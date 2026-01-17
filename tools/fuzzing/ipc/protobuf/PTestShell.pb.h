@@ -436,24 +436,24 @@ class Msg_ExecuteCommand final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACommandFieldNumber = 1,
+    kAACommandFieldNumber = 1,
   };
-  // required bytes aCommand = 1;
-  bool has_acommand() const;
+  // required bytes a_aCommand = 1;
+  bool has_a_acommand() const;
   private:
-  bool _internal_has_acommand() const;
+  bool _internal_has_a_acommand() const;
   public:
-  void clear_acommand();
-  const std::string& acommand() const;
+  void clear_a_acommand();
+  const std::string& a_acommand() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acommand(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acommand();
-  PROTOBUF_NODISCARD std::string* release_acommand();
-  void set_allocated_acommand(std::string* acommand);
+  void set_a_acommand(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acommand();
+  PROTOBUF_NODISCARD std::string* release_a_acommand();
+  void set_allocated_a_acommand(std::string* a_acommand);
   private:
-  const std::string& _internal_acommand() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acommand(const std::string& value);
-  std::string* _internal_mutable_acommand();
+  const std::string& _internal_a_acommand() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acommand(const std::string& value);
+  std::string* _internal_mutable_a_acommand();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand)
@@ -466,7 +466,7 @@ class Msg_ExecuteCommand final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acommand_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acommand_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestShell_2eproto;
@@ -583,24 +583,24 @@ class Msg_PTestShellCommandConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACommandFieldNumber = 1,
+    kAACommandFieldNumber = 1,
   };
-  // required bytes aCommand = 1;
-  bool has_acommand() const;
+  // required bytes a_aCommand = 1;
+  bool has_a_acommand() const;
   private:
-  bool _internal_has_acommand() const;
+  bool _internal_has_a_acommand() const;
   public:
-  void clear_acommand();
-  const std::string& acommand() const;
+  void clear_a_acommand();
+  const std::string& a_acommand() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acommand(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acommand();
-  PROTOBUF_NODISCARD std::string* release_acommand();
-  void set_allocated_acommand(std::string* acommand);
+  void set_a_acommand(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acommand();
+  PROTOBUF_NODISCARD std::string* release_a_acommand();
+  void set_allocated_a_acommand(std::string* a_acommand);
   private:
-  const std::string& _internal_acommand() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acommand(const std::string& value);
-  std::string* _internal_mutable_acommand();
+  const std::string& _internal_a_acommand() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acommand(const std::string& value);
+  std::string* _internal_mutable_a_acommand();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor)
@@ -613,7 +613,7 @@ class Msg_PTestShellCommandConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acommand_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acommand_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestShell_2eproto;
@@ -761,144 +761,144 @@ class Reply_PTestShellCommandConstructor final :
 
 // Msg_ExecuteCommand
 
-// required bytes aCommand = 1;
-inline bool Msg_ExecuteCommand::_internal_has_acommand() const {
+// required bytes a_aCommand = 1;
+inline bool Msg_ExecuteCommand::_internal_has_a_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ExecuteCommand::has_acommand() const {
-  return _internal_has_acommand();
+inline bool Msg_ExecuteCommand::has_a_acommand() const {
+  return _internal_has_a_acommand();
 }
-inline void Msg_ExecuteCommand::clear_acommand() {
-  _impl_.acommand_.ClearToEmpty();
+inline void Msg_ExecuteCommand::clear_a_acommand() {
+  _impl_.a_acommand_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ExecuteCommand::acommand() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.aCommand)
-  return _internal_acommand();
+inline const std::string& Msg_ExecuteCommand::a_acommand() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.a_aCommand)
+  return _internal_a_acommand();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ExecuteCommand::set_acommand(ArgT0&& arg0, ArgT... args) {
+void Msg_ExecuteCommand::set_a_acommand(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acommand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.aCommand)
+ _impl_.a_acommand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.a_aCommand)
 }
-inline std::string* Msg_ExecuteCommand::mutable_acommand() {
-  std::string* _s = _internal_mutable_acommand();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.aCommand)
+inline std::string* Msg_ExecuteCommand::mutable_a_acommand() {
+  std::string* _s = _internal_mutable_a_acommand();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.a_aCommand)
   return _s;
 }
-inline const std::string& Msg_ExecuteCommand::_internal_acommand() const {
-  return _impl_.acommand_.Get();
+inline const std::string& Msg_ExecuteCommand::_internal_a_acommand() const {
+  return _impl_.a_acommand_.Get();
 }
-inline void Msg_ExecuteCommand::_internal_set_acommand(const std::string& value) {
+inline void Msg_ExecuteCommand::_internal_set_a_acommand(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acommand_.Set(value, GetArenaForAllocation());
+  _impl_.a_acommand_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ExecuteCommand::_internal_mutable_acommand() {
+inline std::string* Msg_ExecuteCommand::_internal_mutable_a_acommand() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acommand_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acommand_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ExecuteCommand::release_acommand() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.aCommand)
-  if (!_internal_has_acommand()) {
+inline std::string* Msg_ExecuteCommand::release_a_acommand() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.a_aCommand)
+  if (!_internal_has_a_acommand()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acommand_.Release();
+  auto* p = _impl_.a_acommand_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acommand_.IsDefault()) {
-    _impl_.acommand_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acommand_.IsDefault()) {
+    _impl_.a_acommand_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ExecuteCommand::set_allocated_acommand(std::string* acommand) {
-  if (acommand != nullptr) {
+inline void Msg_ExecuteCommand::set_allocated_a_acommand(std::string* a_acommand) {
+  if (a_acommand != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acommand_.SetAllocated(acommand, GetArenaForAllocation());
+  _impl_.a_acommand_.SetAllocated(a_acommand, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acommand_.IsDefault()) {
-    _impl_.acommand_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acommand_.IsDefault()) {
+    _impl_.a_acommand_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.aCommand)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PTestShell.Msg_ExecuteCommand.a_aCommand)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PTestShellCommandConstructor
 
-// required bytes aCommand = 1;
-inline bool Msg_PTestShellCommandConstructor::_internal_has_acommand() const {
+// required bytes a_aCommand = 1;
+inline bool Msg_PTestShellCommandConstructor::_internal_has_a_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PTestShellCommandConstructor::has_acommand() const {
-  return _internal_has_acommand();
+inline bool Msg_PTestShellCommandConstructor::has_a_acommand() const {
+  return _internal_has_a_acommand();
 }
-inline void Msg_PTestShellCommandConstructor::clear_acommand() {
-  _impl_.acommand_.ClearToEmpty();
+inline void Msg_PTestShellCommandConstructor::clear_a_acommand() {
+  _impl_.a_acommand_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PTestShellCommandConstructor::acommand() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.aCommand)
-  return _internal_acommand();
+inline const std::string& Msg_PTestShellCommandConstructor::a_acommand() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_aCommand)
+  return _internal_a_acommand();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PTestShellCommandConstructor::set_acommand(ArgT0&& arg0, ArgT... args) {
+void Msg_PTestShellCommandConstructor::set_a_acommand(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acommand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.aCommand)
+ _impl_.a_acommand_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_aCommand)
 }
-inline std::string* Msg_PTestShellCommandConstructor::mutable_acommand() {
-  std::string* _s = _internal_mutable_acommand();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.aCommand)
+inline std::string* Msg_PTestShellCommandConstructor::mutable_a_acommand() {
+  std::string* _s = _internal_mutable_a_acommand();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_aCommand)
   return _s;
 }
-inline const std::string& Msg_PTestShellCommandConstructor::_internal_acommand() const {
-  return _impl_.acommand_.Get();
+inline const std::string& Msg_PTestShellCommandConstructor::_internal_a_acommand() const {
+  return _impl_.a_acommand_.Get();
 }
-inline void Msg_PTestShellCommandConstructor::_internal_set_acommand(const std::string& value) {
+inline void Msg_PTestShellCommandConstructor::_internal_set_a_acommand(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acommand_.Set(value, GetArenaForAllocation());
+  _impl_.a_acommand_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PTestShellCommandConstructor::_internal_mutable_acommand() {
+inline std::string* Msg_PTestShellCommandConstructor::_internal_mutable_a_acommand() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acommand_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acommand_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PTestShellCommandConstructor::release_acommand() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.aCommand)
-  if (!_internal_has_acommand()) {
+inline std::string* Msg_PTestShellCommandConstructor::release_a_acommand() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_aCommand)
+  if (!_internal_has_a_acommand()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acommand_.Release();
+  auto* p = _impl_.a_acommand_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acommand_.IsDefault()) {
-    _impl_.acommand_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acommand_.IsDefault()) {
+    _impl_.a_acommand_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PTestShellCommandConstructor::set_allocated_acommand(std::string* acommand) {
-  if (acommand != nullptr) {
+inline void Msg_PTestShellCommandConstructor::set_allocated_a_acommand(std::string* a_acommand) {
+  if (a_acommand != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acommand_.SetAllocated(acommand, GetArenaForAllocation());
+  _impl_.a_acommand_.SetAllocated(a_acommand, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acommand_.IsDefault()) {
-    _impl_.acommand_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acommand_.IsDefault()) {
+    _impl_.a_acommand_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.aCommand)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_aCommand)
 }
 
 // -------------------------------------------------------------------

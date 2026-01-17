@@ -25,8 +25,8 @@ PROTOBUF_CONSTEXPR Msg_InitBackgroundDataBridge::Msg_InitBackgroundDataBridge(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.achannelid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_aendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_achannelid_)*/uint64_t{0u}} {}
 struct Msg_InitBackgroundDataBridgeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_InitBackgroundDataBridgeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -40,7 +40,7 @@ PROTOBUF_CONSTEXPR Msg_InitMediaTransport::Msg_InitMediaTransport(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_InitMediaTransportDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_InitMediaTransportDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -64,10 +64,10 @@ namespace PSocketProcessBridge {
 class Msg_InitBackgroundDataBridge::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_InitBackgroundDataBridge>()._impl_._has_bits_);
-  static void set_has_aendpoint(HasBits* has_bits) {
+  static void set_has_a_aendpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_achannelid(HasBits* has_bits) {
+  static void set_has_a_achannelid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -87,19 +87,19 @@ Msg_InitBackgroundDataBridge::Msg_InitBackgroundDataBridge(const Msg_InitBackgro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aendpoint_){}
-    , decltype(_impl_.achannelid_){}};
+    , decltype(_impl_.a_aendpoint_){}
+    , decltype(_impl_.a_achannelid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aendpoint_.InitDefault();
+  _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aendpoint()) {
-    _this->_impl_.aendpoint_.Set(from._internal_aendpoint(), 
+  if (from._internal_has_a_aendpoint()) {
+    _this->_impl_.a_aendpoint_.Set(from._internal_a_aendpoint(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.achannelid_ = from._impl_.achannelid_;
+  _this->_impl_.a_achannelid_ = from._impl_.a_achannelid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
 }
 
@@ -110,12 +110,12 @@ inline void Msg_InitBackgroundDataBridge::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aendpoint_){}
-    , decltype(_impl_.achannelid_){uint64_t{0u}}
+    , decltype(_impl_.a_aendpoint_){}
+    , decltype(_impl_.a_achannelid_){uint64_t{0u}}
   };
-  _impl_.aendpoint_.InitDefault();
+  _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -130,7 +130,7 @@ Msg_InitBackgroundDataBridge::~Msg_InitBackgroundDataBridge() {
 
 inline void Msg_InitBackgroundDataBridge::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aendpoint_.Destroy();
+  _impl_.a_aendpoint_.Destroy();
 }
 
 void Msg_InitBackgroundDataBridge::SetCachedSize(int size) const {
@@ -145,9 +145,9 @@ void Msg_InitBackgroundDataBridge::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aendpoint_.ClearNonDefaultToEmpty();
+    _impl_.a_aendpoint_.ClearNonDefaultToEmpty();
   }
-  _impl_.achannelid_ = uint64_t{0u};
+  _impl_.a_achannelid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -159,20 +159,20 @@ const char* Msg_InitBackgroundDataBridge::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEndpoint = 1;
+      // required bytes a_aEndpoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aendpoint();
+          auto str = _internal_mutable_a_aendpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 aChannelID = 2;
+      // required uint64 a_aChannelID = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_achannelid(&has_bits);
-          _impl_.achannelid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_achannelid(&has_bits);
+          _impl_.a_achannelid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -208,16 +208,16 @@ uint8_t* Msg_InitBackgroundDataBridge::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEndpoint = 1;
+  // required bytes a_aEndpoint = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aendpoint(), target);
+        1, this->_internal_a_aendpoint(), target);
   }
 
-  // required uint64 aChannelID = 2;
+  // required uint64 a_aChannelID = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_achannelid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_achannelid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -232,16 +232,16 @@ size_t Msg_InitBackgroundDataBridge::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
   size_t total_size = 0;
 
-  if (_internal_has_aendpoint()) {
-    // required bytes aEndpoint = 1;
+  if (_internal_has_a_aendpoint()) {
+    // required bytes a_aEndpoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aendpoint());
+        this->_internal_a_aendpoint());
   }
 
-  if (_internal_has_achannelid()) {
-    // required uint64 aChannelID = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_achannelid());
+  if (_internal_has_a_achannelid()) {
+    // required uint64 a_aChannelID = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
   }
 
   return total_size;
@@ -251,13 +251,13 @@ size_t Msg_InitBackgroundDataBridge::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEndpoint = 1;
+    // required bytes a_aEndpoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aendpoint());
+        this->_internal_a_aendpoint());
 
-    // required uint64 aChannelID = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_achannelid());
+    // required uint64 a_aChannelID = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -290,10 +290,10 @@ void Msg_InitBackgroundDataBridge::MergeFrom(const Msg_InitBackgroundDataBridge&
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aendpoint(from._internal_aendpoint());
+      _this->_internal_set_a_aendpoint(from._internal_a_aendpoint());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.achannelid_ = from._impl_.achannelid_;
+      _this->_impl_.a_achannelid_ = from._impl_.a_achannelid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -319,10 +319,10 @@ void Msg_InitBackgroundDataBridge::InternalSwap(Msg_InitBackgroundDataBridge* ot
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aendpoint_, lhs_arena,
-      &other->_impl_.aendpoint_, rhs_arena
+      &_impl_.a_aendpoint_, lhs_arena,
+      &other->_impl_.a_aendpoint_, rhs_arena
   );
-  swap(_impl_.achannelid_, other->_impl_.achannelid_);
+  swap(_impl_.a_achannelid_, other->_impl_.a_achannelid_);
 }
 
 std::string Msg_InitBackgroundDataBridge::GetTypeName() const {
@@ -335,7 +335,7 @@ std::string Msg_InitBackgroundDataBridge::GetTypeName() const {
 class Msg_InitMediaTransport::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_InitMediaTransport>()._impl_._has_bits_);
-  static void set_has_aendpoint(HasBits* has_bits) {
+  static void set_has_a_aendpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -355,15 +355,15 @@ Msg_InitMediaTransport::Msg_InitMediaTransport(const Msg_InitMediaTransport& fro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aendpoint_){}};
+    , decltype(_impl_.a_aendpoint_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aendpoint_.InitDefault();
+  _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aendpoint()) {
-    _this->_impl_.aendpoint_.Set(from._internal_aendpoint(), 
+  if (from._internal_has_a_aendpoint()) {
+    _this->_impl_.a_aendpoint_.Set(from._internal_a_aendpoint(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport)
@@ -376,11 +376,11 @@ inline void Msg_InitMediaTransport::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aendpoint_){}
+    , decltype(_impl_.a_aendpoint_){}
   };
-  _impl_.aendpoint_.InitDefault();
+  _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -395,7 +395,7 @@ Msg_InitMediaTransport::~Msg_InitMediaTransport() {
 
 inline void Msg_InitMediaTransport::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aendpoint_.Destroy();
+  _impl_.a_aendpoint_.Destroy();
 }
 
 void Msg_InitMediaTransport::SetCachedSize(int size) const {
@@ -410,7 +410,7 @@ void Msg_InitMediaTransport::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aendpoint_.ClearNonDefaultToEmpty();
+    _impl_.a_aendpoint_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -423,10 +423,10 @@ const char* Msg_InitMediaTransport::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEndpoint = 1;
+      // required bytes a_aEndpoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aendpoint();
+          auto str = _internal_mutable_a_aendpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -463,10 +463,10 @@ uint8_t* Msg_InitMediaTransport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEndpoint = 1;
+  // required bytes a_aEndpoint = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aendpoint(), target);
+        1, this->_internal_a_aendpoint(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -481,11 +481,11 @@ size_t Msg_InitMediaTransport::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport)
   size_t total_size = 0;
 
-  // required bytes aEndpoint = 1;
-  if (_internal_has_aendpoint()) {
+  // required bytes a_aEndpoint = 1;
+  if (_internal_has_a_aendpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aendpoint());
+        this->_internal_a_aendpoint());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -512,8 +512,8 @@ void Msg_InitMediaTransport::MergeFrom(const Msg_InitMediaTransport& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aendpoint()) {
-    _this->_internal_set_aendpoint(from._internal_aendpoint());
+  if (from._internal_has_a_aendpoint()) {
+    _this->_internal_set_a_aendpoint(from._internal_a_aendpoint());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -537,8 +537,8 @@ void Msg_InitMediaTransport::InternalSwap(Msg_InitMediaTransport* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aendpoint_, lhs_arena,
-      &other->_impl_.aendpoint_, rhs_arena
+      &_impl_.a_aendpoint_, lhs_arena,
+      &other->_impl_.a_aendpoint_, rhs_arena
   );
 }
 

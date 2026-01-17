@@ -37,7 +37,7 @@ PROTOBUF_CONSTEXPR Reply_RequestStateDelete::Reply_RequestStateDelete(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/false} {}
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_RequestStateDeleteDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestStateDeleteDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,8 +49,8 @@ struct Reply_RequestStateDeleteDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestStateDeleteDefaultTypeInternal _Reply_RequestStateDelete_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupStateDelete::Msg_RequestGroupStateDelete(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupStateDeleteDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupStateDeleteDefaultTypeInternal()
@@ -65,7 +65,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupStateDelete::Reply_RequestGroupStateDelete(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupStateDeleteDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupStateDeleteDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -91,7 +91,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGenerateIdentityKeypair::Reply_RequestGenerateId
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGenerateIdentityKeypairDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGenerateIdentityKeypairDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -103,7 +103,7 @@ struct Reply_RequestGenerateIdentityKeypairDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGenerateIdentityKeypairDefaultTypeInternal _Reply_RequestGenerateIdentityKeypair_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGenerateCredentialBasic::Msg_RequestGenerateCredentialBasic(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.credname_)*/{}
+    /*decltype(_impl_.a_credname_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGenerateCredentialBasicDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGenerateCredentialBasicDefaultTypeInternal()
@@ -118,7 +118,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGenerateCredentialBasic::Reply_RequestGenerateCr
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGenerateCredentialBasicDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGenerateCredentialBasicDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -130,8 +130,8 @@ struct Reply_RequestGenerateCredentialBasicDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGenerateCredentialBasicDefaultTypeInternal _Reply_RequestGenerateCredentialBasic_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGenerateKeyPackage::Msg_RequestGenerateKeyPackage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.identity_)*/{}
-  , /*decltype(_impl_.credential_)*/{}
+    /*decltype(_impl_.a_identity_)*/{}
+  , /*decltype(_impl_.a_credential_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGenerateKeyPackageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGenerateKeyPackageDefaultTypeInternal()
@@ -146,7 +146,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGenerateKeyPackage::Reply_RequestGenerateKeyPack
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGenerateKeyPackageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGenerateKeyPackageDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -158,9 +158,9 @@ struct Reply_RequestGenerateKeyPackageDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGenerateKeyPackageDefaultTypeInternal _Reply_RequestGenerateKeyPackage_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupCreate::Msg_RequestGroupCreate(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.credential_)*/{}
-  , /*decltype(_impl_.inoptgroupidentifier_)*/{}
+    /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_credential_)*/{}
+  , /*decltype(_impl_.a_inoptgroupidentifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupCreateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupCreateDefaultTypeInternal()
@@ -175,7 +175,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupCreate::Reply_RequestGroupCreate(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupCreateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupCreateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -187,8 +187,8 @@ struct Reply_RequestGroupCreateDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupCreateDefaultTypeInternal _Reply_RequestGroupCreate_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupJoin::Msg_RequestGroupJoin(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.welcome_)*/{}
+    /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_welcome_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupJoinDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupJoinDefaultTypeInternal()
@@ -203,7 +203,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupJoin::Reply_RequestGroupJoin(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupJoinDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupJoinDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -215,9 +215,9 @@ struct Reply_RequestGroupJoinDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupJoinDefaultTypeInternal _Reply_RequestGroupJoin_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupAdd::Msg_RequestGroupAdd(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.keypackage_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_keypackage_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupAddDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupAddDefaultTypeInternal()
@@ -232,7 +232,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupAdd::Reply_RequestGroupAdd(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupAddDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupAddDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -244,9 +244,9 @@ struct Reply_RequestGroupAddDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupAddDefaultTypeInternal _Reply_RequestGroupAdd_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupProposeAdd::Msg_RequestGroupProposeAdd(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.keypackage_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_keypackage_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupProposeAddDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupProposeAddDefaultTypeInternal()
@@ -261,7 +261,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupProposeAdd::Reply_RequestGroupProposeAdd(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGroupProposeAddDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupProposeAddDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -273,9 +273,9 @@ struct Reply_RequestGroupProposeAddDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupProposeAddDefaultTypeInternal _Reply_RequestGroupProposeAdd_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupRemove::Msg_RequestGroupRemove(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.remidentifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_remidentifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupRemoveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupRemoveDefaultTypeInternal()
@@ -290,7 +290,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupRemove::Reply_RequestGroupRemove(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupRemoveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupRemoveDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -302,9 +302,9 @@ struct Reply_RequestGroupRemoveDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupRemoveDefaultTypeInternal _Reply_RequestGroupRemove_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupProposeRemove::Msg_RequestGroupProposeRemove(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.remidentifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_remidentifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupProposeRemoveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupProposeRemoveDefaultTypeInternal()
@@ -319,7 +319,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupProposeRemove::Reply_RequestGroupProposeRem
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGroupProposeRemoveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupProposeRemoveDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -331,8 +331,8 @@ struct Reply_RequestGroupProposeRemoveDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupProposeRemoveDefaultTypeInternal _Reply_RequestGroupProposeRemove_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupClose::Msg_RequestGroupClose(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupCloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupCloseDefaultTypeInternal()
@@ -347,7 +347,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupClose::Reply_RequestGroupClose(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupCloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupCloseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -359,8 +359,8 @@ struct Reply_RequestGroupCloseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupCloseDefaultTypeInternal _Reply_RequestGroupClose_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGroupDetails::Msg_RequestGroupDetails(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGroupDetailsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGroupDetailsDefaultTypeInternal()
@@ -375,7 +375,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGroupDetails::Reply_RequestGroupDetails(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestGroupDetailsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGroupDetailsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -387,9 +387,9 @@ struct Reply_RequestGroupDetailsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGroupDetailsDefaultTypeInternal _Reply_RequestGroupDetails_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestSend::Msg_RequestSend(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.message_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_message_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestSendDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestSendDefaultTypeInternal()
@@ -404,7 +404,7 @@ PROTOBUF_CONSTEXPR Reply_RequestSend::Reply_RequestSend(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestSendDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestSendDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -416,8 +416,8 @@ struct Reply_RequestSendDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestSendDefaultTypeInternal _Reply_RequestSend_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestReceive::Msg_RequestReceive(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.message_)*/{}
+    /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_message_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestReceiveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestReceiveDefaultTypeInternal()
@@ -432,7 +432,7 @@ PROTOBUF_CONSTEXPR Reply_RequestReceive::Reply_RequestReceive(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestReceiveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestReceiveDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -444,8 +444,8 @@ struct Reply_RequestReceiveDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestReceiveDefaultTypeInternal _Reply_RequestReceive_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestHasPendingProposals::Msg_RequestHasPendingProposals(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestHasPendingProposalsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestHasPendingProposalsDefaultTypeInternal()
@@ -460,7 +460,7 @@ PROTOBUF_CONSTEXPR Reply_RequestHasPendingProposals::Reply_RequestHasPendingProp
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/false} {}
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_RequestHasPendingProposalsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestHasPendingProposalsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -472,8 +472,8 @@ struct Reply_RequestHasPendingProposalsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestHasPendingProposalsDefaultTypeInternal _Reply_RequestHasPendingProposals_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestClearPendingProposals::Msg_RequestClearPendingProposals(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestClearPendingProposalsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestClearPendingProposalsDefaultTypeInternal()
@@ -488,7 +488,7 @@ PROTOBUF_CONSTEXPR Reply_RequestClearPendingProposals::Reply_RequestClearPending
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/false} {}
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_RequestClearPendingProposalsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestClearPendingProposalsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -500,8 +500,8 @@ struct Reply_RequestClearPendingProposalsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestClearPendingProposalsDefaultTypeInternal _Reply_RequestClearPendingProposals_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestHasPendingCommit::Msg_RequestHasPendingCommit(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestHasPendingCommitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestHasPendingCommitDefaultTypeInternal()
@@ -516,7 +516,7 @@ PROTOBUF_CONSTEXPR Reply_RequestHasPendingCommit::Reply_RequestHasPendingCommit(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/false} {}
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_RequestHasPendingCommitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestHasPendingCommitDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -528,8 +528,8 @@ struct Reply_RequestHasPendingCommitDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestHasPendingCommitDefaultTypeInternal _Reply_RequestHasPendingCommit_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestClearPendingCommit::Msg_RequestClearPendingCommit(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestClearPendingCommitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestClearPendingCommitDefaultTypeInternal()
@@ -544,7 +544,7 @@ PROTOBUF_CONSTEXPR Reply_RequestClearPendingCommit::Reply_RequestClearPendingCom
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/false} {}
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_RequestClearPendingCommitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestClearPendingCommitDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -556,8 +556,8 @@ struct Reply_RequestClearPendingCommitDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestClearPendingCommitDefaultTypeInternal _Reply_RequestClearPendingCommit_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestApplyPendingCommit::Msg_RequestApplyPendingCommit(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
+    /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestApplyPendingCommitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestApplyPendingCommitDefaultTypeInternal()
@@ -572,7 +572,7 @@ PROTOBUF_CONSTEXPR Reply_RequestApplyPendingCommit::Reply_RequestApplyPendingCom
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestApplyPendingCommitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestApplyPendingCommitDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -586,11 +586,11 @@ PROTOBUF_CONSTEXPR Msg_RequestExportSecret::Msg_RequestExportSecret(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.groupidentifier_)*/{}
-  , /*decltype(_impl_.identifier_)*/{}
-  , /*decltype(_impl_.label_)*/{}
-  , /*decltype(_impl_.content_)*/{}
-  , /*decltype(_impl_.len_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_groupidentifier_)*/{}
+  , /*decltype(_impl_.a_identifier_)*/{}
+  , /*decltype(_impl_.a_label_)*/{}
+  , /*decltype(_impl_.a_content_)*/{}
+  , /*decltype(_impl_.a_len_)*/uint64_t{0u}} {}
 struct Msg_RequestExportSecretDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestExportSecretDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -604,7 +604,7 @@ PROTOBUF_CONSTEXPR Reply_RequestExportSecret::Reply_RequestExportSecret(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_RequestExportSecretDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestExportSecretDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -616,7 +616,7 @@ struct Reply_RequestExportSecretDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestExportSecretDefaultTypeInternal _Reply_RequestExportSecret_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGetGroupIdentifier::Msg_RequestGetGroupIdentifier(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{}
+    /*decltype(_impl_.a_message_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGetGroupIdentifierDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGetGroupIdentifierDefaultTypeInternal()
@@ -631,7 +631,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGetGroupIdentifier::Reply_RequestGetGroupIdentif
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGetGroupIdentifierDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGetGroupIdentifierDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -643,7 +643,7 @@ struct Reply_RequestGetGroupIdentifierDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_RequestGetGroupIdentifierDefaultTypeInternal _Reply_RequestGetGroupIdentifier_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RequestGetGroupEpoch::Msg_RequestGetGroupEpoch(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_)*/{}
+    /*decltype(_impl_.a_message_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RequestGetGroupEpochDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RequestGetGroupEpochDefaultTypeInternal()
@@ -658,7 +658,7 @@ PROTOBUF_CONSTEXPR Reply_RequestGetGroupEpoch::Reply_RequestGetGroupEpoch(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.result_)*/nullptr} {}
+  , /*decltype(_impl_.a_result_)*/nullptr} {}
 struct Reply_RequestGetGroupEpochDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_RequestGetGroupEpochDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -830,7 +830,7 @@ std::string Msg_RequestStateDelete::GetTypeName() const {
 class Reply_RequestStateDelete::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestStateDelete>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -850,10 +850,10 @@ Reply_RequestStateDelete::Reply_RequestStateDelete(const Reply_RequestStateDelet
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.result_ = from._impl_.result_;
+  _this->_impl_.a_result_ = from._impl_.a_result_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete)
 }
 
@@ -864,7 +864,7 @@ inline void Reply_RequestStateDelete::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){false}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -891,7 +891,7 @@ void Reply_RequestStateDelete::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.result_ = false;
+  _impl_.a_result_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -903,11 +903,11 @@ const char* Reply_RequestStateDelete::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool result = 1;
+      // required bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_result(&has_bits);
-          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_result(&has_bits);
+          _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -943,10 +943,10 @@ uint8_t* Reply_RequestStateDelete::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool result = 1;
+  // required bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_result(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -961,8 +961,8 @@ size_t Reply_RequestStateDelete::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete)
   size_t total_size = 0;
 
-  // required bool result = 1;
-  if (_internal_has_result()) {
+  // required bool a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -990,8 +990,8 @@ void Reply_RequestStateDelete::MergeFrom(const Reply_RequestStateDelete& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1012,7 +1012,7 @@ void Reply_RequestStateDelete::InternalSwap(Reply_RequestStateDelete* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestStateDelete::GetTypeName() const {
@@ -1036,8 +1036,8 @@ Msg_RequestGroupStateDelete::Msg_RequestGroupStateDelete(const Msg_RequestGroupS
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupStateDelete* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1049,8 +1049,8 @@ inline void Msg_RequestGroupStateDelete::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1066,8 +1066,8 @@ Msg_RequestGroupStateDelete::~Msg_RequestGroupStateDelete() {
 
 inline void Msg_RequestGroupStateDelete::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestGroupStateDelete::SetCachedSize(int size) const {
@@ -1080,8 +1080,8 @@ void Msg_RequestGroupStateDelete::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -1091,34 +1091,34 @@ const char* Msg_RequestGroupStateDelete::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1152,16 +1152,16 @@ uint8_t* Msg_RequestGroupStateDelete::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1180,21 +1180,21 @@ size_t Msg_RequestGroupStateDelete::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -1219,8 +1219,8 @@ void Msg_RequestGroupStateDelete::MergeFrom(const Msg_RequestGroupStateDelete& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -1238,8 +1238,8 @@ bool Msg_RequestGroupStateDelete::IsInitialized() const {
 void Msg_RequestGroupStateDelete::InternalSwap(Msg_RequestGroupStateDelete* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestGroupStateDelete::GetTypeName() const {
@@ -1252,7 +1252,7 @@ std::string Msg_RequestGroupStateDelete::GetTypeName() const {
 class Reply_RequestGroupStateDelete::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupStateDelete>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -1269,15 +1269,15 @@ Reply_RequestGroupStateDelete::Reply_RequestGroupStateDelete(const Reply_Request
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete)
@@ -1290,11 +1290,11 @@ inline void Reply_RequestGroupStateDelete::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1309,7 +1309,7 @@ Reply_RequestGroupStateDelete::~Reply_RequestGroupStateDelete() {
 
 inline void Reply_RequestGroupStateDelete::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupStateDelete::SetCachedSize(int size) const {
@@ -1324,7 +1324,7 @@ void Reply_RequestGroupStateDelete::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1337,10 +1337,10 @@ const char* Reply_RequestGroupStateDelete::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1377,10 +1377,10 @@ uint8_t* Reply_RequestGroupStateDelete::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1399,12 +1399,12 @@ size_t Reply_RequestGroupStateDelete::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1428,8 +1428,8 @@ void Reply_RequestGroupStateDelete::MergeFrom(const Reply_RequestGroupStateDelet
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1452,8 +1452,8 @@ void Reply_RequestGroupStateDelete::InternalSwap(Reply_RequestGroupStateDelete* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -1615,18 +1615,18 @@ std::string Msg_RequestGenerateIdentityKeypair::GetTypeName() const {
 class Reply_RequestGenerateIdentityKeypair::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGenerateIdentityKeypair>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGenerateIdentityKeypair* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGenerateIdentityKeypair* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGenerateIdentityKeypair::_Internal::result(const Reply_RequestGenerateIdentityKeypair* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGenerateIdentityKeypair::_Internal::a_result(const Reply_RequestGenerateIdentityKeypair* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGenerateIdentityKeypair::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGenerateIdentityKeypair::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGenerateIdentityKeypair::Reply_RequestGenerateIdentityKeypair(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1641,11 +1641,11 @@ Reply_RequestGenerateIdentityKeypair::Reply_RequestGenerateIdentityKeypair(const
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair)
 }
@@ -1657,7 +1657,7 @@ inline void Reply_RequestGenerateIdentityKeypair::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -1672,7 +1672,7 @@ Reply_RequestGenerateIdentityKeypair::~Reply_RequestGenerateIdentityKeypair() {
 
 inline void Reply_RequestGenerateIdentityKeypair::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGenerateIdentityKeypair::SetCachedSize(int size) const {
@@ -1687,8 +1687,8 @@ void Reply_RequestGenerateIdentityKeypair::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1701,10 +1701,10 @@ const char* Reply_RequestGenerateIdentityKeypair::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1740,11 +1740,11 @@ uint8_t* Reply_RequestGenerateIdentityKeypair::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1763,12 +1763,12 @@ size_t Reply_RequestGenerateIdentityKeypair::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1792,9 +1792,9 @@ void Reply_RequestGenerateIdentityKeypair::MergeFrom(const Reply_RequestGenerate
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1814,7 +1814,7 @@ void Reply_RequestGenerateIdentityKeypair::InternalSwap(Reply_RequestGenerateIde
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGenerateIdentityKeypair::GetTypeName() const {
@@ -1838,7 +1838,7 @@ Msg_RequestGenerateCredentialBasic::Msg_RequestGenerateCredentialBasic(const Msg
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGenerateCredentialBasic* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.credname_){from._impl_.credname_}
+      decltype(_impl_.a_credname_){from._impl_.a_credname_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1850,7 +1850,7 @@ inline void Msg_RequestGenerateCredentialBasic::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.credname_){arena}
+      decltype(_impl_.a_credname_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1866,7 +1866,7 @@ Msg_RequestGenerateCredentialBasic::~Msg_RequestGenerateCredentialBasic() {
 
 inline void Msg_RequestGenerateCredentialBasic::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.credname_.~RepeatedField();
+  _impl_.a_credname_.~RepeatedField();
 }
 
 void Msg_RequestGenerateCredentialBasic::SetCachedSize(int size) const {
@@ -1879,7 +1879,7 @@ void Msg_RequestGenerateCredentialBasic::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.credname_.Clear();
+  _impl_.a_credname_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -1889,18 +1889,18 @@ const char* Msg_RequestGenerateCredentialBasic::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 credName = 1;
+      // repeated uint32 a_credName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_credname(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_credname(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_credname(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_credname(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1934,10 +1934,10 @@ uint8_t* Msg_RequestGenerateCredentialBasic::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 credName = 1;
-  for (int i = 0, n = this->_internal_credname_size(); i < n; i++) {
+  // repeated uint32 a_credName = 1;
+  for (int i = 0, n = this->_internal_a_credname_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_credname(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_credname(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1956,12 +1956,12 @@ size_t Msg_RequestGenerateCredentialBasic::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 credName = 1;
+  // repeated uint32 a_credName = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.credname_);
+      UInt32Size(this->_impl_.a_credname_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_credname_size());
+                  ::_pbi::FromIntSize(this->_internal_a_credname_size());
     total_size += data_size;
   }
 
@@ -1986,7 +1986,7 @@ void Msg_RequestGenerateCredentialBasic::MergeFrom(const Msg_RequestGenerateCred
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.credname_.MergeFrom(from._impl_.credname_);
+  _this->_impl_.a_credname_.MergeFrom(from._impl_.a_credname_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -2004,7 +2004,7 @@ bool Msg_RequestGenerateCredentialBasic::IsInitialized() const {
 void Msg_RequestGenerateCredentialBasic::InternalSwap(Msg_RequestGenerateCredentialBasic* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.credname_.InternalSwap(&other->_impl_.credname_);
+  _impl_.a_credname_.InternalSwap(&other->_impl_.a_credname_);
 }
 
 std::string Msg_RequestGenerateCredentialBasic::GetTypeName() const {
@@ -2017,18 +2017,18 @@ std::string Msg_RequestGenerateCredentialBasic::GetTypeName() const {
 class Reply_RequestGenerateCredentialBasic::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGenerateCredentialBasic>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGenerateCredentialBasic* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGenerateCredentialBasic* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGenerateCredentialBasic::_Internal::result(const Reply_RequestGenerateCredentialBasic* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGenerateCredentialBasic::_Internal::a_result(const Reply_RequestGenerateCredentialBasic* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGenerateCredentialBasic::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGenerateCredentialBasic::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGenerateCredentialBasic::Reply_RequestGenerateCredentialBasic(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2043,11 +2043,11 @@ Reply_RequestGenerateCredentialBasic::Reply_RequestGenerateCredentialBasic(const
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic)
 }
@@ -2059,7 +2059,7 @@ inline void Reply_RequestGenerateCredentialBasic::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -2074,7 +2074,7 @@ Reply_RequestGenerateCredentialBasic::~Reply_RequestGenerateCredentialBasic() {
 
 inline void Reply_RequestGenerateCredentialBasic::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGenerateCredentialBasic::SetCachedSize(int size) const {
@@ -2089,8 +2089,8 @@ void Reply_RequestGenerateCredentialBasic::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2103,10 +2103,10 @@ const char* Reply_RequestGenerateCredentialBasic::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2142,11 +2142,11 @@ uint8_t* Reply_RequestGenerateCredentialBasic::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2165,12 +2165,12 @@ size_t Reply_RequestGenerateCredentialBasic::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2194,9 +2194,9 @@ void Reply_RequestGenerateCredentialBasic::MergeFrom(const Reply_RequestGenerate
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2216,7 +2216,7 @@ void Reply_RequestGenerateCredentialBasic::InternalSwap(Reply_RequestGenerateCre
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGenerateCredentialBasic::GetTypeName() const {
@@ -2240,8 +2240,8 @@ Msg_RequestGenerateKeyPackage::Msg_RequestGenerateKeyPackage(const Msg_RequestGe
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGenerateKeyPackage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.identity_){from._impl_.identity_}
-    , decltype(_impl_.credential_){from._impl_.credential_}
+      decltype(_impl_.a_identity_){from._impl_.a_identity_}
+    , decltype(_impl_.a_credential_){from._impl_.a_credential_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2253,8 +2253,8 @@ inline void Msg_RequestGenerateKeyPackage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.identity_){arena}
-    , decltype(_impl_.credential_){arena}
+      decltype(_impl_.a_identity_){arena}
+    , decltype(_impl_.a_credential_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -2270,8 +2270,8 @@ Msg_RequestGenerateKeyPackage::~Msg_RequestGenerateKeyPackage() {
 
 inline void Msg_RequestGenerateKeyPackage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.identity_.~RepeatedField();
-  _impl_.credential_.~RepeatedField();
+  _impl_.a_identity_.~RepeatedField();
+  _impl_.a_credential_.~RepeatedField();
 }
 
 void Msg_RequestGenerateKeyPackage::SetCachedSize(int size) const {
@@ -2284,8 +2284,8 @@ void Msg_RequestGenerateKeyPackage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.identity_.Clear();
-  _impl_.credential_.Clear();
+  _impl_.a_identity_.Clear();
+  _impl_.a_credential_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -2295,34 +2295,34 @@ const char* Msg_RequestGenerateKeyPackage::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 identity = 1;
+      // repeated uint32 a_identity = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identity(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identity(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identity(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identity(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 credential = 2;
+      // repeated uint32 a_credential = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_credential(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_credential(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_credential(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_credential(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2356,16 +2356,16 @@ uint8_t* Msg_RequestGenerateKeyPackage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 identity = 1;
-  for (int i = 0, n = this->_internal_identity_size(); i < n; i++) {
+  // repeated uint32 a_identity = 1;
+  for (int i = 0, n = this->_internal_a_identity_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_identity(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_identity(i), target);
   }
 
-  // repeated uint32 credential = 2;
-  for (int i = 0, n = this->_internal_credential_size(); i < n; i++) {
+  // repeated uint32 a_credential = 2;
+  for (int i = 0, n = this->_internal_a_credential_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_credential(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_credential(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2384,21 +2384,21 @@ size_t Msg_RequestGenerateKeyPackage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 identity = 1;
+  // repeated uint32 a_identity = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identity_);
+      UInt32Size(this->_impl_.a_identity_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identity_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identity_size());
     total_size += data_size;
   }
 
-  // repeated uint32 credential = 2;
+  // repeated uint32 a_credential = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.credential_);
+      UInt32Size(this->_impl_.a_credential_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_credential_size());
+                  ::_pbi::FromIntSize(this->_internal_a_credential_size());
     total_size += data_size;
   }
 
@@ -2423,8 +2423,8 @@ void Msg_RequestGenerateKeyPackage::MergeFrom(const Msg_RequestGenerateKeyPackag
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.identity_.MergeFrom(from._impl_.identity_);
-  _this->_impl_.credential_.MergeFrom(from._impl_.credential_);
+  _this->_impl_.a_identity_.MergeFrom(from._impl_.a_identity_);
+  _this->_impl_.a_credential_.MergeFrom(from._impl_.a_credential_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -2442,8 +2442,8 @@ bool Msg_RequestGenerateKeyPackage::IsInitialized() const {
 void Msg_RequestGenerateKeyPackage::InternalSwap(Msg_RequestGenerateKeyPackage* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.identity_.InternalSwap(&other->_impl_.identity_);
-  _impl_.credential_.InternalSwap(&other->_impl_.credential_);
+  _impl_.a_identity_.InternalSwap(&other->_impl_.a_identity_);
+  _impl_.a_credential_.InternalSwap(&other->_impl_.a_credential_);
 }
 
 std::string Msg_RequestGenerateKeyPackage::GetTypeName() const {
@@ -2456,18 +2456,18 @@ std::string Msg_RequestGenerateKeyPackage::GetTypeName() const {
 class Reply_RequestGenerateKeyPackage::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGenerateKeyPackage>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGenerateKeyPackage* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGenerateKeyPackage* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGenerateKeyPackage::_Internal::result(const Reply_RequestGenerateKeyPackage* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGenerateKeyPackage::_Internal::a_result(const Reply_RequestGenerateKeyPackage* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGenerateKeyPackage::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGenerateKeyPackage::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGenerateKeyPackage::Reply_RequestGenerateKeyPackage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2482,11 +2482,11 @@ Reply_RequestGenerateKeyPackage::Reply_RequestGenerateKeyPackage(const Reply_Req
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage)
 }
@@ -2498,7 +2498,7 @@ inline void Reply_RequestGenerateKeyPackage::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -2513,7 +2513,7 @@ Reply_RequestGenerateKeyPackage::~Reply_RequestGenerateKeyPackage() {
 
 inline void Reply_RequestGenerateKeyPackage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGenerateKeyPackage::SetCachedSize(int size) const {
@@ -2528,8 +2528,8 @@ void Reply_RequestGenerateKeyPackage::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2542,10 +2542,10 @@ const char* Reply_RequestGenerateKeyPackage::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2581,11 +2581,11 @@ uint8_t* Reply_RequestGenerateKeyPackage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2604,12 +2604,12 @@ size_t Reply_RequestGenerateKeyPackage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2633,9 +2633,9 @@ void Reply_RequestGenerateKeyPackage::MergeFrom(const Reply_RequestGenerateKeyPa
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2655,7 +2655,7 @@ void Reply_RequestGenerateKeyPackage::InternalSwap(Reply_RequestGenerateKeyPacka
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGenerateKeyPackage::GetTypeName() const {
@@ -2679,9 +2679,9 @@ Msg_RequestGroupCreate::Msg_RequestGroupCreate(const Msg_RequestGroupCreate& fro
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupCreate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.credential_){from._impl_.credential_}
-    , decltype(_impl_.inoptgroupidentifier_){from._impl_.inoptgroupidentifier_}
+      decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_credential_){from._impl_.a_credential_}
+    , decltype(_impl_.a_inoptgroupidentifier_){from._impl_.a_inoptgroupidentifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2693,9 +2693,9 @@ inline void Msg_RequestGroupCreate::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.credential_){arena}
-    , decltype(_impl_.inoptgroupidentifier_){arena}
+      decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_credential_){arena}
+    , decltype(_impl_.a_inoptgroupidentifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -2711,9 +2711,9 @@ Msg_RequestGroupCreate::~Msg_RequestGroupCreate() {
 
 inline void Msg_RequestGroupCreate::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.identifier_.~RepeatedField();
-  _impl_.credential_.~RepeatedField();
-  _impl_.inoptgroupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_credential_.~RepeatedField();
+  _impl_.a_inoptgroupidentifier_.~RepeatedField();
 }
 
 void Msg_RequestGroupCreate::SetCachedSize(int size) const {
@@ -2726,9 +2726,9 @@ void Msg_RequestGroupCreate::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.identifier_.Clear();
-  _impl_.credential_.Clear();
-  _impl_.inoptgroupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_credential_.Clear();
+  _impl_.a_inoptgroupidentifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -2738,50 +2738,50 @@ const char* Msg_RequestGroupCreate::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 identifier = 1;
+      // repeated uint32 a_identifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 credential = 2;
+      // repeated uint32 a_credential = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_credential(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_credential(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_credential(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_credential(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 inOptGroupIdentifier = 3;
+      // repeated uint32 a_inOptGroupIdentifier = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_inoptgroupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_inoptgroupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_inoptgroupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_inoptgroupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2815,22 +2815,22 @@ uint8_t* Msg_RequestGroupCreate::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 identifier = 1;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 1;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 credential = 2;
-  for (int i = 0, n = this->_internal_credential_size(); i < n; i++) {
+  // repeated uint32 a_credential = 2;
+  for (int i = 0, n = this->_internal_a_credential_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_credential(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_credential(i), target);
   }
 
-  // repeated uint32 inOptGroupIdentifier = 3;
-  for (int i = 0, n = this->_internal_inoptgroupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_inOptGroupIdentifier = 3;
+  for (int i = 0, n = this->_internal_a_inoptgroupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_inoptgroupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_inoptgroupidentifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2849,30 +2849,30 @@ size_t Msg_RequestGroupCreate::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 identifier = 1;
+  // repeated uint32 a_identifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 credential = 2;
+  // repeated uint32 a_credential = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.credential_);
+      UInt32Size(this->_impl_.a_credential_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_credential_size());
+                  ::_pbi::FromIntSize(this->_internal_a_credential_size());
     total_size += data_size;
   }
 
-  // repeated uint32 inOptGroupIdentifier = 3;
+  // repeated uint32 a_inOptGroupIdentifier = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.inoptgroupidentifier_);
+      UInt32Size(this->_impl_.a_inoptgroupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_inoptgroupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_inoptgroupidentifier_size());
     total_size += data_size;
   }
 
@@ -2897,9 +2897,9 @@ void Msg_RequestGroupCreate::MergeFrom(const Msg_RequestGroupCreate& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.credential_.MergeFrom(from._impl_.credential_);
-  _this->_impl_.inoptgroupidentifier_.MergeFrom(from._impl_.inoptgroupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_credential_.MergeFrom(from._impl_.a_credential_);
+  _this->_impl_.a_inoptgroupidentifier_.MergeFrom(from._impl_.a_inoptgroupidentifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -2917,9 +2917,9 @@ bool Msg_RequestGroupCreate::IsInitialized() const {
 void Msg_RequestGroupCreate::InternalSwap(Msg_RequestGroupCreate* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.credential_.InternalSwap(&other->_impl_.credential_);
-  _impl_.inoptgroupidentifier_.InternalSwap(&other->_impl_.inoptgroupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_credential_.InternalSwap(&other->_impl_.a_credential_);
+  _impl_.a_inoptgroupidentifier_.InternalSwap(&other->_impl_.a_inoptgroupidentifier_);
 }
 
 std::string Msg_RequestGroupCreate::GetTypeName() const {
@@ -2932,7 +2932,7 @@ std::string Msg_RequestGroupCreate::GetTypeName() const {
 class Reply_RequestGroupCreate::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupCreate>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -2949,15 +2949,15 @@ Reply_RequestGroupCreate::Reply_RequestGroupCreate(const Reply_RequestGroupCreat
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate)
@@ -2970,11 +2970,11 @@ inline void Reply_RequestGroupCreate::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2989,7 +2989,7 @@ Reply_RequestGroupCreate::~Reply_RequestGroupCreate() {
 
 inline void Reply_RequestGroupCreate::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupCreate::SetCachedSize(int size) const {
@@ -3004,7 +3004,7 @@ void Reply_RequestGroupCreate::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3017,10 +3017,10 @@ const char* Reply_RequestGroupCreate::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3057,10 +3057,10 @@ uint8_t* Reply_RequestGroupCreate::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3079,12 +3079,12 @@ size_t Reply_RequestGroupCreate::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3108,8 +3108,8 @@ void Reply_RequestGroupCreate::MergeFrom(const Reply_RequestGroupCreate& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3132,8 +3132,8 @@ void Reply_RequestGroupCreate::InternalSwap(Reply_RequestGroupCreate* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -3158,8 +3158,8 @@ Msg_RequestGroupJoin::Msg_RequestGroupJoin(const Msg_RequestGroupJoin& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupJoin* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.welcome_){from._impl_.welcome_}
+      decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_welcome_){from._impl_.a_welcome_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3171,8 +3171,8 @@ inline void Msg_RequestGroupJoin::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.welcome_){arena}
+      decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_welcome_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -3188,8 +3188,8 @@ Msg_RequestGroupJoin::~Msg_RequestGroupJoin() {
 
 inline void Msg_RequestGroupJoin::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.identifier_.~RepeatedField();
-  _impl_.welcome_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_welcome_.~RepeatedField();
 }
 
 void Msg_RequestGroupJoin::SetCachedSize(int size) const {
@@ -3202,8 +3202,8 @@ void Msg_RequestGroupJoin::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.identifier_.Clear();
-  _impl_.welcome_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_welcome_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -3213,34 +3213,34 @@ const char* Msg_RequestGroupJoin::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 identifier = 1;
+      // repeated uint32 a_identifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 welcome = 2;
+      // repeated uint32 a_welcome = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_welcome(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_welcome(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_welcome(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_welcome(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3274,16 +3274,16 @@ uint8_t* Msg_RequestGroupJoin::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 identifier = 1;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 1;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 welcome = 2;
-  for (int i = 0, n = this->_internal_welcome_size(); i < n; i++) {
+  // repeated uint32 a_welcome = 2;
+  for (int i = 0, n = this->_internal_a_welcome_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_welcome(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_welcome(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3302,21 +3302,21 @@ size_t Msg_RequestGroupJoin::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 identifier = 1;
+  // repeated uint32 a_identifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 welcome = 2;
+  // repeated uint32 a_welcome = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.welcome_);
+      UInt32Size(this->_impl_.a_welcome_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_welcome_size());
+                  ::_pbi::FromIntSize(this->_internal_a_welcome_size());
     total_size += data_size;
   }
 
@@ -3341,8 +3341,8 @@ void Msg_RequestGroupJoin::MergeFrom(const Msg_RequestGroupJoin& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.welcome_.MergeFrom(from._impl_.welcome_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_welcome_.MergeFrom(from._impl_.a_welcome_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -3360,8 +3360,8 @@ bool Msg_RequestGroupJoin::IsInitialized() const {
 void Msg_RequestGroupJoin::InternalSwap(Msg_RequestGroupJoin* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.welcome_.InternalSwap(&other->_impl_.welcome_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_welcome_.InternalSwap(&other->_impl_.a_welcome_);
 }
 
 std::string Msg_RequestGroupJoin::GetTypeName() const {
@@ -3374,7 +3374,7 @@ std::string Msg_RequestGroupJoin::GetTypeName() const {
 class Reply_RequestGroupJoin::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupJoin>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -3391,15 +3391,15 @@ Reply_RequestGroupJoin::Reply_RequestGroupJoin(const Reply_RequestGroupJoin& fro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin)
@@ -3412,11 +3412,11 @@ inline void Reply_RequestGroupJoin::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3431,7 +3431,7 @@ Reply_RequestGroupJoin::~Reply_RequestGroupJoin() {
 
 inline void Reply_RequestGroupJoin::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupJoin::SetCachedSize(int size) const {
@@ -3446,7 +3446,7 @@ void Reply_RequestGroupJoin::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3459,10 +3459,10 @@ const char* Reply_RequestGroupJoin::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3499,10 +3499,10 @@ uint8_t* Reply_RequestGroupJoin::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3521,12 +3521,12 @@ size_t Reply_RequestGroupJoin::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3550,8 +3550,8 @@ void Reply_RequestGroupJoin::MergeFrom(const Reply_RequestGroupJoin& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3574,8 +3574,8 @@ void Reply_RequestGroupJoin::InternalSwap(Reply_RequestGroupJoin* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -3600,9 +3600,9 @@ Msg_RequestGroupAdd::Msg_RequestGroupAdd(const Msg_RequestGroupAdd& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupAdd* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.keypackage_){from._impl_.keypackage_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_keypackage_){from._impl_.a_keypackage_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3614,9 +3614,9 @@ inline void Msg_RequestGroupAdd::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.keypackage_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_keypackage_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -3632,9 +3632,9 @@ Msg_RequestGroupAdd::~Msg_RequestGroupAdd() {
 
 inline void Msg_RequestGroupAdd::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
-  _impl_.keypackage_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_keypackage_.~RepeatedField();
 }
 
 void Msg_RequestGroupAdd::SetCachedSize(int size) const {
@@ -3647,9 +3647,9 @@ void Msg_RequestGroupAdd::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
-  _impl_.keypackage_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_keypackage_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -3659,50 +3659,50 @@ const char* Msg_RequestGroupAdd::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 keyPackage = 3;
+      // repeated uint32 a_keyPackage = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_keypackage(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_keypackage(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_keypackage(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_keypackage(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3736,22 +3736,22 @@ uint8_t* Msg_RequestGroupAdd::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 keyPackage = 3;
-  for (int i = 0, n = this->_internal_keypackage_size(); i < n; i++) {
+  // repeated uint32 a_keyPackage = 3;
+  for (int i = 0, n = this->_internal_a_keypackage_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_keypackage(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_keypackage(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3770,30 +3770,30 @@ size_t Msg_RequestGroupAdd::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 keyPackage = 3;
+  // repeated uint32 a_keyPackage = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.keypackage_);
+      UInt32Size(this->_impl_.a_keypackage_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_keypackage_size());
+                  ::_pbi::FromIntSize(this->_internal_a_keypackage_size());
     total_size += data_size;
   }
 
@@ -3818,9 +3818,9 @@ void Msg_RequestGroupAdd::MergeFrom(const Msg_RequestGroupAdd& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.keypackage_.MergeFrom(from._impl_.keypackage_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_keypackage_.MergeFrom(from._impl_.a_keypackage_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -3838,9 +3838,9 @@ bool Msg_RequestGroupAdd::IsInitialized() const {
 void Msg_RequestGroupAdd::InternalSwap(Msg_RequestGroupAdd* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.keypackage_.InternalSwap(&other->_impl_.keypackage_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_keypackage_.InternalSwap(&other->_impl_.a_keypackage_);
 }
 
 std::string Msg_RequestGroupAdd::GetTypeName() const {
@@ -3853,7 +3853,7 @@ std::string Msg_RequestGroupAdd::GetTypeName() const {
 class Reply_RequestGroupAdd::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupAdd>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -3870,15 +3870,15 @@ Reply_RequestGroupAdd::Reply_RequestGroupAdd(const Reply_RequestGroupAdd& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd)
@@ -3891,11 +3891,11 @@ inline void Reply_RequestGroupAdd::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3910,7 +3910,7 @@ Reply_RequestGroupAdd::~Reply_RequestGroupAdd() {
 
 inline void Reply_RequestGroupAdd::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupAdd::SetCachedSize(int size) const {
@@ -3925,7 +3925,7 @@ void Reply_RequestGroupAdd::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3938,10 +3938,10 @@ const char* Reply_RequestGroupAdd::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3978,10 +3978,10 @@ uint8_t* Reply_RequestGroupAdd::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4000,12 +4000,12 @@ size_t Reply_RequestGroupAdd::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4029,8 +4029,8 @@ void Reply_RequestGroupAdd::MergeFrom(const Reply_RequestGroupAdd& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4053,8 +4053,8 @@ void Reply_RequestGroupAdd::InternalSwap(Reply_RequestGroupAdd* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -4079,9 +4079,9 @@ Msg_RequestGroupProposeAdd::Msg_RequestGroupProposeAdd(const Msg_RequestGroupPro
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupProposeAdd* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.keypackage_){from._impl_.keypackage_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_keypackage_){from._impl_.a_keypackage_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4093,9 +4093,9 @@ inline void Msg_RequestGroupProposeAdd::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.keypackage_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_keypackage_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -4111,9 +4111,9 @@ Msg_RequestGroupProposeAdd::~Msg_RequestGroupProposeAdd() {
 
 inline void Msg_RequestGroupProposeAdd::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
-  _impl_.keypackage_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_keypackage_.~RepeatedField();
 }
 
 void Msg_RequestGroupProposeAdd::SetCachedSize(int size) const {
@@ -4126,9 +4126,9 @@ void Msg_RequestGroupProposeAdd::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
-  _impl_.keypackage_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_keypackage_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -4138,50 +4138,50 @@ const char* Msg_RequestGroupProposeAdd::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 keyPackage = 3;
+      // repeated uint32 a_keyPackage = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_keypackage(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_keypackage(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_keypackage(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_keypackage(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4215,22 +4215,22 @@ uint8_t* Msg_RequestGroupProposeAdd::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 keyPackage = 3;
-  for (int i = 0, n = this->_internal_keypackage_size(); i < n; i++) {
+  // repeated uint32 a_keyPackage = 3;
+  for (int i = 0, n = this->_internal_a_keypackage_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_keypackage(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_keypackage(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4249,30 +4249,30 @@ size_t Msg_RequestGroupProposeAdd::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 keyPackage = 3;
+  // repeated uint32 a_keyPackage = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.keypackage_);
+      UInt32Size(this->_impl_.a_keypackage_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_keypackage_size());
+                  ::_pbi::FromIntSize(this->_internal_a_keypackage_size());
     total_size += data_size;
   }
 
@@ -4297,9 +4297,9 @@ void Msg_RequestGroupProposeAdd::MergeFrom(const Msg_RequestGroupProposeAdd& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.keypackage_.MergeFrom(from._impl_.keypackage_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_keypackage_.MergeFrom(from._impl_.a_keypackage_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -4317,9 +4317,9 @@ bool Msg_RequestGroupProposeAdd::IsInitialized() const {
 void Msg_RequestGroupProposeAdd::InternalSwap(Msg_RequestGroupProposeAdd* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.keypackage_.InternalSwap(&other->_impl_.keypackage_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_keypackage_.InternalSwap(&other->_impl_.a_keypackage_);
 }
 
 std::string Msg_RequestGroupProposeAdd::GetTypeName() const {
@@ -4332,18 +4332,18 @@ std::string Msg_RequestGroupProposeAdd::GetTypeName() const {
 class Reply_RequestGroupProposeAdd::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupProposeAdd>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGroupProposeAdd* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGroupProposeAdd* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGroupProposeAdd::_Internal::result(const Reply_RequestGroupProposeAdd* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGroupProposeAdd::_Internal::a_result(const Reply_RequestGroupProposeAdd* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGroupProposeAdd::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGroupProposeAdd::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGroupProposeAdd::Reply_RequestGroupProposeAdd(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4358,11 +4358,11 @@ Reply_RequestGroupProposeAdd::Reply_RequestGroupProposeAdd(const Reply_RequestGr
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd)
 }
@@ -4374,7 +4374,7 @@ inline void Reply_RequestGroupProposeAdd::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -4389,7 +4389,7 @@ Reply_RequestGroupProposeAdd::~Reply_RequestGroupProposeAdd() {
 
 inline void Reply_RequestGroupProposeAdd::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGroupProposeAdd::SetCachedSize(int size) const {
@@ -4404,8 +4404,8 @@ void Reply_RequestGroupProposeAdd::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -4418,10 +4418,10 @@ const char* Reply_RequestGroupProposeAdd::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4457,11 +4457,11 @@ uint8_t* Reply_RequestGroupProposeAdd::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4480,12 +4480,12 @@ size_t Reply_RequestGroupProposeAdd::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4509,9 +4509,9 @@ void Reply_RequestGroupProposeAdd::MergeFrom(const Reply_RequestGroupProposeAdd&
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4531,7 +4531,7 @@ void Reply_RequestGroupProposeAdd::InternalSwap(Reply_RequestGroupProposeAdd* ot
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGroupProposeAdd::GetTypeName() const {
@@ -4555,9 +4555,9 @@ Msg_RequestGroupRemove::Msg_RequestGroupRemove(const Msg_RequestGroupRemove& fro
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupRemove* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.remidentifier_){from._impl_.remidentifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_remidentifier_){from._impl_.a_remidentifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4569,9 +4569,9 @@ inline void Msg_RequestGroupRemove::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.remidentifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_remidentifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -4587,9 +4587,9 @@ Msg_RequestGroupRemove::~Msg_RequestGroupRemove() {
 
 inline void Msg_RequestGroupRemove::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
-  _impl_.remidentifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_remidentifier_.~RepeatedField();
 }
 
 void Msg_RequestGroupRemove::SetCachedSize(int size) const {
@@ -4602,9 +4602,9 @@ void Msg_RequestGroupRemove::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
-  _impl_.remidentifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_remidentifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -4614,50 +4614,50 @@ const char* Msg_RequestGroupRemove::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 remIdentifier = 3;
+      // repeated uint32 a_remIdentifier = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_remidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_remidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_remidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_remidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4691,22 +4691,22 @@ uint8_t* Msg_RequestGroupRemove::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 remIdentifier = 3;
-  for (int i = 0, n = this->_internal_remidentifier_size(); i < n; i++) {
+  // repeated uint32 a_remIdentifier = 3;
+  for (int i = 0, n = this->_internal_a_remidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_remidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_remidentifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4725,30 +4725,30 @@ size_t Msg_RequestGroupRemove::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 remIdentifier = 3;
+  // repeated uint32 a_remIdentifier = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.remidentifier_);
+      UInt32Size(this->_impl_.a_remidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_remidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_remidentifier_size());
     total_size += data_size;
   }
 
@@ -4773,9 +4773,9 @@ void Msg_RequestGroupRemove::MergeFrom(const Msg_RequestGroupRemove& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.remidentifier_.MergeFrom(from._impl_.remidentifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_remidentifier_.MergeFrom(from._impl_.a_remidentifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -4793,9 +4793,9 @@ bool Msg_RequestGroupRemove::IsInitialized() const {
 void Msg_RequestGroupRemove::InternalSwap(Msg_RequestGroupRemove* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.remidentifier_.InternalSwap(&other->_impl_.remidentifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_remidentifier_.InternalSwap(&other->_impl_.a_remidentifier_);
 }
 
 std::string Msg_RequestGroupRemove::GetTypeName() const {
@@ -4808,7 +4808,7 @@ std::string Msg_RequestGroupRemove::GetTypeName() const {
 class Reply_RequestGroupRemove::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupRemove>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -4825,15 +4825,15 @@ Reply_RequestGroupRemove::Reply_RequestGroupRemove(const Reply_RequestGroupRemov
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove)
@@ -4846,11 +4846,11 @@ inline void Reply_RequestGroupRemove::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4865,7 +4865,7 @@ Reply_RequestGroupRemove::~Reply_RequestGroupRemove() {
 
 inline void Reply_RequestGroupRemove::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupRemove::SetCachedSize(int size) const {
@@ -4880,7 +4880,7 @@ void Reply_RequestGroupRemove::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -4893,10 +4893,10 @@ const char* Reply_RequestGroupRemove::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -4933,10 +4933,10 @@ uint8_t* Reply_RequestGroupRemove::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4955,12 +4955,12 @@ size_t Reply_RequestGroupRemove::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4984,8 +4984,8 @@ void Reply_RequestGroupRemove::MergeFrom(const Reply_RequestGroupRemove& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5008,8 +5008,8 @@ void Reply_RequestGroupRemove::InternalSwap(Reply_RequestGroupRemove* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -5034,9 +5034,9 @@ Msg_RequestGroupProposeRemove::Msg_RequestGroupProposeRemove(const Msg_RequestGr
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupProposeRemove* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.remidentifier_){from._impl_.remidentifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_remidentifier_){from._impl_.a_remidentifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5048,9 +5048,9 @@ inline void Msg_RequestGroupProposeRemove::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.remidentifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_remidentifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -5066,9 +5066,9 @@ Msg_RequestGroupProposeRemove::~Msg_RequestGroupProposeRemove() {
 
 inline void Msg_RequestGroupProposeRemove::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
-  _impl_.remidentifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_remidentifier_.~RepeatedField();
 }
 
 void Msg_RequestGroupProposeRemove::SetCachedSize(int size) const {
@@ -5081,9 +5081,9 @@ void Msg_RequestGroupProposeRemove::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
-  _impl_.remidentifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_remidentifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -5093,50 +5093,50 @@ const char* Msg_RequestGroupProposeRemove::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 remIdentifier = 3;
+      // repeated uint32 a_remIdentifier = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_remidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_remidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_remidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_remidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5170,22 +5170,22 @@ uint8_t* Msg_RequestGroupProposeRemove::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 remIdentifier = 3;
-  for (int i = 0, n = this->_internal_remidentifier_size(); i < n; i++) {
+  // repeated uint32 a_remIdentifier = 3;
+  for (int i = 0, n = this->_internal_a_remidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_remidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_remidentifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5204,30 +5204,30 @@ size_t Msg_RequestGroupProposeRemove::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 remIdentifier = 3;
+  // repeated uint32 a_remIdentifier = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.remidentifier_);
+      UInt32Size(this->_impl_.a_remidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_remidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_remidentifier_size());
     total_size += data_size;
   }
 
@@ -5252,9 +5252,9 @@ void Msg_RequestGroupProposeRemove::MergeFrom(const Msg_RequestGroupProposeRemov
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.remidentifier_.MergeFrom(from._impl_.remidentifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_remidentifier_.MergeFrom(from._impl_.a_remidentifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -5272,9 +5272,9 @@ bool Msg_RequestGroupProposeRemove::IsInitialized() const {
 void Msg_RequestGroupProposeRemove::InternalSwap(Msg_RequestGroupProposeRemove* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.remidentifier_.InternalSwap(&other->_impl_.remidentifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_remidentifier_.InternalSwap(&other->_impl_.a_remidentifier_);
 }
 
 std::string Msg_RequestGroupProposeRemove::GetTypeName() const {
@@ -5287,18 +5287,18 @@ std::string Msg_RequestGroupProposeRemove::GetTypeName() const {
 class Reply_RequestGroupProposeRemove::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupProposeRemove>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGroupProposeRemove* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGroupProposeRemove* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGroupProposeRemove::_Internal::result(const Reply_RequestGroupProposeRemove* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGroupProposeRemove::_Internal::a_result(const Reply_RequestGroupProposeRemove* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGroupProposeRemove::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGroupProposeRemove::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGroupProposeRemove::Reply_RequestGroupProposeRemove(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -5313,11 +5313,11 @@ Reply_RequestGroupProposeRemove::Reply_RequestGroupProposeRemove(const Reply_Req
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove)
 }
@@ -5329,7 +5329,7 @@ inline void Reply_RequestGroupProposeRemove::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -5344,7 +5344,7 @@ Reply_RequestGroupProposeRemove::~Reply_RequestGroupProposeRemove() {
 
 inline void Reply_RequestGroupProposeRemove::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGroupProposeRemove::SetCachedSize(int size) const {
@@ -5359,8 +5359,8 @@ void Reply_RequestGroupProposeRemove::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -5373,10 +5373,10 @@ const char* Reply_RequestGroupProposeRemove::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5412,11 +5412,11 @@ uint8_t* Reply_RequestGroupProposeRemove::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5435,12 +5435,12 @@ size_t Reply_RequestGroupProposeRemove::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5464,9 +5464,9 @@ void Reply_RequestGroupProposeRemove::MergeFrom(const Reply_RequestGroupProposeR
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5486,7 +5486,7 @@ void Reply_RequestGroupProposeRemove::InternalSwap(Reply_RequestGroupProposeRemo
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGroupProposeRemove::GetTypeName() const {
@@ -5510,8 +5510,8 @@ Msg_RequestGroupClose::Msg_RequestGroupClose(const Msg_RequestGroupClose& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupClose* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5523,8 +5523,8 @@ inline void Msg_RequestGroupClose::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -5540,8 +5540,8 @@ Msg_RequestGroupClose::~Msg_RequestGroupClose() {
 
 inline void Msg_RequestGroupClose::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestGroupClose::SetCachedSize(int size) const {
@@ -5554,8 +5554,8 @@ void Msg_RequestGroupClose::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -5565,34 +5565,34 @@ const char* Msg_RequestGroupClose::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5626,16 +5626,16 @@ uint8_t* Msg_RequestGroupClose::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5654,21 +5654,21 @@ size_t Msg_RequestGroupClose::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -5693,8 +5693,8 @@ void Msg_RequestGroupClose::MergeFrom(const Msg_RequestGroupClose& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -5712,8 +5712,8 @@ bool Msg_RequestGroupClose::IsInitialized() const {
 void Msg_RequestGroupClose::InternalSwap(Msg_RequestGroupClose* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestGroupClose::GetTypeName() const {
@@ -5726,7 +5726,7 @@ std::string Msg_RequestGroupClose::GetTypeName() const {
 class Reply_RequestGroupClose::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupClose>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -5743,15 +5743,15 @@ Reply_RequestGroupClose::Reply_RequestGroupClose(const Reply_RequestGroupClose& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose)
@@ -5764,11 +5764,11 @@ inline void Reply_RequestGroupClose::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5783,7 +5783,7 @@ Reply_RequestGroupClose::~Reply_RequestGroupClose() {
 
 inline void Reply_RequestGroupClose::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupClose::SetCachedSize(int size) const {
@@ -5798,7 +5798,7 @@ void Reply_RequestGroupClose::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -5811,10 +5811,10 @@ const char* Reply_RequestGroupClose::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5851,10 +5851,10 @@ uint8_t* Reply_RequestGroupClose::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5873,12 +5873,12 @@ size_t Reply_RequestGroupClose::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5902,8 +5902,8 @@ void Reply_RequestGroupClose::MergeFrom(const Reply_RequestGroupClose& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5926,8 +5926,8 @@ void Reply_RequestGroupClose::InternalSwap(Reply_RequestGroupClose* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -5952,8 +5952,8 @@ Msg_RequestGroupDetails::Msg_RequestGroupDetails(const Msg_RequestGroupDetails& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGroupDetails* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5965,8 +5965,8 @@ inline void Msg_RequestGroupDetails::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -5982,8 +5982,8 @@ Msg_RequestGroupDetails::~Msg_RequestGroupDetails() {
 
 inline void Msg_RequestGroupDetails::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestGroupDetails::SetCachedSize(int size) const {
@@ -5996,8 +5996,8 @@ void Msg_RequestGroupDetails::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -6007,34 +6007,34 @@ const char* Msg_RequestGroupDetails::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6068,16 +6068,16 @@ uint8_t* Msg_RequestGroupDetails::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6096,21 +6096,21 @@ size_t Msg_RequestGroupDetails::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -6135,8 +6135,8 @@ void Msg_RequestGroupDetails::MergeFrom(const Msg_RequestGroupDetails& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -6154,8 +6154,8 @@ bool Msg_RequestGroupDetails::IsInitialized() const {
 void Msg_RequestGroupDetails::InternalSwap(Msg_RequestGroupDetails* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestGroupDetails::GetTypeName() const {
@@ -6168,7 +6168,7 @@ std::string Msg_RequestGroupDetails::GetTypeName() const {
 class Reply_RequestGroupDetails::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGroupDetails>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -6185,15 +6185,15 @@ Reply_RequestGroupDetails::Reply_RequestGroupDetails(const Reply_RequestGroupDet
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails)
@@ -6206,11 +6206,11 @@ inline void Reply_RequestGroupDetails::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -6225,7 +6225,7 @@ Reply_RequestGroupDetails::~Reply_RequestGroupDetails() {
 
 inline void Reply_RequestGroupDetails::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestGroupDetails::SetCachedSize(int size) const {
@@ -6240,7 +6240,7 @@ void Reply_RequestGroupDetails::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -6253,10 +6253,10 @@ const char* Reply_RequestGroupDetails::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -6293,10 +6293,10 @@ uint8_t* Reply_RequestGroupDetails::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6315,12 +6315,12 @@ size_t Reply_RequestGroupDetails::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6344,8 +6344,8 @@ void Reply_RequestGroupDetails::MergeFrom(const Reply_RequestGroupDetails& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6368,8 +6368,8 @@ void Reply_RequestGroupDetails::InternalSwap(Reply_RequestGroupDetails* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -6394,9 +6394,9 @@ Msg_RequestSend::Msg_RequestSend(const Msg_RequestSend& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestSend* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.message_){from._impl_.message_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_message_){from._impl_.a_message_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6408,9 +6408,9 @@ inline void Msg_RequestSend::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.message_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_message_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -6426,9 +6426,9 @@ Msg_RequestSend::~Msg_RequestSend() {
 
 inline void Msg_RequestSend::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
-  _impl_.message_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_message_.~RepeatedField();
 }
 
 void Msg_RequestSend::SetCachedSize(int size) const {
@@ -6441,9 +6441,9 @@ void Msg_RequestSend::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
-  _impl_.message_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_message_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -6453,50 +6453,50 @@ const char* Msg_RequestSend::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 message = 3;
+      // repeated uint32 a_message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_message(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_message(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6530,22 +6530,22 @@ uint8_t* Msg_RequestSend::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 message = 3;
-  for (int i = 0, n = this->_internal_message_size(); i < n; i++) {
+  // repeated uint32 a_message = 3;
+  for (int i = 0, n = this->_internal_a_message_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_message(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_message(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6564,30 +6564,30 @@ size_t Msg_RequestSend::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 message = 3;
+  // repeated uint32 a_message = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.message_);
+      UInt32Size(this->_impl_.a_message_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_message_size());
+                  ::_pbi::FromIntSize(this->_internal_a_message_size());
     total_size += data_size;
   }
 
@@ -6612,9 +6612,9 @@ void Msg_RequestSend::MergeFrom(const Msg_RequestSend& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.message_.MergeFrom(from._impl_.message_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_message_.MergeFrom(from._impl_.a_message_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -6632,9 +6632,9 @@ bool Msg_RequestSend::IsInitialized() const {
 void Msg_RequestSend::InternalSwap(Msg_RequestSend* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.message_.InternalSwap(&other->_impl_.message_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_message_.InternalSwap(&other->_impl_.a_message_);
 }
 
 std::string Msg_RequestSend::GetTypeName() const {
@@ -6647,18 +6647,18 @@ std::string Msg_RequestSend::GetTypeName() const {
 class Reply_RequestSend::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestSend>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestSend* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestSend* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestSend::_Internal::result(const Reply_RequestSend* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestSend::_Internal::a_result(const Reply_RequestSend* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestSend::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestSend::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestSend::Reply_RequestSend(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -6673,11 +6673,11 @@ Reply_RequestSend::Reply_RequestSend(const Reply_RequestSend& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend)
 }
@@ -6689,7 +6689,7 @@ inline void Reply_RequestSend::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -6704,7 +6704,7 @@ Reply_RequestSend::~Reply_RequestSend() {
 
 inline void Reply_RequestSend::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestSend::SetCachedSize(int size) const {
@@ -6719,8 +6719,8 @@ void Reply_RequestSend::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -6733,10 +6733,10 @@ const char* Reply_RequestSend::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6772,11 +6772,11 @@ uint8_t* Reply_RequestSend::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6795,12 +6795,12 @@ size_t Reply_RequestSend::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6824,9 +6824,9 @@ void Reply_RequestSend::MergeFrom(const Reply_RequestSend& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6846,7 +6846,7 @@ void Reply_RequestSend::InternalSwap(Reply_RequestSend* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestSend::GetTypeName() const {
@@ -6870,8 +6870,8 @@ Msg_RequestReceive::Msg_RequestReceive(const Msg_RequestReceive& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestReceive* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.message_){from._impl_.message_}
+      decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_message_){from._impl_.a_message_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6883,8 +6883,8 @@ inline void Msg_RequestReceive::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.message_){arena}
+      decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_message_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -6900,8 +6900,8 @@ Msg_RequestReceive::~Msg_RequestReceive() {
 
 inline void Msg_RequestReceive::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.identifier_.~RepeatedField();
-  _impl_.message_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_message_.~RepeatedField();
 }
 
 void Msg_RequestReceive::SetCachedSize(int size) const {
@@ -6914,8 +6914,8 @@ void Msg_RequestReceive::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.identifier_.Clear();
-  _impl_.message_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_message_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -6925,34 +6925,34 @@ const char* Msg_RequestReceive::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 identifier = 1;
+      // repeated uint32 a_identifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 message = 2;
+      // repeated uint32 a_message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_message(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_message(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6986,16 +6986,16 @@ uint8_t* Msg_RequestReceive::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 identifier = 1;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 1;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 message = 2;
-  for (int i = 0, n = this->_internal_message_size(); i < n; i++) {
+  // repeated uint32 a_message = 2;
+  for (int i = 0, n = this->_internal_a_message_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_message(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_message(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7014,21 +7014,21 @@ size_t Msg_RequestReceive::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 identifier = 1;
+  // repeated uint32 a_identifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 message = 2;
+  // repeated uint32 a_message = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.message_);
+      UInt32Size(this->_impl_.a_message_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_message_size());
+                  ::_pbi::FromIntSize(this->_internal_a_message_size());
     total_size += data_size;
   }
 
@@ -7053,8 +7053,8 @@ void Msg_RequestReceive::MergeFrom(const Msg_RequestReceive& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.message_.MergeFrom(from._impl_.message_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_message_.MergeFrom(from._impl_.a_message_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -7072,8 +7072,8 @@ bool Msg_RequestReceive::IsInitialized() const {
 void Msg_RequestReceive::InternalSwap(Msg_RequestReceive* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.message_.InternalSwap(&other->_impl_.message_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_message_.InternalSwap(&other->_impl_.a_message_);
 }
 
 std::string Msg_RequestReceive::GetTypeName() const {
@@ -7086,7 +7086,7 @@ std::string Msg_RequestReceive::GetTypeName() const {
 class Reply_RequestReceive::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestReceive>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -7106,15 +7106,15 @@ Reply_RequestReceive::Reply_RequestReceive(const Reply_RequestReceive& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive)
@@ -7127,11 +7127,11 @@ inline void Reply_RequestReceive::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -7146,7 +7146,7 @@ Reply_RequestReceive::~Reply_RequestReceive() {
 
 inline void Reply_RequestReceive::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestReceive::SetCachedSize(int size) const {
@@ -7161,7 +7161,7 @@ void Reply_RequestReceive::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -7174,10 +7174,10 @@ const char* Reply_RequestReceive::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes result = 1;
+      // required bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -7214,10 +7214,10 @@ uint8_t* Reply_RequestReceive::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes result = 1;
+  // required bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7232,11 +7232,11 @@ size_t Reply_RequestReceive::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive)
   size_t total_size = 0;
 
-  // required bytes result = 1;
-  if (_internal_has_result()) {
+  // required bytes a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -7263,8 +7263,8 @@ void Reply_RequestReceive::MergeFrom(const Reply_RequestReceive& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -7288,8 +7288,8 @@ void Reply_RequestReceive::InternalSwap(Reply_RequestReceive* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -7314,8 +7314,8 @@ Msg_RequestHasPendingProposals::Msg_RequestHasPendingProposals(const Msg_Request
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestHasPendingProposals* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -7327,8 +7327,8 @@ inline void Msg_RequestHasPendingProposals::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -7344,8 +7344,8 @@ Msg_RequestHasPendingProposals::~Msg_RequestHasPendingProposals() {
 
 inline void Msg_RequestHasPendingProposals::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestHasPendingProposals::SetCachedSize(int size) const {
@@ -7358,8 +7358,8 @@ void Msg_RequestHasPendingProposals::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -7369,34 +7369,34 @@ const char* Msg_RequestHasPendingProposals::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7430,16 +7430,16 @@ uint8_t* Msg_RequestHasPendingProposals::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7458,21 +7458,21 @@ size_t Msg_RequestHasPendingProposals::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -7497,8 +7497,8 @@ void Msg_RequestHasPendingProposals::MergeFrom(const Msg_RequestHasPendingPropos
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -7516,8 +7516,8 @@ bool Msg_RequestHasPendingProposals::IsInitialized() const {
 void Msg_RequestHasPendingProposals::InternalSwap(Msg_RequestHasPendingProposals* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestHasPendingProposals::GetTypeName() const {
@@ -7530,7 +7530,7 @@ std::string Msg_RequestHasPendingProposals::GetTypeName() const {
 class Reply_RequestHasPendingProposals::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestHasPendingProposals>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -7550,10 +7550,10 @@ Reply_RequestHasPendingProposals::Reply_RequestHasPendingProposals(const Reply_R
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.result_ = from._impl_.result_;
+  _this->_impl_.a_result_ = from._impl_.a_result_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals)
 }
 
@@ -7564,7 +7564,7 @@ inline void Reply_RequestHasPendingProposals::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){false}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -7591,7 +7591,7 @@ void Reply_RequestHasPendingProposals::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.result_ = false;
+  _impl_.a_result_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -7603,11 +7603,11 @@ const char* Reply_RequestHasPendingProposals::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool result = 1;
+      // required bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_result(&has_bits);
-          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_result(&has_bits);
+          _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7643,10 +7643,10 @@ uint8_t* Reply_RequestHasPendingProposals::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool result = 1;
+  // required bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_result(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7661,8 +7661,8 @@ size_t Reply_RequestHasPendingProposals::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals)
   size_t total_size = 0;
 
-  // required bool result = 1;
-  if (_internal_has_result()) {
+  // required bool a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -7690,8 +7690,8 @@ void Reply_RequestHasPendingProposals::MergeFrom(const Reply_RequestHasPendingPr
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -7712,7 +7712,7 @@ void Reply_RequestHasPendingProposals::InternalSwap(Reply_RequestHasPendingPropo
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestHasPendingProposals::GetTypeName() const {
@@ -7736,8 +7736,8 @@ Msg_RequestClearPendingProposals::Msg_RequestClearPendingProposals(const Msg_Req
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestClearPendingProposals* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -7749,8 +7749,8 @@ inline void Msg_RequestClearPendingProposals::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -7766,8 +7766,8 @@ Msg_RequestClearPendingProposals::~Msg_RequestClearPendingProposals() {
 
 inline void Msg_RequestClearPendingProposals::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestClearPendingProposals::SetCachedSize(int size) const {
@@ -7780,8 +7780,8 @@ void Msg_RequestClearPendingProposals::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -7791,34 +7791,34 @@ const char* Msg_RequestClearPendingProposals::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7852,16 +7852,16 @@ uint8_t* Msg_RequestClearPendingProposals::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7880,21 +7880,21 @@ size_t Msg_RequestClearPendingProposals::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -7919,8 +7919,8 @@ void Msg_RequestClearPendingProposals::MergeFrom(const Msg_RequestClearPendingPr
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -7938,8 +7938,8 @@ bool Msg_RequestClearPendingProposals::IsInitialized() const {
 void Msg_RequestClearPendingProposals::InternalSwap(Msg_RequestClearPendingProposals* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestClearPendingProposals::GetTypeName() const {
@@ -7952,7 +7952,7 @@ std::string Msg_RequestClearPendingProposals::GetTypeName() const {
 class Reply_RequestClearPendingProposals::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestClearPendingProposals>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -7972,10 +7972,10 @@ Reply_RequestClearPendingProposals::Reply_RequestClearPendingProposals(const Rep
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.result_ = from._impl_.result_;
+  _this->_impl_.a_result_ = from._impl_.a_result_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals)
 }
 
@@ -7986,7 +7986,7 @@ inline void Reply_RequestClearPendingProposals::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){false}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -8013,7 +8013,7 @@ void Reply_RequestClearPendingProposals::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.result_ = false;
+  _impl_.a_result_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -8025,11 +8025,11 @@ const char* Reply_RequestClearPendingProposals::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool result = 1;
+      // required bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_result(&has_bits);
-          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_result(&has_bits);
+          _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8065,10 +8065,10 @@ uint8_t* Reply_RequestClearPendingProposals::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool result = 1;
+  // required bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_result(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8083,8 +8083,8 @@ size_t Reply_RequestClearPendingProposals::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals)
   size_t total_size = 0;
 
-  // required bool result = 1;
-  if (_internal_has_result()) {
+  // required bool a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -8112,8 +8112,8 @@ void Reply_RequestClearPendingProposals::MergeFrom(const Reply_RequestClearPendi
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -8134,7 +8134,7 @@ void Reply_RequestClearPendingProposals::InternalSwap(Reply_RequestClearPendingP
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestClearPendingProposals::GetTypeName() const {
@@ -8158,8 +8158,8 @@ Msg_RequestHasPendingCommit::Msg_RequestHasPendingCommit(const Msg_RequestHasPen
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestHasPendingCommit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -8171,8 +8171,8 @@ inline void Msg_RequestHasPendingCommit::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -8188,8 +8188,8 @@ Msg_RequestHasPendingCommit::~Msg_RequestHasPendingCommit() {
 
 inline void Msg_RequestHasPendingCommit::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestHasPendingCommit::SetCachedSize(int size) const {
@@ -8202,8 +8202,8 @@ void Msg_RequestHasPendingCommit::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -8213,34 +8213,34 @@ const char* Msg_RequestHasPendingCommit::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8274,16 +8274,16 @@ uint8_t* Msg_RequestHasPendingCommit::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8302,21 +8302,21 @@ size_t Msg_RequestHasPendingCommit::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -8341,8 +8341,8 @@ void Msg_RequestHasPendingCommit::MergeFrom(const Msg_RequestHasPendingCommit& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -8360,8 +8360,8 @@ bool Msg_RequestHasPendingCommit::IsInitialized() const {
 void Msg_RequestHasPendingCommit::InternalSwap(Msg_RequestHasPendingCommit* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestHasPendingCommit::GetTypeName() const {
@@ -8374,7 +8374,7 @@ std::string Msg_RequestHasPendingCommit::GetTypeName() const {
 class Reply_RequestHasPendingCommit::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestHasPendingCommit>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -8394,10 +8394,10 @@ Reply_RequestHasPendingCommit::Reply_RequestHasPendingCommit(const Reply_Request
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.result_ = from._impl_.result_;
+  _this->_impl_.a_result_ = from._impl_.a_result_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit)
 }
 
@@ -8408,7 +8408,7 @@ inline void Reply_RequestHasPendingCommit::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){false}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -8435,7 +8435,7 @@ void Reply_RequestHasPendingCommit::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.result_ = false;
+  _impl_.a_result_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -8447,11 +8447,11 @@ const char* Reply_RequestHasPendingCommit::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool result = 1;
+      // required bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_result(&has_bits);
-          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_result(&has_bits);
+          _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8487,10 +8487,10 @@ uint8_t* Reply_RequestHasPendingCommit::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool result = 1;
+  // required bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_result(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8505,8 +8505,8 @@ size_t Reply_RequestHasPendingCommit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit)
   size_t total_size = 0;
 
-  // required bool result = 1;
-  if (_internal_has_result()) {
+  // required bool a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -8534,8 +8534,8 @@ void Reply_RequestHasPendingCommit::MergeFrom(const Reply_RequestHasPendingCommi
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -8556,7 +8556,7 @@ void Reply_RequestHasPendingCommit::InternalSwap(Reply_RequestHasPendingCommit* 
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestHasPendingCommit::GetTypeName() const {
@@ -8580,8 +8580,8 @@ Msg_RequestClearPendingCommit::Msg_RequestClearPendingCommit(const Msg_RequestCl
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestClearPendingCommit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -8593,8 +8593,8 @@ inline void Msg_RequestClearPendingCommit::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -8610,8 +8610,8 @@ Msg_RequestClearPendingCommit::~Msg_RequestClearPendingCommit() {
 
 inline void Msg_RequestClearPendingCommit::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestClearPendingCommit::SetCachedSize(int size) const {
@@ -8624,8 +8624,8 @@ void Msg_RequestClearPendingCommit::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -8635,34 +8635,34 @@ const char* Msg_RequestClearPendingCommit::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8696,16 +8696,16 @@ uint8_t* Msg_RequestClearPendingCommit::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8724,21 +8724,21 @@ size_t Msg_RequestClearPendingCommit::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -8763,8 +8763,8 @@ void Msg_RequestClearPendingCommit::MergeFrom(const Msg_RequestClearPendingCommi
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -8782,8 +8782,8 @@ bool Msg_RequestClearPendingCommit::IsInitialized() const {
 void Msg_RequestClearPendingCommit::InternalSwap(Msg_RequestClearPendingCommit* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestClearPendingCommit::GetTypeName() const {
@@ -8796,7 +8796,7 @@ std::string Msg_RequestClearPendingCommit::GetTypeName() const {
 class Reply_RequestClearPendingCommit::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestClearPendingCommit>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -8816,10 +8816,10 @@ Reply_RequestClearPendingCommit::Reply_RequestClearPendingCommit(const Reply_Req
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.result_ = from._impl_.result_;
+  _this->_impl_.a_result_ = from._impl_.a_result_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit)
 }
 
@@ -8830,7 +8830,7 @@ inline void Reply_RequestClearPendingCommit::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){false}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -8857,7 +8857,7 @@ void Reply_RequestClearPendingCommit::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.result_ = false;
+  _impl_.a_result_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -8869,11 +8869,11 @@ const char* Reply_RequestClearPendingCommit::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool result = 1;
+      // required bool a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_result(&has_bits);
-          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_result(&has_bits);
+          _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8909,10 +8909,10 @@ uint8_t* Reply_RequestClearPendingCommit::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool result = 1;
+  // required bool a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_result(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8927,8 +8927,8 @@ size_t Reply_RequestClearPendingCommit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit)
   size_t total_size = 0;
 
-  // required bool result = 1;
-  if (_internal_has_result()) {
+  // required bool a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -8956,8 +8956,8 @@ void Reply_RequestClearPendingCommit::MergeFrom(const Reply_RequestClearPendingC
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -8978,7 +8978,7 @@ void Reply_RequestClearPendingCommit::InternalSwap(Reply_RequestClearPendingComm
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestClearPendingCommit::GetTypeName() const {
@@ -9002,8 +9002,8 @@ Msg_RequestApplyPendingCommit::Msg_RequestApplyPendingCommit(const Msg_RequestAp
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestApplyPendingCommit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
+      decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -9015,8 +9015,8 @@ inline void Msg_RequestApplyPendingCommit::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
+      decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -9032,8 +9032,8 @@ Msg_RequestApplyPendingCommit::~Msg_RequestApplyPendingCommit() {
 
 inline void Msg_RequestApplyPendingCommit::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
 }
 
 void Msg_RequestApplyPendingCommit::SetCachedSize(int size) const {
@@ -9046,8 +9046,8 @@ void Msg_RequestApplyPendingCommit::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -9057,34 +9057,34 @@ const char* Msg_RequestApplyPendingCommit::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9118,16 +9118,16 @@ uint8_t* Msg_RequestApplyPendingCommit::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9146,21 +9146,21 @@ size_t Msg_RequestApplyPendingCommit::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
@@ -9185,8 +9185,8 @@ void Msg_RequestApplyPendingCommit::MergeFrom(const Msg_RequestApplyPendingCommi
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -9204,8 +9204,8 @@ bool Msg_RequestApplyPendingCommit::IsInitialized() const {
 void Msg_RequestApplyPendingCommit::InternalSwap(Msg_RequestApplyPendingCommit* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
 }
 
 std::string Msg_RequestApplyPendingCommit::GetTypeName() const {
@@ -9218,7 +9218,7 @@ std::string Msg_RequestApplyPendingCommit::GetTypeName() const {
 class Reply_RequestApplyPendingCommit::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestApplyPendingCommit>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -9238,15 +9238,15 @@ Reply_RequestApplyPendingCommit::Reply_RequestApplyPendingCommit(const Reply_Req
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit)
@@ -9259,11 +9259,11 @@ inline void Reply_RequestApplyPendingCommit::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -9278,7 +9278,7 @@ Reply_RequestApplyPendingCommit::~Reply_RequestApplyPendingCommit() {
 
 inline void Reply_RequestApplyPendingCommit::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestApplyPendingCommit::SetCachedSize(int size) const {
@@ -9293,7 +9293,7 @@ void Reply_RequestApplyPendingCommit::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -9306,10 +9306,10 @@ const char* Reply_RequestApplyPendingCommit::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes result = 1;
+      // required bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -9346,10 +9346,10 @@ uint8_t* Reply_RequestApplyPendingCommit::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes result = 1;
+  // required bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9364,11 +9364,11 @@ size_t Reply_RequestApplyPendingCommit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit)
   size_t total_size = 0;
 
-  // required bytes result = 1;
-  if (_internal_has_result()) {
+  // required bytes a_result = 1;
+  if (_internal_has_a_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -9395,8 +9395,8 @@ void Reply_RequestApplyPendingCommit::MergeFrom(const Reply_RequestApplyPendingC
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -9420,8 +9420,8 @@ void Reply_RequestApplyPendingCommit::InternalSwap(Reply_RequestApplyPendingComm
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -9435,7 +9435,7 @@ std::string Reply_RequestApplyPendingCommit::GetTypeName() const {
 class Msg_RequestExportSecret::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_RequestExportSecret>()._impl_._has_bits_);
-  static void set_has_len(HasBits* has_bits) {
+  static void set_has_a_len(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -9455,14 +9455,14 @@ Msg_RequestExportSecret::Msg_RequestExportSecret(const Msg_RequestExportSecret& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.groupidentifier_){from._impl_.groupidentifier_}
-    , decltype(_impl_.identifier_){from._impl_.identifier_}
-    , decltype(_impl_.label_){from._impl_.label_}
-    , decltype(_impl_.content_){from._impl_.content_}
-    , decltype(_impl_.len_){}};
+    , decltype(_impl_.a_groupidentifier_){from._impl_.a_groupidentifier_}
+    , decltype(_impl_.a_identifier_){from._impl_.a_identifier_}
+    , decltype(_impl_.a_label_){from._impl_.a_label_}
+    , decltype(_impl_.a_content_){from._impl_.a_content_}
+    , decltype(_impl_.a_len_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.len_ = from._impl_.len_;
+  _this->_impl_.a_len_ = from._impl_.a_len_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret)
 }
 
@@ -9473,11 +9473,11 @@ inline void Msg_RequestExportSecret::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.groupidentifier_){arena}
-    , decltype(_impl_.identifier_){arena}
-    , decltype(_impl_.label_){arena}
-    , decltype(_impl_.content_){arena}
-    , decltype(_impl_.len_){uint64_t{0u}}
+    , decltype(_impl_.a_groupidentifier_){arena}
+    , decltype(_impl_.a_identifier_){arena}
+    , decltype(_impl_.a_label_){arena}
+    , decltype(_impl_.a_content_){arena}
+    , decltype(_impl_.a_len_){uint64_t{0u}}
   };
 }
 
@@ -9492,10 +9492,10 @@ Msg_RequestExportSecret::~Msg_RequestExportSecret() {
 
 inline void Msg_RequestExportSecret::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.groupidentifier_.~RepeatedField();
-  _impl_.identifier_.~RepeatedField();
-  _impl_.label_.~RepeatedField();
-  _impl_.content_.~RepeatedField();
+  _impl_.a_groupidentifier_.~RepeatedField();
+  _impl_.a_identifier_.~RepeatedField();
+  _impl_.a_label_.~RepeatedField();
+  _impl_.a_content_.~RepeatedField();
 }
 
 void Msg_RequestExportSecret::SetCachedSize(int size) const {
@@ -9508,11 +9508,11 @@ void Msg_RequestExportSecret::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.groupidentifier_.Clear();
-  _impl_.identifier_.Clear();
-  _impl_.label_.Clear();
-  _impl_.content_.Clear();
-  _impl_.len_ = uint64_t{0u};
+  _impl_.a_groupidentifier_.Clear();
+  _impl_.a_identifier_.Clear();
+  _impl_.a_label_.Clear();
+  _impl_.a_content_.Clear();
+  _impl_.a_len_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -9524,75 +9524,75 @@ const char* Msg_RequestExportSecret::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 groupIdentifier = 1;
+      // repeated uint32 a_groupIdentifier = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_groupidentifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_groupidentifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_groupidentifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 identifier = 2;
+      // repeated uint32 a_identifier = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_identifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_identifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_identifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 label = 3;
+      // repeated uint32 a_label = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_label(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_label(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_label(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_label(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 content = 4;
+      // repeated uint32 a_content = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_content(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_content(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
         } else if (static_cast<uint8_t>(tag) == 34) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_content(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_content(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 len = 5;
+      // required uint64 a_len = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_len(&has_bits);
-          _impl_.len_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_len(&has_bits);
+          _impl_.a_len_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9627,35 +9627,35 @@ uint8_t* Msg_RequestExportSecret::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
-  for (int i = 0, n = this->_internal_groupidentifier_size(); i < n; i++) {
+  // repeated uint32 a_groupIdentifier = 1;
+  for (int i = 0, n = this->_internal_a_groupidentifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_groupidentifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_groupidentifier(i), target);
   }
 
-  // repeated uint32 identifier = 2;
-  for (int i = 0, n = this->_internal_identifier_size(); i < n; i++) {
+  // repeated uint32 a_identifier = 2;
+  for (int i = 0, n = this->_internal_a_identifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_identifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_identifier(i), target);
   }
 
-  // repeated uint32 label = 3;
-  for (int i = 0, n = this->_internal_label_size(); i < n; i++) {
+  // repeated uint32 a_label = 3;
+  for (int i = 0, n = this->_internal_a_label_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_label(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_label(i), target);
   }
 
-  // repeated uint32 content = 4;
-  for (int i = 0, n = this->_internal_content_size(); i < n; i++) {
+  // repeated uint32 a_content = 4;
+  for (int i = 0, n = this->_internal_a_content_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_content(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_content(i), target);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 len = 5;
+  // required uint64 a_len = 5;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_len(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_a_len(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9670,47 +9670,47 @@ size_t Msg_RequestExportSecret::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret)
   size_t total_size = 0;
 
-  // required uint64 len = 5;
-  if (_internal_has_len()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_len());
+  // required uint64 a_len = 5;
+  if (_internal_has_a_len()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_len());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 groupIdentifier = 1;
+  // repeated uint32 a_groupIdentifier = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.groupidentifier_);
+      UInt32Size(this->_impl_.a_groupidentifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_groupidentifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_groupidentifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 identifier = 2;
+  // repeated uint32 a_identifier = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.identifier_);
+      UInt32Size(this->_impl_.a_identifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_identifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_identifier_size());
     total_size += data_size;
   }
 
-  // repeated uint32 label = 3;
+  // repeated uint32 a_label = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.label_);
+      UInt32Size(this->_impl_.a_label_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_label_size());
+                  ::_pbi::FromIntSize(this->_internal_a_label_size());
     total_size += data_size;
   }
 
-  // repeated uint32 content = 4;
+  // repeated uint32 a_content = 4;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.content_);
+      UInt32Size(this->_impl_.a_content_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_content_size());
+                  ::_pbi::FromIntSize(this->_internal_a_content_size());
     total_size += data_size;
   }
 
@@ -9735,12 +9735,12 @@ void Msg_RequestExportSecret::MergeFrom(const Msg_RequestExportSecret& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.groupidentifier_.MergeFrom(from._impl_.groupidentifier_);
-  _this->_impl_.identifier_.MergeFrom(from._impl_.identifier_);
-  _this->_impl_.label_.MergeFrom(from._impl_.label_);
-  _this->_impl_.content_.MergeFrom(from._impl_.content_);
-  if (from._internal_has_len()) {
-    _this->_internal_set_len(from._internal_len());
+  _this->_impl_.a_groupidentifier_.MergeFrom(from._impl_.a_groupidentifier_);
+  _this->_impl_.a_identifier_.MergeFrom(from._impl_.a_identifier_);
+  _this->_impl_.a_label_.MergeFrom(from._impl_.a_label_);
+  _this->_impl_.a_content_.MergeFrom(from._impl_.a_content_);
+  if (from._internal_has_a_len()) {
+    _this->_internal_set_a_len(from._internal_a_len());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -9761,11 +9761,11 @@ void Msg_RequestExportSecret::InternalSwap(Msg_RequestExportSecret* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.groupidentifier_.InternalSwap(&other->_impl_.groupidentifier_);
-  _impl_.identifier_.InternalSwap(&other->_impl_.identifier_);
-  _impl_.label_.InternalSwap(&other->_impl_.label_);
-  _impl_.content_.InternalSwap(&other->_impl_.content_);
-  swap(_impl_.len_, other->_impl_.len_);
+  _impl_.a_groupidentifier_.InternalSwap(&other->_impl_.a_groupidentifier_);
+  _impl_.a_identifier_.InternalSwap(&other->_impl_.a_identifier_);
+  _impl_.a_label_.InternalSwap(&other->_impl_.a_label_);
+  _impl_.a_content_.InternalSwap(&other->_impl_.a_content_);
+  swap(_impl_.a_len_, other->_impl_.a_len_);
 }
 
 std::string Msg_RequestExportSecret::GetTypeName() const {
@@ -9778,7 +9778,7 @@ std::string Msg_RequestExportSecret::GetTypeName() const {
 class Reply_RequestExportSecret::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestExportSecret>()._impl_._has_bits_);
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
@@ -9795,15 +9795,15 @@ Reply_RequestExportSecret::Reply_RequestExportSecret(const Reply_RequestExportSe
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret)
@@ -9816,11 +9816,11 @@ inline void Reply_RequestExportSecret::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){}
+    , decltype(_impl_.a_result_){}
   };
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -9835,7 +9835,7 @@ Reply_RequestExportSecret::~Reply_RequestExportSecret() {
 
 inline void Reply_RequestExportSecret::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.result_.Destroy();
+  _impl_.a_result_.Destroy();
 }
 
 void Reply_RequestExportSecret::SetCachedSize(int size) const {
@@ -9850,7 +9850,7 @@ void Reply_RequestExportSecret::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.result_.ClearNonDefaultToEmpty();
+    _impl_.a_result_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -9863,10 +9863,10 @@ const char* Reply_RequestExportSecret::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes result = 1;
+      // optional bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -9903,10 +9903,10 @@ uint8_t* Reply_RequestExportSecret::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_result(), target);
+        1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9925,12 +9925,12 @@ size_t Reply_RequestExportSecret::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes result = 1;
+  // optional bytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9954,8 +9954,8 @@ void Reply_RequestExportSecret::MergeFrom(const Reply_RequestExportSecret& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_set_result(from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_set_a_result(from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -9978,8 +9978,8 @@ void Reply_RequestExportSecret::InternalSwap(Reply_RequestExportSecret* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
 }
 
@@ -10004,7 +10004,7 @@ Msg_RequestGetGroupIdentifier::Msg_RequestGetGroupIdentifier(const Msg_RequestGe
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGetGroupIdentifier* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){from._impl_.message_}
+      decltype(_impl_.a_message_){from._impl_.a_message_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -10016,7 +10016,7 @@ inline void Msg_RequestGetGroupIdentifier::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){arena}
+      decltype(_impl_.a_message_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -10032,7 +10032,7 @@ Msg_RequestGetGroupIdentifier::~Msg_RequestGetGroupIdentifier() {
 
 inline void Msg_RequestGetGroupIdentifier::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.~RepeatedField();
+  _impl_.a_message_.~RepeatedField();
 }
 
 void Msg_RequestGetGroupIdentifier::SetCachedSize(int size) const {
@@ -10045,7 +10045,7 @@ void Msg_RequestGetGroupIdentifier::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.Clear();
+  _impl_.a_message_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -10055,18 +10055,18 @@ const char* Msg_RequestGetGroupIdentifier::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 message = 1;
+      // repeated uint32 a_message = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_message(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_message(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10100,10 +10100,10 @@ uint8_t* Msg_RequestGetGroupIdentifier::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 message = 1;
-  for (int i = 0, n = this->_internal_message_size(); i < n; i++) {
+  // repeated uint32 a_message = 1;
+  for (int i = 0, n = this->_internal_a_message_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_message(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_message(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10122,12 +10122,12 @@ size_t Msg_RequestGetGroupIdentifier::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 message = 1;
+  // repeated uint32 a_message = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.message_);
+      UInt32Size(this->_impl_.a_message_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_message_size());
+                  ::_pbi::FromIntSize(this->_internal_a_message_size());
     total_size += data_size;
   }
 
@@ -10152,7 +10152,7 @@ void Msg_RequestGetGroupIdentifier::MergeFrom(const Msg_RequestGetGroupIdentifie
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.message_.MergeFrom(from._impl_.message_);
+  _this->_impl_.a_message_.MergeFrom(from._impl_.a_message_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -10170,7 +10170,7 @@ bool Msg_RequestGetGroupIdentifier::IsInitialized() const {
 void Msg_RequestGetGroupIdentifier::InternalSwap(Msg_RequestGetGroupIdentifier* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.message_.InternalSwap(&other->_impl_.message_);
+  _impl_.a_message_.InternalSwap(&other->_impl_.a_message_);
 }
 
 std::string Msg_RequestGetGroupIdentifier::GetTypeName() const {
@@ -10183,18 +10183,18 @@ std::string Msg_RequestGetGroupIdentifier::GetTypeName() const {
 class Reply_RequestGetGroupIdentifier::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGetGroupIdentifier>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGetGroupIdentifier* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGetGroupIdentifier* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGetGroupIdentifier::_Internal::result(const Reply_RequestGetGroupIdentifier* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGetGroupIdentifier::_Internal::a_result(const Reply_RequestGetGroupIdentifier* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGetGroupIdentifier::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGetGroupIdentifier::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGetGroupIdentifier::Reply_RequestGetGroupIdentifier(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -10209,11 +10209,11 @@ Reply_RequestGetGroupIdentifier::Reply_RequestGetGroupIdentifier(const Reply_Req
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier)
 }
@@ -10225,7 +10225,7 @@ inline void Reply_RequestGetGroupIdentifier::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -10240,7 +10240,7 @@ Reply_RequestGetGroupIdentifier::~Reply_RequestGetGroupIdentifier() {
 
 inline void Reply_RequestGetGroupIdentifier::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGetGroupIdentifier::SetCachedSize(int size) const {
@@ -10255,8 +10255,8 @@ void Reply_RequestGetGroupIdentifier::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -10269,10 +10269,10 @@ const char* Reply_RequestGetGroupIdentifier::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10308,11 +10308,11 @@ uint8_t* Reply_RequestGetGroupIdentifier::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10331,12 +10331,12 @@ size_t Reply_RequestGetGroupIdentifier::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10360,9 +10360,9 @@ void Reply_RequestGetGroupIdentifier::MergeFrom(const Reply_RequestGetGroupIdent
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -10382,7 +10382,7 @@ void Reply_RequestGetGroupIdentifier::InternalSwap(Reply_RequestGetGroupIdentifi
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGetGroupIdentifier::GetTypeName() const {
@@ -10406,7 +10406,7 @@ Msg_RequestGetGroupEpoch::Msg_RequestGetGroupEpoch(const Msg_RequestGetGroupEpoc
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RequestGetGroupEpoch* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){from._impl_.message_}
+      decltype(_impl_.a_message_){from._impl_.a_message_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -10418,7 +10418,7 @@ inline void Msg_RequestGetGroupEpoch::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_){arena}
+      decltype(_impl_.a_message_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -10434,7 +10434,7 @@ Msg_RequestGetGroupEpoch::~Msg_RequestGetGroupEpoch() {
 
 inline void Msg_RequestGetGroupEpoch::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_.~RepeatedField();
+  _impl_.a_message_.~RepeatedField();
 }
 
 void Msg_RequestGetGroupEpoch::SetCachedSize(int size) const {
@@ -10447,7 +10447,7 @@ void Msg_RequestGetGroupEpoch::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_.Clear();
+  _impl_.a_message_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -10457,18 +10457,18 @@ const char* Msg_RequestGetGroupEpoch::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 message = 1;
+      // repeated uint32 a_message = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_message(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_message(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_message(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10502,10 +10502,10 @@ uint8_t* Msg_RequestGetGroupEpoch::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 message = 1;
-  for (int i = 0, n = this->_internal_message_size(); i < n; i++) {
+  // repeated uint32 a_message = 1;
+  for (int i = 0, n = this->_internal_a_message_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_message(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_message(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10524,12 +10524,12 @@ size_t Msg_RequestGetGroupEpoch::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 message = 1;
+  // repeated uint32 a_message = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.message_);
+      UInt32Size(this->_impl_.a_message_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_message_size());
+                  ::_pbi::FromIntSize(this->_internal_a_message_size());
     total_size += data_size;
   }
 
@@ -10554,7 +10554,7 @@ void Msg_RequestGetGroupEpoch::MergeFrom(const Msg_RequestGetGroupEpoch& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.message_.MergeFrom(from._impl_.message_);
+  _this->_impl_.a_message_.MergeFrom(from._impl_.a_message_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -10572,7 +10572,7 @@ bool Msg_RequestGetGroupEpoch::IsInitialized() const {
 void Msg_RequestGetGroupEpoch::InternalSwap(Msg_RequestGetGroupEpoch* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.message_.InternalSwap(&other->_impl_.message_);
+  _impl_.a_message_.InternalSwap(&other->_impl_.a_message_);
 }
 
 std::string Msg_RequestGetGroupEpoch::GetTypeName() const {
@@ -10585,18 +10585,18 @@ std::string Msg_RequestGetGroupEpoch::GetTypeName() const {
 class Reply_RequestGetGroupEpoch::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_RequestGetGroupEpoch>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RawBytes& result(const Reply_RequestGetGroupEpoch* msg);
-  static void set_has_result(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RawBytes& a_result(const Reply_RequestGetGroupEpoch* msg);
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::dom::RawBytes&
-Reply_RequestGetGroupEpoch::_Internal::result(const Reply_RequestGetGroupEpoch* msg) {
-  return *msg->_impl_.result_;
+Reply_RequestGetGroupEpoch::_Internal::a_result(const Reply_RequestGetGroupEpoch* msg) {
+  return *msg->_impl_.a_result_;
 }
-void Reply_RequestGetGroupEpoch::clear_result() {
-  if (_impl_.result_ != nullptr) _impl_.result_->Clear();
+void Reply_RequestGetGroupEpoch::clear_a_result() {
+  if (_impl_.a_result_ != nullptr) _impl_.a_result_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_RequestGetGroupEpoch::Reply_RequestGetGroupEpoch(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -10611,11 +10611,11 @@ Reply_RequestGetGroupEpoch::Reply_RequestGetGroupEpoch(const Reply_RequestGetGro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}};
+    , decltype(_impl_.a_result_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_result()) {
-    _this->_impl_.result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.result_);
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_ = new ::protobuf::mozilla::dom::RawBytes(*from._impl_.a_result_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch)
 }
@@ -10627,7 +10627,7 @@ inline void Reply_RequestGetGroupEpoch::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.result_){nullptr}
+    , decltype(_impl_.a_result_){nullptr}
   };
 }
 
@@ -10642,7 +10642,7 @@ Reply_RequestGetGroupEpoch::~Reply_RequestGetGroupEpoch() {
 
 inline void Reply_RequestGetGroupEpoch::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.result_;
+  if (this != internal_default_instance()) delete _impl_.a_result_;
 }
 
 void Reply_RequestGetGroupEpoch::SetCachedSize(int size) const {
@@ -10657,8 +10657,8 @@ void Reply_RequestGetGroupEpoch::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.result_ != nullptr);
-    _impl_.result_->Clear();
+    GOOGLE_DCHECK(_impl_.a_result_ != nullptr);
+    _impl_.a_result_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -10671,10 +10671,10 @@ const char* Reply_RequestGetGroupEpoch::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.dom.RawBytes result = 1;
+      // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10710,11 +10710,11 @@ uint8_t* Reply_RequestGetGroupEpoch::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::result(this),
-        _Internal::result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_result(this),
+        _Internal::a_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10733,12 +10733,12 @@ size_t Reply_RequestGetGroupEpoch::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.result_);
+        *_impl_.a_result_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10762,9 +10762,9 @@ void Reply_RequestGetGroupEpoch::MergeFrom(const Reply_RequestGetGroupEpoch& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _this->_internal_mutable_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
-        from._internal_result());
+  if (from._internal_has_a_result()) {
+    _this->_internal_mutable_a_result()->::protobuf::mozilla::dom::RawBytes::MergeFrom(
+        from._internal_a_result());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -10784,7 +10784,7 @@ void Reply_RequestGetGroupEpoch::InternalSwap(Reply_RequestGetGroupEpoch* other)
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.result_, other->_impl_.result_);
+  swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
 std::string Reply_RequestGetGroupEpoch::GetTypeName() const {

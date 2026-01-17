@@ -173,38 +173,38 @@ class RecordedFrameData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTimeOffsetFieldNumber = 1,
-    kLengthFieldNumber = 2,
+    kATimeOffsetFieldNumber = 1,
+    kALengthFieldNumber = 2,
   };
-  // required bytes timeOffset = 1;
-  bool has_timeoffset() const;
+  // required bytes a_timeOffset = 1;
+  bool has_a_timeoffset() const;
   private:
-  bool _internal_has_timeoffset() const;
+  bool _internal_has_a_timeoffset() const;
   public:
-  void clear_timeoffset();
-  const std::string& timeoffset() const;
+  void clear_a_timeoffset();
+  const std::string& a_timeoffset() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_timeoffset(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_timeoffset();
-  PROTOBUF_NODISCARD std::string* release_timeoffset();
-  void set_allocated_timeoffset(std::string* timeoffset);
+  void set_a_timeoffset(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_timeoffset();
+  PROTOBUF_NODISCARD std::string* release_a_timeoffset();
+  void set_allocated_a_timeoffset(std::string* a_timeoffset);
   private:
-  const std::string& _internal_timeoffset() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_timeoffset(const std::string& value);
-  std::string* _internal_mutable_timeoffset();
+  const std::string& _internal_a_timeoffset() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_timeoffset(const std::string& value);
+  std::string* _internal_mutable_a_timeoffset();
   public:
 
-  // required uint32 length = 2;
-  bool has_length() const;
+  // required uint32 a_length = 2;
+  bool has_a_length() const;
   private:
-  bool _internal_has_length() const;
+  bool _internal_has_a_length() const;
   public:
-  void clear_length();
-  uint32_t length() const;
-  void set_length(uint32_t value);
+  void clear_a_length();
+  uint32_t a_length() const;
+  void set_a_length(uint32_t value);
   private:
-  uint32_t _internal_length() const;
-  void _internal_set_length(uint32_t value);
+  uint32_t _internal_a_length() const;
+  void _internal_set_a_length(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.RecordedFrameData)
@@ -220,8 +220,8 @@ class RecordedFrameData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr timeoffset_;
-    uint32_t length_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timeoffset_;
+    uint32_t a_length_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -338,62 +338,62 @@ class FrameRecording final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFramesFieldNumber = 2,
-    kStartTimeFieldNumber = 1,
-    kBytesFieldNumber = 3,
+    kAFramesFieldNumber = 2,
+    kAStartTimeFieldNumber = 1,
+    kABytesFieldNumber = 3,
   };
-  // repeated .protobuf.mozilla.layers.RecordedFrameData frames = 2;
-  int frames_size() const;
+  // repeated .protobuf.mozilla.layers.RecordedFrameData a_frames = 2;
+  int a_frames_size() const;
   private:
-  int _internal_frames_size() const;
+  int _internal_a_frames_size() const;
   public:
-  void clear_frames();
-  ::protobuf::mozilla::layers::RecordedFrameData* mutable_frames(int index);
+  void clear_a_frames();
+  ::protobuf::mozilla::layers::RecordedFrameData* mutable_a_frames(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::RecordedFrameData >*
-      mutable_frames();
+      mutable_a_frames();
   private:
-  const ::protobuf::mozilla::layers::RecordedFrameData& _internal_frames(int index) const;
-  ::protobuf::mozilla::layers::RecordedFrameData* _internal_add_frames();
+  const ::protobuf::mozilla::layers::RecordedFrameData& _internal_a_frames(int index) const;
+  ::protobuf::mozilla::layers::RecordedFrameData* _internal_add_a_frames();
   public:
-  const ::protobuf::mozilla::layers::RecordedFrameData& frames(int index) const;
-  ::protobuf::mozilla::layers::RecordedFrameData* add_frames();
+  const ::protobuf::mozilla::layers::RecordedFrameData& a_frames(int index) const;
+  ::protobuf::mozilla::layers::RecordedFrameData* add_a_frames();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::RecordedFrameData >&
-      frames() const;
+      a_frames() const;
 
-  // required bytes startTime = 1;
-  bool has_starttime() const;
+  // required bytes a_startTime = 1;
+  bool has_a_starttime() const;
   private:
-  bool _internal_has_starttime() const;
+  bool _internal_has_a_starttime() const;
   public:
-  void clear_starttime();
-  const std::string& starttime() const;
+  void clear_a_starttime();
+  const std::string& a_starttime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_starttime(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_starttime();
-  PROTOBUF_NODISCARD std::string* release_starttime();
-  void set_allocated_starttime(std::string* starttime);
+  void set_a_starttime(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_starttime();
+  PROTOBUF_NODISCARD std::string* release_a_starttime();
+  void set_allocated_a_starttime(std::string* a_starttime);
   private:
-  const std::string& _internal_starttime() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_starttime(const std::string& value);
-  std::string* _internal_mutable_starttime();
+  const std::string& _internal_a_starttime() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_starttime(const std::string& value);
+  std::string* _internal_mutable_a_starttime();
   public:
 
-  // required bytes bytes = 3;
-  bool has_bytes() const;
+  // required bytes a_bytes = 3;
+  bool has_a_bytes() const;
   private:
-  bool _internal_has_bytes() const;
+  bool _internal_has_a_bytes() const;
   public:
-  void clear_bytes();
-  const std::string& bytes() const;
+  void clear_a_bytes();
+  const std::string& a_bytes() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bytes(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bytes();
-  PROTOBUF_NODISCARD std::string* release_bytes();
-  void set_allocated_bytes(std::string* bytes);
+  void set_a_bytes(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bytes();
+  PROTOBUF_NODISCARD std::string* release_a_bytes();
+  void set_allocated_a_bytes(std::string* a_bytes);
   private:
-  const std::string& _internal_bytes() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bytes(const std::string& value);
-  std::string* _internal_mutable_bytes();
+  const std::string& _internal_a_bytes() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bytes(const std::string& value);
+  std::string* _internal_mutable_a_bytes();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.FrameRecording)
@@ -409,9 +409,9 @@ class FrameRecording final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::RecordedFrameData > frames_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr starttime_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bytes_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::RecordedFrameData > a_frames_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_starttime_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bytes_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -427,280 +427,280 @@ class FrameRecording final :
 #endif  // __GNUC__
 // RecordedFrameData
 
-// required bytes timeOffset = 1;
-inline bool RecordedFrameData::_internal_has_timeoffset() const {
+// required bytes a_timeOffset = 1;
+inline bool RecordedFrameData::_internal_has_a_timeoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RecordedFrameData::has_timeoffset() const {
-  return _internal_has_timeoffset();
+inline bool RecordedFrameData::has_a_timeoffset() const {
+  return _internal_has_a_timeoffset();
 }
-inline void RecordedFrameData::clear_timeoffset() {
-  _impl_.timeoffset_.ClearToEmpty();
+inline void RecordedFrameData::clear_a_timeoffset() {
+  _impl_.a_timeoffset_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& RecordedFrameData::timeoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.RecordedFrameData.timeOffset)
-  return _internal_timeoffset();
+inline const std::string& RecordedFrameData::a_timeoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.RecordedFrameData.a_timeOffset)
+  return _internal_a_timeoffset();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RecordedFrameData::set_timeoffset(ArgT0&& arg0, ArgT... args) {
+void RecordedFrameData::set_a_timeoffset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.timeoffset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.RecordedFrameData.timeOffset)
+ _impl_.a_timeoffset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.RecordedFrameData.a_timeOffset)
 }
-inline std::string* RecordedFrameData::mutable_timeoffset() {
-  std::string* _s = _internal_mutable_timeoffset();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.RecordedFrameData.timeOffset)
+inline std::string* RecordedFrameData::mutable_a_timeoffset() {
+  std::string* _s = _internal_mutable_a_timeoffset();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.RecordedFrameData.a_timeOffset)
   return _s;
 }
-inline const std::string& RecordedFrameData::_internal_timeoffset() const {
-  return _impl_.timeoffset_.Get();
+inline const std::string& RecordedFrameData::_internal_a_timeoffset() const {
+  return _impl_.a_timeoffset_.Get();
 }
-inline void RecordedFrameData::_internal_set_timeoffset(const std::string& value) {
+inline void RecordedFrameData::_internal_set_a_timeoffset(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.timeoffset_.Set(value, GetArenaForAllocation());
+  _impl_.a_timeoffset_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RecordedFrameData::_internal_mutable_timeoffset() {
+inline std::string* RecordedFrameData::_internal_mutable_a_timeoffset() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.timeoffset_.Mutable(GetArenaForAllocation());
+  return _impl_.a_timeoffset_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RecordedFrameData::release_timeoffset() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.RecordedFrameData.timeOffset)
-  if (!_internal_has_timeoffset()) {
+inline std::string* RecordedFrameData::release_a_timeoffset() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.RecordedFrameData.a_timeOffset)
+  if (!_internal_has_a_timeoffset()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.timeoffset_.Release();
+  auto* p = _impl_.a_timeoffset_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timeoffset_.IsDefault()) {
-    _impl_.timeoffset_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timeoffset_.IsDefault()) {
+    _impl_.a_timeoffset_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RecordedFrameData::set_allocated_timeoffset(std::string* timeoffset) {
-  if (timeoffset != nullptr) {
+inline void RecordedFrameData::set_allocated_a_timeoffset(std::string* a_timeoffset) {
+  if (a_timeoffset != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.timeoffset_.SetAllocated(timeoffset, GetArenaForAllocation());
+  _impl_.a_timeoffset_.SetAllocated(a_timeoffset, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timeoffset_.IsDefault()) {
-    _impl_.timeoffset_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timeoffset_.IsDefault()) {
+    _impl_.a_timeoffset_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RecordedFrameData.timeOffset)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RecordedFrameData.a_timeOffset)
 }
 
-// required uint32 length = 2;
-inline bool RecordedFrameData::_internal_has_length() const {
+// required uint32 a_length = 2;
+inline bool RecordedFrameData::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RecordedFrameData::has_length() const {
-  return _internal_has_length();
+inline bool RecordedFrameData::has_a_length() const {
+  return _internal_has_a_length();
 }
-inline void RecordedFrameData::clear_length() {
-  _impl_.length_ = 0u;
+inline void RecordedFrameData::clear_a_length() {
+  _impl_.a_length_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t RecordedFrameData::_internal_length() const {
-  return _impl_.length_;
+inline uint32_t RecordedFrameData::_internal_a_length() const {
+  return _impl_.a_length_;
 }
-inline uint32_t RecordedFrameData::length() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.RecordedFrameData.length)
-  return _internal_length();
+inline uint32_t RecordedFrameData::a_length() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.RecordedFrameData.a_length)
+  return _internal_a_length();
 }
-inline void RecordedFrameData::_internal_set_length(uint32_t value) {
+inline void RecordedFrameData::_internal_set_a_length(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.length_ = value;
+  _impl_.a_length_ = value;
 }
-inline void RecordedFrameData::set_length(uint32_t value) {
-  _internal_set_length(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.RecordedFrameData.length)
+inline void RecordedFrameData::set_a_length(uint32_t value) {
+  _internal_set_a_length(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.RecordedFrameData.a_length)
 }
 
 // -------------------------------------------------------------------
 
 // FrameRecording
 
-// required bytes startTime = 1;
-inline bool FrameRecording::_internal_has_starttime() const {
+// required bytes a_startTime = 1;
+inline bool FrameRecording::_internal_has_a_starttime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FrameRecording::has_starttime() const {
-  return _internal_has_starttime();
+inline bool FrameRecording::has_a_starttime() const {
+  return _internal_has_a_starttime();
 }
-inline void FrameRecording::clear_starttime() {
-  _impl_.starttime_.ClearToEmpty();
+inline void FrameRecording::clear_a_starttime() {
+  _impl_.a_starttime_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FrameRecording::starttime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameRecording.startTime)
-  return _internal_starttime();
+inline const std::string& FrameRecording::a_starttime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameRecording.a_startTime)
+  return _internal_a_starttime();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameRecording::set_starttime(ArgT0&& arg0, ArgT... args) {
+void FrameRecording::set_a_starttime(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.starttime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameRecording.startTime)
+ _impl_.a_starttime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameRecording.a_startTime)
 }
-inline std::string* FrameRecording::mutable_starttime() {
-  std::string* _s = _internal_mutable_starttime();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameRecording.startTime)
+inline std::string* FrameRecording::mutable_a_starttime() {
+  std::string* _s = _internal_mutable_a_starttime();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameRecording.a_startTime)
   return _s;
 }
-inline const std::string& FrameRecording::_internal_starttime() const {
-  return _impl_.starttime_.Get();
+inline const std::string& FrameRecording::_internal_a_starttime() const {
+  return _impl_.a_starttime_.Get();
 }
-inline void FrameRecording::_internal_set_starttime(const std::string& value) {
+inline void FrameRecording::_internal_set_a_starttime(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.starttime_.Set(value, GetArenaForAllocation());
+  _impl_.a_starttime_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameRecording::_internal_mutable_starttime() {
+inline std::string* FrameRecording::_internal_mutable_a_starttime() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.starttime_.Mutable(GetArenaForAllocation());
+  return _impl_.a_starttime_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameRecording::release_starttime() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameRecording.startTime)
-  if (!_internal_has_starttime()) {
+inline std::string* FrameRecording::release_a_starttime() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameRecording.a_startTime)
+  if (!_internal_has_a_starttime()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.starttime_.Release();
+  auto* p = _impl_.a_starttime_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.starttime_.IsDefault()) {
-    _impl_.starttime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_starttime_.IsDefault()) {
+    _impl_.a_starttime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameRecording::set_allocated_starttime(std::string* starttime) {
-  if (starttime != nullptr) {
+inline void FrameRecording::set_allocated_a_starttime(std::string* a_starttime) {
+  if (a_starttime != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.starttime_.SetAllocated(starttime, GetArenaForAllocation());
+  _impl_.a_starttime_.SetAllocated(a_starttime, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.starttime_.IsDefault()) {
-    _impl_.starttime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_starttime_.IsDefault()) {
+    _impl_.a_starttime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameRecording.startTime)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameRecording.a_startTime)
 }
 
-// repeated .protobuf.mozilla.layers.RecordedFrameData frames = 2;
-inline int FrameRecording::_internal_frames_size() const {
-  return _impl_.frames_.size();
+// repeated .protobuf.mozilla.layers.RecordedFrameData a_frames = 2;
+inline int FrameRecording::_internal_a_frames_size() const {
+  return _impl_.a_frames_.size();
 }
-inline int FrameRecording::frames_size() const {
-  return _internal_frames_size();
+inline int FrameRecording::a_frames_size() const {
+  return _internal_a_frames_size();
 }
-inline void FrameRecording::clear_frames() {
-  _impl_.frames_.Clear();
+inline void FrameRecording::clear_a_frames() {
+  _impl_.a_frames_.Clear();
 }
-inline ::protobuf::mozilla::layers::RecordedFrameData* FrameRecording::mutable_frames(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameRecording.frames)
-  return _impl_.frames_.Mutable(index);
+inline ::protobuf::mozilla::layers::RecordedFrameData* FrameRecording::mutable_a_frames(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameRecording.a_frames)
+  return _impl_.a_frames_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::RecordedFrameData >*
-FrameRecording::mutable_frames() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.FrameRecording.frames)
-  return &_impl_.frames_;
+FrameRecording::mutable_a_frames() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.FrameRecording.a_frames)
+  return &_impl_.a_frames_;
 }
-inline const ::protobuf::mozilla::layers::RecordedFrameData& FrameRecording::_internal_frames(int index) const {
-  return _impl_.frames_.Get(index);
+inline const ::protobuf::mozilla::layers::RecordedFrameData& FrameRecording::_internal_a_frames(int index) const {
+  return _impl_.a_frames_.Get(index);
 }
-inline const ::protobuf::mozilla::layers::RecordedFrameData& FrameRecording::frames(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameRecording.frames)
-  return _internal_frames(index);
+inline const ::protobuf::mozilla::layers::RecordedFrameData& FrameRecording::a_frames(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameRecording.a_frames)
+  return _internal_a_frames(index);
 }
-inline ::protobuf::mozilla::layers::RecordedFrameData* FrameRecording::_internal_add_frames() {
-  return _impl_.frames_.Add();
+inline ::protobuf::mozilla::layers::RecordedFrameData* FrameRecording::_internal_add_a_frames() {
+  return _impl_.a_frames_.Add();
 }
-inline ::protobuf::mozilla::layers::RecordedFrameData* FrameRecording::add_frames() {
-  ::protobuf::mozilla::layers::RecordedFrameData* _add = _internal_add_frames();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.FrameRecording.frames)
+inline ::protobuf::mozilla::layers::RecordedFrameData* FrameRecording::add_a_frames() {
+  ::protobuf::mozilla::layers::RecordedFrameData* _add = _internal_add_a_frames();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.FrameRecording.a_frames)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::RecordedFrameData >&
-FrameRecording::frames() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.FrameRecording.frames)
-  return _impl_.frames_;
+FrameRecording::a_frames() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.FrameRecording.a_frames)
+  return _impl_.a_frames_;
 }
 
-// required bytes bytes = 3;
-inline bool FrameRecording::_internal_has_bytes() const {
+// required bytes a_bytes = 3;
+inline bool FrameRecording::_internal_has_a_bytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FrameRecording::has_bytes() const {
-  return _internal_has_bytes();
+inline bool FrameRecording::has_a_bytes() const {
+  return _internal_has_a_bytes();
 }
-inline void FrameRecording::clear_bytes() {
-  _impl_.bytes_.ClearToEmpty();
+inline void FrameRecording::clear_a_bytes() {
+  _impl_.a_bytes_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FrameRecording::bytes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameRecording.bytes)
-  return _internal_bytes();
+inline const std::string& FrameRecording::a_bytes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameRecording.a_bytes)
+  return _internal_a_bytes();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameRecording::set_bytes(ArgT0&& arg0, ArgT... args) {
+void FrameRecording::set_a_bytes(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.bytes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameRecording.bytes)
+ _impl_.a_bytes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameRecording.a_bytes)
 }
-inline std::string* FrameRecording::mutable_bytes() {
-  std::string* _s = _internal_mutable_bytes();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameRecording.bytes)
+inline std::string* FrameRecording::mutable_a_bytes() {
+  std::string* _s = _internal_mutable_a_bytes();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameRecording.a_bytes)
   return _s;
 }
-inline const std::string& FrameRecording::_internal_bytes() const {
-  return _impl_.bytes_.Get();
+inline const std::string& FrameRecording::_internal_a_bytes() const {
+  return _impl_.a_bytes_.Get();
 }
-inline void FrameRecording::_internal_set_bytes(const std::string& value) {
+inline void FrameRecording::_internal_set_a_bytes(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bytes_.Set(value, GetArenaForAllocation());
+  _impl_.a_bytes_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameRecording::_internal_mutable_bytes() {
+inline std::string* FrameRecording::_internal_mutable_a_bytes() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.bytes_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bytes_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameRecording::release_bytes() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameRecording.bytes)
-  if (!_internal_has_bytes()) {
+inline std::string* FrameRecording::release_a_bytes() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameRecording.a_bytes)
+  if (!_internal_has_a_bytes()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.bytes_.Release();
+  auto* p = _impl_.a_bytes_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bytes_.IsDefault()) {
-    _impl_.bytes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bytes_.IsDefault()) {
+    _impl_.a_bytes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameRecording::set_allocated_bytes(std::string* bytes) {
-  if (bytes != nullptr) {
+inline void FrameRecording::set_allocated_a_bytes(std::string* a_bytes) {
+  if (a_bytes != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.bytes_.SetAllocated(bytes, GetArenaForAllocation());
+  _impl_.a_bytes_.SetAllocated(a_bytes, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bytes_.IsDefault()) {
-    _impl_.bytes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bytes_.IsDefault()) {
+    _impl_.a_bytes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameRecording.bytes)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameRecording.a_bytes)
 }
 
 #ifdef __GNUC__

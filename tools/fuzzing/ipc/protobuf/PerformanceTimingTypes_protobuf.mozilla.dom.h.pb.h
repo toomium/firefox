@@ -173,57 +173,57 @@ class IPCServerTiming final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
-    kDescriptionFieldNumber = 3,
-    kDurationFieldNumber = 2,
+    kANameFieldNumber = 1,
+    kADescriptionFieldNumber = 3,
+    kADurationFieldNumber = 2,
   };
-  // required bytes name = 1;
-  bool has_name() const;
+  // required bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes description = 3;
-  bool has_description() const;
+  // required bytes a_description = 3;
+  bool has_a_description() const;
   private:
-  bool _internal_has_description() const;
+  bool _internal_has_a_description() const;
   public:
-  void clear_description();
-  const std::string& description() const;
+  void clear_a_description();
+  const std::string& a_description() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_description(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_description();
-  PROTOBUF_NODISCARD std::string* release_description();
-  void set_allocated_description(std::string* description);
+  void set_a_description(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_description();
+  PROTOBUF_NODISCARD std::string* release_a_description();
+  void set_allocated_a_description(std::string* a_description);
   private:
-  const std::string& _internal_description() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_description(const std::string& value);
-  std::string* _internal_mutable_description();
+  const std::string& _internal_a_description() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_description(const std::string& value);
+  std::string* _internal_mutable_a_description();
   public:
 
-  // required double duration = 2;
-  bool has_duration() const;
+  // required double a_duration = 2;
+  bool has_a_duration() const;
   private:
-  bool _internal_has_duration() const;
+  bool _internal_has_a_duration() const;
   public:
-  void clear_duration();
-  double duration() const;
-  void set_duration(double value);
+  void clear_a_duration();
+  double a_duration() const;
+  void set_a_duration(double value);
   private:
-  double _internal_duration() const;
-  void _internal_set_duration(double value);
+  double _internal_a_duration() const;
+  void _internal_set_a_duration(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCServerTiming)
@@ -239,9 +239,9 @@ class IPCServerTiming final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
-    double duration_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_description_;
+    double a_duration_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -358,577 +358,577 @@ class IPCPerformanceTimingData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kServerTimingFieldNumber = 1,
-    kNextHopProtocolFieldNumber = 2,
-    kAsyncOpenFieldNumber = 3,
-    kRedirectStartFieldNumber = 4,
-    kRedirectEndFieldNumber = 5,
-    kDomainLookupStartFieldNumber = 6,
-    kDomainLookupEndFieldNumber = 7,
-    kConnectStartFieldNumber = 8,
-    kSecureConnectionStartFieldNumber = 9,
-    kConnectEndFieldNumber = 10,
-    kRequestStartFieldNumber = 11,
-    kResponseStartFieldNumber = 12,
-    kCacheReadStartFieldNumber = 13,
-    kResponseEndFieldNumber = 14,
-    kCacheReadEndFieldNumber = 15,
-    kWorkerStartFieldNumber = 16,
-    kWorkerRequestStartFieldNumber = 17,
-    kWorkerResponseEndFieldNumber = 18,
-    kZeroTimeFieldNumber = 19,
-    kFetchStartFieldNumber = 20,
-    kContentTypeFieldNumber = 27,
-    kBodyInfoAccessAllowedFieldNumber = 31,
-    kEncodedBodySizeFieldNumber = 21,
-    kTransferSizeFieldNumber = 22,
-    kDecodedBodySizeFieldNumber = 23,
-    kResponseStatusFieldNumber = 24,
-    kRedirectCountFieldNumber = 25,
-    kRenderBlockingFieldNumber = 26,
-    kAllRedirectsSameOriginFieldNumber = 28,
-    kAllRedirectsPassTAOFieldNumber = 29,
-    kSecureConnectionFieldNumber = 30,
-    kTimingAllowedFieldNumber = 32,
-    kInitializedFieldNumber = 33,
+    kAServerTimingFieldNumber = 1,
+    kANextHopProtocolFieldNumber = 2,
+    kAAsyncOpenFieldNumber = 3,
+    kARedirectStartFieldNumber = 4,
+    kARedirectEndFieldNumber = 5,
+    kADomainLookupStartFieldNumber = 6,
+    kADomainLookupEndFieldNumber = 7,
+    kAConnectStartFieldNumber = 8,
+    kASecureConnectionStartFieldNumber = 9,
+    kAConnectEndFieldNumber = 10,
+    kARequestStartFieldNumber = 11,
+    kAResponseStartFieldNumber = 12,
+    kACacheReadStartFieldNumber = 13,
+    kAResponseEndFieldNumber = 14,
+    kACacheReadEndFieldNumber = 15,
+    kAWorkerStartFieldNumber = 16,
+    kAWorkerRequestStartFieldNumber = 17,
+    kAWorkerResponseEndFieldNumber = 18,
+    kAZeroTimeFieldNumber = 19,
+    kAFetchStartFieldNumber = 20,
+    kAContentTypeFieldNumber = 27,
+    kABodyInfoAccessAllowedFieldNumber = 31,
+    kAEncodedBodySizeFieldNumber = 21,
+    kATransferSizeFieldNumber = 22,
+    kADecodedBodySizeFieldNumber = 23,
+    kAResponseStatusFieldNumber = 24,
+    kARedirectCountFieldNumber = 25,
+    kARenderBlockingFieldNumber = 26,
+    kAAllRedirectsSameOriginFieldNumber = 28,
+    kAAllRedirectsPassTAOFieldNumber = 29,
+    kASecureConnectionFieldNumber = 30,
+    kATimingAllowedFieldNumber = 32,
+    kAInitializedFieldNumber = 33,
   };
-  // repeated .protobuf.mozilla.dom.IPCServerTiming serverTiming = 1;
-  int servertiming_size() const;
+  // repeated .protobuf.mozilla.dom.IPCServerTiming a_serverTiming = 1;
+  int a_servertiming_size() const;
   private:
-  int _internal_servertiming_size() const;
+  int _internal_a_servertiming_size() const;
   public:
-  void clear_servertiming();
-  ::protobuf::mozilla::dom::IPCServerTiming* mutable_servertiming(int index);
+  void clear_a_servertiming();
+  ::protobuf::mozilla::dom::IPCServerTiming* mutable_a_servertiming(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming >*
-      mutable_servertiming();
+      mutable_a_servertiming();
   private:
-  const ::protobuf::mozilla::dom::IPCServerTiming& _internal_servertiming(int index) const;
-  ::protobuf::mozilla::dom::IPCServerTiming* _internal_add_servertiming();
+  const ::protobuf::mozilla::dom::IPCServerTiming& _internal_a_servertiming(int index) const;
+  ::protobuf::mozilla::dom::IPCServerTiming* _internal_add_a_servertiming();
   public:
-  const ::protobuf::mozilla::dom::IPCServerTiming& servertiming(int index) const;
-  ::protobuf::mozilla::dom::IPCServerTiming* add_servertiming();
+  const ::protobuf::mozilla::dom::IPCServerTiming& a_servertiming(int index) const;
+  ::protobuf::mozilla::dom::IPCServerTiming* add_a_servertiming();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming >&
-      servertiming() const;
+      a_servertiming() const;
 
-  // required bytes nextHopProtocol = 2;
-  bool has_nexthopprotocol() const;
+  // required bytes a_nextHopProtocol = 2;
+  bool has_a_nexthopprotocol() const;
   private:
-  bool _internal_has_nexthopprotocol() const;
+  bool _internal_has_a_nexthopprotocol() const;
   public:
-  void clear_nexthopprotocol();
-  const std::string& nexthopprotocol() const;
+  void clear_a_nexthopprotocol();
+  const std::string& a_nexthopprotocol() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_nexthopprotocol(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_nexthopprotocol();
-  PROTOBUF_NODISCARD std::string* release_nexthopprotocol();
-  void set_allocated_nexthopprotocol(std::string* nexthopprotocol);
+  void set_a_nexthopprotocol(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_nexthopprotocol();
+  PROTOBUF_NODISCARD std::string* release_a_nexthopprotocol();
+  void set_allocated_a_nexthopprotocol(std::string* a_nexthopprotocol);
   private:
-  const std::string& _internal_nexthopprotocol() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nexthopprotocol(const std::string& value);
-  std::string* _internal_mutable_nexthopprotocol();
+  const std::string& _internal_a_nexthopprotocol() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_nexthopprotocol(const std::string& value);
+  std::string* _internal_mutable_a_nexthopprotocol();
   public:
 
-  // required bytes asyncOpen = 3;
-  bool has_asyncopen() const;
+  // required bytes a_asyncOpen = 3;
+  bool has_a_asyncopen() const;
   private:
-  bool _internal_has_asyncopen() const;
+  bool _internal_has_a_asyncopen() const;
   public:
-  void clear_asyncopen();
-  const std::string& asyncopen() const;
+  void clear_a_asyncopen();
+  const std::string& a_asyncopen() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_asyncopen(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_asyncopen();
-  PROTOBUF_NODISCARD std::string* release_asyncopen();
-  void set_allocated_asyncopen(std::string* asyncopen);
+  void set_a_asyncopen(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_asyncopen();
+  PROTOBUF_NODISCARD std::string* release_a_asyncopen();
+  void set_allocated_a_asyncopen(std::string* a_asyncopen);
   private:
-  const std::string& _internal_asyncopen() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_asyncopen(const std::string& value);
-  std::string* _internal_mutable_asyncopen();
+  const std::string& _internal_a_asyncopen() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_asyncopen(const std::string& value);
+  std::string* _internal_mutable_a_asyncopen();
   public:
 
-  // required bytes redirectStart = 4;
-  bool has_redirectstart() const;
+  // required bytes a_redirectStart = 4;
+  bool has_a_redirectstart() const;
   private:
-  bool _internal_has_redirectstart() const;
+  bool _internal_has_a_redirectstart() const;
   public:
-  void clear_redirectstart();
-  const std::string& redirectstart() const;
+  void clear_a_redirectstart();
+  const std::string& a_redirectstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_redirectstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_redirectstart();
-  PROTOBUF_NODISCARD std::string* release_redirectstart();
-  void set_allocated_redirectstart(std::string* redirectstart);
+  void set_a_redirectstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_redirectstart();
+  PROTOBUF_NODISCARD std::string* release_a_redirectstart();
+  void set_allocated_a_redirectstart(std::string* a_redirectstart);
   private:
-  const std::string& _internal_redirectstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_redirectstart(const std::string& value);
-  std::string* _internal_mutable_redirectstart();
+  const std::string& _internal_a_redirectstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_redirectstart(const std::string& value);
+  std::string* _internal_mutable_a_redirectstart();
   public:
 
-  // required bytes redirectEnd = 5;
-  bool has_redirectend() const;
+  // required bytes a_redirectEnd = 5;
+  bool has_a_redirectend() const;
   private:
-  bool _internal_has_redirectend() const;
+  bool _internal_has_a_redirectend() const;
   public:
-  void clear_redirectend();
-  const std::string& redirectend() const;
+  void clear_a_redirectend();
+  const std::string& a_redirectend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_redirectend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_redirectend();
-  PROTOBUF_NODISCARD std::string* release_redirectend();
-  void set_allocated_redirectend(std::string* redirectend);
+  void set_a_redirectend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_redirectend();
+  PROTOBUF_NODISCARD std::string* release_a_redirectend();
+  void set_allocated_a_redirectend(std::string* a_redirectend);
   private:
-  const std::string& _internal_redirectend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_redirectend(const std::string& value);
-  std::string* _internal_mutable_redirectend();
+  const std::string& _internal_a_redirectend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_redirectend(const std::string& value);
+  std::string* _internal_mutable_a_redirectend();
   public:
 
-  // required bytes domainLookupStart = 6;
-  bool has_domainlookupstart() const;
+  // required bytes a_domainLookupStart = 6;
+  bool has_a_domainlookupstart() const;
   private:
-  bool _internal_has_domainlookupstart() const;
+  bool _internal_has_a_domainlookupstart() const;
   public:
-  void clear_domainlookupstart();
-  const std::string& domainlookupstart() const;
+  void clear_a_domainlookupstart();
+  const std::string& a_domainlookupstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_domainlookupstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_domainlookupstart();
-  PROTOBUF_NODISCARD std::string* release_domainlookupstart();
-  void set_allocated_domainlookupstart(std::string* domainlookupstart);
+  void set_a_domainlookupstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_domainlookupstart();
+  PROTOBUF_NODISCARD std::string* release_a_domainlookupstart();
+  void set_allocated_a_domainlookupstart(std::string* a_domainlookupstart);
   private:
-  const std::string& _internal_domainlookupstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_domainlookupstart(const std::string& value);
-  std::string* _internal_mutable_domainlookupstart();
+  const std::string& _internal_a_domainlookupstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_domainlookupstart(const std::string& value);
+  std::string* _internal_mutable_a_domainlookupstart();
   public:
 
-  // required bytes domainLookupEnd = 7;
-  bool has_domainlookupend() const;
+  // required bytes a_domainLookupEnd = 7;
+  bool has_a_domainlookupend() const;
   private:
-  bool _internal_has_domainlookupend() const;
+  bool _internal_has_a_domainlookupend() const;
   public:
-  void clear_domainlookupend();
-  const std::string& domainlookupend() const;
+  void clear_a_domainlookupend();
+  const std::string& a_domainlookupend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_domainlookupend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_domainlookupend();
-  PROTOBUF_NODISCARD std::string* release_domainlookupend();
-  void set_allocated_domainlookupend(std::string* domainlookupend);
+  void set_a_domainlookupend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_domainlookupend();
+  PROTOBUF_NODISCARD std::string* release_a_domainlookupend();
+  void set_allocated_a_domainlookupend(std::string* a_domainlookupend);
   private:
-  const std::string& _internal_domainlookupend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_domainlookupend(const std::string& value);
-  std::string* _internal_mutable_domainlookupend();
+  const std::string& _internal_a_domainlookupend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_domainlookupend(const std::string& value);
+  std::string* _internal_mutable_a_domainlookupend();
   public:
 
-  // required bytes connectStart = 8;
-  bool has_connectstart() const;
+  // required bytes a_connectStart = 8;
+  bool has_a_connectstart() const;
   private:
-  bool _internal_has_connectstart() const;
+  bool _internal_has_a_connectstart() const;
   public:
-  void clear_connectstart();
-  const std::string& connectstart() const;
+  void clear_a_connectstart();
+  const std::string& a_connectstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_connectstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_connectstart();
-  PROTOBUF_NODISCARD std::string* release_connectstart();
-  void set_allocated_connectstart(std::string* connectstart);
+  void set_a_connectstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_connectstart();
+  PROTOBUF_NODISCARD std::string* release_a_connectstart();
+  void set_allocated_a_connectstart(std::string* a_connectstart);
   private:
-  const std::string& _internal_connectstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_connectstart(const std::string& value);
-  std::string* _internal_mutable_connectstart();
+  const std::string& _internal_a_connectstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_connectstart(const std::string& value);
+  std::string* _internal_mutable_a_connectstart();
   public:
 
-  // required bytes secureConnectionStart = 9;
-  bool has_secureconnectionstart() const;
+  // required bytes a_secureConnectionStart = 9;
+  bool has_a_secureconnectionstart() const;
   private:
-  bool _internal_has_secureconnectionstart() const;
+  bool _internal_has_a_secureconnectionstart() const;
   public:
-  void clear_secureconnectionstart();
-  const std::string& secureconnectionstart() const;
+  void clear_a_secureconnectionstart();
+  const std::string& a_secureconnectionstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_secureconnectionstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_secureconnectionstart();
-  PROTOBUF_NODISCARD std::string* release_secureconnectionstart();
-  void set_allocated_secureconnectionstart(std::string* secureconnectionstart);
+  void set_a_secureconnectionstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_secureconnectionstart();
+  PROTOBUF_NODISCARD std::string* release_a_secureconnectionstart();
+  void set_allocated_a_secureconnectionstart(std::string* a_secureconnectionstart);
   private:
-  const std::string& _internal_secureconnectionstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_secureconnectionstart(const std::string& value);
-  std::string* _internal_mutable_secureconnectionstart();
+  const std::string& _internal_a_secureconnectionstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_secureconnectionstart(const std::string& value);
+  std::string* _internal_mutable_a_secureconnectionstart();
   public:
 
-  // required bytes connectEnd = 10;
-  bool has_connectend() const;
+  // required bytes a_connectEnd = 10;
+  bool has_a_connectend() const;
   private:
-  bool _internal_has_connectend() const;
+  bool _internal_has_a_connectend() const;
   public:
-  void clear_connectend();
-  const std::string& connectend() const;
+  void clear_a_connectend();
+  const std::string& a_connectend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_connectend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_connectend();
-  PROTOBUF_NODISCARD std::string* release_connectend();
-  void set_allocated_connectend(std::string* connectend);
+  void set_a_connectend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_connectend();
+  PROTOBUF_NODISCARD std::string* release_a_connectend();
+  void set_allocated_a_connectend(std::string* a_connectend);
   private:
-  const std::string& _internal_connectend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_connectend(const std::string& value);
-  std::string* _internal_mutable_connectend();
+  const std::string& _internal_a_connectend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_connectend(const std::string& value);
+  std::string* _internal_mutable_a_connectend();
   public:
 
-  // required bytes requestStart = 11;
-  bool has_requeststart() const;
+  // required bytes a_requestStart = 11;
+  bool has_a_requeststart() const;
   private:
-  bool _internal_has_requeststart() const;
+  bool _internal_has_a_requeststart() const;
   public:
-  void clear_requeststart();
-  const std::string& requeststart() const;
+  void clear_a_requeststart();
+  const std::string& a_requeststart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_requeststart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_requeststart();
-  PROTOBUF_NODISCARD std::string* release_requeststart();
-  void set_allocated_requeststart(std::string* requeststart);
+  void set_a_requeststart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_requeststart();
+  PROTOBUF_NODISCARD std::string* release_a_requeststart();
+  void set_allocated_a_requeststart(std::string* a_requeststart);
   private:
-  const std::string& _internal_requeststart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_requeststart(const std::string& value);
-  std::string* _internal_mutable_requeststart();
+  const std::string& _internal_a_requeststart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_requeststart(const std::string& value);
+  std::string* _internal_mutable_a_requeststart();
   public:
 
-  // required bytes responseStart = 12;
-  bool has_responsestart() const;
+  // required bytes a_responseStart = 12;
+  bool has_a_responsestart() const;
   private:
-  bool _internal_has_responsestart() const;
+  bool _internal_has_a_responsestart() const;
   public:
-  void clear_responsestart();
-  const std::string& responsestart() const;
+  void clear_a_responsestart();
+  const std::string& a_responsestart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_responsestart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_responsestart();
-  PROTOBUF_NODISCARD std::string* release_responsestart();
-  void set_allocated_responsestart(std::string* responsestart);
+  void set_a_responsestart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_responsestart();
+  PROTOBUF_NODISCARD std::string* release_a_responsestart();
+  void set_allocated_a_responsestart(std::string* a_responsestart);
   private:
-  const std::string& _internal_responsestart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_responsestart(const std::string& value);
-  std::string* _internal_mutable_responsestart();
+  const std::string& _internal_a_responsestart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_responsestart(const std::string& value);
+  std::string* _internal_mutable_a_responsestart();
   public:
 
-  // required bytes cacheReadStart = 13;
-  bool has_cachereadstart() const;
+  // required bytes a_cacheReadStart = 13;
+  bool has_a_cachereadstart() const;
   private:
-  bool _internal_has_cachereadstart() const;
+  bool _internal_has_a_cachereadstart() const;
   public:
-  void clear_cachereadstart();
-  const std::string& cachereadstart() const;
+  void clear_a_cachereadstart();
+  const std::string& a_cachereadstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_cachereadstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_cachereadstart();
-  PROTOBUF_NODISCARD std::string* release_cachereadstart();
-  void set_allocated_cachereadstart(std::string* cachereadstart);
+  void set_a_cachereadstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_cachereadstart();
+  PROTOBUF_NODISCARD std::string* release_a_cachereadstart();
+  void set_allocated_a_cachereadstart(std::string* a_cachereadstart);
   private:
-  const std::string& _internal_cachereadstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cachereadstart(const std::string& value);
-  std::string* _internal_mutable_cachereadstart();
+  const std::string& _internal_a_cachereadstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_cachereadstart(const std::string& value);
+  std::string* _internal_mutable_a_cachereadstart();
   public:
 
-  // required bytes responseEnd = 14;
-  bool has_responseend() const;
+  // required bytes a_responseEnd = 14;
+  bool has_a_responseend() const;
   private:
-  bool _internal_has_responseend() const;
+  bool _internal_has_a_responseend() const;
   public:
-  void clear_responseend();
-  const std::string& responseend() const;
+  void clear_a_responseend();
+  const std::string& a_responseend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_responseend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_responseend();
-  PROTOBUF_NODISCARD std::string* release_responseend();
-  void set_allocated_responseend(std::string* responseend);
+  void set_a_responseend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_responseend();
+  PROTOBUF_NODISCARD std::string* release_a_responseend();
+  void set_allocated_a_responseend(std::string* a_responseend);
   private:
-  const std::string& _internal_responseend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_responseend(const std::string& value);
-  std::string* _internal_mutable_responseend();
+  const std::string& _internal_a_responseend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_responseend(const std::string& value);
+  std::string* _internal_mutable_a_responseend();
   public:
 
-  // required bytes cacheReadEnd = 15;
-  bool has_cachereadend() const;
+  // required bytes a_cacheReadEnd = 15;
+  bool has_a_cachereadend() const;
   private:
-  bool _internal_has_cachereadend() const;
+  bool _internal_has_a_cachereadend() const;
   public:
-  void clear_cachereadend();
-  const std::string& cachereadend() const;
+  void clear_a_cachereadend();
+  const std::string& a_cachereadend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_cachereadend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_cachereadend();
-  PROTOBUF_NODISCARD std::string* release_cachereadend();
-  void set_allocated_cachereadend(std::string* cachereadend);
+  void set_a_cachereadend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_cachereadend();
+  PROTOBUF_NODISCARD std::string* release_a_cachereadend();
+  void set_allocated_a_cachereadend(std::string* a_cachereadend);
   private:
-  const std::string& _internal_cachereadend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cachereadend(const std::string& value);
-  std::string* _internal_mutable_cachereadend();
+  const std::string& _internal_a_cachereadend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_cachereadend(const std::string& value);
+  std::string* _internal_mutable_a_cachereadend();
   public:
 
-  // required bytes workerStart = 16;
-  bool has_workerstart() const;
+  // required bytes a_workerStart = 16;
+  bool has_a_workerstart() const;
   private:
-  bool _internal_has_workerstart() const;
+  bool _internal_has_a_workerstart() const;
   public:
-  void clear_workerstart();
-  const std::string& workerstart() const;
+  void clear_a_workerstart();
+  const std::string& a_workerstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_workerstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_workerstart();
-  PROTOBUF_NODISCARD std::string* release_workerstart();
-  void set_allocated_workerstart(std::string* workerstart);
+  void set_a_workerstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_workerstart();
+  PROTOBUF_NODISCARD std::string* release_a_workerstart();
+  void set_allocated_a_workerstart(std::string* a_workerstart);
   private:
-  const std::string& _internal_workerstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_workerstart(const std::string& value);
-  std::string* _internal_mutable_workerstart();
+  const std::string& _internal_a_workerstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_workerstart(const std::string& value);
+  std::string* _internal_mutable_a_workerstart();
   public:
 
-  // required bytes workerRequestStart = 17;
-  bool has_workerrequeststart() const;
+  // required bytes a_workerRequestStart = 17;
+  bool has_a_workerrequeststart() const;
   private:
-  bool _internal_has_workerrequeststart() const;
+  bool _internal_has_a_workerrequeststart() const;
   public:
-  void clear_workerrequeststart();
-  const std::string& workerrequeststart() const;
+  void clear_a_workerrequeststart();
+  const std::string& a_workerrequeststart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_workerrequeststart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_workerrequeststart();
-  PROTOBUF_NODISCARD std::string* release_workerrequeststart();
-  void set_allocated_workerrequeststart(std::string* workerrequeststart);
+  void set_a_workerrequeststart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_workerrequeststart();
+  PROTOBUF_NODISCARD std::string* release_a_workerrequeststart();
+  void set_allocated_a_workerrequeststart(std::string* a_workerrequeststart);
   private:
-  const std::string& _internal_workerrequeststart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_workerrequeststart(const std::string& value);
-  std::string* _internal_mutable_workerrequeststart();
+  const std::string& _internal_a_workerrequeststart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_workerrequeststart(const std::string& value);
+  std::string* _internal_mutable_a_workerrequeststart();
   public:
 
-  // required bytes workerResponseEnd = 18;
-  bool has_workerresponseend() const;
+  // required bytes a_workerResponseEnd = 18;
+  bool has_a_workerresponseend() const;
   private:
-  bool _internal_has_workerresponseend() const;
+  bool _internal_has_a_workerresponseend() const;
   public:
-  void clear_workerresponseend();
-  const std::string& workerresponseend() const;
+  void clear_a_workerresponseend();
+  const std::string& a_workerresponseend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_workerresponseend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_workerresponseend();
-  PROTOBUF_NODISCARD std::string* release_workerresponseend();
-  void set_allocated_workerresponseend(std::string* workerresponseend);
+  void set_a_workerresponseend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_workerresponseend();
+  PROTOBUF_NODISCARD std::string* release_a_workerresponseend();
+  void set_allocated_a_workerresponseend(std::string* a_workerresponseend);
   private:
-  const std::string& _internal_workerresponseend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_workerresponseend(const std::string& value);
-  std::string* _internal_mutable_workerresponseend();
+  const std::string& _internal_a_workerresponseend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_workerresponseend(const std::string& value);
+  std::string* _internal_mutable_a_workerresponseend();
   public:
 
-  // required bytes zeroTime = 19;
-  bool has_zerotime() const;
+  // required bytes a_zeroTime = 19;
+  bool has_a_zerotime() const;
   private:
-  bool _internal_has_zerotime() const;
+  bool _internal_has_a_zerotime() const;
   public:
-  void clear_zerotime();
-  const std::string& zerotime() const;
+  void clear_a_zerotime();
+  const std::string& a_zerotime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_zerotime(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_zerotime();
-  PROTOBUF_NODISCARD std::string* release_zerotime();
-  void set_allocated_zerotime(std::string* zerotime);
+  void set_a_zerotime(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_zerotime();
+  PROTOBUF_NODISCARD std::string* release_a_zerotime();
+  void set_allocated_a_zerotime(std::string* a_zerotime);
   private:
-  const std::string& _internal_zerotime() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_zerotime(const std::string& value);
-  std::string* _internal_mutable_zerotime();
+  const std::string& _internal_a_zerotime() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_zerotime(const std::string& value);
+  std::string* _internal_mutable_a_zerotime();
   public:
 
-  // required bytes fetchStart = 20;
-  bool has_fetchstart() const;
+  // required bytes a_fetchStart = 20;
+  bool has_a_fetchstart() const;
   private:
-  bool _internal_has_fetchstart() const;
+  bool _internal_has_a_fetchstart() const;
   public:
-  void clear_fetchstart();
-  const std::string& fetchstart() const;
+  void clear_a_fetchstart();
+  const std::string& a_fetchstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_fetchstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_fetchstart();
-  PROTOBUF_NODISCARD std::string* release_fetchstart();
-  void set_allocated_fetchstart(std::string* fetchstart);
+  void set_a_fetchstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_fetchstart();
+  PROTOBUF_NODISCARD std::string* release_a_fetchstart();
+  void set_allocated_a_fetchstart(std::string* a_fetchstart);
   private:
-  const std::string& _internal_fetchstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_fetchstart(const std::string& value);
-  std::string* _internal_mutable_fetchstart();
+  const std::string& _internal_a_fetchstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_fetchstart(const std::string& value);
+  std::string* _internal_mutable_a_fetchstart();
   public:
 
-  // required bytes contentType = 27;
-  bool has_contenttype() const;
+  // required bytes a_contentType = 27;
+  bool has_a_contenttype() const;
   private:
-  bool _internal_has_contenttype() const;
+  bool _internal_has_a_contenttype() const;
   public:
-  void clear_contenttype();
-  const std::string& contenttype() const;
+  void clear_a_contenttype();
+  const std::string& a_contenttype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_contenttype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_contenttype();
-  PROTOBUF_NODISCARD std::string* release_contenttype();
-  void set_allocated_contenttype(std::string* contenttype);
+  void set_a_contenttype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_contenttype();
+  PROTOBUF_NODISCARD std::string* release_a_contenttype();
+  void set_allocated_a_contenttype(std::string* a_contenttype);
   private:
-  const std::string& _internal_contenttype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contenttype(const std::string& value);
-  std::string* _internal_mutable_contenttype();
+  const std::string& _internal_a_contenttype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_contenttype(const std::string& value);
+  std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required bytes bodyInfoAccessAllowed = 31;
-  bool has_bodyinfoaccessallowed() const;
+  // required bytes a_bodyInfoAccessAllowed = 31;
+  bool has_a_bodyinfoaccessallowed() const;
   private:
-  bool _internal_has_bodyinfoaccessallowed() const;
+  bool _internal_has_a_bodyinfoaccessallowed() const;
   public:
-  void clear_bodyinfoaccessallowed();
-  const std::string& bodyinfoaccessallowed() const;
+  void clear_a_bodyinfoaccessallowed();
+  const std::string& a_bodyinfoaccessallowed() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bodyinfoaccessallowed(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bodyinfoaccessallowed();
-  PROTOBUF_NODISCARD std::string* release_bodyinfoaccessallowed();
-  void set_allocated_bodyinfoaccessallowed(std::string* bodyinfoaccessallowed);
+  void set_a_bodyinfoaccessallowed(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bodyinfoaccessallowed();
+  PROTOBUF_NODISCARD std::string* release_a_bodyinfoaccessallowed();
+  void set_allocated_a_bodyinfoaccessallowed(std::string* a_bodyinfoaccessallowed);
   private:
-  const std::string& _internal_bodyinfoaccessallowed() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bodyinfoaccessallowed(const std::string& value);
-  std::string* _internal_mutable_bodyinfoaccessallowed();
+  const std::string& _internal_a_bodyinfoaccessallowed() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bodyinfoaccessallowed(const std::string& value);
+  std::string* _internal_mutable_a_bodyinfoaccessallowed();
   public:
 
-  // required uint64 encodedBodySize = 21;
-  bool has_encodedbodysize() const;
+  // required uint64 a_encodedBodySize = 21;
+  bool has_a_encodedbodysize() const;
   private:
-  bool _internal_has_encodedbodysize() const;
+  bool _internal_has_a_encodedbodysize() const;
   public:
-  void clear_encodedbodysize();
-  uint64_t encodedbodysize() const;
-  void set_encodedbodysize(uint64_t value);
+  void clear_a_encodedbodysize();
+  uint64_t a_encodedbodysize() const;
+  void set_a_encodedbodysize(uint64_t value);
   private:
-  uint64_t _internal_encodedbodysize() const;
-  void _internal_set_encodedbodysize(uint64_t value);
-  public:
-
-  // required uint64 transferSize = 22;
-  bool has_transfersize() const;
-  private:
-  bool _internal_has_transfersize() const;
-  public:
-  void clear_transfersize();
-  uint64_t transfersize() const;
-  void set_transfersize(uint64_t value);
-  private:
-  uint64_t _internal_transfersize() const;
-  void _internal_set_transfersize(uint64_t value);
+  uint64_t _internal_a_encodedbodysize() const;
+  void _internal_set_a_encodedbodysize(uint64_t value);
   public:
 
-  // required uint64 decodedBodySize = 23;
-  bool has_decodedbodysize() const;
+  // required uint64 a_transferSize = 22;
+  bool has_a_transfersize() const;
   private:
-  bool _internal_has_decodedbodysize() const;
+  bool _internal_has_a_transfersize() const;
   public:
-  void clear_decodedbodysize();
-  uint64_t decodedbodysize() const;
-  void set_decodedbodysize(uint64_t value);
+  void clear_a_transfersize();
+  uint64_t a_transfersize() const;
+  void set_a_transfersize(uint64_t value);
   private:
-  uint64_t _internal_decodedbodysize() const;
-  void _internal_set_decodedbodysize(uint64_t value);
-  public:
-
-  // required uint32 responseStatus = 24;
-  bool has_responsestatus() const;
-  private:
-  bool _internal_has_responsestatus() const;
-  public:
-  void clear_responsestatus();
-  uint32_t responsestatus() const;
-  void set_responsestatus(uint32_t value);
-  private:
-  uint32_t _internal_responsestatus() const;
-  void _internal_set_responsestatus(uint32_t value);
+  uint64_t _internal_a_transfersize() const;
+  void _internal_set_a_transfersize(uint64_t value);
   public:
 
-  // required uint32 redirectCount = 25;
-  bool has_redirectcount() const;
+  // required uint64 a_decodedBodySize = 23;
+  bool has_a_decodedbodysize() const;
   private:
-  bool _internal_has_redirectcount() const;
+  bool _internal_has_a_decodedbodysize() const;
   public:
-  void clear_redirectcount();
-  uint32_t redirectcount() const;
-  void set_redirectcount(uint32_t value);
+  void clear_a_decodedbodysize();
+  uint64_t a_decodedbodysize() const;
+  void set_a_decodedbodysize(uint64_t value);
   private:
-  uint32_t _internal_redirectcount() const;
-  void _internal_set_redirectcount(uint32_t value);
-  public:
-
-  // required bool renderBlocking = 26;
-  bool has_renderblocking() const;
-  private:
-  bool _internal_has_renderblocking() const;
-  public:
-  void clear_renderblocking();
-  bool renderblocking() const;
-  void set_renderblocking(bool value);
-  private:
-  bool _internal_renderblocking() const;
-  void _internal_set_renderblocking(bool value);
+  uint64_t _internal_a_decodedbodysize() const;
+  void _internal_set_a_decodedbodysize(uint64_t value);
   public:
 
-  // required bool allRedirectsSameOrigin = 28;
-  bool has_allredirectssameorigin() const;
+  // required uint32 a_responseStatus = 24;
+  bool has_a_responsestatus() const;
   private:
-  bool _internal_has_allredirectssameorigin() const;
+  bool _internal_has_a_responsestatus() const;
   public:
-  void clear_allredirectssameorigin();
-  bool allredirectssameorigin() const;
-  void set_allredirectssameorigin(bool value);
+  void clear_a_responsestatus();
+  uint32_t a_responsestatus() const;
+  void set_a_responsestatus(uint32_t value);
   private:
-  bool _internal_allredirectssameorigin() const;
-  void _internal_set_allredirectssameorigin(bool value);
-  public:
-
-  // required bool allRedirectsPassTAO = 29;
-  bool has_allredirectspasstao() const;
-  private:
-  bool _internal_has_allredirectspasstao() const;
-  public:
-  void clear_allredirectspasstao();
-  bool allredirectspasstao() const;
-  void set_allredirectspasstao(bool value);
-  private:
-  bool _internal_allredirectspasstao() const;
-  void _internal_set_allredirectspasstao(bool value);
+  uint32_t _internal_a_responsestatus() const;
+  void _internal_set_a_responsestatus(uint32_t value);
   public:
 
-  // required bool secureConnection = 30;
-  bool has_secureconnection() const;
+  // required uint32 a_redirectCount = 25;
+  bool has_a_redirectcount() const;
   private:
-  bool _internal_has_secureconnection() const;
+  bool _internal_has_a_redirectcount() const;
   public:
-  void clear_secureconnection();
-  bool secureconnection() const;
-  void set_secureconnection(bool value);
+  void clear_a_redirectcount();
+  uint32_t a_redirectcount() const;
+  void set_a_redirectcount(uint32_t value);
   private:
-  bool _internal_secureconnection() const;
-  void _internal_set_secureconnection(bool value);
-  public:
-
-  // required bool timingAllowed = 32;
-  bool has_timingallowed() const;
-  private:
-  bool _internal_has_timingallowed() const;
-  public:
-  void clear_timingallowed();
-  bool timingallowed() const;
-  void set_timingallowed(bool value);
-  private:
-  bool _internal_timingallowed() const;
-  void _internal_set_timingallowed(bool value);
+  uint32_t _internal_a_redirectcount() const;
+  void _internal_set_a_redirectcount(uint32_t value);
   public:
 
-  // required bool initialized = 33;
-  bool has_initialized() const;
+  // required bool a_renderBlocking = 26;
+  bool has_a_renderblocking() const;
   private:
-  bool _internal_has_initialized() const;
+  bool _internal_has_a_renderblocking() const;
   public:
-  void clear_initialized();
-  bool initialized() const;
-  void set_initialized(bool value);
+  void clear_a_renderblocking();
+  bool a_renderblocking() const;
+  void set_a_renderblocking(bool value);
   private:
-  bool _internal_initialized() const;
-  void _internal_set_initialized(bool value);
+  bool _internal_a_renderblocking() const;
+  void _internal_set_a_renderblocking(bool value);
+  public:
+
+  // required bool a_allRedirectsSameOrigin = 28;
+  bool has_a_allredirectssameorigin() const;
+  private:
+  bool _internal_has_a_allredirectssameorigin() const;
+  public:
+  void clear_a_allredirectssameorigin();
+  bool a_allredirectssameorigin() const;
+  void set_a_allredirectssameorigin(bool value);
+  private:
+  bool _internal_a_allredirectssameorigin() const;
+  void _internal_set_a_allredirectssameorigin(bool value);
+  public:
+
+  // required bool a_allRedirectsPassTAO = 29;
+  bool has_a_allredirectspasstao() const;
+  private:
+  bool _internal_has_a_allredirectspasstao() const;
+  public:
+  void clear_a_allredirectspasstao();
+  bool a_allredirectspasstao() const;
+  void set_a_allredirectspasstao(bool value);
+  private:
+  bool _internal_a_allredirectspasstao() const;
+  void _internal_set_a_allredirectspasstao(bool value);
+  public:
+
+  // required bool a_secureConnection = 30;
+  bool has_a_secureconnection() const;
+  private:
+  bool _internal_has_a_secureconnection() const;
+  public:
+  void clear_a_secureconnection();
+  bool a_secureconnection() const;
+  void set_a_secureconnection(bool value);
+  private:
+  bool _internal_a_secureconnection() const;
+  void _internal_set_a_secureconnection(bool value);
+  public:
+
+  // required bool a_timingAllowed = 32;
+  bool has_a_timingallowed() const;
+  private:
+  bool _internal_has_a_timingallowed() const;
+  public:
+  void clear_a_timingallowed();
+  bool a_timingallowed() const;
+  void set_a_timingallowed(bool value);
+  private:
+  bool _internal_a_timingallowed() const;
+  void _internal_set_a_timingallowed(bool value);
+  public:
+
+  // required bool a_initialized = 33;
+  bool has_a_initialized() const;
+  private:
+  bool _internal_has_a_initialized() const;
+  public:
+  void clear_a_initialized();
+  bool a_initialized() const;
+  void set_a_initialized(bool value);
+  private:
+  bool _internal_a_initialized() const;
+  void _internal_set_a_initialized(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCPerformanceTimingData)
@@ -944,39 +944,39 @@ class IPCPerformanceTimingData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming > servertiming_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nexthopprotocol_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr asyncopen_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr redirectstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr redirectend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr domainlookupstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr domainlookupend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr connectstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr secureconnectionstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr connectend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requeststart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr responsestart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cachereadstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr responseend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cachereadend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr workerstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr workerrequeststart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr workerresponseend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr zerotime_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr fetchstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contenttype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bodyinfoaccessallowed_;
-    uint64_t encodedbodysize_;
-    uint64_t transfersize_;
-    uint64_t decodedbodysize_;
-    uint32_t responsestatus_;
-    uint32_t redirectcount_;
-    bool renderblocking_;
-    bool allredirectssameorigin_;
-    bool allredirectspasstao_;
-    bool secureconnection_;
-    bool timingallowed_;
-    bool initialized_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming > a_servertiming_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_nexthopprotocol_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asyncopen_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_redirectstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_redirectend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_domainlookupstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_domainlookupend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_connectstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_secureconnectionstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_connectend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_requeststart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_responsestart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_cachereadstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_responseend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_cachereadend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_workerstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_workerrequeststart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_workerresponseend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_zerotime_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fetchstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_contenttype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bodyinfoaccessallowed_;
+    uint64_t a_encodedbodysize_;
+    uint64_t a_transfersize_;
+    uint64_t a_decodedbodysize_;
+    uint32_t a_responsestatus_;
+    uint32_t a_redirectcount_;
+    bool a_renderblocking_;
+    bool a_allredirectssameorigin_;
+    bool a_allredirectspasstao_;
+    bool a_secureconnection_;
+    bool a_timingallowed_;
+    bool a_initialized_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -992,1948 +992,1948 @@ class IPCPerformanceTimingData final :
 #endif  // __GNUC__
 // IPCServerTiming
 
-// required bytes name = 1;
-inline bool IPCServerTiming::_internal_has_name() const {
+// required bytes a_name = 1;
+inline bool IPCServerTiming::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCServerTiming::has_name() const {
-  return _internal_has_name();
+inline bool IPCServerTiming::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void IPCServerTiming::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void IPCServerTiming::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCServerTiming::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServerTiming.name)
-  return _internal_name();
+inline const std::string& IPCServerTiming::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServerTiming.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCServerTiming::set_name(ArgT0&& arg0, ArgT... args) {
+void IPCServerTiming::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_name)
 }
-inline std::string* IPCServerTiming::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCServerTiming.name)
+inline std::string* IPCServerTiming::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCServerTiming.a_name)
   return _s;
 }
-inline const std::string& IPCServerTiming::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& IPCServerTiming::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void IPCServerTiming::_internal_set_name(const std::string& value) {
+inline void IPCServerTiming::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCServerTiming::_internal_mutable_name() {
+inline std::string* IPCServerTiming::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCServerTiming::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServerTiming.name)
-  if (!_internal_has_name()) {
+inline std::string* IPCServerTiming::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServerTiming.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCServerTiming::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void IPCServerTiming::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServerTiming.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServerTiming.a_name)
 }
 
-// required double duration = 2;
-inline bool IPCServerTiming::_internal_has_duration() const {
+// required double a_duration = 2;
+inline bool IPCServerTiming::_internal_has_a_duration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool IPCServerTiming::has_duration() const {
-  return _internal_has_duration();
+inline bool IPCServerTiming::has_a_duration() const {
+  return _internal_has_a_duration();
 }
-inline void IPCServerTiming::clear_duration() {
-  _impl_.duration_ = 0;
+inline void IPCServerTiming::clear_a_duration() {
+  _impl_.a_duration_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline double IPCServerTiming::_internal_duration() const {
-  return _impl_.duration_;
+inline double IPCServerTiming::_internal_a_duration() const {
+  return _impl_.a_duration_;
 }
-inline double IPCServerTiming::duration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServerTiming.duration)
-  return _internal_duration();
+inline double IPCServerTiming::a_duration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServerTiming.a_duration)
+  return _internal_a_duration();
 }
-inline void IPCServerTiming::_internal_set_duration(double value) {
+inline void IPCServerTiming::_internal_set_a_duration(double value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.duration_ = value;
+  _impl_.a_duration_ = value;
 }
-inline void IPCServerTiming::set_duration(double value) {
-  _internal_set_duration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.duration)
+inline void IPCServerTiming::set_a_duration(double value) {
+  _internal_set_a_duration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_duration)
 }
 
-// required bytes description = 3;
-inline bool IPCServerTiming::_internal_has_description() const {
+// required bytes a_description = 3;
+inline bool IPCServerTiming::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IPCServerTiming::has_description() const {
-  return _internal_has_description();
+inline bool IPCServerTiming::has_a_description() const {
+  return _internal_has_a_description();
 }
-inline void IPCServerTiming::clear_description() {
-  _impl_.description_.ClearToEmpty();
+inline void IPCServerTiming::clear_a_description() {
+  _impl_.a_description_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IPCServerTiming::description() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServerTiming.description)
-  return _internal_description();
+inline const std::string& IPCServerTiming::a_description() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCServerTiming.a_description)
+  return _internal_a_description();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCServerTiming::set_description(ArgT0&& arg0, ArgT... args) {
+void IPCServerTiming::set_a_description(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.description_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.description)
+ _impl_.a_description_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_description)
 }
-inline std::string* IPCServerTiming::mutable_description() {
-  std::string* _s = _internal_mutable_description();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCServerTiming.description)
+inline std::string* IPCServerTiming::mutable_a_description() {
+  std::string* _s = _internal_mutable_a_description();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCServerTiming.a_description)
   return _s;
 }
-inline const std::string& IPCServerTiming::_internal_description() const {
-  return _impl_.description_.Get();
+inline const std::string& IPCServerTiming::_internal_a_description() const {
+  return _impl_.a_description_.Get();
 }
-inline void IPCServerTiming::_internal_set_description(const std::string& value) {
+inline void IPCServerTiming::_internal_set_a_description(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.description_.Set(value, GetArenaForAllocation());
+  _impl_.a_description_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCServerTiming::_internal_mutable_description() {
+inline std::string* IPCServerTiming::_internal_mutable_a_description() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.description_.Mutable(GetArenaForAllocation());
+  return _impl_.a_description_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCServerTiming::release_description() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServerTiming.description)
-  if (!_internal_has_description()) {
+inline std::string* IPCServerTiming::release_a_description() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCServerTiming.a_description)
+  if (!_internal_has_a_description()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.description_.Release();
+  auto* p = _impl_.a_description_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.description_.IsDefault()) {
-    _impl_.description_.Set("", GetArenaForAllocation());
+  if (_impl_.a_description_.IsDefault()) {
+    _impl_.a_description_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCServerTiming::set_allocated_description(std::string* description) {
-  if (description != nullptr) {
+inline void IPCServerTiming::set_allocated_a_description(std::string* a_description) {
+  if (a_description != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.description_.SetAllocated(description, GetArenaForAllocation());
+  _impl_.a_description_.SetAllocated(a_description, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.description_.IsDefault()) {
-    _impl_.description_.Set("", GetArenaForAllocation());
+  if (_impl_.a_description_.IsDefault()) {
+    _impl_.a_description_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServerTiming.description)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCServerTiming.a_description)
 }
 
 // -------------------------------------------------------------------
 
 // IPCPerformanceTimingData
 
-// repeated .protobuf.mozilla.dom.IPCServerTiming serverTiming = 1;
-inline int IPCPerformanceTimingData::_internal_servertiming_size() const {
-  return _impl_.servertiming_.size();
+// repeated .protobuf.mozilla.dom.IPCServerTiming a_serverTiming = 1;
+inline int IPCPerformanceTimingData::_internal_a_servertiming_size() const {
+  return _impl_.a_servertiming_.size();
 }
-inline int IPCPerformanceTimingData::servertiming_size() const {
-  return _internal_servertiming_size();
+inline int IPCPerformanceTimingData::a_servertiming_size() const {
+  return _internal_a_servertiming_size();
 }
-inline void IPCPerformanceTimingData::clear_servertiming() {
-  _impl_.servertiming_.Clear();
+inline void IPCPerformanceTimingData::clear_a_servertiming() {
+  _impl_.a_servertiming_.Clear();
 }
-inline ::protobuf::mozilla::dom::IPCServerTiming* IPCPerformanceTimingData::mutable_servertiming(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.serverTiming)
-  return _impl_.servertiming_.Mutable(index);
+inline ::protobuf::mozilla::dom::IPCServerTiming* IPCPerformanceTimingData::mutable_a_servertiming(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_serverTiming)
+  return _impl_.a_servertiming_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming >*
-IPCPerformanceTimingData::mutable_servertiming() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.IPCPerformanceTimingData.serverTiming)
-  return &_impl_.servertiming_;
+IPCPerformanceTimingData::mutable_a_servertiming() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.IPCPerformanceTimingData.a_serverTiming)
+  return &_impl_.a_servertiming_;
 }
-inline const ::protobuf::mozilla::dom::IPCServerTiming& IPCPerformanceTimingData::_internal_servertiming(int index) const {
-  return _impl_.servertiming_.Get(index);
+inline const ::protobuf::mozilla::dom::IPCServerTiming& IPCPerformanceTimingData::_internal_a_servertiming(int index) const {
+  return _impl_.a_servertiming_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::IPCServerTiming& IPCPerformanceTimingData::servertiming(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.serverTiming)
-  return _internal_servertiming(index);
+inline const ::protobuf::mozilla::dom::IPCServerTiming& IPCPerformanceTimingData::a_servertiming(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_serverTiming)
+  return _internal_a_servertiming(index);
 }
-inline ::protobuf::mozilla::dom::IPCServerTiming* IPCPerformanceTimingData::_internal_add_servertiming() {
-  return _impl_.servertiming_.Add();
+inline ::protobuf::mozilla::dom::IPCServerTiming* IPCPerformanceTimingData::_internal_add_a_servertiming() {
+  return _impl_.a_servertiming_.Add();
 }
-inline ::protobuf::mozilla::dom::IPCServerTiming* IPCPerformanceTimingData::add_servertiming() {
-  ::protobuf::mozilla::dom::IPCServerTiming* _add = _internal_add_servertiming();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.IPCPerformanceTimingData.serverTiming)
+inline ::protobuf::mozilla::dom::IPCServerTiming* IPCPerformanceTimingData::add_a_servertiming() {
+  ::protobuf::mozilla::dom::IPCServerTiming* _add = _internal_add_a_servertiming();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.IPCPerformanceTimingData.a_serverTiming)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming >&
-IPCPerformanceTimingData::servertiming() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.IPCPerformanceTimingData.serverTiming)
-  return _impl_.servertiming_;
+IPCPerformanceTimingData::a_servertiming() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.IPCPerformanceTimingData.a_serverTiming)
+  return _impl_.a_servertiming_;
 }
 
-// required bytes nextHopProtocol = 2;
-inline bool IPCPerformanceTimingData::_internal_has_nexthopprotocol() const {
+// required bytes a_nextHopProtocol = 2;
+inline bool IPCPerformanceTimingData::_internal_has_a_nexthopprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_nexthopprotocol() const {
-  return _internal_has_nexthopprotocol();
+inline bool IPCPerformanceTimingData::has_a_nexthopprotocol() const {
+  return _internal_has_a_nexthopprotocol();
 }
-inline void IPCPerformanceTimingData::clear_nexthopprotocol() {
-  _impl_.nexthopprotocol_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_nexthopprotocol() {
+  _impl_.a_nexthopprotocol_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCPerformanceTimingData::nexthopprotocol() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.nextHopProtocol)
-  return _internal_nexthopprotocol();
+inline const std::string& IPCPerformanceTimingData::a_nexthopprotocol() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol)
+  return _internal_a_nexthopprotocol();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_nexthopprotocol(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_nexthopprotocol(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.nexthopprotocol_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.nextHopProtocol)
+ _impl_.a_nexthopprotocol_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol)
 }
-inline std::string* IPCPerformanceTimingData::mutable_nexthopprotocol() {
-  std::string* _s = _internal_mutable_nexthopprotocol();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.nextHopProtocol)
+inline std::string* IPCPerformanceTimingData::mutable_a_nexthopprotocol() {
+  std::string* _s = _internal_mutable_a_nexthopprotocol();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_nexthopprotocol() const {
-  return _impl_.nexthopprotocol_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_nexthopprotocol() const {
+  return _impl_.a_nexthopprotocol_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_nexthopprotocol(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_nexthopprotocol(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.nexthopprotocol_.Set(value, GetArenaForAllocation());
+  _impl_.a_nexthopprotocol_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_nexthopprotocol() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_nexthopprotocol() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.nexthopprotocol_.Mutable(GetArenaForAllocation());
+  return _impl_.a_nexthopprotocol_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_nexthopprotocol() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.nextHopProtocol)
-  if (!_internal_has_nexthopprotocol()) {
+inline std::string* IPCPerformanceTimingData::release_a_nexthopprotocol() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol)
+  if (!_internal_has_a_nexthopprotocol()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.nexthopprotocol_.Release();
+  auto* p = _impl_.a_nexthopprotocol_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.nexthopprotocol_.IsDefault()) {
-    _impl_.nexthopprotocol_.Set("", GetArenaForAllocation());
+  if (_impl_.a_nexthopprotocol_.IsDefault()) {
+    _impl_.a_nexthopprotocol_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_nexthopprotocol(std::string* nexthopprotocol) {
-  if (nexthopprotocol != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_nexthopprotocol(std::string* a_nexthopprotocol) {
+  if (a_nexthopprotocol != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.nexthopprotocol_.SetAllocated(nexthopprotocol, GetArenaForAllocation());
+  _impl_.a_nexthopprotocol_.SetAllocated(a_nexthopprotocol, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.nexthopprotocol_.IsDefault()) {
-    _impl_.nexthopprotocol_.Set("", GetArenaForAllocation());
+  if (_impl_.a_nexthopprotocol_.IsDefault()) {
+    _impl_.a_nexthopprotocol_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.nextHopProtocol)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol)
 }
 
-// required bytes asyncOpen = 3;
-inline bool IPCPerformanceTimingData::_internal_has_asyncopen() const {
+// required bytes a_asyncOpen = 3;
+inline bool IPCPerformanceTimingData::_internal_has_a_asyncopen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_asyncopen() const {
-  return _internal_has_asyncopen();
+inline bool IPCPerformanceTimingData::has_a_asyncopen() const {
+  return _internal_has_a_asyncopen();
 }
-inline void IPCPerformanceTimingData::clear_asyncopen() {
-  _impl_.asyncopen_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_asyncopen() {
+  _impl_.a_asyncopen_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IPCPerformanceTimingData::asyncopen() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.asyncOpen)
-  return _internal_asyncopen();
+inline const std::string& IPCPerformanceTimingData::a_asyncopen() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_asyncOpen)
+  return _internal_a_asyncopen();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_asyncopen(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_asyncopen(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.asyncopen_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.asyncOpen)
+ _impl_.a_asyncopen_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_asyncOpen)
 }
-inline std::string* IPCPerformanceTimingData::mutable_asyncopen() {
-  std::string* _s = _internal_mutable_asyncopen();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.asyncOpen)
+inline std::string* IPCPerformanceTimingData::mutable_a_asyncopen() {
+  std::string* _s = _internal_mutable_a_asyncopen();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_asyncOpen)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_asyncopen() const {
-  return _impl_.asyncopen_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_asyncopen() const {
+  return _impl_.a_asyncopen_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_asyncopen(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_asyncopen(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.asyncopen_.Set(value, GetArenaForAllocation());
+  _impl_.a_asyncopen_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_asyncopen() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_asyncopen() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.asyncopen_.Mutable(GetArenaForAllocation());
+  return _impl_.a_asyncopen_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_asyncopen() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.asyncOpen)
-  if (!_internal_has_asyncopen()) {
+inline std::string* IPCPerformanceTimingData::release_a_asyncopen() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_asyncOpen)
+  if (!_internal_has_a_asyncopen()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.asyncopen_.Release();
+  auto* p = _impl_.a_asyncopen_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asyncopen_.IsDefault()) {
-    _impl_.asyncopen_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asyncopen_.IsDefault()) {
+    _impl_.a_asyncopen_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_asyncopen(std::string* asyncopen) {
-  if (asyncopen != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_asyncopen(std::string* a_asyncopen) {
+  if (a_asyncopen != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.asyncopen_.SetAllocated(asyncopen, GetArenaForAllocation());
+  _impl_.a_asyncopen_.SetAllocated(a_asyncopen, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asyncopen_.IsDefault()) {
-    _impl_.asyncopen_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asyncopen_.IsDefault()) {
+    _impl_.a_asyncopen_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.asyncOpen)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_asyncOpen)
 }
 
-// required bytes redirectStart = 4;
-inline bool IPCPerformanceTimingData::_internal_has_redirectstart() const {
+// required bytes a_redirectStart = 4;
+inline bool IPCPerformanceTimingData::_internal_has_a_redirectstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_redirectstart() const {
-  return _internal_has_redirectstart();
+inline bool IPCPerformanceTimingData::has_a_redirectstart() const {
+  return _internal_has_a_redirectstart();
 }
-inline void IPCPerformanceTimingData::clear_redirectstart() {
-  _impl_.redirectstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_redirectstart() {
+  _impl_.a_redirectstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& IPCPerformanceTimingData::redirectstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectStart)
-  return _internal_redirectstart();
+inline const std::string& IPCPerformanceTimingData::a_redirectstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectStart)
+  return _internal_a_redirectstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_redirectstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_redirectstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.redirectstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectStart)
+ _impl_.a_redirectstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_redirectstart() {
-  std::string* _s = _internal_mutable_redirectstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_redirectstart() {
+  std::string* _s = _internal_mutable_a_redirectstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_redirectstart() const {
-  return _impl_.redirectstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_redirectstart() const {
+  return _impl_.a_redirectstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_redirectstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_redirectstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.redirectstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_redirectstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_redirectstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_redirectstart() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.redirectstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_redirectstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_redirectstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectStart)
-  if (!_internal_has_redirectstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_redirectstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectStart)
+  if (!_internal_has_a_redirectstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.redirectstart_.Release();
+  auto* p = _impl_.a_redirectstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.redirectstart_.IsDefault()) {
-    _impl_.redirectstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_redirectstart_.IsDefault()) {
+    _impl_.a_redirectstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_redirectstart(std::string* redirectstart) {
-  if (redirectstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_redirectstart(std::string* a_redirectstart) {
+  if (a_redirectstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.redirectstart_.SetAllocated(redirectstart, GetArenaForAllocation());
+  _impl_.a_redirectstart_.SetAllocated(a_redirectstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.redirectstart_.IsDefault()) {
-    _impl_.redirectstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_redirectstart_.IsDefault()) {
+    _impl_.a_redirectstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectStart)
 }
 
-// required bytes redirectEnd = 5;
-inline bool IPCPerformanceTimingData::_internal_has_redirectend() const {
+// required bytes a_redirectEnd = 5;
+inline bool IPCPerformanceTimingData::_internal_has_a_redirectend() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_redirectend() const {
-  return _internal_has_redirectend();
+inline bool IPCPerformanceTimingData::has_a_redirectend() const {
+  return _internal_has_a_redirectend();
 }
-inline void IPCPerformanceTimingData::clear_redirectend() {
-  _impl_.redirectend_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_redirectend() {
+  _impl_.a_redirectend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& IPCPerformanceTimingData::redirectend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectEnd)
-  return _internal_redirectend();
+inline const std::string& IPCPerformanceTimingData::a_redirectend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectEnd)
+  return _internal_a_redirectend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_redirectend(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_redirectend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.redirectend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectEnd)
+ _impl_.a_redirectend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectEnd)
 }
-inline std::string* IPCPerformanceTimingData::mutable_redirectend() {
-  std::string* _s = _internal_mutable_redirectend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectEnd)
+inline std::string* IPCPerformanceTimingData::mutable_a_redirectend() {
+  std::string* _s = _internal_mutable_a_redirectend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectEnd)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_redirectend() const {
-  return _impl_.redirectend_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_redirectend() const {
+  return _impl_.a_redirectend_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_redirectend(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_redirectend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.redirectend_.Set(value, GetArenaForAllocation());
+  _impl_.a_redirectend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_redirectend() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_redirectend() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.redirectend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_redirectend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_redirectend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectEnd)
-  if (!_internal_has_redirectend()) {
+inline std::string* IPCPerformanceTimingData::release_a_redirectend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectEnd)
+  if (!_internal_has_a_redirectend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.redirectend_.Release();
+  auto* p = _impl_.a_redirectend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.redirectend_.IsDefault()) {
-    _impl_.redirectend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_redirectend_.IsDefault()) {
+    _impl_.a_redirectend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_redirectend(std::string* redirectend) {
-  if (redirectend != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_redirectend(std::string* a_redirectend) {
+  if (a_redirectend != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.redirectend_.SetAllocated(redirectend, GetArenaForAllocation());
+  _impl_.a_redirectend_.SetAllocated(a_redirectend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.redirectend_.IsDefault()) {
-    _impl_.redirectend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_redirectend_.IsDefault()) {
+    _impl_.a_redirectend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectEnd)
 }
 
-// required bytes domainLookupStart = 6;
-inline bool IPCPerformanceTimingData::_internal_has_domainlookupstart() const {
+// required bytes a_domainLookupStart = 6;
+inline bool IPCPerformanceTimingData::_internal_has_a_domainlookupstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_domainlookupstart() const {
-  return _internal_has_domainlookupstart();
+inline bool IPCPerformanceTimingData::has_a_domainlookupstart() const {
+  return _internal_has_a_domainlookupstart();
 }
-inline void IPCPerformanceTimingData::clear_domainlookupstart() {
-  _impl_.domainlookupstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_domainlookupstart() {
+  _impl_.a_domainlookupstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& IPCPerformanceTimingData::domainlookupstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupStart)
-  return _internal_domainlookupstart();
+inline const std::string& IPCPerformanceTimingData::a_domainlookupstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupStart)
+  return _internal_a_domainlookupstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_domainlookupstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_domainlookupstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.domainlookupstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupStart)
+ _impl_.a_domainlookupstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_domainlookupstart() {
-  std::string* _s = _internal_mutable_domainlookupstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_domainlookupstart() {
+  std::string* _s = _internal_mutable_a_domainlookupstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_domainlookupstart() const {
-  return _impl_.domainlookupstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_domainlookupstart() const {
+  return _impl_.a_domainlookupstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_domainlookupstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_domainlookupstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.domainlookupstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_domainlookupstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_domainlookupstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_domainlookupstart() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.domainlookupstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_domainlookupstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_domainlookupstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupStart)
-  if (!_internal_has_domainlookupstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_domainlookupstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupStart)
+  if (!_internal_has_a_domainlookupstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.domainlookupstart_.Release();
+  auto* p = _impl_.a_domainlookupstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.domainlookupstart_.IsDefault()) {
-    _impl_.domainlookupstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_domainlookupstart_.IsDefault()) {
+    _impl_.a_domainlookupstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_domainlookupstart(std::string* domainlookupstart) {
-  if (domainlookupstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_domainlookupstart(std::string* a_domainlookupstart) {
+  if (a_domainlookupstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.domainlookupstart_.SetAllocated(domainlookupstart, GetArenaForAllocation());
+  _impl_.a_domainlookupstart_.SetAllocated(a_domainlookupstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.domainlookupstart_.IsDefault()) {
-    _impl_.domainlookupstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_domainlookupstart_.IsDefault()) {
+    _impl_.a_domainlookupstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupStart)
 }
 
-// required bytes domainLookupEnd = 7;
-inline bool IPCPerformanceTimingData::_internal_has_domainlookupend() const {
+// required bytes a_domainLookupEnd = 7;
+inline bool IPCPerformanceTimingData::_internal_has_a_domainlookupend() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_domainlookupend() const {
-  return _internal_has_domainlookupend();
+inline bool IPCPerformanceTimingData::has_a_domainlookupend() const {
+  return _internal_has_a_domainlookupend();
 }
-inline void IPCPerformanceTimingData::clear_domainlookupend() {
-  _impl_.domainlookupend_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_domainlookupend() {
+  _impl_.a_domainlookupend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline const std::string& IPCPerformanceTimingData::domainlookupend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupEnd)
-  return _internal_domainlookupend();
+inline const std::string& IPCPerformanceTimingData::a_domainlookupend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupEnd)
+  return _internal_a_domainlookupend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_domainlookupend(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_domainlookupend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.domainlookupend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupEnd)
+ _impl_.a_domainlookupend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupEnd)
 }
-inline std::string* IPCPerformanceTimingData::mutable_domainlookupend() {
-  std::string* _s = _internal_mutable_domainlookupend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupEnd)
+inline std::string* IPCPerformanceTimingData::mutable_a_domainlookupend() {
+  std::string* _s = _internal_mutable_a_domainlookupend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupEnd)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_domainlookupend() const {
-  return _impl_.domainlookupend_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_domainlookupend() const {
+  return _impl_.a_domainlookupend_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_domainlookupend(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_domainlookupend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.domainlookupend_.Set(value, GetArenaForAllocation());
+  _impl_.a_domainlookupend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_domainlookupend() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_domainlookupend() {
   _impl_._has_bits_[0] |= 0x00000020u;
-  return _impl_.domainlookupend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_domainlookupend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_domainlookupend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupEnd)
-  if (!_internal_has_domainlookupend()) {
+inline std::string* IPCPerformanceTimingData::release_a_domainlookupend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupEnd)
+  if (!_internal_has_a_domainlookupend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.domainlookupend_.Release();
+  auto* p = _impl_.a_domainlookupend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.domainlookupend_.IsDefault()) {
-    _impl_.domainlookupend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_domainlookupend_.IsDefault()) {
+    _impl_.a_domainlookupend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_domainlookupend(std::string* domainlookupend) {
-  if (domainlookupend != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_domainlookupend(std::string* a_domainlookupend) {
+  if (a_domainlookupend != nullptr) {
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  _impl_.domainlookupend_.SetAllocated(domainlookupend, GetArenaForAllocation());
+  _impl_.a_domainlookupend_.SetAllocated(a_domainlookupend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.domainlookupend_.IsDefault()) {
-    _impl_.domainlookupend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_domainlookupend_.IsDefault()) {
+    _impl_.a_domainlookupend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.domainLookupEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_domainLookupEnd)
 }
 
-// required bytes connectStart = 8;
-inline bool IPCPerformanceTimingData::_internal_has_connectstart() const {
+// required bytes a_connectStart = 8;
+inline bool IPCPerformanceTimingData::_internal_has_a_connectstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_connectstart() const {
-  return _internal_has_connectstart();
+inline bool IPCPerformanceTimingData::has_a_connectstart() const {
+  return _internal_has_a_connectstart();
 }
-inline void IPCPerformanceTimingData::clear_connectstart() {
-  _impl_.connectstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_connectstart() {
+  _impl_.a_connectstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline const std::string& IPCPerformanceTimingData::connectstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.connectStart)
-  return _internal_connectstart();
+inline const std::string& IPCPerformanceTimingData::a_connectstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectStart)
+  return _internal_a_connectstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_connectstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_connectstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.connectstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.connectStart)
+ _impl_.a_connectstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_connectstart() {
-  std::string* _s = _internal_mutable_connectstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.connectStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_connectstart() {
+  std::string* _s = _internal_mutable_a_connectstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_connectstart() const {
-  return _impl_.connectstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_connectstart() const {
+  return _impl_.a_connectstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_connectstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_connectstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.connectstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_connectstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_connectstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_connectstart() {
   _impl_._has_bits_[0] |= 0x00000040u;
-  return _impl_.connectstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_connectstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_connectstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.connectStart)
-  if (!_internal_has_connectstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_connectstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectStart)
+  if (!_internal_has_a_connectstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000040u;
-  auto* p = _impl_.connectstart_.Release();
+  auto* p = _impl_.a_connectstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.connectstart_.IsDefault()) {
-    _impl_.connectstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_connectstart_.IsDefault()) {
+    _impl_.a_connectstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_connectstart(std::string* connectstart) {
-  if (connectstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_connectstart(std::string* a_connectstart) {
+  if (a_connectstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000040u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000040u;
   }
-  _impl_.connectstart_.SetAllocated(connectstart, GetArenaForAllocation());
+  _impl_.a_connectstart_.SetAllocated(a_connectstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.connectstart_.IsDefault()) {
-    _impl_.connectstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_connectstart_.IsDefault()) {
+    _impl_.a_connectstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.connectStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectStart)
 }
 
-// required bytes secureConnectionStart = 9;
-inline bool IPCPerformanceTimingData::_internal_has_secureconnectionstart() const {
+// required bytes a_secureConnectionStart = 9;
+inline bool IPCPerformanceTimingData::_internal_has_a_secureconnectionstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_secureconnectionstart() const {
-  return _internal_has_secureconnectionstart();
+inline bool IPCPerformanceTimingData::has_a_secureconnectionstart() const {
+  return _internal_has_a_secureconnectionstart();
 }
-inline void IPCPerformanceTimingData::clear_secureconnectionstart() {
-  _impl_.secureconnectionstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_secureconnectionstart() {
+  _impl_.a_secureconnectionstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline const std::string& IPCPerformanceTimingData::secureconnectionstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnectionStart)
-  return _internal_secureconnectionstart();
+inline const std::string& IPCPerformanceTimingData::a_secureconnectionstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnectionStart)
+  return _internal_a_secureconnectionstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_secureconnectionstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_secureconnectionstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.secureconnectionstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnectionStart)
+ _impl_.a_secureconnectionstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnectionStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_secureconnectionstart() {
-  std::string* _s = _internal_mutable_secureconnectionstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnectionStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_secureconnectionstart() {
+  std::string* _s = _internal_mutable_a_secureconnectionstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnectionStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_secureconnectionstart() const {
-  return _impl_.secureconnectionstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_secureconnectionstart() const {
+  return _impl_.a_secureconnectionstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_secureconnectionstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_secureconnectionstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.secureconnectionstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_secureconnectionstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_secureconnectionstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_secureconnectionstart() {
   _impl_._has_bits_[0] |= 0x00000080u;
-  return _impl_.secureconnectionstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_secureconnectionstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_secureconnectionstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnectionStart)
-  if (!_internal_has_secureconnectionstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_secureconnectionstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnectionStart)
+  if (!_internal_has_a_secureconnectionstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000080u;
-  auto* p = _impl_.secureconnectionstart_.Release();
+  auto* p = _impl_.a_secureconnectionstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.secureconnectionstart_.IsDefault()) {
-    _impl_.secureconnectionstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_secureconnectionstart_.IsDefault()) {
+    _impl_.a_secureconnectionstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_secureconnectionstart(std::string* secureconnectionstart) {
-  if (secureconnectionstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_secureconnectionstart(std::string* a_secureconnectionstart) {
+  if (a_secureconnectionstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000080u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000080u;
   }
-  _impl_.secureconnectionstart_.SetAllocated(secureconnectionstart, GetArenaForAllocation());
+  _impl_.a_secureconnectionstart_.SetAllocated(a_secureconnectionstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.secureconnectionstart_.IsDefault()) {
-    _impl_.secureconnectionstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_secureconnectionstart_.IsDefault()) {
+    _impl_.a_secureconnectionstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnectionStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnectionStart)
 }
 
-// required bytes connectEnd = 10;
-inline bool IPCPerformanceTimingData::_internal_has_connectend() const {
+// required bytes a_connectEnd = 10;
+inline bool IPCPerformanceTimingData::_internal_has_a_connectend() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_connectend() const {
-  return _internal_has_connectend();
+inline bool IPCPerformanceTimingData::has_a_connectend() const {
+  return _internal_has_a_connectend();
 }
-inline void IPCPerformanceTimingData::clear_connectend() {
-  _impl_.connectend_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_connectend() {
+  _impl_.a_connectend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline const std::string& IPCPerformanceTimingData::connectend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.connectEnd)
-  return _internal_connectend();
+inline const std::string& IPCPerformanceTimingData::a_connectend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectEnd)
+  return _internal_a_connectend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_connectend(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_connectend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.connectend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.connectEnd)
+ _impl_.a_connectend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectEnd)
 }
-inline std::string* IPCPerformanceTimingData::mutable_connectend() {
-  std::string* _s = _internal_mutable_connectend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.connectEnd)
+inline std::string* IPCPerformanceTimingData::mutable_a_connectend() {
+  std::string* _s = _internal_mutable_a_connectend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectEnd)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_connectend() const {
-  return _impl_.connectend_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_connectend() const {
+  return _impl_.a_connectend_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_connectend(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_connectend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.connectend_.Set(value, GetArenaForAllocation());
+  _impl_.a_connectend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_connectend() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_connectend() {
   _impl_._has_bits_[0] |= 0x00000100u;
-  return _impl_.connectend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_connectend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_connectend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.connectEnd)
-  if (!_internal_has_connectend()) {
+inline std::string* IPCPerformanceTimingData::release_a_connectend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectEnd)
+  if (!_internal_has_a_connectend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000100u;
-  auto* p = _impl_.connectend_.Release();
+  auto* p = _impl_.a_connectend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.connectend_.IsDefault()) {
-    _impl_.connectend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_connectend_.IsDefault()) {
+    _impl_.a_connectend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_connectend(std::string* connectend) {
-  if (connectend != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_connectend(std::string* a_connectend) {
+  if (a_connectend != nullptr) {
     _impl_._has_bits_[0] |= 0x00000100u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000100u;
   }
-  _impl_.connectend_.SetAllocated(connectend, GetArenaForAllocation());
+  _impl_.a_connectend_.SetAllocated(a_connectend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.connectend_.IsDefault()) {
-    _impl_.connectend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_connectend_.IsDefault()) {
+    _impl_.a_connectend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.connectEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_connectEnd)
 }
 
-// required bytes requestStart = 11;
-inline bool IPCPerformanceTimingData::_internal_has_requeststart() const {
+// required bytes a_requestStart = 11;
+inline bool IPCPerformanceTimingData::_internal_has_a_requeststart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_requeststart() const {
-  return _internal_has_requeststart();
+inline bool IPCPerformanceTimingData::has_a_requeststart() const {
+  return _internal_has_a_requeststart();
 }
-inline void IPCPerformanceTimingData::clear_requeststart() {
-  _impl_.requeststart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_requeststart() {
+  _impl_.a_requeststart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
-inline const std::string& IPCPerformanceTimingData::requeststart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.requestStart)
-  return _internal_requeststart();
+inline const std::string& IPCPerformanceTimingData::a_requeststart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_requestStart)
+  return _internal_a_requeststart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_requeststart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_requeststart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000200u;
- _impl_.requeststart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.requestStart)
+ _impl_.a_requeststart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_requestStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_requeststart() {
-  std::string* _s = _internal_mutable_requeststart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.requestStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_requeststart() {
+  std::string* _s = _internal_mutable_a_requeststart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_requestStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_requeststart() const {
-  return _impl_.requeststart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_requeststart() const {
+  return _impl_.a_requeststart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_requeststart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_requeststart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.requeststart_.Set(value, GetArenaForAllocation());
+  _impl_.a_requeststart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_requeststart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_requeststart() {
   _impl_._has_bits_[0] |= 0x00000200u;
-  return _impl_.requeststart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_requeststart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_requeststart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.requestStart)
-  if (!_internal_has_requeststart()) {
+inline std::string* IPCPerformanceTimingData::release_a_requeststart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_requestStart)
+  if (!_internal_has_a_requeststart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000200u;
-  auto* p = _impl_.requeststart_.Release();
+  auto* p = _impl_.a_requeststart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.requeststart_.IsDefault()) {
-    _impl_.requeststart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_requeststart_.IsDefault()) {
+    _impl_.a_requeststart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_requeststart(std::string* requeststart) {
-  if (requeststart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_requeststart(std::string* a_requeststart) {
+  if (a_requeststart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000200u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000200u;
   }
-  _impl_.requeststart_.SetAllocated(requeststart, GetArenaForAllocation());
+  _impl_.a_requeststart_.SetAllocated(a_requeststart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.requeststart_.IsDefault()) {
-    _impl_.requeststart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_requeststart_.IsDefault()) {
+    _impl_.a_requeststart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.requestStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_requestStart)
 }
 
-// required bytes responseStart = 12;
-inline bool IPCPerformanceTimingData::_internal_has_responsestart() const {
+// required bytes a_responseStart = 12;
+inline bool IPCPerformanceTimingData::_internal_has_a_responsestart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_responsestart() const {
-  return _internal_has_responsestart();
+inline bool IPCPerformanceTimingData::has_a_responsestart() const {
+  return _internal_has_a_responsestart();
 }
-inline void IPCPerformanceTimingData::clear_responsestart() {
-  _impl_.responsestart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_responsestart() {
+  _impl_.a_responsestart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000400u;
 }
-inline const std::string& IPCPerformanceTimingData::responsestart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStart)
-  return _internal_responsestart();
+inline const std::string& IPCPerformanceTimingData::a_responsestart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStart)
+  return _internal_a_responsestart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_responsestart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_responsestart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000400u;
- _impl_.responsestart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStart)
+ _impl_.a_responsestart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_responsestart() {
-  std::string* _s = _internal_mutable_responsestart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_responsestart() {
+  std::string* _s = _internal_mutable_a_responsestart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_responsestart() const {
-  return _impl_.responsestart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_responsestart() const {
+  return _impl_.a_responsestart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_responsestart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_responsestart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000400u;
-  _impl_.responsestart_.Set(value, GetArenaForAllocation());
+  _impl_.a_responsestart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_responsestart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_responsestart() {
   _impl_._has_bits_[0] |= 0x00000400u;
-  return _impl_.responsestart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_responsestart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_responsestart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStart)
-  if (!_internal_has_responsestart()) {
+inline std::string* IPCPerformanceTimingData::release_a_responsestart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStart)
+  if (!_internal_has_a_responsestart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000400u;
-  auto* p = _impl_.responsestart_.Release();
+  auto* p = _impl_.a_responsestart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.responsestart_.IsDefault()) {
-    _impl_.responsestart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_responsestart_.IsDefault()) {
+    _impl_.a_responsestart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_responsestart(std::string* responsestart) {
-  if (responsestart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_responsestart(std::string* a_responsestart) {
+  if (a_responsestart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000400u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000400u;
   }
-  _impl_.responsestart_.SetAllocated(responsestart, GetArenaForAllocation());
+  _impl_.a_responsestart_.SetAllocated(a_responsestart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.responsestart_.IsDefault()) {
-    _impl_.responsestart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_responsestart_.IsDefault()) {
+    _impl_.a_responsestart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStart)
 }
 
-// required bytes cacheReadStart = 13;
-inline bool IPCPerformanceTimingData::_internal_has_cachereadstart() const {
+// required bytes a_cacheReadStart = 13;
+inline bool IPCPerformanceTimingData::_internal_has_a_cachereadstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_cachereadstart() const {
-  return _internal_has_cachereadstart();
+inline bool IPCPerformanceTimingData::has_a_cachereadstart() const {
+  return _internal_has_a_cachereadstart();
 }
-inline void IPCPerformanceTimingData::clear_cachereadstart() {
-  _impl_.cachereadstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_cachereadstart() {
+  _impl_.a_cachereadstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000800u;
 }
-inline const std::string& IPCPerformanceTimingData::cachereadstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadStart)
-  return _internal_cachereadstart();
+inline const std::string& IPCPerformanceTimingData::a_cachereadstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadStart)
+  return _internal_a_cachereadstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_cachereadstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_cachereadstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000800u;
- _impl_.cachereadstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadStart)
+ _impl_.a_cachereadstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_cachereadstart() {
-  std::string* _s = _internal_mutable_cachereadstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_cachereadstart() {
+  std::string* _s = _internal_mutable_a_cachereadstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_cachereadstart() const {
-  return _impl_.cachereadstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_cachereadstart() const {
+  return _impl_.a_cachereadstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_cachereadstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_cachereadstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000800u;
-  _impl_.cachereadstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_cachereadstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_cachereadstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_cachereadstart() {
   _impl_._has_bits_[0] |= 0x00000800u;
-  return _impl_.cachereadstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_cachereadstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_cachereadstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadStart)
-  if (!_internal_has_cachereadstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_cachereadstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadStart)
+  if (!_internal_has_a_cachereadstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000800u;
-  auto* p = _impl_.cachereadstart_.Release();
+  auto* p = _impl_.a_cachereadstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachereadstart_.IsDefault()) {
-    _impl_.cachereadstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachereadstart_.IsDefault()) {
+    _impl_.a_cachereadstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_cachereadstart(std::string* cachereadstart) {
-  if (cachereadstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_cachereadstart(std::string* a_cachereadstart) {
+  if (a_cachereadstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000800u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000800u;
   }
-  _impl_.cachereadstart_.SetAllocated(cachereadstart, GetArenaForAllocation());
+  _impl_.a_cachereadstart_.SetAllocated(a_cachereadstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachereadstart_.IsDefault()) {
-    _impl_.cachereadstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachereadstart_.IsDefault()) {
+    _impl_.a_cachereadstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadStart)
 }
 
-// required bytes responseEnd = 14;
-inline bool IPCPerformanceTimingData::_internal_has_responseend() const {
+// required bytes a_responseEnd = 14;
+inline bool IPCPerformanceTimingData::_internal_has_a_responseend() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_responseend() const {
-  return _internal_has_responseend();
+inline bool IPCPerformanceTimingData::has_a_responseend() const {
+  return _internal_has_a_responseend();
 }
-inline void IPCPerformanceTimingData::clear_responseend() {
-  _impl_.responseend_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_responseend() {
+  _impl_.a_responseend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00001000u;
 }
-inline const std::string& IPCPerformanceTimingData::responseend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.responseEnd)
-  return _internal_responseend();
+inline const std::string& IPCPerformanceTimingData::a_responseend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseEnd)
+  return _internal_a_responseend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_responseend(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_responseend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00001000u;
- _impl_.responseend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.responseEnd)
+ _impl_.a_responseend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseEnd)
 }
-inline std::string* IPCPerformanceTimingData::mutable_responseend() {
-  std::string* _s = _internal_mutable_responseend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.responseEnd)
+inline std::string* IPCPerformanceTimingData::mutable_a_responseend() {
+  std::string* _s = _internal_mutable_a_responseend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseEnd)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_responseend() const {
-  return _impl_.responseend_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_responseend() const {
+  return _impl_.a_responseend_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_responseend(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_responseend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00001000u;
-  _impl_.responseend_.Set(value, GetArenaForAllocation());
+  _impl_.a_responseend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_responseend() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_responseend() {
   _impl_._has_bits_[0] |= 0x00001000u;
-  return _impl_.responseend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_responseend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_responseend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.responseEnd)
-  if (!_internal_has_responseend()) {
+inline std::string* IPCPerformanceTimingData::release_a_responseend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseEnd)
+  if (!_internal_has_a_responseend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00001000u;
-  auto* p = _impl_.responseend_.Release();
+  auto* p = _impl_.a_responseend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.responseend_.IsDefault()) {
-    _impl_.responseend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_responseend_.IsDefault()) {
+    _impl_.a_responseend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_responseend(std::string* responseend) {
-  if (responseend != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_responseend(std::string* a_responseend) {
+  if (a_responseend != nullptr) {
     _impl_._has_bits_[0] |= 0x00001000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00001000u;
   }
-  _impl_.responseend_.SetAllocated(responseend, GetArenaForAllocation());
+  _impl_.a_responseend_.SetAllocated(a_responseend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.responseend_.IsDefault()) {
-    _impl_.responseend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_responseend_.IsDefault()) {
+    _impl_.a_responseend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.responseEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseEnd)
 }
 
-// required bytes cacheReadEnd = 15;
-inline bool IPCPerformanceTimingData::_internal_has_cachereadend() const {
+// required bytes a_cacheReadEnd = 15;
+inline bool IPCPerformanceTimingData::_internal_has_a_cachereadend() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_cachereadend() const {
-  return _internal_has_cachereadend();
+inline bool IPCPerformanceTimingData::has_a_cachereadend() const {
+  return _internal_has_a_cachereadend();
 }
-inline void IPCPerformanceTimingData::clear_cachereadend() {
-  _impl_.cachereadend_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_cachereadend() {
+  _impl_.a_cachereadend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00002000u;
 }
-inline const std::string& IPCPerformanceTimingData::cachereadend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadEnd)
-  return _internal_cachereadend();
+inline const std::string& IPCPerformanceTimingData::a_cachereadend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadEnd)
+  return _internal_a_cachereadend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_cachereadend(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_cachereadend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00002000u;
- _impl_.cachereadend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadEnd)
+ _impl_.a_cachereadend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadEnd)
 }
-inline std::string* IPCPerformanceTimingData::mutable_cachereadend() {
-  std::string* _s = _internal_mutable_cachereadend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadEnd)
+inline std::string* IPCPerformanceTimingData::mutable_a_cachereadend() {
+  std::string* _s = _internal_mutable_a_cachereadend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadEnd)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_cachereadend() const {
-  return _impl_.cachereadend_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_cachereadend() const {
+  return _impl_.a_cachereadend_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_cachereadend(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_cachereadend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00002000u;
-  _impl_.cachereadend_.Set(value, GetArenaForAllocation());
+  _impl_.a_cachereadend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_cachereadend() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_cachereadend() {
   _impl_._has_bits_[0] |= 0x00002000u;
-  return _impl_.cachereadend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_cachereadend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_cachereadend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadEnd)
-  if (!_internal_has_cachereadend()) {
+inline std::string* IPCPerformanceTimingData::release_a_cachereadend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadEnd)
+  if (!_internal_has_a_cachereadend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00002000u;
-  auto* p = _impl_.cachereadend_.Release();
+  auto* p = _impl_.a_cachereadend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachereadend_.IsDefault()) {
-    _impl_.cachereadend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachereadend_.IsDefault()) {
+    _impl_.a_cachereadend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_cachereadend(std::string* cachereadend) {
-  if (cachereadend != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_cachereadend(std::string* a_cachereadend) {
+  if (a_cachereadend != nullptr) {
     _impl_._has_bits_[0] |= 0x00002000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00002000u;
   }
-  _impl_.cachereadend_.SetAllocated(cachereadend, GetArenaForAllocation());
+  _impl_.a_cachereadend_.SetAllocated(a_cachereadend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachereadend_.IsDefault()) {
-    _impl_.cachereadend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachereadend_.IsDefault()) {
+    _impl_.a_cachereadend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.cacheReadEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_cacheReadEnd)
 }
 
-// required bytes workerStart = 16;
-inline bool IPCPerformanceTimingData::_internal_has_workerstart() const {
+// required bytes a_workerStart = 16;
+inline bool IPCPerformanceTimingData::_internal_has_a_workerstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_workerstart() const {
-  return _internal_has_workerstart();
+inline bool IPCPerformanceTimingData::has_a_workerstart() const {
+  return _internal_has_a_workerstart();
 }
-inline void IPCPerformanceTimingData::clear_workerstart() {
-  _impl_.workerstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_workerstart() {
+  _impl_.a_workerstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00004000u;
 }
-inline const std::string& IPCPerformanceTimingData::workerstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.workerStart)
-  return _internal_workerstart();
+inline const std::string& IPCPerformanceTimingData::a_workerstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerStart)
+  return _internal_a_workerstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_workerstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_workerstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00004000u;
- _impl_.workerstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.workerStart)
+ _impl_.a_workerstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_workerstart() {
-  std::string* _s = _internal_mutable_workerstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.workerStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_workerstart() {
+  std::string* _s = _internal_mutable_a_workerstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_workerstart() const {
-  return _impl_.workerstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_workerstart() const {
+  return _impl_.a_workerstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_workerstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_workerstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00004000u;
-  _impl_.workerstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_workerstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_workerstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_workerstart() {
   _impl_._has_bits_[0] |= 0x00004000u;
-  return _impl_.workerstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_workerstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_workerstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.workerStart)
-  if (!_internal_has_workerstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_workerstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerStart)
+  if (!_internal_has_a_workerstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00004000u;
-  auto* p = _impl_.workerstart_.Release();
+  auto* p = _impl_.a_workerstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workerstart_.IsDefault()) {
-    _impl_.workerstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workerstart_.IsDefault()) {
+    _impl_.a_workerstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_workerstart(std::string* workerstart) {
-  if (workerstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_workerstart(std::string* a_workerstart) {
+  if (a_workerstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00004000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00004000u;
   }
-  _impl_.workerstart_.SetAllocated(workerstart, GetArenaForAllocation());
+  _impl_.a_workerstart_.SetAllocated(a_workerstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workerstart_.IsDefault()) {
-    _impl_.workerstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workerstart_.IsDefault()) {
+    _impl_.a_workerstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.workerStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerStart)
 }
 
-// required bytes workerRequestStart = 17;
-inline bool IPCPerformanceTimingData::_internal_has_workerrequeststart() const {
+// required bytes a_workerRequestStart = 17;
+inline bool IPCPerformanceTimingData::_internal_has_a_workerrequeststart() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_workerrequeststart() const {
-  return _internal_has_workerrequeststart();
+inline bool IPCPerformanceTimingData::has_a_workerrequeststart() const {
+  return _internal_has_a_workerrequeststart();
 }
-inline void IPCPerformanceTimingData::clear_workerrequeststart() {
-  _impl_.workerrequeststart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_workerrequeststart() {
+  _impl_.a_workerrequeststart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00008000u;
 }
-inline const std::string& IPCPerformanceTimingData::workerrequeststart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.workerRequestStart)
-  return _internal_workerrequeststart();
+inline const std::string& IPCPerformanceTimingData::a_workerrequeststart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerRequestStart)
+  return _internal_a_workerrequeststart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_workerrequeststart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_workerrequeststart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00008000u;
- _impl_.workerrequeststart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.workerRequestStart)
+ _impl_.a_workerrequeststart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerRequestStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_workerrequeststart() {
-  std::string* _s = _internal_mutable_workerrequeststart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.workerRequestStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_workerrequeststart() {
+  std::string* _s = _internal_mutable_a_workerrequeststart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerRequestStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_workerrequeststart() const {
-  return _impl_.workerrequeststart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_workerrequeststart() const {
+  return _impl_.a_workerrequeststart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_workerrequeststart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_workerrequeststart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00008000u;
-  _impl_.workerrequeststart_.Set(value, GetArenaForAllocation());
+  _impl_.a_workerrequeststart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_workerrequeststart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_workerrequeststart() {
   _impl_._has_bits_[0] |= 0x00008000u;
-  return _impl_.workerrequeststart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_workerrequeststart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_workerrequeststart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.workerRequestStart)
-  if (!_internal_has_workerrequeststart()) {
+inline std::string* IPCPerformanceTimingData::release_a_workerrequeststart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerRequestStart)
+  if (!_internal_has_a_workerrequeststart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00008000u;
-  auto* p = _impl_.workerrequeststart_.Release();
+  auto* p = _impl_.a_workerrequeststart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workerrequeststart_.IsDefault()) {
-    _impl_.workerrequeststart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workerrequeststart_.IsDefault()) {
+    _impl_.a_workerrequeststart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_workerrequeststart(std::string* workerrequeststart) {
-  if (workerrequeststart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_workerrequeststart(std::string* a_workerrequeststart) {
+  if (a_workerrequeststart != nullptr) {
     _impl_._has_bits_[0] |= 0x00008000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00008000u;
   }
-  _impl_.workerrequeststart_.SetAllocated(workerrequeststart, GetArenaForAllocation());
+  _impl_.a_workerrequeststart_.SetAllocated(a_workerrequeststart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workerrequeststart_.IsDefault()) {
-    _impl_.workerrequeststart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workerrequeststart_.IsDefault()) {
+    _impl_.a_workerrequeststart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.workerRequestStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerRequestStart)
 }
 
-// required bytes workerResponseEnd = 18;
-inline bool IPCPerformanceTimingData::_internal_has_workerresponseend() const {
+// required bytes a_workerResponseEnd = 18;
+inline bool IPCPerformanceTimingData::_internal_has_a_workerresponseend() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_workerresponseend() const {
-  return _internal_has_workerresponseend();
+inline bool IPCPerformanceTimingData::has_a_workerresponseend() const {
+  return _internal_has_a_workerresponseend();
 }
-inline void IPCPerformanceTimingData::clear_workerresponseend() {
-  _impl_.workerresponseend_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_workerresponseend() {
+  _impl_.a_workerresponseend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00010000u;
 }
-inline const std::string& IPCPerformanceTimingData::workerresponseend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.workerResponseEnd)
-  return _internal_workerresponseend();
+inline const std::string& IPCPerformanceTimingData::a_workerresponseend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerResponseEnd)
+  return _internal_a_workerresponseend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_workerresponseend(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_workerresponseend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00010000u;
- _impl_.workerresponseend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.workerResponseEnd)
+ _impl_.a_workerresponseend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerResponseEnd)
 }
-inline std::string* IPCPerformanceTimingData::mutable_workerresponseend() {
-  std::string* _s = _internal_mutable_workerresponseend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.workerResponseEnd)
+inline std::string* IPCPerformanceTimingData::mutable_a_workerresponseend() {
+  std::string* _s = _internal_mutable_a_workerresponseend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerResponseEnd)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_workerresponseend() const {
-  return _impl_.workerresponseend_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_workerresponseend() const {
+  return _impl_.a_workerresponseend_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_workerresponseend(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_workerresponseend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00010000u;
-  _impl_.workerresponseend_.Set(value, GetArenaForAllocation());
+  _impl_.a_workerresponseend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_workerresponseend() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_workerresponseend() {
   _impl_._has_bits_[0] |= 0x00010000u;
-  return _impl_.workerresponseend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_workerresponseend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_workerresponseend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.workerResponseEnd)
-  if (!_internal_has_workerresponseend()) {
+inline std::string* IPCPerformanceTimingData::release_a_workerresponseend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerResponseEnd)
+  if (!_internal_has_a_workerresponseend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00010000u;
-  auto* p = _impl_.workerresponseend_.Release();
+  auto* p = _impl_.a_workerresponseend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workerresponseend_.IsDefault()) {
-    _impl_.workerresponseend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workerresponseend_.IsDefault()) {
+    _impl_.a_workerresponseend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_workerresponseend(std::string* workerresponseend) {
-  if (workerresponseend != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_workerresponseend(std::string* a_workerresponseend) {
+  if (a_workerresponseend != nullptr) {
     _impl_._has_bits_[0] |= 0x00010000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00010000u;
   }
-  _impl_.workerresponseend_.SetAllocated(workerresponseend, GetArenaForAllocation());
+  _impl_.a_workerresponseend_.SetAllocated(a_workerresponseend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workerresponseend_.IsDefault()) {
-    _impl_.workerresponseend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workerresponseend_.IsDefault()) {
+    _impl_.a_workerresponseend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.workerResponseEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_workerResponseEnd)
 }
 
-// required bytes zeroTime = 19;
-inline bool IPCPerformanceTimingData::_internal_has_zerotime() const {
+// required bytes a_zeroTime = 19;
+inline bool IPCPerformanceTimingData::_internal_has_a_zerotime() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_zerotime() const {
-  return _internal_has_zerotime();
+inline bool IPCPerformanceTimingData::has_a_zerotime() const {
+  return _internal_has_a_zerotime();
 }
-inline void IPCPerformanceTimingData::clear_zerotime() {
-  _impl_.zerotime_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_zerotime() {
+  _impl_.a_zerotime_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00020000u;
 }
-inline const std::string& IPCPerformanceTimingData::zerotime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.zeroTime)
-  return _internal_zerotime();
+inline const std::string& IPCPerformanceTimingData::a_zerotime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_zeroTime)
+  return _internal_a_zerotime();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_zerotime(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_zerotime(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00020000u;
- _impl_.zerotime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.zeroTime)
+ _impl_.a_zerotime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_zeroTime)
 }
-inline std::string* IPCPerformanceTimingData::mutable_zerotime() {
-  std::string* _s = _internal_mutable_zerotime();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.zeroTime)
+inline std::string* IPCPerformanceTimingData::mutable_a_zerotime() {
+  std::string* _s = _internal_mutable_a_zerotime();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_zeroTime)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_zerotime() const {
-  return _impl_.zerotime_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_zerotime() const {
+  return _impl_.a_zerotime_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_zerotime(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_zerotime(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00020000u;
-  _impl_.zerotime_.Set(value, GetArenaForAllocation());
+  _impl_.a_zerotime_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_zerotime() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_zerotime() {
   _impl_._has_bits_[0] |= 0x00020000u;
-  return _impl_.zerotime_.Mutable(GetArenaForAllocation());
+  return _impl_.a_zerotime_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_zerotime() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.zeroTime)
-  if (!_internal_has_zerotime()) {
+inline std::string* IPCPerformanceTimingData::release_a_zerotime() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_zeroTime)
+  if (!_internal_has_a_zerotime()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00020000u;
-  auto* p = _impl_.zerotime_.Release();
+  auto* p = _impl_.a_zerotime_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.zerotime_.IsDefault()) {
-    _impl_.zerotime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_zerotime_.IsDefault()) {
+    _impl_.a_zerotime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_zerotime(std::string* zerotime) {
-  if (zerotime != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_zerotime(std::string* a_zerotime) {
+  if (a_zerotime != nullptr) {
     _impl_._has_bits_[0] |= 0x00020000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00020000u;
   }
-  _impl_.zerotime_.SetAllocated(zerotime, GetArenaForAllocation());
+  _impl_.a_zerotime_.SetAllocated(a_zerotime, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.zerotime_.IsDefault()) {
-    _impl_.zerotime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_zerotime_.IsDefault()) {
+    _impl_.a_zerotime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.zeroTime)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_zeroTime)
 }
 
-// required bytes fetchStart = 20;
-inline bool IPCPerformanceTimingData::_internal_has_fetchstart() const {
+// required bytes a_fetchStart = 20;
+inline bool IPCPerformanceTimingData::_internal_has_a_fetchstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_fetchstart() const {
-  return _internal_has_fetchstart();
+inline bool IPCPerformanceTimingData::has_a_fetchstart() const {
+  return _internal_has_a_fetchstart();
 }
-inline void IPCPerformanceTimingData::clear_fetchstart() {
-  _impl_.fetchstart_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_fetchstart() {
+  _impl_.a_fetchstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00040000u;
 }
-inline const std::string& IPCPerformanceTimingData::fetchstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.fetchStart)
-  return _internal_fetchstart();
+inline const std::string& IPCPerformanceTimingData::a_fetchstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_fetchStart)
+  return _internal_a_fetchstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_fetchstart(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_fetchstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00040000u;
- _impl_.fetchstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.fetchStart)
+ _impl_.a_fetchstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_fetchStart)
 }
-inline std::string* IPCPerformanceTimingData::mutable_fetchstart() {
-  std::string* _s = _internal_mutable_fetchstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.fetchStart)
+inline std::string* IPCPerformanceTimingData::mutable_a_fetchstart() {
+  std::string* _s = _internal_mutable_a_fetchstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_fetchStart)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_fetchstart() const {
-  return _impl_.fetchstart_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_fetchstart() const {
+  return _impl_.a_fetchstart_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_fetchstart(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_fetchstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00040000u;
-  _impl_.fetchstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_fetchstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_fetchstart() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_fetchstart() {
   _impl_._has_bits_[0] |= 0x00040000u;
-  return _impl_.fetchstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_fetchstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_fetchstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.fetchStart)
-  if (!_internal_has_fetchstart()) {
+inline std::string* IPCPerformanceTimingData::release_a_fetchstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_fetchStart)
+  if (!_internal_has_a_fetchstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00040000u;
-  auto* p = _impl_.fetchstart_.Release();
+  auto* p = _impl_.a_fetchstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fetchstart_.IsDefault()) {
-    _impl_.fetchstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fetchstart_.IsDefault()) {
+    _impl_.a_fetchstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_fetchstart(std::string* fetchstart) {
-  if (fetchstart != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_fetchstart(std::string* a_fetchstart) {
+  if (a_fetchstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00040000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00040000u;
   }
-  _impl_.fetchstart_.SetAllocated(fetchstart, GetArenaForAllocation());
+  _impl_.a_fetchstart_.SetAllocated(a_fetchstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fetchstart_.IsDefault()) {
-    _impl_.fetchstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fetchstart_.IsDefault()) {
+    _impl_.a_fetchstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.fetchStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_fetchStart)
 }
 
-// required uint64 encodedBodySize = 21;
-inline bool IPCPerformanceTimingData::_internal_has_encodedbodysize() const {
+// required uint64 a_encodedBodySize = 21;
+inline bool IPCPerformanceTimingData::_internal_has_a_encodedbodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_encodedbodysize() const {
-  return _internal_has_encodedbodysize();
+inline bool IPCPerformanceTimingData::has_a_encodedbodysize() const {
+  return _internal_has_a_encodedbodysize();
 }
-inline void IPCPerformanceTimingData::clear_encodedbodysize() {
-  _impl_.encodedbodysize_ = uint64_t{0u};
+inline void IPCPerformanceTimingData::clear_a_encodedbodysize() {
+  _impl_.a_encodedbodysize_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00200000u;
 }
-inline uint64_t IPCPerformanceTimingData::_internal_encodedbodysize() const {
-  return _impl_.encodedbodysize_;
+inline uint64_t IPCPerformanceTimingData::_internal_a_encodedbodysize() const {
+  return _impl_.a_encodedbodysize_;
 }
-inline uint64_t IPCPerformanceTimingData::encodedbodysize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.encodedBodySize)
-  return _internal_encodedbodysize();
+inline uint64_t IPCPerformanceTimingData::a_encodedbodysize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_encodedBodySize)
+  return _internal_a_encodedbodysize();
 }
-inline void IPCPerformanceTimingData::_internal_set_encodedbodysize(uint64_t value) {
+inline void IPCPerformanceTimingData::_internal_set_a_encodedbodysize(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00200000u;
-  _impl_.encodedbodysize_ = value;
+  _impl_.a_encodedbodysize_ = value;
 }
-inline void IPCPerformanceTimingData::set_encodedbodysize(uint64_t value) {
-  _internal_set_encodedbodysize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.encodedBodySize)
+inline void IPCPerformanceTimingData::set_a_encodedbodysize(uint64_t value) {
+  _internal_set_a_encodedbodysize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_encodedBodySize)
 }
 
-// required uint64 transferSize = 22;
-inline bool IPCPerformanceTimingData::_internal_has_transfersize() const {
+// required uint64 a_transferSize = 22;
+inline bool IPCPerformanceTimingData::_internal_has_a_transfersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_transfersize() const {
-  return _internal_has_transfersize();
+inline bool IPCPerformanceTimingData::has_a_transfersize() const {
+  return _internal_has_a_transfersize();
 }
-inline void IPCPerformanceTimingData::clear_transfersize() {
-  _impl_.transfersize_ = uint64_t{0u};
+inline void IPCPerformanceTimingData::clear_a_transfersize() {
+  _impl_.a_transfersize_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00400000u;
 }
-inline uint64_t IPCPerformanceTimingData::_internal_transfersize() const {
-  return _impl_.transfersize_;
+inline uint64_t IPCPerformanceTimingData::_internal_a_transfersize() const {
+  return _impl_.a_transfersize_;
 }
-inline uint64_t IPCPerformanceTimingData::transfersize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.transferSize)
-  return _internal_transfersize();
+inline uint64_t IPCPerformanceTimingData::a_transfersize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_transferSize)
+  return _internal_a_transfersize();
 }
-inline void IPCPerformanceTimingData::_internal_set_transfersize(uint64_t value) {
+inline void IPCPerformanceTimingData::_internal_set_a_transfersize(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00400000u;
-  _impl_.transfersize_ = value;
+  _impl_.a_transfersize_ = value;
 }
-inline void IPCPerformanceTimingData::set_transfersize(uint64_t value) {
-  _internal_set_transfersize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.transferSize)
+inline void IPCPerformanceTimingData::set_a_transfersize(uint64_t value) {
+  _internal_set_a_transfersize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_transferSize)
 }
 
-// required uint64 decodedBodySize = 23;
-inline bool IPCPerformanceTimingData::_internal_has_decodedbodysize() const {
+// required uint64 a_decodedBodySize = 23;
+inline bool IPCPerformanceTimingData::_internal_has_a_decodedbodysize() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_decodedbodysize() const {
-  return _internal_has_decodedbodysize();
+inline bool IPCPerformanceTimingData::has_a_decodedbodysize() const {
+  return _internal_has_a_decodedbodysize();
 }
-inline void IPCPerformanceTimingData::clear_decodedbodysize() {
-  _impl_.decodedbodysize_ = uint64_t{0u};
+inline void IPCPerformanceTimingData::clear_a_decodedbodysize() {
+  _impl_.a_decodedbodysize_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00800000u;
 }
-inline uint64_t IPCPerformanceTimingData::_internal_decodedbodysize() const {
-  return _impl_.decodedbodysize_;
+inline uint64_t IPCPerformanceTimingData::_internal_a_decodedbodysize() const {
+  return _impl_.a_decodedbodysize_;
 }
-inline uint64_t IPCPerformanceTimingData::decodedbodysize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.decodedBodySize)
-  return _internal_decodedbodysize();
+inline uint64_t IPCPerformanceTimingData::a_decodedbodysize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_decodedBodySize)
+  return _internal_a_decodedbodysize();
 }
-inline void IPCPerformanceTimingData::_internal_set_decodedbodysize(uint64_t value) {
+inline void IPCPerformanceTimingData::_internal_set_a_decodedbodysize(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00800000u;
-  _impl_.decodedbodysize_ = value;
+  _impl_.a_decodedbodysize_ = value;
 }
-inline void IPCPerformanceTimingData::set_decodedbodysize(uint64_t value) {
-  _internal_set_decodedbodysize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.decodedBodySize)
+inline void IPCPerformanceTimingData::set_a_decodedbodysize(uint64_t value) {
+  _internal_set_a_decodedbodysize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_decodedBodySize)
 }
 
-// required uint32 responseStatus = 24;
-inline bool IPCPerformanceTimingData::_internal_has_responsestatus() const {
+// required uint32 a_responseStatus = 24;
+inline bool IPCPerformanceTimingData::_internal_has_a_responsestatus() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_responsestatus() const {
-  return _internal_has_responsestatus();
+inline bool IPCPerformanceTimingData::has_a_responsestatus() const {
+  return _internal_has_a_responsestatus();
 }
-inline void IPCPerformanceTimingData::clear_responsestatus() {
-  _impl_.responsestatus_ = 0u;
+inline void IPCPerformanceTimingData::clear_a_responsestatus() {
+  _impl_.a_responsestatus_ = 0u;
   _impl_._has_bits_[0] &= ~0x01000000u;
 }
-inline uint32_t IPCPerformanceTimingData::_internal_responsestatus() const {
-  return _impl_.responsestatus_;
+inline uint32_t IPCPerformanceTimingData::_internal_a_responsestatus() const {
+  return _impl_.a_responsestatus_;
 }
-inline uint32_t IPCPerformanceTimingData::responsestatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStatus)
-  return _internal_responsestatus();
+inline uint32_t IPCPerformanceTimingData::a_responsestatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStatus)
+  return _internal_a_responsestatus();
 }
-inline void IPCPerformanceTimingData::_internal_set_responsestatus(uint32_t value) {
+inline void IPCPerformanceTimingData::_internal_set_a_responsestatus(uint32_t value) {
   _impl_._has_bits_[0] |= 0x01000000u;
-  _impl_.responsestatus_ = value;
+  _impl_.a_responsestatus_ = value;
 }
-inline void IPCPerformanceTimingData::set_responsestatus(uint32_t value) {
-  _internal_set_responsestatus(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.responseStatus)
+inline void IPCPerformanceTimingData::set_a_responsestatus(uint32_t value) {
+  _internal_set_a_responsestatus(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_responseStatus)
 }
 
-// required uint32 redirectCount = 25;
-inline bool IPCPerformanceTimingData::_internal_has_redirectcount() const {
+// required uint32 a_redirectCount = 25;
+inline bool IPCPerformanceTimingData::_internal_has_a_redirectcount() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_redirectcount() const {
-  return _internal_has_redirectcount();
+inline bool IPCPerformanceTimingData::has_a_redirectcount() const {
+  return _internal_has_a_redirectcount();
 }
-inline void IPCPerformanceTimingData::clear_redirectcount() {
-  _impl_.redirectcount_ = 0u;
+inline void IPCPerformanceTimingData::clear_a_redirectcount() {
+  _impl_.a_redirectcount_ = 0u;
   _impl_._has_bits_[0] &= ~0x02000000u;
 }
-inline uint32_t IPCPerformanceTimingData::_internal_redirectcount() const {
-  return _impl_.redirectcount_;
+inline uint32_t IPCPerformanceTimingData::_internal_a_redirectcount() const {
+  return _impl_.a_redirectcount_;
 }
-inline uint32_t IPCPerformanceTimingData::redirectcount() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectCount)
-  return _internal_redirectcount();
+inline uint32_t IPCPerformanceTimingData::a_redirectcount() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectCount)
+  return _internal_a_redirectcount();
 }
-inline void IPCPerformanceTimingData::_internal_set_redirectcount(uint32_t value) {
+inline void IPCPerformanceTimingData::_internal_set_a_redirectcount(uint32_t value) {
   _impl_._has_bits_[0] |= 0x02000000u;
-  _impl_.redirectcount_ = value;
+  _impl_.a_redirectcount_ = value;
 }
-inline void IPCPerformanceTimingData::set_redirectcount(uint32_t value) {
-  _internal_set_redirectcount(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.redirectCount)
+inline void IPCPerformanceTimingData::set_a_redirectcount(uint32_t value) {
+  _internal_set_a_redirectcount(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_redirectCount)
 }
 
-// required bool renderBlocking = 26;
-inline bool IPCPerformanceTimingData::_internal_has_renderblocking() const {
+// required bool a_renderBlocking = 26;
+inline bool IPCPerformanceTimingData::_internal_has_a_renderblocking() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_renderblocking() const {
-  return _internal_has_renderblocking();
+inline bool IPCPerformanceTimingData::has_a_renderblocking() const {
+  return _internal_has_a_renderblocking();
 }
-inline void IPCPerformanceTimingData::clear_renderblocking() {
-  _impl_.renderblocking_ = false;
+inline void IPCPerformanceTimingData::clear_a_renderblocking() {
+  _impl_.a_renderblocking_ = false;
   _impl_._has_bits_[0] &= ~0x04000000u;
 }
-inline bool IPCPerformanceTimingData::_internal_renderblocking() const {
-  return _impl_.renderblocking_;
+inline bool IPCPerformanceTimingData::_internal_a_renderblocking() const {
+  return _impl_.a_renderblocking_;
 }
-inline bool IPCPerformanceTimingData::renderblocking() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.renderBlocking)
-  return _internal_renderblocking();
+inline bool IPCPerformanceTimingData::a_renderblocking() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_renderBlocking)
+  return _internal_a_renderblocking();
 }
-inline void IPCPerformanceTimingData::_internal_set_renderblocking(bool value) {
+inline void IPCPerformanceTimingData::_internal_set_a_renderblocking(bool value) {
   _impl_._has_bits_[0] |= 0x04000000u;
-  _impl_.renderblocking_ = value;
+  _impl_.a_renderblocking_ = value;
 }
-inline void IPCPerformanceTimingData::set_renderblocking(bool value) {
-  _internal_set_renderblocking(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.renderBlocking)
+inline void IPCPerformanceTimingData::set_a_renderblocking(bool value) {
+  _internal_set_a_renderblocking(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_renderBlocking)
 }
 
-// required bytes contentType = 27;
-inline bool IPCPerformanceTimingData::_internal_has_contenttype() const {
+// required bytes a_contentType = 27;
+inline bool IPCPerformanceTimingData::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_contenttype() const {
-  return _internal_has_contenttype();
+inline bool IPCPerformanceTimingData::has_a_contenttype() const {
+  return _internal_has_a_contenttype();
 }
-inline void IPCPerformanceTimingData::clear_contenttype() {
-  _impl_.contenttype_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_contenttype() {
+  _impl_.a_contenttype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00080000u;
 }
-inline const std::string& IPCPerformanceTimingData::contenttype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.contentType)
-  return _internal_contenttype();
+inline const std::string& IPCPerformanceTimingData::a_contenttype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
+  return _internal_a_contenttype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_contenttype(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00080000u;
- _impl_.contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.contentType)
+ _impl_.a_contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
 }
-inline std::string* IPCPerformanceTimingData::mutable_contenttype() {
-  std::string* _s = _internal_mutable_contenttype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.contentType)
+inline std::string* IPCPerformanceTimingData::mutable_a_contenttype() {
+  std::string* _s = _internal_mutable_a_contenttype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_contenttype() const {
-  return _impl_.contenttype_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_contenttype() const {
+  return _impl_.a_contenttype_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_contenttype(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_contenttype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00080000u;
-  _impl_.contenttype_.Set(value, GetArenaForAllocation());
+  _impl_.a_contenttype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_contenttype() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_contenttype() {
   _impl_._has_bits_[0] |= 0x00080000u;
-  return _impl_.contenttype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_contenttype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_contenttype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.contentType)
-  if (!_internal_has_contenttype()) {
+inline std::string* IPCPerformanceTimingData::release_a_contenttype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
+  if (!_internal_has_a_contenttype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00080000u;
-  auto* p = _impl_.contenttype_.Release();
+  auto* p = _impl_.a_contenttype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.contenttype_.IsDefault()) {
-    _impl_.contenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_contenttype_.IsDefault()) {
+    _impl_.a_contenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_contenttype(std::string* contenttype) {
-  if (contenttype != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_contenttype(std::string* a_contenttype) {
+  if (a_contenttype != nullptr) {
     _impl_._has_bits_[0] |= 0x00080000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00080000u;
   }
-  _impl_.contenttype_.SetAllocated(contenttype, GetArenaForAllocation());
+  _impl_.a_contenttype_.SetAllocated(a_contenttype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.contenttype_.IsDefault()) {
-    _impl_.contenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_contenttype_.IsDefault()) {
+    _impl_.a_contenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.contentType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
 }
 
-// required bool allRedirectsSameOrigin = 28;
-inline bool IPCPerformanceTimingData::_internal_has_allredirectssameorigin() const {
+// required bool a_allRedirectsSameOrigin = 28;
+inline bool IPCPerformanceTimingData::_internal_has_a_allredirectssameorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_allredirectssameorigin() const {
-  return _internal_has_allredirectssameorigin();
+inline bool IPCPerformanceTimingData::has_a_allredirectssameorigin() const {
+  return _internal_has_a_allredirectssameorigin();
 }
-inline void IPCPerformanceTimingData::clear_allredirectssameorigin() {
-  _impl_.allredirectssameorigin_ = false;
+inline void IPCPerformanceTimingData::clear_a_allredirectssameorigin() {
+  _impl_.a_allredirectssameorigin_ = false;
   _impl_._has_bits_[0] &= ~0x08000000u;
 }
-inline bool IPCPerformanceTimingData::_internal_allredirectssameorigin() const {
-  return _impl_.allredirectssameorigin_;
+inline bool IPCPerformanceTimingData::_internal_a_allredirectssameorigin() const {
+  return _impl_.a_allredirectssameorigin_;
 }
-inline bool IPCPerformanceTimingData::allredirectssameorigin() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.allRedirectsSameOrigin)
-  return _internal_allredirectssameorigin();
+inline bool IPCPerformanceTimingData::a_allredirectssameorigin() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_allRedirectsSameOrigin)
+  return _internal_a_allredirectssameorigin();
 }
-inline void IPCPerformanceTimingData::_internal_set_allredirectssameorigin(bool value) {
+inline void IPCPerformanceTimingData::_internal_set_a_allredirectssameorigin(bool value) {
   _impl_._has_bits_[0] |= 0x08000000u;
-  _impl_.allredirectssameorigin_ = value;
+  _impl_.a_allredirectssameorigin_ = value;
 }
-inline void IPCPerformanceTimingData::set_allredirectssameorigin(bool value) {
-  _internal_set_allredirectssameorigin(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.allRedirectsSameOrigin)
+inline void IPCPerformanceTimingData::set_a_allredirectssameorigin(bool value) {
+  _internal_set_a_allredirectssameorigin(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_allRedirectsSameOrigin)
 }
 
-// required bool allRedirectsPassTAO = 29;
-inline bool IPCPerformanceTimingData::_internal_has_allredirectspasstao() const {
+// required bool a_allRedirectsPassTAO = 29;
+inline bool IPCPerformanceTimingData::_internal_has_a_allredirectspasstao() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_allredirectspasstao() const {
-  return _internal_has_allredirectspasstao();
+inline bool IPCPerformanceTimingData::has_a_allredirectspasstao() const {
+  return _internal_has_a_allredirectspasstao();
 }
-inline void IPCPerformanceTimingData::clear_allredirectspasstao() {
-  _impl_.allredirectspasstao_ = false;
+inline void IPCPerformanceTimingData::clear_a_allredirectspasstao() {
+  _impl_.a_allredirectspasstao_ = false;
   _impl_._has_bits_[0] &= ~0x10000000u;
 }
-inline bool IPCPerformanceTimingData::_internal_allredirectspasstao() const {
-  return _impl_.allredirectspasstao_;
+inline bool IPCPerformanceTimingData::_internal_a_allredirectspasstao() const {
+  return _impl_.a_allredirectspasstao_;
 }
-inline bool IPCPerformanceTimingData::allredirectspasstao() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.allRedirectsPassTAO)
-  return _internal_allredirectspasstao();
+inline bool IPCPerformanceTimingData::a_allredirectspasstao() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_allRedirectsPassTAO)
+  return _internal_a_allredirectspasstao();
 }
-inline void IPCPerformanceTimingData::_internal_set_allredirectspasstao(bool value) {
+inline void IPCPerformanceTimingData::_internal_set_a_allredirectspasstao(bool value) {
   _impl_._has_bits_[0] |= 0x10000000u;
-  _impl_.allredirectspasstao_ = value;
+  _impl_.a_allredirectspasstao_ = value;
 }
-inline void IPCPerformanceTimingData::set_allredirectspasstao(bool value) {
-  _internal_set_allredirectspasstao(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.allRedirectsPassTAO)
+inline void IPCPerformanceTimingData::set_a_allredirectspasstao(bool value) {
+  _internal_set_a_allredirectspasstao(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_allRedirectsPassTAO)
 }
 
-// required bool secureConnection = 30;
-inline bool IPCPerformanceTimingData::_internal_has_secureconnection() const {
+// required bool a_secureConnection = 30;
+inline bool IPCPerformanceTimingData::_internal_has_a_secureconnection() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_secureconnection() const {
-  return _internal_has_secureconnection();
+inline bool IPCPerformanceTimingData::has_a_secureconnection() const {
+  return _internal_has_a_secureconnection();
 }
-inline void IPCPerformanceTimingData::clear_secureconnection() {
-  _impl_.secureconnection_ = false;
+inline void IPCPerformanceTimingData::clear_a_secureconnection() {
+  _impl_.a_secureconnection_ = false;
   _impl_._has_bits_[0] &= ~0x20000000u;
 }
-inline bool IPCPerformanceTimingData::_internal_secureconnection() const {
-  return _impl_.secureconnection_;
+inline bool IPCPerformanceTimingData::_internal_a_secureconnection() const {
+  return _impl_.a_secureconnection_;
 }
-inline bool IPCPerformanceTimingData::secureconnection() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnection)
-  return _internal_secureconnection();
+inline bool IPCPerformanceTimingData::a_secureconnection() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnection)
+  return _internal_a_secureconnection();
 }
-inline void IPCPerformanceTimingData::_internal_set_secureconnection(bool value) {
+inline void IPCPerformanceTimingData::_internal_set_a_secureconnection(bool value) {
   _impl_._has_bits_[0] |= 0x20000000u;
-  _impl_.secureconnection_ = value;
+  _impl_.a_secureconnection_ = value;
 }
-inline void IPCPerformanceTimingData::set_secureconnection(bool value) {
-  _internal_set_secureconnection(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.secureConnection)
+inline void IPCPerformanceTimingData::set_a_secureconnection(bool value) {
+  _internal_set_a_secureconnection(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_secureConnection)
 }
 
-// required bytes bodyInfoAccessAllowed = 31;
-inline bool IPCPerformanceTimingData::_internal_has_bodyinfoaccessallowed() const {
+// required bytes a_bodyInfoAccessAllowed = 31;
+inline bool IPCPerformanceTimingData::_internal_has_a_bodyinfoaccessallowed() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_bodyinfoaccessallowed() const {
-  return _internal_has_bodyinfoaccessallowed();
+inline bool IPCPerformanceTimingData::has_a_bodyinfoaccessallowed() const {
+  return _internal_has_a_bodyinfoaccessallowed();
 }
-inline void IPCPerformanceTimingData::clear_bodyinfoaccessallowed() {
-  _impl_.bodyinfoaccessallowed_.ClearToEmpty();
+inline void IPCPerformanceTimingData::clear_a_bodyinfoaccessallowed() {
+  _impl_.a_bodyinfoaccessallowed_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00100000u;
 }
-inline const std::string& IPCPerformanceTimingData::bodyinfoaccessallowed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.bodyInfoAccessAllowed)
-  return _internal_bodyinfoaccessallowed();
+inline const std::string& IPCPerformanceTimingData::a_bodyinfoaccessallowed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_bodyInfoAccessAllowed)
+  return _internal_a_bodyinfoaccessallowed();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCPerformanceTimingData::set_bodyinfoaccessallowed(ArgT0&& arg0, ArgT... args) {
+void IPCPerformanceTimingData::set_a_bodyinfoaccessallowed(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00100000u;
- _impl_.bodyinfoaccessallowed_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.bodyInfoAccessAllowed)
+ _impl_.a_bodyinfoaccessallowed_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_bodyInfoAccessAllowed)
 }
-inline std::string* IPCPerformanceTimingData::mutable_bodyinfoaccessallowed() {
-  std::string* _s = _internal_mutable_bodyinfoaccessallowed();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.bodyInfoAccessAllowed)
+inline std::string* IPCPerformanceTimingData::mutable_a_bodyinfoaccessallowed() {
+  std::string* _s = _internal_mutable_a_bodyinfoaccessallowed();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCPerformanceTimingData.a_bodyInfoAccessAllowed)
   return _s;
 }
-inline const std::string& IPCPerformanceTimingData::_internal_bodyinfoaccessallowed() const {
-  return _impl_.bodyinfoaccessallowed_.Get();
+inline const std::string& IPCPerformanceTimingData::_internal_a_bodyinfoaccessallowed() const {
+  return _impl_.a_bodyinfoaccessallowed_.Get();
 }
-inline void IPCPerformanceTimingData::_internal_set_bodyinfoaccessallowed(const std::string& value) {
+inline void IPCPerformanceTimingData::_internal_set_a_bodyinfoaccessallowed(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00100000u;
-  _impl_.bodyinfoaccessallowed_.Set(value, GetArenaForAllocation());
+  _impl_.a_bodyinfoaccessallowed_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::_internal_mutable_bodyinfoaccessallowed() {
+inline std::string* IPCPerformanceTimingData::_internal_mutable_a_bodyinfoaccessallowed() {
   _impl_._has_bits_[0] |= 0x00100000u;
-  return _impl_.bodyinfoaccessallowed_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bodyinfoaccessallowed_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCPerformanceTimingData::release_bodyinfoaccessallowed() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.bodyInfoAccessAllowed)
-  if (!_internal_has_bodyinfoaccessallowed()) {
+inline std::string* IPCPerformanceTimingData::release_a_bodyinfoaccessallowed() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCPerformanceTimingData.a_bodyInfoAccessAllowed)
+  if (!_internal_has_a_bodyinfoaccessallowed()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00100000u;
-  auto* p = _impl_.bodyinfoaccessallowed_.Release();
+  auto* p = _impl_.a_bodyinfoaccessallowed_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bodyinfoaccessallowed_.IsDefault()) {
-    _impl_.bodyinfoaccessallowed_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bodyinfoaccessallowed_.IsDefault()) {
+    _impl_.a_bodyinfoaccessallowed_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCPerformanceTimingData::set_allocated_bodyinfoaccessallowed(std::string* bodyinfoaccessallowed) {
-  if (bodyinfoaccessallowed != nullptr) {
+inline void IPCPerformanceTimingData::set_allocated_a_bodyinfoaccessallowed(std::string* a_bodyinfoaccessallowed) {
+  if (a_bodyinfoaccessallowed != nullptr) {
     _impl_._has_bits_[0] |= 0x00100000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00100000u;
   }
-  _impl_.bodyinfoaccessallowed_.SetAllocated(bodyinfoaccessallowed, GetArenaForAllocation());
+  _impl_.a_bodyinfoaccessallowed_.SetAllocated(a_bodyinfoaccessallowed, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bodyinfoaccessallowed_.IsDefault()) {
-    _impl_.bodyinfoaccessallowed_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bodyinfoaccessallowed_.IsDefault()) {
+    _impl_.a_bodyinfoaccessallowed_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.bodyInfoAccessAllowed)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPerformanceTimingData.a_bodyInfoAccessAllowed)
 }
 
-// required bool timingAllowed = 32;
-inline bool IPCPerformanceTimingData::_internal_has_timingallowed() const {
+// required bool a_timingAllowed = 32;
+inline bool IPCPerformanceTimingData::_internal_has_a_timingallowed() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_timingallowed() const {
-  return _internal_has_timingallowed();
+inline bool IPCPerformanceTimingData::has_a_timingallowed() const {
+  return _internal_has_a_timingallowed();
 }
-inline void IPCPerformanceTimingData::clear_timingallowed() {
-  _impl_.timingallowed_ = false;
+inline void IPCPerformanceTimingData::clear_a_timingallowed() {
+  _impl_.a_timingallowed_ = false;
   _impl_._has_bits_[0] &= ~0x40000000u;
 }
-inline bool IPCPerformanceTimingData::_internal_timingallowed() const {
-  return _impl_.timingallowed_;
+inline bool IPCPerformanceTimingData::_internal_a_timingallowed() const {
+  return _impl_.a_timingallowed_;
 }
-inline bool IPCPerformanceTimingData::timingallowed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.timingAllowed)
-  return _internal_timingallowed();
+inline bool IPCPerformanceTimingData::a_timingallowed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_timingAllowed)
+  return _internal_a_timingallowed();
 }
-inline void IPCPerformanceTimingData::_internal_set_timingallowed(bool value) {
+inline void IPCPerformanceTimingData::_internal_set_a_timingallowed(bool value) {
   _impl_._has_bits_[0] |= 0x40000000u;
-  _impl_.timingallowed_ = value;
+  _impl_.a_timingallowed_ = value;
 }
-inline void IPCPerformanceTimingData::set_timingallowed(bool value) {
-  _internal_set_timingallowed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.timingAllowed)
+inline void IPCPerformanceTimingData::set_a_timingallowed(bool value) {
+  _internal_set_a_timingallowed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_timingAllowed)
 }
 
-// required bool initialized = 33;
-inline bool IPCPerformanceTimingData::_internal_has_initialized() const {
+// required bool a_initialized = 33;
+inline bool IPCPerformanceTimingData::_internal_has_a_initialized() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
 }
-inline bool IPCPerformanceTimingData::has_initialized() const {
-  return _internal_has_initialized();
+inline bool IPCPerformanceTimingData::has_a_initialized() const {
+  return _internal_has_a_initialized();
 }
-inline void IPCPerformanceTimingData::clear_initialized() {
-  _impl_.initialized_ = false;
+inline void IPCPerformanceTimingData::clear_a_initialized() {
+  _impl_.a_initialized_ = false;
   _impl_._has_bits_[0] &= ~0x80000000u;
 }
-inline bool IPCPerformanceTimingData::_internal_initialized() const {
-  return _impl_.initialized_;
+inline bool IPCPerformanceTimingData::_internal_a_initialized() const {
+  return _impl_.a_initialized_;
 }
-inline bool IPCPerformanceTimingData::initialized() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.initialized)
-  return _internal_initialized();
+inline bool IPCPerformanceTimingData::a_initialized() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCPerformanceTimingData.a_initialized)
+  return _internal_a_initialized();
 }
-inline void IPCPerformanceTimingData::_internal_set_initialized(bool value) {
+inline void IPCPerformanceTimingData::_internal_set_a_initialized(bool value) {
   _impl_._has_bits_[0] |= 0x80000000u;
-  _impl_.initialized_ = value;
+  _impl_.a_initialized_ = value;
 }
-inline void IPCPerformanceTimingData::set_initialized(bool value) {
-  _internal_set_initialized(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.initialized)
+inline void IPCPerformanceTimingData::set_a_initialized(bool value) {
+  _internal_set_a_initialized(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_initialized)
 }
 
 #ifdef __GNUC__

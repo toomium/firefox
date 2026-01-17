@@ -13,19 +13,19 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message SDBRequestOpenParams {
-  required bytes name = 1;
+  required bytes a_name = 1;
 }
 
 message SDBRequestSeekParams {
-  required uint64 offset = 1;
+  required uint64 a_offset = 1;
 }
 
 message SDBRequestReadParams {
-  required uint64 size = 1;
+  required uint64 a_size = 1;
 }
 
 message SDBRequestWriteParams {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message SDBRequestCloseParams {
@@ -33,10 +33,10 @@ message SDBRequestCloseParams {
 
 message SDBRequestParams {
   oneof content {
-    protobuf.mozilla.dom.SDBRequestOpenParams mVSDBRequestOpenParams = 1;
-    protobuf.mozilla.dom.SDBRequestSeekParams mVSDBRequestSeekParams = 2;
-    protobuf.mozilla.dom.SDBRequestReadParams mVSDBRequestReadParams = 3;
-    protobuf.mozilla.dom.SDBRequestWriteParams mVSDBRequestWriteParams = 4;
-    protobuf.mozilla.dom.SDBRequestCloseParams mVSDBRequestCloseParams = 5;
+    protobuf.mozilla.dom.SDBRequestOpenParams a_mVSDBRequestOpenParams = 1;
+    protobuf.mozilla.dom.SDBRequestSeekParams a_mVSDBRequestSeekParams = 2;
+    protobuf.mozilla.dom.SDBRequestReadParams a_mVSDBRequestReadParams = 3;
+    protobuf.mozilla.dom.SDBRequestWriteParams a_mVSDBRequestWriteParams = 4;
+    protobuf.mozilla.dom.SDBRequestCloseParams a_mVSDBRequestCloseParams = 5;
   }
 }

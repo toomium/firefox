@@ -340,19 +340,19 @@ class Reply_Test1 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required uint32 result = 1;
-  bool has_result() const;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  uint32_t result() const;
-  void set_result(uint32_t value);
+  void clear_a_result();
+  uint32_t a_result() const;
+  void set_a_result(uint32_t value);
   private:
-  uint32_t _internal_result() const;
-  void _internal_set_result(uint32_t value);
+  uint32_t _internal_a_result() const;
+  void _internal_set_a_result(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test1)
@@ -365,7 +365,7 @@ class Reply_Test1 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t result_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -730,19 +730,19 @@ class Reply_Test3 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required uint32 result = 1;
-  bool has_result() const;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  uint32_t result() const;
-  void set_result(uint32_t value);
+  void clear_a_result();
+  uint32_t a_result() const;
+  void set_a_result(uint32_t value);
   private:
-  uint32_t _internal_result() const;
-  void _internal_set_result(uint32_t value);
+  uint32_t _internal_a_result() const;
+  void _internal_set_a_result(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test3)
@@ -755,7 +755,7 @@ class Reply_Test3 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t result_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -1368,19 +1368,19 @@ class Reply_Reply1 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required uint32 result = 1;
-  bool has_result() const;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  uint32_t result() const;
-  void set_result(uint32_t value);
+  void clear_a_result();
+  uint32_t a_result() const;
+  void set_a_result(uint32_t value);
   private:
-  uint32_t _internal_result() const;
-  void _internal_set_result(uint32_t value);
+  uint32_t _internal_a_result() const;
+  void _internal_set_a_result(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply1)
@@ -1393,7 +1393,7 @@ class Reply_Reply1 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t result_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -1634,19 +1634,19 @@ class Reply_Reply2 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required uint32 result = 1;
-  bool has_result() const;
+  // required uint32 a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  uint32_t result() const;
-  void set_result(uint32_t value);
+  void clear_a_result();
+  uint32_t a_result() const;
+  void set_a_result(uint32_t value);
   private:
-  uint32_t _internal_result() const;
-  void _internal_set_result(uint32_t value);
+  uint32_t _internal_a_result() const;
+  void _internal_set_a_result(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply2)
@@ -1659,7 +1659,7 @@ class Reply_Reply2 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t result_;
+    uint32_t a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUrgency_2eproto;
@@ -1679,32 +1679,32 @@ class Reply_Reply2 final :
 
 // Reply_Test1
 
-// required uint32 result = 1;
-inline bool Reply_Test1::_internal_has_result() const {
+// required uint32 a_result = 1;
+inline bool Reply_Test1::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Test1::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Test1::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_Test1::clear_result() {
-  _impl_.result_ = 0u;
+inline void Reply_Test1::clear_a_result() {
+  _impl_.a_result_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_Test1::_internal_result() const {
-  return _impl_.result_;
+inline uint32_t Reply_Test1::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline uint32_t Reply_Test1::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test1.result)
-  return _internal_result();
+inline uint32_t Reply_Test1::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test1.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Test1::_internal_set_result(uint32_t value) {
+inline void Reply_Test1::_internal_set_a_result(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_Test1::set_result(uint32_t value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test1.result)
+inline void Reply_Test1::set_a_result(uint32_t value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test1.a_result)
 }
 
 // -------------------------------------------------------------------
@@ -1719,32 +1719,32 @@ inline void Reply_Test1::set_result(uint32_t value) {
 
 // Reply_Test3
 
-// required uint32 result = 1;
-inline bool Reply_Test3::_internal_has_result() const {
+// required uint32 a_result = 1;
+inline bool Reply_Test3::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Test3::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Test3::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_Test3::clear_result() {
-  _impl_.result_ = 0u;
+inline void Reply_Test3::clear_a_result() {
+  _impl_.a_result_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_Test3::_internal_result() const {
-  return _impl_.result_;
+inline uint32_t Reply_Test3::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline uint32_t Reply_Test3::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test3.result)
-  return _internal_result();
+inline uint32_t Reply_Test3::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test3.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Test3::_internal_set_result(uint32_t value) {
+inline void Reply_Test3::_internal_set_a_result(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_Test3::set_result(uint32_t value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test3.result)
+inline void Reply_Test3::set_a_result(uint32_t value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Test3.a_result)
 }
 
 // -------------------------------------------------------------------
@@ -1767,32 +1767,32 @@ inline void Reply_Test3::set_result(uint32_t value) {
 
 // Reply_Reply1
 
-// required uint32 result = 1;
-inline bool Reply_Reply1::_internal_has_result() const {
+// required uint32 a_result = 1;
+inline bool Reply_Reply1::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Reply1::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Reply1::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_Reply1::clear_result() {
-  _impl_.result_ = 0u;
+inline void Reply_Reply1::clear_a_result() {
+  _impl_.a_result_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_Reply1::_internal_result() const {
-  return _impl_.result_;
+inline uint32_t Reply_Reply1::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline uint32_t Reply_Reply1::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply1.result)
-  return _internal_result();
+inline uint32_t Reply_Reply1::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply1.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Reply1::_internal_set_result(uint32_t value) {
+inline void Reply_Reply1::_internal_set_a_result(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_Reply1::set_result(uint32_t value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply1.result)
+inline void Reply_Reply1::set_a_result(uint32_t value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply1.a_result)
 }
 
 // -------------------------------------------------------------------
@@ -1803,32 +1803,32 @@ inline void Reply_Reply1::set_result(uint32_t value) {
 
 // Reply_Reply2
 
-// required uint32 result = 1;
-inline bool Reply_Reply2::_internal_has_result() const {
+// required uint32 a_result = 1;
+inline bool Reply_Reply2::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Reply2::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Reply2::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_Reply2::clear_result() {
-  _impl_.result_ = 0u;
+inline void Reply_Reply2::clear_a_result() {
+  _impl_.a_result_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_Reply2::_internal_result() const {
-  return _impl_.result_;
+inline uint32_t Reply_Reply2::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline uint32_t Reply_Reply2::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply2.result)
-  return _internal_result();
+inline uint32_t Reply_Reply2::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply2.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Reply2::_internal_set_result(uint32_t value) {
+inline void Reply_Reply2::_internal_set_a_result(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_Reply2::set_result(uint32_t value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply2.result)
+inline void Reply_Reply2::set_a_result(uint32_t value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestUrgency.Reply_Reply2.a_result)
 }
 
 #ifdef __GNUC__

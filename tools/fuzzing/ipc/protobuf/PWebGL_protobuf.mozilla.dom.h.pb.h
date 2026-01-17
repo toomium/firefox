@@ -101,8 +101,8 @@ class ReadPixelsBuffer final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVuint64T = 1,
-    kMVShmem = 2,
+    kAMVuint64T = 1,
+    kAMVShmem = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -175,38 +175,38 @@ class ReadPixelsBuffer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVuint64TFieldNumber = 1,
-    kMVShmemFieldNumber = 2,
+    kAMVuint64TFieldNumber = 1,
+    kAMVShmemFieldNumber = 2,
   };
-  // uint64 mVuint64_t = 1;
-  bool has_mvuint64_t() const;
+  // uint64 a_mVuint64_t = 1;
+  bool has_a_mvuint64_t() const;
   private:
-  bool _internal_has_mvuint64_t() const;
+  bool _internal_has_a_mvuint64_t() const;
   public:
-  void clear_mvuint64_t();
-  uint64_t mvuint64_t() const;
-  void set_mvuint64_t(uint64_t value);
+  void clear_a_mvuint64_t();
+  uint64_t a_mvuint64_t() const;
+  void set_a_mvuint64_t(uint64_t value);
   private:
-  uint64_t _internal_mvuint64_t() const;
-  void _internal_set_mvuint64_t(uint64_t value);
+  uint64_t _internal_a_mvuint64_t() const;
+  void _internal_set_a_mvuint64_t(uint64_t value);
   public:
 
-  // bytes mVShmem = 2;
-  bool has_mvshmem() const;
+  // bytes a_mVShmem = 2;
+  bool has_a_mvshmem() const;
   private:
-  bool _internal_has_mvshmem() const;
+  bool _internal_has_a_mvshmem() const;
   public:
-  void clear_mvshmem();
-  const std::string& mvshmem() const;
+  void clear_a_mvshmem();
+  const std::string& a_mvshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvshmem();
-  PROTOBUF_NODISCARD std::string* release_mvshmem();
-  void set_allocated_mvshmem(std::string* mvshmem);
+  void set_a_mvshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvshmem();
+  PROTOBUF_NODISCARD std::string* release_a_mvshmem();
+  void set_allocated_a_mvshmem(std::string* a_mvshmem);
   private:
-  const std::string& _internal_mvshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvshmem(const std::string& value);
-  std::string* _internal_mutable_mvshmem();
+  const std::string& _internal_a_mvshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvshmem(const std::string& value);
+  std::string* _internal_mutable_a_mvshmem();
   public:
 
   void clear_content();
@@ -214,8 +214,8 @@ class ReadPixelsBuffer final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ReadPixelsBuffer)
  private:
   class _Internal;
-  void set_has_mvuint64_t();
-  void set_has_mvshmem();
+  void set_has_a_mvuint64_t();
+  void set_has_a_mvshmem();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -227,8 +227,8 @@ class ReadPixelsBuffer final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      uint64_t mvuint64_t_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvshmem_;
+      uint64_t a_mvuint64_t_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvshmem_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -248,119 +248,119 @@ class ReadPixelsBuffer final :
 #endif  // __GNUC__
 // ReadPixelsBuffer
 
-// uint64 mVuint64_t = 1;
-inline bool ReadPixelsBuffer::_internal_has_mvuint64_t() const {
-  return content_case() == kMVuint64T;
+// uint64 a_mVuint64_t = 1;
+inline bool ReadPixelsBuffer::_internal_has_a_mvuint64_t() const {
+  return content_case() == kAMVuint64T;
 }
-inline bool ReadPixelsBuffer::has_mvuint64_t() const {
-  return _internal_has_mvuint64_t();
+inline bool ReadPixelsBuffer::has_a_mvuint64_t() const {
+  return _internal_has_a_mvuint64_t();
 }
-inline void ReadPixelsBuffer::set_has_mvuint64_t() {
-  _impl_._oneof_case_[0] = kMVuint64T;
+inline void ReadPixelsBuffer::set_has_a_mvuint64_t() {
+  _impl_._oneof_case_[0] = kAMVuint64T;
 }
-inline void ReadPixelsBuffer::clear_mvuint64_t() {
-  if (_internal_has_mvuint64_t()) {
-    _impl_.content_.mvuint64_t_ = uint64_t{0u};
+inline void ReadPixelsBuffer::clear_a_mvuint64_t() {
+  if (_internal_has_a_mvuint64_t()) {
+    _impl_.content_.a_mvuint64_t_ = uint64_t{0u};
     clear_has_content();
   }
 }
-inline uint64_t ReadPixelsBuffer::_internal_mvuint64_t() const {
-  if (_internal_has_mvuint64_t()) {
-    return _impl_.content_.mvuint64_t_;
+inline uint64_t ReadPixelsBuffer::_internal_a_mvuint64_t() const {
+  if (_internal_has_a_mvuint64_t()) {
+    return _impl_.content_.a_mvuint64_t_;
   }
   return uint64_t{0u};
 }
-inline void ReadPixelsBuffer::_internal_set_mvuint64_t(uint64_t value) {
-  if (!_internal_has_mvuint64_t()) {
+inline void ReadPixelsBuffer::_internal_set_a_mvuint64_t(uint64_t value) {
+  if (!_internal_has_a_mvuint64_t()) {
     clear_content();
-    set_has_mvuint64_t();
+    set_has_a_mvuint64_t();
   }
-  _impl_.content_.mvuint64_t_ = value;
+  _impl_.content_.a_mvuint64_t_ = value;
 }
-inline uint64_t ReadPixelsBuffer::mvuint64_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ReadPixelsBuffer.mVuint64_t)
-  return _internal_mvuint64_t();
+inline uint64_t ReadPixelsBuffer::a_mvuint64_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVuint64_t)
+  return _internal_a_mvuint64_t();
 }
-inline void ReadPixelsBuffer::set_mvuint64_t(uint64_t value) {
-  _internal_set_mvuint64_t(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReadPixelsBuffer.mVuint64_t)
+inline void ReadPixelsBuffer::set_a_mvuint64_t(uint64_t value) {
+  _internal_set_a_mvuint64_t(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVuint64_t)
 }
 
-// bytes mVShmem = 2;
-inline bool ReadPixelsBuffer::_internal_has_mvshmem() const {
-  return content_case() == kMVShmem;
+// bytes a_mVShmem = 2;
+inline bool ReadPixelsBuffer::_internal_has_a_mvshmem() const {
+  return content_case() == kAMVShmem;
 }
-inline bool ReadPixelsBuffer::has_mvshmem() const {
-  return _internal_has_mvshmem();
+inline bool ReadPixelsBuffer::has_a_mvshmem() const {
+  return _internal_has_a_mvshmem();
 }
-inline void ReadPixelsBuffer::set_has_mvshmem() {
-  _impl_._oneof_case_[0] = kMVShmem;
+inline void ReadPixelsBuffer::set_has_a_mvshmem() {
+  _impl_._oneof_case_[0] = kAMVShmem;
 }
-inline void ReadPixelsBuffer::clear_mvshmem() {
-  if (_internal_has_mvshmem()) {
-    _impl_.content_.mvshmem_.Destroy();
+inline void ReadPixelsBuffer::clear_a_mvshmem() {
+  if (_internal_has_a_mvshmem()) {
+    _impl_.content_.a_mvshmem_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ReadPixelsBuffer::mvshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ReadPixelsBuffer.mVShmem)
-  return _internal_mvshmem();
+inline const std::string& ReadPixelsBuffer::a_mvshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVShmem)
+  return _internal_a_mvshmem();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ReadPixelsBuffer::set_mvshmem(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvshmem()) {
+inline void ReadPixelsBuffer::set_a_mvshmem(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvshmem()) {
     clear_content();
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitDefault();
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitDefault();
   }
-  _impl_.content_.mvshmem_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReadPixelsBuffer.mVShmem)
+  _impl_.content_.a_mvshmem_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVShmem)
 }
-inline std::string* ReadPixelsBuffer::mutable_mvshmem() {
-  std::string* _s = _internal_mutable_mvshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ReadPixelsBuffer.mVShmem)
+inline std::string* ReadPixelsBuffer::mutable_a_mvshmem() {
+  std::string* _s = _internal_mutable_a_mvshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVShmem)
   return _s;
 }
-inline const std::string& ReadPixelsBuffer::_internal_mvshmem() const {
-  if (_internal_has_mvshmem()) {
-    return _impl_.content_.mvshmem_.Get();
+inline const std::string& ReadPixelsBuffer::_internal_a_mvshmem() const {
+  if (_internal_has_a_mvshmem()) {
+    return _impl_.content_.a_mvshmem_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ReadPixelsBuffer::_internal_set_mvshmem(const std::string& value) {
-  if (!_internal_has_mvshmem()) {
+inline void ReadPixelsBuffer::_internal_set_a_mvshmem(const std::string& value) {
+  if (!_internal_has_a_mvshmem()) {
     clear_content();
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitDefault();
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitDefault();
   }
-  _impl_.content_.mvshmem_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ReadPixelsBuffer::_internal_mutable_mvshmem() {
-  if (!_internal_has_mvshmem()) {
+inline std::string* ReadPixelsBuffer::_internal_mutable_a_mvshmem() {
+  if (!_internal_has_a_mvshmem()) {
     clear_content();
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitDefault();
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitDefault();
   }
-  return _impl_.content_.mvshmem_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvshmem_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ReadPixelsBuffer::release_mvshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ReadPixelsBuffer.mVShmem)
-  if (_internal_has_mvshmem()) {
+inline std::string* ReadPixelsBuffer::release_a_mvshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVShmem)
+  if (_internal_has_a_mvshmem()) {
     clear_has_content();
-    return _impl_.content_.mvshmem_.Release();
+    return _impl_.content_.a_mvshmem_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ReadPixelsBuffer::set_allocated_mvshmem(std::string* mvshmem) {
+inline void ReadPixelsBuffer::set_allocated_a_mvshmem(std::string* a_mvshmem) {
   if (has_content()) {
     clear_content();
   }
-  if (mvshmem != nullptr) {
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitAllocated(mvshmem, GetArenaForAllocation());
+  if (a_mvshmem != nullptr) {
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitAllocated(a_mvshmem, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ReadPixelsBuffer.mVShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ReadPixelsBuffer.a_mVShmem)
 }
 
 inline bool ReadPixelsBuffer::has_content() const {

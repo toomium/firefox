@@ -25,9 +25,9 @@ PROTOBUF_CONSTEXPR FileSystemEntryMetadata::FileSystemEntryMetadata(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.entryname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.directory_)*/false} {}
+  , /*decltype(_impl_.a_entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_entryname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_directory_)*/false} {}
 struct FileSystemEntryMetadataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemEntryMetadataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -41,8 +41,8 @@ PROTOBUF_CONSTEXPR FileSystemChildMetadata::FileSystemChildMetadata(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.childname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_childname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileSystemChildMetadataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemChildMetadataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -56,8 +56,8 @@ PROTOBUF_CONSTEXPR FileSystemGetHandleRequest::FileSystemGetHandleRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.handle_)*/nullptr
-  , /*decltype(_impl_.create_)*/false} {}
+  , /*decltype(_impl_.a_handle_)*/nullptr
+  , /*decltype(_impl_.a_create_)*/false} {}
 struct FileSystemGetHandleRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemGetHandleRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -85,8 +85,8 @@ PROTOBUF_CONSTEXPR FileSystemGetEntriesRequest::FileSystemGetEntriesRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.page_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_page_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileSystemGetEntriesRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemGetEntriesRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -98,8 +98,8 @@ struct FileSystemGetEntriesRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileSystemGetEntriesRequestDefaultTypeInternal _FileSystemGetEntriesRequest_default_instance_;
 PROTOBUF_CONSTEXPR FileSystemDirectoryListing::FileSystemDirectoryListing(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.directories_)*/{}
-  , /*decltype(_impl_.files_)*/{}
+    /*decltype(_impl_.a_directories_)*/{}
+  , /*decltype(_impl_.a_files_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemDirectoryListingDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemDirectoryListingDefaultTypeInternal()
@@ -128,7 +128,7 @@ PROTOBUF_CONSTEXPR FileSystemGetFileRequest::FileSystemGetFileRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileSystemGetFileRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemGetFileRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -142,10 +142,10 @@ PROTOBUF_CONSTEXPR FileSystemFileProperties::FileSystemFileProperties(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.path_)*/{}
-  , /*decltype(_impl_.last_modified_ms_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.file_)*/nullptr} {}
+  , /*decltype(_impl_.a_path_)*/{}
+  , /*decltype(_impl_.a_last_modified_ms_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_file_)*/nullptr} {}
 struct FileSystemFilePropertiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemFilePropertiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -173,7 +173,7 @@ PROTOBUF_CONSTEXPR FileSystemGetAccessHandleRequest::FileSystemGetAccessHandleRe
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileSystemGetAccessHandleRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemGetAccessHandleRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -187,9 +187,9 @@ PROTOBUF_CONSTEXPR FileSystemAccessHandleProperties::FileSystemAccessHandlePrope
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.accesshandlechildendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.accesshandlecontrolchildendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.streamparams_)*/nullptr} {}
+  , /*decltype(_impl_.a_accesshandlechildendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_accesshandlecontrolchildendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_streamparams_)*/nullptr} {}
 struct FileSystemAccessHandlePropertiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemAccessHandlePropertiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -217,8 +217,8 @@ PROTOBUF_CONSTEXPR FileSystemGetWritableRequest::FileSystemGetWritableRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.keepdata_)*/false} {}
+  , /*decltype(_impl_.a_entryid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_keepdata_)*/false} {}
 struct FileSystemGetWritableRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemGetWritableRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -232,8 +232,8 @@ PROTOBUF_CONSTEXPR FileSystemWritableFileStreamProperties::FileSystemWritableFil
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.writablefilestream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.streamparams_)*/nullptr} {}
+  , /*decltype(_impl_.a_writablefilestream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_streamparams_)*/nullptr} {}
 struct FileSystemWritableFileStreamPropertiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemWritableFileStreamPropertiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -261,8 +261,8 @@ PROTOBUF_CONSTEXPR FileSystemEntryPair::FileSystemEntryPair(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.childid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_parentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_childid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileSystemEntryPairDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemEntryPairDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -276,7 +276,7 @@ PROTOBUF_CONSTEXPR FileSystemResolveRequest::FileSystemResolveRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.endpoints_)*/nullptr} {}
+  , /*decltype(_impl_.a_endpoints_)*/nullptr} {}
 struct FileSystemResolveRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemResolveRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -288,7 +288,7 @@ struct FileSystemResolveRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileSystemResolveRequestDefaultTypeInternal _FileSystemResolveRequest_default_instance_;
 PROTOBUF_CONSTEXPR FileSystemPath::FileSystemPath(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.path_)*/{}
+    /*decltype(_impl_.a_path_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemPathDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemPathDefaultTypeInternal()
@@ -317,8 +317,8 @@ PROTOBUF_CONSTEXPR FileSystemRemoveEntryRequest::FileSystemRemoveEntryRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.handle_)*/nullptr
-  , /*decltype(_impl_.recursive_)*/false} {}
+  , /*decltype(_impl_.a_handle_)*/nullptr
+  , /*decltype(_impl_.a_recursive_)*/false} {}
 struct FileSystemRemoveEntryRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemRemoveEntryRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -346,8 +346,8 @@ PROTOBUF_CONSTEXPR FileSystemMoveEntryRequest::FileSystemMoveEntryRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.handle_)*/nullptr
-  , /*decltype(_impl_.desthandle_)*/nullptr} {}
+  , /*decltype(_impl_.a_handle_)*/nullptr
+  , /*decltype(_impl_.a_desthandle_)*/nullptr} {}
 struct FileSystemMoveEntryRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemMoveEntryRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -361,8 +361,8 @@ PROTOBUF_CONSTEXPR FileSystemRenameEntryRequest::FileSystemRenameEntryRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.handle_)*/nullptr} {}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_handle_)*/nullptr} {}
 struct FileSystemRenameEntryRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemRenameEntryRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -400,13 +400,13 @@ namespace fs {
 class FileSystemEntryMetadata::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemEntryMetadata>()._impl_._has_bits_);
-  static void set_has_entryid(HasBits* has_bits) {
+  static void set_has_a_entryid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_entryname(HasBits* has_bits) {
+  static void set_has_a_entryname(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_directory(HasBits* has_bits) {
+  static void set_has_a_directory(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -426,28 +426,28 @@ FileSystemEntryMetadata::FileSystemEntryMetadata(const FileSystemEntryMetadata& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}
-    , decltype(_impl_.entryname_){}
-    , decltype(_impl_.directory_){}};
+    , decltype(_impl_.a_entryid_){}
+    , decltype(_impl_.a_entryname_){}
+    , decltype(_impl_.a_directory_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_entryid()) {
-    _this->_impl_.entryid_.Set(from._internal_entryid(), 
+  if (from._internal_has_a_entryid()) {
+    _this->_impl_.a_entryid_.Set(from._internal_a_entryid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.entryname_.InitDefault();
+  _impl_.a_entryname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryname_.Set("", GetArenaForAllocation());
+    _impl_.a_entryname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_entryname()) {
-    _this->_impl_.entryname_.Set(from._internal_entryname(), 
+  if (from._internal_has_a_entryname()) {
+    _this->_impl_.a_entryname_.Set(from._internal_a_entryname(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.directory_ = from._impl_.directory_;
+  _this->_impl_.a_directory_ = from._impl_.a_directory_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemEntryMetadata)
 }
 
@@ -458,17 +458,17 @@ inline void FileSystemEntryMetadata::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}
-    , decltype(_impl_.entryname_){}
-    , decltype(_impl_.directory_){false}
+    , decltype(_impl_.a_entryid_){}
+    , decltype(_impl_.a_entryname_){}
+    , decltype(_impl_.a_directory_){false}
   };
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.entryname_.InitDefault();
+  _impl_.a_entryname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryname_.Set("", GetArenaForAllocation());
+    _impl_.a_entryname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -483,8 +483,8 @@ FileSystemEntryMetadata::~FileSystemEntryMetadata() {
 
 inline void FileSystemEntryMetadata::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.entryid_.Destroy();
-  _impl_.entryname_.Destroy();
+  _impl_.a_entryid_.Destroy();
+  _impl_.a_entryname_.Destroy();
 }
 
 void FileSystemEntryMetadata::SetCachedSize(int size) const {
@@ -500,13 +500,13 @@ void FileSystemEntryMetadata::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.entryid_.ClearNonDefaultToEmpty();
+      _impl_.a_entryid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.entryname_.ClearNonDefaultToEmpty();
+      _impl_.a_entryname_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.directory_ = false;
+  _impl_.a_directory_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -518,29 +518,29 @@ const char* FileSystemEntryMetadata::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes entryId = 1;
+      // required bytes a_entryId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_entryid();
+          auto str = _internal_mutable_a_entryid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes entryName = 2;
+      // required bytes a_entryName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_entryname();
+          auto str = _internal_mutable_a_entryname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool directory = 3;
+      // required bool a_directory = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_directory(&has_bits);
-          _impl_.directory_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_directory(&has_bits);
+          _impl_.a_directory_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -576,22 +576,22 @@ uint8_t* FileSystemEntryMetadata::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes entryId = 1;
+  // required bytes a_entryId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_entryid(), target);
+        1, this->_internal_a_entryid(), target);
   }
 
-  // required bytes entryName = 2;
+  // required bytes a_entryName = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_entryname(), target);
+        2, this->_internal_a_entryname(), target);
   }
 
-  // required bool directory = 3;
+  // required bool a_directory = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_directory(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_directory(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -606,22 +606,22 @@ size_t FileSystemEntryMetadata::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemEntryMetadata)
   size_t total_size = 0;
 
-  if (_internal_has_entryid()) {
-    // required bytes entryId = 1;
+  if (_internal_has_a_entryid()) {
+    // required bytes a_entryId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryid());
+        this->_internal_a_entryid());
   }
 
-  if (_internal_has_entryname()) {
-    // required bytes entryName = 2;
+  if (_internal_has_a_entryname()) {
+    // required bytes a_entryName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryname());
+        this->_internal_a_entryname());
   }
 
-  if (_internal_has_directory()) {
-    // required bool directory = 3;
+  if (_internal_has_a_directory()) {
+    // required bool a_directory = 3;
     total_size += 1 + 1;
   }
 
@@ -632,17 +632,17 @@ size_t FileSystemEntryMetadata::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes entryId = 1;
+    // required bytes a_entryId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryid());
+        this->_internal_a_entryid());
 
-    // required bytes entryName = 2;
+    // required bytes a_entryName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryname());
+        this->_internal_a_entryname());
 
-    // required bool directory = 3;
+    // required bool a_directory = 3;
     total_size += 1 + 1;
 
   } else {
@@ -676,13 +676,13 @@ void FileSystemEntryMetadata::MergeFrom(const FileSystemEntryMetadata& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_entryid(from._internal_entryid());
+      _this->_internal_set_a_entryid(from._internal_a_entryid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_entryname(from._internal_entryname());
+      _this->_internal_set_a_entryname(from._internal_a_entryname());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.directory_ = from._impl_.directory_;
+      _this->_impl_.a_directory_ = from._impl_.a_directory_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -708,14 +708,14 @@ void FileSystemEntryMetadata::InternalSwap(FileSystemEntryMetadata* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.entryid_, lhs_arena,
-      &other->_impl_.entryid_, rhs_arena
+      &_impl_.a_entryid_, lhs_arena,
+      &other->_impl_.a_entryid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.entryname_, lhs_arena,
-      &other->_impl_.entryname_, rhs_arena
+      &_impl_.a_entryname_, lhs_arena,
+      &other->_impl_.a_entryname_, rhs_arena
   );
-  swap(_impl_.directory_, other->_impl_.directory_);
+  swap(_impl_.a_directory_, other->_impl_.a_directory_);
 }
 
 std::string FileSystemEntryMetadata::GetTypeName() const {
@@ -728,10 +728,10 @@ std::string FileSystemEntryMetadata::GetTypeName() const {
 class FileSystemChildMetadata::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemChildMetadata>()._impl_._has_bits_);
-  static void set_has_parentid(HasBits* has_bits) {
+  static void set_has_a_parentid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_childname(HasBits* has_bits) {
+  static void set_has_a_childname(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -751,24 +751,24 @@ FileSystemChildMetadata::FileSystemChildMetadata(const FileSystemChildMetadata& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.parentid_){}
-    , decltype(_impl_.childname_){}};
+    , decltype(_impl_.a_parentid_){}
+    , decltype(_impl_.a_childname_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.parentid_.InitDefault();
+  _impl_.a_parentid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_parentid()) {
-    _this->_impl_.parentid_.Set(from._internal_parentid(), 
+  if (from._internal_has_a_parentid()) {
+    _this->_impl_.a_parentid_.Set(from._internal_a_parentid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.childname_.InitDefault();
+  _impl_.a_childname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.childname_.Set("", GetArenaForAllocation());
+    _impl_.a_childname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_childname()) {
-    _this->_impl_.childname_.Set(from._internal_childname(), 
+  if (from._internal_has_a_childname()) {
+    _this->_impl_.a_childname_.Set(from._internal_a_childname(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemChildMetadata)
@@ -781,16 +781,16 @@ inline void FileSystemChildMetadata::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.parentid_){}
-    , decltype(_impl_.childname_){}
+    , decltype(_impl_.a_parentid_){}
+    , decltype(_impl_.a_childname_){}
   };
-  _impl_.parentid_.InitDefault();
+  _impl_.a_parentid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.childname_.InitDefault();
+  _impl_.a_childname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.childname_.Set("", GetArenaForAllocation());
+    _impl_.a_childname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -805,8 +805,8 @@ FileSystemChildMetadata::~FileSystemChildMetadata() {
 
 inline void FileSystemChildMetadata::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.parentid_.Destroy();
-  _impl_.childname_.Destroy();
+  _impl_.a_parentid_.Destroy();
+  _impl_.a_childname_.Destroy();
 }
 
 void FileSystemChildMetadata::SetCachedSize(int size) const {
@@ -822,10 +822,10 @@ void FileSystemChildMetadata::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.parentid_.ClearNonDefaultToEmpty();
+      _impl_.a_parentid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.childname_.ClearNonDefaultToEmpty();
+      _impl_.a_childname_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -839,19 +839,19 @@ const char* FileSystemChildMetadata::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes parentId = 1;
+      // required bytes a_parentId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_parentid();
+          auto str = _internal_mutable_a_parentid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes childName = 2;
+      // required bytes a_childName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_childname();
+          auto str = _internal_mutable_a_childname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -888,16 +888,16 @@ uint8_t* FileSystemChildMetadata::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes parentId = 1;
+  // required bytes a_parentId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_parentid(), target);
+        1, this->_internal_a_parentid(), target);
   }
 
-  // required bytes childName = 2;
+  // required bytes a_childName = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_childname(), target);
+        2, this->_internal_a_childname(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -912,18 +912,18 @@ size_t FileSystemChildMetadata::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemChildMetadata)
   size_t total_size = 0;
 
-  if (_internal_has_parentid()) {
-    // required bytes parentId = 1;
+  if (_internal_has_a_parentid()) {
+    // required bytes a_parentId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_parentid());
+        this->_internal_a_parentid());
   }
 
-  if (_internal_has_childname()) {
-    // required bytes childName = 2;
+  if (_internal_has_a_childname()) {
+    // required bytes a_childName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_childname());
+        this->_internal_a_childname());
   }
 
   return total_size;
@@ -933,15 +933,15 @@ size_t FileSystemChildMetadata::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes parentId = 1;
+    // required bytes a_parentId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_parentid());
+        this->_internal_a_parentid());
 
-    // required bytes childName = 2;
+    // required bytes a_childName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_childname());
+        this->_internal_a_childname());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -974,10 +974,10 @@ void FileSystemChildMetadata::MergeFrom(const FileSystemChildMetadata& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_parentid(from._internal_parentid());
+      _this->_internal_set_a_parentid(from._internal_a_parentid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_childname(from._internal_childname());
+      _this->_internal_set_a_childname(from._internal_a_childname());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1002,12 +1002,12 @@ void FileSystemChildMetadata::InternalSwap(FileSystemChildMetadata* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.parentid_, lhs_arena,
-      &other->_impl_.parentid_, rhs_arena
+      &_impl_.a_parentid_, lhs_arena,
+      &other->_impl_.a_parentid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.childname_, lhs_arena,
-      &other->_impl_.childname_, rhs_arena
+      &_impl_.a_childname_, lhs_arena,
+      &other->_impl_.a_childname_, rhs_arena
   );
 }
 
@@ -1021,11 +1021,11 @@ std::string FileSystemChildMetadata::GetTypeName() const {
 class FileSystemGetHandleRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemGetHandleRequest>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& handle(const FileSystemGetHandleRequest* msg);
-  static void set_has_handle(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& a_handle(const FileSystemGetHandleRequest* msg);
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_create(HasBits* has_bits) {
+  static void set_has_a_create(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1034,8 +1034,8 @@ class FileSystemGetHandleRequest::_Internal {
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata&
-FileSystemGetHandleRequest::_Internal::handle(const FileSystemGetHandleRequest* msg) {
-  return *msg->_impl_.handle_;
+FileSystemGetHandleRequest::_Internal::a_handle(const FileSystemGetHandleRequest* msg) {
+  return *msg->_impl_.a_handle_;
 }
 FileSystemGetHandleRequest::FileSystemGetHandleRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1049,14 +1049,14 @@ FileSystemGetHandleRequest::FileSystemGetHandleRequest(const FileSystemGetHandle
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){nullptr}
-    , decltype(_impl_.create_){}};
+    , decltype(_impl_.a_handle_){nullptr}
+    , decltype(_impl_.a_create_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_ = new ::protobuf::mozilla::dom::fs::FileSystemChildMetadata(*from._impl_.handle_);
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_ = new ::protobuf::mozilla::dom::fs::FileSystemChildMetadata(*from._impl_.a_handle_);
   }
-  _this->_impl_.create_ = from._impl_.create_;
+  _this->_impl_.a_create_ = from._impl_.a_create_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest)
 }
 
@@ -1067,8 +1067,8 @@ inline void FileSystemGetHandleRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){nullptr}
-    , decltype(_impl_.create_){false}
+    , decltype(_impl_.a_handle_){nullptr}
+    , decltype(_impl_.a_create_){false}
   };
 }
 
@@ -1083,7 +1083,7 @@ FileSystemGetHandleRequest::~FileSystemGetHandleRequest() {
 
 inline void FileSystemGetHandleRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.handle_;
+  if (this != internal_default_instance()) delete _impl_.a_handle_;
 }
 
 void FileSystemGetHandleRequest::SetCachedSize(int size) const {
@@ -1098,10 +1098,10 @@ void FileSystemGetHandleRequest::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.handle_ != nullptr);
-    _impl_.handle_->Clear();
+    GOOGLE_DCHECK(_impl_.a_handle_ != nullptr);
+    _impl_.a_handle_->Clear();
   }
-  _impl_.create_ = false;
+  _impl_.a_create_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1113,19 +1113,19 @@ const char* FileSystemGetHandleRequest::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+      // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_handle(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_handle(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool create = 2;
+      // required bool a_create = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_create(&has_bits);
-          _impl_.create_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_create(&has_bits);
+          _impl_.a_create_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1161,17 +1161,17 @@ uint8_t* FileSystemGetHandleRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::handle(this),
-        _Internal::handle(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_handle(this),
+        _Internal::a_handle(this).GetCachedSize(), target, stream);
   }
 
-  // required bool create = 2;
+  // required bool a_create = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_create(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_create(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1186,15 +1186,15 @@ size_t FileSystemGetHandleRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest)
   size_t total_size = 0;
 
-  if (_internal_has_handle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+  if (_internal_has_a_handle()) {
+    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
   }
 
-  if (_internal_has_create()) {
-    // required bool create = 2;
+  if (_internal_has_a_create()) {
+    // required bool a_create = 2;
     total_size += 1 + 1;
   }
 
@@ -1205,12 +1205,12 @@ size_t FileSystemGetHandleRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
 
-    // required bool create = 2;
+    // required bool a_create = 2;
     total_size += 1 + 1;
 
   } else {
@@ -1244,11 +1244,11 @@ void FileSystemGetHandleRequest::MergeFrom(const FileSystemGetHandleRequest& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_handle()->::protobuf::mozilla::dom::fs::FileSystemChildMetadata::MergeFrom(
-          from._internal_handle());
+      _this->_internal_mutable_a_handle()->::protobuf::mozilla::dom::fs::FileSystemChildMetadata::MergeFrom(
+          from._internal_a_handle());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.create_ = from._impl_.create_;
+      _this->_impl_.a_create_ = from._impl_.a_create_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1264,8 +1264,8 @@ void FileSystemGetHandleRequest::CopyFrom(const FileSystemGetHandleRequest& from
 
 bool FileSystemGetHandleRequest::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_handle()) {
-    if (!_impl_.handle_->IsInitialized()) return false;
+  if (_internal_has_a_handle()) {
+    if (!_impl_.a_handle_->IsInitialized()) return false;
   }
   return true;
 }
@@ -1275,11 +1275,11 @@ void FileSystemGetHandleRequest::InternalSwap(FileSystemGetHandleRequest* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FileSystemGetHandleRequest, _impl_.create_)
-      + sizeof(FileSystemGetHandleRequest::_impl_.create_)
-      - PROTOBUF_FIELD_OFFSET(FileSystemGetHandleRequest, _impl_.handle_)>(
-          reinterpret_cast<char*>(&_impl_.handle_),
-          reinterpret_cast<char*>(&other->_impl_.handle_));
+      PROTOBUF_FIELD_OFFSET(FileSystemGetHandleRequest, _impl_.a_create_)
+      + sizeof(FileSystemGetHandleRequest::_impl_.a_create_)
+      - PROTOBUF_FIELD_OFFSET(FileSystemGetHandleRequest, _impl_.a_handle_)>(
+          reinterpret_cast<char*>(&_impl_.a_handle_),
+          reinterpret_cast<char*>(&other->_impl_.a_handle_));
 }
 
 std::string FileSystemGetHandleRequest::GetTypeName() const {
@@ -1310,12 +1310,12 @@ FileSystemGetHandleResponse::FileSystemGetHandleResponse(const FileSystemGetHand
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVEntryId: {
-      _this->_internal_set_mventryid(from._internal_mventryid());
+    case kAMVEntryId: {
+      _this->_internal_set_a_mventryid(from._internal_a_mventryid());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1360,12 +1360,12 @@ void FileSystemGetHandleResponse::SetCachedSize(int size) const {
 void FileSystemGetHandleResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVEntryId: {
-      _impl_.content_.mventryid_.Destroy();
+    case kAMVEntryId: {
+      _impl_.content_.a_mventryid_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1392,19 +1392,19 @@ const char* FileSystemGetHandleResponse::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVEntryId = 2;
+      // bytes a_mVEntryId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mventryid();
+          auto str = _internal_mutable_a_mventryid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1440,14 +1440,14 @@ uint8_t* FileSystemGetHandleResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVEntryId: {
+    case kAMVEntryId: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mventryid(), target);
+          2, this->_internal_a_mventryid(), target);
       break;
     }
     default: ;
@@ -1469,18 +1469,18 @@ size_t FileSystemGetHandleResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // bytes mVEntryId = 2;
-    case kMVEntryId: {
+    // bytes a_mVEntryId = 2;
+    case kAMVEntryId: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mventryid());
+          this->_internal_a_mventryid());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1509,12 +1509,12 @@ void FileSystemGetHandleResponse::MergeFrom(const FileSystemGetHandleResponse& f
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVEntryId: {
-      _this->_internal_set_mventryid(from._internal_mventryid());
+    case kAMVEntryId: {
+      _this->_internal_set_a_mventryid(from._internal_a_mventryid());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1552,10 +1552,10 @@ std::string FileSystemGetHandleResponse::GetTypeName() const {
 class FileSystemGetEntriesRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemGetEntriesRequest>()._impl_._has_bits_);
-  static void set_has_parentid(HasBits* has_bits) {
+  static void set_has_a_parentid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_page(HasBits* has_bits) {
+  static void set_has_a_page(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1575,24 +1575,24 @@ FileSystemGetEntriesRequest::FileSystemGetEntriesRequest(const FileSystemGetEntr
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.parentid_){}
-    , decltype(_impl_.page_){}};
+    , decltype(_impl_.a_parentid_){}
+    , decltype(_impl_.a_page_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.parentid_.InitDefault();
+  _impl_.a_parentid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_parentid()) {
-    _this->_impl_.parentid_.Set(from._internal_parentid(), 
+  if (from._internal_has_a_parentid()) {
+    _this->_impl_.a_parentid_.Set(from._internal_a_parentid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.page_.InitDefault();
+  _impl_.a_page_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.page_.Set("", GetArenaForAllocation());
+    _impl_.a_page_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_page()) {
-    _this->_impl_.page_.Set(from._internal_page(), 
+  if (from._internal_has_a_page()) {
+    _this->_impl_.a_page_.Set(from._internal_a_page(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest)
@@ -1605,16 +1605,16 @@ inline void FileSystemGetEntriesRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.parentid_){}
-    , decltype(_impl_.page_){}
+    , decltype(_impl_.a_parentid_){}
+    , decltype(_impl_.a_page_){}
   };
-  _impl_.parentid_.InitDefault();
+  _impl_.a_parentid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.page_.InitDefault();
+  _impl_.a_page_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.page_.Set("", GetArenaForAllocation());
+    _impl_.a_page_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1629,8 +1629,8 @@ FileSystemGetEntriesRequest::~FileSystemGetEntriesRequest() {
 
 inline void FileSystemGetEntriesRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.parentid_.Destroy();
-  _impl_.page_.Destroy();
+  _impl_.a_parentid_.Destroy();
+  _impl_.a_page_.Destroy();
 }
 
 void FileSystemGetEntriesRequest::SetCachedSize(int size) const {
@@ -1646,10 +1646,10 @@ void FileSystemGetEntriesRequest::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.parentid_.ClearNonDefaultToEmpty();
+      _impl_.a_parentid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.page_.ClearNonDefaultToEmpty();
+      _impl_.a_page_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -1663,19 +1663,19 @@ const char* FileSystemGetEntriesRequest::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes parentId = 1;
+      // required bytes a_parentId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_parentid();
+          auto str = _internal_mutable_a_parentid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes page = 2;
+      // required bytes a_page = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_page();
+          auto str = _internal_mutable_a_page();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1712,16 +1712,16 @@ uint8_t* FileSystemGetEntriesRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes parentId = 1;
+  // required bytes a_parentId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_parentid(), target);
+        1, this->_internal_a_parentid(), target);
   }
 
-  // required bytes page = 2;
+  // required bytes a_page = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_page(), target);
+        2, this->_internal_a_page(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1736,18 +1736,18 @@ size_t FileSystemGetEntriesRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest)
   size_t total_size = 0;
 
-  if (_internal_has_parentid()) {
-    // required bytes parentId = 1;
+  if (_internal_has_a_parentid()) {
+    // required bytes a_parentId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_parentid());
+        this->_internal_a_parentid());
   }
 
-  if (_internal_has_page()) {
-    // required bytes page = 2;
+  if (_internal_has_a_page()) {
+    // required bytes a_page = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_page());
+        this->_internal_a_page());
   }
 
   return total_size;
@@ -1757,15 +1757,15 @@ size_t FileSystemGetEntriesRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes parentId = 1;
+    // required bytes a_parentId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_parentid());
+        this->_internal_a_parentid());
 
-    // required bytes page = 2;
+    // required bytes a_page = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_page());
+        this->_internal_a_page());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1798,10 +1798,10 @@ void FileSystemGetEntriesRequest::MergeFrom(const FileSystemGetEntriesRequest& f
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_parentid(from._internal_parentid());
+      _this->_internal_set_a_parentid(from._internal_a_parentid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_page(from._internal_page());
+      _this->_internal_set_a_page(from._internal_a_page());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1826,12 +1826,12 @@ void FileSystemGetEntriesRequest::InternalSwap(FileSystemGetEntriesRequest* othe
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.parentid_, lhs_arena,
-      &other->_impl_.parentid_, rhs_arena
+      &_impl_.a_parentid_, lhs_arena,
+      &other->_impl_.a_parentid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.page_, lhs_arena,
-      &other->_impl_.page_, rhs_arena
+      &_impl_.a_page_, lhs_arena,
+      &other->_impl_.a_page_, rhs_arena
   );
 }
 
@@ -1856,8 +1856,8 @@ FileSystemDirectoryListing::FileSystemDirectoryListing(const FileSystemDirectory
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileSystemDirectoryListing* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.directories_){from._impl_.directories_}
-    , decltype(_impl_.files_){from._impl_.files_}
+      decltype(_impl_.a_directories_){from._impl_.a_directories_}
+    , decltype(_impl_.a_files_){from._impl_.a_files_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1869,8 +1869,8 @@ inline void FileSystemDirectoryListing::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.directories_){arena}
-    , decltype(_impl_.files_){arena}
+      decltype(_impl_.a_directories_){arena}
+    , decltype(_impl_.a_files_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1886,8 +1886,8 @@ FileSystemDirectoryListing::~FileSystemDirectoryListing() {
 
 inline void FileSystemDirectoryListing::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.directories_.~RepeatedPtrField();
-  _impl_.files_.~RepeatedPtrField();
+  _impl_.a_directories_.~RepeatedPtrField();
+  _impl_.a_files_.~RepeatedPtrField();
 }
 
 void FileSystemDirectoryListing::SetCachedSize(int size) const {
@@ -1900,8 +1900,8 @@ void FileSystemDirectoryListing::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.directories_.Clear();
-  _impl_.files_.Clear();
+  _impl_.a_directories_.Clear();
+  _impl_.a_files_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -1911,26 +1911,26 @@ const char* FileSystemDirectoryListing::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata directories = 1;
+      // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_directories = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_directories(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_directories(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata files = 2;
+      // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_files = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_files(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_files(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
@@ -1966,18 +1966,18 @@ uint8_t* FileSystemDirectoryListing::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata directories = 1;
+  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_directories = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_directories_size()); i < n; i++) {
-    const auto& repfield = this->_internal_directories(i);
+      n = static_cast<unsigned>(this->_internal_a_directories_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_directories(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata files = 2;
+  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_files = 2;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_files_size()); i < n; i++) {
-    const auto& repfield = this->_internal_files(i);
+      n = static_cast<unsigned>(this->_internal_a_files_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_files(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -1998,16 +1998,16 @@ size_t FileSystemDirectoryListing::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata directories = 1;
-  total_size += 1UL * this->_internal_directories_size();
-  for (const auto& msg : this->_impl_.directories_) {
+  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_directories = 1;
+  total_size += 1UL * this->_internal_a_directories_size();
+  for (const auto& msg : this->_impl_.a_directories_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata files = 2;
-  total_size += 1UL * this->_internal_files_size();
-  for (const auto& msg : this->_impl_.files_) {
+  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_files = 2;
+  total_size += 1UL * this->_internal_a_files_size();
+  for (const auto& msg : this->_impl_.a_files_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -2033,8 +2033,8 @@ void FileSystemDirectoryListing::MergeFrom(const FileSystemDirectoryListing& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.directories_.MergeFrom(from._impl_.directories_);
-  _this->_impl_.files_.MergeFrom(from._impl_.files_);
+  _this->_impl_.a_directories_.MergeFrom(from._impl_.a_directories_);
+  _this->_impl_.a_files_.MergeFrom(from._impl_.a_files_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -2046,9 +2046,9 @@ void FileSystemDirectoryListing::CopyFrom(const FileSystemDirectoryListing& from
 }
 
 bool FileSystemDirectoryListing::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.directories_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_directories_))
     return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.files_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_files_))
     return false;
   return true;
 }
@@ -2056,8 +2056,8 @@ bool FileSystemDirectoryListing::IsInitialized() const {
 void FileSystemDirectoryListing::InternalSwap(FileSystemDirectoryListing* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.directories_.InternalSwap(&other->_impl_.directories_);
-  _impl_.files_.InternalSwap(&other->_impl_.files_);
+  _impl_.a_directories_.InternalSwap(&other->_impl_.a_directories_);
+  _impl_.a_files_.InternalSwap(&other->_impl_.a_files_);
 }
 
 std::string FileSystemDirectoryListing::GetTypeName() const {
@@ -2069,27 +2069,27 @@ std::string FileSystemDirectoryListing::GetTypeName() const {
 
 class FileSystemGetEntriesResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& mvfilesystemdirectorylisting(const FileSystemGetEntriesResponse* msg);
+  static const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& a_mvfilesystemdirectorylisting(const FileSystemGetEntriesResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing&
-FileSystemGetEntriesResponse::_Internal::mvfilesystemdirectorylisting(const FileSystemGetEntriesResponse* msg) {
-  return *msg->_impl_.content_.mvfilesystemdirectorylisting_;
+FileSystemGetEntriesResponse::_Internal::a_mvfilesystemdirectorylisting(const FileSystemGetEntriesResponse* msg) {
+  return *msg->_impl_.content_.a_mvfilesystemdirectorylisting_;
 }
-void FileSystemGetEntriesResponse::set_allocated_mvfilesystemdirectorylisting(::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mvfilesystemdirectorylisting) {
+void FileSystemGetEntriesResponse::set_allocated_a_mvfilesystemdirectorylisting(::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* a_mvfilesystemdirectorylisting) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfilesystemdirectorylisting) {
+  if (a_mvfilesystemdirectorylisting) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfilesystemdirectorylisting);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfilesystemdirectorylisting);
     if (message_arena != submessage_arena) {
-      mvfilesystemdirectorylisting = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfilesystemdirectorylisting, submessage_arena);
+      a_mvfilesystemdirectorylisting = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfilesystemdirectorylisting, submessage_arena);
     }
-    set_has_mvfilesystemdirectorylisting();
-    _impl_.content_.mvfilesystemdirectorylisting_ = mvfilesystemdirectorylisting;
+    set_has_a_mvfilesystemdirectorylisting();
+    _impl_.content_.a_mvfilesystemdirectorylisting_ = a_mvfilesystemdirectorylisting;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVFileSystemDirectoryListing)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVFileSystemDirectoryListing)
 }
 FileSystemGetEntriesResponse::FileSystemGetEntriesResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -2108,13 +2108,13 @@ FileSystemGetEntriesResponse::FileSystemGetEntriesResponse(const FileSystemGetEn
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemDirectoryListing: {
-      _this->_internal_mutable_mvfilesystemdirectorylisting()->::protobuf::mozilla::dom::fs::FileSystemDirectoryListing::MergeFrom(
-          from._internal_mvfilesystemdirectorylisting());
+    case kAMVFileSystemDirectoryListing: {
+      _this->_internal_mutable_a_mvfilesystemdirectorylisting()->::protobuf::mozilla::dom::fs::FileSystemDirectoryListing::MergeFrom(
+          from._internal_a_mvfilesystemdirectorylisting());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -2159,13 +2159,13 @@ void FileSystemGetEntriesResponse::SetCachedSize(int size) const {
 void FileSystemGetEntriesResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVFileSystemDirectoryListing: {
+    case kAMVFileSystemDirectoryListing: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfilesystemdirectorylisting_;
+        delete _impl_.content_.a_mvfilesystemdirectorylisting_;
       }
       break;
     }
@@ -2193,19 +2193,19 @@ const char* FileSystemGetEntriesResponse::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.fs.FileSystemDirectoryListing mVFileSystemDirectoryListing = 2;
+      // .protobuf.mozilla.dom.fs.FileSystemDirectoryListing a_mVFileSystemDirectoryListing = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfilesystemdirectorylisting(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfilesystemdirectorylisting(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2240,15 +2240,15 @@ uint8_t* FileSystemGetEntriesResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVFileSystemDirectoryListing: {
+    case kAMVFileSystemDirectoryListing: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvfilesystemdirectorylisting(this),
-          _Internal::mvfilesystemdirectorylisting(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvfilesystemdirectorylisting(this),
+          _Internal::a_mvfilesystemdirectorylisting(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -2270,18 +2270,18 @@ size_t FileSystemGetEntriesResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.fs.FileSystemDirectoryListing mVFileSystemDirectoryListing = 2;
-    case kMVFileSystemDirectoryListing: {
+    // .protobuf.mozilla.dom.fs.FileSystemDirectoryListing a_mVFileSystemDirectoryListing = 2;
+    case kAMVFileSystemDirectoryListing: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfilesystemdirectorylisting_);
+          *_impl_.content_.a_mvfilesystemdirectorylisting_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -2310,13 +2310,13 @@ void FileSystemGetEntriesResponse::MergeFrom(const FileSystemGetEntriesResponse&
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemDirectoryListing: {
-      _this->_internal_mutable_mvfilesystemdirectorylisting()->::protobuf::mozilla::dom::fs::FileSystemDirectoryListing::MergeFrom(
-          from._internal_mvfilesystemdirectorylisting());
+    case kAMVFileSystemDirectoryListing: {
+      _this->_internal_mutable_a_mvfilesystemdirectorylisting()->::protobuf::mozilla::dom::fs::FileSystemDirectoryListing::MergeFrom(
+          from._internal_a_mvfilesystemdirectorylisting());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -2335,12 +2335,12 @@ void FileSystemGetEntriesResponse::CopyFrom(const FileSystemGetEntriesResponse& 
 
 bool FileSystemGetEntriesResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVFileSystemDirectoryListing: {
-      if (_internal_has_mvfilesystemdirectorylisting()) {
-        if (!_impl_.content_.mvfilesystemdirectorylisting_->IsInitialized()) return false;
+    case kAMVFileSystemDirectoryListing: {
+      if (_internal_has_a_mvfilesystemdirectorylisting()) {
+        if (!_impl_.content_.a_mvfilesystemdirectorylisting_->IsInitialized()) return false;
       }
       break;
     }
@@ -2368,7 +2368,7 @@ std::string FileSystemGetEntriesResponse::GetTypeName() const {
 class FileSystemGetFileRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemGetFileRequest>()._impl_._has_bits_);
-  static void set_has_entryid(HasBits* has_bits) {
+  static void set_has_a_entryid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2388,15 +2388,15 @@ FileSystemGetFileRequest::FileSystemGetFileRequest(const FileSystemGetFileReques
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}};
+    , decltype(_impl_.a_entryid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_entryid()) {
-    _this->_impl_.entryid_.Set(from._internal_entryid(), 
+  if (from._internal_has_a_entryid()) {
+    _this->_impl_.a_entryid_.Set(from._internal_a_entryid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemGetFileRequest)
@@ -2409,11 +2409,11 @@ inline void FileSystemGetFileRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}
+    , decltype(_impl_.a_entryid_){}
   };
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2428,7 +2428,7 @@ FileSystemGetFileRequest::~FileSystemGetFileRequest() {
 
 inline void FileSystemGetFileRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.entryid_.Destroy();
+  _impl_.a_entryid_.Destroy();
 }
 
 void FileSystemGetFileRequest::SetCachedSize(int size) const {
@@ -2443,7 +2443,7 @@ void FileSystemGetFileRequest::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.entryid_.ClearNonDefaultToEmpty();
+    _impl_.a_entryid_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2456,10 +2456,10 @@ const char* FileSystemGetFileRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes entryId = 1;
+      // required bytes a_entryId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_entryid();
+          auto str = _internal_mutable_a_entryid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2496,10 +2496,10 @@ uint8_t* FileSystemGetFileRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes entryId = 1;
+  // required bytes a_entryId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_entryid(), target);
+        1, this->_internal_a_entryid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2514,11 +2514,11 @@ size_t FileSystemGetFileRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemGetFileRequest)
   size_t total_size = 0;
 
-  // required bytes entryId = 1;
-  if (_internal_has_entryid()) {
+  // required bytes a_entryId = 1;
+  if (_internal_has_a_entryid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryid());
+        this->_internal_a_entryid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2545,8 +2545,8 @@ void FileSystemGetFileRequest::MergeFrom(const FileSystemGetFileRequest& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_entryid()) {
-    _this->_internal_set_entryid(from._internal_entryid());
+  if (from._internal_has_a_entryid()) {
+    _this->_internal_set_a_entryid(from._internal_a_entryid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2570,8 +2570,8 @@ void FileSystemGetFileRequest::InternalSwap(FileSystemGetFileRequest* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.entryid_, lhs_arena,
-      &other->_impl_.entryid_, rhs_arena
+      &_impl_.a_entryid_, lhs_arena,
+      &other->_impl_.a_entryid_, rhs_arena
   );
 }
 
@@ -2585,14 +2585,14 @@ std::string FileSystemGetFileRequest::GetTypeName() const {
 class FileSystemFileProperties::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemFileProperties>()._impl_._has_bits_);
-  static void set_has_last_modified_ms(HasBits* has_bits) {
+  static void set_has_a_last_modified_ms(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::dom::IPCBlob& file(const FileSystemFileProperties* msg);
-  static void set_has_file(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::IPCBlob& a_file(const FileSystemFileProperties* msg);
+  static void set_has_a_file(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_type(HasBits* has_bits) {
+  static void set_has_a_type(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2601,11 +2601,11 @@ class FileSystemFileProperties::_Internal {
 };
 
 const ::protobuf::mozilla::dom::IPCBlob&
-FileSystemFileProperties::_Internal::file(const FileSystemFileProperties* msg) {
-  return *msg->_impl_.file_;
+FileSystemFileProperties::_Internal::a_file(const FileSystemFileProperties* msg) {
+  return *msg->_impl_.a_file_;
 }
-void FileSystemFileProperties::clear_file() {
-  if (_impl_.file_ != nullptr) _impl_.file_->Clear();
+void FileSystemFileProperties::clear_a_file() {
+  if (_impl_.a_file_ != nullptr) _impl_.a_file_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 FileSystemFileProperties::FileSystemFileProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2620,30 +2620,30 @@ FileSystemFileProperties::FileSystemFileProperties(const FileSystemFilePropertie
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.path_){from._impl_.path_}
-    , decltype(_impl_.last_modified_ms_){}
-    , decltype(_impl_.type_){}
-    , decltype(_impl_.file_){nullptr}};
+    , decltype(_impl_.a_path_){from._impl_.a_path_}
+    , decltype(_impl_.a_last_modified_ms_){}
+    , decltype(_impl_.a_type_){}
+    , decltype(_impl_.a_file_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.last_modified_ms_.InitDefault();
+  _impl_.a_last_modified_ms_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.last_modified_ms_.Set("", GetArenaForAllocation());
+    _impl_.a_last_modified_ms_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_last_modified_ms()) {
-    _this->_impl_.last_modified_ms_.Set(from._internal_last_modified_ms(), 
+  if (from._internal_has_a_last_modified_ms()) {
+    _this->_impl_.a_last_modified_ms_.Set(from._internal_a_last_modified_ms(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_type()) {
-    _this->_impl_.type_.Set(from._internal_type(), 
+  if (from._internal_has_a_type()) {
+    _this->_impl_.a_type_.Set(from._internal_a_type(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_file()) {
-    _this->_impl_.file_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.file_);
+  if (from._internal_has_a_file()) {
+    _this->_impl_.a_file_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.a_file_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemFileProperties)
 }
@@ -2655,18 +2655,18 @@ inline void FileSystemFileProperties::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.path_){arena}
-    , decltype(_impl_.last_modified_ms_){}
-    , decltype(_impl_.type_){}
-    , decltype(_impl_.file_){nullptr}
+    , decltype(_impl_.a_path_){arena}
+    , decltype(_impl_.a_last_modified_ms_){}
+    , decltype(_impl_.a_type_){}
+    , decltype(_impl_.a_file_){nullptr}
   };
-  _impl_.last_modified_ms_.InitDefault();
+  _impl_.a_last_modified_ms_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.last_modified_ms_.Set("", GetArenaForAllocation());
+    _impl_.a_last_modified_ms_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2681,10 +2681,10 @@ FileSystemFileProperties::~FileSystemFileProperties() {
 
 inline void FileSystemFileProperties::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.path_.~RepeatedPtrField();
-  _impl_.last_modified_ms_.Destroy();
-  _impl_.type_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.file_;
+  _impl_.a_path_.~RepeatedPtrField();
+  _impl_.a_last_modified_ms_.Destroy();
+  _impl_.a_type_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_file_;
 }
 
 void FileSystemFileProperties::SetCachedSize(int size) const {
@@ -2697,18 +2697,18 @@ void FileSystemFileProperties::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.path_.Clear();
+  _impl_.a_path_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.last_modified_ms_.ClearNonDefaultToEmpty();
+      _impl_.a_last_modified_ms_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.type_.ClearNonDefaultToEmpty();
+      _impl_.a_type_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.file_ != nullptr);
-      _impl_.file_->Clear();
+      GOOGLE_DCHECK(_impl_.a_file_ != nullptr);
+      _impl_.a_file_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -2722,39 +2722,39 @@ const char* FileSystemFileProperties::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes last_modified_ms = 1;
+      // required bytes a_last_modified_ms = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_last_modified_ms();
+          auto str = _internal_mutable_a_last_modified_ms();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCBlob file = 2;
+      // required .protobuf.mozilla.dom.IPCBlob a_file = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_file(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_file(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes type = 3;
+      // required bytes a_type = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_type();
+          auto str = _internal_mutable_a_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes path = 4;
+      // repeated bytes a_path = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_path();
+            auto str = _internal_add_a_path();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -2793,28 +2793,28 @@ uint8_t* FileSystemFileProperties::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes last_modified_ms = 1;
+  // required bytes a_last_modified_ms = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_last_modified_ms(), target);
+        1, this->_internal_a_last_modified_ms(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCBlob file = 2;
+  // required .protobuf.mozilla.dom.IPCBlob a_file = 2;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::file(this),
-        _Internal::file(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_file(this),
+        _Internal::a_file(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes type = 3;
+  // required bytes a_type = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_type(), target);
+        3, this->_internal_a_type(), target);
   }
 
-  // repeated bytes path = 4;
-  for (int i = 0, n = this->_internal_path_size(); i < n; i++) {
-    const auto& s = this->_internal_path(i);
+  // repeated bytes a_path = 4;
+  for (int i = 0, n = this->_internal_a_path_size(); i < n; i++) {
+    const auto& s = this->_internal_a_path(i);
     target = stream->WriteBytes(4, s, target);
   }
 
@@ -2830,25 +2830,25 @@ size_t FileSystemFileProperties::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemFileProperties)
   size_t total_size = 0;
 
-  if (_internal_has_last_modified_ms()) {
-    // required bytes last_modified_ms = 1;
+  if (_internal_has_a_last_modified_ms()) {
+    // required bytes a_last_modified_ms = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_last_modified_ms());
+        this->_internal_a_last_modified_ms());
   }
 
-  if (_internal_has_type()) {
-    // required bytes type = 3;
+  if (_internal_has_a_type()) {
+    // required bytes a_type = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
   }
 
-  if (_internal_has_file()) {
-    // required .protobuf.mozilla.dom.IPCBlob file = 2;
+  if (_internal_has_a_file()) {
+    // required .protobuf.mozilla.dom.IPCBlob a_file = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.file_);
+        *_impl_.a_file_);
   }
 
   return total_size;
@@ -2858,20 +2858,20 @@ size_t FileSystemFileProperties::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes last_modified_ms = 1;
+    // required bytes a_last_modified_ms = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_last_modified_ms());
+        this->_internal_a_last_modified_ms());
 
-    // required bytes type = 3;
+    // required bytes a_type = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
 
-    // required .protobuf.mozilla.dom.IPCBlob file = 2;
+    // required .protobuf.mozilla.dom.IPCBlob a_file = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.file_);
+        *_impl_.a_file_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2880,12 +2880,12 @@ size_t FileSystemFileProperties::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes path = 4;
+  // repeated bytes a_path = 4;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.path_.size());
-  for (int i = 0, n = _impl_.path_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_path_.size());
+  for (int i = 0, n = _impl_.a_path_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.path_.Get(i));
+      _impl_.a_path_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2909,18 +2909,18 @@ void FileSystemFileProperties::MergeFrom(const FileSystemFileProperties& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.path_.MergeFrom(from._impl_.path_);
+  _this->_impl_.a_path_.MergeFrom(from._impl_.a_path_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_last_modified_ms(from._internal_last_modified_ms());
+      _this->_internal_set_a_last_modified_ms(from._internal_a_last_modified_ms());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_type(from._internal_type());
+      _this->_internal_set_a_type(from._internal_a_type());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_file()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
-          from._internal_file());
+      _this->_internal_mutable_a_file()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
+          from._internal_a_file());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2935,8 +2935,8 @@ void FileSystemFileProperties::CopyFrom(const FileSystemFileProperties& from) {
 
 bool FileSystemFileProperties::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_file()) {
-    if (!_impl_.file_->IsInitialized()) return false;
+  if (_internal_has_a_file()) {
+    if (!_impl_.a_file_->IsInitialized()) return false;
   }
   return true;
 }
@@ -2947,16 +2947,16 @@ void FileSystemFileProperties::InternalSwap(FileSystemFileProperties* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.path_.InternalSwap(&other->_impl_.path_);
+  _impl_.a_path_.InternalSwap(&other->_impl_.a_path_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.last_modified_ms_, lhs_arena,
-      &other->_impl_.last_modified_ms_, rhs_arena
+      &_impl_.a_last_modified_ms_, lhs_arena,
+      &other->_impl_.a_last_modified_ms_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.type_, lhs_arena,
-      &other->_impl_.type_, rhs_arena
+      &_impl_.a_type_, lhs_arena,
+      &other->_impl_.a_type_, rhs_arena
   );
-  swap(_impl_.file_, other->_impl_.file_);
+  swap(_impl_.a_file_, other->_impl_.a_file_);
 }
 
 std::string FileSystemFileProperties::GetTypeName() const {
@@ -2968,27 +2968,27 @@ std::string FileSystemFileProperties::GetTypeName() const {
 
 class FileSystemGetFileResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& mvfilesystemfileproperties(const FileSystemGetFileResponse* msg);
+  static const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& a_mvfilesystemfileproperties(const FileSystemGetFileResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemFileProperties&
-FileSystemGetFileResponse::_Internal::mvfilesystemfileproperties(const FileSystemGetFileResponse* msg) {
-  return *msg->_impl_.content_.mvfilesystemfileproperties_;
+FileSystemGetFileResponse::_Internal::a_mvfilesystemfileproperties(const FileSystemGetFileResponse* msg) {
+  return *msg->_impl_.content_.a_mvfilesystemfileproperties_;
 }
-void FileSystemGetFileResponse::set_allocated_mvfilesystemfileproperties(::protobuf::mozilla::dom::fs::FileSystemFileProperties* mvfilesystemfileproperties) {
+void FileSystemGetFileResponse::set_allocated_a_mvfilesystemfileproperties(::protobuf::mozilla::dom::fs::FileSystemFileProperties* a_mvfilesystemfileproperties) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfilesystemfileproperties) {
+  if (a_mvfilesystemfileproperties) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfilesystemfileproperties);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfilesystemfileproperties);
     if (message_arena != submessage_arena) {
-      mvfilesystemfileproperties = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfilesystemfileproperties, submessage_arena);
+      a_mvfilesystemfileproperties = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfilesystemfileproperties, submessage_arena);
     }
-    set_has_mvfilesystemfileproperties();
-    _impl_.content_.mvfilesystemfileproperties_ = mvfilesystemfileproperties;
+    set_has_a_mvfilesystemfileproperties();
+    _impl_.content_.a_mvfilesystemfileproperties_ = a_mvfilesystemfileproperties;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVFileSystemFileProperties)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVFileSystemFileProperties)
 }
 FileSystemGetFileResponse::FileSystemGetFileResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -3007,13 +3007,13 @@ FileSystemGetFileResponse::FileSystemGetFileResponse(const FileSystemGetFileResp
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemFileProperties: {
-      _this->_internal_mutable_mvfilesystemfileproperties()->::protobuf::mozilla::dom::fs::FileSystemFileProperties::MergeFrom(
-          from._internal_mvfilesystemfileproperties());
+    case kAMVFileSystemFileProperties: {
+      _this->_internal_mutable_a_mvfilesystemfileproperties()->::protobuf::mozilla::dom::fs::FileSystemFileProperties::MergeFrom(
+          from._internal_a_mvfilesystemfileproperties());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -3058,13 +3058,13 @@ void FileSystemGetFileResponse::SetCachedSize(int size) const {
 void FileSystemGetFileResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemGetFileResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVFileSystemFileProperties: {
+    case kAMVFileSystemFileProperties: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfilesystemfileproperties_;
+        delete _impl_.content_.a_mvfilesystemfileproperties_;
       }
       break;
     }
@@ -3092,19 +3092,19 @@ const char* FileSystemGetFileResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.fs.FileSystemFileProperties mVFileSystemFileProperties = 2;
+      // .protobuf.mozilla.dom.fs.FileSystemFileProperties a_mVFileSystemFileProperties = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfilesystemfileproperties(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfilesystemfileproperties(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3139,15 +3139,15 @@ uint8_t* FileSystemGetFileResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVFileSystemFileProperties: {
+    case kAMVFileSystemFileProperties: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvfilesystemfileproperties(this),
-          _Internal::mvfilesystemfileproperties(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvfilesystemfileproperties(this),
+          _Internal::a_mvfilesystemfileproperties(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -3169,18 +3169,18 @@ size_t FileSystemGetFileResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.fs.FileSystemFileProperties mVFileSystemFileProperties = 2;
-    case kMVFileSystemFileProperties: {
+    // .protobuf.mozilla.dom.fs.FileSystemFileProperties a_mVFileSystemFileProperties = 2;
+    case kAMVFileSystemFileProperties: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfilesystemfileproperties_);
+          *_impl_.content_.a_mvfilesystemfileproperties_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -3209,13 +3209,13 @@ void FileSystemGetFileResponse::MergeFrom(const FileSystemGetFileResponse& from)
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemFileProperties: {
-      _this->_internal_mutable_mvfilesystemfileproperties()->::protobuf::mozilla::dom::fs::FileSystemFileProperties::MergeFrom(
-          from._internal_mvfilesystemfileproperties());
+    case kAMVFileSystemFileProperties: {
+      _this->_internal_mutable_a_mvfilesystemfileproperties()->::protobuf::mozilla::dom::fs::FileSystemFileProperties::MergeFrom(
+          from._internal_a_mvfilesystemfileproperties());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -3234,12 +3234,12 @@ void FileSystemGetFileResponse::CopyFrom(const FileSystemGetFileResponse& from) 
 
 bool FileSystemGetFileResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVFileSystemFileProperties: {
-      if (_internal_has_mvfilesystemfileproperties()) {
-        if (!_impl_.content_.mvfilesystemfileproperties_->IsInitialized()) return false;
+    case kAMVFileSystemFileProperties: {
+      if (_internal_has_a_mvfilesystemfileproperties()) {
+        if (!_impl_.content_.a_mvfilesystemfileproperties_->IsInitialized()) return false;
       }
       break;
     }
@@ -3267,7 +3267,7 @@ std::string FileSystemGetFileResponse::GetTypeName() const {
 class FileSystemGetAccessHandleRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemGetAccessHandleRequest>()._impl_._has_bits_);
-  static void set_has_entryid(HasBits* has_bits) {
+  static void set_has_a_entryid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3287,15 +3287,15 @@ FileSystemGetAccessHandleRequest::FileSystemGetAccessHandleRequest(const FileSys
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}};
+    , decltype(_impl_.a_entryid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_entryid()) {
-    _this->_impl_.entryid_.Set(from._internal_entryid(), 
+  if (from._internal_has_a_entryid()) {
+    _this->_impl_.a_entryid_.Set(from._internal_a_entryid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest)
@@ -3308,11 +3308,11 @@ inline void FileSystemGetAccessHandleRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}
+    , decltype(_impl_.a_entryid_){}
   };
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3327,7 +3327,7 @@ FileSystemGetAccessHandleRequest::~FileSystemGetAccessHandleRequest() {
 
 inline void FileSystemGetAccessHandleRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.entryid_.Destroy();
+  _impl_.a_entryid_.Destroy();
 }
 
 void FileSystemGetAccessHandleRequest::SetCachedSize(int size) const {
@@ -3342,7 +3342,7 @@ void FileSystemGetAccessHandleRequest::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.entryid_.ClearNonDefaultToEmpty();
+    _impl_.a_entryid_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3355,10 +3355,10 @@ const char* FileSystemGetAccessHandleRequest::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes entryId = 1;
+      // required bytes a_entryId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_entryid();
+          auto str = _internal_mutable_a_entryid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3395,10 +3395,10 @@ uint8_t* FileSystemGetAccessHandleRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes entryId = 1;
+  // required bytes a_entryId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_entryid(), target);
+        1, this->_internal_a_entryid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3413,11 +3413,11 @@ size_t FileSystemGetAccessHandleRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest)
   size_t total_size = 0;
 
-  // required bytes entryId = 1;
-  if (_internal_has_entryid()) {
+  // required bytes a_entryId = 1;
+  if (_internal_has_a_entryid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryid());
+        this->_internal_a_entryid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3444,8 +3444,8 @@ void FileSystemGetAccessHandleRequest::MergeFrom(const FileSystemGetAccessHandle
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_entryid()) {
-    _this->_internal_set_entryid(from._internal_entryid());
+  if (from._internal_has_a_entryid()) {
+    _this->_internal_set_a_entryid(from._internal_a_entryid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3469,8 +3469,8 @@ void FileSystemGetAccessHandleRequest::InternalSwap(FileSystemGetAccessHandleReq
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.entryid_, lhs_arena,
-      &other->_impl_.entryid_, rhs_arena
+      &_impl_.a_entryid_, lhs_arena,
+      &other->_impl_.a_entryid_, rhs_arena
   );
 }
 
@@ -3484,14 +3484,14 @@ std::string FileSystemGetAccessHandleRequest::GetTypeName() const {
 class FileSystemAccessHandleProperties::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemAccessHandleProperties>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::ipc::RandomAccessStreamParams& streamparams(const FileSystemAccessHandleProperties* msg);
-  static void set_has_streamparams(HasBits* has_bits) {
+  static const ::protobuf::mozilla::ipc::RandomAccessStreamParams& a_streamparams(const FileSystemAccessHandleProperties* msg);
+  static void set_has_a_streamparams(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_accesshandlechildendpoint(HasBits* has_bits) {
+  static void set_has_a_accesshandlechildendpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_accesshandlecontrolchildendpoint(HasBits* has_bits) {
+  static void set_has_a_accesshandlecontrolchildendpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3500,11 +3500,11 @@ class FileSystemAccessHandleProperties::_Internal {
 };
 
 const ::protobuf::mozilla::ipc::RandomAccessStreamParams&
-FileSystemAccessHandleProperties::_Internal::streamparams(const FileSystemAccessHandleProperties* msg) {
-  return *msg->_impl_.streamparams_;
+FileSystemAccessHandleProperties::_Internal::a_streamparams(const FileSystemAccessHandleProperties* msg) {
+  return *msg->_impl_.a_streamparams_;
 }
-void FileSystemAccessHandleProperties::clear_streamparams() {
-  if (_impl_.streamparams_ != nullptr) _impl_.streamparams_->Clear();
+void FileSystemAccessHandleProperties::clear_a_streamparams() {
+  if (_impl_.a_streamparams_ != nullptr) _impl_.a_streamparams_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 FileSystemAccessHandleProperties::FileSystemAccessHandleProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3519,29 +3519,29 @@ FileSystemAccessHandleProperties::FileSystemAccessHandleProperties(const FileSys
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.accesshandlechildendpoint_){}
-    , decltype(_impl_.accesshandlecontrolchildendpoint_){}
-    , decltype(_impl_.streamparams_){nullptr}};
+    , decltype(_impl_.a_accesshandlechildendpoint_){}
+    , decltype(_impl_.a_accesshandlecontrolchildendpoint_){}
+    , decltype(_impl_.a_streamparams_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.accesshandlechildendpoint_.InitDefault();
+  _impl_.a_accesshandlechildendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.accesshandlechildendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_accesshandlechildendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_accesshandlechildendpoint()) {
-    _this->_impl_.accesshandlechildendpoint_.Set(from._internal_accesshandlechildendpoint(), 
+  if (from._internal_has_a_accesshandlechildendpoint()) {
+    _this->_impl_.a_accesshandlechildendpoint_.Set(from._internal_a_accesshandlechildendpoint(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.accesshandlecontrolchildendpoint_.InitDefault();
+  _impl_.a_accesshandlecontrolchildendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_accesshandlecontrolchildendpoint()) {
-    _this->_impl_.accesshandlecontrolchildendpoint_.Set(from._internal_accesshandlecontrolchildendpoint(), 
+  if (from._internal_has_a_accesshandlecontrolchildendpoint()) {
+    _this->_impl_.a_accesshandlecontrolchildendpoint_.Set(from._internal_a_accesshandlecontrolchildendpoint(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_streamparams()) {
-    _this->_impl_.streamparams_ = new ::protobuf::mozilla::ipc::RandomAccessStreamParams(*from._impl_.streamparams_);
+  if (from._internal_has_a_streamparams()) {
+    _this->_impl_.a_streamparams_ = new ::protobuf::mozilla::ipc::RandomAccessStreamParams(*from._impl_.a_streamparams_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties)
 }
@@ -3553,17 +3553,17 @@ inline void FileSystemAccessHandleProperties::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.accesshandlechildendpoint_){}
-    , decltype(_impl_.accesshandlecontrolchildendpoint_){}
-    , decltype(_impl_.streamparams_){nullptr}
+    , decltype(_impl_.a_accesshandlechildendpoint_){}
+    , decltype(_impl_.a_accesshandlecontrolchildendpoint_){}
+    , decltype(_impl_.a_streamparams_){nullptr}
   };
-  _impl_.accesshandlechildendpoint_.InitDefault();
+  _impl_.a_accesshandlechildendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.accesshandlechildendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_accesshandlechildendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.accesshandlecontrolchildendpoint_.InitDefault();
+  _impl_.a_accesshandlecontrolchildendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3578,9 +3578,9 @@ FileSystemAccessHandleProperties::~FileSystemAccessHandleProperties() {
 
 inline void FileSystemAccessHandleProperties::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.accesshandlechildendpoint_.Destroy();
-  _impl_.accesshandlecontrolchildendpoint_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.streamparams_;
+  _impl_.a_accesshandlechildendpoint_.Destroy();
+  _impl_.a_accesshandlecontrolchildendpoint_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_streamparams_;
 }
 
 void FileSystemAccessHandleProperties::SetCachedSize(int size) const {
@@ -3596,14 +3596,14 @@ void FileSystemAccessHandleProperties::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.accesshandlechildendpoint_.ClearNonDefaultToEmpty();
+      _impl_.a_accesshandlechildendpoint_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.accesshandlecontrolchildendpoint_.ClearNonDefaultToEmpty();
+      _impl_.a_accesshandlecontrolchildendpoint_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.streamparams_ != nullptr);
-      _impl_.streamparams_->Clear();
+      GOOGLE_DCHECK(_impl_.a_streamparams_ != nullptr);
+      _impl_.a_streamparams_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -3617,27 +3617,27 @@ const char* FileSystemAccessHandleProperties::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+      // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_streamparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_streamparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes accessHandleChildEndpoint = 2;
+      // required bytes a_accessHandleChildEndpoint = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_accesshandlechildendpoint();
+          auto str = _internal_mutable_a_accesshandlechildendpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes accessHandleControlChildEndpoint = 3;
+      // required bytes a_accessHandleControlChildEndpoint = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_accesshandlecontrolchildendpoint();
+          auto str = _internal_mutable_a_accesshandlecontrolchildendpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3674,23 +3674,23 @@ uint8_t* FileSystemAccessHandleProperties::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+  // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::streamparams(this),
-        _Internal::streamparams(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_streamparams(this),
+        _Internal::a_streamparams(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes accessHandleChildEndpoint = 2;
+  // required bytes a_accessHandleChildEndpoint = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_accesshandlechildendpoint(), target);
+        2, this->_internal_a_accesshandlechildendpoint(), target);
   }
 
-  // required bytes accessHandleControlChildEndpoint = 3;
+  // required bytes a_accessHandleControlChildEndpoint = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_accesshandlecontrolchildendpoint(), target);
+        3, this->_internal_a_accesshandlecontrolchildendpoint(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3705,25 +3705,25 @@ size_t FileSystemAccessHandleProperties::RequiredFieldsByteSizeFallback() const 
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties)
   size_t total_size = 0;
 
-  if (_internal_has_accesshandlechildendpoint()) {
-    // required bytes accessHandleChildEndpoint = 2;
+  if (_internal_has_a_accesshandlechildendpoint()) {
+    // required bytes a_accessHandleChildEndpoint = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_accesshandlechildendpoint());
+        this->_internal_a_accesshandlechildendpoint());
   }
 
-  if (_internal_has_accesshandlecontrolchildendpoint()) {
-    // required bytes accessHandleControlChildEndpoint = 3;
+  if (_internal_has_a_accesshandlecontrolchildendpoint()) {
+    // required bytes a_accessHandleControlChildEndpoint = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_accesshandlecontrolchildendpoint());
+        this->_internal_a_accesshandlecontrolchildendpoint());
   }
 
-  if (_internal_has_streamparams()) {
-    // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+  if (_internal_has_a_streamparams()) {
+    // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.streamparams_);
+        *_impl_.a_streamparams_);
   }
 
   return total_size;
@@ -3733,20 +3733,20 @@ size_t FileSystemAccessHandleProperties::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes accessHandleChildEndpoint = 2;
+    // required bytes a_accessHandleChildEndpoint = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_accesshandlechildendpoint());
+        this->_internal_a_accesshandlechildendpoint());
 
-    // required bytes accessHandleControlChildEndpoint = 3;
+    // required bytes a_accessHandleControlChildEndpoint = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_accesshandlecontrolchildendpoint());
+        this->_internal_a_accesshandlecontrolchildendpoint());
 
-    // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+    // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.streamparams_);
+        *_impl_.a_streamparams_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3779,14 +3779,14 @@ void FileSystemAccessHandleProperties::MergeFrom(const FileSystemAccessHandlePro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_accesshandlechildendpoint(from._internal_accesshandlechildendpoint());
+      _this->_internal_set_a_accesshandlechildendpoint(from._internal_a_accesshandlechildendpoint());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_accesshandlecontrolchildendpoint(from._internal_accesshandlecontrolchildendpoint());
+      _this->_internal_set_a_accesshandlecontrolchildendpoint(from._internal_a_accesshandlecontrolchildendpoint());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_streamparams()->::protobuf::mozilla::ipc::RandomAccessStreamParams::MergeFrom(
-          from._internal_streamparams());
+      _this->_internal_mutable_a_streamparams()->::protobuf::mozilla::ipc::RandomAccessStreamParams::MergeFrom(
+          from._internal_a_streamparams());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3801,8 +3801,8 @@ void FileSystemAccessHandleProperties::CopyFrom(const FileSystemAccessHandleProp
 
 bool FileSystemAccessHandleProperties::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_streamparams()) {
-    if (!_impl_.streamparams_->IsInitialized()) return false;
+  if (_internal_has_a_streamparams()) {
+    if (!_impl_.a_streamparams_->IsInitialized()) return false;
   }
   return true;
 }
@@ -3814,14 +3814,14 @@ void FileSystemAccessHandleProperties::InternalSwap(FileSystemAccessHandleProper
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.accesshandlechildendpoint_, lhs_arena,
-      &other->_impl_.accesshandlechildendpoint_, rhs_arena
+      &_impl_.a_accesshandlechildendpoint_, lhs_arena,
+      &other->_impl_.a_accesshandlechildendpoint_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.accesshandlecontrolchildendpoint_, lhs_arena,
-      &other->_impl_.accesshandlecontrolchildendpoint_, rhs_arena
+      &_impl_.a_accesshandlecontrolchildendpoint_, lhs_arena,
+      &other->_impl_.a_accesshandlecontrolchildendpoint_, rhs_arena
   );
-  swap(_impl_.streamparams_, other->_impl_.streamparams_);
+  swap(_impl_.a_streamparams_, other->_impl_.a_streamparams_);
 }
 
 std::string FileSystemAccessHandleProperties::GetTypeName() const {
@@ -3833,27 +3833,27 @@ std::string FileSystemAccessHandleProperties::GetTypeName() const {
 
 class FileSystemGetAccessHandleResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& mvfilesystemaccesshandleproperties(const FileSystemGetAccessHandleResponse* msg);
+  static const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& a_mvfilesystemaccesshandleproperties(const FileSystemGetAccessHandleResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties&
-FileSystemGetAccessHandleResponse::_Internal::mvfilesystemaccesshandleproperties(const FileSystemGetAccessHandleResponse* msg) {
-  return *msg->_impl_.content_.mvfilesystemaccesshandleproperties_;
+FileSystemGetAccessHandleResponse::_Internal::a_mvfilesystemaccesshandleproperties(const FileSystemGetAccessHandleResponse* msg) {
+  return *msg->_impl_.content_.a_mvfilesystemaccesshandleproperties_;
 }
-void FileSystemGetAccessHandleResponse::set_allocated_mvfilesystemaccesshandleproperties(::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mvfilesystemaccesshandleproperties) {
+void FileSystemGetAccessHandleResponse::set_allocated_a_mvfilesystemaccesshandleproperties(::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* a_mvfilesystemaccesshandleproperties) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfilesystemaccesshandleproperties) {
+  if (a_mvfilesystemaccesshandleproperties) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfilesystemaccesshandleproperties);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfilesystemaccesshandleproperties);
     if (message_arena != submessage_arena) {
-      mvfilesystemaccesshandleproperties = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfilesystemaccesshandleproperties, submessage_arena);
+      a_mvfilesystemaccesshandleproperties = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfilesystemaccesshandleproperties, submessage_arena);
     }
-    set_has_mvfilesystemaccesshandleproperties();
-    _impl_.content_.mvfilesystemaccesshandleproperties_ = mvfilesystemaccesshandleproperties;
+    set_has_a_mvfilesystemaccesshandleproperties();
+    _impl_.content_.a_mvfilesystemaccesshandleproperties_ = a_mvfilesystemaccesshandleproperties;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVFileSystemAccessHandleProperties)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVFileSystemAccessHandleProperties)
 }
 FileSystemGetAccessHandleResponse::FileSystemGetAccessHandleResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -3872,13 +3872,13 @@ FileSystemGetAccessHandleResponse::FileSystemGetAccessHandleResponse(const FileS
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemAccessHandleProperties: {
-      _this->_internal_mutable_mvfilesystemaccesshandleproperties()->::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties::MergeFrom(
-          from._internal_mvfilesystemaccesshandleproperties());
+    case kAMVFileSystemAccessHandleProperties: {
+      _this->_internal_mutable_a_mvfilesystemaccesshandleproperties()->::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties::MergeFrom(
+          from._internal_a_mvfilesystemaccesshandleproperties());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -3923,13 +3923,13 @@ void FileSystemGetAccessHandleResponse::SetCachedSize(int size) const {
 void FileSystemGetAccessHandleResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVFileSystemAccessHandleProperties: {
+    case kAMVFileSystemAccessHandleProperties: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfilesystemaccesshandleproperties_;
+        delete _impl_.content_.a_mvfilesystemaccesshandleproperties_;
       }
       break;
     }
@@ -3957,19 +3957,19 @@ const char* FileSystemGetAccessHandleResponse::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties mVFileSystemAccessHandleProperties = 2;
+      // .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties a_mVFileSystemAccessHandleProperties = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfilesystemaccesshandleproperties(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfilesystemaccesshandleproperties(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4004,15 +4004,15 @@ uint8_t* FileSystemGetAccessHandleResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVFileSystemAccessHandleProperties: {
+    case kAMVFileSystemAccessHandleProperties: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvfilesystemaccesshandleproperties(this),
-          _Internal::mvfilesystemaccesshandleproperties(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvfilesystemaccesshandleproperties(this),
+          _Internal::a_mvfilesystemaccesshandleproperties(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -4034,18 +4034,18 @@ size_t FileSystemGetAccessHandleResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties mVFileSystemAccessHandleProperties = 2;
-    case kMVFileSystemAccessHandleProperties: {
+    // .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties a_mVFileSystemAccessHandleProperties = 2;
+    case kAMVFileSystemAccessHandleProperties: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfilesystemaccesshandleproperties_);
+          *_impl_.content_.a_mvfilesystemaccesshandleproperties_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -4074,13 +4074,13 @@ void FileSystemGetAccessHandleResponse::MergeFrom(const FileSystemGetAccessHandl
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemAccessHandleProperties: {
-      _this->_internal_mutable_mvfilesystemaccesshandleproperties()->::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties::MergeFrom(
-          from._internal_mvfilesystemaccesshandleproperties());
+    case kAMVFileSystemAccessHandleProperties: {
+      _this->_internal_mutable_a_mvfilesystemaccesshandleproperties()->::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties::MergeFrom(
+          from._internal_a_mvfilesystemaccesshandleproperties());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -4099,12 +4099,12 @@ void FileSystemGetAccessHandleResponse::CopyFrom(const FileSystemGetAccessHandle
 
 bool FileSystemGetAccessHandleResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVFileSystemAccessHandleProperties: {
-      if (_internal_has_mvfilesystemaccesshandleproperties()) {
-        if (!_impl_.content_.mvfilesystemaccesshandleproperties_->IsInitialized()) return false;
+    case kAMVFileSystemAccessHandleProperties: {
+      if (_internal_has_a_mvfilesystemaccesshandleproperties()) {
+        if (!_impl_.content_.a_mvfilesystemaccesshandleproperties_->IsInitialized()) return false;
       }
       break;
     }
@@ -4132,10 +4132,10 @@ std::string FileSystemGetAccessHandleResponse::GetTypeName() const {
 class FileSystemGetWritableRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemGetWritableRequest>()._impl_._has_bits_);
-  static void set_has_entryid(HasBits* has_bits) {
+  static void set_has_a_entryid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_keepdata(HasBits* has_bits) {
+  static void set_has_a_keepdata(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4155,19 +4155,19 @@ FileSystemGetWritableRequest::FileSystemGetWritableRequest(const FileSystemGetWr
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}
-    , decltype(_impl_.keepdata_){}};
+    , decltype(_impl_.a_entryid_){}
+    , decltype(_impl_.a_keepdata_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_entryid()) {
-    _this->_impl_.entryid_.Set(from._internal_entryid(), 
+  if (from._internal_has_a_entryid()) {
+    _this->_impl_.a_entryid_.Set(from._internal_a_entryid(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.keepdata_ = from._impl_.keepdata_;
+  _this->_impl_.a_keepdata_ = from._impl_.a_keepdata_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest)
 }
 
@@ -4178,12 +4178,12 @@ inline void FileSystemGetWritableRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.entryid_){}
-    , decltype(_impl_.keepdata_){false}
+    , decltype(_impl_.a_entryid_){}
+    , decltype(_impl_.a_keepdata_){false}
   };
-  _impl_.entryid_.InitDefault();
+  _impl_.a_entryid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4198,7 +4198,7 @@ FileSystemGetWritableRequest::~FileSystemGetWritableRequest() {
 
 inline void FileSystemGetWritableRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.entryid_.Destroy();
+  _impl_.a_entryid_.Destroy();
 }
 
 void FileSystemGetWritableRequest::SetCachedSize(int size) const {
@@ -4213,9 +4213,9 @@ void FileSystemGetWritableRequest::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.entryid_.ClearNonDefaultToEmpty();
+    _impl_.a_entryid_.ClearNonDefaultToEmpty();
   }
-  _impl_.keepdata_ = false;
+  _impl_.a_keepdata_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4227,20 +4227,20 @@ const char* FileSystemGetWritableRequest::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes entryId = 1;
+      // required bytes a_entryId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_entryid();
+          auto str = _internal_mutable_a_entryid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool keepData = 2;
+      // required bool a_keepData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_keepdata(&has_bits);
-          _impl_.keepdata_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_keepdata(&has_bits);
+          _impl_.a_keepdata_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4276,16 +4276,16 @@ uint8_t* FileSystemGetWritableRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes entryId = 1;
+  // required bytes a_entryId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_entryid(), target);
+        1, this->_internal_a_entryid(), target);
   }
 
-  // required bool keepData = 2;
+  // required bool a_keepData = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_keepdata(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_keepdata(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4300,15 +4300,15 @@ size_t FileSystemGetWritableRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest)
   size_t total_size = 0;
 
-  if (_internal_has_entryid()) {
-    // required bytes entryId = 1;
+  if (_internal_has_a_entryid()) {
+    // required bytes a_entryId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryid());
+        this->_internal_a_entryid());
   }
 
-  if (_internal_has_keepdata()) {
-    // required bool keepData = 2;
+  if (_internal_has_a_keepdata()) {
+    // required bool a_keepData = 2;
     total_size += 1 + 1;
   }
 
@@ -4319,12 +4319,12 @@ size_t FileSystemGetWritableRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes entryId = 1;
+    // required bytes a_entryId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_entryid());
+        this->_internal_a_entryid());
 
-    // required bool keepData = 2;
+    // required bool a_keepData = 2;
     total_size += 1 + 1;
 
   } else {
@@ -4358,10 +4358,10 @@ void FileSystemGetWritableRequest::MergeFrom(const FileSystemGetWritableRequest&
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_entryid(from._internal_entryid());
+      _this->_internal_set_a_entryid(from._internal_a_entryid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.keepdata_ = from._impl_.keepdata_;
+      _this->_impl_.a_keepdata_ = from._impl_.a_keepdata_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4387,10 +4387,10 @@ void FileSystemGetWritableRequest::InternalSwap(FileSystemGetWritableRequest* ot
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.entryid_, lhs_arena,
-      &other->_impl_.entryid_, rhs_arena
+      &_impl_.a_entryid_, lhs_arena,
+      &other->_impl_.a_entryid_, rhs_arena
   );
-  swap(_impl_.keepdata_, other->_impl_.keepdata_);
+  swap(_impl_.a_keepdata_, other->_impl_.a_keepdata_);
 }
 
 std::string FileSystemGetWritableRequest::GetTypeName() const {
@@ -4403,11 +4403,11 @@ std::string FileSystemGetWritableRequest::GetTypeName() const {
 class FileSystemWritableFileStreamProperties::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemWritableFileStreamProperties>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::ipc::RandomAccessStreamParams& streamparams(const FileSystemWritableFileStreamProperties* msg);
-  static void set_has_streamparams(HasBits* has_bits) {
+  static const ::protobuf::mozilla::ipc::RandomAccessStreamParams& a_streamparams(const FileSystemWritableFileStreamProperties* msg);
+  static void set_has_a_streamparams(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_writablefilestream(HasBits* has_bits) {
+  static void set_has_a_writablefilestream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4416,11 +4416,11 @@ class FileSystemWritableFileStreamProperties::_Internal {
 };
 
 const ::protobuf::mozilla::ipc::RandomAccessStreamParams&
-FileSystemWritableFileStreamProperties::_Internal::streamparams(const FileSystemWritableFileStreamProperties* msg) {
-  return *msg->_impl_.streamparams_;
+FileSystemWritableFileStreamProperties::_Internal::a_streamparams(const FileSystemWritableFileStreamProperties* msg) {
+  return *msg->_impl_.a_streamparams_;
 }
-void FileSystemWritableFileStreamProperties::clear_streamparams() {
-  if (_impl_.streamparams_ != nullptr) _impl_.streamparams_->Clear();
+void FileSystemWritableFileStreamProperties::clear_a_streamparams() {
+  if (_impl_.a_streamparams_ != nullptr) _impl_.a_streamparams_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 FileSystemWritableFileStreamProperties::FileSystemWritableFileStreamProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4435,20 +4435,20 @@ FileSystemWritableFileStreamProperties::FileSystemWritableFileStreamProperties(c
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.writablefilestream_){}
-    , decltype(_impl_.streamparams_){nullptr}};
+    , decltype(_impl_.a_writablefilestream_){}
+    , decltype(_impl_.a_streamparams_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.writablefilestream_.InitDefault();
+  _impl_.a_writablefilestream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.writablefilestream_.Set("", GetArenaForAllocation());
+    _impl_.a_writablefilestream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_writablefilestream()) {
-    _this->_impl_.writablefilestream_.Set(from._internal_writablefilestream(), 
+  if (from._internal_has_a_writablefilestream()) {
+    _this->_impl_.a_writablefilestream_.Set(from._internal_a_writablefilestream(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_streamparams()) {
-    _this->_impl_.streamparams_ = new ::protobuf::mozilla::ipc::RandomAccessStreamParams(*from._impl_.streamparams_);
+  if (from._internal_has_a_streamparams()) {
+    _this->_impl_.a_streamparams_ = new ::protobuf::mozilla::ipc::RandomAccessStreamParams(*from._impl_.a_streamparams_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties)
 }
@@ -4460,12 +4460,12 @@ inline void FileSystemWritableFileStreamProperties::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.writablefilestream_){}
-    , decltype(_impl_.streamparams_){nullptr}
+    , decltype(_impl_.a_writablefilestream_){}
+    , decltype(_impl_.a_streamparams_){nullptr}
   };
-  _impl_.writablefilestream_.InitDefault();
+  _impl_.a_writablefilestream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.writablefilestream_.Set("", GetArenaForAllocation());
+    _impl_.a_writablefilestream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4480,8 +4480,8 @@ FileSystemWritableFileStreamProperties::~FileSystemWritableFileStreamProperties(
 
 inline void FileSystemWritableFileStreamProperties::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.writablefilestream_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.streamparams_;
+  _impl_.a_writablefilestream_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_streamparams_;
 }
 
 void FileSystemWritableFileStreamProperties::SetCachedSize(int size) const {
@@ -4497,11 +4497,11 @@ void FileSystemWritableFileStreamProperties::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.writablefilestream_.ClearNonDefaultToEmpty();
+      _impl_.a_writablefilestream_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.streamparams_ != nullptr);
-      _impl_.streamparams_->Clear();
+      GOOGLE_DCHECK(_impl_.a_streamparams_ != nullptr);
+      _impl_.a_streamparams_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -4515,18 +4515,18 @@ const char* FileSystemWritableFileStreamProperties::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+      // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_streamparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_streamparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes writableFileStream = 2;
+      // required bytes a_writableFileStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_writablefilestream();
+          auto str = _internal_mutable_a_writablefilestream();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -4563,17 +4563,17 @@ uint8_t* FileSystemWritableFileStreamProperties::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+  // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::streamparams(this),
-        _Internal::streamparams(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_streamparams(this),
+        _Internal::a_streamparams(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes writableFileStream = 2;
+  // required bytes a_writableFileStream = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_writablefilestream(), target);
+        2, this->_internal_a_writablefilestream(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4588,18 +4588,18 @@ size_t FileSystemWritableFileStreamProperties::RequiredFieldsByteSizeFallback() 
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties)
   size_t total_size = 0;
 
-  if (_internal_has_writablefilestream()) {
-    // required bytes writableFileStream = 2;
+  if (_internal_has_a_writablefilestream()) {
+    // required bytes a_writableFileStream = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_writablefilestream());
+        this->_internal_a_writablefilestream());
   }
 
-  if (_internal_has_streamparams()) {
-    // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+  if (_internal_has_a_streamparams()) {
+    // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.streamparams_);
+        *_impl_.a_streamparams_);
   }
 
   return total_size;
@@ -4609,15 +4609,15 @@ size_t FileSystemWritableFileStreamProperties::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes writableFileStream = 2;
+    // required bytes a_writableFileStream = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_writablefilestream());
+        this->_internal_a_writablefilestream());
 
-    // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
+    // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.streamparams_);
+        *_impl_.a_streamparams_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4650,11 +4650,11 @@ void FileSystemWritableFileStreamProperties::MergeFrom(const FileSystemWritableF
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_writablefilestream(from._internal_writablefilestream());
+      _this->_internal_set_a_writablefilestream(from._internal_a_writablefilestream());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_streamparams()->::protobuf::mozilla::ipc::RandomAccessStreamParams::MergeFrom(
-          from._internal_streamparams());
+      _this->_internal_mutable_a_streamparams()->::protobuf::mozilla::ipc::RandomAccessStreamParams::MergeFrom(
+          from._internal_a_streamparams());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4669,8 +4669,8 @@ void FileSystemWritableFileStreamProperties::CopyFrom(const FileSystemWritableFi
 
 bool FileSystemWritableFileStreamProperties::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_streamparams()) {
-    if (!_impl_.streamparams_->IsInitialized()) return false;
+  if (_internal_has_a_streamparams()) {
+    if (!_impl_.a_streamparams_->IsInitialized()) return false;
   }
   return true;
 }
@@ -4682,10 +4682,10 @@ void FileSystemWritableFileStreamProperties::InternalSwap(FileSystemWritableFile
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.writablefilestream_, lhs_arena,
-      &other->_impl_.writablefilestream_, rhs_arena
+      &_impl_.a_writablefilestream_, lhs_arena,
+      &other->_impl_.a_writablefilestream_, rhs_arena
   );
-  swap(_impl_.streamparams_, other->_impl_.streamparams_);
+  swap(_impl_.a_streamparams_, other->_impl_.a_streamparams_);
 }
 
 std::string FileSystemWritableFileStreamProperties::GetTypeName() const {
@@ -4697,27 +4697,27 @@ std::string FileSystemWritableFileStreamProperties::GetTypeName() const {
 
 class FileSystemGetWritableFileStreamResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& mvfilesystemwritablefilestreamproperties(const FileSystemGetWritableFileStreamResponse* msg);
+  static const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& a_mvfilesystemwritablefilestreamproperties(const FileSystemGetWritableFileStreamResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties&
-FileSystemGetWritableFileStreamResponse::_Internal::mvfilesystemwritablefilestreamproperties(const FileSystemGetWritableFileStreamResponse* msg) {
-  return *msg->_impl_.content_.mvfilesystemwritablefilestreamproperties_;
+FileSystemGetWritableFileStreamResponse::_Internal::a_mvfilesystemwritablefilestreamproperties(const FileSystemGetWritableFileStreamResponse* msg) {
+  return *msg->_impl_.content_.a_mvfilesystemwritablefilestreamproperties_;
 }
-void FileSystemGetWritableFileStreamResponse::set_allocated_mvfilesystemwritablefilestreamproperties(::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mvfilesystemwritablefilestreamproperties) {
+void FileSystemGetWritableFileStreamResponse::set_allocated_a_mvfilesystemwritablefilestreamproperties(::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* a_mvfilesystemwritablefilestreamproperties) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfilesystemwritablefilestreamproperties) {
+  if (a_mvfilesystemwritablefilestreamproperties) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfilesystemwritablefilestreamproperties);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfilesystemwritablefilestreamproperties);
     if (message_arena != submessage_arena) {
-      mvfilesystemwritablefilestreamproperties = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfilesystemwritablefilestreamproperties, submessage_arena);
+      a_mvfilesystemwritablefilestreamproperties = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfilesystemwritablefilestreamproperties, submessage_arena);
     }
-    set_has_mvfilesystemwritablefilestreamproperties();
-    _impl_.content_.mvfilesystemwritablefilestreamproperties_ = mvfilesystemwritablefilestreamproperties;
+    set_has_a_mvfilesystemwritablefilestreamproperties();
+    _impl_.content_.a_mvfilesystemwritablefilestreamproperties_ = a_mvfilesystemwritablefilestreamproperties;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVFileSystemWritableFileStreamProperties)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVFileSystemWritableFileStreamProperties)
 }
 FileSystemGetWritableFileStreamResponse::FileSystemGetWritableFileStreamResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -4736,13 +4736,13 @@ FileSystemGetWritableFileStreamResponse::FileSystemGetWritableFileStreamResponse
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemWritableFileStreamProperties: {
-      _this->_internal_mutable_mvfilesystemwritablefilestreamproperties()->::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties::MergeFrom(
-          from._internal_mvfilesystemwritablefilestreamproperties());
+    case kAMVFileSystemWritableFileStreamProperties: {
+      _this->_internal_mutable_a_mvfilesystemwritablefilestreamproperties()->::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties::MergeFrom(
+          from._internal_a_mvfilesystemwritablefilestreamproperties());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -4787,13 +4787,13 @@ void FileSystemGetWritableFileStreamResponse::SetCachedSize(int size) const {
 void FileSystemGetWritableFileStreamResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVFileSystemWritableFileStreamProperties: {
+    case kAMVFileSystemWritableFileStreamProperties: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfilesystemwritablefilestreamproperties_;
+        delete _impl_.content_.a_mvfilesystemwritablefilestreamproperties_;
       }
       break;
     }
@@ -4821,19 +4821,19 @@ const char* FileSystemGetWritableFileStreamResponse::_InternalParse(const char* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties mVFileSystemWritableFileStreamProperties = 2;
+      // .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties a_mVFileSystemWritableFileStreamProperties = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfilesystemwritablefilestreamproperties(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfilesystemwritablefilestreamproperties(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4868,15 +4868,15 @@ uint8_t* FileSystemGetWritableFileStreamResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVFileSystemWritableFileStreamProperties: {
+    case kAMVFileSystemWritableFileStreamProperties: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvfilesystemwritablefilestreamproperties(this),
-          _Internal::mvfilesystemwritablefilestreamproperties(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvfilesystemwritablefilestreamproperties(this),
+          _Internal::a_mvfilesystemwritablefilestreamproperties(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -4898,18 +4898,18 @@ size_t FileSystemGetWritableFileStreamResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties mVFileSystemWritableFileStreamProperties = 2;
-    case kMVFileSystemWritableFileStreamProperties: {
+    // .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties a_mVFileSystemWritableFileStreamProperties = 2;
+    case kAMVFileSystemWritableFileStreamProperties: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfilesystemwritablefilestreamproperties_);
+          *_impl_.content_.a_mvfilesystemwritablefilestreamproperties_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -4938,13 +4938,13 @@ void FileSystemGetWritableFileStreamResponse::MergeFrom(const FileSystemGetWrita
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVFileSystemWritableFileStreamProperties: {
-      _this->_internal_mutable_mvfilesystemwritablefilestreamproperties()->::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties::MergeFrom(
-          from._internal_mvfilesystemwritablefilestreamproperties());
+    case kAMVFileSystemWritableFileStreamProperties: {
+      _this->_internal_mutable_a_mvfilesystemwritablefilestreamproperties()->::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties::MergeFrom(
+          from._internal_a_mvfilesystemwritablefilestreamproperties());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -4963,12 +4963,12 @@ void FileSystemGetWritableFileStreamResponse::CopyFrom(const FileSystemGetWritab
 
 bool FileSystemGetWritableFileStreamResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVFileSystemWritableFileStreamProperties: {
-      if (_internal_has_mvfilesystemwritablefilestreamproperties()) {
-        if (!_impl_.content_.mvfilesystemwritablefilestreamproperties_->IsInitialized()) return false;
+    case kAMVFileSystemWritableFileStreamProperties: {
+      if (_internal_has_a_mvfilesystemwritablefilestreamproperties()) {
+        if (!_impl_.content_.a_mvfilesystemwritablefilestreamproperties_->IsInitialized()) return false;
       }
       break;
     }
@@ -4996,10 +4996,10 @@ std::string FileSystemGetWritableFileStreamResponse::GetTypeName() const {
 class FileSystemEntryPair::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemEntryPair>()._impl_._has_bits_);
-  static void set_has_parentid(HasBits* has_bits) {
+  static void set_has_a_parentid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_childid(HasBits* has_bits) {
+  static void set_has_a_childid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5019,24 +5019,24 @@ FileSystemEntryPair::FileSystemEntryPair(const FileSystemEntryPair& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.parentid_){}
-    , decltype(_impl_.childid_){}};
+    , decltype(_impl_.a_parentid_){}
+    , decltype(_impl_.a_childid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.parentid_.InitDefault();
+  _impl_.a_parentid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_parentid()) {
-    _this->_impl_.parentid_.Set(from._internal_parentid(), 
+  if (from._internal_has_a_parentid()) {
+    _this->_impl_.a_parentid_.Set(from._internal_a_parentid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.childid_.InitDefault();
+  _impl_.a_childid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.childid_.Set("", GetArenaForAllocation());
+    _impl_.a_childid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_childid()) {
-    _this->_impl_.childid_.Set(from._internal_childid(), 
+  if (from._internal_has_a_childid()) {
+    _this->_impl_.a_childid_.Set(from._internal_a_childid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemEntryPair)
@@ -5049,16 +5049,16 @@ inline void FileSystemEntryPair::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.parentid_){}
-    , decltype(_impl_.childid_){}
+    , decltype(_impl_.a_parentid_){}
+    , decltype(_impl_.a_childid_){}
   };
-  _impl_.parentid_.InitDefault();
+  _impl_.a_parentid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.childid_.InitDefault();
+  _impl_.a_childid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.childid_.Set("", GetArenaForAllocation());
+    _impl_.a_childid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5073,8 +5073,8 @@ FileSystemEntryPair::~FileSystemEntryPair() {
 
 inline void FileSystemEntryPair::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.parentid_.Destroy();
-  _impl_.childid_.Destroy();
+  _impl_.a_parentid_.Destroy();
+  _impl_.a_childid_.Destroy();
 }
 
 void FileSystemEntryPair::SetCachedSize(int size) const {
@@ -5090,10 +5090,10 @@ void FileSystemEntryPair::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.parentid_.ClearNonDefaultToEmpty();
+      _impl_.a_parentid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.childid_.ClearNonDefaultToEmpty();
+      _impl_.a_childid_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -5107,19 +5107,19 @@ const char* FileSystemEntryPair::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes parentId = 1;
+      // required bytes a_parentId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_parentid();
+          auto str = _internal_mutable_a_parentid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes childId = 2;
+      // required bytes a_childId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_childid();
+          auto str = _internal_mutable_a_childid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5156,16 +5156,16 @@ uint8_t* FileSystemEntryPair::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes parentId = 1;
+  // required bytes a_parentId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_parentid(), target);
+        1, this->_internal_a_parentid(), target);
   }
 
-  // required bytes childId = 2;
+  // required bytes a_childId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_childid(), target);
+        2, this->_internal_a_childid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5180,18 +5180,18 @@ size_t FileSystemEntryPair::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemEntryPair)
   size_t total_size = 0;
 
-  if (_internal_has_parentid()) {
-    // required bytes parentId = 1;
+  if (_internal_has_a_parentid()) {
+    // required bytes a_parentId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_parentid());
+        this->_internal_a_parentid());
   }
 
-  if (_internal_has_childid()) {
-    // required bytes childId = 2;
+  if (_internal_has_a_childid()) {
+    // required bytes a_childId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_childid());
+        this->_internal_a_childid());
   }
 
   return total_size;
@@ -5201,15 +5201,15 @@ size_t FileSystemEntryPair::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes parentId = 1;
+    // required bytes a_parentId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_parentid());
+        this->_internal_a_parentid());
 
-    // required bytes childId = 2;
+    // required bytes a_childId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_childid());
+        this->_internal_a_childid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5242,10 +5242,10 @@ void FileSystemEntryPair::MergeFrom(const FileSystemEntryPair& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_parentid(from._internal_parentid());
+      _this->_internal_set_a_parentid(from._internal_a_parentid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_childid(from._internal_childid());
+      _this->_internal_set_a_childid(from._internal_a_childid());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5270,12 +5270,12 @@ void FileSystemEntryPair::InternalSwap(FileSystemEntryPair* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.parentid_, lhs_arena,
-      &other->_impl_.parentid_, rhs_arena
+      &_impl_.a_parentid_, lhs_arena,
+      &other->_impl_.a_parentid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.childid_, lhs_arena,
-      &other->_impl_.childid_, rhs_arena
+      &_impl_.a_childid_, lhs_arena,
+      &other->_impl_.a_childid_, rhs_arena
   );
 }
 
@@ -5289,8 +5289,8 @@ std::string FileSystemEntryPair::GetTypeName() const {
 class FileSystemResolveRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemResolveRequest>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& endpoints(const FileSystemResolveRequest* msg);
-  static void set_has_endpoints(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& a_endpoints(const FileSystemResolveRequest* msg);
+  static void set_has_a_endpoints(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5299,8 +5299,8 @@ class FileSystemResolveRequest::_Internal {
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemEntryPair&
-FileSystemResolveRequest::_Internal::endpoints(const FileSystemResolveRequest* msg) {
-  return *msg->_impl_.endpoints_;
+FileSystemResolveRequest::_Internal::a_endpoints(const FileSystemResolveRequest* msg) {
+  return *msg->_impl_.a_endpoints_;
 }
 FileSystemResolveRequest::FileSystemResolveRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -5314,11 +5314,11 @@ FileSystemResolveRequest::FileSystemResolveRequest(const FileSystemResolveReques
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.endpoints_){nullptr}};
+    , decltype(_impl_.a_endpoints_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_endpoints()) {
-    _this->_impl_.endpoints_ = new ::protobuf::mozilla::dom::fs::FileSystemEntryPair(*from._impl_.endpoints_);
+  if (from._internal_has_a_endpoints()) {
+    _this->_impl_.a_endpoints_ = new ::protobuf::mozilla::dom::fs::FileSystemEntryPair(*from._impl_.a_endpoints_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemResolveRequest)
 }
@@ -5330,7 +5330,7 @@ inline void FileSystemResolveRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.endpoints_){nullptr}
+    , decltype(_impl_.a_endpoints_){nullptr}
   };
 }
 
@@ -5345,7 +5345,7 @@ FileSystemResolveRequest::~FileSystemResolveRequest() {
 
 inline void FileSystemResolveRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.endpoints_;
+  if (this != internal_default_instance()) delete _impl_.a_endpoints_;
 }
 
 void FileSystemResolveRequest::SetCachedSize(int size) const {
@@ -5360,8 +5360,8 @@ void FileSystemResolveRequest::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.endpoints_ != nullptr);
-    _impl_.endpoints_->Clear();
+    GOOGLE_DCHECK(_impl_.a_endpoints_ != nullptr);
+    _impl_.a_endpoints_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -5374,10 +5374,10 @@ const char* FileSystemResolveRequest::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.fs.FileSystemEntryPair endpoints = 1;
+      // required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_endpoints(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_endpoints(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5413,11 +5413,11 @@ uint8_t* FileSystemResolveRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair endpoints = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::endpoints(this),
-        _Internal::endpoints(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_endpoints(this),
+        _Internal::a_endpoints(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5432,11 +5432,11 @@ size_t FileSystemResolveRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.fs.FileSystemResolveRequest)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair endpoints = 1;
-  if (_internal_has_endpoints()) {
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
+  if (_internal_has_a_endpoints()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.endpoints_);
+        *_impl_.a_endpoints_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -5463,9 +5463,9 @@ void FileSystemResolveRequest::MergeFrom(const FileSystemResolveRequest& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_endpoints()) {
-    _this->_internal_mutable_endpoints()->::protobuf::mozilla::dom::fs::FileSystemEntryPair::MergeFrom(
-        from._internal_endpoints());
+  if (from._internal_has_a_endpoints()) {
+    _this->_internal_mutable_a_endpoints()->::protobuf::mozilla::dom::fs::FileSystemEntryPair::MergeFrom(
+        from._internal_a_endpoints());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5479,8 +5479,8 @@ void FileSystemResolveRequest::CopyFrom(const FileSystemResolveRequest& from) {
 
 bool FileSystemResolveRequest::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_endpoints()) {
-    if (!_impl_.endpoints_->IsInitialized()) return false;
+  if (_internal_has_a_endpoints()) {
+    if (!_impl_.a_endpoints_->IsInitialized()) return false;
   }
   return true;
 }
@@ -5489,7 +5489,7 @@ void FileSystemResolveRequest::InternalSwap(FileSystemResolveRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.endpoints_, other->_impl_.endpoints_);
+  swap(_impl_.a_endpoints_, other->_impl_.a_endpoints_);
 }
 
 std::string FileSystemResolveRequest::GetTypeName() const {
@@ -5513,7 +5513,7 @@ FileSystemPath::FileSystemPath(const FileSystemPath& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileSystemPath* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.path_){from._impl_.path_}
+      decltype(_impl_.a_path_){from._impl_.a_path_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5525,7 +5525,7 @@ inline void FileSystemPath::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.path_){arena}
+      decltype(_impl_.a_path_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -5541,7 +5541,7 @@ FileSystemPath::~FileSystemPath() {
 
 inline void FileSystemPath::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.path_.~RepeatedPtrField();
+  _impl_.a_path_.~RepeatedPtrField();
 }
 
 void FileSystemPath::SetCachedSize(int size) const {
@@ -5554,7 +5554,7 @@ void FileSystemPath::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.path_.Clear();
+  _impl_.a_path_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -5564,13 +5564,13 @@ const char* FileSystemPath::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes path = 1;
+      // repeated bytes a_path = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_path();
+            auto str = _internal_add_a_path();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -5607,9 +5607,9 @@ uint8_t* FileSystemPath::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes path = 1;
-  for (int i = 0, n = this->_internal_path_size(); i < n; i++) {
-    const auto& s = this->_internal_path(i);
+  // repeated bytes a_path = 1;
+  for (int i = 0, n = this->_internal_a_path_size(); i < n; i++) {
+    const auto& s = this->_internal_a_path(i);
     target = stream->WriteBytes(1, s, target);
   }
 
@@ -5629,12 +5629,12 @@ size_t FileSystemPath::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes path = 1;
+  // repeated bytes a_path = 1;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.path_.size());
-  for (int i = 0, n = _impl_.path_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_path_.size());
+  for (int i = 0, n = _impl_.a_path_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.path_.Get(i));
+      _impl_.a_path_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5658,7 +5658,7 @@ void FileSystemPath::MergeFrom(const FileSystemPath& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.path_.MergeFrom(from._impl_.path_);
+  _this->_impl_.a_path_.MergeFrom(from._impl_.a_path_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -5676,7 +5676,7 @@ bool FileSystemPath::IsInitialized() const {
 void FileSystemPath::InternalSwap(FileSystemPath* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.path_.InternalSwap(&other->_impl_.path_);
+  _impl_.a_path_.InternalSwap(&other->_impl_.a_path_);
 }
 
 std::string FileSystemPath::GetTypeName() const {
@@ -5688,27 +5688,27 @@ std::string FileSystemPath::GetTypeName() const {
 
 class FileSystemResolveResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::fs::FileSystemPath& mvmaybefilesystempath(const FileSystemResolveResponse* msg);
+  static const ::protobuf::mozilla::dom::fs::FileSystemPath& a_mvmaybefilesystempath(const FileSystemResolveResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemPath&
-FileSystemResolveResponse::_Internal::mvmaybefilesystempath(const FileSystemResolveResponse* msg) {
-  return *msg->_impl_.content_.mvmaybefilesystempath_;
+FileSystemResolveResponse::_Internal::a_mvmaybefilesystempath(const FileSystemResolveResponse* msg) {
+  return *msg->_impl_.content_.a_mvmaybefilesystempath_;
 }
-void FileSystemResolveResponse::set_allocated_mvmaybefilesystempath(::protobuf::mozilla::dom::fs::FileSystemPath* mvmaybefilesystempath) {
+void FileSystemResolveResponse::set_allocated_a_mvmaybefilesystempath(::protobuf::mozilla::dom::fs::FileSystemPath* a_mvmaybefilesystempath) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvmaybefilesystempath) {
+  if (a_mvmaybefilesystempath) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvmaybefilesystempath);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvmaybefilesystempath);
     if (message_arena != submessage_arena) {
-      mvmaybefilesystempath = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvmaybefilesystempath, submessage_arena);
+      a_mvmaybefilesystempath = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvmaybefilesystempath, submessage_arena);
     }
-    set_has_mvmaybefilesystempath();
-    _impl_.content_.mvmaybefilesystempath_ = mvmaybefilesystempath;
+    set_has_a_mvmaybefilesystempath();
+    _impl_.content_.a_mvmaybefilesystempath_ = a_mvmaybefilesystempath;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVMaybeFileSystemPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVMaybeFileSystemPath)
 }
 FileSystemResolveResponse::FileSystemResolveResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -5727,13 +5727,13 @@ FileSystemResolveResponse::FileSystemResolveResponse(const FileSystemResolveResp
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVMaybeFileSystemPath: {
-      _this->_internal_mutable_mvmaybefilesystempath()->::protobuf::mozilla::dom::fs::FileSystemPath::MergeFrom(
-          from._internal_mvmaybefilesystempath());
+    case kAMVMaybeFileSystemPath: {
+      _this->_internal_mutable_a_mvmaybefilesystempath()->::protobuf::mozilla::dom::fs::FileSystemPath::MergeFrom(
+          from._internal_a_mvmaybefilesystempath());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5778,13 +5778,13 @@ void FileSystemResolveResponse::SetCachedSize(int size) const {
 void FileSystemResolveResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemResolveResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVMaybeFileSystemPath: {
+    case kAMVMaybeFileSystemPath: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvmaybefilesystempath_;
+        delete _impl_.content_.a_mvmaybefilesystempath_;
       }
       break;
     }
@@ -5812,19 +5812,19 @@ const char* FileSystemResolveResponse::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.fs.FileSystemPath mVMaybeFileSystemPath = 2;
+      // .protobuf.mozilla.dom.fs.FileSystemPath a_mVMaybeFileSystemPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvmaybefilesystempath(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvmaybefilesystempath(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5859,15 +5859,15 @@ uint8_t* FileSystemResolveResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVMaybeFileSystemPath: {
+    case kAMVMaybeFileSystemPath: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvmaybefilesystempath(this),
-          _Internal::mvmaybefilesystempath(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvmaybefilesystempath(this),
+          _Internal::a_mvmaybefilesystempath(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -5889,18 +5889,18 @@ size_t FileSystemResolveResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.fs.FileSystemPath mVMaybeFileSystemPath = 2;
-    case kMVMaybeFileSystemPath: {
+    // .protobuf.mozilla.dom.fs.FileSystemPath a_mVMaybeFileSystemPath = 2;
+    case kAMVMaybeFileSystemPath: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvmaybefilesystempath_);
+          *_impl_.content_.a_mvmaybefilesystempath_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5929,13 +5929,13 @@ void FileSystemResolveResponse::MergeFrom(const FileSystemResolveResponse& from)
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVMaybeFileSystemPath: {
-      _this->_internal_mutable_mvmaybefilesystempath()->::protobuf::mozilla::dom::fs::FileSystemPath::MergeFrom(
-          from._internal_mvmaybefilesystempath());
+    case kAMVMaybeFileSystemPath: {
+      _this->_internal_mutable_a_mvmaybefilesystempath()->::protobuf::mozilla::dom::fs::FileSystemPath::MergeFrom(
+          from._internal_a_mvmaybefilesystempath());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5973,11 +5973,11 @@ std::string FileSystemResolveResponse::GetTypeName() const {
 class FileSystemRemoveEntryRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemRemoveEntryRequest>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& handle(const FileSystemRemoveEntryRequest* msg);
-  static void set_has_handle(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& a_handle(const FileSystemRemoveEntryRequest* msg);
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_recursive(HasBits* has_bits) {
+  static void set_has_a_recursive(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5986,8 +5986,8 @@ class FileSystemRemoveEntryRequest::_Internal {
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata&
-FileSystemRemoveEntryRequest::_Internal::handle(const FileSystemRemoveEntryRequest* msg) {
-  return *msg->_impl_.handle_;
+FileSystemRemoveEntryRequest::_Internal::a_handle(const FileSystemRemoveEntryRequest* msg) {
+  return *msg->_impl_.a_handle_;
 }
 FileSystemRemoveEntryRequest::FileSystemRemoveEntryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6001,14 +6001,14 @@ FileSystemRemoveEntryRequest::FileSystemRemoveEntryRequest(const FileSystemRemov
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){nullptr}
-    , decltype(_impl_.recursive_){}};
+    , decltype(_impl_.a_handle_){nullptr}
+    , decltype(_impl_.a_recursive_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_ = new ::protobuf::mozilla::dom::fs::FileSystemChildMetadata(*from._impl_.handle_);
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_ = new ::protobuf::mozilla::dom::fs::FileSystemChildMetadata(*from._impl_.a_handle_);
   }
-  _this->_impl_.recursive_ = from._impl_.recursive_;
+  _this->_impl_.a_recursive_ = from._impl_.a_recursive_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest)
 }
 
@@ -6019,8 +6019,8 @@ inline void FileSystemRemoveEntryRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){nullptr}
-    , decltype(_impl_.recursive_){false}
+    , decltype(_impl_.a_handle_){nullptr}
+    , decltype(_impl_.a_recursive_){false}
   };
 }
 
@@ -6035,7 +6035,7 @@ FileSystemRemoveEntryRequest::~FileSystemRemoveEntryRequest() {
 
 inline void FileSystemRemoveEntryRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.handle_;
+  if (this != internal_default_instance()) delete _impl_.a_handle_;
 }
 
 void FileSystemRemoveEntryRequest::SetCachedSize(int size) const {
@@ -6050,10 +6050,10 @@ void FileSystemRemoveEntryRequest::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.handle_ != nullptr);
-    _impl_.handle_->Clear();
+    GOOGLE_DCHECK(_impl_.a_handle_ != nullptr);
+    _impl_.a_handle_->Clear();
   }
-  _impl_.recursive_ = false;
+  _impl_.a_recursive_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -6065,19 +6065,19 @@ const char* FileSystemRemoveEntryRequest::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+      // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_handle(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_handle(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool recursive = 2;
+      // required bool a_recursive = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_recursive(&has_bits);
-          _impl_.recursive_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_recursive(&has_bits);
+          _impl_.a_recursive_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6113,17 +6113,17 @@ uint8_t* FileSystemRemoveEntryRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::handle(this),
-        _Internal::handle(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_handle(this),
+        _Internal::a_handle(this).GetCachedSize(), target, stream);
   }
 
-  // required bool recursive = 2;
+  // required bool a_recursive = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_recursive(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_recursive(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6138,15 +6138,15 @@ size_t FileSystemRemoveEntryRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest)
   size_t total_size = 0;
 
-  if (_internal_has_handle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+  if (_internal_has_a_handle()) {
+    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
   }
 
-  if (_internal_has_recursive()) {
-    // required bool recursive = 2;
+  if (_internal_has_a_recursive()) {
+    // required bool a_recursive = 2;
     total_size += 1 + 1;
   }
 
@@ -6157,12 +6157,12 @@ size_t FileSystemRemoveEntryRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
+    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
 
-    // required bool recursive = 2;
+    // required bool a_recursive = 2;
     total_size += 1 + 1;
 
   } else {
@@ -6196,11 +6196,11 @@ void FileSystemRemoveEntryRequest::MergeFrom(const FileSystemRemoveEntryRequest&
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_handle()->::protobuf::mozilla::dom::fs::FileSystemChildMetadata::MergeFrom(
-          from._internal_handle());
+      _this->_internal_mutable_a_handle()->::protobuf::mozilla::dom::fs::FileSystemChildMetadata::MergeFrom(
+          from._internal_a_handle());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.recursive_ = from._impl_.recursive_;
+      _this->_impl_.a_recursive_ = from._impl_.a_recursive_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -6216,8 +6216,8 @@ void FileSystemRemoveEntryRequest::CopyFrom(const FileSystemRemoveEntryRequest& 
 
 bool FileSystemRemoveEntryRequest::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_handle()) {
-    if (!_impl_.handle_->IsInitialized()) return false;
+  if (_internal_has_a_handle()) {
+    if (!_impl_.a_handle_->IsInitialized()) return false;
   }
   return true;
 }
@@ -6227,11 +6227,11 @@ void FileSystemRemoveEntryRequest::InternalSwap(FileSystemRemoveEntryRequest* ot
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FileSystemRemoveEntryRequest, _impl_.recursive_)
-      + sizeof(FileSystemRemoveEntryRequest::_impl_.recursive_)
-      - PROTOBUF_FIELD_OFFSET(FileSystemRemoveEntryRequest, _impl_.handle_)>(
-          reinterpret_cast<char*>(&_impl_.handle_),
-          reinterpret_cast<char*>(&other->_impl_.handle_));
+      PROTOBUF_FIELD_OFFSET(FileSystemRemoveEntryRequest, _impl_.a_recursive_)
+      + sizeof(FileSystemRemoveEntryRequest::_impl_.a_recursive_)
+      - PROTOBUF_FIELD_OFFSET(FileSystemRemoveEntryRequest, _impl_.a_handle_)>(
+          reinterpret_cast<char*>(&_impl_.a_handle_),
+          reinterpret_cast<char*>(&other->_impl_.a_handle_));
 }
 
 std::string FileSystemRemoveEntryRequest::GetTypeName() const {
@@ -6262,12 +6262,12 @@ FileSystemRemoveEntryResponse::FileSystemRemoveEntryResponse(const FileSystemRem
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6312,12 +6312,12 @@ void FileSystemRemoveEntryResponse::SetCachedSize(int size) const {
 void FileSystemRemoveEntryResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVvoidT: {
-      _impl_.content_.mvvoid_t_.Destroy();
+    case kAMVvoidT: {
+      _impl_.content_.a_mvvoid_t_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6344,19 +6344,19 @@ const char* FileSystemRemoveEntryResponse::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVvoid_t = 2;
+      // bytes a_mVvoid_t = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvvoid_t();
+          auto str = _internal_mutable_a_mvvoid_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -6392,14 +6392,14 @@ uint8_t* FileSystemRemoveEntryResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVvoidT: {
+    case kAMVvoidT: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvvoid_t(), target);
+          2, this->_internal_a_mvvoid_t(), target);
       break;
     }
     default: ;
@@ -6421,18 +6421,18 @@ size_t FileSystemRemoveEntryResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // bytes mVvoid_t = 2;
-    case kMVvoidT: {
+    // bytes a_mVvoid_t = 2;
+    case kAMVvoidT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvvoid_t());
+          this->_internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6461,12 +6461,12 @@ void FileSystemRemoveEntryResponse::MergeFrom(const FileSystemRemoveEntryRespons
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6504,12 +6504,12 @@ std::string FileSystemRemoveEntryResponse::GetTypeName() const {
 class FileSystemMoveEntryRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemMoveEntryRequest>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& handle(const FileSystemMoveEntryRequest* msg);
-  static void set_has_handle(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& a_handle(const FileSystemMoveEntryRequest* msg);
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& desthandle(const FileSystemMoveEntryRequest* msg);
-  static void set_has_desthandle(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& a_desthandle(const FileSystemMoveEntryRequest* msg);
+  static void set_has_a_desthandle(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6518,12 +6518,12 @@ class FileSystemMoveEntryRequest::_Internal {
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata&
-FileSystemMoveEntryRequest::_Internal::handle(const FileSystemMoveEntryRequest* msg) {
-  return *msg->_impl_.handle_;
+FileSystemMoveEntryRequest::_Internal::a_handle(const FileSystemMoveEntryRequest* msg) {
+  return *msg->_impl_.a_handle_;
 }
 const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata&
-FileSystemMoveEntryRequest::_Internal::desthandle(const FileSystemMoveEntryRequest* msg) {
-  return *msg->_impl_.desthandle_;
+FileSystemMoveEntryRequest::_Internal::a_desthandle(const FileSystemMoveEntryRequest* msg) {
+  return *msg->_impl_.a_desthandle_;
 }
 FileSystemMoveEntryRequest::FileSystemMoveEntryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6537,15 +6537,15 @@ FileSystemMoveEntryRequest::FileSystemMoveEntryRequest(const FileSystemMoveEntry
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){nullptr}
-    , decltype(_impl_.desthandle_){nullptr}};
+    , decltype(_impl_.a_handle_){nullptr}
+    , decltype(_impl_.a_desthandle_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_ = new ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata(*from._impl_.handle_);
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_ = new ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata(*from._impl_.a_handle_);
   }
-  if (from._internal_has_desthandle()) {
-    _this->_impl_.desthandle_ = new ::protobuf::mozilla::dom::fs::FileSystemChildMetadata(*from._impl_.desthandle_);
+  if (from._internal_has_a_desthandle()) {
+    _this->_impl_.a_desthandle_ = new ::protobuf::mozilla::dom::fs::FileSystemChildMetadata(*from._impl_.a_desthandle_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest)
 }
@@ -6557,8 +6557,8 @@ inline void FileSystemMoveEntryRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){nullptr}
-    , decltype(_impl_.desthandle_){nullptr}
+    , decltype(_impl_.a_handle_){nullptr}
+    , decltype(_impl_.a_desthandle_){nullptr}
   };
 }
 
@@ -6573,8 +6573,8 @@ FileSystemMoveEntryRequest::~FileSystemMoveEntryRequest() {
 
 inline void FileSystemMoveEntryRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.handle_;
-  if (this != internal_default_instance()) delete _impl_.desthandle_;
+  if (this != internal_default_instance()) delete _impl_.a_handle_;
+  if (this != internal_default_instance()) delete _impl_.a_desthandle_;
 }
 
 void FileSystemMoveEntryRequest::SetCachedSize(int size) const {
@@ -6590,12 +6590,12 @@ void FileSystemMoveEntryRequest::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(_impl_.handle_ != nullptr);
-      _impl_.handle_->Clear();
+      GOOGLE_DCHECK(_impl_.a_handle_ != nullptr);
+      _impl_.a_handle_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.desthandle_ != nullptr);
-      _impl_.desthandle_->Clear();
+      GOOGLE_DCHECK(_impl_.a_desthandle_ != nullptr);
+      _impl_.a_desthandle_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -6609,18 +6609,18 @@ const char* FileSystemMoveEntryRequest::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+      // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_handle(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_handle(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata destHandle = 2;
+      // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_desthandle(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_desthandle(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6656,18 +6656,18 @@ uint8_t* FileSystemMoveEntryRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::handle(this),
-        _Internal::handle(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_handle(this),
+        _Internal::a_handle(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata destHandle = 2;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::desthandle(this),
-        _Internal::desthandle(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_desthandle(this),
+        _Internal::a_desthandle(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6682,18 +6682,18 @@ size_t FileSystemMoveEntryRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest)
   size_t total_size = 0;
 
-  if (_internal_has_handle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+  if (_internal_has_a_handle()) {
+    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
   }
 
-  if (_internal_has_desthandle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata destHandle = 2;
+  if (_internal_has_a_desthandle()) {
+    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.desthandle_);
+        *_impl_.a_desthandle_);
   }
 
   return total_size;
@@ -6703,15 +6703,15 @@ size_t FileSystemMoveEntryRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
 
-    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata destHandle = 2;
+    // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.desthandle_);
+        *_impl_.a_desthandle_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -6744,12 +6744,12 @@ void FileSystemMoveEntryRequest::MergeFrom(const FileSystemMoveEntryRequest& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_handle()->::protobuf::mozilla::dom::fs::FileSystemEntryMetadata::MergeFrom(
-          from._internal_handle());
+      _this->_internal_mutable_a_handle()->::protobuf::mozilla::dom::fs::FileSystemEntryMetadata::MergeFrom(
+          from._internal_a_handle());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_desthandle()->::protobuf::mozilla::dom::fs::FileSystemChildMetadata::MergeFrom(
-          from._internal_desthandle());
+      _this->_internal_mutable_a_desthandle()->::protobuf::mozilla::dom::fs::FileSystemChildMetadata::MergeFrom(
+          from._internal_a_desthandle());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6764,11 +6764,11 @@ void FileSystemMoveEntryRequest::CopyFrom(const FileSystemMoveEntryRequest& from
 
 bool FileSystemMoveEntryRequest::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_handle()) {
-    if (!_impl_.handle_->IsInitialized()) return false;
+  if (_internal_has_a_handle()) {
+    if (!_impl_.a_handle_->IsInitialized()) return false;
   }
-  if (_internal_has_desthandle()) {
-    if (!_impl_.desthandle_->IsInitialized()) return false;
+  if (_internal_has_a_desthandle()) {
+    if (!_impl_.a_desthandle_->IsInitialized()) return false;
   }
   return true;
 }
@@ -6778,11 +6778,11 @@ void FileSystemMoveEntryRequest::InternalSwap(FileSystemMoveEntryRequest* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FileSystemMoveEntryRequest, _impl_.desthandle_)
-      + sizeof(FileSystemMoveEntryRequest::_impl_.desthandle_)
-      - PROTOBUF_FIELD_OFFSET(FileSystemMoveEntryRequest, _impl_.handle_)>(
-          reinterpret_cast<char*>(&_impl_.handle_),
-          reinterpret_cast<char*>(&other->_impl_.handle_));
+      PROTOBUF_FIELD_OFFSET(FileSystemMoveEntryRequest, _impl_.a_desthandle_)
+      + sizeof(FileSystemMoveEntryRequest::_impl_.a_desthandle_)
+      - PROTOBUF_FIELD_OFFSET(FileSystemMoveEntryRequest, _impl_.a_handle_)>(
+          reinterpret_cast<char*>(&_impl_.a_handle_),
+          reinterpret_cast<char*>(&other->_impl_.a_handle_));
 }
 
 std::string FileSystemMoveEntryRequest::GetTypeName() const {
@@ -6795,11 +6795,11 @@ std::string FileSystemMoveEntryRequest::GetTypeName() const {
 class FileSystemRenameEntryRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<FileSystemRenameEntryRequest>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& handle(const FileSystemRenameEntryRequest* msg);
-  static void set_has_handle(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& a_handle(const FileSystemRenameEntryRequest* msg);
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6808,8 +6808,8 @@ class FileSystemRenameEntryRequest::_Internal {
 };
 
 const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata&
-FileSystemRenameEntryRequest::_Internal::handle(const FileSystemRenameEntryRequest* msg) {
-  return *msg->_impl_.handle_;
+FileSystemRenameEntryRequest::_Internal::a_handle(const FileSystemRenameEntryRequest* msg) {
+  return *msg->_impl_.a_handle_;
 }
 FileSystemRenameEntryRequest::FileSystemRenameEntryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6823,20 +6823,20 @@ FileSystemRenameEntryRequest::FileSystemRenameEntryRequest(const FileSystemRenam
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.handle_){nullptr}};
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_handle_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_ = new ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata(*from._impl_.handle_);
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_ = new ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata(*from._impl_.a_handle_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest)
 }
@@ -6848,12 +6848,12 @@ inline void FileSystemRenameEntryRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.handle_){nullptr}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_handle_){nullptr}
   };
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -6868,8 +6868,8 @@ FileSystemRenameEntryRequest::~FileSystemRenameEntryRequest() {
 
 inline void FileSystemRenameEntryRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.handle_;
+  _impl_.a_name_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_handle_;
 }
 
 void FileSystemRenameEntryRequest::SetCachedSize(int size) const {
@@ -6885,11 +6885,11 @@ void FileSystemRenameEntryRequest::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.name_.ClearNonDefaultToEmpty();
+      _impl_.a_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.handle_ != nullptr);
-      _impl_.handle_->Clear();
+      GOOGLE_DCHECK(_impl_.a_handle_ != nullptr);
+      _impl_.a_handle_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -6903,18 +6903,18 @@ const char* FileSystemRenameEntryRequest::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+      // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_handle(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_handle(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes name = 2;
+      // required bytes a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -6951,17 +6951,17 @@ uint8_t* FileSystemRenameEntryRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::handle(this),
-        _Internal::handle(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_handle(this),
+        _Internal::a_handle(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes name = 2;
+  // required bytes a_name = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_name(), target);
+        2, this->_internal_a_name(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6976,18 +6976,18 @@ size_t FileSystemRenameEntryRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest)
   size_t total_size = 0;
 
-  if (_internal_has_name()) {
-    // required bytes name = 2;
+  if (_internal_has_a_name()) {
+    // required bytes a_name = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
 
-  if (_internal_has_handle()) {
-    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+  if (_internal_has_a_handle()) {
+    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
   }
 
   return total_size;
@@ -6997,15 +6997,15 @@ size_t FileSystemRenameEntryRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes name = 2;
+    // required bytes a_name = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
 
-    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
+    // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.handle_);
+        *_impl_.a_handle_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7038,11 +7038,11 @@ void FileSystemRenameEntryRequest::MergeFrom(const FileSystemRenameEntryRequest&
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_name(from._internal_name());
+      _this->_internal_set_a_name(from._internal_a_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_handle()->::protobuf::mozilla::dom::fs::FileSystemEntryMetadata::MergeFrom(
-          from._internal_handle());
+      _this->_internal_mutable_a_handle()->::protobuf::mozilla::dom::fs::FileSystemEntryMetadata::MergeFrom(
+          from._internal_a_handle());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -7057,8 +7057,8 @@ void FileSystemRenameEntryRequest::CopyFrom(const FileSystemRenameEntryRequest& 
 
 bool FileSystemRenameEntryRequest::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_handle()) {
-    if (!_impl_.handle_->IsInitialized()) return false;
+  if (_internal_has_a_handle()) {
+    if (!_impl_.a_handle_->IsInitialized()) return false;
   }
   return true;
 }
@@ -7070,10 +7070,10 @@ void FileSystemRenameEntryRequest::InternalSwap(FileSystemRenameEntryRequest* ot
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
-  swap(_impl_.handle_, other->_impl_.handle_);
+  swap(_impl_.a_handle_, other->_impl_.a_handle_);
 }
 
 std::string FileSystemRenameEntryRequest::GetTypeName() const {
@@ -7104,12 +7104,12 @@ FileSystemMoveEntryResponse::FileSystemMoveEntryResponse(const FileSystemMoveEnt
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVEntryId: {
-      _this->_internal_set_mventryid(from._internal_mventryid());
+    case kAMVEntryId: {
+      _this->_internal_set_a_mventryid(from._internal_a_mventryid());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7154,12 +7154,12 @@ void FileSystemMoveEntryResponse::SetCachedSize(int size) const {
 void FileSystemMoveEntryResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVEntryId: {
-      _impl_.content_.mventryid_.Destroy();
+    case kAMVEntryId: {
+      _impl_.content_.a_mventryid_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7186,19 +7186,19 @@ const char* FileSystemMoveEntryResponse::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVEntryId = 2;
+      // bytes a_mVEntryId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mventryid();
+          auto str = _internal_mutable_a_mventryid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -7234,14 +7234,14 @@ uint8_t* FileSystemMoveEntryResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVEntryId: {
+    case kAMVEntryId: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mventryid(), target);
+          2, this->_internal_a_mventryid(), target);
       break;
     }
     default: ;
@@ -7263,18 +7263,18 @@ size_t FileSystemMoveEntryResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // bytes mVEntryId = 2;
-    case kMVEntryId: {
+    // bytes a_mVEntryId = 2;
+    case kAMVEntryId: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mventryid());
+          this->_internal_a_mventryid());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7303,12 +7303,12 @@ void FileSystemMoveEntryResponse::MergeFrom(const FileSystemMoveEntryResponse& f
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVEntryId: {
-      _this->_internal_set_mventryid(from._internal_mventryid());
+    case kAMVEntryId: {
+      _this->_internal_set_a_mventryid(from._internal_a_mventryid());
       break;
     }
     case CONTENT_NOT_SET: {

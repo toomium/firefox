@@ -32,15 +32,15 @@ message Msg_Thaw {
 }
 
 message Msg_Error {
-  required protobuf.mozilla.dom.ErrorValue value = 1;
+  required protobuf.mozilla.dom.ErrorValue a_value = 1;
 }
 
 message Msg_NotifyLock {
-  required bool aCreated = 1;
+  required bool a_aCreated = 1;
 }
 
 message Msg_NotifyWebTransport {
-  required bool aCreated = 1;
+  required bool a_aCreated = 1;
 }
 
 message Msg_Terminate {

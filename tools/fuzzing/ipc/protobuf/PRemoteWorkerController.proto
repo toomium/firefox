@@ -24,7 +24,7 @@ message Msg_CreationSucceeded {
 }
 
 message Msg_ErrorReceived {
-  required protobuf.mozilla.dom.ErrorValue aError = 1;
+  required protobuf.mozilla.dom.ErrorValue a_aError = 1;
 }
 
 message Msg_Terminated {
@@ -34,11 +34,11 @@ message Msg_SetServiceWorkerSkipWaitingFlag {
 }
 
 message Reply_SetServiceWorkerSkipWaitingFlag {
-  required bool aOk = 1;
+  required bool a_aOk = 1;
 }
 
 message Msg_PFetchEventOpConstructor {
-  required protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs aArgs = 1;
+  required protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs a_aArgs = 1;
 }
 
 message Reply_PFetchEventOpConstructor {
@@ -54,15 +54,15 @@ message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool aOk = 1;
+  required bool a_aOk = 1;
 }
 
 message Msg_ExecServiceWorkerOp {
-  required protobuf.mozilla.dom.ServiceWorkerOpArgs aArgs = 1;
+  required protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
 }
 
 message Reply_ExecServiceWorkerOp {
-  required protobuf.mozilla.dom.ServiceWorkerOpResult aResult = 1;
+  required protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
 }
 
 // Parameter mappings stats:

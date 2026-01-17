@@ -309,25 +309,25 @@ class Reply_OpenHeapSnapshotTempFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
+    kAResponseFieldNumber = 1,
   };
-  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse response = 1;
-  bool has_response() const;
+  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+  bool has_a_response() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_a_response() const;
   public:
-  void clear_response();
-  const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& response() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* release_response();
-  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* mutable_response();
-  void set_allocated_response(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* response);
+  void clear_a_response();
+  const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& a_response() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* release_a_response();
+  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* mutable_a_response();
+  void set_allocated_a_response(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response);
   private:
-  const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& _internal_response() const;
-  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* _internal_mutable_response();
+  const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& _internal_a_response() const;
+  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* _internal_mutable_a_response();
   public:
-  void unsafe_arena_set_allocated_response(
-      ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* response);
-  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* unsafe_arena_release_response();
+  void unsafe_arena_set_allocated_a_response(
+      ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response);
+  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* unsafe_arena_release_a_response();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile)
  private:
@@ -339,7 +339,7 @@ class Reply_OpenHeapSnapshotTempFile final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* response_;
+    ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHeapSnapshotTempFileHelper_2eproto;
@@ -607,41 +607,41 @@ class Reply___delete__ final :
 
 // Reply_OpenHeapSnapshotTempFile
 
-// required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse response = 1;
-inline bool Reply_OpenHeapSnapshotTempFile::_internal_has_response() const {
+// required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+inline bool Reply_OpenHeapSnapshotTempFile::_internal_has_a_response() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.response_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
   return value;
 }
-inline bool Reply_OpenHeapSnapshotTempFile::has_response() const {
-  return _internal_has_response();
+inline bool Reply_OpenHeapSnapshotTempFile::has_a_response() const {
+  return _internal_has_a_response();
 }
-inline const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& Reply_OpenHeapSnapshotTempFile::_internal_response() const {
-  const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* p = _impl_.response_;
+inline const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& Reply_OpenHeapSnapshotTempFile::_internal_a_response() const {
+  const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* p = _impl_.a_response_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse&>(
       ::protobuf::mozilla::devtools::_OpenHeapSnapshotTempFileResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& Reply_OpenHeapSnapshotTempFile::response() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.response)
-  return _internal_response();
+inline const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& Reply_OpenHeapSnapshotTempFile::a_response() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
+  return _internal_a_response();
 }
-inline void Reply_OpenHeapSnapshotTempFile::unsafe_arena_set_allocated_response(
-    ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* response) {
+inline void Reply_OpenHeapSnapshotTempFile::unsafe_arena_set_allocated_a_response(
+    ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  _impl_.response_ = response;
-  if (response) {
+  _impl_.a_response_ = a_response;
+  if (a_response) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
 }
-inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::release_response() {
+inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::release_a_response() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -653,45 +653,45 @@ inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_Op
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.response)
+inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::unsafe_arena_release_a_response() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::_internal_mutable_response() {
+inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::_internal_mutable_a_response() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.response_ == nullptr) {
+  if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse>(GetArenaForAllocation());
-    _impl_.response_ = p;
+    _impl_.a_response_ = p;
   }
-  return _impl_.response_;
+  return _impl_.a_response_;
 }
-inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::mutable_response() {
-  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.response)
+inline ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* Reply_OpenHeapSnapshotTempFile::mutable_a_response() {
+  ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* _msg = _internal_mutable_a_response();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
   return _msg;
 }
-inline void Reply_OpenHeapSnapshotTempFile::set_allocated_response(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* response) {
+inline void Reply_OpenHeapSnapshotTempFile::set_allocated_a_response(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse* a_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  if (response) {
+  if (a_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_response));
     if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
+      a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_response, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.response)
+  _impl_.a_response_ = a_response;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile.a_response)
 }
 
 // -------------------------------------------------------------------

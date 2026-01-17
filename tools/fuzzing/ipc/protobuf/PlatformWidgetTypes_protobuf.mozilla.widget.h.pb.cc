@@ -24,10 +24,10 @@ PROTOBUF_CONSTEXPR GtkCompositorWidgetInitData::GtkCompositorWidgetInitData(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.xwindow_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.xdisplaystring_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.initialclientsize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.isx11display_)*/false} {}
+  , /*decltype(_impl_.a_xwindow_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_xdisplaystring_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_initialclientsize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_isx11display_)*/false} {}
 struct GtkCompositorWidgetInitDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GtkCompositorWidgetInitDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -63,16 +63,16 @@ namespace widget {
 class GtkCompositorWidgetInitData::_Internal {
  public:
   using HasBits = decltype(std::declval<GtkCompositorWidgetInitData>()._impl_._has_bits_);
-  static void set_has_xwindow(HasBits* has_bits) {
+  static void set_has_a_xwindow(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_xdisplaystring(HasBits* has_bits) {
+  static void set_has_a_xdisplaystring(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_isx11display(HasBits* has_bits) {
+  static void set_has_a_isx11display(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_initialclientsize(HasBits* has_bits) {
+  static void set_has_a_initialclientsize(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -92,37 +92,37 @@ GtkCompositorWidgetInitData::GtkCompositorWidgetInitData(const GtkCompositorWidg
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.xwindow_){}
-    , decltype(_impl_.xdisplaystring_){}
-    , decltype(_impl_.initialclientsize_){}
-    , decltype(_impl_.isx11display_){}};
+    , decltype(_impl_.a_xwindow_){}
+    , decltype(_impl_.a_xdisplaystring_){}
+    , decltype(_impl_.a_initialclientsize_){}
+    , decltype(_impl_.a_isx11display_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.xwindow_.InitDefault();
+  _impl_.a_xwindow_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.xwindow_.Set("", GetArenaForAllocation());
+    _impl_.a_xwindow_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_xwindow()) {
-    _this->_impl_.xwindow_.Set(from._internal_xwindow(), 
+  if (from._internal_has_a_xwindow()) {
+    _this->_impl_.a_xwindow_.Set(from._internal_a_xwindow(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.xdisplaystring_.InitDefault();
+  _impl_.a_xdisplaystring_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.xdisplaystring_.Set("", GetArenaForAllocation());
+    _impl_.a_xdisplaystring_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_xdisplaystring()) {
-    _this->_impl_.xdisplaystring_.Set(from._internal_xdisplaystring(), 
+  if (from._internal_has_a_xdisplaystring()) {
+    _this->_impl_.a_xdisplaystring_.Set(from._internal_a_xdisplaystring(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.initialclientsize_.InitDefault();
+  _impl_.a_initialclientsize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.initialclientsize_.Set("", GetArenaForAllocation());
+    _impl_.a_initialclientsize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_initialclientsize()) {
-    _this->_impl_.initialclientsize_.Set(from._internal_initialclientsize(), 
+  if (from._internal_has_a_initialclientsize()) {
+    _this->_impl_.a_initialclientsize_.Set(from._internal_a_initialclientsize(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.isx11display_ = from._impl_.isx11display_;
+  _this->_impl_.a_isx11display_ = from._impl_.a_isx11display_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
 }
 
@@ -133,22 +133,22 @@ inline void GtkCompositorWidgetInitData::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.xwindow_){}
-    , decltype(_impl_.xdisplaystring_){}
-    , decltype(_impl_.initialclientsize_){}
-    , decltype(_impl_.isx11display_){false}
+    , decltype(_impl_.a_xwindow_){}
+    , decltype(_impl_.a_xdisplaystring_){}
+    , decltype(_impl_.a_initialclientsize_){}
+    , decltype(_impl_.a_isx11display_){false}
   };
-  _impl_.xwindow_.InitDefault();
+  _impl_.a_xwindow_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.xwindow_.Set("", GetArenaForAllocation());
+    _impl_.a_xwindow_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.xdisplaystring_.InitDefault();
+  _impl_.a_xdisplaystring_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.xdisplaystring_.Set("", GetArenaForAllocation());
+    _impl_.a_xdisplaystring_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.initialclientsize_.InitDefault();
+  _impl_.a_initialclientsize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.initialclientsize_.Set("", GetArenaForAllocation());
+    _impl_.a_initialclientsize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -163,9 +163,9 @@ GtkCompositorWidgetInitData::~GtkCompositorWidgetInitData() {
 
 inline void GtkCompositorWidgetInitData::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.xwindow_.Destroy();
-  _impl_.xdisplaystring_.Destroy();
-  _impl_.initialclientsize_.Destroy();
+  _impl_.a_xwindow_.Destroy();
+  _impl_.a_xdisplaystring_.Destroy();
+  _impl_.a_initialclientsize_.Destroy();
 }
 
 void GtkCompositorWidgetInitData::SetCachedSize(int size) const {
@@ -181,16 +181,16 @@ void GtkCompositorWidgetInitData::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.xwindow_.ClearNonDefaultToEmpty();
+      _impl_.a_xwindow_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.xdisplaystring_.ClearNonDefaultToEmpty();
+      _impl_.a_xdisplaystring_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.initialclientsize_.ClearNonDefaultToEmpty();
+      _impl_.a_initialclientsize_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.isx11display_ = false;
+  _impl_.a_isx11display_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -202,37 +202,37 @@ const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes XWindow = 1;
+      // required bytes a_XWindow = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_xwindow();
+          auto str = _internal_mutable_a_xwindow();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes XDisplayString = 2;
+      // required bytes a_XDisplayString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_xdisplaystring();
+          auto str = _internal_mutable_a_xdisplaystring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool IsX11Display = 3;
+      // required bool a_IsX11Display = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_isx11display(&has_bits);
-          _impl_.isx11display_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_isx11display(&has_bits);
+          _impl_.a_isx11display_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes InitialClientSize = 4;
+      // required bytes a_InitialClientSize = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_initialclientsize();
+          auto str = _internal_mutable_a_initialclientsize();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -269,28 +269,28 @@ uint8_t* GtkCompositorWidgetInitData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes XWindow = 1;
+  // required bytes a_XWindow = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_xwindow(), target);
+        1, this->_internal_a_xwindow(), target);
   }
 
-  // required bytes XDisplayString = 2;
+  // required bytes a_XDisplayString = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_xdisplaystring(), target);
+        2, this->_internal_a_xdisplaystring(), target);
   }
 
-  // required bool IsX11Display = 3;
+  // required bool a_IsX11Display = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_isx11display(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_isx11display(), target);
   }
 
-  // required bytes InitialClientSize = 4;
+  // required bytes a_InitialClientSize = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_initialclientsize(), target);
+        4, this->_internal_a_initialclientsize(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -305,29 +305,29 @@ size_t GtkCompositorWidgetInitData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
   size_t total_size = 0;
 
-  if (_internal_has_xwindow()) {
-    // required bytes XWindow = 1;
+  if (_internal_has_a_xwindow()) {
+    // required bytes a_XWindow = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_xwindow());
+        this->_internal_a_xwindow());
   }
 
-  if (_internal_has_xdisplaystring()) {
-    // required bytes XDisplayString = 2;
+  if (_internal_has_a_xdisplaystring()) {
+    // required bytes a_XDisplayString = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_xdisplaystring());
+        this->_internal_a_xdisplaystring());
   }
 
-  if (_internal_has_initialclientsize()) {
-    // required bytes InitialClientSize = 4;
+  if (_internal_has_a_initialclientsize()) {
+    // required bytes a_InitialClientSize = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_initialclientsize());
+        this->_internal_a_initialclientsize());
   }
 
-  if (_internal_has_isx11display()) {
-    // required bool IsX11Display = 3;
+  if (_internal_has_a_isx11display()) {
+    // required bool a_IsX11Display = 3;
     total_size += 1 + 1;
   }
 
@@ -338,22 +338,22 @@ size_t GtkCompositorWidgetInitData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes XWindow = 1;
+    // required bytes a_XWindow = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_xwindow());
+        this->_internal_a_xwindow());
 
-    // required bytes XDisplayString = 2;
+    // required bytes a_XDisplayString = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_xdisplaystring());
+        this->_internal_a_xdisplaystring());
 
-    // required bytes InitialClientSize = 4;
+    // required bytes a_InitialClientSize = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_initialclientsize());
+        this->_internal_a_initialclientsize());
 
-    // required bool IsX11Display = 3;
+    // required bool a_IsX11Display = 3;
     total_size += 1 + 1;
 
   } else {
@@ -387,16 +387,16 @@ void GtkCompositorWidgetInitData::MergeFrom(const GtkCompositorWidgetInitData& f
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_xwindow(from._internal_xwindow());
+      _this->_internal_set_a_xwindow(from._internal_a_xwindow());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_xdisplaystring(from._internal_xdisplaystring());
+      _this->_internal_set_a_xdisplaystring(from._internal_a_xdisplaystring());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_initialclientsize(from._internal_initialclientsize());
+      _this->_internal_set_a_initialclientsize(from._internal_a_initialclientsize());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.isx11display_ = from._impl_.isx11display_;
+      _this->_impl_.a_isx11display_ = from._impl_.a_isx11display_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -422,18 +422,18 @@ void GtkCompositorWidgetInitData::InternalSwap(GtkCompositorWidgetInitData* othe
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.xwindow_, lhs_arena,
-      &other->_impl_.xwindow_, rhs_arena
+      &_impl_.a_xwindow_, lhs_arena,
+      &other->_impl_.a_xwindow_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.xdisplaystring_, lhs_arena,
-      &other->_impl_.xdisplaystring_, rhs_arena
+      &_impl_.a_xdisplaystring_, lhs_arena,
+      &other->_impl_.a_xdisplaystring_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.initialclientsize_, lhs_arena,
-      &other->_impl_.initialclientsize_, rhs_arena
+      &_impl_.a_initialclientsize_, lhs_arena,
+      &other->_impl_.a_initialclientsize_, rhs_arena
   );
-  swap(_impl_.isx11display_, other->_impl_.isx11display_);
+  swap(_impl_.a_isx11display_, other->_impl_.a_isx11display_);
 }
 
 std::string GtkCompositorWidgetInitData::GetTypeName() const {
@@ -445,53 +445,53 @@ std::string GtkCompositorWidgetInitData::GetTypeName() const {
 
 class CompositorWidgetInitData::_Internal {
  public:
-  static const ::protobuf::mozilla::widget::GtkCompositorWidgetInitData& mvgtkcompositorwidgetinitdata(const CompositorWidgetInitData* msg);
-  static const ::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData& mvheadlesscompositorwidgetinitdata(const CompositorWidgetInitData* msg);
+  static const ::protobuf::mozilla::widget::GtkCompositorWidgetInitData& a_mvgtkcompositorwidgetinitdata(const CompositorWidgetInitData* msg);
+  static const ::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData& a_mvheadlesscompositorwidgetinitdata(const CompositorWidgetInitData* msg);
 };
 
 const ::protobuf::mozilla::widget::GtkCompositorWidgetInitData&
-CompositorWidgetInitData::_Internal::mvgtkcompositorwidgetinitdata(const CompositorWidgetInitData* msg) {
-  return *msg->_impl_.content_.mvgtkcompositorwidgetinitdata_;
+CompositorWidgetInitData::_Internal::a_mvgtkcompositorwidgetinitdata(const CompositorWidgetInitData* msg) {
+  return *msg->_impl_.content_.a_mvgtkcompositorwidgetinitdata_;
 }
 const ::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData&
-CompositorWidgetInitData::_Internal::mvheadlesscompositorwidgetinitdata(const CompositorWidgetInitData* msg) {
-  return *msg->_impl_.content_.mvheadlesscompositorwidgetinitdata_;
+CompositorWidgetInitData::_Internal::a_mvheadlesscompositorwidgetinitdata(const CompositorWidgetInitData* msg) {
+  return *msg->_impl_.content_.a_mvheadlesscompositorwidgetinitdata_;
 }
-void CompositorWidgetInitData::set_allocated_mvgtkcompositorwidgetinitdata(::protobuf::mozilla::widget::GtkCompositorWidgetInitData* mvgtkcompositorwidgetinitdata) {
+void CompositorWidgetInitData::set_allocated_a_mvgtkcompositorwidgetinitdata(::protobuf::mozilla::widget::GtkCompositorWidgetInitData* a_mvgtkcompositorwidgetinitdata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvgtkcompositorwidgetinitdata) {
+  if (a_mvgtkcompositorwidgetinitdata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvgtkcompositorwidgetinitdata);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvgtkcompositorwidgetinitdata);
     if (message_arena != submessage_arena) {
-      mvgtkcompositorwidgetinitdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvgtkcompositorwidgetinitdata, submessage_arena);
+      a_mvgtkcompositorwidgetinitdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvgtkcompositorwidgetinitdata, submessage_arena);
     }
-    set_has_mvgtkcompositorwidgetinitdata();
-    _impl_.content_.mvgtkcompositorwidgetinitdata_ = mvgtkcompositorwidgetinitdata;
+    set_has_a_mvgtkcompositorwidgetinitdata();
+    _impl_.content_.a_mvgtkcompositorwidgetinitdata_ = a_mvgtkcompositorwidgetinitdata;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.CompositorWidgetInitData.mVGtkCompositorWidgetInitData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.CompositorWidgetInitData.a_mVGtkCompositorWidgetInitData)
 }
-void CompositorWidgetInitData::set_allocated_mvheadlesscompositorwidgetinitdata(::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData* mvheadlesscompositorwidgetinitdata) {
+void CompositorWidgetInitData::set_allocated_a_mvheadlesscompositorwidgetinitdata(::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData* a_mvheadlesscompositorwidgetinitdata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvheadlesscompositorwidgetinitdata) {
+  if (a_mvheadlesscompositorwidgetinitdata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mvheadlesscompositorwidgetinitdata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_mvheadlesscompositorwidgetinitdata));
     if (message_arena != submessage_arena) {
-      mvheadlesscompositorwidgetinitdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvheadlesscompositorwidgetinitdata, submessage_arena);
+      a_mvheadlesscompositorwidgetinitdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvheadlesscompositorwidgetinitdata, submessage_arena);
     }
-    set_has_mvheadlesscompositorwidgetinitdata();
-    _impl_.content_.mvheadlesscompositorwidgetinitdata_ = mvheadlesscompositorwidgetinitdata;
+    set_has_a_mvheadlesscompositorwidgetinitdata();
+    _impl_.content_.a_mvheadlesscompositorwidgetinitdata_ = a_mvheadlesscompositorwidgetinitdata;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.CompositorWidgetInitData.mVHeadlessCompositorWidgetInitData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.CompositorWidgetInitData.a_mVHeadlessCompositorWidgetInitData)
 }
-void CompositorWidgetInitData::clear_mvheadlesscompositorwidgetinitdata() {
-  if (_internal_has_mvheadlesscompositorwidgetinitdata()) {
+void CompositorWidgetInitData::clear_a_mvheadlesscompositorwidgetinitdata() {
+  if (_internal_has_a_mvheadlesscompositorwidgetinitdata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvheadlesscompositorwidgetinitdata_;
+      delete _impl_.content_.a_mvheadlesscompositorwidgetinitdata_;
     }
     clear_has_content();
   }
@@ -513,14 +513,14 @@ CompositorWidgetInitData::CompositorWidgetInitData(const CompositorWidgetInitDat
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVGtkCompositorWidgetInitData: {
-      _this->_internal_mutable_mvgtkcompositorwidgetinitdata()->::protobuf::mozilla::widget::GtkCompositorWidgetInitData::MergeFrom(
-          from._internal_mvgtkcompositorwidgetinitdata());
+    case kAMVGtkCompositorWidgetInitData: {
+      _this->_internal_mutable_a_mvgtkcompositorwidgetinitdata()->::protobuf::mozilla::widget::GtkCompositorWidgetInitData::MergeFrom(
+          from._internal_a_mvgtkcompositorwidgetinitdata());
       break;
     }
-    case kMVHeadlessCompositorWidgetInitData: {
-      _this->_internal_mutable_mvheadlesscompositorwidgetinitdata()->::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData::MergeFrom(
-          from._internal_mvheadlesscompositorwidgetinitdata());
+    case kAMVHeadlessCompositorWidgetInitData: {
+      _this->_internal_mutable_a_mvheadlesscompositorwidgetinitdata()->::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData::MergeFrom(
+          from._internal_a_mvheadlesscompositorwidgetinitdata());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -565,15 +565,15 @@ void CompositorWidgetInitData::SetCachedSize(int size) const {
 void CompositorWidgetInitData::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.widget.CompositorWidgetInitData)
   switch (content_case()) {
-    case kMVGtkCompositorWidgetInitData: {
+    case kAMVGtkCompositorWidgetInitData: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvgtkcompositorwidgetinitdata_;
+        delete _impl_.content_.a_mvgtkcompositorwidgetinitdata_;
       }
       break;
     }
-    case kMVHeadlessCompositorWidgetInitData: {
+    case kAMVHeadlessCompositorWidgetInitData: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvheadlesscompositorwidgetinitdata_;
+        delete _impl_.content_.a_mvheadlesscompositorwidgetinitdata_;
       }
       break;
     }
@@ -601,18 +601,18 @@ const char* CompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.widget.GtkCompositorWidgetInitData mVGtkCompositorWidgetInitData = 1;
+      // .protobuf.mozilla.widget.GtkCompositorWidgetInitData a_mVGtkCompositorWidgetInitData = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvgtkcompositorwidgetinitdata(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvgtkcompositorwidgetinitdata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.widget.HeadlessCompositorWidgetInitData mVHeadlessCompositorWidgetInitData = 2;
+      // .protobuf.mozilla.widget.HeadlessCompositorWidgetInitData a_mVHeadlessCompositorWidgetInitData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvheadlesscompositorwidgetinitdata(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvheadlesscompositorwidgetinitdata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -647,16 +647,16 @@ uint8_t* CompositorWidgetInitData::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVGtkCompositorWidgetInitData: {
+    case kAMVGtkCompositorWidgetInitData: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvgtkcompositorwidgetinitdata(this),
-          _Internal::mvgtkcompositorwidgetinitdata(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvgtkcompositorwidgetinitdata(this),
+          _Internal::a_mvgtkcompositorwidgetinitdata(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVHeadlessCompositorWidgetInitData: {
+    case kAMVHeadlessCompositorWidgetInitData: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvheadlesscompositorwidgetinitdata(this),
-          _Internal::mvheadlesscompositorwidgetinitdata(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvheadlesscompositorwidgetinitdata(this),
+          _Internal::a_mvheadlesscompositorwidgetinitdata(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -678,18 +678,18 @@ size_t CompositorWidgetInitData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.widget.GtkCompositorWidgetInitData mVGtkCompositorWidgetInitData = 1;
-    case kMVGtkCompositorWidgetInitData: {
+    // .protobuf.mozilla.widget.GtkCompositorWidgetInitData a_mVGtkCompositorWidgetInitData = 1;
+    case kAMVGtkCompositorWidgetInitData: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvgtkcompositorwidgetinitdata_);
+          *_impl_.content_.a_mvgtkcompositorwidgetinitdata_);
       break;
     }
-    // .protobuf.mozilla.widget.HeadlessCompositorWidgetInitData mVHeadlessCompositorWidgetInitData = 2;
-    case kMVHeadlessCompositorWidgetInitData: {
+    // .protobuf.mozilla.widget.HeadlessCompositorWidgetInitData a_mVHeadlessCompositorWidgetInitData = 2;
+    case kAMVHeadlessCompositorWidgetInitData: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvheadlesscompositorwidgetinitdata_);
+          *_impl_.content_.a_mvheadlesscompositorwidgetinitdata_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -718,14 +718,14 @@ void CompositorWidgetInitData::MergeFrom(const CompositorWidgetInitData& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVGtkCompositorWidgetInitData: {
-      _this->_internal_mutable_mvgtkcompositorwidgetinitdata()->::protobuf::mozilla::widget::GtkCompositorWidgetInitData::MergeFrom(
-          from._internal_mvgtkcompositorwidgetinitdata());
+    case kAMVGtkCompositorWidgetInitData: {
+      _this->_internal_mutable_a_mvgtkcompositorwidgetinitdata()->::protobuf::mozilla::widget::GtkCompositorWidgetInitData::MergeFrom(
+          from._internal_a_mvgtkcompositorwidgetinitdata());
       break;
     }
-    case kMVHeadlessCompositorWidgetInitData: {
-      _this->_internal_mutable_mvheadlesscompositorwidgetinitdata()->::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData::MergeFrom(
-          from._internal_mvheadlesscompositorwidgetinitdata());
+    case kAMVHeadlessCompositorWidgetInitData: {
+      _this->_internal_mutable_a_mvheadlesscompositorwidgetinitdata()->::protobuf::mozilla::widget::HeadlessCompositorWidgetInitData::MergeFrom(
+          from._internal_a_mvheadlesscompositorwidgetinitdata());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -744,15 +744,15 @@ void CompositorWidgetInitData::CopyFrom(const CompositorWidgetInitData& from) {
 
 bool CompositorWidgetInitData::IsInitialized() const {
   switch (content_case()) {
-    case kMVGtkCompositorWidgetInitData: {
-      if (_internal_has_mvgtkcompositorwidgetinitdata()) {
-        if (!_impl_.content_.mvgtkcompositorwidgetinitdata_->IsInitialized()) return false;
+    case kAMVGtkCompositorWidgetInitData: {
+      if (_internal_has_a_mvgtkcompositorwidgetinitdata()) {
+        if (!_impl_.content_.a_mvgtkcompositorwidgetinitdata_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVHeadlessCompositorWidgetInitData: {
-      if (_internal_has_mvheadlesscompositorwidgetinitdata()) {
-        if (!_impl_.content_.mvheadlesscompositorwidgetinitdata_->IsInitialized()) return false;
+    case kAMVHeadlessCompositorWidgetInitData: {
+      if (_internal_has_a_mvheadlesscompositorwidgetinitdata()) {
+        if (!_impl_.content_.a_mvheadlesscompositorwidgetinitdata_->IsInitialized()) return false;
       }
       break;
     }

@@ -19,81 +19,81 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_GetRequest {
-  required bytes cookieURI = 1;
-  required bytes attrs = 2;
-  optional bytes partitionedAttrs = 3;
-  required bool thirdPartyContext = 4;
-  required bool partitionForeign = 5;
-  required bool usingStorageAccess = 6;
-  required bool isOn3PCBExceptionList = 7;
-  required bool matchName = 8;
-  required bytes name = 9;
-  required bytes path = 10;
-  required bool onlyFirstMatch = 11;
+  required bytes a_cookieURI = 1;
+  required bytes a_attrs = 2;
+  optional bytes a_partitionedAttrs = 3;
+  required bool a_thirdPartyContext = 4;
+  required bool a_partitionForeign = 5;
+  required bool a_usingStorageAccess = 6;
+  required bool a_isOn3PCBExceptionList = 7;
+  required bool a_matchName = 8;
+  required bytes a_name = 9;
+  required bytes a_path = 10;
+  required bool a_onlyFirstMatch = 11;
 }
 
 message Reply_GetRequest {
-  repeated protobuf.mozilla.net.CookieStruct data = 1;
+  repeated protobuf.mozilla.net.CookieStruct a_data = 1;
 }
 
 message Msg_SetRequest {
-  required bytes cookieURI = 1;
-  required bytes attrs = 2;
-  required bool thirdPartyContext = 3;
-  required bool partitionForeign = 4;
-  required bool usingStorageAccess = 5;
-  required bool isOn3PCBExceptionList = 6;
-  required bytes name = 7;
-  required bytes value = 8;
-  required bool session = 9;
-  required sint64 expires = 10;
-  required bytes domain = 11;
-  required bytes path = 12;
-  required sint32 sameSite = 13;
-  required bool partitioned = 14;
-  required bytes operationId = 15;
+  required bytes a_cookieURI = 1;
+  required bytes a_attrs = 2;
+  required bool a_thirdPartyContext = 3;
+  required bool a_partitionForeign = 4;
+  required bool a_usingStorageAccess = 5;
+  required bool a_isOn3PCBExceptionList = 6;
+  required bytes a_name = 7;
+  required bytes a_value = 8;
+  required bool a_session = 9;
+  required sint64 a_expires = 10;
+  required bytes a_domain = 11;
+  required bytes a_path = 12;
+  required sint32 a_sameSite = 13;
+  required bool a_partitioned = 14;
+  required bytes a_operationId = 15;
 }
 
 message Reply_SetRequest {
-  required bool waitForNotification = 1;
+  required bool a_waitForNotification = 1;
 }
 
 message Msg_DeleteRequest {
-  required bytes cookieURI = 1;
-  required bytes attrs = 2;
-  required bool thirdPartyContext = 3;
-  required bool partitionForeign = 4;
-  required bool usingStorageAccess = 5;
-  required bool isOn3PCBExceptionList = 6;
-  required bytes name = 7;
-  required bytes domain = 8;
-  required bytes path = 9;
-  required bool partitioned = 10;
-  required bytes operationID = 11;
+  required bytes a_cookieURI = 1;
+  required bytes a_attrs = 2;
+  required bool a_thirdPartyContext = 3;
+  required bool a_partitionForeign = 4;
+  required bool a_usingStorageAccess = 5;
+  required bool a_isOn3PCBExceptionList = 6;
+  required bytes a_name = 7;
+  required bytes a_domain = 8;
+  required bytes a_path = 9;
+  required bool a_partitioned = 10;
+  required bytes a_operationID = 11;
 }
 
 message Reply_DeleteRequest {
-  required bool waitForNotification = 1;
+  required bool a_waitForNotification = 1;
 }
 
 message Msg_GetSubscriptionsRequest {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required bytes scopeURL = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_scopeURL = 2;
 }
 
 message Reply_GetSubscriptionsRequest {
-  repeated protobuf.mozilla.dom.CookieSubscription subscriptions = 1;
+  repeated protobuf.mozilla.dom.CookieSubscription a_subscriptions = 1;
 }
 
 message Msg_SubscribeOrUnsubscribeRequest {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required bytes scopeURL = 2;
-  repeated protobuf.mozilla.dom.CookieSubscription subscriptions = 3;
-  required bool subscribe = 4;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_scopeURL = 2;
+  repeated protobuf.mozilla.dom.CookieSubscription a_subscriptions = 3;
+  required bool a_subscribe = 4;
 }
 
 message Reply_SubscribeOrUnsubscribeRequest {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_Close {

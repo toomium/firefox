@@ -12,18 +12,18 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message MIDIPortInfo {
-  required bytes id = 1;
-  required bytes name = 2;
-  required bytes manufacturer = 3;
-  required bytes version = 4;
-  required uint32 type = 5;
+  required bytes a_id = 1;
+  required bytes a_name = 2;
+  required bytes a_manufacturer = 3;
+  required bytes a_version = 4;
+  required uint32 a_type = 5;
 }
 
 message MIDIMessage {
-  repeated uint32 data = 1;
-  required bytes timestamp = 2;
+  repeated uint32 a_data = 1;
+  required bytes a_timestamp = 2;
 }
 
 message MIDIPortList {
-  repeated protobuf.mozilla.dom.MIDIPortInfo ports = 1;
+  repeated protobuf.mozilla.dom.MIDIPortInfo a_ports = 1;
 }

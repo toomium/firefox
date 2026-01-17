@@ -14,5 +14,5 @@ import "ServiceWorkerRegistrarTypes.proto";
 
 // Structs and unions declarations
 message ServiceWorkerConfiguration {
-  repeated protobuf.mozilla.dom.ServiceWorkerRegistrationData serviceWorkerRegistrations = 1;
+  repeated protobuf.mozilla.dom.ServiceWorkerRegistrationData a_serviceWorkerRegistrations = 1;
 }

@@ -20,16 +20,16 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_Attributes {
-  required protobuf.mozilla.WebBrowserPersistDocumentAttrs aAttrs = 1;
-  optional protobuf.mozilla.ipc.IPCStream stream = 2;
+  required protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
+  optional protobuf.mozilla.ipc.IPCStream a_stream = 2;
 }
 
 message Msg_InitFailure {
-  required bytes aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 message Msg_SetPersistFlags {
-  required uint32 aNewFlags = 1;
+  required uint32 a_aNewFlags = 1;
 }
 
 message Msg_PWebBrowserPersistResourcesConstructor {
@@ -39,10 +39,10 @@ message Reply_PWebBrowserPersistResourcesConstructor {
 }
 
 message Msg_PWebBrowserPersistSerializeConstructor {
-  required protobuf.mozilla.WebBrowserPersistURIMap aMap = 1;
-  required bytes aRequestedContentType = 2;
-  required uint32 aEncoderFlags = 3;
-  required uint32 aWrapColumn = 4;
+  required protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 1;
+  required bytes a_aRequestedContentType = 2;
+  required uint32 a_aEncoderFlags = 3;
+  required uint32 a_aWrapColumn = 4;
 }
 
 message Reply_PWebBrowserPersistSerializeConstructor {

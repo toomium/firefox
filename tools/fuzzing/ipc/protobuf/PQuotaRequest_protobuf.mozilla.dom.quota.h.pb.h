@@ -192,24 +192,24 @@ class StorageNameResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
+    kANameFieldNumber = 1,
   };
-  // required bytes name = 1;
-  bool has_name() const;
+  // required bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.StorageNameResponse)
@@ -222,7 +222,7 @@ class StorageNameResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -339,24 +339,24 @@ class GetFullOriginMetadataResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMaybeFullOriginMetadataFieldNumber = 1,
+    kAMaybeFullOriginMetadataFieldNumber = 1,
   };
-  // optional bytes maybeFullOriginMetadata = 1;
-  bool has_maybefulloriginmetadata() const;
+  // optional bytes a_maybeFullOriginMetadata = 1;
+  bool has_a_maybefulloriginmetadata() const;
   private:
-  bool _internal_has_maybefulloriginmetadata() const;
+  bool _internal_has_a_maybefulloriginmetadata() const;
   public:
-  void clear_maybefulloriginmetadata();
-  const std::string& maybefulloriginmetadata() const;
+  void clear_a_maybefulloriginmetadata();
+  const std::string& a_maybefulloriginmetadata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_maybefulloriginmetadata(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_maybefulloriginmetadata();
-  PROTOBUF_NODISCARD std::string* release_maybefulloriginmetadata();
-  void set_allocated_maybefulloriginmetadata(std::string* maybefulloriginmetadata);
+  void set_a_maybefulloriginmetadata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_maybefulloriginmetadata();
+  PROTOBUF_NODISCARD std::string* release_a_maybefulloriginmetadata();
+  void set_allocated_a_maybefulloriginmetadata(std::string* a_maybefulloriginmetadata);
   private:
-  const std::string& _internal_maybefulloriginmetadata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_maybefulloriginmetadata(const std::string& value);
-  std::string* _internal_mutable_maybefulloriginmetadata();
+  const std::string& _internal_a_maybefulloriginmetadata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_maybefulloriginmetadata(const std::string& value);
+  std::string* _internal_mutable_a_maybefulloriginmetadata();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse)
@@ -369,7 +369,7 @@ class GetFullOriginMetadataResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr maybefulloriginmetadata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_maybefulloriginmetadata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -486,19 +486,19 @@ class PersistedResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPersistedFieldNumber = 1,
+    kAPersistedFieldNumber = 1,
   };
-  // required bool persisted = 1;
-  bool has_persisted() const;
+  // required bool a_persisted = 1;
+  bool has_a_persisted() const;
   private:
-  bool _internal_has_persisted() const;
+  bool _internal_has_a_persisted() const;
   public:
-  void clear_persisted();
-  bool persisted() const;
-  void set_persisted(bool value);
+  void clear_a_persisted();
+  bool a_persisted() const;
+  void set_a_persisted(bool value);
   private:
-  bool _internal_persisted() const;
-  void _internal_set_persisted(bool value);
+  bool _internal_a_persisted() const;
+  void _internal_set_a_persisted(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PersistedResponse)
@@ -511,7 +511,7 @@ class PersistedResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool persisted_;
+    bool a_persisted_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -752,33 +752,33 @@ class EstimateResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUsageFieldNumber = 1,
-    kLimitFieldNumber = 2,
+    kAUsageFieldNumber = 1,
+    kALimitFieldNumber = 2,
   };
-  // required uint64 usage = 1;
-  bool has_usage() const;
+  // required uint64 a_usage = 1;
+  bool has_a_usage() const;
   private:
-  bool _internal_has_usage() const;
+  bool _internal_has_a_usage() const;
   public:
-  void clear_usage();
-  uint64_t usage() const;
-  void set_usage(uint64_t value);
+  void clear_a_usage();
+  uint64_t a_usage() const;
+  void set_a_usage(uint64_t value);
   private:
-  uint64_t _internal_usage() const;
-  void _internal_set_usage(uint64_t value);
+  uint64_t _internal_a_usage() const;
+  void _internal_set_a_usage(uint64_t value);
   public:
 
-  // required uint64 limit = 2;
-  bool has_limit() const;
+  // required uint64 a_limit = 2;
+  bool has_a_limit() const;
   private:
-  bool _internal_has_limit() const;
+  bool _internal_has_a_limit() const;
   public:
-  void clear_limit();
-  uint64_t limit() const;
-  void set_limit(uint64_t value);
+  void clear_a_limit();
+  uint64_t a_limit() const;
+  void set_a_limit(uint64_t value);
   private:
-  uint64_t _internal_limit() const;
-  void _internal_set_limit(uint64_t value);
+  uint64_t _internal_a_limit() const;
+  void _internal_set_a_limit(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.EstimateResponse)
@@ -794,8 +794,8 @@ class EstimateResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t usage_;
-    uint64_t limit_;
+    uint64_t a_usage_;
+    uint64_t a_limit_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -844,12 +844,12 @@ class RequestResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVStorageNameResponse = 2,
-    kMVGetFullOriginMetadataResponse = 3,
-    kMVPersistedResponse = 4,
-    kMVPersistResponse = 5,
-    kMVEstimateResponse = 6,
+    kAMVnsresult = 1,
+    kAMVStorageNameResponse = 2,
+    kAMVGetFullOriginMetadataResponse = 3,
+    kAMVPersistedResponse = 4,
+    kAMVPersistResponse = 5,
+    kAMVEstimateResponse = 6,
     CONTENT_NOT_SET = 0,
   };
 
@@ -922,132 +922,132 @@ class RequestResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVStorageNameResponseFieldNumber = 2,
-    kMVGetFullOriginMetadataResponseFieldNumber = 3,
-    kMVPersistedResponseFieldNumber = 4,
-    kMVPersistResponseFieldNumber = 5,
-    kMVEstimateResponseFieldNumber = 6,
+    kAMVnsresultFieldNumber = 1,
+    kAMVStorageNameResponseFieldNumber = 2,
+    kAMVGetFullOriginMetadataResponseFieldNumber = 3,
+    kAMVPersistedResponseFieldNumber = 4,
+    kAMVPersistResponseFieldNumber = 5,
+    kAMVEstimateResponseFieldNumber = 6,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.quota.StorageNameResponse mVStorageNameResponse = 2;
-  bool has_mvstoragenameresponse() const;
+  // .protobuf.mozilla.dom.quota.StorageNameResponse a_mVStorageNameResponse = 2;
+  bool has_a_mvstoragenameresponse() const;
   private:
-  bool _internal_has_mvstoragenameresponse() const;
+  bool _internal_has_a_mvstoragenameresponse() const;
   public:
-  void clear_mvstoragenameresponse();
-  const ::protobuf::mozilla::dom::quota::StorageNameResponse& mvstoragenameresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::StorageNameResponse* release_mvstoragenameresponse();
-  ::protobuf::mozilla::dom::quota::StorageNameResponse* mutable_mvstoragenameresponse();
-  void set_allocated_mvstoragenameresponse(::protobuf::mozilla::dom::quota::StorageNameResponse* mvstoragenameresponse);
+  void clear_a_mvstoragenameresponse();
+  const ::protobuf::mozilla::dom::quota::StorageNameResponse& a_mvstoragenameresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::StorageNameResponse* release_a_mvstoragenameresponse();
+  ::protobuf::mozilla::dom::quota::StorageNameResponse* mutable_a_mvstoragenameresponse();
+  void set_allocated_a_mvstoragenameresponse(::protobuf::mozilla::dom::quota::StorageNameResponse* a_mvstoragenameresponse);
   private:
-  const ::protobuf::mozilla::dom::quota::StorageNameResponse& _internal_mvstoragenameresponse() const;
-  ::protobuf::mozilla::dom::quota::StorageNameResponse* _internal_mutable_mvstoragenameresponse();
+  const ::protobuf::mozilla::dom::quota::StorageNameResponse& _internal_a_mvstoragenameresponse() const;
+  ::protobuf::mozilla::dom::quota::StorageNameResponse* _internal_mutable_a_mvstoragenameresponse();
   public:
-  void unsafe_arena_set_allocated_mvstoragenameresponse(
-      ::protobuf::mozilla::dom::quota::StorageNameResponse* mvstoragenameresponse);
-  ::protobuf::mozilla::dom::quota::StorageNameResponse* unsafe_arena_release_mvstoragenameresponse();
+  void unsafe_arena_set_allocated_a_mvstoragenameresponse(
+      ::protobuf::mozilla::dom::quota::StorageNameResponse* a_mvstoragenameresponse);
+  ::protobuf::mozilla::dom::quota::StorageNameResponse* unsafe_arena_release_a_mvstoragenameresponse();
 
-  // .protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse mVGetFullOriginMetadataResponse = 3;
-  bool has_mvgetfulloriginmetadataresponse() const;
+  // .protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse a_mVGetFullOriginMetadataResponse = 3;
+  bool has_a_mvgetfulloriginmetadataresponse() const;
   private:
-  bool _internal_has_mvgetfulloriginmetadataresponse() const;
+  bool _internal_has_a_mvgetfulloriginmetadataresponse() const;
   public:
-  void clear_mvgetfulloriginmetadataresponse();
-  const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& mvgetfulloriginmetadataresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* release_mvgetfulloriginmetadataresponse();
-  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* mutable_mvgetfulloriginmetadataresponse();
-  void set_allocated_mvgetfulloriginmetadataresponse(::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* mvgetfulloriginmetadataresponse);
+  void clear_a_mvgetfulloriginmetadataresponse();
+  const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& a_mvgetfulloriginmetadataresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* release_a_mvgetfulloriginmetadataresponse();
+  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* mutable_a_mvgetfulloriginmetadataresponse();
+  void set_allocated_a_mvgetfulloriginmetadataresponse(::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* a_mvgetfulloriginmetadataresponse);
   private:
-  const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& _internal_mvgetfulloriginmetadataresponse() const;
-  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* _internal_mutable_mvgetfulloriginmetadataresponse();
+  const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& _internal_a_mvgetfulloriginmetadataresponse() const;
+  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* _internal_mutable_a_mvgetfulloriginmetadataresponse();
   public:
-  void unsafe_arena_set_allocated_mvgetfulloriginmetadataresponse(
-      ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* mvgetfulloriginmetadataresponse);
-  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* unsafe_arena_release_mvgetfulloriginmetadataresponse();
+  void unsafe_arena_set_allocated_a_mvgetfulloriginmetadataresponse(
+      ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* a_mvgetfulloriginmetadataresponse);
+  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* unsafe_arena_release_a_mvgetfulloriginmetadataresponse();
 
-  // .protobuf.mozilla.dom.quota.PersistedResponse mVPersistedResponse = 4;
-  bool has_mvpersistedresponse() const;
+  // .protobuf.mozilla.dom.quota.PersistedResponse a_mVPersistedResponse = 4;
+  bool has_a_mvpersistedresponse() const;
   private:
-  bool _internal_has_mvpersistedresponse() const;
+  bool _internal_has_a_mvpersistedresponse() const;
   public:
-  void clear_mvpersistedresponse();
-  const ::protobuf::mozilla::dom::quota::PersistedResponse& mvpersistedresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::PersistedResponse* release_mvpersistedresponse();
-  ::protobuf::mozilla::dom::quota::PersistedResponse* mutable_mvpersistedresponse();
-  void set_allocated_mvpersistedresponse(::protobuf::mozilla::dom::quota::PersistedResponse* mvpersistedresponse);
+  void clear_a_mvpersistedresponse();
+  const ::protobuf::mozilla::dom::quota::PersistedResponse& a_mvpersistedresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::PersistedResponse* release_a_mvpersistedresponse();
+  ::protobuf::mozilla::dom::quota::PersistedResponse* mutable_a_mvpersistedresponse();
+  void set_allocated_a_mvpersistedresponse(::protobuf::mozilla::dom::quota::PersistedResponse* a_mvpersistedresponse);
   private:
-  const ::protobuf::mozilla::dom::quota::PersistedResponse& _internal_mvpersistedresponse() const;
-  ::protobuf::mozilla::dom::quota::PersistedResponse* _internal_mutable_mvpersistedresponse();
+  const ::protobuf::mozilla::dom::quota::PersistedResponse& _internal_a_mvpersistedresponse() const;
+  ::protobuf::mozilla::dom::quota::PersistedResponse* _internal_mutable_a_mvpersistedresponse();
   public:
-  void unsafe_arena_set_allocated_mvpersistedresponse(
-      ::protobuf::mozilla::dom::quota::PersistedResponse* mvpersistedresponse);
-  ::protobuf::mozilla::dom::quota::PersistedResponse* unsafe_arena_release_mvpersistedresponse();
+  void unsafe_arena_set_allocated_a_mvpersistedresponse(
+      ::protobuf::mozilla::dom::quota::PersistedResponse* a_mvpersistedresponse);
+  ::protobuf::mozilla::dom::quota::PersistedResponse* unsafe_arena_release_a_mvpersistedresponse();
 
-  // .protobuf.mozilla.dom.quota.PersistResponse mVPersistResponse = 5;
-  bool has_mvpersistresponse() const;
+  // .protobuf.mozilla.dom.quota.PersistResponse a_mVPersistResponse = 5;
+  bool has_a_mvpersistresponse() const;
   private:
-  bool _internal_has_mvpersistresponse() const;
+  bool _internal_has_a_mvpersistresponse() const;
   public:
-  void clear_mvpersistresponse();
-  const ::protobuf::mozilla::dom::quota::PersistResponse& mvpersistresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::PersistResponse* release_mvpersistresponse();
-  ::protobuf::mozilla::dom::quota::PersistResponse* mutable_mvpersistresponse();
-  void set_allocated_mvpersistresponse(::protobuf::mozilla::dom::quota::PersistResponse* mvpersistresponse);
+  void clear_a_mvpersistresponse();
+  const ::protobuf::mozilla::dom::quota::PersistResponse& a_mvpersistresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::PersistResponse* release_a_mvpersistresponse();
+  ::protobuf::mozilla::dom::quota::PersistResponse* mutable_a_mvpersistresponse();
+  void set_allocated_a_mvpersistresponse(::protobuf::mozilla::dom::quota::PersistResponse* a_mvpersistresponse);
   private:
-  const ::protobuf::mozilla::dom::quota::PersistResponse& _internal_mvpersistresponse() const;
-  ::protobuf::mozilla::dom::quota::PersistResponse* _internal_mutable_mvpersistresponse();
+  const ::protobuf::mozilla::dom::quota::PersistResponse& _internal_a_mvpersistresponse() const;
+  ::protobuf::mozilla::dom::quota::PersistResponse* _internal_mutable_a_mvpersistresponse();
   public:
-  void unsafe_arena_set_allocated_mvpersistresponse(
-      ::protobuf::mozilla::dom::quota::PersistResponse* mvpersistresponse);
-  ::protobuf::mozilla::dom::quota::PersistResponse* unsafe_arena_release_mvpersistresponse();
+  void unsafe_arena_set_allocated_a_mvpersistresponse(
+      ::protobuf::mozilla::dom::quota::PersistResponse* a_mvpersistresponse);
+  ::protobuf::mozilla::dom::quota::PersistResponse* unsafe_arena_release_a_mvpersistresponse();
 
-  // .protobuf.mozilla.dom.quota.EstimateResponse mVEstimateResponse = 6;
-  bool has_mvestimateresponse() const;
+  // .protobuf.mozilla.dom.quota.EstimateResponse a_mVEstimateResponse = 6;
+  bool has_a_mvestimateresponse() const;
   private:
-  bool _internal_has_mvestimateresponse() const;
+  bool _internal_has_a_mvestimateresponse() const;
   public:
-  void clear_mvestimateresponse();
-  const ::protobuf::mozilla::dom::quota::EstimateResponse& mvestimateresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::EstimateResponse* release_mvestimateresponse();
-  ::protobuf::mozilla::dom::quota::EstimateResponse* mutable_mvestimateresponse();
-  void set_allocated_mvestimateresponse(::protobuf::mozilla::dom::quota::EstimateResponse* mvestimateresponse);
+  void clear_a_mvestimateresponse();
+  const ::protobuf::mozilla::dom::quota::EstimateResponse& a_mvestimateresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::quota::EstimateResponse* release_a_mvestimateresponse();
+  ::protobuf::mozilla::dom::quota::EstimateResponse* mutable_a_mvestimateresponse();
+  void set_allocated_a_mvestimateresponse(::protobuf::mozilla::dom::quota::EstimateResponse* a_mvestimateresponse);
   private:
-  const ::protobuf::mozilla::dom::quota::EstimateResponse& _internal_mvestimateresponse() const;
-  ::protobuf::mozilla::dom::quota::EstimateResponse* _internal_mutable_mvestimateresponse();
+  const ::protobuf::mozilla::dom::quota::EstimateResponse& _internal_a_mvestimateresponse() const;
+  ::protobuf::mozilla::dom::quota::EstimateResponse* _internal_mutable_a_mvestimateresponse();
   public:
-  void unsafe_arena_set_allocated_mvestimateresponse(
-      ::protobuf::mozilla::dom::quota::EstimateResponse* mvestimateresponse);
-  ::protobuf::mozilla::dom::quota::EstimateResponse* unsafe_arena_release_mvestimateresponse();
+  void unsafe_arena_set_allocated_a_mvestimateresponse(
+      ::protobuf::mozilla::dom::quota::EstimateResponse* a_mvestimateresponse);
+  ::protobuf::mozilla::dom::quota::EstimateResponse* unsafe_arena_release_a_mvestimateresponse();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.RequestResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvstoragenameresponse();
-  void set_has_mvgetfulloriginmetadataresponse();
-  void set_has_mvpersistedresponse();
-  void set_has_mvpersistresponse();
-  void set_has_mvestimateresponse();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvstoragenameresponse();
+  void set_has_a_mvgetfulloriginmetadataresponse();
+  void set_has_a_mvpersistedresponse();
+  void set_has_a_mvpersistresponse();
+  void set_has_a_mvestimateresponse();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1059,12 +1059,12 @@ class RequestResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::quota::StorageNameResponse* mvstoragenameresponse_;
-      ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* mvgetfulloriginmetadataresponse_;
-      ::protobuf::mozilla::dom::quota::PersistedResponse* mvpersistedresponse_;
-      ::protobuf::mozilla::dom::quota::PersistResponse* mvpersistresponse_;
-      ::protobuf::mozilla::dom::quota::EstimateResponse* mvestimateresponse_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::quota::StorageNameResponse* a_mvstoragenameresponse_;
+      ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* a_mvgetfulloriginmetadataresponse_;
+      ::protobuf::mozilla::dom::quota::PersistedResponse* a_mvpersistedresponse_;
+      ::protobuf::mozilla::dom::quota::PersistResponse* a_mvpersistresponse_;
+      ::protobuf::mozilla::dom::quota::EstimateResponse* a_mvestimateresponse_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1084,176 +1084,176 @@ class RequestResponse final :
 #endif  // __GNUC__
 // StorageNameResponse
 
-// required bytes name = 1;
-inline bool StorageNameResponse::_internal_has_name() const {
+// required bytes a_name = 1;
+inline bool StorageNameResponse::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool StorageNameResponse::has_name() const {
-  return _internal_has_name();
+inline bool StorageNameResponse::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void StorageNameResponse::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void StorageNameResponse::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& StorageNameResponse::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.StorageNameResponse.name)
-  return _internal_name();
+inline const std::string& StorageNameResponse::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void StorageNameResponse::set_name(ArgT0&& arg0, ArgT... args) {
+void StorageNameResponse::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.StorageNameResponse.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
 }
-inline std::string* StorageNameResponse::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.StorageNameResponse.name)
+inline std::string* StorageNameResponse::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
   return _s;
 }
-inline const std::string& StorageNameResponse::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& StorageNameResponse::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void StorageNameResponse::_internal_set_name(const std::string& value) {
+inline void StorageNameResponse::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* StorageNameResponse::_internal_mutable_name() {
+inline std::string* StorageNameResponse::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* StorageNameResponse::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.StorageNameResponse.name)
-  if (!_internal_has_name()) {
+inline std::string* StorageNameResponse::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void StorageNameResponse::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void StorageNameResponse::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.StorageNameResponse.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
 }
 
 // -------------------------------------------------------------------
 
 // GetFullOriginMetadataResponse
 
-// optional bytes maybeFullOriginMetadata = 1;
-inline bool GetFullOriginMetadataResponse::_internal_has_maybefulloriginmetadata() const {
+// optional bytes a_maybeFullOriginMetadata = 1;
+inline bool GetFullOriginMetadataResponse::_internal_has_a_maybefulloriginmetadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool GetFullOriginMetadataResponse::has_maybefulloriginmetadata() const {
-  return _internal_has_maybefulloriginmetadata();
+inline bool GetFullOriginMetadataResponse::has_a_maybefulloriginmetadata() const {
+  return _internal_has_a_maybefulloriginmetadata();
 }
-inline void GetFullOriginMetadataResponse::clear_maybefulloriginmetadata() {
-  _impl_.maybefulloriginmetadata_.ClearToEmpty();
+inline void GetFullOriginMetadataResponse::clear_a_maybefulloriginmetadata() {
+  _impl_.a_maybefulloriginmetadata_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GetFullOriginMetadataResponse::maybefulloriginmetadata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.maybeFullOriginMetadata)
-  return _internal_maybefulloriginmetadata();
+inline const std::string& GetFullOriginMetadataResponse::a_maybefulloriginmetadata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.a_maybeFullOriginMetadata)
+  return _internal_a_maybefulloriginmetadata();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GetFullOriginMetadataResponse::set_maybefulloriginmetadata(ArgT0&& arg0, ArgT... args) {
+void GetFullOriginMetadataResponse::set_a_maybefulloriginmetadata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.maybefulloriginmetadata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.maybeFullOriginMetadata)
+ _impl_.a_maybefulloriginmetadata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.a_maybeFullOriginMetadata)
 }
-inline std::string* GetFullOriginMetadataResponse::mutable_maybefulloriginmetadata() {
-  std::string* _s = _internal_mutable_maybefulloriginmetadata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.maybeFullOriginMetadata)
+inline std::string* GetFullOriginMetadataResponse::mutable_a_maybefulloriginmetadata() {
+  std::string* _s = _internal_mutable_a_maybefulloriginmetadata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.a_maybeFullOriginMetadata)
   return _s;
 }
-inline const std::string& GetFullOriginMetadataResponse::_internal_maybefulloriginmetadata() const {
-  return _impl_.maybefulloriginmetadata_.Get();
+inline const std::string& GetFullOriginMetadataResponse::_internal_a_maybefulloriginmetadata() const {
+  return _impl_.a_maybefulloriginmetadata_.Get();
 }
-inline void GetFullOriginMetadataResponse::_internal_set_maybefulloriginmetadata(const std::string& value) {
+inline void GetFullOriginMetadataResponse::_internal_set_a_maybefulloriginmetadata(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.maybefulloriginmetadata_.Set(value, GetArenaForAllocation());
+  _impl_.a_maybefulloriginmetadata_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GetFullOriginMetadataResponse::_internal_mutable_maybefulloriginmetadata() {
+inline std::string* GetFullOriginMetadataResponse::_internal_mutable_a_maybefulloriginmetadata() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.maybefulloriginmetadata_.Mutable(GetArenaForAllocation());
+  return _impl_.a_maybefulloriginmetadata_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GetFullOriginMetadataResponse::release_maybefulloriginmetadata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.maybeFullOriginMetadata)
-  if (!_internal_has_maybefulloriginmetadata()) {
+inline std::string* GetFullOriginMetadataResponse::release_a_maybefulloriginmetadata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.a_maybeFullOriginMetadata)
+  if (!_internal_has_a_maybefulloriginmetadata()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.maybefulloriginmetadata_.Release();
+  auto* p = _impl_.a_maybefulloriginmetadata_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.maybefulloriginmetadata_.IsDefault()) {
-    _impl_.maybefulloriginmetadata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_maybefulloriginmetadata_.IsDefault()) {
+    _impl_.a_maybefulloriginmetadata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void GetFullOriginMetadataResponse::set_allocated_maybefulloriginmetadata(std::string* maybefulloriginmetadata) {
-  if (maybefulloriginmetadata != nullptr) {
+inline void GetFullOriginMetadataResponse::set_allocated_a_maybefulloriginmetadata(std::string* a_maybefulloriginmetadata) {
+  if (a_maybefulloriginmetadata != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.maybefulloriginmetadata_.SetAllocated(maybefulloriginmetadata, GetArenaForAllocation());
+  _impl_.a_maybefulloriginmetadata_.SetAllocated(a_maybefulloriginmetadata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.maybefulloriginmetadata_.IsDefault()) {
-    _impl_.maybefulloriginmetadata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_maybefulloriginmetadata_.IsDefault()) {
+    _impl_.a_maybefulloriginmetadata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.maybeFullOriginMetadata)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse.a_maybeFullOriginMetadata)
 }
 
 // -------------------------------------------------------------------
 
 // PersistedResponse
 
-// required bool persisted = 1;
-inline bool PersistedResponse::_internal_has_persisted() const {
+// required bool a_persisted = 1;
+inline bool PersistedResponse::_internal_has_a_persisted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PersistedResponse::has_persisted() const {
-  return _internal_has_persisted();
+inline bool PersistedResponse::has_a_persisted() const {
+  return _internal_has_a_persisted();
 }
-inline void PersistedResponse::clear_persisted() {
-  _impl_.persisted_ = false;
+inline void PersistedResponse::clear_a_persisted() {
+  _impl_.a_persisted_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool PersistedResponse::_internal_persisted() const {
-  return _impl_.persisted_;
+inline bool PersistedResponse::_internal_a_persisted() const {
+  return _impl_.a_persisted_;
 }
-inline bool PersistedResponse::persisted() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PersistedResponse.persisted)
-  return _internal_persisted();
+inline bool PersistedResponse::a_persisted() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PersistedResponse.a_persisted)
+  return _internal_a_persisted();
 }
-inline void PersistedResponse::_internal_set_persisted(bool value) {
+inline void PersistedResponse::_internal_set_a_persisted(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.persisted_ = value;
+  _impl_.a_persisted_ = value;
 }
-inline void PersistedResponse::set_persisted(bool value) {
-  _internal_set_persisted(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PersistedResponse.persisted)
+inline void PersistedResponse::set_a_persisted(bool value) {
+  _internal_set_a_persisted(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PersistedResponse.a_persisted)
 }
 
 // -------------------------------------------------------------------
@@ -1264,510 +1264,510 @@ inline void PersistedResponse::set_persisted(bool value) {
 
 // EstimateResponse
 
-// required uint64 usage = 1;
-inline bool EstimateResponse::_internal_has_usage() const {
+// required uint64 a_usage = 1;
+inline bool EstimateResponse::_internal_has_a_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool EstimateResponse::has_usage() const {
-  return _internal_has_usage();
+inline bool EstimateResponse::has_a_usage() const {
+  return _internal_has_a_usage();
 }
-inline void EstimateResponse::clear_usage() {
-  _impl_.usage_ = uint64_t{0u};
+inline void EstimateResponse::clear_a_usage() {
+  _impl_.a_usage_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t EstimateResponse::_internal_usage() const {
-  return _impl_.usage_;
+inline uint64_t EstimateResponse::_internal_a_usage() const {
+  return _impl_.a_usage_;
 }
-inline uint64_t EstimateResponse::usage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.EstimateResponse.usage)
-  return _internal_usage();
+inline uint64_t EstimateResponse::a_usage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.EstimateResponse.a_usage)
+  return _internal_a_usage();
 }
-inline void EstimateResponse::_internal_set_usage(uint64_t value) {
+inline void EstimateResponse::_internal_set_a_usage(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.usage_ = value;
+  _impl_.a_usage_ = value;
 }
-inline void EstimateResponse::set_usage(uint64_t value) {
-  _internal_set_usage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.usage)
+inline void EstimateResponse::set_a_usage(uint64_t value) {
+  _internal_set_a_usage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.a_usage)
 }
 
-// required uint64 limit = 2;
-inline bool EstimateResponse::_internal_has_limit() const {
+// required uint64 a_limit = 2;
+inline bool EstimateResponse::_internal_has_a_limit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool EstimateResponse::has_limit() const {
-  return _internal_has_limit();
+inline bool EstimateResponse::has_a_limit() const {
+  return _internal_has_a_limit();
 }
-inline void EstimateResponse::clear_limit() {
-  _impl_.limit_ = uint64_t{0u};
+inline void EstimateResponse::clear_a_limit() {
+  _impl_.a_limit_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t EstimateResponse::_internal_limit() const {
-  return _impl_.limit_;
+inline uint64_t EstimateResponse::_internal_a_limit() const {
+  return _impl_.a_limit_;
 }
-inline uint64_t EstimateResponse::limit() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.EstimateResponse.limit)
-  return _internal_limit();
+inline uint64_t EstimateResponse::a_limit() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.EstimateResponse.a_limit)
+  return _internal_a_limit();
 }
-inline void EstimateResponse::_internal_set_limit(uint64_t value) {
+inline void EstimateResponse::_internal_set_a_limit(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.limit_ = value;
+  _impl_.a_limit_ = value;
 }
-inline void EstimateResponse::set_limit(uint64_t value) {
-  _internal_set_limit(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.limit)
+inline void EstimateResponse::set_a_limit(uint64_t value) {
+  _internal_set_a_limit(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.a_limit)
 }
 
 // -------------------------------------------------------------------
 
 // RequestResponse
 
-// bytes mVnsresult = 1;
-inline bool RequestResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool RequestResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool RequestResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool RequestResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void RequestResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void RequestResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void RequestResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void RequestResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& RequestResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& RequestResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void RequestResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void RequestResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.RequestResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.RequestResponse.a_mVnsresult)
 }
-inline std::string* RequestResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.mVnsresult)
+inline std::string* RequestResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& RequestResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& RequestResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void RequestResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void RequestResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RequestResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* RequestResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* RequestResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* RequestResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void RequestResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void RequestResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.quota.StorageNameResponse mVStorageNameResponse = 2;
-inline bool RequestResponse::_internal_has_mvstoragenameresponse() const {
-  return content_case() == kMVStorageNameResponse;
+// .protobuf.mozilla.dom.quota.StorageNameResponse a_mVStorageNameResponse = 2;
+inline bool RequestResponse::_internal_has_a_mvstoragenameresponse() const {
+  return content_case() == kAMVStorageNameResponse;
 }
-inline bool RequestResponse::has_mvstoragenameresponse() const {
-  return _internal_has_mvstoragenameresponse();
+inline bool RequestResponse::has_a_mvstoragenameresponse() const {
+  return _internal_has_a_mvstoragenameresponse();
 }
-inline void RequestResponse::set_has_mvstoragenameresponse() {
-  _impl_._oneof_case_[0] = kMVStorageNameResponse;
+inline void RequestResponse::set_has_a_mvstoragenameresponse() {
+  _impl_._oneof_case_[0] = kAMVStorageNameResponse;
 }
-inline void RequestResponse::clear_mvstoragenameresponse() {
-  if (_internal_has_mvstoragenameresponse()) {
+inline void RequestResponse::clear_a_mvstoragenameresponse() {
+  if (_internal_has_a_mvstoragenameresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvstoragenameresponse_;
+      delete _impl_.content_.a_mvstoragenameresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::release_mvstoragenameresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.mVStorageNameResponse)
-  if (_internal_has_mvstoragenameresponse()) {
+inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::release_a_mvstoragenameresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVStorageNameResponse)
+  if (_internal_has_a_mvstoragenameresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::StorageNameResponse* temp = _impl_.content_.mvstoragenameresponse_;
+    ::protobuf::mozilla::dom::quota::StorageNameResponse* temp = _impl_.content_.a_mvstoragenameresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvstoragenameresponse_ = nullptr;
+    _impl_.content_.a_mvstoragenameresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::quota::StorageNameResponse& RequestResponse::_internal_mvstoragenameresponse() const {
-  return _internal_has_mvstoragenameresponse()
-      ? *_impl_.content_.mvstoragenameresponse_
+inline const ::protobuf::mozilla::dom::quota::StorageNameResponse& RequestResponse::_internal_a_mvstoragenameresponse() const {
+  return _internal_has_a_mvstoragenameresponse()
+      ? *_impl_.content_.a_mvstoragenameresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::quota::StorageNameResponse&>(::protobuf::mozilla::dom::quota::_StorageNameResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::quota::StorageNameResponse& RequestResponse::mvstoragenameresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.mVStorageNameResponse)
-  return _internal_mvstoragenameresponse();
+inline const ::protobuf::mozilla::dom::quota::StorageNameResponse& RequestResponse::a_mvstoragenameresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.a_mVStorageNameResponse)
+  return _internal_a_mvstoragenameresponse();
 }
-inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::unsafe_arena_release_mvstoragenameresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.mVStorageNameResponse)
-  if (_internal_has_mvstoragenameresponse()) {
+inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::unsafe_arena_release_a_mvstoragenameresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVStorageNameResponse)
+  if (_internal_has_a_mvstoragenameresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::StorageNameResponse* temp = _impl_.content_.mvstoragenameresponse_;
-    _impl_.content_.mvstoragenameresponse_ = nullptr;
+    ::protobuf::mozilla::dom::quota::StorageNameResponse* temp = _impl_.content_.a_mvstoragenameresponse_;
+    _impl_.content_.a_mvstoragenameresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RequestResponse::unsafe_arena_set_allocated_mvstoragenameresponse(::protobuf::mozilla::dom::quota::StorageNameResponse* mvstoragenameresponse) {
+inline void RequestResponse::unsafe_arena_set_allocated_a_mvstoragenameresponse(::protobuf::mozilla::dom::quota::StorageNameResponse* a_mvstoragenameresponse) {
   clear_content();
-  if (mvstoragenameresponse) {
-    set_has_mvstoragenameresponse();
-    _impl_.content_.mvstoragenameresponse_ = mvstoragenameresponse;
+  if (a_mvstoragenameresponse) {
+    set_has_a_mvstoragenameresponse();
+    _impl_.content_.a_mvstoragenameresponse_ = a_mvstoragenameresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.mVStorageNameResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.a_mVStorageNameResponse)
 }
-inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::_internal_mutable_mvstoragenameresponse() {
-  if (!_internal_has_mvstoragenameresponse()) {
+inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::_internal_mutable_a_mvstoragenameresponse() {
+  if (!_internal_has_a_mvstoragenameresponse()) {
     clear_content();
-    set_has_mvstoragenameresponse();
-    _impl_.content_.mvstoragenameresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::StorageNameResponse >(GetArenaForAllocation());
+    set_has_a_mvstoragenameresponse();
+    _impl_.content_.a_mvstoragenameresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::StorageNameResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvstoragenameresponse_;
+  return _impl_.content_.a_mvstoragenameresponse_;
 }
-inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::mutable_mvstoragenameresponse() {
-  ::protobuf::mozilla::dom::quota::StorageNameResponse* _msg = _internal_mutable_mvstoragenameresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.mVStorageNameResponse)
+inline ::protobuf::mozilla::dom::quota::StorageNameResponse* RequestResponse::mutable_a_mvstoragenameresponse() {
+  ::protobuf::mozilla::dom::quota::StorageNameResponse* _msg = _internal_mutable_a_mvstoragenameresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.a_mVStorageNameResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse mVGetFullOriginMetadataResponse = 3;
-inline bool RequestResponse::_internal_has_mvgetfulloriginmetadataresponse() const {
-  return content_case() == kMVGetFullOriginMetadataResponse;
+// .protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse a_mVGetFullOriginMetadataResponse = 3;
+inline bool RequestResponse::_internal_has_a_mvgetfulloriginmetadataresponse() const {
+  return content_case() == kAMVGetFullOriginMetadataResponse;
 }
-inline bool RequestResponse::has_mvgetfulloriginmetadataresponse() const {
-  return _internal_has_mvgetfulloriginmetadataresponse();
+inline bool RequestResponse::has_a_mvgetfulloriginmetadataresponse() const {
+  return _internal_has_a_mvgetfulloriginmetadataresponse();
 }
-inline void RequestResponse::set_has_mvgetfulloriginmetadataresponse() {
-  _impl_._oneof_case_[0] = kMVGetFullOriginMetadataResponse;
+inline void RequestResponse::set_has_a_mvgetfulloriginmetadataresponse() {
+  _impl_._oneof_case_[0] = kAMVGetFullOriginMetadataResponse;
 }
-inline void RequestResponse::clear_mvgetfulloriginmetadataresponse() {
-  if (_internal_has_mvgetfulloriginmetadataresponse()) {
+inline void RequestResponse::clear_a_mvgetfulloriginmetadataresponse() {
+  if (_internal_has_a_mvgetfulloriginmetadataresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvgetfulloriginmetadataresponse_;
+      delete _impl_.content_.a_mvgetfulloriginmetadataresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::release_mvgetfulloriginmetadataresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.mVGetFullOriginMetadataResponse)
-  if (_internal_has_mvgetfulloriginmetadataresponse()) {
+inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::release_a_mvgetfulloriginmetadataresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVGetFullOriginMetadataResponse)
+  if (_internal_has_a_mvgetfulloriginmetadataresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* temp = _impl_.content_.mvgetfulloriginmetadataresponse_;
+    ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* temp = _impl_.content_.a_mvgetfulloriginmetadataresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvgetfulloriginmetadataresponse_ = nullptr;
+    _impl_.content_.a_mvgetfulloriginmetadataresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& RequestResponse::_internal_mvgetfulloriginmetadataresponse() const {
-  return _internal_has_mvgetfulloriginmetadataresponse()
-      ? *_impl_.content_.mvgetfulloriginmetadataresponse_
+inline const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& RequestResponse::_internal_a_mvgetfulloriginmetadataresponse() const {
+  return _internal_has_a_mvgetfulloriginmetadataresponse()
+      ? *_impl_.content_.a_mvgetfulloriginmetadataresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse&>(::protobuf::mozilla::dom::quota::_GetFullOriginMetadataResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& RequestResponse::mvgetfulloriginmetadataresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.mVGetFullOriginMetadataResponse)
-  return _internal_mvgetfulloriginmetadataresponse();
+inline const ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse& RequestResponse::a_mvgetfulloriginmetadataresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.a_mVGetFullOriginMetadataResponse)
+  return _internal_a_mvgetfulloriginmetadataresponse();
 }
-inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::unsafe_arena_release_mvgetfulloriginmetadataresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.mVGetFullOriginMetadataResponse)
-  if (_internal_has_mvgetfulloriginmetadataresponse()) {
+inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::unsafe_arena_release_a_mvgetfulloriginmetadataresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVGetFullOriginMetadataResponse)
+  if (_internal_has_a_mvgetfulloriginmetadataresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* temp = _impl_.content_.mvgetfulloriginmetadataresponse_;
-    _impl_.content_.mvgetfulloriginmetadataresponse_ = nullptr;
+    ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* temp = _impl_.content_.a_mvgetfulloriginmetadataresponse_;
+    _impl_.content_.a_mvgetfulloriginmetadataresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RequestResponse::unsafe_arena_set_allocated_mvgetfulloriginmetadataresponse(::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* mvgetfulloriginmetadataresponse) {
+inline void RequestResponse::unsafe_arena_set_allocated_a_mvgetfulloriginmetadataresponse(::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* a_mvgetfulloriginmetadataresponse) {
   clear_content();
-  if (mvgetfulloriginmetadataresponse) {
-    set_has_mvgetfulloriginmetadataresponse();
-    _impl_.content_.mvgetfulloriginmetadataresponse_ = mvgetfulloriginmetadataresponse;
+  if (a_mvgetfulloriginmetadataresponse) {
+    set_has_a_mvgetfulloriginmetadataresponse();
+    _impl_.content_.a_mvgetfulloriginmetadataresponse_ = a_mvgetfulloriginmetadataresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.mVGetFullOriginMetadataResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.a_mVGetFullOriginMetadataResponse)
 }
-inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::_internal_mutable_mvgetfulloriginmetadataresponse() {
-  if (!_internal_has_mvgetfulloriginmetadataresponse()) {
+inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::_internal_mutable_a_mvgetfulloriginmetadataresponse() {
+  if (!_internal_has_a_mvgetfulloriginmetadataresponse()) {
     clear_content();
-    set_has_mvgetfulloriginmetadataresponse();
-    _impl_.content_.mvgetfulloriginmetadataresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse >(GetArenaForAllocation());
+    set_has_a_mvgetfulloriginmetadataresponse();
+    _impl_.content_.a_mvgetfulloriginmetadataresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvgetfulloriginmetadataresponse_;
+  return _impl_.content_.a_mvgetfulloriginmetadataresponse_;
 }
-inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::mutable_mvgetfulloriginmetadataresponse() {
-  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* _msg = _internal_mutable_mvgetfulloriginmetadataresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.mVGetFullOriginMetadataResponse)
+inline ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* RequestResponse::mutable_a_mvgetfulloriginmetadataresponse() {
+  ::protobuf::mozilla::dom::quota::GetFullOriginMetadataResponse* _msg = _internal_mutable_a_mvgetfulloriginmetadataresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.a_mVGetFullOriginMetadataResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.quota.PersistedResponse mVPersistedResponse = 4;
-inline bool RequestResponse::_internal_has_mvpersistedresponse() const {
-  return content_case() == kMVPersistedResponse;
+// .protobuf.mozilla.dom.quota.PersistedResponse a_mVPersistedResponse = 4;
+inline bool RequestResponse::_internal_has_a_mvpersistedresponse() const {
+  return content_case() == kAMVPersistedResponse;
 }
-inline bool RequestResponse::has_mvpersistedresponse() const {
-  return _internal_has_mvpersistedresponse();
+inline bool RequestResponse::has_a_mvpersistedresponse() const {
+  return _internal_has_a_mvpersistedresponse();
 }
-inline void RequestResponse::set_has_mvpersistedresponse() {
-  _impl_._oneof_case_[0] = kMVPersistedResponse;
+inline void RequestResponse::set_has_a_mvpersistedresponse() {
+  _impl_._oneof_case_[0] = kAMVPersistedResponse;
 }
-inline void RequestResponse::clear_mvpersistedresponse() {
-  if (_internal_has_mvpersistedresponse()) {
+inline void RequestResponse::clear_a_mvpersistedresponse() {
+  if (_internal_has_a_mvpersistedresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvpersistedresponse_;
+      delete _impl_.content_.a_mvpersistedresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::release_mvpersistedresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.mVPersistedResponse)
-  if (_internal_has_mvpersistedresponse()) {
+inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::release_a_mvpersistedresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistedResponse)
+  if (_internal_has_a_mvpersistedresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::PersistedResponse* temp = _impl_.content_.mvpersistedresponse_;
+    ::protobuf::mozilla::dom::quota::PersistedResponse* temp = _impl_.content_.a_mvpersistedresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvpersistedresponse_ = nullptr;
+    _impl_.content_.a_mvpersistedresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::quota::PersistedResponse& RequestResponse::_internal_mvpersistedresponse() const {
-  return _internal_has_mvpersistedresponse()
-      ? *_impl_.content_.mvpersistedresponse_
+inline const ::protobuf::mozilla::dom::quota::PersistedResponse& RequestResponse::_internal_a_mvpersistedresponse() const {
+  return _internal_has_a_mvpersistedresponse()
+      ? *_impl_.content_.a_mvpersistedresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::quota::PersistedResponse&>(::protobuf::mozilla::dom::quota::_PersistedResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::quota::PersistedResponse& RequestResponse::mvpersistedresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.mVPersistedResponse)
-  return _internal_mvpersistedresponse();
+inline const ::protobuf::mozilla::dom::quota::PersistedResponse& RequestResponse::a_mvpersistedresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistedResponse)
+  return _internal_a_mvpersistedresponse();
 }
-inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::unsafe_arena_release_mvpersistedresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.mVPersistedResponse)
-  if (_internal_has_mvpersistedresponse()) {
+inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::unsafe_arena_release_a_mvpersistedresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistedResponse)
+  if (_internal_has_a_mvpersistedresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::PersistedResponse* temp = _impl_.content_.mvpersistedresponse_;
-    _impl_.content_.mvpersistedresponse_ = nullptr;
+    ::protobuf::mozilla::dom::quota::PersistedResponse* temp = _impl_.content_.a_mvpersistedresponse_;
+    _impl_.content_.a_mvpersistedresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RequestResponse::unsafe_arena_set_allocated_mvpersistedresponse(::protobuf::mozilla::dom::quota::PersistedResponse* mvpersistedresponse) {
+inline void RequestResponse::unsafe_arena_set_allocated_a_mvpersistedresponse(::protobuf::mozilla::dom::quota::PersistedResponse* a_mvpersistedresponse) {
   clear_content();
-  if (mvpersistedresponse) {
-    set_has_mvpersistedresponse();
-    _impl_.content_.mvpersistedresponse_ = mvpersistedresponse;
+  if (a_mvpersistedresponse) {
+    set_has_a_mvpersistedresponse();
+    _impl_.content_.a_mvpersistedresponse_ = a_mvpersistedresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.mVPersistedResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistedResponse)
 }
-inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::_internal_mutable_mvpersistedresponse() {
-  if (!_internal_has_mvpersistedresponse()) {
+inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::_internal_mutable_a_mvpersistedresponse() {
+  if (!_internal_has_a_mvpersistedresponse()) {
     clear_content();
-    set_has_mvpersistedresponse();
-    _impl_.content_.mvpersistedresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::PersistedResponse >(GetArenaForAllocation());
+    set_has_a_mvpersistedresponse();
+    _impl_.content_.a_mvpersistedresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::PersistedResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvpersistedresponse_;
+  return _impl_.content_.a_mvpersistedresponse_;
 }
-inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::mutable_mvpersistedresponse() {
-  ::protobuf::mozilla::dom::quota::PersistedResponse* _msg = _internal_mutable_mvpersistedresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.mVPersistedResponse)
+inline ::protobuf::mozilla::dom::quota::PersistedResponse* RequestResponse::mutable_a_mvpersistedresponse() {
+  ::protobuf::mozilla::dom::quota::PersistedResponse* _msg = _internal_mutable_a_mvpersistedresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistedResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.quota.PersistResponse mVPersistResponse = 5;
-inline bool RequestResponse::_internal_has_mvpersistresponse() const {
-  return content_case() == kMVPersistResponse;
+// .protobuf.mozilla.dom.quota.PersistResponse a_mVPersistResponse = 5;
+inline bool RequestResponse::_internal_has_a_mvpersistresponse() const {
+  return content_case() == kAMVPersistResponse;
 }
-inline bool RequestResponse::has_mvpersistresponse() const {
-  return _internal_has_mvpersistresponse();
+inline bool RequestResponse::has_a_mvpersistresponse() const {
+  return _internal_has_a_mvpersistresponse();
 }
-inline void RequestResponse::set_has_mvpersistresponse() {
-  _impl_._oneof_case_[0] = kMVPersistResponse;
+inline void RequestResponse::set_has_a_mvpersistresponse() {
+  _impl_._oneof_case_[0] = kAMVPersistResponse;
 }
-inline void RequestResponse::clear_mvpersistresponse() {
-  if (_internal_has_mvpersistresponse()) {
+inline void RequestResponse::clear_a_mvpersistresponse() {
+  if (_internal_has_a_mvpersistresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvpersistresponse_;
+      delete _impl_.content_.a_mvpersistresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::release_mvpersistresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.mVPersistResponse)
-  if (_internal_has_mvpersistresponse()) {
+inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::release_a_mvpersistresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistResponse)
+  if (_internal_has_a_mvpersistresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::PersistResponse* temp = _impl_.content_.mvpersistresponse_;
+    ::protobuf::mozilla::dom::quota::PersistResponse* temp = _impl_.content_.a_mvpersistresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvpersistresponse_ = nullptr;
+    _impl_.content_.a_mvpersistresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::quota::PersistResponse& RequestResponse::_internal_mvpersistresponse() const {
-  return _internal_has_mvpersistresponse()
-      ? *_impl_.content_.mvpersistresponse_
+inline const ::protobuf::mozilla::dom::quota::PersistResponse& RequestResponse::_internal_a_mvpersistresponse() const {
+  return _internal_has_a_mvpersistresponse()
+      ? *_impl_.content_.a_mvpersistresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::quota::PersistResponse&>(::protobuf::mozilla::dom::quota::_PersistResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::quota::PersistResponse& RequestResponse::mvpersistresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.mVPersistResponse)
-  return _internal_mvpersistresponse();
+inline const ::protobuf::mozilla::dom::quota::PersistResponse& RequestResponse::a_mvpersistresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistResponse)
+  return _internal_a_mvpersistresponse();
 }
-inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::unsafe_arena_release_mvpersistresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.mVPersistResponse)
-  if (_internal_has_mvpersistresponse()) {
+inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::unsafe_arena_release_a_mvpersistresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistResponse)
+  if (_internal_has_a_mvpersistresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::PersistResponse* temp = _impl_.content_.mvpersistresponse_;
-    _impl_.content_.mvpersistresponse_ = nullptr;
+    ::protobuf::mozilla::dom::quota::PersistResponse* temp = _impl_.content_.a_mvpersistresponse_;
+    _impl_.content_.a_mvpersistresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RequestResponse::unsafe_arena_set_allocated_mvpersistresponse(::protobuf::mozilla::dom::quota::PersistResponse* mvpersistresponse) {
+inline void RequestResponse::unsafe_arena_set_allocated_a_mvpersistresponse(::protobuf::mozilla::dom::quota::PersistResponse* a_mvpersistresponse) {
   clear_content();
-  if (mvpersistresponse) {
-    set_has_mvpersistresponse();
-    _impl_.content_.mvpersistresponse_ = mvpersistresponse;
+  if (a_mvpersistresponse) {
+    set_has_a_mvpersistresponse();
+    _impl_.content_.a_mvpersistresponse_ = a_mvpersistresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.mVPersistResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistResponse)
 }
-inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::_internal_mutable_mvpersistresponse() {
-  if (!_internal_has_mvpersistresponse()) {
+inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::_internal_mutable_a_mvpersistresponse() {
+  if (!_internal_has_a_mvpersistresponse()) {
     clear_content();
-    set_has_mvpersistresponse();
-    _impl_.content_.mvpersistresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::PersistResponse >(GetArenaForAllocation());
+    set_has_a_mvpersistresponse();
+    _impl_.content_.a_mvpersistresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::PersistResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvpersistresponse_;
+  return _impl_.content_.a_mvpersistresponse_;
 }
-inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::mutable_mvpersistresponse() {
-  ::protobuf::mozilla::dom::quota::PersistResponse* _msg = _internal_mutable_mvpersistresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.mVPersistResponse)
+inline ::protobuf::mozilla::dom::quota::PersistResponse* RequestResponse::mutable_a_mvpersistresponse() {
+  ::protobuf::mozilla::dom::quota::PersistResponse* _msg = _internal_mutable_a_mvpersistresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.a_mVPersistResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.quota.EstimateResponse mVEstimateResponse = 6;
-inline bool RequestResponse::_internal_has_mvestimateresponse() const {
-  return content_case() == kMVEstimateResponse;
+// .protobuf.mozilla.dom.quota.EstimateResponse a_mVEstimateResponse = 6;
+inline bool RequestResponse::_internal_has_a_mvestimateresponse() const {
+  return content_case() == kAMVEstimateResponse;
 }
-inline bool RequestResponse::has_mvestimateresponse() const {
-  return _internal_has_mvestimateresponse();
+inline bool RequestResponse::has_a_mvestimateresponse() const {
+  return _internal_has_a_mvestimateresponse();
 }
-inline void RequestResponse::set_has_mvestimateresponse() {
-  _impl_._oneof_case_[0] = kMVEstimateResponse;
+inline void RequestResponse::set_has_a_mvestimateresponse() {
+  _impl_._oneof_case_[0] = kAMVEstimateResponse;
 }
-inline void RequestResponse::clear_mvestimateresponse() {
-  if (_internal_has_mvestimateresponse()) {
+inline void RequestResponse::clear_a_mvestimateresponse() {
+  if (_internal_has_a_mvestimateresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvestimateresponse_;
+      delete _impl_.content_.a_mvestimateresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::release_mvestimateresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.mVEstimateResponse)
-  if (_internal_has_mvestimateresponse()) {
+inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::release_a_mvestimateresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVEstimateResponse)
+  if (_internal_has_a_mvestimateresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::EstimateResponse* temp = _impl_.content_.mvestimateresponse_;
+    ::protobuf::mozilla::dom::quota::EstimateResponse* temp = _impl_.content_.a_mvestimateresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvestimateresponse_ = nullptr;
+    _impl_.content_.a_mvestimateresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::quota::EstimateResponse& RequestResponse::_internal_mvestimateresponse() const {
-  return _internal_has_mvestimateresponse()
-      ? *_impl_.content_.mvestimateresponse_
+inline const ::protobuf::mozilla::dom::quota::EstimateResponse& RequestResponse::_internal_a_mvestimateresponse() const {
+  return _internal_has_a_mvestimateresponse()
+      ? *_impl_.content_.a_mvestimateresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::quota::EstimateResponse&>(::protobuf::mozilla::dom::quota::_EstimateResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::quota::EstimateResponse& RequestResponse::mvestimateresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.mVEstimateResponse)
-  return _internal_mvestimateresponse();
+inline const ::protobuf::mozilla::dom::quota::EstimateResponse& RequestResponse::a_mvestimateresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.RequestResponse.a_mVEstimateResponse)
+  return _internal_a_mvestimateresponse();
 }
-inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::unsafe_arena_release_mvestimateresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.mVEstimateResponse)
-  if (_internal_has_mvestimateresponse()) {
+inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::unsafe_arena_release_a_mvestimateresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.quota.RequestResponse.a_mVEstimateResponse)
+  if (_internal_has_a_mvestimateresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::quota::EstimateResponse* temp = _impl_.content_.mvestimateresponse_;
-    _impl_.content_.mvestimateresponse_ = nullptr;
+    ::protobuf::mozilla::dom::quota::EstimateResponse* temp = _impl_.content_.a_mvestimateresponse_;
+    _impl_.content_.a_mvestimateresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RequestResponse::unsafe_arena_set_allocated_mvestimateresponse(::protobuf::mozilla::dom::quota::EstimateResponse* mvestimateresponse) {
+inline void RequestResponse::unsafe_arena_set_allocated_a_mvestimateresponse(::protobuf::mozilla::dom::quota::EstimateResponse* a_mvestimateresponse) {
   clear_content();
-  if (mvestimateresponse) {
-    set_has_mvestimateresponse();
-    _impl_.content_.mvestimateresponse_ = mvestimateresponse;
+  if (a_mvestimateresponse) {
+    set_has_a_mvestimateresponse();
+    _impl_.content_.a_mvestimateresponse_ = a_mvestimateresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.mVEstimateResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.quota.RequestResponse.a_mVEstimateResponse)
 }
-inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::_internal_mutable_mvestimateresponse() {
-  if (!_internal_has_mvestimateresponse()) {
+inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::_internal_mutable_a_mvestimateresponse() {
+  if (!_internal_has_a_mvestimateresponse()) {
     clear_content();
-    set_has_mvestimateresponse();
-    _impl_.content_.mvestimateresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::EstimateResponse >(GetArenaForAllocation());
+    set_has_a_mvestimateresponse();
+    _impl_.content_.a_mvestimateresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::quota::EstimateResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvestimateresponse_;
+  return _impl_.content_.a_mvestimateresponse_;
 }
-inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::mutable_mvestimateresponse() {
-  ::protobuf::mozilla::dom::quota::EstimateResponse* _msg = _internal_mutable_mvestimateresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.mVEstimateResponse)
+inline ::protobuf::mozilla::dom::quota::EstimateResponse* RequestResponse::mutable_a_mvestimateresponse() {
+  ::protobuf::mozilla::dom::quota::EstimateResponse* _msg = _internal_mutable_a_mvestimateresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.RequestResponse.a_mVEstimateResponse)
   return _msg;
 }
 

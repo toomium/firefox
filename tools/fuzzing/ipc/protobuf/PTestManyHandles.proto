@@ -14,7 +14,7 @@ package protobuf.mozilla._ipdltest.PTestManyHandles;
 
 // Message declarations
 message Msg_ManyHandles {
-  repeated bytes descrs = 1;
+  repeated bytes a_descrs = 1;
 }
 
 // Parameter mappings stats:

@@ -260,25 +260,25 @@ class Msg_InitCrashReporter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAInitArgsFieldNumber = 1,
+    kAAInitArgsFieldNumber = 1,
   };
-  // required .protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
-  bool has_ainitargs() const;
+  // required .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+  bool has_a_ainitargs() const;
   private:
-  bool _internal_has_ainitargs() const;
+  bool _internal_has_a_ainitargs() const;
   public:
-  void clear_ainitargs();
-  const ::protobuf::CrashReporter::CrashReporterInitArgs& ainitargs() const;
-  PROTOBUF_NODISCARD ::protobuf::CrashReporter::CrashReporterInitArgs* release_ainitargs();
-  ::protobuf::CrashReporter::CrashReporterInitArgs* mutable_ainitargs();
-  void set_allocated_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs);
+  void clear_a_ainitargs();
+  const ::protobuf::CrashReporter::CrashReporterInitArgs& a_ainitargs() const;
+  PROTOBUF_NODISCARD ::protobuf::CrashReporter::CrashReporterInitArgs* release_a_ainitargs();
+  ::protobuf::CrashReporter::CrashReporterInitArgs* mutable_a_ainitargs();
+  void set_allocated_a_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs);
   private:
-  const ::protobuf::CrashReporter::CrashReporterInitArgs& _internal_ainitargs() const;
-  ::protobuf::CrashReporter::CrashReporterInitArgs* _internal_mutable_ainitargs();
+  const ::protobuf::CrashReporter::CrashReporterInitArgs& _internal_a_ainitargs() const;
+  ::protobuf::CrashReporter::CrashReporterInitArgs* _internal_mutable_a_ainitargs();
   public:
-  void unsafe_arena_set_allocated_ainitargs(
-      ::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs);
-  ::protobuf::CrashReporter::CrashReporterInitArgs* unsafe_arena_release_ainitargs();
+  void unsafe_arena_set_allocated_a_ainitargs(
+      ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs);
+  ::protobuf::CrashReporter::CrashReporterInitArgs* unsafe_arena_release_a_ainitargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter)
  private:
@@ -290,7 +290,7 @@ class Msg_InitCrashReporter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs_;
+    ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -407,25 +407,25 @@ class Msg_AddMemoryReport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAReportFieldNumber = 1,
+    kAAReportFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.MemoryReport aReport = 1;
-  bool has_areport() const;
+  // required .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+  bool has_a_areport() const;
   private:
-  bool _internal_has_areport() const;
+  bool _internal_has_a_areport() const;
   public:
-  void clear_areport();
-  const ::protobuf::mozilla::dom::MemoryReport& areport() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MemoryReport* release_areport();
-  ::protobuf::mozilla::dom::MemoryReport* mutable_areport();
-  void set_allocated_areport(::protobuf::mozilla::dom::MemoryReport* areport);
+  void clear_a_areport();
+  const ::protobuf::mozilla::dom::MemoryReport& a_areport() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MemoryReport* release_a_areport();
+  ::protobuf::mozilla::dom::MemoryReport* mutable_a_areport();
+  void set_allocated_a_areport(::protobuf::mozilla::dom::MemoryReport* a_areport);
   private:
-  const ::protobuf::mozilla::dom::MemoryReport& _internal_areport() const;
-  ::protobuf::mozilla::dom::MemoryReport* _internal_mutable_areport();
+  const ::protobuf::mozilla::dom::MemoryReport& _internal_a_areport() const;
+  ::protobuf::mozilla::dom::MemoryReport* _internal_mutable_a_areport();
   public:
-  void unsafe_arena_set_allocated_areport(
-      ::protobuf::mozilla::dom::MemoryReport* areport);
-  ::protobuf::mozilla::dom::MemoryReport* unsafe_arena_release_areport();
+  void unsafe_arena_set_allocated_a_areport(
+      ::protobuf::mozilla::dom::MemoryReport* a_areport);
+  ::protobuf::mozilla::dom::MemoryReport* unsafe_arena_release_a_areport();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport)
  private:
@@ -437,7 +437,7 @@ class Msg_AddMemoryReport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::MemoryReport* areport_;
+    ::protobuf::mozilla::dom::MemoryReport* a_areport_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -554,24 +554,24 @@ class Msg_FOGData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufFieldNumber = 1,
+    kABufFieldNumber = 1,
   };
-  // required bytes buf = 1;
-  bool has_buf() const;
+  // required bytes a_buf = 1;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData)
@@ -584,7 +584,7 @@ class Msg_FOGData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -701,30 +701,30 @@ class Msg_AccumulateChildHistograms final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccumulationsFieldNumber = 1,
+    kAAccumulationsFieldNumber = 1,
   };
-  // repeated bytes accumulations = 1;
-  int accumulations_size() const;
+  // repeated bytes a_accumulations = 1;
+  int a_accumulations_size() const;
   private:
-  int _internal_accumulations_size() const;
+  int _internal_a_accumulations_size() const;
   public:
-  void clear_accumulations();
-  const std::string& accumulations(int index) const;
-  std::string* mutable_accumulations(int index);
-  void set_accumulations(int index, const std::string& value);
-  void set_accumulations(int index, std::string&& value);
-  void set_accumulations(int index, const char* value);
-  void set_accumulations(int index, const void* value, size_t size);
-  std::string* add_accumulations();
-  void add_accumulations(const std::string& value);
-  void add_accumulations(std::string&& value);
-  void add_accumulations(const char* value);
-  void add_accumulations(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& accumulations() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_accumulations();
+  void clear_a_accumulations();
+  const std::string& a_accumulations(int index) const;
+  std::string* mutable_a_accumulations(int index);
+  void set_a_accumulations(int index, const std::string& value);
+  void set_a_accumulations(int index, std::string&& value);
+  void set_a_accumulations(int index, const char* value);
+  void set_a_accumulations(int index, const void* value, size_t size);
+  std::string* add_a_accumulations();
+  void add_a_accumulations(const std::string& value);
+  void add_a_accumulations(std::string&& value);
+  void add_a_accumulations(const char* value);
+  void add_a_accumulations(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_accumulations() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_accumulations();
   private:
-  const std::string& _internal_accumulations(int index) const;
-  std::string* _internal_add_accumulations();
+  const std::string& _internal_a_accumulations(int index) const;
+  std::string* _internal_add_a_accumulations();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms)
@@ -735,7 +735,7 @@ class Msg_AccumulateChildHistograms final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> accumulations_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_accumulations_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -853,30 +853,30 @@ class Msg_AccumulateChildKeyedHistograms final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccumulationsFieldNumber = 1,
+    kAAccumulationsFieldNumber = 1,
   };
-  // repeated bytes accumulations = 1;
-  int accumulations_size() const;
+  // repeated bytes a_accumulations = 1;
+  int a_accumulations_size() const;
   private:
-  int _internal_accumulations_size() const;
+  int _internal_a_accumulations_size() const;
   public:
-  void clear_accumulations();
-  const std::string& accumulations(int index) const;
-  std::string* mutable_accumulations(int index);
-  void set_accumulations(int index, const std::string& value);
-  void set_accumulations(int index, std::string&& value);
-  void set_accumulations(int index, const char* value);
-  void set_accumulations(int index, const void* value, size_t size);
-  std::string* add_accumulations();
-  void add_accumulations(const std::string& value);
-  void add_accumulations(std::string&& value);
-  void add_accumulations(const char* value);
-  void add_accumulations(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& accumulations() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_accumulations();
+  void clear_a_accumulations();
+  const std::string& a_accumulations(int index) const;
+  std::string* mutable_a_accumulations(int index);
+  void set_a_accumulations(int index, const std::string& value);
+  void set_a_accumulations(int index, std::string&& value);
+  void set_a_accumulations(int index, const char* value);
+  void set_a_accumulations(int index, const void* value, size_t size);
+  std::string* add_a_accumulations();
+  void add_a_accumulations(const std::string& value);
+  void add_a_accumulations(std::string&& value);
+  void add_a_accumulations(const char* value);
+  void add_a_accumulations(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_accumulations() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_accumulations();
   private:
-  const std::string& _internal_accumulations(int index) const;
-  std::string* _internal_add_accumulations();
+  const std::string& _internal_a_accumulations(int index) const;
+  std::string* _internal_add_a_accumulations();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms)
@@ -887,7 +887,7 @@ class Msg_AccumulateChildKeyedHistograms final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> accumulations_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_accumulations_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1005,30 +1005,30 @@ class Msg_UpdateChildScalars final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionsFieldNumber = 1,
+    kAActionsFieldNumber = 1,
   };
-  // repeated bytes actions = 1;
-  int actions_size() const;
+  // repeated bytes a_actions = 1;
+  int a_actions_size() const;
   private:
-  int _internal_actions_size() const;
+  int _internal_a_actions_size() const;
   public:
-  void clear_actions();
-  const std::string& actions(int index) const;
-  std::string* mutable_actions(int index);
-  void set_actions(int index, const std::string& value);
-  void set_actions(int index, std::string&& value);
-  void set_actions(int index, const char* value);
-  void set_actions(int index, const void* value, size_t size);
-  std::string* add_actions();
-  void add_actions(const std::string& value);
-  void add_actions(std::string&& value);
-  void add_actions(const char* value);
-  void add_actions(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& actions() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_actions();
+  void clear_a_actions();
+  const std::string& a_actions(int index) const;
+  std::string* mutable_a_actions(int index);
+  void set_a_actions(int index, const std::string& value);
+  void set_a_actions(int index, std::string&& value);
+  void set_a_actions(int index, const char* value);
+  void set_a_actions(int index, const void* value, size_t size);
+  std::string* add_a_actions();
+  void add_a_actions(const std::string& value);
+  void add_a_actions(std::string&& value);
+  void add_a_actions(const char* value);
+  void add_a_actions(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_actions() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_actions();
   private:
-  const std::string& _internal_actions(int index) const;
-  std::string* _internal_add_actions();
+  const std::string& _internal_a_actions(int index) const;
+  std::string* _internal_add_a_actions();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars)
@@ -1039,7 +1039,7 @@ class Msg_UpdateChildScalars final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> actions_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_actions_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1157,30 +1157,30 @@ class Msg_UpdateChildKeyedScalars final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionsFieldNumber = 1,
+    kAActionsFieldNumber = 1,
   };
-  // repeated bytes actions = 1;
-  int actions_size() const;
+  // repeated bytes a_actions = 1;
+  int a_actions_size() const;
   private:
-  int _internal_actions_size() const;
+  int _internal_a_actions_size() const;
   public:
-  void clear_actions();
-  const std::string& actions(int index) const;
-  std::string* mutable_actions(int index);
-  void set_actions(int index, const std::string& value);
-  void set_actions(int index, std::string&& value);
-  void set_actions(int index, const char* value);
-  void set_actions(int index, const void* value, size_t size);
-  std::string* add_actions();
-  void add_actions(const std::string& value);
-  void add_actions(std::string&& value);
-  void add_actions(const char* value);
-  void add_actions(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& actions() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_actions();
+  void clear_a_actions();
+  const std::string& a_actions(int index) const;
+  std::string* mutable_a_actions(int index);
+  void set_a_actions(int index, const std::string& value);
+  void set_a_actions(int index, std::string&& value);
+  void set_a_actions(int index, const char* value);
+  void set_a_actions(int index, const void* value, size_t size);
+  std::string* add_a_actions();
+  void add_a_actions(const std::string& value);
+  void add_a_actions(std::string&& value);
+  void add_a_actions(const char* value);
+  void add_a_actions(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_actions() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_actions();
   private:
-  const std::string& _internal_actions(int index) const;
-  std::string* _internal_add_actions();
+  const std::string& _internal_a_actions(int index) const;
+  std::string* _internal_add_a_actions();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars)
@@ -1191,7 +1191,7 @@ class Msg_UpdateChildKeyedScalars final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> actions_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_actions_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1309,30 +1309,30 @@ class Msg_RecordChildEvents final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEventsFieldNumber = 1,
+    kAEventsFieldNumber = 1,
   };
-  // repeated bytes events = 1;
-  int events_size() const;
+  // repeated bytes a_events = 1;
+  int a_events_size() const;
   private:
-  int _internal_events_size() const;
+  int _internal_a_events_size() const;
   public:
-  void clear_events();
-  const std::string& events(int index) const;
-  std::string* mutable_events(int index);
-  void set_events(int index, const std::string& value);
-  void set_events(int index, std::string&& value);
-  void set_events(int index, const char* value);
-  void set_events(int index, const void* value, size_t size);
-  std::string* add_events();
-  void add_events(const std::string& value);
-  void add_events(std::string&& value);
-  void add_events(const char* value);
-  void add_events(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& events() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_events();
+  void clear_a_events();
+  const std::string& a_events(int index) const;
+  std::string* mutable_a_events(int index);
+  void set_a_events(int index, const std::string& value);
+  void set_a_events(int index, std::string&& value);
+  void set_a_events(int index, const char* value);
+  void set_a_events(int index, const void* value, size_t size);
+  std::string* add_a_events();
+  void add_a_events(const std::string& value);
+  void add_a_events(std::string&& value);
+  void add_a_events(const char* value);
+  void add_a_events(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_events() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_events();
   private:
-  const std::string& _internal_events(int index) const;
-  std::string* _internal_add_events();
+  const std::string& _internal_a_events(int index) const;
+  std::string* _internal_add_a_events();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents)
@@ -1343,7 +1343,7 @@ class Msg_RecordChildEvents final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> events_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_events_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1461,24 +1461,24 @@ class Msg_RecordDiscardedData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData)
@@ -1491,7 +1491,7 @@ class Msg_RecordDiscardedData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -1732,52 +1732,52 @@ class Msg_Init final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSandboxBrokerFieldNumber = 1,
-    kCanRecordReleaseTelemetryFieldNumber = 2,
-    kAIsReadyForBackgroundProcessingFieldNumber = 3,
+    kASandboxBrokerFieldNumber = 1,
+    kACanRecordReleaseTelemetryFieldNumber = 2,
+    kAAIsReadyForBackgroundProcessingFieldNumber = 3,
   };
-  // optional bytes sandboxBroker = 1;
-  bool has_sandboxbroker() const;
+  // optional bytes a_sandboxBroker = 1;
+  bool has_a_sandboxbroker() const;
   private:
-  bool _internal_has_sandboxbroker() const;
+  bool _internal_has_a_sandboxbroker() const;
   public:
-  void clear_sandboxbroker();
-  const std::string& sandboxbroker() const;
+  void clear_a_sandboxbroker();
+  const std::string& a_sandboxbroker() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sandboxbroker(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sandboxbroker();
-  PROTOBUF_NODISCARD std::string* release_sandboxbroker();
-  void set_allocated_sandboxbroker(std::string* sandboxbroker);
+  void set_a_sandboxbroker(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_sandboxbroker();
+  PROTOBUF_NODISCARD std::string* release_a_sandboxbroker();
+  void set_allocated_a_sandboxbroker(std::string* a_sandboxbroker);
   private:
-  const std::string& _internal_sandboxbroker() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sandboxbroker(const std::string& value);
-  std::string* _internal_mutable_sandboxbroker();
+  const std::string& _internal_a_sandboxbroker() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_sandboxbroker(const std::string& value);
+  std::string* _internal_mutable_a_sandboxbroker();
   public:
 
-  // required bool canRecordReleaseTelemetry = 2;
-  bool has_canrecordreleasetelemetry() const;
+  // required bool a_canRecordReleaseTelemetry = 2;
+  bool has_a_canrecordreleasetelemetry() const;
   private:
-  bool _internal_has_canrecordreleasetelemetry() const;
+  bool _internal_has_a_canrecordreleasetelemetry() const;
   public:
-  void clear_canrecordreleasetelemetry();
-  bool canrecordreleasetelemetry() const;
-  void set_canrecordreleasetelemetry(bool value);
+  void clear_a_canrecordreleasetelemetry();
+  bool a_canrecordreleasetelemetry() const;
+  void set_a_canrecordreleasetelemetry(bool value);
   private:
-  bool _internal_canrecordreleasetelemetry() const;
-  void _internal_set_canrecordreleasetelemetry(bool value);
+  bool _internal_a_canrecordreleasetelemetry() const;
+  void _internal_set_a_canrecordreleasetelemetry(bool value);
   public:
 
-  // required bool aIsReadyForBackgroundProcessing = 3;
-  bool has_aisreadyforbackgroundprocessing() const;
+  // required bool a_aIsReadyForBackgroundProcessing = 3;
+  bool has_a_aisreadyforbackgroundprocessing() const;
   private:
-  bool _internal_has_aisreadyforbackgroundprocessing() const;
+  bool _internal_has_a_aisreadyforbackgroundprocessing() const;
   public:
-  void clear_aisreadyforbackgroundprocessing();
-  bool aisreadyforbackgroundprocessing() const;
-  void set_aisreadyforbackgroundprocessing(bool value);
+  void clear_a_aisreadyforbackgroundprocessing();
+  bool a_aisreadyforbackgroundprocessing() const;
+  void set_a_aisreadyforbackgroundprocessing(bool value);
   private:
-  bool _internal_aisreadyforbackgroundprocessing() const;
-  void _internal_set_aisreadyforbackgroundprocessing(bool value);
+  bool _internal_a_aisreadyforbackgroundprocessing() const;
+  void _internal_set_a_aisreadyforbackgroundprocessing(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init)
@@ -1793,9 +1793,9 @@ class Msg_Init final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sandboxbroker_;
-    bool canrecordreleasetelemetry_;
-    bool aisreadyforbackgroundprocessing_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sandboxbroker_;
+    bool a_canrecordreleasetelemetry_;
+    bool a_aisreadyforbackgroundprocessing_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -1912,24 +1912,24 @@ class Msg_InitProfiler final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndpointFieldNumber = 1,
+    kAEndpointFieldNumber = 1,
   };
-  // required bytes endpoint = 1;
-  bool has_endpoint() const;
+  // required bytes a_endpoint = 1;
+  bool has_a_endpoint() const;
   private:
-  bool _internal_has_endpoint() const;
+  bool _internal_has_a_endpoint() const;
   public:
-  void clear_endpoint();
-  const std::string& endpoint() const;
+  void clear_a_endpoint();
+  const std::string& a_endpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_endpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_endpoint();
-  PROTOBUF_NODISCARD std::string* release_endpoint();
-  void set_allocated_endpoint(std::string* endpoint);
+  void set_a_endpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_endpoint();
+  PROTOBUF_NODISCARD std::string* release_a_endpoint();
+  void set_allocated_a_endpoint(std::string* a_endpoint);
   private:
-  const std::string& _internal_endpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endpoint(const std::string& value);
-  std::string* _internal_mutable_endpoint();
+  const std::string& _internal_a_endpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_endpoint(const std::string& value);
+  std::string* _internal_mutable_a_endpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler)
@@ -1942,7 +1942,7 @@ class Msg_InitProfiler final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -2059,66 +2059,66 @@ class Msg_RequestMemoryReport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDMDFileFieldNumber = 4,
-    kGenerationFieldNumber = 1,
-    kAnonymizeFieldNumber = 2,
-    kMinimizeMemoryUsageFieldNumber = 3,
+    kADMDFileFieldNumber = 4,
+    kAGenerationFieldNumber = 1,
+    kAAnonymizeFieldNumber = 2,
+    kAMinimizeMemoryUsageFieldNumber = 3,
   };
-  // optional bytes DMDFile = 4;
-  bool has_dmdfile() const;
+  // optional bytes a_DMDFile = 4;
+  bool has_a_dmdfile() const;
   private:
-  bool _internal_has_dmdfile() const;
+  bool _internal_has_a_dmdfile() const;
   public:
-  void clear_dmdfile();
-  const std::string& dmdfile() const;
+  void clear_a_dmdfile();
+  const std::string& a_dmdfile() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_dmdfile(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_dmdfile();
-  PROTOBUF_NODISCARD std::string* release_dmdfile();
-  void set_allocated_dmdfile(std::string* dmdfile);
+  void set_a_dmdfile(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_dmdfile();
+  PROTOBUF_NODISCARD std::string* release_a_dmdfile();
+  void set_allocated_a_dmdfile(std::string* a_dmdfile);
   private:
-  const std::string& _internal_dmdfile() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dmdfile(const std::string& value);
-  std::string* _internal_mutable_dmdfile();
+  const std::string& _internal_a_dmdfile() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_dmdfile(const std::string& value);
+  std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 generation = 1;
-  bool has_generation() const;
+  // required uint32 a_generation = 1;
+  bool has_a_generation() const;
   private:
-  bool _internal_has_generation() const;
+  bool _internal_has_a_generation() const;
   public:
-  void clear_generation();
-  uint32_t generation() const;
-  void set_generation(uint32_t value);
+  void clear_a_generation();
+  uint32_t a_generation() const;
+  void set_a_generation(uint32_t value);
   private:
-  uint32_t _internal_generation() const;
-  void _internal_set_generation(uint32_t value);
-  public:
-
-  // required bool anonymize = 2;
-  bool has_anonymize() const;
-  private:
-  bool _internal_has_anonymize() const;
-  public:
-  void clear_anonymize();
-  bool anonymize() const;
-  void set_anonymize(bool value);
-  private:
-  bool _internal_anonymize() const;
-  void _internal_set_anonymize(bool value);
+  uint32_t _internal_a_generation() const;
+  void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool minimizeMemoryUsage = 3;
-  bool has_minimizememoryusage() const;
+  // required bool a_anonymize = 2;
+  bool has_a_anonymize() const;
   private:
-  bool _internal_has_minimizememoryusage() const;
+  bool _internal_has_a_anonymize() const;
   public:
-  void clear_minimizememoryusage();
-  bool minimizememoryusage() const;
-  void set_minimizememoryusage(bool value);
+  void clear_a_anonymize();
+  bool a_anonymize() const;
+  void set_a_anonymize(bool value);
   private:
-  bool _internal_minimizememoryusage() const;
-  void _internal_set_minimizememoryusage(bool value);
+  bool _internal_a_anonymize() const;
+  void _internal_set_a_anonymize(bool value);
+  public:
+
+  // required bool a_minimizeMemoryUsage = 3;
+  bool has_a_minimizememoryusage() const;
+  private:
+  bool _internal_has_a_minimizememoryusage() const;
+  public:
+  void clear_a_minimizememoryusage();
+  bool a_minimizememoryusage() const;
+  void set_a_minimizememoryusage(bool value);
+  private:
+  bool _internal_a_minimizememoryusage() const;
+  void _internal_set_a_minimizememoryusage(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport)
@@ -2134,10 +2134,10 @@ class Msg_RequestMemoryReport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dmdfile_;
-    uint32_t generation_;
-    bool anonymize_;
-    bool minimizememoryusage_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dmdfile_;
+    uint32_t a_generation_;
+    bool a_anonymize_;
+    bool a_minimizememoryusage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -2254,19 +2254,19 @@ class Reply_RequestMemoryReport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAGenerationFieldNumber = 1,
+    kAAGenerationFieldNumber = 1,
   };
-  // required uint32 aGeneration = 1;
-  bool has_ageneration() const;
+  // required uint32 a_aGeneration = 1;
+  bool has_a_ageneration() const;
   private:
-  bool _internal_has_ageneration() const;
+  bool _internal_has_a_ageneration() const;
   public:
-  void clear_ageneration();
-  uint32_t ageneration() const;
-  void set_ageneration(uint32_t value);
+  void clear_a_ageneration();
+  uint32_t a_ageneration() const;
+  void set_a_ageneration(uint32_t value);
   private:
-  uint32_t _internal_ageneration() const;
-  void _internal_set_ageneration(uint32_t value);
+  uint32_t _internal_a_ageneration() const;
+  void _internal_set_a_ageneration(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Reply_RequestMemoryReport)
@@ -2279,7 +2279,7 @@ class Reply_RequestMemoryReport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t ageneration_;
+    uint32_t a_ageneration_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -2396,25 +2396,25 @@ class Msg_PreferenceUpdate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPrefFieldNumber = 1,
+    kAPrefFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.Pref pref = 1;
-  bool has_pref() const;
+  // required .protobuf.mozilla.dom.Pref a_pref = 1;
+  bool has_a_pref() const;
   private:
-  bool _internal_has_pref() const;
+  bool _internal_has_a_pref() const;
   public:
-  void clear_pref();
-  const ::protobuf::mozilla::dom::Pref& pref() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::Pref* release_pref();
-  ::protobuf::mozilla::dom::Pref* mutable_pref();
-  void set_allocated_pref(::protobuf::mozilla::dom::Pref* pref);
+  void clear_a_pref();
+  const ::protobuf::mozilla::dom::Pref& a_pref() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::Pref* release_a_pref();
+  ::protobuf::mozilla::dom::Pref* mutable_a_pref();
+  void set_allocated_a_pref(::protobuf::mozilla::dom::Pref* a_pref);
   private:
-  const ::protobuf::mozilla::dom::Pref& _internal_pref() const;
-  ::protobuf::mozilla::dom::Pref* _internal_mutable_pref();
+  const ::protobuf::mozilla::dom::Pref& _internal_a_pref() const;
+  ::protobuf::mozilla::dom::Pref* _internal_mutable_a_pref();
   public:
-  void unsafe_arena_set_allocated_pref(
-      ::protobuf::mozilla::dom::Pref* pref);
-  ::protobuf::mozilla::dom::Pref* unsafe_arena_release_pref();
+  void unsafe_arena_set_allocated_a_pref(
+      ::protobuf::mozilla::dom::Pref* a_pref);
+  ::protobuf::mozilla::dom::Pref* unsafe_arena_release_a_pref();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate)
  private:
@@ -2426,7 +2426,7 @@ class Msg_PreferenceUpdate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::Pref* pref_;
+    ::protobuf::mozilla::dom::Pref* a_pref_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -2667,24 +2667,24 @@ class Reply_FlushFOGData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufFieldNumber = 1,
+    kABufFieldNumber = 1,
   };
-  // required bytes buf = 1;
-  bool has_buf() const;
+  // required bytes a_buf = 1;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData)
@@ -2697,7 +2697,7 @@ class Reply_FlushFOGData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -2938,19 +2938,19 @@ class Reply_TestTriggerMetrics final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Reply_TestTriggerMetrics)
@@ -2963,7 +2963,7 @@ class Reply_TestTriggerMetrics final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -3204,43 +3204,43 @@ class Msg_StartUtilityAudioDecoderService final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUpdatesFieldNumber = 2,
-    kAEndpointFieldNumber = 1,
+    kAUpdatesFieldNumber = 2,
+    kAAEndpointFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.gfx.GfxVarUpdate updates = 2;
-  int updates_size() const;
+  // repeated .protobuf.mozilla.gfx.GfxVarUpdate a_updates = 2;
+  int a_updates_size() const;
   private:
-  int _internal_updates_size() const;
+  int _internal_a_updates_size() const;
   public:
-  void clear_updates();
-  ::protobuf::mozilla::gfx::GfxVarUpdate* mutable_updates(int index);
+  void clear_a_updates();
+  ::protobuf::mozilla::gfx::GfxVarUpdate* mutable_a_updates(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate >*
-      mutable_updates();
+      mutable_a_updates();
   private:
-  const ::protobuf::mozilla::gfx::GfxVarUpdate& _internal_updates(int index) const;
-  ::protobuf::mozilla::gfx::GfxVarUpdate* _internal_add_updates();
+  const ::protobuf::mozilla::gfx::GfxVarUpdate& _internal_a_updates(int index) const;
+  ::protobuf::mozilla::gfx::GfxVarUpdate* _internal_add_a_updates();
   public:
-  const ::protobuf::mozilla::gfx::GfxVarUpdate& updates(int index) const;
-  ::protobuf::mozilla::gfx::GfxVarUpdate* add_updates();
+  const ::protobuf::mozilla::gfx::GfxVarUpdate& a_updates(int index) const;
+  ::protobuf::mozilla::gfx::GfxVarUpdate* add_a_updates();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate >&
-      updates() const;
+      a_updates() const;
 
-  // required bytes aEndpoint = 1;
-  bool has_aendpoint() const;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
   private:
-  bool _internal_has_aendpoint() const;
+  bool _internal_has_a_aendpoint() const;
   public:
-  void clear_aendpoint();
-  const std::string& aendpoint() const;
+  void clear_a_aendpoint();
+  const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aendpoint();
-  PROTOBUF_NODISCARD std::string* release_aendpoint();
-  void set_allocated_aendpoint(std::string* aendpoint);
+  void set_a_aendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_aendpoint();
+  void set_allocated_a_aendpoint(std::string* a_aendpoint);
   private:
-  const std::string& _internal_aendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aendpoint(const std::string& value);
-  std::string* _internal_mutable_aendpoint();
+  const std::string& _internal_a_aendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aendpoint(const std::string& value);
+  std::string* _internal_mutable_a_aendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService)
@@ -3253,8 +3253,8 @@ class Msg_StartUtilityAudioDecoderService final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate > updates_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate > a_updates_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -3371,24 +3371,24 @@ class Msg_StartJSOracleService final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEndpointFieldNumber = 1,
+    kAAEndpointFieldNumber = 1,
   };
-  // required bytes aEndpoint = 1;
-  bool has_aendpoint() const;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
   private:
-  bool _internal_has_aendpoint() const;
+  bool _internal_has_a_aendpoint() const;
   public:
-  void clear_aendpoint();
-  const std::string& aendpoint() const;
+  void clear_a_aendpoint();
+  const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aendpoint();
-  PROTOBUF_NODISCARD std::string* release_aendpoint();
-  void set_allocated_aendpoint(std::string* aendpoint);
+  void set_a_aendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_aendpoint();
+  void set_allocated_a_aendpoint(std::string* a_aendpoint);
   private:
-  const std::string& _internal_aendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aendpoint(const std::string& value);
-  std::string* _internal_mutable_aendpoint();
+  const std::string& _internal_a_aendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aendpoint(const std::string& value);
+  std::string* _internal_mutable_a_aendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService)
@@ -3401,7 +3401,7 @@ class Msg_StartJSOracleService final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUtilityProcess_2eproto;
@@ -3417,41 +3417,41 @@ class Msg_StartJSOracleService final :
 #endif  // __GNUC__
 // Msg_InitCrashReporter
 
-// required .protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
-inline bool Msg_InitCrashReporter::_internal_has_ainitargs() const {
+// required .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+inline bool Msg_InitCrashReporter::_internal_has_a_ainitargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.ainitargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_ainitargs_ != nullptr);
   return value;
 }
-inline bool Msg_InitCrashReporter::has_ainitargs() const {
-  return _internal_has_ainitargs();
+inline bool Msg_InitCrashReporter::has_a_ainitargs() const {
+  return _internal_has_a_ainitargs();
 }
-inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::_internal_ainitargs() const {
-  const ::protobuf::CrashReporter::CrashReporterInitArgs* p = _impl_.ainitargs_;
+inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::_internal_a_ainitargs() const {
+  const ::protobuf::CrashReporter::CrashReporterInitArgs* p = _impl_.a_ainitargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::CrashReporter::CrashReporterInitArgs&>(
       ::protobuf::CrashReporter::_CrashReporterInitArgs_default_instance_);
 }
-inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::ainitargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.aInitArgs)
-  return _internal_ainitargs();
+inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::a_ainitargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.a_aInitArgs)
+  return _internal_a_ainitargs();
 }
-inline void Msg_InitCrashReporter::unsafe_arena_set_allocated_ainitargs(
-    ::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs) {
+inline void Msg_InitCrashReporter::unsafe_arena_set_allocated_a_ainitargs(
+    ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ainitargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ainitargs_);
   }
-  _impl_.ainitargs_ = ainitargs;
-  if (ainitargs) {
+  _impl_.a_ainitargs_ = a_ainitargs;
+  if (a_ainitargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.aInitArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.a_aInitArgs)
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::release_ainitargs() {
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::release_a_ainitargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.ainitargs_;
-  _impl_.ainitargs_ = nullptr;
+  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.a_ainitargs_;
+  _impl_.a_ainitargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3463,86 +3463,86 @@ inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::unsafe_arena_release_ainitargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.aInitArgs)
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::unsafe_arena_release_a_ainitargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.a_aInitArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.ainitargs_;
-  _impl_.ainitargs_ = nullptr;
+  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.a_ainitargs_;
+  _impl_.a_ainitargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::_internal_mutable_ainitargs() {
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::_internal_mutable_a_ainitargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.ainitargs_ == nullptr) {
+  if (_impl_.a_ainitargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::CrashReporter::CrashReporterInitArgs>(GetArenaForAllocation());
-    _impl_.ainitargs_ = p;
+    _impl_.a_ainitargs_ = p;
   }
-  return _impl_.ainitargs_;
+  return _impl_.a_ainitargs_;
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::mutable_ainitargs() {
-  ::protobuf::CrashReporter::CrashReporterInitArgs* _msg = _internal_mutable_ainitargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.aInitArgs)
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::mutable_a_ainitargs() {
+  ::protobuf::CrashReporter::CrashReporterInitArgs* _msg = _internal_mutable_a_ainitargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.a_aInitArgs)
   return _msg;
 }
-inline void Msg_InitCrashReporter::set_allocated_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs) {
+inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ainitargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ainitargs_);
   }
-  if (ainitargs) {
+  if (a_ainitargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ainitargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_ainitargs));
     if (message_arena != submessage_arena) {
-      ainitargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, ainitargs, submessage_arena);
+      a_ainitargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_ainitargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ainitargs_ = ainitargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.aInitArgs)
+  _impl_.a_ainitargs_ = a_ainitargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitCrashReporter.a_aInitArgs)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AddMemoryReport
 
-// required .protobuf.mozilla.dom.MemoryReport aReport = 1;
-inline bool Msg_AddMemoryReport::_internal_has_areport() const {
+// required .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+inline bool Msg_AddMemoryReport::_internal_has_a_areport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.areport_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_areport_ != nullptr);
   return value;
 }
-inline bool Msg_AddMemoryReport::has_areport() const {
-  return _internal_has_areport();
+inline bool Msg_AddMemoryReport::has_a_areport() const {
+  return _internal_has_a_areport();
 }
-inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::_internal_areport() const {
-  const ::protobuf::mozilla::dom::MemoryReport* p = _impl_.areport_;
+inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::_internal_a_areport() const {
+  const ::protobuf::mozilla::dom::MemoryReport* p = _impl_.a_areport_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::MemoryReport&>(
       ::protobuf::mozilla::dom::_MemoryReport_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::areport() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.aReport)
-  return _internal_areport();
+inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::a_areport() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.a_aReport)
+  return _internal_a_areport();
 }
-inline void Msg_AddMemoryReport::unsafe_arena_set_allocated_areport(
-    ::protobuf::mozilla::dom::MemoryReport* areport) {
+inline void Msg_AddMemoryReport::unsafe_arena_set_allocated_a_areport(
+    ::protobuf::mozilla::dom::MemoryReport* a_areport) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.areport_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_areport_);
   }
-  _impl_.areport_ = areport;
-  if (areport) {
+  _impl_.a_areport_ = a_areport;
+  if (a_areport) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.aReport)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.a_aReport)
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_areport() {
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_a_areport() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.areport_;
-  _impl_.areport_ = nullptr;
+  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.a_areport_;
+  _impl_.a_areport_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3554,584 +3554,584 @@ inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_arep
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::unsafe_arena_release_areport() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.aReport)
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::unsafe_arena_release_a_areport() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.a_aReport)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.areport_;
-  _impl_.areport_ = nullptr;
+  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.a_areport_;
+  _impl_.a_areport_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::_internal_mutable_areport() {
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::_internal_mutable_a_areport() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.areport_ == nullptr) {
+  if (_impl_.a_areport_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MemoryReport>(GetArenaForAllocation());
-    _impl_.areport_ = p;
+    _impl_.a_areport_ = p;
   }
-  return _impl_.areport_;
+  return _impl_.a_areport_;
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::mutable_areport() {
-  ::protobuf::mozilla::dom::MemoryReport* _msg = _internal_mutable_areport();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.aReport)
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::mutable_a_areport() {
+  ::protobuf::mozilla::dom::MemoryReport* _msg = _internal_mutable_a_areport();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.a_aReport)
   return _msg;
 }
-inline void Msg_AddMemoryReport::set_allocated_areport(::protobuf::mozilla::dom::MemoryReport* areport) {
+inline void Msg_AddMemoryReport::set_allocated_a_areport(::protobuf::mozilla::dom::MemoryReport* a_areport) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.areport_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_areport_);
   }
-  if (areport) {
+  if (a_areport) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(areport));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_areport));
     if (message_arena != submessage_arena) {
-      areport = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, areport, submessage_arena);
+      a_areport = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_areport, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.areport_ = areport;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.aReport)
+  _impl_.a_areport_ = a_areport;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_AddMemoryReport.a_aReport)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_FOGData
 
-// required bytes buf = 1;
-inline bool Msg_FOGData::_internal_has_buf() const {
+// required bytes a_buf = 1;
+inline bool Msg_FOGData::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FOGData::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_FOGData::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_FOGData::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_FOGData::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_FOGData::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.buf)
-  return _internal_buf();
+inline const std::string& Msg_FOGData::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_FOGData::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_FOGData::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.a_buf)
 }
-inline std::string* Msg_FOGData::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.buf)
+inline std::string* Msg_FOGData::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.a_buf)
   return _s;
 }
-inline const std::string& Msg_FOGData::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_FOGData::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_FOGData::_internal_set_buf(const std::string& value) {
+inline void Msg_FOGData::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_FOGData::_internal_mutable_buf() {
+inline std::string* Msg_FOGData::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_FOGData::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_FOGData::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_FOGData::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_FOGData::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_FOGData.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AccumulateChildHistograms
 
-// repeated bytes accumulations = 1;
-inline int Msg_AccumulateChildHistograms::_internal_accumulations_size() const {
-  return _impl_.accumulations_.size();
+// repeated bytes a_accumulations = 1;
+inline int Msg_AccumulateChildHistograms::_internal_a_accumulations_size() const {
+  return _impl_.a_accumulations_.size();
 }
-inline int Msg_AccumulateChildHistograms::accumulations_size() const {
-  return _internal_accumulations_size();
+inline int Msg_AccumulateChildHistograms::a_accumulations_size() const {
+  return _internal_a_accumulations_size();
 }
-inline void Msg_AccumulateChildHistograms::clear_accumulations() {
-  _impl_.accumulations_.Clear();
+inline void Msg_AccumulateChildHistograms::clear_a_accumulations() {
+  _impl_.a_accumulations_.Clear();
 }
-inline std::string* Msg_AccumulateChildHistograms::add_accumulations() {
-  std::string* _s = _internal_add_accumulations();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+inline std::string* Msg_AccumulateChildHistograms::add_a_accumulations() {
+  std::string* _s = _internal_add_a_accumulations();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
   return _s;
 }
-inline const std::string& Msg_AccumulateChildHistograms::_internal_accumulations(int index) const {
-  return _impl_.accumulations_.Get(index);
+inline const std::string& Msg_AccumulateChildHistograms::_internal_a_accumulations(int index) const {
+  return _impl_.a_accumulations_.Get(index);
 }
-inline const std::string& Msg_AccumulateChildHistograms::accumulations(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
-  return _internal_accumulations(index);
+inline const std::string& Msg_AccumulateChildHistograms::a_accumulations(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return _internal_a_accumulations(index);
 }
-inline std::string* Msg_AccumulateChildHistograms::mutable_accumulations(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
-  return _impl_.accumulations_.Mutable(index);
+inline std::string* Msg_AccumulateChildHistograms::mutable_a_accumulations(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return _impl_.a_accumulations_.Mutable(index);
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, const std::string& value) {
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, const std::string& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, std::string&& value) {
-  _impl_.accumulations_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, std::string&& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, const char* value) {
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, const void* value, size_t size) {
-  _impl_.accumulations_.Mutable(index)->assign(
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, const void* value, size_t size) {
+  _impl_.a_accumulations_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline std::string* Msg_AccumulateChildHistograms::_internal_add_accumulations() {
-  return _impl_.accumulations_.Add();
+inline std::string* Msg_AccumulateChildHistograms::_internal_add_a_accumulations() {
+  return _impl_.a_accumulations_.Add();
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(const std::string& value) {
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(const std::string& value) {
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(std::string&& value) {
-  _impl_.accumulations_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(std::string&& value) {
+  _impl_.a_accumulations_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(const char* value) {
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(const void* value, size_t size) {
-  _impl_.accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(const void* value, size_t size) {
+  _impl_.a_accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_AccumulateChildHistograms::accumulations() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
-  return _impl_.accumulations_;
+Msg_AccumulateChildHistograms::a_accumulations() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return _impl_.a_accumulations_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_AccumulateChildHistograms::mutable_accumulations() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.accumulations)
-  return &_impl_.accumulations_;
+Msg_AccumulateChildHistograms::mutable_a_accumulations() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return &_impl_.a_accumulations_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AccumulateChildKeyedHistograms
 
-// repeated bytes accumulations = 1;
-inline int Msg_AccumulateChildKeyedHistograms::_internal_accumulations_size() const {
-  return _impl_.accumulations_.size();
+// repeated bytes a_accumulations = 1;
+inline int Msg_AccumulateChildKeyedHistograms::_internal_a_accumulations_size() const {
+  return _impl_.a_accumulations_.size();
 }
-inline int Msg_AccumulateChildKeyedHistograms::accumulations_size() const {
-  return _internal_accumulations_size();
+inline int Msg_AccumulateChildKeyedHistograms::a_accumulations_size() const {
+  return _internal_a_accumulations_size();
 }
-inline void Msg_AccumulateChildKeyedHistograms::clear_accumulations() {
-  _impl_.accumulations_.Clear();
+inline void Msg_AccumulateChildKeyedHistograms::clear_a_accumulations() {
+  _impl_.a_accumulations_.Clear();
 }
-inline std::string* Msg_AccumulateChildKeyedHistograms::add_accumulations() {
-  std::string* _s = _internal_add_accumulations();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline std::string* Msg_AccumulateChildKeyedHistograms::add_a_accumulations() {
+  std::string* _s = _internal_add_a_accumulations();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
   return _s;
 }
-inline const std::string& Msg_AccumulateChildKeyedHistograms::_internal_accumulations(int index) const {
-  return _impl_.accumulations_.Get(index);
+inline const std::string& Msg_AccumulateChildKeyedHistograms::_internal_a_accumulations(int index) const {
+  return _impl_.a_accumulations_.Get(index);
 }
-inline const std::string& Msg_AccumulateChildKeyedHistograms::accumulations(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return _internal_accumulations(index);
+inline const std::string& Msg_AccumulateChildKeyedHistograms::a_accumulations(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return _internal_a_accumulations(index);
 }
-inline std::string* Msg_AccumulateChildKeyedHistograms::mutable_accumulations(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return _impl_.accumulations_.Mutable(index);
+inline std::string* Msg_AccumulateChildKeyedHistograms::mutable_a_accumulations(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return _impl_.a_accumulations_.Mutable(index);
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, const std::string& value) {
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, const std::string& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, std::string&& value) {
-  _impl_.accumulations_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, std::string&& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, const char* value) {
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, const void* value, size_t size) {
-  _impl_.accumulations_.Mutable(index)->assign(
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, const void* value, size_t size) {
+  _impl_.a_accumulations_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline std::string* Msg_AccumulateChildKeyedHistograms::_internal_add_accumulations() {
-  return _impl_.accumulations_.Add();
+inline std::string* Msg_AccumulateChildKeyedHistograms::_internal_add_a_accumulations() {
+  return _impl_.a_accumulations_.Add();
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(const std::string& value) {
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(const std::string& value) {
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(std::string&& value) {
-  _impl_.accumulations_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(std::string&& value) {
+  _impl_.a_accumulations_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(const char* value) {
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(const void* value, size_t size) {
-  _impl_.accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(const void* value, size_t size) {
+  _impl_.a_accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_AccumulateChildKeyedHistograms::accumulations() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return _impl_.accumulations_;
+Msg_AccumulateChildKeyedHistograms::a_accumulations() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return _impl_.a_accumulations_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_AccumulateChildKeyedHistograms::mutable_accumulations() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return &_impl_.accumulations_;
+Msg_AccumulateChildKeyedHistograms::mutable_a_accumulations() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return &_impl_.a_accumulations_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateChildScalars
 
-// repeated bytes actions = 1;
-inline int Msg_UpdateChildScalars::_internal_actions_size() const {
-  return _impl_.actions_.size();
+// repeated bytes a_actions = 1;
+inline int Msg_UpdateChildScalars::_internal_a_actions_size() const {
+  return _impl_.a_actions_.size();
 }
-inline int Msg_UpdateChildScalars::actions_size() const {
-  return _internal_actions_size();
+inline int Msg_UpdateChildScalars::a_actions_size() const {
+  return _internal_a_actions_size();
 }
-inline void Msg_UpdateChildScalars::clear_actions() {
-  _impl_.actions_.Clear();
+inline void Msg_UpdateChildScalars::clear_a_actions() {
+  _impl_.a_actions_.Clear();
 }
-inline std::string* Msg_UpdateChildScalars::add_actions() {
-  std::string* _s = _internal_add_actions();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+inline std::string* Msg_UpdateChildScalars::add_a_actions() {
+  std::string* _s = _internal_add_a_actions();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
   return _s;
 }
-inline const std::string& Msg_UpdateChildScalars::_internal_actions(int index) const {
-  return _impl_.actions_.Get(index);
+inline const std::string& Msg_UpdateChildScalars::_internal_a_actions(int index) const {
+  return _impl_.a_actions_.Get(index);
 }
-inline const std::string& Msg_UpdateChildScalars::actions(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
-  return _internal_actions(index);
+inline const std::string& Msg_UpdateChildScalars::a_actions(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
+  return _internal_a_actions(index);
 }
-inline std::string* Msg_UpdateChildScalars::mutable_actions(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
-  return _impl_.actions_.Mutable(index);
+inline std::string* Msg_UpdateChildScalars::mutable_a_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
+  return _impl_.a_actions_.Mutable(index);
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, const std::string& value) {
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::set_a_actions(int index, const std::string& value) {
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, std::string&& value) {
-  _impl_.actions_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::set_a_actions(int index, std::string&& value) {
+  _impl_.a_actions_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, const char* value) {
+inline void Msg_UpdateChildScalars::set_a_actions(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, const void* value, size_t size) {
-  _impl_.actions_.Mutable(index)->assign(
+inline void Msg_UpdateChildScalars::set_a_actions(int index, const void* value, size_t size) {
+  _impl_.a_actions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline std::string* Msg_UpdateChildScalars::_internal_add_actions() {
-  return _impl_.actions_.Add();
+inline std::string* Msg_UpdateChildScalars::_internal_add_a_actions() {
+  return _impl_.a_actions_.Add();
 }
-inline void Msg_UpdateChildScalars::add_actions(const std::string& value) {
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::add_a_actions(const std::string& value) {
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::add_actions(std::string&& value) {
-  _impl_.actions_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::add_a_actions(std::string&& value) {
+  _impl_.a_actions_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::add_actions(const char* value) {
+inline void Msg_UpdateChildScalars::add_a_actions(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::add_actions(const void* value, size_t size) {
-  _impl_.actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::add_a_actions(const void* value, size_t size) {
+  _impl_.a_actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_UpdateChildScalars::actions() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
-  return _impl_.actions_;
+Msg_UpdateChildScalars::a_actions() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
+  return _impl_.a_actions_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_UpdateChildScalars::mutable_actions() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.actions)
-  return &_impl_.actions_;
+Msg_UpdateChildScalars::mutable_a_actions() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildScalars.a_actions)
+  return &_impl_.a_actions_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateChildKeyedScalars
 
-// repeated bytes actions = 1;
-inline int Msg_UpdateChildKeyedScalars::_internal_actions_size() const {
-  return _impl_.actions_.size();
+// repeated bytes a_actions = 1;
+inline int Msg_UpdateChildKeyedScalars::_internal_a_actions_size() const {
+  return _impl_.a_actions_.size();
 }
-inline int Msg_UpdateChildKeyedScalars::actions_size() const {
-  return _internal_actions_size();
+inline int Msg_UpdateChildKeyedScalars::a_actions_size() const {
+  return _internal_a_actions_size();
 }
-inline void Msg_UpdateChildKeyedScalars::clear_actions() {
-  _impl_.actions_.Clear();
+inline void Msg_UpdateChildKeyedScalars::clear_a_actions() {
+  _impl_.a_actions_.Clear();
 }
-inline std::string* Msg_UpdateChildKeyedScalars::add_actions() {
-  std::string* _s = _internal_add_actions();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+inline std::string* Msg_UpdateChildKeyedScalars::add_a_actions() {
+  std::string* _s = _internal_add_a_actions();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
   return _s;
 }
-inline const std::string& Msg_UpdateChildKeyedScalars::_internal_actions(int index) const {
-  return _impl_.actions_.Get(index);
+inline const std::string& Msg_UpdateChildKeyedScalars::_internal_a_actions(int index) const {
+  return _impl_.a_actions_.Get(index);
 }
-inline const std::string& Msg_UpdateChildKeyedScalars::actions(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
-  return _internal_actions(index);
+inline const std::string& Msg_UpdateChildKeyedScalars::a_actions(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return _internal_a_actions(index);
 }
-inline std::string* Msg_UpdateChildKeyedScalars::mutable_actions(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
-  return _impl_.actions_.Mutable(index);
+inline std::string* Msg_UpdateChildKeyedScalars::mutable_a_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return _impl_.a_actions_.Mutable(index);
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, const std::string& value) {
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, const std::string& value) {
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, std::string&& value) {
-  _impl_.actions_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, std::string&& value) {
+  _impl_.a_actions_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, const char* value) {
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, const void* value, size_t size) {
-  _impl_.actions_.Mutable(index)->assign(
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, const void* value, size_t size) {
+  _impl_.a_actions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline std::string* Msg_UpdateChildKeyedScalars::_internal_add_actions() {
-  return _impl_.actions_.Add();
+inline std::string* Msg_UpdateChildKeyedScalars::_internal_add_a_actions() {
+  return _impl_.a_actions_.Add();
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(const std::string& value) {
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(const std::string& value) {
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(std::string&& value) {
-  _impl_.actions_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(std::string&& value) {
+  _impl_.a_actions_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(const char* value) {
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(const void* value, size_t size) {
-  _impl_.actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(const void* value, size_t size) {
+  _impl_.a_actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_UpdateChildKeyedScalars::actions() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
-  return _impl_.actions_;
+Msg_UpdateChildKeyedScalars::a_actions() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return _impl_.a_actions_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_UpdateChildKeyedScalars::mutable_actions() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.actions)
-  return &_impl_.actions_;
+Msg_UpdateChildKeyedScalars::mutable_a_actions() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return &_impl_.a_actions_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RecordChildEvents
 
-// repeated bytes events = 1;
-inline int Msg_RecordChildEvents::_internal_events_size() const {
-  return _impl_.events_.size();
+// repeated bytes a_events = 1;
+inline int Msg_RecordChildEvents::_internal_a_events_size() const {
+  return _impl_.a_events_.size();
 }
-inline int Msg_RecordChildEvents::events_size() const {
-  return _internal_events_size();
+inline int Msg_RecordChildEvents::a_events_size() const {
+  return _internal_a_events_size();
 }
-inline void Msg_RecordChildEvents::clear_events() {
-  _impl_.events_.Clear();
+inline void Msg_RecordChildEvents::clear_a_events() {
+  _impl_.a_events_.Clear();
 }
-inline std::string* Msg_RecordChildEvents::add_events() {
-  std::string* _s = _internal_add_events();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+inline std::string* Msg_RecordChildEvents::add_a_events() {
+  std::string* _s = _internal_add_a_events();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
   return _s;
 }
-inline const std::string& Msg_RecordChildEvents::_internal_events(int index) const {
-  return _impl_.events_.Get(index);
+inline const std::string& Msg_RecordChildEvents::_internal_a_events(int index) const {
+  return _impl_.a_events_.Get(index);
 }
-inline const std::string& Msg_RecordChildEvents::events(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
-  return _internal_events(index);
+inline const std::string& Msg_RecordChildEvents::a_events(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
+  return _internal_a_events(index);
 }
-inline std::string* Msg_RecordChildEvents::mutable_events(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
-  return _impl_.events_.Mutable(index);
+inline std::string* Msg_RecordChildEvents::mutable_a_events(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
+  return _impl_.a_events_.Mutable(index);
 }
-inline void Msg_RecordChildEvents::set_events(int index, const std::string& value) {
-  _impl_.events_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::set_a_events(int index, const std::string& value) {
+  _impl_.a_events_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::set_events(int index, std::string&& value) {
-  _impl_.events_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::set_a_events(int index, std::string&& value) {
+  _impl_.a_events_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::set_events(int index, const char* value) {
+inline void Msg_RecordChildEvents::set_a_events(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.events_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+  _impl_.a_events_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::set_events(int index, const void* value, size_t size) {
-  _impl_.events_.Mutable(index)->assign(
+inline void Msg_RecordChildEvents::set_a_events(int index, const void* value, size_t size) {
+  _impl_.a_events_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline std::string* Msg_RecordChildEvents::_internal_add_events() {
-  return _impl_.events_.Add();
+inline std::string* Msg_RecordChildEvents::_internal_add_a_events() {
+  return _impl_.a_events_.Add();
 }
-inline void Msg_RecordChildEvents::add_events(const std::string& value) {
-  _impl_.events_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::add_a_events(const std::string& value) {
+  _impl_.a_events_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::add_events(std::string&& value) {
-  _impl_.events_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::add_a_events(std::string&& value) {
+  _impl_.a_events_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::add_events(const char* value) {
+inline void Msg_RecordChildEvents::add_a_events(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.events_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+  _impl_.a_events_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::add_events(const void* value, size_t size) {
-  _impl_.events_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::add_a_events(const void* value, size_t size) {
+  _impl_.a_events_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_RecordChildEvents::events() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
-  return _impl_.events_;
+Msg_RecordChildEvents::a_events() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
+  return _impl_.a_events_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_RecordChildEvents::mutable_events() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.events)
-  return &_impl_.events_;
+Msg_RecordChildEvents::mutable_a_events() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordChildEvents.a_events)
+  return &_impl_.a_events_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RecordDiscardedData
 
-// required bytes data = 1;
-inline bool Msg_RecordDiscardedData::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool Msg_RecordDiscardedData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RecordDiscardedData::has_data() const {
-  return _internal_has_data();
+inline bool Msg_RecordDiscardedData::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void Msg_RecordDiscardedData::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void Msg_RecordDiscardedData::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RecordDiscardedData::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.data)
-  return _internal_data();
+inline const std::string& Msg_RecordDiscardedData::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RecordDiscardedData::set_data(ArgT0&& arg0, ArgT... args) {
+void Msg_RecordDiscardedData::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.a_data)
 }
-inline std::string* Msg_RecordDiscardedData::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.data)
+inline std::string* Msg_RecordDiscardedData::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.a_data)
   return _s;
 }
-inline const std::string& Msg_RecordDiscardedData::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& Msg_RecordDiscardedData::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void Msg_RecordDiscardedData::_internal_set_data(const std::string& value) {
+inline void Msg_RecordDiscardedData::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RecordDiscardedData::_internal_mutable_data() {
+inline std::string* Msg_RecordDiscardedData::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RecordDiscardedData::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.data)
-  if (!_internal_has_data()) {
+inline std::string* Msg_RecordDiscardedData::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RecordDiscardedData::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void Msg_RecordDiscardedData::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_RecordDiscardedData.a_data)
 }
 
 // -------------------------------------------------------------------
@@ -4142,429 +4142,429 @@ inline void Msg_RecordDiscardedData::set_allocated_data(std::string* data) {
 
 // Msg_Init
 
-// optional bytes sandboxBroker = 1;
-inline bool Msg_Init::_internal_has_sandboxbroker() const {
+// optional bytes a_sandboxBroker = 1;
+inline bool Msg_Init::_internal_has_a_sandboxbroker() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Init::has_sandboxbroker() const {
-  return _internal_has_sandboxbroker();
+inline bool Msg_Init::has_a_sandboxbroker() const {
+  return _internal_has_a_sandboxbroker();
 }
-inline void Msg_Init::clear_sandboxbroker() {
-  _impl_.sandboxbroker_.ClearToEmpty();
+inline void Msg_Init::clear_a_sandboxbroker() {
+  _impl_.a_sandboxbroker_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Init::sandboxbroker() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.sandboxBroker)
-  return _internal_sandboxbroker();
+inline const std::string& Msg_Init::a_sandboxbroker() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_sandboxBroker)
+  return _internal_a_sandboxbroker();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Init::set_sandboxbroker(ArgT0&& arg0, ArgT... args) {
+void Msg_Init::set_a_sandboxbroker(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.sandboxbroker_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.sandboxBroker)
+ _impl_.a_sandboxbroker_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_sandboxBroker)
 }
-inline std::string* Msg_Init::mutable_sandboxbroker() {
-  std::string* _s = _internal_mutable_sandboxbroker();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.sandboxBroker)
+inline std::string* Msg_Init::mutable_a_sandboxbroker() {
+  std::string* _s = _internal_mutable_a_sandboxbroker();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_sandboxBroker)
   return _s;
 }
-inline const std::string& Msg_Init::_internal_sandboxbroker() const {
-  return _impl_.sandboxbroker_.Get();
+inline const std::string& Msg_Init::_internal_a_sandboxbroker() const {
+  return _impl_.a_sandboxbroker_.Get();
 }
-inline void Msg_Init::_internal_set_sandboxbroker(const std::string& value) {
+inline void Msg_Init::_internal_set_a_sandboxbroker(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.sandboxbroker_.Set(value, GetArenaForAllocation());
+  _impl_.a_sandboxbroker_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Init::_internal_mutable_sandboxbroker() {
+inline std::string* Msg_Init::_internal_mutable_a_sandboxbroker() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.sandboxbroker_.Mutable(GetArenaForAllocation());
+  return _impl_.a_sandboxbroker_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Init::release_sandboxbroker() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.sandboxBroker)
-  if (!_internal_has_sandboxbroker()) {
+inline std::string* Msg_Init::release_a_sandboxbroker() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_sandboxBroker)
+  if (!_internal_has_a_sandboxbroker()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.sandboxbroker_.Release();
+  auto* p = _impl_.a_sandboxbroker_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sandboxbroker_.IsDefault()) {
-    _impl_.sandboxbroker_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sandboxbroker_.IsDefault()) {
+    _impl_.a_sandboxbroker_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Init::set_allocated_sandboxbroker(std::string* sandboxbroker) {
-  if (sandboxbroker != nullptr) {
+inline void Msg_Init::set_allocated_a_sandboxbroker(std::string* a_sandboxbroker) {
+  if (a_sandboxbroker != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.sandboxbroker_.SetAllocated(sandboxbroker, GetArenaForAllocation());
+  _impl_.a_sandboxbroker_.SetAllocated(a_sandboxbroker, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sandboxbroker_.IsDefault()) {
-    _impl_.sandboxbroker_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sandboxbroker_.IsDefault()) {
+    _impl_.a_sandboxbroker_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.sandboxBroker)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_sandboxBroker)
 }
 
-// required bool canRecordReleaseTelemetry = 2;
-inline bool Msg_Init::_internal_has_canrecordreleasetelemetry() const {
+// required bool a_canRecordReleaseTelemetry = 2;
+inline bool Msg_Init::_internal_has_a_canrecordreleasetelemetry() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Init::has_canrecordreleasetelemetry() const {
-  return _internal_has_canrecordreleasetelemetry();
+inline bool Msg_Init::has_a_canrecordreleasetelemetry() const {
+  return _internal_has_a_canrecordreleasetelemetry();
 }
-inline void Msg_Init::clear_canrecordreleasetelemetry() {
-  _impl_.canrecordreleasetelemetry_ = false;
+inline void Msg_Init::clear_a_canrecordreleasetelemetry() {
+  _impl_.a_canrecordreleasetelemetry_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_Init::_internal_canrecordreleasetelemetry() const {
-  return _impl_.canrecordreleasetelemetry_;
+inline bool Msg_Init::_internal_a_canrecordreleasetelemetry() const {
+  return _impl_.a_canrecordreleasetelemetry_;
 }
-inline bool Msg_Init::canrecordreleasetelemetry() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.canRecordReleaseTelemetry)
-  return _internal_canrecordreleasetelemetry();
+inline bool Msg_Init::a_canrecordreleasetelemetry() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_canRecordReleaseTelemetry)
+  return _internal_a_canrecordreleasetelemetry();
 }
-inline void Msg_Init::_internal_set_canrecordreleasetelemetry(bool value) {
+inline void Msg_Init::_internal_set_a_canrecordreleasetelemetry(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.canrecordreleasetelemetry_ = value;
+  _impl_.a_canrecordreleasetelemetry_ = value;
 }
-inline void Msg_Init::set_canrecordreleasetelemetry(bool value) {
-  _internal_set_canrecordreleasetelemetry(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.canRecordReleaseTelemetry)
+inline void Msg_Init::set_a_canrecordreleasetelemetry(bool value) {
+  _internal_set_a_canrecordreleasetelemetry(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_canRecordReleaseTelemetry)
 }
 
-// required bool aIsReadyForBackgroundProcessing = 3;
-inline bool Msg_Init::_internal_has_aisreadyforbackgroundprocessing() const {
+// required bool a_aIsReadyForBackgroundProcessing = 3;
+inline bool Msg_Init::_internal_has_a_aisreadyforbackgroundprocessing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_Init::has_aisreadyforbackgroundprocessing() const {
-  return _internal_has_aisreadyforbackgroundprocessing();
+inline bool Msg_Init::has_a_aisreadyforbackgroundprocessing() const {
+  return _internal_has_a_aisreadyforbackgroundprocessing();
 }
-inline void Msg_Init::clear_aisreadyforbackgroundprocessing() {
-  _impl_.aisreadyforbackgroundprocessing_ = false;
+inline void Msg_Init::clear_a_aisreadyforbackgroundprocessing() {
+  _impl_.a_aisreadyforbackgroundprocessing_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_Init::_internal_aisreadyforbackgroundprocessing() const {
-  return _impl_.aisreadyforbackgroundprocessing_;
+inline bool Msg_Init::_internal_a_aisreadyforbackgroundprocessing() const {
+  return _impl_.a_aisreadyforbackgroundprocessing_;
 }
-inline bool Msg_Init::aisreadyforbackgroundprocessing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.aIsReadyForBackgroundProcessing)
-  return _internal_aisreadyforbackgroundprocessing();
+inline bool Msg_Init::a_aisreadyforbackgroundprocessing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_aIsReadyForBackgroundProcessing)
+  return _internal_a_aisreadyforbackgroundprocessing();
 }
-inline void Msg_Init::_internal_set_aisreadyforbackgroundprocessing(bool value) {
+inline void Msg_Init::_internal_set_a_aisreadyforbackgroundprocessing(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aisreadyforbackgroundprocessing_ = value;
+  _impl_.a_aisreadyforbackgroundprocessing_ = value;
 }
-inline void Msg_Init::set_aisreadyforbackgroundprocessing(bool value) {
-  _internal_set_aisreadyforbackgroundprocessing(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.aIsReadyForBackgroundProcessing)
+inline void Msg_Init::set_a_aisreadyforbackgroundprocessing(bool value) {
+  _internal_set_a_aisreadyforbackgroundprocessing(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_Init.a_aIsReadyForBackgroundProcessing)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitProfiler
 
-// required bytes endpoint = 1;
-inline bool Msg_InitProfiler::_internal_has_endpoint() const {
+// required bytes a_endpoint = 1;
+inline bool Msg_InitProfiler::_internal_has_a_endpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitProfiler::has_endpoint() const {
-  return _internal_has_endpoint();
+inline bool Msg_InitProfiler::has_a_endpoint() const {
+  return _internal_has_a_endpoint();
 }
-inline void Msg_InitProfiler::clear_endpoint() {
-  _impl_.endpoint_.ClearToEmpty();
+inline void Msg_InitProfiler::clear_a_endpoint() {
+  _impl_.a_endpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitProfiler::endpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.endpoint)
-  return _internal_endpoint();
+inline const std::string& Msg_InitProfiler::a_endpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.a_endpoint)
+  return _internal_a_endpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitProfiler::set_endpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_InitProfiler::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.endpoint)
+ _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.a_endpoint)
 }
-inline std::string* Msg_InitProfiler::mutable_endpoint() {
-  std::string* _s = _internal_mutable_endpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.endpoint)
+inline std::string* Msg_InitProfiler::mutable_a_endpoint() {
+  std::string* _s = _internal_mutable_a_endpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.a_endpoint)
   return _s;
 }
-inline const std::string& Msg_InitProfiler::_internal_endpoint() const {
-  return _impl_.endpoint_.Get();
+inline const std::string& Msg_InitProfiler::_internal_a_endpoint() const {
+  return _impl_.a_endpoint_.Get();
 }
-inline void Msg_InitProfiler::_internal_set_endpoint(const std::string& value) {
+inline void Msg_InitProfiler::_internal_set_a_endpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.endpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_endpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitProfiler::_internal_mutable_endpoint() {
+inline std::string* Msg_InitProfiler::_internal_mutable_a_endpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.endpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_endpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitProfiler::release_endpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.endpoint)
-  if (!_internal_has_endpoint()) {
+inline std::string* Msg_InitProfiler::release_a_endpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.a_endpoint)
+  if (!_internal_has_a_endpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.endpoint_.Release();
+  auto* p = _impl_.a_endpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitProfiler::set_allocated_endpoint(std::string* endpoint) {
-  if (endpoint != nullptr) {
+inline void Msg_InitProfiler::set_allocated_a_endpoint(std::string* a_endpoint) {
+  if (a_endpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.endpoint_.SetAllocated(endpoint, GetArenaForAllocation());
+  _impl_.a_endpoint_.SetAllocated(a_endpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.endpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_InitProfiler.a_endpoint)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestMemoryReport
 
-// required uint32 generation = 1;
-inline bool Msg_RequestMemoryReport::_internal_has_generation() const {
+// required uint32 a_generation = 1;
+inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_generation() const {
-  return _internal_has_generation();
+inline bool Msg_RequestMemoryReport::has_a_generation() const {
+  return _internal_has_a_generation();
 }
-inline void Msg_RequestMemoryReport::clear_generation() {
-  _impl_.generation_ = 0u;
+inline void Msg_RequestMemoryReport::clear_a_generation() {
+  _impl_.a_generation_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_RequestMemoryReport::_internal_generation() const {
-  return _impl_.generation_;
+inline uint32_t Msg_RequestMemoryReport::_internal_a_generation() const {
+  return _impl_.a_generation_;
 }
-inline uint32_t Msg_RequestMemoryReport::generation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.generation)
-  return _internal_generation();
+inline uint32_t Msg_RequestMemoryReport::a_generation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_generation)
+  return _internal_a_generation();
 }
-inline void Msg_RequestMemoryReport::_internal_set_generation(uint32_t value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_generation(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.generation_ = value;
+  _impl_.a_generation_ = value;
 }
-inline void Msg_RequestMemoryReport::set_generation(uint32_t value) {
-  _internal_set_generation(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.generation)
+inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
+  _internal_set_a_generation(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool anonymize = 2;
-inline bool Msg_RequestMemoryReport::_internal_has_anonymize() const {
+// required bool a_anonymize = 2;
+inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_anonymize() const {
-  return _internal_has_anonymize();
+inline bool Msg_RequestMemoryReport::has_a_anonymize() const {
+  return _internal_has_a_anonymize();
 }
-inline void Msg_RequestMemoryReport::clear_anonymize() {
-  _impl_.anonymize_ = false;
+inline void Msg_RequestMemoryReport::clear_a_anonymize() {
+  _impl_.a_anonymize_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_RequestMemoryReport::_internal_anonymize() const {
-  return _impl_.anonymize_;
+inline bool Msg_RequestMemoryReport::_internal_a_anonymize() const {
+  return _impl_.a_anonymize_;
 }
-inline bool Msg_RequestMemoryReport::anonymize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.anonymize)
-  return _internal_anonymize();
+inline bool Msg_RequestMemoryReport::a_anonymize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_anonymize)
+  return _internal_a_anonymize();
 }
-inline void Msg_RequestMemoryReport::_internal_set_anonymize(bool value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_anonymize(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.anonymize_ = value;
+  _impl_.a_anonymize_ = value;
 }
-inline void Msg_RequestMemoryReport::set_anonymize(bool value) {
-  _internal_set_anonymize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.anonymize)
+inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
+  _internal_set_a_anonymize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool minimizeMemoryUsage = 3;
-inline bool Msg_RequestMemoryReport::_internal_has_minimizememoryusage() const {
+// required bool a_minimizeMemoryUsage = 3;
+inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_minimizememoryusage() const {
-  return _internal_has_minimizememoryusage();
+inline bool Msg_RequestMemoryReport::has_a_minimizememoryusage() const {
+  return _internal_has_a_minimizememoryusage();
 }
-inline void Msg_RequestMemoryReport::clear_minimizememoryusage() {
-  _impl_.minimizememoryusage_ = false;
+inline void Msg_RequestMemoryReport::clear_a_minimizememoryusage() {
+  _impl_.a_minimizememoryusage_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_RequestMemoryReport::_internal_minimizememoryusage() const {
-  return _impl_.minimizememoryusage_;
+inline bool Msg_RequestMemoryReport::_internal_a_minimizememoryusage() const {
+  return _impl_.a_minimizememoryusage_;
 }
-inline bool Msg_RequestMemoryReport::minimizememoryusage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.minimizeMemoryUsage)
-  return _internal_minimizememoryusage();
+inline bool Msg_RequestMemoryReport::a_minimizememoryusage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_minimizeMemoryUsage)
+  return _internal_a_minimizememoryusage();
 }
-inline void Msg_RequestMemoryReport::_internal_set_minimizememoryusage(bool value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_minimizememoryusage(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.minimizememoryusage_ = value;
+  _impl_.a_minimizememoryusage_ = value;
 }
-inline void Msg_RequestMemoryReport::set_minimizememoryusage(bool value) {
-  _internal_set_minimizememoryusage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.minimizeMemoryUsage)
+inline void Msg_RequestMemoryReport::set_a_minimizememoryusage(bool value) {
+  _internal_set_a_minimizememoryusage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_minimizeMemoryUsage)
 }
 
-// optional bytes DMDFile = 4;
-inline bool Msg_RequestMemoryReport::_internal_has_dmdfile() const {
+// optional bytes a_DMDFile = 4;
+inline bool Msg_RequestMemoryReport::_internal_has_a_dmdfile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_dmdfile() const {
-  return _internal_has_dmdfile();
+inline bool Msg_RequestMemoryReport::has_a_dmdfile() const {
+  return _internal_has_a_dmdfile();
 }
-inline void Msg_RequestMemoryReport::clear_dmdfile() {
-  _impl_.dmdfile_.ClearToEmpty();
+inline void Msg_RequestMemoryReport::clear_a_dmdfile() {
+  _impl_.a_dmdfile_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RequestMemoryReport::dmdfile() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.DMDFile)
-  return _internal_dmdfile();
+inline const std::string& Msg_RequestMemoryReport::a_dmdfile() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_DMDFile)
+  return _internal_a_dmdfile();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RequestMemoryReport::set_dmdfile(ArgT0&& arg0, ArgT... args) {
+void Msg_RequestMemoryReport::set_a_dmdfile(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.dmdfile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.DMDFile)
+ _impl_.a_dmdfile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_DMDFile)
 }
-inline std::string* Msg_RequestMemoryReport::mutable_dmdfile() {
-  std::string* _s = _internal_mutable_dmdfile();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.DMDFile)
+inline std::string* Msg_RequestMemoryReport::mutable_a_dmdfile() {
+  std::string* _s = _internal_mutable_a_dmdfile();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_DMDFile)
   return _s;
 }
-inline const std::string& Msg_RequestMemoryReport::_internal_dmdfile() const {
-  return _impl_.dmdfile_.Get();
+inline const std::string& Msg_RequestMemoryReport::_internal_a_dmdfile() const {
+  return _impl_.a_dmdfile_.Get();
 }
-inline void Msg_RequestMemoryReport::_internal_set_dmdfile(const std::string& value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_dmdfile(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dmdfile_.Set(value, GetArenaForAllocation());
+  _impl_.a_dmdfile_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RequestMemoryReport::_internal_mutable_dmdfile() {
+inline std::string* Msg_RequestMemoryReport::_internal_mutable_a_dmdfile() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.dmdfile_.Mutable(GetArenaForAllocation());
+  return _impl_.a_dmdfile_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RequestMemoryReport::release_dmdfile() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.DMDFile)
-  if (!_internal_has_dmdfile()) {
+inline std::string* Msg_RequestMemoryReport::release_a_dmdfile() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_DMDFile)
+  if (!_internal_has_a_dmdfile()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.dmdfile_.Release();
+  auto* p = _impl_.a_dmdfile_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dmdfile_.IsDefault()) {
-    _impl_.dmdfile_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dmdfile_.IsDefault()) {
+    _impl_.a_dmdfile_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RequestMemoryReport::set_allocated_dmdfile(std::string* dmdfile) {
-  if (dmdfile != nullptr) {
+inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdfile) {
+  if (a_dmdfile != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.dmdfile_.SetAllocated(dmdfile, GetArenaForAllocation());
+  _impl_.a_dmdfile_.SetAllocated(a_dmdfile, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dmdfile_.IsDefault()) {
-    _impl_.dmdfile_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dmdfile_.IsDefault()) {
+    _impl_.a_dmdfile_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.DMDFile)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_RequestMemoryReport.a_DMDFile)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestMemoryReport
 
-// required uint32 aGeneration = 1;
-inline bool Reply_RequestMemoryReport::_internal_has_ageneration() const {
+// required uint32 a_aGeneration = 1;
+inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestMemoryReport::has_ageneration() const {
-  return _internal_has_ageneration();
+inline bool Reply_RequestMemoryReport::has_a_ageneration() const {
+  return _internal_has_a_ageneration();
 }
-inline void Reply_RequestMemoryReport::clear_ageneration() {
-  _impl_.ageneration_ = 0u;
+inline void Reply_RequestMemoryReport::clear_a_ageneration() {
+  _impl_.a_ageneration_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_RequestMemoryReport::_internal_ageneration() const {
-  return _impl_.ageneration_;
+inline uint32_t Reply_RequestMemoryReport::_internal_a_ageneration() const {
+  return _impl_.a_ageneration_;
 }
-inline uint32_t Reply_RequestMemoryReport::ageneration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Reply_RequestMemoryReport.aGeneration)
-  return _internal_ageneration();
+inline uint32_t Reply_RequestMemoryReport::a_ageneration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Reply_RequestMemoryReport.a_aGeneration)
+  return _internal_a_ageneration();
 }
-inline void Reply_RequestMemoryReport::_internal_set_ageneration(uint32_t value) {
+inline void Reply_RequestMemoryReport::_internal_set_a_ageneration(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ageneration_ = value;
+  _impl_.a_ageneration_ = value;
 }
-inline void Reply_RequestMemoryReport::set_ageneration(uint32_t value) {
-  _internal_set_ageneration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Reply_RequestMemoryReport.aGeneration)
+inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
+  _internal_set_a_ageneration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Reply_RequestMemoryReport.a_aGeneration)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PreferenceUpdate
 
-// required .protobuf.mozilla.dom.Pref pref = 1;
-inline bool Msg_PreferenceUpdate::_internal_has_pref() const {
+// required .protobuf.mozilla.dom.Pref a_pref = 1;
+inline bool Msg_PreferenceUpdate::_internal_has_a_pref() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.pref_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_pref_ != nullptr);
   return value;
 }
-inline bool Msg_PreferenceUpdate::has_pref() const {
-  return _internal_has_pref();
+inline bool Msg_PreferenceUpdate::has_a_pref() const {
+  return _internal_has_a_pref();
 }
-inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::_internal_pref() const {
-  const ::protobuf::mozilla::dom::Pref* p = _impl_.pref_;
+inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::_internal_a_pref() const {
+  const ::protobuf::mozilla::dom::Pref* p = _impl_.a_pref_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::Pref&>(
       ::protobuf::mozilla::dom::_Pref_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::pref() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.pref)
-  return _internal_pref();
+inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::a_pref() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.a_pref)
+  return _internal_a_pref();
 }
-inline void Msg_PreferenceUpdate::unsafe_arena_set_allocated_pref(
-    ::protobuf::mozilla::dom::Pref* pref) {
+inline void Msg_PreferenceUpdate::unsafe_arena_set_allocated_a_pref(
+    ::protobuf::mozilla::dom::Pref* a_pref) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.pref_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_pref_);
   }
-  _impl_.pref_ = pref;
-  if (pref) {
+  _impl_.a_pref_ = a_pref;
+  if (a_pref) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.pref)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.a_pref)
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_pref() {
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_a_pref() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::Pref* temp = _impl_.pref_;
-  _impl_.pref_ = nullptr;
+  ::protobuf::mozilla::dom::Pref* temp = _impl_.a_pref_;
+  _impl_.a_pref_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4576,45 +4576,45 @@ inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_pref() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::unsafe_arena_release_pref() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.pref)
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::unsafe_arena_release_a_pref() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.a_pref)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::Pref* temp = _impl_.pref_;
-  _impl_.pref_ = nullptr;
+  ::protobuf::mozilla::dom::Pref* temp = _impl_.a_pref_;
+  _impl_.a_pref_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::_internal_mutable_pref() {
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::_internal_mutable_a_pref() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.pref_ == nullptr) {
+  if (_impl_.a_pref_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::Pref>(GetArenaForAllocation());
-    _impl_.pref_ = p;
+    _impl_.a_pref_ = p;
   }
-  return _impl_.pref_;
+  return _impl_.a_pref_;
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::mutable_pref() {
-  ::protobuf::mozilla::dom::Pref* _msg = _internal_mutable_pref();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.pref)
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::mutable_a_pref() {
+  ::protobuf::mozilla::dom::Pref* _msg = _internal_mutable_a_pref();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.a_pref)
   return _msg;
 }
-inline void Msg_PreferenceUpdate::set_allocated_pref(::protobuf::mozilla::dom::Pref* pref) {
+inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom::Pref* a_pref) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.pref_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_pref_);
   }
-  if (pref) {
+  if (a_pref) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(pref));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_pref));
     if (message_arena != submessage_arena) {
-      pref = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, pref, submessage_arena);
+      a_pref = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_pref, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.pref_ = pref;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.pref)
+  _impl_.a_pref_ = a_pref;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_PreferenceUpdate.a_pref)
 }
 
 // -------------------------------------------------------------------
@@ -4625,72 +4625,72 @@ inline void Msg_PreferenceUpdate::set_allocated_pref(::protobuf::mozilla::dom::P
 
 // Reply_FlushFOGData
 
-// required bytes buf = 1;
-inline bool Reply_FlushFOGData::_internal_has_buf() const {
+// required bytes a_buf = 1;
+inline bool Reply_FlushFOGData::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_FlushFOGData::has_buf() const {
-  return _internal_has_buf();
+inline bool Reply_FlushFOGData::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Reply_FlushFOGData::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Reply_FlushFOGData::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_FlushFOGData::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.buf)
-  return _internal_buf();
+inline const std::string& Reply_FlushFOGData::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_FlushFOGData::set_buf(ArgT0&& arg0, ArgT... args) {
+void Reply_FlushFOGData::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.a_buf)
 }
-inline std::string* Reply_FlushFOGData::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.buf)
+inline std::string* Reply_FlushFOGData::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.a_buf)
   return _s;
 }
-inline const std::string& Reply_FlushFOGData::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Reply_FlushFOGData::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Reply_FlushFOGData::_internal_set_buf(const std::string& value) {
+inline void Reply_FlushFOGData::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_FlushFOGData::_internal_mutable_buf() {
+inline std::string* Reply_FlushFOGData::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_FlushFOGData::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Reply_FlushFOGData::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_FlushFOGData::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Reply_FlushFOGData::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Reply_FlushFOGData.a_buf)
 }
 
 // -------------------------------------------------------------------
@@ -4701,32 +4701,32 @@ inline void Reply_FlushFOGData::set_allocated_buf(std::string* buf) {
 
 // Reply_TestTriggerMetrics
 
-// required bool unused = 1;
-inline bool Reply_TestTriggerMetrics::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_TestTriggerMetrics::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_TestTriggerMetrics::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_TestTriggerMetrics::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_TestTriggerMetrics::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_TestTriggerMetrics::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_TestTriggerMetrics::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_TestTriggerMetrics::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_TestTriggerMetrics::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Reply_TestTriggerMetrics.unused)
-  return _internal_unused();
+inline bool Reply_TestTriggerMetrics::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Reply_TestTriggerMetrics.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_TestTriggerMetrics::_internal_set_unused(bool value) {
+inline void Reply_TestTriggerMetrics::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_TestTriggerMetrics::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Reply_TestTriggerMetrics.unused)
+inline void Reply_TestTriggerMetrics::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Reply_TestTriggerMetrics.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -4737,181 +4737,181 @@ inline void Reply_TestTriggerMetrics::set_unused(bool value) {
 
 // Msg_StartUtilityAudioDecoderService
 
-// required bytes aEndpoint = 1;
-inline bool Msg_StartUtilityAudioDecoderService::_internal_has_aendpoint() const {
+// required bytes a_aEndpoint = 1;
+inline bool Msg_StartUtilityAudioDecoderService::_internal_has_a_aendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StartUtilityAudioDecoderService::has_aendpoint() const {
-  return _internal_has_aendpoint();
+inline bool Msg_StartUtilityAudioDecoderService::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
 }
-inline void Msg_StartUtilityAudioDecoderService::clear_aendpoint() {
-  _impl_.aendpoint_.ClearToEmpty();
+inline void Msg_StartUtilityAudioDecoderService::clear_a_aendpoint() {
+  _impl_.a_aendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StartUtilityAudioDecoderService::aendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.aEndpoint)
-  return _internal_aendpoint();
+inline const std::string& Msg_StartUtilityAudioDecoderService::a_aendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_aEndpoint)
+  return _internal_a_aendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StartUtilityAudioDecoderService::set_aendpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_StartUtilityAudioDecoderService::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.aEndpoint)
+ _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_aEndpoint)
 }
-inline std::string* Msg_StartUtilityAudioDecoderService::mutable_aendpoint() {
-  std::string* _s = _internal_mutable_aendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.aEndpoint)
+inline std::string* Msg_StartUtilityAudioDecoderService::mutable_a_aendpoint() {
+  std::string* _s = _internal_mutable_a_aendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_aEndpoint)
   return _s;
 }
-inline const std::string& Msg_StartUtilityAudioDecoderService::_internal_aendpoint() const {
-  return _impl_.aendpoint_.Get();
+inline const std::string& Msg_StartUtilityAudioDecoderService::_internal_a_aendpoint() const {
+  return _impl_.a_aendpoint_.Get();
 }
-inline void Msg_StartUtilityAudioDecoderService::_internal_set_aendpoint(const std::string& value) {
+inline void Msg_StartUtilityAudioDecoderService::_internal_set_a_aendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StartUtilityAudioDecoderService::_internal_mutable_aendpoint() {
+inline std::string* Msg_StartUtilityAudioDecoderService::_internal_mutable_a_aendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StartUtilityAudioDecoderService::release_aendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.aEndpoint)
-  if (!_internal_has_aendpoint()) {
+inline std::string* Msg_StartUtilityAudioDecoderService::release_a_aendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_aEndpoint)
+  if (!_internal_has_a_aendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aendpoint_.Release();
+  auto* p = _impl_.a_aendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StartUtilityAudioDecoderService::set_allocated_aendpoint(std::string* aendpoint) {
-  if (aendpoint != nullptr) {
+inline void Msg_StartUtilityAudioDecoderService::set_allocated_a_aendpoint(std::string* a_aendpoint) {
+  if (a_aendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aendpoint_.SetAllocated(aendpoint, GetArenaForAllocation());
+  _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.aEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_aEndpoint)
 }
 
-// repeated .protobuf.mozilla.gfx.GfxVarUpdate updates = 2;
-inline int Msg_StartUtilityAudioDecoderService::_internal_updates_size() const {
-  return _impl_.updates_.size();
+// repeated .protobuf.mozilla.gfx.GfxVarUpdate a_updates = 2;
+inline int Msg_StartUtilityAudioDecoderService::_internal_a_updates_size() const {
+  return _impl_.a_updates_.size();
 }
-inline int Msg_StartUtilityAudioDecoderService::updates_size() const {
-  return _internal_updates_size();
+inline int Msg_StartUtilityAudioDecoderService::a_updates_size() const {
+  return _internal_a_updates_size();
 }
-inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_StartUtilityAudioDecoderService::mutable_updates(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.updates)
-  return _impl_.updates_.Mutable(index);
+inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_StartUtilityAudioDecoderService::mutable_a_updates(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_updates)
+  return _impl_.a_updates_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate >*
-Msg_StartUtilityAudioDecoderService::mutable_updates() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.updates)
-  return &_impl_.updates_;
+Msg_StartUtilityAudioDecoderService::mutable_a_updates() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_updates)
+  return &_impl_.a_updates_;
 }
-inline const ::protobuf::mozilla::gfx::GfxVarUpdate& Msg_StartUtilityAudioDecoderService::_internal_updates(int index) const {
-  return _impl_.updates_.Get(index);
+inline const ::protobuf::mozilla::gfx::GfxVarUpdate& Msg_StartUtilityAudioDecoderService::_internal_a_updates(int index) const {
+  return _impl_.a_updates_.Get(index);
 }
-inline const ::protobuf::mozilla::gfx::GfxVarUpdate& Msg_StartUtilityAudioDecoderService::updates(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.updates)
-  return _internal_updates(index);
+inline const ::protobuf::mozilla::gfx::GfxVarUpdate& Msg_StartUtilityAudioDecoderService::a_updates(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_updates)
+  return _internal_a_updates(index);
 }
-inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_StartUtilityAudioDecoderService::_internal_add_updates() {
-  return _impl_.updates_.Add();
+inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_StartUtilityAudioDecoderService::_internal_add_a_updates() {
+  return _impl_.a_updates_.Add();
 }
-inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_StartUtilityAudioDecoderService::add_updates() {
-  ::protobuf::mozilla::gfx::GfxVarUpdate* _add = _internal_add_updates();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.updates)
+inline ::protobuf::mozilla::gfx::GfxVarUpdate* Msg_StartUtilityAudioDecoderService::add_a_updates() {
+  ::protobuf::mozilla::gfx::GfxVarUpdate* _add = _internal_add_a_updates();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_updates)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::gfx::GfxVarUpdate >&
-Msg_StartUtilityAudioDecoderService::updates() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.updates)
-  return _impl_.updates_;
+Msg_StartUtilityAudioDecoderService::a_updates() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartUtilityAudioDecoderService.a_updates)
+  return _impl_.a_updates_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StartJSOracleService
 
-// required bytes aEndpoint = 1;
-inline bool Msg_StartJSOracleService::_internal_has_aendpoint() const {
+// required bytes a_aEndpoint = 1;
+inline bool Msg_StartJSOracleService::_internal_has_a_aendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StartJSOracleService::has_aendpoint() const {
-  return _internal_has_aendpoint();
+inline bool Msg_StartJSOracleService::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
 }
-inline void Msg_StartJSOracleService::clear_aendpoint() {
-  _impl_.aendpoint_.ClearToEmpty();
+inline void Msg_StartJSOracleService::clear_a_aendpoint() {
+  _impl_.a_aendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StartJSOracleService::aendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.aEndpoint)
-  return _internal_aendpoint();
+inline const std::string& Msg_StartJSOracleService::a_aendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.a_aEndpoint)
+  return _internal_a_aendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StartJSOracleService::set_aendpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_StartJSOracleService::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.aEndpoint)
+ _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.a_aEndpoint)
 }
-inline std::string* Msg_StartJSOracleService::mutable_aendpoint() {
-  std::string* _s = _internal_mutable_aendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.aEndpoint)
+inline std::string* Msg_StartJSOracleService::mutable_a_aendpoint() {
+  std::string* _s = _internal_mutable_a_aendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.a_aEndpoint)
   return _s;
 }
-inline const std::string& Msg_StartJSOracleService::_internal_aendpoint() const {
-  return _impl_.aendpoint_.Get();
+inline const std::string& Msg_StartJSOracleService::_internal_a_aendpoint() const {
+  return _impl_.a_aendpoint_.Get();
 }
-inline void Msg_StartJSOracleService::_internal_set_aendpoint(const std::string& value) {
+inline void Msg_StartJSOracleService::_internal_set_a_aendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StartJSOracleService::_internal_mutable_aendpoint() {
+inline std::string* Msg_StartJSOracleService::_internal_mutable_a_aendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StartJSOracleService::release_aendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.aEndpoint)
-  if (!_internal_has_aendpoint()) {
+inline std::string* Msg_StartJSOracleService::release_a_aendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.a_aEndpoint)
+  if (!_internal_has_a_aendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aendpoint_.Release();
+  auto* p = _impl_.a_aendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StartJSOracleService::set_allocated_aendpoint(std::string* aendpoint) {
-  if (aendpoint != nullptr) {
+inline void Msg_StartJSOracleService::set_allocated_a_aendpoint(std::string* a_aendpoint) {
+  if (a_aendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aendpoint_.SetAllocated(aendpoint, GetArenaForAllocation());
+  _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.aEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PUtilityProcess.Msg_StartJSOracleService.a_aEndpoint)
 }
 
 #ifdef __GNUC__

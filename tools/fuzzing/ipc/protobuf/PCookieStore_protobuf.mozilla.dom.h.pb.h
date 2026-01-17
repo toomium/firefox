@@ -107,8 +107,8 @@ class MaybeCookieStruct final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVCookieStruct = 1,
-    kMVvoidT = 2,
+    kAMVCookieStruct = 1,
+    kAMVvoidT = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -181,43 +181,43 @@ class MaybeCookieStruct final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVCookieStructFieldNumber = 1,
-    kMVvoidTFieldNumber = 2,
+    kAMVCookieStructFieldNumber = 1,
+    kAMVvoidTFieldNumber = 2,
   };
-  // .protobuf.mozilla.net.CookieStruct mVCookieStruct = 1;
-  bool has_mvcookiestruct() const;
+  // .protobuf.mozilla.net.CookieStruct a_mVCookieStruct = 1;
+  bool has_a_mvcookiestruct() const;
   private:
-  bool _internal_has_mvcookiestruct() const;
+  bool _internal_has_a_mvcookiestruct() const;
   public:
-  void clear_mvcookiestruct();
-  const ::protobuf::mozilla::net::CookieStruct& mvcookiestruct() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieStruct* release_mvcookiestruct();
-  ::protobuf::mozilla::net::CookieStruct* mutable_mvcookiestruct();
-  void set_allocated_mvcookiestruct(::protobuf::mozilla::net::CookieStruct* mvcookiestruct);
+  void clear_a_mvcookiestruct();
+  const ::protobuf::mozilla::net::CookieStruct& a_mvcookiestruct() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieStruct* release_a_mvcookiestruct();
+  ::protobuf::mozilla::net::CookieStruct* mutable_a_mvcookiestruct();
+  void set_allocated_a_mvcookiestruct(::protobuf::mozilla::net::CookieStruct* a_mvcookiestruct);
   private:
-  const ::protobuf::mozilla::net::CookieStruct& _internal_mvcookiestruct() const;
-  ::protobuf::mozilla::net::CookieStruct* _internal_mutable_mvcookiestruct();
+  const ::protobuf::mozilla::net::CookieStruct& _internal_a_mvcookiestruct() const;
+  ::protobuf::mozilla::net::CookieStruct* _internal_mutable_a_mvcookiestruct();
   public:
-  void unsafe_arena_set_allocated_mvcookiestruct(
-      ::protobuf::mozilla::net::CookieStruct* mvcookiestruct);
-  ::protobuf::mozilla::net::CookieStruct* unsafe_arena_release_mvcookiestruct();
+  void unsafe_arena_set_allocated_a_mvcookiestruct(
+      ::protobuf::mozilla::net::CookieStruct* a_mvcookiestruct);
+  ::protobuf::mozilla::net::CookieStruct* unsafe_arena_release_a_mvcookiestruct();
 
-  // bytes mVvoid_t = 2;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 2;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
   void clear_content();
@@ -225,8 +225,8 @@ class MaybeCookieStruct final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.MaybeCookieStruct)
  private:
   class _Internal;
-  void set_has_mvcookiestruct();
-  void set_has_mvvoid_t();
+  void set_has_a_mvcookiestruct();
+  void set_has_a_mvvoid_t();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -238,8 +238,8 @@ class MaybeCookieStruct final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::net::CookieStruct* mvcookiestruct_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
+      ::protobuf::mozilla::net::CookieStruct* a_mvcookiestruct_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -360,43 +360,43 @@ class CookieSubscription final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
-    kUrlFieldNumber = 2,
+    kANameFieldNumber = 1,
+    kAUrlFieldNumber = 2,
   };
-  // optional bytes name = 1;
-  bool has_name() const;
+  // optional bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes url = 2;
-  bool has_url() const;
+  // required bytes a_url = 2;
+  bool has_a_url() const;
   private:
-  bool _internal_has_url() const;
+  bool _internal_has_a_url() const;
   public:
-  void clear_url();
-  const std::string& url() const;
+  void clear_a_url();
+  const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_url(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_url();
-  PROTOBUF_NODISCARD std::string* release_url();
-  void set_allocated_url(std::string* url);
+  void set_a_url(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_url();
+  PROTOBUF_NODISCARD std::string* release_a_url();
+  void set_allocated_a_url(std::string* a_url);
   private:
-  const std::string& _internal_url() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& value);
-  std::string* _internal_mutable_url();
+  const std::string& _internal_a_url() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_url(const std::string& value);
+  std::string* _internal_mutable_a_url();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.CookieSubscription)
@@ -409,8 +409,8 @@ class CookieSubscription final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_url_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCookieStore_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -426,147 +426,147 @@ class CookieSubscription final :
 #endif  // __GNUC__
 // MaybeCookieStruct
 
-// .protobuf.mozilla.net.CookieStruct mVCookieStruct = 1;
-inline bool MaybeCookieStruct::_internal_has_mvcookiestruct() const {
-  return content_case() == kMVCookieStruct;
+// .protobuf.mozilla.net.CookieStruct a_mVCookieStruct = 1;
+inline bool MaybeCookieStruct::_internal_has_a_mvcookiestruct() const {
+  return content_case() == kAMVCookieStruct;
 }
-inline bool MaybeCookieStruct::has_mvcookiestruct() const {
-  return _internal_has_mvcookiestruct();
+inline bool MaybeCookieStruct::has_a_mvcookiestruct() const {
+  return _internal_has_a_mvcookiestruct();
 }
-inline void MaybeCookieStruct::set_has_mvcookiestruct() {
-  _impl_._oneof_case_[0] = kMVCookieStruct;
+inline void MaybeCookieStruct::set_has_a_mvcookiestruct() {
+  _impl_._oneof_case_[0] = kAMVCookieStruct;
 }
-inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::release_mvcookiestruct() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MaybeCookieStruct.mVCookieStruct)
-  if (_internal_has_mvcookiestruct()) {
+inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::release_a_mvcookiestruct() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MaybeCookieStruct.a_mVCookieStruct)
+  if (_internal_has_a_mvcookiestruct()) {
     clear_has_content();
-    ::protobuf::mozilla::net::CookieStruct* temp = _impl_.content_.mvcookiestruct_;
+    ::protobuf::mozilla::net::CookieStruct* temp = _impl_.content_.a_mvcookiestruct_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcookiestruct_ = nullptr;
+    _impl_.content_.a_mvcookiestruct_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::net::CookieStruct& MaybeCookieStruct::_internal_mvcookiestruct() const {
-  return _internal_has_mvcookiestruct()
-      ? *_impl_.content_.mvcookiestruct_
+inline const ::protobuf::mozilla::net::CookieStruct& MaybeCookieStruct::_internal_a_mvcookiestruct() const {
+  return _internal_has_a_mvcookiestruct()
+      ? *_impl_.content_.a_mvcookiestruct_
       : reinterpret_cast< ::protobuf::mozilla::net::CookieStruct&>(::protobuf::mozilla::net::_CookieStruct_default_instance_);
 }
-inline const ::protobuf::mozilla::net::CookieStruct& MaybeCookieStruct::mvcookiestruct() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MaybeCookieStruct.mVCookieStruct)
-  return _internal_mvcookiestruct();
+inline const ::protobuf::mozilla::net::CookieStruct& MaybeCookieStruct::a_mvcookiestruct() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MaybeCookieStruct.a_mVCookieStruct)
+  return _internal_a_mvcookiestruct();
 }
-inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::unsafe_arena_release_mvcookiestruct() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.MaybeCookieStruct.mVCookieStruct)
-  if (_internal_has_mvcookiestruct()) {
+inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::unsafe_arena_release_a_mvcookiestruct() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.MaybeCookieStruct.a_mVCookieStruct)
+  if (_internal_has_a_mvcookiestruct()) {
     clear_has_content();
-    ::protobuf::mozilla::net::CookieStruct* temp = _impl_.content_.mvcookiestruct_;
-    _impl_.content_.mvcookiestruct_ = nullptr;
+    ::protobuf::mozilla::net::CookieStruct* temp = _impl_.content_.a_mvcookiestruct_;
+    _impl_.content_.a_mvcookiestruct_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void MaybeCookieStruct::unsafe_arena_set_allocated_mvcookiestruct(::protobuf::mozilla::net::CookieStruct* mvcookiestruct) {
+inline void MaybeCookieStruct::unsafe_arena_set_allocated_a_mvcookiestruct(::protobuf::mozilla::net::CookieStruct* a_mvcookiestruct) {
   clear_content();
-  if (mvcookiestruct) {
-    set_has_mvcookiestruct();
-    _impl_.content_.mvcookiestruct_ = mvcookiestruct;
+  if (a_mvcookiestruct) {
+    set_has_a_mvcookiestruct();
+    _impl_.content_.a_mvcookiestruct_ = a_mvcookiestruct;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.MaybeCookieStruct.mVCookieStruct)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.MaybeCookieStruct.a_mVCookieStruct)
 }
-inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::_internal_mutable_mvcookiestruct() {
-  if (!_internal_has_mvcookiestruct()) {
+inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::_internal_mutable_a_mvcookiestruct() {
+  if (!_internal_has_a_mvcookiestruct()) {
     clear_content();
-    set_has_mvcookiestruct();
-    _impl_.content_.mvcookiestruct_ = CreateMaybeMessage< ::protobuf::mozilla::net::CookieStruct >(GetArenaForAllocation());
+    set_has_a_mvcookiestruct();
+    _impl_.content_.a_mvcookiestruct_ = CreateMaybeMessage< ::protobuf::mozilla::net::CookieStruct >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcookiestruct_;
+  return _impl_.content_.a_mvcookiestruct_;
 }
-inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::mutable_mvcookiestruct() {
-  ::protobuf::mozilla::net::CookieStruct* _msg = _internal_mutable_mvcookiestruct();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MaybeCookieStruct.mVCookieStruct)
+inline ::protobuf::mozilla::net::CookieStruct* MaybeCookieStruct::mutable_a_mvcookiestruct() {
+  ::protobuf::mozilla::net::CookieStruct* _msg = _internal_mutable_a_mvcookiestruct();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MaybeCookieStruct.a_mVCookieStruct)
   return _msg;
 }
 
-// bytes mVvoid_t = 2;
-inline bool MaybeCookieStruct::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 2;
+inline bool MaybeCookieStruct::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool MaybeCookieStruct::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool MaybeCookieStruct::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void MaybeCookieStruct::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void MaybeCookieStruct::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void MaybeCookieStruct::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void MaybeCookieStruct::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& MaybeCookieStruct::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MaybeCookieStruct.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& MaybeCookieStruct::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MaybeCookieStruct.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void MaybeCookieStruct::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void MaybeCookieStruct::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MaybeCookieStruct.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MaybeCookieStruct.a_mVvoid_t)
 }
-inline std::string* MaybeCookieStruct::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MaybeCookieStruct.mVvoid_t)
+inline std::string* MaybeCookieStruct::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MaybeCookieStruct.a_mVvoid_t)
   return _s;
 }
-inline const std::string& MaybeCookieStruct::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& MaybeCookieStruct::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void MaybeCookieStruct::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void MaybeCookieStruct::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MaybeCookieStruct::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* MaybeCookieStruct::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* MaybeCookieStruct::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MaybeCookieStruct.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* MaybeCookieStruct::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MaybeCookieStruct.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void MaybeCookieStruct::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void MaybeCookieStruct::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeCookieStruct.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeCookieStruct.a_mVvoid_t)
 }
 
 inline bool MaybeCookieStruct::has_content() const {
@@ -582,140 +582,140 @@ inline MaybeCookieStruct::ContentCase MaybeCookieStruct::content_case() const {
 
 // CookieSubscription
 
-// optional bytes name = 1;
-inline bool CookieSubscription::_internal_has_name() const {
+// optional bytes a_name = 1;
+inline bool CookieSubscription::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CookieSubscription::has_name() const {
-  return _internal_has_name();
+inline bool CookieSubscription::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void CookieSubscription::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void CookieSubscription::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CookieSubscription::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CookieSubscription.name)
-  return _internal_name();
+inline const std::string& CookieSubscription::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CookieSubscription.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CookieSubscription::set_name(ArgT0&& arg0, ArgT... args) {
+void CookieSubscription::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.a_name)
 }
-inline std::string* CookieSubscription::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CookieSubscription.name)
+inline std::string* CookieSubscription::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CookieSubscription.a_name)
   return _s;
 }
-inline const std::string& CookieSubscription::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& CookieSubscription::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void CookieSubscription::_internal_set_name(const std::string& value) {
+inline void CookieSubscription::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CookieSubscription::_internal_mutable_name() {
+inline std::string* CookieSubscription::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CookieSubscription::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CookieSubscription.name)
-  if (!_internal_has_name()) {
+inline std::string* CookieSubscription::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CookieSubscription.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CookieSubscription::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void CookieSubscription::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.a_name)
 }
 
-// required bytes url = 2;
-inline bool CookieSubscription::_internal_has_url() const {
+// required bytes a_url = 2;
+inline bool CookieSubscription::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool CookieSubscription::has_url() const {
-  return _internal_has_url();
+inline bool CookieSubscription::has_a_url() const {
+  return _internal_has_a_url();
 }
-inline void CookieSubscription::clear_url() {
-  _impl_.url_.ClearToEmpty();
+inline void CookieSubscription::clear_a_url() {
+  _impl_.a_url_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& CookieSubscription::url() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CookieSubscription.url)
-  return _internal_url();
+inline const std::string& CookieSubscription::a_url() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CookieSubscription.a_url)
+  return _internal_a_url();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CookieSubscription::set_url(ArgT0&& arg0, ArgT... args) {
+void CookieSubscription::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.url)
+ _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.a_url)
 }
-inline std::string* CookieSubscription::mutable_url() {
-  std::string* _s = _internal_mutable_url();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CookieSubscription.url)
+inline std::string* CookieSubscription::mutable_a_url() {
+  std::string* _s = _internal_mutable_a_url();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CookieSubscription.a_url)
   return _s;
 }
-inline const std::string& CookieSubscription::_internal_url() const {
-  return _impl_.url_.Get();
+inline const std::string& CookieSubscription::_internal_a_url() const {
+  return _impl_.a_url_.Get();
 }
-inline void CookieSubscription::_internal_set_url(const std::string& value) {
+inline void CookieSubscription::_internal_set_a_url(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.url_.Set(value, GetArenaForAllocation());
+  _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CookieSubscription::_internal_mutable_url() {
+inline std::string* CookieSubscription::_internal_mutable_a_url() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.url_.Mutable(GetArenaForAllocation());
+  return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CookieSubscription::release_url() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CookieSubscription.url)
-  if (!_internal_has_url()) {
+inline std::string* CookieSubscription::release_a_url() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CookieSubscription.a_url)
+  if (!_internal_has_a_url()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.url_.Release();
+  auto* p = _impl_.a_url_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CookieSubscription::set_allocated_url(std::string* url) {
-  if (url != nullptr) {
+inline void CookieSubscription::set_allocated_a_url(std::string* a_url) {
+  if (a_url != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.url_.SetAllocated(url, GetArenaForAllocation());
+  _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.url)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.a_url)
 }
 
 #ifdef __GNUC__

@@ -29,26 +29,26 @@ message SharedWorkerTerminateOpArgs {
 }
 
 message SharedWorkerPortIdentifierOpArgs {
-  required protobuf.mozilla.dom.MessagePortIdentifier portIdentifier = 1;
+  required protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
 }
 
 message SharedWorkerAddWindowIDOpArgs {
-  required uint64 windowID = 1;
+  required uint64 a_windowID = 1;
 }
 
 message SharedWorkerRemoveWindowIDOpArgs {
-  required uint64 windowID = 1;
+  required uint64 a_windowID = 1;
 }
 
 message SharedWorkerOpArgs {
   oneof content {
-    protobuf.mozilla.dom.SharedWorkerSuspendOpArgs mVSharedWorkerSuspendOpArgs = 1;
-    protobuf.mozilla.dom.SharedWorkerResumeOpArgs mVSharedWorkerResumeOpArgs = 2;
-    protobuf.mozilla.dom.SharedWorkerFreezeOpArgs mVSharedWorkerFreezeOpArgs = 3;
-    protobuf.mozilla.dom.SharedWorkerThawOpArgs mVSharedWorkerThawOpArgs = 4;
-    protobuf.mozilla.dom.SharedWorkerTerminateOpArgs mVSharedWorkerTerminateOpArgs = 5;
-    protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs mVSharedWorkerPortIdentifierOpArgs = 6;
-    protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs mVSharedWorkerAddWindowIDOpArgs = 7;
-    protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs mVSharedWorkerRemoveWindowIDOpArgs = 8;
+    protobuf.mozilla.dom.SharedWorkerSuspendOpArgs a_mVSharedWorkerSuspendOpArgs = 1;
+    protobuf.mozilla.dom.SharedWorkerResumeOpArgs a_mVSharedWorkerResumeOpArgs = 2;
+    protobuf.mozilla.dom.SharedWorkerFreezeOpArgs a_mVSharedWorkerFreezeOpArgs = 3;
+    protobuf.mozilla.dom.SharedWorkerThawOpArgs a_mVSharedWorkerThawOpArgs = 4;
+    protobuf.mozilla.dom.SharedWorkerTerminateOpArgs a_mVSharedWorkerTerminateOpArgs = 5;
+    protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs a_mVSharedWorkerPortIdentifierOpArgs = 6;
+    protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs a_mVSharedWorkerAddWindowIDOpArgs = 7;
+    protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs a_mVSharedWorkerRemoveWindowIDOpArgs = 8;
   }
 }

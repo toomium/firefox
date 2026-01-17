@@ -28,7 +28,7 @@ message Reply_PGMPVideoEncoderConstructor {
 }
 
 message Msg_PChromiumCDMConstructor {
-  required bytes aKeySystem = 1;
+  required bytes a_aKeySystem = 1;
 }
 
 message Reply_PChromiumCDMConstructor {

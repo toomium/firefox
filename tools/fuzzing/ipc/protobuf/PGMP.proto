@@ -18,7 +18,7 @@ import "PrefsTypes.proto";
 
 // Message declarations
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
+  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_PGMPTimerConstructor {
@@ -37,61 +37,61 @@ message Msg_PGMPContentChildDestroyed {
 }
 
 message Msg_FOGData {
-  required bytes buf = 1;
+  required bytes a_buf = 1;
 }
 
 message Msg_CrashPluginNow {
 }
 
 message Msg_StartPlugin {
-  required bytes adapter = 1;
+  required bytes a_adapter = 1;
 }
 
 message Reply_StartPlugin {
 }
 
 message Msg_ProvideStorageId {
-  required bytes storageId = 1;
+  required bytes a_storageId = 1;
 }
 
 message Msg_PreloadLibs {
-  required bytes libs = 1;
+  required bytes a_libs = 1;
 }
 
 message Msg_CloseActive {
 }
 
 message Msg_InitGMPContentChild {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_InitProfiler {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref pref = 1;
+  required protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_FlushFOGData {
 }
 
 message Reply_FlushFOGData {
-  required bytes buf = 1;
+  required bytes a_buf = 1;
 }
 
 message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bytes profile = 1;
+  required bytes a_profile = 1;
 }
 
 // Parameter mappings stats:

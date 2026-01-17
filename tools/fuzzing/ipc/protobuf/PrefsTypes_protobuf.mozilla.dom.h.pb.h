@@ -105,9 +105,9 @@ class PrefValue final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsCString = 1,
-    kMVint32T = 2,
-    kMVbool = 3,
+    kAMVnsCString = 1,
+    kAMVint32T = 2,
+    kAMVbool = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -180,52 +180,52 @@ class PrefValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsCStringFieldNumber = 1,
-    kMVint32TFieldNumber = 2,
-    kMVboolFieldNumber = 3,
+    kAMVnsCStringFieldNumber = 1,
+    kAMVint32TFieldNumber = 2,
+    kAMVboolFieldNumber = 3,
   };
-  // bytes mVnsCString = 1;
-  bool has_mvnscstring() const;
+  // bytes a_mVnsCString = 1;
+  bool has_a_mvnscstring() const;
   private:
-  bool _internal_has_mvnscstring() const;
+  bool _internal_has_a_mvnscstring() const;
   public:
-  void clear_mvnscstring();
-  const std::string& mvnscstring() const;
+  void clear_a_mvnscstring();
+  const std::string& a_mvnscstring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnscstring(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnscstring();
-  PROTOBUF_NODISCARD std::string* release_mvnscstring();
-  void set_allocated_mvnscstring(std::string* mvnscstring);
+  void set_a_mvnscstring(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnscstring();
+  PROTOBUF_NODISCARD std::string* release_a_mvnscstring();
+  void set_allocated_a_mvnscstring(std::string* a_mvnscstring);
   private:
-  const std::string& _internal_mvnscstring() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnscstring(const std::string& value);
-  std::string* _internal_mutable_mvnscstring();
+  const std::string& _internal_a_mvnscstring() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnscstring(const std::string& value);
+  std::string* _internal_mutable_a_mvnscstring();
   public:
 
-  // sint32 mVint32_t = 2;
-  bool has_mvint32_t() const;
+  // sint32 a_mVint32_t = 2;
+  bool has_a_mvint32_t() const;
   private:
-  bool _internal_has_mvint32_t() const;
+  bool _internal_has_a_mvint32_t() const;
   public:
-  void clear_mvint32_t();
-  int32_t mvint32_t() const;
-  void set_mvint32_t(int32_t value);
+  void clear_a_mvint32_t();
+  int32_t a_mvint32_t() const;
+  void set_a_mvint32_t(int32_t value);
   private:
-  int32_t _internal_mvint32_t() const;
-  void _internal_set_mvint32_t(int32_t value);
+  int32_t _internal_a_mvint32_t() const;
+  void _internal_set_a_mvint32_t(int32_t value);
   public:
 
-  // bool mVbool = 3;
-  bool has_mvbool() const;
+  // bool a_mVbool = 3;
+  bool has_a_mvbool() const;
   private:
-  bool _internal_has_mvbool() const;
+  bool _internal_has_a_mvbool() const;
   public:
-  void clear_mvbool();
-  bool mvbool() const;
-  void set_mvbool(bool value);
+  void clear_a_mvbool();
+  bool a_mvbool() const;
+  void set_a_mvbool(bool value);
   private:
-  bool _internal_mvbool() const;
-  void _internal_set_mvbool(bool value);
+  bool _internal_a_mvbool() const;
+  void _internal_set_a_mvbool(bool value);
   public:
 
   void clear_content();
@@ -233,9 +233,9 @@ class PrefValue final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PrefValue)
  private:
   class _Internal;
-  void set_has_mvnscstring();
-  void set_has_mvint32_t();
-  void set_has_mvbool();
+  void set_has_a_mvnscstring();
+  void set_has_a_mvint32_t();
+  void set_has_a_mvbool();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -247,9 +247,9 @@ class PrefValue final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnscstring_;
-      int32_t mvint32_t_;
-      bool mvbool_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnscstring_;
+      int32_t a_mvint32_t_;
+      bool a_mvbool_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -370,90 +370,90 @@ class Pref final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
-    kDefaultValueFieldNumber = 4,
-    kUserValueFieldNumber = 5,
-    kIsLockedFieldNumber = 2,
-    kIsSanitizedFieldNumber = 3,
+    kANameFieldNumber = 1,
+    kADefaultValueFieldNumber = 4,
+    kAUserValueFieldNumber = 5,
+    kAIsLockedFieldNumber = 2,
+    kAIsSanitizedFieldNumber = 3,
   };
-  // required bytes name = 1;
-  bool has_name() const;
+  // required bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // optional .protobuf.mozilla.dom.PrefValue defaultValue = 4;
-  bool has_defaultvalue() const;
+  // optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
+  bool has_a_defaultvalue() const;
   private:
-  bool _internal_has_defaultvalue() const;
+  bool _internal_has_a_defaultvalue() const;
   public:
-  void clear_defaultvalue();
-  const ::protobuf::mozilla::dom::PrefValue& defaultvalue() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PrefValue* release_defaultvalue();
-  ::protobuf::mozilla::dom::PrefValue* mutable_defaultvalue();
-  void set_allocated_defaultvalue(::protobuf::mozilla::dom::PrefValue* defaultvalue);
+  void clear_a_defaultvalue();
+  const ::protobuf::mozilla::dom::PrefValue& a_defaultvalue() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PrefValue* release_a_defaultvalue();
+  ::protobuf::mozilla::dom::PrefValue* mutable_a_defaultvalue();
+  void set_allocated_a_defaultvalue(::protobuf::mozilla::dom::PrefValue* a_defaultvalue);
   private:
-  const ::protobuf::mozilla::dom::PrefValue& _internal_defaultvalue() const;
-  ::protobuf::mozilla::dom::PrefValue* _internal_mutable_defaultvalue();
+  const ::protobuf::mozilla::dom::PrefValue& _internal_a_defaultvalue() const;
+  ::protobuf::mozilla::dom::PrefValue* _internal_mutable_a_defaultvalue();
   public:
-  void unsafe_arena_set_allocated_defaultvalue(
-      ::protobuf::mozilla::dom::PrefValue* defaultvalue);
-  ::protobuf::mozilla::dom::PrefValue* unsafe_arena_release_defaultvalue();
+  void unsafe_arena_set_allocated_a_defaultvalue(
+      ::protobuf::mozilla::dom::PrefValue* a_defaultvalue);
+  ::protobuf::mozilla::dom::PrefValue* unsafe_arena_release_a_defaultvalue();
 
-  // optional .protobuf.mozilla.dom.PrefValue userValue = 5;
-  bool has_uservalue() const;
+  // optional .protobuf.mozilla.dom.PrefValue a_userValue = 5;
+  bool has_a_uservalue() const;
   private:
-  bool _internal_has_uservalue() const;
+  bool _internal_has_a_uservalue() const;
   public:
-  void clear_uservalue();
-  const ::protobuf::mozilla::dom::PrefValue& uservalue() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PrefValue* release_uservalue();
-  ::protobuf::mozilla::dom::PrefValue* mutable_uservalue();
-  void set_allocated_uservalue(::protobuf::mozilla::dom::PrefValue* uservalue);
+  void clear_a_uservalue();
+  const ::protobuf::mozilla::dom::PrefValue& a_uservalue() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PrefValue* release_a_uservalue();
+  ::protobuf::mozilla::dom::PrefValue* mutable_a_uservalue();
+  void set_allocated_a_uservalue(::protobuf::mozilla::dom::PrefValue* a_uservalue);
   private:
-  const ::protobuf::mozilla::dom::PrefValue& _internal_uservalue() const;
-  ::protobuf::mozilla::dom::PrefValue* _internal_mutable_uservalue();
+  const ::protobuf::mozilla::dom::PrefValue& _internal_a_uservalue() const;
+  ::protobuf::mozilla::dom::PrefValue* _internal_mutable_a_uservalue();
   public:
-  void unsafe_arena_set_allocated_uservalue(
-      ::protobuf::mozilla::dom::PrefValue* uservalue);
-  ::protobuf::mozilla::dom::PrefValue* unsafe_arena_release_uservalue();
+  void unsafe_arena_set_allocated_a_uservalue(
+      ::protobuf::mozilla::dom::PrefValue* a_uservalue);
+  ::protobuf::mozilla::dom::PrefValue* unsafe_arena_release_a_uservalue();
 
-  // required bool isLocked = 2;
-  bool has_islocked() const;
+  // required bool a_isLocked = 2;
+  bool has_a_islocked() const;
   private:
-  bool _internal_has_islocked() const;
+  bool _internal_has_a_islocked() const;
   public:
-  void clear_islocked();
-  bool islocked() const;
-  void set_islocked(bool value);
+  void clear_a_islocked();
+  bool a_islocked() const;
+  void set_a_islocked(bool value);
   private:
-  bool _internal_islocked() const;
-  void _internal_set_islocked(bool value);
+  bool _internal_a_islocked() const;
+  void _internal_set_a_islocked(bool value);
   public:
 
-  // required bool isSanitized = 3;
-  bool has_issanitized() const;
+  // required bool a_isSanitized = 3;
+  bool has_a_issanitized() const;
   private:
-  bool _internal_has_issanitized() const;
+  bool _internal_has_a_issanitized() const;
   public:
-  void clear_issanitized();
-  bool issanitized() const;
-  void set_issanitized(bool value);
+  void clear_a_issanitized();
+  bool a_issanitized() const;
+  void set_a_issanitized(bool value);
   private:
-  bool _internal_issanitized() const;
-  void _internal_set_issanitized(bool value);
+  bool _internal_a_issanitized() const;
+  void _internal_set_a_issanitized(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.Pref)
@@ -469,11 +469,11 @@ class Pref final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::protobuf::mozilla::dom::PrefValue* defaultvalue_;
-    ::protobuf::mozilla::dom::PrefValue* uservalue_;
-    bool islocked_;
-    bool issanitized_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::protobuf::mozilla::dom::PrefValue* a_defaultvalue_;
+    ::protobuf::mozilla::dom::PrefValue* a_uservalue_;
+    bool a_islocked_;
+    bool a_issanitized_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PrefsTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -489,157 +489,157 @@ class Pref final :
 #endif  // __GNUC__
 // PrefValue
 
-// bytes mVnsCString = 1;
-inline bool PrefValue::_internal_has_mvnscstring() const {
-  return content_case() == kMVnsCString;
+// bytes a_mVnsCString = 1;
+inline bool PrefValue::_internal_has_a_mvnscstring() const {
+  return content_case() == kAMVnsCString;
 }
-inline bool PrefValue::has_mvnscstring() const {
-  return _internal_has_mvnscstring();
+inline bool PrefValue::has_a_mvnscstring() const {
+  return _internal_has_a_mvnscstring();
 }
-inline void PrefValue::set_has_mvnscstring() {
-  _impl_._oneof_case_[0] = kMVnsCString;
+inline void PrefValue::set_has_a_mvnscstring() {
+  _impl_._oneof_case_[0] = kAMVnsCString;
 }
-inline void PrefValue::clear_mvnscstring() {
-  if (_internal_has_mvnscstring()) {
-    _impl_.content_.mvnscstring_.Destroy();
+inline void PrefValue::clear_a_mvnscstring() {
+  if (_internal_has_a_mvnscstring()) {
+    _impl_.content_.a_mvnscstring_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& PrefValue::mvnscstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PrefValue.mVnsCString)
-  return _internal_mvnscstring();
+inline const std::string& PrefValue::a_mvnscstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PrefValue.a_mVnsCString)
+  return _internal_a_mvnscstring();
 }
 template <typename ArgT0, typename... ArgT>
-inline void PrefValue::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnscstring()) {
+inline void PrefValue::set_a_mvnscstring(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.mVnsCString)
+  _impl_.content_.a_mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.a_mVnsCString)
 }
-inline std::string* PrefValue::mutable_mvnscstring() {
-  std::string* _s = _internal_mutable_mvnscstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PrefValue.mVnsCString)
+inline std::string* PrefValue::mutable_a_mvnscstring() {
+  std::string* _s = _internal_mutable_a_mvnscstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PrefValue.a_mVnsCString)
   return _s;
 }
-inline const std::string& PrefValue::_internal_mvnscstring() const {
-  if (_internal_has_mvnscstring()) {
-    return _impl_.content_.mvnscstring_.Get();
+inline const std::string& PrefValue::_internal_a_mvnscstring() const {
+  if (_internal_has_a_mvnscstring()) {
+    return _impl_.content_.a_mvnscstring_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void PrefValue::_internal_set_mvnscstring(const std::string& value) {
-  if (!_internal_has_mvnscstring()) {
+inline void PrefValue::_internal_set_a_mvnscstring(const std::string& value) {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnscstring_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrefValue::_internal_mutable_mvnscstring() {
-  if (!_internal_has_mvnscstring()) {
+inline std::string* PrefValue::_internal_mutable_a_mvnscstring() {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  return _impl_.content_.mvnscstring_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnscstring_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* PrefValue::release_mvnscstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PrefValue.mVnsCString)
-  if (_internal_has_mvnscstring()) {
+inline std::string* PrefValue::release_a_mvnscstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PrefValue.a_mVnsCString)
+  if (_internal_has_a_mvnscstring()) {
     clear_has_content();
-    return _impl_.content_.mvnscstring_.Release();
+    return _impl_.content_.a_mvnscstring_.Release();
   } else {
     return nullptr;
   }
 }
-inline void PrefValue::set_allocated_mvnscstring(std::string* mvnscstring) {
+inline void PrefValue::set_allocated_a_mvnscstring(std::string* a_mvnscstring) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnscstring != nullptr) {
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitAllocated(mvnscstring, GetArenaForAllocation());
+  if (a_mvnscstring != nullptr) {
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitAllocated(a_mvnscstring, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PrefValue.mVnsCString)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PrefValue.a_mVnsCString)
 }
 
-// sint32 mVint32_t = 2;
-inline bool PrefValue::_internal_has_mvint32_t() const {
-  return content_case() == kMVint32T;
+// sint32 a_mVint32_t = 2;
+inline bool PrefValue::_internal_has_a_mvint32_t() const {
+  return content_case() == kAMVint32T;
 }
-inline bool PrefValue::has_mvint32_t() const {
-  return _internal_has_mvint32_t();
+inline bool PrefValue::has_a_mvint32_t() const {
+  return _internal_has_a_mvint32_t();
 }
-inline void PrefValue::set_has_mvint32_t() {
-  _impl_._oneof_case_[0] = kMVint32T;
+inline void PrefValue::set_has_a_mvint32_t() {
+  _impl_._oneof_case_[0] = kAMVint32T;
 }
-inline void PrefValue::clear_mvint32_t() {
-  if (_internal_has_mvint32_t()) {
-    _impl_.content_.mvint32_t_ = 0;
+inline void PrefValue::clear_a_mvint32_t() {
+  if (_internal_has_a_mvint32_t()) {
+    _impl_.content_.a_mvint32_t_ = 0;
     clear_has_content();
   }
 }
-inline int32_t PrefValue::_internal_mvint32_t() const {
-  if (_internal_has_mvint32_t()) {
-    return _impl_.content_.mvint32_t_;
+inline int32_t PrefValue::_internal_a_mvint32_t() const {
+  if (_internal_has_a_mvint32_t()) {
+    return _impl_.content_.a_mvint32_t_;
   }
   return 0;
 }
-inline void PrefValue::_internal_set_mvint32_t(int32_t value) {
-  if (!_internal_has_mvint32_t()) {
+inline void PrefValue::_internal_set_a_mvint32_t(int32_t value) {
+  if (!_internal_has_a_mvint32_t()) {
     clear_content();
-    set_has_mvint32_t();
+    set_has_a_mvint32_t();
   }
-  _impl_.content_.mvint32_t_ = value;
+  _impl_.content_.a_mvint32_t_ = value;
 }
-inline int32_t PrefValue::mvint32_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PrefValue.mVint32_t)
-  return _internal_mvint32_t();
+inline int32_t PrefValue::a_mvint32_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PrefValue.a_mVint32_t)
+  return _internal_a_mvint32_t();
 }
-inline void PrefValue::set_mvint32_t(int32_t value) {
-  _internal_set_mvint32_t(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.mVint32_t)
+inline void PrefValue::set_a_mvint32_t(int32_t value) {
+  _internal_set_a_mvint32_t(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.a_mVint32_t)
 }
 
-// bool mVbool = 3;
-inline bool PrefValue::_internal_has_mvbool() const {
-  return content_case() == kMVbool;
+// bool a_mVbool = 3;
+inline bool PrefValue::_internal_has_a_mvbool() const {
+  return content_case() == kAMVbool;
 }
-inline bool PrefValue::has_mvbool() const {
-  return _internal_has_mvbool();
+inline bool PrefValue::has_a_mvbool() const {
+  return _internal_has_a_mvbool();
 }
-inline void PrefValue::set_has_mvbool() {
-  _impl_._oneof_case_[0] = kMVbool;
+inline void PrefValue::set_has_a_mvbool() {
+  _impl_._oneof_case_[0] = kAMVbool;
 }
-inline void PrefValue::clear_mvbool() {
-  if (_internal_has_mvbool()) {
-    _impl_.content_.mvbool_ = false;
+inline void PrefValue::clear_a_mvbool() {
+  if (_internal_has_a_mvbool()) {
+    _impl_.content_.a_mvbool_ = false;
     clear_has_content();
   }
 }
-inline bool PrefValue::_internal_mvbool() const {
-  if (_internal_has_mvbool()) {
-    return _impl_.content_.mvbool_;
+inline bool PrefValue::_internal_a_mvbool() const {
+  if (_internal_has_a_mvbool()) {
+    return _impl_.content_.a_mvbool_;
   }
   return false;
 }
-inline void PrefValue::_internal_set_mvbool(bool value) {
-  if (!_internal_has_mvbool()) {
+inline void PrefValue::_internal_set_a_mvbool(bool value) {
+  if (!_internal_has_a_mvbool()) {
     clear_content();
-    set_has_mvbool();
+    set_has_a_mvbool();
   }
-  _impl_.content_.mvbool_ = value;
+  _impl_.content_.a_mvbool_ = value;
 }
-inline bool PrefValue::mvbool() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PrefValue.mVbool)
-  return _internal_mvbool();
+inline bool PrefValue::a_mvbool() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PrefValue.a_mVbool)
+  return _internal_a_mvbool();
 }
-inline void PrefValue::set_mvbool(bool value) {
-  _internal_set_mvbool(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.mVbool)
+inline void PrefValue::set_a_mvbool(bool value) {
+  _internal_set_a_mvbool(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.a_mVbool)
 }
 
 inline bool PrefValue::has_content() const {
@@ -655,169 +655,169 @@ inline PrefValue::ContentCase PrefValue::content_case() const {
 
 // Pref
 
-// required bytes name = 1;
-inline bool Pref::_internal_has_name() const {
+// required bytes a_name = 1;
+inline bool Pref::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Pref::has_name() const {
-  return _internal_has_name();
+inline bool Pref::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void Pref::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void Pref::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Pref::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.name)
-  return _internal_name();
+inline const std::string& Pref::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Pref::set_name(ArgT0&& arg0, ArgT... args) {
+void Pref::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_name)
 }
-inline std::string* Pref::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.Pref.name)
+inline std::string* Pref::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.Pref.a_name)
   return _s;
 }
-inline const std::string& Pref::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& Pref::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void Pref::_internal_set_name(const std::string& value) {
+inline void Pref::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Pref::_internal_mutable_name() {
+inline std::string* Pref::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Pref::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.name)
-  if (!_internal_has_name()) {
+inline std::string* Pref::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Pref::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void Pref::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_name)
 }
 
-// required bool isLocked = 2;
-inline bool Pref::_internal_has_islocked() const {
+// required bool a_isLocked = 2;
+inline bool Pref::_internal_has_a_islocked() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Pref::has_islocked() const {
-  return _internal_has_islocked();
+inline bool Pref::has_a_islocked() const {
+  return _internal_has_a_islocked();
 }
-inline void Pref::clear_islocked() {
-  _impl_.islocked_ = false;
+inline void Pref::clear_a_islocked() {
+  _impl_.a_islocked_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Pref::_internal_islocked() const {
-  return _impl_.islocked_;
+inline bool Pref::_internal_a_islocked() const {
+  return _impl_.a_islocked_;
 }
-inline bool Pref::islocked() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.isLocked)
-  return _internal_islocked();
+inline bool Pref::a_islocked() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.a_isLocked)
+  return _internal_a_islocked();
 }
-inline void Pref::_internal_set_islocked(bool value) {
+inline void Pref::_internal_set_a_islocked(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.islocked_ = value;
+  _impl_.a_islocked_ = value;
 }
-inline void Pref::set_islocked(bool value) {
-  _internal_set_islocked(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.isLocked)
+inline void Pref::set_a_islocked(bool value) {
+  _internal_set_a_islocked(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_isLocked)
 }
 
-// required bool isSanitized = 3;
-inline bool Pref::_internal_has_issanitized() const {
+// required bool a_isSanitized = 3;
+inline bool Pref::_internal_has_a_issanitized() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Pref::has_issanitized() const {
-  return _internal_has_issanitized();
+inline bool Pref::has_a_issanitized() const {
+  return _internal_has_a_issanitized();
 }
-inline void Pref::clear_issanitized() {
-  _impl_.issanitized_ = false;
+inline void Pref::clear_a_issanitized() {
+  _impl_.a_issanitized_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Pref::_internal_issanitized() const {
-  return _impl_.issanitized_;
+inline bool Pref::_internal_a_issanitized() const {
+  return _impl_.a_issanitized_;
 }
-inline bool Pref::issanitized() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.isSanitized)
-  return _internal_issanitized();
+inline bool Pref::a_issanitized() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.a_isSanitized)
+  return _internal_a_issanitized();
 }
-inline void Pref::_internal_set_issanitized(bool value) {
+inline void Pref::_internal_set_a_issanitized(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.issanitized_ = value;
+  _impl_.a_issanitized_ = value;
 }
-inline void Pref::set_issanitized(bool value) {
-  _internal_set_issanitized(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.isSanitized)
+inline void Pref::set_a_issanitized(bool value) {
+  _internal_set_a_issanitized(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_isSanitized)
 }
 
-// optional .protobuf.mozilla.dom.PrefValue defaultValue = 4;
-inline bool Pref::_internal_has_defaultvalue() const {
+// optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
+inline bool Pref::_internal_has_a_defaultvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.defaultvalue_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_defaultvalue_ != nullptr);
   return value;
 }
-inline bool Pref::has_defaultvalue() const {
-  return _internal_has_defaultvalue();
+inline bool Pref::has_a_defaultvalue() const {
+  return _internal_has_a_defaultvalue();
 }
-inline void Pref::clear_defaultvalue() {
-  if (_impl_.defaultvalue_ != nullptr) _impl_.defaultvalue_->Clear();
+inline void Pref::clear_a_defaultvalue() {
+  if (_impl_.a_defaultvalue_ != nullptr) _impl_.a_defaultvalue_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::dom::PrefValue& Pref::_internal_defaultvalue() const {
-  const ::protobuf::mozilla::dom::PrefValue* p = _impl_.defaultvalue_;
+inline const ::protobuf::mozilla::dom::PrefValue& Pref::_internal_a_defaultvalue() const {
+  const ::protobuf::mozilla::dom::PrefValue* p = _impl_.a_defaultvalue_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::PrefValue&>(
       ::protobuf::mozilla::dom::_PrefValue_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::PrefValue& Pref::defaultvalue() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.defaultValue)
-  return _internal_defaultvalue();
+inline const ::protobuf::mozilla::dom::PrefValue& Pref::a_defaultvalue() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.a_defaultValue)
+  return _internal_a_defaultvalue();
 }
-inline void Pref::unsafe_arena_set_allocated_defaultvalue(
-    ::protobuf::mozilla::dom::PrefValue* defaultvalue) {
+inline void Pref::unsafe_arena_set_allocated_a_defaultvalue(
+    ::protobuf::mozilla::dom::PrefValue* a_defaultvalue) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.defaultvalue_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_defaultvalue_);
   }
-  _impl_.defaultvalue_ = defaultvalue;
-  if (defaultvalue) {
+  _impl_.a_defaultvalue_ = a_defaultvalue;
+  if (a_defaultvalue) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.Pref.defaultValue)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.Pref.a_defaultValue)
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::release_defaultvalue() {
+inline ::protobuf::mozilla::dom::PrefValue* Pref::release_a_defaultvalue() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.defaultvalue_;
-  _impl_.defaultvalue_ = nullptr;
+  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_defaultvalue_;
+  _impl_.a_defaultvalue_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -829,85 +829,85 @@ inline ::protobuf::mozilla::dom::PrefValue* Pref::release_defaultvalue() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::unsafe_arena_release_defaultvalue() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.defaultValue)
+inline ::protobuf::mozilla::dom::PrefValue* Pref::unsafe_arena_release_a_defaultvalue() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.a_defaultValue)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.defaultvalue_;
-  _impl_.defaultvalue_ = nullptr;
+  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_defaultvalue_;
+  _impl_.a_defaultvalue_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::_internal_mutable_defaultvalue() {
+inline ::protobuf::mozilla::dom::PrefValue* Pref::_internal_mutable_a_defaultvalue() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.defaultvalue_ == nullptr) {
+  if (_impl_.a_defaultvalue_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::PrefValue>(GetArenaForAllocation());
-    _impl_.defaultvalue_ = p;
+    _impl_.a_defaultvalue_ = p;
   }
-  return _impl_.defaultvalue_;
+  return _impl_.a_defaultvalue_;
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::mutable_defaultvalue() {
-  ::protobuf::mozilla::dom::PrefValue* _msg = _internal_mutable_defaultvalue();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.Pref.defaultValue)
+inline ::protobuf::mozilla::dom::PrefValue* Pref::mutable_a_defaultvalue() {
+  ::protobuf::mozilla::dom::PrefValue* _msg = _internal_mutable_a_defaultvalue();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.Pref.a_defaultValue)
   return _msg;
 }
-inline void Pref::set_allocated_defaultvalue(::protobuf::mozilla::dom::PrefValue* defaultvalue) {
+inline void Pref::set_allocated_a_defaultvalue(::protobuf::mozilla::dom::PrefValue* a_defaultvalue) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.defaultvalue_;
+    delete _impl_.a_defaultvalue_;
   }
-  if (defaultvalue) {
+  if (a_defaultvalue) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(defaultvalue);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_defaultvalue);
     if (message_arena != submessage_arena) {
-      defaultvalue = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, defaultvalue, submessage_arena);
+      a_defaultvalue = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_defaultvalue, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.defaultvalue_ = defaultvalue;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.defaultValue)
+  _impl_.a_defaultvalue_ = a_defaultvalue;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_defaultValue)
 }
 
-// optional .protobuf.mozilla.dom.PrefValue userValue = 5;
-inline bool Pref::_internal_has_uservalue() const {
+// optional .protobuf.mozilla.dom.PrefValue a_userValue = 5;
+inline bool Pref::_internal_has_a_uservalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.uservalue_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_uservalue_ != nullptr);
   return value;
 }
-inline bool Pref::has_uservalue() const {
-  return _internal_has_uservalue();
+inline bool Pref::has_a_uservalue() const {
+  return _internal_has_a_uservalue();
 }
-inline void Pref::clear_uservalue() {
-  if (_impl_.uservalue_ != nullptr) _impl_.uservalue_->Clear();
+inline void Pref::clear_a_uservalue() {
+  if (_impl_.a_uservalue_ != nullptr) _impl_.a_uservalue_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::protobuf::mozilla::dom::PrefValue& Pref::_internal_uservalue() const {
-  const ::protobuf::mozilla::dom::PrefValue* p = _impl_.uservalue_;
+inline const ::protobuf::mozilla::dom::PrefValue& Pref::_internal_a_uservalue() const {
+  const ::protobuf::mozilla::dom::PrefValue* p = _impl_.a_uservalue_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::PrefValue&>(
       ::protobuf::mozilla::dom::_PrefValue_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::PrefValue& Pref::uservalue() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.userValue)
-  return _internal_uservalue();
+inline const ::protobuf::mozilla::dom::PrefValue& Pref::a_uservalue() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.a_userValue)
+  return _internal_a_uservalue();
 }
-inline void Pref::unsafe_arena_set_allocated_uservalue(
-    ::protobuf::mozilla::dom::PrefValue* uservalue) {
+inline void Pref::unsafe_arena_set_allocated_a_uservalue(
+    ::protobuf::mozilla::dom::PrefValue* a_uservalue) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.uservalue_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_uservalue_);
   }
-  _impl_.uservalue_ = uservalue;
-  if (uservalue) {
+  _impl_.a_uservalue_ = a_uservalue;
+  if (a_uservalue) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.Pref.userValue)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.Pref.a_userValue)
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::release_uservalue() {
+inline ::protobuf::mozilla::dom::PrefValue* Pref::release_a_uservalue() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.uservalue_;
-  _impl_.uservalue_ = nullptr;
+  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_uservalue_;
+  _impl_.a_uservalue_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -919,44 +919,44 @@ inline ::protobuf::mozilla::dom::PrefValue* Pref::release_uservalue() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::unsafe_arena_release_uservalue() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.userValue)
+inline ::protobuf::mozilla::dom::PrefValue* Pref::unsafe_arena_release_a_uservalue() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.a_userValue)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.uservalue_;
-  _impl_.uservalue_ = nullptr;
+  ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_uservalue_;
+  _impl_.a_uservalue_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::_internal_mutable_uservalue() {
+inline ::protobuf::mozilla::dom::PrefValue* Pref::_internal_mutable_a_uservalue() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.uservalue_ == nullptr) {
+  if (_impl_.a_uservalue_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::PrefValue>(GetArenaForAllocation());
-    _impl_.uservalue_ = p;
+    _impl_.a_uservalue_ = p;
   }
-  return _impl_.uservalue_;
+  return _impl_.a_uservalue_;
 }
-inline ::protobuf::mozilla::dom::PrefValue* Pref::mutable_uservalue() {
-  ::protobuf::mozilla::dom::PrefValue* _msg = _internal_mutable_uservalue();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.Pref.userValue)
+inline ::protobuf::mozilla::dom::PrefValue* Pref::mutable_a_uservalue() {
+  ::protobuf::mozilla::dom::PrefValue* _msg = _internal_mutable_a_uservalue();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.Pref.a_userValue)
   return _msg;
 }
-inline void Pref::set_allocated_uservalue(::protobuf::mozilla::dom::PrefValue* uservalue) {
+inline void Pref::set_allocated_a_uservalue(::protobuf::mozilla::dom::PrefValue* a_uservalue) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.uservalue_;
+    delete _impl_.a_uservalue_;
   }
-  if (uservalue) {
+  if (a_uservalue) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(uservalue);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_uservalue);
     if (message_arena != submessage_arena) {
-      uservalue = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, uservalue, submessage_arena);
+      a_uservalue = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_uservalue, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.uservalue_ = uservalue;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.userValue)
+  _impl_.a_uservalue_ = a_uservalue;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_userValue)
 }
 
 #ifdef __GNUC__

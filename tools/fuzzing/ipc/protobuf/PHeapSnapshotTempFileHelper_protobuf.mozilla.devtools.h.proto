@@ -13,14 +13,14 @@ package protobuf.mozilla.devtools;
 
 // Structs and unions declarations
 message OpenedFile {
-  required bytes path = 1;
-  required bytes snapshotId = 2;
-  required bytes descriptor = 3;
+  required bytes a_path = 1;
+  required bytes a_snapshotId = 2;
+  required bytes a_descriptor = 3;
 }
 
 message OpenHeapSnapshotTempFileResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    protobuf.mozilla.devtools.OpenedFile mVOpenedFile = 2;
+    bytes a_mVnsresult = 1;
+    protobuf.mozilla.devtools.OpenedFile a_mVOpenedFile = 2;
   }
 }

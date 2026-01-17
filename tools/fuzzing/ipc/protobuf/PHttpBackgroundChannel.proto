@@ -19,66 +19,66 @@ import "PURLClassifierInfo.proto";
 
 // Message declarations
 message Msg_OnStartRequest {
-  required bytes responseHead = 1;
-  required bool useResponseHead = 2;
-  required bytes requestHeaders = 3;
-  required protobuf.mozilla.net.HttpChannelOnStartRequestArgs args = 4;
-  required protobuf.mozilla.net.HttpChannelAltDataStream altData = 5;
-  required bytes onStartRequestStart = 6;
+  required bytes a_responseHead = 1;
+  required bool a_useResponseHead = 2;
+  required bytes a_requestHeaders = 3;
+  required protobuf.mozilla.net.HttpChannelOnStartRequestArgs a_args = 4;
+  required protobuf.mozilla.net.HttpChannelAltDataStream a_altData = 5;
+  required bytes a_onStartRequestStart = 6;
 }
 
 message Msg_OnTransportAndData {
-  required bytes channelStatus = 1;
-  required bytes transportStatus = 2;
-  required uint64 offset = 3;
-  required uint32 count = 4;
-  required bytes data = 5;
-  required bool dataFromSocketProcess = 6;
-  required bytes onDataAvailableStart = 7;
+  required bytes a_channelStatus = 1;
+  required bytes a_transportStatus = 2;
+  required uint64 a_offset = 3;
+  required uint32 a_count = 4;
+  required bytes a_data = 5;
+  required bool a_dataFromSocketProcess = 6;
+  required bytes a_onDataAvailableStart = 7;
 }
 
 message Msg_OnStopRequest {
-  required bytes channelStatus = 1;
-  required protobuf.mozilla.net.ResourceTimingStructArgs timing = 2;
-  required bytes lastActiveTabOptimization = 3;
-  required bytes responseTrailers = 4;
-  repeated protobuf.mozilla.net.ConsoleReportCollected consoleReport = 5;
-  required bool fromSocketProcess = 6;
-  required bytes onStopRequestStart = 7;
+  required bytes a_channelStatus = 1;
+  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
+  required bytes a_lastActiveTabOptimization = 3;
+  required bytes a_responseTrailers = 4;
+  repeated protobuf.mozilla.net.ConsoleReportCollected a_consoleReport = 5;
+  required bool a_fromSocketProcess = 6;
+  required bytes a_onStopRequestStart = 7;
 }
 
 message Msg_OnConsoleReport {
-  repeated protobuf.mozilla.net.ConsoleReportCollected consoleReport = 1;
+  repeated protobuf.mozilla.net.ConsoleReportCollected a_consoleReport = 1;
 }
 
 message Msg_OnProgress {
-  required sint64 progress = 1;
-  required sint64 progressMax = 2;
+  required sint64 a_progress = 1;
+  required sint64 a_progressMax = 2;
 }
 
 message Msg_OnStatus {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_OnAfterLastPart {
-  required bytes aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 message Msg_NotifyClassificationFlags {
-  required uint32 aClassificationFlags = 1;
-  required bool aIsThirdParty = 2;
+  required uint32 a_aClassificationFlags = 1;
+  required bool a_aIsThirdParty = 2;
 }
 
 message Msg_SetClassifierMatchedInfo {
-  required protobuf.mozilla.dom.ClassifierInfo info = 1;
+  required protobuf.mozilla.dom.ClassifierInfo a_info = 1;
 }
 
 message Msg_SetClassifierMatchedTrackingInfo {
-  required protobuf.mozilla.dom.ClassifierInfo info = 1;
+  required protobuf.mozilla.dom.ClassifierInfo a_info = 1;
 }
 
 message Msg_AttachStreamFilter {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 message Msg_DetachStreamFilters {

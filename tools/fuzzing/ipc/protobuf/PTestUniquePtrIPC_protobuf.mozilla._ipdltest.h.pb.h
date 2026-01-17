@@ -173,24 +173,24 @@ class DummyStruct final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kXFieldNumber = 1,
+    kAXFieldNumber = 1,
   };
-  // required string x = 1;
-  bool has_x() const;
+  // required string a_x = 1;
+  bool has_a_x() const;
   private:
-  bool _internal_has_x() const;
+  bool _internal_has_a_x() const;
   public:
-  void clear_x();
-  const std::string& x() const;
+  void clear_a_x();
+  const std::string& a_x() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_x(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_x();
-  PROTOBUF_NODISCARD std::string* release_x();
-  void set_allocated_x(std::string* x);
+  void set_a_x(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_x();
+  PROTOBUF_NODISCARD std::string* release_a_x();
+  void set_allocated_a_x(std::string* a_x);
   private:
-  const std::string& _internal_x() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_x(const std::string& value);
-  std::string* _internal_mutable_x();
+  const std::string& _internal_a_x() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_x(const std::string& value);
+  std::string* _internal_mutable_a_x();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.DummyStruct)
@@ -203,7 +203,7 @@ class DummyStruct final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr x_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_x_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestUniquePtrIPC_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
@@ -252,8 +252,8 @@ class DummyUnion final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVstring = 1,
-    kMVint = 2,
+    kAMVstring = 1,
+    kAMVint = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -326,38 +326,38 @@ class DummyUnion final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVstringFieldNumber = 1,
-    kMVintFieldNumber = 2,
+    kAMVstringFieldNumber = 1,
+    kAMVintFieldNumber = 2,
   };
-  // bytes mVstring = 1;
-  bool has_mvstring() const;
+  // bytes a_mVstring = 1;
+  bool has_a_mvstring() const;
   private:
-  bool _internal_has_mvstring() const;
+  bool _internal_has_a_mvstring() const;
   public:
-  void clear_mvstring();
-  const std::string& mvstring() const;
+  void clear_a_mvstring();
+  const std::string& a_mvstring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvstring(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvstring();
-  PROTOBUF_NODISCARD std::string* release_mvstring();
-  void set_allocated_mvstring(std::string* mvstring);
+  void set_a_mvstring(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvstring();
+  PROTOBUF_NODISCARD std::string* release_a_mvstring();
+  void set_allocated_a_mvstring(std::string* a_mvstring);
   private:
-  const std::string& _internal_mvstring() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvstring(const std::string& value);
-  std::string* _internal_mutable_mvstring();
+  const std::string& _internal_a_mvstring() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvstring(const std::string& value);
+  std::string* _internal_mutable_a_mvstring();
   public:
 
-  // sint32 mVint = 2;
-  bool has_mvint() const;
+  // sint32 a_mVint = 2;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
   void clear_content();
@@ -365,8 +365,8 @@ class DummyUnion final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.DummyUnion)
  private:
   class _Internal;
-  void set_has_mvstring();
-  void set_has_mvint();
+  void set_has_a_mvstring();
+  void set_has_a_mvint();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -378,8 +378,8 @@ class DummyUnion final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvstring_;
-      int32_t mvint_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvstring_;
+      int32_t a_mvint_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -399,191 +399,191 @@ class DummyUnion final :
 #endif  // __GNUC__
 // DummyStruct
 
-// required string x = 1;
-inline bool DummyStruct::_internal_has_x() const {
+// required string a_x = 1;
+inline bool DummyStruct::_internal_has_a_x() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool DummyStruct::has_x() const {
-  return _internal_has_x();
+inline bool DummyStruct::has_a_x() const {
+  return _internal_has_a_x();
 }
-inline void DummyStruct::clear_x() {
-  _impl_.x_.ClearToEmpty();
+inline void DummyStruct::clear_a_x() {
+  _impl_.a_x_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DummyStruct::x() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.DummyStruct.x)
-  return _internal_x();
+inline const std::string& DummyStruct::a_x() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.DummyStruct.a_x)
+  return _internal_a_x();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DummyStruct::set_x(ArgT0&& arg0, ArgT... args) {
+void DummyStruct::set_a_x(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.x_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyStruct.x)
+ _impl_.a_x_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyStruct.a_x)
 }
-inline std::string* DummyStruct::mutable_x() {
-  std::string* _s = _internal_mutable_x();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.DummyStruct.x)
+inline std::string* DummyStruct::mutable_a_x() {
+  std::string* _s = _internal_mutable_a_x();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.DummyStruct.a_x)
   return _s;
 }
-inline const std::string& DummyStruct::_internal_x() const {
-  return _impl_.x_.Get();
+inline const std::string& DummyStruct::_internal_a_x() const {
+  return _impl_.a_x_.Get();
 }
-inline void DummyStruct::_internal_set_x(const std::string& value) {
+inline void DummyStruct::_internal_set_a_x(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.x_.Set(value, GetArenaForAllocation());
+  _impl_.a_x_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DummyStruct::_internal_mutable_x() {
+inline std::string* DummyStruct::_internal_mutable_a_x() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.x_.Mutable(GetArenaForAllocation());
+  return _impl_.a_x_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DummyStruct::release_x() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.DummyStruct.x)
-  if (!_internal_has_x()) {
+inline std::string* DummyStruct::release_a_x() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.DummyStruct.a_x)
+  if (!_internal_has_a_x()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.x_.Release();
+  auto* p = _impl_.a_x_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.x_.IsDefault()) {
-    _impl_.x_.Set("", GetArenaForAllocation());
+  if (_impl_.a_x_.IsDefault()) {
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DummyStruct::set_allocated_x(std::string* x) {
-  if (x != nullptr) {
+inline void DummyStruct::set_allocated_a_x(std::string* a_x) {
+  if (a_x != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.x_.SetAllocated(x, GetArenaForAllocation());
+  _impl_.a_x_.SetAllocated(a_x, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.x_.IsDefault()) {
-    _impl_.x_.Set("", GetArenaForAllocation());
+  if (_impl_.a_x_.IsDefault()) {
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.DummyStruct.x)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.DummyStruct.a_x)
 }
 
 // -------------------------------------------------------------------
 
 // DummyUnion
 
-// bytes mVstring = 1;
-inline bool DummyUnion::_internal_has_mvstring() const {
-  return content_case() == kMVstring;
+// bytes a_mVstring = 1;
+inline bool DummyUnion::_internal_has_a_mvstring() const {
+  return content_case() == kAMVstring;
 }
-inline bool DummyUnion::has_mvstring() const {
-  return _internal_has_mvstring();
+inline bool DummyUnion::has_a_mvstring() const {
+  return _internal_has_a_mvstring();
 }
-inline void DummyUnion::set_has_mvstring() {
-  _impl_._oneof_case_[0] = kMVstring;
+inline void DummyUnion::set_has_a_mvstring() {
+  _impl_._oneof_case_[0] = kAMVstring;
 }
-inline void DummyUnion::clear_mvstring() {
-  if (_internal_has_mvstring()) {
-    _impl_.content_.mvstring_.Destroy();
+inline void DummyUnion::clear_a_mvstring() {
+  if (_internal_has_a_mvstring()) {
+    _impl_.content_.a_mvstring_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& DummyUnion::mvstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.DummyUnion.mVstring)
-  return _internal_mvstring();
+inline const std::string& DummyUnion::a_mvstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.DummyUnion.a_mVstring)
+  return _internal_a_mvstring();
 }
 template <typename ArgT0, typename... ArgT>
-inline void DummyUnion::set_mvstring(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvstring()) {
+inline void DummyUnion::set_a_mvstring(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvstring()) {
     clear_content();
-    set_has_mvstring();
-    _impl_.content_.mvstring_.InitDefault();
+    set_has_a_mvstring();
+    _impl_.content_.a_mvstring_.InitDefault();
   }
-  _impl_.content_.mvstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyUnion.mVstring)
+  _impl_.content_.a_mvstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyUnion.a_mVstring)
 }
-inline std::string* DummyUnion::mutable_mvstring() {
-  std::string* _s = _internal_mutable_mvstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.DummyUnion.mVstring)
+inline std::string* DummyUnion::mutable_a_mvstring() {
+  std::string* _s = _internal_mutable_a_mvstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.DummyUnion.a_mVstring)
   return _s;
 }
-inline const std::string& DummyUnion::_internal_mvstring() const {
-  if (_internal_has_mvstring()) {
-    return _impl_.content_.mvstring_.Get();
+inline const std::string& DummyUnion::_internal_a_mvstring() const {
+  if (_internal_has_a_mvstring()) {
+    return _impl_.content_.a_mvstring_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void DummyUnion::_internal_set_mvstring(const std::string& value) {
-  if (!_internal_has_mvstring()) {
+inline void DummyUnion::_internal_set_a_mvstring(const std::string& value) {
+  if (!_internal_has_a_mvstring()) {
     clear_content();
-    set_has_mvstring();
-    _impl_.content_.mvstring_.InitDefault();
+    set_has_a_mvstring();
+    _impl_.content_.a_mvstring_.InitDefault();
   }
-  _impl_.content_.mvstring_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvstring_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DummyUnion::_internal_mutable_mvstring() {
-  if (!_internal_has_mvstring()) {
+inline std::string* DummyUnion::_internal_mutable_a_mvstring() {
+  if (!_internal_has_a_mvstring()) {
     clear_content();
-    set_has_mvstring();
-    _impl_.content_.mvstring_.InitDefault();
+    set_has_a_mvstring();
+    _impl_.content_.a_mvstring_.InitDefault();
   }
-  return _impl_.content_.mvstring_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvstring_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* DummyUnion::release_mvstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.DummyUnion.mVstring)
-  if (_internal_has_mvstring()) {
+inline std::string* DummyUnion::release_a_mvstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.DummyUnion.a_mVstring)
+  if (_internal_has_a_mvstring()) {
     clear_has_content();
-    return _impl_.content_.mvstring_.Release();
+    return _impl_.content_.a_mvstring_.Release();
   } else {
     return nullptr;
   }
 }
-inline void DummyUnion::set_allocated_mvstring(std::string* mvstring) {
+inline void DummyUnion::set_allocated_a_mvstring(std::string* a_mvstring) {
   if (has_content()) {
     clear_content();
   }
-  if (mvstring != nullptr) {
-    set_has_mvstring();
-    _impl_.content_.mvstring_.InitAllocated(mvstring, GetArenaForAllocation());
+  if (a_mvstring != nullptr) {
+    set_has_a_mvstring();
+    _impl_.content_.a_mvstring_.InitAllocated(a_mvstring, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.DummyUnion.mVstring)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.DummyUnion.a_mVstring)
 }
 
-// sint32 mVint = 2;
-inline bool DummyUnion::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 2;
+inline bool DummyUnion::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool DummyUnion::has_mvint() const {
-  return _internal_has_mvint();
+inline bool DummyUnion::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void DummyUnion::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void DummyUnion::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void DummyUnion::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void DummyUnion::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t DummyUnion::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t DummyUnion::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void DummyUnion::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void DummyUnion::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t DummyUnion::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.DummyUnion.mVint)
-  return _internal_mvint();
+inline int32_t DummyUnion::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.DummyUnion.a_mVint)
+  return _internal_a_mvint();
 }
-inline void DummyUnion::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyUnion.mVint)
+inline void DummyUnion::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyUnion.a_mVint)
 }
 
 inline bool DummyUnion::has_content() const {

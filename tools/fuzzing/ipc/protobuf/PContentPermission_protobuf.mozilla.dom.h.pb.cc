@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR PermissionRequest::PermissionRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.options_)*/{}
-  , /*decltype(_impl_.type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_options_)*/{}
+  , /*decltype(_impl_.a_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct PermissionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR PermissionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,8 +39,8 @@ PROTOBUF_CONSTEXPR PermissionChoice::PermissionChoice(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.choice_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_choice_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct PermissionChoiceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR PermissionChoiceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,7 +62,7 @@ namespace dom {
 class PermissionRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<PermissionRequest>()._impl_._has_bits_);
-  static void set_has_type(HasBits* has_bits) {
+  static void set_has_a_type(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -82,16 +82,16 @@ PermissionRequest::PermissionRequest(const PermissionRequest& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.options_){from._impl_.options_}
-    , decltype(_impl_.type_){}};
+    , decltype(_impl_.a_options_){from._impl_.a_options_}
+    , decltype(_impl_.a_type_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_type()) {
-    _this->_impl_.type_.Set(from._internal_type(), 
+  if (from._internal_has_a_type()) {
+    _this->_impl_.a_type_.Set(from._internal_a_type(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PermissionRequest)
@@ -104,12 +104,12 @@ inline void PermissionRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.options_){arena}
-    , decltype(_impl_.type_){}
+    , decltype(_impl_.a_options_){arena}
+    , decltype(_impl_.a_type_){}
   };
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -124,8 +124,8 @@ PermissionRequest::~PermissionRequest() {
 
 inline void PermissionRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.options_.~RepeatedPtrField();
-  _impl_.type_.Destroy();
+  _impl_.a_options_.~RepeatedPtrField();
+  _impl_.a_type_.Destroy();
 }
 
 void PermissionRequest::SetCachedSize(int size) const {
@@ -138,10 +138,10 @@ void PermissionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.options_.Clear();
+  _impl_.a_options_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.type_.ClearNonDefaultToEmpty();
+    _impl_.a_type_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -154,22 +154,22 @@ const char* PermissionRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes type = 1;
+      // required bytes a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_type();
+          auto str = _internal_mutable_a_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes options = 2;
+      // repeated bytes a_options = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_options();
+            auto str = _internal_add_a_options();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -208,15 +208,15 @@ uint8_t* PermissionRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes type = 1;
+  // required bytes a_type = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_type(), target);
+        1, this->_internal_a_type(), target);
   }
 
-  // repeated bytes options = 2;
-  for (int i = 0, n = this->_internal_options_size(); i < n; i++) {
-    const auto& s = this->_internal_options(i);
+  // repeated bytes a_options = 2;
+  for (int i = 0, n = this->_internal_a_options_size(); i < n; i++) {
+    const auto& s = this->_internal_a_options(i);
     target = stream->WriteBytes(2, s, target);
   }
 
@@ -232,22 +232,22 @@ size_t PermissionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PermissionRequest)
   size_t total_size = 0;
 
-  // required bytes type = 1;
-  if (_internal_has_type()) {
+  // required bytes a_type = 1;
+  if (_internal_has_a_type()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes options = 2;
+  // repeated bytes a_options = 2;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.options_.size());
-  for (int i = 0, n = _impl_.options_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_options_.size());
+  for (int i = 0, n = _impl_.a_options_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.options_.Get(i));
+      _impl_.a_options_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -271,9 +271,9 @@ void PermissionRequest::MergeFrom(const PermissionRequest& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.options_.MergeFrom(from._impl_.options_);
-  if (from._internal_has_type()) {
-    _this->_internal_set_type(from._internal_type());
+  _this->_impl_.a_options_.MergeFrom(from._impl_.a_options_);
+  if (from._internal_has_a_type()) {
+    _this->_internal_set_a_type(from._internal_a_type());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -296,10 +296,10 @@ void PermissionRequest::InternalSwap(PermissionRequest* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.options_.InternalSwap(&other->_impl_.options_);
+  _impl_.a_options_.InternalSwap(&other->_impl_.a_options_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.type_, lhs_arena,
-      &other->_impl_.type_, rhs_arena
+      &_impl_.a_type_, lhs_arena,
+      &other->_impl_.a_type_, rhs_arena
   );
 }
 
@@ -313,10 +313,10 @@ std::string PermissionRequest::GetTypeName() const {
 class PermissionChoice::_Internal {
  public:
   using HasBits = decltype(std::declval<PermissionChoice>()._impl_._has_bits_);
-  static void set_has_type(HasBits* has_bits) {
+  static void set_has_a_type(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_choice(HasBits* has_bits) {
+  static void set_has_a_choice(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -336,24 +336,24 @@ PermissionChoice::PermissionChoice(const PermissionChoice& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.type_){}
-    , decltype(_impl_.choice_){}};
+    , decltype(_impl_.a_type_){}
+    , decltype(_impl_.a_choice_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_type()) {
-    _this->_impl_.type_.Set(from._internal_type(), 
+  if (from._internal_has_a_type()) {
+    _this->_impl_.a_type_.Set(from._internal_a_type(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.choice_.InitDefault();
+  _impl_.a_choice_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.choice_.Set("", GetArenaForAllocation());
+    _impl_.a_choice_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_choice()) {
-    _this->_impl_.choice_.Set(from._internal_choice(), 
+  if (from._internal_has_a_choice()) {
+    _this->_impl_.a_choice_.Set(from._internal_a_choice(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PermissionChoice)
@@ -366,16 +366,16 @@ inline void PermissionChoice::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.type_){}
-    , decltype(_impl_.choice_){}
+    , decltype(_impl_.a_type_){}
+    , decltype(_impl_.a_choice_){}
   };
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.choice_.InitDefault();
+  _impl_.a_choice_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.choice_.Set("", GetArenaForAllocation());
+    _impl_.a_choice_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -390,8 +390,8 @@ PermissionChoice::~PermissionChoice() {
 
 inline void PermissionChoice::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.type_.Destroy();
-  _impl_.choice_.Destroy();
+  _impl_.a_type_.Destroy();
+  _impl_.a_choice_.Destroy();
 }
 
 void PermissionChoice::SetCachedSize(int size) const {
@@ -407,10 +407,10 @@ void PermissionChoice::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.type_.ClearNonDefaultToEmpty();
+      _impl_.a_type_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.choice_.ClearNonDefaultToEmpty();
+      _impl_.a_choice_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -424,19 +424,19 @@ const char* PermissionChoice::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes type = 1;
+      // required bytes a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_type();
+          auto str = _internal_mutable_a_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes choice = 2;
+      // required bytes a_choice = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_choice();
+          auto str = _internal_mutable_a_choice();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -473,16 +473,16 @@ uint8_t* PermissionChoice::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes type = 1;
+  // required bytes a_type = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_type(), target);
+        1, this->_internal_a_type(), target);
   }
 
-  // required bytes choice = 2;
+  // required bytes a_choice = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_choice(), target);
+        2, this->_internal_a_choice(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -497,18 +497,18 @@ size_t PermissionChoice::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PermissionChoice)
   size_t total_size = 0;
 
-  if (_internal_has_type()) {
-    // required bytes type = 1;
+  if (_internal_has_a_type()) {
+    // required bytes a_type = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
   }
 
-  if (_internal_has_choice()) {
-    // required bytes choice = 2;
+  if (_internal_has_a_choice()) {
+    // required bytes a_choice = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_choice());
+        this->_internal_a_choice());
   }
 
   return total_size;
@@ -518,15 +518,15 @@ size_t PermissionChoice::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes type = 1;
+    // required bytes a_type = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
 
-    // required bytes choice = 2;
+    // required bytes a_choice = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_choice());
+        this->_internal_a_choice());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -559,10 +559,10 @@ void PermissionChoice::MergeFrom(const PermissionChoice& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_type(from._internal_type());
+      _this->_internal_set_a_type(from._internal_a_type());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_choice(from._internal_choice());
+      _this->_internal_set_a_choice(from._internal_a_choice());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -587,12 +587,12 @@ void PermissionChoice::InternalSwap(PermissionChoice* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.type_, lhs_arena,
-      &other->_impl_.type_, rhs_arena
+      &_impl_.a_type_, lhs_arena,
+      &other->_impl_.a_type_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.choice_, lhs_arena,
-      &other->_impl_.choice_, rhs_arena
+      &_impl_.a_choice_, lhs_arena,
+      &other->_impl_.a_choice_, rhs_arena
   );
 }
 

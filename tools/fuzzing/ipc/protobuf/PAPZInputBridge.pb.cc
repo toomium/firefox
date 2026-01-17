@@ -25,8 +25,8 @@ PROTOBUF_CONSTEXPR Msg_ReceiveMultiTouchInputEvent::Msg_ReceiveMultiTouchInputEv
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceiveMultiTouchInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveMultiTouchInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -40,8 +40,8 @@ PROTOBUF_CONSTEXPR Reply_ReceiveMultiTouchInputEvent::Reply_ReceiveMultiTouchInp
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceiveMultiTouchInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceiveMultiTouchInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -55,8 +55,8 @@ PROTOBUF_CONSTEXPR Msg_ReceiveMouseInputEvent::Msg_ReceiveMouseInputEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceiveMouseInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveMouseInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -70,8 +70,8 @@ PROTOBUF_CONSTEXPR Reply_ReceiveMouseInputEvent::Reply_ReceiveMouseInputEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceiveMouseInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceiveMouseInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -85,8 +85,8 @@ PROTOBUF_CONSTEXPR Msg_ReceivePanGestureInputEvent::Msg_ReceivePanGestureInputEv
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceivePanGestureInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceivePanGestureInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -100,8 +100,8 @@ PROTOBUF_CONSTEXPR Reply_ReceivePanGestureInputEvent::Reply_ReceivePanGestureInp
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceivePanGestureInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceivePanGestureInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -115,8 +115,8 @@ PROTOBUF_CONSTEXPR Msg_ReceivePinchGestureInputEvent::Msg_ReceivePinchGestureInp
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceivePinchGestureInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceivePinchGestureInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -130,8 +130,8 @@ PROTOBUF_CONSTEXPR Reply_ReceivePinchGestureInputEvent::Reply_ReceivePinchGestur
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceivePinchGestureInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceivePinchGestureInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -145,8 +145,8 @@ PROTOBUF_CONSTEXPR Msg_ReceiveTapGestureInputEvent::Msg_ReceiveTapGestureInputEv
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceiveTapGestureInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveTapGestureInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -160,8 +160,8 @@ PROTOBUF_CONSTEXPR Reply_ReceiveTapGestureInputEvent::Reply_ReceiveTapGestureInp
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceiveTapGestureInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceiveTapGestureInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -175,8 +175,8 @@ PROTOBUF_CONSTEXPR Msg_ReceiveScrollWheelInputEvent::Msg_ReceiveScrollWheelInput
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceiveScrollWheelInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveScrollWheelInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -190,8 +190,8 @@ PROTOBUF_CONSTEXPR Reply_ReceiveScrollWheelInputEvent::Reply_ReceiveScrollWheelI
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceiveScrollWheelInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceiveScrollWheelInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -205,8 +205,8 @@ PROTOBUF_CONSTEXPR Msg_ReceiveKeyboardInputEvent::Msg_ReceiveKeyboardInputEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awantscallback_)*/false} {}
+  , /*decltype(_impl_.a_aevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awantscallback_)*/false} {}
 struct Msg_ReceiveKeyboardInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveKeyboardInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -220,8 +220,8 @@ PROTOBUF_CONSTEXPR Reply_ReceiveKeyboardInputEvent::Reply_ReceiveKeyboardInputEv
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoutresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutevent_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_ReceiveKeyboardInputEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ReceiveKeyboardInputEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -235,9 +235,9 @@ PROTOBUF_CONSTEXPR Msg_UpdateWheelTransaction::Msg_UpdateWheelTransaction(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.arefpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aeventmessage_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.atargetguid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_arefpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aeventmessage_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_atargetguid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_UpdateWheelTransactionDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateWheelTransactionDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -251,7 +251,7 @@ PROTOBUF_CONSTEXPR Msg_ProcessUnhandledEvent::Msg_ProcessUnhandledEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.arefpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_arefpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ProcessUnhandledEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ProcessUnhandledEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -265,10 +265,10 @@ PROTOBUF_CONSTEXPR Reply_ProcessUnhandledEvent::Reply_ProcessUnhandledEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoutrefpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aouttargetguid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutlayersid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoutfocussequencenumber_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_aoutrefpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aouttargetguid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutlayersid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoutfocussequencenumber_)*/uint64_t{0u}} {}
 struct Reply_ProcessUnhandledEventDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ProcessUnhandledEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -282,8 +282,8 @@ PROTOBUF_CONSTEXPR Msg_CallInputBlockCallback::Msg_CallInputBlockCallback(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ahandledresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ainputblockid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_ahandledresult_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ainputblockid_)*/uint64_t{0u}} {}
 struct Msg_CallInputBlockCallbackDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CallInputBlockCallbackDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -297,12 +297,12 @@ PROTOBUF_CONSTEXPR Msg_HandleTap::Msg_HandleTap(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.atype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.point_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.amodifiers_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aguid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.adoubletaptozoommetrics_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ainputblockid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_atype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_point_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_amodifiers_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aguid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_adoubletaptozoommetrics_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ainputblockid_)*/uint64_t{0u}} {}
 struct Msg_HandleTapDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_HandleTapDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -326,10 +326,10 @@ namespace PAPZInputBridge {
 class Msg_ReceiveMultiTouchInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceiveMultiTouchInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -349,19 +349,19 @@ Msg_ReceiveMultiTouchInputEvent::Msg_ReceiveMultiTouchInputEvent(const Msg_Recei
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent)
 }
 
@@ -372,12 +372,12 @@ inline void Msg_ReceiveMultiTouchInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -392,7 +392,7 @@ Msg_ReceiveMultiTouchInputEvent::~Msg_ReceiveMultiTouchInputEvent() {
 
 inline void Msg_ReceiveMultiTouchInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceiveMultiTouchInputEvent::SetCachedSize(int size) const {
@@ -407,9 +407,9 @@ void Msg_ReceiveMultiTouchInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -421,20 +421,20 @@ const char* Msg_ReceiveMultiTouchInputEvent::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -470,16 +470,16 @@ uint8_t* Msg_ReceiveMultiTouchInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -494,15 +494,15 @@ size_t Msg_ReceiveMultiTouchInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -513,12 +513,12 @@ size_t Msg_ReceiveMultiTouchInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -552,10 +552,10 @@ void Msg_ReceiveMultiTouchInputEvent::MergeFrom(const Msg_ReceiveMultiTouchInput
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -581,10 +581,10 @@ void Msg_ReceiveMultiTouchInputEvent::InternalSwap(Msg_ReceiveMultiTouchInputEve
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceiveMultiTouchInputEvent::GetTypeName() const {
@@ -597,10 +597,10 @@ std::string Msg_ReceiveMultiTouchInputEvent::GetTypeName() const {
 class Reply_ReceiveMultiTouchInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceiveMultiTouchInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -620,24 +620,24 @@ Reply_ReceiveMultiTouchInputEvent::Reply_ReceiveMultiTouchInputEvent(const Reply
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent)
@@ -650,16 +650,16 @@ inline void Reply_ReceiveMultiTouchInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -674,8 +674,8 @@ Reply_ReceiveMultiTouchInputEvent::~Reply_ReceiveMultiTouchInputEvent() {
 
 inline void Reply_ReceiveMultiTouchInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceiveMultiTouchInputEvent::SetCachedSize(int size) const {
@@ -691,10 +691,10 @@ void Reply_ReceiveMultiTouchInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -708,19 +708,19 @@ const char* Reply_ReceiveMultiTouchInputEvent::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -757,16 +757,16 @@ uint8_t* Reply_ReceiveMultiTouchInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -781,18 +781,18 @@ size_t Reply_ReceiveMultiTouchInputEvent::RequiredFieldsByteSizeFallback() const
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -802,15 +802,15 @@ size_t Reply_ReceiveMultiTouchInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -843,10 +843,10 @@ void Reply_ReceiveMultiTouchInputEvent::MergeFrom(const Reply_ReceiveMultiTouchI
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -871,12 +871,12 @@ void Reply_ReceiveMultiTouchInputEvent::InternalSwap(Reply_ReceiveMultiTouchInpu
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -890,10 +890,10 @@ std::string Reply_ReceiveMultiTouchInputEvent::GetTypeName() const {
 class Msg_ReceiveMouseInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceiveMouseInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -913,19 +913,19 @@ Msg_ReceiveMouseInputEvent::Msg_ReceiveMouseInputEvent(const Msg_ReceiveMouseInp
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent)
 }
 
@@ -936,12 +936,12 @@ inline void Msg_ReceiveMouseInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -956,7 +956,7 @@ Msg_ReceiveMouseInputEvent::~Msg_ReceiveMouseInputEvent() {
 
 inline void Msg_ReceiveMouseInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceiveMouseInputEvent::SetCachedSize(int size) const {
@@ -971,9 +971,9 @@ void Msg_ReceiveMouseInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -985,20 +985,20 @@ const char* Msg_ReceiveMouseInputEvent::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1034,16 +1034,16 @@ uint8_t* Msg_ReceiveMouseInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1058,15 +1058,15 @@ size_t Msg_ReceiveMouseInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -1077,12 +1077,12 @@ size_t Msg_ReceiveMouseInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -1116,10 +1116,10 @@ void Msg_ReceiveMouseInputEvent::MergeFrom(const Msg_ReceiveMouseInputEvent& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1145,10 +1145,10 @@ void Msg_ReceiveMouseInputEvent::InternalSwap(Msg_ReceiveMouseInputEvent* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceiveMouseInputEvent::GetTypeName() const {
@@ -1161,10 +1161,10 @@ std::string Msg_ReceiveMouseInputEvent::GetTypeName() const {
 class Reply_ReceiveMouseInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceiveMouseInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1184,24 +1184,24 @@ Reply_ReceiveMouseInputEvent::Reply_ReceiveMouseInputEvent(const Reply_ReceiveMo
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent)
@@ -1214,16 +1214,16 @@ inline void Reply_ReceiveMouseInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1238,8 +1238,8 @@ Reply_ReceiveMouseInputEvent::~Reply_ReceiveMouseInputEvent() {
 
 inline void Reply_ReceiveMouseInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceiveMouseInputEvent::SetCachedSize(int size) const {
@@ -1255,10 +1255,10 @@ void Reply_ReceiveMouseInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -1272,19 +1272,19 @@ const char* Reply_ReceiveMouseInputEvent::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1321,16 +1321,16 @@ uint8_t* Reply_ReceiveMouseInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1345,18 +1345,18 @@ size_t Reply_ReceiveMouseInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -1366,15 +1366,15 @@ size_t Reply_ReceiveMouseInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1407,10 +1407,10 @@ void Reply_ReceiveMouseInputEvent::MergeFrom(const Reply_ReceiveMouseInputEvent&
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1435,12 +1435,12 @@ void Reply_ReceiveMouseInputEvent::InternalSwap(Reply_ReceiveMouseInputEvent* ot
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -1454,10 +1454,10 @@ std::string Reply_ReceiveMouseInputEvent::GetTypeName() const {
 class Msg_ReceivePanGestureInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceivePanGestureInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1477,19 +1477,19 @@ Msg_ReceivePanGestureInputEvent::Msg_ReceivePanGestureInputEvent(const Msg_Recei
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent)
 }
 
@@ -1500,12 +1500,12 @@ inline void Msg_ReceivePanGestureInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1520,7 +1520,7 @@ Msg_ReceivePanGestureInputEvent::~Msg_ReceivePanGestureInputEvent() {
 
 inline void Msg_ReceivePanGestureInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceivePanGestureInputEvent::SetCachedSize(int size) const {
@@ -1535,9 +1535,9 @@ void Msg_ReceivePanGestureInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1549,20 +1549,20 @@ const char* Msg_ReceivePanGestureInputEvent::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1598,16 +1598,16 @@ uint8_t* Msg_ReceivePanGestureInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1622,15 +1622,15 @@ size_t Msg_ReceivePanGestureInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -1641,12 +1641,12 @@ size_t Msg_ReceivePanGestureInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -1680,10 +1680,10 @@ void Msg_ReceivePanGestureInputEvent::MergeFrom(const Msg_ReceivePanGestureInput
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1709,10 +1709,10 @@ void Msg_ReceivePanGestureInputEvent::InternalSwap(Msg_ReceivePanGestureInputEve
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceivePanGestureInputEvent::GetTypeName() const {
@@ -1725,10 +1725,10 @@ std::string Msg_ReceivePanGestureInputEvent::GetTypeName() const {
 class Reply_ReceivePanGestureInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceivePanGestureInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1748,24 +1748,24 @@ Reply_ReceivePanGestureInputEvent::Reply_ReceivePanGestureInputEvent(const Reply
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent)
@@ -1778,16 +1778,16 @@ inline void Reply_ReceivePanGestureInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1802,8 +1802,8 @@ Reply_ReceivePanGestureInputEvent::~Reply_ReceivePanGestureInputEvent() {
 
 inline void Reply_ReceivePanGestureInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceivePanGestureInputEvent::SetCachedSize(int size) const {
@@ -1819,10 +1819,10 @@ void Reply_ReceivePanGestureInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -1836,19 +1836,19 @@ const char* Reply_ReceivePanGestureInputEvent::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1885,16 +1885,16 @@ uint8_t* Reply_ReceivePanGestureInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1909,18 +1909,18 @@ size_t Reply_ReceivePanGestureInputEvent::RequiredFieldsByteSizeFallback() const
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -1930,15 +1930,15 @@ size_t Reply_ReceivePanGestureInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1971,10 +1971,10 @@ void Reply_ReceivePanGestureInputEvent::MergeFrom(const Reply_ReceivePanGestureI
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1999,12 +1999,12 @@ void Reply_ReceivePanGestureInputEvent::InternalSwap(Reply_ReceivePanGestureInpu
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -2018,10 +2018,10 @@ std::string Reply_ReceivePanGestureInputEvent::GetTypeName() const {
 class Msg_ReceivePinchGestureInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceivePinchGestureInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2041,19 +2041,19 @@ Msg_ReceivePinchGestureInputEvent::Msg_ReceivePinchGestureInputEvent(const Msg_R
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent)
 }
 
@@ -2064,12 +2064,12 @@ inline void Msg_ReceivePinchGestureInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2084,7 +2084,7 @@ Msg_ReceivePinchGestureInputEvent::~Msg_ReceivePinchGestureInputEvent() {
 
 inline void Msg_ReceivePinchGestureInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceivePinchGestureInputEvent::SetCachedSize(int size) const {
@@ -2099,9 +2099,9 @@ void Msg_ReceivePinchGestureInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2113,20 +2113,20 @@ const char* Msg_ReceivePinchGestureInputEvent::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2162,16 +2162,16 @@ uint8_t* Msg_ReceivePinchGestureInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2186,15 +2186,15 @@ size_t Msg_ReceivePinchGestureInputEvent::RequiredFieldsByteSizeFallback() const
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -2205,12 +2205,12 @@ size_t Msg_ReceivePinchGestureInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -2244,10 +2244,10 @@ void Msg_ReceivePinchGestureInputEvent::MergeFrom(const Msg_ReceivePinchGestureI
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2273,10 +2273,10 @@ void Msg_ReceivePinchGestureInputEvent::InternalSwap(Msg_ReceivePinchGestureInpu
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceivePinchGestureInputEvent::GetTypeName() const {
@@ -2289,10 +2289,10 @@ std::string Msg_ReceivePinchGestureInputEvent::GetTypeName() const {
 class Reply_ReceivePinchGestureInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceivePinchGestureInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2312,24 +2312,24 @@ Reply_ReceivePinchGestureInputEvent::Reply_ReceivePinchGestureInputEvent(const R
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent)
@@ -2342,16 +2342,16 @@ inline void Reply_ReceivePinchGestureInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2366,8 +2366,8 @@ Reply_ReceivePinchGestureInputEvent::~Reply_ReceivePinchGestureInputEvent() {
 
 inline void Reply_ReceivePinchGestureInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceivePinchGestureInputEvent::SetCachedSize(int size) const {
@@ -2383,10 +2383,10 @@ void Reply_ReceivePinchGestureInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -2400,19 +2400,19 @@ const char* Reply_ReceivePinchGestureInputEvent::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2449,16 +2449,16 @@ uint8_t* Reply_ReceivePinchGestureInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2473,18 +2473,18 @@ size_t Reply_ReceivePinchGestureInputEvent::RequiredFieldsByteSizeFallback() con
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -2494,15 +2494,15 @@ size_t Reply_ReceivePinchGestureInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2535,10 +2535,10 @@ void Reply_ReceivePinchGestureInputEvent::MergeFrom(const Reply_ReceivePinchGest
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2563,12 +2563,12 @@ void Reply_ReceivePinchGestureInputEvent::InternalSwap(Reply_ReceivePinchGesture
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -2582,10 +2582,10 @@ std::string Reply_ReceivePinchGestureInputEvent::GetTypeName() const {
 class Msg_ReceiveTapGestureInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceiveTapGestureInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2605,19 +2605,19 @@ Msg_ReceiveTapGestureInputEvent::Msg_ReceiveTapGestureInputEvent(const Msg_Recei
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent)
 }
 
@@ -2628,12 +2628,12 @@ inline void Msg_ReceiveTapGestureInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2648,7 +2648,7 @@ Msg_ReceiveTapGestureInputEvent::~Msg_ReceiveTapGestureInputEvent() {
 
 inline void Msg_ReceiveTapGestureInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceiveTapGestureInputEvent::SetCachedSize(int size) const {
@@ -2663,9 +2663,9 @@ void Msg_ReceiveTapGestureInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2677,20 +2677,20 @@ const char* Msg_ReceiveTapGestureInputEvent::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2726,16 +2726,16 @@ uint8_t* Msg_ReceiveTapGestureInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2750,15 +2750,15 @@ size_t Msg_ReceiveTapGestureInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -2769,12 +2769,12 @@ size_t Msg_ReceiveTapGestureInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -2808,10 +2808,10 @@ void Msg_ReceiveTapGestureInputEvent::MergeFrom(const Msg_ReceiveTapGestureInput
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2837,10 +2837,10 @@ void Msg_ReceiveTapGestureInputEvent::InternalSwap(Msg_ReceiveTapGestureInputEve
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceiveTapGestureInputEvent::GetTypeName() const {
@@ -2853,10 +2853,10 @@ std::string Msg_ReceiveTapGestureInputEvent::GetTypeName() const {
 class Reply_ReceiveTapGestureInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceiveTapGestureInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2876,24 +2876,24 @@ Reply_ReceiveTapGestureInputEvent::Reply_ReceiveTapGestureInputEvent(const Reply
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent)
@@ -2906,16 +2906,16 @@ inline void Reply_ReceiveTapGestureInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2930,8 +2930,8 @@ Reply_ReceiveTapGestureInputEvent::~Reply_ReceiveTapGestureInputEvent() {
 
 inline void Reply_ReceiveTapGestureInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceiveTapGestureInputEvent::SetCachedSize(int size) const {
@@ -2947,10 +2947,10 @@ void Reply_ReceiveTapGestureInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -2964,19 +2964,19 @@ const char* Reply_ReceiveTapGestureInputEvent::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3013,16 +3013,16 @@ uint8_t* Reply_ReceiveTapGestureInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3037,18 +3037,18 @@ size_t Reply_ReceiveTapGestureInputEvent::RequiredFieldsByteSizeFallback() const
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -3058,15 +3058,15 @@ size_t Reply_ReceiveTapGestureInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3099,10 +3099,10 @@ void Reply_ReceiveTapGestureInputEvent::MergeFrom(const Reply_ReceiveTapGestureI
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3127,12 +3127,12 @@ void Reply_ReceiveTapGestureInputEvent::InternalSwap(Reply_ReceiveTapGestureInpu
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -3146,10 +3146,10 @@ std::string Reply_ReceiveTapGestureInputEvent::GetTypeName() const {
 class Msg_ReceiveScrollWheelInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceiveScrollWheelInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3169,19 +3169,19 @@ Msg_ReceiveScrollWheelInputEvent::Msg_ReceiveScrollWheelInputEvent(const Msg_Rec
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent)
 }
 
@@ -3192,12 +3192,12 @@ inline void Msg_ReceiveScrollWheelInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3212,7 +3212,7 @@ Msg_ReceiveScrollWheelInputEvent::~Msg_ReceiveScrollWheelInputEvent() {
 
 inline void Msg_ReceiveScrollWheelInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceiveScrollWheelInputEvent::SetCachedSize(int size) const {
@@ -3227,9 +3227,9 @@ void Msg_ReceiveScrollWheelInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -3241,20 +3241,20 @@ const char* Msg_ReceiveScrollWheelInputEvent::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3290,16 +3290,16 @@ uint8_t* Msg_ReceiveScrollWheelInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3314,15 +3314,15 @@ size_t Msg_ReceiveScrollWheelInputEvent::RequiredFieldsByteSizeFallback() const 
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -3333,12 +3333,12 @@ size_t Msg_ReceiveScrollWheelInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -3372,10 +3372,10 @@ void Msg_ReceiveScrollWheelInputEvent::MergeFrom(const Msg_ReceiveScrollWheelInp
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3401,10 +3401,10 @@ void Msg_ReceiveScrollWheelInputEvent::InternalSwap(Msg_ReceiveScrollWheelInputE
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceiveScrollWheelInputEvent::GetTypeName() const {
@@ -3417,10 +3417,10 @@ std::string Msg_ReceiveScrollWheelInputEvent::GetTypeName() const {
 class Reply_ReceiveScrollWheelInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceiveScrollWheelInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3440,24 +3440,24 @@ Reply_ReceiveScrollWheelInputEvent::Reply_ReceiveScrollWheelInputEvent(const Rep
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent)
@@ -3470,16 +3470,16 @@ inline void Reply_ReceiveScrollWheelInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3494,8 +3494,8 @@ Reply_ReceiveScrollWheelInputEvent::~Reply_ReceiveScrollWheelInputEvent() {
 
 inline void Reply_ReceiveScrollWheelInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceiveScrollWheelInputEvent::SetCachedSize(int size) const {
@@ -3511,10 +3511,10 @@ void Reply_ReceiveScrollWheelInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -3528,19 +3528,19 @@ const char* Reply_ReceiveScrollWheelInputEvent::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3577,16 +3577,16 @@ uint8_t* Reply_ReceiveScrollWheelInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3601,18 +3601,18 @@ size_t Reply_ReceiveScrollWheelInputEvent::RequiredFieldsByteSizeFallback() cons
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -3622,15 +3622,15 @@ size_t Reply_ReceiveScrollWheelInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3663,10 +3663,10 @@ void Reply_ReceiveScrollWheelInputEvent::MergeFrom(const Reply_ReceiveScrollWhee
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3691,12 +3691,12 @@ void Reply_ReceiveScrollWheelInputEvent::InternalSwap(Reply_ReceiveScrollWheelIn
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -3710,10 +3710,10 @@ std::string Reply_ReceiveScrollWheelInputEvent::GetTypeName() const {
 class Msg_ReceiveKeyboardInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReceiveKeyboardInputEvent>()._impl_._has_bits_);
-  static void set_has_aevent(HasBits* has_bits) {
+  static void set_has_a_aevent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_awantscallback(HasBits* has_bits) {
+  static void set_has_a_awantscallback(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3733,19 +3733,19 @@ Msg_ReceiveKeyboardInputEvent::Msg_ReceiveKeyboardInputEvent(const Msg_ReceiveKe
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){}};
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevent()) {
-    _this->_impl_.aevent_.Set(from._internal_aevent(), 
+  if (from._internal_has_a_aevent()) {
+    _this->_impl_.a_aevent_.Set(from._internal_a_aevent(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+  _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent)
 }
 
@@ -3756,12 +3756,12 @@ inline void Msg_ReceiveKeyboardInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aevent_){}
-    , decltype(_impl_.awantscallback_){false}
+    , decltype(_impl_.a_aevent_){}
+    , decltype(_impl_.a_awantscallback_){false}
   };
-  _impl_.aevent_.InitDefault();
+  _impl_.a_aevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3776,7 +3776,7 @@ Msg_ReceiveKeyboardInputEvent::~Msg_ReceiveKeyboardInputEvent() {
 
 inline void Msg_ReceiveKeyboardInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aevent_.Destroy();
+  _impl_.a_aevent_.Destroy();
 }
 
 void Msg_ReceiveKeyboardInputEvent::SetCachedSize(int size) const {
@@ -3791,9 +3791,9 @@ void Msg_ReceiveKeyboardInputEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aevent_.ClearNonDefaultToEmpty();
+    _impl_.a_aevent_.ClearNonDefaultToEmpty();
   }
-  _impl_.awantscallback_ = false;
+  _impl_.a_awantscallback_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -3805,20 +3805,20 @@ const char* Msg_ReceiveKeyboardInputEvent::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aEvent = 1;
+      // required bytes a_aEvent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aevent();
+          auto str = _internal_mutable_a_aevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWantsCallback = 2;
+      // required bool a_aWantsCallback = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awantscallback(&has_bits);
-          _impl_.awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awantscallback(&has_bits);
+          _impl_.a_awantscallback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3854,16 +3854,16 @@ uint8_t* Msg_ReceiveKeyboardInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aEvent = 1;
+  // required bytes a_aEvent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aevent(), target);
+        1, this->_internal_a_aevent(), target);
   }
 
-  // required bool aWantsCallback = 2;
+  // required bool a_aWantsCallback = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awantscallback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awantscallback(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3878,15 +3878,15 @@ size_t Msg_ReceiveKeyboardInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aevent()) {
-    // required bytes aEvent = 1;
+  if (_internal_has_a_aevent()) {
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
   }
 
-  if (_internal_has_awantscallback()) {
-    // required bool aWantsCallback = 2;
+  if (_internal_has_a_awantscallback()) {
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
   }
 
@@ -3897,12 +3897,12 @@ size_t Msg_ReceiveKeyboardInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aEvent = 1;
+    // required bytes a_aEvent = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevent());
+        this->_internal_a_aevent());
 
-    // required bool aWantsCallback = 2;
+    // required bool a_aWantsCallback = 2;
     total_size += 1 + 1;
 
   } else {
@@ -3936,10 +3936,10 @@ void Msg_ReceiveKeyboardInputEvent::MergeFrom(const Msg_ReceiveKeyboardInputEven
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevent(from._internal_aevent());
+      _this->_internal_set_a_aevent(from._internal_a_aevent());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awantscallback_ = from._impl_.awantscallback_;
+      _this->_impl_.a_awantscallback_ = from._impl_.a_awantscallback_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3965,10 +3965,10 @@ void Msg_ReceiveKeyboardInputEvent::InternalSwap(Msg_ReceiveKeyboardInputEvent* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevent_, lhs_arena,
-      &other->_impl_.aevent_, rhs_arena
+      &_impl_.a_aevent_, lhs_arena,
+      &other->_impl_.a_aevent_, rhs_arena
   );
-  swap(_impl_.awantscallback_, other->_impl_.awantscallback_);
+  swap(_impl_.a_awantscallback_, other->_impl_.a_awantscallback_);
 }
 
 std::string Msg_ReceiveKeyboardInputEvent::GetTypeName() const {
@@ -3981,10 +3981,10 @@ std::string Msg_ReceiveKeyboardInputEvent::GetTypeName() const {
 class Reply_ReceiveKeyboardInputEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ReceiveKeyboardInputEvent>()._impl_._has_bits_);
-  static void set_has_aoutresult(HasBits* has_bits) {
+  static void set_has_a_aoutresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aoutevent(HasBits* has_bits) {
+  static void set_has_a_aoutevent(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4004,24 +4004,24 @@ Reply_ReceiveKeyboardInputEvent::Reply_ReceiveKeyboardInputEvent(const Reply_Rec
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}};
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutresult()) {
-    _this->_impl_.aoutresult_.Set(from._internal_aoutresult(), 
+  if (from._internal_has_a_aoutresult()) {
+    _this->_impl_.a_aoutresult_.Set(from._internal_a_aoutresult(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutevent()) {
-    _this->_impl_.aoutevent_.Set(from._internal_aoutevent(), 
+  if (from._internal_has_a_aoutevent()) {
+    _this->_impl_.a_aoutevent_.Set(from._internal_a_aoutevent(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent)
@@ -4034,16 +4034,16 @@ inline void Reply_ReceiveKeyboardInputEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutresult_){}
-    , decltype(_impl_.aoutevent_){}
+    , decltype(_impl_.a_aoutresult_){}
+    , decltype(_impl_.a_aoutevent_){}
   };
-  _impl_.aoutresult_.InitDefault();
+  _impl_.a_aoutresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutresult_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutevent_.InitDefault();
+  _impl_.a_aoutevent_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutevent_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutevent_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4058,8 +4058,8 @@ Reply_ReceiveKeyboardInputEvent::~Reply_ReceiveKeyboardInputEvent() {
 
 inline void Reply_ReceiveKeyboardInputEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutresult_.Destroy();
-  _impl_.aoutevent_.Destroy();
+  _impl_.a_aoutresult_.Destroy();
+  _impl_.a_aoutevent_.Destroy();
 }
 
 void Reply_ReceiveKeyboardInputEvent::SetCachedSize(int size) const {
@@ -4075,10 +4075,10 @@ void Reply_ReceiveKeyboardInputEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutresult_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutresult_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoutevent_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutevent_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -4092,19 +4092,19 @@ const char* Reply_ReceiveKeyboardInputEvent::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutResult = 1;
+      // required bytes a_aOutResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutresult();
+          auto str = _internal_mutable_a_aoutresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutEvent = 2;
+      // required bytes a_aOutEvent = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aoutevent();
+          auto str = _internal_mutable_a_aoutevent();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -4141,16 +4141,16 @@ uint8_t* Reply_ReceiveKeyboardInputEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutResult = 1;
+  // required bytes a_aOutResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutresult(), target);
+        1, this->_internal_a_aoutresult(), target);
   }
 
-  // required bytes aOutEvent = 2;
+  // required bytes a_aOutEvent = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aoutevent(), target);
+        2, this->_internal_a_aoutevent(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4165,18 +4165,18 @@ size_t Reply_ReceiveKeyboardInputEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutresult()) {
-    // required bytes aOutResult = 1;
+  if (_internal_has_a_aoutresult()) {
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
   }
 
-  if (_internal_has_aoutevent()) {
-    // required bytes aOutEvent = 2;
+  if (_internal_has_a_aoutevent()) {
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
   }
 
   return total_size;
@@ -4186,15 +4186,15 @@ size_t Reply_ReceiveKeyboardInputEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aOutResult = 1;
+    // required bytes a_aOutResult = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutresult());
+        this->_internal_a_aoutresult());
 
-    // required bytes aOutEvent = 2;
+    // required bytes a_aOutEvent = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutevent());
+        this->_internal_a_aoutevent());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4227,10 +4227,10 @@ void Reply_ReceiveKeyboardInputEvent::MergeFrom(const Reply_ReceiveKeyboardInput
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutresult(from._internal_aoutresult());
+      _this->_internal_set_a_aoutresult(from._internal_a_aoutresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoutevent(from._internal_aoutevent());
+      _this->_internal_set_a_aoutevent(from._internal_a_aoutevent());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4255,12 +4255,12 @@ void Reply_ReceiveKeyboardInputEvent::InternalSwap(Reply_ReceiveKeyboardInputEve
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutresult_, lhs_arena,
-      &other->_impl_.aoutresult_, rhs_arena
+      &_impl_.a_aoutresult_, lhs_arena,
+      &other->_impl_.a_aoutresult_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutevent_, lhs_arena,
-      &other->_impl_.aoutevent_, rhs_arena
+      &_impl_.a_aoutevent_, lhs_arena,
+      &other->_impl_.a_aoutevent_, rhs_arena
   );
 }
 
@@ -4274,13 +4274,13 @@ std::string Reply_ReceiveKeyboardInputEvent::GetTypeName() const {
 class Msg_UpdateWheelTransaction::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_UpdateWheelTransaction>()._impl_._has_bits_);
-  static void set_has_arefpoint(HasBits* has_bits) {
+  static void set_has_a_arefpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aeventmessage(HasBits* has_bits) {
+  static void set_has_a_aeventmessage(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_atargetguid(HasBits* has_bits) {
+  static void set_has_a_atargetguid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4300,33 +4300,33 @@ Msg_UpdateWheelTransaction::Msg_UpdateWheelTransaction(const Msg_UpdateWheelTran
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.arefpoint_){}
-    , decltype(_impl_.aeventmessage_){}
-    , decltype(_impl_.atargetguid_){}};
+    , decltype(_impl_.a_arefpoint_){}
+    , decltype(_impl_.a_aeventmessage_){}
+    , decltype(_impl_.a_atargetguid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.arefpoint_.InitDefault();
+  _impl_.a_arefpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.arefpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_arefpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_arefpoint()) {
-    _this->_impl_.arefpoint_.Set(from._internal_arefpoint(), 
+  if (from._internal_has_a_arefpoint()) {
+    _this->_impl_.a_arefpoint_.Set(from._internal_a_arefpoint(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aeventmessage_.InitDefault();
+  _impl_.a_aeventmessage_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aeventmessage_.Set("", GetArenaForAllocation());
+    _impl_.a_aeventmessage_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aeventmessage()) {
-    _this->_impl_.aeventmessage_.Set(from._internal_aeventmessage(), 
+  if (from._internal_has_a_aeventmessage()) {
+    _this->_impl_.a_aeventmessage_.Set(from._internal_a_aeventmessage(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.atargetguid_.InitDefault();
+  _impl_.a_atargetguid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.atargetguid_.Set("", GetArenaForAllocation());
+    _impl_.a_atargetguid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_atargetguid()) {
-    _this->_impl_.atargetguid_.Set(from._internal_atargetguid(), 
+  if (from._internal_has_a_atargetguid()) {
+    _this->_impl_.a_atargetguid_.Set(from._internal_a_atargetguid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction)
@@ -4339,21 +4339,21 @@ inline void Msg_UpdateWheelTransaction::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.arefpoint_){}
-    , decltype(_impl_.aeventmessage_){}
-    , decltype(_impl_.atargetguid_){}
+    , decltype(_impl_.a_arefpoint_){}
+    , decltype(_impl_.a_aeventmessage_){}
+    , decltype(_impl_.a_atargetguid_){}
   };
-  _impl_.arefpoint_.InitDefault();
+  _impl_.a_arefpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.arefpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_arefpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aeventmessage_.InitDefault();
+  _impl_.a_aeventmessage_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aeventmessage_.Set("", GetArenaForAllocation());
+    _impl_.a_aeventmessage_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.atargetguid_.InitDefault();
+  _impl_.a_atargetguid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.atargetguid_.Set("", GetArenaForAllocation());
+    _impl_.a_atargetguid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4368,9 +4368,9 @@ Msg_UpdateWheelTransaction::~Msg_UpdateWheelTransaction() {
 
 inline void Msg_UpdateWheelTransaction::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.arefpoint_.Destroy();
-  _impl_.aeventmessage_.Destroy();
-  _impl_.atargetguid_.Destroy();
+  _impl_.a_arefpoint_.Destroy();
+  _impl_.a_aeventmessage_.Destroy();
+  _impl_.a_atargetguid_.Destroy();
 }
 
 void Msg_UpdateWheelTransaction::SetCachedSize(int size) const {
@@ -4386,13 +4386,13 @@ void Msg_UpdateWheelTransaction::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.arefpoint_.ClearNonDefaultToEmpty();
+      _impl_.a_arefpoint_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aeventmessage_.ClearNonDefaultToEmpty();
+      _impl_.a_aeventmessage_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.atargetguid_.ClearNonDefaultToEmpty();
+      _impl_.a_atargetguid_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -4406,28 +4406,28 @@ const char* Msg_UpdateWheelTransaction::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aRefPoint = 1;
+      // required bytes a_aRefPoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_arefpoint();
+          auto str = _internal_mutable_a_arefpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aEventMessage = 2;
+      // required bytes a_aEventMessage = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aeventmessage();
+          auto str = _internal_mutable_a_aeventmessage();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes aTargetGuid = 3;
+      // optional bytes a_aTargetGuid = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_atargetguid();
+          auto str = _internal_mutable_a_atargetguid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -4464,22 +4464,22 @@ uint8_t* Msg_UpdateWheelTransaction::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aRefPoint = 1;
+  // required bytes a_aRefPoint = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_arefpoint(), target);
+        1, this->_internal_a_arefpoint(), target);
   }
 
-  // required bytes aEventMessage = 2;
+  // required bytes a_aEventMessage = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aeventmessage(), target);
+        2, this->_internal_a_aeventmessage(), target);
   }
 
-  // optional bytes aTargetGuid = 3;
+  // optional bytes a_aTargetGuid = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_atargetguid(), target);
+        3, this->_internal_a_atargetguid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4494,18 +4494,18 @@ size_t Msg_UpdateWheelTransaction::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction)
   size_t total_size = 0;
 
-  if (_internal_has_arefpoint()) {
-    // required bytes aRefPoint = 1;
+  if (_internal_has_a_arefpoint()) {
+    // required bytes a_aRefPoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_arefpoint());
+        this->_internal_a_arefpoint());
   }
 
-  if (_internal_has_aeventmessage()) {
-    // required bytes aEventMessage = 2;
+  if (_internal_has_a_aeventmessage()) {
+    // required bytes a_aEventMessage = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aeventmessage());
+        this->_internal_a_aeventmessage());
   }
 
   return total_size;
@@ -4515,15 +4515,15 @@ size_t Msg_UpdateWheelTransaction::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aRefPoint = 1;
+    // required bytes a_aRefPoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_arefpoint());
+        this->_internal_a_arefpoint());
 
-    // required bytes aEventMessage = 2;
+    // required bytes a_aEventMessage = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aeventmessage());
+        this->_internal_a_aeventmessage());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4532,12 +4532,12 @@ size_t Msg_UpdateWheelTransaction::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes aTargetGuid = 3;
+  // optional bytes a_aTargetGuid = 3;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_atargetguid());
+        this->_internal_a_atargetguid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4564,13 +4564,13 @@ void Msg_UpdateWheelTransaction::MergeFrom(const Msg_UpdateWheelTransaction& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_arefpoint(from._internal_arefpoint());
+      _this->_internal_set_a_arefpoint(from._internal_a_arefpoint());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aeventmessage(from._internal_aeventmessage());
+      _this->_internal_set_a_aeventmessage(from._internal_a_aeventmessage());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_atargetguid(from._internal_atargetguid());
+      _this->_internal_set_a_atargetguid(from._internal_a_atargetguid());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4595,16 +4595,16 @@ void Msg_UpdateWheelTransaction::InternalSwap(Msg_UpdateWheelTransaction* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.arefpoint_, lhs_arena,
-      &other->_impl_.arefpoint_, rhs_arena
+      &_impl_.a_arefpoint_, lhs_arena,
+      &other->_impl_.a_arefpoint_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aeventmessage_, lhs_arena,
-      &other->_impl_.aeventmessage_, rhs_arena
+      &_impl_.a_aeventmessage_, lhs_arena,
+      &other->_impl_.a_aeventmessage_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.atargetguid_, lhs_arena,
-      &other->_impl_.atargetguid_, rhs_arena
+      &_impl_.a_atargetguid_, lhs_arena,
+      &other->_impl_.a_atargetguid_, rhs_arena
   );
 }
 
@@ -4618,7 +4618,7 @@ std::string Msg_UpdateWheelTransaction::GetTypeName() const {
 class Msg_ProcessUnhandledEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ProcessUnhandledEvent>()._impl_._has_bits_);
-  static void set_has_arefpoint(HasBits* has_bits) {
+  static void set_has_a_arefpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4638,15 +4638,15 @@ Msg_ProcessUnhandledEvent::Msg_ProcessUnhandledEvent(const Msg_ProcessUnhandledE
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.arefpoint_){}};
+    , decltype(_impl_.a_arefpoint_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.arefpoint_.InitDefault();
+  _impl_.a_arefpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.arefpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_arefpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_arefpoint()) {
-    _this->_impl_.arefpoint_.Set(from._internal_arefpoint(), 
+  if (from._internal_has_a_arefpoint()) {
+    _this->_impl_.a_arefpoint_.Set(from._internal_a_arefpoint(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent)
@@ -4659,11 +4659,11 @@ inline void Msg_ProcessUnhandledEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.arefpoint_){}
+    , decltype(_impl_.a_arefpoint_){}
   };
-  _impl_.arefpoint_.InitDefault();
+  _impl_.a_arefpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.arefpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_arefpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4678,7 +4678,7 @@ Msg_ProcessUnhandledEvent::~Msg_ProcessUnhandledEvent() {
 
 inline void Msg_ProcessUnhandledEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.arefpoint_.Destroy();
+  _impl_.a_arefpoint_.Destroy();
 }
 
 void Msg_ProcessUnhandledEvent::SetCachedSize(int size) const {
@@ -4693,7 +4693,7 @@ void Msg_ProcessUnhandledEvent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.arefpoint_.ClearNonDefaultToEmpty();
+    _impl_.a_arefpoint_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -4706,10 +4706,10 @@ const char* Msg_ProcessUnhandledEvent::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aRefPoint = 1;
+      // required bytes a_aRefPoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_arefpoint();
+          auto str = _internal_mutable_a_arefpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -4746,10 +4746,10 @@ uint8_t* Msg_ProcessUnhandledEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aRefPoint = 1;
+  // required bytes a_aRefPoint = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_arefpoint(), target);
+        1, this->_internal_a_arefpoint(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4764,11 +4764,11 @@ size_t Msg_ProcessUnhandledEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent)
   size_t total_size = 0;
 
-  // required bytes aRefPoint = 1;
-  if (_internal_has_arefpoint()) {
+  // required bytes a_aRefPoint = 1;
+  if (_internal_has_a_arefpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_arefpoint());
+        this->_internal_a_arefpoint());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -4795,8 +4795,8 @@ void Msg_ProcessUnhandledEvent::MergeFrom(const Msg_ProcessUnhandledEvent& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_arefpoint()) {
-    _this->_internal_set_arefpoint(from._internal_arefpoint());
+  if (from._internal_has_a_arefpoint()) {
+    _this->_internal_set_a_arefpoint(from._internal_a_arefpoint());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4820,8 +4820,8 @@ void Msg_ProcessUnhandledEvent::InternalSwap(Msg_ProcessUnhandledEvent* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.arefpoint_, lhs_arena,
-      &other->_impl_.arefpoint_, rhs_arena
+      &_impl_.a_arefpoint_, lhs_arena,
+      &other->_impl_.a_arefpoint_, rhs_arena
   );
 }
 
@@ -4835,16 +4835,16 @@ std::string Msg_ProcessUnhandledEvent::GetTypeName() const {
 class Reply_ProcessUnhandledEvent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ProcessUnhandledEvent>()._impl_._has_bits_);
-  static void set_has_aoutrefpoint(HasBits* has_bits) {
+  static void set_has_a_aoutrefpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aouttargetguid(HasBits* has_bits) {
+  static void set_has_a_aouttargetguid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aoutfocussequencenumber(HasBits* has_bits) {
+  static void set_has_a_aoutfocussequencenumber(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_aoutlayersid(HasBits* has_bits) {
+  static void set_has_a_aoutlayersid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4864,37 +4864,37 @@ Reply_ProcessUnhandledEvent::Reply_ProcessUnhandledEvent(const Reply_ProcessUnha
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutrefpoint_){}
-    , decltype(_impl_.aouttargetguid_){}
-    , decltype(_impl_.aoutlayersid_){}
-    , decltype(_impl_.aoutfocussequencenumber_){}};
+    , decltype(_impl_.a_aoutrefpoint_){}
+    , decltype(_impl_.a_aouttargetguid_){}
+    , decltype(_impl_.a_aoutlayersid_){}
+    , decltype(_impl_.a_aoutfocussequencenumber_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoutrefpoint_.InitDefault();
+  _impl_.a_aoutrefpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutrefpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutrefpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutrefpoint()) {
-    _this->_impl_.aoutrefpoint_.Set(from._internal_aoutrefpoint(), 
+  if (from._internal_has_a_aoutrefpoint()) {
+    _this->_impl_.a_aoutrefpoint_.Set(from._internal_a_aoutrefpoint(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aouttargetguid_.InitDefault();
+  _impl_.a_aouttargetguid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aouttargetguid_.Set("", GetArenaForAllocation());
+    _impl_.a_aouttargetguid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aouttargetguid()) {
-    _this->_impl_.aouttargetguid_.Set(from._internal_aouttargetguid(), 
+  if (from._internal_has_a_aouttargetguid()) {
+    _this->_impl_.a_aouttargetguid_.Set(from._internal_a_aouttargetguid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoutlayersid_.InitDefault();
+  _impl_.a_aoutlayersid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutlayersid_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutlayersid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoutlayersid()) {
-    _this->_impl_.aoutlayersid_.Set(from._internal_aoutlayersid(), 
+  if (from._internal_has_a_aoutlayersid()) {
+    _this->_impl_.a_aoutlayersid_.Set(from._internal_a_aoutlayersid(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.aoutfocussequencenumber_ = from._impl_.aoutfocussequencenumber_;
+  _this->_impl_.a_aoutfocussequencenumber_ = from._impl_.a_aoutfocussequencenumber_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent)
 }
 
@@ -4905,22 +4905,22 @@ inline void Reply_ProcessUnhandledEvent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoutrefpoint_){}
-    , decltype(_impl_.aouttargetguid_){}
-    , decltype(_impl_.aoutlayersid_){}
-    , decltype(_impl_.aoutfocussequencenumber_){uint64_t{0u}}
+    , decltype(_impl_.a_aoutrefpoint_){}
+    , decltype(_impl_.a_aouttargetguid_){}
+    , decltype(_impl_.a_aoutlayersid_){}
+    , decltype(_impl_.a_aoutfocussequencenumber_){uint64_t{0u}}
   };
-  _impl_.aoutrefpoint_.InitDefault();
+  _impl_.a_aoutrefpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutrefpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutrefpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aouttargetguid_.InitDefault();
+  _impl_.a_aouttargetguid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aouttargetguid_.Set("", GetArenaForAllocation());
+    _impl_.a_aouttargetguid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoutlayersid_.InitDefault();
+  _impl_.a_aoutlayersid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoutlayersid_.Set("", GetArenaForAllocation());
+    _impl_.a_aoutlayersid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4935,9 +4935,9 @@ Reply_ProcessUnhandledEvent::~Reply_ProcessUnhandledEvent() {
 
 inline void Reply_ProcessUnhandledEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoutrefpoint_.Destroy();
-  _impl_.aouttargetguid_.Destroy();
-  _impl_.aoutlayersid_.Destroy();
+  _impl_.a_aoutrefpoint_.Destroy();
+  _impl_.a_aouttargetguid_.Destroy();
+  _impl_.a_aoutlayersid_.Destroy();
 }
 
 void Reply_ProcessUnhandledEvent::SetCachedSize(int size) const {
@@ -4953,16 +4953,16 @@ void Reply_ProcessUnhandledEvent::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoutrefpoint_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutrefpoint_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aouttargetguid_.ClearNonDefaultToEmpty();
+      _impl_.a_aouttargetguid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.aoutlayersid_.ClearNonDefaultToEmpty();
+      _impl_.a_aoutlayersid_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.aoutfocussequencenumber_ = uint64_t{0u};
+  _impl_.a_aoutfocussequencenumber_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4974,37 +4974,37 @@ const char* Reply_ProcessUnhandledEvent::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOutRefPoint = 1;
+      // required bytes a_aOutRefPoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoutrefpoint();
+          auto str = _internal_mutable_a_aoutrefpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutTargetGuid = 2;
+      // required bytes a_aOutTargetGuid = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aouttargetguid();
+          auto str = _internal_mutable_a_aouttargetguid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 aOutFocusSequenceNumber = 3;
+      // required uint64 a_aOutFocusSequenceNumber = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_aoutfocussequencenumber(&has_bits);
-          _impl_.aoutfocussequencenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aoutfocussequencenumber(&has_bits);
+          _impl_.a_aoutfocussequencenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOutLayersId = 4;
+      // required bytes a_aOutLayersId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_aoutlayersid();
+          auto str = _internal_mutable_a_aoutlayersid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5041,28 +5041,28 @@ uint8_t* Reply_ProcessUnhandledEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOutRefPoint = 1;
+  // required bytes a_aOutRefPoint = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoutrefpoint(), target);
+        1, this->_internal_a_aoutrefpoint(), target);
   }
 
-  // required bytes aOutTargetGuid = 2;
+  // required bytes a_aOutTargetGuid = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aouttargetguid(), target);
+        2, this->_internal_a_aouttargetguid(), target);
   }
 
-  // required uint64 aOutFocusSequenceNumber = 3;
+  // required uint64 a_aOutFocusSequenceNumber = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_aoutfocussequencenumber(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_aoutfocussequencenumber(), target);
   }
 
-  // required bytes aOutLayersId = 4;
+  // required bytes a_aOutLayersId = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_aoutlayersid(), target);
+        4, this->_internal_a_aoutlayersid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5077,30 +5077,30 @@ size_t Reply_ProcessUnhandledEvent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent)
   size_t total_size = 0;
 
-  if (_internal_has_aoutrefpoint()) {
-    // required bytes aOutRefPoint = 1;
+  if (_internal_has_a_aoutrefpoint()) {
+    // required bytes a_aOutRefPoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutrefpoint());
+        this->_internal_a_aoutrefpoint());
   }
 
-  if (_internal_has_aouttargetguid()) {
-    // required bytes aOutTargetGuid = 2;
+  if (_internal_has_a_aouttargetguid()) {
+    // required bytes a_aOutTargetGuid = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aouttargetguid());
+        this->_internal_a_aouttargetguid());
   }
 
-  if (_internal_has_aoutlayersid()) {
-    // required bytes aOutLayersId = 4;
+  if (_internal_has_a_aoutlayersid()) {
+    // required bytes a_aOutLayersId = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutlayersid());
+        this->_internal_a_aoutlayersid());
   }
 
-  if (_internal_has_aoutfocussequencenumber()) {
-    // required uint64 aOutFocusSequenceNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aoutfocussequencenumber());
+  if (_internal_has_a_aoutfocussequencenumber()) {
+    // required uint64 a_aOutFocusSequenceNumber = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aoutfocussequencenumber());
   }
 
   return total_size;
@@ -5110,23 +5110,23 @@ size_t Reply_ProcessUnhandledEvent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes aOutRefPoint = 1;
+    // required bytes a_aOutRefPoint = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutrefpoint());
+        this->_internal_a_aoutrefpoint());
 
-    // required bytes aOutTargetGuid = 2;
+    // required bytes a_aOutTargetGuid = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aouttargetguid());
+        this->_internal_a_aouttargetguid());
 
-    // required bytes aOutLayersId = 4;
+    // required bytes a_aOutLayersId = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoutlayersid());
+        this->_internal_a_aoutlayersid());
 
-    // required uint64 aOutFocusSequenceNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_aoutfocussequencenumber());
+    // required uint64 a_aOutFocusSequenceNumber = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aoutfocussequencenumber());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5159,16 +5159,16 @@ void Reply_ProcessUnhandledEvent::MergeFrom(const Reply_ProcessUnhandledEvent& f
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoutrefpoint(from._internal_aoutrefpoint());
+      _this->_internal_set_a_aoutrefpoint(from._internal_a_aoutrefpoint());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aouttargetguid(from._internal_aouttargetguid());
+      _this->_internal_set_a_aouttargetguid(from._internal_a_aouttargetguid());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_aoutlayersid(from._internal_aoutlayersid());
+      _this->_internal_set_a_aoutlayersid(from._internal_a_aoutlayersid());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.aoutfocussequencenumber_ = from._impl_.aoutfocussequencenumber_;
+      _this->_impl_.a_aoutfocussequencenumber_ = from._impl_.a_aoutfocussequencenumber_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -5194,18 +5194,18 @@ void Reply_ProcessUnhandledEvent::InternalSwap(Reply_ProcessUnhandledEvent* othe
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutrefpoint_, lhs_arena,
-      &other->_impl_.aoutrefpoint_, rhs_arena
+      &_impl_.a_aoutrefpoint_, lhs_arena,
+      &other->_impl_.a_aoutrefpoint_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aouttargetguid_, lhs_arena,
-      &other->_impl_.aouttargetguid_, rhs_arena
+      &_impl_.a_aouttargetguid_, lhs_arena,
+      &other->_impl_.a_aouttargetguid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoutlayersid_, lhs_arena,
-      &other->_impl_.aoutlayersid_, rhs_arena
+      &_impl_.a_aoutlayersid_, lhs_arena,
+      &other->_impl_.a_aoutlayersid_, rhs_arena
   );
-  swap(_impl_.aoutfocussequencenumber_, other->_impl_.aoutfocussequencenumber_);
+  swap(_impl_.a_aoutfocussequencenumber_, other->_impl_.a_aoutfocussequencenumber_);
 }
 
 std::string Reply_ProcessUnhandledEvent::GetTypeName() const {
@@ -5218,10 +5218,10 @@ std::string Reply_ProcessUnhandledEvent::GetTypeName() const {
 class Msg_CallInputBlockCallback::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_CallInputBlockCallback>()._impl_._has_bits_);
-  static void set_has_ainputblockid(HasBits* has_bits) {
+  static void set_has_a_ainputblockid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_ahandledresult(HasBits* has_bits) {
+  static void set_has_a_ahandledresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5241,19 +5241,19 @@ Msg_CallInputBlockCallback::Msg_CallInputBlockCallback(const Msg_CallInputBlockC
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ahandledresult_){}
-    , decltype(_impl_.ainputblockid_){}};
+    , decltype(_impl_.a_ahandledresult_){}
+    , decltype(_impl_.a_ainputblockid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.ahandledresult_.InitDefault();
+  _impl_.a_ahandledresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ahandledresult_.Set("", GetArenaForAllocation());
+    _impl_.a_ahandledresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_ahandledresult()) {
-    _this->_impl_.ahandledresult_.Set(from._internal_ahandledresult(), 
+  if (from._internal_has_a_ahandledresult()) {
+    _this->_impl_.a_ahandledresult_.Set(from._internal_a_ahandledresult(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.ainputblockid_ = from._impl_.ainputblockid_;
+  _this->_impl_.a_ainputblockid_ = from._impl_.a_ainputblockid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback)
 }
 
@@ -5264,12 +5264,12 @@ inline void Msg_CallInputBlockCallback::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ahandledresult_){}
-    , decltype(_impl_.ainputblockid_){uint64_t{0u}}
+    , decltype(_impl_.a_ahandledresult_){}
+    , decltype(_impl_.a_ainputblockid_){uint64_t{0u}}
   };
-  _impl_.ahandledresult_.InitDefault();
+  _impl_.a_ahandledresult_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ahandledresult_.Set("", GetArenaForAllocation());
+    _impl_.a_ahandledresult_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5284,7 +5284,7 @@ Msg_CallInputBlockCallback::~Msg_CallInputBlockCallback() {
 
 inline void Msg_CallInputBlockCallback::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.ahandledresult_.Destroy();
+  _impl_.a_ahandledresult_.Destroy();
 }
 
 void Msg_CallInputBlockCallback::SetCachedSize(int size) const {
@@ -5299,9 +5299,9 @@ void Msg_CallInputBlockCallback::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.ahandledresult_.ClearNonDefaultToEmpty();
+    _impl_.a_ahandledresult_.ClearNonDefaultToEmpty();
   }
-  _impl_.ainputblockid_ = uint64_t{0u};
+  _impl_.a_ainputblockid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -5313,19 +5313,19 @@ const char* Msg_CallInputBlockCallback::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 aInputBlockId = 1;
+      // required uint64 a_aInputBlockId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_ainputblockid(&has_bits);
-          _impl_.ainputblockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ainputblockid(&has_bits);
+          _impl_.a_ainputblockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aHandledResult = 2;
+      // required bytes a_aHandledResult = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_ahandledresult();
+          auto str = _internal_mutable_a_ahandledresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5362,16 +5362,16 @@ uint8_t* Msg_CallInputBlockCallback::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 aInputBlockId = 1;
+  // required uint64 a_aInputBlockId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_ainputblockid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_ainputblockid(), target);
   }
 
-  // required bytes aHandledResult = 2;
+  // required bytes a_aHandledResult = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_ahandledresult(), target);
+        2, this->_internal_a_ahandledresult(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5386,16 +5386,16 @@ size_t Msg_CallInputBlockCallback::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback)
   size_t total_size = 0;
 
-  if (_internal_has_ahandledresult()) {
-    // required bytes aHandledResult = 2;
+  if (_internal_has_a_ahandledresult()) {
+    // required bytes a_aHandledResult = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ahandledresult());
+        this->_internal_a_ahandledresult());
   }
 
-  if (_internal_has_ainputblockid()) {
-    // required uint64 aInputBlockId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_ainputblockid());
+  if (_internal_has_a_ainputblockid()) {
+    // required uint64 a_aInputBlockId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
   }
 
   return total_size;
@@ -5405,13 +5405,13 @@ size_t Msg_CallInputBlockCallback::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aHandledResult = 2;
+    // required bytes a_aHandledResult = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ahandledresult());
+        this->_internal_a_ahandledresult());
 
-    // required uint64 aInputBlockId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_ainputblockid());
+    // required uint64 a_aInputBlockId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5444,10 +5444,10 @@ void Msg_CallInputBlockCallback::MergeFrom(const Msg_CallInputBlockCallback& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_ahandledresult(from._internal_ahandledresult());
+      _this->_internal_set_a_ahandledresult(from._internal_a_ahandledresult());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.ainputblockid_ = from._impl_.ainputblockid_;
+      _this->_impl_.a_ainputblockid_ = from._impl_.a_ainputblockid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -5473,10 +5473,10 @@ void Msg_CallInputBlockCallback::InternalSwap(Msg_CallInputBlockCallback* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.ahandledresult_, lhs_arena,
-      &other->_impl_.ahandledresult_, rhs_arena
+      &_impl_.a_ahandledresult_, lhs_arena,
+      &other->_impl_.a_ahandledresult_, rhs_arena
   );
-  swap(_impl_.ainputblockid_, other->_impl_.ainputblockid_);
+  swap(_impl_.a_ainputblockid_, other->_impl_.a_ainputblockid_);
 }
 
 std::string Msg_CallInputBlockCallback::GetTypeName() const {
@@ -5489,22 +5489,22 @@ std::string Msg_CallInputBlockCallback::GetTypeName() const {
 class Msg_HandleTap::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_HandleTap>()._impl_._has_bits_);
-  static void set_has_atype(HasBits* has_bits) {
+  static void set_has_a_atype(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_point(HasBits* has_bits) {
+  static void set_has_a_point(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_amodifiers(HasBits* has_bits) {
+  static void set_has_a_amodifiers(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_aguid(HasBits* has_bits) {
+  static void set_has_a_aguid(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_ainputblockid(HasBits* has_bits) {
+  static void set_has_a_ainputblockid(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_adoubletaptozoommetrics(HasBits* has_bits) {
+  static void set_has_a_adoubletaptozoommetrics(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5524,55 +5524,55 @@ Msg_HandleTap::Msg_HandleTap(const Msg_HandleTap& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atype_){}
-    , decltype(_impl_.point_){}
-    , decltype(_impl_.amodifiers_){}
-    , decltype(_impl_.aguid_){}
-    , decltype(_impl_.adoubletaptozoommetrics_){}
-    , decltype(_impl_.ainputblockid_){}};
+    , decltype(_impl_.a_atype_){}
+    , decltype(_impl_.a_point_){}
+    , decltype(_impl_.a_amodifiers_){}
+    , decltype(_impl_.a_aguid_){}
+    , decltype(_impl_.a_adoubletaptozoommetrics_){}
+    , decltype(_impl_.a_ainputblockid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.atype_.InitDefault();
+  _impl_.a_atype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.atype_.Set("", GetArenaForAllocation());
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_atype()) {
-    _this->_impl_.atype_.Set(from._internal_atype(), 
+  if (from._internal_has_a_atype()) {
+    _this->_impl_.a_atype_.Set(from._internal_a_atype(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.point_.InitDefault();
+  _impl_.a_point_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.point_.Set("", GetArenaForAllocation());
+    _impl_.a_point_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_point()) {
-    _this->_impl_.point_.Set(from._internal_point(), 
+  if (from._internal_has_a_point()) {
+    _this->_impl_.a_point_.Set(from._internal_a_point(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.amodifiers_.InitDefault();
+  _impl_.a_amodifiers_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.amodifiers_.Set("", GetArenaForAllocation());
+    _impl_.a_amodifiers_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_amodifiers()) {
-    _this->_impl_.amodifiers_.Set(from._internal_amodifiers(), 
+  if (from._internal_has_a_amodifiers()) {
+    _this->_impl_.a_amodifiers_.Set(from._internal_a_amodifiers(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aguid_.InitDefault();
+  _impl_.a_aguid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aguid_.Set("", GetArenaForAllocation());
+    _impl_.a_aguid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aguid()) {
-    _this->_impl_.aguid_.Set(from._internal_aguid(), 
+  if (from._internal_has_a_aguid()) {
+    _this->_impl_.a_aguid_.Set(from._internal_a_aguid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.adoubletaptozoommetrics_.InitDefault();
+  _impl_.a_adoubletaptozoommetrics_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adoubletaptozoommetrics_.Set("", GetArenaForAllocation());
+    _impl_.a_adoubletaptozoommetrics_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_adoubletaptozoommetrics()) {
-    _this->_impl_.adoubletaptozoommetrics_.Set(from._internal_adoubletaptozoommetrics(), 
+  if (from._internal_has_a_adoubletaptozoommetrics()) {
+    _this->_impl_.a_adoubletaptozoommetrics_.Set(from._internal_a_adoubletaptozoommetrics(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.ainputblockid_ = from._impl_.ainputblockid_;
+  _this->_impl_.a_ainputblockid_ = from._impl_.a_ainputblockid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap)
 }
 
@@ -5583,32 +5583,32 @@ inline void Msg_HandleTap::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atype_){}
-    , decltype(_impl_.point_){}
-    , decltype(_impl_.amodifiers_){}
-    , decltype(_impl_.aguid_){}
-    , decltype(_impl_.adoubletaptozoommetrics_){}
-    , decltype(_impl_.ainputblockid_){uint64_t{0u}}
+    , decltype(_impl_.a_atype_){}
+    , decltype(_impl_.a_point_){}
+    , decltype(_impl_.a_amodifiers_){}
+    , decltype(_impl_.a_aguid_){}
+    , decltype(_impl_.a_adoubletaptozoommetrics_){}
+    , decltype(_impl_.a_ainputblockid_){uint64_t{0u}}
   };
-  _impl_.atype_.InitDefault();
+  _impl_.a_atype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.atype_.Set("", GetArenaForAllocation());
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.point_.InitDefault();
+  _impl_.a_point_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.point_.Set("", GetArenaForAllocation());
+    _impl_.a_point_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.amodifiers_.InitDefault();
+  _impl_.a_amodifiers_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.amodifiers_.Set("", GetArenaForAllocation());
+    _impl_.a_amodifiers_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aguid_.InitDefault();
+  _impl_.a_aguid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aguid_.Set("", GetArenaForAllocation());
+    _impl_.a_aguid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.adoubletaptozoommetrics_.InitDefault();
+  _impl_.a_adoubletaptozoommetrics_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adoubletaptozoommetrics_.Set("", GetArenaForAllocation());
+    _impl_.a_adoubletaptozoommetrics_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5623,11 +5623,11 @@ Msg_HandleTap::~Msg_HandleTap() {
 
 inline void Msg_HandleTap::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.atype_.Destroy();
-  _impl_.point_.Destroy();
-  _impl_.amodifiers_.Destroy();
-  _impl_.aguid_.Destroy();
-  _impl_.adoubletaptozoommetrics_.Destroy();
+  _impl_.a_atype_.Destroy();
+  _impl_.a_point_.Destroy();
+  _impl_.a_amodifiers_.Destroy();
+  _impl_.a_aguid_.Destroy();
+  _impl_.a_adoubletaptozoommetrics_.Destroy();
 }
 
 void Msg_HandleTap::SetCachedSize(int size) const {
@@ -5643,22 +5643,22 @@ void Msg_HandleTap::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.atype_.ClearNonDefaultToEmpty();
+      _impl_.a_atype_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.point_.ClearNonDefaultToEmpty();
+      _impl_.a_point_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.amodifiers_.ClearNonDefaultToEmpty();
+      _impl_.a_amodifiers_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.aguid_.ClearNonDefaultToEmpty();
+      _impl_.a_aguid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.adoubletaptozoommetrics_.ClearNonDefaultToEmpty();
+      _impl_.a_adoubletaptozoommetrics_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.ainputblockid_ = uint64_t{0u};
+  _impl_.a_ainputblockid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -5670,55 +5670,55 @@ const char* Msg_HandleTap::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aType = 1;
+      // required bytes a_aType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_atype();
+          auto str = _internal_mutable_a_atype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes point = 2;
+      // required bytes a_point = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_point();
+          auto str = _internal_mutable_a_point();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aModifiers = 3;
+      // required bytes a_aModifiers = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_amodifiers();
+          auto str = _internal_mutable_a_amodifiers();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aGuid = 4;
+      // required bytes a_aGuid = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_aguid();
+          auto str = _internal_mutable_a_aguid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 aInputBlockId = 5;
+      // required uint64 a_aInputBlockId = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_ainputblockid(&has_bits);
-          _impl_.ainputblockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ainputblockid(&has_bits);
+          _impl_.a_ainputblockid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes aDoubleTapToZoomMetrics = 6;
+      // optional bytes a_aDoubleTapToZoomMetrics = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_adoubletaptozoommetrics();
+          auto str = _internal_mutable_a_adoubletaptozoommetrics();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5755,40 +5755,40 @@ uint8_t* Msg_HandleTap::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aType = 1;
+  // required bytes a_aType = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_atype(), target);
+        1, this->_internal_a_atype(), target);
   }
 
-  // required bytes point = 2;
+  // required bytes a_point = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_point(), target);
+        2, this->_internal_a_point(), target);
   }
 
-  // required bytes aModifiers = 3;
+  // required bytes a_aModifiers = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_amodifiers(), target);
+        3, this->_internal_a_amodifiers(), target);
   }
 
-  // required bytes aGuid = 4;
+  // required bytes a_aGuid = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_aguid(), target);
+        4, this->_internal_a_aguid(), target);
   }
 
-  // required uint64 aInputBlockId = 5;
+  // required uint64 a_aInputBlockId = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_ainputblockid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_a_ainputblockid(), target);
   }
 
-  // optional bytes aDoubleTapToZoomMetrics = 6;
+  // optional bytes a_aDoubleTapToZoomMetrics = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_adoubletaptozoommetrics(), target);
+        6, this->_internal_a_adoubletaptozoommetrics(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5803,37 +5803,37 @@ size_t Msg_HandleTap::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap)
   size_t total_size = 0;
 
-  if (_internal_has_atype()) {
-    // required bytes aType = 1;
+  if (_internal_has_a_atype()) {
+    // required bytes a_aType = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_atype());
+        this->_internal_a_atype());
   }
 
-  if (_internal_has_point()) {
-    // required bytes point = 2;
+  if (_internal_has_a_point()) {
+    // required bytes a_point = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_point());
+        this->_internal_a_point());
   }
 
-  if (_internal_has_amodifiers()) {
-    // required bytes aModifiers = 3;
+  if (_internal_has_a_amodifiers()) {
+    // required bytes a_aModifiers = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_amodifiers());
+        this->_internal_a_amodifiers());
   }
 
-  if (_internal_has_aguid()) {
-    // required bytes aGuid = 4;
+  if (_internal_has_a_aguid()) {
+    // required bytes a_aGuid = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aguid());
+        this->_internal_a_aguid());
   }
 
-  if (_internal_has_ainputblockid()) {
-    // required uint64 aInputBlockId = 5;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_ainputblockid());
+  if (_internal_has_a_ainputblockid()) {
+    // required uint64 a_aInputBlockId = 5;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
   }
 
   return total_size;
@@ -5843,28 +5843,28 @@ size_t Msg_HandleTap::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000002f) ^ 0x0000002f) == 0) {  // All required fields are present.
-    // required bytes aType = 1;
+    // required bytes a_aType = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_atype());
+        this->_internal_a_atype());
 
-    // required bytes point = 2;
+    // required bytes a_point = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_point());
+        this->_internal_a_point());
 
-    // required bytes aModifiers = 3;
+    // required bytes a_aModifiers = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_amodifiers());
+        this->_internal_a_amodifiers());
 
-    // required bytes aGuid = 4;
+    // required bytes a_aGuid = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aguid());
+        this->_internal_a_aguid());
 
-    // required uint64 aInputBlockId = 5;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_ainputblockid());
+    // required uint64 a_aInputBlockId = 5;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ainputblockid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5873,12 +5873,12 @@ size_t Msg_HandleTap::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes aDoubleTapToZoomMetrics = 6;
+  // optional bytes a_aDoubleTapToZoomMetrics = 6;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000010u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_adoubletaptozoommetrics());
+        this->_internal_a_adoubletaptozoommetrics());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5905,22 +5905,22 @@ void Msg_HandleTap::MergeFrom(const Msg_HandleTap& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_atype(from._internal_atype());
+      _this->_internal_set_a_atype(from._internal_a_atype());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_point(from._internal_point());
+      _this->_internal_set_a_point(from._internal_a_point());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_amodifiers(from._internal_amodifiers());
+      _this->_internal_set_a_amodifiers(from._internal_a_amodifiers());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_aguid(from._internal_aguid());
+      _this->_internal_set_a_aguid(from._internal_a_aguid());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_adoubletaptozoommetrics(from._internal_adoubletaptozoommetrics());
+      _this->_internal_set_a_adoubletaptozoommetrics(from._internal_a_adoubletaptozoommetrics());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.ainputblockid_ = from._impl_.ainputblockid_;
+      _this->_impl_.a_ainputblockid_ = from._impl_.a_ainputblockid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -5946,26 +5946,26 @@ void Msg_HandleTap::InternalSwap(Msg_HandleTap* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.atype_, lhs_arena,
-      &other->_impl_.atype_, rhs_arena
+      &_impl_.a_atype_, lhs_arena,
+      &other->_impl_.a_atype_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.point_, lhs_arena,
-      &other->_impl_.point_, rhs_arena
+      &_impl_.a_point_, lhs_arena,
+      &other->_impl_.a_point_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.amodifiers_, lhs_arena,
-      &other->_impl_.amodifiers_, rhs_arena
+      &_impl_.a_amodifiers_, lhs_arena,
+      &other->_impl_.a_amodifiers_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aguid_, lhs_arena,
-      &other->_impl_.aguid_, rhs_arena
+      &_impl_.a_aguid_, lhs_arena,
+      &other->_impl_.a_aguid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.adoubletaptozoommetrics_, lhs_arena,
-      &other->_impl_.adoubletaptozoommetrics_, rhs_arena
+      &_impl_.a_adoubletaptozoommetrics_, lhs_arena,
+      &other->_impl_.a_adoubletaptozoommetrics_, rhs_arena
   );
-  swap(_impl_.ainputblockid_, other->_impl_.ainputblockid_);
+  swap(_impl_.a_ainputblockid_, other->_impl_.a_ainputblockid_);
 }
 
 std::string Msg_HandleTap::GetTypeName() const {

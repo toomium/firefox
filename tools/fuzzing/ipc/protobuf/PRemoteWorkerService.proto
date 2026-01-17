@@ -18,8 +18,8 @@ import "RemoteWorkerTypes.proto";
 
 // Message declarations
 message Msg_PRemoteWorkerConstructor {
-  required protobuf.mozilla.dom.RemoteWorkerData data = 1;
-  required bytes childEp = 2;
+  required protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+  required bytes a_childEp = 2;
 }
 
 message Reply_PRemoteWorkerConstructor {

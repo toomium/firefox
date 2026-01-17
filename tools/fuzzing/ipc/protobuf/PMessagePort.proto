@@ -18,11 +18,11 @@ import "ProtocolTypes.proto";
 
 // Message declarations
 message Msg_PostMessages {
-  repeated protobuf.mozilla.dom.MessageData messages = 1;
+  repeated protobuf.mozilla.dom.MessageData a_messages = 1;
 }
 
 message Msg_Disentangle {
-  repeated protobuf.mozilla.dom.MessageData messages = 1;
+  repeated protobuf.mozilla.dom.MessageData a_messages = 1;
 }
 
 message Msg_StopSendingData {
@@ -32,11 +32,11 @@ message Msg_Close {
 }
 
 message Msg_Entangled {
-  repeated protobuf.mozilla.dom.MessageData messages = 1;
+  repeated protobuf.mozilla.dom.MessageData a_messages = 1;
 }
 
 message Msg_ReceiveData {
-  repeated protobuf.mozilla.dom.MessageData messages = 1;
+  repeated protobuf.mozilla.dom.MessageData a_messages = 1;
 }
 
 message Msg_StopSendingDataConfirmed {

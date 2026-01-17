@@ -436,24 +436,24 @@ class Msg_CallbackAccept final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSocketFieldNumber = 1,
+    kASocketFieldNumber = 1,
   };
-  // required bytes socket = 1;
-  bool has_socket() const;
+  // required bytes a_socket = 1;
+  bool has_a_socket() const;
   private:
-  bool _internal_has_socket() const;
+  bool _internal_has_a_socket() const;
   public:
-  void clear_socket();
-  const std::string& socket() const;
+  void clear_a_socket();
+  const std::string& a_socket() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_socket(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_socket();
-  PROTOBUF_NODISCARD std::string* release_socket();
-  void set_allocated_socket(std::string* socket);
+  void set_a_socket(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_socket();
+  PROTOBUF_NODISCARD std::string* release_a_socket();
+  void set_allocated_a_socket(std::string* a_socket);
   private:
-  const std::string& _internal_socket() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_socket(const std::string& value);
-  std::string* _internal_mutable_socket();
+  const std::string& _internal_a_socket() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_socket(const std::string& value);
+  std::string* _internal_mutable_a_socket();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept)
@@ -466,7 +466,7 @@ class Msg_CallbackAccept final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr socket_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_socket_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPServerSocket_2eproto;
@@ -738,72 +738,72 @@ class Reply___delete__ final :
 
 // Msg_CallbackAccept
 
-// required bytes socket = 1;
-inline bool Msg_CallbackAccept::_internal_has_socket() const {
+// required bytes a_socket = 1;
+inline bool Msg_CallbackAccept::_internal_has_a_socket() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CallbackAccept::has_socket() const {
-  return _internal_has_socket();
+inline bool Msg_CallbackAccept::has_a_socket() const {
+  return _internal_has_a_socket();
 }
-inline void Msg_CallbackAccept::clear_socket() {
-  _impl_.socket_.ClearToEmpty();
+inline void Msg_CallbackAccept::clear_a_socket() {
+  _impl_.a_socket_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CallbackAccept::socket() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.socket)
-  return _internal_socket();
+inline const std::string& Msg_CallbackAccept::a_socket() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
+  return _internal_a_socket();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CallbackAccept::set_socket(ArgT0&& arg0, ArgT... args) {
+void Msg_CallbackAccept::set_a_socket(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.socket_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.socket)
+ _impl_.a_socket_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
 }
-inline std::string* Msg_CallbackAccept::mutable_socket() {
-  std::string* _s = _internal_mutable_socket();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.socket)
+inline std::string* Msg_CallbackAccept::mutable_a_socket() {
+  std::string* _s = _internal_mutable_a_socket();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
   return _s;
 }
-inline const std::string& Msg_CallbackAccept::_internal_socket() const {
-  return _impl_.socket_.Get();
+inline const std::string& Msg_CallbackAccept::_internal_a_socket() const {
+  return _impl_.a_socket_.Get();
 }
-inline void Msg_CallbackAccept::_internal_set_socket(const std::string& value) {
+inline void Msg_CallbackAccept::_internal_set_a_socket(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.socket_.Set(value, GetArenaForAllocation());
+  _impl_.a_socket_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CallbackAccept::_internal_mutable_socket() {
+inline std::string* Msg_CallbackAccept::_internal_mutable_a_socket() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.socket_.Mutable(GetArenaForAllocation());
+  return _impl_.a_socket_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CallbackAccept::release_socket() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.socket)
-  if (!_internal_has_socket()) {
+inline std::string* Msg_CallbackAccept::release_a_socket() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
+  if (!_internal_has_a_socket()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.socket_.Release();
+  auto* p = _impl_.a_socket_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.socket_.IsDefault()) {
-    _impl_.socket_.Set("", GetArenaForAllocation());
+  if (_impl_.a_socket_.IsDefault()) {
+    _impl_.a_socket_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CallbackAccept::set_allocated_socket(std::string* socket) {
-  if (socket != nullptr) {
+inline void Msg_CallbackAccept::set_allocated_a_socket(std::string* a_socket) {
+  if (a_socket != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.socket_.SetAllocated(socket, GetArenaForAllocation());
+  _impl_.a_socket_.SetAllocated(a_socket, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.socket_.IsDefault()) {
-    _impl_.socket_.Set("", GetArenaForAllocation());
+  if (_impl_.a_socket_.IsDefault()) {
+    _impl_.a_socket_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.socket)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTCPServerSocket.Msg_CallbackAccept.a_socket)
 }
 
 // -------------------------------------------------------------------

@@ -15,24 +15,24 @@ import "PBackgroundSharedTypes.proto";
 // Structs and unions declarations
 message BoolResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    bool mVbool = 2;
+    bytes a_mVnsresult = 1;
+    bool a_mVbool = 2;
   }
 }
 
 message UInt64Response {
   oneof content {
-    bytes mVnsresult = 1;
-    uint64 mVuint64_t = 2;
+    bytes a_mVnsresult = 1;
+    uint64 a_mVuint64_t = 2;
   }
 }
 
 message CStringArrayResponse {
   message _mVArrayOfnsCString {
-    repeated bytes mVArrayOfnsCString = 1;
+    repeated bytes a_mVArrayOfnsCString = 1;
   }
   oneof content {
-    bytes mVnsresult = 1;
+    bytes a_mVnsresult = 1;
     _mVArrayOfnsCString mVArrayOfnsCString = 2;
   }
 }

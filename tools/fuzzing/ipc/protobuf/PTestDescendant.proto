@@ -16,14 +16,14 @@ package protobuf.mozilla._ipdltest.PTestDescendant;
 
 // Message declarations
 message Msg_PTestDescendantSubConstructor {
-  required bytes dummy = 1;
+  required bytes a_dummy = 1;
 }
 
 message Reply_PTestDescendantSubConstructor {
 }
 
 message Msg_Test {
-  required bytes a = 1;
+  required bytes a_a = 1;
 }
 
 message Msg___delete__ {
@@ -33,7 +33,7 @@ message Reply___delete__ {
 }
 
 message Msg_Ok {
-  required bytes a = 1;
+  required bytes a_a = 1;
 }
 
 // Parameter mappings stats:

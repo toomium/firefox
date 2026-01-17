@@ -320,24 +320,24 @@ class Reply_Query final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSnapshotFieldNumber = 1,
+    kASnapshotFieldNumber = 1,
   };
-  // required bytes snapshot = 1;
-  bool has_snapshot() const;
+  // required bytes a_snapshot = 1;
+  bool has_a_snapshot() const;
   private:
-  bool _internal_has_snapshot() const;
+  bool _internal_has_a_snapshot() const;
   public:
-  void clear_snapshot();
-  const std::string& snapshot() const;
+  void clear_a_snapshot();
+  const std::string& a_snapshot() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_snapshot(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_snapshot();
-  PROTOBUF_NODISCARD std::string* release_snapshot();
-  void set_allocated_snapshot(std::string* snapshot);
+  void set_a_snapshot(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_snapshot();
+  PROTOBUF_NODISCARD std::string* release_a_snapshot();
+  void set_allocated_a_snapshot(std::string* a_snapshot);
   private:
-  const std::string& _internal_snapshot() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_snapshot(const std::string& value);
-  std::string* _internal_mutable_snapshot();
+  const std::string& _internal_a_snapshot() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_snapshot(const std::string& value);
+  std::string* _internal_mutable_a_snapshot();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockManager.Reply_Query)
@@ -350,7 +350,7 @@ class Reply_Query final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr snapshot_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_snapshot_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockManager_2eproto;
@@ -467,25 +467,25 @@ class Msg_PLockRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARequestFieldNumber = 1,
+    kAARequestFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.locks.IPCLockRequest aRequest = 1;
-  bool has_arequest() const;
+  // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 1;
+  bool has_a_arequest() const;
   private:
-  bool _internal_has_arequest() const;
+  bool _internal_has_a_arequest() const;
   public:
-  void clear_arequest();
-  const ::protobuf::mozilla::dom::locks::IPCLockRequest& arequest() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::locks::IPCLockRequest* release_arequest();
-  ::protobuf::mozilla::dom::locks::IPCLockRequest* mutable_arequest();
-  void set_allocated_arequest(::protobuf::mozilla::dom::locks::IPCLockRequest* arequest);
+  void clear_a_arequest();
+  const ::protobuf::mozilla::dom::locks::IPCLockRequest& a_arequest() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::locks::IPCLockRequest* release_a_arequest();
+  ::protobuf::mozilla::dom::locks::IPCLockRequest* mutable_a_arequest();
+  void set_allocated_a_arequest(::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest);
   private:
-  const ::protobuf::mozilla::dom::locks::IPCLockRequest& _internal_arequest() const;
-  ::protobuf::mozilla::dom::locks::IPCLockRequest* _internal_mutable_arequest();
+  const ::protobuf::mozilla::dom::locks::IPCLockRequest& _internal_a_arequest() const;
+  ::protobuf::mozilla::dom::locks::IPCLockRequest* _internal_mutable_a_arequest();
   public:
-  void unsafe_arena_set_allocated_arequest(
-      ::protobuf::mozilla::dom::locks::IPCLockRequest* arequest);
-  ::protobuf::mozilla::dom::locks::IPCLockRequest* unsafe_arena_release_arequest();
+  void unsafe_arena_set_allocated_a_arequest(
+      ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest);
+  ::protobuf::mozilla::dom::locks::IPCLockRequest* unsafe_arena_release_a_arequest();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor)
  private:
@@ -497,7 +497,7 @@ class Msg_PLockRequestConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::locks::IPCLockRequest* arequest_;
+    ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockManager_2eproto;
@@ -889,113 +889,113 @@ class Reply___delete__ final :
 
 // Reply_Query
 
-// required bytes snapshot = 1;
-inline bool Reply_Query::_internal_has_snapshot() const {
+// required bytes a_snapshot = 1;
+inline bool Reply_Query::_internal_has_a_snapshot() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Query::has_snapshot() const {
-  return _internal_has_snapshot();
+inline bool Reply_Query::has_a_snapshot() const {
+  return _internal_has_a_snapshot();
 }
-inline void Reply_Query::clear_snapshot() {
-  _impl_.snapshot_.ClearToEmpty();
+inline void Reply_Query::clear_a_snapshot() {
+  _impl_.a_snapshot_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Query::snapshot() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.snapshot)
-  return _internal_snapshot();
+inline const std::string& Reply_Query::a_snapshot() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
+  return _internal_a_snapshot();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Query::set_snapshot(ArgT0&& arg0, ArgT... args) {
+void Reply_Query::set_a_snapshot(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.snapshot_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.snapshot)
+ _impl_.a_snapshot_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
 }
-inline std::string* Reply_Query::mutable_snapshot() {
-  std::string* _s = _internal_mutable_snapshot();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.snapshot)
+inline std::string* Reply_Query::mutable_a_snapshot() {
+  std::string* _s = _internal_mutable_a_snapshot();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
   return _s;
 }
-inline const std::string& Reply_Query::_internal_snapshot() const {
-  return _impl_.snapshot_.Get();
+inline const std::string& Reply_Query::_internal_a_snapshot() const {
+  return _impl_.a_snapshot_.Get();
 }
-inline void Reply_Query::_internal_set_snapshot(const std::string& value) {
+inline void Reply_Query::_internal_set_a_snapshot(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.snapshot_.Set(value, GetArenaForAllocation());
+  _impl_.a_snapshot_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Query::_internal_mutable_snapshot() {
+inline std::string* Reply_Query::_internal_mutable_a_snapshot() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.snapshot_.Mutable(GetArenaForAllocation());
+  return _impl_.a_snapshot_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Query::release_snapshot() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.snapshot)
-  if (!_internal_has_snapshot()) {
+inline std::string* Reply_Query::release_a_snapshot() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
+  if (!_internal_has_a_snapshot()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.snapshot_.Release();
+  auto* p = _impl_.a_snapshot_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.snapshot_.IsDefault()) {
-    _impl_.snapshot_.Set("", GetArenaForAllocation());
+  if (_impl_.a_snapshot_.IsDefault()) {
+    _impl_.a_snapshot_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Query::set_allocated_snapshot(std::string* snapshot) {
-  if (snapshot != nullptr) {
+inline void Reply_Query::set_allocated_a_snapshot(std::string* a_snapshot) {
+  if (a_snapshot != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.snapshot_.SetAllocated(snapshot, GetArenaForAllocation());
+  _impl_.a_snapshot_.SetAllocated(a_snapshot, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.snapshot_.IsDefault()) {
-    _impl_.snapshot_.Set("", GetArenaForAllocation());
+  if (_impl_.a_snapshot_.IsDefault()) {
+    _impl_.a_snapshot_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.snapshot)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Reply_Query.a_snapshot)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PLockRequestConstructor
 
-// required .protobuf.mozilla.dom.locks.IPCLockRequest aRequest = 1;
-inline bool Msg_PLockRequestConstructor::_internal_has_arequest() const {
+// required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 1;
+inline bool Msg_PLockRequestConstructor::_internal_has_a_arequest() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.arequest_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_arequest_ != nullptr);
   return value;
 }
-inline bool Msg_PLockRequestConstructor::has_arequest() const {
-  return _internal_has_arequest();
+inline bool Msg_PLockRequestConstructor::has_a_arequest() const {
+  return _internal_has_a_arequest();
 }
-inline const ::protobuf::mozilla::dom::locks::IPCLockRequest& Msg_PLockRequestConstructor::_internal_arequest() const {
-  const ::protobuf::mozilla::dom::locks::IPCLockRequest* p = _impl_.arequest_;
+inline const ::protobuf::mozilla::dom::locks::IPCLockRequest& Msg_PLockRequestConstructor::_internal_a_arequest() const {
+  const ::protobuf::mozilla::dom::locks::IPCLockRequest* p = _impl_.a_arequest_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::locks::IPCLockRequest&>(
       ::protobuf::mozilla::dom::locks::_IPCLockRequest_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::locks::IPCLockRequest& Msg_PLockRequestConstructor::arequest() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.aRequest)
-  return _internal_arequest();
+inline const ::protobuf::mozilla::dom::locks::IPCLockRequest& Msg_PLockRequestConstructor::a_arequest() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
+  return _internal_a_arequest();
 }
-inline void Msg_PLockRequestConstructor::unsafe_arena_set_allocated_arequest(
-    ::protobuf::mozilla::dom::locks::IPCLockRequest* arequest) {
+inline void Msg_PLockRequestConstructor::unsafe_arena_set_allocated_a_arequest(
+    ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.arequest_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_arequest_);
   }
-  _impl_.arequest_ = arequest;
-  if (arequest) {
+  _impl_.a_arequest_ = a_arequest;
+  if (a_arequest) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.aRequest)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
 }
-inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::release_arequest() {
+inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::release_a_arequest() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::locks::IPCLockRequest* temp = _impl_.arequest_;
-  _impl_.arequest_ = nullptr;
+  ::protobuf::mozilla::dom::locks::IPCLockRequest* temp = _impl_.a_arequest_;
+  _impl_.a_arequest_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1007,45 +1007,45 @@ inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstruc
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::unsafe_arena_release_arequest() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.aRequest)
+inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::unsafe_arena_release_a_arequest() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::locks::IPCLockRequest* temp = _impl_.arequest_;
-  _impl_.arequest_ = nullptr;
+  ::protobuf::mozilla::dom::locks::IPCLockRequest* temp = _impl_.a_arequest_;
+  _impl_.a_arequest_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::_internal_mutable_arequest() {
+inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::_internal_mutable_a_arequest() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.arequest_ == nullptr) {
+  if (_impl_.a_arequest_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::locks::IPCLockRequest>(GetArenaForAllocation());
-    _impl_.arequest_ = p;
+    _impl_.a_arequest_ = p;
   }
-  return _impl_.arequest_;
+  return _impl_.a_arequest_;
 }
-inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::mutable_arequest() {
-  ::protobuf::mozilla::dom::locks::IPCLockRequest* _msg = _internal_mutable_arequest();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.aRequest)
+inline ::protobuf::mozilla::dom::locks::IPCLockRequest* Msg_PLockRequestConstructor::mutable_a_arequest() {
+  ::protobuf::mozilla::dom::locks::IPCLockRequest* _msg = _internal_mutable_a_arequest();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
   return _msg;
 }
-inline void Msg_PLockRequestConstructor::set_allocated_arequest(::protobuf::mozilla::dom::locks::IPCLockRequest* arequest) {
+inline void Msg_PLockRequestConstructor::set_allocated_a_arequest(::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.arequest_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_arequest_);
   }
-  if (arequest) {
+  if (a_arequest) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(arequest));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_arequest));
     if (message_arena != submessage_arena) {
-      arequest = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, arequest, submessage_arena);
+      a_arequest = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_arequest, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arequest_ = arequest;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.aRequest)
+  _impl_.a_arequest_ = a_arequest;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_aRequest)
 }
 
 // -------------------------------------------------------------------

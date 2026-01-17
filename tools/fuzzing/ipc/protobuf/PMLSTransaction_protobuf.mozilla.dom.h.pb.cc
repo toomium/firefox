@@ -22,7 +22,7 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR RawBytes::RawBytes(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.data_)*/{}
+    /*decltype(_impl_.a_data_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RawBytesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RawBytesDefaultTypeInternal()
@@ -56,7 +56,7 @@ RawBytes::RawBytes(const RawBytes& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RawBytes* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.data_){from._impl_.data_}
+      decltype(_impl_.a_data_){from._impl_.a_data_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -68,7 +68,7 @@ inline void RawBytes::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.data_){arena}
+      decltype(_impl_.a_data_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -84,7 +84,7 @@ RawBytes::~RawBytes() {
 
 inline void RawBytes::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.data_.~RepeatedField();
+  _impl_.a_data_.~RepeatedField();
 }
 
 void RawBytes::SetCachedSize(int size) const {
@@ -97,7 +97,7 @@ void RawBytes::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.data_.Clear();
+  _impl_.a_data_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -107,18 +107,18 @@ const char* RawBytes::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 data = 1;
+      // repeated uint32 a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_data(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_data(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -152,10 +152,10 @@ uint8_t* RawBytes::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 data = 1;
-  for (int i = 0, n = this->_internal_data_size(); i < n; i++) {
+  // repeated uint32 a_data = 1;
+  for (int i = 0, n = this->_internal_a_data_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_data(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_data(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -174,12 +174,12 @@ size_t RawBytes::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 data = 1;
+  // repeated uint32 a_data = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.data_);
+      UInt32Size(this->_impl_.a_data_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_data_size());
+                  ::_pbi::FromIntSize(this->_internal_a_data_size());
     total_size += data_size;
   }
 
@@ -204,7 +204,7 @@ void RawBytes::MergeFrom(const RawBytes& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.data_.MergeFrom(from._impl_.data_);
+  _this->_impl_.a_data_.MergeFrom(from._impl_.a_data_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -222,7 +222,7 @@ bool RawBytes::IsInitialized() const {
 void RawBytes::InternalSwap(RawBytes* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.data_.InternalSwap(&other->_impl_.data_);
+  _impl_.a_data_.InternalSwap(&other->_impl_.a_data_);
 }
 
 std::string RawBytes::GetTypeName() const {

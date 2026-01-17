@@ -50,7 +50,7 @@ struct UInt64ResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UInt64ResponseDefaultTypeInternal _UInt64Response_default_instance_;
 PROTOBUF_CONSTEXPR CStringArrayResponse__mVArrayOfnsCString::CStringArrayResponse__mVArrayOfnsCString(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofnscstring_)*/{}
+    /*decltype(_impl_.a_mvarrayofnscstring_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal()
@@ -105,12 +105,12 @@ BoolResponse::BoolResponse(const BoolResponse& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVbool: {
-      _this->_internal_set_mvbool(from._internal_mvbool());
+    case kAMVbool: {
+      _this->_internal_set_a_mvbool(from._internal_a_mvbool());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -155,11 +155,11 @@ void BoolResponse::SetCachedSize(int size) const {
 void BoolResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.ipc.BoolResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       // No need to clear
       break;
     }
@@ -187,19 +187,19 @@ const char* BoolResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool mVbool = 2;
+      // bool a_mVbool = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_mvbool(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          _internal_set_a_mvbool(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -234,14 +234,14 @@ uint8_t* BoolResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_mvbool(), target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_mvbool(), target);
       break;
     }
     default: ;
@@ -263,15 +263,15 @@ size_t BoolResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // bool mVbool = 2;
-    case kMVbool: {
+    // bool a_mVbool = 2;
+    case kAMVbool: {
       total_size += 1 + 1;
       break;
     }
@@ -301,12 +301,12 @@ void BoolResponse::MergeFrom(const BoolResponse& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVbool: {
-      _this->_internal_set_mvbool(from._internal_mvbool());
+    case kAMVbool: {
+      _this->_internal_set_a_mvbool(from._internal_a_mvbool());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -362,12 +362,12 @@ UInt64Response::UInt64Response(const UInt64Response& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVuint64T: {
-      _this->_internal_set_mvuint64_t(from._internal_mvuint64_t());
+    case kAMVuint64T: {
+      _this->_internal_set_a_mvuint64_t(from._internal_a_mvuint64_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -412,11 +412,11 @@ void UInt64Response::SetCachedSize(int size) const {
 void UInt64Response::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.ipc.UInt64Response)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVuint64T: {
+    case kAMVuint64T: {
       // No need to clear
       break;
     }
@@ -444,19 +444,19 @@ const char* UInt64Response::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // uint64 mVuint64_t = 2;
+      // uint64 a_mVuint64_t = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_mvuint64_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          _internal_set_a_mvuint64_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -491,14 +491,14 @@ uint8_t* UInt64Response::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVuint64T: {
+    case kAMVuint64T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_mvuint64_t(), target);
+      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_mvuint64_t(), target);
       break;
     }
     default: ;
@@ -520,16 +520,16 @@ size_t UInt64Response::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // uint64 mVuint64_t = 2;
-    case kMVuint64T: {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_mvuint64_t());
+    // uint64 a_mVuint64_t = 2;
+    case kAMVuint64T: {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mvuint64_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -558,12 +558,12 @@ void UInt64Response::MergeFrom(const UInt64Response& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVuint64T: {
-      _this->_internal_set_mvuint64_t(from._internal_mvuint64_t());
+    case kAMVuint64T: {
+      _this->_internal_set_a_mvuint64_t(from._internal_a_mvuint64_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -612,7 +612,7 @@ CStringArrayResponse__mVArrayOfnsCString::CStringArrayResponse__mVArrayOfnsCStri
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CStringArrayResponse__mVArrayOfnsCString* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofnscstring_){from._impl_.mvarrayofnscstring_}
+      decltype(_impl_.a_mvarrayofnscstring_){from._impl_.a_mvarrayofnscstring_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -624,7 +624,7 @@ inline void CStringArrayResponse__mVArrayOfnsCString::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofnscstring_){arena}
+      decltype(_impl_.a_mvarrayofnscstring_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -640,7 +640,7 @@ CStringArrayResponse__mVArrayOfnsCString::~CStringArrayResponse__mVArrayOfnsCStr
 
 inline void CStringArrayResponse__mVArrayOfnsCString::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofnscstring_.~RepeatedPtrField();
+  _impl_.a_mvarrayofnscstring_.~RepeatedPtrField();
 }
 
 void CStringArrayResponse__mVArrayOfnsCString::SetCachedSize(int size) const {
@@ -653,7 +653,7 @@ void CStringArrayResponse__mVArrayOfnsCString::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofnscstring_.Clear();
+  _impl_.a_mvarrayofnscstring_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -663,13 +663,13 @@ const char* CStringArrayResponse__mVArrayOfnsCString::_InternalParse(const char*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes mVArrayOfnsCString = 1;
+      // repeated bytes a_mVArrayOfnsCString = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_mvarrayofnscstring();
+            auto str = _internal_add_a_mvarrayofnscstring();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -706,9 +706,9 @@ uint8_t* CStringArrayResponse__mVArrayOfnsCString::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfnsCString = 1;
-  for (int i = 0, n = this->_internal_mvarrayofnscstring_size(); i < n; i++) {
-    const auto& s = this->_internal_mvarrayofnscstring(i);
+  // repeated bytes a_mVArrayOfnsCString = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofnscstring_size(); i < n; i++) {
+    const auto& s = this->_internal_a_mvarrayofnscstring(i);
     target = stream->WriteBytes(1, s, target);
   }
 
@@ -728,12 +728,12 @@ size_t CStringArrayResponse__mVArrayOfnsCString::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfnsCString = 1;
+  // repeated bytes a_mVArrayOfnsCString = 1;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.mvarrayofnscstring_.size());
-  for (int i = 0, n = _impl_.mvarrayofnscstring_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_mvarrayofnscstring_.size());
+  for (int i = 0, n = _impl_.a_mvarrayofnscstring_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.mvarrayofnscstring_.Get(i));
+      _impl_.a_mvarrayofnscstring_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -757,7 +757,7 @@ void CStringArrayResponse__mVArrayOfnsCString::MergeFrom(const CStringArrayRespo
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofnscstring_.MergeFrom(from._impl_.mvarrayofnscstring_);
+  _this->_impl_.a_mvarrayofnscstring_.MergeFrom(from._impl_.a_mvarrayofnscstring_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -775,7 +775,7 @@ bool CStringArrayResponse__mVArrayOfnsCString::IsInitialized() const {
 void CStringArrayResponse__mVArrayOfnsCString::InternalSwap(CStringArrayResponse__mVArrayOfnsCString* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofnscstring_.InternalSwap(&other->_impl_.mvarrayofnscstring_);
+  _impl_.a_mvarrayofnscstring_.InternalSwap(&other->_impl_.a_mvarrayofnscstring_);
 }
 
 std::string CStringArrayResponse__mVArrayOfnsCString::GetTypeName() const {
@@ -826,8 +826,8 @@ CStringArrayResponse::CStringArrayResponse(const CStringArrayResponse& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
     case kMVArrayOfnsCString: {
@@ -877,8 +877,8 @@ void CStringArrayResponse::SetCachedSize(int size) const {
 void CStringArrayResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.ipc.CStringArrayResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
     case kMVArrayOfnsCString: {
@@ -911,10 +911,10 @@ const char* CStringArrayResponse::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -958,9 +958,9 @@ uint8_t* CStringArrayResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
     case kMVArrayOfnsCString: {
@@ -988,11 +988,11 @@ size_t CStringArrayResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
     // .protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString mVArrayOfnsCString = 2;
@@ -1028,8 +1028,8 @@ void CStringArrayResponse::MergeFrom(const CStringArrayResponse& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
     case kMVArrayOfnsCString: {

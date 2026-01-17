@@ -173,62 +173,62 @@ class ClassifierInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kListFieldNumber = 1,
-    kProviderFieldNumber = 2,
-    kFullhashFieldNumber = 3,
+    kAListFieldNumber = 1,
+    kAProviderFieldNumber = 2,
+    kAFullhashFieldNumber = 3,
   };
-  // required bytes list = 1;
-  bool has_list() const;
+  // required bytes a_list = 1;
+  bool has_a_list() const;
   private:
-  bool _internal_has_list() const;
+  bool _internal_has_a_list() const;
   public:
-  void clear_list();
-  const std::string& list() const;
+  void clear_a_list();
+  const std::string& a_list() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_list(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_list();
-  PROTOBUF_NODISCARD std::string* release_list();
-  void set_allocated_list(std::string* list);
+  void set_a_list(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_list();
+  PROTOBUF_NODISCARD std::string* release_a_list();
+  void set_allocated_a_list(std::string* a_list);
   private:
-  const std::string& _internal_list() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_list(const std::string& value);
-  std::string* _internal_mutable_list();
+  const std::string& _internal_a_list() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_list(const std::string& value);
+  std::string* _internal_mutable_a_list();
   public:
 
-  // required bytes provider = 2;
-  bool has_provider() const;
+  // required bytes a_provider = 2;
+  bool has_a_provider() const;
   private:
-  bool _internal_has_provider() const;
+  bool _internal_has_a_provider() const;
   public:
-  void clear_provider();
-  const std::string& provider() const;
+  void clear_a_provider();
+  const std::string& a_provider() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_provider(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_provider();
-  PROTOBUF_NODISCARD std::string* release_provider();
-  void set_allocated_provider(std::string* provider);
+  void set_a_provider(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_provider();
+  PROTOBUF_NODISCARD std::string* release_a_provider();
+  void set_allocated_a_provider(std::string* a_provider);
   private:
-  const std::string& _internal_provider() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_provider(const std::string& value);
-  std::string* _internal_mutable_provider();
+  const std::string& _internal_a_provider() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_provider(const std::string& value);
+  std::string* _internal_mutable_a_provider();
   public:
 
-  // required bytes fullhash = 3;
-  bool has_fullhash() const;
+  // required bytes a_fullhash = 3;
+  bool has_a_fullhash() const;
   private:
-  bool _internal_has_fullhash() const;
+  bool _internal_has_a_fullhash() const;
   public:
-  void clear_fullhash();
-  const std::string& fullhash() const;
+  void clear_a_fullhash();
+  const std::string& a_fullhash() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_fullhash(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_fullhash();
-  PROTOBUF_NODISCARD std::string* release_fullhash();
-  void set_allocated_fullhash(std::string* fullhash);
+  void set_a_fullhash(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_fullhash();
+  PROTOBUF_NODISCARD std::string* release_a_fullhash();
+  void set_allocated_a_fullhash(std::string* a_fullhash);
   private:
-  const std::string& _internal_fullhash() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_fullhash(const std::string& value);
-  std::string* _internal_mutable_fullhash();
+  const std::string& _internal_a_fullhash() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_fullhash(const std::string& value);
+  std::string* _internal_mutable_a_fullhash();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ClassifierInfo)
@@ -244,9 +244,9 @@ class ClassifierInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr list_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr provider_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr fullhash_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_list_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_provider_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fullhash_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -363,62 +363,62 @@ class URLClassifierLocalResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUriFieldNumber = 1,
-    kFeatureNameFieldNumber = 2,
-    kMatchingListFieldNumber = 3,
+    kAUriFieldNumber = 1,
+    kAFeatureNameFieldNumber = 2,
+    kAMatchingListFieldNumber = 3,
   };
-  // required bytes uri = 1;
-  bool has_uri() const;
+  // required bytes a_uri = 1;
+  bool has_a_uri() const;
   private:
-  bool _internal_has_uri() const;
+  bool _internal_has_a_uri() const;
   public:
-  void clear_uri();
-  const std::string& uri() const;
+  void clear_a_uri();
+  const std::string& a_uri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_uri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_uri();
-  PROTOBUF_NODISCARD std::string* release_uri();
-  void set_allocated_uri(std::string* uri);
+  void set_a_uri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_uri();
+  PROTOBUF_NODISCARD std::string* release_a_uri();
+  void set_allocated_a_uri(std::string* a_uri);
   private:
-  const std::string& _internal_uri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uri(const std::string& value);
-  std::string* _internal_mutable_uri();
+  const std::string& _internal_a_uri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_uri(const std::string& value);
+  std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes featureName = 2;
-  bool has_featurename() const;
+  // required bytes a_featureName = 2;
+  bool has_a_featurename() const;
   private:
-  bool _internal_has_featurename() const;
+  bool _internal_has_a_featurename() const;
   public:
-  void clear_featurename();
-  const std::string& featurename() const;
+  void clear_a_featurename();
+  const std::string& a_featurename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_featurename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_featurename();
-  PROTOBUF_NODISCARD std::string* release_featurename();
-  void set_allocated_featurename(std::string* featurename);
+  void set_a_featurename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_featurename();
+  PROTOBUF_NODISCARD std::string* release_a_featurename();
+  void set_allocated_a_featurename(std::string* a_featurename);
   private:
-  const std::string& _internal_featurename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_featurename(const std::string& value);
-  std::string* _internal_mutable_featurename();
+  const std::string& _internal_a_featurename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_featurename(const std::string& value);
+  std::string* _internal_mutable_a_featurename();
   public:
 
-  // required bytes matchingList = 3;
-  bool has_matchinglist() const;
+  // required bytes a_matchingList = 3;
+  bool has_a_matchinglist() const;
   private:
-  bool _internal_has_matchinglist() const;
+  bool _internal_has_a_matchinglist() const;
   public:
-  void clear_matchinglist();
-  const std::string& matchinglist() const;
+  void clear_a_matchinglist();
+  const std::string& a_matchinglist() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_matchinglist(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_matchinglist();
-  PROTOBUF_NODISCARD std::string* release_matchinglist();
-  void set_allocated_matchinglist(std::string* matchinglist);
+  void set_a_matchinglist(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_matchinglist();
+  PROTOBUF_NODISCARD std::string* release_a_matchinglist();
+  void set_allocated_a_matchinglist(std::string* a_matchinglist);
   private:
-  const std::string& _internal_matchinglist() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_matchinglist(const std::string& value);
-  std::string* _internal_mutable_matchinglist();
+  const std::string& _internal_a_matchinglist() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_matchinglist(const std::string& value);
+  std::string* _internal_mutable_a_matchinglist();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.URLClassifierLocalResult)
@@ -434,9 +434,9 @@ class URLClassifierLocalResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uri_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr featurename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr matchinglist_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_featurename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_matchinglist_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -452,416 +452,416 @@ class URLClassifierLocalResult final :
 #endif  // __GNUC__
 // ClassifierInfo
 
-// required bytes list = 1;
-inline bool ClassifierInfo::_internal_has_list() const {
+// required bytes a_list = 1;
+inline bool ClassifierInfo::_internal_has_a_list() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ClassifierInfo::has_list() const {
-  return _internal_has_list();
+inline bool ClassifierInfo::has_a_list() const {
+  return _internal_has_a_list();
 }
-inline void ClassifierInfo::clear_list() {
-  _impl_.list_.ClearToEmpty();
+inline void ClassifierInfo::clear_a_list() {
+  _impl_.a_list_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ClassifierInfo::list() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ClassifierInfo.list)
-  return _internal_list();
+inline const std::string& ClassifierInfo::a_list() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ClassifierInfo.a_list)
+  return _internal_a_list();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ClassifierInfo::set_list(ArgT0&& arg0, ArgT... args) {
+void ClassifierInfo::set_a_list(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.list_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.list)
+ _impl_.a_list_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.a_list)
 }
-inline std::string* ClassifierInfo::mutable_list() {
-  std::string* _s = _internal_mutable_list();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ClassifierInfo.list)
+inline std::string* ClassifierInfo::mutable_a_list() {
+  std::string* _s = _internal_mutable_a_list();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ClassifierInfo.a_list)
   return _s;
 }
-inline const std::string& ClassifierInfo::_internal_list() const {
-  return _impl_.list_.Get();
+inline const std::string& ClassifierInfo::_internal_a_list() const {
+  return _impl_.a_list_.Get();
 }
-inline void ClassifierInfo::_internal_set_list(const std::string& value) {
+inline void ClassifierInfo::_internal_set_a_list(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.list_.Set(value, GetArenaForAllocation());
+  _impl_.a_list_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ClassifierInfo::_internal_mutable_list() {
+inline std::string* ClassifierInfo::_internal_mutable_a_list() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.list_.Mutable(GetArenaForAllocation());
+  return _impl_.a_list_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ClassifierInfo::release_list() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ClassifierInfo.list)
-  if (!_internal_has_list()) {
+inline std::string* ClassifierInfo::release_a_list() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ClassifierInfo.a_list)
+  if (!_internal_has_a_list()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.list_.Release();
+  auto* p = _impl_.a_list_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.list_.IsDefault()) {
-    _impl_.list_.Set("", GetArenaForAllocation());
+  if (_impl_.a_list_.IsDefault()) {
+    _impl_.a_list_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ClassifierInfo::set_allocated_list(std::string* list) {
-  if (list != nullptr) {
+inline void ClassifierInfo::set_allocated_a_list(std::string* a_list) {
+  if (a_list != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.list_.SetAllocated(list, GetArenaForAllocation());
+  _impl_.a_list_.SetAllocated(a_list, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.list_.IsDefault()) {
-    _impl_.list_.Set("", GetArenaForAllocation());
+  if (_impl_.a_list_.IsDefault()) {
+    _impl_.a_list_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.list)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_list)
 }
 
-// required bytes provider = 2;
-inline bool ClassifierInfo::_internal_has_provider() const {
+// required bytes a_provider = 2;
+inline bool ClassifierInfo::_internal_has_a_provider() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ClassifierInfo::has_provider() const {
-  return _internal_has_provider();
+inline bool ClassifierInfo::has_a_provider() const {
+  return _internal_has_a_provider();
 }
-inline void ClassifierInfo::clear_provider() {
-  _impl_.provider_.ClearToEmpty();
+inline void ClassifierInfo::clear_a_provider() {
+  _impl_.a_provider_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ClassifierInfo::provider() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ClassifierInfo.provider)
-  return _internal_provider();
+inline const std::string& ClassifierInfo::a_provider() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ClassifierInfo.a_provider)
+  return _internal_a_provider();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ClassifierInfo::set_provider(ArgT0&& arg0, ArgT... args) {
+void ClassifierInfo::set_a_provider(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.provider_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.provider)
+ _impl_.a_provider_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.a_provider)
 }
-inline std::string* ClassifierInfo::mutable_provider() {
-  std::string* _s = _internal_mutable_provider();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ClassifierInfo.provider)
+inline std::string* ClassifierInfo::mutable_a_provider() {
+  std::string* _s = _internal_mutable_a_provider();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ClassifierInfo.a_provider)
   return _s;
 }
-inline const std::string& ClassifierInfo::_internal_provider() const {
-  return _impl_.provider_.Get();
+inline const std::string& ClassifierInfo::_internal_a_provider() const {
+  return _impl_.a_provider_.Get();
 }
-inline void ClassifierInfo::_internal_set_provider(const std::string& value) {
+inline void ClassifierInfo::_internal_set_a_provider(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.provider_.Set(value, GetArenaForAllocation());
+  _impl_.a_provider_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ClassifierInfo::_internal_mutable_provider() {
+inline std::string* ClassifierInfo::_internal_mutable_a_provider() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.provider_.Mutable(GetArenaForAllocation());
+  return _impl_.a_provider_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ClassifierInfo::release_provider() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ClassifierInfo.provider)
-  if (!_internal_has_provider()) {
+inline std::string* ClassifierInfo::release_a_provider() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ClassifierInfo.a_provider)
+  if (!_internal_has_a_provider()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.provider_.Release();
+  auto* p = _impl_.a_provider_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.provider_.IsDefault()) {
-    _impl_.provider_.Set("", GetArenaForAllocation());
+  if (_impl_.a_provider_.IsDefault()) {
+    _impl_.a_provider_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ClassifierInfo::set_allocated_provider(std::string* provider) {
-  if (provider != nullptr) {
+inline void ClassifierInfo::set_allocated_a_provider(std::string* a_provider) {
+  if (a_provider != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.provider_.SetAllocated(provider, GetArenaForAllocation());
+  _impl_.a_provider_.SetAllocated(a_provider, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.provider_.IsDefault()) {
-    _impl_.provider_.Set("", GetArenaForAllocation());
+  if (_impl_.a_provider_.IsDefault()) {
+    _impl_.a_provider_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.provider)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_provider)
 }
 
-// required bytes fullhash = 3;
-inline bool ClassifierInfo::_internal_has_fullhash() const {
+// required bytes a_fullhash = 3;
+inline bool ClassifierInfo::_internal_has_a_fullhash() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ClassifierInfo::has_fullhash() const {
-  return _internal_has_fullhash();
+inline bool ClassifierInfo::has_a_fullhash() const {
+  return _internal_has_a_fullhash();
 }
-inline void ClassifierInfo::clear_fullhash() {
-  _impl_.fullhash_.ClearToEmpty();
+inline void ClassifierInfo::clear_a_fullhash() {
+  _impl_.a_fullhash_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& ClassifierInfo::fullhash() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ClassifierInfo.fullhash)
-  return _internal_fullhash();
+inline const std::string& ClassifierInfo::a_fullhash() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ClassifierInfo.a_fullhash)
+  return _internal_a_fullhash();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ClassifierInfo::set_fullhash(ArgT0&& arg0, ArgT... args) {
+void ClassifierInfo::set_a_fullhash(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.fullhash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.fullhash)
+ _impl_.a_fullhash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.a_fullhash)
 }
-inline std::string* ClassifierInfo::mutable_fullhash() {
-  std::string* _s = _internal_mutable_fullhash();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ClassifierInfo.fullhash)
+inline std::string* ClassifierInfo::mutable_a_fullhash() {
+  std::string* _s = _internal_mutable_a_fullhash();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ClassifierInfo.a_fullhash)
   return _s;
 }
-inline const std::string& ClassifierInfo::_internal_fullhash() const {
-  return _impl_.fullhash_.Get();
+inline const std::string& ClassifierInfo::_internal_a_fullhash() const {
+  return _impl_.a_fullhash_.Get();
 }
-inline void ClassifierInfo::_internal_set_fullhash(const std::string& value) {
+inline void ClassifierInfo::_internal_set_a_fullhash(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.fullhash_.Set(value, GetArenaForAllocation());
+  _impl_.a_fullhash_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ClassifierInfo::_internal_mutable_fullhash() {
+inline std::string* ClassifierInfo::_internal_mutable_a_fullhash() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.fullhash_.Mutable(GetArenaForAllocation());
+  return _impl_.a_fullhash_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ClassifierInfo::release_fullhash() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ClassifierInfo.fullhash)
-  if (!_internal_has_fullhash()) {
+inline std::string* ClassifierInfo::release_a_fullhash() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ClassifierInfo.a_fullhash)
+  if (!_internal_has_a_fullhash()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.fullhash_.Release();
+  auto* p = _impl_.a_fullhash_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fullhash_.IsDefault()) {
-    _impl_.fullhash_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fullhash_.IsDefault()) {
+    _impl_.a_fullhash_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ClassifierInfo::set_allocated_fullhash(std::string* fullhash) {
-  if (fullhash != nullptr) {
+inline void ClassifierInfo::set_allocated_a_fullhash(std::string* a_fullhash) {
+  if (a_fullhash != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.fullhash_.SetAllocated(fullhash, GetArenaForAllocation());
+  _impl_.a_fullhash_.SetAllocated(a_fullhash, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fullhash_.IsDefault()) {
-    _impl_.fullhash_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fullhash_.IsDefault()) {
+    _impl_.a_fullhash_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.fullhash)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_fullhash)
 }
 
 // -------------------------------------------------------------------
 
 // URLClassifierLocalResult
 
-// required bytes uri = 1;
-inline bool URLClassifierLocalResult::_internal_has_uri() const {
+// required bytes a_uri = 1;
+inline bool URLClassifierLocalResult::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool URLClassifierLocalResult::has_uri() const {
-  return _internal_has_uri();
+inline bool URLClassifierLocalResult::has_a_uri() const {
+  return _internal_has_a_uri();
 }
-inline void URLClassifierLocalResult::clear_uri() {
-  _impl_.uri_.ClearToEmpty();
+inline void URLClassifierLocalResult::clear_a_uri() {
+  _impl_.a_uri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& URLClassifierLocalResult::uri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.URLClassifierLocalResult.uri)
-  return _internal_uri();
+inline const std::string& URLClassifierLocalResult::a_uri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
+  return _internal_a_uri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void URLClassifierLocalResult::set_uri(ArgT0&& arg0, ArgT... args) {
+void URLClassifierLocalResult::set_a_uri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.uri)
+ _impl_.a_uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
 }
-inline std::string* URLClassifierLocalResult::mutable_uri() {
-  std::string* _s = _internal_mutable_uri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.URLClassifierLocalResult.uri)
+inline std::string* URLClassifierLocalResult::mutable_a_uri() {
+  std::string* _s = _internal_mutable_a_uri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
   return _s;
 }
-inline const std::string& URLClassifierLocalResult::_internal_uri() const {
-  return _impl_.uri_.Get();
+inline const std::string& URLClassifierLocalResult::_internal_a_uri() const {
+  return _impl_.a_uri_.Get();
 }
-inline void URLClassifierLocalResult::_internal_set_uri(const std::string& value) {
+inline void URLClassifierLocalResult::_internal_set_a_uri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.uri_.Set(value, GetArenaForAllocation());
+  _impl_.a_uri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* URLClassifierLocalResult::_internal_mutable_uri() {
+inline std::string* URLClassifierLocalResult::_internal_mutable_a_uri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.uri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_uri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* URLClassifierLocalResult::release_uri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.URLClassifierLocalResult.uri)
-  if (!_internal_has_uri()) {
+inline std::string* URLClassifierLocalResult::release_a_uri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
+  if (!_internal_has_a_uri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.uri_.Release();
+  auto* p = _impl_.a_uri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.uri_.IsDefault()) {
-    _impl_.uri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_uri_.IsDefault()) {
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void URLClassifierLocalResult::set_allocated_uri(std::string* uri) {
-  if (uri != nullptr) {
+inline void URLClassifierLocalResult::set_allocated_a_uri(std::string* a_uri) {
+  if (a_uri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.uri_.SetAllocated(uri, GetArenaForAllocation());
+  _impl_.a_uri_.SetAllocated(a_uri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.uri_.IsDefault()) {
-    _impl_.uri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_uri_.IsDefault()) {
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.uri)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
 }
 
-// required bytes featureName = 2;
-inline bool URLClassifierLocalResult::_internal_has_featurename() const {
+// required bytes a_featureName = 2;
+inline bool URLClassifierLocalResult::_internal_has_a_featurename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool URLClassifierLocalResult::has_featurename() const {
-  return _internal_has_featurename();
+inline bool URLClassifierLocalResult::has_a_featurename() const {
+  return _internal_has_a_featurename();
 }
-inline void URLClassifierLocalResult::clear_featurename() {
-  _impl_.featurename_.ClearToEmpty();
+inline void URLClassifierLocalResult::clear_a_featurename() {
+  _impl_.a_featurename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& URLClassifierLocalResult::featurename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
-  return _internal_featurename();
+inline const std::string& URLClassifierLocalResult::a_featurename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
+  return _internal_a_featurename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void URLClassifierLocalResult::set_featurename(ArgT0&& arg0, ArgT... args) {
+void URLClassifierLocalResult::set_a_featurename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.featurename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
+ _impl_.a_featurename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
 }
-inline std::string* URLClassifierLocalResult::mutable_featurename() {
-  std::string* _s = _internal_mutable_featurename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
+inline std::string* URLClassifierLocalResult::mutable_a_featurename() {
+  std::string* _s = _internal_mutable_a_featurename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
   return _s;
 }
-inline const std::string& URLClassifierLocalResult::_internal_featurename() const {
-  return _impl_.featurename_.Get();
+inline const std::string& URLClassifierLocalResult::_internal_a_featurename() const {
+  return _impl_.a_featurename_.Get();
 }
-inline void URLClassifierLocalResult::_internal_set_featurename(const std::string& value) {
+inline void URLClassifierLocalResult::_internal_set_a_featurename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.featurename_.Set(value, GetArenaForAllocation());
+  _impl_.a_featurename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* URLClassifierLocalResult::_internal_mutable_featurename() {
+inline std::string* URLClassifierLocalResult::_internal_mutable_a_featurename() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.featurename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_featurename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* URLClassifierLocalResult::release_featurename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
-  if (!_internal_has_featurename()) {
+inline std::string* URLClassifierLocalResult::release_a_featurename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
+  if (!_internal_has_a_featurename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.featurename_.Release();
+  auto* p = _impl_.a_featurename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.featurename_.IsDefault()) {
-    _impl_.featurename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_featurename_.IsDefault()) {
+    _impl_.a_featurename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void URLClassifierLocalResult::set_allocated_featurename(std::string* featurename) {
-  if (featurename != nullptr) {
+inline void URLClassifierLocalResult::set_allocated_a_featurename(std::string* a_featurename) {
+  if (a_featurename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.featurename_.SetAllocated(featurename, GetArenaForAllocation());
+  _impl_.a_featurename_.SetAllocated(a_featurename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.featurename_.IsDefault()) {
-    _impl_.featurename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_featurename_.IsDefault()) {
+    _impl_.a_featurename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.featureName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
 }
 
-// required bytes matchingList = 3;
-inline bool URLClassifierLocalResult::_internal_has_matchinglist() const {
+// required bytes a_matchingList = 3;
+inline bool URLClassifierLocalResult::_internal_has_a_matchinglist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool URLClassifierLocalResult::has_matchinglist() const {
-  return _internal_has_matchinglist();
+inline bool URLClassifierLocalResult::has_a_matchinglist() const {
+  return _internal_has_a_matchinglist();
 }
-inline void URLClassifierLocalResult::clear_matchinglist() {
-  _impl_.matchinglist_.ClearToEmpty();
+inline void URLClassifierLocalResult::clear_a_matchinglist() {
+  _impl_.a_matchinglist_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& URLClassifierLocalResult::matchinglist() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.URLClassifierLocalResult.matchingList)
-  return _internal_matchinglist();
+inline const std::string& URLClassifierLocalResult::a_matchinglist() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList)
+  return _internal_a_matchinglist();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void URLClassifierLocalResult::set_matchinglist(ArgT0&& arg0, ArgT... args) {
+void URLClassifierLocalResult::set_a_matchinglist(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.matchinglist_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.matchingList)
+ _impl_.a_matchinglist_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList)
 }
-inline std::string* URLClassifierLocalResult::mutable_matchinglist() {
-  std::string* _s = _internal_mutable_matchinglist();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.URLClassifierLocalResult.matchingList)
+inline std::string* URLClassifierLocalResult::mutable_a_matchinglist() {
+  std::string* _s = _internal_mutable_a_matchinglist();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList)
   return _s;
 }
-inline const std::string& URLClassifierLocalResult::_internal_matchinglist() const {
-  return _impl_.matchinglist_.Get();
+inline const std::string& URLClassifierLocalResult::_internal_a_matchinglist() const {
+  return _impl_.a_matchinglist_.Get();
 }
-inline void URLClassifierLocalResult::_internal_set_matchinglist(const std::string& value) {
+inline void URLClassifierLocalResult::_internal_set_a_matchinglist(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.matchinglist_.Set(value, GetArenaForAllocation());
+  _impl_.a_matchinglist_.Set(value, GetArenaForAllocation());
 }
-inline std::string* URLClassifierLocalResult::_internal_mutable_matchinglist() {
+inline std::string* URLClassifierLocalResult::_internal_mutable_a_matchinglist() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.matchinglist_.Mutable(GetArenaForAllocation());
+  return _impl_.a_matchinglist_.Mutable(GetArenaForAllocation());
 }
-inline std::string* URLClassifierLocalResult::release_matchinglist() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.URLClassifierLocalResult.matchingList)
-  if (!_internal_has_matchinglist()) {
+inline std::string* URLClassifierLocalResult::release_a_matchinglist() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList)
+  if (!_internal_has_a_matchinglist()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.matchinglist_.Release();
+  auto* p = _impl_.a_matchinglist_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.matchinglist_.IsDefault()) {
-    _impl_.matchinglist_.Set("", GetArenaForAllocation());
+  if (_impl_.a_matchinglist_.IsDefault()) {
+    _impl_.a_matchinglist_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void URLClassifierLocalResult::set_allocated_matchinglist(std::string* matchinglist) {
-  if (matchinglist != nullptr) {
+inline void URLClassifierLocalResult::set_allocated_a_matchinglist(std::string* a_matchinglist) {
+  if (a_matchinglist != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.matchinglist_.SetAllocated(matchinglist, GetArenaForAllocation());
+  _impl_.a_matchinglist_.SetAllocated(a_matchinglist, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.matchinglist_.IsDefault()) {
-    _impl_.matchinglist_.Set("", GetArenaForAllocation());
+  if (_impl_.a_matchinglist_.IsDefault()) {
+    _impl_.a_matchinglist_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.matchingList)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList)
 }
 
 #ifdef __GNUC__

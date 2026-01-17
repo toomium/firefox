@@ -209,109 +209,109 @@ class Msg_SetCookies final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCookiesFieldNumber = 6,
-    kBaseDomainFieldNumber = 1,
-    kAttrsFieldNumber = 2,
-    kHostFieldNumber = 3,
-    kFromHttpFieldNumber = 4,
-    kIsThirdPartyFieldNumber = 5,
+    kACookiesFieldNumber = 6,
+    kABaseDomainFieldNumber = 1,
+    kAAttrsFieldNumber = 2,
+    kAHostFieldNumber = 3,
+    kAFromHttpFieldNumber = 4,
+    kAIsThirdPartyFieldNumber = 5,
   };
-  // repeated .protobuf.mozilla.net.CookieStruct cookies = 6;
-  int cookies_size() const;
+  // repeated .protobuf.mozilla.net.CookieStruct a_cookies = 6;
+  int a_cookies_size() const;
   private:
-  int _internal_cookies_size() const;
+  int _internal_a_cookies_size() const;
   public:
-  void clear_cookies();
-  ::protobuf::mozilla::net::CookieStruct* mutable_cookies(int index);
+  void clear_a_cookies();
+  ::protobuf::mozilla::net::CookieStruct* mutable_a_cookies(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >*
-      mutable_cookies();
+      mutable_a_cookies();
   private:
-  const ::protobuf::mozilla::net::CookieStruct& _internal_cookies(int index) const;
-  ::protobuf::mozilla::net::CookieStruct* _internal_add_cookies();
+  const ::protobuf::mozilla::net::CookieStruct& _internal_a_cookies(int index) const;
+  ::protobuf::mozilla::net::CookieStruct* _internal_add_a_cookies();
   public:
-  const ::protobuf::mozilla::net::CookieStruct& cookies(int index) const;
-  ::protobuf::mozilla::net::CookieStruct* add_cookies();
+  const ::protobuf::mozilla::net::CookieStruct& a_cookies(int index) const;
+  ::protobuf::mozilla::net::CookieStruct* add_a_cookies();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
-      cookies() const;
+      a_cookies() const;
 
-  // required bytes baseDomain = 1;
-  bool has_basedomain() const;
+  // required bytes a_baseDomain = 1;
+  bool has_a_basedomain() const;
   private:
-  bool _internal_has_basedomain() const;
+  bool _internal_has_a_basedomain() const;
   public:
-  void clear_basedomain();
-  const std::string& basedomain() const;
+  void clear_a_basedomain();
+  const std::string& a_basedomain() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_basedomain(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_basedomain();
-  PROTOBUF_NODISCARD std::string* release_basedomain();
-  void set_allocated_basedomain(std::string* basedomain);
+  void set_a_basedomain(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_basedomain();
+  PROTOBUF_NODISCARD std::string* release_a_basedomain();
+  void set_allocated_a_basedomain(std::string* a_basedomain);
   private:
-  const std::string& _internal_basedomain() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_basedomain(const std::string& value);
-  std::string* _internal_mutable_basedomain();
+  const std::string& _internal_a_basedomain() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_basedomain(const std::string& value);
+  std::string* _internal_mutable_a_basedomain();
   public:
 
-  // required bytes attrs = 2;
-  bool has_attrs() const;
+  // required bytes a_attrs = 2;
+  bool has_a_attrs() const;
   private:
-  bool _internal_has_attrs() const;
+  bool _internal_has_a_attrs() const;
   public:
-  void clear_attrs();
-  const std::string& attrs() const;
+  void clear_a_attrs();
+  const std::string& a_attrs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_attrs(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_attrs();
-  PROTOBUF_NODISCARD std::string* release_attrs();
-  void set_allocated_attrs(std::string* attrs);
+  void set_a_attrs(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_attrs();
+  PROTOBUF_NODISCARD std::string* release_a_attrs();
+  void set_allocated_a_attrs(std::string* a_attrs);
   private:
-  const std::string& _internal_attrs() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_attrs(const std::string& value);
-  std::string* _internal_mutable_attrs();
+  const std::string& _internal_a_attrs() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_attrs(const std::string& value);
+  std::string* _internal_mutable_a_attrs();
   public:
 
-  // required bytes host = 3;
-  bool has_host() const;
+  // required bytes a_host = 3;
+  bool has_a_host() const;
   private:
-  bool _internal_has_host() const;
+  bool _internal_has_a_host() const;
   public:
-  void clear_host();
-  const std::string& host() const;
+  void clear_a_host();
+  const std::string& a_host() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_host(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_host();
-  PROTOBUF_NODISCARD std::string* release_host();
-  void set_allocated_host(std::string* host);
+  void set_a_host(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_host();
+  PROTOBUF_NODISCARD std::string* release_a_host();
+  void set_allocated_a_host(std::string* a_host);
   private:
-  const std::string& _internal_host() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_host(const std::string& value);
-  std::string* _internal_mutable_host();
+  const std::string& _internal_a_host() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_host(const std::string& value);
+  std::string* _internal_mutable_a_host();
   public:
 
-  // required bool fromHttp = 4;
-  bool has_fromhttp() const;
+  // required bool a_fromHttp = 4;
+  bool has_a_fromhttp() const;
   private:
-  bool _internal_has_fromhttp() const;
+  bool _internal_has_a_fromhttp() const;
   public:
-  void clear_fromhttp();
-  bool fromhttp() const;
-  void set_fromhttp(bool value);
+  void clear_a_fromhttp();
+  bool a_fromhttp() const;
+  void set_a_fromhttp(bool value);
   private:
-  bool _internal_fromhttp() const;
-  void _internal_set_fromhttp(bool value);
+  bool _internal_a_fromhttp() const;
+  void _internal_set_a_fromhttp(bool value);
   public:
 
-  // required bool isThirdParty = 5;
-  bool has_isthirdparty() const;
+  // required bool a_isThirdParty = 5;
+  bool has_a_isthirdparty() const;
   private:
-  bool _internal_has_isthirdparty() const;
+  bool _internal_has_a_isthirdparty() const;
   public:
-  void clear_isthirdparty();
-  bool isthirdparty() const;
-  void set_isthirdparty(bool value);
+  void clear_a_isthirdparty();
+  bool a_isthirdparty() const;
+  void set_a_isthirdparty(bool value);
   private:
-  bool _internal_isthirdparty() const;
-  void _internal_set_isthirdparty(bool value);
+  bool _internal_a_isthirdparty() const;
+  void _internal_set_a_isthirdparty(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
@@ -327,12 +327,12 @@ class Msg_SetCookies final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct > cookies_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr basedomain_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attrs_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr host_;
-    bool fromhttp_;
-    bool isthirdparty_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct > a_cookies_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_basedomain_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_attrs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_host_;
+    bool a_fromhttp_;
+    bool a_isthirdparty_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCookieService_2eproto;
@@ -449,161 +449,161 @@ class Msg_GetCookieList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAttrsListFieldNumber = 10,
-    kHostFieldNumber = 1,
-    kIsForeignFieldNumber = 2,
-    kIsThirdPartyTrackingResourceFieldNumber = 3,
-    kIsThirdPartySocialTrackingResourceFieldNumber = 4,
-    kFirstPartyStorageAccessPermissionGrantedFieldNumber = 5,
-    kRejectedReasonFieldNumber = 6,
-    kIsSafeTopLevelNavFieldNumber = 7,
-    kIsSameSiteForeignFieldNumber = 8,
-    kHadCrossSiteRedirectsFieldNumber = 9,
+    kAAttrsListFieldNumber = 10,
+    kAHostFieldNumber = 1,
+    kAIsForeignFieldNumber = 2,
+    kAIsThirdPartyTrackingResourceFieldNumber = 3,
+    kAIsThirdPartySocialTrackingResourceFieldNumber = 4,
+    kAFirstPartyStorageAccessPermissionGrantedFieldNumber = 5,
+    kARejectedReasonFieldNumber = 6,
+    kAIsSafeTopLevelNavFieldNumber = 7,
+    kAIsSameSiteForeignFieldNumber = 8,
+    kAHadCrossSiteRedirectsFieldNumber = 9,
   };
-  // repeated bytes attrsList = 10;
-  int attrslist_size() const;
+  // repeated bytes a_attrsList = 10;
+  int a_attrslist_size() const;
   private:
-  int _internal_attrslist_size() const;
+  int _internal_a_attrslist_size() const;
   public:
-  void clear_attrslist();
-  const std::string& attrslist(int index) const;
-  std::string* mutable_attrslist(int index);
-  void set_attrslist(int index, const std::string& value);
-  void set_attrslist(int index, std::string&& value);
-  void set_attrslist(int index, const char* value);
-  void set_attrslist(int index, const void* value, size_t size);
-  std::string* add_attrslist();
-  void add_attrslist(const std::string& value);
-  void add_attrslist(std::string&& value);
-  void add_attrslist(const char* value);
-  void add_attrslist(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& attrslist() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_attrslist();
+  void clear_a_attrslist();
+  const std::string& a_attrslist(int index) const;
+  std::string* mutable_a_attrslist(int index);
+  void set_a_attrslist(int index, const std::string& value);
+  void set_a_attrslist(int index, std::string&& value);
+  void set_a_attrslist(int index, const char* value);
+  void set_a_attrslist(int index, const void* value, size_t size);
+  std::string* add_a_attrslist();
+  void add_a_attrslist(const std::string& value);
+  void add_a_attrslist(std::string&& value);
+  void add_a_attrslist(const char* value);
+  void add_a_attrslist(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_attrslist() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_attrslist();
   private:
-  const std::string& _internal_attrslist(int index) const;
-  std::string* _internal_add_attrslist();
+  const std::string& _internal_a_attrslist(int index) const;
+  std::string* _internal_add_a_attrslist();
   public:
 
-  // required bytes host = 1;
-  bool has_host() const;
+  // required bytes a_host = 1;
+  bool has_a_host() const;
   private:
-  bool _internal_has_host() const;
+  bool _internal_has_a_host() const;
   public:
-  void clear_host();
-  const std::string& host() const;
+  void clear_a_host();
+  const std::string& a_host() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_host(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_host();
-  PROTOBUF_NODISCARD std::string* release_host();
-  void set_allocated_host(std::string* host);
+  void set_a_host(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_host();
+  PROTOBUF_NODISCARD std::string* release_a_host();
+  void set_allocated_a_host(std::string* a_host);
   private:
-  const std::string& _internal_host() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_host(const std::string& value);
-  std::string* _internal_mutable_host();
+  const std::string& _internal_a_host() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_host(const std::string& value);
+  std::string* _internal_mutable_a_host();
   public:
 
-  // required bool isForeign = 2;
-  bool has_isforeign() const;
+  // required bool a_isForeign = 2;
+  bool has_a_isforeign() const;
   private:
-  bool _internal_has_isforeign() const;
+  bool _internal_has_a_isforeign() const;
   public:
-  void clear_isforeign();
-  bool isforeign() const;
-  void set_isforeign(bool value);
+  void clear_a_isforeign();
+  bool a_isforeign() const;
+  void set_a_isforeign(bool value);
   private:
-  bool _internal_isforeign() const;
-  void _internal_set_isforeign(bool value);
-  public:
-
-  // required bool isThirdPartyTrackingResource = 3;
-  bool has_isthirdpartytrackingresource() const;
-  private:
-  bool _internal_has_isthirdpartytrackingresource() const;
-  public:
-  void clear_isthirdpartytrackingresource();
-  bool isthirdpartytrackingresource() const;
-  void set_isthirdpartytrackingresource(bool value);
-  private:
-  bool _internal_isthirdpartytrackingresource() const;
-  void _internal_set_isthirdpartytrackingresource(bool value);
+  bool _internal_a_isforeign() const;
+  void _internal_set_a_isforeign(bool value);
   public:
 
-  // required bool isThirdPartySocialTrackingResource = 4;
-  bool has_isthirdpartysocialtrackingresource() const;
+  // required bool a_isThirdPartyTrackingResource = 3;
+  bool has_a_isthirdpartytrackingresource() const;
   private:
-  bool _internal_has_isthirdpartysocialtrackingresource() const;
+  bool _internal_has_a_isthirdpartytrackingresource() const;
   public:
-  void clear_isthirdpartysocialtrackingresource();
-  bool isthirdpartysocialtrackingresource() const;
-  void set_isthirdpartysocialtrackingresource(bool value);
+  void clear_a_isthirdpartytrackingresource();
+  bool a_isthirdpartytrackingresource() const;
+  void set_a_isthirdpartytrackingresource(bool value);
   private:
-  bool _internal_isthirdpartysocialtrackingresource() const;
-  void _internal_set_isthirdpartysocialtrackingresource(bool value);
-  public:
-
-  // required bool firstPartyStorageAccessPermissionGranted = 5;
-  bool has_firstpartystorageaccesspermissiongranted() const;
-  private:
-  bool _internal_has_firstpartystorageaccesspermissiongranted() const;
-  public:
-  void clear_firstpartystorageaccesspermissiongranted();
-  bool firstpartystorageaccesspermissiongranted() const;
-  void set_firstpartystorageaccesspermissiongranted(bool value);
-  private:
-  bool _internal_firstpartystorageaccesspermissiongranted() const;
-  void _internal_set_firstpartystorageaccesspermissiongranted(bool value);
+  bool _internal_a_isthirdpartytrackingresource() const;
+  void _internal_set_a_isthirdpartytrackingresource(bool value);
   public:
 
-  // required uint32 rejectedReason = 6;
-  bool has_rejectedreason() const;
+  // required bool a_isThirdPartySocialTrackingResource = 4;
+  bool has_a_isthirdpartysocialtrackingresource() const;
   private:
-  bool _internal_has_rejectedreason() const;
+  bool _internal_has_a_isthirdpartysocialtrackingresource() const;
   public:
-  void clear_rejectedreason();
-  uint32_t rejectedreason() const;
-  void set_rejectedreason(uint32_t value);
+  void clear_a_isthirdpartysocialtrackingresource();
+  bool a_isthirdpartysocialtrackingresource() const;
+  void set_a_isthirdpartysocialtrackingresource(bool value);
   private:
-  uint32_t _internal_rejectedreason() const;
-  void _internal_set_rejectedreason(uint32_t value);
-  public:
-
-  // required bool isSafeTopLevelNav = 7;
-  bool has_issafetoplevelnav() const;
-  private:
-  bool _internal_has_issafetoplevelnav() const;
-  public:
-  void clear_issafetoplevelnav();
-  bool issafetoplevelnav() const;
-  void set_issafetoplevelnav(bool value);
-  private:
-  bool _internal_issafetoplevelnav() const;
-  void _internal_set_issafetoplevelnav(bool value);
+  bool _internal_a_isthirdpartysocialtrackingresource() const;
+  void _internal_set_a_isthirdpartysocialtrackingresource(bool value);
   public:
 
-  // required bool isSameSiteForeign = 8;
-  bool has_issamesiteforeign() const;
+  // required bool a_firstPartyStorageAccessPermissionGranted = 5;
+  bool has_a_firstpartystorageaccesspermissiongranted() const;
   private:
-  bool _internal_has_issamesiteforeign() const;
+  bool _internal_has_a_firstpartystorageaccesspermissiongranted() const;
   public:
-  void clear_issamesiteforeign();
-  bool issamesiteforeign() const;
-  void set_issamesiteforeign(bool value);
+  void clear_a_firstpartystorageaccesspermissiongranted();
+  bool a_firstpartystorageaccesspermissiongranted() const;
+  void set_a_firstpartystorageaccesspermissiongranted(bool value);
   private:
-  bool _internal_issamesiteforeign() const;
-  void _internal_set_issamesiteforeign(bool value);
+  bool _internal_a_firstpartystorageaccesspermissiongranted() const;
+  void _internal_set_a_firstpartystorageaccesspermissiongranted(bool value);
   public:
 
-  // required bool hadCrossSiteRedirects = 9;
-  bool has_hadcrosssiteredirects() const;
+  // required uint32 a_rejectedReason = 6;
+  bool has_a_rejectedreason() const;
   private:
-  bool _internal_has_hadcrosssiteredirects() const;
+  bool _internal_has_a_rejectedreason() const;
   public:
-  void clear_hadcrosssiteredirects();
-  bool hadcrosssiteredirects() const;
-  void set_hadcrosssiteredirects(bool value);
+  void clear_a_rejectedreason();
+  uint32_t a_rejectedreason() const;
+  void set_a_rejectedreason(uint32_t value);
   private:
-  bool _internal_hadcrosssiteredirects() const;
-  void _internal_set_hadcrosssiteredirects(bool value);
+  uint32_t _internal_a_rejectedreason() const;
+  void _internal_set_a_rejectedreason(uint32_t value);
+  public:
+
+  // required bool a_isSafeTopLevelNav = 7;
+  bool has_a_issafetoplevelnav() const;
+  private:
+  bool _internal_has_a_issafetoplevelnav() const;
+  public:
+  void clear_a_issafetoplevelnav();
+  bool a_issafetoplevelnav() const;
+  void set_a_issafetoplevelnav(bool value);
+  private:
+  bool _internal_a_issafetoplevelnav() const;
+  void _internal_set_a_issafetoplevelnav(bool value);
+  public:
+
+  // required bool a_isSameSiteForeign = 8;
+  bool has_a_issamesiteforeign() const;
+  private:
+  bool _internal_has_a_issamesiteforeign() const;
+  public:
+  void clear_a_issamesiteforeign();
+  bool a_issamesiteforeign() const;
+  void set_a_issamesiteforeign(bool value);
+  private:
+  bool _internal_a_issamesiteforeign() const;
+  void _internal_set_a_issamesiteforeign(bool value);
+  public:
+
+  // required bool a_hadCrossSiteRedirects = 9;
+  bool has_a_hadcrosssiteredirects() const;
+  private:
+  bool _internal_has_a_hadcrosssiteredirects() const;
+  public:
+  void clear_a_hadcrosssiteredirects();
+  bool a_hadcrosssiteredirects() const;
+  void set_a_hadcrosssiteredirects(bool value);
+  private:
+  bool _internal_a_hadcrosssiteredirects() const;
+  void _internal_set_a_hadcrosssiteredirects(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
@@ -619,16 +619,16 @@ class Msg_GetCookieList final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> attrslist_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr host_;
-    bool isforeign_;
-    bool isthirdpartytrackingresource_;
-    bool isthirdpartysocialtrackingresource_;
-    bool firstpartystorageaccesspermissiongranted_;
-    uint32_t rejectedreason_;
-    bool issafetoplevelnav_;
-    bool issamesiteforeign_;
-    bool hadcrosssiteredirects_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_attrslist_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_host_;
+    bool a_isforeign_;
+    bool a_isthirdpartytrackingresource_;
+    bool a_isthirdpartysocialtrackingresource_;
+    bool a_firstpartystorageaccesspermissiongranted_;
+    uint32_t a_rejectedreason_;
+    bool a_issafetoplevelnav_;
+    bool a_issamesiteforeign_;
+    bool a_hadcrosssiteredirects_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCookieService_2eproto;
@@ -745,25 +745,25 @@ class Reply_GetCookieList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCookiesFieldNumber = 1,
+    kACookiesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.net.CookieStructTable cookies = 1;
-  int cookies_size() const;
+  // repeated .protobuf.mozilla.net.CookieStructTable a_cookies = 1;
+  int a_cookies_size() const;
   private:
-  int _internal_cookies_size() const;
+  int _internal_a_cookies_size() const;
   public:
-  void clear_cookies();
-  ::protobuf::mozilla::net::CookieStructTable* mutable_cookies(int index);
+  void clear_a_cookies();
+  ::protobuf::mozilla::net::CookieStructTable* mutable_a_cookies(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >*
-      mutable_cookies();
+      mutable_a_cookies();
   private:
-  const ::protobuf::mozilla::net::CookieStructTable& _internal_cookies(int index) const;
-  ::protobuf::mozilla::net::CookieStructTable* _internal_add_cookies();
+  const ::protobuf::mozilla::net::CookieStructTable& _internal_a_cookies(int index) const;
+  ::protobuf::mozilla::net::CookieStructTable* _internal_add_a_cookies();
   public:
-  const ::protobuf::mozilla::net::CookieStructTable& cookies(int index) const;
-  ::protobuf::mozilla::net::CookieStructTable* add_cookies();
+  const ::protobuf::mozilla::net::CookieStructTable& a_cookies(int index) const;
+  ::protobuf::mozilla::net::CookieStructTable* add_a_cookies();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >&
-      cookies() const;
+      a_cookies() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Reply_GetCookieList)
  private:
@@ -773,7 +773,7 @@ class Reply_GetCookieList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable > cookies_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable > a_cookies_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1139,25 +1139,25 @@ class Msg_TrackCookiesLoad final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCookiesListTableFieldNumber = 1,
+    kACookiesListTableFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.net.CookieStructTable cookiesListTable = 1;
-  int cookieslisttable_size() const;
+  // repeated .protobuf.mozilla.net.CookieStructTable a_cookiesListTable = 1;
+  int a_cookieslisttable_size() const;
   private:
-  int _internal_cookieslisttable_size() const;
+  int _internal_a_cookieslisttable_size() const;
   public:
-  void clear_cookieslisttable();
-  ::protobuf::mozilla::net::CookieStructTable* mutable_cookieslisttable(int index);
+  void clear_a_cookieslisttable();
+  ::protobuf::mozilla::net::CookieStructTable* mutable_a_cookieslisttable(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >*
-      mutable_cookieslisttable();
+      mutable_a_cookieslisttable();
   private:
-  const ::protobuf::mozilla::net::CookieStructTable& _internal_cookieslisttable(int index) const;
-  ::protobuf::mozilla::net::CookieStructTable* _internal_add_cookieslisttable();
+  const ::protobuf::mozilla::net::CookieStructTable& _internal_a_cookieslisttable(int index) const;
+  ::protobuf::mozilla::net::CookieStructTable* _internal_add_a_cookieslisttable();
   public:
-  const ::protobuf::mozilla::net::CookieStructTable& cookieslisttable(int index) const;
-  ::protobuf::mozilla::net::CookieStructTable* add_cookieslisttable();
+  const ::protobuf::mozilla::net::CookieStructTable& a_cookieslisttable(int index) const;
+  ::protobuf::mozilla::net::CookieStructTable* add_a_cookieslisttable();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >&
-      cookieslisttable() const;
+      a_cookieslisttable() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad)
  private:
@@ -1167,7 +1167,7 @@ class Msg_TrackCookiesLoad final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable > cookieslisttable_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable > a_cookieslisttable_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1285,63 +1285,63 @@ class Msg_RemoveCookie final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAttrsFieldNumber = 2,
-    kOperationIdFieldNumber = 3,
-    kCookieFieldNumber = 1,
+    kAAttrsFieldNumber = 2,
+    kAOperationIdFieldNumber = 3,
+    kACookieFieldNumber = 1,
   };
-  // required bytes attrs = 2;
-  bool has_attrs() const;
+  // required bytes a_attrs = 2;
+  bool has_a_attrs() const;
   private:
-  bool _internal_has_attrs() const;
+  bool _internal_has_a_attrs() const;
   public:
-  void clear_attrs();
-  const std::string& attrs() const;
+  void clear_a_attrs();
+  const std::string& a_attrs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_attrs(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_attrs();
-  PROTOBUF_NODISCARD std::string* release_attrs();
-  void set_allocated_attrs(std::string* attrs);
+  void set_a_attrs(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_attrs();
+  PROTOBUF_NODISCARD std::string* release_a_attrs();
+  void set_allocated_a_attrs(std::string* a_attrs);
   private:
-  const std::string& _internal_attrs() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_attrs(const std::string& value);
-  std::string* _internal_mutable_attrs();
+  const std::string& _internal_a_attrs() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_attrs(const std::string& value);
+  std::string* _internal_mutable_a_attrs();
   public:
 
-  // optional bytes operationId = 3;
-  bool has_operationid() const;
+  // optional bytes a_operationId = 3;
+  bool has_a_operationid() const;
   private:
-  bool _internal_has_operationid() const;
+  bool _internal_has_a_operationid() const;
   public:
-  void clear_operationid();
-  const std::string& operationid() const;
+  void clear_a_operationid();
+  const std::string& a_operationid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_operationid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_operationid();
-  PROTOBUF_NODISCARD std::string* release_operationid();
-  void set_allocated_operationid(std::string* operationid);
+  void set_a_operationid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_operationid();
+  PROTOBUF_NODISCARD std::string* release_a_operationid();
+  void set_allocated_a_operationid(std::string* a_operationid);
   private:
-  const std::string& _internal_operationid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_operationid(const std::string& value);
-  std::string* _internal_mutable_operationid();
+  const std::string& _internal_a_operationid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_operationid(const std::string& value);
+  std::string* _internal_mutable_a_operationid();
   public:
 
-  // required .protobuf.mozilla.net.CookieStruct cookie = 1;
-  bool has_cookie() const;
+  // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  bool has_a_cookie() const;
   private:
-  bool _internal_has_cookie() const;
+  bool _internal_has_a_cookie() const;
   public:
-  void clear_cookie();
-  const ::protobuf::mozilla::net::CookieStruct& cookie() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieStruct* release_cookie();
-  ::protobuf::mozilla::net::CookieStruct* mutable_cookie();
-  void set_allocated_cookie(::protobuf::mozilla::net::CookieStruct* cookie);
+  void clear_a_cookie();
+  const ::protobuf::mozilla::net::CookieStruct& a_cookie() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieStruct* release_a_cookie();
+  ::protobuf::mozilla::net::CookieStruct* mutable_a_cookie();
+  void set_allocated_a_cookie(::protobuf::mozilla::net::CookieStruct* a_cookie);
   private:
-  const ::protobuf::mozilla::net::CookieStruct& _internal_cookie() const;
-  ::protobuf::mozilla::net::CookieStruct* _internal_mutable_cookie();
+  const ::protobuf::mozilla::net::CookieStruct& _internal_a_cookie() const;
+  ::protobuf::mozilla::net::CookieStruct* _internal_mutable_a_cookie();
   public:
-  void unsafe_arena_set_allocated_cookie(
-      ::protobuf::mozilla::net::CookieStruct* cookie);
-  ::protobuf::mozilla::net::CookieStruct* unsafe_arena_release_cookie();
+  void unsafe_arena_set_allocated_a_cookie(
+      ::protobuf::mozilla::net::CookieStruct* a_cookie);
+  ::protobuf::mozilla::net::CookieStruct* unsafe_arena_release_a_cookie();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie)
  private:
@@ -1356,9 +1356,9 @@ class Msg_RemoveCookie final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attrs_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr operationid_;
-    ::protobuf::mozilla::net::CookieStruct* cookie_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_attrs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_operationid_;
+    ::protobuf::mozilla::net::CookieStruct* a_cookie_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCookieService_2eproto;
@@ -1475,49 +1475,49 @@ class Msg_RemoveBatchDeletedCookies final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCookiesListFieldNumber = 1,
-    kAttrsListFieldNumber = 2,
+    kACookiesListFieldNumber = 1,
+    kAAttrsListFieldNumber = 2,
   };
-  // repeated .protobuf.mozilla.net.CookieStruct cookiesList = 1;
-  int cookieslist_size() const;
+  // repeated .protobuf.mozilla.net.CookieStruct a_cookiesList = 1;
+  int a_cookieslist_size() const;
   private:
-  int _internal_cookieslist_size() const;
+  int _internal_a_cookieslist_size() const;
   public:
-  void clear_cookieslist();
-  ::protobuf::mozilla::net::CookieStruct* mutable_cookieslist(int index);
+  void clear_a_cookieslist();
+  ::protobuf::mozilla::net::CookieStruct* mutable_a_cookieslist(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >*
-      mutable_cookieslist();
+      mutable_a_cookieslist();
   private:
-  const ::protobuf::mozilla::net::CookieStruct& _internal_cookieslist(int index) const;
-  ::protobuf::mozilla::net::CookieStruct* _internal_add_cookieslist();
+  const ::protobuf::mozilla::net::CookieStruct& _internal_a_cookieslist(int index) const;
+  ::protobuf::mozilla::net::CookieStruct* _internal_add_a_cookieslist();
   public:
-  const ::protobuf::mozilla::net::CookieStruct& cookieslist(int index) const;
-  ::protobuf::mozilla::net::CookieStruct* add_cookieslist();
+  const ::protobuf::mozilla::net::CookieStruct& a_cookieslist(int index) const;
+  ::protobuf::mozilla::net::CookieStruct* add_a_cookieslist();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
-      cookieslist() const;
+      a_cookieslist() const;
 
-  // repeated bytes attrsList = 2;
-  int attrslist_size() const;
+  // repeated bytes a_attrsList = 2;
+  int a_attrslist_size() const;
   private:
-  int _internal_attrslist_size() const;
+  int _internal_a_attrslist_size() const;
   public:
-  void clear_attrslist();
-  const std::string& attrslist(int index) const;
-  std::string* mutable_attrslist(int index);
-  void set_attrslist(int index, const std::string& value);
-  void set_attrslist(int index, std::string&& value);
-  void set_attrslist(int index, const char* value);
-  void set_attrslist(int index, const void* value, size_t size);
-  std::string* add_attrslist();
-  void add_attrslist(const std::string& value);
-  void add_attrslist(std::string&& value);
-  void add_attrslist(const char* value);
-  void add_attrslist(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& attrslist() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_attrslist();
+  void clear_a_attrslist();
+  const std::string& a_attrslist(int index) const;
+  std::string* mutable_a_attrslist(int index);
+  void set_a_attrslist(int index, const std::string& value);
+  void set_a_attrslist(int index, std::string&& value);
+  void set_a_attrslist(int index, const char* value);
+  void set_a_attrslist(int index, const void* value, size_t size);
+  std::string* add_a_attrslist();
+  void add_a_attrslist(const std::string& value);
+  void add_a_attrslist(std::string&& value);
+  void add_a_attrslist(const char* value);
+  void add_a_attrslist(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_attrslist() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_attrslist();
   private:
-  const std::string& _internal_attrslist(int index) const;
-  std::string* _internal_add_attrslist();
+  const std::string& _internal_a_attrslist(int index) const;
+  std::string* _internal_add_a_attrslist();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies)
@@ -1528,8 +1528,8 @@ class Msg_RemoveBatchDeletedCookies final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct > cookieslist_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> attrslist_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct > a_cookieslist_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_attrslist_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1771,63 +1771,63 @@ class Msg_AddCookie final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAttrsFieldNumber = 2,
-    kOperationIdFieldNumber = 3,
-    kCookieFieldNumber = 1,
+    kAAttrsFieldNumber = 2,
+    kAOperationIdFieldNumber = 3,
+    kACookieFieldNumber = 1,
   };
-  // required bytes attrs = 2;
-  bool has_attrs() const;
+  // required bytes a_attrs = 2;
+  bool has_a_attrs() const;
   private:
-  bool _internal_has_attrs() const;
+  bool _internal_has_a_attrs() const;
   public:
-  void clear_attrs();
-  const std::string& attrs() const;
+  void clear_a_attrs();
+  const std::string& a_attrs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_attrs(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_attrs();
-  PROTOBUF_NODISCARD std::string* release_attrs();
-  void set_allocated_attrs(std::string* attrs);
+  void set_a_attrs(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_attrs();
+  PROTOBUF_NODISCARD std::string* release_a_attrs();
+  void set_allocated_a_attrs(std::string* a_attrs);
   private:
-  const std::string& _internal_attrs() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_attrs(const std::string& value);
-  std::string* _internal_mutable_attrs();
+  const std::string& _internal_a_attrs() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_attrs(const std::string& value);
+  std::string* _internal_mutable_a_attrs();
   public:
 
-  // optional bytes operationId = 3;
-  bool has_operationid() const;
+  // optional bytes a_operationId = 3;
+  bool has_a_operationid() const;
   private:
-  bool _internal_has_operationid() const;
+  bool _internal_has_a_operationid() const;
   public:
-  void clear_operationid();
-  const std::string& operationid() const;
+  void clear_a_operationid();
+  const std::string& a_operationid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_operationid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_operationid();
-  PROTOBUF_NODISCARD std::string* release_operationid();
-  void set_allocated_operationid(std::string* operationid);
+  void set_a_operationid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_operationid();
+  PROTOBUF_NODISCARD std::string* release_a_operationid();
+  void set_allocated_a_operationid(std::string* a_operationid);
   private:
-  const std::string& _internal_operationid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_operationid(const std::string& value);
-  std::string* _internal_mutable_operationid();
+  const std::string& _internal_a_operationid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_operationid(const std::string& value);
+  std::string* _internal_mutable_a_operationid();
   public:
 
-  // required .protobuf.mozilla.net.CookieStruct cookie = 1;
-  bool has_cookie() const;
+  // required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  bool has_a_cookie() const;
   private:
-  bool _internal_has_cookie() const;
+  bool _internal_has_a_cookie() const;
   public:
-  void clear_cookie();
-  const ::protobuf::mozilla::net::CookieStruct& cookie() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieStruct* release_cookie();
-  ::protobuf::mozilla::net::CookieStruct* mutable_cookie();
-  void set_allocated_cookie(::protobuf::mozilla::net::CookieStruct* cookie);
+  void clear_a_cookie();
+  const ::protobuf::mozilla::net::CookieStruct& a_cookie() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieStruct* release_a_cookie();
+  ::protobuf::mozilla::net::CookieStruct* mutable_a_cookie();
+  void set_allocated_a_cookie(::protobuf::mozilla::net::CookieStruct* a_cookie);
   private:
-  const ::protobuf::mozilla::net::CookieStruct& _internal_cookie() const;
-  ::protobuf::mozilla::net::CookieStruct* _internal_mutable_cookie();
+  const ::protobuf::mozilla::net::CookieStruct& _internal_a_cookie() const;
+  ::protobuf::mozilla::net::CookieStruct* _internal_mutable_a_cookie();
   public:
-  void unsafe_arena_set_allocated_cookie(
-      ::protobuf::mozilla::net::CookieStruct* cookie);
-  ::protobuf::mozilla::net::CookieStruct* unsafe_arena_release_cookie();
+  void unsafe_arena_set_allocated_a_cookie(
+      ::protobuf::mozilla::net::CookieStruct* a_cookie);
+  ::protobuf::mozilla::net::CookieStruct* unsafe_arena_release_a_cookie();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PCookieService.Msg_AddCookie)
  private:
@@ -1842,9 +1842,9 @@ class Msg_AddCookie final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr attrs_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr operationid_;
-    ::protobuf::mozilla::net::CookieStruct* cookie_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_attrs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_operationid_;
+    ::protobuf::mozilla::net::CookieStruct* a_cookie_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCookieService_2eproto;
@@ -1860,713 +1860,713 @@ class Msg_AddCookie final :
 #endif  // __GNUC__
 // Msg_SetCookies
 
-// required bytes baseDomain = 1;
-inline bool Msg_SetCookies::_internal_has_basedomain() const {
+// required bytes a_baseDomain = 1;
+inline bool Msg_SetCookies::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetCookies::has_basedomain() const {
-  return _internal_has_basedomain();
+inline bool Msg_SetCookies::has_a_basedomain() const {
+  return _internal_has_a_basedomain();
 }
-inline void Msg_SetCookies::clear_basedomain() {
-  _impl_.basedomain_.ClearToEmpty();
+inline void Msg_SetCookies::clear_a_basedomain() {
+  _impl_.a_basedomain_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SetCookies::basedomain() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.baseDomain)
-  return _internal_basedomain();
+inline const std::string& Msg_SetCookies::a_basedomain() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_baseDomain)
+  return _internal_a_basedomain();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetCookies::set_basedomain(ArgT0&& arg0, ArgT... args) {
+void Msg_SetCookies::set_a_basedomain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.basedomain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.baseDomain)
+ _impl_.a_basedomain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_baseDomain)
 }
-inline std::string* Msg_SetCookies::mutable_basedomain() {
-  std::string* _s = _internal_mutable_basedomain();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.baseDomain)
+inline std::string* Msg_SetCookies::mutable_a_basedomain() {
+  std::string* _s = _internal_mutable_a_basedomain();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_baseDomain)
   return _s;
 }
-inline const std::string& Msg_SetCookies::_internal_basedomain() const {
-  return _impl_.basedomain_.Get();
+inline const std::string& Msg_SetCookies::_internal_a_basedomain() const {
+  return _impl_.a_basedomain_.Get();
 }
-inline void Msg_SetCookies::_internal_set_basedomain(const std::string& value) {
+inline void Msg_SetCookies::_internal_set_a_basedomain(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.basedomain_.Set(value, GetArenaForAllocation());
+  _impl_.a_basedomain_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetCookies::_internal_mutable_basedomain() {
+inline std::string* Msg_SetCookies::_internal_mutable_a_basedomain() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.basedomain_.Mutable(GetArenaForAllocation());
+  return _impl_.a_basedomain_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetCookies::release_basedomain() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_SetCookies.baseDomain)
-  if (!_internal_has_basedomain()) {
+inline std::string* Msg_SetCookies::release_a_basedomain() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_baseDomain)
+  if (!_internal_has_a_basedomain()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.basedomain_.Release();
+  auto* p = _impl_.a_basedomain_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.basedomain_.IsDefault()) {
-    _impl_.basedomain_.Set("", GetArenaForAllocation());
+  if (_impl_.a_basedomain_.IsDefault()) {
+    _impl_.a_basedomain_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetCookies::set_allocated_basedomain(std::string* basedomain) {
-  if (basedomain != nullptr) {
+inline void Msg_SetCookies::set_allocated_a_basedomain(std::string* a_basedomain) {
+  if (a_basedomain != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.basedomain_.SetAllocated(basedomain, GetArenaForAllocation());
+  _impl_.a_basedomain_.SetAllocated(a_basedomain, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.basedomain_.IsDefault()) {
-    _impl_.basedomain_.Set("", GetArenaForAllocation());
+  if (_impl_.a_basedomain_.IsDefault()) {
+    _impl_.a_basedomain_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.baseDomain)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_baseDomain)
 }
 
-// required bytes attrs = 2;
-inline bool Msg_SetCookies::_internal_has_attrs() const {
+// required bytes a_attrs = 2;
+inline bool Msg_SetCookies::_internal_has_a_attrs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetCookies::has_attrs() const {
-  return _internal_has_attrs();
+inline bool Msg_SetCookies::has_a_attrs() const {
+  return _internal_has_a_attrs();
 }
-inline void Msg_SetCookies::clear_attrs() {
-  _impl_.attrs_.ClearToEmpty();
+inline void Msg_SetCookies::clear_a_attrs() {
+  _impl_.a_attrs_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_SetCookies::attrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.attrs)
-  return _internal_attrs();
+inline const std::string& Msg_SetCookies::a_attrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_attrs)
+  return _internal_a_attrs();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetCookies::set_attrs(ArgT0&& arg0, ArgT... args) {
+void Msg_SetCookies::set_a_attrs(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.attrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.attrs)
+ _impl_.a_attrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_attrs)
 }
-inline std::string* Msg_SetCookies::mutable_attrs() {
-  std::string* _s = _internal_mutable_attrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.attrs)
+inline std::string* Msg_SetCookies::mutable_a_attrs() {
+  std::string* _s = _internal_mutable_a_attrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_attrs)
   return _s;
 }
-inline const std::string& Msg_SetCookies::_internal_attrs() const {
-  return _impl_.attrs_.Get();
+inline const std::string& Msg_SetCookies::_internal_a_attrs() const {
+  return _impl_.a_attrs_.Get();
 }
-inline void Msg_SetCookies::_internal_set_attrs(const std::string& value) {
+inline void Msg_SetCookies::_internal_set_a_attrs(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.attrs_.Set(value, GetArenaForAllocation());
+  _impl_.a_attrs_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetCookies::_internal_mutable_attrs() {
+inline std::string* Msg_SetCookies::_internal_mutable_a_attrs() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.attrs_.Mutable(GetArenaForAllocation());
+  return _impl_.a_attrs_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetCookies::release_attrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_SetCookies.attrs)
-  if (!_internal_has_attrs()) {
+inline std::string* Msg_SetCookies::release_a_attrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_attrs)
+  if (!_internal_has_a_attrs()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.attrs_.Release();
+  auto* p = _impl_.a_attrs_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.attrs_.IsDefault()) {
-    _impl_.attrs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_attrs_.IsDefault()) {
+    _impl_.a_attrs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetCookies::set_allocated_attrs(std::string* attrs) {
-  if (attrs != nullptr) {
+inline void Msg_SetCookies::set_allocated_a_attrs(std::string* a_attrs) {
+  if (a_attrs != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.attrs_.SetAllocated(attrs, GetArenaForAllocation());
+  _impl_.a_attrs_.SetAllocated(a_attrs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.attrs_.IsDefault()) {
-    _impl_.attrs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_attrs_.IsDefault()) {
+    _impl_.a_attrs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.attrs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_attrs)
 }
 
-// required bytes host = 3;
-inline bool Msg_SetCookies::_internal_has_host() const {
+// required bytes a_host = 3;
+inline bool Msg_SetCookies::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_SetCookies::has_host() const {
-  return _internal_has_host();
+inline bool Msg_SetCookies::has_a_host() const {
+  return _internal_has_a_host();
 }
-inline void Msg_SetCookies::clear_host() {
-  _impl_.host_.ClearToEmpty();
+inline void Msg_SetCookies::clear_a_host() {
+  _impl_.a_host_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_SetCookies::host() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.host)
-  return _internal_host();
+inline const std::string& Msg_SetCookies::a_host() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_host)
+  return _internal_a_host();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetCookies::set_host(ArgT0&& arg0, ArgT... args) {
+void Msg_SetCookies::set_a_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.host)
+ _impl_.a_host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_host)
 }
-inline std::string* Msg_SetCookies::mutable_host() {
-  std::string* _s = _internal_mutable_host();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.host)
+inline std::string* Msg_SetCookies::mutable_a_host() {
+  std::string* _s = _internal_mutable_a_host();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_host)
   return _s;
 }
-inline const std::string& Msg_SetCookies::_internal_host() const {
-  return _impl_.host_.Get();
+inline const std::string& Msg_SetCookies::_internal_a_host() const {
+  return _impl_.a_host_.Get();
 }
-inline void Msg_SetCookies::_internal_set_host(const std::string& value) {
+inline void Msg_SetCookies::_internal_set_a_host(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.host_.Set(value, GetArenaForAllocation());
+  _impl_.a_host_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetCookies::_internal_mutable_host() {
+inline std::string* Msg_SetCookies::_internal_mutable_a_host() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.host_.Mutable(GetArenaForAllocation());
+  return _impl_.a_host_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetCookies::release_host() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_SetCookies.host)
-  if (!_internal_has_host()) {
+inline std::string* Msg_SetCookies::release_a_host() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_host)
+  if (!_internal_has_a_host()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.host_.Release();
+  auto* p = _impl_.a_host_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.host_.IsDefault()) {
-    _impl_.host_.Set("", GetArenaForAllocation());
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetCookies::set_allocated_host(std::string* host) {
-  if (host != nullptr) {
+inline void Msg_SetCookies::set_allocated_a_host(std::string* a_host) {
+  if (a_host != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.host_.SetAllocated(host, GetArenaForAllocation());
+  _impl_.a_host_.SetAllocated(a_host, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.host_.IsDefault()) {
-    _impl_.host_.Set("", GetArenaForAllocation());
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.host)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_host)
 }
 
-// required bool fromHttp = 4;
-inline bool Msg_SetCookies::_internal_has_fromhttp() const {
+// required bool a_fromHttp = 4;
+inline bool Msg_SetCookies::_internal_has_a_fromhttp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_SetCookies::has_fromhttp() const {
-  return _internal_has_fromhttp();
+inline bool Msg_SetCookies::has_a_fromhttp() const {
+  return _internal_has_a_fromhttp();
 }
-inline void Msg_SetCookies::clear_fromhttp() {
-  _impl_.fromhttp_ = false;
+inline void Msg_SetCookies::clear_a_fromhttp() {
+  _impl_.a_fromhttp_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_SetCookies::_internal_fromhttp() const {
-  return _impl_.fromhttp_;
+inline bool Msg_SetCookies::_internal_a_fromhttp() const {
+  return _impl_.a_fromhttp_;
 }
-inline bool Msg_SetCookies::fromhttp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.fromHttp)
-  return _internal_fromhttp();
+inline bool Msg_SetCookies::a_fromhttp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_fromHttp)
+  return _internal_a_fromhttp();
 }
-inline void Msg_SetCookies::_internal_set_fromhttp(bool value) {
+inline void Msg_SetCookies::_internal_set_a_fromhttp(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.fromhttp_ = value;
+  _impl_.a_fromhttp_ = value;
 }
-inline void Msg_SetCookies::set_fromhttp(bool value) {
-  _internal_set_fromhttp(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.fromHttp)
+inline void Msg_SetCookies::set_a_fromhttp(bool value) {
+  _internal_set_a_fromhttp(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_fromHttp)
 }
 
-// required bool isThirdParty = 5;
-inline bool Msg_SetCookies::_internal_has_isthirdparty() const {
+// required bool a_isThirdParty = 5;
+inline bool Msg_SetCookies::_internal_has_a_isthirdparty() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_SetCookies::has_isthirdparty() const {
-  return _internal_has_isthirdparty();
+inline bool Msg_SetCookies::has_a_isthirdparty() const {
+  return _internal_has_a_isthirdparty();
 }
-inline void Msg_SetCookies::clear_isthirdparty() {
-  _impl_.isthirdparty_ = false;
+inline void Msg_SetCookies::clear_a_isthirdparty() {
+  _impl_.a_isthirdparty_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Msg_SetCookies::_internal_isthirdparty() const {
-  return _impl_.isthirdparty_;
+inline bool Msg_SetCookies::_internal_a_isthirdparty() const {
+  return _impl_.a_isthirdparty_;
 }
-inline bool Msg_SetCookies::isthirdparty() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.isThirdParty)
-  return _internal_isthirdparty();
+inline bool Msg_SetCookies::a_isthirdparty() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_isThirdParty)
+  return _internal_a_isthirdparty();
 }
-inline void Msg_SetCookies::_internal_set_isthirdparty(bool value) {
+inline void Msg_SetCookies::_internal_set_a_isthirdparty(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.isthirdparty_ = value;
+  _impl_.a_isthirdparty_ = value;
 }
-inline void Msg_SetCookies::set_isthirdparty(bool value) {
-  _internal_set_isthirdparty(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.isThirdParty)
+inline void Msg_SetCookies::set_a_isthirdparty(bool value) {
+  _internal_set_a_isthirdparty(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_isThirdParty)
 }
 
-// repeated .protobuf.mozilla.net.CookieStruct cookies = 6;
-inline int Msg_SetCookies::_internal_cookies_size() const {
-  return _impl_.cookies_.size();
+// repeated .protobuf.mozilla.net.CookieStruct a_cookies = 6;
+inline int Msg_SetCookies::_internal_a_cookies_size() const {
+  return _impl_.a_cookies_.size();
 }
-inline int Msg_SetCookies::cookies_size() const {
-  return _internal_cookies_size();
+inline int Msg_SetCookies::a_cookies_size() const {
+  return _internal_a_cookies_size();
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_SetCookies::mutable_cookies(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.cookies)
-  return _impl_.cookies_.Mutable(index);
+inline ::protobuf::mozilla::net::CookieStruct* Msg_SetCookies::mutable_a_cookies(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_cookies)
+  return _impl_.a_cookies_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >*
-Msg_SetCookies::mutable_cookies() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_SetCookies.cookies)
-  return &_impl_.cookies_;
+Msg_SetCookies::mutable_a_cookies() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_cookies)
+  return &_impl_.a_cookies_;
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_SetCookies::_internal_cookies(int index) const {
-  return _impl_.cookies_.Get(index);
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_SetCookies::_internal_a_cookies(int index) const {
+  return _impl_.a_cookies_.Get(index);
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_SetCookies::cookies(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.cookies)
-  return _internal_cookies(index);
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_SetCookies::a_cookies(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_cookies)
+  return _internal_a_cookies(index);
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_SetCookies::_internal_add_cookies() {
-  return _impl_.cookies_.Add();
+inline ::protobuf::mozilla::net::CookieStruct* Msg_SetCookies::_internal_add_a_cookies() {
+  return _impl_.a_cookies_.Add();
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_SetCookies::add_cookies() {
-  ::protobuf::mozilla::net::CookieStruct* _add = _internal_add_cookies();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_SetCookies.cookies)
+inline ::protobuf::mozilla::net::CookieStruct* Msg_SetCookies::add_a_cookies() {
+  ::protobuf::mozilla::net::CookieStruct* _add = _internal_add_a_cookies();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_cookies)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
-Msg_SetCookies::cookies() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_SetCookies.cookies)
-  return _impl_.cookies_;
+Msg_SetCookies::a_cookies() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_cookies)
+  return _impl_.a_cookies_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetCookieList
 
-// required bytes host = 1;
-inline bool Msg_GetCookieList::_internal_has_host() const {
+// required bytes a_host = 1;
+inline bool Msg_GetCookieList::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_host() const {
-  return _internal_has_host();
+inline bool Msg_GetCookieList::has_a_host() const {
+  return _internal_has_a_host();
 }
-inline void Msg_GetCookieList::clear_host() {
-  _impl_.host_.ClearToEmpty();
+inline void Msg_GetCookieList::clear_a_host() {
+  _impl_.a_host_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetCookieList::host() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.host)
-  return _internal_host();
+inline const std::string& Msg_GetCookieList::a_host() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_host)
+  return _internal_a_host();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetCookieList::set_host(ArgT0&& arg0, ArgT... args) {
+void Msg_GetCookieList::set_a_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.host)
+ _impl_.a_host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_host)
 }
-inline std::string* Msg_GetCookieList::mutable_host() {
-  std::string* _s = _internal_mutable_host();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.host)
+inline std::string* Msg_GetCookieList::mutable_a_host() {
+  std::string* _s = _internal_mutable_a_host();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_host)
   return _s;
 }
-inline const std::string& Msg_GetCookieList::_internal_host() const {
-  return _impl_.host_.Get();
+inline const std::string& Msg_GetCookieList::_internal_a_host() const {
+  return _impl_.a_host_.Get();
 }
-inline void Msg_GetCookieList::_internal_set_host(const std::string& value) {
+inline void Msg_GetCookieList::_internal_set_a_host(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.host_.Set(value, GetArenaForAllocation());
+  _impl_.a_host_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetCookieList::_internal_mutable_host() {
+inline std::string* Msg_GetCookieList::_internal_mutable_a_host() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.host_.Mutable(GetArenaForAllocation());
+  return _impl_.a_host_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetCookieList::release_host() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.host)
-  if (!_internal_has_host()) {
+inline std::string* Msg_GetCookieList::release_a_host() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_host)
+  if (!_internal_has_a_host()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.host_.Release();
+  auto* p = _impl_.a_host_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.host_.IsDefault()) {
-    _impl_.host_.Set("", GetArenaForAllocation());
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetCookieList::set_allocated_host(std::string* host) {
-  if (host != nullptr) {
+inline void Msg_GetCookieList::set_allocated_a_host(std::string* a_host) {
+  if (a_host != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.host_.SetAllocated(host, GetArenaForAllocation());
+  _impl_.a_host_.SetAllocated(a_host, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.host_.IsDefault()) {
-    _impl_.host_.Set("", GetArenaForAllocation());
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.host)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_host)
 }
 
-// required bool isForeign = 2;
-inline bool Msg_GetCookieList::_internal_has_isforeign() const {
+// required bool a_isForeign = 2;
+inline bool Msg_GetCookieList::_internal_has_a_isforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_isforeign() const {
-  return _internal_has_isforeign();
+inline bool Msg_GetCookieList::has_a_isforeign() const {
+  return _internal_has_a_isforeign();
 }
-inline void Msg_GetCookieList::clear_isforeign() {
-  _impl_.isforeign_ = false;
+inline void Msg_GetCookieList::clear_a_isforeign() {
+  _impl_.a_isforeign_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_GetCookieList::_internal_isforeign() const {
-  return _impl_.isforeign_;
+inline bool Msg_GetCookieList::_internal_a_isforeign() const {
+  return _impl_.a_isforeign_;
 }
-inline bool Msg_GetCookieList::isforeign() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isForeign)
-  return _internal_isforeign();
+inline bool Msg_GetCookieList::a_isforeign() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isForeign)
+  return _internal_a_isforeign();
 }
-inline void Msg_GetCookieList::_internal_set_isforeign(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_isforeign(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.isforeign_ = value;
+  _impl_.a_isforeign_ = value;
 }
-inline void Msg_GetCookieList::set_isforeign(bool value) {
-  _internal_set_isforeign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isForeign)
+inline void Msg_GetCookieList::set_a_isforeign(bool value) {
+  _internal_set_a_isforeign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isForeign)
 }
 
-// required bool isThirdPartyTrackingResource = 3;
-inline bool Msg_GetCookieList::_internal_has_isthirdpartytrackingresource() const {
+// required bool a_isThirdPartyTrackingResource = 3;
+inline bool Msg_GetCookieList::_internal_has_a_isthirdpartytrackingresource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_isthirdpartytrackingresource() const {
-  return _internal_has_isthirdpartytrackingresource();
+inline bool Msg_GetCookieList::has_a_isthirdpartytrackingresource() const {
+  return _internal_has_a_isthirdpartytrackingresource();
 }
-inline void Msg_GetCookieList::clear_isthirdpartytrackingresource() {
-  _impl_.isthirdpartytrackingresource_ = false;
+inline void Msg_GetCookieList::clear_a_isthirdpartytrackingresource() {
+  _impl_.a_isthirdpartytrackingresource_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_GetCookieList::_internal_isthirdpartytrackingresource() const {
-  return _impl_.isthirdpartytrackingresource_;
+inline bool Msg_GetCookieList::_internal_a_isthirdpartytrackingresource() const {
+  return _impl_.a_isthirdpartytrackingresource_;
 }
-inline bool Msg_GetCookieList::isthirdpartytrackingresource() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isThirdPartyTrackingResource)
-  return _internal_isthirdpartytrackingresource();
+inline bool Msg_GetCookieList::a_isthirdpartytrackingresource() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isThirdPartyTrackingResource)
+  return _internal_a_isthirdpartytrackingresource();
 }
-inline void Msg_GetCookieList::_internal_set_isthirdpartytrackingresource(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_isthirdpartytrackingresource(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.isthirdpartytrackingresource_ = value;
+  _impl_.a_isthirdpartytrackingresource_ = value;
 }
-inline void Msg_GetCookieList::set_isthirdpartytrackingresource(bool value) {
-  _internal_set_isthirdpartytrackingresource(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isThirdPartyTrackingResource)
+inline void Msg_GetCookieList::set_a_isthirdpartytrackingresource(bool value) {
+  _internal_set_a_isthirdpartytrackingresource(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isThirdPartyTrackingResource)
 }
 
-// required bool isThirdPartySocialTrackingResource = 4;
-inline bool Msg_GetCookieList::_internal_has_isthirdpartysocialtrackingresource() const {
+// required bool a_isThirdPartySocialTrackingResource = 4;
+inline bool Msg_GetCookieList::_internal_has_a_isthirdpartysocialtrackingresource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_isthirdpartysocialtrackingresource() const {
-  return _internal_has_isthirdpartysocialtrackingresource();
+inline bool Msg_GetCookieList::has_a_isthirdpartysocialtrackingresource() const {
+  return _internal_has_a_isthirdpartysocialtrackingresource();
 }
-inline void Msg_GetCookieList::clear_isthirdpartysocialtrackingresource() {
-  _impl_.isthirdpartysocialtrackingresource_ = false;
+inline void Msg_GetCookieList::clear_a_isthirdpartysocialtrackingresource() {
+  _impl_.a_isthirdpartysocialtrackingresource_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_GetCookieList::_internal_isthirdpartysocialtrackingresource() const {
-  return _impl_.isthirdpartysocialtrackingresource_;
+inline bool Msg_GetCookieList::_internal_a_isthirdpartysocialtrackingresource() const {
+  return _impl_.a_isthirdpartysocialtrackingresource_;
 }
-inline bool Msg_GetCookieList::isthirdpartysocialtrackingresource() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isThirdPartySocialTrackingResource)
-  return _internal_isthirdpartysocialtrackingresource();
+inline bool Msg_GetCookieList::a_isthirdpartysocialtrackingresource() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isThirdPartySocialTrackingResource)
+  return _internal_a_isthirdpartysocialtrackingresource();
 }
-inline void Msg_GetCookieList::_internal_set_isthirdpartysocialtrackingresource(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_isthirdpartysocialtrackingresource(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.isthirdpartysocialtrackingresource_ = value;
+  _impl_.a_isthirdpartysocialtrackingresource_ = value;
 }
-inline void Msg_GetCookieList::set_isthirdpartysocialtrackingresource(bool value) {
-  _internal_set_isthirdpartysocialtrackingresource(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isThirdPartySocialTrackingResource)
+inline void Msg_GetCookieList::set_a_isthirdpartysocialtrackingresource(bool value) {
+  _internal_set_a_isthirdpartysocialtrackingresource(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isThirdPartySocialTrackingResource)
 }
 
-// required bool firstPartyStorageAccessPermissionGranted = 5;
-inline bool Msg_GetCookieList::_internal_has_firstpartystorageaccesspermissiongranted() const {
+// required bool a_firstPartyStorageAccessPermissionGranted = 5;
+inline bool Msg_GetCookieList::_internal_has_a_firstpartystorageaccesspermissiongranted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_firstpartystorageaccesspermissiongranted() const {
-  return _internal_has_firstpartystorageaccesspermissiongranted();
+inline bool Msg_GetCookieList::has_a_firstpartystorageaccesspermissiongranted() const {
+  return _internal_has_a_firstpartystorageaccesspermissiongranted();
 }
-inline void Msg_GetCookieList::clear_firstpartystorageaccesspermissiongranted() {
-  _impl_.firstpartystorageaccesspermissiongranted_ = false;
+inline void Msg_GetCookieList::clear_a_firstpartystorageaccesspermissiongranted() {
+  _impl_.a_firstpartystorageaccesspermissiongranted_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Msg_GetCookieList::_internal_firstpartystorageaccesspermissiongranted() const {
-  return _impl_.firstpartystorageaccesspermissiongranted_;
+inline bool Msg_GetCookieList::_internal_a_firstpartystorageaccesspermissiongranted() const {
+  return _impl_.a_firstpartystorageaccesspermissiongranted_;
 }
-inline bool Msg_GetCookieList::firstpartystorageaccesspermissiongranted() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.firstPartyStorageAccessPermissionGranted)
-  return _internal_firstpartystorageaccesspermissiongranted();
+inline bool Msg_GetCookieList::a_firstpartystorageaccesspermissiongranted() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_firstPartyStorageAccessPermissionGranted)
+  return _internal_a_firstpartystorageaccesspermissiongranted();
 }
-inline void Msg_GetCookieList::_internal_set_firstpartystorageaccesspermissiongranted(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_firstpartystorageaccesspermissiongranted(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.firstpartystorageaccesspermissiongranted_ = value;
+  _impl_.a_firstpartystorageaccesspermissiongranted_ = value;
 }
-inline void Msg_GetCookieList::set_firstpartystorageaccesspermissiongranted(bool value) {
-  _internal_set_firstpartystorageaccesspermissiongranted(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.firstPartyStorageAccessPermissionGranted)
+inline void Msg_GetCookieList::set_a_firstpartystorageaccesspermissiongranted(bool value) {
+  _internal_set_a_firstpartystorageaccesspermissiongranted(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_firstPartyStorageAccessPermissionGranted)
 }
 
-// required uint32 rejectedReason = 6;
-inline bool Msg_GetCookieList::_internal_has_rejectedreason() const {
+// required uint32 a_rejectedReason = 6;
+inline bool Msg_GetCookieList::_internal_has_a_rejectedreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_rejectedreason() const {
-  return _internal_has_rejectedreason();
+inline bool Msg_GetCookieList::has_a_rejectedreason() const {
+  return _internal_has_a_rejectedreason();
 }
-inline void Msg_GetCookieList::clear_rejectedreason() {
-  _impl_.rejectedreason_ = 0u;
+inline void Msg_GetCookieList::clear_a_rejectedreason() {
+  _impl_.a_rejectedreason_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline uint32_t Msg_GetCookieList::_internal_rejectedreason() const {
-  return _impl_.rejectedreason_;
+inline uint32_t Msg_GetCookieList::_internal_a_rejectedreason() const {
+  return _impl_.a_rejectedreason_;
 }
-inline uint32_t Msg_GetCookieList::rejectedreason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.rejectedReason)
-  return _internal_rejectedreason();
+inline uint32_t Msg_GetCookieList::a_rejectedreason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_rejectedReason)
+  return _internal_a_rejectedreason();
 }
-inline void Msg_GetCookieList::_internal_set_rejectedreason(uint32_t value) {
+inline void Msg_GetCookieList::_internal_set_a_rejectedreason(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.rejectedreason_ = value;
+  _impl_.a_rejectedreason_ = value;
 }
-inline void Msg_GetCookieList::set_rejectedreason(uint32_t value) {
-  _internal_set_rejectedreason(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.rejectedReason)
+inline void Msg_GetCookieList::set_a_rejectedreason(uint32_t value) {
+  _internal_set_a_rejectedreason(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_rejectedReason)
 }
 
-// required bool isSafeTopLevelNav = 7;
-inline bool Msg_GetCookieList::_internal_has_issafetoplevelnav() const {
+// required bool a_isSafeTopLevelNav = 7;
+inline bool Msg_GetCookieList::_internal_has_a_issafetoplevelnav() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_issafetoplevelnav() const {
-  return _internal_has_issafetoplevelnav();
+inline bool Msg_GetCookieList::has_a_issafetoplevelnav() const {
+  return _internal_has_a_issafetoplevelnav();
 }
-inline void Msg_GetCookieList::clear_issafetoplevelnav() {
-  _impl_.issafetoplevelnav_ = false;
+inline void Msg_GetCookieList::clear_a_issafetoplevelnav() {
+  _impl_.a_issafetoplevelnav_ = false;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline bool Msg_GetCookieList::_internal_issafetoplevelnav() const {
-  return _impl_.issafetoplevelnav_;
+inline bool Msg_GetCookieList::_internal_a_issafetoplevelnav() const {
+  return _impl_.a_issafetoplevelnav_;
 }
-inline bool Msg_GetCookieList::issafetoplevelnav() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isSafeTopLevelNav)
-  return _internal_issafetoplevelnav();
+inline bool Msg_GetCookieList::a_issafetoplevelnav() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isSafeTopLevelNav)
+  return _internal_a_issafetoplevelnav();
 }
-inline void Msg_GetCookieList::_internal_set_issafetoplevelnav(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_issafetoplevelnav(bool value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.issafetoplevelnav_ = value;
+  _impl_.a_issafetoplevelnav_ = value;
 }
-inline void Msg_GetCookieList::set_issafetoplevelnav(bool value) {
-  _internal_set_issafetoplevelnav(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isSafeTopLevelNav)
+inline void Msg_GetCookieList::set_a_issafetoplevelnav(bool value) {
+  _internal_set_a_issafetoplevelnav(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isSafeTopLevelNav)
 }
 
-// required bool isSameSiteForeign = 8;
-inline bool Msg_GetCookieList::_internal_has_issamesiteforeign() const {
+// required bool a_isSameSiteForeign = 8;
+inline bool Msg_GetCookieList::_internal_has_a_issamesiteforeign() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_issamesiteforeign() const {
-  return _internal_has_issamesiteforeign();
+inline bool Msg_GetCookieList::has_a_issamesiteforeign() const {
+  return _internal_has_a_issamesiteforeign();
 }
-inline void Msg_GetCookieList::clear_issamesiteforeign() {
-  _impl_.issamesiteforeign_ = false;
+inline void Msg_GetCookieList::clear_a_issamesiteforeign() {
+  _impl_.a_issamesiteforeign_ = false;
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline bool Msg_GetCookieList::_internal_issamesiteforeign() const {
-  return _impl_.issamesiteforeign_;
+inline bool Msg_GetCookieList::_internal_a_issamesiteforeign() const {
+  return _impl_.a_issamesiteforeign_;
 }
-inline bool Msg_GetCookieList::issamesiteforeign() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isSameSiteForeign)
-  return _internal_issamesiteforeign();
+inline bool Msg_GetCookieList::a_issamesiteforeign() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isSameSiteForeign)
+  return _internal_a_issamesiteforeign();
 }
-inline void Msg_GetCookieList::_internal_set_issamesiteforeign(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_issamesiteforeign(bool value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.issamesiteforeign_ = value;
+  _impl_.a_issamesiteforeign_ = value;
 }
-inline void Msg_GetCookieList::set_issamesiteforeign(bool value) {
-  _internal_set_issamesiteforeign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.isSameSiteForeign)
+inline void Msg_GetCookieList::set_a_issamesiteforeign(bool value) {
+  _internal_set_a_issamesiteforeign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_isSameSiteForeign)
 }
 
-// required bool hadCrossSiteRedirects = 9;
-inline bool Msg_GetCookieList::_internal_has_hadcrosssiteredirects() const {
+// required bool a_hadCrossSiteRedirects = 9;
+inline bool Msg_GetCookieList::_internal_has_a_hadcrosssiteredirects() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool Msg_GetCookieList::has_hadcrosssiteredirects() const {
-  return _internal_has_hadcrosssiteredirects();
+inline bool Msg_GetCookieList::has_a_hadcrosssiteredirects() const {
+  return _internal_has_a_hadcrosssiteredirects();
 }
-inline void Msg_GetCookieList::clear_hadcrosssiteredirects() {
-  _impl_.hadcrosssiteredirects_ = false;
+inline void Msg_GetCookieList::clear_a_hadcrosssiteredirects() {
+  _impl_.a_hadcrosssiteredirects_ = false;
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline bool Msg_GetCookieList::_internal_hadcrosssiteredirects() const {
-  return _impl_.hadcrosssiteredirects_;
+inline bool Msg_GetCookieList::_internal_a_hadcrosssiteredirects() const {
+  return _impl_.a_hadcrosssiteredirects_;
 }
-inline bool Msg_GetCookieList::hadcrosssiteredirects() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.hadCrossSiteRedirects)
-  return _internal_hadcrosssiteredirects();
+inline bool Msg_GetCookieList::a_hadcrosssiteredirects() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_hadCrossSiteRedirects)
+  return _internal_a_hadcrosssiteredirects();
 }
-inline void Msg_GetCookieList::_internal_set_hadcrosssiteredirects(bool value) {
+inline void Msg_GetCookieList::_internal_set_a_hadcrosssiteredirects(bool value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.hadcrosssiteredirects_ = value;
+  _impl_.a_hadcrosssiteredirects_ = value;
 }
-inline void Msg_GetCookieList::set_hadcrosssiteredirects(bool value) {
-  _internal_set_hadcrosssiteredirects(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.hadCrossSiteRedirects)
+inline void Msg_GetCookieList::set_a_hadcrosssiteredirects(bool value) {
+  _internal_set_a_hadcrosssiteredirects(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_hadCrossSiteRedirects)
 }
 
-// repeated bytes attrsList = 10;
-inline int Msg_GetCookieList::_internal_attrslist_size() const {
-  return _impl_.attrslist_.size();
+// repeated bytes a_attrsList = 10;
+inline int Msg_GetCookieList::_internal_a_attrslist_size() const {
+  return _impl_.a_attrslist_.size();
 }
-inline int Msg_GetCookieList::attrslist_size() const {
-  return _internal_attrslist_size();
+inline int Msg_GetCookieList::a_attrslist_size() const {
+  return _internal_a_attrslist_size();
 }
-inline void Msg_GetCookieList::clear_attrslist() {
-  _impl_.attrslist_.Clear();
+inline void Msg_GetCookieList::clear_a_attrslist() {
+  _impl_.a_attrslist_.Clear();
 }
-inline std::string* Msg_GetCookieList::add_attrslist() {
-  std::string* _s = _internal_add_attrslist();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+inline std::string* Msg_GetCookieList::add_a_attrslist() {
+  std::string* _s = _internal_add_a_attrslist();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
   return _s;
 }
-inline const std::string& Msg_GetCookieList::_internal_attrslist(int index) const {
-  return _impl_.attrslist_.Get(index);
+inline const std::string& Msg_GetCookieList::_internal_a_attrslist(int index) const {
+  return _impl_.a_attrslist_.Get(index);
 }
-inline const std::string& Msg_GetCookieList::attrslist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
-  return _internal_attrslist(index);
+inline const std::string& Msg_GetCookieList::a_attrslist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
+  return _internal_a_attrslist(index);
 }
-inline std::string* Msg_GetCookieList::mutable_attrslist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
-  return _impl_.attrslist_.Mutable(index);
+inline std::string* Msg_GetCookieList::mutable_a_attrslist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
+  return _impl_.a_attrslist_.Mutable(index);
 }
-inline void Msg_GetCookieList::set_attrslist(int index, const std::string& value) {
-  _impl_.attrslist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+inline void Msg_GetCookieList::set_a_attrslist(int index, const std::string& value) {
+  _impl_.a_attrslist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline void Msg_GetCookieList::set_attrslist(int index, std::string&& value) {
-  _impl_.attrslist_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+inline void Msg_GetCookieList::set_a_attrslist(int index, std::string&& value) {
+  _impl_.a_attrslist_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline void Msg_GetCookieList::set_attrslist(int index, const char* value) {
+inline void Msg_GetCookieList::set_a_attrslist(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.attrslist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+  _impl_.a_attrslist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline void Msg_GetCookieList::set_attrslist(int index, const void* value, size_t size) {
-  _impl_.attrslist_.Mutable(index)->assign(
+inline void Msg_GetCookieList::set_a_attrslist(int index, const void* value, size_t size) {
+  _impl_.a_attrslist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline std::string* Msg_GetCookieList::_internal_add_attrslist() {
-  return _impl_.attrslist_.Add();
+inline std::string* Msg_GetCookieList::_internal_add_a_attrslist() {
+  return _impl_.a_attrslist_.Add();
 }
-inline void Msg_GetCookieList::add_attrslist(const std::string& value) {
-  _impl_.attrslist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+inline void Msg_GetCookieList::add_a_attrslist(const std::string& value) {
+  _impl_.a_attrslist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline void Msg_GetCookieList::add_attrslist(std::string&& value) {
-  _impl_.attrslist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+inline void Msg_GetCookieList::add_a_attrslist(std::string&& value) {
+  _impl_.a_attrslist_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline void Msg_GetCookieList::add_attrslist(const char* value) {
+inline void Msg_GetCookieList::add_a_attrslist(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.attrslist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+  _impl_.a_attrslist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
-inline void Msg_GetCookieList::add_attrslist(const void* value, size_t size) {
-  _impl_.attrslist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
+inline void Msg_GetCookieList::add_a_attrslist(const void* value, size_t size) {
+  _impl_.a_attrslist_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_GetCookieList::attrslist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
-  return _impl_.attrslist_;
+Msg_GetCookieList::a_attrslist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
+  return _impl_.a_attrslist_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_GetCookieList::mutable_attrslist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.attrsList)
-  return &_impl_.attrslist_;
+Msg_GetCookieList::mutable_a_attrslist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_GetCookieList.a_attrsList)
+  return &_impl_.a_attrslist_;
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetCookieList
 
-// repeated .protobuf.mozilla.net.CookieStructTable cookies = 1;
-inline int Reply_GetCookieList::_internal_cookies_size() const {
-  return _impl_.cookies_.size();
+// repeated .protobuf.mozilla.net.CookieStructTable a_cookies = 1;
+inline int Reply_GetCookieList::_internal_a_cookies_size() const {
+  return _impl_.a_cookies_.size();
 }
-inline int Reply_GetCookieList::cookies_size() const {
-  return _internal_cookies_size();
+inline int Reply_GetCookieList::a_cookies_size() const {
+  return _internal_a_cookies_size();
 }
-inline ::protobuf::mozilla::net::CookieStructTable* Reply_GetCookieList::mutable_cookies(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.cookies)
-  return _impl_.cookies_.Mutable(index);
+inline ::protobuf::mozilla::net::CookieStructTable* Reply_GetCookieList::mutable_a_cookies(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.a_cookies)
+  return _impl_.a_cookies_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >*
-Reply_GetCookieList::mutable_cookies() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.cookies)
-  return &_impl_.cookies_;
+Reply_GetCookieList::mutable_a_cookies() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.a_cookies)
+  return &_impl_.a_cookies_;
 }
-inline const ::protobuf::mozilla::net::CookieStructTable& Reply_GetCookieList::_internal_cookies(int index) const {
-  return _impl_.cookies_.Get(index);
+inline const ::protobuf::mozilla::net::CookieStructTable& Reply_GetCookieList::_internal_a_cookies(int index) const {
+  return _impl_.a_cookies_.Get(index);
 }
-inline const ::protobuf::mozilla::net::CookieStructTable& Reply_GetCookieList::cookies(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.cookies)
-  return _internal_cookies(index);
+inline const ::protobuf::mozilla::net::CookieStructTable& Reply_GetCookieList::a_cookies(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.a_cookies)
+  return _internal_a_cookies(index);
 }
-inline ::protobuf::mozilla::net::CookieStructTable* Reply_GetCookieList::_internal_add_cookies() {
-  return _impl_.cookies_.Add();
+inline ::protobuf::mozilla::net::CookieStructTable* Reply_GetCookieList::_internal_add_a_cookies() {
+  return _impl_.a_cookies_.Add();
 }
-inline ::protobuf::mozilla::net::CookieStructTable* Reply_GetCookieList::add_cookies() {
-  ::protobuf::mozilla::net::CookieStructTable* _add = _internal_add_cookies();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.cookies)
+inline ::protobuf::mozilla::net::CookieStructTable* Reply_GetCookieList::add_a_cookies() {
+  ::protobuf::mozilla::net::CookieStructTable* _add = _internal_add_a_cookies();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.a_cookies)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >&
-Reply_GetCookieList::cookies() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.cookies)
-  return _impl_.cookies_;
+Reply_GetCookieList::a_cookies() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Reply_GetCookieList.a_cookies)
+  return _impl_.a_cookies_;
 }
 
 // -------------------------------------------------------------------
@@ -2581,82 +2581,82 @@ Reply_GetCookieList::cookies() const {
 
 // Msg_TrackCookiesLoad
 
-// repeated .protobuf.mozilla.net.CookieStructTable cookiesListTable = 1;
-inline int Msg_TrackCookiesLoad::_internal_cookieslisttable_size() const {
-  return _impl_.cookieslisttable_.size();
+// repeated .protobuf.mozilla.net.CookieStructTable a_cookiesListTable = 1;
+inline int Msg_TrackCookiesLoad::_internal_a_cookieslisttable_size() const {
+  return _impl_.a_cookieslisttable_.size();
 }
-inline int Msg_TrackCookiesLoad::cookieslisttable_size() const {
-  return _internal_cookieslisttable_size();
+inline int Msg_TrackCookiesLoad::a_cookieslisttable_size() const {
+  return _internal_a_cookieslisttable_size();
 }
-inline ::protobuf::mozilla::net::CookieStructTable* Msg_TrackCookiesLoad::mutable_cookieslisttable(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.cookiesListTable)
-  return _impl_.cookieslisttable_.Mutable(index);
+inline ::protobuf::mozilla::net::CookieStructTable* Msg_TrackCookiesLoad::mutable_a_cookieslisttable(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.a_cookiesListTable)
+  return _impl_.a_cookieslisttable_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >*
-Msg_TrackCookiesLoad::mutable_cookieslisttable() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.cookiesListTable)
-  return &_impl_.cookieslisttable_;
+Msg_TrackCookiesLoad::mutable_a_cookieslisttable() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.a_cookiesListTable)
+  return &_impl_.a_cookieslisttable_;
 }
-inline const ::protobuf::mozilla::net::CookieStructTable& Msg_TrackCookiesLoad::_internal_cookieslisttable(int index) const {
-  return _impl_.cookieslisttable_.Get(index);
+inline const ::protobuf::mozilla::net::CookieStructTable& Msg_TrackCookiesLoad::_internal_a_cookieslisttable(int index) const {
+  return _impl_.a_cookieslisttable_.Get(index);
 }
-inline const ::protobuf::mozilla::net::CookieStructTable& Msg_TrackCookiesLoad::cookieslisttable(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.cookiesListTable)
-  return _internal_cookieslisttable(index);
+inline const ::protobuf::mozilla::net::CookieStructTable& Msg_TrackCookiesLoad::a_cookieslisttable(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.a_cookiesListTable)
+  return _internal_a_cookieslisttable(index);
 }
-inline ::protobuf::mozilla::net::CookieStructTable* Msg_TrackCookiesLoad::_internal_add_cookieslisttable() {
-  return _impl_.cookieslisttable_.Add();
+inline ::protobuf::mozilla::net::CookieStructTable* Msg_TrackCookiesLoad::_internal_add_a_cookieslisttable() {
+  return _impl_.a_cookieslisttable_.Add();
 }
-inline ::protobuf::mozilla::net::CookieStructTable* Msg_TrackCookiesLoad::add_cookieslisttable() {
-  ::protobuf::mozilla::net::CookieStructTable* _add = _internal_add_cookieslisttable();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.cookiesListTable)
+inline ::protobuf::mozilla::net::CookieStructTable* Msg_TrackCookiesLoad::add_a_cookieslisttable() {
+  ::protobuf::mozilla::net::CookieStructTable* _add = _internal_add_a_cookieslisttable();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.a_cookiesListTable)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStructTable >&
-Msg_TrackCookiesLoad::cookieslisttable() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.cookiesListTable)
-  return _impl_.cookieslisttable_;
+Msg_TrackCookiesLoad::a_cookieslisttable() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_TrackCookiesLoad.a_cookiesListTable)
+  return _impl_.a_cookieslisttable_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RemoveCookie
 
-// required .protobuf.mozilla.net.CookieStruct cookie = 1;
-inline bool Msg_RemoveCookie::_internal_has_cookie() const {
+// required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+inline bool Msg_RemoveCookie::_internal_has_a_cookie() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cookie_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cookie_ != nullptr);
   return value;
 }
-inline bool Msg_RemoveCookie::has_cookie() const {
-  return _internal_has_cookie();
+inline bool Msg_RemoveCookie::has_a_cookie() const {
+  return _internal_has_a_cookie();
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveCookie::_internal_cookie() const {
-  const ::protobuf::mozilla::net::CookieStruct* p = _impl_.cookie_;
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveCookie::_internal_a_cookie() const {
+  const ::protobuf::mozilla::net::CookieStruct* p = _impl_.a_cookie_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::CookieStruct&>(
       ::protobuf::mozilla::net::_CookieStruct_default_instance_);
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveCookie::cookie() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.cookie)
-  return _internal_cookie();
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveCookie::a_cookie() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_cookie)
+  return _internal_a_cookie();
 }
-inline void Msg_RemoveCookie::unsafe_arena_set_allocated_cookie(
-    ::protobuf::mozilla::net::CookieStruct* cookie) {
+inline void Msg_RemoveCookie::unsafe_arena_set_allocated_a_cookie(
+    ::protobuf::mozilla::net::CookieStruct* a_cookie) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookie_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookie_);
   }
-  _impl_.cookie_ = cookie;
-  if (cookie) {
+  _impl_.a_cookie_ = a_cookie;
+  if (a_cookie) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.cookie)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_cookie)
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::release_cookie() {
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::release_a_cookie() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.cookie_;
-  _impl_.cookie_ = nullptr;
+  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.a_cookie_;
+  _impl_.a_cookie_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2668,297 +2668,297 @@ inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::release_cookie(
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::unsafe_arena_release_cookie() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.cookie)
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::unsafe_arena_release_a_cookie() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_cookie)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.cookie_;
-  _impl_.cookie_ = nullptr;
+  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.a_cookie_;
+  _impl_.a_cookie_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::_internal_mutable_cookie() {
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::_internal_mutable_a_cookie() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.cookie_ == nullptr) {
+  if (_impl_.a_cookie_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::CookieStruct>(GetArenaForAllocation());
-    _impl_.cookie_ = p;
+    _impl_.a_cookie_ = p;
   }
-  return _impl_.cookie_;
+  return _impl_.a_cookie_;
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::mutable_cookie() {
-  ::protobuf::mozilla::net::CookieStruct* _msg = _internal_mutable_cookie();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.cookie)
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveCookie::mutable_a_cookie() {
+  ::protobuf::mozilla::net::CookieStruct* _msg = _internal_mutable_a_cookie();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_cookie)
   return _msg;
 }
-inline void Msg_RemoveCookie::set_allocated_cookie(::protobuf::mozilla::net::CookieStruct* cookie) {
+inline void Msg_RemoveCookie::set_allocated_a_cookie(::protobuf::mozilla::net::CookieStruct* a_cookie) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookie_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookie_);
   }
-  if (cookie) {
+  if (a_cookie) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cookie));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cookie));
     if (message_arena != submessage_arena) {
-      cookie = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cookie, submessage_arena);
+      a_cookie = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cookie, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.cookie_ = cookie;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.cookie)
+  _impl_.a_cookie_ = a_cookie;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_cookie)
 }
 
-// required bytes attrs = 2;
-inline bool Msg_RemoveCookie::_internal_has_attrs() const {
+// required bytes a_attrs = 2;
+inline bool Msg_RemoveCookie::_internal_has_a_attrs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RemoveCookie::has_attrs() const {
-  return _internal_has_attrs();
+inline bool Msg_RemoveCookie::has_a_attrs() const {
+  return _internal_has_a_attrs();
 }
-inline void Msg_RemoveCookie::clear_attrs() {
-  _impl_.attrs_.ClearToEmpty();
+inline void Msg_RemoveCookie::clear_a_attrs() {
+  _impl_.a_attrs_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RemoveCookie::attrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.attrs)
-  return _internal_attrs();
+inline const std::string& Msg_RemoveCookie::a_attrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_attrs)
+  return _internal_a_attrs();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RemoveCookie::set_attrs(ArgT0&& arg0, ArgT... args) {
+void Msg_RemoveCookie::set_a_attrs(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.attrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.attrs)
+ _impl_.a_attrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_attrs)
 }
-inline std::string* Msg_RemoveCookie::mutable_attrs() {
-  std::string* _s = _internal_mutable_attrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.attrs)
+inline std::string* Msg_RemoveCookie::mutable_a_attrs() {
+  std::string* _s = _internal_mutable_a_attrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_attrs)
   return _s;
 }
-inline const std::string& Msg_RemoveCookie::_internal_attrs() const {
-  return _impl_.attrs_.Get();
+inline const std::string& Msg_RemoveCookie::_internal_a_attrs() const {
+  return _impl_.a_attrs_.Get();
 }
-inline void Msg_RemoveCookie::_internal_set_attrs(const std::string& value) {
+inline void Msg_RemoveCookie::_internal_set_a_attrs(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.attrs_.Set(value, GetArenaForAllocation());
+  _impl_.a_attrs_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RemoveCookie::_internal_mutable_attrs() {
+inline std::string* Msg_RemoveCookie::_internal_mutable_a_attrs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.attrs_.Mutable(GetArenaForAllocation());
+  return _impl_.a_attrs_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RemoveCookie::release_attrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.attrs)
-  if (!_internal_has_attrs()) {
+inline std::string* Msg_RemoveCookie::release_a_attrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_attrs)
+  if (!_internal_has_a_attrs()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.attrs_.Release();
+  auto* p = _impl_.a_attrs_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.attrs_.IsDefault()) {
-    _impl_.attrs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_attrs_.IsDefault()) {
+    _impl_.a_attrs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RemoveCookie::set_allocated_attrs(std::string* attrs) {
-  if (attrs != nullptr) {
+inline void Msg_RemoveCookie::set_allocated_a_attrs(std::string* a_attrs) {
+  if (a_attrs != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.attrs_.SetAllocated(attrs, GetArenaForAllocation());
+  _impl_.a_attrs_.SetAllocated(a_attrs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.attrs_.IsDefault()) {
-    _impl_.attrs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_attrs_.IsDefault()) {
+    _impl_.a_attrs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.attrs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_attrs)
 }
 
-// optional bytes operationId = 3;
-inline bool Msg_RemoveCookie::_internal_has_operationid() const {
+// optional bytes a_operationId = 3;
+inline bool Msg_RemoveCookie::_internal_has_a_operationid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RemoveCookie::has_operationid() const {
-  return _internal_has_operationid();
+inline bool Msg_RemoveCookie::has_a_operationid() const {
+  return _internal_has_a_operationid();
 }
-inline void Msg_RemoveCookie::clear_operationid() {
-  _impl_.operationid_.ClearToEmpty();
+inline void Msg_RemoveCookie::clear_a_operationid() {
+  _impl_.a_operationid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_RemoveCookie::operationid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.operationId)
-  return _internal_operationid();
+inline const std::string& Msg_RemoveCookie::a_operationid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_operationId)
+  return _internal_a_operationid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RemoveCookie::set_operationid(ArgT0&& arg0, ArgT... args) {
+void Msg_RemoveCookie::set_a_operationid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.operationid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.operationId)
+ _impl_.a_operationid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_operationId)
 }
-inline std::string* Msg_RemoveCookie::mutable_operationid() {
-  std::string* _s = _internal_mutable_operationid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.operationId)
+inline std::string* Msg_RemoveCookie::mutable_a_operationid() {
+  std::string* _s = _internal_mutable_a_operationid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_operationId)
   return _s;
 }
-inline const std::string& Msg_RemoveCookie::_internal_operationid() const {
-  return _impl_.operationid_.Get();
+inline const std::string& Msg_RemoveCookie::_internal_a_operationid() const {
+  return _impl_.a_operationid_.Get();
 }
-inline void Msg_RemoveCookie::_internal_set_operationid(const std::string& value) {
+inline void Msg_RemoveCookie::_internal_set_a_operationid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.operationid_.Set(value, GetArenaForAllocation());
+  _impl_.a_operationid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RemoveCookie::_internal_mutable_operationid() {
+inline std::string* Msg_RemoveCookie::_internal_mutable_a_operationid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.operationid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_operationid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RemoveCookie::release_operationid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.operationId)
-  if (!_internal_has_operationid()) {
+inline std::string* Msg_RemoveCookie::release_a_operationid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_operationId)
+  if (!_internal_has_a_operationid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.operationid_.Release();
+  auto* p = _impl_.a_operationid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.operationid_.IsDefault()) {
-    _impl_.operationid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_operationid_.IsDefault()) {
+    _impl_.a_operationid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RemoveCookie::set_allocated_operationid(std::string* operationid) {
-  if (operationid != nullptr) {
+inline void Msg_RemoveCookie::set_allocated_a_operationid(std::string* a_operationid) {
+  if (a_operationid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.operationid_.SetAllocated(operationid, GetArenaForAllocation());
+  _impl_.a_operationid_.SetAllocated(a_operationid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.operationid_.IsDefault()) {
-    _impl_.operationid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_operationid_.IsDefault()) {
+    _impl_.a_operationid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.operationId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_RemoveCookie.a_operationId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RemoveBatchDeletedCookies
 
-// repeated .protobuf.mozilla.net.CookieStruct cookiesList = 1;
-inline int Msg_RemoveBatchDeletedCookies::_internal_cookieslist_size() const {
-  return _impl_.cookieslist_.size();
+// repeated .protobuf.mozilla.net.CookieStruct a_cookiesList = 1;
+inline int Msg_RemoveBatchDeletedCookies::_internal_a_cookieslist_size() const {
+  return _impl_.a_cookieslist_.size();
 }
-inline int Msg_RemoveBatchDeletedCookies::cookieslist_size() const {
-  return _internal_cookieslist_size();
+inline int Msg_RemoveBatchDeletedCookies::a_cookieslist_size() const {
+  return _internal_a_cookieslist_size();
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveBatchDeletedCookies::mutable_cookieslist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.cookiesList)
-  return _impl_.cookieslist_.Mutable(index);
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveBatchDeletedCookies::mutable_a_cookieslist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_cookiesList)
+  return _impl_.a_cookieslist_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >*
-Msg_RemoveBatchDeletedCookies::mutable_cookieslist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.cookiesList)
-  return &_impl_.cookieslist_;
+Msg_RemoveBatchDeletedCookies::mutable_a_cookieslist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_cookiesList)
+  return &_impl_.a_cookieslist_;
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveBatchDeletedCookies::_internal_cookieslist(int index) const {
-  return _impl_.cookieslist_.Get(index);
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveBatchDeletedCookies::_internal_a_cookieslist(int index) const {
+  return _impl_.a_cookieslist_.Get(index);
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveBatchDeletedCookies::cookieslist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.cookiesList)
-  return _internal_cookieslist(index);
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_RemoveBatchDeletedCookies::a_cookieslist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_cookiesList)
+  return _internal_a_cookieslist(index);
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveBatchDeletedCookies::_internal_add_cookieslist() {
-  return _impl_.cookieslist_.Add();
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveBatchDeletedCookies::_internal_add_a_cookieslist() {
+  return _impl_.a_cookieslist_.Add();
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveBatchDeletedCookies::add_cookieslist() {
-  ::protobuf::mozilla::net::CookieStruct* _add = _internal_add_cookieslist();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.cookiesList)
+inline ::protobuf::mozilla::net::CookieStruct* Msg_RemoveBatchDeletedCookies::add_a_cookieslist() {
+  ::protobuf::mozilla::net::CookieStruct* _add = _internal_add_a_cookieslist();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_cookiesList)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
-Msg_RemoveBatchDeletedCookies::cookieslist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.cookiesList)
-  return _impl_.cookieslist_;
+Msg_RemoveBatchDeletedCookies::a_cookieslist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_cookiesList)
+  return _impl_.a_cookieslist_;
 }
 
-// repeated bytes attrsList = 2;
-inline int Msg_RemoveBatchDeletedCookies::_internal_attrslist_size() const {
-  return _impl_.attrslist_.size();
+// repeated bytes a_attrsList = 2;
+inline int Msg_RemoveBatchDeletedCookies::_internal_a_attrslist_size() const {
+  return _impl_.a_attrslist_.size();
 }
-inline int Msg_RemoveBatchDeletedCookies::attrslist_size() const {
-  return _internal_attrslist_size();
+inline int Msg_RemoveBatchDeletedCookies::a_attrslist_size() const {
+  return _internal_a_attrslist_size();
 }
-inline void Msg_RemoveBatchDeletedCookies::clear_attrslist() {
-  _impl_.attrslist_.Clear();
+inline void Msg_RemoveBatchDeletedCookies::clear_a_attrslist() {
+  _impl_.a_attrslist_.Clear();
 }
-inline std::string* Msg_RemoveBatchDeletedCookies::add_attrslist() {
-  std::string* _s = _internal_add_attrslist();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+inline std::string* Msg_RemoveBatchDeletedCookies::add_a_attrslist() {
+  std::string* _s = _internal_add_a_attrslist();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
   return _s;
 }
-inline const std::string& Msg_RemoveBatchDeletedCookies::_internal_attrslist(int index) const {
-  return _impl_.attrslist_.Get(index);
+inline const std::string& Msg_RemoveBatchDeletedCookies::_internal_a_attrslist(int index) const {
+  return _impl_.a_attrslist_.Get(index);
 }
-inline const std::string& Msg_RemoveBatchDeletedCookies::attrslist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
-  return _internal_attrslist(index);
+inline const std::string& Msg_RemoveBatchDeletedCookies::a_attrslist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
+  return _internal_a_attrslist(index);
 }
-inline std::string* Msg_RemoveBatchDeletedCookies::mutable_attrslist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
-  return _impl_.attrslist_.Mutable(index);
+inline std::string* Msg_RemoveBatchDeletedCookies::mutable_a_attrslist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
+  return _impl_.a_attrslist_.Mutable(index);
 }
-inline void Msg_RemoveBatchDeletedCookies::set_attrslist(int index, const std::string& value) {
-  _impl_.attrslist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+inline void Msg_RemoveBatchDeletedCookies::set_a_attrslist(int index, const std::string& value) {
+  _impl_.a_attrslist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline void Msg_RemoveBatchDeletedCookies::set_attrslist(int index, std::string&& value) {
-  _impl_.attrslist_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+inline void Msg_RemoveBatchDeletedCookies::set_a_attrslist(int index, std::string&& value) {
+  _impl_.a_attrslist_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline void Msg_RemoveBatchDeletedCookies::set_attrslist(int index, const char* value) {
+inline void Msg_RemoveBatchDeletedCookies::set_a_attrslist(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.attrslist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+  _impl_.a_attrslist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline void Msg_RemoveBatchDeletedCookies::set_attrslist(int index, const void* value, size_t size) {
-  _impl_.attrslist_.Mutable(index)->assign(
+inline void Msg_RemoveBatchDeletedCookies::set_a_attrslist(int index, const void* value, size_t size) {
+  _impl_.a_attrslist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline std::string* Msg_RemoveBatchDeletedCookies::_internal_add_attrslist() {
-  return _impl_.attrslist_.Add();
+inline std::string* Msg_RemoveBatchDeletedCookies::_internal_add_a_attrslist() {
+  return _impl_.a_attrslist_.Add();
 }
-inline void Msg_RemoveBatchDeletedCookies::add_attrslist(const std::string& value) {
-  _impl_.attrslist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+inline void Msg_RemoveBatchDeletedCookies::add_a_attrslist(const std::string& value) {
+  _impl_.a_attrslist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline void Msg_RemoveBatchDeletedCookies::add_attrslist(std::string&& value) {
-  _impl_.attrslist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+inline void Msg_RemoveBatchDeletedCookies::add_a_attrslist(std::string&& value) {
+  _impl_.a_attrslist_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline void Msg_RemoveBatchDeletedCookies::add_attrslist(const char* value) {
+inline void Msg_RemoveBatchDeletedCookies::add_a_attrslist(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.attrslist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+  _impl_.a_attrslist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
-inline void Msg_RemoveBatchDeletedCookies::add_attrslist(const void* value, size_t size) {
-  _impl_.attrslist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
+inline void Msg_RemoveBatchDeletedCookies::add_a_attrslist(const void* value, size_t size) {
+  _impl_.a_attrslist_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_RemoveBatchDeletedCookies::attrslist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
-  return _impl_.attrslist_;
+Msg_RemoveBatchDeletedCookies::a_attrslist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
+  return _impl_.a_attrslist_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_RemoveBatchDeletedCookies::mutable_attrslist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.attrsList)
-  return &_impl_.attrslist_;
+Msg_RemoveBatchDeletedCookies::mutable_a_attrslist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PCookieService.Msg_RemoveBatchDeletedCookies.a_attrsList)
+  return &_impl_.a_attrslist_;
 }
 
 // -------------------------------------------------------------------
@@ -2969,41 +2969,41 @@ Msg_RemoveBatchDeletedCookies::mutable_attrslist() {
 
 // Msg_AddCookie
 
-// required .protobuf.mozilla.net.CookieStruct cookie = 1;
-inline bool Msg_AddCookie::_internal_has_cookie() const {
+// required .protobuf.mozilla.net.CookieStruct a_cookie = 1;
+inline bool Msg_AddCookie::_internal_has_a_cookie() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cookie_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cookie_ != nullptr);
   return value;
 }
-inline bool Msg_AddCookie::has_cookie() const {
-  return _internal_has_cookie();
+inline bool Msg_AddCookie::has_a_cookie() const {
+  return _internal_has_a_cookie();
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_AddCookie::_internal_cookie() const {
-  const ::protobuf::mozilla::net::CookieStruct* p = _impl_.cookie_;
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_AddCookie::_internal_a_cookie() const {
+  const ::protobuf::mozilla::net::CookieStruct* p = _impl_.a_cookie_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::CookieStruct&>(
       ::protobuf::mozilla::net::_CookieStruct_default_instance_);
 }
-inline const ::protobuf::mozilla::net::CookieStruct& Msg_AddCookie::cookie() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_AddCookie.cookie)
-  return _internal_cookie();
+inline const ::protobuf::mozilla::net::CookieStruct& Msg_AddCookie::a_cookie() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_cookie)
+  return _internal_a_cookie();
 }
-inline void Msg_AddCookie::unsafe_arena_set_allocated_cookie(
-    ::protobuf::mozilla::net::CookieStruct* cookie) {
+inline void Msg_AddCookie::unsafe_arena_set_allocated_a_cookie(
+    ::protobuf::mozilla::net::CookieStruct* a_cookie) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookie_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookie_);
   }
-  _impl_.cookie_ = cookie;
-  if (cookie) {
+  _impl_.a_cookie_ = a_cookie;
+  if (a_cookie) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.cookie)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_cookie)
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::release_cookie() {
+inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::release_a_cookie() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.cookie_;
-  _impl_.cookie_ = nullptr;
+  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.a_cookie_;
+  _impl_.a_cookie_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3015,181 +3015,181 @@ inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::release_cookie() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::unsafe_arena_release_cookie() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_AddCookie.cookie)
+inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::unsafe_arena_release_a_cookie() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_cookie)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.cookie_;
-  _impl_.cookie_ = nullptr;
+  ::protobuf::mozilla::net::CookieStruct* temp = _impl_.a_cookie_;
+  _impl_.a_cookie_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::_internal_mutable_cookie() {
+inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::_internal_mutable_a_cookie() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.cookie_ == nullptr) {
+  if (_impl_.a_cookie_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::CookieStruct>(GetArenaForAllocation());
-    _impl_.cookie_ = p;
+    _impl_.a_cookie_ = p;
   }
-  return _impl_.cookie_;
+  return _impl_.a_cookie_;
 }
-inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::mutable_cookie() {
-  ::protobuf::mozilla::net::CookieStruct* _msg = _internal_mutable_cookie();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_AddCookie.cookie)
+inline ::protobuf::mozilla::net::CookieStruct* Msg_AddCookie::mutable_a_cookie() {
+  ::protobuf::mozilla::net::CookieStruct* _msg = _internal_mutable_a_cookie();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_cookie)
   return _msg;
 }
-inline void Msg_AddCookie::set_allocated_cookie(::protobuf::mozilla::net::CookieStruct* cookie) {
+inline void Msg_AddCookie::set_allocated_a_cookie(::protobuf::mozilla::net::CookieStruct* a_cookie) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookie_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookie_);
   }
-  if (cookie) {
+  if (a_cookie) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cookie));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cookie));
     if (message_arena != submessage_arena) {
-      cookie = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cookie, submessage_arena);
+      a_cookie = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cookie, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.cookie_ = cookie;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.cookie)
+  _impl_.a_cookie_ = a_cookie;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_cookie)
 }
 
-// required bytes attrs = 2;
-inline bool Msg_AddCookie::_internal_has_attrs() const {
+// required bytes a_attrs = 2;
+inline bool Msg_AddCookie::_internal_has_a_attrs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AddCookie::has_attrs() const {
-  return _internal_has_attrs();
+inline bool Msg_AddCookie::has_a_attrs() const {
+  return _internal_has_a_attrs();
 }
-inline void Msg_AddCookie::clear_attrs() {
-  _impl_.attrs_.ClearToEmpty();
+inline void Msg_AddCookie::clear_a_attrs() {
+  _impl_.a_attrs_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AddCookie::attrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_AddCookie.attrs)
-  return _internal_attrs();
+inline const std::string& Msg_AddCookie::a_attrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_attrs)
+  return _internal_a_attrs();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddCookie::set_attrs(ArgT0&& arg0, ArgT... args) {
+void Msg_AddCookie::set_a_attrs(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.attrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_AddCookie.attrs)
+ _impl_.a_attrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_attrs)
 }
-inline std::string* Msg_AddCookie::mutable_attrs() {
-  std::string* _s = _internal_mutable_attrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_AddCookie.attrs)
+inline std::string* Msg_AddCookie::mutable_a_attrs() {
+  std::string* _s = _internal_mutable_a_attrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_attrs)
   return _s;
 }
-inline const std::string& Msg_AddCookie::_internal_attrs() const {
-  return _impl_.attrs_.Get();
+inline const std::string& Msg_AddCookie::_internal_a_attrs() const {
+  return _impl_.a_attrs_.Get();
 }
-inline void Msg_AddCookie::_internal_set_attrs(const std::string& value) {
+inline void Msg_AddCookie::_internal_set_a_attrs(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.attrs_.Set(value, GetArenaForAllocation());
+  _impl_.a_attrs_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddCookie::_internal_mutable_attrs() {
+inline std::string* Msg_AddCookie::_internal_mutable_a_attrs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.attrs_.Mutable(GetArenaForAllocation());
+  return _impl_.a_attrs_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddCookie::release_attrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_AddCookie.attrs)
-  if (!_internal_has_attrs()) {
+inline std::string* Msg_AddCookie::release_a_attrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_attrs)
+  if (!_internal_has_a_attrs()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.attrs_.Release();
+  auto* p = _impl_.a_attrs_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.attrs_.IsDefault()) {
-    _impl_.attrs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_attrs_.IsDefault()) {
+    _impl_.a_attrs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddCookie::set_allocated_attrs(std::string* attrs) {
-  if (attrs != nullptr) {
+inline void Msg_AddCookie::set_allocated_a_attrs(std::string* a_attrs) {
+  if (a_attrs != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.attrs_.SetAllocated(attrs, GetArenaForAllocation());
+  _impl_.a_attrs_.SetAllocated(a_attrs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.attrs_.IsDefault()) {
-    _impl_.attrs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_attrs_.IsDefault()) {
+    _impl_.a_attrs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.attrs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_attrs)
 }
 
-// optional bytes operationId = 3;
-inline bool Msg_AddCookie::_internal_has_operationid() const {
+// optional bytes a_operationId = 3;
+inline bool Msg_AddCookie::_internal_has_a_operationid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AddCookie::has_operationid() const {
-  return _internal_has_operationid();
+inline bool Msg_AddCookie::has_a_operationid() const {
+  return _internal_has_a_operationid();
 }
-inline void Msg_AddCookie::clear_operationid() {
-  _impl_.operationid_.ClearToEmpty();
+inline void Msg_AddCookie::clear_a_operationid() {
+  _impl_.a_operationid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_AddCookie::operationid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_AddCookie.operationId)
-  return _internal_operationid();
+inline const std::string& Msg_AddCookie::a_operationid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_operationId)
+  return _internal_a_operationid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddCookie::set_operationid(ArgT0&& arg0, ArgT... args) {
+void Msg_AddCookie::set_a_operationid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.operationid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_AddCookie.operationId)
+ _impl_.a_operationid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_operationId)
 }
-inline std::string* Msg_AddCookie::mutable_operationid() {
-  std::string* _s = _internal_mutable_operationid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_AddCookie.operationId)
+inline std::string* Msg_AddCookie::mutable_a_operationid() {
+  std::string* _s = _internal_mutable_a_operationid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_operationId)
   return _s;
 }
-inline const std::string& Msg_AddCookie::_internal_operationid() const {
-  return _impl_.operationid_.Get();
+inline const std::string& Msg_AddCookie::_internal_a_operationid() const {
+  return _impl_.a_operationid_.Get();
 }
-inline void Msg_AddCookie::_internal_set_operationid(const std::string& value) {
+inline void Msg_AddCookie::_internal_set_a_operationid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.operationid_.Set(value, GetArenaForAllocation());
+  _impl_.a_operationid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddCookie::_internal_mutable_operationid() {
+inline std::string* Msg_AddCookie::_internal_mutable_a_operationid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.operationid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_operationid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddCookie::release_operationid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_AddCookie.operationId)
-  if (!_internal_has_operationid()) {
+inline std::string* Msg_AddCookie::release_a_operationid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_operationId)
+  if (!_internal_has_a_operationid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.operationid_.Release();
+  auto* p = _impl_.a_operationid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.operationid_.IsDefault()) {
-    _impl_.operationid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_operationid_.IsDefault()) {
+    _impl_.a_operationid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddCookie::set_allocated_operationid(std::string* operationid) {
-  if (operationid != nullptr) {
+inline void Msg_AddCookie::set_allocated_a_operationid(std::string* a_operationid) {
+  if (a_operationid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.operationid_.SetAllocated(operationid, GetArenaForAllocation());
+  _impl_.a_operationid_.SetAllocated(a_operationid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.operationid_.IsDefault()) {
-    _impl_.operationid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_operationid_.IsDefault()) {
+    _impl_.a_operationid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.operationId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_AddCookie.a_operationId)
 }
 
 #ifdef __GNUC__

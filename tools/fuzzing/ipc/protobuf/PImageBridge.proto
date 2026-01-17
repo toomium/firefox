@@ -19,34 +19,34 @@ import "ProtocolTypes.proto";
 
 // Message declarations
 message Msg_ParentAsyncMessages {
-  repeated protobuf.mozilla.layers.AsyncParentMessageData aMessages = 1;
+  repeated protobuf.mozilla.layers.AsyncParentMessageData a_aMessages = 1;
 }
 
 message Msg_DidComposite {
-  repeated protobuf.mozilla.layers.ImageCompositeNotification aNotifications = 1;
+  repeated protobuf.mozilla.layers.ImageCompositeNotification a_aNotifications = 1;
 }
 
 message Msg_ReportFramesDropped {
-  required bytes aHandle = 1;
-  required uint32 aFrames = 2;
+  required bytes a_aHandle = 1;
+  required uint32 a_aFrames = 2;
 }
 
 message Msg_Update {
-  repeated protobuf.mozilla.layers.CompositableOperation ops = 1;
-  repeated protobuf.mozilla.layers.OpDestroy toDestroy = 2;
-  required uint64 fwdTransactionId = 3;
+  repeated protobuf.mozilla.layers.CompositableOperation a_ops = 1;
+  repeated protobuf.mozilla.layers.OpDestroy a_toDestroy = 2;
+  required uint64 a_fwdTransactionId = 3;
 }
 
 message Msg_WillClose {
 }
 
 message Msg_PTextureConstructor {
-  required protobuf.mozilla.layers.SurfaceDescriptor aSharedData = 1;
-  required protobuf.mozilla.layers.ReadLockDescriptor aReadLock = 2;
-  required bytes aBackend = 3;
-  required bytes aTextureFlags = 4;
-  required uint64 aSerial = 5;
-  required bytes aExternalImageId = 6;
+  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
+  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
+  required bytes a_aBackend = 3;
+  required bytes a_aTextureFlags = 4;
+  required uint64 a_aSerial = 5;
+  required bytes a_aExternalImageId = 6;
 }
 
 message Reply_PTextureConstructor {
@@ -59,15 +59,15 @@ message Reply_PMediaSystemResourceManagerConstructor {
 }
 
 message Msg_NewCompositable {
-  required bytes aHandle = 1;
-  required bytes aInfo = 2;
+  required bytes a_aHandle = 1;
+  required bytes a_aInfo = 2;
 }
 
 message Reply_NewCompositable {
 }
 
 message Msg_ReleaseCompositable {
-  required bytes aHandle = 1;
+  required bytes a_aHandle = 1;
 }
 
 // Parameter mappings stats:

@@ -192,24 +192,24 @@ class Msg_OnStartRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntityIDFieldNumber = 1,
+    kAEntityIDFieldNumber = 1,
   };
-  // required bytes entityID = 1;
-  bool has_entityid() const;
+  // required bytes a_entityID = 1;
+  bool has_a_entityid() const;
   private:
-  bool _internal_has_entityid() const;
+  bool _internal_has_a_entityid() const;
   public:
-  void clear_entityid();
-  const std::string& entityid() const;
+  void clear_a_entityid();
+  const std::string& a_entityid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_entityid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_entityid();
-  PROTOBUF_NODISCARD std::string* release_entityid();
-  void set_allocated_entityid(std::string* entityid);
+  void set_a_entityid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_entityid();
+  PROTOBUF_NODISCARD std::string* release_a_entityid();
+  void set_allocated_a_entityid(std::string* a_entityid);
   private:
-  const std::string& _internal_entityid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entityid(const std::string& value);
-  std::string* _internal_mutable_entityid();
+  const std::string& _internal_a_entityid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_entityid(const std::string& value);
+  std::string* _internal_mutable_a_entityid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest)
@@ -222,7 +222,7 @@ class Msg_OnStartRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entityid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entityid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExternalHelperApp_2eproto;
@@ -339,52 +339,52 @@ class Msg_OnDataAvailable final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
-    kOffsetFieldNumber = 2,
-    kCountFieldNumber = 3,
+    kADataFieldNumber = 1,
+    kAOffsetFieldNumber = 2,
+    kACountFieldNumber = 3,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
-  // required uint64 offset = 2;
-  bool has_offset() const;
+  // required uint64 a_offset = 2;
+  bool has_a_offset() const;
   private:
-  bool _internal_has_offset() const;
+  bool _internal_has_a_offset() const;
   public:
-  void clear_offset();
-  uint64_t offset() const;
-  void set_offset(uint64_t value);
+  void clear_a_offset();
+  uint64_t a_offset() const;
+  void set_a_offset(uint64_t value);
   private:
-  uint64_t _internal_offset() const;
-  void _internal_set_offset(uint64_t value);
+  uint64_t _internal_a_offset() const;
+  void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 count = 3;
-  bool has_count() const;
+  // required uint32 a_count = 3;
+  bool has_a_count() const;
   private:
-  bool _internal_has_count() const;
+  bool _internal_has_a_count() const;
   public:
-  void clear_count();
-  uint32_t count() const;
-  void set_count(uint32_t value);
+  void clear_a_count();
+  uint32_t a_count() const;
+  void set_a_count(uint32_t value);
   private:
-  uint32_t _internal_count() const;
-  void _internal_set_count(uint32_t value);
+  uint32_t _internal_a_count() const;
+  void _internal_set_a_count(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable)
@@ -400,9 +400,9 @@ class Msg_OnDataAvailable final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
-    uint64_t offset_;
-    uint32_t count_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    uint64_t a_offset_;
+    uint32_t a_count_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExternalHelperApp_2eproto;
@@ -519,24 +519,24 @@ class Msg_OnStopRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCodeFieldNumber = 1,
+    kACodeFieldNumber = 1,
   };
-  // required bytes code = 1;
-  bool has_code() const;
+  // required bytes a_code = 1;
+  bool has_a_code() const;
   private:
-  bool _internal_has_code() const;
+  bool _internal_has_a_code() const;
   public:
-  void clear_code();
-  const std::string& code() const;
+  void clear_a_code();
+  const std::string& a_code() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_code(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_code();
-  PROTOBUF_NODISCARD std::string* release_code();
-  void set_allocated_code(std::string* code);
+  void set_a_code(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_code();
+  PROTOBUF_NODISCARD std::string* release_a_code();
+  void set_allocated_a_code(std::string* a_code);
   private:
-  const std::string& _internal_code() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_code(const std::string& value);
-  std::string* _internal_mutable_code();
+  const std::string& _internal_a_code() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_code(const std::string& value);
+  std::string* _internal_mutable_a_code();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest)
@@ -549,7 +549,7 @@ class Msg_OnStopRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr code_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_code_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExternalHelperApp_2eproto;
@@ -666,24 +666,24 @@ class Msg_Cancel final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStatusFieldNumber = 1,
+    kAAStatusFieldNumber = 1,
   };
-  // required bytes aStatus = 1;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel)
@@ -696,7 +696,7 @@ class Msg_Cancel final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExternalHelperApp_2eproto;
@@ -960,344 +960,344 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnStartRequest
 
-// required bytes entityID = 1;
-inline bool Msg_OnStartRequest::_internal_has_entityid() const {
+// required bytes a_entityID = 1;
+inline bool Msg_OnStartRequest::_internal_has_a_entityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnStartRequest::has_entityid() const {
-  return _internal_has_entityid();
+inline bool Msg_OnStartRequest::has_a_entityid() const {
+  return _internal_has_a_entityid();
 }
-inline void Msg_OnStartRequest::clear_entityid() {
-  _impl_.entityid_.ClearToEmpty();
+inline void Msg_OnStartRequest::clear_a_entityid() {
+  _impl_.a_entityid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnStartRequest::entityid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.entityID)
-  return _internal_entityid();
+inline const std::string& Msg_OnStartRequest::a_entityid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.a_entityID)
+  return _internal_a_entityid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnStartRequest::set_entityid(ArgT0&& arg0, ArgT... args) {
+void Msg_OnStartRequest::set_a_entityid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.entityID)
+ _impl_.a_entityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.a_entityID)
 }
-inline std::string* Msg_OnStartRequest::mutable_entityid() {
-  std::string* _s = _internal_mutable_entityid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.entityID)
+inline std::string* Msg_OnStartRequest::mutable_a_entityid() {
+  std::string* _s = _internal_mutable_a_entityid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.a_entityID)
   return _s;
 }
-inline const std::string& Msg_OnStartRequest::_internal_entityid() const {
-  return _impl_.entityid_.Get();
+inline const std::string& Msg_OnStartRequest::_internal_a_entityid() const {
+  return _impl_.a_entityid_.Get();
 }
-inline void Msg_OnStartRequest::_internal_set_entityid(const std::string& value) {
+inline void Msg_OnStartRequest::_internal_set_a_entityid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.entityid_.Set(value, GetArenaForAllocation());
+  _impl_.a_entityid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::_internal_mutable_entityid() {
+inline std::string* Msg_OnStartRequest::_internal_mutable_a_entityid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.entityid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_entityid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::release_entityid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.entityID)
-  if (!_internal_has_entityid()) {
+inline std::string* Msg_OnStartRequest::release_a_entityid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.a_entityID)
+  if (!_internal_has_a_entityid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.entityid_.Release();
+  auto* p = _impl_.a_entityid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entityid_.IsDefault()) {
-    _impl_.entityid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entityid_.IsDefault()) {
+    _impl_.a_entityid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnStartRequest::set_allocated_entityid(std::string* entityid) {
-  if (entityid != nullptr) {
+inline void Msg_OnStartRequest::set_allocated_a_entityid(std::string* a_entityid) {
+  if (a_entityid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.entityid_.SetAllocated(entityid, GetArenaForAllocation());
+  _impl_.a_entityid_.SetAllocated(a_entityid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entityid_.IsDefault()) {
-    _impl_.entityid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entityid_.IsDefault()) {
+    _impl_.a_entityid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.entityID)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStartRequest.a_entityID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnDataAvailable
 
-// required bytes data = 1;
-inline bool Msg_OnDataAvailable::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool Msg_OnDataAvailable::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_data() const {
-  return _internal_has_data();
+inline bool Msg_OnDataAvailable::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void Msg_OnDataAvailable::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void Msg_OnDataAvailable::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnDataAvailable::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.data)
-  return _internal_data();
+inline const std::string& Msg_OnDataAvailable::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnDataAvailable::set_data(ArgT0&& arg0, ArgT... args) {
+void Msg_OnDataAvailable::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_data)
 }
-inline std::string* Msg_OnDataAvailable::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.data)
+inline std::string* Msg_OnDataAvailable::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_data)
   return _s;
 }
-inline const std::string& Msg_OnDataAvailable::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& Msg_OnDataAvailable::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void Msg_OnDataAvailable::_internal_set_data(const std::string& value) {
+inline void Msg_OnDataAvailable::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnDataAvailable::_internal_mutable_data() {
+inline std::string* Msg_OnDataAvailable::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnDataAvailable::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.data)
-  if (!_internal_has_data()) {
+inline std::string* Msg_OnDataAvailable::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnDataAvailable::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void Msg_OnDataAvailable::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_data)
 }
 
-// required uint64 offset = 2;
-inline bool Msg_OnDataAvailable::_internal_has_offset() const {
+// required uint64 a_offset = 2;
+inline bool Msg_OnDataAvailable::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_offset() const {
-  return _internal_has_offset();
+inline bool Msg_OnDataAvailable::has_a_offset() const {
+  return _internal_has_a_offset();
 }
-inline void Msg_OnDataAvailable::clear_offset() {
-  _impl_.offset_ = uint64_t{0u};
+inline void Msg_OnDataAvailable::clear_a_offset() {
+  _impl_.a_offset_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_OnDataAvailable::_internal_offset() const {
-  return _impl_.offset_;
+inline uint64_t Msg_OnDataAvailable::_internal_a_offset() const {
+  return _impl_.a_offset_;
 }
-inline uint64_t Msg_OnDataAvailable::offset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.offset)
-  return _internal_offset();
+inline uint64_t Msg_OnDataAvailable::a_offset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_offset)
+  return _internal_a_offset();
 }
-inline void Msg_OnDataAvailable::_internal_set_offset(uint64_t value) {
+inline void Msg_OnDataAvailable::_internal_set_a_offset(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.offset_ = value;
+  _impl_.a_offset_ = value;
 }
-inline void Msg_OnDataAvailable::set_offset(uint64_t value) {
-  _internal_set_offset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.offset)
+inline void Msg_OnDataAvailable::set_a_offset(uint64_t value) {
+  _internal_set_a_offset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_offset)
 }
 
-// required uint32 count = 3;
-inline bool Msg_OnDataAvailable::_internal_has_count() const {
+// required uint32 a_count = 3;
+inline bool Msg_OnDataAvailable::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_count() const {
-  return _internal_has_count();
+inline bool Msg_OnDataAvailable::has_a_count() const {
+  return _internal_has_a_count();
 }
-inline void Msg_OnDataAvailable::clear_count() {
-  _impl_.count_ = 0u;
+inline void Msg_OnDataAvailable::clear_a_count() {
+  _impl_.a_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_OnDataAvailable::_internal_count() const {
-  return _impl_.count_;
+inline uint32_t Msg_OnDataAvailable::_internal_a_count() const {
+  return _impl_.a_count_;
 }
-inline uint32_t Msg_OnDataAvailable::count() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.count)
-  return _internal_count();
+inline uint32_t Msg_OnDataAvailable::a_count() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_count)
+  return _internal_a_count();
 }
-inline void Msg_OnDataAvailable::_internal_set_count(uint32_t value) {
+inline void Msg_OnDataAvailable::_internal_set_a_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.count_ = value;
+  _impl_.a_count_ = value;
 }
-inline void Msg_OnDataAvailable::set_count(uint32_t value) {
-  _internal_set_count(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.count)
+inline void Msg_OnDataAvailable::set_a_count(uint32_t value) {
+  _internal_set_a_count(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnDataAvailable.a_count)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnStopRequest
 
-// required bytes code = 1;
-inline bool Msg_OnStopRequest::_internal_has_code() const {
+// required bytes a_code = 1;
+inline bool Msg_OnStopRequest::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnStopRequest::has_code() const {
-  return _internal_has_code();
+inline bool Msg_OnStopRequest::has_a_code() const {
+  return _internal_has_a_code();
 }
-inline void Msg_OnStopRequest::clear_code() {
-  _impl_.code_.ClearToEmpty();
+inline void Msg_OnStopRequest::clear_a_code() {
+  _impl_.a_code_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnStopRequest::code() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.code)
-  return _internal_code();
+inline const std::string& Msg_OnStopRequest::a_code() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.a_code)
+  return _internal_a_code();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnStopRequest::set_code(ArgT0&& arg0, ArgT... args) {
+void Msg_OnStopRequest::set_a_code(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.code_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.code)
+ _impl_.a_code_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.a_code)
 }
-inline std::string* Msg_OnStopRequest::mutable_code() {
-  std::string* _s = _internal_mutable_code();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.code)
+inline std::string* Msg_OnStopRequest::mutable_a_code() {
+  std::string* _s = _internal_mutable_a_code();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.a_code)
   return _s;
 }
-inline const std::string& Msg_OnStopRequest::_internal_code() const {
-  return _impl_.code_.Get();
+inline const std::string& Msg_OnStopRequest::_internal_a_code() const {
+  return _impl_.a_code_.Get();
 }
-inline void Msg_OnStopRequest::_internal_set_code(const std::string& value) {
+inline void Msg_OnStopRequest::_internal_set_a_code(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.code_.Set(value, GetArenaForAllocation());
+  _impl_.a_code_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnStopRequest::_internal_mutable_code() {
+inline std::string* Msg_OnStopRequest::_internal_mutable_a_code() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.code_.Mutable(GetArenaForAllocation());
+  return _impl_.a_code_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnStopRequest::release_code() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.code)
-  if (!_internal_has_code()) {
+inline std::string* Msg_OnStopRequest::release_a_code() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.a_code)
+  if (!_internal_has_a_code()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.code_.Release();
+  auto* p = _impl_.a_code_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.code_.IsDefault()) {
-    _impl_.code_.Set("", GetArenaForAllocation());
+  if (_impl_.a_code_.IsDefault()) {
+    _impl_.a_code_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnStopRequest::set_allocated_code(std::string* code) {
-  if (code != nullptr) {
+inline void Msg_OnStopRequest::set_allocated_a_code(std::string* a_code) {
+  if (a_code != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.code_.SetAllocated(code, GetArenaForAllocation());
+  _impl_.a_code_.SetAllocated(a_code, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.code_.IsDefault()) {
-    _impl_.code_.Set("", GetArenaForAllocation());
+  if (_impl_.a_code_.IsDefault()) {
+    _impl_.a_code_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.code)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_OnStopRequest.a_code)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Cancel
 
-// required bytes aStatus = 1;
-inline bool Msg_Cancel::_internal_has_astatus() const {
+// required bytes a_aStatus = 1;
+inline bool Msg_Cancel::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Cancel::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_Cancel::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_Cancel::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_Cancel::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Cancel::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_Cancel::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Cancel::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_Cancel::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.a_aStatus)
 }
-inline std::string* Msg_Cancel::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.aStatus)
+inline std::string* Msg_Cancel::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_Cancel::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_Cancel::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_Cancel::_internal_set_astatus(const std::string& value) {
+inline void Msg_Cancel::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::_internal_mutable_astatus() {
+inline std::string* Msg_Cancel::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_Cancel::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Cancel::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_Cancel::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PExternalHelperApp.Msg_Cancel.a_aStatus)
 }
 
 // -------------------------------------------------------------------

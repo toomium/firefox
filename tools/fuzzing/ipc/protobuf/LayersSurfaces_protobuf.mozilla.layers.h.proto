@@ -12,200 +12,200 @@ package protobuf.mozilla.layers;
 
 // Structs and unions declarations
 message SurfaceDescriptorD3D10 {
-  required bytes handle = 1;
-  optional bytes gpuProcessTextureId = 2;
-  required uint32 arrayIndex = 3;
-  required bytes format = 4;
-  required bytes size = 5;
-  required bytes colorSpace = 6;
-  required bytes colorRange = 7;
-  required bool hasKeyedMutex = 8;
-  optional bytes fencesHolderId = 9;
+  required bytes a_handle = 1;
+  optional bytes a_gpuProcessTextureId = 2;
+  required uint32 a_arrayIndex = 3;
+  required bytes a_format = 4;
+  required bytes a_size = 5;
+  required bytes a_colorSpace = 6;
+  required bytes a_colorRange = 7;
+  required bool a_hasKeyedMutex = 8;
+  optional bytes a_fencesHolderId = 9;
 }
 
 message SurfaceDescriptorDXGIYCbCr {
-  required bytes handleY = 1;
-  required bytes handleCb = 2;
-  required bytes handleCr = 3;
-  required bytes size = 4;
-  required bytes sizeY = 5;
-  required bytes sizeCbCr = 6;
-  required bytes colorDepth = 7;
-  required bytes yUVColorSpace = 8;
-  required bytes colorRange = 9;
-  required bytes fencesHolderId = 10;
+  required bytes a_handleY = 1;
+  required bytes a_handleCb = 2;
+  required bytes a_handleCr = 3;
+  required bytes a_size = 4;
+  required bytes a_sizeY = 5;
+  required bytes a_sizeCbCr = 6;
+  required bytes a_colorDepth = 7;
+  required bytes a_yUVColorSpace = 8;
+  required bytes a_colorRange = 9;
+  required bytes a_fencesHolderId = 10;
 }
 
 message SurfaceDescriptorMacIOSurface {
-  required uint32 surfaceId = 1;
-  required bool isOpaque = 2;
-  required bytes yUVColorSpace = 3;
-  required bytes gpuFence = 4;
+  required uint32 a_surfaceId = 1;
+  required bool a_isOpaque = 2;
+  required bytes a_yUVColorSpace = 3;
+  required bytes a_gpuFence = 4;
 }
 
 message SurfaceDescriptorDMABuf {
-  required uint32 bufferType = 1;
-  required uint32 fourccFormat = 2;
-  repeated uint64 modifier = 3;
-  required uint32 flags = 4;
-  repeated bytes fds = 5;
-  repeated uint32 width = 6;
-  repeated uint32 height = 7;
-  repeated uint32 widthAligned = 8;
-  repeated uint32 heightAligned = 9;
-  repeated uint32 format = 10;
-  repeated uint32 strides = 11;
-  repeated uint32 offsets = 12;
-  required bytes yUVColorSpace = 13;
-  required bytes colorRange = 14;
-  required bytes colorPrimaries = 15;
-  required bytes transferFunction = 16;
-  repeated bytes fence = 17;
-  required uint32 uid = 18;
-  required uint32 pid = 19;
-  repeated bytes refCount = 20;
-  required bytes semaphoreFd = 21;
+  required uint32 a_bufferType = 1;
+  required uint32 a_fourccFormat = 2;
+  repeated uint64 a_modifier = 3;
+  required uint32 a_flags = 4;
+  repeated bytes a_fds = 5;
+  repeated uint32 a_width = 6;
+  repeated uint32 a_height = 7;
+  repeated uint32 a_widthAligned = 8;
+  repeated uint32 a_heightAligned = 9;
+  repeated uint32 a_format = 10;
+  repeated uint32 a_strides = 11;
+  repeated uint32 a_offsets = 12;
+  required bytes a_yUVColorSpace = 13;
+  required bytes a_colorRange = 14;
+  required bytes a_colorPrimaries = 15;
+  required bytes a_transferFunction = 16;
+  repeated bytes a_fence = 17;
+  required uint32 a_uid = 18;
+  required uint32 a_pid = 19;
+  repeated bytes a_refCount = 20;
+  required bytes a_semaphoreFd = 21;
 }
 
 message SurfaceTextureDescriptor {
-  required uint64 handle = 1;
-  required bytes size = 2;
-  required bytes format = 3;
-  required bool continuous = 4;
-  required bool forceBT709ColorSpace = 5;
-  optional bytes transformOverride = 6;
+  required uint64 a_handle = 1;
+  required bytes a_size = 2;
+  required bytes a_format = 3;
+  required bool a_continuous = 4;
+  required bool a_forceBT709ColorSpace = 5;
+  optional bytes a_transformOverride = 6;
 }
 
 message SurfaceDescriptorAndroidHardwareBuffer {
-  required uint64 bufferId = 1;
-  required bytes size = 2;
-  required bytes format = 3;
+  required uint64 a_bufferId = 1;
+  required bytes a_size = 2;
+  required bytes a_format = 3;
 }
 
 message EGLImageDescriptor {
-  required bytes image = 1;
-  required bytes fence = 2;
-  required bytes size = 3;
-  required bool hasAlpha = 4;
+  required bytes a_image = 1;
+  required bytes a_fence = 2;
+  required bytes a_size = 3;
+  required bool a_hasAlpha = 4;
 }
 
 message SurfaceDescriptorSharedGLTexture {
-  required uint32 texture = 1;
-  required uint32 target = 2;
-  required bytes fence = 3;
-  required bytes size = 4;
-  required bool hasAlpha = 5;
+  required uint32 a_texture = 1;
+  required uint32 a_target = 2;
+  required bytes a_fence = 3;
+  required bytes a_size = 4;
+  required bool a_hasAlpha = 5;
 }
 
 message SurfaceDescriptorDcompSurface {
-  required bytes handle = 1;
-  required bytes size = 2;
-  required bytes format = 3;
+  required bytes a_handle = 1;
+  required bytes a_size = 2;
+  required bytes a_format = 3;
 }
 
 message RemoteDecoderVideoSubDescriptor {
   oneof content {
-    protobuf.mozilla.layers.SurfaceDescriptorD3D10 mVSurfaceDescriptorD3D10 = 1;
-    protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr mVSurfaceDescriptorDXGIYCbCr = 2;
-    protobuf.mozilla.layers.SurfaceDescriptorDMABuf mVSurfaceDescriptorDMABuf = 3;
-    protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface mVSurfaceDescriptorMacIOSurface = 4;
-    protobuf.mozilla.layers.SurfaceDescriptorDcompSurface mVSurfaceDescriptorDcompSurface = 5;
-    bytes mVnull_t = 6;
+    protobuf.mozilla.layers.SurfaceDescriptorD3D10 a_mVSurfaceDescriptorD3D10 = 1;
+    protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr a_mVSurfaceDescriptorDXGIYCbCr = 2;
+    protobuf.mozilla.layers.SurfaceDescriptorDMABuf a_mVSurfaceDescriptorDMABuf = 3;
+    protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface a_mVSurfaceDescriptorMacIOSurface = 4;
+    protobuf.mozilla.layers.SurfaceDescriptorDcompSurface a_mVSurfaceDescriptorDcompSurface = 5;
+    bytes a_mVnull_t = 6;
   }
 }
 
 message SurfaceDescriptorRemoteDecoder {
-  required uint64 handle = 1;
-  required protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor subdesc = 2;
-  required bytes source = 3;
-  required bytes id = 4;
+  required uint64 a_handle = 1;
+  required protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
+  required bytes a_source = 3;
+  required bytes a_id = 4;
 }
 
 message SurfaceDescriptorGPUVideo {
   oneof content {
-    protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder mVSurfaceDescriptorRemoteDecoder = 1;
+    protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder a_mVSurfaceDescriptorRemoteDecoder = 1;
   }
 }
 
 message RGBDescriptor {
-  required bytes size = 1;
-  required bytes format = 2;
+  required bytes a_size = 1;
+  required bytes a_format = 2;
 }
 
 message YCbCrDescriptor {
-  required bytes display = 1;
-  required bytes ySize = 2;
-  required uint32 yStride = 3;
-  required bytes cbCrSize = 4;
-  required uint32 cbCrStride = 5;
-  required uint32 yOffset = 6;
-  required uint32 cbOffset = 7;
-  required uint32 crOffset = 8;
-  required bytes stereoMode = 9;
-  required bytes colorDepth = 10;
-  required bytes yUVColorSpace = 11;
-  required bytes colorRange = 12;
-  required bytes chromaSubsampling = 13;
+  required bytes a_display = 1;
+  required bytes a_ySize = 2;
+  required uint32 a_yStride = 3;
+  required bytes a_cbCrSize = 4;
+  required uint32 a_cbCrStride = 5;
+  required uint32 a_yOffset = 6;
+  required uint32 a_cbOffset = 7;
+  required uint32 a_crOffset = 8;
+  required bytes a_stereoMode = 9;
+  required bytes a_colorDepth = 10;
+  required bytes a_yUVColorSpace = 11;
+  required bytes a_colorRange = 12;
+  required bytes a_chromaSubsampling = 13;
 }
 
 message BufferDescriptor {
   oneof content {
-    protobuf.mozilla.layers.RGBDescriptor mVRGBDescriptor = 1;
-    protobuf.mozilla.layers.YCbCrDescriptor mVYCbCrDescriptor = 2;
+    protobuf.mozilla.layers.RGBDescriptor a_mVRGBDescriptor = 1;
+    protobuf.mozilla.layers.YCbCrDescriptor a_mVYCbCrDescriptor = 2;
   }
 }
 
 message MemoryOrShmem {
   oneof content {
-    bytes mVuintptr_t = 1;
-    bytes mVShmem = 2;
+    bytes a_mVuintptr_t = 1;
+    bytes a_mVShmem = 2;
   }
 }
 
 message SurfaceDescriptorBuffer {
-  required protobuf.mozilla.layers.BufferDescriptor desc = 1;
-  required protobuf.mozilla.layers.MemoryOrShmem data = 2;
+  required protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
+  required protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
 }
 
 message SurfaceDescriptorShared {
-  required bytes size = 1;
-  required sint32 stride = 2;
-  required bytes format = 3;
-  required bytes handle = 4;
+  required bytes a_size = 1;
+  required sint32 a_stride = 2;
+  required bytes a_format = 3;
+  required bytes a_handle = 4;
 }
 
 message SurfaceDescriptorExternalImage {
-  required bytes source = 1;
-  required bytes id = 2;
+  required bytes a_source = 1;
+  required bytes a_id = 2;
 }
 
 message SurfaceDescriptorRemoteTexture {
-  required bytes textureId = 1;
-  required bytes ownerId = 2;
+  required bytes a_textureId = 1;
+  required bytes a_ownerId = 2;
 }
 
 message SurfaceDescriptorCanvasSurface {
-  required uint32 managerId = 1;
-  required bytes canvasId = 2;
-  required bytes surfaceId = 3;
+  required uint32 a_managerId = 1;
+  required bytes a_canvasId = 2;
+  required bytes a_surfaceId = 3;
 }
 
 message SurfaceDescriptor {
   oneof content {
-    protobuf.mozilla.layers.SurfaceDescriptorBuffer mVSurfaceDescriptorBuffer = 1;
-    protobuf.mozilla.layers.SurfaceDescriptorD3D10 mVSurfaceDescriptorD3D10 = 2;
-    protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr mVSurfaceDescriptorDXGIYCbCr = 3;
-    protobuf.mozilla.layers.SurfaceDescriptorDMABuf mVSurfaceDescriptorDMABuf = 4;
-    protobuf.mozilla.layers.SurfaceTextureDescriptor mVSurfaceTextureDescriptor = 5;
-    protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer mVSurfaceDescriptorAndroidHardwareBuffer = 6;
-    protobuf.mozilla.layers.EGLImageDescriptor mVEGLImageDescriptor = 7;
-    protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface mVSurfaceDescriptorMacIOSurface = 8;
-    protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture mVSurfaceDescriptorSharedGLTexture = 9;
-    protobuf.mozilla.layers.SurfaceDescriptorGPUVideo mVSurfaceDescriptorGPUVideo = 10;
-    protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture mVSurfaceDescriptorRemoteTexture = 11;
-    protobuf.mozilla.layers.SurfaceDescriptorDcompSurface mVSurfaceDescriptorDcompSurface = 12;
-    protobuf.mozilla.layers.SurfaceDescriptorExternalImage mVSurfaceDescriptorExternalImage = 13;
-    protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface mVSurfaceDescriptorCanvasSurface = 14;
-    bytes mVnull_t = 15;
+    protobuf.mozilla.layers.SurfaceDescriptorBuffer a_mVSurfaceDescriptorBuffer = 1;
+    protobuf.mozilla.layers.SurfaceDescriptorD3D10 a_mVSurfaceDescriptorD3D10 = 2;
+    protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr a_mVSurfaceDescriptorDXGIYCbCr = 3;
+    protobuf.mozilla.layers.SurfaceDescriptorDMABuf a_mVSurfaceDescriptorDMABuf = 4;
+    protobuf.mozilla.layers.SurfaceTextureDescriptor a_mVSurfaceTextureDescriptor = 5;
+    protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer a_mVSurfaceDescriptorAndroidHardwareBuffer = 6;
+    protobuf.mozilla.layers.EGLImageDescriptor a_mVEGLImageDescriptor = 7;
+    protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface a_mVSurfaceDescriptorMacIOSurface = 8;
+    protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture a_mVSurfaceDescriptorSharedGLTexture = 9;
+    protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_mVSurfaceDescriptorGPUVideo = 10;
+    protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture a_mVSurfaceDescriptorRemoteTexture = 11;
+    protobuf.mozilla.layers.SurfaceDescriptorDcompSurface a_mVSurfaceDescriptorDcompSurface = 12;
+    protobuf.mozilla.layers.SurfaceDescriptorExternalImage a_mVSurfaceDescriptorExternalImage = 13;
+    protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface a_mVSurfaceDescriptorCanvasSurface = 14;
+    bytes a_mVnull_t = 15;
   }
 }

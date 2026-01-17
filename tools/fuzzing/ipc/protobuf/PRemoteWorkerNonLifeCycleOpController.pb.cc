@@ -37,7 +37,7 @@ PROTOBUF_CONSTEXPR Msg_Error::Msg_Error(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.avalue_)*/nullptr} {}
+  , /*decltype(_impl_.a_avalue_)*/nullptr} {}
 struct Msg_ErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,7 +51,7 @@ PROTOBUF_CONSTEXPR Msg_ExecOp::Msg_ExecOp(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aopargs_)*/nullptr} {}
+  , /*decltype(_impl_.a_aopargs_)*/nullptr} {}
 struct Msg_ExecOpDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ExecOpDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -65,7 +65,7 @@ PROTOBUF_CONSTEXPR Msg_ExecServiceWorkerOp::Msg_ExecServiceWorkerOp(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aopargs_)*/nullptr} {}
+  , /*decltype(_impl_.a_aopargs_)*/nullptr} {}
 struct Msg_ExecServiceWorkerOpDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ExecServiceWorkerOpDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -79,7 +79,7 @@ PROTOBUF_CONSTEXPR Reply_ExecServiceWorkerOp::Reply_ExecServiceWorkerOp(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aresult_)*/nullptr} {}
+  , /*decltype(_impl_.a_aresult_)*/nullptr} {}
 struct Reply_ExecServiceWorkerOpDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ExecServiceWorkerOpDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -263,8 +263,8 @@ std::string Msg_Terminated::GetTypeName() const {
 class Msg_Error::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Error>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::ErrorValue& avalue(const Msg_Error* msg);
-  static void set_has_avalue(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::ErrorValue& a_avalue(const Msg_Error* msg);
+  static void set_has_a_avalue(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -273,11 +273,11 @@ class Msg_Error::_Internal {
 };
 
 const ::protobuf::mozilla::dom::ErrorValue&
-Msg_Error::_Internal::avalue(const Msg_Error* msg) {
-  return *msg->_impl_.avalue_;
+Msg_Error::_Internal::a_avalue(const Msg_Error* msg) {
+  return *msg->_impl_.a_avalue_;
 }
-void Msg_Error::clear_avalue() {
-  if (_impl_.avalue_ != nullptr) _impl_.avalue_->Clear();
+void Msg_Error::clear_a_avalue() {
+  if (_impl_.a_avalue_ != nullptr) _impl_.a_avalue_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_Error::Msg_Error(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -292,11 +292,11 @@ Msg_Error::Msg_Error(const Msg_Error& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.avalue_){nullptr}};
+    , decltype(_impl_.a_avalue_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_avalue()) {
-    _this->_impl_.avalue_ = new ::protobuf::mozilla::dom::ErrorValue(*from._impl_.avalue_);
+  if (from._internal_has_a_avalue()) {
+    _this->_impl_.a_avalue_ = new ::protobuf::mozilla::dom::ErrorValue(*from._impl_.a_avalue_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Msg_Error)
 }
@@ -308,7 +308,7 @@ inline void Msg_Error::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.avalue_){nullptr}
+    , decltype(_impl_.a_avalue_){nullptr}
   };
 }
 
@@ -323,7 +323,7 @@ Msg_Error::~Msg_Error() {
 
 inline void Msg_Error::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.avalue_;
+  if (this != internal_default_instance()) delete _impl_.a_avalue_;
 }
 
 void Msg_Error::SetCachedSize(int size) const {
@@ -338,8 +338,8 @@ void Msg_Error::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.avalue_ != nullptr);
-    _impl_.avalue_->Clear();
+    GOOGLE_DCHECK(_impl_.a_avalue_ != nullptr);
+    _impl_.a_avalue_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -352,10 +352,10 @@ const char* Msg_Error::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.ErrorValue aValue = 1;
+      // required .protobuf.mozilla.dom.ErrorValue a_aValue = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_avalue(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_avalue(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -391,11 +391,11 @@ uint8_t* Msg_Error::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.ErrorValue aValue = 1;
+  // required .protobuf.mozilla.dom.ErrorValue a_aValue = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::avalue(this),
-        _Internal::avalue(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_avalue(this),
+        _Internal::a_avalue(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -410,11 +410,11 @@ size_t Msg_Error::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Msg_Error)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.ErrorValue aValue = 1;
-  if (_internal_has_avalue()) {
+  // required .protobuf.mozilla.dom.ErrorValue a_aValue = 1;
+  if (_internal_has_a_avalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.avalue_);
+        *_impl_.a_avalue_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -441,9 +441,9 @@ void Msg_Error::MergeFrom(const Msg_Error& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_avalue()) {
-    _this->_internal_mutable_avalue()->::protobuf::mozilla::dom::ErrorValue::MergeFrom(
-        from._internal_avalue());
+  if (from._internal_has_a_avalue()) {
+    _this->_internal_mutable_a_avalue()->::protobuf::mozilla::dom::ErrorValue::MergeFrom(
+        from._internal_a_avalue());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -457,8 +457,8 @@ void Msg_Error::CopyFrom(const Msg_Error& from) {
 
 bool Msg_Error::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_avalue()) {
-    if (!_impl_.avalue_->IsInitialized()) return false;
+  if (_internal_has_a_avalue()) {
+    if (!_impl_.a_avalue_->IsInitialized()) return false;
   }
   return true;
 }
@@ -467,7 +467,7 @@ void Msg_Error::InternalSwap(Msg_Error* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.avalue_, other->_impl_.avalue_);
+  swap(_impl_.a_avalue_, other->_impl_.a_avalue_);
 }
 
 std::string Msg_Error::GetTypeName() const {
@@ -480,8 +480,8 @@ std::string Msg_Error::GetTypeName() const {
 class Msg_ExecOp::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ExecOp>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::SharedWorkerOpArgs& aopargs(const Msg_ExecOp* msg);
-  static void set_has_aopargs(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::SharedWorkerOpArgs& a_aopargs(const Msg_ExecOp* msg);
+  static void set_has_a_aopargs(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -490,11 +490,11 @@ class Msg_ExecOp::_Internal {
 };
 
 const ::protobuf::mozilla::dom::SharedWorkerOpArgs&
-Msg_ExecOp::_Internal::aopargs(const Msg_ExecOp* msg) {
-  return *msg->_impl_.aopargs_;
+Msg_ExecOp::_Internal::a_aopargs(const Msg_ExecOp* msg) {
+  return *msg->_impl_.a_aopargs_;
 }
-void Msg_ExecOp::clear_aopargs() {
-  if (_impl_.aopargs_ != nullptr) _impl_.aopargs_->Clear();
+void Msg_ExecOp::clear_a_aopargs() {
+  if (_impl_.a_aopargs_ != nullptr) _impl_.a_aopargs_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_ExecOp::Msg_ExecOp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -509,11 +509,11 @@ Msg_ExecOp::Msg_ExecOp(const Msg_ExecOp& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aopargs_){nullptr}};
+    , decltype(_impl_.a_aopargs_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_aopargs()) {
-    _this->_impl_.aopargs_ = new ::protobuf::mozilla::dom::SharedWorkerOpArgs(*from._impl_.aopargs_);
+  if (from._internal_has_a_aopargs()) {
+    _this->_impl_.a_aopargs_ = new ::protobuf::mozilla::dom::SharedWorkerOpArgs(*from._impl_.a_aopargs_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Msg_ExecOp)
 }
@@ -525,7 +525,7 @@ inline void Msg_ExecOp::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aopargs_){nullptr}
+    , decltype(_impl_.a_aopargs_){nullptr}
   };
 }
 
@@ -540,7 +540,7 @@ Msg_ExecOp::~Msg_ExecOp() {
 
 inline void Msg_ExecOp::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.aopargs_;
+  if (this != internal_default_instance()) delete _impl_.a_aopargs_;
 }
 
 void Msg_ExecOp::SetCachedSize(int size) const {
@@ -555,8 +555,8 @@ void Msg_ExecOp::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.aopargs_ != nullptr);
-    _impl_.aopargs_->Clear();
+    GOOGLE_DCHECK(_impl_.a_aopargs_ != nullptr);
+    _impl_.a_aopargs_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -569,10 +569,10 @@ const char* Msg_ExecOp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.SharedWorkerOpArgs aOpArgs = 1;
+      // required .protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aopargs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aopargs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -608,11 +608,11 @@ uint8_t* Msg_ExecOp::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.SharedWorkerOpArgs aOpArgs = 1;
+  // required .protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::aopargs(this),
-        _Internal::aopargs(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_aopargs(this),
+        _Internal::a_aopargs(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -627,11 +627,11 @@ size_t Msg_ExecOp::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Msg_ExecOp)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.SharedWorkerOpArgs aOpArgs = 1;
-  if (_internal_has_aopargs()) {
+  // required .protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
+  if (_internal_has_a_aopargs()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aopargs_);
+        *_impl_.a_aopargs_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -658,9 +658,9 @@ void Msg_ExecOp::MergeFrom(const Msg_ExecOp& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aopargs()) {
-    _this->_internal_mutable_aopargs()->::protobuf::mozilla::dom::SharedWorkerOpArgs::MergeFrom(
-        from._internal_aopargs());
+  if (from._internal_has_a_aopargs()) {
+    _this->_internal_mutable_a_aopargs()->::protobuf::mozilla::dom::SharedWorkerOpArgs::MergeFrom(
+        from._internal_a_aopargs());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -674,8 +674,8 @@ void Msg_ExecOp::CopyFrom(const Msg_ExecOp& from) {
 
 bool Msg_ExecOp::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_aopargs()) {
-    if (!_impl_.aopargs_->IsInitialized()) return false;
+  if (_internal_has_a_aopargs()) {
+    if (!_impl_.a_aopargs_->IsInitialized()) return false;
   }
   return true;
 }
@@ -684,7 +684,7 @@ void Msg_ExecOp::InternalSwap(Msg_ExecOp* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aopargs_, other->_impl_.aopargs_);
+  swap(_impl_.a_aopargs_, other->_impl_.a_aopargs_);
 }
 
 std::string Msg_ExecOp::GetTypeName() const {
@@ -697,8 +697,8 @@ std::string Msg_ExecOp::GetTypeName() const {
 class Msg_ExecServiceWorkerOp::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ExecServiceWorkerOp>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& aopargs(const Msg_ExecServiceWorkerOp* msg);
-  static void set_has_aopargs(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& a_aopargs(const Msg_ExecServiceWorkerOp* msg);
+  static void set_has_a_aopargs(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -707,11 +707,11 @@ class Msg_ExecServiceWorkerOp::_Internal {
 };
 
 const ::protobuf::mozilla::dom::ServiceWorkerOpArgs&
-Msg_ExecServiceWorkerOp::_Internal::aopargs(const Msg_ExecServiceWorkerOp* msg) {
-  return *msg->_impl_.aopargs_;
+Msg_ExecServiceWorkerOp::_Internal::a_aopargs(const Msg_ExecServiceWorkerOp* msg) {
+  return *msg->_impl_.a_aopargs_;
 }
-void Msg_ExecServiceWorkerOp::clear_aopargs() {
-  if (_impl_.aopargs_ != nullptr) _impl_.aopargs_->Clear();
+void Msg_ExecServiceWorkerOp::clear_a_aopargs() {
+  if (_impl_.a_aopargs_ != nullptr) _impl_.a_aopargs_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_ExecServiceWorkerOp::Msg_ExecServiceWorkerOp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -726,11 +726,11 @@ Msg_ExecServiceWorkerOp::Msg_ExecServiceWorkerOp(const Msg_ExecServiceWorkerOp& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aopargs_){nullptr}};
+    , decltype(_impl_.a_aopargs_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_aopargs()) {
-    _this->_impl_.aopargs_ = new ::protobuf::mozilla::dom::ServiceWorkerOpArgs(*from._impl_.aopargs_);
+  if (from._internal_has_a_aopargs()) {
+    _this->_impl_.a_aopargs_ = new ::protobuf::mozilla::dom::ServiceWorkerOpArgs(*from._impl_.a_aopargs_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Msg_ExecServiceWorkerOp)
 }
@@ -742,7 +742,7 @@ inline void Msg_ExecServiceWorkerOp::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aopargs_){nullptr}
+    , decltype(_impl_.a_aopargs_){nullptr}
   };
 }
 
@@ -757,7 +757,7 @@ Msg_ExecServiceWorkerOp::~Msg_ExecServiceWorkerOp() {
 
 inline void Msg_ExecServiceWorkerOp::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.aopargs_;
+  if (this != internal_default_instance()) delete _impl_.a_aopargs_;
 }
 
 void Msg_ExecServiceWorkerOp::SetCachedSize(int size) const {
@@ -772,8 +772,8 @@ void Msg_ExecServiceWorkerOp::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.aopargs_ != nullptr);
-    _impl_.aopargs_->Clear();
+    GOOGLE_DCHECK(_impl_.a_aopargs_ != nullptr);
+    _impl_.a_aopargs_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -786,10 +786,10 @@ const char* Msg_ExecServiceWorkerOp::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.ServiceWorkerOpArgs aOpArgs = 1;
+      // required .protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aopargs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aopargs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -825,11 +825,11 @@ uint8_t* Msg_ExecServiceWorkerOp::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.ServiceWorkerOpArgs aOpArgs = 1;
+  // required .protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::aopargs(this),
-        _Internal::aopargs(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_aopargs(this),
+        _Internal::a_aopargs(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -844,11 +844,11 @@ size_t Msg_ExecServiceWorkerOp::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Msg_ExecServiceWorkerOp)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.ServiceWorkerOpArgs aOpArgs = 1;
-  if (_internal_has_aopargs()) {
+  // required .protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
+  if (_internal_has_a_aopargs()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aopargs_);
+        *_impl_.a_aopargs_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -875,9 +875,9 @@ void Msg_ExecServiceWorkerOp::MergeFrom(const Msg_ExecServiceWorkerOp& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aopargs()) {
-    _this->_internal_mutable_aopargs()->::protobuf::mozilla::dom::ServiceWorkerOpArgs::MergeFrom(
-        from._internal_aopargs());
+  if (from._internal_has_a_aopargs()) {
+    _this->_internal_mutable_a_aopargs()->::protobuf::mozilla::dom::ServiceWorkerOpArgs::MergeFrom(
+        from._internal_a_aopargs());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -891,8 +891,8 @@ void Msg_ExecServiceWorkerOp::CopyFrom(const Msg_ExecServiceWorkerOp& from) {
 
 bool Msg_ExecServiceWorkerOp::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_aopargs()) {
-    if (!_impl_.aopargs_->IsInitialized()) return false;
+  if (_internal_has_a_aopargs()) {
+    if (!_impl_.a_aopargs_->IsInitialized()) return false;
   }
   return true;
 }
@@ -901,7 +901,7 @@ void Msg_ExecServiceWorkerOp::InternalSwap(Msg_ExecServiceWorkerOp* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aopargs_, other->_impl_.aopargs_);
+  swap(_impl_.a_aopargs_, other->_impl_.a_aopargs_);
 }
 
 std::string Msg_ExecServiceWorkerOp::GetTypeName() const {
@@ -914,8 +914,8 @@ std::string Msg_ExecServiceWorkerOp::GetTypeName() const {
 class Reply_ExecServiceWorkerOp::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_ExecServiceWorkerOp>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::ServiceWorkerOpResult& aresult(const Reply_ExecServiceWorkerOp* msg);
-  static void set_has_aresult(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::ServiceWorkerOpResult& a_aresult(const Reply_ExecServiceWorkerOp* msg);
+  static void set_has_a_aresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -924,11 +924,11 @@ class Reply_ExecServiceWorkerOp::_Internal {
 };
 
 const ::protobuf::mozilla::dom::ServiceWorkerOpResult&
-Reply_ExecServiceWorkerOp::_Internal::aresult(const Reply_ExecServiceWorkerOp* msg) {
-  return *msg->_impl_.aresult_;
+Reply_ExecServiceWorkerOp::_Internal::a_aresult(const Reply_ExecServiceWorkerOp* msg) {
+  return *msg->_impl_.a_aresult_;
 }
-void Reply_ExecServiceWorkerOp::clear_aresult() {
-  if (_impl_.aresult_ != nullptr) _impl_.aresult_->Clear();
+void Reply_ExecServiceWorkerOp::clear_a_aresult() {
+  if (_impl_.a_aresult_ != nullptr) _impl_.a_aresult_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_ExecServiceWorkerOp::Reply_ExecServiceWorkerOp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -943,11 +943,11 @@ Reply_ExecServiceWorkerOp::Reply_ExecServiceWorkerOp(const Reply_ExecServiceWork
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aresult_){nullptr}};
+    , decltype(_impl_.a_aresult_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_aresult()) {
-    _this->_impl_.aresult_ = new ::protobuf::mozilla::dom::ServiceWorkerOpResult(*from._impl_.aresult_);
+  if (from._internal_has_a_aresult()) {
+    _this->_impl_.a_aresult_ = new ::protobuf::mozilla::dom::ServiceWorkerOpResult(*from._impl_.a_aresult_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Reply_ExecServiceWorkerOp)
 }
@@ -959,7 +959,7 @@ inline void Reply_ExecServiceWorkerOp::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aresult_){nullptr}
+    , decltype(_impl_.a_aresult_){nullptr}
   };
 }
 
@@ -974,7 +974,7 @@ Reply_ExecServiceWorkerOp::~Reply_ExecServiceWorkerOp() {
 
 inline void Reply_ExecServiceWorkerOp::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.aresult_;
+  if (this != internal_default_instance()) delete _impl_.a_aresult_;
 }
 
 void Reply_ExecServiceWorkerOp::SetCachedSize(int size) const {
@@ -989,8 +989,8 @@ void Reply_ExecServiceWorkerOp::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.aresult_ != nullptr);
-    _impl_.aresult_->Clear();
+    GOOGLE_DCHECK(_impl_.a_aresult_ != nullptr);
+    _impl_.a_aresult_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1003,10 +1003,10 @@ const char* Reply_ExecServiceWorkerOp::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.ServiceWorkerOpResult aResult = 1;
+      // required .protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aresult(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aresult(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1042,11 +1042,11 @@ uint8_t* Reply_ExecServiceWorkerOp::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.ServiceWorkerOpResult aResult = 1;
+  // required .protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::aresult(this),
-        _Internal::aresult(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_aresult(this),
+        _Internal::a_aresult(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1061,11 +1061,11 @@ size_t Reply_ExecServiceWorkerOp::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController.Reply_ExecServiceWorkerOp)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.ServiceWorkerOpResult aResult = 1;
-  if (_internal_has_aresult()) {
+  // required .protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+  if (_internal_has_a_aresult()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aresult_);
+        *_impl_.a_aresult_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1092,9 +1092,9 @@ void Reply_ExecServiceWorkerOp::MergeFrom(const Reply_ExecServiceWorkerOp& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aresult()) {
-    _this->_internal_mutable_aresult()->::protobuf::mozilla::dom::ServiceWorkerOpResult::MergeFrom(
-        from._internal_aresult());
+  if (from._internal_has_a_aresult()) {
+    _this->_internal_mutable_a_aresult()->::protobuf::mozilla::dom::ServiceWorkerOpResult::MergeFrom(
+        from._internal_a_aresult());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1108,8 +1108,8 @@ void Reply_ExecServiceWorkerOp::CopyFrom(const Reply_ExecServiceWorkerOp& from) 
 
 bool Reply_ExecServiceWorkerOp::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_aresult()) {
-    if (!_impl_.aresult_->IsInitialized()) return false;
+  if (_internal_has_a_aresult()) {
+    if (!_impl_.a_aresult_->IsInitialized()) return false;
   }
   return true;
 }
@@ -1118,7 +1118,7 @@ void Reply_ExecServiceWorkerOp::InternalSwap(Reply_ExecServiceWorkerOp* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aresult_, other->_impl_.aresult_);
+  swap(_impl_.a_aresult_, other->_impl_.a_aresult_);
 }
 
 std::string Reply_ExecServiceWorkerOp::GetTypeName() const {

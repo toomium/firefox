@@ -181,81 +181,81 @@ class FileSystemGetDirectoryListingParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFilesystemFieldNumber = 1,
-    kRealPathFieldNumber = 2,
-    kDomPathFieldNumber = 3,
-    kFiltersFieldNumber = 4,
+    kAFilesystemFieldNumber = 1,
+    kARealPathFieldNumber = 2,
+    kADomPathFieldNumber = 3,
+    kAFiltersFieldNumber = 4,
   };
-  // required bytes filesystem = 1;
-  bool has_filesystem() const;
+  // required bytes a_filesystem = 1;
+  bool has_a_filesystem() const;
   private:
-  bool _internal_has_filesystem() const;
+  bool _internal_has_a_filesystem() const;
   public:
-  void clear_filesystem();
-  const std::string& filesystem() const;
+  void clear_a_filesystem();
+  const std::string& a_filesystem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filesystem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filesystem();
-  PROTOBUF_NODISCARD std::string* release_filesystem();
-  void set_allocated_filesystem(std::string* filesystem);
+  void set_a_filesystem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filesystem();
+  PROTOBUF_NODISCARD std::string* release_a_filesystem();
+  void set_allocated_a_filesystem(std::string* a_filesystem);
   private:
-  const std::string& _internal_filesystem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filesystem(const std::string& value);
-  std::string* _internal_mutable_filesystem();
+  const std::string& _internal_a_filesystem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filesystem(const std::string& value);
+  std::string* _internal_mutable_a_filesystem();
   public:
 
-  // required bytes realPath = 2;
-  bool has_realpath() const;
+  // required bytes a_realPath = 2;
+  bool has_a_realpath() const;
   private:
-  bool _internal_has_realpath() const;
+  bool _internal_has_a_realpath() const;
   public:
-  void clear_realpath();
-  const std::string& realpath() const;
+  void clear_a_realpath();
+  const std::string& a_realpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_realpath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_realpath();
-  PROTOBUF_NODISCARD std::string* release_realpath();
-  void set_allocated_realpath(std::string* realpath);
+  void set_a_realpath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_realpath();
+  PROTOBUF_NODISCARD std::string* release_a_realpath();
+  void set_allocated_a_realpath(std::string* a_realpath);
   private:
-  const std::string& _internal_realpath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_realpath(const std::string& value);
-  std::string* _internal_mutable_realpath();
+  const std::string& _internal_a_realpath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_realpath(const std::string& value);
+  std::string* _internal_mutable_a_realpath();
   public:
 
-  // required bytes domPath = 3;
-  bool has_dompath() const;
+  // required bytes a_domPath = 3;
+  bool has_a_dompath() const;
   private:
-  bool _internal_has_dompath() const;
+  bool _internal_has_a_dompath() const;
   public:
-  void clear_dompath();
-  const std::string& dompath() const;
+  void clear_a_dompath();
+  const std::string& a_dompath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_dompath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_dompath();
-  PROTOBUF_NODISCARD std::string* release_dompath();
-  void set_allocated_dompath(std::string* dompath);
+  void set_a_dompath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_dompath();
+  PROTOBUF_NODISCARD std::string* release_a_dompath();
+  void set_allocated_a_dompath(std::string* a_dompath);
   private:
-  const std::string& _internal_dompath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dompath(const std::string& value);
-  std::string* _internal_mutable_dompath();
+  const std::string& _internal_a_dompath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_dompath(const std::string& value);
+  std::string* _internal_mutable_a_dompath();
   public:
 
-  // required bytes filters = 4;
-  bool has_filters() const;
+  // required bytes a_filters = 4;
+  bool has_a_filters() const;
   private:
-  bool _internal_has_filters() const;
+  bool _internal_has_a_filters() const;
   public:
-  void clear_filters();
-  const std::string& filters() const;
+  void clear_a_filters();
+  const std::string& a_filters() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filters(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filters();
-  PROTOBUF_NODISCARD std::string* release_filters();
-  void set_allocated_filters(std::string* filters);
+  void set_a_filters(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filters();
+  PROTOBUF_NODISCARD std::string* release_a_filters();
+  void set_allocated_a_filters(std::string* a_filters);
   private:
-  const std::string& _internal_filters() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filters(const std::string& value);
-  std::string* _internal_mutable_filters();
+  const std::string& _internal_a_filters() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filters(const std::string& value);
+  std::string* _internal_mutable_a_filters();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams)
@@ -271,10 +271,10 @@ class FileSystemGetDirectoryListingParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filesystem_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr realpath_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dompath_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filters_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filesystem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_realpath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dompath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filters_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemParams_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -391,76 +391,76 @@ class FileSystemGetFilesParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFilesystemFieldNumber = 1,
-    kRealPathFieldNumber = 2,
-    kDomPathFieldNumber = 3,
-    kRecursiveFlagFieldNumber = 4,
+    kAFilesystemFieldNumber = 1,
+    kARealPathFieldNumber = 2,
+    kADomPathFieldNumber = 3,
+    kARecursiveFlagFieldNumber = 4,
   };
-  // required bytes filesystem = 1;
-  bool has_filesystem() const;
+  // required bytes a_filesystem = 1;
+  bool has_a_filesystem() const;
   private:
-  bool _internal_has_filesystem() const;
+  bool _internal_has_a_filesystem() const;
   public:
-  void clear_filesystem();
-  const std::string& filesystem() const;
+  void clear_a_filesystem();
+  const std::string& a_filesystem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filesystem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filesystem();
-  PROTOBUF_NODISCARD std::string* release_filesystem();
-  void set_allocated_filesystem(std::string* filesystem);
+  void set_a_filesystem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filesystem();
+  PROTOBUF_NODISCARD std::string* release_a_filesystem();
+  void set_allocated_a_filesystem(std::string* a_filesystem);
   private:
-  const std::string& _internal_filesystem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filesystem(const std::string& value);
-  std::string* _internal_mutable_filesystem();
+  const std::string& _internal_a_filesystem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filesystem(const std::string& value);
+  std::string* _internal_mutable_a_filesystem();
   public:
 
-  // required bytes realPath = 2;
-  bool has_realpath() const;
+  // required bytes a_realPath = 2;
+  bool has_a_realpath() const;
   private:
-  bool _internal_has_realpath() const;
+  bool _internal_has_a_realpath() const;
   public:
-  void clear_realpath();
-  const std::string& realpath() const;
+  void clear_a_realpath();
+  const std::string& a_realpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_realpath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_realpath();
-  PROTOBUF_NODISCARD std::string* release_realpath();
-  void set_allocated_realpath(std::string* realpath);
+  void set_a_realpath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_realpath();
+  PROTOBUF_NODISCARD std::string* release_a_realpath();
+  void set_allocated_a_realpath(std::string* a_realpath);
   private:
-  const std::string& _internal_realpath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_realpath(const std::string& value);
-  std::string* _internal_mutable_realpath();
+  const std::string& _internal_a_realpath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_realpath(const std::string& value);
+  std::string* _internal_mutable_a_realpath();
   public:
 
-  // required bytes domPath = 3;
-  bool has_dompath() const;
+  // required bytes a_domPath = 3;
+  bool has_a_dompath() const;
   private:
-  bool _internal_has_dompath() const;
+  bool _internal_has_a_dompath() const;
   public:
-  void clear_dompath();
-  const std::string& dompath() const;
+  void clear_a_dompath();
+  const std::string& a_dompath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_dompath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_dompath();
-  PROTOBUF_NODISCARD std::string* release_dompath();
-  void set_allocated_dompath(std::string* dompath);
+  void set_a_dompath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_dompath();
+  PROTOBUF_NODISCARD std::string* release_a_dompath();
+  void set_allocated_a_dompath(std::string* a_dompath);
   private:
-  const std::string& _internal_dompath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dompath(const std::string& value);
-  std::string* _internal_mutable_dompath();
+  const std::string& _internal_a_dompath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_dompath(const std::string& value);
+  std::string* _internal_mutable_a_dompath();
   public:
 
-  // required bool recursiveFlag = 4;
-  bool has_recursiveflag() const;
+  // required bool a_recursiveFlag = 4;
+  bool has_a_recursiveflag() const;
   private:
-  bool _internal_has_recursiveflag() const;
+  bool _internal_has_a_recursiveflag() const;
   public:
-  void clear_recursiveflag();
-  bool recursiveflag() const;
-  void set_recursiveflag(bool value);
+  void clear_a_recursiveflag();
+  bool a_recursiveflag() const;
+  void set_a_recursiveflag(bool value);
   private:
-  bool _internal_recursiveflag() const;
-  void _internal_set_recursiveflag(bool value);
+  bool _internal_a_recursiveflag() const;
+  void _internal_set_a_recursiveflag(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemGetFilesParams)
@@ -476,10 +476,10 @@ class FileSystemGetFilesParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filesystem_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr realpath_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dompath_;
-    bool recursiveflag_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filesystem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_realpath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dompath_;
+    bool a_recursiveflag_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemParams_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -596,43 +596,43 @@ class FileSystemGetFileOrDirectoryParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFilesystemFieldNumber = 1,
-    kRealPathFieldNumber = 2,
+    kAFilesystemFieldNumber = 1,
+    kARealPathFieldNumber = 2,
   };
-  // required bytes filesystem = 1;
-  bool has_filesystem() const;
+  // required bytes a_filesystem = 1;
+  bool has_a_filesystem() const;
   private:
-  bool _internal_has_filesystem() const;
+  bool _internal_has_a_filesystem() const;
   public:
-  void clear_filesystem();
-  const std::string& filesystem() const;
+  void clear_a_filesystem();
+  const std::string& a_filesystem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filesystem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filesystem();
-  PROTOBUF_NODISCARD std::string* release_filesystem();
-  void set_allocated_filesystem(std::string* filesystem);
+  void set_a_filesystem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filesystem();
+  PROTOBUF_NODISCARD std::string* release_a_filesystem();
+  void set_allocated_a_filesystem(std::string* a_filesystem);
   private:
-  const std::string& _internal_filesystem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filesystem(const std::string& value);
-  std::string* _internal_mutable_filesystem();
+  const std::string& _internal_a_filesystem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filesystem(const std::string& value);
+  std::string* _internal_mutable_a_filesystem();
   public:
 
-  // required bytes realPath = 2;
-  bool has_realpath() const;
+  // required bytes a_realPath = 2;
+  bool has_a_realpath() const;
   private:
-  bool _internal_has_realpath() const;
+  bool _internal_has_a_realpath() const;
   public:
-  void clear_realpath();
-  const std::string& realpath() const;
+  void clear_a_realpath();
+  const std::string& a_realpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_realpath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_realpath();
-  PROTOBUF_NODISCARD std::string* release_realpath();
-  void set_allocated_realpath(std::string* realpath);
+  void set_a_realpath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_realpath();
+  PROTOBUF_NODISCARD std::string* release_a_realpath();
+  void set_allocated_a_realpath(std::string* a_realpath);
   private:
-  const std::string& _internal_realpath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_realpath(const std::string& value);
-  std::string* _internal_mutable_realpath();
+  const std::string& _internal_a_realpath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_realpath(const std::string& value);
+  std::string* _internal_mutable_a_realpath();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams)
@@ -648,8 +648,8 @@ class FileSystemGetFileOrDirectoryParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filesystem_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr realpath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filesystem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_realpath_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemParams_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -698,9 +698,9 @@ class FileSystemParams final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVFileSystemGetDirectoryListingParams = 1,
-    kMVFileSystemGetFilesParams = 2,
-    kMVFileSystemGetFileOrDirectoryParams = 3,
+    kAMVFileSystemGetDirectoryListingParams = 1,
+    kAMVFileSystemGetFilesParams = 2,
+    kAMVFileSystemGetFileOrDirectoryParams = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -773,72 +773,72 @@ class FileSystemParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVFileSystemGetDirectoryListingParamsFieldNumber = 1,
-    kMVFileSystemGetFilesParamsFieldNumber = 2,
-    kMVFileSystemGetFileOrDirectoryParamsFieldNumber = 3,
+    kAMVFileSystemGetDirectoryListingParamsFieldNumber = 1,
+    kAMVFileSystemGetFilesParamsFieldNumber = 2,
+    kAMVFileSystemGetFileOrDirectoryParamsFieldNumber = 3,
   };
-  // .protobuf.mozilla.dom.FileSystemGetDirectoryListingParams mVFileSystemGetDirectoryListingParams = 1;
-  bool has_mvfilesystemgetdirectorylistingparams() const;
+  // .protobuf.mozilla.dom.FileSystemGetDirectoryListingParams a_mVFileSystemGetDirectoryListingParams = 1;
+  bool has_a_mvfilesystemgetdirectorylistingparams() const;
   private:
-  bool _internal_has_mvfilesystemgetdirectorylistingparams() const;
+  bool _internal_has_a_mvfilesystemgetdirectorylistingparams() const;
   public:
-  void clear_mvfilesystemgetdirectorylistingparams();
-  const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& mvfilesystemgetdirectorylistingparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* release_mvfilesystemgetdirectorylistingparams();
-  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* mutable_mvfilesystemgetdirectorylistingparams();
-  void set_allocated_mvfilesystemgetdirectorylistingparams(::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* mvfilesystemgetdirectorylistingparams);
+  void clear_a_mvfilesystemgetdirectorylistingparams();
+  const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& a_mvfilesystemgetdirectorylistingparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* release_a_mvfilesystemgetdirectorylistingparams();
+  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* mutable_a_mvfilesystemgetdirectorylistingparams();
+  void set_allocated_a_mvfilesystemgetdirectorylistingparams(::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* a_mvfilesystemgetdirectorylistingparams);
   private:
-  const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& _internal_mvfilesystemgetdirectorylistingparams() const;
-  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* _internal_mutable_mvfilesystemgetdirectorylistingparams();
+  const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& _internal_a_mvfilesystemgetdirectorylistingparams() const;
+  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* _internal_mutable_a_mvfilesystemgetdirectorylistingparams();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemgetdirectorylistingparams(
-      ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* mvfilesystemgetdirectorylistingparams);
-  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* unsafe_arena_release_mvfilesystemgetdirectorylistingparams();
+  void unsafe_arena_set_allocated_a_mvfilesystemgetdirectorylistingparams(
+      ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* a_mvfilesystemgetdirectorylistingparams);
+  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* unsafe_arena_release_a_mvfilesystemgetdirectorylistingparams();
 
-  // .protobuf.mozilla.dom.FileSystemGetFilesParams mVFileSystemGetFilesParams = 2;
-  bool has_mvfilesystemgetfilesparams() const;
+  // .protobuf.mozilla.dom.FileSystemGetFilesParams a_mVFileSystemGetFilesParams = 2;
+  bool has_a_mvfilesystemgetfilesparams() const;
   private:
-  bool _internal_has_mvfilesystemgetfilesparams() const;
+  bool _internal_has_a_mvfilesystemgetfilesparams() const;
   public:
-  void clear_mvfilesystemgetfilesparams();
-  const ::protobuf::mozilla::dom::FileSystemGetFilesParams& mvfilesystemgetfilesparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemGetFilesParams* release_mvfilesystemgetfilesparams();
-  ::protobuf::mozilla::dom::FileSystemGetFilesParams* mutable_mvfilesystemgetfilesparams();
-  void set_allocated_mvfilesystemgetfilesparams(::protobuf::mozilla::dom::FileSystemGetFilesParams* mvfilesystemgetfilesparams);
+  void clear_a_mvfilesystemgetfilesparams();
+  const ::protobuf::mozilla::dom::FileSystemGetFilesParams& a_mvfilesystemgetfilesparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemGetFilesParams* release_a_mvfilesystemgetfilesparams();
+  ::protobuf::mozilla::dom::FileSystemGetFilesParams* mutable_a_mvfilesystemgetfilesparams();
+  void set_allocated_a_mvfilesystemgetfilesparams(::protobuf::mozilla::dom::FileSystemGetFilesParams* a_mvfilesystemgetfilesparams);
   private:
-  const ::protobuf::mozilla::dom::FileSystemGetFilesParams& _internal_mvfilesystemgetfilesparams() const;
-  ::protobuf::mozilla::dom::FileSystemGetFilesParams* _internal_mutable_mvfilesystemgetfilesparams();
+  const ::protobuf::mozilla::dom::FileSystemGetFilesParams& _internal_a_mvfilesystemgetfilesparams() const;
+  ::protobuf::mozilla::dom::FileSystemGetFilesParams* _internal_mutable_a_mvfilesystemgetfilesparams();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemgetfilesparams(
-      ::protobuf::mozilla::dom::FileSystemGetFilesParams* mvfilesystemgetfilesparams);
-  ::protobuf::mozilla::dom::FileSystemGetFilesParams* unsafe_arena_release_mvfilesystemgetfilesparams();
+  void unsafe_arena_set_allocated_a_mvfilesystemgetfilesparams(
+      ::protobuf::mozilla::dom::FileSystemGetFilesParams* a_mvfilesystemgetfilesparams);
+  ::protobuf::mozilla::dom::FileSystemGetFilesParams* unsafe_arena_release_a_mvfilesystemgetfilesparams();
 
-  // .protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams mVFileSystemGetFileOrDirectoryParams = 3;
-  bool has_mvfilesystemgetfileordirectoryparams() const;
+  // .protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams a_mVFileSystemGetFileOrDirectoryParams = 3;
+  bool has_a_mvfilesystemgetfileordirectoryparams() const;
   private:
-  bool _internal_has_mvfilesystemgetfileordirectoryparams() const;
+  bool _internal_has_a_mvfilesystemgetfileordirectoryparams() const;
   public:
-  void clear_mvfilesystemgetfileordirectoryparams();
-  const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& mvfilesystemgetfileordirectoryparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* release_mvfilesystemgetfileordirectoryparams();
-  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* mutable_mvfilesystemgetfileordirectoryparams();
-  void set_allocated_mvfilesystemgetfileordirectoryparams(::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* mvfilesystemgetfileordirectoryparams);
+  void clear_a_mvfilesystemgetfileordirectoryparams();
+  const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& a_mvfilesystemgetfileordirectoryparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* release_a_mvfilesystemgetfileordirectoryparams();
+  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* mutable_a_mvfilesystemgetfileordirectoryparams();
+  void set_allocated_a_mvfilesystemgetfileordirectoryparams(::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* a_mvfilesystemgetfileordirectoryparams);
   private:
-  const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& _internal_mvfilesystemgetfileordirectoryparams() const;
-  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* _internal_mutable_mvfilesystemgetfileordirectoryparams();
+  const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& _internal_a_mvfilesystemgetfileordirectoryparams() const;
+  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* _internal_mutable_a_mvfilesystemgetfileordirectoryparams();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemgetfileordirectoryparams(
-      ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* mvfilesystemgetfileordirectoryparams);
-  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* unsafe_arena_release_mvfilesystemgetfileordirectoryparams();
+  void unsafe_arena_set_allocated_a_mvfilesystemgetfileordirectoryparams(
+      ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* a_mvfilesystemgetfileordirectoryparams);
+  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* unsafe_arena_release_a_mvfilesystemgetfileordirectoryparams();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemParams)
  private:
   class _Internal;
-  void set_has_mvfilesystemgetdirectorylistingparams();
-  void set_has_mvfilesystemgetfilesparams();
-  void set_has_mvfilesystemgetfileordirectoryparams();
+  void set_has_a_mvfilesystemgetdirectorylistingparams();
+  void set_has_a_mvfilesystemgetfilesparams();
+  void set_has_a_mvfilesystemgetfileordirectoryparams();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -850,9 +850,9 @@ class FileSystemParams final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* mvfilesystemgetdirectorylistingparams_;
-      ::protobuf::mozilla::dom::FileSystemGetFilesParams* mvfilesystemgetfilesparams_;
-      ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* mvfilesystemgetfileordirectoryparams_;
+      ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* a_mvfilesystemgetdirectorylistingparams_;
+      ::protobuf::mozilla::dom::FileSystemGetFilesParams* a_mvfilesystemgetfilesparams_;
+      ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* a_mvfilesystemgetfileordirectoryparams_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -872,877 +872,877 @@ class FileSystemParams final :
 #endif  // __GNUC__
 // FileSystemGetDirectoryListingParams
 
-// required bytes filesystem = 1;
-inline bool FileSystemGetDirectoryListingParams::_internal_has_filesystem() const {
+// required bytes a_filesystem = 1;
+inline bool FileSystemGetDirectoryListingParams::_internal_has_a_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetDirectoryListingParams::has_filesystem() const {
-  return _internal_has_filesystem();
+inline bool FileSystemGetDirectoryListingParams::has_a_filesystem() const {
+  return _internal_has_a_filesystem();
 }
-inline void FileSystemGetDirectoryListingParams::clear_filesystem() {
-  _impl_.filesystem_.ClearToEmpty();
+inline void FileSystemGetDirectoryListingParams::clear_a_filesystem() {
+  _impl_.a_filesystem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::filesystem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
-  return _internal_filesystem();
+inline const std::string& FileSystemGetDirectoryListingParams::a_filesystem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filesystem)
+  return _internal_a_filesystem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetDirectoryListingParams::set_filesystem(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetDirectoryListingParams::set_a_filesystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
+ _impl_.a_filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filesystem)
 }
-inline std::string* FileSystemGetDirectoryListingParams::mutable_filesystem() {
-  std::string* _s = _internal_mutable_filesystem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
+inline std::string* FileSystemGetDirectoryListingParams::mutable_a_filesystem() {
+  std::string* _s = _internal_mutable_a_filesystem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filesystem)
   return _s;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::_internal_filesystem() const {
-  return _impl_.filesystem_.Get();
+inline const std::string& FileSystemGetDirectoryListingParams::_internal_a_filesystem() const {
+  return _impl_.a_filesystem_.Get();
 }
-inline void FileSystemGetDirectoryListingParams::_internal_set_filesystem(const std::string& value) {
+inline void FileSystemGetDirectoryListingParams::_internal_set_a_filesystem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.filesystem_.Set(value, GetArenaForAllocation());
+  _impl_.a_filesystem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_filesystem() {
+inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_a_filesystem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.filesystem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filesystem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::release_filesystem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
-  if (!_internal_has_filesystem()) {
+inline std::string* FileSystemGetDirectoryListingParams::release_a_filesystem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filesystem)
+  if (!_internal_has_a_filesystem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.filesystem_.Release();
+  auto* p = _impl_.a_filesystem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filesystem_.IsDefault()) {
-    _impl_.filesystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filesystem_.IsDefault()) {
+    _impl_.a_filesystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetDirectoryListingParams::set_allocated_filesystem(std::string* filesystem) {
-  if (filesystem != nullptr) {
+inline void FileSystemGetDirectoryListingParams::set_allocated_a_filesystem(std::string* a_filesystem) {
+  if (a_filesystem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.filesystem_.SetAllocated(filesystem, GetArenaForAllocation());
+  _impl_.a_filesystem_.SetAllocated(a_filesystem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filesystem_.IsDefault()) {
-    _impl_.filesystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filesystem_.IsDefault()) {
+    _impl_.a_filesystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filesystem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filesystem)
 }
 
-// required bytes realPath = 2;
-inline bool FileSystemGetDirectoryListingParams::_internal_has_realpath() const {
+// required bytes a_realPath = 2;
+inline bool FileSystemGetDirectoryListingParams::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemGetDirectoryListingParams::has_realpath() const {
-  return _internal_has_realpath();
+inline bool FileSystemGetDirectoryListingParams::has_a_realpath() const {
+  return _internal_has_a_realpath();
 }
-inline void FileSystemGetDirectoryListingParams::clear_realpath() {
-  _impl_.realpath_.ClearToEmpty();
+inline void FileSystemGetDirectoryListingParams::clear_a_realpath() {
+  _impl_.a_realpath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::realpath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
-  return _internal_realpath();
+inline const std::string& FileSystemGetDirectoryListingParams::a_realpath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_realPath)
+  return _internal_a_realpath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetDirectoryListingParams::set_realpath(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetDirectoryListingParams::set_a_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
+ _impl_.a_realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_realPath)
 }
-inline std::string* FileSystemGetDirectoryListingParams::mutable_realpath() {
-  std::string* _s = _internal_mutable_realpath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
+inline std::string* FileSystemGetDirectoryListingParams::mutable_a_realpath() {
+  std::string* _s = _internal_mutable_a_realpath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_realPath)
   return _s;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::_internal_realpath() const {
-  return _impl_.realpath_.Get();
+inline const std::string& FileSystemGetDirectoryListingParams::_internal_a_realpath() const {
+  return _impl_.a_realpath_.Get();
 }
-inline void FileSystemGetDirectoryListingParams::_internal_set_realpath(const std::string& value) {
+inline void FileSystemGetDirectoryListingParams::_internal_set_a_realpath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.realpath_.Set(value, GetArenaForAllocation());
+  _impl_.a_realpath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_realpath() {
+inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_a_realpath() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.realpath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_realpath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::release_realpath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
-  if (!_internal_has_realpath()) {
+inline std::string* FileSystemGetDirectoryListingParams::release_a_realpath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_realPath)
+  if (!_internal_has_a_realpath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.realpath_.Release();
+  auto* p = _impl_.a_realpath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetDirectoryListingParams::set_allocated_realpath(std::string* realpath) {
-  if (realpath != nullptr) {
+inline void FileSystemGetDirectoryListingParams::set_allocated_a_realpath(std::string* a_realpath) {
+  if (a_realpath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.realpath_.SetAllocated(realpath, GetArenaForAllocation());
+  _impl_.a_realpath_.SetAllocated(a_realpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.realPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_realPath)
 }
 
-// required bytes domPath = 3;
-inline bool FileSystemGetDirectoryListingParams::_internal_has_dompath() const {
+// required bytes a_domPath = 3;
+inline bool FileSystemGetDirectoryListingParams::_internal_has_a_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FileSystemGetDirectoryListingParams::has_dompath() const {
-  return _internal_has_dompath();
+inline bool FileSystemGetDirectoryListingParams::has_a_dompath() const {
+  return _internal_has_a_dompath();
 }
-inline void FileSystemGetDirectoryListingParams::clear_dompath() {
-  _impl_.dompath_.ClearToEmpty();
+inline void FileSystemGetDirectoryListingParams::clear_a_dompath() {
+  _impl_.a_dompath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::dompath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
-  return _internal_dompath();
+inline const std::string& FileSystemGetDirectoryListingParams::a_dompath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_domPath)
+  return _internal_a_dompath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetDirectoryListingParams::set_dompath(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetDirectoryListingParams::set_a_dompath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
+ _impl_.a_dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_domPath)
 }
-inline std::string* FileSystemGetDirectoryListingParams::mutable_dompath() {
-  std::string* _s = _internal_mutable_dompath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
+inline std::string* FileSystemGetDirectoryListingParams::mutable_a_dompath() {
+  std::string* _s = _internal_mutable_a_dompath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_domPath)
   return _s;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::_internal_dompath() const {
-  return _impl_.dompath_.Get();
+inline const std::string& FileSystemGetDirectoryListingParams::_internal_a_dompath() const {
+  return _impl_.a_dompath_.Get();
 }
-inline void FileSystemGetDirectoryListingParams::_internal_set_dompath(const std::string& value) {
+inline void FileSystemGetDirectoryListingParams::_internal_set_a_dompath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.dompath_.Set(value, GetArenaForAllocation());
+  _impl_.a_dompath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_dompath() {
+inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_a_dompath() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.dompath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_dompath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::release_dompath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
-  if (!_internal_has_dompath()) {
+inline std::string* FileSystemGetDirectoryListingParams::release_a_dompath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_domPath)
+  if (!_internal_has_a_dompath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.dompath_.Release();
+  auto* p = _impl_.a_dompath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dompath_.IsDefault()) {
-    _impl_.dompath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dompath_.IsDefault()) {
+    _impl_.a_dompath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetDirectoryListingParams::set_allocated_dompath(std::string* dompath) {
-  if (dompath != nullptr) {
+inline void FileSystemGetDirectoryListingParams::set_allocated_a_dompath(std::string* a_dompath) {
+  if (a_dompath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.dompath_.SetAllocated(dompath, GetArenaForAllocation());
+  _impl_.a_dompath_.SetAllocated(a_dompath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dompath_.IsDefault()) {
-    _impl_.dompath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dompath_.IsDefault()) {
+    _impl_.a_dompath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.domPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_domPath)
 }
 
-// required bytes filters = 4;
-inline bool FileSystemGetDirectoryListingParams::_internal_has_filters() const {
+// required bytes a_filters = 4;
+inline bool FileSystemGetDirectoryListingParams::_internal_has_a_filters() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool FileSystemGetDirectoryListingParams::has_filters() const {
-  return _internal_has_filters();
+inline bool FileSystemGetDirectoryListingParams::has_a_filters() const {
+  return _internal_has_a_filters();
 }
-inline void FileSystemGetDirectoryListingParams::clear_filters() {
-  _impl_.filters_.ClearToEmpty();
+inline void FileSystemGetDirectoryListingParams::clear_a_filters() {
+  _impl_.a_filters_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::filters() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filters)
-  return _internal_filters();
+inline const std::string& FileSystemGetDirectoryListingParams::a_filters() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filters)
+  return _internal_a_filters();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetDirectoryListingParams::set_filters(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetDirectoryListingParams::set_a_filters(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.filters_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filters)
+ _impl_.a_filters_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filters)
 }
-inline std::string* FileSystemGetDirectoryListingParams::mutable_filters() {
-  std::string* _s = _internal_mutable_filters();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filters)
+inline std::string* FileSystemGetDirectoryListingParams::mutable_a_filters() {
+  std::string* _s = _internal_mutable_a_filters();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filters)
   return _s;
 }
-inline const std::string& FileSystemGetDirectoryListingParams::_internal_filters() const {
-  return _impl_.filters_.Get();
+inline const std::string& FileSystemGetDirectoryListingParams::_internal_a_filters() const {
+  return _impl_.a_filters_.Get();
 }
-inline void FileSystemGetDirectoryListingParams::_internal_set_filters(const std::string& value) {
+inline void FileSystemGetDirectoryListingParams::_internal_set_a_filters(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.filters_.Set(value, GetArenaForAllocation());
+  _impl_.a_filters_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_filters() {
+inline std::string* FileSystemGetDirectoryListingParams::_internal_mutable_a_filters() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.filters_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filters_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetDirectoryListingParams::release_filters() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filters)
-  if (!_internal_has_filters()) {
+inline std::string* FileSystemGetDirectoryListingParams::release_a_filters() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filters)
+  if (!_internal_has_a_filters()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.filters_.Release();
+  auto* p = _impl_.a_filters_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filters_.IsDefault()) {
-    _impl_.filters_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filters_.IsDefault()) {
+    _impl_.a_filters_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetDirectoryListingParams::set_allocated_filters(std::string* filters) {
-  if (filters != nullptr) {
+inline void FileSystemGetDirectoryListingParams::set_allocated_a_filters(std::string* a_filters) {
+  if (a_filters != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.filters_.SetAllocated(filters, GetArenaForAllocation());
+  _impl_.a_filters_.SetAllocated(a_filters, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filters_.IsDefault()) {
-    _impl_.filters_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filters_.IsDefault()) {
+    _impl_.a_filters_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.filters)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetDirectoryListingParams.a_filters)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetFilesParams
 
-// required bytes filesystem = 1;
-inline bool FileSystemGetFilesParams::_internal_has_filesystem() const {
+// required bytes a_filesystem = 1;
+inline bool FileSystemGetFilesParams::_internal_has_a_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetFilesParams::has_filesystem() const {
-  return _internal_has_filesystem();
+inline bool FileSystemGetFilesParams::has_a_filesystem() const {
+  return _internal_has_a_filesystem();
 }
-inline void FileSystemGetFilesParams::clear_filesystem() {
-  _impl_.filesystem_.ClearToEmpty();
+inline void FileSystemGetFilesParams::clear_a_filesystem() {
+  _impl_.a_filesystem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetFilesParams::filesystem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
-  return _internal_filesystem();
+inline const std::string& FileSystemGetFilesParams::a_filesystem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.a_filesystem)
+  return _internal_a_filesystem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetFilesParams::set_filesystem(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetFilesParams::set_a_filesystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
+ _impl_.a_filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.a_filesystem)
 }
-inline std::string* FileSystemGetFilesParams::mutable_filesystem() {
-  std::string* _s = _internal_mutable_filesystem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
+inline std::string* FileSystemGetFilesParams::mutable_a_filesystem() {
+  std::string* _s = _internal_mutable_a_filesystem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFilesParams.a_filesystem)
   return _s;
 }
-inline const std::string& FileSystemGetFilesParams::_internal_filesystem() const {
-  return _impl_.filesystem_.Get();
+inline const std::string& FileSystemGetFilesParams::_internal_a_filesystem() const {
+  return _impl_.a_filesystem_.Get();
 }
-inline void FileSystemGetFilesParams::_internal_set_filesystem(const std::string& value) {
+inline void FileSystemGetFilesParams::_internal_set_a_filesystem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.filesystem_.Set(value, GetArenaForAllocation());
+  _impl_.a_filesystem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFilesParams::_internal_mutable_filesystem() {
+inline std::string* FileSystemGetFilesParams::_internal_mutable_a_filesystem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.filesystem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filesystem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFilesParams::release_filesystem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
-  if (!_internal_has_filesystem()) {
+inline std::string* FileSystemGetFilesParams::release_a_filesystem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFilesParams.a_filesystem)
+  if (!_internal_has_a_filesystem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.filesystem_.Release();
+  auto* p = _impl_.a_filesystem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filesystem_.IsDefault()) {
-    _impl_.filesystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filesystem_.IsDefault()) {
+    _impl_.a_filesystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetFilesParams::set_allocated_filesystem(std::string* filesystem) {
-  if (filesystem != nullptr) {
+inline void FileSystemGetFilesParams::set_allocated_a_filesystem(std::string* a_filesystem) {
+  if (a_filesystem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.filesystem_.SetAllocated(filesystem, GetArenaForAllocation());
+  _impl_.a_filesystem_.SetAllocated(a_filesystem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filesystem_.IsDefault()) {
-    _impl_.filesystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filesystem_.IsDefault()) {
+    _impl_.a_filesystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.filesystem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.a_filesystem)
 }
 
-// required bytes realPath = 2;
-inline bool FileSystemGetFilesParams::_internal_has_realpath() const {
+// required bytes a_realPath = 2;
+inline bool FileSystemGetFilesParams::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemGetFilesParams::has_realpath() const {
-  return _internal_has_realpath();
+inline bool FileSystemGetFilesParams::has_a_realpath() const {
+  return _internal_has_a_realpath();
 }
-inline void FileSystemGetFilesParams::clear_realpath() {
-  _impl_.realpath_.ClearToEmpty();
+inline void FileSystemGetFilesParams::clear_a_realpath() {
+  _impl_.a_realpath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemGetFilesParams::realpath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
-  return _internal_realpath();
+inline const std::string& FileSystemGetFilesParams::a_realpath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.a_realPath)
+  return _internal_a_realpath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetFilesParams::set_realpath(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetFilesParams::set_a_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
+ _impl_.a_realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.a_realPath)
 }
-inline std::string* FileSystemGetFilesParams::mutable_realpath() {
-  std::string* _s = _internal_mutable_realpath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
+inline std::string* FileSystemGetFilesParams::mutable_a_realpath() {
+  std::string* _s = _internal_mutable_a_realpath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFilesParams.a_realPath)
   return _s;
 }
-inline const std::string& FileSystemGetFilesParams::_internal_realpath() const {
-  return _impl_.realpath_.Get();
+inline const std::string& FileSystemGetFilesParams::_internal_a_realpath() const {
+  return _impl_.a_realpath_.Get();
 }
-inline void FileSystemGetFilesParams::_internal_set_realpath(const std::string& value) {
+inline void FileSystemGetFilesParams::_internal_set_a_realpath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.realpath_.Set(value, GetArenaForAllocation());
+  _impl_.a_realpath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFilesParams::_internal_mutable_realpath() {
+inline std::string* FileSystemGetFilesParams::_internal_mutable_a_realpath() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.realpath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_realpath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFilesParams::release_realpath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
-  if (!_internal_has_realpath()) {
+inline std::string* FileSystemGetFilesParams::release_a_realpath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFilesParams.a_realPath)
+  if (!_internal_has_a_realpath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.realpath_.Release();
+  auto* p = _impl_.a_realpath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetFilesParams::set_allocated_realpath(std::string* realpath) {
-  if (realpath != nullptr) {
+inline void FileSystemGetFilesParams::set_allocated_a_realpath(std::string* a_realpath) {
+  if (a_realpath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.realpath_.SetAllocated(realpath, GetArenaForAllocation());
+  _impl_.a_realpath_.SetAllocated(a_realpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.realPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.a_realPath)
 }
 
-// required bytes domPath = 3;
-inline bool FileSystemGetFilesParams::_internal_has_dompath() const {
+// required bytes a_domPath = 3;
+inline bool FileSystemGetFilesParams::_internal_has_a_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FileSystemGetFilesParams::has_dompath() const {
-  return _internal_has_dompath();
+inline bool FileSystemGetFilesParams::has_a_dompath() const {
+  return _internal_has_a_dompath();
 }
-inline void FileSystemGetFilesParams::clear_dompath() {
-  _impl_.dompath_.ClearToEmpty();
+inline void FileSystemGetFilesParams::clear_a_dompath() {
+  _impl_.a_dompath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& FileSystemGetFilesParams::dompath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.domPath)
-  return _internal_dompath();
+inline const std::string& FileSystemGetFilesParams::a_dompath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.a_domPath)
+  return _internal_a_dompath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetFilesParams::set_dompath(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetFilesParams::set_a_dompath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.domPath)
+ _impl_.a_dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.a_domPath)
 }
-inline std::string* FileSystemGetFilesParams::mutable_dompath() {
-  std::string* _s = _internal_mutable_dompath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFilesParams.domPath)
+inline std::string* FileSystemGetFilesParams::mutable_a_dompath() {
+  std::string* _s = _internal_mutable_a_dompath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFilesParams.a_domPath)
   return _s;
 }
-inline const std::string& FileSystemGetFilesParams::_internal_dompath() const {
-  return _impl_.dompath_.Get();
+inline const std::string& FileSystemGetFilesParams::_internal_a_dompath() const {
+  return _impl_.a_dompath_.Get();
 }
-inline void FileSystemGetFilesParams::_internal_set_dompath(const std::string& value) {
+inline void FileSystemGetFilesParams::_internal_set_a_dompath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.dompath_.Set(value, GetArenaForAllocation());
+  _impl_.a_dompath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFilesParams::_internal_mutable_dompath() {
+inline std::string* FileSystemGetFilesParams::_internal_mutable_a_dompath() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.dompath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_dompath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFilesParams::release_dompath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFilesParams.domPath)
-  if (!_internal_has_dompath()) {
+inline std::string* FileSystemGetFilesParams::release_a_dompath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFilesParams.a_domPath)
+  if (!_internal_has_a_dompath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.dompath_.Release();
+  auto* p = _impl_.a_dompath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dompath_.IsDefault()) {
-    _impl_.dompath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dompath_.IsDefault()) {
+    _impl_.a_dompath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetFilesParams::set_allocated_dompath(std::string* dompath) {
-  if (dompath != nullptr) {
+inline void FileSystemGetFilesParams::set_allocated_a_dompath(std::string* a_dompath) {
+  if (a_dompath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.dompath_.SetAllocated(dompath, GetArenaForAllocation());
+  _impl_.a_dompath_.SetAllocated(a_dompath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dompath_.IsDefault()) {
-    _impl_.dompath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dompath_.IsDefault()) {
+    _impl_.a_dompath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.domPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFilesParams.a_domPath)
 }
 
-// required bool recursiveFlag = 4;
-inline bool FileSystemGetFilesParams::_internal_has_recursiveflag() const {
+// required bool a_recursiveFlag = 4;
+inline bool FileSystemGetFilesParams::_internal_has_a_recursiveflag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool FileSystemGetFilesParams::has_recursiveflag() const {
-  return _internal_has_recursiveflag();
+inline bool FileSystemGetFilesParams::has_a_recursiveflag() const {
+  return _internal_has_a_recursiveflag();
 }
-inline void FileSystemGetFilesParams::clear_recursiveflag() {
-  _impl_.recursiveflag_ = false;
+inline void FileSystemGetFilesParams::clear_a_recursiveflag() {
+  _impl_.a_recursiveflag_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool FileSystemGetFilesParams::_internal_recursiveflag() const {
-  return _impl_.recursiveflag_;
+inline bool FileSystemGetFilesParams::_internal_a_recursiveflag() const {
+  return _impl_.a_recursiveflag_;
 }
-inline bool FileSystemGetFilesParams::recursiveflag() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.recursiveFlag)
-  return _internal_recursiveflag();
+inline bool FileSystemGetFilesParams::a_recursiveflag() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFilesParams.a_recursiveFlag)
+  return _internal_a_recursiveflag();
 }
-inline void FileSystemGetFilesParams::_internal_set_recursiveflag(bool value) {
+inline void FileSystemGetFilesParams::_internal_set_a_recursiveflag(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.recursiveflag_ = value;
+  _impl_.a_recursiveflag_ = value;
 }
-inline void FileSystemGetFilesParams::set_recursiveflag(bool value) {
-  _internal_set_recursiveflag(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.recursiveFlag)
+inline void FileSystemGetFilesParams::set_a_recursiveflag(bool value) {
+  _internal_set_a_recursiveflag(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFilesParams.a_recursiveFlag)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetFileOrDirectoryParams
 
-// required bytes filesystem = 1;
-inline bool FileSystemGetFileOrDirectoryParams::_internal_has_filesystem() const {
+// required bytes a_filesystem = 1;
+inline bool FileSystemGetFileOrDirectoryParams::_internal_has_a_filesystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetFileOrDirectoryParams::has_filesystem() const {
-  return _internal_has_filesystem();
+inline bool FileSystemGetFileOrDirectoryParams::has_a_filesystem() const {
+  return _internal_has_a_filesystem();
 }
-inline void FileSystemGetFileOrDirectoryParams::clear_filesystem() {
-  _impl_.filesystem_.ClearToEmpty();
+inline void FileSystemGetFileOrDirectoryParams::clear_a_filesystem() {
+  _impl_.a_filesystem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetFileOrDirectoryParams::filesystem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
-  return _internal_filesystem();
+inline const std::string& FileSystemGetFileOrDirectoryParams::a_filesystem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_filesystem)
+  return _internal_a_filesystem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetFileOrDirectoryParams::set_filesystem(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetFileOrDirectoryParams::set_a_filesystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
+ _impl_.a_filesystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_filesystem)
 }
-inline std::string* FileSystemGetFileOrDirectoryParams::mutable_filesystem() {
-  std::string* _s = _internal_mutable_filesystem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
+inline std::string* FileSystemGetFileOrDirectoryParams::mutable_a_filesystem() {
+  std::string* _s = _internal_mutable_a_filesystem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_filesystem)
   return _s;
 }
-inline const std::string& FileSystemGetFileOrDirectoryParams::_internal_filesystem() const {
-  return _impl_.filesystem_.Get();
+inline const std::string& FileSystemGetFileOrDirectoryParams::_internal_a_filesystem() const {
+  return _impl_.a_filesystem_.Get();
 }
-inline void FileSystemGetFileOrDirectoryParams::_internal_set_filesystem(const std::string& value) {
+inline void FileSystemGetFileOrDirectoryParams::_internal_set_a_filesystem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.filesystem_.Set(value, GetArenaForAllocation());
+  _impl_.a_filesystem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileOrDirectoryParams::_internal_mutable_filesystem() {
+inline std::string* FileSystemGetFileOrDirectoryParams::_internal_mutable_a_filesystem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.filesystem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filesystem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileOrDirectoryParams::release_filesystem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
-  if (!_internal_has_filesystem()) {
+inline std::string* FileSystemGetFileOrDirectoryParams::release_a_filesystem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_filesystem)
+  if (!_internal_has_a_filesystem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.filesystem_.Release();
+  auto* p = _impl_.a_filesystem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filesystem_.IsDefault()) {
-    _impl_.filesystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filesystem_.IsDefault()) {
+    _impl_.a_filesystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetFileOrDirectoryParams::set_allocated_filesystem(std::string* filesystem) {
-  if (filesystem != nullptr) {
+inline void FileSystemGetFileOrDirectoryParams::set_allocated_a_filesystem(std::string* a_filesystem) {
+  if (a_filesystem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.filesystem_.SetAllocated(filesystem, GetArenaForAllocation());
+  _impl_.a_filesystem_.SetAllocated(a_filesystem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filesystem_.IsDefault()) {
-    _impl_.filesystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filesystem_.IsDefault()) {
+    _impl_.a_filesystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.filesystem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_filesystem)
 }
 
-// required bytes realPath = 2;
-inline bool FileSystemGetFileOrDirectoryParams::_internal_has_realpath() const {
+// required bytes a_realPath = 2;
+inline bool FileSystemGetFileOrDirectoryParams::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemGetFileOrDirectoryParams::has_realpath() const {
-  return _internal_has_realpath();
+inline bool FileSystemGetFileOrDirectoryParams::has_a_realpath() const {
+  return _internal_has_a_realpath();
 }
-inline void FileSystemGetFileOrDirectoryParams::clear_realpath() {
-  _impl_.realpath_.ClearToEmpty();
+inline void FileSystemGetFileOrDirectoryParams::clear_a_realpath() {
+  _impl_.a_realpath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemGetFileOrDirectoryParams::realpath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.realPath)
-  return _internal_realpath();
+inline const std::string& FileSystemGetFileOrDirectoryParams::a_realpath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_realPath)
+  return _internal_a_realpath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetFileOrDirectoryParams::set_realpath(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetFileOrDirectoryParams::set_a_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.realPath)
+ _impl_.a_realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_realPath)
 }
-inline std::string* FileSystemGetFileOrDirectoryParams::mutable_realpath() {
-  std::string* _s = _internal_mutable_realpath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.realPath)
+inline std::string* FileSystemGetFileOrDirectoryParams::mutable_a_realpath() {
+  std::string* _s = _internal_mutable_a_realpath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_realPath)
   return _s;
 }
-inline const std::string& FileSystemGetFileOrDirectoryParams::_internal_realpath() const {
-  return _impl_.realpath_.Get();
+inline const std::string& FileSystemGetFileOrDirectoryParams::_internal_a_realpath() const {
+  return _impl_.a_realpath_.Get();
 }
-inline void FileSystemGetFileOrDirectoryParams::_internal_set_realpath(const std::string& value) {
+inline void FileSystemGetFileOrDirectoryParams::_internal_set_a_realpath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.realpath_.Set(value, GetArenaForAllocation());
+  _impl_.a_realpath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileOrDirectoryParams::_internal_mutable_realpath() {
+inline std::string* FileSystemGetFileOrDirectoryParams::_internal_mutable_a_realpath() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.realpath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_realpath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileOrDirectoryParams::release_realpath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.realPath)
-  if (!_internal_has_realpath()) {
+inline std::string* FileSystemGetFileOrDirectoryParams::release_a_realpath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_realPath)
+  if (!_internal_has_a_realpath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.realpath_.Release();
+  auto* p = _impl_.a_realpath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetFileOrDirectoryParams::set_allocated_realpath(std::string* realpath) {
-  if (realpath != nullptr) {
+inline void FileSystemGetFileOrDirectoryParams::set_allocated_a_realpath(std::string* a_realpath) {
+  if (a_realpath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.realpath_.SetAllocated(realpath, GetArenaForAllocation());
+  _impl_.a_realpath_.SetAllocated(a_realpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.realPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams.a_realPath)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemParams
 
-// .protobuf.mozilla.dom.FileSystemGetDirectoryListingParams mVFileSystemGetDirectoryListingParams = 1;
-inline bool FileSystemParams::_internal_has_mvfilesystemgetdirectorylistingparams() const {
-  return content_case() == kMVFileSystemGetDirectoryListingParams;
+// .protobuf.mozilla.dom.FileSystemGetDirectoryListingParams a_mVFileSystemGetDirectoryListingParams = 1;
+inline bool FileSystemParams::_internal_has_a_mvfilesystemgetdirectorylistingparams() const {
+  return content_case() == kAMVFileSystemGetDirectoryListingParams;
 }
-inline bool FileSystemParams::has_mvfilesystemgetdirectorylistingparams() const {
-  return _internal_has_mvfilesystemgetdirectorylistingparams();
+inline bool FileSystemParams::has_a_mvfilesystemgetdirectorylistingparams() const {
+  return _internal_has_a_mvfilesystemgetdirectorylistingparams();
 }
-inline void FileSystemParams::set_has_mvfilesystemgetdirectorylistingparams() {
-  _impl_._oneof_case_[0] = kMVFileSystemGetDirectoryListingParams;
+inline void FileSystemParams::set_has_a_mvfilesystemgetdirectorylistingparams() {
+  _impl_._oneof_case_[0] = kAMVFileSystemGetDirectoryListingParams;
 }
-inline void FileSystemParams::clear_mvfilesystemgetdirectorylistingparams() {
-  if (_internal_has_mvfilesystemgetdirectorylistingparams()) {
+inline void FileSystemParams::clear_a_mvfilesystemgetdirectorylistingparams() {
+  if (_internal_has_a_mvfilesystemgetdirectorylistingparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemgetdirectorylistingparams_;
+      delete _impl_.content_.a_mvfilesystemgetdirectorylistingparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::release_mvfilesystemgetdirectorylistingparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetDirectoryListingParams)
-  if (_internal_has_mvfilesystemgetdirectorylistingparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::release_a_mvfilesystemgetdirectorylistingparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetDirectoryListingParams)
+  if (_internal_has_a_mvfilesystemgetdirectorylistingparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* temp = _impl_.content_.mvfilesystemgetdirectorylistingparams_;
+    ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* temp = _impl_.content_.a_mvfilesystemgetdirectorylistingparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemgetdirectorylistingparams_ = nullptr;
+    _impl_.content_.a_mvfilesystemgetdirectorylistingparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& FileSystemParams::_internal_mvfilesystemgetdirectorylistingparams() const {
-  return _internal_has_mvfilesystemgetdirectorylistingparams()
-      ? *_impl_.content_.mvfilesystemgetdirectorylistingparams_
+inline const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& FileSystemParams::_internal_a_mvfilesystemgetdirectorylistingparams() const {
+  return _internal_has_a_mvfilesystemgetdirectorylistingparams()
+      ? *_impl_.content_.a_mvfilesystemgetdirectorylistingparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams&>(::protobuf::mozilla::dom::_FileSystemGetDirectoryListingParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& FileSystemParams::mvfilesystemgetdirectorylistingparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetDirectoryListingParams)
-  return _internal_mvfilesystemgetdirectorylistingparams();
+inline const ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams& FileSystemParams::a_mvfilesystemgetdirectorylistingparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetDirectoryListingParams)
+  return _internal_a_mvfilesystemgetdirectorylistingparams();
 }
-inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::unsafe_arena_release_mvfilesystemgetdirectorylistingparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetDirectoryListingParams)
-  if (_internal_has_mvfilesystemgetdirectorylistingparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::unsafe_arena_release_a_mvfilesystemgetdirectorylistingparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetDirectoryListingParams)
+  if (_internal_has_a_mvfilesystemgetdirectorylistingparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* temp = _impl_.content_.mvfilesystemgetdirectorylistingparams_;
-    _impl_.content_.mvfilesystemgetdirectorylistingparams_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* temp = _impl_.content_.a_mvfilesystemgetdirectorylistingparams_;
+    _impl_.content_.a_mvfilesystemgetdirectorylistingparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemParams::unsafe_arena_set_allocated_mvfilesystemgetdirectorylistingparams(::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* mvfilesystemgetdirectorylistingparams) {
+inline void FileSystemParams::unsafe_arena_set_allocated_a_mvfilesystemgetdirectorylistingparams(::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* a_mvfilesystemgetdirectorylistingparams) {
   clear_content();
-  if (mvfilesystemgetdirectorylistingparams) {
-    set_has_mvfilesystemgetdirectorylistingparams();
-    _impl_.content_.mvfilesystemgetdirectorylistingparams_ = mvfilesystemgetdirectorylistingparams;
+  if (a_mvfilesystemgetdirectorylistingparams) {
+    set_has_a_mvfilesystemgetdirectorylistingparams();
+    _impl_.content_.a_mvfilesystemgetdirectorylistingparams_ = a_mvfilesystemgetdirectorylistingparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetDirectoryListingParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetDirectoryListingParams)
 }
-inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::_internal_mutable_mvfilesystemgetdirectorylistingparams() {
-  if (!_internal_has_mvfilesystemgetdirectorylistingparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::_internal_mutable_a_mvfilesystemgetdirectorylistingparams() {
+  if (!_internal_has_a_mvfilesystemgetdirectorylistingparams()) {
     clear_content();
-    set_has_mvfilesystemgetdirectorylistingparams();
-    _impl_.content_.mvfilesystemgetdirectorylistingparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams >(GetArenaForAllocation());
+    set_has_a_mvfilesystemgetdirectorylistingparams();
+    _impl_.content_.a_mvfilesystemgetdirectorylistingparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemgetdirectorylistingparams_;
+  return _impl_.content_.a_mvfilesystemgetdirectorylistingparams_;
 }
-inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::mutable_mvfilesystemgetdirectorylistingparams() {
-  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* _msg = _internal_mutable_mvfilesystemgetdirectorylistingparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetDirectoryListingParams)
+inline ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* FileSystemParams::mutable_a_mvfilesystemgetdirectorylistingparams() {
+  ::protobuf::mozilla::dom::FileSystemGetDirectoryListingParams* _msg = _internal_mutable_a_mvfilesystemgetdirectorylistingparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetDirectoryListingParams)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemGetFilesParams mVFileSystemGetFilesParams = 2;
-inline bool FileSystemParams::_internal_has_mvfilesystemgetfilesparams() const {
-  return content_case() == kMVFileSystemGetFilesParams;
+// .protobuf.mozilla.dom.FileSystemGetFilesParams a_mVFileSystemGetFilesParams = 2;
+inline bool FileSystemParams::_internal_has_a_mvfilesystemgetfilesparams() const {
+  return content_case() == kAMVFileSystemGetFilesParams;
 }
-inline bool FileSystemParams::has_mvfilesystemgetfilesparams() const {
-  return _internal_has_mvfilesystemgetfilesparams();
+inline bool FileSystemParams::has_a_mvfilesystemgetfilesparams() const {
+  return _internal_has_a_mvfilesystemgetfilesparams();
 }
-inline void FileSystemParams::set_has_mvfilesystemgetfilesparams() {
-  _impl_._oneof_case_[0] = kMVFileSystemGetFilesParams;
+inline void FileSystemParams::set_has_a_mvfilesystemgetfilesparams() {
+  _impl_._oneof_case_[0] = kAMVFileSystemGetFilesParams;
 }
-inline void FileSystemParams::clear_mvfilesystemgetfilesparams() {
-  if (_internal_has_mvfilesystemgetfilesparams()) {
+inline void FileSystemParams::clear_a_mvfilesystemgetfilesparams() {
+  if (_internal_has_a_mvfilesystemgetfilesparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemgetfilesparams_;
+      delete _impl_.content_.a_mvfilesystemgetfilesparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::release_mvfilesystemgetfilesparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFilesParams)
-  if (_internal_has_mvfilesystemgetfilesparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::release_a_mvfilesystemgetfilesparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFilesParams)
+  if (_internal_has_a_mvfilesystemgetfilesparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemGetFilesParams* temp = _impl_.content_.mvfilesystemgetfilesparams_;
+    ::protobuf::mozilla::dom::FileSystemGetFilesParams* temp = _impl_.content_.a_mvfilesystemgetfilesparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemgetfilesparams_ = nullptr;
+    _impl_.content_.a_mvfilesystemgetfilesparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemGetFilesParams& FileSystemParams::_internal_mvfilesystemgetfilesparams() const {
-  return _internal_has_mvfilesystemgetfilesparams()
-      ? *_impl_.content_.mvfilesystemgetfilesparams_
+inline const ::protobuf::mozilla::dom::FileSystemGetFilesParams& FileSystemParams::_internal_a_mvfilesystemgetfilesparams() const {
+  return _internal_has_a_mvfilesystemgetfilesparams()
+      ? *_impl_.content_.a_mvfilesystemgetfilesparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemGetFilesParams&>(::protobuf::mozilla::dom::_FileSystemGetFilesParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemGetFilesParams& FileSystemParams::mvfilesystemgetfilesparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFilesParams)
-  return _internal_mvfilesystemgetfilesparams();
+inline const ::protobuf::mozilla::dom::FileSystemGetFilesParams& FileSystemParams::a_mvfilesystemgetfilesparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFilesParams)
+  return _internal_a_mvfilesystemgetfilesparams();
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::unsafe_arena_release_mvfilesystemgetfilesparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFilesParams)
-  if (_internal_has_mvfilesystemgetfilesparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::unsafe_arena_release_a_mvfilesystemgetfilesparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFilesParams)
+  if (_internal_has_a_mvfilesystemgetfilesparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemGetFilesParams* temp = _impl_.content_.mvfilesystemgetfilesparams_;
-    _impl_.content_.mvfilesystemgetfilesparams_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemGetFilesParams* temp = _impl_.content_.a_mvfilesystemgetfilesparams_;
+    _impl_.content_.a_mvfilesystemgetfilesparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemParams::unsafe_arena_set_allocated_mvfilesystemgetfilesparams(::protobuf::mozilla::dom::FileSystemGetFilesParams* mvfilesystemgetfilesparams) {
+inline void FileSystemParams::unsafe_arena_set_allocated_a_mvfilesystemgetfilesparams(::protobuf::mozilla::dom::FileSystemGetFilesParams* a_mvfilesystemgetfilesparams) {
   clear_content();
-  if (mvfilesystemgetfilesparams) {
-    set_has_mvfilesystemgetfilesparams();
-    _impl_.content_.mvfilesystemgetfilesparams_ = mvfilesystemgetfilesparams;
+  if (a_mvfilesystemgetfilesparams) {
+    set_has_a_mvfilesystemgetfilesparams();
+    _impl_.content_.a_mvfilesystemgetfilesparams_ = a_mvfilesystemgetfilesparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFilesParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFilesParams)
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::_internal_mutable_mvfilesystemgetfilesparams() {
-  if (!_internal_has_mvfilesystemgetfilesparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::_internal_mutable_a_mvfilesystemgetfilesparams() {
+  if (!_internal_has_a_mvfilesystemgetfilesparams()) {
     clear_content();
-    set_has_mvfilesystemgetfilesparams();
-    _impl_.content_.mvfilesystemgetfilesparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemGetFilesParams >(GetArenaForAllocation());
+    set_has_a_mvfilesystemgetfilesparams();
+    _impl_.content_.a_mvfilesystemgetfilesparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemGetFilesParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemgetfilesparams_;
+  return _impl_.content_.a_mvfilesystemgetfilesparams_;
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::mutable_mvfilesystemgetfilesparams() {
-  ::protobuf::mozilla::dom::FileSystemGetFilesParams* _msg = _internal_mutable_mvfilesystemgetfilesparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFilesParams)
+inline ::protobuf::mozilla::dom::FileSystemGetFilesParams* FileSystemParams::mutable_a_mvfilesystemgetfilesparams() {
+  ::protobuf::mozilla::dom::FileSystemGetFilesParams* _msg = _internal_mutable_a_mvfilesystemgetfilesparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFilesParams)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams mVFileSystemGetFileOrDirectoryParams = 3;
-inline bool FileSystemParams::_internal_has_mvfilesystemgetfileordirectoryparams() const {
-  return content_case() == kMVFileSystemGetFileOrDirectoryParams;
+// .protobuf.mozilla.dom.FileSystemGetFileOrDirectoryParams a_mVFileSystemGetFileOrDirectoryParams = 3;
+inline bool FileSystemParams::_internal_has_a_mvfilesystemgetfileordirectoryparams() const {
+  return content_case() == kAMVFileSystemGetFileOrDirectoryParams;
 }
-inline bool FileSystemParams::has_mvfilesystemgetfileordirectoryparams() const {
-  return _internal_has_mvfilesystemgetfileordirectoryparams();
+inline bool FileSystemParams::has_a_mvfilesystemgetfileordirectoryparams() const {
+  return _internal_has_a_mvfilesystemgetfileordirectoryparams();
 }
-inline void FileSystemParams::set_has_mvfilesystemgetfileordirectoryparams() {
-  _impl_._oneof_case_[0] = kMVFileSystemGetFileOrDirectoryParams;
+inline void FileSystemParams::set_has_a_mvfilesystemgetfileordirectoryparams() {
+  _impl_._oneof_case_[0] = kAMVFileSystemGetFileOrDirectoryParams;
 }
-inline void FileSystemParams::clear_mvfilesystemgetfileordirectoryparams() {
-  if (_internal_has_mvfilesystemgetfileordirectoryparams()) {
+inline void FileSystemParams::clear_a_mvfilesystemgetfileordirectoryparams() {
+  if (_internal_has_a_mvfilesystemgetfileordirectoryparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemgetfileordirectoryparams_;
+      delete _impl_.content_.a_mvfilesystemgetfileordirectoryparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::release_mvfilesystemgetfileordirectoryparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFileOrDirectoryParams)
-  if (_internal_has_mvfilesystemgetfileordirectoryparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::release_a_mvfilesystemgetfileordirectoryparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFileOrDirectoryParams)
+  if (_internal_has_a_mvfilesystemgetfileordirectoryparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* temp = _impl_.content_.mvfilesystemgetfileordirectoryparams_;
+    ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* temp = _impl_.content_.a_mvfilesystemgetfileordirectoryparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemgetfileordirectoryparams_ = nullptr;
+    _impl_.content_.a_mvfilesystemgetfileordirectoryparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& FileSystemParams::_internal_mvfilesystemgetfileordirectoryparams() const {
-  return _internal_has_mvfilesystemgetfileordirectoryparams()
-      ? *_impl_.content_.mvfilesystemgetfileordirectoryparams_
+inline const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& FileSystemParams::_internal_a_mvfilesystemgetfileordirectoryparams() const {
+  return _internal_has_a_mvfilesystemgetfileordirectoryparams()
+      ? *_impl_.content_.a_mvfilesystemgetfileordirectoryparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams&>(::protobuf::mozilla::dom::_FileSystemGetFileOrDirectoryParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& FileSystemParams::mvfilesystemgetfileordirectoryparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFileOrDirectoryParams)
-  return _internal_mvfilesystemgetfileordirectoryparams();
+inline const ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams& FileSystemParams::a_mvfilesystemgetfileordirectoryparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFileOrDirectoryParams)
+  return _internal_a_mvfilesystemgetfileordirectoryparams();
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::unsafe_arena_release_mvfilesystemgetfileordirectoryparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFileOrDirectoryParams)
-  if (_internal_has_mvfilesystemgetfileordirectoryparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::unsafe_arena_release_a_mvfilesystemgetfileordirectoryparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFileOrDirectoryParams)
+  if (_internal_has_a_mvfilesystemgetfileordirectoryparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* temp = _impl_.content_.mvfilesystemgetfileordirectoryparams_;
-    _impl_.content_.mvfilesystemgetfileordirectoryparams_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* temp = _impl_.content_.a_mvfilesystemgetfileordirectoryparams_;
+    _impl_.content_.a_mvfilesystemgetfileordirectoryparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemParams::unsafe_arena_set_allocated_mvfilesystemgetfileordirectoryparams(::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* mvfilesystemgetfileordirectoryparams) {
+inline void FileSystemParams::unsafe_arena_set_allocated_a_mvfilesystemgetfileordirectoryparams(::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* a_mvfilesystemgetfileordirectoryparams) {
   clear_content();
-  if (mvfilesystemgetfileordirectoryparams) {
-    set_has_mvfilesystemgetfileordirectoryparams();
-    _impl_.content_.mvfilesystemgetfileordirectoryparams_ = mvfilesystemgetfileordirectoryparams;
+  if (a_mvfilesystemgetfileordirectoryparams) {
+    set_has_a_mvfilesystemgetfileordirectoryparams();
+    _impl_.content_.a_mvfilesystemgetfileordirectoryparams_ = a_mvfilesystemgetfileordirectoryparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFileOrDirectoryParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFileOrDirectoryParams)
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::_internal_mutable_mvfilesystemgetfileordirectoryparams() {
-  if (!_internal_has_mvfilesystemgetfileordirectoryparams()) {
+inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::_internal_mutable_a_mvfilesystemgetfileordirectoryparams() {
+  if (!_internal_has_a_mvfilesystemgetfileordirectoryparams()) {
     clear_content();
-    set_has_mvfilesystemgetfileordirectoryparams();
-    _impl_.content_.mvfilesystemgetfileordirectoryparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams >(GetArenaForAllocation());
+    set_has_a_mvfilesystemgetfileordirectoryparams();
+    _impl_.content_.a_mvfilesystemgetfileordirectoryparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemgetfileordirectoryparams_;
+  return _impl_.content_.a_mvfilesystemgetfileordirectoryparams_;
 }
-inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::mutable_mvfilesystemgetfileordirectoryparams() {
-  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* _msg = _internal_mutable_mvfilesystemgetfileordirectoryparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemParams.mVFileSystemGetFileOrDirectoryParams)
+inline ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* FileSystemParams::mutable_a_mvfilesystemgetfileordirectoryparams() {
+  ::protobuf::mozilla::dom::FileSystemGetFileOrDirectoryParams* _msg = _internal_mutable_a_mvfilesystemgetfileordirectoryparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemParams.a_mVFileSystemGetFileOrDirectoryParams)
   return _msg;
 }
 

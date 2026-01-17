@@ -24,7 +24,7 @@ PROTOBUF_CONSTEXPR SDBRequestOpenParams::SDBRequestOpenParams(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SDBRequestOpenParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SDBRequestOpenParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -38,7 +38,7 @@ PROTOBUF_CONSTEXPR SDBRequestSeekParams::SDBRequestSeekParams(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.offset_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_offset_)*/uint64_t{0u}} {}
 struct SDBRequestSeekParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SDBRequestSeekParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,7 +52,7 @@ PROTOBUF_CONSTEXPR SDBRequestReadParams::SDBRequestReadParams(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.size_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_size_)*/uint64_t{0u}} {}
 struct SDBRequestReadParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SDBRequestReadParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -66,7 +66,7 @@ PROTOBUF_CONSTEXPR SDBRequestWriteParams::SDBRequestWriteParams(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SDBRequestWriteParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SDBRequestWriteParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -114,7 +114,7 @@ namespace dom {
 class SDBRequestOpenParams::_Internal {
  public:
   using HasBits = decltype(std::declval<SDBRequestOpenParams>()._impl_._has_bits_);
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -134,15 +134,15 @@ SDBRequestOpenParams::SDBRequestOpenParams(const SDBRequestOpenParams& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}};
+    , decltype(_impl_.a_name_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestOpenParams)
@@ -155,11 +155,11 @@ inline void SDBRequestOpenParams::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
+    , decltype(_impl_.a_name_){}
   };
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -174,7 +174,7 @@ SDBRequestOpenParams::~SDBRequestOpenParams() {
 
 inline void SDBRequestOpenParams::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
+  _impl_.a_name_.Destroy();
 }
 
 void SDBRequestOpenParams::SetCachedSize(int size) const {
@@ -189,7 +189,7 @@ void SDBRequestOpenParams::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.name_.ClearNonDefaultToEmpty();
+    _impl_.a_name_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -202,10 +202,10 @@ const char* SDBRequestOpenParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes name = 1;
+      // required bytes a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -242,10 +242,10 @@ uint8_t* SDBRequestOpenParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes name = 1;
+  // required bytes a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_name(), target);
+        1, this->_internal_a_name(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -260,11 +260,11 @@ size_t SDBRequestOpenParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestOpenParams)
   size_t total_size = 0;
 
-  // required bytes name = 1;
-  if (_internal_has_name()) {
+  // required bytes a_name = 1;
+  if (_internal_has_a_name()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -291,8 +291,8 @@ void SDBRequestOpenParams::MergeFrom(const SDBRequestOpenParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_name()) {
-    _this->_internal_set_name(from._internal_name());
+  if (from._internal_has_a_name()) {
+    _this->_internal_set_a_name(from._internal_a_name());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -316,8 +316,8 @@ void SDBRequestOpenParams::InternalSwap(SDBRequestOpenParams* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
 }
 
@@ -331,7 +331,7 @@ std::string SDBRequestOpenParams::GetTypeName() const {
 class SDBRequestSeekParams::_Internal {
  public:
   using HasBits = decltype(std::declval<SDBRequestSeekParams>()._impl_._has_bits_);
-  static void set_has_offset(HasBits* has_bits) {
+  static void set_has_a_offset(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -351,10 +351,10 @@ SDBRequestSeekParams::SDBRequestSeekParams(const SDBRequestSeekParams& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.offset_){}};
+    , decltype(_impl_.a_offset_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.offset_ = from._impl_.offset_;
+  _this->_impl_.a_offset_ = from._impl_.a_offset_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestSeekParams)
 }
 
@@ -365,7 +365,7 @@ inline void SDBRequestSeekParams::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.offset_){uint64_t{0u}}
+    , decltype(_impl_.a_offset_){uint64_t{0u}}
   };
 }
 
@@ -392,7 +392,7 @@ void SDBRequestSeekParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.offset_ = uint64_t{0u};
+  _impl_.a_offset_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -404,11 +404,11 @@ const char* SDBRequestSeekParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 offset = 1;
+      // required uint64 a_offset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_offset(&has_bits);
-          _impl_.offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_offset(&has_bits);
+          _impl_.a_offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -444,10 +444,10 @@ uint8_t* SDBRequestSeekParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 offset = 1;
+  // required uint64 a_offset = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_offset(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_offset(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -462,9 +462,9 @@ size_t SDBRequestSeekParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestSeekParams)
   size_t total_size = 0;
 
-  // required uint64 offset = 1;
-  if (_internal_has_offset()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_offset());
+  // required uint64 a_offset = 1;
+  if (_internal_has_a_offset()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -491,8 +491,8 @@ void SDBRequestSeekParams::MergeFrom(const SDBRequestSeekParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_offset()) {
-    _this->_internal_set_offset(from._internal_offset());
+  if (from._internal_has_a_offset()) {
+    _this->_internal_set_a_offset(from._internal_a_offset());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -513,7 +513,7 @@ void SDBRequestSeekParams::InternalSwap(SDBRequestSeekParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.offset_, other->_impl_.offset_);
+  swap(_impl_.a_offset_, other->_impl_.a_offset_);
 }
 
 std::string SDBRequestSeekParams::GetTypeName() const {
@@ -526,7 +526,7 @@ std::string SDBRequestSeekParams::GetTypeName() const {
 class SDBRequestReadParams::_Internal {
  public:
   using HasBits = decltype(std::declval<SDBRequestReadParams>()._impl_._has_bits_);
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -546,10 +546,10 @@ SDBRequestReadParams::SDBRequestReadParams(const SDBRequestReadParams& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}};
+    , decltype(_impl_.a_size_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.size_ = from._impl_.size_;
+  _this->_impl_.a_size_ = from._impl_.a_size_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestReadParams)
 }
 
@@ -560,7 +560,7 @@ inline void SDBRequestReadParams::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){uint64_t{0u}}
+    , decltype(_impl_.a_size_){uint64_t{0u}}
   };
 }
 
@@ -587,7 +587,7 @@ void SDBRequestReadParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.size_ = uint64_t{0u};
+  _impl_.a_size_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -599,11 +599,11 @@ const char* SDBRequestReadParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 size = 1;
+      // required uint64 a_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_size(&has_bits);
-          _impl_.size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_size(&has_bits);
+          _impl_.a_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -639,10 +639,10 @@ uint8_t* SDBRequestReadParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 size = 1;
+  // required uint64 a_size = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_size(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_size(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -657,9 +657,9 @@ size_t SDBRequestReadParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestReadParams)
   size_t total_size = 0;
 
-  // required uint64 size = 1;
-  if (_internal_has_size()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_size());
+  // required uint64 a_size = 1;
+  if (_internal_has_a_size()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -686,8 +686,8 @@ void SDBRequestReadParams::MergeFrom(const SDBRequestReadParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_size()) {
-    _this->_internal_set_size(from._internal_size());
+  if (from._internal_has_a_size()) {
+    _this->_internal_set_a_size(from._internal_a_size());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -708,7 +708,7 @@ void SDBRequestReadParams::InternalSwap(SDBRequestReadParams* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.size_, other->_impl_.size_);
+  swap(_impl_.a_size_, other->_impl_.a_size_);
 }
 
 std::string SDBRequestReadParams::GetTypeName() const {
@@ -721,7 +721,7 @@ std::string SDBRequestReadParams::GetTypeName() const {
 class SDBRequestWriteParams::_Internal {
  public:
   using HasBits = decltype(std::declval<SDBRequestWriteParams>()._impl_._has_bits_);
-  static void set_has_data(HasBits* has_bits) {
+  static void set_has_a_data(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -741,15 +741,15 @@ SDBRequestWriteParams::SDBRequestWriteParams(const SDBRequestWriteParams& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.data_){}};
+    , decltype(_impl_.a_data_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.data_.InitDefault();
+  _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.data_.Set("", GetArenaForAllocation());
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_data()) {
-    _this->_impl_.data_.Set(from._internal_data(), 
+  if (from._internal_has_a_data()) {
+    _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestWriteParams)
@@ -762,11 +762,11 @@ inline void SDBRequestWriteParams::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.data_){}
+    , decltype(_impl_.a_data_){}
   };
-  _impl_.data_.InitDefault();
+  _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.data_.Set("", GetArenaForAllocation());
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -781,7 +781,7 @@ SDBRequestWriteParams::~SDBRequestWriteParams() {
 
 inline void SDBRequestWriteParams::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.data_.Destroy();
+  _impl_.a_data_.Destroy();
 }
 
 void SDBRequestWriteParams::SetCachedSize(int size) const {
@@ -796,7 +796,7 @@ void SDBRequestWriteParams::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.data_.ClearNonDefaultToEmpty();
+    _impl_.a_data_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -809,10 +809,10 @@ const char* SDBRequestWriteParams::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes data = 1;
+      // required bytes a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_data();
+          auto str = _internal_mutable_a_data();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -849,10 +849,10 @@ uint8_t* SDBRequestWriteParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes data = 1;
+  // required bytes a_data = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_data(), target);
+        1, this->_internal_a_data(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -867,11 +867,11 @@ size_t SDBRequestWriteParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestWriteParams)
   size_t total_size = 0;
 
-  // required bytes data = 1;
-  if (_internal_has_data()) {
+  // required bytes a_data = 1;
+  if (_internal_has_a_data()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_data());
+        this->_internal_a_data());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -898,8 +898,8 @@ void SDBRequestWriteParams::MergeFrom(const SDBRequestWriteParams& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_data()) {
-    _this->_internal_set_data(from._internal_data());
+  if (from._internal_has_a_data()) {
+    _this->_internal_set_a_data(from._internal_a_data());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -923,8 +923,8 @@ void SDBRequestWriteParams::InternalSwap(SDBRequestWriteParams* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.data_, lhs_arena,
-      &other->_impl_.data_, rhs_arena
+      &_impl_.a_data_, lhs_arena,
+      &other->_impl_.a_data_, rhs_arena
   );
 }
 
@@ -1085,107 +1085,107 @@ std::string SDBRequestCloseParams::GetTypeName() const {
 
 class SDBRequestParams::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::SDBRequestOpenParams& mvsdbrequestopenparams(const SDBRequestParams* msg);
-  static const ::protobuf::mozilla::dom::SDBRequestSeekParams& mvsdbrequestseekparams(const SDBRequestParams* msg);
-  static const ::protobuf::mozilla::dom::SDBRequestReadParams& mvsdbrequestreadparams(const SDBRequestParams* msg);
-  static const ::protobuf::mozilla::dom::SDBRequestWriteParams& mvsdbrequestwriteparams(const SDBRequestParams* msg);
-  static const ::protobuf::mozilla::dom::SDBRequestCloseParams& mvsdbrequestcloseparams(const SDBRequestParams* msg);
+  static const ::protobuf::mozilla::dom::SDBRequestOpenParams& a_mvsdbrequestopenparams(const SDBRequestParams* msg);
+  static const ::protobuf::mozilla::dom::SDBRequestSeekParams& a_mvsdbrequestseekparams(const SDBRequestParams* msg);
+  static const ::protobuf::mozilla::dom::SDBRequestReadParams& a_mvsdbrequestreadparams(const SDBRequestParams* msg);
+  static const ::protobuf::mozilla::dom::SDBRequestWriteParams& a_mvsdbrequestwriteparams(const SDBRequestParams* msg);
+  static const ::protobuf::mozilla::dom::SDBRequestCloseParams& a_mvsdbrequestcloseparams(const SDBRequestParams* msg);
 };
 
 const ::protobuf::mozilla::dom::SDBRequestOpenParams&
-SDBRequestParams::_Internal::mvsdbrequestopenparams(const SDBRequestParams* msg) {
-  return *msg->_impl_.content_.mvsdbrequestopenparams_;
+SDBRequestParams::_Internal::a_mvsdbrequestopenparams(const SDBRequestParams* msg) {
+  return *msg->_impl_.content_.a_mvsdbrequestopenparams_;
 }
 const ::protobuf::mozilla::dom::SDBRequestSeekParams&
-SDBRequestParams::_Internal::mvsdbrequestseekparams(const SDBRequestParams* msg) {
-  return *msg->_impl_.content_.mvsdbrequestseekparams_;
+SDBRequestParams::_Internal::a_mvsdbrequestseekparams(const SDBRequestParams* msg) {
+  return *msg->_impl_.content_.a_mvsdbrequestseekparams_;
 }
 const ::protobuf::mozilla::dom::SDBRequestReadParams&
-SDBRequestParams::_Internal::mvsdbrequestreadparams(const SDBRequestParams* msg) {
-  return *msg->_impl_.content_.mvsdbrequestreadparams_;
+SDBRequestParams::_Internal::a_mvsdbrequestreadparams(const SDBRequestParams* msg) {
+  return *msg->_impl_.content_.a_mvsdbrequestreadparams_;
 }
 const ::protobuf::mozilla::dom::SDBRequestWriteParams&
-SDBRequestParams::_Internal::mvsdbrequestwriteparams(const SDBRequestParams* msg) {
-  return *msg->_impl_.content_.mvsdbrequestwriteparams_;
+SDBRequestParams::_Internal::a_mvsdbrequestwriteparams(const SDBRequestParams* msg) {
+  return *msg->_impl_.content_.a_mvsdbrequestwriteparams_;
 }
 const ::protobuf::mozilla::dom::SDBRequestCloseParams&
-SDBRequestParams::_Internal::mvsdbrequestcloseparams(const SDBRequestParams* msg) {
-  return *msg->_impl_.content_.mvsdbrequestcloseparams_;
+SDBRequestParams::_Internal::a_mvsdbrequestcloseparams(const SDBRequestParams* msg) {
+  return *msg->_impl_.content_.a_mvsdbrequestcloseparams_;
 }
-void SDBRequestParams::set_allocated_mvsdbrequestopenparams(::protobuf::mozilla::dom::SDBRequestOpenParams* mvsdbrequestopenparams) {
+void SDBRequestParams::set_allocated_a_mvsdbrequestopenparams(::protobuf::mozilla::dom::SDBRequestOpenParams* a_mvsdbrequestopenparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsdbrequestopenparams) {
+  if (a_mvsdbrequestopenparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsdbrequestopenparams);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsdbrequestopenparams);
     if (message_arena != submessage_arena) {
-      mvsdbrequestopenparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsdbrequestopenparams, submessage_arena);
+      a_mvsdbrequestopenparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsdbrequestopenparams, submessage_arena);
     }
-    set_has_mvsdbrequestopenparams();
-    _impl_.content_.mvsdbrequestopenparams_ = mvsdbrequestopenparams;
+    set_has_a_mvsdbrequestopenparams();
+    _impl_.content_.a_mvsdbrequestopenparams_ = a_mvsdbrequestopenparams;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.mVSDBRequestOpenParams)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.a_mVSDBRequestOpenParams)
 }
-void SDBRequestParams::set_allocated_mvsdbrequestseekparams(::protobuf::mozilla::dom::SDBRequestSeekParams* mvsdbrequestseekparams) {
+void SDBRequestParams::set_allocated_a_mvsdbrequestseekparams(::protobuf::mozilla::dom::SDBRequestSeekParams* a_mvsdbrequestseekparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsdbrequestseekparams) {
+  if (a_mvsdbrequestseekparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsdbrequestseekparams);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsdbrequestseekparams);
     if (message_arena != submessage_arena) {
-      mvsdbrequestseekparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsdbrequestseekparams, submessage_arena);
+      a_mvsdbrequestseekparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsdbrequestseekparams, submessage_arena);
     }
-    set_has_mvsdbrequestseekparams();
-    _impl_.content_.mvsdbrequestseekparams_ = mvsdbrequestseekparams;
+    set_has_a_mvsdbrequestseekparams();
+    _impl_.content_.a_mvsdbrequestseekparams_ = a_mvsdbrequestseekparams;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.mVSDBRequestSeekParams)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.a_mVSDBRequestSeekParams)
 }
-void SDBRequestParams::set_allocated_mvsdbrequestreadparams(::protobuf::mozilla::dom::SDBRequestReadParams* mvsdbrequestreadparams) {
+void SDBRequestParams::set_allocated_a_mvsdbrequestreadparams(::protobuf::mozilla::dom::SDBRequestReadParams* a_mvsdbrequestreadparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsdbrequestreadparams) {
+  if (a_mvsdbrequestreadparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsdbrequestreadparams);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsdbrequestreadparams);
     if (message_arena != submessage_arena) {
-      mvsdbrequestreadparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsdbrequestreadparams, submessage_arena);
+      a_mvsdbrequestreadparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsdbrequestreadparams, submessage_arena);
     }
-    set_has_mvsdbrequestreadparams();
-    _impl_.content_.mvsdbrequestreadparams_ = mvsdbrequestreadparams;
+    set_has_a_mvsdbrequestreadparams();
+    _impl_.content_.a_mvsdbrequestreadparams_ = a_mvsdbrequestreadparams;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.mVSDBRequestReadParams)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.a_mVSDBRequestReadParams)
 }
-void SDBRequestParams::set_allocated_mvsdbrequestwriteparams(::protobuf::mozilla::dom::SDBRequestWriteParams* mvsdbrequestwriteparams) {
+void SDBRequestParams::set_allocated_a_mvsdbrequestwriteparams(::protobuf::mozilla::dom::SDBRequestWriteParams* a_mvsdbrequestwriteparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsdbrequestwriteparams) {
+  if (a_mvsdbrequestwriteparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsdbrequestwriteparams);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsdbrequestwriteparams);
     if (message_arena != submessage_arena) {
-      mvsdbrequestwriteparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsdbrequestwriteparams, submessage_arena);
+      a_mvsdbrequestwriteparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsdbrequestwriteparams, submessage_arena);
     }
-    set_has_mvsdbrequestwriteparams();
-    _impl_.content_.mvsdbrequestwriteparams_ = mvsdbrequestwriteparams;
+    set_has_a_mvsdbrequestwriteparams();
+    _impl_.content_.a_mvsdbrequestwriteparams_ = a_mvsdbrequestwriteparams;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.mVSDBRequestWriteParams)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.a_mVSDBRequestWriteParams)
 }
-void SDBRequestParams::set_allocated_mvsdbrequestcloseparams(::protobuf::mozilla::dom::SDBRequestCloseParams* mvsdbrequestcloseparams) {
+void SDBRequestParams::set_allocated_a_mvsdbrequestcloseparams(::protobuf::mozilla::dom::SDBRequestCloseParams* a_mvsdbrequestcloseparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsdbrequestcloseparams) {
+  if (a_mvsdbrequestcloseparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsdbrequestcloseparams);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsdbrequestcloseparams);
     if (message_arena != submessage_arena) {
-      mvsdbrequestcloseparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsdbrequestcloseparams, submessage_arena);
+      a_mvsdbrequestcloseparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsdbrequestcloseparams, submessage_arena);
     }
-    set_has_mvsdbrequestcloseparams();
-    _impl_.content_.mvsdbrequestcloseparams_ = mvsdbrequestcloseparams;
+    set_has_a_mvsdbrequestcloseparams();
+    _impl_.content_.a_mvsdbrequestcloseparams_ = a_mvsdbrequestcloseparams;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.mVSDBRequestCloseParams)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SDBRequestParams.a_mVSDBRequestCloseParams)
 }
 SDBRequestParams::SDBRequestParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1204,29 +1204,29 @@ SDBRequestParams::SDBRequestParams(const SDBRequestParams& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVSDBRequestOpenParams: {
-      _this->_internal_mutable_mvsdbrequestopenparams()->::protobuf::mozilla::dom::SDBRequestOpenParams::MergeFrom(
-          from._internal_mvsdbrequestopenparams());
+    case kAMVSDBRequestOpenParams: {
+      _this->_internal_mutable_a_mvsdbrequestopenparams()->::protobuf::mozilla::dom::SDBRequestOpenParams::MergeFrom(
+          from._internal_a_mvsdbrequestopenparams());
       break;
     }
-    case kMVSDBRequestSeekParams: {
-      _this->_internal_mutable_mvsdbrequestseekparams()->::protobuf::mozilla::dom::SDBRequestSeekParams::MergeFrom(
-          from._internal_mvsdbrequestseekparams());
+    case kAMVSDBRequestSeekParams: {
+      _this->_internal_mutable_a_mvsdbrequestseekparams()->::protobuf::mozilla::dom::SDBRequestSeekParams::MergeFrom(
+          from._internal_a_mvsdbrequestseekparams());
       break;
     }
-    case kMVSDBRequestReadParams: {
-      _this->_internal_mutable_mvsdbrequestreadparams()->::protobuf::mozilla::dom::SDBRequestReadParams::MergeFrom(
-          from._internal_mvsdbrequestreadparams());
+    case kAMVSDBRequestReadParams: {
+      _this->_internal_mutable_a_mvsdbrequestreadparams()->::protobuf::mozilla::dom::SDBRequestReadParams::MergeFrom(
+          from._internal_a_mvsdbrequestreadparams());
       break;
     }
-    case kMVSDBRequestWriteParams: {
-      _this->_internal_mutable_mvsdbrequestwriteparams()->::protobuf::mozilla::dom::SDBRequestWriteParams::MergeFrom(
-          from._internal_mvsdbrequestwriteparams());
+    case kAMVSDBRequestWriteParams: {
+      _this->_internal_mutable_a_mvsdbrequestwriteparams()->::protobuf::mozilla::dom::SDBRequestWriteParams::MergeFrom(
+          from._internal_a_mvsdbrequestwriteparams());
       break;
     }
-    case kMVSDBRequestCloseParams: {
-      _this->_internal_mutable_mvsdbrequestcloseparams()->::protobuf::mozilla::dom::SDBRequestCloseParams::MergeFrom(
-          from._internal_mvsdbrequestcloseparams());
+    case kAMVSDBRequestCloseParams: {
+      _this->_internal_mutable_a_mvsdbrequestcloseparams()->::protobuf::mozilla::dom::SDBRequestCloseParams::MergeFrom(
+          from._internal_a_mvsdbrequestcloseparams());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1271,33 +1271,33 @@ void SDBRequestParams::SetCachedSize(int size) const {
 void SDBRequestParams::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.SDBRequestParams)
   switch (content_case()) {
-    case kMVSDBRequestOpenParams: {
+    case kAMVSDBRequestOpenParams: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsdbrequestopenparams_;
+        delete _impl_.content_.a_mvsdbrequestopenparams_;
       }
       break;
     }
-    case kMVSDBRequestSeekParams: {
+    case kAMVSDBRequestSeekParams: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsdbrequestseekparams_;
+        delete _impl_.content_.a_mvsdbrequestseekparams_;
       }
       break;
     }
-    case kMVSDBRequestReadParams: {
+    case kAMVSDBRequestReadParams: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsdbrequestreadparams_;
+        delete _impl_.content_.a_mvsdbrequestreadparams_;
       }
       break;
     }
-    case kMVSDBRequestWriteParams: {
+    case kAMVSDBRequestWriteParams: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsdbrequestwriteparams_;
+        delete _impl_.content_.a_mvsdbrequestwriteparams_;
       }
       break;
     }
-    case kMVSDBRequestCloseParams: {
+    case kAMVSDBRequestCloseParams: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsdbrequestcloseparams_;
+        delete _impl_.content_.a_mvsdbrequestcloseparams_;
       }
       break;
     }
@@ -1325,42 +1325,42 @@ const char* SDBRequestParams::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.SDBRequestOpenParams mVSDBRequestOpenParams = 1;
+      // .protobuf.mozilla.dom.SDBRequestOpenParams a_mVSDBRequestOpenParams = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsdbrequestopenparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsdbrequestopenparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.SDBRequestSeekParams mVSDBRequestSeekParams = 2;
+      // .protobuf.mozilla.dom.SDBRequestSeekParams a_mVSDBRequestSeekParams = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsdbrequestseekparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsdbrequestseekparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.SDBRequestReadParams mVSDBRequestReadParams = 3;
+      // .protobuf.mozilla.dom.SDBRequestReadParams a_mVSDBRequestReadParams = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsdbrequestreadparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsdbrequestreadparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.SDBRequestWriteParams mVSDBRequestWriteParams = 4;
+      // .protobuf.mozilla.dom.SDBRequestWriteParams a_mVSDBRequestWriteParams = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsdbrequestwriteparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsdbrequestwriteparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.SDBRequestCloseParams mVSDBRequestCloseParams = 5;
+      // .protobuf.mozilla.dom.SDBRequestCloseParams a_mVSDBRequestCloseParams = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsdbrequestcloseparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsdbrequestcloseparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1395,34 +1395,34 @@ uint8_t* SDBRequestParams::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVSDBRequestOpenParams: {
+    case kAMVSDBRequestOpenParams: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvsdbrequestopenparams(this),
-          _Internal::mvsdbrequestopenparams(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvsdbrequestopenparams(this),
+          _Internal::a_mvsdbrequestopenparams(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSDBRequestSeekParams: {
+    case kAMVSDBRequestSeekParams: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvsdbrequestseekparams(this),
-          _Internal::mvsdbrequestseekparams(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvsdbrequestseekparams(this),
+          _Internal::a_mvsdbrequestseekparams(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSDBRequestReadParams: {
+    case kAMVSDBRequestReadParams: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::mvsdbrequestreadparams(this),
-          _Internal::mvsdbrequestreadparams(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(3, _Internal::a_mvsdbrequestreadparams(this),
+          _Internal::a_mvsdbrequestreadparams(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSDBRequestWriteParams: {
+    case kAMVSDBRequestWriteParams: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::mvsdbrequestwriteparams(this),
-          _Internal::mvsdbrequestwriteparams(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(4, _Internal::a_mvsdbrequestwriteparams(this),
+          _Internal::a_mvsdbrequestwriteparams(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSDBRequestCloseParams: {
+    case kAMVSDBRequestCloseParams: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(5, _Internal::mvsdbrequestcloseparams(this),
-          _Internal::mvsdbrequestcloseparams(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(5, _Internal::a_mvsdbrequestcloseparams(this),
+          _Internal::a_mvsdbrequestcloseparams(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1444,39 +1444,39 @@ size_t SDBRequestParams::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.dom.SDBRequestOpenParams mVSDBRequestOpenParams = 1;
-    case kMVSDBRequestOpenParams: {
+    // .protobuf.mozilla.dom.SDBRequestOpenParams a_mVSDBRequestOpenParams = 1;
+    case kAMVSDBRequestOpenParams: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsdbrequestopenparams_);
+          *_impl_.content_.a_mvsdbrequestopenparams_);
       break;
     }
-    // .protobuf.mozilla.dom.SDBRequestSeekParams mVSDBRequestSeekParams = 2;
-    case kMVSDBRequestSeekParams: {
+    // .protobuf.mozilla.dom.SDBRequestSeekParams a_mVSDBRequestSeekParams = 2;
+    case kAMVSDBRequestSeekParams: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsdbrequestseekparams_);
+          *_impl_.content_.a_mvsdbrequestseekparams_);
       break;
     }
-    // .protobuf.mozilla.dom.SDBRequestReadParams mVSDBRequestReadParams = 3;
-    case kMVSDBRequestReadParams: {
+    // .protobuf.mozilla.dom.SDBRequestReadParams a_mVSDBRequestReadParams = 3;
+    case kAMVSDBRequestReadParams: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsdbrequestreadparams_);
+          *_impl_.content_.a_mvsdbrequestreadparams_);
       break;
     }
-    // .protobuf.mozilla.dom.SDBRequestWriteParams mVSDBRequestWriteParams = 4;
-    case kMVSDBRequestWriteParams: {
+    // .protobuf.mozilla.dom.SDBRequestWriteParams a_mVSDBRequestWriteParams = 4;
+    case kAMVSDBRequestWriteParams: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsdbrequestwriteparams_);
+          *_impl_.content_.a_mvsdbrequestwriteparams_);
       break;
     }
-    // .protobuf.mozilla.dom.SDBRequestCloseParams mVSDBRequestCloseParams = 5;
-    case kMVSDBRequestCloseParams: {
+    // .protobuf.mozilla.dom.SDBRequestCloseParams a_mVSDBRequestCloseParams = 5;
+    case kAMVSDBRequestCloseParams: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsdbrequestcloseparams_);
+          *_impl_.content_.a_mvsdbrequestcloseparams_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1505,29 +1505,29 @@ void SDBRequestParams::MergeFrom(const SDBRequestParams& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVSDBRequestOpenParams: {
-      _this->_internal_mutable_mvsdbrequestopenparams()->::protobuf::mozilla::dom::SDBRequestOpenParams::MergeFrom(
-          from._internal_mvsdbrequestopenparams());
+    case kAMVSDBRequestOpenParams: {
+      _this->_internal_mutable_a_mvsdbrequestopenparams()->::protobuf::mozilla::dom::SDBRequestOpenParams::MergeFrom(
+          from._internal_a_mvsdbrequestopenparams());
       break;
     }
-    case kMVSDBRequestSeekParams: {
-      _this->_internal_mutable_mvsdbrequestseekparams()->::protobuf::mozilla::dom::SDBRequestSeekParams::MergeFrom(
-          from._internal_mvsdbrequestseekparams());
+    case kAMVSDBRequestSeekParams: {
+      _this->_internal_mutable_a_mvsdbrequestseekparams()->::protobuf::mozilla::dom::SDBRequestSeekParams::MergeFrom(
+          from._internal_a_mvsdbrequestseekparams());
       break;
     }
-    case kMVSDBRequestReadParams: {
-      _this->_internal_mutable_mvsdbrequestreadparams()->::protobuf::mozilla::dom::SDBRequestReadParams::MergeFrom(
-          from._internal_mvsdbrequestreadparams());
+    case kAMVSDBRequestReadParams: {
+      _this->_internal_mutable_a_mvsdbrequestreadparams()->::protobuf::mozilla::dom::SDBRequestReadParams::MergeFrom(
+          from._internal_a_mvsdbrequestreadparams());
       break;
     }
-    case kMVSDBRequestWriteParams: {
-      _this->_internal_mutable_mvsdbrequestwriteparams()->::protobuf::mozilla::dom::SDBRequestWriteParams::MergeFrom(
-          from._internal_mvsdbrequestwriteparams());
+    case kAMVSDBRequestWriteParams: {
+      _this->_internal_mutable_a_mvsdbrequestwriteparams()->::protobuf::mozilla::dom::SDBRequestWriteParams::MergeFrom(
+          from._internal_a_mvsdbrequestwriteparams());
       break;
     }
-    case kMVSDBRequestCloseParams: {
-      _this->_internal_mutable_mvsdbrequestcloseparams()->::protobuf::mozilla::dom::SDBRequestCloseParams::MergeFrom(
-          from._internal_mvsdbrequestcloseparams());
+    case kAMVSDBRequestCloseParams: {
+      _this->_internal_mutable_a_mvsdbrequestcloseparams()->::protobuf::mozilla::dom::SDBRequestCloseParams::MergeFrom(
+          from._internal_a_mvsdbrequestcloseparams());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1546,31 +1546,31 @@ void SDBRequestParams::CopyFrom(const SDBRequestParams& from) {
 
 bool SDBRequestParams::IsInitialized() const {
   switch (content_case()) {
-    case kMVSDBRequestOpenParams: {
-      if (_internal_has_mvsdbrequestopenparams()) {
-        if (!_impl_.content_.mvsdbrequestopenparams_->IsInitialized()) return false;
+    case kAMVSDBRequestOpenParams: {
+      if (_internal_has_a_mvsdbrequestopenparams()) {
+        if (!_impl_.content_.a_mvsdbrequestopenparams_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSDBRequestSeekParams: {
-      if (_internal_has_mvsdbrequestseekparams()) {
-        if (!_impl_.content_.mvsdbrequestseekparams_->IsInitialized()) return false;
+    case kAMVSDBRequestSeekParams: {
+      if (_internal_has_a_mvsdbrequestseekparams()) {
+        if (!_impl_.content_.a_mvsdbrequestseekparams_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSDBRequestReadParams: {
-      if (_internal_has_mvsdbrequestreadparams()) {
-        if (!_impl_.content_.mvsdbrequestreadparams_->IsInitialized()) return false;
+    case kAMVSDBRequestReadParams: {
+      if (_internal_has_a_mvsdbrequestreadparams()) {
+        if (!_impl_.content_.a_mvsdbrequestreadparams_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSDBRequestWriteParams: {
-      if (_internal_has_mvsdbrequestwriteparams()) {
-        if (!_impl_.content_.mvsdbrequestwriteparams_->IsInitialized()) return false;
+    case kAMVSDBRequestWriteParams: {
+      if (_internal_has_a_mvsdbrequestwriteparams()) {
+        if (!_impl_.content_.a_mvsdbrequestwriteparams_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSDBRequestCloseParams: {
+    case kAMVSDBRequestCloseParams: {
       break;
     }
     case CONTENT_NOT_SET: {

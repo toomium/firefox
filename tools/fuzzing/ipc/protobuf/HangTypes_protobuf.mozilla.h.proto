@@ -12,16 +12,16 @@ package protobuf.mozilla;
 
 // Structs and unions declarations
 message HangEntryBufOffset {
-  required uint32 index = 1;
+  required uint32 a_index = 1;
 }
 
 message HangEntryModOffset {
-  required uint32 module = 1;
-  required uint32 offset = 2;
+  required uint32 a_module = 1;
+  required uint32 a_offset = 2;
 }
 
 message HangEntryProgCounter {
-  required bytes pc = 1;
+  required bytes a_pc = 1;
 }
 
 message HangEntryContent {
@@ -41,40 +41,40 @@ message HangEntrySuppressed {
 
 message HangEntry {
   oneof content {
-    bytes mVnsCString = 1;
-    protobuf.mozilla.HangEntryBufOffset mVHangEntryBufOffset = 2;
-    protobuf.mozilla.HangEntryModOffset mVHangEntryModOffset = 3;
-    protobuf.mozilla.HangEntryProgCounter mVHangEntryProgCounter = 4;
-    protobuf.mozilla.HangEntryContent mVHangEntryContent = 5;
-    protobuf.mozilla.HangEntryJit mVHangEntryJit = 6;
-    protobuf.mozilla.HangEntryWasm mVHangEntryWasm = 7;
-    protobuf.mozilla.HangEntryChromeScript mVHangEntryChromeScript = 8;
-    protobuf.mozilla.HangEntrySuppressed mVHangEntrySuppressed = 9;
+    bytes a_mVnsCString = 1;
+    protobuf.mozilla.HangEntryBufOffset a_mVHangEntryBufOffset = 2;
+    protobuf.mozilla.HangEntryModOffset a_mVHangEntryModOffset = 3;
+    protobuf.mozilla.HangEntryProgCounter a_mVHangEntryProgCounter = 4;
+    protobuf.mozilla.HangEntryContent a_mVHangEntryContent = 5;
+    protobuf.mozilla.HangEntryJit a_mVHangEntryJit = 6;
+    protobuf.mozilla.HangEntryWasm a_mVHangEntryWasm = 7;
+    protobuf.mozilla.HangEntryChromeScript a_mVHangEntryChromeScript = 8;
+    protobuf.mozilla.HangEntrySuppressed a_mVHangEntrySuppressed = 9;
   }
 }
 
 message HangModule {
-  required bytes name = 1;
-  required bytes breakpadId = 2;
+  required bytes a_name = 1;
+  required bytes a_breakpadId = 2;
 }
 
 message HangStack {
-  repeated protobuf.mozilla.HangEntry stack = 1;
-  repeated sint32 strbuffer = 2;
-  repeated protobuf.mozilla.HangModule modules = 3;
+  repeated protobuf.mozilla.HangEntry a_stack = 1;
+  repeated sint32 a_strbuffer = 2;
+  repeated protobuf.mozilla.HangModule a_modules = 3;
 }
 
 message HangAnnotation {
-  required bytes name = 1;
-  required bytes value = 2;
+  required bytes a_name = 1;
+  required bytes a_value = 2;
 }
 
 message HangDetails {
-  required bytes duration = 1;
-  required bytes process = 2;
-  required bytes remoteType = 3;
-  required bytes threadName = 4;
-  required bytes runnableName = 5;
-  required protobuf.mozilla.HangStack stack = 6;
-  repeated protobuf.mozilla.HangAnnotation annotations = 7;
+  required bytes a_duration = 1;
+  required bytes a_process = 2;
+  required bytes a_remoteType = 3;
+  required bytes a_threadName = 4;
+  required bytes a_runnableName = 5;
+  required protobuf.mozilla.HangStack a_stack = 6;
+  repeated protobuf.mozilla.HangAnnotation a_annotations = 7;
 }

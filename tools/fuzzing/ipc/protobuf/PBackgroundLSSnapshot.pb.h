@@ -374,25 +374,25 @@ class Msg_AsyncCheckpoint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWriteInfosFieldNumber = 1,
+    kAWriteInfosFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.LSWriteInfo writeInfos = 1;
-  int writeinfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSWriteInfo a_writeInfos = 1;
+  int a_writeinfos_size() const;
   private:
-  int _internal_writeinfos_size() const;
+  int _internal_a_writeinfos_size() const;
   public:
-  void clear_writeinfos();
-  ::protobuf::mozilla::dom::LSWriteInfo* mutable_writeinfos(int index);
+  void clear_a_writeinfos();
+  ::protobuf::mozilla::dom::LSWriteInfo* mutable_a_writeinfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >*
-      mutable_writeinfos();
+      mutable_a_writeinfos();
   private:
-  const ::protobuf::mozilla::dom::LSWriteInfo& _internal_writeinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteInfo* _internal_add_writeinfos();
+  const ::protobuf::mozilla::dom::LSWriteInfo& _internal_a_writeinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteInfo* _internal_add_a_writeinfos();
   public:
-  const ::protobuf::mozilla::dom::LSWriteInfo& writeinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteInfo* add_writeinfos();
+  const ::protobuf::mozilla::dom::LSWriteInfo& a_writeinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteInfo* add_a_writeinfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >&
-      writeinfos() const;
+      a_writeinfos() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint)
  private:
@@ -402,7 +402,7 @@ class Msg_AsyncCheckpoint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo > writeinfos_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo > a_writeinfos_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -520,25 +520,25 @@ class Msg_AsyncCheckpointAndNotify final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWriteAndNotifyInfosFieldNumber = 1,
+    kAWriteAndNotifyInfosFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo writeAndNotifyInfos = 1;
-  int writeandnotifyinfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo a_writeAndNotifyInfos = 1;
+  int a_writeandnotifyinfos_size() const;
   private:
-  int _internal_writeandnotifyinfos_size() const;
+  int _internal_a_writeandnotifyinfos_size() const;
   public:
-  void clear_writeandnotifyinfos();
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* mutable_writeandnotifyinfos(int index);
+  void clear_a_writeandnotifyinfos();
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* mutable_a_writeandnotifyinfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >*
-      mutable_writeandnotifyinfos();
+      mutable_a_writeandnotifyinfos();
   private:
-  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& _internal_writeandnotifyinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _internal_add_writeandnotifyinfos();
+  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& _internal_a_writeandnotifyinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _internal_add_a_writeandnotifyinfos();
   public:
-  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& writeandnotifyinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* add_writeandnotifyinfos();
+  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& a_writeandnotifyinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* add_a_writeandnotifyinfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >&
-      writeandnotifyinfos() const;
+      a_writeandnotifyinfos() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify)
  private:
@@ -548,7 +548,7 @@ class Msg_AsyncCheckpointAndNotify final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo > writeandnotifyinfos_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo > a_writeandnotifyinfos_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -666,25 +666,25 @@ class Msg_SyncCheckpoint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWriteInfosFieldNumber = 1,
+    kAWriteInfosFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.LSWriteInfo writeInfos = 1;
-  int writeinfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSWriteInfo a_writeInfos = 1;
+  int a_writeinfos_size() const;
   private:
-  int _internal_writeinfos_size() const;
+  int _internal_a_writeinfos_size() const;
   public:
-  void clear_writeinfos();
-  ::protobuf::mozilla::dom::LSWriteInfo* mutable_writeinfos(int index);
+  void clear_a_writeinfos();
+  ::protobuf::mozilla::dom::LSWriteInfo* mutable_a_writeinfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >*
-      mutable_writeinfos();
+      mutable_a_writeinfos();
   private:
-  const ::protobuf::mozilla::dom::LSWriteInfo& _internal_writeinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteInfo* _internal_add_writeinfos();
+  const ::protobuf::mozilla::dom::LSWriteInfo& _internal_a_writeinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteInfo* _internal_add_a_writeinfos();
   public:
-  const ::protobuf::mozilla::dom::LSWriteInfo& writeinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteInfo* add_writeinfos();
+  const ::protobuf::mozilla::dom::LSWriteInfo& a_writeinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteInfo* add_a_writeinfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >&
-      writeinfos() const;
+      a_writeinfos() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint)
  private:
@@ -694,7 +694,7 @@ class Msg_SyncCheckpoint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo > writeinfos_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo > a_writeinfos_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -936,25 +936,25 @@ class Msg_SyncCheckpointAndNotify final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWriteAndNotifyInfosFieldNumber = 1,
+    kAWriteAndNotifyInfosFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo writeAndNotifyInfos = 1;
-  int writeandnotifyinfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo a_writeAndNotifyInfos = 1;
+  int a_writeandnotifyinfos_size() const;
   private:
-  int _internal_writeandnotifyinfos_size() const;
+  int _internal_a_writeandnotifyinfos_size() const;
   public:
-  void clear_writeandnotifyinfos();
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* mutable_writeandnotifyinfos(int index);
+  void clear_a_writeandnotifyinfos();
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* mutable_a_writeandnotifyinfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >*
-      mutable_writeandnotifyinfos();
+      mutable_a_writeandnotifyinfos();
   private:
-  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& _internal_writeandnotifyinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _internal_add_writeandnotifyinfos();
+  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& _internal_a_writeandnotifyinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _internal_add_a_writeandnotifyinfos();
   public:
-  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& writeandnotifyinfos(int index) const;
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* add_writeandnotifyinfos();
+  const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& a_writeandnotifyinfos(int index) const;
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* add_a_writeandnotifyinfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >&
-      writeandnotifyinfos() const;
+      a_writeandnotifyinfos() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify)
  private:
@@ -964,7 +964,7 @@ class Msg_SyncCheckpointAndNotify final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo > writeandnotifyinfos_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo > a_writeandnotifyinfos_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1702,24 +1702,24 @@ class Msg_LoadValueAndMoreItems final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
+    kAKeyFieldNumber = 1,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems)
@@ -1732,7 +1732,7 @@ class Msg_LoadValueAndMoreItems final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -1849,43 +1849,43 @@ class Reply_LoadValueAndMoreItems final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kItemInfosFieldNumber = 2,
-    kValueFieldNumber = 1,
+    kAItemInfosFieldNumber = 2,
+    kAValueFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
-  int iteminfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
+  int a_iteminfos_size() const;
   private:
-  int _internal_iteminfos_size() const;
+  int _internal_a_iteminfos_size() const;
   public:
-  void clear_iteminfos();
-  ::protobuf::mozilla::dom::LSItemInfo* mutable_iteminfos(int index);
+  void clear_a_iteminfos();
+  ::protobuf::mozilla::dom::LSItemInfo* mutable_a_iteminfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >*
-      mutable_iteminfos();
+      mutable_a_iteminfos();
   private:
-  const ::protobuf::mozilla::dom::LSItemInfo& _internal_iteminfos(int index) const;
-  ::protobuf::mozilla::dom::LSItemInfo* _internal_add_iteminfos();
+  const ::protobuf::mozilla::dom::LSItemInfo& _internal_a_iteminfos(int index) const;
+  ::protobuf::mozilla::dom::LSItemInfo* _internal_add_a_iteminfos();
   public:
-  const ::protobuf::mozilla::dom::LSItemInfo& iteminfos(int index) const;
-  ::protobuf::mozilla::dom::LSItemInfo* add_iteminfos();
+  const ::protobuf::mozilla::dom::LSItemInfo& a_iteminfos(int index) const;
+  ::protobuf::mozilla::dom::LSItemInfo* add_a_iteminfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
-      iteminfos() const;
+      a_iteminfos() const;
 
-  // required bytes value = 1;
-  bool has_value() const;
+  // required bytes a_value = 1;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems)
@@ -1898,8 +1898,8 @@ class Reply_LoadValueAndMoreItems final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > iteminfos_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > a_iteminfos_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -2140,30 +2140,30 @@ class Reply_LoadKeys final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeysFieldNumber = 1,
+    kAKeysFieldNumber = 1,
   };
-  // repeated bytes keys = 1;
-  int keys_size() const;
+  // repeated bytes a_keys = 1;
+  int a_keys_size() const;
   private:
-  int _internal_keys_size() const;
+  int _internal_a_keys_size() const;
   public:
-  void clear_keys();
-  const std::string& keys(int index) const;
-  std::string* mutable_keys(int index);
-  void set_keys(int index, const std::string& value);
-  void set_keys(int index, std::string&& value);
-  void set_keys(int index, const char* value);
-  void set_keys(int index, const void* value, size_t size);
-  std::string* add_keys();
-  void add_keys(const std::string& value);
-  void add_keys(std::string&& value);
-  void add_keys(const char* value);
-  void add_keys(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& keys() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_keys();
+  void clear_a_keys();
+  const std::string& a_keys(int index) const;
+  std::string* mutable_a_keys(int index);
+  void set_a_keys(int index, const std::string& value);
+  void set_a_keys(int index, std::string&& value);
+  void set_a_keys(int index, const char* value);
+  void set_a_keys(int index, const void* value, size_t size);
+  std::string* add_a_keys();
+  void add_a_keys(const std::string& value);
+  void add_a_keys(std::string&& value);
+  void add_a_keys(const char* value);
+  void add_a_keys(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_keys() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_keys();
   private:
-  const std::string& _internal_keys(int index) const;
-  std::string* _internal_add_keys();
+  const std::string& _internal_a_keys(int index) const;
+  std::string* _internal_add_a_keys();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys)
@@ -2174,7 +2174,7 @@ class Reply_LoadKeys final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> keys_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_keys_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2292,19 +2292,19 @@ class Msg_IncreasePeakUsage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMinSizeFieldNumber = 1,
+    kAMinSizeFieldNumber = 1,
   };
-  // required sint64 minSize = 1;
-  bool has_minsize() const;
+  // required sint64 a_minSize = 1;
+  bool has_a_minsize() const;
   private:
-  bool _internal_has_minsize() const;
+  bool _internal_has_a_minsize() const;
   public:
-  void clear_minsize();
-  int64_t minsize() const;
-  void set_minsize(int64_t value);
+  void clear_a_minsize();
+  int64_t a_minsize() const;
+  void set_a_minsize(int64_t value);
   private:
-  int64_t _internal_minsize() const;
-  void _internal_set_minsize(int64_t value);
+  int64_t _internal_a_minsize() const;
+  void _internal_set_a_minsize(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage)
@@ -2317,7 +2317,7 @@ class Msg_IncreasePeakUsage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int64_t minsize_;
+    int64_t a_minsize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -2434,19 +2434,19 @@ class Reply_IncreasePeakUsage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSizeFieldNumber = 1,
+    kASizeFieldNumber = 1,
   };
-  // required sint64 size = 1;
-  bool has_size() const;
+  // required sint64 a_size = 1;
+  bool has_a_size() const;
   private:
-  bool _internal_has_size() const;
+  bool _internal_has_a_size() const;
   public:
-  void clear_size();
-  int64_t size() const;
-  void set_size(int64_t value);
+  void clear_a_size();
+  int64_t a_size() const;
+  void set_a_size(int64_t value);
   private:
-  int64_t _internal_size() const;
-  void _internal_set_size(int64_t value);
+  int64_t _internal_a_size() const;
+  void _internal_set_a_size(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage)
@@ -2459,7 +2459,7 @@ class Reply_IncreasePeakUsage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int64_t size_;
+    int64_t a_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_2eproto;
@@ -2851,123 +2851,123 @@ class Reply___delete__ final :
 
 // Msg_AsyncCheckpoint
 
-// repeated .protobuf.mozilla.dom.LSWriteInfo writeInfos = 1;
-inline int Msg_AsyncCheckpoint::_internal_writeinfos_size() const {
-  return _impl_.writeinfos_.size();
+// repeated .protobuf.mozilla.dom.LSWriteInfo a_writeInfos = 1;
+inline int Msg_AsyncCheckpoint::_internal_a_writeinfos_size() const {
+  return _impl_.a_writeinfos_.size();
 }
-inline int Msg_AsyncCheckpoint::writeinfos_size() const {
-  return _internal_writeinfos_size();
+inline int Msg_AsyncCheckpoint::a_writeinfos_size() const {
+  return _internal_a_writeinfos_size();
 }
-inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_AsyncCheckpoint::mutable_writeinfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.writeInfos)
-  return _impl_.writeinfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_AsyncCheckpoint::mutable_a_writeinfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.a_writeInfos)
+  return _impl_.a_writeinfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >*
-Msg_AsyncCheckpoint::mutable_writeinfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.writeInfos)
-  return &_impl_.writeinfos_;
+Msg_AsyncCheckpoint::mutable_a_writeinfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.a_writeInfos)
+  return &_impl_.a_writeinfos_;
 }
-inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_AsyncCheckpoint::_internal_writeinfos(int index) const {
-  return _impl_.writeinfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_AsyncCheckpoint::_internal_a_writeinfos(int index) const {
+  return _impl_.a_writeinfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_AsyncCheckpoint::writeinfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.writeInfos)
-  return _internal_writeinfos(index);
+inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_AsyncCheckpoint::a_writeinfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.a_writeInfos)
+  return _internal_a_writeinfos(index);
 }
-inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_AsyncCheckpoint::_internal_add_writeinfos() {
-  return _impl_.writeinfos_.Add();
+inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_AsyncCheckpoint::_internal_add_a_writeinfos() {
+  return _impl_.a_writeinfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_AsyncCheckpoint::add_writeinfos() {
-  ::protobuf::mozilla::dom::LSWriteInfo* _add = _internal_add_writeinfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.writeInfos)
+inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_AsyncCheckpoint::add_a_writeinfos() {
+  ::protobuf::mozilla::dom::LSWriteInfo* _add = _internal_add_a_writeinfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.a_writeInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >&
-Msg_AsyncCheckpoint::writeinfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.writeInfos)
-  return _impl_.writeinfos_;
+Msg_AsyncCheckpoint::a_writeinfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpoint.a_writeInfos)
+  return _impl_.a_writeinfos_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AsyncCheckpointAndNotify
 
-// repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo writeAndNotifyInfos = 1;
-inline int Msg_AsyncCheckpointAndNotify::_internal_writeandnotifyinfos_size() const {
-  return _impl_.writeandnotifyinfos_.size();
+// repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo a_writeAndNotifyInfos = 1;
+inline int Msg_AsyncCheckpointAndNotify::_internal_a_writeandnotifyinfos_size() const {
+  return _impl_.a_writeandnotifyinfos_.size();
 }
-inline int Msg_AsyncCheckpointAndNotify::writeandnotifyinfos_size() const {
-  return _internal_writeandnotifyinfos_size();
+inline int Msg_AsyncCheckpointAndNotify::a_writeandnotifyinfos_size() const {
+  return _internal_a_writeandnotifyinfos_size();
 }
-inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_AsyncCheckpointAndNotify::mutable_writeandnotifyinfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.writeAndNotifyInfos)
-  return _impl_.writeandnotifyinfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_AsyncCheckpointAndNotify::mutable_a_writeandnotifyinfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return _impl_.a_writeandnotifyinfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >*
-Msg_AsyncCheckpointAndNotify::mutable_writeandnotifyinfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.writeAndNotifyInfos)
-  return &_impl_.writeandnotifyinfos_;
+Msg_AsyncCheckpointAndNotify::mutable_a_writeandnotifyinfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return &_impl_.a_writeandnotifyinfos_;
 }
-inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_AsyncCheckpointAndNotify::_internal_writeandnotifyinfos(int index) const {
-  return _impl_.writeandnotifyinfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_AsyncCheckpointAndNotify::_internal_a_writeandnotifyinfos(int index) const {
+  return _impl_.a_writeandnotifyinfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_AsyncCheckpointAndNotify::writeandnotifyinfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.writeAndNotifyInfos)
-  return _internal_writeandnotifyinfos(index);
+inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_AsyncCheckpointAndNotify::a_writeandnotifyinfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return _internal_a_writeandnotifyinfos(index);
 }
-inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_AsyncCheckpointAndNotify::_internal_add_writeandnotifyinfos() {
-  return _impl_.writeandnotifyinfos_.Add();
+inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_AsyncCheckpointAndNotify::_internal_add_a_writeandnotifyinfos() {
+  return _impl_.a_writeandnotifyinfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_AsyncCheckpointAndNotify::add_writeandnotifyinfos() {
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _add = _internal_add_writeandnotifyinfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.writeAndNotifyInfos)
+inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_AsyncCheckpointAndNotify::add_a_writeandnotifyinfos() {
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _add = _internal_add_a_writeandnotifyinfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.a_writeAndNotifyInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >&
-Msg_AsyncCheckpointAndNotify::writeandnotifyinfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.writeAndNotifyInfos)
-  return _impl_.writeandnotifyinfos_;
+Msg_AsyncCheckpointAndNotify::a_writeandnotifyinfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_AsyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return _impl_.a_writeandnotifyinfos_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SyncCheckpoint
 
-// repeated .protobuf.mozilla.dom.LSWriteInfo writeInfos = 1;
-inline int Msg_SyncCheckpoint::_internal_writeinfos_size() const {
-  return _impl_.writeinfos_.size();
+// repeated .protobuf.mozilla.dom.LSWriteInfo a_writeInfos = 1;
+inline int Msg_SyncCheckpoint::_internal_a_writeinfos_size() const {
+  return _impl_.a_writeinfos_.size();
 }
-inline int Msg_SyncCheckpoint::writeinfos_size() const {
-  return _internal_writeinfos_size();
+inline int Msg_SyncCheckpoint::a_writeinfos_size() const {
+  return _internal_a_writeinfos_size();
 }
-inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_SyncCheckpoint::mutable_writeinfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.writeInfos)
-  return _impl_.writeinfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_SyncCheckpoint::mutable_a_writeinfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.a_writeInfos)
+  return _impl_.a_writeinfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >*
-Msg_SyncCheckpoint::mutable_writeinfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.writeInfos)
-  return &_impl_.writeinfos_;
+Msg_SyncCheckpoint::mutable_a_writeinfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.a_writeInfos)
+  return &_impl_.a_writeinfos_;
 }
-inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_SyncCheckpoint::_internal_writeinfos(int index) const {
-  return _impl_.writeinfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_SyncCheckpoint::_internal_a_writeinfos(int index) const {
+  return _impl_.a_writeinfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_SyncCheckpoint::writeinfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.writeInfos)
-  return _internal_writeinfos(index);
+inline const ::protobuf::mozilla::dom::LSWriteInfo& Msg_SyncCheckpoint::a_writeinfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.a_writeInfos)
+  return _internal_a_writeinfos(index);
 }
-inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_SyncCheckpoint::_internal_add_writeinfos() {
-  return _impl_.writeinfos_.Add();
+inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_SyncCheckpoint::_internal_add_a_writeinfos() {
+  return _impl_.a_writeinfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_SyncCheckpoint::add_writeinfos() {
-  ::protobuf::mozilla::dom::LSWriteInfo* _add = _internal_add_writeinfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.writeInfos)
+inline ::protobuf::mozilla::dom::LSWriteInfo* Msg_SyncCheckpoint::add_a_writeinfos() {
+  ::protobuf::mozilla::dom::LSWriteInfo* _add = _internal_add_a_writeinfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.a_writeInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteInfo >&
-Msg_SyncCheckpoint::writeinfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.writeInfos)
-  return _impl_.writeinfos_;
+Msg_SyncCheckpoint::a_writeinfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpoint.a_writeInfos)
+  return _impl_.a_writeinfos_;
 }
 
 // -------------------------------------------------------------------
@@ -2978,41 +2978,41 @@ Msg_SyncCheckpoint::writeinfos() const {
 
 // Msg_SyncCheckpointAndNotify
 
-// repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo writeAndNotifyInfos = 1;
-inline int Msg_SyncCheckpointAndNotify::_internal_writeandnotifyinfos_size() const {
-  return _impl_.writeandnotifyinfos_.size();
+// repeated .protobuf.mozilla.dom.LSWriteAndNotifyInfo a_writeAndNotifyInfos = 1;
+inline int Msg_SyncCheckpointAndNotify::_internal_a_writeandnotifyinfos_size() const {
+  return _impl_.a_writeandnotifyinfos_.size();
 }
-inline int Msg_SyncCheckpointAndNotify::writeandnotifyinfos_size() const {
-  return _internal_writeandnotifyinfos_size();
+inline int Msg_SyncCheckpointAndNotify::a_writeandnotifyinfos_size() const {
+  return _internal_a_writeandnotifyinfos_size();
 }
-inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_SyncCheckpointAndNotify::mutable_writeandnotifyinfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.writeAndNotifyInfos)
-  return _impl_.writeandnotifyinfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_SyncCheckpointAndNotify::mutable_a_writeandnotifyinfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return _impl_.a_writeandnotifyinfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >*
-Msg_SyncCheckpointAndNotify::mutable_writeandnotifyinfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.writeAndNotifyInfos)
-  return &_impl_.writeandnotifyinfos_;
+Msg_SyncCheckpointAndNotify::mutable_a_writeandnotifyinfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return &_impl_.a_writeandnotifyinfos_;
 }
-inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_SyncCheckpointAndNotify::_internal_writeandnotifyinfos(int index) const {
-  return _impl_.writeandnotifyinfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_SyncCheckpointAndNotify::_internal_a_writeandnotifyinfos(int index) const {
+  return _impl_.a_writeandnotifyinfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_SyncCheckpointAndNotify::writeandnotifyinfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.writeAndNotifyInfos)
-  return _internal_writeandnotifyinfos(index);
+inline const ::protobuf::mozilla::dom::LSWriteAndNotifyInfo& Msg_SyncCheckpointAndNotify::a_writeandnotifyinfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return _internal_a_writeandnotifyinfos(index);
 }
-inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_SyncCheckpointAndNotify::_internal_add_writeandnotifyinfos() {
-  return _impl_.writeandnotifyinfos_.Add();
+inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_SyncCheckpointAndNotify::_internal_add_a_writeandnotifyinfos() {
+  return _impl_.a_writeandnotifyinfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_SyncCheckpointAndNotify::add_writeandnotifyinfos() {
-  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _add = _internal_add_writeandnotifyinfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.writeAndNotifyInfos)
+inline ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* Msg_SyncCheckpointAndNotify::add_a_writeandnotifyinfos() {
+  ::protobuf::mozilla::dom::LSWriteAndNotifyInfo* _add = _internal_add_a_writeandnotifyinfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.a_writeAndNotifyInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSWriteAndNotifyInfo >&
-Msg_SyncCheckpointAndNotify::writeandnotifyinfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.writeAndNotifyInfos)
-  return _impl_.writeandnotifyinfos_;
+Msg_SyncCheckpointAndNotify::a_writeandnotifyinfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_SyncCheckpointAndNotify.a_writeAndNotifyInfos)
+  return _impl_.a_writeandnotifyinfos_;
 }
 
 // -------------------------------------------------------------------
@@ -3039,181 +3039,181 @@ Msg_SyncCheckpointAndNotify::writeandnotifyinfos() const {
 
 // Msg_LoadValueAndMoreItems
 
-// required bytes key = 1;
-inline bool Msg_LoadValueAndMoreItems::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool Msg_LoadValueAndMoreItems::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_LoadValueAndMoreItems::has_key() const {
-  return _internal_has_key();
+inline bool Msg_LoadValueAndMoreItems::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void Msg_LoadValueAndMoreItems::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void Msg_LoadValueAndMoreItems::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_LoadValueAndMoreItems::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.key)
-  return _internal_key();
+inline const std::string& Msg_LoadValueAndMoreItems::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_LoadValueAndMoreItems::set_key(ArgT0&& arg0, ArgT... args) {
+void Msg_LoadValueAndMoreItems::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
 }
-inline std::string* Msg_LoadValueAndMoreItems::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.key)
+inline std::string* Msg_LoadValueAndMoreItems::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
   return _s;
 }
-inline const std::string& Msg_LoadValueAndMoreItems::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& Msg_LoadValueAndMoreItems::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void Msg_LoadValueAndMoreItems::_internal_set_key(const std::string& value) {
+inline void Msg_LoadValueAndMoreItems::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_LoadValueAndMoreItems::_internal_mutable_key() {
+inline std::string* Msg_LoadValueAndMoreItems::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_LoadValueAndMoreItems::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.key)
-  if (!_internal_has_key()) {
+inline std::string* Msg_LoadValueAndMoreItems::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_LoadValueAndMoreItems::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void Msg_LoadValueAndMoreItems::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_LoadValueAndMoreItems
 
-// required bytes value = 1;
-inline bool Reply_LoadValueAndMoreItems::_internal_has_value() const {
+// required bytes a_value = 1;
+inline bool Reply_LoadValueAndMoreItems::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_LoadValueAndMoreItems::has_value() const {
-  return _internal_has_value();
+inline bool Reply_LoadValueAndMoreItems::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void Reply_LoadValueAndMoreItems::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void Reply_LoadValueAndMoreItems::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_LoadValueAndMoreItems::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.value)
-  return _internal_value();
+inline const std::string& Reply_LoadValueAndMoreItems::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_LoadValueAndMoreItems::set_value(ArgT0&& arg0, ArgT... args) {
+void Reply_LoadValueAndMoreItems::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
 }
-inline std::string* Reply_LoadValueAndMoreItems::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.value)
+inline std::string* Reply_LoadValueAndMoreItems::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
   return _s;
 }
-inline const std::string& Reply_LoadValueAndMoreItems::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& Reply_LoadValueAndMoreItems::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void Reply_LoadValueAndMoreItems::_internal_set_value(const std::string& value) {
+inline void Reply_LoadValueAndMoreItems::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_LoadValueAndMoreItems::_internal_mutable_value() {
+inline std::string* Reply_LoadValueAndMoreItems::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_LoadValueAndMoreItems::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.value)
-  if (!_internal_has_value()) {
+inline std::string* Reply_LoadValueAndMoreItems::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_LoadValueAndMoreItems::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void Reply_LoadValueAndMoreItems::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_value)
 }
 
-// repeated .protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
-inline int Reply_LoadValueAndMoreItems::_internal_iteminfos_size() const {
-  return _impl_.iteminfos_.size();
+// repeated .protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
+inline int Reply_LoadValueAndMoreItems::_internal_a_iteminfos_size() const {
+  return _impl_.a_iteminfos_.size();
 }
-inline int Reply_LoadValueAndMoreItems::iteminfos_size() const {
-  return _internal_iteminfos_size();
+inline int Reply_LoadValueAndMoreItems::a_iteminfos_size() const {
+  return _internal_a_iteminfos_size();
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* Reply_LoadValueAndMoreItems::mutable_iteminfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.itemInfos)
-  return _impl_.iteminfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSItemInfo* Reply_LoadValueAndMoreItems::mutable_a_iteminfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_itemInfos)
+  return _impl_.a_iteminfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >*
-Reply_LoadValueAndMoreItems::mutable_iteminfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.itemInfos)
-  return &_impl_.iteminfos_;
+Reply_LoadValueAndMoreItems::mutable_a_iteminfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_itemInfos)
+  return &_impl_.a_iteminfos_;
 }
-inline const ::protobuf::mozilla::dom::LSItemInfo& Reply_LoadValueAndMoreItems::_internal_iteminfos(int index) const {
-  return _impl_.iteminfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSItemInfo& Reply_LoadValueAndMoreItems::_internal_a_iteminfos(int index) const {
+  return _impl_.a_iteminfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSItemInfo& Reply_LoadValueAndMoreItems::iteminfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.itemInfos)
-  return _internal_iteminfos(index);
+inline const ::protobuf::mozilla::dom::LSItemInfo& Reply_LoadValueAndMoreItems::a_iteminfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_itemInfos)
+  return _internal_a_iteminfos(index);
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* Reply_LoadValueAndMoreItems::_internal_add_iteminfos() {
-  return _impl_.iteminfos_.Add();
+inline ::protobuf::mozilla::dom::LSItemInfo* Reply_LoadValueAndMoreItems::_internal_add_a_iteminfos() {
+  return _impl_.a_iteminfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* Reply_LoadValueAndMoreItems::add_iteminfos() {
-  ::protobuf::mozilla::dom::LSItemInfo* _add = _internal_add_iteminfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.itemInfos)
+inline ::protobuf::mozilla::dom::LSItemInfo* Reply_LoadValueAndMoreItems::add_a_iteminfos() {
+  ::protobuf::mozilla::dom::LSItemInfo* _add = _internal_add_a_iteminfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_itemInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
-Reply_LoadValueAndMoreItems::iteminfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.itemInfos)
-  return _impl_.iteminfos_;
+Reply_LoadValueAndMoreItems::a_iteminfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadValueAndMoreItems.a_itemInfos)
+  return _impl_.a_iteminfos_;
 }
 
 // -------------------------------------------------------------------
@@ -3224,143 +3224,143 @@ Reply_LoadValueAndMoreItems::iteminfos() const {
 
 // Reply_LoadKeys
 
-// repeated bytes keys = 1;
-inline int Reply_LoadKeys::_internal_keys_size() const {
-  return _impl_.keys_.size();
+// repeated bytes a_keys = 1;
+inline int Reply_LoadKeys::_internal_a_keys_size() const {
+  return _impl_.a_keys_.size();
 }
-inline int Reply_LoadKeys::keys_size() const {
-  return _internal_keys_size();
+inline int Reply_LoadKeys::a_keys_size() const {
+  return _internal_a_keys_size();
 }
-inline void Reply_LoadKeys::clear_keys() {
-  _impl_.keys_.Clear();
+inline void Reply_LoadKeys::clear_a_keys() {
+  _impl_.a_keys_.Clear();
 }
-inline std::string* Reply_LoadKeys::add_keys() {
-  std::string* _s = _internal_add_keys();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+inline std::string* Reply_LoadKeys::add_a_keys() {
+  std::string* _s = _internal_add_a_keys();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
   return _s;
 }
-inline const std::string& Reply_LoadKeys::_internal_keys(int index) const {
-  return _impl_.keys_.Get(index);
+inline const std::string& Reply_LoadKeys::_internal_a_keys(int index) const {
+  return _impl_.a_keys_.Get(index);
 }
-inline const std::string& Reply_LoadKeys::keys(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
-  return _internal_keys(index);
+inline const std::string& Reply_LoadKeys::a_keys(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
+  return _internal_a_keys(index);
 }
-inline std::string* Reply_LoadKeys::mutable_keys(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
-  return _impl_.keys_.Mutable(index);
+inline std::string* Reply_LoadKeys::mutable_a_keys(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
+  return _impl_.a_keys_.Mutable(index);
 }
-inline void Reply_LoadKeys::set_keys(int index, const std::string& value) {
-  _impl_.keys_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+inline void Reply_LoadKeys::set_a_keys(int index, const std::string& value) {
+  _impl_.a_keys_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::set_keys(int index, std::string&& value) {
-  _impl_.keys_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+inline void Reply_LoadKeys::set_a_keys(int index, std::string&& value) {
+  _impl_.a_keys_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::set_keys(int index, const char* value) {
+inline void Reply_LoadKeys::set_a_keys(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.keys_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+  _impl_.a_keys_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::set_keys(int index, const void* value, size_t size) {
-  _impl_.keys_.Mutable(index)->assign(
+inline void Reply_LoadKeys::set_a_keys(int index, const void* value, size_t size) {
+  _impl_.a_keys_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline std::string* Reply_LoadKeys::_internal_add_keys() {
-  return _impl_.keys_.Add();
+inline std::string* Reply_LoadKeys::_internal_add_a_keys() {
+  return _impl_.a_keys_.Add();
 }
-inline void Reply_LoadKeys::add_keys(const std::string& value) {
-  _impl_.keys_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+inline void Reply_LoadKeys::add_a_keys(const std::string& value) {
+  _impl_.a_keys_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::add_keys(std::string&& value) {
-  _impl_.keys_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+inline void Reply_LoadKeys::add_a_keys(std::string&& value) {
+  _impl_.a_keys_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::add_keys(const char* value) {
+inline void Reply_LoadKeys::add_a_keys(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.keys_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+  _impl_.a_keys_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::add_keys(const void* value, size_t size) {
-  _impl_.keys_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
+inline void Reply_LoadKeys::add_a_keys(const void* value, size_t size) {
+  _impl_.a_keys_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Reply_LoadKeys::keys() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
-  return _impl_.keys_;
+Reply_LoadKeys::a_keys() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
+  return _impl_.a_keys_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Reply_LoadKeys::mutable_keys() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.keys)
-  return &_impl_.keys_;
+Reply_LoadKeys::mutable_a_keys() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
+  return &_impl_.a_keys_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_IncreasePeakUsage
 
-// required sint64 minSize = 1;
-inline bool Msg_IncreasePeakUsage::_internal_has_minsize() const {
+// required sint64 a_minSize = 1;
+inline bool Msg_IncreasePeakUsage::_internal_has_a_minsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_IncreasePeakUsage::has_minsize() const {
-  return _internal_has_minsize();
+inline bool Msg_IncreasePeakUsage::has_a_minsize() const {
+  return _internal_has_a_minsize();
 }
-inline void Msg_IncreasePeakUsage::clear_minsize() {
-  _impl_.minsize_ = int64_t{0};
+inline void Msg_IncreasePeakUsage::clear_a_minsize() {
+  _impl_.a_minsize_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t Msg_IncreasePeakUsage::_internal_minsize() const {
-  return _impl_.minsize_;
+inline int64_t Msg_IncreasePeakUsage::_internal_a_minsize() const {
+  return _impl_.a_minsize_;
 }
-inline int64_t Msg_IncreasePeakUsage::minsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage.minSize)
-  return _internal_minsize();
+inline int64_t Msg_IncreasePeakUsage::a_minsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage.a_minSize)
+  return _internal_a_minsize();
 }
-inline void Msg_IncreasePeakUsage::_internal_set_minsize(int64_t value) {
+inline void Msg_IncreasePeakUsage::_internal_set_a_minsize(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.minsize_ = value;
+  _impl_.a_minsize_ = value;
 }
-inline void Msg_IncreasePeakUsage::set_minsize(int64_t value) {
-  _internal_set_minsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage.minSize)
+inline void Msg_IncreasePeakUsage::set_a_minsize(int64_t value) {
+  _internal_set_a_minsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_IncreasePeakUsage.a_minSize)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_IncreasePeakUsage
 
-// required sint64 size = 1;
-inline bool Reply_IncreasePeakUsage::_internal_has_size() const {
+// required sint64 a_size = 1;
+inline bool Reply_IncreasePeakUsage::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_IncreasePeakUsage::has_size() const {
-  return _internal_has_size();
+inline bool Reply_IncreasePeakUsage::has_a_size() const {
+  return _internal_has_a_size();
 }
-inline void Reply_IncreasePeakUsage::clear_size() {
-  _impl_.size_ = int64_t{0};
+inline void Reply_IncreasePeakUsage::clear_a_size() {
+  _impl_.a_size_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t Reply_IncreasePeakUsage::_internal_size() const {
-  return _impl_.size_;
+inline int64_t Reply_IncreasePeakUsage::_internal_a_size() const {
+  return _impl_.a_size_;
 }
-inline int64_t Reply_IncreasePeakUsage::size() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage.size)
-  return _internal_size();
+inline int64_t Reply_IncreasePeakUsage::a_size() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage.a_size)
+  return _internal_a_size();
 }
-inline void Reply_IncreasePeakUsage::_internal_set_size(int64_t value) {
+inline void Reply_IncreasePeakUsage::_internal_set_a_size(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.size_ = value;
+  _impl_.a_size_ = value;
 }
-inline void Reply_IncreasePeakUsage::set_size(int64_t value) {
-  _internal_set_size(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage.size)
+inline void Reply_IncreasePeakUsage::set_a_size(int64_t value) {
+  _internal_set_a_size(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_IncreasePeakUsage.a_size)
 }
 
 // -------------------------------------------------------------------

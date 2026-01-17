@@ -15,10 +15,10 @@ import "NeckoChannelParams.proto";
 
 // Structs and unions declarations
 message NetworkAddressArg {
-  required bytes selfAddr = 1;
-  required bytes peerAddr = 2;
-  required bool resolvedByTRR = 3;
-  required bytes mode = 4;
-  required bytes trrSkipReason = 5;
-  required bool echConfigUsed = 6;
+  required bytes a_selfAddr = 1;
+  required bytes a_peerAddr = 2;
+  required bool a_resolvedByTRR = 3;
+  required bytes a_mode = 4;
+  required bytes a_trrSkipReason = 5;
+  required bool a_echConfigUsed = 6;
 }

@@ -19,16 +19,16 @@ message Msg_GetStunAddrs {
 }
 
 message Msg_RegisterMDNSHostname {
-  required bytes hostname = 1;
-  required bytes address = 2;
+  required bytes a_hostname = 1;
+  required bytes a_address = 2;
 }
 
 message Msg_QueryMDNSHostname {
-  required bytes hostname = 1;
+  required bytes a_hostname = 1;
 }
 
 message Msg_UnregisterMDNSHostname {
-  required bytes hostname = 1;
+  required bytes a_hostname = 1;
 }
 
 message Msg___delete__ {
@@ -38,12 +38,12 @@ message Reply___delete__ {
 }
 
 message Msg_OnMDNSQueryComplete {
-  required bytes hostname = 1;
-  required bytes address = 2;
+  required bytes a_hostname = 1;
+  required bytes a_address = 2;
 }
 
 message Msg_OnStunAddrsAvailable {
-  required bytes iceStunAddrs = 1;
+  required bytes a_iceStunAddrs = 1;
 }
 
 // Parameter mappings stats:

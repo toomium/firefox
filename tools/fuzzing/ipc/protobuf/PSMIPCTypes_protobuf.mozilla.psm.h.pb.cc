@@ -22,7 +22,7 @@ namespace mozilla {
 namespace psm {
 PROTOBUF_CONSTEXPR ByteArray::ByteArray(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.data_)*/{}
+    /*decltype(_impl_.a_data_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ByteArrayDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ByteArrayDefaultTypeInternal()
@@ -35,8 +35,8 @@ struct ByteArrayDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ByteArrayDefaultTypeInternal _ByteArray_default_instance_;
 PROTOBUF_CONSTEXPR ECKey::ECKey(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.params_)*/{}
-  , /*decltype(_impl_.cert_)*/{}
+    /*decltype(_impl_.a_params_)*/{}
+  , /*decltype(_impl_.a_cert_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ECKeyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ECKeyDefaultTypeInternal()
@@ -49,8 +49,8 @@ struct ECKeyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ECKeyDefaultTypeInternal _ECKey_default_instance_;
 PROTOBUF_CONSTEXPR RSAKey::RSAKey(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.modulus_)*/{}
-  , /*decltype(_impl_.cert_)*/{}
+    /*decltype(_impl_.a_modulus_)*/{}
+  , /*decltype(_impl_.a_cert_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RSAKeyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RSAKeyDefaultTypeInternal()
@@ -63,7 +63,7 @@ struct RSAKeyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RSAKeyDefaultTypeInternal _RSAKey_default_instance_;
 PROTOBUF_CONSTEXPR Certificate::Certificate(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.der_)*/{}
+    /*decltype(_impl_.a_der_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CertificateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CertificateDefaultTypeInternal()
@@ -92,8 +92,8 @@ PROTOBUF_CONSTEXPR DelegatedCredentialInfoArg::DelegatedCredentialInfoArg(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.scheme_)*/0u
-  , /*decltype(_impl_.authkeybits_)*/0u} {}
+  , /*decltype(_impl_.a_scheme_)*/0u
+  , /*decltype(_impl_.a_authkeybits_)*/0u} {}
 struct DelegatedCredentialInfoArgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DelegatedCredentialInfoArgDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -126,7 +126,7 @@ ByteArray::ByteArray(const ByteArray& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ByteArray* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.data_){from._impl_.data_}
+      decltype(_impl_.a_data_){from._impl_.a_data_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -138,7 +138,7 @@ inline void ByteArray::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.data_){arena}
+      decltype(_impl_.a_data_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -154,7 +154,7 @@ ByteArray::~ByteArray() {
 
 inline void ByteArray::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.data_.~RepeatedField();
+  _impl_.a_data_.~RepeatedField();
 }
 
 void ByteArray::SetCachedSize(int size) const {
@@ -167,7 +167,7 @@ void ByteArray::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.data_.Clear();
+  _impl_.a_data_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -177,18 +177,18 @@ const char* ByteArray::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 data = 1;
+      // repeated uint32 a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_data(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_data(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_data(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -222,10 +222,10 @@ uint8_t* ByteArray::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 data = 1;
-  for (int i = 0, n = this->_internal_data_size(); i < n; i++) {
+  // repeated uint32 a_data = 1;
+  for (int i = 0, n = this->_internal_a_data_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_data(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_data(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -244,12 +244,12 @@ size_t ByteArray::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 data = 1;
+  // repeated uint32 a_data = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.data_);
+      UInt32Size(this->_impl_.a_data_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_data_size());
+                  ::_pbi::FromIntSize(this->_internal_a_data_size());
     total_size += data_size;
   }
 
@@ -274,7 +274,7 @@ void ByteArray::MergeFrom(const ByteArray& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.data_.MergeFrom(from._impl_.data_);
+  _this->_impl_.a_data_.MergeFrom(from._impl_.a_data_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -292,7 +292,7 @@ bool ByteArray::IsInitialized() const {
 void ByteArray::InternalSwap(ByteArray* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.data_.InternalSwap(&other->_impl_.data_);
+  _impl_.a_data_.InternalSwap(&other->_impl_.a_data_);
 }
 
 std::string ByteArray::GetTypeName() const {
@@ -316,8 +316,8 @@ ECKey::ECKey(const ECKey& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ECKey* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.params_){from._impl_.params_}
-    , decltype(_impl_.cert_){from._impl_.cert_}
+      decltype(_impl_.a_params_){from._impl_.a_params_}
+    , decltype(_impl_.a_cert_){from._impl_.a_cert_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -329,8 +329,8 @@ inline void ECKey::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.params_){arena}
-    , decltype(_impl_.cert_){arena}
+      decltype(_impl_.a_params_){arena}
+    , decltype(_impl_.a_cert_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -346,8 +346,8 @@ ECKey::~ECKey() {
 
 inline void ECKey::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.params_.~RepeatedField();
-  _impl_.cert_.~RepeatedField();
+  _impl_.a_params_.~RepeatedField();
+  _impl_.a_cert_.~RepeatedField();
 }
 
 void ECKey::SetCachedSize(int size) const {
@@ -360,8 +360,8 @@ void ECKey::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.params_.Clear();
-  _impl_.cert_.Clear();
+  _impl_.a_params_.Clear();
+  _impl_.a_cert_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -371,34 +371,34 @@ const char* ECKey::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 params = 1;
+      // repeated uint32 a_params = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_params(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_params(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_params(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_params(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 cert = 2;
+      // repeated uint32 a_cert = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_cert(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_cert(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_cert(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_cert(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -432,16 +432,16 @@ uint8_t* ECKey::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 params = 1;
-  for (int i = 0, n = this->_internal_params_size(); i < n; i++) {
+  // repeated uint32 a_params = 1;
+  for (int i = 0, n = this->_internal_a_params_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_params(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_params(i), target);
   }
 
-  // repeated uint32 cert = 2;
-  for (int i = 0, n = this->_internal_cert_size(); i < n; i++) {
+  // repeated uint32 a_cert = 2;
+  for (int i = 0, n = this->_internal_a_cert_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_cert(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_cert(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -460,21 +460,21 @@ size_t ECKey::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 params = 1;
+  // repeated uint32 a_params = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.params_);
+      UInt32Size(this->_impl_.a_params_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_params_size());
+                  ::_pbi::FromIntSize(this->_internal_a_params_size());
     total_size += data_size;
   }
 
-  // repeated uint32 cert = 2;
+  // repeated uint32 a_cert = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.cert_);
+      UInt32Size(this->_impl_.a_cert_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_cert_size());
+                  ::_pbi::FromIntSize(this->_internal_a_cert_size());
     total_size += data_size;
   }
 
@@ -499,8 +499,8 @@ void ECKey::MergeFrom(const ECKey& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.params_.MergeFrom(from._impl_.params_);
-  _this->_impl_.cert_.MergeFrom(from._impl_.cert_);
+  _this->_impl_.a_params_.MergeFrom(from._impl_.a_params_);
+  _this->_impl_.a_cert_.MergeFrom(from._impl_.a_cert_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -518,8 +518,8 @@ bool ECKey::IsInitialized() const {
 void ECKey::InternalSwap(ECKey* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.params_.InternalSwap(&other->_impl_.params_);
-  _impl_.cert_.InternalSwap(&other->_impl_.cert_);
+  _impl_.a_params_.InternalSwap(&other->_impl_.a_params_);
+  _impl_.a_cert_.InternalSwap(&other->_impl_.a_cert_);
 }
 
 std::string ECKey::GetTypeName() const {
@@ -543,8 +543,8 @@ RSAKey::RSAKey(const RSAKey& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RSAKey* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.modulus_){from._impl_.modulus_}
-    , decltype(_impl_.cert_){from._impl_.cert_}
+      decltype(_impl_.a_modulus_){from._impl_.a_modulus_}
+    , decltype(_impl_.a_cert_){from._impl_.a_cert_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -556,8 +556,8 @@ inline void RSAKey::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.modulus_){arena}
-    , decltype(_impl_.cert_){arena}
+      decltype(_impl_.a_modulus_){arena}
+    , decltype(_impl_.a_cert_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -573,8 +573,8 @@ RSAKey::~RSAKey() {
 
 inline void RSAKey::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.modulus_.~RepeatedField();
-  _impl_.cert_.~RepeatedField();
+  _impl_.a_modulus_.~RepeatedField();
+  _impl_.a_cert_.~RepeatedField();
 }
 
 void RSAKey::SetCachedSize(int size) const {
@@ -587,8 +587,8 @@ void RSAKey::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.modulus_.Clear();
-  _impl_.cert_.Clear();
+  _impl_.a_modulus_.Clear();
+  _impl_.a_cert_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -598,34 +598,34 @@ const char* RSAKey::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 modulus = 1;
+      // repeated uint32 a_modulus = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_modulus(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_modulus(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_modulus(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_modulus(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 cert = 2;
+      // repeated uint32 a_cert = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_cert(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_cert(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_cert(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_cert(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -659,16 +659,16 @@ uint8_t* RSAKey::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 modulus = 1;
-  for (int i = 0, n = this->_internal_modulus_size(); i < n; i++) {
+  // repeated uint32 a_modulus = 1;
+  for (int i = 0, n = this->_internal_a_modulus_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_modulus(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_modulus(i), target);
   }
 
-  // repeated uint32 cert = 2;
-  for (int i = 0, n = this->_internal_cert_size(); i < n; i++) {
+  // repeated uint32 a_cert = 2;
+  for (int i = 0, n = this->_internal_a_cert_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_cert(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_cert(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -687,21 +687,21 @@ size_t RSAKey::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 modulus = 1;
+  // repeated uint32 a_modulus = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.modulus_);
+      UInt32Size(this->_impl_.a_modulus_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_modulus_size());
+                  ::_pbi::FromIntSize(this->_internal_a_modulus_size());
     total_size += data_size;
   }
 
-  // repeated uint32 cert = 2;
+  // repeated uint32 a_cert = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.cert_);
+      UInt32Size(this->_impl_.a_cert_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_cert_size());
+                  ::_pbi::FromIntSize(this->_internal_a_cert_size());
     total_size += data_size;
   }
 
@@ -726,8 +726,8 @@ void RSAKey::MergeFrom(const RSAKey& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.modulus_.MergeFrom(from._impl_.modulus_);
-  _this->_impl_.cert_.MergeFrom(from._impl_.cert_);
+  _this->_impl_.a_modulus_.MergeFrom(from._impl_.a_modulus_);
+  _this->_impl_.a_cert_.MergeFrom(from._impl_.a_cert_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -745,8 +745,8 @@ bool RSAKey::IsInitialized() const {
 void RSAKey::InternalSwap(RSAKey* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.modulus_.InternalSwap(&other->_impl_.modulus_);
-  _impl_.cert_.InternalSwap(&other->_impl_.cert_);
+  _impl_.a_modulus_.InternalSwap(&other->_impl_.a_modulus_);
+  _impl_.a_cert_.InternalSwap(&other->_impl_.a_cert_);
 }
 
 std::string RSAKey::GetTypeName() const {
@@ -770,7 +770,7 @@ Certificate::Certificate(const Certificate& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Certificate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.der_){from._impl_.der_}
+      decltype(_impl_.a_der_){from._impl_.a_der_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -782,7 +782,7 @@ inline void Certificate::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.der_){arena}
+      decltype(_impl_.a_der_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -798,7 +798,7 @@ Certificate::~Certificate() {
 
 inline void Certificate::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.der_.~RepeatedField();
+  _impl_.a_der_.~RepeatedField();
 }
 
 void Certificate::SetCachedSize(int size) const {
@@ -811,7 +811,7 @@ void Certificate::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.der_.Clear();
+  _impl_.a_der_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -821,18 +821,18 @@ const char* Certificate::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 der = 1;
+      // repeated uint32 a_der = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_der(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_der(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_der(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_der(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -866,10 +866,10 @@ uint8_t* Certificate::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 der = 1;
-  for (int i = 0, n = this->_internal_der_size(); i < n; i++) {
+  // repeated uint32 a_der = 1;
+  for (int i = 0, n = this->_internal_a_der_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_der(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_der(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -888,12 +888,12 @@ size_t Certificate::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 der = 1;
+  // repeated uint32 a_der = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.der_);
+      UInt32Size(this->_impl_.a_der_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_der_size());
+                  ::_pbi::FromIntSize(this->_internal_a_der_size());
     total_size += data_size;
   }
 
@@ -918,7 +918,7 @@ void Certificate::MergeFrom(const Certificate& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.der_.MergeFrom(from._impl_.der_);
+  _this->_impl_.a_der_.MergeFrom(from._impl_.a_der_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -936,7 +936,7 @@ bool Certificate::IsInitialized() const {
 void Certificate::InternalSwap(Certificate* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.der_.InternalSwap(&other->_impl_.der_);
+  _impl_.a_der_.InternalSwap(&other->_impl_.a_der_);
 }
 
 std::string Certificate::GetTypeName() const {
@@ -948,67 +948,67 @@ std::string Certificate::GetTypeName() const {
 
 class IPCClientCertObject::_Internal {
  public:
-  static const ::protobuf::mozilla::psm::ECKey& mveckey(const IPCClientCertObject* msg);
-  static const ::protobuf::mozilla::psm::RSAKey& mvrsakey(const IPCClientCertObject* msg);
-  static const ::protobuf::mozilla::psm::Certificate& mvcertificate(const IPCClientCertObject* msg);
+  static const ::protobuf::mozilla::psm::ECKey& a_mveckey(const IPCClientCertObject* msg);
+  static const ::protobuf::mozilla::psm::RSAKey& a_mvrsakey(const IPCClientCertObject* msg);
+  static const ::protobuf::mozilla::psm::Certificate& a_mvcertificate(const IPCClientCertObject* msg);
 };
 
 const ::protobuf::mozilla::psm::ECKey&
-IPCClientCertObject::_Internal::mveckey(const IPCClientCertObject* msg) {
-  return *msg->_impl_.content_.mveckey_;
+IPCClientCertObject::_Internal::a_mveckey(const IPCClientCertObject* msg) {
+  return *msg->_impl_.content_.a_mveckey_;
 }
 const ::protobuf::mozilla::psm::RSAKey&
-IPCClientCertObject::_Internal::mvrsakey(const IPCClientCertObject* msg) {
-  return *msg->_impl_.content_.mvrsakey_;
+IPCClientCertObject::_Internal::a_mvrsakey(const IPCClientCertObject* msg) {
+  return *msg->_impl_.content_.a_mvrsakey_;
 }
 const ::protobuf::mozilla::psm::Certificate&
-IPCClientCertObject::_Internal::mvcertificate(const IPCClientCertObject* msg) {
-  return *msg->_impl_.content_.mvcertificate_;
+IPCClientCertObject::_Internal::a_mvcertificate(const IPCClientCertObject* msg) {
+  return *msg->_impl_.content_.a_mvcertificate_;
 }
-void IPCClientCertObject::set_allocated_mveckey(::protobuf::mozilla::psm::ECKey* mveckey) {
+void IPCClientCertObject::set_allocated_a_mveckey(::protobuf::mozilla::psm::ECKey* a_mveckey) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mveckey) {
+  if (a_mveckey) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mveckey);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mveckey);
     if (message_arena != submessage_arena) {
-      mveckey = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mveckey, submessage_arena);
+      a_mveckey = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mveckey, submessage_arena);
     }
-    set_has_mveckey();
-    _impl_.content_.mveckey_ = mveckey;
+    set_has_a_mveckey();
+    _impl_.content_.a_mveckey_ = a_mveckey;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.mVECKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.a_mVECKey)
 }
-void IPCClientCertObject::set_allocated_mvrsakey(::protobuf::mozilla::psm::RSAKey* mvrsakey) {
+void IPCClientCertObject::set_allocated_a_mvrsakey(::protobuf::mozilla::psm::RSAKey* a_mvrsakey) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvrsakey) {
+  if (a_mvrsakey) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvrsakey);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvrsakey);
     if (message_arena != submessage_arena) {
-      mvrsakey = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvrsakey, submessage_arena);
+      a_mvrsakey = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvrsakey, submessage_arena);
     }
-    set_has_mvrsakey();
-    _impl_.content_.mvrsakey_ = mvrsakey;
+    set_has_a_mvrsakey();
+    _impl_.content_.a_mvrsakey_ = a_mvrsakey;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.mVRSAKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.a_mVRSAKey)
 }
-void IPCClientCertObject::set_allocated_mvcertificate(::protobuf::mozilla::psm::Certificate* mvcertificate) {
+void IPCClientCertObject::set_allocated_a_mvcertificate(::protobuf::mozilla::psm::Certificate* a_mvcertificate) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvcertificate) {
+  if (a_mvcertificate) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvcertificate);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvcertificate);
     if (message_arena != submessage_arena) {
-      mvcertificate = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvcertificate, submessage_arena);
+      a_mvcertificate = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvcertificate, submessage_arena);
     }
-    set_has_mvcertificate();
-    _impl_.content_.mvcertificate_ = mvcertificate;
+    set_has_a_mvcertificate();
+    _impl_.content_.a_mvcertificate_ = a_mvcertificate;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.mVCertificate)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.a_mVCertificate)
 }
 IPCClientCertObject::IPCClientCertObject(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1027,19 +1027,19 @@ IPCClientCertObject::IPCClientCertObject(const IPCClientCertObject& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVECKey: {
-      _this->_internal_mutable_mveckey()->::protobuf::mozilla::psm::ECKey::MergeFrom(
-          from._internal_mveckey());
+    case kAMVECKey: {
+      _this->_internal_mutable_a_mveckey()->::protobuf::mozilla::psm::ECKey::MergeFrom(
+          from._internal_a_mveckey());
       break;
     }
-    case kMVRSAKey: {
-      _this->_internal_mutable_mvrsakey()->::protobuf::mozilla::psm::RSAKey::MergeFrom(
-          from._internal_mvrsakey());
+    case kAMVRSAKey: {
+      _this->_internal_mutable_a_mvrsakey()->::protobuf::mozilla::psm::RSAKey::MergeFrom(
+          from._internal_a_mvrsakey());
       break;
     }
-    case kMVCertificate: {
-      _this->_internal_mutable_mvcertificate()->::protobuf::mozilla::psm::Certificate::MergeFrom(
-          from._internal_mvcertificate());
+    case kAMVCertificate: {
+      _this->_internal_mutable_a_mvcertificate()->::protobuf::mozilla::psm::Certificate::MergeFrom(
+          from._internal_a_mvcertificate());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1084,21 +1084,21 @@ void IPCClientCertObject::SetCachedSize(int size) const {
 void IPCClientCertObject::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.psm.IPCClientCertObject)
   switch (content_case()) {
-    case kMVECKey: {
+    case kAMVECKey: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mveckey_;
+        delete _impl_.content_.a_mveckey_;
       }
       break;
     }
-    case kMVRSAKey: {
+    case kAMVRSAKey: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvrsakey_;
+        delete _impl_.content_.a_mvrsakey_;
       }
       break;
     }
-    case kMVCertificate: {
+    case kAMVCertificate: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvcertificate_;
+        delete _impl_.content_.a_mvcertificate_;
       }
       break;
     }
@@ -1126,26 +1126,26 @@ const char* IPCClientCertObject::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.psm.ECKey mVECKey = 1;
+      // .protobuf.mozilla.psm.ECKey a_mVECKey = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mveckey(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mveckey(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.psm.RSAKey mVRSAKey = 2;
+      // .protobuf.mozilla.psm.RSAKey a_mVRSAKey = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvrsakey(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvrsakey(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.psm.Certificate mVCertificate = 3;
+      // .protobuf.mozilla.psm.Certificate a_mVCertificate = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvcertificate(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvcertificate(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1180,22 +1180,22 @@ uint8_t* IPCClientCertObject::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVECKey: {
+    case kAMVECKey: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mveckey(this),
-          _Internal::mveckey(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mveckey(this),
+          _Internal::a_mveckey(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVRSAKey: {
+    case kAMVRSAKey: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvrsakey(this),
-          _Internal::mvrsakey(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvrsakey(this),
+          _Internal::a_mvrsakey(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVCertificate: {
+    case kAMVCertificate: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::mvcertificate(this),
-          _Internal::mvcertificate(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(3, _Internal::a_mvcertificate(this),
+          _Internal::a_mvcertificate(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1217,25 +1217,25 @@ size_t IPCClientCertObject::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.psm.ECKey mVECKey = 1;
-    case kMVECKey: {
+    // .protobuf.mozilla.psm.ECKey a_mVECKey = 1;
+    case kAMVECKey: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mveckey_);
+          *_impl_.content_.a_mveckey_);
       break;
     }
-    // .protobuf.mozilla.psm.RSAKey mVRSAKey = 2;
-    case kMVRSAKey: {
+    // .protobuf.mozilla.psm.RSAKey a_mVRSAKey = 2;
+    case kAMVRSAKey: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvrsakey_);
+          *_impl_.content_.a_mvrsakey_);
       break;
     }
-    // .protobuf.mozilla.psm.Certificate mVCertificate = 3;
-    case kMVCertificate: {
+    // .protobuf.mozilla.psm.Certificate a_mVCertificate = 3;
+    case kAMVCertificate: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvcertificate_);
+          *_impl_.content_.a_mvcertificate_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1264,19 +1264,19 @@ void IPCClientCertObject::MergeFrom(const IPCClientCertObject& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVECKey: {
-      _this->_internal_mutable_mveckey()->::protobuf::mozilla::psm::ECKey::MergeFrom(
-          from._internal_mveckey());
+    case kAMVECKey: {
+      _this->_internal_mutable_a_mveckey()->::protobuf::mozilla::psm::ECKey::MergeFrom(
+          from._internal_a_mveckey());
       break;
     }
-    case kMVRSAKey: {
-      _this->_internal_mutable_mvrsakey()->::protobuf::mozilla::psm::RSAKey::MergeFrom(
-          from._internal_mvrsakey());
+    case kAMVRSAKey: {
+      _this->_internal_mutable_a_mvrsakey()->::protobuf::mozilla::psm::RSAKey::MergeFrom(
+          from._internal_a_mvrsakey());
       break;
     }
-    case kMVCertificate: {
-      _this->_internal_mutable_mvcertificate()->::protobuf::mozilla::psm::Certificate::MergeFrom(
-          from._internal_mvcertificate());
+    case kAMVCertificate: {
+      _this->_internal_mutable_a_mvcertificate()->::protobuf::mozilla::psm::Certificate::MergeFrom(
+          from._internal_a_mvcertificate());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1314,10 +1314,10 @@ std::string IPCClientCertObject::GetTypeName() const {
 class DelegatedCredentialInfoArg::_Internal {
  public:
   using HasBits = decltype(std::declval<DelegatedCredentialInfoArg>()._impl_._has_bits_);
-  static void set_has_scheme(HasBits* has_bits) {
+  static void set_has_a_scheme(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_authkeybits(HasBits* has_bits) {
+  static void set_has_a_authkeybits(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1337,13 +1337,13 @@ DelegatedCredentialInfoArg::DelegatedCredentialInfoArg(const DelegatedCredential
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.scheme_){}
-    , decltype(_impl_.authkeybits_){}};
+    , decltype(_impl_.a_scheme_){}
+    , decltype(_impl_.a_authkeybits_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.scheme_, &from._impl_.scheme_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.authkeybits_) -
-    reinterpret_cast<char*>(&_impl_.scheme_)) + sizeof(_impl_.authkeybits_));
+  ::memcpy(&_impl_.a_scheme_, &from._impl_.a_scheme_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_authkeybits_) -
+    reinterpret_cast<char*>(&_impl_.a_scheme_)) + sizeof(_impl_.a_authkeybits_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.psm.DelegatedCredentialInfoArg)
 }
 
@@ -1354,8 +1354,8 @@ inline void DelegatedCredentialInfoArg::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.scheme_){0u}
-    , decltype(_impl_.authkeybits_){0u}
+    , decltype(_impl_.a_scheme_){0u}
+    , decltype(_impl_.a_authkeybits_){0u}
   };
 }
 
@@ -1384,9 +1384,9 @@ void DelegatedCredentialInfoArg::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.scheme_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.authkeybits_) -
-        reinterpret_cast<char*>(&_impl_.scheme_)) + sizeof(_impl_.authkeybits_));
+    ::memset(&_impl_.a_scheme_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_authkeybits_) -
+        reinterpret_cast<char*>(&_impl_.a_scheme_)) + sizeof(_impl_.a_authkeybits_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1399,20 +1399,20 @@ const char* DelegatedCredentialInfoArg::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 scheme = 1;
+      // required uint32 a_scheme = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_scheme(&has_bits);
-          _impl_.scheme_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_scheme(&has_bits);
+          _impl_.a_scheme_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 authKeyBits = 2;
+      // required uint32 a_authKeyBits = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_authkeybits(&has_bits);
-          _impl_.authkeybits_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_authkeybits(&has_bits);
+          _impl_.a_authkeybits_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1448,16 +1448,16 @@ uint8_t* DelegatedCredentialInfoArg::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 scheme = 1;
+  // required uint32 a_scheme = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_scheme(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_scheme(), target);
   }
 
-  // required uint32 authKeyBits = 2;
+  // required uint32 a_authKeyBits = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_authkeybits(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_authkeybits(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1472,14 +1472,14 @@ size_t DelegatedCredentialInfoArg::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.psm.DelegatedCredentialInfoArg)
   size_t total_size = 0;
 
-  if (_internal_has_scheme()) {
-    // required uint32 scheme = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_scheme());
+  if (_internal_has_a_scheme()) {
+    // required uint32 a_scheme = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_scheme());
   }
 
-  if (_internal_has_authkeybits()) {
-    // required uint32 authKeyBits = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_authkeybits());
+  if (_internal_has_a_authkeybits()) {
+    // required uint32 a_authKeyBits = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_authkeybits());
   }
 
   return total_size;
@@ -1489,11 +1489,11 @@ size_t DelegatedCredentialInfoArg::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 scheme = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_scheme());
+    // required uint32 a_scheme = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_scheme());
 
-    // required uint32 authKeyBits = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_authkeybits());
+    // required uint32 a_authKeyBits = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_authkeybits());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1526,10 +1526,10 @@ void DelegatedCredentialInfoArg::MergeFrom(const DelegatedCredentialInfoArg& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.scheme_ = from._impl_.scheme_;
+      _this->_impl_.a_scheme_ = from._impl_.a_scheme_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.authkeybits_ = from._impl_.authkeybits_;
+      _this->_impl_.a_authkeybits_ = from._impl_.a_authkeybits_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1553,11 +1553,11 @@ void DelegatedCredentialInfoArg::InternalSwap(DelegatedCredentialInfoArg* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DelegatedCredentialInfoArg, _impl_.authkeybits_)
-      + sizeof(DelegatedCredentialInfoArg::_impl_.authkeybits_)
-      - PROTOBUF_FIELD_OFFSET(DelegatedCredentialInfoArg, _impl_.scheme_)>(
-          reinterpret_cast<char*>(&_impl_.scheme_),
-          reinterpret_cast<char*>(&other->_impl_.scheme_));
+      PROTOBUF_FIELD_OFFSET(DelegatedCredentialInfoArg, _impl_.a_authkeybits_)
+      + sizeof(DelegatedCredentialInfoArg::_impl_.a_authkeybits_)
+      - PROTOBUF_FIELD_OFFSET(DelegatedCredentialInfoArg, _impl_.a_scheme_)>(
+          reinterpret_cast<char*>(&_impl_.a_scheme_),
+          reinterpret_cast<char*>(&other->_impl_.a_scheme_));
 }
 
 std::string DelegatedCredentialInfoArg::GetTypeName() const {

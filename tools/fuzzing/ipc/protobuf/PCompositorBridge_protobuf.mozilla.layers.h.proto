@@ -17,17 +17,17 @@ import "PCompositorBridgeTypes.proto";
 
 // Structs and unions declarations
 message FrameStats {
-  required bytes id = 1;
-  required bytes compositeStart = 2;
-  required bytes renderStart = 3;
-  required bytes compositeEnd = 4;
-  required sint32 contentFrameTime = 5;
-  required double resourceUploadTime = 6;
-  required double gpuCacheUploadTime = 7;
-  required bytes transactionStart = 8;
-  required bytes refreshStart = 9;
-  required bytes fwdTime = 10;
-  required bytes sceneBuiltTime = 11;
-  required uint32 skippedComposites = 12;
-  required bytes url = 13;
+  required bytes a_id = 1;
+  required bytes a_compositeStart = 2;
+  required bytes a_renderStart = 3;
+  required bytes a_compositeEnd = 4;
+  required sint32 a_contentFrameTime = 5;
+  required double a_resourceUploadTime = 6;
+  required double a_gpuCacheUploadTime = 7;
+  required bytes a_transactionStart = 8;
+  required bytes a_refreshStart = 9;
+  required bytes a_fwdTime = 10;
+  required bytes a_sceneBuiltTime = 11;
+  required uint32 a_skippedComposites = 12;
+  required bytes a_url = 13;
 }

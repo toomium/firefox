@@ -446,63 +446,63 @@ class Msg_DocumentChange final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBcFieldNumber = 1,
-    kLocationFieldNumber = 3,
-    kTransitionDataFieldNumber = 2,
+    kABcFieldNumber = 1,
+    kALocationFieldNumber = 3,
+    kATransitionDataFieldNumber = 2,
   };
-  // required bytes bc = 1;
-  bool has_bc() const;
+  // required bytes a_bc = 1;
+  bool has_a_bc() const;
   private:
-  bool _internal_has_bc() const;
+  bool _internal_has_a_bc() const;
   public:
-  void clear_bc();
-  const std::string& bc() const;
+  void clear_a_bc();
+  const std::string& a_bc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bc();
-  PROTOBUF_NODISCARD std::string* release_bc();
-  void set_allocated_bc(std::string* bc);
+  void set_a_bc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bc();
+  PROTOBUF_NODISCARD std::string* release_a_bc();
+  void set_allocated_a_bc(std::string* a_bc);
   private:
-  const std::string& _internal_bc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bc(const std::string& value);
-  std::string* _internal_mutable_bc();
+  const std::string& _internal_a_bc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bc(const std::string& value);
+  std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes location = 3;
-  bool has_location() const;
+  // required bytes a_location = 3;
+  bool has_a_location() const;
   private:
-  bool _internal_has_location() const;
+  bool _internal_has_a_location() const;
   public:
-  void clear_location();
-  const std::string& location() const;
+  void clear_a_location();
+  const std::string& a_location() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_location(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_location();
-  PROTOBUF_NODISCARD std::string* release_location();
-  void set_allocated_location(std::string* location);
+  void set_a_location(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_location();
+  PROTOBUF_NODISCARD std::string* release_a_location();
+  void set_allocated_a_location(std::string* a_location);
   private:
-  const std::string& _internal_location() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_location(const std::string& value);
-  std::string* _internal_mutable_location();
+  const std::string& _internal_a_location() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_location(const std::string& value);
+  std::string* _internal_mutable_a_location();
   public:
 
-  // required .protobuf.mozilla.extensions.FrameTransitionData transitionData = 2;
-  bool has_transitiondata() const;
+  // required .protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
+  bool has_a_transitiondata() const;
   private:
-  bool _internal_has_transitiondata() const;
+  bool _internal_has_a_transitiondata() const;
   public:
-  void clear_transitiondata();
-  const ::protobuf::mozilla::extensions::FrameTransitionData& transitiondata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::extensions::FrameTransitionData* release_transitiondata();
-  ::protobuf::mozilla::extensions::FrameTransitionData* mutable_transitiondata();
-  void set_allocated_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* transitiondata);
+  void clear_a_transitiondata();
+  const ::protobuf::mozilla::extensions::FrameTransitionData& a_transitiondata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::extensions::FrameTransitionData* release_a_transitiondata();
+  ::protobuf::mozilla::extensions::FrameTransitionData* mutable_a_transitiondata();
+  void set_allocated_a_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata);
   private:
-  const ::protobuf::mozilla::extensions::FrameTransitionData& _internal_transitiondata() const;
-  ::protobuf::mozilla::extensions::FrameTransitionData* _internal_mutable_transitiondata();
+  const ::protobuf::mozilla::extensions::FrameTransitionData& _internal_a_transitiondata() const;
+  ::protobuf::mozilla::extensions::FrameTransitionData* _internal_mutable_a_transitiondata();
   public:
-  void unsafe_arena_set_allocated_transitiondata(
-      ::protobuf::mozilla::extensions::FrameTransitionData* transitiondata);
-  ::protobuf::mozilla::extensions::FrameTransitionData* unsafe_arena_release_transitiondata();
+  void unsafe_arena_set_allocated_a_transitiondata(
+      ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata);
+  ::protobuf::mozilla::extensions::FrameTransitionData* unsafe_arena_release_a_transitiondata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange)
  private:
@@ -517,9 +517,9 @@ class Msg_DocumentChange final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr location_;
-    ::protobuf::mozilla::extensions::FrameTransitionData* transitiondata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_location_;
+    ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_2eproto;
@@ -636,90 +636,90 @@ class Msg_HistoryChange final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBcFieldNumber = 1,
-    kLocationFieldNumber = 3,
-    kTransitionDataFieldNumber = 2,
-    kIsHistoryStateUpdatedFieldNumber = 4,
-    kIsReferenceFragmentUpdatedFieldNumber = 5,
+    kABcFieldNumber = 1,
+    kALocationFieldNumber = 3,
+    kATransitionDataFieldNumber = 2,
+    kAIsHistoryStateUpdatedFieldNumber = 4,
+    kAIsReferenceFragmentUpdatedFieldNumber = 5,
   };
-  // required bytes bc = 1;
-  bool has_bc() const;
+  // required bytes a_bc = 1;
+  bool has_a_bc() const;
   private:
-  bool _internal_has_bc() const;
+  bool _internal_has_a_bc() const;
   public:
-  void clear_bc();
-  const std::string& bc() const;
+  void clear_a_bc();
+  const std::string& a_bc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bc();
-  PROTOBUF_NODISCARD std::string* release_bc();
-  void set_allocated_bc(std::string* bc);
+  void set_a_bc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bc();
+  PROTOBUF_NODISCARD std::string* release_a_bc();
+  void set_allocated_a_bc(std::string* a_bc);
   private:
-  const std::string& _internal_bc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bc(const std::string& value);
-  std::string* _internal_mutable_bc();
+  const std::string& _internal_a_bc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bc(const std::string& value);
+  std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes location = 3;
-  bool has_location() const;
+  // required bytes a_location = 3;
+  bool has_a_location() const;
   private:
-  bool _internal_has_location() const;
+  bool _internal_has_a_location() const;
   public:
-  void clear_location();
-  const std::string& location() const;
+  void clear_a_location();
+  const std::string& a_location() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_location(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_location();
-  PROTOBUF_NODISCARD std::string* release_location();
-  void set_allocated_location(std::string* location);
+  void set_a_location(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_location();
+  PROTOBUF_NODISCARD std::string* release_a_location();
+  void set_allocated_a_location(std::string* a_location);
   private:
-  const std::string& _internal_location() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_location(const std::string& value);
-  std::string* _internal_mutable_location();
+  const std::string& _internal_a_location() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_location(const std::string& value);
+  std::string* _internal_mutable_a_location();
   public:
 
-  // required .protobuf.mozilla.extensions.FrameTransitionData transitionData = 2;
-  bool has_transitiondata() const;
+  // required .protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
+  bool has_a_transitiondata() const;
   private:
-  bool _internal_has_transitiondata() const;
+  bool _internal_has_a_transitiondata() const;
   public:
-  void clear_transitiondata();
-  const ::protobuf::mozilla::extensions::FrameTransitionData& transitiondata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::extensions::FrameTransitionData* release_transitiondata();
-  ::protobuf::mozilla::extensions::FrameTransitionData* mutable_transitiondata();
-  void set_allocated_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* transitiondata);
+  void clear_a_transitiondata();
+  const ::protobuf::mozilla::extensions::FrameTransitionData& a_transitiondata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::extensions::FrameTransitionData* release_a_transitiondata();
+  ::protobuf::mozilla::extensions::FrameTransitionData* mutable_a_transitiondata();
+  void set_allocated_a_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata);
   private:
-  const ::protobuf::mozilla::extensions::FrameTransitionData& _internal_transitiondata() const;
-  ::protobuf::mozilla::extensions::FrameTransitionData* _internal_mutable_transitiondata();
+  const ::protobuf::mozilla::extensions::FrameTransitionData& _internal_a_transitiondata() const;
+  ::protobuf::mozilla::extensions::FrameTransitionData* _internal_mutable_a_transitiondata();
   public:
-  void unsafe_arena_set_allocated_transitiondata(
-      ::protobuf::mozilla::extensions::FrameTransitionData* transitiondata);
-  ::protobuf::mozilla::extensions::FrameTransitionData* unsafe_arena_release_transitiondata();
+  void unsafe_arena_set_allocated_a_transitiondata(
+      ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata);
+  ::protobuf::mozilla::extensions::FrameTransitionData* unsafe_arena_release_a_transitiondata();
 
-  // required bool isHistoryStateUpdated = 4;
-  bool has_ishistorystateupdated() const;
+  // required bool a_isHistoryStateUpdated = 4;
+  bool has_a_ishistorystateupdated() const;
   private:
-  bool _internal_has_ishistorystateupdated() const;
+  bool _internal_has_a_ishistorystateupdated() const;
   public:
-  void clear_ishistorystateupdated();
-  bool ishistorystateupdated() const;
-  void set_ishistorystateupdated(bool value);
+  void clear_a_ishistorystateupdated();
+  bool a_ishistorystateupdated() const;
+  void set_a_ishistorystateupdated(bool value);
   private:
-  bool _internal_ishistorystateupdated() const;
-  void _internal_set_ishistorystateupdated(bool value);
+  bool _internal_a_ishistorystateupdated() const;
+  void _internal_set_a_ishistorystateupdated(bool value);
   public:
 
-  // required bool isReferenceFragmentUpdated = 5;
-  bool has_isreferencefragmentupdated() const;
+  // required bool a_isReferenceFragmentUpdated = 5;
+  bool has_a_isreferencefragmentupdated() const;
   private:
-  bool _internal_has_isreferencefragmentupdated() const;
+  bool _internal_has_a_isreferencefragmentupdated() const;
   public:
-  void clear_isreferencefragmentupdated();
-  bool isreferencefragmentupdated() const;
-  void set_isreferencefragmentupdated(bool value);
+  void clear_a_isreferencefragmentupdated();
+  bool a_isreferencefragmentupdated() const;
+  void set_a_isreferencefragmentupdated(bool value);
   private:
-  bool _internal_isreferencefragmentupdated() const;
-  void _internal_set_isreferencefragmentupdated(bool value);
+  bool _internal_a_isreferencefragmentupdated() const;
+  void _internal_set_a_isreferencefragmentupdated(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange)
@@ -735,11 +735,11 @@ class Msg_HistoryChange final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr location_;
-    ::protobuf::mozilla::extensions::FrameTransitionData* transitiondata_;
-    bool ishistorystateupdated_;
-    bool isreferencefragmentupdated_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_location_;
+    ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata_;
+    bool a_ishistorystateupdated_;
+    bool a_isreferencefragmentupdated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_2eproto;
@@ -856,76 +856,76 @@ class Msg_StateChange final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBcFieldNumber = 1,
-    kRequestURIFieldNumber = 2,
-    kStatusFieldNumber = 3,
-    kStateFlagsFieldNumber = 4,
+    kABcFieldNumber = 1,
+    kARequestURIFieldNumber = 2,
+    kAStatusFieldNumber = 3,
+    kAStateFlagsFieldNumber = 4,
   };
-  // required bytes bc = 1;
-  bool has_bc() const;
+  // required bytes a_bc = 1;
+  bool has_a_bc() const;
   private:
-  bool _internal_has_bc() const;
+  bool _internal_has_a_bc() const;
   public:
-  void clear_bc();
-  const std::string& bc() const;
+  void clear_a_bc();
+  const std::string& a_bc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bc();
-  PROTOBUF_NODISCARD std::string* release_bc();
-  void set_allocated_bc(std::string* bc);
+  void set_a_bc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bc();
+  PROTOBUF_NODISCARD std::string* release_a_bc();
+  void set_allocated_a_bc(std::string* a_bc);
   private:
-  const std::string& _internal_bc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bc(const std::string& value);
-  std::string* _internal_mutable_bc();
+  const std::string& _internal_a_bc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bc(const std::string& value);
+  std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes requestURI = 2;
-  bool has_requesturi() const;
+  // required bytes a_requestURI = 2;
+  bool has_a_requesturi() const;
   private:
-  bool _internal_has_requesturi() const;
+  bool _internal_has_a_requesturi() const;
   public:
-  void clear_requesturi();
-  const std::string& requesturi() const;
+  void clear_a_requesturi();
+  const std::string& a_requesturi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_requesturi(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_requesturi();
-  PROTOBUF_NODISCARD std::string* release_requesturi();
-  void set_allocated_requesturi(std::string* requesturi);
+  void set_a_requesturi(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_requesturi();
+  PROTOBUF_NODISCARD std::string* release_a_requesturi();
+  void set_allocated_a_requesturi(std::string* a_requesturi);
   private:
-  const std::string& _internal_requesturi() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_requesturi(const std::string& value);
-  std::string* _internal_mutable_requesturi();
+  const std::string& _internal_a_requesturi() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_requesturi(const std::string& value);
+  std::string* _internal_mutable_a_requesturi();
   public:
 
-  // required bytes status = 3;
-  bool has_status() const;
+  // required bytes a_status = 3;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  const std::string& status() const;
+  void clear_a_status();
+  const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_status(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_status();
-  PROTOBUF_NODISCARD std::string* release_status();
-  void set_allocated_status(std::string* status);
+  void set_a_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_status();
+  PROTOBUF_NODISCARD std::string* release_a_status();
+  void set_allocated_a_status(std::string* a_status);
   private:
-  const std::string& _internal_status() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_status(const std::string& value);
-  std::string* _internal_mutable_status();
+  const std::string& _internal_a_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_status(const std::string& value);
+  std::string* _internal_mutable_a_status();
   public:
 
-  // required uint32 stateFlags = 4;
-  bool has_stateflags() const;
+  // required uint32 a_stateFlags = 4;
+  bool has_a_stateflags() const;
   private:
-  bool _internal_has_stateflags() const;
+  bool _internal_has_a_stateflags() const;
   public:
-  void clear_stateflags();
-  uint32_t stateflags() const;
-  void set_stateflags(uint32_t value);
+  void clear_a_stateflags();
+  uint32_t a_stateflags() const;
+  void set_a_stateflags(uint32_t value);
   private:
-  uint32_t _internal_stateflags() const;
-  void _internal_set_stateflags(uint32_t value);
+  uint32_t _internal_a_stateflags() const;
+  void _internal_set_a_stateflags(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.PExtensions.Msg_StateChange)
@@ -941,10 +941,10 @@ class Msg_StateChange final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requesturi_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr status_;
-    uint32_t stateflags_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_requesturi_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
+    uint32_t a_stateflags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_2eproto;
@@ -1061,62 +1061,62 @@ class Msg_CreatedNavigationTarget final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBcFieldNumber = 1,
-    kSourceBCFieldNumber = 2,
-    kUrlFieldNumber = 3,
+    kABcFieldNumber = 1,
+    kASourceBCFieldNumber = 2,
+    kAUrlFieldNumber = 3,
   };
-  // required bytes bc = 1;
-  bool has_bc() const;
+  // required bytes a_bc = 1;
+  bool has_a_bc() const;
   private:
-  bool _internal_has_bc() const;
+  bool _internal_has_a_bc() const;
   public:
-  void clear_bc();
-  const std::string& bc() const;
+  void clear_a_bc();
+  const std::string& a_bc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bc();
-  PROTOBUF_NODISCARD std::string* release_bc();
-  void set_allocated_bc(std::string* bc);
+  void set_a_bc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bc();
+  PROTOBUF_NODISCARD std::string* release_a_bc();
+  void set_allocated_a_bc(std::string* a_bc);
   private:
-  const std::string& _internal_bc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bc(const std::string& value);
-  std::string* _internal_mutable_bc();
+  const std::string& _internal_a_bc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bc(const std::string& value);
+  std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes sourceBC = 2;
-  bool has_sourcebc() const;
+  // required bytes a_sourceBC = 2;
+  bool has_a_sourcebc() const;
   private:
-  bool _internal_has_sourcebc() const;
+  bool _internal_has_a_sourcebc() const;
   public:
-  void clear_sourcebc();
-  const std::string& sourcebc() const;
+  void clear_a_sourcebc();
+  const std::string& a_sourcebc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sourcebc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sourcebc();
-  PROTOBUF_NODISCARD std::string* release_sourcebc();
-  void set_allocated_sourcebc(std::string* sourcebc);
+  void set_a_sourcebc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_sourcebc();
+  PROTOBUF_NODISCARD std::string* release_a_sourcebc();
+  void set_allocated_a_sourcebc(std::string* a_sourcebc);
   private:
-  const std::string& _internal_sourcebc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sourcebc(const std::string& value);
-  std::string* _internal_mutable_sourcebc();
+  const std::string& _internal_a_sourcebc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_sourcebc(const std::string& value);
+  std::string* _internal_mutable_a_sourcebc();
   public:
 
-  // required bytes url = 3;
-  bool has_url() const;
+  // required bytes a_url = 3;
+  bool has_a_url() const;
   private:
-  bool _internal_has_url() const;
+  bool _internal_has_a_url() const;
   public:
-  void clear_url();
-  const std::string& url() const;
+  void clear_a_url();
+  const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_url(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_url();
-  PROTOBUF_NODISCARD std::string* release_url();
-  void set_allocated_url(std::string* url);
+  void set_a_url(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_url();
+  PROTOBUF_NODISCARD std::string* release_a_url();
+  void set_allocated_a_url(std::string* a_url);
   private:
-  const std::string& _internal_url() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& value);
-  std::string* _internal_mutable_url();
+  const std::string& _internal_a_url() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_url(const std::string& value);
+  std::string* _internal_mutable_a_url();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget)
@@ -1132,9 +1132,9 @@ class Msg_CreatedNavigationTarget final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sourcebc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sourcebc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_url_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_2eproto;
@@ -1251,43 +1251,43 @@ class Msg_DOMContentLoaded final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBcFieldNumber = 1,
-    kDocumentURIFieldNumber = 2,
+    kABcFieldNumber = 1,
+    kADocumentURIFieldNumber = 2,
   };
-  // required bytes bc = 1;
-  bool has_bc() const;
+  // required bytes a_bc = 1;
+  bool has_a_bc() const;
   private:
-  bool _internal_has_bc() const;
+  bool _internal_has_a_bc() const;
   public:
-  void clear_bc();
-  const std::string& bc() const;
+  void clear_a_bc();
+  const std::string& a_bc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bc();
-  PROTOBUF_NODISCARD std::string* release_bc();
-  void set_allocated_bc(std::string* bc);
+  void set_a_bc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bc();
+  PROTOBUF_NODISCARD std::string* release_a_bc();
+  void set_allocated_a_bc(std::string* a_bc);
   private:
-  const std::string& _internal_bc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bc(const std::string& value);
-  std::string* _internal_mutable_bc();
+  const std::string& _internal_a_bc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bc(const std::string& value);
+  std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes documentURI = 2;
-  bool has_documenturi() const;
+  // required bytes a_documentURI = 2;
+  bool has_a_documenturi() const;
   private:
-  bool _internal_has_documenturi() const;
+  bool _internal_has_a_documenturi() const;
   public:
-  void clear_documenturi();
-  const std::string& documenturi() const;
+  void clear_a_documenturi();
+  const std::string& a_documenturi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_documenturi(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_documenturi();
-  PROTOBUF_NODISCARD std::string* release_documenturi();
-  void set_allocated_documenturi(std::string* documenturi);
+  void set_a_documenturi(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_documenturi();
+  PROTOBUF_NODISCARD std::string* release_a_documenturi();
+  void set_allocated_a_documenturi(std::string* a_documenturi);
   private:
-  const std::string& _internal_documenturi() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_documenturi(const std::string& value);
-  std::string* _internal_mutable_documenturi();
+  const std::string& _internal_a_documenturi() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_documenturi(const std::string& value);
+  std::string* _internal_mutable_a_documenturi();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded)
@@ -1303,8 +1303,8 @@ class Msg_DOMContentLoaded final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr documenturi_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_documenturi_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_2eproto;
@@ -1328,109 +1328,109 @@ class Msg_DOMContentLoaded final :
 
 // Msg_DocumentChange
 
-// required bytes bc = 1;
-inline bool Msg_DocumentChange::_internal_has_bc() const {
+// required bytes a_bc = 1;
+inline bool Msg_DocumentChange::_internal_has_a_bc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DocumentChange::has_bc() const {
-  return _internal_has_bc();
+inline bool Msg_DocumentChange::has_a_bc() const {
+  return _internal_has_a_bc();
 }
-inline void Msg_DocumentChange::clear_bc() {
-  _impl_.bc_.ClearToEmpty();
+inline void Msg_DocumentChange::clear_a_bc() {
+  _impl_.a_bc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DocumentChange::bc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.bc)
-  return _internal_bc();
+inline const std::string& Msg_DocumentChange::a_bc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_bc)
+  return _internal_a_bc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DocumentChange::set_bc(ArgT0&& arg0, ArgT... args) {
+void Msg_DocumentChange::set_a_bc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.bc)
+ _impl_.a_bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_bc)
 }
-inline std::string* Msg_DocumentChange::mutable_bc() {
-  std::string* _s = _internal_mutable_bc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.bc)
+inline std::string* Msg_DocumentChange::mutable_a_bc() {
+  std::string* _s = _internal_mutable_a_bc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_bc)
   return _s;
 }
-inline const std::string& Msg_DocumentChange::_internal_bc() const {
-  return _impl_.bc_.Get();
+inline const std::string& Msg_DocumentChange::_internal_a_bc() const {
+  return _impl_.a_bc_.Get();
 }
-inline void Msg_DocumentChange::_internal_set_bc(const std::string& value) {
+inline void Msg_DocumentChange::_internal_set_a_bc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.bc_.Set(value, GetArenaForAllocation());
+  _impl_.a_bc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DocumentChange::_internal_mutable_bc() {
+inline std::string* Msg_DocumentChange::_internal_mutable_a_bc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.bc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DocumentChange::release_bc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.bc)
-  if (!_internal_has_bc()) {
+inline std::string* Msg_DocumentChange::release_a_bc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_bc)
+  if (!_internal_has_a_bc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.bc_.Release();
+  auto* p = _impl_.a_bc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DocumentChange::set_allocated_bc(std::string* bc) {
-  if (bc != nullptr) {
+inline void Msg_DocumentChange::set_allocated_a_bc(std::string* a_bc) {
+  if (a_bc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.bc_.SetAllocated(bc, GetArenaForAllocation());
+  _impl_.a_bc_.SetAllocated(a_bc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.bc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_bc)
 }
 
-// required .protobuf.mozilla.extensions.FrameTransitionData transitionData = 2;
-inline bool Msg_DocumentChange::_internal_has_transitiondata() const {
+// required .protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
+inline bool Msg_DocumentChange::_internal_has_a_transitiondata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.transitiondata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_transitiondata_ != nullptr);
   return value;
 }
-inline bool Msg_DocumentChange::has_transitiondata() const {
-  return _internal_has_transitiondata();
+inline bool Msg_DocumentChange::has_a_transitiondata() const {
+  return _internal_has_a_transitiondata();
 }
-inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_DocumentChange::_internal_transitiondata() const {
-  const ::protobuf::mozilla::extensions::FrameTransitionData* p = _impl_.transitiondata_;
+inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_DocumentChange::_internal_a_transitiondata() const {
+  const ::protobuf::mozilla::extensions::FrameTransitionData* p = _impl_.a_transitiondata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::extensions::FrameTransitionData&>(
       ::protobuf::mozilla::extensions::_FrameTransitionData_default_instance_);
 }
-inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_DocumentChange::transitiondata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.transitionData)
-  return _internal_transitiondata();
+inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_DocumentChange::a_transitiondata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_transitionData)
+  return _internal_a_transitiondata();
 }
-inline void Msg_DocumentChange::unsafe_arena_set_allocated_transitiondata(
-    ::protobuf::mozilla::extensions::FrameTransitionData* transitiondata) {
+inline void Msg_DocumentChange::unsafe_arena_set_allocated_a_transitiondata(
+    ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.transitiondata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_transitiondata_);
   }
-  _impl_.transitiondata_ = transitiondata;
-  if (transitiondata) {
+  _impl_.a_transitiondata_ = a_transitiondata;
+  if (a_transitiondata) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.transitionData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_transitionData)
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::release_transitiondata() {
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::release_a_transitiondata() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.transitiondata_;
-  _impl_.transitiondata_ = nullptr;
+  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.a_transitiondata_;
+  _impl_.a_transitiondata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1442,222 +1442,222 @@ inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::unsafe_arena_release_transitiondata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.transitionData)
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::unsafe_arena_release_a_transitiondata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_transitionData)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.transitiondata_;
-  _impl_.transitiondata_ = nullptr;
+  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.a_transitiondata_;
+  _impl_.a_transitiondata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::_internal_mutable_transitiondata() {
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::_internal_mutable_a_transitiondata() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.transitiondata_ == nullptr) {
+  if (_impl_.a_transitiondata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::extensions::FrameTransitionData>(GetArenaForAllocation());
-    _impl_.transitiondata_ = p;
+    _impl_.a_transitiondata_ = p;
   }
-  return _impl_.transitiondata_;
+  return _impl_.a_transitiondata_;
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::mutable_transitiondata() {
-  ::protobuf::mozilla::extensions::FrameTransitionData* _msg = _internal_mutable_transitiondata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.transitionData)
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_DocumentChange::mutable_a_transitiondata() {
+  ::protobuf::mozilla::extensions::FrameTransitionData* _msg = _internal_mutable_a_transitiondata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_transitionData)
   return _msg;
 }
-inline void Msg_DocumentChange::set_allocated_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* transitiondata) {
+inline void Msg_DocumentChange::set_allocated_a_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.transitiondata_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_transitiondata_);
   }
-  if (transitiondata) {
+  if (a_transitiondata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(transitiondata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_transitiondata));
     if (message_arena != submessage_arena) {
-      transitiondata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, transitiondata, submessage_arena);
+      a_transitiondata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_transitiondata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.transitiondata_ = transitiondata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.transitionData)
+  _impl_.a_transitiondata_ = a_transitiondata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_transitionData)
 }
 
-// required bytes location = 3;
-inline bool Msg_DocumentChange::_internal_has_location() const {
+// required bytes a_location = 3;
+inline bool Msg_DocumentChange::_internal_has_a_location() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DocumentChange::has_location() const {
-  return _internal_has_location();
+inline bool Msg_DocumentChange::has_a_location() const {
+  return _internal_has_a_location();
 }
-inline void Msg_DocumentChange::clear_location() {
-  _impl_.location_.ClearToEmpty();
+inline void Msg_DocumentChange::clear_a_location() {
+  _impl_.a_location_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DocumentChange::location() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.location)
-  return _internal_location();
+inline const std::string& Msg_DocumentChange::a_location() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_location)
+  return _internal_a_location();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DocumentChange::set_location(ArgT0&& arg0, ArgT... args) {
+void Msg_DocumentChange::set_a_location(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.location_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.location)
+ _impl_.a_location_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_location)
 }
-inline std::string* Msg_DocumentChange::mutable_location() {
-  std::string* _s = _internal_mutable_location();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.location)
+inline std::string* Msg_DocumentChange::mutable_a_location() {
+  std::string* _s = _internal_mutable_a_location();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_location)
   return _s;
 }
-inline const std::string& Msg_DocumentChange::_internal_location() const {
-  return _impl_.location_.Get();
+inline const std::string& Msg_DocumentChange::_internal_a_location() const {
+  return _impl_.a_location_.Get();
 }
-inline void Msg_DocumentChange::_internal_set_location(const std::string& value) {
+inline void Msg_DocumentChange::_internal_set_a_location(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.location_.Set(value, GetArenaForAllocation());
+  _impl_.a_location_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DocumentChange::_internal_mutable_location() {
+inline std::string* Msg_DocumentChange::_internal_mutable_a_location() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.location_.Mutable(GetArenaForAllocation());
+  return _impl_.a_location_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DocumentChange::release_location() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.location)
-  if (!_internal_has_location()) {
+inline std::string* Msg_DocumentChange::release_a_location() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_location)
+  if (!_internal_has_a_location()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.location_.Release();
+  auto* p = _impl_.a_location_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.location_.IsDefault()) {
-    _impl_.location_.Set("", GetArenaForAllocation());
+  if (_impl_.a_location_.IsDefault()) {
+    _impl_.a_location_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DocumentChange::set_allocated_location(std::string* location) {
-  if (location != nullptr) {
+inline void Msg_DocumentChange::set_allocated_a_location(std::string* a_location) {
+  if (a_location != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.location_.SetAllocated(location, GetArenaForAllocation());
+  _impl_.a_location_.SetAllocated(a_location, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.location_.IsDefault()) {
-    _impl_.location_.Set("", GetArenaForAllocation());
+  if (_impl_.a_location_.IsDefault()) {
+    _impl_.a_location_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.location)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_location)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_HistoryChange
 
-// required bytes bc = 1;
-inline bool Msg_HistoryChange::_internal_has_bc() const {
+// required bytes a_bc = 1;
+inline bool Msg_HistoryChange::_internal_has_a_bc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_HistoryChange::has_bc() const {
-  return _internal_has_bc();
+inline bool Msg_HistoryChange::has_a_bc() const {
+  return _internal_has_a_bc();
 }
-inline void Msg_HistoryChange::clear_bc() {
-  _impl_.bc_.ClearToEmpty();
+inline void Msg_HistoryChange::clear_a_bc() {
+  _impl_.a_bc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_HistoryChange::bc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.bc)
-  return _internal_bc();
+inline const std::string& Msg_HistoryChange::a_bc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_bc)
+  return _internal_a_bc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_HistoryChange::set_bc(ArgT0&& arg0, ArgT... args) {
+void Msg_HistoryChange::set_a_bc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.bc)
+ _impl_.a_bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_bc)
 }
-inline std::string* Msg_HistoryChange::mutable_bc() {
-  std::string* _s = _internal_mutable_bc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.bc)
+inline std::string* Msg_HistoryChange::mutable_a_bc() {
+  std::string* _s = _internal_mutable_a_bc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_bc)
   return _s;
 }
-inline const std::string& Msg_HistoryChange::_internal_bc() const {
-  return _impl_.bc_.Get();
+inline const std::string& Msg_HistoryChange::_internal_a_bc() const {
+  return _impl_.a_bc_.Get();
 }
-inline void Msg_HistoryChange::_internal_set_bc(const std::string& value) {
+inline void Msg_HistoryChange::_internal_set_a_bc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.bc_.Set(value, GetArenaForAllocation());
+  _impl_.a_bc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_HistoryChange::_internal_mutable_bc() {
+inline std::string* Msg_HistoryChange::_internal_mutable_a_bc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.bc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_HistoryChange::release_bc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.bc)
-  if (!_internal_has_bc()) {
+inline std::string* Msg_HistoryChange::release_a_bc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_bc)
+  if (!_internal_has_a_bc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.bc_.Release();
+  auto* p = _impl_.a_bc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_HistoryChange::set_allocated_bc(std::string* bc) {
-  if (bc != nullptr) {
+inline void Msg_HistoryChange::set_allocated_a_bc(std::string* a_bc) {
+  if (a_bc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.bc_.SetAllocated(bc, GetArenaForAllocation());
+  _impl_.a_bc_.SetAllocated(a_bc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.bc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_bc)
 }
 
-// required .protobuf.mozilla.extensions.FrameTransitionData transitionData = 2;
-inline bool Msg_HistoryChange::_internal_has_transitiondata() const {
+// required .protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
+inline bool Msg_HistoryChange::_internal_has_a_transitiondata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.transitiondata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_transitiondata_ != nullptr);
   return value;
 }
-inline bool Msg_HistoryChange::has_transitiondata() const {
-  return _internal_has_transitiondata();
+inline bool Msg_HistoryChange::has_a_transitiondata() const {
+  return _internal_has_a_transitiondata();
 }
-inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_HistoryChange::_internal_transitiondata() const {
-  const ::protobuf::mozilla::extensions::FrameTransitionData* p = _impl_.transitiondata_;
+inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_HistoryChange::_internal_a_transitiondata() const {
+  const ::protobuf::mozilla::extensions::FrameTransitionData* p = _impl_.a_transitiondata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::extensions::FrameTransitionData&>(
       ::protobuf::mozilla::extensions::_FrameTransitionData_default_instance_);
 }
-inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_HistoryChange::transitiondata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.transitionData)
-  return _internal_transitiondata();
+inline const ::protobuf::mozilla::extensions::FrameTransitionData& Msg_HistoryChange::a_transitiondata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_transitionData)
+  return _internal_a_transitiondata();
 }
-inline void Msg_HistoryChange::unsafe_arena_set_allocated_transitiondata(
-    ::protobuf::mozilla::extensions::FrameTransitionData* transitiondata) {
+inline void Msg_HistoryChange::unsafe_arena_set_allocated_a_transitiondata(
+    ::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.transitiondata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_transitiondata_);
   }
-  _impl_.transitiondata_ = transitiondata;
-  if (transitiondata) {
+  _impl_.a_transitiondata_ = a_transitiondata;
+  if (a_transitiondata) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.transitionData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_transitionData)
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::release_transitiondata() {
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::release_a_transitiondata() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.transitiondata_;
-  _impl_.transitiondata_ = nullptr;
+  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.a_transitiondata_;
+  _impl_.a_transitiondata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1669,753 +1669,753 @@ inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::unsafe_arena_release_transitiondata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.transitionData)
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::unsafe_arena_release_a_transitiondata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_transitionData)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.transitiondata_;
-  _impl_.transitiondata_ = nullptr;
+  ::protobuf::mozilla::extensions::FrameTransitionData* temp = _impl_.a_transitiondata_;
+  _impl_.a_transitiondata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::_internal_mutable_transitiondata() {
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::_internal_mutable_a_transitiondata() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.transitiondata_ == nullptr) {
+  if (_impl_.a_transitiondata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::extensions::FrameTransitionData>(GetArenaForAllocation());
-    _impl_.transitiondata_ = p;
+    _impl_.a_transitiondata_ = p;
   }
-  return _impl_.transitiondata_;
+  return _impl_.a_transitiondata_;
 }
-inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::mutable_transitiondata() {
-  ::protobuf::mozilla::extensions::FrameTransitionData* _msg = _internal_mutable_transitiondata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.transitionData)
+inline ::protobuf::mozilla::extensions::FrameTransitionData* Msg_HistoryChange::mutable_a_transitiondata() {
+  ::protobuf::mozilla::extensions::FrameTransitionData* _msg = _internal_mutable_a_transitiondata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_transitionData)
   return _msg;
 }
-inline void Msg_HistoryChange::set_allocated_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* transitiondata) {
+inline void Msg_HistoryChange::set_allocated_a_transitiondata(::protobuf::mozilla::extensions::FrameTransitionData* a_transitiondata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.transitiondata_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_transitiondata_);
   }
-  if (transitiondata) {
+  if (a_transitiondata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(transitiondata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_transitiondata));
     if (message_arena != submessage_arena) {
-      transitiondata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, transitiondata, submessage_arena);
+      a_transitiondata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_transitiondata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.transitiondata_ = transitiondata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.transitionData)
+  _impl_.a_transitiondata_ = a_transitiondata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_transitionData)
 }
 
-// required bytes location = 3;
-inline bool Msg_HistoryChange::_internal_has_location() const {
+// required bytes a_location = 3;
+inline bool Msg_HistoryChange::_internal_has_a_location() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_HistoryChange::has_location() const {
-  return _internal_has_location();
+inline bool Msg_HistoryChange::has_a_location() const {
+  return _internal_has_a_location();
 }
-inline void Msg_HistoryChange::clear_location() {
-  _impl_.location_.ClearToEmpty();
+inline void Msg_HistoryChange::clear_a_location() {
+  _impl_.a_location_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_HistoryChange::location() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.location)
-  return _internal_location();
+inline const std::string& Msg_HistoryChange::a_location() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_location)
+  return _internal_a_location();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_HistoryChange::set_location(ArgT0&& arg0, ArgT... args) {
+void Msg_HistoryChange::set_a_location(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.location_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.location)
+ _impl_.a_location_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_location)
 }
-inline std::string* Msg_HistoryChange::mutable_location() {
-  std::string* _s = _internal_mutable_location();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.location)
+inline std::string* Msg_HistoryChange::mutable_a_location() {
+  std::string* _s = _internal_mutable_a_location();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_location)
   return _s;
 }
-inline const std::string& Msg_HistoryChange::_internal_location() const {
-  return _impl_.location_.Get();
+inline const std::string& Msg_HistoryChange::_internal_a_location() const {
+  return _impl_.a_location_.Get();
 }
-inline void Msg_HistoryChange::_internal_set_location(const std::string& value) {
+inline void Msg_HistoryChange::_internal_set_a_location(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.location_.Set(value, GetArenaForAllocation());
+  _impl_.a_location_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_HistoryChange::_internal_mutable_location() {
+inline std::string* Msg_HistoryChange::_internal_mutable_a_location() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.location_.Mutable(GetArenaForAllocation());
+  return _impl_.a_location_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_HistoryChange::release_location() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.location)
-  if (!_internal_has_location()) {
+inline std::string* Msg_HistoryChange::release_a_location() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_location)
+  if (!_internal_has_a_location()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.location_.Release();
+  auto* p = _impl_.a_location_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.location_.IsDefault()) {
-    _impl_.location_.Set("", GetArenaForAllocation());
+  if (_impl_.a_location_.IsDefault()) {
+    _impl_.a_location_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_HistoryChange::set_allocated_location(std::string* location) {
-  if (location != nullptr) {
+inline void Msg_HistoryChange::set_allocated_a_location(std::string* a_location) {
+  if (a_location != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.location_.SetAllocated(location, GetArenaForAllocation());
+  _impl_.a_location_.SetAllocated(a_location, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.location_.IsDefault()) {
-    _impl_.location_.Set("", GetArenaForAllocation());
+  if (_impl_.a_location_.IsDefault()) {
+    _impl_.a_location_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.location)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_location)
 }
 
-// required bool isHistoryStateUpdated = 4;
-inline bool Msg_HistoryChange::_internal_has_ishistorystateupdated() const {
+// required bool a_isHistoryStateUpdated = 4;
+inline bool Msg_HistoryChange::_internal_has_a_ishistorystateupdated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_HistoryChange::has_ishistorystateupdated() const {
-  return _internal_has_ishistorystateupdated();
+inline bool Msg_HistoryChange::has_a_ishistorystateupdated() const {
+  return _internal_has_a_ishistorystateupdated();
 }
-inline void Msg_HistoryChange::clear_ishistorystateupdated() {
-  _impl_.ishistorystateupdated_ = false;
+inline void Msg_HistoryChange::clear_a_ishistorystateupdated() {
+  _impl_.a_ishistorystateupdated_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_HistoryChange::_internal_ishistorystateupdated() const {
-  return _impl_.ishistorystateupdated_;
+inline bool Msg_HistoryChange::_internal_a_ishistorystateupdated() const {
+  return _impl_.a_ishistorystateupdated_;
 }
-inline bool Msg_HistoryChange::ishistorystateupdated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.isHistoryStateUpdated)
-  return _internal_ishistorystateupdated();
+inline bool Msg_HistoryChange::a_ishistorystateupdated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_isHistoryStateUpdated)
+  return _internal_a_ishistorystateupdated();
 }
-inline void Msg_HistoryChange::_internal_set_ishistorystateupdated(bool value) {
+inline void Msg_HistoryChange::_internal_set_a_ishistorystateupdated(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.ishistorystateupdated_ = value;
+  _impl_.a_ishistorystateupdated_ = value;
 }
-inline void Msg_HistoryChange::set_ishistorystateupdated(bool value) {
-  _internal_set_ishistorystateupdated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.isHistoryStateUpdated)
+inline void Msg_HistoryChange::set_a_ishistorystateupdated(bool value) {
+  _internal_set_a_ishistorystateupdated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_isHistoryStateUpdated)
 }
 
-// required bool isReferenceFragmentUpdated = 5;
-inline bool Msg_HistoryChange::_internal_has_isreferencefragmentupdated() const {
+// required bool a_isReferenceFragmentUpdated = 5;
+inline bool Msg_HistoryChange::_internal_has_a_isreferencefragmentupdated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_HistoryChange::has_isreferencefragmentupdated() const {
-  return _internal_has_isreferencefragmentupdated();
+inline bool Msg_HistoryChange::has_a_isreferencefragmentupdated() const {
+  return _internal_has_a_isreferencefragmentupdated();
 }
-inline void Msg_HistoryChange::clear_isreferencefragmentupdated() {
-  _impl_.isreferencefragmentupdated_ = false;
+inline void Msg_HistoryChange::clear_a_isreferencefragmentupdated() {
+  _impl_.a_isreferencefragmentupdated_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Msg_HistoryChange::_internal_isreferencefragmentupdated() const {
-  return _impl_.isreferencefragmentupdated_;
+inline bool Msg_HistoryChange::_internal_a_isreferencefragmentupdated() const {
+  return _impl_.a_isreferencefragmentupdated_;
 }
-inline bool Msg_HistoryChange::isreferencefragmentupdated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.isReferenceFragmentUpdated)
-  return _internal_isreferencefragmentupdated();
+inline bool Msg_HistoryChange::a_isreferencefragmentupdated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_isReferenceFragmentUpdated)
+  return _internal_a_isreferencefragmentupdated();
 }
-inline void Msg_HistoryChange::_internal_set_isreferencefragmentupdated(bool value) {
+inline void Msg_HistoryChange::_internal_set_a_isreferencefragmentupdated(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.isreferencefragmentupdated_ = value;
+  _impl_.a_isreferencefragmentupdated_ = value;
 }
-inline void Msg_HistoryChange::set_isreferencefragmentupdated(bool value) {
-  _internal_set_isreferencefragmentupdated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.isReferenceFragmentUpdated)
+inline void Msg_HistoryChange::set_a_isreferencefragmentupdated(bool value) {
+  _internal_set_a_isreferencefragmentupdated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_isReferenceFragmentUpdated)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StateChange
 
-// required bytes bc = 1;
-inline bool Msg_StateChange::_internal_has_bc() const {
+// required bytes a_bc = 1;
+inline bool Msg_StateChange::_internal_has_a_bc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StateChange::has_bc() const {
-  return _internal_has_bc();
+inline bool Msg_StateChange::has_a_bc() const {
+  return _internal_has_a_bc();
 }
-inline void Msg_StateChange::clear_bc() {
-  _impl_.bc_.ClearToEmpty();
+inline void Msg_StateChange::clear_a_bc() {
+  _impl_.a_bc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StateChange::bc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.bc)
-  return _internal_bc();
+inline const std::string& Msg_StateChange::a_bc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_bc)
+  return _internal_a_bc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StateChange::set_bc(ArgT0&& arg0, ArgT... args) {
+void Msg_StateChange::set_a_bc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.bc)
+ _impl_.a_bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_bc)
 }
-inline std::string* Msg_StateChange::mutable_bc() {
-  std::string* _s = _internal_mutable_bc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.bc)
+inline std::string* Msg_StateChange::mutable_a_bc() {
+  std::string* _s = _internal_mutable_a_bc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_bc)
   return _s;
 }
-inline const std::string& Msg_StateChange::_internal_bc() const {
-  return _impl_.bc_.Get();
+inline const std::string& Msg_StateChange::_internal_a_bc() const {
+  return _impl_.a_bc_.Get();
 }
-inline void Msg_StateChange::_internal_set_bc(const std::string& value) {
+inline void Msg_StateChange::_internal_set_a_bc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.bc_.Set(value, GetArenaForAllocation());
+  _impl_.a_bc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StateChange::_internal_mutable_bc() {
+inline std::string* Msg_StateChange::_internal_mutable_a_bc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.bc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StateChange::release_bc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.bc)
-  if (!_internal_has_bc()) {
+inline std::string* Msg_StateChange::release_a_bc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_bc)
+  if (!_internal_has_a_bc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.bc_.Release();
+  auto* p = _impl_.a_bc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StateChange::set_allocated_bc(std::string* bc) {
-  if (bc != nullptr) {
+inline void Msg_StateChange::set_allocated_a_bc(std::string* a_bc) {
+  if (a_bc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.bc_.SetAllocated(bc, GetArenaForAllocation());
+  _impl_.a_bc_.SetAllocated(a_bc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.bc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_bc)
 }
 
-// required bytes requestURI = 2;
-inline bool Msg_StateChange::_internal_has_requesturi() const {
+// required bytes a_requestURI = 2;
+inline bool Msg_StateChange::_internal_has_a_requesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_StateChange::has_requesturi() const {
-  return _internal_has_requesturi();
+inline bool Msg_StateChange::has_a_requesturi() const {
+  return _internal_has_a_requesturi();
 }
-inline void Msg_StateChange::clear_requesturi() {
-  _impl_.requesturi_.ClearToEmpty();
+inline void Msg_StateChange::clear_a_requesturi() {
+  _impl_.a_requesturi_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_StateChange::requesturi() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.requestURI)
-  return _internal_requesturi();
+inline const std::string& Msg_StateChange::a_requesturi() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_requestURI)
+  return _internal_a_requesturi();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StateChange::set_requesturi(ArgT0&& arg0, ArgT... args) {
+void Msg_StateChange::set_a_requesturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.requesturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.requestURI)
+ _impl_.a_requesturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_requestURI)
 }
-inline std::string* Msg_StateChange::mutable_requesturi() {
-  std::string* _s = _internal_mutable_requesturi();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.requestURI)
+inline std::string* Msg_StateChange::mutable_a_requesturi() {
+  std::string* _s = _internal_mutable_a_requesturi();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_requestURI)
   return _s;
 }
-inline const std::string& Msg_StateChange::_internal_requesturi() const {
-  return _impl_.requesturi_.Get();
+inline const std::string& Msg_StateChange::_internal_a_requesturi() const {
+  return _impl_.a_requesturi_.Get();
 }
-inline void Msg_StateChange::_internal_set_requesturi(const std::string& value) {
+inline void Msg_StateChange::_internal_set_a_requesturi(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.requesturi_.Set(value, GetArenaForAllocation());
+  _impl_.a_requesturi_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StateChange::_internal_mutable_requesturi() {
+inline std::string* Msg_StateChange::_internal_mutable_a_requesturi() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.requesturi_.Mutable(GetArenaForAllocation());
+  return _impl_.a_requesturi_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StateChange::release_requesturi() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.requestURI)
-  if (!_internal_has_requesturi()) {
+inline std::string* Msg_StateChange::release_a_requesturi() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_requestURI)
+  if (!_internal_has_a_requesturi()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.requesturi_.Release();
+  auto* p = _impl_.a_requesturi_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.requesturi_.IsDefault()) {
-    _impl_.requesturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_requesturi_.IsDefault()) {
+    _impl_.a_requesturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StateChange::set_allocated_requesturi(std::string* requesturi) {
-  if (requesturi != nullptr) {
+inline void Msg_StateChange::set_allocated_a_requesturi(std::string* a_requesturi) {
+  if (a_requesturi != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.requesturi_.SetAllocated(requesturi, GetArenaForAllocation());
+  _impl_.a_requesturi_.SetAllocated(a_requesturi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.requesturi_.IsDefault()) {
-    _impl_.requesturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_requesturi_.IsDefault()) {
+    _impl_.a_requesturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.requestURI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_requestURI)
 }
 
-// required bytes status = 3;
-inline bool Msg_StateChange::_internal_has_status() const {
+// required bytes a_status = 3;
+inline bool Msg_StateChange::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_StateChange::has_status() const {
-  return _internal_has_status();
+inline bool Msg_StateChange::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void Msg_StateChange::clear_status() {
-  _impl_.status_.ClearToEmpty();
+inline void Msg_StateChange::clear_a_status() {
+  _impl_.a_status_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_StateChange::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.status)
-  return _internal_status();
+inline const std::string& Msg_StateChange::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_status)
+  return _internal_a_status();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StateChange::set_status(ArgT0&& arg0, ArgT... args) {
+void Msg_StateChange::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.status)
+ _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_status)
 }
-inline std::string* Msg_StateChange::mutable_status() {
-  std::string* _s = _internal_mutable_status();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.status)
+inline std::string* Msg_StateChange::mutable_a_status() {
+  std::string* _s = _internal_mutable_a_status();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_status)
   return _s;
 }
-inline const std::string& Msg_StateChange::_internal_status() const {
-  return _impl_.status_.Get();
+inline const std::string& Msg_StateChange::_internal_a_status() const {
+  return _impl_.a_status_.Get();
 }
-inline void Msg_StateChange::_internal_set_status(const std::string& value) {
+inline void Msg_StateChange::_internal_set_a_status(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.status_.Set(value, GetArenaForAllocation());
+  _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StateChange::_internal_mutable_status() {
+inline std::string* Msg_StateChange::_internal_mutable_a_status() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.status_.Mutable(GetArenaForAllocation());
+  return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StateChange::release_status() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.status)
-  if (!_internal_has_status()) {
+inline std::string* Msg_StateChange::release_a_status() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_status)
+  if (!_internal_has_a_status()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.status_.Release();
+  auto* p = _impl_.a_status_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StateChange::set_allocated_status(std::string* status) {
-  if (status != nullptr) {
+inline void Msg_StateChange::set_allocated_a_status(std::string* a_status) {
+  if (a_status != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.status_.SetAllocated(status, GetArenaForAllocation());
+  _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.status)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_status)
 }
 
-// required uint32 stateFlags = 4;
-inline bool Msg_StateChange::_internal_has_stateflags() const {
+// required uint32 a_stateFlags = 4;
+inline bool Msg_StateChange::_internal_has_a_stateflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_StateChange::has_stateflags() const {
-  return _internal_has_stateflags();
+inline bool Msg_StateChange::has_a_stateflags() const {
+  return _internal_has_a_stateflags();
 }
-inline void Msg_StateChange::clear_stateflags() {
-  _impl_.stateflags_ = 0u;
+inline void Msg_StateChange::clear_a_stateflags() {
+  _impl_.a_stateflags_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_StateChange::_internal_stateflags() const {
-  return _impl_.stateflags_;
+inline uint32_t Msg_StateChange::_internal_a_stateflags() const {
+  return _impl_.a_stateflags_;
 }
-inline uint32_t Msg_StateChange::stateflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.stateFlags)
-  return _internal_stateflags();
+inline uint32_t Msg_StateChange::a_stateflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_stateFlags)
+  return _internal_a_stateflags();
 }
-inline void Msg_StateChange::_internal_set_stateflags(uint32_t value) {
+inline void Msg_StateChange::_internal_set_a_stateflags(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.stateflags_ = value;
+  _impl_.a_stateflags_ = value;
 }
-inline void Msg_StateChange::set_stateflags(uint32_t value) {
-  _internal_set_stateflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.stateFlags)
+inline void Msg_StateChange::set_a_stateflags(uint32_t value) {
+  _internal_set_a_stateflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_stateFlags)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CreatedNavigationTarget
 
-// required bytes bc = 1;
-inline bool Msg_CreatedNavigationTarget::_internal_has_bc() const {
+// required bytes a_bc = 1;
+inline bool Msg_CreatedNavigationTarget::_internal_has_a_bc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CreatedNavigationTarget::has_bc() const {
-  return _internal_has_bc();
+inline bool Msg_CreatedNavigationTarget::has_a_bc() const {
+  return _internal_has_a_bc();
 }
-inline void Msg_CreatedNavigationTarget::clear_bc() {
-  _impl_.bc_.ClearToEmpty();
+inline void Msg_CreatedNavigationTarget::clear_a_bc() {
+  _impl_.a_bc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CreatedNavigationTarget::bc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.bc)
-  return _internal_bc();
+inline const std::string& Msg_CreatedNavigationTarget::a_bc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_bc)
+  return _internal_a_bc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CreatedNavigationTarget::set_bc(ArgT0&& arg0, ArgT... args) {
+void Msg_CreatedNavigationTarget::set_a_bc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.bc)
+ _impl_.a_bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_bc)
 }
-inline std::string* Msg_CreatedNavigationTarget::mutable_bc() {
-  std::string* _s = _internal_mutable_bc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.bc)
+inline std::string* Msg_CreatedNavigationTarget::mutable_a_bc() {
+  std::string* _s = _internal_mutable_a_bc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_bc)
   return _s;
 }
-inline const std::string& Msg_CreatedNavigationTarget::_internal_bc() const {
-  return _impl_.bc_.Get();
+inline const std::string& Msg_CreatedNavigationTarget::_internal_a_bc() const {
+  return _impl_.a_bc_.Get();
 }
-inline void Msg_CreatedNavigationTarget::_internal_set_bc(const std::string& value) {
+inline void Msg_CreatedNavigationTarget::_internal_set_a_bc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.bc_.Set(value, GetArenaForAllocation());
+  _impl_.a_bc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CreatedNavigationTarget::_internal_mutable_bc() {
+inline std::string* Msg_CreatedNavigationTarget::_internal_mutable_a_bc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.bc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CreatedNavigationTarget::release_bc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.bc)
-  if (!_internal_has_bc()) {
+inline std::string* Msg_CreatedNavigationTarget::release_a_bc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_bc)
+  if (!_internal_has_a_bc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.bc_.Release();
+  auto* p = _impl_.a_bc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CreatedNavigationTarget::set_allocated_bc(std::string* bc) {
-  if (bc != nullptr) {
+inline void Msg_CreatedNavigationTarget::set_allocated_a_bc(std::string* a_bc) {
+  if (a_bc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.bc_.SetAllocated(bc, GetArenaForAllocation());
+  _impl_.a_bc_.SetAllocated(a_bc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.bc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_bc)
 }
 
-// required bytes sourceBC = 2;
-inline bool Msg_CreatedNavigationTarget::_internal_has_sourcebc() const {
+// required bytes a_sourceBC = 2;
+inline bool Msg_CreatedNavigationTarget::_internal_has_a_sourcebc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CreatedNavigationTarget::has_sourcebc() const {
-  return _internal_has_sourcebc();
+inline bool Msg_CreatedNavigationTarget::has_a_sourcebc() const {
+  return _internal_has_a_sourcebc();
 }
-inline void Msg_CreatedNavigationTarget::clear_sourcebc() {
-  _impl_.sourcebc_.ClearToEmpty();
+inline void Msg_CreatedNavigationTarget::clear_a_sourcebc() {
+  _impl_.a_sourcebc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_CreatedNavigationTarget::sourcebc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.sourceBC)
-  return _internal_sourcebc();
+inline const std::string& Msg_CreatedNavigationTarget::a_sourcebc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_sourceBC)
+  return _internal_a_sourcebc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CreatedNavigationTarget::set_sourcebc(ArgT0&& arg0, ArgT... args) {
+void Msg_CreatedNavigationTarget::set_a_sourcebc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sourcebc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.sourceBC)
+ _impl_.a_sourcebc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_sourceBC)
 }
-inline std::string* Msg_CreatedNavigationTarget::mutable_sourcebc() {
-  std::string* _s = _internal_mutable_sourcebc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.sourceBC)
+inline std::string* Msg_CreatedNavigationTarget::mutable_a_sourcebc() {
+  std::string* _s = _internal_mutable_a_sourcebc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_sourceBC)
   return _s;
 }
-inline const std::string& Msg_CreatedNavigationTarget::_internal_sourcebc() const {
-  return _impl_.sourcebc_.Get();
+inline const std::string& Msg_CreatedNavigationTarget::_internal_a_sourcebc() const {
+  return _impl_.a_sourcebc_.Get();
 }
-inline void Msg_CreatedNavigationTarget::_internal_set_sourcebc(const std::string& value) {
+inline void Msg_CreatedNavigationTarget::_internal_set_a_sourcebc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.sourcebc_.Set(value, GetArenaForAllocation());
+  _impl_.a_sourcebc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CreatedNavigationTarget::_internal_mutable_sourcebc() {
+inline std::string* Msg_CreatedNavigationTarget::_internal_mutable_a_sourcebc() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.sourcebc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_sourcebc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CreatedNavigationTarget::release_sourcebc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.sourceBC)
-  if (!_internal_has_sourcebc()) {
+inline std::string* Msg_CreatedNavigationTarget::release_a_sourcebc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_sourceBC)
+  if (!_internal_has_a_sourcebc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.sourcebc_.Release();
+  auto* p = _impl_.a_sourcebc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sourcebc_.IsDefault()) {
-    _impl_.sourcebc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sourcebc_.IsDefault()) {
+    _impl_.a_sourcebc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CreatedNavigationTarget::set_allocated_sourcebc(std::string* sourcebc) {
-  if (sourcebc != nullptr) {
+inline void Msg_CreatedNavigationTarget::set_allocated_a_sourcebc(std::string* a_sourcebc) {
+  if (a_sourcebc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.sourcebc_.SetAllocated(sourcebc, GetArenaForAllocation());
+  _impl_.a_sourcebc_.SetAllocated(a_sourcebc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sourcebc_.IsDefault()) {
-    _impl_.sourcebc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sourcebc_.IsDefault()) {
+    _impl_.a_sourcebc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.sourceBC)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_sourceBC)
 }
 
-// required bytes url = 3;
-inline bool Msg_CreatedNavigationTarget::_internal_has_url() const {
+// required bytes a_url = 3;
+inline bool Msg_CreatedNavigationTarget::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_CreatedNavigationTarget::has_url() const {
-  return _internal_has_url();
+inline bool Msg_CreatedNavigationTarget::has_a_url() const {
+  return _internal_has_a_url();
 }
-inline void Msg_CreatedNavigationTarget::clear_url() {
-  _impl_.url_.ClearToEmpty();
+inline void Msg_CreatedNavigationTarget::clear_a_url() {
+  _impl_.a_url_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_CreatedNavigationTarget::url() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.url)
-  return _internal_url();
+inline const std::string& Msg_CreatedNavigationTarget::a_url() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_url)
+  return _internal_a_url();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CreatedNavigationTarget::set_url(ArgT0&& arg0, ArgT... args) {
+void Msg_CreatedNavigationTarget::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.url)
+ _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_url)
 }
-inline std::string* Msg_CreatedNavigationTarget::mutable_url() {
-  std::string* _s = _internal_mutable_url();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.url)
+inline std::string* Msg_CreatedNavigationTarget::mutable_a_url() {
+  std::string* _s = _internal_mutable_a_url();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_url)
   return _s;
 }
-inline const std::string& Msg_CreatedNavigationTarget::_internal_url() const {
-  return _impl_.url_.Get();
+inline const std::string& Msg_CreatedNavigationTarget::_internal_a_url() const {
+  return _impl_.a_url_.Get();
 }
-inline void Msg_CreatedNavigationTarget::_internal_set_url(const std::string& value) {
+inline void Msg_CreatedNavigationTarget::_internal_set_a_url(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.url_.Set(value, GetArenaForAllocation());
+  _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CreatedNavigationTarget::_internal_mutable_url() {
+inline std::string* Msg_CreatedNavigationTarget::_internal_mutable_a_url() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.url_.Mutable(GetArenaForAllocation());
+  return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CreatedNavigationTarget::release_url() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.url)
-  if (!_internal_has_url()) {
+inline std::string* Msg_CreatedNavigationTarget::release_a_url() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_url)
+  if (!_internal_has_a_url()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.url_.Release();
+  auto* p = _impl_.a_url_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CreatedNavigationTarget::set_allocated_url(std::string* url) {
-  if (url != nullptr) {
+inline void Msg_CreatedNavigationTarget::set_allocated_a_url(std::string* a_url) {
+  if (a_url != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.url_.SetAllocated(url, GetArenaForAllocation());
+  _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.url)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_CreatedNavigationTarget.a_url)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DOMContentLoaded
 
-// required bytes bc = 1;
-inline bool Msg_DOMContentLoaded::_internal_has_bc() const {
+// required bytes a_bc = 1;
+inline bool Msg_DOMContentLoaded::_internal_has_a_bc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DOMContentLoaded::has_bc() const {
-  return _internal_has_bc();
+inline bool Msg_DOMContentLoaded::has_a_bc() const {
+  return _internal_has_a_bc();
 }
-inline void Msg_DOMContentLoaded::clear_bc() {
-  _impl_.bc_.ClearToEmpty();
+inline void Msg_DOMContentLoaded::clear_a_bc() {
+  _impl_.a_bc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DOMContentLoaded::bc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.bc)
-  return _internal_bc();
+inline const std::string& Msg_DOMContentLoaded::a_bc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_bc)
+  return _internal_a_bc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DOMContentLoaded::set_bc(ArgT0&& arg0, ArgT... args) {
+void Msg_DOMContentLoaded::set_a_bc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.bc)
+ _impl_.a_bc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_bc)
 }
-inline std::string* Msg_DOMContentLoaded::mutable_bc() {
-  std::string* _s = _internal_mutable_bc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.bc)
+inline std::string* Msg_DOMContentLoaded::mutable_a_bc() {
+  std::string* _s = _internal_mutable_a_bc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_bc)
   return _s;
 }
-inline const std::string& Msg_DOMContentLoaded::_internal_bc() const {
-  return _impl_.bc_.Get();
+inline const std::string& Msg_DOMContentLoaded::_internal_a_bc() const {
+  return _impl_.a_bc_.Get();
 }
-inline void Msg_DOMContentLoaded::_internal_set_bc(const std::string& value) {
+inline void Msg_DOMContentLoaded::_internal_set_a_bc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.bc_.Set(value, GetArenaForAllocation());
+  _impl_.a_bc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DOMContentLoaded::_internal_mutable_bc() {
+inline std::string* Msg_DOMContentLoaded::_internal_mutable_a_bc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.bc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DOMContentLoaded::release_bc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.bc)
-  if (!_internal_has_bc()) {
+inline std::string* Msg_DOMContentLoaded::release_a_bc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_bc)
+  if (!_internal_has_a_bc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.bc_.Release();
+  auto* p = _impl_.a_bc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DOMContentLoaded::set_allocated_bc(std::string* bc) {
-  if (bc != nullptr) {
+inline void Msg_DOMContentLoaded::set_allocated_a_bc(std::string* a_bc) {
+  if (a_bc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.bc_.SetAllocated(bc, GetArenaForAllocation());
+  _impl_.a_bc_.SetAllocated(a_bc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bc_.IsDefault()) {
-    _impl_.bc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bc_.IsDefault()) {
+    _impl_.a_bc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.bc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_bc)
 }
 
-// required bytes documentURI = 2;
-inline bool Msg_DOMContentLoaded::_internal_has_documenturi() const {
+// required bytes a_documentURI = 2;
+inline bool Msg_DOMContentLoaded::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DOMContentLoaded::has_documenturi() const {
-  return _internal_has_documenturi();
+inline bool Msg_DOMContentLoaded::has_a_documenturi() const {
+  return _internal_has_a_documenturi();
 }
-inline void Msg_DOMContentLoaded::clear_documenturi() {
-  _impl_.documenturi_.ClearToEmpty();
+inline void Msg_DOMContentLoaded::clear_a_documenturi() {
+  _impl_.a_documenturi_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DOMContentLoaded::documenturi() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.documentURI)
-  return _internal_documenturi();
+inline const std::string& Msg_DOMContentLoaded::a_documenturi() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_documentURI)
+  return _internal_a_documenturi();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DOMContentLoaded::set_documenturi(ArgT0&& arg0, ArgT... args) {
+void Msg_DOMContentLoaded::set_a_documenturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.documentURI)
+ _impl_.a_documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_documentURI)
 }
-inline std::string* Msg_DOMContentLoaded::mutable_documenturi() {
-  std::string* _s = _internal_mutable_documenturi();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.documentURI)
+inline std::string* Msg_DOMContentLoaded::mutable_a_documenturi() {
+  std::string* _s = _internal_mutable_a_documenturi();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_documentURI)
   return _s;
 }
-inline const std::string& Msg_DOMContentLoaded::_internal_documenturi() const {
-  return _impl_.documenturi_.Get();
+inline const std::string& Msg_DOMContentLoaded::_internal_a_documenturi() const {
+  return _impl_.a_documenturi_.Get();
 }
-inline void Msg_DOMContentLoaded::_internal_set_documenturi(const std::string& value) {
+inline void Msg_DOMContentLoaded::_internal_set_a_documenturi(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.documenturi_.Set(value, GetArenaForAllocation());
+  _impl_.a_documenturi_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DOMContentLoaded::_internal_mutable_documenturi() {
+inline std::string* Msg_DOMContentLoaded::_internal_mutable_a_documenturi() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.documenturi_.Mutable(GetArenaForAllocation());
+  return _impl_.a_documenturi_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DOMContentLoaded::release_documenturi() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.documentURI)
-  if (!_internal_has_documenturi()) {
+inline std::string* Msg_DOMContentLoaded::release_a_documenturi() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_documentURI)
+  if (!_internal_has_a_documenturi()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.documenturi_.Release();
+  auto* p = _impl_.a_documenturi_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.documenturi_.IsDefault()) {
-    _impl_.documenturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_documenturi_.IsDefault()) {
+    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DOMContentLoaded::set_allocated_documenturi(std::string* documenturi) {
-  if (documenturi != nullptr) {
+inline void Msg_DOMContentLoaded::set_allocated_a_documenturi(std::string* a_documenturi) {
+  if (a_documenturi != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.documenturi_.SetAllocated(documenturi, GetArenaForAllocation());
+  _impl_.a_documenturi_.SetAllocated(a_documenturi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.documenturi_.IsDefault()) {
-    _impl_.documenturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_documenturi_.IsDefault()) {
+    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.documentURI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_documentURI)
 }
 
 #ifdef __GNUC__

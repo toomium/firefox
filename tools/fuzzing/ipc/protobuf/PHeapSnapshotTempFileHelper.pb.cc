@@ -37,7 +37,7 @@ PROTOBUF_CONSTEXPR Reply_OpenHeapSnapshotTempFile::Reply_OpenHeapSnapshotTempFil
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.response_)*/nullptr} {}
+  , /*decltype(_impl_.a_response_)*/nullptr} {}
 struct Reply_OpenHeapSnapshotTempFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_OpenHeapSnapshotTempFileDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -233,8 +233,8 @@ std::string Msg_OpenHeapSnapshotTempFile::GetTypeName() const {
 class Reply_OpenHeapSnapshotTempFile::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_OpenHeapSnapshotTempFile>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& response(const Reply_OpenHeapSnapshotTempFile* msg);
-  static void set_has_response(HasBits* has_bits) {
+  static const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse& a_response(const Reply_OpenHeapSnapshotTempFile* msg);
+  static void set_has_a_response(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -243,11 +243,11 @@ class Reply_OpenHeapSnapshotTempFile::_Internal {
 };
 
 const ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse&
-Reply_OpenHeapSnapshotTempFile::_Internal::response(const Reply_OpenHeapSnapshotTempFile* msg) {
-  return *msg->_impl_.response_;
+Reply_OpenHeapSnapshotTempFile::_Internal::a_response(const Reply_OpenHeapSnapshotTempFile* msg) {
+  return *msg->_impl_.a_response_;
 }
-void Reply_OpenHeapSnapshotTempFile::clear_response() {
-  if (_impl_.response_ != nullptr) _impl_.response_->Clear();
+void Reply_OpenHeapSnapshotTempFile::clear_a_response() {
+  if (_impl_.a_response_ != nullptr) _impl_.a_response_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_OpenHeapSnapshotTempFile::Reply_OpenHeapSnapshotTempFile(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -262,11 +262,11 @@ Reply_OpenHeapSnapshotTempFile::Reply_OpenHeapSnapshotTempFile(const Reply_OpenH
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.response_){nullptr}};
+    , decltype(_impl_.a_response_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_response()) {
-    _this->_impl_.response_ = new ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse(*from._impl_.response_);
+  if (from._internal_has_a_response()) {
+    _this->_impl_.a_response_ = new ::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse(*from._impl_.a_response_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile)
 }
@@ -278,7 +278,7 @@ inline void Reply_OpenHeapSnapshotTempFile::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.response_){nullptr}
+    , decltype(_impl_.a_response_){nullptr}
   };
 }
 
@@ -293,7 +293,7 @@ Reply_OpenHeapSnapshotTempFile::~Reply_OpenHeapSnapshotTempFile() {
 
 inline void Reply_OpenHeapSnapshotTempFile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.response_;
+  if (this != internal_default_instance()) delete _impl_.a_response_;
 }
 
 void Reply_OpenHeapSnapshotTempFile::SetCachedSize(int size) const {
@@ -308,8 +308,8 @@ void Reply_OpenHeapSnapshotTempFile::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.response_ != nullptr);
-    _impl_.response_->Clear();
+    GOOGLE_DCHECK(_impl_.a_response_ != nullptr);
+    _impl_.a_response_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -322,10 +322,10 @@ const char* Reply_OpenHeapSnapshotTempFile::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse response = 1;
+      // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_response(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -361,11 +361,11 @@ uint8_t* Reply_OpenHeapSnapshotTempFile::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse response = 1;
+  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::response(this),
-        _Internal::response(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_response(this),
+        _Internal::a_response(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -380,11 +380,11 @@ size_t Reply_OpenHeapSnapshotTempFile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper.Reply_OpenHeapSnapshotTempFile)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse response = 1;
-  if (_internal_has_response()) {
+  // required .protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+  if (_internal_has_a_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.response_);
+        *_impl_.a_response_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -411,9 +411,9 @@ void Reply_OpenHeapSnapshotTempFile::MergeFrom(const Reply_OpenHeapSnapshotTempF
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_response()) {
-    _this->_internal_mutable_response()->::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse::MergeFrom(
-        from._internal_response());
+  if (from._internal_has_a_response()) {
+    _this->_internal_mutable_a_response()->::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse::MergeFrom(
+        from._internal_a_response());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -427,8 +427,8 @@ void Reply_OpenHeapSnapshotTempFile::CopyFrom(const Reply_OpenHeapSnapshotTempFi
 
 bool Reply_OpenHeapSnapshotTempFile::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_response()) {
-    if (!_impl_.response_->IsInitialized()) return false;
+  if (_internal_has_a_response()) {
+    if (!_impl_.a_response_->IsInitialized()) return false;
   }
   return true;
 }
@@ -437,7 +437,7 @@ void Reply_OpenHeapSnapshotTempFile::InternalSwap(Reply_OpenHeapSnapshotTempFile
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.response_, other->_impl_.response_);
+  swap(_impl_.a_response_, other->_impl_.a_response_);
 }
 
 std::string Reply_OpenHeapSnapshotTempFile::GetTypeName() const {

@@ -17,29 +17,29 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_SetCookies {
-  required bytes baseDomain = 1;
-  required bytes attrs = 2;
-  required bytes host = 3;
-  required bool fromHttp = 4;
-  required bool isThirdParty = 5;
-  repeated protobuf.mozilla.net.CookieStruct cookies = 6;
+  required bytes a_baseDomain = 1;
+  required bytes a_attrs = 2;
+  required bytes a_host = 3;
+  required bool a_fromHttp = 4;
+  required bool a_isThirdParty = 5;
+  repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
 message Msg_GetCookieList {
-  required bytes host = 1;
-  required bool isForeign = 2;
-  required bool isThirdPartyTrackingResource = 3;
-  required bool isThirdPartySocialTrackingResource = 4;
-  required bool firstPartyStorageAccessPermissionGranted = 5;
-  required uint32 rejectedReason = 6;
-  required bool isSafeTopLevelNav = 7;
-  required bool isSameSiteForeign = 8;
-  required bool hadCrossSiteRedirects = 9;
-  repeated bytes attrsList = 10;
+  required bytes a_host = 1;
+  required bool a_isForeign = 2;
+  required bool a_isThirdPartyTrackingResource = 3;
+  required bool a_isThirdPartySocialTrackingResource = 4;
+  required bool a_firstPartyStorageAccessPermissionGranted = 5;
+  required uint32 a_rejectedReason = 6;
+  required bool a_isSafeTopLevelNav = 7;
+  required bool a_isSameSiteForeign = 8;
+  required bool a_hadCrossSiteRedirects = 9;
+  repeated bytes a_attrsList = 10;
 }
 
 message Reply_GetCookieList {
-  repeated protobuf.mozilla.net.CookieStructTable cookies = 1;
+  repeated protobuf.mozilla.net.CookieStructTable a_cookies = 1;
 }
 
 message Msg___delete__ {
@@ -49,27 +49,27 @@ message Reply___delete__ {
 }
 
 message Msg_TrackCookiesLoad {
-  repeated protobuf.mozilla.net.CookieStructTable cookiesListTable = 1;
+  repeated protobuf.mozilla.net.CookieStructTable a_cookiesListTable = 1;
 }
 
 message Msg_RemoveCookie {
-  required protobuf.mozilla.net.CookieStruct cookie = 1;
-  required bytes attrs = 2;
-  optional bytes operationId = 3;
+  required protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  required bytes a_attrs = 2;
+  optional bytes a_operationId = 3;
 }
 
 message Msg_RemoveBatchDeletedCookies {
-  repeated protobuf.mozilla.net.CookieStruct cookiesList = 1;
-  repeated bytes attrsList = 2;
+  repeated protobuf.mozilla.net.CookieStruct a_cookiesList = 1;
+  repeated bytes a_attrsList = 2;
 }
 
 message Msg_RemoveAll {
 }
 
 message Msg_AddCookie {
-  required protobuf.mozilla.net.CookieStruct cookie = 1;
-  required bytes attrs = 2;
-  optional bytes operationId = 3;
+  required protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  required bytes a_attrs = 2;
+  optional bytes a_operationId = 3;
 }
 
 // Parameter mappings stats:

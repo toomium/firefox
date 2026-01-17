@@ -22,7 +22,7 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR InputBlobs::InputBlobs(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.blobs_)*/{}
+    /*decltype(_impl_.a_blobs_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InputBlobsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InputBlobsDefaultTypeInternal()
@@ -37,8 +37,8 @@ PROTOBUF_CONSTEXPR InputDirectory::InputDirectory(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.blobsinwebkitdirectory_)*/{}
-  , /*decltype(_impl_.directorypath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_blobsinwebkitdirectory_)*/{}
+  , /*decltype(_impl_.a_directorypath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct InputDirectoryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InputDirectoryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -75,8 +75,8 @@ class InputBlobs::_Internal {
  public:
 };
 
-void InputBlobs::clear_blobs() {
-  _impl_.blobs_.Clear();
+void InputBlobs::clear_a_blobs() {
+  _impl_.a_blobs_.Clear();
 }
 InputBlobs::InputBlobs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -88,7 +88,7 @@ InputBlobs::InputBlobs(const InputBlobs& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   InputBlobs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.blobs_){from._impl_.blobs_}
+      decltype(_impl_.a_blobs_){from._impl_.a_blobs_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -100,7 +100,7 @@ inline void InputBlobs::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.blobs_){arena}
+      decltype(_impl_.a_blobs_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -116,7 +116,7 @@ InputBlobs::~InputBlobs() {
 
 inline void InputBlobs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.blobs_.~RepeatedPtrField();
+  _impl_.a_blobs_.~RepeatedPtrField();
 }
 
 void InputBlobs::SetCachedSize(int size) const {
@@ -129,7 +129,7 @@ void InputBlobs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.blobs_.Clear();
+  _impl_.a_blobs_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -139,13 +139,13 @@ const char* InputBlobs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.IPCBlob blobs = 1;
+      // repeated .protobuf.mozilla.dom.IPCBlob a_blobs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_blobs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_blobs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -181,10 +181,10 @@ uint8_t* InputBlobs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.IPCBlob blobs = 1;
+  // repeated .protobuf.mozilla.dom.IPCBlob a_blobs = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_blobs_size()); i < n; i++) {
-    const auto& repfield = this->_internal_blobs(i);
+      n = static_cast<unsigned>(this->_internal_a_blobs_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_blobs(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -205,9 +205,9 @@ size_t InputBlobs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.IPCBlob blobs = 1;
-  total_size += 1UL * this->_internal_blobs_size();
-  for (const auto& msg : this->_impl_.blobs_) {
+  // repeated .protobuf.mozilla.dom.IPCBlob a_blobs = 1;
+  total_size += 1UL * this->_internal_a_blobs_size();
+  for (const auto& msg : this->_impl_.a_blobs_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -233,7 +233,7 @@ void InputBlobs::MergeFrom(const InputBlobs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.blobs_.MergeFrom(from._impl_.blobs_);
+  _this->_impl_.a_blobs_.MergeFrom(from._impl_.a_blobs_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -245,7 +245,7 @@ void InputBlobs::CopyFrom(const InputBlobs& from) {
 }
 
 bool InputBlobs::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.blobs_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_blobs_))
     return false;
   return true;
 }
@@ -253,7 +253,7 @@ bool InputBlobs::IsInitialized() const {
 void InputBlobs::InternalSwap(InputBlobs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.blobs_.InternalSwap(&other->_impl_.blobs_);
+  _impl_.a_blobs_.InternalSwap(&other->_impl_.a_blobs_);
 }
 
 std::string InputBlobs::GetTypeName() const {
@@ -266,7 +266,7 @@ std::string InputBlobs::GetTypeName() const {
 class InputDirectory::_Internal {
  public:
   using HasBits = decltype(std::declval<InputDirectory>()._impl_._has_bits_);
-  static void set_has_directorypath(HasBits* has_bits) {
+  static void set_has_a_directorypath(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -274,8 +274,8 @@ class InputDirectory::_Internal {
   }
 };
 
-void InputDirectory::clear_blobsinwebkitdirectory() {
-  _impl_.blobsinwebkitdirectory_.Clear();
+void InputDirectory::clear_a_blobsinwebkitdirectory() {
+  _impl_.a_blobsinwebkitdirectory_.Clear();
 }
 InputDirectory::InputDirectory(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -289,16 +289,16 @@ InputDirectory::InputDirectory(const InputDirectory& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.blobsinwebkitdirectory_){from._impl_.blobsinwebkitdirectory_}
-    , decltype(_impl_.directorypath_){}};
+    , decltype(_impl_.a_blobsinwebkitdirectory_){from._impl_.a_blobsinwebkitdirectory_}
+    , decltype(_impl_.a_directorypath_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.directorypath_.InitDefault();
+  _impl_.a_directorypath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.directorypath_.Set("", GetArenaForAllocation());
+    _impl_.a_directorypath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_directorypath()) {
-    _this->_impl_.directorypath_.Set(from._internal_directorypath(), 
+  if (from._internal_has_a_directorypath()) {
+    _this->_impl_.a_directorypath_.Set(from._internal_a_directorypath(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.InputDirectory)
@@ -311,12 +311,12 @@ inline void InputDirectory::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.blobsinwebkitdirectory_){arena}
-    , decltype(_impl_.directorypath_){}
+    , decltype(_impl_.a_blobsinwebkitdirectory_){arena}
+    , decltype(_impl_.a_directorypath_){}
   };
-  _impl_.directorypath_.InitDefault();
+  _impl_.a_directorypath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.directorypath_.Set("", GetArenaForAllocation());
+    _impl_.a_directorypath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -331,8 +331,8 @@ InputDirectory::~InputDirectory() {
 
 inline void InputDirectory::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.blobsinwebkitdirectory_.~RepeatedPtrField();
-  _impl_.directorypath_.Destroy();
+  _impl_.a_blobsinwebkitdirectory_.~RepeatedPtrField();
+  _impl_.a_directorypath_.Destroy();
 }
 
 void InputDirectory::SetCachedSize(int size) const {
@@ -345,10 +345,10 @@ void InputDirectory::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.blobsinwebkitdirectory_.Clear();
+  _impl_.a_blobsinwebkitdirectory_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.directorypath_.ClearNonDefaultToEmpty();
+    _impl_.a_directorypath_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -361,22 +361,22 @@ const char* InputDirectory::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes directoryPath = 1;
+      // required bytes a_directoryPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_directorypath();
+          auto str = _internal_mutable_a_directorypath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated .protobuf.mozilla.dom.IPCBlob blobsInWebKitDirectory = 2;
+      // repeated .protobuf.mozilla.dom.IPCBlob a_blobsInWebKitDirectory = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_blobsinwebkitdirectory(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_blobsinwebkitdirectory(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
@@ -414,16 +414,16 @@ uint8_t* InputDirectory::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes directoryPath = 1;
+  // required bytes a_directoryPath = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_directorypath(), target);
+        1, this->_internal_a_directorypath(), target);
   }
 
-  // repeated .protobuf.mozilla.dom.IPCBlob blobsInWebKitDirectory = 2;
+  // repeated .protobuf.mozilla.dom.IPCBlob a_blobsInWebKitDirectory = 2;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_blobsinwebkitdirectory_size()); i < n; i++) {
-    const auto& repfield = this->_internal_blobsinwebkitdirectory(i);
+      n = static_cast<unsigned>(this->_internal_a_blobsinwebkitdirectory_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_blobsinwebkitdirectory(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -440,19 +440,19 @@ size_t InputDirectory::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.InputDirectory)
   size_t total_size = 0;
 
-  // required bytes directoryPath = 1;
-  if (_internal_has_directorypath()) {
+  // required bytes a_directoryPath = 1;
+  if (_internal_has_a_directorypath()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_directorypath());
+        this->_internal_a_directorypath());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.IPCBlob blobsInWebKitDirectory = 2;
-  total_size += 1UL * this->_internal_blobsinwebkitdirectory_size();
-  for (const auto& msg : this->_impl_.blobsinwebkitdirectory_) {
+  // repeated .protobuf.mozilla.dom.IPCBlob a_blobsInWebKitDirectory = 2;
+  total_size += 1UL * this->_internal_a_blobsinwebkitdirectory_size();
+  for (const auto& msg : this->_impl_.a_blobsinwebkitdirectory_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -478,9 +478,9 @@ void InputDirectory::MergeFrom(const InputDirectory& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.blobsinwebkitdirectory_.MergeFrom(from._impl_.blobsinwebkitdirectory_);
-  if (from._internal_has_directorypath()) {
-    _this->_internal_set_directorypath(from._internal_directorypath());
+  _this->_impl_.a_blobsinwebkitdirectory_.MergeFrom(from._impl_.a_blobsinwebkitdirectory_);
+  if (from._internal_has_a_directorypath()) {
+    _this->_internal_set_a_directorypath(from._internal_a_directorypath());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -494,7 +494,7 @@ void InputDirectory::CopyFrom(const InputDirectory& from) {
 
 bool InputDirectory::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.blobsinwebkitdirectory_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_blobsinwebkitdirectory_))
     return false;
   return true;
 }
@@ -505,10 +505,10 @@ void InputDirectory::InternalSwap(InputDirectory* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.blobsinwebkitdirectory_.InternalSwap(&other->_impl_.blobsinwebkitdirectory_);
+  _impl_.a_blobsinwebkitdirectory_.InternalSwap(&other->_impl_.a_blobsinwebkitdirectory_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.directorypath_, lhs_arena,
-      &other->_impl_.directorypath_, rhs_arena
+      &_impl_.a_directorypath_, lhs_arena,
+      &other->_impl_.a_directorypath_, rhs_arena
   );
 }
 
@@ -521,47 +521,47 @@ std::string InputDirectory::GetTypeName() const {
 
 class MaybeInputData::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::InputBlobs& mvinputblobs(const MaybeInputData* msg);
-  static const ::protobuf::mozilla::dom::InputDirectory& mvinputdirectory(const MaybeInputData* msg);
+  static const ::protobuf::mozilla::dom::InputBlobs& a_mvinputblobs(const MaybeInputData* msg);
+  static const ::protobuf::mozilla::dom::InputDirectory& a_mvinputdirectory(const MaybeInputData* msg);
 };
 
 const ::protobuf::mozilla::dom::InputBlobs&
-MaybeInputData::_Internal::mvinputblobs(const MaybeInputData* msg) {
-  return *msg->_impl_.content_.mvinputblobs_;
+MaybeInputData::_Internal::a_mvinputblobs(const MaybeInputData* msg) {
+  return *msg->_impl_.content_.a_mvinputblobs_;
 }
 const ::protobuf::mozilla::dom::InputDirectory&
-MaybeInputData::_Internal::mvinputdirectory(const MaybeInputData* msg) {
-  return *msg->_impl_.content_.mvinputdirectory_;
+MaybeInputData::_Internal::a_mvinputdirectory(const MaybeInputData* msg) {
+  return *msg->_impl_.content_.a_mvinputdirectory_;
 }
-void MaybeInputData::set_allocated_mvinputblobs(::protobuf::mozilla::dom::InputBlobs* mvinputblobs) {
+void MaybeInputData::set_allocated_a_mvinputblobs(::protobuf::mozilla::dom::InputBlobs* a_mvinputblobs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvinputblobs) {
+  if (a_mvinputblobs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvinputblobs);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvinputblobs);
     if (message_arena != submessage_arena) {
-      mvinputblobs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvinputblobs, submessage_arena);
+      a_mvinputblobs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvinputblobs, submessage_arena);
     }
-    set_has_mvinputblobs();
-    _impl_.content_.mvinputblobs_ = mvinputblobs;
+    set_has_a_mvinputblobs();
+    _impl_.content_.a_mvinputblobs_ = a_mvinputblobs;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeInputData.mVInputBlobs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeInputData.a_mVInputBlobs)
 }
-void MaybeInputData::set_allocated_mvinputdirectory(::protobuf::mozilla::dom::InputDirectory* mvinputdirectory) {
+void MaybeInputData::set_allocated_a_mvinputdirectory(::protobuf::mozilla::dom::InputDirectory* a_mvinputdirectory) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvinputdirectory) {
+  if (a_mvinputdirectory) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvinputdirectory);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvinputdirectory);
     if (message_arena != submessage_arena) {
-      mvinputdirectory = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvinputdirectory, submessage_arena);
+      a_mvinputdirectory = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvinputdirectory, submessage_arena);
     }
-    set_has_mvinputdirectory();
-    _impl_.content_.mvinputdirectory_ = mvinputdirectory;
+    set_has_a_mvinputdirectory();
+    _impl_.content_.a_mvinputdirectory_ = a_mvinputdirectory;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeInputData.mVInputDirectory)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeInputData.a_mVInputDirectory)
 }
 MaybeInputData::MaybeInputData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -580,18 +580,18 @@ MaybeInputData::MaybeInputData(const MaybeInputData& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVInputBlobs: {
-      _this->_internal_mutable_mvinputblobs()->::protobuf::mozilla::dom::InputBlobs::MergeFrom(
-          from._internal_mvinputblobs());
+    case kAMVInputBlobs: {
+      _this->_internal_mutable_a_mvinputblobs()->::protobuf::mozilla::dom::InputBlobs::MergeFrom(
+          from._internal_a_mvinputblobs());
       break;
     }
-    case kMVInputDirectory: {
-      _this->_internal_mutable_mvinputdirectory()->::protobuf::mozilla::dom::InputDirectory::MergeFrom(
-          from._internal_mvinputdirectory());
+    case kAMVInputDirectory: {
+      _this->_internal_mutable_a_mvinputdirectory()->::protobuf::mozilla::dom::InputDirectory::MergeFrom(
+          from._internal_a_mvinputdirectory());
       break;
     }
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -636,20 +636,20 @@ void MaybeInputData::SetCachedSize(int size) const {
 void MaybeInputData::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.MaybeInputData)
   switch (content_case()) {
-    case kMVInputBlobs: {
+    case kAMVInputBlobs: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvinputblobs_;
+        delete _impl_.content_.a_mvinputblobs_;
       }
       break;
     }
-    case kMVInputDirectory: {
+    case kAMVInputDirectory: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvinputdirectory_;
+        delete _impl_.content_.a_mvinputdirectory_;
       }
       break;
     }
-    case kMVvoidT: {
-      _impl_.content_.mvvoid_t_.Destroy();
+    case kAMVvoidT: {
+      _impl_.content_.a_mvvoid_t_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -676,26 +676,26 @@ const char* MaybeInputData::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.InputBlobs mVInputBlobs = 1;
+      // .protobuf.mozilla.dom.InputBlobs a_mVInputBlobs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvinputblobs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvinputblobs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.InputDirectory mVInputDirectory = 2;
+      // .protobuf.mozilla.dom.InputDirectory a_mVInputDirectory = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvinputdirectory(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvinputdirectory(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVvoid_t = 3;
+      // bytes a_mVvoid_t = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_mvvoid_t();
+          auto str = _internal_mutable_a_mvvoid_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -731,21 +731,21 @@ uint8_t* MaybeInputData::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVInputBlobs: {
+    case kAMVInputBlobs: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvinputblobs(this),
-          _Internal::mvinputblobs(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvinputblobs(this),
+          _Internal::a_mvinputblobs(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVInputDirectory: {
+    case kAMVInputDirectory: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvinputdirectory(this),
-          _Internal::mvinputdirectory(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvinputdirectory(this),
+          _Internal::a_mvinputdirectory(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVvoidT: {
+    case kAMVvoidT: {
       target = stream->WriteBytesMaybeAliased(
-          3, this->_internal_mvvoid_t(), target);
+          3, this->_internal_a_mvvoid_t(), target);
       break;
     }
     default: ;
@@ -767,25 +767,25 @@ size_t MaybeInputData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.dom.InputBlobs mVInputBlobs = 1;
-    case kMVInputBlobs: {
+    // .protobuf.mozilla.dom.InputBlobs a_mVInputBlobs = 1;
+    case kAMVInputBlobs: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvinputblobs_);
+          *_impl_.content_.a_mvinputblobs_);
       break;
     }
-    // .protobuf.mozilla.dom.InputDirectory mVInputDirectory = 2;
-    case kMVInputDirectory: {
+    // .protobuf.mozilla.dom.InputDirectory a_mVInputDirectory = 2;
+    case kAMVInputDirectory: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvinputdirectory_);
+          *_impl_.content_.a_mvinputdirectory_);
       break;
     }
-    // bytes mVvoid_t = 3;
-    case kMVvoidT: {
+    // bytes a_mVvoid_t = 3;
+    case kAMVvoidT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvvoid_t());
+          this->_internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -814,18 +814,18 @@ void MaybeInputData::MergeFrom(const MaybeInputData& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVInputBlobs: {
-      _this->_internal_mutable_mvinputblobs()->::protobuf::mozilla::dom::InputBlobs::MergeFrom(
-          from._internal_mvinputblobs());
+    case kAMVInputBlobs: {
+      _this->_internal_mutable_a_mvinputblobs()->::protobuf::mozilla::dom::InputBlobs::MergeFrom(
+          from._internal_a_mvinputblobs());
       break;
     }
-    case kMVInputDirectory: {
-      _this->_internal_mutable_mvinputdirectory()->::protobuf::mozilla::dom::InputDirectory::MergeFrom(
-          from._internal_mvinputdirectory());
+    case kAMVInputDirectory: {
+      _this->_internal_mutable_a_mvinputdirectory()->::protobuf::mozilla::dom::InputDirectory::MergeFrom(
+          from._internal_a_mvinputdirectory());
       break;
     }
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -844,19 +844,19 @@ void MaybeInputData::CopyFrom(const MaybeInputData& from) {
 
 bool MaybeInputData::IsInitialized() const {
   switch (content_case()) {
-    case kMVInputBlobs: {
-      if (_internal_has_mvinputblobs()) {
-        if (!_impl_.content_.mvinputblobs_->IsInitialized()) return false;
+    case kAMVInputBlobs: {
+      if (_internal_has_a_mvinputblobs()) {
+        if (!_impl_.content_.a_mvinputblobs_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVInputDirectory: {
-      if (_internal_has_mvinputdirectory()) {
-        if (!_impl_.content_.mvinputdirectory_->IsInitialized()) return false;
+    case kAMVInputDirectory: {
+      if (_internal_has_a_mvinputdirectory()) {
+        if (!_impl_.content_.a_mvinputdirectory_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVvoidT: {
+    case kAMVvoidT: {
       break;
     }
     case CONTENT_NOT_SET: {

@@ -225,8 +225,8 @@ class IntDouble final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVint = 1,
-    kMVdouble = 2,
+    kAMVint = 1,
+    kAMVdouble = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -299,33 +299,33 @@ class IntDouble final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVintFieldNumber = 1,
-    kMVdoubleFieldNumber = 2,
+    kAMVintFieldNumber = 1,
+    kAMVdoubleFieldNumber = 2,
   };
-  // sint32 mVint = 1;
-  bool has_mvint() const;
+  // sint32 a_mVint = 1;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
-  // double mVdouble = 2;
-  bool has_mvdouble() const;
+  // double a_mVdouble = 2;
+  bool has_a_mvdouble() const;
   private:
-  bool _internal_has_mvdouble() const;
+  bool _internal_has_a_mvdouble() const;
   public:
-  void clear_mvdouble();
-  double mvdouble() const;
-  void set_mvdouble(double value);
+  void clear_a_mvdouble();
+  double a_mvdouble() const;
+  void set_a_mvdouble(double value);
   private:
-  double _internal_mvdouble() const;
-  void _internal_set_mvdouble(double value);
+  double _internal_a_mvdouble() const;
+  void _internal_set_a_mvdouble(double value);
   public:
 
   void clear_content();
@@ -333,8 +333,8 @@ class IntDouble final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.IntDouble)
  private:
   class _Internal;
-  void set_has_mvint();
-  void set_has_mvdouble();
+  void set_has_a_mvint();
+  void set_has_a_mvdouble();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -346,8 +346,8 @@ class IntDouble final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      int32_t mvint_;
-      double mvdouble_;
+      int32_t a_mvint_;
+      double a_mvdouble_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -468,33 +468,33 @@ class SIntDouble final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDFieldNumber = 2,
-    kIFieldNumber = 1,
+    kADFieldNumber = 2,
+    kAIFieldNumber = 1,
   };
-  // required double d = 2;
-  bool has_d() const;
+  // required double a_d = 2;
+  bool has_a_d() const;
   private:
-  bool _internal_has_d() const;
+  bool _internal_has_a_d() const;
   public:
-  void clear_d();
-  double d() const;
-  void set_d(double value);
+  void clear_a_d();
+  double a_d() const;
+  void set_a_d(double value);
   private:
-  double _internal_d() const;
-  void _internal_set_d(double value);
+  double _internal_a_d() const;
+  void _internal_set_a_d(double value);
   public:
 
-  // required sint32 i = 1;
-  bool has_i() const;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  int32_t i() const;
-  void set_i(int32_t value);
+  void clear_a_i();
+  int32_t a_i() const;
+  void set_a_i(int32_t value);
   private:
-  int32_t _internal_i() const;
-  void _internal_set_i(int32_t value);
+  int32_t _internal_a_i() const;
+  void _internal_set_a_i(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.SIntDouble)
@@ -510,8 +510,8 @@ class SIntDouble final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double d_;
-    int32_t i_;
+    double a_d_;
+    int32_t a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -628,29 +628,29 @@ class IntDoubleArrays__mVArrayOfint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfintFieldNumber = 1,
+    kAMVArrayOfintFieldNumber = 1,
   };
-  // repeated sint32 mVArrayOfint = 1;
-  int mvarrayofint_size() const;
+  // repeated sint32 a_mVArrayOfint = 1;
+  int a_mvarrayofint_size() const;
   private:
-  int _internal_mvarrayofint_size() const;
+  int _internal_a_mvarrayofint_size() const;
   public:
-  void clear_mvarrayofint();
+  void clear_a_mvarrayofint();
   private:
-  int32_t _internal_mvarrayofint(int index) const;
+  int32_t _internal_a_mvarrayofint(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_mvarrayofint() const;
-  void _internal_add_mvarrayofint(int32_t value);
+      _internal_a_mvarrayofint() const;
+  void _internal_add_a_mvarrayofint(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_mvarrayofint();
+      _internal_mutable_a_mvarrayofint();
   public:
-  int32_t mvarrayofint(int index) const;
-  void set_mvarrayofint(int index, int32_t value);
-  void add_mvarrayofint(int32_t value);
+  int32_t a_mvarrayofint(int index) const;
+  void set_a_mvarrayofint(int index, int32_t value);
+  void add_a_mvarrayofint(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      mvarrayofint() const;
+      a_mvarrayofint() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_mvarrayofint();
+      mutable_a_mvarrayofint();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint)
  private:
@@ -660,7 +660,7 @@ class IntDoubleArrays__mVArrayOfint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > mvarrayofint_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -778,29 +778,29 @@ class IntDoubleArrays__mVArrayOfdouble final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfdoubleFieldNumber = 1,
+    kAMVArrayOfdoubleFieldNumber = 1,
   };
-  // repeated double mVArrayOfdouble = 1;
-  int mvarrayofdouble_size() const;
+  // repeated double a_mVArrayOfdouble = 1;
+  int a_mvarrayofdouble_size() const;
   private:
-  int _internal_mvarrayofdouble_size() const;
+  int _internal_a_mvarrayofdouble_size() const;
   public:
-  void clear_mvarrayofdouble();
+  void clear_a_mvarrayofdouble();
   private:
-  double _internal_mvarrayofdouble(int index) const;
+  double _internal_a_mvarrayofdouble(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-      _internal_mvarrayofdouble() const;
-  void _internal_add_mvarrayofdouble(double value);
+      _internal_a_mvarrayofdouble() const;
+  void _internal_add_a_mvarrayofdouble(double value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-      _internal_mutable_mvarrayofdouble();
+      _internal_mutable_a_mvarrayofdouble();
   public:
-  double mvarrayofdouble(int index) const;
-  void set_mvarrayofdouble(int index, double value);
-  void add_mvarrayofdouble(double value);
+  double a_mvarrayofdouble(int index) const;
+  void set_a_mvarrayofdouble(int index, double value);
+  void add_a_mvarrayofdouble(double value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-      mvarrayofdouble() const;
+      a_mvarrayofdouble() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-      mutable_mvarrayofdouble();
+      mutable_a_mvarrayofdouble();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble)
  private:
@@ -810,7 +810,7 @@ class IntDoubleArrays__mVArrayOfdouble final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > mvarrayofdouble_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > a_mvarrayofdouble_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -860,7 +860,7 @@ class IntDoubleArrays final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVint = 1,
+    kAMVint = 1,
     kMVArrayOfint = 2,
     kMVArrayOfdouble = 3,
     CONTENT_NOT_SET = 0,
@@ -938,21 +938,21 @@ class IntDoubleArrays final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVintFieldNumber = 1,
+    kAMVintFieldNumber = 1,
     kMVArrayOfintFieldNumber = 2,
     kMVArrayOfdoubleFieldNumber = 3,
   };
-  // sint32 mVint = 1;
-  bool has_mvint() const;
+  // sint32 a_mVint = 1;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
   // .protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint mVArrayOfint = 2;
@@ -996,7 +996,7 @@ class IntDoubleArrays final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.IntDoubleArrays)
  private:
   class _Internal;
-  void set_has_mvint();
+  void set_has_a_mvint();
   void set_has_mvarrayofint();
   void set_has_mvarrayofdouble();
 
@@ -1010,7 +1010,7 @@ class IntDoubleArrays final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      int32_t mvint_;
+      int32_t a_mvint_;
       ::protobuf::mozilla::_foo::IntDoubleArrays__mVArrayOfint* mvarrayofint_;
       ::protobuf::mozilla::_foo::IntDoubleArrays__mVArrayOfdouble* mvarrayofdouble_;
     } content_;
@@ -1133,65 +1133,65 @@ class SIntDoubleArrays final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAiFieldNumber = 2,
-    kAdFieldNumber = 3,
-    kIFieldNumber = 1,
+    kAAiFieldNumber = 2,
+    kAAdFieldNumber = 3,
+    kAIFieldNumber = 1,
   };
-  // repeated sint32 ai = 2;
-  int ai_size() const;
+  // repeated sint32 a_ai = 2;
+  int a_ai_size() const;
   private:
-  int _internal_ai_size() const;
+  int _internal_a_ai_size() const;
   public:
-  void clear_ai();
+  void clear_a_ai();
   private:
-  int32_t _internal_ai(int index) const;
+  int32_t _internal_a_ai(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_ai() const;
-  void _internal_add_ai(int32_t value);
+      _internal_a_ai() const;
+  void _internal_add_a_ai(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_ai();
+      _internal_mutable_a_ai();
   public:
-  int32_t ai(int index) const;
-  void set_ai(int index, int32_t value);
-  void add_ai(int32_t value);
+  int32_t a_ai(int index) const;
+  void set_a_ai(int index, int32_t value);
+  void add_a_ai(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      ai() const;
+      a_ai() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_ai();
+      mutable_a_ai();
 
-  // repeated double ad = 3;
-  int ad_size() const;
+  // repeated double a_ad = 3;
+  int a_ad_size() const;
   private:
-  int _internal_ad_size() const;
+  int _internal_a_ad_size() const;
   public:
-  void clear_ad();
+  void clear_a_ad();
   private:
-  double _internal_ad(int index) const;
+  double _internal_a_ad(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-      _internal_ad() const;
-  void _internal_add_ad(double value);
+      _internal_a_ad() const;
+  void _internal_add_a_ad(double value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-      _internal_mutable_ad();
+      _internal_mutable_a_ad();
   public:
-  double ad(int index) const;
-  void set_ad(int index, double value);
-  void add_ad(double value);
+  double a_ad(int index) const;
+  void set_a_ad(int index, double value);
+  void add_a_ad(double value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-      ad() const;
+      a_ad() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-      mutable_ad();
+      mutable_a_ad();
 
-  // required sint32 i = 1;
-  bool has_i() const;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  int32_t i() const;
-  void set_i(int32_t value);
+  void clear_a_i();
+  int32_t a_i() const;
+  void set_a_i(int32_t value);
   private:
-  int32_t _internal_i() const;
-  void _internal_set_i(int32_t value);
+  int32_t _internal_a_i() const;
+  void _internal_set_a_i(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.SIntDoubleArrays)
@@ -1204,9 +1204,9 @@ class SIntDoubleArrays final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > ai_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > ad_;
-    int32_t i_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< double > a_ad_;
+    int32_t a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -1323,24 +1323,24 @@ class ActorWrapper final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActorFieldNumber = 1,
+    kAActorFieldNumber = 1,
   };
-  // required bytes actor = 1;
-  bool has_actor() const;
+  // required bytes a_actor = 1;
+  bool has_a_actor() const;
   private:
-  bool _internal_has_actor() const;
+  bool _internal_has_a_actor() const;
   public:
-  void clear_actor();
-  const std::string& actor() const;
+  void clear_a_actor();
+  const std::string& a_actor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_actor(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_actor();
-  PROTOBUF_NODISCARD std::string* release_actor();
-  void set_allocated_actor(std::string* actor);
+  void set_a_actor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_actor();
+  PROTOBUF_NODISCARD std::string* release_a_actor();
+  void set_allocated_a_actor(std::string* a_actor);
   private:
-  const std::string& _internal_actor() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_actor(const std::string& value);
-  std::string* _internal_mutable_actor();
+  const std::string& _internal_a_actor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_actor(const std::string& value);
+  std::string* _internal_mutable_a_actor();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.ActorWrapper)
@@ -1353,7 +1353,7 @@ class ActorWrapper final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr actor_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_actor_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -1470,29 +1470,29 @@ class Actors__mVArrayOfint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfintFieldNumber = 1,
+    kAMVArrayOfintFieldNumber = 1,
   };
-  // repeated sint32 mVArrayOfint = 1;
-  int mvarrayofint_size() const;
+  // repeated sint32 a_mVArrayOfint = 1;
+  int a_mvarrayofint_size() const;
   private:
-  int _internal_mvarrayofint_size() const;
+  int _internal_a_mvarrayofint_size() const;
   public:
-  void clear_mvarrayofint();
+  void clear_a_mvarrayofint();
   private:
-  int32_t _internal_mvarrayofint(int index) const;
+  int32_t _internal_a_mvarrayofint(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_mvarrayofint() const;
-  void _internal_add_mvarrayofint(int32_t value);
+      _internal_a_mvarrayofint() const;
+  void _internal_add_a_mvarrayofint(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_mvarrayofint();
+      _internal_mutable_a_mvarrayofint();
   public:
-  int32_t mvarrayofint(int index) const;
-  void set_mvarrayofint(int index, int32_t value);
-  void add_mvarrayofint(int32_t value);
+  int32_t a_mvarrayofint(int index) const;
+  void set_a_mvarrayofint(int index, int32_t value);
+  void add_a_mvarrayofint(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      mvarrayofint() const;
+      a_mvarrayofint() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_mvarrayofint();
+      mutable_a_mvarrayofint();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Actors._mVArrayOfint)
  private:
@@ -1502,7 +1502,7 @@ class Actors__mVArrayOfint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > mvarrayofint_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1620,30 +1620,30 @@ class Actors__mVArrayOfPTestDataStructuresSub final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfPTestDataStructuresSubFieldNumber = 1,
+    kAMVArrayOfPTestDataStructuresSubFieldNumber = 1,
   };
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-  int mvarrayofptestdatastructuressub_size() const;
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+  int a_mvarrayofptestdatastructuressub_size() const;
   private:
-  int _internal_mvarrayofptestdatastructuressub_size() const;
+  int _internal_a_mvarrayofptestdatastructuressub_size() const;
   public:
-  void clear_mvarrayofptestdatastructuressub();
-  const std::string& mvarrayofptestdatastructuressub(int index) const;
-  std::string* mutable_mvarrayofptestdatastructuressub(int index);
-  void set_mvarrayofptestdatastructuressub(int index, const std::string& value);
-  void set_mvarrayofptestdatastructuressub(int index, std::string&& value);
-  void set_mvarrayofptestdatastructuressub(int index, const char* value);
-  void set_mvarrayofptestdatastructuressub(int index, const void* value, size_t size);
-  std::string* add_mvarrayofptestdatastructuressub();
-  void add_mvarrayofptestdatastructuressub(const std::string& value);
-  void add_mvarrayofptestdatastructuressub(std::string&& value);
-  void add_mvarrayofptestdatastructuressub(const char* value);
-  void add_mvarrayofptestdatastructuressub(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& mvarrayofptestdatastructuressub() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_mvarrayofptestdatastructuressub();
+  void clear_a_mvarrayofptestdatastructuressub();
+  const std::string& a_mvarrayofptestdatastructuressub(int index) const;
+  std::string* mutable_a_mvarrayofptestdatastructuressub(int index);
+  void set_a_mvarrayofptestdatastructuressub(int index, const std::string& value);
+  void set_a_mvarrayofptestdatastructuressub(int index, std::string&& value);
+  void set_a_mvarrayofptestdatastructuressub(int index, const char* value);
+  void set_a_mvarrayofptestdatastructuressub(int index, const void* value, size_t size);
+  std::string* add_a_mvarrayofptestdatastructuressub();
+  void add_a_mvarrayofptestdatastructuressub(const std::string& value);
+  void add_a_mvarrayofptestdatastructuressub(std::string&& value);
+  void add_a_mvarrayofptestdatastructuressub(const char* value);
+  void add_a_mvarrayofptestdatastructuressub(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_mvarrayofptestdatastructuressub() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_mvarrayofptestdatastructuressub();
   private:
-  const std::string& _internal_mvarrayofptestdatastructuressub(int index) const;
-  std::string* _internal_add_mvarrayofptestdatastructuressub();
+  const std::string& _internal_a_mvarrayofptestdatastructuressub(int index) const;
+  std::string* _internal_add_a_mvarrayofptestdatastructuressub();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub)
@@ -1654,7 +1654,7 @@ class Actors__mVArrayOfPTestDataStructuresSub final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> mvarrayofptestdatastructuressub_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_mvarrayofptestdatastructuressub_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1704,7 +1704,7 @@ class Actors final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVint = 1,
+    kAMVint = 1,
     kMVArrayOfint = 2,
     kMVArrayOfPTestDataStructuresSub = 3,
     CONTENT_NOT_SET = 0,
@@ -1782,21 +1782,21 @@ class Actors final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVintFieldNumber = 1,
+    kAMVintFieldNumber = 1,
     kMVArrayOfintFieldNumber = 2,
     kMVArrayOfPTestDataStructuresSubFieldNumber = 3,
   };
-  // sint32 mVint = 1;
-  bool has_mvint() const;
+  // sint32 a_mVint = 1;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
   // .protobuf.mozilla._foo.Actors._mVArrayOfint mVArrayOfint = 2;
@@ -1840,7 +1840,7 @@ class Actors final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Actors)
  private:
   class _Internal;
-  void set_has_mvint();
+  void set_has_a_mvint();
   void set_has_mvarrayofint();
   void set_has_mvarrayofptestdatastructuressub();
 
@@ -1854,7 +1854,7 @@ class Actors final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      int32_t mvint_;
+      int32_t a_mvint_;
       ::protobuf::mozilla::_foo::Actors__mVArrayOfint* mvarrayofint_;
       ::protobuf::mozilla::_foo::Actors__mVArrayOfPTestDataStructuresSub* mvarrayofptestdatastructuressub_;
     } content_;
@@ -1977,67 +1977,67 @@ class SActors final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAiFieldNumber = 2,
-    kApFieldNumber = 3,
-    kIFieldNumber = 1,
+    kAAiFieldNumber = 2,
+    kAApFieldNumber = 3,
+    kAIFieldNumber = 1,
   };
-  // repeated sint32 ai = 2;
-  int ai_size() const;
+  // repeated sint32 a_ai = 2;
+  int a_ai_size() const;
   private:
-  int _internal_ai_size() const;
+  int _internal_a_ai_size() const;
   public:
-  void clear_ai();
+  void clear_a_ai();
   private:
-  int32_t _internal_ai(int index) const;
+  int32_t _internal_a_ai(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_ai() const;
-  void _internal_add_ai(int32_t value);
+      _internal_a_ai() const;
+  void _internal_add_a_ai(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_ai();
+      _internal_mutable_a_ai();
   public:
-  int32_t ai(int index) const;
-  void set_ai(int index, int32_t value);
-  void add_ai(int32_t value);
+  int32_t a_ai(int index) const;
+  void set_a_ai(int index, int32_t value);
+  void add_a_ai(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      ai() const;
+      a_ai() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_ai();
+      mutable_a_ai();
 
-  // repeated bytes ap = 3;
-  int ap_size() const;
+  // repeated bytes a_ap = 3;
+  int a_ap_size() const;
   private:
-  int _internal_ap_size() const;
+  int _internal_a_ap_size() const;
   public:
-  void clear_ap();
-  const std::string& ap(int index) const;
-  std::string* mutable_ap(int index);
-  void set_ap(int index, const std::string& value);
-  void set_ap(int index, std::string&& value);
-  void set_ap(int index, const char* value);
-  void set_ap(int index, const void* value, size_t size);
-  std::string* add_ap();
-  void add_ap(const std::string& value);
-  void add_ap(std::string&& value);
-  void add_ap(const char* value);
-  void add_ap(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& ap() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_ap();
+  void clear_a_ap();
+  const std::string& a_ap(int index) const;
+  std::string* mutable_a_ap(int index);
+  void set_a_ap(int index, const std::string& value);
+  void set_a_ap(int index, std::string&& value);
+  void set_a_ap(int index, const char* value);
+  void set_a_ap(int index, const void* value, size_t size);
+  std::string* add_a_ap();
+  void add_a_ap(const std::string& value);
+  void add_a_ap(std::string&& value);
+  void add_a_ap(const char* value);
+  void add_a_ap(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_ap() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_ap();
   private:
-  const std::string& _internal_ap(int index) const;
-  std::string* _internal_add_ap();
+  const std::string& _internal_a_ap(int index) const;
+  std::string* _internal_add_a_ap();
   public:
 
-  // required sint32 i = 1;
-  bool has_i() const;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  int32_t i() const;
-  void set_i(int32_t value);
+  void clear_a_i();
+  int32_t a_i() const;
+  void set_a_i(int32_t value);
   private:
-  int32_t _internal_i() const;
-  void _internal_set_i(int32_t value);
+  int32_t _internal_a_i() const;
+  void _internal_set_a_i(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.SActors)
@@ -2050,9 +2050,9 @@ class SActors final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > ai_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> ap_;
-    int32_t i_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ap_;
+    int32_t a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -2169,29 +2169,29 @@ class Unions__mVArrayOfint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfintFieldNumber = 1,
+    kAMVArrayOfintFieldNumber = 1,
   };
-  // repeated sint32 mVArrayOfint = 1;
-  int mvarrayofint_size() const;
+  // repeated sint32 a_mVArrayOfint = 1;
+  int a_mvarrayofint_size() const;
   private:
-  int _internal_mvarrayofint_size() const;
+  int _internal_a_mvarrayofint_size() const;
   public:
-  void clear_mvarrayofint();
+  void clear_a_mvarrayofint();
   private:
-  int32_t _internal_mvarrayofint(int index) const;
+  int32_t _internal_a_mvarrayofint(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_mvarrayofint() const;
-  void _internal_add_mvarrayofint(int32_t value);
+      _internal_a_mvarrayofint() const;
+  void _internal_add_a_mvarrayofint(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_mvarrayofint();
+      _internal_mutable_a_mvarrayofint();
   public:
-  int32_t mvarrayofint(int index) const;
-  void set_mvarrayofint(int index, int32_t value);
-  void add_mvarrayofint(int32_t value);
+  int32_t a_mvarrayofint(int index) const;
+  void set_a_mvarrayofint(int index, int32_t value);
+  void add_a_mvarrayofint(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      mvarrayofint() const;
+      a_mvarrayofint() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_mvarrayofint();
+      mutable_a_mvarrayofint();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Unions._mVArrayOfint)
  private:
@@ -2201,7 +2201,7 @@ class Unions__mVArrayOfint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > mvarrayofint_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2319,30 +2319,30 @@ class Unions__mVArrayOfPTestDataStructuresSub final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfPTestDataStructuresSubFieldNumber = 1,
+    kAMVArrayOfPTestDataStructuresSubFieldNumber = 1,
   };
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-  int mvarrayofptestdatastructuressub_size() const;
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+  int a_mvarrayofptestdatastructuressub_size() const;
   private:
-  int _internal_mvarrayofptestdatastructuressub_size() const;
+  int _internal_a_mvarrayofptestdatastructuressub_size() const;
   public:
-  void clear_mvarrayofptestdatastructuressub();
-  const std::string& mvarrayofptestdatastructuressub(int index) const;
-  std::string* mutable_mvarrayofptestdatastructuressub(int index);
-  void set_mvarrayofptestdatastructuressub(int index, const std::string& value);
-  void set_mvarrayofptestdatastructuressub(int index, std::string&& value);
-  void set_mvarrayofptestdatastructuressub(int index, const char* value);
-  void set_mvarrayofptestdatastructuressub(int index, const void* value, size_t size);
-  std::string* add_mvarrayofptestdatastructuressub();
-  void add_mvarrayofptestdatastructuressub(const std::string& value);
-  void add_mvarrayofptestdatastructuressub(std::string&& value);
-  void add_mvarrayofptestdatastructuressub(const char* value);
-  void add_mvarrayofptestdatastructuressub(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& mvarrayofptestdatastructuressub() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_mvarrayofptestdatastructuressub();
+  void clear_a_mvarrayofptestdatastructuressub();
+  const std::string& a_mvarrayofptestdatastructuressub(int index) const;
+  std::string* mutable_a_mvarrayofptestdatastructuressub(int index);
+  void set_a_mvarrayofptestdatastructuressub(int index, const std::string& value);
+  void set_a_mvarrayofptestdatastructuressub(int index, std::string&& value);
+  void set_a_mvarrayofptestdatastructuressub(int index, const char* value);
+  void set_a_mvarrayofptestdatastructuressub(int index, const void* value, size_t size);
+  std::string* add_a_mvarrayofptestdatastructuressub();
+  void add_a_mvarrayofptestdatastructuressub(const std::string& value);
+  void add_a_mvarrayofptestdatastructuressub(std::string&& value);
+  void add_a_mvarrayofptestdatastructuressub(const char* value);
+  void add_a_mvarrayofptestdatastructuressub(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_mvarrayofptestdatastructuressub() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_mvarrayofptestdatastructuressub();
   private:
-  const std::string& _internal_mvarrayofptestdatastructuressub(int index) const;
-  std::string* _internal_add_mvarrayofptestdatastructuressub();
+  const std::string& _internal_a_mvarrayofptestdatastructuressub(int index) const;
+  std::string* _internal_add_a_mvarrayofptestdatastructuressub();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub)
@@ -2353,7 +2353,7 @@ class Unions__mVArrayOfPTestDataStructuresSub final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> mvarrayofptestdatastructuressub_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_mvarrayofptestdatastructuressub_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2471,25 +2471,25 @@ class Unions__mVArrayOfActors final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfActorsFieldNumber = 1,
+    kAMVArrayOfActorsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla._foo.Actors mVArrayOfActors = 1;
-  int mvarrayofactors_size() const;
+  // repeated .protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
+  int a_mvarrayofactors_size() const;
   private:
-  int _internal_mvarrayofactors_size() const;
+  int _internal_a_mvarrayofactors_size() const;
   public:
-  void clear_mvarrayofactors();
-  ::protobuf::mozilla::_foo::Actors* mutable_mvarrayofactors(int index);
+  void clear_a_mvarrayofactors();
+  ::protobuf::mozilla::_foo::Actors* mutable_a_mvarrayofactors(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >*
-      mutable_mvarrayofactors();
+      mutable_a_mvarrayofactors();
   private:
-  const ::protobuf::mozilla::_foo::Actors& _internal_mvarrayofactors(int index) const;
-  ::protobuf::mozilla::_foo::Actors* _internal_add_mvarrayofactors();
+  const ::protobuf::mozilla::_foo::Actors& _internal_a_mvarrayofactors(int index) const;
+  ::protobuf::mozilla::_foo::Actors* _internal_add_a_mvarrayofactors();
   public:
-  const ::protobuf::mozilla::_foo::Actors& mvarrayofactors(int index) const;
-  ::protobuf::mozilla::_foo::Actors* add_mvarrayofactors();
+  const ::protobuf::mozilla::_foo::Actors& a_mvarrayofactors(int index) const;
+  ::protobuf::mozilla::_foo::Actors* add_a_mvarrayofactors();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >&
-      mvarrayofactors() const;
+      a_mvarrayofactors() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Unions._mVArrayOfActors)
  private:
@@ -2499,7 +2499,7 @@ class Unions__mVArrayOfActors final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors > mvarrayofactors_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors > a_mvarrayofactors_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2549,7 +2549,7 @@ class Unions final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVint = 1,
+    kAMVint = 1,
     kMVArrayOfint = 2,
     kMVArrayOfPTestDataStructuresSub = 3,
     kMVArrayOfActors = 4,
@@ -2629,22 +2629,22 @@ class Unions final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVintFieldNumber = 1,
+    kAMVintFieldNumber = 1,
     kMVArrayOfintFieldNumber = 2,
     kMVArrayOfPTestDataStructuresSubFieldNumber = 3,
     kMVArrayOfActorsFieldNumber = 4,
   };
-  // sint32 mVint = 1;
-  bool has_mvint() const;
+  // sint32 a_mVint = 1;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
   // .protobuf.mozilla._foo.Unions._mVArrayOfint mVArrayOfint = 2;
@@ -2706,7 +2706,7 @@ class Unions final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Unions)
  private:
   class _Internal;
-  void set_has_mvint();
+  void set_has_a_mvint();
   void set_has_mvarrayofint();
   void set_has_mvarrayofptestdatastructuressub();
   void set_has_mvarrayofactors();
@@ -2721,7 +2721,7 @@ class Unions final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      int32_t mvint_;
+      int32_t a_mvint_;
       ::protobuf::mozilla::_foo::Unions__mVArrayOfint* mvarrayofint_;
       ::protobuf::mozilla::_foo::Unions__mVArrayOfPTestDataStructuresSub* mvarrayofptestdatastructuressub_;
       ::protobuf::mozilla::_foo::Unions__mVArrayOfActors* mvarrayofactors_;
@@ -2845,86 +2845,86 @@ class Structs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAiFieldNumber = 2,
-    kApFieldNumber = 3,
-    kAaFieldNumber = 4,
-    kIFieldNumber = 1,
+    kAAiFieldNumber = 2,
+    kAApFieldNumber = 3,
+    kAAaFieldNumber = 4,
+    kAIFieldNumber = 1,
   };
-  // repeated sint32 ai = 2;
-  int ai_size() const;
+  // repeated sint32 a_ai = 2;
+  int a_ai_size() const;
   private:
-  int _internal_ai_size() const;
+  int _internal_a_ai_size() const;
   public:
-  void clear_ai();
+  void clear_a_ai();
   private:
-  int32_t _internal_ai(int index) const;
+  int32_t _internal_a_ai(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_ai() const;
-  void _internal_add_ai(int32_t value);
+      _internal_a_ai() const;
+  void _internal_add_a_ai(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_ai();
+      _internal_mutable_a_ai();
   public:
-  int32_t ai(int index) const;
-  void set_ai(int index, int32_t value);
-  void add_ai(int32_t value);
+  int32_t a_ai(int index) const;
+  void set_a_ai(int index, int32_t value);
+  void add_a_ai(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      ai() const;
+      a_ai() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_ai();
+      mutable_a_ai();
 
-  // repeated bytes ap = 3;
-  int ap_size() const;
+  // repeated bytes a_ap = 3;
+  int a_ap_size() const;
   private:
-  int _internal_ap_size() const;
+  int _internal_a_ap_size() const;
   public:
-  void clear_ap();
-  const std::string& ap(int index) const;
-  std::string* mutable_ap(int index);
-  void set_ap(int index, const std::string& value);
-  void set_ap(int index, std::string&& value);
-  void set_ap(int index, const char* value);
-  void set_ap(int index, const void* value, size_t size);
-  std::string* add_ap();
-  void add_ap(const std::string& value);
-  void add_ap(std::string&& value);
-  void add_ap(const char* value);
-  void add_ap(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& ap() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_ap();
+  void clear_a_ap();
+  const std::string& a_ap(int index) const;
+  std::string* mutable_a_ap(int index);
+  void set_a_ap(int index, const std::string& value);
+  void set_a_ap(int index, std::string&& value);
+  void set_a_ap(int index, const char* value);
+  void set_a_ap(int index, const void* value, size_t size);
+  std::string* add_a_ap();
+  void add_a_ap(const std::string& value);
+  void add_a_ap(std::string&& value);
+  void add_a_ap(const char* value);
+  void add_a_ap(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_ap() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_ap();
   private:
-  const std::string& _internal_ap(int index) const;
-  std::string* _internal_add_ap();
+  const std::string& _internal_a_ap(int index) const;
+  std::string* _internal_add_a_ap();
   public:
 
-  // repeated .protobuf.mozilla._foo.SActors aa = 4;
-  int aa_size() const;
+  // repeated .protobuf.mozilla._foo.SActors a_aa = 4;
+  int a_aa_size() const;
   private:
-  int _internal_aa_size() const;
+  int _internal_a_aa_size() const;
   public:
-  void clear_aa();
-  ::protobuf::mozilla::_foo::SActors* mutable_aa(int index);
+  void clear_a_aa();
+  ::protobuf::mozilla::_foo::SActors* mutable_a_aa(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >*
-      mutable_aa();
+      mutable_a_aa();
   private:
-  const ::protobuf::mozilla::_foo::SActors& _internal_aa(int index) const;
-  ::protobuf::mozilla::_foo::SActors* _internal_add_aa();
+  const ::protobuf::mozilla::_foo::SActors& _internal_a_aa(int index) const;
+  ::protobuf::mozilla::_foo::SActors* _internal_add_a_aa();
   public:
-  const ::protobuf::mozilla::_foo::SActors& aa(int index) const;
-  ::protobuf::mozilla::_foo::SActors* add_aa();
+  const ::protobuf::mozilla::_foo::SActors& a_aa(int index) const;
+  ::protobuf::mozilla::_foo::SActors* add_a_aa();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
-      aa() const;
+      a_aa() const;
 
-  // required sint32 i = 1;
-  bool has_i() const;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  int32_t i() const;
-  void set_i(int32_t value);
+  void clear_a_i();
+  int32_t a_i() const;
+  void set_a_i(int32_t value);
   private:
-  int32_t _internal_i() const;
-  void _internal_set_i(int32_t value);
+  int32_t _internal_a_i() const;
+  void _internal_set_a_i(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Structs)
@@ -2937,10 +2937,10 @@ class Structs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > ai_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> ap_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors > aa_;
-    int32_t i_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ap_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors > a_aa_;
+    int32_t a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -3057,29 +3057,29 @@ class WithStructs__mVArrayOfint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfintFieldNumber = 1,
+    kAMVArrayOfintFieldNumber = 1,
   };
-  // repeated sint32 mVArrayOfint = 1;
-  int mvarrayofint_size() const;
+  // repeated sint32 a_mVArrayOfint = 1;
+  int a_mvarrayofint_size() const;
   private:
-  int _internal_mvarrayofint_size() const;
+  int _internal_a_mvarrayofint_size() const;
   public:
-  void clear_mvarrayofint();
+  void clear_a_mvarrayofint();
   private:
-  int32_t _internal_mvarrayofint(int index) const;
+  int32_t _internal_a_mvarrayofint(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_mvarrayofint() const;
-  void _internal_add_mvarrayofint(int32_t value);
+      _internal_a_mvarrayofint() const;
+  void _internal_add_a_mvarrayofint(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_mvarrayofint();
+      _internal_mutable_a_mvarrayofint();
   public:
-  int32_t mvarrayofint(int index) const;
-  void set_mvarrayofint(int index, int32_t value);
-  void add_mvarrayofint(int32_t value);
+  int32_t a_mvarrayofint(int index) const;
+  void set_a_mvarrayofint(int index, int32_t value);
+  void add_a_mvarrayofint(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      mvarrayofint() const;
+      a_mvarrayofint() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_mvarrayofint();
+      mutable_a_mvarrayofint();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.WithStructs._mVArrayOfint)
  private:
@@ -3089,7 +3089,7 @@ class WithStructs__mVArrayOfint final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > mvarrayofint_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_mvarrayofint_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3207,30 +3207,30 @@ class WithStructs__mVArrayOfPTestDataStructuresSub final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfPTestDataStructuresSubFieldNumber = 1,
+    kAMVArrayOfPTestDataStructuresSubFieldNumber = 1,
   };
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-  int mvarrayofptestdatastructuressub_size() const;
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+  int a_mvarrayofptestdatastructuressub_size() const;
   private:
-  int _internal_mvarrayofptestdatastructuressub_size() const;
+  int _internal_a_mvarrayofptestdatastructuressub_size() const;
   public:
-  void clear_mvarrayofptestdatastructuressub();
-  const std::string& mvarrayofptestdatastructuressub(int index) const;
-  std::string* mutable_mvarrayofptestdatastructuressub(int index);
-  void set_mvarrayofptestdatastructuressub(int index, const std::string& value);
-  void set_mvarrayofptestdatastructuressub(int index, std::string&& value);
-  void set_mvarrayofptestdatastructuressub(int index, const char* value);
-  void set_mvarrayofptestdatastructuressub(int index, const void* value, size_t size);
-  std::string* add_mvarrayofptestdatastructuressub();
-  void add_mvarrayofptestdatastructuressub(const std::string& value);
-  void add_mvarrayofptestdatastructuressub(std::string&& value);
-  void add_mvarrayofptestdatastructuressub(const char* value);
-  void add_mvarrayofptestdatastructuressub(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& mvarrayofptestdatastructuressub() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_mvarrayofptestdatastructuressub();
+  void clear_a_mvarrayofptestdatastructuressub();
+  const std::string& a_mvarrayofptestdatastructuressub(int index) const;
+  std::string* mutable_a_mvarrayofptestdatastructuressub(int index);
+  void set_a_mvarrayofptestdatastructuressub(int index, const std::string& value);
+  void set_a_mvarrayofptestdatastructuressub(int index, std::string&& value);
+  void set_a_mvarrayofptestdatastructuressub(int index, const char* value);
+  void set_a_mvarrayofptestdatastructuressub(int index, const void* value, size_t size);
+  std::string* add_a_mvarrayofptestdatastructuressub();
+  void add_a_mvarrayofptestdatastructuressub(const std::string& value);
+  void add_a_mvarrayofptestdatastructuressub(std::string&& value);
+  void add_a_mvarrayofptestdatastructuressub(const char* value);
+  void add_a_mvarrayofptestdatastructuressub(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_mvarrayofptestdatastructuressub() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_mvarrayofptestdatastructuressub();
   private:
-  const std::string& _internal_mvarrayofptestdatastructuressub(int index) const;
-  std::string* _internal_add_mvarrayofptestdatastructuressub();
+  const std::string& _internal_a_mvarrayofptestdatastructuressub(int index) const;
+  std::string* _internal_add_a_mvarrayofptestdatastructuressub();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub)
@@ -3241,7 +3241,7 @@ class WithStructs__mVArrayOfPTestDataStructuresSub final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> mvarrayofptestdatastructuressub_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_mvarrayofptestdatastructuressub_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3359,25 +3359,25 @@ class WithStructs__mVArrayOfSActors final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfSActorsFieldNumber = 1,
+    kAMVArrayOfSActorsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla._foo.SActors mVArrayOfSActors = 1;
-  int mvarrayofsactors_size() const;
+  // repeated .protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
+  int a_mvarrayofsactors_size() const;
   private:
-  int _internal_mvarrayofsactors_size() const;
+  int _internal_a_mvarrayofsactors_size() const;
   public:
-  void clear_mvarrayofsactors();
-  ::protobuf::mozilla::_foo::SActors* mutable_mvarrayofsactors(int index);
+  void clear_a_mvarrayofsactors();
+  ::protobuf::mozilla::_foo::SActors* mutable_a_mvarrayofsactors(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >*
-      mutable_mvarrayofsactors();
+      mutable_a_mvarrayofsactors();
   private:
-  const ::protobuf::mozilla::_foo::SActors& _internal_mvarrayofsactors(int index) const;
-  ::protobuf::mozilla::_foo::SActors* _internal_add_mvarrayofsactors();
+  const ::protobuf::mozilla::_foo::SActors& _internal_a_mvarrayofsactors(int index) const;
+  ::protobuf::mozilla::_foo::SActors* _internal_add_a_mvarrayofsactors();
   public:
-  const ::protobuf::mozilla::_foo::SActors& mvarrayofsactors(int index) const;
-  ::protobuf::mozilla::_foo::SActors* add_mvarrayofsactors();
+  const ::protobuf::mozilla::_foo::SActors& a_mvarrayofsactors(int index) const;
+  ::protobuf::mozilla::_foo::SActors* add_a_mvarrayofsactors();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
-      mvarrayofsactors() const;
+      a_mvarrayofsactors() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors)
  private:
@@ -3387,7 +3387,7 @@ class WithStructs__mVArrayOfSActors final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors > mvarrayofsactors_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors > a_mvarrayofsactors_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3505,25 +3505,25 @@ class WithStructs__mVArrayOfStructs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfStructsFieldNumber = 1,
+    kAMVArrayOfStructsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla._foo.Structs mVArrayOfStructs = 1;
-  int mvarrayofstructs_size() const;
+  // repeated .protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
+  int a_mvarrayofstructs_size() const;
   private:
-  int _internal_mvarrayofstructs_size() const;
+  int _internal_a_mvarrayofstructs_size() const;
   public:
-  void clear_mvarrayofstructs();
-  ::protobuf::mozilla::_foo::Structs* mutable_mvarrayofstructs(int index);
+  void clear_a_mvarrayofstructs();
+  ::protobuf::mozilla::_foo::Structs* mutable_a_mvarrayofstructs(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Structs >*
-      mutable_mvarrayofstructs();
+      mutable_a_mvarrayofstructs();
   private:
-  const ::protobuf::mozilla::_foo::Structs& _internal_mvarrayofstructs(int index) const;
-  ::protobuf::mozilla::_foo::Structs* _internal_add_mvarrayofstructs();
+  const ::protobuf::mozilla::_foo::Structs& _internal_a_mvarrayofstructs(int index) const;
+  ::protobuf::mozilla::_foo::Structs* _internal_add_a_mvarrayofstructs();
   public:
-  const ::protobuf::mozilla::_foo::Structs& mvarrayofstructs(int index) const;
-  ::protobuf::mozilla::_foo::Structs* add_mvarrayofstructs();
+  const ::protobuf::mozilla::_foo::Structs& a_mvarrayofstructs(int index) const;
+  ::protobuf::mozilla::_foo::Structs* add_a_mvarrayofstructs();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Structs >&
-      mvarrayofstructs() const;
+      a_mvarrayofstructs() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs)
  private:
@@ -3533,7 +3533,7 @@ class WithStructs__mVArrayOfStructs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Structs > mvarrayofstructs_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Structs > a_mvarrayofstructs_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3583,7 +3583,7 @@ class WithStructs final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVint = 1,
+    kAMVint = 1,
     kMVArrayOfint = 2,
     kMVArrayOfPTestDataStructuresSub = 3,
     kMVArrayOfSActors = 4,
@@ -3665,23 +3665,23 @@ class WithStructs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVintFieldNumber = 1,
+    kAMVintFieldNumber = 1,
     kMVArrayOfintFieldNumber = 2,
     kMVArrayOfPTestDataStructuresSubFieldNumber = 3,
     kMVArrayOfSActorsFieldNumber = 4,
     kMVArrayOfStructsFieldNumber = 5,
   };
-  // sint32 mVint = 1;
-  bool has_mvint() const;
+  // sint32 a_mVint = 1;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
   // .protobuf.mozilla._foo.WithStructs._mVArrayOfint mVArrayOfint = 2;
@@ -3761,7 +3761,7 @@ class WithStructs final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.WithStructs)
  private:
   class _Internal;
-  void set_has_mvint();
+  void set_has_a_mvint();
   void set_has_mvarrayofint();
   void set_has_mvarrayofptestdatastructuressub();
   void set_has_mvarrayofsactors();
@@ -3777,7 +3777,7 @@ class WithStructs final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      int32_t mvint_;
+      int32_t a_mvint_;
       ::protobuf::mozilla::_foo::WithStructs__mVArrayOfint* mvarrayofint_;
       ::protobuf::mozilla::_foo::WithStructs__mVArrayOfPTestDataStructuresSub* mvarrayofptestdatastructuressub_;
       ::protobuf::mozilla::_foo::WithStructs__mVArrayOfSActors* mvarrayofsactors_;
@@ -3902,105 +3902,105 @@ class WithUnions final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAiFieldNumber = 2,
-    kApFieldNumber = 3,
-    kAaFieldNumber = 4,
-    kAuFieldNumber = 5,
-    kIFieldNumber = 1,
+    kAAiFieldNumber = 2,
+    kAApFieldNumber = 3,
+    kAAaFieldNumber = 4,
+    kAAuFieldNumber = 5,
+    kAIFieldNumber = 1,
   };
-  // repeated sint32 ai = 2;
-  int ai_size() const;
+  // repeated sint32 a_ai = 2;
+  int a_ai_size() const;
   private:
-  int _internal_ai_size() const;
+  int _internal_a_ai_size() const;
   public:
-  void clear_ai();
+  void clear_a_ai();
   private:
-  int32_t _internal_ai(int index) const;
+  int32_t _internal_a_ai(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_ai() const;
-  void _internal_add_ai(int32_t value);
+      _internal_a_ai() const;
+  void _internal_add_a_ai(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_ai();
+      _internal_mutable_a_ai();
   public:
-  int32_t ai(int index) const;
-  void set_ai(int index, int32_t value);
-  void add_ai(int32_t value);
+  int32_t a_ai(int index) const;
+  void set_a_ai(int index, int32_t value);
+  void add_a_ai(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      ai() const;
+      a_ai() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_ai();
+      mutable_a_ai();
 
-  // repeated bytes ap = 3;
-  int ap_size() const;
+  // repeated bytes a_ap = 3;
+  int a_ap_size() const;
   private:
-  int _internal_ap_size() const;
+  int _internal_a_ap_size() const;
   public:
-  void clear_ap();
-  const std::string& ap(int index) const;
-  std::string* mutable_ap(int index);
-  void set_ap(int index, const std::string& value);
-  void set_ap(int index, std::string&& value);
-  void set_ap(int index, const char* value);
-  void set_ap(int index, const void* value, size_t size);
-  std::string* add_ap();
-  void add_ap(const std::string& value);
-  void add_ap(std::string&& value);
-  void add_ap(const char* value);
-  void add_ap(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& ap() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_ap();
+  void clear_a_ap();
+  const std::string& a_ap(int index) const;
+  std::string* mutable_a_ap(int index);
+  void set_a_ap(int index, const std::string& value);
+  void set_a_ap(int index, std::string&& value);
+  void set_a_ap(int index, const char* value);
+  void set_a_ap(int index, const void* value, size_t size);
+  std::string* add_a_ap();
+  void add_a_ap(const std::string& value);
+  void add_a_ap(std::string&& value);
+  void add_a_ap(const char* value);
+  void add_a_ap(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_ap() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_ap();
   private:
-  const std::string& _internal_ap(int index) const;
-  std::string* _internal_add_ap();
+  const std::string& _internal_a_ap(int index) const;
+  std::string* _internal_add_a_ap();
   public:
 
-  // repeated .protobuf.mozilla._foo.Actors aa = 4;
-  int aa_size() const;
+  // repeated .protobuf.mozilla._foo.Actors a_aa = 4;
+  int a_aa_size() const;
   private:
-  int _internal_aa_size() const;
+  int _internal_a_aa_size() const;
   public:
-  void clear_aa();
-  ::protobuf::mozilla::_foo::Actors* mutable_aa(int index);
+  void clear_a_aa();
+  ::protobuf::mozilla::_foo::Actors* mutable_a_aa(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >*
-      mutable_aa();
+      mutable_a_aa();
   private:
-  const ::protobuf::mozilla::_foo::Actors& _internal_aa(int index) const;
-  ::protobuf::mozilla::_foo::Actors* _internal_add_aa();
+  const ::protobuf::mozilla::_foo::Actors& _internal_a_aa(int index) const;
+  ::protobuf::mozilla::_foo::Actors* _internal_add_a_aa();
   public:
-  const ::protobuf::mozilla::_foo::Actors& aa(int index) const;
-  ::protobuf::mozilla::_foo::Actors* add_aa();
+  const ::protobuf::mozilla::_foo::Actors& a_aa(int index) const;
+  ::protobuf::mozilla::_foo::Actors* add_a_aa();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >&
-      aa() const;
+      a_aa() const;
 
-  // repeated .protobuf.mozilla._foo.Unions au = 5;
-  int au_size() const;
+  // repeated .protobuf.mozilla._foo.Unions a_au = 5;
+  int a_au_size() const;
   private:
-  int _internal_au_size() const;
+  int _internal_a_au_size() const;
   public:
-  void clear_au();
-  ::protobuf::mozilla::_foo::Unions* mutable_au(int index);
+  void clear_a_au();
+  ::protobuf::mozilla::_foo::Unions* mutable_a_au(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >*
-      mutable_au();
+      mutable_a_au();
   private:
-  const ::protobuf::mozilla::_foo::Unions& _internal_au(int index) const;
-  ::protobuf::mozilla::_foo::Unions* _internal_add_au();
+  const ::protobuf::mozilla::_foo::Unions& _internal_a_au(int index) const;
+  ::protobuf::mozilla::_foo::Unions* _internal_add_a_au();
   public:
-  const ::protobuf::mozilla::_foo::Unions& au(int index) const;
-  ::protobuf::mozilla::_foo::Unions* add_au();
+  const ::protobuf::mozilla::_foo::Unions& a_au(int index) const;
+  ::protobuf::mozilla::_foo::Unions* add_a_au();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >&
-      au() const;
+      a_au() const;
 
-  // required sint32 i = 1;
-  bool has_i() const;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  int32_t i() const;
-  void set_i(int32_t value);
+  void clear_a_i();
+  int32_t a_i() const;
+  void set_a_i(int32_t value);
   private:
-  int32_t _internal_i() const;
-  void _internal_set_i(int32_t value);
+  int32_t _internal_a_i() const;
+  void _internal_set_a_i(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.WithUnions)
@@ -4013,11 +4013,11 @@ class WithUnions final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > ai_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> ap_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors > aa_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions > au_;
-    int32_t i_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ai_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ap_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors > a_aa_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions > a_au_;
+    int32_t a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4134,19 +4134,19 @@ class CommonAttrs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDummyFieldNumber = 1,
+    kADummyFieldNumber = 1,
   };
-  // required bool dummy = 1;
-  bool has_dummy() const;
+  // required bool a_dummy = 1;
+  bool has_a_dummy() const;
   private:
-  bool _internal_has_dummy() const;
+  bool _internal_has_a_dummy() const;
   public:
-  void clear_dummy();
-  bool dummy() const;
-  void set_dummy(bool value);
+  void clear_a_dummy();
+  bool a_dummy() const;
+  void set_a_dummy(bool value);
   private:
-  bool _internal_dummy() const;
-  void _internal_set_dummy(bool value);
+  bool _internal_a_dummy() const;
+  void _internal_set_a_dummy(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.CommonAttrs)
@@ -4159,7 +4159,7 @@ class CommonAttrs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool dummy_;
+    bool a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4276,19 +4276,19 @@ class FooAttrs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDummyFieldNumber = 1,
+    kADummyFieldNumber = 1,
   };
-  // required sint32 dummy = 1;
-  bool has_dummy() const;
+  // required sint32 a_dummy = 1;
+  bool has_a_dummy() const;
   private:
-  bool _internal_has_dummy() const;
+  bool _internal_has_a_dummy() const;
   public:
-  void clear_dummy();
-  int32_t dummy() const;
-  void set_dummy(int32_t value);
+  void clear_a_dummy();
+  int32_t a_dummy() const;
+  void set_a_dummy(int32_t value);
   private:
-  int32_t _internal_dummy() const;
-  void _internal_set_dummy(int32_t value);
+  int32_t _internal_a_dummy() const;
+  void _internal_set_a_dummy(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.FooAttrs)
@@ -4301,7 +4301,7 @@ class FooAttrs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t dummy_;
+    int32_t a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4418,19 +4418,19 @@ class BarAttrs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDummyFieldNumber = 1,
+    kADummyFieldNumber = 1,
   };
-  // required float dummy = 1;
-  bool has_dummy() const;
+  // required float a_dummy = 1;
+  bool has_a_dummy() const;
   private:
-  bool _internal_has_dummy() const;
+  bool _internal_has_a_dummy() const;
   public:
-  void clear_dummy();
-  float dummy() const;
-  void set_dummy(float value);
+  void clear_a_dummy();
+  float a_dummy() const;
+  void set_a_dummy(float value);
   private:
-  float _internal_dummy() const;
-  void _internal_set_dummy(float value);
+  float _internal_a_dummy() const;
+  void _internal_set_a_dummy(float value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.BarAttrs)
@@ -4443,7 +4443,7 @@ class BarAttrs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    float dummy_;
+    float a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4492,8 +4492,8 @@ class SpecificAttrs final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVFooAttrs = 1,
-    kMVBarAttrs = 2,
+    kAMVFooAttrs = 1,
+    kAMVBarAttrs = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -4566,52 +4566,52 @@ class SpecificAttrs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVFooAttrsFieldNumber = 1,
-    kMVBarAttrsFieldNumber = 2,
+    kAMVFooAttrsFieldNumber = 1,
+    kAMVBarAttrsFieldNumber = 2,
   };
-  // .protobuf.mozilla._foo.FooAttrs mVFooAttrs = 1;
-  bool has_mvfooattrs() const;
+  // .protobuf.mozilla._foo.FooAttrs a_mVFooAttrs = 1;
+  bool has_a_mvfooattrs() const;
   private:
-  bool _internal_has_mvfooattrs() const;
+  bool _internal_has_a_mvfooattrs() const;
   public:
-  void clear_mvfooattrs();
-  const ::protobuf::mozilla::_foo::FooAttrs& mvfooattrs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::FooAttrs* release_mvfooattrs();
-  ::protobuf::mozilla::_foo::FooAttrs* mutable_mvfooattrs();
-  void set_allocated_mvfooattrs(::protobuf::mozilla::_foo::FooAttrs* mvfooattrs);
+  void clear_a_mvfooattrs();
+  const ::protobuf::mozilla::_foo::FooAttrs& a_mvfooattrs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::FooAttrs* release_a_mvfooattrs();
+  ::protobuf::mozilla::_foo::FooAttrs* mutable_a_mvfooattrs();
+  void set_allocated_a_mvfooattrs(::protobuf::mozilla::_foo::FooAttrs* a_mvfooattrs);
   private:
-  const ::protobuf::mozilla::_foo::FooAttrs& _internal_mvfooattrs() const;
-  ::protobuf::mozilla::_foo::FooAttrs* _internal_mutable_mvfooattrs();
+  const ::protobuf::mozilla::_foo::FooAttrs& _internal_a_mvfooattrs() const;
+  ::protobuf::mozilla::_foo::FooAttrs* _internal_mutable_a_mvfooattrs();
   public:
-  void unsafe_arena_set_allocated_mvfooattrs(
-      ::protobuf::mozilla::_foo::FooAttrs* mvfooattrs);
-  ::protobuf::mozilla::_foo::FooAttrs* unsafe_arena_release_mvfooattrs();
+  void unsafe_arena_set_allocated_a_mvfooattrs(
+      ::protobuf::mozilla::_foo::FooAttrs* a_mvfooattrs);
+  ::protobuf::mozilla::_foo::FooAttrs* unsafe_arena_release_a_mvfooattrs();
 
-  // .protobuf.mozilla._foo.BarAttrs mVBarAttrs = 2;
-  bool has_mvbarattrs() const;
+  // .protobuf.mozilla._foo.BarAttrs a_mVBarAttrs = 2;
+  bool has_a_mvbarattrs() const;
   private:
-  bool _internal_has_mvbarattrs() const;
+  bool _internal_has_a_mvbarattrs() const;
   public:
-  void clear_mvbarattrs();
-  const ::protobuf::mozilla::_foo::BarAttrs& mvbarattrs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::BarAttrs* release_mvbarattrs();
-  ::protobuf::mozilla::_foo::BarAttrs* mutable_mvbarattrs();
-  void set_allocated_mvbarattrs(::protobuf::mozilla::_foo::BarAttrs* mvbarattrs);
+  void clear_a_mvbarattrs();
+  const ::protobuf::mozilla::_foo::BarAttrs& a_mvbarattrs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::BarAttrs* release_a_mvbarattrs();
+  ::protobuf::mozilla::_foo::BarAttrs* mutable_a_mvbarattrs();
+  void set_allocated_a_mvbarattrs(::protobuf::mozilla::_foo::BarAttrs* a_mvbarattrs);
   private:
-  const ::protobuf::mozilla::_foo::BarAttrs& _internal_mvbarattrs() const;
-  ::protobuf::mozilla::_foo::BarAttrs* _internal_mutable_mvbarattrs();
+  const ::protobuf::mozilla::_foo::BarAttrs& _internal_a_mvbarattrs() const;
+  ::protobuf::mozilla::_foo::BarAttrs* _internal_mutable_a_mvbarattrs();
   public:
-  void unsafe_arena_set_allocated_mvbarattrs(
-      ::protobuf::mozilla::_foo::BarAttrs* mvbarattrs);
-  ::protobuf::mozilla::_foo::BarAttrs* unsafe_arena_release_mvbarattrs();
+  void unsafe_arena_set_allocated_a_mvbarattrs(
+      ::protobuf::mozilla::_foo::BarAttrs* a_mvbarattrs);
+  ::protobuf::mozilla::_foo::BarAttrs* unsafe_arena_release_a_mvbarattrs();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.SpecificAttrs)
  private:
   class _Internal;
-  void set_has_mvfooattrs();
-  void set_has_mvbarattrs();
+  void set_has_a_mvfooattrs();
+  void set_has_a_mvbarattrs();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -4623,8 +4623,8 @@ class SpecificAttrs final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::_foo::FooAttrs* mvfooattrs_;
-      ::protobuf::mozilla::_foo::BarAttrs* mvbarattrs_;
+      ::protobuf::mozilla::_foo::FooAttrs* a_mvfooattrs_;
+      ::protobuf::mozilla::_foo::BarAttrs* a_mvbarattrs_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -4745,44 +4745,44 @@ class Attrs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCommonFieldNumber = 1,
-    kSpecificFieldNumber = 2,
+    kACommonFieldNumber = 1,
+    kASpecificFieldNumber = 2,
   };
-  // required .protobuf.mozilla._foo.CommonAttrs common = 1;
-  bool has_common() const;
+  // required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
+  bool has_a_common() const;
   private:
-  bool _internal_has_common() const;
+  bool _internal_has_a_common() const;
   public:
-  void clear_common();
-  const ::protobuf::mozilla::_foo::CommonAttrs& common() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::CommonAttrs* release_common();
-  ::protobuf::mozilla::_foo::CommonAttrs* mutable_common();
-  void set_allocated_common(::protobuf::mozilla::_foo::CommonAttrs* common);
+  void clear_a_common();
+  const ::protobuf::mozilla::_foo::CommonAttrs& a_common() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::CommonAttrs* release_a_common();
+  ::protobuf::mozilla::_foo::CommonAttrs* mutable_a_common();
+  void set_allocated_a_common(::protobuf::mozilla::_foo::CommonAttrs* a_common);
   private:
-  const ::protobuf::mozilla::_foo::CommonAttrs& _internal_common() const;
-  ::protobuf::mozilla::_foo::CommonAttrs* _internal_mutable_common();
+  const ::protobuf::mozilla::_foo::CommonAttrs& _internal_a_common() const;
+  ::protobuf::mozilla::_foo::CommonAttrs* _internal_mutable_a_common();
   public:
-  void unsafe_arena_set_allocated_common(
-      ::protobuf::mozilla::_foo::CommonAttrs* common);
-  ::protobuf::mozilla::_foo::CommonAttrs* unsafe_arena_release_common();
+  void unsafe_arena_set_allocated_a_common(
+      ::protobuf::mozilla::_foo::CommonAttrs* a_common);
+  ::protobuf::mozilla::_foo::CommonAttrs* unsafe_arena_release_a_common();
 
-  // required .protobuf.mozilla._foo.SpecificAttrs specific = 2;
-  bool has_specific() const;
+  // required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
+  bool has_a_specific() const;
   private:
-  bool _internal_has_specific() const;
+  bool _internal_has_a_specific() const;
   public:
-  void clear_specific();
-  const ::protobuf::mozilla::_foo::SpecificAttrs& specific() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::SpecificAttrs* release_specific();
-  ::protobuf::mozilla::_foo::SpecificAttrs* mutable_specific();
-  void set_allocated_specific(::protobuf::mozilla::_foo::SpecificAttrs* specific);
+  void clear_a_specific();
+  const ::protobuf::mozilla::_foo::SpecificAttrs& a_specific() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::SpecificAttrs* release_a_specific();
+  ::protobuf::mozilla::_foo::SpecificAttrs* mutable_a_specific();
+  void set_allocated_a_specific(::protobuf::mozilla::_foo::SpecificAttrs* a_specific);
   private:
-  const ::protobuf::mozilla::_foo::SpecificAttrs& _internal_specific() const;
-  ::protobuf::mozilla::_foo::SpecificAttrs* _internal_mutable_specific();
+  const ::protobuf::mozilla::_foo::SpecificAttrs& _internal_a_specific() const;
+  ::protobuf::mozilla::_foo::SpecificAttrs* _internal_mutable_a_specific();
   public:
-  void unsafe_arena_set_allocated_specific(
-      ::protobuf::mozilla::_foo::SpecificAttrs* specific);
-  ::protobuf::mozilla::_foo::SpecificAttrs* unsafe_arena_release_specific();
+  void unsafe_arena_set_allocated_a_specific(
+      ::protobuf::mozilla::_foo::SpecificAttrs* a_specific);
+  ::protobuf::mozilla::_foo::SpecificAttrs* unsafe_arena_release_a_specific();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Attrs)
  private:
@@ -4797,8 +4797,8 @@ class Attrs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::_foo::CommonAttrs* common_;
-    ::protobuf::mozilla::_foo::SpecificAttrs* specific_;
+    ::protobuf::mozilla::_foo::CommonAttrs* a_common_;
+    ::protobuf::mozilla::_foo::SpecificAttrs* a_specific_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -4915,44 +4915,44 @@ class SetAttrs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kXFieldNumber = 1,
-    kAttrsFieldNumber = 2,
+    kAXFieldNumber = 1,
+    kAAttrsFieldNumber = 2,
   };
-  // required bytes x = 1;
-  bool has_x() const;
+  // required bytes a_x = 1;
+  bool has_a_x() const;
   private:
-  bool _internal_has_x() const;
+  bool _internal_has_a_x() const;
   public:
-  void clear_x();
-  const std::string& x() const;
+  void clear_a_x();
+  const std::string& a_x() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_x(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_x();
-  PROTOBUF_NODISCARD std::string* release_x();
-  void set_allocated_x(std::string* x);
+  void set_a_x(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_x();
+  PROTOBUF_NODISCARD std::string* release_a_x();
+  void set_allocated_a_x(std::string* a_x);
   private:
-  const std::string& _internal_x() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_x(const std::string& value);
-  std::string* _internal_mutable_x();
+  const std::string& _internal_a_x() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_x(const std::string& value);
+  std::string* _internal_mutable_a_x();
   public:
 
-  // required .protobuf.mozilla._foo.Attrs attrs = 2;
-  bool has_attrs() const;
+  // required .protobuf.mozilla._foo.Attrs a_attrs = 2;
+  bool has_a_attrs() const;
   private:
-  bool _internal_has_attrs() const;
+  bool _internal_has_a_attrs() const;
   public:
-  void clear_attrs();
-  const ::protobuf::mozilla::_foo::Attrs& attrs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::Attrs* release_attrs();
-  ::protobuf::mozilla::_foo::Attrs* mutable_attrs();
-  void set_allocated_attrs(::protobuf::mozilla::_foo::Attrs* attrs);
+  void clear_a_attrs();
+  const ::protobuf::mozilla::_foo::Attrs& a_attrs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::Attrs* release_a_attrs();
+  ::protobuf::mozilla::_foo::Attrs* mutable_a_attrs();
+  void set_allocated_a_attrs(::protobuf::mozilla::_foo::Attrs* a_attrs);
   private:
-  const ::protobuf::mozilla::_foo::Attrs& _internal_attrs() const;
-  ::protobuf::mozilla::_foo::Attrs* _internal_mutable_attrs();
+  const ::protobuf::mozilla::_foo::Attrs& _internal_a_attrs() const;
+  ::protobuf::mozilla::_foo::Attrs* _internal_mutable_a_attrs();
   public:
-  void unsafe_arena_set_allocated_attrs(
-      ::protobuf::mozilla::_foo::Attrs* attrs);
-  ::protobuf::mozilla::_foo::Attrs* unsafe_arena_release_attrs();
+  void unsafe_arena_set_allocated_a_attrs(
+      ::protobuf::mozilla::_foo::Attrs* a_attrs);
+  ::protobuf::mozilla::_foo::Attrs* unsafe_arena_release_a_attrs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.SetAttrs)
  private:
@@ -4967,8 +4967,8 @@ class SetAttrs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr x_;
-    ::protobuf::mozilla::_foo::Attrs* attrs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_x_;
+    ::protobuf::mozilla::_foo::Attrs* a_attrs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -5017,8 +5017,8 @@ class Op final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnullT = 1,
-    kMVSetAttrs = 2,
+    kAMVnullT = 1,
+    kAMVSetAttrs = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -5091,52 +5091,52 @@ class Op final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnullTFieldNumber = 1,
-    kMVSetAttrsFieldNumber = 2,
+    kAMVnullTFieldNumber = 1,
+    kAMVSetAttrsFieldNumber = 2,
   };
-  // bytes mVnull_t = 1;
-  bool has_mvnull_t() const;
+  // bytes a_mVnull_t = 1;
+  bool has_a_mvnull_t() const;
   private:
-  bool _internal_has_mvnull_t() const;
+  bool _internal_has_a_mvnull_t() const;
   public:
-  void clear_mvnull_t();
-  const std::string& mvnull_t() const;
+  void clear_a_mvnull_t();
+  const std::string& a_mvnull_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnull_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnull_t();
-  PROTOBUF_NODISCARD std::string* release_mvnull_t();
-  void set_allocated_mvnull_t(std::string* mvnull_t);
+  void set_a_mvnull_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnull_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvnull_t();
+  void set_allocated_a_mvnull_t(std::string* a_mvnull_t);
   private:
-  const std::string& _internal_mvnull_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnull_t(const std::string& value);
-  std::string* _internal_mutable_mvnull_t();
+  const std::string& _internal_a_mvnull_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnull_t(const std::string& value);
+  std::string* _internal_mutable_a_mvnull_t();
   public:
 
-  // .protobuf.mozilla._foo.SetAttrs mVSetAttrs = 2;
-  bool has_mvsetattrs() const;
+  // .protobuf.mozilla._foo.SetAttrs a_mVSetAttrs = 2;
+  bool has_a_mvsetattrs() const;
   private:
-  bool _internal_has_mvsetattrs() const;
+  bool _internal_has_a_mvsetattrs() const;
   public:
-  void clear_mvsetattrs();
-  const ::protobuf::mozilla::_foo::SetAttrs& mvsetattrs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::SetAttrs* release_mvsetattrs();
-  ::protobuf::mozilla::_foo::SetAttrs* mutable_mvsetattrs();
-  void set_allocated_mvsetattrs(::protobuf::mozilla::_foo::SetAttrs* mvsetattrs);
+  void clear_a_mvsetattrs();
+  const ::protobuf::mozilla::_foo::SetAttrs& a_mvsetattrs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_foo::SetAttrs* release_a_mvsetattrs();
+  ::protobuf::mozilla::_foo::SetAttrs* mutable_a_mvsetattrs();
+  void set_allocated_a_mvsetattrs(::protobuf::mozilla::_foo::SetAttrs* a_mvsetattrs);
   private:
-  const ::protobuf::mozilla::_foo::SetAttrs& _internal_mvsetattrs() const;
-  ::protobuf::mozilla::_foo::SetAttrs* _internal_mutable_mvsetattrs();
+  const ::protobuf::mozilla::_foo::SetAttrs& _internal_a_mvsetattrs() const;
+  ::protobuf::mozilla::_foo::SetAttrs* _internal_mutable_a_mvsetattrs();
   public:
-  void unsafe_arena_set_allocated_mvsetattrs(
-      ::protobuf::mozilla::_foo::SetAttrs* mvsetattrs);
-  ::protobuf::mozilla::_foo::SetAttrs* unsafe_arena_release_mvsetattrs();
+  void unsafe_arena_set_allocated_a_mvsetattrs(
+      ::protobuf::mozilla::_foo::SetAttrs* a_mvsetattrs);
+  ::protobuf::mozilla::_foo::SetAttrs* unsafe_arena_release_a_mvsetattrs();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.Op)
  private:
   class _Internal;
-  void set_has_mvnull_t();
-  void set_has_mvsetattrs();
+  void set_has_a_mvnull_t();
+  void set_has_a_mvsetattrs();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -5148,8 +5148,8 @@ class Op final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnull_t_;
-      ::protobuf::mozilla::_foo::SetAttrs* mvsetattrs_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnull_t_;
+      ::protobuf::mozilla::_foo::SetAttrs* a_mvsetattrs_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -5270,38 +5270,38 @@ class ShmemStruct final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMemFieldNumber = 2,
-    kIFieldNumber = 1,
+    kAMemFieldNumber = 2,
+    kAIFieldNumber = 1,
   };
-  // required bytes mem = 2;
-  bool has_mem() const;
+  // required bytes a_mem = 2;
+  bool has_a_mem() const;
   private:
-  bool _internal_has_mem() const;
+  bool _internal_has_a_mem() const;
   public:
-  void clear_mem();
-  const std::string& mem() const;
+  void clear_a_mem();
+  const std::string& a_mem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mem();
-  PROTOBUF_NODISCARD std::string* release_mem();
-  void set_allocated_mem(std::string* mem);
+  void set_a_mem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mem();
+  PROTOBUF_NODISCARD std::string* release_a_mem();
+  void set_allocated_a_mem(std::string* a_mem);
   private:
-  const std::string& _internal_mem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mem(const std::string& value);
-  std::string* _internal_mutable_mem();
+  const std::string& _internal_a_mem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mem(const std::string& value);
+  std::string* _internal_mutable_a_mem();
   public:
 
-  // required sint32 i = 1;
-  bool has_i() const;
+  // required sint32 a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  int32_t i() const;
-  void set_i(int32_t value);
+  void clear_a_i();
+  int32_t a_i() const;
+  void set_a_i(int32_t value);
   private:
-  int32_t _internal_i() const;
-  void _internal_set_i(int32_t value);
+  int32_t _internal_a_i() const;
+  void _internal_set_a_i(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.ShmemStruct)
@@ -5317,8 +5317,8 @@ class ShmemStruct final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mem_;
-    int32_t i_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mem_;
+    int32_t a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestDataStructuresCommon_5fprotobuf_2emozilla_2e_5ffoo_2eh_2eproto;
@@ -5367,8 +5367,8 @@ class ShmemUnion final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVint = 1,
-    kMVShmem = 2,
+    kAMVint = 1,
+    kAMVShmem = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -5441,38 +5441,38 @@ class ShmemUnion final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVintFieldNumber = 1,
-    kMVShmemFieldNumber = 2,
+    kAMVintFieldNumber = 1,
+    kAMVShmemFieldNumber = 2,
   };
-  // sint32 mVint = 1;
-  bool has_mvint() const;
+  // sint32 a_mVint = 1;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvint() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
-  // bytes mVShmem = 2;
-  bool has_mvshmem() const;
+  // bytes a_mVShmem = 2;
+  bool has_a_mvshmem() const;
   private:
-  bool _internal_has_mvshmem() const;
+  bool _internal_has_a_mvshmem() const;
   public:
-  void clear_mvshmem();
-  const std::string& mvshmem() const;
+  void clear_a_mvshmem();
+  const std::string& a_mvshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvshmem();
-  PROTOBUF_NODISCARD std::string* release_mvshmem();
-  void set_allocated_mvshmem(std::string* mvshmem);
+  void set_a_mvshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvshmem();
+  PROTOBUF_NODISCARD std::string* release_a_mvshmem();
+  void set_allocated_a_mvshmem(std::string* a_mvshmem);
   private:
-  const std::string& _internal_mvshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvshmem(const std::string& value);
-  std::string* _internal_mutable_mvshmem();
+  const std::string& _internal_a_mvshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvshmem(const std::string& value);
+  std::string* _internal_mutable_a_mvshmem();
   public:
 
   void clear_content();
@@ -5480,8 +5480,8 @@ class ShmemUnion final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._foo.ShmemUnion)
  private:
   class _Internal;
-  void set_has_mvint();
-  void set_has_mvshmem();
+  void set_has_a_mvint();
+  void set_has_a_mvshmem();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -5493,8 +5493,8 @@ class ShmemUnion final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      int32_t mvint_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvshmem_;
+      int32_t a_mvint_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvshmem_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -5638,80 +5638,80 @@ class Empty final :
 #endif  // __GNUC__
 // IntDouble
 
-// sint32 mVint = 1;
-inline bool IntDouble::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 1;
+inline bool IntDouble::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool IntDouble::has_mvint() const {
-  return _internal_has_mvint();
+inline bool IntDouble::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void IntDouble::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void IntDouble::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void IntDouble::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void IntDouble::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t IntDouble::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t IntDouble::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void IntDouble::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void IntDouble::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t IntDouble::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDouble.mVint)
-  return _internal_mvint();
+inline int32_t IntDouble::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDouble.a_mVint)
+  return _internal_a_mvint();
 }
-inline void IntDouble::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDouble.mVint)
+inline void IntDouble::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDouble.a_mVint)
 }
 
-// double mVdouble = 2;
-inline bool IntDouble::_internal_has_mvdouble() const {
-  return content_case() == kMVdouble;
+// double a_mVdouble = 2;
+inline bool IntDouble::_internal_has_a_mvdouble() const {
+  return content_case() == kAMVdouble;
 }
-inline bool IntDouble::has_mvdouble() const {
-  return _internal_has_mvdouble();
+inline bool IntDouble::has_a_mvdouble() const {
+  return _internal_has_a_mvdouble();
 }
-inline void IntDouble::set_has_mvdouble() {
-  _impl_._oneof_case_[0] = kMVdouble;
+inline void IntDouble::set_has_a_mvdouble() {
+  _impl_._oneof_case_[0] = kAMVdouble;
 }
-inline void IntDouble::clear_mvdouble() {
-  if (_internal_has_mvdouble()) {
-    _impl_.content_.mvdouble_ = 0;
+inline void IntDouble::clear_a_mvdouble() {
+  if (_internal_has_a_mvdouble()) {
+    _impl_.content_.a_mvdouble_ = 0;
     clear_has_content();
   }
 }
-inline double IntDouble::_internal_mvdouble() const {
-  if (_internal_has_mvdouble()) {
-    return _impl_.content_.mvdouble_;
+inline double IntDouble::_internal_a_mvdouble() const {
+  if (_internal_has_a_mvdouble()) {
+    return _impl_.content_.a_mvdouble_;
   }
   return 0;
 }
-inline void IntDouble::_internal_set_mvdouble(double value) {
-  if (!_internal_has_mvdouble()) {
+inline void IntDouble::_internal_set_a_mvdouble(double value) {
+  if (!_internal_has_a_mvdouble()) {
     clear_content();
-    set_has_mvdouble();
+    set_has_a_mvdouble();
   }
-  _impl_.content_.mvdouble_ = value;
+  _impl_.content_.a_mvdouble_ = value;
 }
-inline double IntDouble::mvdouble() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDouble.mVdouble)
-  return _internal_mvdouble();
+inline double IntDouble::a_mvdouble() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDouble.a_mVdouble)
+  return _internal_a_mvdouble();
 }
-inline void IntDouble::set_mvdouble(double value) {
-  _internal_set_mvdouble(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDouble.mVdouble)
+inline void IntDouble::set_a_mvdouble(double value) {
+  _internal_set_a_mvdouble(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDouble.a_mVdouble)
 }
 
 inline bool IntDouble::has_content() const {
@@ -5727,204 +5727,204 @@ inline IntDouble::ContentCase IntDouble::content_case() const {
 
 // SIntDouble
 
-// required sint32 i = 1;
-inline bool SIntDouble::_internal_has_i() const {
+// required sint32 a_i = 1;
+inline bool SIntDouble::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool SIntDouble::has_i() const {
-  return _internal_has_i();
+inline bool SIntDouble::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline void SIntDouble::clear_i() {
-  _impl_.i_ = 0;
+inline void SIntDouble::clear_a_i() {
+  _impl_.a_i_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t SIntDouble::_internal_i() const {
-  return _impl_.i_;
+inline int32_t SIntDouble::_internal_a_i() const {
+  return _impl_.a_i_;
 }
-inline int32_t SIntDouble::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDouble.i)
-  return _internal_i();
+inline int32_t SIntDouble::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDouble.a_i)
+  return _internal_a_i();
 }
-inline void SIntDouble::_internal_set_i(int32_t value) {
+inline void SIntDouble::_internal_set_a_i(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.i_ = value;
+  _impl_.a_i_ = value;
 }
-inline void SIntDouble::set_i(int32_t value) {
-  _internal_set_i(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDouble.i)
+inline void SIntDouble::set_a_i(int32_t value) {
+  _internal_set_a_i(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDouble.a_i)
 }
 
-// required double d = 2;
-inline bool SIntDouble::_internal_has_d() const {
+// required double a_d = 2;
+inline bool SIntDouble::_internal_has_a_d() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SIntDouble::has_d() const {
-  return _internal_has_d();
+inline bool SIntDouble::has_a_d() const {
+  return _internal_has_a_d();
 }
-inline void SIntDouble::clear_d() {
-  _impl_.d_ = 0;
+inline void SIntDouble::clear_a_d() {
+  _impl_.a_d_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double SIntDouble::_internal_d() const {
-  return _impl_.d_;
+inline double SIntDouble::_internal_a_d() const {
+  return _impl_.a_d_;
 }
-inline double SIntDouble::d() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDouble.d)
-  return _internal_d();
+inline double SIntDouble::a_d() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDouble.a_d)
+  return _internal_a_d();
 }
-inline void SIntDouble::_internal_set_d(double value) {
+inline void SIntDouble::_internal_set_a_d(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.d_ = value;
+  _impl_.a_d_ = value;
 }
-inline void SIntDouble::set_d(double value) {
-  _internal_set_d(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDouble.d)
+inline void SIntDouble::set_a_d(double value) {
+  _internal_set_a_d(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDouble.a_d)
 }
 
 // -------------------------------------------------------------------
 
 // IntDoubleArrays__mVArrayOfint
 
-// repeated sint32 mVArrayOfint = 1;
-inline int IntDoubleArrays__mVArrayOfint::_internal_mvarrayofint_size() const {
-  return _impl_.mvarrayofint_.size();
+// repeated sint32 a_mVArrayOfint = 1;
+inline int IntDoubleArrays__mVArrayOfint::_internal_a_mvarrayofint_size() const {
+  return _impl_.a_mvarrayofint_.size();
 }
-inline int IntDoubleArrays__mVArrayOfint::mvarrayofint_size() const {
-  return _internal_mvarrayofint_size();
+inline int IntDoubleArrays__mVArrayOfint::a_mvarrayofint_size() const {
+  return _internal_a_mvarrayofint_size();
 }
-inline void IntDoubleArrays__mVArrayOfint::clear_mvarrayofint() {
-  _impl_.mvarrayofint_.Clear();
+inline void IntDoubleArrays__mVArrayOfint::clear_a_mvarrayofint() {
+  _impl_.a_mvarrayofint_.Clear();
 }
-inline int32_t IntDoubleArrays__mVArrayOfint::_internal_mvarrayofint(int index) const {
-  return _impl_.mvarrayofint_.Get(index);
+inline int32_t IntDoubleArrays__mVArrayOfint::_internal_a_mvarrayofint(int index) const {
+  return _impl_.a_mvarrayofint_.Get(index);
 }
-inline int32_t IntDoubleArrays__mVArrayOfint::mvarrayofint(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint(index);
+inline int32_t IntDoubleArrays__mVArrayOfint::a_mvarrayofint(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint(index);
 }
-inline void IntDoubleArrays__mVArrayOfint::set_mvarrayofint(int index, int32_t value) {
-  _impl_.mvarrayofint_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.mVArrayOfint)
+inline void IntDoubleArrays__mVArrayOfint::set_a_mvarrayofint(int index, int32_t value) {
+  _impl_.a_mvarrayofint_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.a_mVArrayOfint)
 }
-inline void IntDoubleArrays__mVArrayOfint::_internal_add_mvarrayofint(int32_t value) {
-  _impl_.mvarrayofint_.Add(value);
+inline void IntDoubleArrays__mVArrayOfint::_internal_add_a_mvarrayofint(int32_t value) {
+  _impl_.a_mvarrayofint_.Add(value);
 }
-inline void IntDoubleArrays__mVArrayOfint::add_mvarrayofint(int32_t value) {
-  _internal_add_mvarrayofint(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.mVArrayOfint)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-IntDoubleArrays__mVArrayOfint::_internal_mvarrayofint() const {
-  return _impl_.mvarrayofint_;
+inline void IntDoubleArrays__mVArrayOfint::add_a_mvarrayofint(int32_t value) {
+  _internal_add_a_mvarrayofint(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.a_mVArrayOfint)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-IntDoubleArrays__mVArrayOfint::mvarrayofint() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint();
+IntDoubleArrays__mVArrayOfint::_internal_a_mvarrayofint() const {
+  return _impl_.a_mvarrayofint_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+IntDoubleArrays__mVArrayOfint::a_mvarrayofint() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-IntDoubleArrays__mVArrayOfint::_internal_mutable_mvarrayofint() {
-  return &_impl_.mvarrayofint_;
+IntDoubleArrays__mVArrayOfint::_internal_mutable_a_mvarrayofint() {
+  return &_impl_.a_mvarrayofint_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-IntDoubleArrays__mVArrayOfint::mutable_mvarrayofint() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.mVArrayOfint)
-  return _internal_mutable_mvarrayofint();
+IntDoubleArrays__mVArrayOfint::mutable_a_mvarrayofint() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint.a_mVArrayOfint)
+  return _internal_mutable_a_mvarrayofint();
 }
 
 // -------------------------------------------------------------------
 
 // IntDoubleArrays__mVArrayOfdouble
 
-// repeated double mVArrayOfdouble = 1;
-inline int IntDoubleArrays__mVArrayOfdouble::_internal_mvarrayofdouble_size() const {
-  return _impl_.mvarrayofdouble_.size();
+// repeated double a_mVArrayOfdouble = 1;
+inline int IntDoubleArrays__mVArrayOfdouble::_internal_a_mvarrayofdouble_size() const {
+  return _impl_.a_mvarrayofdouble_.size();
 }
-inline int IntDoubleArrays__mVArrayOfdouble::mvarrayofdouble_size() const {
-  return _internal_mvarrayofdouble_size();
+inline int IntDoubleArrays__mVArrayOfdouble::a_mvarrayofdouble_size() const {
+  return _internal_a_mvarrayofdouble_size();
 }
-inline void IntDoubleArrays__mVArrayOfdouble::clear_mvarrayofdouble() {
-  _impl_.mvarrayofdouble_.Clear();
+inline void IntDoubleArrays__mVArrayOfdouble::clear_a_mvarrayofdouble() {
+  _impl_.a_mvarrayofdouble_.Clear();
 }
-inline double IntDoubleArrays__mVArrayOfdouble::_internal_mvarrayofdouble(int index) const {
-  return _impl_.mvarrayofdouble_.Get(index);
+inline double IntDoubleArrays__mVArrayOfdouble::_internal_a_mvarrayofdouble(int index) const {
+  return _impl_.a_mvarrayofdouble_.Get(index);
 }
-inline double IntDoubleArrays__mVArrayOfdouble::mvarrayofdouble(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.mVArrayOfdouble)
-  return _internal_mvarrayofdouble(index);
+inline double IntDoubleArrays__mVArrayOfdouble::a_mvarrayofdouble(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.a_mVArrayOfdouble)
+  return _internal_a_mvarrayofdouble(index);
 }
-inline void IntDoubleArrays__mVArrayOfdouble::set_mvarrayofdouble(int index, double value) {
-  _impl_.mvarrayofdouble_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.mVArrayOfdouble)
+inline void IntDoubleArrays__mVArrayOfdouble::set_a_mvarrayofdouble(int index, double value) {
+  _impl_.a_mvarrayofdouble_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.a_mVArrayOfdouble)
 }
-inline void IntDoubleArrays__mVArrayOfdouble::_internal_add_mvarrayofdouble(double value) {
-  _impl_.mvarrayofdouble_.Add(value);
+inline void IntDoubleArrays__mVArrayOfdouble::_internal_add_a_mvarrayofdouble(double value) {
+  _impl_.a_mvarrayofdouble_.Add(value);
 }
-inline void IntDoubleArrays__mVArrayOfdouble::add_mvarrayofdouble(double value) {
-  _internal_add_mvarrayofdouble(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.mVArrayOfdouble)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-IntDoubleArrays__mVArrayOfdouble::_internal_mvarrayofdouble() const {
-  return _impl_.mvarrayofdouble_;
+inline void IntDoubleArrays__mVArrayOfdouble::add_a_mvarrayofdouble(double value) {
+  _internal_add_a_mvarrayofdouble(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.a_mVArrayOfdouble)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-IntDoubleArrays__mVArrayOfdouble::mvarrayofdouble() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.mVArrayOfdouble)
-  return _internal_mvarrayofdouble();
+IntDoubleArrays__mVArrayOfdouble::_internal_a_mvarrayofdouble() const {
+  return _impl_.a_mvarrayofdouble_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
+IntDoubleArrays__mVArrayOfdouble::a_mvarrayofdouble() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.a_mVArrayOfdouble)
+  return _internal_a_mvarrayofdouble();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-IntDoubleArrays__mVArrayOfdouble::_internal_mutable_mvarrayofdouble() {
-  return &_impl_.mvarrayofdouble_;
+IntDoubleArrays__mVArrayOfdouble::_internal_mutable_a_mvarrayofdouble() {
+  return &_impl_.a_mvarrayofdouble_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-IntDoubleArrays__mVArrayOfdouble::mutable_mvarrayofdouble() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.mVArrayOfdouble)
-  return _internal_mutable_mvarrayofdouble();
+IntDoubleArrays__mVArrayOfdouble::mutable_a_mvarrayofdouble() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfdouble.a_mVArrayOfdouble)
+  return _internal_mutable_a_mvarrayofdouble();
 }
 
 // -------------------------------------------------------------------
 
 // IntDoubleArrays
 
-// sint32 mVint = 1;
-inline bool IntDoubleArrays::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 1;
+inline bool IntDoubleArrays::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool IntDoubleArrays::has_mvint() const {
-  return _internal_has_mvint();
+inline bool IntDoubleArrays::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void IntDoubleArrays::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void IntDoubleArrays::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void IntDoubleArrays::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void IntDoubleArrays::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t IntDoubleArrays::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t IntDoubleArrays::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void IntDoubleArrays::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void IntDoubleArrays::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t IntDoubleArrays::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDoubleArrays.mVint)
-  return _internal_mvint();
+inline int32_t IntDoubleArrays::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.IntDoubleArrays.a_mVint)
+  return _internal_a_mvint();
 }
-inline void IntDoubleArrays::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDoubleArrays.mVint)
+inline void IntDoubleArrays::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.IntDoubleArrays.a_mVint)
 }
 
 // .protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint mVArrayOfint = 2;
@@ -6088,370 +6088,370 @@ inline IntDoubleArrays::ContentCase IntDoubleArrays::content_case() const {
 
 // SIntDoubleArrays
 
-// required sint32 i = 1;
-inline bool SIntDoubleArrays::_internal_has_i() const {
+// required sint32 a_i = 1;
+inline bool SIntDoubleArrays::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SIntDoubleArrays::has_i() const {
-  return _internal_has_i();
+inline bool SIntDoubleArrays::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline void SIntDoubleArrays::clear_i() {
-  _impl_.i_ = 0;
+inline void SIntDoubleArrays::clear_a_i() {
+  _impl_.a_i_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t SIntDoubleArrays::_internal_i() const {
-  return _impl_.i_;
+inline int32_t SIntDoubleArrays::_internal_a_i() const {
+  return _impl_.a_i_;
 }
-inline int32_t SIntDoubleArrays::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDoubleArrays.i)
-  return _internal_i();
+inline int32_t SIntDoubleArrays::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDoubleArrays.a_i)
+  return _internal_a_i();
 }
-inline void SIntDoubleArrays::_internal_set_i(int32_t value) {
+inline void SIntDoubleArrays::_internal_set_a_i(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.i_ = value;
+  _impl_.a_i_ = value;
 }
-inline void SIntDoubleArrays::set_i(int32_t value) {
-  _internal_set_i(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.i)
-}
-
-// repeated sint32 ai = 2;
-inline int SIntDoubleArrays::_internal_ai_size() const {
-  return _impl_.ai_.size();
-}
-inline int SIntDoubleArrays::ai_size() const {
-  return _internal_ai_size();
-}
-inline void SIntDoubleArrays::clear_ai() {
-  _impl_.ai_.Clear();
-}
-inline int32_t SIntDoubleArrays::_internal_ai(int index) const {
-  return _impl_.ai_.Get(index);
-}
-inline int32_t SIntDoubleArrays::ai(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDoubleArrays.ai)
-  return _internal_ai(index);
-}
-inline void SIntDoubleArrays::set_ai(int index, int32_t value) {
-  _impl_.ai_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.ai)
-}
-inline void SIntDoubleArrays::_internal_add_ai(int32_t value) {
-  _impl_.ai_.Add(value);
-}
-inline void SIntDoubleArrays::add_ai(int32_t value) {
-  _internal_add_ai(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SIntDoubleArrays.ai)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-SIntDoubleArrays::_internal_ai() const {
-  return _impl_.ai_;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-SIntDoubleArrays::ai() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SIntDoubleArrays.ai)
-  return _internal_ai();
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-SIntDoubleArrays::_internal_mutable_ai() {
-  return &_impl_.ai_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-SIntDoubleArrays::mutable_ai() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SIntDoubleArrays.ai)
-  return _internal_mutable_ai();
+inline void SIntDoubleArrays::set_a_i(int32_t value) {
+  _internal_set_a_i(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.a_i)
 }
 
-// repeated double ad = 3;
-inline int SIntDoubleArrays::_internal_ad_size() const {
-  return _impl_.ad_.size();
+// repeated sint32 a_ai = 2;
+inline int SIntDoubleArrays::_internal_a_ai_size() const {
+  return _impl_.a_ai_.size();
 }
-inline int SIntDoubleArrays::ad_size() const {
-  return _internal_ad_size();
+inline int SIntDoubleArrays::a_ai_size() const {
+  return _internal_a_ai_size();
 }
-inline void SIntDoubleArrays::clear_ad() {
-  _impl_.ad_.Clear();
+inline void SIntDoubleArrays::clear_a_ai() {
+  _impl_.a_ai_.Clear();
 }
-inline double SIntDoubleArrays::_internal_ad(int index) const {
-  return _impl_.ad_.Get(index);
+inline int32_t SIntDoubleArrays::_internal_a_ai(int index) const {
+  return _impl_.a_ai_.Get(index);
 }
-inline double SIntDoubleArrays::ad(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDoubleArrays.ad)
-  return _internal_ad(index);
+inline int32_t SIntDoubleArrays::a_ai(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDoubleArrays.a_ai)
+  return _internal_a_ai(index);
 }
-inline void SIntDoubleArrays::set_ad(int index, double value) {
-  _impl_.ad_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.ad)
+inline void SIntDoubleArrays::set_a_ai(int index, int32_t value) {
+  _impl_.a_ai_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.a_ai)
 }
-inline void SIntDoubleArrays::_internal_add_ad(double value) {
-  _impl_.ad_.Add(value);
+inline void SIntDoubleArrays::_internal_add_a_ai(int32_t value) {
+  _impl_.a_ai_.Add(value);
 }
-inline void SIntDoubleArrays::add_ad(double value) {
-  _internal_add_ad(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SIntDoubleArrays.ad)
+inline void SIntDoubleArrays::add_a_ai(int32_t value) {
+  _internal_add_a_ai(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SIntDoubleArrays.a_ai)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+SIntDoubleArrays::_internal_a_ai() const {
+  return _impl_.a_ai_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+SIntDoubleArrays::a_ai() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SIntDoubleArrays.a_ai)
+  return _internal_a_ai();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+SIntDoubleArrays::_internal_mutable_a_ai() {
+  return &_impl_.a_ai_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+SIntDoubleArrays::mutable_a_ai() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SIntDoubleArrays.a_ai)
+  return _internal_mutable_a_ai();
+}
+
+// repeated double a_ad = 3;
+inline int SIntDoubleArrays::_internal_a_ad_size() const {
+  return _impl_.a_ad_.size();
+}
+inline int SIntDoubleArrays::a_ad_size() const {
+  return _internal_a_ad_size();
+}
+inline void SIntDoubleArrays::clear_a_ad() {
+  _impl_.a_ad_.Clear();
+}
+inline double SIntDoubleArrays::_internal_a_ad(int index) const {
+  return _impl_.a_ad_.Get(index);
+}
+inline double SIntDoubleArrays::a_ad(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SIntDoubleArrays.a_ad)
+  return _internal_a_ad(index);
+}
+inline void SIntDoubleArrays::set_a_ad(int index, double value) {
+  _impl_.a_ad_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SIntDoubleArrays.a_ad)
+}
+inline void SIntDoubleArrays::_internal_add_a_ad(double value) {
+  _impl_.a_ad_.Add(value);
+}
+inline void SIntDoubleArrays::add_a_ad(double value) {
+  _internal_add_a_ad(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SIntDoubleArrays.a_ad)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-SIntDoubleArrays::_internal_ad() const {
-  return _impl_.ad_;
+SIntDoubleArrays::_internal_a_ad() const {
+  return _impl_.a_ad_;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >&
-SIntDoubleArrays::ad() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SIntDoubleArrays.ad)
-  return _internal_ad();
+SIntDoubleArrays::a_ad() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SIntDoubleArrays.a_ad)
+  return _internal_a_ad();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-SIntDoubleArrays::_internal_mutable_ad() {
-  return &_impl_.ad_;
+SIntDoubleArrays::_internal_mutable_a_ad() {
+  return &_impl_.a_ad_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< double >*
-SIntDoubleArrays::mutable_ad() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SIntDoubleArrays.ad)
-  return _internal_mutable_ad();
+SIntDoubleArrays::mutable_a_ad() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SIntDoubleArrays.a_ad)
+  return _internal_mutable_a_ad();
 }
 
 // -------------------------------------------------------------------
 
 // ActorWrapper
 
-// required bytes actor = 1;
-inline bool ActorWrapper::_internal_has_actor() const {
+// required bytes a_actor = 1;
+inline bool ActorWrapper::_internal_has_a_actor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ActorWrapper::has_actor() const {
-  return _internal_has_actor();
+inline bool ActorWrapper::has_a_actor() const {
+  return _internal_has_a_actor();
 }
-inline void ActorWrapper::clear_actor() {
-  _impl_.actor_.ClearToEmpty();
+inline void ActorWrapper::clear_a_actor() {
+  _impl_.a_actor_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ActorWrapper::actor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ActorWrapper.actor)
-  return _internal_actor();
+inline const std::string& ActorWrapper::a_actor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ActorWrapper.a_actor)
+  return _internal_a_actor();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ActorWrapper::set_actor(ArgT0&& arg0, ArgT... args) {
+void ActorWrapper::set_a_actor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.actor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ActorWrapper.actor)
+ _impl_.a_actor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ActorWrapper.a_actor)
 }
-inline std::string* ActorWrapper::mutable_actor() {
-  std::string* _s = _internal_mutable_actor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.ActorWrapper.actor)
+inline std::string* ActorWrapper::mutable_a_actor() {
+  std::string* _s = _internal_mutable_a_actor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.ActorWrapper.a_actor)
   return _s;
 }
-inline const std::string& ActorWrapper::_internal_actor() const {
-  return _impl_.actor_.Get();
+inline const std::string& ActorWrapper::_internal_a_actor() const {
+  return _impl_.a_actor_.Get();
 }
-inline void ActorWrapper::_internal_set_actor(const std::string& value) {
+inline void ActorWrapper::_internal_set_a_actor(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.actor_.Set(value, GetArenaForAllocation());
+  _impl_.a_actor_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ActorWrapper::_internal_mutable_actor() {
+inline std::string* ActorWrapper::_internal_mutable_a_actor() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.actor_.Mutable(GetArenaForAllocation());
+  return _impl_.a_actor_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ActorWrapper::release_actor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ActorWrapper.actor)
-  if (!_internal_has_actor()) {
+inline std::string* ActorWrapper::release_a_actor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ActorWrapper.a_actor)
+  if (!_internal_has_a_actor()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.actor_.Release();
+  auto* p = _impl_.a_actor_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.actor_.IsDefault()) {
-    _impl_.actor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_actor_.IsDefault()) {
+    _impl_.a_actor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ActorWrapper::set_allocated_actor(std::string* actor) {
-  if (actor != nullptr) {
+inline void ActorWrapper::set_allocated_a_actor(std::string* a_actor) {
+  if (a_actor != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.actor_.SetAllocated(actor, GetArenaForAllocation());
+  _impl_.a_actor_.SetAllocated(a_actor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.actor_.IsDefault()) {
-    _impl_.actor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_actor_.IsDefault()) {
+    _impl_.a_actor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.ActorWrapper.actor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.ActorWrapper.a_actor)
 }
 
 // -------------------------------------------------------------------
 
 // Actors__mVArrayOfint
 
-// repeated sint32 mVArrayOfint = 1;
-inline int Actors__mVArrayOfint::_internal_mvarrayofint_size() const {
-  return _impl_.mvarrayofint_.size();
+// repeated sint32 a_mVArrayOfint = 1;
+inline int Actors__mVArrayOfint::_internal_a_mvarrayofint_size() const {
+  return _impl_.a_mvarrayofint_.size();
 }
-inline int Actors__mVArrayOfint::mvarrayofint_size() const {
-  return _internal_mvarrayofint_size();
+inline int Actors__mVArrayOfint::a_mvarrayofint_size() const {
+  return _internal_a_mvarrayofint_size();
 }
-inline void Actors__mVArrayOfint::clear_mvarrayofint() {
-  _impl_.mvarrayofint_.Clear();
+inline void Actors__mVArrayOfint::clear_a_mvarrayofint() {
+  _impl_.a_mvarrayofint_.Clear();
 }
-inline int32_t Actors__mVArrayOfint::_internal_mvarrayofint(int index) const {
-  return _impl_.mvarrayofint_.Get(index);
+inline int32_t Actors__mVArrayOfint::_internal_a_mvarrayofint(int index) const {
+  return _impl_.a_mvarrayofint_.Get(index);
 }
-inline int32_t Actors__mVArrayOfint::mvarrayofint(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Actors._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint(index);
+inline int32_t Actors__mVArrayOfint::a_mvarrayofint(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Actors._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint(index);
 }
-inline void Actors__mVArrayOfint::set_mvarrayofint(int index, int32_t value) {
-  _impl_.mvarrayofint_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors._mVArrayOfint.mVArrayOfint)
+inline void Actors__mVArrayOfint::set_a_mvarrayofint(int index, int32_t value) {
+  _impl_.a_mvarrayofint_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors._mVArrayOfint.a_mVArrayOfint)
 }
-inline void Actors__mVArrayOfint::_internal_add_mvarrayofint(int32_t value) {
-  _impl_.mvarrayofint_.Add(value);
+inline void Actors__mVArrayOfint::_internal_add_a_mvarrayofint(int32_t value) {
+  _impl_.a_mvarrayofint_.Add(value);
 }
-inline void Actors__mVArrayOfint::add_mvarrayofint(int32_t value) {
-  _internal_add_mvarrayofint(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Actors._mVArrayOfint.mVArrayOfint)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-Actors__mVArrayOfint::_internal_mvarrayofint() const {
-  return _impl_.mvarrayofint_;
+inline void Actors__mVArrayOfint::add_a_mvarrayofint(int32_t value) {
+  _internal_add_a_mvarrayofint(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Actors._mVArrayOfint.a_mVArrayOfint)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-Actors__mVArrayOfint::mvarrayofint() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Actors._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint();
+Actors__mVArrayOfint::_internal_a_mvarrayofint() const {
+  return _impl_.a_mvarrayofint_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+Actors__mVArrayOfint::a_mvarrayofint() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Actors._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-Actors__mVArrayOfint::_internal_mutable_mvarrayofint() {
-  return &_impl_.mvarrayofint_;
+Actors__mVArrayOfint::_internal_mutable_a_mvarrayofint() {
+  return &_impl_.a_mvarrayofint_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-Actors__mVArrayOfint::mutable_mvarrayofint() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Actors._mVArrayOfint.mVArrayOfint)
-  return _internal_mutable_mvarrayofint();
+Actors__mVArrayOfint::mutable_a_mvarrayofint() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Actors._mVArrayOfint.a_mVArrayOfint)
+  return _internal_mutable_a_mvarrayofint();
 }
 
 // -------------------------------------------------------------------
 
 // Actors__mVArrayOfPTestDataStructuresSub
 
-// repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-inline int Actors__mVArrayOfPTestDataStructuresSub::_internal_mvarrayofptestdatastructuressub_size() const {
-  return _impl_.mvarrayofptestdatastructuressub_.size();
+// repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+inline int Actors__mVArrayOfPTestDataStructuresSub::_internal_a_mvarrayofptestdatastructuressub_size() const {
+  return _impl_.a_mvarrayofptestdatastructuressub_.size();
 }
-inline int Actors__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub_size() const {
-  return _internal_mvarrayofptestdatastructuressub_size();
+inline int Actors__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub_size() const {
+  return _internal_a_mvarrayofptestdatastructuressub_size();
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::clear_mvarrayofptestdatastructuressub() {
-  _impl_.mvarrayofptestdatastructuressub_.Clear();
+inline void Actors__mVArrayOfPTestDataStructuresSub::clear_a_mvarrayofptestdatastructuressub() {
+  _impl_.a_mvarrayofptestdatastructuressub_.Clear();
 }
-inline std::string* Actors__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub() {
-  std::string* _s = _internal_add_mvarrayofptestdatastructuressub();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline std::string* Actors__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub() {
+  std::string* _s = _internal_add_a_mvarrayofptestdatastructuressub();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
   return _s;
 }
-inline const std::string& Actors__mVArrayOfPTestDataStructuresSub::_internal_mvarrayofptestdatastructuressub(int index) const {
-  return _impl_.mvarrayofptestdatastructuressub_.Get(index);
+inline const std::string& Actors__mVArrayOfPTestDataStructuresSub::_internal_a_mvarrayofptestdatastructuressub(int index) const {
+  return _impl_.a_mvarrayofptestdatastructuressub_.Get(index);
 }
-inline const std::string& Actors__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _internal_mvarrayofptestdatastructuressub(index);
+inline const std::string& Actors__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _internal_a_mvarrayofptestdatastructuressub(index);
 }
-inline std::string* Actors__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _impl_.mvarrayofptestdatastructuressub_.Mutable(index);
+inline std::string* Actors__mVArrayOfPTestDataStructuresSub::mutable_a_mvarrayofptestdatastructuressub(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index);
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const std::string& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Actors__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const std::string& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, std::string&& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Actors__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, std::string&& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const char* value) {
+inline void Actors__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const void* value, size_t size) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(
+inline void Actors__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const void* value, size_t size) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline std::string* Actors__mVArrayOfPTestDataStructuresSub::_internal_add_mvarrayofptestdatastructuressub() {
-  return _impl_.mvarrayofptestdatastructuressub_.Add();
+inline std::string* Actors__mVArrayOfPTestDataStructuresSub::_internal_add_a_mvarrayofptestdatastructuressub() {
+  return _impl_.a_mvarrayofptestdatastructuressub_.Add();
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const std::string& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Actors__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const std::string& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(std::string&& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Actors__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(std::string&& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const char* value) {
+inline void Actors__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Actors__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const void* value, size_t size) {
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Actors__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const void* value, size_t size) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Actors__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _impl_.mvarrayofptestdatastructuressub_;
+Actors__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _impl_.a_mvarrayofptestdatastructuressub_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Actors__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return &_impl_.mvarrayofptestdatastructuressub_;
+Actors__mVArrayOfPTestDataStructuresSub::mutable_a_mvarrayofptestdatastructuressub() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Actors._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return &_impl_.a_mvarrayofptestdatastructuressub_;
 }
 
 // -------------------------------------------------------------------
 
 // Actors
 
-// sint32 mVint = 1;
-inline bool Actors::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 1;
+inline bool Actors::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool Actors::has_mvint() const {
-  return _internal_has_mvint();
+inline bool Actors::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void Actors::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void Actors::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void Actors::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void Actors::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t Actors::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t Actors::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void Actors::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void Actors::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t Actors::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Actors.mVint)
-  return _internal_mvint();
+inline int32_t Actors::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Actors.a_mVint)
+  return _internal_a_mvint();
 }
-inline void Actors::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors.mVint)
+inline void Actors::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Actors.a_mVint)
 }
 
 // .protobuf.mozilla._foo.Actors._mVArrayOfint mVArrayOfint = 2;
@@ -6615,370 +6615,370 @@ inline Actors::ContentCase Actors::content_case() const {
 
 // SActors
 
-// required sint32 i = 1;
-inline bool SActors::_internal_has_i() const {
+// required sint32 a_i = 1;
+inline bool SActors::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SActors::has_i() const {
-  return _internal_has_i();
+inline bool SActors::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline void SActors::clear_i() {
-  _impl_.i_ = 0;
+inline void SActors::clear_a_i() {
+  _impl_.a_i_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t SActors::_internal_i() const {
-  return _impl_.i_;
+inline int32_t SActors::_internal_a_i() const {
+  return _impl_.a_i_;
 }
-inline int32_t SActors::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SActors.i)
-  return _internal_i();
+inline int32_t SActors::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SActors.a_i)
+  return _internal_a_i();
 }
-inline void SActors::_internal_set_i(int32_t value) {
+inline void SActors::_internal_set_a_i(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.i_ = value;
+  _impl_.a_i_ = value;
 }
-inline void SActors::set_i(int32_t value) {
-  _internal_set_i(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.i)
-}
-
-// repeated sint32 ai = 2;
-inline int SActors::_internal_ai_size() const {
-  return _impl_.ai_.size();
-}
-inline int SActors::ai_size() const {
-  return _internal_ai_size();
-}
-inline void SActors::clear_ai() {
-  _impl_.ai_.Clear();
-}
-inline int32_t SActors::_internal_ai(int index) const {
-  return _impl_.ai_.Get(index);
-}
-inline int32_t SActors::ai(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SActors.ai)
-  return _internal_ai(index);
-}
-inline void SActors::set_ai(int index, int32_t value) {
-  _impl_.ai_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.ai)
-}
-inline void SActors::_internal_add_ai(int32_t value) {
-  _impl_.ai_.Add(value);
-}
-inline void SActors::add_ai(int32_t value) {
-  _internal_add_ai(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SActors.ai)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-SActors::_internal_ai() const {
-  return _impl_.ai_;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-SActors::ai() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SActors.ai)
-  return _internal_ai();
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-SActors::_internal_mutable_ai() {
-  return &_impl_.ai_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-SActors::mutable_ai() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SActors.ai)
-  return _internal_mutable_ai();
+inline void SActors::set_a_i(int32_t value) {
+  _internal_set_a_i(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.a_i)
 }
 
-// repeated bytes ap = 3;
-inline int SActors::_internal_ap_size() const {
-  return _impl_.ap_.size();
+// repeated sint32 a_ai = 2;
+inline int SActors::_internal_a_ai_size() const {
+  return _impl_.a_ai_.size();
 }
-inline int SActors::ap_size() const {
-  return _internal_ap_size();
+inline int SActors::a_ai_size() const {
+  return _internal_a_ai_size();
 }
-inline void SActors::clear_ap() {
-  _impl_.ap_.Clear();
+inline void SActors::clear_a_ai() {
+  _impl_.a_ai_.Clear();
 }
-inline std::string* SActors::add_ap() {
-  std::string* _s = _internal_add_ap();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.SActors.ap)
+inline int32_t SActors::_internal_a_ai(int index) const {
+  return _impl_.a_ai_.Get(index);
+}
+inline int32_t SActors::a_ai(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SActors.a_ai)
+  return _internal_a_ai(index);
+}
+inline void SActors::set_a_ai(int index, int32_t value) {
+  _impl_.a_ai_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.a_ai)
+}
+inline void SActors::_internal_add_a_ai(int32_t value) {
+  _impl_.a_ai_.Add(value);
+}
+inline void SActors::add_a_ai(int32_t value) {
+  _internal_add_a_ai(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SActors.a_ai)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+SActors::_internal_a_ai() const {
+  return _impl_.a_ai_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+SActors::a_ai() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SActors.a_ai)
+  return _internal_a_ai();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+SActors::_internal_mutable_a_ai() {
+  return &_impl_.a_ai_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+SActors::mutable_a_ai() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SActors.a_ai)
+  return _internal_mutable_a_ai();
+}
+
+// repeated bytes a_ap = 3;
+inline int SActors::_internal_a_ap_size() const {
+  return _impl_.a_ap_.size();
+}
+inline int SActors::a_ap_size() const {
+  return _internal_a_ap_size();
+}
+inline void SActors::clear_a_ap() {
+  _impl_.a_ap_.Clear();
+}
+inline std::string* SActors::add_a_ap() {
+  std::string* _s = _internal_add_a_ap();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.SActors.a_ap)
   return _s;
 }
-inline const std::string& SActors::_internal_ap(int index) const {
-  return _impl_.ap_.Get(index);
+inline const std::string& SActors::_internal_a_ap(int index) const {
+  return _impl_.a_ap_.Get(index);
 }
-inline const std::string& SActors::ap(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SActors.ap)
-  return _internal_ap(index);
+inline const std::string& SActors::a_ap(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SActors.a_ap)
+  return _internal_a_ap(index);
 }
-inline std::string* SActors::mutable_ap(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SActors.ap)
-  return _impl_.ap_.Mutable(index);
+inline std::string* SActors::mutable_a_ap(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SActors.a_ap)
+  return _impl_.a_ap_.Mutable(index);
 }
-inline void SActors::set_ap(int index, const std::string& value) {
-  _impl_.ap_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.ap)
+inline void SActors::set_a_ap(int index, const std::string& value) {
+  _impl_.a_ap_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline void SActors::set_ap(int index, std::string&& value) {
-  _impl_.ap_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.ap)
+inline void SActors::set_a_ap(int index, std::string&& value) {
+  _impl_.a_ap_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline void SActors::set_ap(int index, const char* value) {
+inline void SActors::set_a_ap(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ap_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.SActors.ap)
+  _impl_.a_ap_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline void SActors::set_ap(int index, const void* value, size_t size) {
-  _impl_.ap_.Mutable(index)->assign(
+inline void SActors::set_a_ap(int index, const void* value, size_t size) {
+  _impl_.a_ap_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.SActors.ap)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline std::string* SActors::_internal_add_ap() {
-  return _impl_.ap_.Add();
+inline std::string* SActors::_internal_add_a_ap() {
+  return _impl_.a_ap_.Add();
 }
-inline void SActors::add_ap(const std::string& value) {
-  _impl_.ap_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SActors.ap)
+inline void SActors::add_a_ap(const std::string& value) {
+  _impl_.a_ap_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline void SActors::add_ap(std::string&& value) {
-  _impl_.ap_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SActors.ap)
+inline void SActors::add_a_ap(std::string&& value) {
+  _impl_.a_ap_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline void SActors::add_ap(const char* value) {
+inline void SActors::add_a_ap(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ap_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.SActors.ap)
+  _impl_.a_ap_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.SActors.a_ap)
 }
-inline void SActors::add_ap(const void* value, size_t size) {
-  _impl_.ap_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.SActors.ap)
+inline void SActors::add_a_ap(const void* value, size_t size) {
+  _impl_.a_ap_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.SActors.a_ap)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-SActors::ap() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SActors.ap)
-  return _impl_.ap_;
+SActors::a_ap() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.SActors.a_ap)
+  return _impl_.a_ap_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-SActors::mutable_ap() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SActors.ap)
-  return &_impl_.ap_;
+SActors::mutable_a_ap() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.SActors.a_ap)
+  return &_impl_.a_ap_;
 }
 
 // -------------------------------------------------------------------
 
 // Unions__mVArrayOfint
 
-// repeated sint32 mVArrayOfint = 1;
-inline int Unions__mVArrayOfint::_internal_mvarrayofint_size() const {
-  return _impl_.mvarrayofint_.size();
+// repeated sint32 a_mVArrayOfint = 1;
+inline int Unions__mVArrayOfint::_internal_a_mvarrayofint_size() const {
+  return _impl_.a_mvarrayofint_.size();
 }
-inline int Unions__mVArrayOfint::mvarrayofint_size() const {
-  return _internal_mvarrayofint_size();
+inline int Unions__mVArrayOfint::a_mvarrayofint_size() const {
+  return _internal_a_mvarrayofint_size();
 }
-inline void Unions__mVArrayOfint::clear_mvarrayofint() {
-  _impl_.mvarrayofint_.Clear();
+inline void Unions__mVArrayOfint::clear_a_mvarrayofint() {
+  _impl_.a_mvarrayofint_.Clear();
 }
-inline int32_t Unions__mVArrayOfint::_internal_mvarrayofint(int index) const {
-  return _impl_.mvarrayofint_.Get(index);
+inline int32_t Unions__mVArrayOfint::_internal_a_mvarrayofint(int index) const {
+  return _impl_.a_mvarrayofint_.Get(index);
 }
-inline int32_t Unions__mVArrayOfint::mvarrayofint(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint(index);
+inline int32_t Unions__mVArrayOfint::a_mvarrayofint(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint(index);
 }
-inline void Unions__mVArrayOfint::set_mvarrayofint(int index, int32_t value) {
-  _impl_.mvarrayofint_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions._mVArrayOfint.mVArrayOfint)
+inline void Unions__mVArrayOfint::set_a_mvarrayofint(int index, int32_t value) {
+  _impl_.a_mvarrayofint_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions._mVArrayOfint.a_mVArrayOfint)
 }
-inline void Unions__mVArrayOfint::_internal_add_mvarrayofint(int32_t value) {
-  _impl_.mvarrayofint_.Add(value);
+inline void Unions__mVArrayOfint::_internal_add_a_mvarrayofint(int32_t value) {
+  _impl_.a_mvarrayofint_.Add(value);
 }
-inline void Unions__mVArrayOfint::add_mvarrayofint(int32_t value) {
-  _internal_add_mvarrayofint(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfint.mVArrayOfint)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-Unions__mVArrayOfint::_internal_mvarrayofint() const {
-  return _impl_.mvarrayofint_;
+inline void Unions__mVArrayOfint::add_a_mvarrayofint(int32_t value) {
+  _internal_add_a_mvarrayofint(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfint.a_mVArrayOfint)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-Unions__mVArrayOfint::mvarrayofint() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Unions._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint();
+Unions__mVArrayOfint::_internal_a_mvarrayofint() const {
+  return _impl_.a_mvarrayofint_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+Unions__mVArrayOfint::a_mvarrayofint() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Unions._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-Unions__mVArrayOfint::_internal_mutable_mvarrayofint() {
-  return &_impl_.mvarrayofint_;
+Unions__mVArrayOfint::_internal_mutable_a_mvarrayofint() {
+  return &_impl_.a_mvarrayofint_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-Unions__mVArrayOfint::mutable_mvarrayofint() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Unions._mVArrayOfint.mVArrayOfint)
-  return _internal_mutable_mvarrayofint();
+Unions__mVArrayOfint::mutable_a_mvarrayofint() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Unions._mVArrayOfint.a_mVArrayOfint)
+  return _internal_mutable_a_mvarrayofint();
 }
 
 // -------------------------------------------------------------------
 
 // Unions__mVArrayOfPTestDataStructuresSub
 
-// repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-inline int Unions__mVArrayOfPTestDataStructuresSub::_internal_mvarrayofptestdatastructuressub_size() const {
-  return _impl_.mvarrayofptestdatastructuressub_.size();
+// repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+inline int Unions__mVArrayOfPTestDataStructuresSub::_internal_a_mvarrayofptestdatastructuressub_size() const {
+  return _impl_.a_mvarrayofptestdatastructuressub_.size();
 }
-inline int Unions__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub_size() const {
-  return _internal_mvarrayofptestdatastructuressub_size();
+inline int Unions__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub_size() const {
+  return _internal_a_mvarrayofptestdatastructuressub_size();
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::clear_mvarrayofptestdatastructuressub() {
-  _impl_.mvarrayofptestdatastructuressub_.Clear();
+inline void Unions__mVArrayOfPTestDataStructuresSub::clear_a_mvarrayofptestdatastructuressub() {
+  _impl_.a_mvarrayofptestdatastructuressub_.Clear();
 }
-inline std::string* Unions__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub() {
-  std::string* _s = _internal_add_mvarrayofptestdatastructuressub();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline std::string* Unions__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub() {
+  std::string* _s = _internal_add_a_mvarrayofptestdatastructuressub();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
   return _s;
 }
-inline const std::string& Unions__mVArrayOfPTestDataStructuresSub::_internal_mvarrayofptestdatastructuressub(int index) const {
-  return _impl_.mvarrayofptestdatastructuressub_.Get(index);
+inline const std::string& Unions__mVArrayOfPTestDataStructuresSub::_internal_a_mvarrayofptestdatastructuressub(int index) const {
+  return _impl_.a_mvarrayofptestdatastructuressub_.Get(index);
 }
-inline const std::string& Unions__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _internal_mvarrayofptestdatastructuressub(index);
+inline const std::string& Unions__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _internal_a_mvarrayofptestdatastructuressub(index);
 }
-inline std::string* Unions__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _impl_.mvarrayofptestdatastructuressub_.Mutable(index);
+inline std::string* Unions__mVArrayOfPTestDataStructuresSub::mutable_a_mvarrayofptestdatastructuressub(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index);
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const std::string& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Unions__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const std::string& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, std::string&& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Unions__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, std::string&& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const char* value) {
+inline void Unions__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const void* value, size_t size) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(
+inline void Unions__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const void* value, size_t size) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline std::string* Unions__mVArrayOfPTestDataStructuresSub::_internal_add_mvarrayofptestdatastructuressub() {
-  return _impl_.mvarrayofptestdatastructuressub_.Add();
+inline std::string* Unions__mVArrayOfPTestDataStructuresSub::_internal_add_a_mvarrayofptestdatastructuressub() {
+  return _impl_.a_mvarrayofptestdatastructuressub_.Add();
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const std::string& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Unions__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const std::string& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(std::string&& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Unions__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(std::string&& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const char* value) {
+inline void Unions__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void Unions__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const void* value, size_t size) {
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void Unions__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const void* value, size_t size) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Unions__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _impl_.mvarrayofptestdatastructuressub_;
+Unions__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _impl_.a_mvarrayofptestdatastructuressub_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Unions__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return &_impl_.mvarrayofptestdatastructuressub_;
+Unions__mVArrayOfPTestDataStructuresSub::mutable_a_mvarrayofptestdatastructuressub() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Unions._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return &_impl_.a_mvarrayofptestdatastructuressub_;
 }
 
 // -------------------------------------------------------------------
 
 // Unions__mVArrayOfActors
 
-// repeated .protobuf.mozilla._foo.Actors mVArrayOfActors = 1;
-inline int Unions__mVArrayOfActors::_internal_mvarrayofactors_size() const {
-  return _impl_.mvarrayofactors_.size();
+// repeated .protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
+inline int Unions__mVArrayOfActors::_internal_a_mvarrayofactors_size() const {
+  return _impl_.a_mvarrayofactors_.size();
 }
-inline int Unions__mVArrayOfActors::mvarrayofactors_size() const {
-  return _internal_mvarrayofactors_size();
+inline int Unions__mVArrayOfActors::a_mvarrayofactors_size() const {
+  return _internal_a_mvarrayofactors_size();
 }
-inline void Unions__mVArrayOfActors::clear_mvarrayofactors() {
-  _impl_.mvarrayofactors_.Clear();
+inline void Unions__mVArrayOfActors::clear_a_mvarrayofactors() {
+  _impl_.a_mvarrayofactors_.Clear();
 }
-inline ::protobuf::mozilla::_foo::Actors* Unions__mVArrayOfActors::mutable_mvarrayofactors(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Unions._mVArrayOfActors.mVArrayOfActors)
-  return _impl_.mvarrayofactors_.Mutable(index);
+inline ::protobuf::mozilla::_foo::Actors* Unions__mVArrayOfActors::mutable_a_mvarrayofactors(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Unions._mVArrayOfActors.a_mVArrayOfActors)
+  return _impl_.a_mvarrayofactors_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >*
-Unions__mVArrayOfActors::mutable_mvarrayofactors() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Unions._mVArrayOfActors.mVArrayOfActors)
-  return &_impl_.mvarrayofactors_;
+Unions__mVArrayOfActors::mutable_a_mvarrayofactors() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Unions._mVArrayOfActors.a_mVArrayOfActors)
+  return &_impl_.a_mvarrayofactors_;
 }
-inline const ::protobuf::mozilla::_foo::Actors& Unions__mVArrayOfActors::_internal_mvarrayofactors(int index) const {
-  return _impl_.mvarrayofactors_.Get(index);
+inline const ::protobuf::mozilla::_foo::Actors& Unions__mVArrayOfActors::_internal_a_mvarrayofactors(int index) const {
+  return _impl_.a_mvarrayofactors_.Get(index);
 }
-inline const ::protobuf::mozilla::_foo::Actors& Unions__mVArrayOfActors::mvarrayofactors(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions._mVArrayOfActors.mVArrayOfActors)
-  return _internal_mvarrayofactors(index);
+inline const ::protobuf::mozilla::_foo::Actors& Unions__mVArrayOfActors::a_mvarrayofactors(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions._mVArrayOfActors.a_mVArrayOfActors)
+  return _internal_a_mvarrayofactors(index);
 }
-inline ::protobuf::mozilla::_foo::Actors* Unions__mVArrayOfActors::_internal_add_mvarrayofactors() {
-  return _impl_.mvarrayofactors_.Add();
+inline ::protobuf::mozilla::_foo::Actors* Unions__mVArrayOfActors::_internal_add_a_mvarrayofactors() {
+  return _impl_.a_mvarrayofactors_.Add();
 }
-inline ::protobuf::mozilla::_foo::Actors* Unions__mVArrayOfActors::add_mvarrayofactors() {
-  ::protobuf::mozilla::_foo::Actors* _add = _internal_add_mvarrayofactors();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfActors.mVArrayOfActors)
+inline ::protobuf::mozilla::_foo::Actors* Unions__mVArrayOfActors::add_a_mvarrayofactors() {
+  ::protobuf::mozilla::_foo::Actors* _add = _internal_add_a_mvarrayofactors();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Unions._mVArrayOfActors.a_mVArrayOfActors)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >&
-Unions__mVArrayOfActors::mvarrayofactors() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Unions._mVArrayOfActors.mVArrayOfActors)
-  return _impl_.mvarrayofactors_;
+Unions__mVArrayOfActors::a_mvarrayofactors() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Unions._mVArrayOfActors.a_mVArrayOfActors)
+  return _impl_.a_mvarrayofactors_;
 }
 
 // -------------------------------------------------------------------
 
 // Unions
 
-// sint32 mVint = 1;
-inline bool Unions::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 1;
+inline bool Unions::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool Unions::has_mvint() const {
-  return _internal_has_mvint();
+inline bool Unions::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void Unions::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void Unions::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void Unions::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void Unions::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t Unions::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t Unions::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void Unions::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void Unions::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t Unions::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions.mVint)
-  return _internal_mvint();
+inline int32_t Unions::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Unions.a_mVint)
+  return _internal_a_mvint();
 }
-inline void Unions::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions.mVint)
+inline void Unions::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Unions.a_mVint)
 }
 
 // .protobuf.mozilla._foo.Unions._mVArrayOfint mVArrayOfint = 2;
@@ -7216,454 +7216,454 @@ inline Unions::ContentCase Unions::content_case() const {
 
 // Structs
 
-// required sint32 i = 1;
-inline bool Structs::_internal_has_i() const {
+// required sint32 a_i = 1;
+inline bool Structs::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Structs::has_i() const {
-  return _internal_has_i();
+inline bool Structs::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline void Structs::clear_i() {
-  _impl_.i_ = 0;
+inline void Structs::clear_a_i() {
+  _impl_.a_i_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Structs::_internal_i() const {
-  return _impl_.i_;
+inline int32_t Structs::_internal_a_i() const {
+  return _impl_.a_i_;
 }
-inline int32_t Structs::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.i)
-  return _internal_i();
+inline int32_t Structs::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.a_i)
+  return _internal_a_i();
 }
-inline void Structs::_internal_set_i(int32_t value) {
+inline void Structs::_internal_set_a_i(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.i_ = value;
+  _impl_.a_i_ = value;
 }
-inline void Structs::set_i(int32_t value) {
-  _internal_set_i(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.i)
-}
-
-// repeated sint32 ai = 2;
-inline int Structs::_internal_ai_size() const {
-  return _impl_.ai_.size();
-}
-inline int Structs::ai_size() const {
-  return _internal_ai_size();
-}
-inline void Structs::clear_ai() {
-  _impl_.ai_.Clear();
-}
-inline int32_t Structs::_internal_ai(int index) const {
-  return _impl_.ai_.Get(index);
-}
-inline int32_t Structs::ai(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.ai)
-  return _internal_ai(index);
-}
-inline void Structs::set_ai(int index, int32_t value) {
-  _impl_.ai_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.ai)
-}
-inline void Structs::_internal_add_ai(int32_t value) {
-  _impl_.ai_.Add(value);
-}
-inline void Structs::add_ai(int32_t value) {
-  _internal_add_ai(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.ai)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-Structs::_internal_ai() const {
-  return _impl_.ai_;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-Structs::ai() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Structs.ai)
-  return _internal_ai();
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-Structs::_internal_mutable_ai() {
-  return &_impl_.ai_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-Structs::mutable_ai() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Structs.ai)
-  return _internal_mutable_ai();
+inline void Structs::set_a_i(int32_t value) {
+  _internal_set_a_i(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.a_i)
 }
 
-// repeated bytes ap = 3;
-inline int Structs::_internal_ap_size() const {
-  return _impl_.ap_.size();
+// repeated sint32 a_ai = 2;
+inline int Structs::_internal_a_ai_size() const {
+  return _impl_.a_ai_.size();
 }
-inline int Structs::ap_size() const {
-  return _internal_ap_size();
+inline int Structs::a_ai_size() const {
+  return _internal_a_ai_size();
 }
-inline void Structs::clear_ap() {
-  _impl_.ap_.Clear();
+inline void Structs::clear_a_ai() {
+  _impl_.a_ai_.Clear();
 }
-inline std::string* Structs::add_ap() {
-  std::string* _s = _internal_add_ap();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.Structs.ap)
+inline int32_t Structs::_internal_a_ai(int index) const {
+  return _impl_.a_ai_.Get(index);
+}
+inline int32_t Structs::a_ai(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.a_ai)
+  return _internal_a_ai(index);
+}
+inline void Structs::set_a_ai(int index, int32_t value) {
+  _impl_.a_ai_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.a_ai)
+}
+inline void Structs::_internal_add_a_ai(int32_t value) {
+  _impl_.a_ai_.Add(value);
+}
+inline void Structs::add_a_ai(int32_t value) {
+  _internal_add_a_ai(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.a_ai)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+Structs::_internal_a_ai() const {
+  return _impl_.a_ai_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+Structs::a_ai() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Structs.a_ai)
+  return _internal_a_ai();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+Structs::_internal_mutable_a_ai() {
+  return &_impl_.a_ai_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+Structs::mutable_a_ai() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Structs.a_ai)
+  return _internal_mutable_a_ai();
+}
+
+// repeated bytes a_ap = 3;
+inline int Structs::_internal_a_ap_size() const {
+  return _impl_.a_ap_.size();
+}
+inline int Structs::a_ap_size() const {
+  return _internal_a_ap_size();
+}
+inline void Structs::clear_a_ap() {
+  _impl_.a_ap_.Clear();
+}
+inline std::string* Structs::add_a_ap() {
+  std::string* _s = _internal_add_a_ap();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.Structs.a_ap)
   return _s;
 }
-inline const std::string& Structs::_internal_ap(int index) const {
-  return _impl_.ap_.Get(index);
+inline const std::string& Structs::_internal_a_ap(int index) const {
+  return _impl_.a_ap_.Get(index);
 }
-inline const std::string& Structs::ap(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.ap)
-  return _internal_ap(index);
+inline const std::string& Structs::a_ap(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.a_ap)
+  return _internal_a_ap(index);
 }
-inline std::string* Structs::mutable_ap(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Structs.ap)
-  return _impl_.ap_.Mutable(index);
+inline std::string* Structs::mutable_a_ap(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Structs.a_ap)
+  return _impl_.a_ap_.Mutable(index);
 }
-inline void Structs::set_ap(int index, const std::string& value) {
-  _impl_.ap_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.ap)
+inline void Structs::set_a_ap(int index, const std::string& value) {
+  _impl_.a_ap_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline void Structs::set_ap(int index, std::string&& value) {
-  _impl_.ap_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.ap)
+inline void Structs::set_a_ap(int index, std::string&& value) {
+  _impl_.a_ap_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline void Structs::set_ap(int index, const char* value) {
+inline void Structs::set_a_ap(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ap_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.Structs.ap)
+  _impl_.a_ap_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline void Structs::set_ap(int index, const void* value, size_t size) {
-  _impl_.ap_.Mutable(index)->assign(
+inline void Structs::set_a_ap(int index, const void* value, size_t size) {
+  _impl_.a_ap_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.Structs.ap)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline std::string* Structs::_internal_add_ap() {
-  return _impl_.ap_.Add();
+inline std::string* Structs::_internal_add_a_ap() {
+  return _impl_.a_ap_.Add();
 }
-inline void Structs::add_ap(const std::string& value) {
-  _impl_.ap_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.ap)
+inline void Structs::add_a_ap(const std::string& value) {
+  _impl_.a_ap_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline void Structs::add_ap(std::string&& value) {
-  _impl_.ap_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.ap)
+inline void Structs::add_a_ap(std::string&& value) {
+  _impl_.a_ap_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline void Structs::add_ap(const char* value) {
+inline void Structs::add_a_ap(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ap_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.Structs.ap)
+  _impl_.a_ap_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.Structs.a_ap)
 }
-inline void Structs::add_ap(const void* value, size_t size) {
-  _impl_.ap_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.Structs.ap)
+inline void Structs::add_a_ap(const void* value, size_t size) {
+  _impl_.a_ap_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.Structs.a_ap)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Structs::ap() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Structs.ap)
-  return _impl_.ap_;
+Structs::a_ap() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Structs.a_ap)
+  return _impl_.a_ap_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Structs::mutable_ap() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Structs.ap)
-  return &_impl_.ap_;
+Structs::mutable_a_ap() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Structs.a_ap)
+  return &_impl_.a_ap_;
 }
 
-// repeated .protobuf.mozilla._foo.SActors aa = 4;
-inline int Structs::_internal_aa_size() const {
-  return _impl_.aa_.size();
+// repeated .protobuf.mozilla._foo.SActors a_aa = 4;
+inline int Structs::_internal_a_aa_size() const {
+  return _impl_.a_aa_.size();
 }
-inline int Structs::aa_size() const {
-  return _internal_aa_size();
+inline int Structs::a_aa_size() const {
+  return _internal_a_aa_size();
 }
-inline void Structs::clear_aa() {
-  _impl_.aa_.Clear();
+inline void Structs::clear_a_aa() {
+  _impl_.a_aa_.Clear();
 }
-inline ::protobuf::mozilla::_foo::SActors* Structs::mutable_aa(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Structs.aa)
-  return _impl_.aa_.Mutable(index);
+inline ::protobuf::mozilla::_foo::SActors* Structs::mutable_a_aa(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Structs.a_aa)
+  return _impl_.a_aa_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >*
-Structs::mutable_aa() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Structs.aa)
-  return &_impl_.aa_;
+Structs::mutable_a_aa() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.Structs.a_aa)
+  return &_impl_.a_aa_;
 }
-inline const ::protobuf::mozilla::_foo::SActors& Structs::_internal_aa(int index) const {
-  return _impl_.aa_.Get(index);
+inline const ::protobuf::mozilla::_foo::SActors& Structs::_internal_a_aa(int index) const {
+  return _impl_.a_aa_.Get(index);
 }
-inline const ::protobuf::mozilla::_foo::SActors& Structs::aa(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.aa)
-  return _internal_aa(index);
+inline const ::protobuf::mozilla::_foo::SActors& Structs::a_aa(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Structs.a_aa)
+  return _internal_a_aa(index);
 }
-inline ::protobuf::mozilla::_foo::SActors* Structs::_internal_add_aa() {
-  return _impl_.aa_.Add();
+inline ::protobuf::mozilla::_foo::SActors* Structs::_internal_add_a_aa() {
+  return _impl_.a_aa_.Add();
 }
-inline ::protobuf::mozilla::_foo::SActors* Structs::add_aa() {
-  ::protobuf::mozilla::_foo::SActors* _add = _internal_add_aa();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.aa)
+inline ::protobuf::mozilla::_foo::SActors* Structs::add_a_aa() {
+  ::protobuf::mozilla::_foo::SActors* _add = _internal_add_a_aa();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.Structs.a_aa)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
-Structs::aa() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Structs.aa)
-  return _impl_.aa_;
+Structs::a_aa() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.Structs.a_aa)
+  return _impl_.a_aa_;
 }
 
 // -------------------------------------------------------------------
 
 // WithStructs__mVArrayOfint
 
-// repeated sint32 mVArrayOfint = 1;
-inline int WithStructs__mVArrayOfint::_internal_mvarrayofint_size() const {
-  return _impl_.mvarrayofint_.size();
+// repeated sint32 a_mVArrayOfint = 1;
+inline int WithStructs__mVArrayOfint::_internal_a_mvarrayofint_size() const {
+  return _impl_.a_mvarrayofint_.size();
 }
-inline int WithStructs__mVArrayOfint::mvarrayofint_size() const {
-  return _internal_mvarrayofint_size();
+inline int WithStructs__mVArrayOfint::a_mvarrayofint_size() const {
+  return _internal_a_mvarrayofint_size();
 }
-inline void WithStructs__mVArrayOfint::clear_mvarrayofint() {
-  _impl_.mvarrayofint_.Clear();
+inline void WithStructs__mVArrayOfint::clear_a_mvarrayofint() {
+  _impl_.a_mvarrayofint_.Clear();
 }
-inline int32_t WithStructs__mVArrayOfint::_internal_mvarrayofint(int index) const {
-  return _impl_.mvarrayofint_.Get(index);
+inline int32_t WithStructs__mVArrayOfint::_internal_a_mvarrayofint(int index) const {
+  return _impl_.a_mvarrayofint_.Get(index);
 }
-inline int32_t WithStructs__mVArrayOfint::mvarrayofint(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint(index);
+inline int32_t WithStructs__mVArrayOfint::a_mvarrayofint(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint(index);
 }
-inline void WithStructs__mVArrayOfint::set_mvarrayofint(int index, int32_t value) {
-  _impl_.mvarrayofint_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs._mVArrayOfint.mVArrayOfint)
+inline void WithStructs__mVArrayOfint::set_a_mvarrayofint(int index, int32_t value) {
+  _impl_.a_mvarrayofint_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs._mVArrayOfint.a_mVArrayOfint)
 }
-inline void WithStructs__mVArrayOfint::_internal_add_mvarrayofint(int32_t value) {
-  _impl_.mvarrayofint_.Add(value);
+inline void WithStructs__mVArrayOfint::_internal_add_a_mvarrayofint(int32_t value) {
+  _impl_.a_mvarrayofint_.Add(value);
 }
-inline void WithStructs__mVArrayOfint::add_mvarrayofint(int32_t value) {
-  _internal_add_mvarrayofint(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfint.mVArrayOfint)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-WithStructs__mVArrayOfint::_internal_mvarrayofint() const {
-  return _impl_.mvarrayofint_;
+inline void WithStructs__mVArrayOfint::add_a_mvarrayofint(int32_t value) {
+  _internal_add_a_mvarrayofint(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfint.a_mVArrayOfint)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-WithStructs__mVArrayOfint::mvarrayofint() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfint.mVArrayOfint)
-  return _internal_mvarrayofint();
+WithStructs__mVArrayOfint::_internal_a_mvarrayofint() const {
+  return _impl_.a_mvarrayofint_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+WithStructs__mVArrayOfint::a_mvarrayofint() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfint.a_mVArrayOfint)
+  return _internal_a_mvarrayofint();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-WithStructs__mVArrayOfint::_internal_mutable_mvarrayofint() {
-  return &_impl_.mvarrayofint_;
+WithStructs__mVArrayOfint::_internal_mutable_a_mvarrayofint() {
+  return &_impl_.a_mvarrayofint_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-WithStructs__mVArrayOfint::mutable_mvarrayofint() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfint.mVArrayOfint)
-  return _internal_mutable_mvarrayofint();
+WithStructs__mVArrayOfint::mutable_a_mvarrayofint() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfint.a_mVArrayOfint)
+  return _internal_mutable_a_mvarrayofint();
 }
 
 // -------------------------------------------------------------------
 
 // WithStructs__mVArrayOfPTestDataStructuresSub
 
-// repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-inline int WithStructs__mVArrayOfPTestDataStructuresSub::_internal_mvarrayofptestdatastructuressub_size() const {
-  return _impl_.mvarrayofptestdatastructuressub_.size();
+// repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+inline int WithStructs__mVArrayOfPTestDataStructuresSub::_internal_a_mvarrayofptestdatastructuressub_size() const {
+  return _impl_.a_mvarrayofptestdatastructuressub_.size();
 }
-inline int WithStructs__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub_size() const {
-  return _internal_mvarrayofptestdatastructuressub_size();
+inline int WithStructs__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub_size() const {
+  return _internal_a_mvarrayofptestdatastructuressub_size();
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::clear_mvarrayofptestdatastructuressub() {
-  _impl_.mvarrayofptestdatastructuressub_.Clear();
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::clear_a_mvarrayofptestdatastructuressub() {
+  _impl_.a_mvarrayofptestdatastructuressub_.Clear();
 }
-inline std::string* WithStructs__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub() {
-  std::string* _s = _internal_add_mvarrayofptestdatastructuressub();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline std::string* WithStructs__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub() {
+  std::string* _s = _internal_add_a_mvarrayofptestdatastructuressub();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
   return _s;
 }
-inline const std::string& WithStructs__mVArrayOfPTestDataStructuresSub::_internal_mvarrayofptestdatastructuressub(int index) const {
-  return _impl_.mvarrayofptestdatastructuressub_.Get(index);
+inline const std::string& WithStructs__mVArrayOfPTestDataStructuresSub::_internal_a_mvarrayofptestdatastructuressub(int index) const {
+  return _impl_.a_mvarrayofptestdatastructuressub_.Get(index);
 }
-inline const std::string& WithStructs__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _internal_mvarrayofptestdatastructuressub(index);
+inline const std::string& WithStructs__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _internal_a_mvarrayofptestdatastructuressub(index);
 }
-inline std::string* WithStructs__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _impl_.mvarrayofptestdatastructuressub_.Mutable(index);
+inline std::string* WithStructs__mVArrayOfPTestDataStructuresSub::mutable_a_mvarrayofptestdatastructuressub(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index);
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const std::string& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const std::string& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, std::string&& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, std::string&& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const char* value) {
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_mvarrayofptestdatastructuressub(int index, const void* value, size_t size) {
-  _impl_.mvarrayofptestdatastructuressub_.Mutable(index)->assign(
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::set_a_mvarrayofptestdatastructuressub(int index, const void* value, size_t size) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline std::string* WithStructs__mVArrayOfPTestDataStructuresSub::_internal_add_mvarrayofptestdatastructuressub() {
-  return _impl_.mvarrayofptestdatastructuressub_.Add();
+inline std::string* WithStructs__mVArrayOfPTestDataStructuresSub::_internal_add_a_mvarrayofptestdatastructuressub() {
+  return _impl_.a_mvarrayofptestdatastructuressub_.Add();
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const std::string& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const std::string& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(std::string&& value) {
-  _impl_.mvarrayofptestdatastructuressub_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(std::string&& value) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const char* value) {
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
-inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_mvarrayofptestdatastructuressub(const void* value, size_t size) {
-  _impl_.mvarrayofptestdatastructuressub_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
+inline void WithStructs__mVArrayOfPTestDataStructuresSub::add_a_mvarrayofptestdatastructuressub(const void* value, size_t size) {
+  _impl_.a_mvarrayofptestdatastructuressub_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-WithStructs__mVArrayOfPTestDataStructuresSub::mvarrayofptestdatastructuressub() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return _impl_.mvarrayofptestdatastructuressub_;
+WithStructs__mVArrayOfPTestDataStructuresSub::a_mvarrayofptestdatastructuressub() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return _impl_.a_mvarrayofptestdatastructuressub_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-WithStructs__mVArrayOfPTestDataStructuresSub::mutable_mvarrayofptestdatastructuressub() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.mVArrayOfPTestDataStructuresSub)
-  return &_impl_.mvarrayofptestdatastructuressub_;
+WithStructs__mVArrayOfPTestDataStructuresSub::mutable_a_mvarrayofptestdatastructuressub() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfPTestDataStructuresSub.a_mVArrayOfPTestDataStructuresSub)
+  return &_impl_.a_mvarrayofptestdatastructuressub_;
 }
 
 // -------------------------------------------------------------------
 
 // WithStructs__mVArrayOfSActors
 
-// repeated .protobuf.mozilla._foo.SActors mVArrayOfSActors = 1;
-inline int WithStructs__mVArrayOfSActors::_internal_mvarrayofsactors_size() const {
-  return _impl_.mvarrayofsactors_.size();
+// repeated .protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
+inline int WithStructs__mVArrayOfSActors::_internal_a_mvarrayofsactors_size() const {
+  return _impl_.a_mvarrayofsactors_.size();
 }
-inline int WithStructs__mVArrayOfSActors::mvarrayofsactors_size() const {
-  return _internal_mvarrayofsactors_size();
+inline int WithStructs__mVArrayOfSActors::a_mvarrayofsactors_size() const {
+  return _internal_a_mvarrayofsactors_size();
 }
-inline void WithStructs__mVArrayOfSActors::clear_mvarrayofsactors() {
-  _impl_.mvarrayofsactors_.Clear();
+inline void WithStructs__mVArrayOfSActors::clear_a_mvarrayofsactors() {
+  _impl_.a_mvarrayofsactors_.Clear();
 }
-inline ::protobuf::mozilla::_foo::SActors* WithStructs__mVArrayOfSActors::mutable_mvarrayofsactors(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.mVArrayOfSActors)
-  return _impl_.mvarrayofsactors_.Mutable(index);
+inline ::protobuf::mozilla::_foo::SActors* WithStructs__mVArrayOfSActors::mutable_a_mvarrayofsactors(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.a_mVArrayOfSActors)
+  return _impl_.a_mvarrayofsactors_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >*
-WithStructs__mVArrayOfSActors::mutable_mvarrayofsactors() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.mVArrayOfSActors)
-  return &_impl_.mvarrayofsactors_;
+WithStructs__mVArrayOfSActors::mutable_a_mvarrayofsactors() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.a_mVArrayOfSActors)
+  return &_impl_.a_mvarrayofsactors_;
 }
-inline const ::protobuf::mozilla::_foo::SActors& WithStructs__mVArrayOfSActors::_internal_mvarrayofsactors(int index) const {
-  return _impl_.mvarrayofsactors_.Get(index);
+inline const ::protobuf::mozilla::_foo::SActors& WithStructs__mVArrayOfSActors::_internal_a_mvarrayofsactors(int index) const {
+  return _impl_.a_mvarrayofsactors_.Get(index);
 }
-inline const ::protobuf::mozilla::_foo::SActors& WithStructs__mVArrayOfSActors::mvarrayofsactors(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.mVArrayOfSActors)
-  return _internal_mvarrayofsactors(index);
+inline const ::protobuf::mozilla::_foo::SActors& WithStructs__mVArrayOfSActors::a_mvarrayofsactors(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.a_mVArrayOfSActors)
+  return _internal_a_mvarrayofsactors(index);
 }
-inline ::protobuf::mozilla::_foo::SActors* WithStructs__mVArrayOfSActors::_internal_add_mvarrayofsactors() {
-  return _impl_.mvarrayofsactors_.Add();
+inline ::protobuf::mozilla::_foo::SActors* WithStructs__mVArrayOfSActors::_internal_add_a_mvarrayofsactors() {
+  return _impl_.a_mvarrayofsactors_.Add();
 }
-inline ::protobuf::mozilla::_foo::SActors* WithStructs__mVArrayOfSActors::add_mvarrayofsactors() {
-  ::protobuf::mozilla::_foo::SActors* _add = _internal_add_mvarrayofsactors();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.mVArrayOfSActors)
+inline ::protobuf::mozilla::_foo::SActors* WithStructs__mVArrayOfSActors::add_a_mvarrayofsactors() {
+  ::protobuf::mozilla::_foo::SActors* _add = _internal_add_a_mvarrayofsactors();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.a_mVArrayOfSActors)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::SActors >&
-WithStructs__mVArrayOfSActors::mvarrayofsactors() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.mVArrayOfSActors)
-  return _impl_.mvarrayofsactors_;
+WithStructs__mVArrayOfSActors::a_mvarrayofsactors() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfSActors.a_mVArrayOfSActors)
+  return _impl_.a_mvarrayofsactors_;
 }
 
 // -------------------------------------------------------------------
 
 // WithStructs__mVArrayOfStructs
 
-// repeated .protobuf.mozilla._foo.Structs mVArrayOfStructs = 1;
-inline int WithStructs__mVArrayOfStructs::_internal_mvarrayofstructs_size() const {
-  return _impl_.mvarrayofstructs_.size();
+// repeated .protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
+inline int WithStructs__mVArrayOfStructs::_internal_a_mvarrayofstructs_size() const {
+  return _impl_.a_mvarrayofstructs_.size();
 }
-inline int WithStructs__mVArrayOfStructs::mvarrayofstructs_size() const {
-  return _internal_mvarrayofstructs_size();
+inline int WithStructs__mVArrayOfStructs::a_mvarrayofstructs_size() const {
+  return _internal_a_mvarrayofstructs_size();
 }
-inline void WithStructs__mVArrayOfStructs::clear_mvarrayofstructs() {
-  _impl_.mvarrayofstructs_.Clear();
+inline void WithStructs__mVArrayOfStructs::clear_a_mvarrayofstructs() {
+  _impl_.a_mvarrayofstructs_.Clear();
 }
-inline ::protobuf::mozilla::_foo::Structs* WithStructs__mVArrayOfStructs::mutable_mvarrayofstructs(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.mVArrayOfStructs)
-  return _impl_.mvarrayofstructs_.Mutable(index);
+inline ::protobuf::mozilla::_foo::Structs* WithStructs__mVArrayOfStructs::mutable_a_mvarrayofstructs(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.a_mVArrayOfStructs)
+  return _impl_.a_mvarrayofstructs_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Structs >*
-WithStructs__mVArrayOfStructs::mutable_mvarrayofstructs() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.mVArrayOfStructs)
-  return &_impl_.mvarrayofstructs_;
+WithStructs__mVArrayOfStructs::mutable_a_mvarrayofstructs() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.a_mVArrayOfStructs)
+  return &_impl_.a_mvarrayofstructs_;
 }
-inline const ::protobuf::mozilla::_foo::Structs& WithStructs__mVArrayOfStructs::_internal_mvarrayofstructs(int index) const {
-  return _impl_.mvarrayofstructs_.Get(index);
+inline const ::protobuf::mozilla::_foo::Structs& WithStructs__mVArrayOfStructs::_internal_a_mvarrayofstructs(int index) const {
+  return _impl_.a_mvarrayofstructs_.Get(index);
 }
-inline const ::protobuf::mozilla::_foo::Structs& WithStructs__mVArrayOfStructs::mvarrayofstructs(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.mVArrayOfStructs)
-  return _internal_mvarrayofstructs(index);
+inline const ::protobuf::mozilla::_foo::Structs& WithStructs__mVArrayOfStructs::a_mvarrayofstructs(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.a_mVArrayOfStructs)
+  return _internal_a_mvarrayofstructs(index);
 }
-inline ::protobuf::mozilla::_foo::Structs* WithStructs__mVArrayOfStructs::_internal_add_mvarrayofstructs() {
-  return _impl_.mvarrayofstructs_.Add();
+inline ::protobuf::mozilla::_foo::Structs* WithStructs__mVArrayOfStructs::_internal_add_a_mvarrayofstructs() {
+  return _impl_.a_mvarrayofstructs_.Add();
 }
-inline ::protobuf::mozilla::_foo::Structs* WithStructs__mVArrayOfStructs::add_mvarrayofstructs() {
-  ::protobuf::mozilla::_foo::Structs* _add = _internal_add_mvarrayofstructs();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.mVArrayOfStructs)
+inline ::protobuf::mozilla::_foo::Structs* WithStructs__mVArrayOfStructs::add_a_mvarrayofstructs() {
+  ::protobuf::mozilla::_foo::Structs* _add = _internal_add_a_mvarrayofstructs();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.a_mVArrayOfStructs)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Structs >&
-WithStructs__mVArrayOfStructs::mvarrayofstructs() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.mVArrayOfStructs)
-  return _impl_.mvarrayofstructs_;
+WithStructs__mVArrayOfStructs::a_mvarrayofstructs() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithStructs._mVArrayOfStructs.a_mVArrayOfStructs)
+  return _impl_.a_mvarrayofstructs_;
 }
 
 // -------------------------------------------------------------------
 
 // WithStructs
 
-// sint32 mVint = 1;
-inline bool WithStructs::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 1;
+inline bool WithStructs::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool WithStructs::has_mvint() const {
-  return _internal_has_mvint();
+inline bool WithStructs::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void WithStructs::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void WithStructs::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void WithStructs::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void WithStructs::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t WithStructs::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t WithStructs::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void WithStructs::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void WithStructs::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t WithStructs::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs.mVint)
-  return _internal_mvint();
+inline int32_t WithStructs::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithStructs.a_mVint)
+  return _internal_a_mvint();
 }
-inline void WithStructs::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs.mVint)
+inline void WithStructs::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithStructs.a_mVint)
 }
 
 // .protobuf.mozilla._foo.WithStructs._mVArrayOfint mVArrayOfint = 2;
@@ -7975,481 +7975,481 @@ inline WithStructs::ContentCase WithStructs::content_case() const {
 
 // WithUnions
 
-// required sint32 i = 1;
-inline bool WithUnions::_internal_has_i() const {
+// required sint32 a_i = 1;
+inline bool WithUnions::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool WithUnions::has_i() const {
-  return _internal_has_i();
+inline bool WithUnions::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline void WithUnions::clear_i() {
-  _impl_.i_ = 0;
+inline void WithUnions::clear_a_i() {
+  _impl_.a_i_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t WithUnions::_internal_i() const {
-  return _impl_.i_;
+inline int32_t WithUnions::_internal_a_i() const {
+  return _impl_.a_i_;
 }
-inline int32_t WithUnions::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.i)
-  return _internal_i();
+inline int32_t WithUnions::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.a_i)
+  return _internal_a_i();
 }
-inline void WithUnions::_internal_set_i(int32_t value) {
+inline void WithUnions::_internal_set_a_i(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.i_ = value;
+  _impl_.a_i_ = value;
 }
-inline void WithUnions::set_i(int32_t value) {
-  _internal_set_i(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.i)
-}
-
-// repeated sint32 ai = 2;
-inline int WithUnions::_internal_ai_size() const {
-  return _impl_.ai_.size();
-}
-inline int WithUnions::ai_size() const {
-  return _internal_ai_size();
-}
-inline void WithUnions::clear_ai() {
-  _impl_.ai_.Clear();
-}
-inline int32_t WithUnions::_internal_ai(int index) const {
-  return _impl_.ai_.Get(index);
-}
-inline int32_t WithUnions::ai(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.ai)
-  return _internal_ai(index);
-}
-inline void WithUnions::set_ai(int index, int32_t value) {
-  _impl_.ai_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.ai)
-}
-inline void WithUnions::_internal_add_ai(int32_t value) {
-  _impl_.ai_.Add(value);
-}
-inline void WithUnions::add_ai(int32_t value) {
-  _internal_add_ai(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.ai)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-WithUnions::_internal_ai() const {
-  return _impl_.ai_;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-WithUnions::ai() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.ai)
-  return _internal_ai();
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-WithUnions::_internal_mutable_ai() {
-  return &_impl_.ai_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-WithUnions::mutable_ai() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.ai)
-  return _internal_mutable_ai();
+inline void WithUnions::set_a_i(int32_t value) {
+  _internal_set_a_i(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.a_i)
 }
 
-// repeated bytes ap = 3;
-inline int WithUnions::_internal_ap_size() const {
-  return _impl_.ap_.size();
+// repeated sint32 a_ai = 2;
+inline int WithUnions::_internal_a_ai_size() const {
+  return _impl_.a_ai_.size();
 }
-inline int WithUnions::ap_size() const {
-  return _internal_ap_size();
+inline int WithUnions::a_ai_size() const {
+  return _internal_a_ai_size();
 }
-inline void WithUnions::clear_ap() {
-  _impl_.ap_.Clear();
+inline void WithUnions::clear_a_ai() {
+  _impl_.a_ai_.Clear();
 }
-inline std::string* WithUnions::add_ap() {
-  std::string* _s = _internal_add_ap();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.WithUnions.ap)
+inline int32_t WithUnions::_internal_a_ai(int index) const {
+  return _impl_.a_ai_.Get(index);
+}
+inline int32_t WithUnions::a_ai(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.a_ai)
+  return _internal_a_ai(index);
+}
+inline void WithUnions::set_a_ai(int index, int32_t value) {
+  _impl_.a_ai_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.a_ai)
+}
+inline void WithUnions::_internal_add_a_ai(int32_t value) {
+  _impl_.a_ai_.Add(value);
+}
+inline void WithUnions::add_a_ai(int32_t value) {
+  _internal_add_a_ai(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.a_ai)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+WithUnions::_internal_a_ai() const {
+  return _impl_.a_ai_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+WithUnions::a_ai() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.a_ai)
+  return _internal_a_ai();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+WithUnions::_internal_mutable_a_ai() {
+  return &_impl_.a_ai_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+WithUnions::mutable_a_ai() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.a_ai)
+  return _internal_mutable_a_ai();
+}
+
+// repeated bytes a_ap = 3;
+inline int WithUnions::_internal_a_ap_size() const {
+  return _impl_.a_ap_.size();
+}
+inline int WithUnions::a_ap_size() const {
+  return _internal_a_ap_size();
+}
+inline void WithUnions::clear_a_ap() {
+  _impl_.a_ap_.Clear();
+}
+inline std::string* WithUnions::add_a_ap() {
+  std::string* _s = _internal_add_a_ap();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._foo.WithUnions.a_ap)
   return _s;
 }
-inline const std::string& WithUnions::_internal_ap(int index) const {
-  return _impl_.ap_.Get(index);
+inline const std::string& WithUnions::_internal_a_ap(int index) const {
+  return _impl_.a_ap_.Get(index);
 }
-inline const std::string& WithUnions::ap(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.ap)
-  return _internal_ap(index);
+inline const std::string& WithUnions::a_ap(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.a_ap)
+  return _internal_a_ap(index);
 }
-inline std::string* WithUnions::mutable_ap(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithUnions.ap)
-  return _impl_.ap_.Mutable(index);
+inline std::string* WithUnions::mutable_a_ap(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithUnions.a_ap)
+  return _impl_.a_ap_.Mutable(index);
 }
-inline void WithUnions::set_ap(int index, const std::string& value) {
-  _impl_.ap_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.ap)
+inline void WithUnions::set_a_ap(int index, const std::string& value) {
+  _impl_.a_ap_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline void WithUnions::set_ap(int index, std::string&& value) {
-  _impl_.ap_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.ap)
+inline void WithUnions::set_a_ap(int index, std::string&& value) {
+  _impl_.a_ap_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline void WithUnions::set_ap(int index, const char* value) {
+inline void WithUnions::set_a_ap(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ap_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.WithUnions.ap)
+  _impl_.a_ap_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline void WithUnions::set_ap(int index, const void* value, size_t size) {
-  _impl_.ap_.Mutable(index)->assign(
+inline void WithUnions::set_a_ap(int index, const void* value, size_t size) {
+  _impl_.a_ap_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.WithUnions.ap)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline std::string* WithUnions::_internal_add_ap() {
-  return _impl_.ap_.Add();
+inline std::string* WithUnions::_internal_add_a_ap() {
+  return _impl_.a_ap_.Add();
 }
-inline void WithUnions::add_ap(const std::string& value) {
-  _impl_.ap_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.ap)
+inline void WithUnions::add_a_ap(const std::string& value) {
+  _impl_.a_ap_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline void WithUnions::add_ap(std::string&& value) {
-  _impl_.ap_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.ap)
+inline void WithUnions::add_a_ap(std::string&& value) {
+  _impl_.a_ap_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline void WithUnions::add_ap(const char* value) {
+inline void WithUnions::add_a_ap(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ap_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.WithUnions.ap)
+  _impl_.a_ap_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._foo.WithUnions.a_ap)
 }
-inline void WithUnions::add_ap(const void* value, size_t size) {
-  _impl_.ap_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.WithUnions.ap)
+inline void WithUnions::add_a_ap(const void* value, size_t size) {
+  _impl_.a_ap_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._foo.WithUnions.a_ap)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-WithUnions::ap() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.ap)
-  return _impl_.ap_;
+WithUnions::a_ap() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.a_ap)
+  return _impl_.a_ap_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-WithUnions::mutable_ap() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.ap)
-  return &_impl_.ap_;
+WithUnions::mutable_a_ap() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.a_ap)
+  return &_impl_.a_ap_;
 }
 
-// repeated .protobuf.mozilla._foo.Actors aa = 4;
-inline int WithUnions::_internal_aa_size() const {
-  return _impl_.aa_.size();
+// repeated .protobuf.mozilla._foo.Actors a_aa = 4;
+inline int WithUnions::_internal_a_aa_size() const {
+  return _impl_.a_aa_.size();
 }
-inline int WithUnions::aa_size() const {
-  return _internal_aa_size();
+inline int WithUnions::a_aa_size() const {
+  return _internal_a_aa_size();
 }
-inline void WithUnions::clear_aa() {
-  _impl_.aa_.Clear();
+inline void WithUnions::clear_a_aa() {
+  _impl_.a_aa_.Clear();
 }
-inline ::protobuf::mozilla::_foo::Actors* WithUnions::mutable_aa(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithUnions.aa)
-  return _impl_.aa_.Mutable(index);
+inline ::protobuf::mozilla::_foo::Actors* WithUnions::mutable_a_aa(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithUnions.a_aa)
+  return _impl_.a_aa_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >*
-WithUnions::mutable_aa() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.aa)
-  return &_impl_.aa_;
+WithUnions::mutable_a_aa() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.a_aa)
+  return &_impl_.a_aa_;
 }
-inline const ::protobuf::mozilla::_foo::Actors& WithUnions::_internal_aa(int index) const {
-  return _impl_.aa_.Get(index);
+inline const ::protobuf::mozilla::_foo::Actors& WithUnions::_internal_a_aa(int index) const {
+  return _impl_.a_aa_.Get(index);
 }
-inline const ::protobuf::mozilla::_foo::Actors& WithUnions::aa(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.aa)
-  return _internal_aa(index);
+inline const ::protobuf::mozilla::_foo::Actors& WithUnions::a_aa(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.a_aa)
+  return _internal_a_aa(index);
 }
-inline ::protobuf::mozilla::_foo::Actors* WithUnions::_internal_add_aa() {
-  return _impl_.aa_.Add();
+inline ::protobuf::mozilla::_foo::Actors* WithUnions::_internal_add_a_aa() {
+  return _impl_.a_aa_.Add();
 }
-inline ::protobuf::mozilla::_foo::Actors* WithUnions::add_aa() {
-  ::protobuf::mozilla::_foo::Actors* _add = _internal_add_aa();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.aa)
+inline ::protobuf::mozilla::_foo::Actors* WithUnions::add_a_aa() {
+  ::protobuf::mozilla::_foo::Actors* _add = _internal_add_a_aa();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.a_aa)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Actors >&
-WithUnions::aa() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.aa)
-  return _impl_.aa_;
+WithUnions::a_aa() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.a_aa)
+  return _impl_.a_aa_;
 }
 
-// repeated .protobuf.mozilla._foo.Unions au = 5;
-inline int WithUnions::_internal_au_size() const {
-  return _impl_.au_.size();
+// repeated .protobuf.mozilla._foo.Unions a_au = 5;
+inline int WithUnions::_internal_a_au_size() const {
+  return _impl_.a_au_.size();
 }
-inline int WithUnions::au_size() const {
-  return _internal_au_size();
+inline int WithUnions::a_au_size() const {
+  return _internal_a_au_size();
 }
-inline void WithUnions::clear_au() {
-  _impl_.au_.Clear();
+inline void WithUnions::clear_a_au() {
+  _impl_.a_au_.Clear();
 }
-inline ::protobuf::mozilla::_foo::Unions* WithUnions::mutable_au(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithUnions.au)
-  return _impl_.au_.Mutable(index);
+inline ::protobuf::mozilla::_foo::Unions* WithUnions::mutable_a_au(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.WithUnions.a_au)
+  return _impl_.a_au_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >*
-WithUnions::mutable_au() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.au)
-  return &_impl_.au_;
+WithUnions::mutable_a_au() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._foo.WithUnions.a_au)
+  return &_impl_.a_au_;
 }
-inline const ::protobuf::mozilla::_foo::Unions& WithUnions::_internal_au(int index) const {
-  return _impl_.au_.Get(index);
+inline const ::protobuf::mozilla::_foo::Unions& WithUnions::_internal_a_au(int index) const {
+  return _impl_.a_au_.Get(index);
 }
-inline const ::protobuf::mozilla::_foo::Unions& WithUnions::au(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.au)
-  return _internal_au(index);
+inline const ::protobuf::mozilla::_foo::Unions& WithUnions::a_au(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.WithUnions.a_au)
+  return _internal_a_au(index);
 }
-inline ::protobuf::mozilla::_foo::Unions* WithUnions::_internal_add_au() {
-  return _impl_.au_.Add();
+inline ::protobuf::mozilla::_foo::Unions* WithUnions::_internal_add_a_au() {
+  return _impl_.a_au_.Add();
 }
-inline ::protobuf::mozilla::_foo::Unions* WithUnions::add_au() {
-  ::protobuf::mozilla::_foo::Unions* _add = _internal_add_au();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.au)
+inline ::protobuf::mozilla::_foo::Unions* WithUnions::add_a_au() {
+  ::protobuf::mozilla::_foo::Unions* _add = _internal_add_a_au();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._foo.WithUnions.a_au)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_foo::Unions >&
-WithUnions::au() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.au)
-  return _impl_.au_;
+WithUnions::a_au() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._foo.WithUnions.a_au)
+  return _impl_.a_au_;
 }
 
 // -------------------------------------------------------------------
 
 // CommonAttrs
 
-// required bool dummy = 1;
-inline bool CommonAttrs::_internal_has_dummy() const {
+// required bool a_dummy = 1;
+inline bool CommonAttrs::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CommonAttrs::has_dummy() const {
-  return _internal_has_dummy();
+inline bool CommonAttrs::has_a_dummy() const {
+  return _internal_has_a_dummy();
 }
-inline void CommonAttrs::clear_dummy() {
-  _impl_.dummy_ = false;
+inline void CommonAttrs::clear_a_dummy() {
+  _impl_.a_dummy_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool CommonAttrs::_internal_dummy() const {
-  return _impl_.dummy_;
+inline bool CommonAttrs::_internal_a_dummy() const {
+  return _impl_.a_dummy_;
 }
-inline bool CommonAttrs::dummy() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.CommonAttrs.dummy)
-  return _internal_dummy();
+inline bool CommonAttrs::a_dummy() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.CommonAttrs.a_dummy)
+  return _internal_a_dummy();
 }
-inline void CommonAttrs::_internal_set_dummy(bool value) {
+inline void CommonAttrs::_internal_set_a_dummy(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dummy_ = value;
+  _impl_.a_dummy_ = value;
 }
-inline void CommonAttrs::set_dummy(bool value) {
-  _internal_set_dummy(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.CommonAttrs.dummy)
+inline void CommonAttrs::set_a_dummy(bool value) {
+  _internal_set_a_dummy(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.CommonAttrs.a_dummy)
 }
 
 // -------------------------------------------------------------------
 
 // FooAttrs
 
-// required sint32 dummy = 1;
-inline bool FooAttrs::_internal_has_dummy() const {
+// required sint32 a_dummy = 1;
+inline bool FooAttrs::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FooAttrs::has_dummy() const {
-  return _internal_has_dummy();
+inline bool FooAttrs::has_a_dummy() const {
+  return _internal_has_a_dummy();
 }
-inline void FooAttrs::clear_dummy() {
-  _impl_.dummy_ = 0;
+inline void FooAttrs::clear_a_dummy() {
+  _impl_.a_dummy_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t FooAttrs::_internal_dummy() const {
-  return _impl_.dummy_;
+inline int32_t FooAttrs::_internal_a_dummy() const {
+  return _impl_.a_dummy_;
 }
-inline int32_t FooAttrs::dummy() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.FooAttrs.dummy)
-  return _internal_dummy();
+inline int32_t FooAttrs::a_dummy() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.FooAttrs.a_dummy)
+  return _internal_a_dummy();
 }
-inline void FooAttrs::_internal_set_dummy(int32_t value) {
+inline void FooAttrs::_internal_set_a_dummy(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dummy_ = value;
+  _impl_.a_dummy_ = value;
 }
-inline void FooAttrs::set_dummy(int32_t value) {
-  _internal_set_dummy(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.FooAttrs.dummy)
+inline void FooAttrs::set_a_dummy(int32_t value) {
+  _internal_set_a_dummy(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.FooAttrs.a_dummy)
 }
 
 // -------------------------------------------------------------------
 
 // BarAttrs
 
-// required float dummy = 1;
-inline bool BarAttrs::_internal_has_dummy() const {
+// required float a_dummy = 1;
+inline bool BarAttrs::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool BarAttrs::has_dummy() const {
-  return _internal_has_dummy();
+inline bool BarAttrs::has_a_dummy() const {
+  return _internal_has_a_dummy();
 }
-inline void BarAttrs::clear_dummy() {
-  _impl_.dummy_ = 0;
+inline void BarAttrs::clear_a_dummy() {
+  _impl_.a_dummy_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline float BarAttrs::_internal_dummy() const {
-  return _impl_.dummy_;
+inline float BarAttrs::_internal_a_dummy() const {
+  return _impl_.a_dummy_;
 }
-inline float BarAttrs::dummy() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.BarAttrs.dummy)
-  return _internal_dummy();
+inline float BarAttrs::a_dummy() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.BarAttrs.a_dummy)
+  return _internal_a_dummy();
 }
-inline void BarAttrs::_internal_set_dummy(float value) {
+inline void BarAttrs::_internal_set_a_dummy(float value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dummy_ = value;
+  _impl_.a_dummy_ = value;
 }
-inline void BarAttrs::set_dummy(float value) {
-  _internal_set_dummy(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.BarAttrs.dummy)
+inline void BarAttrs::set_a_dummy(float value) {
+  _internal_set_a_dummy(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.BarAttrs.a_dummy)
 }
 
 // -------------------------------------------------------------------
 
 // SpecificAttrs
 
-// .protobuf.mozilla._foo.FooAttrs mVFooAttrs = 1;
-inline bool SpecificAttrs::_internal_has_mvfooattrs() const {
-  return content_case() == kMVFooAttrs;
+// .protobuf.mozilla._foo.FooAttrs a_mVFooAttrs = 1;
+inline bool SpecificAttrs::_internal_has_a_mvfooattrs() const {
+  return content_case() == kAMVFooAttrs;
 }
-inline bool SpecificAttrs::has_mvfooattrs() const {
-  return _internal_has_mvfooattrs();
+inline bool SpecificAttrs::has_a_mvfooattrs() const {
+  return _internal_has_a_mvfooattrs();
 }
-inline void SpecificAttrs::set_has_mvfooattrs() {
-  _impl_._oneof_case_[0] = kMVFooAttrs;
+inline void SpecificAttrs::set_has_a_mvfooattrs() {
+  _impl_._oneof_case_[0] = kAMVFooAttrs;
 }
-inline void SpecificAttrs::clear_mvfooattrs() {
-  if (_internal_has_mvfooattrs()) {
+inline void SpecificAttrs::clear_a_mvfooattrs() {
+  if (_internal_has_a_mvfooattrs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfooattrs_;
+      delete _impl_.content_.a_mvfooattrs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::release_mvfooattrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SpecificAttrs.mVFooAttrs)
-  if (_internal_has_mvfooattrs()) {
+inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::release_a_mvfooattrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SpecificAttrs.a_mVFooAttrs)
+  if (_internal_has_a_mvfooattrs()) {
     clear_has_content();
-    ::protobuf::mozilla::_foo::FooAttrs* temp = _impl_.content_.mvfooattrs_;
+    ::protobuf::mozilla::_foo::FooAttrs* temp = _impl_.content_.a_mvfooattrs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfooattrs_ = nullptr;
+    _impl_.content_.a_mvfooattrs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::_foo::FooAttrs& SpecificAttrs::_internal_mvfooattrs() const {
-  return _internal_has_mvfooattrs()
-      ? *_impl_.content_.mvfooattrs_
+inline const ::protobuf::mozilla::_foo::FooAttrs& SpecificAttrs::_internal_a_mvfooattrs() const {
+  return _internal_has_a_mvfooattrs()
+      ? *_impl_.content_.a_mvfooattrs_
       : reinterpret_cast< ::protobuf::mozilla::_foo::FooAttrs&>(::protobuf::mozilla::_foo::_FooAttrs_default_instance_);
 }
-inline const ::protobuf::mozilla::_foo::FooAttrs& SpecificAttrs::mvfooattrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SpecificAttrs.mVFooAttrs)
-  return _internal_mvfooattrs();
+inline const ::protobuf::mozilla::_foo::FooAttrs& SpecificAttrs::a_mvfooattrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SpecificAttrs.a_mVFooAttrs)
+  return _internal_a_mvfooattrs();
 }
-inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::unsafe_arena_release_mvfooattrs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._foo.SpecificAttrs.mVFooAttrs)
-  if (_internal_has_mvfooattrs()) {
+inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::unsafe_arena_release_a_mvfooattrs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._foo.SpecificAttrs.a_mVFooAttrs)
+  if (_internal_has_a_mvfooattrs()) {
     clear_has_content();
-    ::protobuf::mozilla::_foo::FooAttrs* temp = _impl_.content_.mvfooattrs_;
-    _impl_.content_.mvfooattrs_ = nullptr;
+    ::protobuf::mozilla::_foo::FooAttrs* temp = _impl_.content_.a_mvfooattrs_;
+    _impl_.content_.a_mvfooattrs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SpecificAttrs::unsafe_arena_set_allocated_mvfooattrs(::protobuf::mozilla::_foo::FooAttrs* mvfooattrs) {
+inline void SpecificAttrs::unsafe_arena_set_allocated_a_mvfooattrs(::protobuf::mozilla::_foo::FooAttrs* a_mvfooattrs) {
   clear_content();
-  if (mvfooattrs) {
-    set_has_mvfooattrs();
-    _impl_.content_.mvfooattrs_ = mvfooattrs;
+  if (a_mvfooattrs) {
+    set_has_a_mvfooattrs();
+    _impl_.content_.a_mvfooattrs_ = a_mvfooattrs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SpecificAttrs.mVFooAttrs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SpecificAttrs.a_mVFooAttrs)
 }
-inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::_internal_mutable_mvfooattrs() {
-  if (!_internal_has_mvfooattrs()) {
+inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::_internal_mutable_a_mvfooattrs() {
+  if (!_internal_has_a_mvfooattrs()) {
     clear_content();
-    set_has_mvfooattrs();
-    _impl_.content_.mvfooattrs_ = CreateMaybeMessage< ::protobuf::mozilla::_foo::FooAttrs >(GetArenaForAllocation());
+    set_has_a_mvfooattrs();
+    _impl_.content_.a_mvfooattrs_ = CreateMaybeMessage< ::protobuf::mozilla::_foo::FooAttrs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfooattrs_;
+  return _impl_.content_.a_mvfooattrs_;
 }
-inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::mutable_mvfooattrs() {
-  ::protobuf::mozilla::_foo::FooAttrs* _msg = _internal_mutable_mvfooattrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SpecificAttrs.mVFooAttrs)
+inline ::protobuf::mozilla::_foo::FooAttrs* SpecificAttrs::mutable_a_mvfooattrs() {
+  ::protobuf::mozilla::_foo::FooAttrs* _msg = _internal_mutable_a_mvfooattrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SpecificAttrs.a_mVFooAttrs)
   return _msg;
 }
 
-// .protobuf.mozilla._foo.BarAttrs mVBarAttrs = 2;
-inline bool SpecificAttrs::_internal_has_mvbarattrs() const {
-  return content_case() == kMVBarAttrs;
+// .protobuf.mozilla._foo.BarAttrs a_mVBarAttrs = 2;
+inline bool SpecificAttrs::_internal_has_a_mvbarattrs() const {
+  return content_case() == kAMVBarAttrs;
 }
-inline bool SpecificAttrs::has_mvbarattrs() const {
-  return _internal_has_mvbarattrs();
+inline bool SpecificAttrs::has_a_mvbarattrs() const {
+  return _internal_has_a_mvbarattrs();
 }
-inline void SpecificAttrs::set_has_mvbarattrs() {
-  _impl_._oneof_case_[0] = kMVBarAttrs;
+inline void SpecificAttrs::set_has_a_mvbarattrs() {
+  _impl_._oneof_case_[0] = kAMVBarAttrs;
 }
-inline void SpecificAttrs::clear_mvbarattrs() {
-  if (_internal_has_mvbarattrs()) {
+inline void SpecificAttrs::clear_a_mvbarattrs() {
+  if (_internal_has_a_mvbarattrs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvbarattrs_;
+      delete _impl_.content_.a_mvbarattrs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::release_mvbarattrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SpecificAttrs.mVBarAttrs)
-  if (_internal_has_mvbarattrs()) {
+inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::release_a_mvbarattrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SpecificAttrs.a_mVBarAttrs)
+  if (_internal_has_a_mvbarattrs()) {
     clear_has_content();
-    ::protobuf::mozilla::_foo::BarAttrs* temp = _impl_.content_.mvbarattrs_;
+    ::protobuf::mozilla::_foo::BarAttrs* temp = _impl_.content_.a_mvbarattrs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvbarattrs_ = nullptr;
+    _impl_.content_.a_mvbarattrs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::_foo::BarAttrs& SpecificAttrs::_internal_mvbarattrs() const {
-  return _internal_has_mvbarattrs()
-      ? *_impl_.content_.mvbarattrs_
+inline const ::protobuf::mozilla::_foo::BarAttrs& SpecificAttrs::_internal_a_mvbarattrs() const {
+  return _internal_has_a_mvbarattrs()
+      ? *_impl_.content_.a_mvbarattrs_
       : reinterpret_cast< ::protobuf::mozilla::_foo::BarAttrs&>(::protobuf::mozilla::_foo::_BarAttrs_default_instance_);
 }
-inline const ::protobuf::mozilla::_foo::BarAttrs& SpecificAttrs::mvbarattrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SpecificAttrs.mVBarAttrs)
-  return _internal_mvbarattrs();
+inline const ::protobuf::mozilla::_foo::BarAttrs& SpecificAttrs::a_mvbarattrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SpecificAttrs.a_mVBarAttrs)
+  return _internal_a_mvbarattrs();
 }
-inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::unsafe_arena_release_mvbarattrs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._foo.SpecificAttrs.mVBarAttrs)
-  if (_internal_has_mvbarattrs()) {
+inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::unsafe_arena_release_a_mvbarattrs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._foo.SpecificAttrs.a_mVBarAttrs)
+  if (_internal_has_a_mvbarattrs()) {
     clear_has_content();
-    ::protobuf::mozilla::_foo::BarAttrs* temp = _impl_.content_.mvbarattrs_;
-    _impl_.content_.mvbarattrs_ = nullptr;
+    ::protobuf::mozilla::_foo::BarAttrs* temp = _impl_.content_.a_mvbarattrs_;
+    _impl_.content_.a_mvbarattrs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SpecificAttrs::unsafe_arena_set_allocated_mvbarattrs(::protobuf::mozilla::_foo::BarAttrs* mvbarattrs) {
+inline void SpecificAttrs::unsafe_arena_set_allocated_a_mvbarattrs(::protobuf::mozilla::_foo::BarAttrs* a_mvbarattrs) {
   clear_content();
-  if (mvbarattrs) {
-    set_has_mvbarattrs();
-    _impl_.content_.mvbarattrs_ = mvbarattrs;
+  if (a_mvbarattrs) {
+    set_has_a_mvbarattrs();
+    _impl_.content_.a_mvbarattrs_ = a_mvbarattrs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SpecificAttrs.mVBarAttrs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SpecificAttrs.a_mVBarAttrs)
 }
-inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::_internal_mutable_mvbarattrs() {
-  if (!_internal_has_mvbarattrs()) {
+inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::_internal_mutable_a_mvbarattrs() {
+  if (!_internal_has_a_mvbarattrs()) {
     clear_content();
-    set_has_mvbarattrs();
-    _impl_.content_.mvbarattrs_ = CreateMaybeMessage< ::protobuf::mozilla::_foo::BarAttrs >(GetArenaForAllocation());
+    set_has_a_mvbarattrs();
+    _impl_.content_.a_mvbarattrs_ = CreateMaybeMessage< ::protobuf::mozilla::_foo::BarAttrs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvbarattrs_;
+  return _impl_.content_.a_mvbarattrs_;
 }
-inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::mutable_mvbarattrs() {
-  ::protobuf::mozilla::_foo::BarAttrs* _msg = _internal_mutable_mvbarattrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SpecificAttrs.mVBarAttrs)
+inline ::protobuf::mozilla::_foo::BarAttrs* SpecificAttrs::mutable_a_mvbarattrs() {
+  ::protobuf::mozilla::_foo::BarAttrs* _msg = _internal_mutable_a_mvbarattrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SpecificAttrs.a_mVBarAttrs)
   return _msg;
 }
 
@@ -8466,45 +8466,45 @@ inline SpecificAttrs::ContentCase SpecificAttrs::content_case() const {
 
 // Attrs
 
-// required .protobuf.mozilla._foo.CommonAttrs common = 1;
-inline bool Attrs::_internal_has_common() const {
+// required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
+inline bool Attrs::_internal_has_a_common() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.common_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_common_ != nullptr);
   return value;
 }
-inline bool Attrs::has_common() const {
-  return _internal_has_common();
+inline bool Attrs::has_a_common() const {
+  return _internal_has_a_common();
 }
-inline void Attrs::clear_common() {
-  if (_impl_.common_ != nullptr) _impl_.common_->Clear();
+inline void Attrs::clear_a_common() {
+  if (_impl_.a_common_ != nullptr) _impl_.a_common_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::_foo::CommonAttrs& Attrs::_internal_common() const {
-  const ::protobuf::mozilla::_foo::CommonAttrs* p = _impl_.common_;
+inline const ::protobuf::mozilla::_foo::CommonAttrs& Attrs::_internal_a_common() const {
+  const ::protobuf::mozilla::_foo::CommonAttrs* p = _impl_.a_common_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_foo::CommonAttrs&>(
       ::protobuf::mozilla::_foo::_CommonAttrs_default_instance_);
 }
-inline const ::protobuf::mozilla::_foo::CommonAttrs& Attrs::common() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Attrs.common)
-  return _internal_common();
+inline const ::protobuf::mozilla::_foo::CommonAttrs& Attrs::a_common() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Attrs.a_common)
+  return _internal_a_common();
 }
-inline void Attrs::unsafe_arena_set_allocated_common(
-    ::protobuf::mozilla::_foo::CommonAttrs* common) {
+inline void Attrs::unsafe_arena_set_allocated_a_common(
+    ::protobuf::mozilla::_foo::CommonAttrs* a_common) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.common_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_common_);
   }
-  _impl_.common_ = common;
-  if (common) {
+  _impl_.a_common_ = a_common;
+  if (a_common) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Attrs.common)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Attrs.a_common)
 }
-inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::release_common() {
+inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::release_a_common() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_foo::CommonAttrs* temp = _impl_.common_;
-  _impl_.common_ = nullptr;
+  ::protobuf::mozilla::_foo::CommonAttrs* temp = _impl_.a_common_;
+  _impl_.a_common_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8516,85 +8516,85 @@ inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::release_common() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::unsafe_arena_release_common() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Attrs.common)
+inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::unsafe_arena_release_a_common() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Attrs.a_common)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_foo::CommonAttrs* temp = _impl_.common_;
-  _impl_.common_ = nullptr;
+  ::protobuf::mozilla::_foo::CommonAttrs* temp = _impl_.a_common_;
+  _impl_.a_common_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::_internal_mutable_common() {
+inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::_internal_mutable_a_common() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.common_ == nullptr) {
+  if (_impl_.a_common_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_foo::CommonAttrs>(GetArenaForAllocation());
-    _impl_.common_ = p;
+    _impl_.a_common_ = p;
   }
-  return _impl_.common_;
+  return _impl_.a_common_;
 }
-inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::mutable_common() {
-  ::protobuf::mozilla::_foo::CommonAttrs* _msg = _internal_mutable_common();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Attrs.common)
+inline ::protobuf::mozilla::_foo::CommonAttrs* Attrs::mutable_a_common() {
+  ::protobuf::mozilla::_foo::CommonAttrs* _msg = _internal_mutable_a_common();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Attrs.a_common)
   return _msg;
 }
-inline void Attrs::set_allocated_common(::protobuf::mozilla::_foo::CommonAttrs* common) {
+inline void Attrs::set_allocated_a_common(::protobuf::mozilla::_foo::CommonAttrs* a_common) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.common_;
+    delete _impl_.a_common_;
   }
-  if (common) {
+  if (a_common) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(common);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_common);
     if (message_arena != submessage_arena) {
-      common = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, common, submessage_arena);
+      a_common = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_common, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.common_ = common;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Attrs.common)
+  _impl_.a_common_ = a_common;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Attrs.a_common)
 }
 
-// required .protobuf.mozilla._foo.SpecificAttrs specific = 2;
-inline bool Attrs::_internal_has_specific() const {
+// required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
+inline bool Attrs::_internal_has_a_specific() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.specific_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_specific_ != nullptr);
   return value;
 }
-inline bool Attrs::has_specific() const {
-  return _internal_has_specific();
+inline bool Attrs::has_a_specific() const {
+  return _internal_has_a_specific();
 }
-inline void Attrs::clear_specific() {
-  if (_impl_.specific_ != nullptr) _impl_.specific_->Clear();
+inline void Attrs::clear_a_specific() {
+  if (_impl_.a_specific_ != nullptr) _impl_.a_specific_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::_foo::SpecificAttrs& Attrs::_internal_specific() const {
-  const ::protobuf::mozilla::_foo::SpecificAttrs* p = _impl_.specific_;
+inline const ::protobuf::mozilla::_foo::SpecificAttrs& Attrs::_internal_a_specific() const {
+  const ::protobuf::mozilla::_foo::SpecificAttrs* p = _impl_.a_specific_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_foo::SpecificAttrs&>(
       ::protobuf::mozilla::_foo::_SpecificAttrs_default_instance_);
 }
-inline const ::protobuf::mozilla::_foo::SpecificAttrs& Attrs::specific() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Attrs.specific)
-  return _internal_specific();
+inline const ::protobuf::mozilla::_foo::SpecificAttrs& Attrs::a_specific() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Attrs.a_specific)
+  return _internal_a_specific();
 }
-inline void Attrs::unsafe_arena_set_allocated_specific(
-    ::protobuf::mozilla::_foo::SpecificAttrs* specific) {
+inline void Attrs::unsafe_arena_set_allocated_a_specific(
+    ::protobuf::mozilla::_foo::SpecificAttrs* a_specific) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.specific_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_specific_);
   }
-  _impl_.specific_ = specific;
-  if (specific) {
+  _impl_.a_specific_ = a_specific;
+  if (a_specific) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Attrs.specific)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Attrs.a_specific)
 }
-inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::release_specific() {
+inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::release_a_specific() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::_foo::SpecificAttrs* temp = _impl_.specific_;
-  _impl_.specific_ = nullptr;
+  ::protobuf::mozilla::_foo::SpecificAttrs* temp = _impl_.a_specific_;
+  _impl_.a_specific_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8606,157 +8606,157 @@ inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::release_specific() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::unsafe_arena_release_specific() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Attrs.specific)
+inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::unsafe_arena_release_a_specific() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Attrs.a_specific)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::_foo::SpecificAttrs* temp = _impl_.specific_;
-  _impl_.specific_ = nullptr;
+  ::protobuf::mozilla::_foo::SpecificAttrs* temp = _impl_.a_specific_;
+  _impl_.a_specific_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::_internal_mutable_specific() {
+inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::_internal_mutable_a_specific() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.specific_ == nullptr) {
+  if (_impl_.a_specific_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_foo::SpecificAttrs>(GetArenaForAllocation());
-    _impl_.specific_ = p;
+    _impl_.a_specific_ = p;
   }
-  return _impl_.specific_;
+  return _impl_.a_specific_;
 }
-inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::mutable_specific() {
-  ::protobuf::mozilla::_foo::SpecificAttrs* _msg = _internal_mutable_specific();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Attrs.specific)
+inline ::protobuf::mozilla::_foo::SpecificAttrs* Attrs::mutable_a_specific() {
+  ::protobuf::mozilla::_foo::SpecificAttrs* _msg = _internal_mutable_a_specific();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Attrs.a_specific)
   return _msg;
 }
-inline void Attrs::set_allocated_specific(::protobuf::mozilla::_foo::SpecificAttrs* specific) {
+inline void Attrs::set_allocated_a_specific(::protobuf::mozilla::_foo::SpecificAttrs* a_specific) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.specific_;
+    delete _impl_.a_specific_;
   }
-  if (specific) {
+  if (a_specific) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(specific);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_specific);
     if (message_arena != submessage_arena) {
-      specific = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, specific, submessage_arena);
+      a_specific = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_specific, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.specific_ = specific;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Attrs.specific)
+  _impl_.a_specific_ = a_specific;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Attrs.a_specific)
 }
 
 // -------------------------------------------------------------------
 
 // SetAttrs
 
-// required bytes x = 1;
-inline bool SetAttrs::_internal_has_x() const {
+// required bytes a_x = 1;
+inline bool SetAttrs::_internal_has_a_x() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SetAttrs::has_x() const {
-  return _internal_has_x();
+inline bool SetAttrs::has_a_x() const {
+  return _internal_has_a_x();
 }
-inline void SetAttrs::clear_x() {
-  _impl_.x_.ClearToEmpty();
+inline void SetAttrs::clear_a_x() {
+  _impl_.a_x_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& SetAttrs::x() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SetAttrs.x)
-  return _internal_x();
+inline const std::string& SetAttrs::a_x() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SetAttrs.a_x)
+  return _internal_a_x();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SetAttrs::set_x(ArgT0&& arg0, ArgT... args) {
+void SetAttrs::set_a_x(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.x_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SetAttrs.x)
+ _impl_.a_x_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.SetAttrs.a_x)
 }
-inline std::string* SetAttrs::mutable_x() {
-  std::string* _s = _internal_mutable_x();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SetAttrs.x)
+inline std::string* SetAttrs::mutable_a_x() {
+  std::string* _s = _internal_mutable_a_x();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SetAttrs.a_x)
   return _s;
 }
-inline const std::string& SetAttrs::_internal_x() const {
-  return _impl_.x_.Get();
+inline const std::string& SetAttrs::_internal_a_x() const {
+  return _impl_.a_x_.Get();
 }
-inline void SetAttrs::_internal_set_x(const std::string& value) {
+inline void SetAttrs::_internal_set_a_x(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.x_.Set(value, GetArenaForAllocation());
+  _impl_.a_x_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SetAttrs::_internal_mutable_x() {
+inline std::string* SetAttrs::_internal_mutable_a_x() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.x_.Mutable(GetArenaForAllocation());
+  return _impl_.a_x_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SetAttrs::release_x() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SetAttrs.x)
-  if (!_internal_has_x()) {
+inline std::string* SetAttrs::release_a_x() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SetAttrs.a_x)
+  if (!_internal_has_a_x()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.x_.Release();
+  auto* p = _impl_.a_x_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.x_.IsDefault()) {
-    _impl_.x_.Set("", GetArenaForAllocation());
+  if (_impl_.a_x_.IsDefault()) {
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SetAttrs::set_allocated_x(std::string* x) {
-  if (x != nullptr) {
+inline void SetAttrs::set_allocated_a_x(std::string* a_x) {
+  if (a_x != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.x_.SetAllocated(x, GetArenaForAllocation());
+  _impl_.a_x_.SetAllocated(a_x, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.x_.IsDefault()) {
-    _impl_.x_.Set("", GetArenaForAllocation());
+  if (_impl_.a_x_.IsDefault()) {
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SetAttrs.x)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SetAttrs.a_x)
 }
 
-// required .protobuf.mozilla._foo.Attrs attrs = 2;
-inline bool SetAttrs::_internal_has_attrs() const {
+// required .protobuf.mozilla._foo.Attrs a_attrs = 2;
+inline bool SetAttrs::_internal_has_a_attrs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.attrs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_attrs_ != nullptr);
   return value;
 }
-inline bool SetAttrs::has_attrs() const {
-  return _internal_has_attrs();
+inline bool SetAttrs::has_a_attrs() const {
+  return _internal_has_a_attrs();
 }
-inline void SetAttrs::clear_attrs() {
-  if (_impl_.attrs_ != nullptr) _impl_.attrs_->Clear();
+inline void SetAttrs::clear_a_attrs() {
+  if (_impl_.a_attrs_ != nullptr) _impl_.a_attrs_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::_foo::Attrs& SetAttrs::_internal_attrs() const {
-  const ::protobuf::mozilla::_foo::Attrs* p = _impl_.attrs_;
+inline const ::protobuf::mozilla::_foo::Attrs& SetAttrs::_internal_a_attrs() const {
+  const ::protobuf::mozilla::_foo::Attrs* p = _impl_.a_attrs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_foo::Attrs&>(
       ::protobuf::mozilla::_foo::_Attrs_default_instance_);
 }
-inline const ::protobuf::mozilla::_foo::Attrs& SetAttrs::attrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SetAttrs.attrs)
-  return _internal_attrs();
+inline const ::protobuf::mozilla::_foo::Attrs& SetAttrs::a_attrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.SetAttrs.a_attrs)
+  return _internal_a_attrs();
 }
-inline void SetAttrs::unsafe_arena_set_allocated_attrs(
-    ::protobuf::mozilla::_foo::Attrs* attrs) {
+inline void SetAttrs::unsafe_arena_set_allocated_a_attrs(
+    ::protobuf::mozilla::_foo::Attrs* a_attrs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.attrs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_attrs_);
   }
-  _impl_.attrs_ = attrs;
-  if (attrs) {
+  _impl_.a_attrs_ = a_attrs;
+  if (a_attrs) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SetAttrs.attrs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.SetAttrs.a_attrs)
 }
-inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::release_attrs() {
+inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::release_a_attrs() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::_foo::Attrs* temp = _impl_.attrs_;
-  _impl_.attrs_ = nullptr;
+  ::protobuf::mozilla::_foo::Attrs* temp = _impl_.a_attrs_;
+  _impl_.a_attrs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8768,198 +8768,198 @@ inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::release_attrs() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::unsafe_arena_release_attrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SetAttrs.attrs)
+inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::unsafe_arena_release_a_attrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.SetAttrs.a_attrs)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::_foo::Attrs* temp = _impl_.attrs_;
-  _impl_.attrs_ = nullptr;
+  ::protobuf::mozilla::_foo::Attrs* temp = _impl_.a_attrs_;
+  _impl_.a_attrs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::_internal_mutable_attrs() {
+inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::_internal_mutable_a_attrs() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.attrs_ == nullptr) {
+  if (_impl_.a_attrs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_foo::Attrs>(GetArenaForAllocation());
-    _impl_.attrs_ = p;
+    _impl_.a_attrs_ = p;
   }
-  return _impl_.attrs_;
+  return _impl_.a_attrs_;
 }
-inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::mutable_attrs() {
-  ::protobuf::mozilla::_foo::Attrs* _msg = _internal_mutable_attrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SetAttrs.attrs)
+inline ::protobuf::mozilla::_foo::Attrs* SetAttrs::mutable_a_attrs() {
+  ::protobuf::mozilla::_foo::Attrs* _msg = _internal_mutable_a_attrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.SetAttrs.a_attrs)
   return _msg;
 }
-inline void SetAttrs::set_allocated_attrs(::protobuf::mozilla::_foo::Attrs* attrs) {
+inline void SetAttrs::set_allocated_a_attrs(::protobuf::mozilla::_foo::Attrs* a_attrs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.attrs_;
+    delete _impl_.a_attrs_;
   }
-  if (attrs) {
+  if (a_attrs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(attrs);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_attrs);
     if (message_arena != submessage_arena) {
-      attrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, attrs, submessage_arena);
+      a_attrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_attrs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.attrs_ = attrs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SetAttrs.attrs)
+  _impl_.a_attrs_ = a_attrs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SetAttrs.a_attrs)
 }
 
 // -------------------------------------------------------------------
 
 // Op
 
-// bytes mVnull_t = 1;
-inline bool Op::_internal_has_mvnull_t() const {
-  return content_case() == kMVnullT;
+// bytes a_mVnull_t = 1;
+inline bool Op::_internal_has_a_mvnull_t() const {
+  return content_case() == kAMVnullT;
 }
-inline bool Op::has_mvnull_t() const {
-  return _internal_has_mvnull_t();
+inline bool Op::has_a_mvnull_t() const {
+  return _internal_has_a_mvnull_t();
 }
-inline void Op::set_has_mvnull_t() {
-  _impl_._oneof_case_[0] = kMVnullT;
+inline void Op::set_has_a_mvnull_t() {
+  _impl_._oneof_case_[0] = kAMVnullT;
 }
-inline void Op::clear_mvnull_t() {
-  if (_internal_has_mvnull_t()) {
-    _impl_.content_.mvnull_t_.Destroy();
+inline void Op::clear_a_mvnull_t() {
+  if (_internal_has_a_mvnull_t()) {
+    _impl_.content_.a_mvnull_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& Op::mvnull_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Op.mVnull_t)
-  return _internal_mvnull_t();
+inline const std::string& Op::a_mvnull_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Op.a_mVnull_t)
+  return _internal_a_mvnull_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void Op::set_mvnull_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnull_t()) {
+inline void Op::set_a_mvnull_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnull_t()) {
     clear_content();
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitDefault();
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitDefault();
   }
-  _impl_.content_.mvnull_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Op.mVnull_t)
+  _impl_.content_.a_mvnull_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.Op.a_mVnull_t)
 }
-inline std::string* Op::mutable_mvnull_t() {
-  std::string* _s = _internal_mutable_mvnull_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Op.mVnull_t)
+inline std::string* Op::mutable_a_mvnull_t() {
+  std::string* _s = _internal_mutable_a_mvnull_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Op.a_mVnull_t)
   return _s;
 }
-inline const std::string& Op::_internal_mvnull_t() const {
-  if (_internal_has_mvnull_t()) {
-    return _impl_.content_.mvnull_t_.Get();
+inline const std::string& Op::_internal_a_mvnull_t() const {
+  if (_internal_has_a_mvnull_t()) {
+    return _impl_.content_.a_mvnull_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void Op::_internal_set_mvnull_t(const std::string& value) {
-  if (!_internal_has_mvnull_t()) {
+inline void Op::_internal_set_a_mvnull_t(const std::string& value) {
+  if (!_internal_has_a_mvnull_t()) {
     clear_content();
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitDefault();
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitDefault();
   }
-  _impl_.content_.mvnull_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnull_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Op::_internal_mutable_mvnull_t() {
-  if (!_internal_has_mvnull_t()) {
+inline std::string* Op::_internal_mutable_a_mvnull_t() {
+  if (!_internal_has_a_mvnull_t()) {
     clear_content();
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitDefault();
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitDefault();
   }
-  return _impl_.content_.mvnull_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnull_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* Op::release_mvnull_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Op.mVnull_t)
-  if (_internal_has_mvnull_t()) {
+inline std::string* Op::release_a_mvnull_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Op.a_mVnull_t)
+  if (_internal_has_a_mvnull_t()) {
     clear_has_content();
-    return _impl_.content_.mvnull_t_.Release();
+    return _impl_.content_.a_mvnull_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void Op::set_allocated_mvnull_t(std::string* mvnull_t) {
+inline void Op::set_allocated_a_mvnull_t(std::string* a_mvnull_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnull_t != nullptr) {
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitAllocated(mvnull_t, GetArenaForAllocation());
+  if (a_mvnull_t != nullptr) {
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitAllocated(a_mvnull_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Op.mVnull_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Op.a_mVnull_t)
 }
 
-// .protobuf.mozilla._foo.SetAttrs mVSetAttrs = 2;
-inline bool Op::_internal_has_mvsetattrs() const {
-  return content_case() == kMVSetAttrs;
+// .protobuf.mozilla._foo.SetAttrs a_mVSetAttrs = 2;
+inline bool Op::_internal_has_a_mvsetattrs() const {
+  return content_case() == kAMVSetAttrs;
 }
-inline bool Op::has_mvsetattrs() const {
-  return _internal_has_mvsetattrs();
+inline bool Op::has_a_mvsetattrs() const {
+  return _internal_has_a_mvsetattrs();
 }
-inline void Op::set_has_mvsetattrs() {
-  _impl_._oneof_case_[0] = kMVSetAttrs;
+inline void Op::set_has_a_mvsetattrs() {
+  _impl_._oneof_case_[0] = kAMVSetAttrs;
 }
-inline void Op::clear_mvsetattrs() {
-  if (_internal_has_mvsetattrs()) {
+inline void Op::clear_a_mvsetattrs() {
+  if (_internal_has_a_mvsetattrs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsetattrs_;
+      delete _impl_.content_.a_mvsetattrs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::_foo::SetAttrs* Op::release_mvsetattrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Op.mVSetAttrs)
-  if (_internal_has_mvsetattrs()) {
+inline ::protobuf::mozilla::_foo::SetAttrs* Op::release_a_mvsetattrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.Op.a_mVSetAttrs)
+  if (_internal_has_a_mvsetattrs()) {
     clear_has_content();
-    ::protobuf::mozilla::_foo::SetAttrs* temp = _impl_.content_.mvsetattrs_;
+    ::protobuf::mozilla::_foo::SetAttrs* temp = _impl_.content_.a_mvsetattrs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsetattrs_ = nullptr;
+    _impl_.content_.a_mvsetattrs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::_foo::SetAttrs& Op::_internal_mvsetattrs() const {
-  return _internal_has_mvsetattrs()
-      ? *_impl_.content_.mvsetattrs_
+inline const ::protobuf::mozilla::_foo::SetAttrs& Op::_internal_a_mvsetattrs() const {
+  return _internal_has_a_mvsetattrs()
+      ? *_impl_.content_.a_mvsetattrs_
       : reinterpret_cast< ::protobuf::mozilla::_foo::SetAttrs&>(::protobuf::mozilla::_foo::_SetAttrs_default_instance_);
 }
-inline const ::protobuf::mozilla::_foo::SetAttrs& Op::mvsetattrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Op.mVSetAttrs)
-  return _internal_mvsetattrs();
+inline const ::protobuf::mozilla::_foo::SetAttrs& Op::a_mvsetattrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.Op.a_mVSetAttrs)
+  return _internal_a_mvsetattrs();
 }
-inline ::protobuf::mozilla::_foo::SetAttrs* Op::unsafe_arena_release_mvsetattrs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._foo.Op.mVSetAttrs)
-  if (_internal_has_mvsetattrs()) {
+inline ::protobuf::mozilla::_foo::SetAttrs* Op::unsafe_arena_release_a_mvsetattrs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._foo.Op.a_mVSetAttrs)
+  if (_internal_has_a_mvsetattrs()) {
     clear_has_content();
-    ::protobuf::mozilla::_foo::SetAttrs* temp = _impl_.content_.mvsetattrs_;
-    _impl_.content_.mvsetattrs_ = nullptr;
+    ::protobuf::mozilla::_foo::SetAttrs* temp = _impl_.content_.a_mvsetattrs_;
+    _impl_.content_.a_mvsetattrs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void Op::unsafe_arena_set_allocated_mvsetattrs(::protobuf::mozilla::_foo::SetAttrs* mvsetattrs) {
+inline void Op::unsafe_arena_set_allocated_a_mvsetattrs(::protobuf::mozilla::_foo::SetAttrs* a_mvsetattrs) {
   clear_content();
-  if (mvsetattrs) {
-    set_has_mvsetattrs();
-    _impl_.content_.mvsetattrs_ = mvsetattrs;
+  if (a_mvsetattrs) {
+    set_has_a_mvsetattrs();
+    _impl_.content_.a_mvsetattrs_ = a_mvsetattrs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Op.mVSetAttrs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._foo.Op.a_mVSetAttrs)
 }
-inline ::protobuf::mozilla::_foo::SetAttrs* Op::_internal_mutable_mvsetattrs() {
-  if (!_internal_has_mvsetattrs()) {
+inline ::protobuf::mozilla::_foo::SetAttrs* Op::_internal_mutable_a_mvsetattrs() {
+  if (!_internal_has_a_mvsetattrs()) {
     clear_content();
-    set_has_mvsetattrs();
-    _impl_.content_.mvsetattrs_ = CreateMaybeMessage< ::protobuf::mozilla::_foo::SetAttrs >(GetArenaForAllocation());
+    set_has_a_mvsetattrs();
+    _impl_.content_.a_mvsetattrs_ = CreateMaybeMessage< ::protobuf::mozilla::_foo::SetAttrs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsetattrs_;
+  return _impl_.content_.a_mvsetattrs_;
 }
-inline ::protobuf::mozilla::_foo::SetAttrs* Op::mutable_mvsetattrs() {
-  ::protobuf::mozilla::_foo::SetAttrs* _msg = _internal_mutable_mvsetattrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Op.mVSetAttrs)
+inline ::protobuf::mozilla::_foo::SetAttrs* Op::mutable_a_mvsetattrs() {
+  ::protobuf::mozilla::_foo::SetAttrs* _msg = _internal_mutable_a_mvsetattrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.Op.a_mVSetAttrs)
   return _msg;
 }
 
@@ -8976,219 +8976,219 @@ inline Op::ContentCase Op::content_case() const {
 
 // ShmemStruct
 
-// required sint32 i = 1;
-inline bool ShmemStruct::_internal_has_i() const {
+// required sint32 a_i = 1;
+inline bool ShmemStruct::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ShmemStruct::has_i() const {
-  return _internal_has_i();
+inline bool ShmemStruct::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline void ShmemStruct::clear_i() {
-  _impl_.i_ = 0;
+inline void ShmemStruct::clear_a_i() {
+  _impl_.a_i_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t ShmemStruct::_internal_i() const {
-  return _impl_.i_;
+inline int32_t ShmemStruct::_internal_a_i() const {
+  return _impl_.a_i_;
 }
-inline int32_t ShmemStruct::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemStruct.i)
-  return _internal_i();
+inline int32_t ShmemStruct::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemStruct.a_i)
+  return _internal_a_i();
 }
-inline void ShmemStruct::_internal_set_i(int32_t value) {
+inline void ShmemStruct::_internal_set_a_i(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.i_ = value;
+  _impl_.a_i_ = value;
 }
-inline void ShmemStruct::set_i(int32_t value) {
-  _internal_set_i(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemStruct.i)
+inline void ShmemStruct::set_a_i(int32_t value) {
+  _internal_set_a_i(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemStruct.a_i)
 }
 
-// required bytes mem = 2;
-inline bool ShmemStruct::_internal_has_mem() const {
+// required bytes a_mem = 2;
+inline bool ShmemStruct::_internal_has_a_mem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ShmemStruct::has_mem() const {
-  return _internal_has_mem();
+inline bool ShmemStruct::has_a_mem() const {
+  return _internal_has_a_mem();
 }
-inline void ShmemStruct::clear_mem() {
-  _impl_.mem_.ClearToEmpty();
+inline void ShmemStruct::clear_a_mem() {
+  _impl_.a_mem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ShmemStruct::mem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemStruct.mem)
-  return _internal_mem();
+inline const std::string& ShmemStruct::a_mem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemStruct.a_mem)
+  return _internal_a_mem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ShmemStruct::set_mem(ArgT0&& arg0, ArgT... args) {
+void ShmemStruct::set_a_mem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.mem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemStruct.mem)
+ _impl_.a_mem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemStruct.a_mem)
 }
-inline std::string* ShmemStruct::mutable_mem() {
-  std::string* _s = _internal_mutable_mem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.ShmemStruct.mem)
+inline std::string* ShmemStruct::mutable_a_mem() {
+  std::string* _s = _internal_mutable_a_mem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.ShmemStruct.a_mem)
   return _s;
 }
-inline const std::string& ShmemStruct::_internal_mem() const {
-  return _impl_.mem_.Get();
+inline const std::string& ShmemStruct::_internal_a_mem() const {
+  return _impl_.a_mem_.Get();
 }
-inline void ShmemStruct::_internal_set_mem(const std::string& value) {
+inline void ShmemStruct::_internal_set_a_mem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.mem_.Set(value, GetArenaForAllocation());
+  _impl_.a_mem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ShmemStruct::_internal_mutable_mem() {
+inline std::string* ShmemStruct::_internal_mutable_a_mem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.mem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_mem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ShmemStruct::release_mem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ShmemStruct.mem)
-  if (!_internal_has_mem()) {
+inline std::string* ShmemStruct::release_a_mem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ShmemStruct.a_mem)
+  if (!_internal_has_a_mem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.mem_.Release();
+  auto* p = _impl_.a_mem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.mem_.IsDefault()) {
-    _impl_.mem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_mem_.IsDefault()) {
+    _impl_.a_mem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ShmemStruct::set_allocated_mem(std::string* mem) {
-  if (mem != nullptr) {
+inline void ShmemStruct::set_allocated_a_mem(std::string* a_mem) {
+  if (a_mem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.mem_.SetAllocated(mem, GetArenaForAllocation());
+  _impl_.a_mem_.SetAllocated(a_mem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.mem_.IsDefault()) {
-    _impl_.mem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_mem_.IsDefault()) {
+    _impl_.a_mem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.ShmemStruct.mem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.ShmemStruct.a_mem)
 }
 
 // -------------------------------------------------------------------
 
 // ShmemUnion
 
-// sint32 mVint = 1;
-inline bool ShmemUnion::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 1;
+inline bool ShmemUnion::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool ShmemUnion::has_mvint() const {
-  return _internal_has_mvint();
+inline bool ShmemUnion::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void ShmemUnion::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void ShmemUnion::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void ShmemUnion::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void ShmemUnion::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t ShmemUnion::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t ShmemUnion::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void ShmemUnion::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void ShmemUnion::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t ShmemUnion::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemUnion.mVint)
-  return _internal_mvint();
+inline int32_t ShmemUnion::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemUnion.a_mVint)
+  return _internal_a_mvint();
 }
-inline void ShmemUnion::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemUnion.mVint)
+inline void ShmemUnion::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemUnion.a_mVint)
 }
 
-// bytes mVShmem = 2;
-inline bool ShmemUnion::_internal_has_mvshmem() const {
-  return content_case() == kMVShmem;
+// bytes a_mVShmem = 2;
+inline bool ShmemUnion::_internal_has_a_mvshmem() const {
+  return content_case() == kAMVShmem;
 }
-inline bool ShmemUnion::has_mvshmem() const {
-  return _internal_has_mvshmem();
+inline bool ShmemUnion::has_a_mvshmem() const {
+  return _internal_has_a_mvshmem();
 }
-inline void ShmemUnion::set_has_mvshmem() {
-  _impl_._oneof_case_[0] = kMVShmem;
+inline void ShmemUnion::set_has_a_mvshmem() {
+  _impl_._oneof_case_[0] = kAMVShmem;
 }
-inline void ShmemUnion::clear_mvshmem() {
-  if (_internal_has_mvshmem()) {
-    _impl_.content_.mvshmem_.Destroy();
+inline void ShmemUnion::clear_a_mvshmem() {
+  if (_internal_has_a_mvshmem()) {
+    _impl_.content_.a_mvshmem_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ShmemUnion::mvshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemUnion.mVShmem)
-  return _internal_mvshmem();
+inline const std::string& ShmemUnion::a_mvshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._foo.ShmemUnion.a_mVShmem)
+  return _internal_a_mvshmem();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ShmemUnion::set_mvshmem(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvshmem()) {
+inline void ShmemUnion::set_a_mvshmem(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvshmem()) {
     clear_content();
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitDefault();
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitDefault();
   }
-  _impl_.content_.mvshmem_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemUnion.mVShmem)
+  _impl_.content_.a_mvshmem_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._foo.ShmemUnion.a_mVShmem)
 }
-inline std::string* ShmemUnion::mutable_mvshmem() {
-  std::string* _s = _internal_mutable_mvshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.ShmemUnion.mVShmem)
+inline std::string* ShmemUnion::mutable_a_mvshmem() {
+  std::string* _s = _internal_mutable_a_mvshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._foo.ShmemUnion.a_mVShmem)
   return _s;
 }
-inline const std::string& ShmemUnion::_internal_mvshmem() const {
-  if (_internal_has_mvshmem()) {
-    return _impl_.content_.mvshmem_.Get();
+inline const std::string& ShmemUnion::_internal_a_mvshmem() const {
+  if (_internal_has_a_mvshmem()) {
+    return _impl_.content_.a_mvshmem_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ShmemUnion::_internal_set_mvshmem(const std::string& value) {
-  if (!_internal_has_mvshmem()) {
+inline void ShmemUnion::_internal_set_a_mvshmem(const std::string& value) {
+  if (!_internal_has_a_mvshmem()) {
     clear_content();
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitDefault();
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitDefault();
   }
-  _impl_.content_.mvshmem_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ShmemUnion::_internal_mutable_mvshmem() {
-  if (!_internal_has_mvshmem()) {
+inline std::string* ShmemUnion::_internal_mutable_a_mvshmem() {
+  if (!_internal_has_a_mvshmem()) {
     clear_content();
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitDefault();
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitDefault();
   }
-  return _impl_.content_.mvshmem_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvshmem_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ShmemUnion::release_mvshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ShmemUnion.mVShmem)
-  if (_internal_has_mvshmem()) {
+inline std::string* ShmemUnion::release_a_mvshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._foo.ShmemUnion.a_mVShmem)
+  if (_internal_has_a_mvshmem()) {
     clear_has_content();
-    return _impl_.content_.mvshmem_.Release();
+    return _impl_.content_.a_mvshmem_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ShmemUnion::set_allocated_mvshmem(std::string* mvshmem) {
+inline void ShmemUnion::set_allocated_a_mvshmem(std::string* a_mvshmem) {
   if (has_content()) {
     clear_content();
   }
-  if (mvshmem != nullptr) {
-    set_has_mvshmem();
-    _impl_.content_.mvshmem_.InitAllocated(mvshmem, GetArenaForAllocation());
+  if (a_mvshmem != nullptr) {
+    set_has_a_mvshmem();
+    _impl_.content_.a_mvshmem_.InitAllocated(a_mvshmem, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.ShmemUnion.mVShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.ShmemUnion.a_mVShmem)
 }
 
 inline bool ShmemUnion::has_content() const {

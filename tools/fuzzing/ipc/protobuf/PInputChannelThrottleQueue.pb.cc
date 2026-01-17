@@ -25,7 +25,7 @@ PROTOBUF_CONSTEXPR Msg_RecordRead::Msg_RecordRead(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.abytesread_)*/0u} {}
+  , /*decltype(_impl_.a_abytesread_)*/0u} {}
 struct Msg_RecordReadDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RecordReadDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -73,7 +73,7 @@ namespace PInputChannelThrottleQueue {
 class Msg_RecordRead::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_RecordRead>()._impl_._has_bits_);
-  static void set_has_abytesread(HasBits* has_bits) {
+  static void set_has_a_abytesread(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -93,10 +93,10 @@ Msg_RecordRead::Msg_RecordRead(const Msg_RecordRead& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abytesread_){}};
+    , decltype(_impl_.a_abytesread_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.abytesread_ = from._impl_.abytesread_;
+  _this->_impl_.a_abytesread_ = from._impl_.a_abytesread_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead)
 }
 
@@ -107,7 +107,7 @@ inline void Msg_RecordRead::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abytesread_){0u}
+    , decltype(_impl_.a_abytesread_){0u}
   };
 }
 
@@ -134,7 +134,7 @@ void Msg_RecordRead::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.abytesread_ = 0u;
+  _impl_.a_abytesread_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -146,11 +146,11 @@ const char* Msg_RecordRead::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aBytesRead = 1;
+      // required uint32 a_aBytesRead = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_abytesread(&has_bits);
-          _impl_.abytesread_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_abytesread(&has_bits);
+          _impl_.a_abytesread_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -186,10 +186,10 @@ uint8_t* Msg_RecordRead::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aBytesRead = 1;
+  // required uint32 a_aBytesRead = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_abytesread(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_abytesread(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -204,9 +204,9 @@ size_t Msg_RecordRead::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead)
   size_t total_size = 0;
 
-  // required uint32 aBytesRead = 1;
-  if (_internal_has_abytesread()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_abytesread());
+  // required uint32 a_aBytesRead = 1;
+  if (_internal_has_a_abytesread()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_abytesread());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -233,8 +233,8 @@ void Msg_RecordRead::MergeFrom(const Msg_RecordRead& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_abytesread()) {
-    _this->_internal_set_abytesread(from._internal_abytesread());
+  if (from._internal_has_a_abytesread()) {
+    _this->_internal_set_a_abytesread(from._internal_a_abytesread());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -255,7 +255,7 @@ void Msg_RecordRead::InternalSwap(Msg_RecordRead* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.abytesread_, other->_impl_.abytesread_);
+  swap(_impl_.a_abytesread_, other->_impl_.a_abytesread_);
 }
 
 std::string Msg_RecordRead::GetTypeName() const {

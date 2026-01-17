@@ -171,25 +171,25 @@ class IPCStream final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamFieldNumber = 1,
+    kAStreamFieldNumber = 1,
   };
-  // required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-  bool has_stream() const;
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  bool has_a_stream() const;
   private:
-  bool _internal_has_stream() const;
+  bool _internal_has_a_stream() const;
   public:
-  void clear_stream();
-  const ::protobuf::mozilla::ipc::InputStreamParams& stream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_stream();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_stream();
-  void set_allocated_stream(::protobuf::mozilla::ipc::InputStreamParams* stream);
+  void clear_a_stream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_stream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_a_stream();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_stream();
+  void set_allocated_a_stream(::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_stream() const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_stream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_stream() const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_a_stream();
   public:
-  void unsafe_arena_set_allocated_stream(
-      ::protobuf::mozilla::ipc::InputStreamParams* stream);
-  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_stream();
+  void unsafe_arena_set_allocated_a_stream(
+      ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
+  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.IPCStream)
  private:
@@ -201,7 +201,7 @@ class IPCStream final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::InputStreamParams* stream_;
+    ::protobuf::mozilla::ipc::InputStreamParams* a_stream_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCStream_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -217,41 +217,41 @@ class IPCStream final :
 #endif  // __GNUC__
 // IPCStream
 
-// required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-inline bool IPCStream::_internal_has_stream() const {
+// required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+inline bool IPCStream::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.stream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
   return value;
 }
-inline bool IPCStream::has_stream() const {
-  return _internal_has_stream();
+inline bool IPCStream::has_a_stream() const {
+  return _internal_has_a_stream();
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& IPCStream::_internal_stream() const {
-  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.stream_;
+inline const ::protobuf::mozilla::ipc::InputStreamParams& IPCStream::_internal_a_stream() const {
+  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_stream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::InputStreamParams&>(
       ::protobuf::mozilla::ipc::_InputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& IPCStream::stream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.IPCStream.stream)
-  return _internal_stream();
+inline const ::protobuf::mozilla::ipc::InputStreamParams& IPCStream::a_stream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.IPCStream.a_stream)
+  return _internal_a_stream();
 }
-inline void IPCStream::unsafe_arena_set_allocated_stream(
-    ::protobuf::mozilla::ipc::InputStreamParams* stream) {
+inline void IPCStream::unsafe_arena_set_allocated_a_stream(
+    ::protobuf::mozilla::ipc::InputStreamParams* a_stream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  _impl_.stream_ = stream;
-  if (stream) {
+  _impl_.a_stream_ = a_stream;
+  if (a_stream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.IPCStream.stream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.IPCStream.a_stream)
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::release_stream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::release_a_stream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -263,45 +263,45 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::release_stream() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::unsafe_arena_release_stream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.IPCStream.stream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::unsafe_arena_release_a_stream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.IPCStream.a_stream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::_internal_mutable_stream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::_internal_mutable_a_stream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.stream_ == nullptr) {
+  if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
-    _impl_.stream_ = p;
+    _impl_.a_stream_ = p;
   }
-  return _impl_.stream_;
+  return _impl_.a_stream_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::mutable_stream() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_stream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.IPCStream.stream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* IPCStream::mutable_a_stream() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_a_stream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.IPCStream.a_stream)
   return _msg;
 }
-inline void IPCStream::set_allocated_stream(::protobuf::mozilla::ipc::InputStreamParams* stream) {
+inline void IPCStream::set_allocated_a_stream(::protobuf::mozilla::ipc::InputStreamParams* a_stream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  if (stream) {
+  if (a_stream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(stream));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_stream));
     if (message_arena != submessage_arena) {
-      stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, stream, submessage_arena);
+      a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_stream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.stream_ = stream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IPCStream.stream)
+  _impl_.a_stream_ = a_stream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.IPCStream.a_stream)
 }
 
 #ifdef __GNUC__

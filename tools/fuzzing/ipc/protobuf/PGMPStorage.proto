@@ -17,39 +17,39 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_OpenComplete {
-  required bytes aRecordName = 1;
-  required bytes aStatus = 2;
+  required bytes a_aRecordName = 1;
+  required bytes a_aStatus = 2;
 }
 
 message Msg_ReadComplete {
-  required bytes aRecordName = 1;
-  required bytes aStatus = 2;
-  repeated uint32 aBytes = 3;
+  required bytes a_aRecordName = 1;
+  required bytes a_aStatus = 2;
+  repeated uint32 a_aBytes = 3;
 }
 
 message Msg_WriteComplete {
-  required bytes aRecordName = 1;
-  required bytes aStatus = 2;
+  required bytes a_aRecordName = 1;
+  required bytes a_aStatus = 2;
 }
 
 message Msg_Shutdown {
 }
 
 message Msg_Open {
-  required bytes aRecordName = 1;
+  required bytes a_aRecordName = 1;
 }
 
 message Msg_Read {
-  required bytes aRecordName = 1;
+  required bytes a_aRecordName = 1;
 }
 
 message Msg_Write {
-  required bytes aRecordName = 1;
-  repeated uint32 aBytes = 2;
+  required bytes a_aRecordName = 1;
+  repeated uint32 a_aBytes = 2;
 }
 
 message Msg_Close {
-  required bytes aRecordName = 1;
+  required bytes a_aRecordName = 1;
 }
 
 message Msg___delete__ {

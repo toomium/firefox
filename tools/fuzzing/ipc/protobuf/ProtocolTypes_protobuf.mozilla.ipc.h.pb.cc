@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR ProtocolFdMapping::ProtocolFdMapping(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.fd_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.protocolid_)*/0u} {}
+  , /*decltype(_impl_.a_fd_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_protocolid_)*/0u} {}
 struct ProtocolFdMappingDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ProtocolFdMappingDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,10 +47,10 @@ namespace ipc {
 class ProtocolFdMapping::_Internal {
  public:
   using HasBits = decltype(std::declval<ProtocolFdMapping>()._impl_._has_bits_);
-  static void set_has_protocolid(HasBits* has_bits) {
+  static void set_has_a_protocolid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_fd(HasBits* has_bits) {
+  static void set_has_a_fd(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -70,19 +70,19 @@ ProtocolFdMapping::ProtocolFdMapping(const ProtocolFdMapping& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.fd_){}
-    , decltype(_impl_.protocolid_){}};
+    , decltype(_impl_.a_fd_){}
+    , decltype(_impl_.a_protocolid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.fd_.InitDefault();
+  _impl_.a_fd_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fd_.Set("", GetArenaForAllocation());
+    _impl_.a_fd_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fd()) {
-    _this->_impl_.fd_.Set(from._internal_fd(), 
+  if (from._internal_has_a_fd()) {
+    _this->_impl_.a_fd_.Set(from._internal_a_fd(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.protocolid_ = from._impl_.protocolid_;
+  _this->_impl_.a_protocolid_ = from._impl_.a_protocolid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.ipc.ProtocolFdMapping)
 }
 
@@ -93,12 +93,12 @@ inline void ProtocolFdMapping::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.fd_){}
-    , decltype(_impl_.protocolid_){0u}
+    , decltype(_impl_.a_fd_){}
+    , decltype(_impl_.a_protocolid_){0u}
   };
-  _impl_.fd_.InitDefault();
+  _impl_.a_fd_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fd_.Set("", GetArenaForAllocation());
+    _impl_.a_fd_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -113,7 +113,7 @@ ProtocolFdMapping::~ProtocolFdMapping() {
 
 inline void ProtocolFdMapping::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.fd_.Destroy();
+  _impl_.a_fd_.Destroy();
 }
 
 void ProtocolFdMapping::SetCachedSize(int size) const {
@@ -128,9 +128,9 @@ void ProtocolFdMapping::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.fd_.ClearNonDefaultToEmpty();
+    _impl_.a_fd_.ClearNonDefaultToEmpty();
   }
-  _impl_.protocolid_ = 0u;
+  _impl_.a_protocolid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -142,19 +142,19 @@ const char* ProtocolFdMapping::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 protocolId = 1;
+      // required uint32 a_protocolId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_protocolid(&has_bits);
-          _impl_.protocolid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_protocolid(&has_bits);
+          _impl_.a_protocolid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes fd = 2;
+      // required bytes a_fd = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_fd();
+          auto str = _internal_mutable_a_fd();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -191,16 +191,16 @@ uint8_t* ProtocolFdMapping::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 protocolId = 1;
+  // required uint32 a_protocolId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_protocolid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_protocolid(), target);
   }
 
-  // required bytes fd = 2;
+  // required bytes a_fd = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_fd(), target);
+        2, this->_internal_a_fd(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -215,16 +215,16 @@ size_t ProtocolFdMapping::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.ipc.ProtocolFdMapping)
   size_t total_size = 0;
 
-  if (_internal_has_fd()) {
-    // required bytes fd = 2;
+  if (_internal_has_a_fd()) {
+    // required bytes a_fd = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fd());
+        this->_internal_a_fd());
   }
 
-  if (_internal_has_protocolid()) {
-    // required uint32 protocolId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_protocolid());
+  if (_internal_has_a_protocolid()) {
+    // required uint32 a_protocolId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_protocolid());
   }
 
   return total_size;
@@ -234,13 +234,13 @@ size_t ProtocolFdMapping::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes fd = 2;
+    // required bytes a_fd = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fd());
+        this->_internal_a_fd());
 
-    // required uint32 protocolId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_protocolid());
+    // required uint32 a_protocolId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_protocolid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -273,10 +273,10 @@ void ProtocolFdMapping::MergeFrom(const ProtocolFdMapping& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_fd(from._internal_fd());
+      _this->_internal_set_a_fd(from._internal_a_fd());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.protocolid_ = from._impl_.protocolid_;
+      _this->_impl_.a_protocolid_ = from._impl_.a_protocolid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -302,10 +302,10 @@ void ProtocolFdMapping::InternalSwap(ProtocolFdMapping* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fd_, lhs_arena,
-      &other->_impl_.fd_, rhs_arena
+      &_impl_.a_fd_, lhs_arena,
+      &other->_impl_.a_fd_, rhs_arena
   );
-  swap(_impl_.protocolid_, other->_impl_.protocolid_);
+  swap(_impl_.a_protocolid_, other->_impl_.a_protocolid_);
 }
 
 std::string ProtocolFdMapping::GetTypeName() const {

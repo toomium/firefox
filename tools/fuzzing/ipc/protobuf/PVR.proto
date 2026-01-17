@@ -20,60 +20,60 @@ import "PrefsTypes.proto";
 
 // Message declarations
 message Msg_NewGPUVRManager {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_Init {
-  repeated protobuf.mozilla.gfx.GfxVarUpdate vars = 1;
-  required protobuf.mozilla.gfx.DevicePrefs devicePrefs = 2;
+  repeated protobuf.mozilla.gfx.GfxVarUpdate a_vars = 1;
+  required protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
 }
 
 message Msg_UpdateVar {
-  required protobuf.mozilla.gfx.GfxVarUpdate var = 1;
+  required protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref pref = 1;
+  required protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_OpenVRControllerActionPathToVR {
-  required bytes aPath = 1;
+  required bytes a_aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToVR {
-  required bytes aType = 1;
-  required bytes aPath = 2;
+  required bytes a_aType = 1;
+  required bytes a_aPath = 2;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 generation = 1;
-  required bool anonymize = 2;
-  required bool minimizeMemoryUsage = 3;
-  optional bytes DMDFile = 4;
+  required uint32 a_generation = 1;
+  required bool a_anonymize = 2;
+  required bool a_minimizeMemoryUsage = 3;
+  optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 aGeneration = 1;
+  required uint32 a_aGeneration = 1;
 }
 
 message Msg_InitComplete {
 }
 
 message Msg_OpenVRControllerActionPathToParent {
-  required bytes aPath = 1;
+  required bytes a_aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToParent {
-  required bytes aType = 1;
-  required bytes aPath = 2;
+  required bytes a_aType = 1;
+  required bytes a_aPath = 2;
 }
 
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
+  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_AddMemoryReport {
-  required protobuf.mozilla.dom.MemoryReport aReport = 1;
+  required protobuf.mozilla.dom.MemoryReport a_aReport = 1;
 }
 
 // Parameter mappings stats:

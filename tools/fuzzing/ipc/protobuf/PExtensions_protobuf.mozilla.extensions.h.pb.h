@@ -170,75 +170,75 @@ class FrameTransitionData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kClientRedirectFieldNumber = 1,
-    kFormSubmitFieldNumber = 2,
-    kForwardBackFieldNumber = 3,
-    kReloadFieldNumber = 4,
-    kServerRedirectFieldNumber = 5,
+    kAClientRedirectFieldNumber = 1,
+    kAFormSubmitFieldNumber = 2,
+    kAForwardBackFieldNumber = 3,
+    kAReloadFieldNumber = 4,
+    kAServerRedirectFieldNumber = 5,
   };
-  // required bool clientRedirect = 1;
-  bool has_clientredirect() const;
+  // required bool a_clientRedirect = 1;
+  bool has_a_clientredirect() const;
   private:
-  bool _internal_has_clientredirect() const;
+  bool _internal_has_a_clientredirect() const;
   public:
-  void clear_clientredirect();
-  bool clientredirect() const;
-  void set_clientredirect(bool value);
+  void clear_a_clientredirect();
+  bool a_clientredirect() const;
+  void set_a_clientredirect(bool value);
   private:
-  bool _internal_clientredirect() const;
-  void _internal_set_clientredirect(bool value);
-  public:
-
-  // required bool formSubmit = 2;
-  bool has_formsubmit() const;
-  private:
-  bool _internal_has_formsubmit() const;
-  public:
-  void clear_formsubmit();
-  bool formsubmit() const;
-  void set_formsubmit(bool value);
-  private:
-  bool _internal_formsubmit() const;
-  void _internal_set_formsubmit(bool value);
+  bool _internal_a_clientredirect() const;
+  void _internal_set_a_clientredirect(bool value);
   public:
 
-  // required bool forwardBack = 3;
-  bool has_forwardback() const;
+  // required bool a_formSubmit = 2;
+  bool has_a_formsubmit() const;
   private:
-  bool _internal_has_forwardback() const;
+  bool _internal_has_a_formsubmit() const;
   public:
-  void clear_forwardback();
-  bool forwardback() const;
-  void set_forwardback(bool value);
+  void clear_a_formsubmit();
+  bool a_formsubmit() const;
+  void set_a_formsubmit(bool value);
   private:
-  bool _internal_forwardback() const;
-  void _internal_set_forwardback(bool value);
-  public:
-
-  // required bool reload = 4;
-  bool has_reload() const;
-  private:
-  bool _internal_has_reload() const;
-  public:
-  void clear_reload();
-  bool reload() const;
-  void set_reload(bool value);
-  private:
-  bool _internal_reload() const;
-  void _internal_set_reload(bool value);
+  bool _internal_a_formsubmit() const;
+  void _internal_set_a_formsubmit(bool value);
   public:
 
-  // required bool serverRedirect = 5;
-  bool has_serverredirect() const;
+  // required bool a_forwardBack = 3;
+  bool has_a_forwardback() const;
   private:
-  bool _internal_has_serverredirect() const;
+  bool _internal_has_a_forwardback() const;
   public:
-  void clear_serverredirect();
-  bool serverredirect() const;
-  void set_serverredirect(bool value);
+  void clear_a_forwardback();
+  bool a_forwardback() const;
+  void set_a_forwardback(bool value);
   private:
-  bool _internal_serverredirect() const;
-  void _internal_set_serverredirect(bool value);
+  bool _internal_a_forwardback() const;
+  void _internal_set_a_forwardback(bool value);
+  public:
+
+  // required bool a_reload = 4;
+  bool has_a_reload() const;
+  private:
+  bool _internal_has_a_reload() const;
+  public:
+  void clear_a_reload();
+  bool a_reload() const;
+  void set_a_reload(bool value);
+  private:
+  bool _internal_a_reload() const;
+  void _internal_set_a_reload(bool value);
+  public:
+
+  // required bool a_serverRedirect = 5;
+  bool has_a_serverredirect() const;
+  private:
+  bool _internal_has_a_serverredirect() const;
+  public:
+  void clear_a_serverredirect();
+  bool a_serverredirect() const;
+  void set_a_serverredirect(bool value);
+  private:
+  bool _internal_a_serverredirect() const;
+  void _internal_set_a_serverredirect(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.FrameTransitionData)
@@ -254,11 +254,11 @@ class FrameTransitionData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool clientredirect_;
-    bool formsubmit_;
-    bool forwardback_;
-    bool reload_;
-    bool serverredirect_;
+    bool a_clientredirect_;
+    bool a_formsubmit_;
+    bool a_forwardback_;
+    bool a_reload_;
+    bool a_serverredirect_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto;
@@ -274,144 +274,144 @@ class FrameTransitionData final :
 #endif  // __GNUC__
 // FrameTransitionData
 
-// required bool clientRedirect = 1;
-inline bool FrameTransitionData::_internal_has_clientredirect() const {
+// required bool a_clientRedirect = 1;
+inline bool FrameTransitionData::_internal_has_a_clientredirect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FrameTransitionData::has_clientredirect() const {
-  return _internal_has_clientredirect();
+inline bool FrameTransitionData::has_a_clientredirect() const {
+  return _internal_has_a_clientredirect();
 }
-inline void FrameTransitionData::clear_clientredirect() {
-  _impl_.clientredirect_ = false;
+inline void FrameTransitionData::clear_a_clientredirect() {
+  _impl_.a_clientredirect_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool FrameTransitionData::_internal_clientredirect() const {
-  return _impl_.clientredirect_;
+inline bool FrameTransitionData::_internal_a_clientredirect() const {
+  return _impl_.a_clientredirect_;
 }
-inline bool FrameTransitionData::clientredirect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.clientRedirect)
-  return _internal_clientredirect();
+inline bool FrameTransitionData::a_clientredirect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.a_clientRedirect)
+  return _internal_a_clientredirect();
 }
-inline void FrameTransitionData::_internal_set_clientredirect(bool value) {
+inline void FrameTransitionData::_internal_set_a_clientredirect(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.clientredirect_ = value;
+  _impl_.a_clientredirect_ = value;
 }
-inline void FrameTransitionData::set_clientredirect(bool value) {
-  _internal_set_clientredirect(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.clientRedirect)
+inline void FrameTransitionData::set_a_clientredirect(bool value) {
+  _internal_set_a_clientredirect(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_clientRedirect)
 }
 
-// required bool formSubmit = 2;
-inline bool FrameTransitionData::_internal_has_formsubmit() const {
+// required bool a_formSubmit = 2;
+inline bool FrameTransitionData::_internal_has_a_formsubmit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FrameTransitionData::has_formsubmit() const {
-  return _internal_has_formsubmit();
+inline bool FrameTransitionData::has_a_formsubmit() const {
+  return _internal_has_a_formsubmit();
 }
-inline void FrameTransitionData::clear_formsubmit() {
-  _impl_.formsubmit_ = false;
+inline void FrameTransitionData::clear_a_formsubmit() {
+  _impl_.a_formsubmit_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool FrameTransitionData::_internal_formsubmit() const {
-  return _impl_.formsubmit_;
+inline bool FrameTransitionData::_internal_a_formsubmit() const {
+  return _impl_.a_formsubmit_;
 }
-inline bool FrameTransitionData::formsubmit() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.formSubmit)
-  return _internal_formsubmit();
+inline bool FrameTransitionData::a_formsubmit() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.a_formSubmit)
+  return _internal_a_formsubmit();
 }
-inline void FrameTransitionData::_internal_set_formsubmit(bool value) {
+inline void FrameTransitionData::_internal_set_a_formsubmit(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.formsubmit_ = value;
+  _impl_.a_formsubmit_ = value;
 }
-inline void FrameTransitionData::set_formsubmit(bool value) {
-  _internal_set_formsubmit(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.formSubmit)
+inline void FrameTransitionData::set_a_formsubmit(bool value) {
+  _internal_set_a_formsubmit(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_formSubmit)
 }
 
-// required bool forwardBack = 3;
-inline bool FrameTransitionData::_internal_has_forwardback() const {
+// required bool a_forwardBack = 3;
+inline bool FrameTransitionData::_internal_has_a_forwardback() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FrameTransitionData::has_forwardback() const {
-  return _internal_has_forwardback();
+inline bool FrameTransitionData::has_a_forwardback() const {
+  return _internal_has_a_forwardback();
 }
-inline void FrameTransitionData::clear_forwardback() {
-  _impl_.forwardback_ = false;
+inline void FrameTransitionData::clear_a_forwardback() {
+  _impl_.a_forwardback_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool FrameTransitionData::_internal_forwardback() const {
-  return _impl_.forwardback_;
+inline bool FrameTransitionData::_internal_a_forwardback() const {
+  return _impl_.a_forwardback_;
 }
-inline bool FrameTransitionData::forwardback() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.forwardBack)
-  return _internal_forwardback();
+inline bool FrameTransitionData::a_forwardback() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.a_forwardBack)
+  return _internal_a_forwardback();
 }
-inline void FrameTransitionData::_internal_set_forwardback(bool value) {
+inline void FrameTransitionData::_internal_set_a_forwardback(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.forwardback_ = value;
+  _impl_.a_forwardback_ = value;
 }
-inline void FrameTransitionData::set_forwardback(bool value) {
-  _internal_set_forwardback(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.forwardBack)
+inline void FrameTransitionData::set_a_forwardback(bool value) {
+  _internal_set_a_forwardback(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_forwardBack)
 }
 
-// required bool reload = 4;
-inline bool FrameTransitionData::_internal_has_reload() const {
+// required bool a_reload = 4;
+inline bool FrameTransitionData::_internal_has_a_reload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool FrameTransitionData::has_reload() const {
-  return _internal_has_reload();
+inline bool FrameTransitionData::has_a_reload() const {
+  return _internal_has_a_reload();
 }
-inline void FrameTransitionData::clear_reload() {
-  _impl_.reload_ = false;
+inline void FrameTransitionData::clear_a_reload() {
+  _impl_.a_reload_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool FrameTransitionData::_internal_reload() const {
-  return _impl_.reload_;
+inline bool FrameTransitionData::_internal_a_reload() const {
+  return _impl_.a_reload_;
 }
-inline bool FrameTransitionData::reload() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.reload)
-  return _internal_reload();
+inline bool FrameTransitionData::a_reload() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.a_reload)
+  return _internal_a_reload();
 }
-inline void FrameTransitionData::_internal_set_reload(bool value) {
+inline void FrameTransitionData::_internal_set_a_reload(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.reload_ = value;
+  _impl_.a_reload_ = value;
 }
-inline void FrameTransitionData::set_reload(bool value) {
-  _internal_set_reload(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.reload)
+inline void FrameTransitionData::set_a_reload(bool value) {
+  _internal_set_a_reload(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_reload)
 }
 
-// required bool serverRedirect = 5;
-inline bool FrameTransitionData::_internal_has_serverredirect() const {
+// required bool a_serverRedirect = 5;
+inline bool FrameTransitionData::_internal_has_a_serverredirect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool FrameTransitionData::has_serverredirect() const {
-  return _internal_has_serverredirect();
+inline bool FrameTransitionData::has_a_serverredirect() const {
+  return _internal_has_a_serverredirect();
 }
-inline void FrameTransitionData::clear_serverredirect() {
-  _impl_.serverredirect_ = false;
+inline void FrameTransitionData::clear_a_serverredirect() {
+  _impl_.a_serverredirect_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool FrameTransitionData::_internal_serverredirect() const {
-  return _impl_.serverredirect_;
+inline bool FrameTransitionData::_internal_a_serverredirect() const {
+  return _impl_.a_serverredirect_;
 }
-inline bool FrameTransitionData::serverredirect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.serverRedirect)
-  return _internal_serverredirect();
+inline bool FrameTransitionData::a_serverredirect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.extensions.FrameTransitionData.a_serverRedirect)
+  return _internal_a_serverredirect();
 }
-inline void FrameTransitionData::_internal_set_serverredirect(bool value) {
+inline void FrameTransitionData::_internal_set_a_serverredirect(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.serverredirect_ = value;
+  _impl_.a_serverredirect_ = value;
 }
-inline void FrameTransitionData::set_serverredirect(bool value) {
-  _internal_set_serverredirect(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.serverRedirect)
+inline void FrameTransitionData::set_a_serverredirect(bool value) {
+  _internal_set_a_serverredirect(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_serverRedirect)
 }
 
 #ifdef __GNUC__

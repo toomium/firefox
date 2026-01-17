@@ -321,25 +321,25 @@ class Msg_Send final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMsgFieldNumber = 1,
+    kAMsgFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
-  int msg_size() const;
+  // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
+  int a_msg_size() const;
   private:
-  int _internal_msg_size() const;
+  int _internal_a_msg_size() const;
   public:
-  void clear_msg();
-  ::protobuf::mozilla::dom::MIDIMessage* mutable_msg(int index);
+  void clear_a_msg();
+  ::protobuf::mozilla::dom::MIDIMessage* mutable_a_msg(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >*
-      mutable_msg();
+      mutable_a_msg();
   private:
-  const ::protobuf::mozilla::dom::MIDIMessage& _internal_msg(int index) const;
-  ::protobuf::mozilla::dom::MIDIMessage* _internal_add_msg();
+  const ::protobuf::mozilla::dom::MIDIMessage& _internal_a_msg(int index) const;
+  ::protobuf::mozilla::dom::MIDIMessage* _internal_add_a_msg();
   public:
-  const ::protobuf::mozilla::dom::MIDIMessage& msg(int index) const;
-  ::protobuf::mozilla::dom::MIDIMessage* add_msg();
+  const ::protobuf::mozilla::dom::MIDIMessage& a_msg(int index) const;
+  ::protobuf::mozilla::dom::MIDIMessage* add_a_msg();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >&
-      msg() const;
+      a_msg() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMIDIPort.Msg_Send)
  private:
@@ -349,7 +349,7 @@ class Msg_Send final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage > msg_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage > a_msg_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -839,25 +839,25 @@ class Msg_Receive final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMsgFieldNumber = 1,
+    kAMsgFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
-  int msg_size() const;
+  // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
+  int a_msg_size() const;
   private:
-  int _internal_msg_size() const;
+  int _internal_a_msg_size() const;
   public:
-  void clear_msg();
-  ::protobuf::mozilla::dom::MIDIMessage* mutable_msg(int index);
+  void clear_a_msg();
+  ::protobuf::mozilla::dom::MIDIMessage* mutable_a_msg(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >*
-      mutable_msg();
+      mutable_a_msg();
   private:
-  const ::protobuf::mozilla::dom::MIDIMessage& _internal_msg(int index) const;
-  ::protobuf::mozilla::dom::MIDIMessage* _internal_add_msg();
+  const ::protobuf::mozilla::dom::MIDIMessage& _internal_a_msg(int index) const;
+  ::protobuf::mozilla::dom::MIDIMessage* _internal_add_a_msg();
   public:
-  const ::protobuf::mozilla::dom::MIDIMessage& msg(int index) const;
-  ::protobuf::mozilla::dom::MIDIMessage* add_msg();
+  const ::protobuf::mozilla::dom::MIDIMessage& a_msg(int index) const;
+  ::protobuf::mozilla::dom::MIDIMessage* add_a_msg();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >&
-      msg() const;
+      a_msg() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMIDIPort.Msg_Receive)
  private:
@@ -867,7 +867,7 @@ class Msg_Receive final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage > msg_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage > a_msg_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -985,33 +985,33 @@ class Msg_UpdateStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceStateFieldNumber = 1,
-    kConnectionStateFieldNumber = 2,
+    kADeviceStateFieldNumber = 1,
+    kAConnectionStateFieldNumber = 2,
   };
-  // required uint32 deviceState = 1;
-  bool has_devicestate() const;
+  // required uint32 a_deviceState = 1;
+  bool has_a_devicestate() const;
   private:
-  bool _internal_has_devicestate() const;
+  bool _internal_has_a_devicestate() const;
   public:
-  void clear_devicestate();
-  uint32_t devicestate() const;
-  void set_devicestate(uint32_t value);
+  void clear_a_devicestate();
+  uint32_t a_devicestate() const;
+  void set_a_devicestate(uint32_t value);
   private:
-  uint32_t _internal_devicestate() const;
-  void _internal_set_devicestate(uint32_t value);
+  uint32_t _internal_a_devicestate() const;
+  void _internal_set_a_devicestate(uint32_t value);
   public:
 
-  // required uint32 connectionState = 2;
-  bool has_connectionstate() const;
+  // required uint32 a_connectionState = 2;
+  bool has_a_connectionstate() const;
   private:
-  bool _internal_has_connectionstate() const;
+  bool _internal_has_a_connectionstate() const;
   public:
-  void clear_connectionstate();
-  uint32_t connectionstate() const;
-  void set_connectionstate(uint32_t value);
+  void clear_a_connectionstate();
+  uint32_t a_connectionstate() const;
+  void set_a_connectionstate(uint32_t value);
   private:
-  uint32_t _internal_connectionstate() const;
-  void _internal_set_connectionstate(uint32_t value);
+  uint32_t _internal_a_connectionstate() const;
+  void _internal_set_a_connectionstate(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus)
@@ -1027,8 +1027,8 @@ class Msg_UpdateStatus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t devicestate_;
-    uint32_t connectionstate_;
+    uint32_t a_devicestate_;
+    uint32_t a_connectionstate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMIDIPort_2eproto;
@@ -1048,41 +1048,41 @@ class Msg_UpdateStatus final :
 
 // Msg_Send
 
-// repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
-inline int Msg_Send::_internal_msg_size() const {
-  return _impl_.msg_.size();
+// repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
+inline int Msg_Send::_internal_a_msg_size() const {
+  return _impl_.a_msg_.size();
 }
-inline int Msg_Send::msg_size() const {
-  return _internal_msg_size();
+inline int Msg_Send::a_msg_size() const {
+  return _internal_a_msg_size();
 }
-inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Send::mutable_msg(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMIDIPort.Msg_Send.msg)
-  return _impl_.msg_.Mutable(index);
+inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Send::mutable_a_msg(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMIDIPort.Msg_Send.a_msg)
+  return _impl_.a_msg_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >*
-Msg_Send::mutable_msg() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMIDIPort.Msg_Send.msg)
-  return &_impl_.msg_;
+Msg_Send::mutable_a_msg() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMIDIPort.Msg_Send.a_msg)
+  return &_impl_.a_msg_;
 }
-inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Send::_internal_msg(int index) const {
-  return _impl_.msg_.Get(index);
+inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Send::_internal_a_msg(int index) const {
+  return _impl_.a_msg_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Send::msg(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_Send.msg)
-  return _internal_msg(index);
+inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Send::a_msg(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_Send.a_msg)
+  return _internal_a_msg(index);
 }
-inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Send::_internal_add_msg() {
-  return _impl_.msg_.Add();
+inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Send::_internal_add_a_msg() {
+  return _impl_.a_msg_.Add();
 }
-inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Send::add_msg() {
-  ::protobuf::mozilla::dom::MIDIMessage* _add = _internal_add_msg();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMIDIPort.Msg_Send.msg)
+inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Send::add_a_msg() {
+  ::protobuf::mozilla::dom::MIDIMessage* _add = _internal_add_a_msg();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMIDIPort.Msg_Send.a_msg)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >&
-Msg_Send::msg() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMIDIPort.Msg_Send.msg)
-  return _impl_.msg_;
+Msg_Send::a_msg() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMIDIPort.Msg_Send.a_msg)
+  return _impl_.a_msg_;
 }
 
 // -------------------------------------------------------------------
@@ -1101,101 +1101,101 @@ Msg_Send::msg() const {
 
 // Msg_Receive
 
-// repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
-inline int Msg_Receive::_internal_msg_size() const {
-  return _impl_.msg_.size();
+// repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
+inline int Msg_Receive::_internal_a_msg_size() const {
+  return _impl_.a_msg_.size();
 }
-inline int Msg_Receive::msg_size() const {
-  return _internal_msg_size();
+inline int Msg_Receive::a_msg_size() const {
+  return _internal_a_msg_size();
 }
-inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Receive::mutable_msg(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.msg)
-  return _impl_.msg_.Mutable(index);
+inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Receive::mutable_a_msg(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.a_msg)
+  return _impl_.a_msg_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >*
-Msg_Receive::mutable_msg() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.msg)
-  return &_impl_.msg_;
+Msg_Receive::mutable_a_msg() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.a_msg)
+  return &_impl_.a_msg_;
 }
-inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Receive::_internal_msg(int index) const {
-  return _impl_.msg_.Get(index);
+inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Receive::_internal_a_msg(int index) const {
+  return _impl_.a_msg_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Receive::msg(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.msg)
-  return _internal_msg(index);
+inline const ::protobuf::mozilla::dom::MIDIMessage& Msg_Receive::a_msg(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.a_msg)
+  return _internal_a_msg(index);
 }
-inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Receive::_internal_add_msg() {
-  return _impl_.msg_.Add();
+inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Receive::_internal_add_a_msg() {
+  return _impl_.a_msg_.Add();
 }
-inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Receive::add_msg() {
-  ::protobuf::mozilla::dom::MIDIMessage* _add = _internal_add_msg();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.msg)
+inline ::protobuf::mozilla::dom::MIDIMessage* Msg_Receive::add_a_msg() {
+  ::protobuf::mozilla::dom::MIDIMessage* _add = _internal_add_a_msg();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.a_msg)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIMessage >&
-Msg_Receive::msg() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.msg)
-  return _impl_.msg_;
+Msg_Receive::a_msg() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMIDIPort.Msg_Receive.a_msg)
+  return _impl_.a_msg_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateStatus
 
-// required uint32 deviceState = 1;
-inline bool Msg_UpdateStatus::_internal_has_devicestate() const {
+// required uint32 a_deviceState = 1;
+inline bool Msg_UpdateStatus::_internal_has_a_devicestate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateStatus::has_devicestate() const {
-  return _internal_has_devicestate();
+inline bool Msg_UpdateStatus::has_a_devicestate() const {
+  return _internal_has_a_devicestate();
 }
-inline void Msg_UpdateStatus::clear_devicestate() {
-  _impl_.devicestate_ = 0u;
+inline void Msg_UpdateStatus::clear_a_devicestate() {
+  _impl_.a_devicestate_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_UpdateStatus::_internal_devicestate() const {
-  return _impl_.devicestate_;
+inline uint32_t Msg_UpdateStatus::_internal_a_devicestate() const {
+  return _impl_.a_devicestate_;
 }
-inline uint32_t Msg_UpdateStatus::devicestate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.deviceState)
-  return _internal_devicestate();
+inline uint32_t Msg_UpdateStatus::a_devicestate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.a_deviceState)
+  return _internal_a_devicestate();
 }
-inline void Msg_UpdateStatus::_internal_set_devicestate(uint32_t value) {
+inline void Msg_UpdateStatus::_internal_set_a_devicestate(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.devicestate_ = value;
+  _impl_.a_devicestate_ = value;
 }
-inline void Msg_UpdateStatus::set_devicestate(uint32_t value) {
-  _internal_set_devicestate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.deviceState)
+inline void Msg_UpdateStatus::set_a_devicestate(uint32_t value) {
+  _internal_set_a_devicestate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.a_deviceState)
 }
 
-// required uint32 connectionState = 2;
-inline bool Msg_UpdateStatus::_internal_has_connectionstate() const {
+// required uint32 a_connectionState = 2;
+inline bool Msg_UpdateStatus::_internal_has_a_connectionstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_UpdateStatus::has_connectionstate() const {
-  return _internal_has_connectionstate();
+inline bool Msg_UpdateStatus::has_a_connectionstate() const {
+  return _internal_has_a_connectionstate();
 }
-inline void Msg_UpdateStatus::clear_connectionstate() {
-  _impl_.connectionstate_ = 0u;
+inline void Msg_UpdateStatus::clear_a_connectionstate() {
+  _impl_.a_connectionstate_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_UpdateStatus::_internal_connectionstate() const {
-  return _impl_.connectionstate_;
+inline uint32_t Msg_UpdateStatus::_internal_a_connectionstate() const {
+  return _impl_.a_connectionstate_;
 }
-inline uint32_t Msg_UpdateStatus::connectionstate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.connectionState)
-  return _internal_connectionstate();
+inline uint32_t Msg_UpdateStatus::a_connectionstate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.a_connectionState)
+  return _internal_a_connectionstate();
 }
-inline void Msg_UpdateStatus::_internal_set_connectionstate(uint32_t value) {
+inline void Msg_UpdateStatus::_internal_set_a_connectionstate(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.connectionstate_ = value;
+  _impl_.a_connectionstate_ = value;
 }
-inline void Msg_UpdateStatus::set_connectionstate(uint32_t value) {
-  _internal_set_connectionstate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.connectionState)
+inline void Msg_UpdateStatus::set_a_connectionstate(uint32_t value) {
+  _internal_set_a_connectionstate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus.a_connectionState)
 }
 
 #ifdef __GNUC__

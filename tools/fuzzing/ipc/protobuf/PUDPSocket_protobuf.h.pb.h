@@ -176,38 +176,38 @@ class UDPAddressInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAddrFieldNumber = 1,
-    kPortFieldNumber = 2,
+    kAAddrFieldNumber = 1,
+    kAPortFieldNumber = 2,
   };
-  // required bytes addr = 1;
-  bool has_addr() const;
+  // required bytes a_addr = 1;
+  bool has_a_addr() const;
   private:
-  bool _internal_has_addr() const;
+  bool _internal_has_a_addr() const;
   public:
-  void clear_addr();
-  const std::string& addr() const;
+  void clear_a_addr();
+  const std::string& a_addr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_addr(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_addr();
-  PROTOBUF_NODISCARD std::string* release_addr();
-  void set_allocated_addr(std::string* addr);
+  void set_a_addr(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_addr();
+  PROTOBUF_NODISCARD std::string* release_a_addr();
+  void set_allocated_a_addr(std::string* a_addr);
   private:
-  const std::string& _internal_addr() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_addr(const std::string& value);
-  std::string* _internal_mutable_addr();
+  const std::string& _internal_a_addr() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_addr(const std::string& value);
+  std::string* _internal_mutable_a_addr();
   public:
 
-  // required uint32 port = 2;
-  bool has_port() const;
+  // required uint32 a_port = 2;
+  bool has_a_port() const;
   private:
-  bool _internal_has_port() const;
+  bool _internal_has_a_port() const;
   public:
-  void clear_port();
-  uint32_t port() const;
-  void set_port(uint32_t value);
+  void clear_a_port();
+  uint32_t a_port() const;
+  void set_a_port(uint32_t value);
   private:
-  uint32_t _internal_port() const;
-  void _internal_set_port(uint32_t value);
+  uint32_t _internal_a_port() const;
+  void _internal_set_a_port(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.UDPAddressInfo)
@@ -223,8 +223,8 @@ class UDPAddressInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr addr_;
-    uint32_t port_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_addr_;
+    uint32_t a_port_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_5fprotobuf_2eh_2eproto;
@@ -273,8 +273,8 @@ class UDPSocketAddr final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVUDPAddressInfo = 1,
-    kMVNetAddr = 2,
+    kAMVUDPAddressInfo = 1,
+    kAMVNetAddr = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -347,43 +347,43 @@ class UDPSocketAddr final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVUDPAddressInfoFieldNumber = 1,
-    kMVNetAddrFieldNumber = 2,
+    kAMVUDPAddressInfoFieldNumber = 1,
+    kAMVNetAddrFieldNumber = 2,
   };
-  // .protobuf.UDPAddressInfo mVUDPAddressInfo = 1;
-  bool has_mvudpaddressinfo() const;
+  // .protobuf.UDPAddressInfo a_mVUDPAddressInfo = 1;
+  bool has_a_mvudpaddressinfo() const;
   private:
-  bool _internal_has_mvudpaddressinfo() const;
+  bool _internal_has_a_mvudpaddressinfo() const;
   public:
-  void clear_mvudpaddressinfo();
-  const ::protobuf::UDPAddressInfo& mvudpaddressinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::UDPAddressInfo* release_mvudpaddressinfo();
-  ::protobuf::UDPAddressInfo* mutable_mvudpaddressinfo();
-  void set_allocated_mvudpaddressinfo(::protobuf::UDPAddressInfo* mvudpaddressinfo);
+  void clear_a_mvudpaddressinfo();
+  const ::protobuf::UDPAddressInfo& a_mvudpaddressinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::UDPAddressInfo* release_a_mvudpaddressinfo();
+  ::protobuf::UDPAddressInfo* mutable_a_mvudpaddressinfo();
+  void set_allocated_a_mvudpaddressinfo(::protobuf::UDPAddressInfo* a_mvudpaddressinfo);
   private:
-  const ::protobuf::UDPAddressInfo& _internal_mvudpaddressinfo() const;
-  ::protobuf::UDPAddressInfo* _internal_mutable_mvudpaddressinfo();
+  const ::protobuf::UDPAddressInfo& _internal_a_mvudpaddressinfo() const;
+  ::protobuf::UDPAddressInfo* _internal_mutable_a_mvudpaddressinfo();
   public:
-  void unsafe_arena_set_allocated_mvudpaddressinfo(
-      ::protobuf::UDPAddressInfo* mvudpaddressinfo);
-  ::protobuf::UDPAddressInfo* unsafe_arena_release_mvudpaddressinfo();
+  void unsafe_arena_set_allocated_a_mvudpaddressinfo(
+      ::protobuf::UDPAddressInfo* a_mvudpaddressinfo);
+  ::protobuf::UDPAddressInfo* unsafe_arena_release_a_mvudpaddressinfo();
 
-  // bytes mVNetAddr = 2;
-  bool has_mvnetaddr() const;
+  // bytes a_mVNetAddr = 2;
+  bool has_a_mvnetaddr() const;
   private:
-  bool _internal_has_mvnetaddr() const;
+  bool _internal_has_a_mvnetaddr() const;
   public:
-  void clear_mvnetaddr();
-  const std::string& mvnetaddr() const;
+  void clear_a_mvnetaddr();
+  const std::string& a_mvnetaddr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnetaddr(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnetaddr();
-  PROTOBUF_NODISCARD std::string* release_mvnetaddr();
-  void set_allocated_mvnetaddr(std::string* mvnetaddr);
+  void set_a_mvnetaddr(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnetaddr();
+  PROTOBUF_NODISCARD std::string* release_a_mvnetaddr();
+  void set_allocated_a_mvnetaddr(std::string* a_mvnetaddr);
   private:
-  const std::string& _internal_mvnetaddr() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnetaddr(const std::string& value);
-  std::string* _internal_mutable_mvnetaddr();
+  const std::string& _internal_a_mvnetaddr() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnetaddr(const std::string& value);
+  std::string* _internal_mutable_a_mvnetaddr();
   public:
 
   void clear_content();
@@ -391,8 +391,8 @@ class UDPSocketAddr final :
   // @@protoc_insertion_point(class_scope:protobuf.UDPSocketAddr)
  private:
   class _Internal;
-  void set_has_mvudpaddressinfo();
-  void set_has_mvnetaddr();
+  void set_has_a_mvudpaddressinfo();
+  void set_has_a_mvnetaddr();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -404,8 +404,8 @@ class UDPSocketAddr final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::UDPAddressInfo* mvudpaddressinfo_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnetaddr_;
+      ::protobuf::UDPAddressInfo* a_mvudpaddressinfo_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnetaddr_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -526,29 +526,29 @@ class UDPData__mVArrayOfuint8_t final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfuint8TFieldNumber = 1,
+    kAMVArrayOfuint8TFieldNumber = 1,
   };
-  // repeated uint32 mVArrayOfuint8_t = 1;
-  int mvarrayofuint8_t_size() const;
+  // repeated uint32 a_mVArrayOfuint8_t = 1;
+  int a_mvarrayofuint8_t_size() const;
   private:
-  int _internal_mvarrayofuint8_t_size() const;
+  int _internal_a_mvarrayofuint8_t_size() const;
   public:
-  void clear_mvarrayofuint8_t();
+  void clear_a_mvarrayofuint8_t();
   private:
-  uint32_t _internal_mvarrayofuint8_t(int index) const;
+  uint32_t _internal_a_mvarrayofuint8_t(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_mvarrayofuint8_t() const;
-  void _internal_add_mvarrayofuint8_t(uint32_t value);
+      _internal_a_mvarrayofuint8_t() const;
+  void _internal_add_a_mvarrayofuint8_t(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_mvarrayofuint8_t();
+      _internal_mutable_a_mvarrayofuint8_t();
   public:
-  uint32_t mvarrayofuint8_t(int index) const;
-  void set_mvarrayofuint8_t(int index, uint32_t value);
-  void add_mvarrayofuint8_t(uint32_t value);
+  uint32_t a_mvarrayofuint8_t(int index) const;
+  void set_a_mvarrayofuint8_t(int index, uint32_t value);
+  void add_a_mvarrayofuint8_t(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      mvarrayofuint8_t() const;
+      a_mvarrayofuint8_t() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_mvarrayofuint8_t();
+      mutable_a_mvarrayofuint8_t();
 
   // @@protoc_insertion_point(class_scope:protobuf.UDPData._mVArrayOfuint8_t)
  private:
@@ -558,7 +558,7 @@ class UDPData__mVArrayOfuint8_t final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > mvarrayofuint8_t_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mvarrayofuint8_t_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -609,7 +609,7 @@ class UDPData final :
   }
   enum ContentCase {
     kMVArrayOfuint8T = 1,
-    kMVIPCStream = 2,
+    kAMVIPCStream = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -685,7 +685,7 @@ class UDPData final :
 
   enum : int {
     kMVArrayOfuint8TFieldNumber = 1,
-    kMVIPCStreamFieldNumber = 2,
+    kAMVIPCStreamFieldNumber = 2,
   };
   // .protobuf.UDPData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
   bool has_mvarrayofuint8_t() const;
@@ -705,23 +705,23 @@ class UDPData final :
       ::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t);
   ::protobuf::UDPData__mVArrayOfuint8_t* unsafe_arena_release_mvarrayofuint8_t();
 
-  // .protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
-  bool has_mvipcstream() const;
+  // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
+  bool has_a_mvipcstream() const;
   private:
-  bool _internal_has_mvipcstream() const;
+  bool _internal_has_a_mvipcstream() const;
   public:
-  void clear_mvipcstream();
-  const ::protobuf::mozilla::ipc::IPCStream& mvipcstream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_mvipcstream();
-  ::protobuf::mozilla::ipc::IPCStream* mutable_mvipcstream();
-  void set_allocated_mvipcstream(::protobuf::mozilla::ipc::IPCStream* mvipcstream);
+  void clear_a_mvipcstream();
+  const ::protobuf::mozilla::ipc::IPCStream& a_mvipcstream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_a_mvipcstream();
+  ::protobuf::mozilla::ipc::IPCStream* mutable_a_mvipcstream();
+  void set_allocated_a_mvipcstream(::protobuf::mozilla::ipc::IPCStream* a_mvipcstream);
   private:
-  const ::protobuf::mozilla::ipc::IPCStream& _internal_mvipcstream() const;
-  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_mvipcstream();
+  const ::protobuf::mozilla::ipc::IPCStream& _internal_a_mvipcstream() const;
+  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_a_mvipcstream();
   public:
-  void unsafe_arena_set_allocated_mvipcstream(
-      ::protobuf::mozilla::ipc::IPCStream* mvipcstream);
-  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_mvipcstream();
+  void unsafe_arena_set_allocated_a_mvipcstream(
+      ::protobuf::mozilla::ipc::IPCStream* a_mvipcstream);
+  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_mvipcstream();
 
   void clear_content();
   ContentCase content_case() const;
@@ -729,7 +729,7 @@ class UDPData final :
  private:
   class _Internal;
   void set_has_mvarrayofuint8_t();
-  void set_has_mvipcstream();
+  void set_has_a_mvipcstream();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -742,7 +742,7 @@ class UDPData final :
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t_;
-      ::protobuf::mozilla::ipc::IPCStream* mvipcstream_;
+      ::protobuf::mozilla::ipc::IPCStream* a_mvipcstream_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -762,255 +762,255 @@ class UDPData final :
 #endif  // __GNUC__
 // UDPAddressInfo
 
-// required bytes addr = 1;
-inline bool UDPAddressInfo::_internal_has_addr() const {
+// required bytes a_addr = 1;
+inline bool UDPAddressInfo::_internal_has_a_addr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool UDPAddressInfo::has_addr() const {
-  return _internal_has_addr();
+inline bool UDPAddressInfo::has_a_addr() const {
+  return _internal_has_a_addr();
 }
-inline void UDPAddressInfo::clear_addr() {
-  _impl_.addr_.ClearToEmpty();
+inline void UDPAddressInfo::clear_a_addr() {
+  _impl_.a_addr_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& UDPAddressInfo::addr() const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPAddressInfo.addr)
-  return _internal_addr();
+inline const std::string& UDPAddressInfo::a_addr() const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPAddressInfo.a_addr)
+  return _internal_a_addr();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void UDPAddressInfo::set_addr(ArgT0&& arg0, ArgT... args) {
+void UDPAddressInfo::set_a_addr(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.addr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.UDPAddressInfo.addr)
+ _impl_.a_addr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.UDPAddressInfo.a_addr)
 }
-inline std::string* UDPAddressInfo::mutable_addr() {
-  std::string* _s = _internal_mutable_addr();
-  // @@protoc_insertion_point(field_mutable:protobuf.UDPAddressInfo.addr)
+inline std::string* UDPAddressInfo::mutable_a_addr() {
+  std::string* _s = _internal_mutable_a_addr();
+  // @@protoc_insertion_point(field_mutable:protobuf.UDPAddressInfo.a_addr)
   return _s;
 }
-inline const std::string& UDPAddressInfo::_internal_addr() const {
-  return _impl_.addr_.Get();
+inline const std::string& UDPAddressInfo::_internal_a_addr() const {
+  return _impl_.a_addr_.Get();
 }
-inline void UDPAddressInfo::_internal_set_addr(const std::string& value) {
+inline void UDPAddressInfo::_internal_set_a_addr(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.addr_.Set(value, GetArenaForAllocation());
+  _impl_.a_addr_.Set(value, GetArenaForAllocation());
 }
-inline std::string* UDPAddressInfo::_internal_mutable_addr() {
+inline std::string* UDPAddressInfo::_internal_mutable_a_addr() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.addr_.Mutable(GetArenaForAllocation());
+  return _impl_.a_addr_.Mutable(GetArenaForAllocation());
 }
-inline std::string* UDPAddressInfo::release_addr() {
-  // @@protoc_insertion_point(field_release:protobuf.UDPAddressInfo.addr)
-  if (!_internal_has_addr()) {
+inline std::string* UDPAddressInfo::release_a_addr() {
+  // @@protoc_insertion_point(field_release:protobuf.UDPAddressInfo.a_addr)
+  if (!_internal_has_a_addr()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.addr_.Release();
+  auto* p = _impl_.a_addr_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.addr_.IsDefault()) {
-    _impl_.addr_.Set("", GetArenaForAllocation());
+  if (_impl_.a_addr_.IsDefault()) {
+    _impl_.a_addr_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void UDPAddressInfo::set_allocated_addr(std::string* addr) {
-  if (addr != nullptr) {
+inline void UDPAddressInfo::set_allocated_a_addr(std::string* a_addr) {
+  if (a_addr != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.addr_.SetAllocated(addr, GetArenaForAllocation());
+  _impl_.a_addr_.SetAllocated(a_addr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.addr_.IsDefault()) {
-    _impl_.addr_.Set("", GetArenaForAllocation());
+  if (_impl_.a_addr_.IsDefault()) {
+    _impl_.a_addr_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.UDPAddressInfo.addr)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.UDPAddressInfo.a_addr)
 }
 
-// required uint32 port = 2;
-inline bool UDPAddressInfo::_internal_has_port() const {
+// required uint32 a_port = 2;
+inline bool UDPAddressInfo::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool UDPAddressInfo::has_port() const {
-  return _internal_has_port();
+inline bool UDPAddressInfo::has_a_port() const {
+  return _internal_has_a_port();
 }
-inline void UDPAddressInfo::clear_port() {
-  _impl_.port_ = 0u;
+inline void UDPAddressInfo::clear_a_port() {
+  _impl_.a_port_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t UDPAddressInfo::_internal_port() const {
-  return _impl_.port_;
+inline uint32_t UDPAddressInfo::_internal_a_port() const {
+  return _impl_.a_port_;
 }
-inline uint32_t UDPAddressInfo::port() const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPAddressInfo.port)
-  return _internal_port();
+inline uint32_t UDPAddressInfo::a_port() const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPAddressInfo.a_port)
+  return _internal_a_port();
 }
-inline void UDPAddressInfo::_internal_set_port(uint32_t value) {
+inline void UDPAddressInfo::_internal_set_a_port(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.port_ = value;
+  _impl_.a_port_ = value;
 }
-inline void UDPAddressInfo::set_port(uint32_t value) {
-  _internal_set_port(value);
-  // @@protoc_insertion_point(field_set:protobuf.UDPAddressInfo.port)
+inline void UDPAddressInfo::set_a_port(uint32_t value) {
+  _internal_set_a_port(value);
+  // @@protoc_insertion_point(field_set:protobuf.UDPAddressInfo.a_port)
 }
 
 // -------------------------------------------------------------------
 
 // UDPSocketAddr
 
-// .protobuf.UDPAddressInfo mVUDPAddressInfo = 1;
-inline bool UDPSocketAddr::_internal_has_mvudpaddressinfo() const {
-  return content_case() == kMVUDPAddressInfo;
+// .protobuf.UDPAddressInfo a_mVUDPAddressInfo = 1;
+inline bool UDPSocketAddr::_internal_has_a_mvudpaddressinfo() const {
+  return content_case() == kAMVUDPAddressInfo;
 }
-inline bool UDPSocketAddr::has_mvudpaddressinfo() const {
-  return _internal_has_mvudpaddressinfo();
+inline bool UDPSocketAddr::has_a_mvudpaddressinfo() const {
+  return _internal_has_a_mvudpaddressinfo();
 }
-inline void UDPSocketAddr::set_has_mvudpaddressinfo() {
-  _impl_._oneof_case_[0] = kMVUDPAddressInfo;
+inline void UDPSocketAddr::set_has_a_mvudpaddressinfo() {
+  _impl_._oneof_case_[0] = kAMVUDPAddressInfo;
 }
-inline void UDPSocketAddr::clear_mvudpaddressinfo() {
-  if (_internal_has_mvudpaddressinfo()) {
+inline void UDPSocketAddr::clear_a_mvudpaddressinfo() {
+  if (_internal_has_a_mvudpaddressinfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvudpaddressinfo_;
+      delete _impl_.content_.a_mvudpaddressinfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::UDPAddressInfo* UDPSocketAddr::release_mvudpaddressinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.UDPSocketAddr.mVUDPAddressInfo)
-  if (_internal_has_mvudpaddressinfo()) {
+inline ::protobuf::UDPAddressInfo* UDPSocketAddr::release_a_mvudpaddressinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.UDPSocketAddr.a_mVUDPAddressInfo)
+  if (_internal_has_a_mvudpaddressinfo()) {
     clear_has_content();
-    ::protobuf::UDPAddressInfo* temp = _impl_.content_.mvudpaddressinfo_;
+    ::protobuf::UDPAddressInfo* temp = _impl_.content_.a_mvudpaddressinfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvudpaddressinfo_ = nullptr;
+    _impl_.content_.a_mvudpaddressinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::UDPAddressInfo& UDPSocketAddr::_internal_mvudpaddressinfo() const {
-  return _internal_has_mvudpaddressinfo()
-      ? *_impl_.content_.mvudpaddressinfo_
+inline const ::protobuf::UDPAddressInfo& UDPSocketAddr::_internal_a_mvudpaddressinfo() const {
+  return _internal_has_a_mvudpaddressinfo()
+      ? *_impl_.content_.a_mvudpaddressinfo_
       : reinterpret_cast< ::protobuf::UDPAddressInfo&>(::protobuf::_UDPAddressInfo_default_instance_);
 }
-inline const ::protobuf::UDPAddressInfo& UDPSocketAddr::mvudpaddressinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPSocketAddr.mVUDPAddressInfo)
-  return _internal_mvudpaddressinfo();
+inline const ::protobuf::UDPAddressInfo& UDPSocketAddr::a_mvudpaddressinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPSocketAddr.a_mVUDPAddressInfo)
+  return _internal_a_mvudpaddressinfo();
 }
-inline ::protobuf::UDPAddressInfo* UDPSocketAddr::unsafe_arena_release_mvudpaddressinfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.UDPSocketAddr.mVUDPAddressInfo)
-  if (_internal_has_mvudpaddressinfo()) {
+inline ::protobuf::UDPAddressInfo* UDPSocketAddr::unsafe_arena_release_a_mvudpaddressinfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.UDPSocketAddr.a_mVUDPAddressInfo)
+  if (_internal_has_a_mvudpaddressinfo()) {
     clear_has_content();
-    ::protobuf::UDPAddressInfo* temp = _impl_.content_.mvudpaddressinfo_;
-    _impl_.content_.mvudpaddressinfo_ = nullptr;
+    ::protobuf::UDPAddressInfo* temp = _impl_.content_.a_mvudpaddressinfo_;
+    _impl_.content_.a_mvudpaddressinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void UDPSocketAddr::unsafe_arena_set_allocated_mvudpaddressinfo(::protobuf::UDPAddressInfo* mvudpaddressinfo) {
+inline void UDPSocketAddr::unsafe_arena_set_allocated_a_mvudpaddressinfo(::protobuf::UDPAddressInfo* a_mvudpaddressinfo) {
   clear_content();
-  if (mvudpaddressinfo) {
-    set_has_mvudpaddressinfo();
-    _impl_.content_.mvudpaddressinfo_ = mvudpaddressinfo;
+  if (a_mvudpaddressinfo) {
+    set_has_a_mvudpaddressinfo();
+    _impl_.content_.a_mvudpaddressinfo_ = a_mvudpaddressinfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.UDPSocketAddr.mVUDPAddressInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.UDPSocketAddr.a_mVUDPAddressInfo)
 }
-inline ::protobuf::UDPAddressInfo* UDPSocketAddr::_internal_mutable_mvudpaddressinfo() {
-  if (!_internal_has_mvudpaddressinfo()) {
+inline ::protobuf::UDPAddressInfo* UDPSocketAddr::_internal_mutable_a_mvudpaddressinfo() {
+  if (!_internal_has_a_mvudpaddressinfo()) {
     clear_content();
-    set_has_mvudpaddressinfo();
-    _impl_.content_.mvudpaddressinfo_ = CreateMaybeMessage< ::protobuf::UDPAddressInfo >(GetArenaForAllocation());
+    set_has_a_mvudpaddressinfo();
+    _impl_.content_.a_mvudpaddressinfo_ = CreateMaybeMessage< ::protobuf::UDPAddressInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvudpaddressinfo_;
+  return _impl_.content_.a_mvudpaddressinfo_;
 }
-inline ::protobuf::UDPAddressInfo* UDPSocketAddr::mutable_mvudpaddressinfo() {
-  ::protobuf::UDPAddressInfo* _msg = _internal_mutable_mvudpaddressinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.UDPSocketAddr.mVUDPAddressInfo)
+inline ::protobuf::UDPAddressInfo* UDPSocketAddr::mutable_a_mvudpaddressinfo() {
+  ::protobuf::UDPAddressInfo* _msg = _internal_mutable_a_mvudpaddressinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.UDPSocketAddr.a_mVUDPAddressInfo)
   return _msg;
 }
 
-// bytes mVNetAddr = 2;
-inline bool UDPSocketAddr::_internal_has_mvnetaddr() const {
-  return content_case() == kMVNetAddr;
+// bytes a_mVNetAddr = 2;
+inline bool UDPSocketAddr::_internal_has_a_mvnetaddr() const {
+  return content_case() == kAMVNetAddr;
 }
-inline bool UDPSocketAddr::has_mvnetaddr() const {
-  return _internal_has_mvnetaddr();
+inline bool UDPSocketAddr::has_a_mvnetaddr() const {
+  return _internal_has_a_mvnetaddr();
 }
-inline void UDPSocketAddr::set_has_mvnetaddr() {
-  _impl_._oneof_case_[0] = kMVNetAddr;
+inline void UDPSocketAddr::set_has_a_mvnetaddr() {
+  _impl_._oneof_case_[0] = kAMVNetAddr;
 }
-inline void UDPSocketAddr::clear_mvnetaddr() {
-  if (_internal_has_mvnetaddr()) {
-    _impl_.content_.mvnetaddr_.Destroy();
+inline void UDPSocketAddr::clear_a_mvnetaddr() {
+  if (_internal_has_a_mvnetaddr()) {
+    _impl_.content_.a_mvnetaddr_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& UDPSocketAddr::mvnetaddr() const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPSocketAddr.mVNetAddr)
-  return _internal_mvnetaddr();
+inline const std::string& UDPSocketAddr::a_mvnetaddr() const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPSocketAddr.a_mVNetAddr)
+  return _internal_a_mvnetaddr();
 }
 template <typename ArgT0, typename... ArgT>
-inline void UDPSocketAddr::set_mvnetaddr(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnetaddr()) {
+inline void UDPSocketAddr::set_a_mvnetaddr(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnetaddr()) {
     clear_content();
-    set_has_mvnetaddr();
-    _impl_.content_.mvnetaddr_.InitDefault();
+    set_has_a_mvnetaddr();
+    _impl_.content_.a_mvnetaddr_.InitDefault();
   }
-  _impl_.content_.mvnetaddr_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.UDPSocketAddr.mVNetAddr)
+  _impl_.content_.a_mvnetaddr_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.UDPSocketAddr.a_mVNetAddr)
 }
-inline std::string* UDPSocketAddr::mutable_mvnetaddr() {
-  std::string* _s = _internal_mutable_mvnetaddr();
-  // @@protoc_insertion_point(field_mutable:protobuf.UDPSocketAddr.mVNetAddr)
+inline std::string* UDPSocketAddr::mutable_a_mvnetaddr() {
+  std::string* _s = _internal_mutable_a_mvnetaddr();
+  // @@protoc_insertion_point(field_mutable:protobuf.UDPSocketAddr.a_mVNetAddr)
   return _s;
 }
-inline const std::string& UDPSocketAddr::_internal_mvnetaddr() const {
-  if (_internal_has_mvnetaddr()) {
-    return _impl_.content_.mvnetaddr_.Get();
+inline const std::string& UDPSocketAddr::_internal_a_mvnetaddr() const {
+  if (_internal_has_a_mvnetaddr()) {
+    return _impl_.content_.a_mvnetaddr_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void UDPSocketAddr::_internal_set_mvnetaddr(const std::string& value) {
-  if (!_internal_has_mvnetaddr()) {
+inline void UDPSocketAddr::_internal_set_a_mvnetaddr(const std::string& value) {
+  if (!_internal_has_a_mvnetaddr()) {
     clear_content();
-    set_has_mvnetaddr();
-    _impl_.content_.mvnetaddr_.InitDefault();
+    set_has_a_mvnetaddr();
+    _impl_.content_.a_mvnetaddr_.InitDefault();
   }
-  _impl_.content_.mvnetaddr_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnetaddr_.Set(value, GetArenaForAllocation());
 }
-inline std::string* UDPSocketAddr::_internal_mutable_mvnetaddr() {
-  if (!_internal_has_mvnetaddr()) {
+inline std::string* UDPSocketAddr::_internal_mutable_a_mvnetaddr() {
+  if (!_internal_has_a_mvnetaddr()) {
     clear_content();
-    set_has_mvnetaddr();
-    _impl_.content_.mvnetaddr_.InitDefault();
+    set_has_a_mvnetaddr();
+    _impl_.content_.a_mvnetaddr_.InitDefault();
   }
-  return _impl_.content_.mvnetaddr_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnetaddr_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* UDPSocketAddr::release_mvnetaddr() {
-  // @@protoc_insertion_point(field_release:protobuf.UDPSocketAddr.mVNetAddr)
-  if (_internal_has_mvnetaddr()) {
+inline std::string* UDPSocketAddr::release_a_mvnetaddr() {
+  // @@protoc_insertion_point(field_release:protobuf.UDPSocketAddr.a_mVNetAddr)
+  if (_internal_has_a_mvnetaddr()) {
     clear_has_content();
-    return _impl_.content_.mvnetaddr_.Release();
+    return _impl_.content_.a_mvnetaddr_.Release();
   } else {
     return nullptr;
   }
 }
-inline void UDPSocketAddr::set_allocated_mvnetaddr(std::string* mvnetaddr) {
+inline void UDPSocketAddr::set_allocated_a_mvnetaddr(std::string* a_mvnetaddr) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnetaddr != nullptr) {
-    set_has_mvnetaddr();
-    _impl_.content_.mvnetaddr_.InitAllocated(mvnetaddr, GetArenaForAllocation());
+  if (a_mvnetaddr != nullptr) {
+    set_has_a_mvnetaddr();
+    _impl_.content_.a_mvnetaddr_.InitAllocated(a_mvnetaddr, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.UDPSocketAddr.mVNetAddr)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.UDPSocketAddr.a_mVNetAddr)
 }
 
 inline bool UDPSocketAddr::has_content() const {
@@ -1026,51 +1026,51 @@ inline UDPSocketAddr::ContentCase UDPSocketAddr::content_case() const {
 
 // UDPData__mVArrayOfuint8_t
 
-// repeated uint32 mVArrayOfuint8_t = 1;
-inline int UDPData__mVArrayOfuint8_t::_internal_mvarrayofuint8_t_size() const {
-  return _impl_.mvarrayofuint8_t_.size();
+// repeated uint32 a_mVArrayOfuint8_t = 1;
+inline int UDPData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
+  return _impl_.a_mvarrayofuint8_t_.size();
 }
-inline int UDPData__mVArrayOfuint8_t::mvarrayofuint8_t_size() const {
-  return _internal_mvarrayofuint8_t_size();
+inline int UDPData__mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
+  return _internal_a_mvarrayofuint8_t_size();
 }
-inline void UDPData__mVArrayOfuint8_t::clear_mvarrayofuint8_t() {
-  _impl_.mvarrayofuint8_t_.Clear();
+inline void UDPData__mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
+  _impl_.a_mvarrayofuint8_t_.Clear();
 }
-inline uint32_t UDPData__mVArrayOfuint8_t::_internal_mvarrayofuint8_t(int index) const {
-  return _impl_.mvarrayofuint8_t_.Get(index);
+inline uint32_t UDPData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
+  return _impl_.a_mvarrayofuint8_t_.Get(index);
 }
-inline uint32_t UDPData__mVArrayOfuint8_t::mvarrayofuint8_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t(index);
+inline uint32_t UDPData__mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t(index);
 }
-inline void UDPData__mVArrayOfuint8_t::set_mvarrayofuint8_t(int index, uint32_t value) {
-  _impl_.mvarrayofuint8_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.UDPData._mVArrayOfuint8_t.mVArrayOfuint8_t)
+inline void UDPData__mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
+  _impl_.a_mvarrayofuint8_t_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
-inline void UDPData__mVArrayOfuint8_t::_internal_add_mvarrayofuint8_t(uint32_t value) {
-  _impl_.mvarrayofuint8_t_.Add(value);
+inline void UDPData__mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
+  _impl_.a_mvarrayofuint8_t_.Add(value);
 }
-inline void UDPData__mVArrayOfuint8_t::add_mvarrayofuint8_t(uint32_t value) {
-  _internal_add_mvarrayofuint8_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.UDPData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-UDPData__mVArrayOfuint8_t::_internal_mvarrayofuint8_t() const {
-  return _impl_.mvarrayofuint8_t_;
+inline void UDPData__mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
+  _internal_add_a_mvarrayofuint8_t(value);
+  // @@protoc_insertion_point(field_add:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-UDPData__mVArrayOfuint8_t::mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.UDPData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t();
+UDPData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
+  return _impl_.a_mvarrayofuint8_t_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+UDPData__mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-UDPData__mVArrayOfuint8_t::_internal_mutable_mvarrayofuint8_t() {
-  return &_impl_.mvarrayofuint8_t_;
+UDPData__mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
+  return &_impl_.a_mvarrayofuint8_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-UDPData__mVArrayOfuint8_t::mutable_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.UDPData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-  return _internal_mutable_mvarrayofuint8_t();
+UDPData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  return _internal_mutable_a_mvarrayofuint8_t();
 }
 
 // -------------------------------------------------------------------
@@ -1151,69 +1151,69 @@ inline ::protobuf::UDPData__mVArrayOfuint8_t* UDPData::mutable_mvarrayofuint8_t(
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
-inline bool UDPData::_internal_has_mvipcstream() const {
-  return content_case() == kMVIPCStream;
+// .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
+inline bool UDPData::_internal_has_a_mvipcstream() const {
+  return content_case() == kAMVIPCStream;
 }
-inline bool UDPData::has_mvipcstream() const {
-  return _internal_has_mvipcstream();
+inline bool UDPData::has_a_mvipcstream() const {
+  return _internal_has_a_mvipcstream();
 }
-inline void UDPData::set_has_mvipcstream() {
-  _impl_._oneof_case_[0] = kMVIPCStream;
+inline void UDPData::set_has_a_mvipcstream() {
+  _impl_._oneof_case_[0] = kAMVIPCStream;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* UDPData::release_mvipcstream() {
-  // @@protoc_insertion_point(field_release:protobuf.UDPData.mVIPCStream)
-  if (_internal_has_mvipcstream()) {
+inline ::protobuf::mozilla::ipc::IPCStream* UDPData::release_a_mvipcstream() {
+  // @@protoc_insertion_point(field_release:protobuf.UDPData.a_mVIPCStream)
+  if (_internal_has_a_mvipcstream()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.mvipcstream_;
+    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.a_mvipcstream_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipcstream_ = nullptr;
+    _impl_.content_.a_mvipcstream_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& UDPData::_internal_mvipcstream() const {
-  return _internal_has_mvipcstream()
-      ? *_impl_.content_.mvipcstream_
+inline const ::protobuf::mozilla::ipc::IPCStream& UDPData::_internal_a_mvipcstream() const {
+  return _internal_has_a_mvipcstream()
+      ? *_impl_.content_.a_mvipcstream_
       : reinterpret_cast< ::protobuf::mozilla::ipc::IPCStream&>(::protobuf::mozilla::ipc::_IPCStream_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& UDPData::mvipcstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPData.mVIPCStream)
-  return _internal_mvipcstream();
+inline const ::protobuf::mozilla::ipc::IPCStream& UDPData::a_mvipcstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPData.a_mVIPCStream)
+  return _internal_a_mvipcstream();
 }
-inline ::protobuf::mozilla::ipc::IPCStream* UDPData::unsafe_arena_release_mvipcstream() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.UDPData.mVIPCStream)
-  if (_internal_has_mvipcstream()) {
+inline ::protobuf::mozilla::ipc::IPCStream* UDPData::unsafe_arena_release_a_mvipcstream() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.UDPData.a_mVIPCStream)
+  if (_internal_has_a_mvipcstream()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.mvipcstream_;
-    _impl_.content_.mvipcstream_ = nullptr;
+    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.a_mvipcstream_;
+    _impl_.content_.a_mvipcstream_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void UDPData::unsafe_arena_set_allocated_mvipcstream(::protobuf::mozilla::ipc::IPCStream* mvipcstream) {
+inline void UDPData::unsafe_arena_set_allocated_a_mvipcstream(::protobuf::mozilla::ipc::IPCStream* a_mvipcstream) {
   clear_content();
-  if (mvipcstream) {
-    set_has_mvipcstream();
-    _impl_.content_.mvipcstream_ = mvipcstream;
+  if (a_mvipcstream) {
+    set_has_a_mvipcstream();
+    _impl_.content_.a_mvipcstream_ = a_mvipcstream;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.UDPData.mVIPCStream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.UDPData.a_mVIPCStream)
 }
-inline ::protobuf::mozilla::ipc::IPCStream* UDPData::_internal_mutable_mvipcstream() {
-  if (!_internal_has_mvipcstream()) {
+inline ::protobuf::mozilla::ipc::IPCStream* UDPData::_internal_mutable_a_mvipcstream() {
+  if (!_internal_has_a_mvipcstream()) {
     clear_content();
-    set_has_mvipcstream();
-    _impl_.content_.mvipcstream_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::IPCStream >(GetArenaForAllocation());
+    set_has_a_mvipcstream();
+    _impl_.content_.a_mvipcstream_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::IPCStream >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipcstream_;
+  return _impl_.content_.a_mvipcstream_;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* UDPData::mutable_mvipcstream() {
-  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_mvipcstream();
-  // @@protoc_insertion_point(field_mutable:protobuf.UDPData.mVIPCStream)
+inline ::protobuf::mozilla::ipc::IPCStream* UDPData::mutable_a_mvipcstream() {
+  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_a_mvipcstream();
+  // @@protoc_insertion_point(field_mutable:protobuf.UDPData.a_mVIPCStream)
   return _msg;
 }
 

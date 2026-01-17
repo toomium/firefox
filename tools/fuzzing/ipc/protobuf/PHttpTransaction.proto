@@ -19,58 +19,58 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_OnStartRequest {
-  required bytes status = 1;
-  optional bytes responseHead = 2;
-  required bytes securityInfo = 3;
-  required bool proxyConnectFailed = 4;
-  required protobuf.mozilla.net.TimingStructArgs timings = 5;
-  required sint32 proxyConnectResponseCode = 6;
-  repeated uint32 dataForSniffer = 7;
-  optional bytes altSvcUsed = 8;
-  required bool dataToChildProcess = 9;
-  required bool restarted = 10;
-  required uint32 HTTPSSVCReceivedStage = 11;
-  required bool supportsHttp3 = 12;
-  required bytes trrMode = 13;
-  required bytes trrSkipReason = 14;
-  required uint32 caps = 15;
-  required bytes onStartRequestStart = 16;
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs connInfoArgs = 17;
+  required bytes a_status = 1;
+  optional bytes a_responseHead = 2;
+  required bytes a_securityInfo = 3;
+  required bool a_proxyConnectFailed = 4;
+  required protobuf.mozilla.net.TimingStructArgs a_timings = 5;
+  required sint32 a_proxyConnectResponseCode = 6;
+  repeated uint32 a_dataForSniffer = 7;
+  optional bytes a_altSvcUsed = 8;
+  required bool a_dataToChildProcess = 9;
+  required bool a_restarted = 10;
+  required uint32 a_HTTPSSVCReceivedStage = 11;
+  required bool a_supportsHttp3 = 12;
+  required bytes a_trrMode = 13;
+  required bytes a_trrSkipReason = 14;
+  required uint32 a_caps = 15;
+  required bytes a_onStartRequestStart = 16;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 17;
 }
 
 message Msg_OnTransportStatus {
-  required bytes status = 1;
-  required sint64 progress = 2;
-  required sint64 progressMax = 3;
-  optional protobuf.mozilla.net.NetworkAddressArg networkAddressArg = 4;
+  required bytes a_status = 1;
+  required sint64 a_progress = 2;
+  required sint64 a_progressMax = 3;
+  optional protobuf.mozilla.net.NetworkAddressArg a_networkAddressArg = 4;
 }
 
 message Msg_OnDataAvailable {
-  required bytes data = 1;
-  required uint64 offset = 2;
-  required uint32 count = 3;
-  required bytes onDataAvailableStart = 4;
+  required bytes a_data = 1;
+  required uint64 a_offset = 2;
+  required uint32 a_count = 3;
+  required bytes a_onDataAvailableStart = 4;
 }
 
 message Msg_OnStopRequest {
-  required bytes status = 1;
-  required bool responseIsComplete = 2;
-  required sint64 transferSize = 3;
-  required protobuf.mozilla.net.TimingStructArgs timings = 4;
-  optional bytes responseTrailers = 5;
-  optional protobuf.mozilla.net.TransactionObserverResult transactionObserverResult = 6;
-  required bytes lastActiveTabOptimization = 7;
-  required bytes onStopRequestStart = 8;
+  required bytes a_status = 1;
+  required bool a_responseIsComplete = 2;
+  required sint64 a_transferSize = 3;
+  required protobuf.mozilla.net.TimingStructArgs a_timings = 4;
+  optional bytes a_responseTrailers = 5;
+  optional protobuf.mozilla.net.TransactionObserverResult a_transactionObserverResult = 6;
+  required bytes a_lastActiveTabOptimization = 7;
+  required bytes a_onStopRequestStart = 8;
 }
 
 message Msg_OnInitFailed {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_EarlyHint {
-  required bytes linkHeader = 1;
-  required bytes referrerPolicy = 2;
-  required bytes cspHeader = 3;
+  required bytes a_linkHeader = 1;
+  required bytes a_referrerPolicy = 2;
+  required bytes a_cspHeader = 3;
 }
 
 message Msg___delete__ {
@@ -80,30 +80,30 @@ message Reply___delete__ {
 }
 
 message Msg_Init {
-  required uint32 caps = 1;
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs aArgs = 2;
-  required bytes reqHeaders = 3;
-  optional protobuf.mozilla.ipc.IPCStream requestBody = 4;
-  required uint64 reqContentLength = 5;
-  required bool reqBodyIncludesHeaders = 6;
-  required uint64 topLevelOuterContentWindowId = 7;
-  required uint32 httpTrafficCategory = 8;
-  required uint64 requestContextID = 9;
-  required bytes classOfService = 10;
-  required uint32 initialRwin = 11;
-  required bool responseTimeoutEnabled = 12;
-  required uint64 channelId = 13;
-  required bool hasTransactionObserver = 14;
-  optional bytes throttleQueue = 15;
-  required bool aIsDocumentLoad = 16;
-  required bytes aParentIPAddressSpace = 17;
-  required bytes aLnaPermissionStatus = 18;
-  required bytes aRedirectStart = 19;
-  required bytes aRedirectEnd = 20;
+  required uint32 a_caps = 1;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 2;
+  required bytes a_reqHeaders = 3;
+  optional protobuf.mozilla.ipc.IPCStream a_requestBody = 4;
+  required uint64 a_reqContentLength = 5;
+  required bool a_reqBodyIncludesHeaders = 6;
+  required uint64 a_topLevelOuterContentWindowId = 7;
+  required uint32 a_httpTrafficCategory = 8;
+  required uint64 a_requestContextID = 9;
+  required bytes a_classOfService = 10;
+  required uint32 a_initialRwin = 11;
+  required bool a_responseTimeoutEnabled = 12;
+  required uint64 a_channelId = 13;
+  required bool a_hasTransactionObserver = 14;
+  optional bytes a_throttleQueue = 15;
+  required bool a_aIsDocumentLoad = 16;
+  required bytes a_aParentIPAddressSpace = 17;
+  required bytes a_aLnaPermissionStatus = 18;
+  required bytes a_aRedirectStart = 19;
+  required bytes a_aRedirectEnd = 20;
 }
 
 message Msg_CancelPump {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_SuspendPump {

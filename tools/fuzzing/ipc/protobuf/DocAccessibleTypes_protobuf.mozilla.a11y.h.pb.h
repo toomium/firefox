@@ -169,38 +169,38 @@ class CacheData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFieldsFieldNumber = 2,
-    kIDFieldNumber = 1,
+    kAFieldsFieldNumber = 2,
+    kAIDFieldNumber = 1,
   };
-  // required bytes Fields = 2;
-  bool has_fields() const;
+  // required bytes a_Fields = 2;
+  bool has_a_fields() const;
   private:
-  bool _internal_has_fields() const;
+  bool _internal_has_a_fields() const;
   public:
-  void clear_fields();
-  const std::string& fields() const;
+  void clear_a_fields();
+  const std::string& a_fields() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_fields(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_fields();
-  PROTOBUF_NODISCARD std::string* release_fields();
-  void set_allocated_fields(std::string* fields);
+  void set_a_fields(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_fields();
+  PROTOBUF_NODISCARD std::string* release_a_fields();
+  void set_allocated_a_fields(std::string* a_fields);
   private:
-  const std::string& _internal_fields() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_fields(const std::string& value);
-  std::string* _internal_mutable_fields();
+  const std::string& _internal_a_fields() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_fields(const std::string& value);
+  std::string* _internal_mutable_a_fields();
   public:
 
-  // required uint64 ID = 1;
-  bool has_id() const;
+  // required uint64 a_ID = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.CacheData)
@@ -216,8 +216,8 @@ class CacheData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr fields_;
-    uint64_t id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fields_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_DocAccessibleTypes_5fprotobuf_2emozilla_2ea11y_2eh_2eproto;
@@ -233,100 +233,100 @@ class CacheData final :
 #endif  // __GNUC__
 // CacheData
 
-// required uint64 ID = 1;
-inline bool CacheData::_internal_has_id() const {
+// required uint64 a_ID = 1;
+inline bool CacheData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool CacheData::has_id() const {
-  return _internal_has_id();
+inline bool CacheData::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void CacheData::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void CacheData::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t CacheData::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t CacheData::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t CacheData::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.CacheData.ID)
-  return _internal_id();
+inline uint64_t CacheData::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.CacheData.a_ID)
+  return _internal_a_id();
 }
-inline void CacheData::_internal_set_id(uint64_t value) {
+inline void CacheData::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void CacheData::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.CacheData.ID)
+inline void CacheData::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.CacheData.a_ID)
 }
 
-// required bytes Fields = 2;
-inline bool CacheData::_internal_has_fields() const {
+// required bytes a_Fields = 2;
+inline bool CacheData::_internal_has_a_fields() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CacheData::has_fields() const {
-  return _internal_has_fields();
+inline bool CacheData::has_a_fields() const {
+  return _internal_has_a_fields();
 }
-inline void CacheData::clear_fields() {
-  _impl_.fields_.ClearToEmpty();
+inline void CacheData::clear_a_fields() {
+  _impl_.a_fields_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CacheData::fields() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.CacheData.Fields)
-  return _internal_fields();
+inline const std::string& CacheData::a_fields() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.CacheData.a_Fields)
+  return _internal_a_fields();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CacheData::set_fields(ArgT0&& arg0, ArgT... args) {
+void CacheData::set_a_fields(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.fields_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.CacheData.Fields)
+ _impl_.a_fields_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.CacheData.a_Fields)
 }
-inline std::string* CacheData::mutable_fields() {
-  std::string* _s = _internal_mutable_fields();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.CacheData.Fields)
+inline std::string* CacheData::mutable_a_fields() {
+  std::string* _s = _internal_mutable_a_fields();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.CacheData.a_Fields)
   return _s;
 }
-inline const std::string& CacheData::_internal_fields() const {
-  return _impl_.fields_.Get();
+inline const std::string& CacheData::_internal_a_fields() const {
+  return _impl_.a_fields_.Get();
 }
-inline void CacheData::_internal_set_fields(const std::string& value) {
+inline void CacheData::_internal_set_a_fields(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.fields_.Set(value, GetArenaForAllocation());
+  _impl_.a_fields_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CacheData::_internal_mutable_fields() {
+inline std::string* CacheData::_internal_mutable_a_fields() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.fields_.Mutable(GetArenaForAllocation());
+  return _impl_.a_fields_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CacheData::release_fields() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.CacheData.Fields)
-  if (!_internal_has_fields()) {
+inline std::string* CacheData::release_a_fields() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.CacheData.a_Fields)
+  if (!_internal_has_a_fields()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.fields_.Release();
+  auto* p = _impl_.a_fields_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fields_.IsDefault()) {
-    _impl_.fields_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fields_.IsDefault()) {
+    _impl_.a_fields_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CacheData::set_allocated_fields(std::string* fields) {
-  if (fields != nullptr) {
+inline void CacheData::set_allocated_a_fields(std::string* a_fields) {
+  if (a_fields != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.fields_.SetAllocated(fields, GetArenaForAllocation());
+  _impl_.a_fields_.SetAllocated(a_fields, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fields_.IsDefault()) {
-    _impl_.fields_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fields_.IsDefault()) {
+    _impl_.a_fields_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.CacheData.Fields)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.CacheData.a_Fields)
 }
 
 #ifdef __GNUC__

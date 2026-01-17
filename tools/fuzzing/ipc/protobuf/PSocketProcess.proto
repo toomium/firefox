@@ -21,55 +21,55 @@ import "PrefsTypes.proto";
 
 // Message declarations
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
+  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_AddMemoryReport {
-  required protobuf.mozilla.dom.MemoryReport aReport = 1;
+  required protobuf.mozilla.dom.MemoryReport a_aReport = 1;
 }
 
 message Msg_AccumulateChildHistograms {
-  repeated bytes accumulations = 1;
+  repeated bytes a_accumulations = 1;
 }
 
 message Msg_AccumulateChildKeyedHistograms {
-  repeated bytes accumulations = 1;
+  repeated bytes a_accumulations = 1;
 }
 
 message Msg_UpdateChildScalars {
-  repeated bytes actions = 1;
+  repeated bytes a_actions = 1;
 }
 
 message Msg_UpdateChildKeyedScalars {
-  repeated bytes actions = 1;
+  repeated bytes a_actions = 1;
 }
 
 message Msg_RecordChildEvents {
-  repeated bytes events = 1;
+  repeated bytes a_events = 1;
 }
 
 message Msg_RecordDiscardedData {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message Msg_PWebrtcTCPSocketConstructor {
-  optional bytes tabId = 1;
+  optional bytes a_tabId = 1;
 }
 
 message Reply_PWebrtcTCPSocketConstructor {
 }
 
 message Msg_ObserveHttpActivity {
-  required protobuf.mozilla.net.HttpActivityArgs aActivityArgs = 1;
-  required uint32 aActivityType = 2;
-  required uint32 aActivitySubtype = 3;
-  required bytes aTimestamp = 4;
-  required uint64 aExtraSizeData = 5;
-  required bytes aExtraStringData = 6;
+  required protobuf.mozilla.net.HttpActivityArgs a_aActivityArgs = 1;
+  required uint32 a_aActivityType = 2;
+  required uint32 a_aActivitySubtype = 3;
+  required bytes a_aTimestamp = 4;
+  required uint64 a_aExtraSizeData = 5;
+  required bytes a_aExtraStringData = 6;
 }
 
 message Msg_InitSocketBackground {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 message Msg_PAltServiceConstructor {
@@ -79,63 +79,63 @@ message Reply_PAltServiceConstructor {
 }
 
 message Msg_PProxyConfigLookupConstructor {
-  required bytes aUri = 1;
-  required uint32 aFlags = 2;
+  required bytes a_aUri = 1;
+  required uint32 a_aFlags = 2;
 }
 
 message Reply_PProxyConfigLookupConstructor {
 }
 
 message Msg_ExcludeHttp2OrHttp3 {
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs aArgs = 1;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
 }
 
 message Msg_OnConsoleMessage {
-  required bytes aMessage = 1;
+  required bytes a_aMessage = 1;
 }
 
 message Msg_FOGData {
-  required bytes buf = 1;
+  required bytes a_buf = 1;
 }
 
 message Msg_Init {
-  required protobuf.mozilla.net.SocketPorcessInitAttributes aAttributes = 1;
+  required protobuf.mozilla.net.SocketPorcessInitAttributes a_aAttributes = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref pref = 1;
+  required protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 generation = 1;
-  required bool anonymize = 2;
-  required bool minimizeMemoryUsage = 3;
-  optional bytes DMDFile = 4;
+  required uint32 a_generation = 1;
+  required bool a_anonymize = 2;
+  required bool a_minimizeMemoryUsage = 3;
+  optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 aGeneration = 1;
+  required uint32 a_aGeneration = 1;
 }
 
 message Msg_SetOffline {
-  required bool offline = 1;
+  required bool a_offline = 1;
 }
 
 message Msg_SetConnectivity {
-  required bool connectivity = 1;
+  required bool a_connectivity = 1;
 }
 
 message Msg_InitLinuxSandbox {
-  optional bytes sandboxBroker = 1;
+  optional bytes a_sandboxBroker = 1;
 }
 
 message Msg_InitSocketProcessBridgeParent {
-  required bytes processId = 1;
-  required bytes endpoint = 2;
+  required bytes a_processId = 1;
+  required bytes a_endpoint = 2;
 }
 
 message Msg_InitProfiler {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 message Msg_SocketProcessTelemetryPing {
@@ -148,39 +148,39 @@ message Reply_PHttpTransactionConstructor {
 }
 
 message Msg_PHttpConnectionMgrConstructor {
-  required protobuf.mozilla.net.HttpHandlerInitArgs aArgs = 1;
+  required protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 1;
 }
 
 message Reply_PHttpConnectionMgrConstructor {
 }
 
 message Msg_UpdateDeviceModelId {
-  required bytes aModelId = 1;
+  required bytes a_aModelId = 1;
 }
 
 message Msg_OnHttpActivityDistributorActivated {
-  required bool aIsActivated = 1;
+  required bool a_aIsActivated = 1;
 }
 
 message Msg_OnHttpActivityDistributorObserveProxyResponse {
-  required bool aIsEnabled = 1;
+  required bool a_aIsEnabled = 1;
 }
 
 message Msg_OnHttpActivityDistributorObserveConnection {
-  required bool aIsEnabled = 1;
+  required bool a_aIsEnabled = 1;
 }
 
 message Msg_PInputChannelThrottleQueueConstructor {
-  required uint32 meanBytesPerSecond = 1;
-  required uint32 maxBytesPerSecond = 2;
+  required uint32 a_meanBytesPerSecond = 1;
+  required uint32 a_maxBytesPerSecond = 2;
 }
 
 message Reply_PInputChannelThrottleQueueConstructor {
 }
 
 message Msg_PAltSvcTransactionConstructor {
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs aConnInfo = 1;
-  required uint32 aCaps = 2;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  required uint32 a_aCaps = 2;
 }
 
 message Reply_PAltSvcTransactionConstructor {
@@ -190,13 +190,13 @@ message Msg_ClearSessionCache {
 }
 
 message Reply_ClearSessionCache {
-  required bytes ok = 1;
+  required bytes a_ok = 1;
 }
 
 message Msg_PTRRServiceConstructor {
-  required bool aCaptiveIsPassed = 1;
-  required bool aParentalControlEnabled = 2;
-  repeated bytes aDNSSuffixList = 3;
+  required bool a_aCaptiveIsPassed = 1;
+  required bool a_aParentalControlEnabled = 2;
+  repeated bytes a_aDNSSuffixList = 3;
 }
 
 message Reply_PTRRServiceConstructor {
@@ -209,40 +209,40 @@ message Reply_PNativeDNSResolverOverrideConstructor {
 }
 
 message Msg_NotifyObserver {
-  required bytes aTopic = 1;
-  required bytes aData = 2;
+  required bytes a_aTopic = 1;
+  required bytes a_aData = 2;
 }
 
 message Msg_GetSocketData {
 }
 
 message Reply_GetSocketData {
-  required protobuf.mozilla.net.SocketDataArgs data = 1;
+  required protobuf.mozilla.net.SocketDataArgs a_data = 1;
 }
 
 message Msg_GetDNSCacheEntries {
 }
 
 message Reply_GetDNSCacheEntries {
-  repeated bytes entries = 1;
+  repeated bytes a_entries = 1;
 }
 
 message Msg_GetHttpConnectionData {
 }
 
 message Reply_GetHttpConnectionData {
-  repeated bytes params = 1;
+  repeated bytes a_params = 1;
 }
 
 message Msg_GetHttp3ConnectionStatsData {
 }
 
 message Reply_GetHttp3ConnectionStatsData {
-  repeated bytes params = 1;
+  repeated bytes a_params = 1;
 }
 
 message Msg_InitProxyAutoConfigChild {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_RecheckIPConnectivity {
@@ -255,31 +255,31 @@ message Msg_FlushFOGData {
 }
 
 message Reply_FlushFOGData {
-  required bytes buf = 1;
+  required bytes a_buf = 1;
 }
 
 message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_AddNetAddrOverride {
-  required bytes aFrom = 1;
-  required bytes aTo = 2;
+  required bytes a_aFrom = 1;
+  required bytes a_aTo = 2;
 }
 
 message Msg_ClearNetAddrOverrides {
 }
 
 message Msg_PDNSRequestConstructor {
-  required bytes hostName = 1;
-  required bytes trrServer = 2;
-  required sint32 port = 3;
-  required uint32 type = 4;
-  required bytes originAttributes = 5;
-  required bytes flags = 6;
+  required bytes a_hostName = 1;
+  required bytes a_trrServer = 2;
+  required sint32 a_port = 3;
+  required uint32 a_type = 4;
+  required bytes a_originAttributes = 5;
+  required bytes a_flags = 6;
 }
 
 message Reply_PDNSRequestConstructor {

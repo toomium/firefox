@@ -18,14 +18,14 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_NotifyNetworkConnectivityServiceObservers {
-  required bytes aTopic = 1;
+  required bytes a_aTopic = 1;
 }
 
 message Msg_InitTRRConnectionInfo {
 }
 
 message Msg_SetConfirmationState {
-  required uint32 aNewState = 1;
+  required uint32 a_aNewState = 1;
 }
 
 message Msg___delete__ {
@@ -35,27 +35,27 @@ message Reply___delete__ {
 }
 
 message Msg_UpdatePlatformDNSInformation {
-  repeated bytes aSuffixList = 1;
+  repeated bytes a_aSuffixList = 1;
 }
 
 message Msg_UpdateParentalControlEnabled {
-  required bool aEnabled = 1;
+  required bool a_aEnabled = 1;
 }
 
 message Msg_ClearDNSCache {
-  required bool aTrrToo = 1;
+  required bool a_aTrrToo = 1;
 }
 
 message Msg_SetDetectedTrrURI {
-  required bytes aURI = 1;
+  required bytes a_aURI = 1;
 }
 
 message Msg_SetDefaultTRRConnectionInfo {
-  optional protobuf.mozilla.net.HttpConnectionInfoCloneArgs aConnInfoArgs = 1;
+  optional protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfoArgs = 1;
 }
 
 message Msg_UpdateEtcHosts {
-  repeated bytes aHosts = 1;
+  repeated bytes a_aHosts = 1;
 }
 
 // Parameter mappings stats:

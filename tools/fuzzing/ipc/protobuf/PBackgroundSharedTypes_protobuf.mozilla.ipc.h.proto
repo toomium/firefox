@@ -12,53 +12,53 @@ package protobuf.mozilla.ipc;
 
 // Structs and unions declarations
 message ContentSecurityPolicy {
-  required bytes policy = 1;
-  required bool reportOnlyFlag = 2;
-  required bool deliveredViaMetaTagFlag = 3;
-  required bool hasRequireTrustedTypesForDirective = 4;
+  required bytes a_policy = 1;
+  required bool a_reportOnlyFlag = 2;
+  required bool a_deliveredViaMetaTagFlag = 3;
+  required bool a_hasRequireTrustedTypesForDirective = 4;
 }
 
 message ContentPrincipalInfo {
-  required bytes attrs = 1;
-  required bytes originNoSuffix = 2;
-  required bytes spec = 3;
-  optional bytes domain = 4;
-  required bytes baseDomain = 5;
+  required bytes a_attrs = 1;
+  required bytes a_originNoSuffix = 2;
+  required bytes a_spec = 3;
+  optional bytes a_domain = 4;
+  required bytes a_baseDomain = 5;
 }
 
 message SystemPrincipalInfo {
 }
 
 message NullPrincipalInfo {
-  required bytes attrs = 1;
-  required bytes spec = 2;
+  required bytes a_attrs = 1;
+  required bytes a_spec = 2;
 }
 
 message ExpandedPrincipalInfo {
-  required bytes attrs = 1;
-  repeated protobuf.mozilla.ipc.PrincipalInfo allowlist = 2;
+  required bytes a_attrs = 1;
+  repeated protobuf.mozilla.ipc.PrincipalInfo a_allowlist = 2;
 }
 
 message PrincipalInfo {
   oneof content {
-    protobuf.mozilla.ipc.ContentPrincipalInfo mVContentPrincipalInfo = 1;
-    protobuf.mozilla.ipc.SystemPrincipalInfo mVSystemPrincipalInfo = 2;
-    protobuf.mozilla.ipc.NullPrincipalInfo mVNullPrincipalInfo = 3;
-    protobuf.mozilla.ipc.ExpandedPrincipalInfo mVExpandedPrincipalInfo = 4;
+    protobuf.mozilla.ipc.ContentPrincipalInfo a_mVContentPrincipalInfo = 1;
+    protobuf.mozilla.ipc.SystemPrincipalInfo a_mVSystemPrincipalInfo = 2;
+    protobuf.mozilla.ipc.NullPrincipalInfo a_mVNullPrincipalInfo = 3;
+    protobuf.mozilla.ipc.ExpandedPrincipalInfo a_mVExpandedPrincipalInfo = 4;
   }
 }
 
 message CSPInfo {
-  repeated protobuf.mozilla.ipc.ContentSecurityPolicy policyInfos = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo requestPrincipalInfo = 2;
-  required bytes selfURISpec = 3;
-  required bytes referrer = 4;
-  required uint64 innerWindowID = 5;
-  required bytes requireTrustedTypesForDirectiveState = 6;
-  required bool skipAllowInlineStyleCheck = 7;
+  repeated protobuf.mozilla.ipc.ContentSecurityPolicy a_policyInfos = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_requestPrincipalInfo = 2;
+  required bytes a_selfURISpec = 3;
+  required bytes a_referrer = 4;
+  required uint64 a_innerWindowID = 5;
+  required bytes a_requireTrustedTypesForDirectiveState = 6;
+  required bool a_skipAllowInlineStyleCheck = 7;
 }
 
 message WebTransportHash {
-  required bytes algorithm = 1;
-  repeated uint32 value = 2;
+  required bytes a_algorithm = 1;
+  repeated uint32 a_value = 2;
 }

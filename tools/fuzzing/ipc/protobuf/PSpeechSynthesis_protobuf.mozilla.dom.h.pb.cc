@@ -24,11 +24,11 @@ PROTOBUF_CONSTEXPR RemoteVoice::RemoteVoice(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.voiceuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.lang_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.localservice_)*/false
-  , /*decltype(_impl_.queued_)*/false} {}
+  , /*decltype(_impl_.a_voiceuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_lang_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_localservice_)*/false
+  , /*decltype(_impl_.a_queued_)*/false} {}
 struct RemoteVoiceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RemoteVoiceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -50,19 +50,19 @@ namespace dom {
 class RemoteVoice::_Internal {
  public:
   using HasBits = decltype(std::declval<RemoteVoice>()._impl_._has_bits_);
-  static void set_has_voiceuri(HasBits* has_bits) {
+  static void set_has_a_voiceuri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_lang(HasBits* has_bits) {
+  static void set_has_a_lang(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_localservice(HasBits* has_bits) {
+  static void set_has_a_localservice(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_queued(HasBits* has_bits) {
+  static void set_has_a_queued(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -82,40 +82,40 @@ RemoteVoice::RemoteVoice(const RemoteVoice& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.voiceuri_){}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.lang_){}
-    , decltype(_impl_.localservice_){}
-    , decltype(_impl_.queued_){}};
+    , decltype(_impl_.a_voiceuri_){}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_lang_){}
+    , decltype(_impl_.a_localservice_){}
+    , decltype(_impl_.a_queued_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.voiceuri_.InitDefault();
+  _impl_.a_voiceuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.voiceuri_.Set("", GetArenaForAllocation());
+    _impl_.a_voiceuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_voiceuri()) {
-    _this->_impl_.voiceuri_.Set(from._internal_voiceuri(), 
+  if (from._internal_has_a_voiceuri()) {
+    _this->_impl_.a_voiceuri_.Set(from._internal_a_voiceuri(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.lang_.InitDefault();
+  _impl_.a_lang_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.lang_.Set("", GetArenaForAllocation());
+    _impl_.a_lang_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_lang()) {
-    _this->_impl_.lang_.Set(from._internal_lang(), 
+  if (from._internal_has_a_lang()) {
+    _this->_impl_.a_lang_.Set(from._internal_a_lang(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.localservice_, &from._impl_.localservice_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.queued_) -
-    reinterpret_cast<char*>(&_impl_.localservice_)) + sizeof(_impl_.queued_));
+  ::memcpy(&_impl_.a_localservice_, &from._impl_.a_localservice_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_queued_) -
+    reinterpret_cast<char*>(&_impl_.a_localservice_)) + sizeof(_impl_.a_queued_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.RemoteVoice)
 }
 
@@ -126,23 +126,23 @@ inline void RemoteVoice::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.voiceuri_){}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.lang_){}
-    , decltype(_impl_.localservice_){false}
-    , decltype(_impl_.queued_){false}
+    , decltype(_impl_.a_voiceuri_){}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_lang_){}
+    , decltype(_impl_.a_localservice_){false}
+    , decltype(_impl_.a_queued_){false}
   };
-  _impl_.voiceuri_.InitDefault();
+  _impl_.a_voiceuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.voiceuri_.Set("", GetArenaForAllocation());
+    _impl_.a_voiceuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.lang_.InitDefault();
+  _impl_.a_lang_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.lang_.Set("", GetArenaForAllocation());
+    _impl_.a_lang_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -157,9 +157,9 @@ RemoteVoice::~RemoteVoice() {
 
 inline void RemoteVoice::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.voiceuri_.Destroy();
-  _impl_.name_.Destroy();
-  _impl_.lang_.Destroy();
+  _impl_.a_voiceuri_.Destroy();
+  _impl_.a_name_.Destroy();
+  _impl_.a_lang_.Destroy();
 }
 
 void RemoteVoice::SetCachedSize(int size) const {
@@ -175,18 +175,18 @@ void RemoteVoice::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.voiceuri_.ClearNonDefaultToEmpty();
+      _impl_.a_voiceuri_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.name_.ClearNonDefaultToEmpty();
+      _impl_.a_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.lang_.ClearNonDefaultToEmpty();
+      _impl_.a_lang_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.localservice_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.queued_) -
-      reinterpret_cast<char*>(&_impl_.localservice_)) + sizeof(_impl_.queued_));
+  ::memset(&_impl_.a_localservice_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_queued_) -
+      reinterpret_cast<char*>(&_impl_.a_localservice_)) + sizeof(_impl_.a_queued_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -198,47 +198,47 @@ const char* RemoteVoice::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes voiceURI = 1;
+      // required bytes a_voiceURI = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_voiceuri();
+          auto str = _internal_mutable_a_voiceuri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes name = 2;
+      // required bytes a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes lang = 3;
+      // required bytes a_lang = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_lang();
+          auto str = _internal_mutable_a_lang();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool localService = 4;
+      // required bool a_localService = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_localservice(&has_bits);
-          _impl_.localservice_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_localservice(&has_bits);
+          _impl_.a_localservice_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool queued = 5;
+      // required bool a_queued = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_queued(&has_bits);
-          _impl_.queued_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_queued(&has_bits);
+          _impl_.a_queued_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -274,34 +274,34 @@ uint8_t* RemoteVoice::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes voiceURI = 1;
+  // required bytes a_voiceURI = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_voiceuri(), target);
+        1, this->_internal_a_voiceuri(), target);
   }
 
-  // required bytes name = 2;
+  // required bytes a_name = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_name(), target);
+        2, this->_internal_a_name(), target);
   }
 
-  // required bytes lang = 3;
+  // required bytes a_lang = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_lang(), target);
+        3, this->_internal_a_lang(), target);
   }
 
-  // required bool localService = 4;
+  // required bool a_localService = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_localservice(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_localservice(), target);
   }
 
-  // required bool queued = 5;
+  // required bool a_queued = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_queued(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_queued(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -316,34 +316,34 @@ size_t RemoteVoice::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.RemoteVoice)
   size_t total_size = 0;
 
-  if (_internal_has_voiceuri()) {
-    // required bytes voiceURI = 1;
+  if (_internal_has_a_voiceuri()) {
+    // required bytes a_voiceURI = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_voiceuri());
+        this->_internal_a_voiceuri());
   }
 
-  if (_internal_has_name()) {
-    // required bytes name = 2;
+  if (_internal_has_a_name()) {
+    // required bytes a_name = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
 
-  if (_internal_has_lang()) {
-    // required bytes lang = 3;
+  if (_internal_has_a_lang()) {
+    // required bytes a_lang = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_lang());
+        this->_internal_a_lang());
   }
 
-  if (_internal_has_localservice()) {
-    // required bool localService = 4;
+  if (_internal_has_a_localservice()) {
+    // required bool a_localService = 4;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_queued()) {
-    // required bool queued = 5;
+  if (_internal_has_a_queued()) {
+    // required bool a_queued = 5;
     total_size += 1 + 1;
   }
 
@@ -354,25 +354,25 @@ size_t RemoteVoice::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes voiceURI = 1;
+    // required bytes a_voiceURI = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_voiceuri());
+        this->_internal_a_voiceuri());
 
-    // required bytes name = 2;
+    // required bytes a_name = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
 
-    // required bytes lang = 3;
+    // required bytes a_lang = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_lang());
+        this->_internal_a_lang());
 
-    // required bool localService = 4;
+    // required bool a_localService = 4;
     total_size += 1 + 1;
 
-    // required bool queued = 5;
+    // required bool a_queued = 5;
     total_size += 1 + 1;
 
   } else {
@@ -406,19 +406,19 @@ void RemoteVoice::MergeFrom(const RemoteVoice& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_voiceuri(from._internal_voiceuri());
+      _this->_internal_set_a_voiceuri(from._internal_a_voiceuri());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_name(from._internal_name());
+      _this->_internal_set_a_name(from._internal_a_name());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_lang(from._internal_lang());
+      _this->_internal_set_a_lang(from._internal_a_lang());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.localservice_ = from._impl_.localservice_;
+      _this->_impl_.a_localservice_ = from._impl_.a_localservice_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.queued_ = from._impl_.queued_;
+      _this->_impl_.a_queued_ = from._impl_.a_queued_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -444,23 +444,23 @@ void RemoteVoice::InternalSwap(RemoteVoice* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.voiceuri_, lhs_arena,
-      &other->_impl_.voiceuri_, rhs_arena
+      &_impl_.a_voiceuri_, lhs_arena,
+      &other->_impl_.a_voiceuri_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.lang_, lhs_arena,
-      &other->_impl_.lang_, rhs_arena
+      &_impl_.a_lang_, lhs_arena,
+      &other->_impl_.a_lang_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RemoteVoice, _impl_.queued_)
-      + sizeof(RemoteVoice::_impl_.queued_)
-      - PROTOBUF_FIELD_OFFSET(RemoteVoice, _impl_.localservice_)>(
-          reinterpret_cast<char*>(&_impl_.localservice_),
-          reinterpret_cast<char*>(&other->_impl_.localservice_));
+      PROTOBUF_FIELD_OFFSET(RemoteVoice, _impl_.a_queued_)
+      + sizeof(RemoteVoice::_impl_.a_queued_)
+      - PROTOBUF_FIELD_OFFSET(RemoteVoice, _impl_.a_localservice_)>(
+          reinterpret_cast<char*>(&_impl_.a_localservice_),
+          reinterpret_cast<char*>(&other->_impl_.a_localservice_));
 }
 
 std::string RemoteVoice::GetTypeName() const {

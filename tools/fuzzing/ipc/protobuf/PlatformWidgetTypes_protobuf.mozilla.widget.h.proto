@@ -14,15 +14,15 @@ import "HeadlessWidgetTypes.proto";
 
 // Structs and unions declarations
 message GtkCompositorWidgetInitData {
-  required bytes XWindow = 1;
-  required bytes XDisplayString = 2;
-  required bool IsX11Display = 3;
-  required bytes InitialClientSize = 4;
+  required bytes a_XWindow = 1;
+  required bytes a_XDisplayString = 2;
+  required bool a_IsX11Display = 3;
+  required bytes a_InitialClientSize = 4;
 }
 
 message CompositorWidgetInitData {
   oneof content {
-    protobuf.mozilla.widget.GtkCompositorWidgetInitData mVGtkCompositorWidgetInitData = 1;
-    protobuf.mozilla.widget.HeadlessCompositorWidgetInitData mVHeadlessCompositorWidgetInitData = 2;
+    protobuf.mozilla.widget.GtkCompositorWidgetInitData a_mVGtkCompositorWidgetInitData = 1;
+    protobuf.mozilla.widget.HeadlessCompositorWidgetInitData a_mVHeadlessCompositorWidgetInitData = 2;
   }
 }

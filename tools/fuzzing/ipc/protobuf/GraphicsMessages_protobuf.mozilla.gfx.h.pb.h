@@ -201,99 +201,99 @@ class D3D11DeviceStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAdapterFieldNumber = 4,
-    kFormatOptionsFieldNumber = 6,
-    kIsWARPFieldNumber = 1,
-    kTextureSharingWorksFieldNumber = 2,
-    kFeatureLevelFieldNumber = 3,
-    kSequenceNumberFieldNumber = 5,
+    kAAdapterFieldNumber = 4,
+    kAFormatOptionsFieldNumber = 6,
+    kAIsWARPFieldNumber = 1,
+    kATextureSharingWorksFieldNumber = 2,
+    kAFeatureLevelFieldNumber = 3,
+    kASequenceNumberFieldNumber = 5,
   };
-  // required bytes adapter = 4;
-  bool has_adapter() const;
+  // required bytes a_adapter = 4;
+  bool has_a_adapter() const;
   private:
-  bool _internal_has_adapter() const;
+  bool _internal_has_a_adapter() const;
   public:
-  void clear_adapter();
-  const std::string& adapter() const;
+  void clear_a_adapter();
+  const std::string& a_adapter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adapter(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adapter();
-  PROTOBUF_NODISCARD std::string* release_adapter();
-  void set_allocated_adapter(std::string* adapter);
+  void set_a_adapter(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adapter();
+  PROTOBUF_NODISCARD std::string* release_a_adapter();
+  void set_allocated_a_adapter(std::string* a_adapter);
   private:
-  const std::string& _internal_adapter() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adapter(const std::string& value);
-  std::string* _internal_mutable_adapter();
+  const std::string& _internal_a_adapter() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adapter(const std::string& value);
+  std::string* _internal_mutable_a_adapter();
   public:
 
-  // required bytes formatOptions = 6;
-  bool has_formatoptions() const;
+  // required bytes a_formatOptions = 6;
+  bool has_a_formatoptions() const;
   private:
-  bool _internal_has_formatoptions() const;
+  bool _internal_has_a_formatoptions() const;
   public:
-  void clear_formatoptions();
-  const std::string& formatoptions() const;
+  void clear_a_formatoptions();
+  const std::string& a_formatoptions() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_formatoptions(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_formatoptions();
-  PROTOBUF_NODISCARD std::string* release_formatoptions();
-  void set_allocated_formatoptions(std::string* formatoptions);
+  void set_a_formatoptions(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_formatoptions();
+  PROTOBUF_NODISCARD std::string* release_a_formatoptions();
+  void set_allocated_a_formatoptions(std::string* a_formatoptions);
   private:
-  const std::string& _internal_formatoptions() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_formatoptions(const std::string& value);
-  std::string* _internal_mutable_formatoptions();
+  const std::string& _internal_a_formatoptions() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_formatoptions(const std::string& value);
+  std::string* _internal_mutable_a_formatoptions();
   public:
 
-  // required bool isWARP = 1;
-  bool has_iswarp() const;
+  // required bool a_isWARP = 1;
+  bool has_a_iswarp() const;
   private:
-  bool _internal_has_iswarp() const;
+  bool _internal_has_a_iswarp() const;
   public:
-  void clear_iswarp();
-  bool iswarp() const;
-  void set_iswarp(bool value);
+  void clear_a_iswarp();
+  bool a_iswarp() const;
+  void set_a_iswarp(bool value);
   private:
-  bool _internal_iswarp() const;
-  void _internal_set_iswarp(bool value);
-  public:
-
-  // required bool textureSharingWorks = 2;
-  bool has_texturesharingworks() const;
-  private:
-  bool _internal_has_texturesharingworks() const;
-  public:
-  void clear_texturesharingworks();
-  bool texturesharingworks() const;
-  void set_texturesharingworks(bool value);
-  private:
-  bool _internal_texturesharingworks() const;
-  void _internal_set_texturesharingworks(bool value);
+  bool _internal_a_iswarp() const;
+  void _internal_set_a_iswarp(bool value);
   public:
 
-  // required uint32 featureLevel = 3;
-  bool has_featurelevel() const;
+  // required bool a_textureSharingWorks = 2;
+  bool has_a_texturesharingworks() const;
   private:
-  bool _internal_has_featurelevel() const;
+  bool _internal_has_a_texturesharingworks() const;
   public:
-  void clear_featurelevel();
-  uint32_t featurelevel() const;
-  void set_featurelevel(uint32_t value);
+  void clear_a_texturesharingworks();
+  bool a_texturesharingworks() const;
+  void set_a_texturesharingworks(bool value);
   private:
-  uint32_t _internal_featurelevel() const;
-  void _internal_set_featurelevel(uint32_t value);
+  bool _internal_a_texturesharingworks() const;
+  void _internal_set_a_texturesharingworks(bool value);
   public:
 
-  // required sint32 sequenceNumber = 5;
-  bool has_sequencenumber() const;
+  // required uint32 a_featureLevel = 3;
+  bool has_a_featurelevel() const;
   private:
-  bool _internal_has_sequencenumber() const;
+  bool _internal_has_a_featurelevel() const;
   public:
-  void clear_sequencenumber();
-  int32_t sequencenumber() const;
-  void set_sequencenumber(int32_t value);
+  void clear_a_featurelevel();
+  uint32_t a_featurelevel() const;
+  void set_a_featurelevel(uint32_t value);
   private:
-  int32_t _internal_sequencenumber() const;
-  void _internal_set_sequencenumber(int32_t value);
+  uint32_t _internal_a_featurelevel() const;
+  void _internal_set_a_featurelevel(uint32_t value);
+  public:
+
+  // required sint32 a_sequenceNumber = 5;
+  bool has_a_sequencenumber() const;
+  private:
+  bool _internal_has_a_sequencenumber() const;
+  public:
+  void clear_a_sequencenumber();
+  int32_t a_sequencenumber() const;
+  void set_a_sequencenumber(int32_t value);
+  private:
+  int32_t _internal_a_sequencenumber() const;
+  void _internal_set_a_sequencenumber(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.D3D11DeviceStatus)
@@ -309,12 +309,12 @@ class D3D11DeviceStatus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adapter_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr formatoptions_;
-    bool iswarp_;
-    bool texturesharingworks_;
-    uint32_t featurelevel_;
-    int32_t sequencenumber_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adapter_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_formatoptions_;
+    bool a_iswarp_;
+    bool a_texturesharingworks_;
+    uint32_t a_featurelevel_;
+    int32_t a_sequencenumber_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -431,100 +431,100 @@ class DevicePrefs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHwCompositingFieldNumber = 1,
-    kD3D11CompositingFieldNumber = 2,
-    kOglCompositingFieldNumber = 3,
-    kUseD2D1FieldNumber = 4,
-    kD3D11HwAngleFieldNumber = 5,
+    kAHwCompositingFieldNumber = 1,
+    kAD3D11CompositingFieldNumber = 2,
+    kAOglCompositingFieldNumber = 3,
+    kAUseD2D1FieldNumber = 4,
+    kAD3D11HwAngleFieldNumber = 5,
   };
-  // required bytes hwCompositing = 1;
-  bool has_hwcompositing() const;
+  // required bytes a_hwCompositing = 1;
+  bool has_a_hwcompositing() const;
   private:
-  bool _internal_has_hwcompositing() const;
+  bool _internal_has_a_hwcompositing() const;
   public:
-  void clear_hwcompositing();
-  const std::string& hwcompositing() const;
+  void clear_a_hwcompositing();
+  const std::string& a_hwcompositing() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_hwcompositing(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_hwcompositing();
-  PROTOBUF_NODISCARD std::string* release_hwcompositing();
-  void set_allocated_hwcompositing(std::string* hwcompositing);
+  void set_a_hwcompositing(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_hwcompositing();
+  PROTOBUF_NODISCARD std::string* release_a_hwcompositing();
+  void set_allocated_a_hwcompositing(std::string* a_hwcompositing);
   private:
-  const std::string& _internal_hwcompositing() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_hwcompositing(const std::string& value);
-  std::string* _internal_mutable_hwcompositing();
+  const std::string& _internal_a_hwcompositing() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_hwcompositing(const std::string& value);
+  std::string* _internal_mutable_a_hwcompositing();
   public:
 
-  // required bytes d3d11Compositing = 2;
-  bool has_d3d11compositing() const;
+  // required bytes a_d3d11Compositing = 2;
+  bool has_a_d3d11compositing() const;
   private:
-  bool _internal_has_d3d11compositing() const;
+  bool _internal_has_a_d3d11compositing() const;
   public:
-  void clear_d3d11compositing();
-  const std::string& d3d11compositing() const;
+  void clear_a_d3d11compositing();
+  const std::string& a_d3d11compositing() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_d3d11compositing(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_d3d11compositing();
-  PROTOBUF_NODISCARD std::string* release_d3d11compositing();
-  void set_allocated_d3d11compositing(std::string* d3d11compositing);
+  void set_a_d3d11compositing(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_d3d11compositing();
+  PROTOBUF_NODISCARD std::string* release_a_d3d11compositing();
+  void set_allocated_a_d3d11compositing(std::string* a_d3d11compositing);
   private:
-  const std::string& _internal_d3d11compositing() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_d3d11compositing(const std::string& value);
-  std::string* _internal_mutable_d3d11compositing();
+  const std::string& _internal_a_d3d11compositing() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_d3d11compositing(const std::string& value);
+  std::string* _internal_mutable_a_d3d11compositing();
   public:
 
-  // required bytes oglCompositing = 3;
-  bool has_oglcompositing() const;
+  // required bytes a_oglCompositing = 3;
+  bool has_a_oglcompositing() const;
   private:
-  bool _internal_has_oglcompositing() const;
+  bool _internal_has_a_oglcompositing() const;
   public:
-  void clear_oglcompositing();
-  const std::string& oglcompositing() const;
+  void clear_a_oglcompositing();
+  const std::string& a_oglcompositing() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_oglcompositing(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_oglcompositing();
-  PROTOBUF_NODISCARD std::string* release_oglcompositing();
-  void set_allocated_oglcompositing(std::string* oglcompositing);
+  void set_a_oglcompositing(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_oglcompositing();
+  PROTOBUF_NODISCARD std::string* release_a_oglcompositing();
+  void set_allocated_a_oglcompositing(std::string* a_oglcompositing);
   private:
-  const std::string& _internal_oglcompositing() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_oglcompositing(const std::string& value);
-  std::string* _internal_mutable_oglcompositing();
+  const std::string& _internal_a_oglcompositing() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_oglcompositing(const std::string& value);
+  std::string* _internal_mutable_a_oglcompositing();
   public:
 
-  // required bytes useD2D1 = 4;
-  bool has_used2d1() const;
+  // required bytes a_useD2D1 = 4;
+  bool has_a_used2d1() const;
   private:
-  bool _internal_has_used2d1() const;
+  bool _internal_has_a_used2d1() const;
   public:
-  void clear_used2d1();
-  const std::string& used2d1() const;
+  void clear_a_used2d1();
+  const std::string& a_used2d1() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_used2d1(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_used2d1();
-  PROTOBUF_NODISCARD std::string* release_used2d1();
-  void set_allocated_used2d1(std::string* used2d1);
+  void set_a_used2d1(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_used2d1();
+  PROTOBUF_NODISCARD std::string* release_a_used2d1();
+  void set_allocated_a_used2d1(std::string* a_used2d1);
   private:
-  const std::string& _internal_used2d1() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_used2d1(const std::string& value);
-  std::string* _internal_mutable_used2d1();
+  const std::string& _internal_a_used2d1() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_used2d1(const std::string& value);
+  std::string* _internal_mutable_a_used2d1();
   public:
 
-  // required bytes d3d11HwAngle = 5;
-  bool has_d3d11hwangle() const;
+  // required bytes a_d3d11HwAngle = 5;
+  bool has_a_d3d11hwangle() const;
   private:
-  bool _internal_has_d3d11hwangle() const;
+  bool _internal_has_a_d3d11hwangle() const;
   public:
-  void clear_d3d11hwangle();
-  const std::string& d3d11hwangle() const;
+  void clear_a_d3d11hwangle();
+  const std::string& a_d3d11hwangle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_d3d11hwangle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_d3d11hwangle();
-  PROTOBUF_NODISCARD std::string* release_d3d11hwangle();
-  void set_allocated_d3d11hwangle(std::string* d3d11hwangle);
+  void set_a_d3d11hwangle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_d3d11hwangle();
+  PROTOBUF_NODISCARD std::string* release_a_d3d11hwangle();
+  void set_allocated_a_d3d11hwangle(std::string* a_d3d11hwangle);
   private:
-  const std::string& _internal_d3d11hwangle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_d3d11hwangle(const std::string& value);
-  std::string* _internal_mutable_d3d11hwangle();
+  const std::string& _internal_a_d3d11hwangle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_d3d11hwangle(const std::string& value);
+  std::string* _internal_mutable_a_d3d11hwangle();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.DevicePrefs)
@@ -540,11 +540,11 @@ class DevicePrefs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hwcompositing_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr d3d11compositing_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr oglcompositing_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr used2d1_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr d3d11hwangle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hwcompositing_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_d3d11compositing_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oglcompositing_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_used2d1_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_d3d11hwangle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -661,67 +661,67 @@ class ContentDeviceData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCmsOutputProfileDataFieldNumber = 3,
-    kPrefsFieldNumber = 1,
-    kD3D11FieldNumber = 2,
+    kACmsOutputProfileDataFieldNumber = 3,
+    kAPrefsFieldNumber = 1,
+    kAD3D11FieldNumber = 2,
   };
-  // repeated uint32 cmsOutputProfileData = 3;
-  int cmsoutputprofiledata_size() const;
+  // repeated uint32 a_cmsOutputProfileData = 3;
+  int a_cmsoutputprofiledata_size() const;
   private:
-  int _internal_cmsoutputprofiledata_size() const;
+  int _internal_a_cmsoutputprofiledata_size() const;
   public:
-  void clear_cmsoutputprofiledata();
+  void clear_a_cmsoutputprofiledata();
   private:
-  uint32_t _internal_cmsoutputprofiledata(int index) const;
+  uint32_t _internal_a_cmsoutputprofiledata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_cmsoutputprofiledata() const;
-  void _internal_add_cmsoutputprofiledata(uint32_t value);
+      _internal_a_cmsoutputprofiledata() const;
+  void _internal_add_a_cmsoutputprofiledata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_cmsoutputprofiledata();
+      _internal_mutable_a_cmsoutputprofiledata();
   public:
-  uint32_t cmsoutputprofiledata(int index) const;
-  void set_cmsoutputprofiledata(int index, uint32_t value);
-  void add_cmsoutputprofiledata(uint32_t value);
+  uint32_t a_cmsoutputprofiledata(int index) const;
+  void set_a_cmsoutputprofiledata(int index, uint32_t value);
+  void add_a_cmsoutputprofiledata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      cmsoutputprofiledata() const;
+      a_cmsoutputprofiledata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_cmsoutputprofiledata();
+      mutable_a_cmsoutputprofiledata();
 
-  // required .protobuf.mozilla.gfx.DevicePrefs prefs = 1;
-  bool has_prefs() const;
+  // required .protobuf.mozilla.gfx.DevicePrefs a_prefs = 1;
+  bool has_a_prefs() const;
   private:
-  bool _internal_has_prefs() const;
+  bool _internal_has_a_prefs() const;
   public:
-  void clear_prefs();
-  const ::protobuf::mozilla::gfx::DevicePrefs& prefs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::DevicePrefs* release_prefs();
-  ::protobuf::mozilla::gfx::DevicePrefs* mutable_prefs();
-  void set_allocated_prefs(::protobuf::mozilla::gfx::DevicePrefs* prefs);
+  void clear_a_prefs();
+  const ::protobuf::mozilla::gfx::DevicePrefs& a_prefs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::DevicePrefs* release_a_prefs();
+  ::protobuf::mozilla::gfx::DevicePrefs* mutable_a_prefs();
+  void set_allocated_a_prefs(::protobuf::mozilla::gfx::DevicePrefs* a_prefs);
   private:
-  const ::protobuf::mozilla::gfx::DevicePrefs& _internal_prefs() const;
-  ::protobuf::mozilla::gfx::DevicePrefs* _internal_mutable_prefs();
+  const ::protobuf::mozilla::gfx::DevicePrefs& _internal_a_prefs() const;
+  ::protobuf::mozilla::gfx::DevicePrefs* _internal_mutable_a_prefs();
   public:
-  void unsafe_arena_set_allocated_prefs(
-      ::protobuf::mozilla::gfx::DevicePrefs* prefs);
-  ::protobuf::mozilla::gfx::DevicePrefs* unsafe_arena_release_prefs();
+  void unsafe_arena_set_allocated_a_prefs(
+      ::protobuf::mozilla::gfx::DevicePrefs* a_prefs);
+  ::protobuf::mozilla::gfx::DevicePrefs* unsafe_arena_release_a_prefs();
 
-  // required .protobuf.mozilla.gfx.D3D11DeviceStatus d3d11 = 2;
-  bool has_d3d11() const;
+  // required .protobuf.mozilla.gfx.D3D11DeviceStatus a_d3d11 = 2;
+  bool has_a_d3d11() const;
   private:
-  bool _internal_has_d3d11() const;
+  bool _internal_has_a_d3d11() const;
   public:
-  void clear_d3d11();
-  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& d3d11() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::D3D11DeviceStatus* release_d3d11();
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* mutable_d3d11();
-  void set_allocated_d3d11(::protobuf::mozilla::gfx::D3D11DeviceStatus* d3d11);
+  void clear_a_d3d11();
+  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& a_d3d11() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::D3D11DeviceStatus* release_a_d3d11();
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* mutable_a_d3d11();
+  void set_allocated_a_d3d11(::protobuf::mozilla::gfx::D3D11DeviceStatus* a_d3d11);
   private:
-  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& _internal_d3d11() const;
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _internal_mutable_d3d11();
+  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& _internal_a_d3d11() const;
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _internal_mutable_a_d3d11();
   public:
-  void unsafe_arena_set_allocated_d3d11(
-      ::protobuf::mozilla::gfx::D3D11DeviceStatus* d3d11);
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* unsafe_arena_release_d3d11();
+  void unsafe_arena_set_allocated_a_d3d11(
+      ::protobuf::mozilla::gfx::D3D11DeviceStatus* a_d3d11);
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* unsafe_arena_release_a_d3d11();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.ContentDeviceData)
  private:
@@ -736,9 +736,9 @@ class ContentDeviceData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > cmsoutputprofiledata_;
-    ::protobuf::mozilla::gfx::DevicePrefs* prefs_;
-    ::protobuf::mozilla::gfx::D3D11DeviceStatus* d3d11_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cmsoutputprofiledata_;
+    ::protobuf::mozilla::gfx::DevicePrefs* a_prefs_;
+    ::protobuf::mozilla::gfx::D3D11DeviceStatus* a_d3d11_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -855,62 +855,62 @@ class FeatureFailure final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStatusFieldNumber = 1,
-    kMessageFieldNumber = 2,
-    kFailureIdFieldNumber = 3,
+    kAStatusFieldNumber = 1,
+    kAMessageFieldNumber = 2,
+    kAFailureIdFieldNumber = 3,
   };
-  // required bytes status = 1;
-  bool has_status() const;
+  // required bytes a_status = 1;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  const std::string& status() const;
+  void clear_a_status();
+  const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_status(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_status();
-  PROTOBUF_NODISCARD std::string* release_status();
-  void set_allocated_status(std::string* status);
+  void set_a_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_status();
+  PROTOBUF_NODISCARD std::string* release_a_status();
+  void set_allocated_a_status(std::string* a_status);
   private:
-  const std::string& _internal_status() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_status(const std::string& value);
-  std::string* _internal_mutable_status();
+  const std::string& _internal_a_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_status(const std::string& value);
+  std::string* _internal_mutable_a_status();
   public:
 
-  // required bytes message = 2;
-  bool has_message() const;
+  // required bytes a_message = 2;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes failureId = 3;
-  bool has_failureid() const;
+  // required bytes a_failureId = 3;
+  bool has_a_failureid() const;
   private:
-  bool _internal_has_failureid() const;
+  bool _internal_has_a_failureid() const;
   public:
-  void clear_failureid();
-  const std::string& failureid() const;
+  void clear_a_failureid();
+  const std::string& a_failureid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_failureid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_failureid();
-  PROTOBUF_NODISCARD std::string* release_failureid();
-  void set_allocated_failureid(std::string* failureid);
+  void set_a_failureid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_failureid();
+  PROTOBUF_NODISCARD std::string* release_a_failureid();
+  void set_allocated_a_failureid(std::string* a_failureid);
   private:
-  const std::string& _internal_failureid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_failureid(const std::string& value);
-  std::string* _internal_mutable_failureid();
+  const std::string& _internal_a_failureid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_failureid(const std::string& value);
+  std::string* _internal_mutable_a_failureid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.FeatureFailure)
@@ -926,9 +926,9 @@ class FeatureFailure final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr status_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr failureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_failureid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -1045,63 +1045,63 @@ class GPUDeviceData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kD3D11CompositingFieldNumber = 1,
-    kOglCompositingFieldNumber = 2,
-    kGpuDeviceFieldNumber = 3,
+    kAD3D11CompositingFieldNumber = 1,
+    kAOglCompositingFieldNumber = 2,
+    kAGpuDeviceFieldNumber = 3,
   };
-  // optional .protobuf.mozilla.gfx.FeatureFailure d3d11Compositing = 1;
-  bool has_d3d11compositing() const;
+  // optional .protobuf.mozilla.gfx.FeatureFailure a_d3d11Compositing = 1;
+  bool has_a_d3d11compositing() const;
   private:
-  bool _internal_has_d3d11compositing() const;
+  bool _internal_has_a_d3d11compositing() const;
   public:
-  void clear_d3d11compositing();
-  const ::protobuf::mozilla::gfx::FeatureFailure& d3d11compositing() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::FeatureFailure* release_d3d11compositing();
-  ::protobuf::mozilla::gfx::FeatureFailure* mutable_d3d11compositing();
-  void set_allocated_d3d11compositing(::protobuf::mozilla::gfx::FeatureFailure* d3d11compositing);
+  void clear_a_d3d11compositing();
+  const ::protobuf::mozilla::gfx::FeatureFailure& a_d3d11compositing() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::FeatureFailure* release_a_d3d11compositing();
+  ::protobuf::mozilla::gfx::FeatureFailure* mutable_a_d3d11compositing();
+  void set_allocated_a_d3d11compositing(::protobuf::mozilla::gfx::FeatureFailure* a_d3d11compositing);
   private:
-  const ::protobuf::mozilla::gfx::FeatureFailure& _internal_d3d11compositing() const;
-  ::protobuf::mozilla::gfx::FeatureFailure* _internal_mutable_d3d11compositing();
+  const ::protobuf::mozilla::gfx::FeatureFailure& _internal_a_d3d11compositing() const;
+  ::protobuf::mozilla::gfx::FeatureFailure* _internal_mutable_a_d3d11compositing();
   public:
-  void unsafe_arena_set_allocated_d3d11compositing(
-      ::protobuf::mozilla::gfx::FeatureFailure* d3d11compositing);
-  ::protobuf::mozilla::gfx::FeatureFailure* unsafe_arena_release_d3d11compositing();
+  void unsafe_arena_set_allocated_a_d3d11compositing(
+      ::protobuf::mozilla::gfx::FeatureFailure* a_d3d11compositing);
+  ::protobuf::mozilla::gfx::FeatureFailure* unsafe_arena_release_a_d3d11compositing();
 
-  // optional .protobuf.mozilla.gfx.FeatureFailure oglCompositing = 2;
-  bool has_oglcompositing() const;
+  // optional .protobuf.mozilla.gfx.FeatureFailure a_oglCompositing = 2;
+  bool has_a_oglcompositing() const;
   private:
-  bool _internal_has_oglcompositing() const;
+  bool _internal_has_a_oglcompositing() const;
   public:
-  void clear_oglcompositing();
-  const ::protobuf::mozilla::gfx::FeatureFailure& oglcompositing() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::FeatureFailure* release_oglcompositing();
-  ::protobuf::mozilla::gfx::FeatureFailure* mutable_oglcompositing();
-  void set_allocated_oglcompositing(::protobuf::mozilla::gfx::FeatureFailure* oglcompositing);
+  void clear_a_oglcompositing();
+  const ::protobuf::mozilla::gfx::FeatureFailure& a_oglcompositing() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::FeatureFailure* release_a_oglcompositing();
+  ::protobuf::mozilla::gfx::FeatureFailure* mutable_a_oglcompositing();
+  void set_allocated_a_oglcompositing(::protobuf::mozilla::gfx::FeatureFailure* a_oglcompositing);
   private:
-  const ::protobuf::mozilla::gfx::FeatureFailure& _internal_oglcompositing() const;
-  ::protobuf::mozilla::gfx::FeatureFailure* _internal_mutable_oglcompositing();
+  const ::protobuf::mozilla::gfx::FeatureFailure& _internal_a_oglcompositing() const;
+  ::protobuf::mozilla::gfx::FeatureFailure* _internal_mutable_a_oglcompositing();
   public:
-  void unsafe_arena_set_allocated_oglcompositing(
-      ::protobuf::mozilla::gfx::FeatureFailure* oglcompositing);
-  ::protobuf::mozilla::gfx::FeatureFailure* unsafe_arena_release_oglcompositing();
+  void unsafe_arena_set_allocated_a_oglcompositing(
+      ::protobuf::mozilla::gfx::FeatureFailure* a_oglcompositing);
+  ::protobuf::mozilla::gfx::FeatureFailure* unsafe_arena_release_a_oglcompositing();
 
-  // optional .protobuf.mozilla.gfx.D3D11DeviceStatus gpuDevice = 3;
-  bool has_gpudevice() const;
+  // optional .protobuf.mozilla.gfx.D3D11DeviceStatus a_gpuDevice = 3;
+  bool has_a_gpudevice() const;
   private:
-  bool _internal_has_gpudevice() const;
+  bool _internal_has_a_gpudevice() const;
   public:
-  void clear_gpudevice();
-  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& gpudevice() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::D3D11DeviceStatus* release_gpudevice();
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* mutable_gpudevice();
-  void set_allocated_gpudevice(::protobuf::mozilla::gfx::D3D11DeviceStatus* gpudevice);
+  void clear_a_gpudevice();
+  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& a_gpudevice() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::D3D11DeviceStatus* release_a_gpudevice();
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* mutable_a_gpudevice();
+  void set_allocated_a_gpudevice(::protobuf::mozilla::gfx::D3D11DeviceStatus* a_gpudevice);
   private:
-  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& _internal_gpudevice() const;
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _internal_mutable_gpudevice();
+  const ::protobuf::mozilla::gfx::D3D11DeviceStatus& _internal_a_gpudevice() const;
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _internal_mutable_a_gpudevice();
   public:
-  void unsafe_arena_set_allocated_gpudevice(
-      ::protobuf::mozilla::gfx::D3D11DeviceStatus* gpudevice);
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* unsafe_arena_release_gpudevice();
+  void unsafe_arena_set_allocated_a_gpudevice(
+      ::protobuf::mozilla::gfx::D3D11DeviceStatus* a_gpudevice);
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* unsafe_arena_release_a_gpudevice();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GPUDeviceData)
  private:
@@ -1113,9 +1113,9 @@ class GPUDeviceData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::gfx::FeatureFailure* d3d11compositing_;
-    ::protobuf::mozilla::gfx::FeatureFailure* oglcompositing_;
-    ::protobuf::mozilla::gfx::D3D11DeviceStatus* gpudevice_;
+    ::protobuf::mozilla::gfx::FeatureFailure* a_d3d11compositing_;
+    ::protobuf::mozilla::gfx::FeatureFailure* a_oglcompositing_;
+    ::protobuf::mozilla::gfx::D3D11DeviceStatus* a_gpudevice_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -1232,29 +1232,29 @@ class GfxVarValue__mVArrayOfuint64_t final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfuint64TFieldNumber = 1,
+    kAMVArrayOfuint64TFieldNumber = 1,
   };
-  // repeated uint64 mVArrayOfuint64_t = 1;
-  int mvarrayofuint64_t_size() const;
+  // repeated uint64 a_mVArrayOfuint64_t = 1;
+  int a_mvarrayofuint64_t_size() const;
   private:
-  int _internal_mvarrayofuint64_t_size() const;
+  int _internal_a_mvarrayofuint64_t_size() const;
   public:
-  void clear_mvarrayofuint64_t();
+  void clear_a_mvarrayofuint64_t();
   private:
-  uint64_t _internal_mvarrayofuint64_t(int index) const;
+  uint64_t _internal_a_mvarrayofuint64_t(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_mvarrayofuint64_t() const;
-  void _internal_add_mvarrayofuint64_t(uint64_t value);
+      _internal_a_mvarrayofuint64_t() const;
+  void _internal_add_a_mvarrayofuint64_t(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_mvarrayofuint64_t();
+      _internal_mutable_a_mvarrayofuint64_t();
   public:
-  uint64_t mvarrayofuint64_t(int index) const;
-  void set_mvarrayofuint64_t(int index, uint64_t value);
-  void add_mvarrayofuint64_t(uint64_t value);
+  uint64_t a_mvarrayofuint64_t(int index) const;
+  void set_a_mvarrayofuint64_t(int index, uint64_t value);
+  void add_a_mvarrayofuint64_t(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      mvarrayofuint64_t() const;
+      a_mvarrayofuint64_t() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_mvarrayofuint64_t();
+      mutable_a_mvarrayofuint64_t();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t)
  private:
@@ -1264,7 +1264,7 @@ class GfxVarValue__mVArrayOfuint64_t final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > mvarrayofuint64_t_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_mvarrayofuint64_t_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1314,15 +1314,15 @@ class GfxVarValue final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVBackendType = 1,
-    kMVbool = 2,
-    kMVgfxImageFormat = 3,
-    kMVIntSize = 4,
-    kMVnsCString = 5,
-    kMVnsString = 6,
-    kMVint32T = 7,
-    kMVuint64T = 8,
-    kMVfloat = 9,
+    kAMVBackendType = 1,
+    kAMVbool = 2,
+    kAMVgfxImageFormat = 3,
+    kAMVIntSize = 4,
+    kAMVnsCString = 5,
+    kAMVnsString = 6,
+    kAMVint32T = 7,
+    kAMVuint64T = 8,
+    kAMVfloat = 9,
     kMVArrayOfuint64T = 10,
     CONTENT_NOT_SET = 0,
   };
@@ -1398,157 +1398,157 @@ class GfxVarValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVBackendTypeFieldNumber = 1,
-    kMVboolFieldNumber = 2,
-    kMVgfxImageFormatFieldNumber = 3,
-    kMVIntSizeFieldNumber = 4,
-    kMVnsCStringFieldNumber = 5,
-    kMVnsStringFieldNumber = 6,
-    kMVint32TFieldNumber = 7,
-    kMVuint64TFieldNumber = 8,
-    kMVfloatFieldNumber = 9,
+    kAMVBackendTypeFieldNumber = 1,
+    kAMVboolFieldNumber = 2,
+    kAMVgfxImageFormatFieldNumber = 3,
+    kAMVIntSizeFieldNumber = 4,
+    kAMVnsCStringFieldNumber = 5,
+    kAMVnsStringFieldNumber = 6,
+    kAMVint32TFieldNumber = 7,
+    kAMVuint64TFieldNumber = 8,
+    kAMVfloatFieldNumber = 9,
     kMVArrayOfuint64TFieldNumber = 10,
   };
-  // bytes mVBackendType = 1;
-  bool has_mvbackendtype() const;
+  // bytes a_mVBackendType = 1;
+  bool has_a_mvbackendtype() const;
   private:
-  bool _internal_has_mvbackendtype() const;
+  bool _internal_has_a_mvbackendtype() const;
   public:
-  void clear_mvbackendtype();
-  const std::string& mvbackendtype() const;
+  void clear_a_mvbackendtype();
+  const std::string& a_mvbackendtype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvbackendtype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvbackendtype();
-  PROTOBUF_NODISCARD std::string* release_mvbackendtype();
-  void set_allocated_mvbackendtype(std::string* mvbackendtype);
+  void set_a_mvbackendtype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvbackendtype();
+  PROTOBUF_NODISCARD std::string* release_a_mvbackendtype();
+  void set_allocated_a_mvbackendtype(std::string* a_mvbackendtype);
   private:
-  const std::string& _internal_mvbackendtype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvbackendtype(const std::string& value);
-  std::string* _internal_mutable_mvbackendtype();
+  const std::string& _internal_a_mvbackendtype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvbackendtype(const std::string& value);
+  std::string* _internal_mutable_a_mvbackendtype();
   public:
 
-  // bool mVbool = 2;
-  bool has_mvbool() const;
+  // bool a_mVbool = 2;
+  bool has_a_mvbool() const;
   private:
-  bool _internal_has_mvbool() const;
+  bool _internal_has_a_mvbool() const;
   public:
-  void clear_mvbool();
-  bool mvbool() const;
-  void set_mvbool(bool value);
+  void clear_a_mvbool();
+  bool a_mvbool() const;
+  void set_a_mvbool(bool value);
   private:
-  bool _internal_mvbool() const;
-  void _internal_set_mvbool(bool value);
+  bool _internal_a_mvbool() const;
+  void _internal_set_a_mvbool(bool value);
   public:
 
-  // bytes mVgfxImageFormat = 3;
-  bool has_mvgfximageformat() const;
+  // bytes a_mVgfxImageFormat = 3;
+  bool has_a_mvgfximageformat() const;
   private:
-  bool _internal_has_mvgfximageformat() const;
+  bool _internal_has_a_mvgfximageformat() const;
   public:
-  void clear_mvgfximageformat();
-  const std::string& mvgfximageformat() const;
+  void clear_a_mvgfximageformat();
+  const std::string& a_mvgfximageformat() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvgfximageformat(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvgfximageformat();
-  PROTOBUF_NODISCARD std::string* release_mvgfximageformat();
-  void set_allocated_mvgfximageformat(std::string* mvgfximageformat);
+  void set_a_mvgfximageformat(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvgfximageformat();
+  PROTOBUF_NODISCARD std::string* release_a_mvgfximageformat();
+  void set_allocated_a_mvgfximageformat(std::string* a_mvgfximageformat);
   private:
-  const std::string& _internal_mvgfximageformat() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvgfximageformat(const std::string& value);
-  std::string* _internal_mutable_mvgfximageformat();
+  const std::string& _internal_a_mvgfximageformat() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvgfximageformat(const std::string& value);
+  std::string* _internal_mutable_a_mvgfximageformat();
   public:
 
-  // bytes mVIntSize = 4;
-  bool has_mvintsize() const;
+  // bytes a_mVIntSize = 4;
+  bool has_a_mvintsize() const;
   private:
-  bool _internal_has_mvintsize() const;
+  bool _internal_has_a_mvintsize() const;
   public:
-  void clear_mvintsize();
-  const std::string& mvintsize() const;
+  void clear_a_mvintsize();
+  const std::string& a_mvintsize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvintsize(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvintsize();
-  PROTOBUF_NODISCARD std::string* release_mvintsize();
-  void set_allocated_mvintsize(std::string* mvintsize);
+  void set_a_mvintsize(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvintsize();
+  PROTOBUF_NODISCARD std::string* release_a_mvintsize();
+  void set_allocated_a_mvintsize(std::string* a_mvintsize);
   private:
-  const std::string& _internal_mvintsize() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvintsize(const std::string& value);
-  std::string* _internal_mutable_mvintsize();
+  const std::string& _internal_a_mvintsize() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvintsize(const std::string& value);
+  std::string* _internal_mutable_a_mvintsize();
   public:
 
-  // bytes mVnsCString = 5;
-  bool has_mvnscstring() const;
+  // bytes a_mVnsCString = 5;
+  bool has_a_mvnscstring() const;
   private:
-  bool _internal_has_mvnscstring() const;
+  bool _internal_has_a_mvnscstring() const;
   public:
-  void clear_mvnscstring();
-  const std::string& mvnscstring() const;
+  void clear_a_mvnscstring();
+  const std::string& a_mvnscstring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnscstring(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnscstring();
-  PROTOBUF_NODISCARD std::string* release_mvnscstring();
-  void set_allocated_mvnscstring(std::string* mvnscstring);
+  void set_a_mvnscstring(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnscstring();
+  PROTOBUF_NODISCARD std::string* release_a_mvnscstring();
+  void set_allocated_a_mvnscstring(std::string* a_mvnscstring);
   private:
-  const std::string& _internal_mvnscstring() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnscstring(const std::string& value);
-  std::string* _internal_mutable_mvnscstring();
+  const std::string& _internal_a_mvnscstring() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnscstring(const std::string& value);
+  std::string* _internal_mutable_a_mvnscstring();
   public:
 
-  // bytes mVnsString = 6;
-  bool has_mvnsstring() const;
+  // bytes a_mVnsString = 6;
+  bool has_a_mvnsstring() const;
   private:
-  bool _internal_has_mvnsstring() const;
+  bool _internal_has_a_mvnsstring() const;
   public:
-  void clear_mvnsstring();
-  const std::string& mvnsstring() const;
+  void clear_a_mvnsstring();
+  const std::string& a_mvnsstring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsstring(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsstring();
-  PROTOBUF_NODISCARD std::string* release_mvnsstring();
-  void set_allocated_mvnsstring(std::string* mvnsstring);
+  void set_a_mvnsstring(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsstring();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsstring();
+  void set_allocated_a_mvnsstring(std::string* a_mvnsstring);
   private:
-  const std::string& _internal_mvnsstring() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsstring(const std::string& value);
-  std::string* _internal_mutable_mvnsstring();
+  const std::string& _internal_a_mvnsstring() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsstring(const std::string& value);
+  std::string* _internal_mutable_a_mvnsstring();
   public:
 
-  // sint32 mVint32_t = 7;
-  bool has_mvint32_t() const;
+  // sint32 a_mVint32_t = 7;
+  bool has_a_mvint32_t() const;
   private:
-  bool _internal_has_mvint32_t() const;
+  bool _internal_has_a_mvint32_t() const;
   public:
-  void clear_mvint32_t();
-  int32_t mvint32_t() const;
-  void set_mvint32_t(int32_t value);
+  void clear_a_mvint32_t();
+  int32_t a_mvint32_t() const;
+  void set_a_mvint32_t(int32_t value);
   private:
-  int32_t _internal_mvint32_t() const;
-  void _internal_set_mvint32_t(int32_t value);
-  public:
-
-  // uint64 mVuint64_t = 8;
-  bool has_mvuint64_t() const;
-  private:
-  bool _internal_has_mvuint64_t() const;
-  public:
-  void clear_mvuint64_t();
-  uint64_t mvuint64_t() const;
-  void set_mvuint64_t(uint64_t value);
-  private:
-  uint64_t _internal_mvuint64_t() const;
-  void _internal_set_mvuint64_t(uint64_t value);
+  int32_t _internal_a_mvint32_t() const;
+  void _internal_set_a_mvint32_t(int32_t value);
   public:
 
-  // float mVfloat = 9;
-  bool has_mvfloat() const;
+  // uint64 a_mVuint64_t = 8;
+  bool has_a_mvuint64_t() const;
   private:
-  bool _internal_has_mvfloat() const;
+  bool _internal_has_a_mvuint64_t() const;
   public:
-  void clear_mvfloat();
-  float mvfloat() const;
-  void set_mvfloat(float value);
+  void clear_a_mvuint64_t();
+  uint64_t a_mvuint64_t() const;
+  void set_a_mvuint64_t(uint64_t value);
   private:
-  float _internal_mvfloat() const;
-  void _internal_set_mvfloat(float value);
+  uint64_t _internal_a_mvuint64_t() const;
+  void _internal_set_a_mvuint64_t(uint64_t value);
+  public:
+
+  // float a_mVfloat = 9;
+  bool has_a_mvfloat() const;
+  private:
+  bool _internal_has_a_mvfloat() const;
+  public:
+  void clear_a_mvfloat();
+  float a_mvfloat() const;
+  void set_a_mvfloat(float value);
+  private:
+  float _internal_a_mvfloat() const;
+  void _internal_set_a_mvfloat(float value);
   public:
 
   // .protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t mVArrayOfuint64_t = 10;
@@ -1574,15 +1574,15 @@ class GfxVarValue final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxVarValue)
  private:
   class _Internal;
-  void set_has_mvbackendtype();
-  void set_has_mvbool();
-  void set_has_mvgfximageformat();
-  void set_has_mvintsize();
-  void set_has_mvnscstring();
-  void set_has_mvnsstring();
-  void set_has_mvint32_t();
-  void set_has_mvuint64_t();
-  void set_has_mvfloat();
+  void set_has_a_mvbackendtype();
+  void set_has_a_mvbool();
+  void set_has_a_mvgfximageformat();
+  void set_has_a_mvintsize();
+  void set_has_a_mvnscstring();
+  void set_has_a_mvnsstring();
+  void set_has_a_mvint32_t();
+  void set_has_a_mvuint64_t();
+  void set_has_a_mvfloat();
   void set_has_mvarrayofuint64_t();
 
   inline bool has_content() const;
@@ -1595,15 +1595,15 @@ class GfxVarValue final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvbackendtype_;
-      bool mvbool_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvgfximageformat_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvintsize_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnscstring_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsstring_;
-      int32_t mvint32_t_;
-      uint64_t mvuint64_t_;
-      float mvfloat_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvbackendtype_;
+      bool a_mvbool_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvgfximageformat_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvintsize_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnscstring_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsstring_;
+      int32_t a_mvint32_t_;
+      uint64_t a_mvuint64_t_;
+      float a_mvfloat_;
       ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* mvarrayofuint64_t_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1725,38 +1725,38 @@ class GfxVarUpdate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueFieldNumber = 2,
-    kIndexFieldNumber = 1,
+    kAValueFieldNumber = 2,
+    kAIndexFieldNumber = 1,
   };
-  // required .protobuf.mozilla.gfx.GfxVarValue value = 2;
-  bool has_value() const;
+  // required .protobuf.mozilla.gfx.GfxVarValue a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const ::protobuf::mozilla::gfx::GfxVarValue& value() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::GfxVarValue* release_value();
-  ::protobuf::mozilla::gfx::GfxVarValue* mutable_value();
-  void set_allocated_value(::protobuf::mozilla::gfx::GfxVarValue* value);
+  void clear_a_value();
+  const ::protobuf::mozilla::gfx::GfxVarValue& a_value() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::GfxVarValue* release_a_value();
+  ::protobuf::mozilla::gfx::GfxVarValue* mutable_a_value();
+  void set_allocated_a_value(::protobuf::mozilla::gfx::GfxVarValue* a_value);
   private:
-  const ::protobuf::mozilla::gfx::GfxVarValue& _internal_value() const;
-  ::protobuf::mozilla::gfx::GfxVarValue* _internal_mutable_value();
+  const ::protobuf::mozilla::gfx::GfxVarValue& _internal_a_value() const;
+  ::protobuf::mozilla::gfx::GfxVarValue* _internal_mutable_a_value();
   public:
-  void unsafe_arena_set_allocated_value(
-      ::protobuf::mozilla::gfx::GfxVarValue* value);
-  ::protobuf::mozilla::gfx::GfxVarValue* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_a_value(
+      ::protobuf::mozilla::gfx::GfxVarValue* a_value);
+  ::protobuf::mozilla::gfx::GfxVarValue* unsafe_arena_release_a_value();
 
-  // required uint32 index = 1;
-  bool has_index() const;
+  // required uint32 a_index = 1;
+  bool has_a_index() const;
   private:
-  bool _internal_has_index() const;
+  bool _internal_has_a_index() const;
   public:
-  void clear_index();
-  uint32_t index() const;
-  void set_index(uint32_t value);
+  void clear_a_index();
+  uint32_t a_index() const;
+  void set_a_index(uint32_t value);
   private:
-  uint32_t _internal_index() const;
-  void _internal_set_index(uint32_t value);
+  uint32_t _internal_a_index() const;
+  void _internal_set_a_index(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxVarUpdate)
@@ -1772,8 +1772,8 @@ class GfxVarUpdate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::gfx::GfxVarValue* value_;
-    uint32_t index_;
+    ::protobuf::mozilla::gfx::GfxVarValue* a_value_;
+    uint32_t a_index_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -1890,52 +1890,52 @@ class GfxInfoFeatureStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFailureIdFieldNumber = 3,
-    kFeatureFieldNumber = 1,
-    kStatusFieldNumber = 2,
+    kAFailureIdFieldNumber = 3,
+    kAFeatureFieldNumber = 1,
+    kAStatusFieldNumber = 2,
   };
-  // required bytes failureId = 3;
-  bool has_failureid() const;
+  // required bytes a_failureId = 3;
+  bool has_a_failureid() const;
   private:
-  bool _internal_has_failureid() const;
+  bool _internal_has_a_failureid() const;
   public:
-  void clear_failureid();
-  const std::string& failureid() const;
+  void clear_a_failureid();
+  const std::string& a_failureid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_failureid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_failureid();
-  PROTOBUF_NODISCARD std::string* release_failureid();
-  void set_allocated_failureid(std::string* failureid);
+  void set_a_failureid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_failureid();
+  PROTOBUF_NODISCARD std::string* release_a_failureid();
+  void set_allocated_a_failureid(std::string* a_failureid);
   private:
-  const std::string& _internal_failureid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_failureid(const std::string& value);
-  std::string* _internal_mutable_failureid();
+  const std::string& _internal_a_failureid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_failureid(const std::string& value);
+  std::string* _internal_mutable_a_failureid();
   public:
 
-  // required sint32 feature = 1;
-  bool has_feature() const;
+  // required sint32 a_feature = 1;
+  bool has_a_feature() const;
   private:
-  bool _internal_has_feature() const;
+  bool _internal_has_a_feature() const;
   public:
-  void clear_feature();
-  int32_t feature() const;
-  void set_feature(int32_t value);
+  void clear_a_feature();
+  int32_t a_feature() const;
+  void set_a_feature(int32_t value);
   private:
-  int32_t _internal_feature() const;
-  void _internal_set_feature(int32_t value);
+  int32_t _internal_a_feature() const;
+  void _internal_set_a_feature(int32_t value);
   public:
 
-  // required sint32 status = 2;
-  bool has_status() const;
+  // required sint32 a_status = 2;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  int32_t status() const;
-  void set_status(int32_t value);
+  void clear_a_status();
+  int32_t a_status() const;
+  void set_a_status(int32_t value);
   private:
-  int32_t _internal_status() const;
-  void _internal_set_status(int32_t value);
+  int32_t _internal_a_status() const;
+  void _internal_set_a_status(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxInfoFeatureStatus)
@@ -1951,9 +1951,9 @@ class GfxInfoFeatureStatus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr failureid_;
-    int32_t feature_;
-    int32_t status_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_failureid_;
+    int32_t a_feature_;
+    int32_t a_status_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -1969,641 +1969,641 @@ class GfxInfoFeatureStatus final :
 #endif  // __GNUC__
 // D3D11DeviceStatus
 
-// required bool isWARP = 1;
-inline bool D3D11DeviceStatus::_internal_has_iswarp() const {
+// required bool a_isWARP = 1;
+inline bool D3D11DeviceStatus::_internal_has_a_iswarp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool D3D11DeviceStatus::has_iswarp() const {
-  return _internal_has_iswarp();
+inline bool D3D11DeviceStatus::has_a_iswarp() const {
+  return _internal_has_a_iswarp();
 }
-inline void D3D11DeviceStatus::clear_iswarp() {
-  _impl_.iswarp_ = false;
+inline void D3D11DeviceStatus::clear_a_iswarp() {
+  _impl_.a_iswarp_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool D3D11DeviceStatus::_internal_iswarp() const {
-  return _impl_.iswarp_;
+inline bool D3D11DeviceStatus::_internal_a_iswarp() const {
+  return _impl_.a_iswarp_;
 }
-inline bool D3D11DeviceStatus::iswarp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.isWARP)
-  return _internal_iswarp();
+inline bool D3D11DeviceStatus::a_iswarp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.a_isWARP)
+  return _internal_a_iswarp();
 }
-inline void D3D11DeviceStatus::_internal_set_iswarp(bool value) {
+inline void D3D11DeviceStatus::_internal_set_a_iswarp(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.iswarp_ = value;
+  _impl_.a_iswarp_ = value;
 }
-inline void D3D11DeviceStatus::set_iswarp(bool value) {
-  _internal_set_iswarp(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.isWARP)
+inline void D3D11DeviceStatus::set_a_iswarp(bool value) {
+  _internal_set_a_iswarp(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_isWARP)
 }
 
-// required bool textureSharingWorks = 2;
-inline bool D3D11DeviceStatus::_internal_has_texturesharingworks() const {
+// required bool a_textureSharingWorks = 2;
+inline bool D3D11DeviceStatus::_internal_has_a_texturesharingworks() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool D3D11DeviceStatus::has_texturesharingworks() const {
-  return _internal_has_texturesharingworks();
+inline bool D3D11DeviceStatus::has_a_texturesharingworks() const {
+  return _internal_has_a_texturesharingworks();
 }
-inline void D3D11DeviceStatus::clear_texturesharingworks() {
-  _impl_.texturesharingworks_ = false;
+inline void D3D11DeviceStatus::clear_a_texturesharingworks() {
+  _impl_.a_texturesharingworks_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool D3D11DeviceStatus::_internal_texturesharingworks() const {
-  return _impl_.texturesharingworks_;
+inline bool D3D11DeviceStatus::_internal_a_texturesharingworks() const {
+  return _impl_.a_texturesharingworks_;
 }
-inline bool D3D11DeviceStatus::texturesharingworks() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.textureSharingWorks)
-  return _internal_texturesharingworks();
+inline bool D3D11DeviceStatus::a_texturesharingworks() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.a_textureSharingWorks)
+  return _internal_a_texturesharingworks();
 }
-inline void D3D11DeviceStatus::_internal_set_texturesharingworks(bool value) {
+inline void D3D11DeviceStatus::_internal_set_a_texturesharingworks(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.texturesharingworks_ = value;
+  _impl_.a_texturesharingworks_ = value;
 }
-inline void D3D11DeviceStatus::set_texturesharingworks(bool value) {
-  _internal_set_texturesharingworks(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.textureSharingWorks)
+inline void D3D11DeviceStatus::set_a_texturesharingworks(bool value) {
+  _internal_set_a_texturesharingworks(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_textureSharingWorks)
 }
 
-// required uint32 featureLevel = 3;
-inline bool D3D11DeviceStatus::_internal_has_featurelevel() const {
+// required uint32 a_featureLevel = 3;
+inline bool D3D11DeviceStatus::_internal_has_a_featurelevel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool D3D11DeviceStatus::has_featurelevel() const {
-  return _internal_has_featurelevel();
+inline bool D3D11DeviceStatus::has_a_featurelevel() const {
+  return _internal_has_a_featurelevel();
 }
-inline void D3D11DeviceStatus::clear_featurelevel() {
-  _impl_.featurelevel_ = 0u;
+inline void D3D11DeviceStatus::clear_a_featurelevel() {
+  _impl_.a_featurelevel_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t D3D11DeviceStatus::_internal_featurelevel() const {
-  return _impl_.featurelevel_;
+inline uint32_t D3D11DeviceStatus::_internal_a_featurelevel() const {
+  return _impl_.a_featurelevel_;
 }
-inline uint32_t D3D11DeviceStatus::featurelevel() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.featureLevel)
-  return _internal_featurelevel();
+inline uint32_t D3D11DeviceStatus::a_featurelevel() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.a_featureLevel)
+  return _internal_a_featurelevel();
 }
-inline void D3D11DeviceStatus::_internal_set_featurelevel(uint32_t value) {
+inline void D3D11DeviceStatus::_internal_set_a_featurelevel(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.featurelevel_ = value;
+  _impl_.a_featurelevel_ = value;
 }
-inline void D3D11DeviceStatus::set_featurelevel(uint32_t value) {
-  _internal_set_featurelevel(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.featureLevel)
+inline void D3D11DeviceStatus::set_a_featurelevel(uint32_t value) {
+  _internal_set_a_featurelevel(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_featureLevel)
 }
 
-// required bytes adapter = 4;
-inline bool D3D11DeviceStatus::_internal_has_adapter() const {
+// required bytes a_adapter = 4;
+inline bool D3D11DeviceStatus::_internal_has_a_adapter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool D3D11DeviceStatus::has_adapter() const {
-  return _internal_has_adapter();
+inline bool D3D11DeviceStatus::has_a_adapter() const {
+  return _internal_has_a_adapter();
 }
-inline void D3D11DeviceStatus::clear_adapter() {
-  _impl_.adapter_.ClearToEmpty();
+inline void D3D11DeviceStatus::clear_a_adapter() {
+  _impl_.a_adapter_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& D3D11DeviceStatus::adapter() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.adapter)
-  return _internal_adapter();
+inline const std::string& D3D11DeviceStatus::a_adapter() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.a_adapter)
+  return _internal_a_adapter();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void D3D11DeviceStatus::set_adapter(ArgT0&& arg0, ArgT... args) {
+void D3D11DeviceStatus::set_a_adapter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adapter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.adapter)
+ _impl_.a_adapter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_adapter)
 }
-inline std::string* D3D11DeviceStatus::mutable_adapter() {
-  std::string* _s = _internal_mutable_adapter();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.D3D11DeviceStatus.adapter)
+inline std::string* D3D11DeviceStatus::mutable_a_adapter() {
+  std::string* _s = _internal_mutable_a_adapter();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.D3D11DeviceStatus.a_adapter)
   return _s;
 }
-inline const std::string& D3D11DeviceStatus::_internal_adapter() const {
-  return _impl_.adapter_.Get();
+inline const std::string& D3D11DeviceStatus::_internal_a_adapter() const {
+  return _impl_.a_adapter_.Get();
 }
-inline void D3D11DeviceStatus::_internal_set_adapter(const std::string& value) {
+inline void D3D11DeviceStatus::_internal_set_a_adapter(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adapter_.Set(value, GetArenaForAllocation());
+  _impl_.a_adapter_.Set(value, GetArenaForAllocation());
 }
-inline std::string* D3D11DeviceStatus::_internal_mutable_adapter() {
+inline std::string* D3D11DeviceStatus::_internal_mutable_a_adapter() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.adapter_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adapter_.Mutable(GetArenaForAllocation());
 }
-inline std::string* D3D11DeviceStatus::release_adapter() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.D3D11DeviceStatus.adapter)
-  if (!_internal_has_adapter()) {
+inline std::string* D3D11DeviceStatus::release_a_adapter() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.D3D11DeviceStatus.a_adapter)
+  if (!_internal_has_a_adapter()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.adapter_.Release();
+  auto* p = _impl_.a_adapter_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adapter_.IsDefault()) {
-    _impl_.adapter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adapter_.IsDefault()) {
+    _impl_.a_adapter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void D3D11DeviceStatus::set_allocated_adapter(std::string* adapter) {
-  if (adapter != nullptr) {
+inline void D3D11DeviceStatus::set_allocated_a_adapter(std::string* a_adapter) {
+  if (a_adapter != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.adapter_.SetAllocated(adapter, GetArenaForAllocation());
+  _impl_.a_adapter_.SetAllocated(a_adapter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adapter_.IsDefault()) {
-    _impl_.adapter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adapter_.IsDefault()) {
+    _impl_.a_adapter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.D3D11DeviceStatus.adapter)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.D3D11DeviceStatus.a_adapter)
 }
 
-// required sint32 sequenceNumber = 5;
-inline bool D3D11DeviceStatus::_internal_has_sequencenumber() const {
+// required sint32 a_sequenceNumber = 5;
+inline bool D3D11DeviceStatus::_internal_has_a_sequencenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool D3D11DeviceStatus::has_sequencenumber() const {
-  return _internal_has_sequencenumber();
+inline bool D3D11DeviceStatus::has_a_sequencenumber() const {
+  return _internal_has_a_sequencenumber();
 }
-inline void D3D11DeviceStatus::clear_sequencenumber() {
-  _impl_.sequencenumber_ = 0;
+inline void D3D11DeviceStatus::clear_a_sequencenumber() {
+  _impl_.a_sequencenumber_ = 0;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline int32_t D3D11DeviceStatus::_internal_sequencenumber() const {
-  return _impl_.sequencenumber_;
+inline int32_t D3D11DeviceStatus::_internal_a_sequencenumber() const {
+  return _impl_.a_sequencenumber_;
 }
-inline int32_t D3D11DeviceStatus::sequencenumber() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.sequenceNumber)
-  return _internal_sequencenumber();
+inline int32_t D3D11DeviceStatus::a_sequencenumber() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.a_sequenceNumber)
+  return _internal_a_sequencenumber();
 }
-inline void D3D11DeviceStatus::_internal_set_sequencenumber(int32_t value) {
+inline void D3D11DeviceStatus::_internal_set_a_sequencenumber(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.sequencenumber_ = value;
+  _impl_.a_sequencenumber_ = value;
 }
-inline void D3D11DeviceStatus::set_sequencenumber(int32_t value) {
-  _internal_set_sequencenumber(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.sequenceNumber)
+inline void D3D11DeviceStatus::set_a_sequencenumber(int32_t value) {
+  _internal_set_a_sequencenumber(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_sequenceNumber)
 }
 
-// required bytes formatOptions = 6;
-inline bool D3D11DeviceStatus::_internal_has_formatoptions() const {
+// required bytes a_formatOptions = 6;
+inline bool D3D11DeviceStatus::_internal_has_a_formatoptions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool D3D11DeviceStatus::has_formatoptions() const {
-  return _internal_has_formatoptions();
+inline bool D3D11DeviceStatus::has_a_formatoptions() const {
+  return _internal_has_a_formatoptions();
 }
-inline void D3D11DeviceStatus::clear_formatoptions() {
-  _impl_.formatoptions_.ClearToEmpty();
+inline void D3D11DeviceStatus::clear_a_formatoptions() {
+  _impl_.a_formatoptions_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& D3D11DeviceStatus::formatoptions() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.formatOptions)
-  return _internal_formatoptions();
+inline const std::string& D3D11DeviceStatus::a_formatoptions() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.D3D11DeviceStatus.a_formatOptions)
+  return _internal_a_formatoptions();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void D3D11DeviceStatus::set_formatoptions(ArgT0&& arg0, ArgT... args) {
+void D3D11DeviceStatus::set_a_formatoptions(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.formatoptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.formatOptions)
+ _impl_.a_formatoptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.D3D11DeviceStatus.a_formatOptions)
 }
-inline std::string* D3D11DeviceStatus::mutable_formatoptions() {
-  std::string* _s = _internal_mutable_formatoptions();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.D3D11DeviceStatus.formatOptions)
+inline std::string* D3D11DeviceStatus::mutable_a_formatoptions() {
+  std::string* _s = _internal_mutable_a_formatoptions();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.D3D11DeviceStatus.a_formatOptions)
   return _s;
 }
-inline const std::string& D3D11DeviceStatus::_internal_formatoptions() const {
-  return _impl_.formatoptions_.Get();
+inline const std::string& D3D11DeviceStatus::_internal_a_formatoptions() const {
+  return _impl_.a_formatoptions_.Get();
 }
-inline void D3D11DeviceStatus::_internal_set_formatoptions(const std::string& value) {
+inline void D3D11DeviceStatus::_internal_set_a_formatoptions(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.formatoptions_.Set(value, GetArenaForAllocation());
+  _impl_.a_formatoptions_.Set(value, GetArenaForAllocation());
 }
-inline std::string* D3D11DeviceStatus::_internal_mutable_formatoptions() {
+inline std::string* D3D11DeviceStatus::_internal_mutable_a_formatoptions() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.formatoptions_.Mutable(GetArenaForAllocation());
+  return _impl_.a_formatoptions_.Mutable(GetArenaForAllocation());
 }
-inline std::string* D3D11DeviceStatus::release_formatoptions() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.D3D11DeviceStatus.formatOptions)
-  if (!_internal_has_formatoptions()) {
+inline std::string* D3D11DeviceStatus::release_a_formatoptions() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.D3D11DeviceStatus.a_formatOptions)
+  if (!_internal_has_a_formatoptions()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.formatoptions_.Release();
+  auto* p = _impl_.a_formatoptions_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.formatoptions_.IsDefault()) {
-    _impl_.formatoptions_.Set("", GetArenaForAllocation());
+  if (_impl_.a_formatoptions_.IsDefault()) {
+    _impl_.a_formatoptions_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void D3D11DeviceStatus::set_allocated_formatoptions(std::string* formatoptions) {
-  if (formatoptions != nullptr) {
+inline void D3D11DeviceStatus::set_allocated_a_formatoptions(std::string* a_formatoptions) {
+  if (a_formatoptions != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.formatoptions_.SetAllocated(formatoptions, GetArenaForAllocation());
+  _impl_.a_formatoptions_.SetAllocated(a_formatoptions, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.formatoptions_.IsDefault()) {
-    _impl_.formatoptions_.Set("", GetArenaForAllocation());
+  if (_impl_.a_formatoptions_.IsDefault()) {
+    _impl_.a_formatoptions_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.D3D11DeviceStatus.formatOptions)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.D3D11DeviceStatus.a_formatOptions)
 }
 
 // -------------------------------------------------------------------
 
 // DevicePrefs
 
-// required bytes hwCompositing = 1;
-inline bool DevicePrefs::_internal_has_hwcompositing() const {
+// required bytes a_hwCompositing = 1;
+inline bool DevicePrefs::_internal_has_a_hwcompositing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool DevicePrefs::has_hwcompositing() const {
-  return _internal_has_hwcompositing();
+inline bool DevicePrefs::has_a_hwcompositing() const {
+  return _internal_has_a_hwcompositing();
 }
-inline void DevicePrefs::clear_hwcompositing() {
-  _impl_.hwcompositing_.ClearToEmpty();
+inline void DevicePrefs::clear_a_hwcompositing() {
+  _impl_.a_hwcompositing_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DevicePrefs::hwcompositing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.hwCompositing)
-  return _internal_hwcompositing();
+inline const std::string& DevicePrefs::a_hwcompositing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.a_hwCompositing)
+  return _internal_a_hwcompositing();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DevicePrefs::set_hwcompositing(ArgT0&& arg0, ArgT... args) {
+void DevicePrefs::set_a_hwcompositing(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hwcompositing_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.hwCompositing)
+ _impl_.a_hwcompositing_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.a_hwCompositing)
 }
-inline std::string* DevicePrefs::mutable_hwcompositing() {
-  std::string* _s = _internal_mutable_hwcompositing();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.hwCompositing)
+inline std::string* DevicePrefs::mutable_a_hwcompositing() {
+  std::string* _s = _internal_mutable_a_hwcompositing();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.a_hwCompositing)
   return _s;
 }
-inline const std::string& DevicePrefs::_internal_hwcompositing() const {
-  return _impl_.hwcompositing_.Get();
+inline const std::string& DevicePrefs::_internal_a_hwcompositing() const {
+  return _impl_.a_hwcompositing_.Get();
 }
-inline void DevicePrefs::_internal_set_hwcompositing(const std::string& value) {
+inline void DevicePrefs::_internal_set_a_hwcompositing(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.hwcompositing_.Set(value, GetArenaForAllocation());
+  _impl_.a_hwcompositing_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::_internal_mutable_hwcompositing() {
+inline std::string* DevicePrefs::_internal_mutable_a_hwcompositing() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.hwcompositing_.Mutable(GetArenaForAllocation());
+  return _impl_.a_hwcompositing_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::release_hwcompositing() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.hwCompositing)
-  if (!_internal_has_hwcompositing()) {
+inline std::string* DevicePrefs::release_a_hwcompositing() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.a_hwCompositing)
+  if (!_internal_has_a_hwcompositing()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.hwcompositing_.Release();
+  auto* p = _impl_.a_hwcompositing_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.hwcompositing_.IsDefault()) {
-    _impl_.hwcompositing_.Set("", GetArenaForAllocation());
+  if (_impl_.a_hwcompositing_.IsDefault()) {
+    _impl_.a_hwcompositing_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DevicePrefs::set_allocated_hwcompositing(std::string* hwcompositing) {
-  if (hwcompositing != nullptr) {
+inline void DevicePrefs::set_allocated_a_hwcompositing(std::string* a_hwcompositing) {
+  if (a_hwcompositing != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.hwcompositing_.SetAllocated(hwcompositing, GetArenaForAllocation());
+  _impl_.a_hwcompositing_.SetAllocated(a_hwcompositing, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.hwcompositing_.IsDefault()) {
-    _impl_.hwcompositing_.Set("", GetArenaForAllocation());
+  if (_impl_.a_hwcompositing_.IsDefault()) {
+    _impl_.a_hwcompositing_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.hwCompositing)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.a_hwCompositing)
 }
 
-// required bytes d3d11Compositing = 2;
-inline bool DevicePrefs::_internal_has_d3d11compositing() const {
+// required bytes a_d3d11Compositing = 2;
+inline bool DevicePrefs::_internal_has_a_d3d11compositing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool DevicePrefs::has_d3d11compositing() const {
-  return _internal_has_d3d11compositing();
+inline bool DevicePrefs::has_a_d3d11compositing() const {
+  return _internal_has_a_d3d11compositing();
 }
-inline void DevicePrefs::clear_d3d11compositing() {
-  _impl_.d3d11compositing_.ClearToEmpty();
+inline void DevicePrefs::clear_a_d3d11compositing() {
+  _impl_.a_d3d11compositing_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& DevicePrefs::d3d11compositing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.d3d11Compositing)
-  return _internal_d3d11compositing();
+inline const std::string& DevicePrefs::a_d3d11compositing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.a_d3d11Compositing)
+  return _internal_a_d3d11compositing();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DevicePrefs::set_d3d11compositing(ArgT0&& arg0, ArgT... args) {
+void DevicePrefs::set_a_d3d11compositing(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.d3d11compositing_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.d3d11Compositing)
+ _impl_.a_d3d11compositing_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.a_d3d11Compositing)
 }
-inline std::string* DevicePrefs::mutable_d3d11compositing() {
-  std::string* _s = _internal_mutable_d3d11compositing();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.d3d11Compositing)
+inline std::string* DevicePrefs::mutable_a_d3d11compositing() {
+  std::string* _s = _internal_mutable_a_d3d11compositing();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.a_d3d11Compositing)
   return _s;
 }
-inline const std::string& DevicePrefs::_internal_d3d11compositing() const {
-  return _impl_.d3d11compositing_.Get();
+inline const std::string& DevicePrefs::_internal_a_d3d11compositing() const {
+  return _impl_.a_d3d11compositing_.Get();
 }
-inline void DevicePrefs::_internal_set_d3d11compositing(const std::string& value) {
+inline void DevicePrefs::_internal_set_a_d3d11compositing(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.d3d11compositing_.Set(value, GetArenaForAllocation());
+  _impl_.a_d3d11compositing_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::_internal_mutable_d3d11compositing() {
+inline std::string* DevicePrefs::_internal_mutable_a_d3d11compositing() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.d3d11compositing_.Mutable(GetArenaForAllocation());
+  return _impl_.a_d3d11compositing_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::release_d3d11compositing() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.d3d11Compositing)
-  if (!_internal_has_d3d11compositing()) {
+inline std::string* DevicePrefs::release_a_d3d11compositing() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.a_d3d11Compositing)
+  if (!_internal_has_a_d3d11compositing()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.d3d11compositing_.Release();
+  auto* p = _impl_.a_d3d11compositing_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.d3d11compositing_.IsDefault()) {
-    _impl_.d3d11compositing_.Set("", GetArenaForAllocation());
+  if (_impl_.a_d3d11compositing_.IsDefault()) {
+    _impl_.a_d3d11compositing_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DevicePrefs::set_allocated_d3d11compositing(std::string* d3d11compositing) {
-  if (d3d11compositing != nullptr) {
+inline void DevicePrefs::set_allocated_a_d3d11compositing(std::string* a_d3d11compositing) {
+  if (a_d3d11compositing != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.d3d11compositing_.SetAllocated(d3d11compositing, GetArenaForAllocation());
+  _impl_.a_d3d11compositing_.SetAllocated(a_d3d11compositing, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.d3d11compositing_.IsDefault()) {
-    _impl_.d3d11compositing_.Set("", GetArenaForAllocation());
+  if (_impl_.a_d3d11compositing_.IsDefault()) {
+    _impl_.a_d3d11compositing_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.d3d11Compositing)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.a_d3d11Compositing)
 }
 
-// required bytes oglCompositing = 3;
-inline bool DevicePrefs::_internal_has_oglcompositing() const {
+// required bytes a_oglCompositing = 3;
+inline bool DevicePrefs::_internal_has_a_oglcompositing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool DevicePrefs::has_oglcompositing() const {
-  return _internal_has_oglcompositing();
+inline bool DevicePrefs::has_a_oglcompositing() const {
+  return _internal_has_a_oglcompositing();
 }
-inline void DevicePrefs::clear_oglcompositing() {
-  _impl_.oglcompositing_.ClearToEmpty();
+inline void DevicePrefs::clear_a_oglcompositing() {
+  _impl_.a_oglcompositing_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& DevicePrefs::oglcompositing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.oglCompositing)
-  return _internal_oglcompositing();
+inline const std::string& DevicePrefs::a_oglcompositing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.a_oglCompositing)
+  return _internal_a_oglcompositing();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DevicePrefs::set_oglcompositing(ArgT0&& arg0, ArgT... args) {
+void DevicePrefs::set_a_oglcompositing(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.oglcompositing_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.oglCompositing)
+ _impl_.a_oglcompositing_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.a_oglCompositing)
 }
-inline std::string* DevicePrefs::mutable_oglcompositing() {
-  std::string* _s = _internal_mutable_oglcompositing();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.oglCompositing)
+inline std::string* DevicePrefs::mutable_a_oglcompositing() {
+  std::string* _s = _internal_mutable_a_oglcompositing();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.a_oglCompositing)
   return _s;
 }
-inline const std::string& DevicePrefs::_internal_oglcompositing() const {
-  return _impl_.oglcompositing_.Get();
+inline const std::string& DevicePrefs::_internal_a_oglcompositing() const {
+  return _impl_.a_oglcompositing_.Get();
 }
-inline void DevicePrefs::_internal_set_oglcompositing(const std::string& value) {
+inline void DevicePrefs::_internal_set_a_oglcompositing(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.oglcompositing_.Set(value, GetArenaForAllocation());
+  _impl_.a_oglcompositing_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::_internal_mutable_oglcompositing() {
+inline std::string* DevicePrefs::_internal_mutable_a_oglcompositing() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.oglcompositing_.Mutable(GetArenaForAllocation());
+  return _impl_.a_oglcompositing_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::release_oglcompositing() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.oglCompositing)
-  if (!_internal_has_oglcompositing()) {
+inline std::string* DevicePrefs::release_a_oglcompositing() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.a_oglCompositing)
+  if (!_internal_has_a_oglcompositing()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.oglcompositing_.Release();
+  auto* p = _impl_.a_oglcompositing_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oglcompositing_.IsDefault()) {
-    _impl_.oglcompositing_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oglcompositing_.IsDefault()) {
+    _impl_.a_oglcompositing_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DevicePrefs::set_allocated_oglcompositing(std::string* oglcompositing) {
-  if (oglcompositing != nullptr) {
+inline void DevicePrefs::set_allocated_a_oglcompositing(std::string* a_oglcompositing) {
+  if (a_oglcompositing != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.oglcompositing_.SetAllocated(oglcompositing, GetArenaForAllocation());
+  _impl_.a_oglcompositing_.SetAllocated(a_oglcompositing, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oglcompositing_.IsDefault()) {
-    _impl_.oglcompositing_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oglcompositing_.IsDefault()) {
+    _impl_.a_oglcompositing_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.oglCompositing)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.a_oglCompositing)
 }
 
-// required bytes useD2D1 = 4;
-inline bool DevicePrefs::_internal_has_used2d1() const {
+// required bytes a_useD2D1 = 4;
+inline bool DevicePrefs::_internal_has_a_used2d1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool DevicePrefs::has_used2d1() const {
-  return _internal_has_used2d1();
+inline bool DevicePrefs::has_a_used2d1() const {
+  return _internal_has_a_used2d1();
 }
-inline void DevicePrefs::clear_used2d1() {
-  _impl_.used2d1_.ClearToEmpty();
+inline void DevicePrefs::clear_a_used2d1() {
+  _impl_.a_used2d1_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& DevicePrefs::used2d1() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.useD2D1)
-  return _internal_used2d1();
+inline const std::string& DevicePrefs::a_used2d1() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.a_useD2D1)
+  return _internal_a_used2d1();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DevicePrefs::set_used2d1(ArgT0&& arg0, ArgT... args) {
+void DevicePrefs::set_a_used2d1(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.used2d1_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.useD2D1)
+ _impl_.a_used2d1_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.a_useD2D1)
 }
-inline std::string* DevicePrefs::mutable_used2d1() {
-  std::string* _s = _internal_mutable_used2d1();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.useD2D1)
+inline std::string* DevicePrefs::mutable_a_used2d1() {
+  std::string* _s = _internal_mutable_a_used2d1();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.a_useD2D1)
   return _s;
 }
-inline const std::string& DevicePrefs::_internal_used2d1() const {
-  return _impl_.used2d1_.Get();
+inline const std::string& DevicePrefs::_internal_a_used2d1() const {
+  return _impl_.a_used2d1_.Get();
 }
-inline void DevicePrefs::_internal_set_used2d1(const std::string& value) {
+inline void DevicePrefs::_internal_set_a_used2d1(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.used2d1_.Set(value, GetArenaForAllocation());
+  _impl_.a_used2d1_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::_internal_mutable_used2d1() {
+inline std::string* DevicePrefs::_internal_mutable_a_used2d1() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.used2d1_.Mutable(GetArenaForAllocation());
+  return _impl_.a_used2d1_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::release_used2d1() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.useD2D1)
-  if (!_internal_has_used2d1()) {
+inline std::string* DevicePrefs::release_a_used2d1() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.a_useD2D1)
+  if (!_internal_has_a_used2d1()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.used2d1_.Release();
+  auto* p = _impl_.a_used2d1_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.used2d1_.IsDefault()) {
-    _impl_.used2d1_.Set("", GetArenaForAllocation());
+  if (_impl_.a_used2d1_.IsDefault()) {
+    _impl_.a_used2d1_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DevicePrefs::set_allocated_used2d1(std::string* used2d1) {
-  if (used2d1 != nullptr) {
+inline void DevicePrefs::set_allocated_a_used2d1(std::string* a_used2d1) {
+  if (a_used2d1 != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.used2d1_.SetAllocated(used2d1, GetArenaForAllocation());
+  _impl_.a_used2d1_.SetAllocated(a_used2d1, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.used2d1_.IsDefault()) {
-    _impl_.used2d1_.Set("", GetArenaForAllocation());
+  if (_impl_.a_used2d1_.IsDefault()) {
+    _impl_.a_used2d1_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.useD2D1)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.a_useD2D1)
 }
 
-// required bytes d3d11HwAngle = 5;
-inline bool DevicePrefs::_internal_has_d3d11hwangle() const {
+// required bytes a_d3d11HwAngle = 5;
+inline bool DevicePrefs::_internal_has_a_d3d11hwangle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool DevicePrefs::has_d3d11hwangle() const {
-  return _internal_has_d3d11hwangle();
+inline bool DevicePrefs::has_a_d3d11hwangle() const {
+  return _internal_has_a_d3d11hwangle();
 }
-inline void DevicePrefs::clear_d3d11hwangle() {
-  _impl_.d3d11hwangle_.ClearToEmpty();
+inline void DevicePrefs::clear_a_d3d11hwangle() {
+  _impl_.a_d3d11hwangle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& DevicePrefs::d3d11hwangle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.d3d11HwAngle)
-  return _internal_d3d11hwangle();
+inline const std::string& DevicePrefs::a_d3d11hwangle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.DevicePrefs.a_d3d11HwAngle)
+  return _internal_a_d3d11hwangle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DevicePrefs::set_d3d11hwangle(ArgT0&& arg0, ArgT... args) {
+void DevicePrefs::set_a_d3d11hwangle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.d3d11hwangle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.d3d11HwAngle)
+ _impl_.a_d3d11hwangle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.DevicePrefs.a_d3d11HwAngle)
 }
-inline std::string* DevicePrefs::mutable_d3d11hwangle() {
-  std::string* _s = _internal_mutable_d3d11hwangle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.d3d11HwAngle)
+inline std::string* DevicePrefs::mutable_a_d3d11hwangle() {
+  std::string* _s = _internal_mutable_a_d3d11hwangle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.DevicePrefs.a_d3d11HwAngle)
   return _s;
 }
-inline const std::string& DevicePrefs::_internal_d3d11hwangle() const {
-  return _impl_.d3d11hwangle_.Get();
+inline const std::string& DevicePrefs::_internal_a_d3d11hwangle() const {
+  return _impl_.a_d3d11hwangle_.Get();
 }
-inline void DevicePrefs::_internal_set_d3d11hwangle(const std::string& value) {
+inline void DevicePrefs::_internal_set_a_d3d11hwangle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.d3d11hwangle_.Set(value, GetArenaForAllocation());
+  _impl_.a_d3d11hwangle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::_internal_mutable_d3d11hwangle() {
+inline std::string* DevicePrefs::_internal_mutable_a_d3d11hwangle() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.d3d11hwangle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_d3d11hwangle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DevicePrefs::release_d3d11hwangle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.d3d11HwAngle)
-  if (!_internal_has_d3d11hwangle()) {
+inline std::string* DevicePrefs::release_a_d3d11hwangle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.DevicePrefs.a_d3d11HwAngle)
+  if (!_internal_has_a_d3d11hwangle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.d3d11hwangle_.Release();
+  auto* p = _impl_.a_d3d11hwangle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.d3d11hwangle_.IsDefault()) {
-    _impl_.d3d11hwangle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_d3d11hwangle_.IsDefault()) {
+    _impl_.a_d3d11hwangle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DevicePrefs::set_allocated_d3d11hwangle(std::string* d3d11hwangle) {
-  if (d3d11hwangle != nullptr) {
+inline void DevicePrefs::set_allocated_a_d3d11hwangle(std::string* a_d3d11hwangle) {
+  if (a_d3d11hwangle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.d3d11hwangle_.SetAllocated(d3d11hwangle, GetArenaForAllocation());
+  _impl_.a_d3d11hwangle_.SetAllocated(a_d3d11hwangle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.d3d11hwangle_.IsDefault()) {
-    _impl_.d3d11hwangle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_d3d11hwangle_.IsDefault()) {
+    _impl_.a_d3d11hwangle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.d3d11HwAngle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.DevicePrefs.a_d3d11HwAngle)
 }
 
 // -------------------------------------------------------------------
 
 // ContentDeviceData
 
-// required .protobuf.mozilla.gfx.DevicePrefs prefs = 1;
-inline bool ContentDeviceData::_internal_has_prefs() const {
+// required .protobuf.mozilla.gfx.DevicePrefs a_prefs = 1;
+inline bool ContentDeviceData::_internal_has_a_prefs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.prefs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_prefs_ != nullptr);
   return value;
 }
-inline bool ContentDeviceData::has_prefs() const {
-  return _internal_has_prefs();
+inline bool ContentDeviceData::has_a_prefs() const {
+  return _internal_has_a_prefs();
 }
-inline void ContentDeviceData::clear_prefs() {
-  if (_impl_.prefs_ != nullptr) _impl_.prefs_->Clear();
+inline void ContentDeviceData::clear_a_prefs() {
+  if (_impl_.a_prefs_ != nullptr) _impl_.a_prefs_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::gfx::DevicePrefs& ContentDeviceData::_internal_prefs() const {
-  const ::protobuf::mozilla::gfx::DevicePrefs* p = _impl_.prefs_;
+inline const ::protobuf::mozilla::gfx::DevicePrefs& ContentDeviceData::_internal_a_prefs() const {
+  const ::protobuf::mozilla::gfx::DevicePrefs* p = _impl_.a_prefs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gfx::DevicePrefs&>(
       ::protobuf::mozilla::gfx::_DevicePrefs_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::DevicePrefs& ContentDeviceData::prefs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.ContentDeviceData.prefs)
-  return _internal_prefs();
+inline const ::protobuf::mozilla::gfx::DevicePrefs& ContentDeviceData::a_prefs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.ContentDeviceData.a_prefs)
+  return _internal_a_prefs();
 }
-inline void ContentDeviceData::unsafe_arena_set_allocated_prefs(
-    ::protobuf::mozilla::gfx::DevicePrefs* prefs) {
+inline void ContentDeviceData::unsafe_arena_set_allocated_a_prefs(
+    ::protobuf::mozilla::gfx::DevicePrefs* a_prefs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.prefs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_prefs_);
   }
-  _impl_.prefs_ = prefs;
-  if (prefs) {
+  _impl_.a_prefs_ = a_prefs;
+  if (a_prefs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.prefs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.a_prefs)
 }
-inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::release_prefs() {
+inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::release_a_prefs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gfx::DevicePrefs* temp = _impl_.prefs_;
-  _impl_.prefs_ = nullptr;
+  ::protobuf::mozilla::gfx::DevicePrefs* temp = _impl_.a_prefs_;
+  _impl_.a_prefs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2615,85 +2615,85 @@ inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::release_prefs()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::unsafe_arena_release_prefs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.ContentDeviceData.prefs)
+inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::unsafe_arena_release_a_prefs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.ContentDeviceData.a_prefs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gfx::DevicePrefs* temp = _impl_.prefs_;
-  _impl_.prefs_ = nullptr;
+  ::protobuf::mozilla::gfx::DevicePrefs* temp = _impl_.a_prefs_;
+  _impl_.a_prefs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::_internal_mutable_prefs() {
+inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::_internal_mutable_a_prefs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.prefs_ == nullptr) {
+  if (_impl_.a_prefs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::DevicePrefs>(GetArenaForAllocation());
-    _impl_.prefs_ = p;
+    _impl_.a_prefs_ = p;
   }
-  return _impl_.prefs_;
+  return _impl_.a_prefs_;
 }
-inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::mutable_prefs() {
-  ::protobuf::mozilla::gfx::DevicePrefs* _msg = _internal_mutable_prefs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.ContentDeviceData.prefs)
+inline ::protobuf::mozilla::gfx::DevicePrefs* ContentDeviceData::mutable_a_prefs() {
+  ::protobuf::mozilla::gfx::DevicePrefs* _msg = _internal_mutable_a_prefs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.ContentDeviceData.a_prefs)
   return _msg;
 }
-inline void ContentDeviceData::set_allocated_prefs(::protobuf::mozilla::gfx::DevicePrefs* prefs) {
+inline void ContentDeviceData::set_allocated_a_prefs(::protobuf::mozilla::gfx::DevicePrefs* a_prefs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.prefs_;
+    delete _impl_.a_prefs_;
   }
-  if (prefs) {
+  if (a_prefs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(prefs);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_prefs);
     if (message_arena != submessage_arena) {
-      prefs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, prefs, submessage_arena);
+      a_prefs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_prefs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.prefs_ = prefs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.prefs)
+  _impl_.a_prefs_ = a_prefs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.a_prefs)
 }
 
-// required .protobuf.mozilla.gfx.D3D11DeviceStatus d3d11 = 2;
-inline bool ContentDeviceData::_internal_has_d3d11() const {
+// required .protobuf.mozilla.gfx.D3D11DeviceStatus a_d3d11 = 2;
+inline bool ContentDeviceData::_internal_has_a_d3d11() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.d3d11_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_d3d11_ != nullptr);
   return value;
 }
-inline bool ContentDeviceData::has_d3d11() const {
-  return _internal_has_d3d11();
+inline bool ContentDeviceData::has_a_d3d11() const {
+  return _internal_has_a_d3d11();
 }
-inline void ContentDeviceData::clear_d3d11() {
-  if (_impl_.d3d11_ != nullptr) _impl_.d3d11_->Clear();
+inline void ContentDeviceData::clear_a_d3d11() {
+  if (_impl_.a_d3d11_ != nullptr) _impl_.a_d3d11_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& ContentDeviceData::_internal_d3d11() const {
-  const ::protobuf::mozilla::gfx::D3D11DeviceStatus* p = _impl_.d3d11_;
+inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& ContentDeviceData::_internal_a_d3d11() const {
+  const ::protobuf::mozilla::gfx::D3D11DeviceStatus* p = _impl_.a_d3d11_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gfx::D3D11DeviceStatus&>(
       ::protobuf::mozilla::gfx::_D3D11DeviceStatus_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& ContentDeviceData::d3d11() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.ContentDeviceData.d3d11)
-  return _internal_d3d11();
+inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& ContentDeviceData::a_d3d11() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.ContentDeviceData.a_d3d11)
+  return _internal_a_d3d11();
 }
-inline void ContentDeviceData::unsafe_arena_set_allocated_d3d11(
-    ::protobuf::mozilla::gfx::D3D11DeviceStatus* d3d11) {
+inline void ContentDeviceData::unsafe_arena_set_allocated_a_d3d11(
+    ::protobuf::mozilla::gfx::D3D11DeviceStatus* a_d3d11) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.d3d11_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_d3d11_);
   }
-  _impl_.d3d11_ = d3d11;
-  if (d3d11) {
+  _impl_.a_d3d11_ = a_d3d11;
+  if (a_d3d11) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.d3d11)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.a_d3d11)
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::release_d3d11() {
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::release_a_d3d11() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.d3d11_;
-  _impl_.d3d11_ = nullptr;
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.a_d3d11_;
+  _impl_.a_d3d11_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2705,344 +2705,344 @@ inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::release_d
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::unsafe_arena_release_d3d11() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.ContentDeviceData.d3d11)
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::unsafe_arena_release_a_d3d11() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.ContentDeviceData.a_d3d11)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.d3d11_;
-  _impl_.d3d11_ = nullptr;
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.a_d3d11_;
+  _impl_.a_d3d11_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::_internal_mutable_d3d11() {
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::_internal_mutable_a_d3d11() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.d3d11_ == nullptr) {
+  if (_impl_.a_d3d11_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::D3D11DeviceStatus>(GetArenaForAllocation());
-    _impl_.d3d11_ = p;
+    _impl_.a_d3d11_ = p;
   }
-  return _impl_.d3d11_;
+  return _impl_.a_d3d11_;
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::mutable_d3d11() {
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _msg = _internal_mutable_d3d11();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.ContentDeviceData.d3d11)
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* ContentDeviceData::mutable_a_d3d11() {
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _msg = _internal_mutable_a_d3d11();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.ContentDeviceData.a_d3d11)
   return _msg;
 }
-inline void ContentDeviceData::set_allocated_d3d11(::protobuf::mozilla::gfx::D3D11DeviceStatus* d3d11) {
+inline void ContentDeviceData::set_allocated_a_d3d11(::protobuf::mozilla::gfx::D3D11DeviceStatus* a_d3d11) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.d3d11_;
+    delete _impl_.a_d3d11_;
   }
-  if (d3d11) {
+  if (a_d3d11) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(d3d11);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_d3d11);
     if (message_arena != submessage_arena) {
-      d3d11 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, d3d11, submessage_arena);
+      a_d3d11 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_d3d11, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.d3d11_ = d3d11;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.d3d11)
+  _impl_.a_d3d11_ = a_d3d11;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.ContentDeviceData.a_d3d11)
 }
 
-// repeated uint32 cmsOutputProfileData = 3;
-inline int ContentDeviceData::_internal_cmsoutputprofiledata_size() const {
-  return _impl_.cmsoutputprofiledata_.size();
+// repeated uint32 a_cmsOutputProfileData = 3;
+inline int ContentDeviceData::_internal_a_cmsoutputprofiledata_size() const {
+  return _impl_.a_cmsoutputprofiledata_.size();
 }
-inline int ContentDeviceData::cmsoutputprofiledata_size() const {
-  return _internal_cmsoutputprofiledata_size();
+inline int ContentDeviceData::a_cmsoutputprofiledata_size() const {
+  return _internal_a_cmsoutputprofiledata_size();
 }
-inline void ContentDeviceData::clear_cmsoutputprofiledata() {
-  _impl_.cmsoutputprofiledata_.Clear();
+inline void ContentDeviceData::clear_a_cmsoutputprofiledata() {
+  _impl_.a_cmsoutputprofiledata_.Clear();
 }
-inline uint32_t ContentDeviceData::_internal_cmsoutputprofiledata(int index) const {
-  return _impl_.cmsoutputprofiledata_.Get(index);
+inline uint32_t ContentDeviceData::_internal_a_cmsoutputprofiledata(int index) const {
+  return _impl_.a_cmsoutputprofiledata_.Get(index);
 }
-inline uint32_t ContentDeviceData::cmsoutputprofiledata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.ContentDeviceData.cmsOutputProfileData)
-  return _internal_cmsoutputprofiledata(index);
+inline uint32_t ContentDeviceData::a_cmsoutputprofiledata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.ContentDeviceData.a_cmsOutputProfileData)
+  return _internal_a_cmsoutputprofiledata(index);
 }
-inline void ContentDeviceData::set_cmsoutputprofiledata(int index, uint32_t value) {
-  _impl_.cmsoutputprofiledata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.ContentDeviceData.cmsOutputProfileData)
+inline void ContentDeviceData::set_a_cmsoutputprofiledata(int index, uint32_t value) {
+  _impl_.a_cmsoutputprofiledata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.ContentDeviceData.a_cmsOutputProfileData)
 }
-inline void ContentDeviceData::_internal_add_cmsoutputprofiledata(uint32_t value) {
-  _impl_.cmsoutputprofiledata_.Add(value);
+inline void ContentDeviceData::_internal_add_a_cmsoutputprofiledata(uint32_t value) {
+  _impl_.a_cmsoutputprofiledata_.Add(value);
 }
-inline void ContentDeviceData::add_cmsoutputprofiledata(uint32_t value) {
-  _internal_add_cmsoutputprofiledata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.ContentDeviceData.cmsOutputProfileData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ContentDeviceData::_internal_cmsoutputprofiledata() const {
-  return _impl_.cmsoutputprofiledata_;
+inline void ContentDeviceData::add_a_cmsoutputprofiledata(uint32_t value) {
+  _internal_add_a_cmsoutputprofiledata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.ContentDeviceData.a_cmsOutputProfileData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ContentDeviceData::cmsoutputprofiledata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.ContentDeviceData.cmsOutputProfileData)
-  return _internal_cmsoutputprofiledata();
+ContentDeviceData::_internal_a_cmsoutputprofiledata() const {
+  return _impl_.a_cmsoutputprofiledata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+ContentDeviceData::a_cmsoutputprofiledata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.ContentDeviceData.a_cmsOutputProfileData)
+  return _internal_a_cmsoutputprofiledata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ContentDeviceData::_internal_mutable_cmsoutputprofiledata() {
-  return &_impl_.cmsoutputprofiledata_;
+ContentDeviceData::_internal_mutable_a_cmsoutputprofiledata() {
+  return &_impl_.a_cmsoutputprofiledata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ContentDeviceData::mutable_cmsoutputprofiledata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.ContentDeviceData.cmsOutputProfileData)
-  return _internal_mutable_cmsoutputprofiledata();
+ContentDeviceData::mutable_a_cmsoutputprofiledata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.ContentDeviceData.a_cmsOutputProfileData)
+  return _internal_mutable_a_cmsoutputprofiledata();
 }
 
 // -------------------------------------------------------------------
 
 // FeatureFailure
 
-// required bytes status = 1;
-inline bool FeatureFailure::_internal_has_status() const {
+// required bytes a_status = 1;
+inline bool FeatureFailure::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FeatureFailure::has_status() const {
-  return _internal_has_status();
+inline bool FeatureFailure::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void FeatureFailure::clear_status() {
-  _impl_.status_.ClearToEmpty();
+inline void FeatureFailure::clear_a_status() {
+  _impl_.a_status_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FeatureFailure::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.FeatureFailure.status)
-  return _internal_status();
+inline const std::string& FeatureFailure::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.FeatureFailure.a_status)
+  return _internal_a_status();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FeatureFailure::set_status(ArgT0&& arg0, ArgT... args) {
+void FeatureFailure::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.status)
+ _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.a_status)
 }
-inline std::string* FeatureFailure::mutable_status() {
-  std::string* _s = _internal_mutable_status();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.FeatureFailure.status)
+inline std::string* FeatureFailure::mutable_a_status() {
+  std::string* _s = _internal_mutable_a_status();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.FeatureFailure.a_status)
   return _s;
 }
-inline const std::string& FeatureFailure::_internal_status() const {
-  return _impl_.status_.Get();
+inline const std::string& FeatureFailure::_internal_a_status() const {
+  return _impl_.a_status_.Get();
 }
-inline void FeatureFailure::_internal_set_status(const std::string& value) {
+inline void FeatureFailure::_internal_set_a_status(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.status_.Set(value, GetArenaForAllocation());
+  _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FeatureFailure::_internal_mutable_status() {
+inline std::string* FeatureFailure::_internal_mutable_a_status() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.status_.Mutable(GetArenaForAllocation());
+  return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FeatureFailure::release_status() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.FeatureFailure.status)
-  if (!_internal_has_status()) {
+inline std::string* FeatureFailure::release_a_status() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.FeatureFailure.a_status)
+  if (!_internal_has_a_status()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.status_.Release();
+  auto* p = _impl_.a_status_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FeatureFailure::set_allocated_status(std::string* status) {
-  if (status != nullptr) {
+inline void FeatureFailure::set_allocated_a_status(std::string* a_status) {
+  if (a_status != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.status_.SetAllocated(status, GetArenaForAllocation());
+  _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.status)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.a_status)
 }
 
-// required bytes message = 2;
-inline bool FeatureFailure::_internal_has_message() const {
+// required bytes a_message = 2;
+inline bool FeatureFailure::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FeatureFailure::has_message() const {
-  return _internal_has_message();
+inline bool FeatureFailure::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void FeatureFailure::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void FeatureFailure::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FeatureFailure::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.FeatureFailure.message)
-  return _internal_message();
+inline const std::string& FeatureFailure::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.FeatureFailure.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FeatureFailure::set_message(ArgT0&& arg0, ArgT... args) {
+void FeatureFailure::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.a_message)
 }
-inline std::string* FeatureFailure::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.FeatureFailure.message)
+inline std::string* FeatureFailure::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.FeatureFailure.a_message)
   return _s;
 }
-inline const std::string& FeatureFailure::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& FeatureFailure::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void FeatureFailure::_internal_set_message(const std::string& value) {
+inline void FeatureFailure::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FeatureFailure::_internal_mutable_message() {
+inline std::string* FeatureFailure::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FeatureFailure::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.FeatureFailure.message)
-  if (!_internal_has_message()) {
+inline std::string* FeatureFailure::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.FeatureFailure.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FeatureFailure::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void FeatureFailure::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.a_message)
 }
 
-// required bytes failureId = 3;
-inline bool FeatureFailure::_internal_has_failureid() const {
+// required bytes a_failureId = 3;
+inline bool FeatureFailure::_internal_has_a_failureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FeatureFailure::has_failureid() const {
-  return _internal_has_failureid();
+inline bool FeatureFailure::has_a_failureid() const {
+  return _internal_has_a_failureid();
 }
-inline void FeatureFailure::clear_failureid() {
-  _impl_.failureid_.ClearToEmpty();
+inline void FeatureFailure::clear_a_failureid() {
+  _impl_.a_failureid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& FeatureFailure::failureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.FeatureFailure.failureId)
-  return _internal_failureid();
+inline const std::string& FeatureFailure::a_failureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.FeatureFailure.a_failureId)
+  return _internal_a_failureid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FeatureFailure::set_failureid(ArgT0&& arg0, ArgT... args) {
+void FeatureFailure::set_a_failureid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.failureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.failureId)
+ _impl_.a_failureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.FeatureFailure.a_failureId)
 }
-inline std::string* FeatureFailure::mutable_failureid() {
-  std::string* _s = _internal_mutable_failureid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.FeatureFailure.failureId)
+inline std::string* FeatureFailure::mutable_a_failureid() {
+  std::string* _s = _internal_mutable_a_failureid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.FeatureFailure.a_failureId)
   return _s;
 }
-inline const std::string& FeatureFailure::_internal_failureid() const {
-  return _impl_.failureid_.Get();
+inline const std::string& FeatureFailure::_internal_a_failureid() const {
+  return _impl_.a_failureid_.Get();
 }
-inline void FeatureFailure::_internal_set_failureid(const std::string& value) {
+inline void FeatureFailure::_internal_set_a_failureid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.failureid_.Set(value, GetArenaForAllocation());
+  _impl_.a_failureid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FeatureFailure::_internal_mutable_failureid() {
+inline std::string* FeatureFailure::_internal_mutable_a_failureid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.failureid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_failureid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FeatureFailure::release_failureid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.FeatureFailure.failureId)
-  if (!_internal_has_failureid()) {
+inline std::string* FeatureFailure::release_a_failureid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.FeatureFailure.a_failureId)
+  if (!_internal_has_a_failureid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.failureid_.Release();
+  auto* p = _impl_.a_failureid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.failureid_.IsDefault()) {
-    _impl_.failureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_failureid_.IsDefault()) {
+    _impl_.a_failureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FeatureFailure::set_allocated_failureid(std::string* failureid) {
-  if (failureid != nullptr) {
+inline void FeatureFailure::set_allocated_a_failureid(std::string* a_failureid) {
+  if (a_failureid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.failureid_.SetAllocated(failureid, GetArenaForAllocation());
+  _impl_.a_failureid_.SetAllocated(a_failureid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.failureid_.IsDefault()) {
-    _impl_.failureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_failureid_.IsDefault()) {
+    _impl_.a_failureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.failureId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.FeatureFailure.a_failureId)
 }
 
 // -------------------------------------------------------------------
 
 // GPUDeviceData
 
-// optional .protobuf.mozilla.gfx.FeatureFailure d3d11Compositing = 1;
-inline bool GPUDeviceData::_internal_has_d3d11compositing() const {
+// optional .protobuf.mozilla.gfx.FeatureFailure a_d3d11Compositing = 1;
+inline bool GPUDeviceData::_internal_has_a_d3d11compositing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.d3d11compositing_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_d3d11compositing_ != nullptr);
   return value;
 }
-inline bool GPUDeviceData::has_d3d11compositing() const {
-  return _internal_has_d3d11compositing();
+inline bool GPUDeviceData::has_a_d3d11compositing() const {
+  return _internal_has_a_d3d11compositing();
 }
-inline void GPUDeviceData::clear_d3d11compositing() {
-  if (_impl_.d3d11compositing_ != nullptr) _impl_.d3d11compositing_->Clear();
+inline void GPUDeviceData::clear_a_d3d11compositing() {
+  if (_impl_.a_d3d11compositing_ != nullptr) _impl_.a_d3d11compositing_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::_internal_d3d11compositing() const {
-  const ::protobuf::mozilla::gfx::FeatureFailure* p = _impl_.d3d11compositing_;
+inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::_internal_a_d3d11compositing() const {
+  const ::protobuf::mozilla::gfx::FeatureFailure* p = _impl_.a_d3d11compositing_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gfx::FeatureFailure&>(
       ::protobuf::mozilla::gfx::_FeatureFailure_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::d3d11compositing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GPUDeviceData.d3d11Compositing)
-  return _internal_d3d11compositing();
+inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::a_d3d11compositing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GPUDeviceData.a_d3d11Compositing)
+  return _internal_a_d3d11compositing();
 }
-inline void GPUDeviceData::unsafe_arena_set_allocated_d3d11compositing(
-    ::protobuf::mozilla::gfx::FeatureFailure* d3d11compositing) {
+inline void GPUDeviceData::unsafe_arena_set_allocated_a_d3d11compositing(
+    ::protobuf::mozilla::gfx::FeatureFailure* a_d3d11compositing) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.d3d11compositing_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_d3d11compositing_);
   }
-  _impl_.d3d11compositing_ = d3d11compositing;
-  if (d3d11compositing) {
+  _impl_.a_d3d11compositing_ = a_d3d11compositing;
+  if (a_d3d11compositing) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.d3d11Compositing)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.a_d3d11Compositing)
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::release_d3d11compositing() {
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::release_a_d3d11compositing() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.d3d11compositing_;
-  _impl_.d3d11compositing_ = nullptr;
+  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.a_d3d11compositing_;
+  _impl_.a_d3d11compositing_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3054,85 +3054,85 @@ inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::release_d3d11com
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::unsafe_arena_release_d3d11compositing() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GPUDeviceData.d3d11Compositing)
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::unsafe_arena_release_a_d3d11compositing() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GPUDeviceData.a_d3d11Compositing)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.d3d11compositing_;
-  _impl_.d3d11compositing_ = nullptr;
+  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.a_d3d11compositing_;
+  _impl_.a_d3d11compositing_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::_internal_mutable_d3d11compositing() {
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::_internal_mutable_a_d3d11compositing() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.d3d11compositing_ == nullptr) {
+  if (_impl_.a_d3d11compositing_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::FeatureFailure>(GetArenaForAllocation());
-    _impl_.d3d11compositing_ = p;
+    _impl_.a_d3d11compositing_ = p;
   }
-  return _impl_.d3d11compositing_;
+  return _impl_.a_d3d11compositing_;
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::mutable_d3d11compositing() {
-  ::protobuf::mozilla::gfx::FeatureFailure* _msg = _internal_mutable_d3d11compositing();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GPUDeviceData.d3d11Compositing)
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::mutable_a_d3d11compositing() {
+  ::protobuf::mozilla::gfx::FeatureFailure* _msg = _internal_mutable_a_d3d11compositing();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GPUDeviceData.a_d3d11Compositing)
   return _msg;
 }
-inline void GPUDeviceData::set_allocated_d3d11compositing(::protobuf::mozilla::gfx::FeatureFailure* d3d11compositing) {
+inline void GPUDeviceData::set_allocated_a_d3d11compositing(::protobuf::mozilla::gfx::FeatureFailure* a_d3d11compositing) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.d3d11compositing_;
+    delete _impl_.a_d3d11compositing_;
   }
-  if (d3d11compositing) {
+  if (a_d3d11compositing) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(d3d11compositing);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_d3d11compositing);
     if (message_arena != submessage_arena) {
-      d3d11compositing = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, d3d11compositing, submessage_arena);
+      a_d3d11compositing = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_d3d11compositing, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.d3d11compositing_ = d3d11compositing;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.d3d11Compositing)
+  _impl_.a_d3d11compositing_ = a_d3d11compositing;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.a_d3d11Compositing)
 }
 
-// optional .protobuf.mozilla.gfx.FeatureFailure oglCompositing = 2;
-inline bool GPUDeviceData::_internal_has_oglcompositing() const {
+// optional .protobuf.mozilla.gfx.FeatureFailure a_oglCompositing = 2;
+inline bool GPUDeviceData::_internal_has_a_oglcompositing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.oglcompositing_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_oglcompositing_ != nullptr);
   return value;
 }
-inline bool GPUDeviceData::has_oglcompositing() const {
-  return _internal_has_oglcompositing();
+inline bool GPUDeviceData::has_a_oglcompositing() const {
+  return _internal_has_a_oglcompositing();
 }
-inline void GPUDeviceData::clear_oglcompositing() {
-  if (_impl_.oglcompositing_ != nullptr) _impl_.oglcompositing_->Clear();
+inline void GPUDeviceData::clear_a_oglcompositing() {
+  if (_impl_.a_oglcompositing_ != nullptr) _impl_.a_oglcompositing_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::_internal_oglcompositing() const {
-  const ::protobuf::mozilla::gfx::FeatureFailure* p = _impl_.oglcompositing_;
+inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::_internal_a_oglcompositing() const {
+  const ::protobuf::mozilla::gfx::FeatureFailure* p = _impl_.a_oglcompositing_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gfx::FeatureFailure&>(
       ::protobuf::mozilla::gfx::_FeatureFailure_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::oglcompositing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GPUDeviceData.oglCompositing)
-  return _internal_oglcompositing();
+inline const ::protobuf::mozilla::gfx::FeatureFailure& GPUDeviceData::a_oglcompositing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GPUDeviceData.a_oglCompositing)
+  return _internal_a_oglcompositing();
 }
-inline void GPUDeviceData::unsafe_arena_set_allocated_oglcompositing(
-    ::protobuf::mozilla::gfx::FeatureFailure* oglcompositing) {
+inline void GPUDeviceData::unsafe_arena_set_allocated_a_oglcompositing(
+    ::protobuf::mozilla::gfx::FeatureFailure* a_oglcompositing) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.oglcompositing_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_oglcompositing_);
   }
-  _impl_.oglcompositing_ = oglcompositing;
-  if (oglcompositing) {
+  _impl_.a_oglcompositing_ = a_oglcompositing;
+  if (a_oglcompositing) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.oglCompositing)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.a_oglCompositing)
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::release_oglcompositing() {
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::release_a_oglcompositing() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.oglcompositing_;
-  _impl_.oglcompositing_ = nullptr;
+  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.a_oglcompositing_;
+  _impl_.a_oglcompositing_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3144,85 +3144,85 @@ inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::release_oglcompo
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::unsafe_arena_release_oglcompositing() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GPUDeviceData.oglCompositing)
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::unsafe_arena_release_a_oglcompositing() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GPUDeviceData.a_oglCompositing)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.oglcompositing_;
-  _impl_.oglcompositing_ = nullptr;
+  ::protobuf::mozilla::gfx::FeatureFailure* temp = _impl_.a_oglcompositing_;
+  _impl_.a_oglcompositing_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::_internal_mutable_oglcompositing() {
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::_internal_mutable_a_oglcompositing() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.oglcompositing_ == nullptr) {
+  if (_impl_.a_oglcompositing_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::FeatureFailure>(GetArenaForAllocation());
-    _impl_.oglcompositing_ = p;
+    _impl_.a_oglcompositing_ = p;
   }
-  return _impl_.oglcompositing_;
+  return _impl_.a_oglcompositing_;
 }
-inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::mutable_oglcompositing() {
-  ::protobuf::mozilla::gfx::FeatureFailure* _msg = _internal_mutable_oglcompositing();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GPUDeviceData.oglCompositing)
+inline ::protobuf::mozilla::gfx::FeatureFailure* GPUDeviceData::mutable_a_oglcompositing() {
+  ::protobuf::mozilla::gfx::FeatureFailure* _msg = _internal_mutable_a_oglcompositing();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GPUDeviceData.a_oglCompositing)
   return _msg;
 }
-inline void GPUDeviceData::set_allocated_oglcompositing(::protobuf::mozilla::gfx::FeatureFailure* oglcompositing) {
+inline void GPUDeviceData::set_allocated_a_oglcompositing(::protobuf::mozilla::gfx::FeatureFailure* a_oglcompositing) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.oglcompositing_;
+    delete _impl_.a_oglcompositing_;
   }
-  if (oglcompositing) {
+  if (a_oglcompositing) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(oglcompositing);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_oglcompositing);
     if (message_arena != submessage_arena) {
-      oglcompositing = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, oglcompositing, submessage_arena);
+      a_oglcompositing = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_oglcompositing, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.oglcompositing_ = oglcompositing;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.oglCompositing)
+  _impl_.a_oglcompositing_ = a_oglcompositing;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.a_oglCompositing)
 }
 
-// optional .protobuf.mozilla.gfx.D3D11DeviceStatus gpuDevice = 3;
-inline bool GPUDeviceData::_internal_has_gpudevice() const {
+// optional .protobuf.mozilla.gfx.D3D11DeviceStatus a_gpuDevice = 3;
+inline bool GPUDeviceData::_internal_has_a_gpudevice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.gpudevice_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_gpudevice_ != nullptr);
   return value;
 }
-inline bool GPUDeviceData::has_gpudevice() const {
-  return _internal_has_gpudevice();
+inline bool GPUDeviceData::has_a_gpudevice() const {
+  return _internal_has_a_gpudevice();
 }
-inline void GPUDeviceData::clear_gpudevice() {
-  if (_impl_.gpudevice_ != nullptr) _impl_.gpudevice_->Clear();
+inline void GPUDeviceData::clear_a_gpudevice() {
+  if (_impl_.a_gpudevice_ != nullptr) _impl_.a_gpudevice_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& GPUDeviceData::_internal_gpudevice() const {
-  const ::protobuf::mozilla::gfx::D3D11DeviceStatus* p = _impl_.gpudevice_;
+inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& GPUDeviceData::_internal_a_gpudevice() const {
+  const ::protobuf::mozilla::gfx::D3D11DeviceStatus* p = _impl_.a_gpudevice_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gfx::D3D11DeviceStatus&>(
       ::protobuf::mozilla::gfx::_D3D11DeviceStatus_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& GPUDeviceData::gpudevice() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GPUDeviceData.gpuDevice)
-  return _internal_gpudevice();
+inline const ::protobuf::mozilla::gfx::D3D11DeviceStatus& GPUDeviceData::a_gpudevice() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GPUDeviceData.a_gpuDevice)
+  return _internal_a_gpudevice();
 }
-inline void GPUDeviceData::unsafe_arena_set_allocated_gpudevice(
-    ::protobuf::mozilla::gfx::D3D11DeviceStatus* gpudevice) {
+inline void GPUDeviceData::unsafe_arena_set_allocated_a_gpudevice(
+    ::protobuf::mozilla::gfx::D3D11DeviceStatus* a_gpudevice) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.gpudevice_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_gpudevice_);
   }
-  _impl_.gpudevice_ = gpudevice;
-  if (gpudevice) {
+  _impl_.a_gpudevice_ = a_gpudevice;
+  if (a_gpudevice) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.gpuDevice)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.a_gpuDevice)
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::release_gpudevice() {
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::release_a_gpudevice() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.gpudevice_;
-  _impl_.gpudevice_ = nullptr;
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.a_gpudevice_;
+  _impl_.a_gpudevice_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3234,636 +3234,636 @@ inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::release_gpude
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::unsafe_arena_release_gpudevice() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GPUDeviceData.gpuDevice)
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::unsafe_arena_release_a_gpudevice() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GPUDeviceData.a_gpuDevice)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.gpudevice_;
-  _impl_.gpudevice_ = nullptr;
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* temp = _impl_.a_gpudevice_;
+  _impl_.a_gpudevice_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::_internal_mutable_gpudevice() {
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::_internal_mutable_a_gpudevice() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.gpudevice_ == nullptr) {
+  if (_impl_.a_gpudevice_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::D3D11DeviceStatus>(GetArenaForAllocation());
-    _impl_.gpudevice_ = p;
+    _impl_.a_gpudevice_ = p;
   }
-  return _impl_.gpudevice_;
+  return _impl_.a_gpudevice_;
 }
-inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::mutable_gpudevice() {
-  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _msg = _internal_mutable_gpudevice();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GPUDeviceData.gpuDevice)
+inline ::protobuf::mozilla::gfx::D3D11DeviceStatus* GPUDeviceData::mutable_a_gpudevice() {
+  ::protobuf::mozilla::gfx::D3D11DeviceStatus* _msg = _internal_mutable_a_gpudevice();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GPUDeviceData.a_gpuDevice)
   return _msg;
 }
-inline void GPUDeviceData::set_allocated_gpudevice(::protobuf::mozilla::gfx::D3D11DeviceStatus* gpudevice) {
+inline void GPUDeviceData::set_allocated_a_gpudevice(::protobuf::mozilla::gfx::D3D11DeviceStatus* a_gpudevice) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.gpudevice_;
+    delete _impl_.a_gpudevice_;
   }
-  if (gpudevice) {
+  if (a_gpudevice) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(gpudevice);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_gpudevice);
     if (message_arena != submessage_arena) {
-      gpudevice = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, gpudevice, submessage_arena);
+      a_gpudevice = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_gpudevice, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.gpudevice_ = gpudevice;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.gpuDevice)
+  _impl_.a_gpudevice_ = a_gpudevice;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GPUDeviceData.a_gpuDevice)
 }
 
 // -------------------------------------------------------------------
 
 // GfxVarValue__mVArrayOfuint64_t
 
-// repeated uint64 mVArrayOfuint64_t = 1;
-inline int GfxVarValue__mVArrayOfuint64_t::_internal_mvarrayofuint64_t_size() const {
-  return _impl_.mvarrayofuint64_t_.size();
+// repeated uint64 a_mVArrayOfuint64_t = 1;
+inline int GfxVarValue__mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t_size() const {
+  return _impl_.a_mvarrayofuint64_t_.size();
 }
-inline int GfxVarValue__mVArrayOfuint64_t::mvarrayofuint64_t_size() const {
-  return _internal_mvarrayofuint64_t_size();
+inline int GfxVarValue__mVArrayOfuint64_t::a_mvarrayofuint64_t_size() const {
+  return _internal_a_mvarrayofuint64_t_size();
 }
-inline void GfxVarValue__mVArrayOfuint64_t::clear_mvarrayofuint64_t() {
-  _impl_.mvarrayofuint64_t_.Clear();
+inline void GfxVarValue__mVArrayOfuint64_t::clear_a_mvarrayofuint64_t() {
+  _impl_.a_mvarrayofuint64_t_.Clear();
 }
-inline uint64_t GfxVarValue__mVArrayOfuint64_t::_internal_mvarrayofuint64_t(int index) const {
-  return _impl_.mvarrayofuint64_t_.Get(index);
+inline uint64_t GfxVarValue__mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t(int index) const {
+  return _impl_.a_mvarrayofuint64_t_.Get(index);
 }
-inline uint64_t GfxVarValue__mVArrayOfuint64_t::mvarrayofuint64_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.mVArrayOfuint64_t)
-  return _internal_mvarrayofuint64_t(index);
+inline uint64_t GfxVarValue__mVArrayOfuint64_t::a_mvarrayofuint64_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+  return _internal_a_mvarrayofuint64_t(index);
 }
-inline void GfxVarValue__mVArrayOfuint64_t::set_mvarrayofuint64_t(int index, uint64_t value) {
-  _impl_.mvarrayofuint64_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.mVArrayOfuint64_t)
+inline void GfxVarValue__mVArrayOfuint64_t::set_a_mvarrayofuint64_t(int index, uint64_t value) {
+  _impl_.a_mvarrayofuint64_t_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
 }
-inline void GfxVarValue__mVArrayOfuint64_t::_internal_add_mvarrayofuint64_t(uint64_t value) {
-  _impl_.mvarrayofuint64_t_.Add(value);
+inline void GfxVarValue__mVArrayOfuint64_t::_internal_add_a_mvarrayofuint64_t(uint64_t value) {
+  _impl_.a_mvarrayofuint64_t_.Add(value);
 }
-inline void GfxVarValue__mVArrayOfuint64_t::add_mvarrayofuint64_t(uint64_t value) {
-  _internal_add_mvarrayofuint64_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.mVArrayOfuint64_t)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-GfxVarValue__mVArrayOfuint64_t::_internal_mvarrayofuint64_t() const {
-  return _impl_.mvarrayofuint64_t_;
+inline void GfxVarValue__mVArrayOfuint64_t::add_a_mvarrayofuint64_t(uint64_t value) {
+  _internal_add_a_mvarrayofuint64_t(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-GfxVarValue__mVArrayOfuint64_t::mvarrayofuint64_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.mVArrayOfuint64_t)
-  return _internal_mvarrayofuint64_t();
+GfxVarValue__mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t() const {
+  return _impl_.a_mvarrayofuint64_t_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+GfxVarValue__mVArrayOfuint64_t::a_mvarrayofuint64_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+  return _internal_a_mvarrayofuint64_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-GfxVarValue__mVArrayOfuint64_t::_internal_mutable_mvarrayofuint64_t() {
-  return &_impl_.mvarrayofuint64_t_;
+GfxVarValue__mVArrayOfuint64_t::_internal_mutable_a_mvarrayofuint64_t() {
+  return &_impl_.a_mvarrayofuint64_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-GfxVarValue__mVArrayOfuint64_t::mutable_mvarrayofuint64_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.mVArrayOfuint64_t)
-  return _internal_mutable_mvarrayofuint64_t();
+GfxVarValue__mVArrayOfuint64_t::mutable_a_mvarrayofuint64_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+  return _internal_mutable_a_mvarrayofuint64_t();
 }
 
 // -------------------------------------------------------------------
 
 // GfxVarValue
 
-// bytes mVBackendType = 1;
-inline bool GfxVarValue::_internal_has_mvbackendtype() const {
-  return content_case() == kMVBackendType;
+// bytes a_mVBackendType = 1;
+inline bool GfxVarValue::_internal_has_a_mvbackendtype() const {
+  return content_case() == kAMVBackendType;
 }
-inline bool GfxVarValue::has_mvbackendtype() const {
-  return _internal_has_mvbackendtype();
+inline bool GfxVarValue::has_a_mvbackendtype() const {
+  return _internal_has_a_mvbackendtype();
 }
-inline void GfxVarValue::set_has_mvbackendtype() {
-  _impl_._oneof_case_[0] = kMVBackendType;
+inline void GfxVarValue::set_has_a_mvbackendtype() {
+  _impl_._oneof_case_[0] = kAMVBackendType;
 }
-inline void GfxVarValue::clear_mvbackendtype() {
-  if (_internal_has_mvbackendtype()) {
-    _impl_.content_.mvbackendtype_.Destroy();
+inline void GfxVarValue::clear_a_mvbackendtype() {
+  if (_internal_has_a_mvbackendtype()) {
+    _impl_.content_.a_mvbackendtype_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& GfxVarValue::mvbackendtype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVBackendType)
-  return _internal_mvbackendtype();
+inline const std::string& GfxVarValue::a_mvbackendtype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVBackendType)
+  return _internal_a_mvbackendtype();
 }
 template <typename ArgT0, typename... ArgT>
-inline void GfxVarValue::set_mvbackendtype(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvbackendtype()) {
+inline void GfxVarValue::set_a_mvbackendtype(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvbackendtype()) {
     clear_content();
-    set_has_mvbackendtype();
-    _impl_.content_.mvbackendtype_.InitDefault();
+    set_has_a_mvbackendtype();
+    _impl_.content_.a_mvbackendtype_.InitDefault();
   }
-  _impl_.content_.mvbackendtype_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVBackendType)
+  _impl_.content_.a_mvbackendtype_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVBackendType)
 }
-inline std::string* GfxVarValue::mutable_mvbackendtype() {
-  std::string* _s = _internal_mutable_mvbackendtype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.mVBackendType)
+inline std::string* GfxVarValue::mutable_a_mvbackendtype() {
+  std::string* _s = _internal_mutable_a_mvbackendtype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.a_mVBackendType)
   return _s;
 }
-inline const std::string& GfxVarValue::_internal_mvbackendtype() const {
-  if (_internal_has_mvbackendtype()) {
-    return _impl_.content_.mvbackendtype_.Get();
+inline const std::string& GfxVarValue::_internal_a_mvbackendtype() const {
+  if (_internal_has_a_mvbackendtype()) {
+    return _impl_.content_.a_mvbackendtype_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void GfxVarValue::_internal_set_mvbackendtype(const std::string& value) {
-  if (!_internal_has_mvbackendtype()) {
+inline void GfxVarValue::_internal_set_a_mvbackendtype(const std::string& value) {
+  if (!_internal_has_a_mvbackendtype()) {
     clear_content();
-    set_has_mvbackendtype();
-    _impl_.content_.mvbackendtype_.InitDefault();
+    set_has_a_mvbackendtype();
+    _impl_.content_.a_mvbackendtype_.InitDefault();
   }
-  _impl_.content_.mvbackendtype_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvbackendtype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::_internal_mutable_mvbackendtype() {
-  if (!_internal_has_mvbackendtype()) {
+inline std::string* GfxVarValue::_internal_mutable_a_mvbackendtype() {
+  if (!_internal_has_a_mvbackendtype()) {
     clear_content();
-    set_has_mvbackendtype();
-    _impl_.content_.mvbackendtype_.InitDefault();
+    set_has_a_mvbackendtype();
+    _impl_.content_.a_mvbackendtype_.InitDefault();
   }
-  return _impl_.content_.mvbackendtype_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvbackendtype_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::release_mvbackendtype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.mVBackendType)
-  if (_internal_has_mvbackendtype()) {
+inline std::string* GfxVarValue::release_a_mvbackendtype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.a_mVBackendType)
+  if (_internal_has_a_mvbackendtype()) {
     clear_has_content();
-    return _impl_.content_.mvbackendtype_.Release();
+    return _impl_.content_.a_mvbackendtype_.Release();
   } else {
     return nullptr;
   }
 }
-inline void GfxVarValue::set_allocated_mvbackendtype(std::string* mvbackendtype) {
+inline void GfxVarValue::set_allocated_a_mvbackendtype(std::string* a_mvbackendtype) {
   if (has_content()) {
     clear_content();
   }
-  if (mvbackendtype != nullptr) {
-    set_has_mvbackendtype();
-    _impl_.content_.mvbackendtype_.InitAllocated(mvbackendtype, GetArenaForAllocation());
+  if (a_mvbackendtype != nullptr) {
+    set_has_a_mvbackendtype();
+    _impl_.content_.a_mvbackendtype_.InitAllocated(a_mvbackendtype, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVBackendType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.a_mVBackendType)
 }
 
-// bool mVbool = 2;
-inline bool GfxVarValue::_internal_has_mvbool() const {
-  return content_case() == kMVbool;
+// bool a_mVbool = 2;
+inline bool GfxVarValue::_internal_has_a_mvbool() const {
+  return content_case() == kAMVbool;
 }
-inline bool GfxVarValue::has_mvbool() const {
-  return _internal_has_mvbool();
+inline bool GfxVarValue::has_a_mvbool() const {
+  return _internal_has_a_mvbool();
 }
-inline void GfxVarValue::set_has_mvbool() {
-  _impl_._oneof_case_[0] = kMVbool;
+inline void GfxVarValue::set_has_a_mvbool() {
+  _impl_._oneof_case_[0] = kAMVbool;
 }
-inline void GfxVarValue::clear_mvbool() {
-  if (_internal_has_mvbool()) {
-    _impl_.content_.mvbool_ = false;
+inline void GfxVarValue::clear_a_mvbool() {
+  if (_internal_has_a_mvbool()) {
+    _impl_.content_.a_mvbool_ = false;
     clear_has_content();
   }
 }
-inline bool GfxVarValue::_internal_mvbool() const {
-  if (_internal_has_mvbool()) {
-    return _impl_.content_.mvbool_;
+inline bool GfxVarValue::_internal_a_mvbool() const {
+  if (_internal_has_a_mvbool()) {
+    return _impl_.content_.a_mvbool_;
   }
   return false;
 }
-inline void GfxVarValue::_internal_set_mvbool(bool value) {
-  if (!_internal_has_mvbool()) {
+inline void GfxVarValue::_internal_set_a_mvbool(bool value) {
+  if (!_internal_has_a_mvbool()) {
     clear_content();
-    set_has_mvbool();
+    set_has_a_mvbool();
   }
-  _impl_.content_.mvbool_ = value;
+  _impl_.content_.a_mvbool_ = value;
 }
-inline bool GfxVarValue::mvbool() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVbool)
-  return _internal_mvbool();
+inline bool GfxVarValue::a_mvbool() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVbool)
+  return _internal_a_mvbool();
 }
-inline void GfxVarValue::set_mvbool(bool value) {
-  _internal_set_mvbool(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVbool)
+inline void GfxVarValue::set_a_mvbool(bool value) {
+  _internal_set_a_mvbool(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVbool)
 }
 
-// bytes mVgfxImageFormat = 3;
-inline bool GfxVarValue::_internal_has_mvgfximageformat() const {
-  return content_case() == kMVgfxImageFormat;
+// bytes a_mVgfxImageFormat = 3;
+inline bool GfxVarValue::_internal_has_a_mvgfximageformat() const {
+  return content_case() == kAMVgfxImageFormat;
 }
-inline bool GfxVarValue::has_mvgfximageformat() const {
-  return _internal_has_mvgfximageformat();
+inline bool GfxVarValue::has_a_mvgfximageformat() const {
+  return _internal_has_a_mvgfximageformat();
 }
-inline void GfxVarValue::set_has_mvgfximageformat() {
-  _impl_._oneof_case_[0] = kMVgfxImageFormat;
+inline void GfxVarValue::set_has_a_mvgfximageformat() {
+  _impl_._oneof_case_[0] = kAMVgfxImageFormat;
 }
-inline void GfxVarValue::clear_mvgfximageformat() {
-  if (_internal_has_mvgfximageformat()) {
-    _impl_.content_.mvgfximageformat_.Destroy();
+inline void GfxVarValue::clear_a_mvgfximageformat() {
+  if (_internal_has_a_mvgfximageformat()) {
+    _impl_.content_.a_mvgfximageformat_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& GfxVarValue::mvgfximageformat() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVgfxImageFormat)
-  return _internal_mvgfximageformat();
+inline const std::string& GfxVarValue::a_mvgfximageformat() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVgfxImageFormat)
+  return _internal_a_mvgfximageformat();
 }
 template <typename ArgT0, typename... ArgT>
-inline void GfxVarValue::set_mvgfximageformat(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvgfximageformat()) {
+inline void GfxVarValue::set_a_mvgfximageformat(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvgfximageformat()) {
     clear_content();
-    set_has_mvgfximageformat();
-    _impl_.content_.mvgfximageformat_.InitDefault();
+    set_has_a_mvgfximageformat();
+    _impl_.content_.a_mvgfximageformat_.InitDefault();
   }
-  _impl_.content_.mvgfximageformat_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVgfxImageFormat)
+  _impl_.content_.a_mvgfximageformat_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVgfxImageFormat)
 }
-inline std::string* GfxVarValue::mutable_mvgfximageformat() {
-  std::string* _s = _internal_mutable_mvgfximageformat();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.mVgfxImageFormat)
+inline std::string* GfxVarValue::mutable_a_mvgfximageformat() {
+  std::string* _s = _internal_mutable_a_mvgfximageformat();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.a_mVgfxImageFormat)
   return _s;
 }
-inline const std::string& GfxVarValue::_internal_mvgfximageformat() const {
-  if (_internal_has_mvgfximageformat()) {
-    return _impl_.content_.mvgfximageformat_.Get();
+inline const std::string& GfxVarValue::_internal_a_mvgfximageformat() const {
+  if (_internal_has_a_mvgfximageformat()) {
+    return _impl_.content_.a_mvgfximageformat_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void GfxVarValue::_internal_set_mvgfximageformat(const std::string& value) {
-  if (!_internal_has_mvgfximageformat()) {
+inline void GfxVarValue::_internal_set_a_mvgfximageformat(const std::string& value) {
+  if (!_internal_has_a_mvgfximageformat()) {
     clear_content();
-    set_has_mvgfximageformat();
-    _impl_.content_.mvgfximageformat_.InitDefault();
+    set_has_a_mvgfximageformat();
+    _impl_.content_.a_mvgfximageformat_.InitDefault();
   }
-  _impl_.content_.mvgfximageformat_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvgfximageformat_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::_internal_mutable_mvgfximageformat() {
-  if (!_internal_has_mvgfximageformat()) {
+inline std::string* GfxVarValue::_internal_mutable_a_mvgfximageformat() {
+  if (!_internal_has_a_mvgfximageformat()) {
     clear_content();
-    set_has_mvgfximageformat();
-    _impl_.content_.mvgfximageformat_.InitDefault();
+    set_has_a_mvgfximageformat();
+    _impl_.content_.a_mvgfximageformat_.InitDefault();
   }
-  return _impl_.content_.mvgfximageformat_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvgfximageformat_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::release_mvgfximageformat() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.mVgfxImageFormat)
-  if (_internal_has_mvgfximageformat()) {
+inline std::string* GfxVarValue::release_a_mvgfximageformat() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.a_mVgfxImageFormat)
+  if (_internal_has_a_mvgfximageformat()) {
     clear_has_content();
-    return _impl_.content_.mvgfximageformat_.Release();
+    return _impl_.content_.a_mvgfximageformat_.Release();
   } else {
     return nullptr;
   }
 }
-inline void GfxVarValue::set_allocated_mvgfximageformat(std::string* mvgfximageformat) {
+inline void GfxVarValue::set_allocated_a_mvgfximageformat(std::string* a_mvgfximageformat) {
   if (has_content()) {
     clear_content();
   }
-  if (mvgfximageformat != nullptr) {
-    set_has_mvgfximageformat();
-    _impl_.content_.mvgfximageformat_.InitAllocated(mvgfximageformat, GetArenaForAllocation());
+  if (a_mvgfximageformat != nullptr) {
+    set_has_a_mvgfximageformat();
+    _impl_.content_.a_mvgfximageformat_.InitAllocated(a_mvgfximageformat, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVgfxImageFormat)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.a_mVgfxImageFormat)
 }
 
-// bytes mVIntSize = 4;
-inline bool GfxVarValue::_internal_has_mvintsize() const {
-  return content_case() == kMVIntSize;
+// bytes a_mVIntSize = 4;
+inline bool GfxVarValue::_internal_has_a_mvintsize() const {
+  return content_case() == kAMVIntSize;
 }
-inline bool GfxVarValue::has_mvintsize() const {
-  return _internal_has_mvintsize();
+inline bool GfxVarValue::has_a_mvintsize() const {
+  return _internal_has_a_mvintsize();
 }
-inline void GfxVarValue::set_has_mvintsize() {
-  _impl_._oneof_case_[0] = kMVIntSize;
+inline void GfxVarValue::set_has_a_mvintsize() {
+  _impl_._oneof_case_[0] = kAMVIntSize;
 }
-inline void GfxVarValue::clear_mvintsize() {
-  if (_internal_has_mvintsize()) {
-    _impl_.content_.mvintsize_.Destroy();
+inline void GfxVarValue::clear_a_mvintsize() {
+  if (_internal_has_a_mvintsize()) {
+    _impl_.content_.a_mvintsize_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& GfxVarValue::mvintsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVIntSize)
-  return _internal_mvintsize();
+inline const std::string& GfxVarValue::a_mvintsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVIntSize)
+  return _internal_a_mvintsize();
 }
 template <typename ArgT0, typename... ArgT>
-inline void GfxVarValue::set_mvintsize(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvintsize()) {
+inline void GfxVarValue::set_a_mvintsize(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvintsize()) {
     clear_content();
-    set_has_mvintsize();
-    _impl_.content_.mvintsize_.InitDefault();
+    set_has_a_mvintsize();
+    _impl_.content_.a_mvintsize_.InitDefault();
   }
-  _impl_.content_.mvintsize_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVIntSize)
+  _impl_.content_.a_mvintsize_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVIntSize)
 }
-inline std::string* GfxVarValue::mutable_mvintsize() {
-  std::string* _s = _internal_mutable_mvintsize();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.mVIntSize)
+inline std::string* GfxVarValue::mutable_a_mvintsize() {
+  std::string* _s = _internal_mutable_a_mvintsize();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.a_mVIntSize)
   return _s;
 }
-inline const std::string& GfxVarValue::_internal_mvintsize() const {
-  if (_internal_has_mvintsize()) {
-    return _impl_.content_.mvintsize_.Get();
+inline const std::string& GfxVarValue::_internal_a_mvintsize() const {
+  if (_internal_has_a_mvintsize()) {
+    return _impl_.content_.a_mvintsize_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void GfxVarValue::_internal_set_mvintsize(const std::string& value) {
-  if (!_internal_has_mvintsize()) {
+inline void GfxVarValue::_internal_set_a_mvintsize(const std::string& value) {
+  if (!_internal_has_a_mvintsize()) {
     clear_content();
-    set_has_mvintsize();
-    _impl_.content_.mvintsize_.InitDefault();
+    set_has_a_mvintsize();
+    _impl_.content_.a_mvintsize_.InitDefault();
   }
-  _impl_.content_.mvintsize_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvintsize_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::_internal_mutable_mvintsize() {
-  if (!_internal_has_mvintsize()) {
+inline std::string* GfxVarValue::_internal_mutable_a_mvintsize() {
+  if (!_internal_has_a_mvintsize()) {
     clear_content();
-    set_has_mvintsize();
-    _impl_.content_.mvintsize_.InitDefault();
+    set_has_a_mvintsize();
+    _impl_.content_.a_mvintsize_.InitDefault();
   }
-  return _impl_.content_.mvintsize_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvintsize_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::release_mvintsize() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.mVIntSize)
-  if (_internal_has_mvintsize()) {
+inline std::string* GfxVarValue::release_a_mvintsize() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.a_mVIntSize)
+  if (_internal_has_a_mvintsize()) {
     clear_has_content();
-    return _impl_.content_.mvintsize_.Release();
+    return _impl_.content_.a_mvintsize_.Release();
   } else {
     return nullptr;
   }
 }
-inline void GfxVarValue::set_allocated_mvintsize(std::string* mvintsize) {
+inline void GfxVarValue::set_allocated_a_mvintsize(std::string* a_mvintsize) {
   if (has_content()) {
     clear_content();
   }
-  if (mvintsize != nullptr) {
-    set_has_mvintsize();
-    _impl_.content_.mvintsize_.InitAllocated(mvintsize, GetArenaForAllocation());
+  if (a_mvintsize != nullptr) {
+    set_has_a_mvintsize();
+    _impl_.content_.a_mvintsize_.InitAllocated(a_mvintsize, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVIntSize)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.a_mVIntSize)
 }
 
-// bytes mVnsCString = 5;
-inline bool GfxVarValue::_internal_has_mvnscstring() const {
-  return content_case() == kMVnsCString;
+// bytes a_mVnsCString = 5;
+inline bool GfxVarValue::_internal_has_a_mvnscstring() const {
+  return content_case() == kAMVnsCString;
 }
-inline bool GfxVarValue::has_mvnscstring() const {
-  return _internal_has_mvnscstring();
+inline bool GfxVarValue::has_a_mvnscstring() const {
+  return _internal_has_a_mvnscstring();
 }
-inline void GfxVarValue::set_has_mvnscstring() {
-  _impl_._oneof_case_[0] = kMVnsCString;
+inline void GfxVarValue::set_has_a_mvnscstring() {
+  _impl_._oneof_case_[0] = kAMVnsCString;
 }
-inline void GfxVarValue::clear_mvnscstring() {
-  if (_internal_has_mvnscstring()) {
-    _impl_.content_.mvnscstring_.Destroy();
+inline void GfxVarValue::clear_a_mvnscstring() {
+  if (_internal_has_a_mvnscstring()) {
+    _impl_.content_.a_mvnscstring_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& GfxVarValue::mvnscstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
-  return _internal_mvnscstring();
+inline const std::string& GfxVarValue::a_mvnscstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVnsCString)
+  return _internal_a_mvnscstring();
 }
 template <typename ArgT0, typename... ArgT>
-inline void GfxVarValue::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnscstring()) {
+inline void GfxVarValue::set_a_mvnscstring(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
+  _impl_.content_.a_mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVnsCString)
 }
-inline std::string* GfxVarValue::mutable_mvnscstring() {
-  std::string* _s = _internal_mutable_mvnscstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
+inline std::string* GfxVarValue::mutable_a_mvnscstring() {
+  std::string* _s = _internal_mutable_a_mvnscstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.a_mVnsCString)
   return _s;
 }
-inline const std::string& GfxVarValue::_internal_mvnscstring() const {
-  if (_internal_has_mvnscstring()) {
-    return _impl_.content_.mvnscstring_.Get();
+inline const std::string& GfxVarValue::_internal_a_mvnscstring() const {
+  if (_internal_has_a_mvnscstring()) {
+    return _impl_.content_.a_mvnscstring_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void GfxVarValue::_internal_set_mvnscstring(const std::string& value) {
-  if (!_internal_has_mvnscstring()) {
+inline void GfxVarValue::_internal_set_a_mvnscstring(const std::string& value) {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnscstring_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::_internal_mutable_mvnscstring() {
-  if (!_internal_has_mvnscstring()) {
+inline std::string* GfxVarValue::_internal_mutable_a_mvnscstring() {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  return _impl_.content_.mvnscstring_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnscstring_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::release_mvnscstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
-  if (_internal_has_mvnscstring()) {
+inline std::string* GfxVarValue::release_a_mvnscstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.a_mVnsCString)
+  if (_internal_has_a_mvnscstring()) {
     clear_has_content();
-    return _impl_.content_.mvnscstring_.Release();
+    return _impl_.content_.a_mvnscstring_.Release();
   } else {
     return nullptr;
   }
 }
-inline void GfxVarValue::set_allocated_mvnscstring(std::string* mvnscstring) {
+inline void GfxVarValue::set_allocated_a_mvnscstring(std::string* a_mvnscstring) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnscstring != nullptr) {
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitAllocated(mvnscstring, GetArenaForAllocation());
+  if (a_mvnscstring != nullptr) {
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitAllocated(a_mvnscstring, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVnsCString)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.a_mVnsCString)
 }
 
-// bytes mVnsString = 6;
-inline bool GfxVarValue::_internal_has_mvnsstring() const {
-  return content_case() == kMVnsString;
+// bytes a_mVnsString = 6;
+inline bool GfxVarValue::_internal_has_a_mvnsstring() const {
+  return content_case() == kAMVnsString;
 }
-inline bool GfxVarValue::has_mvnsstring() const {
-  return _internal_has_mvnsstring();
+inline bool GfxVarValue::has_a_mvnsstring() const {
+  return _internal_has_a_mvnsstring();
 }
-inline void GfxVarValue::set_has_mvnsstring() {
-  _impl_._oneof_case_[0] = kMVnsString;
+inline void GfxVarValue::set_has_a_mvnsstring() {
+  _impl_._oneof_case_[0] = kAMVnsString;
 }
-inline void GfxVarValue::clear_mvnsstring() {
-  if (_internal_has_mvnsstring()) {
-    _impl_.content_.mvnsstring_.Destroy();
+inline void GfxVarValue::clear_a_mvnsstring() {
+  if (_internal_has_a_mvnsstring()) {
+    _impl_.content_.a_mvnsstring_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& GfxVarValue::mvnsstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
-  return _internal_mvnsstring();
+inline const std::string& GfxVarValue::a_mvnsstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVnsString)
+  return _internal_a_mvnsstring();
 }
 template <typename ArgT0, typename... ArgT>
-inline void GfxVarValue::set_mvnsstring(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsstring()) {
+inline void GfxVarValue::set_a_mvnsstring(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsstring()) {
     clear_content();
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitDefault();
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
+  _impl_.content_.a_mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVnsString)
 }
-inline std::string* GfxVarValue::mutable_mvnsstring() {
-  std::string* _s = _internal_mutable_mvnsstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
+inline std::string* GfxVarValue::mutable_a_mvnsstring() {
+  std::string* _s = _internal_mutable_a_mvnsstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.a_mVnsString)
   return _s;
 }
-inline const std::string& GfxVarValue::_internal_mvnsstring() const {
-  if (_internal_has_mvnsstring()) {
-    return _impl_.content_.mvnsstring_.Get();
+inline const std::string& GfxVarValue::_internal_a_mvnsstring() const {
+  if (_internal_has_a_mvnsstring()) {
+    return _impl_.content_.a_mvnsstring_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void GfxVarValue::_internal_set_mvnsstring(const std::string& value) {
-  if (!_internal_has_mvnsstring()) {
+inline void GfxVarValue::_internal_set_a_mvnsstring(const std::string& value) {
+  if (!_internal_has_a_mvnsstring()) {
     clear_content();
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitDefault();
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsstring_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::_internal_mutable_mvnsstring() {
-  if (!_internal_has_mvnsstring()) {
+inline std::string* GfxVarValue::_internal_mutable_a_mvnsstring() {
+  if (!_internal_has_a_mvnsstring()) {
     clear_content();
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitDefault();
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  return _impl_.content_.mvnsstring_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsstring_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* GfxVarValue::release_mvnsstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
-  if (_internal_has_mvnsstring()) {
+inline std::string* GfxVarValue::release_a_mvnsstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.a_mVnsString)
+  if (_internal_has_a_mvnsstring()) {
     clear_has_content();
-    return _impl_.content_.mvnsstring_.Release();
+    return _impl_.content_.a_mvnsstring_.Release();
   } else {
     return nullptr;
   }
 }
-inline void GfxVarValue::set_allocated_mvnsstring(std::string* mvnsstring) {
+inline void GfxVarValue::set_allocated_a_mvnsstring(std::string* a_mvnsstring) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsstring != nullptr) {
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitAllocated(mvnsstring, GetArenaForAllocation());
+  if (a_mvnsstring != nullptr) {
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitAllocated(a_mvnsstring, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVnsString)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarValue.a_mVnsString)
 }
 
-// sint32 mVint32_t = 7;
-inline bool GfxVarValue::_internal_has_mvint32_t() const {
-  return content_case() == kMVint32T;
+// sint32 a_mVint32_t = 7;
+inline bool GfxVarValue::_internal_has_a_mvint32_t() const {
+  return content_case() == kAMVint32T;
 }
-inline bool GfxVarValue::has_mvint32_t() const {
-  return _internal_has_mvint32_t();
+inline bool GfxVarValue::has_a_mvint32_t() const {
+  return _internal_has_a_mvint32_t();
 }
-inline void GfxVarValue::set_has_mvint32_t() {
-  _impl_._oneof_case_[0] = kMVint32T;
+inline void GfxVarValue::set_has_a_mvint32_t() {
+  _impl_._oneof_case_[0] = kAMVint32T;
 }
-inline void GfxVarValue::clear_mvint32_t() {
-  if (_internal_has_mvint32_t()) {
-    _impl_.content_.mvint32_t_ = 0;
+inline void GfxVarValue::clear_a_mvint32_t() {
+  if (_internal_has_a_mvint32_t()) {
+    _impl_.content_.a_mvint32_t_ = 0;
     clear_has_content();
   }
 }
-inline int32_t GfxVarValue::_internal_mvint32_t() const {
-  if (_internal_has_mvint32_t()) {
-    return _impl_.content_.mvint32_t_;
+inline int32_t GfxVarValue::_internal_a_mvint32_t() const {
+  if (_internal_has_a_mvint32_t()) {
+    return _impl_.content_.a_mvint32_t_;
   }
   return 0;
 }
-inline void GfxVarValue::_internal_set_mvint32_t(int32_t value) {
-  if (!_internal_has_mvint32_t()) {
+inline void GfxVarValue::_internal_set_a_mvint32_t(int32_t value) {
+  if (!_internal_has_a_mvint32_t()) {
     clear_content();
-    set_has_mvint32_t();
+    set_has_a_mvint32_t();
   }
-  _impl_.content_.mvint32_t_ = value;
+  _impl_.content_.a_mvint32_t_ = value;
 }
-inline int32_t GfxVarValue::mvint32_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVint32_t)
-  return _internal_mvint32_t();
+inline int32_t GfxVarValue::a_mvint32_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVint32_t)
+  return _internal_a_mvint32_t();
 }
-inline void GfxVarValue::set_mvint32_t(int32_t value) {
-  _internal_set_mvint32_t(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVint32_t)
+inline void GfxVarValue::set_a_mvint32_t(int32_t value) {
+  _internal_set_a_mvint32_t(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVint32_t)
 }
 
-// uint64 mVuint64_t = 8;
-inline bool GfxVarValue::_internal_has_mvuint64_t() const {
-  return content_case() == kMVuint64T;
+// uint64 a_mVuint64_t = 8;
+inline bool GfxVarValue::_internal_has_a_mvuint64_t() const {
+  return content_case() == kAMVuint64T;
 }
-inline bool GfxVarValue::has_mvuint64_t() const {
-  return _internal_has_mvuint64_t();
+inline bool GfxVarValue::has_a_mvuint64_t() const {
+  return _internal_has_a_mvuint64_t();
 }
-inline void GfxVarValue::set_has_mvuint64_t() {
-  _impl_._oneof_case_[0] = kMVuint64T;
+inline void GfxVarValue::set_has_a_mvuint64_t() {
+  _impl_._oneof_case_[0] = kAMVuint64T;
 }
-inline void GfxVarValue::clear_mvuint64_t() {
-  if (_internal_has_mvuint64_t()) {
-    _impl_.content_.mvuint64_t_ = uint64_t{0u};
+inline void GfxVarValue::clear_a_mvuint64_t() {
+  if (_internal_has_a_mvuint64_t()) {
+    _impl_.content_.a_mvuint64_t_ = uint64_t{0u};
     clear_has_content();
   }
 }
-inline uint64_t GfxVarValue::_internal_mvuint64_t() const {
-  if (_internal_has_mvuint64_t()) {
-    return _impl_.content_.mvuint64_t_;
+inline uint64_t GfxVarValue::_internal_a_mvuint64_t() const {
+  if (_internal_has_a_mvuint64_t()) {
+    return _impl_.content_.a_mvuint64_t_;
   }
   return uint64_t{0u};
 }
-inline void GfxVarValue::_internal_set_mvuint64_t(uint64_t value) {
-  if (!_internal_has_mvuint64_t()) {
+inline void GfxVarValue::_internal_set_a_mvuint64_t(uint64_t value) {
+  if (!_internal_has_a_mvuint64_t()) {
     clear_content();
-    set_has_mvuint64_t();
+    set_has_a_mvuint64_t();
   }
-  _impl_.content_.mvuint64_t_ = value;
+  _impl_.content_.a_mvuint64_t_ = value;
 }
-inline uint64_t GfxVarValue::mvuint64_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVuint64_t)
-  return _internal_mvuint64_t();
+inline uint64_t GfxVarValue::a_mvuint64_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVuint64_t)
+  return _internal_a_mvuint64_t();
 }
-inline void GfxVarValue::set_mvuint64_t(uint64_t value) {
-  _internal_set_mvuint64_t(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVuint64_t)
+inline void GfxVarValue::set_a_mvuint64_t(uint64_t value) {
+  _internal_set_a_mvuint64_t(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVuint64_t)
 }
 
-// float mVfloat = 9;
-inline bool GfxVarValue::_internal_has_mvfloat() const {
-  return content_case() == kMVfloat;
+// float a_mVfloat = 9;
+inline bool GfxVarValue::_internal_has_a_mvfloat() const {
+  return content_case() == kAMVfloat;
 }
-inline bool GfxVarValue::has_mvfloat() const {
-  return _internal_has_mvfloat();
+inline bool GfxVarValue::has_a_mvfloat() const {
+  return _internal_has_a_mvfloat();
 }
-inline void GfxVarValue::set_has_mvfloat() {
-  _impl_._oneof_case_[0] = kMVfloat;
+inline void GfxVarValue::set_has_a_mvfloat() {
+  _impl_._oneof_case_[0] = kAMVfloat;
 }
-inline void GfxVarValue::clear_mvfloat() {
-  if (_internal_has_mvfloat()) {
-    _impl_.content_.mvfloat_ = 0;
+inline void GfxVarValue::clear_a_mvfloat() {
+  if (_internal_has_a_mvfloat()) {
+    _impl_.content_.a_mvfloat_ = 0;
     clear_has_content();
   }
 }
-inline float GfxVarValue::_internal_mvfloat() const {
-  if (_internal_has_mvfloat()) {
-    return _impl_.content_.mvfloat_;
+inline float GfxVarValue::_internal_a_mvfloat() const {
+  if (_internal_has_a_mvfloat()) {
+    return _impl_.content_.a_mvfloat_;
   }
   return 0;
 }
-inline void GfxVarValue::_internal_set_mvfloat(float value) {
-  if (!_internal_has_mvfloat()) {
+inline void GfxVarValue::_internal_set_a_mvfloat(float value) {
+  if (!_internal_has_a_mvfloat()) {
     clear_content();
-    set_has_mvfloat();
+    set_has_a_mvfloat();
   }
-  _impl_.content_.mvfloat_ = value;
+  _impl_.content_.a_mvfloat_ = value;
 }
-inline float GfxVarValue::mvfloat() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVfloat)
-  return _internal_mvfloat();
+inline float GfxVarValue::a_mvfloat() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVfloat)
+  return _internal_a_mvfloat();
 }
-inline void GfxVarValue::set_mvfloat(float value) {
-  _internal_set_mvfloat(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.mVfloat)
+inline void GfxVarValue::set_a_mvfloat(float value) {
+  _internal_set_a_mvfloat(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVfloat)
 }
 
 // .protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t mVArrayOfuint64_t = 10;
@@ -3953,73 +3953,73 @@ inline GfxVarValue::ContentCase GfxVarValue::content_case() const {
 
 // GfxVarUpdate
 
-// required uint32 index = 1;
-inline bool GfxVarUpdate::_internal_has_index() const {
+// required uint32 a_index = 1;
+inline bool GfxVarUpdate::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool GfxVarUpdate::has_index() const {
-  return _internal_has_index();
+inline bool GfxVarUpdate::has_a_index() const {
+  return _internal_has_a_index();
 }
-inline void GfxVarUpdate::clear_index() {
-  _impl_.index_ = 0u;
+inline void GfxVarUpdate::clear_a_index() {
+  _impl_.a_index_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t GfxVarUpdate::_internal_index() const {
-  return _impl_.index_;
+inline uint32_t GfxVarUpdate::_internal_a_index() const {
+  return _impl_.a_index_;
 }
-inline uint32_t GfxVarUpdate::index() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarUpdate.index)
-  return _internal_index();
+inline uint32_t GfxVarUpdate::a_index() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarUpdate.a_index)
+  return _internal_a_index();
 }
-inline void GfxVarUpdate::_internal_set_index(uint32_t value) {
+inline void GfxVarUpdate::_internal_set_a_index(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.index_ = value;
+  _impl_.a_index_ = value;
 }
-inline void GfxVarUpdate::set_index(uint32_t value) {
-  _internal_set_index(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarUpdate.index)
+inline void GfxVarUpdate::set_a_index(uint32_t value) {
+  _internal_set_a_index(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarUpdate.a_index)
 }
 
-// required .protobuf.mozilla.gfx.GfxVarValue value = 2;
-inline bool GfxVarUpdate::_internal_has_value() const {
+// required .protobuf.mozilla.gfx.GfxVarValue a_value = 2;
+inline bool GfxVarUpdate::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.value_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
   return value;
 }
-inline bool GfxVarUpdate::has_value() const {
-  return _internal_has_value();
+inline bool GfxVarUpdate::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void GfxVarUpdate::clear_value() {
-  if (_impl_.value_ != nullptr) _impl_.value_->Clear();
+inline void GfxVarUpdate::clear_a_value() {
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::gfx::GfxVarValue& GfxVarUpdate::_internal_value() const {
-  const ::protobuf::mozilla::gfx::GfxVarValue* p = _impl_.value_;
+inline const ::protobuf::mozilla::gfx::GfxVarValue& GfxVarUpdate::_internal_a_value() const {
+  const ::protobuf::mozilla::gfx::GfxVarValue* p = _impl_.a_value_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gfx::GfxVarValue&>(
       ::protobuf::mozilla::gfx::_GfxVarValue_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::GfxVarValue& GfxVarUpdate::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarUpdate.value)
-  return _internal_value();
+inline const ::protobuf::mozilla::gfx::GfxVarValue& GfxVarUpdate::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarUpdate.a_value)
+  return _internal_a_value();
 }
-inline void GfxVarUpdate::unsafe_arena_set_allocated_value(
-    ::protobuf::mozilla::gfx::GfxVarValue* value) {
+inline void GfxVarUpdate::unsafe_arena_set_allocated_a_value(
+    ::protobuf::mozilla::gfx::GfxVarValue* a_value) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.value_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_value_);
   }
-  _impl_.value_ = value;
-  if (value) {
+  _impl_.a_value_ = a_value;
+  if (a_value) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GfxVarUpdate.value)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GfxVarUpdate.a_value)
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::release_value() {
+inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::release_a_value() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gfx::GfxVarValue* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::gfx::GfxVarValue* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4031,172 +4031,172 @@ inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::release_value() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::unsafe_arena_release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarUpdate.value)
+inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::unsafe_arena_release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarUpdate.a_value)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gfx::GfxVarValue* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::gfx::GfxVarValue* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::_internal_mutable_value() {
+inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.value_ == nullptr) {
+  if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gfx::GfxVarValue>(GetArenaForAllocation());
-    _impl_.value_ = p;
+    _impl_.a_value_ = p;
   }
-  return _impl_.value_;
+  return _impl_.a_value_;
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::mutable_value() {
-  ::protobuf::mozilla::gfx::GfxVarValue* _msg = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarUpdate.value)
+inline ::protobuf::mozilla::gfx::GfxVarValue* GfxVarUpdate::mutable_a_value() {
+  ::protobuf::mozilla::gfx::GfxVarValue* _msg = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarUpdate.a_value)
   return _msg;
 }
-inline void GfxVarUpdate::set_allocated_value(::protobuf::mozilla::gfx::GfxVarValue* value) {
+inline void GfxVarUpdate::set_allocated_a_value(::protobuf::mozilla::gfx::GfxVarValue* a_value) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.value_;
+    delete _impl_.a_value_;
   }
-  if (value) {
+  if (a_value) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(value);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_value);
     if (message_arena != submessage_arena) {
-      value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, value, submessage_arena);
+      a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_value, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.value_ = value;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarUpdate.value)
+  _impl_.a_value_ = a_value;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxVarUpdate.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // GfxInfoFeatureStatus
 
-// required sint32 feature = 1;
-inline bool GfxInfoFeatureStatus::_internal_has_feature() const {
+// required sint32 a_feature = 1;
+inline bool GfxInfoFeatureStatus::_internal_has_a_feature() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool GfxInfoFeatureStatus::has_feature() const {
-  return _internal_has_feature();
+inline bool GfxInfoFeatureStatus::has_a_feature() const {
+  return _internal_has_a_feature();
 }
-inline void GfxInfoFeatureStatus::clear_feature() {
-  _impl_.feature_ = 0;
+inline void GfxInfoFeatureStatus::clear_a_feature() {
+  _impl_.a_feature_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t GfxInfoFeatureStatus::_internal_feature() const {
-  return _impl_.feature_;
+inline int32_t GfxInfoFeatureStatus::_internal_a_feature() const {
+  return _impl_.a_feature_;
 }
-inline int32_t GfxInfoFeatureStatus::feature() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxInfoFeatureStatus.feature)
-  return _internal_feature();
+inline int32_t GfxInfoFeatureStatus::a_feature() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_feature)
+  return _internal_a_feature();
 }
-inline void GfxInfoFeatureStatus::_internal_set_feature(int32_t value) {
+inline void GfxInfoFeatureStatus::_internal_set_a_feature(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.feature_ = value;
+  _impl_.a_feature_ = value;
 }
-inline void GfxInfoFeatureStatus::set_feature(int32_t value) {
-  _internal_set_feature(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.feature)
+inline void GfxInfoFeatureStatus::set_a_feature(int32_t value) {
+  _internal_set_a_feature(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_feature)
 }
 
-// required sint32 status = 2;
-inline bool GfxInfoFeatureStatus::_internal_has_status() const {
+// required sint32 a_status = 2;
+inline bool GfxInfoFeatureStatus::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool GfxInfoFeatureStatus::has_status() const {
-  return _internal_has_status();
+inline bool GfxInfoFeatureStatus::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void GfxInfoFeatureStatus::clear_status() {
-  _impl_.status_ = 0;
+inline void GfxInfoFeatureStatus::clear_a_status() {
+  _impl_.a_status_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t GfxInfoFeatureStatus::_internal_status() const {
-  return _impl_.status_;
+inline int32_t GfxInfoFeatureStatus::_internal_a_status() const {
+  return _impl_.a_status_;
 }
-inline int32_t GfxInfoFeatureStatus::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxInfoFeatureStatus.status)
-  return _internal_status();
+inline int32_t GfxInfoFeatureStatus::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_status)
+  return _internal_a_status();
 }
-inline void GfxInfoFeatureStatus::_internal_set_status(int32_t value) {
+inline void GfxInfoFeatureStatus::_internal_set_a_status(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.status_ = value;
+  _impl_.a_status_ = value;
 }
-inline void GfxInfoFeatureStatus::set_status(int32_t value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.status)
+inline void GfxInfoFeatureStatus::set_a_status(int32_t value) {
+  _internal_set_a_status(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_status)
 }
 
-// required bytes failureId = 3;
-inline bool GfxInfoFeatureStatus::_internal_has_failureid() const {
+// required bytes a_failureId = 3;
+inline bool GfxInfoFeatureStatus::_internal_has_a_failureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool GfxInfoFeatureStatus::has_failureid() const {
-  return _internal_has_failureid();
+inline bool GfxInfoFeatureStatus::has_a_failureid() const {
+  return _internal_has_a_failureid();
 }
-inline void GfxInfoFeatureStatus::clear_failureid() {
-  _impl_.failureid_.ClearToEmpty();
+inline void GfxInfoFeatureStatus::clear_a_failureid() {
+  _impl_.a_failureid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GfxInfoFeatureStatus::failureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxInfoFeatureStatus.failureId)
-  return _internal_failureid();
+inline const std::string& GfxInfoFeatureStatus::a_failureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_failureId)
+  return _internal_a_failureid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GfxInfoFeatureStatus::set_failureid(ArgT0&& arg0, ArgT... args) {
+void GfxInfoFeatureStatus::set_a_failureid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.failureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.failureId)
+ _impl_.a_failureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_failureId)
 }
-inline std::string* GfxInfoFeatureStatus::mutable_failureid() {
-  std::string* _s = _internal_mutable_failureid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxInfoFeatureStatus.failureId)
+inline std::string* GfxInfoFeatureStatus::mutable_a_failureid() {
+  std::string* _s = _internal_mutable_a_failureid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_failureId)
   return _s;
 }
-inline const std::string& GfxInfoFeatureStatus::_internal_failureid() const {
-  return _impl_.failureid_.Get();
+inline const std::string& GfxInfoFeatureStatus::_internal_a_failureid() const {
+  return _impl_.a_failureid_.Get();
 }
-inline void GfxInfoFeatureStatus::_internal_set_failureid(const std::string& value) {
+inline void GfxInfoFeatureStatus::_internal_set_a_failureid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.failureid_.Set(value, GetArenaForAllocation());
+  _impl_.a_failureid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GfxInfoFeatureStatus::_internal_mutable_failureid() {
+inline std::string* GfxInfoFeatureStatus::_internal_mutable_a_failureid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.failureid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_failureid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GfxInfoFeatureStatus::release_failureid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxInfoFeatureStatus.failureId)
-  if (!_internal_has_failureid()) {
+inline std::string* GfxInfoFeatureStatus::release_a_failureid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_failureId)
+  if (!_internal_has_a_failureid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.failureid_.Release();
+  auto* p = _impl_.a_failureid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.failureid_.IsDefault()) {
-    _impl_.failureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_failureid_.IsDefault()) {
+    _impl_.a_failureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void GfxInfoFeatureStatus::set_allocated_failureid(std::string* failureid) {
-  if (failureid != nullptr) {
+inline void GfxInfoFeatureStatus::set_allocated_a_failureid(std::string* a_failureid) {
+  if (a_failureid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.failureid_.SetAllocated(failureid, GetArenaForAllocation());
+  _impl_.a_failureid_.SetAllocated(a_failureid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.failureid_.IsDefault()) {
-    _impl_.failureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_failureid_.IsDefault()) {
+    _impl_.a_failureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxInfoFeatureStatus.failureId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_failureId)
 }
 
 #ifdef __GNUC__

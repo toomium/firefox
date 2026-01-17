@@ -177,25 +177,25 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kScriptsFieldNumber = 1,
+    kAScriptsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.loader.ScriptData scripts = 1;
-  int scripts_size() const;
+  // repeated .protobuf.mozilla.loader.ScriptData a_scripts = 1;
+  int a_scripts_size() const;
   private:
-  int _internal_scripts_size() const;
+  int _internal_a_scripts_size() const;
   public:
-  void clear_scripts();
-  ::protobuf::mozilla::loader::ScriptData* mutable_scripts(int index);
+  void clear_a_scripts();
+  ::protobuf::mozilla::loader::ScriptData* mutable_a_scripts(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::loader::ScriptData >*
-      mutable_scripts();
+      mutable_a_scripts();
   private:
-  const ::protobuf::mozilla::loader::ScriptData& _internal_scripts(int index) const;
-  ::protobuf::mozilla::loader::ScriptData* _internal_add_scripts();
+  const ::protobuf::mozilla::loader::ScriptData& _internal_a_scripts(int index) const;
+  ::protobuf::mozilla::loader::ScriptData* _internal_add_a_scripts();
   public:
-  const ::protobuf::mozilla::loader::ScriptData& scripts(int index) const;
-  ::protobuf::mozilla::loader::ScriptData* add_scripts();
+  const ::protobuf::mozilla::loader::ScriptData& a_scripts(int index) const;
+  ::protobuf::mozilla::loader::ScriptData* add_a_scripts();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::loader::ScriptData >&
-      scripts() const;
+      a_scripts() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.loader.PScriptCache.Msg___delete__)
  private:
@@ -205,7 +205,7 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::loader::ScriptData > scripts_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::loader::ScriptData > a_scripts_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -346,41 +346,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// repeated .protobuf.mozilla.loader.ScriptData scripts = 1;
-inline int Msg___delete__::_internal_scripts_size() const {
-  return _impl_.scripts_.size();
+// repeated .protobuf.mozilla.loader.ScriptData a_scripts = 1;
+inline int Msg___delete__::_internal_a_scripts_size() const {
+  return _impl_.a_scripts_.size();
 }
-inline int Msg___delete__::scripts_size() const {
-  return _internal_scripts_size();
+inline int Msg___delete__::a_scripts_size() const {
+  return _internal_a_scripts_size();
 }
-inline ::protobuf::mozilla::loader::ScriptData* Msg___delete__::mutable_scripts(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.loader.PScriptCache.Msg___delete__.scripts)
-  return _impl_.scripts_.Mutable(index);
+inline ::protobuf::mozilla::loader::ScriptData* Msg___delete__::mutable_a_scripts(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.loader.PScriptCache.Msg___delete__.a_scripts)
+  return _impl_.a_scripts_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::loader::ScriptData >*
-Msg___delete__::mutable_scripts() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.loader.PScriptCache.Msg___delete__.scripts)
-  return &_impl_.scripts_;
+Msg___delete__::mutable_a_scripts() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.loader.PScriptCache.Msg___delete__.a_scripts)
+  return &_impl_.a_scripts_;
 }
-inline const ::protobuf::mozilla::loader::ScriptData& Msg___delete__::_internal_scripts(int index) const {
-  return _impl_.scripts_.Get(index);
+inline const ::protobuf::mozilla::loader::ScriptData& Msg___delete__::_internal_a_scripts(int index) const {
+  return _impl_.a_scripts_.Get(index);
 }
-inline const ::protobuf::mozilla::loader::ScriptData& Msg___delete__::scripts(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.loader.PScriptCache.Msg___delete__.scripts)
-  return _internal_scripts(index);
+inline const ::protobuf::mozilla::loader::ScriptData& Msg___delete__::a_scripts(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.loader.PScriptCache.Msg___delete__.a_scripts)
+  return _internal_a_scripts(index);
 }
-inline ::protobuf::mozilla::loader::ScriptData* Msg___delete__::_internal_add_scripts() {
-  return _impl_.scripts_.Add();
+inline ::protobuf::mozilla::loader::ScriptData* Msg___delete__::_internal_add_a_scripts() {
+  return _impl_.a_scripts_.Add();
 }
-inline ::protobuf::mozilla::loader::ScriptData* Msg___delete__::add_scripts() {
-  ::protobuf::mozilla::loader::ScriptData* _add = _internal_add_scripts();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.loader.PScriptCache.Msg___delete__.scripts)
+inline ::protobuf::mozilla::loader::ScriptData* Msg___delete__::add_a_scripts() {
+  ::protobuf::mozilla::loader::ScriptData* _add = _internal_add_a_scripts();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.loader.PScriptCache.Msg___delete__.a_scripts)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::loader::ScriptData >&
-Msg___delete__::scripts() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.loader.PScriptCache.Msg___delete__.scripts)
-  return _impl_.scripts_;
+Msg___delete__::a_scripts() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.loader.PScriptCache.Msg___delete__.a_scripts)
+  return _impl_.a_scripts_;
 }
 
 // -------------------------------------------------------------------

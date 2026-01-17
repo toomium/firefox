@@ -15,13 +15,13 @@ import "PMediaDecoderParams.proto";
 
 // Structs and unions declarations
 message VideoDecoderInfoIPDL {
-  required bytes videoInfo = 1;
-  required float framerate = 2;
+  required bytes a_videoInfo = 1;
+  required float a_framerate = 2;
 }
 
 message RemoteDecoderInfoIPDL {
   oneof content {
-    bytes mVAudioInfo = 1;
-    protobuf.mozilla.VideoDecoderInfoIPDL mVVideoDecoderInfoIPDL = 2;
+    bytes a_mVAudioInfo = 1;
+    protobuf.mozilla.VideoDecoderInfoIPDL a_mVVideoDecoderInfoIPDL = 2;
   }
 }

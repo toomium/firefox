@@ -45,33 +45,33 @@ namespace dom {
 
 class IPCBlobOrError::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::IPCBlob& mvipcblob(const IPCBlobOrError* msg);
+  static const ::protobuf::mozilla::dom::IPCBlob& a_mvipcblob(const IPCBlobOrError* msg);
 };
 
 const ::protobuf::mozilla::dom::IPCBlob&
-IPCBlobOrError::_Internal::mvipcblob(const IPCBlobOrError* msg) {
-  return *msg->_impl_.content_.mvipcblob_;
+IPCBlobOrError::_Internal::a_mvipcblob(const IPCBlobOrError* msg) {
+  return *msg->_impl_.content_.a_mvipcblob_;
 }
-void IPCBlobOrError::set_allocated_mvipcblob(::protobuf::mozilla::dom::IPCBlob* mvipcblob) {
+void IPCBlobOrError::set_allocated_a_mvipcblob(::protobuf::mozilla::dom::IPCBlob* a_mvipcblob) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvipcblob) {
+  if (a_mvipcblob) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mvipcblob));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_mvipcblob));
     if (message_arena != submessage_arena) {
-      mvipcblob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvipcblob, submessage_arena);
+      a_mvipcblob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvipcblob, submessage_arena);
     }
-    set_has_mvipcblob();
-    _impl_.content_.mvipcblob_ = mvipcblob;
+    set_has_a_mvipcblob();
+    _impl_.content_.a_mvipcblob_ = a_mvipcblob;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlobOrError.mVIPCBlob)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlobOrError.a_mVIPCBlob)
 }
-void IPCBlobOrError::clear_mvipcblob() {
-  if (_internal_has_mvipcblob()) {
+void IPCBlobOrError::clear_a_mvipcblob() {
+  if (_internal_has_a_mvipcblob()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipcblob_;
+      delete _impl_.content_.a_mvipcblob_;
     }
     clear_has_content();
   }
@@ -93,13 +93,13 @@ IPCBlobOrError::IPCBlobOrError(const IPCBlobOrError& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVIPCBlob: {
-      _this->_internal_mutable_mvipcblob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
-          from._internal_mvipcblob());
+    case kAMVIPCBlob: {
+      _this->_internal_mutable_a_mvipcblob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
+          from._internal_a_mvipcblob());
       break;
     }
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -144,14 +144,14 @@ void IPCBlobOrError::SetCachedSize(int size) const {
 void IPCBlobOrError::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.IPCBlobOrError)
   switch (content_case()) {
-    case kMVIPCBlob: {
+    case kAMVIPCBlob: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvipcblob_;
+        delete _impl_.content_.a_mvipcblob_;
       }
       break;
     }
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -178,18 +178,18 @@ const char* IPCBlobOrError::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.IPCBlob mVIPCBlob = 1;
+      // .protobuf.mozilla.dom.IPCBlob a_mVIPCBlob = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvipcblob(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvipcblob(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVnsresult = 2;
+      // bytes a_mVnsresult = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -225,15 +225,15 @@ uint8_t* IPCBlobOrError::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVIPCBlob: {
+    case kAMVIPCBlob: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvipcblob(this),
-          _Internal::mvipcblob(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvipcblob(this),
+          _Internal::a_mvipcblob(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvnsresult(), target);
+          2, this->_internal_a_mvnsresult(), target);
       break;
     }
     default: ;
@@ -255,18 +255,18 @@ size_t IPCBlobOrError::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.dom.IPCBlob mVIPCBlob = 1;
-    case kMVIPCBlob: {
+    // .protobuf.mozilla.dom.IPCBlob a_mVIPCBlob = 1;
+    case kAMVIPCBlob: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvipcblob_);
+          *_impl_.content_.a_mvipcblob_);
       break;
     }
-    // bytes mVnsresult = 2;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 2;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -295,13 +295,13 @@ void IPCBlobOrError::MergeFrom(const IPCBlobOrError& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVIPCBlob: {
-      _this->_internal_mutable_mvipcblob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
-          from._internal_mvipcblob());
+    case kAMVIPCBlob: {
+      _this->_internal_mutable_a_mvipcblob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
+          from._internal_a_mvipcblob());
       break;
     }
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -320,13 +320,13 @@ void IPCBlobOrError::CopyFrom(const IPCBlobOrError& from) {
 
 bool IPCBlobOrError::IsInitialized() const {
   switch (content_case()) {
-    case kMVIPCBlob: {
-      if (_internal_has_mvipcblob()) {
-        if (!_impl_.content_.mvipcblob_->IsInitialized()) return false;
+    case kAMVIPCBlob: {
+      if (_internal_has_a_mvipcblob()) {
+        if (!_impl_.content_.a_mvipcblob_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
     case CONTENT_NOT_SET: {

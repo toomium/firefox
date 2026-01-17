@@ -61,7 +61,7 @@ PROTOBUF_CONSTEXPR Msg_RecycleTexture::Msg_RecycleTexture(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.atextureflags_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_atextureflags_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_RecycleTextureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RecycleTextureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -529,7 +529,7 @@ std::string Msg_Destroy::GetTypeName() const {
 class Msg_RecycleTexture::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_RecycleTexture>()._impl_._has_bits_);
-  static void set_has_atextureflags(HasBits* has_bits) {
+  static void set_has_a_atextureflags(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -549,15 +549,15 @@ Msg_RecycleTexture::Msg_RecycleTexture(const Msg_RecycleTexture& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atextureflags_){}};
+    , decltype(_impl_.a_atextureflags_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.atextureflags_.InitDefault();
+  _impl_.a_atextureflags_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.atextureflags_.Set("", GetArenaForAllocation());
+    _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_atextureflags()) {
-    _this->_impl_.atextureflags_.Set(from._internal_atextureflags(), 
+  if (from._internal_has_a_atextureflags()) {
+    _this->_impl_.a_atextureflags_.Set(from._internal_a_atextureflags(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture)
@@ -570,11 +570,11 @@ inline void Msg_RecycleTexture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atextureflags_){}
+    , decltype(_impl_.a_atextureflags_){}
   };
-  _impl_.atextureflags_.InitDefault();
+  _impl_.a_atextureflags_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.atextureflags_.Set("", GetArenaForAllocation());
+    _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -589,7 +589,7 @@ Msg_RecycleTexture::~Msg_RecycleTexture() {
 
 inline void Msg_RecycleTexture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.atextureflags_.Destroy();
+  _impl_.a_atextureflags_.Destroy();
 }
 
 void Msg_RecycleTexture::SetCachedSize(int size) const {
@@ -604,7 +604,7 @@ void Msg_RecycleTexture::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.atextureflags_.ClearNonDefaultToEmpty();
+    _impl_.a_atextureflags_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -617,10 +617,10 @@ const char* Msg_RecycleTexture::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aTextureFlags = 1;
+      // required bytes a_aTextureFlags = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_atextureflags();
+          auto str = _internal_mutable_a_atextureflags();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -657,10 +657,10 @@ uint8_t* Msg_RecycleTexture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aTextureFlags = 1;
+  // required bytes a_aTextureFlags = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_atextureflags(), target);
+        1, this->_internal_a_atextureflags(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -675,11 +675,11 @@ size_t Msg_RecycleTexture::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture)
   size_t total_size = 0;
 
-  // required bytes aTextureFlags = 1;
-  if (_internal_has_atextureflags()) {
+  // required bytes a_aTextureFlags = 1;
+  if (_internal_has_a_atextureflags()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_atextureflags());
+        this->_internal_a_atextureflags());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -706,8 +706,8 @@ void Msg_RecycleTexture::MergeFrom(const Msg_RecycleTexture& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_atextureflags()) {
-    _this->_internal_set_atextureflags(from._internal_atextureflags());
+  if (from._internal_has_a_atextureflags()) {
+    _this->_internal_set_a_atextureflags(from._internal_a_atextureflags());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -731,8 +731,8 @@ void Msg_RecycleTexture::InternalSwap(Msg_RecycleTexture* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.atextureflags_, lhs_arena,
-      &other->_impl_.atextureflags_, rhs_arena
+      &_impl_.a_atextureflags_, lhs_arena,
+      &other->_impl_.a_atextureflags_, rhs_arena
   );
 }
 

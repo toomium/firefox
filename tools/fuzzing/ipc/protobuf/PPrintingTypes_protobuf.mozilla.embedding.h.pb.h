@@ -173,43 +173,43 @@ class CStringKeyValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kValueFieldNumber = 2,
+    kAKeyFieldNumber = 1,
+    kAValueFieldNumber = 2,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes value = 2;
-  bool has_value() const;
+  // required bytes a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.embedding.CStringKeyValue)
@@ -225,8 +225,8 @@ class CStringKeyValue final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto;
@@ -343,849 +343,849 @@ class PrintData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPageRangesFieldNumber = 22,
-    kDevModeDataFieldNumber = 51,
-    kGTKPrintSettingsFieldNumber = 52,
-    kRemotePrintJobFieldNumber = 1,
-    kTitleFieldNumber = 23,
-    kDocURLFieldNumber = 24,
-    kHeaderStrLeftFieldNumber = 25,
-    kHeaderStrCenterFieldNumber = 26,
-    kHeaderStrRightFieldNumber = 27,
-    kFooterStrLeftFieldNumber = 28,
-    kFooterStrCenterFieldNumber = 29,
-    kFooterStrRightFieldNumber = 30,
-    kPaperIdFieldNumber = 33,
-    kDriverNameFieldNumber = 49,
-    kDeviceNameFieldNumber = 50,
-    kDispositionFieldNumber = 53,
-    kEdgeTopFieldNumber = 2,
-    kEdgeLeftFieldNumber = 3,
-    kEdgeBottomFieldNumber = 4,
-    kEdgeRightFieldNumber = 5,
-    kMarginTopFieldNumber = 6,
-    kMarginLeftFieldNumber = 7,
-    kMarginBottomFieldNumber = 8,
-    kMarginRightFieldNumber = 9,
-    kUnwriteableMarginTopFieldNumber = 10,
-    kUnwriteableMarginLeftFieldNumber = 11,
-    kUnwriteableMarginBottomFieldNumber = 12,
-    kUnwriteableMarginRightFieldNumber = 13,
-    kScalingFieldNumber = 14,
-    kPrintBGColorsFieldNumber = 15,
-    kPrintBGImagesFieldNumber = 16,
-    kHonorPageRuleMarginsFieldNumber = 17,
-    kUsePageRuleSizeAsPaperSizeFieldNumber = 18,
-    kIgnoreUnwriteableMarginsFieldNumber = 19,
-    kShowMarginGuidesFieldNumber = 20,
-    kPrintSelectionOnlyFieldNumber = 21,
-    kPrintSilentFieldNumber = 31,
-    kPaperWidthFieldNumber = 34,
-    kPaperHeightFieldNumber = 35,
-    kPaperSizeUnitFieldNumber = 36,
-    kShrinkToFitFieldNumber = 32,
-    kPrintReversedFieldNumber = 37,
-    kPrintInColorFieldNumber = 38,
-    kIsInitializedFromPrinterFieldNumber = 47,
-    kOrientationFieldNumber = 39,
-    kNumCopiesFieldNumber = 40,
-    kNumPagesPerSheetFieldNumber = 41,
-    kOutputDestinationFieldNumber = 42,
-    kOutputFormatFieldNumber = 43,
-    kPrintPageDelayFieldNumber = 44,
-    kResolutionFieldNumber = 45,
-    kDuplexFieldNumber = 46,
-    kIsInitializedFromPrefsFieldNumber = 48,
-    kDestinationFieldNumber = 54,
+    kAPageRangesFieldNumber = 22,
+    kADevModeDataFieldNumber = 51,
+    kAGTKPrintSettingsFieldNumber = 52,
+    kARemotePrintJobFieldNumber = 1,
+    kATitleFieldNumber = 23,
+    kADocURLFieldNumber = 24,
+    kAHeaderStrLeftFieldNumber = 25,
+    kAHeaderStrCenterFieldNumber = 26,
+    kAHeaderStrRightFieldNumber = 27,
+    kAFooterStrLeftFieldNumber = 28,
+    kAFooterStrCenterFieldNumber = 29,
+    kAFooterStrRightFieldNumber = 30,
+    kAPaperIdFieldNumber = 33,
+    kADriverNameFieldNumber = 49,
+    kADeviceNameFieldNumber = 50,
+    kADispositionFieldNumber = 53,
+    kAEdgeTopFieldNumber = 2,
+    kAEdgeLeftFieldNumber = 3,
+    kAEdgeBottomFieldNumber = 4,
+    kAEdgeRightFieldNumber = 5,
+    kAMarginTopFieldNumber = 6,
+    kAMarginLeftFieldNumber = 7,
+    kAMarginBottomFieldNumber = 8,
+    kAMarginRightFieldNumber = 9,
+    kAUnwriteableMarginTopFieldNumber = 10,
+    kAUnwriteableMarginLeftFieldNumber = 11,
+    kAUnwriteableMarginBottomFieldNumber = 12,
+    kAUnwriteableMarginRightFieldNumber = 13,
+    kAScalingFieldNumber = 14,
+    kAPrintBGColorsFieldNumber = 15,
+    kAPrintBGImagesFieldNumber = 16,
+    kAHonorPageRuleMarginsFieldNumber = 17,
+    kAUsePageRuleSizeAsPaperSizeFieldNumber = 18,
+    kAIgnoreUnwriteableMarginsFieldNumber = 19,
+    kAShowMarginGuidesFieldNumber = 20,
+    kAPrintSelectionOnlyFieldNumber = 21,
+    kAPrintSilentFieldNumber = 31,
+    kAPaperWidthFieldNumber = 34,
+    kAPaperHeightFieldNumber = 35,
+    kAPaperSizeUnitFieldNumber = 36,
+    kAShrinkToFitFieldNumber = 32,
+    kAPrintReversedFieldNumber = 37,
+    kAPrintInColorFieldNumber = 38,
+    kAIsInitializedFromPrinterFieldNumber = 47,
+    kAOrientationFieldNumber = 39,
+    kANumCopiesFieldNumber = 40,
+    kANumPagesPerSheetFieldNumber = 41,
+    kAOutputDestinationFieldNumber = 42,
+    kAOutputFormatFieldNumber = 43,
+    kAPrintPageDelayFieldNumber = 44,
+    kAResolutionFieldNumber = 45,
+    kADuplexFieldNumber = 46,
+    kAIsInitializedFromPrefsFieldNumber = 48,
+    kADestinationFieldNumber = 54,
   };
-  // repeated sint32 pageRanges = 22;
-  int pageranges_size() const;
+  // repeated sint32 a_pageRanges = 22;
+  int a_pageranges_size() const;
   private:
-  int _internal_pageranges_size() const;
+  int _internal_a_pageranges_size() const;
   public:
-  void clear_pageranges();
+  void clear_a_pageranges();
   private:
-  int32_t _internal_pageranges(int index) const;
+  int32_t _internal_a_pageranges(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      _internal_pageranges() const;
-  void _internal_add_pageranges(int32_t value);
+      _internal_a_pageranges() const;
+  void _internal_add_a_pageranges(int32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      _internal_mutable_pageranges();
+      _internal_mutable_a_pageranges();
   public:
-  int32_t pageranges(int index) const;
-  void set_pageranges(int index, int32_t value);
-  void add_pageranges(int32_t value);
+  int32_t a_pageranges(int index) const;
+  void set_a_pageranges(int index, int32_t value);
+  void add_a_pageranges(int32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-      pageranges() const;
+      a_pageranges() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-      mutable_pageranges();
+      mutable_a_pageranges();
 
-  // repeated uint32 devModeData = 51;
-  int devmodedata_size() const;
+  // repeated uint32 a_devModeData = 51;
+  int a_devmodedata_size() const;
   private:
-  int _internal_devmodedata_size() const;
+  int _internal_a_devmodedata_size() const;
   public:
-  void clear_devmodedata();
+  void clear_a_devmodedata();
   private:
-  uint32_t _internal_devmodedata(int index) const;
+  uint32_t _internal_a_devmodedata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_devmodedata() const;
-  void _internal_add_devmodedata(uint32_t value);
+      _internal_a_devmodedata() const;
+  void _internal_add_a_devmodedata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_devmodedata();
+      _internal_mutable_a_devmodedata();
   public:
-  uint32_t devmodedata(int index) const;
-  void set_devmodedata(int index, uint32_t value);
-  void add_devmodedata(uint32_t value);
+  uint32_t a_devmodedata(int index) const;
+  void set_a_devmodedata(int index, uint32_t value);
+  void add_a_devmodedata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      devmodedata() const;
+      a_devmodedata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_devmodedata();
+      mutable_a_devmodedata();
 
-  // repeated .protobuf.mozilla.embedding.CStringKeyValue GTKPrintSettings = 52;
-  int gtkprintsettings_size() const;
+  // repeated .protobuf.mozilla.embedding.CStringKeyValue a_GTKPrintSettings = 52;
+  int a_gtkprintsettings_size() const;
   private:
-  int _internal_gtkprintsettings_size() const;
+  int _internal_a_gtkprintsettings_size() const;
   public:
-  void clear_gtkprintsettings();
-  ::protobuf::mozilla::embedding::CStringKeyValue* mutable_gtkprintsettings(int index);
+  void clear_a_gtkprintsettings();
+  ::protobuf::mozilla::embedding::CStringKeyValue* mutable_a_gtkprintsettings(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue >*
-      mutable_gtkprintsettings();
+      mutable_a_gtkprintsettings();
   private:
-  const ::protobuf::mozilla::embedding::CStringKeyValue& _internal_gtkprintsettings(int index) const;
-  ::protobuf::mozilla::embedding::CStringKeyValue* _internal_add_gtkprintsettings();
+  const ::protobuf::mozilla::embedding::CStringKeyValue& _internal_a_gtkprintsettings(int index) const;
+  ::protobuf::mozilla::embedding::CStringKeyValue* _internal_add_a_gtkprintsettings();
   public:
-  const ::protobuf::mozilla::embedding::CStringKeyValue& gtkprintsettings(int index) const;
-  ::protobuf::mozilla::embedding::CStringKeyValue* add_gtkprintsettings();
+  const ::protobuf::mozilla::embedding::CStringKeyValue& a_gtkprintsettings(int index) const;
+  ::protobuf::mozilla::embedding::CStringKeyValue* add_a_gtkprintsettings();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue >&
-      gtkprintsettings() const;
+      a_gtkprintsettings() const;
 
-  // required bytes remotePrintJob = 1;
-  bool has_remoteprintjob() const;
+  // required bytes a_remotePrintJob = 1;
+  bool has_a_remoteprintjob() const;
   private:
-  bool _internal_has_remoteprintjob() const;
+  bool _internal_has_a_remoteprintjob() const;
   public:
-  void clear_remoteprintjob();
-  const std::string& remoteprintjob() const;
+  void clear_a_remoteprintjob();
+  const std::string& a_remoteprintjob() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_remoteprintjob(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_remoteprintjob();
-  PROTOBUF_NODISCARD std::string* release_remoteprintjob();
-  void set_allocated_remoteprintjob(std::string* remoteprintjob);
+  void set_a_remoteprintjob(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_remoteprintjob();
+  PROTOBUF_NODISCARD std::string* release_a_remoteprintjob();
+  void set_allocated_a_remoteprintjob(std::string* a_remoteprintjob);
   private:
-  const std::string& _internal_remoteprintjob() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_remoteprintjob(const std::string& value);
-  std::string* _internal_mutable_remoteprintjob();
+  const std::string& _internal_a_remoteprintjob() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_remoteprintjob(const std::string& value);
+  std::string* _internal_mutable_a_remoteprintjob();
   public:
 
-  // required bytes title = 23;
-  bool has_title() const;
+  // required bytes a_title = 23;
+  bool has_a_title() const;
   private:
-  bool _internal_has_title() const;
+  bool _internal_has_a_title() const;
   public:
-  void clear_title();
-  const std::string& title() const;
+  void clear_a_title();
+  const std::string& a_title() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_title(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_title();
-  PROTOBUF_NODISCARD std::string* release_title();
-  void set_allocated_title(std::string* title);
+  void set_a_title(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_title();
+  PROTOBUF_NODISCARD std::string* release_a_title();
+  void set_allocated_a_title(std::string* a_title);
   private:
-  const std::string& _internal_title() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_title(const std::string& value);
-  std::string* _internal_mutable_title();
+  const std::string& _internal_a_title() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_title(const std::string& value);
+  std::string* _internal_mutable_a_title();
   public:
 
-  // required bytes docURL = 24;
-  bool has_docurl() const;
+  // required bytes a_docURL = 24;
+  bool has_a_docurl() const;
   private:
-  bool _internal_has_docurl() const;
+  bool _internal_has_a_docurl() const;
   public:
-  void clear_docurl();
-  const std::string& docurl() const;
+  void clear_a_docurl();
+  const std::string& a_docurl() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_docurl(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_docurl();
-  PROTOBUF_NODISCARD std::string* release_docurl();
-  void set_allocated_docurl(std::string* docurl);
+  void set_a_docurl(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_docurl();
+  PROTOBUF_NODISCARD std::string* release_a_docurl();
+  void set_allocated_a_docurl(std::string* a_docurl);
   private:
-  const std::string& _internal_docurl() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_docurl(const std::string& value);
-  std::string* _internal_mutable_docurl();
+  const std::string& _internal_a_docurl() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_docurl(const std::string& value);
+  std::string* _internal_mutable_a_docurl();
   public:
 
-  // required bytes headerStrLeft = 25;
-  bool has_headerstrleft() const;
+  // required bytes a_headerStrLeft = 25;
+  bool has_a_headerstrleft() const;
   private:
-  bool _internal_has_headerstrleft() const;
+  bool _internal_has_a_headerstrleft() const;
   public:
-  void clear_headerstrleft();
-  const std::string& headerstrleft() const;
+  void clear_a_headerstrleft();
+  const std::string& a_headerstrleft() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_headerstrleft(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_headerstrleft();
-  PROTOBUF_NODISCARD std::string* release_headerstrleft();
-  void set_allocated_headerstrleft(std::string* headerstrleft);
+  void set_a_headerstrleft(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_headerstrleft();
+  PROTOBUF_NODISCARD std::string* release_a_headerstrleft();
+  void set_allocated_a_headerstrleft(std::string* a_headerstrleft);
   private:
-  const std::string& _internal_headerstrleft() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_headerstrleft(const std::string& value);
-  std::string* _internal_mutable_headerstrleft();
+  const std::string& _internal_a_headerstrleft() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_headerstrleft(const std::string& value);
+  std::string* _internal_mutable_a_headerstrleft();
   public:
 
-  // required bytes headerStrCenter = 26;
-  bool has_headerstrcenter() const;
+  // required bytes a_headerStrCenter = 26;
+  bool has_a_headerstrcenter() const;
   private:
-  bool _internal_has_headerstrcenter() const;
+  bool _internal_has_a_headerstrcenter() const;
   public:
-  void clear_headerstrcenter();
-  const std::string& headerstrcenter() const;
+  void clear_a_headerstrcenter();
+  const std::string& a_headerstrcenter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_headerstrcenter(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_headerstrcenter();
-  PROTOBUF_NODISCARD std::string* release_headerstrcenter();
-  void set_allocated_headerstrcenter(std::string* headerstrcenter);
+  void set_a_headerstrcenter(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_headerstrcenter();
+  PROTOBUF_NODISCARD std::string* release_a_headerstrcenter();
+  void set_allocated_a_headerstrcenter(std::string* a_headerstrcenter);
   private:
-  const std::string& _internal_headerstrcenter() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_headerstrcenter(const std::string& value);
-  std::string* _internal_mutable_headerstrcenter();
+  const std::string& _internal_a_headerstrcenter() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_headerstrcenter(const std::string& value);
+  std::string* _internal_mutable_a_headerstrcenter();
   public:
 
-  // required bytes headerStrRight = 27;
-  bool has_headerstrright() const;
+  // required bytes a_headerStrRight = 27;
+  bool has_a_headerstrright() const;
   private:
-  bool _internal_has_headerstrright() const;
+  bool _internal_has_a_headerstrright() const;
   public:
-  void clear_headerstrright();
-  const std::string& headerstrright() const;
+  void clear_a_headerstrright();
+  const std::string& a_headerstrright() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_headerstrright(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_headerstrright();
-  PROTOBUF_NODISCARD std::string* release_headerstrright();
-  void set_allocated_headerstrright(std::string* headerstrright);
+  void set_a_headerstrright(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_headerstrright();
+  PROTOBUF_NODISCARD std::string* release_a_headerstrright();
+  void set_allocated_a_headerstrright(std::string* a_headerstrright);
   private:
-  const std::string& _internal_headerstrright() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_headerstrright(const std::string& value);
-  std::string* _internal_mutable_headerstrright();
+  const std::string& _internal_a_headerstrright() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_headerstrright(const std::string& value);
+  std::string* _internal_mutable_a_headerstrright();
   public:
 
-  // required bytes footerStrLeft = 28;
-  bool has_footerstrleft() const;
+  // required bytes a_footerStrLeft = 28;
+  bool has_a_footerstrleft() const;
   private:
-  bool _internal_has_footerstrleft() const;
+  bool _internal_has_a_footerstrleft() const;
   public:
-  void clear_footerstrleft();
-  const std::string& footerstrleft() const;
+  void clear_a_footerstrleft();
+  const std::string& a_footerstrleft() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_footerstrleft(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_footerstrleft();
-  PROTOBUF_NODISCARD std::string* release_footerstrleft();
-  void set_allocated_footerstrleft(std::string* footerstrleft);
+  void set_a_footerstrleft(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_footerstrleft();
+  PROTOBUF_NODISCARD std::string* release_a_footerstrleft();
+  void set_allocated_a_footerstrleft(std::string* a_footerstrleft);
   private:
-  const std::string& _internal_footerstrleft() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_footerstrleft(const std::string& value);
-  std::string* _internal_mutable_footerstrleft();
+  const std::string& _internal_a_footerstrleft() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_footerstrleft(const std::string& value);
+  std::string* _internal_mutable_a_footerstrleft();
   public:
 
-  // required bytes footerStrCenter = 29;
-  bool has_footerstrcenter() const;
+  // required bytes a_footerStrCenter = 29;
+  bool has_a_footerstrcenter() const;
   private:
-  bool _internal_has_footerstrcenter() const;
+  bool _internal_has_a_footerstrcenter() const;
   public:
-  void clear_footerstrcenter();
-  const std::string& footerstrcenter() const;
+  void clear_a_footerstrcenter();
+  const std::string& a_footerstrcenter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_footerstrcenter(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_footerstrcenter();
-  PROTOBUF_NODISCARD std::string* release_footerstrcenter();
-  void set_allocated_footerstrcenter(std::string* footerstrcenter);
+  void set_a_footerstrcenter(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_footerstrcenter();
+  PROTOBUF_NODISCARD std::string* release_a_footerstrcenter();
+  void set_allocated_a_footerstrcenter(std::string* a_footerstrcenter);
   private:
-  const std::string& _internal_footerstrcenter() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_footerstrcenter(const std::string& value);
-  std::string* _internal_mutable_footerstrcenter();
+  const std::string& _internal_a_footerstrcenter() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_footerstrcenter(const std::string& value);
+  std::string* _internal_mutable_a_footerstrcenter();
   public:
 
-  // required bytes footerStrRight = 30;
-  bool has_footerstrright() const;
+  // required bytes a_footerStrRight = 30;
+  bool has_a_footerstrright() const;
   private:
-  bool _internal_has_footerstrright() const;
+  bool _internal_has_a_footerstrright() const;
   public:
-  void clear_footerstrright();
-  const std::string& footerstrright() const;
+  void clear_a_footerstrright();
+  const std::string& a_footerstrright() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_footerstrright(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_footerstrright();
-  PROTOBUF_NODISCARD std::string* release_footerstrright();
-  void set_allocated_footerstrright(std::string* footerstrright);
+  void set_a_footerstrright(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_footerstrright();
+  PROTOBUF_NODISCARD std::string* release_a_footerstrright();
+  void set_allocated_a_footerstrright(std::string* a_footerstrright);
   private:
-  const std::string& _internal_footerstrright() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_footerstrright(const std::string& value);
-  std::string* _internal_mutable_footerstrright();
+  const std::string& _internal_a_footerstrright() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_footerstrright(const std::string& value);
+  std::string* _internal_mutable_a_footerstrright();
   public:
 
-  // required bytes paperId = 33;
-  bool has_paperid() const;
+  // required bytes a_paperId = 33;
+  bool has_a_paperid() const;
   private:
-  bool _internal_has_paperid() const;
+  bool _internal_has_a_paperid() const;
   public:
-  void clear_paperid();
-  const std::string& paperid() const;
+  void clear_a_paperid();
+  const std::string& a_paperid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_paperid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_paperid();
-  PROTOBUF_NODISCARD std::string* release_paperid();
-  void set_allocated_paperid(std::string* paperid);
+  void set_a_paperid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_paperid();
+  PROTOBUF_NODISCARD std::string* release_a_paperid();
+  void set_allocated_a_paperid(std::string* a_paperid);
   private:
-  const std::string& _internal_paperid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_paperid(const std::string& value);
-  std::string* _internal_mutable_paperid();
+  const std::string& _internal_a_paperid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_paperid(const std::string& value);
+  std::string* _internal_mutable_a_paperid();
   public:
 
-  // required bytes driverName = 49;
-  bool has_drivername() const;
+  // required bytes a_driverName = 49;
+  bool has_a_drivername() const;
   private:
-  bool _internal_has_drivername() const;
+  bool _internal_has_a_drivername() const;
   public:
-  void clear_drivername();
-  const std::string& drivername() const;
+  void clear_a_drivername();
+  const std::string& a_drivername() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_drivername(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_drivername();
-  PROTOBUF_NODISCARD std::string* release_drivername();
-  void set_allocated_drivername(std::string* drivername);
+  void set_a_drivername(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_drivername();
+  PROTOBUF_NODISCARD std::string* release_a_drivername();
+  void set_allocated_a_drivername(std::string* a_drivername);
   private:
-  const std::string& _internal_drivername() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_drivername(const std::string& value);
-  std::string* _internal_mutable_drivername();
+  const std::string& _internal_a_drivername() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_drivername(const std::string& value);
+  std::string* _internal_mutable_a_drivername();
   public:
 
-  // required bytes deviceName = 50;
-  bool has_devicename() const;
+  // required bytes a_deviceName = 50;
+  bool has_a_devicename() const;
   private:
-  bool _internal_has_devicename() const;
+  bool _internal_has_a_devicename() const;
   public:
-  void clear_devicename();
-  const std::string& devicename() const;
+  void clear_a_devicename();
+  const std::string& a_devicename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_devicename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_devicename();
-  PROTOBUF_NODISCARD std::string* release_devicename();
-  void set_allocated_devicename(std::string* devicename);
+  void set_a_devicename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_devicename();
+  PROTOBUF_NODISCARD std::string* release_a_devicename();
+  void set_allocated_a_devicename(std::string* a_devicename);
   private:
-  const std::string& _internal_devicename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_devicename(const std::string& value);
-  std::string* _internal_mutable_devicename();
+  const std::string& _internal_a_devicename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_devicename(const std::string& value);
+  std::string* _internal_mutable_a_devicename();
   public:
 
-  // required bytes disposition = 53;
-  bool has_disposition() const;
+  // required bytes a_disposition = 53;
+  bool has_a_disposition() const;
   private:
-  bool _internal_has_disposition() const;
+  bool _internal_has_a_disposition() const;
   public:
-  void clear_disposition();
-  const std::string& disposition() const;
+  void clear_a_disposition();
+  const std::string& a_disposition() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_disposition(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_disposition();
-  PROTOBUF_NODISCARD std::string* release_disposition();
-  void set_allocated_disposition(std::string* disposition);
+  void set_a_disposition(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_disposition();
+  PROTOBUF_NODISCARD std::string* release_a_disposition();
+  void set_allocated_a_disposition(std::string* a_disposition);
   private:
-  const std::string& _internal_disposition() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_disposition(const std::string& value);
-  std::string* _internal_mutable_disposition();
+  const std::string& _internal_a_disposition() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_disposition(const std::string& value);
+  std::string* _internal_mutable_a_disposition();
   public:
 
-  // required double edgeTop = 2;
-  bool has_edgetop() const;
+  // required double a_edgeTop = 2;
+  bool has_a_edgetop() const;
   private:
-  bool _internal_has_edgetop() const;
+  bool _internal_has_a_edgetop() const;
   public:
-  void clear_edgetop();
-  double edgetop() const;
-  void set_edgetop(double value);
+  void clear_a_edgetop();
+  double a_edgetop() const;
+  void set_a_edgetop(double value);
   private:
-  double _internal_edgetop() const;
-  void _internal_set_edgetop(double value);
-  public:
-
-  // required double edgeLeft = 3;
-  bool has_edgeleft() const;
-  private:
-  bool _internal_has_edgeleft() const;
-  public:
-  void clear_edgeleft();
-  double edgeleft() const;
-  void set_edgeleft(double value);
-  private:
-  double _internal_edgeleft() const;
-  void _internal_set_edgeleft(double value);
+  double _internal_a_edgetop() const;
+  void _internal_set_a_edgetop(double value);
   public:
 
-  // required double edgeBottom = 4;
-  bool has_edgebottom() const;
+  // required double a_edgeLeft = 3;
+  bool has_a_edgeleft() const;
   private:
-  bool _internal_has_edgebottom() const;
+  bool _internal_has_a_edgeleft() const;
   public:
-  void clear_edgebottom();
-  double edgebottom() const;
-  void set_edgebottom(double value);
+  void clear_a_edgeleft();
+  double a_edgeleft() const;
+  void set_a_edgeleft(double value);
   private:
-  double _internal_edgebottom() const;
-  void _internal_set_edgebottom(double value);
-  public:
-
-  // required double edgeRight = 5;
-  bool has_edgeright() const;
-  private:
-  bool _internal_has_edgeright() const;
-  public:
-  void clear_edgeright();
-  double edgeright() const;
-  void set_edgeright(double value);
-  private:
-  double _internal_edgeright() const;
-  void _internal_set_edgeright(double value);
+  double _internal_a_edgeleft() const;
+  void _internal_set_a_edgeleft(double value);
   public:
 
-  // required double marginTop = 6;
-  bool has_margintop() const;
+  // required double a_edgeBottom = 4;
+  bool has_a_edgebottom() const;
   private:
-  bool _internal_has_margintop() const;
+  bool _internal_has_a_edgebottom() const;
   public:
-  void clear_margintop();
-  double margintop() const;
-  void set_margintop(double value);
+  void clear_a_edgebottom();
+  double a_edgebottom() const;
+  void set_a_edgebottom(double value);
   private:
-  double _internal_margintop() const;
-  void _internal_set_margintop(double value);
-  public:
-
-  // required double marginLeft = 7;
-  bool has_marginleft() const;
-  private:
-  bool _internal_has_marginleft() const;
-  public:
-  void clear_marginleft();
-  double marginleft() const;
-  void set_marginleft(double value);
-  private:
-  double _internal_marginleft() const;
-  void _internal_set_marginleft(double value);
+  double _internal_a_edgebottom() const;
+  void _internal_set_a_edgebottom(double value);
   public:
 
-  // required double marginBottom = 8;
-  bool has_marginbottom() const;
+  // required double a_edgeRight = 5;
+  bool has_a_edgeright() const;
   private:
-  bool _internal_has_marginbottom() const;
+  bool _internal_has_a_edgeright() const;
   public:
-  void clear_marginbottom();
-  double marginbottom() const;
-  void set_marginbottom(double value);
+  void clear_a_edgeright();
+  double a_edgeright() const;
+  void set_a_edgeright(double value);
   private:
-  double _internal_marginbottom() const;
-  void _internal_set_marginbottom(double value);
-  public:
-
-  // required double marginRight = 9;
-  bool has_marginright() const;
-  private:
-  bool _internal_has_marginright() const;
-  public:
-  void clear_marginright();
-  double marginright() const;
-  void set_marginright(double value);
-  private:
-  double _internal_marginright() const;
-  void _internal_set_marginright(double value);
+  double _internal_a_edgeright() const;
+  void _internal_set_a_edgeright(double value);
   public:
 
-  // required double unwriteableMarginTop = 10;
-  bool has_unwriteablemargintop() const;
+  // required double a_marginTop = 6;
+  bool has_a_margintop() const;
   private:
-  bool _internal_has_unwriteablemargintop() const;
+  bool _internal_has_a_margintop() const;
   public:
-  void clear_unwriteablemargintop();
-  double unwriteablemargintop() const;
-  void set_unwriteablemargintop(double value);
+  void clear_a_margintop();
+  double a_margintop() const;
+  void set_a_margintop(double value);
   private:
-  double _internal_unwriteablemargintop() const;
-  void _internal_set_unwriteablemargintop(double value);
-  public:
-
-  // required double unwriteableMarginLeft = 11;
-  bool has_unwriteablemarginleft() const;
-  private:
-  bool _internal_has_unwriteablemarginleft() const;
-  public:
-  void clear_unwriteablemarginleft();
-  double unwriteablemarginleft() const;
-  void set_unwriteablemarginleft(double value);
-  private:
-  double _internal_unwriteablemarginleft() const;
-  void _internal_set_unwriteablemarginleft(double value);
+  double _internal_a_margintop() const;
+  void _internal_set_a_margintop(double value);
   public:
 
-  // required double unwriteableMarginBottom = 12;
-  bool has_unwriteablemarginbottom() const;
+  // required double a_marginLeft = 7;
+  bool has_a_marginleft() const;
   private:
-  bool _internal_has_unwriteablemarginbottom() const;
+  bool _internal_has_a_marginleft() const;
   public:
-  void clear_unwriteablemarginbottom();
-  double unwriteablemarginbottom() const;
-  void set_unwriteablemarginbottom(double value);
+  void clear_a_marginleft();
+  double a_marginleft() const;
+  void set_a_marginleft(double value);
   private:
-  double _internal_unwriteablemarginbottom() const;
-  void _internal_set_unwriteablemarginbottom(double value);
-  public:
-
-  // required double unwriteableMarginRight = 13;
-  bool has_unwriteablemarginright() const;
-  private:
-  bool _internal_has_unwriteablemarginright() const;
-  public:
-  void clear_unwriteablemarginright();
-  double unwriteablemarginright() const;
-  void set_unwriteablemarginright(double value);
-  private:
-  double _internal_unwriteablemarginright() const;
-  void _internal_set_unwriteablemarginright(double value);
+  double _internal_a_marginleft() const;
+  void _internal_set_a_marginleft(double value);
   public:
 
-  // required double scaling = 14;
-  bool has_scaling() const;
+  // required double a_marginBottom = 8;
+  bool has_a_marginbottom() const;
   private:
-  bool _internal_has_scaling() const;
+  bool _internal_has_a_marginbottom() const;
   public:
-  void clear_scaling();
-  double scaling() const;
-  void set_scaling(double value);
+  void clear_a_marginbottom();
+  double a_marginbottom() const;
+  void set_a_marginbottom(double value);
   private:
-  double _internal_scaling() const;
-  void _internal_set_scaling(double value);
-  public:
-
-  // required bool printBGColors = 15;
-  bool has_printbgcolors() const;
-  private:
-  bool _internal_has_printbgcolors() const;
-  public:
-  void clear_printbgcolors();
-  bool printbgcolors() const;
-  void set_printbgcolors(bool value);
-  private:
-  bool _internal_printbgcolors() const;
-  void _internal_set_printbgcolors(bool value);
+  double _internal_a_marginbottom() const;
+  void _internal_set_a_marginbottom(double value);
   public:
 
-  // required bool printBGImages = 16;
-  bool has_printbgimages() const;
+  // required double a_marginRight = 9;
+  bool has_a_marginright() const;
   private:
-  bool _internal_has_printbgimages() const;
+  bool _internal_has_a_marginright() const;
   public:
-  void clear_printbgimages();
-  bool printbgimages() const;
-  void set_printbgimages(bool value);
+  void clear_a_marginright();
+  double a_marginright() const;
+  void set_a_marginright(double value);
   private:
-  bool _internal_printbgimages() const;
-  void _internal_set_printbgimages(bool value);
-  public:
-
-  // required bool honorPageRuleMargins = 17;
-  bool has_honorpagerulemargins() const;
-  private:
-  bool _internal_has_honorpagerulemargins() const;
-  public:
-  void clear_honorpagerulemargins();
-  bool honorpagerulemargins() const;
-  void set_honorpagerulemargins(bool value);
-  private:
-  bool _internal_honorpagerulemargins() const;
-  void _internal_set_honorpagerulemargins(bool value);
+  double _internal_a_marginright() const;
+  void _internal_set_a_marginright(double value);
   public:
 
-  // required bool usePageRuleSizeAsPaperSize = 18;
-  bool has_usepagerulesizeaspapersize() const;
+  // required double a_unwriteableMarginTop = 10;
+  bool has_a_unwriteablemargintop() const;
   private:
-  bool _internal_has_usepagerulesizeaspapersize() const;
+  bool _internal_has_a_unwriteablemargintop() const;
   public:
-  void clear_usepagerulesizeaspapersize();
-  bool usepagerulesizeaspapersize() const;
-  void set_usepagerulesizeaspapersize(bool value);
+  void clear_a_unwriteablemargintop();
+  double a_unwriteablemargintop() const;
+  void set_a_unwriteablemargintop(double value);
   private:
-  bool _internal_usepagerulesizeaspapersize() const;
-  void _internal_set_usepagerulesizeaspapersize(bool value);
-  public:
-
-  // required bool ignoreUnwriteableMargins = 19;
-  bool has_ignoreunwriteablemargins() const;
-  private:
-  bool _internal_has_ignoreunwriteablemargins() const;
-  public:
-  void clear_ignoreunwriteablemargins();
-  bool ignoreunwriteablemargins() const;
-  void set_ignoreunwriteablemargins(bool value);
-  private:
-  bool _internal_ignoreunwriteablemargins() const;
-  void _internal_set_ignoreunwriteablemargins(bool value);
+  double _internal_a_unwriteablemargintop() const;
+  void _internal_set_a_unwriteablemargintop(double value);
   public:
 
-  // required bool showMarginGuides = 20;
-  bool has_showmarginguides() const;
+  // required double a_unwriteableMarginLeft = 11;
+  bool has_a_unwriteablemarginleft() const;
   private:
-  bool _internal_has_showmarginguides() const;
+  bool _internal_has_a_unwriteablemarginleft() const;
   public:
-  void clear_showmarginguides();
-  bool showmarginguides() const;
-  void set_showmarginguides(bool value);
+  void clear_a_unwriteablemarginleft();
+  double a_unwriteablemarginleft() const;
+  void set_a_unwriteablemarginleft(double value);
   private:
-  bool _internal_showmarginguides() const;
-  void _internal_set_showmarginguides(bool value);
-  public:
-
-  // required bool printSelectionOnly = 21;
-  bool has_printselectiononly() const;
-  private:
-  bool _internal_has_printselectiononly() const;
-  public:
-  void clear_printselectiononly();
-  bool printselectiononly() const;
-  void set_printselectiononly(bool value);
-  private:
-  bool _internal_printselectiononly() const;
-  void _internal_set_printselectiononly(bool value);
+  double _internal_a_unwriteablemarginleft() const;
+  void _internal_set_a_unwriteablemarginleft(double value);
   public:
 
-  // required bool printSilent = 31;
-  bool has_printsilent() const;
+  // required double a_unwriteableMarginBottom = 12;
+  bool has_a_unwriteablemarginbottom() const;
   private:
-  bool _internal_has_printsilent() const;
+  bool _internal_has_a_unwriteablemarginbottom() const;
   public:
-  void clear_printsilent();
-  bool printsilent() const;
-  void set_printsilent(bool value);
+  void clear_a_unwriteablemarginbottom();
+  double a_unwriteablemarginbottom() const;
+  void set_a_unwriteablemarginbottom(double value);
   private:
-  bool _internal_printsilent() const;
-  void _internal_set_printsilent(bool value);
-  public:
-
-  // required double paperWidth = 34;
-  bool has_paperwidth() const;
-  private:
-  bool _internal_has_paperwidth() const;
-  public:
-  void clear_paperwidth();
-  double paperwidth() const;
-  void set_paperwidth(double value);
-  private:
-  double _internal_paperwidth() const;
-  void _internal_set_paperwidth(double value);
+  double _internal_a_unwriteablemarginbottom() const;
+  void _internal_set_a_unwriteablemarginbottom(double value);
   public:
 
-  // required double paperHeight = 35;
-  bool has_paperheight() const;
+  // required double a_unwriteableMarginRight = 13;
+  bool has_a_unwriteablemarginright() const;
   private:
-  bool _internal_has_paperheight() const;
+  bool _internal_has_a_unwriteablemarginright() const;
   public:
-  void clear_paperheight();
-  double paperheight() const;
-  void set_paperheight(double value);
+  void clear_a_unwriteablemarginright();
+  double a_unwriteablemarginright() const;
+  void set_a_unwriteablemarginright(double value);
   private:
-  double _internal_paperheight() const;
-  void _internal_set_paperheight(double value);
-  public:
-
-  // required sint32 paperSizeUnit = 36;
-  bool has_papersizeunit() const;
-  private:
-  bool _internal_has_papersizeunit() const;
-  public:
-  void clear_papersizeunit();
-  int32_t papersizeunit() const;
-  void set_papersizeunit(int32_t value);
-  private:
-  int32_t _internal_papersizeunit() const;
-  void _internal_set_papersizeunit(int32_t value);
+  double _internal_a_unwriteablemarginright() const;
+  void _internal_set_a_unwriteablemarginright(double value);
   public:
 
-  // required bool shrinkToFit = 32;
-  bool has_shrinktofit() const;
+  // required double a_scaling = 14;
+  bool has_a_scaling() const;
   private:
-  bool _internal_has_shrinktofit() const;
+  bool _internal_has_a_scaling() const;
   public:
-  void clear_shrinktofit();
-  bool shrinktofit() const;
-  void set_shrinktofit(bool value);
+  void clear_a_scaling();
+  double a_scaling() const;
+  void set_a_scaling(double value);
   private:
-  bool _internal_shrinktofit() const;
-  void _internal_set_shrinktofit(bool value);
-  public:
-
-  // required bool printReversed = 37;
-  bool has_printreversed() const;
-  private:
-  bool _internal_has_printreversed() const;
-  public:
-  void clear_printreversed();
-  bool printreversed() const;
-  void set_printreversed(bool value);
-  private:
-  bool _internal_printreversed() const;
-  void _internal_set_printreversed(bool value);
+  double _internal_a_scaling() const;
+  void _internal_set_a_scaling(double value);
   public:
 
-  // required bool printInColor = 38;
-  bool has_printincolor() const;
+  // required bool a_printBGColors = 15;
+  bool has_a_printbgcolors() const;
   private:
-  bool _internal_has_printincolor() const;
+  bool _internal_has_a_printbgcolors() const;
   public:
-  void clear_printincolor();
-  bool printincolor() const;
-  void set_printincolor(bool value);
+  void clear_a_printbgcolors();
+  bool a_printbgcolors() const;
+  void set_a_printbgcolors(bool value);
   private:
-  bool _internal_printincolor() const;
-  void _internal_set_printincolor(bool value);
-  public:
-
-  // required bool isInitializedFromPrinter = 47;
-  bool has_isinitializedfromprinter() const;
-  private:
-  bool _internal_has_isinitializedfromprinter() const;
-  public:
-  void clear_isinitializedfromprinter();
-  bool isinitializedfromprinter() const;
-  void set_isinitializedfromprinter(bool value);
-  private:
-  bool _internal_isinitializedfromprinter() const;
-  void _internal_set_isinitializedfromprinter(bool value);
+  bool _internal_a_printbgcolors() const;
+  void _internal_set_a_printbgcolors(bool value);
   public:
 
-  // required sint32 orientation = 39;
-  bool has_orientation() const;
+  // required bool a_printBGImages = 16;
+  bool has_a_printbgimages() const;
   private:
-  bool _internal_has_orientation() const;
+  bool _internal_has_a_printbgimages() const;
   public:
-  void clear_orientation();
-  int32_t orientation() const;
-  void set_orientation(int32_t value);
+  void clear_a_printbgimages();
+  bool a_printbgimages() const;
+  void set_a_printbgimages(bool value);
   private:
-  int32_t _internal_orientation() const;
-  void _internal_set_orientation(int32_t value);
-  public:
-
-  // required sint32 numCopies = 40;
-  bool has_numcopies() const;
-  private:
-  bool _internal_has_numcopies() const;
-  public:
-  void clear_numcopies();
-  int32_t numcopies() const;
-  void set_numcopies(int32_t value);
-  private:
-  int32_t _internal_numcopies() const;
-  void _internal_set_numcopies(int32_t value);
+  bool _internal_a_printbgimages() const;
+  void _internal_set_a_printbgimages(bool value);
   public:
 
-  // required sint32 numPagesPerSheet = 41;
-  bool has_numpagespersheet() const;
+  // required bool a_honorPageRuleMargins = 17;
+  bool has_a_honorpagerulemargins() const;
   private:
-  bool _internal_has_numpagespersheet() const;
+  bool _internal_has_a_honorpagerulemargins() const;
   public:
-  void clear_numpagespersheet();
-  int32_t numpagespersheet() const;
-  void set_numpagespersheet(int32_t value);
+  void clear_a_honorpagerulemargins();
+  bool a_honorpagerulemargins() const;
+  void set_a_honorpagerulemargins(bool value);
   private:
-  int32_t _internal_numpagespersheet() const;
-  void _internal_set_numpagespersheet(int32_t value);
-  public:
-
-  // required sint32 outputDestination = 42;
-  bool has_outputdestination() const;
-  private:
-  bool _internal_has_outputdestination() const;
-  public:
-  void clear_outputdestination();
-  int32_t outputdestination() const;
-  void set_outputdestination(int32_t value);
-  private:
-  int32_t _internal_outputdestination() const;
-  void _internal_set_outputdestination(int32_t value);
+  bool _internal_a_honorpagerulemargins() const;
+  void _internal_set_a_honorpagerulemargins(bool value);
   public:
 
-  // required sint32 outputFormat = 43;
-  bool has_outputformat() const;
+  // required bool a_usePageRuleSizeAsPaperSize = 18;
+  bool has_a_usepagerulesizeaspapersize() const;
   private:
-  bool _internal_has_outputformat() const;
+  bool _internal_has_a_usepagerulesizeaspapersize() const;
   public:
-  void clear_outputformat();
-  int32_t outputformat() const;
-  void set_outputformat(int32_t value);
+  void clear_a_usepagerulesizeaspapersize();
+  bool a_usepagerulesizeaspapersize() const;
+  void set_a_usepagerulesizeaspapersize(bool value);
   private:
-  int32_t _internal_outputformat() const;
-  void _internal_set_outputformat(int32_t value);
-  public:
-
-  // required sint32 printPageDelay = 44;
-  bool has_printpagedelay() const;
-  private:
-  bool _internal_has_printpagedelay() const;
-  public:
-  void clear_printpagedelay();
-  int32_t printpagedelay() const;
-  void set_printpagedelay(int32_t value);
-  private:
-  int32_t _internal_printpagedelay() const;
-  void _internal_set_printpagedelay(int32_t value);
+  bool _internal_a_usepagerulesizeaspapersize() const;
+  void _internal_set_a_usepagerulesizeaspapersize(bool value);
   public:
 
-  // required sint32 resolution = 45;
-  bool has_resolution() const;
+  // required bool a_ignoreUnwriteableMargins = 19;
+  bool has_a_ignoreunwriteablemargins() const;
   private:
-  bool _internal_has_resolution() const;
+  bool _internal_has_a_ignoreunwriteablemargins() const;
   public:
-  void clear_resolution();
-  int32_t resolution() const;
-  void set_resolution(int32_t value);
+  void clear_a_ignoreunwriteablemargins();
+  bool a_ignoreunwriteablemargins() const;
+  void set_a_ignoreunwriteablemargins(bool value);
   private:
-  int32_t _internal_resolution() const;
-  void _internal_set_resolution(int32_t value);
-  public:
-
-  // required sint32 duplex = 46;
-  bool has_duplex() const;
-  private:
-  bool _internal_has_duplex() const;
-  public:
-  void clear_duplex();
-  int32_t duplex() const;
-  void set_duplex(int32_t value);
-  private:
-  int32_t _internal_duplex() const;
-  void _internal_set_duplex(int32_t value);
+  bool _internal_a_ignoreunwriteablemargins() const;
+  void _internal_set_a_ignoreunwriteablemargins(bool value);
   public:
 
-  // required bool isInitializedFromPrefs = 48;
-  bool has_isinitializedfromprefs() const;
+  // required bool a_showMarginGuides = 20;
+  bool has_a_showmarginguides() const;
   private:
-  bool _internal_has_isinitializedfromprefs() const;
+  bool _internal_has_a_showmarginguides() const;
   public:
-  void clear_isinitializedfromprefs();
-  bool isinitializedfromprefs() const;
-  void set_isinitializedfromprefs(bool value);
+  void clear_a_showmarginguides();
+  bool a_showmarginguides() const;
+  void set_a_showmarginguides(bool value);
   private:
-  bool _internal_isinitializedfromprefs() const;
-  void _internal_set_isinitializedfromprefs(bool value);
+  bool _internal_a_showmarginguides() const;
+  void _internal_set_a_showmarginguides(bool value);
   public:
 
-  // required uint32 destination = 54;
-  bool has_destination() const;
+  // required bool a_printSelectionOnly = 21;
+  bool has_a_printselectiononly() const;
   private:
-  bool _internal_has_destination() const;
+  bool _internal_has_a_printselectiononly() const;
   public:
-  void clear_destination();
-  uint32_t destination() const;
-  void set_destination(uint32_t value);
+  void clear_a_printselectiononly();
+  bool a_printselectiononly() const;
+  void set_a_printselectiononly(bool value);
   private:
-  uint32_t _internal_destination() const;
-  void _internal_set_destination(uint32_t value);
+  bool _internal_a_printselectiononly() const;
+  void _internal_set_a_printselectiononly(bool value);
+  public:
+
+  // required bool a_printSilent = 31;
+  bool has_a_printsilent() const;
+  private:
+  bool _internal_has_a_printsilent() const;
+  public:
+  void clear_a_printsilent();
+  bool a_printsilent() const;
+  void set_a_printsilent(bool value);
+  private:
+  bool _internal_a_printsilent() const;
+  void _internal_set_a_printsilent(bool value);
+  public:
+
+  // required double a_paperWidth = 34;
+  bool has_a_paperwidth() const;
+  private:
+  bool _internal_has_a_paperwidth() const;
+  public:
+  void clear_a_paperwidth();
+  double a_paperwidth() const;
+  void set_a_paperwidth(double value);
+  private:
+  double _internal_a_paperwidth() const;
+  void _internal_set_a_paperwidth(double value);
+  public:
+
+  // required double a_paperHeight = 35;
+  bool has_a_paperheight() const;
+  private:
+  bool _internal_has_a_paperheight() const;
+  public:
+  void clear_a_paperheight();
+  double a_paperheight() const;
+  void set_a_paperheight(double value);
+  private:
+  double _internal_a_paperheight() const;
+  void _internal_set_a_paperheight(double value);
+  public:
+
+  // required sint32 a_paperSizeUnit = 36;
+  bool has_a_papersizeunit() const;
+  private:
+  bool _internal_has_a_papersizeunit() const;
+  public:
+  void clear_a_papersizeunit();
+  int32_t a_papersizeunit() const;
+  void set_a_papersizeunit(int32_t value);
+  private:
+  int32_t _internal_a_papersizeunit() const;
+  void _internal_set_a_papersizeunit(int32_t value);
+  public:
+
+  // required bool a_shrinkToFit = 32;
+  bool has_a_shrinktofit() const;
+  private:
+  bool _internal_has_a_shrinktofit() const;
+  public:
+  void clear_a_shrinktofit();
+  bool a_shrinktofit() const;
+  void set_a_shrinktofit(bool value);
+  private:
+  bool _internal_a_shrinktofit() const;
+  void _internal_set_a_shrinktofit(bool value);
+  public:
+
+  // required bool a_printReversed = 37;
+  bool has_a_printreversed() const;
+  private:
+  bool _internal_has_a_printreversed() const;
+  public:
+  void clear_a_printreversed();
+  bool a_printreversed() const;
+  void set_a_printreversed(bool value);
+  private:
+  bool _internal_a_printreversed() const;
+  void _internal_set_a_printreversed(bool value);
+  public:
+
+  // required bool a_printInColor = 38;
+  bool has_a_printincolor() const;
+  private:
+  bool _internal_has_a_printincolor() const;
+  public:
+  void clear_a_printincolor();
+  bool a_printincolor() const;
+  void set_a_printincolor(bool value);
+  private:
+  bool _internal_a_printincolor() const;
+  void _internal_set_a_printincolor(bool value);
+  public:
+
+  // required bool a_isInitializedFromPrinter = 47;
+  bool has_a_isinitializedfromprinter() const;
+  private:
+  bool _internal_has_a_isinitializedfromprinter() const;
+  public:
+  void clear_a_isinitializedfromprinter();
+  bool a_isinitializedfromprinter() const;
+  void set_a_isinitializedfromprinter(bool value);
+  private:
+  bool _internal_a_isinitializedfromprinter() const;
+  void _internal_set_a_isinitializedfromprinter(bool value);
+  public:
+
+  // required sint32 a_orientation = 39;
+  bool has_a_orientation() const;
+  private:
+  bool _internal_has_a_orientation() const;
+  public:
+  void clear_a_orientation();
+  int32_t a_orientation() const;
+  void set_a_orientation(int32_t value);
+  private:
+  int32_t _internal_a_orientation() const;
+  void _internal_set_a_orientation(int32_t value);
+  public:
+
+  // required sint32 a_numCopies = 40;
+  bool has_a_numcopies() const;
+  private:
+  bool _internal_has_a_numcopies() const;
+  public:
+  void clear_a_numcopies();
+  int32_t a_numcopies() const;
+  void set_a_numcopies(int32_t value);
+  private:
+  int32_t _internal_a_numcopies() const;
+  void _internal_set_a_numcopies(int32_t value);
+  public:
+
+  // required sint32 a_numPagesPerSheet = 41;
+  bool has_a_numpagespersheet() const;
+  private:
+  bool _internal_has_a_numpagespersheet() const;
+  public:
+  void clear_a_numpagespersheet();
+  int32_t a_numpagespersheet() const;
+  void set_a_numpagespersheet(int32_t value);
+  private:
+  int32_t _internal_a_numpagespersheet() const;
+  void _internal_set_a_numpagespersheet(int32_t value);
+  public:
+
+  // required sint32 a_outputDestination = 42;
+  bool has_a_outputdestination() const;
+  private:
+  bool _internal_has_a_outputdestination() const;
+  public:
+  void clear_a_outputdestination();
+  int32_t a_outputdestination() const;
+  void set_a_outputdestination(int32_t value);
+  private:
+  int32_t _internal_a_outputdestination() const;
+  void _internal_set_a_outputdestination(int32_t value);
+  public:
+
+  // required sint32 a_outputFormat = 43;
+  bool has_a_outputformat() const;
+  private:
+  bool _internal_has_a_outputformat() const;
+  public:
+  void clear_a_outputformat();
+  int32_t a_outputformat() const;
+  void set_a_outputformat(int32_t value);
+  private:
+  int32_t _internal_a_outputformat() const;
+  void _internal_set_a_outputformat(int32_t value);
+  public:
+
+  // required sint32 a_printPageDelay = 44;
+  bool has_a_printpagedelay() const;
+  private:
+  bool _internal_has_a_printpagedelay() const;
+  public:
+  void clear_a_printpagedelay();
+  int32_t a_printpagedelay() const;
+  void set_a_printpagedelay(int32_t value);
+  private:
+  int32_t _internal_a_printpagedelay() const;
+  void _internal_set_a_printpagedelay(int32_t value);
+  public:
+
+  // required sint32 a_resolution = 45;
+  bool has_a_resolution() const;
+  private:
+  bool _internal_has_a_resolution() const;
+  public:
+  void clear_a_resolution();
+  int32_t a_resolution() const;
+  void set_a_resolution(int32_t value);
+  private:
+  int32_t _internal_a_resolution() const;
+  void _internal_set_a_resolution(int32_t value);
+  public:
+
+  // required sint32 a_duplex = 46;
+  bool has_a_duplex() const;
+  private:
+  bool _internal_has_a_duplex() const;
+  public:
+  void clear_a_duplex();
+  int32_t a_duplex() const;
+  void set_a_duplex(int32_t value);
+  private:
+  int32_t _internal_a_duplex() const;
+  void _internal_set_a_duplex(int32_t value);
+  public:
+
+  // required bool a_isInitializedFromPrefs = 48;
+  bool has_a_isinitializedfromprefs() const;
+  private:
+  bool _internal_has_a_isinitializedfromprefs() const;
+  public:
+  void clear_a_isinitializedfromprefs();
+  bool a_isinitializedfromprefs() const;
+  void set_a_isinitializedfromprefs(bool value);
+  private:
+  bool _internal_a_isinitializedfromprefs() const;
+  void _internal_set_a_isinitializedfromprefs(bool value);
+  public:
+
+  // required uint32 a_destination = 54;
+  bool has_a_destination() const;
+  private:
+  bool _internal_has_a_destination() const;
+  public:
+  void clear_a_destination();
+  uint32_t a_destination() const;
+  void set_a_destination(uint32_t value);
+  private:
+  uint32_t _internal_a_destination() const;
+  void _internal_set_a_destination(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.embedding.PrintData)
@@ -1201,60 +1201,60 @@ class PrintData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<2> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > pageranges_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > devmodedata_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue > gtkprintsettings_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr remoteprintjob_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr title_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr docurl_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr headerstrleft_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr headerstrcenter_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr headerstrright_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr footerstrleft_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr footerstrcenter_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr footerstrright_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr paperid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr drivername_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr devicename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr disposition_;
-    double edgetop_;
-    double edgeleft_;
-    double edgebottom_;
-    double edgeright_;
-    double margintop_;
-    double marginleft_;
-    double marginbottom_;
-    double marginright_;
-    double unwriteablemargintop_;
-    double unwriteablemarginleft_;
-    double unwriteablemarginbottom_;
-    double unwriteablemarginright_;
-    double scaling_;
-    bool printbgcolors_;
-    bool printbgimages_;
-    bool honorpagerulemargins_;
-    bool usepagerulesizeaspapersize_;
-    bool ignoreunwriteablemargins_;
-    bool showmarginguides_;
-    bool printselectiononly_;
-    bool printsilent_;
-    double paperwidth_;
-    double paperheight_;
-    int32_t papersizeunit_;
-    bool shrinktofit_;
-    bool printreversed_;
-    bool printincolor_;
-    bool isinitializedfromprinter_;
-    int32_t orientation_;
-    int32_t numcopies_;
-    int32_t numpagespersheet_;
-    int32_t outputdestination_;
-    int32_t outputformat_;
-    int32_t printpagedelay_;
-    int32_t resolution_;
-    int32_t duplex_;
-    bool isinitializedfromprefs_;
-    uint32_t destination_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_pageranges_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_devmodedata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue > a_gtkprintsettings_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_remoteprintjob_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_title_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_docurl_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_headerstrleft_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_headerstrcenter_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_headerstrright_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_footerstrleft_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_footerstrcenter_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_footerstrright_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_paperid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_drivername_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_devicename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_disposition_;
+    double a_edgetop_;
+    double a_edgeleft_;
+    double a_edgebottom_;
+    double a_edgeright_;
+    double a_margintop_;
+    double a_marginleft_;
+    double a_marginbottom_;
+    double a_marginright_;
+    double a_unwriteablemargintop_;
+    double a_unwriteablemarginleft_;
+    double a_unwriteablemarginbottom_;
+    double a_unwriteablemarginright_;
+    double a_scaling_;
+    bool a_printbgcolors_;
+    bool a_printbgimages_;
+    bool a_honorpagerulemargins_;
+    bool a_usepagerulesizeaspapersize_;
+    bool a_ignoreunwriteablemargins_;
+    bool a_showmarginguides_;
+    bool a_printselectiononly_;
+    bool a_printsilent_;
+    double a_paperwidth_;
+    double a_paperheight_;
+    int32_t a_papersizeunit_;
+    bool a_shrinktofit_;
+    bool a_printreversed_;
+    bool a_printincolor_;
+    bool a_isinitializedfromprinter_;
+    int32_t a_orientation_;
+    int32_t a_numcopies_;
+    int32_t a_numpagespersheet_;
+    int32_t a_outputdestination_;
+    int32_t a_outputformat_;
+    int32_t a_printpagedelay_;
+    int32_t a_resolution_;
+    int32_t a_duplex_;
+    bool a_isinitializedfromprefs_;
+    uint32_t a_destination_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto;
@@ -1270,2226 +1270,2226 @@ class PrintData final :
 #endif  // __GNUC__
 // CStringKeyValue
 
-// required bytes key = 1;
-inline bool CStringKeyValue::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool CStringKeyValue::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CStringKeyValue::has_key() const {
-  return _internal_has_key();
+inline bool CStringKeyValue::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void CStringKeyValue::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void CStringKeyValue::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CStringKeyValue::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.CStringKeyValue.key)
-  return _internal_key();
+inline const std::string& CStringKeyValue::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.CStringKeyValue.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CStringKeyValue::set_key(ArgT0&& arg0, ArgT... args) {
+void CStringKeyValue::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.CStringKeyValue.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.CStringKeyValue.a_key)
 }
-inline std::string* CStringKeyValue::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.CStringKeyValue.key)
+inline std::string* CStringKeyValue::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.CStringKeyValue.a_key)
   return _s;
 }
-inline const std::string& CStringKeyValue::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& CStringKeyValue::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void CStringKeyValue::_internal_set_key(const std::string& value) {
+inline void CStringKeyValue::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CStringKeyValue::_internal_mutable_key() {
+inline std::string* CStringKeyValue::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CStringKeyValue::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.CStringKeyValue.key)
-  if (!_internal_has_key()) {
+inline std::string* CStringKeyValue::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.CStringKeyValue.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CStringKeyValue::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void CStringKeyValue::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.CStringKeyValue.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.CStringKeyValue.a_key)
 }
 
-// required bytes value = 2;
-inline bool CStringKeyValue::_internal_has_value() const {
+// required bytes a_value = 2;
+inline bool CStringKeyValue::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool CStringKeyValue::has_value() const {
-  return _internal_has_value();
+inline bool CStringKeyValue::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void CStringKeyValue::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void CStringKeyValue::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& CStringKeyValue::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.CStringKeyValue.value)
-  return _internal_value();
+inline const std::string& CStringKeyValue::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.CStringKeyValue.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CStringKeyValue::set_value(ArgT0&& arg0, ArgT... args) {
+void CStringKeyValue::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.CStringKeyValue.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.CStringKeyValue.a_value)
 }
-inline std::string* CStringKeyValue::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.CStringKeyValue.value)
+inline std::string* CStringKeyValue::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.CStringKeyValue.a_value)
   return _s;
 }
-inline const std::string& CStringKeyValue::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& CStringKeyValue::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void CStringKeyValue::_internal_set_value(const std::string& value) {
+inline void CStringKeyValue::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CStringKeyValue::_internal_mutable_value() {
+inline std::string* CStringKeyValue::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CStringKeyValue::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.CStringKeyValue.value)
-  if (!_internal_has_value()) {
+inline std::string* CStringKeyValue::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.CStringKeyValue.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CStringKeyValue::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void CStringKeyValue::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.CStringKeyValue.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.CStringKeyValue.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // PrintData
 
-// required bytes remotePrintJob = 1;
-inline bool PrintData::_internal_has_remoteprintjob() const {
+// required bytes a_remotePrintJob = 1;
+inline bool PrintData::_internal_has_a_remoteprintjob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PrintData::has_remoteprintjob() const {
-  return _internal_has_remoteprintjob();
+inline bool PrintData::has_a_remoteprintjob() const {
+  return _internal_has_a_remoteprintjob();
 }
-inline void PrintData::clear_remoteprintjob() {
-  _impl_.remoteprintjob_.ClearToEmpty();
+inline void PrintData::clear_a_remoteprintjob() {
+  _impl_.a_remoteprintjob_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PrintData::remoteprintjob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.remotePrintJob)
-  return _internal_remoteprintjob();
+inline const std::string& PrintData::a_remoteprintjob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_remotePrintJob)
+  return _internal_a_remoteprintjob();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_remoteprintjob(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_remoteprintjob(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.remoteprintjob_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.remotePrintJob)
+ _impl_.a_remoteprintjob_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_remotePrintJob)
 }
-inline std::string* PrintData::mutable_remoteprintjob() {
-  std::string* _s = _internal_mutable_remoteprintjob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.remotePrintJob)
+inline std::string* PrintData::mutable_a_remoteprintjob() {
+  std::string* _s = _internal_mutable_a_remoteprintjob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_remotePrintJob)
   return _s;
 }
-inline const std::string& PrintData::_internal_remoteprintjob() const {
-  return _impl_.remoteprintjob_.Get();
+inline const std::string& PrintData::_internal_a_remoteprintjob() const {
+  return _impl_.a_remoteprintjob_.Get();
 }
-inline void PrintData::_internal_set_remoteprintjob(const std::string& value) {
+inline void PrintData::_internal_set_a_remoteprintjob(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.remoteprintjob_.Set(value, GetArenaForAllocation());
+  _impl_.a_remoteprintjob_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_remoteprintjob() {
+inline std::string* PrintData::_internal_mutable_a_remoteprintjob() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.remoteprintjob_.Mutable(GetArenaForAllocation());
+  return _impl_.a_remoteprintjob_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_remoteprintjob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.remotePrintJob)
-  if (!_internal_has_remoteprintjob()) {
+inline std::string* PrintData::release_a_remoteprintjob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_remotePrintJob)
+  if (!_internal_has_a_remoteprintjob()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.remoteprintjob_.Release();
+  auto* p = _impl_.a_remoteprintjob_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remoteprintjob_.IsDefault()) {
-    _impl_.remoteprintjob_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remoteprintjob_.IsDefault()) {
+    _impl_.a_remoteprintjob_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_remoteprintjob(std::string* remoteprintjob) {
-  if (remoteprintjob != nullptr) {
+inline void PrintData::set_allocated_a_remoteprintjob(std::string* a_remoteprintjob) {
+  if (a_remoteprintjob != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.remoteprintjob_.SetAllocated(remoteprintjob, GetArenaForAllocation());
+  _impl_.a_remoteprintjob_.SetAllocated(a_remoteprintjob, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remoteprintjob_.IsDefault()) {
-    _impl_.remoteprintjob_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remoteprintjob_.IsDefault()) {
+    _impl_.a_remoteprintjob_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.remotePrintJob)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_remotePrintJob)
 }
 
-// required double edgeTop = 2;
-inline bool PrintData::_internal_has_edgetop() const {
+// required double a_edgeTop = 2;
+inline bool PrintData::_internal_has_a_edgetop() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
-inline bool PrintData::has_edgetop() const {
-  return _internal_has_edgetop();
+inline bool PrintData::has_a_edgetop() const {
+  return _internal_has_a_edgetop();
 }
-inline void PrintData::clear_edgetop() {
-  _impl_.edgetop_ = 0;
+inline void PrintData::clear_a_edgetop() {
+  _impl_.a_edgetop_ = 0;
   _impl_._has_bits_[0] &= ~0x00002000u;
 }
-inline double PrintData::_internal_edgetop() const {
-  return _impl_.edgetop_;
+inline double PrintData::_internal_a_edgetop() const {
+  return _impl_.a_edgetop_;
 }
-inline double PrintData::edgetop() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.edgeTop)
-  return _internal_edgetop();
+inline double PrintData::a_edgetop() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_edgeTop)
+  return _internal_a_edgetop();
 }
-inline void PrintData::_internal_set_edgetop(double value) {
+inline void PrintData::_internal_set_a_edgetop(double value) {
   _impl_._has_bits_[0] |= 0x00002000u;
-  _impl_.edgetop_ = value;
+  _impl_.a_edgetop_ = value;
 }
-inline void PrintData::set_edgetop(double value) {
-  _internal_set_edgetop(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.edgeTop)
+inline void PrintData::set_a_edgetop(double value) {
+  _internal_set_a_edgetop(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeTop)
 }
 
-// required double edgeLeft = 3;
-inline bool PrintData::_internal_has_edgeleft() const {
+// required double a_edgeLeft = 3;
+inline bool PrintData::_internal_has_a_edgeleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
 }
-inline bool PrintData::has_edgeleft() const {
-  return _internal_has_edgeleft();
+inline bool PrintData::has_a_edgeleft() const {
+  return _internal_has_a_edgeleft();
 }
-inline void PrintData::clear_edgeleft() {
-  _impl_.edgeleft_ = 0;
+inline void PrintData::clear_a_edgeleft() {
+  _impl_.a_edgeleft_ = 0;
   _impl_._has_bits_[0] &= ~0x00004000u;
 }
-inline double PrintData::_internal_edgeleft() const {
-  return _impl_.edgeleft_;
+inline double PrintData::_internal_a_edgeleft() const {
+  return _impl_.a_edgeleft_;
 }
-inline double PrintData::edgeleft() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.edgeLeft)
-  return _internal_edgeleft();
+inline double PrintData::a_edgeleft() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_edgeLeft)
+  return _internal_a_edgeleft();
 }
-inline void PrintData::_internal_set_edgeleft(double value) {
+inline void PrintData::_internal_set_a_edgeleft(double value) {
   _impl_._has_bits_[0] |= 0x00004000u;
-  _impl_.edgeleft_ = value;
+  _impl_.a_edgeleft_ = value;
 }
-inline void PrintData::set_edgeleft(double value) {
-  _internal_set_edgeleft(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.edgeLeft)
+inline void PrintData::set_a_edgeleft(double value) {
+  _internal_set_a_edgeleft(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeLeft)
 }
 
-// required double edgeBottom = 4;
-inline bool PrintData::_internal_has_edgebottom() const {
+// required double a_edgeBottom = 4;
+inline bool PrintData::_internal_has_a_edgebottom() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
   return value;
 }
-inline bool PrintData::has_edgebottom() const {
-  return _internal_has_edgebottom();
+inline bool PrintData::has_a_edgebottom() const {
+  return _internal_has_a_edgebottom();
 }
-inline void PrintData::clear_edgebottom() {
-  _impl_.edgebottom_ = 0;
+inline void PrintData::clear_a_edgebottom() {
+  _impl_.a_edgebottom_ = 0;
   _impl_._has_bits_[0] &= ~0x00008000u;
 }
-inline double PrintData::_internal_edgebottom() const {
-  return _impl_.edgebottom_;
+inline double PrintData::_internal_a_edgebottom() const {
+  return _impl_.a_edgebottom_;
 }
-inline double PrintData::edgebottom() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.edgeBottom)
-  return _internal_edgebottom();
+inline double PrintData::a_edgebottom() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_edgeBottom)
+  return _internal_a_edgebottom();
 }
-inline void PrintData::_internal_set_edgebottom(double value) {
+inline void PrintData::_internal_set_a_edgebottom(double value) {
   _impl_._has_bits_[0] |= 0x00008000u;
-  _impl_.edgebottom_ = value;
+  _impl_.a_edgebottom_ = value;
 }
-inline void PrintData::set_edgebottom(double value) {
-  _internal_set_edgebottom(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.edgeBottom)
+inline void PrintData::set_a_edgebottom(double value) {
+  _internal_set_a_edgebottom(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeBottom)
 }
 
-// required double edgeRight = 5;
-inline bool PrintData::_internal_has_edgeright() const {
+// required double a_edgeRight = 5;
+inline bool PrintData::_internal_has_a_edgeright() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
   return value;
 }
-inline bool PrintData::has_edgeright() const {
-  return _internal_has_edgeright();
+inline bool PrintData::has_a_edgeright() const {
+  return _internal_has_a_edgeright();
 }
-inline void PrintData::clear_edgeright() {
-  _impl_.edgeright_ = 0;
+inline void PrintData::clear_a_edgeright() {
+  _impl_.a_edgeright_ = 0;
   _impl_._has_bits_[0] &= ~0x00010000u;
 }
-inline double PrintData::_internal_edgeright() const {
-  return _impl_.edgeright_;
+inline double PrintData::_internal_a_edgeright() const {
+  return _impl_.a_edgeright_;
 }
-inline double PrintData::edgeright() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.edgeRight)
-  return _internal_edgeright();
+inline double PrintData::a_edgeright() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_edgeRight)
+  return _internal_a_edgeright();
 }
-inline void PrintData::_internal_set_edgeright(double value) {
+inline void PrintData::_internal_set_a_edgeright(double value) {
   _impl_._has_bits_[0] |= 0x00010000u;
-  _impl_.edgeright_ = value;
+  _impl_.a_edgeright_ = value;
 }
-inline void PrintData::set_edgeright(double value) {
-  _internal_set_edgeright(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.edgeRight)
+inline void PrintData::set_a_edgeright(double value) {
+  _internal_set_a_edgeright(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_edgeRight)
 }
 
-// required double marginTop = 6;
-inline bool PrintData::_internal_has_margintop() const {
+// required double a_marginTop = 6;
+inline bool PrintData::_internal_has_a_margintop() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
-inline bool PrintData::has_margintop() const {
-  return _internal_has_margintop();
+inline bool PrintData::has_a_margintop() const {
+  return _internal_has_a_margintop();
 }
-inline void PrintData::clear_margintop() {
-  _impl_.margintop_ = 0;
+inline void PrintData::clear_a_margintop() {
+  _impl_.a_margintop_ = 0;
   _impl_._has_bits_[0] &= ~0x00020000u;
 }
-inline double PrintData::_internal_margintop() const {
-  return _impl_.margintop_;
+inline double PrintData::_internal_a_margintop() const {
+  return _impl_.a_margintop_;
 }
-inline double PrintData::margintop() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.marginTop)
-  return _internal_margintop();
+inline double PrintData::a_margintop() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_marginTop)
+  return _internal_a_margintop();
 }
-inline void PrintData::_internal_set_margintop(double value) {
+inline void PrintData::_internal_set_a_margintop(double value) {
   _impl_._has_bits_[0] |= 0x00020000u;
-  _impl_.margintop_ = value;
+  _impl_.a_margintop_ = value;
 }
-inline void PrintData::set_margintop(double value) {
-  _internal_set_margintop(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.marginTop)
+inline void PrintData::set_a_margintop(double value) {
+  _internal_set_a_margintop(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginTop)
 }
 
-// required double marginLeft = 7;
-inline bool PrintData::_internal_has_marginleft() const {
+// required double a_marginLeft = 7;
+inline bool PrintData::_internal_has_a_marginleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
-inline bool PrintData::has_marginleft() const {
-  return _internal_has_marginleft();
+inline bool PrintData::has_a_marginleft() const {
+  return _internal_has_a_marginleft();
 }
-inline void PrintData::clear_marginleft() {
-  _impl_.marginleft_ = 0;
+inline void PrintData::clear_a_marginleft() {
+  _impl_.a_marginleft_ = 0;
   _impl_._has_bits_[0] &= ~0x00040000u;
 }
-inline double PrintData::_internal_marginleft() const {
-  return _impl_.marginleft_;
+inline double PrintData::_internal_a_marginleft() const {
+  return _impl_.a_marginleft_;
 }
-inline double PrintData::marginleft() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.marginLeft)
-  return _internal_marginleft();
+inline double PrintData::a_marginleft() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_marginLeft)
+  return _internal_a_marginleft();
 }
-inline void PrintData::_internal_set_marginleft(double value) {
+inline void PrintData::_internal_set_a_marginleft(double value) {
   _impl_._has_bits_[0] |= 0x00040000u;
-  _impl_.marginleft_ = value;
+  _impl_.a_marginleft_ = value;
 }
-inline void PrintData::set_marginleft(double value) {
-  _internal_set_marginleft(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.marginLeft)
+inline void PrintData::set_a_marginleft(double value) {
+  _internal_set_a_marginleft(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginLeft)
 }
 
-// required double marginBottom = 8;
-inline bool PrintData::_internal_has_marginbottom() const {
+// required double a_marginBottom = 8;
+inline bool PrintData::_internal_has_a_marginbottom() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
-inline bool PrintData::has_marginbottom() const {
-  return _internal_has_marginbottom();
+inline bool PrintData::has_a_marginbottom() const {
+  return _internal_has_a_marginbottom();
 }
-inline void PrintData::clear_marginbottom() {
-  _impl_.marginbottom_ = 0;
+inline void PrintData::clear_a_marginbottom() {
+  _impl_.a_marginbottom_ = 0;
   _impl_._has_bits_[0] &= ~0x00080000u;
 }
-inline double PrintData::_internal_marginbottom() const {
-  return _impl_.marginbottom_;
+inline double PrintData::_internal_a_marginbottom() const {
+  return _impl_.a_marginbottom_;
 }
-inline double PrintData::marginbottom() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.marginBottom)
-  return _internal_marginbottom();
+inline double PrintData::a_marginbottom() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_marginBottom)
+  return _internal_a_marginbottom();
 }
-inline void PrintData::_internal_set_marginbottom(double value) {
+inline void PrintData::_internal_set_a_marginbottom(double value) {
   _impl_._has_bits_[0] |= 0x00080000u;
-  _impl_.marginbottom_ = value;
+  _impl_.a_marginbottom_ = value;
 }
-inline void PrintData::set_marginbottom(double value) {
-  _internal_set_marginbottom(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.marginBottom)
+inline void PrintData::set_a_marginbottom(double value) {
+  _internal_set_a_marginbottom(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginBottom)
 }
 
-// required double marginRight = 9;
-inline bool PrintData::_internal_has_marginright() const {
+// required double a_marginRight = 9;
+inline bool PrintData::_internal_has_a_marginright() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
-inline bool PrintData::has_marginright() const {
-  return _internal_has_marginright();
+inline bool PrintData::has_a_marginright() const {
+  return _internal_has_a_marginright();
 }
-inline void PrintData::clear_marginright() {
-  _impl_.marginright_ = 0;
+inline void PrintData::clear_a_marginright() {
+  _impl_.a_marginright_ = 0;
   _impl_._has_bits_[0] &= ~0x00100000u;
 }
-inline double PrintData::_internal_marginright() const {
-  return _impl_.marginright_;
+inline double PrintData::_internal_a_marginright() const {
+  return _impl_.a_marginright_;
 }
-inline double PrintData::marginright() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.marginRight)
-  return _internal_marginright();
+inline double PrintData::a_marginright() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_marginRight)
+  return _internal_a_marginright();
 }
-inline void PrintData::_internal_set_marginright(double value) {
+inline void PrintData::_internal_set_a_marginright(double value) {
   _impl_._has_bits_[0] |= 0x00100000u;
-  _impl_.marginright_ = value;
+  _impl_.a_marginright_ = value;
 }
-inline void PrintData::set_marginright(double value) {
-  _internal_set_marginright(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.marginRight)
+inline void PrintData::set_a_marginright(double value) {
+  _internal_set_a_marginright(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_marginRight)
 }
 
-// required double unwriteableMarginTop = 10;
-inline bool PrintData::_internal_has_unwriteablemargintop() const {
+// required double a_unwriteableMarginTop = 10;
+inline bool PrintData::_internal_has_a_unwriteablemargintop() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
-inline bool PrintData::has_unwriteablemargintop() const {
-  return _internal_has_unwriteablemargintop();
+inline bool PrintData::has_a_unwriteablemargintop() const {
+  return _internal_has_a_unwriteablemargintop();
 }
-inline void PrintData::clear_unwriteablemargintop() {
-  _impl_.unwriteablemargintop_ = 0;
+inline void PrintData::clear_a_unwriteablemargintop() {
+  _impl_.a_unwriteablemargintop_ = 0;
   _impl_._has_bits_[0] &= ~0x00200000u;
 }
-inline double PrintData::_internal_unwriteablemargintop() const {
-  return _impl_.unwriteablemargintop_;
+inline double PrintData::_internal_a_unwriteablemargintop() const {
+  return _impl_.a_unwriteablemargintop_;
 }
-inline double PrintData::unwriteablemargintop() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.unwriteableMarginTop)
-  return _internal_unwriteablemargintop();
+inline double PrintData::a_unwriteablemargintop() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginTop)
+  return _internal_a_unwriteablemargintop();
 }
-inline void PrintData::_internal_set_unwriteablemargintop(double value) {
+inline void PrintData::_internal_set_a_unwriteablemargintop(double value) {
   _impl_._has_bits_[0] |= 0x00200000u;
-  _impl_.unwriteablemargintop_ = value;
+  _impl_.a_unwriteablemargintop_ = value;
 }
-inline void PrintData::set_unwriteablemargintop(double value) {
-  _internal_set_unwriteablemargintop(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.unwriteableMarginTop)
+inline void PrintData::set_a_unwriteablemargintop(double value) {
+  _internal_set_a_unwriteablemargintop(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginTop)
 }
 
-// required double unwriteableMarginLeft = 11;
-inline bool PrintData::_internal_has_unwriteablemarginleft() const {
+// required double a_unwriteableMarginLeft = 11;
+inline bool PrintData::_internal_has_a_unwriteablemarginleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
-inline bool PrintData::has_unwriteablemarginleft() const {
-  return _internal_has_unwriteablemarginleft();
+inline bool PrintData::has_a_unwriteablemarginleft() const {
+  return _internal_has_a_unwriteablemarginleft();
 }
-inline void PrintData::clear_unwriteablemarginleft() {
-  _impl_.unwriteablemarginleft_ = 0;
+inline void PrintData::clear_a_unwriteablemarginleft() {
+  _impl_.a_unwriteablemarginleft_ = 0;
   _impl_._has_bits_[0] &= ~0x00400000u;
 }
-inline double PrintData::_internal_unwriteablemarginleft() const {
-  return _impl_.unwriteablemarginleft_;
+inline double PrintData::_internal_a_unwriteablemarginleft() const {
+  return _impl_.a_unwriteablemarginleft_;
 }
-inline double PrintData::unwriteablemarginleft() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.unwriteableMarginLeft)
-  return _internal_unwriteablemarginleft();
+inline double PrintData::a_unwriteablemarginleft() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginLeft)
+  return _internal_a_unwriteablemarginleft();
 }
-inline void PrintData::_internal_set_unwriteablemarginleft(double value) {
+inline void PrintData::_internal_set_a_unwriteablemarginleft(double value) {
   _impl_._has_bits_[0] |= 0x00400000u;
-  _impl_.unwriteablemarginleft_ = value;
+  _impl_.a_unwriteablemarginleft_ = value;
 }
-inline void PrintData::set_unwriteablemarginleft(double value) {
-  _internal_set_unwriteablemarginleft(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.unwriteableMarginLeft)
+inline void PrintData::set_a_unwriteablemarginleft(double value) {
+  _internal_set_a_unwriteablemarginleft(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginLeft)
 }
 
-// required double unwriteableMarginBottom = 12;
-inline bool PrintData::_internal_has_unwriteablemarginbottom() const {
+// required double a_unwriteableMarginBottom = 12;
+inline bool PrintData::_internal_has_a_unwriteablemarginbottom() const {
   bool value = (_impl_._has_bits_[0] & 0x00800000u) != 0;
   return value;
 }
-inline bool PrintData::has_unwriteablemarginbottom() const {
-  return _internal_has_unwriteablemarginbottom();
+inline bool PrintData::has_a_unwriteablemarginbottom() const {
+  return _internal_has_a_unwriteablemarginbottom();
 }
-inline void PrintData::clear_unwriteablemarginbottom() {
-  _impl_.unwriteablemarginbottom_ = 0;
+inline void PrintData::clear_a_unwriteablemarginbottom() {
+  _impl_.a_unwriteablemarginbottom_ = 0;
   _impl_._has_bits_[0] &= ~0x00800000u;
 }
-inline double PrintData::_internal_unwriteablemarginbottom() const {
-  return _impl_.unwriteablemarginbottom_;
+inline double PrintData::_internal_a_unwriteablemarginbottom() const {
+  return _impl_.a_unwriteablemarginbottom_;
 }
-inline double PrintData::unwriteablemarginbottom() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.unwriteableMarginBottom)
-  return _internal_unwriteablemarginbottom();
+inline double PrintData::a_unwriteablemarginbottom() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginBottom)
+  return _internal_a_unwriteablemarginbottom();
 }
-inline void PrintData::_internal_set_unwriteablemarginbottom(double value) {
+inline void PrintData::_internal_set_a_unwriteablemarginbottom(double value) {
   _impl_._has_bits_[0] |= 0x00800000u;
-  _impl_.unwriteablemarginbottom_ = value;
+  _impl_.a_unwriteablemarginbottom_ = value;
 }
-inline void PrintData::set_unwriteablemarginbottom(double value) {
-  _internal_set_unwriteablemarginbottom(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.unwriteableMarginBottom)
+inline void PrintData::set_a_unwriteablemarginbottom(double value) {
+  _internal_set_a_unwriteablemarginbottom(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginBottom)
 }
 
-// required double unwriteableMarginRight = 13;
-inline bool PrintData::_internal_has_unwriteablemarginright() const {
+// required double a_unwriteableMarginRight = 13;
+inline bool PrintData::_internal_has_a_unwriteablemarginright() const {
   bool value = (_impl_._has_bits_[0] & 0x01000000u) != 0;
   return value;
 }
-inline bool PrintData::has_unwriteablemarginright() const {
-  return _internal_has_unwriteablemarginright();
+inline bool PrintData::has_a_unwriteablemarginright() const {
+  return _internal_has_a_unwriteablemarginright();
 }
-inline void PrintData::clear_unwriteablemarginright() {
-  _impl_.unwriteablemarginright_ = 0;
+inline void PrintData::clear_a_unwriteablemarginright() {
+  _impl_.a_unwriteablemarginright_ = 0;
   _impl_._has_bits_[0] &= ~0x01000000u;
 }
-inline double PrintData::_internal_unwriteablemarginright() const {
-  return _impl_.unwriteablemarginright_;
+inline double PrintData::_internal_a_unwriteablemarginright() const {
+  return _impl_.a_unwriteablemarginright_;
 }
-inline double PrintData::unwriteablemarginright() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.unwriteableMarginRight)
-  return _internal_unwriteablemarginright();
+inline double PrintData::a_unwriteablemarginright() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginRight)
+  return _internal_a_unwriteablemarginright();
 }
-inline void PrintData::_internal_set_unwriteablemarginright(double value) {
+inline void PrintData::_internal_set_a_unwriteablemarginright(double value) {
   _impl_._has_bits_[0] |= 0x01000000u;
-  _impl_.unwriteablemarginright_ = value;
+  _impl_.a_unwriteablemarginright_ = value;
 }
-inline void PrintData::set_unwriteablemarginright(double value) {
-  _internal_set_unwriteablemarginright(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.unwriteableMarginRight)
+inline void PrintData::set_a_unwriteablemarginright(double value) {
+  _internal_set_a_unwriteablemarginright(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_unwriteableMarginRight)
 }
 
-// required double scaling = 14;
-inline bool PrintData::_internal_has_scaling() const {
+// required double a_scaling = 14;
+inline bool PrintData::_internal_has_a_scaling() const {
   bool value = (_impl_._has_bits_[0] & 0x02000000u) != 0;
   return value;
 }
-inline bool PrintData::has_scaling() const {
-  return _internal_has_scaling();
+inline bool PrintData::has_a_scaling() const {
+  return _internal_has_a_scaling();
 }
-inline void PrintData::clear_scaling() {
-  _impl_.scaling_ = 0;
+inline void PrintData::clear_a_scaling() {
+  _impl_.a_scaling_ = 0;
   _impl_._has_bits_[0] &= ~0x02000000u;
 }
-inline double PrintData::_internal_scaling() const {
-  return _impl_.scaling_;
+inline double PrintData::_internal_a_scaling() const {
+  return _impl_.a_scaling_;
 }
-inline double PrintData::scaling() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.scaling)
-  return _internal_scaling();
+inline double PrintData::a_scaling() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_scaling)
+  return _internal_a_scaling();
 }
-inline void PrintData::_internal_set_scaling(double value) {
+inline void PrintData::_internal_set_a_scaling(double value) {
   _impl_._has_bits_[0] |= 0x02000000u;
-  _impl_.scaling_ = value;
+  _impl_.a_scaling_ = value;
 }
-inline void PrintData::set_scaling(double value) {
-  _internal_set_scaling(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.scaling)
+inline void PrintData::set_a_scaling(double value) {
+  _internal_set_a_scaling(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_scaling)
 }
 
-// required bool printBGColors = 15;
-inline bool PrintData::_internal_has_printbgcolors() const {
+// required bool a_printBGColors = 15;
+inline bool PrintData::_internal_has_a_printbgcolors() const {
   bool value = (_impl_._has_bits_[0] & 0x04000000u) != 0;
   return value;
 }
-inline bool PrintData::has_printbgcolors() const {
-  return _internal_has_printbgcolors();
+inline bool PrintData::has_a_printbgcolors() const {
+  return _internal_has_a_printbgcolors();
 }
-inline void PrintData::clear_printbgcolors() {
-  _impl_.printbgcolors_ = false;
+inline void PrintData::clear_a_printbgcolors() {
+  _impl_.a_printbgcolors_ = false;
   _impl_._has_bits_[0] &= ~0x04000000u;
 }
-inline bool PrintData::_internal_printbgcolors() const {
-  return _impl_.printbgcolors_;
+inline bool PrintData::_internal_a_printbgcolors() const {
+  return _impl_.a_printbgcolors_;
 }
-inline bool PrintData::printbgcolors() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printBGColors)
-  return _internal_printbgcolors();
+inline bool PrintData::a_printbgcolors() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printBGColors)
+  return _internal_a_printbgcolors();
 }
-inline void PrintData::_internal_set_printbgcolors(bool value) {
+inline void PrintData::_internal_set_a_printbgcolors(bool value) {
   _impl_._has_bits_[0] |= 0x04000000u;
-  _impl_.printbgcolors_ = value;
+  _impl_.a_printbgcolors_ = value;
 }
-inline void PrintData::set_printbgcolors(bool value) {
-  _internal_set_printbgcolors(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printBGColors)
+inline void PrintData::set_a_printbgcolors(bool value) {
+  _internal_set_a_printbgcolors(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printBGColors)
 }
 
-// required bool printBGImages = 16;
-inline bool PrintData::_internal_has_printbgimages() const {
+// required bool a_printBGImages = 16;
+inline bool PrintData::_internal_has_a_printbgimages() const {
   bool value = (_impl_._has_bits_[0] & 0x08000000u) != 0;
   return value;
 }
-inline bool PrintData::has_printbgimages() const {
-  return _internal_has_printbgimages();
+inline bool PrintData::has_a_printbgimages() const {
+  return _internal_has_a_printbgimages();
 }
-inline void PrintData::clear_printbgimages() {
-  _impl_.printbgimages_ = false;
+inline void PrintData::clear_a_printbgimages() {
+  _impl_.a_printbgimages_ = false;
   _impl_._has_bits_[0] &= ~0x08000000u;
 }
-inline bool PrintData::_internal_printbgimages() const {
-  return _impl_.printbgimages_;
+inline bool PrintData::_internal_a_printbgimages() const {
+  return _impl_.a_printbgimages_;
 }
-inline bool PrintData::printbgimages() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printBGImages)
-  return _internal_printbgimages();
+inline bool PrintData::a_printbgimages() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printBGImages)
+  return _internal_a_printbgimages();
 }
-inline void PrintData::_internal_set_printbgimages(bool value) {
+inline void PrintData::_internal_set_a_printbgimages(bool value) {
   _impl_._has_bits_[0] |= 0x08000000u;
-  _impl_.printbgimages_ = value;
+  _impl_.a_printbgimages_ = value;
 }
-inline void PrintData::set_printbgimages(bool value) {
-  _internal_set_printbgimages(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printBGImages)
+inline void PrintData::set_a_printbgimages(bool value) {
+  _internal_set_a_printbgimages(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printBGImages)
 }
 
-// required bool honorPageRuleMargins = 17;
-inline bool PrintData::_internal_has_honorpagerulemargins() const {
+// required bool a_honorPageRuleMargins = 17;
+inline bool PrintData::_internal_has_a_honorpagerulemargins() const {
   bool value = (_impl_._has_bits_[0] & 0x10000000u) != 0;
   return value;
 }
-inline bool PrintData::has_honorpagerulemargins() const {
-  return _internal_has_honorpagerulemargins();
+inline bool PrintData::has_a_honorpagerulemargins() const {
+  return _internal_has_a_honorpagerulemargins();
 }
-inline void PrintData::clear_honorpagerulemargins() {
-  _impl_.honorpagerulemargins_ = false;
+inline void PrintData::clear_a_honorpagerulemargins() {
+  _impl_.a_honorpagerulemargins_ = false;
   _impl_._has_bits_[0] &= ~0x10000000u;
 }
-inline bool PrintData::_internal_honorpagerulemargins() const {
-  return _impl_.honorpagerulemargins_;
+inline bool PrintData::_internal_a_honorpagerulemargins() const {
+  return _impl_.a_honorpagerulemargins_;
 }
-inline bool PrintData::honorpagerulemargins() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.honorPageRuleMargins)
-  return _internal_honorpagerulemargins();
+inline bool PrintData::a_honorpagerulemargins() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_honorPageRuleMargins)
+  return _internal_a_honorpagerulemargins();
 }
-inline void PrintData::_internal_set_honorpagerulemargins(bool value) {
+inline void PrintData::_internal_set_a_honorpagerulemargins(bool value) {
   _impl_._has_bits_[0] |= 0x10000000u;
-  _impl_.honorpagerulemargins_ = value;
+  _impl_.a_honorpagerulemargins_ = value;
 }
-inline void PrintData::set_honorpagerulemargins(bool value) {
-  _internal_set_honorpagerulemargins(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.honorPageRuleMargins)
+inline void PrintData::set_a_honorpagerulemargins(bool value) {
+  _internal_set_a_honorpagerulemargins(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_honorPageRuleMargins)
 }
 
-// required bool usePageRuleSizeAsPaperSize = 18;
-inline bool PrintData::_internal_has_usepagerulesizeaspapersize() const {
+// required bool a_usePageRuleSizeAsPaperSize = 18;
+inline bool PrintData::_internal_has_a_usepagerulesizeaspapersize() const {
   bool value = (_impl_._has_bits_[0] & 0x20000000u) != 0;
   return value;
 }
-inline bool PrintData::has_usepagerulesizeaspapersize() const {
-  return _internal_has_usepagerulesizeaspapersize();
+inline bool PrintData::has_a_usepagerulesizeaspapersize() const {
+  return _internal_has_a_usepagerulesizeaspapersize();
 }
-inline void PrintData::clear_usepagerulesizeaspapersize() {
-  _impl_.usepagerulesizeaspapersize_ = false;
+inline void PrintData::clear_a_usepagerulesizeaspapersize() {
+  _impl_.a_usepagerulesizeaspapersize_ = false;
   _impl_._has_bits_[0] &= ~0x20000000u;
 }
-inline bool PrintData::_internal_usepagerulesizeaspapersize() const {
-  return _impl_.usepagerulesizeaspapersize_;
+inline bool PrintData::_internal_a_usepagerulesizeaspapersize() const {
+  return _impl_.a_usepagerulesizeaspapersize_;
 }
-inline bool PrintData::usepagerulesizeaspapersize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.usePageRuleSizeAsPaperSize)
-  return _internal_usepagerulesizeaspapersize();
+inline bool PrintData::a_usepagerulesizeaspapersize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_usePageRuleSizeAsPaperSize)
+  return _internal_a_usepagerulesizeaspapersize();
 }
-inline void PrintData::_internal_set_usepagerulesizeaspapersize(bool value) {
+inline void PrintData::_internal_set_a_usepagerulesizeaspapersize(bool value) {
   _impl_._has_bits_[0] |= 0x20000000u;
-  _impl_.usepagerulesizeaspapersize_ = value;
+  _impl_.a_usepagerulesizeaspapersize_ = value;
 }
-inline void PrintData::set_usepagerulesizeaspapersize(bool value) {
-  _internal_set_usepagerulesizeaspapersize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.usePageRuleSizeAsPaperSize)
+inline void PrintData::set_a_usepagerulesizeaspapersize(bool value) {
+  _internal_set_a_usepagerulesizeaspapersize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_usePageRuleSizeAsPaperSize)
 }
 
-// required bool ignoreUnwriteableMargins = 19;
-inline bool PrintData::_internal_has_ignoreunwriteablemargins() const {
+// required bool a_ignoreUnwriteableMargins = 19;
+inline bool PrintData::_internal_has_a_ignoreunwriteablemargins() const {
   bool value = (_impl_._has_bits_[0] & 0x40000000u) != 0;
   return value;
 }
-inline bool PrintData::has_ignoreunwriteablemargins() const {
-  return _internal_has_ignoreunwriteablemargins();
+inline bool PrintData::has_a_ignoreunwriteablemargins() const {
+  return _internal_has_a_ignoreunwriteablemargins();
 }
-inline void PrintData::clear_ignoreunwriteablemargins() {
-  _impl_.ignoreunwriteablemargins_ = false;
+inline void PrintData::clear_a_ignoreunwriteablemargins() {
+  _impl_.a_ignoreunwriteablemargins_ = false;
   _impl_._has_bits_[0] &= ~0x40000000u;
 }
-inline bool PrintData::_internal_ignoreunwriteablemargins() const {
-  return _impl_.ignoreunwriteablemargins_;
+inline bool PrintData::_internal_a_ignoreunwriteablemargins() const {
+  return _impl_.a_ignoreunwriteablemargins_;
 }
-inline bool PrintData::ignoreunwriteablemargins() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.ignoreUnwriteableMargins)
-  return _internal_ignoreunwriteablemargins();
+inline bool PrintData::a_ignoreunwriteablemargins() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_ignoreUnwriteableMargins)
+  return _internal_a_ignoreunwriteablemargins();
 }
-inline void PrintData::_internal_set_ignoreunwriteablemargins(bool value) {
+inline void PrintData::_internal_set_a_ignoreunwriteablemargins(bool value) {
   _impl_._has_bits_[0] |= 0x40000000u;
-  _impl_.ignoreunwriteablemargins_ = value;
+  _impl_.a_ignoreunwriteablemargins_ = value;
 }
-inline void PrintData::set_ignoreunwriteablemargins(bool value) {
-  _internal_set_ignoreunwriteablemargins(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.ignoreUnwriteableMargins)
+inline void PrintData::set_a_ignoreunwriteablemargins(bool value) {
+  _internal_set_a_ignoreunwriteablemargins(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_ignoreUnwriteableMargins)
 }
 
-// required bool showMarginGuides = 20;
-inline bool PrintData::_internal_has_showmarginguides() const {
+// required bool a_showMarginGuides = 20;
+inline bool PrintData::_internal_has_a_showmarginguides() const {
   bool value = (_impl_._has_bits_[0] & 0x80000000u) != 0;
   return value;
 }
-inline bool PrintData::has_showmarginguides() const {
-  return _internal_has_showmarginguides();
+inline bool PrintData::has_a_showmarginguides() const {
+  return _internal_has_a_showmarginguides();
 }
-inline void PrintData::clear_showmarginguides() {
-  _impl_.showmarginguides_ = false;
+inline void PrintData::clear_a_showmarginguides() {
+  _impl_.a_showmarginguides_ = false;
   _impl_._has_bits_[0] &= ~0x80000000u;
 }
-inline bool PrintData::_internal_showmarginguides() const {
-  return _impl_.showmarginguides_;
+inline bool PrintData::_internal_a_showmarginguides() const {
+  return _impl_.a_showmarginguides_;
 }
-inline bool PrintData::showmarginguides() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.showMarginGuides)
-  return _internal_showmarginguides();
+inline bool PrintData::a_showmarginguides() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_showMarginGuides)
+  return _internal_a_showmarginguides();
 }
-inline void PrintData::_internal_set_showmarginguides(bool value) {
+inline void PrintData::_internal_set_a_showmarginguides(bool value) {
   _impl_._has_bits_[0] |= 0x80000000u;
-  _impl_.showmarginguides_ = value;
+  _impl_.a_showmarginguides_ = value;
 }
-inline void PrintData::set_showmarginguides(bool value) {
-  _internal_set_showmarginguides(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.showMarginGuides)
+inline void PrintData::set_a_showmarginguides(bool value) {
+  _internal_set_a_showmarginguides(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_showMarginGuides)
 }
 
-// required bool printSelectionOnly = 21;
-inline bool PrintData::_internal_has_printselectiononly() const {
+// required bool a_printSelectionOnly = 21;
+inline bool PrintData::_internal_has_a_printselectiononly() const {
   bool value = (_impl_._has_bits_[1] & 0x00000001u) != 0;
   return value;
 }
-inline bool PrintData::has_printselectiononly() const {
-  return _internal_has_printselectiononly();
+inline bool PrintData::has_a_printselectiononly() const {
+  return _internal_has_a_printselectiononly();
 }
-inline void PrintData::clear_printselectiononly() {
-  _impl_.printselectiononly_ = false;
+inline void PrintData::clear_a_printselectiononly() {
+  _impl_.a_printselectiononly_ = false;
   _impl_._has_bits_[1] &= ~0x00000001u;
 }
-inline bool PrintData::_internal_printselectiononly() const {
-  return _impl_.printselectiononly_;
+inline bool PrintData::_internal_a_printselectiononly() const {
+  return _impl_.a_printselectiononly_;
 }
-inline bool PrintData::printselectiononly() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printSelectionOnly)
-  return _internal_printselectiononly();
+inline bool PrintData::a_printselectiononly() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printSelectionOnly)
+  return _internal_a_printselectiononly();
 }
-inline void PrintData::_internal_set_printselectiononly(bool value) {
+inline void PrintData::_internal_set_a_printselectiononly(bool value) {
   _impl_._has_bits_[1] |= 0x00000001u;
-  _impl_.printselectiononly_ = value;
+  _impl_.a_printselectiononly_ = value;
 }
-inline void PrintData::set_printselectiononly(bool value) {
-  _internal_set_printselectiononly(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printSelectionOnly)
-}
-
-// repeated sint32 pageRanges = 22;
-inline int PrintData::_internal_pageranges_size() const {
-  return _impl_.pageranges_.size();
-}
-inline int PrintData::pageranges_size() const {
-  return _internal_pageranges_size();
-}
-inline void PrintData::clear_pageranges() {
-  _impl_.pageranges_.Clear();
-}
-inline int32_t PrintData::_internal_pageranges(int index) const {
-  return _impl_.pageranges_.Get(index);
-}
-inline int32_t PrintData::pageranges(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.pageRanges)
-  return _internal_pageranges(index);
-}
-inline void PrintData::set_pageranges(int index, int32_t value) {
-  _impl_.pageranges_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.pageRanges)
-}
-inline void PrintData::_internal_add_pageranges(int32_t value) {
-  _impl_.pageranges_.Add(value);
-}
-inline void PrintData::add_pageranges(int32_t value) {
-  _internal_add_pageranges(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.embedding.PrintData.pageRanges)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-PrintData::_internal_pageranges() const {
-  return _impl_.pageranges_;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
-PrintData::pageranges() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.embedding.PrintData.pageRanges)
-  return _internal_pageranges();
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-PrintData::_internal_mutable_pageranges() {
-  return &_impl_.pageranges_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
-PrintData::mutable_pageranges() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.embedding.PrintData.pageRanges)
-  return _internal_mutable_pageranges();
+inline void PrintData::set_a_printselectiononly(bool value) {
+  _internal_set_a_printselectiononly(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printSelectionOnly)
 }
 
-// required bytes title = 23;
-inline bool PrintData::_internal_has_title() const {
+// repeated sint32 a_pageRanges = 22;
+inline int PrintData::_internal_a_pageranges_size() const {
+  return _impl_.a_pageranges_.size();
+}
+inline int PrintData::a_pageranges_size() const {
+  return _internal_a_pageranges_size();
+}
+inline void PrintData::clear_a_pageranges() {
+  _impl_.a_pageranges_.Clear();
+}
+inline int32_t PrintData::_internal_a_pageranges(int index) const {
+  return _impl_.a_pageranges_.Get(index);
+}
+inline int32_t PrintData::a_pageranges(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_pageRanges)
+  return _internal_a_pageranges(index);
+}
+inline void PrintData::set_a_pageranges(int index, int32_t value) {
+  _impl_.a_pageranges_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_pageRanges)
+}
+inline void PrintData::_internal_add_a_pageranges(int32_t value) {
+  _impl_.a_pageranges_.Add(value);
+}
+inline void PrintData::add_a_pageranges(int32_t value) {
+  _internal_add_a_pageranges(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.embedding.PrintData.a_pageRanges)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+PrintData::_internal_a_pageranges() const {
+  return _impl_.a_pageranges_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >&
+PrintData::a_pageranges() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.embedding.PrintData.a_pageRanges)
+  return _internal_a_pageranges();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+PrintData::_internal_mutable_a_pageranges() {
+  return &_impl_.a_pageranges_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t >*
+PrintData::mutable_a_pageranges() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.embedding.PrintData.a_pageRanges)
+  return _internal_mutable_a_pageranges();
+}
+
+// required bytes a_title = 23;
+inline bool PrintData::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PrintData::has_title() const {
-  return _internal_has_title();
+inline bool PrintData::has_a_title() const {
+  return _internal_has_a_title();
 }
-inline void PrintData::clear_title() {
-  _impl_.title_.ClearToEmpty();
+inline void PrintData::clear_a_title() {
+  _impl_.a_title_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& PrintData::title() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.title)
-  return _internal_title();
+inline const std::string& PrintData::a_title() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_title)
+  return _internal_a_title();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_title(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.title)
+ _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_title)
 }
-inline std::string* PrintData::mutable_title() {
-  std::string* _s = _internal_mutable_title();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.title)
+inline std::string* PrintData::mutable_a_title() {
+  std::string* _s = _internal_mutable_a_title();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_title)
   return _s;
 }
-inline const std::string& PrintData::_internal_title() const {
-  return _impl_.title_.Get();
+inline const std::string& PrintData::_internal_a_title() const {
+  return _impl_.a_title_.Get();
 }
-inline void PrintData::_internal_set_title(const std::string& value) {
+inline void PrintData::_internal_set_a_title(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.title_.Set(value, GetArenaForAllocation());
+  _impl_.a_title_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_title() {
+inline std::string* PrintData::_internal_mutable_a_title() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.title_.Mutable(GetArenaForAllocation());
+  return _impl_.a_title_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_title() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.title)
-  if (!_internal_has_title()) {
+inline std::string* PrintData::release_a_title() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_title)
+  if (!_internal_has_a_title()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.title_.Release();
+  auto* p = _impl_.a_title_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.title_.IsDefault()) {
-    _impl_.title_.Set("", GetArenaForAllocation());
+  if (_impl_.a_title_.IsDefault()) {
+    _impl_.a_title_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_title(std::string* title) {
-  if (title != nullptr) {
+inline void PrintData::set_allocated_a_title(std::string* a_title) {
+  if (a_title != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.title_.SetAllocated(title, GetArenaForAllocation());
+  _impl_.a_title_.SetAllocated(a_title, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.title_.IsDefault()) {
-    _impl_.title_.Set("", GetArenaForAllocation());
+  if (_impl_.a_title_.IsDefault()) {
+    _impl_.a_title_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.title)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_title)
 }
 
-// required bytes docURL = 24;
-inline bool PrintData::_internal_has_docurl() const {
+// required bytes a_docURL = 24;
+inline bool PrintData::_internal_has_a_docurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool PrintData::has_docurl() const {
-  return _internal_has_docurl();
+inline bool PrintData::has_a_docurl() const {
+  return _internal_has_a_docurl();
 }
-inline void PrintData::clear_docurl() {
-  _impl_.docurl_.ClearToEmpty();
+inline void PrintData::clear_a_docurl() {
+  _impl_.a_docurl_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& PrintData::docurl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.docURL)
-  return _internal_docurl();
+inline const std::string& PrintData::a_docurl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_docURL)
+  return _internal_a_docurl();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_docurl(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_docurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.docurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.docURL)
+ _impl_.a_docurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_docURL)
 }
-inline std::string* PrintData::mutable_docurl() {
-  std::string* _s = _internal_mutable_docurl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.docURL)
+inline std::string* PrintData::mutable_a_docurl() {
+  std::string* _s = _internal_mutable_a_docurl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_docURL)
   return _s;
 }
-inline const std::string& PrintData::_internal_docurl() const {
-  return _impl_.docurl_.Get();
+inline const std::string& PrintData::_internal_a_docurl() const {
+  return _impl_.a_docurl_.Get();
 }
-inline void PrintData::_internal_set_docurl(const std::string& value) {
+inline void PrintData::_internal_set_a_docurl(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.docurl_.Set(value, GetArenaForAllocation());
+  _impl_.a_docurl_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_docurl() {
+inline std::string* PrintData::_internal_mutable_a_docurl() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.docurl_.Mutable(GetArenaForAllocation());
+  return _impl_.a_docurl_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_docurl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.docURL)
-  if (!_internal_has_docurl()) {
+inline std::string* PrintData::release_a_docurl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_docURL)
+  if (!_internal_has_a_docurl()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.docurl_.Release();
+  auto* p = _impl_.a_docurl_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.docurl_.IsDefault()) {
-    _impl_.docurl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_docurl_.IsDefault()) {
+    _impl_.a_docurl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_docurl(std::string* docurl) {
-  if (docurl != nullptr) {
+inline void PrintData::set_allocated_a_docurl(std::string* a_docurl) {
+  if (a_docurl != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.docurl_.SetAllocated(docurl, GetArenaForAllocation());
+  _impl_.a_docurl_.SetAllocated(a_docurl, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.docurl_.IsDefault()) {
-    _impl_.docurl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_docurl_.IsDefault()) {
+    _impl_.a_docurl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.docURL)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_docURL)
 }
 
-// required bytes headerStrLeft = 25;
-inline bool PrintData::_internal_has_headerstrleft() const {
+// required bytes a_headerStrLeft = 25;
+inline bool PrintData::_internal_has_a_headerstrleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool PrintData::has_headerstrleft() const {
-  return _internal_has_headerstrleft();
+inline bool PrintData::has_a_headerstrleft() const {
+  return _internal_has_a_headerstrleft();
 }
-inline void PrintData::clear_headerstrleft() {
-  _impl_.headerstrleft_.ClearToEmpty();
+inline void PrintData::clear_a_headerstrleft() {
+  _impl_.a_headerstrleft_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& PrintData::headerstrleft() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.headerStrLeft)
-  return _internal_headerstrleft();
+inline const std::string& PrintData::a_headerstrleft() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
+  return _internal_a_headerstrleft();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_headerstrleft(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_headerstrleft(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.headerstrleft_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.headerStrLeft)
+ _impl_.a_headerstrleft_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
 }
-inline std::string* PrintData::mutable_headerstrleft() {
-  std::string* _s = _internal_mutable_headerstrleft();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.headerStrLeft)
+inline std::string* PrintData::mutable_a_headerstrleft() {
+  std::string* _s = _internal_mutable_a_headerstrleft();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
   return _s;
 }
-inline const std::string& PrintData::_internal_headerstrleft() const {
-  return _impl_.headerstrleft_.Get();
+inline const std::string& PrintData::_internal_a_headerstrleft() const {
+  return _impl_.a_headerstrleft_.Get();
 }
-inline void PrintData::_internal_set_headerstrleft(const std::string& value) {
+inline void PrintData::_internal_set_a_headerstrleft(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.headerstrleft_.Set(value, GetArenaForAllocation());
+  _impl_.a_headerstrleft_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_headerstrleft() {
+inline std::string* PrintData::_internal_mutable_a_headerstrleft() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.headerstrleft_.Mutable(GetArenaForAllocation());
+  return _impl_.a_headerstrleft_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_headerstrleft() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.headerStrLeft)
-  if (!_internal_has_headerstrleft()) {
+inline std::string* PrintData::release_a_headerstrleft() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
+  if (!_internal_has_a_headerstrleft()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.headerstrleft_.Release();
+  auto* p = _impl_.a_headerstrleft_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.headerstrleft_.IsDefault()) {
-    _impl_.headerstrleft_.Set("", GetArenaForAllocation());
+  if (_impl_.a_headerstrleft_.IsDefault()) {
+    _impl_.a_headerstrleft_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_headerstrleft(std::string* headerstrleft) {
-  if (headerstrleft != nullptr) {
+inline void PrintData::set_allocated_a_headerstrleft(std::string* a_headerstrleft) {
+  if (a_headerstrleft != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.headerstrleft_.SetAllocated(headerstrleft, GetArenaForAllocation());
+  _impl_.a_headerstrleft_.SetAllocated(a_headerstrleft, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.headerstrleft_.IsDefault()) {
-    _impl_.headerstrleft_.Set("", GetArenaForAllocation());
+  if (_impl_.a_headerstrleft_.IsDefault()) {
+    _impl_.a_headerstrleft_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.headerStrLeft)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
 }
 
-// required bytes headerStrCenter = 26;
-inline bool PrintData::_internal_has_headerstrcenter() const {
+// required bytes a_headerStrCenter = 26;
+inline bool PrintData::_internal_has_a_headerstrcenter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool PrintData::has_headerstrcenter() const {
-  return _internal_has_headerstrcenter();
+inline bool PrintData::has_a_headerstrcenter() const {
+  return _internal_has_a_headerstrcenter();
 }
-inline void PrintData::clear_headerstrcenter() {
-  _impl_.headerstrcenter_.ClearToEmpty();
+inline void PrintData::clear_a_headerstrcenter() {
+  _impl_.a_headerstrcenter_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& PrintData::headerstrcenter() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.headerStrCenter)
-  return _internal_headerstrcenter();
+inline const std::string& PrintData::a_headerstrcenter() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
+  return _internal_a_headerstrcenter();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_headerstrcenter(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_headerstrcenter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.headerstrcenter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.headerStrCenter)
+ _impl_.a_headerstrcenter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
 }
-inline std::string* PrintData::mutable_headerstrcenter() {
-  std::string* _s = _internal_mutable_headerstrcenter();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.headerStrCenter)
+inline std::string* PrintData::mutable_a_headerstrcenter() {
+  std::string* _s = _internal_mutable_a_headerstrcenter();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
   return _s;
 }
-inline const std::string& PrintData::_internal_headerstrcenter() const {
-  return _impl_.headerstrcenter_.Get();
+inline const std::string& PrintData::_internal_a_headerstrcenter() const {
+  return _impl_.a_headerstrcenter_.Get();
 }
-inline void PrintData::_internal_set_headerstrcenter(const std::string& value) {
+inline void PrintData::_internal_set_a_headerstrcenter(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.headerstrcenter_.Set(value, GetArenaForAllocation());
+  _impl_.a_headerstrcenter_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_headerstrcenter() {
+inline std::string* PrintData::_internal_mutable_a_headerstrcenter() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.headerstrcenter_.Mutable(GetArenaForAllocation());
+  return _impl_.a_headerstrcenter_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_headerstrcenter() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.headerStrCenter)
-  if (!_internal_has_headerstrcenter()) {
+inline std::string* PrintData::release_a_headerstrcenter() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
+  if (!_internal_has_a_headerstrcenter()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.headerstrcenter_.Release();
+  auto* p = _impl_.a_headerstrcenter_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.headerstrcenter_.IsDefault()) {
-    _impl_.headerstrcenter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_headerstrcenter_.IsDefault()) {
+    _impl_.a_headerstrcenter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_headerstrcenter(std::string* headerstrcenter) {
-  if (headerstrcenter != nullptr) {
+inline void PrintData::set_allocated_a_headerstrcenter(std::string* a_headerstrcenter) {
+  if (a_headerstrcenter != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.headerstrcenter_.SetAllocated(headerstrcenter, GetArenaForAllocation());
+  _impl_.a_headerstrcenter_.SetAllocated(a_headerstrcenter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.headerstrcenter_.IsDefault()) {
-    _impl_.headerstrcenter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_headerstrcenter_.IsDefault()) {
+    _impl_.a_headerstrcenter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.headerStrCenter)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
 }
 
-// required bytes headerStrRight = 27;
-inline bool PrintData::_internal_has_headerstrright() const {
+// required bytes a_headerStrRight = 27;
+inline bool PrintData::_internal_has_a_headerstrright() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool PrintData::has_headerstrright() const {
-  return _internal_has_headerstrright();
+inline bool PrintData::has_a_headerstrright() const {
+  return _internal_has_a_headerstrright();
 }
-inline void PrintData::clear_headerstrright() {
-  _impl_.headerstrright_.ClearToEmpty();
+inline void PrintData::clear_a_headerstrright() {
+  _impl_.a_headerstrright_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline const std::string& PrintData::headerstrright() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.headerStrRight)
-  return _internal_headerstrright();
+inline const std::string& PrintData::a_headerstrright() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
+  return _internal_a_headerstrright();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_headerstrright(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_headerstrright(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.headerstrright_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.headerStrRight)
+ _impl_.a_headerstrright_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
 }
-inline std::string* PrintData::mutable_headerstrright() {
-  std::string* _s = _internal_mutable_headerstrright();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.headerStrRight)
+inline std::string* PrintData::mutable_a_headerstrright() {
+  std::string* _s = _internal_mutable_a_headerstrright();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
   return _s;
 }
-inline const std::string& PrintData::_internal_headerstrright() const {
-  return _impl_.headerstrright_.Get();
+inline const std::string& PrintData::_internal_a_headerstrright() const {
+  return _impl_.a_headerstrright_.Get();
 }
-inline void PrintData::_internal_set_headerstrright(const std::string& value) {
+inline void PrintData::_internal_set_a_headerstrright(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.headerstrright_.Set(value, GetArenaForAllocation());
+  _impl_.a_headerstrright_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_headerstrright() {
+inline std::string* PrintData::_internal_mutable_a_headerstrright() {
   _impl_._has_bits_[0] |= 0x00000020u;
-  return _impl_.headerstrright_.Mutable(GetArenaForAllocation());
+  return _impl_.a_headerstrright_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_headerstrright() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.headerStrRight)
-  if (!_internal_has_headerstrright()) {
+inline std::string* PrintData::release_a_headerstrright() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
+  if (!_internal_has_a_headerstrright()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.headerstrright_.Release();
+  auto* p = _impl_.a_headerstrright_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.headerstrright_.IsDefault()) {
-    _impl_.headerstrright_.Set("", GetArenaForAllocation());
+  if (_impl_.a_headerstrright_.IsDefault()) {
+    _impl_.a_headerstrright_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_headerstrright(std::string* headerstrright) {
-  if (headerstrright != nullptr) {
+inline void PrintData::set_allocated_a_headerstrright(std::string* a_headerstrright) {
+  if (a_headerstrright != nullptr) {
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  _impl_.headerstrright_.SetAllocated(headerstrright, GetArenaForAllocation());
+  _impl_.a_headerstrright_.SetAllocated(a_headerstrright, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.headerstrright_.IsDefault()) {
-    _impl_.headerstrright_.Set("", GetArenaForAllocation());
+  if (_impl_.a_headerstrright_.IsDefault()) {
+    _impl_.a_headerstrright_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.headerStrRight)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
 }
 
-// required bytes footerStrLeft = 28;
-inline bool PrintData::_internal_has_footerstrleft() const {
+// required bytes a_footerStrLeft = 28;
+inline bool PrintData::_internal_has_a_footerstrleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool PrintData::has_footerstrleft() const {
-  return _internal_has_footerstrleft();
+inline bool PrintData::has_a_footerstrleft() const {
+  return _internal_has_a_footerstrleft();
 }
-inline void PrintData::clear_footerstrleft() {
-  _impl_.footerstrleft_.ClearToEmpty();
+inline void PrintData::clear_a_footerstrleft() {
+  _impl_.a_footerstrleft_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline const std::string& PrintData::footerstrleft() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.footerStrLeft)
-  return _internal_footerstrleft();
+inline const std::string& PrintData::a_footerstrleft() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
+  return _internal_a_footerstrleft();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_footerstrleft(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_footerstrleft(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.footerstrleft_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.footerStrLeft)
+ _impl_.a_footerstrleft_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
 }
-inline std::string* PrintData::mutable_footerstrleft() {
-  std::string* _s = _internal_mutable_footerstrleft();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.footerStrLeft)
+inline std::string* PrintData::mutable_a_footerstrleft() {
+  std::string* _s = _internal_mutable_a_footerstrleft();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
   return _s;
 }
-inline const std::string& PrintData::_internal_footerstrleft() const {
-  return _impl_.footerstrleft_.Get();
+inline const std::string& PrintData::_internal_a_footerstrleft() const {
+  return _impl_.a_footerstrleft_.Get();
 }
-inline void PrintData::_internal_set_footerstrleft(const std::string& value) {
+inline void PrintData::_internal_set_a_footerstrleft(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.footerstrleft_.Set(value, GetArenaForAllocation());
+  _impl_.a_footerstrleft_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_footerstrleft() {
+inline std::string* PrintData::_internal_mutable_a_footerstrleft() {
   _impl_._has_bits_[0] |= 0x00000040u;
-  return _impl_.footerstrleft_.Mutable(GetArenaForAllocation());
+  return _impl_.a_footerstrleft_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_footerstrleft() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.footerStrLeft)
-  if (!_internal_has_footerstrleft()) {
+inline std::string* PrintData::release_a_footerstrleft() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
+  if (!_internal_has_a_footerstrleft()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000040u;
-  auto* p = _impl_.footerstrleft_.Release();
+  auto* p = _impl_.a_footerstrleft_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.footerstrleft_.IsDefault()) {
-    _impl_.footerstrleft_.Set("", GetArenaForAllocation());
+  if (_impl_.a_footerstrleft_.IsDefault()) {
+    _impl_.a_footerstrleft_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_footerstrleft(std::string* footerstrleft) {
-  if (footerstrleft != nullptr) {
+inline void PrintData::set_allocated_a_footerstrleft(std::string* a_footerstrleft) {
+  if (a_footerstrleft != nullptr) {
     _impl_._has_bits_[0] |= 0x00000040u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000040u;
   }
-  _impl_.footerstrleft_.SetAllocated(footerstrleft, GetArenaForAllocation());
+  _impl_.a_footerstrleft_.SetAllocated(a_footerstrleft, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.footerstrleft_.IsDefault()) {
-    _impl_.footerstrleft_.Set("", GetArenaForAllocation());
+  if (_impl_.a_footerstrleft_.IsDefault()) {
+    _impl_.a_footerstrleft_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.footerStrLeft)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
 }
 
-// required bytes footerStrCenter = 29;
-inline bool PrintData::_internal_has_footerstrcenter() const {
+// required bytes a_footerStrCenter = 29;
+inline bool PrintData::_internal_has_a_footerstrcenter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool PrintData::has_footerstrcenter() const {
-  return _internal_has_footerstrcenter();
+inline bool PrintData::has_a_footerstrcenter() const {
+  return _internal_has_a_footerstrcenter();
 }
-inline void PrintData::clear_footerstrcenter() {
-  _impl_.footerstrcenter_.ClearToEmpty();
+inline void PrintData::clear_a_footerstrcenter() {
+  _impl_.a_footerstrcenter_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline const std::string& PrintData::footerstrcenter() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.footerStrCenter)
-  return _internal_footerstrcenter();
+inline const std::string& PrintData::a_footerstrcenter() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
+  return _internal_a_footerstrcenter();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_footerstrcenter(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_footerstrcenter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.footerstrcenter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.footerStrCenter)
+ _impl_.a_footerstrcenter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
 }
-inline std::string* PrintData::mutable_footerstrcenter() {
-  std::string* _s = _internal_mutable_footerstrcenter();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.footerStrCenter)
+inline std::string* PrintData::mutable_a_footerstrcenter() {
+  std::string* _s = _internal_mutable_a_footerstrcenter();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
   return _s;
 }
-inline const std::string& PrintData::_internal_footerstrcenter() const {
-  return _impl_.footerstrcenter_.Get();
+inline const std::string& PrintData::_internal_a_footerstrcenter() const {
+  return _impl_.a_footerstrcenter_.Get();
 }
-inline void PrintData::_internal_set_footerstrcenter(const std::string& value) {
+inline void PrintData::_internal_set_a_footerstrcenter(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.footerstrcenter_.Set(value, GetArenaForAllocation());
+  _impl_.a_footerstrcenter_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_footerstrcenter() {
+inline std::string* PrintData::_internal_mutable_a_footerstrcenter() {
   _impl_._has_bits_[0] |= 0x00000080u;
-  return _impl_.footerstrcenter_.Mutable(GetArenaForAllocation());
+  return _impl_.a_footerstrcenter_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_footerstrcenter() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.footerStrCenter)
-  if (!_internal_has_footerstrcenter()) {
+inline std::string* PrintData::release_a_footerstrcenter() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
+  if (!_internal_has_a_footerstrcenter()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000080u;
-  auto* p = _impl_.footerstrcenter_.Release();
+  auto* p = _impl_.a_footerstrcenter_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.footerstrcenter_.IsDefault()) {
-    _impl_.footerstrcenter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_footerstrcenter_.IsDefault()) {
+    _impl_.a_footerstrcenter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_footerstrcenter(std::string* footerstrcenter) {
-  if (footerstrcenter != nullptr) {
+inline void PrintData::set_allocated_a_footerstrcenter(std::string* a_footerstrcenter) {
+  if (a_footerstrcenter != nullptr) {
     _impl_._has_bits_[0] |= 0x00000080u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000080u;
   }
-  _impl_.footerstrcenter_.SetAllocated(footerstrcenter, GetArenaForAllocation());
+  _impl_.a_footerstrcenter_.SetAllocated(a_footerstrcenter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.footerstrcenter_.IsDefault()) {
-    _impl_.footerstrcenter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_footerstrcenter_.IsDefault()) {
+    _impl_.a_footerstrcenter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.footerStrCenter)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
 }
 
-// required bytes footerStrRight = 30;
-inline bool PrintData::_internal_has_footerstrright() const {
+// required bytes a_footerStrRight = 30;
+inline bool PrintData::_internal_has_a_footerstrright() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool PrintData::has_footerstrright() const {
-  return _internal_has_footerstrright();
+inline bool PrintData::has_a_footerstrright() const {
+  return _internal_has_a_footerstrright();
 }
-inline void PrintData::clear_footerstrright() {
-  _impl_.footerstrright_.ClearToEmpty();
+inline void PrintData::clear_a_footerstrright() {
+  _impl_.a_footerstrright_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline const std::string& PrintData::footerstrright() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.footerStrRight)
-  return _internal_footerstrright();
+inline const std::string& PrintData::a_footerstrright() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
+  return _internal_a_footerstrright();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_footerstrright(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_footerstrright(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.footerstrright_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.footerStrRight)
+ _impl_.a_footerstrright_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
 }
-inline std::string* PrintData::mutable_footerstrright() {
-  std::string* _s = _internal_mutable_footerstrright();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.footerStrRight)
+inline std::string* PrintData::mutable_a_footerstrright() {
+  std::string* _s = _internal_mutable_a_footerstrright();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
   return _s;
 }
-inline const std::string& PrintData::_internal_footerstrright() const {
-  return _impl_.footerstrright_.Get();
+inline const std::string& PrintData::_internal_a_footerstrright() const {
+  return _impl_.a_footerstrright_.Get();
 }
-inline void PrintData::_internal_set_footerstrright(const std::string& value) {
+inline void PrintData::_internal_set_a_footerstrright(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.footerstrright_.Set(value, GetArenaForAllocation());
+  _impl_.a_footerstrright_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_footerstrright() {
+inline std::string* PrintData::_internal_mutable_a_footerstrright() {
   _impl_._has_bits_[0] |= 0x00000100u;
-  return _impl_.footerstrright_.Mutable(GetArenaForAllocation());
+  return _impl_.a_footerstrright_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_footerstrright() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.footerStrRight)
-  if (!_internal_has_footerstrright()) {
+inline std::string* PrintData::release_a_footerstrright() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
+  if (!_internal_has_a_footerstrright()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000100u;
-  auto* p = _impl_.footerstrright_.Release();
+  auto* p = _impl_.a_footerstrright_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.footerstrright_.IsDefault()) {
-    _impl_.footerstrright_.Set("", GetArenaForAllocation());
+  if (_impl_.a_footerstrright_.IsDefault()) {
+    _impl_.a_footerstrright_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_footerstrright(std::string* footerstrright) {
-  if (footerstrright != nullptr) {
+inline void PrintData::set_allocated_a_footerstrright(std::string* a_footerstrright) {
+  if (a_footerstrright != nullptr) {
     _impl_._has_bits_[0] |= 0x00000100u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000100u;
   }
-  _impl_.footerstrright_.SetAllocated(footerstrright, GetArenaForAllocation());
+  _impl_.a_footerstrright_.SetAllocated(a_footerstrright, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.footerstrright_.IsDefault()) {
-    _impl_.footerstrright_.Set("", GetArenaForAllocation());
+  if (_impl_.a_footerstrright_.IsDefault()) {
+    _impl_.a_footerstrright_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.footerStrRight)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
 }
 
-// required bool printSilent = 31;
-inline bool PrintData::_internal_has_printsilent() const {
+// required bool a_printSilent = 31;
+inline bool PrintData::_internal_has_a_printsilent() const {
   bool value = (_impl_._has_bits_[1] & 0x00000002u) != 0;
   return value;
 }
-inline bool PrintData::has_printsilent() const {
-  return _internal_has_printsilent();
+inline bool PrintData::has_a_printsilent() const {
+  return _internal_has_a_printsilent();
 }
-inline void PrintData::clear_printsilent() {
-  _impl_.printsilent_ = false;
+inline void PrintData::clear_a_printsilent() {
+  _impl_.a_printsilent_ = false;
   _impl_._has_bits_[1] &= ~0x00000002u;
 }
-inline bool PrintData::_internal_printsilent() const {
-  return _impl_.printsilent_;
+inline bool PrintData::_internal_a_printsilent() const {
+  return _impl_.a_printsilent_;
 }
-inline bool PrintData::printsilent() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printSilent)
-  return _internal_printsilent();
+inline bool PrintData::a_printsilent() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printSilent)
+  return _internal_a_printsilent();
 }
-inline void PrintData::_internal_set_printsilent(bool value) {
+inline void PrintData::_internal_set_a_printsilent(bool value) {
   _impl_._has_bits_[1] |= 0x00000002u;
-  _impl_.printsilent_ = value;
+  _impl_.a_printsilent_ = value;
 }
-inline void PrintData::set_printsilent(bool value) {
-  _internal_set_printsilent(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printSilent)
+inline void PrintData::set_a_printsilent(bool value) {
+  _internal_set_a_printsilent(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printSilent)
 }
 
-// required bool shrinkToFit = 32;
-inline bool PrintData::_internal_has_shrinktofit() const {
+// required bool a_shrinkToFit = 32;
+inline bool PrintData::_internal_has_a_shrinktofit() const {
   bool value = (_impl_._has_bits_[1] & 0x00000020u) != 0;
   return value;
 }
-inline bool PrintData::has_shrinktofit() const {
-  return _internal_has_shrinktofit();
+inline bool PrintData::has_a_shrinktofit() const {
+  return _internal_has_a_shrinktofit();
 }
-inline void PrintData::clear_shrinktofit() {
-  _impl_.shrinktofit_ = false;
+inline void PrintData::clear_a_shrinktofit() {
+  _impl_.a_shrinktofit_ = false;
   _impl_._has_bits_[1] &= ~0x00000020u;
 }
-inline bool PrintData::_internal_shrinktofit() const {
-  return _impl_.shrinktofit_;
+inline bool PrintData::_internal_a_shrinktofit() const {
+  return _impl_.a_shrinktofit_;
 }
-inline bool PrintData::shrinktofit() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.shrinkToFit)
-  return _internal_shrinktofit();
+inline bool PrintData::a_shrinktofit() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_shrinkToFit)
+  return _internal_a_shrinktofit();
 }
-inline void PrintData::_internal_set_shrinktofit(bool value) {
+inline void PrintData::_internal_set_a_shrinktofit(bool value) {
   _impl_._has_bits_[1] |= 0x00000020u;
-  _impl_.shrinktofit_ = value;
+  _impl_.a_shrinktofit_ = value;
 }
-inline void PrintData::set_shrinktofit(bool value) {
-  _internal_set_shrinktofit(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.shrinkToFit)
+inline void PrintData::set_a_shrinktofit(bool value) {
+  _internal_set_a_shrinktofit(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_shrinkToFit)
 }
 
-// required bytes paperId = 33;
-inline bool PrintData::_internal_has_paperid() const {
+// required bytes a_paperId = 33;
+inline bool PrintData::_internal_has_a_paperid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
-inline bool PrintData::has_paperid() const {
-  return _internal_has_paperid();
+inline bool PrintData::has_a_paperid() const {
+  return _internal_has_a_paperid();
 }
-inline void PrintData::clear_paperid() {
-  _impl_.paperid_.ClearToEmpty();
+inline void PrintData::clear_a_paperid() {
+  _impl_.a_paperid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
-inline const std::string& PrintData::paperid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.paperId)
-  return _internal_paperid();
+inline const std::string& PrintData::a_paperid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_paperId)
+  return _internal_a_paperid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_paperid(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_paperid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000200u;
- _impl_.paperid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.paperId)
+ _impl_.a_paperid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperId)
 }
-inline std::string* PrintData::mutable_paperid() {
-  std::string* _s = _internal_mutable_paperid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.paperId)
+inline std::string* PrintData::mutable_a_paperid() {
+  std::string* _s = _internal_mutable_a_paperid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_paperId)
   return _s;
 }
-inline const std::string& PrintData::_internal_paperid() const {
-  return _impl_.paperid_.Get();
+inline const std::string& PrintData::_internal_a_paperid() const {
+  return _impl_.a_paperid_.Get();
 }
-inline void PrintData::_internal_set_paperid(const std::string& value) {
+inline void PrintData::_internal_set_a_paperid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.paperid_.Set(value, GetArenaForAllocation());
+  _impl_.a_paperid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_paperid() {
+inline std::string* PrintData::_internal_mutable_a_paperid() {
   _impl_._has_bits_[0] |= 0x00000200u;
-  return _impl_.paperid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_paperid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_paperid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.paperId)
-  if (!_internal_has_paperid()) {
+inline std::string* PrintData::release_a_paperid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_paperId)
+  if (!_internal_has_a_paperid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000200u;
-  auto* p = _impl_.paperid_.Release();
+  auto* p = _impl_.a_paperid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.paperid_.IsDefault()) {
-    _impl_.paperid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_paperid_.IsDefault()) {
+    _impl_.a_paperid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_paperid(std::string* paperid) {
-  if (paperid != nullptr) {
+inline void PrintData::set_allocated_a_paperid(std::string* a_paperid) {
+  if (a_paperid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000200u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000200u;
   }
-  _impl_.paperid_.SetAllocated(paperid, GetArenaForAllocation());
+  _impl_.a_paperid_.SetAllocated(a_paperid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.paperid_.IsDefault()) {
-    _impl_.paperid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_paperid_.IsDefault()) {
+    _impl_.a_paperid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.paperId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_paperId)
 }
 
-// required double paperWidth = 34;
-inline bool PrintData::_internal_has_paperwidth() const {
+// required double a_paperWidth = 34;
+inline bool PrintData::_internal_has_a_paperwidth() const {
   bool value = (_impl_._has_bits_[1] & 0x00000004u) != 0;
   return value;
 }
-inline bool PrintData::has_paperwidth() const {
-  return _internal_has_paperwidth();
+inline bool PrintData::has_a_paperwidth() const {
+  return _internal_has_a_paperwidth();
 }
-inline void PrintData::clear_paperwidth() {
-  _impl_.paperwidth_ = 0;
+inline void PrintData::clear_a_paperwidth() {
+  _impl_.a_paperwidth_ = 0;
   _impl_._has_bits_[1] &= ~0x00000004u;
 }
-inline double PrintData::_internal_paperwidth() const {
-  return _impl_.paperwidth_;
+inline double PrintData::_internal_a_paperwidth() const {
+  return _impl_.a_paperwidth_;
 }
-inline double PrintData::paperwidth() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.paperWidth)
-  return _internal_paperwidth();
+inline double PrintData::a_paperwidth() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_paperWidth)
+  return _internal_a_paperwidth();
 }
-inline void PrintData::_internal_set_paperwidth(double value) {
+inline void PrintData::_internal_set_a_paperwidth(double value) {
   _impl_._has_bits_[1] |= 0x00000004u;
-  _impl_.paperwidth_ = value;
+  _impl_.a_paperwidth_ = value;
 }
-inline void PrintData::set_paperwidth(double value) {
-  _internal_set_paperwidth(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.paperWidth)
+inline void PrintData::set_a_paperwidth(double value) {
+  _internal_set_a_paperwidth(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperWidth)
 }
 
-// required double paperHeight = 35;
-inline bool PrintData::_internal_has_paperheight() const {
+// required double a_paperHeight = 35;
+inline bool PrintData::_internal_has_a_paperheight() const {
   bool value = (_impl_._has_bits_[1] & 0x00000008u) != 0;
   return value;
 }
-inline bool PrintData::has_paperheight() const {
-  return _internal_has_paperheight();
+inline bool PrintData::has_a_paperheight() const {
+  return _internal_has_a_paperheight();
 }
-inline void PrintData::clear_paperheight() {
-  _impl_.paperheight_ = 0;
+inline void PrintData::clear_a_paperheight() {
+  _impl_.a_paperheight_ = 0;
   _impl_._has_bits_[1] &= ~0x00000008u;
 }
-inline double PrintData::_internal_paperheight() const {
-  return _impl_.paperheight_;
+inline double PrintData::_internal_a_paperheight() const {
+  return _impl_.a_paperheight_;
 }
-inline double PrintData::paperheight() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.paperHeight)
-  return _internal_paperheight();
+inline double PrintData::a_paperheight() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_paperHeight)
+  return _internal_a_paperheight();
 }
-inline void PrintData::_internal_set_paperheight(double value) {
+inline void PrintData::_internal_set_a_paperheight(double value) {
   _impl_._has_bits_[1] |= 0x00000008u;
-  _impl_.paperheight_ = value;
+  _impl_.a_paperheight_ = value;
 }
-inline void PrintData::set_paperheight(double value) {
-  _internal_set_paperheight(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.paperHeight)
+inline void PrintData::set_a_paperheight(double value) {
+  _internal_set_a_paperheight(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperHeight)
 }
 
-// required sint32 paperSizeUnit = 36;
-inline bool PrintData::_internal_has_papersizeunit() const {
+// required sint32 a_paperSizeUnit = 36;
+inline bool PrintData::_internal_has_a_papersizeunit() const {
   bool value = (_impl_._has_bits_[1] & 0x00000010u) != 0;
   return value;
 }
-inline bool PrintData::has_papersizeunit() const {
-  return _internal_has_papersizeunit();
+inline bool PrintData::has_a_papersizeunit() const {
+  return _internal_has_a_papersizeunit();
 }
-inline void PrintData::clear_papersizeunit() {
-  _impl_.papersizeunit_ = 0;
+inline void PrintData::clear_a_papersizeunit() {
+  _impl_.a_papersizeunit_ = 0;
   _impl_._has_bits_[1] &= ~0x00000010u;
 }
-inline int32_t PrintData::_internal_papersizeunit() const {
-  return _impl_.papersizeunit_;
+inline int32_t PrintData::_internal_a_papersizeunit() const {
+  return _impl_.a_papersizeunit_;
 }
-inline int32_t PrintData::papersizeunit() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.paperSizeUnit)
-  return _internal_papersizeunit();
+inline int32_t PrintData::a_papersizeunit() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_paperSizeUnit)
+  return _internal_a_papersizeunit();
 }
-inline void PrintData::_internal_set_papersizeunit(int32_t value) {
+inline void PrintData::_internal_set_a_papersizeunit(int32_t value) {
   _impl_._has_bits_[1] |= 0x00000010u;
-  _impl_.papersizeunit_ = value;
+  _impl_.a_papersizeunit_ = value;
 }
-inline void PrintData::set_papersizeunit(int32_t value) {
-  _internal_set_papersizeunit(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.paperSizeUnit)
+inline void PrintData::set_a_papersizeunit(int32_t value) {
+  _internal_set_a_papersizeunit(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperSizeUnit)
 }
 
-// required bool printReversed = 37;
-inline bool PrintData::_internal_has_printreversed() const {
+// required bool a_printReversed = 37;
+inline bool PrintData::_internal_has_a_printreversed() const {
   bool value = (_impl_._has_bits_[1] & 0x00000040u) != 0;
   return value;
 }
-inline bool PrintData::has_printreversed() const {
-  return _internal_has_printreversed();
+inline bool PrintData::has_a_printreversed() const {
+  return _internal_has_a_printreversed();
 }
-inline void PrintData::clear_printreversed() {
-  _impl_.printreversed_ = false;
+inline void PrintData::clear_a_printreversed() {
+  _impl_.a_printreversed_ = false;
   _impl_._has_bits_[1] &= ~0x00000040u;
 }
-inline bool PrintData::_internal_printreversed() const {
-  return _impl_.printreversed_;
+inline bool PrintData::_internal_a_printreversed() const {
+  return _impl_.a_printreversed_;
 }
-inline bool PrintData::printreversed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printReversed)
-  return _internal_printreversed();
+inline bool PrintData::a_printreversed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printReversed)
+  return _internal_a_printreversed();
 }
-inline void PrintData::_internal_set_printreversed(bool value) {
+inline void PrintData::_internal_set_a_printreversed(bool value) {
   _impl_._has_bits_[1] |= 0x00000040u;
-  _impl_.printreversed_ = value;
+  _impl_.a_printreversed_ = value;
 }
-inline void PrintData::set_printreversed(bool value) {
-  _internal_set_printreversed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printReversed)
+inline void PrintData::set_a_printreversed(bool value) {
+  _internal_set_a_printreversed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printReversed)
 }
 
-// required bool printInColor = 38;
-inline bool PrintData::_internal_has_printincolor() const {
+// required bool a_printInColor = 38;
+inline bool PrintData::_internal_has_a_printincolor() const {
   bool value = (_impl_._has_bits_[1] & 0x00000080u) != 0;
   return value;
 }
-inline bool PrintData::has_printincolor() const {
-  return _internal_has_printincolor();
+inline bool PrintData::has_a_printincolor() const {
+  return _internal_has_a_printincolor();
 }
-inline void PrintData::clear_printincolor() {
-  _impl_.printincolor_ = false;
+inline void PrintData::clear_a_printincolor() {
+  _impl_.a_printincolor_ = false;
   _impl_._has_bits_[1] &= ~0x00000080u;
 }
-inline bool PrintData::_internal_printincolor() const {
-  return _impl_.printincolor_;
+inline bool PrintData::_internal_a_printincolor() const {
+  return _impl_.a_printincolor_;
 }
-inline bool PrintData::printincolor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printInColor)
-  return _internal_printincolor();
+inline bool PrintData::a_printincolor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printInColor)
+  return _internal_a_printincolor();
 }
-inline void PrintData::_internal_set_printincolor(bool value) {
+inline void PrintData::_internal_set_a_printincolor(bool value) {
   _impl_._has_bits_[1] |= 0x00000080u;
-  _impl_.printincolor_ = value;
+  _impl_.a_printincolor_ = value;
 }
-inline void PrintData::set_printincolor(bool value) {
-  _internal_set_printincolor(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printInColor)
+inline void PrintData::set_a_printincolor(bool value) {
+  _internal_set_a_printincolor(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printInColor)
 }
 
-// required sint32 orientation = 39;
-inline bool PrintData::_internal_has_orientation() const {
+// required sint32 a_orientation = 39;
+inline bool PrintData::_internal_has_a_orientation() const {
   bool value = (_impl_._has_bits_[1] & 0x00000200u) != 0;
   return value;
 }
-inline bool PrintData::has_orientation() const {
-  return _internal_has_orientation();
+inline bool PrintData::has_a_orientation() const {
+  return _internal_has_a_orientation();
 }
-inline void PrintData::clear_orientation() {
-  _impl_.orientation_ = 0;
+inline void PrintData::clear_a_orientation() {
+  _impl_.a_orientation_ = 0;
   _impl_._has_bits_[1] &= ~0x00000200u;
 }
-inline int32_t PrintData::_internal_orientation() const {
-  return _impl_.orientation_;
+inline int32_t PrintData::_internal_a_orientation() const {
+  return _impl_.a_orientation_;
 }
-inline int32_t PrintData::orientation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.orientation)
-  return _internal_orientation();
+inline int32_t PrintData::a_orientation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_orientation)
+  return _internal_a_orientation();
 }
-inline void PrintData::_internal_set_orientation(int32_t value) {
+inline void PrintData::_internal_set_a_orientation(int32_t value) {
   _impl_._has_bits_[1] |= 0x00000200u;
-  _impl_.orientation_ = value;
+  _impl_.a_orientation_ = value;
 }
-inline void PrintData::set_orientation(int32_t value) {
-  _internal_set_orientation(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.orientation)
+inline void PrintData::set_a_orientation(int32_t value) {
+  _internal_set_a_orientation(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_orientation)
 }
 
-// required sint32 numCopies = 40;
-inline bool PrintData::_internal_has_numcopies() const {
+// required sint32 a_numCopies = 40;
+inline bool PrintData::_internal_has_a_numcopies() const {
   bool value = (_impl_._has_bits_[1] & 0x00000400u) != 0;
   return value;
 }
-inline bool PrintData::has_numcopies() const {
-  return _internal_has_numcopies();
+inline bool PrintData::has_a_numcopies() const {
+  return _internal_has_a_numcopies();
 }
-inline void PrintData::clear_numcopies() {
-  _impl_.numcopies_ = 0;
+inline void PrintData::clear_a_numcopies() {
+  _impl_.a_numcopies_ = 0;
   _impl_._has_bits_[1] &= ~0x00000400u;
 }
-inline int32_t PrintData::_internal_numcopies() const {
-  return _impl_.numcopies_;
+inline int32_t PrintData::_internal_a_numcopies() const {
+  return _impl_.a_numcopies_;
 }
-inline int32_t PrintData::numcopies() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.numCopies)
-  return _internal_numcopies();
+inline int32_t PrintData::a_numcopies() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_numCopies)
+  return _internal_a_numcopies();
 }
-inline void PrintData::_internal_set_numcopies(int32_t value) {
+inline void PrintData::_internal_set_a_numcopies(int32_t value) {
   _impl_._has_bits_[1] |= 0x00000400u;
-  _impl_.numcopies_ = value;
+  _impl_.a_numcopies_ = value;
 }
-inline void PrintData::set_numcopies(int32_t value) {
-  _internal_set_numcopies(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.numCopies)
+inline void PrintData::set_a_numcopies(int32_t value) {
+  _internal_set_a_numcopies(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_numCopies)
 }
 
-// required sint32 numPagesPerSheet = 41;
-inline bool PrintData::_internal_has_numpagespersheet() const {
+// required sint32 a_numPagesPerSheet = 41;
+inline bool PrintData::_internal_has_a_numpagespersheet() const {
   bool value = (_impl_._has_bits_[1] & 0x00000800u) != 0;
   return value;
 }
-inline bool PrintData::has_numpagespersheet() const {
-  return _internal_has_numpagespersheet();
+inline bool PrintData::has_a_numpagespersheet() const {
+  return _internal_has_a_numpagespersheet();
 }
-inline void PrintData::clear_numpagespersheet() {
-  _impl_.numpagespersheet_ = 0;
+inline void PrintData::clear_a_numpagespersheet() {
+  _impl_.a_numpagespersheet_ = 0;
   _impl_._has_bits_[1] &= ~0x00000800u;
 }
-inline int32_t PrintData::_internal_numpagespersheet() const {
-  return _impl_.numpagespersheet_;
+inline int32_t PrintData::_internal_a_numpagespersheet() const {
+  return _impl_.a_numpagespersheet_;
 }
-inline int32_t PrintData::numpagespersheet() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.numPagesPerSheet)
-  return _internal_numpagespersheet();
+inline int32_t PrintData::a_numpagespersheet() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_numPagesPerSheet)
+  return _internal_a_numpagespersheet();
 }
-inline void PrintData::_internal_set_numpagespersheet(int32_t value) {
+inline void PrintData::_internal_set_a_numpagespersheet(int32_t value) {
   _impl_._has_bits_[1] |= 0x00000800u;
-  _impl_.numpagespersheet_ = value;
+  _impl_.a_numpagespersheet_ = value;
 }
-inline void PrintData::set_numpagespersheet(int32_t value) {
-  _internal_set_numpagespersheet(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.numPagesPerSheet)
+inline void PrintData::set_a_numpagespersheet(int32_t value) {
+  _internal_set_a_numpagespersheet(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_numPagesPerSheet)
 }
 
-// required sint32 outputDestination = 42;
-inline bool PrintData::_internal_has_outputdestination() const {
+// required sint32 a_outputDestination = 42;
+inline bool PrintData::_internal_has_a_outputdestination() const {
   bool value = (_impl_._has_bits_[1] & 0x00001000u) != 0;
   return value;
 }
-inline bool PrintData::has_outputdestination() const {
-  return _internal_has_outputdestination();
+inline bool PrintData::has_a_outputdestination() const {
+  return _internal_has_a_outputdestination();
 }
-inline void PrintData::clear_outputdestination() {
-  _impl_.outputdestination_ = 0;
+inline void PrintData::clear_a_outputdestination() {
+  _impl_.a_outputdestination_ = 0;
   _impl_._has_bits_[1] &= ~0x00001000u;
 }
-inline int32_t PrintData::_internal_outputdestination() const {
-  return _impl_.outputdestination_;
+inline int32_t PrintData::_internal_a_outputdestination() const {
+  return _impl_.a_outputdestination_;
 }
-inline int32_t PrintData::outputdestination() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.outputDestination)
-  return _internal_outputdestination();
+inline int32_t PrintData::a_outputdestination() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_outputDestination)
+  return _internal_a_outputdestination();
 }
-inline void PrintData::_internal_set_outputdestination(int32_t value) {
+inline void PrintData::_internal_set_a_outputdestination(int32_t value) {
   _impl_._has_bits_[1] |= 0x00001000u;
-  _impl_.outputdestination_ = value;
+  _impl_.a_outputdestination_ = value;
 }
-inline void PrintData::set_outputdestination(int32_t value) {
-  _internal_set_outputdestination(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.outputDestination)
+inline void PrintData::set_a_outputdestination(int32_t value) {
+  _internal_set_a_outputdestination(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_outputDestination)
 }
 
-// required sint32 outputFormat = 43;
-inline bool PrintData::_internal_has_outputformat() const {
+// required sint32 a_outputFormat = 43;
+inline bool PrintData::_internal_has_a_outputformat() const {
   bool value = (_impl_._has_bits_[1] & 0x00002000u) != 0;
   return value;
 }
-inline bool PrintData::has_outputformat() const {
-  return _internal_has_outputformat();
+inline bool PrintData::has_a_outputformat() const {
+  return _internal_has_a_outputformat();
 }
-inline void PrintData::clear_outputformat() {
-  _impl_.outputformat_ = 0;
+inline void PrintData::clear_a_outputformat() {
+  _impl_.a_outputformat_ = 0;
   _impl_._has_bits_[1] &= ~0x00002000u;
 }
-inline int32_t PrintData::_internal_outputformat() const {
-  return _impl_.outputformat_;
+inline int32_t PrintData::_internal_a_outputformat() const {
+  return _impl_.a_outputformat_;
 }
-inline int32_t PrintData::outputformat() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.outputFormat)
-  return _internal_outputformat();
+inline int32_t PrintData::a_outputformat() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_outputFormat)
+  return _internal_a_outputformat();
 }
-inline void PrintData::_internal_set_outputformat(int32_t value) {
+inline void PrintData::_internal_set_a_outputformat(int32_t value) {
   _impl_._has_bits_[1] |= 0x00002000u;
-  _impl_.outputformat_ = value;
+  _impl_.a_outputformat_ = value;
 }
-inline void PrintData::set_outputformat(int32_t value) {
-  _internal_set_outputformat(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.outputFormat)
+inline void PrintData::set_a_outputformat(int32_t value) {
+  _internal_set_a_outputformat(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_outputFormat)
 }
 
-// required sint32 printPageDelay = 44;
-inline bool PrintData::_internal_has_printpagedelay() const {
+// required sint32 a_printPageDelay = 44;
+inline bool PrintData::_internal_has_a_printpagedelay() const {
   bool value = (_impl_._has_bits_[1] & 0x00004000u) != 0;
   return value;
 }
-inline bool PrintData::has_printpagedelay() const {
-  return _internal_has_printpagedelay();
+inline bool PrintData::has_a_printpagedelay() const {
+  return _internal_has_a_printpagedelay();
 }
-inline void PrintData::clear_printpagedelay() {
-  _impl_.printpagedelay_ = 0;
+inline void PrintData::clear_a_printpagedelay() {
+  _impl_.a_printpagedelay_ = 0;
   _impl_._has_bits_[1] &= ~0x00004000u;
 }
-inline int32_t PrintData::_internal_printpagedelay() const {
-  return _impl_.printpagedelay_;
+inline int32_t PrintData::_internal_a_printpagedelay() const {
+  return _impl_.a_printpagedelay_;
 }
-inline int32_t PrintData::printpagedelay() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.printPageDelay)
-  return _internal_printpagedelay();
+inline int32_t PrintData::a_printpagedelay() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_printPageDelay)
+  return _internal_a_printpagedelay();
 }
-inline void PrintData::_internal_set_printpagedelay(int32_t value) {
+inline void PrintData::_internal_set_a_printpagedelay(int32_t value) {
   _impl_._has_bits_[1] |= 0x00004000u;
-  _impl_.printpagedelay_ = value;
+  _impl_.a_printpagedelay_ = value;
 }
-inline void PrintData::set_printpagedelay(int32_t value) {
-  _internal_set_printpagedelay(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.printPageDelay)
+inline void PrintData::set_a_printpagedelay(int32_t value) {
+  _internal_set_a_printpagedelay(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_printPageDelay)
 }
 
-// required sint32 resolution = 45;
-inline bool PrintData::_internal_has_resolution() const {
+// required sint32 a_resolution = 45;
+inline bool PrintData::_internal_has_a_resolution() const {
   bool value = (_impl_._has_bits_[1] & 0x00008000u) != 0;
   return value;
 }
-inline bool PrintData::has_resolution() const {
-  return _internal_has_resolution();
+inline bool PrintData::has_a_resolution() const {
+  return _internal_has_a_resolution();
 }
-inline void PrintData::clear_resolution() {
-  _impl_.resolution_ = 0;
+inline void PrintData::clear_a_resolution() {
+  _impl_.a_resolution_ = 0;
   _impl_._has_bits_[1] &= ~0x00008000u;
 }
-inline int32_t PrintData::_internal_resolution() const {
-  return _impl_.resolution_;
+inline int32_t PrintData::_internal_a_resolution() const {
+  return _impl_.a_resolution_;
 }
-inline int32_t PrintData::resolution() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.resolution)
-  return _internal_resolution();
+inline int32_t PrintData::a_resolution() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_resolution)
+  return _internal_a_resolution();
 }
-inline void PrintData::_internal_set_resolution(int32_t value) {
+inline void PrintData::_internal_set_a_resolution(int32_t value) {
   _impl_._has_bits_[1] |= 0x00008000u;
-  _impl_.resolution_ = value;
+  _impl_.a_resolution_ = value;
 }
-inline void PrintData::set_resolution(int32_t value) {
-  _internal_set_resolution(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.resolution)
+inline void PrintData::set_a_resolution(int32_t value) {
+  _internal_set_a_resolution(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_resolution)
 }
 
-// required sint32 duplex = 46;
-inline bool PrintData::_internal_has_duplex() const {
+// required sint32 a_duplex = 46;
+inline bool PrintData::_internal_has_a_duplex() const {
   bool value = (_impl_._has_bits_[1] & 0x00010000u) != 0;
   return value;
 }
-inline bool PrintData::has_duplex() const {
-  return _internal_has_duplex();
+inline bool PrintData::has_a_duplex() const {
+  return _internal_has_a_duplex();
 }
-inline void PrintData::clear_duplex() {
-  _impl_.duplex_ = 0;
+inline void PrintData::clear_a_duplex() {
+  _impl_.a_duplex_ = 0;
   _impl_._has_bits_[1] &= ~0x00010000u;
 }
-inline int32_t PrintData::_internal_duplex() const {
-  return _impl_.duplex_;
+inline int32_t PrintData::_internal_a_duplex() const {
+  return _impl_.a_duplex_;
 }
-inline int32_t PrintData::duplex() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.duplex)
-  return _internal_duplex();
+inline int32_t PrintData::a_duplex() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_duplex)
+  return _internal_a_duplex();
 }
-inline void PrintData::_internal_set_duplex(int32_t value) {
+inline void PrintData::_internal_set_a_duplex(int32_t value) {
   _impl_._has_bits_[1] |= 0x00010000u;
-  _impl_.duplex_ = value;
+  _impl_.a_duplex_ = value;
 }
-inline void PrintData::set_duplex(int32_t value) {
-  _internal_set_duplex(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.duplex)
+inline void PrintData::set_a_duplex(int32_t value) {
+  _internal_set_a_duplex(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_duplex)
 }
 
-// required bool isInitializedFromPrinter = 47;
-inline bool PrintData::_internal_has_isinitializedfromprinter() const {
+// required bool a_isInitializedFromPrinter = 47;
+inline bool PrintData::_internal_has_a_isinitializedfromprinter() const {
   bool value = (_impl_._has_bits_[1] & 0x00000100u) != 0;
   return value;
 }
-inline bool PrintData::has_isinitializedfromprinter() const {
-  return _internal_has_isinitializedfromprinter();
+inline bool PrintData::has_a_isinitializedfromprinter() const {
+  return _internal_has_a_isinitializedfromprinter();
 }
-inline void PrintData::clear_isinitializedfromprinter() {
-  _impl_.isinitializedfromprinter_ = false;
+inline void PrintData::clear_a_isinitializedfromprinter() {
+  _impl_.a_isinitializedfromprinter_ = false;
   _impl_._has_bits_[1] &= ~0x00000100u;
 }
-inline bool PrintData::_internal_isinitializedfromprinter() const {
-  return _impl_.isinitializedfromprinter_;
+inline bool PrintData::_internal_a_isinitializedfromprinter() const {
+  return _impl_.a_isinitializedfromprinter_;
 }
-inline bool PrintData::isinitializedfromprinter() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.isInitializedFromPrinter)
-  return _internal_isinitializedfromprinter();
+inline bool PrintData::a_isinitializedfromprinter() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrinter)
+  return _internal_a_isinitializedfromprinter();
 }
-inline void PrintData::_internal_set_isinitializedfromprinter(bool value) {
+inline void PrintData::_internal_set_a_isinitializedfromprinter(bool value) {
   _impl_._has_bits_[1] |= 0x00000100u;
-  _impl_.isinitializedfromprinter_ = value;
+  _impl_.a_isinitializedfromprinter_ = value;
 }
-inline void PrintData::set_isinitializedfromprinter(bool value) {
-  _internal_set_isinitializedfromprinter(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.isInitializedFromPrinter)
+inline void PrintData::set_a_isinitializedfromprinter(bool value) {
+  _internal_set_a_isinitializedfromprinter(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrinter)
 }
 
-// required bool isInitializedFromPrefs = 48;
-inline bool PrintData::_internal_has_isinitializedfromprefs() const {
+// required bool a_isInitializedFromPrefs = 48;
+inline bool PrintData::_internal_has_a_isinitializedfromprefs() const {
   bool value = (_impl_._has_bits_[1] & 0x00020000u) != 0;
   return value;
 }
-inline bool PrintData::has_isinitializedfromprefs() const {
-  return _internal_has_isinitializedfromprefs();
+inline bool PrintData::has_a_isinitializedfromprefs() const {
+  return _internal_has_a_isinitializedfromprefs();
 }
-inline void PrintData::clear_isinitializedfromprefs() {
-  _impl_.isinitializedfromprefs_ = false;
+inline void PrintData::clear_a_isinitializedfromprefs() {
+  _impl_.a_isinitializedfromprefs_ = false;
   _impl_._has_bits_[1] &= ~0x00020000u;
 }
-inline bool PrintData::_internal_isinitializedfromprefs() const {
-  return _impl_.isinitializedfromprefs_;
+inline bool PrintData::_internal_a_isinitializedfromprefs() const {
+  return _impl_.a_isinitializedfromprefs_;
 }
-inline bool PrintData::isinitializedfromprefs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.isInitializedFromPrefs)
-  return _internal_isinitializedfromprefs();
+inline bool PrintData::a_isinitializedfromprefs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrefs)
+  return _internal_a_isinitializedfromprefs();
 }
-inline void PrintData::_internal_set_isinitializedfromprefs(bool value) {
+inline void PrintData::_internal_set_a_isinitializedfromprefs(bool value) {
   _impl_._has_bits_[1] |= 0x00020000u;
-  _impl_.isinitializedfromprefs_ = value;
+  _impl_.a_isinitializedfromprefs_ = value;
 }
-inline void PrintData::set_isinitializedfromprefs(bool value) {
-  _internal_set_isinitializedfromprefs(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.isInitializedFromPrefs)
+inline void PrintData::set_a_isinitializedfromprefs(bool value) {
+  _internal_set_a_isinitializedfromprefs(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrefs)
 }
 
-// required bytes driverName = 49;
-inline bool PrintData::_internal_has_drivername() const {
+// required bytes a_driverName = 49;
+inline bool PrintData::_internal_has_a_drivername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
-inline bool PrintData::has_drivername() const {
-  return _internal_has_drivername();
+inline bool PrintData::has_a_drivername() const {
+  return _internal_has_a_drivername();
 }
-inline void PrintData::clear_drivername() {
-  _impl_.drivername_.ClearToEmpty();
+inline void PrintData::clear_a_drivername() {
+  _impl_.a_drivername_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000400u;
 }
-inline const std::string& PrintData::drivername() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.driverName)
-  return _internal_drivername();
+inline const std::string& PrintData::a_drivername() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_driverName)
+  return _internal_a_drivername();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_drivername(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_drivername(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000400u;
- _impl_.drivername_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.driverName)
+ _impl_.a_drivername_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_driverName)
 }
-inline std::string* PrintData::mutable_drivername() {
-  std::string* _s = _internal_mutable_drivername();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.driverName)
+inline std::string* PrintData::mutable_a_drivername() {
+  std::string* _s = _internal_mutable_a_drivername();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_driverName)
   return _s;
 }
-inline const std::string& PrintData::_internal_drivername() const {
-  return _impl_.drivername_.Get();
+inline const std::string& PrintData::_internal_a_drivername() const {
+  return _impl_.a_drivername_.Get();
 }
-inline void PrintData::_internal_set_drivername(const std::string& value) {
+inline void PrintData::_internal_set_a_drivername(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000400u;
-  _impl_.drivername_.Set(value, GetArenaForAllocation());
+  _impl_.a_drivername_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_drivername() {
+inline std::string* PrintData::_internal_mutable_a_drivername() {
   _impl_._has_bits_[0] |= 0x00000400u;
-  return _impl_.drivername_.Mutable(GetArenaForAllocation());
+  return _impl_.a_drivername_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_drivername() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.driverName)
-  if (!_internal_has_drivername()) {
+inline std::string* PrintData::release_a_drivername() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_driverName)
+  if (!_internal_has_a_drivername()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000400u;
-  auto* p = _impl_.drivername_.Release();
+  auto* p = _impl_.a_drivername_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.drivername_.IsDefault()) {
-    _impl_.drivername_.Set("", GetArenaForAllocation());
+  if (_impl_.a_drivername_.IsDefault()) {
+    _impl_.a_drivername_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_drivername(std::string* drivername) {
-  if (drivername != nullptr) {
+inline void PrintData::set_allocated_a_drivername(std::string* a_drivername) {
+  if (a_drivername != nullptr) {
     _impl_._has_bits_[0] |= 0x00000400u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000400u;
   }
-  _impl_.drivername_.SetAllocated(drivername, GetArenaForAllocation());
+  _impl_.a_drivername_.SetAllocated(a_drivername, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.drivername_.IsDefault()) {
-    _impl_.drivername_.Set("", GetArenaForAllocation());
+  if (_impl_.a_drivername_.IsDefault()) {
+    _impl_.a_drivername_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.driverName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_driverName)
 }
 
-// required bytes deviceName = 50;
-inline bool PrintData::_internal_has_devicename() const {
+// required bytes a_deviceName = 50;
+inline bool PrintData::_internal_has_a_devicename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
-inline bool PrintData::has_devicename() const {
-  return _internal_has_devicename();
+inline bool PrintData::has_a_devicename() const {
+  return _internal_has_a_devicename();
 }
-inline void PrintData::clear_devicename() {
-  _impl_.devicename_.ClearToEmpty();
+inline void PrintData::clear_a_devicename() {
+  _impl_.a_devicename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000800u;
 }
-inline const std::string& PrintData::devicename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.deviceName)
-  return _internal_devicename();
+inline const std::string& PrintData::a_devicename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_deviceName)
+  return _internal_a_devicename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_devicename(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_devicename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000800u;
- _impl_.devicename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.deviceName)
+ _impl_.a_devicename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_deviceName)
 }
-inline std::string* PrintData::mutable_devicename() {
-  std::string* _s = _internal_mutable_devicename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.deviceName)
+inline std::string* PrintData::mutable_a_devicename() {
+  std::string* _s = _internal_mutable_a_devicename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_deviceName)
   return _s;
 }
-inline const std::string& PrintData::_internal_devicename() const {
-  return _impl_.devicename_.Get();
+inline const std::string& PrintData::_internal_a_devicename() const {
+  return _impl_.a_devicename_.Get();
 }
-inline void PrintData::_internal_set_devicename(const std::string& value) {
+inline void PrintData::_internal_set_a_devicename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000800u;
-  _impl_.devicename_.Set(value, GetArenaForAllocation());
+  _impl_.a_devicename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_devicename() {
+inline std::string* PrintData::_internal_mutable_a_devicename() {
   _impl_._has_bits_[0] |= 0x00000800u;
-  return _impl_.devicename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_devicename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_devicename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.deviceName)
-  if (!_internal_has_devicename()) {
+inline std::string* PrintData::release_a_devicename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_deviceName)
+  if (!_internal_has_a_devicename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000800u;
-  auto* p = _impl_.devicename_.Release();
+  auto* p = _impl_.a_devicename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.devicename_.IsDefault()) {
-    _impl_.devicename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_devicename_.IsDefault()) {
+    _impl_.a_devicename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_devicename(std::string* devicename) {
-  if (devicename != nullptr) {
+inline void PrintData::set_allocated_a_devicename(std::string* a_devicename) {
+  if (a_devicename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000800u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000800u;
   }
-  _impl_.devicename_.SetAllocated(devicename, GetArenaForAllocation());
+  _impl_.a_devicename_.SetAllocated(a_devicename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.devicename_.IsDefault()) {
-    _impl_.devicename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_devicename_.IsDefault()) {
+    _impl_.a_devicename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.deviceName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_deviceName)
 }
 
-// repeated uint32 devModeData = 51;
-inline int PrintData::_internal_devmodedata_size() const {
-  return _impl_.devmodedata_.size();
+// repeated uint32 a_devModeData = 51;
+inline int PrintData::_internal_a_devmodedata_size() const {
+  return _impl_.a_devmodedata_.size();
 }
-inline int PrintData::devmodedata_size() const {
-  return _internal_devmodedata_size();
+inline int PrintData::a_devmodedata_size() const {
+  return _internal_a_devmodedata_size();
 }
-inline void PrintData::clear_devmodedata() {
-  _impl_.devmodedata_.Clear();
+inline void PrintData::clear_a_devmodedata() {
+  _impl_.a_devmodedata_.Clear();
 }
-inline uint32_t PrintData::_internal_devmodedata(int index) const {
-  return _impl_.devmodedata_.Get(index);
+inline uint32_t PrintData::_internal_a_devmodedata(int index) const {
+  return _impl_.a_devmodedata_.Get(index);
 }
-inline uint32_t PrintData::devmodedata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.devModeData)
-  return _internal_devmodedata(index);
+inline uint32_t PrintData::a_devmodedata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_devModeData)
+  return _internal_a_devmodedata(index);
 }
-inline void PrintData::set_devmodedata(int index, uint32_t value) {
-  _impl_.devmodedata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.devModeData)
+inline void PrintData::set_a_devmodedata(int index, uint32_t value) {
+  _impl_.a_devmodedata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_devModeData)
 }
-inline void PrintData::_internal_add_devmodedata(uint32_t value) {
-  _impl_.devmodedata_.Add(value);
+inline void PrintData::_internal_add_a_devmodedata(uint32_t value) {
+  _impl_.a_devmodedata_.Add(value);
 }
-inline void PrintData::add_devmodedata(uint32_t value) {
-  _internal_add_devmodedata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.embedding.PrintData.devModeData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-PrintData::_internal_devmodedata() const {
-  return _impl_.devmodedata_;
+inline void PrintData::add_a_devmodedata(uint32_t value) {
+  _internal_add_a_devmodedata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.embedding.PrintData.a_devModeData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-PrintData::devmodedata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.embedding.PrintData.devModeData)
-  return _internal_devmodedata();
+PrintData::_internal_a_devmodedata() const {
+  return _impl_.a_devmodedata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+PrintData::a_devmodedata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.embedding.PrintData.a_devModeData)
+  return _internal_a_devmodedata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-PrintData::_internal_mutable_devmodedata() {
-  return &_impl_.devmodedata_;
+PrintData::_internal_mutable_a_devmodedata() {
+  return &_impl_.a_devmodedata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-PrintData::mutable_devmodedata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.embedding.PrintData.devModeData)
-  return _internal_mutable_devmodedata();
+PrintData::mutable_a_devmodedata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.embedding.PrintData.a_devModeData)
+  return _internal_mutable_a_devmodedata();
 }
 
-// repeated .protobuf.mozilla.embedding.CStringKeyValue GTKPrintSettings = 52;
-inline int PrintData::_internal_gtkprintsettings_size() const {
-  return _impl_.gtkprintsettings_.size();
+// repeated .protobuf.mozilla.embedding.CStringKeyValue a_GTKPrintSettings = 52;
+inline int PrintData::_internal_a_gtkprintsettings_size() const {
+  return _impl_.a_gtkprintsettings_.size();
 }
-inline int PrintData::gtkprintsettings_size() const {
-  return _internal_gtkprintsettings_size();
+inline int PrintData::a_gtkprintsettings_size() const {
+  return _internal_a_gtkprintsettings_size();
 }
-inline void PrintData::clear_gtkprintsettings() {
-  _impl_.gtkprintsettings_.Clear();
+inline void PrintData::clear_a_gtkprintsettings() {
+  _impl_.a_gtkprintsettings_.Clear();
 }
-inline ::protobuf::mozilla::embedding::CStringKeyValue* PrintData::mutable_gtkprintsettings(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.GTKPrintSettings)
-  return _impl_.gtkprintsettings_.Mutable(index);
+inline ::protobuf::mozilla::embedding::CStringKeyValue* PrintData::mutable_a_gtkprintsettings(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_GTKPrintSettings)
+  return _impl_.a_gtkprintsettings_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue >*
-PrintData::mutable_gtkprintsettings() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.embedding.PrintData.GTKPrintSettings)
-  return &_impl_.gtkprintsettings_;
+PrintData::mutable_a_gtkprintsettings() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.embedding.PrintData.a_GTKPrintSettings)
+  return &_impl_.a_gtkprintsettings_;
 }
-inline const ::protobuf::mozilla::embedding::CStringKeyValue& PrintData::_internal_gtkprintsettings(int index) const {
-  return _impl_.gtkprintsettings_.Get(index);
+inline const ::protobuf::mozilla::embedding::CStringKeyValue& PrintData::_internal_a_gtkprintsettings(int index) const {
+  return _impl_.a_gtkprintsettings_.Get(index);
 }
-inline const ::protobuf::mozilla::embedding::CStringKeyValue& PrintData::gtkprintsettings(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.GTKPrintSettings)
-  return _internal_gtkprintsettings(index);
+inline const ::protobuf::mozilla::embedding::CStringKeyValue& PrintData::a_gtkprintsettings(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_GTKPrintSettings)
+  return _internal_a_gtkprintsettings(index);
 }
-inline ::protobuf::mozilla::embedding::CStringKeyValue* PrintData::_internal_add_gtkprintsettings() {
-  return _impl_.gtkprintsettings_.Add();
+inline ::protobuf::mozilla::embedding::CStringKeyValue* PrintData::_internal_add_a_gtkprintsettings() {
+  return _impl_.a_gtkprintsettings_.Add();
 }
-inline ::protobuf::mozilla::embedding::CStringKeyValue* PrintData::add_gtkprintsettings() {
-  ::protobuf::mozilla::embedding::CStringKeyValue* _add = _internal_add_gtkprintsettings();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.embedding.PrintData.GTKPrintSettings)
+inline ::protobuf::mozilla::embedding::CStringKeyValue* PrintData::add_a_gtkprintsettings() {
+  ::protobuf::mozilla::embedding::CStringKeyValue* _add = _internal_add_a_gtkprintsettings();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.embedding.PrintData.a_GTKPrintSettings)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue >&
-PrintData::gtkprintsettings() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.embedding.PrintData.GTKPrintSettings)
-  return _impl_.gtkprintsettings_;
+PrintData::a_gtkprintsettings() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.embedding.PrintData.a_GTKPrintSettings)
+  return _impl_.a_gtkprintsettings_;
 }
 
-// required bytes disposition = 53;
-inline bool PrintData::_internal_has_disposition() const {
+// required bytes a_disposition = 53;
+inline bool PrintData::_internal_has_a_disposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
-inline bool PrintData::has_disposition() const {
-  return _internal_has_disposition();
+inline bool PrintData::has_a_disposition() const {
+  return _internal_has_a_disposition();
 }
-inline void PrintData::clear_disposition() {
-  _impl_.disposition_.ClearToEmpty();
+inline void PrintData::clear_a_disposition() {
+  _impl_.a_disposition_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00001000u;
 }
-inline const std::string& PrintData::disposition() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.disposition)
-  return _internal_disposition();
+inline const std::string& PrintData::a_disposition() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_disposition)
+  return _internal_a_disposition();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PrintData::set_disposition(ArgT0&& arg0, ArgT... args) {
+void PrintData::set_a_disposition(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00001000u;
- _impl_.disposition_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.disposition)
+ _impl_.a_disposition_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_disposition)
 }
-inline std::string* PrintData::mutable_disposition() {
-  std::string* _s = _internal_mutable_disposition();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.disposition)
+inline std::string* PrintData::mutable_a_disposition() {
+  std::string* _s = _internal_mutable_a_disposition();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.embedding.PrintData.a_disposition)
   return _s;
 }
-inline const std::string& PrintData::_internal_disposition() const {
-  return _impl_.disposition_.Get();
+inline const std::string& PrintData::_internal_a_disposition() const {
+  return _impl_.a_disposition_.Get();
 }
-inline void PrintData::_internal_set_disposition(const std::string& value) {
+inline void PrintData::_internal_set_a_disposition(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00001000u;
-  _impl_.disposition_.Set(value, GetArenaForAllocation());
+  _impl_.a_disposition_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PrintData::_internal_mutable_disposition() {
+inline std::string* PrintData::_internal_mutable_a_disposition() {
   _impl_._has_bits_[0] |= 0x00001000u;
-  return _impl_.disposition_.Mutable(GetArenaForAllocation());
+  return _impl_.a_disposition_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PrintData::release_disposition() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.disposition)
-  if (!_internal_has_disposition()) {
+inline std::string* PrintData::release_a_disposition() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.embedding.PrintData.a_disposition)
+  if (!_internal_has_a_disposition()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00001000u;
-  auto* p = _impl_.disposition_.Release();
+  auto* p = _impl_.a_disposition_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.disposition_.IsDefault()) {
-    _impl_.disposition_.Set("", GetArenaForAllocation());
+  if (_impl_.a_disposition_.IsDefault()) {
+    _impl_.a_disposition_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PrintData::set_allocated_disposition(std::string* disposition) {
-  if (disposition != nullptr) {
+inline void PrintData::set_allocated_a_disposition(std::string* a_disposition) {
+  if (a_disposition != nullptr) {
     _impl_._has_bits_[0] |= 0x00001000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00001000u;
   }
-  _impl_.disposition_.SetAllocated(disposition, GetArenaForAllocation());
+  _impl_.a_disposition_.SetAllocated(a_disposition, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.disposition_.IsDefault()) {
-    _impl_.disposition_.Set("", GetArenaForAllocation());
+  if (_impl_.a_disposition_.IsDefault()) {
+    _impl_.a_disposition_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.disposition)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_disposition)
 }
 
-// required uint32 destination = 54;
-inline bool PrintData::_internal_has_destination() const {
+// required uint32 a_destination = 54;
+inline bool PrintData::_internal_has_a_destination() const {
   bool value = (_impl_._has_bits_[1] & 0x00040000u) != 0;
   return value;
 }
-inline bool PrintData::has_destination() const {
-  return _internal_has_destination();
+inline bool PrintData::has_a_destination() const {
+  return _internal_has_a_destination();
 }
-inline void PrintData::clear_destination() {
-  _impl_.destination_ = 0u;
+inline void PrintData::clear_a_destination() {
+  _impl_.a_destination_ = 0u;
   _impl_._has_bits_[1] &= ~0x00040000u;
 }
-inline uint32_t PrintData::_internal_destination() const {
-  return _impl_.destination_;
+inline uint32_t PrintData::_internal_a_destination() const {
+  return _impl_.a_destination_;
 }
-inline uint32_t PrintData::destination() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.destination)
-  return _internal_destination();
+inline uint32_t PrintData::a_destination() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.embedding.PrintData.a_destination)
+  return _internal_a_destination();
 }
-inline void PrintData::_internal_set_destination(uint32_t value) {
+inline void PrintData::_internal_set_a_destination(uint32_t value) {
   _impl_._has_bits_[1] |= 0x00040000u;
-  _impl_.destination_ = value;
+  _impl_.a_destination_ = value;
 }
-inline void PrintData::set_destination(uint32_t value) {
-  _internal_set_destination(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.destination)
+inline void PrintData::set_a_destination(uint32_t value) {
+  _internal_set_a_destination(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_destination)
 }
 
 #ifdef __GNUC__

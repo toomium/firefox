@@ -17,17 +17,17 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_GetPrincipalKey {
-  required protobuf.mozilla.ipc.PrincipalInfo aPrincipal = 1;
-  required bool aPersist = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
+  required bool a_aPersist = 2;
 }
 
 message Reply_GetPrincipalKey {
-  required bytes aKey = 1;
+  required bytes a_aKey = 1;
 }
 
 message Msg_SanitizeOriginKeys {
-  required uint64 aSinceWhen = 1;
-  required bool aOnlyPrivateBrowsing = 2;
+  required uint64 a_aSinceWhen = 1;
+  required bool a_aOnlyPrivateBrowsing = 2;
 }
 
 message Msg___delete__ {

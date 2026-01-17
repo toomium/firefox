@@ -16,11 +16,11 @@ package protobuf.mozilla.net.PAltDataOutputStream;
 
 // Message declarations
 message Msg_WriteData {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message Msg_Close {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg___delete__ {
@@ -30,7 +30,7 @@ message Reply___delete__ {
 }
 
 message Msg_Error {
-  required bytes err = 1;
+  required bytes a_err = 1;
 }
 
 message Msg_DeleteSelf {

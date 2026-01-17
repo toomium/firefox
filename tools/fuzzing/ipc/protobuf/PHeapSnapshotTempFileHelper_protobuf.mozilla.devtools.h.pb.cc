@@ -24,9 +24,9 @@ PROTOBUF_CONSTEXPR OpenedFile::OpenedFile(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.snapshotid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.descriptor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_snapshotid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_descriptor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct OpenedFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR OpenedFileDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,13 +62,13 @@ namespace devtools {
 class OpenedFile::_Internal {
  public:
   using HasBits = decltype(std::declval<OpenedFile>()._impl_._has_bits_);
-  static void set_has_path(HasBits* has_bits) {
+  static void set_has_a_path(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_snapshotid(HasBits* has_bits) {
+  static void set_has_a_snapshotid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_descriptor(HasBits* has_bits) {
+  static void set_has_a_descriptor(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -88,33 +88,33 @@ OpenedFile::OpenedFile(const OpenedFile& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.path_){}
-    , decltype(_impl_.snapshotid_){}
-    , decltype(_impl_.descriptor_){}};
+    , decltype(_impl_.a_path_){}
+    , decltype(_impl_.a_snapshotid_){}
+    , decltype(_impl_.a_descriptor_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.path_.InitDefault();
+  _impl_.a_path_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.path_.Set("", GetArenaForAllocation());
+    _impl_.a_path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_path()) {
-    _this->_impl_.path_.Set(from._internal_path(), 
+  if (from._internal_has_a_path()) {
+    _this->_impl_.a_path_.Set(from._internal_a_path(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.snapshotid_.InitDefault();
+  _impl_.a_snapshotid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.snapshotid_.Set("", GetArenaForAllocation());
+    _impl_.a_snapshotid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_snapshotid()) {
-    _this->_impl_.snapshotid_.Set(from._internal_snapshotid(), 
+  if (from._internal_has_a_snapshotid()) {
+    _this->_impl_.a_snapshotid_.Set(from._internal_a_snapshotid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.descriptor_.InitDefault();
+  _impl_.a_descriptor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.descriptor_.Set("", GetArenaForAllocation());
+    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_descriptor()) {
-    _this->_impl_.descriptor_.Set(from._internal_descriptor(), 
+  if (from._internal_has_a_descriptor()) {
+    _this->_impl_.a_descriptor_.Set(from._internal_a_descriptor(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.devtools.OpenedFile)
@@ -127,21 +127,21 @@ inline void OpenedFile::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.path_){}
-    , decltype(_impl_.snapshotid_){}
-    , decltype(_impl_.descriptor_){}
+    , decltype(_impl_.a_path_){}
+    , decltype(_impl_.a_snapshotid_){}
+    , decltype(_impl_.a_descriptor_){}
   };
-  _impl_.path_.InitDefault();
+  _impl_.a_path_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.path_.Set("", GetArenaForAllocation());
+    _impl_.a_path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.snapshotid_.InitDefault();
+  _impl_.a_snapshotid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.snapshotid_.Set("", GetArenaForAllocation());
+    _impl_.a_snapshotid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.descriptor_.InitDefault();
+  _impl_.a_descriptor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.descriptor_.Set("", GetArenaForAllocation());
+    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -156,9 +156,9 @@ OpenedFile::~OpenedFile() {
 
 inline void OpenedFile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.path_.Destroy();
-  _impl_.snapshotid_.Destroy();
-  _impl_.descriptor_.Destroy();
+  _impl_.a_path_.Destroy();
+  _impl_.a_snapshotid_.Destroy();
+  _impl_.a_descriptor_.Destroy();
 }
 
 void OpenedFile::SetCachedSize(int size) const {
@@ -174,13 +174,13 @@ void OpenedFile::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.path_.ClearNonDefaultToEmpty();
+      _impl_.a_path_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.snapshotid_.ClearNonDefaultToEmpty();
+      _impl_.a_snapshotid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.descriptor_.ClearNonDefaultToEmpty();
+      _impl_.a_descriptor_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -194,28 +194,28 @@ const char* OpenedFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes path = 1;
+      // required bytes a_path = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_path();
+          auto str = _internal_mutable_a_path();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes snapshotId = 2;
+      // required bytes a_snapshotId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_snapshotid();
+          auto str = _internal_mutable_a_snapshotid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes descriptor = 3;
+      // required bytes a_descriptor = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_descriptor();
+          auto str = _internal_mutable_a_descriptor();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -252,22 +252,22 @@ uint8_t* OpenedFile::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes path = 1;
+  // required bytes a_path = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_path(), target);
+        1, this->_internal_a_path(), target);
   }
 
-  // required bytes snapshotId = 2;
+  // required bytes a_snapshotId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_snapshotid(), target);
+        2, this->_internal_a_snapshotid(), target);
   }
 
-  // required bytes descriptor = 3;
+  // required bytes a_descriptor = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_descriptor(), target);
+        3, this->_internal_a_descriptor(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -282,25 +282,25 @@ size_t OpenedFile::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.devtools.OpenedFile)
   size_t total_size = 0;
 
-  if (_internal_has_path()) {
-    // required bytes path = 1;
+  if (_internal_has_a_path()) {
+    // required bytes a_path = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_path());
+        this->_internal_a_path());
   }
 
-  if (_internal_has_snapshotid()) {
-    // required bytes snapshotId = 2;
+  if (_internal_has_a_snapshotid()) {
+    // required bytes a_snapshotId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_snapshotid());
+        this->_internal_a_snapshotid());
   }
 
-  if (_internal_has_descriptor()) {
-    // required bytes descriptor = 3;
+  if (_internal_has_a_descriptor()) {
+    // required bytes a_descriptor = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_descriptor());
+        this->_internal_a_descriptor());
   }
 
   return total_size;
@@ -310,20 +310,20 @@ size_t OpenedFile::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes path = 1;
+    // required bytes a_path = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_path());
+        this->_internal_a_path());
 
-    // required bytes snapshotId = 2;
+    // required bytes a_snapshotId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_snapshotid());
+        this->_internal_a_snapshotid());
 
-    // required bytes descriptor = 3;
+    // required bytes a_descriptor = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_descriptor());
+        this->_internal_a_descriptor());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -356,13 +356,13 @@ void OpenedFile::MergeFrom(const OpenedFile& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_path(from._internal_path());
+      _this->_internal_set_a_path(from._internal_a_path());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_snapshotid(from._internal_snapshotid());
+      _this->_internal_set_a_snapshotid(from._internal_a_snapshotid());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_descriptor(from._internal_descriptor());
+      _this->_internal_set_a_descriptor(from._internal_a_descriptor());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -387,16 +387,16 @@ void OpenedFile::InternalSwap(OpenedFile* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.path_, lhs_arena,
-      &other->_impl_.path_, rhs_arena
+      &_impl_.a_path_, lhs_arena,
+      &other->_impl_.a_path_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.snapshotid_, lhs_arena,
-      &other->_impl_.snapshotid_, rhs_arena
+      &_impl_.a_snapshotid_, lhs_arena,
+      &other->_impl_.a_snapshotid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.descriptor_, lhs_arena,
-      &other->_impl_.descriptor_, rhs_arena
+      &_impl_.a_descriptor_, lhs_arena,
+      &other->_impl_.a_descriptor_, rhs_arena
   );
 }
 
@@ -409,27 +409,27 @@ std::string OpenedFile::GetTypeName() const {
 
 class OpenHeapSnapshotTempFileResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::devtools::OpenedFile& mvopenedfile(const OpenHeapSnapshotTempFileResponse* msg);
+  static const ::protobuf::mozilla::devtools::OpenedFile& a_mvopenedfile(const OpenHeapSnapshotTempFileResponse* msg);
 };
 
 const ::protobuf::mozilla::devtools::OpenedFile&
-OpenHeapSnapshotTempFileResponse::_Internal::mvopenedfile(const OpenHeapSnapshotTempFileResponse* msg) {
-  return *msg->_impl_.content_.mvopenedfile_;
+OpenHeapSnapshotTempFileResponse::_Internal::a_mvopenedfile(const OpenHeapSnapshotTempFileResponse* msg) {
+  return *msg->_impl_.content_.a_mvopenedfile_;
 }
-void OpenHeapSnapshotTempFileResponse::set_allocated_mvopenedfile(::protobuf::mozilla::devtools::OpenedFile* mvopenedfile) {
+void OpenHeapSnapshotTempFileResponse::set_allocated_a_mvopenedfile(::protobuf::mozilla::devtools::OpenedFile* a_mvopenedfile) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvopenedfile) {
+  if (a_mvopenedfile) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvopenedfile);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvopenedfile);
     if (message_arena != submessage_arena) {
-      mvopenedfile = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvopenedfile, submessage_arena);
+      a_mvopenedfile = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvopenedfile, submessage_arena);
     }
-    set_has_mvopenedfile();
-    _impl_.content_.mvopenedfile_ = mvopenedfile;
+    set_has_a_mvopenedfile();
+    _impl_.content_.a_mvopenedfile_ = a_mvopenedfile;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVOpenedFile)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVOpenedFile)
 }
 OpenHeapSnapshotTempFileResponse::OpenHeapSnapshotTempFileResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -448,13 +448,13 @@ OpenHeapSnapshotTempFileResponse::OpenHeapSnapshotTempFileResponse(const OpenHea
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVOpenedFile: {
-      _this->_internal_mutable_mvopenedfile()->::protobuf::mozilla::devtools::OpenedFile::MergeFrom(
-          from._internal_mvopenedfile());
+    case kAMVOpenedFile: {
+      _this->_internal_mutable_a_mvopenedfile()->::protobuf::mozilla::devtools::OpenedFile::MergeFrom(
+          from._internal_a_mvopenedfile());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -499,13 +499,13 @@ void OpenHeapSnapshotTempFileResponse::SetCachedSize(int size) const {
 void OpenHeapSnapshotTempFileResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVOpenedFile: {
+    case kAMVOpenedFile: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvopenedfile_;
+        delete _impl_.content_.a_mvopenedfile_;
       }
       break;
     }
@@ -533,19 +533,19 @@ const char* OpenHeapSnapshotTempFileResponse::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.devtools.OpenedFile mVOpenedFile = 2;
+      // .protobuf.mozilla.devtools.OpenedFile a_mVOpenedFile = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvopenedfile(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvopenedfile(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -580,15 +580,15 @@ uint8_t* OpenHeapSnapshotTempFileResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVOpenedFile: {
+    case kAMVOpenedFile: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvopenedfile(this),
-          _Internal::mvopenedfile(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvopenedfile(this),
+          _Internal::a_mvopenedfile(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -610,18 +610,18 @@ size_t OpenHeapSnapshotTempFileResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.devtools.OpenedFile mVOpenedFile = 2;
-    case kMVOpenedFile: {
+    // .protobuf.mozilla.devtools.OpenedFile a_mVOpenedFile = 2;
+    case kAMVOpenedFile: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvopenedfile_);
+          *_impl_.content_.a_mvopenedfile_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -650,13 +650,13 @@ void OpenHeapSnapshotTempFileResponse::MergeFrom(const OpenHeapSnapshotTempFileR
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVOpenedFile: {
-      _this->_internal_mutable_mvopenedfile()->::protobuf::mozilla::devtools::OpenedFile::MergeFrom(
-          from._internal_mvopenedfile());
+    case kAMVOpenedFile: {
+      _this->_internal_mutable_a_mvopenedfile()->::protobuf::mozilla::devtools::OpenedFile::MergeFrom(
+          from._internal_a_mvopenedfile());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -675,12 +675,12 @@ void OpenHeapSnapshotTempFileResponse::CopyFrom(const OpenHeapSnapshotTempFileRe
 
 bool OpenHeapSnapshotTempFileResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVOpenedFile: {
-      if (_internal_has_mvopenedfile()) {
-        if (!_impl_.content_.mvopenedfile_->IsInitialized()) return false;
+    case kAMVOpenedFile: {
+      if (_internal_has_a_mvopenedfile()) {
+        if (!_impl_.content_.a_mvopenedfile_->IsInitialized()) return false;
       }
       break;
     }

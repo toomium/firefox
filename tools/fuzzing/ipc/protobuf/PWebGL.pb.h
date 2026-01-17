@@ -441,24 +441,24 @@ class Msg_Initialize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDescFieldNumber = 1,
+    kADescFieldNumber = 1,
   };
-  // required bytes desc = 1;
-  bool has_desc() const;
+  // required bytes a_desc = 1;
+  bool has_a_desc() const;
   private:
-  bool _internal_has_desc() const;
+  bool _internal_has_a_desc() const;
   public:
-  void clear_desc();
-  const std::string& desc() const;
+  void clear_a_desc();
+  const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_desc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_desc();
-  PROTOBUF_NODISCARD std::string* release_desc();
-  void set_allocated_desc(std::string* desc);
+  void set_a_desc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_desc();
+  PROTOBUF_NODISCARD std::string* release_a_desc();
+  void set_allocated_a_desc(std::string* a_desc);
   private:
-  const std::string& _internal_desc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_desc(const std::string& value);
-  std::string* _internal_mutable_desc();
+  const std::string& _internal_a_desc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_desc(const std::string& value);
+  std::string* _internal_mutable_a_desc();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_Initialize)
@@ -471,7 +471,7 @@ class Msg_Initialize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr desc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -588,24 +588,24 @@ class Reply_Initialize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResFieldNumber = 1,
+    kAResFieldNumber = 1,
   };
-  // required bytes res = 1;
-  bool has_res() const;
+  // required bytes a_res = 1;
+  bool has_a_res() const;
   private:
-  bool _internal_has_res() const;
+  bool _internal_has_a_res() const;
   public:
-  void clear_res();
-  const std::string& res() const;
+  void clear_a_res();
+  const std::string& a_res() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_res(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_res();
-  PROTOBUF_NODISCARD std::string* release_res();
-  void set_allocated_res(std::string* res);
+  void set_a_res(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_res();
+  PROTOBUF_NODISCARD std::string* release_a_res();
+  void set_allocated_a_res(std::string* a_res);
   private:
-  const std::string& _internal_res() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_res(const std::string& value);
-  std::string* _internal_mutable_res();
+  const std::string& _internal_a_res() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_res(const std::string& value);
+  std::string* _internal_mutable_a_res();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_Initialize)
@@ -618,7 +618,7 @@ class Reply_Initialize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr res_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_res_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -983,62 +983,62 @@ class Msg_WaitForTxn final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOwnerIdFieldNumber = 1,
-    kTxnTypeFieldNumber = 2,
-    kTxnIdFieldNumber = 3,
+    kAOwnerIdFieldNumber = 1,
+    kATxnTypeFieldNumber = 2,
+    kATxnIdFieldNumber = 3,
   };
-  // required bytes ownerId = 1;
-  bool has_ownerid() const;
+  // required bytes a_ownerId = 1;
+  bool has_a_ownerid() const;
   private:
-  bool _internal_has_ownerid() const;
+  bool _internal_has_a_ownerid() const;
   public:
-  void clear_ownerid();
-  const std::string& ownerid() const;
+  void clear_a_ownerid();
+  const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ownerid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ownerid();
-  PROTOBUF_NODISCARD std::string* release_ownerid();
-  void set_allocated_ownerid(std::string* ownerid);
+  void set_a_ownerid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ownerid();
+  PROTOBUF_NODISCARD std::string* release_a_ownerid();
+  void set_allocated_a_ownerid(std::string* a_ownerid);
   private:
-  const std::string& _internal_ownerid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ownerid(const std::string& value);
-  std::string* _internal_mutable_ownerid();
+  const std::string& _internal_a_ownerid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ownerid(const std::string& value);
+  std::string* _internal_mutable_a_ownerid();
   public:
 
-  // required bytes txnType = 2;
-  bool has_txntype() const;
+  // required bytes a_txnType = 2;
+  bool has_a_txntype() const;
   private:
-  bool _internal_has_txntype() const;
+  bool _internal_has_a_txntype() const;
   public:
-  void clear_txntype();
-  const std::string& txntype() const;
+  void clear_a_txntype();
+  const std::string& a_txntype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_txntype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_txntype();
-  PROTOBUF_NODISCARD std::string* release_txntype();
-  void set_allocated_txntype(std::string* txntype);
+  void set_a_txntype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_txntype();
+  PROTOBUF_NODISCARD std::string* release_a_txntype();
+  void set_allocated_a_txntype(std::string* a_txntype);
   private:
-  const std::string& _internal_txntype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_txntype(const std::string& value);
-  std::string* _internal_mutable_txntype();
+  const std::string& _internal_a_txntype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_txntype(const std::string& value);
+  std::string* _internal_mutable_a_txntype();
   public:
 
-  // required bytes txnId = 3;
-  bool has_txnid() const;
+  // required bytes a_txnId = 3;
+  bool has_a_txnid() const;
   private:
-  bool _internal_has_txnid() const;
+  bool _internal_has_a_txnid() const;
   public:
-  void clear_txnid();
-  const std::string& txnid() const;
+  void clear_a_txnid();
+  const std::string& a_txnid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_txnid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_txnid();
-  PROTOBUF_NODISCARD std::string* release_txnid();
-  void set_allocated_txnid(std::string* txnid);
+  void set_a_txnid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_txnid();
+  PROTOBUF_NODISCARD std::string* release_a_txnid();
+  void set_allocated_a_txnid(std::string* a_txnid);
   private:
-  const std::string& _internal_txnid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_txnid(const std::string& value);
-  std::string* _internal_mutable_txnid();
+  const std::string& _internal_a_txnid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_txnid(const std::string& value);
+  std::string* _internal_mutable_a_txnid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn)
@@ -1054,9 +1054,9 @@ class Msg_WaitForTxn final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ownerid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr txntype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr txnid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txntype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txnid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1173,38 +1173,38 @@ class Msg_DispatchCommands final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCommandsFieldNumber = 1,
-    kSizeFieldNumber = 2,
+    kACommandsFieldNumber = 1,
+    kASizeFieldNumber = 2,
   };
-  // required bytes commands = 1;
-  bool has_commands() const;
+  // required bytes a_commands = 1;
+  bool has_a_commands() const;
   private:
-  bool _internal_has_commands() const;
+  bool _internal_has_a_commands() const;
   public:
-  void clear_commands();
-  const std::string& commands() const;
+  void clear_a_commands();
+  const std::string& a_commands() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_commands(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_commands();
-  PROTOBUF_NODISCARD std::string* release_commands();
-  void set_allocated_commands(std::string* commands);
+  void set_a_commands(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_commands();
+  PROTOBUF_NODISCARD std::string* release_a_commands();
+  void set_allocated_a_commands(std::string* a_commands);
   private:
-  const std::string& _internal_commands() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_commands(const std::string& value);
-  std::string* _internal_mutable_commands();
+  const std::string& _internal_a_commands() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_commands(const std::string& value);
+  std::string* _internal_mutable_a_commands();
   public:
 
-  // required uint64 size = 2;
-  bool has_size() const;
+  // required uint64 a_size = 2;
+  bool has_a_size() const;
   private:
-  bool _internal_has_size() const;
+  bool _internal_has_a_size() const;
   public:
-  void clear_size();
-  uint64_t size() const;
-  void set_size(uint64_t value);
+  void clear_a_size();
+  uint64_t a_size() const;
+  void set_a_size(uint64_t value);
   private:
-  uint64_t _internal_size() const;
-  void _internal_set_size(uint64_t value);
+  uint64_t _internal_a_size() const;
+  void _internal_set_a_size(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands)
@@ -1220,8 +1220,8 @@ class Msg_DispatchCommands final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr commands_;
-    uint64_t size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_commands_;
+    uint64_t a_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1462,24 +1462,24 @@ class Reply_Ping final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOkFieldNumber = 1,
+    kAOkFieldNumber = 1,
   };
-  // required bytes ok = 1;
-  bool has_ok() const;
+  // required bytes a_ok = 1;
+  bool has_a_ok() const;
   private:
-  bool _internal_has_ok() const;
+  bool _internal_has_a_ok() const;
   public:
-  void clear_ok();
-  const std::string& ok() const;
+  void clear_a_ok();
+  const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ok(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ok();
-  PROTOBUF_NODISCARD std::string* release_ok();
-  void set_allocated_ok(std::string* ok);
+  void set_a_ok(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ok();
+  PROTOBUF_NODISCARD std::string* release_a_ok();
+  void set_allocated_a_ok(std::string* a_ok);
   private:
-  const std::string& _internal_ok() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ok(const std::string& value);
-  std::string* _internal_mutable_ok();
+  const std::string& _internal_a_ok() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ok(const std::string& value);
+  std::string* _internal_mutable_a_ok();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_Ping)
@@ -1492,7 +1492,7 @@ class Reply_Ping final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ok_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -1857,90 +1857,90 @@ class Msg_TexImage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOffsetFieldNumber = 3,
-    kPiFieldNumber = 4,
-    kSrcFieldNumber = 5,
-    kLevelFieldNumber = 1,
-    kRespecFormatFieldNumber = 2,
+    kAOffsetFieldNumber = 3,
+    kAPiFieldNumber = 4,
+    kASrcFieldNumber = 5,
+    kALevelFieldNumber = 1,
+    kARespecFormatFieldNumber = 2,
   };
-  // required bytes offset = 3;
-  bool has_offset() const;
+  // required bytes a_offset = 3;
+  bool has_a_offset() const;
   private:
-  bool _internal_has_offset() const;
+  bool _internal_has_a_offset() const;
   public:
-  void clear_offset();
-  const std::string& offset() const;
+  void clear_a_offset();
+  const std::string& a_offset() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_offset(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_offset();
-  PROTOBUF_NODISCARD std::string* release_offset();
-  void set_allocated_offset(std::string* offset);
+  void set_a_offset(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_offset();
+  PROTOBUF_NODISCARD std::string* release_a_offset();
+  void set_allocated_a_offset(std::string* a_offset);
   private:
-  const std::string& _internal_offset() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_offset(const std::string& value);
-  std::string* _internal_mutable_offset();
+  const std::string& _internal_a_offset() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_offset(const std::string& value);
+  std::string* _internal_mutable_a_offset();
   public:
 
-  // required bytes pi = 4;
-  bool has_pi() const;
+  // required bytes a_pi = 4;
+  bool has_a_pi() const;
   private:
-  bool _internal_has_pi() const;
+  bool _internal_has_a_pi() const;
   public:
-  void clear_pi();
-  const std::string& pi() const;
+  void clear_a_pi();
+  const std::string& a_pi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_pi(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_pi();
-  PROTOBUF_NODISCARD std::string* release_pi();
-  void set_allocated_pi(std::string* pi);
+  void set_a_pi(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_pi();
+  PROTOBUF_NODISCARD std::string* release_a_pi();
+  void set_allocated_a_pi(std::string* a_pi);
   private:
-  const std::string& _internal_pi() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pi(const std::string& value);
-  std::string* _internal_mutable_pi();
+  const std::string& _internal_a_pi() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_pi(const std::string& value);
+  std::string* _internal_mutable_a_pi();
   public:
 
-  // required bytes src = 5;
-  bool has_src() const;
+  // required bytes a_src = 5;
+  bool has_a_src() const;
   private:
-  bool _internal_has_src() const;
+  bool _internal_has_a_src() const;
   public:
-  void clear_src();
-  const std::string& src() const;
+  void clear_a_src();
+  const std::string& a_src() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_src(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_src();
-  PROTOBUF_NODISCARD std::string* release_src();
-  void set_allocated_src(std::string* src);
+  void set_a_src(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_src();
+  PROTOBUF_NODISCARD std::string* release_a_src();
+  void set_allocated_a_src(std::string* a_src);
   private:
-  const std::string& _internal_src() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_src(const std::string& value);
-  std::string* _internal_mutable_src();
+  const std::string& _internal_a_src() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_src(const std::string& value);
+  std::string* _internal_mutable_a_src();
   public:
 
-  // required uint32 level = 1;
-  bool has_level() const;
+  // required uint32 a_level = 1;
+  bool has_a_level() const;
   private:
-  bool _internal_has_level() const;
+  bool _internal_has_a_level() const;
   public:
-  void clear_level();
-  uint32_t level() const;
-  void set_level(uint32_t value);
+  void clear_a_level();
+  uint32_t a_level() const;
+  void set_a_level(uint32_t value);
   private:
-  uint32_t _internal_level() const;
-  void _internal_set_level(uint32_t value);
+  uint32_t _internal_a_level() const;
+  void _internal_set_a_level(uint32_t value);
   public:
 
-  // required uint32 respecFormat = 2;
-  bool has_respecformat() const;
+  // required uint32 a_respecFormat = 2;
+  bool has_a_respecformat() const;
   private:
-  bool _internal_has_respecformat() const;
+  bool _internal_has_a_respecformat() const;
   public:
-  void clear_respecformat();
-  uint32_t respecformat() const;
-  void set_respecformat(uint32_t value);
+  void clear_a_respecformat();
+  uint32_t a_respecformat() const;
+  void set_a_respecformat(uint32_t value);
   private:
-  uint32_t _internal_respecformat() const;
-  void _internal_set_respecformat(uint32_t value);
+  uint32_t _internal_a_respecformat() const;
+  void _internal_set_a_respecformat(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_TexImage)
@@ -1956,11 +1956,11 @@ class Msg_TexImage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr offset_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pi_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr src_;
-    uint32_t level_;
-    uint32_t respecformat_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_offset_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pi_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_src_;
+    uint32_t a_level_;
+    uint32_t a_respecformat_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2077,47 +2077,47 @@ class Msg_GetBufferSubData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSrcByteOffsetFieldNumber = 2,
-    kByteSizeFieldNumber = 3,
-    kTargetFieldNumber = 1,
+    kASrcByteOffsetFieldNumber = 2,
+    kAByteSizeFieldNumber = 3,
+    kATargetFieldNumber = 1,
   };
-  // required uint64 srcByteOffset = 2;
-  bool has_srcbyteoffset() const;
+  // required uint64 a_srcByteOffset = 2;
+  bool has_a_srcbyteoffset() const;
   private:
-  bool _internal_has_srcbyteoffset() const;
+  bool _internal_has_a_srcbyteoffset() const;
   public:
-  void clear_srcbyteoffset();
-  uint64_t srcbyteoffset() const;
-  void set_srcbyteoffset(uint64_t value);
+  void clear_a_srcbyteoffset();
+  uint64_t a_srcbyteoffset() const;
+  void set_a_srcbyteoffset(uint64_t value);
   private:
-  uint64_t _internal_srcbyteoffset() const;
-  void _internal_set_srcbyteoffset(uint64_t value);
-  public:
-
-  // required uint64 byteSize = 3;
-  bool has_bytesize() const;
-  private:
-  bool _internal_has_bytesize() const;
-  public:
-  void clear_bytesize();
-  uint64_t bytesize() const;
-  void set_bytesize(uint64_t value);
-  private:
-  uint64_t _internal_bytesize() const;
-  void _internal_set_bytesize(uint64_t value);
+  uint64_t _internal_a_srcbyteoffset() const;
+  void _internal_set_a_srcbyteoffset(uint64_t value);
   public:
 
-  // required uint32 target = 1;
-  bool has_target() const;
+  // required uint64 a_byteSize = 3;
+  bool has_a_bytesize() const;
   private:
-  bool _internal_has_target() const;
+  bool _internal_has_a_bytesize() const;
   public:
-  void clear_target();
-  uint32_t target() const;
-  void set_target(uint32_t value);
+  void clear_a_bytesize();
+  uint64_t a_bytesize() const;
+  void set_a_bytesize(uint64_t value);
   private:
-  uint32_t _internal_target() const;
-  void _internal_set_target(uint32_t value);
+  uint64_t _internal_a_bytesize() const;
+  void _internal_set_a_bytesize(uint64_t value);
+  public:
+
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
+  private:
+  bool _internal_has_a_target() const;
+  public:
+  void clear_a_target();
+  uint32_t a_target() const;
+  void set_a_target(uint32_t value);
+  private:
+  uint32_t _internal_a_target() const;
+  void _internal_set_a_target(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData)
@@ -2133,9 +2133,9 @@ class Msg_GetBufferSubData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t srcbyteoffset_;
-    uint64_t bytesize_;
-    uint32_t target_;
+    uint64_t a_srcbyteoffset_;
+    uint64_t a_bytesize_;
+    uint32_t a_target_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2252,24 +2252,24 @@ class Reply_GetBufferSubData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData)
@@ -2282,7 +2282,7 @@ class Reply_GetBufferSubData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2523,24 +2523,24 @@ class Reply_GetFrontBufferSnapshot final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot)
@@ -2553,7 +2553,7 @@ class Reply_GetFrontBufferSnapshot final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2670,44 +2670,44 @@ class Msg_ReadPixels final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDescFieldNumber = 1,
-    kBufferFieldNumber = 2,
+    kADescFieldNumber = 1,
+    kABufferFieldNumber = 2,
   };
-  // required bytes desc = 1;
-  bool has_desc() const;
+  // required bytes a_desc = 1;
+  bool has_a_desc() const;
   private:
-  bool _internal_has_desc() const;
+  bool _internal_has_a_desc() const;
   public:
-  void clear_desc();
-  const std::string& desc() const;
+  void clear_a_desc();
+  const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_desc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_desc();
-  PROTOBUF_NODISCARD std::string* release_desc();
-  void set_allocated_desc(std::string* desc);
+  void set_a_desc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_desc();
+  PROTOBUF_NODISCARD std::string* release_a_desc();
+  void set_allocated_a_desc(std::string* a_desc);
   private:
-  const std::string& _internal_desc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_desc(const std::string& value);
-  std::string* _internal_mutable_desc();
+  const std::string& _internal_a_desc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_desc(const std::string& value);
+  std::string* _internal_mutable_a_desc();
   public:
 
-  // required .protobuf.mozilla.dom.ReadPixelsBuffer buffer = 2;
-  bool has_buffer() const;
+  // required .protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
+  bool has_a_buffer() const;
   private:
-  bool _internal_has_buffer() const;
+  bool _internal_has_a_buffer() const;
   public:
-  void clear_buffer();
-  const ::protobuf::mozilla::dom::ReadPixelsBuffer& buffer() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ReadPixelsBuffer* release_buffer();
-  ::protobuf::mozilla::dom::ReadPixelsBuffer* mutable_buffer();
-  void set_allocated_buffer(::protobuf::mozilla::dom::ReadPixelsBuffer* buffer);
+  void clear_a_buffer();
+  const ::protobuf::mozilla::dom::ReadPixelsBuffer& a_buffer() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ReadPixelsBuffer* release_a_buffer();
+  ::protobuf::mozilla::dom::ReadPixelsBuffer* mutable_a_buffer();
+  void set_allocated_a_buffer(::protobuf::mozilla::dom::ReadPixelsBuffer* a_buffer);
   private:
-  const ::protobuf::mozilla::dom::ReadPixelsBuffer& _internal_buffer() const;
-  ::protobuf::mozilla::dom::ReadPixelsBuffer* _internal_mutable_buffer();
+  const ::protobuf::mozilla::dom::ReadPixelsBuffer& _internal_a_buffer() const;
+  ::protobuf::mozilla::dom::ReadPixelsBuffer* _internal_mutable_a_buffer();
   public:
-  void unsafe_arena_set_allocated_buffer(
-      ::protobuf::mozilla::dom::ReadPixelsBuffer* buffer);
-  ::protobuf::mozilla::dom::ReadPixelsBuffer* unsafe_arena_release_buffer();
+  void unsafe_arena_set_allocated_a_buffer(
+      ::protobuf::mozilla::dom::ReadPixelsBuffer* a_buffer);
+  ::protobuf::mozilla::dom::ReadPixelsBuffer* unsafe_arena_release_a_buffer();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels)
  private:
@@ -2722,8 +2722,8 @@ class Msg_ReadPixels final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr desc_;
-    ::protobuf::mozilla::dom::ReadPixelsBuffer* buffer_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
+    ::protobuf::mozilla::dom::ReadPixelsBuffer* a_buffer_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2840,24 +2840,24 @@ class Reply_ReadPixels final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels)
@@ -2870,7 +2870,7 @@ class Reply_ReadPixels final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -2987,19 +2987,19 @@ class Msg_CheckFramebufferStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTargetFieldNumber = 1,
+    kATargetFieldNumber = 1,
   };
-  // required uint32 target = 1;
-  bool has_target() const;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
   private:
-  bool _internal_has_target() const;
+  bool _internal_has_a_target() const;
   public:
-  void clear_target();
-  uint32_t target() const;
-  void set_target(uint32_t value);
+  void clear_a_target();
+  uint32_t a_target() const;
+  void set_a_target(uint32_t value);
   private:
-  uint32_t _internal_target() const;
-  void _internal_set_target(uint32_t value);
+  uint32_t _internal_a_target() const;
+  void _internal_set_a_target(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_CheckFramebufferStatus)
@@ -3012,7 +3012,7 @@ class Msg_CheckFramebufferStatus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t target_;
+    uint32_t a_target_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3129,19 +3129,19 @@ class Reply_CheckFramebufferStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required uint32 ret = 1;
-  bool has_ret() const;
+  // required uint32 a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  uint32_t ret() const;
-  void set_ret(uint32_t value);
+  void clear_a_ret();
+  uint32_t a_ret() const;
+  void set_a_ret(uint32_t value);
   private:
-  uint32_t _internal_ret() const;
-  void _internal_set_ret(uint32_t value);
+  uint32_t _internal_a_ret() const;
+  void _internal_set_a_ret(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_CheckFramebufferStatus)
@@ -3154,7 +3154,7 @@ class Reply_CheckFramebufferStatus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t ret_;
+    uint32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3271,47 +3271,47 @@ class Msg_ClientWaitSync final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kTimeoutFieldNumber = 3,
-    kFlagsFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kATimeoutFieldNumber = 3,
+    kAFlagsFieldNumber = 2,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
-  public:
-
-  // required uint64 timeout = 3;
-  bool has_timeout() const;
-  private:
-  bool _internal_has_timeout() const;
-  public:
-  void clear_timeout();
-  uint64_t timeout() const;
-  void set_timeout(uint64_t value);
-  private:
-  uint64_t _internal_timeout() const;
-  void _internal_set_timeout(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 flags = 2;
-  bool has_flags() const;
+  // required uint64 a_timeout = 3;
+  bool has_a_timeout() const;
   private:
-  bool _internal_has_flags() const;
+  bool _internal_has_a_timeout() const;
   public:
-  void clear_flags();
-  uint32_t flags() const;
-  void set_flags(uint32_t value);
+  void clear_a_timeout();
+  uint64_t a_timeout() const;
+  void set_a_timeout(uint64_t value);
   private:
-  uint32_t _internal_flags() const;
-  void _internal_set_flags(uint32_t value);
+  uint64_t _internal_a_timeout() const;
+  void _internal_set_a_timeout(uint64_t value);
+  public:
+
+  // required uint32 a_flags = 2;
+  bool has_a_flags() const;
+  private:
+  bool _internal_has_a_flags() const;
+  public:
+  void clear_a_flags();
+  uint32_t a_flags() const;
+  void set_a_flags(uint32_t value);
+  private:
+  uint32_t _internal_a_flags() const;
+  void _internal_set_a_flags(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync)
@@ -3327,9 +3327,9 @@ class Msg_ClientWaitSync final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint64_t timeout_;
-    uint32_t flags_;
+    uint64_t a_id_;
+    uint64_t a_timeout_;
+    uint32_t a_flags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3446,19 +3446,19 @@ class Reply_ClientWaitSync final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required uint32 ret = 1;
-  bool has_ret() const;
+  // required uint32 a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  uint32_t ret() const;
-  void set_ret(uint32_t value);
+  void clear_a_ret();
+  uint32_t a_ret() const;
+  void set_a_ret(uint32_t value);
   private:
-  uint32_t _internal_ret() const;
-  void _internal_set_ret(uint32_t value);
+  uint32_t _internal_a_ret() const;
+  void _internal_set_a_ret(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_ClientWaitSync)
@@ -3471,7 +3471,7 @@ class Reply_ClientWaitSync final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t ret_;
+    uint32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3588,38 +3588,38 @@ class Msg_CreateOpaqueFramebuffer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOptionsFieldNumber = 2,
-    kIdFieldNumber = 1,
+    kAOptionsFieldNumber = 2,
+    kAIdFieldNumber = 1,
   };
-  // required bytes options = 2;
-  bool has_options() const;
+  // required bytes a_options = 2;
+  bool has_a_options() const;
   private:
-  bool _internal_has_options() const;
+  bool _internal_has_a_options() const;
   public:
-  void clear_options();
-  const std::string& options() const;
+  void clear_a_options();
+  const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_options(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_options();
-  PROTOBUF_NODISCARD std::string* release_options();
-  void set_allocated_options(std::string* options);
+  void set_a_options(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_options();
+  PROTOBUF_NODISCARD std::string* release_a_options();
+  void set_allocated_a_options(std::string* a_options);
   private:
-  const std::string& _internal_options() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_options(const std::string& value);
-  std::string* _internal_mutable_options();
+  const std::string& _internal_a_options() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_options(const std::string& value);
+  std::string* _internal_mutable_a_options();
   public:
 
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer)
@@ -3635,8 +3635,8 @@ class Msg_CreateOpaqueFramebuffer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr options_;
-    uint64_t id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -3753,19 +3753,19 @@ class Reply_CreateOpaqueFramebuffer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bool ret = 1;
-  bool has_ret() const;
+  // required bool a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  bool ret() const;
-  void set_ret(bool value);
+  void clear_a_ret();
+  bool a_ret() const;
+  void set_a_ret(bool value);
   private:
-  bool _internal_ret() const;
-  void _internal_set_ret(bool value);
+  bool _internal_a_ret() const;
+  void _internal_set_a_ret(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_CreateOpaqueFramebuffer)
@@ -3778,7 +3778,7 @@ class Reply_CreateOpaqueFramebuffer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool ret_;
+    bool a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4019,24 +4019,24 @@ class Reply_DrawingBufferSize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize)
@@ -4049,7 +4049,7 @@ class Reply_DrawingBufferSize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4414,33 +4414,33 @@ class Msg_GetBufferParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTargetFieldNumber = 1,
-    kPnameFieldNumber = 2,
+    kATargetFieldNumber = 1,
+    kAPnameFieldNumber = 2,
   };
-  // required uint32 target = 1;
-  bool has_target() const;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
   private:
-  bool _internal_has_target() const;
+  bool _internal_has_a_target() const;
   public:
-  void clear_target();
-  uint32_t target() const;
-  void set_target(uint32_t value);
+  void clear_a_target();
+  uint32_t a_target() const;
+  void set_a_target(uint32_t value);
   private:
-  uint32_t _internal_target() const;
-  void _internal_set_target(uint32_t value);
+  uint32_t _internal_a_target() const;
+  void _internal_set_a_target(uint32_t value);
   public:
 
-  // required uint32 pname = 2;
-  bool has_pname() const;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter)
@@ -4456,8 +4456,8 @@ class Msg_GetBufferParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t target_;
-    uint32_t pname_;
+    uint32_t a_target_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4574,19 +4574,19 @@ class Reply_GetBufferParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetBufferParameter)
@@ -4599,7 +4599,7 @@ class Reply_GetBufferParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4716,19 +4716,19 @@ class Msg_GetCompileResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
+    kAIdFieldNumber = 1,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetCompileResult)
@@ -4741,7 +4741,7 @@ class Msg_GetCompileResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -4858,24 +4858,24 @@ class Reply_GetCompileResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult)
@@ -4888,7 +4888,7 @@ class Reply_GetCompileResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5129,19 +5129,19 @@ class Reply_GetError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required uint32 ret = 1;
-  bool has_ret() const;
+  // required uint32 a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  uint32_t ret() const;
-  void set_ret(uint32_t value);
+  void clear_a_ret();
+  uint32_t a_ret() const;
+  void set_a_ret(uint32_t value);
   private:
-  uint32_t _internal_ret() const;
-  void _internal_set_ret(uint32_t value);
+  uint32_t _internal_a_ret() const;
+  void _internal_set_a_ret(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetError)
@@ -5154,7 +5154,7 @@ class Reply_GetError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t ret_;
+    uint32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5271,38 +5271,38 @@ class Msg_GetFragDataLocation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 2,
-    kIdFieldNumber = 1,
+    kANameFieldNumber = 2,
+    kAIdFieldNumber = 1,
   };
-  // required string name = 2;
-  bool has_name() const;
+  // required string a_name = 2;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation)
@@ -5318,8 +5318,8 @@ class Msg_GetFragDataLocation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    uint64_t id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5436,19 +5436,19 @@ class Reply_GetFragDataLocation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required sint32 ret = 1;
-  bool has_ret() const;
+  // required sint32 a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  int32_t ret() const;
-  void set_ret(int32_t value);
+  void clear_a_ret();
+  int32_t a_ret() const;
+  void set_a_ret(int32_t value);
   private:
-  int32_t _internal_ret() const;
-  void _internal_set_ret(int32_t value);
+  int32_t _internal_a_ret() const;
+  void _internal_set_a_ret(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetFragDataLocation)
@@ -5461,7 +5461,7 @@ class Reply_GetFragDataLocation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t ret_;
+    int32_t a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5578,47 +5578,47 @@ class Msg_GetFramebufferAttachmentParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kAttachmentFieldNumber = 2,
-    kPnameFieldNumber = 3,
+    kAIdFieldNumber = 1,
+    kAAttachmentFieldNumber = 2,
+    kAPnameFieldNumber = 3,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
-  public:
-
-  // required uint32 attachment = 2;
-  bool has_attachment() const;
-  private:
-  bool _internal_has_attachment() const;
-  public:
-  void clear_attachment();
-  uint32_t attachment() const;
-  void set_attachment(uint32_t value);
-  private:
-  uint32_t _internal_attachment() const;
-  void _internal_set_attachment(uint32_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 pname = 3;
-  bool has_pname() const;
+  // required uint32 a_attachment = 2;
+  bool has_a_attachment() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_attachment() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_attachment();
+  uint32_t a_attachment() const;
+  void set_a_attachment(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_attachment() const;
+  void _internal_set_a_attachment(uint32_t value);
+  public:
+
+  // required uint32 a_pname = 3;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
+  private:
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter)
@@ -5634,9 +5634,9 @@ class Msg_GetFramebufferAttachmentParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint32_t attachment_;
-    uint32_t pname_;
+    uint64_t a_id_;
+    uint32_t a_attachment_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5753,19 +5753,19 @@ class Reply_GetFramebufferAttachmentParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetFramebufferAttachmentParameter)
@@ -5778,7 +5778,7 @@ class Reply_GetFramebufferAttachmentParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -5895,33 +5895,33 @@ class Msg_GetFrontBuffer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFbFieldNumber = 1,
-    kVrFieldNumber = 2,
+    kAFbFieldNumber = 1,
+    kAVrFieldNumber = 2,
   };
-  // required uint64 fb = 1;
-  bool has_fb() const;
+  // required uint64 a_fb = 1;
+  bool has_a_fb() const;
   private:
-  bool _internal_has_fb() const;
+  bool _internal_has_a_fb() const;
   public:
-  void clear_fb();
-  uint64_t fb() const;
-  void set_fb(uint64_t value);
+  void clear_a_fb();
+  uint64_t a_fb() const;
+  void set_a_fb(uint64_t value);
   private:
-  uint64_t _internal_fb() const;
-  void _internal_set_fb(uint64_t value);
+  uint64_t _internal_a_fb() const;
+  void _internal_set_a_fb(uint64_t value);
   public:
 
-  // required bool vr = 2;
-  bool has_vr() const;
+  // required bool a_vr = 2;
+  bool has_a_vr() const;
   private:
-  bool _internal_has_vr() const;
+  bool _internal_has_a_vr() const;
   public:
-  void clear_vr();
-  bool vr() const;
-  void set_vr(bool value);
+  void clear_a_vr();
+  bool a_vr() const;
+  void set_a_vr(bool value);
   private:
-  bool _internal_vr() const;
-  void _internal_set_vr(bool value);
+  bool _internal_a_vr() const;
+  void _internal_set_a_vr(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer)
@@ -5937,8 +5937,8 @@ class Msg_GetFrontBuffer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t fb_;
-    bool vr_;
+    uint64_t a_fb_;
+    bool a_vr_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6055,24 +6055,24 @@ class Reply_GetFrontBuffer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional bytes ret = 1;
-  bool has_ret() const;
+  // optional bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer)
@@ -6085,7 +6085,7 @@ class Reply_GetFrontBuffer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6202,33 +6202,33 @@ class Msg_GetIndexedParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTargetFieldNumber = 1,
-    kIndexFieldNumber = 2,
+    kATargetFieldNumber = 1,
+    kAIndexFieldNumber = 2,
   };
-  // required uint32 target = 1;
-  bool has_target() const;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
   private:
-  bool _internal_has_target() const;
+  bool _internal_has_a_target() const;
   public:
-  void clear_target();
-  uint32_t target() const;
-  void set_target(uint32_t value);
+  void clear_a_target();
+  uint32_t a_target() const;
+  void set_a_target(uint32_t value);
   private:
-  uint32_t _internal_target() const;
-  void _internal_set_target(uint32_t value);
+  uint32_t _internal_a_target() const;
+  void _internal_set_a_target(uint32_t value);
   public:
 
-  // required uint32 index = 2;
-  bool has_index() const;
+  // required uint32 a_index = 2;
+  bool has_a_index() const;
   private:
-  bool _internal_has_index() const;
+  bool _internal_has_a_index() const;
   public:
-  void clear_index();
-  uint32_t index() const;
-  void set_index(uint32_t value);
+  void clear_a_index();
+  uint32_t a_index() const;
+  void set_a_index(uint32_t value);
   private:
-  uint32_t _internal_index() const;
-  void _internal_set_index(uint32_t value);
+  uint32_t _internal_a_index() const;
+  void _internal_set_a_index(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter)
@@ -6244,8 +6244,8 @@ class Msg_GetIndexedParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t target_;
-    uint32_t index_;
+    uint32_t a_target_;
+    uint32_t a_index_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6362,19 +6362,19 @@ class Reply_GetIndexedParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetIndexedParameter)
@@ -6387,7 +6387,7 @@ class Reply_GetIndexedParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6504,47 +6504,47 @@ class Msg_GetInternalformatParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTargetFieldNumber = 1,
-    kInternalFormatFieldNumber = 2,
-    kPnameFieldNumber = 3,
+    kATargetFieldNumber = 1,
+    kAInternalFormatFieldNumber = 2,
+    kAPnameFieldNumber = 3,
   };
-  // required uint32 target = 1;
-  bool has_target() const;
+  // required uint32 a_target = 1;
+  bool has_a_target() const;
   private:
-  bool _internal_has_target() const;
+  bool _internal_has_a_target() const;
   public:
-  void clear_target();
-  uint32_t target() const;
-  void set_target(uint32_t value);
+  void clear_a_target();
+  uint32_t a_target() const;
+  void set_a_target(uint32_t value);
   private:
-  uint32_t _internal_target() const;
-  void _internal_set_target(uint32_t value);
-  public:
-
-  // required uint32 internalFormat = 2;
-  bool has_internalformat() const;
-  private:
-  bool _internal_has_internalformat() const;
-  public:
-  void clear_internalformat();
-  uint32_t internalformat() const;
-  void set_internalformat(uint32_t value);
-  private:
-  uint32_t _internal_internalformat() const;
-  void _internal_set_internalformat(uint32_t value);
+  uint32_t _internal_a_target() const;
+  void _internal_set_a_target(uint32_t value);
   public:
 
-  // required uint32 pname = 3;
-  bool has_pname() const;
+  // required uint32 a_internalFormat = 2;
+  bool has_a_internalformat() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_internalformat() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_internalformat();
+  uint32_t a_internalformat() const;
+  void set_a_internalformat(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_internalformat() const;
+  void _internal_set_a_internalformat(uint32_t value);
+  public:
+
+  // required uint32 a_pname = 3;
+  bool has_a_pname() const;
+  private:
+  bool _internal_has_a_pname() const;
+  public:
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
+  private:
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter)
@@ -6560,9 +6560,9 @@ class Msg_GetInternalformatParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t target_;
-    uint32_t internalformat_;
-    uint32_t pname_;
+    uint32_t a_target_;
+    uint32_t a_internalformat_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6679,24 +6679,24 @@ class Reply_GetInternalformatParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional bytes ret = 1;
-  bool has_ret() const;
+  // optional bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter)
@@ -6709,7 +6709,7 @@ class Reply_GetInternalformatParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6826,19 +6826,19 @@ class Msg_GetLinkResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
+    kAIdFieldNumber = 1,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetLinkResult)
@@ -6851,7 +6851,7 @@ class Msg_GetLinkResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -6968,24 +6968,24 @@ class Reply_GetLinkResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult)
@@ -6998,7 +6998,7 @@ class Reply_GetLinkResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7115,19 +7115,19 @@ class Msg_GetNumber final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPnameFieldNumber = 1,
+    kAPnameFieldNumber = 1,
   };
-  // required uint32 pname = 1;
-  bool has_pname() const;
+  // required uint32 a_pname = 1;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetNumber)
@@ -7140,7 +7140,7 @@ class Msg_GetNumber final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t pname_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7257,19 +7257,19 @@ class Reply_GetNumber final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetNumber)
@@ -7282,7 +7282,7 @@ class Reply_GetNumber final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7399,33 +7399,33 @@ class Msg_GetQueryParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kPnameFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kAPnameFieldNumber = 2,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 pname = 2;
-  bool has_pname() const;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter)
@@ -7441,8 +7441,8 @@ class Msg_GetQueryParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint32_t pname_;
+    uint64_t a_id_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7559,19 +7559,19 @@ class Reply_GetQueryParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetQueryParameter)
@@ -7584,7 +7584,7 @@ class Reply_GetQueryParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7701,33 +7701,33 @@ class Msg_GetRenderbufferParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kPnameFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kAPnameFieldNumber = 2,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 pname = 2;
-  bool has_pname() const;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter)
@@ -7743,8 +7743,8 @@ class Msg_GetRenderbufferParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint32_t pname_;
+    uint64_t a_id_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -7861,19 +7861,19 @@ class Reply_GetRenderbufferParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetRenderbufferParameter)
@@ -7886,7 +7886,7 @@ class Reply_GetRenderbufferParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8003,33 +8003,33 @@ class Msg_GetSamplerParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kPnameFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kAPnameFieldNumber = 2,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 pname = 2;
-  bool has_pname() const;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter)
@@ -8045,8 +8045,8 @@ class Msg_GetSamplerParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint32_t pname_;
+    uint64_t a_id_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8163,19 +8163,19 @@ class Reply_GetSamplerParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetSamplerParameter)
@@ -8188,7 +8188,7 @@ class Reply_GetSamplerParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8305,19 +8305,19 @@ class Msg_GetString final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPnameFieldNumber = 1,
+    kAPnameFieldNumber = 1,
   };
-  // required uint32 pname = 1;
-  bool has_pname() const;
+  // required uint32 a_pname = 1;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetString)
@@ -8330,7 +8330,7 @@ class Msg_GetString final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t pname_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8447,24 +8447,24 @@ class Reply_GetString final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional string ret = 1;
-  bool has_ret() const;
+  // optional string a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetString)
@@ -8477,7 +8477,7 @@ class Reply_GetString final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8594,33 +8594,33 @@ class Msg_GetTexParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kPnameFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kAPnameFieldNumber = 2,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 pname = 2;
-  bool has_pname() const;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter)
@@ -8636,8 +8636,8 @@ class Msg_GetTexParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint32_t pname_;
+    uint64_t a_id_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8754,19 +8754,19 @@ class Reply_GetTexParameter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetTexParameter)
@@ -8779,7 +8779,7 @@ class Reply_GetTexParameter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -8896,33 +8896,33 @@ class Msg_GetUniform final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kLocFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kALocFieldNumber = 2,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
-  // required uint32 loc = 2;
-  bool has_loc() const;
+  // required uint32 a_loc = 2;
+  bool has_a_loc() const;
   private:
-  bool _internal_has_loc() const;
+  bool _internal_has_a_loc() const;
   public:
-  void clear_loc();
-  uint32_t loc() const;
-  void set_loc(uint32_t value);
+  void clear_a_loc();
+  uint32_t a_loc() const;
+  void set_a_loc(uint32_t value);
   private:
-  uint32_t _internal_loc() const;
-  void _internal_set_loc(uint32_t value);
+  uint32_t _internal_a_loc() const;
+  void _internal_set_a_loc(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetUniform)
@@ -8938,8 +8938,8 @@ class Msg_GetUniform final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
-    uint32_t loc_;
+    uint64_t a_id_;
+    uint32_t a_loc_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9056,24 +9056,24 @@ class Reply_GetUniform final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetUniform)
@@ -9086,7 +9086,7 @@ class Reply_GetUniform final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9203,33 +9203,33 @@ class Msg_GetVertexAttrib final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIndexFieldNumber = 1,
-    kPnameFieldNumber = 2,
+    kAIndexFieldNumber = 1,
+    kAPnameFieldNumber = 2,
   };
-  // required uint32 index = 1;
-  bool has_index() const;
+  // required uint32 a_index = 1;
+  bool has_a_index() const;
   private:
-  bool _internal_has_index() const;
+  bool _internal_has_a_index() const;
   public:
-  void clear_index();
-  uint32_t index() const;
-  void set_index(uint32_t value);
+  void clear_a_index();
+  uint32_t a_index() const;
+  void set_a_index(uint32_t value);
   private:
-  uint32_t _internal_index() const;
-  void _internal_set_index(uint32_t value);
+  uint32_t _internal_a_index() const;
+  void _internal_set_a_index(uint32_t value);
   public:
 
-  // required uint32 pname = 2;
-  bool has_pname() const;
+  // required uint32 a_pname = 2;
+  bool has_a_pname() const;
   private:
-  bool _internal_has_pname() const;
+  bool _internal_has_a_pname() const;
   public:
-  void clear_pname();
-  uint32_t pname() const;
-  void set_pname(uint32_t value);
+  void clear_a_pname();
+  uint32_t a_pname() const;
+  void set_a_pname(uint32_t value);
   private:
-  uint32_t _internal_pname() const;
-  void _internal_set_pname(uint32_t value);
+  uint32_t _internal_a_pname() const;
+  void _internal_set_a_pname(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib)
@@ -9245,8 +9245,8 @@ class Msg_GetVertexAttrib final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t index_;
-    uint32_t pname_;
+    uint32_t a_index_;
+    uint32_t a_pname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9363,19 +9363,19 @@ class Reply_GetVertexAttrib final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // optional double ret = 1;
-  bool has_ret() const;
+  // optional double a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  double ret() const;
-  void set_ret(double value);
+  void clear_a_ret();
+  double a_ret() const;
+  void set_a_ret(double value);
   private:
-  double _internal_ret() const;
-  void _internal_set_ret(double value);
+  double _internal_a_ret() const;
+  void _internal_set_a_ret(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_GetVertexAttrib)
@@ -9388,7 +9388,7 @@ class Reply_GetVertexAttrib final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double ret_;
+    double a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9753,19 +9753,19 @@ class Msg_ValidateProgram final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
+    kAIdFieldNumber = 1,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_ValidateProgram)
@@ -9778,7 +9778,7 @@ class Msg_ValidateProgram final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -9895,19 +9895,19 @@ class Reply_ValidateProgram final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bool ret = 1;
-  bool has_ret() const;
+  // required bool a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  bool ret() const;
-  void set_ret(bool value);
+  void clear_a_ret();
+  bool a_ret() const;
+  void set_a_ret(bool value);
   private:
-  bool _internal_ret() const;
-  void _internal_set_ret(bool value);
+  bool _internal_a_ret() const;
+  void _internal_set_a_ret(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Reply_ValidateProgram)
@@ -9920,7 +9920,7 @@ class Reply_ValidateProgram final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool ret_;
+    bool a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -10037,24 +10037,24 @@ class Msg_JsWarning final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTextFieldNumber = 1,
+    kATextFieldNumber = 1,
   };
-  // required string text = 1;
-  bool has_text() const;
+  // required string a_text = 1;
+  bool has_a_text() const;
   private:
-  bool _internal_has_text() const;
+  bool _internal_has_a_text() const;
   public:
-  void clear_text();
-  const std::string& text() const;
+  void clear_a_text();
+  const std::string& a_text() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_text(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_text();
-  PROTOBUF_NODISCARD std::string* release_text();
-  void set_allocated_text(std::string* text);
+  void set_a_text(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_text();
+  PROTOBUF_NODISCARD std::string* release_a_text();
+  void set_allocated_a_text(std::string* a_text);
   private:
-  const std::string& _internal_text() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_text(const std::string& value);
-  std::string* _internal_mutable_text();
+  const std::string& _internal_a_text() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_text(const std::string& value);
+  std::string* _internal_mutable_a_text();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_JsWarning)
@@ -10067,7 +10067,7 @@ class Msg_JsWarning final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr text_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_text_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -10184,24 +10184,24 @@ class Msg_OnContextLoss final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAReasonFieldNumber = 1,
+    kAAReasonFieldNumber = 1,
   };
-  // required bytes aReason = 1;
-  bool has_areason() const;
+  // required bytes a_aReason = 1;
+  bool has_a_areason() const;
   private:
-  bool _internal_has_areason() const;
+  bool _internal_has_a_areason() const;
   public:
-  void clear_areason();
-  const std::string& areason() const;
+  void clear_a_areason();
+  const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_areason(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_areason();
-  PROTOBUF_NODISCARD std::string* release_areason();
-  void set_allocated_areason(std::string* areason);
+  void set_a_areason(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_areason();
+  PROTOBUF_NODISCARD std::string* release_a_areason();
+  void set_allocated_a_areason(std::string* a_areason);
   private:
-  const std::string& _internal_areason() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_areason(const std::string& value);
-  std::string* _internal_mutable_areason();
+  const std::string& _internal_a_areason() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_areason(const std::string& value);
+  std::string* _internal_mutable_a_areason();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss)
@@ -10214,7 +10214,7 @@ class Msg_OnContextLoss final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr areason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -10331,19 +10331,19 @@ class Msg_OnSyncComplete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
+    kAIdFieldNumber = 1,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebGL.Msg_OnSyncComplete)
@@ -10356,7 +10356,7 @@ class Msg_OnSyncComplete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGL_2eproto;
@@ -10372,144 +10372,144 @@ class Msg_OnSyncComplete final :
 #endif  // __GNUC__
 // Msg_Initialize
 
-// required bytes desc = 1;
-inline bool Msg_Initialize::_internal_has_desc() const {
+// required bytes a_desc = 1;
+inline bool Msg_Initialize::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Initialize::has_desc() const {
-  return _internal_has_desc();
+inline bool Msg_Initialize::has_a_desc() const {
+  return _internal_has_a_desc();
 }
-inline void Msg_Initialize::clear_desc() {
-  _impl_.desc_.ClearToEmpty();
+inline void Msg_Initialize::clear_a_desc() {
+  _impl_.a_desc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Initialize::desc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_Initialize.desc)
-  return _internal_desc();
+inline const std::string& Msg_Initialize::a_desc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
+  return _internal_a_desc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Initialize::set_desc(ArgT0&& arg0, ArgT... args) {
+void Msg_Initialize::set_a_desc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_Initialize.desc)
+ _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
 }
-inline std::string* Msg_Initialize::mutable_desc() {
-  std::string* _s = _internal_mutable_desc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_Initialize.desc)
+inline std::string* Msg_Initialize::mutable_a_desc() {
+  std::string* _s = _internal_mutable_a_desc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
   return _s;
 }
-inline const std::string& Msg_Initialize::_internal_desc() const {
-  return _impl_.desc_.Get();
+inline const std::string& Msg_Initialize::_internal_a_desc() const {
+  return _impl_.a_desc_.Get();
 }
-inline void Msg_Initialize::_internal_set_desc(const std::string& value) {
+inline void Msg_Initialize::_internal_set_a_desc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.desc_.Set(value, GetArenaForAllocation());
+  _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Initialize::_internal_mutable_desc() {
+inline std::string* Msg_Initialize::_internal_mutable_a_desc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.desc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Initialize::release_desc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_Initialize.desc)
-  if (!_internal_has_desc()) {
+inline std::string* Msg_Initialize::release_a_desc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
+  if (!_internal_has_a_desc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.desc_.Release();
+  auto* p = _impl_.a_desc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Initialize::set_allocated_desc(std::string* desc) {
-  if (desc != nullptr) {
+inline void Msg_Initialize::set_allocated_a_desc(std::string* a_desc) {
+  if (a_desc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.desc_.SetAllocated(desc, GetArenaForAllocation());
+  _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_Initialize.desc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_Initialize.a_desc)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Initialize
 
-// required bytes res = 1;
-inline bool Reply_Initialize::_internal_has_res() const {
+// required bytes a_res = 1;
+inline bool Reply_Initialize::_internal_has_a_res() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Initialize::has_res() const {
-  return _internal_has_res();
+inline bool Reply_Initialize::has_a_res() const {
+  return _internal_has_a_res();
 }
-inline void Reply_Initialize::clear_res() {
-  _impl_.res_.ClearToEmpty();
+inline void Reply_Initialize::clear_a_res() {
+  _impl_.a_res_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Initialize::res() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_Initialize.res)
-  return _internal_res();
+inline const std::string& Reply_Initialize::a_res() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
+  return _internal_a_res();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Initialize::set_res(ArgT0&& arg0, ArgT... args) {
+void Reply_Initialize::set_a_res(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.res_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_Initialize.res)
+ _impl_.a_res_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
 }
-inline std::string* Reply_Initialize::mutable_res() {
-  std::string* _s = _internal_mutable_res();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_Initialize.res)
+inline std::string* Reply_Initialize::mutable_a_res() {
+  std::string* _s = _internal_mutable_a_res();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
   return _s;
 }
-inline const std::string& Reply_Initialize::_internal_res() const {
-  return _impl_.res_.Get();
+inline const std::string& Reply_Initialize::_internal_a_res() const {
+  return _impl_.a_res_.Get();
 }
-inline void Reply_Initialize::_internal_set_res(const std::string& value) {
+inline void Reply_Initialize::_internal_set_a_res(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.res_.Set(value, GetArenaForAllocation());
+  _impl_.a_res_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Initialize::_internal_mutable_res() {
+inline std::string* Reply_Initialize::_internal_mutable_a_res() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.res_.Mutable(GetArenaForAllocation());
+  return _impl_.a_res_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Initialize::release_res() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_Initialize.res)
-  if (!_internal_has_res()) {
+inline std::string* Reply_Initialize::release_a_res() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
+  if (!_internal_has_a_res()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.res_.Release();
+  auto* p = _impl_.a_res_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.res_.IsDefault()) {
-    _impl_.res_.Set("", GetArenaForAllocation());
+  if (_impl_.a_res_.IsDefault()) {
+    _impl_.a_res_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Initialize::set_allocated_res(std::string* res) {
-  if (res != nullptr) {
+inline void Reply_Initialize::set_allocated_a_res(std::string* a_res) {
+  if (a_res != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.res_.SetAllocated(res, GetArenaForAllocation());
+  _impl_.a_res_.SetAllocated(a_res, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.res_.IsDefault()) {
-    _impl_.res_.Set("", GetArenaForAllocation());
+  if (_impl_.a_res_.IsDefault()) {
+    _impl_.a_res_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_Initialize.res)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_Initialize.a_res)
 }
 
 // -------------------------------------------------------------------
@@ -10524,308 +10524,308 @@ inline void Reply_Initialize::set_allocated_res(std::string* res) {
 
 // Msg_WaitForTxn
 
-// required bytes ownerId = 1;
-inline bool Msg_WaitForTxn::_internal_has_ownerid() const {
+// required bytes a_ownerId = 1;
+inline bool Msg_WaitForTxn::_internal_has_a_ownerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_WaitForTxn::has_ownerid() const {
-  return _internal_has_ownerid();
+inline bool Msg_WaitForTxn::has_a_ownerid() const {
+  return _internal_has_a_ownerid();
 }
-inline void Msg_WaitForTxn::clear_ownerid() {
-  _impl_.ownerid_.ClearToEmpty();
+inline void Msg_WaitForTxn::clear_a_ownerid() {
+  _impl_.a_ownerid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_WaitForTxn::ownerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.ownerId)
-  return _internal_ownerid();
+inline const std::string& Msg_WaitForTxn::a_ownerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
+  return _internal_a_ownerid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_WaitForTxn::set_ownerid(ArgT0&& arg0, ArgT... args) {
+void Msg_WaitForTxn::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.ownerId)
+ _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
 }
-inline std::string* Msg_WaitForTxn::mutable_ownerid() {
-  std::string* _s = _internal_mutable_ownerid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.ownerId)
+inline std::string* Msg_WaitForTxn::mutable_a_ownerid() {
+  std::string* _s = _internal_mutable_a_ownerid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
   return _s;
 }
-inline const std::string& Msg_WaitForTxn::_internal_ownerid() const {
-  return _impl_.ownerid_.Get();
+inline const std::string& Msg_WaitForTxn::_internal_a_ownerid() const {
+  return _impl_.a_ownerid_.Get();
 }
-inline void Msg_WaitForTxn::_internal_set_ownerid(const std::string& value) {
+inline void Msg_WaitForTxn::_internal_set_a_ownerid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ownerid_.Set(value, GetArenaForAllocation());
+  _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_WaitForTxn::_internal_mutable_ownerid() {
+inline std::string* Msg_WaitForTxn::_internal_mutable_a_ownerid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ownerid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_WaitForTxn::release_ownerid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.ownerId)
-  if (!_internal_has_ownerid()) {
+inline std::string* Msg_WaitForTxn::release_a_ownerid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
+  if (!_internal_has_a_ownerid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ownerid_.Release();
+  auto* p = _impl_.a_ownerid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_WaitForTxn::set_allocated_ownerid(std::string* ownerid) {
-  if (ownerid != nullptr) {
+inline void Msg_WaitForTxn::set_allocated_a_ownerid(std::string* a_ownerid) {
+  if (a_ownerid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ownerid_.SetAllocated(ownerid, GetArenaForAllocation());
+  _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.ownerId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_ownerId)
 }
 
-// required bytes txnType = 2;
-inline bool Msg_WaitForTxn::_internal_has_txntype() const {
+// required bytes a_txnType = 2;
+inline bool Msg_WaitForTxn::_internal_has_a_txntype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_WaitForTxn::has_txntype() const {
-  return _internal_has_txntype();
+inline bool Msg_WaitForTxn::has_a_txntype() const {
+  return _internal_has_a_txntype();
 }
-inline void Msg_WaitForTxn::clear_txntype() {
-  _impl_.txntype_.ClearToEmpty();
+inline void Msg_WaitForTxn::clear_a_txntype() {
+  _impl_.a_txntype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_WaitForTxn::txntype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnType)
-  return _internal_txntype();
+inline const std::string& Msg_WaitForTxn::a_txntype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
+  return _internal_a_txntype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_WaitForTxn::set_txntype(ArgT0&& arg0, ArgT... args) {
+void Msg_WaitForTxn::set_a_txntype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.txntype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnType)
+ _impl_.a_txntype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
 }
-inline std::string* Msg_WaitForTxn::mutable_txntype() {
-  std::string* _s = _internal_mutable_txntype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnType)
+inline std::string* Msg_WaitForTxn::mutable_a_txntype() {
+  std::string* _s = _internal_mutable_a_txntype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
   return _s;
 }
-inline const std::string& Msg_WaitForTxn::_internal_txntype() const {
-  return _impl_.txntype_.Get();
+inline const std::string& Msg_WaitForTxn::_internal_a_txntype() const {
+  return _impl_.a_txntype_.Get();
 }
-inline void Msg_WaitForTxn::_internal_set_txntype(const std::string& value) {
+inline void Msg_WaitForTxn::_internal_set_a_txntype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.txntype_.Set(value, GetArenaForAllocation());
+  _impl_.a_txntype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_WaitForTxn::_internal_mutable_txntype() {
+inline std::string* Msg_WaitForTxn::_internal_mutable_a_txntype() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.txntype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_txntype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_WaitForTxn::release_txntype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnType)
-  if (!_internal_has_txntype()) {
+inline std::string* Msg_WaitForTxn::release_a_txntype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
+  if (!_internal_has_a_txntype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.txntype_.Release();
+  auto* p = _impl_.a_txntype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txntype_.IsDefault()) {
-    _impl_.txntype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txntype_.IsDefault()) {
+    _impl_.a_txntype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_WaitForTxn::set_allocated_txntype(std::string* txntype) {
-  if (txntype != nullptr) {
+inline void Msg_WaitForTxn::set_allocated_a_txntype(std::string* a_txntype) {
+  if (a_txntype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.txntype_.SetAllocated(txntype, GetArenaForAllocation());
+  _impl_.a_txntype_.SetAllocated(a_txntype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txntype_.IsDefault()) {
-    _impl_.txntype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txntype_.IsDefault()) {
+    _impl_.a_txntype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnType)
 }
 
-// required bytes txnId = 3;
-inline bool Msg_WaitForTxn::_internal_has_txnid() const {
+// required bytes a_txnId = 3;
+inline bool Msg_WaitForTxn::_internal_has_a_txnid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_WaitForTxn::has_txnid() const {
-  return _internal_has_txnid();
+inline bool Msg_WaitForTxn::has_a_txnid() const {
+  return _internal_has_a_txnid();
 }
-inline void Msg_WaitForTxn::clear_txnid() {
-  _impl_.txnid_.ClearToEmpty();
+inline void Msg_WaitForTxn::clear_a_txnid() {
+  _impl_.a_txnid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_WaitForTxn::txnid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnId)
-  return _internal_txnid();
+inline const std::string& Msg_WaitForTxn::a_txnid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
+  return _internal_a_txnid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_WaitForTxn::set_txnid(ArgT0&& arg0, ArgT... args) {
+void Msg_WaitForTxn::set_a_txnid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.txnid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnId)
+ _impl_.a_txnid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
 }
-inline std::string* Msg_WaitForTxn::mutable_txnid() {
-  std::string* _s = _internal_mutable_txnid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnId)
+inline std::string* Msg_WaitForTxn::mutable_a_txnid() {
+  std::string* _s = _internal_mutable_a_txnid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
   return _s;
 }
-inline const std::string& Msg_WaitForTxn::_internal_txnid() const {
-  return _impl_.txnid_.Get();
+inline const std::string& Msg_WaitForTxn::_internal_a_txnid() const {
+  return _impl_.a_txnid_.Get();
 }
-inline void Msg_WaitForTxn::_internal_set_txnid(const std::string& value) {
+inline void Msg_WaitForTxn::_internal_set_a_txnid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.txnid_.Set(value, GetArenaForAllocation());
+  _impl_.a_txnid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_WaitForTxn::_internal_mutable_txnid() {
+inline std::string* Msg_WaitForTxn::_internal_mutable_a_txnid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.txnid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_txnid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_WaitForTxn::release_txnid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnId)
-  if (!_internal_has_txnid()) {
+inline std::string* Msg_WaitForTxn::release_a_txnid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
+  if (!_internal_has_a_txnid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.txnid_.Release();
+  auto* p = _impl_.a_txnid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txnid_.IsDefault()) {
-    _impl_.txnid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txnid_.IsDefault()) {
+    _impl_.a_txnid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_WaitForTxn::set_allocated_txnid(std::string* txnid) {
-  if (txnid != nullptr) {
+inline void Msg_WaitForTxn::set_allocated_a_txnid(std::string* a_txnid) {
+  if (a_txnid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.txnid_.SetAllocated(txnid, GetArenaForAllocation());
+  _impl_.a_txnid_.SetAllocated(a_txnid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txnid_.IsDefault()) {
-    _impl_.txnid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txnid_.IsDefault()) {
+    _impl_.a_txnid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.txnId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_WaitForTxn.a_txnId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DispatchCommands
 
-// required bytes commands = 1;
-inline bool Msg_DispatchCommands::_internal_has_commands() const {
+// required bytes a_commands = 1;
+inline bool Msg_DispatchCommands::_internal_has_a_commands() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DispatchCommands::has_commands() const {
-  return _internal_has_commands();
+inline bool Msg_DispatchCommands::has_a_commands() const {
+  return _internal_has_a_commands();
 }
-inline void Msg_DispatchCommands::clear_commands() {
-  _impl_.commands_.ClearToEmpty();
+inline void Msg_DispatchCommands::clear_a_commands() {
+  _impl_.a_commands_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DispatchCommands::commands() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.commands)
-  return _internal_commands();
+inline const std::string& Msg_DispatchCommands::a_commands() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
+  return _internal_a_commands();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DispatchCommands::set_commands(ArgT0&& arg0, ArgT... args) {
+void Msg_DispatchCommands::set_a_commands(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.commands_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.commands)
+ _impl_.a_commands_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
 }
-inline std::string* Msg_DispatchCommands::mutable_commands() {
-  std::string* _s = _internal_mutable_commands();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.commands)
+inline std::string* Msg_DispatchCommands::mutable_a_commands() {
+  std::string* _s = _internal_mutable_a_commands();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
   return _s;
 }
-inline const std::string& Msg_DispatchCommands::_internal_commands() const {
-  return _impl_.commands_.Get();
+inline const std::string& Msg_DispatchCommands::_internal_a_commands() const {
+  return _impl_.a_commands_.Get();
 }
-inline void Msg_DispatchCommands::_internal_set_commands(const std::string& value) {
+inline void Msg_DispatchCommands::_internal_set_a_commands(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.commands_.Set(value, GetArenaForAllocation());
+  _impl_.a_commands_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DispatchCommands::_internal_mutable_commands() {
+inline std::string* Msg_DispatchCommands::_internal_mutable_a_commands() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.commands_.Mutable(GetArenaForAllocation());
+  return _impl_.a_commands_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DispatchCommands::release_commands() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.commands)
-  if (!_internal_has_commands()) {
+inline std::string* Msg_DispatchCommands::release_a_commands() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
+  if (!_internal_has_a_commands()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.commands_.Release();
+  auto* p = _impl_.a_commands_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.commands_.IsDefault()) {
-    _impl_.commands_.Set("", GetArenaForAllocation());
+  if (_impl_.a_commands_.IsDefault()) {
+    _impl_.a_commands_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DispatchCommands::set_allocated_commands(std::string* commands) {
-  if (commands != nullptr) {
+inline void Msg_DispatchCommands::set_allocated_a_commands(std::string* a_commands) {
+  if (a_commands != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.commands_.SetAllocated(commands, GetArenaForAllocation());
+  _impl_.a_commands_.SetAllocated(a_commands, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.commands_.IsDefault()) {
-    _impl_.commands_.Set("", GetArenaForAllocation());
+  if (_impl_.a_commands_.IsDefault()) {
+    _impl_.a_commands_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.commands)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_commands)
 }
 
-// required uint64 size = 2;
-inline bool Msg_DispatchCommands::_internal_has_size() const {
+// required uint64 a_size = 2;
+inline bool Msg_DispatchCommands::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DispatchCommands::has_size() const {
-  return _internal_has_size();
+inline bool Msg_DispatchCommands::has_a_size() const {
+  return _internal_has_a_size();
 }
-inline void Msg_DispatchCommands::clear_size() {
-  _impl_.size_ = uint64_t{0u};
+inline void Msg_DispatchCommands::clear_a_size() {
+  _impl_.a_size_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_DispatchCommands::_internal_size() const {
-  return _impl_.size_;
+inline uint64_t Msg_DispatchCommands::_internal_a_size() const {
+  return _impl_.a_size_;
 }
-inline uint64_t Msg_DispatchCommands::size() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.size)
-  return _internal_size();
+inline uint64_t Msg_DispatchCommands::a_size() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_size)
+  return _internal_a_size();
 }
-inline void Msg_DispatchCommands::_internal_set_size(uint64_t value) {
+inline void Msg_DispatchCommands::_internal_set_a_size(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.size_ = value;
+  _impl_.a_size_ = value;
 }
-inline void Msg_DispatchCommands::set_size(uint64_t value) {
-  _internal_set_size(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.size)
+inline void Msg_DispatchCommands::set_a_size(uint64_t value) {
+  _internal_set_a_size(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_DispatchCommands.a_size)
 }
 
 // -------------------------------------------------------------------
@@ -10836,72 +10836,72 @@ inline void Msg_DispatchCommands::set_size(uint64_t value) {
 
 // Reply_Ping
 
-// required bytes ok = 1;
-inline bool Reply_Ping::_internal_has_ok() const {
+// required bytes a_ok = 1;
+inline bool Reply_Ping::_internal_has_a_ok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Ping::has_ok() const {
-  return _internal_has_ok();
+inline bool Reply_Ping::has_a_ok() const {
+  return _internal_has_a_ok();
 }
-inline void Reply_Ping::clear_ok() {
-  _impl_.ok_.ClearToEmpty();
+inline void Reply_Ping::clear_a_ok() {
+  _impl_.a_ok_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Ping::ok() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_Ping.ok)
-  return _internal_ok();
+inline const std::string& Reply_Ping::a_ok() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
+  return _internal_a_ok();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Ping::set_ok(ArgT0&& arg0, ArgT... args) {
+void Reply_Ping::set_a_ok(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_Ping.ok)
+ _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
 }
-inline std::string* Reply_Ping::mutable_ok() {
-  std::string* _s = _internal_mutable_ok();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_Ping.ok)
+inline std::string* Reply_Ping::mutable_a_ok() {
+  std::string* _s = _internal_mutable_a_ok();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
   return _s;
 }
-inline const std::string& Reply_Ping::_internal_ok() const {
-  return _impl_.ok_.Get();
+inline const std::string& Reply_Ping::_internal_a_ok() const {
+  return _impl_.a_ok_.Get();
 }
-inline void Reply_Ping::_internal_set_ok(const std::string& value) {
+inline void Reply_Ping::_internal_set_a_ok(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ok_.Set(value, GetArenaForAllocation());
+  _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Ping::_internal_mutable_ok() {
+inline std::string* Reply_Ping::_internal_mutable_a_ok() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ok_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Ping::release_ok() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_Ping.ok)
-  if (!_internal_has_ok()) {
+inline std::string* Reply_Ping::release_a_ok() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
+  if (!_internal_has_a_ok()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ok_.Release();
+  auto* p = _impl_.a_ok_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Ping::set_allocated_ok(std::string* ok) {
-  if (ok != nullptr) {
+inline void Reply_Ping::set_allocated_a_ok(std::string* a_ok) {
+  if (a_ok != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ok_.SetAllocated(ok, GetArenaForAllocation());
+  _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_Ping.ok)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_Ping.a_ok)
 }
 
 // -------------------------------------------------------------------
@@ -10916,424 +10916,424 @@ inline void Reply_Ping::set_allocated_ok(std::string* ok) {
 
 // Msg_TexImage
 
-// required uint32 level = 1;
-inline bool Msg_TexImage::_internal_has_level() const {
+// required uint32 a_level = 1;
+inline bool Msg_TexImage::_internal_has_a_level() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_TexImage::has_level() const {
-  return _internal_has_level();
+inline bool Msg_TexImage::has_a_level() const {
+  return _internal_has_a_level();
 }
-inline void Msg_TexImage::clear_level() {
-  _impl_.level_ = 0u;
+inline void Msg_TexImage::clear_a_level() {
+  _impl_.a_level_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_TexImage::_internal_level() const {
-  return _impl_.level_;
+inline uint32_t Msg_TexImage::_internal_a_level() const {
+  return _impl_.a_level_;
 }
-inline uint32_t Msg_TexImage::level() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.level)
-  return _internal_level();
+inline uint32_t Msg_TexImage::a_level() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_level)
+  return _internal_a_level();
 }
-inline void Msg_TexImage::_internal_set_level(uint32_t value) {
+inline void Msg_TexImage::_internal_set_a_level(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.level_ = value;
+  _impl_.a_level_ = value;
 }
-inline void Msg_TexImage::set_level(uint32_t value) {
-  _internal_set_level(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.level)
+inline void Msg_TexImage::set_a_level(uint32_t value) {
+  _internal_set_a_level(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_level)
 }
 
-// required uint32 respecFormat = 2;
-inline bool Msg_TexImage::_internal_has_respecformat() const {
+// required uint32 a_respecFormat = 2;
+inline bool Msg_TexImage::_internal_has_a_respecformat() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_TexImage::has_respecformat() const {
-  return _internal_has_respecformat();
+inline bool Msg_TexImage::has_a_respecformat() const {
+  return _internal_has_a_respecformat();
 }
-inline void Msg_TexImage::clear_respecformat() {
-  _impl_.respecformat_ = 0u;
+inline void Msg_TexImage::clear_a_respecformat() {
+  _impl_.a_respecformat_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t Msg_TexImage::_internal_respecformat() const {
-  return _impl_.respecformat_;
+inline uint32_t Msg_TexImage::_internal_a_respecformat() const {
+  return _impl_.a_respecformat_;
 }
-inline uint32_t Msg_TexImage::respecformat() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.respecFormat)
-  return _internal_respecformat();
+inline uint32_t Msg_TexImage::a_respecformat() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_respecFormat)
+  return _internal_a_respecformat();
 }
-inline void Msg_TexImage::_internal_set_respecformat(uint32_t value) {
+inline void Msg_TexImage::_internal_set_a_respecformat(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.respecformat_ = value;
+  _impl_.a_respecformat_ = value;
 }
-inline void Msg_TexImage::set_respecformat(uint32_t value) {
-  _internal_set_respecformat(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.respecFormat)
+inline void Msg_TexImage::set_a_respecformat(uint32_t value) {
+  _internal_set_a_respecformat(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_respecFormat)
 }
 
-// required bytes offset = 3;
-inline bool Msg_TexImage::_internal_has_offset() const {
+// required bytes a_offset = 3;
+inline bool Msg_TexImage::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TexImage::has_offset() const {
-  return _internal_has_offset();
+inline bool Msg_TexImage::has_a_offset() const {
+  return _internal_has_a_offset();
 }
-inline void Msg_TexImage::clear_offset() {
-  _impl_.offset_.ClearToEmpty();
+inline void Msg_TexImage::clear_a_offset() {
+  _impl_.a_offset_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_TexImage::offset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.offset)
-  return _internal_offset();
+inline const std::string& Msg_TexImage::a_offset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
+  return _internal_a_offset();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TexImage::set_offset(ArgT0&& arg0, ArgT... args) {
+void Msg_TexImage::set_a_offset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.offset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.offset)
+ _impl_.a_offset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
 }
-inline std::string* Msg_TexImage::mutable_offset() {
-  std::string* _s = _internal_mutable_offset();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_TexImage.offset)
+inline std::string* Msg_TexImage::mutable_a_offset() {
+  std::string* _s = _internal_mutable_a_offset();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
   return _s;
 }
-inline const std::string& Msg_TexImage::_internal_offset() const {
-  return _impl_.offset_.Get();
+inline const std::string& Msg_TexImage::_internal_a_offset() const {
+  return _impl_.a_offset_.Get();
 }
-inline void Msg_TexImage::_internal_set_offset(const std::string& value) {
+inline void Msg_TexImage::_internal_set_a_offset(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.offset_.Set(value, GetArenaForAllocation());
+  _impl_.a_offset_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TexImage::_internal_mutable_offset() {
+inline std::string* Msg_TexImage::_internal_mutable_a_offset() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.offset_.Mutable(GetArenaForAllocation());
+  return _impl_.a_offset_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TexImage::release_offset() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.offset)
-  if (!_internal_has_offset()) {
+inline std::string* Msg_TexImage::release_a_offset() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
+  if (!_internal_has_a_offset()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.offset_.Release();
+  auto* p = _impl_.a_offset_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.offset_.IsDefault()) {
-    _impl_.offset_.Set("", GetArenaForAllocation());
+  if (_impl_.a_offset_.IsDefault()) {
+    _impl_.a_offset_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TexImage::set_allocated_offset(std::string* offset) {
-  if (offset != nullptr) {
+inline void Msg_TexImage::set_allocated_a_offset(std::string* a_offset) {
+  if (a_offset != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.offset_.SetAllocated(offset, GetArenaForAllocation());
+  _impl_.a_offset_.SetAllocated(a_offset, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.offset_.IsDefault()) {
-    _impl_.offset_.Set("", GetArenaForAllocation());
+  if (_impl_.a_offset_.IsDefault()) {
+    _impl_.a_offset_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.offset)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_offset)
 }
 
-// required bytes pi = 4;
-inline bool Msg_TexImage::_internal_has_pi() const {
+// required bytes a_pi = 4;
+inline bool Msg_TexImage::_internal_has_a_pi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_TexImage::has_pi() const {
-  return _internal_has_pi();
+inline bool Msg_TexImage::has_a_pi() const {
+  return _internal_has_a_pi();
 }
-inline void Msg_TexImage::clear_pi() {
-  _impl_.pi_.ClearToEmpty();
+inline void Msg_TexImage::clear_a_pi() {
+  _impl_.a_pi_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_TexImage::pi() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.pi)
-  return _internal_pi();
+inline const std::string& Msg_TexImage::a_pi() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
+  return _internal_a_pi();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TexImage::set_pi(ArgT0&& arg0, ArgT... args) {
+void Msg_TexImage::set_a_pi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.pi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.pi)
+ _impl_.a_pi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
 }
-inline std::string* Msg_TexImage::mutable_pi() {
-  std::string* _s = _internal_mutable_pi();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_TexImage.pi)
+inline std::string* Msg_TexImage::mutable_a_pi() {
+  std::string* _s = _internal_mutable_a_pi();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
   return _s;
 }
-inline const std::string& Msg_TexImage::_internal_pi() const {
-  return _impl_.pi_.Get();
+inline const std::string& Msg_TexImage::_internal_a_pi() const {
+  return _impl_.a_pi_.Get();
 }
-inline void Msg_TexImage::_internal_set_pi(const std::string& value) {
+inline void Msg_TexImage::_internal_set_a_pi(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pi_.Set(value, GetArenaForAllocation());
+  _impl_.a_pi_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TexImage::_internal_mutable_pi() {
+inline std::string* Msg_TexImage::_internal_mutable_a_pi() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.pi_.Mutable(GetArenaForAllocation());
+  return _impl_.a_pi_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TexImage::release_pi() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.pi)
-  if (!_internal_has_pi()) {
+inline std::string* Msg_TexImage::release_a_pi() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
+  if (!_internal_has_a_pi()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.pi_.Release();
+  auto* p = _impl_.a_pi_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.pi_.IsDefault()) {
-    _impl_.pi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_pi_.IsDefault()) {
+    _impl_.a_pi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TexImage::set_allocated_pi(std::string* pi) {
-  if (pi != nullptr) {
+inline void Msg_TexImage::set_allocated_a_pi(std::string* a_pi) {
+  if (a_pi != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.pi_.SetAllocated(pi, GetArenaForAllocation());
+  _impl_.a_pi_.SetAllocated(a_pi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.pi_.IsDefault()) {
-    _impl_.pi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_pi_.IsDefault()) {
+    _impl_.a_pi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.pi)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_pi)
 }
 
-// required bytes src = 5;
-inline bool Msg_TexImage::_internal_has_src() const {
+// required bytes a_src = 5;
+inline bool Msg_TexImage::_internal_has_a_src() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_TexImage::has_src() const {
-  return _internal_has_src();
+inline bool Msg_TexImage::has_a_src() const {
+  return _internal_has_a_src();
 }
-inline void Msg_TexImage::clear_src() {
-  _impl_.src_.ClearToEmpty();
+inline void Msg_TexImage::clear_a_src() {
+  _impl_.a_src_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_TexImage::src() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.src)
-  return _internal_src();
+inline const std::string& Msg_TexImage::a_src() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
+  return _internal_a_src();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TexImage::set_src(ArgT0&& arg0, ArgT... args) {
+void Msg_TexImage::set_a_src(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.src_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.src)
+ _impl_.a_src_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
 }
-inline std::string* Msg_TexImage::mutable_src() {
-  std::string* _s = _internal_mutable_src();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_TexImage.src)
+inline std::string* Msg_TexImage::mutable_a_src() {
+  std::string* _s = _internal_mutable_a_src();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
   return _s;
 }
-inline const std::string& Msg_TexImage::_internal_src() const {
-  return _impl_.src_.Get();
+inline const std::string& Msg_TexImage::_internal_a_src() const {
+  return _impl_.a_src_.Get();
 }
-inline void Msg_TexImage::_internal_set_src(const std::string& value) {
+inline void Msg_TexImage::_internal_set_a_src(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.src_.Set(value, GetArenaForAllocation());
+  _impl_.a_src_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TexImage::_internal_mutable_src() {
+inline std::string* Msg_TexImage::_internal_mutable_a_src() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.src_.Mutable(GetArenaForAllocation());
+  return _impl_.a_src_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TexImage::release_src() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.src)
-  if (!_internal_has_src()) {
+inline std::string* Msg_TexImage::release_a_src() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
+  if (!_internal_has_a_src()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.src_.Release();
+  auto* p = _impl_.a_src_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.src_.IsDefault()) {
-    _impl_.src_.Set("", GetArenaForAllocation());
+  if (_impl_.a_src_.IsDefault()) {
+    _impl_.a_src_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TexImage::set_allocated_src(std::string* src) {
-  if (src != nullptr) {
+inline void Msg_TexImage::set_allocated_a_src(std::string* a_src) {
+  if (a_src != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.src_.SetAllocated(src, GetArenaForAllocation());
+  _impl_.a_src_.SetAllocated(a_src, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.src_.IsDefault()) {
-    _impl_.src_.Set("", GetArenaForAllocation());
+  if (_impl_.a_src_.IsDefault()) {
+    _impl_.a_src_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.src)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_TexImage.a_src)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetBufferSubData
 
-// required uint32 target = 1;
-inline bool Msg_GetBufferSubData::_internal_has_target() const {
+// required uint32 a_target = 1;
+inline bool Msg_GetBufferSubData::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetBufferSubData::has_target() const {
-  return _internal_has_target();
+inline bool Msg_GetBufferSubData::has_a_target() const {
+  return _internal_has_a_target();
 }
-inline void Msg_GetBufferSubData::clear_target() {
-  _impl_.target_ = 0u;
+inline void Msg_GetBufferSubData::clear_a_target() {
+  _impl_.a_target_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_GetBufferSubData::_internal_target() const {
-  return _impl_.target_;
+inline uint32_t Msg_GetBufferSubData::_internal_a_target() const {
+  return _impl_.a_target_;
 }
-inline uint32_t Msg_GetBufferSubData::target() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.target)
-  return _internal_target();
+inline uint32_t Msg_GetBufferSubData::a_target() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_target)
+  return _internal_a_target();
 }
-inline void Msg_GetBufferSubData::_internal_set_target(uint32_t value) {
+inline void Msg_GetBufferSubData::_internal_set_a_target(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.target_ = value;
+  _impl_.a_target_ = value;
 }
-inline void Msg_GetBufferSubData::set_target(uint32_t value) {
-  _internal_set_target(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.target)
+inline void Msg_GetBufferSubData::set_a_target(uint32_t value) {
+  _internal_set_a_target(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_target)
 }
 
-// required uint64 srcByteOffset = 2;
-inline bool Msg_GetBufferSubData::_internal_has_srcbyteoffset() const {
+// required uint64 a_srcByteOffset = 2;
+inline bool Msg_GetBufferSubData::_internal_has_a_srcbyteoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetBufferSubData::has_srcbyteoffset() const {
-  return _internal_has_srcbyteoffset();
+inline bool Msg_GetBufferSubData::has_a_srcbyteoffset() const {
+  return _internal_has_a_srcbyteoffset();
 }
-inline void Msg_GetBufferSubData::clear_srcbyteoffset() {
-  _impl_.srcbyteoffset_ = uint64_t{0u};
+inline void Msg_GetBufferSubData::clear_a_srcbyteoffset() {
+  _impl_.a_srcbyteoffset_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetBufferSubData::_internal_srcbyteoffset() const {
-  return _impl_.srcbyteoffset_;
+inline uint64_t Msg_GetBufferSubData::_internal_a_srcbyteoffset() const {
+  return _impl_.a_srcbyteoffset_;
 }
-inline uint64_t Msg_GetBufferSubData::srcbyteoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.srcByteOffset)
-  return _internal_srcbyteoffset();
+inline uint64_t Msg_GetBufferSubData::a_srcbyteoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_srcByteOffset)
+  return _internal_a_srcbyteoffset();
 }
-inline void Msg_GetBufferSubData::_internal_set_srcbyteoffset(uint64_t value) {
+inline void Msg_GetBufferSubData::_internal_set_a_srcbyteoffset(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.srcbyteoffset_ = value;
+  _impl_.a_srcbyteoffset_ = value;
 }
-inline void Msg_GetBufferSubData::set_srcbyteoffset(uint64_t value) {
-  _internal_set_srcbyteoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.srcByteOffset)
+inline void Msg_GetBufferSubData::set_a_srcbyteoffset(uint64_t value) {
+  _internal_set_a_srcbyteoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_srcByteOffset)
 }
 
-// required uint64 byteSize = 3;
-inline bool Msg_GetBufferSubData::_internal_has_bytesize() const {
+// required uint64 a_byteSize = 3;
+inline bool Msg_GetBufferSubData::_internal_has_a_bytesize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetBufferSubData::has_bytesize() const {
-  return _internal_has_bytesize();
+inline bool Msg_GetBufferSubData::has_a_bytesize() const {
+  return _internal_has_a_bytesize();
 }
-inline void Msg_GetBufferSubData::clear_bytesize() {
-  _impl_.bytesize_ = uint64_t{0u};
+inline void Msg_GetBufferSubData::clear_a_bytesize() {
+  _impl_.a_bytesize_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_GetBufferSubData::_internal_bytesize() const {
-  return _impl_.bytesize_;
+inline uint64_t Msg_GetBufferSubData::_internal_a_bytesize() const {
+  return _impl_.a_bytesize_;
 }
-inline uint64_t Msg_GetBufferSubData::bytesize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.byteSize)
-  return _internal_bytesize();
+inline uint64_t Msg_GetBufferSubData::a_bytesize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_byteSize)
+  return _internal_a_bytesize();
 }
-inline void Msg_GetBufferSubData::_internal_set_bytesize(uint64_t value) {
+inline void Msg_GetBufferSubData::_internal_set_a_bytesize(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bytesize_ = value;
+  _impl_.a_bytesize_ = value;
 }
-inline void Msg_GetBufferSubData::set_bytesize(uint64_t value) {
-  _internal_set_bytesize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.byteSize)
+inline void Msg_GetBufferSubData::set_a_bytesize(uint64_t value) {
+  _internal_set_a_bytesize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferSubData.a_byteSize)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetBufferSubData
 
-// required bytes ret = 1;
-inline bool Reply_GetBufferSubData::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_GetBufferSubData::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetBufferSubData::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetBufferSubData::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetBufferSubData::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetBufferSubData::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetBufferSubData::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetBufferSubData::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetBufferSubData::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetBufferSubData::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
 }
-inline std::string* Reply_GetBufferSubData::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.ret)
+inline std::string* Reply_GetBufferSubData::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetBufferSubData::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetBufferSubData::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetBufferSubData::_internal_set_ret(const std::string& value) {
+inline void Reply_GetBufferSubData::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetBufferSubData::_internal_mutable_ret() {
+inline std::string* Reply_GetBufferSubData::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetBufferSubData::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetBufferSubData::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetBufferSubData::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetBufferSubData::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetBufferSubData.a_ret)
 }
 
 // -------------------------------------------------------------------
@@ -11344,181 +11344,181 @@ inline void Reply_GetBufferSubData::set_allocated_ret(std::string* ret) {
 
 // Reply_GetFrontBufferSnapshot
 
-// required bytes ret = 1;
-inline bool Reply_GetFrontBufferSnapshot::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_GetFrontBufferSnapshot::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetFrontBufferSnapshot::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetFrontBufferSnapshot::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetFrontBufferSnapshot::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetFrontBufferSnapshot::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetFrontBufferSnapshot::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetFrontBufferSnapshot::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetFrontBufferSnapshot::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetFrontBufferSnapshot::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
 }
-inline std::string* Reply_GetFrontBufferSnapshot::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.ret)
+inline std::string* Reply_GetFrontBufferSnapshot::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetFrontBufferSnapshot::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetFrontBufferSnapshot::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetFrontBufferSnapshot::_internal_set_ret(const std::string& value) {
+inline void Reply_GetFrontBufferSnapshot::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetFrontBufferSnapshot::_internal_mutable_ret() {
+inline std::string* Reply_GetFrontBufferSnapshot::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetFrontBufferSnapshot::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetFrontBufferSnapshot::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetFrontBufferSnapshot::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetFrontBufferSnapshot::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBufferSnapshot.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReadPixels
 
-// required bytes desc = 1;
-inline bool Msg_ReadPixels::_internal_has_desc() const {
+// required bytes a_desc = 1;
+inline bool Msg_ReadPixels::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReadPixels::has_desc() const {
-  return _internal_has_desc();
+inline bool Msg_ReadPixels::has_a_desc() const {
+  return _internal_has_a_desc();
 }
-inline void Msg_ReadPixels::clear_desc() {
-  _impl_.desc_.ClearToEmpty();
+inline void Msg_ReadPixels::clear_a_desc() {
+  _impl_.a_desc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReadPixels::desc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.desc)
-  return _internal_desc();
+inline const std::string& Msg_ReadPixels::a_desc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
+  return _internal_a_desc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReadPixels::set_desc(ArgT0&& arg0, ArgT... args) {
+void Msg_ReadPixels::set_a_desc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.desc)
+ _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
 }
-inline std::string* Msg_ReadPixels::mutable_desc() {
-  std::string* _s = _internal_mutable_desc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.desc)
+inline std::string* Msg_ReadPixels::mutable_a_desc() {
+  std::string* _s = _internal_mutable_a_desc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
   return _s;
 }
-inline const std::string& Msg_ReadPixels::_internal_desc() const {
-  return _impl_.desc_.Get();
+inline const std::string& Msg_ReadPixels::_internal_a_desc() const {
+  return _impl_.a_desc_.Get();
 }
-inline void Msg_ReadPixels::_internal_set_desc(const std::string& value) {
+inline void Msg_ReadPixels::_internal_set_a_desc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.desc_.Set(value, GetArenaForAllocation());
+  _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReadPixels::_internal_mutable_desc() {
+inline std::string* Msg_ReadPixels::_internal_mutable_a_desc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.desc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReadPixels::release_desc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.desc)
-  if (!_internal_has_desc()) {
+inline std::string* Msg_ReadPixels::release_a_desc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
+  if (!_internal_has_a_desc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.desc_.Release();
+  auto* p = _impl_.a_desc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReadPixels::set_allocated_desc(std::string* desc) {
-  if (desc != nullptr) {
+inline void Msg_ReadPixels::set_allocated_a_desc(std::string* a_desc) {
+  if (a_desc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.desc_.SetAllocated(desc, GetArenaForAllocation());
+  _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.desc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_desc)
 }
 
-// required .protobuf.mozilla.dom.ReadPixelsBuffer buffer = 2;
-inline bool Msg_ReadPixels::_internal_has_buffer() const {
+// required .protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
+inline bool Msg_ReadPixels::_internal_has_a_buffer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.buffer_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_buffer_ != nullptr);
   return value;
 }
-inline bool Msg_ReadPixels::has_buffer() const {
-  return _internal_has_buffer();
+inline bool Msg_ReadPixels::has_a_buffer() const {
+  return _internal_has_a_buffer();
 }
-inline const ::protobuf::mozilla::dom::ReadPixelsBuffer& Msg_ReadPixels::_internal_buffer() const {
-  const ::protobuf::mozilla::dom::ReadPixelsBuffer* p = _impl_.buffer_;
+inline const ::protobuf::mozilla::dom::ReadPixelsBuffer& Msg_ReadPixels::_internal_a_buffer() const {
+  const ::protobuf::mozilla::dom::ReadPixelsBuffer* p = _impl_.a_buffer_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ReadPixelsBuffer&>(
       ::protobuf::mozilla::dom::_ReadPixelsBuffer_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ReadPixelsBuffer& Msg_ReadPixels::buffer() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.buffer)
-  return _internal_buffer();
+inline const ::protobuf::mozilla::dom::ReadPixelsBuffer& Msg_ReadPixels::a_buffer() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
+  return _internal_a_buffer();
 }
-inline void Msg_ReadPixels::unsafe_arena_set_allocated_buffer(
-    ::protobuf::mozilla::dom::ReadPixelsBuffer* buffer) {
+inline void Msg_ReadPixels::unsafe_arena_set_allocated_a_buffer(
+    ::protobuf::mozilla::dom::ReadPixelsBuffer* a_buffer) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.buffer_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_buffer_);
   }
-  _impl_.buffer_ = buffer;
-  if (buffer) {
+  _impl_.a_buffer_ = a_buffer;
+  if (a_buffer) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.buffer)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
 }
-inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::release_buffer() {
+inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::release_a_buffer() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::ReadPixelsBuffer* temp = _impl_.buffer_;
-  _impl_.buffer_ = nullptr;
+  ::protobuf::mozilla::dom::ReadPixelsBuffer* temp = _impl_.a_buffer_;
+  _impl_.a_buffer_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11530,433 +11530,433 @@ inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::release_buffe
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::unsafe_arena_release_buffer() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.buffer)
+inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::unsafe_arena_release_a_buffer() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::ReadPixelsBuffer* temp = _impl_.buffer_;
-  _impl_.buffer_ = nullptr;
+  ::protobuf::mozilla::dom::ReadPixelsBuffer* temp = _impl_.a_buffer_;
+  _impl_.a_buffer_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::_internal_mutable_buffer() {
+inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::_internal_mutable_a_buffer() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.buffer_ == nullptr) {
+  if (_impl_.a_buffer_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ReadPixelsBuffer>(GetArenaForAllocation());
-    _impl_.buffer_ = p;
+    _impl_.a_buffer_ = p;
   }
-  return _impl_.buffer_;
+  return _impl_.a_buffer_;
 }
-inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::mutable_buffer() {
-  ::protobuf::mozilla::dom::ReadPixelsBuffer* _msg = _internal_mutable_buffer();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.buffer)
+inline ::protobuf::mozilla::dom::ReadPixelsBuffer* Msg_ReadPixels::mutable_a_buffer() {
+  ::protobuf::mozilla::dom::ReadPixelsBuffer* _msg = _internal_mutable_a_buffer();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
   return _msg;
 }
-inline void Msg_ReadPixels::set_allocated_buffer(::protobuf::mozilla::dom::ReadPixelsBuffer* buffer) {
+inline void Msg_ReadPixels::set_allocated_a_buffer(::protobuf::mozilla::dom::ReadPixelsBuffer* a_buffer) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.buffer_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_buffer_);
   }
-  if (buffer) {
+  if (a_buffer) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(buffer));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_buffer));
     if (message_arena != submessage_arena) {
-      buffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, buffer, submessage_arena);
+      a_buffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_buffer, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.buffer_ = buffer;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.buffer)
+  _impl_.a_buffer_ = a_buffer;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_ReadPixels.a_buffer)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_ReadPixels
 
-// required bytes ret = 1;
-inline bool Reply_ReadPixels::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_ReadPixels::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_ReadPixels::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_ReadPixels::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_ReadPixels::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_ReadPixels::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_ReadPixels::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.ret)
-  return _internal_ret();
+inline const std::string& Reply_ReadPixels::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_ReadPixels::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_ReadPixels::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
 }
-inline std::string* Reply_ReadPixels::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.ret)
+inline std::string* Reply_ReadPixels::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
   return _s;
 }
-inline const std::string& Reply_ReadPixels::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_ReadPixels::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_ReadPixels::_internal_set_ret(const std::string& value) {
+inline void Reply_ReadPixels::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_ReadPixels::_internal_mutable_ret() {
+inline std::string* Reply_ReadPixels::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_ReadPixels::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_ReadPixels::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_ReadPixels::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_ReadPixels::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_ReadPixels.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CheckFramebufferStatus
 
-// required uint32 target = 1;
-inline bool Msg_CheckFramebufferStatus::_internal_has_target() const {
+// required uint32 a_target = 1;
+inline bool Msg_CheckFramebufferStatus::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CheckFramebufferStatus::has_target() const {
-  return _internal_has_target();
+inline bool Msg_CheckFramebufferStatus::has_a_target() const {
+  return _internal_has_a_target();
 }
-inline void Msg_CheckFramebufferStatus::clear_target() {
-  _impl_.target_ = 0u;
+inline void Msg_CheckFramebufferStatus::clear_a_target() {
+  _impl_.a_target_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_CheckFramebufferStatus::_internal_target() const {
-  return _impl_.target_;
+inline uint32_t Msg_CheckFramebufferStatus::_internal_a_target() const {
+  return _impl_.a_target_;
 }
-inline uint32_t Msg_CheckFramebufferStatus::target() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CheckFramebufferStatus.target)
-  return _internal_target();
+inline uint32_t Msg_CheckFramebufferStatus::a_target() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CheckFramebufferStatus.a_target)
+  return _internal_a_target();
 }
-inline void Msg_CheckFramebufferStatus::_internal_set_target(uint32_t value) {
+inline void Msg_CheckFramebufferStatus::_internal_set_a_target(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.target_ = value;
+  _impl_.a_target_ = value;
 }
-inline void Msg_CheckFramebufferStatus::set_target(uint32_t value) {
-  _internal_set_target(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CheckFramebufferStatus.target)
+inline void Msg_CheckFramebufferStatus::set_a_target(uint32_t value) {
+  _internal_set_a_target(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CheckFramebufferStatus.a_target)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_CheckFramebufferStatus
 
-// required uint32 ret = 1;
-inline bool Reply_CheckFramebufferStatus::_internal_has_ret() const {
+// required uint32 a_ret = 1;
+inline bool Reply_CheckFramebufferStatus::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_CheckFramebufferStatus::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_CheckFramebufferStatus::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_CheckFramebufferStatus::clear_ret() {
-  _impl_.ret_ = 0u;
+inline void Reply_CheckFramebufferStatus::clear_a_ret() {
+  _impl_.a_ret_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_CheckFramebufferStatus::_internal_ret() const {
-  return _impl_.ret_;
+inline uint32_t Reply_CheckFramebufferStatus::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline uint32_t Reply_CheckFramebufferStatus::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_CheckFramebufferStatus.ret)
-  return _internal_ret();
+inline uint32_t Reply_CheckFramebufferStatus::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_CheckFramebufferStatus.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_CheckFramebufferStatus::_internal_set_ret(uint32_t value) {
+inline void Reply_CheckFramebufferStatus::_internal_set_a_ret(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_CheckFramebufferStatus::set_ret(uint32_t value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_CheckFramebufferStatus.ret)
+inline void Reply_CheckFramebufferStatus::set_a_ret(uint32_t value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_CheckFramebufferStatus.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ClientWaitSync
 
-// required uint64 id = 1;
-inline bool Msg_ClientWaitSync::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_ClientWaitSync::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ClientWaitSync::has_id() const {
-  return _internal_has_id();
+inline bool Msg_ClientWaitSync::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_ClientWaitSync::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_ClientWaitSync::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ClientWaitSync::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_ClientWaitSync::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_ClientWaitSync::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.id)
-  return _internal_id();
+inline uint64_t Msg_ClientWaitSync::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_id)
+  return _internal_a_id();
 }
-inline void Msg_ClientWaitSync::_internal_set_id(uint64_t value) {
+inline void Msg_ClientWaitSync::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_ClientWaitSync::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.id)
+inline void Msg_ClientWaitSync::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_id)
 }
 
-// required uint32 flags = 2;
-inline bool Msg_ClientWaitSync::_internal_has_flags() const {
+// required uint32 a_flags = 2;
+inline bool Msg_ClientWaitSync::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ClientWaitSync::has_flags() const {
-  return _internal_has_flags();
+inline bool Msg_ClientWaitSync::has_a_flags() const {
+  return _internal_has_a_flags();
 }
-inline void Msg_ClientWaitSync::clear_flags() {
-  _impl_.flags_ = 0u;
+inline void Msg_ClientWaitSync::clear_a_flags() {
+  _impl_.a_flags_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_ClientWaitSync::_internal_flags() const {
-  return _impl_.flags_;
+inline uint32_t Msg_ClientWaitSync::_internal_a_flags() const {
+  return _impl_.a_flags_;
 }
-inline uint32_t Msg_ClientWaitSync::flags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.flags)
-  return _internal_flags();
+inline uint32_t Msg_ClientWaitSync::a_flags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_flags)
+  return _internal_a_flags();
 }
-inline void Msg_ClientWaitSync::_internal_set_flags(uint32_t value) {
+inline void Msg_ClientWaitSync::_internal_set_a_flags(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.flags_ = value;
+  _impl_.a_flags_ = value;
 }
-inline void Msg_ClientWaitSync::set_flags(uint32_t value) {
-  _internal_set_flags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.flags)
+inline void Msg_ClientWaitSync::set_a_flags(uint32_t value) {
+  _internal_set_a_flags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_flags)
 }
 
-// required uint64 timeout = 3;
-inline bool Msg_ClientWaitSync::_internal_has_timeout() const {
+// required uint64 a_timeout = 3;
+inline bool Msg_ClientWaitSync::_internal_has_a_timeout() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ClientWaitSync::has_timeout() const {
-  return _internal_has_timeout();
+inline bool Msg_ClientWaitSync::has_a_timeout() const {
+  return _internal_has_a_timeout();
 }
-inline void Msg_ClientWaitSync::clear_timeout() {
-  _impl_.timeout_ = uint64_t{0u};
+inline void Msg_ClientWaitSync::clear_a_timeout() {
+  _impl_.a_timeout_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_ClientWaitSync::_internal_timeout() const {
-  return _impl_.timeout_;
+inline uint64_t Msg_ClientWaitSync::_internal_a_timeout() const {
+  return _impl_.a_timeout_;
 }
-inline uint64_t Msg_ClientWaitSync::timeout() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.timeout)
-  return _internal_timeout();
+inline uint64_t Msg_ClientWaitSync::a_timeout() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_timeout)
+  return _internal_a_timeout();
 }
-inline void Msg_ClientWaitSync::_internal_set_timeout(uint64_t value) {
+inline void Msg_ClientWaitSync::_internal_set_a_timeout(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.timeout_ = value;
+  _impl_.a_timeout_ = value;
 }
-inline void Msg_ClientWaitSync::set_timeout(uint64_t value) {
-  _internal_set_timeout(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.timeout)
+inline void Msg_ClientWaitSync::set_a_timeout(uint64_t value) {
+  _internal_set_a_timeout(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ClientWaitSync.a_timeout)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_ClientWaitSync
 
-// required uint32 ret = 1;
-inline bool Reply_ClientWaitSync::_internal_has_ret() const {
+// required uint32 a_ret = 1;
+inline bool Reply_ClientWaitSync::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_ClientWaitSync::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_ClientWaitSync::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_ClientWaitSync::clear_ret() {
-  _impl_.ret_ = 0u;
+inline void Reply_ClientWaitSync::clear_a_ret() {
+  _impl_.a_ret_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_ClientWaitSync::_internal_ret() const {
-  return _impl_.ret_;
+inline uint32_t Reply_ClientWaitSync::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline uint32_t Reply_ClientWaitSync::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ClientWaitSync.ret)
-  return _internal_ret();
+inline uint32_t Reply_ClientWaitSync::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ClientWaitSync.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_ClientWaitSync::_internal_set_ret(uint32_t value) {
+inline void Reply_ClientWaitSync::_internal_set_a_ret(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_ClientWaitSync::set_ret(uint32_t value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ClientWaitSync.ret)
+inline void Reply_ClientWaitSync::set_a_ret(uint32_t value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ClientWaitSync.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CreateOpaqueFramebuffer
 
-// required uint64 id = 1;
-inline bool Msg_CreateOpaqueFramebuffer::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_CreateOpaqueFramebuffer::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CreateOpaqueFramebuffer::has_id() const {
-  return _internal_has_id();
+inline bool Msg_CreateOpaqueFramebuffer::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_CreateOpaqueFramebuffer::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_CreateOpaqueFramebuffer::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_CreateOpaqueFramebuffer::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_CreateOpaqueFramebuffer::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_CreateOpaqueFramebuffer::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.id)
-  return _internal_id();
+inline uint64_t Msg_CreateOpaqueFramebuffer::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_id)
+  return _internal_a_id();
 }
-inline void Msg_CreateOpaqueFramebuffer::_internal_set_id(uint64_t value) {
+inline void Msg_CreateOpaqueFramebuffer::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_CreateOpaqueFramebuffer::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.id)
+inline void Msg_CreateOpaqueFramebuffer::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_id)
 }
 
-// required bytes options = 2;
-inline bool Msg_CreateOpaqueFramebuffer::_internal_has_options() const {
+// required bytes a_options = 2;
+inline bool Msg_CreateOpaqueFramebuffer::_internal_has_a_options() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CreateOpaqueFramebuffer::has_options() const {
-  return _internal_has_options();
+inline bool Msg_CreateOpaqueFramebuffer::has_a_options() const {
+  return _internal_has_a_options();
 }
-inline void Msg_CreateOpaqueFramebuffer::clear_options() {
-  _impl_.options_.ClearToEmpty();
+inline void Msg_CreateOpaqueFramebuffer::clear_a_options() {
+  _impl_.a_options_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CreateOpaqueFramebuffer::options() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.options)
-  return _internal_options();
+inline const std::string& Msg_CreateOpaqueFramebuffer::a_options() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
+  return _internal_a_options();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CreateOpaqueFramebuffer::set_options(ArgT0&& arg0, ArgT... args) {
+void Msg_CreateOpaqueFramebuffer::set_a_options(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.options)
+ _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
 }
-inline std::string* Msg_CreateOpaqueFramebuffer::mutable_options() {
-  std::string* _s = _internal_mutable_options();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.options)
+inline std::string* Msg_CreateOpaqueFramebuffer::mutable_a_options() {
+  std::string* _s = _internal_mutable_a_options();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
   return _s;
 }
-inline const std::string& Msg_CreateOpaqueFramebuffer::_internal_options() const {
-  return _impl_.options_.Get();
+inline const std::string& Msg_CreateOpaqueFramebuffer::_internal_a_options() const {
+  return _impl_.a_options_.Get();
 }
-inline void Msg_CreateOpaqueFramebuffer::_internal_set_options(const std::string& value) {
+inline void Msg_CreateOpaqueFramebuffer::_internal_set_a_options(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.options_.Set(value, GetArenaForAllocation());
+  _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CreateOpaqueFramebuffer::_internal_mutable_options() {
+inline std::string* Msg_CreateOpaqueFramebuffer::_internal_mutable_a_options() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.options_.Mutable(GetArenaForAllocation());
+  return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CreateOpaqueFramebuffer::release_options() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.options)
-  if (!_internal_has_options()) {
+inline std::string* Msg_CreateOpaqueFramebuffer::release_a_options() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
+  if (!_internal_has_a_options()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.options_.Release();
+  auto* p = _impl_.a_options_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.options_.IsDefault()) {
-    _impl_.options_.Set("", GetArenaForAllocation());
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CreateOpaqueFramebuffer::set_allocated_options(std::string* options) {
-  if (options != nullptr) {
+inline void Msg_CreateOpaqueFramebuffer::set_allocated_a_options(std::string* a_options) {
+  if (a_options != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.options_.SetAllocated(options, GetArenaForAllocation());
+  _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.options_.IsDefault()) {
-    _impl_.options_.Set("", GetArenaForAllocation());
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.options)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_CreateOpaqueFramebuffer.a_options)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_CreateOpaqueFramebuffer
 
-// required bool ret = 1;
-inline bool Reply_CreateOpaqueFramebuffer::_internal_has_ret() const {
+// required bool a_ret = 1;
+inline bool Reply_CreateOpaqueFramebuffer::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_CreateOpaqueFramebuffer::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_CreateOpaqueFramebuffer::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_CreateOpaqueFramebuffer::clear_ret() {
-  _impl_.ret_ = false;
+inline void Reply_CreateOpaqueFramebuffer::clear_a_ret() {
+  _impl_.a_ret_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_CreateOpaqueFramebuffer::_internal_ret() const {
-  return _impl_.ret_;
+inline bool Reply_CreateOpaqueFramebuffer::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline bool Reply_CreateOpaqueFramebuffer::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_CreateOpaqueFramebuffer.ret)
-  return _internal_ret();
+inline bool Reply_CreateOpaqueFramebuffer::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_CreateOpaqueFramebuffer.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_CreateOpaqueFramebuffer::_internal_set_ret(bool value) {
+inline void Reply_CreateOpaqueFramebuffer::_internal_set_a_ret(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_CreateOpaqueFramebuffer::set_ret(bool value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_CreateOpaqueFramebuffer.ret)
+inline void Reply_CreateOpaqueFramebuffer::set_a_ret(bool value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_CreateOpaqueFramebuffer.a_ret)
 }
 
 // -------------------------------------------------------------------
@@ -11967,72 +11967,72 @@ inline void Reply_CreateOpaqueFramebuffer::set_ret(bool value) {
 
 // Reply_DrawingBufferSize
 
-// required bytes ret = 1;
-inline bool Reply_DrawingBufferSize::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_DrawingBufferSize::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_DrawingBufferSize::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_DrawingBufferSize::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_DrawingBufferSize::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_DrawingBufferSize::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_DrawingBufferSize::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.ret)
-  return _internal_ret();
+inline const std::string& Reply_DrawingBufferSize::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_DrawingBufferSize::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_DrawingBufferSize::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
 }
-inline std::string* Reply_DrawingBufferSize::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.ret)
+inline std::string* Reply_DrawingBufferSize::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
   return _s;
 }
-inline const std::string& Reply_DrawingBufferSize::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_DrawingBufferSize::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_DrawingBufferSize::_internal_set_ret(const std::string& value) {
+inline void Reply_DrawingBufferSize::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_DrawingBufferSize::_internal_mutable_ret() {
+inline std::string* Reply_DrawingBufferSize::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_DrawingBufferSize::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_DrawingBufferSize::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_DrawingBufferSize::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_DrawingBufferSize::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_DrawingBufferSize.a_ret)
 }
 
 // -------------------------------------------------------------------
@@ -12047,196 +12047,196 @@ inline void Reply_DrawingBufferSize::set_allocated_ret(std::string* ret) {
 
 // Msg_GetBufferParameter
 
-// required uint32 target = 1;
-inline bool Msg_GetBufferParameter::_internal_has_target() const {
+// required uint32 a_target = 1;
+inline bool Msg_GetBufferParameter::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetBufferParameter::has_target() const {
-  return _internal_has_target();
+inline bool Msg_GetBufferParameter::has_a_target() const {
+  return _internal_has_a_target();
 }
-inline void Msg_GetBufferParameter::clear_target() {
-  _impl_.target_ = 0u;
+inline void Msg_GetBufferParameter::clear_a_target() {
+  _impl_.a_target_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_GetBufferParameter::_internal_target() const {
-  return _impl_.target_;
+inline uint32_t Msg_GetBufferParameter::_internal_a_target() const {
+  return _impl_.a_target_;
 }
-inline uint32_t Msg_GetBufferParameter::target() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.target)
-  return _internal_target();
+inline uint32_t Msg_GetBufferParameter::a_target() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.a_target)
+  return _internal_a_target();
 }
-inline void Msg_GetBufferParameter::_internal_set_target(uint32_t value) {
+inline void Msg_GetBufferParameter::_internal_set_a_target(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.target_ = value;
+  _impl_.a_target_ = value;
 }
-inline void Msg_GetBufferParameter::set_target(uint32_t value) {
-  _internal_set_target(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.target)
+inline void Msg_GetBufferParameter::set_a_target(uint32_t value) {
+  _internal_set_a_target(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.a_target)
 }
 
-// required uint32 pname = 2;
-inline bool Msg_GetBufferParameter::_internal_has_pname() const {
+// required uint32 a_pname = 2;
+inline bool Msg_GetBufferParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetBufferParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetBufferParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetBufferParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetBufferParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetBufferParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetBufferParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetBufferParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetBufferParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetBufferParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetBufferParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetBufferParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.pname)
+inline void Msg_GetBufferParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetBufferParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetBufferParameter
 
-// optional double ret = 1;
-inline bool Reply_GetBufferParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetBufferParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetBufferParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetBufferParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetBufferParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetBufferParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetBufferParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetBufferParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetBufferParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetBufferParameter.ret)
-  return _internal_ret();
+inline double Reply_GetBufferParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetBufferParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetBufferParameter::_internal_set_ret(double value) {
+inline void Reply_GetBufferParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetBufferParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetBufferParameter.ret)
+inline void Reply_GetBufferParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetBufferParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetCompileResult
 
-// required uint64 id = 1;
-inline bool Msg_GetCompileResult::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetCompileResult::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetCompileResult::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetCompileResult::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetCompileResult::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetCompileResult::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetCompileResult::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetCompileResult::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetCompileResult::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetCompileResult.id)
-  return _internal_id();
+inline uint64_t Msg_GetCompileResult::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetCompileResult.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetCompileResult::_internal_set_id(uint64_t value) {
+inline void Msg_GetCompileResult::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetCompileResult::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetCompileResult.id)
+inline void Msg_GetCompileResult::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetCompileResult.a_id)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetCompileResult
 
-// required bytes ret = 1;
-inline bool Reply_GetCompileResult::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_GetCompileResult::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetCompileResult::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetCompileResult::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetCompileResult::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetCompileResult::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetCompileResult::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetCompileResult::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetCompileResult::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetCompileResult::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
 }
-inline std::string* Reply_GetCompileResult::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.ret)
+inline std::string* Reply_GetCompileResult::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetCompileResult::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetCompileResult::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetCompileResult::_internal_set_ret(const std::string& value) {
+inline void Reply_GetCompileResult::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetCompileResult::_internal_mutable_ret() {
+inline std::string* Reply_GetCompileResult::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetCompileResult::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetCompileResult::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetCompileResult::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetCompileResult::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetCompileResult.a_ret)
 }
 
 // -------------------------------------------------------------------
@@ -12247,1532 +12247,1532 @@ inline void Reply_GetCompileResult::set_allocated_ret(std::string* ret) {
 
 // Reply_GetError
 
-// required uint32 ret = 1;
-inline bool Reply_GetError::_internal_has_ret() const {
+// required uint32 a_ret = 1;
+inline bool Reply_GetError::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetError::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetError::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetError::clear_ret() {
-  _impl_.ret_ = 0u;
+inline void Reply_GetError::clear_a_ret() {
+  _impl_.a_ret_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_GetError::_internal_ret() const {
-  return _impl_.ret_;
+inline uint32_t Reply_GetError::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline uint32_t Reply_GetError::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetError.ret)
-  return _internal_ret();
+inline uint32_t Reply_GetError::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetError.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetError::_internal_set_ret(uint32_t value) {
+inline void Reply_GetError::_internal_set_a_ret(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetError::set_ret(uint32_t value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetError.ret)
+inline void Reply_GetError::set_a_ret(uint32_t value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetError.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetFragDataLocation
 
-// required uint64 id = 1;
-inline bool Msg_GetFragDataLocation::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetFragDataLocation::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetFragDataLocation::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetFragDataLocation::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetFragDataLocation::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetFragDataLocation::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_GetFragDataLocation::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetFragDataLocation::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetFragDataLocation::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.id)
-  return _internal_id();
+inline uint64_t Msg_GetFragDataLocation::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetFragDataLocation::_internal_set_id(uint64_t value) {
+inline void Msg_GetFragDataLocation::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetFragDataLocation::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.id)
+inline void Msg_GetFragDataLocation::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_id)
 }
 
-// required string name = 2;
-inline bool Msg_GetFragDataLocation::_internal_has_name() const {
+// required string a_name = 2;
+inline bool Msg_GetFragDataLocation::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetFragDataLocation::has_name() const {
-  return _internal_has_name();
+inline bool Msg_GetFragDataLocation::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void Msg_GetFragDataLocation::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void Msg_GetFragDataLocation::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetFragDataLocation::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.name)
-  return _internal_name();
+inline const std::string& Msg_GetFragDataLocation::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetFragDataLocation::set_name(ArgT0&& arg0, ArgT... args) {
+void Msg_GetFragDataLocation::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.name)
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
 }
-inline std::string* Msg_GetFragDataLocation::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.name)
+inline std::string* Msg_GetFragDataLocation::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
   return _s;
 }
-inline const std::string& Msg_GetFragDataLocation::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& Msg_GetFragDataLocation::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void Msg_GetFragDataLocation::_internal_set_name(const std::string& value) {
+inline void Msg_GetFragDataLocation::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetFragDataLocation::_internal_mutable_name() {
+inline std::string* Msg_GetFragDataLocation::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetFragDataLocation::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.name)
-  if (!_internal_has_name()) {
+inline std::string* Msg_GetFragDataLocation::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetFragDataLocation::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void Msg_GetFragDataLocation::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetFragDataLocation
 
-// required sint32 ret = 1;
-inline bool Reply_GetFragDataLocation::_internal_has_ret() const {
+// required sint32 a_ret = 1;
+inline bool Reply_GetFragDataLocation::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetFragDataLocation::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetFragDataLocation::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetFragDataLocation::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetFragDataLocation::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Reply_GetFragDataLocation::_internal_ret() const {
-  return _impl_.ret_;
+inline int32_t Reply_GetFragDataLocation::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline int32_t Reply_GetFragDataLocation::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFragDataLocation.ret)
-  return _internal_ret();
+inline int32_t Reply_GetFragDataLocation::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFragDataLocation.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetFragDataLocation::_internal_set_ret(int32_t value) {
+inline void Reply_GetFragDataLocation::_internal_set_a_ret(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetFragDataLocation::set_ret(int32_t value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFragDataLocation.ret)
+inline void Reply_GetFragDataLocation::set_a_ret(int32_t value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFragDataLocation.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetFramebufferAttachmentParameter
 
-// required uint64 id = 1;
-inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetFramebufferAttachmentParameter::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetFramebufferAttachmentParameter::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetFramebufferAttachmentParameter::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetFramebufferAttachmentParameter::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetFramebufferAttachmentParameter::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetFramebufferAttachmentParameter::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetFramebufferAttachmentParameter::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.id)
-  return _internal_id();
+inline uint64_t Msg_GetFramebufferAttachmentParameter::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetFramebufferAttachmentParameter::_internal_set_id(uint64_t value) {
+inline void Msg_GetFramebufferAttachmentParameter::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetFramebufferAttachmentParameter::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.id)
+inline void Msg_GetFramebufferAttachmentParameter::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_id)
 }
 
-// required uint32 attachment = 2;
-inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_attachment() const {
+// required uint32 a_attachment = 2;
+inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_attachment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetFramebufferAttachmentParameter::has_attachment() const {
-  return _internal_has_attachment();
+inline bool Msg_GetFramebufferAttachmentParameter::has_a_attachment() const {
+  return _internal_has_a_attachment();
 }
-inline void Msg_GetFramebufferAttachmentParameter::clear_attachment() {
-  _impl_.attachment_ = 0u;
+inline void Msg_GetFramebufferAttachmentParameter::clear_a_attachment() {
+  _impl_.a_attachment_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetFramebufferAttachmentParameter::_internal_attachment() const {
-  return _impl_.attachment_;
+inline uint32_t Msg_GetFramebufferAttachmentParameter::_internal_a_attachment() const {
+  return _impl_.a_attachment_;
 }
-inline uint32_t Msg_GetFramebufferAttachmentParameter::attachment() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.attachment)
-  return _internal_attachment();
+inline uint32_t Msg_GetFramebufferAttachmentParameter::a_attachment() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_attachment)
+  return _internal_a_attachment();
 }
-inline void Msg_GetFramebufferAttachmentParameter::_internal_set_attachment(uint32_t value) {
+inline void Msg_GetFramebufferAttachmentParameter::_internal_set_a_attachment(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.attachment_ = value;
+  _impl_.a_attachment_ = value;
 }
-inline void Msg_GetFramebufferAttachmentParameter::set_attachment(uint32_t value) {
-  _internal_set_attachment(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.attachment)
+inline void Msg_GetFramebufferAttachmentParameter::set_a_attachment(uint32_t value) {
+  _internal_set_a_attachment(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_attachment)
 }
 
-// required uint32 pname = 3;
-inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_pname() const {
+// required uint32 a_pname = 3;
+inline bool Msg_GetFramebufferAttachmentParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetFramebufferAttachmentParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetFramebufferAttachmentParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetFramebufferAttachmentParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetFramebufferAttachmentParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_GetFramebufferAttachmentParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetFramebufferAttachmentParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetFramebufferAttachmentParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetFramebufferAttachmentParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetFramebufferAttachmentParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetFramebufferAttachmentParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetFramebufferAttachmentParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.pname)
+inline void Msg_GetFramebufferAttachmentParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFramebufferAttachmentParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetFramebufferAttachmentParameter
 
-// optional double ret = 1;
-inline bool Reply_GetFramebufferAttachmentParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetFramebufferAttachmentParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetFramebufferAttachmentParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetFramebufferAttachmentParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetFramebufferAttachmentParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetFramebufferAttachmentParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetFramebufferAttachmentParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetFramebufferAttachmentParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetFramebufferAttachmentParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFramebufferAttachmentParameter.ret)
-  return _internal_ret();
+inline double Reply_GetFramebufferAttachmentParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFramebufferAttachmentParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetFramebufferAttachmentParameter::_internal_set_ret(double value) {
+inline void Reply_GetFramebufferAttachmentParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetFramebufferAttachmentParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFramebufferAttachmentParameter.ret)
+inline void Reply_GetFramebufferAttachmentParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFramebufferAttachmentParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetFrontBuffer
 
-// required uint64 fb = 1;
-inline bool Msg_GetFrontBuffer::_internal_has_fb() const {
+// required uint64 a_fb = 1;
+inline bool Msg_GetFrontBuffer::_internal_has_a_fb() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetFrontBuffer::has_fb() const {
-  return _internal_has_fb();
+inline bool Msg_GetFrontBuffer::has_a_fb() const {
+  return _internal_has_a_fb();
 }
-inline void Msg_GetFrontBuffer::clear_fb() {
-  _impl_.fb_ = uint64_t{0u};
+inline void Msg_GetFrontBuffer::clear_a_fb() {
+  _impl_.a_fb_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetFrontBuffer::_internal_fb() const {
-  return _impl_.fb_;
+inline uint64_t Msg_GetFrontBuffer::_internal_a_fb() const {
+  return _impl_.a_fb_;
 }
-inline uint64_t Msg_GetFrontBuffer::fb() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.fb)
-  return _internal_fb();
+inline uint64_t Msg_GetFrontBuffer::a_fb() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.a_fb)
+  return _internal_a_fb();
 }
-inline void Msg_GetFrontBuffer::_internal_set_fb(uint64_t value) {
+inline void Msg_GetFrontBuffer::_internal_set_a_fb(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.fb_ = value;
+  _impl_.a_fb_ = value;
 }
-inline void Msg_GetFrontBuffer::set_fb(uint64_t value) {
-  _internal_set_fb(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.fb)
+inline void Msg_GetFrontBuffer::set_a_fb(uint64_t value) {
+  _internal_set_a_fb(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.a_fb)
 }
 
-// required bool vr = 2;
-inline bool Msg_GetFrontBuffer::_internal_has_vr() const {
+// required bool a_vr = 2;
+inline bool Msg_GetFrontBuffer::_internal_has_a_vr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetFrontBuffer::has_vr() const {
-  return _internal_has_vr();
+inline bool Msg_GetFrontBuffer::has_a_vr() const {
+  return _internal_has_a_vr();
 }
-inline void Msg_GetFrontBuffer::clear_vr() {
-  _impl_.vr_ = false;
+inline void Msg_GetFrontBuffer::clear_a_vr() {
+  _impl_.a_vr_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_GetFrontBuffer::_internal_vr() const {
-  return _impl_.vr_;
+inline bool Msg_GetFrontBuffer::_internal_a_vr() const {
+  return _impl_.a_vr_;
 }
-inline bool Msg_GetFrontBuffer::vr() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.vr)
-  return _internal_vr();
+inline bool Msg_GetFrontBuffer::a_vr() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.a_vr)
+  return _internal_a_vr();
 }
-inline void Msg_GetFrontBuffer::_internal_set_vr(bool value) {
+inline void Msg_GetFrontBuffer::_internal_set_a_vr(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.vr_ = value;
+  _impl_.a_vr_ = value;
 }
-inline void Msg_GetFrontBuffer::set_vr(bool value) {
-  _internal_set_vr(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.vr)
+inline void Msg_GetFrontBuffer::set_a_vr(bool value) {
+  _internal_set_a_vr(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFrontBuffer.a_vr)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetFrontBuffer
 
-// optional bytes ret = 1;
-inline bool Reply_GetFrontBuffer::_internal_has_ret() const {
+// optional bytes a_ret = 1;
+inline bool Reply_GetFrontBuffer::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetFrontBuffer::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetFrontBuffer::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetFrontBuffer::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetFrontBuffer::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetFrontBuffer::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetFrontBuffer::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetFrontBuffer::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetFrontBuffer::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.a_ret)
 }
-inline std::string* Reply_GetFrontBuffer::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.ret)
+inline std::string* Reply_GetFrontBuffer::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetFrontBuffer::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetFrontBuffer::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetFrontBuffer::_internal_set_ret(const std::string& value) {
+inline void Reply_GetFrontBuffer::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetFrontBuffer::_internal_mutable_ret() {
+inline std::string* Reply_GetFrontBuffer::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetFrontBuffer::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetFrontBuffer::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetFrontBuffer::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetFrontBuffer::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetFrontBuffer.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetIndexedParameter
 
-// required uint32 target = 1;
-inline bool Msg_GetIndexedParameter::_internal_has_target() const {
+// required uint32 a_target = 1;
+inline bool Msg_GetIndexedParameter::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetIndexedParameter::has_target() const {
-  return _internal_has_target();
+inline bool Msg_GetIndexedParameter::has_a_target() const {
+  return _internal_has_a_target();
 }
-inline void Msg_GetIndexedParameter::clear_target() {
-  _impl_.target_ = 0u;
+inline void Msg_GetIndexedParameter::clear_a_target() {
+  _impl_.a_target_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_GetIndexedParameter::_internal_target() const {
-  return _impl_.target_;
+inline uint32_t Msg_GetIndexedParameter::_internal_a_target() const {
+  return _impl_.a_target_;
 }
-inline uint32_t Msg_GetIndexedParameter::target() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.target)
-  return _internal_target();
+inline uint32_t Msg_GetIndexedParameter::a_target() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.a_target)
+  return _internal_a_target();
 }
-inline void Msg_GetIndexedParameter::_internal_set_target(uint32_t value) {
+inline void Msg_GetIndexedParameter::_internal_set_a_target(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.target_ = value;
+  _impl_.a_target_ = value;
 }
-inline void Msg_GetIndexedParameter::set_target(uint32_t value) {
-  _internal_set_target(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.target)
+inline void Msg_GetIndexedParameter::set_a_target(uint32_t value) {
+  _internal_set_a_target(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.a_target)
 }
 
-// required uint32 index = 2;
-inline bool Msg_GetIndexedParameter::_internal_has_index() const {
+// required uint32 a_index = 2;
+inline bool Msg_GetIndexedParameter::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetIndexedParameter::has_index() const {
-  return _internal_has_index();
+inline bool Msg_GetIndexedParameter::has_a_index() const {
+  return _internal_has_a_index();
 }
-inline void Msg_GetIndexedParameter::clear_index() {
-  _impl_.index_ = 0u;
+inline void Msg_GetIndexedParameter::clear_a_index() {
+  _impl_.a_index_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetIndexedParameter::_internal_index() const {
-  return _impl_.index_;
+inline uint32_t Msg_GetIndexedParameter::_internal_a_index() const {
+  return _impl_.a_index_;
 }
-inline uint32_t Msg_GetIndexedParameter::index() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.index)
-  return _internal_index();
+inline uint32_t Msg_GetIndexedParameter::a_index() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.a_index)
+  return _internal_a_index();
 }
-inline void Msg_GetIndexedParameter::_internal_set_index(uint32_t value) {
+inline void Msg_GetIndexedParameter::_internal_set_a_index(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.index_ = value;
+  _impl_.a_index_ = value;
 }
-inline void Msg_GetIndexedParameter::set_index(uint32_t value) {
-  _internal_set_index(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.index)
+inline void Msg_GetIndexedParameter::set_a_index(uint32_t value) {
+  _internal_set_a_index(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetIndexedParameter.a_index)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetIndexedParameter
 
-// optional double ret = 1;
-inline bool Reply_GetIndexedParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetIndexedParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetIndexedParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetIndexedParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetIndexedParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetIndexedParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetIndexedParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetIndexedParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetIndexedParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetIndexedParameter.ret)
-  return _internal_ret();
+inline double Reply_GetIndexedParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetIndexedParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetIndexedParameter::_internal_set_ret(double value) {
+inline void Reply_GetIndexedParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetIndexedParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetIndexedParameter.ret)
+inline void Reply_GetIndexedParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetIndexedParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetInternalformatParameter
 
-// required uint32 target = 1;
-inline bool Msg_GetInternalformatParameter::_internal_has_target() const {
+// required uint32 a_target = 1;
+inline bool Msg_GetInternalformatParameter::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetInternalformatParameter::has_target() const {
-  return _internal_has_target();
+inline bool Msg_GetInternalformatParameter::has_a_target() const {
+  return _internal_has_a_target();
 }
-inline void Msg_GetInternalformatParameter::clear_target() {
-  _impl_.target_ = 0u;
+inline void Msg_GetInternalformatParameter::clear_a_target() {
+  _impl_.a_target_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_GetInternalformatParameter::_internal_target() const {
-  return _impl_.target_;
+inline uint32_t Msg_GetInternalformatParameter::_internal_a_target() const {
+  return _impl_.a_target_;
 }
-inline uint32_t Msg_GetInternalformatParameter::target() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.target)
-  return _internal_target();
+inline uint32_t Msg_GetInternalformatParameter::a_target() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_target)
+  return _internal_a_target();
 }
-inline void Msg_GetInternalformatParameter::_internal_set_target(uint32_t value) {
+inline void Msg_GetInternalformatParameter::_internal_set_a_target(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.target_ = value;
+  _impl_.a_target_ = value;
 }
-inline void Msg_GetInternalformatParameter::set_target(uint32_t value) {
-  _internal_set_target(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.target)
+inline void Msg_GetInternalformatParameter::set_a_target(uint32_t value) {
+  _internal_set_a_target(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_target)
 }
 
-// required uint32 internalFormat = 2;
-inline bool Msg_GetInternalformatParameter::_internal_has_internalformat() const {
+// required uint32 a_internalFormat = 2;
+inline bool Msg_GetInternalformatParameter::_internal_has_a_internalformat() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetInternalformatParameter::has_internalformat() const {
-  return _internal_has_internalformat();
+inline bool Msg_GetInternalformatParameter::has_a_internalformat() const {
+  return _internal_has_a_internalformat();
 }
-inline void Msg_GetInternalformatParameter::clear_internalformat() {
-  _impl_.internalformat_ = 0u;
+inline void Msg_GetInternalformatParameter::clear_a_internalformat() {
+  _impl_.a_internalformat_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetInternalformatParameter::_internal_internalformat() const {
-  return _impl_.internalformat_;
+inline uint32_t Msg_GetInternalformatParameter::_internal_a_internalformat() const {
+  return _impl_.a_internalformat_;
 }
-inline uint32_t Msg_GetInternalformatParameter::internalformat() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.internalFormat)
-  return _internal_internalformat();
+inline uint32_t Msg_GetInternalformatParameter::a_internalformat() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_internalFormat)
+  return _internal_a_internalformat();
 }
-inline void Msg_GetInternalformatParameter::_internal_set_internalformat(uint32_t value) {
+inline void Msg_GetInternalformatParameter::_internal_set_a_internalformat(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.internalformat_ = value;
+  _impl_.a_internalformat_ = value;
 }
-inline void Msg_GetInternalformatParameter::set_internalformat(uint32_t value) {
-  _internal_set_internalformat(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.internalFormat)
+inline void Msg_GetInternalformatParameter::set_a_internalformat(uint32_t value) {
+  _internal_set_a_internalformat(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_internalFormat)
 }
 
-// required uint32 pname = 3;
-inline bool Msg_GetInternalformatParameter::_internal_has_pname() const {
+// required uint32 a_pname = 3;
+inline bool Msg_GetInternalformatParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetInternalformatParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetInternalformatParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetInternalformatParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetInternalformatParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_GetInternalformatParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetInternalformatParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetInternalformatParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetInternalformatParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetInternalformatParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetInternalformatParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetInternalformatParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.pname)
+inline void Msg_GetInternalformatParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetInternalformatParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetInternalformatParameter
 
-// optional bytes ret = 1;
-inline bool Reply_GetInternalformatParameter::_internal_has_ret() const {
+// optional bytes a_ret = 1;
+inline bool Reply_GetInternalformatParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetInternalformatParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetInternalformatParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetInternalformatParameter::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetInternalformatParameter::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetInternalformatParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetInternalformatParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetInternalformatParameter::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetInternalformatParameter::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.a_ret)
 }
-inline std::string* Reply_GetInternalformatParameter::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.ret)
+inline std::string* Reply_GetInternalformatParameter::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetInternalformatParameter::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetInternalformatParameter::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetInternalformatParameter::_internal_set_ret(const std::string& value) {
+inline void Reply_GetInternalformatParameter::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetInternalformatParameter::_internal_mutable_ret() {
+inline std::string* Reply_GetInternalformatParameter::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetInternalformatParameter::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetInternalformatParameter::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetInternalformatParameter::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetInternalformatParameter::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetInternalformatParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetLinkResult
 
-// required uint64 id = 1;
-inline bool Msg_GetLinkResult::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetLinkResult::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetLinkResult::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetLinkResult::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetLinkResult::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetLinkResult::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetLinkResult::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetLinkResult::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetLinkResult::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetLinkResult.id)
-  return _internal_id();
+inline uint64_t Msg_GetLinkResult::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetLinkResult.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetLinkResult::_internal_set_id(uint64_t value) {
+inline void Msg_GetLinkResult::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetLinkResult::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetLinkResult.id)
+inline void Msg_GetLinkResult::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetLinkResult.a_id)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetLinkResult
 
-// required bytes ret = 1;
-inline bool Reply_GetLinkResult::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_GetLinkResult::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetLinkResult::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetLinkResult::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetLinkResult::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetLinkResult::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetLinkResult::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetLinkResult::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetLinkResult::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetLinkResult::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
 }
-inline std::string* Reply_GetLinkResult::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.ret)
+inline std::string* Reply_GetLinkResult::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetLinkResult::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetLinkResult::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetLinkResult::_internal_set_ret(const std::string& value) {
+inline void Reply_GetLinkResult::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetLinkResult::_internal_mutable_ret() {
+inline std::string* Reply_GetLinkResult::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetLinkResult::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetLinkResult::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetLinkResult::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetLinkResult::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetLinkResult.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetNumber
 
-// required uint32 pname = 1;
-inline bool Msg_GetNumber::_internal_has_pname() const {
+// required uint32 a_pname = 1;
+inline bool Msg_GetNumber::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetNumber::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetNumber::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetNumber::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetNumber::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_GetNumber::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetNumber::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetNumber::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetNumber.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetNumber::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetNumber.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetNumber::_internal_set_pname(uint32_t value) {
+inline void Msg_GetNumber::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetNumber::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetNumber.pname)
+inline void Msg_GetNumber::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetNumber.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetNumber
 
-// optional double ret = 1;
-inline bool Reply_GetNumber::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetNumber::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetNumber::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetNumber::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetNumber::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetNumber::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetNumber::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetNumber::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetNumber::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetNumber.ret)
-  return _internal_ret();
+inline double Reply_GetNumber::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetNumber.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetNumber::_internal_set_ret(double value) {
+inline void Reply_GetNumber::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetNumber::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetNumber.ret)
+inline void Reply_GetNumber::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetNumber.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetQueryParameter
 
-// required uint64 id = 1;
-inline bool Msg_GetQueryParameter::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetQueryParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetQueryParameter::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetQueryParameter::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetQueryParameter::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetQueryParameter::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetQueryParameter::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetQueryParameter::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetQueryParameter::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.id)
-  return _internal_id();
+inline uint64_t Msg_GetQueryParameter::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetQueryParameter::_internal_set_id(uint64_t value) {
+inline void Msg_GetQueryParameter::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetQueryParameter::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.id)
+inline void Msg_GetQueryParameter::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.a_id)
 }
 
-// required uint32 pname = 2;
-inline bool Msg_GetQueryParameter::_internal_has_pname() const {
+// required uint32 a_pname = 2;
+inline bool Msg_GetQueryParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetQueryParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetQueryParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetQueryParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetQueryParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetQueryParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetQueryParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetQueryParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetQueryParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetQueryParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetQueryParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetQueryParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.pname)
+inline void Msg_GetQueryParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetQueryParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetQueryParameter
 
-// optional double ret = 1;
-inline bool Reply_GetQueryParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetQueryParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetQueryParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetQueryParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetQueryParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetQueryParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetQueryParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetQueryParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetQueryParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetQueryParameter.ret)
-  return _internal_ret();
+inline double Reply_GetQueryParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetQueryParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetQueryParameter::_internal_set_ret(double value) {
+inline void Reply_GetQueryParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetQueryParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetQueryParameter.ret)
+inline void Reply_GetQueryParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetQueryParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetRenderbufferParameter
 
-// required uint64 id = 1;
-inline bool Msg_GetRenderbufferParameter::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetRenderbufferParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetRenderbufferParameter::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetRenderbufferParameter::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetRenderbufferParameter::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetRenderbufferParameter::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetRenderbufferParameter::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetRenderbufferParameter::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetRenderbufferParameter::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.id)
-  return _internal_id();
+inline uint64_t Msg_GetRenderbufferParameter::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetRenderbufferParameter::_internal_set_id(uint64_t value) {
+inline void Msg_GetRenderbufferParameter::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetRenderbufferParameter::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.id)
+inline void Msg_GetRenderbufferParameter::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.a_id)
 }
 
-// required uint32 pname = 2;
-inline bool Msg_GetRenderbufferParameter::_internal_has_pname() const {
+// required uint32 a_pname = 2;
+inline bool Msg_GetRenderbufferParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetRenderbufferParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetRenderbufferParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetRenderbufferParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetRenderbufferParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetRenderbufferParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetRenderbufferParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetRenderbufferParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetRenderbufferParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetRenderbufferParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetRenderbufferParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetRenderbufferParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.pname)
+inline void Msg_GetRenderbufferParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetRenderbufferParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetRenderbufferParameter
 
-// optional double ret = 1;
-inline bool Reply_GetRenderbufferParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetRenderbufferParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetRenderbufferParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetRenderbufferParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetRenderbufferParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetRenderbufferParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetRenderbufferParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetRenderbufferParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetRenderbufferParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetRenderbufferParameter.ret)
-  return _internal_ret();
+inline double Reply_GetRenderbufferParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetRenderbufferParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetRenderbufferParameter::_internal_set_ret(double value) {
+inline void Reply_GetRenderbufferParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetRenderbufferParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetRenderbufferParameter.ret)
+inline void Reply_GetRenderbufferParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetRenderbufferParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetSamplerParameter
 
-// required uint64 id = 1;
-inline bool Msg_GetSamplerParameter::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetSamplerParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetSamplerParameter::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetSamplerParameter::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetSamplerParameter::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetSamplerParameter::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetSamplerParameter::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetSamplerParameter::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetSamplerParameter::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.id)
-  return _internal_id();
+inline uint64_t Msg_GetSamplerParameter::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetSamplerParameter::_internal_set_id(uint64_t value) {
+inline void Msg_GetSamplerParameter::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetSamplerParameter::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.id)
+inline void Msg_GetSamplerParameter::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.a_id)
 }
 
-// required uint32 pname = 2;
-inline bool Msg_GetSamplerParameter::_internal_has_pname() const {
+// required uint32 a_pname = 2;
+inline bool Msg_GetSamplerParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetSamplerParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetSamplerParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetSamplerParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetSamplerParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetSamplerParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetSamplerParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetSamplerParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetSamplerParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetSamplerParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetSamplerParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetSamplerParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.pname)
+inline void Msg_GetSamplerParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetSamplerParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetSamplerParameter
 
-// optional double ret = 1;
-inline bool Reply_GetSamplerParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetSamplerParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetSamplerParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetSamplerParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetSamplerParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetSamplerParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetSamplerParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetSamplerParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetSamplerParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetSamplerParameter.ret)
-  return _internal_ret();
+inline double Reply_GetSamplerParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetSamplerParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetSamplerParameter::_internal_set_ret(double value) {
+inline void Reply_GetSamplerParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetSamplerParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetSamplerParameter.ret)
+inline void Reply_GetSamplerParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetSamplerParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetString
 
-// required uint32 pname = 1;
-inline bool Msg_GetString::_internal_has_pname() const {
+// required uint32 a_pname = 1;
+inline bool Msg_GetString::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetString::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetString::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetString::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetString::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_GetString::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetString::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetString::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetString.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetString::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetString.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetString::_internal_set_pname(uint32_t value) {
+inline void Msg_GetString::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetString::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetString.pname)
+inline void Msg_GetString::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetString.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetString
 
-// optional string ret = 1;
-inline bool Reply_GetString::_internal_has_ret() const {
+// optional string a_ret = 1;
+inline bool Reply_GetString::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetString::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetString::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetString::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetString::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetString::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetString.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetString::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetString.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetString::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetString::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetString.ret)
+ _impl_.a_ret_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetString.a_ret)
 }
-inline std::string* Reply_GetString::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetString.ret)
+inline std::string* Reply_GetString::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetString.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetString::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetString::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetString::_internal_set_ret(const std::string& value) {
+inline void Reply_GetString::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetString::_internal_mutable_ret() {
+inline std::string* Reply_GetString::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetString::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetString.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetString::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetString.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetString::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetString::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetString.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetString.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetTexParameter
 
-// required uint64 id = 1;
-inline bool Msg_GetTexParameter::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetTexParameter::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetTexParameter::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetTexParameter::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetTexParameter::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetTexParameter::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetTexParameter::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetTexParameter::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetTexParameter::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.id)
-  return _internal_id();
+inline uint64_t Msg_GetTexParameter::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetTexParameter::_internal_set_id(uint64_t value) {
+inline void Msg_GetTexParameter::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetTexParameter::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.id)
+inline void Msg_GetTexParameter::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.a_id)
 }
 
-// required uint32 pname = 2;
-inline bool Msg_GetTexParameter::_internal_has_pname() const {
+// required uint32 a_pname = 2;
+inline bool Msg_GetTexParameter::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetTexParameter::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetTexParameter::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetTexParameter::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetTexParameter::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetTexParameter::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetTexParameter::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetTexParameter::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetTexParameter::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetTexParameter::_internal_set_pname(uint32_t value) {
+inline void Msg_GetTexParameter::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetTexParameter::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.pname)
+inline void Msg_GetTexParameter::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetTexParameter.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetTexParameter
 
-// optional double ret = 1;
-inline bool Reply_GetTexParameter::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetTexParameter::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetTexParameter::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetTexParameter::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetTexParameter::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetTexParameter::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetTexParameter::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetTexParameter::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetTexParameter::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetTexParameter.ret)
-  return _internal_ret();
+inline double Reply_GetTexParameter::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetTexParameter.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetTexParameter::_internal_set_ret(double value) {
+inline void Reply_GetTexParameter::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetTexParameter::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetTexParameter.ret)
+inline void Reply_GetTexParameter::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetTexParameter.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetUniform
 
-// required uint64 id = 1;
-inline bool Msg_GetUniform::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_GetUniform::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetUniform::has_id() const {
-  return _internal_has_id();
+inline bool Msg_GetUniform::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_GetUniform::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_GetUniform::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_GetUniform::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_GetUniform::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_GetUniform::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.id)
-  return _internal_id();
+inline uint64_t Msg_GetUniform::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.a_id)
+  return _internal_a_id();
 }
-inline void Msg_GetUniform::_internal_set_id(uint64_t value) {
+inline void Msg_GetUniform::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_GetUniform::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.id)
+inline void Msg_GetUniform::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.a_id)
 }
 
-// required uint32 loc = 2;
-inline bool Msg_GetUniform::_internal_has_loc() const {
+// required uint32 a_loc = 2;
+inline bool Msg_GetUniform::_internal_has_a_loc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetUniform::has_loc() const {
-  return _internal_has_loc();
+inline bool Msg_GetUniform::has_a_loc() const {
+  return _internal_has_a_loc();
 }
-inline void Msg_GetUniform::clear_loc() {
-  _impl_.loc_ = 0u;
+inline void Msg_GetUniform::clear_a_loc() {
+  _impl_.a_loc_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetUniform::_internal_loc() const {
-  return _impl_.loc_;
+inline uint32_t Msg_GetUniform::_internal_a_loc() const {
+  return _impl_.a_loc_;
 }
-inline uint32_t Msg_GetUniform::loc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.loc)
-  return _internal_loc();
+inline uint32_t Msg_GetUniform::a_loc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.a_loc)
+  return _internal_a_loc();
 }
-inline void Msg_GetUniform::_internal_set_loc(uint32_t value) {
+inline void Msg_GetUniform::_internal_set_a_loc(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.loc_ = value;
+  _impl_.a_loc_ = value;
 }
-inline void Msg_GetUniform::set_loc(uint32_t value) {
-  _internal_set_loc(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.loc)
+inline void Msg_GetUniform::set_a_loc(uint32_t value) {
+  _internal_set_a_loc(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetUniform.a_loc)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetUniform
 
-// required bytes ret = 1;
-inline bool Reply_GetUniform::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_GetUniform::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetUniform::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetUniform::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetUniform::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetUniform::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetUniform::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetUniform::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetUniform::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetUniform::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
 }
-inline std::string* Reply_GetUniform::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.ret)
+inline std::string* Reply_GetUniform::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetUniform::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetUniform::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetUniform::_internal_set_ret(const std::string& value) {
+inline void Reply_GetUniform::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetUniform::_internal_mutable_ret() {
+inline std::string* Reply_GetUniform::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetUniform::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetUniform::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetUniform::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetUniform::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Reply_GetUniform.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetVertexAttrib
 
-// required uint32 index = 1;
-inline bool Msg_GetVertexAttrib::_internal_has_index() const {
+// required uint32 a_index = 1;
+inline bool Msg_GetVertexAttrib::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetVertexAttrib::has_index() const {
-  return _internal_has_index();
+inline bool Msg_GetVertexAttrib::has_a_index() const {
+  return _internal_has_a_index();
 }
-inline void Msg_GetVertexAttrib::clear_index() {
-  _impl_.index_ = 0u;
+inline void Msg_GetVertexAttrib::clear_a_index() {
+  _impl_.a_index_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_GetVertexAttrib::_internal_index() const {
-  return _impl_.index_;
+inline uint32_t Msg_GetVertexAttrib::_internal_a_index() const {
+  return _impl_.a_index_;
 }
-inline uint32_t Msg_GetVertexAttrib::index() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.index)
-  return _internal_index();
+inline uint32_t Msg_GetVertexAttrib::a_index() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.a_index)
+  return _internal_a_index();
 }
-inline void Msg_GetVertexAttrib::_internal_set_index(uint32_t value) {
+inline void Msg_GetVertexAttrib::_internal_set_a_index(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.index_ = value;
+  _impl_.a_index_ = value;
 }
-inline void Msg_GetVertexAttrib::set_index(uint32_t value) {
-  _internal_set_index(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.index)
+inline void Msg_GetVertexAttrib::set_a_index(uint32_t value) {
+  _internal_set_a_index(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.a_index)
 }
 
-// required uint32 pname = 2;
-inline bool Msg_GetVertexAttrib::_internal_has_pname() const {
+// required uint32 a_pname = 2;
+inline bool Msg_GetVertexAttrib::_internal_has_a_pname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetVertexAttrib::has_pname() const {
-  return _internal_has_pname();
+inline bool Msg_GetVertexAttrib::has_a_pname() const {
+  return _internal_has_a_pname();
 }
-inline void Msg_GetVertexAttrib::clear_pname() {
-  _impl_.pname_ = 0u;
+inline void Msg_GetVertexAttrib::clear_a_pname() {
+  _impl_.a_pname_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GetVertexAttrib::_internal_pname() const {
-  return _impl_.pname_;
+inline uint32_t Msg_GetVertexAttrib::_internal_a_pname() const {
+  return _impl_.a_pname_;
 }
-inline uint32_t Msg_GetVertexAttrib::pname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.pname)
-  return _internal_pname();
+inline uint32_t Msg_GetVertexAttrib::a_pname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.a_pname)
+  return _internal_a_pname();
 }
-inline void Msg_GetVertexAttrib::_internal_set_pname(uint32_t value) {
+inline void Msg_GetVertexAttrib::_internal_set_a_pname(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.pname_ = value;
+  _impl_.a_pname_ = value;
 }
-inline void Msg_GetVertexAttrib::set_pname(uint32_t value) {
-  _internal_set_pname(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.pname)
+inline void Msg_GetVertexAttrib::set_a_pname(uint32_t value) {
+  _internal_set_a_pname(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetVertexAttrib.a_pname)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetVertexAttrib
 
-// optional double ret = 1;
-inline bool Reply_GetVertexAttrib::_internal_has_ret() const {
+// optional double a_ret = 1;
+inline bool Reply_GetVertexAttrib::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetVertexAttrib::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetVertexAttrib::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetVertexAttrib::clear_ret() {
-  _impl_.ret_ = 0;
+inline void Reply_GetVertexAttrib::clear_a_ret() {
+  _impl_.a_ret_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double Reply_GetVertexAttrib::_internal_ret() const {
-  return _impl_.ret_;
+inline double Reply_GetVertexAttrib::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline double Reply_GetVertexAttrib::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetVertexAttrib.ret)
-  return _internal_ret();
+inline double Reply_GetVertexAttrib::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_GetVertexAttrib.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_GetVertexAttrib::_internal_set_ret(double value) {
+inline void Reply_GetVertexAttrib::_internal_set_a_ret(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_GetVertexAttrib::set_ret(double value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetVertexAttrib.ret)
+inline void Reply_GetVertexAttrib::set_a_ret(double value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetVertexAttrib.a_ret)
 }
 
 // -------------------------------------------------------------------
@@ -13787,240 +13787,240 @@ inline void Reply_GetVertexAttrib::set_ret(double value) {
 
 // Msg_ValidateProgram
 
-// required uint64 id = 1;
-inline bool Msg_ValidateProgram::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_ValidateProgram::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ValidateProgram::has_id() const {
-  return _internal_has_id();
+inline bool Msg_ValidateProgram::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_ValidateProgram::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_ValidateProgram::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ValidateProgram::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_ValidateProgram::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_ValidateProgram::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ValidateProgram.id)
-  return _internal_id();
+inline uint64_t Msg_ValidateProgram::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_ValidateProgram.a_id)
+  return _internal_a_id();
 }
-inline void Msg_ValidateProgram::_internal_set_id(uint64_t value) {
+inline void Msg_ValidateProgram::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_ValidateProgram::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ValidateProgram.id)
+inline void Msg_ValidateProgram::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_ValidateProgram.a_id)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_ValidateProgram
 
-// required bool ret = 1;
-inline bool Reply_ValidateProgram::_internal_has_ret() const {
+// required bool a_ret = 1;
+inline bool Reply_ValidateProgram::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_ValidateProgram::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_ValidateProgram::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_ValidateProgram::clear_ret() {
-  _impl_.ret_ = false;
+inline void Reply_ValidateProgram::clear_a_ret() {
+  _impl_.a_ret_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_ValidateProgram::_internal_ret() const {
-  return _impl_.ret_;
+inline bool Reply_ValidateProgram::_internal_a_ret() const {
+  return _impl_.a_ret_;
 }
-inline bool Reply_ValidateProgram::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ValidateProgram.ret)
-  return _internal_ret();
+inline bool Reply_ValidateProgram::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Reply_ValidateProgram.a_ret)
+  return _internal_a_ret();
 }
-inline void Reply_ValidateProgram::_internal_set_ret(bool value) {
+inline void Reply_ValidateProgram::_internal_set_a_ret(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_ = value;
+  _impl_.a_ret_ = value;
 }
-inline void Reply_ValidateProgram::set_ret(bool value) {
-  _internal_set_ret(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ValidateProgram.ret)
+inline void Reply_ValidateProgram::set_a_ret(bool value) {
+  _internal_set_a_ret(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_ValidateProgram.a_ret)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_JsWarning
 
-// required string text = 1;
-inline bool Msg_JsWarning::_internal_has_text() const {
+// required string a_text = 1;
+inline bool Msg_JsWarning::_internal_has_a_text() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_JsWarning::has_text() const {
-  return _internal_has_text();
+inline bool Msg_JsWarning::has_a_text() const {
+  return _internal_has_a_text();
 }
-inline void Msg_JsWarning::clear_text() {
-  _impl_.text_.ClearToEmpty();
+inline void Msg_JsWarning::clear_a_text() {
+  _impl_.a_text_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_JsWarning::text() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.text)
-  return _internal_text();
+inline const std::string& Msg_JsWarning::a_text() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
+  return _internal_a_text();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_JsWarning::set_text(ArgT0&& arg0, ArgT... args) {
+void Msg_JsWarning::set_a_text(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.text_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.text)
+ _impl_.a_text_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
 }
-inline std::string* Msg_JsWarning::mutable_text() {
-  std::string* _s = _internal_mutable_text();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.text)
+inline std::string* Msg_JsWarning::mutable_a_text() {
+  std::string* _s = _internal_mutable_a_text();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
   return _s;
 }
-inline const std::string& Msg_JsWarning::_internal_text() const {
-  return _impl_.text_.Get();
+inline const std::string& Msg_JsWarning::_internal_a_text() const {
+  return _impl_.a_text_.Get();
 }
-inline void Msg_JsWarning::_internal_set_text(const std::string& value) {
+inline void Msg_JsWarning::_internal_set_a_text(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.text_.Set(value, GetArenaForAllocation());
+  _impl_.a_text_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_JsWarning::_internal_mutable_text() {
+inline std::string* Msg_JsWarning::_internal_mutable_a_text() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.text_.Mutable(GetArenaForAllocation());
+  return _impl_.a_text_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_JsWarning::release_text() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.text)
-  if (!_internal_has_text()) {
+inline std::string* Msg_JsWarning::release_a_text() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
+  if (!_internal_has_a_text()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.text_.Release();
+  auto* p = _impl_.a_text_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.text_.IsDefault()) {
-    _impl_.text_.Set("", GetArenaForAllocation());
+  if (_impl_.a_text_.IsDefault()) {
+    _impl_.a_text_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_JsWarning::set_allocated_text(std::string* text) {
-  if (text != nullptr) {
+inline void Msg_JsWarning::set_allocated_a_text(std::string* a_text) {
+  if (a_text != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.text_.SetAllocated(text, GetArenaForAllocation());
+  _impl_.a_text_.SetAllocated(a_text, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.text_.IsDefault()) {
-    _impl_.text_.Set("", GetArenaForAllocation());
+  if (_impl_.a_text_.IsDefault()) {
+    _impl_.a_text_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.text)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnContextLoss
 
-// required bytes aReason = 1;
-inline bool Msg_OnContextLoss::_internal_has_areason() const {
+// required bytes a_aReason = 1;
+inline bool Msg_OnContextLoss::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnContextLoss::has_areason() const {
-  return _internal_has_areason();
+inline bool Msg_OnContextLoss::has_a_areason() const {
+  return _internal_has_a_areason();
 }
-inline void Msg_OnContextLoss::clear_areason() {
-  _impl_.areason_.ClearToEmpty();
+inline void Msg_OnContextLoss::clear_a_areason() {
+  _impl_.a_areason_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnContextLoss::areason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.aReason)
-  return _internal_areason();
+inline const std::string& Msg_OnContextLoss::a_areason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
+  return _internal_a_areason();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnContextLoss::set_areason(ArgT0&& arg0, ArgT... args) {
+void Msg_OnContextLoss::set_a_areason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.aReason)
+ _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
 }
-inline std::string* Msg_OnContextLoss::mutable_areason() {
-  std::string* _s = _internal_mutable_areason();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.aReason)
+inline std::string* Msg_OnContextLoss::mutable_a_areason() {
+  std::string* _s = _internal_mutable_a_areason();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
   return _s;
 }
-inline const std::string& Msg_OnContextLoss::_internal_areason() const {
-  return _impl_.areason_.Get();
+inline const std::string& Msg_OnContextLoss::_internal_a_areason() const {
+  return _impl_.a_areason_.Get();
 }
-inline void Msg_OnContextLoss::_internal_set_areason(const std::string& value) {
+inline void Msg_OnContextLoss::_internal_set_a_areason(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.areason_.Set(value, GetArenaForAllocation());
+  _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnContextLoss::_internal_mutable_areason() {
+inline std::string* Msg_OnContextLoss::_internal_mutable_a_areason() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.areason_.Mutable(GetArenaForAllocation());
+  return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnContextLoss::release_areason() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.aReason)
-  if (!_internal_has_areason()) {
+inline std::string* Msg_OnContextLoss::release_a_areason() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
+  if (!_internal_has_a_areason()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.areason_.Release();
+  auto* p = _impl_.a_areason_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.areason_.IsDefault()) {
-    _impl_.areason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnContextLoss::set_allocated_areason(std::string* areason) {
-  if (areason != nullptr) {
+inline void Msg_OnContextLoss::set_allocated_a_areason(std::string* a_areason) {
+  if (a_areason != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.areason_.SetAllocated(areason, GetArenaForAllocation());
+  _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.areason_.IsDefault()) {
-    _impl_.areason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.aReason)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebGL.Msg_OnContextLoss.a_aReason)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnSyncComplete
 
-// required uint64 id = 1;
-inline bool Msg_OnSyncComplete::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_OnSyncComplete::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnSyncComplete::has_id() const {
-  return _internal_has_id();
+inline bool Msg_OnSyncComplete::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_OnSyncComplete::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_OnSyncComplete::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_OnSyncComplete::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_OnSyncComplete::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_OnSyncComplete::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_OnSyncComplete.id)
-  return _internal_id();
+inline uint64_t Msg_OnSyncComplete::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebGL.Msg_OnSyncComplete.a_id)
+  return _internal_a_id();
 }
-inline void Msg_OnSyncComplete::_internal_set_id(uint64_t value) {
+inline void Msg_OnSyncComplete::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_OnSyncComplete::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_OnSyncComplete.id)
+inline void Msg_OnSyncComplete::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_OnSyncComplete.a_id)
 }
 
 #ifdef __GNUC__

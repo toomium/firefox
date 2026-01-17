@@ -221,24 +221,24 @@ class ContinueParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
+    kAKeyFieldNumber = 1,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ContinueParams)
@@ -251,7 +251,7 @@ class ContinueParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -368,43 +368,43 @@ class ContinuePrimaryKeyParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kPrimaryKeyFieldNumber = 2,
+    kAKeyFieldNumber = 1,
+    kAPrimaryKeyFieldNumber = 2,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes primaryKey = 2;
-  bool has_primarykey() const;
+  // required bytes a_primaryKey = 2;
+  bool has_a_primarykey() const;
   private:
-  bool _internal_has_primarykey() const;
+  bool _internal_has_a_primarykey() const;
   public:
-  void clear_primarykey();
-  const std::string& primarykey() const;
+  void clear_a_primarykey();
+  const std::string& a_primarykey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_primarykey(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_primarykey();
-  PROTOBUF_NODISCARD std::string* release_primarykey();
-  void set_allocated_primarykey(std::string* primarykey);
+  void set_a_primarykey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_primarykey();
+  PROTOBUF_NODISCARD std::string* release_a_primarykey();
+  void set_allocated_a_primarykey(std::string* a_primarykey);
   private:
-  const std::string& _internal_primarykey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_primarykey(const std::string& value);
-  std::string* _internal_mutable_primarykey();
+  const std::string& _internal_a_primarykey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_primarykey(const std::string& value);
+  std::string* _internal_mutable_a_primarykey();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams)
@@ -420,8 +420,8 @@ class ContinuePrimaryKeyParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr primarykey_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_primarykey_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -538,19 +538,19 @@ class AdvanceParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCountFieldNumber = 1,
+    kACountFieldNumber = 1,
   };
-  // required uint32 count = 1;
-  bool has_count() const;
+  // required uint32 a_count = 1;
+  bool has_a_count() const;
   private:
-  bool _internal_has_count() const;
+  bool _internal_has_a_count() const;
   public:
-  void clear_count();
-  uint32_t count() const;
-  void set_count(uint32_t value);
+  void clear_a_count();
+  uint32_t a_count() const;
+  void set_a_count(uint32_t value);
   private:
-  uint32_t _internal_count() const;
-  void _internal_set_count(uint32_t value);
+  uint32_t _internal_a_count() const;
+  void _internal_set_a_count(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.AdvanceParams)
@@ -563,7 +563,7 @@ class AdvanceParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t count_;
+    uint32_t a_count_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -612,9 +612,9 @@ class CursorRequestParams final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVContinueParams = 1,
-    kMVContinuePrimaryKeyParams = 2,
-    kMVAdvanceParams = 3,
+    kAMVContinueParams = 1,
+    kAMVContinuePrimaryKeyParams = 2,
+    kAMVAdvanceParams = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -687,72 +687,72 @@ class CursorRequestParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVContinueParamsFieldNumber = 1,
-    kMVContinuePrimaryKeyParamsFieldNumber = 2,
-    kMVAdvanceParamsFieldNumber = 3,
+    kAMVContinueParamsFieldNumber = 1,
+    kAMVContinuePrimaryKeyParamsFieldNumber = 2,
+    kAMVAdvanceParamsFieldNumber = 3,
   };
-  // .protobuf.mozilla.dom.indexedDB.ContinueParams mVContinueParams = 1;
-  bool has_mvcontinueparams() const;
+  // .protobuf.mozilla.dom.indexedDB.ContinueParams a_mVContinueParams = 1;
+  bool has_a_mvcontinueparams() const;
   private:
-  bool _internal_has_mvcontinueparams() const;
+  bool _internal_has_a_mvcontinueparams() const;
   public:
-  void clear_mvcontinueparams();
-  const ::protobuf::mozilla::dom::indexedDB::ContinueParams& mvcontinueparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::ContinueParams* release_mvcontinueparams();
-  ::protobuf::mozilla::dom::indexedDB::ContinueParams* mutable_mvcontinueparams();
-  void set_allocated_mvcontinueparams(::protobuf::mozilla::dom::indexedDB::ContinueParams* mvcontinueparams);
+  void clear_a_mvcontinueparams();
+  const ::protobuf::mozilla::dom::indexedDB::ContinueParams& a_mvcontinueparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::ContinueParams* release_a_mvcontinueparams();
+  ::protobuf::mozilla::dom::indexedDB::ContinueParams* mutable_a_mvcontinueparams();
+  void set_allocated_a_mvcontinueparams(::protobuf::mozilla::dom::indexedDB::ContinueParams* a_mvcontinueparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::ContinueParams& _internal_mvcontinueparams() const;
-  ::protobuf::mozilla::dom::indexedDB::ContinueParams* _internal_mutable_mvcontinueparams();
+  const ::protobuf::mozilla::dom::indexedDB::ContinueParams& _internal_a_mvcontinueparams() const;
+  ::protobuf::mozilla::dom::indexedDB::ContinueParams* _internal_mutable_a_mvcontinueparams();
   public:
-  void unsafe_arena_set_allocated_mvcontinueparams(
-      ::protobuf::mozilla::dom::indexedDB::ContinueParams* mvcontinueparams);
-  ::protobuf::mozilla::dom::indexedDB::ContinueParams* unsafe_arena_release_mvcontinueparams();
+  void unsafe_arena_set_allocated_a_mvcontinueparams(
+      ::protobuf::mozilla::dom::indexedDB::ContinueParams* a_mvcontinueparams);
+  ::protobuf::mozilla::dom::indexedDB::ContinueParams* unsafe_arena_release_a_mvcontinueparams();
 
-  // .protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams mVContinuePrimaryKeyParams = 2;
-  bool has_mvcontinueprimarykeyparams() const;
+  // .protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams a_mVContinuePrimaryKeyParams = 2;
+  bool has_a_mvcontinueprimarykeyparams() const;
   private:
-  bool _internal_has_mvcontinueprimarykeyparams() const;
+  bool _internal_has_a_mvcontinueprimarykeyparams() const;
   public:
-  void clear_mvcontinueprimarykeyparams();
-  const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& mvcontinueprimarykeyparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* release_mvcontinueprimarykeyparams();
-  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* mutable_mvcontinueprimarykeyparams();
-  void set_allocated_mvcontinueprimarykeyparams(::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* mvcontinueprimarykeyparams);
+  void clear_a_mvcontinueprimarykeyparams();
+  const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& a_mvcontinueprimarykeyparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* release_a_mvcontinueprimarykeyparams();
+  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* mutable_a_mvcontinueprimarykeyparams();
+  void set_allocated_a_mvcontinueprimarykeyparams(::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* a_mvcontinueprimarykeyparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& _internal_mvcontinueprimarykeyparams() const;
-  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* _internal_mutable_mvcontinueprimarykeyparams();
+  const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& _internal_a_mvcontinueprimarykeyparams() const;
+  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* _internal_mutable_a_mvcontinueprimarykeyparams();
   public:
-  void unsafe_arena_set_allocated_mvcontinueprimarykeyparams(
-      ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* mvcontinueprimarykeyparams);
-  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* unsafe_arena_release_mvcontinueprimarykeyparams();
+  void unsafe_arena_set_allocated_a_mvcontinueprimarykeyparams(
+      ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* a_mvcontinueprimarykeyparams);
+  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* unsafe_arena_release_a_mvcontinueprimarykeyparams();
 
-  // .protobuf.mozilla.dom.indexedDB.AdvanceParams mVAdvanceParams = 3;
-  bool has_mvadvanceparams() const;
+  // .protobuf.mozilla.dom.indexedDB.AdvanceParams a_mVAdvanceParams = 3;
+  bool has_a_mvadvanceparams() const;
   private:
-  bool _internal_has_mvadvanceparams() const;
+  bool _internal_has_a_mvadvanceparams() const;
   public:
-  void clear_mvadvanceparams();
-  const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& mvadvanceparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::AdvanceParams* release_mvadvanceparams();
-  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* mutable_mvadvanceparams();
-  void set_allocated_mvadvanceparams(::protobuf::mozilla::dom::indexedDB::AdvanceParams* mvadvanceparams);
+  void clear_a_mvadvanceparams();
+  const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& a_mvadvanceparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::AdvanceParams* release_a_mvadvanceparams();
+  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* mutable_a_mvadvanceparams();
+  void set_allocated_a_mvadvanceparams(::protobuf::mozilla::dom::indexedDB::AdvanceParams* a_mvadvanceparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& _internal_mvadvanceparams() const;
-  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* _internal_mutable_mvadvanceparams();
+  const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& _internal_a_mvadvanceparams() const;
+  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* _internal_mutable_a_mvadvanceparams();
   public:
-  void unsafe_arena_set_allocated_mvadvanceparams(
-      ::protobuf::mozilla::dom::indexedDB::AdvanceParams* mvadvanceparams);
-  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* unsafe_arena_release_mvadvanceparams();
+  void unsafe_arena_set_allocated_a_mvadvanceparams(
+      ::protobuf::mozilla::dom::indexedDB::AdvanceParams* a_mvadvanceparams);
+  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* unsafe_arena_release_a_mvadvanceparams();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorRequestParams)
  private:
   class _Internal;
-  void set_has_mvcontinueparams();
-  void set_has_mvcontinueprimarykeyparams();
-  void set_has_mvadvanceparams();
+  void set_has_a_mvcontinueparams();
+  void set_has_a_mvcontinueprimarykeyparams();
+  void set_has_a_mvadvanceparams();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -764,9 +764,9 @@ class CursorRequestParams final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::indexedDB::ContinueParams* mvcontinueparams_;
-      ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* mvcontinueprimarykeyparams_;
-      ::protobuf::mozilla::dom::indexedDB::AdvanceParams* mvadvanceparams_;
+      ::protobuf::mozilla::dom::indexedDB::ContinueParams* a_mvcontinueparams_;
+      ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* a_mvcontinueprimarykeyparams_;
+      ::protobuf::mozilla::dom::indexedDB::AdvanceParams* a_mvadvanceparams_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -887,44 +887,44 @@ class ObjectStoreCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kCloneInfoFieldNumber = 2,
+    kAKeyFieldNumber = 1,
+    kACloneInfoFieldNumber = 2,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo cloneInfo = 2;
-  bool has_cloneinfo() const;
+  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
+  bool has_a_cloneinfo() const;
   private:
-  bool _internal_has_cloneinfo() const;
+  bool _internal_has_a_cloneinfo() const;
   public:
-  void clear_cloneinfo();
-  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& cloneinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* release_cloneinfo();
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* mutable_cloneinfo();
-  void set_allocated_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo);
+  void clear_a_cloneinfo();
+  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& a_cloneinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* release_a_cloneinfo();
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* mutable_a_cloneinfo();
+  void set_allocated_a_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& _internal_cloneinfo() const;
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _internal_mutable_cloneinfo();
+  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& _internal_a_cloneinfo() const;
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _internal_mutable_a_cloneinfo();
   public:
-  void unsafe_arena_set_allocated_cloneinfo(
-      ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo);
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* unsafe_arena_release_cloneinfo();
+  void unsafe_arena_set_allocated_a_cloneinfo(
+      ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo);
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* unsafe_arena_release_a_cloneinfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse)
  private:
@@ -939,8 +939,8 @@ class ObjectStoreCursorResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1057,24 +1057,24 @@ class ObjectStoreKeyCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
+    kAKeyFieldNumber = 1,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse)
@@ -1087,7 +1087,7 @@ class ObjectStoreKeyCursorResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1204,82 +1204,82 @@ class IndexCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kSortKeyFieldNumber = 2,
-    kObjectKeyFieldNumber = 3,
-    kCloneInfoFieldNumber = 4,
+    kAKeyFieldNumber = 1,
+    kASortKeyFieldNumber = 2,
+    kAObjectKeyFieldNumber = 3,
+    kACloneInfoFieldNumber = 4,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes sortKey = 2;
-  bool has_sortkey() const;
+  // required bytes a_sortKey = 2;
+  bool has_a_sortkey() const;
   private:
-  bool _internal_has_sortkey() const;
+  bool _internal_has_a_sortkey() const;
   public:
-  void clear_sortkey();
-  const std::string& sortkey() const;
+  void clear_a_sortkey();
+  const std::string& a_sortkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sortkey(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sortkey();
-  PROTOBUF_NODISCARD std::string* release_sortkey();
-  void set_allocated_sortkey(std::string* sortkey);
+  void set_a_sortkey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_sortkey();
+  PROTOBUF_NODISCARD std::string* release_a_sortkey();
+  void set_allocated_a_sortkey(std::string* a_sortkey);
   private:
-  const std::string& _internal_sortkey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sortkey(const std::string& value);
-  std::string* _internal_mutable_sortkey();
+  const std::string& _internal_a_sortkey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_sortkey(const std::string& value);
+  std::string* _internal_mutable_a_sortkey();
   public:
 
-  // required bytes objectKey = 3;
-  bool has_objectkey() const;
+  // required bytes a_objectKey = 3;
+  bool has_a_objectkey() const;
   private:
-  bool _internal_has_objectkey() const;
+  bool _internal_has_a_objectkey() const;
   public:
-  void clear_objectkey();
-  const std::string& objectkey() const;
+  void clear_a_objectkey();
+  const std::string& a_objectkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_objectkey(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_objectkey();
-  PROTOBUF_NODISCARD std::string* release_objectkey();
-  void set_allocated_objectkey(std::string* objectkey);
+  void set_a_objectkey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_objectkey();
+  PROTOBUF_NODISCARD std::string* release_a_objectkey();
+  void set_allocated_a_objectkey(std::string* a_objectkey);
   private:
-  const std::string& _internal_objectkey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_objectkey(const std::string& value);
-  std::string* _internal_mutable_objectkey();
+  const std::string& _internal_a_objectkey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_objectkey(const std::string& value);
+  std::string* _internal_mutable_a_objectkey();
   public:
 
-  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo cloneInfo = 4;
-  bool has_cloneinfo() const;
+  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
+  bool has_a_cloneinfo() const;
   private:
-  bool _internal_has_cloneinfo() const;
+  bool _internal_has_a_cloneinfo() const;
   public:
-  void clear_cloneinfo();
-  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& cloneinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* release_cloneinfo();
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* mutable_cloneinfo();
-  void set_allocated_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo);
+  void clear_a_cloneinfo();
+  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& a_cloneinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* release_a_cloneinfo();
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* mutable_a_cloneinfo();
+  void set_allocated_a_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& _internal_cloneinfo() const;
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _internal_mutable_cloneinfo();
+  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& _internal_a_cloneinfo() const;
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _internal_mutable_a_cloneinfo();
   public:
-  void unsafe_arena_set_allocated_cloneinfo(
-      ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo);
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* unsafe_arena_release_cloneinfo();
+  void unsafe_arena_set_allocated_a_cloneinfo(
+      ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo);
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* unsafe_arena_release_a_cloneinfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexCursorResponse)
  private:
@@ -1294,10 +1294,10 @@ class IndexCursorResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sortkey_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr objectkey_;
-    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sortkey_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_objectkey_;
+    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1414,62 +1414,62 @@ class IndexKeyCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kSortKeyFieldNumber = 2,
-    kObjectKeyFieldNumber = 3,
+    kAKeyFieldNumber = 1,
+    kASortKeyFieldNumber = 2,
+    kAObjectKeyFieldNumber = 3,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes sortKey = 2;
-  bool has_sortkey() const;
+  // required bytes a_sortKey = 2;
+  bool has_a_sortkey() const;
   private:
-  bool _internal_has_sortkey() const;
+  bool _internal_has_a_sortkey() const;
   public:
-  void clear_sortkey();
-  const std::string& sortkey() const;
+  void clear_a_sortkey();
+  const std::string& a_sortkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sortkey(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sortkey();
-  PROTOBUF_NODISCARD std::string* release_sortkey();
-  void set_allocated_sortkey(std::string* sortkey);
+  void set_a_sortkey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_sortkey();
+  PROTOBUF_NODISCARD std::string* release_a_sortkey();
+  void set_allocated_a_sortkey(std::string* a_sortkey);
   private:
-  const std::string& _internal_sortkey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sortkey(const std::string& value);
-  std::string* _internal_mutable_sortkey();
+  const std::string& _internal_a_sortkey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_sortkey(const std::string& value);
+  std::string* _internal_mutable_a_sortkey();
   public:
 
-  // required bytes objectKey = 3;
-  bool has_objectkey() const;
+  // required bytes a_objectKey = 3;
+  bool has_a_objectkey() const;
   private:
-  bool _internal_has_objectkey() const;
+  bool _internal_has_a_objectkey() const;
   public:
-  void clear_objectkey();
-  const std::string& objectkey() const;
+  void clear_a_objectkey();
+  const std::string& a_objectkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_objectkey(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_objectkey();
-  PROTOBUF_NODISCARD std::string* release_objectkey();
-  void set_allocated_objectkey(std::string* objectkey);
+  void set_a_objectkey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_objectkey();
+  PROTOBUF_NODISCARD std::string* release_a_objectkey();
+  void set_allocated_a_objectkey(std::string* a_objectkey);
   private:
-  const std::string& _internal_objectkey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_objectkey(const std::string& value);
-  std::string* _internal_mutable_objectkey();
+  const std::string& _internal_a_objectkey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_objectkey(const std::string& value);
+  std::string* _internal_mutable_a_objectkey();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse)
@@ -1485,9 +1485,9 @@ class IndexKeyCursorResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sortkey_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr objectkey_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sortkey_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_objectkey_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1604,25 +1604,25 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfObjectStoreCursorResponseFieldNumber = 1,
+    kAMVArrayOfObjectStoreCursorResponseFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 1;
-  int mvarrayofobjectstorecursorresponse_size() const;
+  // repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 1;
+  int a_mvarrayofobjectstorecursorresponse_size() const;
   private:
-  int _internal_mvarrayofobjectstorecursorresponse_size() const;
+  int _internal_a_mvarrayofobjectstorecursorresponse_size() const;
   public:
-  void clear_mvarrayofobjectstorecursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* mutable_mvarrayofobjectstorecursorresponse(int index);
+  void clear_a_mvarrayofobjectstorecursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* mutable_a_mvarrayofobjectstorecursorresponse(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >*
-      mutable_mvarrayofobjectstorecursorresponse();
+      mutable_a_mvarrayofobjectstorecursorresponse();
   private:
-  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& _internal_mvarrayofobjectstorecursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* _internal_add_mvarrayofobjectstorecursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& _internal_a_mvarrayofobjectstorecursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* _internal_add_a_mvarrayofobjectstorecursorresponse();
   public:
-  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& mvarrayofobjectstorecursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* add_mvarrayofobjectstorecursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& a_mvarrayofobjectstorecursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* add_a_mvarrayofobjectstorecursorresponse();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >&
-      mvarrayofobjectstorecursorresponse() const;
+      a_mvarrayofobjectstorecursorresponse() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse)
  private:
@@ -1632,7 +1632,7 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse > mvarrayofobjectstorecursorresponse_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse > a_mvarrayofobjectstorecursorresponse_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1750,25 +1750,25 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfObjectStoreKeyCursorResponseFieldNumber = 1,
+    kAMVArrayOfObjectStoreKeyCursorResponseFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 1;
-  int mvarrayofobjectstorekeycursorresponse_size() const;
+  // repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 1;
+  int a_mvarrayofobjectstorekeycursorresponse_size() const;
   private:
-  int _internal_mvarrayofobjectstorekeycursorresponse_size() const;
+  int _internal_a_mvarrayofobjectstorekeycursorresponse_size() const;
   public:
-  void clear_mvarrayofobjectstorekeycursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* mutable_mvarrayofobjectstorekeycursorresponse(int index);
+  void clear_a_mvarrayofobjectstorekeycursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* mutable_a_mvarrayofobjectstorekeycursorresponse(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >*
-      mutable_mvarrayofobjectstorekeycursorresponse();
+      mutable_a_mvarrayofobjectstorekeycursorresponse();
   private:
-  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& _internal_mvarrayofobjectstorekeycursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* _internal_add_mvarrayofobjectstorekeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& _internal_a_mvarrayofobjectstorekeycursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* _internal_add_a_mvarrayofobjectstorekeycursorresponse();
   public:
-  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& mvarrayofobjectstorekeycursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* add_mvarrayofobjectstorekeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& a_mvarrayofobjectstorekeycursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* add_a_mvarrayofobjectstorekeycursorresponse();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >&
-      mvarrayofobjectstorekeycursorresponse() const;
+      a_mvarrayofobjectstorekeycursorresponse() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse)
  private:
@@ -1778,7 +1778,7 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse > mvarrayofobjectstorekeycursorresponse_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse > a_mvarrayofobjectstorekeycursorresponse_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1896,25 +1896,25 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfIndexCursorResponseFieldNumber = 1,
+    kAMVArrayOfIndexCursorResponseFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.indexedDB.IndexCursorResponse mVArrayOfIndexCursorResponse = 1;
-  int mvarrayofindexcursorresponse_size() const;
+  // repeated .protobuf.mozilla.dom.indexedDB.IndexCursorResponse a_mVArrayOfIndexCursorResponse = 1;
+  int a_mvarrayofindexcursorresponse_size() const;
   private:
-  int _internal_mvarrayofindexcursorresponse_size() const;
+  int _internal_a_mvarrayofindexcursorresponse_size() const;
   public:
-  void clear_mvarrayofindexcursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* mutable_mvarrayofindexcursorresponse(int index);
+  void clear_a_mvarrayofindexcursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* mutable_a_mvarrayofindexcursorresponse(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >*
-      mutable_mvarrayofindexcursorresponse();
+      mutable_a_mvarrayofindexcursorresponse();
   private:
-  const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& _internal_mvarrayofindexcursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* _internal_add_mvarrayofindexcursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& _internal_a_mvarrayofindexcursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* _internal_add_a_mvarrayofindexcursorresponse();
   public:
-  const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& mvarrayofindexcursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* add_mvarrayofindexcursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& a_mvarrayofindexcursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* add_a_mvarrayofindexcursorresponse();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >&
-      mvarrayofindexcursorresponse() const;
+      a_mvarrayofindexcursorresponse() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse)
  private:
@@ -1924,7 +1924,7 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse > mvarrayofindexcursorresponse_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse > a_mvarrayofindexcursorresponse_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2042,25 +2042,25 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfIndexKeyCursorResponseFieldNumber = 1,
+    kAMVArrayOfIndexKeyCursorResponseFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse mVArrayOfIndexKeyCursorResponse = 1;
-  int mvarrayofindexkeycursorresponse_size() const;
+  // repeated .protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 1;
+  int a_mvarrayofindexkeycursorresponse_size() const;
   private:
-  int _internal_mvarrayofindexkeycursorresponse_size() const;
+  int _internal_a_mvarrayofindexkeycursorresponse_size() const;
   public:
-  void clear_mvarrayofindexkeycursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* mutable_mvarrayofindexkeycursorresponse(int index);
+  void clear_a_mvarrayofindexkeycursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* mutable_a_mvarrayofindexkeycursorresponse(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >*
-      mutable_mvarrayofindexkeycursorresponse();
+      mutable_a_mvarrayofindexkeycursorresponse();
   private:
-  const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& _internal_mvarrayofindexkeycursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* _internal_add_mvarrayofindexkeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& _internal_a_mvarrayofindexkeycursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* _internal_add_a_mvarrayofindexkeycursorresponse();
   public:
-  const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& mvarrayofindexkeycursorresponse(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* add_mvarrayofindexkeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& a_mvarrayofindexkeycursorresponse(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* add_a_mvarrayofindexkeycursorresponse();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >&
-      mvarrayofindexkeycursorresponse() const;
+      a_mvarrayofindexkeycursorresponse() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse)
  private:
@@ -2070,7 +2070,7 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse > mvarrayofindexkeycursorresponse_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse > a_mvarrayofindexkeycursorresponse_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2120,8 +2120,8 @@ class CursorResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVvoidT = 1,
-    kMVnsresult = 2,
+    kAMVvoidT = 1,
+    kAMVnsresult = 2,
     kMVArrayOfObjectStoreCursorResponse = 3,
     kMVArrayOfObjectStoreKeyCursorResponse = 4,
     kMVArrayOfIndexCursorResponse = 5,
@@ -2203,47 +2203,47 @@ class CursorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVvoidTFieldNumber = 1,
-    kMVnsresultFieldNumber = 2,
+    kAMVvoidTFieldNumber = 1,
+    kAMVnsresultFieldNumber = 2,
     kMVArrayOfObjectStoreCursorResponseFieldNumber = 3,
     kMVArrayOfObjectStoreKeyCursorResponseFieldNumber = 4,
     kMVArrayOfIndexCursorResponseFieldNumber = 5,
     kMVArrayOfIndexKeyCursorResponseFieldNumber = 6,
   };
-  // bytes mVvoid_t = 1;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 1;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
-  // bytes mVnsresult = 2;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 2;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
   // .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 3;
@@ -2323,8 +2323,8 @@ class CursorResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse)
  private:
   class _Internal;
-  void set_has_mvvoid_t();
-  void set_has_mvnsresult();
+  void set_has_a_mvvoid_t();
+  void set_has_a_mvnsresult();
   void set_has_mvarrayofobjectstorecursorresponse();
   void set_has_mvarrayofobjectstorekeycursorresponse();
   void set_has_mvarrayofindexcursorresponse();
@@ -2340,8 +2340,8 @@ class CursorResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
       ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* mvarrayofobjectstorecursorresponse_;
       ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* mvarrayofobjectstorekeycursorresponse_;
       ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* mvarrayofindexcursorresponse_;
@@ -2365,469 +2365,469 @@ class CursorResponse final :
 #endif  // __GNUC__
 // ContinueParams
 
-// required bytes key = 1;
-inline bool ContinueParams::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool ContinueParams::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ContinueParams::has_key() const {
-  return _internal_has_key();
+inline bool ContinueParams::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void ContinueParams::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void ContinueParams::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ContinueParams::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinueParams.key)
-  return _internal_key();
+inline const std::string& ContinueParams::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ContinueParams::set_key(ArgT0&& arg0, ArgT... args) {
+void ContinueParams::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinueParams.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
 }
-inline std::string* ContinueParams::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ContinueParams.key)
+inline std::string* ContinueParams::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
   return _s;
 }
-inline const std::string& ContinueParams::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& ContinueParams::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void ContinueParams::_internal_set_key(const std::string& value) {
+inline void ContinueParams::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ContinueParams::_internal_mutable_key() {
+inline std::string* ContinueParams::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ContinueParams::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinueParams.key)
-  if (!_internal_has_key()) {
+inline std::string* ContinueParams::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ContinueParams::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void ContinueParams::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinueParams.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinueParams.a_key)
 }
 
 // -------------------------------------------------------------------
 
 // ContinuePrimaryKeyParams
 
-// required bytes key = 1;
-inline bool ContinuePrimaryKeyParams::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool ContinuePrimaryKeyParams::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ContinuePrimaryKeyParams::has_key() const {
-  return _internal_has_key();
+inline bool ContinuePrimaryKeyParams::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void ContinuePrimaryKeyParams::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void ContinuePrimaryKeyParams::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ContinuePrimaryKeyParams::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.key)
-  return _internal_key();
+inline const std::string& ContinuePrimaryKeyParams::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ContinuePrimaryKeyParams::set_key(ArgT0&& arg0, ArgT... args) {
+void ContinuePrimaryKeyParams::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
 }
-inline std::string* ContinuePrimaryKeyParams::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.key)
+inline std::string* ContinuePrimaryKeyParams::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
   return _s;
 }
-inline const std::string& ContinuePrimaryKeyParams::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& ContinuePrimaryKeyParams::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void ContinuePrimaryKeyParams::_internal_set_key(const std::string& value) {
+inline void ContinuePrimaryKeyParams::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ContinuePrimaryKeyParams::_internal_mutable_key() {
+inline std::string* ContinuePrimaryKeyParams::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ContinuePrimaryKeyParams::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.key)
-  if (!_internal_has_key()) {
+inline std::string* ContinuePrimaryKeyParams::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ContinuePrimaryKeyParams::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void ContinuePrimaryKeyParams::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_key)
 }
 
-// required bytes primaryKey = 2;
-inline bool ContinuePrimaryKeyParams::_internal_has_primarykey() const {
+// required bytes a_primaryKey = 2;
+inline bool ContinuePrimaryKeyParams::_internal_has_a_primarykey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ContinuePrimaryKeyParams::has_primarykey() const {
-  return _internal_has_primarykey();
+inline bool ContinuePrimaryKeyParams::has_a_primarykey() const {
+  return _internal_has_a_primarykey();
 }
-inline void ContinuePrimaryKeyParams::clear_primarykey() {
-  _impl_.primarykey_.ClearToEmpty();
+inline void ContinuePrimaryKeyParams::clear_a_primarykey() {
+  _impl_.a_primarykey_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ContinuePrimaryKeyParams::primarykey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.primaryKey)
-  return _internal_primarykey();
+inline const std::string& ContinuePrimaryKeyParams::a_primarykey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
+  return _internal_a_primarykey();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ContinuePrimaryKeyParams::set_primarykey(ArgT0&& arg0, ArgT... args) {
+void ContinuePrimaryKeyParams::set_a_primarykey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.primarykey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.primaryKey)
+ _impl_.a_primarykey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
 }
-inline std::string* ContinuePrimaryKeyParams::mutable_primarykey() {
-  std::string* _s = _internal_mutable_primarykey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.primaryKey)
+inline std::string* ContinuePrimaryKeyParams::mutable_a_primarykey() {
+  std::string* _s = _internal_mutable_a_primarykey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
   return _s;
 }
-inline const std::string& ContinuePrimaryKeyParams::_internal_primarykey() const {
-  return _impl_.primarykey_.Get();
+inline const std::string& ContinuePrimaryKeyParams::_internal_a_primarykey() const {
+  return _impl_.a_primarykey_.Get();
 }
-inline void ContinuePrimaryKeyParams::_internal_set_primarykey(const std::string& value) {
+inline void ContinuePrimaryKeyParams::_internal_set_a_primarykey(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.primarykey_.Set(value, GetArenaForAllocation());
+  _impl_.a_primarykey_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ContinuePrimaryKeyParams::_internal_mutable_primarykey() {
+inline std::string* ContinuePrimaryKeyParams::_internal_mutable_a_primarykey() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.primarykey_.Mutable(GetArenaForAllocation());
+  return _impl_.a_primarykey_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ContinuePrimaryKeyParams::release_primarykey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.primaryKey)
-  if (!_internal_has_primarykey()) {
+inline std::string* ContinuePrimaryKeyParams::release_a_primarykey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
+  if (!_internal_has_a_primarykey()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.primarykey_.Release();
+  auto* p = _impl_.a_primarykey_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.primarykey_.IsDefault()) {
-    _impl_.primarykey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_primarykey_.IsDefault()) {
+    _impl_.a_primarykey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ContinuePrimaryKeyParams::set_allocated_primarykey(std::string* primarykey) {
-  if (primarykey != nullptr) {
+inline void ContinuePrimaryKeyParams::set_allocated_a_primarykey(std::string* a_primarykey) {
+  if (a_primarykey != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.primarykey_.SetAllocated(primarykey, GetArenaForAllocation());
+  _impl_.a_primarykey_.SetAllocated(a_primarykey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.primarykey_.IsDefault()) {
-    _impl_.primarykey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_primarykey_.IsDefault()) {
+    _impl_.a_primarykey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.primaryKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams.a_primaryKey)
 }
 
 // -------------------------------------------------------------------
 
 // AdvanceParams
 
-// required uint32 count = 1;
-inline bool AdvanceParams::_internal_has_count() const {
+// required uint32 a_count = 1;
+inline bool AdvanceParams::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool AdvanceParams::has_count() const {
-  return _internal_has_count();
+inline bool AdvanceParams::has_a_count() const {
+  return _internal_has_a_count();
 }
-inline void AdvanceParams::clear_count() {
-  _impl_.count_ = 0u;
+inline void AdvanceParams::clear_a_count() {
+  _impl_.a_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t AdvanceParams::_internal_count() const {
-  return _impl_.count_;
+inline uint32_t AdvanceParams::_internal_a_count() const {
+  return _impl_.a_count_;
 }
-inline uint32_t AdvanceParams::count() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.AdvanceParams.count)
-  return _internal_count();
+inline uint32_t AdvanceParams::a_count() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.AdvanceParams.a_count)
+  return _internal_a_count();
 }
-inline void AdvanceParams::_internal_set_count(uint32_t value) {
+inline void AdvanceParams::_internal_set_a_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.count_ = value;
+  _impl_.a_count_ = value;
 }
-inline void AdvanceParams::set_count(uint32_t value) {
-  _internal_set_count(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.AdvanceParams.count)
+inline void AdvanceParams::set_a_count(uint32_t value) {
+  _internal_set_a_count(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.AdvanceParams.a_count)
 }
 
 // -------------------------------------------------------------------
 
 // CursorRequestParams
 
-// .protobuf.mozilla.dom.indexedDB.ContinueParams mVContinueParams = 1;
-inline bool CursorRequestParams::_internal_has_mvcontinueparams() const {
-  return content_case() == kMVContinueParams;
+// .protobuf.mozilla.dom.indexedDB.ContinueParams a_mVContinueParams = 1;
+inline bool CursorRequestParams::_internal_has_a_mvcontinueparams() const {
+  return content_case() == kAMVContinueParams;
 }
-inline bool CursorRequestParams::has_mvcontinueparams() const {
-  return _internal_has_mvcontinueparams();
+inline bool CursorRequestParams::has_a_mvcontinueparams() const {
+  return _internal_has_a_mvcontinueparams();
 }
-inline void CursorRequestParams::set_has_mvcontinueparams() {
-  _impl_._oneof_case_[0] = kMVContinueParams;
+inline void CursorRequestParams::set_has_a_mvcontinueparams() {
+  _impl_._oneof_case_[0] = kAMVContinueParams;
 }
-inline void CursorRequestParams::clear_mvcontinueparams() {
-  if (_internal_has_mvcontinueparams()) {
+inline void CursorRequestParams::clear_a_mvcontinueparams() {
+  if (_internal_has_a_mvcontinueparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcontinueparams_;
+      delete _impl_.content_.a_mvcontinueparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::release_mvcontinueparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinueParams)
-  if (_internal_has_mvcontinueparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::release_a_mvcontinueparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinueParams)
+  if (_internal_has_a_mvcontinueparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::ContinueParams* temp = _impl_.content_.mvcontinueparams_;
+    ::protobuf::mozilla::dom::indexedDB::ContinueParams* temp = _impl_.content_.a_mvcontinueparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcontinueparams_ = nullptr;
+    _impl_.content_.a_mvcontinueparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ContinueParams& CursorRequestParams::_internal_mvcontinueparams() const {
-  return _internal_has_mvcontinueparams()
-      ? *_impl_.content_.mvcontinueparams_
+inline const ::protobuf::mozilla::dom::indexedDB::ContinueParams& CursorRequestParams::_internal_a_mvcontinueparams() const {
+  return _internal_has_a_mvcontinueparams()
+      ? *_impl_.content_.a_mvcontinueparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::ContinueParams&>(::protobuf::mozilla::dom::indexedDB::_ContinueParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ContinueParams& CursorRequestParams::mvcontinueparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinueParams)
-  return _internal_mvcontinueparams();
+inline const ::protobuf::mozilla::dom::indexedDB::ContinueParams& CursorRequestParams::a_mvcontinueparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinueParams)
+  return _internal_a_mvcontinueparams();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::unsafe_arena_release_mvcontinueparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinueParams)
-  if (_internal_has_mvcontinueparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::unsafe_arena_release_a_mvcontinueparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinueParams)
+  if (_internal_has_a_mvcontinueparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::ContinueParams* temp = _impl_.content_.mvcontinueparams_;
-    _impl_.content_.mvcontinueparams_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::ContinueParams* temp = _impl_.content_.a_mvcontinueparams_;
+    _impl_.content_.a_mvcontinueparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorRequestParams::unsafe_arena_set_allocated_mvcontinueparams(::protobuf::mozilla::dom::indexedDB::ContinueParams* mvcontinueparams) {
+inline void CursorRequestParams::unsafe_arena_set_allocated_a_mvcontinueparams(::protobuf::mozilla::dom::indexedDB::ContinueParams* a_mvcontinueparams) {
   clear_content();
-  if (mvcontinueparams) {
-    set_has_mvcontinueparams();
-    _impl_.content_.mvcontinueparams_ = mvcontinueparams;
+  if (a_mvcontinueparams) {
+    set_has_a_mvcontinueparams();
+    _impl_.content_.a_mvcontinueparams_ = a_mvcontinueparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinueParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinueParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::_internal_mutable_mvcontinueparams() {
-  if (!_internal_has_mvcontinueparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::_internal_mutable_a_mvcontinueparams() {
+  if (!_internal_has_a_mvcontinueparams()) {
     clear_content();
-    set_has_mvcontinueparams();
-    _impl_.content_.mvcontinueparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::ContinueParams >(GetArenaForAllocation());
+    set_has_a_mvcontinueparams();
+    _impl_.content_.a_mvcontinueparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::ContinueParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcontinueparams_;
+  return _impl_.content_.a_mvcontinueparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::mutable_mvcontinueparams() {
-  ::protobuf::mozilla::dom::indexedDB::ContinueParams* _msg = _internal_mutable_mvcontinueparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinueParams)
+inline ::protobuf::mozilla::dom::indexedDB::ContinueParams* CursorRequestParams::mutable_a_mvcontinueparams() {
+  ::protobuf::mozilla::dom::indexedDB::ContinueParams* _msg = _internal_mutable_a_mvcontinueparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinueParams)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams mVContinuePrimaryKeyParams = 2;
-inline bool CursorRequestParams::_internal_has_mvcontinueprimarykeyparams() const {
-  return content_case() == kMVContinuePrimaryKeyParams;
+// .protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams a_mVContinuePrimaryKeyParams = 2;
+inline bool CursorRequestParams::_internal_has_a_mvcontinueprimarykeyparams() const {
+  return content_case() == kAMVContinuePrimaryKeyParams;
 }
-inline bool CursorRequestParams::has_mvcontinueprimarykeyparams() const {
-  return _internal_has_mvcontinueprimarykeyparams();
+inline bool CursorRequestParams::has_a_mvcontinueprimarykeyparams() const {
+  return _internal_has_a_mvcontinueprimarykeyparams();
 }
-inline void CursorRequestParams::set_has_mvcontinueprimarykeyparams() {
-  _impl_._oneof_case_[0] = kMVContinuePrimaryKeyParams;
+inline void CursorRequestParams::set_has_a_mvcontinueprimarykeyparams() {
+  _impl_._oneof_case_[0] = kAMVContinuePrimaryKeyParams;
 }
-inline void CursorRequestParams::clear_mvcontinueprimarykeyparams() {
-  if (_internal_has_mvcontinueprimarykeyparams()) {
+inline void CursorRequestParams::clear_a_mvcontinueprimarykeyparams() {
+  if (_internal_has_a_mvcontinueprimarykeyparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcontinueprimarykeyparams_;
+      delete _impl_.content_.a_mvcontinueprimarykeyparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::release_mvcontinueprimarykeyparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinuePrimaryKeyParams)
-  if (_internal_has_mvcontinueprimarykeyparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::release_a_mvcontinueprimarykeyparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinuePrimaryKeyParams)
+  if (_internal_has_a_mvcontinueprimarykeyparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* temp = _impl_.content_.mvcontinueprimarykeyparams_;
+    ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* temp = _impl_.content_.a_mvcontinueprimarykeyparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcontinueprimarykeyparams_ = nullptr;
+    _impl_.content_.a_mvcontinueprimarykeyparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& CursorRequestParams::_internal_mvcontinueprimarykeyparams() const {
-  return _internal_has_mvcontinueprimarykeyparams()
-      ? *_impl_.content_.mvcontinueprimarykeyparams_
+inline const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& CursorRequestParams::_internal_a_mvcontinueprimarykeyparams() const {
+  return _internal_has_a_mvcontinueprimarykeyparams()
+      ? *_impl_.content_.a_mvcontinueprimarykeyparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams&>(::protobuf::mozilla::dom::indexedDB::_ContinuePrimaryKeyParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& CursorRequestParams::mvcontinueprimarykeyparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinuePrimaryKeyParams)
-  return _internal_mvcontinueprimarykeyparams();
+inline const ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams& CursorRequestParams::a_mvcontinueprimarykeyparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinuePrimaryKeyParams)
+  return _internal_a_mvcontinueprimarykeyparams();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::unsafe_arena_release_mvcontinueprimarykeyparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinuePrimaryKeyParams)
-  if (_internal_has_mvcontinueprimarykeyparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::unsafe_arena_release_a_mvcontinueprimarykeyparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinuePrimaryKeyParams)
+  if (_internal_has_a_mvcontinueprimarykeyparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* temp = _impl_.content_.mvcontinueprimarykeyparams_;
-    _impl_.content_.mvcontinueprimarykeyparams_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* temp = _impl_.content_.a_mvcontinueprimarykeyparams_;
+    _impl_.content_.a_mvcontinueprimarykeyparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorRequestParams::unsafe_arena_set_allocated_mvcontinueprimarykeyparams(::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* mvcontinueprimarykeyparams) {
+inline void CursorRequestParams::unsafe_arena_set_allocated_a_mvcontinueprimarykeyparams(::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* a_mvcontinueprimarykeyparams) {
   clear_content();
-  if (mvcontinueprimarykeyparams) {
-    set_has_mvcontinueprimarykeyparams();
-    _impl_.content_.mvcontinueprimarykeyparams_ = mvcontinueprimarykeyparams;
+  if (a_mvcontinueprimarykeyparams) {
+    set_has_a_mvcontinueprimarykeyparams();
+    _impl_.content_.a_mvcontinueprimarykeyparams_ = a_mvcontinueprimarykeyparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinuePrimaryKeyParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinuePrimaryKeyParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::_internal_mutable_mvcontinueprimarykeyparams() {
-  if (!_internal_has_mvcontinueprimarykeyparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::_internal_mutable_a_mvcontinueprimarykeyparams() {
+  if (!_internal_has_a_mvcontinueprimarykeyparams()) {
     clear_content();
-    set_has_mvcontinueprimarykeyparams();
-    _impl_.content_.mvcontinueprimarykeyparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams >(GetArenaForAllocation());
+    set_has_a_mvcontinueprimarykeyparams();
+    _impl_.content_.a_mvcontinueprimarykeyparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcontinueprimarykeyparams_;
+  return _impl_.content_.a_mvcontinueprimarykeyparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::mutable_mvcontinueprimarykeyparams() {
-  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* _msg = _internal_mutable_mvcontinueprimarykeyparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVContinuePrimaryKeyParams)
+inline ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* CursorRequestParams::mutable_a_mvcontinueprimarykeyparams() {
+  ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* _msg = _internal_mutable_a_mvcontinueprimarykeyparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVContinuePrimaryKeyParams)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.indexedDB.AdvanceParams mVAdvanceParams = 3;
-inline bool CursorRequestParams::_internal_has_mvadvanceparams() const {
-  return content_case() == kMVAdvanceParams;
+// .protobuf.mozilla.dom.indexedDB.AdvanceParams a_mVAdvanceParams = 3;
+inline bool CursorRequestParams::_internal_has_a_mvadvanceparams() const {
+  return content_case() == kAMVAdvanceParams;
 }
-inline bool CursorRequestParams::has_mvadvanceparams() const {
-  return _internal_has_mvadvanceparams();
+inline bool CursorRequestParams::has_a_mvadvanceparams() const {
+  return _internal_has_a_mvadvanceparams();
 }
-inline void CursorRequestParams::set_has_mvadvanceparams() {
-  _impl_._oneof_case_[0] = kMVAdvanceParams;
+inline void CursorRequestParams::set_has_a_mvadvanceparams() {
+  _impl_._oneof_case_[0] = kAMVAdvanceParams;
 }
-inline void CursorRequestParams::clear_mvadvanceparams() {
-  if (_internal_has_mvadvanceparams()) {
+inline void CursorRequestParams::clear_a_mvadvanceparams() {
+  if (_internal_has_a_mvadvanceparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvadvanceparams_;
+      delete _impl_.content_.a_mvadvanceparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::release_mvadvanceparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVAdvanceParams)
-  if (_internal_has_mvadvanceparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::release_a_mvadvanceparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVAdvanceParams)
+  if (_internal_has_a_mvadvanceparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::AdvanceParams* temp = _impl_.content_.mvadvanceparams_;
+    ::protobuf::mozilla::dom::indexedDB::AdvanceParams* temp = _impl_.content_.a_mvadvanceparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvadvanceparams_ = nullptr;
+    _impl_.content_.a_mvadvanceparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& CursorRequestParams::_internal_mvadvanceparams() const {
-  return _internal_has_mvadvanceparams()
-      ? *_impl_.content_.mvadvanceparams_
+inline const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& CursorRequestParams::_internal_a_mvadvanceparams() const {
+  return _internal_has_a_mvadvanceparams()
+      ? *_impl_.content_.a_mvadvanceparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::AdvanceParams&>(::protobuf::mozilla::dom::indexedDB::_AdvanceParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& CursorRequestParams::mvadvanceparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVAdvanceParams)
-  return _internal_mvadvanceparams();
+inline const ::protobuf::mozilla::dom::indexedDB::AdvanceParams& CursorRequestParams::a_mvadvanceparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVAdvanceParams)
+  return _internal_a_mvadvanceparams();
 }
-inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::unsafe_arena_release_mvadvanceparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVAdvanceParams)
-  if (_internal_has_mvadvanceparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::unsafe_arena_release_a_mvadvanceparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVAdvanceParams)
+  if (_internal_has_a_mvadvanceparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::AdvanceParams* temp = _impl_.content_.mvadvanceparams_;
-    _impl_.content_.mvadvanceparams_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::AdvanceParams* temp = _impl_.content_.a_mvadvanceparams_;
+    _impl_.content_.a_mvadvanceparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorRequestParams::unsafe_arena_set_allocated_mvadvanceparams(::protobuf::mozilla::dom::indexedDB::AdvanceParams* mvadvanceparams) {
+inline void CursorRequestParams::unsafe_arena_set_allocated_a_mvadvanceparams(::protobuf::mozilla::dom::indexedDB::AdvanceParams* a_mvadvanceparams) {
   clear_content();
-  if (mvadvanceparams) {
-    set_has_mvadvanceparams();
-    _impl_.content_.mvadvanceparams_ = mvadvanceparams;
+  if (a_mvadvanceparams) {
+    set_has_a_mvadvanceparams();
+    _impl_.content_.a_mvadvanceparams_ = a_mvadvanceparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVAdvanceParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVAdvanceParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::_internal_mutable_mvadvanceparams() {
-  if (!_internal_has_mvadvanceparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::_internal_mutable_a_mvadvanceparams() {
+  if (!_internal_has_a_mvadvanceparams()) {
     clear_content();
-    set_has_mvadvanceparams();
-    _impl_.content_.mvadvanceparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::AdvanceParams >(GetArenaForAllocation());
+    set_has_a_mvadvanceparams();
+    _impl_.content_.a_mvadvanceparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::AdvanceParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvadvanceparams_;
+  return _impl_.content_.a_mvadvanceparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::mutable_mvadvanceparams() {
-  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* _msg = _internal_mutable_mvadvanceparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorRequestParams.mVAdvanceParams)
+inline ::protobuf::mozilla::dom::indexedDB::AdvanceParams* CursorRequestParams::mutable_a_mvadvanceparams() {
+  ::protobuf::mozilla::dom::indexedDB::AdvanceParams* _msg = _internal_mutable_a_mvadvanceparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorRequestParams.a_mVAdvanceParams)
   return _msg;
 }
 
@@ -2844,109 +2844,109 @@ inline CursorRequestParams::ContentCase CursorRequestParams::content_case() cons
 
 // ObjectStoreCursorResponse
 
-// required bytes key = 1;
-inline bool ObjectStoreCursorResponse::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool ObjectStoreCursorResponse::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ObjectStoreCursorResponse::has_key() const {
-  return _internal_has_key();
+inline bool ObjectStoreCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void ObjectStoreCursorResponse::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void ObjectStoreCursorResponse::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ObjectStoreCursorResponse::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.key)
-  return _internal_key();
+inline const std::string& ObjectStoreCursorResponse::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ObjectStoreCursorResponse::set_key(ArgT0&& arg0, ArgT... args) {
+void ObjectStoreCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
 }
-inline std::string* ObjectStoreCursorResponse::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.key)
+inline std::string* ObjectStoreCursorResponse::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
   return _s;
 }
-inline const std::string& ObjectStoreCursorResponse::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& ObjectStoreCursorResponse::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void ObjectStoreCursorResponse::_internal_set_key(const std::string& value) {
+inline void ObjectStoreCursorResponse::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ObjectStoreCursorResponse::_internal_mutable_key() {
+inline std::string* ObjectStoreCursorResponse::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ObjectStoreCursorResponse::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.key)
-  if (!_internal_has_key()) {
+inline std::string* ObjectStoreCursorResponse::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ObjectStoreCursorResponse::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void ObjectStoreCursorResponse::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_key)
 }
 
-// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo cloneInfo = 2;
-inline bool ObjectStoreCursorResponse::_internal_has_cloneinfo() const {
+// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
+inline bool ObjectStoreCursorResponse::_internal_has_a_cloneinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cloneinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cloneinfo_ != nullptr);
   return value;
 }
-inline bool ObjectStoreCursorResponse::has_cloneinfo() const {
-  return _internal_has_cloneinfo();
+inline bool ObjectStoreCursorResponse::has_a_cloneinfo() const {
+  return _internal_has_a_cloneinfo();
 }
-inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& ObjectStoreCursorResponse::_internal_cloneinfo() const {
-  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* p = _impl_.cloneinfo_;
+inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& ObjectStoreCursorResponse::_internal_a_cloneinfo() const {
+  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* p = _impl_.a_cloneinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo&>(
       ::protobuf::mozilla::dom::indexedDB::_SerializedStructuredCloneReadInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& ObjectStoreCursorResponse::cloneinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.cloneInfo)
-  return _internal_cloneinfo();
+inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& ObjectStoreCursorResponse::a_cloneinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
+  return _internal_a_cloneinfo();
 }
-inline void ObjectStoreCursorResponse::unsafe_arena_set_allocated_cloneinfo(
-    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo) {
+inline void ObjectStoreCursorResponse::unsafe_arena_set_allocated_a_cloneinfo(
+    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cloneinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cloneinfo_);
   }
-  _impl_.cloneinfo_ = cloneinfo;
-  if (cloneinfo) {
+  _impl_.a_cloneinfo_ = a_cloneinfo;
+  if (a_cloneinfo) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.cloneInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::release_cloneinfo() {
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::release_a_cloneinfo() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.cloneinfo_;
-  _impl_.cloneinfo_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
+  _impl_.a_cloneinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2958,362 +2958,362 @@ inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* O
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::unsafe_arena_release_cloneinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.cloneInfo)
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::unsafe_arena_release_a_cloneinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.cloneinfo_;
-  _impl_.cloneinfo_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
+  _impl_.a_cloneinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::_internal_mutable_cloneinfo() {
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::_internal_mutable_a_cloneinfo() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.cloneinfo_ == nullptr) {
+  if (_impl_.a_cloneinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo>(GetArenaForAllocation());
-    _impl_.cloneinfo_ = p;
+    _impl_.a_cloneinfo_ = p;
   }
-  return _impl_.cloneinfo_;
+  return _impl_.a_cloneinfo_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::mutable_cloneinfo() {
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _msg = _internal_mutable_cloneinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.cloneInfo)
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreCursorResponse::mutable_a_cloneinfo() {
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _msg = _internal_mutable_a_cloneinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
   return _msg;
 }
-inline void ObjectStoreCursorResponse::set_allocated_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo) {
+inline void ObjectStoreCursorResponse::set_allocated_a_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cloneinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cloneinfo_);
   }
-  if (cloneinfo) {
+  if (a_cloneinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cloneinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cloneinfo));
     if (message_arena != submessage_arena) {
-      cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cloneinfo, submessage_arena);
+      a_cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cloneinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.cloneinfo_ = cloneinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.cloneInfo)
+  _impl_.a_cloneinfo_ = a_cloneinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse.a_cloneInfo)
 }
 
 // -------------------------------------------------------------------
 
 // ObjectStoreKeyCursorResponse
 
-// required bytes key = 1;
-inline bool ObjectStoreKeyCursorResponse::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool ObjectStoreKeyCursorResponse::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ObjectStoreKeyCursorResponse::has_key() const {
-  return _internal_has_key();
+inline bool ObjectStoreKeyCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void ObjectStoreKeyCursorResponse::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void ObjectStoreKeyCursorResponse::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ObjectStoreKeyCursorResponse::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.key)
-  return _internal_key();
+inline const std::string& ObjectStoreKeyCursorResponse::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ObjectStoreKeyCursorResponse::set_key(ArgT0&& arg0, ArgT... args) {
+void ObjectStoreKeyCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
 }
-inline std::string* ObjectStoreKeyCursorResponse::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.key)
+inline std::string* ObjectStoreKeyCursorResponse::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
   return _s;
 }
-inline const std::string& ObjectStoreKeyCursorResponse::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& ObjectStoreKeyCursorResponse::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void ObjectStoreKeyCursorResponse::_internal_set_key(const std::string& value) {
+inline void ObjectStoreKeyCursorResponse::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ObjectStoreKeyCursorResponse::_internal_mutable_key() {
+inline std::string* ObjectStoreKeyCursorResponse::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ObjectStoreKeyCursorResponse::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.key)
-  if (!_internal_has_key()) {
+inline std::string* ObjectStoreKeyCursorResponse::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ObjectStoreKeyCursorResponse::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void ObjectStoreKeyCursorResponse::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse.a_key)
 }
 
 // -------------------------------------------------------------------
 
 // IndexCursorResponse
 
-// required bytes key = 1;
-inline bool IndexCursorResponse::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool IndexCursorResponse::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IndexCursorResponse::has_key() const {
-  return _internal_has_key();
+inline bool IndexCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void IndexCursorResponse::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void IndexCursorResponse::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IndexCursorResponse::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.key)
-  return _internal_key();
+inline const std::string& IndexCursorResponse::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IndexCursorResponse::set_key(ArgT0&& arg0, ArgT... args) {
+void IndexCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
 }
-inline std::string* IndexCursorResponse::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.key)
+inline std::string* IndexCursorResponse::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
   return _s;
 }
-inline const std::string& IndexCursorResponse::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& IndexCursorResponse::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void IndexCursorResponse::_internal_set_key(const std::string& value) {
+inline void IndexCursorResponse::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IndexCursorResponse::_internal_mutable_key() {
+inline std::string* IndexCursorResponse::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IndexCursorResponse::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.key)
-  if (!_internal_has_key()) {
+inline std::string* IndexCursorResponse::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IndexCursorResponse::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void IndexCursorResponse::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_key)
 }
 
-// required bytes sortKey = 2;
-inline bool IndexCursorResponse::_internal_has_sortkey() const {
+// required bytes a_sortKey = 2;
+inline bool IndexCursorResponse::_internal_has_a_sortkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IndexCursorResponse::has_sortkey() const {
-  return _internal_has_sortkey();
+inline bool IndexCursorResponse::has_a_sortkey() const {
+  return _internal_has_a_sortkey();
 }
-inline void IndexCursorResponse::clear_sortkey() {
-  _impl_.sortkey_.ClearToEmpty();
+inline void IndexCursorResponse::clear_a_sortkey() {
+  _impl_.a_sortkey_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IndexCursorResponse::sortkey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.sortKey)
-  return _internal_sortkey();
+inline const std::string& IndexCursorResponse::a_sortkey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
+  return _internal_a_sortkey();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IndexCursorResponse::set_sortkey(ArgT0&& arg0, ArgT... args) {
+void IndexCursorResponse::set_a_sortkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sortkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.sortKey)
+ _impl_.a_sortkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
 }
-inline std::string* IndexCursorResponse::mutable_sortkey() {
-  std::string* _s = _internal_mutable_sortkey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.sortKey)
+inline std::string* IndexCursorResponse::mutable_a_sortkey() {
+  std::string* _s = _internal_mutable_a_sortkey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
   return _s;
 }
-inline const std::string& IndexCursorResponse::_internal_sortkey() const {
-  return _impl_.sortkey_.Get();
+inline const std::string& IndexCursorResponse::_internal_a_sortkey() const {
+  return _impl_.a_sortkey_.Get();
 }
-inline void IndexCursorResponse::_internal_set_sortkey(const std::string& value) {
+inline void IndexCursorResponse::_internal_set_a_sortkey(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.sortkey_.Set(value, GetArenaForAllocation());
+  _impl_.a_sortkey_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IndexCursorResponse::_internal_mutable_sortkey() {
+inline std::string* IndexCursorResponse::_internal_mutable_a_sortkey() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.sortkey_.Mutable(GetArenaForAllocation());
+  return _impl_.a_sortkey_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IndexCursorResponse::release_sortkey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.sortKey)
-  if (!_internal_has_sortkey()) {
+inline std::string* IndexCursorResponse::release_a_sortkey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
+  if (!_internal_has_a_sortkey()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.sortkey_.Release();
+  auto* p = _impl_.a_sortkey_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sortkey_.IsDefault()) {
-    _impl_.sortkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sortkey_.IsDefault()) {
+    _impl_.a_sortkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IndexCursorResponse::set_allocated_sortkey(std::string* sortkey) {
-  if (sortkey != nullptr) {
+inline void IndexCursorResponse::set_allocated_a_sortkey(std::string* a_sortkey) {
+  if (a_sortkey != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.sortkey_.SetAllocated(sortkey, GetArenaForAllocation());
+  _impl_.a_sortkey_.SetAllocated(a_sortkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sortkey_.IsDefault()) {
-    _impl_.sortkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sortkey_.IsDefault()) {
+    _impl_.a_sortkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.sortKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_sortKey)
 }
 
-// required bytes objectKey = 3;
-inline bool IndexCursorResponse::_internal_has_objectkey() const {
+// required bytes a_objectKey = 3;
+inline bool IndexCursorResponse::_internal_has_a_objectkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool IndexCursorResponse::has_objectkey() const {
-  return _internal_has_objectkey();
+inline bool IndexCursorResponse::has_a_objectkey() const {
+  return _internal_has_a_objectkey();
 }
-inline void IndexCursorResponse::clear_objectkey() {
-  _impl_.objectkey_.ClearToEmpty();
+inline void IndexCursorResponse::clear_a_objectkey() {
+  _impl_.a_objectkey_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& IndexCursorResponse::objectkey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.objectKey)
-  return _internal_objectkey();
+inline const std::string& IndexCursorResponse::a_objectkey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
+  return _internal_a_objectkey();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IndexCursorResponse::set_objectkey(ArgT0&& arg0, ArgT... args) {
+void IndexCursorResponse::set_a_objectkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.objectkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.objectKey)
+ _impl_.a_objectkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
 }
-inline std::string* IndexCursorResponse::mutable_objectkey() {
-  std::string* _s = _internal_mutable_objectkey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.objectKey)
+inline std::string* IndexCursorResponse::mutable_a_objectkey() {
+  std::string* _s = _internal_mutable_a_objectkey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
   return _s;
 }
-inline const std::string& IndexCursorResponse::_internal_objectkey() const {
-  return _impl_.objectkey_.Get();
+inline const std::string& IndexCursorResponse::_internal_a_objectkey() const {
+  return _impl_.a_objectkey_.Get();
 }
-inline void IndexCursorResponse::_internal_set_objectkey(const std::string& value) {
+inline void IndexCursorResponse::_internal_set_a_objectkey(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.objectkey_.Set(value, GetArenaForAllocation());
+  _impl_.a_objectkey_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IndexCursorResponse::_internal_mutable_objectkey() {
+inline std::string* IndexCursorResponse::_internal_mutable_a_objectkey() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.objectkey_.Mutable(GetArenaForAllocation());
+  return _impl_.a_objectkey_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IndexCursorResponse::release_objectkey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.objectKey)
-  if (!_internal_has_objectkey()) {
+inline std::string* IndexCursorResponse::release_a_objectkey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
+  if (!_internal_has_a_objectkey()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.objectkey_.Release();
+  auto* p = _impl_.a_objectkey_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.objectkey_.IsDefault()) {
-    _impl_.objectkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_objectkey_.IsDefault()) {
+    _impl_.a_objectkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IndexCursorResponse::set_allocated_objectkey(std::string* objectkey) {
-  if (objectkey != nullptr) {
+inline void IndexCursorResponse::set_allocated_a_objectkey(std::string* a_objectkey) {
+  if (a_objectkey != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.objectkey_.SetAllocated(objectkey, GetArenaForAllocation());
+  _impl_.a_objectkey_.SetAllocated(a_objectkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.objectkey_.IsDefault()) {
-    _impl_.objectkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_objectkey_.IsDefault()) {
+    _impl_.a_objectkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.objectKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_objectKey)
 }
 
-// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo cloneInfo = 4;
-inline bool IndexCursorResponse::_internal_has_cloneinfo() const {
+// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
+inline bool IndexCursorResponse::_internal_has_a_cloneinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cloneinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cloneinfo_ != nullptr);
   return value;
 }
-inline bool IndexCursorResponse::has_cloneinfo() const {
-  return _internal_has_cloneinfo();
+inline bool IndexCursorResponse::has_a_cloneinfo() const {
+  return _internal_has_a_cloneinfo();
 }
-inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& IndexCursorResponse::_internal_cloneinfo() const {
-  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* p = _impl_.cloneinfo_;
+inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& IndexCursorResponse::_internal_a_cloneinfo() const {
+  const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* p = _impl_.a_cloneinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo&>(
       ::protobuf::mozilla::dom::indexedDB::_SerializedStructuredCloneReadInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& IndexCursorResponse::cloneinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.cloneInfo)
-  return _internal_cloneinfo();
+inline const ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo& IndexCursorResponse::a_cloneinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
+  return _internal_a_cloneinfo();
 }
-inline void IndexCursorResponse::unsafe_arena_set_allocated_cloneinfo(
-    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo) {
+inline void IndexCursorResponse::unsafe_arena_set_allocated_a_cloneinfo(
+    ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cloneinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cloneinfo_);
   }
-  _impl_.cloneinfo_ = cloneinfo;
-  if (cloneinfo) {
+  _impl_.a_cloneinfo_ = a_cloneinfo;
+  if (a_cloneinfo) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.cloneInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::release_cloneinfo() {
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::release_a_cloneinfo() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.cloneinfo_;
-  _impl_.cloneinfo_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
+  _impl_.a_cloneinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3325,587 +3325,587 @@ inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* I
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::unsafe_arena_release_cloneinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.cloneInfo)
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::unsafe_arena_release_a_cloneinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.cloneinfo_;
-  _impl_.cloneinfo_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
+  _impl_.a_cloneinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::_internal_mutable_cloneinfo() {
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::_internal_mutable_a_cloneinfo() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.cloneinfo_ == nullptr) {
+  if (_impl_.a_cloneinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo>(GetArenaForAllocation());
-    _impl_.cloneinfo_ = p;
+    _impl_.a_cloneinfo_ = p;
   }
-  return _impl_.cloneinfo_;
+  return _impl_.a_cloneinfo_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::mutable_cloneinfo() {
-  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _msg = _internal_mutable_cloneinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.cloneInfo)
+inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexCursorResponse::mutable_a_cloneinfo() {
+  ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* _msg = _internal_mutable_a_cloneinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
   return _msg;
 }
-inline void IndexCursorResponse::set_allocated_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* cloneinfo) {
+inline void IndexCursorResponse::set_allocated_a_cloneinfo(::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cloneinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cloneinfo_);
   }
-  if (cloneinfo) {
+  if (a_cloneinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cloneinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cloneinfo));
     if (message_arena != submessage_arena) {
-      cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cloneinfo, submessage_arena);
+      a_cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cloneinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.cloneinfo_ = cloneinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.cloneInfo)
+  _impl_.a_cloneinfo_ = a_cloneinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexCursorResponse.a_cloneInfo)
 }
 
 // -------------------------------------------------------------------
 
 // IndexKeyCursorResponse
 
-// required bytes key = 1;
-inline bool IndexKeyCursorResponse::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool IndexKeyCursorResponse::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IndexKeyCursorResponse::has_key() const {
-  return _internal_has_key();
+inline bool IndexKeyCursorResponse::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void IndexKeyCursorResponse::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void IndexKeyCursorResponse::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IndexKeyCursorResponse::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.key)
-  return _internal_key();
+inline const std::string& IndexKeyCursorResponse::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IndexKeyCursorResponse::set_key(ArgT0&& arg0, ArgT... args) {
+void IndexKeyCursorResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
 }
-inline std::string* IndexKeyCursorResponse::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.key)
+inline std::string* IndexKeyCursorResponse::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
   return _s;
 }
-inline const std::string& IndexKeyCursorResponse::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& IndexKeyCursorResponse::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void IndexKeyCursorResponse::_internal_set_key(const std::string& value) {
+inline void IndexKeyCursorResponse::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IndexKeyCursorResponse::_internal_mutable_key() {
+inline std::string* IndexKeyCursorResponse::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IndexKeyCursorResponse::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.key)
-  if (!_internal_has_key()) {
+inline std::string* IndexKeyCursorResponse::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IndexKeyCursorResponse::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void IndexKeyCursorResponse::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_key)
 }
 
-// required bytes sortKey = 2;
-inline bool IndexKeyCursorResponse::_internal_has_sortkey() const {
+// required bytes a_sortKey = 2;
+inline bool IndexKeyCursorResponse::_internal_has_a_sortkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IndexKeyCursorResponse::has_sortkey() const {
-  return _internal_has_sortkey();
+inline bool IndexKeyCursorResponse::has_a_sortkey() const {
+  return _internal_has_a_sortkey();
 }
-inline void IndexKeyCursorResponse::clear_sortkey() {
-  _impl_.sortkey_.ClearToEmpty();
+inline void IndexKeyCursorResponse::clear_a_sortkey() {
+  _impl_.a_sortkey_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IndexKeyCursorResponse::sortkey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.sortKey)
-  return _internal_sortkey();
+inline const std::string& IndexKeyCursorResponse::a_sortkey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
+  return _internal_a_sortkey();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IndexKeyCursorResponse::set_sortkey(ArgT0&& arg0, ArgT... args) {
+void IndexKeyCursorResponse::set_a_sortkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.sortkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.sortKey)
+ _impl_.a_sortkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
 }
-inline std::string* IndexKeyCursorResponse::mutable_sortkey() {
-  std::string* _s = _internal_mutable_sortkey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.sortKey)
+inline std::string* IndexKeyCursorResponse::mutable_a_sortkey() {
+  std::string* _s = _internal_mutable_a_sortkey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
   return _s;
 }
-inline const std::string& IndexKeyCursorResponse::_internal_sortkey() const {
-  return _impl_.sortkey_.Get();
+inline const std::string& IndexKeyCursorResponse::_internal_a_sortkey() const {
+  return _impl_.a_sortkey_.Get();
 }
-inline void IndexKeyCursorResponse::_internal_set_sortkey(const std::string& value) {
+inline void IndexKeyCursorResponse::_internal_set_a_sortkey(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.sortkey_.Set(value, GetArenaForAllocation());
+  _impl_.a_sortkey_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IndexKeyCursorResponse::_internal_mutable_sortkey() {
+inline std::string* IndexKeyCursorResponse::_internal_mutable_a_sortkey() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.sortkey_.Mutable(GetArenaForAllocation());
+  return _impl_.a_sortkey_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IndexKeyCursorResponse::release_sortkey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.sortKey)
-  if (!_internal_has_sortkey()) {
+inline std::string* IndexKeyCursorResponse::release_a_sortkey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
+  if (!_internal_has_a_sortkey()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.sortkey_.Release();
+  auto* p = _impl_.a_sortkey_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sortkey_.IsDefault()) {
-    _impl_.sortkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sortkey_.IsDefault()) {
+    _impl_.a_sortkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IndexKeyCursorResponse::set_allocated_sortkey(std::string* sortkey) {
-  if (sortkey != nullptr) {
+inline void IndexKeyCursorResponse::set_allocated_a_sortkey(std::string* a_sortkey) {
+  if (a_sortkey != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.sortkey_.SetAllocated(sortkey, GetArenaForAllocation());
+  _impl_.a_sortkey_.SetAllocated(a_sortkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sortkey_.IsDefault()) {
-    _impl_.sortkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sortkey_.IsDefault()) {
+    _impl_.a_sortkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.sortKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_sortKey)
 }
 
-// required bytes objectKey = 3;
-inline bool IndexKeyCursorResponse::_internal_has_objectkey() const {
+// required bytes a_objectKey = 3;
+inline bool IndexKeyCursorResponse::_internal_has_a_objectkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool IndexKeyCursorResponse::has_objectkey() const {
-  return _internal_has_objectkey();
+inline bool IndexKeyCursorResponse::has_a_objectkey() const {
+  return _internal_has_a_objectkey();
 }
-inline void IndexKeyCursorResponse::clear_objectkey() {
-  _impl_.objectkey_.ClearToEmpty();
+inline void IndexKeyCursorResponse::clear_a_objectkey() {
+  _impl_.a_objectkey_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& IndexKeyCursorResponse::objectkey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.objectKey)
-  return _internal_objectkey();
+inline const std::string& IndexKeyCursorResponse::a_objectkey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
+  return _internal_a_objectkey();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IndexKeyCursorResponse::set_objectkey(ArgT0&& arg0, ArgT... args) {
+void IndexKeyCursorResponse::set_a_objectkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.objectkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.objectKey)
+ _impl_.a_objectkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
 }
-inline std::string* IndexKeyCursorResponse::mutable_objectkey() {
-  std::string* _s = _internal_mutable_objectkey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.objectKey)
+inline std::string* IndexKeyCursorResponse::mutable_a_objectkey() {
+  std::string* _s = _internal_mutable_a_objectkey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
   return _s;
 }
-inline const std::string& IndexKeyCursorResponse::_internal_objectkey() const {
-  return _impl_.objectkey_.Get();
+inline const std::string& IndexKeyCursorResponse::_internal_a_objectkey() const {
+  return _impl_.a_objectkey_.Get();
 }
-inline void IndexKeyCursorResponse::_internal_set_objectkey(const std::string& value) {
+inline void IndexKeyCursorResponse::_internal_set_a_objectkey(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.objectkey_.Set(value, GetArenaForAllocation());
+  _impl_.a_objectkey_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IndexKeyCursorResponse::_internal_mutable_objectkey() {
+inline std::string* IndexKeyCursorResponse::_internal_mutable_a_objectkey() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.objectkey_.Mutable(GetArenaForAllocation());
+  return _impl_.a_objectkey_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IndexKeyCursorResponse::release_objectkey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.objectKey)
-  if (!_internal_has_objectkey()) {
+inline std::string* IndexKeyCursorResponse::release_a_objectkey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
+  if (!_internal_has_a_objectkey()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.objectkey_.Release();
+  auto* p = _impl_.a_objectkey_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.objectkey_.IsDefault()) {
-    _impl_.objectkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_objectkey_.IsDefault()) {
+    _impl_.a_objectkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IndexKeyCursorResponse::set_allocated_objectkey(std::string* objectkey) {
-  if (objectkey != nullptr) {
+inline void IndexKeyCursorResponse::set_allocated_a_objectkey(std::string* a_objectkey) {
+  if (a_objectkey != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.objectkey_.SetAllocated(objectkey, GetArenaForAllocation());
+  _impl_.a_objectkey_.SetAllocated(a_objectkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.objectkey_.IsDefault()) {
-    _impl_.objectkey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_objectkey_.IsDefault()) {
+    _impl_.a_objectkey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.objectKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse.a_objectKey)
 }
 
 // -------------------------------------------------------------------
 
 // CursorResponse__mVArrayOfObjectStoreCursorResponse
 
-// repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 1;
-inline int CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_mvarrayofobjectstorecursorresponse_size() const {
-  return _impl_.mvarrayofobjectstorecursorresponse_.size();
+// repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 1;
+inline int CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_a_mvarrayofobjectstorecursorresponse_size() const {
+  return _impl_.a_mvarrayofobjectstorecursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfObjectStoreCursorResponse::mvarrayofobjectstorecursorresponse_size() const {
-  return _internal_mvarrayofobjectstorecursorresponse_size();
+inline int CursorResponse__mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse_size() const {
+  return _internal_a_mvarrayofobjectstorecursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfObjectStoreCursorResponse::clear_mvarrayofobjectstorecursorresponse() {
-  _impl_.mvarrayofobjectstorecursorresponse_.Clear();
+inline void CursorResponse__mVArrayOfObjectStoreCursorResponse::clear_a_mvarrayofobjectstorecursorresponse() {
+  _impl_.a_mvarrayofobjectstorecursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::mutable_mvarrayofobjectstorecursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.mVArrayOfObjectStoreCursorResponse)
-  return _impl_.mvarrayofobjectstorecursorresponse_.Mutable(index);
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::mutable_a_mvarrayofobjectstorecursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  return _impl_.a_mvarrayofobjectstorecursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >*
-CursorResponse__mVArrayOfObjectStoreCursorResponse::mutable_mvarrayofobjectstorecursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.mVArrayOfObjectStoreCursorResponse)
-  return &_impl_.mvarrayofobjectstorecursorresponse_;
+CursorResponse__mVArrayOfObjectStoreCursorResponse::mutable_a_mvarrayofobjectstorecursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  return &_impl_.a_mvarrayofobjectstorecursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_mvarrayofobjectstorecursorresponse(int index) const {
-  return _impl_.mvarrayofobjectstorecursorresponse_.Get(index);
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_a_mvarrayofobjectstorecursorresponse(int index) const {
+  return _impl_.a_mvarrayofobjectstorecursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse__mVArrayOfObjectStoreCursorResponse::mvarrayofobjectstorecursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.mVArrayOfObjectStoreCursorResponse)
-  return _internal_mvarrayofobjectstorecursorresponse(index);
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse__mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  return _internal_a_mvarrayofobjectstorecursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_add_mvarrayofobjectstorecursorresponse() {
-  return _impl_.mvarrayofobjectstorecursorresponse_.Add();
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_add_a_mvarrayofobjectstorecursorresponse() {
+  return _impl_.a_mvarrayofobjectstorecursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::add_mvarrayofobjectstorecursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* _add = _internal_add_mvarrayofobjectstorecursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.mVArrayOfObjectStoreCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::add_a_mvarrayofobjectstorecursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* _add = _internal_add_a_mvarrayofobjectstorecursorresponse();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >&
-CursorResponse__mVArrayOfObjectStoreCursorResponse::mvarrayofobjectstorecursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.mVArrayOfObjectStoreCursorResponse)
-  return _impl_.mvarrayofobjectstorecursorresponse_;
+CursorResponse__mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  return _impl_.a_mvarrayofobjectstorecursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
 // CursorResponse__mVArrayOfObjectStoreKeyCursorResponse
 
-// repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 1;
-inline int CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_mvarrayofobjectstorekeycursorresponse_size() const {
-  return _impl_.mvarrayofobjectstorekeycursorresponse_.size();
+// repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 1;
+inline int CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse_size() const {
+  return _impl_.a_mvarrayofobjectstorekeycursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mvarrayofobjectstorekeycursorresponse_size() const {
-  return _internal_mvarrayofobjectstorekeycursorresponse_size();
+inline int CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse_size() const {
+  return _internal_a_mvarrayofobjectstorekeycursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::clear_mvarrayofobjectstorekeycursorresponse() {
-  _impl_.mvarrayofobjectstorekeycursorresponse_.Clear();
+inline void CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::clear_a_mvarrayofobjectstorekeycursorresponse() {
+  _impl_.a_mvarrayofobjectstorekeycursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mutable_mvarrayofobjectstorekeycursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  return _impl_.mvarrayofobjectstorekeycursorresponse_.Mutable(index);
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  return _impl_.a_mvarrayofobjectstorekeycursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >*
-CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mutable_mvarrayofobjectstorekeycursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  return &_impl_.mvarrayofobjectstorekeycursorresponse_;
+CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  return &_impl_.a_mvarrayofobjectstorekeycursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_mvarrayofobjectstorekeycursorresponse(int index) const {
-  return _impl_.mvarrayofobjectstorekeycursorresponse_.Get(index);
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse(int index) const {
+  return _impl_.a_mvarrayofobjectstorekeycursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mvarrayofobjectstorekeycursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  return _internal_mvarrayofobjectstorekeycursorresponse(index);
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  return _internal_a_mvarrayofobjectstorekeycursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_add_mvarrayofobjectstorekeycursorresponse() {
-  return _impl_.mvarrayofobjectstorekeycursorresponse_.Add();
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_add_a_mvarrayofobjectstorekeycursorresponse() {
+  return _impl_.a_mvarrayofobjectstorekeycursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::add_mvarrayofobjectstorekeycursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* _add = _internal_add_mvarrayofobjectstorekeycursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::add_a_mvarrayofobjectstorekeycursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* _add = _internal_add_a_mvarrayofobjectstorekeycursorresponse();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >&
-CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mvarrayofobjectstorekeycursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  return _impl_.mvarrayofobjectstorekeycursorresponse_;
+CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  return _impl_.a_mvarrayofobjectstorekeycursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
 // CursorResponse__mVArrayOfIndexCursorResponse
 
-// repeated .protobuf.mozilla.dom.indexedDB.IndexCursorResponse mVArrayOfIndexCursorResponse = 1;
-inline int CursorResponse__mVArrayOfIndexCursorResponse::_internal_mvarrayofindexcursorresponse_size() const {
-  return _impl_.mvarrayofindexcursorresponse_.size();
+// repeated .protobuf.mozilla.dom.indexedDB.IndexCursorResponse a_mVArrayOfIndexCursorResponse = 1;
+inline int CursorResponse__mVArrayOfIndexCursorResponse::_internal_a_mvarrayofindexcursorresponse_size() const {
+  return _impl_.a_mvarrayofindexcursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfIndexCursorResponse::mvarrayofindexcursorresponse_size() const {
-  return _internal_mvarrayofindexcursorresponse_size();
+inline int CursorResponse__mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse_size() const {
+  return _internal_a_mvarrayofindexcursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfIndexCursorResponse::clear_mvarrayofindexcursorresponse() {
-  _impl_.mvarrayofindexcursorresponse_.Clear();
+inline void CursorResponse__mVArrayOfIndexCursorResponse::clear_a_mvarrayofindexcursorresponse() {
+  _impl_.a_mvarrayofindexcursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::mutable_mvarrayofindexcursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.mVArrayOfIndexCursorResponse)
-  return _impl_.mvarrayofindexcursorresponse_.Mutable(index);
+inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::mutable_a_mvarrayofindexcursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+  return _impl_.a_mvarrayofindexcursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >*
-CursorResponse__mVArrayOfIndexCursorResponse::mutable_mvarrayofindexcursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.mVArrayOfIndexCursorResponse)
-  return &_impl_.mvarrayofindexcursorresponse_;
+CursorResponse__mVArrayOfIndexCursorResponse::mutable_a_mvarrayofindexcursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+  return &_impl_.a_mvarrayofindexcursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse__mVArrayOfIndexCursorResponse::_internal_mvarrayofindexcursorresponse(int index) const {
-  return _impl_.mvarrayofindexcursorresponse_.Get(index);
+inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse__mVArrayOfIndexCursorResponse::_internal_a_mvarrayofindexcursorresponse(int index) const {
+  return _impl_.a_mvarrayofindexcursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse__mVArrayOfIndexCursorResponse::mvarrayofindexcursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.mVArrayOfIndexCursorResponse)
-  return _internal_mvarrayofindexcursorresponse(index);
+inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse__mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+  return _internal_a_mvarrayofindexcursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::_internal_add_mvarrayofindexcursorresponse() {
-  return _impl_.mvarrayofindexcursorresponse_.Add();
+inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::_internal_add_a_mvarrayofindexcursorresponse() {
+  return _impl_.a_mvarrayofindexcursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::add_mvarrayofindexcursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* _add = _internal_add_mvarrayofindexcursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.mVArrayOfIndexCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::add_a_mvarrayofindexcursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* _add = _internal_add_a_mvarrayofindexcursorresponse();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >&
-CursorResponse__mVArrayOfIndexCursorResponse::mvarrayofindexcursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.mVArrayOfIndexCursorResponse)
-  return _impl_.mvarrayofindexcursorresponse_;
+CursorResponse__mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+  return _impl_.a_mvarrayofindexcursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
 // CursorResponse__mVArrayOfIndexKeyCursorResponse
 
-// repeated .protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse mVArrayOfIndexKeyCursorResponse = 1;
-inline int CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_mvarrayofindexkeycursorresponse_size() const {
-  return _impl_.mvarrayofindexkeycursorresponse_.size();
+// repeated .protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 1;
+inline int CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_a_mvarrayofindexkeycursorresponse_size() const {
+  return _impl_.a_mvarrayofindexkeycursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfIndexKeyCursorResponse::mvarrayofindexkeycursorresponse_size() const {
-  return _internal_mvarrayofindexkeycursorresponse_size();
+inline int CursorResponse__mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse_size() const {
+  return _internal_a_mvarrayofindexkeycursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfIndexKeyCursorResponse::clear_mvarrayofindexkeycursorresponse() {
-  _impl_.mvarrayofindexkeycursorresponse_.Clear();
+inline void CursorResponse__mVArrayOfIndexKeyCursorResponse::clear_a_mvarrayofindexkeycursorresponse() {
+  _impl_.a_mvarrayofindexkeycursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::mutable_mvarrayofindexkeycursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.mVArrayOfIndexKeyCursorResponse)
-  return _impl_.mvarrayofindexkeycursorresponse_.Mutable(index);
+inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::mutable_a_mvarrayofindexkeycursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  return _impl_.a_mvarrayofindexkeycursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >*
-CursorResponse__mVArrayOfIndexKeyCursorResponse::mutable_mvarrayofindexkeycursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.mVArrayOfIndexKeyCursorResponse)
-  return &_impl_.mvarrayofindexkeycursorresponse_;
+CursorResponse__mVArrayOfIndexKeyCursorResponse::mutable_a_mvarrayofindexkeycursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  return &_impl_.a_mvarrayofindexkeycursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_mvarrayofindexkeycursorresponse(int index) const {
-  return _impl_.mvarrayofindexkeycursorresponse_.Get(index);
+inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_a_mvarrayofindexkeycursorresponse(int index) const {
+  return _impl_.a_mvarrayofindexkeycursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse__mVArrayOfIndexKeyCursorResponse::mvarrayofindexkeycursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.mVArrayOfIndexKeyCursorResponse)
-  return _internal_mvarrayofindexkeycursorresponse(index);
+inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse__mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  return _internal_a_mvarrayofindexkeycursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_add_mvarrayofindexkeycursorresponse() {
-  return _impl_.mvarrayofindexkeycursorresponse_.Add();
+inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_add_a_mvarrayofindexkeycursorresponse() {
+  return _impl_.a_mvarrayofindexkeycursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::add_mvarrayofindexkeycursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* _add = _internal_add_mvarrayofindexkeycursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.mVArrayOfIndexKeyCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::add_a_mvarrayofindexkeycursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* _add = _internal_add_a_mvarrayofindexkeycursorresponse();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >&
-CursorResponse__mVArrayOfIndexKeyCursorResponse::mvarrayofindexkeycursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.mVArrayOfIndexKeyCursorResponse)
-  return _impl_.mvarrayofindexkeycursorresponse_;
+CursorResponse__mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  return _impl_.a_mvarrayofindexkeycursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
 // CursorResponse
 
-// bytes mVvoid_t = 1;
-inline bool CursorResponse::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 1;
+inline bool CursorResponse::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool CursorResponse::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool CursorResponse::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void CursorResponse::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void CursorResponse::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void CursorResponse::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void CursorResponse::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& CursorResponse::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& CursorResponse::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void CursorResponse::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void CursorResponse::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.CursorResponse.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVvoid_t)
 }
-inline std::string* CursorResponse::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.mVvoid_t)
+inline std::string* CursorResponse::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVvoid_t)
   return _s;
 }
-inline const std::string& CursorResponse::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& CursorResponse::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void CursorResponse::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void CursorResponse::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CursorResponse::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* CursorResponse::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* CursorResponse::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* CursorResponse::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void CursorResponse::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void CursorResponse::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVvoid_t)
 }
 
-// bytes mVnsresult = 2;
-inline bool CursorResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 2;
+inline bool CursorResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool CursorResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool CursorResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void CursorResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void CursorResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void CursorResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void CursorResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& CursorResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& CursorResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void CursorResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void CursorResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.CursorResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVnsresult)
 }
-inline std::string* CursorResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.mVnsresult)
+inline std::string* CursorResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& CursorResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& CursorResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void CursorResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void CursorResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CursorResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* CursorResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* CursorResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* CursorResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void CursorResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void CursorResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVnsresult)
 }
 
 // .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 3;

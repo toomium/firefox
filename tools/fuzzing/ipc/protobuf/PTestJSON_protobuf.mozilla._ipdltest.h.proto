@@ -13,25 +13,25 @@ package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message KeyValue {
-  required bytes key = 1;
-  required protobuf.mozilla._ipdltest.JSONVariant value = 2;
+  required bytes a_key = 1;
+  required protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
 }
 
 message JSONVariant {
   message _mVArrayOfKeyValue {
-    repeated protobuf.mozilla._ipdltest.KeyValue mVArrayOfKeyValue = 1;
+    repeated protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
   }
   message _mVArrayOfJSONVariant {
-    repeated protobuf.mozilla._ipdltest.JSONVariant mVArrayOfJSONVariant = 1;
+    repeated protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
   }
   oneof content {
-    bytes mVvoid_t = 1;
-    bytes mVnull_t = 2;
-    bool mVbool = 3;
-    sint32 mVint = 4;
-    double mVdouble = 5;
-    bytes mVnsString = 6;
-    bytes mVPTestJSONHandle = 7;
+    bytes a_mVvoid_t = 1;
+    bytes a_mVnull_t = 2;
+    bool a_mVbool = 3;
+    sint32 a_mVint = 4;
+    double a_mVdouble = 5;
+    bytes a_mVnsString = 6;
+    bytes a_mVPTestJSONHandle = 7;
     _mVArrayOfKeyValue mVArrayOfKeyValue = 8;
     _mVArrayOfJSONVariant mVArrayOfJSONVariant = 9;
   }

@@ -196,24 +196,24 @@ class Msg_OpenStream final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStreamIdFieldNumber = 1,
+    kAAStreamIdFieldNumber = 1,
   };
-  // required bytes aStreamId = 1;
-  bool has_astreamid() const;
+  // required bytes a_aStreamId = 1;
+  bool has_a_astreamid() const;
   private:
-  bool _internal_has_astreamid() const;
+  bool _internal_has_a_astreamid() const;
   public:
-  void clear_astreamid();
-  const std::string& astreamid() const;
+  void clear_a_astreamid();
+  const std::string& a_astreamid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astreamid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astreamid();
-  PROTOBUF_NODISCARD std::string* release_astreamid();
-  void set_allocated_astreamid(std::string* astreamid);
+  void set_a_astreamid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astreamid();
+  PROTOBUF_NODISCARD std::string* release_a_astreamid();
+  void set_allocated_a_astreamid(std::string* a_astreamid);
   private:
-  const std::string& _internal_astreamid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astreamid(const std::string& value);
-  std::string* _internal_mutable_astreamid();
+  const std::string& _internal_a_astreamid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astreamid(const std::string& value);
+  std::string* _internal_mutable_a_astreamid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream)
@@ -226,7 +226,7 @@ class Msg_OpenStream final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astreamid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astreamid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCacheStreamControl_2eproto;
@@ -343,25 +343,25 @@ class Reply_OpenStream final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStreamFieldNumber = 1,
+    kAAStreamFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.ipc.IPCStream aStream = 1;
-  bool has_astream() const;
+  // optional .protobuf.mozilla.ipc.IPCStream a_aStream = 1;
+  bool has_a_astream() const;
   private:
-  bool _internal_has_astream() const;
+  bool _internal_has_a_astream() const;
   public:
-  void clear_astream();
-  const ::protobuf::mozilla::ipc::IPCStream& astream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_astream();
-  ::protobuf::mozilla::ipc::IPCStream* mutable_astream();
-  void set_allocated_astream(::protobuf::mozilla::ipc::IPCStream* astream);
+  void clear_a_astream();
+  const ::protobuf::mozilla::ipc::IPCStream& a_astream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_a_astream();
+  ::protobuf::mozilla::ipc::IPCStream* mutable_a_astream();
+  void set_allocated_a_astream(::protobuf::mozilla::ipc::IPCStream* a_astream);
   private:
-  const ::protobuf::mozilla::ipc::IPCStream& _internal_astream() const;
-  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_astream();
+  const ::protobuf::mozilla::ipc::IPCStream& _internal_a_astream() const;
+  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_a_astream();
   public:
-  void unsafe_arena_set_allocated_astream(
-      ::protobuf::mozilla::ipc::IPCStream* astream);
-  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_astream();
+  void unsafe_arena_set_allocated_a_astream(
+      ::protobuf::mozilla::ipc::IPCStream* a_astream);
+  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_astream();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream)
  private:
@@ -373,7 +373,7 @@ class Reply_OpenStream final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::IPCStream* astream_;
+    ::protobuf::mozilla::ipc::IPCStream* a_astream_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCacheStreamControl_2eproto;
@@ -490,24 +490,24 @@ class Msg_NoteClosed final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStreamIdFieldNumber = 1,
+    kAAStreamIdFieldNumber = 1,
   };
-  // required bytes aStreamId = 1;
-  bool has_astreamid() const;
+  // required bytes a_aStreamId = 1;
+  bool has_a_astreamid() const;
   private:
-  bool _internal_has_astreamid() const;
+  bool _internal_has_a_astreamid() const;
   public:
-  void clear_astreamid();
-  const std::string& astreamid() const;
+  void clear_a_astreamid();
+  const std::string& a_astreamid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astreamid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astreamid();
-  PROTOBUF_NODISCARD std::string* release_astreamid();
-  void set_allocated_astreamid(std::string* astreamid);
+  void set_a_astreamid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astreamid();
+  PROTOBUF_NODISCARD std::string* release_a_astreamid();
+  void set_allocated_a_astreamid(std::string* a_astreamid);
   private:
-  const std::string& _internal_astreamid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astreamid(const std::string& value);
-  std::string* _internal_mutable_astreamid();
+  const std::string& _internal_a_astreamid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astreamid(const std::string& value);
+  std::string* _internal_mutable_a_astreamid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed)
@@ -520,7 +520,7 @@ class Msg_NoteClosed final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astreamid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astreamid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCacheStreamControl_2eproto;
@@ -908,113 +908,113 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OpenStream
 
-// required bytes aStreamId = 1;
-inline bool Msg_OpenStream::_internal_has_astreamid() const {
+// required bytes a_aStreamId = 1;
+inline bool Msg_OpenStream::_internal_has_a_astreamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OpenStream::has_astreamid() const {
-  return _internal_has_astreamid();
+inline bool Msg_OpenStream::has_a_astreamid() const {
+  return _internal_has_a_astreamid();
 }
-inline void Msg_OpenStream::clear_astreamid() {
-  _impl_.astreamid_.ClearToEmpty();
+inline void Msg_OpenStream::clear_a_astreamid() {
+  _impl_.a_astreamid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OpenStream::astreamid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.aStreamId)
-  return _internal_astreamid();
+inline const std::string& Msg_OpenStream::a_astreamid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
+  return _internal_a_astreamid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OpenStream::set_astreamid(ArgT0&& arg0, ArgT... args) {
+void Msg_OpenStream::set_a_astreamid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astreamid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.aStreamId)
+ _impl_.a_astreamid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
 }
-inline std::string* Msg_OpenStream::mutable_astreamid() {
-  std::string* _s = _internal_mutable_astreamid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.aStreamId)
+inline std::string* Msg_OpenStream::mutable_a_astreamid() {
+  std::string* _s = _internal_mutable_a_astreamid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
   return _s;
 }
-inline const std::string& Msg_OpenStream::_internal_astreamid() const {
-  return _impl_.astreamid_.Get();
+inline const std::string& Msg_OpenStream::_internal_a_astreamid() const {
+  return _impl_.a_astreamid_.Get();
 }
-inline void Msg_OpenStream::_internal_set_astreamid(const std::string& value) {
+inline void Msg_OpenStream::_internal_set_a_astreamid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astreamid_.Set(value, GetArenaForAllocation());
+  _impl_.a_astreamid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OpenStream::_internal_mutable_astreamid() {
+inline std::string* Msg_OpenStream::_internal_mutable_a_astreamid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astreamid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astreamid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OpenStream::release_astreamid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.aStreamId)
-  if (!_internal_has_astreamid()) {
+inline std::string* Msg_OpenStream::release_a_astreamid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
+  if (!_internal_has_a_astreamid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astreamid_.Release();
+  auto* p = _impl_.a_astreamid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astreamid_.IsDefault()) {
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astreamid_.IsDefault()) {
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OpenStream::set_allocated_astreamid(std::string* astreamid) {
-  if (astreamid != nullptr) {
+inline void Msg_OpenStream::set_allocated_a_astreamid(std::string* a_astreamid) {
+  if (a_astreamid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astreamid_.SetAllocated(astreamid, GetArenaForAllocation());
+  _impl_.a_astreamid_.SetAllocated(a_astreamid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astreamid_.IsDefault()) {
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astreamid_.IsDefault()) {
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.aStreamId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream.a_aStreamId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_OpenStream
 
-// optional .protobuf.mozilla.ipc.IPCStream aStream = 1;
-inline bool Reply_OpenStream::_internal_has_astream() const {
+// optional .protobuf.mozilla.ipc.IPCStream a_aStream = 1;
+inline bool Reply_OpenStream::_internal_has_a_astream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.astream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_astream_ != nullptr);
   return value;
 }
-inline bool Reply_OpenStream::has_astream() const {
-  return _internal_has_astream();
+inline bool Reply_OpenStream::has_a_astream() const {
+  return _internal_has_a_astream();
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& Reply_OpenStream::_internal_astream() const {
-  const ::protobuf::mozilla::ipc::IPCStream* p = _impl_.astream_;
+inline const ::protobuf::mozilla::ipc::IPCStream& Reply_OpenStream::_internal_a_astream() const {
+  const ::protobuf::mozilla::ipc::IPCStream* p = _impl_.a_astream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::IPCStream&>(
       ::protobuf::mozilla::ipc::_IPCStream_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& Reply_OpenStream::astream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.aStream)
-  return _internal_astream();
+inline const ::protobuf::mozilla::ipc::IPCStream& Reply_OpenStream::a_astream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.a_aStream)
+  return _internal_a_astream();
 }
-inline void Reply_OpenStream::unsafe_arena_set_allocated_astream(
-    ::protobuf::mozilla::ipc::IPCStream* astream) {
+inline void Reply_OpenStream::unsafe_arena_set_allocated_a_astream(
+    ::protobuf::mozilla::ipc::IPCStream* a_astream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.astream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_astream_);
   }
-  _impl_.astream_ = astream;
-  if (astream) {
+  _impl_.a_astream_ = a_astream;
+  if (a_astream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.aStream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.a_aStream)
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::release_astream() {
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::release_a_astream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.astream_;
-  _impl_.astream_ = nullptr;
+  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_astream_;
+  _impl_.a_astream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1026,117 +1026,117 @@ inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::release_astream() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::unsafe_arena_release_astream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.aStream)
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::unsafe_arena_release_a_astream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.a_aStream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.astream_;
-  _impl_.astream_ = nullptr;
+  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_astream_;
+  _impl_.a_astream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::_internal_mutable_astream() {
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::_internal_mutable_a_astream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.astream_ == nullptr) {
+  if (_impl_.a_astream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::IPCStream>(GetArenaForAllocation());
-    _impl_.astream_ = p;
+    _impl_.a_astream_ = p;
   }
-  return _impl_.astream_;
+  return _impl_.a_astream_;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::mutable_astream() {
-  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_astream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.aStream)
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_OpenStream::mutable_a_astream() {
+  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_a_astream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.a_aStream)
   return _msg;
 }
-inline void Reply_OpenStream::set_allocated_astream(::protobuf::mozilla::ipc::IPCStream* astream) {
+inline void Reply_OpenStream::set_allocated_a_astream(::protobuf::mozilla::ipc::IPCStream* a_astream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.astream_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_astream_);
   }
-  if (astream) {
+  if (a_astream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(astream));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_astream));
     if (message_arena != submessage_arena) {
-      astream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, astream, submessage_arena);
+      a_astream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_astream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astream_ = astream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.aStream)
+  _impl_.a_astream_ = a_astream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream.a_aStream)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NoteClosed
 
-// required bytes aStreamId = 1;
-inline bool Msg_NoteClosed::_internal_has_astreamid() const {
+// required bytes a_aStreamId = 1;
+inline bool Msg_NoteClosed::_internal_has_a_astreamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NoteClosed::has_astreamid() const {
-  return _internal_has_astreamid();
+inline bool Msg_NoteClosed::has_a_astreamid() const {
+  return _internal_has_a_astreamid();
 }
-inline void Msg_NoteClosed::clear_astreamid() {
-  _impl_.astreamid_.ClearToEmpty();
+inline void Msg_NoteClosed::clear_a_astreamid() {
+  _impl_.a_astreamid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NoteClosed::astreamid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.aStreamId)
-  return _internal_astreamid();
+inline const std::string& Msg_NoteClosed::a_astreamid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
+  return _internal_a_astreamid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NoteClosed::set_astreamid(ArgT0&& arg0, ArgT... args) {
+void Msg_NoteClosed::set_a_astreamid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astreamid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.aStreamId)
+ _impl_.a_astreamid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
 }
-inline std::string* Msg_NoteClosed::mutable_astreamid() {
-  std::string* _s = _internal_mutable_astreamid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.aStreamId)
+inline std::string* Msg_NoteClosed::mutable_a_astreamid() {
+  std::string* _s = _internal_mutable_a_astreamid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
   return _s;
 }
-inline const std::string& Msg_NoteClosed::_internal_astreamid() const {
-  return _impl_.astreamid_.Get();
+inline const std::string& Msg_NoteClosed::_internal_a_astreamid() const {
+  return _impl_.a_astreamid_.Get();
 }
-inline void Msg_NoteClosed::_internal_set_astreamid(const std::string& value) {
+inline void Msg_NoteClosed::_internal_set_a_astreamid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astreamid_.Set(value, GetArenaForAllocation());
+  _impl_.a_astreamid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NoteClosed::_internal_mutable_astreamid() {
+inline std::string* Msg_NoteClosed::_internal_mutable_a_astreamid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astreamid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astreamid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NoteClosed::release_astreamid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.aStreamId)
-  if (!_internal_has_astreamid()) {
+inline std::string* Msg_NoteClosed::release_a_astreamid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
+  if (!_internal_has_a_astreamid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astreamid_.Release();
+  auto* p = _impl_.a_astreamid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astreamid_.IsDefault()) {
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astreamid_.IsDefault()) {
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NoteClosed::set_allocated_astreamid(std::string* astreamid) {
-  if (astreamid != nullptr) {
+inline void Msg_NoteClosed::set_allocated_a_astreamid(std::string* a_astreamid) {
+  if (a_astreamid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astreamid_.SetAllocated(astreamid, GetArenaForAllocation());
+  _impl_.a_astreamid_.SetAllocated(a_astreamid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astreamid_.IsDefault()) {
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astreamid_.IsDefault()) {
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.aStreamId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed.a_aStreamId)
 }
 
 // -------------------------------------------------------------------

@@ -26,7 +26,7 @@ PROTOBUF_CONSTEXPR Msg_OpenStream::Msg_OpenStream(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.astreamid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_astreamid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_OpenStreamDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_OpenStreamDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -40,7 +40,7 @@ PROTOBUF_CONSTEXPR Reply_OpenStream::Reply_OpenStream(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.astream_)*/nullptr} {}
+  , /*decltype(_impl_.a_astream_)*/nullptr} {}
 struct Reply_OpenStreamDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_OpenStreamDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -54,7 +54,7 @@ PROTOBUF_CONSTEXPR Msg_NoteClosed::Msg_NoteClosed(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.astreamid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_astreamid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_NoteClosedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NoteClosedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -116,7 +116,7 @@ namespace PCacheStreamControl {
 class Msg_OpenStream::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_OpenStream>()._impl_._has_bits_);
-  static void set_has_astreamid(HasBits* has_bits) {
+  static void set_has_a_astreamid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -136,15 +136,15 @@ Msg_OpenStream::Msg_OpenStream(const Msg_OpenStream& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.astreamid_){}};
+    , decltype(_impl_.a_astreamid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.astreamid_.InitDefault();
+  _impl_.a_astreamid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_astreamid()) {
-    _this->_impl_.astreamid_.Set(from._internal_astreamid(), 
+  if (from._internal_has_a_astreamid()) {
+    _this->_impl_.a_astreamid_.Set(from._internal_a_astreamid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream)
@@ -157,11 +157,11 @@ inline void Msg_OpenStream::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.astreamid_){}
+    , decltype(_impl_.a_astreamid_){}
   };
-  _impl_.astreamid_.InitDefault();
+  _impl_.a_astreamid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -176,7 +176,7 @@ Msg_OpenStream::~Msg_OpenStream() {
 
 inline void Msg_OpenStream::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.astreamid_.Destroy();
+  _impl_.a_astreamid_.Destroy();
 }
 
 void Msg_OpenStream::SetCachedSize(int size) const {
@@ -191,7 +191,7 @@ void Msg_OpenStream::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.astreamid_.ClearNonDefaultToEmpty();
+    _impl_.a_astreamid_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -204,10 +204,10 @@ const char* Msg_OpenStream::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aStreamId = 1;
+      // required bytes a_aStreamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_astreamid();
+          auto str = _internal_mutable_a_astreamid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -244,10 +244,10 @@ uint8_t* Msg_OpenStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aStreamId = 1;
+  // required bytes a_aStreamId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_astreamid(), target);
+        1, this->_internal_a_astreamid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -262,11 +262,11 @@ size_t Msg_OpenStream::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_OpenStream)
   size_t total_size = 0;
 
-  // required bytes aStreamId = 1;
-  if (_internal_has_astreamid()) {
+  // required bytes a_aStreamId = 1;
+  if (_internal_has_a_astreamid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_astreamid());
+        this->_internal_a_astreamid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -293,8 +293,8 @@ void Msg_OpenStream::MergeFrom(const Msg_OpenStream& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_astreamid()) {
-    _this->_internal_set_astreamid(from._internal_astreamid());
+  if (from._internal_has_a_astreamid()) {
+    _this->_internal_set_a_astreamid(from._internal_a_astreamid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -318,8 +318,8 @@ void Msg_OpenStream::InternalSwap(Msg_OpenStream* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.astreamid_, lhs_arena,
-      &other->_impl_.astreamid_, rhs_arena
+      &_impl_.a_astreamid_, lhs_arena,
+      &other->_impl_.a_astreamid_, rhs_arena
   );
 }
 
@@ -333,18 +333,18 @@ std::string Msg_OpenStream::GetTypeName() const {
 class Reply_OpenStream::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_OpenStream>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::ipc::IPCStream& astream(const Reply_OpenStream* msg);
-  static void set_has_astream(HasBits* has_bits) {
+  static const ::protobuf::mozilla::ipc::IPCStream& a_astream(const Reply_OpenStream* msg);
+  static void set_has_a_astream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
 const ::protobuf::mozilla::ipc::IPCStream&
-Reply_OpenStream::_Internal::astream(const Reply_OpenStream* msg) {
-  return *msg->_impl_.astream_;
+Reply_OpenStream::_Internal::a_astream(const Reply_OpenStream* msg) {
+  return *msg->_impl_.a_astream_;
 }
-void Reply_OpenStream::clear_astream() {
-  if (_impl_.astream_ != nullptr) _impl_.astream_->Clear();
+void Reply_OpenStream::clear_a_astream() {
+  if (_impl_.a_astream_ != nullptr) _impl_.a_astream_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_OpenStream::Reply_OpenStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -359,11 +359,11 @@ Reply_OpenStream::Reply_OpenStream(const Reply_OpenStream& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.astream_){nullptr}};
+    , decltype(_impl_.a_astream_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_astream()) {
-    _this->_impl_.astream_ = new ::protobuf::mozilla::ipc::IPCStream(*from._impl_.astream_);
+  if (from._internal_has_a_astream()) {
+    _this->_impl_.a_astream_ = new ::protobuf::mozilla::ipc::IPCStream(*from._impl_.a_astream_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.cache.PCacheStreamControl.Reply_OpenStream)
 }
@@ -375,7 +375,7 @@ inline void Reply_OpenStream::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.astream_){nullptr}
+    , decltype(_impl_.a_astream_){nullptr}
   };
 }
 
@@ -390,7 +390,7 @@ Reply_OpenStream::~Reply_OpenStream() {
 
 inline void Reply_OpenStream::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.astream_;
+  if (this != internal_default_instance()) delete _impl_.a_astream_;
 }
 
 void Reply_OpenStream::SetCachedSize(int size) const {
@@ -405,8 +405,8 @@ void Reply_OpenStream::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.astream_ != nullptr);
-    _impl_.astream_->Clear();
+    GOOGLE_DCHECK(_impl_.a_astream_ != nullptr);
+    _impl_.a_astream_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -419,10 +419,10 @@ const char* Reply_OpenStream::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional .protobuf.mozilla.ipc.IPCStream aStream = 1;
+      // optional .protobuf.mozilla.ipc.IPCStream a_aStream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_astream(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_astream(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -458,11 +458,11 @@ uint8_t* Reply_OpenStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional .protobuf.mozilla.ipc.IPCStream aStream = 1;
+  // optional .protobuf.mozilla.ipc.IPCStream a_aStream = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::astream(this),
-        _Internal::astream(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_astream(this),
+        _Internal::a_astream(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -481,12 +481,12 @@ size_t Reply_OpenStream::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional .protobuf.mozilla.ipc.IPCStream aStream = 1;
+  // optional .protobuf.mozilla.ipc.IPCStream a_aStream = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.astream_);
+        *_impl_.a_astream_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -510,9 +510,9 @@ void Reply_OpenStream::MergeFrom(const Reply_OpenStream& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_astream()) {
-    _this->_internal_mutable_astream()->::protobuf::mozilla::ipc::IPCStream::MergeFrom(
-        from._internal_astream());
+  if (from._internal_has_a_astream()) {
+    _this->_internal_mutable_a_astream()->::protobuf::mozilla::ipc::IPCStream::MergeFrom(
+        from._internal_a_astream());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -525,8 +525,8 @@ void Reply_OpenStream::CopyFrom(const Reply_OpenStream& from) {
 }
 
 bool Reply_OpenStream::IsInitialized() const {
-  if (_internal_has_astream()) {
-    if (!_impl_.astream_->IsInitialized()) return false;
+  if (_internal_has_a_astream()) {
+    if (!_impl_.a_astream_->IsInitialized()) return false;
   }
   return true;
 }
@@ -535,7 +535,7 @@ void Reply_OpenStream::InternalSwap(Reply_OpenStream* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.astream_, other->_impl_.astream_);
+  swap(_impl_.a_astream_, other->_impl_.a_astream_);
 }
 
 std::string Reply_OpenStream::GetTypeName() const {
@@ -548,7 +548,7 @@ std::string Reply_OpenStream::GetTypeName() const {
 class Msg_NoteClosed::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_NoteClosed>()._impl_._has_bits_);
-  static void set_has_astreamid(HasBits* has_bits) {
+  static void set_has_a_astreamid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -568,15 +568,15 @@ Msg_NoteClosed::Msg_NoteClosed(const Msg_NoteClosed& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.astreamid_){}};
+    , decltype(_impl_.a_astreamid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.astreamid_.InitDefault();
+  _impl_.a_astreamid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_astreamid()) {
-    _this->_impl_.astreamid_.Set(from._internal_astreamid(), 
+  if (from._internal_has_a_astreamid()) {
+    _this->_impl_.a_astreamid_.Set(from._internal_a_astreamid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed)
@@ -589,11 +589,11 @@ inline void Msg_NoteClosed::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.astreamid_){}
+    , decltype(_impl_.a_astreamid_){}
   };
-  _impl_.astreamid_.InitDefault();
+  _impl_.a_astreamid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.astreamid_.Set("", GetArenaForAllocation());
+    _impl_.a_astreamid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -608,7 +608,7 @@ Msg_NoteClosed::~Msg_NoteClosed() {
 
 inline void Msg_NoteClosed::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.astreamid_.Destroy();
+  _impl_.a_astreamid_.Destroy();
 }
 
 void Msg_NoteClosed::SetCachedSize(int size) const {
@@ -623,7 +623,7 @@ void Msg_NoteClosed::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.astreamid_.ClearNonDefaultToEmpty();
+    _impl_.a_astreamid_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -636,10 +636,10 @@ const char* Msg_NoteClosed::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aStreamId = 1;
+      // required bytes a_aStreamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_astreamid();
+          auto str = _internal_mutable_a_astreamid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -676,10 +676,10 @@ uint8_t* Msg_NoteClosed::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aStreamId = 1;
+  // required bytes a_aStreamId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_astreamid(), target);
+        1, this->_internal_a_astreamid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -694,11 +694,11 @@ size_t Msg_NoteClosed::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.cache.PCacheStreamControl.Msg_NoteClosed)
   size_t total_size = 0;
 
-  // required bytes aStreamId = 1;
-  if (_internal_has_astreamid()) {
+  // required bytes a_aStreamId = 1;
+  if (_internal_has_a_astreamid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_astreamid());
+        this->_internal_a_astreamid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -725,8 +725,8 @@ void Msg_NoteClosed::MergeFrom(const Msg_NoteClosed& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_astreamid()) {
-    _this->_internal_set_astreamid(from._internal_astreamid());
+  if (from._internal_has_a_astreamid()) {
+    _this->_internal_set_a_astreamid(from._internal_a_astreamid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -750,8 +750,8 @@ void Msg_NoteClosed::InternalSwap(Msg_NoteClosed* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.astreamid_, lhs_arena,
-      &other->_impl_.astreamid_, rhs_arena
+      &_impl_.a_astreamid_, lhs_arena,
+      &other->_impl_.a_astreamid_, rhs_arena
   );
 }
 

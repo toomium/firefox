@@ -201,104 +201,104 @@ class Msg_AsyncOpen final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHostFieldNumber = 1,
-    kALocalAddressFieldNumber = 3,
-    kAProxyConfigFieldNumber = 6,
-    kAPortFieldNumber = 2,
-    kALocalPortFieldNumber = 4,
-    kAUseTlsFieldNumber = 5,
+    kAAHostFieldNumber = 1,
+    kAALocalAddressFieldNumber = 3,
+    kAAProxyConfigFieldNumber = 6,
+    kAAPortFieldNumber = 2,
+    kAALocalPortFieldNumber = 4,
+    kAAUseTlsFieldNumber = 5,
   };
-  // required bytes aHost = 1;
-  bool has_ahost() const;
+  // required bytes a_aHost = 1;
+  bool has_a_ahost() const;
   private:
-  bool _internal_has_ahost() const;
+  bool _internal_has_a_ahost() const;
   public:
-  void clear_ahost();
-  const std::string& ahost() const;
+  void clear_a_ahost();
+  const std::string& a_ahost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahost();
-  PROTOBUF_NODISCARD std::string* release_ahost();
-  void set_allocated_ahost(std::string* ahost);
+  void set_a_ahost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahost();
+  PROTOBUF_NODISCARD std::string* release_a_ahost();
+  void set_allocated_a_ahost(std::string* a_ahost);
   private:
-  const std::string& _internal_ahost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahost(const std::string& value);
-  std::string* _internal_mutable_ahost();
+  const std::string& _internal_a_ahost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahost(const std::string& value);
+  std::string* _internal_mutable_a_ahost();
   public:
 
-  // required bytes aLocalAddress = 3;
-  bool has_alocaladdress() const;
+  // required bytes a_aLocalAddress = 3;
+  bool has_a_alocaladdress() const;
   private:
-  bool _internal_has_alocaladdress() const;
+  bool _internal_has_a_alocaladdress() const;
   public:
-  void clear_alocaladdress();
-  const std::string& alocaladdress() const;
+  void clear_a_alocaladdress();
+  const std::string& a_alocaladdress() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_alocaladdress(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_alocaladdress();
-  PROTOBUF_NODISCARD std::string* release_alocaladdress();
-  void set_allocated_alocaladdress(std::string* alocaladdress);
+  void set_a_alocaladdress(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_alocaladdress();
+  PROTOBUF_NODISCARD std::string* release_a_alocaladdress();
+  void set_allocated_a_alocaladdress(std::string* a_alocaladdress);
   private:
-  const std::string& _internal_alocaladdress() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_alocaladdress(const std::string& value);
-  std::string* _internal_mutable_alocaladdress();
+  const std::string& _internal_a_alocaladdress() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_alocaladdress(const std::string& value);
+  std::string* _internal_mutable_a_alocaladdress();
   public:
 
-  // optional .protobuf.mozilla.net.WebrtcProxyConfig aProxyConfig = 6;
-  bool has_aproxyconfig() const;
+  // optional .protobuf.mozilla.net.WebrtcProxyConfig a_aProxyConfig = 6;
+  bool has_a_aproxyconfig() const;
   private:
-  bool _internal_has_aproxyconfig() const;
+  bool _internal_has_a_aproxyconfig() const;
   public:
-  void clear_aproxyconfig();
-  const ::protobuf::mozilla::net::WebrtcProxyConfig& aproxyconfig() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::WebrtcProxyConfig* release_aproxyconfig();
-  ::protobuf::mozilla::net::WebrtcProxyConfig* mutable_aproxyconfig();
-  void set_allocated_aproxyconfig(::protobuf::mozilla::net::WebrtcProxyConfig* aproxyconfig);
+  void clear_a_aproxyconfig();
+  const ::protobuf::mozilla::net::WebrtcProxyConfig& a_aproxyconfig() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::WebrtcProxyConfig* release_a_aproxyconfig();
+  ::protobuf::mozilla::net::WebrtcProxyConfig* mutable_a_aproxyconfig();
+  void set_allocated_a_aproxyconfig(::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig);
   private:
-  const ::protobuf::mozilla::net::WebrtcProxyConfig& _internal_aproxyconfig() const;
-  ::protobuf::mozilla::net::WebrtcProxyConfig* _internal_mutable_aproxyconfig();
+  const ::protobuf::mozilla::net::WebrtcProxyConfig& _internal_a_aproxyconfig() const;
+  ::protobuf::mozilla::net::WebrtcProxyConfig* _internal_mutable_a_aproxyconfig();
   public:
-  void unsafe_arena_set_allocated_aproxyconfig(
-      ::protobuf::mozilla::net::WebrtcProxyConfig* aproxyconfig);
-  ::protobuf::mozilla::net::WebrtcProxyConfig* unsafe_arena_release_aproxyconfig();
+  void unsafe_arena_set_allocated_a_aproxyconfig(
+      ::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig);
+  ::protobuf::mozilla::net::WebrtcProxyConfig* unsafe_arena_release_a_aproxyconfig();
 
-  // required sint32 aPort = 2;
-  bool has_aport() const;
+  // required sint32 a_aPort = 2;
+  bool has_a_aport() const;
   private:
-  bool _internal_has_aport() const;
+  bool _internal_has_a_aport() const;
   public:
-  void clear_aport();
-  int32_t aport() const;
-  void set_aport(int32_t value);
+  void clear_a_aport();
+  int32_t a_aport() const;
+  void set_a_aport(int32_t value);
   private:
-  int32_t _internal_aport() const;
-  void _internal_set_aport(int32_t value);
-  public:
-
-  // required sint32 aLocalPort = 4;
-  bool has_alocalport() const;
-  private:
-  bool _internal_has_alocalport() const;
-  public:
-  void clear_alocalport();
-  int32_t alocalport() const;
-  void set_alocalport(int32_t value);
-  private:
-  int32_t _internal_alocalport() const;
-  void _internal_set_alocalport(int32_t value);
+  int32_t _internal_a_aport() const;
+  void _internal_set_a_aport(int32_t value);
   public:
 
-  // required bool aUseTls = 5;
-  bool has_ausetls() const;
+  // required sint32 a_aLocalPort = 4;
+  bool has_a_alocalport() const;
   private:
-  bool _internal_has_ausetls() const;
+  bool _internal_has_a_alocalport() const;
   public:
-  void clear_ausetls();
-  bool ausetls() const;
-  void set_ausetls(bool value);
+  void clear_a_alocalport();
+  int32_t a_alocalport() const;
+  void set_a_alocalport(int32_t value);
   private:
-  bool _internal_ausetls() const;
-  void _internal_set_ausetls(bool value);
+  int32_t _internal_a_alocalport() const;
+  void _internal_set_a_alocalport(int32_t value);
+  public:
+
+  // required bool a_aUseTls = 5;
+  bool has_a_ausetls() const;
+  private:
+  bool _internal_has_a_ausetls() const;
+  public:
+  void clear_a_ausetls();
+  bool a_ausetls() const;
+  void set_a_ausetls(bool value);
+  private:
+  bool _internal_a_ausetls() const;
+  void _internal_set_a_ausetls(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen)
@@ -314,12 +314,12 @@ class Msg_AsyncOpen final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahost_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr alocaladdress_;
-    ::protobuf::mozilla::net::WebrtcProxyConfig* aproxyconfig_;
-    int32_t aport_;
-    int32_t alocalport_;
-    bool ausetls_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahost_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_alocaladdress_;
+    ::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig_;
+    int32_t a_aport_;
+    int32_t a_alocalport_;
+    bool a_ausetls_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcTCPSocket_2eproto;
@@ -436,29 +436,29 @@ class Msg_Write final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAWriteDataFieldNumber = 1,
+    kAAWriteDataFieldNumber = 1,
   };
-  // repeated uint32 aWriteData = 1;
-  int awritedata_size() const;
+  // repeated uint32 a_aWriteData = 1;
+  int a_awritedata_size() const;
   private:
-  int _internal_awritedata_size() const;
+  int _internal_a_awritedata_size() const;
   public:
-  void clear_awritedata();
+  void clear_a_awritedata();
   private:
-  uint32_t _internal_awritedata(int index) const;
+  uint32_t _internal_a_awritedata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_awritedata() const;
-  void _internal_add_awritedata(uint32_t value);
+      _internal_a_awritedata() const;
+  void _internal_add_a_awritedata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_awritedata();
+      _internal_mutable_a_awritedata();
   public:
-  uint32_t awritedata(int index) const;
-  void set_awritedata(int index, uint32_t value);
-  void add_awritedata(uint32_t value);
+  uint32_t a_awritedata(int index) const;
+  void set_a_awritedata(int index, uint32_t value);
+  void add_a_awritedata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      awritedata() const;
+      a_awritedata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_awritedata();
+      mutable_a_awritedata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write)
  private:
@@ -468,7 +468,7 @@ class Msg_Write final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > awritedata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_awritedata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -710,24 +710,24 @@ class Msg_OnClose final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAReasonFieldNumber = 1,
+    kAAReasonFieldNumber = 1,
   };
-  // required bytes aReason = 1;
-  bool has_areason() const;
+  // required bytes a_aReason = 1;
+  bool has_a_areason() const;
   private:
-  bool _internal_has_areason() const;
+  bool _internal_has_a_areason() const;
   public:
-  void clear_areason();
-  const std::string& areason() const;
+  void clear_a_areason();
+  const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_areason(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_areason();
-  PROTOBUF_NODISCARD std::string* release_areason();
-  void set_allocated_areason(std::string* areason);
+  void set_a_areason(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_areason();
+  PROTOBUF_NODISCARD std::string* release_a_areason();
+  void set_allocated_a_areason(std::string* a_areason);
   private:
-  const std::string& _internal_areason() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_areason(const std::string& value);
-  std::string* _internal_mutable_areason();
+  const std::string& _internal_a_areason() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_areason(const std::string& value);
+  std::string* _internal_mutable_a_areason();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose)
@@ -740,7 +740,7 @@ class Msg_OnClose final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr areason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcTCPSocket_2eproto;
@@ -857,24 +857,24 @@ class Msg_OnConnected final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAProxyTypeFieldNumber = 1,
+    kAAProxyTypeFieldNumber = 1,
   };
-  // required bytes aProxyType = 1;
-  bool has_aproxytype() const;
+  // required bytes a_aProxyType = 1;
+  bool has_a_aproxytype() const;
   private:
-  bool _internal_has_aproxytype() const;
+  bool _internal_has_a_aproxytype() const;
   public:
-  void clear_aproxytype();
-  const std::string& aproxytype() const;
+  void clear_a_aproxytype();
+  const std::string& a_aproxytype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aproxytype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aproxytype();
-  PROTOBUF_NODISCARD std::string* release_aproxytype();
-  void set_allocated_aproxytype(std::string* aproxytype);
+  void set_a_aproxytype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aproxytype();
+  PROTOBUF_NODISCARD std::string* release_a_aproxytype();
+  void set_allocated_a_aproxytype(std::string* a_aproxytype);
   private:
-  const std::string& _internal_aproxytype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aproxytype(const std::string& value);
-  std::string* _internal_mutable_aproxytype();
+  const std::string& _internal_a_aproxytype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aproxytype(const std::string& value);
+  std::string* _internal_mutable_a_aproxytype();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected)
@@ -887,7 +887,7 @@ class Msg_OnConnected final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aproxytype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aproxytype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcTCPSocket_2eproto;
@@ -1004,29 +1004,29 @@ class Msg_OnRead final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAReadDataFieldNumber = 1,
+    kAAReadDataFieldNumber = 1,
   };
-  // repeated uint32 aReadData = 1;
-  int areaddata_size() const;
+  // repeated uint32 a_aReadData = 1;
+  int a_areaddata_size() const;
   private:
-  int _internal_areaddata_size() const;
+  int _internal_a_areaddata_size() const;
   public:
-  void clear_areaddata();
+  void clear_a_areaddata();
   private:
-  uint32_t _internal_areaddata(int index) const;
+  uint32_t _internal_a_areaddata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_areaddata() const;
-  void _internal_add_areaddata(uint32_t value);
+      _internal_a_areaddata() const;
+  void _internal_add_a_areaddata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_areaddata();
+      _internal_mutable_a_areaddata();
   public:
-  uint32_t areaddata(int index) const;
-  void set_areaddata(int index, uint32_t value);
-  void add_areaddata(uint32_t value);
+  uint32_t a_areaddata(int index) const;
+  void set_a_areaddata(int index, uint32_t value);
+  void add_a_areaddata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      areaddata() const;
+      a_areaddata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_areaddata();
+      mutable_a_areaddata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead)
  private:
@@ -1036,7 +1036,7 @@ class Msg_OnRead final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > areaddata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_areaddata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1301,261 +1301,261 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_AsyncOpen
 
-// required bytes aHost = 1;
-inline bool Msg_AsyncOpen::_internal_has_ahost() const {
+// required bytes a_aHost = 1;
+inline bool Msg_AsyncOpen::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AsyncOpen::has_ahost() const {
-  return _internal_has_ahost();
+inline bool Msg_AsyncOpen::has_a_ahost() const {
+  return _internal_has_a_ahost();
 }
-inline void Msg_AsyncOpen::clear_ahost() {
-  _impl_.ahost_.ClearToEmpty();
+inline void Msg_AsyncOpen::clear_a_ahost() {
+  _impl_.a_ahost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AsyncOpen::ahost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aHost)
-  return _internal_ahost();
+inline const std::string& Msg_AsyncOpen::a_ahost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
+  return _internal_a_ahost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AsyncOpen::set_ahost(ArgT0&& arg0, ArgT... args) {
+void Msg_AsyncOpen::set_a_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aHost)
+ _impl_.a_ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
 }
-inline std::string* Msg_AsyncOpen::mutable_ahost() {
-  std::string* _s = _internal_mutable_ahost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aHost)
+inline std::string* Msg_AsyncOpen::mutable_a_ahost() {
+  std::string* _s = _internal_mutable_a_ahost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
   return _s;
 }
-inline const std::string& Msg_AsyncOpen::_internal_ahost() const {
-  return _impl_.ahost_.Get();
+inline const std::string& Msg_AsyncOpen::_internal_a_ahost() const {
+  return _impl_.a_ahost_.Get();
 }
-inline void Msg_AsyncOpen::_internal_set_ahost(const std::string& value) {
+inline void Msg_AsyncOpen::_internal_set_a_ahost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahost_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AsyncOpen::_internal_mutable_ahost() {
+inline std::string* Msg_AsyncOpen::_internal_mutable_a_ahost() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AsyncOpen::release_ahost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aHost)
-  if (!_internal_has_ahost()) {
+inline std::string* Msg_AsyncOpen::release_a_ahost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
+  if (!_internal_has_a_ahost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahost_.Release();
+  auto* p = _impl_.a_ahost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AsyncOpen::set_allocated_ahost(std::string* ahost) {
-  if (ahost != nullptr) {
+inline void Msg_AsyncOpen::set_allocated_a_ahost(std::string* a_ahost) {
+  if (a_ahost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahost_.SetAllocated(ahost, GetArenaForAllocation());
+  _impl_.a_ahost_.SetAllocated(a_ahost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
 }
 
-// required sint32 aPort = 2;
-inline bool Msg_AsyncOpen::_internal_has_aport() const {
+// required sint32 a_aPort = 2;
+inline bool Msg_AsyncOpen::_internal_has_a_aport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_AsyncOpen::has_aport() const {
-  return _internal_has_aport();
+inline bool Msg_AsyncOpen::has_a_aport() const {
+  return _internal_has_a_aport();
 }
-inline void Msg_AsyncOpen::clear_aport() {
-  _impl_.aport_ = 0;
+inline void Msg_AsyncOpen::clear_a_aport() {
+  _impl_.a_aport_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t Msg_AsyncOpen::_internal_aport() const {
-  return _impl_.aport_;
+inline int32_t Msg_AsyncOpen::_internal_a_aport() const {
+  return _impl_.a_aport_;
 }
-inline int32_t Msg_AsyncOpen::aport() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aPort)
-  return _internal_aport();
+inline int32_t Msg_AsyncOpen::a_aport() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aPort)
+  return _internal_a_aport();
 }
-inline void Msg_AsyncOpen::_internal_set_aport(int32_t value) {
+inline void Msg_AsyncOpen::_internal_set_a_aport(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aport_ = value;
+  _impl_.a_aport_ = value;
 }
-inline void Msg_AsyncOpen::set_aport(int32_t value) {
-  _internal_set_aport(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aPort)
+inline void Msg_AsyncOpen::set_a_aport(int32_t value) {
+  _internal_set_a_aport(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aPort)
 }
 
-// required bytes aLocalAddress = 3;
-inline bool Msg_AsyncOpen::_internal_has_alocaladdress() const {
+// required bytes a_aLocalAddress = 3;
+inline bool Msg_AsyncOpen::_internal_has_a_alocaladdress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AsyncOpen::has_alocaladdress() const {
-  return _internal_has_alocaladdress();
+inline bool Msg_AsyncOpen::has_a_alocaladdress() const {
+  return _internal_has_a_alocaladdress();
 }
-inline void Msg_AsyncOpen::clear_alocaladdress() {
-  _impl_.alocaladdress_.ClearToEmpty();
+inline void Msg_AsyncOpen::clear_a_alocaladdress() {
+  _impl_.a_alocaladdress_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_AsyncOpen::alocaladdress() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalAddress)
-  return _internal_alocaladdress();
+inline const std::string& Msg_AsyncOpen::a_alocaladdress() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
+  return _internal_a_alocaladdress();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AsyncOpen::set_alocaladdress(ArgT0&& arg0, ArgT... args) {
+void Msg_AsyncOpen::set_a_alocaladdress(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.alocaladdress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalAddress)
+ _impl_.a_alocaladdress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
 }
-inline std::string* Msg_AsyncOpen::mutable_alocaladdress() {
-  std::string* _s = _internal_mutable_alocaladdress();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalAddress)
+inline std::string* Msg_AsyncOpen::mutable_a_alocaladdress() {
+  std::string* _s = _internal_mutable_a_alocaladdress();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
   return _s;
 }
-inline const std::string& Msg_AsyncOpen::_internal_alocaladdress() const {
-  return _impl_.alocaladdress_.Get();
+inline const std::string& Msg_AsyncOpen::_internal_a_alocaladdress() const {
+  return _impl_.a_alocaladdress_.Get();
 }
-inline void Msg_AsyncOpen::_internal_set_alocaladdress(const std::string& value) {
+inline void Msg_AsyncOpen::_internal_set_a_alocaladdress(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.alocaladdress_.Set(value, GetArenaForAllocation());
+  _impl_.a_alocaladdress_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AsyncOpen::_internal_mutable_alocaladdress() {
+inline std::string* Msg_AsyncOpen::_internal_mutable_a_alocaladdress() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.alocaladdress_.Mutable(GetArenaForAllocation());
+  return _impl_.a_alocaladdress_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AsyncOpen::release_alocaladdress() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalAddress)
-  if (!_internal_has_alocaladdress()) {
+inline std::string* Msg_AsyncOpen::release_a_alocaladdress() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
+  if (!_internal_has_a_alocaladdress()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.alocaladdress_.Release();
+  auto* p = _impl_.a_alocaladdress_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.alocaladdress_.IsDefault()) {
-    _impl_.alocaladdress_.Set("", GetArenaForAllocation());
+  if (_impl_.a_alocaladdress_.IsDefault()) {
+    _impl_.a_alocaladdress_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AsyncOpen::set_allocated_alocaladdress(std::string* alocaladdress) {
-  if (alocaladdress != nullptr) {
+inline void Msg_AsyncOpen::set_allocated_a_alocaladdress(std::string* a_alocaladdress) {
+  if (a_alocaladdress != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.alocaladdress_.SetAllocated(alocaladdress, GetArenaForAllocation());
+  _impl_.a_alocaladdress_.SetAllocated(a_alocaladdress, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.alocaladdress_.IsDefault()) {
-    _impl_.alocaladdress_.Set("", GetArenaForAllocation());
+  if (_impl_.a_alocaladdress_.IsDefault()) {
+    _impl_.a_alocaladdress_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalAddress)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
 }
 
-// required sint32 aLocalPort = 4;
-inline bool Msg_AsyncOpen::_internal_has_alocalport() const {
+// required sint32 a_aLocalPort = 4;
+inline bool Msg_AsyncOpen::_internal_has_a_alocalport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_AsyncOpen::has_alocalport() const {
-  return _internal_has_alocalport();
+inline bool Msg_AsyncOpen::has_a_alocalport() const {
+  return _internal_has_a_alocalport();
 }
-inline void Msg_AsyncOpen::clear_alocalport() {
-  _impl_.alocalport_ = 0;
+inline void Msg_AsyncOpen::clear_a_alocalport() {
+  _impl_.a_alocalport_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t Msg_AsyncOpen::_internal_alocalport() const {
-  return _impl_.alocalport_;
+inline int32_t Msg_AsyncOpen::_internal_a_alocalport() const {
+  return _impl_.a_alocalport_;
 }
-inline int32_t Msg_AsyncOpen::alocalport() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalPort)
-  return _internal_alocalport();
+inline int32_t Msg_AsyncOpen::a_alocalport() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalPort)
+  return _internal_a_alocalport();
 }
-inline void Msg_AsyncOpen::_internal_set_alocalport(int32_t value) {
+inline void Msg_AsyncOpen::_internal_set_a_alocalport(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.alocalport_ = value;
+  _impl_.a_alocalport_ = value;
 }
-inline void Msg_AsyncOpen::set_alocalport(int32_t value) {
-  _internal_set_alocalport(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aLocalPort)
+inline void Msg_AsyncOpen::set_a_alocalport(int32_t value) {
+  _internal_set_a_alocalport(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalPort)
 }
 
-// required bool aUseTls = 5;
-inline bool Msg_AsyncOpen::_internal_has_ausetls() const {
+// required bool a_aUseTls = 5;
+inline bool Msg_AsyncOpen::_internal_has_a_ausetls() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_AsyncOpen::has_ausetls() const {
-  return _internal_has_ausetls();
+inline bool Msg_AsyncOpen::has_a_ausetls() const {
+  return _internal_has_a_ausetls();
 }
-inline void Msg_AsyncOpen::clear_ausetls() {
-  _impl_.ausetls_ = false;
+inline void Msg_AsyncOpen::clear_a_ausetls() {
+  _impl_.a_ausetls_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool Msg_AsyncOpen::_internal_ausetls() const {
-  return _impl_.ausetls_;
+inline bool Msg_AsyncOpen::_internal_a_ausetls() const {
+  return _impl_.a_ausetls_;
 }
-inline bool Msg_AsyncOpen::ausetls() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aUseTls)
-  return _internal_ausetls();
+inline bool Msg_AsyncOpen::a_ausetls() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aUseTls)
+  return _internal_a_ausetls();
 }
-inline void Msg_AsyncOpen::_internal_set_ausetls(bool value) {
+inline void Msg_AsyncOpen::_internal_set_a_ausetls(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.ausetls_ = value;
+  _impl_.a_ausetls_ = value;
 }
-inline void Msg_AsyncOpen::set_ausetls(bool value) {
-  _internal_set_ausetls(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aUseTls)
+inline void Msg_AsyncOpen::set_a_ausetls(bool value) {
+  _internal_set_a_ausetls(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aUseTls)
 }
 
-// optional .protobuf.mozilla.net.WebrtcProxyConfig aProxyConfig = 6;
-inline bool Msg_AsyncOpen::_internal_has_aproxyconfig() const {
+// optional .protobuf.mozilla.net.WebrtcProxyConfig a_aProxyConfig = 6;
+inline bool Msg_AsyncOpen::_internal_has_a_aproxyconfig() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aproxyconfig_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aproxyconfig_ != nullptr);
   return value;
 }
-inline bool Msg_AsyncOpen::has_aproxyconfig() const {
-  return _internal_has_aproxyconfig();
+inline bool Msg_AsyncOpen::has_a_aproxyconfig() const {
+  return _internal_has_a_aproxyconfig();
 }
-inline const ::protobuf::mozilla::net::WebrtcProxyConfig& Msg_AsyncOpen::_internal_aproxyconfig() const {
-  const ::protobuf::mozilla::net::WebrtcProxyConfig* p = _impl_.aproxyconfig_;
+inline const ::protobuf::mozilla::net::WebrtcProxyConfig& Msg_AsyncOpen::_internal_a_aproxyconfig() const {
+  const ::protobuf::mozilla::net::WebrtcProxyConfig* p = _impl_.a_aproxyconfig_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::WebrtcProxyConfig&>(
       ::protobuf::mozilla::net::_WebrtcProxyConfig_default_instance_);
 }
-inline const ::protobuf::mozilla::net::WebrtcProxyConfig& Msg_AsyncOpen::aproxyconfig() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aProxyConfig)
-  return _internal_aproxyconfig();
+inline const ::protobuf::mozilla::net::WebrtcProxyConfig& Msg_AsyncOpen::a_aproxyconfig() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
+  return _internal_a_aproxyconfig();
 }
-inline void Msg_AsyncOpen::unsafe_arena_set_allocated_aproxyconfig(
-    ::protobuf::mozilla::net::WebrtcProxyConfig* aproxyconfig) {
+inline void Msg_AsyncOpen::unsafe_arena_set_allocated_a_aproxyconfig(
+    ::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aproxyconfig_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aproxyconfig_);
   }
-  _impl_.aproxyconfig_ = aproxyconfig;
-  if (aproxyconfig) {
+  _impl_.a_aproxyconfig_ = a_aproxyconfig;
+  if (a_aproxyconfig) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aProxyConfig)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
 }
-inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::release_aproxyconfig() {
+inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::release_a_aproxyconfig() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::WebrtcProxyConfig* temp = _impl_.aproxyconfig_;
-  _impl_.aproxyconfig_ = nullptr;
+  ::protobuf::mozilla::net::WebrtcProxyConfig* temp = _impl_.a_aproxyconfig_;
+  _impl_.a_aproxyconfig_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1567,96 +1567,96 @@ inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::release_aprox
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::unsafe_arena_release_aproxyconfig() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aProxyConfig)
+inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::unsafe_arena_release_a_aproxyconfig() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::WebrtcProxyConfig* temp = _impl_.aproxyconfig_;
-  _impl_.aproxyconfig_ = nullptr;
+  ::protobuf::mozilla::net::WebrtcProxyConfig* temp = _impl_.a_aproxyconfig_;
+  _impl_.a_aproxyconfig_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::_internal_mutable_aproxyconfig() {
+inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::_internal_mutable_a_aproxyconfig() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.aproxyconfig_ == nullptr) {
+  if (_impl_.a_aproxyconfig_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::WebrtcProxyConfig>(GetArenaForAllocation());
-    _impl_.aproxyconfig_ = p;
+    _impl_.a_aproxyconfig_ = p;
   }
-  return _impl_.aproxyconfig_;
+  return _impl_.a_aproxyconfig_;
 }
-inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::mutable_aproxyconfig() {
-  ::protobuf::mozilla::net::WebrtcProxyConfig* _msg = _internal_mutable_aproxyconfig();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aProxyConfig)
+inline ::protobuf::mozilla::net::WebrtcProxyConfig* Msg_AsyncOpen::mutable_a_aproxyconfig() {
+  ::protobuf::mozilla::net::WebrtcProxyConfig* _msg = _internal_mutable_a_aproxyconfig();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
   return _msg;
 }
-inline void Msg_AsyncOpen::set_allocated_aproxyconfig(::protobuf::mozilla::net::WebrtcProxyConfig* aproxyconfig) {
+inline void Msg_AsyncOpen::set_allocated_a_aproxyconfig(::protobuf::mozilla::net::WebrtcProxyConfig* a_aproxyconfig) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aproxyconfig_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aproxyconfig_);
   }
-  if (aproxyconfig) {
+  if (a_aproxyconfig) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aproxyconfig));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aproxyconfig));
     if (message_arena != submessage_arena) {
-      aproxyconfig = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aproxyconfig, submessage_arena);
+      a_aproxyconfig = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aproxyconfig, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.aproxyconfig_ = aproxyconfig;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.aProxyConfig)
+  _impl_.a_aproxyconfig_ = a_aproxyconfig;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aProxyConfig)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Write
 
-// repeated uint32 aWriteData = 1;
-inline int Msg_Write::_internal_awritedata_size() const {
-  return _impl_.awritedata_.size();
+// repeated uint32 a_aWriteData = 1;
+inline int Msg_Write::_internal_a_awritedata_size() const {
+  return _impl_.a_awritedata_.size();
 }
-inline int Msg_Write::awritedata_size() const {
-  return _internal_awritedata_size();
+inline int Msg_Write::a_awritedata_size() const {
+  return _internal_a_awritedata_size();
 }
-inline void Msg_Write::clear_awritedata() {
-  _impl_.awritedata_.Clear();
+inline void Msg_Write::clear_a_awritedata() {
+  _impl_.a_awritedata_.Clear();
 }
-inline uint32_t Msg_Write::_internal_awritedata(int index) const {
-  return _impl_.awritedata_.Get(index);
+inline uint32_t Msg_Write::_internal_a_awritedata(int index) const {
+  return _impl_.a_awritedata_.Get(index);
 }
-inline uint32_t Msg_Write::awritedata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.aWriteData)
-  return _internal_awritedata(index);
+inline uint32_t Msg_Write::a_awritedata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.a_aWriteData)
+  return _internal_a_awritedata(index);
 }
-inline void Msg_Write::set_awritedata(int index, uint32_t value) {
-  _impl_.awritedata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.aWriteData)
+inline void Msg_Write::set_a_awritedata(int index, uint32_t value) {
+  _impl_.a_awritedata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.a_aWriteData)
 }
-inline void Msg_Write::_internal_add_awritedata(uint32_t value) {
-  _impl_.awritedata_.Add(value);
+inline void Msg_Write::_internal_add_a_awritedata(uint32_t value) {
+  _impl_.a_awritedata_.Add(value);
 }
-inline void Msg_Write::add_awritedata(uint32_t value) {
-  _internal_add_awritedata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.aWriteData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_Write::_internal_awritedata() const {
-  return _impl_.awritedata_;
+inline void Msg_Write::add_a_awritedata(uint32_t value) {
+  _internal_add_a_awritedata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.a_aWriteData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_Write::awritedata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.aWriteData)
-  return _internal_awritedata();
+Msg_Write::_internal_a_awritedata() const {
+  return _impl_.a_awritedata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_Write::a_awritedata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.a_aWriteData)
+  return _internal_a_awritedata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_Write::_internal_mutable_awritedata() {
-  return &_impl_.awritedata_;
+Msg_Write::_internal_mutable_a_awritedata() {
+  return &_impl_.a_awritedata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_Write::mutable_awritedata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.aWriteData)
-  return _internal_mutable_awritedata();
+Msg_Write::mutable_a_awritedata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_Write.a_aWriteData)
+  return _internal_mutable_a_awritedata();
 }
 
 // -------------------------------------------------------------------
@@ -1667,195 +1667,195 @@ Msg_Write::mutable_awritedata() {
 
 // Msg_OnClose
 
-// required bytes aReason = 1;
-inline bool Msg_OnClose::_internal_has_areason() const {
+// required bytes a_aReason = 1;
+inline bool Msg_OnClose::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnClose::has_areason() const {
-  return _internal_has_areason();
+inline bool Msg_OnClose::has_a_areason() const {
+  return _internal_has_a_areason();
 }
-inline void Msg_OnClose::clear_areason() {
-  _impl_.areason_.ClearToEmpty();
+inline void Msg_OnClose::clear_a_areason() {
+  _impl_.a_areason_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnClose::areason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.aReason)
-  return _internal_areason();
+inline const std::string& Msg_OnClose::a_areason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
+  return _internal_a_areason();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnClose::set_areason(ArgT0&& arg0, ArgT... args) {
+void Msg_OnClose::set_a_areason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.aReason)
+ _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
 }
-inline std::string* Msg_OnClose::mutable_areason() {
-  std::string* _s = _internal_mutable_areason();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.aReason)
+inline std::string* Msg_OnClose::mutable_a_areason() {
+  std::string* _s = _internal_mutable_a_areason();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
   return _s;
 }
-inline const std::string& Msg_OnClose::_internal_areason() const {
-  return _impl_.areason_.Get();
+inline const std::string& Msg_OnClose::_internal_a_areason() const {
+  return _impl_.a_areason_.Get();
 }
-inline void Msg_OnClose::_internal_set_areason(const std::string& value) {
+inline void Msg_OnClose::_internal_set_a_areason(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.areason_.Set(value, GetArenaForAllocation());
+  _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnClose::_internal_mutable_areason() {
+inline std::string* Msg_OnClose::_internal_mutable_a_areason() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.areason_.Mutable(GetArenaForAllocation());
+  return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnClose::release_areason() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.aReason)
-  if (!_internal_has_areason()) {
+inline std::string* Msg_OnClose::release_a_areason() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
+  if (!_internal_has_a_areason()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.areason_.Release();
+  auto* p = _impl_.a_areason_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.areason_.IsDefault()) {
-    _impl_.areason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnClose::set_allocated_areason(std::string* areason) {
-  if (areason != nullptr) {
+inline void Msg_OnClose::set_allocated_a_areason(std::string* a_areason) {
+  if (a_areason != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.areason_.SetAllocated(areason, GetArenaForAllocation());
+  _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.areason_.IsDefault()) {
-    _impl_.areason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.aReason)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnClose.a_aReason)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnConnected
 
-// required bytes aProxyType = 1;
-inline bool Msg_OnConnected::_internal_has_aproxytype() const {
+// required bytes a_aProxyType = 1;
+inline bool Msg_OnConnected::_internal_has_a_aproxytype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnConnected::has_aproxytype() const {
-  return _internal_has_aproxytype();
+inline bool Msg_OnConnected::has_a_aproxytype() const {
+  return _internal_has_a_aproxytype();
 }
-inline void Msg_OnConnected::clear_aproxytype() {
-  _impl_.aproxytype_.ClearToEmpty();
+inline void Msg_OnConnected::clear_a_aproxytype() {
+  _impl_.a_aproxytype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnConnected::aproxytype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.aProxyType)
-  return _internal_aproxytype();
+inline const std::string& Msg_OnConnected::a_aproxytype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
+  return _internal_a_aproxytype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnConnected::set_aproxytype(ArgT0&& arg0, ArgT... args) {
+void Msg_OnConnected::set_a_aproxytype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aproxytype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.aProxyType)
+ _impl_.a_aproxytype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
 }
-inline std::string* Msg_OnConnected::mutable_aproxytype() {
-  std::string* _s = _internal_mutable_aproxytype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.aProxyType)
+inline std::string* Msg_OnConnected::mutable_a_aproxytype() {
+  std::string* _s = _internal_mutable_a_aproxytype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
   return _s;
 }
-inline const std::string& Msg_OnConnected::_internal_aproxytype() const {
-  return _impl_.aproxytype_.Get();
+inline const std::string& Msg_OnConnected::_internal_a_aproxytype() const {
+  return _impl_.a_aproxytype_.Get();
 }
-inline void Msg_OnConnected::_internal_set_aproxytype(const std::string& value) {
+inline void Msg_OnConnected::_internal_set_a_aproxytype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aproxytype_.Set(value, GetArenaForAllocation());
+  _impl_.a_aproxytype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnConnected::_internal_mutable_aproxytype() {
+inline std::string* Msg_OnConnected::_internal_mutable_a_aproxytype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aproxytype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aproxytype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnConnected::release_aproxytype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.aProxyType)
-  if (!_internal_has_aproxytype()) {
+inline std::string* Msg_OnConnected::release_a_aproxytype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
+  if (!_internal_has_a_aproxytype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aproxytype_.Release();
+  auto* p = _impl_.a_aproxytype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aproxytype_.IsDefault()) {
-    _impl_.aproxytype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aproxytype_.IsDefault()) {
+    _impl_.a_aproxytype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnConnected::set_allocated_aproxytype(std::string* aproxytype) {
-  if (aproxytype != nullptr) {
+inline void Msg_OnConnected::set_allocated_a_aproxytype(std::string* a_aproxytype) {
+  if (a_aproxytype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aproxytype_.SetAllocated(aproxytype, GetArenaForAllocation());
+  _impl_.a_aproxytype_.SetAllocated(a_aproxytype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aproxytype_.IsDefault()) {
-    _impl_.aproxytype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aproxytype_.IsDefault()) {
+    _impl_.a_aproxytype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.aProxyType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnRead
 
-// repeated uint32 aReadData = 1;
-inline int Msg_OnRead::_internal_areaddata_size() const {
-  return _impl_.areaddata_.size();
+// repeated uint32 a_aReadData = 1;
+inline int Msg_OnRead::_internal_a_areaddata_size() const {
+  return _impl_.a_areaddata_.size();
 }
-inline int Msg_OnRead::areaddata_size() const {
-  return _internal_areaddata_size();
+inline int Msg_OnRead::a_areaddata_size() const {
+  return _internal_a_areaddata_size();
 }
-inline void Msg_OnRead::clear_areaddata() {
-  _impl_.areaddata_.Clear();
+inline void Msg_OnRead::clear_a_areaddata() {
+  _impl_.a_areaddata_.Clear();
 }
-inline uint32_t Msg_OnRead::_internal_areaddata(int index) const {
-  return _impl_.areaddata_.Get(index);
+inline uint32_t Msg_OnRead::_internal_a_areaddata(int index) const {
+  return _impl_.a_areaddata_.Get(index);
 }
-inline uint32_t Msg_OnRead::areaddata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.aReadData)
-  return _internal_areaddata(index);
+inline uint32_t Msg_OnRead::a_areaddata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.a_aReadData)
+  return _internal_a_areaddata(index);
 }
-inline void Msg_OnRead::set_areaddata(int index, uint32_t value) {
-  _impl_.areaddata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.aReadData)
+inline void Msg_OnRead::set_a_areaddata(int index, uint32_t value) {
+  _impl_.a_areaddata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.a_aReadData)
 }
-inline void Msg_OnRead::_internal_add_areaddata(uint32_t value) {
-  _impl_.areaddata_.Add(value);
+inline void Msg_OnRead::_internal_add_a_areaddata(uint32_t value) {
+  _impl_.a_areaddata_.Add(value);
 }
-inline void Msg_OnRead::add_areaddata(uint32_t value) {
-  _internal_add_areaddata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.aReadData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_OnRead::_internal_areaddata() const {
-  return _impl_.areaddata_;
+inline void Msg_OnRead::add_a_areaddata(uint32_t value) {
+  _internal_add_a_areaddata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.a_aReadData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_OnRead::areaddata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.aReadData)
-  return _internal_areaddata();
+Msg_OnRead::_internal_a_areaddata() const {
+  return _impl_.a_areaddata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_OnRead::a_areaddata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.a_aReadData)
+  return _internal_a_areaddata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_OnRead::_internal_mutable_areaddata() {
-  return &_impl_.areaddata_;
+Msg_OnRead::_internal_mutable_a_areaddata() {
+  return &_impl_.a_areaddata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_OnRead::mutable_areaddata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.aReadData)
-  return _internal_mutable_areaddata();
+Msg_OnRead::mutable_a_areaddata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnRead.a_aReadData)
+  return _internal_mutable_a_areaddata();
 }
 
 // -------------------------------------------------------------------

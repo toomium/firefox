@@ -19,7 +19,7 @@ message SDBRequestSeekResponse {
 }
 
 message SDBRequestReadResponse {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message SDBRequestWriteResponse {
@@ -30,11 +30,11 @@ message SDBRequestCloseResponse {
 
 message SDBRequestResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    protobuf.mozilla.dom.SDBRequestOpenResponse mVSDBRequestOpenResponse = 2;
-    protobuf.mozilla.dom.SDBRequestSeekResponse mVSDBRequestSeekResponse = 3;
-    protobuf.mozilla.dom.SDBRequestReadResponse mVSDBRequestReadResponse = 4;
-    protobuf.mozilla.dom.SDBRequestWriteResponse mVSDBRequestWriteResponse = 5;
-    protobuf.mozilla.dom.SDBRequestCloseResponse mVSDBRequestCloseResponse = 6;
+    bytes a_mVnsresult = 1;
+    protobuf.mozilla.dom.SDBRequestOpenResponse a_mVSDBRequestOpenResponse = 2;
+    protobuf.mozilla.dom.SDBRequestSeekResponse a_mVSDBRequestSeekResponse = 3;
+    protobuf.mozilla.dom.SDBRequestReadResponse a_mVSDBRequestReadResponse = 4;
+    protobuf.mozilla.dom.SDBRequestWriteResponse a_mVSDBRequestWriteResponse = 5;
+    protobuf.mozilla.dom.SDBRequestCloseResponse a_mVSDBRequestCloseResponse = 6;
   }
 }

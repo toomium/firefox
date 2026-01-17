@@ -18,22 +18,22 @@ import "IPCBlob.proto";
 
 // Message declarations
 message Msg_Open {
-  required sint32 selectedType = 1;
-  required bool addToRecentDocs = 2;
-  required bytes defaultFile = 3;
-  required bytes defaultExtension = 4;
-  repeated bytes filters = 5;
-  repeated bytes filterNames = 6;
-  repeated bytes rawFilters = 7;
-  required bytes displayDirectory = 8;
-  required bytes displaySpecialDirectory = 9;
-  required bytes okButtonLabel = 10;
-  required bytes capture = 11;
+  required sint32 a_selectedType = 1;
+  required bool a_addToRecentDocs = 2;
+  required bytes a_defaultFile = 3;
+  required bytes a_defaultExtension = 4;
+  repeated bytes a_filters = 5;
+  repeated bytes a_filterNames = 6;
+  repeated bytes a_rawFilters = 7;
+  required bytes a_displayDirectory = 8;
+  required bytes a_displaySpecialDirectory = 9;
+  required bytes a_okButtonLabel = 10;
+  required bytes a_capture = 11;
 }
 
 message Msg___delete__ {
-  required protobuf.mozilla.dom.MaybeInputData data = 1;
-  required bytes result = 2;
+  required protobuf.mozilla.dom.MaybeInputData a_data = 1;
+  required bytes a_result = 2;
 }
 
 message Reply___delete__ {

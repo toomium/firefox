@@ -25,8 +25,8 @@ PROTOBUF_CONSTEXPR Msg_Hang::Msg_Hang(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.timeout_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.hangmode_)*/0u} {}
+  , /*decltype(_impl_.a_timeout_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_hangmode_)*/0u} {}
 struct Msg_HangDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_HangDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,7 +52,7 @@ PROTOBUF_CONSTEXPR Msg_Start::Msg_Start(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.hangmode_)*/0u} {}
+  , /*decltype(_impl_.a_hangmode_)*/0u} {}
 struct Msg_StartDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -66,7 +66,7 @@ PROTOBUF_CONSTEXPR Reply_Start::Reply_Start(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.detectedhang_)*/false} {}
+  , /*decltype(_impl_.a_detectedhang_)*/false} {}
 struct Reply_StartDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_StartDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -90,10 +90,10 @@ namespace PTestHangs {
 class Msg_Hang::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Hang>()._impl_._has_bits_);
-  static void set_has_hangmode(HasBits* has_bits) {
+  static void set_has_a_hangmode(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_timeout(HasBits* has_bits) {
+  static void set_has_a_timeout(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -113,19 +113,19 @@ Msg_Hang::Msg_Hang(const Msg_Hang& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.timeout_){}
-    , decltype(_impl_.hangmode_){}};
+    , decltype(_impl_.a_timeout_){}
+    , decltype(_impl_.a_hangmode_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.timeout_.InitDefault();
+  _impl_.a_timeout_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.timeout_.Set("", GetArenaForAllocation());
+    _impl_.a_timeout_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_timeout()) {
-    _this->_impl_.timeout_.Set(from._internal_timeout(), 
+  if (from._internal_has_a_timeout()) {
+    _this->_impl_.a_timeout_.Set(from._internal_a_timeout(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.hangmode_ = from._impl_.hangmode_;
+  _this->_impl_.a_hangmode_ = from._impl_.a_hangmode_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang)
 }
 
@@ -136,12 +136,12 @@ inline void Msg_Hang::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.timeout_){}
-    , decltype(_impl_.hangmode_){0u}
+    , decltype(_impl_.a_timeout_){}
+    , decltype(_impl_.a_hangmode_){0u}
   };
-  _impl_.timeout_.InitDefault();
+  _impl_.a_timeout_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.timeout_.Set("", GetArenaForAllocation());
+    _impl_.a_timeout_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -156,7 +156,7 @@ Msg_Hang::~Msg_Hang() {
 
 inline void Msg_Hang::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.timeout_.Destroy();
+  _impl_.a_timeout_.Destroy();
 }
 
 void Msg_Hang::SetCachedSize(int size) const {
@@ -171,9 +171,9 @@ void Msg_Hang::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.timeout_.ClearNonDefaultToEmpty();
+    _impl_.a_timeout_.ClearNonDefaultToEmpty();
   }
-  _impl_.hangmode_ = 0u;
+  _impl_.a_hangmode_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -185,19 +185,19 @@ const char* Msg_Hang::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 hangMode = 1;
+      // required uint32 a_hangMode = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_hangmode(&has_bits);
-          _impl_.hangmode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_hangmode(&has_bits);
+          _impl_.a_hangmode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes timeout = 2;
+      // required bytes a_timeout = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_timeout();
+          auto str = _internal_mutable_a_timeout();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -234,16 +234,16 @@ uint8_t* Msg_Hang::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 hangMode = 1;
+  // required uint32 a_hangMode = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_hangmode(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_hangmode(), target);
   }
 
-  // required bytes timeout = 2;
+  // required bytes a_timeout = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_timeout(), target);
+        2, this->_internal_a_timeout(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -258,16 +258,16 @@ size_t Msg_Hang::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang)
   size_t total_size = 0;
 
-  if (_internal_has_timeout()) {
-    // required bytes timeout = 2;
+  if (_internal_has_a_timeout()) {
+    // required bytes a_timeout = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_timeout());
+        this->_internal_a_timeout());
   }
 
-  if (_internal_has_hangmode()) {
-    // required uint32 hangMode = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_hangmode());
+  if (_internal_has_a_hangmode()) {
+    // required uint32 a_hangMode = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_hangmode());
   }
 
   return total_size;
@@ -277,13 +277,13 @@ size_t Msg_Hang::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes timeout = 2;
+    // required bytes a_timeout = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_timeout());
+        this->_internal_a_timeout());
 
-    // required uint32 hangMode = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_hangmode());
+    // required uint32 a_hangMode = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_hangmode());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -316,10 +316,10 @@ void Msg_Hang::MergeFrom(const Msg_Hang& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_timeout(from._internal_timeout());
+      _this->_internal_set_a_timeout(from._internal_a_timeout());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.hangmode_ = from._impl_.hangmode_;
+      _this->_impl_.a_hangmode_ = from._impl_.a_hangmode_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -345,10 +345,10 @@ void Msg_Hang::InternalSwap(Msg_Hang* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.timeout_, lhs_arena,
-      &other->_impl_.timeout_, rhs_arena
+      &_impl_.a_timeout_, lhs_arena,
+      &other->_impl_.a_timeout_, rhs_arena
   );
-  swap(_impl_.hangmode_, other->_impl_.hangmode_);
+  swap(_impl_.a_hangmode_, other->_impl_.a_hangmode_);
 }
 
 std::string Msg_Hang::GetTypeName() const {
@@ -509,7 +509,7 @@ std::string Reply_Hang::GetTypeName() const {
 class Msg_Start::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Start>()._impl_._has_bits_);
-  static void set_has_hangmode(HasBits* has_bits) {
+  static void set_has_a_hangmode(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -529,10 +529,10 @@ Msg_Start::Msg_Start(const Msg_Start& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.hangmode_){}};
+    , decltype(_impl_.a_hangmode_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.hangmode_ = from._impl_.hangmode_;
+  _this->_impl_.a_hangmode_ = from._impl_.a_hangmode_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start)
 }
 
@@ -543,7 +543,7 @@ inline void Msg_Start::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.hangmode_){0u}
+    , decltype(_impl_.a_hangmode_){0u}
   };
 }
 
@@ -570,7 +570,7 @@ void Msg_Start::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.hangmode_ = 0u;
+  _impl_.a_hangmode_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -582,11 +582,11 @@ const char* Msg_Start::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 hangMode = 1;
+      // required uint32 a_hangMode = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_hangmode(&has_bits);
-          _impl_.hangmode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_hangmode(&has_bits);
+          _impl_.a_hangmode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -622,10 +622,10 @@ uint8_t* Msg_Start::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 hangMode = 1;
+  // required uint32 a_hangMode = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_hangmode(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_hangmode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -640,9 +640,9 @@ size_t Msg_Start::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start)
   size_t total_size = 0;
 
-  // required uint32 hangMode = 1;
-  if (_internal_has_hangmode()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_hangmode());
+  // required uint32 a_hangMode = 1;
+  if (_internal_has_a_hangmode()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_hangmode());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -669,8 +669,8 @@ void Msg_Start::MergeFrom(const Msg_Start& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_hangmode()) {
-    _this->_internal_set_hangmode(from._internal_hangmode());
+  if (from._internal_has_a_hangmode()) {
+    _this->_internal_set_a_hangmode(from._internal_a_hangmode());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -691,7 +691,7 @@ void Msg_Start::InternalSwap(Msg_Start* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.hangmode_, other->_impl_.hangmode_);
+  swap(_impl_.a_hangmode_, other->_impl_.a_hangmode_);
 }
 
 std::string Msg_Start::GetTypeName() const {
@@ -704,7 +704,7 @@ std::string Msg_Start::GetTypeName() const {
 class Reply_Start::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_Start>()._impl_._has_bits_);
-  static void set_has_detectedhang(HasBits* has_bits) {
+  static void set_has_a_detectedhang(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -724,10 +724,10 @@ Reply_Start::Reply_Start(const Reply_Start& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.detectedhang_){}};
+    , decltype(_impl_.a_detectedhang_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.detectedhang_ = from._impl_.detectedhang_;
+  _this->_impl_.a_detectedhang_ = from._impl_.a_detectedhang_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start)
 }
 
@@ -738,7 +738,7 @@ inline void Reply_Start::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.detectedhang_){false}
+    , decltype(_impl_.a_detectedhang_){false}
   };
 }
 
@@ -765,7 +765,7 @@ void Reply_Start::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.detectedhang_ = false;
+  _impl_.a_detectedhang_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -777,11 +777,11 @@ const char* Reply_Start::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool detectedHang = 1;
+      // required bool a_detectedHang = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_detectedhang(&has_bits);
-          _impl_.detectedhang_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_detectedhang(&has_bits);
+          _impl_.a_detectedhang_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -817,10 +817,10 @@ uint8_t* Reply_Start::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool detectedHang = 1;
+  // required bool a_detectedHang = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_detectedhang(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_detectedhang(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -835,8 +835,8 @@ size_t Reply_Start::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start)
   size_t total_size = 0;
 
-  // required bool detectedHang = 1;
-  if (_internal_has_detectedhang()) {
+  // required bool a_detectedHang = 1;
+  if (_internal_has_a_detectedhang()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -864,8 +864,8 @@ void Reply_Start::MergeFrom(const Reply_Start& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_detectedhang()) {
-    _this->_internal_set_detectedhang(from._internal_detectedhang());
+  if (from._internal_has_a_detectedhang()) {
+    _this->_internal_set_a_detectedhang(from._internal_a_detectedhang());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -886,7 +886,7 @@ void Reply_Start::InternalSwap(Reply_Start* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.detectedhang_, other->_impl_.detectedhang_);
+  swap(_impl_.a_detectedhang_, other->_impl_.a_detectedhang_);
 }
 
 std::string Reply_Start::GetTypeName() const {

@@ -17,23 +17,23 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_Clone {
-  required bytes aCloneEndpoint = 1;
+  required bytes a_aCloneEndpoint = 1;
 }
 
 message Msg_StreamNeeded {
-  required uint64 aStart = 1;
-  required uint64 aLength = 2;
+  required uint64 a_aStart = 1;
+  required uint64 a_aLength = 2;
 }
 
 message Reply_StreamNeeded {
-  optional protobuf.mozilla.ipc.IPCStream stream = 1;
+  optional protobuf.mozilla.ipc.IPCStream a_stream = 1;
 }
 
 message Msg_LengthNeeded {
 }
 
 message Reply_LengthNeeded {
-  required sint64 length = 1;
+  required sint64 a_length = 1;
 }
 
 message Msg_Goodbye {

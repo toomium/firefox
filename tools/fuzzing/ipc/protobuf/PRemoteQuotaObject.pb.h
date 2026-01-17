@@ -179,33 +179,33 @@ class Msg_MaybeUpdateSize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSizeFieldNumber = 1,
-    kTruncateFieldNumber = 2,
+    kASizeFieldNumber = 1,
+    kATruncateFieldNumber = 2,
   };
-  // required sint64 size = 1;
-  bool has_size() const;
+  // required sint64 a_size = 1;
+  bool has_a_size() const;
   private:
-  bool _internal_has_size() const;
+  bool _internal_has_a_size() const;
   public:
-  void clear_size();
-  int64_t size() const;
-  void set_size(int64_t value);
+  void clear_a_size();
+  int64_t a_size() const;
+  void set_a_size(int64_t value);
   private:
-  int64_t _internal_size() const;
-  void _internal_set_size(int64_t value);
+  int64_t _internal_a_size() const;
+  void _internal_set_a_size(int64_t value);
   public:
 
-  // required bool truncate = 2;
-  bool has_truncate() const;
+  // required bool a_truncate = 2;
+  bool has_a_truncate() const;
   private:
-  bool _internal_has_truncate() const;
+  bool _internal_has_a_truncate() const;
   public:
-  void clear_truncate();
-  bool truncate() const;
-  void set_truncate(bool value);
+  void clear_a_truncate();
+  bool a_truncate() const;
+  void set_a_truncate(bool value);
   private:
-  bool _internal_truncate() const;
-  void _internal_set_truncate(bool value);
+  bool _internal_a_truncate() const;
+  void _internal_set_a_truncate(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
@@ -221,8 +221,8 @@ class Msg_MaybeUpdateSize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int64_t size_;
-    bool truncate_;
+    int64_t a_size_;
+    bool a_truncate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteQuotaObject_2eproto;
@@ -339,19 +339,19 @@ class Reply_MaybeUpdateSize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bool result = 1;
-  bool has_result() const;
+  // required bool a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
@@ -364,7 +364,7 @@ class Reply_MaybeUpdateSize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool result_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteQuotaObject_2eproto;
@@ -380,92 +380,92 @@ class Reply_MaybeUpdateSize final :
 #endif  // __GNUC__
 // Msg_MaybeUpdateSize
 
-// required sint64 size = 1;
-inline bool Msg_MaybeUpdateSize::_internal_has_size() const {
+// required sint64 a_size = 1;
+inline bool Msg_MaybeUpdateSize::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_MaybeUpdateSize::has_size() const {
-  return _internal_has_size();
+inline bool Msg_MaybeUpdateSize::has_a_size() const {
+  return _internal_has_a_size();
 }
-inline void Msg_MaybeUpdateSize::clear_size() {
-  _impl_.size_ = int64_t{0};
+inline void Msg_MaybeUpdateSize::clear_a_size() {
+  _impl_.a_size_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t Msg_MaybeUpdateSize::_internal_size() const {
-  return _impl_.size_;
+inline int64_t Msg_MaybeUpdateSize::_internal_a_size() const {
+  return _impl_.a_size_;
 }
-inline int64_t Msg_MaybeUpdateSize::size() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.size)
-  return _internal_size();
+inline int64_t Msg_MaybeUpdateSize::a_size() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.a_size)
+  return _internal_a_size();
 }
-inline void Msg_MaybeUpdateSize::_internal_set_size(int64_t value) {
+inline void Msg_MaybeUpdateSize::_internal_set_a_size(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.size_ = value;
+  _impl_.a_size_ = value;
 }
-inline void Msg_MaybeUpdateSize::set_size(int64_t value) {
-  _internal_set_size(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.size)
+inline void Msg_MaybeUpdateSize::set_a_size(int64_t value) {
+  _internal_set_a_size(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.a_size)
 }
 
-// required bool truncate = 2;
-inline bool Msg_MaybeUpdateSize::_internal_has_truncate() const {
+// required bool a_truncate = 2;
+inline bool Msg_MaybeUpdateSize::_internal_has_a_truncate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_MaybeUpdateSize::has_truncate() const {
-  return _internal_has_truncate();
+inline bool Msg_MaybeUpdateSize::has_a_truncate() const {
+  return _internal_has_a_truncate();
 }
-inline void Msg_MaybeUpdateSize::clear_truncate() {
-  _impl_.truncate_ = false;
+inline void Msg_MaybeUpdateSize::clear_a_truncate() {
+  _impl_.a_truncate_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_MaybeUpdateSize::_internal_truncate() const {
-  return _impl_.truncate_;
+inline bool Msg_MaybeUpdateSize::_internal_a_truncate() const {
+  return _impl_.a_truncate_;
 }
-inline bool Msg_MaybeUpdateSize::truncate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.truncate)
-  return _internal_truncate();
+inline bool Msg_MaybeUpdateSize::a_truncate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.a_truncate)
+  return _internal_a_truncate();
 }
-inline void Msg_MaybeUpdateSize::_internal_set_truncate(bool value) {
+inline void Msg_MaybeUpdateSize::_internal_set_a_truncate(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.truncate_ = value;
+  _impl_.a_truncate_ = value;
 }
-inline void Msg_MaybeUpdateSize::set_truncate(bool value) {
-  _internal_set_truncate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.truncate)
+inline void Msg_MaybeUpdateSize::set_a_truncate(bool value) {
+  _internal_set_a_truncate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize.a_truncate)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_MaybeUpdateSize
 
-// required bool result = 1;
-inline bool Reply_MaybeUpdateSize::_internal_has_result() const {
+// required bool a_result = 1;
+inline bool Reply_MaybeUpdateSize::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_MaybeUpdateSize::has_result() const {
-  return _internal_has_result();
+inline bool Reply_MaybeUpdateSize::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_MaybeUpdateSize::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_MaybeUpdateSize::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_MaybeUpdateSize::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_MaybeUpdateSize::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_MaybeUpdateSize::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize.result)
-  return _internal_result();
+inline bool Reply_MaybeUpdateSize::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize.a_result)
+  return _internal_a_result();
 }
-inline void Reply_MaybeUpdateSize::_internal_set_result(bool value) {
+inline void Reply_MaybeUpdateSize::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_MaybeUpdateSize::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize.result)
+inline void Reply_MaybeUpdateSize::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize.a_result)
 }
 
 #ifdef __GNUC__

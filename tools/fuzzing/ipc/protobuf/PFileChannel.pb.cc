@@ -49,7 +49,7 @@ PROTOBUF_CONSTEXPR Msg_NotifyListeners::Msg_NotifyListeners(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.afilechannelinfo_)*/nullptr} {}
+  , /*decltype(_impl_.a_afilechannelinfo_)*/nullptr} {}
 struct Msg_NotifyListenersDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyListenersDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -63,7 +63,7 @@ PROTOBUF_CONSTEXPR Msg_SetChannelIdForRedirect::Msg_SetChannelIdForRedirect(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.achannelid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_achannelid_)*/uint64_t{0u}} {}
 struct Msg_SetChannelIdForRedirectDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetChannelIdForRedirectDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -383,8 +383,8 @@ std::string Reply___delete__::GetTypeName() const {
 class Msg_NotifyListeners::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_NotifyListeners>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::net::FileChannelInfo& afilechannelinfo(const Msg_NotifyListeners* msg);
-  static void set_has_afilechannelinfo(HasBits* has_bits) {
+  static const ::protobuf::mozilla::net::FileChannelInfo& a_afilechannelinfo(const Msg_NotifyListeners* msg);
+  static void set_has_a_afilechannelinfo(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -393,11 +393,11 @@ class Msg_NotifyListeners::_Internal {
 };
 
 const ::protobuf::mozilla::net::FileChannelInfo&
-Msg_NotifyListeners::_Internal::afilechannelinfo(const Msg_NotifyListeners* msg) {
-  return *msg->_impl_.afilechannelinfo_;
+Msg_NotifyListeners::_Internal::a_afilechannelinfo(const Msg_NotifyListeners* msg) {
+  return *msg->_impl_.a_afilechannelinfo_;
 }
-void Msg_NotifyListeners::clear_afilechannelinfo() {
-  if (_impl_.afilechannelinfo_ != nullptr) _impl_.afilechannelinfo_->Clear();
+void Msg_NotifyListeners::clear_a_afilechannelinfo() {
+  if (_impl_.a_afilechannelinfo_ != nullptr) _impl_.a_afilechannelinfo_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_NotifyListeners::Msg_NotifyListeners(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -412,11 +412,11 @@ Msg_NotifyListeners::Msg_NotifyListeners(const Msg_NotifyListeners& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.afilechannelinfo_){nullptr}};
+    , decltype(_impl_.a_afilechannelinfo_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_afilechannelinfo()) {
-    _this->_impl_.afilechannelinfo_ = new ::protobuf::mozilla::net::FileChannelInfo(*from._impl_.afilechannelinfo_);
+  if (from._internal_has_a_afilechannelinfo()) {
+    _this->_impl_.a_afilechannelinfo_ = new ::protobuf::mozilla::net::FileChannelInfo(*from._impl_.a_afilechannelinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners)
 }
@@ -428,7 +428,7 @@ inline void Msg_NotifyListeners::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.afilechannelinfo_){nullptr}
+    , decltype(_impl_.a_afilechannelinfo_){nullptr}
   };
 }
 
@@ -443,7 +443,7 @@ Msg_NotifyListeners::~Msg_NotifyListeners() {
 
 inline void Msg_NotifyListeners::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.afilechannelinfo_;
+  if (this != internal_default_instance()) delete _impl_.a_afilechannelinfo_;
 }
 
 void Msg_NotifyListeners::SetCachedSize(int size) const {
@@ -458,8 +458,8 @@ void Msg_NotifyListeners::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.afilechannelinfo_ != nullptr);
-    _impl_.afilechannelinfo_->Clear();
+    GOOGLE_DCHECK(_impl_.a_afilechannelinfo_ != nullptr);
+    _impl_.a_afilechannelinfo_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -472,10 +472,10 @@ const char* Msg_NotifyListeners::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.net.FileChannelInfo aFileChannelInfo = 1;
+      // required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_afilechannelinfo(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_afilechannelinfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -511,11 +511,11 @@ uint8_t* Msg_NotifyListeners::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.net.FileChannelInfo aFileChannelInfo = 1;
+  // required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::afilechannelinfo(this),
-        _Internal::afilechannelinfo(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_afilechannelinfo(this),
+        _Internal::a_afilechannelinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -530,11 +530,11 @@ size_t Msg_NotifyListeners::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.net.FileChannelInfo aFileChannelInfo = 1;
-  if (_internal_has_afilechannelinfo()) {
+  // required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
+  if (_internal_has_a_afilechannelinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.afilechannelinfo_);
+        *_impl_.a_afilechannelinfo_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -561,9 +561,9 @@ void Msg_NotifyListeners::MergeFrom(const Msg_NotifyListeners& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_afilechannelinfo()) {
-    _this->_internal_mutable_afilechannelinfo()->::protobuf::mozilla::net::FileChannelInfo::MergeFrom(
-        from._internal_afilechannelinfo());
+  if (from._internal_has_a_afilechannelinfo()) {
+    _this->_internal_mutable_a_afilechannelinfo()->::protobuf::mozilla::net::FileChannelInfo::MergeFrom(
+        from._internal_a_afilechannelinfo());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -577,8 +577,8 @@ void Msg_NotifyListeners::CopyFrom(const Msg_NotifyListeners& from) {
 
 bool Msg_NotifyListeners::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_afilechannelinfo()) {
-    if (!_impl_.afilechannelinfo_->IsInitialized()) return false;
+  if (_internal_has_a_afilechannelinfo()) {
+    if (!_impl_.a_afilechannelinfo_->IsInitialized()) return false;
   }
   return true;
 }
@@ -587,7 +587,7 @@ void Msg_NotifyListeners::InternalSwap(Msg_NotifyListeners* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.afilechannelinfo_, other->_impl_.afilechannelinfo_);
+  swap(_impl_.a_afilechannelinfo_, other->_impl_.a_afilechannelinfo_);
 }
 
 std::string Msg_NotifyListeners::GetTypeName() const {
@@ -600,7 +600,7 @@ std::string Msg_NotifyListeners::GetTypeName() const {
 class Msg_SetChannelIdForRedirect::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SetChannelIdForRedirect>()._impl_._has_bits_);
-  static void set_has_achannelid(HasBits* has_bits) {
+  static void set_has_a_achannelid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -620,10 +620,10 @@ Msg_SetChannelIdForRedirect::Msg_SetChannelIdForRedirect(const Msg_SetChannelIdF
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.achannelid_){}};
+    , decltype(_impl_.a_achannelid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.achannelid_ = from._impl_.achannelid_;
+  _this->_impl_.a_achannelid_ = from._impl_.a_achannelid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect)
 }
 
@@ -634,7 +634,7 @@ inline void Msg_SetChannelIdForRedirect::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.achannelid_){uint64_t{0u}}
+    , decltype(_impl_.a_achannelid_){uint64_t{0u}}
   };
 }
 
@@ -661,7 +661,7 @@ void Msg_SetChannelIdForRedirect::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.achannelid_ = uint64_t{0u};
+  _impl_.a_achannelid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -673,11 +673,11 @@ const char* Msg_SetChannelIdForRedirect::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 aChannelId = 1;
+      // required uint64 a_aChannelId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_achannelid(&has_bits);
-          _impl_.achannelid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_achannelid(&has_bits);
+          _impl_.a_achannelid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -713,10 +713,10 @@ uint8_t* Msg_SetChannelIdForRedirect::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 aChannelId = 1;
+  // required uint64 a_aChannelId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_achannelid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_achannelid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -731,9 +731,9 @@ size_t Msg_SetChannelIdForRedirect::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect)
   size_t total_size = 0;
 
-  // required uint64 aChannelId = 1;
-  if (_internal_has_achannelid()) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_achannelid());
+  // required uint64 a_aChannelId = 1;
+  if (_internal_has_a_achannelid()) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -760,8 +760,8 @@ void Msg_SetChannelIdForRedirect::MergeFrom(const Msg_SetChannelIdForRedirect& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_achannelid()) {
-    _this->_internal_set_achannelid(from._internal_achannelid());
+  if (from._internal_has_a_achannelid()) {
+    _this->_internal_set_a_achannelid(from._internal_a_achannelid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -782,7 +782,7 @@ void Msg_SetChannelIdForRedirect::InternalSwap(Msg_SetChannelIdForRedirect* othe
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.achannelid_, other->_impl_.achannelid_);
+  swap(_impl_.a_achannelid_, other->_impl_.a_achannelid_);
 }
 
 std::string Msg_SetChannelIdForRedirect::GetTypeName() const {

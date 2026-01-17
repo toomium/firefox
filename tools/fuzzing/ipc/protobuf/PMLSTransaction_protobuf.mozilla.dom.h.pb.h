@@ -169,29 +169,29 @@ class RawBytes final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // repeated uint32 data = 1;
-  int data_size() const;
+  // repeated uint32 a_data = 1;
+  int a_data_size() const;
   private:
-  int _internal_data_size() const;
+  int _internal_a_data_size() const;
   public:
-  void clear_data();
+  void clear_a_data();
   private:
-  uint32_t _internal_data(int index) const;
+  uint32_t _internal_a_data(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_data() const;
-  void _internal_add_data(uint32_t value);
+      _internal_a_data() const;
+  void _internal_add_a_data(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_data();
+      _internal_mutable_a_data();
   public:
-  uint32_t data(int index) const;
-  void set_data(int index, uint32_t value);
-  void add_data(uint32_t value);
+  uint32_t a_data(int index) const;
+  void set_a_data(int index, uint32_t value);
+  void add_a_data(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      data() const;
+      a_data() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_data();
+      mutable_a_data();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.RawBytes)
  private:
@@ -201,7 +201,7 @@ class RawBytes final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > data_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -218,51 +218,51 @@ class RawBytes final :
 #endif  // __GNUC__
 // RawBytes
 
-// repeated uint32 data = 1;
-inline int RawBytes::_internal_data_size() const {
-  return _impl_.data_.size();
+// repeated uint32 a_data = 1;
+inline int RawBytes::_internal_a_data_size() const {
+  return _impl_.a_data_.size();
 }
-inline int RawBytes::data_size() const {
-  return _internal_data_size();
+inline int RawBytes::a_data_size() const {
+  return _internal_a_data_size();
 }
-inline void RawBytes::clear_data() {
-  _impl_.data_.Clear();
+inline void RawBytes::clear_a_data() {
+  _impl_.a_data_.Clear();
 }
-inline uint32_t RawBytes::_internal_data(int index) const {
-  return _impl_.data_.Get(index);
+inline uint32_t RawBytes::_internal_a_data(int index) const {
+  return _impl_.a_data_.Get(index);
 }
-inline uint32_t RawBytes::data(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RawBytes.data)
-  return _internal_data(index);
+inline uint32_t RawBytes::a_data(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RawBytes.a_data)
+  return _internal_a_data(index);
 }
-inline void RawBytes::set_data(int index, uint32_t value) {
-  _impl_.data_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RawBytes.data)
+inline void RawBytes::set_a_data(int index, uint32_t value) {
+  _impl_.a_data_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RawBytes.a_data)
 }
-inline void RawBytes::_internal_add_data(uint32_t value) {
-  _impl_.data_.Add(value);
+inline void RawBytes::_internal_add_a_data(uint32_t value) {
+  _impl_.a_data_.Add(value);
 }
-inline void RawBytes::add_data(uint32_t value) {
-  _internal_add_data(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.RawBytes.data)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-RawBytes::_internal_data() const {
-  return _impl_.data_;
+inline void RawBytes::add_a_data(uint32_t value) {
+  _internal_add_a_data(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.RawBytes.a_data)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-RawBytes::data() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.RawBytes.data)
-  return _internal_data();
+RawBytes::_internal_a_data() const {
+  return _impl_.a_data_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+RawBytes::a_data() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.RawBytes.a_data)
+  return _internal_a_data();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-RawBytes::_internal_mutable_data() {
-  return &_impl_.data_;
+RawBytes::_internal_mutable_a_data() {
+  return &_impl_.a_data_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-RawBytes::mutable_data() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.RawBytes.data)
-  return _internal_mutable_data();
+RawBytes::mutable_a_data() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.RawBytes.a_data)
+  return _internal_mutable_a_data();
 }
 
 #ifdef __GNUC__

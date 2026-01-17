@@ -24,18 +24,18 @@ PROTOBUF_CONSTEXPR HttpHandlerInitArgs::HttpHandlerInitArgs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.mlegacyappname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mlegacyappversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mplatform_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.moscpu_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mmisc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mproduct_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mproductsub_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mappname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mappversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mcompatfirefox_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mcompatdevice_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mdevicemodelid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_mlegacyappname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mlegacyappversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mplatform_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_moscpu_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mmisc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mproduct_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mproductsub_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mappname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mappversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mcompatfirefox_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mcompatdevice_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mdevicemodelid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct HttpHandlerInitArgsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR HttpHandlerInitArgsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,9 +49,9 @@ PROTOBUF_CONSTEXPR SocketDataArgs::SocketDataArgs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.info_)*/{}
-  , /*decltype(_impl_.totalsent_)*/uint64_t{0u}
-  , /*decltype(_impl_.totalrecv_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_info_)*/{}
+  , /*decltype(_impl_.a_totalsent_)*/uint64_t{0u}
+  , /*decltype(_impl_.a_totalrecv_)*/uint64_t{0u}} {}
 struct SocketDataArgsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SocketDataArgsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -65,10 +65,10 @@ PROTOBUF_CONSTEXPR SocketPorcessInitAttributes::SocketPorcessInitAttributes(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.msandboxbroker_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.moffline_)*/false
-  , /*decltype(_impl_.mconnectivity_)*/false
-  , /*decltype(_impl_.minitsandbox_)*/false} {}
+  , /*decltype(_impl_.a_msandboxbroker_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_moffline_)*/false
+  , /*decltype(_impl_.a_mconnectivity_)*/false
+  , /*decltype(_impl_.a_minitsandbox_)*/false} {}
 struct SocketPorcessInitAttributesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SocketPorcessInitAttributesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -90,40 +90,40 @@ namespace net {
 class HttpHandlerInitArgs::_Internal {
  public:
   using HasBits = decltype(std::declval<HttpHandlerInitArgs>()._impl_._has_bits_);
-  static void set_has_mlegacyappname(HasBits* has_bits) {
+  static void set_has_a_mlegacyappname(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_mlegacyappversion(HasBits* has_bits) {
+  static void set_has_a_mlegacyappversion(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_mplatform(HasBits* has_bits) {
+  static void set_has_a_mplatform(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_moscpu(HasBits* has_bits) {
+  static void set_has_a_moscpu(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_mmisc(HasBits* has_bits) {
+  static void set_has_a_mmisc(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_mproduct(HasBits* has_bits) {
+  static void set_has_a_mproduct(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_mproductsub(HasBits* has_bits) {
+  static void set_has_a_mproductsub(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_mappname(HasBits* has_bits) {
+  static void set_has_a_mappname(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_mappversion(HasBits* has_bits) {
+  static void set_has_a_mappversion(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_mcompatfirefox(HasBits* has_bits) {
+  static void set_has_a_mcompatfirefox(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
-  static void set_has_mcompatdevice(HasBits* has_bits) {
+  static void set_has_a_mcompatdevice(HasBits* has_bits) {
     (*has_bits)[0] |= 1024u;
   }
-  static void set_has_mdevicemodelid(HasBits* has_bits) {
+  static void set_has_a_mdevicemodelid(HasBits* has_bits) {
     (*has_bits)[0] |= 2048u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -143,114 +143,114 @@ HttpHandlerInitArgs::HttpHandlerInitArgs(const HttpHandlerInitArgs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mlegacyappname_){}
-    , decltype(_impl_.mlegacyappversion_){}
-    , decltype(_impl_.mplatform_){}
-    , decltype(_impl_.moscpu_){}
-    , decltype(_impl_.mmisc_){}
-    , decltype(_impl_.mproduct_){}
-    , decltype(_impl_.mproductsub_){}
-    , decltype(_impl_.mappname_){}
-    , decltype(_impl_.mappversion_){}
-    , decltype(_impl_.mcompatfirefox_){}
-    , decltype(_impl_.mcompatdevice_){}
-    , decltype(_impl_.mdevicemodelid_){}};
+    , decltype(_impl_.a_mlegacyappname_){}
+    , decltype(_impl_.a_mlegacyappversion_){}
+    , decltype(_impl_.a_mplatform_){}
+    , decltype(_impl_.a_moscpu_){}
+    , decltype(_impl_.a_mmisc_){}
+    , decltype(_impl_.a_mproduct_){}
+    , decltype(_impl_.a_mproductsub_){}
+    , decltype(_impl_.a_mappname_){}
+    , decltype(_impl_.a_mappversion_){}
+    , decltype(_impl_.a_mcompatfirefox_){}
+    , decltype(_impl_.a_mcompatdevice_){}
+    , decltype(_impl_.a_mdevicemodelid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.mlegacyappname_.InitDefault();
+  _impl_.a_mlegacyappname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mlegacyappname_.Set("", GetArenaForAllocation());
+    _impl_.a_mlegacyappname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mlegacyappname()) {
-    _this->_impl_.mlegacyappname_.Set(from._internal_mlegacyappname(), 
+  if (from._internal_has_a_mlegacyappname()) {
+    _this->_impl_.a_mlegacyappname_.Set(from._internal_a_mlegacyappname(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mlegacyappversion_.InitDefault();
+  _impl_.a_mlegacyappversion_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mlegacyappversion_.Set("", GetArenaForAllocation());
+    _impl_.a_mlegacyappversion_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mlegacyappversion()) {
-    _this->_impl_.mlegacyappversion_.Set(from._internal_mlegacyappversion(), 
+  if (from._internal_has_a_mlegacyappversion()) {
+    _this->_impl_.a_mlegacyappversion_.Set(from._internal_a_mlegacyappversion(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mplatform_.InitDefault();
+  _impl_.a_mplatform_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mplatform_.Set("", GetArenaForAllocation());
+    _impl_.a_mplatform_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mplatform()) {
-    _this->_impl_.mplatform_.Set(from._internal_mplatform(), 
+  if (from._internal_has_a_mplatform()) {
+    _this->_impl_.a_mplatform_.Set(from._internal_a_mplatform(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.moscpu_.InitDefault();
+  _impl_.a_moscpu_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.moscpu_.Set("", GetArenaForAllocation());
+    _impl_.a_moscpu_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_moscpu()) {
-    _this->_impl_.moscpu_.Set(from._internal_moscpu(), 
+  if (from._internal_has_a_moscpu()) {
+    _this->_impl_.a_moscpu_.Set(from._internal_a_moscpu(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mmisc_.InitDefault();
+  _impl_.a_mmisc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mmisc_.Set("", GetArenaForAllocation());
+    _impl_.a_mmisc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mmisc()) {
-    _this->_impl_.mmisc_.Set(from._internal_mmisc(), 
+  if (from._internal_has_a_mmisc()) {
+    _this->_impl_.a_mmisc_.Set(from._internal_a_mmisc(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mproduct_.InitDefault();
+  _impl_.a_mproduct_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mproduct_.Set("", GetArenaForAllocation());
+    _impl_.a_mproduct_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mproduct()) {
-    _this->_impl_.mproduct_.Set(from._internal_mproduct(), 
+  if (from._internal_has_a_mproduct()) {
+    _this->_impl_.a_mproduct_.Set(from._internal_a_mproduct(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mproductsub_.InitDefault();
+  _impl_.a_mproductsub_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mproductsub_.Set("", GetArenaForAllocation());
+    _impl_.a_mproductsub_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mproductsub()) {
-    _this->_impl_.mproductsub_.Set(from._internal_mproductsub(), 
+  if (from._internal_has_a_mproductsub()) {
+    _this->_impl_.a_mproductsub_.Set(from._internal_a_mproductsub(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mappname_.InitDefault();
+  _impl_.a_mappname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mappname_.Set("", GetArenaForAllocation());
+    _impl_.a_mappname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mappname()) {
-    _this->_impl_.mappname_.Set(from._internal_mappname(), 
+  if (from._internal_has_a_mappname()) {
+    _this->_impl_.a_mappname_.Set(from._internal_a_mappname(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mappversion_.InitDefault();
+  _impl_.a_mappversion_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mappversion_.Set("", GetArenaForAllocation());
+    _impl_.a_mappversion_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mappversion()) {
-    _this->_impl_.mappversion_.Set(from._internal_mappversion(), 
+  if (from._internal_has_a_mappversion()) {
+    _this->_impl_.a_mappversion_.Set(from._internal_a_mappversion(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mcompatfirefox_.InitDefault();
+  _impl_.a_mcompatfirefox_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mcompatfirefox_.Set("", GetArenaForAllocation());
+    _impl_.a_mcompatfirefox_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mcompatfirefox()) {
-    _this->_impl_.mcompatfirefox_.Set(from._internal_mcompatfirefox(), 
+  if (from._internal_has_a_mcompatfirefox()) {
+    _this->_impl_.a_mcompatfirefox_.Set(from._internal_a_mcompatfirefox(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mcompatdevice_.InitDefault();
+  _impl_.a_mcompatdevice_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mcompatdevice_.Set("", GetArenaForAllocation());
+    _impl_.a_mcompatdevice_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mcompatdevice()) {
-    _this->_impl_.mcompatdevice_.Set(from._internal_mcompatdevice(), 
+  if (from._internal_has_a_mcompatdevice()) {
+    _this->_impl_.a_mcompatdevice_.Set(from._internal_a_mcompatdevice(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mdevicemodelid_.InitDefault();
+  _impl_.a_mdevicemodelid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mdevicemodelid_.Set("", GetArenaForAllocation());
+    _impl_.a_mdevicemodelid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mdevicemodelid()) {
-    _this->_impl_.mdevicemodelid_.Set(from._internal_mdevicemodelid(), 
+  if (from._internal_has_a_mdevicemodelid()) {
+    _this->_impl_.a_mdevicemodelid_.Set(from._internal_a_mdevicemodelid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.HttpHandlerInitArgs)
@@ -263,66 +263,66 @@ inline void HttpHandlerInitArgs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mlegacyappname_){}
-    , decltype(_impl_.mlegacyappversion_){}
-    , decltype(_impl_.mplatform_){}
-    , decltype(_impl_.moscpu_){}
-    , decltype(_impl_.mmisc_){}
-    , decltype(_impl_.mproduct_){}
-    , decltype(_impl_.mproductsub_){}
-    , decltype(_impl_.mappname_){}
-    , decltype(_impl_.mappversion_){}
-    , decltype(_impl_.mcompatfirefox_){}
-    , decltype(_impl_.mcompatdevice_){}
-    , decltype(_impl_.mdevicemodelid_){}
+    , decltype(_impl_.a_mlegacyappname_){}
+    , decltype(_impl_.a_mlegacyappversion_){}
+    , decltype(_impl_.a_mplatform_){}
+    , decltype(_impl_.a_moscpu_){}
+    , decltype(_impl_.a_mmisc_){}
+    , decltype(_impl_.a_mproduct_){}
+    , decltype(_impl_.a_mproductsub_){}
+    , decltype(_impl_.a_mappname_){}
+    , decltype(_impl_.a_mappversion_){}
+    , decltype(_impl_.a_mcompatfirefox_){}
+    , decltype(_impl_.a_mcompatdevice_){}
+    , decltype(_impl_.a_mdevicemodelid_){}
   };
-  _impl_.mlegacyappname_.InitDefault();
+  _impl_.a_mlegacyappname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mlegacyappname_.Set("", GetArenaForAllocation());
+    _impl_.a_mlegacyappname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mlegacyappversion_.InitDefault();
+  _impl_.a_mlegacyappversion_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mlegacyappversion_.Set("", GetArenaForAllocation());
+    _impl_.a_mlegacyappversion_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mplatform_.InitDefault();
+  _impl_.a_mplatform_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mplatform_.Set("", GetArenaForAllocation());
+    _impl_.a_mplatform_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.moscpu_.InitDefault();
+  _impl_.a_moscpu_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.moscpu_.Set("", GetArenaForAllocation());
+    _impl_.a_moscpu_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mmisc_.InitDefault();
+  _impl_.a_mmisc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mmisc_.Set("", GetArenaForAllocation());
+    _impl_.a_mmisc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mproduct_.InitDefault();
+  _impl_.a_mproduct_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mproduct_.Set("", GetArenaForAllocation());
+    _impl_.a_mproduct_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mproductsub_.InitDefault();
+  _impl_.a_mproductsub_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mproductsub_.Set("", GetArenaForAllocation());
+    _impl_.a_mproductsub_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mappname_.InitDefault();
+  _impl_.a_mappname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mappname_.Set("", GetArenaForAllocation());
+    _impl_.a_mappname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mappversion_.InitDefault();
+  _impl_.a_mappversion_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mappversion_.Set("", GetArenaForAllocation());
+    _impl_.a_mappversion_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mcompatfirefox_.InitDefault();
+  _impl_.a_mcompatfirefox_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mcompatfirefox_.Set("", GetArenaForAllocation());
+    _impl_.a_mcompatfirefox_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mcompatdevice_.InitDefault();
+  _impl_.a_mcompatdevice_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mcompatdevice_.Set("", GetArenaForAllocation());
+    _impl_.a_mcompatdevice_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mdevicemodelid_.InitDefault();
+  _impl_.a_mdevicemodelid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mdevicemodelid_.Set("", GetArenaForAllocation());
+    _impl_.a_mdevicemodelid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -337,18 +337,18 @@ HttpHandlerInitArgs::~HttpHandlerInitArgs() {
 
 inline void HttpHandlerInitArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mlegacyappname_.Destroy();
-  _impl_.mlegacyappversion_.Destroy();
-  _impl_.mplatform_.Destroy();
-  _impl_.moscpu_.Destroy();
-  _impl_.mmisc_.Destroy();
-  _impl_.mproduct_.Destroy();
-  _impl_.mproductsub_.Destroy();
-  _impl_.mappname_.Destroy();
-  _impl_.mappversion_.Destroy();
-  _impl_.mcompatfirefox_.Destroy();
-  _impl_.mcompatdevice_.Destroy();
-  _impl_.mdevicemodelid_.Destroy();
+  _impl_.a_mlegacyappname_.Destroy();
+  _impl_.a_mlegacyappversion_.Destroy();
+  _impl_.a_mplatform_.Destroy();
+  _impl_.a_moscpu_.Destroy();
+  _impl_.a_mmisc_.Destroy();
+  _impl_.a_mproduct_.Destroy();
+  _impl_.a_mproductsub_.Destroy();
+  _impl_.a_mappname_.Destroy();
+  _impl_.a_mappversion_.Destroy();
+  _impl_.a_mcompatfirefox_.Destroy();
+  _impl_.a_mcompatdevice_.Destroy();
+  _impl_.a_mdevicemodelid_.Destroy();
 }
 
 void HttpHandlerInitArgs::SetCachedSize(int size) const {
@@ -364,42 +364,42 @@ void HttpHandlerInitArgs::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.mlegacyappname_.ClearNonDefaultToEmpty();
+      _impl_.a_mlegacyappname_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.mlegacyappversion_.ClearNonDefaultToEmpty();
+      _impl_.a_mlegacyappversion_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.mplatform_.ClearNonDefaultToEmpty();
+      _impl_.a_mplatform_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.moscpu_.ClearNonDefaultToEmpty();
+      _impl_.a_moscpu_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.mmisc_.ClearNonDefaultToEmpty();
+      _impl_.a_mmisc_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.mproduct_.ClearNonDefaultToEmpty();
+      _impl_.a_mproduct_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000040u) {
-      _impl_.mproductsub_.ClearNonDefaultToEmpty();
+      _impl_.a_mproductsub_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000080u) {
-      _impl_.mappname_.ClearNonDefaultToEmpty();
+      _impl_.a_mappname_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00000f00u) {
     if (cached_has_bits & 0x00000100u) {
-      _impl_.mappversion_.ClearNonDefaultToEmpty();
+      _impl_.a_mappversion_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000200u) {
-      _impl_.mcompatfirefox_.ClearNonDefaultToEmpty();
+      _impl_.a_mcompatfirefox_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000400u) {
-      _impl_.mcompatdevice_.ClearNonDefaultToEmpty();
+      _impl_.a_mcompatdevice_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000800u) {
-      _impl_.mdevicemodelid_.ClearNonDefaultToEmpty();
+      _impl_.a_mdevicemodelid_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -413,109 +413,109 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes mLegacyAppName = 1;
+      // required bytes a_mLegacyAppName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mlegacyappname();
+          auto str = _internal_mutable_a_mlegacyappname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mLegacyAppVersion = 2;
+      // required bytes a_mLegacyAppVersion = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mlegacyappversion();
+          auto str = _internal_mutable_a_mlegacyappversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mPlatform = 3;
+      // required bytes a_mPlatform = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_mplatform();
+          auto str = _internal_mutable_a_mplatform();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mOscpu = 4;
+      // required bytes a_mOscpu = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_moscpu();
+          auto str = _internal_mutable_a_moscpu();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mMisc = 5;
+      // required bytes a_mMisc = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_mmisc();
+          auto str = _internal_mutable_a_mmisc();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mProduct = 6;
+      // required bytes a_mProduct = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_mproduct();
+          auto str = _internal_mutable_a_mproduct();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mProductSub = 7;
+      // required bytes a_mProductSub = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_mproductsub();
+          auto str = _internal_mutable_a_mproductsub();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mAppName = 8;
+      // required bytes a_mAppName = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
-          auto str = _internal_mutable_mappname();
+          auto str = _internal_mutable_a_mappname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mAppVersion = 9;
+      // required bytes a_mAppVersion = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          auto str = _internal_mutable_mappversion();
+          auto str = _internal_mutable_a_mappversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mCompatFirefox = 10;
+      // required bytes a_mCompatFirefox = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
-          auto str = _internal_mutable_mcompatfirefox();
+          auto str = _internal_mutable_a_mcompatfirefox();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mCompatDevice = 11;
+      // required bytes a_mCompatDevice = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
-          auto str = _internal_mutable_mcompatdevice();
+          auto str = _internal_mutable_a_mcompatdevice();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mDeviceModelId = 12;
+      // required bytes a_mDeviceModelId = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
-          auto str = _internal_mutable_mdevicemodelid();
+          auto str = _internal_mutable_a_mdevicemodelid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -552,76 +552,76 @@ uint8_t* HttpHandlerInitArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes mLegacyAppName = 1;
+  // required bytes a_mLegacyAppName = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_mlegacyappname(), target);
+        1, this->_internal_a_mlegacyappname(), target);
   }
 
-  // required bytes mLegacyAppVersion = 2;
+  // required bytes a_mLegacyAppVersion = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_mlegacyappversion(), target);
+        2, this->_internal_a_mlegacyappversion(), target);
   }
 
-  // required bytes mPlatform = 3;
+  // required bytes a_mPlatform = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_mplatform(), target);
+        3, this->_internal_a_mplatform(), target);
   }
 
-  // required bytes mOscpu = 4;
+  // required bytes a_mOscpu = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_moscpu(), target);
+        4, this->_internal_a_moscpu(), target);
   }
 
-  // required bytes mMisc = 5;
+  // required bytes a_mMisc = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_mmisc(), target);
+        5, this->_internal_a_mmisc(), target);
   }
 
-  // required bytes mProduct = 6;
+  // required bytes a_mProduct = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_mproduct(), target);
+        6, this->_internal_a_mproduct(), target);
   }
 
-  // required bytes mProductSub = 7;
+  // required bytes a_mProductSub = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_mproductsub(), target);
+        7, this->_internal_a_mproductsub(), target);
   }
 
-  // required bytes mAppName = 8;
+  // required bytes a_mAppName = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->WriteBytesMaybeAliased(
-        8, this->_internal_mappname(), target);
+        8, this->_internal_a_mappname(), target);
   }
 
-  // required bytes mAppVersion = 9;
+  // required bytes a_mAppVersion = 9;
   if (cached_has_bits & 0x00000100u) {
     target = stream->WriteBytesMaybeAliased(
-        9, this->_internal_mappversion(), target);
+        9, this->_internal_a_mappversion(), target);
   }
 
-  // required bytes mCompatFirefox = 10;
+  // required bytes a_mCompatFirefox = 10;
   if (cached_has_bits & 0x00000200u) {
     target = stream->WriteBytesMaybeAliased(
-        10, this->_internal_mcompatfirefox(), target);
+        10, this->_internal_a_mcompatfirefox(), target);
   }
 
-  // required bytes mCompatDevice = 11;
+  // required bytes a_mCompatDevice = 11;
   if (cached_has_bits & 0x00000400u) {
     target = stream->WriteBytesMaybeAliased(
-        11, this->_internal_mcompatdevice(), target);
+        11, this->_internal_a_mcompatdevice(), target);
   }
 
-  // required bytes mDeviceModelId = 12;
+  // required bytes a_mDeviceModelId = 12;
   if (cached_has_bits & 0x00000800u) {
     target = stream->WriteBytesMaybeAliased(
-        12, this->_internal_mdevicemodelid(), target);
+        12, this->_internal_a_mdevicemodelid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -636,88 +636,88 @@ size_t HttpHandlerInitArgs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.HttpHandlerInitArgs)
   size_t total_size = 0;
 
-  if (_internal_has_mlegacyappname()) {
-    // required bytes mLegacyAppName = 1;
+  if (_internal_has_a_mlegacyappname()) {
+    // required bytes a_mLegacyAppName = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mlegacyappname());
+        this->_internal_a_mlegacyappname());
   }
 
-  if (_internal_has_mlegacyappversion()) {
-    // required bytes mLegacyAppVersion = 2;
+  if (_internal_has_a_mlegacyappversion()) {
+    // required bytes a_mLegacyAppVersion = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mlegacyappversion());
+        this->_internal_a_mlegacyappversion());
   }
 
-  if (_internal_has_mplatform()) {
-    // required bytes mPlatform = 3;
+  if (_internal_has_a_mplatform()) {
+    // required bytes a_mPlatform = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mplatform());
+        this->_internal_a_mplatform());
   }
 
-  if (_internal_has_moscpu()) {
-    // required bytes mOscpu = 4;
+  if (_internal_has_a_moscpu()) {
+    // required bytes a_mOscpu = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_moscpu());
+        this->_internal_a_moscpu());
   }
 
-  if (_internal_has_mmisc()) {
-    // required bytes mMisc = 5;
+  if (_internal_has_a_mmisc()) {
+    // required bytes a_mMisc = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mmisc());
+        this->_internal_a_mmisc());
   }
 
-  if (_internal_has_mproduct()) {
-    // required bytes mProduct = 6;
+  if (_internal_has_a_mproduct()) {
+    // required bytes a_mProduct = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mproduct());
+        this->_internal_a_mproduct());
   }
 
-  if (_internal_has_mproductsub()) {
-    // required bytes mProductSub = 7;
+  if (_internal_has_a_mproductsub()) {
+    // required bytes a_mProductSub = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mproductsub());
+        this->_internal_a_mproductsub());
   }
 
-  if (_internal_has_mappname()) {
-    // required bytes mAppName = 8;
+  if (_internal_has_a_mappname()) {
+    // required bytes a_mAppName = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mappname());
+        this->_internal_a_mappname());
   }
 
-  if (_internal_has_mappversion()) {
-    // required bytes mAppVersion = 9;
+  if (_internal_has_a_mappversion()) {
+    // required bytes a_mAppVersion = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mappversion());
+        this->_internal_a_mappversion());
   }
 
-  if (_internal_has_mcompatfirefox()) {
-    // required bytes mCompatFirefox = 10;
+  if (_internal_has_a_mcompatfirefox()) {
+    // required bytes a_mCompatFirefox = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mcompatfirefox());
+        this->_internal_a_mcompatfirefox());
   }
 
-  if (_internal_has_mcompatdevice()) {
-    // required bytes mCompatDevice = 11;
+  if (_internal_has_a_mcompatdevice()) {
+    // required bytes a_mCompatDevice = 11;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mcompatdevice());
+        this->_internal_a_mcompatdevice());
   }
 
-  if (_internal_has_mdevicemodelid()) {
-    // required bytes mDeviceModelId = 12;
+  if (_internal_has_a_mdevicemodelid()) {
+    // required bytes a_mDeviceModelId = 12;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mdevicemodelid());
+        this->_internal_a_mdevicemodelid());
   }
 
   return total_size;
@@ -727,65 +727,65 @@ size_t HttpHandlerInitArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000fff) ^ 0x00000fff) == 0) {  // All required fields are present.
-    // required bytes mLegacyAppName = 1;
+    // required bytes a_mLegacyAppName = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mlegacyappname());
+        this->_internal_a_mlegacyappname());
 
-    // required bytes mLegacyAppVersion = 2;
+    // required bytes a_mLegacyAppVersion = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mlegacyappversion());
+        this->_internal_a_mlegacyappversion());
 
-    // required bytes mPlatform = 3;
+    // required bytes a_mPlatform = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mplatform());
+        this->_internal_a_mplatform());
 
-    // required bytes mOscpu = 4;
+    // required bytes a_mOscpu = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_moscpu());
+        this->_internal_a_moscpu());
 
-    // required bytes mMisc = 5;
+    // required bytes a_mMisc = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mmisc());
+        this->_internal_a_mmisc());
 
-    // required bytes mProduct = 6;
+    // required bytes a_mProduct = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mproduct());
+        this->_internal_a_mproduct());
 
-    // required bytes mProductSub = 7;
+    // required bytes a_mProductSub = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mproductsub());
+        this->_internal_a_mproductsub());
 
-    // required bytes mAppName = 8;
+    // required bytes a_mAppName = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mappname());
+        this->_internal_a_mappname());
 
-    // required bytes mAppVersion = 9;
+    // required bytes a_mAppVersion = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mappversion());
+        this->_internal_a_mappversion());
 
-    // required bytes mCompatFirefox = 10;
+    // required bytes a_mCompatFirefox = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mcompatfirefox());
+        this->_internal_a_mcompatfirefox());
 
-    // required bytes mCompatDevice = 11;
+    // required bytes a_mCompatDevice = 11;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mcompatdevice());
+        this->_internal_a_mcompatdevice());
 
-    // required bytes mDeviceModelId = 12;
+    // required bytes a_mDeviceModelId = 12;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mdevicemodelid());
+        this->_internal_a_mdevicemodelid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -818,42 +818,42 @@ void HttpHandlerInitArgs::MergeFrom(const HttpHandlerInitArgs& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_mlegacyappname(from._internal_mlegacyappname());
+      _this->_internal_set_a_mlegacyappname(from._internal_a_mlegacyappname());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_mlegacyappversion(from._internal_mlegacyappversion());
+      _this->_internal_set_a_mlegacyappversion(from._internal_a_mlegacyappversion());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_mplatform(from._internal_mplatform());
+      _this->_internal_set_a_mplatform(from._internal_a_mplatform());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_moscpu(from._internal_moscpu());
+      _this->_internal_set_a_moscpu(from._internal_a_moscpu());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_mmisc(from._internal_mmisc());
+      _this->_internal_set_a_mmisc(from._internal_a_mmisc());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_mproduct(from._internal_mproduct());
+      _this->_internal_set_a_mproduct(from._internal_a_mproduct());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_mproductsub(from._internal_mproductsub());
+      _this->_internal_set_a_mproductsub(from._internal_a_mproductsub());
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_internal_set_mappname(from._internal_mappname());
+      _this->_internal_set_a_mappname(from._internal_a_mappname());
     }
   }
   if (cached_has_bits & 0x00000f00u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_internal_set_mappversion(from._internal_mappversion());
+      _this->_internal_set_a_mappversion(from._internal_a_mappversion());
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_internal_set_mcompatfirefox(from._internal_mcompatfirefox());
+      _this->_internal_set_a_mcompatfirefox(from._internal_a_mcompatfirefox());
     }
     if (cached_has_bits & 0x00000400u) {
-      _this->_internal_set_mcompatdevice(from._internal_mcompatdevice());
+      _this->_internal_set_a_mcompatdevice(from._internal_a_mcompatdevice());
     }
     if (cached_has_bits & 0x00000800u) {
-      _this->_internal_set_mdevicemodelid(from._internal_mdevicemodelid());
+      _this->_internal_set_a_mdevicemodelid(from._internal_a_mdevicemodelid());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -878,52 +878,52 @@ void HttpHandlerInitArgs::InternalSwap(HttpHandlerInitArgs* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mlegacyappname_, lhs_arena,
-      &other->_impl_.mlegacyappname_, rhs_arena
+      &_impl_.a_mlegacyappname_, lhs_arena,
+      &other->_impl_.a_mlegacyappname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mlegacyappversion_, lhs_arena,
-      &other->_impl_.mlegacyappversion_, rhs_arena
+      &_impl_.a_mlegacyappversion_, lhs_arena,
+      &other->_impl_.a_mlegacyappversion_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mplatform_, lhs_arena,
-      &other->_impl_.mplatform_, rhs_arena
+      &_impl_.a_mplatform_, lhs_arena,
+      &other->_impl_.a_mplatform_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.moscpu_, lhs_arena,
-      &other->_impl_.moscpu_, rhs_arena
+      &_impl_.a_moscpu_, lhs_arena,
+      &other->_impl_.a_moscpu_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mmisc_, lhs_arena,
-      &other->_impl_.mmisc_, rhs_arena
+      &_impl_.a_mmisc_, lhs_arena,
+      &other->_impl_.a_mmisc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mproduct_, lhs_arena,
-      &other->_impl_.mproduct_, rhs_arena
+      &_impl_.a_mproduct_, lhs_arena,
+      &other->_impl_.a_mproduct_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mproductsub_, lhs_arena,
-      &other->_impl_.mproductsub_, rhs_arena
+      &_impl_.a_mproductsub_, lhs_arena,
+      &other->_impl_.a_mproductsub_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mappname_, lhs_arena,
-      &other->_impl_.mappname_, rhs_arena
+      &_impl_.a_mappname_, lhs_arena,
+      &other->_impl_.a_mappname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mappversion_, lhs_arena,
-      &other->_impl_.mappversion_, rhs_arena
+      &_impl_.a_mappversion_, lhs_arena,
+      &other->_impl_.a_mappversion_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mcompatfirefox_, lhs_arena,
-      &other->_impl_.mcompatfirefox_, rhs_arena
+      &_impl_.a_mcompatfirefox_, lhs_arena,
+      &other->_impl_.a_mcompatfirefox_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mcompatdevice_, lhs_arena,
-      &other->_impl_.mcompatdevice_, rhs_arena
+      &_impl_.a_mcompatdevice_, lhs_arena,
+      &other->_impl_.a_mcompatdevice_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mdevicemodelid_, lhs_arena,
-      &other->_impl_.mdevicemodelid_, rhs_arena
+      &_impl_.a_mdevicemodelid_, lhs_arena,
+      &other->_impl_.a_mdevicemodelid_, rhs_arena
   );
 }
 
@@ -937,10 +937,10 @@ std::string HttpHandlerInitArgs::GetTypeName() const {
 class SocketDataArgs::_Internal {
  public:
   using HasBits = decltype(std::declval<SocketDataArgs>()._impl_._has_bits_);
-  static void set_has_totalsent(HasBits* has_bits) {
+  static void set_has_a_totalsent(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_totalrecv(HasBits* has_bits) {
+  static void set_has_a_totalrecv(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -960,14 +960,14 @@ SocketDataArgs::SocketDataArgs(const SocketDataArgs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.info_){from._impl_.info_}
-    , decltype(_impl_.totalsent_){}
-    , decltype(_impl_.totalrecv_){}};
+    , decltype(_impl_.a_info_){from._impl_.a_info_}
+    , decltype(_impl_.a_totalsent_){}
+    , decltype(_impl_.a_totalrecv_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.totalsent_, &from._impl_.totalsent_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.totalrecv_) -
-    reinterpret_cast<char*>(&_impl_.totalsent_)) + sizeof(_impl_.totalrecv_));
+  ::memcpy(&_impl_.a_totalsent_, &from._impl_.a_totalsent_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_totalrecv_) -
+    reinterpret_cast<char*>(&_impl_.a_totalsent_)) + sizeof(_impl_.a_totalrecv_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.SocketDataArgs)
 }
 
@@ -978,9 +978,9 @@ inline void SocketDataArgs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.info_){arena}
-    , decltype(_impl_.totalsent_){uint64_t{0u}}
-    , decltype(_impl_.totalrecv_){uint64_t{0u}}
+    , decltype(_impl_.a_info_){arena}
+    , decltype(_impl_.a_totalsent_){uint64_t{0u}}
+    , decltype(_impl_.a_totalrecv_){uint64_t{0u}}
   };
 }
 
@@ -995,7 +995,7 @@ SocketDataArgs::~SocketDataArgs() {
 
 inline void SocketDataArgs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.info_.~RepeatedPtrField();
+  _impl_.a_info_.~RepeatedPtrField();
 }
 
 void SocketDataArgs::SetCachedSize(int size) const {
@@ -1008,12 +1008,12 @@ void SocketDataArgs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.info_.Clear();
+  _impl_.a_info_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.totalsent_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.totalrecv_) -
-        reinterpret_cast<char*>(&_impl_.totalsent_)) + sizeof(_impl_.totalrecv_));
+    ::memset(&_impl_.a_totalsent_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_totalrecv_) -
+        reinterpret_cast<char*>(&_impl_.a_totalsent_)) + sizeof(_impl_.a_totalrecv_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1026,31 +1026,31 @@ const char* SocketDataArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 totalSent = 1;
+      // required uint64 a_totalSent = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_totalsent(&has_bits);
-          _impl_.totalsent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_totalsent(&has_bits);
+          _impl_.a_totalsent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 totalRecv = 2;
+      // required uint64 a_totalRecv = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_totalrecv(&has_bits);
-          _impl_.totalrecv_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_totalrecv(&has_bits);
+          _impl_.a_totalrecv_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes info = 3;
+      // repeated bytes a_info = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_info();
+            auto str = _internal_add_a_info();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -1089,21 +1089,21 @@ uint8_t* SocketDataArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 totalSent = 1;
+  // required uint64 a_totalSent = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_totalsent(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_totalsent(), target);
   }
 
-  // required uint64 totalRecv = 2;
+  // required uint64 a_totalRecv = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_totalrecv(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_totalrecv(), target);
   }
 
-  // repeated bytes info = 3;
-  for (int i = 0, n = this->_internal_info_size(); i < n; i++) {
-    const auto& s = this->_internal_info(i);
+  // repeated bytes a_info = 3;
+  for (int i = 0, n = this->_internal_a_info_size(); i < n; i++) {
+    const auto& s = this->_internal_a_info(i);
     target = stream->WriteBytes(3, s, target);
   }
 
@@ -1119,14 +1119,14 @@ size_t SocketDataArgs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.SocketDataArgs)
   size_t total_size = 0;
 
-  if (_internal_has_totalsent()) {
-    // required uint64 totalSent = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_totalsent());
+  if (_internal_has_a_totalsent()) {
+    // required uint64 a_totalSent = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalsent());
   }
 
-  if (_internal_has_totalrecv()) {
-    // required uint64 totalRecv = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_totalrecv());
+  if (_internal_has_a_totalrecv()) {
+    // required uint64 a_totalRecv = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalrecv());
   }
 
   return total_size;
@@ -1136,11 +1136,11 @@ size_t SocketDataArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint64 totalSent = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_totalsent());
+    // required uint64 a_totalSent = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalsent());
 
-    // required uint64 totalRecv = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_totalrecv());
+    // required uint64 a_totalRecv = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalrecv());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1149,12 +1149,12 @@ size_t SocketDataArgs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes info = 3;
+  // repeated bytes a_info = 3;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.info_.size());
-  for (int i = 0, n = _impl_.info_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_info_.size());
+  for (int i = 0, n = _impl_.a_info_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.info_.Get(i));
+      _impl_.a_info_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1178,14 +1178,14 @@ void SocketDataArgs::MergeFrom(const SocketDataArgs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.info_.MergeFrom(from._impl_.info_);
+  _this->_impl_.a_info_.MergeFrom(from._impl_.a_info_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.totalsent_ = from._impl_.totalsent_;
+      _this->_impl_.a_totalsent_ = from._impl_.a_totalsent_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.totalrecv_ = from._impl_.totalrecv_;
+      _this->_impl_.a_totalrecv_ = from._impl_.a_totalrecv_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1208,13 +1208,13 @@ void SocketDataArgs::InternalSwap(SocketDataArgs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.info_.InternalSwap(&other->_impl_.info_);
+  _impl_.a_info_.InternalSwap(&other->_impl_.a_info_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SocketDataArgs, _impl_.totalrecv_)
-      + sizeof(SocketDataArgs::_impl_.totalrecv_)
-      - PROTOBUF_FIELD_OFFSET(SocketDataArgs, _impl_.totalsent_)>(
-          reinterpret_cast<char*>(&_impl_.totalsent_),
-          reinterpret_cast<char*>(&other->_impl_.totalsent_));
+      PROTOBUF_FIELD_OFFSET(SocketDataArgs, _impl_.a_totalrecv_)
+      + sizeof(SocketDataArgs::_impl_.a_totalrecv_)
+      - PROTOBUF_FIELD_OFFSET(SocketDataArgs, _impl_.a_totalsent_)>(
+          reinterpret_cast<char*>(&_impl_.a_totalsent_),
+          reinterpret_cast<char*>(&other->_impl_.a_totalsent_));
 }
 
 std::string SocketDataArgs::GetTypeName() const {
@@ -1227,16 +1227,16 @@ std::string SocketDataArgs::GetTypeName() const {
 class SocketPorcessInitAttributes::_Internal {
  public:
   using HasBits = decltype(std::declval<SocketPorcessInitAttributes>()._impl_._has_bits_);
-  static void set_has_moffline(HasBits* has_bits) {
+  static void set_has_a_moffline(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_mconnectivity(HasBits* has_bits) {
+  static void set_has_a_mconnectivity(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_minitsandbox(HasBits* has_bits) {
+  static void set_has_a_minitsandbox(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_msandboxbroker(HasBits* has_bits) {
+  static void set_has_a_msandboxbroker(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1256,23 +1256,23 @@ SocketPorcessInitAttributes::SocketPorcessInitAttributes(const SocketPorcessInit
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.msandboxbroker_){}
-    , decltype(_impl_.moffline_){}
-    , decltype(_impl_.mconnectivity_){}
-    , decltype(_impl_.minitsandbox_){}};
+    , decltype(_impl_.a_msandboxbroker_){}
+    , decltype(_impl_.a_moffline_){}
+    , decltype(_impl_.a_mconnectivity_){}
+    , decltype(_impl_.a_minitsandbox_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.msandboxbroker_.InitDefault();
+  _impl_.a_msandboxbroker_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.msandboxbroker_.Set("", GetArenaForAllocation());
+    _impl_.a_msandboxbroker_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_msandboxbroker()) {
-    _this->_impl_.msandboxbroker_.Set(from._internal_msandboxbroker(), 
+  if (from._internal_has_a_msandboxbroker()) {
+    _this->_impl_.a_msandboxbroker_.Set(from._internal_a_msandboxbroker(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.moffline_, &from._impl_.moffline_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.minitsandbox_) -
-    reinterpret_cast<char*>(&_impl_.moffline_)) + sizeof(_impl_.minitsandbox_));
+  ::memcpy(&_impl_.a_moffline_, &from._impl_.a_moffline_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_minitsandbox_) -
+    reinterpret_cast<char*>(&_impl_.a_moffline_)) + sizeof(_impl_.a_minitsandbox_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.SocketPorcessInitAttributes)
 }
 
@@ -1283,14 +1283,14 @@ inline void SocketPorcessInitAttributes::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.msandboxbroker_){}
-    , decltype(_impl_.moffline_){false}
-    , decltype(_impl_.mconnectivity_){false}
-    , decltype(_impl_.minitsandbox_){false}
+    , decltype(_impl_.a_msandboxbroker_){}
+    , decltype(_impl_.a_moffline_){false}
+    , decltype(_impl_.a_mconnectivity_){false}
+    , decltype(_impl_.a_minitsandbox_){false}
   };
-  _impl_.msandboxbroker_.InitDefault();
+  _impl_.a_msandboxbroker_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.msandboxbroker_.Set("", GetArenaForAllocation());
+    _impl_.a_msandboxbroker_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1305,7 +1305,7 @@ SocketPorcessInitAttributes::~SocketPorcessInitAttributes() {
 
 inline void SocketPorcessInitAttributes::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.msandboxbroker_.Destroy();
+  _impl_.a_msandboxbroker_.Destroy();
 }
 
 void SocketPorcessInitAttributes::SetCachedSize(int size) const {
@@ -1320,11 +1320,11 @@ void SocketPorcessInitAttributes::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.msandboxbroker_.ClearNonDefaultToEmpty();
+    _impl_.a_msandboxbroker_.ClearNonDefaultToEmpty();
   }
-  ::memset(&_impl_.moffline_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.minitsandbox_) -
-      reinterpret_cast<char*>(&_impl_.moffline_)) + sizeof(_impl_.minitsandbox_));
+  ::memset(&_impl_.a_moffline_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_minitsandbox_) -
+      reinterpret_cast<char*>(&_impl_.a_moffline_)) + sizeof(_impl_.a_minitsandbox_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1336,37 +1336,37 @@ const char* SocketPorcessInitAttributes::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool mOffline = 1;
+      // required bool a_mOffline = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_moffline(&has_bits);
-          _impl_.moffline_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_moffline(&has_bits);
+          _impl_.a_moffline_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool mConnectivity = 2;
+      // required bool a_mConnectivity = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_mconnectivity(&has_bits);
-          _impl_.mconnectivity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_mconnectivity(&has_bits);
+          _impl_.a_mconnectivity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool mInitSandbox = 3;
+      // required bool a_mInitSandbox = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_minitsandbox(&has_bits);
-          _impl_.minitsandbox_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_minitsandbox(&has_bits);
+          _impl_.a_minitsandbox_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes mSandboxBroker = 4;
+      // optional bytes a_mSandboxBroker = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_msandboxbroker();
+          auto str = _internal_mutable_a_msandboxbroker();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1403,28 +1403,28 @@ uint8_t* SocketPorcessInitAttributes::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool mOffline = 1;
+  // required bool a_mOffline = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_moffline(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_moffline(), target);
   }
 
-  // required bool mConnectivity = 2;
+  // required bool a_mConnectivity = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_mconnectivity(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_mconnectivity(), target);
   }
 
-  // required bool mInitSandbox = 3;
+  // required bool a_mInitSandbox = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_minitsandbox(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_minitsandbox(), target);
   }
 
-  // optional bytes mSandboxBroker = 4;
+  // optional bytes a_mSandboxBroker = 4;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_msandboxbroker(), target);
+        4, this->_internal_a_msandboxbroker(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1439,18 +1439,18 @@ size_t SocketPorcessInitAttributes::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.SocketPorcessInitAttributes)
   size_t total_size = 0;
 
-  if (_internal_has_moffline()) {
-    // required bool mOffline = 1;
+  if (_internal_has_a_moffline()) {
+    // required bool a_mOffline = 1;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_mconnectivity()) {
-    // required bool mConnectivity = 2;
+  if (_internal_has_a_mconnectivity()) {
+    // required bool a_mConnectivity = 2;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_minitsandbox()) {
-    // required bool mInitSandbox = 3;
+  if (_internal_has_a_minitsandbox()) {
+    // required bool a_mInitSandbox = 3;
     total_size += 1 + 1;
   }
 
@@ -1461,13 +1461,13 @@ size_t SocketPorcessInitAttributes::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000e) ^ 0x0000000e) == 0) {  // All required fields are present.
-    // required bool mOffline = 1;
+    // required bool a_mOffline = 1;
     total_size += 1 + 1;
 
-    // required bool mConnectivity = 2;
+    // required bool a_mConnectivity = 2;
     total_size += 1 + 1;
 
-    // required bool mInitSandbox = 3;
+    // required bool a_mInitSandbox = 3;
     total_size += 1 + 1;
 
   } else {
@@ -1477,12 +1477,12 @@ size_t SocketPorcessInitAttributes::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes mSandboxBroker = 4;
+  // optional bytes a_mSandboxBroker = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_msandboxbroker());
+        this->_internal_a_msandboxbroker());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1509,16 +1509,16 @@ void SocketPorcessInitAttributes::MergeFrom(const SocketPorcessInitAttributes& f
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_msandboxbroker(from._internal_msandboxbroker());
+      _this->_internal_set_a_msandboxbroker(from._internal_a_msandboxbroker());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.moffline_ = from._impl_.moffline_;
+      _this->_impl_.a_moffline_ = from._impl_.a_moffline_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.mconnectivity_ = from._impl_.mconnectivity_;
+      _this->_impl_.a_mconnectivity_ = from._impl_.a_mconnectivity_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.minitsandbox_ = from._impl_.minitsandbox_;
+      _this->_impl_.a_minitsandbox_ = from._impl_.a_minitsandbox_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1544,15 +1544,15 @@ void SocketPorcessInitAttributes::InternalSwap(SocketPorcessInitAttributes* othe
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.msandboxbroker_, lhs_arena,
-      &other->_impl_.msandboxbroker_, rhs_arena
+      &_impl_.a_msandboxbroker_, lhs_arena,
+      &other->_impl_.a_msandboxbroker_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SocketPorcessInitAttributes, _impl_.minitsandbox_)
-      + sizeof(SocketPorcessInitAttributes::_impl_.minitsandbox_)
-      - PROTOBUF_FIELD_OFFSET(SocketPorcessInitAttributes, _impl_.moffline_)>(
-          reinterpret_cast<char*>(&_impl_.moffline_),
-          reinterpret_cast<char*>(&other->_impl_.moffline_));
+      PROTOBUF_FIELD_OFFSET(SocketPorcessInitAttributes, _impl_.a_minitsandbox_)
+      + sizeof(SocketPorcessInitAttributes::_impl_.a_minitsandbox_)
+      - PROTOBUF_FIELD_OFFSET(SocketPorcessInitAttributes, _impl_.a_moffline_)>(
+          reinterpret_cast<char*>(&_impl_.a_moffline_),
+          reinterpret_cast<char*>(&other->_impl_.a_moffline_));
 }
 
 std::string SocketPorcessInitAttributes::GetTypeName() const {

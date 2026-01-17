@@ -172,43 +172,43 @@ class Msg_NotifyVsync final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kVsyncFieldNumber = 1,
-    kLayersIdFieldNumber = 2,
+    kAVsyncFieldNumber = 1,
+    kALayersIdFieldNumber = 2,
   };
-  // required bytes vsync = 1;
-  bool has_vsync() const;
+  // required bytes a_vsync = 1;
+  bool has_a_vsync() const;
   private:
-  bool _internal_has_vsync() const;
+  bool _internal_has_a_vsync() const;
   public:
-  void clear_vsync();
-  const std::string& vsync() const;
+  void clear_a_vsync();
+  const std::string& a_vsync() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_vsync(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_vsync();
-  PROTOBUF_NODISCARD std::string* release_vsync();
-  void set_allocated_vsync(std::string* vsync);
+  void set_a_vsync(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_vsync();
+  PROTOBUF_NODISCARD std::string* release_a_vsync();
+  void set_allocated_a_vsync(std::string* a_vsync);
   private:
-  const std::string& _internal_vsync() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_vsync(const std::string& value);
-  std::string* _internal_mutable_vsync();
+  const std::string& _internal_a_vsync() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_vsync(const std::string& value);
+  std::string* _internal_mutable_a_vsync();
   public:
 
-  // required bytes layersId = 2;
-  bool has_layersid() const;
+  // required bytes a_layersId = 2;
+  bool has_a_layersid() const;
   private:
-  bool _internal_has_layersid() const;
+  bool _internal_has_a_layersid() const;
   public:
-  void clear_layersid();
-  const std::string& layersid() const;
+  void clear_a_layersid();
+  const std::string& a_layersid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_layersid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_layersid();
-  PROTOBUF_NODISCARD std::string* release_layersid();
-  void set_allocated_layersid(std::string* layersid);
+  void set_a_layersid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_layersid();
+  PROTOBUF_NODISCARD std::string* release_a_layersid();
+  void set_allocated_a_layersid(std::string* a_layersid);
   private:
-  const std::string& _internal_layersid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_layersid(const std::string& value);
-  std::string* _internal_mutable_layersid();
+  const std::string& _internal_a_layersid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_layersid(const std::string& value);
+  std::string* _internal_mutable_a_layersid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync)
@@ -224,8 +224,8 @@ class Msg_NotifyVsync final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vsync_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr layersid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_vsync_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_layersid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVsyncBridge_2eproto;
@@ -241,140 +241,140 @@ class Msg_NotifyVsync final :
 #endif  // __GNUC__
 // Msg_NotifyVsync
 
-// required bytes vsync = 1;
-inline bool Msg_NotifyVsync::_internal_has_vsync() const {
+// required bytes a_vsync = 1;
+inline bool Msg_NotifyVsync::_internal_has_a_vsync() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyVsync::has_vsync() const {
-  return _internal_has_vsync();
+inline bool Msg_NotifyVsync::has_a_vsync() const {
+  return _internal_has_a_vsync();
 }
-inline void Msg_NotifyVsync::clear_vsync() {
-  _impl_.vsync_.ClearToEmpty();
+inline void Msg_NotifyVsync::clear_a_vsync() {
+  _impl_.a_vsync_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NotifyVsync::vsync() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.vsync)
-  return _internal_vsync();
+inline const std::string& Msg_NotifyVsync::a_vsync() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_vsync)
+  return _internal_a_vsync();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyVsync::set_vsync(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyVsync::set_a_vsync(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.vsync_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.vsync)
+ _impl_.a_vsync_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_vsync)
 }
-inline std::string* Msg_NotifyVsync::mutable_vsync() {
-  std::string* _s = _internal_mutable_vsync();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.vsync)
+inline std::string* Msg_NotifyVsync::mutable_a_vsync() {
+  std::string* _s = _internal_mutable_a_vsync();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_vsync)
   return _s;
 }
-inline const std::string& Msg_NotifyVsync::_internal_vsync() const {
-  return _impl_.vsync_.Get();
+inline const std::string& Msg_NotifyVsync::_internal_a_vsync() const {
+  return _impl_.a_vsync_.Get();
 }
-inline void Msg_NotifyVsync::_internal_set_vsync(const std::string& value) {
+inline void Msg_NotifyVsync::_internal_set_a_vsync(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.vsync_.Set(value, GetArenaForAllocation());
+  _impl_.a_vsync_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyVsync::_internal_mutable_vsync() {
+inline std::string* Msg_NotifyVsync::_internal_mutable_a_vsync() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.vsync_.Mutable(GetArenaForAllocation());
+  return _impl_.a_vsync_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyVsync::release_vsync() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.vsync)
-  if (!_internal_has_vsync()) {
+inline std::string* Msg_NotifyVsync::release_a_vsync() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_vsync)
+  if (!_internal_has_a_vsync()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.vsync_.Release();
+  auto* p = _impl_.a_vsync_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.vsync_.IsDefault()) {
-    _impl_.vsync_.Set("", GetArenaForAllocation());
+  if (_impl_.a_vsync_.IsDefault()) {
+    _impl_.a_vsync_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyVsync::set_allocated_vsync(std::string* vsync) {
-  if (vsync != nullptr) {
+inline void Msg_NotifyVsync::set_allocated_a_vsync(std::string* a_vsync) {
+  if (a_vsync != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.vsync_.SetAllocated(vsync, GetArenaForAllocation());
+  _impl_.a_vsync_.SetAllocated(a_vsync, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.vsync_.IsDefault()) {
-    _impl_.vsync_.Set("", GetArenaForAllocation());
+  if (_impl_.a_vsync_.IsDefault()) {
+    _impl_.a_vsync_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.vsync)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_vsync)
 }
 
-// required bytes layersId = 2;
-inline bool Msg_NotifyVsync::_internal_has_layersid() const {
+// required bytes a_layersId = 2;
+inline bool Msg_NotifyVsync::_internal_has_a_layersid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_NotifyVsync::has_layersid() const {
-  return _internal_has_layersid();
+inline bool Msg_NotifyVsync::has_a_layersid() const {
+  return _internal_has_a_layersid();
 }
-inline void Msg_NotifyVsync::clear_layersid() {
-  _impl_.layersid_.ClearToEmpty();
+inline void Msg_NotifyVsync::clear_a_layersid() {
+  _impl_.a_layersid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_NotifyVsync::layersid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.layersId)
-  return _internal_layersid();
+inline const std::string& Msg_NotifyVsync::a_layersid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_layersId)
+  return _internal_a_layersid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyVsync::set_layersid(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyVsync::set_a_layersid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.layersid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.layersId)
+ _impl_.a_layersid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_layersId)
 }
-inline std::string* Msg_NotifyVsync::mutable_layersid() {
-  std::string* _s = _internal_mutable_layersid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.layersId)
+inline std::string* Msg_NotifyVsync::mutable_a_layersid() {
+  std::string* _s = _internal_mutable_a_layersid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_layersId)
   return _s;
 }
-inline const std::string& Msg_NotifyVsync::_internal_layersid() const {
-  return _impl_.layersid_.Get();
+inline const std::string& Msg_NotifyVsync::_internal_a_layersid() const {
+  return _impl_.a_layersid_.Get();
 }
-inline void Msg_NotifyVsync::_internal_set_layersid(const std::string& value) {
+inline void Msg_NotifyVsync::_internal_set_a_layersid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.layersid_.Set(value, GetArenaForAllocation());
+  _impl_.a_layersid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyVsync::_internal_mutable_layersid() {
+inline std::string* Msg_NotifyVsync::_internal_mutable_a_layersid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.layersid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_layersid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyVsync::release_layersid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.layersId)
-  if (!_internal_has_layersid()) {
+inline std::string* Msg_NotifyVsync::release_a_layersid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_layersId)
+  if (!_internal_has_a_layersid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.layersid_.Release();
+  auto* p = _impl_.a_layersid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.layersid_.IsDefault()) {
-    _impl_.layersid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_layersid_.IsDefault()) {
+    _impl_.a_layersid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyVsync::set_allocated_layersid(std::string* layersid) {
-  if (layersid != nullptr) {
+inline void Msg_NotifyVsync::set_allocated_a_layersid(std::string* a_layersid) {
+  if (a_layersid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.layersid_.SetAllocated(layersid, GetArenaForAllocation());
+  _impl_.a_layersid_.SetAllocated(a_layersid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.layersid_.IsDefault()) {
-    _impl_.layersid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_layersid_.IsDefault()) {
+    _impl_.a_layersid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.layersId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync.a_layersId)
 }
 
 #ifdef __GNUC__

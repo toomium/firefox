@@ -20,17 +20,17 @@ message Msg_FindObjects {
 }
 
 message Reply_FindObjects {
-  repeated protobuf.mozilla.psm.IPCClientCertObject aObjects = 1;
+  repeated protobuf.mozilla.psm.IPCClientCertObject a_aObjects = 1;
 }
 
 message Msg_Sign {
-  required protobuf.mozilla.psm.ByteArray aCert = 1;
-  required protobuf.mozilla.psm.ByteArray aData = 2;
-  required protobuf.mozilla.psm.ByteArray aParams = 3;
+  required protobuf.mozilla.psm.ByteArray a_aCert = 1;
+  required protobuf.mozilla.psm.ByteArray a_aData = 2;
+  required protobuf.mozilla.psm.ByteArray a_aParams = 3;
 }
 
 message Reply_Sign {
-  required protobuf.mozilla.psm.ByteArray aSignature = 1;
+  required protobuf.mozilla.psm.ByteArray a_aSignature = 1;
 }
 
 message Msg___delete__ {

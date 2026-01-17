@@ -308,24 +308,24 @@ class Msg_Update final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kColorFieldNumber = 1,
+    kAColorFieldNumber = 1,
   };
-  // required bytes color = 1;
-  bool has_color() const;
+  // required bytes a_color = 1;
+  bool has_a_color() const;
   private:
-  bool _internal_has_color() const;
+  bool _internal_has_a_color() const;
   public:
-  void clear_color();
-  const std::string& color() const;
+  void clear_a_color();
+  const std::string& a_color() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_color(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_color();
-  PROTOBUF_NODISCARD std::string* release_color();
-  void set_allocated_color(std::string* color);
+  void set_a_color(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_color();
+  PROTOBUF_NODISCARD std::string* release_a_color();
+  void set_allocated_a_color(std::string* a_color);
   private:
-  const std::string& _internal_color() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_color(const std::string& value);
-  std::string* _internal_mutable_color();
+  const std::string& _internal_a_color() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_color(const std::string& value);
+  std::string* _internal_mutable_a_color();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PColorPicker.Msg_Update)
@@ -338,7 +338,7 @@ class Msg_Update final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr color_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_color_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PColorPicker_2eproto;
@@ -455,24 +455,24 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kColorFieldNumber = 1,
+    kAColorFieldNumber = 1,
   };
-  // required bytes color = 1;
-  bool has_color() const;
+  // required bytes a_color = 1;
+  bool has_a_color() const;
   private:
-  bool _internal_has_color() const;
+  bool _internal_has_a_color() const;
   public:
-  void clear_color();
-  const std::string& color() const;
+  void clear_a_color();
+  const std::string& a_color() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_color(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_color();
-  PROTOBUF_NODISCARD std::string* release_color();
-  void set_allocated_color(std::string* color);
+  void set_a_color(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_color();
+  PROTOBUF_NODISCARD std::string* release_a_color();
+  void set_allocated_a_color(std::string* a_color);
   private:
-  const std::string& _internal_color() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_color(const std::string& value);
-  std::string* _internal_mutable_color();
+  const std::string& _internal_a_color() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_color(const std::string& value);
+  std::string* _internal_mutable_a_color();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PColorPicker.Msg___delete__)
@@ -485,7 +485,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr color_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_color_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PColorPicker_2eproto;
@@ -629,144 +629,144 @@ class Reply___delete__ final :
 
 // Msg_Update
 
-// required bytes color = 1;
-inline bool Msg_Update::_internal_has_color() const {
+// required bytes a_color = 1;
+inline bool Msg_Update::_internal_has_a_color() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Update::has_color() const {
-  return _internal_has_color();
+inline bool Msg_Update::has_a_color() const {
+  return _internal_has_a_color();
 }
-inline void Msg_Update::clear_color() {
-  _impl_.color_.ClearToEmpty();
+inline void Msg_Update::clear_a_color() {
+  _impl_.a_color_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Update::color() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PColorPicker.Msg_Update.color)
-  return _internal_color();
+inline const std::string& Msg_Update::a_color() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PColorPicker.Msg_Update.a_color)
+  return _internal_a_color();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Update::set_color(ArgT0&& arg0, ArgT... args) {
+void Msg_Update::set_a_color(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.color_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PColorPicker.Msg_Update.color)
+ _impl_.a_color_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PColorPicker.Msg_Update.a_color)
 }
-inline std::string* Msg_Update::mutable_color() {
-  std::string* _s = _internal_mutable_color();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PColorPicker.Msg_Update.color)
+inline std::string* Msg_Update::mutable_a_color() {
+  std::string* _s = _internal_mutable_a_color();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PColorPicker.Msg_Update.a_color)
   return _s;
 }
-inline const std::string& Msg_Update::_internal_color() const {
-  return _impl_.color_.Get();
+inline const std::string& Msg_Update::_internal_a_color() const {
+  return _impl_.a_color_.Get();
 }
-inline void Msg_Update::_internal_set_color(const std::string& value) {
+inline void Msg_Update::_internal_set_a_color(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.color_.Set(value, GetArenaForAllocation());
+  _impl_.a_color_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Update::_internal_mutable_color() {
+inline std::string* Msg_Update::_internal_mutable_a_color() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.color_.Mutable(GetArenaForAllocation());
+  return _impl_.a_color_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Update::release_color() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PColorPicker.Msg_Update.color)
-  if (!_internal_has_color()) {
+inline std::string* Msg_Update::release_a_color() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PColorPicker.Msg_Update.a_color)
+  if (!_internal_has_a_color()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.color_.Release();
+  auto* p = _impl_.a_color_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.color_.IsDefault()) {
-    _impl_.color_.Set("", GetArenaForAllocation());
+  if (_impl_.a_color_.IsDefault()) {
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Update::set_allocated_color(std::string* color) {
-  if (color != nullptr) {
+inline void Msg_Update::set_allocated_a_color(std::string* a_color) {
+  if (a_color != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.color_.SetAllocated(color, GetArenaForAllocation());
+  _impl_.a_color_.SetAllocated(a_color, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.color_.IsDefault()) {
-    _impl_.color_.Set("", GetArenaForAllocation());
+  if (_impl_.a_color_.IsDefault()) {
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PColorPicker.Msg_Update.color)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PColorPicker.Msg_Update.a_color)
 }
 
 // -------------------------------------------------------------------
 
 // Msg___delete__
 
-// required bytes color = 1;
-inline bool Msg___delete__::_internal_has_color() const {
+// required bytes a_color = 1;
+inline bool Msg___delete__::_internal_has_a_color() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_color() const {
-  return _internal_has_color();
+inline bool Msg___delete__::has_a_color() const {
+  return _internal_has_a_color();
 }
-inline void Msg___delete__::clear_color() {
-  _impl_.color_.ClearToEmpty();
+inline void Msg___delete__::clear_a_color() {
+  _impl_.a_color_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg___delete__::color() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PColorPicker.Msg___delete__.color)
-  return _internal_color();
+inline const std::string& Msg___delete__::a_color() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PColorPicker.Msg___delete__.a_color)
+  return _internal_a_color();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_color(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_color(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.color_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PColorPicker.Msg___delete__.color)
+ _impl_.a_color_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PColorPicker.Msg___delete__.a_color)
 }
-inline std::string* Msg___delete__::mutable_color() {
-  std::string* _s = _internal_mutable_color();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PColorPicker.Msg___delete__.color)
+inline std::string* Msg___delete__::mutable_a_color() {
+  std::string* _s = _internal_mutable_a_color();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PColorPicker.Msg___delete__.a_color)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_color() const {
-  return _impl_.color_.Get();
+inline const std::string& Msg___delete__::_internal_a_color() const {
+  return _impl_.a_color_.Get();
 }
-inline void Msg___delete__::_internal_set_color(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_color(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.color_.Set(value, GetArenaForAllocation());
+  _impl_.a_color_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_color() {
+inline std::string* Msg___delete__::_internal_mutable_a_color() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.color_.Mutable(GetArenaForAllocation());
+  return _impl_.a_color_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_color() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PColorPicker.Msg___delete__.color)
-  if (!_internal_has_color()) {
+inline std::string* Msg___delete__::release_a_color() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PColorPicker.Msg___delete__.a_color)
+  if (!_internal_has_a_color()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.color_.Release();
+  auto* p = _impl_.a_color_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.color_.IsDefault()) {
-    _impl_.color_.Set("", GetArenaForAllocation());
+  if (_impl_.a_color_.IsDefault()) {
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_color(std::string* color) {
-  if (color != nullptr) {
+inline void Msg___delete__::set_allocated_a_color(std::string* a_color) {
+  if (a_color != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.color_.SetAllocated(color, GetArenaForAllocation());
+  _impl_.a_color_.SetAllocated(a_color, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.color_.IsDefault()) {
-    _impl_.color_.Set("", GetArenaForAllocation());
+  if (_impl_.a_color_.IsDefault()) {
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PColorPicker.Msg___delete__.color)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PColorPicker.Msg___delete__.a_color)
 }
 
 // -------------------------------------------------------------------

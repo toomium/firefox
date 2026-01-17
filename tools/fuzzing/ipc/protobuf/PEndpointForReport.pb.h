@@ -176,24 +176,24 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndpointURLFieldNumber = 1,
+    kAEndpointURLFieldNumber = 1,
   };
-  // required bytes endpointURL = 1;
-  bool has_endpointurl() const;
+  // required bytes a_endpointURL = 1;
+  bool has_a_endpointurl() const;
   private:
-  bool _internal_has_endpointurl() const;
+  bool _internal_has_a_endpointurl() const;
   public:
-  void clear_endpointurl();
-  const std::string& endpointurl() const;
+  void clear_a_endpointurl();
+  const std::string& a_endpointurl() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_endpointurl(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_endpointurl();
-  PROTOBUF_NODISCARD std::string* release_endpointurl();
-  void set_allocated_endpointurl(std::string* endpointurl);
+  void set_a_endpointurl(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_endpointurl();
+  PROTOBUF_NODISCARD std::string* release_a_endpointurl();
+  void set_allocated_a_endpointurl(std::string* a_endpointurl);
   private:
-  const std::string& _internal_endpointurl() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endpointurl(const std::string& value);
-  std::string* _internal_mutable_endpointurl();
+  const std::string& _internal_a_endpointurl() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_endpointurl(const std::string& value);
+  std::string* _internal_mutable_a_endpointurl();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__)
@@ -206,7 +206,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endpointurl_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpointurl_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PEndpointForReport_2eproto;
@@ -346,72 +346,72 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required bytes endpointURL = 1;
-inline bool Msg___delete__::_internal_has_endpointurl() const {
+// required bytes a_endpointURL = 1;
+inline bool Msg___delete__::_internal_has_a_endpointurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_endpointurl() const {
-  return _internal_has_endpointurl();
+inline bool Msg___delete__::has_a_endpointurl() const {
+  return _internal_has_a_endpointurl();
 }
-inline void Msg___delete__::clear_endpointurl() {
-  _impl_.endpointurl_.ClearToEmpty();
+inline void Msg___delete__::clear_a_endpointurl() {
+  _impl_.a_endpointurl_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg___delete__::endpointurl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.endpointURL)
-  return _internal_endpointurl();
+inline const std::string& Msg___delete__::a_endpointurl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.a_endpointURL)
+  return _internal_a_endpointurl();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_endpointurl(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_endpointurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.endpointurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.endpointURL)
+ _impl_.a_endpointurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.a_endpointURL)
 }
-inline std::string* Msg___delete__::mutable_endpointurl() {
-  std::string* _s = _internal_mutable_endpointurl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.endpointURL)
+inline std::string* Msg___delete__::mutable_a_endpointurl() {
+  std::string* _s = _internal_mutable_a_endpointurl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.a_endpointURL)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_endpointurl() const {
-  return _impl_.endpointurl_.Get();
+inline const std::string& Msg___delete__::_internal_a_endpointurl() const {
+  return _impl_.a_endpointurl_.Get();
 }
-inline void Msg___delete__::_internal_set_endpointurl(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_endpointurl(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.endpointurl_.Set(value, GetArenaForAllocation());
+  _impl_.a_endpointurl_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_endpointurl() {
+inline std::string* Msg___delete__::_internal_mutable_a_endpointurl() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.endpointurl_.Mutable(GetArenaForAllocation());
+  return _impl_.a_endpointurl_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_endpointurl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.endpointURL)
-  if (!_internal_has_endpointurl()) {
+inline std::string* Msg___delete__::release_a_endpointurl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.a_endpointURL)
+  if (!_internal_has_a_endpointurl()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.endpointurl_.Release();
+  auto* p = _impl_.a_endpointurl_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpointurl_.IsDefault()) {
-    _impl_.endpointurl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpointurl_.IsDefault()) {
+    _impl_.a_endpointurl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_endpointurl(std::string* endpointurl) {
-  if (endpointurl != nullptr) {
+inline void Msg___delete__::set_allocated_a_endpointurl(std::string* a_endpointurl) {
+  if (a_endpointurl != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.endpointurl_.SetAllocated(endpointurl, GetArenaForAllocation());
+  _impl_.a_endpointurl_.SetAllocated(a_endpointurl, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpointurl_.IsDefault()) {
-    _impl_.endpointurl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpointurl_.IsDefault()) {
+    _impl_.a_endpointurl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.endpointURL)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__.a_endpointURL)
 }
 
 // -------------------------------------------------------------------

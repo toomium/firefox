@@ -24,15 +24,15 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorD3D10::SurfaceDescriptorD3D10(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.gpuprocesstextureid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.fencesholderid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.arrayindex_)*/0u
-  , /*decltype(_impl_.haskeyedmutex_)*/false} {}
+  , /*decltype(_impl_.a_handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_gpuprocesstextureid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_fencesholderid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_arrayindex_)*/0u
+  , /*decltype(_impl_.a_haskeyedmutex_)*/false} {}
 struct SurfaceDescriptorD3D10DefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorD3D10DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -46,16 +46,16 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorDXGIYCbCr::SurfaceDescriptorDXGIYCbCr(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.handley_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.handlecb_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.handlecr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.sizey_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.sizecbcr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colordepth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.fencesholderid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_handley_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_handlecb_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_handlecr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_sizey_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_sizecbcr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colordepth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_fencesholderid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SurfaceDescriptorDXGIYCbCrDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorDXGIYCbCrDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -69,10 +69,10 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorMacIOSurface::SurfaceDescriptorMacIOSurface(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.gpufence_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.surfaceid_)*/0u
-  , /*decltype(_impl_.isopaque_)*/false} {}
+  , /*decltype(_impl_.a_yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_gpufence_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_surfaceid_)*/0u
+  , /*decltype(_impl_.a_isopaque_)*/false} {}
 struct SurfaceDescriptorMacIOSurfaceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorMacIOSurfaceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -86,27 +86,27 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorDMABuf::SurfaceDescriptorDMABuf(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.modifier_)*/{}
-  , /*decltype(_impl_.fds_)*/{}
-  , /*decltype(_impl_.width_)*/{}
-  , /*decltype(_impl_.height_)*/{}
-  , /*decltype(_impl_.widthaligned_)*/{}
-  , /*decltype(_impl_.heightaligned_)*/{}
-  , /*decltype(_impl_.format_)*/{}
-  , /*decltype(_impl_.strides_)*/{}
-  , /*decltype(_impl_.offsets_)*/{}
-  , /*decltype(_impl_.fence_)*/{}
-  , /*decltype(_impl_.refcount_)*/{}
-  , /*decltype(_impl_.yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colorprimaries_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.transferfunction_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.semaphorefd_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.buffertype_)*/0u
-  , /*decltype(_impl_.fourccformat_)*/0u
-  , /*decltype(_impl_.flags_)*/0u
-  , /*decltype(_impl_.uid_)*/0u
-  , /*decltype(_impl_.pid_)*/0u} {}
+  , /*decltype(_impl_.a_modifier_)*/{}
+  , /*decltype(_impl_.a_fds_)*/{}
+  , /*decltype(_impl_.a_width_)*/{}
+  , /*decltype(_impl_.a_height_)*/{}
+  , /*decltype(_impl_.a_widthaligned_)*/{}
+  , /*decltype(_impl_.a_heightaligned_)*/{}
+  , /*decltype(_impl_.a_format_)*/{}
+  , /*decltype(_impl_.a_strides_)*/{}
+  , /*decltype(_impl_.a_offsets_)*/{}
+  , /*decltype(_impl_.a_fence_)*/{}
+  , /*decltype(_impl_.a_refcount_)*/{}
+  , /*decltype(_impl_.a_yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colorprimaries_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_transferfunction_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_semaphorefd_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_buffertype_)*/0u
+  , /*decltype(_impl_.a_fourccformat_)*/0u
+  , /*decltype(_impl_.a_flags_)*/0u
+  , /*decltype(_impl_.a_uid_)*/0u
+  , /*decltype(_impl_.a_pid_)*/0u} {}
 struct SurfaceDescriptorDMABufDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorDMABufDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -120,12 +120,12 @@ PROTOBUF_CONSTEXPR SurfaceTextureDescriptor::SurfaceTextureDescriptor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.transformoverride_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.handle_)*/uint64_t{0u}
-  , /*decltype(_impl_.continuous_)*/false
-  , /*decltype(_impl_.forcebt709colorspace_)*/false} {}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_transformoverride_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_handle_)*/uint64_t{0u}
+  , /*decltype(_impl_.a_continuous_)*/false
+  , /*decltype(_impl_.a_forcebt709colorspace_)*/false} {}
 struct SurfaceTextureDescriptorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceTextureDescriptorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -139,9 +139,9 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorAndroidHardwareBuffer::SurfaceDescriptorAndr
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.bufferid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_bufferid_)*/uint64_t{0u}} {}
 struct SurfaceDescriptorAndroidHardwareBufferDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorAndroidHardwareBufferDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -155,10 +155,10 @@ PROTOBUF_CONSTEXPR EGLImageDescriptor::EGLImageDescriptor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.image_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.fence_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.hasalpha_)*/false} {}
+  , /*decltype(_impl_.a_image_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_fence_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_hasalpha_)*/false} {}
 struct EGLImageDescriptorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR EGLImageDescriptorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -172,11 +172,11 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorSharedGLTexture::SurfaceDescriptorSharedGLTe
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.fence_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.texture_)*/0u
-  , /*decltype(_impl_.target_)*/0u
-  , /*decltype(_impl_.hasalpha_)*/false} {}
+  , /*decltype(_impl_.a_fence_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_texture_)*/0u
+  , /*decltype(_impl_.a_target_)*/0u
+  , /*decltype(_impl_.a_hasalpha_)*/false} {}
 struct SurfaceDescriptorSharedGLTextureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorSharedGLTextureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -190,9 +190,9 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorDcompSurface::SurfaceDescriptorDcompSurface(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SurfaceDescriptorDcompSurfaceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorDcompSurfaceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -220,10 +220,10 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorRemoteDecoder::SurfaceDescriptorRemoteDecode
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.source_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.subdesc_)*/nullptr
-  , /*decltype(_impl_.handle_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_source_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_subdesc_)*/nullptr
+  , /*decltype(_impl_.a_handle_)*/uint64_t{0u}} {}
 struct SurfaceDescriptorRemoteDecoderDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorRemoteDecoderDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -251,8 +251,8 @@ PROTOBUF_CONSTEXPR RGBDescriptor::RGBDescriptor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct RGBDescriptorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RGBDescriptorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -266,19 +266,19 @@ PROTOBUF_CONSTEXPR YCbCrDescriptor::YCbCrDescriptor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.display_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ysize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.cbcrsize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.stereomode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colordepth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.chromasubsampling_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ystride_)*/0u
-  , /*decltype(_impl_.cbcrstride_)*/0u
-  , /*decltype(_impl_.yoffset_)*/0u
-  , /*decltype(_impl_.cboffset_)*/0u
-  , /*decltype(_impl_.croffset_)*/0u} {}
+  , /*decltype(_impl_.a_display_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ysize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_cbcrsize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_stereomode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colordepth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_yuvcolorspace_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_colorrange_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_chromasubsampling_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ystride_)*/0u
+  , /*decltype(_impl_.a_cbcrstride_)*/0u
+  , /*decltype(_impl_.a_yoffset_)*/0u
+  , /*decltype(_impl_.a_cboffset_)*/0u
+  , /*decltype(_impl_.a_croffset_)*/0u} {}
 struct YCbCrDescriptorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR YCbCrDescriptorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -320,8 +320,8 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorBuffer::SurfaceDescriptorBuffer(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.desc_)*/nullptr
-  , /*decltype(_impl_.data_)*/nullptr} {}
+  , /*decltype(_impl_.a_desc_)*/nullptr
+  , /*decltype(_impl_.a_data_)*/nullptr} {}
 struct SurfaceDescriptorBufferDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorBufferDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -335,10 +335,10 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorShared::SurfaceDescriptorShared(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.stride_)*/0} {}
+  , /*decltype(_impl_.a_size_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_format_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_handle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_stride_)*/0} {}
 struct SurfaceDescriptorSharedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorSharedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -352,8 +352,8 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorExternalImage::SurfaceDescriptorExternalImag
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.source_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_source_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SurfaceDescriptorExternalImageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorExternalImageDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -367,8 +367,8 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorRemoteTexture::SurfaceDescriptorRemoteTextur
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.textureid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ownerid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_textureid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ownerid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct SurfaceDescriptorRemoteTextureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorRemoteTextureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -382,9 +382,9 @@ PROTOBUF_CONSTEXPR SurfaceDescriptorCanvasSurface::SurfaceDescriptorCanvasSurfac
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.canvasid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.surfaceid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.managerid_)*/0u} {}
+  , /*decltype(_impl_.a_canvasid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_surfaceid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_managerid_)*/0u} {}
 struct SurfaceDescriptorCanvasSurfaceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SurfaceDescriptorCanvasSurfaceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -420,31 +420,31 @@ namespace layers {
 class SurfaceDescriptorD3D10::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorD3D10>()._impl_._has_bits_);
-  static void set_has_handle(HasBits* has_bits) {
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_gpuprocesstextureid(HasBits* has_bits) {
+  static void set_has_a_gpuprocesstextureid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_arrayindex(HasBits* has_bits) {
+  static void set_has_a_arrayindex(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_format(HasBits* has_bits) {
+  static void set_has_a_format(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_colorspace(HasBits* has_bits) {
+  static void set_has_a_colorspace(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_colorrange(HasBits* has_bits) {
+  static void set_has_a_colorrange(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_haskeyedmutex(HasBits* has_bits) {
+  static void set_has_a_haskeyedmutex(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_fencesholderid(HasBits* has_bits) {
+  static void set_has_a_fencesholderid(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -464,76 +464,76 @@ SurfaceDescriptorD3D10::SurfaceDescriptorD3D10(const SurfaceDescriptorD3D10& fro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.gpuprocesstextureid_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.colorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.fencesholderid_){}
-    , decltype(_impl_.arrayindex_){}
-    , decltype(_impl_.haskeyedmutex_){}};
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_gpuprocesstextureid_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_colorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_fencesholderid_){}
+    , decltype(_impl_.a_arrayindex_){}
+    , decltype(_impl_.a_haskeyedmutex_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.handle_.InitDefault();
+  _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handle_.Set("", GetArenaForAllocation());
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_.Set(from._internal_handle(), 
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_.Set(from._internal_a_handle(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.gpuprocesstextureid_.InitDefault();
+  _impl_.a_gpuprocesstextureid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpuprocesstextureid_.Set("", GetArenaForAllocation());
+    _impl_.a_gpuprocesstextureid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_gpuprocesstextureid()) {
-    _this->_impl_.gpuprocesstextureid_.Set(from._internal_gpuprocesstextureid(), 
+  if (from._internal_has_a_gpuprocesstextureid()) {
+    _this->_impl_.a_gpuprocesstextureid_.Set(from._internal_a_gpuprocesstextureid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_format()) {
-    _this->_impl_.format_.Set(from._internal_format(), 
+  if (from._internal_has_a_format()) {
+    _this->_impl_.a_format_.Set(from._internal_a_format(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colorspace_.InitDefault();
+  _impl_.a_colorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_colorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colorspace()) {
-    _this->_impl_.colorspace_.Set(from._internal_colorspace(), 
+  if (from._internal_has_a_colorspace()) {
+    _this->_impl_.a_colorspace_.Set(from._internal_a_colorspace(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colorrange()) {
-    _this->_impl_.colorrange_.Set(from._internal_colorrange(), 
+  if (from._internal_has_a_colorrange()) {
+    _this->_impl_.a_colorrange_.Set(from._internal_a_colorrange(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.fencesholderid_.InitDefault();
+  _impl_.a_fencesholderid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fencesholderid_.Set("", GetArenaForAllocation());
+    _impl_.a_fencesholderid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fencesholderid()) {
-    _this->_impl_.fencesholderid_.Set(from._internal_fencesholderid(), 
+  if (from._internal_has_a_fencesholderid()) {
+    _this->_impl_.a_fencesholderid_.Set(from._internal_a_fencesholderid(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.arrayindex_, &from._impl_.arrayindex_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.haskeyedmutex_) -
-    reinterpret_cast<char*>(&_impl_.arrayindex_)) + sizeof(_impl_.haskeyedmutex_));
+  ::memcpy(&_impl_.a_arrayindex_, &from._impl_.a_arrayindex_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_haskeyedmutex_) -
+    reinterpret_cast<char*>(&_impl_.a_arrayindex_)) + sizeof(_impl_.a_haskeyedmutex_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
 }
 
@@ -544,43 +544,43 @@ inline void SurfaceDescriptorD3D10::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.gpuprocesstextureid_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.colorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.fencesholderid_){}
-    , decltype(_impl_.arrayindex_){0u}
-    , decltype(_impl_.haskeyedmutex_){false}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_gpuprocesstextureid_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_colorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_fencesholderid_){}
+    , decltype(_impl_.a_arrayindex_){0u}
+    , decltype(_impl_.a_haskeyedmutex_){false}
   };
-  _impl_.handle_.InitDefault();
+  _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handle_.Set("", GetArenaForAllocation());
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.gpuprocesstextureid_.InitDefault();
+  _impl_.a_gpuprocesstextureid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpuprocesstextureid_.Set("", GetArenaForAllocation());
+    _impl_.a_gpuprocesstextureid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colorspace_.InitDefault();
+  _impl_.a_colorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_colorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.fencesholderid_.InitDefault();
+  _impl_.a_fencesholderid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fencesholderid_.Set("", GetArenaForAllocation());
+    _impl_.a_fencesholderid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -595,13 +595,13 @@ SurfaceDescriptorD3D10::~SurfaceDescriptorD3D10() {
 
 inline void SurfaceDescriptorD3D10::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.handle_.Destroy();
-  _impl_.gpuprocesstextureid_.Destroy();
-  _impl_.format_.Destroy();
-  _impl_.size_.Destroy();
-  _impl_.colorspace_.Destroy();
-  _impl_.colorrange_.Destroy();
-  _impl_.fencesholderid_.Destroy();
+  _impl_.a_handle_.Destroy();
+  _impl_.a_gpuprocesstextureid_.Destroy();
+  _impl_.a_format_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_colorspace_.Destroy();
+  _impl_.a_colorrange_.Destroy();
+  _impl_.a_fencesholderid_.Destroy();
 }
 
 void SurfaceDescriptorD3D10::SetCachedSize(int size) const {
@@ -617,29 +617,29 @@ void SurfaceDescriptorD3D10::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.handle_.ClearNonDefaultToEmpty();
+      _impl_.a_handle_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.gpuprocesstextureid_.ClearNonDefaultToEmpty();
+      _impl_.a_gpuprocesstextureid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.format_.ClearNonDefaultToEmpty();
+      _impl_.a_format_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.colorspace_.ClearNonDefaultToEmpty();
+      _impl_.a_colorspace_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.colorrange_.ClearNonDefaultToEmpty();
+      _impl_.a_colorrange_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000040u) {
-      _impl_.fencesholderid_.ClearNonDefaultToEmpty();
+      _impl_.a_fencesholderid_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.arrayindex_ = 0u;
-  _impl_.haskeyedmutex_ = false;
+  _impl_.a_arrayindex_ = 0u;
+  _impl_.a_haskeyedmutex_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -651,82 +651,82 @@ const char* SurfaceDescriptorD3D10::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes handle = 1;
+      // required bytes a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_handle();
+          auto str = _internal_mutable_a_handle();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes gpuProcessTextureId = 2;
+      // optional bytes a_gpuProcessTextureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_gpuprocesstextureid();
+          auto str = _internal_mutable_a_gpuprocesstextureid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 arrayIndex = 3;
+      // required uint32 a_arrayIndex = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_arrayindex(&has_bits);
-          _impl_.arrayindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_arrayindex(&has_bits);
+          _impl_.a_arrayindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes format = 4;
+      // required bytes a_format = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_format();
+          auto str = _internal_mutable_a_format();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 5;
+      // required bytes a_size = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorSpace = 6;
+      // required bytes a_colorSpace = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_colorspace();
+          auto str = _internal_mutable_a_colorspace();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorRange = 7;
+      // required bytes a_colorRange = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_colorrange();
+          auto str = _internal_mutable_a_colorrange();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool hasKeyedMutex = 8;
+      // required bool a_hasKeyedMutex = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_haskeyedmutex(&has_bits);
-          _impl_.haskeyedmutex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_haskeyedmutex(&has_bits);
+          _impl_.a_haskeyedmutex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes fencesHolderId = 9;
+      // optional bytes a_fencesHolderId = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          auto str = _internal_mutable_fencesholderid();
+          auto str = _internal_mutable_a_fencesholderid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -763,58 +763,58 @@ uint8_t* SurfaceDescriptorD3D10::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes handle = 1;
+  // required bytes a_handle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_handle(), target);
+        1, this->_internal_a_handle(), target);
   }
 
-  // optional bytes gpuProcessTextureId = 2;
+  // optional bytes a_gpuProcessTextureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_gpuprocesstextureid(), target);
+        2, this->_internal_a_gpuprocesstextureid(), target);
   }
 
-  // required uint32 arrayIndex = 3;
+  // required uint32 a_arrayIndex = 3;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_arrayindex(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_arrayindex(), target);
   }
 
-  // required bytes format = 4;
+  // required bytes a_format = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_format(), target);
+        4, this->_internal_a_format(), target);
   }
 
-  // required bytes size = 5;
+  // required bytes a_size = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_size(), target);
+        5, this->_internal_a_size(), target);
   }
 
-  // required bytes colorSpace = 6;
+  // required bytes a_colorSpace = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_colorspace(), target);
+        6, this->_internal_a_colorspace(), target);
   }
 
-  // required bytes colorRange = 7;
+  // required bytes a_colorRange = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_colorrange(), target);
+        7, this->_internal_a_colorrange(), target);
   }
 
-  // required bool hasKeyedMutex = 8;
+  // required bool a_hasKeyedMutex = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_haskeyedmutex(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_haskeyedmutex(), target);
   }
 
-  // optional bytes fencesHolderId = 9;
+  // optional bytes a_fencesHolderId = 9;
   if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
-        9, this->_internal_fencesholderid(), target);
+        9, this->_internal_a_fencesholderid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -829,48 +829,48 @@ size_t SurfaceDescriptorD3D10::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
   size_t total_size = 0;
 
-  if (_internal_has_handle()) {
-    // required bytes handle = 1;
+  if (_internal_has_a_handle()) {
+    // required bytes a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handle());
+        this->_internal_a_handle());
   }
 
-  if (_internal_has_format()) {
-    // required bytes format = 4;
+  if (_internal_has_a_format()) {
+    // required bytes a_format = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
   }
 
-  if (_internal_has_size()) {
-    // required bytes size = 5;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_colorspace()) {
-    // required bytes colorSpace = 6;
+  if (_internal_has_a_colorspace()) {
+    // required bytes a_colorSpace = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorspace());
+        this->_internal_a_colorspace());
   }
 
-  if (_internal_has_colorrange()) {
-    // required bytes colorRange = 7;
+  if (_internal_has_a_colorrange()) {
+    // required bytes a_colorRange = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
   }
 
-  if (_internal_has_arrayindex()) {
-    // required uint32 arrayIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_arrayindex());
+  if (_internal_has_a_arrayindex()) {
+    // required uint32 a_arrayIndex = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_arrayindex());
   }
 
-  if (_internal_has_haskeyedmutex()) {
-    // required bool hasKeyedMutex = 8;
+  if (_internal_has_a_haskeyedmutex()) {
+    // required bool a_hasKeyedMutex = 8;
     total_size += 1 + 1;
   }
 
@@ -881,35 +881,35 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000001bd) ^ 0x000001bd) == 0) {  // All required fields are present.
-    // required bytes handle = 1;
+    // required bytes a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handle());
+        this->_internal_a_handle());
 
-    // required bytes format = 4;
+    // required bytes a_format = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
 
-    // required bytes size = 5;
+    // required bytes a_size = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes colorSpace = 6;
+    // required bytes a_colorSpace = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorspace());
+        this->_internal_a_colorspace());
 
-    // required bytes colorRange = 7;
+    // required bytes a_colorRange = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
 
-    // required uint32 arrayIndex = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_arrayindex());
+    // required uint32 a_arrayIndex = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_arrayindex());
 
-    // required bool hasKeyedMutex = 8;
+    // required bool a_hasKeyedMutex = 8;
     total_size += 1 + 1;
 
   } else {
@@ -919,19 +919,19 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes gpuProcessTextureId = 2;
+  // optional bytes a_gpuProcessTextureId = 2;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_gpuprocesstextureid());
+        this->_internal_a_gpuprocesstextureid());
   }
 
-  // optional bytes fencesHolderId = 9;
+  // optional bytes a_fencesHolderId = 9;
   if (cached_has_bits & 0x00000040u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fencesholderid());
+        this->_internal_a_fencesholderid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -958,33 +958,33 @@ void SurfaceDescriptorD3D10::MergeFrom(const SurfaceDescriptorD3D10& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_handle(from._internal_handle());
+      _this->_internal_set_a_handle(from._internal_a_handle());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_gpuprocesstextureid(from._internal_gpuprocesstextureid());
+      _this->_internal_set_a_gpuprocesstextureid(from._internal_a_gpuprocesstextureid());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_format(from._internal_format());
+      _this->_internal_set_a_format(from._internal_a_format());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_colorspace(from._internal_colorspace());
+      _this->_internal_set_a_colorspace(from._internal_a_colorspace());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_colorrange(from._internal_colorrange());
+      _this->_internal_set_a_colorrange(from._internal_a_colorrange());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_fencesholderid(from._internal_fencesholderid());
+      _this->_internal_set_a_fencesholderid(from._internal_a_fencesholderid());
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.arrayindex_ = from._impl_.arrayindex_;
+      _this->_impl_.a_arrayindex_ = from._impl_.a_arrayindex_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 0x00000100u) {
-    _this->_internal_set_haskeyedmutex(from._internal_haskeyedmutex());
+    _this->_internal_set_a_haskeyedmutex(from._internal_a_haskeyedmutex());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1008,39 +1008,39 @@ void SurfaceDescriptorD3D10::InternalSwap(SurfaceDescriptorD3D10* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.handle_, lhs_arena,
-      &other->_impl_.handle_, rhs_arena
+      &_impl_.a_handle_, lhs_arena,
+      &other->_impl_.a_handle_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.gpuprocesstextureid_, lhs_arena,
-      &other->_impl_.gpuprocesstextureid_, rhs_arena
+      &_impl_.a_gpuprocesstextureid_, lhs_arena,
+      &other->_impl_.a_gpuprocesstextureid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.format_, lhs_arena,
-      &other->_impl_.format_, rhs_arena
+      &_impl_.a_format_, lhs_arena,
+      &other->_impl_.a_format_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colorspace_, lhs_arena,
-      &other->_impl_.colorspace_, rhs_arena
+      &_impl_.a_colorspace_, lhs_arena,
+      &other->_impl_.a_colorspace_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colorrange_, lhs_arena,
-      &other->_impl_.colorrange_, rhs_arena
+      &_impl_.a_colorrange_, lhs_arena,
+      &other->_impl_.a_colorrange_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fencesholderid_, lhs_arena,
-      &other->_impl_.fencesholderid_, rhs_arena
+      &_impl_.a_fencesholderid_, lhs_arena,
+      &other->_impl_.a_fencesholderid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorD3D10, _impl_.haskeyedmutex_)
-      + sizeof(SurfaceDescriptorD3D10::_impl_.haskeyedmutex_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorD3D10, _impl_.arrayindex_)>(
-          reinterpret_cast<char*>(&_impl_.arrayindex_),
-          reinterpret_cast<char*>(&other->_impl_.arrayindex_));
+      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorD3D10, _impl_.a_haskeyedmutex_)
+      + sizeof(SurfaceDescriptorD3D10::_impl_.a_haskeyedmutex_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorD3D10, _impl_.a_arrayindex_)>(
+          reinterpret_cast<char*>(&_impl_.a_arrayindex_),
+          reinterpret_cast<char*>(&other->_impl_.a_arrayindex_));
 }
 
 std::string SurfaceDescriptorD3D10::GetTypeName() const {
@@ -1053,34 +1053,34 @@ std::string SurfaceDescriptorD3D10::GetTypeName() const {
 class SurfaceDescriptorDXGIYCbCr::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorDXGIYCbCr>()._impl_._has_bits_);
-  static void set_has_handley(HasBits* has_bits) {
+  static void set_has_a_handley(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_handlecb(HasBits* has_bits) {
+  static void set_has_a_handlecb(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_handlecr(HasBits* has_bits) {
+  static void set_has_a_handlecr(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_sizey(HasBits* has_bits) {
+  static void set_has_a_sizey(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_sizecbcr(HasBits* has_bits) {
+  static void set_has_a_sizecbcr(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_colordepth(HasBits* has_bits) {
+  static void set_has_a_colordepth(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_yuvcolorspace(HasBits* has_bits) {
+  static void set_has_a_yuvcolorspace(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_colorrange(HasBits* has_bits) {
+  static void set_has_a_colorrange(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_fencesholderid(HasBits* has_bits) {
+  static void set_has_a_fencesholderid(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1100,96 +1100,96 @@ SurfaceDescriptorDXGIYCbCr::SurfaceDescriptorDXGIYCbCr(const SurfaceDescriptorDX
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handley_){}
-    , decltype(_impl_.handlecb_){}
-    , decltype(_impl_.handlecr_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.sizey_){}
-    , decltype(_impl_.sizecbcr_){}
-    , decltype(_impl_.colordepth_){}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.fencesholderid_){}};
+    , decltype(_impl_.a_handley_){}
+    , decltype(_impl_.a_handlecb_){}
+    , decltype(_impl_.a_handlecr_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_sizey_){}
+    , decltype(_impl_.a_sizecbcr_){}
+    , decltype(_impl_.a_colordepth_){}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_fencesholderid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.handley_.InitDefault();
+  _impl_.a_handley_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handley_.Set("", GetArenaForAllocation());
+    _impl_.a_handley_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_handley()) {
-    _this->_impl_.handley_.Set(from._internal_handley(), 
+  if (from._internal_has_a_handley()) {
+    _this->_impl_.a_handley_.Set(from._internal_a_handley(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.handlecb_.InitDefault();
+  _impl_.a_handlecb_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handlecb_.Set("", GetArenaForAllocation());
+    _impl_.a_handlecb_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_handlecb()) {
-    _this->_impl_.handlecb_.Set(from._internal_handlecb(), 
+  if (from._internal_has_a_handlecb()) {
+    _this->_impl_.a_handlecb_.Set(from._internal_a_handlecb(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.handlecr_.InitDefault();
+  _impl_.a_handlecr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handlecr_.Set("", GetArenaForAllocation());
+    _impl_.a_handlecr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_handlecr()) {
-    _this->_impl_.handlecr_.Set(from._internal_handlecr(), 
+  if (from._internal_has_a_handlecr()) {
+    _this->_impl_.a_handlecr_.Set(from._internal_a_handlecr(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.sizey_.InitDefault();
+  _impl_.a_sizey_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.sizey_.Set("", GetArenaForAllocation());
+    _impl_.a_sizey_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_sizey()) {
-    _this->_impl_.sizey_.Set(from._internal_sizey(), 
+  if (from._internal_has_a_sizey()) {
+    _this->_impl_.a_sizey_.Set(from._internal_a_sizey(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.sizecbcr_.InitDefault();
+  _impl_.a_sizecbcr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.sizecbcr_.Set("", GetArenaForAllocation());
+    _impl_.a_sizecbcr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_sizecbcr()) {
-    _this->_impl_.sizecbcr_.Set(from._internal_sizecbcr(), 
+  if (from._internal_has_a_sizecbcr()) {
+    _this->_impl_.a_sizecbcr_.Set(from._internal_a_sizecbcr(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colordepth_.InitDefault();
+  _impl_.a_colordepth_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colordepth_.Set("", GetArenaForAllocation());
+    _impl_.a_colordepth_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colordepth()) {
-    _this->_impl_.colordepth_.Set(from._internal_colordepth(), 
+  if (from._internal_has_a_colordepth()) {
+    _this->_impl_.a_colordepth_.Set(from._internal_a_colordepth(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_yuvcolorspace()) {
-    _this->_impl_.yuvcolorspace_.Set(from._internal_yuvcolorspace(), 
+  if (from._internal_has_a_yuvcolorspace()) {
+    _this->_impl_.a_yuvcolorspace_.Set(from._internal_a_yuvcolorspace(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colorrange()) {
-    _this->_impl_.colorrange_.Set(from._internal_colorrange(), 
+  if (from._internal_has_a_colorrange()) {
+    _this->_impl_.a_colorrange_.Set(from._internal_a_colorrange(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.fencesholderid_.InitDefault();
+  _impl_.a_fencesholderid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fencesholderid_.Set("", GetArenaForAllocation());
+    _impl_.a_fencesholderid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fencesholderid()) {
-    _this->_impl_.fencesholderid_.Set(from._internal_fencesholderid(), 
+  if (from._internal_has_a_fencesholderid()) {
+    _this->_impl_.a_fencesholderid_.Set(from._internal_a_fencesholderid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
@@ -1202,56 +1202,56 @@ inline void SurfaceDescriptorDXGIYCbCr::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handley_){}
-    , decltype(_impl_.handlecb_){}
-    , decltype(_impl_.handlecr_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.sizey_){}
-    , decltype(_impl_.sizecbcr_){}
-    , decltype(_impl_.colordepth_){}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.fencesholderid_){}
+    , decltype(_impl_.a_handley_){}
+    , decltype(_impl_.a_handlecb_){}
+    , decltype(_impl_.a_handlecr_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_sizey_){}
+    , decltype(_impl_.a_sizecbcr_){}
+    , decltype(_impl_.a_colordepth_){}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_fencesholderid_){}
   };
-  _impl_.handley_.InitDefault();
+  _impl_.a_handley_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handley_.Set("", GetArenaForAllocation());
+    _impl_.a_handley_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.handlecb_.InitDefault();
+  _impl_.a_handlecb_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handlecb_.Set("", GetArenaForAllocation());
+    _impl_.a_handlecb_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.handlecr_.InitDefault();
+  _impl_.a_handlecr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handlecr_.Set("", GetArenaForAllocation());
+    _impl_.a_handlecr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.sizey_.InitDefault();
+  _impl_.a_sizey_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.sizey_.Set("", GetArenaForAllocation());
+    _impl_.a_sizey_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.sizecbcr_.InitDefault();
+  _impl_.a_sizecbcr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.sizecbcr_.Set("", GetArenaForAllocation());
+    _impl_.a_sizecbcr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colordepth_.InitDefault();
+  _impl_.a_colordepth_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colordepth_.Set("", GetArenaForAllocation());
+    _impl_.a_colordepth_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.fencesholderid_.InitDefault();
+  _impl_.a_fencesholderid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fencesholderid_.Set("", GetArenaForAllocation());
+    _impl_.a_fencesholderid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1266,16 +1266,16 @@ SurfaceDescriptorDXGIYCbCr::~SurfaceDescriptorDXGIYCbCr() {
 
 inline void SurfaceDescriptorDXGIYCbCr::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.handley_.Destroy();
-  _impl_.handlecb_.Destroy();
-  _impl_.handlecr_.Destroy();
-  _impl_.size_.Destroy();
-  _impl_.sizey_.Destroy();
-  _impl_.sizecbcr_.Destroy();
-  _impl_.colordepth_.Destroy();
-  _impl_.yuvcolorspace_.Destroy();
-  _impl_.colorrange_.Destroy();
-  _impl_.fencesholderid_.Destroy();
+  _impl_.a_handley_.Destroy();
+  _impl_.a_handlecb_.Destroy();
+  _impl_.a_handlecr_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_sizey_.Destroy();
+  _impl_.a_sizecbcr_.Destroy();
+  _impl_.a_colordepth_.Destroy();
+  _impl_.a_yuvcolorspace_.Destroy();
+  _impl_.a_colorrange_.Destroy();
+  _impl_.a_fencesholderid_.Destroy();
 }
 
 void SurfaceDescriptorDXGIYCbCr::SetCachedSize(int size) const {
@@ -1291,36 +1291,36 @@ void SurfaceDescriptorDXGIYCbCr::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.handley_.ClearNonDefaultToEmpty();
+      _impl_.a_handley_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.handlecb_.ClearNonDefaultToEmpty();
+      _impl_.a_handlecb_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.handlecr_.ClearNonDefaultToEmpty();
+      _impl_.a_handlecr_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.sizey_.ClearNonDefaultToEmpty();
+      _impl_.a_sizey_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.sizecbcr_.ClearNonDefaultToEmpty();
+      _impl_.a_sizecbcr_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000040u) {
-      _impl_.colordepth_.ClearNonDefaultToEmpty();
+      _impl_.a_colordepth_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000080u) {
-      _impl_.yuvcolorspace_.ClearNonDefaultToEmpty();
+      _impl_.a_yuvcolorspace_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00000300u) {
     if (cached_has_bits & 0x00000100u) {
-      _impl_.colorrange_.ClearNonDefaultToEmpty();
+      _impl_.a_colorrange_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000200u) {
-      _impl_.fencesholderid_.ClearNonDefaultToEmpty();
+      _impl_.a_fencesholderid_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -1334,91 +1334,91 @@ const char* SurfaceDescriptorDXGIYCbCr::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes handleY = 1;
+      // required bytes a_handleY = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_handley();
+          auto str = _internal_mutable_a_handley();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes handleCb = 2;
+      // required bytes a_handleCb = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_handlecb();
+          auto str = _internal_mutable_a_handlecb();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes handleCr = 3;
+      // required bytes a_handleCr = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_handlecr();
+          auto str = _internal_mutable_a_handlecr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 4;
+      // required bytes a_size = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes sizeY = 5;
+      // required bytes a_sizeY = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_sizey();
+          auto str = _internal_mutable_a_sizey();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes sizeCbCr = 6;
+      // required bytes a_sizeCbCr = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_sizecbcr();
+          auto str = _internal_mutable_a_sizecbcr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorDepth = 7;
+      // required bytes a_colorDepth = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_colordepth();
+          auto str = _internal_mutable_a_colordepth();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes yUVColorSpace = 8;
+      // required bytes a_yUVColorSpace = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
-          auto str = _internal_mutable_yuvcolorspace();
+          auto str = _internal_mutable_a_yuvcolorspace();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorRange = 9;
+      // required bytes a_colorRange = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          auto str = _internal_mutable_colorrange();
+          auto str = _internal_mutable_a_colorrange();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes fencesHolderId = 10;
+      // required bytes a_fencesHolderId = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
-          auto str = _internal_mutable_fencesholderid();
+          auto str = _internal_mutable_a_fencesholderid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1455,64 +1455,64 @@ uint8_t* SurfaceDescriptorDXGIYCbCr::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes handleY = 1;
+  // required bytes a_handleY = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_handley(), target);
+        1, this->_internal_a_handley(), target);
   }
 
-  // required bytes handleCb = 2;
+  // required bytes a_handleCb = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_handlecb(), target);
+        2, this->_internal_a_handlecb(), target);
   }
 
-  // required bytes handleCr = 3;
+  // required bytes a_handleCr = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_handlecr(), target);
+        3, this->_internal_a_handlecr(), target);
   }
 
-  // required bytes size = 4;
+  // required bytes a_size = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_size(), target);
+        4, this->_internal_a_size(), target);
   }
 
-  // required bytes sizeY = 5;
+  // required bytes a_sizeY = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_sizey(), target);
+        5, this->_internal_a_sizey(), target);
   }
 
-  // required bytes sizeCbCr = 6;
+  // required bytes a_sizeCbCr = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_sizecbcr(), target);
+        6, this->_internal_a_sizecbcr(), target);
   }
 
-  // required bytes colorDepth = 7;
+  // required bytes a_colorDepth = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_colordepth(), target);
+        7, this->_internal_a_colordepth(), target);
   }
 
-  // required bytes yUVColorSpace = 8;
+  // required bytes a_yUVColorSpace = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->WriteBytesMaybeAliased(
-        8, this->_internal_yuvcolorspace(), target);
+        8, this->_internal_a_yuvcolorspace(), target);
   }
 
-  // required bytes colorRange = 9;
+  // required bytes a_colorRange = 9;
   if (cached_has_bits & 0x00000100u) {
     target = stream->WriteBytesMaybeAliased(
-        9, this->_internal_colorrange(), target);
+        9, this->_internal_a_colorrange(), target);
   }
 
-  // required bytes fencesHolderId = 10;
+  // required bytes a_fencesHolderId = 10;
   if (cached_has_bits & 0x00000200u) {
     target = stream->WriteBytesMaybeAliased(
-        10, this->_internal_fencesholderid(), target);
+        10, this->_internal_a_fencesholderid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1527,74 +1527,74 @@ size_t SurfaceDescriptorDXGIYCbCr::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
   size_t total_size = 0;
 
-  if (_internal_has_handley()) {
-    // required bytes handleY = 1;
+  if (_internal_has_a_handley()) {
+    // required bytes a_handleY = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handley());
+        this->_internal_a_handley());
   }
 
-  if (_internal_has_handlecb()) {
-    // required bytes handleCb = 2;
+  if (_internal_has_a_handlecb()) {
+    // required bytes a_handleCb = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handlecb());
+        this->_internal_a_handlecb());
   }
 
-  if (_internal_has_handlecr()) {
-    // required bytes handleCr = 3;
+  if (_internal_has_a_handlecr()) {
+    // required bytes a_handleCr = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handlecr());
+        this->_internal_a_handlecr());
   }
 
-  if (_internal_has_size()) {
-    // required bytes size = 4;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_sizey()) {
-    // required bytes sizeY = 5;
+  if (_internal_has_a_sizey()) {
+    // required bytes a_sizeY = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_sizey());
+        this->_internal_a_sizey());
   }
 
-  if (_internal_has_sizecbcr()) {
-    // required bytes sizeCbCr = 6;
+  if (_internal_has_a_sizecbcr()) {
+    // required bytes a_sizeCbCr = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_sizecbcr());
+        this->_internal_a_sizecbcr());
   }
 
-  if (_internal_has_colordepth()) {
-    // required bytes colorDepth = 7;
+  if (_internal_has_a_colordepth()) {
+    // required bytes a_colorDepth = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colordepth());
+        this->_internal_a_colordepth());
   }
 
-  if (_internal_has_yuvcolorspace()) {
-    // required bytes yUVColorSpace = 8;
+  if (_internal_has_a_yuvcolorspace()) {
+    // required bytes a_yUVColorSpace = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
   }
 
-  if (_internal_has_colorrange()) {
-    // required bytes colorRange = 9;
+  if (_internal_has_a_colorrange()) {
+    // required bytes a_colorRange = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
   }
 
-  if (_internal_has_fencesholderid()) {
-    // required bytes fencesHolderId = 10;
+  if (_internal_has_a_fencesholderid()) {
+    // required bytes a_fencesHolderId = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fencesholderid());
+        this->_internal_a_fencesholderid());
   }
 
   return total_size;
@@ -1604,55 +1604,55 @@ size_t SurfaceDescriptorDXGIYCbCr::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required bytes handleY = 1;
+    // required bytes a_handleY = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handley());
+        this->_internal_a_handley());
 
-    // required bytes handleCb = 2;
+    // required bytes a_handleCb = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handlecb());
+        this->_internal_a_handlecb());
 
-    // required bytes handleCr = 3;
+    // required bytes a_handleCr = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handlecr());
+        this->_internal_a_handlecr());
 
-    // required bytes size = 4;
+    // required bytes a_size = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes sizeY = 5;
+    // required bytes a_sizeY = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_sizey());
+        this->_internal_a_sizey());
 
-    // required bytes sizeCbCr = 6;
+    // required bytes a_sizeCbCr = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_sizecbcr());
+        this->_internal_a_sizecbcr());
 
-    // required bytes colorDepth = 7;
+    // required bytes a_colorDepth = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colordepth());
+        this->_internal_a_colordepth());
 
-    // required bytes yUVColorSpace = 8;
+    // required bytes a_yUVColorSpace = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
 
-    // required bytes colorRange = 9;
+    // required bytes a_colorRange = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
 
-    // required bytes fencesHolderId = 10;
+    // required bytes a_fencesHolderId = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fencesholderid());
+        this->_internal_a_fencesholderid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1685,36 +1685,36 @@ void SurfaceDescriptorDXGIYCbCr::MergeFrom(const SurfaceDescriptorDXGIYCbCr& fro
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_handley(from._internal_handley());
+      _this->_internal_set_a_handley(from._internal_a_handley());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_handlecb(from._internal_handlecb());
+      _this->_internal_set_a_handlecb(from._internal_a_handlecb());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_handlecr(from._internal_handlecr());
+      _this->_internal_set_a_handlecr(from._internal_a_handlecr());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_sizey(from._internal_sizey());
+      _this->_internal_set_a_sizey(from._internal_a_sizey());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_sizecbcr(from._internal_sizecbcr());
+      _this->_internal_set_a_sizecbcr(from._internal_a_sizecbcr());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_colordepth(from._internal_colordepth());
+      _this->_internal_set_a_colordepth(from._internal_a_colordepth());
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_internal_set_yuvcolorspace(from._internal_yuvcolorspace());
+      _this->_internal_set_a_yuvcolorspace(from._internal_a_yuvcolorspace());
     }
   }
   if (cached_has_bits & 0x00000300u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_internal_set_colorrange(from._internal_colorrange());
+      _this->_internal_set_a_colorrange(from._internal_a_colorrange());
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_internal_set_fencesholderid(from._internal_fencesholderid());
+      _this->_internal_set_a_fencesholderid(from._internal_a_fencesholderid());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1739,44 +1739,44 @@ void SurfaceDescriptorDXGIYCbCr::InternalSwap(SurfaceDescriptorDXGIYCbCr* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.handley_, lhs_arena,
-      &other->_impl_.handley_, rhs_arena
+      &_impl_.a_handley_, lhs_arena,
+      &other->_impl_.a_handley_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.handlecb_, lhs_arena,
-      &other->_impl_.handlecb_, rhs_arena
+      &_impl_.a_handlecb_, lhs_arena,
+      &other->_impl_.a_handlecb_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.handlecr_, lhs_arena,
-      &other->_impl_.handlecr_, rhs_arena
+      &_impl_.a_handlecr_, lhs_arena,
+      &other->_impl_.a_handlecr_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.sizey_, lhs_arena,
-      &other->_impl_.sizey_, rhs_arena
+      &_impl_.a_sizey_, lhs_arena,
+      &other->_impl_.a_sizey_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.sizecbcr_, lhs_arena,
-      &other->_impl_.sizecbcr_, rhs_arena
+      &_impl_.a_sizecbcr_, lhs_arena,
+      &other->_impl_.a_sizecbcr_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colordepth_, lhs_arena,
-      &other->_impl_.colordepth_, rhs_arena
+      &_impl_.a_colordepth_, lhs_arena,
+      &other->_impl_.a_colordepth_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.yuvcolorspace_, lhs_arena,
-      &other->_impl_.yuvcolorspace_, rhs_arena
+      &_impl_.a_yuvcolorspace_, lhs_arena,
+      &other->_impl_.a_yuvcolorspace_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colorrange_, lhs_arena,
-      &other->_impl_.colorrange_, rhs_arena
+      &_impl_.a_colorrange_, lhs_arena,
+      &other->_impl_.a_colorrange_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fencesholderid_, lhs_arena,
-      &other->_impl_.fencesholderid_, rhs_arena
+      &_impl_.a_fencesholderid_, lhs_arena,
+      &other->_impl_.a_fencesholderid_, rhs_arena
   );
 }
 
@@ -1790,16 +1790,16 @@ std::string SurfaceDescriptorDXGIYCbCr::GetTypeName() const {
 class SurfaceDescriptorMacIOSurface::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorMacIOSurface>()._impl_._has_bits_);
-  static void set_has_surfaceid(HasBits* has_bits) {
+  static void set_has_a_surfaceid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_isopaque(HasBits* has_bits) {
+  static void set_has_a_isopaque(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_yuvcolorspace(HasBits* has_bits) {
+  static void set_has_a_yuvcolorspace(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_gpufence(HasBits* has_bits) {
+  static void set_has_a_gpufence(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1819,31 +1819,31 @@ SurfaceDescriptorMacIOSurface::SurfaceDescriptorMacIOSurface(const SurfaceDescri
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.gpufence_){}
-    , decltype(_impl_.surfaceid_){}
-    , decltype(_impl_.isopaque_){}};
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_gpufence_){}
+    , decltype(_impl_.a_surfaceid_){}
+    , decltype(_impl_.a_isopaque_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_yuvcolorspace()) {
-    _this->_impl_.yuvcolorspace_.Set(from._internal_yuvcolorspace(), 
+  if (from._internal_has_a_yuvcolorspace()) {
+    _this->_impl_.a_yuvcolorspace_.Set(from._internal_a_yuvcolorspace(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.gpufence_.InitDefault();
+  _impl_.a_gpufence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpufence_.Set("", GetArenaForAllocation());
+    _impl_.a_gpufence_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_gpufence()) {
-    _this->_impl_.gpufence_.Set(from._internal_gpufence(), 
+  if (from._internal_has_a_gpufence()) {
+    _this->_impl_.a_gpufence_.Set(from._internal_a_gpufence(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.surfaceid_, &from._impl_.surfaceid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.isopaque_) -
-    reinterpret_cast<char*>(&_impl_.surfaceid_)) + sizeof(_impl_.isopaque_));
+  ::memcpy(&_impl_.a_surfaceid_, &from._impl_.a_surfaceid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_isopaque_) -
+    reinterpret_cast<char*>(&_impl_.a_surfaceid_)) + sizeof(_impl_.a_isopaque_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
 }
 
@@ -1854,18 +1854,18 @@ inline void SurfaceDescriptorMacIOSurface::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.gpufence_){}
-    , decltype(_impl_.surfaceid_){0u}
-    , decltype(_impl_.isopaque_){false}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_gpufence_){}
+    , decltype(_impl_.a_surfaceid_){0u}
+    , decltype(_impl_.a_isopaque_){false}
   };
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.gpufence_.InitDefault();
+  _impl_.a_gpufence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gpufence_.Set("", GetArenaForAllocation());
+    _impl_.a_gpufence_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1880,8 +1880,8 @@ SurfaceDescriptorMacIOSurface::~SurfaceDescriptorMacIOSurface() {
 
 inline void SurfaceDescriptorMacIOSurface::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.yuvcolorspace_.Destroy();
-  _impl_.gpufence_.Destroy();
+  _impl_.a_yuvcolorspace_.Destroy();
+  _impl_.a_gpufence_.Destroy();
 }
 
 void SurfaceDescriptorMacIOSurface::SetCachedSize(int size) const {
@@ -1897,16 +1897,16 @@ void SurfaceDescriptorMacIOSurface::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.yuvcolorspace_.ClearNonDefaultToEmpty();
+      _impl_.a_yuvcolorspace_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.gpufence_.ClearNonDefaultToEmpty();
+      _impl_.a_gpufence_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x0000000cu) {
-    ::memset(&_impl_.surfaceid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.isopaque_) -
-        reinterpret_cast<char*>(&_impl_.surfaceid_)) + sizeof(_impl_.isopaque_));
+    ::memset(&_impl_.a_surfaceid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_isopaque_) -
+        reinterpret_cast<char*>(&_impl_.a_surfaceid_)) + sizeof(_impl_.a_isopaque_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1919,37 +1919,37 @@ const char* SurfaceDescriptorMacIOSurface::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 surfaceId = 1;
+      // required uint32 a_surfaceId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_surfaceid(&has_bits);
-          _impl_.surfaceid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_surfaceid(&has_bits);
+          _impl_.a_surfaceid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool isOpaque = 2;
+      // required bool a_isOpaque = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_isopaque(&has_bits);
-          _impl_.isopaque_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_isopaque(&has_bits);
+          _impl_.a_isopaque_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes yUVColorSpace = 3;
+      // required bytes a_yUVColorSpace = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_yuvcolorspace();
+          auto str = _internal_mutable_a_yuvcolorspace();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes gpuFence = 4;
+      // required bytes a_gpuFence = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_gpufence();
+          auto str = _internal_mutable_a_gpufence();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1986,28 +1986,28 @@ uint8_t* SurfaceDescriptorMacIOSurface::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 surfaceId = 1;
+  // required uint32 a_surfaceId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_surfaceid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_surfaceid(), target);
   }
 
-  // required bool isOpaque = 2;
+  // required bool a_isOpaque = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_isopaque(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_isopaque(), target);
   }
 
-  // required bytes yUVColorSpace = 3;
+  // required bytes a_yUVColorSpace = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_yuvcolorspace(), target);
+        3, this->_internal_a_yuvcolorspace(), target);
   }
 
-  // required bytes gpuFence = 4;
+  // required bytes a_gpuFence = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_gpufence(), target);
+        4, this->_internal_a_gpufence(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2022,27 +2022,27 @@ size_t SurfaceDescriptorMacIOSurface::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
   size_t total_size = 0;
 
-  if (_internal_has_yuvcolorspace()) {
-    // required bytes yUVColorSpace = 3;
+  if (_internal_has_a_yuvcolorspace()) {
+    // required bytes a_yUVColorSpace = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
   }
 
-  if (_internal_has_gpufence()) {
-    // required bytes gpuFence = 4;
+  if (_internal_has_a_gpufence()) {
+    // required bytes a_gpuFence = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_gpufence());
+        this->_internal_a_gpufence());
   }
 
-  if (_internal_has_surfaceid()) {
-    // required uint32 surfaceId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_surfaceid());
+  if (_internal_has_a_surfaceid()) {
+    // required uint32 a_surfaceId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
   }
 
-  if (_internal_has_isopaque()) {
-    // required bool isOpaque = 2;
+  if (_internal_has_a_isopaque()) {
+    // required bool a_isOpaque = 2;
     total_size += 1 + 1;
   }
 
@@ -2053,20 +2053,20 @@ size_t SurfaceDescriptorMacIOSurface::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes yUVColorSpace = 3;
+    // required bytes a_yUVColorSpace = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
 
-    // required bytes gpuFence = 4;
+    // required bytes a_gpuFence = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_gpufence());
+        this->_internal_a_gpufence());
 
-    // required uint32 surfaceId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_surfaceid());
+    // required uint32 a_surfaceId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
 
-    // required bool isOpaque = 2;
+    // required bool a_isOpaque = 2;
     total_size += 1 + 1;
 
   } else {
@@ -2100,16 +2100,16 @@ void SurfaceDescriptorMacIOSurface::MergeFrom(const SurfaceDescriptorMacIOSurfac
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_yuvcolorspace(from._internal_yuvcolorspace());
+      _this->_internal_set_a_yuvcolorspace(from._internal_a_yuvcolorspace());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_gpufence(from._internal_gpufence());
+      _this->_internal_set_a_gpufence(from._internal_a_gpufence());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.surfaceid_ = from._impl_.surfaceid_;
+      _this->_impl_.a_surfaceid_ = from._impl_.a_surfaceid_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.isopaque_ = from._impl_.isopaque_;
+      _this->_impl_.a_isopaque_ = from._impl_.a_isopaque_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2135,19 +2135,19 @@ void SurfaceDescriptorMacIOSurface::InternalSwap(SurfaceDescriptorMacIOSurface* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.yuvcolorspace_, lhs_arena,
-      &other->_impl_.yuvcolorspace_, rhs_arena
+      &_impl_.a_yuvcolorspace_, lhs_arena,
+      &other->_impl_.a_yuvcolorspace_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.gpufence_, lhs_arena,
-      &other->_impl_.gpufence_, rhs_arena
+      &_impl_.a_gpufence_, lhs_arena,
+      &other->_impl_.a_gpufence_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorMacIOSurface, _impl_.isopaque_)
-      + sizeof(SurfaceDescriptorMacIOSurface::_impl_.isopaque_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorMacIOSurface, _impl_.surfaceid_)>(
-          reinterpret_cast<char*>(&_impl_.surfaceid_),
-          reinterpret_cast<char*>(&other->_impl_.surfaceid_));
+      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorMacIOSurface, _impl_.a_isopaque_)
+      + sizeof(SurfaceDescriptorMacIOSurface::_impl_.a_isopaque_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorMacIOSurface, _impl_.a_surfaceid_)>(
+          reinterpret_cast<char*>(&_impl_.a_surfaceid_),
+          reinterpret_cast<char*>(&other->_impl_.a_surfaceid_));
 }
 
 std::string SurfaceDescriptorMacIOSurface::GetTypeName() const {
@@ -2160,34 +2160,34 @@ std::string SurfaceDescriptorMacIOSurface::GetTypeName() const {
 class SurfaceDescriptorDMABuf::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorDMABuf>()._impl_._has_bits_);
-  static void set_has_buffertype(HasBits* has_bits) {
+  static void set_has_a_buffertype(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_fourccformat(HasBits* has_bits) {
+  static void set_has_a_fourccformat(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_flags(HasBits* has_bits) {
+  static void set_has_a_flags(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_yuvcolorspace(HasBits* has_bits) {
+  static void set_has_a_yuvcolorspace(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_colorrange(HasBits* has_bits) {
+  static void set_has_a_colorrange(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_colorprimaries(HasBits* has_bits) {
+  static void set_has_a_colorprimaries(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_transferfunction(HasBits* has_bits) {
+  static void set_has_a_transferfunction(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_uid(HasBits* has_bits) {
+  static void set_has_a_uid(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_pid(HasBits* has_bits) {
+  static void set_has_a_pid(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
-  static void set_has_semaphorefd(HasBits* has_bits) {
+  static void set_has_a_semaphorefd(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2207,72 +2207,72 @@ SurfaceDescriptorDMABuf::SurfaceDescriptorDMABuf(const SurfaceDescriptorDMABuf& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.modifier_){from._impl_.modifier_}
-    , decltype(_impl_.fds_){from._impl_.fds_}
-    , decltype(_impl_.width_){from._impl_.width_}
-    , decltype(_impl_.height_){from._impl_.height_}
-    , decltype(_impl_.widthaligned_){from._impl_.widthaligned_}
-    , decltype(_impl_.heightaligned_){from._impl_.heightaligned_}
-    , decltype(_impl_.format_){from._impl_.format_}
-    , decltype(_impl_.strides_){from._impl_.strides_}
-    , decltype(_impl_.offsets_){from._impl_.offsets_}
-    , decltype(_impl_.fence_){from._impl_.fence_}
-    , decltype(_impl_.refcount_){from._impl_.refcount_}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.colorprimaries_){}
-    , decltype(_impl_.transferfunction_){}
-    , decltype(_impl_.semaphorefd_){}
-    , decltype(_impl_.buffertype_){}
-    , decltype(_impl_.fourccformat_){}
-    , decltype(_impl_.flags_){}
-    , decltype(_impl_.uid_){}
-    , decltype(_impl_.pid_){}};
+    , decltype(_impl_.a_modifier_){from._impl_.a_modifier_}
+    , decltype(_impl_.a_fds_){from._impl_.a_fds_}
+    , decltype(_impl_.a_width_){from._impl_.a_width_}
+    , decltype(_impl_.a_height_){from._impl_.a_height_}
+    , decltype(_impl_.a_widthaligned_){from._impl_.a_widthaligned_}
+    , decltype(_impl_.a_heightaligned_){from._impl_.a_heightaligned_}
+    , decltype(_impl_.a_format_){from._impl_.a_format_}
+    , decltype(_impl_.a_strides_){from._impl_.a_strides_}
+    , decltype(_impl_.a_offsets_){from._impl_.a_offsets_}
+    , decltype(_impl_.a_fence_){from._impl_.a_fence_}
+    , decltype(_impl_.a_refcount_){from._impl_.a_refcount_}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_colorprimaries_){}
+    , decltype(_impl_.a_transferfunction_){}
+    , decltype(_impl_.a_semaphorefd_){}
+    , decltype(_impl_.a_buffertype_){}
+    , decltype(_impl_.a_fourccformat_){}
+    , decltype(_impl_.a_flags_){}
+    , decltype(_impl_.a_uid_){}
+    , decltype(_impl_.a_pid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_yuvcolorspace()) {
-    _this->_impl_.yuvcolorspace_.Set(from._internal_yuvcolorspace(), 
+  if (from._internal_has_a_yuvcolorspace()) {
+    _this->_impl_.a_yuvcolorspace_.Set(from._internal_a_yuvcolorspace(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colorrange()) {
-    _this->_impl_.colorrange_.Set(from._internal_colorrange(), 
+  if (from._internal_has_a_colorrange()) {
+    _this->_impl_.a_colorrange_.Set(from._internal_a_colorrange(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colorprimaries_.InitDefault();
+  _impl_.a_colorprimaries_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorprimaries_.Set("", GetArenaForAllocation());
+    _impl_.a_colorprimaries_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colorprimaries()) {
-    _this->_impl_.colorprimaries_.Set(from._internal_colorprimaries(), 
+  if (from._internal_has_a_colorprimaries()) {
+    _this->_impl_.a_colorprimaries_.Set(from._internal_a_colorprimaries(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.transferfunction_.InitDefault();
+  _impl_.a_transferfunction_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.transferfunction_.Set("", GetArenaForAllocation());
+    _impl_.a_transferfunction_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_transferfunction()) {
-    _this->_impl_.transferfunction_.Set(from._internal_transferfunction(), 
+  if (from._internal_has_a_transferfunction()) {
+    _this->_impl_.a_transferfunction_.Set(from._internal_a_transferfunction(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.semaphorefd_.InitDefault();
+  _impl_.a_semaphorefd_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.semaphorefd_.Set("", GetArenaForAllocation());
+    _impl_.a_semaphorefd_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_semaphorefd()) {
-    _this->_impl_.semaphorefd_.Set(from._internal_semaphorefd(), 
+  if (from._internal_has_a_semaphorefd()) {
+    _this->_impl_.a_semaphorefd_.Set(from._internal_a_semaphorefd(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.buffertype_, &from._impl_.buffertype_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.pid_) -
-    reinterpret_cast<char*>(&_impl_.buffertype_)) + sizeof(_impl_.pid_));
+  ::memcpy(&_impl_.a_buffertype_, &from._impl_.a_buffertype_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_pid_) -
+    reinterpret_cast<char*>(&_impl_.a_buffertype_)) + sizeof(_impl_.a_pid_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
 }
 
@@ -2283,47 +2283,47 @@ inline void SurfaceDescriptorDMABuf::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.modifier_){arena}
-    , decltype(_impl_.fds_){arena}
-    , decltype(_impl_.width_){arena}
-    , decltype(_impl_.height_){arena}
-    , decltype(_impl_.widthaligned_){arena}
-    , decltype(_impl_.heightaligned_){arena}
-    , decltype(_impl_.format_){arena}
-    , decltype(_impl_.strides_){arena}
-    , decltype(_impl_.offsets_){arena}
-    , decltype(_impl_.fence_){arena}
-    , decltype(_impl_.refcount_){arena}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.colorprimaries_){}
-    , decltype(_impl_.transferfunction_){}
-    , decltype(_impl_.semaphorefd_){}
-    , decltype(_impl_.buffertype_){0u}
-    , decltype(_impl_.fourccformat_){0u}
-    , decltype(_impl_.flags_){0u}
-    , decltype(_impl_.uid_){0u}
-    , decltype(_impl_.pid_){0u}
+    , decltype(_impl_.a_modifier_){arena}
+    , decltype(_impl_.a_fds_){arena}
+    , decltype(_impl_.a_width_){arena}
+    , decltype(_impl_.a_height_){arena}
+    , decltype(_impl_.a_widthaligned_){arena}
+    , decltype(_impl_.a_heightaligned_){arena}
+    , decltype(_impl_.a_format_){arena}
+    , decltype(_impl_.a_strides_){arena}
+    , decltype(_impl_.a_offsets_){arena}
+    , decltype(_impl_.a_fence_){arena}
+    , decltype(_impl_.a_refcount_){arena}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_colorprimaries_){}
+    , decltype(_impl_.a_transferfunction_){}
+    , decltype(_impl_.a_semaphorefd_){}
+    , decltype(_impl_.a_buffertype_){0u}
+    , decltype(_impl_.a_fourccformat_){0u}
+    , decltype(_impl_.a_flags_){0u}
+    , decltype(_impl_.a_uid_){0u}
+    , decltype(_impl_.a_pid_){0u}
   };
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colorprimaries_.InitDefault();
+  _impl_.a_colorprimaries_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorprimaries_.Set("", GetArenaForAllocation());
+    _impl_.a_colorprimaries_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.transferfunction_.InitDefault();
+  _impl_.a_transferfunction_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.transferfunction_.Set("", GetArenaForAllocation());
+    _impl_.a_transferfunction_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.semaphorefd_.InitDefault();
+  _impl_.a_semaphorefd_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.semaphorefd_.Set("", GetArenaForAllocation());
+    _impl_.a_semaphorefd_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2338,22 +2338,22 @@ SurfaceDescriptorDMABuf::~SurfaceDescriptorDMABuf() {
 
 inline void SurfaceDescriptorDMABuf::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.modifier_.~RepeatedField();
-  _impl_.fds_.~RepeatedPtrField();
-  _impl_.width_.~RepeatedField();
-  _impl_.height_.~RepeatedField();
-  _impl_.widthaligned_.~RepeatedField();
-  _impl_.heightaligned_.~RepeatedField();
-  _impl_.format_.~RepeatedField();
-  _impl_.strides_.~RepeatedField();
-  _impl_.offsets_.~RepeatedField();
-  _impl_.fence_.~RepeatedPtrField();
-  _impl_.refcount_.~RepeatedPtrField();
-  _impl_.yuvcolorspace_.Destroy();
-  _impl_.colorrange_.Destroy();
-  _impl_.colorprimaries_.Destroy();
-  _impl_.transferfunction_.Destroy();
-  _impl_.semaphorefd_.Destroy();
+  _impl_.a_modifier_.~RepeatedField();
+  _impl_.a_fds_.~RepeatedPtrField();
+  _impl_.a_width_.~RepeatedField();
+  _impl_.a_height_.~RepeatedField();
+  _impl_.a_widthaligned_.~RepeatedField();
+  _impl_.a_heightaligned_.~RepeatedField();
+  _impl_.a_format_.~RepeatedField();
+  _impl_.a_strides_.~RepeatedField();
+  _impl_.a_offsets_.~RepeatedField();
+  _impl_.a_fence_.~RepeatedPtrField();
+  _impl_.a_refcount_.~RepeatedPtrField();
+  _impl_.a_yuvcolorspace_.Destroy();
+  _impl_.a_colorrange_.Destroy();
+  _impl_.a_colorprimaries_.Destroy();
+  _impl_.a_transferfunction_.Destroy();
+  _impl_.a_semaphorefd_.Destroy();
 }
 
 void SurfaceDescriptorDMABuf::SetCachedSize(int size) const {
@@ -2366,44 +2366,44 @@ void SurfaceDescriptorDMABuf::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.modifier_.Clear();
-  _impl_.fds_.Clear();
-  _impl_.width_.Clear();
-  _impl_.height_.Clear();
-  _impl_.widthaligned_.Clear();
-  _impl_.heightaligned_.Clear();
-  _impl_.format_.Clear();
-  _impl_.strides_.Clear();
-  _impl_.offsets_.Clear();
-  _impl_.fence_.Clear();
-  _impl_.refcount_.Clear();
+  _impl_.a_modifier_.Clear();
+  _impl_.a_fds_.Clear();
+  _impl_.a_width_.Clear();
+  _impl_.a_height_.Clear();
+  _impl_.a_widthaligned_.Clear();
+  _impl_.a_heightaligned_.Clear();
+  _impl_.a_format_.Clear();
+  _impl_.a_strides_.Clear();
+  _impl_.a_offsets_.Clear();
+  _impl_.a_fence_.Clear();
+  _impl_.a_refcount_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.yuvcolorspace_.ClearNonDefaultToEmpty();
+      _impl_.a_yuvcolorspace_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.colorrange_.ClearNonDefaultToEmpty();
+      _impl_.a_colorrange_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.colorprimaries_.ClearNonDefaultToEmpty();
+      _impl_.a_colorprimaries_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.transferfunction_.ClearNonDefaultToEmpty();
+      _impl_.a_transferfunction_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.semaphorefd_.ClearNonDefaultToEmpty();
+      _impl_.a_semaphorefd_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x000000e0u) {
-    ::memset(&_impl_.buffertype_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.flags_) -
-        reinterpret_cast<char*>(&_impl_.buffertype_)) + sizeof(_impl_.flags_));
+    ::memset(&_impl_.a_buffertype_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_flags_) -
+        reinterpret_cast<char*>(&_impl_.a_buffertype_)) + sizeof(_impl_.a_flags_));
   }
   if (cached_has_bits & 0x00000300u) {
-    ::memset(&_impl_.uid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.pid_) -
-        reinterpret_cast<char*>(&_impl_.uid_)) + sizeof(_impl_.pid_));
+    ::memset(&_impl_.a_uid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_pid_) -
+        reinterpret_cast<char*>(&_impl_.a_uid_)) + sizeof(_impl_.a_pid_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2416,56 +2416,56 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 bufferType = 1;
+      // required uint32 a_bufferType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_buffertype(&has_bits);
-          _impl_.buffertype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_buffertype(&has_bits);
+          _impl_.a_buffertype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 fourccFormat = 2;
+      // required uint32 a_fourccFormat = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_fourccformat(&has_bits);
-          _impl_.fourccformat_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_fourccformat(&has_bits);
+          _impl_.a_fourccformat_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint64 modifier = 3;
+      // repeated uint64 a_modifier = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_modifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            _internal_add_a_modifier(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<24>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_modifier(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_modifier(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 flags = 4;
+      // required uint32 a_flags = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_flags(&has_bits);
-          _impl_.flags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_flags(&has_bits);
+          _impl_.a_flags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes fds = 5;
+      // repeated bytes a_fds = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_fds();
+            auto str = _internal_add_a_fds();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -2473,161 +2473,161 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 width = 6;
+      // repeated uint32 a_width = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_width(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_width(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<48>(ptr));
         } else if (static_cast<uint8_t>(tag) == 50) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_width(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_width(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 height = 7;
+      // repeated uint32 a_height = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_height(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_height(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<56>(ptr));
         } else if (static_cast<uint8_t>(tag) == 58) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_height(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_height(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 widthAligned = 8;
+      // repeated uint32 a_widthAligned = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_widthaligned(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_widthaligned(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<64>(ptr));
         } else if (static_cast<uint8_t>(tag) == 66) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_widthaligned(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_widthaligned(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 heightAligned = 9;
+      // repeated uint32 a_heightAligned = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_heightaligned(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_heightaligned(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<72>(ptr));
         } else if (static_cast<uint8_t>(tag) == 74) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_heightaligned(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_heightaligned(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 format = 10;
+      // repeated uint32 a_format = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_format(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_format(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<80>(ptr));
         } else if (static_cast<uint8_t>(tag) == 82) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_format(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_format(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 strides = 11;
+      // repeated uint32 a_strides = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_strides(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_strides(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<88>(ptr));
         } else if (static_cast<uint8_t>(tag) == 90) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_strides(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_strides(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 offsets = 12;
+      // repeated uint32 a_offsets = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_offsets(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_offsets(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<96>(ptr));
         } else if (static_cast<uint8_t>(tag) == 98) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_offsets(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_offsets(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes yUVColorSpace = 13;
+      // required bytes a_yUVColorSpace = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
-          auto str = _internal_mutable_yuvcolorspace();
+          auto str = _internal_mutable_a_yuvcolorspace();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorRange = 14;
+      // required bytes a_colorRange = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
-          auto str = _internal_mutable_colorrange();
+          auto str = _internal_mutable_a_colorrange();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorPrimaries = 15;
+      // required bytes a_colorPrimaries = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
-          auto str = _internal_mutable_colorprimaries();
+          auto str = _internal_mutable_a_colorprimaries();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes transferFunction = 16;
+      // required bytes a_transferFunction = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
-          auto str = _internal_mutable_transferfunction();
+          auto str = _internal_mutable_a_transferfunction();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes fence = 17;
+      // repeated bytes a_fence = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr -= 2;
           do {
             ptr += 2;
-            auto str = _internal_add_fence();
+            auto str = _internal_add_a_fence();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -2635,31 +2635,31 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint32 uid = 18;
+      // required uint32 a_uid = 18;
       case 18:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 144)) {
-          _Internal::set_has_uid(&has_bits);
-          _impl_.uid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_uid(&has_bits);
+          _impl_.a_uid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 pid = 19;
+      // required uint32 a_pid = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
-          _Internal::set_has_pid(&has_bits);
-          _impl_.pid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_pid(&has_bits);
+          _impl_.a_pid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes refCount = 20;
+      // repeated bytes a_refCount = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
           ptr -= 2;
           do {
             ptr += 2;
-            auto str = _internal_add_refcount();
+            auto str = _internal_add_a_refcount();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -2667,10 +2667,10 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes semaphoreFd = 21;
+      // required bytes a_semaphoreFd = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
-          auto str = _internal_mutable_semaphorefd();
+          auto str = _internal_mutable_a_semaphorefd();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2707,130 +2707,130 @@ uint8_t* SurfaceDescriptorDMABuf::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 bufferType = 1;
+  // required uint32 a_bufferType = 1;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_buffertype(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_buffertype(), target);
   }
 
-  // required uint32 fourccFormat = 2;
+  // required uint32 a_fourccFormat = 2;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_fourccformat(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_fourccformat(), target);
   }
 
-  // repeated uint64 modifier = 3;
-  for (int i = 0, n = this->_internal_modifier_size(); i < n; i++) {
+  // repeated uint64 a_modifier = 3;
+  for (int i = 0, n = this->_internal_a_modifier_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_modifier(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_modifier(i), target);
   }
 
-  // required uint32 flags = 4;
+  // required uint32 a_flags = 4;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_flags(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_flags(), target);
   }
 
-  // repeated bytes fds = 5;
-  for (int i = 0, n = this->_internal_fds_size(); i < n; i++) {
-    const auto& s = this->_internal_fds(i);
+  // repeated bytes a_fds = 5;
+  for (int i = 0, n = this->_internal_a_fds_size(); i < n; i++) {
+    const auto& s = this->_internal_a_fds(i);
     target = stream->WriteBytes(5, s, target);
   }
 
-  // repeated uint32 width = 6;
-  for (int i = 0, n = this->_internal_width_size(); i < n; i++) {
+  // repeated uint32 a_width = 6;
+  for (int i = 0, n = this->_internal_a_width_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_width(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_width(i), target);
   }
 
-  // repeated uint32 height = 7;
-  for (int i = 0, n = this->_internal_height_size(); i < n; i++) {
+  // repeated uint32 a_height = 7;
+  for (int i = 0, n = this->_internal_a_height_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_height(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_height(i), target);
   }
 
-  // repeated uint32 widthAligned = 8;
-  for (int i = 0, n = this->_internal_widthaligned_size(); i < n; i++) {
+  // repeated uint32 a_widthAligned = 8;
+  for (int i = 0, n = this->_internal_a_widthaligned_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_widthaligned(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_a_widthaligned(i), target);
   }
 
-  // repeated uint32 heightAligned = 9;
-  for (int i = 0, n = this->_internal_heightaligned_size(); i < n; i++) {
+  // repeated uint32 a_heightAligned = 9;
+  for (int i = 0, n = this->_internal_a_heightaligned_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(9, this->_internal_heightaligned(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(9, this->_internal_a_heightaligned(i), target);
   }
 
-  // repeated uint32 format = 10;
-  for (int i = 0, n = this->_internal_format_size(); i < n; i++) {
+  // repeated uint32 a_format = 10;
+  for (int i = 0, n = this->_internal_a_format_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_format(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_a_format(i), target);
   }
 
-  // repeated uint32 strides = 11;
-  for (int i = 0, n = this->_internal_strides_size(); i < n; i++) {
+  // repeated uint32 a_strides = 11;
+  for (int i = 0, n = this->_internal_a_strides_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_strides(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_a_strides(i), target);
   }
 
-  // repeated uint32 offsets = 12;
-  for (int i = 0, n = this->_internal_offsets_size(); i < n; i++) {
+  // repeated uint32 a_offsets = 12;
+  for (int i = 0, n = this->_internal_a_offsets_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_offsets(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_a_offsets(i), target);
   }
 
-  // required bytes yUVColorSpace = 13;
+  // required bytes a_yUVColorSpace = 13;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        13, this->_internal_yuvcolorspace(), target);
+        13, this->_internal_a_yuvcolorspace(), target);
   }
 
-  // required bytes colorRange = 14;
+  // required bytes a_colorRange = 14;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        14, this->_internal_colorrange(), target);
+        14, this->_internal_a_colorrange(), target);
   }
 
-  // required bytes colorPrimaries = 15;
+  // required bytes a_colorPrimaries = 15;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        15, this->_internal_colorprimaries(), target);
+        15, this->_internal_a_colorprimaries(), target);
   }
 
-  // required bytes transferFunction = 16;
+  // required bytes a_transferFunction = 16;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        16, this->_internal_transferfunction(), target);
+        16, this->_internal_a_transferfunction(), target);
   }
 
-  // repeated bytes fence = 17;
-  for (int i = 0, n = this->_internal_fence_size(); i < n; i++) {
-    const auto& s = this->_internal_fence(i);
+  // repeated bytes a_fence = 17;
+  for (int i = 0, n = this->_internal_a_fence_size(); i < n; i++) {
+    const auto& s = this->_internal_a_fence(i);
     target = stream->WriteBytes(17, s, target);
   }
 
-  // required uint32 uid = 18;
+  // required uint32 a_uid = 18;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(18, this->_internal_uid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(18, this->_internal_a_uid(), target);
   }
 
-  // required uint32 pid = 19;
+  // required uint32 a_pid = 19;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(19, this->_internal_pid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(19, this->_internal_a_pid(), target);
   }
 
-  // repeated bytes refCount = 20;
-  for (int i = 0, n = this->_internal_refcount_size(); i < n; i++) {
-    const auto& s = this->_internal_refcount(i);
+  // repeated bytes a_refCount = 20;
+  for (int i = 0, n = this->_internal_a_refcount_size(); i < n; i++) {
+    const auto& s = this->_internal_a_refcount(i);
     target = stream->WriteBytes(20, s, target);
   }
 
-  // required bytes semaphoreFd = 21;
+  // required bytes a_semaphoreFd = 21;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        21, this->_internal_semaphorefd(), target);
+        21, this->_internal_a_semaphorefd(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2845,68 +2845,68 @@ size_t SurfaceDescriptorDMABuf::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
   size_t total_size = 0;
 
-  if (_internal_has_yuvcolorspace()) {
-    // required bytes yUVColorSpace = 13;
+  if (_internal_has_a_yuvcolorspace()) {
+    // required bytes a_yUVColorSpace = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
   }
 
-  if (_internal_has_colorrange()) {
-    // required bytes colorRange = 14;
+  if (_internal_has_a_colorrange()) {
+    // required bytes a_colorRange = 14;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
   }
 
-  if (_internal_has_colorprimaries()) {
-    // required bytes colorPrimaries = 15;
+  if (_internal_has_a_colorprimaries()) {
+    // required bytes a_colorPrimaries = 15;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorprimaries());
+        this->_internal_a_colorprimaries());
   }
 
-  if (_internal_has_transferfunction()) {
-    // required bytes transferFunction = 16;
+  if (_internal_has_a_transferfunction()) {
+    // required bytes a_transferFunction = 16;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_transferfunction());
+        this->_internal_a_transferfunction());
   }
 
-  if (_internal_has_semaphorefd()) {
-    // required bytes semaphoreFd = 21;
+  if (_internal_has_a_semaphorefd()) {
+    // required bytes a_semaphoreFd = 21;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_semaphorefd());
+        this->_internal_a_semaphorefd());
   }
 
-  if (_internal_has_buffertype()) {
-    // required uint32 bufferType = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_buffertype());
+  if (_internal_has_a_buffertype()) {
+    // required uint32 a_bufferType = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
   }
 
-  if (_internal_has_fourccformat()) {
-    // required uint32 fourccFormat = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_fourccformat());
+  if (_internal_has_a_fourccformat()) {
+    // required uint32 a_fourccFormat = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fourccformat());
   }
 
-  if (_internal_has_flags()) {
-    // required uint32 flags = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_flags());
+  if (_internal_has_a_flags()) {
+    // required uint32 a_flags = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_flags());
   }
 
-  if (_internal_has_uid()) {
-    // required uint32 uid = 18;
+  if (_internal_has_a_uid()) {
+    // required uint32 a_uid = 18;
     total_size += 2 +
       ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_uid());
+        this->_internal_a_uid());
   }
 
-  if (_internal_has_pid()) {
-    // required uint32 pid = 19;
+  if (_internal_has_a_pid()) {
+    // required uint32 a_pid = 19;
     total_size += 2 +
       ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_pid());
+        this->_internal_a_pid());
   }
 
   return total_size;
@@ -2916,49 +2916,49 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required bytes yUVColorSpace = 13;
+    // required bytes a_yUVColorSpace = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
 
-    // required bytes colorRange = 14;
+    // required bytes a_colorRange = 14;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
 
-    // required bytes colorPrimaries = 15;
+    // required bytes a_colorPrimaries = 15;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorprimaries());
+        this->_internal_a_colorprimaries());
 
-    // required bytes transferFunction = 16;
+    // required bytes a_transferFunction = 16;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_transferfunction());
+        this->_internal_a_transferfunction());
 
-    // required bytes semaphoreFd = 21;
+    // required bytes a_semaphoreFd = 21;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_semaphorefd());
+        this->_internal_a_semaphorefd());
 
-    // required uint32 bufferType = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_buffertype());
+    // required uint32 a_bufferType = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
 
-    // required uint32 fourccFormat = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_fourccformat());
+    // required uint32 a_fourccFormat = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_fourccformat());
 
-    // required uint32 flags = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_flags());
+    // required uint32 a_flags = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_flags());
 
-    // required uint32 uid = 18;
+    // required uint32 a_uid = 18;
     total_size += 2 +
       ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_uid());
+        this->_internal_a_uid());
 
-    // required uint32 pid = 19;
+    // required uint32 a_pid = 19;
     total_size += 2 +
       ::_pbi::WireFormatLite::UInt32Size(
-        this->_internal_pid());
+        this->_internal_a_pid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2967,100 +2967,100 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint64 modifier = 3;
+  // repeated uint64 a_modifier = 3;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt64Size(this->_impl_.modifier_);
+      UInt64Size(this->_impl_.a_modifier_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_modifier_size());
+                  ::_pbi::FromIntSize(this->_internal_a_modifier_size());
     total_size += data_size;
   }
 
-  // repeated bytes fds = 5;
+  // repeated bytes a_fds = 5;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.fds_.size());
-  for (int i = 0, n = _impl_.fds_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_fds_.size());
+  for (int i = 0, n = _impl_.a_fds_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.fds_.Get(i));
+      _impl_.a_fds_.Get(i));
   }
 
-  // repeated uint32 width = 6;
+  // repeated uint32 a_width = 6;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.width_);
+      UInt32Size(this->_impl_.a_width_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_width_size());
+                  ::_pbi::FromIntSize(this->_internal_a_width_size());
     total_size += data_size;
   }
 
-  // repeated uint32 height = 7;
+  // repeated uint32 a_height = 7;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.height_);
+      UInt32Size(this->_impl_.a_height_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_height_size());
+                  ::_pbi::FromIntSize(this->_internal_a_height_size());
     total_size += data_size;
   }
 
-  // repeated uint32 widthAligned = 8;
+  // repeated uint32 a_widthAligned = 8;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.widthaligned_);
+      UInt32Size(this->_impl_.a_widthaligned_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_widthaligned_size());
+                  ::_pbi::FromIntSize(this->_internal_a_widthaligned_size());
     total_size += data_size;
   }
 
-  // repeated uint32 heightAligned = 9;
+  // repeated uint32 a_heightAligned = 9;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.heightaligned_);
+      UInt32Size(this->_impl_.a_heightaligned_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_heightaligned_size());
+                  ::_pbi::FromIntSize(this->_internal_a_heightaligned_size());
     total_size += data_size;
   }
 
-  // repeated uint32 format = 10;
+  // repeated uint32 a_format = 10;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.format_);
+      UInt32Size(this->_impl_.a_format_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_format_size());
+                  ::_pbi::FromIntSize(this->_internal_a_format_size());
     total_size += data_size;
   }
 
-  // repeated uint32 strides = 11;
+  // repeated uint32 a_strides = 11;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.strides_);
+      UInt32Size(this->_impl_.a_strides_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_strides_size());
+                  ::_pbi::FromIntSize(this->_internal_a_strides_size());
     total_size += data_size;
   }
 
-  // repeated uint32 offsets = 12;
+  // repeated uint32 a_offsets = 12;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.offsets_);
+      UInt32Size(this->_impl_.a_offsets_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_offsets_size());
+                  ::_pbi::FromIntSize(this->_internal_a_offsets_size());
     total_size += data_size;
   }
 
-  // repeated bytes fence = 17;
+  // repeated bytes a_fence = 17;
   total_size += 2 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.fence_.size());
-  for (int i = 0, n = _impl_.fence_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_fence_.size());
+  for (int i = 0, n = _impl_.a_fence_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.fence_.Get(i));
+      _impl_.a_fence_.Get(i));
   }
 
-  // repeated bytes refCount = 20;
+  // repeated bytes a_refCount = 20;
   total_size += 2 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.refcount_.size());
-  for (int i = 0, n = _impl_.refcount_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_refcount_.size());
+  for (int i = 0, n = _impl_.a_refcount_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.refcount_.Get(i));
+      _impl_.a_refcount_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3084,51 +3084,51 @@ void SurfaceDescriptorDMABuf::MergeFrom(const SurfaceDescriptorDMABuf& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.modifier_.MergeFrom(from._impl_.modifier_);
-  _this->_impl_.fds_.MergeFrom(from._impl_.fds_);
-  _this->_impl_.width_.MergeFrom(from._impl_.width_);
-  _this->_impl_.height_.MergeFrom(from._impl_.height_);
-  _this->_impl_.widthaligned_.MergeFrom(from._impl_.widthaligned_);
-  _this->_impl_.heightaligned_.MergeFrom(from._impl_.heightaligned_);
-  _this->_impl_.format_.MergeFrom(from._impl_.format_);
-  _this->_impl_.strides_.MergeFrom(from._impl_.strides_);
-  _this->_impl_.offsets_.MergeFrom(from._impl_.offsets_);
-  _this->_impl_.fence_.MergeFrom(from._impl_.fence_);
-  _this->_impl_.refcount_.MergeFrom(from._impl_.refcount_);
+  _this->_impl_.a_modifier_.MergeFrom(from._impl_.a_modifier_);
+  _this->_impl_.a_fds_.MergeFrom(from._impl_.a_fds_);
+  _this->_impl_.a_width_.MergeFrom(from._impl_.a_width_);
+  _this->_impl_.a_height_.MergeFrom(from._impl_.a_height_);
+  _this->_impl_.a_widthaligned_.MergeFrom(from._impl_.a_widthaligned_);
+  _this->_impl_.a_heightaligned_.MergeFrom(from._impl_.a_heightaligned_);
+  _this->_impl_.a_format_.MergeFrom(from._impl_.a_format_);
+  _this->_impl_.a_strides_.MergeFrom(from._impl_.a_strides_);
+  _this->_impl_.a_offsets_.MergeFrom(from._impl_.a_offsets_);
+  _this->_impl_.a_fence_.MergeFrom(from._impl_.a_fence_);
+  _this->_impl_.a_refcount_.MergeFrom(from._impl_.a_refcount_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_yuvcolorspace(from._internal_yuvcolorspace());
+      _this->_internal_set_a_yuvcolorspace(from._internal_a_yuvcolorspace());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_colorrange(from._internal_colorrange());
+      _this->_internal_set_a_colorrange(from._internal_a_colorrange());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_colorprimaries(from._internal_colorprimaries());
+      _this->_internal_set_a_colorprimaries(from._internal_a_colorprimaries());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_transferfunction(from._internal_transferfunction());
+      _this->_internal_set_a_transferfunction(from._internal_a_transferfunction());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_semaphorefd(from._internal_semaphorefd());
+      _this->_internal_set_a_semaphorefd(from._internal_a_semaphorefd());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.buffertype_ = from._impl_.buffertype_;
+      _this->_impl_.a_buffertype_ = from._impl_.a_buffertype_;
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.fourccformat_ = from._impl_.fourccformat_;
+      _this->_impl_.a_fourccformat_ = from._impl_.a_fourccformat_;
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.flags_ = from._impl_.flags_;
+      _this->_impl_.a_flags_ = from._impl_.a_flags_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 0x00000300u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.uid_ = from._impl_.uid_;
+      _this->_impl_.a_uid_ = from._impl_.a_uid_;
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.pid_ = from._impl_.pid_;
+      _this->_impl_.a_pid_ = from._impl_.a_pid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3153,43 +3153,43 @@ void SurfaceDescriptorDMABuf::InternalSwap(SurfaceDescriptorDMABuf* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.modifier_.InternalSwap(&other->_impl_.modifier_);
-  _impl_.fds_.InternalSwap(&other->_impl_.fds_);
-  _impl_.width_.InternalSwap(&other->_impl_.width_);
-  _impl_.height_.InternalSwap(&other->_impl_.height_);
-  _impl_.widthaligned_.InternalSwap(&other->_impl_.widthaligned_);
-  _impl_.heightaligned_.InternalSwap(&other->_impl_.heightaligned_);
-  _impl_.format_.InternalSwap(&other->_impl_.format_);
-  _impl_.strides_.InternalSwap(&other->_impl_.strides_);
-  _impl_.offsets_.InternalSwap(&other->_impl_.offsets_);
-  _impl_.fence_.InternalSwap(&other->_impl_.fence_);
-  _impl_.refcount_.InternalSwap(&other->_impl_.refcount_);
+  _impl_.a_modifier_.InternalSwap(&other->_impl_.a_modifier_);
+  _impl_.a_fds_.InternalSwap(&other->_impl_.a_fds_);
+  _impl_.a_width_.InternalSwap(&other->_impl_.a_width_);
+  _impl_.a_height_.InternalSwap(&other->_impl_.a_height_);
+  _impl_.a_widthaligned_.InternalSwap(&other->_impl_.a_widthaligned_);
+  _impl_.a_heightaligned_.InternalSwap(&other->_impl_.a_heightaligned_);
+  _impl_.a_format_.InternalSwap(&other->_impl_.a_format_);
+  _impl_.a_strides_.InternalSwap(&other->_impl_.a_strides_);
+  _impl_.a_offsets_.InternalSwap(&other->_impl_.a_offsets_);
+  _impl_.a_fence_.InternalSwap(&other->_impl_.a_fence_);
+  _impl_.a_refcount_.InternalSwap(&other->_impl_.a_refcount_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.yuvcolorspace_, lhs_arena,
-      &other->_impl_.yuvcolorspace_, rhs_arena
+      &_impl_.a_yuvcolorspace_, lhs_arena,
+      &other->_impl_.a_yuvcolorspace_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colorrange_, lhs_arena,
-      &other->_impl_.colorrange_, rhs_arena
+      &_impl_.a_colorrange_, lhs_arena,
+      &other->_impl_.a_colorrange_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colorprimaries_, lhs_arena,
-      &other->_impl_.colorprimaries_, rhs_arena
+      &_impl_.a_colorprimaries_, lhs_arena,
+      &other->_impl_.a_colorprimaries_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.transferfunction_, lhs_arena,
-      &other->_impl_.transferfunction_, rhs_arena
+      &_impl_.a_transferfunction_, lhs_arena,
+      &other->_impl_.a_transferfunction_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.semaphorefd_, lhs_arena,
-      &other->_impl_.semaphorefd_, rhs_arena
+      &_impl_.a_semaphorefd_, lhs_arena,
+      &other->_impl_.a_semaphorefd_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorDMABuf, _impl_.pid_)
-      + sizeof(SurfaceDescriptorDMABuf::_impl_.pid_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorDMABuf, _impl_.buffertype_)>(
-          reinterpret_cast<char*>(&_impl_.buffertype_),
-          reinterpret_cast<char*>(&other->_impl_.buffertype_));
+      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorDMABuf, _impl_.a_pid_)
+      + sizeof(SurfaceDescriptorDMABuf::_impl_.a_pid_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorDMABuf, _impl_.a_buffertype_)>(
+          reinterpret_cast<char*>(&_impl_.a_buffertype_),
+          reinterpret_cast<char*>(&other->_impl_.a_buffertype_));
 }
 
 std::string SurfaceDescriptorDMABuf::GetTypeName() const {
@@ -3202,22 +3202,22 @@ std::string SurfaceDescriptorDMABuf::GetTypeName() const {
 class SurfaceTextureDescriptor::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceTextureDescriptor>()._impl_._has_bits_);
-  static void set_has_handle(HasBits* has_bits) {
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_format(HasBits* has_bits) {
+  static void set_has_a_format(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_continuous(HasBits* has_bits) {
+  static void set_has_a_continuous(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_forcebt709colorspace(HasBits* has_bits) {
+  static void set_has_a_forcebt709colorspace(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_transformoverride(HasBits* has_bits) {
+  static void set_has_a_transformoverride(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3237,41 +3237,41 @@ SurfaceTextureDescriptor::SurfaceTextureDescriptor(const SurfaceTextureDescripto
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.transformoverride_){}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.continuous_){}
-    , decltype(_impl_.forcebt709colorspace_){}};
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_transformoverride_){}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_continuous_){}
+    , decltype(_impl_.a_forcebt709colorspace_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_format()) {
-    _this->_impl_.format_.Set(from._internal_format(), 
+  if (from._internal_has_a_format()) {
+    _this->_impl_.a_format_.Set(from._internal_a_format(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.transformoverride_.InitDefault();
+  _impl_.a_transformoverride_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.transformoverride_.Set("", GetArenaForAllocation());
+    _impl_.a_transformoverride_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_transformoverride()) {
-    _this->_impl_.transformoverride_.Set(from._internal_transformoverride(), 
+  if (from._internal_has_a_transformoverride()) {
+    _this->_impl_.a_transformoverride_.Set(from._internal_a_transformoverride(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.handle_, &from._impl_.handle_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.forcebt709colorspace_) -
-    reinterpret_cast<char*>(&_impl_.handle_)) + sizeof(_impl_.forcebt709colorspace_));
+  ::memcpy(&_impl_.a_handle_, &from._impl_.a_handle_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_forcebt709colorspace_) -
+    reinterpret_cast<char*>(&_impl_.a_handle_)) + sizeof(_impl_.a_forcebt709colorspace_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceTextureDescriptor)
 }
 
@@ -3282,24 +3282,24 @@ inline void SurfaceTextureDescriptor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.transformoverride_){}
-    , decltype(_impl_.handle_){uint64_t{0u}}
-    , decltype(_impl_.continuous_){false}
-    , decltype(_impl_.forcebt709colorspace_){false}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_transformoverride_){}
+    , decltype(_impl_.a_handle_){uint64_t{0u}}
+    , decltype(_impl_.a_continuous_){false}
+    , decltype(_impl_.a_forcebt709colorspace_){false}
   };
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.transformoverride_.InitDefault();
+  _impl_.a_transformoverride_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.transformoverride_.Set("", GetArenaForAllocation());
+    _impl_.a_transformoverride_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3314,9 +3314,9 @@ SurfaceTextureDescriptor::~SurfaceTextureDescriptor() {
 
 inline void SurfaceTextureDescriptor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.size_.Destroy();
-  _impl_.format_.Destroy();
-  _impl_.transformoverride_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_format_.Destroy();
+  _impl_.a_transformoverride_.Destroy();
 }
 
 void SurfaceTextureDescriptor::SetCachedSize(int size) const {
@@ -3332,19 +3332,19 @@ void SurfaceTextureDescriptor::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.format_.ClearNonDefaultToEmpty();
+      _impl_.a_format_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.transformoverride_.ClearNonDefaultToEmpty();
+      _impl_.a_transformoverride_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00000038u) {
-    ::memset(&_impl_.handle_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.forcebt709colorspace_) -
-        reinterpret_cast<char*>(&_impl_.handle_)) + sizeof(_impl_.forcebt709colorspace_));
+    ::memset(&_impl_.a_handle_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_forcebt709colorspace_) -
+        reinterpret_cast<char*>(&_impl_.a_handle_)) + sizeof(_impl_.a_forcebt709colorspace_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3357,55 +3357,55 @@ const char* SurfaceTextureDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 handle = 1;
+      // required uint64 a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_handle(&has_bits);
-          _impl_.handle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_handle(&has_bits);
+          _impl_.a_handle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 2;
+      // required bytes a_size = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes format = 3;
+      // required bytes a_format = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_format();
+          auto str = _internal_mutable_a_format();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool continuous = 4;
+      // required bool a_continuous = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_continuous(&has_bits);
-          _impl_.continuous_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_continuous(&has_bits);
+          _impl_.a_continuous_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool forceBT709ColorSpace = 5;
+      // required bool a_forceBT709ColorSpace = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_forcebt709colorspace(&has_bits);
-          _impl_.forcebt709colorspace_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_forcebt709colorspace(&has_bits);
+          _impl_.a_forcebt709colorspace_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes transformOverride = 6;
+      // optional bytes a_transformOverride = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_transformoverride();
+          auto str = _internal_mutable_a_transformoverride();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3442,40 +3442,40 @@ uint8_t* SurfaceTextureDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 handle = 1;
+  // required uint64 a_handle = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_handle(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_handle(), target);
   }
 
-  // required bytes size = 2;
+  // required bytes a_size = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_size(), target);
+        2, this->_internal_a_size(), target);
   }
 
-  // required bytes format = 3;
+  // required bytes a_format = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_format(), target);
+        3, this->_internal_a_format(), target);
   }
 
-  // required bool continuous = 4;
+  // required bool a_continuous = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_continuous(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_continuous(), target);
   }
 
-  // required bool forceBT709ColorSpace = 5;
+  // required bool a_forceBT709ColorSpace = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_forcebt709colorspace(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_forcebt709colorspace(), target);
   }
 
-  // optional bytes transformOverride = 6;
+  // optional bytes a_transformOverride = 6;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_transformoverride(), target);
+        6, this->_internal_a_transformoverride(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3490,32 +3490,32 @@ size_t SurfaceTextureDescriptor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceTextureDescriptor)
   size_t total_size = 0;
 
-  if (_internal_has_size()) {
-    // required bytes size = 2;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_format()) {
-    // required bytes format = 3;
+  if (_internal_has_a_format()) {
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
   }
 
-  if (_internal_has_handle()) {
-    // required uint64 handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_handle());
+  if (_internal_has_a_handle()) {
+    // required uint64 a_handle = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
   }
 
-  if (_internal_has_continuous()) {
-    // required bool continuous = 4;
+  if (_internal_has_a_continuous()) {
+    // required bool a_continuous = 4;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_forcebt709colorspace()) {
-    // required bool forceBT709ColorSpace = 5;
+  if (_internal_has_a_forcebt709colorspace()) {
+    // required bool a_forceBT709ColorSpace = 5;
     total_size += 1 + 1;
   }
 
@@ -3526,23 +3526,23 @@ size_t SurfaceTextureDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003b) ^ 0x0000003b) == 0) {  // All required fields are present.
-    // required bytes size = 2;
+    // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes format = 3;
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
 
-    // required uint64 handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_handle());
+    // required uint64 a_handle = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
 
-    // required bool continuous = 4;
+    // required bool a_continuous = 4;
     total_size += 1 + 1;
 
-    // required bool forceBT709ColorSpace = 5;
+    // required bool a_forceBT709ColorSpace = 5;
     total_size += 1 + 1;
 
   } else {
@@ -3552,12 +3552,12 @@ size_t SurfaceTextureDescriptor::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes transformOverride = 6;
+  // optional bytes a_transformOverride = 6;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_transformoverride());
+        this->_internal_a_transformoverride());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3584,22 +3584,22 @@ void SurfaceTextureDescriptor::MergeFrom(const SurfaceTextureDescriptor& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_format(from._internal_format());
+      _this->_internal_set_a_format(from._internal_a_format());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_transformoverride(from._internal_transformoverride());
+      _this->_internal_set_a_transformoverride(from._internal_a_transformoverride());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.handle_ = from._impl_.handle_;
+      _this->_impl_.a_handle_ = from._impl_.a_handle_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.continuous_ = from._impl_.continuous_;
+      _this->_impl_.a_continuous_ = from._impl_.a_continuous_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.forcebt709colorspace_ = from._impl_.forcebt709colorspace_;
+      _this->_impl_.a_forcebt709colorspace_ = from._impl_.a_forcebt709colorspace_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3625,23 +3625,23 @@ void SurfaceTextureDescriptor::InternalSwap(SurfaceTextureDescriptor* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.format_, lhs_arena,
-      &other->_impl_.format_, rhs_arena
+      &_impl_.a_format_, lhs_arena,
+      &other->_impl_.a_format_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.transformoverride_, lhs_arena,
-      &other->_impl_.transformoverride_, rhs_arena
+      &_impl_.a_transformoverride_, lhs_arena,
+      &other->_impl_.a_transformoverride_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceTextureDescriptor, _impl_.forcebt709colorspace_)
-      + sizeof(SurfaceTextureDescriptor::_impl_.forcebt709colorspace_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceTextureDescriptor, _impl_.handle_)>(
-          reinterpret_cast<char*>(&_impl_.handle_),
-          reinterpret_cast<char*>(&other->_impl_.handle_));
+      PROTOBUF_FIELD_OFFSET(SurfaceTextureDescriptor, _impl_.a_forcebt709colorspace_)
+      + sizeof(SurfaceTextureDescriptor::_impl_.a_forcebt709colorspace_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceTextureDescriptor, _impl_.a_handle_)>(
+          reinterpret_cast<char*>(&_impl_.a_handle_),
+          reinterpret_cast<char*>(&other->_impl_.a_handle_));
 }
 
 std::string SurfaceTextureDescriptor::GetTypeName() const {
@@ -3654,13 +3654,13 @@ std::string SurfaceTextureDescriptor::GetTypeName() const {
 class SurfaceDescriptorAndroidHardwareBuffer::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorAndroidHardwareBuffer>()._impl_._has_bits_);
-  static void set_has_bufferid(HasBits* has_bits) {
+  static void set_has_a_bufferid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_format(HasBits* has_bits) {
+  static void set_has_a_format(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3680,28 +3680,28 @@ SurfaceDescriptorAndroidHardwareBuffer::SurfaceDescriptorAndroidHardwareBuffer(c
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.bufferid_){}};
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_bufferid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_format()) {
-    _this->_impl_.format_.Set(from._internal_format(), 
+  if (from._internal_has_a_format()) {
+    _this->_impl_.a_format_.Set(from._internal_a_format(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.bufferid_ = from._impl_.bufferid_;
+  _this->_impl_.a_bufferid_ = from._impl_.a_bufferid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
 }
 
@@ -3712,17 +3712,17 @@ inline void SurfaceDescriptorAndroidHardwareBuffer::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.bufferid_){uint64_t{0u}}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_bufferid_){uint64_t{0u}}
   };
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3737,8 +3737,8 @@ SurfaceDescriptorAndroidHardwareBuffer::~SurfaceDescriptorAndroidHardwareBuffer(
 
 inline void SurfaceDescriptorAndroidHardwareBuffer::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.size_.Destroy();
-  _impl_.format_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_format_.Destroy();
 }
 
 void SurfaceDescriptorAndroidHardwareBuffer::SetCachedSize(int size) const {
@@ -3754,13 +3754,13 @@ void SurfaceDescriptorAndroidHardwareBuffer::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.format_.ClearNonDefaultToEmpty();
+      _impl_.a_format_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.bufferid_ = uint64_t{0u};
+  _impl_.a_bufferid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -3772,28 +3772,28 @@ const char* SurfaceDescriptorAndroidHardwareBuffer::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 bufferId = 1;
+      // required uint64 a_bufferId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_bufferid(&has_bits);
-          _impl_.bufferid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_bufferid(&has_bits);
+          _impl_.a_bufferid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 2;
+      // required bytes a_size = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes format = 3;
+      // required bytes a_format = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_format();
+          auto str = _internal_mutable_a_format();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3830,22 +3830,22 @@ uint8_t* SurfaceDescriptorAndroidHardwareBuffer::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 bufferId = 1;
+  // required uint64 a_bufferId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_bufferid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_bufferid(), target);
   }
 
-  // required bytes size = 2;
+  // required bytes a_size = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_size(), target);
+        2, this->_internal_a_size(), target);
   }
 
-  // required bytes format = 3;
+  // required bytes a_format = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_format(), target);
+        3, this->_internal_a_format(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3860,23 +3860,23 @@ size_t SurfaceDescriptorAndroidHardwareBuffer::RequiredFieldsByteSizeFallback() 
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
   size_t total_size = 0;
 
-  if (_internal_has_size()) {
-    // required bytes size = 2;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_format()) {
-    // required bytes format = 3;
+  if (_internal_has_a_format()) {
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
   }
 
-  if (_internal_has_bufferid()) {
-    // required uint64 bufferId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_bufferid());
+  if (_internal_has_a_bufferid()) {
+    // required uint64 a_bufferId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_bufferid());
   }
 
   return total_size;
@@ -3886,18 +3886,18 @@ size_t SurfaceDescriptorAndroidHardwareBuffer::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes size = 2;
+    // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes format = 3;
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
 
-    // required uint64 bufferId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_bufferid());
+    // required uint64 a_bufferId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_bufferid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3930,13 +3930,13 @@ void SurfaceDescriptorAndroidHardwareBuffer::MergeFrom(const SurfaceDescriptorAn
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_format(from._internal_format());
+      _this->_internal_set_a_format(from._internal_a_format());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.bufferid_ = from._impl_.bufferid_;
+      _this->_impl_.a_bufferid_ = from._impl_.a_bufferid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3962,14 +3962,14 @@ void SurfaceDescriptorAndroidHardwareBuffer::InternalSwap(SurfaceDescriptorAndro
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.format_, lhs_arena,
-      &other->_impl_.format_, rhs_arena
+      &_impl_.a_format_, lhs_arena,
+      &other->_impl_.a_format_, rhs_arena
   );
-  swap(_impl_.bufferid_, other->_impl_.bufferid_);
+  swap(_impl_.a_bufferid_, other->_impl_.a_bufferid_);
 }
 
 std::string SurfaceDescriptorAndroidHardwareBuffer::GetTypeName() const {
@@ -3982,16 +3982,16 @@ std::string SurfaceDescriptorAndroidHardwareBuffer::GetTypeName() const {
 class EGLImageDescriptor::_Internal {
  public:
   using HasBits = decltype(std::declval<EGLImageDescriptor>()._impl_._has_bits_);
-  static void set_has_image(HasBits* has_bits) {
+  static void set_has_a_image(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_fence(HasBits* has_bits) {
+  static void set_has_a_fence(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_hasalpha(HasBits* has_bits) {
+  static void set_has_a_hasalpha(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4011,37 +4011,37 @@ EGLImageDescriptor::EGLImageDescriptor(const EGLImageDescriptor& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.image_){}
-    , decltype(_impl_.fence_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.hasalpha_){}};
+    , decltype(_impl_.a_image_){}
+    , decltype(_impl_.a_fence_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_hasalpha_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.image_.InitDefault();
+  _impl_.a_image_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.image_.Set("", GetArenaForAllocation());
+    _impl_.a_image_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_image()) {
-    _this->_impl_.image_.Set(from._internal_image(), 
+  if (from._internal_has_a_image()) {
+    _this->_impl_.a_image_.Set(from._internal_a_image(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.fence_.InitDefault();
+  _impl_.a_fence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fence_.Set("", GetArenaForAllocation());
+    _impl_.a_fence_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fence()) {
-    _this->_impl_.fence_.Set(from._internal_fence(), 
+  if (from._internal_has_a_fence()) {
+    _this->_impl_.a_fence_.Set(from._internal_a_fence(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.hasalpha_ = from._impl_.hasalpha_;
+  _this->_impl_.a_hasalpha_ = from._impl_.a_hasalpha_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.EGLImageDescriptor)
 }
 
@@ -4052,22 +4052,22 @@ inline void EGLImageDescriptor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.image_){}
-    , decltype(_impl_.fence_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.hasalpha_){false}
+    , decltype(_impl_.a_image_){}
+    , decltype(_impl_.a_fence_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_hasalpha_){false}
   };
-  _impl_.image_.InitDefault();
+  _impl_.a_image_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.image_.Set("", GetArenaForAllocation());
+    _impl_.a_image_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.fence_.InitDefault();
+  _impl_.a_fence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fence_.Set("", GetArenaForAllocation());
+    _impl_.a_fence_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4082,9 +4082,9 @@ EGLImageDescriptor::~EGLImageDescriptor() {
 
 inline void EGLImageDescriptor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.image_.Destroy();
-  _impl_.fence_.Destroy();
-  _impl_.size_.Destroy();
+  _impl_.a_image_.Destroy();
+  _impl_.a_fence_.Destroy();
+  _impl_.a_size_.Destroy();
 }
 
 void EGLImageDescriptor::SetCachedSize(int size) const {
@@ -4100,16 +4100,16 @@ void EGLImageDescriptor::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.image_.ClearNonDefaultToEmpty();
+      _impl_.a_image_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.fence_.ClearNonDefaultToEmpty();
+      _impl_.a_fence_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.hasalpha_ = false;
+  _impl_.a_hasalpha_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4121,38 +4121,38 @@ const char* EGLImageDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes image = 1;
+      // required bytes a_image = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_image();
+          auto str = _internal_mutable_a_image();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes fence = 2;
+      // required bytes a_fence = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_fence();
+          auto str = _internal_mutable_a_fence();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 3;
+      // required bytes a_size = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool hasAlpha = 4;
+      // required bool a_hasAlpha = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_hasalpha(&has_bits);
-          _impl_.hasalpha_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_hasalpha(&has_bits);
+          _impl_.a_hasalpha_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4188,28 +4188,28 @@ uint8_t* EGLImageDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes image = 1;
+  // required bytes a_image = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_image(), target);
+        1, this->_internal_a_image(), target);
   }
 
-  // required bytes fence = 2;
+  // required bytes a_fence = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_fence(), target);
+        2, this->_internal_a_fence(), target);
   }
 
-  // required bytes size = 3;
+  // required bytes a_size = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_size(), target);
+        3, this->_internal_a_size(), target);
   }
 
-  // required bool hasAlpha = 4;
+  // required bool a_hasAlpha = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_hasalpha(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_hasalpha(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4224,29 +4224,29 @@ size_t EGLImageDescriptor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.EGLImageDescriptor)
   size_t total_size = 0;
 
-  if (_internal_has_image()) {
-    // required bytes image = 1;
+  if (_internal_has_a_image()) {
+    // required bytes a_image = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_image());
+        this->_internal_a_image());
   }
 
-  if (_internal_has_fence()) {
-    // required bytes fence = 2;
+  if (_internal_has_a_fence()) {
+    // required bytes a_fence = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fence());
+        this->_internal_a_fence());
   }
 
-  if (_internal_has_size()) {
-    // required bytes size = 3;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_hasalpha()) {
-    // required bool hasAlpha = 4;
+  if (_internal_has_a_hasalpha()) {
+    // required bool a_hasAlpha = 4;
     total_size += 1 + 1;
   }
 
@@ -4257,22 +4257,22 @@ size_t EGLImageDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes image = 1;
+    // required bytes a_image = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_image());
+        this->_internal_a_image());
 
-    // required bytes fence = 2;
+    // required bytes a_fence = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fence());
+        this->_internal_a_fence());
 
-    // required bytes size = 3;
+    // required bytes a_size = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bool hasAlpha = 4;
+    // required bool a_hasAlpha = 4;
     total_size += 1 + 1;
 
   } else {
@@ -4306,16 +4306,16 @@ void EGLImageDescriptor::MergeFrom(const EGLImageDescriptor& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_image(from._internal_image());
+      _this->_internal_set_a_image(from._internal_a_image());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_fence(from._internal_fence());
+      _this->_internal_set_a_fence(from._internal_a_fence());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.hasalpha_ = from._impl_.hasalpha_;
+      _this->_impl_.a_hasalpha_ = from._impl_.a_hasalpha_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4341,18 +4341,18 @@ void EGLImageDescriptor::InternalSwap(EGLImageDescriptor* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.image_, lhs_arena,
-      &other->_impl_.image_, rhs_arena
+      &_impl_.a_image_, lhs_arena,
+      &other->_impl_.a_image_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fence_, lhs_arena,
-      &other->_impl_.fence_, rhs_arena
+      &_impl_.a_fence_, lhs_arena,
+      &other->_impl_.a_fence_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
-  swap(_impl_.hasalpha_, other->_impl_.hasalpha_);
+  swap(_impl_.a_hasalpha_, other->_impl_.a_hasalpha_);
 }
 
 std::string EGLImageDescriptor::GetTypeName() const {
@@ -4365,19 +4365,19 @@ std::string EGLImageDescriptor::GetTypeName() const {
 class SurfaceDescriptorSharedGLTexture::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorSharedGLTexture>()._impl_._has_bits_);
-  static void set_has_texture(HasBits* has_bits) {
+  static void set_has_a_texture(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_target(HasBits* has_bits) {
+  static void set_has_a_target(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_fence(HasBits* has_bits) {
+  static void set_has_a_fence(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_hasalpha(HasBits* has_bits) {
+  static void set_has_a_hasalpha(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4397,32 +4397,32 @@ SurfaceDescriptorSharedGLTexture::SurfaceDescriptorSharedGLTexture(const Surface
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.fence_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.texture_){}
-    , decltype(_impl_.target_){}
-    , decltype(_impl_.hasalpha_){}};
+    , decltype(_impl_.a_fence_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_texture_){}
+    , decltype(_impl_.a_target_){}
+    , decltype(_impl_.a_hasalpha_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.fence_.InitDefault();
+  _impl_.a_fence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fence_.Set("", GetArenaForAllocation());
+    _impl_.a_fence_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fence()) {
-    _this->_impl_.fence_.Set(from._internal_fence(), 
+  if (from._internal_has_a_fence()) {
+    _this->_impl_.a_fence_.Set(from._internal_a_fence(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.texture_, &from._impl_.texture_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.hasalpha_) -
-    reinterpret_cast<char*>(&_impl_.texture_)) + sizeof(_impl_.hasalpha_));
+  ::memcpy(&_impl_.a_texture_, &from._impl_.a_texture_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_hasalpha_) -
+    reinterpret_cast<char*>(&_impl_.a_texture_)) + sizeof(_impl_.a_hasalpha_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
 }
 
@@ -4433,19 +4433,19 @@ inline void SurfaceDescriptorSharedGLTexture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.fence_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.texture_){0u}
-    , decltype(_impl_.target_){0u}
-    , decltype(_impl_.hasalpha_){false}
+    , decltype(_impl_.a_fence_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_texture_){0u}
+    , decltype(_impl_.a_target_){0u}
+    , decltype(_impl_.a_hasalpha_){false}
   };
-  _impl_.fence_.InitDefault();
+  _impl_.a_fence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fence_.Set("", GetArenaForAllocation());
+    _impl_.a_fence_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4460,8 +4460,8 @@ SurfaceDescriptorSharedGLTexture::~SurfaceDescriptorSharedGLTexture() {
 
 inline void SurfaceDescriptorSharedGLTexture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.fence_.Destroy();
-  _impl_.size_.Destroy();
+  _impl_.a_fence_.Destroy();
+  _impl_.a_size_.Destroy();
 }
 
 void SurfaceDescriptorSharedGLTexture::SetCachedSize(int size) const {
@@ -4477,16 +4477,16 @@ void SurfaceDescriptorSharedGLTexture::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.fence_.ClearNonDefaultToEmpty();
+      _impl_.a_fence_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x0000001cu) {
-    ::memset(&_impl_.texture_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.hasalpha_) -
-        reinterpret_cast<char*>(&_impl_.texture_)) + sizeof(_impl_.hasalpha_));
+    ::memset(&_impl_.a_texture_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_hasalpha_) -
+        reinterpret_cast<char*>(&_impl_.a_texture_)) + sizeof(_impl_.a_hasalpha_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -4499,47 +4499,47 @@ const char* SurfaceDescriptorSharedGLTexture::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 texture = 1;
+      // required uint32 a_texture = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_texture(&has_bits);
-          _impl_.texture_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_texture(&has_bits);
+          _impl_.a_texture_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 target = 2;
+      // required uint32 a_target = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_target(&has_bits);
-          _impl_.target_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_target(&has_bits);
+          _impl_.a_target_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes fence = 3;
+      // required bytes a_fence = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_fence();
+          auto str = _internal_mutable_a_fence();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 4;
+      // required bytes a_size = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool hasAlpha = 5;
+      // required bool a_hasAlpha = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_hasalpha(&has_bits);
-          _impl_.hasalpha_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_hasalpha(&has_bits);
+          _impl_.a_hasalpha_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4575,34 +4575,34 @@ uint8_t* SurfaceDescriptorSharedGLTexture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 texture = 1;
+  // required uint32 a_texture = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_texture(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_texture(), target);
   }
 
-  // required uint32 target = 2;
+  // required uint32 a_target = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_target(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_target(), target);
   }
 
-  // required bytes fence = 3;
+  // required bytes a_fence = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_fence(), target);
+        3, this->_internal_a_fence(), target);
   }
 
-  // required bytes size = 4;
+  // required bytes a_size = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_size(), target);
+        4, this->_internal_a_size(), target);
   }
 
-  // required bool hasAlpha = 5;
+  // required bool a_hasAlpha = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_hasalpha(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_hasalpha(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4617,32 +4617,32 @@ size_t SurfaceDescriptorSharedGLTexture::RequiredFieldsByteSizeFallback() const 
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
   size_t total_size = 0;
 
-  if (_internal_has_fence()) {
-    // required bytes fence = 3;
+  if (_internal_has_a_fence()) {
+    // required bytes a_fence = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fence());
+        this->_internal_a_fence());
   }
 
-  if (_internal_has_size()) {
-    // required bytes size = 4;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_texture()) {
-    // required uint32 texture = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_texture());
+  if (_internal_has_a_texture()) {
+    // required uint32 a_texture = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_texture());
   }
 
-  if (_internal_has_target()) {
-    // required uint32 target = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_target());
+  if (_internal_has_a_target()) {
+    // required uint32 a_target = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_target());
   }
 
-  if (_internal_has_hasalpha()) {
-    // required bool hasAlpha = 5;
+  if (_internal_has_a_hasalpha()) {
+    // required bool a_hasAlpha = 5;
     total_size += 1 + 1;
   }
 
@@ -4653,23 +4653,23 @@ size_t SurfaceDescriptorSharedGLTexture::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes fence = 3;
+    // required bytes a_fence = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fence());
+        this->_internal_a_fence());
 
-    // required bytes size = 4;
+    // required bytes a_size = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required uint32 texture = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_texture());
+    // required uint32 a_texture = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_texture());
 
-    // required uint32 target = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_target());
+    // required uint32 a_target = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_target());
 
-    // required bool hasAlpha = 5;
+    // required bool a_hasAlpha = 5;
     total_size += 1 + 1;
 
   } else {
@@ -4703,19 +4703,19 @@ void SurfaceDescriptorSharedGLTexture::MergeFrom(const SurfaceDescriptorSharedGL
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_fence(from._internal_fence());
+      _this->_internal_set_a_fence(from._internal_a_fence());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.texture_ = from._impl_.texture_;
+      _this->_impl_.a_texture_ = from._impl_.a_texture_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.target_ = from._impl_.target_;
+      _this->_impl_.a_target_ = from._impl_.a_target_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.hasalpha_ = from._impl_.hasalpha_;
+      _this->_impl_.a_hasalpha_ = from._impl_.a_hasalpha_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4741,19 +4741,19 @@ void SurfaceDescriptorSharedGLTexture::InternalSwap(SurfaceDescriptorSharedGLTex
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fence_, lhs_arena,
-      &other->_impl_.fence_, rhs_arena
+      &_impl_.a_fence_, lhs_arena,
+      &other->_impl_.a_fence_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorSharedGLTexture, _impl_.hasalpha_)
-      + sizeof(SurfaceDescriptorSharedGLTexture::_impl_.hasalpha_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorSharedGLTexture, _impl_.texture_)>(
-          reinterpret_cast<char*>(&_impl_.texture_),
-          reinterpret_cast<char*>(&other->_impl_.texture_));
+      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorSharedGLTexture, _impl_.a_hasalpha_)
+      + sizeof(SurfaceDescriptorSharedGLTexture::_impl_.a_hasalpha_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorSharedGLTexture, _impl_.a_texture_)>(
+          reinterpret_cast<char*>(&_impl_.a_texture_),
+          reinterpret_cast<char*>(&other->_impl_.a_texture_));
 }
 
 std::string SurfaceDescriptorSharedGLTexture::GetTypeName() const {
@@ -4766,13 +4766,13 @@ std::string SurfaceDescriptorSharedGLTexture::GetTypeName() const {
 class SurfaceDescriptorDcompSurface::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorDcompSurface>()._impl_._has_bits_);
-  static void set_has_handle(HasBits* has_bits) {
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_format(HasBits* has_bits) {
+  static void set_has_a_format(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4792,33 +4792,33 @@ SurfaceDescriptorDcompSurface::SurfaceDescriptorDcompSurface(const SurfaceDescri
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}};
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.handle_.InitDefault();
+  _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handle_.Set("", GetArenaForAllocation());
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_.Set(from._internal_handle(), 
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_.Set(from._internal_a_handle(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_format()) {
-    _this->_impl_.format_.Set(from._internal_format(), 
+  if (from._internal_has_a_format()) {
+    _this->_impl_.a_format_.Set(from._internal_a_format(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface)
@@ -4831,21 +4831,21 @@ inline void SurfaceDescriptorDcompSurface::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
   };
-  _impl_.handle_.InitDefault();
+  _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handle_.Set("", GetArenaForAllocation());
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4860,9 +4860,9 @@ SurfaceDescriptorDcompSurface::~SurfaceDescriptorDcompSurface() {
 
 inline void SurfaceDescriptorDcompSurface::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.handle_.Destroy();
-  _impl_.size_.Destroy();
-  _impl_.format_.Destroy();
+  _impl_.a_handle_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_format_.Destroy();
 }
 
 void SurfaceDescriptorDcompSurface::SetCachedSize(int size) const {
@@ -4878,13 +4878,13 @@ void SurfaceDescriptorDcompSurface::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.handle_.ClearNonDefaultToEmpty();
+      _impl_.a_handle_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.format_.ClearNonDefaultToEmpty();
+      _impl_.a_format_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -4898,28 +4898,28 @@ const char* SurfaceDescriptorDcompSurface::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes handle = 1;
+      // required bytes a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_handle();
+          auto str = _internal_mutable_a_handle();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes size = 2;
+      // required bytes a_size = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes format = 3;
+      // required bytes a_format = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_format();
+          auto str = _internal_mutable_a_format();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -4956,22 +4956,22 @@ uint8_t* SurfaceDescriptorDcompSurface::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes handle = 1;
+  // required bytes a_handle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_handle(), target);
+        1, this->_internal_a_handle(), target);
   }
 
-  // required bytes size = 2;
+  // required bytes a_size = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_size(), target);
+        2, this->_internal_a_size(), target);
   }
 
-  // required bytes format = 3;
+  // required bytes a_format = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_format(), target);
+        3, this->_internal_a_format(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4986,25 +4986,25 @@ size_t SurfaceDescriptorDcompSurface::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface)
   size_t total_size = 0;
 
-  if (_internal_has_handle()) {
-    // required bytes handle = 1;
+  if (_internal_has_a_handle()) {
+    // required bytes a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handle());
+        this->_internal_a_handle());
   }
 
-  if (_internal_has_size()) {
-    // required bytes size = 2;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_format()) {
-    // required bytes format = 3;
+  if (_internal_has_a_format()) {
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
   }
 
   return total_size;
@@ -5014,20 +5014,20 @@ size_t SurfaceDescriptorDcompSurface::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes handle = 1;
+    // required bytes a_handle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handle());
+        this->_internal_a_handle());
 
-    // required bytes size = 2;
+    // required bytes a_size = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes format = 3;
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5060,13 +5060,13 @@ void SurfaceDescriptorDcompSurface::MergeFrom(const SurfaceDescriptorDcompSurfac
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_handle(from._internal_handle());
+      _this->_internal_set_a_handle(from._internal_a_handle());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_format(from._internal_format());
+      _this->_internal_set_a_format(from._internal_a_format());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5091,16 +5091,16 @@ void SurfaceDescriptorDcompSurface::InternalSwap(SurfaceDescriptorDcompSurface* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.handle_, lhs_arena,
-      &other->_impl_.handle_, rhs_arena
+      &_impl_.a_handle_, lhs_arena,
+      &other->_impl_.a_handle_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.format_, lhs_arena,
-      &other->_impl_.format_, rhs_arena
+      &_impl_.a_format_, lhs_arena,
+      &other->_impl_.a_format_, rhs_arena
   );
 }
 
@@ -5113,107 +5113,107 @@ std::string SurfaceDescriptorDcompSurface::GetTypeName() const {
 
 class RemoteDecoderVideoSubDescriptor::_Internal {
  public:
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorD3D10& mvsurfacedescriptord3d10(const RemoteDecoderVideoSubDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr& mvsurfacedescriptordxgiycbcr(const RemoteDecoderVideoSubDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorDMABuf& mvsurfacedescriptordmabuf(const RemoteDecoderVideoSubDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface& mvsurfacedescriptormaciosurface(const RemoteDecoderVideoSubDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface& mvsurfacedescriptordcompsurface(const RemoteDecoderVideoSubDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorD3D10& a_mvsurfacedescriptord3d10(const RemoteDecoderVideoSubDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr& a_mvsurfacedescriptordxgiycbcr(const RemoteDecoderVideoSubDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorDMABuf& a_mvsurfacedescriptordmabuf(const RemoteDecoderVideoSubDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface& a_mvsurfacedescriptormaciosurface(const RemoteDecoderVideoSubDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface& a_mvsurfacedescriptordcompsurface(const RemoteDecoderVideoSubDescriptor* msg);
 };
 
 const ::protobuf::mozilla::layers::SurfaceDescriptorD3D10&
-RemoteDecoderVideoSubDescriptor::_Internal::mvsurfacedescriptord3d10(const RemoteDecoderVideoSubDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptord3d10_;
+RemoteDecoderVideoSubDescriptor::_Internal::a_mvsurfacedescriptord3d10(const RemoteDecoderVideoSubDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptord3d10_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr&
-RemoteDecoderVideoSubDescriptor::_Internal::mvsurfacedescriptordxgiycbcr(const RemoteDecoderVideoSubDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptordxgiycbcr_;
+RemoteDecoderVideoSubDescriptor::_Internal::a_mvsurfacedescriptordxgiycbcr(const RemoteDecoderVideoSubDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptordxgiycbcr_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorDMABuf&
-RemoteDecoderVideoSubDescriptor::_Internal::mvsurfacedescriptordmabuf(const RemoteDecoderVideoSubDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptordmabuf_;
+RemoteDecoderVideoSubDescriptor::_Internal::a_mvsurfacedescriptordmabuf(const RemoteDecoderVideoSubDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptordmabuf_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface&
-RemoteDecoderVideoSubDescriptor::_Internal::mvsurfacedescriptormaciosurface(const RemoteDecoderVideoSubDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptormaciosurface_;
+RemoteDecoderVideoSubDescriptor::_Internal::a_mvsurfacedescriptormaciosurface(const RemoteDecoderVideoSubDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptormaciosurface_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface&
-RemoteDecoderVideoSubDescriptor::_Internal::mvsurfacedescriptordcompsurface(const RemoteDecoderVideoSubDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptordcompsurface_;
+RemoteDecoderVideoSubDescriptor::_Internal::a_mvsurfacedescriptordcompsurface(const RemoteDecoderVideoSubDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptordcompsurface_;
 }
-void RemoteDecoderVideoSubDescriptor::set_allocated_mvsurfacedescriptord3d10(::protobuf::mozilla::layers::SurfaceDescriptorD3D10* mvsurfacedescriptord3d10) {
+void RemoteDecoderVideoSubDescriptor::set_allocated_a_mvsurfacedescriptord3d10(::protobuf::mozilla::layers::SurfaceDescriptorD3D10* a_mvsurfacedescriptord3d10) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptord3d10) {
+  if (a_mvsurfacedescriptord3d10) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptord3d10);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptord3d10);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptord3d10 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptord3d10, submessage_arena);
+      a_mvsurfacedescriptord3d10 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptord3d10, submessage_arena);
     }
-    set_has_mvsurfacedescriptord3d10();
-    _impl_.content_.mvsurfacedescriptord3d10_ = mvsurfacedescriptord3d10;
+    set_has_a_mvsurfacedescriptord3d10();
+    _impl_.content_.a_mvsurfacedescriptord3d10_ = a_mvsurfacedescriptord3d10;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.mVSurfaceDescriptorD3D10)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.a_mVSurfaceDescriptorD3D10)
 }
-void RemoteDecoderVideoSubDescriptor::set_allocated_mvsurfacedescriptordxgiycbcr(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr* mvsurfacedescriptordxgiycbcr) {
+void RemoteDecoderVideoSubDescriptor::set_allocated_a_mvsurfacedescriptordxgiycbcr(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr* a_mvsurfacedescriptordxgiycbcr) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptordxgiycbcr) {
+  if (a_mvsurfacedescriptordxgiycbcr) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptordxgiycbcr);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptordxgiycbcr);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptordxgiycbcr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptordxgiycbcr, submessage_arena);
+      a_mvsurfacedescriptordxgiycbcr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptordxgiycbcr, submessage_arena);
     }
-    set_has_mvsurfacedescriptordxgiycbcr();
-    _impl_.content_.mvsurfacedescriptordxgiycbcr_ = mvsurfacedescriptordxgiycbcr;
+    set_has_a_mvsurfacedescriptordxgiycbcr();
+    _impl_.content_.a_mvsurfacedescriptordxgiycbcr_ = a_mvsurfacedescriptordxgiycbcr;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.mVSurfaceDescriptorDXGIYCbCr)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.a_mVSurfaceDescriptorDXGIYCbCr)
 }
-void RemoteDecoderVideoSubDescriptor::set_allocated_mvsurfacedescriptordmabuf(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf* mvsurfacedescriptordmabuf) {
+void RemoteDecoderVideoSubDescriptor::set_allocated_a_mvsurfacedescriptordmabuf(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf* a_mvsurfacedescriptordmabuf) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptordmabuf) {
+  if (a_mvsurfacedescriptordmabuf) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptordmabuf);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptordmabuf);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptordmabuf = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptordmabuf, submessage_arena);
+      a_mvsurfacedescriptordmabuf = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptordmabuf, submessage_arena);
     }
-    set_has_mvsurfacedescriptordmabuf();
-    _impl_.content_.mvsurfacedescriptordmabuf_ = mvsurfacedescriptordmabuf;
+    set_has_a_mvsurfacedescriptordmabuf();
+    _impl_.content_.a_mvsurfacedescriptordmabuf_ = a_mvsurfacedescriptordmabuf;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.mVSurfaceDescriptorDMABuf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.a_mVSurfaceDescriptorDMABuf)
 }
-void RemoteDecoderVideoSubDescriptor::set_allocated_mvsurfacedescriptormaciosurface(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface* mvsurfacedescriptormaciosurface) {
+void RemoteDecoderVideoSubDescriptor::set_allocated_a_mvsurfacedescriptormaciosurface(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface* a_mvsurfacedescriptormaciosurface) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptormaciosurface) {
+  if (a_mvsurfacedescriptormaciosurface) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptormaciosurface);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptormaciosurface);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptormaciosurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptormaciosurface, submessage_arena);
+      a_mvsurfacedescriptormaciosurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptormaciosurface, submessage_arena);
     }
-    set_has_mvsurfacedescriptormaciosurface();
-    _impl_.content_.mvsurfacedescriptormaciosurface_ = mvsurfacedescriptormaciosurface;
+    set_has_a_mvsurfacedescriptormaciosurface();
+    _impl_.content_.a_mvsurfacedescriptormaciosurface_ = a_mvsurfacedescriptormaciosurface;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.mVSurfaceDescriptorMacIOSurface)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.a_mVSurfaceDescriptorMacIOSurface)
 }
-void RemoteDecoderVideoSubDescriptor::set_allocated_mvsurfacedescriptordcompsurface(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface* mvsurfacedescriptordcompsurface) {
+void RemoteDecoderVideoSubDescriptor::set_allocated_a_mvsurfacedescriptordcompsurface(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface* a_mvsurfacedescriptordcompsurface) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptordcompsurface) {
+  if (a_mvsurfacedescriptordcompsurface) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptordcompsurface);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptordcompsurface);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptordcompsurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptordcompsurface, submessage_arena);
+      a_mvsurfacedescriptordcompsurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptordcompsurface, submessage_arena);
     }
-    set_has_mvsurfacedescriptordcompsurface();
-    _impl_.content_.mvsurfacedescriptordcompsurface_ = mvsurfacedescriptordcompsurface;
+    set_has_a_mvsurfacedescriptordcompsurface();
+    _impl_.content_.a_mvsurfacedescriptordcompsurface_ = a_mvsurfacedescriptordcompsurface;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.mVSurfaceDescriptorDcompSurface)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor.a_mVSurfaceDescriptorDcompSurface)
 }
 RemoteDecoderVideoSubDescriptor::RemoteDecoderVideoSubDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -5232,33 +5232,33 @@ RemoteDecoderVideoSubDescriptor::RemoteDecoderVideoSubDescriptor(const RemoteDec
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVSurfaceDescriptorD3D10: {
-      _this->_internal_mutable_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
-          from._internal_mvsurfacedescriptord3d10());
+    case kAMVSurfaceDescriptorD3D10: {
+      _this->_internal_mutable_a_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
+          from._internal_a_mvsurfacedescriptord3d10());
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
-      _this->_internal_mutable_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
-          from._internal_mvsurfacedescriptordxgiycbcr());
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
+      _this->_internal_mutable_a_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
+          from._internal_a_mvsurfacedescriptordxgiycbcr());
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
-      _this->_internal_mutable_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
-          from._internal_mvsurfacedescriptordmabuf());
+    case kAMVSurfaceDescriptorDMABuf: {
+      _this->_internal_mutable_a_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
+          from._internal_a_mvsurfacedescriptordmabuf());
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
-      _this->_internal_mutable_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
-          from._internal_mvsurfacedescriptormaciosurface());
+    case kAMVSurfaceDescriptorMacIOSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptormaciosurface());
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
-      _this->_internal_mutable_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
-          from._internal_mvsurfacedescriptordcompsurface());
+    case kAMVSurfaceDescriptorDcompSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptordcompsurface());
       break;
     }
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5303,38 +5303,38 @@ void RemoteDecoderVideoSubDescriptor::SetCachedSize(int size) const {
 void RemoteDecoderVideoSubDescriptor::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor)
   switch (content_case()) {
-    case kMVSurfaceDescriptorD3D10: {
+    case kAMVSurfaceDescriptorD3D10: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptord3d10_;
+        delete _impl_.content_.a_mvsurfacedescriptord3d10_;
       }
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptordxgiycbcr_;
+        delete _impl_.content_.a_mvsurfacedescriptordxgiycbcr_;
       }
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
+    case kAMVSurfaceDescriptorDMABuf: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptordmabuf_;
+        delete _impl_.content_.a_mvsurfacedescriptordmabuf_;
       }
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
+    case kAMVSurfaceDescriptorMacIOSurface: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptormaciosurface_;
+        delete _impl_.content_.a_mvsurfacedescriptormaciosurface_;
       }
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
+    case kAMVSurfaceDescriptorDcompSurface: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptordcompsurface_;
+        delete _impl_.content_.a_mvsurfacedescriptordcompsurface_;
       }
       break;
     }
-    case kMVnullT: {
-      _impl_.content_.mvnull_t_.Destroy();
+    case kAMVnullT: {
+      _impl_.content_.a_mvnull_t_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5361,50 +5361,50 @@ const char* RemoteDecoderVideoSubDescriptor::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 mVSurfaceDescriptorD3D10 = 1;
+      // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 a_mVSurfaceDescriptorD3D10 = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptord3d10(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptord3d10(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr mVSurfaceDescriptorDXGIYCbCr = 2;
+      // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr a_mVSurfaceDescriptorDXGIYCbCr = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptordxgiycbcr(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptordxgiycbcr(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf mVSurfaceDescriptorDMABuf = 3;
+      // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf a_mVSurfaceDescriptorDMABuf = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptordmabuf(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptordmabuf(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface mVSurfaceDescriptorMacIOSurface = 4;
+      // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface a_mVSurfaceDescriptorMacIOSurface = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptormaciosurface(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptormaciosurface(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface mVSurfaceDescriptorDcompSurface = 5;
+      // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface a_mVSurfaceDescriptorDcompSurface = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptordcompsurface(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptordcompsurface(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVnull_t = 6;
+      // bytes a_mVnull_t = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_mvnull_t();
+          auto str = _internal_mutable_a_mvnull_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5440,39 +5440,39 @@ uint8_t* RemoteDecoderVideoSubDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVSurfaceDescriptorD3D10: {
+    case kAMVSurfaceDescriptorD3D10: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvsurfacedescriptord3d10(this),
-          _Internal::mvsurfacedescriptord3d10(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvsurfacedescriptord3d10(this),
+          _Internal::a_mvsurfacedescriptord3d10(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvsurfacedescriptordxgiycbcr(this),
-          _Internal::mvsurfacedescriptordxgiycbcr(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvsurfacedescriptordxgiycbcr(this),
+          _Internal::a_mvsurfacedescriptordxgiycbcr(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
+    case kAMVSurfaceDescriptorDMABuf: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::mvsurfacedescriptordmabuf(this),
-          _Internal::mvsurfacedescriptordmabuf(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(3, _Internal::a_mvsurfacedescriptordmabuf(this),
+          _Internal::a_mvsurfacedescriptordmabuf(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
+    case kAMVSurfaceDescriptorMacIOSurface: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::mvsurfacedescriptormaciosurface(this),
-          _Internal::mvsurfacedescriptormaciosurface(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(4, _Internal::a_mvsurfacedescriptormaciosurface(this),
+          _Internal::a_mvsurfacedescriptormaciosurface(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
+    case kAMVSurfaceDescriptorDcompSurface: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(5, _Internal::mvsurfacedescriptordcompsurface(this),
-          _Internal::mvsurfacedescriptordcompsurface(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(5, _Internal::a_mvsurfacedescriptordcompsurface(this),
+          _Internal::a_mvsurfacedescriptordcompsurface(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVnullT: {
+    case kAMVnullT: {
       target = stream->WriteBytesMaybeAliased(
-          6, this->_internal_mvnull_t(), target);
+          6, this->_internal_a_mvnull_t(), target);
       break;
     }
     default: ;
@@ -5494,46 +5494,46 @@ size_t RemoteDecoderVideoSubDescriptor::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 mVSurfaceDescriptorD3D10 = 1;
-    case kMVSurfaceDescriptorD3D10: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 a_mVSurfaceDescriptorD3D10 = 1;
+    case kAMVSurfaceDescriptorD3D10: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptord3d10_);
+          *_impl_.content_.a_mvsurfacedescriptord3d10_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr mVSurfaceDescriptorDXGIYCbCr = 2;
-    case kMVSurfaceDescriptorDXGIYCbCr: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr a_mVSurfaceDescriptorDXGIYCbCr = 2;
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptordxgiycbcr_);
+          *_impl_.content_.a_mvsurfacedescriptordxgiycbcr_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf mVSurfaceDescriptorDMABuf = 3;
-    case kMVSurfaceDescriptorDMABuf: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf a_mVSurfaceDescriptorDMABuf = 3;
+    case kAMVSurfaceDescriptorDMABuf: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptordmabuf_);
+          *_impl_.content_.a_mvsurfacedescriptordmabuf_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface mVSurfaceDescriptorMacIOSurface = 4;
-    case kMVSurfaceDescriptorMacIOSurface: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface a_mVSurfaceDescriptorMacIOSurface = 4;
+    case kAMVSurfaceDescriptorMacIOSurface: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptormaciosurface_);
+          *_impl_.content_.a_mvsurfacedescriptormaciosurface_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface mVSurfaceDescriptorDcompSurface = 5;
-    case kMVSurfaceDescriptorDcompSurface: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface a_mVSurfaceDescriptorDcompSurface = 5;
+    case kAMVSurfaceDescriptorDcompSurface: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptordcompsurface_);
+          *_impl_.content_.a_mvsurfacedescriptordcompsurface_);
       break;
     }
-    // bytes mVnull_t = 6;
-    case kMVnullT: {
+    // bytes a_mVnull_t = 6;
+    case kAMVnullT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnull_t());
+          this->_internal_a_mvnull_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5562,33 +5562,33 @@ void RemoteDecoderVideoSubDescriptor::MergeFrom(const RemoteDecoderVideoSubDescr
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVSurfaceDescriptorD3D10: {
-      _this->_internal_mutable_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
-          from._internal_mvsurfacedescriptord3d10());
+    case kAMVSurfaceDescriptorD3D10: {
+      _this->_internal_mutable_a_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
+          from._internal_a_mvsurfacedescriptord3d10());
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
-      _this->_internal_mutable_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
-          from._internal_mvsurfacedescriptordxgiycbcr());
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
+      _this->_internal_mutable_a_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
+          from._internal_a_mvsurfacedescriptordxgiycbcr());
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
-      _this->_internal_mutable_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
-          from._internal_mvsurfacedescriptordmabuf());
+    case kAMVSurfaceDescriptorDMABuf: {
+      _this->_internal_mutable_a_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
+          from._internal_a_mvsurfacedescriptordmabuf());
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
-      _this->_internal_mutable_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
-          from._internal_mvsurfacedescriptormaciosurface());
+    case kAMVSurfaceDescriptorMacIOSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptormaciosurface());
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
-      _this->_internal_mutable_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
-          from._internal_mvsurfacedescriptordcompsurface());
+    case kAMVSurfaceDescriptorDcompSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptordcompsurface());
       break;
     }
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5607,37 +5607,37 @@ void RemoteDecoderVideoSubDescriptor::CopyFrom(const RemoteDecoderVideoSubDescri
 
 bool RemoteDecoderVideoSubDescriptor::IsInitialized() const {
   switch (content_case()) {
-    case kMVSurfaceDescriptorD3D10: {
-      if (_internal_has_mvsurfacedescriptord3d10()) {
-        if (!_impl_.content_.mvsurfacedescriptord3d10_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorD3D10: {
+      if (_internal_has_a_mvsurfacedescriptord3d10()) {
+        if (!_impl_.content_.a_mvsurfacedescriptord3d10_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
-      if (_internal_has_mvsurfacedescriptordxgiycbcr()) {
-        if (!_impl_.content_.mvsurfacedescriptordxgiycbcr_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
+      if (_internal_has_a_mvsurfacedescriptordxgiycbcr()) {
+        if (!_impl_.content_.a_mvsurfacedescriptordxgiycbcr_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
-      if (_internal_has_mvsurfacedescriptordmabuf()) {
-        if (!_impl_.content_.mvsurfacedescriptordmabuf_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorDMABuf: {
+      if (_internal_has_a_mvsurfacedescriptordmabuf()) {
+        if (!_impl_.content_.a_mvsurfacedescriptordmabuf_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
-      if (_internal_has_mvsurfacedescriptormaciosurface()) {
-        if (!_impl_.content_.mvsurfacedescriptormaciosurface_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorMacIOSurface: {
+      if (_internal_has_a_mvsurfacedescriptormaciosurface()) {
+        if (!_impl_.content_.a_mvsurfacedescriptormaciosurface_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
-      if (_internal_has_mvsurfacedescriptordcompsurface()) {
-        if (!_impl_.content_.mvsurfacedescriptordcompsurface_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorDcompSurface: {
+      if (_internal_has_a_mvsurfacedescriptordcompsurface()) {
+        if (!_impl_.content_.a_mvsurfacedescriptordcompsurface_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVnullT: {
+    case kAMVnullT: {
       break;
     }
     case CONTENT_NOT_SET: {
@@ -5664,17 +5664,17 @@ std::string RemoteDecoderVideoSubDescriptor::GetTypeName() const {
 class SurfaceDescriptorRemoteDecoder::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorRemoteDecoder>()._impl_._has_bits_);
-  static void set_has_handle(HasBits* has_bits) {
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static const ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor& subdesc(const SurfaceDescriptorRemoteDecoder* msg);
-  static void set_has_subdesc(HasBits* has_bits) {
+  static const ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor& a_subdesc(const SurfaceDescriptorRemoteDecoder* msg);
+  static void set_has_a_subdesc(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_source(HasBits* has_bits) {
+  static void set_has_a_source(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_id(HasBits* has_bits) {
+  static void set_has_a_id(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5683,8 +5683,8 @@ class SurfaceDescriptorRemoteDecoder::_Internal {
 };
 
 const ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor&
-SurfaceDescriptorRemoteDecoder::_Internal::subdesc(const SurfaceDescriptorRemoteDecoder* msg) {
-  return *msg->_impl_.subdesc_;
+SurfaceDescriptorRemoteDecoder::_Internal::a_subdesc(const SurfaceDescriptorRemoteDecoder* msg) {
+  return *msg->_impl_.a_subdesc_;
 }
 SurfaceDescriptorRemoteDecoder::SurfaceDescriptorRemoteDecoder(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -5698,32 +5698,32 @@ SurfaceDescriptorRemoteDecoder::SurfaceDescriptorRemoteDecoder(const SurfaceDesc
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.source_){}
-    , decltype(_impl_.id_){}
-    , decltype(_impl_.subdesc_){nullptr}
-    , decltype(_impl_.handle_){}};
+    , decltype(_impl_.a_source_){}
+    , decltype(_impl_.a_id_){}
+    , decltype(_impl_.a_subdesc_){nullptr}
+    , decltype(_impl_.a_handle_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.source_.InitDefault();
+  _impl_.a_source_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.source_.Set("", GetArenaForAllocation());
+    _impl_.a_source_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_source()) {
-    _this->_impl_.source_.Set(from._internal_source(), 
+  if (from._internal_has_a_source()) {
+    _this->_impl_.a_source_.Set(from._internal_a_source(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_id()) {
-    _this->_impl_.id_.Set(from._internal_id(), 
+  if (from._internal_has_a_id()) {
+    _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_subdesc()) {
-    _this->_impl_.subdesc_ = new ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor(*from._impl_.subdesc_);
+  if (from._internal_has_a_subdesc()) {
+    _this->_impl_.a_subdesc_ = new ::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor(*from._impl_.a_subdesc_);
   }
-  _this->_impl_.handle_ = from._impl_.handle_;
+  _this->_impl_.a_handle_ = from._impl_.a_handle_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
 }
 
@@ -5734,18 +5734,18 @@ inline void SurfaceDescriptorRemoteDecoder::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.source_){}
-    , decltype(_impl_.id_){}
-    , decltype(_impl_.subdesc_){nullptr}
-    , decltype(_impl_.handle_){uint64_t{0u}}
+    , decltype(_impl_.a_source_){}
+    , decltype(_impl_.a_id_){}
+    , decltype(_impl_.a_subdesc_){nullptr}
+    , decltype(_impl_.a_handle_){uint64_t{0u}}
   };
-  _impl_.source_.InitDefault();
+  _impl_.a_source_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.source_.Set("", GetArenaForAllocation());
+    _impl_.a_source_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5760,9 +5760,9 @@ SurfaceDescriptorRemoteDecoder::~SurfaceDescriptorRemoteDecoder() {
 
 inline void SurfaceDescriptorRemoteDecoder::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.source_.Destroy();
-  _impl_.id_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.subdesc_;
+  _impl_.a_source_.Destroy();
+  _impl_.a_id_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_subdesc_;
 }
 
 void SurfaceDescriptorRemoteDecoder::SetCachedSize(int size) const {
@@ -5778,17 +5778,17 @@ void SurfaceDescriptorRemoteDecoder::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.source_.ClearNonDefaultToEmpty();
+      _impl_.a_source_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.id_.ClearNonDefaultToEmpty();
+      _impl_.a_id_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.subdesc_ != nullptr);
-      _impl_.subdesc_->Clear();
+      GOOGLE_DCHECK(_impl_.a_subdesc_ != nullptr);
+      _impl_.a_subdesc_->Clear();
     }
   }
-  _impl_.handle_ = uint64_t{0u};
+  _impl_.a_handle_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -5800,36 +5800,36 @@ const char* SurfaceDescriptorRemoteDecoder::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 handle = 1;
+      // required uint64 a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_handle(&has_bits);
-          _impl_.handle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_handle(&has_bits);
+          _impl_.a_handle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor subdesc = 2;
+      // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_subdesc(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_subdesc(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes source = 3;
+      // required bytes a_source = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_source();
+          auto str = _internal_mutable_a_source();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes id = 4;
+      // required bytes a_id = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_id();
+          auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5866,29 +5866,29 @@ uint8_t* SurfaceDescriptorRemoteDecoder::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 handle = 1;
+  // required uint64 a_handle = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_handle(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_handle(), target);
   }
 
-  // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor subdesc = 2;
+  // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::subdesc(this),
-        _Internal::subdesc(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_subdesc(this),
+        _Internal::a_subdesc(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes source = 3;
+  // required bytes a_source = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_source(), target);
+        3, this->_internal_a_source(), target);
   }
 
-  // required bytes id = 4;
+  // required bytes a_id = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_id(), target);
+        4, this->_internal_a_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5903,30 +5903,30 @@ size_t SurfaceDescriptorRemoteDecoder::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
   size_t total_size = 0;
 
-  if (_internal_has_source()) {
-    // required bytes source = 3;
+  if (_internal_has_a_source()) {
+    // required bytes a_source = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_source());
+        this->_internal_a_source());
   }
 
-  if (_internal_has_id()) {
-    // required bytes id = 4;
+  if (_internal_has_a_id()) {
+    // required bytes a_id = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_id());
+        this->_internal_a_id());
   }
 
-  if (_internal_has_subdesc()) {
-    // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor subdesc = 2;
+  if (_internal_has_a_subdesc()) {
+    // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.subdesc_);
+        *_impl_.a_subdesc_);
   }
 
-  if (_internal_has_handle()) {
-    // required uint64 handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_handle());
+  if (_internal_has_a_handle()) {
+    // required uint64 a_handle = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
   }
 
   return total_size;
@@ -5936,23 +5936,23 @@ size_t SurfaceDescriptorRemoteDecoder::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes source = 3;
+    // required bytes a_source = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_source());
+        this->_internal_a_source());
 
-    // required bytes id = 4;
+    // required bytes a_id = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_id());
+        this->_internal_a_id());
 
-    // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor subdesc = 2;
+    // required .protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.subdesc_);
+        *_impl_.a_subdesc_);
 
-    // required uint64 handle = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_handle());
+    // required uint64 a_handle = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5985,17 +5985,17 @@ void SurfaceDescriptorRemoteDecoder::MergeFrom(const SurfaceDescriptorRemoteDeco
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_source(from._internal_source());
+      _this->_internal_set_a_source(from._internal_a_source());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_id(from._internal_id());
+      _this->_internal_set_a_id(from._internal_a_id());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_subdesc()->::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor::MergeFrom(
-          from._internal_subdesc());
+      _this->_internal_mutable_a_subdesc()->::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor::MergeFrom(
+          from._internal_a_subdesc());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.handle_ = from._impl_.handle_;
+      _this->_impl_.a_handle_ = from._impl_.a_handle_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -6011,8 +6011,8 @@ void SurfaceDescriptorRemoteDecoder::CopyFrom(const SurfaceDescriptorRemoteDecod
 
 bool SurfaceDescriptorRemoteDecoder::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_subdesc()) {
-    if (!_impl_.subdesc_->IsInitialized()) return false;
+  if (_internal_has_a_subdesc()) {
+    if (!_impl_.a_subdesc_->IsInitialized()) return false;
   }
   return true;
 }
@@ -6024,19 +6024,19 @@ void SurfaceDescriptorRemoteDecoder::InternalSwap(SurfaceDescriptorRemoteDecoder
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.source_, lhs_arena,
-      &other->_impl_.source_, rhs_arena
+      &_impl_.a_source_, lhs_arena,
+      &other->_impl_.a_source_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.id_, lhs_arena,
-      &other->_impl_.id_, rhs_arena
+      &_impl_.a_id_, lhs_arena,
+      &other->_impl_.a_id_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorRemoteDecoder, _impl_.handle_)
-      + sizeof(SurfaceDescriptorRemoteDecoder::_impl_.handle_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorRemoteDecoder, _impl_.subdesc_)>(
-          reinterpret_cast<char*>(&_impl_.subdesc_),
-          reinterpret_cast<char*>(&other->_impl_.subdesc_));
+      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorRemoteDecoder, _impl_.a_handle_)
+      + sizeof(SurfaceDescriptorRemoteDecoder::_impl_.a_handle_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorRemoteDecoder, _impl_.a_subdesc_)>(
+          reinterpret_cast<char*>(&_impl_.a_subdesc_),
+          reinterpret_cast<char*>(&other->_impl_.a_subdesc_));
 }
 
 std::string SurfaceDescriptorRemoteDecoder::GetTypeName() const {
@@ -6048,27 +6048,27 @@ std::string SurfaceDescriptorRemoteDecoder::GetTypeName() const {
 
 class SurfaceDescriptorGPUVideo::_Internal {
  public:
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder& mvsurfacedescriptorremotedecoder(const SurfaceDescriptorGPUVideo* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder& a_mvsurfacedescriptorremotedecoder(const SurfaceDescriptorGPUVideo* msg);
 };
 
 const ::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder&
-SurfaceDescriptorGPUVideo::_Internal::mvsurfacedescriptorremotedecoder(const SurfaceDescriptorGPUVideo* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorremotedecoder_;
+SurfaceDescriptorGPUVideo::_Internal::a_mvsurfacedescriptorremotedecoder(const SurfaceDescriptorGPUVideo* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorremotedecoder_;
 }
-void SurfaceDescriptorGPUVideo::set_allocated_mvsurfacedescriptorremotedecoder(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder* mvsurfacedescriptorremotedecoder) {
+void SurfaceDescriptorGPUVideo::set_allocated_a_mvsurfacedescriptorremotedecoder(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder* a_mvsurfacedescriptorremotedecoder) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorremotedecoder) {
+  if (a_mvsurfacedescriptorremotedecoder) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorremotedecoder);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorremotedecoder);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorremotedecoder = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorremotedecoder, submessage_arena);
+      a_mvsurfacedescriptorremotedecoder = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorremotedecoder, submessage_arena);
     }
-    set_has_mvsurfacedescriptorremotedecoder();
-    _impl_.content_.mvsurfacedescriptorremotedecoder_ = mvsurfacedescriptorremotedecoder;
+    set_has_a_mvsurfacedescriptorremotedecoder();
+    _impl_.content_.a_mvsurfacedescriptorremotedecoder_ = a_mvsurfacedescriptorremotedecoder;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo.mVSurfaceDescriptorRemoteDecoder)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo.a_mVSurfaceDescriptorRemoteDecoder)
 }
 SurfaceDescriptorGPUVideo::SurfaceDescriptorGPUVideo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6087,9 +6087,9 @@ SurfaceDescriptorGPUVideo::SurfaceDescriptorGPUVideo(const SurfaceDescriptorGPUV
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVSurfaceDescriptorRemoteDecoder: {
-      _this->_internal_mutable_mvsurfacedescriptorremotedecoder()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder::MergeFrom(
-          from._internal_mvsurfacedescriptorremotedecoder());
+    case kAMVSurfaceDescriptorRemoteDecoder: {
+      _this->_internal_mutable_a_mvsurfacedescriptorremotedecoder()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder::MergeFrom(
+          from._internal_a_mvsurfacedescriptorremotedecoder());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6134,9 +6134,9 @@ void SurfaceDescriptorGPUVideo::SetCachedSize(int size) const {
 void SurfaceDescriptorGPUVideo::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo)
   switch (content_case()) {
-    case kMVSurfaceDescriptorRemoteDecoder: {
+    case kAMVSurfaceDescriptorRemoteDecoder: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorremotedecoder_;
+        delete _impl_.content_.a_mvsurfacedescriptorremotedecoder_;
       }
       break;
     }
@@ -6164,10 +6164,10 @@ const char* SurfaceDescriptorGPUVideo::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder mVSurfaceDescriptorRemoteDecoder = 1;
+      // .protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder a_mVSurfaceDescriptorRemoteDecoder = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorremotedecoder(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorremotedecoder(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6201,11 +6201,11 @@ uint8_t* SurfaceDescriptorGPUVideo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder mVSurfaceDescriptorRemoteDecoder = 1;
-  if (_internal_has_mvsurfacedescriptorremotedecoder()) {
+  // .protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder a_mVSurfaceDescriptorRemoteDecoder = 1;
+  if (_internal_has_a_mvsurfacedescriptorremotedecoder()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::mvsurfacedescriptorremotedecoder(this),
-        _Internal::mvsurfacedescriptorremotedecoder(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_mvsurfacedescriptorremotedecoder(this),
+        _Internal::a_mvsurfacedescriptorremotedecoder(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6225,11 +6225,11 @@ size_t SurfaceDescriptorGPUVideo::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder mVSurfaceDescriptorRemoteDecoder = 1;
-    case kMVSurfaceDescriptorRemoteDecoder: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder a_mVSurfaceDescriptorRemoteDecoder = 1;
+    case kAMVSurfaceDescriptorRemoteDecoder: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorremotedecoder_);
+          *_impl_.content_.a_mvsurfacedescriptorremotedecoder_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6258,9 +6258,9 @@ void SurfaceDescriptorGPUVideo::MergeFrom(const SurfaceDescriptorGPUVideo& from)
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVSurfaceDescriptorRemoteDecoder: {
-      _this->_internal_mutable_mvsurfacedescriptorremotedecoder()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder::MergeFrom(
-          from._internal_mvsurfacedescriptorremotedecoder());
+    case kAMVSurfaceDescriptorRemoteDecoder: {
+      _this->_internal_mutable_a_mvsurfacedescriptorremotedecoder()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder::MergeFrom(
+          from._internal_a_mvsurfacedescriptorremotedecoder());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6279,9 +6279,9 @@ void SurfaceDescriptorGPUVideo::CopyFrom(const SurfaceDescriptorGPUVideo& from) 
 
 bool SurfaceDescriptorGPUVideo::IsInitialized() const {
   switch (content_case()) {
-    case kMVSurfaceDescriptorRemoteDecoder: {
-      if (_internal_has_mvsurfacedescriptorremotedecoder()) {
-        if (!_impl_.content_.mvsurfacedescriptorremotedecoder_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorRemoteDecoder: {
+      if (_internal_has_a_mvsurfacedescriptorremotedecoder()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorremotedecoder_->IsInitialized()) return false;
       }
       break;
     }
@@ -6309,10 +6309,10 @@ std::string SurfaceDescriptorGPUVideo::GetTypeName() const {
 class RGBDescriptor::_Internal {
  public:
   using HasBits = decltype(std::declval<RGBDescriptor>()._impl_._has_bits_);
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_format(HasBits* has_bits) {
+  static void set_has_a_format(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6332,24 +6332,24 @@ RGBDescriptor::RGBDescriptor(const RGBDescriptor& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}};
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_format()) {
-    _this->_impl_.format_.Set(from._internal_format(), 
+  if (from._internal_has_a_format()) {
+    _this->_impl_.a_format_.Set(from._internal_a_format(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.RGBDescriptor)
@@ -6362,16 +6362,16 @@ inline void RGBDescriptor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
   };
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -6386,8 +6386,8 @@ RGBDescriptor::~RGBDescriptor() {
 
 inline void RGBDescriptor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.size_.Destroy();
-  _impl_.format_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_format_.Destroy();
 }
 
 void RGBDescriptor::SetCachedSize(int size) const {
@@ -6403,10 +6403,10 @@ void RGBDescriptor::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.format_.ClearNonDefaultToEmpty();
+      _impl_.a_format_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -6420,19 +6420,19 @@ const char* RGBDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes size = 1;
+      // required bytes a_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes format = 2;
+      // required bytes a_format = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_format();
+          auto str = _internal_mutable_a_format();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -6469,16 +6469,16 @@ uint8_t* RGBDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes size = 1;
+  // required bytes a_size = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_size(), target);
+        1, this->_internal_a_size(), target);
   }
 
-  // required bytes format = 2;
+  // required bytes a_format = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_format(), target);
+        2, this->_internal_a_format(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6493,18 +6493,18 @@ size_t RGBDescriptor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.RGBDescriptor)
   size_t total_size = 0;
 
-  if (_internal_has_size()) {
-    // required bytes size = 1;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_format()) {
-    // required bytes format = 2;
+  if (_internal_has_a_format()) {
+    // required bytes a_format = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
   }
 
   return total_size;
@@ -6514,15 +6514,15 @@ size_t RGBDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes size = 1;
+    // required bytes a_size = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes format = 2;
+    // required bytes a_format = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -6555,10 +6555,10 @@ void RGBDescriptor::MergeFrom(const RGBDescriptor& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_format(from._internal_format());
+      _this->_internal_set_a_format(from._internal_a_format());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -6583,12 +6583,12 @@ void RGBDescriptor::InternalSwap(RGBDescriptor* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.format_, lhs_arena,
-      &other->_impl_.format_, rhs_arena
+      &_impl_.a_format_, lhs_arena,
+      &other->_impl_.a_format_, rhs_arena
   );
 }
 
@@ -6602,43 +6602,43 @@ std::string RGBDescriptor::GetTypeName() const {
 class YCbCrDescriptor::_Internal {
  public:
   using HasBits = decltype(std::declval<YCbCrDescriptor>()._impl_._has_bits_);
-  static void set_has_display(HasBits* has_bits) {
+  static void set_has_a_display(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_ysize(HasBits* has_bits) {
+  static void set_has_a_ysize(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_ystride(HasBits* has_bits) {
+  static void set_has_a_ystride(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_cbcrsize(HasBits* has_bits) {
+  static void set_has_a_cbcrsize(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_cbcrstride(HasBits* has_bits) {
+  static void set_has_a_cbcrstride(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
-  static void set_has_yoffset(HasBits* has_bits) {
+  static void set_has_a_yoffset(HasBits* has_bits) {
     (*has_bits)[0] |= 1024u;
   }
-  static void set_has_cboffset(HasBits* has_bits) {
+  static void set_has_a_cboffset(HasBits* has_bits) {
     (*has_bits)[0] |= 2048u;
   }
-  static void set_has_croffset(HasBits* has_bits) {
+  static void set_has_a_croffset(HasBits* has_bits) {
     (*has_bits)[0] |= 4096u;
   }
-  static void set_has_stereomode(HasBits* has_bits) {
+  static void set_has_a_stereomode(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_colordepth(HasBits* has_bits) {
+  static void set_has_a_colordepth(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_yuvcolorspace(HasBits* has_bits) {
+  static void set_has_a_yuvcolorspace(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_colorrange(HasBits* has_bits) {
+  static void set_has_a_colorrange(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_chromasubsampling(HasBits* has_bits) {
+  static void set_has_a_chromasubsampling(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6658,88 +6658,88 @@ YCbCrDescriptor::YCbCrDescriptor(const YCbCrDescriptor& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.display_){}
-    , decltype(_impl_.ysize_){}
-    , decltype(_impl_.cbcrsize_){}
-    , decltype(_impl_.stereomode_){}
-    , decltype(_impl_.colordepth_){}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.chromasubsampling_){}
-    , decltype(_impl_.ystride_){}
-    , decltype(_impl_.cbcrstride_){}
-    , decltype(_impl_.yoffset_){}
-    , decltype(_impl_.cboffset_){}
-    , decltype(_impl_.croffset_){}};
+    , decltype(_impl_.a_display_){}
+    , decltype(_impl_.a_ysize_){}
+    , decltype(_impl_.a_cbcrsize_){}
+    , decltype(_impl_.a_stereomode_){}
+    , decltype(_impl_.a_colordepth_){}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_chromasubsampling_){}
+    , decltype(_impl_.a_ystride_){}
+    , decltype(_impl_.a_cbcrstride_){}
+    , decltype(_impl_.a_yoffset_){}
+    , decltype(_impl_.a_cboffset_){}
+    , decltype(_impl_.a_croffset_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.display_.InitDefault();
+  _impl_.a_display_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.display_.Set("", GetArenaForAllocation());
+    _impl_.a_display_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_display()) {
-    _this->_impl_.display_.Set(from._internal_display(), 
+  if (from._internal_has_a_display()) {
+    _this->_impl_.a_display_.Set(from._internal_a_display(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.ysize_.InitDefault();
+  _impl_.a_ysize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ysize_.Set("", GetArenaForAllocation());
+    _impl_.a_ysize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_ysize()) {
-    _this->_impl_.ysize_.Set(from._internal_ysize(), 
+  if (from._internal_has_a_ysize()) {
+    _this->_impl_.a_ysize_.Set(from._internal_a_ysize(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.cbcrsize_.InitDefault();
+  _impl_.a_cbcrsize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cbcrsize_.Set("", GetArenaForAllocation());
+    _impl_.a_cbcrsize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_cbcrsize()) {
-    _this->_impl_.cbcrsize_.Set(from._internal_cbcrsize(), 
+  if (from._internal_has_a_cbcrsize()) {
+    _this->_impl_.a_cbcrsize_.Set(from._internal_a_cbcrsize(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.stereomode_.InitDefault();
+  _impl_.a_stereomode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.stereomode_.Set("", GetArenaForAllocation());
+    _impl_.a_stereomode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_stereomode()) {
-    _this->_impl_.stereomode_.Set(from._internal_stereomode(), 
+  if (from._internal_has_a_stereomode()) {
+    _this->_impl_.a_stereomode_.Set(from._internal_a_stereomode(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colordepth_.InitDefault();
+  _impl_.a_colordepth_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colordepth_.Set("", GetArenaForAllocation());
+    _impl_.a_colordepth_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colordepth()) {
-    _this->_impl_.colordepth_.Set(from._internal_colordepth(), 
+  if (from._internal_has_a_colordepth()) {
+    _this->_impl_.a_colordepth_.Set(from._internal_a_colordepth(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_yuvcolorspace()) {
-    _this->_impl_.yuvcolorspace_.Set(from._internal_yuvcolorspace(), 
+  if (from._internal_has_a_yuvcolorspace()) {
+    _this->_impl_.a_yuvcolorspace_.Set(from._internal_a_yuvcolorspace(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_colorrange()) {
-    _this->_impl_.colorrange_.Set(from._internal_colorrange(), 
+  if (from._internal_has_a_colorrange()) {
+    _this->_impl_.a_colorrange_.Set(from._internal_a_colorrange(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.chromasubsampling_.InitDefault();
+  _impl_.a_chromasubsampling_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.chromasubsampling_.Set("", GetArenaForAllocation());
+    _impl_.a_chromasubsampling_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_chromasubsampling()) {
-    _this->_impl_.chromasubsampling_.Set(from._internal_chromasubsampling(), 
+  if (from._internal_has_a_chromasubsampling()) {
+    _this->_impl_.a_chromasubsampling_.Set(from._internal_a_chromasubsampling(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.ystride_, &from._impl_.ystride_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.croffset_) -
-    reinterpret_cast<char*>(&_impl_.ystride_)) + sizeof(_impl_.croffset_));
+  ::memcpy(&_impl_.a_ystride_, &from._impl_.a_ystride_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_croffset_) -
+    reinterpret_cast<char*>(&_impl_.a_ystride_)) + sizeof(_impl_.a_croffset_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.YCbCrDescriptor)
 }
 
@@ -6750,51 +6750,51 @@ inline void YCbCrDescriptor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.display_){}
-    , decltype(_impl_.ysize_){}
-    , decltype(_impl_.cbcrsize_){}
-    , decltype(_impl_.stereomode_){}
-    , decltype(_impl_.colordepth_){}
-    , decltype(_impl_.yuvcolorspace_){}
-    , decltype(_impl_.colorrange_){}
-    , decltype(_impl_.chromasubsampling_){}
-    , decltype(_impl_.ystride_){0u}
-    , decltype(_impl_.cbcrstride_){0u}
-    , decltype(_impl_.yoffset_){0u}
-    , decltype(_impl_.cboffset_){0u}
-    , decltype(_impl_.croffset_){0u}
+    , decltype(_impl_.a_display_){}
+    , decltype(_impl_.a_ysize_){}
+    , decltype(_impl_.a_cbcrsize_){}
+    , decltype(_impl_.a_stereomode_){}
+    , decltype(_impl_.a_colordepth_){}
+    , decltype(_impl_.a_yuvcolorspace_){}
+    , decltype(_impl_.a_colorrange_){}
+    , decltype(_impl_.a_chromasubsampling_){}
+    , decltype(_impl_.a_ystride_){0u}
+    , decltype(_impl_.a_cbcrstride_){0u}
+    , decltype(_impl_.a_yoffset_){0u}
+    , decltype(_impl_.a_cboffset_){0u}
+    , decltype(_impl_.a_croffset_){0u}
   };
-  _impl_.display_.InitDefault();
+  _impl_.a_display_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.display_.Set("", GetArenaForAllocation());
+    _impl_.a_display_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.ysize_.InitDefault();
+  _impl_.a_ysize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ysize_.Set("", GetArenaForAllocation());
+    _impl_.a_ysize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.cbcrsize_.InitDefault();
+  _impl_.a_cbcrsize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cbcrsize_.Set("", GetArenaForAllocation());
+    _impl_.a_cbcrsize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.stereomode_.InitDefault();
+  _impl_.a_stereomode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.stereomode_.Set("", GetArenaForAllocation());
+    _impl_.a_stereomode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colordepth_.InitDefault();
+  _impl_.a_colordepth_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colordepth_.Set("", GetArenaForAllocation());
+    _impl_.a_colordepth_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.yuvcolorspace_.InitDefault();
+  _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.yuvcolorspace_.Set("", GetArenaForAllocation());
+    _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.colorrange_.InitDefault();
+  _impl_.a_colorrange_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.colorrange_.Set("", GetArenaForAllocation());
+    _impl_.a_colorrange_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.chromasubsampling_.InitDefault();
+  _impl_.a_chromasubsampling_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.chromasubsampling_.Set("", GetArenaForAllocation());
+    _impl_.a_chromasubsampling_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -6809,14 +6809,14 @@ YCbCrDescriptor::~YCbCrDescriptor() {
 
 inline void YCbCrDescriptor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.display_.Destroy();
-  _impl_.ysize_.Destroy();
-  _impl_.cbcrsize_.Destroy();
-  _impl_.stereomode_.Destroy();
-  _impl_.colordepth_.Destroy();
-  _impl_.yuvcolorspace_.Destroy();
-  _impl_.colorrange_.Destroy();
-  _impl_.chromasubsampling_.Destroy();
+  _impl_.a_display_.Destroy();
+  _impl_.a_ysize_.Destroy();
+  _impl_.a_cbcrsize_.Destroy();
+  _impl_.a_stereomode_.Destroy();
+  _impl_.a_colordepth_.Destroy();
+  _impl_.a_yuvcolorspace_.Destroy();
+  _impl_.a_colorrange_.Destroy();
+  _impl_.a_chromasubsampling_.Destroy();
 }
 
 void YCbCrDescriptor::SetCachedSize(int size) const {
@@ -6832,34 +6832,34 @@ void YCbCrDescriptor::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.display_.ClearNonDefaultToEmpty();
+      _impl_.a_display_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.ysize_.ClearNonDefaultToEmpty();
+      _impl_.a_ysize_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.cbcrsize_.ClearNonDefaultToEmpty();
+      _impl_.a_cbcrsize_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.stereomode_.ClearNonDefaultToEmpty();
+      _impl_.a_stereomode_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.colordepth_.ClearNonDefaultToEmpty();
+      _impl_.a_colordepth_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.yuvcolorspace_.ClearNonDefaultToEmpty();
+      _impl_.a_yuvcolorspace_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000040u) {
-      _impl_.colorrange_.ClearNonDefaultToEmpty();
+      _impl_.a_colorrange_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000080u) {
-      _impl_.chromasubsampling_.ClearNonDefaultToEmpty();
+      _impl_.a_chromasubsampling_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00001f00u) {
-    ::memset(&_impl_.ystride_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.croffset_) -
-        reinterpret_cast<char*>(&_impl_.ystride_)) + sizeof(_impl_.croffset_));
+    ::memset(&_impl_.a_ystride_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_croffset_) -
+        reinterpret_cast<char*>(&_impl_.a_ystride_)) + sizeof(_impl_.a_croffset_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -6872,118 +6872,118 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes display = 1;
+      // required bytes a_display = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_display();
+          auto str = _internal_mutable_a_display();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes ySize = 2;
+      // required bytes a_ySize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_ysize();
+          auto str = _internal_mutable_a_ysize();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 yStride = 3;
+      // required uint32 a_yStride = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_ystride(&has_bits);
-          _impl_.ystride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_ystride(&has_bits);
+          _impl_.a_ystride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes cbCrSize = 4;
+      // required bytes a_cbCrSize = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_cbcrsize();
+          auto str = _internal_mutable_a_cbcrsize();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 cbCrStride = 5;
+      // required uint32 a_cbCrStride = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_cbcrstride(&has_bits);
-          _impl_.cbcrstride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_cbcrstride(&has_bits);
+          _impl_.a_cbcrstride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 yOffset = 6;
+      // required uint32 a_yOffset = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_yoffset(&has_bits);
-          _impl_.yoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_yoffset(&has_bits);
+          _impl_.a_yoffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 cbOffset = 7;
+      // required uint32 a_cbOffset = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_cboffset(&has_bits);
-          _impl_.cboffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_cboffset(&has_bits);
+          _impl_.a_cboffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 crOffset = 8;
+      // required uint32 a_crOffset = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_croffset(&has_bits);
-          _impl_.croffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_croffset(&has_bits);
+          _impl_.a_croffset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes stereoMode = 9;
+      // required bytes a_stereoMode = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          auto str = _internal_mutable_stereomode();
+          auto str = _internal_mutable_a_stereomode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorDepth = 10;
+      // required bytes a_colorDepth = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
-          auto str = _internal_mutable_colordepth();
+          auto str = _internal_mutable_a_colordepth();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes yUVColorSpace = 11;
+      // required bytes a_yUVColorSpace = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
-          auto str = _internal_mutable_yuvcolorspace();
+          auto str = _internal_mutable_a_yuvcolorspace();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes colorRange = 12;
+      // required bytes a_colorRange = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
-          auto str = _internal_mutable_colorrange();
+          auto str = _internal_mutable_a_colorrange();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes chromaSubsampling = 13;
+      // required bytes a_chromaSubsampling = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
-          auto str = _internal_mutable_chromasubsampling();
+          auto str = _internal_mutable_a_chromasubsampling();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -7020,82 +7020,82 @@ uint8_t* YCbCrDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes display = 1;
+  // required bytes a_display = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_display(), target);
+        1, this->_internal_a_display(), target);
   }
 
-  // required bytes ySize = 2;
+  // required bytes a_ySize = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_ysize(), target);
+        2, this->_internal_a_ysize(), target);
   }
 
-  // required uint32 yStride = 3;
+  // required uint32 a_yStride = 3;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_ystride(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_ystride(), target);
   }
 
-  // required bytes cbCrSize = 4;
+  // required bytes a_cbCrSize = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_cbcrsize(), target);
+        4, this->_internal_a_cbcrsize(), target);
   }
 
-  // required uint32 cbCrStride = 5;
+  // required uint32 a_cbCrStride = 5;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_cbcrstride(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_cbcrstride(), target);
   }
 
-  // required uint32 yOffset = 6;
+  // required uint32 a_yOffset = 6;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_yoffset(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_yoffset(), target);
   }
 
-  // required uint32 cbOffset = 7;
+  // required uint32 a_cbOffset = 7;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_cboffset(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_cboffset(), target);
   }
 
-  // required uint32 crOffset = 8;
+  // required uint32 a_crOffset = 8;
   if (cached_has_bits & 0x00001000u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_croffset(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_a_croffset(), target);
   }
 
-  // required bytes stereoMode = 9;
+  // required bytes a_stereoMode = 9;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        9, this->_internal_stereomode(), target);
+        9, this->_internal_a_stereomode(), target);
   }
 
-  // required bytes colorDepth = 10;
+  // required bytes a_colorDepth = 10;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        10, this->_internal_colordepth(), target);
+        10, this->_internal_a_colordepth(), target);
   }
 
-  // required bytes yUVColorSpace = 11;
+  // required bytes a_yUVColorSpace = 11;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        11, this->_internal_yuvcolorspace(), target);
+        11, this->_internal_a_yuvcolorspace(), target);
   }
 
-  // required bytes colorRange = 12;
+  // required bytes a_colorRange = 12;
   if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
-        12, this->_internal_colorrange(), target);
+        12, this->_internal_a_colorrange(), target);
   }
 
-  // required bytes chromaSubsampling = 13;
+  // required bytes a_chromaSubsampling = 13;
   if (cached_has_bits & 0x00000080u) {
     target = stream->WriteBytesMaybeAliased(
-        13, this->_internal_chromasubsampling(), target);
+        13, this->_internal_a_chromasubsampling(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7110,85 +7110,85 @@ size_t YCbCrDescriptor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.YCbCrDescriptor)
   size_t total_size = 0;
 
-  if (_internal_has_display()) {
-    // required bytes display = 1;
+  if (_internal_has_a_display()) {
+    // required bytes a_display = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_display());
+        this->_internal_a_display());
   }
 
-  if (_internal_has_ysize()) {
-    // required bytes ySize = 2;
+  if (_internal_has_a_ysize()) {
+    // required bytes a_ySize = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ysize());
+        this->_internal_a_ysize());
   }
 
-  if (_internal_has_cbcrsize()) {
-    // required bytes cbCrSize = 4;
+  if (_internal_has_a_cbcrsize()) {
+    // required bytes a_cbCrSize = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_cbcrsize());
+        this->_internal_a_cbcrsize());
   }
 
-  if (_internal_has_stereomode()) {
-    // required bytes stereoMode = 9;
+  if (_internal_has_a_stereomode()) {
+    // required bytes a_stereoMode = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_stereomode());
+        this->_internal_a_stereomode());
   }
 
-  if (_internal_has_colordepth()) {
-    // required bytes colorDepth = 10;
+  if (_internal_has_a_colordepth()) {
+    // required bytes a_colorDepth = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colordepth());
+        this->_internal_a_colordepth());
   }
 
-  if (_internal_has_yuvcolorspace()) {
-    // required bytes yUVColorSpace = 11;
+  if (_internal_has_a_yuvcolorspace()) {
+    // required bytes a_yUVColorSpace = 11;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
   }
 
-  if (_internal_has_colorrange()) {
-    // required bytes colorRange = 12;
+  if (_internal_has_a_colorrange()) {
+    // required bytes a_colorRange = 12;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
   }
 
-  if (_internal_has_chromasubsampling()) {
-    // required bytes chromaSubsampling = 13;
+  if (_internal_has_a_chromasubsampling()) {
+    // required bytes a_chromaSubsampling = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_chromasubsampling());
+        this->_internal_a_chromasubsampling());
   }
 
-  if (_internal_has_ystride()) {
-    // required uint32 yStride = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_ystride());
+  if (_internal_has_a_ystride()) {
+    // required uint32 a_yStride = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ystride());
   }
 
-  if (_internal_has_cbcrstride()) {
-    // required uint32 cbCrStride = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cbcrstride());
+  if (_internal_has_a_cbcrstride()) {
+    // required uint32 a_cbCrStride = 5;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cbcrstride());
   }
 
-  if (_internal_has_yoffset()) {
-    // required uint32 yOffset = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_yoffset());
+  if (_internal_has_a_yoffset()) {
+    // required uint32 a_yOffset = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_yoffset());
   }
 
-  if (_internal_has_cboffset()) {
-    // required uint32 cbOffset = 7;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cboffset());
+  if (_internal_has_a_cboffset()) {
+    // required uint32 a_cbOffset = 7;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cboffset());
   }
 
-  if (_internal_has_croffset()) {
-    // required uint32 crOffset = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_croffset());
+  if (_internal_has_a_croffset()) {
+    // required uint32 a_crOffset = 8;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_croffset());
   }
 
   return total_size;
@@ -7198,60 +7198,60 @@ size_t YCbCrDescriptor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00001fff) ^ 0x00001fff) == 0) {  // All required fields are present.
-    // required bytes display = 1;
+    // required bytes a_display = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_display());
+        this->_internal_a_display());
 
-    // required bytes ySize = 2;
+    // required bytes a_ySize = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ysize());
+        this->_internal_a_ysize());
 
-    // required bytes cbCrSize = 4;
+    // required bytes a_cbCrSize = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_cbcrsize());
+        this->_internal_a_cbcrsize());
 
-    // required bytes stereoMode = 9;
+    // required bytes a_stereoMode = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_stereomode());
+        this->_internal_a_stereomode());
 
-    // required bytes colorDepth = 10;
+    // required bytes a_colorDepth = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colordepth());
+        this->_internal_a_colordepth());
 
-    // required bytes yUVColorSpace = 11;
+    // required bytes a_yUVColorSpace = 11;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_yuvcolorspace());
+        this->_internal_a_yuvcolorspace());
 
-    // required bytes colorRange = 12;
+    // required bytes a_colorRange = 12;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_colorrange());
+        this->_internal_a_colorrange());
 
-    // required bytes chromaSubsampling = 13;
+    // required bytes a_chromaSubsampling = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_chromasubsampling());
+        this->_internal_a_chromasubsampling());
 
-    // required uint32 yStride = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_ystride());
+    // required uint32 a_yStride = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ystride());
 
-    // required uint32 cbCrStride = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cbcrstride());
+    // required uint32 a_cbCrStride = 5;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cbcrstride());
 
-    // required uint32 yOffset = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_yoffset());
+    // required uint32 a_yOffset = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_yoffset());
 
-    // required uint32 cbOffset = 7;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_cboffset());
+    // required uint32 a_cbOffset = 7;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_cboffset());
 
-    // required uint32 crOffset = 8;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_croffset());
+    // required uint32 a_crOffset = 8;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_croffset());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7284,45 +7284,45 @@ void YCbCrDescriptor::MergeFrom(const YCbCrDescriptor& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_display(from._internal_display());
+      _this->_internal_set_a_display(from._internal_a_display());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_ysize(from._internal_ysize());
+      _this->_internal_set_a_ysize(from._internal_a_ysize());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_cbcrsize(from._internal_cbcrsize());
+      _this->_internal_set_a_cbcrsize(from._internal_a_cbcrsize());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_stereomode(from._internal_stereomode());
+      _this->_internal_set_a_stereomode(from._internal_a_stereomode());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_colordepth(from._internal_colordepth());
+      _this->_internal_set_a_colordepth(from._internal_a_colordepth());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_yuvcolorspace(from._internal_yuvcolorspace());
+      _this->_internal_set_a_yuvcolorspace(from._internal_a_yuvcolorspace());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_colorrange(from._internal_colorrange());
+      _this->_internal_set_a_colorrange(from._internal_a_colorrange());
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_internal_set_chromasubsampling(from._internal_chromasubsampling());
+      _this->_internal_set_a_chromasubsampling(from._internal_a_chromasubsampling());
     }
   }
   if (cached_has_bits & 0x00001f00u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.ystride_ = from._impl_.ystride_;
+      _this->_impl_.a_ystride_ = from._impl_.a_ystride_;
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.cbcrstride_ = from._impl_.cbcrstride_;
+      _this->_impl_.a_cbcrstride_ = from._impl_.a_cbcrstride_;
     }
     if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.yoffset_ = from._impl_.yoffset_;
+      _this->_impl_.a_yoffset_ = from._impl_.a_yoffset_;
     }
     if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.cboffset_ = from._impl_.cboffset_;
+      _this->_impl_.a_cboffset_ = from._impl_.a_cboffset_;
     }
     if (cached_has_bits & 0x00001000u) {
-      _this->_impl_.croffset_ = from._impl_.croffset_;
+      _this->_impl_.a_croffset_ = from._impl_.a_croffset_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -7348,43 +7348,43 @@ void YCbCrDescriptor::InternalSwap(YCbCrDescriptor* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.display_, lhs_arena,
-      &other->_impl_.display_, rhs_arena
+      &_impl_.a_display_, lhs_arena,
+      &other->_impl_.a_display_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.ysize_, lhs_arena,
-      &other->_impl_.ysize_, rhs_arena
+      &_impl_.a_ysize_, lhs_arena,
+      &other->_impl_.a_ysize_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.cbcrsize_, lhs_arena,
-      &other->_impl_.cbcrsize_, rhs_arena
+      &_impl_.a_cbcrsize_, lhs_arena,
+      &other->_impl_.a_cbcrsize_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.stereomode_, lhs_arena,
-      &other->_impl_.stereomode_, rhs_arena
+      &_impl_.a_stereomode_, lhs_arena,
+      &other->_impl_.a_stereomode_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colordepth_, lhs_arena,
-      &other->_impl_.colordepth_, rhs_arena
+      &_impl_.a_colordepth_, lhs_arena,
+      &other->_impl_.a_colordepth_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.yuvcolorspace_, lhs_arena,
-      &other->_impl_.yuvcolorspace_, rhs_arena
+      &_impl_.a_yuvcolorspace_, lhs_arena,
+      &other->_impl_.a_yuvcolorspace_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.colorrange_, lhs_arena,
-      &other->_impl_.colorrange_, rhs_arena
+      &_impl_.a_colorrange_, lhs_arena,
+      &other->_impl_.a_colorrange_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.chromasubsampling_, lhs_arena,
-      &other->_impl_.chromasubsampling_, rhs_arena
+      &_impl_.a_chromasubsampling_, lhs_arena,
+      &other->_impl_.a_chromasubsampling_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(YCbCrDescriptor, _impl_.croffset_)
-      + sizeof(YCbCrDescriptor::_impl_.croffset_)
-      - PROTOBUF_FIELD_OFFSET(YCbCrDescriptor, _impl_.ystride_)>(
-          reinterpret_cast<char*>(&_impl_.ystride_),
-          reinterpret_cast<char*>(&other->_impl_.ystride_));
+      PROTOBUF_FIELD_OFFSET(YCbCrDescriptor, _impl_.a_croffset_)
+      + sizeof(YCbCrDescriptor::_impl_.a_croffset_)
+      - PROTOBUF_FIELD_OFFSET(YCbCrDescriptor, _impl_.a_ystride_)>(
+          reinterpret_cast<char*>(&_impl_.a_ystride_),
+          reinterpret_cast<char*>(&other->_impl_.a_ystride_));
 }
 
 std::string YCbCrDescriptor::GetTypeName() const {
@@ -7396,47 +7396,47 @@ std::string YCbCrDescriptor::GetTypeName() const {
 
 class BufferDescriptor::_Internal {
  public:
-  static const ::protobuf::mozilla::layers::RGBDescriptor& mvrgbdescriptor(const BufferDescriptor* msg);
-  static const ::protobuf::mozilla::layers::YCbCrDescriptor& mvycbcrdescriptor(const BufferDescriptor* msg);
+  static const ::protobuf::mozilla::layers::RGBDescriptor& a_mvrgbdescriptor(const BufferDescriptor* msg);
+  static const ::protobuf::mozilla::layers::YCbCrDescriptor& a_mvycbcrdescriptor(const BufferDescriptor* msg);
 };
 
 const ::protobuf::mozilla::layers::RGBDescriptor&
-BufferDescriptor::_Internal::mvrgbdescriptor(const BufferDescriptor* msg) {
-  return *msg->_impl_.content_.mvrgbdescriptor_;
+BufferDescriptor::_Internal::a_mvrgbdescriptor(const BufferDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvrgbdescriptor_;
 }
 const ::protobuf::mozilla::layers::YCbCrDescriptor&
-BufferDescriptor::_Internal::mvycbcrdescriptor(const BufferDescriptor* msg) {
-  return *msg->_impl_.content_.mvycbcrdescriptor_;
+BufferDescriptor::_Internal::a_mvycbcrdescriptor(const BufferDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvycbcrdescriptor_;
 }
-void BufferDescriptor::set_allocated_mvrgbdescriptor(::protobuf::mozilla::layers::RGBDescriptor* mvrgbdescriptor) {
+void BufferDescriptor::set_allocated_a_mvrgbdescriptor(::protobuf::mozilla::layers::RGBDescriptor* a_mvrgbdescriptor) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvrgbdescriptor) {
+  if (a_mvrgbdescriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvrgbdescriptor);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvrgbdescriptor);
     if (message_arena != submessage_arena) {
-      mvrgbdescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvrgbdescriptor, submessage_arena);
+      a_mvrgbdescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvrgbdescriptor, submessage_arena);
     }
-    set_has_mvrgbdescriptor();
-    _impl_.content_.mvrgbdescriptor_ = mvrgbdescriptor;
+    set_has_a_mvrgbdescriptor();
+    _impl_.content_.a_mvrgbdescriptor_ = a_mvrgbdescriptor;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.BufferDescriptor.mVRGBDescriptor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.BufferDescriptor.a_mVRGBDescriptor)
 }
-void BufferDescriptor::set_allocated_mvycbcrdescriptor(::protobuf::mozilla::layers::YCbCrDescriptor* mvycbcrdescriptor) {
+void BufferDescriptor::set_allocated_a_mvycbcrdescriptor(::protobuf::mozilla::layers::YCbCrDescriptor* a_mvycbcrdescriptor) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvycbcrdescriptor) {
+  if (a_mvycbcrdescriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvycbcrdescriptor);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvycbcrdescriptor);
     if (message_arena != submessage_arena) {
-      mvycbcrdescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvycbcrdescriptor, submessage_arena);
+      a_mvycbcrdescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvycbcrdescriptor, submessage_arena);
     }
-    set_has_mvycbcrdescriptor();
-    _impl_.content_.mvycbcrdescriptor_ = mvycbcrdescriptor;
+    set_has_a_mvycbcrdescriptor();
+    _impl_.content_.a_mvycbcrdescriptor_ = a_mvycbcrdescriptor;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.BufferDescriptor.mVYCbCrDescriptor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.BufferDescriptor.a_mVYCbCrDescriptor)
 }
 BufferDescriptor::BufferDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -7455,14 +7455,14 @@ BufferDescriptor::BufferDescriptor(const BufferDescriptor& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVRGBDescriptor: {
-      _this->_internal_mutable_mvrgbdescriptor()->::protobuf::mozilla::layers::RGBDescriptor::MergeFrom(
-          from._internal_mvrgbdescriptor());
+    case kAMVRGBDescriptor: {
+      _this->_internal_mutable_a_mvrgbdescriptor()->::protobuf::mozilla::layers::RGBDescriptor::MergeFrom(
+          from._internal_a_mvrgbdescriptor());
       break;
     }
-    case kMVYCbCrDescriptor: {
-      _this->_internal_mutable_mvycbcrdescriptor()->::protobuf::mozilla::layers::YCbCrDescriptor::MergeFrom(
-          from._internal_mvycbcrdescriptor());
+    case kAMVYCbCrDescriptor: {
+      _this->_internal_mutable_a_mvycbcrdescriptor()->::protobuf::mozilla::layers::YCbCrDescriptor::MergeFrom(
+          from._internal_a_mvycbcrdescriptor());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7507,15 +7507,15 @@ void BufferDescriptor::SetCachedSize(int size) const {
 void BufferDescriptor::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.layers.BufferDescriptor)
   switch (content_case()) {
-    case kMVRGBDescriptor: {
+    case kAMVRGBDescriptor: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvrgbdescriptor_;
+        delete _impl_.content_.a_mvrgbdescriptor_;
       }
       break;
     }
-    case kMVYCbCrDescriptor: {
+    case kAMVYCbCrDescriptor: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvycbcrdescriptor_;
+        delete _impl_.content_.a_mvycbcrdescriptor_;
       }
       break;
     }
@@ -7543,18 +7543,18 @@ const char* BufferDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.RGBDescriptor mVRGBDescriptor = 1;
+      // .protobuf.mozilla.layers.RGBDescriptor a_mVRGBDescriptor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvrgbdescriptor(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvrgbdescriptor(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.YCbCrDescriptor mVYCbCrDescriptor = 2;
+      // .protobuf.mozilla.layers.YCbCrDescriptor a_mVYCbCrDescriptor = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvycbcrdescriptor(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvycbcrdescriptor(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7589,16 +7589,16 @@ uint8_t* BufferDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVRGBDescriptor: {
+    case kAMVRGBDescriptor: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvrgbdescriptor(this),
-          _Internal::mvrgbdescriptor(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvrgbdescriptor(this),
+          _Internal::a_mvrgbdescriptor(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVYCbCrDescriptor: {
+    case kAMVYCbCrDescriptor: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvycbcrdescriptor(this),
-          _Internal::mvycbcrdescriptor(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvycbcrdescriptor(this),
+          _Internal::a_mvycbcrdescriptor(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -7620,18 +7620,18 @@ size_t BufferDescriptor::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.layers.RGBDescriptor mVRGBDescriptor = 1;
-    case kMVRGBDescriptor: {
+    // .protobuf.mozilla.layers.RGBDescriptor a_mVRGBDescriptor = 1;
+    case kAMVRGBDescriptor: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvrgbdescriptor_);
+          *_impl_.content_.a_mvrgbdescriptor_);
       break;
     }
-    // .protobuf.mozilla.layers.YCbCrDescriptor mVYCbCrDescriptor = 2;
-    case kMVYCbCrDescriptor: {
+    // .protobuf.mozilla.layers.YCbCrDescriptor a_mVYCbCrDescriptor = 2;
+    case kAMVYCbCrDescriptor: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvycbcrdescriptor_);
+          *_impl_.content_.a_mvycbcrdescriptor_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7660,14 +7660,14 @@ void BufferDescriptor::MergeFrom(const BufferDescriptor& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVRGBDescriptor: {
-      _this->_internal_mutable_mvrgbdescriptor()->::protobuf::mozilla::layers::RGBDescriptor::MergeFrom(
-          from._internal_mvrgbdescriptor());
+    case kAMVRGBDescriptor: {
+      _this->_internal_mutable_a_mvrgbdescriptor()->::protobuf::mozilla::layers::RGBDescriptor::MergeFrom(
+          from._internal_a_mvrgbdescriptor());
       break;
     }
-    case kMVYCbCrDescriptor: {
-      _this->_internal_mutable_mvycbcrdescriptor()->::protobuf::mozilla::layers::YCbCrDescriptor::MergeFrom(
-          from._internal_mvycbcrdescriptor());
+    case kAMVYCbCrDescriptor: {
+      _this->_internal_mutable_a_mvycbcrdescriptor()->::protobuf::mozilla::layers::YCbCrDescriptor::MergeFrom(
+          from._internal_a_mvycbcrdescriptor());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7686,15 +7686,15 @@ void BufferDescriptor::CopyFrom(const BufferDescriptor& from) {
 
 bool BufferDescriptor::IsInitialized() const {
   switch (content_case()) {
-    case kMVRGBDescriptor: {
-      if (_internal_has_mvrgbdescriptor()) {
-        if (!_impl_.content_.mvrgbdescriptor_->IsInitialized()) return false;
+    case kAMVRGBDescriptor: {
+      if (_internal_has_a_mvrgbdescriptor()) {
+        if (!_impl_.content_.a_mvrgbdescriptor_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVYCbCrDescriptor: {
-      if (_internal_has_mvycbcrdescriptor()) {
-        if (!_impl_.content_.mvycbcrdescriptor_->IsInitialized()) return false;
+    case kAMVYCbCrDescriptor: {
+      if (_internal_has_a_mvycbcrdescriptor()) {
+        if (!_impl_.content_.a_mvycbcrdescriptor_->IsInitialized()) return false;
       }
       break;
     }
@@ -7740,12 +7740,12 @@ MemoryOrShmem::MemoryOrShmem(const MemoryOrShmem& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVuintptrT: {
-      _this->_internal_set_mvuintptr_t(from._internal_mvuintptr_t());
+    case kAMVuintptrT: {
+      _this->_internal_set_a_mvuintptr_t(from._internal_a_mvuintptr_t());
       break;
     }
-    case kMVShmem: {
-      _this->_internal_set_mvshmem(from._internal_mvshmem());
+    case kAMVShmem: {
+      _this->_internal_set_a_mvshmem(from._internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7790,12 +7790,12 @@ void MemoryOrShmem::SetCachedSize(int size) const {
 void MemoryOrShmem::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.layers.MemoryOrShmem)
   switch (content_case()) {
-    case kMVuintptrT: {
-      _impl_.content_.mvuintptr_t_.Destroy();
+    case kAMVuintptrT: {
+      _impl_.content_.a_mvuintptr_t_.Destroy();
       break;
     }
-    case kMVShmem: {
-      _impl_.content_.mvshmem_.Destroy();
+    case kAMVShmem: {
+      _impl_.content_.a_mvshmem_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7822,19 +7822,19 @@ const char* MemoryOrShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVuintptr_t = 1;
+      // bytes a_mVuintptr_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvuintptr_t();
+          auto str = _internal_mutable_a_mvuintptr_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVShmem = 2;
+      // bytes a_mVShmem = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvshmem();
+          auto str = _internal_mutable_a_mvshmem();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -7870,14 +7870,14 @@ uint8_t* MemoryOrShmem::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVuintptrT: {
+    case kAMVuintptrT: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvuintptr_t(), target);
+          1, this->_internal_a_mvuintptr_t(), target);
       break;
     }
-    case kMVShmem: {
+    case kAMVShmem: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvshmem(), target);
+          2, this->_internal_a_mvshmem(), target);
       break;
     }
     default: ;
@@ -7899,18 +7899,18 @@ size_t MemoryOrShmem::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVuintptr_t = 1;
-    case kMVuintptrT: {
+    // bytes a_mVuintptr_t = 1;
+    case kAMVuintptrT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvuintptr_t());
+          this->_internal_a_mvuintptr_t());
       break;
     }
-    // bytes mVShmem = 2;
-    case kMVShmem: {
+    // bytes a_mVShmem = 2;
+    case kAMVShmem: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvshmem());
+          this->_internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7939,12 +7939,12 @@ void MemoryOrShmem::MergeFrom(const MemoryOrShmem& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVuintptrT: {
-      _this->_internal_set_mvuintptr_t(from._internal_mvuintptr_t());
+    case kAMVuintptrT: {
+      _this->_internal_set_a_mvuintptr_t(from._internal_a_mvuintptr_t());
       break;
     }
-    case kMVShmem: {
-      _this->_internal_set_mvshmem(from._internal_mvshmem());
+    case kAMVShmem: {
+      _this->_internal_set_a_mvshmem(from._internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7982,12 +7982,12 @@ std::string MemoryOrShmem::GetTypeName() const {
 class SurfaceDescriptorBuffer::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorBuffer>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::layers::BufferDescriptor& desc(const SurfaceDescriptorBuffer* msg);
-  static void set_has_desc(HasBits* has_bits) {
+  static const ::protobuf::mozilla::layers::BufferDescriptor& a_desc(const SurfaceDescriptorBuffer* msg);
+  static void set_has_a_desc(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::layers::MemoryOrShmem& data(const SurfaceDescriptorBuffer* msg);
-  static void set_has_data(HasBits* has_bits) {
+  static const ::protobuf::mozilla::layers::MemoryOrShmem& a_data(const SurfaceDescriptorBuffer* msg);
+  static void set_has_a_data(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -7996,12 +7996,12 @@ class SurfaceDescriptorBuffer::_Internal {
 };
 
 const ::protobuf::mozilla::layers::BufferDescriptor&
-SurfaceDescriptorBuffer::_Internal::desc(const SurfaceDescriptorBuffer* msg) {
-  return *msg->_impl_.desc_;
+SurfaceDescriptorBuffer::_Internal::a_desc(const SurfaceDescriptorBuffer* msg) {
+  return *msg->_impl_.a_desc_;
 }
 const ::protobuf::mozilla::layers::MemoryOrShmem&
-SurfaceDescriptorBuffer::_Internal::data(const SurfaceDescriptorBuffer* msg) {
-  return *msg->_impl_.data_;
+SurfaceDescriptorBuffer::_Internal::a_data(const SurfaceDescriptorBuffer* msg) {
+  return *msg->_impl_.a_data_;
 }
 SurfaceDescriptorBuffer::SurfaceDescriptorBuffer(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -8015,15 +8015,15 @@ SurfaceDescriptorBuffer::SurfaceDescriptorBuffer(const SurfaceDescriptorBuffer& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.desc_){nullptr}
-    , decltype(_impl_.data_){nullptr}};
+    , decltype(_impl_.a_desc_){nullptr}
+    , decltype(_impl_.a_data_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_desc()) {
-    _this->_impl_.desc_ = new ::protobuf::mozilla::layers::BufferDescriptor(*from._impl_.desc_);
+  if (from._internal_has_a_desc()) {
+    _this->_impl_.a_desc_ = new ::protobuf::mozilla::layers::BufferDescriptor(*from._impl_.a_desc_);
   }
-  if (from._internal_has_data()) {
-    _this->_impl_.data_ = new ::protobuf::mozilla::layers::MemoryOrShmem(*from._impl_.data_);
+  if (from._internal_has_a_data()) {
+    _this->_impl_.a_data_ = new ::protobuf::mozilla::layers::MemoryOrShmem(*from._impl_.a_data_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorBuffer)
 }
@@ -8035,8 +8035,8 @@ inline void SurfaceDescriptorBuffer::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.desc_){nullptr}
-    , decltype(_impl_.data_){nullptr}
+    , decltype(_impl_.a_desc_){nullptr}
+    , decltype(_impl_.a_data_){nullptr}
   };
 }
 
@@ -8051,8 +8051,8 @@ SurfaceDescriptorBuffer::~SurfaceDescriptorBuffer() {
 
 inline void SurfaceDescriptorBuffer::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.desc_;
-  if (this != internal_default_instance()) delete _impl_.data_;
+  if (this != internal_default_instance()) delete _impl_.a_desc_;
+  if (this != internal_default_instance()) delete _impl_.a_data_;
 }
 
 void SurfaceDescriptorBuffer::SetCachedSize(int size) const {
@@ -8068,12 +8068,12 @@ void SurfaceDescriptorBuffer::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(_impl_.desc_ != nullptr);
-      _impl_.desc_->Clear();
+      GOOGLE_DCHECK(_impl_.a_desc_ != nullptr);
+      _impl_.a_desc_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.data_ != nullptr);
-      _impl_.data_->Clear();
+      GOOGLE_DCHECK(_impl_.a_data_ != nullptr);
+      _impl_.a_data_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -8087,18 +8087,18 @@ const char* SurfaceDescriptorBuffer::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.layers.BufferDescriptor desc = 1;
+      // required .protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_desc(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_desc(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.layers.MemoryOrShmem data = 2;
+      // required .protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_data(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_data(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8134,18 +8134,18 @@ uint8_t* SurfaceDescriptorBuffer::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.layers.BufferDescriptor desc = 1;
+  // required .protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::desc(this),
-        _Internal::desc(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_desc(this),
+        _Internal::a_desc(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.layers.MemoryOrShmem data = 2;
+  // required .protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::data(this),
-        _Internal::data(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_data(this),
+        _Internal::a_data(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8160,18 +8160,18 @@ size_t SurfaceDescriptorBuffer::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorBuffer)
   size_t total_size = 0;
 
-  if (_internal_has_desc()) {
-    // required .protobuf.mozilla.layers.BufferDescriptor desc = 1;
+  if (_internal_has_a_desc()) {
+    // required .protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.desc_);
+        *_impl_.a_desc_);
   }
 
-  if (_internal_has_data()) {
-    // required .protobuf.mozilla.layers.MemoryOrShmem data = 2;
+  if (_internal_has_a_data()) {
+    // required .protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.data_);
+        *_impl_.a_data_);
   }
 
   return total_size;
@@ -8181,15 +8181,15 @@ size_t SurfaceDescriptorBuffer::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.layers.BufferDescriptor desc = 1;
+    // required .protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.desc_);
+        *_impl_.a_desc_);
 
-    // required .protobuf.mozilla.layers.MemoryOrShmem data = 2;
+    // required .protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.data_);
+        *_impl_.a_data_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8222,12 +8222,12 @@ void SurfaceDescriptorBuffer::MergeFrom(const SurfaceDescriptorBuffer& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_desc()->::protobuf::mozilla::layers::BufferDescriptor::MergeFrom(
-          from._internal_desc());
+      _this->_internal_mutable_a_desc()->::protobuf::mozilla::layers::BufferDescriptor::MergeFrom(
+          from._internal_a_desc());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_data()->::protobuf::mozilla::layers::MemoryOrShmem::MergeFrom(
-          from._internal_data());
+      _this->_internal_mutable_a_data()->::protobuf::mozilla::layers::MemoryOrShmem::MergeFrom(
+          from._internal_a_data());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -8242,8 +8242,8 @@ void SurfaceDescriptorBuffer::CopyFrom(const SurfaceDescriptorBuffer& from) {
 
 bool SurfaceDescriptorBuffer::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_desc()) {
-    if (!_impl_.desc_->IsInitialized()) return false;
+  if (_internal_has_a_desc()) {
+    if (!_impl_.a_desc_->IsInitialized()) return false;
   }
   return true;
 }
@@ -8253,11 +8253,11 @@ void SurfaceDescriptorBuffer::InternalSwap(SurfaceDescriptorBuffer* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorBuffer, _impl_.data_)
-      + sizeof(SurfaceDescriptorBuffer::_impl_.data_)
-      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorBuffer, _impl_.desc_)>(
-          reinterpret_cast<char*>(&_impl_.desc_),
-          reinterpret_cast<char*>(&other->_impl_.desc_));
+      PROTOBUF_FIELD_OFFSET(SurfaceDescriptorBuffer, _impl_.a_data_)
+      + sizeof(SurfaceDescriptorBuffer::_impl_.a_data_)
+      - PROTOBUF_FIELD_OFFSET(SurfaceDescriptorBuffer, _impl_.a_desc_)>(
+          reinterpret_cast<char*>(&_impl_.a_desc_),
+          reinterpret_cast<char*>(&other->_impl_.a_desc_));
 }
 
 std::string SurfaceDescriptorBuffer::GetTypeName() const {
@@ -8270,16 +8270,16 @@ std::string SurfaceDescriptorBuffer::GetTypeName() const {
 class SurfaceDescriptorShared::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorShared>()._impl_._has_bits_);
-  static void set_has_size(HasBits* has_bits) {
+  static void set_has_a_size(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_stride(HasBits* has_bits) {
+  static void set_has_a_stride(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_format(HasBits* has_bits) {
+  static void set_has_a_format(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_handle(HasBits* has_bits) {
+  static void set_has_a_handle(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -8299,37 +8299,37 @@ SurfaceDescriptorShared::SurfaceDescriptorShared(const SurfaceDescriptorShared& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.stride_){}};
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_stride_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_size()) {
-    _this->_impl_.size_.Set(from._internal_size(), 
+  if (from._internal_has_a_size()) {
+    _this->_impl_.a_size_.Set(from._internal_a_size(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_format()) {
-    _this->_impl_.format_.Set(from._internal_format(), 
+  if (from._internal_has_a_format()) {
+    _this->_impl_.a_format_.Set(from._internal_a_format(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.handle_.InitDefault();
+  _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handle_.Set("", GetArenaForAllocation());
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_handle()) {
-    _this->_impl_.handle_.Set(from._internal_handle(), 
+  if (from._internal_has_a_handle()) {
+    _this->_impl_.a_handle_.Set(from._internal_a_handle(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.stride_ = from._impl_.stride_;
+  _this->_impl_.a_stride_ = from._impl_.a_stride_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorShared)
 }
 
@@ -8340,22 +8340,22 @@ inline void SurfaceDescriptorShared::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.size_){}
-    , decltype(_impl_.format_){}
-    , decltype(_impl_.handle_){}
-    , decltype(_impl_.stride_){0}
+    , decltype(_impl_.a_size_){}
+    , decltype(_impl_.a_format_){}
+    , decltype(_impl_.a_handle_){}
+    , decltype(_impl_.a_stride_){0}
   };
-  _impl_.size_.InitDefault();
+  _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.size_.Set("", GetArenaForAllocation());
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.format_.InitDefault();
+  _impl_.a_format_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.format_.Set("", GetArenaForAllocation());
+    _impl_.a_format_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.handle_.InitDefault();
+  _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.handle_.Set("", GetArenaForAllocation());
+    _impl_.a_handle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -8370,9 +8370,9 @@ SurfaceDescriptorShared::~SurfaceDescriptorShared() {
 
 inline void SurfaceDescriptorShared::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.size_.Destroy();
-  _impl_.format_.Destroy();
-  _impl_.handle_.Destroy();
+  _impl_.a_size_.Destroy();
+  _impl_.a_format_.Destroy();
+  _impl_.a_handle_.Destroy();
 }
 
 void SurfaceDescriptorShared::SetCachedSize(int size) const {
@@ -8388,16 +8388,16 @@ void SurfaceDescriptorShared::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.size_.ClearNonDefaultToEmpty();
+      _impl_.a_size_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.format_.ClearNonDefaultToEmpty();
+      _impl_.a_format_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.handle_.ClearNonDefaultToEmpty();
+      _impl_.a_handle_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.stride_ = 0;
+  _impl_.a_stride_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -8409,37 +8409,37 @@ const char* SurfaceDescriptorShared::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes size = 1;
+      // required bytes a_size = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_size();
+          auto str = _internal_mutable_a_size();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 stride = 2;
+      // required sint32 a_stride = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_stride(&has_bits);
-          _impl_.stride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_stride(&has_bits);
+          _impl_.a_stride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes format = 3;
+      // required bytes a_format = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_format();
+          auto str = _internal_mutable_a_format();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes handle = 4;
+      // required bytes a_handle = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_handle();
+          auto str = _internal_mutable_a_handle();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -8476,28 +8476,28 @@ uint8_t* SurfaceDescriptorShared::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes size = 1;
+  // required bytes a_size = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_size(), target);
+        1, this->_internal_a_size(), target);
   }
 
-  // required sint32 stride = 2;
+  // required sint32 a_stride = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_stride(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_stride(), target);
   }
 
-  // required bytes format = 3;
+  // required bytes a_format = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_format(), target);
+        3, this->_internal_a_format(), target);
   }
 
-  // required bytes handle = 4;
+  // required bytes a_handle = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_handle(), target);
+        4, this->_internal_a_handle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8512,30 +8512,30 @@ size_t SurfaceDescriptorShared::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorShared)
   size_t total_size = 0;
 
-  if (_internal_has_size()) {
-    // required bytes size = 1;
+  if (_internal_has_a_size()) {
+    // required bytes a_size = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
   }
 
-  if (_internal_has_format()) {
-    // required bytes format = 3;
+  if (_internal_has_a_format()) {
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
   }
 
-  if (_internal_has_handle()) {
-    // required bytes handle = 4;
+  if (_internal_has_a_handle()) {
+    // required bytes a_handle = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handle());
+        this->_internal_a_handle());
   }
 
-  if (_internal_has_stride()) {
-    // required sint32 stride = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_stride());
+  if (_internal_has_a_stride()) {
+    // required sint32 a_stride = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_stride());
   }
 
   return total_size;
@@ -8545,23 +8545,23 @@ size_t SurfaceDescriptorShared::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes size = 1;
+    // required bytes a_size = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_size());
+        this->_internal_a_size());
 
-    // required bytes format = 3;
+    // required bytes a_format = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_format());
+        this->_internal_a_format());
 
-    // required bytes handle = 4;
+    // required bytes a_handle = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_handle());
+        this->_internal_a_handle());
 
-    // required sint32 stride = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_stride());
+    // required sint32 a_stride = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_stride());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8594,16 +8594,16 @@ void SurfaceDescriptorShared::MergeFrom(const SurfaceDescriptorShared& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_size(from._internal_size());
+      _this->_internal_set_a_size(from._internal_a_size());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_format(from._internal_format());
+      _this->_internal_set_a_format(from._internal_a_format());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_handle(from._internal_handle());
+      _this->_internal_set_a_handle(from._internal_a_handle());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.stride_ = from._impl_.stride_;
+      _this->_impl_.a_stride_ = from._impl_.a_stride_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -8629,18 +8629,18 @@ void SurfaceDescriptorShared::InternalSwap(SurfaceDescriptorShared* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.size_, lhs_arena,
-      &other->_impl_.size_, rhs_arena
+      &_impl_.a_size_, lhs_arena,
+      &other->_impl_.a_size_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.format_, lhs_arena,
-      &other->_impl_.format_, rhs_arena
+      &_impl_.a_format_, lhs_arena,
+      &other->_impl_.a_format_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.handle_, lhs_arena,
-      &other->_impl_.handle_, rhs_arena
+      &_impl_.a_handle_, lhs_arena,
+      &other->_impl_.a_handle_, rhs_arena
   );
-  swap(_impl_.stride_, other->_impl_.stride_);
+  swap(_impl_.a_stride_, other->_impl_.a_stride_);
 }
 
 std::string SurfaceDescriptorShared::GetTypeName() const {
@@ -8653,10 +8653,10 @@ std::string SurfaceDescriptorShared::GetTypeName() const {
 class SurfaceDescriptorExternalImage::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorExternalImage>()._impl_._has_bits_);
-  static void set_has_source(HasBits* has_bits) {
+  static void set_has_a_source(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_id(HasBits* has_bits) {
+  static void set_has_a_id(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -8676,24 +8676,24 @@ SurfaceDescriptorExternalImage::SurfaceDescriptorExternalImage(const SurfaceDesc
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.source_){}
-    , decltype(_impl_.id_){}};
+    , decltype(_impl_.a_source_){}
+    , decltype(_impl_.a_id_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.source_.InitDefault();
+  _impl_.a_source_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.source_.Set("", GetArenaForAllocation());
+    _impl_.a_source_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_source()) {
-    _this->_impl_.source_.Set(from._internal_source(), 
+  if (from._internal_has_a_source()) {
+    _this->_impl_.a_source_.Set(from._internal_a_source(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_id()) {
-    _this->_impl_.id_.Set(from._internal_id(), 
+  if (from._internal_has_a_id()) {
+    _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorExternalImage)
@@ -8706,16 +8706,16 @@ inline void SurfaceDescriptorExternalImage::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.source_){}
-    , decltype(_impl_.id_){}
+    , decltype(_impl_.a_source_){}
+    , decltype(_impl_.a_id_){}
   };
-  _impl_.source_.InitDefault();
+  _impl_.a_source_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.source_.Set("", GetArenaForAllocation());
+    _impl_.a_source_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -8730,8 +8730,8 @@ SurfaceDescriptorExternalImage::~SurfaceDescriptorExternalImage() {
 
 inline void SurfaceDescriptorExternalImage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.source_.Destroy();
-  _impl_.id_.Destroy();
+  _impl_.a_source_.Destroy();
+  _impl_.a_id_.Destroy();
 }
 
 void SurfaceDescriptorExternalImage::SetCachedSize(int size) const {
@@ -8747,10 +8747,10 @@ void SurfaceDescriptorExternalImage::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.source_.ClearNonDefaultToEmpty();
+      _impl_.a_source_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.id_.ClearNonDefaultToEmpty();
+      _impl_.a_id_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -8764,19 +8764,19 @@ const char* SurfaceDescriptorExternalImage::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes source = 1;
+      // required bytes a_source = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_source();
+          auto str = _internal_mutable_a_source();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes id = 2;
+      // required bytes a_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_id();
+          auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -8813,16 +8813,16 @@ uint8_t* SurfaceDescriptorExternalImage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes source = 1;
+  // required bytes a_source = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_source(), target);
+        1, this->_internal_a_source(), target);
   }
 
-  // required bytes id = 2;
+  // required bytes a_id = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_id(), target);
+        2, this->_internal_a_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8837,18 +8837,18 @@ size_t SurfaceDescriptorExternalImage::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorExternalImage)
   size_t total_size = 0;
 
-  if (_internal_has_source()) {
-    // required bytes source = 1;
+  if (_internal_has_a_source()) {
+    // required bytes a_source = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_source());
+        this->_internal_a_source());
   }
 
-  if (_internal_has_id()) {
-    // required bytes id = 2;
+  if (_internal_has_a_id()) {
+    // required bytes a_id = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_id());
+        this->_internal_a_id());
   }
 
   return total_size;
@@ -8858,15 +8858,15 @@ size_t SurfaceDescriptorExternalImage::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes source = 1;
+    // required bytes a_source = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_source());
+        this->_internal_a_source());
 
-    // required bytes id = 2;
+    // required bytes a_id = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_id());
+        this->_internal_a_id());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8899,10 +8899,10 @@ void SurfaceDescriptorExternalImage::MergeFrom(const SurfaceDescriptorExternalIm
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_source(from._internal_source());
+      _this->_internal_set_a_source(from._internal_a_source());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_id(from._internal_id());
+      _this->_internal_set_a_id(from._internal_a_id());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -8927,12 +8927,12 @@ void SurfaceDescriptorExternalImage::InternalSwap(SurfaceDescriptorExternalImage
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.source_, lhs_arena,
-      &other->_impl_.source_, rhs_arena
+      &_impl_.a_source_, lhs_arena,
+      &other->_impl_.a_source_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.id_, lhs_arena,
-      &other->_impl_.id_, rhs_arena
+      &_impl_.a_id_, lhs_arena,
+      &other->_impl_.a_id_, rhs_arena
   );
 }
 
@@ -8946,10 +8946,10 @@ std::string SurfaceDescriptorExternalImage::GetTypeName() const {
 class SurfaceDescriptorRemoteTexture::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorRemoteTexture>()._impl_._has_bits_);
-  static void set_has_textureid(HasBits* has_bits) {
+  static void set_has_a_textureid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_ownerid(HasBits* has_bits) {
+  static void set_has_a_ownerid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -8969,24 +8969,24 @@ SurfaceDescriptorRemoteTexture::SurfaceDescriptorRemoteTexture(const SurfaceDesc
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.textureid_){}
-    , decltype(_impl_.ownerid_){}};
+    , decltype(_impl_.a_textureid_){}
+    , decltype(_impl_.a_ownerid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.textureid_.InitDefault();
+  _impl_.a_textureid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.textureid_.Set("", GetArenaForAllocation());
+    _impl_.a_textureid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_textureid()) {
-    _this->_impl_.textureid_.Set(from._internal_textureid(), 
+  if (from._internal_has_a_textureid()) {
+    _this->_impl_.a_textureid_.Set(from._internal_a_textureid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.ownerid_.InitDefault();
+  _impl_.a_ownerid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_ownerid()) {
-    _this->_impl_.ownerid_.Set(from._internal_ownerid(), 
+  if (from._internal_has_a_ownerid()) {
+    _this->_impl_.a_ownerid_.Set(from._internal_a_ownerid(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture)
@@ -8999,16 +8999,16 @@ inline void SurfaceDescriptorRemoteTexture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.textureid_){}
-    , decltype(_impl_.ownerid_){}
+    , decltype(_impl_.a_textureid_){}
+    , decltype(_impl_.a_ownerid_){}
   };
-  _impl_.textureid_.InitDefault();
+  _impl_.a_textureid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.textureid_.Set("", GetArenaForAllocation());
+    _impl_.a_textureid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.ownerid_.InitDefault();
+  _impl_.a_ownerid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -9023,8 +9023,8 @@ SurfaceDescriptorRemoteTexture::~SurfaceDescriptorRemoteTexture() {
 
 inline void SurfaceDescriptorRemoteTexture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.textureid_.Destroy();
-  _impl_.ownerid_.Destroy();
+  _impl_.a_textureid_.Destroy();
+  _impl_.a_ownerid_.Destroy();
 }
 
 void SurfaceDescriptorRemoteTexture::SetCachedSize(int size) const {
@@ -9040,10 +9040,10 @@ void SurfaceDescriptorRemoteTexture::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.textureid_.ClearNonDefaultToEmpty();
+      _impl_.a_textureid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.ownerid_.ClearNonDefaultToEmpty();
+      _impl_.a_ownerid_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -9057,19 +9057,19 @@ const char* SurfaceDescriptorRemoteTexture::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes textureId = 1;
+      // required bytes a_textureId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_textureid();
+          auto str = _internal_mutable_a_textureid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes ownerId = 2;
+      // required bytes a_ownerId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_ownerid();
+          auto str = _internal_mutable_a_ownerid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -9106,16 +9106,16 @@ uint8_t* SurfaceDescriptorRemoteTexture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes textureId = 1;
+  // required bytes a_textureId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_textureid(), target);
+        1, this->_internal_a_textureid(), target);
   }
 
-  // required bytes ownerId = 2;
+  // required bytes a_ownerId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_ownerid(), target);
+        2, this->_internal_a_ownerid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9130,18 +9130,18 @@ size_t SurfaceDescriptorRemoteTexture::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture)
   size_t total_size = 0;
 
-  if (_internal_has_textureid()) {
-    // required bytes textureId = 1;
+  if (_internal_has_a_textureid()) {
+    // required bytes a_textureId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_textureid());
+        this->_internal_a_textureid());
   }
 
-  if (_internal_has_ownerid()) {
-    // required bytes ownerId = 2;
+  if (_internal_has_a_ownerid()) {
+    // required bytes a_ownerId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ownerid());
+        this->_internal_a_ownerid());
   }
 
   return total_size;
@@ -9151,15 +9151,15 @@ size_t SurfaceDescriptorRemoteTexture::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes textureId = 1;
+    // required bytes a_textureId = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_textureid());
+        this->_internal_a_textureid());
 
-    // required bytes ownerId = 2;
+    // required bytes a_ownerId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ownerid());
+        this->_internal_a_ownerid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -9192,10 +9192,10 @@ void SurfaceDescriptorRemoteTexture::MergeFrom(const SurfaceDescriptorRemoteText
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_textureid(from._internal_textureid());
+      _this->_internal_set_a_textureid(from._internal_a_textureid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_ownerid(from._internal_ownerid());
+      _this->_internal_set_a_ownerid(from._internal_a_ownerid());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -9220,12 +9220,12 @@ void SurfaceDescriptorRemoteTexture::InternalSwap(SurfaceDescriptorRemoteTexture
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.textureid_, lhs_arena,
-      &other->_impl_.textureid_, rhs_arena
+      &_impl_.a_textureid_, lhs_arena,
+      &other->_impl_.a_textureid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.ownerid_, lhs_arena,
-      &other->_impl_.ownerid_, rhs_arena
+      &_impl_.a_ownerid_, lhs_arena,
+      &other->_impl_.a_ownerid_, rhs_arena
   );
 }
 
@@ -9239,13 +9239,13 @@ std::string SurfaceDescriptorRemoteTexture::GetTypeName() const {
 class SurfaceDescriptorCanvasSurface::_Internal {
  public:
   using HasBits = decltype(std::declval<SurfaceDescriptorCanvasSurface>()._impl_._has_bits_);
-  static void set_has_managerid(HasBits* has_bits) {
+  static void set_has_a_managerid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_canvasid(HasBits* has_bits) {
+  static void set_has_a_canvasid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_surfaceid(HasBits* has_bits) {
+  static void set_has_a_surfaceid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -9265,28 +9265,28 @@ SurfaceDescriptorCanvasSurface::SurfaceDescriptorCanvasSurface(const SurfaceDesc
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.canvasid_){}
-    , decltype(_impl_.surfaceid_){}
-    , decltype(_impl_.managerid_){}};
+    , decltype(_impl_.a_canvasid_){}
+    , decltype(_impl_.a_surfaceid_){}
+    , decltype(_impl_.a_managerid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.canvasid_.InitDefault();
+  _impl_.a_canvasid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.canvasid_.Set("", GetArenaForAllocation());
+    _impl_.a_canvasid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_canvasid()) {
-    _this->_impl_.canvasid_.Set(from._internal_canvasid(), 
+  if (from._internal_has_a_canvasid()) {
+    _this->_impl_.a_canvasid_.Set(from._internal_a_canvasid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.surfaceid_.InitDefault();
+  _impl_.a_surfaceid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.surfaceid_.Set("", GetArenaForAllocation());
+    _impl_.a_surfaceid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_surfaceid()) {
-    _this->_impl_.surfaceid_.Set(from._internal_surfaceid(), 
+  if (from._internal_has_a_surfaceid()) {
+    _this->_impl_.a_surfaceid_.Set(from._internal_a_surfaceid(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.managerid_ = from._impl_.managerid_;
+  _this->_impl_.a_managerid_ = from._impl_.a_managerid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
 }
 
@@ -9297,17 +9297,17 @@ inline void SurfaceDescriptorCanvasSurface::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.canvasid_){}
-    , decltype(_impl_.surfaceid_){}
-    , decltype(_impl_.managerid_){0u}
+    , decltype(_impl_.a_canvasid_){}
+    , decltype(_impl_.a_surfaceid_){}
+    , decltype(_impl_.a_managerid_){0u}
   };
-  _impl_.canvasid_.InitDefault();
+  _impl_.a_canvasid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.canvasid_.Set("", GetArenaForAllocation());
+    _impl_.a_canvasid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.surfaceid_.InitDefault();
+  _impl_.a_surfaceid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.surfaceid_.Set("", GetArenaForAllocation());
+    _impl_.a_surfaceid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -9322,8 +9322,8 @@ SurfaceDescriptorCanvasSurface::~SurfaceDescriptorCanvasSurface() {
 
 inline void SurfaceDescriptorCanvasSurface::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.canvasid_.Destroy();
-  _impl_.surfaceid_.Destroy();
+  _impl_.a_canvasid_.Destroy();
+  _impl_.a_surfaceid_.Destroy();
 }
 
 void SurfaceDescriptorCanvasSurface::SetCachedSize(int size) const {
@@ -9339,13 +9339,13 @@ void SurfaceDescriptorCanvasSurface::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.canvasid_.ClearNonDefaultToEmpty();
+      _impl_.a_canvasid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.surfaceid_.ClearNonDefaultToEmpty();
+      _impl_.a_surfaceid_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.managerid_ = 0u;
+  _impl_.a_managerid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -9357,28 +9357,28 @@ const char* SurfaceDescriptorCanvasSurface::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 managerId = 1;
+      // required uint32 a_managerId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_managerid(&has_bits);
-          _impl_.managerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_managerid(&has_bits);
+          _impl_.a_managerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes canvasId = 2;
+      // required bytes a_canvasId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_canvasid();
+          auto str = _internal_mutable_a_canvasid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes surfaceId = 3;
+      // required bytes a_surfaceId = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_surfaceid();
+          auto str = _internal_mutable_a_surfaceid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -9415,22 +9415,22 @@ uint8_t* SurfaceDescriptorCanvasSurface::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 managerId = 1;
+  // required uint32 a_managerId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_managerid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_managerid(), target);
   }
 
-  // required bytes canvasId = 2;
+  // required bytes a_canvasId = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_canvasid(), target);
+        2, this->_internal_a_canvasid(), target);
   }
 
-  // required bytes surfaceId = 3;
+  // required bytes a_surfaceId = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_surfaceid(), target);
+        3, this->_internal_a_surfaceid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9445,23 +9445,23 @@ size_t SurfaceDescriptorCanvasSurface::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
   size_t total_size = 0;
 
-  if (_internal_has_canvasid()) {
-    // required bytes canvasId = 2;
+  if (_internal_has_a_canvasid()) {
+    // required bytes a_canvasId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_canvasid());
+        this->_internal_a_canvasid());
   }
 
-  if (_internal_has_surfaceid()) {
-    // required bytes surfaceId = 3;
+  if (_internal_has_a_surfaceid()) {
+    // required bytes a_surfaceId = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_surfaceid());
+        this->_internal_a_surfaceid());
   }
 
-  if (_internal_has_managerid()) {
-    // required uint32 managerId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_managerid());
+  if (_internal_has_a_managerid()) {
+    // required uint32 a_managerId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_managerid());
   }
 
   return total_size;
@@ -9471,18 +9471,18 @@ size_t SurfaceDescriptorCanvasSurface::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes canvasId = 2;
+    // required bytes a_canvasId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_canvasid());
+        this->_internal_a_canvasid());
 
-    // required bytes surfaceId = 3;
+    // required bytes a_surfaceId = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_surfaceid());
+        this->_internal_a_surfaceid());
 
-    // required uint32 managerId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_managerid());
+    // required uint32 a_managerId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_managerid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -9515,13 +9515,13 @@ void SurfaceDescriptorCanvasSurface::MergeFrom(const SurfaceDescriptorCanvasSurf
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_canvasid(from._internal_canvasid());
+      _this->_internal_set_a_canvasid(from._internal_a_canvasid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_surfaceid(from._internal_surfaceid());
+      _this->_internal_set_a_surfaceid(from._internal_a_surfaceid());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.managerid_ = from._impl_.managerid_;
+      _this->_impl_.a_managerid_ = from._impl_.a_managerid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -9547,14 +9547,14 @@ void SurfaceDescriptorCanvasSurface::InternalSwap(SurfaceDescriptorCanvasSurface
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.canvasid_, lhs_arena,
-      &other->_impl_.canvasid_, rhs_arena
+      &_impl_.a_canvasid_, lhs_arena,
+      &other->_impl_.a_canvasid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.surfaceid_, lhs_arena,
-      &other->_impl_.surfaceid_, rhs_arena
+      &_impl_.a_surfaceid_, lhs_arena,
+      &other->_impl_.a_surfaceid_, rhs_arena
   );
-  swap(_impl_.managerid_, other->_impl_.managerid_);
+  swap(_impl_.a_managerid_, other->_impl_.a_managerid_);
 }
 
 std::string SurfaceDescriptorCanvasSurface::GetTypeName() const {
@@ -9566,287 +9566,287 @@ std::string SurfaceDescriptorCanvasSurface::GetTypeName() const {
 
 class SurfaceDescriptor::_Internal {
  public:
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorBuffer& mvsurfacedescriptorbuffer(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorD3D10& mvsurfacedescriptord3d10(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr& mvsurfacedescriptordxgiycbcr(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorDMABuf& mvsurfacedescriptordmabuf(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceTextureDescriptor& mvsurfacetexturedescriptor(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer& mvsurfacedescriptorandroidhardwarebuffer(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::EGLImageDescriptor& mveglimagedescriptor(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface& mvsurfacedescriptormaciosurface(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture& mvsurfacedescriptorsharedgltexture(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo& mvsurfacedescriptorgpuvideo(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture& mvsurfacedescriptorremotetexture(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface& mvsurfacedescriptordcompsurface(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorExternalImage& mvsurfacedescriptorexternalimage(const SurfaceDescriptor* msg);
-  static const ::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface& mvsurfacedescriptorcanvassurface(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorBuffer& a_mvsurfacedescriptorbuffer(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorD3D10& a_mvsurfacedescriptord3d10(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr& a_mvsurfacedescriptordxgiycbcr(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorDMABuf& a_mvsurfacedescriptordmabuf(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceTextureDescriptor& a_mvsurfacetexturedescriptor(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer& a_mvsurfacedescriptorandroidhardwarebuffer(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::EGLImageDescriptor& a_mveglimagedescriptor(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface& a_mvsurfacedescriptormaciosurface(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture& a_mvsurfacedescriptorsharedgltexture(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo& a_mvsurfacedescriptorgpuvideo(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture& a_mvsurfacedescriptorremotetexture(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface& a_mvsurfacedescriptordcompsurface(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorExternalImage& a_mvsurfacedescriptorexternalimage(const SurfaceDescriptor* msg);
+  static const ::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface& a_mvsurfacedescriptorcanvassurface(const SurfaceDescriptor* msg);
 };
 
 const ::protobuf::mozilla::layers::SurfaceDescriptorBuffer&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorbuffer(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorbuffer_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorbuffer(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorbuffer_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorD3D10&
-SurfaceDescriptor::_Internal::mvsurfacedescriptord3d10(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptord3d10_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptord3d10(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptord3d10_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr&
-SurfaceDescriptor::_Internal::mvsurfacedescriptordxgiycbcr(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptordxgiycbcr_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptordxgiycbcr(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptordxgiycbcr_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorDMABuf&
-SurfaceDescriptor::_Internal::mvsurfacedescriptordmabuf(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptordmabuf_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptordmabuf(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptordmabuf_;
 }
 const ::protobuf::mozilla::layers::SurfaceTextureDescriptor&
-SurfaceDescriptor::_Internal::mvsurfacetexturedescriptor(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacetexturedescriptor_;
+SurfaceDescriptor::_Internal::a_mvsurfacetexturedescriptor(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacetexturedescriptor_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorandroidhardwarebuffer(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorandroidhardwarebuffer_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorandroidhardwarebuffer(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorandroidhardwarebuffer_;
 }
 const ::protobuf::mozilla::layers::EGLImageDescriptor&
-SurfaceDescriptor::_Internal::mveglimagedescriptor(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mveglimagedescriptor_;
+SurfaceDescriptor::_Internal::a_mveglimagedescriptor(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mveglimagedescriptor_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface&
-SurfaceDescriptor::_Internal::mvsurfacedescriptormaciosurface(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptormaciosurface_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptormaciosurface(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptormaciosurface_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorsharedgltexture(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorsharedgltexture_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorsharedgltexture(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorsharedgltexture_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorgpuvideo(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorgpuvideo_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorgpuvideo(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorgpuvideo_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorremotetexture(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorremotetexture_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorremotetexture(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorremotetexture_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface&
-SurfaceDescriptor::_Internal::mvsurfacedescriptordcompsurface(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptordcompsurface_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptordcompsurface(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptordcompsurface_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorExternalImage&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorexternalimage(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorexternalimage_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorexternalimage(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorexternalimage_;
 }
 const ::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface&
-SurfaceDescriptor::_Internal::mvsurfacedescriptorcanvassurface(const SurfaceDescriptor* msg) {
-  return *msg->_impl_.content_.mvsurfacedescriptorcanvassurface_;
+SurfaceDescriptor::_Internal::a_mvsurfacedescriptorcanvassurface(const SurfaceDescriptor* msg) {
+  return *msg->_impl_.content_.a_mvsurfacedescriptorcanvassurface_;
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorbuffer(::protobuf::mozilla::layers::SurfaceDescriptorBuffer* mvsurfacedescriptorbuffer) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorbuffer(::protobuf::mozilla::layers::SurfaceDescriptorBuffer* a_mvsurfacedescriptorbuffer) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorbuffer) {
+  if (a_mvsurfacedescriptorbuffer) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorbuffer);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorbuffer);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorbuffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorbuffer, submessage_arena);
+      a_mvsurfacedescriptorbuffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorbuffer, submessage_arena);
     }
-    set_has_mvsurfacedescriptorbuffer();
-    _impl_.content_.mvsurfacedescriptorbuffer_ = mvsurfacedescriptorbuffer;
+    set_has_a_mvsurfacedescriptorbuffer();
+    _impl_.content_.a_mvsurfacedescriptorbuffer_ = a_mvsurfacedescriptorbuffer;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorBuffer)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorBuffer)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptord3d10(::protobuf::mozilla::layers::SurfaceDescriptorD3D10* mvsurfacedescriptord3d10) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptord3d10(::protobuf::mozilla::layers::SurfaceDescriptorD3D10* a_mvsurfacedescriptord3d10) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptord3d10) {
+  if (a_mvsurfacedescriptord3d10) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptord3d10);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptord3d10);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptord3d10 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptord3d10, submessage_arena);
+      a_mvsurfacedescriptord3d10 = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptord3d10, submessage_arena);
     }
-    set_has_mvsurfacedescriptord3d10();
-    _impl_.content_.mvsurfacedescriptord3d10_ = mvsurfacedescriptord3d10;
+    set_has_a_mvsurfacedescriptord3d10();
+    _impl_.content_.a_mvsurfacedescriptord3d10_ = a_mvsurfacedescriptord3d10;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorD3D10)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorD3D10)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptordxgiycbcr(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr* mvsurfacedescriptordxgiycbcr) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptordxgiycbcr(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr* a_mvsurfacedescriptordxgiycbcr) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptordxgiycbcr) {
+  if (a_mvsurfacedescriptordxgiycbcr) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptordxgiycbcr);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptordxgiycbcr);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptordxgiycbcr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptordxgiycbcr, submessage_arena);
+      a_mvsurfacedescriptordxgiycbcr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptordxgiycbcr, submessage_arena);
     }
-    set_has_mvsurfacedescriptordxgiycbcr();
-    _impl_.content_.mvsurfacedescriptordxgiycbcr_ = mvsurfacedescriptordxgiycbcr;
+    set_has_a_mvsurfacedescriptordxgiycbcr();
+    _impl_.content_.a_mvsurfacedescriptordxgiycbcr_ = a_mvsurfacedescriptordxgiycbcr;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorDXGIYCbCr)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorDXGIYCbCr)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptordmabuf(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf* mvsurfacedescriptordmabuf) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptordmabuf(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf* a_mvsurfacedescriptordmabuf) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptordmabuf) {
+  if (a_mvsurfacedescriptordmabuf) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptordmabuf);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptordmabuf);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptordmabuf = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptordmabuf, submessage_arena);
+      a_mvsurfacedescriptordmabuf = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptordmabuf, submessage_arena);
     }
-    set_has_mvsurfacedescriptordmabuf();
-    _impl_.content_.mvsurfacedescriptordmabuf_ = mvsurfacedescriptordmabuf;
+    set_has_a_mvsurfacedescriptordmabuf();
+    _impl_.content_.a_mvsurfacedescriptordmabuf_ = a_mvsurfacedescriptordmabuf;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorDMABuf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorDMABuf)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacetexturedescriptor(::protobuf::mozilla::layers::SurfaceTextureDescriptor* mvsurfacetexturedescriptor) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacetexturedescriptor(::protobuf::mozilla::layers::SurfaceTextureDescriptor* a_mvsurfacetexturedescriptor) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacetexturedescriptor) {
+  if (a_mvsurfacetexturedescriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacetexturedescriptor);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacetexturedescriptor);
     if (message_arena != submessage_arena) {
-      mvsurfacetexturedescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacetexturedescriptor, submessage_arena);
+      a_mvsurfacetexturedescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacetexturedescriptor, submessage_arena);
     }
-    set_has_mvsurfacetexturedescriptor();
-    _impl_.content_.mvsurfacetexturedescriptor_ = mvsurfacetexturedescriptor;
+    set_has_a_mvsurfacetexturedescriptor();
+    _impl_.content_.a_mvsurfacetexturedescriptor_ = a_mvsurfacetexturedescriptor;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceTextureDescriptor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceTextureDescriptor)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorandroidhardwarebuffer(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer* mvsurfacedescriptorandroidhardwarebuffer) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorandroidhardwarebuffer(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer* a_mvsurfacedescriptorandroidhardwarebuffer) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorandroidhardwarebuffer) {
+  if (a_mvsurfacedescriptorandroidhardwarebuffer) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorandroidhardwarebuffer);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorandroidhardwarebuffer);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorandroidhardwarebuffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorandroidhardwarebuffer, submessage_arena);
+      a_mvsurfacedescriptorandroidhardwarebuffer = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorandroidhardwarebuffer, submessage_arena);
     }
-    set_has_mvsurfacedescriptorandroidhardwarebuffer();
-    _impl_.content_.mvsurfacedescriptorandroidhardwarebuffer_ = mvsurfacedescriptorandroidhardwarebuffer;
+    set_has_a_mvsurfacedescriptorandroidhardwarebuffer();
+    _impl_.content_.a_mvsurfacedescriptorandroidhardwarebuffer_ = a_mvsurfacedescriptorandroidhardwarebuffer;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorAndroidHardwareBuffer)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorAndroidHardwareBuffer)
 }
-void SurfaceDescriptor::set_allocated_mveglimagedescriptor(::protobuf::mozilla::layers::EGLImageDescriptor* mveglimagedescriptor) {
+void SurfaceDescriptor::set_allocated_a_mveglimagedescriptor(::protobuf::mozilla::layers::EGLImageDescriptor* a_mveglimagedescriptor) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mveglimagedescriptor) {
+  if (a_mveglimagedescriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mveglimagedescriptor);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mveglimagedescriptor);
     if (message_arena != submessage_arena) {
-      mveglimagedescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mveglimagedescriptor, submessage_arena);
+      a_mveglimagedescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mveglimagedescriptor, submessage_arena);
     }
-    set_has_mveglimagedescriptor();
-    _impl_.content_.mveglimagedescriptor_ = mveglimagedescriptor;
+    set_has_a_mveglimagedescriptor();
+    _impl_.content_.a_mveglimagedescriptor_ = a_mveglimagedescriptor;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVEGLImageDescriptor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVEGLImageDescriptor)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptormaciosurface(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface* mvsurfacedescriptormaciosurface) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptormaciosurface(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface* a_mvsurfacedescriptormaciosurface) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptormaciosurface) {
+  if (a_mvsurfacedescriptormaciosurface) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptormaciosurface);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptormaciosurface);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptormaciosurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptormaciosurface, submessage_arena);
+      a_mvsurfacedescriptormaciosurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptormaciosurface, submessage_arena);
     }
-    set_has_mvsurfacedescriptormaciosurface();
-    _impl_.content_.mvsurfacedescriptormaciosurface_ = mvsurfacedescriptormaciosurface;
+    set_has_a_mvsurfacedescriptormaciosurface();
+    _impl_.content_.a_mvsurfacedescriptormaciosurface_ = a_mvsurfacedescriptormaciosurface;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorMacIOSurface)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorMacIOSurface)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorsharedgltexture(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture* mvsurfacedescriptorsharedgltexture) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorsharedgltexture(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture* a_mvsurfacedescriptorsharedgltexture) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorsharedgltexture) {
+  if (a_mvsurfacedescriptorsharedgltexture) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorsharedgltexture);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorsharedgltexture);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorsharedgltexture = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorsharedgltexture, submessage_arena);
+      a_mvsurfacedescriptorsharedgltexture = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorsharedgltexture, submessage_arena);
     }
-    set_has_mvsurfacedescriptorsharedgltexture();
-    _impl_.content_.mvsurfacedescriptorsharedgltexture_ = mvsurfacedescriptorsharedgltexture;
+    set_has_a_mvsurfacedescriptorsharedgltexture();
+    _impl_.content_.a_mvsurfacedescriptorsharedgltexture_ = a_mvsurfacedescriptorsharedgltexture;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorSharedGLTexture)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorSharedGLTexture)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorgpuvideo(::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* mvsurfacedescriptorgpuvideo) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorgpuvideo(::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* a_mvsurfacedescriptorgpuvideo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorgpuvideo) {
+  if (a_mvsurfacedescriptorgpuvideo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorgpuvideo);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorgpuvideo);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorgpuvideo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorgpuvideo, submessage_arena);
+      a_mvsurfacedescriptorgpuvideo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorgpuvideo, submessage_arena);
     }
-    set_has_mvsurfacedescriptorgpuvideo();
-    _impl_.content_.mvsurfacedescriptorgpuvideo_ = mvsurfacedescriptorgpuvideo;
+    set_has_a_mvsurfacedescriptorgpuvideo();
+    _impl_.content_.a_mvsurfacedescriptorgpuvideo_ = a_mvsurfacedescriptorgpuvideo;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorGPUVideo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorGPUVideo)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorremotetexture(::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture* mvsurfacedescriptorremotetexture) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorremotetexture(::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture* a_mvsurfacedescriptorremotetexture) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorremotetexture) {
+  if (a_mvsurfacedescriptorremotetexture) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorremotetexture);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorremotetexture);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorremotetexture = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorremotetexture, submessage_arena);
+      a_mvsurfacedescriptorremotetexture = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorremotetexture, submessage_arena);
     }
-    set_has_mvsurfacedescriptorremotetexture();
-    _impl_.content_.mvsurfacedescriptorremotetexture_ = mvsurfacedescriptorremotetexture;
+    set_has_a_mvsurfacedescriptorremotetexture();
+    _impl_.content_.a_mvsurfacedescriptorremotetexture_ = a_mvsurfacedescriptorremotetexture;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorRemoteTexture)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorRemoteTexture)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptordcompsurface(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface* mvsurfacedescriptordcompsurface) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptordcompsurface(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface* a_mvsurfacedescriptordcompsurface) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptordcompsurface) {
+  if (a_mvsurfacedescriptordcompsurface) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptordcompsurface);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptordcompsurface);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptordcompsurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptordcompsurface, submessage_arena);
+      a_mvsurfacedescriptordcompsurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptordcompsurface, submessage_arena);
     }
-    set_has_mvsurfacedescriptordcompsurface();
-    _impl_.content_.mvsurfacedescriptordcompsurface_ = mvsurfacedescriptordcompsurface;
+    set_has_a_mvsurfacedescriptordcompsurface();
+    _impl_.content_.a_mvsurfacedescriptordcompsurface_ = a_mvsurfacedescriptordcompsurface;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorDcompSurface)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorDcompSurface)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorexternalimage(::protobuf::mozilla::layers::SurfaceDescriptorExternalImage* mvsurfacedescriptorexternalimage) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorexternalimage(::protobuf::mozilla::layers::SurfaceDescriptorExternalImage* a_mvsurfacedescriptorexternalimage) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorexternalimage) {
+  if (a_mvsurfacedescriptorexternalimage) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorexternalimage);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorexternalimage);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorexternalimage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorexternalimage, submessage_arena);
+      a_mvsurfacedescriptorexternalimage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorexternalimage, submessage_arena);
     }
-    set_has_mvsurfacedescriptorexternalimage();
-    _impl_.content_.mvsurfacedescriptorexternalimage_ = mvsurfacedescriptorexternalimage;
+    set_has_a_mvsurfacedescriptorexternalimage();
+    _impl_.content_.a_mvsurfacedescriptorexternalimage_ = a_mvsurfacedescriptorexternalimage;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorExternalImage)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorExternalImage)
 }
-void SurfaceDescriptor::set_allocated_mvsurfacedescriptorcanvassurface(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface* mvsurfacedescriptorcanvassurface) {
+void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorcanvassurface(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface* a_mvsurfacedescriptorcanvassurface) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsurfacedescriptorcanvassurface) {
+  if (a_mvsurfacedescriptorcanvassurface) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsurfacedescriptorcanvassurface);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsurfacedescriptorcanvassurface);
     if (message_arena != submessage_arena) {
-      mvsurfacedescriptorcanvassurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsurfacedescriptorcanvassurface, submessage_arena);
+      a_mvsurfacedescriptorcanvassurface = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsurfacedescriptorcanvassurface, submessage_arena);
     }
-    set_has_mvsurfacedescriptorcanvassurface();
-    _impl_.content_.mvsurfacedescriptorcanvassurface_ = mvsurfacedescriptorcanvassurface;
+    set_has_a_mvsurfacedescriptorcanvassurface();
+    _impl_.content_.a_mvsurfacedescriptorcanvassurface_ = a_mvsurfacedescriptorcanvassurface;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.mVSurfaceDescriptorCanvasSurface)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptor.a_mVSurfaceDescriptorCanvasSurface)
 }
 SurfaceDescriptor::SurfaceDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -9865,78 +9865,78 @@ SurfaceDescriptor::SurfaceDescriptor(const SurfaceDescriptor& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVSurfaceDescriptorBuffer: {
-      _this->_internal_mutable_mvsurfacedescriptorbuffer()->::protobuf::mozilla::layers::SurfaceDescriptorBuffer::MergeFrom(
-          from._internal_mvsurfacedescriptorbuffer());
+    case kAMVSurfaceDescriptorBuffer: {
+      _this->_internal_mutable_a_mvsurfacedescriptorbuffer()->::protobuf::mozilla::layers::SurfaceDescriptorBuffer::MergeFrom(
+          from._internal_a_mvsurfacedescriptorbuffer());
       break;
     }
-    case kMVSurfaceDescriptorD3D10: {
-      _this->_internal_mutable_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
-          from._internal_mvsurfacedescriptord3d10());
+    case kAMVSurfaceDescriptorD3D10: {
+      _this->_internal_mutable_a_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
+          from._internal_a_mvsurfacedescriptord3d10());
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
-      _this->_internal_mutable_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
-          from._internal_mvsurfacedescriptordxgiycbcr());
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
+      _this->_internal_mutable_a_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
+          from._internal_a_mvsurfacedescriptordxgiycbcr());
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
-      _this->_internal_mutable_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
-          from._internal_mvsurfacedescriptordmabuf());
+    case kAMVSurfaceDescriptorDMABuf: {
+      _this->_internal_mutable_a_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
+          from._internal_a_mvsurfacedescriptordmabuf());
       break;
     }
-    case kMVSurfaceTextureDescriptor: {
-      _this->_internal_mutable_mvsurfacetexturedescriptor()->::protobuf::mozilla::layers::SurfaceTextureDescriptor::MergeFrom(
-          from._internal_mvsurfacetexturedescriptor());
+    case kAMVSurfaceTextureDescriptor: {
+      _this->_internal_mutable_a_mvsurfacetexturedescriptor()->::protobuf::mozilla::layers::SurfaceTextureDescriptor::MergeFrom(
+          from._internal_a_mvsurfacetexturedescriptor());
       break;
     }
-    case kMVSurfaceDescriptorAndroidHardwareBuffer: {
-      _this->_internal_mutable_mvsurfacedescriptorandroidhardwarebuffer()->::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer::MergeFrom(
-          from._internal_mvsurfacedescriptorandroidhardwarebuffer());
+    case kAMVSurfaceDescriptorAndroidHardwareBuffer: {
+      _this->_internal_mutable_a_mvsurfacedescriptorandroidhardwarebuffer()->::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer::MergeFrom(
+          from._internal_a_mvsurfacedescriptorandroidhardwarebuffer());
       break;
     }
-    case kMVEGLImageDescriptor: {
-      _this->_internal_mutable_mveglimagedescriptor()->::protobuf::mozilla::layers::EGLImageDescriptor::MergeFrom(
-          from._internal_mveglimagedescriptor());
+    case kAMVEGLImageDescriptor: {
+      _this->_internal_mutable_a_mveglimagedescriptor()->::protobuf::mozilla::layers::EGLImageDescriptor::MergeFrom(
+          from._internal_a_mveglimagedescriptor());
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
-      _this->_internal_mutable_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
-          from._internal_mvsurfacedescriptormaciosurface());
+    case kAMVSurfaceDescriptorMacIOSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptormaciosurface());
       break;
     }
-    case kMVSurfaceDescriptorSharedGLTexture: {
-      _this->_internal_mutable_mvsurfacedescriptorsharedgltexture()->::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture::MergeFrom(
-          from._internal_mvsurfacedescriptorsharedgltexture());
+    case kAMVSurfaceDescriptorSharedGLTexture: {
+      _this->_internal_mutable_a_mvsurfacedescriptorsharedgltexture()->::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture::MergeFrom(
+          from._internal_a_mvsurfacedescriptorsharedgltexture());
       break;
     }
-    case kMVSurfaceDescriptorGPUVideo: {
-      _this->_internal_mutable_mvsurfacedescriptorgpuvideo()->::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo::MergeFrom(
-          from._internal_mvsurfacedescriptorgpuvideo());
+    case kAMVSurfaceDescriptorGPUVideo: {
+      _this->_internal_mutable_a_mvsurfacedescriptorgpuvideo()->::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo::MergeFrom(
+          from._internal_a_mvsurfacedescriptorgpuvideo());
       break;
     }
-    case kMVSurfaceDescriptorRemoteTexture: {
-      _this->_internal_mutable_mvsurfacedescriptorremotetexture()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture::MergeFrom(
-          from._internal_mvsurfacedescriptorremotetexture());
+    case kAMVSurfaceDescriptorRemoteTexture: {
+      _this->_internal_mutable_a_mvsurfacedescriptorremotetexture()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture::MergeFrom(
+          from._internal_a_mvsurfacedescriptorremotetexture());
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
-      _this->_internal_mutable_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
-          from._internal_mvsurfacedescriptordcompsurface());
+    case kAMVSurfaceDescriptorDcompSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptordcompsurface());
       break;
     }
-    case kMVSurfaceDescriptorExternalImage: {
-      _this->_internal_mutable_mvsurfacedescriptorexternalimage()->::protobuf::mozilla::layers::SurfaceDescriptorExternalImage::MergeFrom(
-          from._internal_mvsurfacedescriptorexternalimage());
+    case kAMVSurfaceDescriptorExternalImage: {
+      _this->_internal_mutable_a_mvsurfacedescriptorexternalimage()->::protobuf::mozilla::layers::SurfaceDescriptorExternalImage::MergeFrom(
+          from._internal_a_mvsurfacedescriptorexternalimage());
       break;
     }
-    case kMVSurfaceDescriptorCanvasSurface: {
-      _this->_internal_mutable_mvsurfacedescriptorcanvassurface()->::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface::MergeFrom(
-          from._internal_mvsurfacedescriptorcanvassurface());
+    case kAMVSurfaceDescriptorCanvasSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptorcanvassurface()->::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptorcanvassurface());
       break;
     }
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -9981,92 +9981,92 @@ void SurfaceDescriptor::SetCachedSize(int size) const {
 void SurfaceDescriptor::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.layers.SurfaceDescriptor)
   switch (content_case()) {
-    case kMVSurfaceDescriptorBuffer: {
+    case kAMVSurfaceDescriptorBuffer: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorbuffer_;
+        delete _impl_.content_.a_mvsurfacedescriptorbuffer_;
       }
       break;
     }
-    case kMVSurfaceDescriptorD3D10: {
+    case kAMVSurfaceDescriptorD3D10: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptord3d10_;
+        delete _impl_.content_.a_mvsurfacedescriptord3d10_;
       }
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptordxgiycbcr_;
+        delete _impl_.content_.a_mvsurfacedescriptordxgiycbcr_;
       }
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
+    case kAMVSurfaceDescriptorDMABuf: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptordmabuf_;
+        delete _impl_.content_.a_mvsurfacedescriptordmabuf_;
       }
       break;
     }
-    case kMVSurfaceTextureDescriptor: {
+    case kAMVSurfaceTextureDescriptor: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacetexturedescriptor_;
+        delete _impl_.content_.a_mvsurfacetexturedescriptor_;
       }
       break;
     }
-    case kMVSurfaceDescriptorAndroidHardwareBuffer: {
+    case kAMVSurfaceDescriptorAndroidHardwareBuffer: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorandroidhardwarebuffer_;
+        delete _impl_.content_.a_mvsurfacedescriptorandroidhardwarebuffer_;
       }
       break;
     }
-    case kMVEGLImageDescriptor: {
+    case kAMVEGLImageDescriptor: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mveglimagedescriptor_;
+        delete _impl_.content_.a_mveglimagedescriptor_;
       }
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
+    case kAMVSurfaceDescriptorMacIOSurface: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptormaciosurface_;
+        delete _impl_.content_.a_mvsurfacedescriptormaciosurface_;
       }
       break;
     }
-    case kMVSurfaceDescriptorSharedGLTexture: {
+    case kAMVSurfaceDescriptorSharedGLTexture: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorsharedgltexture_;
+        delete _impl_.content_.a_mvsurfacedescriptorsharedgltexture_;
       }
       break;
     }
-    case kMVSurfaceDescriptorGPUVideo: {
+    case kAMVSurfaceDescriptorGPUVideo: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorgpuvideo_;
+        delete _impl_.content_.a_mvsurfacedescriptorgpuvideo_;
       }
       break;
     }
-    case kMVSurfaceDescriptorRemoteTexture: {
+    case kAMVSurfaceDescriptorRemoteTexture: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorremotetexture_;
+        delete _impl_.content_.a_mvsurfacedescriptorremotetexture_;
       }
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
+    case kAMVSurfaceDescriptorDcompSurface: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptordcompsurface_;
+        delete _impl_.content_.a_mvsurfacedescriptordcompsurface_;
       }
       break;
     }
-    case kMVSurfaceDescriptorExternalImage: {
+    case kAMVSurfaceDescriptorExternalImage: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorexternalimage_;
+        delete _impl_.content_.a_mvsurfacedescriptorexternalimage_;
       }
       break;
     }
-    case kMVSurfaceDescriptorCanvasSurface: {
+    case kAMVSurfaceDescriptorCanvasSurface: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsurfacedescriptorcanvassurface_;
+        delete _impl_.content_.a_mvsurfacedescriptorcanvassurface_;
       }
       break;
     }
-    case kMVnullT: {
-      _impl_.content_.mvnull_t_.Destroy();
+    case kAMVnullT: {
+      _impl_.content_.a_mvnull_t_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -10093,122 +10093,122 @@ const char* SurfaceDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.SurfaceDescriptorBuffer mVSurfaceDescriptorBuffer = 1;
+      // .protobuf.mozilla.layers.SurfaceDescriptorBuffer a_mVSurfaceDescriptorBuffer = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorbuffer(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorbuffer(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 mVSurfaceDescriptorD3D10 = 2;
+      // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 a_mVSurfaceDescriptorD3D10 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptord3d10(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptord3d10(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr mVSurfaceDescriptorDXGIYCbCr = 3;
+      // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr a_mVSurfaceDescriptorDXGIYCbCr = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptordxgiycbcr(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptordxgiycbcr(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf mVSurfaceDescriptorDMABuf = 4;
+      // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf a_mVSurfaceDescriptorDMABuf = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptordmabuf(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptordmabuf(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceTextureDescriptor mVSurfaceTextureDescriptor = 5;
+      // .protobuf.mozilla.layers.SurfaceTextureDescriptor a_mVSurfaceTextureDescriptor = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacetexturedescriptor(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacetexturedescriptor(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer mVSurfaceDescriptorAndroidHardwareBuffer = 6;
+      // .protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer a_mVSurfaceDescriptorAndroidHardwareBuffer = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorandroidhardwarebuffer(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorandroidhardwarebuffer(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.EGLImageDescriptor mVEGLImageDescriptor = 7;
+      // .protobuf.mozilla.layers.EGLImageDescriptor a_mVEGLImageDescriptor = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mveglimagedescriptor(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mveglimagedescriptor(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface mVSurfaceDescriptorMacIOSurface = 8;
+      // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface a_mVSurfaceDescriptorMacIOSurface = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptormaciosurface(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptormaciosurface(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture mVSurfaceDescriptorSharedGLTexture = 9;
+      // .protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture a_mVSurfaceDescriptorSharedGLTexture = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorsharedgltexture(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorsharedgltexture(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo mVSurfaceDescriptorGPUVideo = 10;
+      // .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_mVSurfaceDescriptorGPUVideo = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorgpuvideo(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorgpuvideo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture mVSurfaceDescriptorRemoteTexture = 11;
+      // .protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture a_mVSurfaceDescriptorRemoteTexture = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorremotetexture(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorremotetexture(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface mVSurfaceDescriptorDcompSurface = 12;
+      // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface a_mVSurfaceDescriptorDcompSurface = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptordcompsurface(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptordcompsurface(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorExternalImage mVSurfaceDescriptorExternalImage = 13;
+      // .protobuf.mozilla.layers.SurfaceDescriptorExternalImage a_mVSurfaceDescriptorExternalImage = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorexternalimage(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorexternalimage(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface mVSurfaceDescriptorCanvasSurface = 14;
+      // .protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface a_mVSurfaceDescriptorCanvasSurface = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsurfacedescriptorcanvassurface(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsurfacedescriptorcanvassurface(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVnull_t = 15;
+      // bytes a_mVnull_t = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
-          auto str = _internal_mutable_mvnull_t();
+          auto str = _internal_mutable_a_mvnull_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -10244,93 +10244,93 @@ uint8_t* SurfaceDescriptor::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVSurfaceDescriptorBuffer: {
+    case kAMVSurfaceDescriptorBuffer: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvsurfacedescriptorbuffer(this),
-          _Internal::mvsurfacedescriptorbuffer(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvsurfacedescriptorbuffer(this),
+          _Internal::a_mvsurfacedescriptorbuffer(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorD3D10: {
+    case kAMVSurfaceDescriptorD3D10: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvsurfacedescriptord3d10(this),
-          _Internal::mvsurfacedescriptord3d10(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvsurfacedescriptord3d10(this),
+          _Internal::a_mvsurfacedescriptord3d10(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::mvsurfacedescriptordxgiycbcr(this),
-          _Internal::mvsurfacedescriptordxgiycbcr(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(3, _Internal::a_mvsurfacedescriptordxgiycbcr(this),
+          _Internal::a_mvsurfacedescriptordxgiycbcr(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
+    case kAMVSurfaceDescriptorDMABuf: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::mvsurfacedescriptordmabuf(this),
-          _Internal::mvsurfacedescriptordmabuf(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(4, _Internal::a_mvsurfacedescriptordmabuf(this),
+          _Internal::a_mvsurfacedescriptordmabuf(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceTextureDescriptor: {
+    case kAMVSurfaceTextureDescriptor: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(5, _Internal::mvsurfacetexturedescriptor(this),
-          _Internal::mvsurfacetexturedescriptor(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(5, _Internal::a_mvsurfacetexturedescriptor(this),
+          _Internal::a_mvsurfacetexturedescriptor(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorAndroidHardwareBuffer: {
+    case kAMVSurfaceDescriptorAndroidHardwareBuffer: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(6, _Internal::mvsurfacedescriptorandroidhardwarebuffer(this),
-          _Internal::mvsurfacedescriptorandroidhardwarebuffer(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(6, _Internal::a_mvsurfacedescriptorandroidhardwarebuffer(this),
+          _Internal::a_mvsurfacedescriptorandroidhardwarebuffer(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVEGLImageDescriptor: {
+    case kAMVEGLImageDescriptor: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(7, _Internal::mveglimagedescriptor(this),
-          _Internal::mveglimagedescriptor(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(7, _Internal::a_mveglimagedescriptor(this),
+          _Internal::a_mveglimagedescriptor(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
+    case kAMVSurfaceDescriptorMacIOSurface: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(8, _Internal::mvsurfacedescriptormaciosurface(this),
-          _Internal::mvsurfacedescriptormaciosurface(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(8, _Internal::a_mvsurfacedescriptormaciosurface(this),
+          _Internal::a_mvsurfacedescriptormaciosurface(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorSharedGLTexture: {
+    case kAMVSurfaceDescriptorSharedGLTexture: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(9, _Internal::mvsurfacedescriptorsharedgltexture(this),
-          _Internal::mvsurfacedescriptorsharedgltexture(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(9, _Internal::a_mvsurfacedescriptorsharedgltexture(this),
+          _Internal::a_mvsurfacedescriptorsharedgltexture(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorGPUVideo: {
+    case kAMVSurfaceDescriptorGPUVideo: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(10, _Internal::mvsurfacedescriptorgpuvideo(this),
-          _Internal::mvsurfacedescriptorgpuvideo(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(10, _Internal::a_mvsurfacedescriptorgpuvideo(this),
+          _Internal::a_mvsurfacedescriptorgpuvideo(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorRemoteTexture: {
+    case kAMVSurfaceDescriptorRemoteTexture: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(11, _Internal::mvsurfacedescriptorremotetexture(this),
-          _Internal::mvsurfacedescriptorremotetexture(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(11, _Internal::a_mvsurfacedescriptorremotetexture(this),
+          _Internal::a_mvsurfacedescriptorremotetexture(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
+    case kAMVSurfaceDescriptorDcompSurface: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(12, _Internal::mvsurfacedescriptordcompsurface(this),
-          _Internal::mvsurfacedescriptordcompsurface(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(12, _Internal::a_mvsurfacedescriptordcompsurface(this),
+          _Internal::a_mvsurfacedescriptordcompsurface(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorExternalImage: {
+    case kAMVSurfaceDescriptorExternalImage: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(13, _Internal::mvsurfacedescriptorexternalimage(this),
-          _Internal::mvsurfacedescriptorexternalimage(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(13, _Internal::a_mvsurfacedescriptorexternalimage(this),
+          _Internal::a_mvsurfacedescriptorexternalimage(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSurfaceDescriptorCanvasSurface: {
+    case kAMVSurfaceDescriptorCanvasSurface: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(14, _Internal::mvsurfacedescriptorcanvassurface(this),
-          _Internal::mvsurfacedescriptorcanvassurface(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(14, _Internal::a_mvsurfacedescriptorcanvassurface(this),
+          _Internal::a_mvsurfacedescriptorcanvassurface(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVnullT: {
+    case kAMVnullT: {
       target = stream->WriteBytesMaybeAliased(
-          15, this->_internal_mvnull_t(), target);
+          15, this->_internal_a_mvnull_t(), target);
       break;
     }
     default: ;
@@ -10352,109 +10352,109 @@ size_t SurfaceDescriptor::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.layers.SurfaceDescriptorBuffer mVSurfaceDescriptorBuffer = 1;
-    case kMVSurfaceDescriptorBuffer: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorBuffer a_mVSurfaceDescriptorBuffer = 1;
+    case kAMVSurfaceDescriptorBuffer: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorbuffer_);
+          *_impl_.content_.a_mvsurfacedescriptorbuffer_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 mVSurfaceDescriptorD3D10 = 2;
-    case kMVSurfaceDescriptorD3D10: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorD3D10 a_mVSurfaceDescriptorD3D10 = 2;
+    case kAMVSurfaceDescriptorD3D10: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptord3d10_);
+          *_impl_.content_.a_mvsurfacedescriptord3d10_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr mVSurfaceDescriptorDXGIYCbCr = 3;
-    case kMVSurfaceDescriptorDXGIYCbCr: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr a_mVSurfaceDescriptorDXGIYCbCr = 3;
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptordxgiycbcr_);
+          *_impl_.content_.a_mvsurfacedescriptordxgiycbcr_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf mVSurfaceDescriptorDMABuf = 4;
-    case kMVSurfaceDescriptorDMABuf: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorDMABuf a_mVSurfaceDescriptorDMABuf = 4;
+    case kAMVSurfaceDescriptorDMABuf: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptordmabuf_);
+          *_impl_.content_.a_mvsurfacedescriptordmabuf_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceTextureDescriptor mVSurfaceTextureDescriptor = 5;
-    case kMVSurfaceTextureDescriptor: {
+    // .protobuf.mozilla.layers.SurfaceTextureDescriptor a_mVSurfaceTextureDescriptor = 5;
+    case kAMVSurfaceTextureDescriptor: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacetexturedescriptor_);
+          *_impl_.content_.a_mvsurfacetexturedescriptor_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer mVSurfaceDescriptorAndroidHardwareBuffer = 6;
-    case kMVSurfaceDescriptorAndroidHardwareBuffer: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer a_mVSurfaceDescriptorAndroidHardwareBuffer = 6;
+    case kAMVSurfaceDescriptorAndroidHardwareBuffer: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorandroidhardwarebuffer_);
+          *_impl_.content_.a_mvsurfacedescriptorandroidhardwarebuffer_);
       break;
     }
-    // .protobuf.mozilla.layers.EGLImageDescriptor mVEGLImageDescriptor = 7;
-    case kMVEGLImageDescriptor: {
+    // .protobuf.mozilla.layers.EGLImageDescriptor a_mVEGLImageDescriptor = 7;
+    case kAMVEGLImageDescriptor: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mveglimagedescriptor_);
+          *_impl_.content_.a_mveglimagedescriptor_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface mVSurfaceDescriptorMacIOSurface = 8;
-    case kMVSurfaceDescriptorMacIOSurface: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface a_mVSurfaceDescriptorMacIOSurface = 8;
+    case kAMVSurfaceDescriptorMacIOSurface: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptormaciosurface_);
+          *_impl_.content_.a_mvsurfacedescriptormaciosurface_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture mVSurfaceDescriptorSharedGLTexture = 9;
-    case kMVSurfaceDescriptorSharedGLTexture: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture a_mVSurfaceDescriptorSharedGLTexture = 9;
+    case kAMVSurfaceDescriptorSharedGLTexture: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorsharedgltexture_);
+          *_impl_.content_.a_mvsurfacedescriptorsharedgltexture_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo mVSurfaceDescriptorGPUVideo = 10;
-    case kMVSurfaceDescriptorGPUVideo: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_mVSurfaceDescriptorGPUVideo = 10;
+    case kAMVSurfaceDescriptorGPUVideo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorgpuvideo_);
+          *_impl_.content_.a_mvsurfacedescriptorgpuvideo_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture mVSurfaceDescriptorRemoteTexture = 11;
-    case kMVSurfaceDescriptorRemoteTexture: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture a_mVSurfaceDescriptorRemoteTexture = 11;
+    case kAMVSurfaceDescriptorRemoteTexture: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorremotetexture_);
+          *_impl_.content_.a_mvsurfacedescriptorremotetexture_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface mVSurfaceDescriptorDcompSurface = 12;
-    case kMVSurfaceDescriptorDcompSurface: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorDcompSurface a_mVSurfaceDescriptorDcompSurface = 12;
+    case kAMVSurfaceDescriptorDcompSurface: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptordcompsurface_);
+          *_impl_.content_.a_mvsurfacedescriptordcompsurface_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorExternalImage mVSurfaceDescriptorExternalImage = 13;
-    case kMVSurfaceDescriptorExternalImage: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorExternalImage a_mVSurfaceDescriptorExternalImage = 13;
+    case kAMVSurfaceDescriptorExternalImage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorexternalimage_);
+          *_impl_.content_.a_mvsurfacedescriptorexternalimage_);
       break;
     }
-    // .protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface mVSurfaceDescriptorCanvasSurface = 14;
-    case kMVSurfaceDescriptorCanvasSurface: {
+    // .protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface a_mVSurfaceDescriptorCanvasSurface = 14;
+    case kAMVSurfaceDescriptorCanvasSurface: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsurfacedescriptorcanvassurface_);
+          *_impl_.content_.a_mvsurfacedescriptorcanvassurface_);
       break;
     }
-    // bytes mVnull_t = 15;
-    case kMVnullT: {
+    // bytes a_mVnull_t = 15;
+    case kAMVnullT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnull_t());
+          this->_internal_a_mvnull_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -10483,78 +10483,78 @@ void SurfaceDescriptor::MergeFrom(const SurfaceDescriptor& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVSurfaceDescriptorBuffer: {
-      _this->_internal_mutable_mvsurfacedescriptorbuffer()->::protobuf::mozilla::layers::SurfaceDescriptorBuffer::MergeFrom(
-          from._internal_mvsurfacedescriptorbuffer());
+    case kAMVSurfaceDescriptorBuffer: {
+      _this->_internal_mutable_a_mvsurfacedescriptorbuffer()->::protobuf::mozilla::layers::SurfaceDescriptorBuffer::MergeFrom(
+          from._internal_a_mvsurfacedescriptorbuffer());
       break;
     }
-    case kMVSurfaceDescriptorD3D10: {
-      _this->_internal_mutable_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
-          from._internal_mvsurfacedescriptord3d10());
+    case kAMVSurfaceDescriptorD3D10: {
+      _this->_internal_mutable_a_mvsurfacedescriptord3d10()->::protobuf::mozilla::layers::SurfaceDescriptorD3D10::MergeFrom(
+          from._internal_a_mvsurfacedescriptord3d10());
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
-      _this->_internal_mutable_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
-          from._internal_mvsurfacedescriptordxgiycbcr());
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
+      _this->_internal_mutable_a_mvsurfacedescriptordxgiycbcr()->::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr::MergeFrom(
+          from._internal_a_mvsurfacedescriptordxgiycbcr());
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
-      _this->_internal_mutable_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
-          from._internal_mvsurfacedescriptordmabuf());
+    case kAMVSurfaceDescriptorDMABuf: {
+      _this->_internal_mutable_a_mvsurfacedescriptordmabuf()->::protobuf::mozilla::layers::SurfaceDescriptorDMABuf::MergeFrom(
+          from._internal_a_mvsurfacedescriptordmabuf());
       break;
     }
-    case kMVSurfaceTextureDescriptor: {
-      _this->_internal_mutable_mvsurfacetexturedescriptor()->::protobuf::mozilla::layers::SurfaceTextureDescriptor::MergeFrom(
-          from._internal_mvsurfacetexturedescriptor());
+    case kAMVSurfaceTextureDescriptor: {
+      _this->_internal_mutable_a_mvsurfacetexturedescriptor()->::protobuf::mozilla::layers::SurfaceTextureDescriptor::MergeFrom(
+          from._internal_a_mvsurfacetexturedescriptor());
       break;
     }
-    case kMVSurfaceDescriptorAndroidHardwareBuffer: {
-      _this->_internal_mutable_mvsurfacedescriptorandroidhardwarebuffer()->::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer::MergeFrom(
-          from._internal_mvsurfacedescriptorandroidhardwarebuffer());
+    case kAMVSurfaceDescriptorAndroidHardwareBuffer: {
+      _this->_internal_mutable_a_mvsurfacedescriptorandroidhardwarebuffer()->::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer::MergeFrom(
+          from._internal_a_mvsurfacedescriptorandroidhardwarebuffer());
       break;
     }
-    case kMVEGLImageDescriptor: {
-      _this->_internal_mutable_mveglimagedescriptor()->::protobuf::mozilla::layers::EGLImageDescriptor::MergeFrom(
-          from._internal_mveglimagedescriptor());
+    case kAMVEGLImageDescriptor: {
+      _this->_internal_mutable_a_mveglimagedescriptor()->::protobuf::mozilla::layers::EGLImageDescriptor::MergeFrom(
+          from._internal_a_mveglimagedescriptor());
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
-      _this->_internal_mutable_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
-          from._internal_mvsurfacedescriptormaciosurface());
+    case kAMVSurfaceDescriptorMacIOSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptormaciosurface()->::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptormaciosurface());
       break;
     }
-    case kMVSurfaceDescriptorSharedGLTexture: {
-      _this->_internal_mutable_mvsurfacedescriptorsharedgltexture()->::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture::MergeFrom(
-          from._internal_mvsurfacedescriptorsharedgltexture());
+    case kAMVSurfaceDescriptorSharedGLTexture: {
+      _this->_internal_mutable_a_mvsurfacedescriptorsharedgltexture()->::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture::MergeFrom(
+          from._internal_a_mvsurfacedescriptorsharedgltexture());
       break;
     }
-    case kMVSurfaceDescriptorGPUVideo: {
-      _this->_internal_mutable_mvsurfacedescriptorgpuvideo()->::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo::MergeFrom(
-          from._internal_mvsurfacedescriptorgpuvideo());
+    case kAMVSurfaceDescriptorGPUVideo: {
+      _this->_internal_mutable_a_mvsurfacedescriptorgpuvideo()->::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo::MergeFrom(
+          from._internal_a_mvsurfacedescriptorgpuvideo());
       break;
     }
-    case kMVSurfaceDescriptorRemoteTexture: {
-      _this->_internal_mutable_mvsurfacedescriptorremotetexture()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture::MergeFrom(
-          from._internal_mvsurfacedescriptorremotetexture());
+    case kAMVSurfaceDescriptorRemoteTexture: {
+      _this->_internal_mutable_a_mvsurfacedescriptorremotetexture()->::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture::MergeFrom(
+          from._internal_a_mvsurfacedescriptorremotetexture());
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
-      _this->_internal_mutable_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
-          from._internal_mvsurfacedescriptordcompsurface());
+    case kAMVSurfaceDescriptorDcompSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptordcompsurface()->::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptordcompsurface());
       break;
     }
-    case kMVSurfaceDescriptorExternalImage: {
-      _this->_internal_mutable_mvsurfacedescriptorexternalimage()->::protobuf::mozilla::layers::SurfaceDescriptorExternalImage::MergeFrom(
-          from._internal_mvsurfacedescriptorexternalimage());
+    case kAMVSurfaceDescriptorExternalImage: {
+      _this->_internal_mutable_a_mvsurfacedescriptorexternalimage()->::protobuf::mozilla::layers::SurfaceDescriptorExternalImage::MergeFrom(
+          from._internal_a_mvsurfacedescriptorexternalimage());
       break;
     }
-    case kMVSurfaceDescriptorCanvasSurface: {
-      _this->_internal_mutable_mvsurfacedescriptorcanvassurface()->::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface::MergeFrom(
-          from._internal_mvsurfacedescriptorcanvassurface());
+    case kAMVSurfaceDescriptorCanvasSurface: {
+      _this->_internal_mutable_a_mvsurfacedescriptorcanvassurface()->::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface::MergeFrom(
+          from._internal_a_mvsurfacedescriptorcanvassurface());
       break;
     }
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -10573,91 +10573,91 @@ void SurfaceDescriptor::CopyFrom(const SurfaceDescriptor& from) {
 
 bool SurfaceDescriptor::IsInitialized() const {
   switch (content_case()) {
-    case kMVSurfaceDescriptorBuffer: {
-      if (_internal_has_mvsurfacedescriptorbuffer()) {
-        if (!_impl_.content_.mvsurfacedescriptorbuffer_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorBuffer: {
+      if (_internal_has_a_mvsurfacedescriptorbuffer()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorbuffer_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorD3D10: {
-      if (_internal_has_mvsurfacedescriptord3d10()) {
-        if (!_impl_.content_.mvsurfacedescriptord3d10_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorD3D10: {
+      if (_internal_has_a_mvsurfacedescriptord3d10()) {
+        if (!_impl_.content_.a_mvsurfacedescriptord3d10_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorDXGIYCbCr: {
-      if (_internal_has_mvsurfacedescriptordxgiycbcr()) {
-        if (!_impl_.content_.mvsurfacedescriptordxgiycbcr_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorDXGIYCbCr: {
+      if (_internal_has_a_mvsurfacedescriptordxgiycbcr()) {
+        if (!_impl_.content_.a_mvsurfacedescriptordxgiycbcr_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorDMABuf: {
-      if (_internal_has_mvsurfacedescriptordmabuf()) {
-        if (!_impl_.content_.mvsurfacedescriptordmabuf_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorDMABuf: {
+      if (_internal_has_a_mvsurfacedescriptordmabuf()) {
+        if (!_impl_.content_.a_mvsurfacedescriptordmabuf_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceTextureDescriptor: {
-      if (_internal_has_mvsurfacetexturedescriptor()) {
-        if (!_impl_.content_.mvsurfacetexturedescriptor_->IsInitialized()) return false;
+    case kAMVSurfaceTextureDescriptor: {
+      if (_internal_has_a_mvsurfacetexturedescriptor()) {
+        if (!_impl_.content_.a_mvsurfacetexturedescriptor_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorAndroidHardwareBuffer: {
-      if (_internal_has_mvsurfacedescriptorandroidhardwarebuffer()) {
-        if (!_impl_.content_.mvsurfacedescriptorandroidhardwarebuffer_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorAndroidHardwareBuffer: {
+      if (_internal_has_a_mvsurfacedescriptorandroidhardwarebuffer()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorandroidhardwarebuffer_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVEGLImageDescriptor: {
-      if (_internal_has_mveglimagedescriptor()) {
-        if (!_impl_.content_.mveglimagedescriptor_->IsInitialized()) return false;
+    case kAMVEGLImageDescriptor: {
+      if (_internal_has_a_mveglimagedescriptor()) {
+        if (!_impl_.content_.a_mveglimagedescriptor_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorMacIOSurface: {
-      if (_internal_has_mvsurfacedescriptormaciosurface()) {
-        if (!_impl_.content_.mvsurfacedescriptormaciosurface_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorMacIOSurface: {
+      if (_internal_has_a_mvsurfacedescriptormaciosurface()) {
+        if (!_impl_.content_.a_mvsurfacedescriptormaciosurface_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorSharedGLTexture: {
-      if (_internal_has_mvsurfacedescriptorsharedgltexture()) {
-        if (!_impl_.content_.mvsurfacedescriptorsharedgltexture_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorSharedGLTexture: {
+      if (_internal_has_a_mvsurfacedescriptorsharedgltexture()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorsharedgltexture_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorGPUVideo: {
-      if (_internal_has_mvsurfacedescriptorgpuvideo()) {
-        if (!_impl_.content_.mvsurfacedescriptorgpuvideo_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorGPUVideo: {
+      if (_internal_has_a_mvsurfacedescriptorgpuvideo()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorgpuvideo_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorRemoteTexture: {
-      if (_internal_has_mvsurfacedescriptorremotetexture()) {
-        if (!_impl_.content_.mvsurfacedescriptorremotetexture_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorRemoteTexture: {
+      if (_internal_has_a_mvsurfacedescriptorremotetexture()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorremotetexture_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorDcompSurface: {
-      if (_internal_has_mvsurfacedescriptordcompsurface()) {
-        if (!_impl_.content_.mvsurfacedescriptordcompsurface_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorDcompSurface: {
+      if (_internal_has_a_mvsurfacedescriptordcompsurface()) {
+        if (!_impl_.content_.a_mvsurfacedescriptordcompsurface_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorExternalImage: {
-      if (_internal_has_mvsurfacedescriptorexternalimage()) {
-        if (!_impl_.content_.mvsurfacedescriptorexternalimage_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorExternalImage: {
+      if (_internal_has_a_mvsurfacedescriptorexternalimage()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorexternalimage_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSurfaceDescriptorCanvasSurface: {
-      if (_internal_has_mvsurfacedescriptorcanvassurface()) {
-        if (!_impl_.content_.mvsurfacedescriptorcanvassurface_->IsInitialized()) return false;
+    case kAMVSurfaceDescriptorCanvasSurface: {
+      if (_internal_has_a_mvsurfacedescriptorcanvassurface()) {
+        if (!_impl_.content_.a_mvsurfacedescriptorcanvassurface_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVnullT: {
+    case kAMVnullT: {
       break;
     }
     case CONTENT_NOT_SET: {

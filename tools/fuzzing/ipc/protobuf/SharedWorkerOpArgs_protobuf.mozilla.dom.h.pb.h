@@ -822,25 +822,25 @@ class SharedWorkerPortIdentifierOpArgs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPortIdentifierFieldNumber = 1,
+    kAPortIdentifierFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.MessagePortIdentifier portIdentifier = 1;
-  bool has_portidentifier() const;
+  // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+  bool has_a_portidentifier() const;
   private:
-  bool _internal_has_portidentifier() const;
+  bool _internal_has_a_portidentifier() const;
   public:
-  void clear_portidentifier();
-  const ::protobuf::mozilla::dom::MessagePortIdentifier& portidentifier() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MessagePortIdentifier* release_portidentifier();
-  ::protobuf::mozilla::dom::MessagePortIdentifier* mutable_portidentifier();
-  void set_allocated_portidentifier(::protobuf::mozilla::dom::MessagePortIdentifier* portidentifier);
+  void clear_a_portidentifier();
+  const ::protobuf::mozilla::dom::MessagePortIdentifier& a_portidentifier() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MessagePortIdentifier* release_a_portidentifier();
+  ::protobuf::mozilla::dom::MessagePortIdentifier* mutable_a_portidentifier();
+  void set_allocated_a_portidentifier(::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier);
   private:
-  const ::protobuf::mozilla::dom::MessagePortIdentifier& _internal_portidentifier() const;
-  ::protobuf::mozilla::dom::MessagePortIdentifier* _internal_mutable_portidentifier();
+  const ::protobuf::mozilla::dom::MessagePortIdentifier& _internal_a_portidentifier() const;
+  ::protobuf::mozilla::dom::MessagePortIdentifier* _internal_mutable_a_portidentifier();
   public:
-  void unsafe_arena_set_allocated_portidentifier(
-      ::protobuf::mozilla::dom::MessagePortIdentifier* portidentifier);
-  ::protobuf::mozilla::dom::MessagePortIdentifier* unsafe_arena_release_portidentifier();
+  void unsafe_arena_set_allocated_a_portidentifier(
+      ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier);
+  ::protobuf::mozilla::dom::MessagePortIdentifier* unsafe_arena_release_a_portidentifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs)
  private:
@@ -852,7 +852,7 @@ class SharedWorkerPortIdentifierOpArgs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::MessagePortIdentifier* portidentifier_;
+    ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -969,19 +969,19 @@ class SharedWorkerAddWindowIDOpArgs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWindowIDFieldNumber = 1,
+    kAWindowIDFieldNumber = 1,
   };
-  // required uint64 windowID = 1;
-  bool has_windowid() const;
+  // required uint64 a_windowID = 1;
+  bool has_a_windowid() const;
   private:
-  bool _internal_has_windowid() const;
+  bool _internal_has_a_windowid() const;
   public:
-  void clear_windowid();
-  uint64_t windowid() const;
-  void set_windowid(uint64_t value);
+  void clear_a_windowid();
+  uint64_t a_windowid() const;
+  void set_a_windowid(uint64_t value);
   private:
-  uint64_t _internal_windowid() const;
-  void _internal_set_windowid(uint64_t value);
+  uint64_t _internal_a_windowid() const;
+  void _internal_set_a_windowid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs)
@@ -994,7 +994,7 @@ class SharedWorkerAddWindowIDOpArgs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t windowid_;
+    uint64_t a_windowid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1111,19 +1111,19 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWindowIDFieldNumber = 1,
+    kAWindowIDFieldNumber = 1,
   };
-  // required uint64 windowID = 1;
-  bool has_windowid() const;
+  // required uint64 a_windowID = 1;
+  bool has_a_windowid() const;
   private:
-  bool _internal_has_windowid() const;
+  bool _internal_has_a_windowid() const;
   public:
-  void clear_windowid();
-  uint64_t windowid() const;
-  void set_windowid(uint64_t value);
+  void clear_a_windowid();
+  uint64_t a_windowid() const;
+  void set_a_windowid(uint64_t value);
   private:
-  uint64_t _internal_windowid() const;
-  void _internal_set_windowid(uint64_t value);
+  uint64_t _internal_a_windowid() const;
+  void _internal_set_a_windowid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs)
@@ -1136,7 +1136,7 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t windowid_;
+    uint64_t a_windowid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1185,14 +1185,14 @@ class SharedWorkerOpArgs final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVSharedWorkerSuspendOpArgs = 1,
-    kMVSharedWorkerResumeOpArgs = 2,
-    kMVSharedWorkerFreezeOpArgs = 3,
-    kMVSharedWorkerThawOpArgs = 4,
-    kMVSharedWorkerTerminateOpArgs = 5,
-    kMVSharedWorkerPortIdentifierOpArgs = 6,
-    kMVSharedWorkerAddWindowIDOpArgs = 7,
-    kMVSharedWorkerRemoveWindowIDOpArgs = 8,
+    kAMVSharedWorkerSuspendOpArgs = 1,
+    kAMVSharedWorkerResumeOpArgs = 2,
+    kAMVSharedWorkerFreezeOpArgs = 3,
+    kAMVSharedWorkerThawOpArgs = 4,
+    kAMVSharedWorkerTerminateOpArgs = 5,
+    kAMVSharedWorkerPortIdentifierOpArgs = 6,
+    kAMVSharedWorkerAddWindowIDOpArgs = 7,
+    kAMVSharedWorkerRemoveWindowIDOpArgs = 8,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1265,172 +1265,172 @@ class SharedWorkerOpArgs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVSharedWorkerSuspendOpArgsFieldNumber = 1,
-    kMVSharedWorkerResumeOpArgsFieldNumber = 2,
-    kMVSharedWorkerFreezeOpArgsFieldNumber = 3,
-    kMVSharedWorkerThawOpArgsFieldNumber = 4,
-    kMVSharedWorkerTerminateOpArgsFieldNumber = 5,
-    kMVSharedWorkerPortIdentifierOpArgsFieldNumber = 6,
-    kMVSharedWorkerAddWindowIDOpArgsFieldNumber = 7,
-    kMVSharedWorkerRemoveWindowIDOpArgsFieldNumber = 8,
+    kAMVSharedWorkerSuspendOpArgsFieldNumber = 1,
+    kAMVSharedWorkerResumeOpArgsFieldNumber = 2,
+    kAMVSharedWorkerFreezeOpArgsFieldNumber = 3,
+    kAMVSharedWorkerThawOpArgsFieldNumber = 4,
+    kAMVSharedWorkerTerminateOpArgsFieldNumber = 5,
+    kAMVSharedWorkerPortIdentifierOpArgsFieldNumber = 6,
+    kAMVSharedWorkerAddWindowIDOpArgsFieldNumber = 7,
+    kAMVSharedWorkerRemoveWindowIDOpArgsFieldNumber = 8,
   };
-  // .protobuf.mozilla.dom.SharedWorkerSuspendOpArgs mVSharedWorkerSuspendOpArgs = 1;
-  bool has_mvsharedworkersuspendopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerSuspendOpArgs a_mVSharedWorkerSuspendOpArgs = 1;
+  bool has_a_mvsharedworkersuspendopargs() const;
   private:
-  bool _internal_has_mvsharedworkersuspendopargs() const;
+  bool _internal_has_a_mvsharedworkersuspendopargs() const;
   public:
-  void clear_mvsharedworkersuspendopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& mvsharedworkersuspendopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* release_mvsharedworkersuspendopargs();
-  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* mutable_mvsharedworkersuspendopargs();
-  void set_allocated_mvsharedworkersuspendopargs(::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* mvsharedworkersuspendopargs);
+  void clear_a_mvsharedworkersuspendopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& a_mvsharedworkersuspendopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* release_a_mvsharedworkersuspendopargs();
+  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* mutable_a_mvsharedworkersuspendopargs();
+  void set_allocated_a_mvsharedworkersuspendopargs(::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* a_mvsharedworkersuspendopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& _internal_mvsharedworkersuspendopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* _internal_mutable_mvsharedworkersuspendopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& _internal_a_mvsharedworkersuspendopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* _internal_mutable_a_mvsharedworkersuspendopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkersuspendopargs(
-      ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* mvsharedworkersuspendopargs);
-  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* unsafe_arena_release_mvsharedworkersuspendopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkersuspendopargs(
+      ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* a_mvsharedworkersuspendopargs);
+  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* unsafe_arena_release_a_mvsharedworkersuspendopargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerResumeOpArgs mVSharedWorkerResumeOpArgs = 2;
-  bool has_mvsharedworkerresumeopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerResumeOpArgs a_mVSharedWorkerResumeOpArgs = 2;
+  bool has_a_mvsharedworkerresumeopargs() const;
   private:
-  bool _internal_has_mvsharedworkerresumeopargs() const;
+  bool _internal_has_a_mvsharedworkerresumeopargs() const;
   public:
-  void clear_mvsharedworkerresumeopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& mvsharedworkerresumeopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* release_mvsharedworkerresumeopargs();
-  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* mutable_mvsharedworkerresumeopargs();
-  void set_allocated_mvsharedworkerresumeopargs(::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* mvsharedworkerresumeopargs);
+  void clear_a_mvsharedworkerresumeopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& a_mvsharedworkerresumeopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* release_a_mvsharedworkerresumeopargs();
+  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* mutable_a_mvsharedworkerresumeopargs();
+  void set_allocated_a_mvsharedworkerresumeopargs(::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* a_mvsharedworkerresumeopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& _internal_mvsharedworkerresumeopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* _internal_mutable_mvsharedworkerresumeopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& _internal_a_mvsharedworkerresumeopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* _internal_mutable_a_mvsharedworkerresumeopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkerresumeopargs(
-      ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* mvsharedworkerresumeopargs);
-  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* unsafe_arena_release_mvsharedworkerresumeopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkerresumeopargs(
+      ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* a_mvsharedworkerresumeopargs);
+  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* unsafe_arena_release_a_mvsharedworkerresumeopargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerFreezeOpArgs mVSharedWorkerFreezeOpArgs = 3;
-  bool has_mvsharedworkerfreezeopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerFreezeOpArgs a_mVSharedWorkerFreezeOpArgs = 3;
+  bool has_a_mvsharedworkerfreezeopargs() const;
   private:
-  bool _internal_has_mvsharedworkerfreezeopargs() const;
+  bool _internal_has_a_mvsharedworkerfreezeopargs() const;
   public:
-  void clear_mvsharedworkerfreezeopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& mvsharedworkerfreezeopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* release_mvsharedworkerfreezeopargs();
-  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* mutable_mvsharedworkerfreezeopargs();
-  void set_allocated_mvsharedworkerfreezeopargs(::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* mvsharedworkerfreezeopargs);
+  void clear_a_mvsharedworkerfreezeopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& a_mvsharedworkerfreezeopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* release_a_mvsharedworkerfreezeopargs();
+  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* mutable_a_mvsharedworkerfreezeopargs();
+  void set_allocated_a_mvsharedworkerfreezeopargs(::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* a_mvsharedworkerfreezeopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& _internal_mvsharedworkerfreezeopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* _internal_mutable_mvsharedworkerfreezeopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& _internal_a_mvsharedworkerfreezeopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* _internal_mutable_a_mvsharedworkerfreezeopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkerfreezeopargs(
-      ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* mvsharedworkerfreezeopargs);
-  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* unsafe_arena_release_mvsharedworkerfreezeopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkerfreezeopargs(
+      ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* a_mvsharedworkerfreezeopargs);
+  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* unsafe_arena_release_a_mvsharedworkerfreezeopargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerThawOpArgs mVSharedWorkerThawOpArgs = 4;
-  bool has_mvsharedworkerthawopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerThawOpArgs a_mVSharedWorkerThawOpArgs = 4;
+  bool has_a_mvsharedworkerthawopargs() const;
   private:
-  bool _internal_has_mvsharedworkerthawopargs() const;
+  bool _internal_has_a_mvsharedworkerthawopargs() const;
   public:
-  void clear_mvsharedworkerthawopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& mvsharedworkerthawopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* release_mvsharedworkerthawopargs();
-  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* mutable_mvsharedworkerthawopargs();
-  void set_allocated_mvsharedworkerthawopargs(::protobuf::mozilla::dom::SharedWorkerThawOpArgs* mvsharedworkerthawopargs);
+  void clear_a_mvsharedworkerthawopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& a_mvsharedworkerthawopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* release_a_mvsharedworkerthawopargs();
+  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* mutable_a_mvsharedworkerthawopargs();
+  void set_allocated_a_mvsharedworkerthawopargs(::protobuf::mozilla::dom::SharedWorkerThawOpArgs* a_mvsharedworkerthawopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& _internal_mvsharedworkerthawopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* _internal_mutable_mvsharedworkerthawopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& _internal_a_mvsharedworkerthawopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* _internal_mutable_a_mvsharedworkerthawopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkerthawopargs(
-      ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* mvsharedworkerthawopargs);
-  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* unsafe_arena_release_mvsharedworkerthawopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkerthawopargs(
+      ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* a_mvsharedworkerthawopargs);
+  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* unsafe_arena_release_a_mvsharedworkerthawopargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerTerminateOpArgs mVSharedWorkerTerminateOpArgs = 5;
-  bool has_mvsharedworkerterminateopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerTerminateOpArgs a_mVSharedWorkerTerminateOpArgs = 5;
+  bool has_a_mvsharedworkerterminateopargs() const;
   private:
-  bool _internal_has_mvsharedworkerterminateopargs() const;
+  bool _internal_has_a_mvsharedworkerterminateopargs() const;
   public:
-  void clear_mvsharedworkerterminateopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& mvsharedworkerterminateopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* release_mvsharedworkerterminateopargs();
-  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* mutable_mvsharedworkerterminateopargs();
-  void set_allocated_mvsharedworkerterminateopargs(::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* mvsharedworkerterminateopargs);
+  void clear_a_mvsharedworkerterminateopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& a_mvsharedworkerterminateopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* release_a_mvsharedworkerterminateopargs();
+  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* mutable_a_mvsharedworkerterminateopargs();
+  void set_allocated_a_mvsharedworkerterminateopargs(::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* a_mvsharedworkerterminateopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& _internal_mvsharedworkerterminateopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* _internal_mutable_mvsharedworkerterminateopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& _internal_a_mvsharedworkerterminateopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* _internal_mutable_a_mvsharedworkerterminateopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkerterminateopargs(
-      ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* mvsharedworkerterminateopargs);
-  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* unsafe_arena_release_mvsharedworkerterminateopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkerterminateopargs(
+      ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* a_mvsharedworkerterminateopargs);
+  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* unsafe_arena_release_a_mvsharedworkerterminateopargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs mVSharedWorkerPortIdentifierOpArgs = 6;
-  bool has_mvsharedworkerportidentifieropargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs a_mVSharedWorkerPortIdentifierOpArgs = 6;
+  bool has_a_mvsharedworkerportidentifieropargs() const;
   private:
-  bool _internal_has_mvsharedworkerportidentifieropargs() const;
+  bool _internal_has_a_mvsharedworkerportidentifieropargs() const;
   public:
-  void clear_mvsharedworkerportidentifieropargs();
-  const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& mvsharedworkerportidentifieropargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* release_mvsharedworkerportidentifieropargs();
-  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* mutable_mvsharedworkerportidentifieropargs();
-  void set_allocated_mvsharedworkerportidentifieropargs(::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* mvsharedworkerportidentifieropargs);
+  void clear_a_mvsharedworkerportidentifieropargs();
+  const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& a_mvsharedworkerportidentifieropargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* release_a_mvsharedworkerportidentifieropargs();
+  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* mutable_a_mvsharedworkerportidentifieropargs();
+  void set_allocated_a_mvsharedworkerportidentifieropargs(::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* a_mvsharedworkerportidentifieropargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& _internal_mvsharedworkerportidentifieropargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* _internal_mutable_mvsharedworkerportidentifieropargs();
+  const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& _internal_a_mvsharedworkerportidentifieropargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* _internal_mutable_a_mvsharedworkerportidentifieropargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkerportidentifieropargs(
-      ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* mvsharedworkerportidentifieropargs);
-  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* unsafe_arena_release_mvsharedworkerportidentifieropargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkerportidentifieropargs(
+      ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* a_mvsharedworkerportidentifieropargs);
+  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* unsafe_arena_release_a_mvsharedworkerportidentifieropargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs mVSharedWorkerAddWindowIDOpArgs = 7;
-  bool has_mvsharedworkeraddwindowidopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs a_mVSharedWorkerAddWindowIDOpArgs = 7;
+  bool has_a_mvsharedworkeraddwindowidopargs() const;
   private:
-  bool _internal_has_mvsharedworkeraddwindowidopargs() const;
+  bool _internal_has_a_mvsharedworkeraddwindowidopargs() const;
   public:
-  void clear_mvsharedworkeraddwindowidopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& mvsharedworkeraddwindowidopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* release_mvsharedworkeraddwindowidopargs();
-  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* mutable_mvsharedworkeraddwindowidopargs();
-  void set_allocated_mvsharedworkeraddwindowidopargs(::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* mvsharedworkeraddwindowidopargs);
+  void clear_a_mvsharedworkeraddwindowidopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& a_mvsharedworkeraddwindowidopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* release_a_mvsharedworkeraddwindowidopargs();
+  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* mutable_a_mvsharedworkeraddwindowidopargs();
+  void set_allocated_a_mvsharedworkeraddwindowidopargs(::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* a_mvsharedworkeraddwindowidopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& _internal_mvsharedworkeraddwindowidopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* _internal_mutable_mvsharedworkeraddwindowidopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& _internal_a_mvsharedworkeraddwindowidopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* _internal_mutable_a_mvsharedworkeraddwindowidopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkeraddwindowidopargs(
-      ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* mvsharedworkeraddwindowidopargs);
-  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* unsafe_arena_release_mvsharedworkeraddwindowidopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkeraddwindowidopargs(
+      ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* a_mvsharedworkeraddwindowidopargs);
+  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* unsafe_arena_release_a_mvsharedworkeraddwindowidopargs();
 
-  // .protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs mVSharedWorkerRemoveWindowIDOpArgs = 8;
-  bool has_mvsharedworkerremovewindowidopargs() const;
+  // .protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs a_mVSharedWorkerRemoveWindowIDOpArgs = 8;
+  bool has_a_mvsharedworkerremovewindowidopargs() const;
   private:
-  bool _internal_has_mvsharedworkerremovewindowidopargs() const;
+  bool _internal_has_a_mvsharedworkerremovewindowidopargs() const;
   public:
-  void clear_mvsharedworkerremovewindowidopargs();
-  const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& mvsharedworkerremovewindowidopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* release_mvsharedworkerremovewindowidopargs();
-  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* mutable_mvsharedworkerremovewindowidopargs();
-  void set_allocated_mvsharedworkerremovewindowidopargs(::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* mvsharedworkerremovewindowidopargs);
+  void clear_a_mvsharedworkerremovewindowidopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& a_mvsharedworkerremovewindowidopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* release_a_mvsharedworkerremovewindowidopargs();
+  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* mutable_a_mvsharedworkerremovewindowidopargs();
+  void set_allocated_a_mvsharedworkerremovewindowidopargs(::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* a_mvsharedworkerremovewindowidopargs);
   private:
-  const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& _internal_mvsharedworkerremovewindowidopargs() const;
-  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* _internal_mutable_mvsharedworkerremovewindowidopargs();
+  const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& _internal_a_mvsharedworkerremovewindowidopargs() const;
+  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* _internal_mutable_a_mvsharedworkerremovewindowidopargs();
   public:
-  void unsafe_arena_set_allocated_mvsharedworkerremovewindowidopargs(
-      ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* mvsharedworkerremovewindowidopargs);
-  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* unsafe_arena_release_mvsharedworkerremovewindowidopargs();
+  void unsafe_arena_set_allocated_a_mvsharedworkerremovewindowidopargs(
+      ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* a_mvsharedworkerremovewindowidopargs);
+  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* unsafe_arena_release_a_mvsharedworkerremovewindowidopargs();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.SharedWorkerOpArgs)
  private:
   class _Internal;
-  void set_has_mvsharedworkersuspendopargs();
-  void set_has_mvsharedworkerresumeopargs();
-  void set_has_mvsharedworkerfreezeopargs();
-  void set_has_mvsharedworkerthawopargs();
-  void set_has_mvsharedworkerterminateopargs();
-  void set_has_mvsharedworkerportidentifieropargs();
-  void set_has_mvsharedworkeraddwindowidopargs();
-  void set_has_mvsharedworkerremovewindowidopargs();
+  void set_has_a_mvsharedworkersuspendopargs();
+  void set_has_a_mvsharedworkerresumeopargs();
+  void set_has_a_mvsharedworkerfreezeopargs();
+  void set_has_a_mvsharedworkerthawopargs();
+  void set_has_a_mvsharedworkerterminateopargs();
+  void set_has_a_mvsharedworkerportidentifieropargs();
+  void set_has_a_mvsharedworkeraddwindowidopargs();
+  void set_has_a_mvsharedworkerremovewindowidopargs();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1442,14 +1442,14 @@ class SharedWorkerOpArgs final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* mvsharedworkersuspendopargs_;
-      ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* mvsharedworkerresumeopargs_;
-      ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* mvsharedworkerfreezeopargs_;
-      ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* mvsharedworkerthawopargs_;
-      ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* mvsharedworkerterminateopargs_;
-      ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* mvsharedworkerportidentifieropargs_;
-      ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* mvsharedworkeraddwindowidopargs_;
-      ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* mvsharedworkerremovewindowidopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* a_mvsharedworkersuspendopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* a_mvsharedworkerresumeopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* a_mvsharedworkerfreezeopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* a_mvsharedworkerthawopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* a_mvsharedworkerterminateopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* a_mvsharedworkerportidentifieropargs_;
+      ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* a_mvsharedworkeraddwindowidopargs_;
+      ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* a_mvsharedworkerremovewindowidopargs_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1489,41 +1489,41 @@ class SharedWorkerOpArgs final :
 
 // SharedWorkerPortIdentifierOpArgs
 
-// required .protobuf.mozilla.dom.MessagePortIdentifier portIdentifier = 1;
-inline bool SharedWorkerPortIdentifierOpArgs::_internal_has_portidentifier() const {
+// required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+inline bool SharedWorkerPortIdentifierOpArgs::_internal_has_a_portidentifier() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.portidentifier_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_portidentifier_ != nullptr);
   return value;
 }
-inline bool SharedWorkerPortIdentifierOpArgs::has_portidentifier() const {
-  return _internal_has_portidentifier();
+inline bool SharedWorkerPortIdentifierOpArgs::has_a_portidentifier() const {
+  return _internal_has_a_portidentifier();
 }
-inline const ::protobuf::mozilla::dom::MessagePortIdentifier& SharedWorkerPortIdentifierOpArgs::_internal_portidentifier() const {
-  const ::protobuf::mozilla::dom::MessagePortIdentifier* p = _impl_.portidentifier_;
+inline const ::protobuf::mozilla::dom::MessagePortIdentifier& SharedWorkerPortIdentifierOpArgs::_internal_a_portidentifier() const {
+  const ::protobuf::mozilla::dom::MessagePortIdentifier* p = _impl_.a_portidentifier_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::MessagePortIdentifier&>(
       ::protobuf::mozilla::dom::_MessagePortIdentifier_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::MessagePortIdentifier& SharedWorkerPortIdentifierOpArgs::portidentifier() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.portIdentifier)
-  return _internal_portidentifier();
+inline const ::protobuf::mozilla::dom::MessagePortIdentifier& SharedWorkerPortIdentifierOpArgs::a_portidentifier() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
+  return _internal_a_portidentifier();
 }
-inline void SharedWorkerPortIdentifierOpArgs::unsafe_arena_set_allocated_portidentifier(
-    ::protobuf::mozilla::dom::MessagePortIdentifier* portidentifier) {
+inline void SharedWorkerPortIdentifierOpArgs::unsafe_arena_set_allocated_a_portidentifier(
+    ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.portidentifier_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_portidentifier_);
   }
-  _impl_.portidentifier_ = portidentifier;
-  if (portidentifier) {
+  _impl_.a_portidentifier_ = a_portidentifier;
+  if (a_portidentifier) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.portIdentifier)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
 }
-inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::release_portidentifier() {
+inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::release_a_portidentifier() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MessagePortIdentifier* temp = _impl_.portidentifier_;
-  _impl_.portidentifier_ = nullptr;
+  ::protobuf::mozilla::dom::MessagePortIdentifier* temp = _impl_.a_portidentifier_;
+  _impl_.a_portidentifier_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1535,704 +1535,704 @@ inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifi
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::unsafe_arena_release_portidentifier() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.portIdentifier)
+inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::unsafe_arena_release_a_portidentifier() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MessagePortIdentifier* temp = _impl_.portidentifier_;
-  _impl_.portidentifier_ = nullptr;
+  ::protobuf::mozilla::dom::MessagePortIdentifier* temp = _impl_.a_portidentifier_;
+  _impl_.a_portidentifier_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::_internal_mutable_portidentifier() {
+inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::_internal_mutable_a_portidentifier() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.portidentifier_ == nullptr) {
+  if (_impl_.a_portidentifier_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MessagePortIdentifier>(GetArenaForAllocation());
-    _impl_.portidentifier_ = p;
+    _impl_.a_portidentifier_ = p;
   }
-  return _impl_.portidentifier_;
+  return _impl_.a_portidentifier_;
 }
-inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::mutable_portidentifier() {
-  ::protobuf::mozilla::dom::MessagePortIdentifier* _msg = _internal_mutable_portidentifier();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.portIdentifier)
+inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::mutable_a_portidentifier() {
+  ::protobuf::mozilla::dom::MessagePortIdentifier* _msg = _internal_mutable_a_portidentifier();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
   return _msg;
 }
-inline void SharedWorkerPortIdentifierOpArgs::set_allocated_portidentifier(::protobuf::mozilla::dom::MessagePortIdentifier* portidentifier) {
+inline void SharedWorkerPortIdentifierOpArgs::set_allocated_a_portidentifier(::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.portidentifier_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_portidentifier_);
   }
-  if (portidentifier) {
+  if (a_portidentifier) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(portidentifier));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_portidentifier));
     if (message_arena != submessage_arena) {
-      portidentifier = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, portidentifier, submessage_arena);
+      a_portidentifier = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_portidentifier, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.portidentifier_ = portidentifier;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.portIdentifier)
+  _impl_.a_portidentifier_ = a_portidentifier;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
 }
 
 // -------------------------------------------------------------------
 
 // SharedWorkerAddWindowIDOpArgs
 
-// required uint64 windowID = 1;
-inline bool SharedWorkerAddWindowIDOpArgs::_internal_has_windowid() const {
+// required uint64 a_windowID = 1;
+inline bool SharedWorkerAddWindowIDOpArgs::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SharedWorkerAddWindowIDOpArgs::has_windowid() const {
-  return _internal_has_windowid();
+inline bool SharedWorkerAddWindowIDOpArgs::has_a_windowid() const {
+  return _internal_has_a_windowid();
 }
-inline void SharedWorkerAddWindowIDOpArgs::clear_windowid() {
-  _impl_.windowid_ = uint64_t{0u};
+inline void SharedWorkerAddWindowIDOpArgs::clear_a_windowid() {
+  _impl_.a_windowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t SharedWorkerAddWindowIDOpArgs::_internal_windowid() const {
-  return _impl_.windowid_;
+inline uint64_t SharedWorkerAddWindowIDOpArgs::_internal_a_windowid() const {
+  return _impl_.a_windowid_;
 }
-inline uint64_t SharedWorkerAddWindowIDOpArgs::windowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs.windowID)
-  return _internal_windowid();
+inline uint64_t SharedWorkerAddWindowIDOpArgs::a_windowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs.a_windowID)
+  return _internal_a_windowid();
 }
-inline void SharedWorkerAddWindowIDOpArgs::_internal_set_windowid(uint64_t value) {
+inline void SharedWorkerAddWindowIDOpArgs::_internal_set_a_windowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.windowid_ = value;
+  _impl_.a_windowid_ = value;
 }
-inline void SharedWorkerAddWindowIDOpArgs::set_windowid(uint64_t value) {
-  _internal_set_windowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs.windowID)
+inline void SharedWorkerAddWindowIDOpArgs::set_a_windowid(uint64_t value) {
+  _internal_set_a_windowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs.a_windowID)
 }
 
 // -------------------------------------------------------------------
 
 // SharedWorkerRemoveWindowIDOpArgs
 
-// required uint64 windowID = 1;
-inline bool SharedWorkerRemoveWindowIDOpArgs::_internal_has_windowid() const {
+// required uint64 a_windowID = 1;
+inline bool SharedWorkerRemoveWindowIDOpArgs::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SharedWorkerRemoveWindowIDOpArgs::has_windowid() const {
-  return _internal_has_windowid();
+inline bool SharedWorkerRemoveWindowIDOpArgs::has_a_windowid() const {
+  return _internal_has_a_windowid();
 }
-inline void SharedWorkerRemoveWindowIDOpArgs::clear_windowid() {
-  _impl_.windowid_ = uint64_t{0u};
+inline void SharedWorkerRemoveWindowIDOpArgs::clear_a_windowid() {
+  _impl_.a_windowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t SharedWorkerRemoveWindowIDOpArgs::_internal_windowid() const {
-  return _impl_.windowid_;
+inline uint64_t SharedWorkerRemoveWindowIDOpArgs::_internal_a_windowid() const {
+  return _impl_.a_windowid_;
 }
-inline uint64_t SharedWorkerRemoveWindowIDOpArgs::windowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs.windowID)
-  return _internal_windowid();
+inline uint64_t SharedWorkerRemoveWindowIDOpArgs::a_windowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs.a_windowID)
+  return _internal_a_windowid();
 }
-inline void SharedWorkerRemoveWindowIDOpArgs::_internal_set_windowid(uint64_t value) {
+inline void SharedWorkerRemoveWindowIDOpArgs::_internal_set_a_windowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.windowid_ = value;
+  _impl_.a_windowid_ = value;
 }
-inline void SharedWorkerRemoveWindowIDOpArgs::set_windowid(uint64_t value) {
-  _internal_set_windowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs.windowID)
+inline void SharedWorkerRemoveWindowIDOpArgs::set_a_windowid(uint64_t value) {
+  _internal_set_a_windowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs.a_windowID)
 }
 
 // -------------------------------------------------------------------
 
 // SharedWorkerOpArgs
 
-// .protobuf.mozilla.dom.SharedWorkerSuspendOpArgs mVSharedWorkerSuspendOpArgs = 1;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkersuspendopargs() const {
-  return content_case() == kMVSharedWorkerSuspendOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerSuspendOpArgs a_mVSharedWorkerSuspendOpArgs = 1;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkersuspendopargs() const {
+  return content_case() == kAMVSharedWorkerSuspendOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkersuspendopargs() const {
-  return _internal_has_mvsharedworkersuspendopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkersuspendopargs() const {
+  return _internal_has_a_mvsharedworkersuspendopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkersuspendopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerSuspendOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkersuspendopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerSuspendOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkersuspendopargs() {
-  if (_internal_has_mvsharedworkersuspendopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkersuspendopargs() {
+  if (_internal_has_a_mvsharedworkersuspendopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkersuspendopargs_;
+      delete _impl_.content_.a_mvsharedworkersuspendopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::release_mvsharedworkersuspendopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerSuspendOpArgs)
-  if (_internal_has_mvsharedworkersuspendopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkersuspendopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerSuspendOpArgs)
+  if (_internal_has_a_mvsharedworkersuspendopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* temp = _impl_.content_.mvsharedworkersuspendopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* temp = _impl_.content_.a_mvsharedworkersuspendopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkersuspendopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkersuspendopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkersuspendopargs() const {
-  return _internal_has_mvsharedworkersuspendopargs()
-      ? *_impl_.content_.mvsharedworkersuspendopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkersuspendopargs() const {
+  return _internal_has_a_mvsharedworkersuspendopargs()
+      ? *_impl_.content_.a_mvsharedworkersuspendopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerSuspendOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& SharedWorkerOpArgs::mvsharedworkersuspendopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerSuspendOpArgs)
-  return _internal_mvsharedworkersuspendopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs& SharedWorkerOpArgs::a_mvsharedworkersuspendopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerSuspendOpArgs)
+  return _internal_a_mvsharedworkersuspendopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkersuspendopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerSuspendOpArgs)
-  if (_internal_has_mvsharedworkersuspendopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkersuspendopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerSuspendOpArgs)
+  if (_internal_has_a_mvsharedworkersuspendopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* temp = _impl_.content_.mvsharedworkersuspendopargs_;
-    _impl_.content_.mvsharedworkersuspendopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* temp = _impl_.content_.a_mvsharedworkersuspendopargs_;
+    _impl_.content_.a_mvsharedworkersuspendopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkersuspendopargs(::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* mvsharedworkersuspendopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkersuspendopargs(::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* a_mvsharedworkersuspendopargs) {
   clear_content();
-  if (mvsharedworkersuspendopargs) {
-    set_has_mvsharedworkersuspendopargs();
-    _impl_.content_.mvsharedworkersuspendopargs_ = mvsharedworkersuspendopargs;
+  if (a_mvsharedworkersuspendopargs) {
+    set_has_a_mvsharedworkersuspendopargs();
+    _impl_.content_.a_mvsharedworkersuspendopargs_ = a_mvsharedworkersuspendopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerSuspendOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerSuspendOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkersuspendopargs() {
-  if (!_internal_has_mvsharedworkersuspendopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkersuspendopargs() {
+  if (!_internal_has_a_mvsharedworkersuspendopargs()) {
     clear_content();
-    set_has_mvsharedworkersuspendopargs();
-    _impl_.content_.mvsharedworkersuspendopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkersuspendopargs();
+    _impl_.content_.a_mvsharedworkersuspendopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkersuspendopargs_;
+  return _impl_.content_.a_mvsharedworkersuspendopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkersuspendopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* _msg = _internal_mutable_mvsharedworkersuspendopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerSuspendOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkersuspendopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerSuspendOpArgs* _msg = _internal_mutable_a_mvsharedworkersuspendopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerSuspendOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerResumeOpArgs mVSharedWorkerResumeOpArgs = 2;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkerresumeopargs() const {
-  return content_case() == kMVSharedWorkerResumeOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerResumeOpArgs a_mVSharedWorkerResumeOpArgs = 2;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkerresumeopargs() const {
+  return content_case() == kAMVSharedWorkerResumeOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkerresumeopargs() const {
-  return _internal_has_mvsharedworkerresumeopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkerresumeopargs() const {
+  return _internal_has_a_mvsharedworkerresumeopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkerresumeopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerResumeOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkerresumeopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerResumeOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkerresumeopargs() {
-  if (_internal_has_mvsharedworkerresumeopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkerresumeopargs() {
+  if (_internal_has_a_mvsharedworkerresumeopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkerresumeopargs_;
+      delete _impl_.content_.a_mvsharedworkerresumeopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::release_mvsharedworkerresumeopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerResumeOpArgs)
-  if (_internal_has_mvsharedworkerresumeopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkerresumeopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerResumeOpArgs)
+  if (_internal_has_a_mvsharedworkerresumeopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* temp = _impl_.content_.mvsharedworkerresumeopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* temp = _impl_.content_.a_mvsharedworkerresumeopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkerresumeopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkerresumeopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkerresumeopargs() const {
-  return _internal_has_mvsharedworkerresumeopargs()
-      ? *_impl_.content_.mvsharedworkerresumeopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkerresumeopargs() const {
+  return _internal_has_a_mvsharedworkerresumeopargs()
+      ? *_impl_.content_.a_mvsharedworkerresumeopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerResumeOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& SharedWorkerOpArgs::mvsharedworkerresumeopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerResumeOpArgs)
-  return _internal_mvsharedworkerresumeopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs& SharedWorkerOpArgs::a_mvsharedworkerresumeopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerResumeOpArgs)
+  return _internal_a_mvsharedworkerresumeopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkerresumeopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerResumeOpArgs)
-  if (_internal_has_mvsharedworkerresumeopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkerresumeopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerResumeOpArgs)
+  if (_internal_has_a_mvsharedworkerresumeopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* temp = _impl_.content_.mvsharedworkerresumeopargs_;
-    _impl_.content_.mvsharedworkerresumeopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* temp = _impl_.content_.a_mvsharedworkerresumeopargs_;
+    _impl_.content_.a_mvsharedworkerresumeopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkerresumeopargs(::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* mvsharedworkerresumeopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkerresumeopargs(::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* a_mvsharedworkerresumeopargs) {
   clear_content();
-  if (mvsharedworkerresumeopargs) {
-    set_has_mvsharedworkerresumeopargs();
-    _impl_.content_.mvsharedworkerresumeopargs_ = mvsharedworkerresumeopargs;
+  if (a_mvsharedworkerresumeopargs) {
+    set_has_a_mvsharedworkerresumeopargs();
+    _impl_.content_.a_mvsharedworkerresumeopargs_ = a_mvsharedworkerresumeopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerResumeOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerResumeOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkerresumeopargs() {
-  if (!_internal_has_mvsharedworkerresumeopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkerresumeopargs() {
+  if (!_internal_has_a_mvsharedworkerresumeopargs()) {
     clear_content();
-    set_has_mvsharedworkerresumeopargs();
-    _impl_.content_.mvsharedworkerresumeopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkerresumeopargs();
+    _impl_.content_.a_mvsharedworkerresumeopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkerresumeopargs_;
+  return _impl_.content_.a_mvsharedworkerresumeopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkerresumeopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* _msg = _internal_mutable_mvsharedworkerresumeopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerResumeOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkerresumeopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerResumeOpArgs* _msg = _internal_mutable_a_mvsharedworkerresumeopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerResumeOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerFreezeOpArgs mVSharedWorkerFreezeOpArgs = 3;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkerfreezeopargs() const {
-  return content_case() == kMVSharedWorkerFreezeOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerFreezeOpArgs a_mVSharedWorkerFreezeOpArgs = 3;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkerfreezeopargs() const {
+  return content_case() == kAMVSharedWorkerFreezeOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkerfreezeopargs() const {
-  return _internal_has_mvsharedworkerfreezeopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkerfreezeopargs() const {
+  return _internal_has_a_mvsharedworkerfreezeopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkerfreezeopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerFreezeOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkerfreezeopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerFreezeOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkerfreezeopargs() {
-  if (_internal_has_mvsharedworkerfreezeopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkerfreezeopargs() {
+  if (_internal_has_a_mvsharedworkerfreezeopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkerfreezeopargs_;
+      delete _impl_.content_.a_mvsharedworkerfreezeopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::release_mvsharedworkerfreezeopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerFreezeOpArgs)
-  if (_internal_has_mvsharedworkerfreezeopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkerfreezeopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerFreezeOpArgs)
+  if (_internal_has_a_mvsharedworkerfreezeopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* temp = _impl_.content_.mvsharedworkerfreezeopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* temp = _impl_.content_.a_mvsharedworkerfreezeopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkerfreezeopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkerfreezeopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkerfreezeopargs() const {
-  return _internal_has_mvsharedworkerfreezeopargs()
-      ? *_impl_.content_.mvsharedworkerfreezeopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkerfreezeopargs() const {
+  return _internal_has_a_mvsharedworkerfreezeopargs()
+      ? *_impl_.content_.a_mvsharedworkerfreezeopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerFreezeOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& SharedWorkerOpArgs::mvsharedworkerfreezeopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerFreezeOpArgs)
-  return _internal_mvsharedworkerfreezeopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs& SharedWorkerOpArgs::a_mvsharedworkerfreezeopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerFreezeOpArgs)
+  return _internal_a_mvsharedworkerfreezeopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkerfreezeopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerFreezeOpArgs)
-  if (_internal_has_mvsharedworkerfreezeopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkerfreezeopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerFreezeOpArgs)
+  if (_internal_has_a_mvsharedworkerfreezeopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* temp = _impl_.content_.mvsharedworkerfreezeopargs_;
-    _impl_.content_.mvsharedworkerfreezeopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* temp = _impl_.content_.a_mvsharedworkerfreezeopargs_;
+    _impl_.content_.a_mvsharedworkerfreezeopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkerfreezeopargs(::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* mvsharedworkerfreezeopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkerfreezeopargs(::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* a_mvsharedworkerfreezeopargs) {
   clear_content();
-  if (mvsharedworkerfreezeopargs) {
-    set_has_mvsharedworkerfreezeopargs();
-    _impl_.content_.mvsharedworkerfreezeopargs_ = mvsharedworkerfreezeopargs;
+  if (a_mvsharedworkerfreezeopargs) {
+    set_has_a_mvsharedworkerfreezeopargs();
+    _impl_.content_.a_mvsharedworkerfreezeopargs_ = a_mvsharedworkerfreezeopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerFreezeOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerFreezeOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkerfreezeopargs() {
-  if (!_internal_has_mvsharedworkerfreezeopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkerfreezeopargs() {
+  if (!_internal_has_a_mvsharedworkerfreezeopargs()) {
     clear_content();
-    set_has_mvsharedworkerfreezeopargs();
-    _impl_.content_.mvsharedworkerfreezeopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkerfreezeopargs();
+    _impl_.content_.a_mvsharedworkerfreezeopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkerfreezeopargs_;
+  return _impl_.content_.a_mvsharedworkerfreezeopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkerfreezeopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* _msg = _internal_mutable_mvsharedworkerfreezeopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerFreezeOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkerfreezeopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerFreezeOpArgs* _msg = _internal_mutable_a_mvsharedworkerfreezeopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerFreezeOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerThawOpArgs mVSharedWorkerThawOpArgs = 4;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkerthawopargs() const {
-  return content_case() == kMVSharedWorkerThawOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerThawOpArgs a_mVSharedWorkerThawOpArgs = 4;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkerthawopargs() const {
+  return content_case() == kAMVSharedWorkerThawOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkerthawopargs() const {
-  return _internal_has_mvsharedworkerthawopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkerthawopargs() const {
+  return _internal_has_a_mvsharedworkerthawopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkerthawopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerThawOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkerthawopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerThawOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkerthawopargs() {
-  if (_internal_has_mvsharedworkerthawopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkerthawopargs() {
+  if (_internal_has_a_mvsharedworkerthawopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkerthawopargs_;
+      delete _impl_.content_.a_mvsharedworkerthawopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::release_mvsharedworkerthawopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerThawOpArgs)
-  if (_internal_has_mvsharedworkerthawopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkerthawopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerThawOpArgs)
+  if (_internal_has_a_mvsharedworkerthawopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* temp = _impl_.content_.mvsharedworkerthawopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* temp = _impl_.content_.a_mvsharedworkerthawopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkerthawopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkerthawopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkerthawopargs() const {
-  return _internal_has_mvsharedworkerthawopargs()
-      ? *_impl_.content_.mvsharedworkerthawopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkerthawopargs() const {
+  return _internal_has_a_mvsharedworkerthawopargs()
+      ? *_impl_.content_.a_mvsharedworkerthawopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerThawOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerThawOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& SharedWorkerOpArgs::mvsharedworkerthawopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerThawOpArgs)
-  return _internal_mvsharedworkerthawopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerThawOpArgs& SharedWorkerOpArgs::a_mvsharedworkerthawopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerThawOpArgs)
+  return _internal_a_mvsharedworkerthawopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkerthawopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerThawOpArgs)
-  if (_internal_has_mvsharedworkerthawopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkerthawopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerThawOpArgs)
+  if (_internal_has_a_mvsharedworkerthawopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* temp = _impl_.content_.mvsharedworkerthawopargs_;
-    _impl_.content_.mvsharedworkerthawopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* temp = _impl_.content_.a_mvsharedworkerthawopargs_;
+    _impl_.content_.a_mvsharedworkerthawopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkerthawopargs(::protobuf::mozilla::dom::SharedWorkerThawOpArgs* mvsharedworkerthawopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkerthawopargs(::protobuf::mozilla::dom::SharedWorkerThawOpArgs* a_mvsharedworkerthawopargs) {
   clear_content();
-  if (mvsharedworkerthawopargs) {
-    set_has_mvsharedworkerthawopargs();
-    _impl_.content_.mvsharedworkerthawopargs_ = mvsharedworkerthawopargs;
+  if (a_mvsharedworkerthawopargs) {
+    set_has_a_mvsharedworkerthawopargs();
+    _impl_.content_.a_mvsharedworkerthawopargs_ = a_mvsharedworkerthawopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerThawOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerThawOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkerthawopargs() {
-  if (!_internal_has_mvsharedworkerthawopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkerthawopargs() {
+  if (!_internal_has_a_mvsharedworkerthawopargs()) {
     clear_content();
-    set_has_mvsharedworkerthawopargs();
-    _impl_.content_.mvsharedworkerthawopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerThawOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkerthawopargs();
+    _impl_.content_.a_mvsharedworkerthawopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerThawOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkerthawopargs_;
+  return _impl_.content_.a_mvsharedworkerthawopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkerthawopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* _msg = _internal_mutable_mvsharedworkerthawopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerThawOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkerthawopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerThawOpArgs* _msg = _internal_mutable_a_mvsharedworkerthawopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerThawOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerTerminateOpArgs mVSharedWorkerTerminateOpArgs = 5;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkerterminateopargs() const {
-  return content_case() == kMVSharedWorkerTerminateOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerTerminateOpArgs a_mVSharedWorkerTerminateOpArgs = 5;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkerterminateopargs() const {
+  return content_case() == kAMVSharedWorkerTerminateOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkerterminateopargs() const {
-  return _internal_has_mvsharedworkerterminateopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkerterminateopargs() const {
+  return _internal_has_a_mvsharedworkerterminateopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkerterminateopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerTerminateOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkerterminateopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerTerminateOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkerterminateopargs() {
-  if (_internal_has_mvsharedworkerterminateopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkerterminateopargs() {
+  if (_internal_has_a_mvsharedworkerterminateopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkerterminateopargs_;
+      delete _impl_.content_.a_mvsharedworkerterminateopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::release_mvsharedworkerterminateopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerTerminateOpArgs)
-  if (_internal_has_mvsharedworkerterminateopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkerterminateopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerTerminateOpArgs)
+  if (_internal_has_a_mvsharedworkerterminateopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* temp = _impl_.content_.mvsharedworkerterminateopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* temp = _impl_.content_.a_mvsharedworkerterminateopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkerterminateopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkerterminateopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkerterminateopargs() const {
-  return _internal_has_mvsharedworkerterminateopargs()
-      ? *_impl_.content_.mvsharedworkerterminateopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkerterminateopargs() const {
+  return _internal_has_a_mvsharedworkerterminateopargs()
+      ? *_impl_.content_.a_mvsharedworkerterminateopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerTerminateOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& SharedWorkerOpArgs::mvsharedworkerterminateopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerTerminateOpArgs)
-  return _internal_mvsharedworkerterminateopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs& SharedWorkerOpArgs::a_mvsharedworkerterminateopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerTerminateOpArgs)
+  return _internal_a_mvsharedworkerterminateopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkerterminateopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerTerminateOpArgs)
-  if (_internal_has_mvsharedworkerterminateopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkerterminateopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerTerminateOpArgs)
+  if (_internal_has_a_mvsharedworkerterminateopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* temp = _impl_.content_.mvsharedworkerterminateopargs_;
-    _impl_.content_.mvsharedworkerterminateopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* temp = _impl_.content_.a_mvsharedworkerterminateopargs_;
+    _impl_.content_.a_mvsharedworkerterminateopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkerterminateopargs(::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* mvsharedworkerterminateopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkerterminateopargs(::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* a_mvsharedworkerterminateopargs) {
   clear_content();
-  if (mvsharedworkerterminateopargs) {
-    set_has_mvsharedworkerterminateopargs();
-    _impl_.content_.mvsharedworkerterminateopargs_ = mvsharedworkerterminateopargs;
+  if (a_mvsharedworkerterminateopargs) {
+    set_has_a_mvsharedworkerterminateopargs();
+    _impl_.content_.a_mvsharedworkerterminateopargs_ = a_mvsharedworkerterminateopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerTerminateOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerTerminateOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkerterminateopargs() {
-  if (!_internal_has_mvsharedworkerterminateopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkerterminateopargs() {
+  if (!_internal_has_a_mvsharedworkerterminateopargs()) {
     clear_content();
-    set_has_mvsharedworkerterminateopargs();
-    _impl_.content_.mvsharedworkerterminateopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkerterminateopargs();
+    _impl_.content_.a_mvsharedworkerterminateopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkerterminateopargs_;
+  return _impl_.content_.a_mvsharedworkerterminateopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkerterminateopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* _msg = _internal_mutable_mvsharedworkerterminateopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerTerminateOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkerterminateopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerTerminateOpArgs* _msg = _internal_mutable_a_mvsharedworkerterminateopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerTerminateOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs mVSharedWorkerPortIdentifierOpArgs = 6;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkerportidentifieropargs() const {
-  return content_case() == kMVSharedWorkerPortIdentifierOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs a_mVSharedWorkerPortIdentifierOpArgs = 6;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkerportidentifieropargs() const {
+  return content_case() == kAMVSharedWorkerPortIdentifierOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkerportidentifieropargs() const {
-  return _internal_has_mvsharedworkerportidentifieropargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkerportidentifieropargs() const {
+  return _internal_has_a_mvsharedworkerportidentifieropargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkerportidentifieropargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerPortIdentifierOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkerportidentifieropargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerPortIdentifierOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkerportidentifieropargs() {
-  if (_internal_has_mvsharedworkerportidentifieropargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkerportidentifieropargs() {
+  if (_internal_has_a_mvsharedworkerportidentifieropargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkerportidentifieropargs_;
+      delete _impl_.content_.a_mvsharedworkerportidentifieropargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::release_mvsharedworkerportidentifieropargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerPortIdentifierOpArgs)
-  if (_internal_has_mvsharedworkerportidentifieropargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkerportidentifieropargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerPortIdentifierOpArgs)
+  if (_internal_has_a_mvsharedworkerportidentifieropargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* temp = _impl_.content_.mvsharedworkerportidentifieropargs_;
+    ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* temp = _impl_.content_.a_mvsharedworkerportidentifieropargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkerportidentifieropargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkerportidentifieropargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkerportidentifieropargs() const {
-  return _internal_has_mvsharedworkerportidentifieropargs()
-      ? *_impl_.content_.mvsharedworkerportidentifieropargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkerportidentifieropargs() const {
+  return _internal_has_a_mvsharedworkerportidentifieropargs()
+      ? *_impl_.content_.a_mvsharedworkerportidentifieropargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerPortIdentifierOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& SharedWorkerOpArgs::mvsharedworkerportidentifieropargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerPortIdentifierOpArgs)
-  return _internal_mvsharedworkerportidentifieropargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs& SharedWorkerOpArgs::a_mvsharedworkerportidentifieropargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerPortIdentifierOpArgs)
+  return _internal_a_mvsharedworkerportidentifieropargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkerportidentifieropargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerPortIdentifierOpArgs)
-  if (_internal_has_mvsharedworkerportidentifieropargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkerportidentifieropargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerPortIdentifierOpArgs)
+  if (_internal_has_a_mvsharedworkerportidentifieropargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* temp = _impl_.content_.mvsharedworkerportidentifieropargs_;
-    _impl_.content_.mvsharedworkerportidentifieropargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* temp = _impl_.content_.a_mvsharedworkerportidentifieropargs_;
+    _impl_.content_.a_mvsharedworkerportidentifieropargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkerportidentifieropargs(::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* mvsharedworkerportidentifieropargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkerportidentifieropargs(::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* a_mvsharedworkerportidentifieropargs) {
   clear_content();
-  if (mvsharedworkerportidentifieropargs) {
-    set_has_mvsharedworkerportidentifieropargs();
-    _impl_.content_.mvsharedworkerportidentifieropargs_ = mvsharedworkerportidentifieropargs;
+  if (a_mvsharedworkerportidentifieropargs) {
+    set_has_a_mvsharedworkerportidentifieropargs();
+    _impl_.content_.a_mvsharedworkerportidentifieropargs_ = a_mvsharedworkerportidentifieropargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerPortIdentifierOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerPortIdentifierOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkerportidentifieropargs() {
-  if (!_internal_has_mvsharedworkerportidentifieropargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkerportidentifieropargs() {
+  if (!_internal_has_a_mvsharedworkerportidentifieropargs()) {
     clear_content();
-    set_has_mvsharedworkerportidentifieropargs();
-    _impl_.content_.mvsharedworkerportidentifieropargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkerportidentifieropargs();
+    _impl_.content_.a_mvsharedworkerportidentifieropargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkerportidentifieropargs_;
+  return _impl_.content_.a_mvsharedworkerportidentifieropargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkerportidentifieropargs() {
-  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* _msg = _internal_mutable_mvsharedworkerportidentifieropargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerPortIdentifierOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkerportidentifieropargs() {
+  ::protobuf::mozilla::dom::SharedWorkerPortIdentifierOpArgs* _msg = _internal_mutable_a_mvsharedworkerportidentifieropargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerPortIdentifierOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs mVSharedWorkerAddWindowIDOpArgs = 7;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkeraddwindowidopargs() const {
-  return content_case() == kMVSharedWorkerAddWindowIDOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs a_mVSharedWorkerAddWindowIDOpArgs = 7;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkeraddwindowidopargs() const {
+  return content_case() == kAMVSharedWorkerAddWindowIDOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkeraddwindowidopargs() const {
-  return _internal_has_mvsharedworkeraddwindowidopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkeraddwindowidopargs() const {
+  return _internal_has_a_mvsharedworkeraddwindowidopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkeraddwindowidopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerAddWindowIDOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkeraddwindowidopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerAddWindowIDOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkeraddwindowidopargs() {
-  if (_internal_has_mvsharedworkeraddwindowidopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkeraddwindowidopargs() {
+  if (_internal_has_a_mvsharedworkeraddwindowidopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkeraddwindowidopargs_;
+      delete _impl_.content_.a_mvsharedworkeraddwindowidopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::release_mvsharedworkeraddwindowidopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerAddWindowIDOpArgs)
-  if (_internal_has_mvsharedworkeraddwindowidopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkeraddwindowidopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerAddWindowIDOpArgs)
+  if (_internal_has_a_mvsharedworkeraddwindowidopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* temp = _impl_.content_.mvsharedworkeraddwindowidopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* temp = _impl_.content_.a_mvsharedworkeraddwindowidopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkeraddwindowidopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkeraddwindowidopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkeraddwindowidopargs() const {
-  return _internal_has_mvsharedworkeraddwindowidopargs()
-      ? *_impl_.content_.mvsharedworkeraddwindowidopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkeraddwindowidopargs() const {
+  return _internal_has_a_mvsharedworkeraddwindowidopargs()
+      ? *_impl_.content_.a_mvsharedworkeraddwindowidopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerAddWindowIDOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& SharedWorkerOpArgs::mvsharedworkeraddwindowidopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerAddWindowIDOpArgs)
-  return _internal_mvsharedworkeraddwindowidopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs& SharedWorkerOpArgs::a_mvsharedworkeraddwindowidopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerAddWindowIDOpArgs)
+  return _internal_a_mvsharedworkeraddwindowidopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkeraddwindowidopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerAddWindowIDOpArgs)
-  if (_internal_has_mvsharedworkeraddwindowidopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkeraddwindowidopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerAddWindowIDOpArgs)
+  if (_internal_has_a_mvsharedworkeraddwindowidopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* temp = _impl_.content_.mvsharedworkeraddwindowidopargs_;
-    _impl_.content_.mvsharedworkeraddwindowidopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* temp = _impl_.content_.a_mvsharedworkeraddwindowidopargs_;
+    _impl_.content_.a_mvsharedworkeraddwindowidopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkeraddwindowidopargs(::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* mvsharedworkeraddwindowidopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkeraddwindowidopargs(::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* a_mvsharedworkeraddwindowidopargs) {
   clear_content();
-  if (mvsharedworkeraddwindowidopargs) {
-    set_has_mvsharedworkeraddwindowidopargs();
-    _impl_.content_.mvsharedworkeraddwindowidopargs_ = mvsharedworkeraddwindowidopargs;
+  if (a_mvsharedworkeraddwindowidopargs) {
+    set_has_a_mvsharedworkeraddwindowidopargs();
+    _impl_.content_.a_mvsharedworkeraddwindowidopargs_ = a_mvsharedworkeraddwindowidopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerAddWindowIDOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerAddWindowIDOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkeraddwindowidopargs() {
-  if (!_internal_has_mvsharedworkeraddwindowidopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkeraddwindowidopargs() {
+  if (!_internal_has_a_mvsharedworkeraddwindowidopargs()) {
     clear_content();
-    set_has_mvsharedworkeraddwindowidopargs();
-    _impl_.content_.mvsharedworkeraddwindowidopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkeraddwindowidopargs();
+    _impl_.content_.a_mvsharedworkeraddwindowidopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkeraddwindowidopargs_;
+  return _impl_.content_.a_mvsharedworkeraddwindowidopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkeraddwindowidopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* _msg = _internal_mutable_mvsharedworkeraddwindowidopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerAddWindowIDOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkeraddwindowidopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerAddWindowIDOpArgs* _msg = _internal_mutable_a_mvsharedworkeraddwindowidopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerAddWindowIDOpArgs)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs mVSharedWorkerRemoveWindowIDOpArgs = 8;
-inline bool SharedWorkerOpArgs::_internal_has_mvsharedworkerremovewindowidopargs() const {
-  return content_case() == kMVSharedWorkerRemoveWindowIDOpArgs;
+// .protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs a_mVSharedWorkerRemoveWindowIDOpArgs = 8;
+inline bool SharedWorkerOpArgs::_internal_has_a_mvsharedworkerremovewindowidopargs() const {
+  return content_case() == kAMVSharedWorkerRemoveWindowIDOpArgs;
 }
-inline bool SharedWorkerOpArgs::has_mvsharedworkerremovewindowidopargs() const {
-  return _internal_has_mvsharedworkerremovewindowidopargs();
+inline bool SharedWorkerOpArgs::has_a_mvsharedworkerremovewindowidopargs() const {
+  return _internal_has_a_mvsharedworkerremovewindowidopargs();
 }
-inline void SharedWorkerOpArgs::set_has_mvsharedworkerremovewindowidopargs() {
-  _impl_._oneof_case_[0] = kMVSharedWorkerRemoveWindowIDOpArgs;
+inline void SharedWorkerOpArgs::set_has_a_mvsharedworkerremovewindowidopargs() {
+  _impl_._oneof_case_[0] = kAMVSharedWorkerRemoveWindowIDOpArgs;
 }
-inline void SharedWorkerOpArgs::clear_mvsharedworkerremovewindowidopargs() {
-  if (_internal_has_mvsharedworkerremovewindowidopargs()) {
+inline void SharedWorkerOpArgs::clear_a_mvsharedworkerremovewindowidopargs() {
+  if (_internal_has_a_mvsharedworkerremovewindowidopargs()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsharedworkerremovewindowidopargs_;
+      delete _impl_.content_.a_mvsharedworkerremovewindowidopargs_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::release_mvsharedworkerremovewindowidopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerRemoveWindowIDOpArgs)
-  if (_internal_has_mvsharedworkerremovewindowidopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::release_a_mvsharedworkerremovewindowidopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerRemoveWindowIDOpArgs)
+  if (_internal_has_a_mvsharedworkerremovewindowidopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* temp = _impl_.content_.mvsharedworkerremovewindowidopargs_;
+    ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* temp = _impl_.content_.a_mvsharedworkerremovewindowidopargs_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsharedworkerremovewindowidopargs_ = nullptr;
+    _impl_.content_.a_mvsharedworkerremovewindowidopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& SharedWorkerOpArgs::_internal_mvsharedworkerremovewindowidopargs() const {
-  return _internal_has_mvsharedworkerremovewindowidopargs()
-      ? *_impl_.content_.mvsharedworkerremovewindowidopargs_
+inline const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& SharedWorkerOpArgs::_internal_a_mvsharedworkerremovewindowidopargs() const {
+  return _internal_has_a_mvsharedworkerremovewindowidopargs()
+      ? *_impl_.content_.a_mvsharedworkerremovewindowidopargs_
       : reinterpret_cast< ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs&>(::protobuf::mozilla::dom::_SharedWorkerRemoveWindowIDOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& SharedWorkerOpArgs::mvsharedworkerremovewindowidopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerRemoveWindowIDOpArgs)
-  return _internal_mvsharedworkerremovewindowidopargs();
+inline const ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs& SharedWorkerOpArgs::a_mvsharedworkerremovewindowidopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerRemoveWindowIDOpArgs)
+  return _internal_a_mvsharedworkerremovewindowidopargs();
 }
-inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::unsafe_arena_release_mvsharedworkerremovewindowidopargs() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerRemoveWindowIDOpArgs)
-  if (_internal_has_mvsharedworkerremovewindowidopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::unsafe_arena_release_a_mvsharedworkerremovewindowidopargs() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerRemoveWindowIDOpArgs)
+  if (_internal_has_a_mvsharedworkerremovewindowidopargs()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* temp = _impl_.content_.mvsharedworkerremovewindowidopargs_;
-    _impl_.content_.mvsharedworkerremovewindowidopargs_ = nullptr;
+    ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* temp = _impl_.content_.a_mvsharedworkerremovewindowidopargs_;
+    _impl_.content_.a_mvsharedworkerremovewindowidopargs_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_mvsharedworkerremovewindowidopargs(::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* mvsharedworkerremovewindowidopargs) {
+inline void SharedWorkerOpArgs::unsafe_arena_set_allocated_a_mvsharedworkerremovewindowidopargs(::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* a_mvsharedworkerremovewindowidopargs) {
   clear_content();
-  if (mvsharedworkerremovewindowidopargs) {
-    set_has_mvsharedworkerremovewindowidopargs();
-    _impl_.content_.mvsharedworkerremovewindowidopargs_ = mvsharedworkerremovewindowidopargs;
+  if (a_mvsharedworkerremovewindowidopargs) {
+    set_has_a_mvsharedworkerremovewindowidopargs();
+    _impl_.content_.a_mvsharedworkerremovewindowidopargs_ = a_mvsharedworkerremovewindowidopargs;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerRemoveWindowIDOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerRemoveWindowIDOpArgs)
 }
-inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::_internal_mutable_mvsharedworkerremovewindowidopargs() {
-  if (!_internal_has_mvsharedworkerremovewindowidopargs()) {
+inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::_internal_mutable_a_mvsharedworkerremovewindowidopargs() {
+  if (!_internal_has_a_mvsharedworkerremovewindowidopargs()) {
     clear_content();
-    set_has_mvsharedworkerremovewindowidopargs();
-    _impl_.content_.mvsharedworkerremovewindowidopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs >(GetArenaForAllocation());
+    set_has_a_mvsharedworkerremovewindowidopargs();
+    _impl_.content_.a_mvsharedworkerremovewindowidopargs_ = CreateMaybeMessage< ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsharedworkerremovewindowidopargs_;
+  return _impl_.content_.a_mvsharedworkerremovewindowidopargs_;
 }
-inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::mutable_mvsharedworkerremovewindowidopargs() {
-  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* _msg = _internal_mutable_mvsharedworkerremovewindowidopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.mVSharedWorkerRemoveWindowIDOpArgs)
+inline ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* SharedWorkerOpArgs::mutable_a_mvsharedworkerremovewindowidopargs() {
+  ::protobuf::mozilla::dom::SharedWorkerRemoveWindowIDOpArgs* _msg = _internal_mutable_a_mvsharedworkerremovewindowidopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.SharedWorkerOpArgs.a_mVSharedWorkerRemoveWindowIDOpArgs)
   return _msg;
 }
 

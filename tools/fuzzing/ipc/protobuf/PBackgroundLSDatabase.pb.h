@@ -310,71 +310,71 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDocumentURIFieldNumber = 1,
-    kKeyFieldNumber = 2,
-    kMinSizeFieldNumber = 4,
-    kIncreasePeakUsageFieldNumber = 3,
+    kADocumentURIFieldNumber = 1,
+    kAKeyFieldNumber = 2,
+    kAMinSizeFieldNumber = 4,
+    kAIncreasePeakUsageFieldNumber = 3,
   };
-  // required bytes documentURI = 1;
-  bool has_documenturi() const;
+  // required bytes a_documentURI = 1;
+  bool has_a_documenturi() const;
   private:
-  bool _internal_has_documenturi() const;
+  bool _internal_has_a_documenturi() const;
   public:
-  void clear_documenturi();
-  const std::string& documenturi() const;
+  void clear_a_documenturi();
+  const std::string& a_documenturi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_documenturi(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_documenturi();
-  PROTOBUF_NODISCARD std::string* release_documenturi();
-  void set_allocated_documenturi(std::string* documenturi);
+  void set_a_documenturi(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_documenturi();
+  PROTOBUF_NODISCARD std::string* release_a_documenturi();
+  void set_allocated_a_documenturi(std::string* a_documenturi);
   private:
-  const std::string& _internal_documenturi() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_documenturi(const std::string& value);
-  std::string* _internal_mutable_documenturi();
+  const std::string& _internal_a_documenturi() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_documenturi(const std::string& value);
+  std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required bytes key = 2;
-  bool has_key() const;
+  // required bytes a_key = 2;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required sint64 minSize = 4;
-  bool has_minsize() const;
+  // required sint64 a_minSize = 4;
+  bool has_a_minsize() const;
   private:
-  bool _internal_has_minsize() const;
+  bool _internal_has_a_minsize() const;
   public:
-  void clear_minsize();
-  int64_t minsize() const;
-  void set_minsize(int64_t value);
+  void clear_a_minsize();
+  int64_t a_minsize() const;
+  void set_a_minsize(int64_t value);
   private:
-  int64_t _internal_minsize() const;
-  void _internal_set_minsize(int64_t value);
+  int64_t _internal_a_minsize() const;
+  void _internal_set_a_minsize(int64_t value);
   public:
 
-  // required bool increasePeakUsage = 3;
-  bool has_increasepeakusage() const;
+  // required bool a_increasePeakUsage = 3;
+  bool has_a_increasepeakusage() const;
   private:
-  bool _internal_has_increasepeakusage() const;
+  bool _internal_has_a_increasepeakusage() const;
   public:
-  void clear_increasepeakusage();
-  bool increasepeakusage() const;
-  void set_increasepeakusage(bool value);
+  void clear_a_increasepeakusage();
+  bool a_increasepeakusage() const;
+  void set_a_increasepeakusage(bool value);
   private:
-  bool _internal_increasepeakusage() const;
-  void _internal_set_increasepeakusage(bool value);
+  bool _internal_a_increasepeakusage() const;
+  void _internal_set_a_increasepeakusage(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor)
@@ -390,10 +390,10 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr documenturi_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    int64_t minsize_;
-    bool increasepeakusage_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_documenturi_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    int64_t a_minsize_;
+    bool a_increasepeakusage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_2eproto;
@@ -510,25 +510,25 @@ class Reply_PBackgroundLSSnapshotConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kInitInfoFieldNumber = 1,
+    kAInitInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.LSSnapshotInitInfo initInfo = 1;
-  bool has_initinfo() const;
+  // required .protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
+  bool has_a_initinfo() const;
   private:
-  bool _internal_has_initinfo() const;
+  bool _internal_has_a_initinfo() const;
   public:
-  void clear_initinfo();
-  const ::protobuf::mozilla::dom::LSSnapshotInitInfo& initinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSnapshotInitInfo* release_initinfo();
-  ::protobuf::mozilla::dom::LSSnapshotInitInfo* mutable_initinfo();
-  void set_allocated_initinfo(::protobuf::mozilla::dom::LSSnapshotInitInfo* initinfo);
+  void clear_a_initinfo();
+  const ::protobuf::mozilla::dom::LSSnapshotInitInfo& a_initinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSnapshotInitInfo* release_a_initinfo();
+  ::protobuf::mozilla::dom::LSSnapshotInitInfo* mutable_a_initinfo();
+  void set_allocated_a_initinfo(::protobuf::mozilla::dom::LSSnapshotInitInfo* a_initinfo);
   private:
-  const ::protobuf::mozilla::dom::LSSnapshotInitInfo& _internal_initinfo() const;
-  ::protobuf::mozilla::dom::LSSnapshotInitInfo* _internal_mutable_initinfo();
+  const ::protobuf::mozilla::dom::LSSnapshotInitInfo& _internal_a_initinfo() const;
+  ::protobuf::mozilla::dom::LSSnapshotInitInfo* _internal_mutable_a_initinfo();
   public:
-  void unsafe_arena_set_allocated_initinfo(
-      ::protobuf::mozilla::dom::LSSnapshotInitInfo* initinfo);
-  ::protobuf::mozilla::dom::LSSnapshotInitInfo* unsafe_arena_release_initinfo();
+  void unsafe_arena_set_allocated_a_initinfo(
+      ::protobuf::mozilla::dom::LSSnapshotInitInfo* a_initinfo);
+  ::protobuf::mozilla::dom::LSSnapshotInitInfo* unsafe_arena_release_a_initinfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor)
  private:
@@ -540,7 +540,7 @@ class Reply_PBackgroundLSSnapshotConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::LSSnapshotInitInfo* initinfo_;
+    ::protobuf::mozilla::dom::LSSnapshotInitInfo* a_initinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_2eproto;
@@ -684,237 +684,237 @@ class Msg_RequestAllowToClose final :
 
 // Msg_PBackgroundLSSnapshotConstructor
 
-// required bytes documentURI = 1;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_documenturi() const {
+// required bytes a_documentURI = 1;
+inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_documenturi() const {
-  return _internal_has_documenturi();
+inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_documenturi() const {
+  return _internal_has_a_documenturi();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::clear_documenturi() {
-  _impl_.documenturi_.ClearToEmpty();
+inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_documenturi() {
+  _impl_.a_documenturi_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PBackgroundLSSnapshotConstructor::documenturi() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
-  return _internal_documenturi();
+inline const std::string& Msg_PBackgroundLSSnapshotConstructor::a_documenturi() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
+  return _internal_a_documenturi();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PBackgroundLSSnapshotConstructor::set_documenturi(ArgT0&& arg0, ArgT... args) {
+void Msg_PBackgroundLSSnapshotConstructor::set_a_documenturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
+ _impl_.a_documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
 }
-inline std::string* Msg_PBackgroundLSSnapshotConstructor::mutable_documenturi() {
-  std::string* _s = _internal_mutable_documenturi();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
+inline std::string* Msg_PBackgroundLSSnapshotConstructor::mutable_a_documenturi() {
+  std::string* _s = _internal_mutable_a_documenturi();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
   return _s;
 }
-inline const std::string& Msg_PBackgroundLSSnapshotConstructor::_internal_documenturi() const {
-  return _impl_.documenturi_.Get();
+inline const std::string& Msg_PBackgroundLSSnapshotConstructor::_internal_a_documenturi() const {
+  return _impl_.a_documenturi_.Get();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_documenturi(const std::string& value) {
+inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_documenturi(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.documenturi_.Set(value, GetArenaForAllocation());
+  _impl_.a_documenturi_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PBackgroundLSSnapshotConstructor::_internal_mutable_documenturi() {
+inline std::string* Msg_PBackgroundLSSnapshotConstructor::_internal_mutable_a_documenturi() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.documenturi_.Mutable(GetArenaForAllocation());
+  return _impl_.a_documenturi_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PBackgroundLSSnapshotConstructor::release_documenturi() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
-  if (!_internal_has_documenturi()) {
+inline std::string* Msg_PBackgroundLSSnapshotConstructor::release_a_documenturi() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
+  if (!_internal_has_a_documenturi()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.documenturi_.Release();
+  auto* p = _impl_.a_documenturi_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.documenturi_.IsDefault()) {
-    _impl_.documenturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_documenturi_.IsDefault()) {
+    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_documenturi(std::string* documenturi) {
-  if (documenturi != nullptr) {
+inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_documenturi(std::string* a_documenturi) {
+  if (a_documenturi != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.documenturi_.SetAllocated(documenturi, GetArenaForAllocation());
+  _impl_.a_documenturi_.SetAllocated(a_documenturi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.documenturi_.IsDefault()) {
-    _impl_.documenturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_documenturi_.IsDefault()) {
+    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.documentURI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
 }
 
-// required bytes key = 2;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_key() const {
+// required bytes a_key = 2;
+inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_key() const {
-  return _internal_has_key();
+inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_PBackgroundLSSnapshotConstructor::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.key)
-  return _internal_key();
+inline const std::string& Msg_PBackgroundLSSnapshotConstructor::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PBackgroundLSSnapshotConstructor::set_key(ArgT0&& arg0, ArgT... args) {
+void Msg_PBackgroundLSSnapshotConstructor::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
 }
-inline std::string* Msg_PBackgroundLSSnapshotConstructor::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.key)
+inline std::string* Msg_PBackgroundLSSnapshotConstructor::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
   return _s;
 }
-inline const std::string& Msg_PBackgroundLSSnapshotConstructor::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& Msg_PBackgroundLSSnapshotConstructor::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_key(const std::string& value) {
+inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PBackgroundLSSnapshotConstructor::_internal_mutable_key() {
+inline std::string* Msg_PBackgroundLSSnapshotConstructor::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PBackgroundLSSnapshotConstructor::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.key)
-  if (!_internal_has_key()) {
+inline std::string* Msg_PBackgroundLSSnapshotConstructor::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
 }
 
-// required bool increasePeakUsage = 3;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_increasepeakusage() const {
+// required bool a_increasePeakUsage = 3;
+inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_increasepeakusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_increasepeakusage() const {
-  return _internal_has_increasepeakusage();
+inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_increasepeakusage() const {
+  return _internal_has_a_increasepeakusage();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::clear_increasepeakusage() {
-  _impl_.increasepeakusage_ = false;
+inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_increasepeakusage() {
+  _impl_.a_increasepeakusage_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_increasepeakusage() const {
-  return _impl_.increasepeakusage_;
+inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_a_increasepeakusage() const {
+  return _impl_.a_increasepeakusage_;
 }
-inline bool Msg_PBackgroundLSSnapshotConstructor::increasepeakusage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.increasePeakUsage)
-  return _internal_increasepeakusage();
+inline bool Msg_PBackgroundLSSnapshotConstructor::a_increasepeakusage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_increasePeakUsage)
+  return _internal_a_increasepeakusage();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_increasepeakusage(bool value) {
+inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_increasepeakusage(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.increasepeakusage_ = value;
+  _impl_.a_increasepeakusage_ = value;
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::set_increasepeakusage(bool value) {
-  _internal_set_increasepeakusage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.increasePeakUsage)
+inline void Msg_PBackgroundLSSnapshotConstructor::set_a_increasepeakusage(bool value) {
+  _internal_set_a_increasepeakusage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_increasePeakUsage)
 }
 
-// required sint64 minSize = 4;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_minsize() const {
+// required sint64 a_minSize = 4;
+inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_minsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_minsize() const {
-  return _internal_has_minsize();
+inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_minsize() const {
+  return _internal_has_a_minsize();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::clear_minsize() {
-  _impl_.minsize_ = int64_t{0};
+inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_minsize() {
+  _impl_.a_minsize_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int64_t Msg_PBackgroundLSSnapshotConstructor::_internal_minsize() const {
-  return _impl_.minsize_;
+inline int64_t Msg_PBackgroundLSSnapshotConstructor::_internal_a_minsize() const {
+  return _impl_.a_minsize_;
 }
-inline int64_t Msg_PBackgroundLSSnapshotConstructor::minsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.minSize)
-  return _internal_minsize();
+inline int64_t Msg_PBackgroundLSSnapshotConstructor::a_minsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_minSize)
+  return _internal_a_minsize();
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_minsize(int64_t value) {
+inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_minsize(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.minsize_ = value;
+  _impl_.a_minsize_ = value;
 }
-inline void Msg_PBackgroundLSSnapshotConstructor::set_minsize(int64_t value) {
-  _internal_set_minsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.minSize)
+inline void Msg_PBackgroundLSSnapshotConstructor::set_a_minsize(int64_t value) {
+  _internal_set_a_minsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_minSize)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_PBackgroundLSSnapshotConstructor
 
-// required .protobuf.mozilla.dom.LSSnapshotInitInfo initInfo = 1;
-inline bool Reply_PBackgroundLSSnapshotConstructor::_internal_has_initinfo() const {
+// required .protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
+inline bool Reply_PBackgroundLSSnapshotConstructor::_internal_has_a_initinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.initinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_initinfo_ != nullptr);
   return value;
 }
-inline bool Reply_PBackgroundLSSnapshotConstructor::has_initinfo() const {
-  return _internal_has_initinfo();
+inline bool Reply_PBackgroundLSSnapshotConstructor::has_a_initinfo() const {
+  return _internal_has_a_initinfo();
 }
-inline const ::protobuf::mozilla::dom::LSSnapshotInitInfo& Reply_PBackgroundLSSnapshotConstructor::_internal_initinfo() const {
-  const ::protobuf::mozilla::dom::LSSnapshotInitInfo* p = _impl_.initinfo_;
+inline const ::protobuf::mozilla::dom::LSSnapshotInitInfo& Reply_PBackgroundLSSnapshotConstructor::_internal_a_initinfo() const {
+  const ::protobuf::mozilla::dom::LSSnapshotInitInfo* p = _impl_.a_initinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::LSSnapshotInitInfo&>(
       ::protobuf::mozilla::dom::_LSSnapshotInitInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSSnapshotInitInfo& Reply_PBackgroundLSSnapshotConstructor::initinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.initInfo)
-  return _internal_initinfo();
+inline const ::protobuf::mozilla::dom::LSSnapshotInitInfo& Reply_PBackgroundLSSnapshotConstructor::a_initinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
+  return _internal_a_initinfo();
 }
-inline void Reply_PBackgroundLSSnapshotConstructor::unsafe_arena_set_allocated_initinfo(
-    ::protobuf::mozilla::dom::LSSnapshotInitInfo* initinfo) {
+inline void Reply_PBackgroundLSSnapshotConstructor::unsafe_arena_set_allocated_a_initinfo(
+    ::protobuf::mozilla::dom::LSSnapshotInitInfo* a_initinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.initinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_initinfo_);
   }
-  _impl_.initinfo_ = initinfo;
-  if (initinfo) {
+  _impl_.a_initinfo_ = a_initinfo;
+  if (a_initinfo) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.initInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
 }
-inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::release_initinfo() {
+inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::release_a_initinfo() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::LSSnapshotInitInfo* temp = _impl_.initinfo_;
-  _impl_.initinfo_ = nullptr;
+  ::protobuf::mozilla::dom::LSSnapshotInitInfo* temp = _impl_.a_initinfo_;
+  _impl_.a_initinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -926,45 +926,45 @@ inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshot
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::unsafe_arena_release_initinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.initInfo)
+inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::unsafe_arena_release_a_initinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::LSSnapshotInitInfo* temp = _impl_.initinfo_;
-  _impl_.initinfo_ = nullptr;
+  ::protobuf::mozilla::dom::LSSnapshotInitInfo* temp = _impl_.a_initinfo_;
+  _impl_.a_initinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::_internal_mutable_initinfo() {
+inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::_internal_mutable_a_initinfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.initinfo_ == nullptr) {
+  if (_impl_.a_initinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::LSSnapshotInitInfo>(GetArenaForAllocation());
-    _impl_.initinfo_ = p;
+    _impl_.a_initinfo_ = p;
   }
-  return _impl_.initinfo_;
+  return _impl_.a_initinfo_;
 }
-inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::mutable_initinfo() {
-  ::protobuf::mozilla::dom::LSSnapshotInitInfo* _msg = _internal_mutable_initinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.initInfo)
+inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::mutable_a_initinfo() {
+  ::protobuf::mozilla::dom::LSSnapshotInitInfo* _msg = _internal_mutable_a_initinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
   return _msg;
 }
-inline void Reply_PBackgroundLSSnapshotConstructor::set_allocated_initinfo(::protobuf::mozilla::dom::LSSnapshotInitInfo* initinfo) {
+inline void Reply_PBackgroundLSSnapshotConstructor::set_allocated_a_initinfo(::protobuf::mozilla::dom::LSSnapshotInitInfo* a_initinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.initinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_initinfo_);
   }
-  if (initinfo) {
+  if (a_initinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(initinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_initinfo));
     if (message_arena != submessage_arena) {
-      initinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, initinfo, submessage_arena);
+      a_initinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_initinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.initinfo_ = initinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.initInfo)
+  _impl_.a_initinfo_ = a_initinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
 }
 
 // -------------------------------------------------------------------

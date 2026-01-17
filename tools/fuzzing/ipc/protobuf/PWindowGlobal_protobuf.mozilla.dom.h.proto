@@ -17,14 +17,14 @@ import "SessionStoreTypes.proto";
 
 // Structs and unions declarations
 message JSActorMessageMeta {
-  required bytes actorName = 1;
-  required bytes messageName = 2;
-  required uint64 queryId = 3;
-  required bytes kind = 4;
+  required bytes a_actorName = 1;
+  required bytes a_messageName = 2;
+  required uint64 a_queryId = 3;
+  required bytes a_kind = 4;
 }
 
 message IPCWebShareData {
-  required bytes title = 1;
-  required bytes text = 2;
-  required bytes url = 3;
+  required bytes a_title = 1;
+  required bytes a_text = 2;
+  required bytes a_url = 3;
 }

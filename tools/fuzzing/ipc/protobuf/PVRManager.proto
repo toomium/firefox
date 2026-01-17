@@ -19,8 +19,8 @@ import "GamepadEventTypes.proto";
 
 // Message declarations
 message Msg_PVRLayerConstructor {
-  required uint32 aDisplayID = 1;
-  required uint32 aGroup = 2;
+  required uint32 a_aDisplayID = 1;
+  required uint32 a_aGroup = 2;
 }
 
 message Reply_PVRLayerConstructor {
@@ -33,12 +33,12 @@ message Msg_RefreshDisplays {
 }
 
 message Msg_SetGroupMask {
-  required uint32 aDisplayID = 1;
-  required uint32 aGroupMask = 2;
+  required uint32 a_aDisplayID = 1;
+  required uint32 a_aGroupMask = 2;
 }
 
 message Msg_SetHaveEventListener {
-  required bool aHaveEventListener = 1;
+  required bool a_aHaveEventListener = 1;
 }
 
 message Msg_ControllerListenerAdded {
@@ -48,24 +48,24 @@ message Msg_ControllerListenerRemoved {
 }
 
 message Msg_VibrateHaptic {
-  required bytes aGamepadHandle = 1;
-  required uint32 aHapticIndex = 2;
-  required double aIntensity = 3;
-  required double aDuration = 4;
-  required uint32 aPromiseID = 5;
+  required bytes a_aGamepadHandle = 1;
+  required uint32 a_aHapticIndex = 2;
+  required double a_aIntensity = 3;
+  required double a_aDuration = 4;
+  required uint32 a_aPromiseID = 5;
 }
 
 message Msg_StopVibrateHaptic {
-  required bytes aGamepadHandle = 1;
+  required bytes a_aGamepadHandle = 1;
 }
 
 message Msg_StartVRNavigation {
-  required uint32 aDeviceID = 1;
+  required uint32 a_aDeviceID = 1;
 }
 
 message Msg_StopVRNavigation {
-  required uint32 aDeviceID = 1;
-  required bytes aDuration = 2;
+  required uint32 a_aDeviceID = 1;
+  required bytes a_aDuration = 2;
 }
 
 message Msg_StartActivity {
@@ -75,26 +75,26 @@ message Msg_StopActivity {
 }
 
 message Msg_RunPuppet {
-  repeated uint64 buffer = 1;
+  repeated uint64 a_buffer = 1;
 }
 
 message Msg_ResetPuppet {
 }
 
 message Msg_UpdateDisplayInfo {
-  required bytes aDisplayInfo = 1;
+  required bytes a_aDisplayInfo = 1;
 }
 
 message Msg_UpdateRuntimeCapabilities {
-  required bytes aCapabilities = 1;
+  required bytes a_aCapabilities = 1;
 }
 
 message Msg_ReplyGamepadVibrateHaptic {
-  required uint32 aPromiseID = 1;
+  required uint32 a_aPromiseID = 1;
 }
 
 message Msg_NotifyPuppetCommandBufferCompleted {
-  required bool aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_NotifyPuppetResetComplete {

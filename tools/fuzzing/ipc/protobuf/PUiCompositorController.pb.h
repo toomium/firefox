@@ -600,19 +600,19 @@ class Reply_Resume final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOutResumedFieldNumber = 1,
+    kAAOutResumedFieldNumber = 1,
   };
-  // required bool aOutResumed = 1;
-  bool has_aoutresumed() const;
+  // required bool a_aOutResumed = 1;
+  bool has_a_aoutresumed() const;
   private:
-  bool _internal_has_aoutresumed() const;
+  bool _internal_has_a_aoutresumed() const;
   public:
-  void clear_aoutresumed();
-  bool aoutresumed() const;
-  void set_aoutresumed(bool value);
+  void clear_a_aoutresumed();
+  bool a_aoutresumed() const;
+  void set_a_aoutresumed(bool value);
   private:
-  bool _internal_aoutresumed() const;
-  void _internal_set_aoutresumed(bool value);
+  bool _internal_a_aoutresumed() const;
+  void _internal_set_a_aoutresumed(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Reply_Resume)
@@ -625,7 +625,7 @@ class Reply_Resume final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aoutresumed_;
+    bool a_aoutresumed_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -742,61 +742,61 @@ class Msg_ResumeAndResize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAXFieldNumber = 1,
-    kAYFieldNumber = 2,
-    kAWidthFieldNumber = 3,
-    kAHeightFieldNumber = 4,
+    kAAXFieldNumber = 1,
+    kAAYFieldNumber = 2,
+    kAAWidthFieldNumber = 3,
+    kAAHeightFieldNumber = 4,
   };
-  // required sint32 aX = 1;
-  bool has_ax() const;
+  // required sint32 a_aX = 1;
+  bool has_a_ax() const;
   private:
-  bool _internal_has_ax() const;
+  bool _internal_has_a_ax() const;
   public:
-  void clear_ax();
-  int32_t ax() const;
-  void set_ax(int32_t value);
+  void clear_a_ax();
+  int32_t a_ax() const;
+  void set_a_ax(int32_t value);
   private:
-  int32_t _internal_ax() const;
-  void _internal_set_ax(int32_t value);
-  public:
-
-  // required sint32 aY = 2;
-  bool has_ay() const;
-  private:
-  bool _internal_has_ay() const;
-  public:
-  void clear_ay();
-  int32_t ay() const;
-  void set_ay(int32_t value);
-  private:
-  int32_t _internal_ay() const;
-  void _internal_set_ay(int32_t value);
+  int32_t _internal_a_ax() const;
+  void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 aWidth = 3;
-  bool has_awidth() const;
+  // required sint32 a_aY = 2;
+  bool has_a_ay() const;
   private:
-  bool _internal_has_awidth() const;
+  bool _internal_has_a_ay() const;
   public:
-  void clear_awidth();
-  int32_t awidth() const;
-  void set_awidth(int32_t value);
+  void clear_a_ay();
+  int32_t a_ay() const;
+  void set_a_ay(int32_t value);
   private:
-  int32_t _internal_awidth() const;
-  void _internal_set_awidth(int32_t value);
+  int32_t _internal_a_ay() const;
+  void _internal_set_a_ay(int32_t value);
   public:
 
-  // required sint32 aHeight = 4;
-  bool has_aheight() const;
+  // required sint32 a_aWidth = 3;
+  bool has_a_awidth() const;
   private:
-  bool _internal_has_aheight() const;
+  bool _internal_has_a_awidth() const;
   public:
-  void clear_aheight();
-  int32_t aheight() const;
-  void set_aheight(int32_t value);
+  void clear_a_awidth();
+  int32_t a_awidth() const;
+  void set_a_awidth(int32_t value);
   private:
-  int32_t _internal_aheight() const;
-  void _internal_set_aheight(int32_t value);
+  int32_t _internal_a_awidth() const;
+  void _internal_set_a_awidth(int32_t value);
+  public:
+
+  // required sint32 a_aHeight = 4;
+  bool has_a_aheight() const;
+  private:
+  bool _internal_has_a_aheight() const;
+  public:
+  void clear_a_aheight();
+  int32_t a_aheight() const;
+  void set_a_aheight(int32_t value);
+  private:
+  int32_t _internal_a_aheight() const;
+  void _internal_set_a_aheight(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize)
@@ -812,10 +812,10 @@ class Msg_ResumeAndResize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t ax_;
-    int32_t ay_;
-    int32_t awidth_;
-    int32_t aheight_;
+    int32_t a_ax_;
+    int32_t a_ay_;
+    int32_t a_awidth_;
+    int32_t a_aheight_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -932,19 +932,19 @@ class Reply_ResumeAndResize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOutResumedFieldNumber = 1,
+    kAAOutResumedFieldNumber = 1,
   };
-  // required bool aOutResumed = 1;
-  bool has_aoutresumed() const;
+  // required bool a_aOutResumed = 1;
+  bool has_a_aoutresumed() const;
   private:
-  bool _internal_has_aoutresumed() const;
+  bool _internal_has_a_aoutresumed() const;
   public:
-  void clear_aoutresumed();
-  bool aoutresumed() const;
-  void set_aoutresumed(bool value);
+  void clear_a_aoutresumed();
+  bool a_aoutresumed() const;
+  void set_a_aoutresumed(bool value);
   private:
-  bool _internal_aoutresumed() const;
-  void _internal_set_aoutresumed(bool value);
+  bool _internal_a_aoutresumed() const;
+  void _internal_set_a_aoutresumed(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Reply_ResumeAndResize)
@@ -957,7 +957,7 @@ class Reply_ResumeAndResize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aoutresumed_;
+    bool a_aoutresumed_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -1198,19 +1198,19 @@ class Msg_MaxToolbarHeight final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHeightFieldNumber = 1,
+    kAAHeightFieldNumber = 1,
   };
-  // required sint32 aHeight = 1;
-  bool has_aheight() const;
+  // required sint32 a_aHeight = 1;
+  bool has_a_aheight() const;
   private:
-  bool _internal_has_aheight() const;
+  bool _internal_has_a_aheight() const;
   public:
-  void clear_aheight();
-  int32_t aheight() const;
-  void set_aheight(int32_t value);
+  void clear_a_aheight();
+  int32_t a_aheight() const;
+  void set_a_aheight(int32_t value);
   private:
-  int32_t _internal_aheight() const;
-  void _internal_set_aheight(int32_t value);
+  int32_t _internal_a_aheight() const;
+  void _internal_set_a_aheight(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_MaxToolbarHeight)
@@ -1223,7 +1223,7 @@ class Msg_MaxToolbarHeight final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t aheight_;
+    int32_t a_aheight_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -1340,19 +1340,19 @@ class Msg_FixedBottomOffset final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOffsetFieldNumber = 1,
+    kAAOffsetFieldNumber = 1,
   };
-  // required sint32 aOffset = 1;
-  bool has_aoffset() const;
+  // required sint32 a_aOffset = 1;
+  bool has_a_aoffset() const;
   private:
-  bool _internal_has_aoffset() const;
+  bool _internal_has_a_aoffset() const;
   public:
-  void clear_aoffset();
-  int32_t aoffset() const;
-  void set_aoffset(int32_t value);
+  void clear_a_aoffset();
+  int32_t a_aoffset() const;
+  void set_a_aoffset(int32_t value);
   private:
-  int32_t _internal_aoffset() const;
-  void _internal_set_aoffset(int32_t value);
+  int32_t _internal_a_aoffset() const;
+  void _internal_set_a_aoffset(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_FixedBottomOffset)
@@ -1365,7 +1365,7 @@ class Msg_FixedBottomOffset final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t aoffset_;
+    int32_t a_aoffset_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -1482,19 +1482,19 @@ class Msg_DefaultClearColor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAColorFieldNumber = 1,
+    kAAColorFieldNumber = 1,
   };
-  // required uint32 aColor = 1;
-  bool has_acolor() const;
+  // required uint32 a_aColor = 1;
+  bool has_a_acolor() const;
   private:
-  bool _internal_has_acolor() const;
+  bool _internal_has_a_acolor() const;
   public:
-  void clear_acolor();
-  uint32_t acolor() const;
-  void set_acolor(uint32_t value);
+  void clear_a_acolor();
+  uint32_t a_acolor() const;
+  void set_a_acolor(uint32_t value);
   private:
-  uint32_t _internal_acolor() const;
-  void _internal_set_acolor(uint32_t value);
+  uint32_t _internal_a_acolor() const;
+  void _internal_set_a_acolor(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_DefaultClearColor)
@@ -1507,7 +1507,7 @@ class Msg_DefaultClearColor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t acolor_;
+    uint32_t a_acolor_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -1748,19 +1748,19 @@ class Msg_EnableLayerUpdateNotifications final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEnableFieldNumber = 1,
+    kAAEnableFieldNumber = 1,
   };
-  // required bool aEnable = 1;
-  bool has_aenable() const;
+  // required bool a_aEnable = 1;
+  bool has_a_aenable() const;
   private:
-  bool _internal_has_aenable() const;
+  bool _internal_has_a_aenable() const;
   public:
-  void clear_aenable();
-  bool aenable() const;
-  void set_aenable(bool value);
+  void clear_a_aenable();
+  bool a_aenable() const;
+  void set_a_aenable(bool value);
   private:
-  bool _internal_aenable() const;
-  void _internal_set_aenable(bool value);
+  bool _internal_a_aenable() const;
+  void _internal_set_a_aenable(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_EnableLayerUpdateNotifications)
@@ -1773,7 +1773,7 @@ class Msg_EnableLayerUpdateNotifications final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aenable_;
+    bool a_aenable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -1890,19 +1890,19 @@ class Msg_ToolbarAnimatorMessageFromCompositor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAMessageFieldNumber = 1,
+    kAAMessageFieldNumber = 1,
   };
-  // required sint32 aMessage = 1;
-  bool has_amessage() const;
+  // required sint32 a_aMessage = 1;
+  bool has_a_amessage() const;
   private:
-  bool _internal_has_amessage() const;
+  bool _internal_has_a_amessage() const;
   public:
-  void clear_amessage();
-  int32_t amessage() const;
-  void set_amessage(int32_t value);
+  void clear_a_amessage();
+  int32_t a_amessage() const;
+  void set_a_amessage(int32_t value);
   private:
-  int32_t _internal_amessage() const;
-  void _internal_set_amessage(int32_t value);
+  int32_t _internal_a_amessage() const;
+  void _internal_set_a_amessage(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_ToolbarAnimatorMessageFromCompositor)
@@ -1915,7 +1915,7 @@ class Msg_ToolbarAnimatorMessageFromCompositor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t amessage_;
+    int32_t a_amessage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -2032,24 +2032,24 @@ class Msg_NotifyCompositorScrollUpdate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAUpdateFieldNumber = 1,
+    kAAUpdateFieldNumber = 1,
   };
-  // required bytes aUpdate = 1;
-  bool has_aupdate() const;
+  // required bytes a_aUpdate = 1;
+  bool has_a_aupdate() const;
   private:
-  bool _internal_has_aupdate() const;
+  bool _internal_has_a_aupdate() const;
   public:
-  void clear_aupdate();
-  const std::string& aupdate() const;
+  void clear_a_aupdate();
+  const std::string& a_aupdate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aupdate(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aupdate();
-  PROTOBUF_NODISCARD std::string* release_aupdate();
-  void set_allocated_aupdate(std::string* aupdate);
+  void set_a_aupdate(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aupdate();
+  PROTOBUF_NODISCARD std::string* release_a_aupdate();
+  void set_allocated_a_aupdate(std::string* a_aupdate);
   private:
-  const std::string& _internal_aupdate() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aupdate(const std::string& value);
-  std::string* _internal_mutable_aupdate();
+  const std::string& _internal_a_aupdate() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aupdate(const std::string& value);
+  std::string* _internal_mutable_a_aupdate();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate)
@@ -2062,7 +2062,7 @@ class Msg_NotifyCompositorScrollUpdate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aupdate_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aupdate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -2179,57 +2179,57 @@ class Msg_ScreenPixels final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAMemFieldNumber = 1,
-    kASizeFieldNumber = 2,
-    kANeedsYFlipFieldNumber = 3,
+    kAAMemFieldNumber = 1,
+    kAASizeFieldNumber = 2,
+    kAANeedsYFlipFieldNumber = 3,
   };
-  // required bytes aMem = 1;
-  bool has_amem() const;
+  // required bytes a_aMem = 1;
+  bool has_a_amem() const;
   private:
-  bool _internal_has_amem() const;
+  bool _internal_has_a_amem() const;
   public:
-  void clear_amem();
-  const std::string& amem() const;
+  void clear_a_amem();
+  const std::string& a_amem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_amem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_amem();
-  PROTOBUF_NODISCARD std::string* release_amem();
-  void set_allocated_amem(std::string* amem);
+  void set_a_amem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_amem();
+  PROTOBUF_NODISCARD std::string* release_a_amem();
+  void set_allocated_a_amem(std::string* a_amem);
   private:
-  const std::string& _internal_amem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_amem(const std::string& value);
-  std::string* _internal_mutable_amem();
+  const std::string& _internal_a_amem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_amem(const std::string& value);
+  std::string* _internal_mutable_a_amem();
   public:
 
-  // required bytes aSize = 2;
-  bool has_asize() const;
+  // required bytes a_aSize = 2;
+  bool has_a_asize() const;
   private:
-  bool _internal_has_asize() const;
+  bool _internal_has_a_asize() const;
   public:
-  void clear_asize();
-  const std::string& asize() const;
+  void clear_a_asize();
+  const std::string& a_asize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_asize(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_asize();
-  PROTOBUF_NODISCARD std::string* release_asize();
-  void set_allocated_asize(std::string* asize);
+  void set_a_asize(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_asize();
+  PROTOBUF_NODISCARD std::string* release_a_asize();
+  void set_allocated_a_asize(std::string* a_asize);
   private:
-  const std::string& _internal_asize() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_asize(const std::string& value);
-  std::string* _internal_mutable_asize();
+  const std::string& _internal_a_asize() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_asize(const std::string& value);
+  std::string* _internal_mutable_a_asize();
   public:
 
-  // required bool aNeedsYFlip = 3;
-  bool has_aneedsyflip() const;
+  // required bool a_aNeedsYFlip = 3;
+  bool has_a_aneedsyflip() const;
   private:
-  bool _internal_has_aneedsyflip() const;
+  bool _internal_has_a_aneedsyflip() const;
   public:
-  void clear_aneedsyflip();
-  bool aneedsyflip() const;
-  void set_aneedsyflip(bool value);
+  void clear_a_aneedsyflip();
+  bool a_aneedsyflip() const;
+  void set_a_aneedsyflip(bool value);
   private:
-  bool _internal_aneedsyflip() const;
-  void _internal_set_aneedsyflip(bool value);
+  bool _internal_a_aneedsyflip() const;
+  void _internal_set_a_aneedsyflip(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels)
@@ -2245,9 +2245,9 @@ class Msg_ScreenPixels final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr amem_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr asize_;
-    bool aneedsyflip_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asize_;
+    bool a_aneedsyflip_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUiCompositorController_2eproto;
@@ -2275,180 +2275,180 @@ class Msg_ScreenPixels final :
 
 // Reply_Resume
 
-// required bool aOutResumed = 1;
-inline bool Reply_Resume::_internal_has_aoutresumed() const {
+// required bool a_aOutResumed = 1;
+inline bool Reply_Resume::_internal_has_a_aoutresumed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Resume::has_aoutresumed() const {
-  return _internal_has_aoutresumed();
+inline bool Reply_Resume::has_a_aoutresumed() const {
+  return _internal_has_a_aoutresumed();
 }
-inline void Reply_Resume::clear_aoutresumed() {
-  _impl_.aoutresumed_ = false;
+inline void Reply_Resume::clear_a_aoutresumed() {
+  _impl_.a_aoutresumed_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Resume::_internal_aoutresumed() const {
-  return _impl_.aoutresumed_;
+inline bool Reply_Resume::_internal_a_aoutresumed() const {
+  return _impl_.a_aoutresumed_;
 }
-inline bool Reply_Resume::aoutresumed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Reply_Resume.aOutResumed)
-  return _internal_aoutresumed();
+inline bool Reply_Resume::a_aoutresumed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Reply_Resume.a_aOutResumed)
+  return _internal_a_aoutresumed();
 }
-inline void Reply_Resume::_internal_set_aoutresumed(bool value) {
+inline void Reply_Resume::_internal_set_a_aoutresumed(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aoutresumed_ = value;
+  _impl_.a_aoutresumed_ = value;
 }
-inline void Reply_Resume::set_aoutresumed(bool value) {
-  _internal_set_aoutresumed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Reply_Resume.aOutResumed)
+inline void Reply_Resume::set_a_aoutresumed(bool value) {
+  _internal_set_a_aoutresumed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Reply_Resume.a_aOutResumed)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ResumeAndResize
 
-// required sint32 aX = 1;
-inline bool Msg_ResumeAndResize::_internal_has_ax() const {
+// required sint32 a_aX = 1;
+inline bool Msg_ResumeAndResize::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ResumeAndResize::has_ax() const {
-  return _internal_has_ax();
+inline bool Msg_ResumeAndResize::has_a_ax() const {
+  return _internal_has_a_ax();
 }
-inline void Msg_ResumeAndResize::clear_ax() {
-  _impl_.ax_ = 0;
+inline void Msg_ResumeAndResize::clear_a_ax() {
+  _impl_.a_ax_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_ResumeAndResize::_internal_ax() const {
-  return _impl_.ax_;
+inline int32_t Msg_ResumeAndResize::_internal_a_ax() const {
+  return _impl_.a_ax_;
 }
-inline int32_t Msg_ResumeAndResize::ax() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aX)
-  return _internal_ax();
+inline int32_t Msg_ResumeAndResize::a_ax() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aX)
+  return _internal_a_ax();
 }
-inline void Msg_ResumeAndResize::_internal_set_ax(int32_t value) {
+inline void Msg_ResumeAndResize::_internal_set_a_ax(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ax_ = value;
+  _impl_.a_ax_ = value;
 }
-inline void Msg_ResumeAndResize::set_ax(int32_t value) {
-  _internal_set_ax(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aX)
+inline void Msg_ResumeAndResize::set_a_ax(int32_t value) {
+  _internal_set_a_ax(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aX)
 }
 
-// required sint32 aY = 2;
-inline bool Msg_ResumeAndResize::_internal_has_ay() const {
+// required sint32 a_aY = 2;
+inline bool Msg_ResumeAndResize::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ResumeAndResize::has_ay() const {
-  return _internal_has_ay();
+inline bool Msg_ResumeAndResize::has_a_ay() const {
+  return _internal_has_a_ay();
 }
-inline void Msg_ResumeAndResize::clear_ay() {
-  _impl_.ay_ = 0;
+inline void Msg_ResumeAndResize::clear_a_ay() {
+  _impl_.a_ay_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_ResumeAndResize::_internal_ay() const {
-  return _impl_.ay_;
+inline int32_t Msg_ResumeAndResize::_internal_a_ay() const {
+  return _impl_.a_ay_;
 }
-inline int32_t Msg_ResumeAndResize::ay() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aY)
-  return _internal_ay();
+inline int32_t Msg_ResumeAndResize::a_ay() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aY)
+  return _internal_a_ay();
 }
-inline void Msg_ResumeAndResize::_internal_set_ay(int32_t value) {
+inline void Msg_ResumeAndResize::_internal_set_a_ay(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.ay_ = value;
+  _impl_.a_ay_ = value;
 }
-inline void Msg_ResumeAndResize::set_ay(int32_t value) {
-  _internal_set_ay(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aY)
+inline void Msg_ResumeAndResize::set_a_ay(int32_t value) {
+  _internal_set_a_ay(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aY)
 }
 
-// required sint32 aWidth = 3;
-inline bool Msg_ResumeAndResize::_internal_has_awidth() const {
+// required sint32 a_aWidth = 3;
+inline bool Msg_ResumeAndResize::_internal_has_a_awidth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ResumeAndResize::has_awidth() const {
-  return _internal_has_awidth();
+inline bool Msg_ResumeAndResize::has_a_awidth() const {
+  return _internal_has_a_awidth();
 }
-inline void Msg_ResumeAndResize::clear_awidth() {
-  _impl_.awidth_ = 0;
+inline void Msg_ResumeAndResize::clear_a_awidth() {
+  _impl_.a_awidth_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_ResumeAndResize::_internal_awidth() const {
-  return _impl_.awidth_;
+inline int32_t Msg_ResumeAndResize::_internal_a_awidth() const {
+  return _impl_.a_awidth_;
 }
-inline int32_t Msg_ResumeAndResize::awidth() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aWidth)
-  return _internal_awidth();
+inline int32_t Msg_ResumeAndResize::a_awidth() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aWidth)
+  return _internal_a_awidth();
 }
-inline void Msg_ResumeAndResize::_internal_set_awidth(int32_t value) {
+inline void Msg_ResumeAndResize::_internal_set_a_awidth(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.awidth_ = value;
+  _impl_.a_awidth_ = value;
 }
-inline void Msg_ResumeAndResize::set_awidth(int32_t value) {
-  _internal_set_awidth(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aWidth)
+inline void Msg_ResumeAndResize::set_a_awidth(int32_t value) {
+  _internal_set_a_awidth(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aWidth)
 }
 
-// required sint32 aHeight = 4;
-inline bool Msg_ResumeAndResize::_internal_has_aheight() const {
+// required sint32 a_aHeight = 4;
+inline bool Msg_ResumeAndResize::_internal_has_a_aheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ResumeAndResize::has_aheight() const {
-  return _internal_has_aheight();
+inline bool Msg_ResumeAndResize::has_a_aheight() const {
+  return _internal_has_a_aheight();
 }
-inline void Msg_ResumeAndResize::clear_aheight() {
-  _impl_.aheight_ = 0;
+inline void Msg_ResumeAndResize::clear_a_aheight() {
+  _impl_.a_aheight_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t Msg_ResumeAndResize::_internal_aheight() const {
-  return _impl_.aheight_;
+inline int32_t Msg_ResumeAndResize::_internal_a_aheight() const {
+  return _impl_.a_aheight_;
 }
-inline int32_t Msg_ResumeAndResize::aheight() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aHeight)
-  return _internal_aheight();
+inline int32_t Msg_ResumeAndResize::a_aheight() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aHeight)
+  return _internal_a_aheight();
 }
-inline void Msg_ResumeAndResize::_internal_set_aheight(int32_t value) {
+inline void Msg_ResumeAndResize::_internal_set_a_aheight(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aheight_ = value;
+  _impl_.a_aheight_ = value;
 }
-inline void Msg_ResumeAndResize::set_aheight(int32_t value) {
-  _internal_set_aheight(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.aHeight)
+inline void Msg_ResumeAndResize::set_a_aheight(int32_t value) {
+  _internal_set_a_aheight(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ResumeAndResize.a_aHeight)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_ResumeAndResize
 
-// required bool aOutResumed = 1;
-inline bool Reply_ResumeAndResize::_internal_has_aoutresumed() const {
+// required bool a_aOutResumed = 1;
+inline bool Reply_ResumeAndResize::_internal_has_a_aoutresumed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_ResumeAndResize::has_aoutresumed() const {
-  return _internal_has_aoutresumed();
+inline bool Reply_ResumeAndResize::has_a_aoutresumed() const {
+  return _internal_has_a_aoutresumed();
 }
-inline void Reply_ResumeAndResize::clear_aoutresumed() {
-  _impl_.aoutresumed_ = false;
+inline void Reply_ResumeAndResize::clear_a_aoutresumed() {
+  _impl_.a_aoutresumed_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_ResumeAndResize::_internal_aoutresumed() const {
-  return _impl_.aoutresumed_;
+inline bool Reply_ResumeAndResize::_internal_a_aoutresumed() const {
+  return _impl_.a_aoutresumed_;
 }
-inline bool Reply_ResumeAndResize::aoutresumed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Reply_ResumeAndResize.aOutResumed)
-  return _internal_aoutresumed();
+inline bool Reply_ResumeAndResize::a_aoutresumed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Reply_ResumeAndResize.a_aOutResumed)
+  return _internal_a_aoutresumed();
 }
-inline void Reply_ResumeAndResize::_internal_set_aoutresumed(bool value) {
+inline void Reply_ResumeAndResize::_internal_set_a_aoutresumed(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aoutresumed_ = value;
+  _impl_.a_aoutresumed_ = value;
 }
-inline void Reply_ResumeAndResize::set_aoutresumed(bool value) {
-  _internal_set_aoutresumed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Reply_ResumeAndResize.aOutResumed)
+inline void Reply_ResumeAndResize::set_a_aoutresumed(bool value) {
+  _internal_set_a_aoutresumed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Reply_ResumeAndResize.a_aOutResumed)
 }
 
 // -------------------------------------------------------------------
@@ -2459,96 +2459,96 @@ inline void Reply_ResumeAndResize::set_aoutresumed(bool value) {
 
 // Msg_MaxToolbarHeight
 
-// required sint32 aHeight = 1;
-inline bool Msg_MaxToolbarHeight::_internal_has_aheight() const {
+// required sint32 a_aHeight = 1;
+inline bool Msg_MaxToolbarHeight::_internal_has_a_aheight() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_MaxToolbarHeight::has_aheight() const {
-  return _internal_has_aheight();
+inline bool Msg_MaxToolbarHeight::has_a_aheight() const {
+  return _internal_has_a_aheight();
 }
-inline void Msg_MaxToolbarHeight::clear_aheight() {
-  _impl_.aheight_ = 0;
+inline void Msg_MaxToolbarHeight::clear_a_aheight() {
+  _impl_.a_aheight_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_MaxToolbarHeight::_internal_aheight() const {
-  return _impl_.aheight_;
+inline int32_t Msg_MaxToolbarHeight::_internal_a_aheight() const {
+  return _impl_.a_aheight_;
 }
-inline int32_t Msg_MaxToolbarHeight::aheight() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_MaxToolbarHeight.aHeight)
-  return _internal_aheight();
+inline int32_t Msg_MaxToolbarHeight::a_aheight() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_MaxToolbarHeight.a_aHeight)
+  return _internal_a_aheight();
 }
-inline void Msg_MaxToolbarHeight::_internal_set_aheight(int32_t value) {
+inline void Msg_MaxToolbarHeight::_internal_set_a_aheight(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aheight_ = value;
+  _impl_.a_aheight_ = value;
 }
-inline void Msg_MaxToolbarHeight::set_aheight(int32_t value) {
-  _internal_set_aheight(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_MaxToolbarHeight.aHeight)
+inline void Msg_MaxToolbarHeight::set_a_aheight(int32_t value) {
+  _internal_set_a_aheight(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_MaxToolbarHeight.a_aHeight)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_FixedBottomOffset
 
-// required sint32 aOffset = 1;
-inline bool Msg_FixedBottomOffset::_internal_has_aoffset() const {
+// required sint32 a_aOffset = 1;
+inline bool Msg_FixedBottomOffset::_internal_has_a_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FixedBottomOffset::has_aoffset() const {
-  return _internal_has_aoffset();
+inline bool Msg_FixedBottomOffset::has_a_aoffset() const {
+  return _internal_has_a_aoffset();
 }
-inline void Msg_FixedBottomOffset::clear_aoffset() {
-  _impl_.aoffset_ = 0;
+inline void Msg_FixedBottomOffset::clear_a_aoffset() {
+  _impl_.a_aoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_FixedBottomOffset::_internal_aoffset() const {
-  return _impl_.aoffset_;
+inline int32_t Msg_FixedBottomOffset::_internal_a_aoffset() const {
+  return _impl_.a_aoffset_;
 }
-inline int32_t Msg_FixedBottomOffset::aoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_FixedBottomOffset.aOffset)
-  return _internal_aoffset();
+inline int32_t Msg_FixedBottomOffset::a_aoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_FixedBottomOffset.a_aOffset)
+  return _internal_a_aoffset();
 }
-inline void Msg_FixedBottomOffset::_internal_set_aoffset(int32_t value) {
+inline void Msg_FixedBottomOffset::_internal_set_a_aoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aoffset_ = value;
+  _impl_.a_aoffset_ = value;
 }
-inline void Msg_FixedBottomOffset::set_aoffset(int32_t value) {
-  _internal_set_aoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_FixedBottomOffset.aOffset)
+inline void Msg_FixedBottomOffset::set_a_aoffset(int32_t value) {
+  _internal_set_a_aoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_FixedBottomOffset.a_aOffset)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DefaultClearColor
 
-// required uint32 aColor = 1;
-inline bool Msg_DefaultClearColor::_internal_has_acolor() const {
+// required uint32 a_aColor = 1;
+inline bool Msg_DefaultClearColor::_internal_has_a_acolor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DefaultClearColor::has_acolor() const {
-  return _internal_has_acolor();
+inline bool Msg_DefaultClearColor::has_a_acolor() const {
+  return _internal_has_a_acolor();
 }
-inline void Msg_DefaultClearColor::clear_acolor() {
-  _impl_.acolor_ = 0u;
+inline void Msg_DefaultClearColor::clear_a_acolor() {
+  _impl_.a_acolor_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_DefaultClearColor::_internal_acolor() const {
-  return _impl_.acolor_;
+inline uint32_t Msg_DefaultClearColor::_internal_a_acolor() const {
+  return _impl_.a_acolor_;
 }
-inline uint32_t Msg_DefaultClearColor::acolor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_DefaultClearColor.aColor)
-  return _internal_acolor();
+inline uint32_t Msg_DefaultClearColor::a_acolor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_DefaultClearColor.a_aColor)
+  return _internal_a_acolor();
 }
-inline void Msg_DefaultClearColor::_internal_set_acolor(uint32_t value) {
+inline void Msg_DefaultClearColor::_internal_set_a_acolor(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acolor_ = value;
+  _impl_.a_acolor_ = value;
 }
-inline void Msg_DefaultClearColor::set_acolor(uint32_t value) {
-  _internal_set_acolor(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_DefaultClearColor.aColor)
+inline void Msg_DefaultClearColor::set_a_acolor(uint32_t value) {
+  _internal_set_a_acolor(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_DefaultClearColor.a_aColor)
 }
 
 // -------------------------------------------------------------------
@@ -2559,304 +2559,304 @@ inline void Msg_DefaultClearColor::set_acolor(uint32_t value) {
 
 // Msg_EnableLayerUpdateNotifications
 
-// required bool aEnable = 1;
-inline bool Msg_EnableLayerUpdateNotifications::_internal_has_aenable() const {
+// required bool a_aEnable = 1;
+inline bool Msg_EnableLayerUpdateNotifications::_internal_has_a_aenable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_EnableLayerUpdateNotifications::has_aenable() const {
-  return _internal_has_aenable();
+inline bool Msg_EnableLayerUpdateNotifications::has_a_aenable() const {
+  return _internal_has_a_aenable();
 }
-inline void Msg_EnableLayerUpdateNotifications::clear_aenable() {
-  _impl_.aenable_ = false;
+inline void Msg_EnableLayerUpdateNotifications::clear_a_aenable() {
+  _impl_.a_aenable_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_EnableLayerUpdateNotifications::_internal_aenable() const {
-  return _impl_.aenable_;
+inline bool Msg_EnableLayerUpdateNotifications::_internal_a_aenable() const {
+  return _impl_.a_aenable_;
 }
-inline bool Msg_EnableLayerUpdateNotifications::aenable() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_EnableLayerUpdateNotifications.aEnable)
-  return _internal_aenable();
+inline bool Msg_EnableLayerUpdateNotifications::a_aenable() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_EnableLayerUpdateNotifications.a_aEnable)
+  return _internal_a_aenable();
 }
-inline void Msg_EnableLayerUpdateNotifications::_internal_set_aenable(bool value) {
+inline void Msg_EnableLayerUpdateNotifications::_internal_set_a_aenable(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aenable_ = value;
+  _impl_.a_aenable_ = value;
 }
-inline void Msg_EnableLayerUpdateNotifications::set_aenable(bool value) {
-  _internal_set_aenable(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_EnableLayerUpdateNotifications.aEnable)
+inline void Msg_EnableLayerUpdateNotifications::set_a_aenable(bool value) {
+  _internal_set_a_aenable(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_EnableLayerUpdateNotifications.a_aEnable)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ToolbarAnimatorMessageFromCompositor
 
-// required sint32 aMessage = 1;
-inline bool Msg_ToolbarAnimatorMessageFromCompositor::_internal_has_amessage() const {
+// required sint32 a_aMessage = 1;
+inline bool Msg_ToolbarAnimatorMessageFromCompositor::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ToolbarAnimatorMessageFromCompositor::has_amessage() const {
-  return _internal_has_amessage();
+inline bool Msg_ToolbarAnimatorMessageFromCompositor::has_a_amessage() const {
+  return _internal_has_a_amessage();
 }
-inline void Msg_ToolbarAnimatorMessageFromCompositor::clear_amessage() {
-  _impl_.amessage_ = 0;
+inline void Msg_ToolbarAnimatorMessageFromCompositor::clear_a_amessage() {
+  _impl_.a_amessage_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_ToolbarAnimatorMessageFromCompositor::_internal_amessage() const {
-  return _impl_.amessage_;
+inline int32_t Msg_ToolbarAnimatorMessageFromCompositor::_internal_a_amessage() const {
+  return _impl_.a_amessage_;
 }
-inline int32_t Msg_ToolbarAnimatorMessageFromCompositor::amessage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ToolbarAnimatorMessageFromCompositor.aMessage)
-  return _internal_amessage();
+inline int32_t Msg_ToolbarAnimatorMessageFromCompositor::a_amessage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ToolbarAnimatorMessageFromCompositor.a_aMessage)
+  return _internal_a_amessage();
 }
-inline void Msg_ToolbarAnimatorMessageFromCompositor::_internal_set_amessage(int32_t value) {
+inline void Msg_ToolbarAnimatorMessageFromCompositor::_internal_set_a_amessage(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.amessage_ = value;
+  _impl_.a_amessage_ = value;
 }
-inline void Msg_ToolbarAnimatorMessageFromCompositor::set_amessage(int32_t value) {
-  _internal_set_amessage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ToolbarAnimatorMessageFromCompositor.aMessage)
+inline void Msg_ToolbarAnimatorMessageFromCompositor::set_a_amessage(int32_t value) {
+  _internal_set_a_amessage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ToolbarAnimatorMessageFromCompositor.a_aMessage)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NotifyCompositorScrollUpdate
 
-// required bytes aUpdate = 1;
-inline bool Msg_NotifyCompositorScrollUpdate::_internal_has_aupdate() const {
+// required bytes a_aUpdate = 1;
+inline bool Msg_NotifyCompositorScrollUpdate::_internal_has_a_aupdate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyCompositorScrollUpdate::has_aupdate() const {
-  return _internal_has_aupdate();
+inline bool Msg_NotifyCompositorScrollUpdate::has_a_aupdate() const {
+  return _internal_has_a_aupdate();
 }
-inline void Msg_NotifyCompositorScrollUpdate::clear_aupdate() {
-  _impl_.aupdate_.ClearToEmpty();
+inline void Msg_NotifyCompositorScrollUpdate::clear_a_aupdate() {
+  _impl_.a_aupdate_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NotifyCompositorScrollUpdate::aupdate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.aUpdate)
-  return _internal_aupdate();
+inline const std::string& Msg_NotifyCompositorScrollUpdate::a_aupdate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.a_aUpdate)
+  return _internal_a_aupdate();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyCompositorScrollUpdate::set_aupdate(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyCompositorScrollUpdate::set_a_aupdate(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aupdate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.aUpdate)
+ _impl_.a_aupdate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.a_aUpdate)
 }
-inline std::string* Msg_NotifyCompositorScrollUpdate::mutable_aupdate() {
-  std::string* _s = _internal_mutable_aupdate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.aUpdate)
+inline std::string* Msg_NotifyCompositorScrollUpdate::mutable_a_aupdate() {
+  std::string* _s = _internal_mutable_a_aupdate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.a_aUpdate)
   return _s;
 }
-inline const std::string& Msg_NotifyCompositorScrollUpdate::_internal_aupdate() const {
-  return _impl_.aupdate_.Get();
+inline const std::string& Msg_NotifyCompositorScrollUpdate::_internal_a_aupdate() const {
+  return _impl_.a_aupdate_.Get();
 }
-inline void Msg_NotifyCompositorScrollUpdate::_internal_set_aupdate(const std::string& value) {
+inline void Msg_NotifyCompositorScrollUpdate::_internal_set_a_aupdate(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aupdate_.Set(value, GetArenaForAllocation());
+  _impl_.a_aupdate_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyCompositorScrollUpdate::_internal_mutable_aupdate() {
+inline std::string* Msg_NotifyCompositorScrollUpdate::_internal_mutable_a_aupdate() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aupdate_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aupdate_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyCompositorScrollUpdate::release_aupdate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.aUpdate)
-  if (!_internal_has_aupdate()) {
+inline std::string* Msg_NotifyCompositorScrollUpdate::release_a_aupdate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.a_aUpdate)
+  if (!_internal_has_a_aupdate()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aupdate_.Release();
+  auto* p = _impl_.a_aupdate_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aupdate_.IsDefault()) {
-    _impl_.aupdate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aupdate_.IsDefault()) {
+    _impl_.a_aupdate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyCompositorScrollUpdate::set_allocated_aupdate(std::string* aupdate) {
-  if (aupdate != nullptr) {
+inline void Msg_NotifyCompositorScrollUpdate::set_allocated_a_aupdate(std::string* a_aupdate) {
+  if (a_aupdate != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aupdate_.SetAllocated(aupdate, GetArenaForAllocation());
+  _impl_.a_aupdate_.SetAllocated(a_aupdate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aupdate_.IsDefault()) {
-    _impl_.aupdate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aupdate_.IsDefault()) {
+    _impl_.a_aupdate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.aUpdate)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_NotifyCompositorScrollUpdate.a_aUpdate)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScreenPixels
 
-// required bytes aMem = 1;
-inline bool Msg_ScreenPixels::_internal_has_amem() const {
+// required bytes a_aMem = 1;
+inline bool Msg_ScreenPixels::_internal_has_a_amem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScreenPixels::has_amem() const {
-  return _internal_has_amem();
+inline bool Msg_ScreenPixels::has_a_amem() const {
+  return _internal_has_a_amem();
 }
-inline void Msg_ScreenPixels::clear_amem() {
-  _impl_.amem_.ClearToEmpty();
+inline void Msg_ScreenPixels::clear_a_amem() {
+  _impl_.a_amem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ScreenPixels::amem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aMem)
-  return _internal_amem();
+inline const std::string& Msg_ScreenPixels::a_amem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aMem)
+  return _internal_a_amem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScreenPixels::set_amem(ArgT0&& arg0, ArgT... args) {
+void Msg_ScreenPixels::set_a_amem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aMem)
+ _impl_.a_amem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aMem)
 }
-inline std::string* Msg_ScreenPixels::mutable_amem() {
-  std::string* _s = _internal_mutable_amem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aMem)
+inline std::string* Msg_ScreenPixels::mutable_a_amem() {
+  std::string* _s = _internal_mutable_a_amem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aMem)
   return _s;
 }
-inline const std::string& Msg_ScreenPixels::_internal_amem() const {
-  return _impl_.amem_.Get();
+inline const std::string& Msg_ScreenPixels::_internal_a_amem() const {
+  return _impl_.a_amem_.Get();
 }
-inline void Msg_ScreenPixels::_internal_set_amem(const std::string& value) {
+inline void Msg_ScreenPixels::_internal_set_a_amem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.amem_.Set(value, GetArenaForAllocation());
+  _impl_.a_amem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScreenPixels::_internal_mutable_amem() {
+inline std::string* Msg_ScreenPixels::_internal_mutable_a_amem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.amem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_amem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScreenPixels::release_amem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aMem)
-  if (!_internal_has_amem()) {
+inline std::string* Msg_ScreenPixels::release_a_amem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aMem)
+  if (!_internal_has_a_amem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.amem_.Release();
+  auto* p = _impl_.a_amem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amem_.IsDefault()) {
-    _impl_.amem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amem_.IsDefault()) {
+    _impl_.a_amem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScreenPixels::set_allocated_amem(std::string* amem) {
-  if (amem != nullptr) {
+inline void Msg_ScreenPixels::set_allocated_a_amem(std::string* a_amem) {
+  if (a_amem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.amem_.SetAllocated(amem, GetArenaForAllocation());
+  _impl_.a_amem_.SetAllocated(a_amem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amem_.IsDefault()) {
-    _impl_.amem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amem_.IsDefault()) {
+    _impl_.a_amem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aMem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aMem)
 }
 
-// required bytes aSize = 2;
-inline bool Msg_ScreenPixels::_internal_has_asize() const {
+// required bytes a_aSize = 2;
+inline bool Msg_ScreenPixels::_internal_has_a_asize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScreenPixels::has_asize() const {
-  return _internal_has_asize();
+inline bool Msg_ScreenPixels::has_a_asize() const {
+  return _internal_has_a_asize();
 }
-inline void Msg_ScreenPixels::clear_asize() {
-  _impl_.asize_.ClearToEmpty();
+inline void Msg_ScreenPixels::clear_a_asize() {
+  _impl_.a_asize_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ScreenPixels::asize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aSize)
-  return _internal_asize();
+inline const std::string& Msg_ScreenPixels::a_asize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aSize)
+  return _internal_a_asize();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScreenPixels::set_asize(ArgT0&& arg0, ArgT... args) {
+void Msg_ScreenPixels::set_a_asize(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.asize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aSize)
+ _impl_.a_asize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aSize)
 }
-inline std::string* Msg_ScreenPixels::mutable_asize() {
-  std::string* _s = _internal_mutable_asize();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aSize)
+inline std::string* Msg_ScreenPixels::mutable_a_asize() {
+  std::string* _s = _internal_mutable_a_asize();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aSize)
   return _s;
 }
-inline const std::string& Msg_ScreenPixels::_internal_asize() const {
-  return _impl_.asize_.Get();
+inline const std::string& Msg_ScreenPixels::_internal_a_asize() const {
+  return _impl_.a_asize_.Get();
 }
-inline void Msg_ScreenPixels::_internal_set_asize(const std::string& value) {
+inline void Msg_ScreenPixels::_internal_set_a_asize(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.asize_.Set(value, GetArenaForAllocation());
+  _impl_.a_asize_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScreenPixels::_internal_mutable_asize() {
+inline std::string* Msg_ScreenPixels::_internal_mutable_a_asize() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.asize_.Mutable(GetArenaForAllocation());
+  return _impl_.a_asize_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScreenPixels::release_asize() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aSize)
-  if (!_internal_has_asize()) {
+inline std::string* Msg_ScreenPixels::release_a_asize() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aSize)
+  if (!_internal_has_a_asize()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.asize_.Release();
+  auto* p = _impl_.a_asize_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asize_.IsDefault()) {
-    _impl_.asize_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asize_.IsDefault()) {
+    _impl_.a_asize_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScreenPixels::set_allocated_asize(std::string* asize) {
-  if (asize != nullptr) {
+inline void Msg_ScreenPixels::set_allocated_a_asize(std::string* a_asize) {
+  if (a_asize != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.asize_.SetAllocated(asize, GetArenaForAllocation());
+  _impl_.a_asize_.SetAllocated(a_asize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asize_.IsDefault()) {
-    _impl_.asize_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asize_.IsDefault()) {
+    _impl_.a_asize_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aSize)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aSize)
 }
 
-// required bool aNeedsYFlip = 3;
-inline bool Msg_ScreenPixels::_internal_has_aneedsyflip() const {
+// required bool a_aNeedsYFlip = 3;
+inline bool Msg_ScreenPixels::_internal_has_a_aneedsyflip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ScreenPixels::has_aneedsyflip() const {
-  return _internal_has_aneedsyflip();
+inline bool Msg_ScreenPixels::has_a_aneedsyflip() const {
+  return _internal_has_a_aneedsyflip();
 }
-inline void Msg_ScreenPixels::clear_aneedsyflip() {
-  _impl_.aneedsyflip_ = false;
+inline void Msg_ScreenPixels::clear_a_aneedsyflip() {
+  _impl_.a_aneedsyflip_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_ScreenPixels::_internal_aneedsyflip() const {
-  return _impl_.aneedsyflip_;
+inline bool Msg_ScreenPixels::_internal_a_aneedsyflip() const {
+  return _impl_.a_aneedsyflip_;
 }
-inline bool Msg_ScreenPixels::aneedsyflip() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aNeedsYFlip)
-  return _internal_aneedsyflip();
+inline bool Msg_ScreenPixels::a_aneedsyflip() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aNeedsYFlip)
+  return _internal_a_aneedsyflip();
 }
-inline void Msg_ScreenPixels::_internal_set_aneedsyflip(bool value) {
+inline void Msg_ScreenPixels::_internal_set_a_aneedsyflip(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aneedsyflip_ = value;
+  _impl_.a_aneedsyflip_ = value;
 }
-inline void Msg_ScreenPixels::set_aneedsyflip(bool value) {
-  _internal_set_aneedsyflip(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.aNeedsYFlip)
+inline void Msg_ScreenPixels::set_a_aneedsyflip(bool value) {
+  _internal_set_a_aneedsyflip(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PUiCompositorController.Msg_ScreenPixels.a_aNeedsYFlip)
 }
 
 #ifdef __GNUC__

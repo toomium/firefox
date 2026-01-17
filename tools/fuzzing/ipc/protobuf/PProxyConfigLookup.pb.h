@@ -177,43 +177,43 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAProxyInfoFieldNumber = 1,
-    kAResultFieldNumber = 2,
+    kAAProxyInfoFieldNumber = 1,
+    kAAResultFieldNumber = 2,
   };
-  // repeated .protobuf.mozilla.net.ProxyInfoCloneArgs aProxyInfo = 1;
-  int aproxyinfo_size() const;
+  // repeated .protobuf.mozilla.net.ProxyInfoCloneArgs a_aProxyInfo = 1;
+  int a_aproxyinfo_size() const;
   private:
-  int _internal_aproxyinfo_size() const;
+  int _internal_a_aproxyinfo_size() const;
   public:
-  void clear_aproxyinfo();
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* mutable_aproxyinfo(int index);
+  void clear_a_aproxyinfo();
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* mutable_a_aproxyinfo(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >*
-      mutable_aproxyinfo();
+      mutable_a_aproxyinfo();
   private:
-  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& _internal_aproxyinfo(int index) const;
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _internal_add_aproxyinfo();
+  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& _internal_a_aproxyinfo(int index) const;
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _internal_add_a_aproxyinfo();
   public:
-  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& aproxyinfo(int index) const;
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* add_aproxyinfo();
+  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& a_aproxyinfo(int index) const;
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* add_a_aproxyinfo();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
-      aproxyinfo() const;
+      a_aproxyinfo() const;
 
-  // required bytes aResult = 2;
-  bool has_aresult() const;
+  // required bytes a_aResult = 2;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const std::string& aresult() const;
+  void clear_a_aresult();
+  const std::string& a_aresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aresult();
-  PROTOBUF_NODISCARD std::string* release_aresult();
-  void set_allocated_aresult(std::string* aresult);
+  void set_a_aresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aresult();
+  PROTOBUF_NODISCARD std::string* release_a_aresult();
+  void set_allocated_a_aresult(std::string* a_aresult);
   private:
-  const std::string& _internal_aresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aresult(const std::string& value);
-  std::string* _internal_mutable_aresult();
+  const std::string& _internal_a_aresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aresult(const std::string& value);
+  std::string* _internal_mutable_a_aresult();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__)
@@ -226,8 +226,8 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs > aproxyinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aresult_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs > a_aproxyinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProxyConfigLookup_2eproto;
@@ -367,109 +367,109 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// repeated .protobuf.mozilla.net.ProxyInfoCloneArgs aProxyInfo = 1;
-inline int Msg___delete__::_internal_aproxyinfo_size() const {
-  return _impl_.aproxyinfo_.size();
+// repeated .protobuf.mozilla.net.ProxyInfoCloneArgs a_aProxyInfo = 1;
+inline int Msg___delete__::_internal_a_aproxyinfo_size() const {
+  return _impl_.a_aproxyinfo_.size();
 }
-inline int Msg___delete__::aproxyinfo_size() const {
-  return _internal_aproxyinfo_size();
+inline int Msg___delete__::a_aproxyinfo_size() const {
+  return _internal_a_aproxyinfo_size();
 }
-inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg___delete__::mutable_aproxyinfo(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aProxyInfo)
-  return _impl_.aproxyinfo_.Mutable(index);
+inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg___delete__::mutable_a_aproxyinfo(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aProxyInfo)
+  return _impl_.a_aproxyinfo_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >*
-Msg___delete__::mutable_aproxyinfo() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aProxyInfo)
-  return &_impl_.aproxyinfo_;
+Msg___delete__::mutable_a_aproxyinfo() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aProxyInfo)
+  return &_impl_.a_aproxyinfo_;
 }
-inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg___delete__::_internal_aproxyinfo(int index) const {
-  return _impl_.aproxyinfo_.Get(index);
+inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg___delete__::_internal_a_aproxyinfo(int index) const {
+  return _impl_.a_aproxyinfo_.Get(index);
 }
-inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg___delete__::aproxyinfo(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aProxyInfo)
-  return _internal_aproxyinfo(index);
+inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg___delete__::a_aproxyinfo(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aProxyInfo)
+  return _internal_a_aproxyinfo(index);
 }
-inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg___delete__::_internal_add_aproxyinfo() {
-  return _impl_.aproxyinfo_.Add();
+inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg___delete__::_internal_add_a_aproxyinfo() {
+  return _impl_.a_aproxyinfo_.Add();
 }
-inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg___delete__::add_aproxyinfo() {
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _add = _internal_add_aproxyinfo();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aProxyInfo)
+inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg___delete__::add_a_aproxyinfo() {
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _add = _internal_add_a_aproxyinfo();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aProxyInfo)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
-Msg___delete__::aproxyinfo() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aProxyInfo)
-  return _impl_.aproxyinfo_;
+Msg___delete__::a_aproxyinfo() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aProxyInfo)
+  return _impl_.a_aproxyinfo_;
 }
 
-// required bytes aResult = 2;
-inline bool Msg___delete__::_internal_has_aresult() const {
+// required bytes a_aResult = 2;
+inline bool Msg___delete__::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Msg___delete__::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline void Msg___delete__::clear_aresult() {
-  _impl_.aresult_.ClearToEmpty();
+inline void Msg___delete__::clear_a_aresult() {
+  _impl_.a_aresult_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg___delete__::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aResult)
-  return _internal_aresult();
+inline const std::string& Msg___delete__::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aResult)
+  return _internal_a_aresult();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_aresult(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_aresult(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aResult)
+ _impl_.a_aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aResult)
 }
-inline std::string* Msg___delete__::mutable_aresult() {
-  std::string* _s = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aResult)
+inline std::string* Msg___delete__::mutable_a_aresult() {
+  std::string* _s = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aResult)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_aresult() const {
-  return _impl_.aresult_.Get();
+inline const std::string& Msg___delete__::_internal_a_aresult() const {
+  return _impl_.a_aresult_.Get();
 }
-inline void Msg___delete__::_internal_set_aresult(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_aresult(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aresult_.Set(value, GetArenaForAllocation());
+  _impl_.a_aresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_aresult() {
+inline std::string* Msg___delete__::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aresult_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aresult_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aResult)
-  if (!_internal_has_aresult()) {
+inline std::string* Msg___delete__::release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aResult)
+  if (!_internal_has_a_aresult()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aresult_.Release();
+  auto* p = _impl_.a_aresult_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_aresult(std::string* aresult) {
-  if (aresult != nullptr) {
+inline void Msg___delete__::set_allocated_a_aresult(std::string* a_aresult) {
+  if (a_aresult != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresult_.SetAllocated(aresult, GetArenaForAllocation());
+  _impl_.a_aresult_.SetAllocated(a_aresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.aResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyConfigLookup.Msg___delete__.a_aResult)
 }
 
 // -------------------------------------------------------------------

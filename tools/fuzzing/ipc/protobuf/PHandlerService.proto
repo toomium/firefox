@@ -17,64 +17,64 @@ import public "PHandlerService_protobuf.mozilla.dom.h.proto";
 
 // Message declarations
 message Msg_FillHandlerInfo {
-  required protobuf.mozilla.dom.HandlerInfo aHandlerInfoData = 1;
-  required bytes aOverrideType = 2;
+  required protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
+  required bytes a_aOverrideType = 2;
 }
 
 message Reply_FillHandlerInfo {
-  required protobuf.mozilla.dom.HandlerInfo handlerInfoData = 1;
+  required protobuf.mozilla.dom.HandlerInfo a_handlerInfoData = 1;
 }
 
 message Msg_ExistsForProtocolOS {
-  required bytes aProtocolScheme = 1;
+  required bytes a_aProtocolScheme = 1;
 }
 
 message Reply_ExistsForProtocolOS {
-  required bool exists = 1;
+  required bool a_exists = 1;
 }
 
 message Msg_ExistsForProtocol {
-  required bytes aProtocolScheme = 1;
+  required bytes a_aProtocolScheme = 1;
 }
 
 message Reply_ExistsForProtocol {
-  required bool exists = 1;
+  required bool a_exists = 1;
 }
 
 message Msg_Exists {
-  required protobuf.mozilla.dom.HandlerInfo aHandlerInfo = 1;
+  required protobuf.mozilla.dom.HandlerInfo a_aHandlerInfo = 1;
 }
 
 message Reply_Exists {
-  required bool exists = 1;
+  required bool a_exists = 1;
 }
 
 message Msg_GetTypeFromExtension {
-  required bytes aFileExtension = 1;
+  required bytes a_aFileExtension = 1;
 }
 
 message Reply_GetTypeFromExtension {
-  required bytes type = 1;
+  required bytes a_type = 1;
 }
 
 message Msg_GetMIMEInfoFromOS {
-  required bytes aMIMEType = 1;
-  required bytes aExtension = 2;
+  required bytes a_aMIMEType = 1;
+  required bytes a_aExtension = 2;
 }
 
 message Reply_GetMIMEInfoFromOS {
-  required bytes rv = 1;
-  required protobuf.mozilla.dom.HandlerInfo handlerInfoData = 2;
-  required bool found = 3;
+  required bytes a_rv = 1;
+  required protobuf.mozilla.dom.HandlerInfo a_handlerInfoData = 2;
+  required bool a_found = 3;
 }
 
 message Msg_GetApplicationDescription {
-  required bytes aScheme = 1;
+  required bytes a_aScheme = 1;
 }
 
 message Reply_GetApplicationDescription {
-  required bytes rv = 1;
-  required bytes description = 2;
+  required bytes a_rv = 1;
+  required bytes a_description = 2;
 }
 
 message Msg___delete__ {

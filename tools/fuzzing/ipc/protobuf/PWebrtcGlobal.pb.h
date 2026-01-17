@@ -464,38 +464,38 @@ class Msg_PeerConnectionCreated final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPcIdFieldNumber = 1,
-    kAIsLongTermStatsDisabledFieldNumber = 2,
+    kAAPcIdFieldNumber = 1,
+    kAAIsLongTermStatsDisabledFieldNumber = 2,
   };
-  // required bytes aPcId = 1;
-  bool has_apcid() const;
+  // required bytes a_aPcId = 1;
+  bool has_a_apcid() const;
   private:
-  bool _internal_has_apcid() const;
+  bool _internal_has_a_apcid() const;
   public:
-  void clear_apcid();
-  const std::string& apcid() const;
+  void clear_a_apcid();
+  const std::string& a_apcid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_apcid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_apcid();
-  PROTOBUF_NODISCARD std::string* release_apcid();
-  void set_allocated_apcid(std::string* apcid);
+  void set_a_apcid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_apcid();
+  PROTOBUF_NODISCARD std::string* release_a_apcid();
+  void set_allocated_a_apcid(std::string* a_apcid);
   private:
-  const std::string& _internal_apcid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_apcid(const std::string& value);
-  std::string* _internal_mutable_apcid();
+  const std::string& _internal_a_apcid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_apcid(const std::string& value);
+  std::string* _internal_mutable_a_apcid();
   public:
 
-  // required bool aIsLongTermStatsDisabled = 2;
-  bool has_aislongtermstatsdisabled() const;
+  // required bool a_aIsLongTermStatsDisabled = 2;
+  bool has_a_aislongtermstatsdisabled() const;
   private:
-  bool _internal_has_aislongtermstatsdisabled() const;
+  bool _internal_has_a_aislongtermstatsdisabled() const;
   public:
-  void clear_aislongtermstatsdisabled();
-  bool aislongtermstatsdisabled() const;
-  void set_aislongtermstatsdisabled(bool value);
+  void clear_a_aislongtermstatsdisabled();
+  bool a_aislongtermstatsdisabled() const;
+  void set_a_aislongtermstatsdisabled(bool value);
   private:
-  bool _internal_aislongtermstatsdisabled() const;
-  void _internal_set_aislongtermstatsdisabled(bool value);
+  bool _internal_a_aislongtermstatsdisabled() const;
+  void _internal_set_a_aislongtermstatsdisabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated)
@@ -511,8 +511,8 @@ class Msg_PeerConnectionCreated final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apcid_;
-    bool aislongtermstatsdisabled_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
+    bool a_aislongtermstatsdisabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -629,24 +629,24 @@ class Msg_PeerConnectionDestroyed final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPcIdFieldNumber = 1,
+    kAAPcIdFieldNumber = 1,
   };
-  // required bytes aPcId = 1;
-  bool has_apcid() const;
+  // required bytes a_aPcId = 1;
+  bool has_a_apcid() const;
   private:
-  bool _internal_has_apcid() const;
+  bool _internal_has_a_apcid() const;
   public:
-  void clear_apcid();
-  const std::string& apcid() const;
+  void clear_a_apcid();
+  const std::string& a_apcid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_apcid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_apcid();
-  PROTOBUF_NODISCARD std::string* release_apcid();
-  void set_allocated_apcid(std::string* apcid);
+  void set_a_apcid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_apcid();
+  PROTOBUF_NODISCARD std::string* release_a_apcid();
+  void set_allocated_a_apcid(std::string* a_apcid);
   private:
-  const std::string& _internal_apcid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_apcid(const std::string& value);
-  std::string* _internal_mutable_apcid();
+  const std::string& _internal_a_apcid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_apcid(const std::string& value);
+  std::string* _internal_mutable_a_apcid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed)
@@ -659,7 +659,7 @@ class Msg_PeerConnectionDestroyed final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apcid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -776,24 +776,24 @@ class Msg_PeerConnectionFinalStats final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFinalStatsFieldNumber = 1,
+    kAAFinalStatsFieldNumber = 1,
   };
-  // required bytes aFinalStats = 1;
-  bool has_afinalstats() const;
+  // required bytes a_aFinalStats = 1;
+  bool has_a_afinalstats() const;
   private:
-  bool _internal_has_afinalstats() const;
+  bool _internal_has_a_afinalstats() const;
   public:
-  void clear_afinalstats();
-  const std::string& afinalstats() const;
+  void clear_a_afinalstats();
+  const std::string& a_afinalstats() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_afinalstats(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_afinalstats();
-  PROTOBUF_NODISCARD std::string* release_afinalstats();
-  void set_allocated_afinalstats(std::string* afinalstats);
+  void set_a_afinalstats(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_afinalstats();
+  PROTOBUF_NODISCARD std::string* release_a_afinalstats();
+  void set_allocated_a_afinalstats(std::string* a_afinalstats);
   private:
-  const std::string& _internal_afinalstats() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_afinalstats(const std::string& value);
-  std::string* _internal_mutable_afinalstats();
+  const std::string& _internal_a_afinalstats() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_afinalstats(const std::string& value);
+  std::string* _internal_mutable_a_afinalstats();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats)
@@ -806,7 +806,7 @@ class Msg_PeerConnectionFinalStats final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr afinalstats_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afinalstats_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -923,24 +923,24 @@ class Msg_GetStats final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPcIdFilterFieldNumber = 1,
+    kAAPcIdFilterFieldNumber = 1,
   };
-  // required bytes aPcIdFilter = 1;
-  bool has_apcidfilter() const;
+  // required bytes a_aPcIdFilter = 1;
+  bool has_a_apcidfilter() const;
   private:
-  bool _internal_has_apcidfilter() const;
+  bool _internal_has_a_apcidfilter() const;
   public:
-  void clear_apcidfilter();
-  const std::string& apcidfilter() const;
+  void clear_a_apcidfilter();
+  const std::string& a_apcidfilter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_apcidfilter(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_apcidfilter();
-  PROTOBUF_NODISCARD std::string* release_apcidfilter();
-  void set_allocated_apcidfilter(std::string* apcidfilter);
+  void set_a_apcidfilter(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_apcidfilter();
+  PROTOBUF_NODISCARD std::string* release_a_apcidfilter();
+  void set_allocated_a_apcidfilter(std::string* a_apcidfilter);
   private:
-  const std::string& _internal_apcidfilter() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_apcidfilter(const std::string& value);
-  std::string* _internal_mutable_apcidfilter();
+  const std::string& _internal_a_apcidfilter() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_apcidfilter(const std::string& value);
+  std::string* _internal_mutable_a_apcidfilter();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats)
@@ -953,7 +953,7 @@ class Msg_GetStats final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apcidfilter_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcidfilter_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1070,30 +1070,30 @@ class Reply_GetStats final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStatsFieldNumber = 1,
+    kAStatsFieldNumber = 1,
   };
-  // repeated bytes stats = 1;
-  int stats_size() const;
+  // repeated bytes a_stats = 1;
+  int a_stats_size() const;
   private:
-  int _internal_stats_size() const;
+  int _internal_a_stats_size() const;
   public:
-  void clear_stats();
-  const std::string& stats(int index) const;
-  std::string* mutable_stats(int index);
-  void set_stats(int index, const std::string& value);
-  void set_stats(int index, std::string&& value);
-  void set_stats(int index, const char* value);
-  void set_stats(int index, const void* value, size_t size);
-  std::string* add_stats();
-  void add_stats(const std::string& value);
-  void add_stats(std::string&& value);
-  void add_stats(const char* value);
-  void add_stats(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& stats() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_stats();
+  void clear_a_stats();
+  const std::string& a_stats(int index) const;
+  std::string* mutable_a_stats(int index);
+  void set_a_stats(int index, const std::string& value);
+  void set_a_stats(int index, std::string&& value);
+  void set_a_stats(int index, const char* value);
+  void set_a_stats(int index, const void* value, size_t size);
+  std::string* add_a_stats();
+  void add_a_stats(const std::string& value);
+  void add_a_stats(std::string&& value);
+  void add_a_stats(const char* value);
+  void add_a_stats(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_stats() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_stats();
   private:
-  const std::string& _internal_stats(int index) const;
-  std::string* _internal_add_stats();
+  const std::string& _internal_a_stats(int index) const;
+  std::string* _internal_add_a_stats();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats)
@@ -1104,7 +1104,7 @@ class Reply_GetStats final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> stats_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_stats_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1470,24 +1470,24 @@ class Reply_GetLog final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kLogsFieldNumber = 1,
+    kALogsFieldNumber = 1,
   };
-  // required bytes logs = 1;
-  bool has_logs() const;
+  // required bytes a_logs = 1;
+  bool has_a_logs() const;
   private:
-  bool _internal_has_logs() const;
+  bool _internal_has_a_logs() const;
   public:
-  void clear_logs();
-  const std::string& logs() const;
+  void clear_a_logs();
+  const std::string& a_logs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_logs(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_logs();
-  PROTOBUF_NODISCARD std::string* release_logs();
-  void set_allocated_logs(std::string* logs);
+  void set_a_logs(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_logs();
+  PROTOBUF_NODISCARD std::string* release_a_logs();
+  void set_allocated_a_logs(std::string* a_logs);
   private:
-  const std::string& _internal_logs() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_logs(const std::string& value);
-  std::string* _internal_mutable_logs();
+  const std::string& _internal_a_logs() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_logs(const std::string& value);
+  std::string* _internal_mutable_a_logs();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog)
@@ -1500,7 +1500,7 @@ class Reply_GetLog final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr logs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_logs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1741,19 +1741,19 @@ class Msg_SetAecLogging final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEnableFieldNumber = 1,
+    kAAEnableFieldNumber = 1,
   };
-  // required bool aEnable = 1;
-  bool has_aenable() const;
+  // required bool a_aEnable = 1;
+  bool has_a_aenable() const;
   private:
-  bool _internal_has_aenable() const;
+  bool _internal_has_a_aenable() const;
   public:
-  void clear_aenable();
-  bool aenable() const;
-  void set_aenable(bool value);
+  void clear_a_aenable();
+  bool a_aenable() const;
+  void set_a_aenable(bool value);
   private:
-  bool _internal_aenable() const;
-  void _internal_set_aenable(bool value);
+  bool _internal_a_aenable() const;
+  void _internal_set_a_aenable(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging)
@@ -1766,7 +1766,7 @@ class Msg_SetAecLogging final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aenable_;
+    bool a_aenable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1790,395 +1790,395 @@ class Msg_SetAecLogging final :
 
 // Msg_PeerConnectionCreated
 
-// required bytes aPcId = 1;
-inline bool Msg_PeerConnectionCreated::_internal_has_apcid() const {
+// required bytes a_aPcId = 1;
+inline bool Msg_PeerConnectionCreated::_internal_has_a_apcid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PeerConnectionCreated::has_apcid() const {
-  return _internal_has_apcid();
+inline bool Msg_PeerConnectionCreated::has_a_apcid() const {
+  return _internal_has_a_apcid();
 }
-inline void Msg_PeerConnectionCreated::clear_apcid() {
-  _impl_.apcid_.ClearToEmpty();
+inline void Msg_PeerConnectionCreated::clear_a_apcid() {
+  _impl_.a_apcid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PeerConnectionCreated::apcid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aPcId)
-  return _internal_apcid();
+inline const std::string& Msg_PeerConnectionCreated::a_apcid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
+  return _internal_a_apcid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PeerConnectionCreated::set_apcid(ArgT0&& arg0, ArgT... args) {
+void Msg_PeerConnectionCreated::set_a_apcid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apcid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aPcId)
+ _impl_.a_apcid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
-inline std::string* Msg_PeerConnectionCreated::mutable_apcid() {
-  std::string* _s = _internal_mutable_apcid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aPcId)
+inline std::string* Msg_PeerConnectionCreated::mutable_a_apcid() {
+  std::string* _s = _internal_mutable_a_apcid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
   return _s;
 }
-inline const std::string& Msg_PeerConnectionCreated::_internal_apcid() const {
-  return _impl_.apcid_.Get();
+inline const std::string& Msg_PeerConnectionCreated::_internal_a_apcid() const {
+  return _impl_.a_apcid_.Get();
 }
-inline void Msg_PeerConnectionCreated::_internal_set_apcid(const std::string& value) {
+inline void Msg_PeerConnectionCreated::_internal_set_a_apcid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apcid_.Set(value, GetArenaForAllocation());
+  _impl_.a_apcid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PeerConnectionCreated::_internal_mutable_apcid() {
+inline std::string* Msg_PeerConnectionCreated::_internal_mutable_a_apcid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.apcid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_apcid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PeerConnectionCreated::release_apcid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aPcId)
-  if (!_internal_has_apcid()) {
+inline std::string* Msg_PeerConnectionCreated::release_a_apcid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
+  if (!_internal_has_a_apcid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.apcid_.Release();
+  auto* p = _impl_.a_apcid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apcid_.IsDefault()) {
-    _impl_.apcid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apcid_.IsDefault()) {
+    _impl_.a_apcid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PeerConnectionCreated::set_allocated_apcid(std::string* apcid) {
-  if (apcid != nullptr) {
+inline void Msg_PeerConnectionCreated::set_allocated_a_apcid(std::string* a_apcid) {
+  if (a_apcid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.apcid_.SetAllocated(apcid, GetArenaForAllocation());
+  _impl_.a_apcid_.SetAllocated(a_apcid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apcid_.IsDefault()) {
-    _impl_.apcid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apcid_.IsDefault()) {
+    _impl_.a_apcid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aPcId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
 
-// required bool aIsLongTermStatsDisabled = 2;
-inline bool Msg_PeerConnectionCreated::_internal_has_aislongtermstatsdisabled() const {
+// required bool a_aIsLongTermStatsDisabled = 2;
+inline bool Msg_PeerConnectionCreated::_internal_has_a_aislongtermstatsdisabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PeerConnectionCreated::has_aislongtermstatsdisabled() const {
-  return _internal_has_aislongtermstatsdisabled();
+inline bool Msg_PeerConnectionCreated::has_a_aislongtermstatsdisabled() const {
+  return _internal_has_a_aislongtermstatsdisabled();
 }
-inline void Msg_PeerConnectionCreated::clear_aislongtermstatsdisabled() {
-  _impl_.aislongtermstatsdisabled_ = false;
+inline void Msg_PeerConnectionCreated::clear_a_aislongtermstatsdisabled() {
+  _impl_.a_aislongtermstatsdisabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_PeerConnectionCreated::_internal_aislongtermstatsdisabled() const {
-  return _impl_.aislongtermstatsdisabled_;
+inline bool Msg_PeerConnectionCreated::_internal_a_aislongtermstatsdisabled() const {
+  return _impl_.a_aislongtermstatsdisabled_;
 }
-inline bool Msg_PeerConnectionCreated::aislongtermstatsdisabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aIsLongTermStatsDisabled)
-  return _internal_aislongtermstatsdisabled();
+inline bool Msg_PeerConnectionCreated::a_aislongtermstatsdisabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aIsLongTermStatsDisabled)
+  return _internal_a_aislongtermstatsdisabled();
 }
-inline void Msg_PeerConnectionCreated::_internal_set_aislongtermstatsdisabled(bool value) {
+inline void Msg_PeerConnectionCreated::_internal_set_a_aislongtermstatsdisabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aislongtermstatsdisabled_ = value;
+  _impl_.a_aislongtermstatsdisabled_ = value;
 }
-inline void Msg_PeerConnectionCreated::set_aislongtermstatsdisabled(bool value) {
-  _internal_set_aislongtermstatsdisabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.aIsLongTermStatsDisabled)
+inline void Msg_PeerConnectionCreated::set_a_aislongtermstatsdisabled(bool value) {
+  _internal_set_a_aislongtermstatsdisabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aIsLongTermStatsDisabled)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PeerConnectionDestroyed
 
-// required bytes aPcId = 1;
-inline bool Msg_PeerConnectionDestroyed::_internal_has_apcid() const {
+// required bytes a_aPcId = 1;
+inline bool Msg_PeerConnectionDestroyed::_internal_has_a_apcid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PeerConnectionDestroyed::has_apcid() const {
-  return _internal_has_apcid();
+inline bool Msg_PeerConnectionDestroyed::has_a_apcid() const {
+  return _internal_has_a_apcid();
 }
-inline void Msg_PeerConnectionDestroyed::clear_apcid() {
-  _impl_.apcid_.ClearToEmpty();
+inline void Msg_PeerConnectionDestroyed::clear_a_apcid() {
+  _impl_.a_apcid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PeerConnectionDestroyed::apcid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.aPcId)
-  return _internal_apcid();
+inline const std::string& Msg_PeerConnectionDestroyed::a_apcid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
+  return _internal_a_apcid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PeerConnectionDestroyed::set_apcid(ArgT0&& arg0, ArgT... args) {
+void Msg_PeerConnectionDestroyed::set_a_apcid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apcid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.aPcId)
+ _impl_.a_apcid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
 }
-inline std::string* Msg_PeerConnectionDestroyed::mutable_apcid() {
-  std::string* _s = _internal_mutable_apcid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.aPcId)
+inline std::string* Msg_PeerConnectionDestroyed::mutable_a_apcid() {
+  std::string* _s = _internal_mutable_a_apcid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
   return _s;
 }
-inline const std::string& Msg_PeerConnectionDestroyed::_internal_apcid() const {
-  return _impl_.apcid_.Get();
+inline const std::string& Msg_PeerConnectionDestroyed::_internal_a_apcid() const {
+  return _impl_.a_apcid_.Get();
 }
-inline void Msg_PeerConnectionDestroyed::_internal_set_apcid(const std::string& value) {
+inline void Msg_PeerConnectionDestroyed::_internal_set_a_apcid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apcid_.Set(value, GetArenaForAllocation());
+  _impl_.a_apcid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PeerConnectionDestroyed::_internal_mutable_apcid() {
+inline std::string* Msg_PeerConnectionDestroyed::_internal_mutable_a_apcid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.apcid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_apcid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PeerConnectionDestroyed::release_apcid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.aPcId)
-  if (!_internal_has_apcid()) {
+inline std::string* Msg_PeerConnectionDestroyed::release_a_apcid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
+  if (!_internal_has_a_apcid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.apcid_.Release();
+  auto* p = _impl_.a_apcid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apcid_.IsDefault()) {
-    _impl_.apcid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apcid_.IsDefault()) {
+    _impl_.a_apcid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PeerConnectionDestroyed::set_allocated_apcid(std::string* apcid) {
-  if (apcid != nullptr) {
+inline void Msg_PeerConnectionDestroyed::set_allocated_a_apcid(std::string* a_apcid) {
+  if (a_apcid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.apcid_.SetAllocated(apcid, GetArenaForAllocation());
+  _impl_.a_apcid_.SetAllocated(a_apcid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apcid_.IsDefault()) {
-    _impl_.apcid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apcid_.IsDefault()) {
+    _impl_.a_apcid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.aPcId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PeerConnectionFinalStats
 
-// required bytes aFinalStats = 1;
-inline bool Msg_PeerConnectionFinalStats::_internal_has_afinalstats() const {
+// required bytes a_aFinalStats = 1;
+inline bool Msg_PeerConnectionFinalStats::_internal_has_a_afinalstats() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PeerConnectionFinalStats::has_afinalstats() const {
-  return _internal_has_afinalstats();
+inline bool Msg_PeerConnectionFinalStats::has_a_afinalstats() const {
+  return _internal_has_a_afinalstats();
 }
-inline void Msg_PeerConnectionFinalStats::clear_afinalstats() {
-  _impl_.afinalstats_.ClearToEmpty();
+inline void Msg_PeerConnectionFinalStats::clear_a_afinalstats() {
+  _impl_.a_afinalstats_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PeerConnectionFinalStats::afinalstats() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.aFinalStats)
-  return _internal_afinalstats();
+inline const std::string& Msg_PeerConnectionFinalStats::a_afinalstats() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
+  return _internal_a_afinalstats();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PeerConnectionFinalStats::set_afinalstats(ArgT0&& arg0, ArgT... args) {
+void Msg_PeerConnectionFinalStats::set_a_afinalstats(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.afinalstats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.aFinalStats)
+ _impl_.a_afinalstats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
 }
-inline std::string* Msg_PeerConnectionFinalStats::mutable_afinalstats() {
-  std::string* _s = _internal_mutable_afinalstats();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.aFinalStats)
+inline std::string* Msg_PeerConnectionFinalStats::mutable_a_afinalstats() {
+  std::string* _s = _internal_mutable_a_afinalstats();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
   return _s;
 }
-inline const std::string& Msg_PeerConnectionFinalStats::_internal_afinalstats() const {
-  return _impl_.afinalstats_.Get();
+inline const std::string& Msg_PeerConnectionFinalStats::_internal_a_afinalstats() const {
+  return _impl_.a_afinalstats_.Get();
 }
-inline void Msg_PeerConnectionFinalStats::_internal_set_afinalstats(const std::string& value) {
+inline void Msg_PeerConnectionFinalStats::_internal_set_a_afinalstats(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.afinalstats_.Set(value, GetArenaForAllocation());
+  _impl_.a_afinalstats_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PeerConnectionFinalStats::_internal_mutable_afinalstats() {
+inline std::string* Msg_PeerConnectionFinalStats::_internal_mutable_a_afinalstats() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.afinalstats_.Mutable(GetArenaForAllocation());
+  return _impl_.a_afinalstats_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PeerConnectionFinalStats::release_afinalstats() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.aFinalStats)
-  if (!_internal_has_afinalstats()) {
+inline std::string* Msg_PeerConnectionFinalStats::release_a_afinalstats() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
+  if (!_internal_has_a_afinalstats()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.afinalstats_.Release();
+  auto* p = _impl_.a_afinalstats_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afinalstats_.IsDefault()) {
-    _impl_.afinalstats_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afinalstats_.IsDefault()) {
+    _impl_.a_afinalstats_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PeerConnectionFinalStats::set_allocated_afinalstats(std::string* afinalstats) {
-  if (afinalstats != nullptr) {
+inline void Msg_PeerConnectionFinalStats::set_allocated_a_afinalstats(std::string* a_afinalstats) {
+  if (a_afinalstats != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.afinalstats_.SetAllocated(afinalstats, GetArenaForAllocation());
+  _impl_.a_afinalstats_.SetAllocated(a_afinalstats, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afinalstats_.IsDefault()) {
-    _impl_.afinalstats_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afinalstats_.IsDefault()) {
+    _impl_.a_afinalstats_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.aFinalStats)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetStats
 
-// required bytes aPcIdFilter = 1;
-inline bool Msg_GetStats::_internal_has_apcidfilter() const {
+// required bytes a_aPcIdFilter = 1;
+inline bool Msg_GetStats::_internal_has_a_apcidfilter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetStats::has_apcidfilter() const {
-  return _internal_has_apcidfilter();
+inline bool Msg_GetStats::has_a_apcidfilter() const {
+  return _internal_has_a_apcidfilter();
 }
-inline void Msg_GetStats::clear_apcidfilter() {
-  _impl_.apcidfilter_.ClearToEmpty();
+inline void Msg_GetStats::clear_a_apcidfilter() {
+  _impl_.a_apcidfilter_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetStats::apcidfilter() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.aPcIdFilter)
-  return _internal_apcidfilter();
+inline const std::string& Msg_GetStats::a_apcidfilter() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
+  return _internal_a_apcidfilter();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetStats::set_apcidfilter(ArgT0&& arg0, ArgT... args) {
+void Msg_GetStats::set_a_apcidfilter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apcidfilter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.aPcIdFilter)
+ _impl_.a_apcidfilter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
 }
-inline std::string* Msg_GetStats::mutable_apcidfilter() {
-  std::string* _s = _internal_mutable_apcidfilter();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.aPcIdFilter)
+inline std::string* Msg_GetStats::mutable_a_apcidfilter() {
+  std::string* _s = _internal_mutable_a_apcidfilter();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
   return _s;
 }
-inline const std::string& Msg_GetStats::_internal_apcidfilter() const {
-  return _impl_.apcidfilter_.Get();
+inline const std::string& Msg_GetStats::_internal_a_apcidfilter() const {
+  return _impl_.a_apcidfilter_.Get();
 }
-inline void Msg_GetStats::_internal_set_apcidfilter(const std::string& value) {
+inline void Msg_GetStats::_internal_set_a_apcidfilter(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apcidfilter_.Set(value, GetArenaForAllocation());
+  _impl_.a_apcidfilter_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetStats::_internal_mutable_apcidfilter() {
+inline std::string* Msg_GetStats::_internal_mutable_a_apcidfilter() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.apcidfilter_.Mutable(GetArenaForAllocation());
+  return _impl_.a_apcidfilter_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetStats::release_apcidfilter() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.aPcIdFilter)
-  if (!_internal_has_apcidfilter()) {
+inline std::string* Msg_GetStats::release_a_apcidfilter() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
+  if (!_internal_has_a_apcidfilter()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.apcidfilter_.Release();
+  auto* p = _impl_.a_apcidfilter_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apcidfilter_.IsDefault()) {
-    _impl_.apcidfilter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apcidfilter_.IsDefault()) {
+    _impl_.a_apcidfilter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetStats::set_allocated_apcidfilter(std::string* apcidfilter) {
-  if (apcidfilter != nullptr) {
+inline void Msg_GetStats::set_allocated_a_apcidfilter(std::string* a_apcidfilter) {
+  if (a_apcidfilter != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.apcidfilter_.SetAllocated(apcidfilter, GetArenaForAllocation());
+  _impl_.a_apcidfilter_.SetAllocated(a_apcidfilter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apcidfilter_.IsDefault()) {
-    _impl_.apcidfilter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apcidfilter_.IsDefault()) {
+    _impl_.a_apcidfilter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.aPcIdFilter)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetStats
 
-// repeated bytes stats = 1;
-inline int Reply_GetStats::_internal_stats_size() const {
-  return _impl_.stats_.size();
+// repeated bytes a_stats = 1;
+inline int Reply_GetStats::_internal_a_stats_size() const {
+  return _impl_.a_stats_.size();
 }
-inline int Reply_GetStats::stats_size() const {
-  return _internal_stats_size();
+inline int Reply_GetStats::a_stats_size() const {
+  return _internal_a_stats_size();
 }
-inline void Reply_GetStats::clear_stats() {
-  _impl_.stats_.Clear();
+inline void Reply_GetStats::clear_a_stats() {
+  _impl_.a_stats_.Clear();
 }
-inline std::string* Reply_GetStats::add_stats() {
-  std::string* _s = _internal_add_stats();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+inline std::string* Reply_GetStats::add_a_stats() {
+  std::string* _s = _internal_add_a_stats();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
   return _s;
 }
-inline const std::string& Reply_GetStats::_internal_stats(int index) const {
-  return _impl_.stats_.Get(index);
+inline const std::string& Reply_GetStats::_internal_a_stats(int index) const {
+  return _impl_.a_stats_.Get(index);
 }
-inline const std::string& Reply_GetStats::stats(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
-  return _internal_stats(index);
+inline const std::string& Reply_GetStats::a_stats(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
+  return _internal_a_stats(index);
 }
-inline std::string* Reply_GetStats::mutable_stats(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
-  return _impl_.stats_.Mutable(index);
+inline std::string* Reply_GetStats::mutable_a_stats(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
+  return _impl_.a_stats_.Mutable(index);
 }
-inline void Reply_GetStats::set_stats(int index, const std::string& value) {
-  _impl_.stats_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+inline void Reply_GetStats::set_a_stats(int index, const std::string& value) {
+  _impl_.a_stats_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline void Reply_GetStats::set_stats(int index, std::string&& value) {
-  _impl_.stats_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+inline void Reply_GetStats::set_a_stats(int index, std::string&& value) {
+  _impl_.a_stats_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline void Reply_GetStats::set_stats(int index, const char* value) {
+inline void Reply_GetStats::set_a_stats(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.stats_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+  _impl_.a_stats_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline void Reply_GetStats::set_stats(int index, const void* value, size_t size) {
-  _impl_.stats_.Mutable(index)->assign(
+inline void Reply_GetStats::set_a_stats(int index, const void* value, size_t size) {
+  _impl_.a_stats_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline std::string* Reply_GetStats::_internal_add_stats() {
-  return _impl_.stats_.Add();
+inline std::string* Reply_GetStats::_internal_add_a_stats() {
+  return _impl_.a_stats_.Add();
 }
-inline void Reply_GetStats::add_stats(const std::string& value) {
-  _impl_.stats_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+inline void Reply_GetStats::add_a_stats(const std::string& value) {
+  _impl_.a_stats_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline void Reply_GetStats::add_stats(std::string&& value) {
-  _impl_.stats_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+inline void Reply_GetStats::add_a_stats(std::string&& value) {
+  _impl_.a_stats_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline void Reply_GetStats::add_stats(const char* value) {
+inline void Reply_GetStats::add_a_stats(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.stats_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+  _impl_.a_stats_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
-inline void Reply_GetStats::add_stats(const void* value, size_t size) {
-  _impl_.stats_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
+inline void Reply_GetStats::add_a_stats(const void* value, size_t size) {
+  _impl_.a_stats_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Reply_GetStats::stats() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
-  return _impl_.stats_;
+Reply_GetStats::a_stats() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
+  return _impl_.a_stats_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Reply_GetStats::mutable_stats() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.stats)
-  return &_impl_.stats_;
+Reply_GetStats::mutable_a_stats() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats.a_stats)
+  return &_impl_.a_stats_;
 }
 
 // -------------------------------------------------------------------
@@ -2193,72 +2193,72 @@ Reply_GetStats::mutable_stats() {
 
 // Reply_GetLog
 
-// required bytes logs = 1;
-inline bool Reply_GetLog::_internal_has_logs() const {
+// required bytes a_logs = 1;
+inline bool Reply_GetLog::_internal_has_a_logs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetLog::has_logs() const {
-  return _internal_has_logs();
+inline bool Reply_GetLog::has_a_logs() const {
+  return _internal_has_a_logs();
 }
-inline void Reply_GetLog::clear_logs() {
-  _impl_.logs_.ClearToEmpty();
+inline void Reply_GetLog::clear_a_logs() {
+  _impl_.a_logs_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetLog::logs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.logs)
-  return _internal_logs();
+inline const std::string& Reply_GetLog::a_logs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
+  return _internal_a_logs();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetLog::set_logs(ArgT0&& arg0, ArgT... args) {
+void Reply_GetLog::set_a_logs(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.logs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.logs)
+ _impl_.a_logs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
 }
-inline std::string* Reply_GetLog::mutable_logs() {
-  std::string* _s = _internal_mutable_logs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.logs)
+inline std::string* Reply_GetLog::mutable_a_logs() {
+  std::string* _s = _internal_mutable_a_logs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
   return _s;
 }
-inline const std::string& Reply_GetLog::_internal_logs() const {
-  return _impl_.logs_.Get();
+inline const std::string& Reply_GetLog::_internal_a_logs() const {
+  return _impl_.a_logs_.Get();
 }
-inline void Reply_GetLog::_internal_set_logs(const std::string& value) {
+inline void Reply_GetLog::_internal_set_a_logs(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.logs_.Set(value, GetArenaForAllocation());
+  _impl_.a_logs_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetLog::_internal_mutable_logs() {
+inline std::string* Reply_GetLog::_internal_mutable_a_logs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.logs_.Mutable(GetArenaForAllocation());
+  return _impl_.a_logs_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetLog::release_logs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.logs)
-  if (!_internal_has_logs()) {
+inline std::string* Reply_GetLog::release_a_logs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
+  if (!_internal_has_a_logs()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.logs_.Release();
+  auto* p = _impl_.a_logs_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.logs_.IsDefault()) {
-    _impl_.logs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_logs_.IsDefault()) {
+    _impl_.a_logs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetLog::set_allocated_logs(std::string* logs) {
-  if (logs != nullptr) {
+inline void Reply_GetLog::set_allocated_a_logs(std::string* a_logs) {
+  if (a_logs != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.logs_.SetAllocated(logs, GetArenaForAllocation());
+  _impl_.a_logs_.SetAllocated(a_logs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.logs_.IsDefault()) {
-    _impl_.logs_.Set("", GetArenaForAllocation());
+  if (_impl_.a_logs_.IsDefault()) {
+    _impl_.a_logs_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.logs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
 }
 
 // -------------------------------------------------------------------
@@ -2269,32 +2269,32 @@ inline void Reply_GetLog::set_allocated_logs(std::string* logs) {
 
 // Msg_SetAecLogging
 
-// required bool aEnable = 1;
-inline bool Msg_SetAecLogging::_internal_has_aenable() const {
+// required bool a_aEnable = 1;
+inline bool Msg_SetAecLogging::_internal_has_a_aenable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetAecLogging::has_aenable() const {
-  return _internal_has_aenable();
+inline bool Msg_SetAecLogging::has_a_aenable() const {
+  return _internal_has_a_aenable();
 }
-inline void Msg_SetAecLogging::clear_aenable() {
-  _impl_.aenable_ = false;
+inline void Msg_SetAecLogging::clear_a_aenable() {
+  _impl_.a_aenable_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_SetAecLogging::_internal_aenable() const {
-  return _impl_.aenable_;
+inline bool Msg_SetAecLogging::_internal_a_aenable() const {
+  return _impl_.a_aenable_;
 }
-inline bool Msg_SetAecLogging::aenable() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging.aEnable)
-  return _internal_aenable();
+inline bool Msg_SetAecLogging::a_aenable() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging.a_aEnable)
+  return _internal_a_aenable();
 }
-inline void Msg_SetAecLogging::_internal_set_aenable(bool value) {
+inline void Msg_SetAecLogging::_internal_set_a_aenable(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aenable_ = value;
+  _impl_.a_aenable_ = value;
 }
-inline void Msg_SetAecLogging::set_aenable(bool value) {
-  _internal_set_aenable(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging.aEnable)
+inline void Msg_SetAecLogging::set_a_aenable(bool value) {
+  _internal_set_a_aenable(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging.a_aEnable)
 }
 
 #ifdef __GNUC__

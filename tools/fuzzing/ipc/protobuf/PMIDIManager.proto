@@ -23,7 +23,7 @@ message Msg_Shutdown {
 }
 
 message Msg_MIDIPortListUpdate {
-  required protobuf.mozilla.dom.MIDIPortList aPortList = 1;
+  required protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
 }
 
 // Parameter mappings stats:

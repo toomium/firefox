@@ -12,65 +12,65 @@ package protobuf.mozilla.gfx;
 
 // Structs and unions declarations
 message D3D11DeviceStatus {
-  required bool isWARP = 1;
-  required bool textureSharingWorks = 2;
-  required uint32 featureLevel = 3;
-  required bytes adapter = 4;
-  required sint32 sequenceNumber = 5;
-  required bytes formatOptions = 6;
+  required bool a_isWARP = 1;
+  required bool a_textureSharingWorks = 2;
+  required uint32 a_featureLevel = 3;
+  required bytes a_adapter = 4;
+  required sint32 a_sequenceNumber = 5;
+  required bytes a_formatOptions = 6;
 }
 
 message DevicePrefs {
-  required bytes hwCompositing = 1;
-  required bytes d3d11Compositing = 2;
-  required bytes oglCompositing = 3;
-  required bytes useD2D1 = 4;
-  required bytes d3d11HwAngle = 5;
+  required bytes a_hwCompositing = 1;
+  required bytes a_d3d11Compositing = 2;
+  required bytes a_oglCompositing = 3;
+  required bytes a_useD2D1 = 4;
+  required bytes a_d3d11HwAngle = 5;
 }
 
 message ContentDeviceData {
-  required protobuf.mozilla.gfx.DevicePrefs prefs = 1;
-  required protobuf.mozilla.gfx.D3D11DeviceStatus d3d11 = 2;
-  repeated uint32 cmsOutputProfileData = 3;
+  required protobuf.mozilla.gfx.DevicePrefs a_prefs = 1;
+  required protobuf.mozilla.gfx.D3D11DeviceStatus a_d3d11 = 2;
+  repeated uint32 a_cmsOutputProfileData = 3;
 }
 
 message FeatureFailure {
-  required bytes status = 1;
-  required bytes message = 2;
-  required bytes failureId = 3;
+  required bytes a_status = 1;
+  required bytes a_message = 2;
+  required bytes a_failureId = 3;
 }
 
 message GPUDeviceData {
-  optional protobuf.mozilla.gfx.FeatureFailure d3d11Compositing = 1;
-  optional protobuf.mozilla.gfx.FeatureFailure oglCompositing = 2;
-  optional protobuf.mozilla.gfx.D3D11DeviceStatus gpuDevice = 3;
+  optional protobuf.mozilla.gfx.FeatureFailure a_d3d11Compositing = 1;
+  optional protobuf.mozilla.gfx.FeatureFailure a_oglCompositing = 2;
+  optional protobuf.mozilla.gfx.D3D11DeviceStatus a_gpuDevice = 3;
 }
 
 message GfxVarValue {
   message _mVArrayOfuint64_t {
-    repeated uint64 mVArrayOfuint64_t = 1;
+    repeated uint64 a_mVArrayOfuint64_t = 1;
   }
   oneof content {
-    bytes mVBackendType = 1;
-    bool mVbool = 2;
-    bytes mVgfxImageFormat = 3;
-    bytes mVIntSize = 4;
-    bytes mVnsCString = 5;
-    bytes mVnsString = 6;
-    sint32 mVint32_t = 7;
-    uint64 mVuint64_t = 8;
-    float mVfloat = 9;
+    bytes a_mVBackendType = 1;
+    bool a_mVbool = 2;
+    bytes a_mVgfxImageFormat = 3;
+    bytes a_mVIntSize = 4;
+    bytes a_mVnsCString = 5;
+    bytes a_mVnsString = 6;
+    sint32 a_mVint32_t = 7;
+    uint64 a_mVuint64_t = 8;
+    float a_mVfloat = 9;
     _mVArrayOfuint64_t mVArrayOfuint64_t = 10;
   }
 }
 
 message GfxVarUpdate {
-  required uint32 index = 1;
-  required protobuf.mozilla.gfx.GfxVarValue value = 2;
+  required uint32 a_index = 1;
+  required protobuf.mozilla.gfx.GfxVarValue a_value = 2;
 }
 
 message GfxInfoFeatureStatus {
-  required sint32 feature = 1;
-  required sint32 status = 2;
-  required bytes failureId = 3;
+  required sint32 a_feature = 1;
+  required sint32 a_status = 2;
+  required bytes a_failureId = 3;
 }

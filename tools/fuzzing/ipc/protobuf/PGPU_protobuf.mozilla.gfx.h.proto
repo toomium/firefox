@@ -18,6 +18,6 @@ import "PrefsTypes.proto";
 
 // Structs and unions declarations
 message LayerTreeIdMapping {
-  required bytes layersId = 1;
-  required bytes ownerId = 2;
+  required bytes a_layersId = 1;
+  required bytes a_ownerId = 2;
 }

@@ -202,25 +202,25 @@ class FileSystemFileResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBlobFieldNumber = 1,
+    kABlobFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob blob = 1;
-  bool has_blob() const;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  bool has_a_blob() const;
   private:
-  bool _internal_has_blob() const;
+  bool _internal_has_a_blob() const;
   public:
-  void clear_blob();
-  const ::protobuf::mozilla::dom::IPCBlob& blob() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_blob();
-  ::protobuf::mozilla::dom::IPCBlob* mutable_blob();
-  void set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob);
+  void clear_a_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& a_blob() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_a_blob();
+  ::protobuf::mozilla::dom::IPCBlob* mutable_a_blob();
+  void set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob);
   private:
-  const ::protobuf::mozilla::dom::IPCBlob& _internal_blob() const;
-  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& _internal_a_blob() const;
+  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_a_blob();
   public:
-  void unsafe_arena_set_allocated_blob(
-      ::protobuf::mozilla::dom::IPCBlob* blob);
-  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_blob();
+  void unsafe_arena_set_allocated_a_blob(
+      ::protobuf::mozilla::dom::IPCBlob* a_blob);
+  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemFileResponse)
  private:
@@ -232,7 +232,7 @@ class FileSystemFileResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::IPCBlob* blob_;
+    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -349,24 +349,24 @@ class FileSystemDirectoryResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRealPathFieldNumber = 1,
+    kARealPathFieldNumber = 1,
   };
-  // required bytes realPath = 1;
-  bool has_realpath() const;
+  // required bytes a_realPath = 1;
+  bool has_a_realpath() const;
   private:
-  bool _internal_has_realpath() const;
+  bool _internal_has_a_realpath() const;
   public:
-  void clear_realpath();
-  const std::string& realpath() const;
+  void clear_a_realpath();
+  const std::string& a_realpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_realpath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_realpath();
-  PROTOBUF_NODISCARD std::string* release_realpath();
-  void set_allocated_realpath(std::string* realpath);
+  void set_a_realpath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_realpath();
+  PROTOBUF_NODISCARD std::string* release_a_realpath();
+  void set_allocated_a_realpath(std::string* a_realpath);
   private:
-  const std::string& _internal_realpath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_realpath(const std::string& value);
-  std::string* _internal_mutable_realpath();
+  const std::string& _internal_a_realpath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_realpath(const std::string& value);
+  std::string* _internal_mutable_a_realpath();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemDirectoryResponse)
@@ -379,7 +379,7 @@ class FileSystemDirectoryResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr realpath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_realpath_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -496,25 +496,25 @@ class FileSystemDirectoryListingResponseFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBlobFieldNumber = 1,
+    kABlobFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob blob = 1;
-  bool has_blob() const;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  bool has_a_blob() const;
   private:
-  bool _internal_has_blob() const;
+  bool _internal_has_a_blob() const;
   public:
-  void clear_blob();
-  const ::protobuf::mozilla::dom::IPCBlob& blob() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_blob();
-  ::protobuf::mozilla::dom::IPCBlob* mutable_blob();
-  void set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob);
+  void clear_a_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& a_blob() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_a_blob();
+  ::protobuf::mozilla::dom::IPCBlob* mutable_a_blob();
+  void set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob);
   private:
-  const ::protobuf::mozilla::dom::IPCBlob& _internal_blob() const;
-  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& _internal_a_blob() const;
+  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_a_blob();
   public:
-  void unsafe_arena_set_allocated_blob(
-      ::protobuf::mozilla::dom::IPCBlob* blob);
-  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_blob();
+  void unsafe_arena_set_allocated_a_blob(
+      ::protobuf::mozilla::dom::IPCBlob* a_blob);
+  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile)
  private:
@@ -526,7 +526,7 @@ class FileSystemDirectoryListingResponseFile final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::IPCBlob* blob_;
+    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -643,24 +643,24 @@ class FileSystemDirectoryListingResponseDirectory final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDirectoryRealPathFieldNumber = 1,
+    kADirectoryRealPathFieldNumber = 1,
   };
-  // required bytes directoryRealPath = 1;
-  bool has_directoryrealpath() const;
+  // required bytes a_directoryRealPath = 1;
+  bool has_a_directoryrealpath() const;
   private:
-  bool _internal_has_directoryrealpath() const;
+  bool _internal_has_a_directoryrealpath() const;
   public:
-  void clear_directoryrealpath();
-  const std::string& directoryrealpath() const;
+  void clear_a_directoryrealpath();
+  const std::string& a_directoryrealpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_directoryrealpath(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_directoryrealpath();
-  PROTOBUF_NODISCARD std::string* release_directoryrealpath();
-  void set_allocated_directoryrealpath(std::string* directoryrealpath);
+  void set_a_directoryrealpath(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_directoryrealpath();
+  PROTOBUF_NODISCARD std::string* release_a_directoryrealpath();
+  void set_allocated_a_directoryrealpath(std::string* a_directoryrealpath);
   private:
-  const std::string& _internal_directoryrealpath() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_directoryrealpath(const std::string& value);
-  std::string* _internal_mutable_directoryrealpath();
+  const std::string& _internal_a_directoryrealpath() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_directoryrealpath(const std::string& value);
+  std::string* _internal_mutable_a_directoryrealpath();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory)
@@ -673,7 +673,7 @@ class FileSystemDirectoryListingResponseDirectory final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr directoryrealpath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_directoryrealpath_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -722,8 +722,8 @@ class FileSystemDirectoryListingResponseData final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVFileSystemDirectoryListingResponseFile = 1,
-    kMVFileSystemDirectoryListingResponseDirectory = 2,
+    kAMVFileSystemDirectoryListingResponseFile = 1,
+    kAMVFileSystemDirectoryListingResponseDirectory = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -796,52 +796,52 @@ class FileSystemDirectoryListingResponseData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVFileSystemDirectoryListingResponseFileFieldNumber = 1,
-    kMVFileSystemDirectoryListingResponseDirectoryFieldNumber = 2,
+    kAMVFileSystemDirectoryListingResponseFileFieldNumber = 1,
+    kAMVFileSystemDirectoryListingResponseDirectoryFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile mVFileSystemDirectoryListingResponseFile = 1;
-  bool has_mvfilesystemdirectorylistingresponsefile() const;
+  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile a_mVFileSystemDirectoryListingResponseFile = 1;
+  bool has_a_mvfilesystemdirectorylistingresponsefile() const;
   private:
-  bool _internal_has_mvfilesystemdirectorylistingresponsefile() const;
+  bool _internal_has_a_mvfilesystemdirectorylistingresponsefile() const;
   public:
-  void clear_mvfilesystemdirectorylistingresponsefile();
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& mvfilesystemdirectorylistingresponsefile() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* release_mvfilesystemdirectorylistingresponsefile();
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* mutable_mvfilesystemdirectorylistingresponsefile();
-  void set_allocated_mvfilesystemdirectorylistingresponsefile(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* mvfilesystemdirectorylistingresponsefile);
+  void clear_a_mvfilesystemdirectorylistingresponsefile();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& a_mvfilesystemdirectorylistingresponsefile() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* release_a_mvfilesystemdirectorylistingresponsefile();
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* mutable_a_mvfilesystemdirectorylistingresponsefile();
+  void set_allocated_a_mvfilesystemdirectorylistingresponsefile(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* a_mvfilesystemdirectorylistingresponsefile);
   private:
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& _internal_mvfilesystemdirectorylistingresponsefile() const;
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* _internal_mutable_mvfilesystemdirectorylistingresponsefile();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& _internal_a_mvfilesystemdirectorylistingresponsefile() const;
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* _internal_mutable_a_mvfilesystemdirectorylistingresponsefile();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemdirectorylistingresponsefile(
-      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* mvfilesystemdirectorylistingresponsefile);
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* unsafe_arena_release_mvfilesystemdirectorylistingresponsefile();
+  void unsafe_arena_set_allocated_a_mvfilesystemdirectorylistingresponsefile(
+      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* a_mvfilesystemdirectorylistingresponsefile);
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* unsafe_arena_release_a_mvfilesystemdirectorylistingresponsefile();
 
-  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory mVFileSystemDirectoryListingResponseDirectory = 2;
-  bool has_mvfilesystemdirectorylistingresponsedirectory() const;
+  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory a_mVFileSystemDirectoryListingResponseDirectory = 2;
+  bool has_a_mvfilesystemdirectorylistingresponsedirectory() const;
   private:
-  bool _internal_has_mvfilesystemdirectorylistingresponsedirectory() const;
+  bool _internal_has_a_mvfilesystemdirectorylistingresponsedirectory() const;
   public:
-  void clear_mvfilesystemdirectorylistingresponsedirectory();
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& mvfilesystemdirectorylistingresponsedirectory() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* release_mvfilesystemdirectorylistingresponsedirectory();
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* mutable_mvfilesystemdirectorylistingresponsedirectory();
-  void set_allocated_mvfilesystemdirectorylistingresponsedirectory(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* mvfilesystemdirectorylistingresponsedirectory);
+  void clear_a_mvfilesystemdirectorylistingresponsedirectory();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& a_mvfilesystemdirectorylistingresponsedirectory() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* release_a_mvfilesystemdirectorylistingresponsedirectory();
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* mutable_a_mvfilesystemdirectorylistingresponsedirectory();
+  void set_allocated_a_mvfilesystemdirectorylistingresponsedirectory(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* a_mvfilesystemdirectorylistingresponsedirectory);
   private:
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& _internal_mvfilesystemdirectorylistingresponsedirectory() const;
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* _internal_mutable_mvfilesystemdirectorylistingresponsedirectory();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& _internal_a_mvfilesystemdirectorylistingresponsedirectory() const;
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* _internal_mutable_a_mvfilesystemdirectorylistingresponsedirectory();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemdirectorylistingresponsedirectory(
-      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* mvfilesystemdirectorylistingresponsedirectory);
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* unsafe_arena_release_mvfilesystemdirectorylistingresponsedirectory();
+  void unsafe_arena_set_allocated_a_mvfilesystemdirectorylistingresponsedirectory(
+      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* a_mvfilesystemdirectorylistingresponsedirectory);
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* unsafe_arena_release_a_mvfilesystemdirectorylistingresponsedirectory();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData)
  private:
   class _Internal;
-  void set_has_mvfilesystemdirectorylistingresponsefile();
-  void set_has_mvfilesystemdirectorylistingresponsedirectory();
+  void set_has_a_mvfilesystemdirectorylistingresponsefile();
+  void set_has_a_mvfilesystemdirectorylistingresponsedirectory();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -853,8 +853,8 @@ class FileSystemDirectoryListingResponseData final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* mvfilesystemdirectorylistingresponsefile_;
-      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* mvfilesystemdirectorylistingresponsedirectory_;
+      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* a_mvfilesystemdirectorylistingresponsefile_;
+      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* a_mvfilesystemdirectorylistingresponsedirectory_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -975,25 +975,25 @@ class FileSystemDirectoryListingResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.FileSystemDirectoryListingResponseData data = 1;
-  int data_size() const;
+  // repeated .protobuf.mozilla.dom.FileSystemDirectoryListingResponseData a_data = 1;
+  int a_data_size() const;
   private:
-  int _internal_data_size() const;
+  int _internal_a_data_size() const;
   public:
-  void clear_data();
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* mutable_data(int index);
+  void clear_a_data();
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* mutable_a_data(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData >*
-      mutable_data();
+      mutable_a_data();
   private:
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& _internal_data(int index) const;
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* _internal_add_data();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& _internal_a_data(int index) const;
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* _internal_add_a_data();
   public:
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& data(int index) const;
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* add_data();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& a_data(int index) const;
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* add_a_data();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData >&
-      data() const;
+      a_data() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemDirectoryListingResponse)
  private:
@@ -1003,7 +1003,7 @@ class FileSystemDirectoryListingResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData > data_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData > a_data_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1121,25 +1121,25 @@ class FileSystemFilesResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.FileSystemFileResponse data = 1;
-  int data_size() const;
+  // repeated .protobuf.mozilla.dom.FileSystemFileResponse a_data = 1;
+  int a_data_size() const;
   private:
-  int _internal_data_size() const;
+  int _internal_a_data_size() const;
   public:
-  void clear_data();
-  ::protobuf::mozilla::dom::FileSystemFileResponse* mutable_data(int index);
+  void clear_a_data();
+  ::protobuf::mozilla::dom::FileSystemFileResponse* mutable_a_data(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemFileResponse >*
-      mutable_data();
+      mutable_a_data();
   private:
-  const ::protobuf::mozilla::dom::FileSystemFileResponse& _internal_data(int index) const;
-  ::protobuf::mozilla::dom::FileSystemFileResponse* _internal_add_data();
+  const ::protobuf::mozilla::dom::FileSystemFileResponse& _internal_a_data(int index) const;
+  ::protobuf::mozilla::dom::FileSystemFileResponse* _internal_add_a_data();
   public:
-  const ::protobuf::mozilla::dom::FileSystemFileResponse& data(int index) const;
-  ::protobuf::mozilla::dom::FileSystemFileResponse* add_data();
+  const ::protobuf::mozilla::dom::FileSystemFileResponse& a_data(int index) const;
+  ::protobuf::mozilla::dom::FileSystemFileResponse* add_a_data();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemFileResponse >&
-      data() const;
+      a_data() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemFilesResponse)
  private:
@@ -1149,7 +1149,7 @@ class FileSystemFilesResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemFileResponse > data_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemFileResponse > a_data_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1267,24 +1267,24 @@ class FileSystemErrorResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kErrorFieldNumber = 1,
+    kAErrorFieldNumber = 1,
   };
-  // required bytes error = 1;
-  bool has_error() const;
+  // required bytes a_error = 1;
+  bool has_a_error() const;
   private:
-  bool _internal_has_error() const;
+  bool _internal_has_a_error() const;
   public:
-  void clear_error();
-  const std::string& error() const;
+  void clear_a_error();
+  const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_error(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_error();
-  PROTOBUF_NODISCARD std::string* release_error();
-  void set_allocated_error(std::string* error);
+  void set_a_error(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_error();
+  PROTOBUF_NODISCARD std::string* release_a_error();
+  void set_allocated_a_error(std::string* a_error);
   private:
-  const std::string& _internal_error() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_error(const std::string& value);
-  std::string* _internal_mutable_error();
+  const std::string& _internal_a_error() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_error(const std::string& value);
+  std::string* _internal_mutable_a_error();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemErrorResponse)
@@ -1297,7 +1297,7 @@ class FileSystemErrorResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr error_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1346,11 +1346,11 @@ class FileSystemResponseValue final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVFileSystemDirectoryResponse = 1,
-    kMVFileSystemDirectoryListingResponse = 2,
-    kMVFileSystemFileResponse = 3,
-    kMVFileSystemFilesResponse = 4,
-    kMVFileSystemErrorResponse = 5,
+    kAMVFileSystemDirectoryResponse = 1,
+    kAMVFileSystemDirectoryListingResponse = 2,
+    kAMVFileSystemFileResponse = 3,
+    kAMVFileSystemFilesResponse = 4,
+    kAMVFileSystemErrorResponse = 5,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1423,112 +1423,112 @@ class FileSystemResponseValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVFileSystemDirectoryResponseFieldNumber = 1,
-    kMVFileSystemDirectoryListingResponseFieldNumber = 2,
-    kMVFileSystemFileResponseFieldNumber = 3,
-    kMVFileSystemFilesResponseFieldNumber = 4,
-    kMVFileSystemErrorResponseFieldNumber = 5,
+    kAMVFileSystemDirectoryResponseFieldNumber = 1,
+    kAMVFileSystemDirectoryListingResponseFieldNumber = 2,
+    kAMVFileSystemFileResponseFieldNumber = 3,
+    kAMVFileSystemFilesResponseFieldNumber = 4,
+    kAMVFileSystemErrorResponseFieldNumber = 5,
   };
-  // .protobuf.mozilla.dom.FileSystemDirectoryResponse mVFileSystemDirectoryResponse = 1;
-  bool has_mvfilesystemdirectoryresponse() const;
+  // .protobuf.mozilla.dom.FileSystemDirectoryResponse a_mVFileSystemDirectoryResponse = 1;
+  bool has_a_mvfilesystemdirectoryresponse() const;
   private:
-  bool _internal_has_mvfilesystemdirectoryresponse() const;
+  bool _internal_has_a_mvfilesystemdirectoryresponse() const;
   public:
-  void clear_mvfilesystemdirectoryresponse();
-  const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& mvfilesystemdirectoryresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryResponse* release_mvfilesystemdirectoryresponse();
-  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* mutable_mvfilesystemdirectoryresponse();
-  void set_allocated_mvfilesystemdirectoryresponse(::protobuf::mozilla::dom::FileSystemDirectoryResponse* mvfilesystemdirectoryresponse);
+  void clear_a_mvfilesystemdirectoryresponse();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& a_mvfilesystemdirectoryresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryResponse* release_a_mvfilesystemdirectoryresponse();
+  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* mutable_a_mvfilesystemdirectoryresponse();
+  void set_allocated_a_mvfilesystemdirectoryresponse(::protobuf::mozilla::dom::FileSystemDirectoryResponse* a_mvfilesystemdirectoryresponse);
   private:
-  const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& _internal_mvfilesystemdirectoryresponse() const;
-  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* _internal_mutable_mvfilesystemdirectoryresponse();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& _internal_a_mvfilesystemdirectoryresponse() const;
+  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* _internal_mutable_a_mvfilesystemdirectoryresponse();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemdirectoryresponse(
-      ::protobuf::mozilla::dom::FileSystemDirectoryResponse* mvfilesystemdirectoryresponse);
-  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* unsafe_arena_release_mvfilesystemdirectoryresponse();
+  void unsafe_arena_set_allocated_a_mvfilesystemdirectoryresponse(
+      ::protobuf::mozilla::dom::FileSystemDirectoryResponse* a_mvfilesystemdirectoryresponse);
+  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* unsafe_arena_release_a_mvfilesystemdirectoryresponse();
 
-  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponse mVFileSystemDirectoryListingResponse = 2;
-  bool has_mvfilesystemdirectorylistingresponse() const;
+  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponse a_mVFileSystemDirectoryListingResponse = 2;
+  bool has_a_mvfilesystemdirectorylistingresponse() const;
   private:
-  bool _internal_has_mvfilesystemdirectorylistingresponse() const;
+  bool _internal_has_a_mvfilesystemdirectorylistingresponse() const;
   public:
-  void clear_mvfilesystemdirectorylistingresponse();
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& mvfilesystemdirectorylistingresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* release_mvfilesystemdirectorylistingresponse();
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* mutable_mvfilesystemdirectorylistingresponse();
-  void set_allocated_mvfilesystemdirectorylistingresponse(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* mvfilesystemdirectorylistingresponse);
+  void clear_a_mvfilesystemdirectorylistingresponse();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& a_mvfilesystemdirectorylistingresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* release_a_mvfilesystemdirectorylistingresponse();
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* mutable_a_mvfilesystemdirectorylistingresponse();
+  void set_allocated_a_mvfilesystemdirectorylistingresponse(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* a_mvfilesystemdirectorylistingresponse);
   private:
-  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& _internal_mvfilesystemdirectorylistingresponse() const;
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* _internal_mutable_mvfilesystemdirectorylistingresponse();
+  const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& _internal_a_mvfilesystemdirectorylistingresponse() const;
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* _internal_mutable_a_mvfilesystemdirectorylistingresponse();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemdirectorylistingresponse(
-      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* mvfilesystemdirectorylistingresponse);
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* unsafe_arena_release_mvfilesystemdirectorylistingresponse();
+  void unsafe_arena_set_allocated_a_mvfilesystemdirectorylistingresponse(
+      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* a_mvfilesystemdirectorylistingresponse);
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* unsafe_arena_release_a_mvfilesystemdirectorylistingresponse();
 
-  // .protobuf.mozilla.dom.FileSystemFileResponse mVFileSystemFileResponse = 3;
-  bool has_mvfilesystemfileresponse() const;
+  // .protobuf.mozilla.dom.FileSystemFileResponse a_mVFileSystemFileResponse = 3;
+  bool has_a_mvfilesystemfileresponse() const;
   private:
-  bool _internal_has_mvfilesystemfileresponse() const;
+  bool _internal_has_a_mvfilesystemfileresponse() const;
   public:
-  void clear_mvfilesystemfileresponse();
-  const ::protobuf::mozilla::dom::FileSystemFileResponse& mvfilesystemfileresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemFileResponse* release_mvfilesystemfileresponse();
-  ::protobuf::mozilla::dom::FileSystemFileResponse* mutable_mvfilesystemfileresponse();
-  void set_allocated_mvfilesystemfileresponse(::protobuf::mozilla::dom::FileSystemFileResponse* mvfilesystemfileresponse);
+  void clear_a_mvfilesystemfileresponse();
+  const ::protobuf::mozilla::dom::FileSystemFileResponse& a_mvfilesystemfileresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemFileResponse* release_a_mvfilesystemfileresponse();
+  ::protobuf::mozilla::dom::FileSystemFileResponse* mutable_a_mvfilesystemfileresponse();
+  void set_allocated_a_mvfilesystemfileresponse(::protobuf::mozilla::dom::FileSystemFileResponse* a_mvfilesystemfileresponse);
   private:
-  const ::protobuf::mozilla::dom::FileSystemFileResponse& _internal_mvfilesystemfileresponse() const;
-  ::protobuf::mozilla::dom::FileSystemFileResponse* _internal_mutable_mvfilesystemfileresponse();
+  const ::protobuf::mozilla::dom::FileSystemFileResponse& _internal_a_mvfilesystemfileresponse() const;
+  ::protobuf::mozilla::dom::FileSystemFileResponse* _internal_mutable_a_mvfilesystemfileresponse();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemfileresponse(
-      ::protobuf::mozilla::dom::FileSystemFileResponse* mvfilesystemfileresponse);
-  ::protobuf::mozilla::dom::FileSystemFileResponse* unsafe_arena_release_mvfilesystemfileresponse();
+  void unsafe_arena_set_allocated_a_mvfilesystemfileresponse(
+      ::protobuf::mozilla::dom::FileSystemFileResponse* a_mvfilesystemfileresponse);
+  ::protobuf::mozilla::dom::FileSystemFileResponse* unsafe_arena_release_a_mvfilesystemfileresponse();
 
-  // .protobuf.mozilla.dom.FileSystemFilesResponse mVFileSystemFilesResponse = 4;
-  bool has_mvfilesystemfilesresponse() const;
+  // .protobuf.mozilla.dom.FileSystemFilesResponse a_mVFileSystemFilesResponse = 4;
+  bool has_a_mvfilesystemfilesresponse() const;
   private:
-  bool _internal_has_mvfilesystemfilesresponse() const;
+  bool _internal_has_a_mvfilesystemfilesresponse() const;
   public:
-  void clear_mvfilesystemfilesresponse();
-  const ::protobuf::mozilla::dom::FileSystemFilesResponse& mvfilesystemfilesresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemFilesResponse* release_mvfilesystemfilesresponse();
-  ::protobuf::mozilla::dom::FileSystemFilesResponse* mutable_mvfilesystemfilesresponse();
-  void set_allocated_mvfilesystemfilesresponse(::protobuf::mozilla::dom::FileSystemFilesResponse* mvfilesystemfilesresponse);
+  void clear_a_mvfilesystemfilesresponse();
+  const ::protobuf::mozilla::dom::FileSystemFilesResponse& a_mvfilesystemfilesresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemFilesResponse* release_a_mvfilesystemfilesresponse();
+  ::protobuf::mozilla::dom::FileSystemFilesResponse* mutable_a_mvfilesystemfilesresponse();
+  void set_allocated_a_mvfilesystemfilesresponse(::protobuf::mozilla::dom::FileSystemFilesResponse* a_mvfilesystemfilesresponse);
   private:
-  const ::protobuf::mozilla::dom::FileSystemFilesResponse& _internal_mvfilesystemfilesresponse() const;
-  ::protobuf::mozilla::dom::FileSystemFilesResponse* _internal_mutable_mvfilesystemfilesresponse();
+  const ::protobuf::mozilla::dom::FileSystemFilesResponse& _internal_a_mvfilesystemfilesresponse() const;
+  ::protobuf::mozilla::dom::FileSystemFilesResponse* _internal_mutable_a_mvfilesystemfilesresponse();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemfilesresponse(
-      ::protobuf::mozilla::dom::FileSystemFilesResponse* mvfilesystemfilesresponse);
-  ::protobuf::mozilla::dom::FileSystemFilesResponse* unsafe_arena_release_mvfilesystemfilesresponse();
+  void unsafe_arena_set_allocated_a_mvfilesystemfilesresponse(
+      ::protobuf::mozilla::dom::FileSystemFilesResponse* a_mvfilesystemfilesresponse);
+  ::protobuf::mozilla::dom::FileSystemFilesResponse* unsafe_arena_release_a_mvfilesystemfilesresponse();
 
-  // .protobuf.mozilla.dom.FileSystemErrorResponse mVFileSystemErrorResponse = 5;
-  bool has_mvfilesystemerrorresponse() const;
+  // .protobuf.mozilla.dom.FileSystemErrorResponse a_mVFileSystemErrorResponse = 5;
+  bool has_a_mvfilesystemerrorresponse() const;
   private:
-  bool _internal_has_mvfilesystemerrorresponse() const;
+  bool _internal_has_a_mvfilesystemerrorresponse() const;
   public:
-  void clear_mvfilesystemerrorresponse();
-  const ::protobuf::mozilla::dom::FileSystemErrorResponse& mvfilesystemerrorresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemErrorResponse* release_mvfilesystemerrorresponse();
-  ::protobuf::mozilla::dom::FileSystemErrorResponse* mutable_mvfilesystemerrorresponse();
-  void set_allocated_mvfilesystemerrorresponse(::protobuf::mozilla::dom::FileSystemErrorResponse* mvfilesystemerrorresponse);
+  void clear_a_mvfilesystemerrorresponse();
+  const ::protobuf::mozilla::dom::FileSystemErrorResponse& a_mvfilesystemerrorresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileSystemErrorResponse* release_a_mvfilesystemerrorresponse();
+  ::protobuf::mozilla::dom::FileSystemErrorResponse* mutable_a_mvfilesystemerrorresponse();
+  void set_allocated_a_mvfilesystemerrorresponse(::protobuf::mozilla::dom::FileSystemErrorResponse* a_mvfilesystemerrorresponse);
   private:
-  const ::protobuf::mozilla::dom::FileSystemErrorResponse& _internal_mvfilesystemerrorresponse() const;
-  ::protobuf::mozilla::dom::FileSystemErrorResponse* _internal_mutable_mvfilesystemerrorresponse();
+  const ::protobuf::mozilla::dom::FileSystemErrorResponse& _internal_a_mvfilesystemerrorresponse() const;
+  ::protobuf::mozilla::dom::FileSystemErrorResponse* _internal_mutable_a_mvfilesystemerrorresponse();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemerrorresponse(
-      ::protobuf::mozilla::dom::FileSystemErrorResponse* mvfilesystemerrorresponse);
-  ::protobuf::mozilla::dom::FileSystemErrorResponse* unsafe_arena_release_mvfilesystemerrorresponse();
+  void unsafe_arena_set_allocated_a_mvfilesystemerrorresponse(
+      ::protobuf::mozilla::dom::FileSystemErrorResponse* a_mvfilesystemerrorresponse);
+  ::protobuf::mozilla::dom::FileSystemErrorResponse* unsafe_arena_release_a_mvfilesystemerrorresponse();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileSystemResponseValue)
  private:
   class _Internal;
-  void set_has_mvfilesystemdirectoryresponse();
-  void set_has_mvfilesystemdirectorylistingresponse();
-  void set_has_mvfilesystemfileresponse();
-  void set_has_mvfilesystemfilesresponse();
-  void set_has_mvfilesystemerrorresponse();
+  void set_has_a_mvfilesystemdirectoryresponse();
+  void set_has_a_mvfilesystemdirectorylistingresponse();
+  void set_has_a_mvfilesystemfileresponse();
+  void set_has_a_mvfilesystemfilesresponse();
+  void set_has_a_mvfilesystemerrorresponse();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1540,11 +1540,11 @@ class FileSystemResponseValue final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::FileSystemDirectoryResponse* mvfilesystemdirectoryresponse_;
-      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* mvfilesystemdirectorylistingresponse_;
-      ::protobuf::mozilla::dom::FileSystemFileResponse* mvfilesystemfileresponse_;
-      ::protobuf::mozilla::dom::FileSystemFilesResponse* mvfilesystemfilesresponse_;
-      ::protobuf::mozilla::dom::FileSystemErrorResponse* mvfilesystemerrorresponse_;
+      ::protobuf::mozilla::dom::FileSystemDirectoryResponse* a_mvfilesystemdirectoryresponse_;
+      ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* a_mvfilesystemdirectorylistingresponse_;
+      ::protobuf::mozilla::dom::FileSystemFileResponse* a_mvfilesystemfileresponse_;
+      ::protobuf::mozilla::dom::FileSystemFilesResponse* a_mvfilesystemfilesresponse_;
+      ::protobuf::mozilla::dom::FileSystemErrorResponse* a_mvfilesystemerrorresponse_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1564,41 +1564,41 @@ class FileSystemResponseValue final :
 #endif  // __GNUC__
 // FileSystemFileResponse
 
-// required .protobuf.mozilla.dom.IPCBlob blob = 1;
-inline bool FileSystemFileResponse::_internal_has_blob() const {
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+inline bool FileSystemFileResponse::_internal_has_a_blob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.blob_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
   return value;
 }
-inline bool FileSystemFileResponse::has_blob() const {
-  return _internal_has_blob();
+inline bool FileSystemFileResponse::has_a_blob() const {
+  return _internal_has_a_blob();
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileResponse::_internal_blob() const {
-  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.blob_;
+inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileResponse::_internal_a_blob() const {
+  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.a_blob_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCBlob&>(
       ::protobuf::mozilla::dom::_IPCBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileResponse::blob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemFileResponse.blob)
-  return _internal_blob();
+inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileResponse::a_blob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
+  return _internal_a_blob();
 }
-inline void FileSystemFileResponse::unsafe_arena_set_allocated_blob(
-    ::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void FileSystemFileResponse::unsafe_arena_set_allocated_a_blob(
+    ::protobuf::mozilla::dom::IPCBlob* a_blob) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  _impl_.blob_ = blob;
-  if (blob) {
+  _impl_.a_blob_ = a_blob;
+  if (a_blob) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemFileResponse.blob)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::release_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::release_a_blob() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1610,158 +1610,158 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::release_blob()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::unsafe_arena_release_blob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemFileResponse.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::unsafe_arena_release_a_blob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::_internal_mutable_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::_internal_mutable_a_blob() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.blob_ == nullptr) {
+  if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
-    _impl_.blob_ = p;
+    _impl_.a_blob_ = p;
   }
-  return _impl_.blob_;
+  return _impl_.a_blob_;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::mutable_blob() {
-  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_blob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemFileResponse.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::mutable_a_blob() {
+  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_a_blob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
   return _msg;
 }
-inline void FileSystemFileResponse::set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void FileSystemFileResponse::set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  if (blob) {
+  if (a_blob) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(blob));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_blob));
     if (message_arena != submessage_arena) {
-      blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, blob, submessage_arena);
+      a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_blob, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.blob_ = blob;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemFileResponse.blob)
+  _impl_.a_blob_ = a_blob;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemDirectoryResponse
 
-// required bytes realPath = 1;
-inline bool FileSystemDirectoryResponse::_internal_has_realpath() const {
+// required bytes a_realPath = 1;
+inline bool FileSystemDirectoryResponse::_internal_has_a_realpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemDirectoryResponse::has_realpath() const {
-  return _internal_has_realpath();
+inline bool FileSystemDirectoryResponse::has_a_realpath() const {
+  return _internal_has_a_realpath();
 }
-inline void FileSystemDirectoryResponse::clear_realpath() {
-  _impl_.realpath_.ClearToEmpty();
+inline void FileSystemDirectoryResponse::clear_a_realpath() {
+  _impl_.a_realpath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemDirectoryResponse::realpath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryResponse.realPath)
-  return _internal_realpath();
+inline const std::string& FileSystemDirectoryResponse::a_realpath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
+  return _internal_a_realpath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemDirectoryResponse::set_realpath(ArgT0&& arg0, ArgT... args) {
+void FileSystemDirectoryResponse::set_a_realpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryResponse.realPath)
+ _impl_.a_realpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
 }
-inline std::string* FileSystemDirectoryResponse::mutable_realpath() {
-  std::string* _s = _internal_mutable_realpath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryResponse.realPath)
+inline std::string* FileSystemDirectoryResponse::mutable_a_realpath() {
+  std::string* _s = _internal_mutable_a_realpath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
   return _s;
 }
-inline const std::string& FileSystemDirectoryResponse::_internal_realpath() const {
-  return _impl_.realpath_.Get();
+inline const std::string& FileSystemDirectoryResponse::_internal_a_realpath() const {
+  return _impl_.a_realpath_.Get();
 }
-inline void FileSystemDirectoryResponse::_internal_set_realpath(const std::string& value) {
+inline void FileSystemDirectoryResponse::_internal_set_a_realpath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.realpath_.Set(value, GetArenaForAllocation());
+  _impl_.a_realpath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemDirectoryResponse::_internal_mutable_realpath() {
+inline std::string* FileSystemDirectoryResponse::_internal_mutable_a_realpath() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.realpath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_realpath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemDirectoryResponse::release_realpath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryResponse.realPath)
-  if (!_internal_has_realpath()) {
+inline std::string* FileSystemDirectoryResponse::release_a_realpath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
+  if (!_internal_has_a_realpath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.realpath_.Release();
+  auto* p = _impl_.a_realpath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemDirectoryResponse::set_allocated_realpath(std::string* realpath) {
-  if (realpath != nullptr) {
+inline void FileSystemDirectoryResponse::set_allocated_a_realpath(std::string* a_realpath) {
+  if (a_realpath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.realpath_.SetAllocated(realpath, GetArenaForAllocation());
+  _impl_.a_realpath_.SetAllocated(a_realpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.realpath_.IsDefault()) {
-    _impl_.realpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_realpath_.IsDefault()) {
+    _impl_.a_realpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryResponse.realPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemDirectoryListingResponseFile
 
-// required .protobuf.mozilla.dom.IPCBlob blob = 1;
-inline bool FileSystemDirectoryListingResponseFile::_internal_has_blob() const {
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+inline bool FileSystemDirectoryListingResponseFile::_internal_has_a_blob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.blob_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
   return value;
 }
-inline bool FileSystemDirectoryListingResponseFile::has_blob() const {
-  return _internal_has_blob();
+inline bool FileSystemDirectoryListingResponseFile::has_a_blob() const {
+  return _internal_has_a_blob();
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemDirectoryListingResponseFile::_internal_blob() const {
-  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.blob_;
+inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemDirectoryListingResponseFile::_internal_a_blob() const {
+  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.a_blob_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCBlob&>(
       ::protobuf::mozilla::dom::_IPCBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemDirectoryListingResponseFile::blob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.blob)
-  return _internal_blob();
+inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemDirectoryListingResponseFile::a_blob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
+  return _internal_a_blob();
 }
-inline void FileSystemDirectoryListingResponseFile::unsafe_arena_set_allocated_blob(
-    ::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void FileSystemDirectoryListingResponseFile::unsafe_arena_set_allocated_a_blob(
+    ::protobuf::mozilla::dom::IPCBlob* a_blob) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  _impl_.blob_ = blob;
-  if (blob) {
+  _impl_.a_blob_ = a_blob;
+  if (a_blob) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.blob)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::release_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::release_a_blob() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1773,268 +1773,268 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::unsafe_arena_release_blob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::unsafe_arena_release_a_blob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::_internal_mutable_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::_internal_mutable_a_blob() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.blob_ == nullptr) {
+  if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
-    _impl_.blob_ = p;
+    _impl_.a_blob_ = p;
   }
-  return _impl_.blob_;
+  return _impl_.a_blob_;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::mutable_blob() {
-  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_blob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::mutable_a_blob() {
+  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_a_blob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
   return _msg;
 }
-inline void FileSystemDirectoryListingResponseFile::set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void FileSystemDirectoryListingResponseFile::set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  if (blob) {
+  if (a_blob) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(blob));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_blob));
     if (message_arena != submessage_arena) {
-      blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, blob, submessage_arena);
+      a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_blob, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.blob_ = blob;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.blob)
+  _impl_.a_blob_ = a_blob;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemDirectoryListingResponseDirectory
 
-// required bytes directoryRealPath = 1;
-inline bool FileSystemDirectoryListingResponseDirectory::_internal_has_directoryrealpath() const {
+// required bytes a_directoryRealPath = 1;
+inline bool FileSystemDirectoryListingResponseDirectory::_internal_has_a_directoryrealpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemDirectoryListingResponseDirectory::has_directoryrealpath() const {
-  return _internal_has_directoryrealpath();
+inline bool FileSystemDirectoryListingResponseDirectory::has_a_directoryrealpath() const {
+  return _internal_has_a_directoryrealpath();
 }
-inline void FileSystemDirectoryListingResponseDirectory::clear_directoryrealpath() {
-  _impl_.directoryrealpath_.ClearToEmpty();
+inline void FileSystemDirectoryListingResponseDirectory::clear_a_directoryrealpath() {
+  _impl_.a_directoryrealpath_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemDirectoryListingResponseDirectory::directoryrealpath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.directoryRealPath)
-  return _internal_directoryrealpath();
+inline const std::string& FileSystemDirectoryListingResponseDirectory::a_directoryrealpath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
+  return _internal_a_directoryrealpath();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemDirectoryListingResponseDirectory::set_directoryrealpath(ArgT0&& arg0, ArgT... args) {
+void FileSystemDirectoryListingResponseDirectory::set_a_directoryrealpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.directoryrealpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.directoryRealPath)
+ _impl_.a_directoryrealpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
 }
-inline std::string* FileSystemDirectoryListingResponseDirectory::mutable_directoryrealpath() {
-  std::string* _s = _internal_mutable_directoryrealpath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.directoryRealPath)
+inline std::string* FileSystemDirectoryListingResponseDirectory::mutable_a_directoryrealpath() {
+  std::string* _s = _internal_mutable_a_directoryrealpath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
   return _s;
 }
-inline const std::string& FileSystemDirectoryListingResponseDirectory::_internal_directoryrealpath() const {
-  return _impl_.directoryrealpath_.Get();
+inline const std::string& FileSystemDirectoryListingResponseDirectory::_internal_a_directoryrealpath() const {
+  return _impl_.a_directoryrealpath_.Get();
 }
-inline void FileSystemDirectoryListingResponseDirectory::_internal_set_directoryrealpath(const std::string& value) {
+inline void FileSystemDirectoryListingResponseDirectory::_internal_set_a_directoryrealpath(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.directoryrealpath_.Set(value, GetArenaForAllocation());
+  _impl_.a_directoryrealpath_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemDirectoryListingResponseDirectory::_internal_mutable_directoryrealpath() {
+inline std::string* FileSystemDirectoryListingResponseDirectory::_internal_mutable_a_directoryrealpath() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.directoryrealpath_.Mutable(GetArenaForAllocation());
+  return _impl_.a_directoryrealpath_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemDirectoryListingResponseDirectory::release_directoryrealpath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.directoryRealPath)
-  if (!_internal_has_directoryrealpath()) {
+inline std::string* FileSystemDirectoryListingResponseDirectory::release_a_directoryrealpath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
+  if (!_internal_has_a_directoryrealpath()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.directoryrealpath_.Release();
+  auto* p = _impl_.a_directoryrealpath_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.directoryrealpath_.IsDefault()) {
-    _impl_.directoryrealpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_directoryrealpath_.IsDefault()) {
+    _impl_.a_directoryrealpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemDirectoryListingResponseDirectory::set_allocated_directoryrealpath(std::string* directoryrealpath) {
-  if (directoryrealpath != nullptr) {
+inline void FileSystemDirectoryListingResponseDirectory::set_allocated_a_directoryrealpath(std::string* a_directoryrealpath) {
+  if (a_directoryrealpath != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.directoryrealpath_.SetAllocated(directoryrealpath, GetArenaForAllocation());
+  _impl_.a_directoryrealpath_.SetAllocated(a_directoryrealpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.directoryrealpath_.IsDefault()) {
-    _impl_.directoryrealpath_.Set("", GetArenaForAllocation());
+  if (_impl_.a_directoryrealpath_.IsDefault()) {
+    _impl_.a_directoryrealpath_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.directoryRealPath)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemDirectoryListingResponseData
 
-// .protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile mVFileSystemDirectoryListingResponseFile = 1;
-inline bool FileSystemDirectoryListingResponseData::_internal_has_mvfilesystemdirectorylistingresponsefile() const {
-  return content_case() == kMVFileSystemDirectoryListingResponseFile;
+// .protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile a_mVFileSystemDirectoryListingResponseFile = 1;
+inline bool FileSystemDirectoryListingResponseData::_internal_has_a_mvfilesystemdirectorylistingresponsefile() const {
+  return content_case() == kAMVFileSystemDirectoryListingResponseFile;
 }
-inline bool FileSystemDirectoryListingResponseData::has_mvfilesystemdirectorylistingresponsefile() const {
-  return _internal_has_mvfilesystemdirectorylistingresponsefile();
+inline bool FileSystemDirectoryListingResponseData::has_a_mvfilesystemdirectorylistingresponsefile() const {
+  return _internal_has_a_mvfilesystemdirectorylistingresponsefile();
 }
-inline void FileSystemDirectoryListingResponseData::set_has_mvfilesystemdirectorylistingresponsefile() {
-  _impl_._oneof_case_[0] = kMVFileSystemDirectoryListingResponseFile;
+inline void FileSystemDirectoryListingResponseData::set_has_a_mvfilesystemdirectorylistingresponsefile() {
+  _impl_._oneof_case_[0] = kAMVFileSystemDirectoryListingResponseFile;
 }
-inline void FileSystemDirectoryListingResponseData::clear_mvfilesystemdirectorylistingresponsefile() {
-  if (_internal_has_mvfilesystemdirectorylistingresponsefile()) {
+inline void FileSystemDirectoryListingResponseData::clear_a_mvfilesystemdirectorylistingresponsefile() {
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsefile()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemdirectorylistingresponsefile_;
+      delete _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::release_mvfilesystemdirectorylistingresponsefile() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseFile)
-  if (_internal_has_mvfilesystemdirectorylistingresponsefile()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::release_a_mvfilesystemdirectorylistingresponsefile() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseFile)
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsefile()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* temp = _impl_.content_.mvfilesystemdirectorylistingresponsefile_;
+    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* temp = _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemdirectorylistingresponsefile_ = nullptr;
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& FileSystemDirectoryListingResponseData::_internal_mvfilesystemdirectorylistingresponsefile() const {
-  return _internal_has_mvfilesystemdirectorylistingresponsefile()
-      ? *_impl_.content_.mvfilesystemdirectorylistingresponsefile_
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& FileSystemDirectoryListingResponseData::_internal_a_mvfilesystemdirectorylistingresponsefile() const {
+  return _internal_has_a_mvfilesystemdirectorylistingresponsefile()
+      ? *_impl_.content_.a_mvfilesystemdirectorylistingresponsefile_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile&>(::protobuf::mozilla::dom::_FileSystemDirectoryListingResponseFile_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& FileSystemDirectoryListingResponseData::mvfilesystemdirectorylistingresponsefile() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseFile)
-  return _internal_mvfilesystemdirectorylistingresponsefile();
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile& FileSystemDirectoryListingResponseData::a_mvfilesystemdirectorylistingresponsefile() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseFile)
+  return _internal_a_mvfilesystemdirectorylistingresponsefile();
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::unsafe_arena_release_mvfilesystemdirectorylistingresponsefile() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseFile)
-  if (_internal_has_mvfilesystemdirectorylistingresponsefile()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::unsafe_arena_release_a_mvfilesystemdirectorylistingresponsefile() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseFile)
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsefile()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* temp = _impl_.content_.mvfilesystemdirectorylistingresponsefile_;
-    _impl_.content_.mvfilesystemdirectorylistingresponsefile_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* temp = _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_;
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemDirectoryListingResponseData::unsafe_arena_set_allocated_mvfilesystemdirectorylistingresponsefile(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* mvfilesystemdirectorylistingresponsefile) {
+inline void FileSystemDirectoryListingResponseData::unsafe_arena_set_allocated_a_mvfilesystemdirectorylistingresponsefile(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* a_mvfilesystemdirectorylistingresponsefile) {
   clear_content();
-  if (mvfilesystemdirectorylistingresponsefile) {
-    set_has_mvfilesystemdirectorylistingresponsefile();
-    _impl_.content_.mvfilesystemdirectorylistingresponsefile_ = mvfilesystemdirectorylistingresponsefile;
+  if (a_mvfilesystemdirectorylistingresponsefile) {
+    set_has_a_mvfilesystemdirectorylistingresponsefile();
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_ = a_mvfilesystemdirectorylistingresponsefile;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseFile)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseFile)
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::_internal_mutable_mvfilesystemdirectorylistingresponsefile() {
-  if (!_internal_has_mvfilesystemdirectorylistingresponsefile()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::_internal_mutable_a_mvfilesystemdirectorylistingresponsefile() {
+  if (!_internal_has_a_mvfilesystemdirectorylistingresponsefile()) {
     clear_content();
-    set_has_mvfilesystemdirectorylistingresponsefile();
-    _impl_.content_.mvfilesystemdirectorylistingresponsefile_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile >(GetArenaForAllocation());
+    set_has_a_mvfilesystemdirectorylistingresponsefile();
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemdirectorylistingresponsefile_;
+  return _impl_.content_.a_mvfilesystemdirectorylistingresponsefile_;
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::mutable_mvfilesystemdirectorylistingresponsefile() {
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* _msg = _internal_mutable_mvfilesystemdirectorylistingresponsefile();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseFile)
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* FileSystemDirectoryListingResponseData::mutable_a_mvfilesystemdirectorylistingresponsefile() {
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile* _msg = _internal_mutable_a_mvfilesystemdirectorylistingresponsefile();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseFile)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory mVFileSystemDirectoryListingResponseDirectory = 2;
-inline bool FileSystemDirectoryListingResponseData::_internal_has_mvfilesystemdirectorylistingresponsedirectory() const {
-  return content_case() == kMVFileSystemDirectoryListingResponseDirectory;
+// .protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory a_mVFileSystemDirectoryListingResponseDirectory = 2;
+inline bool FileSystemDirectoryListingResponseData::_internal_has_a_mvfilesystemdirectorylistingresponsedirectory() const {
+  return content_case() == kAMVFileSystemDirectoryListingResponseDirectory;
 }
-inline bool FileSystemDirectoryListingResponseData::has_mvfilesystemdirectorylistingresponsedirectory() const {
-  return _internal_has_mvfilesystemdirectorylistingresponsedirectory();
+inline bool FileSystemDirectoryListingResponseData::has_a_mvfilesystemdirectorylistingresponsedirectory() const {
+  return _internal_has_a_mvfilesystemdirectorylistingresponsedirectory();
 }
-inline void FileSystemDirectoryListingResponseData::set_has_mvfilesystemdirectorylistingresponsedirectory() {
-  _impl_._oneof_case_[0] = kMVFileSystemDirectoryListingResponseDirectory;
+inline void FileSystemDirectoryListingResponseData::set_has_a_mvfilesystemdirectorylistingresponsedirectory() {
+  _impl_._oneof_case_[0] = kAMVFileSystemDirectoryListingResponseDirectory;
 }
-inline void FileSystemDirectoryListingResponseData::clear_mvfilesystemdirectorylistingresponsedirectory() {
-  if (_internal_has_mvfilesystemdirectorylistingresponsedirectory()) {
+inline void FileSystemDirectoryListingResponseData::clear_a_mvfilesystemdirectorylistingresponsedirectory() {
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsedirectory()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_;
+      delete _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::release_mvfilesystemdirectorylistingresponsedirectory() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseDirectory)
-  if (_internal_has_mvfilesystemdirectorylistingresponsedirectory()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::release_a_mvfilesystemdirectorylistingresponsedirectory() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseDirectory)
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsedirectory()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* temp = _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_;
+    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* temp = _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_ = nullptr;
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& FileSystemDirectoryListingResponseData::_internal_mvfilesystemdirectorylistingresponsedirectory() const {
-  return _internal_has_mvfilesystemdirectorylistingresponsedirectory()
-      ? *_impl_.content_.mvfilesystemdirectorylistingresponsedirectory_
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& FileSystemDirectoryListingResponseData::_internal_a_mvfilesystemdirectorylistingresponsedirectory() const {
+  return _internal_has_a_mvfilesystemdirectorylistingresponsedirectory()
+      ? *_impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory&>(::protobuf::mozilla::dom::_FileSystemDirectoryListingResponseDirectory_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& FileSystemDirectoryListingResponseData::mvfilesystemdirectorylistingresponsedirectory() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseDirectory)
-  return _internal_mvfilesystemdirectorylistingresponsedirectory();
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory& FileSystemDirectoryListingResponseData::a_mvfilesystemdirectorylistingresponsedirectory() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseDirectory)
+  return _internal_a_mvfilesystemdirectorylistingresponsedirectory();
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::unsafe_arena_release_mvfilesystemdirectorylistingresponsedirectory() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseDirectory)
-  if (_internal_has_mvfilesystemdirectorylistingresponsedirectory()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::unsafe_arena_release_a_mvfilesystemdirectorylistingresponsedirectory() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseDirectory)
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsedirectory()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* temp = _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_;
-    _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* temp = _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_;
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemDirectoryListingResponseData::unsafe_arena_set_allocated_mvfilesystemdirectorylistingresponsedirectory(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* mvfilesystemdirectorylistingresponsedirectory) {
+inline void FileSystemDirectoryListingResponseData::unsafe_arena_set_allocated_a_mvfilesystemdirectorylistingresponsedirectory(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* a_mvfilesystemdirectorylistingresponsedirectory) {
   clear_content();
-  if (mvfilesystemdirectorylistingresponsedirectory) {
-    set_has_mvfilesystemdirectorylistingresponsedirectory();
-    _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_ = mvfilesystemdirectorylistingresponsedirectory;
+  if (a_mvfilesystemdirectorylistingresponsedirectory) {
+    set_has_a_mvfilesystemdirectorylistingresponsedirectory();
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_ = a_mvfilesystemdirectorylistingresponsedirectory;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseDirectory)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseDirectory)
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::_internal_mutable_mvfilesystemdirectorylistingresponsedirectory() {
-  if (!_internal_has_mvfilesystemdirectorylistingresponsedirectory()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::_internal_mutable_a_mvfilesystemdirectorylistingresponsedirectory() {
+  if (!_internal_has_a_mvfilesystemdirectorylistingresponsedirectory()) {
     clear_content();
-    set_has_mvfilesystemdirectorylistingresponsedirectory();
-    _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory >(GetArenaForAllocation());
+    set_has_a_mvfilesystemdirectorylistingresponsedirectory();
+    _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemdirectorylistingresponsedirectory_;
+  return _impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_;
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::mutable_mvfilesystemdirectorylistingresponsedirectory() {
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* _msg = _internal_mutable_mvfilesystemdirectorylistingresponsedirectory();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.mVFileSystemDirectoryListingResponseDirectory)
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* FileSystemDirectoryListingResponseData::mutable_a_mvfilesystemdirectorylistingresponsedirectory() {
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory* _msg = _internal_mutable_a_mvfilesystemdirectorylistingresponsedirectory();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData.a_mVFileSystemDirectoryListingResponseDirectory)
   return _msg;
 }
 
@@ -2051,533 +2051,533 @@ inline FileSystemDirectoryListingResponseData::ContentCase FileSystemDirectoryLi
 
 // FileSystemDirectoryListingResponse
 
-// repeated .protobuf.mozilla.dom.FileSystemDirectoryListingResponseData data = 1;
-inline int FileSystemDirectoryListingResponse::_internal_data_size() const {
-  return _impl_.data_.size();
+// repeated .protobuf.mozilla.dom.FileSystemDirectoryListingResponseData a_data = 1;
+inline int FileSystemDirectoryListingResponse::_internal_a_data_size() const {
+  return _impl_.a_data_.size();
 }
-inline int FileSystemDirectoryListingResponse::data_size() const {
-  return _internal_data_size();
+inline int FileSystemDirectoryListingResponse::a_data_size() const {
+  return _internal_a_data_size();
 }
-inline void FileSystemDirectoryListingResponse::clear_data() {
-  _impl_.data_.Clear();
+inline void FileSystemDirectoryListingResponse::clear_a_data() {
+  _impl_.a_data_.Clear();
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* FileSystemDirectoryListingResponse::mutable_data(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.data)
-  return _impl_.data_.Mutable(index);
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* FileSystemDirectoryListingResponse::mutable_a_data(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.a_data)
+  return _impl_.a_data_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData >*
-FileSystemDirectoryListingResponse::mutable_data() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.data)
-  return &_impl_.data_;
+FileSystemDirectoryListingResponse::mutable_a_data() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.a_data)
+  return &_impl_.a_data_;
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& FileSystemDirectoryListingResponse::_internal_data(int index) const {
-  return _impl_.data_.Get(index);
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& FileSystemDirectoryListingResponse::_internal_a_data(int index) const {
+  return _impl_.a_data_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& FileSystemDirectoryListingResponse::data(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.data)
-  return _internal_data(index);
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData& FileSystemDirectoryListingResponse::a_data(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.a_data)
+  return _internal_a_data(index);
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* FileSystemDirectoryListingResponse::_internal_add_data() {
-  return _impl_.data_.Add();
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* FileSystemDirectoryListingResponse::_internal_add_a_data() {
+  return _impl_.a_data_.Add();
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* FileSystemDirectoryListingResponse::add_data() {
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* _add = _internal_add_data();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.data)
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* FileSystemDirectoryListingResponse::add_a_data() {
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData* _add = _internal_add_a_data();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.a_data)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData >&
-FileSystemDirectoryListingResponse::data() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.data)
-  return _impl_.data_;
+FileSystemDirectoryListingResponse::a_data() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.FileSystemDirectoryListingResponse.a_data)
+  return _impl_.a_data_;
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemFilesResponse
 
-// repeated .protobuf.mozilla.dom.FileSystemFileResponse data = 1;
-inline int FileSystemFilesResponse::_internal_data_size() const {
-  return _impl_.data_.size();
+// repeated .protobuf.mozilla.dom.FileSystemFileResponse a_data = 1;
+inline int FileSystemFilesResponse::_internal_a_data_size() const {
+  return _impl_.a_data_.size();
 }
-inline int FileSystemFilesResponse::data_size() const {
-  return _internal_data_size();
+inline int FileSystemFilesResponse::a_data_size() const {
+  return _internal_a_data_size();
 }
-inline void FileSystemFilesResponse::clear_data() {
-  _impl_.data_.Clear();
+inline void FileSystemFilesResponse::clear_a_data() {
+  _impl_.a_data_.Clear();
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemFilesResponse::mutable_data(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemFilesResponse.data)
-  return _impl_.data_.Mutable(index);
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemFilesResponse::mutable_a_data(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemFilesResponse.a_data)
+  return _impl_.a_data_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemFileResponse >*
-FileSystemFilesResponse::mutable_data() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.FileSystemFilesResponse.data)
-  return &_impl_.data_;
+FileSystemFilesResponse::mutable_a_data() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.FileSystemFilesResponse.a_data)
+  return &_impl_.a_data_;
 }
-inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemFilesResponse::_internal_data(int index) const {
-  return _impl_.data_.Get(index);
+inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemFilesResponse::_internal_a_data(int index) const {
+  return _impl_.a_data_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemFilesResponse::data(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemFilesResponse.data)
-  return _internal_data(index);
+inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemFilesResponse::a_data(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemFilesResponse.a_data)
+  return _internal_a_data(index);
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemFilesResponse::_internal_add_data() {
-  return _impl_.data_.Add();
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemFilesResponse::_internal_add_a_data() {
+  return _impl_.a_data_.Add();
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemFilesResponse::add_data() {
-  ::protobuf::mozilla::dom::FileSystemFileResponse* _add = _internal_add_data();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.FileSystemFilesResponse.data)
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemFilesResponse::add_a_data() {
+  ::protobuf::mozilla::dom::FileSystemFileResponse* _add = _internal_add_a_data();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.FileSystemFilesResponse.a_data)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FileSystemFileResponse >&
-FileSystemFilesResponse::data() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.FileSystemFilesResponse.data)
-  return _impl_.data_;
+FileSystemFilesResponse::a_data() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.FileSystemFilesResponse.a_data)
+  return _impl_.a_data_;
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemErrorResponse
 
-// required bytes error = 1;
-inline bool FileSystemErrorResponse::_internal_has_error() const {
+// required bytes a_error = 1;
+inline bool FileSystemErrorResponse::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemErrorResponse::has_error() const {
-  return _internal_has_error();
+inline bool FileSystemErrorResponse::has_a_error() const {
+  return _internal_has_a_error();
 }
-inline void FileSystemErrorResponse::clear_error() {
-  _impl_.error_.ClearToEmpty();
+inline void FileSystemErrorResponse::clear_a_error() {
+  _impl_.a_error_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemErrorResponse::error() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemErrorResponse.error)
-  return _internal_error();
+inline const std::string& FileSystemErrorResponse::a_error() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
+  return _internal_a_error();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemErrorResponse::set_error(ArgT0&& arg0, ArgT... args) {
+void FileSystemErrorResponse::set_a_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemErrorResponse.error)
+ _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
 }
-inline std::string* FileSystemErrorResponse::mutable_error() {
-  std::string* _s = _internal_mutable_error();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemErrorResponse.error)
+inline std::string* FileSystemErrorResponse::mutable_a_error() {
+  std::string* _s = _internal_mutable_a_error();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
   return _s;
 }
-inline const std::string& FileSystemErrorResponse::_internal_error() const {
-  return _impl_.error_.Get();
+inline const std::string& FileSystemErrorResponse::_internal_a_error() const {
+  return _impl_.a_error_.Get();
 }
-inline void FileSystemErrorResponse::_internal_set_error(const std::string& value) {
+inline void FileSystemErrorResponse::_internal_set_a_error(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.error_.Set(value, GetArenaForAllocation());
+  _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemErrorResponse::_internal_mutable_error() {
+inline std::string* FileSystemErrorResponse::_internal_mutable_a_error() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.error_.Mutable(GetArenaForAllocation());
+  return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemErrorResponse::release_error() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemErrorResponse.error)
-  if (!_internal_has_error()) {
+inline std::string* FileSystemErrorResponse::release_a_error() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
+  if (!_internal_has_a_error()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.error_.Release();
+  auto* p = _impl_.a_error_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.error_.IsDefault()) {
-    _impl_.error_.Set("", GetArenaForAllocation());
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemErrorResponse::set_allocated_error(std::string* error) {
-  if (error != nullptr) {
+inline void FileSystemErrorResponse::set_allocated_a_error(std::string* a_error) {
+  if (a_error != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.error_.SetAllocated(error, GetArenaForAllocation());
+  _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.error_.IsDefault()) {
-    _impl_.error_.Set("", GetArenaForAllocation());
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemErrorResponse.error)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemResponseValue
 
-// .protobuf.mozilla.dom.FileSystemDirectoryResponse mVFileSystemDirectoryResponse = 1;
-inline bool FileSystemResponseValue::_internal_has_mvfilesystemdirectoryresponse() const {
-  return content_case() == kMVFileSystemDirectoryResponse;
+// .protobuf.mozilla.dom.FileSystemDirectoryResponse a_mVFileSystemDirectoryResponse = 1;
+inline bool FileSystemResponseValue::_internal_has_a_mvfilesystemdirectoryresponse() const {
+  return content_case() == kAMVFileSystemDirectoryResponse;
 }
-inline bool FileSystemResponseValue::has_mvfilesystemdirectoryresponse() const {
-  return _internal_has_mvfilesystemdirectoryresponse();
+inline bool FileSystemResponseValue::has_a_mvfilesystemdirectoryresponse() const {
+  return _internal_has_a_mvfilesystemdirectoryresponse();
 }
-inline void FileSystemResponseValue::set_has_mvfilesystemdirectoryresponse() {
-  _impl_._oneof_case_[0] = kMVFileSystemDirectoryResponse;
+inline void FileSystemResponseValue::set_has_a_mvfilesystemdirectoryresponse() {
+  _impl_._oneof_case_[0] = kAMVFileSystemDirectoryResponse;
 }
-inline void FileSystemResponseValue::clear_mvfilesystemdirectoryresponse() {
-  if (_internal_has_mvfilesystemdirectoryresponse()) {
+inline void FileSystemResponseValue::clear_a_mvfilesystemdirectoryresponse() {
+  if (_internal_has_a_mvfilesystemdirectoryresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemdirectoryresponse_;
+      delete _impl_.content_.a_mvfilesystemdirectoryresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::release_mvfilesystemdirectoryresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryResponse)
-  if (_internal_has_mvfilesystemdirectoryresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::release_a_mvfilesystemdirectoryresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryResponse)
+  if (_internal_has_a_mvfilesystemdirectoryresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryResponse* temp = _impl_.content_.mvfilesystemdirectoryresponse_;
+    ::protobuf::mozilla::dom::FileSystemDirectoryResponse* temp = _impl_.content_.a_mvfilesystemdirectoryresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemdirectoryresponse_ = nullptr;
+    _impl_.content_.a_mvfilesystemdirectoryresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& FileSystemResponseValue::_internal_mvfilesystemdirectoryresponse() const {
-  return _internal_has_mvfilesystemdirectoryresponse()
-      ? *_impl_.content_.mvfilesystemdirectoryresponse_
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& FileSystemResponseValue::_internal_a_mvfilesystemdirectoryresponse() const {
+  return _internal_has_a_mvfilesystemdirectoryresponse()
+      ? *_impl_.content_.a_mvfilesystemdirectoryresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemDirectoryResponse&>(::protobuf::mozilla::dom::_FileSystemDirectoryResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& FileSystemResponseValue::mvfilesystemdirectoryresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryResponse)
-  return _internal_mvfilesystemdirectoryresponse();
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryResponse& FileSystemResponseValue::a_mvfilesystemdirectoryresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryResponse)
+  return _internal_a_mvfilesystemdirectoryresponse();
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::unsafe_arena_release_mvfilesystemdirectoryresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryResponse)
-  if (_internal_has_mvfilesystemdirectoryresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::unsafe_arena_release_a_mvfilesystemdirectoryresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryResponse)
+  if (_internal_has_a_mvfilesystemdirectoryresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryResponse* temp = _impl_.content_.mvfilesystemdirectoryresponse_;
-    _impl_.content_.mvfilesystemdirectoryresponse_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemDirectoryResponse* temp = _impl_.content_.a_mvfilesystemdirectoryresponse_;
+    _impl_.content_.a_mvfilesystemdirectoryresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResponseValue::unsafe_arena_set_allocated_mvfilesystemdirectoryresponse(::protobuf::mozilla::dom::FileSystemDirectoryResponse* mvfilesystemdirectoryresponse) {
+inline void FileSystemResponseValue::unsafe_arena_set_allocated_a_mvfilesystemdirectoryresponse(::protobuf::mozilla::dom::FileSystemDirectoryResponse* a_mvfilesystemdirectoryresponse) {
   clear_content();
-  if (mvfilesystemdirectoryresponse) {
-    set_has_mvfilesystemdirectoryresponse();
-    _impl_.content_.mvfilesystemdirectoryresponse_ = mvfilesystemdirectoryresponse;
+  if (a_mvfilesystemdirectoryresponse) {
+    set_has_a_mvfilesystemdirectoryresponse();
+    _impl_.content_.a_mvfilesystemdirectoryresponse_ = a_mvfilesystemdirectoryresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryResponse)
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::_internal_mutable_mvfilesystemdirectoryresponse() {
-  if (!_internal_has_mvfilesystemdirectoryresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::_internal_mutable_a_mvfilesystemdirectoryresponse() {
+  if (!_internal_has_a_mvfilesystemdirectoryresponse()) {
     clear_content();
-    set_has_mvfilesystemdirectoryresponse();
-    _impl_.content_.mvfilesystemdirectoryresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryResponse >(GetArenaForAllocation());
+    set_has_a_mvfilesystemdirectoryresponse();
+    _impl_.content_.a_mvfilesystemdirectoryresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemdirectoryresponse_;
+  return _impl_.content_.a_mvfilesystemdirectoryresponse_;
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::mutable_mvfilesystemdirectoryresponse() {
-  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* _msg = _internal_mutable_mvfilesystemdirectoryresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryResponse)
+inline ::protobuf::mozilla::dom::FileSystemDirectoryResponse* FileSystemResponseValue::mutable_a_mvfilesystemdirectoryresponse() {
+  ::protobuf::mozilla::dom::FileSystemDirectoryResponse* _msg = _internal_mutable_a_mvfilesystemdirectoryresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemDirectoryListingResponse mVFileSystemDirectoryListingResponse = 2;
-inline bool FileSystemResponseValue::_internal_has_mvfilesystemdirectorylistingresponse() const {
-  return content_case() == kMVFileSystemDirectoryListingResponse;
+// .protobuf.mozilla.dom.FileSystemDirectoryListingResponse a_mVFileSystemDirectoryListingResponse = 2;
+inline bool FileSystemResponseValue::_internal_has_a_mvfilesystemdirectorylistingresponse() const {
+  return content_case() == kAMVFileSystemDirectoryListingResponse;
 }
-inline bool FileSystemResponseValue::has_mvfilesystemdirectorylistingresponse() const {
-  return _internal_has_mvfilesystemdirectorylistingresponse();
+inline bool FileSystemResponseValue::has_a_mvfilesystemdirectorylistingresponse() const {
+  return _internal_has_a_mvfilesystemdirectorylistingresponse();
 }
-inline void FileSystemResponseValue::set_has_mvfilesystemdirectorylistingresponse() {
-  _impl_._oneof_case_[0] = kMVFileSystemDirectoryListingResponse;
+inline void FileSystemResponseValue::set_has_a_mvfilesystemdirectorylistingresponse() {
+  _impl_._oneof_case_[0] = kAMVFileSystemDirectoryListingResponse;
 }
-inline void FileSystemResponseValue::clear_mvfilesystemdirectorylistingresponse() {
-  if (_internal_has_mvfilesystemdirectorylistingresponse()) {
+inline void FileSystemResponseValue::clear_a_mvfilesystemdirectorylistingresponse() {
+  if (_internal_has_a_mvfilesystemdirectorylistingresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemdirectorylistingresponse_;
+      delete _impl_.content_.a_mvfilesystemdirectorylistingresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::release_mvfilesystemdirectorylistingresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryListingResponse)
-  if (_internal_has_mvfilesystemdirectorylistingresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::release_a_mvfilesystemdirectorylistingresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryListingResponse)
+  if (_internal_has_a_mvfilesystemdirectorylistingresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* temp = _impl_.content_.mvfilesystemdirectorylistingresponse_;
+    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* temp = _impl_.content_.a_mvfilesystemdirectorylistingresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemdirectorylistingresponse_ = nullptr;
+    _impl_.content_.a_mvfilesystemdirectorylistingresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& FileSystemResponseValue::_internal_mvfilesystemdirectorylistingresponse() const {
-  return _internal_has_mvfilesystemdirectorylistingresponse()
-      ? *_impl_.content_.mvfilesystemdirectorylistingresponse_
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& FileSystemResponseValue::_internal_a_mvfilesystemdirectorylistingresponse() const {
+  return _internal_has_a_mvfilesystemdirectorylistingresponse()
+      ? *_impl_.content_.a_mvfilesystemdirectorylistingresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse&>(::protobuf::mozilla::dom::_FileSystemDirectoryListingResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& FileSystemResponseValue::mvfilesystemdirectorylistingresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryListingResponse)
-  return _internal_mvfilesystemdirectorylistingresponse();
+inline const ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse& FileSystemResponseValue::a_mvfilesystemdirectorylistingresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryListingResponse)
+  return _internal_a_mvfilesystemdirectorylistingresponse();
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::unsafe_arena_release_mvfilesystemdirectorylistingresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryListingResponse)
-  if (_internal_has_mvfilesystemdirectorylistingresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::unsafe_arena_release_a_mvfilesystemdirectorylistingresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryListingResponse)
+  if (_internal_has_a_mvfilesystemdirectorylistingresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* temp = _impl_.content_.mvfilesystemdirectorylistingresponse_;
-    _impl_.content_.mvfilesystemdirectorylistingresponse_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* temp = _impl_.content_.a_mvfilesystemdirectorylistingresponse_;
+    _impl_.content_.a_mvfilesystemdirectorylistingresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResponseValue::unsafe_arena_set_allocated_mvfilesystemdirectorylistingresponse(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* mvfilesystemdirectorylistingresponse) {
+inline void FileSystemResponseValue::unsafe_arena_set_allocated_a_mvfilesystemdirectorylistingresponse(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* a_mvfilesystemdirectorylistingresponse) {
   clear_content();
-  if (mvfilesystemdirectorylistingresponse) {
-    set_has_mvfilesystemdirectorylistingresponse();
-    _impl_.content_.mvfilesystemdirectorylistingresponse_ = mvfilesystemdirectorylistingresponse;
+  if (a_mvfilesystemdirectorylistingresponse) {
+    set_has_a_mvfilesystemdirectorylistingresponse();
+    _impl_.content_.a_mvfilesystemdirectorylistingresponse_ = a_mvfilesystemdirectorylistingresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryListingResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryListingResponse)
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::_internal_mutable_mvfilesystemdirectorylistingresponse() {
-  if (!_internal_has_mvfilesystemdirectorylistingresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::_internal_mutable_a_mvfilesystemdirectorylistingresponse() {
+  if (!_internal_has_a_mvfilesystemdirectorylistingresponse()) {
     clear_content();
-    set_has_mvfilesystemdirectorylistingresponse();
-    _impl_.content_.mvfilesystemdirectorylistingresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse >(GetArenaForAllocation());
+    set_has_a_mvfilesystemdirectorylistingresponse();
+    _impl_.content_.a_mvfilesystemdirectorylistingresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemdirectorylistingresponse_;
+  return _impl_.content_.a_mvfilesystemdirectorylistingresponse_;
 }
-inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::mutable_mvfilesystemdirectorylistingresponse() {
-  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* _msg = _internal_mutable_mvfilesystemdirectorylistingresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemDirectoryListingResponse)
+inline ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* FileSystemResponseValue::mutable_a_mvfilesystemdirectorylistingresponse() {
+  ::protobuf::mozilla::dom::FileSystemDirectoryListingResponse* _msg = _internal_mutable_a_mvfilesystemdirectorylistingresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemDirectoryListingResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemFileResponse mVFileSystemFileResponse = 3;
-inline bool FileSystemResponseValue::_internal_has_mvfilesystemfileresponse() const {
-  return content_case() == kMVFileSystemFileResponse;
+// .protobuf.mozilla.dom.FileSystemFileResponse a_mVFileSystemFileResponse = 3;
+inline bool FileSystemResponseValue::_internal_has_a_mvfilesystemfileresponse() const {
+  return content_case() == kAMVFileSystemFileResponse;
 }
-inline bool FileSystemResponseValue::has_mvfilesystemfileresponse() const {
-  return _internal_has_mvfilesystemfileresponse();
+inline bool FileSystemResponseValue::has_a_mvfilesystemfileresponse() const {
+  return _internal_has_a_mvfilesystemfileresponse();
 }
-inline void FileSystemResponseValue::set_has_mvfilesystemfileresponse() {
-  _impl_._oneof_case_[0] = kMVFileSystemFileResponse;
+inline void FileSystemResponseValue::set_has_a_mvfilesystemfileresponse() {
+  _impl_._oneof_case_[0] = kAMVFileSystemFileResponse;
 }
-inline void FileSystemResponseValue::clear_mvfilesystemfileresponse() {
-  if (_internal_has_mvfilesystemfileresponse()) {
+inline void FileSystemResponseValue::clear_a_mvfilesystemfileresponse() {
+  if (_internal_has_a_mvfilesystemfileresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemfileresponse_;
+      delete _impl_.content_.a_mvfilesystemfileresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::release_mvfilesystemfileresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFileResponse)
-  if (_internal_has_mvfilesystemfileresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::release_a_mvfilesystemfileresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFileResponse)
+  if (_internal_has_a_mvfilesystemfileresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemFileResponse* temp = _impl_.content_.mvfilesystemfileresponse_;
+    ::protobuf::mozilla::dom::FileSystemFileResponse* temp = _impl_.content_.a_mvfilesystemfileresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemfileresponse_ = nullptr;
+    _impl_.content_.a_mvfilesystemfileresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemResponseValue::_internal_mvfilesystemfileresponse() const {
-  return _internal_has_mvfilesystemfileresponse()
-      ? *_impl_.content_.mvfilesystemfileresponse_
+inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemResponseValue::_internal_a_mvfilesystemfileresponse() const {
+  return _internal_has_a_mvfilesystemfileresponse()
+      ? *_impl_.content_.a_mvfilesystemfileresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemFileResponse&>(::protobuf::mozilla::dom::_FileSystemFileResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemResponseValue::mvfilesystemfileresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFileResponse)
-  return _internal_mvfilesystemfileresponse();
+inline const ::protobuf::mozilla::dom::FileSystemFileResponse& FileSystemResponseValue::a_mvfilesystemfileresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFileResponse)
+  return _internal_a_mvfilesystemfileresponse();
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::unsafe_arena_release_mvfilesystemfileresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFileResponse)
-  if (_internal_has_mvfilesystemfileresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::unsafe_arena_release_a_mvfilesystemfileresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFileResponse)
+  if (_internal_has_a_mvfilesystemfileresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemFileResponse* temp = _impl_.content_.mvfilesystemfileresponse_;
-    _impl_.content_.mvfilesystemfileresponse_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemFileResponse* temp = _impl_.content_.a_mvfilesystemfileresponse_;
+    _impl_.content_.a_mvfilesystemfileresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResponseValue::unsafe_arena_set_allocated_mvfilesystemfileresponse(::protobuf::mozilla::dom::FileSystemFileResponse* mvfilesystemfileresponse) {
+inline void FileSystemResponseValue::unsafe_arena_set_allocated_a_mvfilesystemfileresponse(::protobuf::mozilla::dom::FileSystemFileResponse* a_mvfilesystemfileresponse) {
   clear_content();
-  if (mvfilesystemfileresponse) {
-    set_has_mvfilesystemfileresponse();
-    _impl_.content_.mvfilesystemfileresponse_ = mvfilesystemfileresponse;
+  if (a_mvfilesystemfileresponse) {
+    set_has_a_mvfilesystemfileresponse();
+    _impl_.content_.a_mvfilesystemfileresponse_ = a_mvfilesystemfileresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFileResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFileResponse)
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::_internal_mutable_mvfilesystemfileresponse() {
-  if (!_internal_has_mvfilesystemfileresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::_internal_mutable_a_mvfilesystemfileresponse() {
+  if (!_internal_has_a_mvfilesystemfileresponse()) {
     clear_content();
-    set_has_mvfilesystemfileresponse();
-    _impl_.content_.mvfilesystemfileresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemFileResponse >(GetArenaForAllocation());
+    set_has_a_mvfilesystemfileresponse();
+    _impl_.content_.a_mvfilesystemfileresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemFileResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemfileresponse_;
+  return _impl_.content_.a_mvfilesystemfileresponse_;
 }
-inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::mutable_mvfilesystemfileresponse() {
-  ::protobuf::mozilla::dom::FileSystemFileResponse* _msg = _internal_mutable_mvfilesystemfileresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFileResponse)
+inline ::protobuf::mozilla::dom::FileSystemFileResponse* FileSystemResponseValue::mutable_a_mvfilesystemfileresponse() {
+  ::protobuf::mozilla::dom::FileSystemFileResponse* _msg = _internal_mutable_a_mvfilesystemfileresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFileResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemFilesResponse mVFileSystemFilesResponse = 4;
-inline bool FileSystemResponseValue::_internal_has_mvfilesystemfilesresponse() const {
-  return content_case() == kMVFileSystemFilesResponse;
+// .protobuf.mozilla.dom.FileSystemFilesResponse a_mVFileSystemFilesResponse = 4;
+inline bool FileSystemResponseValue::_internal_has_a_mvfilesystemfilesresponse() const {
+  return content_case() == kAMVFileSystemFilesResponse;
 }
-inline bool FileSystemResponseValue::has_mvfilesystemfilesresponse() const {
-  return _internal_has_mvfilesystemfilesresponse();
+inline bool FileSystemResponseValue::has_a_mvfilesystemfilesresponse() const {
+  return _internal_has_a_mvfilesystemfilesresponse();
 }
-inline void FileSystemResponseValue::set_has_mvfilesystemfilesresponse() {
-  _impl_._oneof_case_[0] = kMVFileSystemFilesResponse;
+inline void FileSystemResponseValue::set_has_a_mvfilesystemfilesresponse() {
+  _impl_._oneof_case_[0] = kAMVFileSystemFilesResponse;
 }
-inline void FileSystemResponseValue::clear_mvfilesystemfilesresponse() {
-  if (_internal_has_mvfilesystemfilesresponse()) {
+inline void FileSystemResponseValue::clear_a_mvfilesystemfilesresponse() {
+  if (_internal_has_a_mvfilesystemfilesresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemfilesresponse_;
+      delete _impl_.content_.a_mvfilesystemfilesresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::release_mvfilesystemfilesresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFilesResponse)
-  if (_internal_has_mvfilesystemfilesresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::release_a_mvfilesystemfilesresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFilesResponse)
+  if (_internal_has_a_mvfilesystemfilesresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemFilesResponse* temp = _impl_.content_.mvfilesystemfilesresponse_;
+    ::protobuf::mozilla::dom::FileSystemFilesResponse* temp = _impl_.content_.a_mvfilesystemfilesresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemfilesresponse_ = nullptr;
+    _impl_.content_.a_mvfilesystemfilesresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemFilesResponse& FileSystemResponseValue::_internal_mvfilesystemfilesresponse() const {
-  return _internal_has_mvfilesystemfilesresponse()
-      ? *_impl_.content_.mvfilesystemfilesresponse_
+inline const ::protobuf::mozilla::dom::FileSystemFilesResponse& FileSystemResponseValue::_internal_a_mvfilesystemfilesresponse() const {
+  return _internal_has_a_mvfilesystemfilesresponse()
+      ? *_impl_.content_.a_mvfilesystemfilesresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemFilesResponse&>(::protobuf::mozilla::dom::_FileSystemFilesResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemFilesResponse& FileSystemResponseValue::mvfilesystemfilesresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFilesResponse)
-  return _internal_mvfilesystemfilesresponse();
+inline const ::protobuf::mozilla::dom::FileSystemFilesResponse& FileSystemResponseValue::a_mvfilesystemfilesresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFilesResponse)
+  return _internal_a_mvfilesystemfilesresponse();
 }
-inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::unsafe_arena_release_mvfilesystemfilesresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFilesResponse)
-  if (_internal_has_mvfilesystemfilesresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::unsafe_arena_release_a_mvfilesystemfilesresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFilesResponse)
+  if (_internal_has_a_mvfilesystemfilesresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemFilesResponse* temp = _impl_.content_.mvfilesystemfilesresponse_;
-    _impl_.content_.mvfilesystemfilesresponse_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemFilesResponse* temp = _impl_.content_.a_mvfilesystemfilesresponse_;
+    _impl_.content_.a_mvfilesystemfilesresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResponseValue::unsafe_arena_set_allocated_mvfilesystemfilesresponse(::protobuf::mozilla::dom::FileSystemFilesResponse* mvfilesystemfilesresponse) {
+inline void FileSystemResponseValue::unsafe_arena_set_allocated_a_mvfilesystemfilesresponse(::protobuf::mozilla::dom::FileSystemFilesResponse* a_mvfilesystemfilesresponse) {
   clear_content();
-  if (mvfilesystemfilesresponse) {
-    set_has_mvfilesystemfilesresponse();
-    _impl_.content_.mvfilesystemfilesresponse_ = mvfilesystemfilesresponse;
+  if (a_mvfilesystemfilesresponse) {
+    set_has_a_mvfilesystemfilesresponse();
+    _impl_.content_.a_mvfilesystemfilesresponse_ = a_mvfilesystemfilesresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFilesResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFilesResponse)
 }
-inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::_internal_mutable_mvfilesystemfilesresponse() {
-  if (!_internal_has_mvfilesystemfilesresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::_internal_mutable_a_mvfilesystemfilesresponse() {
+  if (!_internal_has_a_mvfilesystemfilesresponse()) {
     clear_content();
-    set_has_mvfilesystemfilesresponse();
-    _impl_.content_.mvfilesystemfilesresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemFilesResponse >(GetArenaForAllocation());
+    set_has_a_mvfilesystemfilesresponse();
+    _impl_.content_.a_mvfilesystemfilesresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemFilesResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemfilesresponse_;
+  return _impl_.content_.a_mvfilesystemfilesresponse_;
 }
-inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::mutable_mvfilesystemfilesresponse() {
-  ::protobuf::mozilla::dom::FileSystemFilesResponse* _msg = _internal_mutable_mvfilesystemfilesresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemFilesResponse)
+inline ::protobuf::mozilla::dom::FileSystemFilesResponse* FileSystemResponseValue::mutable_a_mvfilesystemfilesresponse() {
+  ::protobuf::mozilla::dom::FileSystemFilesResponse* _msg = _internal_mutable_a_mvfilesystemfilesresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemFilesResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileSystemErrorResponse mVFileSystemErrorResponse = 5;
-inline bool FileSystemResponseValue::_internal_has_mvfilesystemerrorresponse() const {
-  return content_case() == kMVFileSystemErrorResponse;
+// .protobuf.mozilla.dom.FileSystemErrorResponse a_mVFileSystemErrorResponse = 5;
+inline bool FileSystemResponseValue::_internal_has_a_mvfilesystemerrorresponse() const {
+  return content_case() == kAMVFileSystemErrorResponse;
 }
-inline bool FileSystemResponseValue::has_mvfilesystemerrorresponse() const {
-  return _internal_has_mvfilesystemerrorresponse();
+inline bool FileSystemResponseValue::has_a_mvfilesystemerrorresponse() const {
+  return _internal_has_a_mvfilesystemerrorresponse();
 }
-inline void FileSystemResponseValue::set_has_mvfilesystemerrorresponse() {
-  _impl_._oneof_case_[0] = kMVFileSystemErrorResponse;
+inline void FileSystemResponseValue::set_has_a_mvfilesystemerrorresponse() {
+  _impl_._oneof_case_[0] = kAMVFileSystemErrorResponse;
 }
-inline void FileSystemResponseValue::clear_mvfilesystemerrorresponse() {
-  if (_internal_has_mvfilesystemerrorresponse()) {
+inline void FileSystemResponseValue::clear_a_mvfilesystemerrorresponse() {
+  if (_internal_has_a_mvfilesystemerrorresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemerrorresponse_;
+      delete _impl_.content_.a_mvfilesystemerrorresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::release_mvfilesystemerrorresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemErrorResponse)
-  if (_internal_has_mvfilesystemerrorresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::release_a_mvfilesystemerrorresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemErrorResponse)
+  if (_internal_has_a_mvfilesystemerrorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemErrorResponse* temp = _impl_.content_.mvfilesystemerrorresponse_;
+    ::protobuf::mozilla::dom::FileSystemErrorResponse* temp = _impl_.content_.a_mvfilesystemerrorresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemerrorresponse_ = nullptr;
+    _impl_.content_.a_mvfilesystemerrorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileSystemErrorResponse& FileSystemResponseValue::_internal_mvfilesystemerrorresponse() const {
-  return _internal_has_mvfilesystemerrorresponse()
-      ? *_impl_.content_.mvfilesystemerrorresponse_
+inline const ::protobuf::mozilla::dom::FileSystemErrorResponse& FileSystemResponseValue::_internal_a_mvfilesystemerrorresponse() const {
+  return _internal_has_a_mvfilesystemerrorresponse()
+      ? *_impl_.content_.a_mvfilesystemerrorresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileSystemErrorResponse&>(::protobuf::mozilla::dom::_FileSystemErrorResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileSystemErrorResponse& FileSystemResponseValue::mvfilesystemerrorresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemErrorResponse)
-  return _internal_mvfilesystemerrorresponse();
+inline const ::protobuf::mozilla::dom::FileSystemErrorResponse& FileSystemResponseValue::a_mvfilesystemerrorresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemErrorResponse)
+  return _internal_a_mvfilesystemerrorresponse();
 }
-inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::unsafe_arena_release_mvfilesystemerrorresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemErrorResponse)
-  if (_internal_has_mvfilesystemerrorresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::unsafe_arena_release_a_mvfilesystemerrorresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemErrorResponse)
+  if (_internal_has_a_mvfilesystemerrorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileSystemErrorResponse* temp = _impl_.content_.mvfilesystemerrorresponse_;
-    _impl_.content_.mvfilesystemerrorresponse_ = nullptr;
+    ::protobuf::mozilla::dom::FileSystemErrorResponse* temp = _impl_.content_.a_mvfilesystemerrorresponse_;
+    _impl_.content_.a_mvfilesystemerrorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResponseValue::unsafe_arena_set_allocated_mvfilesystemerrorresponse(::protobuf::mozilla::dom::FileSystemErrorResponse* mvfilesystemerrorresponse) {
+inline void FileSystemResponseValue::unsafe_arena_set_allocated_a_mvfilesystemerrorresponse(::protobuf::mozilla::dom::FileSystemErrorResponse* a_mvfilesystemerrorresponse) {
   clear_content();
-  if (mvfilesystemerrorresponse) {
-    set_has_mvfilesystemerrorresponse();
-    _impl_.content_.mvfilesystemerrorresponse_ = mvfilesystemerrorresponse;
+  if (a_mvfilesystemerrorresponse) {
+    set_has_a_mvfilesystemerrorresponse();
+    _impl_.content_.a_mvfilesystemerrorresponse_ = a_mvfilesystemerrorresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemErrorResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemErrorResponse)
 }
-inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::_internal_mutable_mvfilesystemerrorresponse() {
-  if (!_internal_has_mvfilesystemerrorresponse()) {
+inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::_internal_mutable_a_mvfilesystemerrorresponse() {
+  if (!_internal_has_a_mvfilesystemerrorresponse()) {
     clear_content();
-    set_has_mvfilesystemerrorresponse();
-    _impl_.content_.mvfilesystemerrorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemErrorResponse >(GetArenaForAllocation());
+    set_has_a_mvfilesystemerrorresponse();
+    _impl_.content_.a_mvfilesystemerrorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileSystemErrorResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemerrorresponse_;
+  return _impl_.content_.a_mvfilesystemerrorresponse_;
 }
-inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::mutable_mvfilesystemerrorresponse() {
-  ::protobuf::mozilla::dom::FileSystemErrorResponse* _msg = _internal_mutable_mvfilesystemerrorresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.mVFileSystemErrorResponse)
+inline ::protobuf::mozilla::dom::FileSystemErrorResponse* FileSystemResponseValue::mutable_a_mvfilesystemerrorresponse() {
+  ::protobuf::mozilla::dom::FileSystemErrorResponse* _msg = _internal_mutable_a_mvfilesystemerrorresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileSystemResponseValue.a_mVFileSystemErrorResponse)
   return _msg;
 }
 

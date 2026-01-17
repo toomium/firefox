@@ -206,19 +206,19 @@ class Checkbox final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueFieldNumber = 1,
+    kAValueFieldNumber = 1,
   };
-  // required bool value = 1;
-  bool has_value() const;
+  // required bool a_value = 1;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  bool value() const;
-  void set_value(bool value);
+  void clear_a_value();
+  bool a_value() const;
+  void set_a_value(bool value);
   private:
-  bool _internal_value() const;
-  void _internal_set_value(bool value);
+  bool _internal_a_value() const;
+  void _internal_set_a_value(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.Checkbox)
@@ -231,7 +231,7 @@ class Checkbox final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool value_;
+    bool a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -348,24 +348,24 @@ class TextField final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueFieldNumber = 1,
+    kAValueFieldNumber = 1,
   };
-  // required bytes value = 1;
-  bool has_value() const;
+  // required bytes a_value = 1;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.TextField)
@@ -378,7 +378,7 @@ class TextField final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -495,30 +495,30 @@ class FileList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueListFieldNumber = 1,
+    kAValueListFieldNumber = 1,
   };
-  // repeated bytes valueList = 1;
-  int valuelist_size() const;
+  // repeated bytes a_valueList = 1;
+  int a_valuelist_size() const;
   private:
-  int _internal_valuelist_size() const;
+  int _internal_a_valuelist_size() const;
   public:
-  void clear_valuelist();
-  const std::string& valuelist(int index) const;
-  std::string* mutable_valuelist(int index);
-  void set_valuelist(int index, const std::string& value);
-  void set_valuelist(int index, std::string&& value);
-  void set_valuelist(int index, const char* value);
-  void set_valuelist(int index, const void* value, size_t size);
-  std::string* add_valuelist();
-  void add_valuelist(const std::string& value);
-  void add_valuelist(std::string&& value);
-  void add_valuelist(const char* value);
-  void add_valuelist(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& valuelist() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_valuelist();
+  void clear_a_valuelist();
+  const std::string& a_valuelist(int index) const;
+  std::string* mutable_a_valuelist(int index);
+  void set_a_valuelist(int index, const std::string& value);
+  void set_a_valuelist(int index, std::string&& value);
+  void set_a_valuelist(int index, const char* value);
+  void set_a_valuelist(int index, const void* value, size_t size);
+  std::string* add_a_valuelist();
+  void add_a_valuelist(const std::string& value);
+  void add_a_valuelist(std::string&& value);
+  void add_a_valuelist(const char* value);
+  void add_a_valuelist(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_valuelist() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_valuelist();
   private:
-  const std::string& _internal_valuelist(int index) const;
-  std::string* _internal_add_valuelist();
+  const std::string& _internal_a_valuelist(int index) const;
+  std::string* _internal_add_a_valuelist();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.FileList)
@@ -529,7 +529,7 @@ class FileList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> valuelist_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_valuelist_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -647,38 +647,38 @@ class SingleSelect final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueFieldNumber = 2,
-    kIndexFieldNumber = 1,
+    kAValueFieldNumber = 2,
+    kAIndexFieldNumber = 1,
   };
-  // required bytes value = 2;
-  bool has_value() const;
+  // required bytes a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
-  // required uint32 index = 1;
-  bool has_index() const;
+  // required uint32 a_index = 1;
+  bool has_a_index() const;
   private:
-  bool _internal_has_index() const;
+  bool _internal_has_a_index() const;
   public:
-  void clear_index();
-  uint32_t index() const;
-  void set_index(uint32_t value);
+  void clear_a_index();
+  uint32_t a_index() const;
+  void set_a_index(uint32_t value);
   private:
-  uint32_t _internal_index() const;
-  void _internal_set_index(uint32_t value);
+  uint32_t _internal_a_index() const;
+  void _internal_set_a_index(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.SingleSelect)
@@ -694,8 +694,8 @@ class SingleSelect final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
-    uint32_t index_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    uint32_t a_index_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -812,30 +812,30 @@ class MultipleSelect final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueListFieldNumber = 1,
+    kAValueListFieldNumber = 1,
   };
-  // repeated bytes valueList = 1;
-  int valuelist_size() const;
+  // repeated bytes a_valueList = 1;
+  int a_valuelist_size() const;
   private:
-  int _internal_valuelist_size() const;
+  int _internal_a_valuelist_size() const;
   public:
-  void clear_valuelist();
-  const std::string& valuelist(int index) const;
-  std::string* mutable_valuelist(int index);
-  void set_valuelist(int index, const std::string& value);
-  void set_valuelist(int index, std::string&& value);
-  void set_valuelist(int index, const char* value);
-  void set_valuelist(int index, const void* value, size_t size);
-  std::string* add_valuelist();
-  void add_valuelist(const std::string& value);
-  void add_valuelist(std::string&& value);
-  void add_valuelist(const char* value);
-  void add_valuelist(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& valuelist() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_valuelist();
+  void clear_a_valuelist();
+  const std::string& a_valuelist(int index) const;
+  std::string* mutable_a_valuelist(int index);
+  void set_a_valuelist(int index, const std::string& value);
+  void set_a_valuelist(int index, std::string&& value);
+  void set_a_valuelist(int index, const char* value);
+  void set_a_valuelist(int index, const void* value, size_t size);
+  std::string* add_a_valuelist();
+  void add_a_valuelist(const std::string& value);
+  void add_a_valuelist(std::string&& value);
+  void add_a_valuelist(const char* value);
+  void add_a_valuelist(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_valuelist() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_valuelist();
   private:
-  const std::string& _internal_valuelist(int index) const;
-  std::string* _internal_add_valuelist();
+  const std::string& _internal_a_valuelist(int index) const;
+  std::string* _internal_add_a_valuelist();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.MultipleSelect)
@@ -846,7 +846,7 @@ class MultipleSelect final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> valuelist_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_valuelist_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -896,12 +896,12 @@ class FormEntryValue final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVCheckbox = 1,
-    kMVTextField = 2,
-    kMVFileList = 3,
-    kMVSingleSelect = 4,
-    kMVMultipleSelect = 5,
-    kMVCustomElementTuple = 6,
+    kAMVCheckbox = 1,
+    kAMVTextField = 2,
+    kAMVFileList = 3,
+    kAMVSingleSelect = 4,
+    kAMVMultipleSelect = 5,
+    kAMVCustomElementTuple = 6,
     CONTENT_NOT_SET = 0,
   };
 
@@ -974,132 +974,132 @@ class FormEntryValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVCheckboxFieldNumber = 1,
-    kMVTextFieldFieldNumber = 2,
-    kMVFileListFieldNumber = 3,
-    kMVSingleSelectFieldNumber = 4,
-    kMVMultipleSelectFieldNumber = 5,
-    kMVCustomElementTupleFieldNumber = 6,
+    kAMVCheckboxFieldNumber = 1,
+    kAMVTextFieldFieldNumber = 2,
+    kAMVFileListFieldNumber = 3,
+    kAMVSingleSelectFieldNumber = 4,
+    kAMVMultipleSelectFieldNumber = 5,
+    kAMVCustomElementTupleFieldNumber = 6,
   };
-  // .protobuf.mozilla.dom.sessionstore.Checkbox mVCheckbox = 1;
-  bool has_mvcheckbox() const;
+  // .protobuf.mozilla.dom.sessionstore.Checkbox a_mVCheckbox = 1;
+  bool has_a_mvcheckbox() const;
   private:
-  bool _internal_has_mvcheckbox() const;
+  bool _internal_has_a_mvcheckbox() const;
   public:
-  void clear_mvcheckbox();
-  const ::protobuf::mozilla::dom::sessionstore::Checkbox& mvcheckbox() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::Checkbox* release_mvcheckbox();
-  ::protobuf::mozilla::dom::sessionstore::Checkbox* mutable_mvcheckbox();
-  void set_allocated_mvcheckbox(::protobuf::mozilla::dom::sessionstore::Checkbox* mvcheckbox);
+  void clear_a_mvcheckbox();
+  const ::protobuf::mozilla::dom::sessionstore::Checkbox& a_mvcheckbox() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::Checkbox* release_a_mvcheckbox();
+  ::protobuf::mozilla::dom::sessionstore::Checkbox* mutable_a_mvcheckbox();
+  void set_allocated_a_mvcheckbox(::protobuf::mozilla::dom::sessionstore::Checkbox* a_mvcheckbox);
   private:
-  const ::protobuf::mozilla::dom::sessionstore::Checkbox& _internal_mvcheckbox() const;
-  ::protobuf::mozilla::dom::sessionstore::Checkbox* _internal_mutable_mvcheckbox();
+  const ::protobuf::mozilla::dom::sessionstore::Checkbox& _internal_a_mvcheckbox() const;
+  ::protobuf::mozilla::dom::sessionstore::Checkbox* _internal_mutable_a_mvcheckbox();
   public:
-  void unsafe_arena_set_allocated_mvcheckbox(
-      ::protobuf::mozilla::dom::sessionstore::Checkbox* mvcheckbox);
-  ::protobuf::mozilla::dom::sessionstore::Checkbox* unsafe_arena_release_mvcheckbox();
+  void unsafe_arena_set_allocated_a_mvcheckbox(
+      ::protobuf::mozilla::dom::sessionstore::Checkbox* a_mvcheckbox);
+  ::protobuf::mozilla::dom::sessionstore::Checkbox* unsafe_arena_release_a_mvcheckbox();
 
-  // .protobuf.mozilla.dom.sessionstore.TextField mVTextField = 2;
-  bool has_mvtextfield() const;
+  // .protobuf.mozilla.dom.sessionstore.TextField a_mVTextField = 2;
+  bool has_a_mvtextfield() const;
   private:
-  bool _internal_has_mvtextfield() const;
+  bool _internal_has_a_mvtextfield() const;
   public:
-  void clear_mvtextfield();
-  const ::protobuf::mozilla::dom::sessionstore::TextField& mvtextfield() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::TextField* release_mvtextfield();
-  ::protobuf::mozilla::dom::sessionstore::TextField* mutable_mvtextfield();
-  void set_allocated_mvtextfield(::protobuf::mozilla::dom::sessionstore::TextField* mvtextfield);
+  void clear_a_mvtextfield();
+  const ::protobuf::mozilla::dom::sessionstore::TextField& a_mvtextfield() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::TextField* release_a_mvtextfield();
+  ::protobuf::mozilla::dom::sessionstore::TextField* mutable_a_mvtextfield();
+  void set_allocated_a_mvtextfield(::protobuf::mozilla::dom::sessionstore::TextField* a_mvtextfield);
   private:
-  const ::protobuf::mozilla::dom::sessionstore::TextField& _internal_mvtextfield() const;
-  ::protobuf::mozilla::dom::sessionstore::TextField* _internal_mutable_mvtextfield();
+  const ::protobuf::mozilla::dom::sessionstore::TextField& _internal_a_mvtextfield() const;
+  ::protobuf::mozilla::dom::sessionstore::TextField* _internal_mutable_a_mvtextfield();
   public:
-  void unsafe_arena_set_allocated_mvtextfield(
-      ::protobuf::mozilla::dom::sessionstore::TextField* mvtextfield);
-  ::protobuf::mozilla::dom::sessionstore::TextField* unsafe_arena_release_mvtextfield();
+  void unsafe_arena_set_allocated_a_mvtextfield(
+      ::protobuf::mozilla::dom::sessionstore::TextField* a_mvtextfield);
+  ::protobuf::mozilla::dom::sessionstore::TextField* unsafe_arena_release_a_mvtextfield();
 
-  // .protobuf.mozilla.dom.sessionstore.FileList mVFileList = 3;
-  bool has_mvfilelist() const;
+  // .protobuf.mozilla.dom.sessionstore.FileList a_mVFileList = 3;
+  bool has_a_mvfilelist() const;
   private:
-  bool _internal_has_mvfilelist() const;
+  bool _internal_has_a_mvfilelist() const;
   public:
-  void clear_mvfilelist();
-  const ::protobuf::mozilla::dom::sessionstore::FileList& mvfilelist() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::FileList* release_mvfilelist();
-  ::protobuf::mozilla::dom::sessionstore::FileList* mutable_mvfilelist();
-  void set_allocated_mvfilelist(::protobuf::mozilla::dom::sessionstore::FileList* mvfilelist);
+  void clear_a_mvfilelist();
+  const ::protobuf::mozilla::dom::sessionstore::FileList& a_mvfilelist() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::FileList* release_a_mvfilelist();
+  ::protobuf::mozilla::dom::sessionstore::FileList* mutable_a_mvfilelist();
+  void set_allocated_a_mvfilelist(::protobuf::mozilla::dom::sessionstore::FileList* a_mvfilelist);
   private:
-  const ::protobuf::mozilla::dom::sessionstore::FileList& _internal_mvfilelist() const;
-  ::protobuf::mozilla::dom::sessionstore::FileList* _internal_mutable_mvfilelist();
+  const ::protobuf::mozilla::dom::sessionstore::FileList& _internal_a_mvfilelist() const;
+  ::protobuf::mozilla::dom::sessionstore::FileList* _internal_mutable_a_mvfilelist();
   public:
-  void unsafe_arena_set_allocated_mvfilelist(
-      ::protobuf::mozilla::dom::sessionstore::FileList* mvfilelist);
-  ::protobuf::mozilla::dom::sessionstore::FileList* unsafe_arena_release_mvfilelist();
+  void unsafe_arena_set_allocated_a_mvfilelist(
+      ::protobuf::mozilla::dom::sessionstore::FileList* a_mvfilelist);
+  ::protobuf::mozilla::dom::sessionstore::FileList* unsafe_arena_release_a_mvfilelist();
 
-  // .protobuf.mozilla.dom.sessionstore.SingleSelect mVSingleSelect = 4;
-  bool has_mvsingleselect() const;
+  // .protobuf.mozilla.dom.sessionstore.SingleSelect a_mVSingleSelect = 4;
+  bool has_a_mvsingleselect() const;
   private:
-  bool _internal_has_mvsingleselect() const;
+  bool _internal_has_a_mvsingleselect() const;
   public:
-  void clear_mvsingleselect();
-  const ::protobuf::mozilla::dom::sessionstore::SingleSelect& mvsingleselect() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::SingleSelect* release_mvsingleselect();
-  ::protobuf::mozilla::dom::sessionstore::SingleSelect* mutable_mvsingleselect();
-  void set_allocated_mvsingleselect(::protobuf::mozilla::dom::sessionstore::SingleSelect* mvsingleselect);
+  void clear_a_mvsingleselect();
+  const ::protobuf::mozilla::dom::sessionstore::SingleSelect& a_mvsingleselect() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::SingleSelect* release_a_mvsingleselect();
+  ::protobuf::mozilla::dom::sessionstore::SingleSelect* mutable_a_mvsingleselect();
+  void set_allocated_a_mvsingleselect(::protobuf::mozilla::dom::sessionstore::SingleSelect* a_mvsingleselect);
   private:
-  const ::protobuf::mozilla::dom::sessionstore::SingleSelect& _internal_mvsingleselect() const;
-  ::protobuf::mozilla::dom::sessionstore::SingleSelect* _internal_mutable_mvsingleselect();
+  const ::protobuf::mozilla::dom::sessionstore::SingleSelect& _internal_a_mvsingleselect() const;
+  ::protobuf::mozilla::dom::sessionstore::SingleSelect* _internal_mutable_a_mvsingleselect();
   public:
-  void unsafe_arena_set_allocated_mvsingleselect(
-      ::protobuf::mozilla::dom::sessionstore::SingleSelect* mvsingleselect);
-  ::protobuf::mozilla::dom::sessionstore::SingleSelect* unsafe_arena_release_mvsingleselect();
+  void unsafe_arena_set_allocated_a_mvsingleselect(
+      ::protobuf::mozilla::dom::sessionstore::SingleSelect* a_mvsingleselect);
+  ::protobuf::mozilla::dom::sessionstore::SingleSelect* unsafe_arena_release_a_mvsingleselect();
 
-  // .protobuf.mozilla.dom.sessionstore.MultipleSelect mVMultipleSelect = 5;
-  bool has_mvmultipleselect() const;
+  // .protobuf.mozilla.dom.sessionstore.MultipleSelect a_mVMultipleSelect = 5;
+  bool has_a_mvmultipleselect() const;
   private:
-  bool _internal_has_mvmultipleselect() const;
+  bool _internal_has_a_mvmultipleselect() const;
   public:
-  void clear_mvmultipleselect();
-  const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& mvmultipleselect() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::MultipleSelect* release_mvmultipleselect();
-  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* mutable_mvmultipleselect();
-  void set_allocated_mvmultipleselect(::protobuf::mozilla::dom::sessionstore::MultipleSelect* mvmultipleselect);
+  void clear_a_mvmultipleselect();
+  const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& a_mvmultipleselect() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::MultipleSelect* release_a_mvmultipleselect();
+  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* mutable_a_mvmultipleselect();
+  void set_allocated_a_mvmultipleselect(::protobuf::mozilla::dom::sessionstore::MultipleSelect* a_mvmultipleselect);
   private:
-  const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& _internal_mvmultipleselect() const;
-  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* _internal_mutable_mvmultipleselect();
+  const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& _internal_a_mvmultipleselect() const;
+  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* _internal_mutable_a_mvmultipleselect();
   public:
-  void unsafe_arena_set_allocated_mvmultipleselect(
-      ::protobuf::mozilla::dom::sessionstore::MultipleSelect* mvmultipleselect);
-  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* unsafe_arena_release_mvmultipleselect();
+  void unsafe_arena_set_allocated_a_mvmultipleselect(
+      ::protobuf::mozilla::dom::sessionstore::MultipleSelect* a_mvmultipleselect);
+  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* unsafe_arena_release_a_mvmultipleselect();
 
-  // .protobuf.mozilla.dom.CustomElementTuple mVCustomElementTuple = 6;
-  bool has_mvcustomelementtuple() const;
+  // .protobuf.mozilla.dom.CustomElementTuple a_mVCustomElementTuple = 6;
+  bool has_a_mvcustomelementtuple() const;
   private:
-  bool _internal_has_mvcustomelementtuple() const;
+  bool _internal_has_a_mvcustomelementtuple() const;
   public:
-  void clear_mvcustomelementtuple();
-  const ::protobuf::mozilla::dom::CustomElementTuple& mvcustomelementtuple() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::CustomElementTuple* release_mvcustomelementtuple();
-  ::protobuf::mozilla::dom::CustomElementTuple* mutable_mvcustomelementtuple();
-  void set_allocated_mvcustomelementtuple(::protobuf::mozilla::dom::CustomElementTuple* mvcustomelementtuple);
+  void clear_a_mvcustomelementtuple();
+  const ::protobuf::mozilla::dom::CustomElementTuple& a_mvcustomelementtuple() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::CustomElementTuple* release_a_mvcustomelementtuple();
+  ::protobuf::mozilla::dom::CustomElementTuple* mutable_a_mvcustomelementtuple();
+  void set_allocated_a_mvcustomelementtuple(::protobuf::mozilla::dom::CustomElementTuple* a_mvcustomelementtuple);
   private:
-  const ::protobuf::mozilla::dom::CustomElementTuple& _internal_mvcustomelementtuple() const;
-  ::protobuf::mozilla::dom::CustomElementTuple* _internal_mutable_mvcustomelementtuple();
+  const ::protobuf::mozilla::dom::CustomElementTuple& _internal_a_mvcustomelementtuple() const;
+  ::protobuf::mozilla::dom::CustomElementTuple* _internal_mutable_a_mvcustomelementtuple();
   public:
-  void unsafe_arena_set_allocated_mvcustomelementtuple(
-      ::protobuf::mozilla::dom::CustomElementTuple* mvcustomelementtuple);
-  ::protobuf::mozilla::dom::CustomElementTuple* unsafe_arena_release_mvcustomelementtuple();
+  void unsafe_arena_set_allocated_a_mvcustomelementtuple(
+      ::protobuf::mozilla::dom::CustomElementTuple* a_mvcustomelementtuple);
+  ::protobuf::mozilla::dom::CustomElementTuple* unsafe_arena_release_a_mvcustomelementtuple();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.FormEntryValue)
  private:
   class _Internal;
-  void set_has_mvcheckbox();
-  void set_has_mvtextfield();
-  void set_has_mvfilelist();
-  void set_has_mvsingleselect();
-  void set_has_mvmultipleselect();
-  void set_has_mvcustomelementtuple();
+  void set_has_a_mvcheckbox();
+  void set_has_a_mvtextfield();
+  void set_has_a_mvfilelist();
+  void set_has_a_mvsingleselect();
+  void set_has_a_mvmultipleselect();
+  void set_has_a_mvcustomelementtuple();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1111,12 +1111,12 @@ class FormEntryValue final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::sessionstore::Checkbox* mvcheckbox_;
-      ::protobuf::mozilla::dom::sessionstore::TextField* mvtextfield_;
-      ::protobuf::mozilla::dom::sessionstore::FileList* mvfilelist_;
-      ::protobuf::mozilla::dom::sessionstore::SingleSelect* mvsingleselect_;
-      ::protobuf::mozilla::dom::sessionstore::MultipleSelect* mvmultipleselect_;
-      ::protobuf::mozilla::dom::CustomElementTuple* mvcustomelementtuple_;
+      ::protobuf::mozilla::dom::sessionstore::Checkbox* a_mvcheckbox_;
+      ::protobuf::mozilla::dom::sessionstore::TextField* a_mvtextfield_;
+      ::protobuf::mozilla::dom::sessionstore::FileList* a_mvfilelist_;
+      ::protobuf::mozilla::dom::sessionstore::SingleSelect* a_mvsingleselect_;
+      ::protobuf::mozilla::dom::sessionstore::MultipleSelect* a_mvmultipleselect_;
+      ::protobuf::mozilla::dom::CustomElementTuple* a_mvcustomelementtuple_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1237,44 +1237,44 @@ class FormEntry final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kValueFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kAValueFieldNumber = 2,
   };
-  // required bytes id = 1;
-  bool has_id() const;
+  // required bytes a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
-  // required .protobuf.mozilla.dom.sessionstore.FormEntryValue value = 2;
-  bool has_value() const;
+  // required .protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& value() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::FormEntryValue* release_value();
-  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* mutable_value();
-  void set_allocated_value(::protobuf::mozilla::dom::sessionstore::FormEntryValue* value);
+  void clear_a_value();
+  const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& a_value() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::sessionstore::FormEntryValue* release_a_value();
+  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* mutable_a_value();
+  void set_allocated_a_value(::protobuf::mozilla::dom::sessionstore::FormEntryValue* a_value);
   private:
-  const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& _internal_value() const;
-  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* _internal_mutable_value();
+  const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& _internal_a_value() const;
+  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* _internal_mutable_a_value();
   public:
-  void unsafe_arena_set_allocated_value(
-      ::protobuf::mozilla::dom::sessionstore::FormEntryValue* value);
-  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_a_value(
+      ::protobuf::mozilla::dom::sessionstore::FormEntryValue* a_value);
+  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* unsafe_arena_release_a_value();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.FormEntry)
  private:
@@ -1289,8 +1289,8 @@ class FormEntry final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::protobuf::mozilla::dom::sessionstore::FormEntryValue* value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
+    ::protobuf::mozilla::dom::sessionstore::FormEntryValue* a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -1407,95 +1407,95 @@ class FormData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 2,
-    kXpathFieldNumber = 3,
-    kInnerHTMLFieldNumber = 4,
-    kUriFieldNumber = 5,
-    kHasDataFieldNumber = 1,
+    kAIdFieldNumber = 2,
+    kAXpathFieldNumber = 3,
+    kAInnerHTMLFieldNumber = 4,
+    kAUriFieldNumber = 5,
+    kAHasDataFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.sessionstore.FormEntry id = 2;
-  int id_size() const;
+  // repeated .protobuf.mozilla.dom.sessionstore.FormEntry a_id = 2;
+  int a_id_size() const;
   private:
-  int _internal_id_size() const;
+  int _internal_a_id_size() const;
   public:
-  void clear_id();
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* mutable_id(int index);
+  void clear_a_id();
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* mutable_a_id(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >*
-      mutable_id();
+      mutable_a_id();
   private:
-  const ::protobuf::mozilla::dom::sessionstore::FormEntry& _internal_id(int index) const;
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* _internal_add_id();
+  const ::protobuf::mozilla::dom::sessionstore::FormEntry& _internal_a_id(int index) const;
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* _internal_add_a_id();
   public:
-  const ::protobuf::mozilla::dom::sessionstore::FormEntry& id(int index) const;
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* add_id();
+  const ::protobuf::mozilla::dom::sessionstore::FormEntry& a_id(int index) const;
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* add_a_id();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
-      id() const;
+      a_id() const;
 
-  // repeated .protobuf.mozilla.dom.sessionstore.FormEntry xpath = 3;
-  int xpath_size() const;
+  // repeated .protobuf.mozilla.dom.sessionstore.FormEntry a_xpath = 3;
+  int a_xpath_size() const;
   private:
-  int _internal_xpath_size() const;
+  int _internal_a_xpath_size() const;
   public:
-  void clear_xpath();
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* mutable_xpath(int index);
+  void clear_a_xpath();
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* mutable_a_xpath(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >*
-      mutable_xpath();
+      mutable_a_xpath();
   private:
-  const ::protobuf::mozilla::dom::sessionstore::FormEntry& _internal_xpath(int index) const;
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* _internal_add_xpath();
+  const ::protobuf::mozilla::dom::sessionstore::FormEntry& _internal_a_xpath(int index) const;
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* _internal_add_a_xpath();
   public:
-  const ::protobuf::mozilla::dom::sessionstore::FormEntry& xpath(int index) const;
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* add_xpath();
+  const ::protobuf::mozilla::dom::sessionstore::FormEntry& a_xpath(int index) const;
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* add_a_xpath();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
-      xpath() const;
+      a_xpath() const;
 
-  // required bytes innerHTML = 4;
-  bool has_innerhtml() const;
+  // required bytes a_innerHTML = 4;
+  bool has_a_innerhtml() const;
   private:
-  bool _internal_has_innerhtml() const;
+  bool _internal_has_a_innerhtml() const;
   public:
-  void clear_innerhtml();
-  const std::string& innerhtml() const;
+  void clear_a_innerhtml();
+  const std::string& a_innerhtml() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_innerhtml(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_innerhtml();
-  PROTOBUF_NODISCARD std::string* release_innerhtml();
-  void set_allocated_innerhtml(std::string* innerhtml);
+  void set_a_innerhtml(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_innerhtml();
+  PROTOBUF_NODISCARD std::string* release_a_innerhtml();
+  void set_allocated_a_innerhtml(std::string* a_innerhtml);
   private:
-  const std::string& _internal_innerhtml() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_innerhtml(const std::string& value);
-  std::string* _internal_mutable_innerhtml();
+  const std::string& _internal_a_innerhtml() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_innerhtml(const std::string& value);
+  std::string* _internal_mutable_a_innerhtml();
   public:
 
-  // required bytes uri = 5;
-  bool has_uri() const;
+  // required bytes a_uri = 5;
+  bool has_a_uri() const;
   private:
-  bool _internal_has_uri() const;
+  bool _internal_has_a_uri() const;
   public:
-  void clear_uri();
-  const std::string& uri() const;
+  void clear_a_uri();
+  const std::string& a_uri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_uri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_uri();
-  PROTOBUF_NODISCARD std::string* release_uri();
-  void set_allocated_uri(std::string* uri);
+  void set_a_uri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_uri();
+  PROTOBUF_NODISCARD std::string* release_a_uri();
+  void set_allocated_a_uri(std::string* a_uri);
   private:
-  const std::string& _internal_uri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uri(const std::string& value);
-  std::string* _internal_mutable_uri();
+  const std::string& _internal_a_uri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_uri(const std::string& value);
+  std::string* _internal_mutable_a_uri();
   public:
 
-  // required bool hasData = 1;
-  bool has_hasdata() const;
+  // required bool a_hasData = 1;
+  bool has_a_hasdata() const;
   private:
-  bool _internal_has_hasdata() const;
+  bool _internal_has_a_hasdata() const;
   public:
-  void clear_hasdata();
-  bool hasdata() const;
-  void set_hasdata(bool value);
+  void clear_a_hasdata();
+  bool a_hasdata() const;
+  void set_a_hasdata(bool value);
   private:
-  bool _internal_hasdata() const;
-  void _internal_set_hasdata(bool value);
+  bool _internal_a_hasdata() const;
+  void _internal_set_a_hasdata(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.FormData)
@@ -1511,11 +1511,11 @@ class FormData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry > id_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry > xpath_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr innerhtml_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uri_;
-    bool hasdata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry > a_id_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry > a_xpath_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_innerhtml_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uri_;
+    bool a_hasdata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -1632,43 +1632,43 @@ class DocShellRestoreState final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kURIFieldNumber = 1,
-    kDocShellCapsFieldNumber = 2,
+    kAURIFieldNumber = 1,
+    kADocShellCapsFieldNumber = 2,
   };
-  // required bytes URI = 1;
-  bool has_uri() const;
+  // required bytes a_URI = 1;
+  bool has_a_uri() const;
   private:
-  bool _internal_has_uri() const;
+  bool _internal_has_a_uri() const;
   public:
-  void clear_uri();
-  const std::string& uri() const;
+  void clear_a_uri();
+  const std::string& a_uri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_uri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_uri();
-  PROTOBUF_NODISCARD std::string* release_uri();
-  void set_allocated_uri(std::string* uri);
+  void set_a_uri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_uri();
+  PROTOBUF_NODISCARD std::string* release_a_uri();
+  void set_allocated_a_uri(std::string* a_uri);
   private:
-  const std::string& _internal_uri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uri(const std::string& value);
-  std::string* _internal_mutable_uri();
+  const std::string& _internal_a_uri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_uri(const std::string& value);
+  std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes docShellCaps = 2;
-  bool has_docshellcaps() const;
+  // required bytes a_docShellCaps = 2;
+  bool has_a_docshellcaps() const;
   private:
-  bool _internal_has_docshellcaps() const;
+  bool _internal_has_a_docshellcaps() const;
   public:
-  void clear_docshellcaps();
-  const std::string& docshellcaps() const;
+  void clear_a_docshellcaps();
+  const std::string& a_docshellcaps() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_docshellcaps(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_docshellcaps();
-  PROTOBUF_NODISCARD std::string* release_docshellcaps();
-  void set_allocated_docshellcaps(std::string* docshellcaps);
+  void set_a_docshellcaps(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_docshellcaps();
+  PROTOBUF_NODISCARD std::string* release_a_docshellcaps();
+  void set_allocated_a_docshellcaps(std::string* a_docshellcaps);
   private:
-  const std::string& _internal_docshellcaps() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_docshellcaps(const std::string& value);
-  std::string* _internal_mutable_docshellcaps();
+  const std::string& _internal_a_docshellcaps() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_docshellcaps(const std::string& value);
+  std::string* _internal_mutable_a_docshellcaps();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.DocShellRestoreState)
@@ -1684,8 +1684,8 @@ class DocShellRestoreState final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uri_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr docshellcaps_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_docshellcaps_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -1701,801 +1701,801 @@ class DocShellRestoreState final :
 #endif  // __GNUC__
 // Checkbox
 
-// required bool value = 1;
-inline bool Checkbox::_internal_has_value() const {
+// required bool a_value = 1;
+inline bool Checkbox::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Checkbox::has_value() const {
-  return _internal_has_value();
+inline bool Checkbox::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void Checkbox::clear_value() {
-  _impl_.value_ = false;
+inline void Checkbox::clear_a_value() {
+  _impl_.a_value_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Checkbox::_internal_value() const {
-  return _impl_.value_;
+inline bool Checkbox::_internal_a_value() const {
+  return _impl_.a_value_;
 }
-inline bool Checkbox::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.Checkbox.value)
-  return _internal_value();
+inline bool Checkbox::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.Checkbox.a_value)
+  return _internal_a_value();
 }
-inline void Checkbox::_internal_set_value(bool value) {
+inline void Checkbox::_internal_set_a_value(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.value_ = value;
+  _impl_.a_value_ = value;
 }
-inline void Checkbox::set_value(bool value) {
-  _internal_set_value(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.Checkbox.value)
+inline void Checkbox::set_a_value(bool value) {
+  _internal_set_a_value(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.Checkbox.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // TextField
 
-// required bytes value = 1;
-inline bool TextField::_internal_has_value() const {
+// required bytes a_value = 1;
+inline bool TextField::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool TextField::has_value() const {
-  return _internal_has_value();
+inline bool TextField::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void TextField::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void TextField::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& TextField::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.TextField.value)
-  return _internal_value();
+inline const std::string& TextField::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.TextField.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void TextField::set_value(ArgT0&& arg0, ArgT... args) {
+void TextField::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.TextField.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.TextField.a_value)
 }
-inline std::string* TextField::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.TextField.value)
+inline std::string* TextField::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.TextField.a_value)
   return _s;
 }
-inline const std::string& TextField::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& TextField::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void TextField::_internal_set_value(const std::string& value) {
+inline void TextField::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* TextField::_internal_mutable_value() {
+inline std::string* TextField::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* TextField::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.TextField.value)
-  if (!_internal_has_value()) {
+inline std::string* TextField::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.TextField.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void TextField::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void TextField::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.TextField.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.TextField.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // FileList
 
-// repeated bytes valueList = 1;
-inline int FileList::_internal_valuelist_size() const {
-  return _impl_.valuelist_.size();
+// repeated bytes a_valueList = 1;
+inline int FileList::_internal_a_valuelist_size() const {
+  return _impl_.a_valuelist_.size();
 }
-inline int FileList::valuelist_size() const {
-  return _internal_valuelist_size();
+inline int FileList::a_valuelist_size() const {
+  return _internal_a_valuelist_size();
 }
-inline void FileList::clear_valuelist() {
-  _impl_.valuelist_.Clear();
+inline void FileList::clear_a_valuelist() {
+  _impl_.a_valuelist_.Clear();
 }
-inline std::string* FileList::add_valuelist() {
-  std::string* _s = _internal_add_valuelist();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+inline std::string* FileList::add_a_valuelist() {
+  std::string* _s = _internal_add_a_valuelist();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
   return _s;
 }
-inline const std::string& FileList::_internal_valuelist(int index) const {
-  return _impl_.valuelist_.Get(index);
+inline const std::string& FileList::_internal_a_valuelist(int index) const {
+  return _impl_.a_valuelist_.Get(index);
 }
-inline const std::string& FileList::valuelist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FileList.valueList)
-  return _internal_valuelist(index);
+inline const std::string& FileList::a_valuelist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
+  return _internal_a_valuelist(index);
 }
-inline std::string* FileList::mutable_valuelist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FileList.valueList)
-  return _impl_.valuelist_.Mutable(index);
+inline std::string* FileList::mutable_a_valuelist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
+  return _impl_.a_valuelist_.Mutable(index);
 }
-inline void FileList::set_valuelist(int index, const std::string& value) {
-  _impl_.valuelist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+inline void FileList::set_a_valuelist(int index, const std::string& value) {
+  _impl_.a_valuelist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::set_valuelist(int index, std::string&& value) {
-  _impl_.valuelist_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+inline void FileList::set_a_valuelist(int index, std::string&& value) {
+  _impl_.a_valuelist_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::set_valuelist(int index, const char* value) {
+inline void FileList::set_a_valuelist(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.valuelist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+  _impl_.a_valuelist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::set_valuelist(int index, const void* value, size_t size) {
-  _impl_.valuelist_.Mutable(index)->assign(
+inline void FileList::set_a_valuelist(int index, const void* value, size_t size) {
+  _impl_.a_valuelist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline std::string* FileList::_internal_add_valuelist() {
-  return _impl_.valuelist_.Add();
+inline std::string* FileList::_internal_add_a_valuelist() {
+  return _impl_.a_valuelist_.Add();
 }
-inline void FileList::add_valuelist(const std::string& value) {
-  _impl_.valuelist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+inline void FileList::add_a_valuelist(const std::string& value) {
+  _impl_.a_valuelist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::add_valuelist(std::string&& value) {
-  _impl_.valuelist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+inline void FileList::add_a_valuelist(std::string&& value) {
+  _impl_.a_valuelist_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::add_valuelist(const char* value) {
+inline void FileList::add_a_valuelist(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.valuelist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+  _impl_.a_valuelist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::add_valuelist(const void* value, size_t size) {
-  _impl_.valuelist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.sessionstore.FileList.valueList)
+inline void FileList::add_a_valuelist(const void* value, size_t size) {
+  _impl_.a_valuelist_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-FileList::valuelist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.FileList.valueList)
-  return _impl_.valuelist_;
+FileList::a_valuelist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
+  return _impl_.a_valuelist_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-FileList::mutable_valuelist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.FileList.valueList)
-  return &_impl_.valuelist_;
+FileList::mutable_a_valuelist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
+  return &_impl_.a_valuelist_;
 }
 
 // -------------------------------------------------------------------
 
 // SingleSelect
 
-// required uint32 index = 1;
-inline bool SingleSelect::_internal_has_index() const {
+// required uint32 a_index = 1;
+inline bool SingleSelect::_internal_has_a_index() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool SingleSelect::has_index() const {
-  return _internal_has_index();
+inline bool SingleSelect::has_a_index() const {
+  return _internal_has_a_index();
 }
-inline void SingleSelect::clear_index() {
-  _impl_.index_ = 0u;
+inline void SingleSelect::clear_a_index() {
+  _impl_.a_index_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t SingleSelect::_internal_index() const {
-  return _impl_.index_;
+inline uint32_t SingleSelect::_internal_a_index() const {
+  return _impl_.a_index_;
 }
-inline uint32_t SingleSelect::index() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.SingleSelect.index)
-  return _internal_index();
+inline uint32_t SingleSelect::a_index() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.SingleSelect.a_index)
+  return _internal_a_index();
 }
-inline void SingleSelect::_internal_set_index(uint32_t value) {
+inline void SingleSelect::_internal_set_a_index(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.index_ = value;
+  _impl_.a_index_ = value;
 }
-inline void SingleSelect::set_index(uint32_t value) {
-  _internal_set_index(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.index)
+inline void SingleSelect::set_a_index(uint32_t value) {
+  _internal_set_a_index(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_index)
 }
 
-// required bytes value = 2;
-inline bool SingleSelect::_internal_has_value() const {
+// required bytes a_value = 2;
+inline bool SingleSelect::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SingleSelect::has_value() const {
-  return _internal_has_value();
+inline bool SingleSelect::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void SingleSelect::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void SingleSelect::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& SingleSelect::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.SingleSelect.value)
-  return _internal_value();
+inline const std::string& SingleSelect::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SingleSelect::set_value(ArgT0&& arg0, ArgT... args) {
+void SingleSelect::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
 }
-inline std::string* SingleSelect::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.SingleSelect.value)
+inline std::string* SingleSelect::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
   return _s;
 }
-inline const std::string& SingleSelect::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& SingleSelect::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void SingleSelect::_internal_set_value(const std::string& value) {
+inline void SingleSelect::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SingleSelect::_internal_mutable_value() {
+inline std::string* SingleSelect::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SingleSelect::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.SingleSelect.value)
-  if (!_internal_has_value()) {
+inline std::string* SingleSelect::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SingleSelect::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void SingleSelect::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.SingleSelect.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // MultipleSelect
 
-// repeated bytes valueList = 1;
-inline int MultipleSelect::_internal_valuelist_size() const {
-  return _impl_.valuelist_.size();
+// repeated bytes a_valueList = 1;
+inline int MultipleSelect::_internal_a_valuelist_size() const {
+  return _impl_.a_valuelist_.size();
 }
-inline int MultipleSelect::valuelist_size() const {
-  return _internal_valuelist_size();
+inline int MultipleSelect::a_valuelist_size() const {
+  return _internal_a_valuelist_size();
 }
-inline void MultipleSelect::clear_valuelist() {
-  _impl_.valuelist_.Clear();
+inline void MultipleSelect::clear_a_valuelist() {
+  _impl_.a_valuelist_.Clear();
 }
-inline std::string* MultipleSelect::add_valuelist() {
-  std::string* _s = _internal_add_valuelist();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+inline std::string* MultipleSelect::add_a_valuelist() {
+  std::string* _s = _internal_add_a_valuelist();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
   return _s;
 }
-inline const std::string& MultipleSelect::_internal_valuelist(int index) const {
-  return _impl_.valuelist_.Get(index);
+inline const std::string& MultipleSelect::_internal_a_valuelist(int index) const {
+  return _impl_.a_valuelist_.Get(index);
 }
-inline const std::string& MultipleSelect::valuelist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
-  return _internal_valuelist(index);
+inline const std::string& MultipleSelect::a_valuelist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
+  return _internal_a_valuelist(index);
 }
-inline std::string* MultipleSelect::mutable_valuelist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
-  return _impl_.valuelist_.Mutable(index);
+inline std::string* MultipleSelect::mutable_a_valuelist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
+  return _impl_.a_valuelist_.Mutable(index);
 }
-inline void MultipleSelect::set_valuelist(int index, const std::string& value) {
-  _impl_.valuelist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+inline void MultipleSelect::set_a_valuelist(int index, const std::string& value) {
+  _impl_.a_valuelist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::set_valuelist(int index, std::string&& value) {
-  _impl_.valuelist_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+inline void MultipleSelect::set_a_valuelist(int index, std::string&& value) {
+  _impl_.a_valuelist_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::set_valuelist(int index, const char* value) {
+inline void MultipleSelect::set_a_valuelist(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.valuelist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+  _impl_.a_valuelist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::set_valuelist(int index, const void* value, size_t size) {
-  _impl_.valuelist_.Mutable(index)->assign(
+inline void MultipleSelect::set_a_valuelist(int index, const void* value, size_t size) {
+  _impl_.a_valuelist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline std::string* MultipleSelect::_internal_add_valuelist() {
-  return _impl_.valuelist_.Add();
+inline std::string* MultipleSelect::_internal_add_a_valuelist() {
+  return _impl_.a_valuelist_.Add();
 }
-inline void MultipleSelect::add_valuelist(const std::string& value) {
-  _impl_.valuelist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+inline void MultipleSelect::add_a_valuelist(const std::string& value) {
+  _impl_.a_valuelist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::add_valuelist(std::string&& value) {
-  _impl_.valuelist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+inline void MultipleSelect::add_a_valuelist(std::string&& value) {
+  _impl_.a_valuelist_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::add_valuelist(const char* value) {
+inline void MultipleSelect::add_a_valuelist(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.valuelist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+  _impl_.a_valuelist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::add_valuelist(const void* value, size_t size) {
-  _impl_.valuelist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
+inline void MultipleSelect::add_a_valuelist(const void* value, size_t size) {
+  _impl_.a_valuelist_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-MultipleSelect::valuelist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
-  return _impl_.valuelist_;
+MultipleSelect::a_valuelist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
+  return _impl_.a_valuelist_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-MultipleSelect::mutable_valuelist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.MultipleSelect.valueList)
-  return &_impl_.valuelist_;
+MultipleSelect::mutable_a_valuelist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
+  return &_impl_.a_valuelist_;
 }
 
 // -------------------------------------------------------------------
 
 // FormEntryValue
 
-// .protobuf.mozilla.dom.sessionstore.Checkbox mVCheckbox = 1;
-inline bool FormEntryValue::_internal_has_mvcheckbox() const {
-  return content_case() == kMVCheckbox;
+// .protobuf.mozilla.dom.sessionstore.Checkbox a_mVCheckbox = 1;
+inline bool FormEntryValue::_internal_has_a_mvcheckbox() const {
+  return content_case() == kAMVCheckbox;
 }
-inline bool FormEntryValue::has_mvcheckbox() const {
-  return _internal_has_mvcheckbox();
+inline bool FormEntryValue::has_a_mvcheckbox() const {
+  return _internal_has_a_mvcheckbox();
 }
-inline void FormEntryValue::set_has_mvcheckbox() {
-  _impl_._oneof_case_[0] = kMVCheckbox;
+inline void FormEntryValue::set_has_a_mvcheckbox() {
+  _impl_._oneof_case_[0] = kAMVCheckbox;
 }
-inline void FormEntryValue::clear_mvcheckbox() {
-  if (_internal_has_mvcheckbox()) {
+inline void FormEntryValue::clear_a_mvcheckbox() {
+  if (_internal_has_a_mvcheckbox()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcheckbox_;
+      delete _impl_.content_.a_mvcheckbox_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::release_mvcheckbox() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCheckbox)
-  if (_internal_has_mvcheckbox()) {
+inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::release_a_mvcheckbox() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCheckbox)
+  if (_internal_has_a_mvcheckbox()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::Checkbox* temp = _impl_.content_.mvcheckbox_;
+    ::protobuf::mozilla::dom::sessionstore::Checkbox* temp = _impl_.content_.a_mvcheckbox_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcheckbox_ = nullptr;
+    _impl_.content_.a_mvcheckbox_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::sessionstore::Checkbox& FormEntryValue::_internal_mvcheckbox() const {
-  return _internal_has_mvcheckbox()
-      ? *_impl_.content_.mvcheckbox_
+inline const ::protobuf::mozilla::dom::sessionstore::Checkbox& FormEntryValue::_internal_a_mvcheckbox() const {
+  return _internal_has_a_mvcheckbox()
+      ? *_impl_.content_.a_mvcheckbox_
       : reinterpret_cast< ::protobuf::mozilla::dom::sessionstore::Checkbox&>(::protobuf::mozilla::dom::sessionstore::_Checkbox_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::Checkbox& FormEntryValue::mvcheckbox() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCheckbox)
-  return _internal_mvcheckbox();
+inline const ::protobuf::mozilla::dom::sessionstore::Checkbox& FormEntryValue::a_mvcheckbox() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCheckbox)
+  return _internal_a_mvcheckbox();
 }
-inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::unsafe_arena_release_mvcheckbox() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCheckbox)
-  if (_internal_has_mvcheckbox()) {
+inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::unsafe_arena_release_a_mvcheckbox() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCheckbox)
+  if (_internal_has_a_mvcheckbox()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::Checkbox* temp = _impl_.content_.mvcheckbox_;
-    _impl_.content_.mvcheckbox_ = nullptr;
+    ::protobuf::mozilla::dom::sessionstore::Checkbox* temp = _impl_.content_.a_mvcheckbox_;
+    _impl_.content_.a_mvcheckbox_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FormEntryValue::unsafe_arena_set_allocated_mvcheckbox(::protobuf::mozilla::dom::sessionstore::Checkbox* mvcheckbox) {
+inline void FormEntryValue::unsafe_arena_set_allocated_a_mvcheckbox(::protobuf::mozilla::dom::sessionstore::Checkbox* a_mvcheckbox) {
   clear_content();
-  if (mvcheckbox) {
-    set_has_mvcheckbox();
-    _impl_.content_.mvcheckbox_ = mvcheckbox;
+  if (a_mvcheckbox) {
+    set_has_a_mvcheckbox();
+    _impl_.content_.a_mvcheckbox_ = a_mvcheckbox;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCheckbox)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCheckbox)
 }
-inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::_internal_mutable_mvcheckbox() {
-  if (!_internal_has_mvcheckbox()) {
+inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::_internal_mutable_a_mvcheckbox() {
+  if (!_internal_has_a_mvcheckbox()) {
     clear_content();
-    set_has_mvcheckbox();
-    _impl_.content_.mvcheckbox_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::Checkbox >(GetArenaForAllocation());
+    set_has_a_mvcheckbox();
+    _impl_.content_.a_mvcheckbox_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::Checkbox >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcheckbox_;
+  return _impl_.content_.a_mvcheckbox_;
 }
-inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::mutable_mvcheckbox() {
-  ::protobuf::mozilla::dom::sessionstore::Checkbox* _msg = _internal_mutable_mvcheckbox();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCheckbox)
+inline ::protobuf::mozilla::dom::sessionstore::Checkbox* FormEntryValue::mutable_a_mvcheckbox() {
+  ::protobuf::mozilla::dom::sessionstore::Checkbox* _msg = _internal_mutable_a_mvcheckbox();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCheckbox)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.sessionstore.TextField mVTextField = 2;
-inline bool FormEntryValue::_internal_has_mvtextfield() const {
-  return content_case() == kMVTextField;
+// .protobuf.mozilla.dom.sessionstore.TextField a_mVTextField = 2;
+inline bool FormEntryValue::_internal_has_a_mvtextfield() const {
+  return content_case() == kAMVTextField;
 }
-inline bool FormEntryValue::has_mvtextfield() const {
-  return _internal_has_mvtextfield();
+inline bool FormEntryValue::has_a_mvtextfield() const {
+  return _internal_has_a_mvtextfield();
 }
-inline void FormEntryValue::set_has_mvtextfield() {
-  _impl_._oneof_case_[0] = kMVTextField;
+inline void FormEntryValue::set_has_a_mvtextfield() {
+  _impl_._oneof_case_[0] = kAMVTextField;
 }
-inline void FormEntryValue::clear_mvtextfield() {
-  if (_internal_has_mvtextfield()) {
+inline void FormEntryValue::clear_a_mvtextfield() {
+  if (_internal_has_a_mvtextfield()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvtextfield_;
+      delete _impl_.content_.a_mvtextfield_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::release_mvtextfield() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVTextField)
-  if (_internal_has_mvtextfield()) {
+inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::release_a_mvtextfield() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVTextField)
+  if (_internal_has_a_mvtextfield()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::TextField* temp = _impl_.content_.mvtextfield_;
+    ::protobuf::mozilla::dom::sessionstore::TextField* temp = _impl_.content_.a_mvtextfield_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvtextfield_ = nullptr;
+    _impl_.content_.a_mvtextfield_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::sessionstore::TextField& FormEntryValue::_internal_mvtextfield() const {
-  return _internal_has_mvtextfield()
-      ? *_impl_.content_.mvtextfield_
+inline const ::protobuf::mozilla::dom::sessionstore::TextField& FormEntryValue::_internal_a_mvtextfield() const {
+  return _internal_has_a_mvtextfield()
+      ? *_impl_.content_.a_mvtextfield_
       : reinterpret_cast< ::protobuf::mozilla::dom::sessionstore::TextField&>(::protobuf::mozilla::dom::sessionstore::_TextField_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::TextField& FormEntryValue::mvtextfield() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVTextField)
-  return _internal_mvtextfield();
+inline const ::protobuf::mozilla::dom::sessionstore::TextField& FormEntryValue::a_mvtextfield() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVTextField)
+  return _internal_a_mvtextfield();
 }
-inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::unsafe_arena_release_mvtextfield() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVTextField)
-  if (_internal_has_mvtextfield()) {
+inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::unsafe_arena_release_a_mvtextfield() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVTextField)
+  if (_internal_has_a_mvtextfield()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::TextField* temp = _impl_.content_.mvtextfield_;
-    _impl_.content_.mvtextfield_ = nullptr;
+    ::protobuf::mozilla::dom::sessionstore::TextField* temp = _impl_.content_.a_mvtextfield_;
+    _impl_.content_.a_mvtextfield_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FormEntryValue::unsafe_arena_set_allocated_mvtextfield(::protobuf::mozilla::dom::sessionstore::TextField* mvtextfield) {
+inline void FormEntryValue::unsafe_arena_set_allocated_a_mvtextfield(::protobuf::mozilla::dom::sessionstore::TextField* a_mvtextfield) {
   clear_content();
-  if (mvtextfield) {
-    set_has_mvtextfield();
-    _impl_.content_.mvtextfield_ = mvtextfield;
+  if (a_mvtextfield) {
+    set_has_a_mvtextfield();
+    _impl_.content_.a_mvtextfield_ = a_mvtextfield;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVTextField)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVTextField)
 }
-inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::_internal_mutable_mvtextfield() {
-  if (!_internal_has_mvtextfield()) {
+inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::_internal_mutable_a_mvtextfield() {
+  if (!_internal_has_a_mvtextfield()) {
     clear_content();
-    set_has_mvtextfield();
-    _impl_.content_.mvtextfield_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::TextField >(GetArenaForAllocation());
+    set_has_a_mvtextfield();
+    _impl_.content_.a_mvtextfield_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::TextField >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvtextfield_;
+  return _impl_.content_.a_mvtextfield_;
 }
-inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::mutable_mvtextfield() {
-  ::protobuf::mozilla::dom::sessionstore::TextField* _msg = _internal_mutable_mvtextfield();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVTextField)
+inline ::protobuf::mozilla::dom::sessionstore::TextField* FormEntryValue::mutable_a_mvtextfield() {
+  ::protobuf::mozilla::dom::sessionstore::TextField* _msg = _internal_mutable_a_mvtextfield();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVTextField)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.sessionstore.FileList mVFileList = 3;
-inline bool FormEntryValue::_internal_has_mvfilelist() const {
-  return content_case() == kMVFileList;
+// .protobuf.mozilla.dom.sessionstore.FileList a_mVFileList = 3;
+inline bool FormEntryValue::_internal_has_a_mvfilelist() const {
+  return content_case() == kAMVFileList;
 }
-inline bool FormEntryValue::has_mvfilelist() const {
-  return _internal_has_mvfilelist();
+inline bool FormEntryValue::has_a_mvfilelist() const {
+  return _internal_has_a_mvfilelist();
 }
-inline void FormEntryValue::set_has_mvfilelist() {
-  _impl_._oneof_case_[0] = kMVFileList;
+inline void FormEntryValue::set_has_a_mvfilelist() {
+  _impl_._oneof_case_[0] = kAMVFileList;
 }
-inline void FormEntryValue::clear_mvfilelist() {
-  if (_internal_has_mvfilelist()) {
+inline void FormEntryValue::clear_a_mvfilelist() {
+  if (_internal_has_a_mvfilelist()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilelist_;
+      delete _impl_.content_.a_mvfilelist_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::release_mvfilelist() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVFileList)
-  if (_internal_has_mvfilelist()) {
+inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::release_a_mvfilelist() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVFileList)
+  if (_internal_has_a_mvfilelist()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::FileList* temp = _impl_.content_.mvfilelist_;
+    ::protobuf::mozilla::dom::sessionstore::FileList* temp = _impl_.content_.a_mvfilelist_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilelist_ = nullptr;
+    _impl_.content_.a_mvfilelist_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FileList& FormEntryValue::_internal_mvfilelist() const {
-  return _internal_has_mvfilelist()
-      ? *_impl_.content_.mvfilelist_
+inline const ::protobuf::mozilla::dom::sessionstore::FileList& FormEntryValue::_internal_a_mvfilelist() const {
+  return _internal_has_a_mvfilelist()
+      ? *_impl_.content_.a_mvfilelist_
       : reinterpret_cast< ::protobuf::mozilla::dom::sessionstore::FileList&>(::protobuf::mozilla::dom::sessionstore::_FileList_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FileList& FormEntryValue::mvfilelist() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVFileList)
-  return _internal_mvfilelist();
+inline const ::protobuf::mozilla::dom::sessionstore::FileList& FormEntryValue::a_mvfilelist() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVFileList)
+  return _internal_a_mvfilelist();
 }
-inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::unsafe_arena_release_mvfilelist() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVFileList)
-  if (_internal_has_mvfilelist()) {
+inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::unsafe_arena_release_a_mvfilelist() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVFileList)
+  if (_internal_has_a_mvfilelist()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::FileList* temp = _impl_.content_.mvfilelist_;
-    _impl_.content_.mvfilelist_ = nullptr;
+    ::protobuf::mozilla::dom::sessionstore::FileList* temp = _impl_.content_.a_mvfilelist_;
+    _impl_.content_.a_mvfilelist_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FormEntryValue::unsafe_arena_set_allocated_mvfilelist(::protobuf::mozilla::dom::sessionstore::FileList* mvfilelist) {
+inline void FormEntryValue::unsafe_arena_set_allocated_a_mvfilelist(::protobuf::mozilla::dom::sessionstore::FileList* a_mvfilelist) {
   clear_content();
-  if (mvfilelist) {
-    set_has_mvfilelist();
-    _impl_.content_.mvfilelist_ = mvfilelist;
+  if (a_mvfilelist) {
+    set_has_a_mvfilelist();
+    _impl_.content_.a_mvfilelist_ = a_mvfilelist;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVFileList)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVFileList)
 }
-inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::_internal_mutable_mvfilelist() {
-  if (!_internal_has_mvfilelist()) {
+inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::_internal_mutable_a_mvfilelist() {
+  if (!_internal_has_a_mvfilelist()) {
     clear_content();
-    set_has_mvfilelist();
-    _impl_.content_.mvfilelist_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::FileList >(GetArenaForAllocation());
+    set_has_a_mvfilelist();
+    _impl_.content_.a_mvfilelist_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::FileList >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilelist_;
+  return _impl_.content_.a_mvfilelist_;
 }
-inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::mutable_mvfilelist() {
-  ::protobuf::mozilla::dom::sessionstore::FileList* _msg = _internal_mutable_mvfilelist();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVFileList)
+inline ::protobuf::mozilla::dom::sessionstore::FileList* FormEntryValue::mutable_a_mvfilelist() {
+  ::protobuf::mozilla::dom::sessionstore::FileList* _msg = _internal_mutable_a_mvfilelist();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVFileList)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.sessionstore.SingleSelect mVSingleSelect = 4;
-inline bool FormEntryValue::_internal_has_mvsingleselect() const {
-  return content_case() == kMVSingleSelect;
+// .protobuf.mozilla.dom.sessionstore.SingleSelect a_mVSingleSelect = 4;
+inline bool FormEntryValue::_internal_has_a_mvsingleselect() const {
+  return content_case() == kAMVSingleSelect;
 }
-inline bool FormEntryValue::has_mvsingleselect() const {
-  return _internal_has_mvsingleselect();
+inline bool FormEntryValue::has_a_mvsingleselect() const {
+  return _internal_has_a_mvsingleselect();
 }
-inline void FormEntryValue::set_has_mvsingleselect() {
-  _impl_._oneof_case_[0] = kMVSingleSelect;
+inline void FormEntryValue::set_has_a_mvsingleselect() {
+  _impl_._oneof_case_[0] = kAMVSingleSelect;
 }
-inline void FormEntryValue::clear_mvsingleselect() {
-  if (_internal_has_mvsingleselect()) {
+inline void FormEntryValue::clear_a_mvsingleselect() {
+  if (_internal_has_a_mvsingleselect()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsingleselect_;
+      delete _impl_.content_.a_mvsingleselect_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::release_mvsingleselect() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVSingleSelect)
-  if (_internal_has_mvsingleselect()) {
+inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::release_a_mvsingleselect() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVSingleSelect)
+  if (_internal_has_a_mvsingleselect()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::SingleSelect* temp = _impl_.content_.mvsingleselect_;
+    ::protobuf::mozilla::dom::sessionstore::SingleSelect* temp = _impl_.content_.a_mvsingleselect_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsingleselect_ = nullptr;
+    _impl_.content_.a_mvsingleselect_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::sessionstore::SingleSelect& FormEntryValue::_internal_mvsingleselect() const {
-  return _internal_has_mvsingleselect()
-      ? *_impl_.content_.mvsingleselect_
+inline const ::protobuf::mozilla::dom::sessionstore::SingleSelect& FormEntryValue::_internal_a_mvsingleselect() const {
+  return _internal_has_a_mvsingleselect()
+      ? *_impl_.content_.a_mvsingleselect_
       : reinterpret_cast< ::protobuf::mozilla::dom::sessionstore::SingleSelect&>(::protobuf::mozilla::dom::sessionstore::_SingleSelect_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::SingleSelect& FormEntryValue::mvsingleselect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVSingleSelect)
-  return _internal_mvsingleselect();
+inline const ::protobuf::mozilla::dom::sessionstore::SingleSelect& FormEntryValue::a_mvsingleselect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVSingleSelect)
+  return _internal_a_mvsingleselect();
 }
-inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::unsafe_arena_release_mvsingleselect() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVSingleSelect)
-  if (_internal_has_mvsingleselect()) {
+inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::unsafe_arena_release_a_mvsingleselect() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVSingleSelect)
+  if (_internal_has_a_mvsingleselect()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::SingleSelect* temp = _impl_.content_.mvsingleselect_;
-    _impl_.content_.mvsingleselect_ = nullptr;
+    ::protobuf::mozilla::dom::sessionstore::SingleSelect* temp = _impl_.content_.a_mvsingleselect_;
+    _impl_.content_.a_mvsingleselect_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FormEntryValue::unsafe_arena_set_allocated_mvsingleselect(::protobuf::mozilla::dom::sessionstore::SingleSelect* mvsingleselect) {
+inline void FormEntryValue::unsafe_arena_set_allocated_a_mvsingleselect(::protobuf::mozilla::dom::sessionstore::SingleSelect* a_mvsingleselect) {
   clear_content();
-  if (mvsingleselect) {
-    set_has_mvsingleselect();
-    _impl_.content_.mvsingleselect_ = mvsingleselect;
+  if (a_mvsingleselect) {
+    set_has_a_mvsingleselect();
+    _impl_.content_.a_mvsingleselect_ = a_mvsingleselect;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVSingleSelect)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVSingleSelect)
 }
-inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::_internal_mutable_mvsingleselect() {
-  if (!_internal_has_mvsingleselect()) {
+inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::_internal_mutable_a_mvsingleselect() {
+  if (!_internal_has_a_mvsingleselect()) {
     clear_content();
-    set_has_mvsingleselect();
-    _impl_.content_.mvsingleselect_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::SingleSelect >(GetArenaForAllocation());
+    set_has_a_mvsingleselect();
+    _impl_.content_.a_mvsingleselect_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::SingleSelect >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsingleselect_;
+  return _impl_.content_.a_mvsingleselect_;
 }
-inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::mutable_mvsingleselect() {
-  ::protobuf::mozilla::dom::sessionstore::SingleSelect* _msg = _internal_mutable_mvsingleselect();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVSingleSelect)
+inline ::protobuf::mozilla::dom::sessionstore::SingleSelect* FormEntryValue::mutable_a_mvsingleselect() {
+  ::protobuf::mozilla::dom::sessionstore::SingleSelect* _msg = _internal_mutable_a_mvsingleselect();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVSingleSelect)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.sessionstore.MultipleSelect mVMultipleSelect = 5;
-inline bool FormEntryValue::_internal_has_mvmultipleselect() const {
-  return content_case() == kMVMultipleSelect;
+// .protobuf.mozilla.dom.sessionstore.MultipleSelect a_mVMultipleSelect = 5;
+inline bool FormEntryValue::_internal_has_a_mvmultipleselect() const {
+  return content_case() == kAMVMultipleSelect;
 }
-inline bool FormEntryValue::has_mvmultipleselect() const {
-  return _internal_has_mvmultipleselect();
+inline bool FormEntryValue::has_a_mvmultipleselect() const {
+  return _internal_has_a_mvmultipleselect();
 }
-inline void FormEntryValue::set_has_mvmultipleselect() {
-  _impl_._oneof_case_[0] = kMVMultipleSelect;
+inline void FormEntryValue::set_has_a_mvmultipleselect() {
+  _impl_._oneof_case_[0] = kAMVMultipleSelect;
 }
-inline void FormEntryValue::clear_mvmultipleselect() {
-  if (_internal_has_mvmultipleselect()) {
+inline void FormEntryValue::clear_a_mvmultipleselect() {
+  if (_internal_has_a_mvmultipleselect()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvmultipleselect_;
+      delete _impl_.content_.a_mvmultipleselect_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::release_mvmultipleselect() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVMultipleSelect)
-  if (_internal_has_mvmultipleselect()) {
+inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::release_a_mvmultipleselect() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVMultipleSelect)
+  if (_internal_has_a_mvmultipleselect()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::MultipleSelect* temp = _impl_.content_.mvmultipleselect_;
+    ::protobuf::mozilla::dom::sessionstore::MultipleSelect* temp = _impl_.content_.a_mvmultipleselect_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvmultipleselect_ = nullptr;
+    _impl_.content_.a_mvmultipleselect_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& FormEntryValue::_internal_mvmultipleselect() const {
-  return _internal_has_mvmultipleselect()
-      ? *_impl_.content_.mvmultipleselect_
+inline const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& FormEntryValue::_internal_a_mvmultipleselect() const {
+  return _internal_has_a_mvmultipleselect()
+      ? *_impl_.content_.a_mvmultipleselect_
       : reinterpret_cast< ::protobuf::mozilla::dom::sessionstore::MultipleSelect&>(::protobuf::mozilla::dom::sessionstore::_MultipleSelect_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& FormEntryValue::mvmultipleselect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVMultipleSelect)
-  return _internal_mvmultipleselect();
+inline const ::protobuf::mozilla::dom::sessionstore::MultipleSelect& FormEntryValue::a_mvmultipleselect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVMultipleSelect)
+  return _internal_a_mvmultipleselect();
 }
-inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::unsafe_arena_release_mvmultipleselect() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVMultipleSelect)
-  if (_internal_has_mvmultipleselect()) {
+inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::unsafe_arena_release_a_mvmultipleselect() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVMultipleSelect)
+  if (_internal_has_a_mvmultipleselect()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::sessionstore::MultipleSelect* temp = _impl_.content_.mvmultipleselect_;
-    _impl_.content_.mvmultipleselect_ = nullptr;
+    ::protobuf::mozilla::dom::sessionstore::MultipleSelect* temp = _impl_.content_.a_mvmultipleselect_;
+    _impl_.content_.a_mvmultipleselect_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FormEntryValue::unsafe_arena_set_allocated_mvmultipleselect(::protobuf::mozilla::dom::sessionstore::MultipleSelect* mvmultipleselect) {
+inline void FormEntryValue::unsafe_arena_set_allocated_a_mvmultipleselect(::protobuf::mozilla::dom::sessionstore::MultipleSelect* a_mvmultipleselect) {
   clear_content();
-  if (mvmultipleselect) {
-    set_has_mvmultipleselect();
-    _impl_.content_.mvmultipleselect_ = mvmultipleselect;
+  if (a_mvmultipleselect) {
+    set_has_a_mvmultipleselect();
+    _impl_.content_.a_mvmultipleselect_ = a_mvmultipleselect;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVMultipleSelect)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVMultipleSelect)
 }
-inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::_internal_mutable_mvmultipleselect() {
-  if (!_internal_has_mvmultipleselect()) {
+inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::_internal_mutable_a_mvmultipleselect() {
+  if (!_internal_has_a_mvmultipleselect()) {
     clear_content();
-    set_has_mvmultipleselect();
-    _impl_.content_.mvmultipleselect_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::MultipleSelect >(GetArenaForAllocation());
+    set_has_a_mvmultipleselect();
+    _impl_.content_.a_mvmultipleselect_ = CreateMaybeMessage< ::protobuf::mozilla::dom::sessionstore::MultipleSelect >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvmultipleselect_;
+  return _impl_.content_.a_mvmultipleselect_;
 }
-inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::mutable_mvmultipleselect() {
-  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* _msg = _internal_mutable_mvmultipleselect();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVMultipleSelect)
+inline ::protobuf::mozilla::dom::sessionstore::MultipleSelect* FormEntryValue::mutable_a_mvmultipleselect() {
+  ::protobuf::mozilla::dom::sessionstore::MultipleSelect* _msg = _internal_mutable_a_mvmultipleselect();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVMultipleSelect)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.CustomElementTuple mVCustomElementTuple = 6;
-inline bool FormEntryValue::_internal_has_mvcustomelementtuple() const {
-  return content_case() == kMVCustomElementTuple;
+// .protobuf.mozilla.dom.CustomElementTuple a_mVCustomElementTuple = 6;
+inline bool FormEntryValue::_internal_has_a_mvcustomelementtuple() const {
+  return content_case() == kAMVCustomElementTuple;
 }
-inline bool FormEntryValue::has_mvcustomelementtuple() const {
-  return _internal_has_mvcustomelementtuple();
+inline bool FormEntryValue::has_a_mvcustomelementtuple() const {
+  return _internal_has_a_mvcustomelementtuple();
 }
-inline void FormEntryValue::set_has_mvcustomelementtuple() {
-  _impl_._oneof_case_[0] = kMVCustomElementTuple;
+inline void FormEntryValue::set_has_a_mvcustomelementtuple() {
+  _impl_._oneof_case_[0] = kAMVCustomElementTuple;
 }
-inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::release_mvcustomelementtuple() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCustomElementTuple)
-  if (_internal_has_mvcustomelementtuple()) {
+inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::release_a_mvcustomelementtuple() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCustomElementTuple)
+  if (_internal_has_a_mvcustomelementtuple()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::CustomElementTuple* temp = _impl_.content_.mvcustomelementtuple_;
+    ::protobuf::mozilla::dom::CustomElementTuple* temp = _impl_.content_.a_mvcustomelementtuple_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcustomelementtuple_ = nullptr;
+    _impl_.content_.a_mvcustomelementtuple_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::CustomElementTuple& FormEntryValue::_internal_mvcustomelementtuple() const {
-  return _internal_has_mvcustomelementtuple()
-      ? *_impl_.content_.mvcustomelementtuple_
+inline const ::protobuf::mozilla::dom::CustomElementTuple& FormEntryValue::_internal_a_mvcustomelementtuple() const {
+  return _internal_has_a_mvcustomelementtuple()
+      ? *_impl_.content_.a_mvcustomelementtuple_
       : reinterpret_cast< ::protobuf::mozilla::dom::CustomElementTuple&>(::protobuf::mozilla::dom::_CustomElementTuple_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::CustomElementTuple& FormEntryValue::mvcustomelementtuple() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCustomElementTuple)
-  return _internal_mvcustomelementtuple();
+inline const ::protobuf::mozilla::dom::CustomElementTuple& FormEntryValue::a_mvcustomelementtuple() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCustomElementTuple)
+  return _internal_a_mvcustomelementtuple();
 }
-inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::unsafe_arena_release_mvcustomelementtuple() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCustomElementTuple)
-  if (_internal_has_mvcustomelementtuple()) {
+inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::unsafe_arena_release_a_mvcustomelementtuple() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCustomElementTuple)
+  if (_internal_has_a_mvcustomelementtuple()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::CustomElementTuple* temp = _impl_.content_.mvcustomelementtuple_;
-    _impl_.content_.mvcustomelementtuple_ = nullptr;
+    ::protobuf::mozilla::dom::CustomElementTuple* temp = _impl_.content_.a_mvcustomelementtuple_;
+    _impl_.content_.a_mvcustomelementtuple_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FormEntryValue::unsafe_arena_set_allocated_mvcustomelementtuple(::protobuf::mozilla::dom::CustomElementTuple* mvcustomelementtuple) {
+inline void FormEntryValue::unsafe_arena_set_allocated_a_mvcustomelementtuple(::protobuf::mozilla::dom::CustomElementTuple* a_mvcustomelementtuple) {
   clear_content();
-  if (mvcustomelementtuple) {
-    set_has_mvcustomelementtuple();
-    _impl_.content_.mvcustomelementtuple_ = mvcustomelementtuple;
+  if (a_mvcustomelementtuple) {
+    set_has_a_mvcustomelementtuple();
+    _impl_.content_.a_mvcustomelementtuple_ = a_mvcustomelementtuple;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCustomElementTuple)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCustomElementTuple)
 }
-inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::_internal_mutable_mvcustomelementtuple() {
-  if (!_internal_has_mvcustomelementtuple()) {
+inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::_internal_mutable_a_mvcustomelementtuple() {
+  if (!_internal_has_a_mvcustomelementtuple()) {
     clear_content();
-    set_has_mvcustomelementtuple();
-    _impl_.content_.mvcustomelementtuple_ = CreateMaybeMessage< ::protobuf::mozilla::dom::CustomElementTuple >(GetArenaForAllocation());
+    set_has_a_mvcustomelementtuple();
+    _impl_.content_.a_mvcustomelementtuple_ = CreateMaybeMessage< ::protobuf::mozilla::dom::CustomElementTuple >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcustomelementtuple_;
+  return _impl_.content_.a_mvcustomelementtuple_;
 }
-inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::mutable_mvcustomelementtuple() {
-  ::protobuf::mozilla::dom::CustomElementTuple* _msg = _internal_mutable_mvcustomelementtuple();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.mVCustomElementTuple)
+inline ::protobuf::mozilla::dom::CustomElementTuple* FormEntryValue::mutable_a_mvcustomelementtuple() {
+  ::protobuf::mozilla::dom::CustomElementTuple* _msg = _internal_mutable_a_mvcustomelementtuple();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntryValue.a_mVCustomElementTuple)
   return _msg;
 }
 
@@ -2512,113 +2512,113 @@ inline FormEntryValue::ContentCase FormEntryValue::content_case() const {
 
 // FormEntry
 
-// required bytes id = 1;
-inline bool FormEntry::_internal_has_id() const {
+// required bytes a_id = 1;
+inline bool FormEntry::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FormEntry::has_id() const {
-  return _internal_has_id();
+inline bool FormEntry::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void FormEntry::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void FormEntry::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FormEntry::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntry.id)
-  return _internal_id();
+inline const std::string& FormEntry::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FormEntry::set_id(ArgT0&& arg0, ArgT... args) {
+void FormEntry::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormEntry.id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
 }
-inline std::string* FormEntry::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntry.id)
+inline std::string* FormEntry::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
   return _s;
 }
-inline const std::string& FormEntry::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& FormEntry::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void FormEntry::_internal_set_id(const std::string& value) {
+inline void FormEntry::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FormEntry::_internal_mutable_id() {
+inline std::string* FormEntry::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FormEntry::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntry.id)
-  if (!_internal_has_id()) {
+inline std::string* FormEntry::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FormEntry::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void FormEntry::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
 }
 
-// required .protobuf.mozilla.dom.sessionstore.FormEntryValue value = 2;
-inline bool FormEntry::_internal_has_value() const {
+// required .protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
+inline bool FormEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.value_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
   return value;
 }
-inline bool FormEntry::has_value() const {
-  return _internal_has_value();
+inline bool FormEntry::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void FormEntry::clear_value() {
-  if (_impl_.value_ != nullptr) _impl_.value_->Clear();
+inline void FormEntry::clear_a_value() {
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& FormEntry::_internal_value() const {
-  const ::protobuf::mozilla::dom::sessionstore::FormEntryValue* p = _impl_.value_;
+inline const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& FormEntry::_internal_a_value() const {
+  const ::protobuf::mozilla::dom::sessionstore::FormEntryValue* p = _impl_.a_value_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::sessionstore::FormEntryValue&>(
       ::protobuf::mozilla::dom::sessionstore::_FormEntryValue_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& FormEntry::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntry.value)
-  return _internal_value();
+inline const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& FormEntry::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
+  return _internal_a_value();
 }
-inline void FormEntry::unsafe_arena_set_allocated_value(
-    ::protobuf::mozilla::dom::sessionstore::FormEntryValue* value) {
+inline void FormEntry::unsafe_arena_set_allocated_a_value(
+    ::protobuf::mozilla::dom::sessionstore::FormEntryValue* a_value) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.value_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_value_);
   }
-  _impl_.value_ = value;
-  if (value) {
+  _impl_.a_value_ = a_value;
+  if (a_value) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.value)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::release_value() {
+inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::release_a_value() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2630,432 +2630,432 @@ inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::releas
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::unsafe_arena_release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntry.value)
+inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::unsafe_arena_release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::_internal_mutable_value() {
+inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.value_ == nullptr) {
+  if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::sessionstore::FormEntryValue>(GetArenaForAllocation());
-    _impl_.value_ = p;
+    _impl_.a_value_ = p;
   }
-  return _impl_.value_;
+  return _impl_.a_value_;
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::mutable_value() {
-  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* _msg = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntry.value)
+inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::mutable_a_value() {
+  ::protobuf::mozilla::dom::sessionstore::FormEntryValue* _msg = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
   return _msg;
 }
-inline void FormEntry::set_allocated_value(::protobuf::mozilla::dom::sessionstore::FormEntryValue* value) {
+inline void FormEntry::set_allocated_a_value(::protobuf::mozilla::dom::sessionstore::FormEntryValue* a_value) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.value_;
+    delete _impl_.a_value_;
   }
-  if (value) {
+  if (a_value) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(value);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_value);
     if (message_arena != submessage_arena) {
-      value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, value, submessage_arena);
+      a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_value, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.value_ = value;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.value)
+  _impl_.a_value_ = a_value;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // FormData
 
-// required bool hasData = 1;
-inline bool FormData::_internal_has_hasdata() const {
+// required bool a_hasData = 1;
+inline bool FormData::_internal_has_a_hasdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FormData::has_hasdata() const {
-  return _internal_has_hasdata();
+inline bool FormData::has_a_hasdata() const {
+  return _internal_has_a_hasdata();
 }
-inline void FormData::clear_hasdata() {
-  _impl_.hasdata_ = false;
+inline void FormData::clear_a_hasdata() {
+  _impl_.a_hasdata_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool FormData::_internal_hasdata() const {
-  return _impl_.hasdata_;
+inline bool FormData::_internal_a_hasdata() const {
+  return _impl_.a_hasdata_;
 }
-inline bool FormData::hasdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.hasData)
-  return _internal_hasdata();
+inline bool FormData::a_hasdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_hasData)
+  return _internal_a_hasdata();
 }
-inline void FormData::_internal_set_hasdata(bool value) {
+inline void FormData::_internal_set_a_hasdata(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.hasdata_ = value;
+  _impl_.a_hasdata_ = value;
 }
-inline void FormData::set_hasdata(bool value) {
-  _internal_set_hasdata(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.hasData)
+inline void FormData::set_a_hasdata(bool value) {
+  _internal_set_a_hasdata(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_hasData)
 }
 
-// repeated .protobuf.mozilla.dom.sessionstore.FormEntry id = 2;
-inline int FormData::_internal_id_size() const {
-  return _impl_.id_.size();
+// repeated .protobuf.mozilla.dom.sessionstore.FormEntry a_id = 2;
+inline int FormData::_internal_a_id_size() const {
+  return _impl_.a_id_.size();
 }
-inline int FormData::id_size() const {
-  return _internal_id_size();
+inline int FormData::a_id_size() const {
+  return _internal_a_id_size();
 }
-inline void FormData::clear_id() {
-  _impl_.id_.Clear();
+inline void FormData::clear_a_id() {
+  _impl_.a_id_.Clear();
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::mutable_id(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.id)
-  return _impl_.id_.Mutable(index);
+inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::mutable_a_id(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.a_id)
+  return _impl_.a_id_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >*
-FormData::mutable_id() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.FormData.id)
-  return &_impl_.id_;
+FormData::mutable_a_id() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.FormData.a_id)
+  return &_impl_.a_id_;
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::_internal_id(int index) const {
-  return _impl_.id_.Get(index);
+inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::_internal_a_id(int index) const {
+  return _impl_.a_id_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::id(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.id)
-  return _internal_id(index);
+inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::a_id(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_id)
+  return _internal_a_id(index);
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::_internal_add_id() {
-  return _impl_.id_.Add();
+inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::_internal_add_a_id() {
+  return _impl_.a_id_.Add();
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::add_id() {
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* _add = _internal_add_id();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FormData.id)
+inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::add_a_id() {
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* _add = _internal_add_a_id();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FormData.a_id)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
-FormData::id() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.FormData.id)
-  return _impl_.id_;
+FormData::a_id() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.FormData.a_id)
+  return _impl_.a_id_;
 }
 
-// repeated .protobuf.mozilla.dom.sessionstore.FormEntry xpath = 3;
-inline int FormData::_internal_xpath_size() const {
-  return _impl_.xpath_.size();
+// repeated .protobuf.mozilla.dom.sessionstore.FormEntry a_xpath = 3;
+inline int FormData::_internal_a_xpath_size() const {
+  return _impl_.a_xpath_.size();
 }
-inline int FormData::xpath_size() const {
-  return _internal_xpath_size();
+inline int FormData::a_xpath_size() const {
+  return _internal_a_xpath_size();
 }
-inline void FormData::clear_xpath() {
-  _impl_.xpath_.Clear();
+inline void FormData::clear_a_xpath() {
+  _impl_.a_xpath_.Clear();
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::mutable_xpath(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.xpath)
-  return _impl_.xpath_.Mutable(index);
+inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::mutable_a_xpath(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.a_xpath)
+  return _impl_.a_xpath_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >*
-FormData::mutable_xpath() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.FormData.xpath)
-  return &_impl_.xpath_;
+FormData::mutable_a_xpath() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.sessionstore.FormData.a_xpath)
+  return &_impl_.a_xpath_;
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::_internal_xpath(int index) const {
-  return _impl_.xpath_.Get(index);
+inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::_internal_a_xpath(int index) const {
+  return _impl_.a_xpath_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::xpath(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.xpath)
-  return _internal_xpath(index);
+inline const ::protobuf::mozilla::dom::sessionstore::FormEntry& FormData::a_xpath(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_xpath)
+  return _internal_a_xpath(index);
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::_internal_add_xpath() {
-  return _impl_.xpath_.Add();
+inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::_internal_add_a_xpath() {
+  return _impl_.a_xpath_.Add();
 }
-inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::add_xpath() {
-  ::protobuf::mozilla::dom::sessionstore::FormEntry* _add = _internal_add_xpath();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FormData.xpath)
+inline ::protobuf::mozilla::dom::sessionstore::FormEntry* FormData::add_a_xpath() {
+  ::protobuf::mozilla::dom::sessionstore::FormEntry* _add = _internal_add_a_xpath();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.sessionstore.FormData.a_xpath)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
-FormData::xpath() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.FormData.xpath)
-  return _impl_.xpath_;
+FormData::a_xpath() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.sessionstore.FormData.a_xpath)
+  return _impl_.a_xpath_;
 }
 
-// required bytes innerHTML = 4;
-inline bool FormData::_internal_has_innerhtml() const {
+// required bytes a_innerHTML = 4;
+inline bool FormData::_internal_has_a_innerhtml() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FormData::has_innerhtml() const {
-  return _internal_has_innerhtml();
+inline bool FormData::has_a_innerhtml() const {
+  return _internal_has_a_innerhtml();
 }
-inline void FormData::clear_innerhtml() {
-  _impl_.innerhtml_.ClearToEmpty();
+inline void FormData::clear_a_innerhtml() {
+  _impl_.a_innerhtml_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FormData::innerhtml() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.innerHTML)
-  return _internal_innerhtml();
+inline const std::string& FormData::a_innerhtml() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
+  return _internal_a_innerhtml();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FormData::set_innerhtml(ArgT0&& arg0, ArgT... args) {
+void FormData::set_a_innerhtml(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.innerhtml_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.innerHTML)
+ _impl_.a_innerhtml_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
-inline std::string* FormData::mutable_innerhtml() {
-  std::string* _s = _internal_mutable_innerhtml();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.innerHTML)
+inline std::string* FormData::mutable_a_innerhtml() {
+  std::string* _s = _internal_mutable_a_innerhtml();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
   return _s;
 }
-inline const std::string& FormData::_internal_innerhtml() const {
-  return _impl_.innerhtml_.Get();
+inline const std::string& FormData::_internal_a_innerhtml() const {
+  return _impl_.a_innerhtml_.Get();
 }
-inline void FormData::_internal_set_innerhtml(const std::string& value) {
+inline void FormData::_internal_set_a_innerhtml(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.innerhtml_.Set(value, GetArenaForAllocation());
+  _impl_.a_innerhtml_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FormData::_internal_mutable_innerhtml() {
+inline std::string* FormData::_internal_mutable_a_innerhtml() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.innerhtml_.Mutable(GetArenaForAllocation());
+  return _impl_.a_innerhtml_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FormData::release_innerhtml() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormData.innerHTML)
-  if (!_internal_has_innerhtml()) {
+inline std::string* FormData::release_a_innerhtml() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
+  if (!_internal_has_a_innerhtml()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.innerhtml_.Release();
+  auto* p = _impl_.a_innerhtml_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.innerhtml_.IsDefault()) {
-    _impl_.innerhtml_.Set("", GetArenaForAllocation());
+  if (_impl_.a_innerhtml_.IsDefault()) {
+    _impl_.a_innerhtml_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FormData::set_allocated_innerhtml(std::string* innerhtml) {
-  if (innerhtml != nullptr) {
+inline void FormData::set_allocated_a_innerhtml(std::string* a_innerhtml) {
+  if (a_innerhtml != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.innerhtml_.SetAllocated(innerhtml, GetArenaForAllocation());
+  _impl_.a_innerhtml_.SetAllocated(a_innerhtml, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.innerhtml_.IsDefault()) {
-    _impl_.innerhtml_.Set("", GetArenaForAllocation());
+  if (_impl_.a_innerhtml_.IsDefault()) {
+    _impl_.a_innerhtml_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.innerHTML)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
 
-// required bytes uri = 5;
-inline bool FormData::_internal_has_uri() const {
+// required bytes a_uri = 5;
+inline bool FormData::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FormData::has_uri() const {
-  return _internal_has_uri();
+inline bool FormData::has_a_uri() const {
+  return _internal_has_a_uri();
 }
-inline void FormData::clear_uri() {
-  _impl_.uri_.ClearToEmpty();
+inline void FormData::clear_a_uri() {
+  _impl_.a_uri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FormData::uri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.uri)
-  return _internal_uri();
+inline const std::string& FormData::a_uri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
+  return _internal_a_uri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FormData::set_uri(ArgT0&& arg0, ArgT... args) {
+void FormData::set_a_uri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.uri)
+ _impl_.a_uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
 }
-inline std::string* FormData::mutable_uri() {
-  std::string* _s = _internal_mutable_uri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.uri)
+inline std::string* FormData::mutable_a_uri() {
+  std::string* _s = _internal_mutable_a_uri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
   return _s;
 }
-inline const std::string& FormData::_internal_uri() const {
-  return _impl_.uri_.Get();
+inline const std::string& FormData::_internal_a_uri() const {
+  return _impl_.a_uri_.Get();
 }
-inline void FormData::_internal_set_uri(const std::string& value) {
+inline void FormData::_internal_set_a_uri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.uri_.Set(value, GetArenaForAllocation());
+  _impl_.a_uri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FormData::_internal_mutable_uri() {
+inline std::string* FormData::_internal_mutable_a_uri() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.uri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_uri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FormData::release_uri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormData.uri)
-  if (!_internal_has_uri()) {
+inline std::string* FormData::release_a_uri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
+  if (!_internal_has_a_uri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.uri_.Release();
+  auto* p = _impl_.a_uri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.uri_.IsDefault()) {
-    _impl_.uri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_uri_.IsDefault()) {
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FormData::set_allocated_uri(std::string* uri) {
-  if (uri != nullptr) {
+inline void FormData::set_allocated_a_uri(std::string* a_uri) {
+  if (a_uri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.uri_.SetAllocated(uri, GetArenaForAllocation());
+  _impl_.a_uri_.SetAllocated(a_uri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.uri_.IsDefault()) {
-    _impl_.uri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_uri_.IsDefault()) {
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.uri)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
 }
 
 // -------------------------------------------------------------------
 
 // DocShellRestoreState
 
-// required bytes URI = 1;
-inline bool DocShellRestoreState::_internal_has_uri() const {
+// required bytes a_URI = 1;
+inline bool DocShellRestoreState::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool DocShellRestoreState::has_uri() const {
-  return _internal_has_uri();
+inline bool DocShellRestoreState::has_a_uri() const {
+  return _internal_has_a_uri();
 }
-inline void DocShellRestoreState::clear_uri() {
-  _impl_.uri_.ClearToEmpty();
+inline void DocShellRestoreState::clear_a_uri() {
+  _impl_.a_uri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DocShellRestoreState::uri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.URI)
-  return _internal_uri();
+inline const std::string& DocShellRestoreState::a_uri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
+  return _internal_a_uri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DocShellRestoreState::set_uri(ArgT0&& arg0, ArgT... args) {
+void DocShellRestoreState::set_a_uri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.URI)
+ _impl_.a_uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
 }
-inline std::string* DocShellRestoreState::mutable_uri() {
-  std::string* _s = _internal_mutable_uri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.URI)
+inline std::string* DocShellRestoreState::mutable_a_uri() {
+  std::string* _s = _internal_mutable_a_uri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
   return _s;
 }
-inline const std::string& DocShellRestoreState::_internal_uri() const {
-  return _impl_.uri_.Get();
+inline const std::string& DocShellRestoreState::_internal_a_uri() const {
+  return _impl_.a_uri_.Get();
 }
-inline void DocShellRestoreState::_internal_set_uri(const std::string& value) {
+inline void DocShellRestoreState::_internal_set_a_uri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.uri_.Set(value, GetArenaForAllocation());
+  _impl_.a_uri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DocShellRestoreState::_internal_mutable_uri() {
+inline std::string* DocShellRestoreState::_internal_mutable_a_uri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.uri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_uri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DocShellRestoreState::release_uri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.URI)
-  if (!_internal_has_uri()) {
+inline std::string* DocShellRestoreState::release_a_uri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
+  if (!_internal_has_a_uri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.uri_.Release();
+  auto* p = _impl_.a_uri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.uri_.IsDefault()) {
-    _impl_.uri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_uri_.IsDefault()) {
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DocShellRestoreState::set_allocated_uri(std::string* uri) {
-  if (uri != nullptr) {
+inline void DocShellRestoreState::set_allocated_a_uri(std::string* a_uri) {
+  if (a_uri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.uri_.SetAllocated(uri, GetArenaForAllocation());
+  _impl_.a_uri_.SetAllocated(a_uri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.uri_.IsDefault()) {
-    _impl_.uri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_uri_.IsDefault()) {
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.URI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
 }
 
-// required bytes docShellCaps = 2;
-inline bool DocShellRestoreState::_internal_has_docshellcaps() const {
+// required bytes a_docShellCaps = 2;
+inline bool DocShellRestoreState::_internal_has_a_docshellcaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool DocShellRestoreState::has_docshellcaps() const {
-  return _internal_has_docshellcaps();
+inline bool DocShellRestoreState::has_a_docshellcaps() const {
+  return _internal_has_a_docshellcaps();
 }
-inline void DocShellRestoreState::clear_docshellcaps() {
-  _impl_.docshellcaps_.ClearToEmpty();
+inline void DocShellRestoreState::clear_a_docshellcaps() {
+  _impl_.a_docshellcaps_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& DocShellRestoreState::docshellcaps() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.docShellCaps)
-  return _internal_docshellcaps();
+inline const std::string& DocShellRestoreState::a_docshellcaps() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
+  return _internal_a_docshellcaps();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DocShellRestoreState::set_docshellcaps(ArgT0&& arg0, ArgT... args) {
+void DocShellRestoreState::set_a_docshellcaps(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.docshellcaps_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.docShellCaps)
+ _impl_.a_docshellcaps_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
 }
-inline std::string* DocShellRestoreState::mutable_docshellcaps() {
-  std::string* _s = _internal_mutable_docshellcaps();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.docShellCaps)
+inline std::string* DocShellRestoreState::mutable_a_docshellcaps() {
+  std::string* _s = _internal_mutable_a_docshellcaps();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
   return _s;
 }
-inline const std::string& DocShellRestoreState::_internal_docshellcaps() const {
-  return _impl_.docshellcaps_.Get();
+inline const std::string& DocShellRestoreState::_internal_a_docshellcaps() const {
+  return _impl_.a_docshellcaps_.Get();
 }
-inline void DocShellRestoreState::_internal_set_docshellcaps(const std::string& value) {
+inline void DocShellRestoreState::_internal_set_a_docshellcaps(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.docshellcaps_.Set(value, GetArenaForAllocation());
+  _impl_.a_docshellcaps_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DocShellRestoreState::_internal_mutable_docshellcaps() {
+inline std::string* DocShellRestoreState::_internal_mutable_a_docshellcaps() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.docshellcaps_.Mutable(GetArenaForAllocation());
+  return _impl_.a_docshellcaps_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DocShellRestoreState::release_docshellcaps() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.docShellCaps)
-  if (!_internal_has_docshellcaps()) {
+inline std::string* DocShellRestoreState::release_a_docshellcaps() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
+  if (!_internal_has_a_docshellcaps()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.docshellcaps_.Release();
+  auto* p = _impl_.a_docshellcaps_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.docshellcaps_.IsDefault()) {
-    _impl_.docshellcaps_.Set("", GetArenaForAllocation());
+  if (_impl_.a_docshellcaps_.IsDefault()) {
+    _impl_.a_docshellcaps_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DocShellRestoreState::set_allocated_docshellcaps(std::string* docshellcaps) {
-  if (docshellcaps != nullptr) {
+inline void DocShellRestoreState::set_allocated_a_docshellcaps(std::string* a_docshellcaps) {
+  if (a_docshellcaps != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.docshellcaps_.SetAllocated(docshellcaps, GetArenaForAllocation());
+  _impl_.a_docshellcaps_.SetAllocated(a_docshellcaps, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.docshellcaps_.IsDefault()) {
-    _impl_.docshellcaps_.Set("", GetArenaForAllocation());
+  if (_impl_.a_docshellcaps_.IsDefault()) {
+    _impl_.a_docshellcaps_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.docShellCaps)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
 }
 
 #ifdef __GNUC__

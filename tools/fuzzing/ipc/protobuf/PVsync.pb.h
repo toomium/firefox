@@ -188,38 +188,38 @@ class Msg_Notify final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAVsyncFieldNumber = 1,
-    kAVsyncRateFieldNumber = 2,
+    kAAVsyncFieldNumber = 1,
+    kAAVsyncRateFieldNumber = 2,
   };
-  // required bytes aVsync = 1;
-  bool has_avsync() const;
+  // required bytes a_aVsync = 1;
+  bool has_a_avsync() const;
   private:
-  bool _internal_has_avsync() const;
+  bool _internal_has_a_avsync() const;
   public:
-  void clear_avsync();
-  const std::string& avsync() const;
+  void clear_a_avsync();
+  const std::string& a_avsync() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_avsync(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_avsync();
-  PROTOBUF_NODISCARD std::string* release_avsync();
-  void set_allocated_avsync(std::string* avsync);
+  void set_a_avsync(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_avsync();
+  PROTOBUF_NODISCARD std::string* release_a_avsync();
+  void set_allocated_a_avsync(std::string* a_avsync);
   private:
-  const std::string& _internal_avsync() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_avsync(const std::string& value);
-  std::string* _internal_mutable_avsync();
+  const std::string& _internal_a_avsync() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_avsync(const std::string& value);
+  std::string* _internal_mutable_a_avsync();
   public:
 
-  // required float aVsyncRate = 2;
-  bool has_avsyncrate() const;
+  // required float a_aVsyncRate = 2;
+  bool has_a_avsyncrate() const;
   private:
-  bool _internal_has_avsyncrate() const;
+  bool _internal_has_a_avsyncrate() const;
   public:
-  void clear_avsyncrate();
-  float avsyncrate() const;
-  void set_avsyncrate(float value);
+  void clear_a_avsyncrate();
+  float a_avsyncrate() const;
+  void set_a_avsyncrate(float value);
   private:
-  float _internal_avsyncrate() const;
-  void _internal_set_avsyncrate(float value);
+  float _internal_a_avsyncrate() const;
+  void _internal_set_a_avsyncrate(float value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PVsync.Msg_Notify)
@@ -235,8 +235,8 @@ class Msg_Notify final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr avsync_;
-    float avsyncrate_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_avsync_;
+    float a_avsyncrate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVsync_2eproto;
@@ -748,100 +748,100 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Notify
 
-// required bytes aVsync = 1;
-inline bool Msg_Notify::_internal_has_avsync() const {
+// required bytes a_aVsync = 1;
+inline bool Msg_Notify::_internal_has_a_avsync() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Notify::has_avsync() const {
-  return _internal_has_avsync();
+inline bool Msg_Notify::has_a_avsync() const {
+  return _internal_has_a_avsync();
 }
-inline void Msg_Notify::clear_avsync() {
-  _impl_.avsync_.ClearToEmpty();
+inline void Msg_Notify::clear_a_avsync() {
+  _impl_.a_avsync_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Notify::avsync() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsync)
-  return _internal_avsync();
+inline const std::string& Msg_Notify::a_avsync() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsync)
+  return _internal_a_avsync();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Notify::set_avsync(ArgT0&& arg0, ArgT... args) {
+void Msg_Notify::set_a_avsync(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.avsync_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsync)
+ _impl_.a_avsync_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsync)
 }
-inline std::string* Msg_Notify::mutable_avsync() {
-  std::string* _s = _internal_mutable_avsync();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsync)
+inline std::string* Msg_Notify::mutable_a_avsync() {
+  std::string* _s = _internal_mutable_a_avsync();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsync)
   return _s;
 }
-inline const std::string& Msg_Notify::_internal_avsync() const {
-  return _impl_.avsync_.Get();
+inline const std::string& Msg_Notify::_internal_a_avsync() const {
+  return _impl_.a_avsync_.Get();
 }
-inline void Msg_Notify::_internal_set_avsync(const std::string& value) {
+inline void Msg_Notify::_internal_set_a_avsync(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.avsync_.Set(value, GetArenaForAllocation());
+  _impl_.a_avsync_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Notify::_internal_mutable_avsync() {
+inline std::string* Msg_Notify::_internal_mutable_a_avsync() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.avsync_.Mutable(GetArenaForAllocation());
+  return _impl_.a_avsync_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Notify::release_avsync() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsync)
-  if (!_internal_has_avsync()) {
+inline std::string* Msg_Notify::release_a_avsync() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsync)
+  if (!_internal_has_a_avsync()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.avsync_.Release();
+  auto* p = _impl_.a_avsync_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.avsync_.IsDefault()) {
-    _impl_.avsync_.Set("", GetArenaForAllocation());
+  if (_impl_.a_avsync_.IsDefault()) {
+    _impl_.a_avsync_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Notify::set_allocated_avsync(std::string* avsync) {
-  if (avsync != nullptr) {
+inline void Msg_Notify::set_allocated_a_avsync(std::string* a_avsync) {
+  if (a_avsync != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.avsync_.SetAllocated(avsync, GetArenaForAllocation());
+  _impl_.a_avsync_.SetAllocated(a_avsync, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.avsync_.IsDefault()) {
-    _impl_.avsync_.Set("", GetArenaForAllocation());
+  if (_impl_.a_avsync_.IsDefault()) {
+    _impl_.a_avsync_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsync)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsync)
 }
 
-// required float aVsyncRate = 2;
-inline bool Msg_Notify::_internal_has_avsyncrate() const {
+// required float a_aVsyncRate = 2;
+inline bool Msg_Notify::_internal_has_a_avsyncrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Notify::has_avsyncrate() const {
-  return _internal_has_avsyncrate();
+inline bool Msg_Notify::has_a_avsyncrate() const {
+  return _internal_has_a_avsyncrate();
 }
-inline void Msg_Notify::clear_avsyncrate() {
-  _impl_.avsyncrate_ = 0;
+inline void Msg_Notify::clear_a_avsyncrate() {
+  _impl_.a_avsyncrate_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline float Msg_Notify::_internal_avsyncrate() const {
-  return _impl_.avsyncrate_;
+inline float Msg_Notify::_internal_a_avsyncrate() const {
+  return _impl_.a_avsyncrate_;
 }
-inline float Msg_Notify::avsyncrate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsyncRate)
-  return _internal_avsyncrate();
+inline float Msg_Notify::a_avsyncrate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsyncRate)
+  return _internal_a_avsyncrate();
 }
-inline void Msg_Notify::_internal_set_avsyncrate(float value) {
+inline void Msg_Notify::_internal_set_a_avsyncrate(float value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.avsyncrate_ = value;
+  _impl_.a_avsyncrate_ = value;
 }
-inline void Msg_Notify::set_avsyncrate(float value) {
-  _internal_set_avsyncrate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PVsync.Msg_Notify.aVsyncRate)
+inline void Msg_Notify::set_a_avsyncrate(float value) {
+  _internal_set_a_avsyncrate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PVsync.Msg_Notify.a_aVsyncRate)
 }
 
 // -------------------------------------------------------------------

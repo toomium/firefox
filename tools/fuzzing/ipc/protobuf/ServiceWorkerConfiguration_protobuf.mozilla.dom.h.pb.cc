@@ -22,7 +22,7 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR ServiceWorkerConfiguration::ServiceWorkerConfiguration(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.serviceworkerregistrations_)*/{}
+    /*decltype(_impl_.a_serviceworkerregistrations_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ServiceWorkerConfigurationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ServiceWorkerConfigurationDefaultTypeInternal()
@@ -46,8 +46,8 @@ class ServiceWorkerConfiguration::_Internal {
  public:
 };
 
-void ServiceWorkerConfiguration::clear_serviceworkerregistrations() {
-  _impl_.serviceworkerregistrations_.Clear();
+void ServiceWorkerConfiguration::clear_a_serviceworkerregistrations() {
+  _impl_.a_serviceworkerregistrations_.Clear();
 }
 ServiceWorkerConfiguration::ServiceWorkerConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -59,7 +59,7 @@ ServiceWorkerConfiguration::ServiceWorkerConfiguration(const ServiceWorkerConfig
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ServiceWorkerConfiguration* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.serviceworkerregistrations_){from._impl_.serviceworkerregistrations_}
+      decltype(_impl_.a_serviceworkerregistrations_){from._impl_.a_serviceworkerregistrations_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -71,7 +71,7 @@ inline void ServiceWorkerConfiguration::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.serviceworkerregistrations_){arena}
+      decltype(_impl_.a_serviceworkerregistrations_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -87,7 +87,7 @@ ServiceWorkerConfiguration::~ServiceWorkerConfiguration() {
 
 inline void ServiceWorkerConfiguration::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.serviceworkerregistrations_.~RepeatedPtrField();
+  _impl_.a_serviceworkerregistrations_.~RepeatedPtrField();
 }
 
 void ServiceWorkerConfiguration::SetCachedSize(int size) const {
@@ -100,7 +100,7 @@ void ServiceWorkerConfiguration::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.serviceworkerregistrations_.Clear();
+  _impl_.a_serviceworkerregistrations_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -110,13 +110,13 @@ const char* ServiceWorkerConfiguration::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData serviceWorkerRegistrations = 1;
+      // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData a_serviceWorkerRegistrations = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_serviceworkerregistrations(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_serviceworkerregistrations(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -152,10 +152,10 @@ uint8_t* ServiceWorkerConfiguration::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData serviceWorkerRegistrations = 1;
+  // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData a_serviceWorkerRegistrations = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_serviceworkerregistrations_size()); i < n; i++) {
-    const auto& repfield = this->_internal_serviceworkerregistrations(i);
+      n = static_cast<unsigned>(this->_internal_a_serviceworkerregistrations_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_serviceworkerregistrations(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -176,9 +176,9 @@ size_t ServiceWorkerConfiguration::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData serviceWorkerRegistrations = 1;
-  total_size += 1UL * this->_internal_serviceworkerregistrations_size();
-  for (const auto& msg : this->_impl_.serviceworkerregistrations_) {
+  // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData a_serviceWorkerRegistrations = 1;
+  total_size += 1UL * this->_internal_a_serviceworkerregistrations_size();
+  for (const auto& msg : this->_impl_.a_serviceworkerregistrations_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -204,7 +204,7 @@ void ServiceWorkerConfiguration::MergeFrom(const ServiceWorkerConfiguration& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.serviceworkerregistrations_.MergeFrom(from._impl_.serviceworkerregistrations_);
+  _this->_impl_.a_serviceworkerregistrations_.MergeFrom(from._impl_.a_serviceworkerregistrations_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -216,7 +216,7 @@ void ServiceWorkerConfiguration::CopyFrom(const ServiceWorkerConfiguration& from
 }
 
 bool ServiceWorkerConfiguration::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.serviceworkerregistrations_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_serviceworkerregistrations_))
     return false;
   return true;
 }
@@ -224,7 +224,7 @@ bool ServiceWorkerConfiguration::IsInitialized() const {
 void ServiceWorkerConfiguration::InternalSwap(ServiceWorkerConfiguration* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.serviceworkerregistrations_.InternalSwap(&other->_impl_.serviceworkerregistrations_);
+  _impl_.a_serviceworkerregistrations_.InternalSwap(&other->_impl_.a_serviceworkerregistrations_);
 }
 
 std::string ServiceWorkerConfiguration::GetTypeName() const {

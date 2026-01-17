@@ -25,9 +25,9 @@ PROTOBUF_CONSTEXPR Msg_WebSocketCreated::Msg_WebSocketCreated(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aprotocols_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awebsocketserialid_)*/0u} {}
+  , /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aprotocols_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awebsocketserialid_)*/0u} {}
 struct Msg_WebSocketCreatedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_WebSocketCreatedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -41,11 +41,11 @@ PROTOBUF_CONSTEXPR Msg_WebSocketOpened::Msg_WebSocketOpened(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aeffectiveuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aprotocols_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aextensions_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ahttpchannelid_)*/uint64_t{0u}
-  , /*decltype(_impl_.awebsocketserialid_)*/0u} {}
+  , /*decltype(_impl_.a_aeffectiveuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aprotocols_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aextensions_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ahttpchannelid_)*/uint64_t{0u}
+  , /*decltype(_impl_.a_awebsocketserialid_)*/0u} {}
 struct Msg_WebSocketOpenedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_WebSocketOpenedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -59,9 +59,9 @@ PROTOBUF_CONSTEXPR Msg_WebSocketMessageAvailable::Msg_WebSocketMessageAvailable(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.adata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awebsocketserialid_)*/0u
-  , /*decltype(_impl_.amessagetype_)*/0u} {}
+  , /*decltype(_impl_.a_adata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awebsocketserialid_)*/0u
+  , /*decltype(_impl_.a_amessagetype_)*/0u} {}
 struct Msg_WebSocketMessageAvailableDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_WebSocketMessageAvailableDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -75,10 +75,10 @@ PROTOBUF_CONSTEXPR Msg_WebSocketClosed::Msg_WebSocketClosed(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.areason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awebsocketserialid_)*/0u
-  , /*decltype(_impl_.awasclean_)*/false
-  , /*decltype(_impl_.acode_)*/0u} {}
+  , /*decltype(_impl_.a_areason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awebsocketserialid_)*/0u
+  , /*decltype(_impl_.a_awasclean_)*/false
+  , /*decltype(_impl_.a_acode_)*/0u} {}
 struct Msg_WebSocketClosedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_WebSocketClosedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -92,8 +92,8 @@ PROTOBUF_CONSTEXPR Msg_FrameReceived::Msg_FrameReceived(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aframedata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awebsocketserialid_)*/0u} {}
+  , /*decltype(_impl_.a_aframedata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awebsocketserialid_)*/0u} {}
 struct Msg_FrameReceivedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_FrameReceivedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -107,8 +107,8 @@ PROTOBUF_CONSTEXPR Msg_FrameSent::Msg_FrameSent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aframedata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.awebsocketserialid_)*/0u} {}
+  , /*decltype(_impl_.a_aframedata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_awebsocketserialid_)*/0u} {}
 struct Msg_FrameSentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_FrameSentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -168,13 +168,13 @@ namespace PWebSocketEventListener {
 class Msg_WebSocketCreated::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_WebSocketCreated>()._impl_._has_bits_);
-  static void set_has_awebsocketserialid(HasBits* has_bits) {
+  static void set_has_a_awebsocketserialid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_auri(HasBits* has_bits) {
+  static void set_has_a_auri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aprotocols(HasBits* has_bits) {
+  static void set_has_a_aprotocols(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -194,28 +194,28 @@ Msg_WebSocketCreated::Msg_WebSocketCreated(const Msg_WebSocketCreated& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.auri_){}
-    , decltype(_impl_.aprotocols_){}
-    , decltype(_impl_.awebsocketserialid_){}};
+    , decltype(_impl_.a_auri_){}
+    , decltype(_impl_.a_aprotocols_){}
+    , decltype(_impl_.a_awebsocketserialid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.auri_.InitDefault();
+  _impl_.a_auri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.auri_.Set("", GetArenaForAllocation());
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_auri()) {
-    _this->_impl_.auri_.Set(from._internal_auri(), 
+  if (from._internal_has_a_auri()) {
+    _this->_impl_.a_auri_.Set(from._internal_a_auri(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aprotocols_.InitDefault();
+  _impl_.a_aprotocols_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aprotocols_.Set("", GetArenaForAllocation());
+    _impl_.a_aprotocols_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aprotocols()) {
-    _this->_impl_.aprotocols_.Set(from._internal_aprotocols(), 
+  if (from._internal_has_a_aprotocols()) {
+    _this->_impl_.a_aprotocols_.Set(from._internal_a_aprotocols(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+  _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated)
 }
 
@@ -226,17 +226,17 @@ inline void Msg_WebSocketCreated::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.auri_){}
-    , decltype(_impl_.aprotocols_){}
-    , decltype(_impl_.awebsocketserialid_){0u}
+    , decltype(_impl_.a_auri_){}
+    , decltype(_impl_.a_aprotocols_){}
+    , decltype(_impl_.a_awebsocketserialid_){0u}
   };
-  _impl_.auri_.InitDefault();
+  _impl_.a_auri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.auri_.Set("", GetArenaForAllocation());
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aprotocols_.InitDefault();
+  _impl_.a_aprotocols_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aprotocols_.Set("", GetArenaForAllocation());
+    _impl_.a_aprotocols_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -251,8 +251,8 @@ Msg_WebSocketCreated::~Msg_WebSocketCreated() {
 
 inline void Msg_WebSocketCreated::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.auri_.Destroy();
-  _impl_.aprotocols_.Destroy();
+  _impl_.a_auri_.Destroy();
+  _impl_.a_aprotocols_.Destroy();
 }
 
 void Msg_WebSocketCreated::SetCachedSize(int size) const {
@@ -268,13 +268,13 @@ void Msg_WebSocketCreated::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.auri_.ClearNonDefaultToEmpty();
+      _impl_.a_auri_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aprotocols_.ClearNonDefaultToEmpty();
+      _impl_.a_aprotocols_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.awebsocketserialid_ = 0u;
+  _impl_.a_awebsocketserialid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -286,28 +286,28 @@ const char* Msg_WebSocketCreated::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 awebSocketSerialID = 1;
+      // required uint32 a_awebSocketSerialID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_awebsocketserialid(&has_bits);
-          _impl_.awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_awebsocketserialid(&has_bits);
+          _impl_.a_awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aURI = 2;
+      // required bytes a_aURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_auri();
+          auto str = _internal_mutable_a_auri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aProtocols = 3;
+      // required bytes a_aProtocols = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_aprotocols();
+          auto str = _internal_mutable_a_aprotocols();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -344,22 +344,22 @@ uint8_t* Msg_WebSocketCreated::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_awebsocketserialid(), target);
   }
 
-  // required bytes aURI = 2;
+  // required bytes a_aURI = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_auri(), target);
+        2, this->_internal_a_auri(), target);
   }
 
-  // required bytes aProtocols = 3;
+  // required bytes a_aProtocols = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_aprotocols(), target);
+        3, this->_internal_a_aprotocols(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -374,23 +374,23 @@ size_t Msg_WebSocketCreated::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketCreated)
   size_t total_size = 0;
 
-  if (_internal_has_auri()) {
-    // required bytes aURI = 2;
+  if (_internal_has_a_auri()) {
+    // required bytes a_aURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_auri());
+        this->_internal_a_auri());
   }
 
-  if (_internal_has_aprotocols()) {
-    // required bytes aProtocols = 3;
+  if (_internal_has_a_aprotocols()) {
+    // required bytes a_aProtocols = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aprotocols());
+        this->_internal_a_aprotocols());
   }
 
-  if (_internal_has_awebsocketserialid()) {
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+  if (_internal_has_a_awebsocketserialid()) {
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
   }
 
   return total_size;
@@ -400,18 +400,18 @@ size_t Msg_WebSocketCreated::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes aURI = 2;
+    // required bytes a_aURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_auri());
+        this->_internal_a_auri());
 
-    // required bytes aProtocols = 3;
+    // required bytes a_aProtocols = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aprotocols());
+        this->_internal_a_aprotocols());
 
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -444,13 +444,13 @@ void Msg_WebSocketCreated::MergeFrom(const Msg_WebSocketCreated& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_auri(from._internal_auri());
+      _this->_internal_set_a_auri(from._internal_a_auri());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aprotocols(from._internal_aprotocols());
+      _this->_internal_set_a_aprotocols(from._internal_a_aprotocols());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+      _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -476,14 +476,14 @@ void Msg_WebSocketCreated::InternalSwap(Msg_WebSocketCreated* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.auri_, lhs_arena,
-      &other->_impl_.auri_, rhs_arena
+      &_impl_.a_auri_, lhs_arena,
+      &other->_impl_.a_auri_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aprotocols_, lhs_arena,
-      &other->_impl_.aprotocols_, rhs_arena
+      &_impl_.a_aprotocols_, lhs_arena,
+      &other->_impl_.a_aprotocols_, rhs_arena
   );
-  swap(_impl_.awebsocketserialid_, other->_impl_.awebsocketserialid_);
+  swap(_impl_.a_awebsocketserialid_, other->_impl_.a_awebsocketserialid_);
 }
 
 std::string Msg_WebSocketCreated::GetTypeName() const {
@@ -496,19 +496,19 @@ std::string Msg_WebSocketCreated::GetTypeName() const {
 class Msg_WebSocketOpened::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_WebSocketOpened>()._impl_._has_bits_);
-  static void set_has_awebsocketserialid(HasBits* has_bits) {
+  static void set_has_a_awebsocketserialid(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_aeffectiveuri(HasBits* has_bits) {
+  static void set_has_a_aeffectiveuri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aprotocols(HasBits* has_bits) {
+  static void set_has_a_aprotocols(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aextensions(HasBits* has_bits) {
+  static void set_has_a_aextensions(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_ahttpchannelid(HasBits* has_bits) {
+  static void set_has_a_ahttpchannelid(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -528,40 +528,40 @@ Msg_WebSocketOpened::Msg_WebSocketOpened(const Msg_WebSocketOpened& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aeffectiveuri_){}
-    , decltype(_impl_.aprotocols_){}
-    , decltype(_impl_.aextensions_){}
-    , decltype(_impl_.ahttpchannelid_){}
-    , decltype(_impl_.awebsocketserialid_){}};
+    , decltype(_impl_.a_aeffectiveuri_){}
+    , decltype(_impl_.a_aprotocols_){}
+    , decltype(_impl_.a_aextensions_){}
+    , decltype(_impl_.a_ahttpchannelid_){}
+    , decltype(_impl_.a_awebsocketserialid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aeffectiveuri_.InitDefault();
+  _impl_.a_aeffectiveuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aeffectiveuri_.Set("", GetArenaForAllocation());
+    _impl_.a_aeffectiveuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aeffectiveuri()) {
-    _this->_impl_.aeffectiveuri_.Set(from._internal_aeffectiveuri(), 
+  if (from._internal_has_a_aeffectiveuri()) {
+    _this->_impl_.a_aeffectiveuri_.Set(from._internal_a_aeffectiveuri(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aprotocols_.InitDefault();
+  _impl_.a_aprotocols_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aprotocols_.Set("", GetArenaForAllocation());
+    _impl_.a_aprotocols_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aprotocols()) {
-    _this->_impl_.aprotocols_.Set(from._internal_aprotocols(), 
+  if (from._internal_has_a_aprotocols()) {
+    _this->_impl_.a_aprotocols_.Set(from._internal_a_aprotocols(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aextensions_.InitDefault();
+  _impl_.a_aextensions_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aextensions_.Set("", GetArenaForAllocation());
+    _impl_.a_aextensions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aextensions()) {
-    _this->_impl_.aextensions_.Set(from._internal_aextensions(), 
+  if (from._internal_has_a_aextensions()) {
+    _this->_impl_.a_aextensions_.Set(from._internal_a_aextensions(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.ahttpchannelid_, &from._impl_.ahttpchannelid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.awebsocketserialid_) -
-    reinterpret_cast<char*>(&_impl_.ahttpchannelid_)) + sizeof(_impl_.awebsocketserialid_));
+  ::memcpy(&_impl_.a_ahttpchannelid_, &from._impl_.a_ahttpchannelid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_) -
+    reinterpret_cast<char*>(&_impl_.a_ahttpchannelid_)) + sizeof(_impl_.a_awebsocketserialid_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened)
 }
 
@@ -572,23 +572,23 @@ inline void Msg_WebSocketOpened::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aeffectiveuri_){}
-    , decltype(_impl_.aprotocols_){}
-    , decltype(_impl_.aextensions_){}
-    , decltype(_impl_.ahttpchannelid_){uint64_t{0u}}
-    , decltype(_impl_.awebsocketserialid_){0u}
+    , decltype(_impl_.a_aeffectiveuri_){}
+    , decltype(_impl_.a_aprotocols_){}
+    , decltype(_impl_.a_aextensions_){}
+    , decltype(_impl_.a_ahttpchannelid_){uint64_t{0u}}
+    , decltype(_impl_.a_awebsocketserialid_){0u}
   };
-  _impl_.aeffectiveuri_.InitDefault();
+  _impl_.a_aeffectiveuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aeffectiveuri_.Set("", GetArenaForAllocation());
+    _impl_.a_aeffectiveuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aprotocols_.InitDefault();
+  _impl_.a_aprotocols_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aprotocols_.Set("", GetArenaForAllocation());
+    _impl_.a_aprotocols_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aextensions_.InitDefault();
+  _impl_.a_aextensions_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aextensions_.Set("", GetArenaForAllocation());
+    _impl_.a_aextensions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -603,9 +603,9 @@ Msg_WebSocketOpened::~Msg_WebSocketOpened() {
 
 inline void Msg_WebSocketOpened::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aeffectiveuri_.Destroy();
-  _impl_.aprotocols_.Destroy();
-  _impl_.aextensions_.Destroy();
+  _impl_.a_aeffectiveuri_.Destroy();
+  _impl_.a_aprotocols_.Destroy();
+  _impl_.a_aextensions_.Destroy();
 }
 
 void Msg_WebSocketOpened::SetCachedSize(int size) const {
@@ -621,19 +621,19 @@ void Msg_WebSocketOpened::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aeffectiveuri_.ClearNonDefaultToEmpty();
+      _impl_.a_aeffectiveuri_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aprotocols_.ClearNonDefaultToEmpty();
+      _impl_.a_aprotocols_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.aextensions_.ClearNonDefaultToEmpty();
+      _impl_.a_aextensions_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00000018u) {
-    ::memset(&_impl_.ahttpchannelid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.awebsocketserialid_) -
-        reinterpret_cast<char*>(&_impl_.ahttpchannelid_)) + sizeof(_impl_.awebsocketserialid_));
+    ::memset(&_impl_.a_ahttpchannelid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_) -
+        reinterpret_cast<char*>(&_impl_.a_ahttpchannelid_)) + sizeof(_impl_.a_awebsocketserialid_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -646,47 +646,47 @@ const char* Msg_WebSocketOpened::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 awebSocketSerialID = 1;
+      // required uint32 a_awebSocketSerialID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_awebsocketserialid(&has_bits);
-          _impl_.awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_awebsocketserialid(&has_bits);
+          _impl_.a_awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aEffectiveURI = 2;
+      // required bytes a_aEffectiveURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aeffectiveuri();
+          auto str = _internal_mutable_a_aeffectiveuri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aProtocols = 3;
+      // required bytes a_aProtocols = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_aprotocols();
+          auto str = _internal_mutable_a_aprotocols();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aExtensions = 4;
+      // required bytes a_aExtensions = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_aextensions();
+          auto str = _internal_mutable_a_aextensions();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 aHttpChannelId = 5;
+      // required uint64 a_aHttpChannelId = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_ahttpchannelid(&has_bits);
-          _impl_.ahttpchannelid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ahttpchannelid(&has_bits);
+          _impl_.a_ahttpchannelid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -722,34 +722,34 @@ uint8_t* Msg_WebSocketOpened::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_awebsocketserialid(), target);
   }
 
-  // required bytes aEffectiveURI = 2;
+  // required bytes a_aEffectiveURI = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aeffectiveuri(), target);
+        2, this->_internal_a_aeffectiveuri(), target);
   }
 
-  // required bytes aProtocols = 3;
+  // required bytes a_aProtocols = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_aprotocols(), target);
+        3, this->_internal_a_aprotocols(), target);
   }
 
-  // required bytes aExtensions = 4;
+  // required bytes a_aExtensions = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_aextensions(), target);
+        4, this->_internal_a_aextensions(), target);
   }
 
-  // required uint64 aHttpChannelId = 5;
+  // required uint64 a_aHttpChannelId = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_ahttpchannelid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_a_ahttpchannelid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -764,35 +764,35 @@ size_t Msg_WebSocketOpened::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketOpened)
   size_t total_size = 0;
 
-  if (_internal_has_aeffectiveuri()) {
-    // required bytes aEffectiveURI = 2;
+  if (_internal_has_a_aeffectiveuri()) {
+    // required bytes a_aEffectiveURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aeffectiveuri());
+        this->_internal_a_aeffectiveuri());
   }
 
-  if (_internal_has_aprotocols()) {
-    // required bytes aProtocols = 3;
+  if (_internal_has_a_aprotocols()) {
+    // required bytes a_aProtocols = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aprotocols());
+        this->_internal_a_aprotocols());
   }
 
-  if (_internal_has_aextensions()) {
-    // required bytes aExtensions = 4;
+  if (_internal_has_a_aextensions()) {
+    // required bytes a_aExtensions = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aextensions());
+        this->_internal_a_aextensions());
   }
 
-  if (_internal_has_ahttpchannelid()) {
-    // required uint64 aHttpChannelId = 5;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_ahttpchannelid());
+  if (_internal_has_a_ahttpchannelid()) {
+    // required uint64 a_aHttpChannelId = 5;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ahttpchannelid());
   }
 
-  if (_internal_has_awebsocketserialid()) {
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+  if (_internal_has_a_awebsocketserialid()) {
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
   }
 
   return total_size;
@@ -802,26 +802,26 @@ size_t Msg_WebSocketOpened::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes aEffectiveURI = 2;
+    // required bytes a_aEffectiveURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aeffectiveuri());
+        this->_internal_a_aeffectiveuri());
 
-    // required bytes aProtocols = 3;
+    // required bytes a_aProtocols = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aprotocols());
+        this->_internal_a_aprotocols());
 
-    // required bytes aExtensions = 4;
+    // required bytes a_aExtensions = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aextensions());
+        this->_internal_a_aextensions());
 
-    // required uint64 aHttpChannelId = 5;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_ahttpchannelid());
+    // required uint64 a_aHttpChannelId = 5;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_ahttpchannelid());
 
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -854,19 +854,19 @@ void Msg_WebSocketOpened::MergeFrom(const Msg_WebSocketOpened& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aeffectiveuri(from._internal_aeffectiveuri());
+      _this->_internal_set_a_aeffectiveuri(from._internal_a_aeffectiveuri());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aprotocols(from._internal_aprotocols());
+      _this->_internal_set_a_aprotocols(from._internal_a_aprotocols());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_aextensions(from._internal_aextensions());
+      _this->_internal_set_a_aextensions(from._internal_a_aextensions());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.ahttpchannelid_ = from._impl_.ahttpchannelid_;
+      _this->_impl_.a_ahttpchannelid_ = from._impl_.a_ahttpchannelid_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+      _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -892,23 +892,23 @@ void Msg_WebSocketOpened::InternalSwap(Msg_WebSocketOpened* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aeffectiveuri_, lhs_arena,
-      &other->_impl_.aeffectiveuri_, rhs_arena
+      &_impl_.a_aeffectiveuri_, lhs_arena,
+      &other->_impl_.a_aeffectiveuri_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aprotocols_, lhs_arena,
-      &other->_impl_.aprotocols_, rhs_arena
+      &_impl_.a_aprotocols_, lhs_arena,
+      &other->_impl_.a_aprotocols_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aextensions_, lhs_arena,
-      &other->_impl_.aextensions_, rhs_arena
+      &_impl_.a_aextensions_, lhs_arena,
+      &other->_impl_.a_aextensions_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_WebSocketOpened, _impl_.awebsocketserialid_)
-      + sizeof(Msg_WebSocketOpened::_impl_.awebsocketserialid_)
-      - PROTOBUF_FIELD_OFFSET(Msg_WebSocketOpened, _impl_.ahttpchannelid_)>(
-          reinterpret_cast<char*>(&_impl_.ahttpchannelid_),
-          reinterpret_cast<char*>(&other->_impl_.ahttpchannelid_));
+      PROTOBUF_FIELD_OFFSET(Msg_WebSocketOpened, _impl_.a_awebsocketserialid_)
+      + sizeof(Msg_WebSocketOpened::_impl_.a_awebsocketserialid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_WebSocketOpened, _impl_.a_ahttpchannelid_)>(
+          reinterpret_cast<char*>(&_impl_.a_ahttpchannelid_),
+          reinterpret_cast<char*>(&other->_impl_.a_ahttpchannelid_));
 }
 
 std::string Msg_WebSocketOpened::GetTypeName() const {
@@ -921,13 +921,13 @@ std::string Msg_WebSocketOpened::GetTypeName() const {
 class Msg_WebSocketMessageAvailable::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_WebSocketMessageAvailable>()._impl_._has_bits_);
-  static void set_has_awebsocketserialid(HasBits* has_bits) {
+  static void set_has_a_awebsocketserialid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_adata(HasBits* has_bits) {
+  static void set_has_a_adata(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_amessagetype(HasBits* has_bits) {
+  static void set_has_a_amessagetype(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -947,22 +947,22 @@ Msg_WebSocketMessageAvailable::Msg_WebSocketMessageAvailable(const Msg_WebSocket
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adata_){}
-    , decltype(_impl_.awebsocketserialid_){}
-    , decltype(_impl_.amessagetype_){}};
+    , decltype(_impl_.a_adata_){}
+    , decltype(_impl_.a_awebsocketserialid_){}
+    , decltype(_impl_.a_amessagetype_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.adata_.InitDefault();
+  _impl_.a_adata_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adata_.Set("", GetArenaForAllocation());
+    _impl_.a_adata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_adata()) {
-    _this->_impl_.adata_.Set(from._internal_adata(), 
+  if (from._internal_has_a_adata()) {
+    _this->_impl_.a_adata_.Set(from._internal_a_adata(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.awebsocketserialid_, &from._impl_.awebsocketserialid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.amessagetype_) -
-    reinterpret_cast<char*>(&_impl_.awebsocketserialid_)) + sizeof(_impl_.amessagetype_));
+  ::memcpy(&_impl_.a_awebsocketserialid_, &from._impl_.a_awebsocketserialid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_amessagetype_) -
+    reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_)) + sizeof(_impl_.a_amessagetype_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable)
 }
 
@@ -973,13 +973,13 @@ inline void Msg_WebSocketMessageAvailable::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adata_){}
-    , decltype(_impl_.awebsocketserialid_){0u}
-    , decltype(_impl_.amessagetype_){0u}
+    , decltype(_impl_.a_adata_){}
+    , decltype(_impl_.a_awebsocketserialid_){0u}
+    , decltype(_impl_.a_amessagetype_){0u}
   };
-  _impl_.adata_.InitDefault();
+  _impl_.a_adata_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adata_.Set("", GetArenaForAllocation());
+    _impl_.a_adata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -994,7 +994,7 @@ Msg_WebSocketMessageAvailable::~Msg_WebSocketMessageAvailable() {
 
 inline void Msg_WebSocketMessageAvailable::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.adata_.Destroy();
+  _impl_.a_adata_.Destroy();
 }
 
 void Msg_WebSocketMessageAvailable::SetCachedSize(int size) const {
@@ -1009,12 +1009,12 @@ void Msg_WebSocketMessageAvailable::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.adata_.ClearNonDefaultToEmpty();
+    _impl_.a_adata_.ClearNonDefaultToEmpty();
   }
   if (cached_has_bits & 0x00000006u) {
-    ::memset(&_impl_.awebsocketserialid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.amessagetype_) -
-        reinterpret_cast<char*>(&_impl_.awebsocketserialid_)) + sizeof(_impl_.amessagetype_));
+    ::memset(&_impl_.a_awebsocketserialid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_amessagetype_) -
+        reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_)) + sizeof(_impl_.a_amessagetype_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1027,29 +1027,29 @@ const char* Msg_WebSocketMessageAvailable::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 awebSocketSerialID = 1;
+      // required uint32 a_awebSocketSerialID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_awebsocketserialid(&has_bits);
-          _impl_.awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_awebsocketserialid(&has_bits);
+          _impl_.a_awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aData = 2;
+      // required bytes a_aData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_adata();
+          auto str = _internal_mutable_a_adata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aMessageType = 3;
+      // required uint32 a_aMessageType = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_amessagetype(&has_bits);
-          _impl_.amessagetype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_amessagetype(&has_bits);
+          _impl_.a_amessagetype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1085,22 +1085,22 @@ uint8_t* Msg_WebSocketMessageAvailable::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_awebsocketserialid(), target);
   }
 
-  // required bytes aData = 2;
+  // required bytes a_aData = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_adata(), target);
+        2, this->_internal_a_adata(), target);
   }
 
-  // required uint32 aMessageType = 3;
+  // required uint32 a_aMessageType = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_amessagetype(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_amessagetype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1115,21 +1115,21 @@ size_t Msg_WebSocketMessageAvailable::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketMessageAvailable)
   size_t total_size = 0;
 
-  if (_internal_has_adata()) {
-    // required bytes aData = 2;
+  if (_internal_has_a_adata()) {
+    // required bytes a_aData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_adata());
+        this->_internal_a_adata());
   }
 
-  if (_internal_has_awebsocketserialid()) {
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+  if (_internal_has_a_awebsocketserialid()) {
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
   }
 
-  if (_internal_has_amessagetype()) {
-    // required uint32 aMessageType = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_amessagetype());
+  if (_internal_has_a_amessagetype()) {
+    // required uint32 a_aMessageType = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_amessagetype());
   }
 
   return total_size;
@@ -1139,16 +1139,16 @@ size_t Msg_WebSocketMessageAvailable::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes aData = 2;
+    // required bytes a_aData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_adata());
+        this->_internal_a_adata());
 
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
 
-    // required uint32 aMessageType = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_amessagetype());
+    // required uint32 a_aMessageType = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_amessagetype());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1181,13 +1181,13 @@ void Msg_WebSocketMessageAvailable::MergeFrom(const Msg_WebSocketMessageAvailabl
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_adata(from._internal_adata());
+      _this->_internal_set_a_adata(from._internal_a_adata());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+      _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.amessagetype_ = from._impl_.amessagetype_;
+      _this->_impl_.a_amessagetype_ = from._impl_.a_amessagetype_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1213,15 +1213,15 @@ void Msg_WebSocketMessageAvailable::InternalSwap(Msg_WebSocketMessageAvailable* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.adata_, lhs_arena,
-      &other->_impl_.adata_, rhs_arena
+      &_impl_.a_adata_, lhs_arena,
+      &other->_impl_.a_adata_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_WebSocketMessageAvailable, _impl_.amessagetype_)
-      + sizeof(Msg_WebSocketMessageAvailable::_impl_.amessagetype_)
-      - PROTOBUF_FIELD_OFFSET(Msg_WebSocketMessageAvailable, _impl_.awebsocketserialid_)>(
-          reinterpret_cast<char*>(&_impl_.awebsocketserialid_),
-          reinterpret_cast<char*>(&other->_impl_.awebsocketserialid_));
+      PROTOBUF_FIELD_OFFSET(Msg_WebSocketMessageAvailable, _impl_.a_amessagetype_)
+      + sizeof(Msg_WebSocketMessageAvailable::_impl_.a_amessagetype_)
+      - PROTOBUF_FIELD_OFFSET(Msg_WebSocketMessageAvailable, _impl_.a_awebsocketserialid_)>(
+          reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_),
+          reinterpret_cast<char*>(&other->_impl_.a_awebsocketserialid_));
 }
 
 std::string Msg_WebSocketMessageAvailable::GetTypeName() const {
@@ -1234,16 +1234,16 @@ std::string Msg_WebSocketMessageAvailable::GetTypeName() const {
 class Msg_WebSocketClosed::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_WebSocketClosed>()._impl_._has_bits_);
-  static void set_has_awebsocketserialid(HasBits* has_bits) {
+  static void set_has_a_awebsocketserialid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_awasclean(HasBits* has_bits) {
+  static void set_has_a_awasclean(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_acode(HasBits* has_bits) {
+  static void set_has_a_acode(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_areason(HasBits* has_bits) {
+  static void set_has_a_areason(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1263,23 +1263,23 @@ Msg_WebSocketClosed::Msg_WebSocketClosed(const Msg_WebSocketClosed& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.areason_){}
-    , decltype(_impl_.awebsocketserialid_){}
-    , decltype(_impl_.awasclean_){}
-    , decltype(_impl_.acode_){}};
+    , decltype(_impl_.a_areason_){}
+    , decltype(_impl_.a_awebsocketserialid_){}
+    , decltype(_impl_.a_awasclean_){}
+    , decltype(_impl_.a_acode_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.areason_.InitDefault();
+  _impl_.a_areason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.areason_.Set("", GetArenaForAllocation());
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_areason()) {
-    _this->_impl_.areason_.Set(from._internal_areason(), 
+  if (from._internal_has_a_areason()) {
+    _this->_impl_.a_areason_.Set(from._internal_a_areason(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.awebsocketserialid_, &from._impl_.awebsocketserialid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.acode_) -
-    reinterpret_cast<char*>(&_impl_.awebsocketserialid_)) + sizeof(_impl_.acode_));
+  ::memcpy(&_impl_.a_awebsocketserialid_, &from._impl_.a_awebsocketserialid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_acode_) -
+    reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_)) + sizeof(_impl_.a_acode_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed)
 }
 
@@ -1290,14 +1290,14 @@ inline void Msg_WebSocketClosed::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.areason_){}
-    , decltype(_impl_.awebsocketserialid_){0u}
-    , decltype(_impl_.awasclean_){false}
-    , decltype(_impl_.acode_){0u}
+    , decltype(_impl_.a_areason_){}
+    , decltype(_impl_.a_awebsocketserialid_){0u}
+    , decltype(_impl_.a_awasclean_){false}
+    , decltype(_impl_.a_acode_){0u}
   };
-  _impl_.areason_.InitDefault();
+  _impl_.a_areason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.areason_.Set("", GetArenaForAllocation());
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1312,7 +1312,7 @@ Msg_WebSocketClosed::~Msg_WebSocketClosed() {
 
 inline void Msg_WebSocketClosed::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.areason_.Destroy();
+  _impl_.a_areason_.Destroy();
 }
 
 void Msg_WebSocketClosed::SetCachedSize(int size) const {
@@ -1327,12 +1327,12 @@ void Msg_WebSocketClosed::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.areason_.ClearNonDefaultToEmpty();
+    _impl_.a_areason_.ClearNonDefaultToEmpty();
   }
   if (cached_has_bits & 0x0000000eu) {
-    ::memset(&_impl_.awebsocketserialid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.acode_) -
-        reinterpret_cast<char*>(&_impl_.awebsocketserialid_)) + sizeof(_impl_.acode_));
+    ::memset(&_impl_.a_awebsocketserialid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_acode_) -
+        reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_)) + sizeof(_impl_.a_acode_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1345,37 +1345,37 @@ const char* Msg_WebSocketClosed::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 awebSocketSerialID = 1;
+      // required uint32 a_awebSocketSerialID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_awebsocketserialid(&has_bits);
-          _impl_.awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_awebsocketserialid(&has_bits);
+          _impl_.a_awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aWasClean = 2;
+      // required bool a_aWasClean = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_awasclean(&has_bits);
-          _impl_.awasclean_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_awasclean(&has_bits);
+          _impl_.a_awasclean_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aCode = 3;
+      // required uint32 a_aCode = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_acode(&has_bits);
-          _impl_.acode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_acode(&has_bits);
+          _impl_.a_acode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aReason = 4;
+      // required bytes a_aReason = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_areason();
+          auto str = _internal_mutable_a_areason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1412,28 +1412,28 @@ uint8_t* Msg_WebSocketClosed::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 awebSocketSerialID = 1;
+  // required uint32 a_awebSocketSerialID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_awebsocketserialid(), target);
   }
 
-  // required bool aWasClean = 2;
+  // required bool a_aWasClean = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_awasclean(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_awasclean(), target);
   }
 
-  // required uint32 aCode = 3;
+  // required uint32 a_aCode = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_acode(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_acode(), target);
   }
 
-  // required bytes aReason = 4;
+  // required bytes a_aReason = 4;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_areason(), target);
+        4, this->_internal_a_areason(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1448,26 +1448,26 @@ size_t Msg_WebSocketClosed::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PWebSocketEventListener.Msg_WebSocketClosed)
   size_t total_size = 0;
 
-  if (_internal_has_areason()) {
-    // required bytes aReason = 4;
+  if (_internal_has_a_areason()) {
+    // required bytes a_aReason = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_areason());
+        this->_internal_a_areason());
   }
 
-  if (_internal_has_awebsocketserialid()) {
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+  if (_internal_has_a_awebsocketserialid()) {
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
   }
 
-  if (_internal_has_awasclean()) {
-    // required bool aWasClean = 2;
+  if (_internal_has_a_awasclean()) {
+    // required bool a_aWasClean = 2;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_acode()) {
-    // required uint32 aCode = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_acode());
+  if (_internal_has_a_acode()) {
+    // required uint32 a_aCode = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acode());
   }
 
   return total_size;
@@ -1477,19 +1477,19 @@ size_t Msg_WebSocketClosed::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes aReason = 4;
+    // required bytes a_aReason = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_areason());
+        this->_internal_a_areason());
 
-    // required uint32 awebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+    // required uint32 a_awebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
 
-    // required bool aWasClean = 2;
+    // required bool a_aWasClean = 2;
     total_size += 1 + 1;
 
-    // required uint32 aCode = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_acode());
+    // required uint32 a_aCode = 3;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acode());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1522,16 +1522,16 @@ void Msg_WebSocketClosed::MergeFrom(const Msg_WebSocketClosed& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_areason(from._internal_areason());
+      _this->_internal_set_a_areason(from._internal_a_areason());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+      _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.awasclean_ = from._impl_.awasclean_;
+      _this->_impl_.a_awasclean_ = from._impl_.a_awasclean_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.acode_ = from._impl_.acode_;
+      _this->_impl_.a_acode_ = from._impl_.a_acode_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1557,15 +1557,15 @@ void Msg_WebSocketClosed::InternalSwap(Msg_WebSocketClosed* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.areason_, lhs_arena,
-      &other->_impl_.areason_, rhs_arena
+      &_impl_.a_areason_, lhs_arena,
+      &other->_impl_.a_areason_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_WebSocketClosed, _impl_.acode_)
-      + sizeof(Msg_WebSocketClosed::_impl_.acode_)
-      - PROTOBUF_FIELD_OFFSET(Msg_WebSocketClosed, _impl_.awebsocketserialid_)>(
-          reinterpret_cast<char*>(&_impl_.awebsocketserialid_),
-          reinterpret_cast<char*>(&other->_impl_.awebsocketserialid_));
+      PROTOBUF_FIELD_OFFSET(Msg_WebSocketClosed, _impl_.a_acode_)
+      + sizeof(Msg_WebSocketClosed::_impl_.a_acode_)
+      - PROTOBUF_FIELD_OFFSET(Msg_WebSocketClosed, _impl_.a_awebsocketserialid_)>(
+          reinterpret_cast<char*>(&_impl_.a_awebsocketserialid_),
+          reinterpret_cast<char*>(&other->_impl_.a_awebsocketserialid_));
 }
 
 std::string Msg_WebSocketClosed::GetTypeName() const {
@@ -1578,10 +1578,10 @@ std::string Msg_WebSocketClosed::GetTypeName() const {
 class Msg_FrameReceived::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_FrameReceived>()._impl_._has_bits_);
-  static void set_has_awebsocketserialid(HasBits* has_bits) {
+  static void set_has_a_awebsocketserialid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aframedata(HasBits* has_bits) {
+  static void set_has_a_aframedata(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1601,19 +1601,19 @@ Msg_FrameReceived::Msg_FrameReceived(const Msg_FrameReceived& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aframedata_){}
-    , decltype(_impl_.awebsocketserialid_){}};
+    , decltype(_impl_.a_aframedata_){}
+    , decltype(_impl_.a_awebsocketserialid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aframedata_.InitDefault();
+  _impl_.a_aframedata_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aframedata_.Set("", GetArenaForAllocation());
+    _impl_.a_aframedata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aframedata()) {
-    _this->_impl_.aframedata_.Set(from._internal_aframedata(), 
+  if (from._internal_has_a_aframedata()) {
+    _this->_impl_.a_aframedata_.Set(from._internal_a_aframedata(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+  _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameReceived)
 }
 
@@ -1624,12 +1624,12 @@ inline void Msg_FrameReceived::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aframedata_){}
-    , decltype(_impl_.awebsocketserialid_){0u}
+    , decltype(_impl_.a_aframedata_){}
+    , decltype(_impl_.a_awebsocketserialid_){0u}
   };
-  _impl_.aframedata_.InitDefault();
+  _impl_.a_aframedata_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aframedata_.Set("", GetArenaForAllocation());
+    _impl_.a_aframedata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1644,7 +1644,7 @@ Msg_FrameReceived::~Msg_FrameReceived() {
 
 inline void Msg_FrameReceived::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aframedata_.Destroy();
+  _impl_.a_aframedata_.Destroy();
 }
 
 void Msg_FrameReceived::SetCachedSize(int size) const {
@@ -1659,9 +1659,9 @@ void Msg_FrameReceived::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aframedata_.ClearNonDefaultToEmpty();
+    _impl_.a_aframedata_.ClearNonDefaultToEmpty();
   }
-  _impl_.awebsocketserialid_ = 0u;
+  _impl_.a_awebsocketserialid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1673,19 +1673,19 @@ const char* Msg_FrameReceived::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aWebSocketSerialID = 1;
+      // required uint32 a_aWebSocketSerialID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_awebsocketserialid(&has_bits);
-          _impl_.awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_awebsocketserialid(&has_bits);
+          _impl_.a_awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aFrameData = 2;
+      // required bytes a_aFrameData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aframedata();
+          auto str = _internal_mutable_a_aframedata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1722,16 +1722,16 @@ uint8_t* Msg_FrameReceived::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aWebSocketSerialID = 1;
+  // required uint32 a_aWebSocketSerialID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_awebsocketserialid(), target);
   }
 
-  // required bytes aFrameData = 2;
+  // required bytes a_aFrameData = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aframedata(), target);
+        2, this->_internal_a_aframedata(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1746,16 +1746,16 @@ size_t Msg_FrameReceived::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameReceived)
   size_t total_size = 0;
 
-  if (_internal_has_aframedata()) {
-    // required bytes aFrameData = 2;
+  if (_internal_has_a_aframedata()) {
+    // required bytes a_aFrameData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aframedata());
+        this->_internal_a_aframedata());
   }
 
-  if (_internal_has_awebsocketserialid()) {
-    // required uint32 aWebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+  if (_internal_has_a_awebsocketserialid()) {
+    // required uint32 a_aWebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
   }
 
   return total_size;
@@ -1765,13 +1765,13 @@ size_t Msg_FrameReceived::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aFrameData = 2;
+    // required bytes a_aFrameData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aframedata());
+        this->_internal_a_aframedata());
 
-    // required uint32 aWebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+    // required uint32 a_aWebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1804,10 +1804,10 @@ void Msg_FrameReceived::MergeFrom(const Msg_FrameReceived& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aframedata(from._internal_aframedata());
+      _this->_internal_set_a_aframedata(from._internal_a_aframedata());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+      _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1833,10 +1833,10 @@ void Msg_FrameReceived::InternalSwap(Msg_FrameReceived* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aframedata_, lhs_arena,
-      &other->_impl_.aframedata_, rhs_arena
+      &_impl_.a_aframedata_, lhs_arena,
+      &other->_impl_.a_aframedata_, rhs_arena
   );
-  swap(_impl_.awebsocketserialid_, other->_impl_.awebsocketserialid_);
+  swap(_impl_.a_awebsocketserialid_, other->_impl_.a_awebsocketserialid_);
 }
 
 std::string Msg_FrameReceived::GetTypeName() const {
@@ -1849,10 +1849,10 @@ std::string Msg_FrameReceived::GetTypeName() const {
 class Msg_FrameSent::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_FrameSent>()._impl_._has_bits_);
-  static void set_has_awebsocketserialid(HasBits* has_bits) {
+  static void set_has_a_awebsocketserialid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aframedata(HasBits* has_bits) {
+  static void set_has_a_aframedata(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1872,19 +1872,19 @@ Msg_FrameSent::Msg_FrameSent(const Msg_FrameSent& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aframedata_){}
-    , decltype(_impl_.awebsocketserialid_){}};
+    , decltype(_impl_.a_aframedata_){}
+    , decltype(_impl_.a_awebsocketserialid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aframedata_.InitDefault();
+  _impl_.a_aframedata_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aframedata_.Set("", GetArenaForAllocation());
+    _impl_.a_aframedata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aframedata()) {
-    _this->_impl_.aframedata_.Set(from._internal_aframedata(), 
+  if (from._internal_has_a_aframedata()) {
+    _this->_impl_.a_aframedata_.Set(from._internal_a_aframedata(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+  _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameSent)
 }
 
@@ -1895,12 +1895,12 @@ inline void Msg_FrameSent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aframedata_){}
-    , decltype(_impl_.awebsocketserialid_){0u}
+    , decltype(_impl_.a_aframedata_){}
+    , decltype(_impl_.a_awebsocketserialid_){0u}
   };
-  _impl_.aframedata_.InitDefault();
+  _impl_.a_aframedata_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aframedata_.Set("", GetArenaForAllocation());
+    _impl_.a_aframedata_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1915,7 +1915,7 @@ Msg_FrameSent::~Msg_FrameSent() {
 
 inline void Msg_FrameSent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aframedata_.Destroy();
+  _impl_.a_aframedata_.Destroy();
 }
 
 void Msg_FrameSent::SetCachedSize(int size) const {
@@ -1930,9 +1930,9 @@ void Msg_FrameSent::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aframedata_.ClearNonDefaultToEmpty();
+    _impl_.a_aframedata_.ClearNonDefaultToEmpty();
   }
-  _impl_.awebsocketserialid_ = 0u;
+  _impl_.a_awebsocketserialid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1944,19 +1944,19 @@ const char* Msg_FrameSent::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aWebSocketSerialID = 1;
+      // required uint32 a_aWebSocketSerialID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_awebsocketserialid(&has_bits);
-          _impl_.awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_awebsocketserialid(&has_bits);
+          _impl_.a_awebsocketserialid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aFrameData = 2;
+      // required bytes a_aFrameData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aframedata();
+          auto str = _internal_mutable_a_aframedata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1993,16 +1993,16 @@ uint8_t* Msg_FrameSent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aWebSocketSerialID = 1;
+  // required uint32 a_aWebSocketSerialID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_awebsocketserialid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_awebsocketserialid(), target);
   }
 
-  // required bytes aFrameData = 2;
+  // required bytes a_aFrameData = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aframedata(), target);
+        2, this->_internal_a_aframedata(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2017,16 +2017,16 @@ size_t Msg_FrameSent::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PWebSocketEventListener.Msg_FrameSent)
   size_t total_size = 0;
 
-  if (_internal_has_aframedata()) {
-    // required bytes aFrameData = 2;
+  if (_internal_has_a_aframedata()) {
+    // required bytes a_aFrameData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aframedata());
+        this->_internal_a_aframedata());
   }
 
-  if (_internal_has_awebsocketserialid()) {
-    // required uint32 aWebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+  if (_internal_has_a_awebsocketserialid()) {
+    // required uint32 a_aWebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
   }
 
   return total_size;
@@ -2036,13 +2036,13 @@ size_t Msg_FrameSent::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aFrameData = 2;
+    // required bytes a_aFrameData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aframedata());
+        this->_internal_a_aframedata());
 
-    // required uint32 aWebSocketSerialID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_awebsocketserialid());
+    // required uint32 a_aWebSocketSerialID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_awebsocketserialid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2075,10 +2075,10 @@ void Msg_FrameSent::MergeFrom(const Msg_FrameSent& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aframedata(from._internal_aframedata());
+      _this->_internal_set_a_aframedata(from._internal_a_aframedata());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.awebsocketserialid_ = from._impl_.awebsocketserialid_;
+      _this->_impl_.a_awebsocketserialid_ = from._impl_.a_awebsocketserialid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2104,10 +2104,10 @@ void Msg_FrameSent::InternalSwap(Msg_FrameSent* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aframedata_, lhs_arena,
-      &other->_impl_.aframedata_, rhs_arena
+      &_impl_.a_aframedata_, lhs_arena,
+      &other->_impl_.a_aframedata_, rhs_arena
   );
-  swap(_impl_.awebsocketserialid_, other->_impl_.awebsocketserialid_);
+  swap(_impl_.a_awebsocketserialid_, other->_impl_.a_awebsocketserialid_);
 }
 
 std::string Msg_FrameSent::GetTypeName() const {

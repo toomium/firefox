@@ -180,19 +180,19 @@ class Msg_RecordRead final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABytesReadFieldNumber = 1,
+    kAABytesReadFieldNumber = 1,
   };
-  // required uint32 aBytesRead = 1;
-  bool has_abytesread() const;
+  // required uint32 a_aBytesRead = 1;
+  bool has_a_abytesread() const;
   private:
-  bool _internal_has_abytesread() const;
+  bool _internal_has_a_abytesread() const;
   public:
-  void clear_abytesread();
-  uint32_t abytesread() const;
-  void set_abytesread(uint32_t value);
+  void clear_a_abytesread();
+  uint32_t a_abytesread() const;
+  void set_a_abytesread(uint32_t value);
   private:
-  uint32_t _internal_abytesread() const;
-  void _internal_set_abytesread(uint32_t value);
+  uint32_t _internal_a_abytesread() const;
+  void _internal_set_a_abytesread(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead)
@@ -205,7 +205,7 @@ class Msg_RecordRead final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t abytesread_;
+    uint32_t a_abytesread_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PInputChannelThrottleQueue_2eproto;
@@ -469,32 +469,32 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_RecordRead
 
-// required uint32 aBytesRead = 1;
-inline bool Msg_RecordRead::_internal_has_abytesread() const {
+// required uint32 a_aBytesRead = 1;
+inline bool Msg_RecordRead::_internal_has_a_abytesread() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RecordRead::has_abytesread() const {
-  return _internal_has_abytesread();
+inline bool Msg_RecordRead::has_a_abytesread() const {
+  return _internal_has_a_abytesread();
 }
-inline void Msg_RecordRead::clear_abytesread() {
-  _impl_.abytesread_ = 0u;
+inline void Msg_RecordRead::clear_a_abytesread() {
+  _impl_.a_abytesread_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_RecordRead::_internal_abytesread() const {
-  return _impl_.abytesread_;
+inline uint32_t Msg_RecordRead::_internal_a_abytesread() const {
+  return _impl_.a_abytesread_;
 }
-inline uint32_t Msg_RecordRead::abytesread() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead.aBytesRead)
-  return _internal_abytesread();
+inline uint32_t Msg_RecordRead::a_abytesread() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead.a_aBytesRead)
+  return _internal_a_abytesread();
 }
-inline void Msg_RecordRead::_internal_set_abytesread(uint32_t value) {
+inline void Msg_RecordRead::_internal_set_a_abytesread(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.abytesread_ = value;
+  _impl_.a_abytesread_ = value;
 }
-inline void Msg_RecordRead::set_abytesread(uint32_t value) {
-  _internal_set_abytesread(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead.aBytesRead)
+inline void Msg_RecordRead::set_a_abytesread(uint32_t value) {
+  _internal_set_a_abytesread(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PInputChannelThrottleQueue.Msg_RecordRead.a_aBytesRead)
 }
 
 // -------------------------------------------------------------------

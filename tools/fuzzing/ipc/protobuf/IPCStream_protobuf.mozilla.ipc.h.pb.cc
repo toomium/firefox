@@ -24,7 +24,7 @@ PROTOBUF_CONSTEXPR IPCStream::IPCStream(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.stream_)*/nullptr} {}
+  , /*decltype(_impl_.a_stream_)*/nullptr} {}
 struct IPCStreamDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCStreamDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -46,8 +46,8 @@ namespace ipc {
 class IPCStream::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCStream>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::ipc::InputStreamParams& stream(const IPCStream* msg);
-  static void set_has_stream(HasBits* has_bits) {
+  static const ::protobuf::mozilla::ipc::InputStreamParams& a_stream(const IPCStream* msg);
+  static void set_has_a_stream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -56,11 +56,11 @@ class IPCStream::_Internal {
 };
 
 const ::protobuf::mozilla::ipc::InputStreamParams&
-IPCStream::_Internal::stream(const IPCStream* msg) {
-  return *msg->_impl_.stream_;
+IPCStream::_Internal::a_stream(const IPCStream* msg) {
+  return *msg->_impl_.a_stream_;
 }
-void IPCStream::clear_stream() {
-  if (_impl_.stream_ != nullptr) _impl_.stream_->Clear();
+void IPCStream::clear_a_stream() {
+  if (_impl_.a_stream_ != nullptr) _impl_.a_stream_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 IPCStream::IPCStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -75,11 +75,11 @@ IPCStream::IPCStream(const IPCStream& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.stream_){nullptr}};
+    , decltype(_impl_.a_stream_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_stream()) {
-    _this->_impl_.stream_ = new ::protobuf::mozilla::ipc::InputStreamParams(*from._impl_.stream_);
+  if (from._internal_has_a_stream()) {
+    _this->_impl_.a_stream_ = new ::protobuf::mozilla::ipc::InputStreamParams(*from._impl_.a_stream_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.ipc.IPCStream)
 }
@@ -91,7 +91,7 @@ inline void IPCStream::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.stream_){nullptr}
+    , decltype(_impl_.a_stream_){nullptr}
   };
 }
 
@@ -106,7 +106,7 @@ IPCStream::~IPCStream() {
 
 inline void IPCStream::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.stream_;
+  if (this != internal_default_instance()) delete _impl_.a_stream_;
 }
 
 void IPCStream::SetCachedSize(int size) const {
@@ -121,8 +121,8 @@ void IPCStream::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.stream_ != nullptr);
-    _impl_.stream_->Clear();
+    GOOGLE_DCHECK(_impl_.a_stream_ != nullptr);
+    _impl_.a_stream_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -135,10 +135,10 @@ const char* IPCStream::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
+      // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_stream(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_stream(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -174,11 +174,11 @@ uint8_t* IPCStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::stream(this),
-        _Internal::stream(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_stream(this),
+        _Internal::a_stream(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -193,11 +193,11 @@ size_t IPCStream::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.IPCStream)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-  if (_internal_has_stream()) {
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  if (_internal_has_a_stream()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.stream_);
+        *_impl_.a_stream_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -224,9 +224,9 @@ void IPCStream::MergeFrom(const IPCStream& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_stream()) {
-    _this->_internal_mutable_stream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
-        from._internal_stream());
+  if (from._internal_has_a_stream()) {
+    _this->_internal_mutable_a_stream()->::protobuf::mozilla::ipc::InputStreamParams::MergeFrom(
+        from._internal_a_stream());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -240,8 +240,8 @@ void IPCStream::CopyFrom(const IPCStream& from) {
 
 bool IPCStream::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_stream()) {
-    if (!_impl_.stream_->IsInitialized()) return false;
+  if (_internal_has_a_stream()) {
+    if (!_impl_.a_stream_->IsInitialized()) return false;
   }
   return true;
 }
@@ -250,7 +250,7 @@ void IPCStream::InternalSwap(IPCStream* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.stream_, other->_impl_.stream_);
+  swap(_impl_.a_stream_, other->_impl_.a_stream_);
 }
 
 std::string IPCStream::GetTypeName() const {

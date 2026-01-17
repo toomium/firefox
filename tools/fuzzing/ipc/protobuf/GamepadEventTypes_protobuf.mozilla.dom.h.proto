@@ -12,64 +12,64 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message GamepadAdded {
-  required bytes id = 1;
-  required bytes mapping = 2;
-  required bytes hand = 3;
-  required uint32 display_id = 4;
-  required uint32 num_buttons = 5;
-  required uint32 num_axes = 6;
-  required uint32 num_haptics = 7;
-  required uint32 num_lights = 8;
-  required uint32 num_touches = 9;
+  required bytes a_id = 1;
+  required bytes a_mapping = 2;
+  required bytes a_hand = 3;
+  required uint32 a_display_id = 4;
+  required uint32 a_num_buttons = 5;
+  required uint32 a_num_axes = 6;
+  required uint32 a_num_haptics = 7;
+  required uint32 a_num_lights = 8;
+  required uint32 a_num_touches = 9;
 }
 
 message GamepadRemoved {
 }
 
 message GamepadAxisInformation {
-  required uint32 axis = 1;
-  required double value = 2;
+  required uint32 a_axis = 1;
+  required double a_value = 2;
 }
 
 message GamepadButtonInformation {
-  required uint32 button = 1;
-  required double value = 2;
-  required bool pressed = 3;
-  required bool touched = 4;
+  required uint32 a_button = 1;
+  required double a_value = 2;
+  required bool a_pressed = 3;
+  required bool a_touched = 4;
 }
 
 message GamepadPoseInformation {
-  required bytes pose_state = 1;
+  required bytes a_pose_state = 1;
 }
 
 message GamepadLightIndicatorTypeInformation {
-  required uint32 light = 1;
-  required bytes type = 2;
+  required uint32 a_light = 1;
+  required bytes a_type = 2;
 }
 
 message GamepadHandInformation {
-  required bytes hand = 1;
+  required bytes a_hand = 1;
 }
 
 message GamepadTouchInformation {
-  required uint32 index = 1;
-  required bytes touch_state = 2;
+  required uint32 a_index = 1;
+  required bytes a_touch_state = 2;
 }
 
 message GamepadChangeEventBody {
   oneof content {
-    protobuf.mozilla.dom.GamepadAdded mVGamepadAdded = 1;
-    protobuf.mozilla.dom.GamepadRemoved mVGamepadRemoved = 2;
-    protobuf.mozilla.dom.GamepadAxisInformation mVGamepadAxisInformation = 3;
-    protobuf.mozilla.dom.GamepadButtonInformation mVGamepadButtonInformation = 4;
-    protobuf.mozilla.dom.GamepadHandInformation mVGamepadHandInformation = 5;
-    protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation mVGamepadLightIndicatorTypeInformation = 6;
-    protobuf.mozilla.dom.GamepadPoseInformation mVGamepadPoseInformation = 7;
-    protobuf.mozilla.dom.GamepadTouchInformation mVGamepadTouchInformation = 8;
+    protobuf.mozilla.dom.GamepadAdded a_mVGamepadAdded = 1;
+    protobuf.mozilla.dom.GamepadRemoved a_mVGamepadRemoved = 2;
+    protobuf.mozilla.dom.GamepadAxisInformation a_mVGamepadAxisInformation = 3;
+    protobuf.mozilla.dom.GamepadButtonInformation a_mVGamepadButtonInformation = 4;
+    protobuf.mozilla.dom.GamepadHandInformation a_mVGamepadHandInformation = 5;
+    protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation a_mVGamepadLightIndicatorTypeInformation = 6;
+    protobuf.mozilla.dom.GamepadPoseInformation a_mVGamepadPoseInformation = 7;
+    protobuf.mozilla.dom.GamepadTouchInformation a_mVGamepadTouchInformation = 8;
   }
 }
 
 message GamepadChangeEvent {
-  required bytes handle = 1;
-  required protobuf.mozilla.dom.GamepadChangeEventBody body = 2;
+  required bytes a_handle = 1;
+  required protobuf.mozilla.dom.GamepadChangeEventBody a_body = 2;
 }

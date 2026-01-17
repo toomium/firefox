@@ -177,38 +177,38 @@ class PopupIPCTabContext final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOpenerFieldNumber = 1,
-    kChromeOuterWindowIDFieldNumber = 2,
+    kAOpenerFieldNumber = 1,
+    kAChromeOuterWindowIDFieldNumber = 2,
   };
-  // required bytes opener = 1;
-  bool has_opener() const;
+  // required bytes a_opener = 1;
+  bool has_a_opener() const;
   private:
-  bool _internal_has_opener() const;
+  bool _internal_has_a_opener() const;
   public:
-  void clear_opener();
-  const std::string& opener() const;
+  void clear_a_opener();
+  const std::string& a_opener() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_opener(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_opener();
-  PROTOBUF_NODISCARD std::string* release_opener();
-  void set_allocated_opener(std::string* opener);
+  void set_a_opener(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_opener();
+  PROTOBUF_NODISCARD std::string* release_a_opener();
+  void set_allocated_a_opener(std::string* a_opener);
   private:
-  const std::string& _internal_opener() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_opener(const std::string& value);
-  std::string* _internal_mutable_opener();
+  const std::string& _internal_a_opener() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_opener(const std::string& value);
+  std::string* _internal_mutable_a_opener();
   public:
 
-  // required uint64 chromeOuterWindowID = 2;
-  bool has_chromeouterwindowid() const;
+  // required uint64 a_chromeOuterWindowID = 2;
+  bool has_a_chromeouterwindowid() const;
   private:
-  bool _internal_has_chromeouterwindowid() const;
+  bool _internal_has_a_chromeouterwindowid() const;
   public:
-  void clear_chromeouterwindowid();
-  uint64_t chromeouterwindowid() const;
-  void set_chromeouterwindowid(uint64_t value);
+  void clear_a_chromeouterwindowid();
+  uint64_t a_chromeouterwindowid() const;
+  void set_a_chromeouterwindowid(uint64_t value);
   private:
-  uint64_t _internal_chromeouterwindowid() const;
-  void _internal_set_chromeouterwindowid(uint64_t value);
+  uint64_t _internal_a_chromeouterwindowid() const;
+  void _internal_set_a_chromeouterwindowid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PopupIPCTabContext)
@@ -224,8 +224,8 @@ class PopupIPCTabContext final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr opener_;
-    uint64_t chromeouterwindowid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_opener_;
+    uint64_t a_chromeouterwindowid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -342,33 +342,33 @@ class FrameIPCTabContext final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChromeOuterWindowIDFieldNumber = 1,
-    kMaxTouchPointsFieldNumber = 2,
+    kAChromeOuterWindowIDFieldNumber = 1,
+    kAMaxTouchPointsFieldNumber = 2,
   };
-  // required uint64 chromeOuterWindowID = 1;
-  bool has_chromeouterwindowid() const;
+  // required uint64 a_chromeOuterWindowID = 1;
+  bool has_a_chromeouterwindowid() const;
   private:
-  bool _internal_has_chromeouterwindowid() const;
+  bool _internal_has_a_chromeouterwindowid() const;
   public:
-  void clear_chromeouterwindowid();
-  uint64_t chromeouterwindowid() const;
-  void set_chromeouterwindowid(uint64_t value);
+  void clear_a_chromeouterwindowid();
+  uint64_t a_chromeouterwindowid() const;
+  void set_a_chromeouterwindowid(uint64_t value);
   private:
-  uint64_t _internal_chromeouterwindowid() const;
-  void _internal_set_chromeouterwindowid(uint64_t value);
+  uint64_t _internal_a_chromeouterwindowid() const;
+  void _internal_set_a_chromeouterwindowid(uint64_t value);
   public:
 
-  // required uint32 maxTouchPoints = 2;
-  bool has_maxtouchpoints() const;
+  // required uint32 a_maxTouchPoints = 2;
+  bool has_a_maxtouchpoints() const;
   private:
-  bool _internal_has_maxtouchpoints() const;
+  bool _internal_has_a_maxtouchpoints() const;
   public:
-  void clear_maxtouchpoints();
-  uint32_t maxtouchpoints() const;
-  void set_maxtouchpoints(uint32_t value);
+  void clear_a_maxtouchpoints();
+  uint32_t a_maxtouchpoints() const;
+  void set_a_maxtouchpoints(uint32_t value);
   private:
-  uint32_t _internal_maxtouchpoints() const;
-  void _internal_set_maxtouchpoints(uint32_t value);
+  uint32_t _internal_a_maxtouchpoints() const;
+  void _internal_set_a_maxtouchpoints(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FrameIPCTabContext)
@@ -384,8 +384,8 @@ class FrameIPCTabContext final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t chromeouterwindowid_;
-    uint32_t maxtouchpoints_;
+    uint64_t a_chromeouterwindowid_;
+    uint32_t a_maxtouchpoints_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -434,8 +434,8 @@ class IPCTabContext final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVPopupIPCTabContext = 1,
-    kMVFrameIPCTabContext = 2,
+    kAMVPopupIPCTabContext = 1,
+    kAMVFrameIPCTabContext = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -508,52 +508,52 @@ class IPCTabContext final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVPopupIPCTabContextFieldNumber = 1,
-    kMVFrameIPCTabContextFieldNumber = 2,
+    kAMVPopupIPCTabContextFieldNumber = 1,
+    kAMVFrameIPCTabContextFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.PopupIPCTabContext mVPopupIPCTabContext = 1;
-  bool has_mvpopupipctabcontext() const;
+  // .protobuf.mozilla.dom.PopupIPCTabContext a_mVPopupIPCTabContext = 1;
+  bool has_a_mvpopupipctabcontext() const;
   private:
-  bool _internal_has_mvpopupipctabcontext() const;
+  bool _internal_has_a_mvpopupipctabcontext() const;
   public:
-  void clear_mvpopupipctabcontext();
-  const ::protobuf::mozilla::dom::PopupIPCTabContext& mvpopupipctabcontext() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PopupIPCTabContext* release_mvpopupipctabcontext();
-  ::protobuf::mozilla::dom::PopupIPCTabContext* mutable_mvpopupipctabcontext();
-  void set_allocated_mvpopupipctabcontext(::protobuf::mozilla::dom::PopupIPCTabContext* mvpopupipctabcontext);
+  void clear_a_mvpopupipctabcontext();
+  const ::protobuf::mozilla::dom::PopupIPCTabContext& a_mvpopupipctabcontext() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PopupIPCTabContext* release_a_mvpopupipctabcontext();
+  ::protobuf::mozilla::dom::PopupIPCTabContext* mutable_a_mvpopupipctabcontext();
+  void set_allocated_a_mvpopupipctabcontext(::protobuf::mozilla::dom::PopupIPCTabContext* a_mvpopupipctabcontext);
   private:
-  const ::protobuf::mozilla::dom::PopupIPCTabContext& _internal_mvpopupipctabcontext() const;
-  ::protobuf::mozilla::dom::PopupIPCTabContext* _internal_mutable_mvpopupipctabcontext();
+  const ::protobuf::mozilla::dom::PopupIPCTabContext& _internal_a_mvpopupipctabcontext() const;
+  ::protobuf::mozilla::dom::PopupIPCTabContext* _internal_mutable_a_mvpopupipctabcontext();
   public:
-  void unsafe_arena_set_allocated_mvpopupipctabcontext(
-      ::protobuf::mozilla::dom::PopupIPCTabContext* mvpopupipctabcontext);
-  ::protobuf::mozilla::dom::PopupIPCTabContext* unsafe_arena_release_mvpopupipctabcontext();
+  void unsafe_arena_set_allocated_a_mvpopupipctabcontext(
+      ::protobuf::mozilla::dom::PopupIPCTabContext* a_mvpopupipctabcontext);
+  ::protobuf::mozilla::dom::PopupIPCTabContext* unsafe_arena_release_a_mvpopupipctabcontext();
 
-  // .protobuf.mozilla.dom.FrameIPCTabContext mVFrameIPCTabContext = 2;
-  bool has_mvframeipctabcontext() const;
+  // .protobuf.mozilla.dom.FrameIPCTabContext a_mVFrameIPCTabContext = 2;
+  bool has_a_mvframeipctabcontext() const;
   private:
-  bool _internal_has_mvframeipctabcontext() const;
+  bool _internal_has_a_mvframeipctabcontext() const;
   public:
-  void clear_mvframeipctabcontext();
-  const ::protobuf::mozilla::dom::FrameIPCTabContext& mvframeipctabcontext() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FrameIPCTabContext* release_mvframeipctabcontext();
-  ::protobuf::mozilla::dom::FrameIPCTabContext* mutable_mvframeipctabcontext();
-  void set_allocated_mvframeipctabcontext(::protobuf::mozilla::dom::FrameIPCTabContext* mvframeipctabcontext);
+  void clear_a_mvframeipctabcontext();
+  const ::protobuf::mozilla::dom::FrameIPCTabContext& a_mvframeipctabcontext() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FrameIPCTabContext* release_a_mvframeipctabcontext();
+  ::protobuf::mozilla::dom::FrameIPCTabContext* mutable_a_mvframeipctabcontext();
+  void set_allocated_a_mvframeipctabcontext(::protobuf::mozilla::dom::FrameIPCTabContext* a_mvframeipctabcontext);
   private:
-  const ::protobuf::mozilla::dom::FrameIPCTabContext& _internal_mvframeipctabcontext() const;
-  ::protobuf::mozilla::dom::FrameIPCTabContext* _internal_mutable_mvframeipctabcontext();
+  const ::protobuf::mozilla::dom::FrameIPCTabContext& _internal_a_mvframeipctabcontext() const;
+  ::protobuf::mozilla::dom::FrameIPCTabContext* _internal_mutable_a_mvframeipctabcontext();
   public:
-  void unsafe_arena_set_allocated_mvframeipctabcontext(
-      ::protobuf::mozilla::dom::FrameIPCTabContext* mvframeipctabcontext);
-  ::protobuf::mozilla::dom::FrameIPCTabContext* unsafe_arena_release_mvframeipctabcontext();
+  void unsafe_arena_set_allocated_a_mvframeipctabcontext(
+      ::protobuf::mozilla::dom::FrameIPCTabContext* a_mvframeipctabcontext);
+  ::protobuf::mozilla::dom::FrameIPCTabContext* unsafe_arena_release_a_mvframeipctabcontext();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTabContext)
  private:
   class _Internal;
-  void set_has_mvpopupipctabcontext();
-  void set_has_mvframeipctabcontext();
+  void set_has_a_mvpopupipctabcontext();
+  void set_has_a_mvframeipctabcontext();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -565,8 +565,8 @@ class IPCTabContext final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::PopupIPCTabContext* mvpopupipctabcontext_;
-      ::protobuf::mozilla::dom::FrameIPCTabContext* mvframeipctabcontext_;
+      ::protobuf::mozilla::dom::PopupIPCTabContext* a_mvpopupipctabcontext_;
+      ::protobuf::mozilla::dom::FrameIPCTabContext* a_mvframeipctabcontext_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -586,311 +586,311 @@ class IPCTabContext final :
 #endif  // __GNUC__
 // PopupIPCTabContext
 
-// required bytes opener = 1;
-inline bool PopupIPCTabContext::_internal_has_opener() const {
+// required bytes a_opener = 1;
+inline bool PopupIPCTabContext::_internal_has_a_opener() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PopupIPCTabContext::has_opener() const {
-  return _internal_has_opener();
+inline bool PopupIPCTabContext::has_a_opener() const {
+  return _internal_has_a_opener();
 }
-inline void PopupIPCTabContext::clear_opener() {
-  _impl_.opener_.ClearToEmpty();
+inline void PopupIPCTabContext::clear_a_opener() {
+  _impl_.a_opener_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PopupIPCTabContext::opener() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PopupIPCTabContext.opener)
-  return _internal_opener();
+inline const std::string& PopupIPCTabContext::a_opener() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
+  return _internal_a_opener();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PopupIPCTabContext::set_opener(ArgT0&& arg0, ArgT... args) {
+void PopupIPCTabContext::set_a_opener(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.opener_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PopupIPCTabContext.opener)
+ _impl_.a_opener_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
 }
-inline std::string* PopupIPCTabContext::mutable_opener() {
-  std::string* _s = _internal_mutable_opener();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PopupIPCTabContext.opener)
+inline std::string* PopupIPCTabContext::mutable_a_opener() {
+  std::string* _s = _internal_mutable_a_opener();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
   return _s;
 }
-inline const std::string& PopupIPCTabContext::_internal_opener() const {
-  return _impl_.opener_.Get();
+inline const std::string& PopupIPCTabContext::_internal_a_opener() const {
+  return _impl_.a_opener_.Get();
 }
-inline void PopupIPCTabContext::_internal_set_opener(const std::string& value) {
+inline void PopupIPCTabContext::_internal_set_a_opener(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.opener_.Set(value, GetArenaForAllocation());
+  _impl_.a_opener_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PopupIPCTabContext::_internal_mutable_opener() {
+inline std::string* PopupIPCTabContext::_internal_mutable_a_opener() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.opener_.Mutable(GetArenaForAllocation());
+  return _impl_.a_opener_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PopupIPCTabContext::release_opener() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PopupIPCTabContext.opener)
-  if (!_internal_has_opener()) {
+inline std::string* PopupIPCTabContext::release_a_opener() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
+  if (!_internal_has_a_opener()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.opener_.Release();
+  auto* p = _impl_.a_opener_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.opener_.IsDefault()) {
-    _impl_.opener_.Set("", GetArenaForAllocation());
+  if (_impl_.a_opener_.IsDefault()) {
+    _impl_.a_opener_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PopupIPCTabContext::set_allocated_opener(std::string* opener) {
-  if (opener != nullptr) {
+inline void PopupIPCTabContext::set_allocated_a_opener(std::string* a_opener) {
+  if (a_opener != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.opener_.SetAllocated(opener, GetArenaForAllocation());
+  _impl_.a_opener_.SetAllocated(a_opener, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.opener_.IsDefault()) {
-    _impl_.opener_.Set("", GetArenaForAllocation());
+  if (_impl_.a_opener_.IsDefault()) {
+    _impl_.a_opener_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PopupIPCTabContext.opener)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
 }
 
-// required uint64 chromeOuterWindowID = 2;
-inline bool PopupIPCTabContext::_internal_has_chromeouterwindowid() const {
+// required uint64 a_chromeOuterWindowID = 2;
+inline bool PopupIPCTabContext::_internal_has_a_chromeouterwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PopupIPCTabContext::has_chromeouterwindowid() const {
-  return _internal_has_chromeouterwindowid();
+inline bool PopupIPCTabContext::has_a_chromeouterwindowid() const {
+  return _internal_has_a_chromeouterwindowid();
 }
-inline void PopupIPCTabContext::clear_chromeouterwindowid() {
-  _impl_.chromeouterwindowid_ = uint64_t{0u};
+inline void PopupIPCTabContext::clear_a_chromeouterwindowid() {
+  _impl_.a_chromeouterwindowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t PopupIPCTabContext::_internal_chromeouterwindowid() const {
-  return _impl_.chromeouterwindowid_;
+inline uint64_t PopupIPCTabContext::_internal_a_chromeouterwindowid() const {
+  return _impl_.a_chromeouterwindowid_;
 }
-inline uint64_t PopupIPCTabContext::chromeouterwindowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PopupIPCTabContext.chromeOuterWindowID)
-  return _internal_chromeouterwindowid();
+inline uint64_t PopupIPCTabContext::a_chromeouterwindowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PopupIPCTabContext.a_chromeOuterWindowID)
+  return _internal_a_chromeouterwindowid();
 }
-inline void PopupIPCTabContext::_internal_set_chromeouterwindowid(uint64_t value) {
+inline void PopupIPCTabContext::_internal_set_a_chromeouterwindowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.chromeouterwindowid_ = value;
+  _impl_.a_chromeouterwindowid_ = value;
 }
-inline void PopupIPCTabContext::set_chromeouterwindowid(uint64_t value) {
-  _internal_set_chromeouterwindowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PopupIPCTabContext.chromeOuterWindowID)
+inline void PopupIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
+  _internal_set_a_chromeouterwindowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PopupIPCTabContext.a_chromeOuterWindowID)
 }
 
 // -------------------------------------------------------------------
 
 // FrameIPCTabContext
 
-// required uint64 chromeOuterWindowID = 1;
-inline bool FrameIPCTabContext::_internal_has_chromeouterwindowid() const {
+// required uint64 a_chromeOuterWindowID = 1;
+inline bool FrameIPCTabContext::_internal_has_a_chromeouterwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FrameIPCTabContext::has_chromeouterwindowid() const {
-  return _internal_has_chromeouterwindowid();
+inline bool FrameIPCTabContext::has_a_chromeouterwindowid() const {
+  return _internal_has_a_chromeouterwindowid();
 }
-inline void FrameIPCTabContext::clear_chromeouterwindowid() {
-  _impl_.chromeouterwindowid_ = uint64_t{0u};
+inline void FrameIPCTabContext::clear_a_chromeouterwindowid() {
+  _impl_.a_chromeouterwindowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t FrameIPCTabContext::_internal_chromeouterwindowid() const {
-  return _impl_.chromeouterwindowid_;
+inline uint64_t FrameIPCTabContext::_internal_a_chromeouterwindowid() const {
+  return _impl_.a_chromeouterwindowid_;
 }
-inline uint64_t FrameIPCTabContext::chromeouterwindowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FrameIPCTabContext.chromeOuterWindowID)
-  return _internal_chromeouterwindowid();
+inline uint64_t FrameIPCTabContext::a_chromeouterwindowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FrameIPCTabContext.a_chromeOuterWindowID)
+  return _internal_a_chromeouterwindowid();
 }
-inline void FrameIPCTabContext::_internal_set_chromeouterwindowid(uint64_t value) {
+inline void FrameIPCTabContext::_internal_set_a_chromeouterwindowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.chromeouterwindowid_ = value;
+  _impl_.a_chromeouterwindowid_ = value;
 }
-inline void FrameIPCTabContext::set_chromeouterwindowid(uint64_t value) {
-  _internal_set_chromeouterwindowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameIPCTabContext.chromeOuterWindowID)
+inline void FrameIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
+  _internal_set_a_chromeouterwindowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameIPCTabContext.a_chromeOuterWindowID)
 }
 
-// required uint32 maxTouchPoints = 2;
-inline bool FrameIPCTabContext::_internal_has_maxtouchpoints() const {
+// required uint32 a_maxTouchPoints = 2;
+inline bool FrameIPCTabContext::_internal_has_a_maxtouchpoints() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FrameIPCTabContext::has_maxtouchpoints() const {
-  return _internal_has_maxtouchpoints();
+inline bool FrameIPCTabContext::has_a_maxtouchpoints() const {
+  return _internal_has_a_maxtouchpoints();
 }
-inline void FrameIPCTabContext::clear_maxtouchpoints() {
-  _impl_.maxtouchpoints_ = 0u;
+inline void FrameIPCTabContext::clear_a_maxtouchpoints() {
+  _impl_.a_maxtouchpoints_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t FrameIPCTabContext::_internal_maxtouchpoints() const {
-  return _impl_.maxtouchpoints_;
+inline uint32_t FrameIPCTabContext::_internal_a_maxtouchpoints() const {
+  return _impl_.a_maxtouchpoints_;
 }
-inline uint32_t FrameIPCTabContext::maxtouchpoints() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FrameIPCTabContext.maxTouchPoints)
-  return _internal_maxtouchpoints();
+inline uint32_t FrameIPCTabContext::a_maxtouchpoints() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FrameIPCTabContext.a_maxTouchPoints)
+  return _internal_a_maxtouchpoints();
 }
-inline void FrameIPCTabContext::_internal_set_maxtouchpoints(uint32_t value) {
+inline void FrameIPCTabContext::_internal_set_a_maxtouchpoints(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.maxtouchpoints_ = value;
+  _impl_.a_maxtouchpoints_ = value;
 }
-inline void FrameIPCTabContext::set_maxtouchpoints(uint32_t value) {
-  _internal_set_maxtouchpoints(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameIPCTabContext.maxTouchPoints)
+inline void FrameIPCTabContext::set_a_maxtouchpoints(uint32_t value) {
+  _internal_set_a_maxtouchpoints(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameIPCTabContext.a_maxTouchPoints)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTabContext
 
-// .protobuf.mozilla.dom.PopupIPCTabContext mVPopupIPCTabContext = 1;
-inline bool IPCTabContext::_internal_has_mvpopupipctabcontext() const {
-  return content_case() == kMVPopupIPCTabContext;
+// .protobuf.mozilla.dom.PopupIPCTabContext a_mVPopupIPCTabContext = 1;
+inline bool IPCTabContext::_internal_has_a_mvpopupipctabcontext() const {
+  return content_case() == kAMVPopupIPCTabContext;
 }
-inline bool IPCTabContext::has_mvpopupipctabcontext() const {
-  return _internal_has_mvpopupipctabcontext();
+inline bool IPCTabContext::has_a_mvpopupipctabcontext() const {
+  return _internal_has_a_mvpopupipctabcontext();
 }
-inline void IPCTabContext::set_has_mvpopupipctabcontext() {
-  _impl_._oneof_case_[0] = kMVPopupIPCTabContext;
+inline void IPCTabContext::set_has_a_mvpopupipctabcontext() {
+  _impl_._oneof_case_[0] = kAMVPopupIPCTabContext;
 }
-inline void IPCTabContext::clear_mvpopupipctabcontext() {
-  if (_internal_has_mvpopupipctabcontext()) {
+inline void IPCTabContext::clear_a_mvpopupipctabcontext() {
+  if (_internal_has_a_mvpopupipctabcontext()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvpopupipctabcontext_;
+      delete _impl_.content_.a_mvpopupipctabcontext_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::release_mvpopupipctabcontext() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTabContext.mVPopupIPCTabContext)
-  if (_internal_has_mvpopupipctabcontext()) {
+inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::release_a_mvpopupipctabcontext() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTabContext.a_mVPopupIPCTabContext)
+  if (_internal_has_a_mvpopupipctabcontext()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::PopupIPCTabContext* temp = _impl_.content_.mvpopupipctabcontext_;
+    ::protobuf::mozilla::dom::PopupIPCTabContext* temp = _impl_.content_.a_mvpopupipctabcontext_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvpopupipctabcontext_ = nullptr;
+    _impl_.content_.a_mvpopupipctabcontext_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::PopupIPCTabContext& IPCTabContext::_internal_mvpopupipctabcontext() const {
-  return _internal_has_mvpopupipctabcontext()
-      ? *_impl_.content_.mvpopupipctabcontext_
+inline const ::protobuf::mozilla::dom::PopupIPCTabContext& IPCTabContext::_internal_a_mvpopupipctabcontext() const {
+  return _internal_has_a_mvpopupipctabcontext()
+      ? *_impl_.content_.a_mvpopupipctabcontext_
       : reinterpret_cast< ::protobuf::mozilla::dom::PopupIPCTabContext&>(::protobuf::mozilla::dom::_PopupIPCTabContext_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::PopupIPCTabContext& IPCTabContext::mvpopupipctabcontext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTabContext.mVPopupIPCTabContext)
-  return _internal_mvpopupipctabcontext();
+inline const ::protobuf::mozilla::dom::PopupIPCTabContext& IPCTabContext::a_mvpopupipctabcontext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTabContext.a_mVPopupIPCTabContext)
+  return _internal_a_mvpopupipctabcontext();
 }
-inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::unsafe_arena_release_mvpopupipctabcontext() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTabContext.mVPopupIPCTabContext)
-  if (_internal_has_mvpopupipctabcontext()) {
+inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::unsafe_arena_release_a_mvpopupipctabcontext() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTabContext.a_mVPopupIPCTabContext)
+  if (_internal_has_a_mvpopupipctabcontext()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::PopupIPCTabContext* temp = _impl_.content_.mvpopupipctabcontext_;
-    _impl_.content_.mvpopupipctabcontext_ = nullptr;
+    ::protobuf::mozilla::dom::PopupIPCTabContext* temp = _impl_.content_.a_mvpopupipctabcontext_;
+    _impl_.content_.a_mvpopupipctabcontext_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTabContext::unsafe_arena_set_allocated_mvpopupipctabcontext(::protobuf::mozilla::dom::PopupIPCTabContext* mvpopupipctabcontext) {
+inline void IPCTabContext::unsafe_arena_set_allocated_a_mvpopupipctabcontext(::protobuf::mozilla::dom::PopupIPCTabContext* a_mvpopupipctabcontext) {
   clear_content();
-  if (mvpopupipctabcontext) {
-    set_has_mvpopupipctabcontext();
-    _impl_.content_.mvpopupipctabcontext_ = mvpopupipctabcontext;
+  if (a_mvpopupipctabcontext) {
+    set_has_a_mvpopupipctabcontext();
+    _impl_.content_.a_mvpopupipctabcontext_ = a_mvpopupipctabcontext;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTabContext.mVPopupIPCTabContext)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTabContext.a_mVPopupIPCTabContext)
 }
-inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::_internal_mutable_mvpopupipctabcontext() {
-  if (!_internal_has_mvpopupipctabcontext()) {
+inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::_internal_mutable_a_mvpopupipctabcontext() {
+  if (!_internal_has_a_mvpopupipctabcontext()) {
     clear_content();
-    set_has_mvpopupipctabcontext();
-    _impl_.content_.mvpopupipctabcontext_ = CreateMaybeMessage< ::protobuf::mozilla::dom::PopupIPCTabContext >(GetArenaForAllocation());
+    set_has_a_mvpopupipctabcontext();
+    _impl_.content_.a_mvpopupipctabcontext_ = CreateMaybeMessage< ::protobuf::mozilla::dom::PopupIPCTabContext >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvpopupipctabcontext_;
+  return _impl_.content_.a_mvpopupipctabcontext_;
 }
-inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::mutable_mvpopupipctabcontext() {
-  ::protobuf::mozilla::dom::PopupIPCTabContext* _msg = _internal_mutable_mvpopupipctabcontext();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTabContext.mVPopupIPCTabContext)
+inline ::protobuf::mozilla::dom::PopupIPCTabContext* IPCTabContext::mutable_a_mvpopupipctabcontext() {
+  ::protobuf::mozilla::dom::PopupIPCTabContext* _msg = _internal_mutable_a_mvpopupipctabcontext();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTabContext.a_mVPopupIPCTabContext)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FrameIPCTabContext mVFrameIPCTabContext = 2;
-inline bool IPCTabContext::_internal_has_mvframeipctabcontext() const {
-  return content_case() == kMVFrameIPCTabContext;
+// .protobuf.mozilla.dom.FrameIPCTabContext a_mVFrameIPCTabContext = 2;
+inline bool IPCTabContext::_internal_has_a_mvframeipctabcontext() const {
+  return content_case() == kAMVFrameIPCTabContext;
 }
-inline bool IPCTabContext::has_mvframeipctabcontext() const {
-  return _internal_has_mvframeipctabcontext();
+inline bool IPCTabContext::has_a_mvframeipctabcontext() const {
+  return _internal_has_a_mvframeipctabcontext();
 }
-inline void IPCTabContext::set_has_mvframeipctabcontext() {
-  _impl_._oneof_case_[0] = kMVFrameIPCTabContext;
+inline void IPCTabContext::set_has_a_mvframeipctabcontext() {
+  _impl_._oneof_case_[0] = kAMVFrameIPCTabContext;
 }
-inline void IPCTabContext::clear_mvframeipctabcontext() {
-  if (_internal_has_mvframeipctabcontext()) {
+inline void IPCTabContext::clear_a_mvframeipctabcontext() {
+  if (_internal_has_a_mvframeipctabcontext()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvframeipctabcontext_;
+      delete _impl_.content_.a_mvframeipctabcontext_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::release_mvframeipctabcontext() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTabContext.mVFrameIPCTabContext)
-  if (_internal_has_mvframeipctabcontext()) {
+inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::release_a_mvframeipctabcontext() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTabContext.a_mVFrameIPCTabContext)
+  if (_internal_has_a_mvframeipctabcontext()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FrameIPCTabContext* temp = _impl_.content_.mvframeipctabcontext_;
+    ::protobuf::mozilla::dom::FrameIPCTabContext* temp = _impl_.content_.a_mvframeipctabcontext_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvframeipctabcontext_ = nullptr;
+    _impl_.content_.a_mvframeipctabcontext_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FrameIPCTabContext& IPCTabContext::_internal_mvframeipctabcontext() const {
-  return _internal_has_mvframeipctabcontext()
-      ? *_impl_.content_.mvframeipctabcontext_
+inline const ::protobuf::mozilla::dom::FrameIPCTabContext& IPCTabContext::_internal_a_mvframeipctabcontext() const {
+  return _internal_has_a_mvframeipctabcontext()
+      ? *_impl_.content_.a_mvframeipctabcontext_
       : reinterpret_cast< ::protobuf::mozilla::dom::FrameIPCTabContext&>(::protobuf::mozilla::dom::_FrameIPCTabContext_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FrameIPCTabContext& IPCTabContext::mvframeipctabcontext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTabContext.mVFrameIPCTabContext)
-  return _internal_mvframeipctabcontext();
+inline const ::protobuf::mozilla::dom::FrameIPCTabContext& IPCTabContext::a_mvframeipctabcontext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTabContext.a_mVFrameIPCTabContext)
+  return _internal_a_mvframeipctabcontext();
 }
-inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::unsafe_arena_release_mvframeipctabcontext() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTabContext.mVFrameIPCTabContext)
-  if (_internal_has_mvframeipctabcontext()) {
+inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::unsafe_arena_release_a_mvframeipctabcontext() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTabContext.a_mVFrameIPCTabContext)
+  if (_internal_has_a_mvframeipctabcontext()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FrameIPCTabContext* temp = _impl_.content_.mvframeipctabcontext_;
-    _impl_.content_.mvframeipctabcontext_ = nullptr;
+    ::protobuf::mozilla::dom::FrameIPCTabContext* temp = _impl_.content_.a_mvframeipctabcontext_;
+    _impl_.content_.a_mvframeipctabcontext_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTabContext::unsafe_arena_set_allocated_mvframeipctabcontext(::protobuf::mozilla::dom::FrameIPCTabContext* mvframeipctabcontext) {
+inline void IPCTabContext::unsafe_arena_set_allocated_a_mvframeipctabcontext(::protobuf::mozilla::dom::FrameIPCTabContext* a_mvframeipctabcontext) {
   clear_content();
-  if (mvframeipctabcontext) {
-    set_has_mvframeipctabcontext();
-    _impl_.content_.mvframeipctabcontext_ = mvframeipctabcontext;
+  if (a_mvframeipctabcontext) {
+    set_has_a_mvframeipctabcontext();
+    _impl_.content_.a_mvframeipctabcontext_ = a_mvframeipctabcontext;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTabContext.mVFrameIPCTabContext)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTabContext.a_mVFrameIPCTabContext)
 }
-inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::_internal_mutable_mvframeipctabcontext() {
-  if (!_internal_has_mvframeipctabcontext()) {
+inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::_internal_mutable_a_mvframeipctabcontext() {
+  if (!_internal_has_a_mvframeipctabcontext()) {
     clear_content();
-    set_has_mvframeipctabcontext();
-    _impl_.content_.mvframeipctabcontext_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FrameIPCTabContext >(GetArenaForAllocation());
+    set_has_a_mvframeipctabcontext();
+    _impl_.content_.a_mvframeipctabcontext_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FrameIPCTabContext >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvframeipctabcontext_;
+  return _impl_.content_.a_mvframeipctabcontext_;
 }
-inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::mutable_mvframeipctabcontext() {
-  ::protobuf::mozilla::dom::FrameIPCTabContext* _msg = _internal_mutable_mvframeipctabcontext();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTabContext.mVFrameIPCTabContext)
+inline ::protobuf::mozilla::dom::FrameIPCTabContext* IPCTabContext::mutable_a_mvframeipctabcontext() {
+  ::protobuf::mozilla::dom::FrameIPCTabContext* _msg = _internal_mutable_a_mvframeipctabcontext();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTabContext.a_mVFrameIPCTabContext)
   return _msg;
 }
 

@@ -24,13 +24,13 @@ PROTOBUF_CONSTEXPR MemoryReport::MemoryReport(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.process_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.desc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.kind_)*/0
-  , /*decltype(_impl_.units_)*/0
-  , /*decltype(_impl_.amount_)*/int64_t{0}
-  , /*decltype(_impl_.generation_)*/0u} {}
+  , /*decltype(_impl_.a_process_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_desc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_kind_)*/0
+  , /*decltype(_impl_.a_units_)*/0
+  , /*decltype(_impl_.a_amount_)*/int64_t{0}
+  , /*decltype(_impl_.a_generation_)*/0u} {}
 struct MemoryReportDefaultTypeInternal {
   PROTOBUF_CONSTEXPR MemoryReportDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,25 +52,25 @@ namespace dom {
 class MemoryReport::_Internal {
  public:
   using HasBits = decltype(std::declval<MemoryReport>()._impl_._has_bits_);
-  static void set_has_process(HasBits* has_bits) {
+  static void set_has_a_process(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_path(HasBits* has_bits) {
+  static void set_has_a_path(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_kind(HasBits* has_bits) {
+  static void set_has_a_kind(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_units(HasBits* has_bits) {
+  static void set_has_a_units(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_amount(HasBits* has_bits) {
+  static void set_has_a_amount(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_generation(HasBits* has_bits) {
+  static void set_has_a_generation(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_desc(HasBits* has_bits) {
+  static void set_has_a_desc(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -90,42 +90,42 @@ MemoryReport::MemoryReport(const MemoryReport& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.process_){}
-    , decltype(_impl_.path_){}
-    , decltype(_impl_.desc_){}
-    , decltype(_impl_.kind_){}
-    , decltype(_impl_.units_){}
-    , decltype(_impl_.amount_){}
-    , decltype(_impl_.generation_){}};
+    , decltype(_impl_.a_process_){}
+    , decltype(_impl_.a_path_){}
+    , decltype(_impl_.a_desc_){}
+    , decltype(_impl_.a_kind_){}
+    , decltype(_impl_.a_units_){}
+    , decltype(_impl_.a_amount_){}
+    , decltype(_impl_.a_generation_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.process_.InitDefault();
+  _impl_.a_process_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.process_.Set("", GetArenaForAllocation());
+    _impl_.a_process_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_process()) {
-    _this->_impl_.process_.Set(from._internal_process(), 
+  if (from._internal_has_a_process()) {
+    _this->_impl_.a_process_.Set(from._internal_a_process(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.path_.InitDefault();
+  _impl_.a_path_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.path_.Set("", GetArenaForAllocation());
+    _impl_.a_path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_path()) {
-    _this->_impl_.path_.Set(from._internal_path(), 
+  if (from._internal_has_a_path()) {
+    _this->_impl_.a_path_.Set(from._internal_a_path(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.desc_.InitDefault();
+  _impl_.a_desc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.desc_.Set("", GetArenaForAllocation());
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_desc()) {
-    _this->_impl_.desc_.Set(from._internal_desc(), 
+  if (from._internal_has_a_desc()) {
+    _this->_impl_.a_desc_.Set(from._internal_a_desc(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.kind_, &from._impl_.kind_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.generation_) -
-    reinterpret_cast<char*>(&_impl_.kind_)) + sizeof(_impl_.generation_));
+  ::memcpy(&_impl_.a_kind_, &from._impl_.a_kind_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_generation_) -
+    reinterpret_cast<char*>(&_impl_.a_kind_)) + sizeof(_impl_.a_generation_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.MemoryReport)
 }
 
@@ -136,25 +136,25 @@ inline void MemoryReport::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.process_){}
-    , decltype(_impl_.path_){}
-    , decltype(_impl_.desc_){}
-    , decltype(_impl_.kind_){0}
-    , decltype(_impl_.units_){0}
-    , decltype(_impl_.amount_){int64_t{0}}
-    , decltype(_impl_.generation_){0u}
+    , decltype(_impl_.a_process_){}
+    , decltype(_impl_.a_path_){}
+    , decltype(_impl_.a_desc_){}
+    , decltype(_impl_.a_kind_){0}
+    , decltype(_impl_.a_units_){0}
+    , decltype(_impl_.a_amount_){int64_t{0}}
+    , decltype(_impl_.a_generation_){0u}
   };
-  _impl_.process_.InitDefault();
+  _impl_.a_process_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.process_.Set("", GetArenaForAllocation());
+    _impl_.a_process_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.path_.InitDefault();
+  _impl_.a_path_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.path_.Set("", GetArenaForAllocation());
+    _impl_.a_path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.desc_.InitDefault();
+  _impl_.a_desc_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.desc_.Set("", GetArenaForAllocation());
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -169,9 +169,9 @@ MemoryReport::~MemoryReport() {
 
 inline void MemoryReport::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.process_.Destroy();
-  _impl_.path_.Destroy();
-  _impl_.desc_.Destroy();
+  _impl_.a_process_.Destroy();
+  _impl_.a_path_.Destroy();
+  _impl_.a_desc_.Destroy();
 }
 
 void MemoryReport::SetCachedSize(int size) const {
@@ -187,19 +187,19 @@ void MemoryReport::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.process_.ClearNonDefaultToEmpty();
+      _impl_.a_process_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.path_.ClearNonDefaultToEmpty();
+      _impl_.a_path_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.desc_.ClearNonDefaultToEmpty();
+      _impl_.a_desc_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00000078u) {
-    ::memset(&_impl_.kind_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.generation_) -
-        reinterpret_cast<char*>(&_impl_.kind_)) + sizeof(_impl_.generation_));
+    ::memset(&_impl_.a_kind_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_generation_) -
+        reinterpret_cast<char*>(&_impl_.a_kind_)) + sizeof(_impl_.a_generation_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -212,64 +212,64 @@ const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes process = 1;
+      // required bytes a_process = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_process();
+          auto str = _internal_mutable_a_process();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes path = 2;
+      // required bytes a_path = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_path();
+          auto str = _internal_mutable_a_path();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 kind = 3;
+      // required sint32 a_kind = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_kind(&has_bits);
-          _impl_.kind_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_kind(&has_bits);
+          _impl_.a_kind_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 units = 4;
+      // required sint32 a_units = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_units(&has_bits);
-          _impl_.units_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_units(&has_bits);
+          _impl_.a_units_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 amount = 5;
+      // required sint64 a_amount = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_amount(&has_bits);
-          _impl_.amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          _Internal::set_has_a_amount(&has_bits);
+          _impl_.a_amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 generation = 6;
+      // required uint32 a_generation = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_generation(&has_bits);
-          _impl_.generation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_generation(&has_bits);
+          _impl_.a_generation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes desc = 7;
+      // required bytes a_desc = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_desc();
+          auto str = _internal_mutable_a_desc();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -306,46 +306,46 @@ uint8_t* MemoryReport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes process = 1;
+  // required bytes a_process = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_process(), target);
+        1, this->_internal_a_process(), target);
   }
 
-  // required bytes path = 2;
+  // required bytes a_path = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_path(), target);
+        2, this->_internal_a_path(), target);
   }
 
-  // required sint32 kind = 3;
+  // required sint32 a_kind = 3;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_kind(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_kind(), target);
   }
 
-  // required sint32 units = 4;
+  // required sint32 a_units = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_units(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_units(), target);
   }
 
-  // required sint64 amount = 5;
+  // required sint64 a_amount = 5;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_amount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_amount(), target);
   }
 
-  // required uint32 generation = 6;
+  // required uint32 a_generation = 6;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_generation(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_generation(), target);
   }
 
-  // required bytes desc = 7;
+  // required bytes a_desc = 7;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_desc(), target);
+        7, this->_internal_a_desc(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -360,45 +360,45 @@ size_t MemoryReport::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.MemoryReport)
   size_t total_size = 0;
 
-  if (_internal_has_process()) {
-    // required bytes process = 1;
+  if (_internal_has_a_process()) {
+    // required bytes a_process = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_process());
+        this->_internal_a_process());
   }
 
-  if (_internal_has_path()) {
-    // required bytes path = 2;
+  if (_internal_has_a_path()) {
+    // required bytes a_path = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_path());
+        this->_internal_a_path());
   }
 
-  if (_internal_has_desc()) {
-    // required bytes desc = 7;
+  if (_internal_has_a_desc()) {
+    // required bytes a_desc = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_desc());
+        this->_internal_a_desc());
   }
 
-  if (_internal_has_kind()) {
-    // required sint32 kind = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_kind());
+  if (_internal_has_a_kind()) {
+    // required sint32 a_kind = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_kind());
   }
 
-  if (_internal_has_units()) {
-    // required sint32 units = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_units());
+  if (_internal_has_a_units()) {
+    // required sint32 a_units = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_units());
   }
 
-  if (_internal_has_amount()) {
-    // required sint64 amount = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amount());
+  if (_internal_has_a_amount()) {
+    // required sint64 a_amount = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_amount());
   }
 
-  if (_internal_has_generation()) {
-    // required uint32 generation = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_generation());
+  if (_internal_has_a_generation()) {
+    // required uint32 a_generation = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
   }
 
   return total_size;
@@ -408,32 +408,32 @@ size_t MemoryReport::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes process = 1;
+    // required bytes a_process = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_process());
+        this->_internal_a_process());
 
-    // required bytes path = 2;
+    // required bytes a_path = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_path());
+        this->_internal_a_path());
 
-    // required bytes desc = 7;
+    // required bytes a_desc = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_desc());
+        this->_internal_a_desc());
 
-    // required sint32 kind = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_kind());
+    // required sint32 a_kind = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_kind());
 
-    // required sint32 units = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_units());
+    // required sint32 a_units = 4;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_units());
 
-    // required sint64 amount = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_amount());
+    // required sint64 a_amount = 5;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_amount());
 
-    // required uint32 generation = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_generation());
+    // required uint32 a_generation = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -466,25 +466,25 @@ void MemoryReport::MergeFrom(const MemoryReport& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_process(from._internal_process());
+      _this->_internal_set_a_process(from._internal_a_process());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_path(from._internal_path());
+      _this->_internal_set_a_path(from._internal_a_path());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_desc(from._internal_desc());
+      _this->_internal_set_a_desc(from._internal_a_desc());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.kind_ = from._impl_.kind_;
+      _this->_impl_.a_kind_ = from._impl_.a_kind_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.units_ = from._impl_.units_;
+      _this->_impl_.a_units_ = from._impl_.a_units_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.amount_ = from._impl_.amount_;
+      _this->_impl_.a_amount_ = from._impl_.a_amount_;
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.generation_ = from._impl_.generation_;
+      _this->_impl_.a_generation_ = from._impl_.a_generation_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -510,23 +510,23 @@ void MemoryReport::InternalSwap(MemoryReport* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.process_, lhs_arena,
-      &other->_impl_.process_, rhs_arena
+      &_impl_.a_process_, lhs_arena,
+      &other->_impl_.a_process_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.path_, lhs_arena,
-      &other->_impl_.path_, rhs_arena
+      &_impl_.a_path_, lhs_arena,
+      &other->_impl_.a_path_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.desc_, lhs_arena,
-      &other->_impl_.desc_, rhs_arena
+      &_impl_.a_desc_, lhs_arena,
+      &other->_impl_.a_desc_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(MemoryReport, _impl_.generation_)
-      + sizeof(MemoryReport::_impl_.generation_)
-      - PROTOBUF_FIELD_OFFSET(MemoryReport, _impl_.kind_)>(
-          reinterpret_cast<char*>(&_impl_.kind_),
-          reinterpret_cast<char*>(&other->_impl_.kind_));
+      PROTOBUF_FIELD_OFFSET(MemoryReport, _impl_.a_generation_)
+      + sizeof(MemoryReport::_impl_.a_generation_)
+      - PROTOBUF_FIELD_OFFSET(MemoryReport, _impl_.a_kind_)>(
+          reinterpret_cast<char*>(&_impl_.a_kind_),
+          reinterpret_cast<char*>(&other->_impl_.a_kind_));
 }
 
 std::string MemoryReport::GetTypeName() const {

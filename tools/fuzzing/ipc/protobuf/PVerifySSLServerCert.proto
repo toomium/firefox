@@ -17,14 +17,14 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_OnVerifySSLServerCertFinished {
-  repeated protobuf.mozilla.psm.ByteArray aBuiltCertChain = 1;
-  required uint32 aCertTransparencyStatus = 2;
-  required bytes aEVStatus = 3;
-  required bool aSucceeded = 4;
-  required sint32 aFinalError = 5;
-  required bytes aOverridableErrorCategory = 6;
-  required bool aIsBuiltCertChainRootBuiltInRoot = 7;
-  required bool aMadeOCSPRequests = 8;
+  repeated protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
+  required uint32 a_aCertTransparencyStatus = 2;
+  required bytes a_aEVStatus = 3;
+  required bool a_aSucceeded = 4;
+  required sint32 a_aFinalError = 5;
+  required bytes a_aOverridableErrorCategory = 6;
+  required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
+  required bool a_aMadeOCSPRequests = 8;
 }
 
 message Msg___delete__ {

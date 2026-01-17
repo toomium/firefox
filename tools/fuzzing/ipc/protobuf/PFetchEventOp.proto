@@ -18,31 +18,31 @@ import "FetchTypes.proto";
 
 // Message declarations
 message Msg_PreloadResponse {
-  required protobuf.mozilla.dom.ParentToParentInternalResponse aResponse = 1;
+  required protobuf.mozilla.dom.ParentToParentInternalResponse a_aResponse = 1;
 }
 
 message Msg_PreloadResponseTiming {
-  required protobuf.mozilla.dom.ResponseTiming aTiming = 1;
+  required protobuf.mozilla.dom.ResponseTiming a_aTiming = 1;
 }
 
 message Msg_PreloadResponseEnd {
-  required protobuf.mozilla.dom.ResponseEndArgs aArgs = 1;
+  required protobuf.mozilla.dom.ResponseEndArgs a_aArgs = 1;
 }
 
 message Msg_AsyncLog {
-  required bytes aScriptSpec = 1;
-  required uint32 aLineNumber = 2;
-  required uint32 aColumnNumber = 3;
-  required bytes aMessageName = 4;
-  repeated bytes aParams = 5;
+  required bytes a_aScriptSpec = 1;
+  required uint32 a_aLineNumber = 2;
+  required uint32 a_aColumnNumber = 3;
+  required bytes a_aMessageName = 4;
+  repeated bytes a_aParams = 5;
 }
 
 message Msg_RespondWith {
-  required protobuf.mozilla.dom.ParentToParentFetchEventRespondWithResult aResult = 1;
+  required protobuf.mozilla.dom.ParentToParentFetchEventRespondWithResult a_aResult = 1;
 }
 
 message Msg___delete__ {
-  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpResult aResult = 1;
+  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpResult a_aResult = 1;
 }
 
 message Reply___delete__ {

@@ -181,19 +181,19 @@ class LSRequestPreloadDatastoreResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kInvalidatedFieldNumber = 1,
+    kAInvalidatedFieldNumber = 1,
   };
-  // required bool invalidated = 1;
-  bool has_invalidated() const;
+  // required bool a_invalidated = 1;
+  bool has_a_invalidated() const;
   private:
-  bool _internal_has_invalidated() const;
+  bool _internal_has_a_invalidated() const;
   public:
-  void clear_invalidated();
-  bool invalidated() const;
-  void set_invalidated(bool value);
+  void clear_a_invalidated();
+  bool a_invalidated() const;
+  void set_a_invalidated(bool value);
   private:
-  bool _internal_invalidated() const;
-  void _internal_set_invalidated(bool value);
+  bool _internal_a_invalidated() const;
+  void _internal_set_a_invalidated(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse)
@@ -206,7 +206,7 @@ class LSRequestPreloadDatastoreResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool invalidated_;
+    bool a_invalidated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -323,38 +323,38 @@ class LSRequestPrepareDatastoreResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDatabaseChildEndpointFieldNumber = 1,
-    kInvalidatedFieldNumber = 2,
+    kADatabaseChildEndpointFieldNumber = 1,
+    kAInvalidatedFieldNumber = 2,
   };
-  // required bytes databaseChildEndpoint = 1;
-  bool has_databasechildendpoint() const;
+  // required bytes a_databaseChildEndpoint = 1;
+  bool has_a_databasechildendpoint() const;
   private:
-  bool _internal_has_databasechildendpoint() const;
+  bool _internal_has_a_databasechildendpoint() const;
   public:
-  void clear_databasechildendpoint();
-  const std::string& databasechildendpoint() const;
+  void clear_a_databasechildendpoint();
+  const std::string& a_databasechildendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_databasechildendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_databasechildendpoint();
-  PROTOBUF_NODISCARD std::string* release_databasechildendpoint();
-  void set_allocated_databasechildendpoint(std::string* databasechildendpoint);
+  void set_a_databasechildendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_databasechildendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_databasechildendpoint();
+  void set_allocated_a_databasechildendpoint(std::string* a_databasechildendpoint);
   private:
-  const std::string& _internal_databasechildendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_databasechildendpoint(const std::string& value);
-  std::string* _internal_mutable_databasechildendpoint();
+  const std::string& _internal_a_databasechildendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_databasechildendpoint(const std::string& value);
+  std::string* _internal_mutable_a_databasechildendpoint();
   public:
 
-  // required bool invalidated = 2;
-  bool has_invalidated() const;
+  // required bool a_invalidated = 2;
+  bool has_a_invalidated() const;
   private:
-  bool _internal_has_invalidated() const;
+  bool _internal_has_a_invalidated() const;
   public:
-  void clear_invalidated();
-  bool invalidated() const;
-  void set_invalidated(bool value);
+  void clear_a_invalidated();
+  bool a_invalidated() const;
+  void set_a_invalidated(bool value);
   private:
-  bool _internal_invalidated() const;
-  void _internal_set_invalidated(bool value);
+  bool _internal_a_invalidated() const;
+  void _internal_set_a_invalidated(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse)
@@ -370,8 +370,8 @@ class LSRequestPrepareDatastoreResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr databasechildendpoint_;
-    bool invalidated_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_databasechildendpoint_;
+    bool a_invalidated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -488,19 +488,19 @@ class LSRequestPrepareObserverResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kObserverIdFieldNumber = 1,
+    kAObserverIdFieldNumber = 1,
   };
-  // required uint64 observerId = 1;
-  bool has_observerid() const;
+  // required uint64 a_observerId = 1;
+  bool has_a_observerid() const;
   private:
-  bool _internal_has_observerid() const;
+  bool _internal_has_a_observerid() const;
   public:
-  void clear_observerid();
-  uint64_t observerid() const;
-  void set_observerid(uint64_t value);
+  void clear_a_observerid();
+  uint64_t a_observerid() const;
+  void set_a_observerid(uint64_t value);
   private:
-  uint64_t _internal_observerid() const;
-  void _internal_set_observerid(uint64_t value);
+  uint64_t _internal_a_observerid() const;
+  void _internal_set_a_observerid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRequestPrepareObserverResponse)
@@ -513,7 +513,7 @@ class LSRequestPrepareObserverResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t observerid_;
+    uint64_t a_observerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -562,10 +562,10 @@ class LSRequestResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVLSRequestPreloadDatastoreResponse = 2,
-    kMVLSRequestPrepareDatastoreResponse = 3,
-    kMVLSRequestPrepareObserverResponse = 4,
+    kAMVnsresult = 1,
+    kAMVLSRequestPreloadDatastoreResponse = 2,
+    kAMVLSRequestPrepareDatastoreResponse = 3,
+    kAMVLSRequestPrepareObserverResponse = 4,
     CONTENT_NOT_SET = 0,
   };
 
@@ -638,92 +638,92 @@ class LSRequestResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVLSRequestPreloadDatastoreResponseFieldNumber = 2,
-    kMVLSRequestPrepareDatastoreResponseFieldNumber = 3,
-    kMVLSRequestPrepareObserverResponseFieldNumber = 4,
+    kAMVnsresultFieldNumber = 1,
+    kAMVLSRequestPreloadDatastoreResponseFieldNumber = 2,
+    kAMVLSRequestPrepareDatastoreResponseFieldNumber = 3,
+    kAMVLSRequestPrepareObserverResponseFieldNumber = 4,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse mVLSRequestPreloadDatastoreResponse = 2;
-  bool has_mvlsrequestpreloaddatastoreresponse() const;
+  // .protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse a_mVLSRequestPreloadDatastoreResponse = 2;
+  bool has_a_mvlsrequestpreloaddatastoreresponse() const;
   private:
-  bool _internal_has_mvlsrequestpreloaddatastoreresponse() const;
+  bool _internal_has_a_mvlsrequestpreloaddatastoreresponse() const;
   public:
-  void clear_mvlsrequestpreloaddatastoreresponse();
-  const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& mvlsrequestpreloaddatastoreresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* release_mvlsrequestpreloaddatastoreresponse();
-  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* mutable_mvlsrequestpreloaddatastoreresponse();
-  void set_allocated_mvlsrequestpreloaddatastoreresponse(::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* mvlsrequestpreloaddatastoreresponse);
+  void clear_a_mvlsrequestpreloaddatastoreresponse();
+  const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& a_mvlsrequestpreloaddatastoreresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* release_a_mvlsrequestpreloaddatastoreresponse();
+  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* mutable_a_mvlsrequestpreloaddatastoreresponse();
+  void set_allocated_a_mvlsrequestpreloaddatastoreresponse(::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* a_mvlsrequestpreloaddatastoreresponse);
   private:
-  const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& _internal_mvlsrequestpreloaddatastoreresponse() const;
-  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* _internal_mutable_mvlsrequestpreloaddatastoreresponse();
+  const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& _internal_a_mvlsrequestpreloaddatastoreresponse() const;
+  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* _internal_mutable_a_mvlsrequestpreloaddatastoreresponse();
   public:
-  void unsafe_arena_set_allocated_mvlsrequestpreloaddatastoreresponse(
-      ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* mvlsrequestpreloaddatastoreresponse);
-  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* unsafe_arena_release_mvlsrequestpreloaddatastoreresponse();
+  void unsafe_arena_set_allocated_a_mvlsrequestpreloaddatastoreresponse(
+      ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* a_mvlsrequestpreloaddatastoreresponse);
+  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* unsafe_arena_release_a_mvlsrequestpreloaddatastoreresponse();
 
-  // .protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse mVLSRequestPrepareDatastoreResponse = 3;
-  bool has_mvlsrequestpreparedatastoreresponse() const;
+  // .protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse a_mVLSRequestPrepareDatastoreResponse = 3;
+  bool has_a_mvlsrequestpreparedatastoreresponse() const;
   private:
-  bool _internal_has_mvlsrequestpreparedatastoreresponse() const;
+  bool _internal_has_a_mvlsrequestpreparedatastoreresponse() const;
   public:
-  void clear_mvlsrequestpreparedatastoreresponse();
-  const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& mvlsrequestpreparedatastoreresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* release_mvlsrequestpreparedatastoreresponse();
-  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* mutable_mvlsrequestpreparedatastoreresponse();
-  void set_allocated_mvlsrequestpreparedatastoreresponse(::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* mvlsrequestpreparedatastoreresponse);
+  void clear_a_mvlsrequestpreparedatastoreresponse();
+  const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& a_mvlsrequestpreparedatastoreresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* release_a_mvlsrequestpreparedatastoreresponse();
+  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* mutable_a_mvlsrequestpreparedatastoreresponse();
+  void set_allocated_a_mvlsrequestpreparedatastoreresponse(::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* a_mvlsrequestpreparedatastoreresponse);
   private:
-  const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& _internal_mvlsrequestpreparedatastoreresponse() const;
-  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* _internal_mutable_mvlsrequestpreparedatastoreresponse();
+  const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& _internal_a_mvlsrequestpreparedatastoreresponse() const;
+  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* _internal_mutable_a_mvlsrequestpreparedatastoreresponse();
   public:
-  void unsafe_arena_set_allocated_mvlsrequestpreparedatastoreresponse(
-      ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* mvlsrequestpreparedatastoreresponse);
-  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* unsafe_arena_release_mvlsrequestpreparedatastoreresponse();
+  void unsafe_arena_set_allocated_a_mvlsrequestpreparedatastoreresponse(
+      ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* a_mvlsrequestpreparedatastoreresponse);
+  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* unsafe_arena_release_a_mvlsrequestpreparedatastoreresponse();
 
-  // .protobuf.mozilla.dom.LSRequestPrepareObserverResponse mVLSRequestPrepareObserverResponse = 4;
-  bool has_mvlsrequestprepareobserverresponse() const;
+  // .protobuf.mozilla.dom.LSRequestPrepareObserverResponse a_mVLSRequestPrepareObserverResponse = 4;
+  bool has_a_mvlsrequestprepareobserverresponse() const;
   private:
-  bool _internal_has_mvlsrequestprepareobserverresponse() const;
+  bool _internal_has_a_mvlsrequestprepareobserverresponse() const;
   public:
-  void clear_mvlsrequestprepareobserverresponse();
-  const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& mvlsrequestprepareobserverresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* release_mvlsrequestprepareobserverresponse();
-  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* mutable_mvlsrequestprepareobserverresponse();
-  void set_allocated_mvlsrequestprepareobserverresponse(::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* mvlsrequestprepareobserverresponse);
+  void clear_a_mvlsrequestprepareobserverresponse();
+  const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& a_mvlsrequestprepareobserverresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* release_a_mvlsrequestprepareobserverresponse();
+  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* mutable_a_mvlsrequestprepareobserverresponse();
+  void set_allocated_a_mvlsrequestprepareobserverresponse(::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* a_mvlsrequestprepareobserverresponse);
   private:
-  const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& _internal_mvlsrequestprepareobserverresponse() const;
-  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* _internal_mutable_mvlsrequestprepareobserverresponse();
+  const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& _internal_a_mvlsrequestprepareobserverresponse() const;
+  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* _internal_mutable_a_mvlsrequestprepareobserverresponse();
   public:
-  void unsafe_arena_set_allocated_mvlsrequestprepareobserverresponse(
-      ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* mvlsrequestprepareobserverresponse);
-  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* unsafe_arena_release_mvlsrequestprepareobserverresponse();
+  void unsafe_arena_set_allocated_a_mvlsrequestprepareobserverresponse(
+      ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* a_mvlsrequestprepareobserverresponse);
+  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* unsafe_arena_release_a_mvlsrequestprepareobserverresponse();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRequestResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvlsrequestpreloaddatastoreresponse();
-  void set_has_mvlsrequestpreparedatastoreresponse();
-  void set_has_mvlsrequestprepareobserverresponse();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvlsrequestpreloaddatastoreresponse();
+  void set_has_a_mvlsrequestpreparedatastoreresponse();
+  void set_has_a_mvlsrequestprepareobserverresponse();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -735,10 +735,10 @@ class LSRequestResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* mvlsrequestpreloaddatastoreresponse_;
-      ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* mvlsrequestpreparedatastoreresponse_;
-      ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* mvlsrequestprepareobserverresponse_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* a_mvlsrequestpreloaddatastoreresponse_;
+      ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* a_mvlsrequestpreparedatastoreresponse_;
+      ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* a_mvlsrequestprepareobserverresponse_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -758,466 +758,466 @@ class LSRequestResponse final :
 #endif  // __GNUC__
 // LSRequestPreloadDatastoreResponse
 
-// required bool invalidated = 1;
-inline bool LSRequestPreloadDatastoreResponse::_internal_has_invalidated() const {
+// required bool a_invalidated = 1;
+inline bool LSRequestPreloadDatastoreResponse::_internal_has_a_invalidated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSRequestPreloadDatastoreResponse::has_invalidated() const {
-  return _internal_has_invalidated();
+inline bool LSRequestPreloadDatastoreResponse::has_a_invalidated() const {
+  return _internal_has_a_invalidated();
 }
-inline void LSRequestPreloadDatastoreResponse::clear_invalidated() {
-  _impl_.invalidated_ = false;
+inline void LSRequestPreloadDatastoreResponse::clear_a_invalidated() {
+  _impl_.a_invalidated_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool LSRequestPreloadDatastoreResponse::_internal_invalidated() const {
-  return _impl_.invalidated_;
+inline bool LSRequestPreloadDatastoreResponse::_internal_a_invalidated() const {
+  return _impl_.a_invalidated_;
 }
-inline bool LSRequestPreloadDatastoreResponse::invalidated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse.invalidated)
-  return _internal_invalidated();
+inline bool LSRequestPreloadDatastoreResponse::a_invalidated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse.a_invalidated)
+  return _internal_a_invalidated();
 }
-inline void LSRequestPreloadDatastoreResponse::_internal_set_invalidated(bool value) {
+inline void LSRequestPreloadDatastoreResponse::_internal_set_a_invalidated(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.invalidated_ = value;
+  _impl_.a_invalidated_ = value;
 }
-inline void LSRequestPreloadDatastoreResponse::set_invalidated(bool value) {
-  _internal_set_invalidated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse.invalidated)
+inline void LSRequestPreloadDatastoreResponse::set_a_invalidated(bool value) {
+  _internal_set_a_invalidated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse.a_invalidated)
 }
 
 // -------------------------------------------------------------------
 
 // LSRequestPrepareDatastoreResponse
 
-// required bytes databaseChildEndpoint = 1;
-inline bool LSRequestPrepareDatastoreResponse::_internal_has_databasechildendpoint() const {
+// required bytes a_databaseChildEndpoint = 1;
+inline bool LSRequestPrepareDatastoreResponse::_internal_has_a_databasechildendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSRequestPrepareDatastoreResponse::has_databasechildendpoint() const {
-  return _internal_has_databasechildendpoint();
+inline bool LSRequestPrepareDatastoreResponse::has_a_databasechildendpoint() const {
+  return _internal_has_a_databasechildendpoint();
 }
-inline void LSRequestPrepareDatastoreResponse::clear_databasechildendpoint() {
-  _impl_.databasechildendpoint_.ClearToEmpty();
+inline void LSRequestPrepareDatastoreResponse::clear_a_databasechildendpoint() {
+  _impl_.a_databasechildendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& LSRequestPrepareDatastoreResponse::databasechildendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.databaseChildEndpoint)
-  return _internal_databasechildendpoint();
+inline const std::string& LSRequestPrepareDatastoreResponse::a_databasechildendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
+  return _internal_a_databasechildendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSRequestPrepareDatastoreResponse::set_databasechildendpoint(ArgT0&& arg0, ArgT... args) {
+void LSRequestPrepareDatastoreResponse::set_a_databasechildendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.databasechildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.databaseChildEndpoint)
+ _impl_.a_databasechildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
 }
-inline std::string* LSRequestPrepareDatastoreResponse::mutable_databasechildendpoint() {
-  std::string* _s = _internal_mutable_databasechildendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.databaseChildEndpoint)
+inline std::string* LSRequestPrepareDatastoreResponse::mutable_a_databasechildendpoint() {
+  std::string* _s = _internal_mutable_a_databasechildendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
   return _s;
 }
-inline const std::string& LSRequestPrepareDatastoreResponse::_internal_databasechildendpoint() const {
-  return _impl_.databasechildendpoint_.Get();
+inline const std::string& LSRequestPrepareDatastoreResponse::_internal_a_databasechildendpoint() const {
+  return _impl_.a_databasechildendpoint_.Get();
 }
-inline void LSRequestPrepareDatastoreResponse::_internal_set_databasechildendpoint(const std::string& value) {
+inline void LSRequestPrepareDatastoreResponse::_internal_set_a_databasechildendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.databasechildendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_databasechildendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSRequestPrepareDatastoreResponse::_internal_mutable_databasechildendpoint() {
+inline std::string* LSRequestPrepareDatastoreResponse::_internal_mutable_a_databasechildendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.databasechildendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_databasechildendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSRequestPrepareDatastoreResponse::release_databasechildendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.databaseChildEndpoint)
-  if (!_internal_has_databasechildendpoint()) {
+inline std::string* LSRequestPrepareDatastoreResponse::release_a_databasechildendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
+  if (!_internal_has_a_databasechildendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.databasechildendpoint_.Release();
+  auto* p = _impl_.a_databasechildendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.databasechildendpoint_.IsDefault()) {
-    _impl_.databasechildendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_databasechildendpoint_.IsDefault()) {
+    _impl_.a_databasechildendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSRequestPrepareDatastoreResponse::set_allocated_databasechildendpoint(std::string* databasechildendpoint) {
-  if (databasechildendpoint != nullptr) {
+inline void LSRequestPrepareDatastoreResponse::set_allocated_a_databasechildendpoint(std::string* a_databasechildendpoint) {
+  if (a_databasechildendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.databasechildendpoint_.SetAllocated(databasechildendpoint, GetArenaForAllocation());
+  _impl_.a_databasechildendpoint_.SetAllocated(a_databasechildendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.databasechildendpoint_.IsDefault()) {
-    _impl_.databasechildendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_databasechildendpoint_.IsDefault()) {
+    _impl_.a_databasechildendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.databaseChildEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_databaseChildEndpoint)
 }
 
-// required bool invalidated = 2;
-inline bool LSRequestPrepareDatastoreResponse::_internal_has_invalidated() const {
+// required bool a_invalidated = 2;
+inline bool LSRequestPrepareDatastoreResponse::_internal_has_a_invalidated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LSRequestPrepareDatastoreResponse::has_invalidated() const {
-  return _internal_has_invalidated();
+inline bool LSRequestPrepareDatastoreResponse::has_a_invalidated() const {
+  return _internal_has_a_invalidated();
 }
-inline void LSRequestPrepareDatastoreResponse::clear_invalidated() {
-  _impl_.invalidated_ = false;
+inline void LSRequestPrepareDatastoreResponse::clear_a_invalidated() {
+  _impl_.a_invalidated_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool LSRequestPrepareDatastoreResponse::_internal_invalidated() const {
-  return _impl_.invalidated_;
+inline bool LSRequestPrepareDatastoreResponse::_internal_a_invalidated() const {
+  return _impl_.a_invalidated_;
 }
-inline bool LSRequestPrepareDatastoreResponse::invalidated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.invalidated)
-  return _internal_invalidated();
+inline bool LSRequestPrepareDatastoreResponse::a_invalidated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_invalidated)
+  return _internal_a_invalidated();
 }
-inline void LSRequestPrepareDatastoreResponse::_internal_set_invalidated(bool value) {
+inline void LSRequestPrepareDatastoreResponse::_internal_set_a_invalidated(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.invalidated_ = value;
+  _impl_.a_invalidated_ = value;
 }
-inline void LSRequestPrepareDatastoreResponse::set_invalidated(bool value) {
-  _internal_set_invalidated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.invalidated)
+inline void LSRequestPrepareDatastoreResponse::set_a_invalidated(bool value) {
+  _internal_set_a_invalidated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse.a_invalidated)
 }
 
 // -------------------------------------------------------------------
 
 // LSRequestPrepareObserverResponse
 
-// required uint64 observerId = 1;
-inline bool LSRequestPrepareObserverResponse::_internal_has_observerid() const {
+// required uint64 a_observerId = 1;
+inline bool LSRequestPrepareObserverResponse::_internal_has_a_observerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSRequestPrepareObserverResponse::has_observerid() const {
-  return _internal_has_observerid();
+inline bool LSRequestPrepareObserverResponse::has_a_observerid() const {
+  return _internal_has_a_observerid();
 }
-inline void LSRequestPrepareObserverResponse::clear_observerid() {
-  _impl_.observerid_ = uint64_t{0u};
+inline void LSRequestPrepareObserverResponse::clear_a_observerid() {
+  _impl_.a_observerid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t LSRequestPrepareObserverResponse::_internal_observerid() const {
-  return _impl_.observerid_;
+inline uint64_t LSRequestPrepareObserverResponse::_internal_a_observerid() const {
+  return _impl_.a_observerid_;
 }
-inline uint64_t LSRequestPrepareObserverResponse::observerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareObserverResponse.observerId)
-  return _internal_observerid();
+inline uint64_t LSRequestPrepareObserverResponse::a_observerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestPrepareObserverResponse.a_observerId)
+  return _internal_a_observerid();
 }
-inline void LSRequestPrepareObserverResponse::_internal_set_observerid(uint64_t value) {
+inline void LSRequestPrepareObserverResponse::_internal_set_a_observerid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.observerid_ = value;
+  _impl_.a_observerid_ = value;
 }
-inline void LSRequestPrepareObserverResponse::set_observerid(uint64_t value) {
-  _internal_set_observerid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareObserverResponse.observerId)
+inline void LSRequestPrepareObserverResponse::set_a_observerid(uint64_t value) {
+  _internal_set_a_observerid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestPrepareObserverResponse.a_observerId)
 }
 
 // -------------------------------------------------------------------
 
 // LSRequestResponse
 
-// bytes mVnsresult = 1;
-inline bool LSRequestResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool LSRequestResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool LSRequestResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool LSRequestResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void LSRequestResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void LSRequestResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void LSRequestResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void LSRequestResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& LSRequestResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& LSRequestResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void LSRequestResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void LSRequestResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestResponse.a_mVnsresult)
 }
-inline std::string* LSRequestResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.mVnsresult)
+inline std::string* LSRequestResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& LSRequestResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& LSRequestResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void LSRequestResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void LSRequestResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSRequestResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* LSRequestResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* LSRequestResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* LSRequestResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void LSRequestResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void LSRequestResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse mVLSRequestPreloadDatastoreResponse = 2;
-inline bool LSRequestResponse::_internal_has_mvlsrequestpreloaddatastoreresponse() const {
-  return content_case() == kMVLSRequestPreloadDatastoreResponse;
+// .protobuf.mozilla.dom.LSRequestPreloadDatastoreResponse a_mVLSRequestPreloadDatastoreResponse = 2;
+inline bool LSRequestResponse::_internal_has_a_mvlsrequestpreloaddatastoreresponse() const {
+  return content_case() == kAMVLSRequestPreloadDatastoreResponse;
 }
-inline bool LSRequestResponse::has_mvlsrequestpreloaddatastoreresponse() const {
-  return _internal_has_mvlsrequestpreloaddatastoreresponse();
+inline bool LSRequestResponse::has_a_mvlsrequestpreloaddatastoreresponse() const {
+  return _internal_has_a_mvlsrequestpreloaddatastoreresponse();
 }
-inline void LSRequestResponse::set_has_mvlsrequestpreloaddatastoreresponse() {
-  _impl_._oneof_case_[0] = kMVLSRequestPreloadDatastoreResponse;
+inline void LSRequestResponse::set_has_a_mvlsrequestpreloaddatastoreresponse() {
+  _impl_._oneof_case_[0] = kAMVLSRequestPreloadDatastoreResponse;
 }
-inline void LSRequestResponse::clear_mvlsrequestpreloaddatastoreresponse() {
-  if (_internal_has_mvlsrequestpreloaddatastoreresponse()) {
+inline void LSRequestResponse::clear_a_mvlsrequestpreloaddatastoreresponse() {
+  if (_internal_has_a_mvlsrequestpreloaddatastoreresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsrequestpreloaddatastoreresponse_;
+      delete _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::release_mvlsrequestpreloaddatastoreresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPreloadDatastoreResponse)
-  if (_internal_has_mvlsrequestpreloaddatastoreresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::release_a_mvlsrequestpreloaddatastoreresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPreloadDatastoreResponse)
+  if (_internal_has_a_mvlsrequestpreloaddatastoreresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* temp = _impl_.content_.mvlsrequestpreloaddatastoreresponse_;
+    ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* temp = _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsrequestpreloaddatastoreresponse_ = nullptr;
+    _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& LSRequestResponse::_internal_mvlsrequestpreloaddatastoreresponse() const {
-  return _internal_has_mvlsrequestpreloaddatastoreresponse()
-      ? *_impl_.content_.mvlsrequestpreloaddatastoreresponse_
+inline const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& LSRequestResponse::_internal_a_mvlsrequestpreloaddatastoreresponse() const {
+  return _internal_has_a_mvlsrequestpreloaddatastoreresponse()
+      ? *_impl_.content_.a_mvlsrequestpreloaddatastoreresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse&>(::protobuf::mozilla::dom::_LSRequestPreloadDatastoreResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& LSRequestResponse::mvlsrequestpreloaddatastoreresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPreloadDatastoreResponse)
-  return _internal_mvlsrequestpreloaddatastoreresponse();
+inline const ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse& LSRequestResponse::a_mvlsrequestpreloaddatastoreresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPreloadDatastoreResponse)
+  return _internal_a_mvlsrequestpreloaddatastoreresponse();
 }
-inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::unsafe_arena_release_mvlsrequestpreloaddatastoreresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPreloadDatastoreResponse)
-  if (_internal_has_mvlsrequestpreloaddatastoreresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::unsafe_arena_release_a_mvlsrequestpreloaddatastoreresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPreloadDatastoreResponse)
+  if (_internal_has_a_mvlsrequestpreloaddatastoreresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* temp = _impl_.content_.mvlsrequestpreloaddatastoreresponse_;
-    _impl_.content_.mvlsrequestpreloaddatastoreresponse_ = nullptr;
+    ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* temp = _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_;
+    _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSRequestResponse::unsafe_arena_set_allocated_mvlsrequestpreloaddatastoreresponse(::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* mvlsrequestpreloaddatastoreresponse) {
+inline void LSRequestResponse::unsafe_arena_set_allocated_a_mvlsrequestpreloaddatastoreresponse(::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* a_mvlsrequestpreloaddatastoreresponse) {
   clear_content();
-  if (mvlsrequestpreloaddatastoreresponse) {
-    set_has_mvlsrequestpreloaddatastoreresponse();
-    _impl_.content_.mvlsrequestpreloaddatastoreresponse_ = mvlsrequestpreloaddatastoreresponse;
+  if (a_mvlsrequestpreloaddatastoreresponse) {
+    set_has_a_mvlsrequestpreloaddatastoreresponse();
+    _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_ = a_mvlsrequestpreloaddatastoreresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPreloadDatastoreResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPreloadDatastoreResponse)
 }
-inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::_internal_mutable_mvlsrequestpreloaddatastoreresponse() {
-  if (!_internal_has_mvlsrequestpreloaddatastoreresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::_internal_mutable_a_mvlsrequestpreloaddatastoreresponse() {
+  if (!_internal_has_a_mvlsrequestpreloaddatastoreresponse()) {
     clear_content();
-    set_has_mvlsrequestpreloaddatastoreresponse();
-    _impl_.content_.mvlsrequestpreloaddatastoreresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse >(GetArenaForAllocation());
+    set_has_a_mvlsrequestpreloaddatastoreresponse();
+    _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsrequestpreloaddatastoreresponse_;
+  return _impl_.content_.a_mvlsrequestpreloaddatastoreresponse_;
 }
-inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::mutable_mvlsrequestpreloaddatastoreresponse() {
-  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* _msg = _internal_mutable_mvlsrequestpreloaddatastoreresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPreloadDatastoreResponse)
+inline ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* LSRequestResponse::mutable_a_mvlsrequestpreloaddatastoreresponse() {
+  ::protobuf::mozilla::dom::LSRequestPreloadDatastoreResponse* _msg = _internal_mutable_a_mvlsrequestpreloaddatastoreresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPreloadDatastoreResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse mVLSRequestPrepareDatastoreResponse = 3;
-inline bool LSRequestResponse::_internal_has_mvlsrequestpreparedatastoreresponse() const {
-  return content_case() == kMVLSRequestPrepareDatastoreResponse;
+// .protobuf.mozilla.dom.LSRequestPrepareDatastoreResponse a_mVLSRequestPrepareDatastoreResponse = 3;
+inline bool LSRequestResponse::_internal_has_a_mvlsrequestpreparedatastoreresponse() const {
+  return content_case() == kAMVLSRequestPrepareDatastoreResponse;
 }
-inline bool LSRequestResponse::has_mvlsrequestpreparedatastoreresponse() const {
-  return _internal_has_mvlsrequestpreparedatastoreresponse();
+inline bool LSRequestResponse::has_a_mvlsrequestpreparedatastoreresponse() const {
+  return _internal_has_a_mvlsrequestpreparedatastoreresponse();
 }
-inline void LSRequestResponse::set_has_mvlsrequestpreparedatastoreresponse() {
-  _impl_._oneof_case_[0] = kMVLSRequestPrepareDatastoreResponse;
+inline void LSRequestResponse::set_has_a_mvlsrequestpreparedatastoreresponse() {
+  _impl_._oneof_case_[0] = kAMVLSRequestPrepareDatastoreResponse;
 }
-inline void LSRequestResponse::clear_mvlsrequestpreparedatastoreresponse() {
-  if (_internal_has_mvlsrequestpreparedatastoreresponse()) {
+inline void LSRequestResponse::clear_a_mvlsrequestpreparedatastoreresponse() {
+  if (_internal_has_a_mvlsrequestpreparedatastoreresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsrequestpreparedatastoreresponse_;
+      delete _impl_.content_.a_mvlsrequestpreparedatastoreresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::release_mvlsrequestpreparedatastoreresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareDatastoreResponse)
-  if (_internal_has_mvlsrequestpreparedatastoreresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::release_a_mvlsrequestpreparedatastoreresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareDatastoreResponse)
+  if (_internal_has_a_mvlsrequestpreparedatastoreresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* temp = _impl_.content_.mvlsrequestpreparedatastoreresponse_;
+    ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* temp = _impl_.content_.a_mvlsrequestpreparedatastoreresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsrequestpreparedatastoreresponse_ = nullptr;
+    _impl_.content_.a_mvlsrequestpreparedatastoreresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& LSRequestResponse::_internal_mvlsrequestpreparedatastoreresponse() const {
-  return _internal_has_mvlsrequestpreparedatastoreresponse()
-      ? *_impl_.content_.mvlsrequestpreparedatastoreresponse_
+inline const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& LSRequestResponse::_internal_a_mvlsrequestpreparedatastoreresponse() const {
+  return _internal_has_a_mvlsrequestpreparedatastoreresponse()
+      ? *_impl_.content_.a_mvlsrequestpreparedatastoreresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse&>(::protobuf::mozilla::dom::_LSRequestPrepareDatastoreResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& LSRequestResponse::mvlsrequestpreparedatastoreresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareDatastoreResponse)
-  return _internal_mvlsrequestpreparedatastoreresponse();
+inline const ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse& LSRequestResponse::a_mvlsrequestpreparedatastoreresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareDatastoreResponse)
+  return _internal_a_mvlsrequestpreparedatastoreresponse();
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::unsafe_arena_release_mvlsrequestpreparedatastoreresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareDatastoreResponse)
-  if (_internal_has_mvlsrequestpreparedatastoreresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::unsafe_arena_release_a_mvlsrequestpreparedatastoreresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareDatastoreResponse)
+  if (_internal_has_a_mvlsrequestpreparedatastoreresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* temp = _impl_.content_.mvlsrequestpreparedatastoreresponse_;
-    _impl_.content_.mvlsrequestpreparedatastoreresponse_ = nullptr;
+    ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* temp = _impl_.content_.a_mvlsrequestpreparedatastoreresponse_;
+    _impl_.content_.a_mvlsrequestpreparedatastoreresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSRequestResponse::unsafe_arena_set_allocated_mvlsrequestpreparedatastoreresponse(::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* mvlsrequestpreparedatastoreresponse) {
+inline void LSRequestResponse::unsafe_arena_set_allocated_a_mvlsrequestpreparedatastoreresponse(::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* a_mvlsrequestpreparedatastoreresponse) {
   clear_content();
-  if (mvlsrequestpreparedatastoreresponse) {
-    set_has_mvlsrequestpreparedatastoreresponse();
-    _impl_.content_.mvlsrequestpreparedatastoreresponse_ = mvlsrequestpreparedatastoreresponse;
+  if (a_mvlsrequestpreparedatastoreresponse) {
+    set_has_a_mvlsrequestpreparedatastoreresponse();
+    _impl_.content_.a_mvlsrequestpreparedatastoreresponse_ = a_mvlsrequestpreparedatastoreresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareDatastoreResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareDatastoreResponse)
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::_internal_mutable_mvlsrequestpreparedatastoreresponse() {
-  if (!_internal_has_mvlsrequestpreparedatastoreresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::_internal_mutable_a_mvlsrequestpreparedatastoreresponse() {
+  if (!_internal_has_a_mvlsrequestpreparedatastoreresponse()) {
     clear_content();
-    set_has_mvlsrequestpreparedatastoreresponse();
-    _impl_.content_.mvlsrequestpreparedatastoreresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse >(GetArenaForAllocation());
+    set_has_a_mvlsrequestpreparedatastoreresponse();
+    _impl_.content_.a_mvlsrequestpreparedatastoreresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsrequestpreparedatastoreresponse_;
+  return _impl_.content_.a_mvlsrequestpreparedatastoreresponse_;
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::mutable_mvlsrequestpreparedatastoreresponse() {
-  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* _msg = _internal_mutable_mvlsrequestpreparedatastoreresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareDatastoreResponse)
+inline ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* LSRequestResponse::mutable_a_mvlsrequestpreparedatastoreresponse() {
+  ::protobuf::mozilla::dom::LSRequestPrepareDatastoreResponse* _msg = _internal_mutable_a_mvlsrequestpreparedatastoreresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareDatastoreResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSRequestPrepareObserverResponse mVLSRequestPrepareObserverResponse = 4;
-inline bool LSRequestResponse::_internal_has_mvlsrequestprepareobserverresponse() const {
-  return content_case() == kMVLSRequestPrepareObserverResponse;
+// .protobuf.mozilla.dom.LSRequestPrepareObserverResponse a_mVLSRequestPrepareObserverResponse = 4;
+inline bool LSRequestResponse::_internal_has_a_mvlsrequestprepareobserverresponse() const {
+  return content_case() == kAMVLSRequestPrepareObserverResponse;
 }
-inline bool LSRequestResponse::has_mvlsrequestprepareobserverresponse() const {
-  return _internal_has_mvlsrequestprepareobserverresponse();
+inline bool LSRequestResponse::has_a_mvlsrequestprepareobserverresponse() const {
+  return _internal_has_a_mvlsrequestprepareobserverresponse();
 }
-inline void LSRequestResponse::set_has_mvlsrequestprepareobserverresponse() {
-  _impl_._oneof_case_[0] = kMVLSRequestPrepareObserverResponse;
+inline void LSRequestResponse::set_has_a_mvlsrequestprepareobserverresponse() {
+  _impl_._oneof_case_[0] = kAMVLSRequestPrepareObserverResponse;
 }
-inline void LSRequestResponse::clear_mvlsrequestprepareobserverresponse() {
-  if (_internal_has_mvlsrequestprepareobserverresponse()) {
+inline void LSRequestResponse::clear_a_mvlsrequestprepareobserverresponse() {
+  if (_internal_has_a_mvlsrequestprepareobserverresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsrequestprepareobserverresponse_;
+      delete _impl_.content_.a_mvlsrequestprepareobserverresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::release_mvlsrequestprepareobserverresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareObserverResponse)
-  if (_internal_has_mvlsrequestprepareobserverresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::release_a_mvlsrequestprepareobserverresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareObserverResponse)
+  if (_internal_has_a_mvlsrequestprepareobserverresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* temp = _impl_.content_.mvlsrequestprepareobserverresponse_;
+    ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* temp = _impl_.content_.a_mvlsrequestprepareobserverresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsrequestprepareobserverresponse_ = nullptr;
+    _impl_.content_.a_mvlsrequestprepareobserverresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& LSRequestResponse::_internal_mvlsrequestprepareobserverresponse() const {
-  return _internal_has_mvlsrequestprepareobserverresponse()
-      ? *_impl_.content_.mvlsrequestprepareobserverresponse_
+inline const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& LSRequestResponse::_internal_a_mvlsrequestprepareobserverresponse() const {
+  return _internal_has_a_mvlsrequestprepareobserverresponse()
+      ? *_impl_.content_.a_mvlsrequestprepareobserverresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse&>(::protobuf::mozilla::dom::_LSRequestPrepareObserverResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& LSRequestResponse::mvlsrequestprepareobserverresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareObserverResponse)
-  return _internal_mvlsrequestprepareobserverresponse();
+inline const ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse& LSRequestResponse::a_mvlsrequestprepareobserverresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareObserverResponse)
+  return _internal_a_mvlsrequestprepareobserverresponse();
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::unsafe_arena_release_mvlsrequestprepareobserverresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareObserverResponse)
-  if (_internal_has_mvlsrequestprepareobserverresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::unsafe_arena_release_a_mvlsrequestprepareobserverresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareObserverResponse)
+  if (_internal_has_a_mvlsrequestprepareobserverresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* temp = _impl_.content_.mvlsrequestprepareobserverresponse_;
-    _impl_.content_.mvlsrequestprepareobserverresponse_ = nullptr;
+    ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* temp = _impl_.content_.a_mvlsrequestprepareobserverresponse_;
+    _impl_.content_.a_mvlsrequestprepareobserverresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSRequestResponse::unsafe_arena_set_allocated_mvlsrequestprepareobserverresponse(::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* mvlsrequestprepareobserverresponse) {
+inline void LSRequestResponse::unsafe_arena_set_allocated_a_mvlsrequestprepareobserverresponse(::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* a_mvlsrequestprepareobserverresponse) {
   clear_content();
-  if (mvlsrequestprepareobserverresponse) {
-    set_has_mvlsrequestprepareobserverresponse();
-    _impl_.content_.mvlsrequestprepareobserverresponse_ = mvlsrequestprepareobserverresponse;
+  if (a_mvlsrequestprepareobserverresponse) {
+    set_has_a_mvlsrequestprepareobserverresponse();
+    _impl_.content_.a_mvlsrequestprepareobserverresponse_ = a_mvlsrequestprepareobserverresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareObserverResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareObserverResponse)
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::_internal_mutable_mvlsrequestprepareobserverresponse() {
-  if (!_internal_has_mvlsrequestprepareobserverresponse()) {
+inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::_internal_mutable_a_mvlsrequestprepareobserverresponse() {
+  if (!_internal_has_a_mvlsrequestprepareobserverresponse()) {
     clear_content();
-    set_has_mvlsrequestprepareobserverresponse();
-    _impl_.content_.mvlsrequestprepareobserverresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse >(GetArenaForAllocation());
+    set_has_a_mvlsrequestprepareobserverresponse();
+    _impl_.content_.a_mvlsrequestprepareobserverresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsrequestprepareobserverresponse_;
+  return _impl_.content_.a_mvlsrequestprepareobserverresponse_;
 }
-inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::mutable_mvlsrequestprepareobserverresponse() {
-  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* _msg = _internal_mutable_mvlsrequestprepareobserverresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.mVLSRequestPrepareObserverResponse)
+inline ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* LSRequestResponse::mutable_a_mvlsrequestprepareobserverresponse() {
+  ::protobuf::mozilla::dom::LSRequestPrepareObserverResponse* _msg = _internal_mutable_a_mvlsrequestprepareobserverresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRequestResponse.a_mVLSRequestPrepareObserverResponse)
   return _msg;
 }
 

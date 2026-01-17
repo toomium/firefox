@@ -437,38 +437,38 @@ class Msg_NotifyResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChoicesFieldNumber = 2,
-    kAllowFieldNumber = 1,
+    kAChoicesFieldNumber = 2,
+    kAAllowFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.PermissionChoice choices = 2;
-  int choices_size() const;
+  // repeated .protobuf.mozilla.dom.PermissionChoice a_choices = 2;
+  int a_choices_size() const;
   private:
-  int _internal_choices_size() const;
+  int _internal_a_choices_size() const;
   public:
-  void clear_choices();
-  ::protobuf::mozilla::dom::PermissionChoice* mutable_choices(int index);
+  void clear_a_choices();
+  ::protobuf::mozilla::dom::PermissionChoice* mutable_a_choices(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice >*
-      mutable_choices();
+      mutable_a_choices();
   private:
-  const ::protobuf::mozilla::dom::PermissionChoice& _internal_choices(int index) const;
-  ::protobuf::mozilla::dom::PermissionChoice* _internal_add_choices();
+  const ::protobuf::mozilla::dom::PermissionChoice& _internal_a_choices(int index) const;
+  ::protobuf::mozilla::dom::PermissionChoice* _internal_add_a_choices();
   public:
-  const ::protobuf::mozilla::dom::PermissionChoice& choices(int index) const;
-  ::protobuf::mozilla::dom::PermissionChoice* add_choices();
+  const ::protobuf::mozilla::dom::PermissionChoice& a_choices(int index) const;
+  ::protobuf::mozilla::dom::PermissionChoice* add_a_choices();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice >&
-      choices() const;
+      a_choices() const;
 
-  // required bool allow = 1;
-  bool has_allow() const;
+  // required bool a_allow = 1;
+  bool has_a_allow() const;
   private:
-  bool _internal_has_allow() const;
+  bool _internal_has_a_allow() const;
   public:
-  void clear_allow();
-  bool allow() const;
-  void set_allow(bool value);
+  void clear_a_allow();
+  bool a_allow() const;
+  void set_a_allow(bool value);
   private:
-  bool _internal_allow() const;
-  void _internal_set_allow(bool value);
+  bool _internal_a_allow() const;
+  void _internal_set_a_allow(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult)
@@ -481,8 +481,8 @@ class Msg_NotifyResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice > choices_;
-    bool allow_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice > a_choices_;
+    bool a_allow_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContentPermissionRequest_2eproto;
@@ -754,69 +754,69 @@ class Reply___delete__ final :
 
 // Msg_NotifyResult
 
-// required bool allow = 1;
-inline bool Msg_NotifyResult::_internal_has_allow() const {
+// required bool a_allow = 1;
+inline bool Msg_NotifyResult::_internal_has_a_allow() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyResult::has_allow() const {
-  return _internal_has_allow();
+inline bool Msg_NotifyResult::has_a_allow() const {
+  return _internal_has_a_allow();
 }
-inline void Msg_NotifyResult::clear_allow() {
-  _impl_.allow_ = false;
+inline void Msg_NotifyResult::clear_a_allow() {
+  _impl_.a_allow_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_NotifyResult::_internal_allow() const {
-  return _impl_.allow_;
+inline bool Msg_NotifyResult::_internal_a_allow() const {
+  return _impl_.a_allow_;
 }
-inline bool Msg_NotifyResult::allow() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.allow)
-  return _internal_allow();
+inline bool Msg_NotifyResult::a_allow() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_allow)
+  return _internal_a_allow();
 }
-inline void Msg_NotifyResult::_internal_set_allow(bool value) {
+inline void Msg_NotifyResult::_internal_set_a_allow(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.allow_ = value;
+  _impl_.a_allow_ = value;
 }
-inline void Msg_NotifyResult::set_allow(bool value) {
-  _internal_set_allow(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.allow)
+inline void Msg_NotifyResult::set_a_allow(bool value) {
+  _internal_set_a_allow(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_allow)
 }
 
-// repeated .protobuf.mozilla.dom.PermissionChoice choices = 2;
-inline int Msg_NotifyResult::_internal_choices_size() const {
-  return _impl_.choices_.size();
+// repeated .protobuf.mozilla.dom.PermissionChoice a_choices = 2;
+inline int Msg_NotifyResult::_internal_a_choices_size() const {
+  return _impl_.a_choices_.size();
 }
-inline int Msg_NotifyResult::choices_size() const {
-  return _internal_choices_size();
+inline int Msg_NotifyResult::a_choices_size() const {
+  return _internal_a_choices_size();
 }
-inline ::protobuf::mozilla::dom::PermissionChoice* Msg_NotifyResult::mutable_choices(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.choices)
-  return _impl_.choices_.Mutable(index);
+inline ::protobuf::mozilla::dom::PermissionChoice* Msg_NotifyResult::mutable_a_choices(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_choices)
+  return _impl_.a_choices_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice >*
-Msg_NotifyResult::mutable_choices() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.choices)
-  return &_impl_.choices_;
+Msg_NotifyResult::mutable_a_choices() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_choices)
+  return &_impl_.a_choices_;
 }
-inline const ::protobuf::mozilla::dom::PermissionChoice& Msg_NotifyResult::_internal_choices(int index) const {
-  return _impl_.choices_.Get(index);
+inline const ::protobuf::mozilla::dom::PermissionChoice& Msg_NotifyResult::_internal_a_choices(int index) const {
+  return _impl_.a_choices_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::PermissionChoice& Msg_NotifyResult::choices(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.choices)
-  return _internal_choices(index);
+inline const ::protobuf::mozilla::dom::PermissionChoice& Msg_NotifyResult::a_choices(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_choices)
+  return _internal_a_choices(index);
 }
-inline ::protobuf::mozilla::dom::PermissionChoice* Msg_NotifyResult::_internal_add_choices() {
-  return _impl_.choices_.Add();
+inline ::protobuf::mozilla::dom::PermissionChoice* Msg_NotifyResult::_internal_add_a_choices() {
+  return _impl_.a_choices_.Add();
 }
-inline ::protobuf::mozilla::dom::PermissionChoice* Msg_NotifyResult::add_choices() {
-  ::protobuf::mozilla::dom::PermissionChoice* _add = _internal_add_choices();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.choices)
+inline ::protobuf::mozilla::dom::PermissionChoice* Msg_NotifyResult::add_a_choices() {
+  ::protobuf::mozilla::dom::PermissionChoice* _add = _internal_add_a_choices();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_choices)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionChoice >&
-Msg_NotifyResult::choices() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.choices)
-  return _impl_.choices_;
+Msg_NotifyResult::a_choices() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PContentPermissionRequest.Msg_NotifyResult.a_choices)
+  return _impl_.a_choices_;
 }
 
 // -------------------------------------------------------------------

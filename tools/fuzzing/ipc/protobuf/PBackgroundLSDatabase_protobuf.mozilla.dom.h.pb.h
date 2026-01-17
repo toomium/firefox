@@ -170,127 +170,127 @@ class LSSnapshotInitInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kItemInfosFieldNumber = 2,
-    kLoadStateFieldNumber = 6,
-    kUsageFieldNumber = 4,
-    kTotalLengthFieldNumber = 3,
-    kAddKeyToUnknownItemsFieldNumber = 1,
-    kHasOtherProcessDatabasesFieldNumber = 7,
-    kHasOtherProcessObserversFieldNumber = 8,
-    kPeakUsageFieldNumber = 5,
+    kAItemInfosFieldNumber = 2,
+    kALoadStateFieldNumber = 6,
+    kAUsageFieldNumber = 4,
+    kATotalLengthFieldNumber = 3,
+    kAAddKeyToUnknownItemsFieldNumber = 1,
+    kAHasOtherProcessDatabasesFieldNumber = 7,
+    kAHasOtherProcessObserversFieldNumber = 8,
+    kAPeakUsageFieldNumber = 5,
   };
-  // repeated .protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
-  int iteminfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
+  int a_iteminfos_size() const;
   private:
-  int _internal_iteminfos_size() const;
+  int _internal_a_iteminfos_size() const;
   public:
-  void clear_iteminfos();
-  ::protobuf::mozilla::dom::LSItemInfo* mutable_iteminfos(int index);
+  void clear_a_iteminfos();
+  ::protobuf::mozilla::dom::LSItemInfo* mutable_a_iteminfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >*
-      mutable_iteminfos();
+      mutable_a_iteminfos();
   private:
-  const ::protobuf::mozilla::dom::LSItemInfo& _internal_iteminfos(int index) const;
-  ::protobuf::mozilla::dom::LSItemInfo* _internal_add_iteminfos();
+  const ::protobuf::mozilla::dom::LSItemInfo& _internal_a_iteminfos(int index) const;
+  ::protobuf::mozilla::dom::LSItemInfo* _internal_add_a_iteminfos();
   public:
-  const ::protobuf::mozilla::dom::LSItemInfo& iteminfos(int index) const;
-  ::protobuf::mozilla::dom::LSItemInfo* add_iteminfos();
+  const ::protobuf::mozilla::dom::LSItemInfo& a_iteminfos(int index) const;
+  ::protobuf::mozilla::dom::LSItemInfo* add_a_iteminfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
-      iteminfos() const;
+      a_iteminfos() const;
 
-  // required bytes loadState = 6;
-  bool has_loadstate() const;
+  // required bytes a_loadState = 6;
+  bool has_a_loadstate() const;
   private:
-  bool _internal_has_loadstate() const;
+  bool _internal_has_a_loadstate() const;
   public:
-  void clear_loadstate();
-  const std::string& loadstate() const;
+  void clear_a_loadstate();
+  const std::string& a_loadstate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_loadstate(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_loadstate();
-  PROTOBUF_NODISCARD std::string* release_loadstate();
-  void set_allocated_loadstate(std::string* loadstate);
+  void set_a_loadstate(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_loadstate();
+  PROTOBUF_NODISCARD std::string* release_a_loadstate();
+  void set_allocated_a_loadstate(std::string* a_loadstate);
   private:
-  const std::string& _internal_loadstate() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_loadstate(const std::string& value);
-  std::string* _internal_mutable_loadstate();
+  const std::string& _internal_a_loadstate() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_loadstate(const std::string& value);
+  std::string* _internal_mutable_a_loadstate();
   public:
 
-  // required sint64 usage = 4;
-  bool has_usage() const;
+  // required sint64 a_usage = 4;
+  bool has_a_usage() const;
   private:
-  bool _internal_has_usage() const;
+  bool _internal_has_a_usage() const;
   public:
-  void clear_usage();
-  int64_t usage() const;
-  void set_usage(int64_t value);
+  void clear_a_usage();
+  int64_t a_usage() const;
+  void set_a_usage(int64_t value);
   private:
-  int64_t _internal_usage() const;
-  void _internal_set_usage(int64_t value);
-  public:
-
-  // required uint32 totalLength = 3;
-  bool has_totallength() const;
-  private:
-  bool _internal_has_totallength() const;
-  public:
-  void clear_totallength();
-  uint32_t totallength() const;
-  void set_totallength(uint32_t value);
-  private:
-  uint32_t _internal_totallength() const;
-  void _internal_set_totallength(uint32_t value);
+  int64_t _internal_a_usage() const;
+  void _internal_set_a_usage(int64_t value);
   public:
 
-  // required bool addKeyToUnknownItems = 1;
-  bool has_addkeytounknownitems() const;
+  // required uint32 a_totalLength = 3;
+  bool has_a_totallength() const;
   private:
-  bool _internal_has_addkeytounknownitems() const;
+  bool _internal_has_a_totallength() const;
   public:
-  void clear_addkeytounknownitems();
-  bool addkeytounknownitems() const;
-  void set_addkeytounknownitems(bool value);
+  void clear_a_totallength();
+  uint32_t a_totallength() const;
+  void set_a_totallength(uint32_t value);
   private:
-  bool _internal_addkeytounknownitems() const;
-  void _internal_set_addkeytounknownitems(bool value);
-  public:
-
-  // required bool hasOtherProcessDatabases = 7;
-  bool has_hasotherprocessdatabases() const;
-  private:
-  bool _internal_has_hasotherprocessdatabases() const;
-  public:
-  void clear_hasotherprocessdatabases();
-  bool hasotherprocessdatabases() const;
-  void set_hasotherprocessdatabases(bool value);
-  private:
-  bool _internal_hasotherprocessdatabases() const;
-  void _internal_set_hasotherprocessdatabases(bool value);
+  uint32_t _internal_a_totallength() const;
+  void _internal_set_a_totallength(uint32_t value);
   public:
 
-  // required bool hasOtherProcessObservers = 8;
-  bool has_hasotherprocessobservers() const;
+  // required bool a_addKeyToUnknownItems = 1;
+  bool has_a_addkeytounknownitems() const;
   private:
-  bool _internal_has_hasotherprocessobservers() const;
+  bool _internal_has_a_addkeytounknownitems() const;
   public:
-  void clear_hasotherprocessobservers();
-  bool hasotherprocessobservers() const;
-  void set_hasotherprocessobservers(bool value);
+  void clear_a_addkeytounknownitems();
+  bool a_addkeytounknownitems() const;
+  void set_a_addkeytounknownitems(bool value);
   private:
-  bool _internal_hasotherprocessobservers() const;
-  void _internal_set_hasotherprocessobservers(bool value);
+  bool _internal_a_addkeytounknownitems() const;
+  void _internal_set_a_addkeytounknownitems(bool value);
   public:
 
-  // required sint64 peakUsage = 5;
-  bool has_peakusage() const;
+  // required bool a_hasOtherProcessDatabases = 7;
+  bool has_a_hasotherprocessdatabases() const;
   private:
-  bool _internal_has_peakusage() const;
+  bool _internal_has_a_hasotherprocessdatabases() const;
   public:
-  void clear_peakusage();
-  int64_t peakusage() const;
-  void set_peakusage(int64_t value);
+  void clear_a_hasotherprocessdatabases();
+  bool a_hasotherprocessdatabases() const;
+  void set_a_hasotherprocessdatabases(bool value);
   private:
-  int64_t _internal_peakusage() const;
-  void _internal_set_peakusage(int64_t value);
+  bool _internal_a_hasotherprocessdatabases() const;
+  void _internal_set_a_hasotherprocessdatabases(bool value);
+  public:
+
+  // required bool a_hasOtherProcessObservers = 8;
+  bool has_a_hasotherprocessobservers() const;
+  private:
+  bool _internal_has_a_hasotherprocessobservers() const;
+  public:
+  void clear_a_hasotherprocessobservers();
+  bool a_hasotherprocessobservers() const;
+  void set_a_hasotherprocessobservers(bool value);
+  private:
+  bool _internal_a_hasotherprocessobservers() const;
+  void _internal_set_a_hasotherprocessobservers(bool value);
+  public:
+
+  // required sint64 a_peakUsage = 5;
+  bool has_a_peakusage() const;
+  private:
+  bool _internal_has_a_peakusage() const;
+  public:
+  void clear_a_peakusage();
+  int64_t a_peakusage() const;
+  void set_a_peakusage(int64_t value);
+  private:
+  int64_t _internal_a_peakusage() const;
+  void _internal_set_a_peakusage(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSnapshotInitInfo)
@@ -306,14 +306,14 @@ class LSSnapshotInitInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > iteminfos_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr loadstate_;
-    int64_t usage_;
-    uint32_t totallength_;
-    bool addkeytounknownitems_;
-    bool hasotherprocessdatabases_;
-    bool hasotherprocessobservers_;
-    int64_t peakusage_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > a_iteminfos_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_loadstate_;
+    int64_t a_usage_;
+    uint32_t a_totallength_;
+    bool a_addkeytounknownitems_;
+    bool a_hasotherprocessdatabases_;
+    bool a_hasotherprocessobservers_;
+    int64_t a_peakusage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -329,277 +329,277 @@ class LSSnapshotInitInfo final :
 #endif  // __GNUC__
 // LSSnapshotInitInfo
 
-// required bool addKeyToUnknownItems = 1;
-inline bool LSSnapshotInitInfo::_internal_has_addkeytounknownitems() const {
+// required bool a_addKeyToUnknownItems = 1;
+inline bool LSSnapshotInitInfo::_internal_has_a_addkeytounknownitems() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_addkeytounknownitems() const {
-  return _internal_has_addkeytounknownitems();
+inline bool LSSnapshotInitInfo::has_a_addkeytounknownitems() const {
+  return _internal_has_a_addkeytounknownitems();
 }
-inline void LSSnapshotInitInfo::clear_addkeytounknownitems() {
-  _impl_.addkeytounknownitems_ = false;
+inline void LSSnapshotInitInfo::clear_a_addkeytounknownitems() {
+  _impl_.a_addkeytounknownitems_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool LSSnapshotInitInfo::_internal_addkeytounknownitems() const {
-  return _impl_.addkeytounknownitems_;
+inline bool LSSnapshotInitInfo::_internal_a_addkeytounknownitems() const {
+  return _impl_.a_addkeytounknownitems_;
 }
-inline bool LSSnapshotInitInfo::addkeytounknownitems() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.addKeyToUnknownItems)
-  return _internal_addkeytounknownitems();
+inline bool LSSnapshotInitInfo::a_addkeytounknownitems() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_addKeyToUnknownItems)
+  return _internal_a_addkeytounknownitems();
 }
-inline void LSSnapshotInitInfo::_internal_set_addkeytounknownitems(bool value) {
+inline void LSSnapshotInitInfo::_internal_set_a_addkeytounknownitems(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.addkeytounknownitems_ = value;
+  _impl_.a_addkeytounknownitems_ = value;
 }
-inline void LSSnapshotInitInfo::set_addkeytounknownitems(bool value) {
-  _internal_set_addkeytounknownitems(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.addKeyToUnknownItems)
+inline void LSSnapshotInitInfo::set_a_addkeytounknownitems(bool value) {
+  _internal_set_a_addkeytounknownitems(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_addKeyToUnknownItems)
 }
 
-// repeated .protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
-inline int LSSnapshotInitInfo::_internal_iteminfos_size() const {
-  return _impl_.iteminfos_.size();
+// repeated .protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
+inline int LSSnapshotInitInfo::_internal_a_iteminfos_size() const {
+  return _impl_.a_iteminfos_.size();
 }
-inline int LSSnapshotInitInfo::iteminfos_size() const {
-  return _internal_iteminfos_size();
+inline int LSSnapshotInitInfo::a_iteminfos_size() const {
+  return _internal_a_iteminfos_size();
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* LSSnapshotInitInfo::mutable_iteminfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSnapshotInitInfo.itemInfos)
-  return _impl_.iteminfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSItemInfo* LSSnapshotInitInfo::mutable_a_iteminfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSnapshotInitInfo.a_itemInfos)
+  return _impl_.a_iteminfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >*
-LSSnapshotInitInfo::mutable_iteminfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.LSSnapshotInitInfo.itemInfos)
-  return &_impl_.iteminfos_;
+LSSnapshotInitInfo::mutable_a_iteminfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.LSSnapshotInitInfo.a_itemInfos)
+  return &_impl_.a_iteminfos_;
 }
-inline const ::protobuf::mozilla::dom::LSItemInfo& LSSnapshotInitInfo::_internal_iteminfos(int index) const {
-  return _impl_.iteminfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSItemInfo& LSSnapshotInitInfo::_internal_a_iteminfos(int index) const {
+  return _impl_.a_iteminfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSItemInfo& LSSnapshotInitInfo::iteminfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.itemInfos)
-  return _internal_iteminfos(index);
+inline const ::protobuf::mozilla::dom::LSItemInfo& LSSnapshotInitInfo::a_iteminfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_itemInfos)
+  return _internal_a_iteminfos(index);
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* LSSnapshotInitInfo::_internal_add_iteminfos() {
-  return _impl_.iteminfos_.Add();
+inline ::protobuf::mozilla::dom::LSItemInfo* LSSnapshotInitInfo::_internal_add_a_iteminfos() {
+  return _impl_.a_iteminfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* LSSnapshotInitInfo::add_iteminfos() {
-  ::protobuf::mozilla::dom::LSItemInfo* _add = _internal_add_iteminfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.LSSnapshotInitInfo.itemInfos)
+inline ::protobuf::mozilla::dom::LSItemInfo* LSSnapshotInitInfo::add_a_iteminfos() {
+  ::protobuf::mozilla::dom::LSItemInfo* _add = _internal_add_a_iteminfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.LSSnapshotInitInfo.a_itemInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
-LSSnapshotInitInfo::iteminfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.LSSnapshotInitInfo.itemInfos)
-  return _impl_.iteminfos_;
+LSSnapshotInitInfo::a_iteminfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.LSSnapshotInitInfo.a_itemInfos)
+  return _impl_.a_iteminfos_;
 }
 
-// required uint32 totalLength = 3;
-inline bool LSSnapshotInitInfo::_internal_has_totallength() const {
+// required uint32 a_totalLength = 3;
+inline bool LSSnapshotInitInfo::_internal_has_a_totallength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_totallength() const {
-  return _internal_has_totallength();
+inline bool LSSnapshotInitInfo::has_a_totallength() const {
+  return _internal_has_a_totallength();
 }
-inline void LSSnapshotInitInfo::clear_totallength() {
-  _impl_.totallength_ = 0u;
+inline void LSSnapshotInitInfo::clear_a_totallength() {
+  _impl_.a_totallength_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t LSSnapshotInitInfo::_internal_totallength() const {
-  return _impl_.totallength_;
+inline uint32_t LSSnapshotInitInfo::_internal_a_totallength() const {
+  return _impl_.a_totallength_;
 }
-inline uint32_t LSSnapshotInitInfo::totallength() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.totalLength)
-  return _internal_totallength();
+inline uint32_t LSSnapshotInitInfo::a_totallength() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_totalLength)
+  return _internal_a_totallength();
 }
-inline void LSSnapshotInitInfo::_internal_set_totallength(uint32_t value) {
+inline void LSSnapshotInitInfo::_internal_set_a_totallength(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.totallength_ = value;
+  _impl_.a_totallength_ = value;
 }
-inline void LSSnapshotInitInfo::set_totallength(uint32_t value) {
-  _internal_set_totallength(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.totalLength)
+inline void LSSnapshotInitInfo::set_a_totallength(uint32_t value) {
+  _internal_set_a_totallength(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_totalLength)
 }
 
-// required sint64 usage = 4;
-inline bool LSSnapshotInitInfo::_internal_has_usage() const {
+// required sint64 a_usage = 4;
+inline bool LSSnapshotInitInfo::_internal_has_a_usage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_usage() const {
-  return _internal_has_usage();
+inline bool LSSnapshotInitInfo::has_a_usage() const {
+  return _internal_has_a_usage();
 }
-inline void LSSnapshotInitInfo::clear_usage() {
-  _impl_.usage_ = int64_t{0};
+inline void LSSnapshotInitInfo::clear_a_usage() {
+  _impl_.a_usage_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t LSSnapshotInitInfo::_internal_usage() const {
-  return _impl_.usage_;
+inline int64_t LSSnapshotInitInfo::_internal_a_usage() const {
+  return _impl_.a_usage_;
 }
-inline int64_t LSSnapshotInitInfo::usage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.usage)
-  return _internal_usage();
+inline int64_t LSSnapshotInitInfo::a_usage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_usage)
+  return _internal_a_usage();
 }
-inline void LSSnapshotInitInfo::_internal_set_usage(int64_t value) {
+inline void LSSnapshotInitInfo::_internal_set_a_usage(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.usage_ = value;
+  _impl_.a_usage_ = value;
 }
-inline void LSSnapshotInitInfo::set_usage(int64_t value) {
-  _internal_set_usage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.usage)
+inline void LSSnapshotInitInfo::set_a_usage(int64_t value) {
+  _internal_set_a_usage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_usage)
 }
 
-// required sint64 peakUsage = 5;
-inline bool LSSnapshotInitInfo::_internal_has_peakusage() const {
+// required sint64 a_peakUsage = 5;
+inline bool LSSnapshotInitInfo::_internal_has_a_peakusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_peakusage() const {
-  return _internal_has_peakusage();
+inline bool LSSnapshotInitInfo::has_a_peakusage() const {
+  return _internal_has_a_peakusage();
 }
-inline void LSSnapshotInitInfo::clear_peakusage() {
-  _impl_.peakusage_ = int64_t{0};
+inline void LSSnapshotInitInfo::clear_a_peakusage() {
+  _impl_.a_peakusage_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline int64_t LSSnapshotInitInfo::_internal_peakusage() const {
-  return _impl_.peakusage_;
+inline int64_t LSSnapshotInitInfo::_internal_a_peakusage() const {
+  return _impl_.a_peakusage_;
 }
-inline int64_t LSSnapshotInitInfo::peakusage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.peakUsage)
-  return _internal_peakusage();
+inline int64_t LSSnapshotInitInfo::a_peakusage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_peakUsage)
+  return _internal_a_peakusage();
 }
-inline void LSSnapshotInitInfo::_internal_set_peakusage(int64_t value) {
+inline void LSSnapshotInitInfo::_internal_set_a_peakusage(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.peakusage_ = value;
+  _impl_.a_peakusage_ = value;
 }
-inline void LSSnapshotInitInfo::set_peakusage(int64_t value) {
-  _internal_set_peakusage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.peakUsage)
+inline void LSSnapshotInitInfo::set_a_peakusage(int64_t value) {
+  _internal_set_a_peakusage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_peakUsage)
 }
 
-// required bytes loadState = 6;
-inline bool LSSnapshotInitInfo::_internal_has_loadstate() const {
+// required bytes a_loadState = 6;
+inline bool LSSnapshotInitInfo::_internal_has_a_loadstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_loadstate() const {
-  return _internal_has_loadstate();
+inline bool LSSnapshotInitInfo::has_a_loadstate() const {
+  return _internal_has_a_loadstate();
 }
-inline void LSSnapshotInitInfo::clear_loadstate() {
-  _impl_.loadstate_.ClearToEmpty();
+inline void LSSnapshotInitInfo::clear_a_loadstate() {
+  _impl_.a_loadstate_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& LSSnapshotInitInfo::loadstate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.loadState)
-  return _internal_loadstate();
+inline const std::string& LSSnapshotInitInfo::a_loadstate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
+  return _internal_a_loadstate();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSSnapshotInitInfo::set_loadstate(ArgT0&& arg0, ArgT... args) {
+void LSSnapshotInitInfo::set_a_loadstate(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.loadstate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.loadState)
+ _impl_.a_loadstate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
 }
-inline std::string* LSSnapshotInitInfo::mutable_loadstate() {
-  std::string* _s = _internal_mutable_loadstate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSnapshotInitInfo.loadState)
+inline std::string* LSSnapshotInitInfo::mutable_a_loadstate() {
+  std::string* _s = _internal_mutable_a_loadstate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
   return _s;
 }
-inline const std::string& LSSnapshotInitInfo::_internal_loadstate() const {
-  return _impl_.loadstate_.Get();
+inline const std::string& LSSnapshotInitInfo::_internal_a_loadstate() const {
+  return _impl_.a_loadstate_.Get();
 }
-inline void LSSnapshotInitInfo::_internal_set_loadstate(const std::string& value) {
+inline void LSSnapshotInitInfo::_internal_set_a_loadstate(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.loadstate_.Set(value, GetArenaForAllocation());
+  _impl_.a_loadstate_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSnapshotInitInfo::_internal_mutable_loadstate() {
+inline std::string* LSSnapshotInitInfo::_internal_mutable_a_loadstate() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.loadstate_.Mutable(GetArenaForAllocation());
+  return _impl_.a_loadstate_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSSnapshotInitInfo::release_loadstate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSnapshotInitInfo.loadState)
-  if (!_internal_has_loadstate()) {
+inline std::string* LSSnapshotInitInfo::release_a_loadstate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
+  if (!_internal_has_a_loadstate()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.loadstate_.Release();
+  auto* p = _impl_.a_loadstate_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.loadstate_.IsDefault()) {
-    _impl_.loadstate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_loadstate_.IsDefault()) {
+    _impl_.a_loadstate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSSnapshotInitInfo::set_allocated_loadstate(std::string* loadstate) {
-  if (loadstate != nullptr) {
+inline void LSSnapshotInitInfo::set_allocated_a_loadstate(std::string* a_loadstate) {
+  if (a_loadstate != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.loadstate_.SetAllocated(loadstate, GetArenaForAllocation());
+  _impl_.a_loadstate_.SetAllocated(a_loadstate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.loadstate_.IsDefault()) {
-    _impl_.loadstate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_loadstate_.IsDefault()) {
+    _impl_.a_loadstate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSnapshotInitInfo.loadState)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSnapshotInitInfo.a_loadState)
 }
 
-// required bool hasOtherProcessDatabases = 7;
-inline bool LSSnapshotInitInfo::_internal_has_hasotherprocessdatabases() const {
+// required bool a_hasOtherProcessDatabases = 7;
+inline bool LSSnapshotInitInfo::_internal_has_a_hasotherprocessdatabases() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_hasotherprocessdatabases() const {
-  return _internal_has_hasotherprocessdatabases();
+inline bool LSSnapshotInitInfo::has_a_hasotherprocessdatabases() const {
+  return _internal_has_a_hasotherprocessdatabases();
 }
-inline void LSSnapshotInitInfo::clear_hasotherprocessdatabases() {
-  _impl_.hasotherprocessdatabases_ = false;
+inline void LSSnapshotInitInfo::clear_a_hasotherprocessdatabases() {
+  _impl_.a_hasotherprocessdatabases_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool LSSnapshotInitInfo::_internal_hasotherprocessdatabases() const {
-  return _impl_.hasotherprocessdatabases_;
+inline bool LSSnapshotInitInfo::_internal_a_hasotherprocessdatabases() const {
+  return _impl_.a_hasotherprocessdatabases_;
 }
-inline bool LSSnapshotInitInfo::hasotherprocessdatabases() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.hasOtherProcessDatabases)
-  return _internal_hasotherprocessdatabases();
+inline bool LSSnapshotInitInfo::a_hasotherprocessdatabases() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_hasOtherProcessDatabases)
+  return _internal_a_hasotherprocessdatabases();
 }
-inline void LSSnapshotInitInfo::_internal_set_hasotherprocessdatabases(bool value) {
+inline void LSSnapshotInitInfo::_internal_set_a_hasotherprocessdatabases(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.hasotherprocessdatabases_ = value;
+  _impl_.a_hasotherprocessdatabases_ = value;
 }
-inline void LSSnapshotInitInfo::set_hasotherprocessdatabases(bool value) {
-  _internal_set_hasotherprocessdatabases(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.hasOtherProcessDatabases)
+inline void LSSnapshotInitInfo::set_a_hasotherprocessdatabases(bool value) {
+  _internal_set_a_hasotherprocessdatabases(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_hasOtherProcessDatabases)
 }
 
-// required bool hasOtherProcessObservers = 8;
-inline bool LSSnapshotInitInfo::_internal_has_hasotherprocessobservers() const {
+// required bool a_hasOtherProcessObservers = 8;
+inline bool LSSnapshotInitInfo::_internal_has_a_hasotherprocessobservers() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool LSSnapshotInitInfo::has_hasotherprocessobservers() const {
-  return _internal_has_hasotherprocessobservers();
+inline bool LSSnapshotInitInfo::has_a_hasotherprocessobservers() const {
+  return _internal_has_a_hasotherprocessobservers();
 }
-inline void LSSnapshotInitInfo::clear_hasotherprocessobservers() {
-  _impl_.hasotherprocessobservers_ = false;
+inline void LSSnapshotInitInfo::clear_a_hasotherprocessobservers() {
+  _impl_.a_hasotherprocessobservers_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool LSSnapshotInitInfo::_internal_hasotherprocessobservers() const {
-  return _impl_.hasotherprocessobservers_;
+inline bool LSSnapshotInitInfo::_internal_a_hasotherprocessobservers() const {
+  return _impl_.a_hasotherprocessobservers_;
 }
-inline bool LSSnapshotInitInfo::hasotherprocessobservers() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.hasOtherProcessObservers)
-  return _internal_hasotherprocessobservers();
+inline bool LSSnapshotInitInfo::a_hasotherprocessobservers() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSnapshotInitInfo.a_hasOtherProcessObservers)
+  return _internal_a_hasotherprocessobservers();
 }
-inline void LSSnapshotInitInfo::_internal_set_hasotherprocessobservers(bool value) {
+inline void LSSnapshotInitInfo::_internal_set_a_hasotherprocessobservers(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.hasotherprocessobservers_ = value;
+  _impl_.a_hasotherprocessobservers_ = value;
 }
-inline void LSSnapshotInitInfo::set_hasotherprocessobservers(bool value) {
-  _internal_set_hasotherprocessobservers(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.hasOtherProcessObservers)
+inline void LSSnapshotInitInfo::set_a_hasotherprocessobservers(bool value) {
+  _internal_set_a_hasotherprocessobservers(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSnapshotInitInfo.a_hasOtherProcessObservers)
 }
 
 #ifdef __GNUC__

@@ -64,12 +64,12 @@ ReadPixelsBuffer::ReadPixelsBuffer(const ReadPixelsBuffer& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVuint64T: {
-      _this->_internal_set_mvuint64_t(from._internal_mvuint64_t());
+    case kAMVuint64T: {
+      _this->_internal_set_a_mvuint64_t(from._internal_a_mvuint64_t());
       break;
     }
-    case kMVShmem: {
-      _this->_internal_set_mvshmem(from._internal_mvshmem());
+    case kAMVShmem: {
+      _this->_internal_set_a_mvshmem(from._internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -114,12 +114,12 @@ void ReadPixelsBuffer::SetCachedSize(int size) const {
 void ReadPixelsBuffer::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.ReadPixelsBuffer)
   switch (content_case()) {
-    case kMVuint64T: {
+    case kAMVuint64T: {
       // No need to clear
       break;
     }
-    case kMVShmem: {
-      _impl_.content_.mvshmem_.Destroy();
+    case kAMVShmem: {
+      _impl_.content_.a_mvshmem_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -146,18 +146,18 @@ const char* ReadPixelsBuffer::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // uint64 mVuint64_t = 1;
+      // uint64 a_mVuint64_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvuint64_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          _internal_set_a_mvuint64_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVShmem = 2;
+      // bytes a_mVShmem = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvshmem();
+          auto str = _internal_mutable_a_mvshmem();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -193,14 +193,14 @@ uint8_t* ReadPixelsBuffer::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVuint64T: {
+    case kAMVuint64T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_mvuint64_t(), target);
+      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_mvuint64_t(), target);
       break;
     }
-    case kMVShmem: {
+    case kAMVShmem: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvshmem(), target);
+          2, this->_internal_a_mvshmem(), target);
       break;
     }
     default: ;
@@ -222,16 +222,16 @@ size_t ReadPixelsBuffer::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // uint64 mVuint64_t = 1;
-    case kMVuint64T: {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_mvuint64_t());
+    // uint64 a_mVuint64_t = 1;
+    case kAMVuint64T: {
+      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mvuint64_t());
       break;
     }
-    // bytes mVShmem = 2;
-    case kMVShmem: {
+    // bytes a_mVShmem = 2;
+    case kAMVShmem: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvshmem());
+          this->_internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -260,12 +260,12 @@ void ReadPixelsBuffer::MergeFrom(const ReadPixelsBuffer& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVuint64T: {
-      _this->_internal_set_mvuint64_t(from._internal_mvuint64_t());
+    case kAMVuint64T: {
+      _this->_internal_set_a_mvuint64_t(from._internal_a_mvuint64_t());
       break;
     }
-    case kMVShmem: {
-      _this->_internal_set_mvshmem(from._internal_mvshmem());
+    case kAMVShmem: {
+      _this->_internal_set_a_mvshmem(from._internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {

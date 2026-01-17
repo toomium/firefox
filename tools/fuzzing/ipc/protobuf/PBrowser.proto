@@ -27,14 +27,14 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_AsyncMessage {
-  required bytes aMessage = 1;
-  required protobuf.mozilla.dom.ClonedMessageData aData = 2;
+  required bytes a_aMessage = 1;
+  required protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
 }
 
 message Msg_PDocAccessibleConstructor {
-  required bytes aParentDoc = 1;
-  required uint64 aParentAcc = 2;
-  required bytes aBrowsingContext = 3;
+  required bytes a_aParentDoc = 1;
+  required uint64 a_aParentAcc = 2;
+  required bytes a_aBrowsingContext = 3;
 }
 
 message Reply_PDocAccessibleConstructor {
@@ -59,160 +59,160 @@ message Msg_DidUnsuppressPaintingNormalPriority {
 }
 
 message Msg_MoveFocus {
-  required bool forward = 1;
-  required bool forDocumentNavigation = 2;
+  required bool a_forward = 1;
+  required bool a_forDocumentNavigation = 2;
 }
 
 message Msg_DropLinks {
-  repeated bytes aLinks = 1;
+  repeated bytes a_aLinks = 1;
 }
 
 message Msg_SyncMessage {
-  required bytes aMessage = 1;
-  required protobuf.mozilla.dom.ClonedMessageData aData = 2;
+  required bytes a_aMessage = 1;
+  required protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
 }
 
 message Reply_SyncMessage {
-  repeated bytes retval = 1;
+  repeated bytes a_retval = 1;
 }
 
 message Msg_NotifyIMEFocus {
-  required bytes contentCache = 1;
-  required bytes notification = 2;
+  required bytes a_contentCache = 1;
+  required bytes a_notification = 2;
 }
 
 message Reply_NotifyIMEFocus {
-  required bytes requests = 1;
+  required bytes a_requests = 1;
 }
 
 message Msg_NotifyIMETextChange {
-  required bytes contentCache = 1;
-  required bytes notification = 2;
+  required bytes a_contentCache = 1;
+  required bytes a_notification = 2;
 }
 
 message Msg_NotifyIMECompositionUpdate {
-  required bytes contentCache = 1;
-  required bytes notification = 2;
+  required bytes a_contentCache = 1;
+  required bytes a_notification = 2;
 }
 
 message Msg_NotifyIMESelection {
-  required bytes contentCache = 1;
-  required bytes notification = 2;
+  required bytes a_contentCache = 1;
+  required bytes a_notification = 2;
 }
 
 message Msg_UpdateContentCache {
-  required bytes contentCache = 1;
+  required bytes a_contentCache = 1;
 }
 
 message Msg_NotifyIMEMouseButtonEvent {
-  required bytes notification = 1;
+  required bytes a_notification = 1;
 }
 
 message Reply_NotifyIMEMouseButtonEvent {
-  required bool consumedByIME = 1;
+  required bool a_consumedByIME = 1;
 }
 
 message Msg_NotifyIMEPositionChange {
-  required bytes contentCache = 1;
-  required bytes notification = 2;
+  required bytes a_contentCache = 1;
+  required bytes a_notification = 2;
 }
 
 message Msg_RequestIMEToCommitComposition {
-  required bool cancel = 1;
-  required uint32 aCompositionId = 2;
+  required bool a_cancel = 1;
+  required uint32 a_aCompositionId = 2;
 }
 
 message Reply_RequestIMEToCommitComposition {
-  required bool isCommitted = 1;
-  required bytes committedString = 2;
+  required bool a_isCommitted = 1;
+  required bytes a_committedString = 2;
 }
 
 message Msg_OnEventNeedingAckHandled {
-  required bytes message = 1;
-  required uint32 compositionId = 2;
+  required bytes a_message = 1;
+  required uint32 a_compositionId = 2;
 }
 
 message Msg_RequestFocus {
-  required bool canRaise = 1;
-  required bytes aCallerType = 2;
+  required bool a_canRaise = 1;
+  required bytes a_aCallerType = 2;
 }
 
 message Msg_WheelZoomChange {
-  required bool increase = 1;
+  required bool a_increase = 1;
 }
 
 message Msg_EnableDisableCommands {
-  required bytes bc = 1;
-  required bytes action = 2;
-  repeated bytes enabledCommands = 3;
-  repeated bytes disabledCommands = 4;
+  required bytes a_bc = 1;
+  required bytes a_action = 2;
+  repeated bytes a_enabledCommands = 3;
+  repeated bytes a_disabledCommands = 4;
 }
 
 message Msg_GetInputContext {
 }
 
 message Reply_GetInputContext {
-  required bytes state = 1;
+  required bytes a_state = 1;
 }
 
 message Msg_SetInputContext {
-  required bytes context = 1;
-  required bytes action = 2;
+  required bytes a_context = 1;
+  required bytes a_action = 2;
 }
 
 message Msg_SetCursor {
-  required bytes value = 1;
-  optional protobuf.mozilla.dom.IPCImage customCursor = 2;
-  required float resolutionX = 3;
-  required float resolutionY = 4;
-  required uint32 hotspotX = 5;
-  required uint32 hotspotY = 6;
-  required bool force = 7;
+  required bytes a_value = 1;
+  optional protobuf.mozilla.dom.IPCImage a_customCursor = 2;
+  required float a_resolutionX = 3;
+  required float a_resolutionY = 4;
+  required uint32 a_hotspotX = 5;
+  required uint32 a_hotspotY = 6;
+  required bool a_force = 7;
 }
 
 message Msg_SetLinkStatus {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_ShowTooltip {
-  required uint32 x = 1;
-  required uint32 y = 2;
-  required bytes tooltip = 3;
-  required bytes direction = 4;
+  required uint32 a_x = 1;
+  required uint32 a_y = 2;
+  required bytes a_tooltip = 3;
+  required bytes a_direction = 4;
 }
 
 message Msg_HideTooltip {
 }
 
 message Msg_PColorPickerConstructor {
-  required bytes aBrowsingContext = 1;
-  required bytes title = 2;
-  required bytes initialColor = 3;
-  repeated bytes defaultColors = 4;
+  required bytes a_aBrowsingContext = 1;
+  required bytes a_title = 2;
+  required bytes a_initialColor = 3;
+  repeated bytes a_defaultColors = 4;
 }
 
 message Reply_PColorPickerConstructor {
 }
 
 message Msg_PFilePickerConstructor {
-  required bytes aTitle = 1;
-  required bytes aMode = 2;
-  required bytes aBrowsingContext = 3;
+  required bytes a_aTitle = 1;
+  required bytes a_aMode = 2;
+  required bytes a_aBrowsingContext = 3;
 }
 
 message Reply_PFilePickerConstructor {
 }
 
 message Msg_RespondStartSwipeEvent {
-  required uint64 aInputBlockId = 1;
-  required bool aStartSwipe = 2;
+  required uint64 a_aInputBlockId = 1;
+  required bool a_aStartSwipe = 2;
 }
 
 message Msg_LookUpDictionary {
-  required bytes aText = 1;
-  repeated bytes aFontRangeArray = 2;
-  required bool aIsVertical = 3;
-  required bytes aPoint = 4;
+  required bytes a_aText = 1;
+  repeated bytes a_aFontRangeArray = 2;
+  required bool a_aIsVertical = 3;
+  required bytes a_aPoint = 4;
 }
 
 message Msg___delete__ {
@@ -222,98 +222,98 @@ message Reply___delete__ {
 }
 
 message Msg_ReplyKeyEvent {
-  required bytes aEvent = 1;
-  required bytes aUUID = 2;
+  required bytes a_aEvent = 1;
+  required bytes a_aUUID = 2;
 }
 
 message Msg_RequestNativeKeyBindings {
-  required uint32 aType = 1;
-  required bytes aEvent = 2;
+  required uint32 a_aType = 1;
+  required bytes a_aEvent = 2;
 }
 
 message Reply_RequestNativeKeyBindings {
-  repeated bytes commands = 1;
+  repeated bytes a_commands = 1;
 }
 
 message Msg_SynthesizeNativeKeyEvent {
-  required sint32 aNativeKeyboardLayout = 1;
-  required sint32 aNativeKeyCode = 2;
-  required uint32 aModifierFlags = 3;
-  required bytes aCharacters = 4;
-  required bytes aUnmodifiedCharacters = 5;
-  optional uint64 aCallbackId = 6;
+  required sint32 a_aNativeKeyboardLayout = 1;
+  required sint32 a_aNativeKeyCode = 2;
+  required uint32 a_aModifierFlags = 3;
+  required bytes a_aCharacters = 4;
+  required bytes a_aUnmodifiedCharacters = 5;
+  optional uint64 a_aCallbackId = 6;
 }
 
 message Msg_SynthesizeNativeMouseEvent {
-  required bytes aPoint = 1;
-  required uint32 aNativeMessage = 2;
-  required sint32 aButton = 3;
-  required uint32 aModifierFlags = 4;
-  optional uint64 aCallbackId = 5;
+  required bytes a_aPoint = 1;
+  required uint32 a_aNativeMessage = 2;
+  required sint32 a_aButton = 3;
+  required uint32 a_aModifierFlags = 4;
+  optional uint64 a_aCallbackId = 5;
 }
 
 message Msg_SynthesizeNativeMouseMove {
-  required bytes aPoint = 1;
-  optional uint64 aCallbackId = 2;
+  required bytes a_aPoint = 1;
+  optional uint64 a_aCallbackId = 2;
 }
 
 message Msg_SynthesizeNativeMouseScrollEvent {
-  required bytes aPoint = 1;
-  required uint32 aNativeMessage = 2;
-  required double aDeltaX = 3;
-  required double aDeltaY = 4;
-  required double aDeltaZ = 5;
-  required uint32 aModifierFlags = 6;
-  required uint32 aAdditionalFlags = 7;
-  optional uint64 aCallbackId = 8;
+  required bytes a_aPoint = 1;
+  required uint32 a_aNativeMessage = 2;
+  required double a_aDeltaX = 3;
+  required double a_aDeltaY = 4;
+  required double a_aDeltaZ = 5;
+  required uint32 a_aModifierFlags = 6;
+  required uint32 a_aAdditionalFlags = 7;
+  optional uint64 a_aCallbackId = 8;
 }
 
 message Msg_SynthesizeNativeTouchPoint {
-  required uint32 aPointerId = 1;
-  required bytes aPointerState = 2;
-  required bytes aPoint = 3;
-  required double aPointerPressure = 4;
-  required uint32 aPointerOrientation = 5;
-  optional uint64 aCallbackId = 6;
+  required uint32 a_aPointerId = 1;
+  required bytes a_aPointerState = 2;
+  required bytes a_aPoint = 3;
+  required double a_aPointerPressure = 4;
+  required uint32 a_aPointerOrientation = 5;
+  optional uint64 a_aCallbackId = 6;
 }
 
 message Msg_SynthesizeNativeTouchPadPinch {
-  required bytes aEventPhase = 1;
-  required float aScale = 2;
-  required bytes aPoint = 3;
-  required sint32 aModifierFlags = 4;
+  required bytes a_aEventPhase = 1;
+  required float a_aScale = 2;
+  required bytes a_aPoint = 3;
+  required sint32 a_aModifierFlags = 4;
 }
 
 message Msg_SynthesizeNativeTouchTap {
-  required bytes aPoint = 1;
-  required bool aLongTap = 2;
-  optional uint64 aCallbackId = 3;
+  required bytes a_aPoint = 1;
+  required bool a_aLongTap = 2;
+  optional uint64 a_aCallbackId = 3;
 }
 
 message Msg_SynthesizeNativePenInput {
-  required uint32 aPointerId = 1;
-  required bytes aPointerState = 2;
-  required bytes aPoint = 3;
-  required double aPressure = 4;
-  required uint32 aRotation = 5;
-  required sint32 aTiltX = 6;
-  required sint32 aTiltY = 7;
-  required sint32 aButton = 8;
-  optional uint64 aCallbackId = 9;
+  required uint32 a_aPointerId = 1;
+  required bytes a_aPointerState = 2;
+  required bytes a_aPoint = 3;
+  required double a_aPressure = 4;
+  required uint32 a_aRotation = 5;
+  required sint32 a_aTiltX = 6;
+  required sint32 a_aTiltY = 7;
+  required sint32 a_aButton = 8;
+  optional uint64 a_aCallbackId = 9;
 }
 
 message Msg_SynthesizeNativeTouchpadDoubleTap {
-  required bytes aPoint = 1;
-  required uint32 aModifierFlags = 2;
+  required bytes a_aPoint = 1;
+  required uint32 a_aModifierFlags = 2;
 }
 
 message Msg_SynthesizeNativeTouchpadPan {
-  required bytes aEventPhase = 1;
-  required bytes aPoint = 2;
-  required double aDeltaX = 3;
-  required double aDeltaY = 4;
-  required sint32 aModifierFlags = 5;
-  optional uint64 aCallbackId = 6;
+  required bytes a_aEventPhase = 1;
+  required bytes a_aPoint = 2;
+  required double a_aDeltaX = 3;
+  required double a_aDeltaY = 4;
+  required sint32 a_aModifierFlags = 5;
+  optional uint64 a_aCallbackId = 6;
 }
 
 message Msg_LockNativePointer {
@@ -323,84 +323,84 @@ message Msg_UnlockNativePointer {
 }
 
 message Msg_AccessKeyNotHandled {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Msg_RegisterProtocolHandler {
-  required bytes scheme = 1;
-  required bytes handlerURI = 2;
-  required bytes title = 3;
-  required bytes documentURI = 4;
+  required bytes a_scheme = 1;
+  required bytes a_handlerURI = 2;
+  required bytes a_title = 3;
+  required bytes a_documentURI = 4;
 }
 
 message Msg_OnStateChange {
-  required protobuf.mozilla.dom.WebProgressData aWebProgressData = 1;
-  required protobuf.mozilla.dom.RequestData aRequestData = 2;
-  required uint32 aStateFlags = 3;
-  required bytes aStatus = 4;
-  optional protobuf.mozilla.dom.WebProgressStateChangeData aStateChangeData = 5;
+  required protobuf.mozilla.dom.WebProgressData a_aWebProgressData = 1;
+  required protobuf.mozilla.dom.RequestData a_aRequestData = 2;
+  required uint32 a_aStateFlags = 3;
+  required bytes a_aStatus = 4;
+  optional protobuf.mozilla.dom.WebProgressStateChangeData a_aStateChangeData = 5;
 }
 
 message Msg_OnLocationChange {
-  required protobuf.mozilla.dom.WebProgressData aWebProgressData = 1;
-  required protobuf.mozilla.dom.RequestData aRequestData = 2;
-  required bytes aLocation = 3;
-  required uint32 aFlags = 4;
-  required bool aCanGoBack = 5;
-  required bool aCanGoBackIgnoringUserInteraction = 6;
-  required bool aCanGoForward = 7;
-  optional protobuf.mozilla.dom.WebProgressLocationChangeData aLocationChangeData = 8;
+  required protobuf.mozilla.dom.WebProgressData a_aWebProgressData = 1;
+  required protobuf.mozilla.dom.RequestData a_aRequestData = 2;
+  required bytes a_aLocation = 3;
+  required uint32 a_aFlags = 4;
+  required bool a_aCanGoBack = 5;
+  required bool a_aCanGoBackIgnoringUserInteraction = 6;
+  required bool a_aCanGoForward = 7;
+  optional protobuf.mozilla.dom.WebProgressLocationChangeData a_aLocationChangeData = 8;
 }
 
 message Msg_OnProgressChange {
-  required sint32 aCurTotalProgress = 1;
-  required sint32 aMaxTotalProgress = 2;
+  required sint32 a_aCurTotalProgress = 1;
+  required sint32 a_aMaxTotalProgress = 2;
 }
 
 message Msg_OnStatusChange {
-  required bytes aMessage = 1;
+  required bytes a_aMessage = 1;
 }
 
 message Msg_NotifyContentBlockingEvent {
-  required uint32 aEvent = 1;
-  required protobuf.mozilla.dom.RequestData aRequestData = 2;
-  required bool aBlocked = 3;
-  required bytes aTrackingOrigin = 4;
-  repeated bytes aTrackingFullHashes = 5;
-  optional bytes aReason = 6;
-  optional bytes aCanvasFingerprinter = 7;
-  optional bool aCanvasFingerprinterKnownText = 8;
+  required uint32 a_aEvent = 1;
+  required protobuf.mozilla.dom.RequestData a_aRequestData = 2;
+  required bool a_aBlocked = 3;
+  required bytes a_aTrackingOrigin = 4;
+  repeated bytes a_aTrackingFullHashes = 5;
+  optional bytes a_aReason = 6;
+  optional bytes a_aCanvasFingerprinter = 7;
+  optional bool a_aCanvasFingerprinterKnownText = 8;
 }
 
 message Msg_NavigationFinished {
 }
 
 message Msg_IntrinsicSizeOrRatioChanged {
-  optional bytes aIntrinsicSize = 1;
-  optional bytes aIntrinsicRatio = 2;
+  optional bytes a_aIntrinsicSize = 1;
+  optional bytes a_aIntrinsicRatio = 2;
 }
 
 message Msg_ImageLoadComplete {
-  required bytes aResult = 1;
+  required bytes a_aResult = 1;
 }
 
 message Msg_RequestPointerCapture {
-  required uint32 aPointerId = 1;
+  required uint32 a_aPointerId = 1;
 }
 
 message Reply_RequestPointerCapture {
-  required bool aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_ReleasePointerCapture {
-  required uint32 aPointerId = 1;
+  required uint32 a_aPointerId = 1;
 }
 
 message Msg_RequestPointerLock {
 }
 
 message Reply_RequestPointerLock {
-  required bytes error = 1;
+  required bytes a_error = 1;
 }
 
 message Msg_ReleasePointerLock {
@@ -410,16 +410,16 @@ message Msg_UpdateSHistory {
 }
 
 message Msg_CloneDocumentTreeIntoSelf {
-  required bytes aBc = 1;
-  required protobuf.mozilla.embedding.PrintData aPrintData = 2;
+  required bytes a_aBc = 1;
+  required protobuf.mozilla.embedding.PrintData a_aPrintData = 2;
 }
 
 message Reply_CloneDocumentTreeIntoSelf {
-  required bool aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_UpdateRemotePrintSettings {
-  required protobuf.mozilla.embedding.PrintData aPrintData = 1;
+  required protobuf.mozilla.embedding.PrintData a_aPrintData = 1;
 }
 
 message Msg_ReleaseAllPointerCapture {
@@ -429,70 +429,70 @@ message Msg_RemoteIsReadyToHandleInputEvents {
 }
 
 message Msg_UpdateEffects {
-  required bytes aEffects = 1;
+  required bytes a_aEffects = 1;
 }
 
 message Msg_SetDimensions {
-  required bytes aRequest = 1;
-  required double aScale = 2;
+  required bytes a_aRequest = 1;
+  required double a_aScale = 2;
 }
 
 message Msg_DispatchWheelEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Reply_DispatchWheelEvent {
 }
 
 message Msg_DispatchMouseEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Reply_DispatchMouseEvent {
 }
 
 message Msg_DispatchKeyboardEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Reply_DispatchKeyboardEvent {
 }
 
 message Msg_DispatchTouchEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Reply_DispatchTouchEvent {
 }
 
 message Msg_InvokeDragSession {
-  repeated protobuf.mozilla.dom.IPCTransferableData transfers = 1;
-  required uint32 action = 2;
-  optional bytes visualData = 3;
-  required uint32 stride = 4;
-  required bytes format = 5;
-  required bytes dragRect = 6;
-  required bytes principal = 7;
-  required bytes csp = 8;
-  required protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 9;
-  required bytes sourceWindowContext = 10;
-  required bytes sourceTopWindowContext = 11;
+  repeated protobuf.mozilla.dom.IPCTransferableData a_transfers = 1;
+  required uint32 a_action = 2;
+  optional bytes a_visualData = 3;
+  required uint32 a_stride = 4;
+  required bytes a_format = 5;
+  required bytes a_dragRect = 6;
+  required bytes a_principal = 7;
+  required bytes a_csp = 8;
+  required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
+  required bytes a_sourceWindowContext = 10;
+  required bytes a_sourceTopWindowContext = 11;
 }
 
 message Msg_EnsureLayersConnected {
 }
 
 message Reply_EnsureLayersConnected {
-  required bytes compositorOptions = 1;
+  required bytes a_compositorOptions = 1;
 }
 
 message Msg_ShowCanvasPermissionPrompt {
-  required bytes aOrigin = 1;
-  required bool aHideDoorHanger = 2;
+  required bytes a_aOrigin = 1;
+  required bool a_aHideDoorHanger = 2;
 }
 
 message Msg_SetSystemFont {
-  required bytes aFontName = 1;
+  required bytes a_aFontName = 1;
 }
 
 message Reply_SetSystemFont {
@@ -502,397 +502,397 @@ message Msg_GetSystemFont {
 }
 
 message Reply_GetSystemFont {
-  required bytes retval = 1;
+  required bytes a_retval = 1;
 }
 
 message Msg_MaybeFireEmbedderLoadEvents {
-  required bytes aFireEventAtEmbeddingElement = 1;
+  required bytes a_aFireEventAtEmbeddingElement = 1;
 }
 
 message Msg_ScrollRectIntoView {
-  required bytes aRect = 1;
-  required bytes aVertical = 2;
-  required bytes aHorizontal = 3;
-  required bytes aScrollFlags = 4;
-  required sint32 aAppUnitsPerDevPixel = 5;
+  required bytes a_aRect = 1;
+  required bytes a_aVertical = 2;
+  required bytes a_aHorizontal = 3;
+  required bytes a_aScrollFlags = 4;
+  required sint32 a_aAppUnitsPerDevPixel = 5;
 }
 
 message Msg_ShowDynamicToolbar {
 }
 
 message Msg_Show {
-  required protobuf.mozilla.dom.ParentShowInfo parentInfo = 1;
-  required protobuf.mozilla.dom.OwnerShowInfo childInfo = 2;
+  required protobuf.mozilla.dom.ParentShowInfo a_parentInfo = 1;
+  required protobuf.mozilla.dom.OwnerShowInfo a_childInfo = 2;
 }
 
 message Msg_Activate {
-  required uint64 aActionId = 1;
+  required uint64 a_aActionId = 1;
 }
 
 message Msg_Deactivate {
-  required uint64 aActionId = 1;
+  required uint64 a_aActionId = 1;
 }
 
 message Msg_ScrollbarPreferenceChanged {
-  required bytes pref = 1;
+  required bytes a_pref = 1;
 }
 
 message Msg_InitRendering {
-  required bytes textureFactoryIdentifier = 1;
-  required bytes layersId = 2;
-  required bytes compositorOptions = 3;
-  required bool layersConnected = 4;
+  required bytes a_textureFactoryIdentifier = 1;
+  required bytes a_layersId = 2;
+  required bytes a_compositorOptions = 3;
+  required bool a_layersConnected = 4;
 }
 
 message Msg_CompositorOptionsChanged {
-  required bytes newOptions = 1;
+  required bytes a_newOptions = 1;
 }
 
 message Msg_LoadURL {
-  required bytes loadState = 1;
-  required protobuf.mozilla.dom.ParentShowInfo info = 2;
+  required bytes a_loadState = 1;
+  required protobuf.mozilla.dom.ParentShowInfo a_info = 2;
 }
 
 message Msg_CreateAboutBlankDocumentViewer {
-  required bytes principal = 1;
-  required bytes partitionedPrincipal = 2;
+  required bytes a_principal = 1;
+  required bytes a_partitionedPrincipal = 2;
 }
 
 message Msg_ResumeLoad {
-  required uint64 pendingSwitchID = 1;
-  required protobuf.mozilla.dom.ParentShowInfo info = 2;
+  required uint64 a_pendingSwitchID = 1;
+  required protobuf.mozilla.dom.ParentShowInfo a_info = 2;
 }
 
 message Msg_UpdateDimensions {
-  required protobuf.mozilla.dom.DimensionInfo dimensions = 1;
+  required protobuf.mozilla.dom.DimensionInfo a_dimensions = 1;
 }
 
 message Msg_SizeModeChanged {
-  required bytes sizeMode = 1;
+  required bytes a_sizeMode = 1;
 }
 
 message Msg_ChildToParentMatrix {
-  optional bytes aMatrix = 1;
-  required bytes aRemoteDocumentRect = 2;
+  optional bytes a_aMatrix = 1;
+  required bytes a_aRemoteDocumentRect = 2;
 }
 
 message Msg_UpdateRemoteStyle {
-  required bytes aImageRendering = 1;
+  required bytes a_aImageRendering = 1;
 }
 
 message Msg_DynamicToolbarMaxHeightChanged {
-  required bytes height = 1;
+  required bytes a_height = 1;
 }
 
 message Msg_DynamicToolbarOffsetChanged {
-  required bytes offset = 1;
+  required bytes a_offset = 1;
 }
 
 message Msg_KeyboardHeightChanged {
-  required bytes height = 1;
+  required bytes a_height = 1;
 }
 
 message Msg_AndroidPipModeChanged {
-  required bool aPipMode = 1;
+  required bool a_aPipMode = 1;
 }
 
 message Msg_StopIMEStateManagement {
 }
 
 message Msg_RealMouseMoveEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPriorityRealMouseMoveEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_RealMouseMoveEventForTests {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPriorityRealMouseMoveEventForTests {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_SynthMouseMoveEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPrioritySynthMouseMoveEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_RealMouseButtonEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPriorityRealMouseButtonEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_RealPointerButtonEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPriorityRealPointerButtonEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_RealMouseEnterExitWidgetEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPriorityRealMouseEnterExitWidgetEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_RealKeyEvent {
-  required bytes aEvent = 1;
-  required bytes aUUID = 2;
+  required bytes a_aEvent = 1;
+  required bytes a_aUUID = 2;
 }
 
 message Msg_NormalPriorityRealKeyEvent {
-  required bytes aEvent = 1;
-  required bytes aUUID = 2;
+  required bytes a_aEvent = 1;
+  required bytes a_aUUID = 2;
 }
 
 message Msg_MouseWheelEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_NormalPriorityMouseWheelEvent {
-  required bytes event = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
+  required bytes a_event = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
 }
 
 message Msg_RealTouchEvent {
-  required bytes aEvent = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
-  required bytes aApzResponse = 4;
+  required bytes a_aEvent = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
+  required bytes a_aApzResponse = 4;
 }
 
 message Msg_NormalPriorityRealTouchEvent {
-  required bytes aEvent = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
-  required bytes aApzResponse = 4;
+  required bytes a_aEvent = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
+  required bytes a_aApzResponse = 4;
 }
 
 message Msg_HandleTap {
-  required bytes aType = 1;
-  required bytes point = 2;
-  required bytes aModifiers = 3;
-  required bytes aGuid = 4;
-  required uint64 aInputBlockId = 5;
-  optional bytes aMetrics = 6;
+  required bytes a_aType = 1;
+  required bytes a_point = 2;
+  required bytes a_aModifiers = 3;
+  required bytes a_aGuid = 4;
+  required uint64 a_aInputBlockId = 5;
+  optional bytes a_aMetrics = 6;
 }
 
 message Msg_NormalPriorityHandleTap {
-  required bytes aType = 1;
-  required bytes point = 2;
-  required bytes aModifiers = 3;
-  required bytes aGuid = 4;
-  required uint64 aInputBlockId = 5;
-  optional bytes aMetrics = 6;
+  required bytes a_aType = 1;
+  required bytes a_point = 2;
+  required bytes a_aModifiers = 3;
+  required bytes a_aGuid = 4;
+  required uint64 a_aInputBlockId = 5;
+  optional bytes a_aMetrics = 6;
 }
 
 message Msg_RealTouchMoveEvent {
-  required bytes aEvent = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
-  required bytes aApzResponse = 4;
+  required bytes a_aEvent = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
+  required bytes a_aApzResponse = 4;
 }
 
 message Msg_NormalPriorityRealTouchMoveEvent {
-  required bytes aEvent = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
-  required bytes aApzResponse = 4;
+  required bytes a_aEvent = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
+  required bytes a_aApzResponse = 4;
 }
 
 message Msg_RealTouchMoveEvent2 {
-  required bytes aEvent = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
-  required bytes aApzResponse = 4;
+  required bytes a_aEvent = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
+  required bytes a_aApzResponse = 4;
 }
 
 message Msg_NormalPriorityRealTouchMoveEvent2 {
-  required bytes aEvent = 1;
-  required bytes aGuid = 2;
-  required uint64 aInputBlockId = 3;
-  required bytes aApzResponse = 4;
+  required bytes a_aEvent = 1;
+  required bytes a_aGuid = 2;
+  required uint64 a_aInputBlockId = 3;
+  required bytes a_aApzResponse = 4;
 }
 
 message Msg_RealDragEvent {
-  required bytes aEvent = 1;
-  required uint32 aDragAction = 2;
-  required uint32 aDropEffect = 3;
-  required bytes aPrincipal = 4;
-  required bytes csp = 5;
+  required bytes a_aEvent = 1;
+  required uint32 a_aDragAction = 2;
+  required uint32 a_aDropEffect = 3;
+  required bytes a_aPrincipal = 4;
+  required bytes a_csp = 5;
 }
 
 message Msg_SynthesizedEventResponse {
-  required uint64 aCallbackId = 1;
+  required uint64 a_aCallbackId = 1;
 }
 
 message Msg_CompositionEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Msg_NormalPriorityCompositionEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Msg_SelectionEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Msg_NormalPrioritySelectionEvent {
-  required bytes event = 1;
+  required bytes a_event = 1;
 }
 
 message Msg_SimpleContentCommandEvent {
-  required bytes message = 1;
+  required bytes a_message = 1;
 }
 
 message Msg_NormalPrioritySimpleContentCommandEvent {
-  required bytes message = 1;
+  required bytes a_message = 1;
 }
 
 message Msg_InsertText {
-  required bytes aStringToInsert = 1;
+  required bytes a_aStringToInsert = 1;
 }
 
 message Msg_NormalPriorityInsertText {
-  required bytes aStringToInsert = 1;
+  required bytes a_aStringToInsert = 1;
 }
 
 message Msg_ReplaceText {
-  required bytes aReplacementString = 1;
-  required bytes aStringToInsert = 2;
-  required uint32 aOffset = 3;
-  required bool aPreventSetSelection = 4;
+  required bytes a_aReplacementString = 1;
+  required bytes a_aStringToInsert = 2;
+  required uint32 a_aOffset = 3;
+  required bool a_aPreventSetSelection = 4;
 }
 
 message Msg_NormalPriorityReplaceText {
-  required bytes aReplacementString = 1;
-  required bytes aStringToInsert = 2;
-  required uint32 aOffset = 3;
-  required bool aPreventSetSelection = 4;
+  required bytes a_aReplacementString = 1;
+  required bytes a_aStringToInsert = 2;
+  required uint32 a_aOffset = 3;
+  required bool a_aPreventSetSelection = 4;
 }
 
 message Msg_PasteTransferable {
-  required protobuf.mozilla.dom.IPCTransferable aTransferable = 1;
+  required protobuf.mozilla.dom.IPCTransferable a_aTransferable = 1;
 }
 
 message Msg_LoadRemoteScript {
-  required bytes aURL = 1;
-  required bool aRunInGlobalScope = 2;
+  required bytes a_aURL = 1;
+  required bool a_aRunInGlobalScope = 2;
 }
 
 message Msg_Destroy {
 }
 
 message Msg_RenderLayers {
-  required bool aEnabled = 1;
+  required bool a_aEnabled = 1;
 }
 
 message Msg_PreserveLayers {
-  required bool aPreserve = 1;
+  required bool a_aPreserve = 1;
 }
 
 message Msg_SuppressDisplayport {
-  required bool aEnabled = 1;
+  required bool a_aEnabled = 1;
 }
 
 message Msg_NavigateByKey {
-  required bool aForward = 1;
-  required bool aForDocumentNavigation = 2;
+  required bool a_aForward = 1;
+  required bool a_aForDocumentNavigation = 2;
 }
 
 message Msg_UIResolutionChanged {
-  required float dpi = 1;
-  required sint32 rounding = 2;
-  required double scale = 3;
+  required float a_dpi = 1;
+  required sint32 a_rounding = 2;
+  required double a_scale = 3;
 }
 
 message Msg_SafeAreaInsetsChanged {
-  required bytes aSafeAreaInsets = 1;
+  required bytes a_aSafeAreaInsets = 1;
 }
 
 message Msg_SwappedWithOtherRemoteLoader {
-  required protobuf.mozilla.dom.IPCTabContext context = 1;
+  required protobuf.mozilla.dom.IPCTabContext a_context = 1;
 }
 
 message Msg_HandleAccessKey {
-  required bytes event = 1;
-  repeated uint32 charCodes = 2;
+  required bytes a_event = 1;
+  repeated uint32 a_charCodes = 2;
 }
 
 message Msg_PrintPreview {
-  required protobuf.mozilla.embedding.PrintData aPrintData = 1;
-  required bytes aSourceBrowsingContext = 2;
+  required protobuf.mozilla.embedding.PrintData a_aPrintData = 1;
+  required bytes a_aSourceBrowsingContext = 2;
 }
 
 message Reply_PrintPreview {
-  required protobuf.mozilla.dom.PrintPreviewResultInfo aInfo = 1;
+  required protobuf.mozilla.dom.PrintPreviewResultInfo a_aInfo = 1;
 }
 
 message Msg_ExitPrintPreview {
 }
 
 message Msg_Print {
-  required bytes aBC = 1;
-  required protobuf.mozilla.embedding.PrintData aPrintData = 2;
-  required bool aReturnStaticClone = 3;
+  required bytes a_aBC = 1;
+  required protobuf.mozilla.embedding.PrintData a_aPrintData = 2;
+  required bool a_aReturnStaticClone = 3;
 }
 
 message Reply_Print {
-  required bytes staticCloneBrowsingContext = 1;
+  required bytes a_staticCloneBrowsingContext = 1;
 }
 
 message Msg_PrintClonedPage {
-  required bytes aBC = 1;
-  required protobuf.mozilla.embedding.PrintData aPrintData = 2;
-  required bytes aStaticCloneBrowsingContext = 3;
+  required bytes a_aBC = 1;
+  required protobuf.mozilla.embedding.PrintData a_aPrintData = 2;
+  required bytes a_aStaticCloneBrowsingContext = 3;
 }
 
 message Msg_DestroyPrintClone {
-  required bytes aStaticCloneBrowsingContext = 1;
+  required bytes a_aStaticCloneBrowsingContext = 1;
 }
 
 message Msg_UpdateNativeWindowHandle {
-  required bytes aNewHandle = 1;
+  required bytes a_aNewHandle = 1;
 }
 
 message Msg_AllowScriptsToClose {
@@ -902,65 +902,65 @@ message Msg_WillChangeProcess {
 }
 
 message Msg_InvokeChildDragSession {
-  required bytes aSourceWindowContext = 1;
-  required bytes aSourceTopWindowContext = 2;
-  required bytes aPrincipal = 3;
-  repeated protobuf.mozilla.dom.IPCTransferableData transfers = 4;
-  required uint32 action = 5;
+  required bytes a_aSourceWindowContext = 1;
+  required bytes a_aSourceTopWindowContext = 2;
+  required bytes a_aPrincipal = 3;
+  repeated protobuf.mozilla.dom.IPCTransferableData a_transfers = 4;
+  required uint32 a_action = 5;
 }
 
 message Msg_UpdateDragSession {
-  required bytes aPrincipal = 1;
-  repeated protobuf.mozilla.dom.IPCTransferableData transfers = 2;
-  required bytes message = 3;
+  required bytes a_aPrincipal = 1;
+  repeated protobuf.mozilla.dom.IPCTransferableData a_transfers = 2;
+  required bytes a_message = 3;
 }
 
 message Msg_EndDragSession {
-  required bool aDoneDrag = 1;
-  required bool aUserCancelled = 2;
-  required bytes aDragEndPoint = 3;
-  required uint32 aKeyModifiers = 4;
-  required uint32 aDropEffect = 5;
+  required bool a_aDoneDrag = 1;
+  required bool a_aUserCancelled = 2;
+  required bytes a_aDragEndPoint = 3;
+  required uint32 a_aKeyModifiers = 4;
+  required uint32 a_aDropEffect = 5;
 }
 
 message Msg_StoreDropTargetAndDelayEndDragSession {
-  required bytes aPt = 1;
-  required uint32 aDropEffect = 2;
-  required uint32 aDragAction = 3;
-  required bytes aPrincipal = 4;
-  required bytes aCsp = 5;
+  required bytes a_aPt = 1;
+  required uint32 a_aDropEffect = 2;
+  required uint32 a_aDragAction = 3;
+  required bytes a_aPrincipal = 4;
+  required bytes a_aCsp = 5;
 }
 
 message Msg_DispatchToDropTargetAndResumeEndDragSession {
-  required bool aShouldDrop = 1;
-  required bytes aAllowedFilePaths = 2;
+  required bool a_aShouldDrop = 1;
+  required bytes a_aAllowedFilePaths = 2;
 }
 
 message Msg_IsWindowSupportingProtectedMedia {
-  required uint64 aOuterWindowID = 1;
+  required uint64 a_aOuterWindowID = 1;
 }
 
 message Reply_IsWindowSupportingProtectedMedia {
-  required bool isSupported = 1;
+  required bool a_isSupported = 1;
 }
 
 message Msg_IsWindowSupportingWebVR {
-  required uint64 aOuterWindowID = 1;
+  required uint64 a_aOuterWindowID = 1;
 }
 
 message Reply_IsWindowSupportingWebVR {
-  required bool isSupported = 1;
+  required bool a_isSupported = 1;
 }
 
 message Msg_VisitURI {
-  required bytes aURI = 1;
-  required bytes aLastVisitedURI = 2;
-  required uint32 aFlags = 3;
-  required uint64 aBrowserId = 4;
+  required bytes a_aURI = 1;
+  required bytes a_aLastVisitedURI = 2;
+  required uint32 a_aFlags = 3;
+  required uint64 a_aBrowserId = 4;
 }
 
 message Msg_QueryVisitedState {
-  repeated bytes aURIs = 1;
+  repeated bytes a_aURIs = 1;
 }
 
 message Msg_PSessionStoreConstructor {
@@ -970,13 +970,13 @@ message Reply_PSessionStoreConstructor {
 }
 
 message Msg_NewWindowGlobal {
-  required bytes aEndpoint = 1;
-  required protobuf.mozilla.dom.WindowGlobalInit aInit = 2;
+  required bytes a_aEndpoint = 1;
+  required protobuf.mozilla.dom.WindowGlobalInit a_aInit = 2;
 }
 
 message Msg_UpdateDropEffect {
-  required uint32 aDragAction = 1;
-  required uint32 aDropEffect = 2;
+  required uint32 a_aDragAction = 1;
+  required uint32 a_aDropEffect = 2;
 }
 
 // Parameter mappings stats:

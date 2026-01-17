@@ -193,25 +193,25 @@ class Msg_PostMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 1,
+    kAMessageFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.MessageData message = 1;
-  bool has_message() const;
+  // required .protobuf.mozilla.dom.MessageData a_message = 1;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const ::protobuf::mozilla::dom::MessageData& message() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MessageData* release_message();
-  ::protobuf::mozilla::dom::MessageData* mutable_message();
-  void set_allocated_message(::protobuf::mozilla::dom::MessageData* message);
+  void clear_a_message();
+  const ::protobuf::mozilla::dom::MessageData& a_message() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MessageData* release_a_message();
+  ::protobuf::mozilla::dom::MessageData* mutable_a_message();
+  void set_allocated_a_message(::protobuf::mozilla::dom::MessageData* a_message);
   private:
-  const ::protobuf::mozilla::dom::MessageData& _internal_message() const;
-  ::protobuf::mozilla::dom::MessageData* _internal_mutable_message();
+  const ::protobuf::mozilla::dom::MessageData& _internal_a_message() const;
+  ::protobuf::mozilla::dom::MessageData* _internal_mutable_a_message();
   public:
-  void unsafe_arena_set_allocated_message(
-      ::protobuf::mozilla::dom::MessageData* message);
-  ::protobuf::mozilla::dom::MessageData* unsafe_arena_release_message();
+  void unsafe_arena_set_allocated_a_message(
+      ::protobuf::mozilla::dom::MessageData* a_message);
+  ::protobuf::mozilla::dom::MessageData* unsafe_arena_release_a_message();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage)
  private:
@@ -223,7 +223,7 @@ class Msg_PostMessage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::MessageData* message_;
+    ::protobuf::mozilla::dom::MessageData* a_message_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBroadcastChannel_2eproto;
@@ -464,25 +464,25 @@ class Msg_Notify final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 1,
+    kAMessageFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.MessageData message = 1;
-  bool has_message() const;
+  // required .protobuf.mozilla.dom.MessageData a_message = 1;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const ::protobuf::mozilla::dom::MessageData& message() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MessageData* release_message();
-  ::protobuf::mozilla::dom::MessageData* mutable_message();
-  void set_allocated_message(::protobuf::mozilla::dom::MessageData* message);
+  void clear_a_message();
+  const ::protobuf::mozilla::dom::MessageData& a_message() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MessageData* release_a_message();
+  ::protobuf::mozilla::dom::MessageData* mutable_a_message();
+  void set_allocated_a_message(::protobuf::mozilla::dom::MessageData* a_message);
   private:
-  const ::protobuf::mozilla::dom::MessageData& _internal_message() const;
-  ::protobuf::mozilla::dom::MessageData* _internal_mutable_message();
+  const ::protobuf::mozilla::dom::MessageData& _internal_a_message() const;
+  ::protobuf::mozilla::dom::MessageData* _internal_mutable_a_message();
   public:
-  void unsafe_arena_set_allocated_message(
-      ::protobuf::mozilla::dom::MessageData* message);
-  ::protobuf::mozilla::dom::MessageData* unsafe_arena_release_message();
+  void unsafe_arena_set_allocated_a_message(
+      ::protobuf::mozilla::dom::MessageData* a_message);
+  ::protobuf::mozilla::dom::MessageData* unsafe_arena_release_a_message();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify)
  private:
@@ -494,7 +494,7 @@ class Msg_Notify final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::MessageData* message_;
+    ::protobuf::mozilla::dom::MessageData* a_message_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBroadcastChannel_2eproto;
@@ -611,38 +611,38 @@ class Msg_RefMessageDelivered final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageIDFieldNumber = 1,
-    kActorsOnSamePidFieldNumber = 2,
+    kAMessageIDFieldNumber = 1,
+    kAActorsOnSamePidFieldNumber = 2,
   };
-  // required bytes messageID = 1;
-  bool has_messageid() const;
+  // required bytes a_messageID = 1;
+  bool has_a_messageid() const;
   private:
-  bool _internal_has_messageid() const;
+  bool _internal_has_a_messageid() const;
   public:
-  void clear_messageid();
-  const std::string& messageid() const;
+  void clear_a_messageid();
+  const std::string& a_messageid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_messageid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_messageid();
-  PROTOBUF_NODISCARD std::string* release_messageid();
-  void set_allocated_messageid(std::string* messageid);
+  void set_a_messageid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_messageid();
+  PROTOBUF_NODISCARD std::string* release_a_messageid();
+  void set_allocated_a_messageid(std::string* a_messageid);
   private:
-  const std::string& _internal_messageid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_messageid(const std::string& value);
-  std::string* _internal_mutable_messageid();
+  const std::string& _internal_a_messageid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_messageid(const std::string& value);
+  std::string* _internal_mutable_a_messageid();
   public:
 
-  // required uint32 actorsOnSamePid = 2;
-  bool has_actorsonsamepid() const;
+  // required uint32 a_actorsOnSamePid = 2;
+  bool has_a_actorsonsamepid() const;
   private:
-  bool _internal_has_actorsonsamepid() const;
+  bool _internal_has_a_actorsonsamepid() const;
   public:
-  void clear_actorsonsamepid();
-  uint32_t actorsonsamepid() const;
-  void set_actorsonsamepid(uint32_t value);
+  void clear_a_actorsonsamepid();
+  uint32_t a_actorsonsamepid() const;
+  void set_a_actorsonsamepid(uint32_t value);
   private:
-  uint32_t _internal_actorsonsamepid() const;
-  void _internal_set_actorsonsamepid(uint32_t value);
+  uint32_t _internal_a_actorsonsamepid() const;
+  void _internal_set_a_actorsonsamepid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered)
@@ -658,8 +658,8 @@ class Msg_RefMessageDelivered final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr messageid_;
-    uint32_t actorsonsamepid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_messageid_;
+    uint32_t a_actorsonsamepid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBroadcastChannel_2eproto;
@@ -923,41 +923,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PostMessage
 
-// required .protobuf.mozilla.dom.MessageData message = 1;
-inline bool Msg_PostMessage::_internal_has_message() const {
+// required .protobuf.mozilla.dom.MessageData a_message = 1;
+inline bool Msg_PostMessage::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.message_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_message_ != nullptr);
   return value;
 }
-inline bool Msg_PostMessage::has_message() const {
-  return _internal_has_message();
+inline bool Msg_PostMessage::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessage::_internal_message() const {
-  const ::protobuf::mozilla::dom::MessageData* p = _impl_.message_;
+inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessage::_internal_a_message() const {
+  const ::protobuf::mozilla::dom::MessageData* p = _impl_.a_message_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::MessageData&>(
       ::protobuf::mozilla::dom::_MessageData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessage::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.message)
-  return _internal_message();
+inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessage::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.a_message)
+  return _internal_a_message();
 }
-inline void Msg_PostMessage::unsafe_arena_set_allocated_message(
-    ::protobuf::mozilla::dom::MessageData* message) {
+inline void Msg_PostMessage::unsafe_arena_set_allocated_a_message(
+    ::protobuf::mozilla::dom::MessageData* a_message) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.message_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_message_);
   }
-  _impl_.message_ = message;
-  if (message) {
+  _impl_.a_message_ = a_message;
+  if (a_message) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.a_message)
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::release_message() {
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::release_a_message() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MessageData* temp = _impl_.message_;
-  _impl_.message_ = nullptr;
+  ::protobuf::mozilla::dom::MessageData* temp = _impl_.a_message_;
+  _impl_.a_message_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -969,45 +969,45 @@ inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::release_message()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::unsafe_arena_release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.message)
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::unsafe_arena_release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.a_message)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MessageData* temp = _impl_.message_;
-  _impl_.message_ = nullptr;
+  ::protobuf::mozilla::dom::MessageData* temp = _impl_.a_message_;
+  _impl_.a_message_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::_internal_mutable_message() {
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.message_ == nullptr) {
+  if (_impl_.a_message_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MessageData>(GetArenaForAllocation());
-    _impl_.message_ = p;
+    _impl_.a_message_ = p;
   }
-  return _impl_.message_;
+  return _impl_.a_message_;
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::mutable_message() {
-  ::protobuf::mozilla::dom::MessageData* _msg = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.message)
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessage::mutable_a_message() {
+  ::protobuf::mozilla::dom::MessageData* _msg = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.a_message)
   return _msg;
 }
-inline void Msg_PostMessage::set_allocated_message(::protobuf::mozilla::dom::MessageData* message) {
+inline void Msg_PostMessage::set_allocated_a_message(::protobuf::mozilla::dom::MessageData* a_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.message_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_message_);
   }
-  if (message) {
+  if (a_message) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(message));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_message));
     if (message_arena != submessage_arena) {
-      message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, message, submessage_arena);
+      a_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_message, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.message_ = message;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.message)
+  _impl_.a_message_ = a_message;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_PostMessage.a_message)
 }
 
 // -------------------------------------------------------------------
@@ -1018,41 +1018,41 @@ inline void Msg_PostMessage::set_allocated_message(::protobuf::mozilla::dom::Mes
 
 // Msg_Notify
 
-// required .protobuf.mozilla.dom.MessageData message = 1;
-inline bool Msg_Notify::_internal_has_message() const {
+// required .protobuf.mozilla.dom.MessageData a_message = 1;
+inline bool Msg_Notify::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.message_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_message_ != nullptr);
   return value;
 }
-inline bool Msg_Notify::has_message() const {
-  return _internal_has_message();
+inline bool Msg_Notify::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_Notify::_internal_message() const {
-  const ::protobuf::mozilla::dom::MessageData* p = _impl_.message_;
+inline const ::protobuf::mozilla::dom::MessageData& Msg_Notify::_internal_a_message() const {
+  const ::protobuf::mozilla::dom::MessageData* p = _impl_.a_message_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::MessageData&>(
       ::protobuf::mozilla::dom::_MessageData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_Notify::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.message)
-  return _internal_message();
+inline const ::protobuf::mozilla::dom::MessageData& Msg_Notify::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.a_message)
+  return _internal_a_message();
 }
-inline void Msg_Notify::unsafe_arena_set_allocated_message(
-    ::protobuf::mozilla::dom::MessageData* message) {
+inline void Msg_Notify::unsafe_arena_set_allocated_a_message(
+    ::protobuf::mozilla::dom::MessageData* a_message) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.message_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_message_);
   }
-  _impl_.message_ = message;
-  if (message) {
+  _impl_.a_message_ = a_message;
+  if (a_message) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.a_message)
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::release_message() {
+inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::release_a_message() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MessageData* temp = _impl_.message_;
-  _impl_.message_ = nullptr;
+  ::protobuf::mozilla::dom::MessageData* temp = _impl_.a_message_;
+  _impl_.a_message_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1064,145 +1064,145 @@ inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::release_message() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::unsafe_arena_release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.message)
+inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::unsafe_arena_release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.a_message)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MessageData* temp = _impl_.message_;
-  _impl_.message_ = nullptr;
+  ::protobuf::mozilla::dom::MessageData* temp = _impl_.a_message_;
+  _impl_.a_message_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::_internal_mutable_message() {
+inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.message_ == nullptr) {
+  if (_impl_.a_message_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MessageData>(GetArenaForAllocation());
-    _impl_.message_ = p;
+    _impl_.a_message_ = p;
   }
-  return _impl_.message_;
+  return _impl_.a_message_;
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::mutable_message() {
-  ::protobuf::mozilla::dom::MessageData* _msg = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.message)
+inline ::protobuf::mozilla::dom::MessageData* Msg_Notify::mutable_a_message() {
+  ::protobuf::mozilla::dom::MessageData* _msg = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.a_message)
   return _msg;
 }
-inline void Msg_Notify::set_allocated_message(::protobuf::mozilla::dom::MessageData* message) {
+inline void Msg_Notify::set_allocated_a_message(::protobuf::mozilla::dom::MessageData* a_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.message_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_message_);
   }
-  if (message) {
+  if (a_message) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(message));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_message));
     if (message_arena != submessage_arena) {
-      message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, message, submessage_arena);
+      a_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_message, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.message_ = message;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.message)
+  _impl_.a_message_ = a_message;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_Notify.a_message)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RefMessageDelivered
 
-// required bytes messageID = 1;
-inline bool Msg_RefMessageDelivered::_internal_has_messageid() const {
+// required bytes a_messageID = 1;
+inline bool Msg_RefMessageDelivered::_internal_has_a_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RefMessageDelivered::has_messageid() const {
-  return _internal_has_messageid();
+inline bool Msg_RefMessageDelivered::has_a_messageid() const {
+  return _internal_has_a_messageid();
 }
-inline void Msg_RefMessageDelivered::clear_messageid() {
-  _impl_.messageid_.ClearToEmpty();
+inline void Msg_RefMessageDelivered::clear_a_messageid() {
+  _impl_.a_messageid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RefMessageDelivered::messageid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.messageID)
-  return _internal_messageid();
+inline const std::string& Msg_RefMessageDelivered::a_messageid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_messageID)
+  return _internal_a_messageid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RefMessageDelivered::set_messageid(ArgT0&& arg0, ArgT... args) {
+void Msg_RefMessageDelivered::set_a_messageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.messageID)
+ _impl_.a_messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_messageID)
 }
-inline std::string* Msg_RefMessageDelivered::mutable_messageid() {
-  std::string* _s = _internal_mutable_messageid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.messageID)
+inline std::string* Msg_RefMessageDelivered::mutable_a_messageid() {
+  std::string* _s = _internal_mutable_a_messageid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_messageID)
   return _s;
 }
-inline const std::string& Msg_RefMessageDelivered::_internal_messageid() const {
-  return _impl_.messageid_.Get();
+inline const std::string& Msg_RefMessageDelivered::_internal_a_messageid() const {
+  return _impl_.a_messageid_.Get();
 }
-inline void Msg_RefMessageDelivered::_internal_set_messageid(const std::string& value) {
+inline void Msg_RefMessageDelivered::_internal_set_a_messageid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.messageid_.Set(value, GetArenaForAllocation());
+  _impl_.a_messageid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RefMessageDelivered::_internal_mutable_messageid() {
+inline std::string* Msg_RefMessageDelivered::_internal_mutable_a_messageid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.messageid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_messageid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RefMessageDelivered::release_messageid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.messageID)
-  if (!_internal_has_messageid()) {
+inline std::string* Msg_RefMessageDelivered::release_a_messageid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_messageID)
+  if (!_internal_has_a_messageid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.messageid_.Release();
+  auto* p = _impl_.a_messageid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.messageid_.IsDefault()) {
-    _impl_.messageid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_messageid_.IsDefault()) {
+    _impl_.a_messageid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RefMessageDelivered::set_allocated_messageid(std::string* messageid) {
-  if (messageid != nullptr) {
+inline void Msg_RefMessageDelivered::set_allocated_a_messageid(std::string* a_messageid) {
+  if (a_messageid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.messageid_.SetAllocated(messageid, GetArenaForAllocation());
+  _impl_.a_messageid_.SetAllocated(a_messageid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.messageid_.IsDefault()) {
-    _impl_.messageid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_messageid_.IsDefault()) {
+    _impl_.a_messageid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.messageID)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_messageID)
 }
 
-// required uint32 actorsOnSamePid = 2;
-inline bool Msg_RefMessageDelivered::_internal_has_actorsonsamepid() const {
+// required uint32 a_actorsOnSamePid = 2;
+inline bool Msg_RefMessageDelivered::_internal_has_a_actorsonsamepid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RefMessageDelivered::has_actorsonsamepid() const {
-  return _internal_has_actorsonsamepid();
+inline bool Msg_RefMessageDelivered::has_a_actorsonsamepid() const {
+  return _internal_has_a_actorsonsamepid();
 }
-inline void Msg_RefMessageDelivered::clear_actorsonsamepid() {
-  _impl_.actorsonsamepid_ = 0u;
+inline void Msg_RefMessageDelivered::clear_a_actorsonsamepid() {
+  _impl_.a_actorsonsamepid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_RefMessageDelivered::_internal_actorsonsamepid() const {
-  return _impl_.actorsonsamepid_;
+inline uint32_t Msg_RefMessageDelivered::_internal_a_actorsonsamepid() const {
+  return _impl_.a_actorsonsamepid_;
 }
-inline uint32_t Msg_RefMessageDelivered::actorsonsamepid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.actorsOnSamePid)
-  return _internal_actorsonsamepid();
+inline uint32_t Msg_RefMessageDelivered::a_actorsonsamepid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_actorsOnSamePid)
+  return _internal_a_actorsonsamepid();
 }
-inline void Msg_RefMessageDelivered::_internal_set_actorsonsamepid(uint32_t value) {
+inline void Msg_RefMessageDelivered::_internal_set_a_actorsonsamepid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.actorsonsamepid_ = value;
+  _impl_.a_actorsonsamepid_ = value;
 }
-inline void Msg_RefMessageDelivered::set_actorsonsamepid(uint32_t value) {
-  _internal_set_actorsonsamepid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.actorsOnSamePid)
+inline void Msg_RefMessageDelivered::set_a_actorsonsamepid(uint32_t value) {
+  _internal_set_a_actorsonsamepid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBroadcastChannel.Msg_RefMessageDelivered.a_actorsOnSamePid)
 }
 
 // -------------------------------------------------------------------

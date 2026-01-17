@@ -24,9 +24,9 @@ PROTOBUF_CONSTEXPR ClassifierInfo::ClassifierInfo(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.list_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.provider_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.fullhash_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_list_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_provider_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_fullhash_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct ClassifierInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ClassifierInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -40,9 +40,9 @@ PROTOBUF_CONSTEXPR URLClassifierLocalResult::URLClassifierLocalResult(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.uri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.featurename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.matchinglist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_uri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_featurename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_matchinglist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct URLClassifierLocalResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR URLClassifierLocalResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -64,13 +64,13 @@ namespace dom {
 class ClassifierInfo::_Internal {
  public:
   using HasBits = decltype(std::declval<ClassifierInfo>()._impl_._has_bits_);
-  static void set_has_list(HasBits* has_bits) {
+  static void set_has_a_list(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_provider(HasBits* has_bits) {
+  static void set_has_a_provider(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_fullhash(HasBits* has_bits) {
+  static void set_has_a_fullhash(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -90,33 +90,33 @@ ClassifierInfo::ClassifierInfo(const ClassifierInfo& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.list_){}
-    , decltype(_impl_.provider_){}
-    , decltype(_impl_.fullhash_){}};
+    , decltype(_impl_.a_list_){}
+    , decltype(_impl_.a_provider_){}
+    , decltype(_impl_.a_fullhash_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.list_.InitDefault();
+  _impl_.a_list_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.list_.Set("", GetArenaForAllocation());
+    _impl_.a_list_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_list()) {
-    _this->_impl_.list_.Set(from._internal_list(), 
+  if (from._internal_has_a_list()) {
+    _this->_impl_.a_list_.Set(from._internal_a_list(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.provider_.InitDefault();
+  _impl_.a_provider_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.provider_.Set("", GetArenaForAllocation());
+    _impl_.a_provider_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_provider()) {
-    _this->_impl_.provider_.Set(from._internal_provider(), 
+  if (from._internal_has_a_provider()) {
+    _this->_impl_.a_provider_.Set(from._internal_a_provider(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.fullhash_.InitDefault();
+  _impl_.a_fullhash_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fullhash_.Set("", GetArenaForAllocation());
+    _impl_.a_fullhash_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fullhash()) {
-    _this->_impl_.fullhash_.Set(from._internal_fullhash(), 
+  if (from._internal_has_a_fullhash()) {
+    _this->_impl_.a_fullhash_.Set(from._internal_a_fullhash(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.ClassifierInfo)
@@ -129,21 +129,21 @@ inline void ClassifierInfo::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.list_){}
-    , decltype(_impl_.provider_){}
-    , decltype(_impl_.fullhash_){}
+    , decltype(_impl_.a_list_){}
+    , decltype(_impl_.a_provider_){}
+    , decltype(_impl_.a_fullhash_){}
   };
-  _impl_.list_.InitDefault();
+  _impl_.a_list_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.list_.Set("", GetArenaForAllocation());
+    _impl_.a_list_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.provider_.InitDefault();
+  _impl_.a_provider_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.provider_.Set("", GetArenaForAllocation());
+    _impl_.a_provider_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.fullhash_.InitDefault();
+  _impl_.a_fullhash_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fullhash_.Set("", GetArenaForAllocation());
+    _impl_.a_fullhash_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -158,9 +158,9 @@ ClassifierInfo::~ClassifierInfo() {
 
 inline void ClassifierInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.list_.Destroy();
-  _impl_.provider_.Destroy();
-  _impl_.fullhash_.Destroy();
+  _impl_.a_list_.Destroy();
+  _impl_.a_provider_.Destroy();
+  _impl_.a_fullhash_.Destroy();
 }
 
 void ClassifierInfo::SetCachedSize(int size) const {
@@ -176,13 +176,13 @@ void ClassifierInfo::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.list_.ClearNonDefaultToEmpty();
+      _impl_.a_list_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.provider_.ClearNonDefaultToEmpty();
+      _impl_.a_provider_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.fullhash_.ClearNonDefaultToEmpty();
+      _impl_.a_fullhash_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -196,28 +196,28 @@ const char* ClassifierInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes list = 1;
+      // required bytes a_list = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_list();
+          auto str = _internal_mutable_a_list();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes provider = 2;
+      // required bytes a_provider = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_provider();
+          auto str = _internal_mutable_a_provider();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes fullhash = 3;
+      // required bytes a_fullhash = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_fullhash();
+          auto str = _internal_mutable_a_fullhash();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -254,22 +254,22 @@ uint8_t* ClassifierInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes list = 1;
+  // required bytes a_list = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_list(), target);
+        1, this->_internal_a_list(), target);
   }
 
-  // required bytes provider = 2;
+  // required bytes a_provider = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_provider(), target);
+        2, this->_internal_a_provider(), target);
   }
 
-  // required bytes fullhash = 3;
+  // required bytes a_fullhash = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_fullhash(), target);
+        3, this->_internal_a_fullhash(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -284,25 +284,25 @@ size_t ClassifierInfo::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.ClassifierInfo)
   size_t total_size = 0;
 
-  if (_internal_has_list()) {
-    // required bytes list = 1;
+  if (_internal_has_a_list()) {
+    // required bytes a_list = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_list());
+        this->_internal_a_list());
   }
 
-  if (_internal_has_provider()) {
-    // required bytes provider = 2;
+  if (_internal_has_a_provider()) {
+    // required bytes a_provider = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_provider());
+        this->_internal_a_provider());
   }
 
-  if (_internal_has_fullhash()) {
-    // required bytes fullhash = 3;
+  if (_internal_has_a_fullhash()) {
+    // required bytes a_fullhash = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fullhash());
+        this->_internal_a_fullhash());
   }
 
   return total_size;
@@ -312,20 +312,20 @@ size_t ClassifierInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes list = 1;
+    // required bytes a_list = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_list());
+        this->_internal_a_list());
 
-    // required bytes provider = 2;
+    // required bytes a_provider = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_provider());
+        this->_internal_a_provider());
 
-    // required bytes fullhash = 3;
+    // required bytes a_fullhash = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fullhash());
+        this->_internal_a_fullhash());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -358,13 +358,13 @@ void ClassifierInfo::MergeFrom(const ClassifierInfo& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_list(from._internal_list());
+      _this->_internal_set_a_list(from._internal_a_list());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_provider(from._internal_provider());
+      _this->_internal_set_a_provider(from._internal_a_provider());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_fullhash(from._internal_fullhash());
+      _this->_internal_set_a_fullhash(from._internal_a_fullhash());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -389,16 +389,16 @@ void ClassifierInfo::InternalSwap(ClassifierInfo* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.list_, lhs_arena,
-      &other->_impl_.list_, rhs_arena
+      &_impl_.a_list_, lhs_arena,
+      &other->_impl_.a_list_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.provider_, lhs_arena,
-      &other->_impl_.provider_, rhs_arena
+      &_impl_.a_provider_, lhs_arena,
+      &other->_impl_.a_provider_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fullhash_, lhs_arena,
-      &other->_impl_.fullhash_, rhs_arena
+      &_impl_.a_fullhash_, lhs_arena,
+      &other->_impl_.a_fullhash_, rhs_arena
   );
 }
 
@@ -412,13 +412,13 @@ std::string ClassifierInfo::GetTypeName() const {
 class URLClassifierLocalResult::_Internal {
  public:
   using HasBits = decltype(std::declval<URLClassifierLocalResult>()._impl_._has_bits_);
-  static void set_has_uri(HasBits* has_bits) {
+  static void set_has_a_uri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_featurename(HasBits* has_bits) {
+  static void set_has_a_featurename(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_matchinglist(HasBits* has_bits) {
+  static void set_has_a_matchinglist(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -438,33 +438,33 @@ URLClassifierLocalResult::URLClassifierLocalResult(const URLClassifierLocalResul
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.uri_){}
-    , decltype(_impl_.featurename_){}
-    , decltype(_impl_.matchinglist_){}};
+    , decltype(_impl_.a_uri_){}
+    , decltype(_impl_.a_featurename_){}
+    , decltype(_impl_.a_matchinglist_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.uri_.InitDefault();
+  _impl_.a_uri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.uri_.Set("", GetArenaForAllocation());
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_uri()) {
-    _this->_impl_.uri_.Set(from._internal_uri(), 
+  if (from._internal_has_a_uri()) {
+    _this->_impl_.a_uri_.Set(from._internal_a_uri(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.featurename_.InitDefault();
+  _impl_.a_featurename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.featurename_.Set("", GetArenaForAllocation());
+    _impl_.a_featurename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_featurename()) {
-    _this->_impl_.featurename_.Set(from._internal_featurename(), 
+  if (from._internal_has_a_featurename()) {
+    _this->_impl_.a_featurename_.Set(from._internal_a_featurename(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.matchinglist_.InitDefault();
+  _impl_.a_matchinglist_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.matchinglist_.Set("", GetArenaForAllocation());
+    _impl_.a_matchinglist_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_matchinglist()) {
-    _this->_impl_.matchinglist_.Set(from._internal_matchinglist(), 
+  if (from._internal_has_a_matchinglist()) {
+    _this->_impl_.a_matchinglist_.Set(from._internal_a_matchinglist(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.URLClassifierLocalResult)
@@ -477,21 +477,21 @@ inline void URLClassifierLocalResult::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.uri_){}
-    , decltype(_impl_.featurename_){}
-    , decltype(_impl_.matchinglist_){}
+    , decltype(_impl_.a_uri_){}
+    , decltype(_impl_.a_featurename_){}
+    , decltype(_impl_.a_matchinglist_){}
   };
-  _impl_.uri_.InitDefault();
+  _impl_.a_uri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.uri_.Set("", GetArenaForAllocation());
+    _impl_.a_uri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.featurename_.InitDefault();
+  _impl_.a_featurename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.featurename_.Set("", GetArenaForAllocation());
+    _impl_.a_featurename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.matchinglist_.InitDefault();
+  _impl_.a_matchinglist_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.matchinglist_.Set("", GetArenaForAllocation());
+    _impl_.a_matchinglist_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -506,9 +506,9 @@ URLClassifierLocalResult::~URLClassifierLocalResult() {
 
 inline void URLClassifierLocalResult::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.uri_.Destroy();
-  _impl_.featurename_.Destroy();
-  _impl_.matchinglist_.Destroy();
+  _impl_.a_uri_.Destroy();
+  _impl_.a_featurename_.Destroy();
+  _impl_.a_matchinglist_.Destroy();
 }
 
 void URLClassifierLocalResult::SetCachedSize(int size) const {
@@ -524,13 +524,13 @@ void URLClassifierLocalResult::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.uri_.ClearNonDefaultToEmpty();
+      _impl_.a_uri_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.featurename_.ClearNonDefaultToEmpty();
+      _impl_.a_featurename_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.matchinglist_.ClearNonDefaultToEmpty();
+      _impl_.a_matchinglist_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -544,28 +544,28 @@ const char* URLClassifierLocalResult::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes uri = 1;
+      // required bytes a_uri = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_uri();
+          auto str = _internal_mutable_a_uri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes featureName = 2;
+      // required bytes a_featureName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_featurename();
+          auto str = _internal_mutable_a_featurename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes matchingList = 3;
+      // required bytes a_matchingList = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_matchinglist();
+          auto str = _internal_mutable_a_matchinglist();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -602,22 +602,22 @@ uint8_t* URLClassifierLocalResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes uri = 1;
+  // required bytes a_uri = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_uri(), target);
+        1, this->_internal_a_uri(), target);
   }
 
-  // required bytes featureName = 2;
+  // required bytes a_featureName = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_featurename(), target);
+        2, this->_internal_a_featurename(), target);
   }
 
-  // required bytes matchingList = 3;
+  // required bytes a_matchingList = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_matchinglist(), target);
+        3, this->_internal_a_matchinglist(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -632,25 +632,25 @@ size_t URLClassifierLocalResult::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.URLClassifierLocalResult)
   size_t total_size = 0;
 
-  if (_internal_has_uri()) {
-    // required bytes uri = 1;
+  if (_internal_has_a_uri()) {
+    // required bytes a_uri = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_uri());
+        this->_internal_a_uri());
   }
 
-  if (_internal_has_featurename()) {
-    // required bytes featureName = 2;
+  if (_internal_has_a_featurename()) {
+    // required bytes a_featureName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_featurename());
+        this->_internal_a_featurename());
   }
 
-  if (_internal_has_matchinglist()) {
-    // required bytes matchingList = 3;
+  if (_internal_has_a_matchinglist()) {
+    // required bytes a_matchingList = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_matchinglist());
+        this->_internal_a_matchinglist());
   }
 
   return total_size;
@@ -660,20 +660,20 @@ size_t URLClassifierLocalResult::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes uri = 1;
+    // required bytes a_uri = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_uri());
+        this->_internal_a_uri());
 
-    // required bytes featureName = 2;
+    // required bytes a_featureName = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_featurename());
+        this->_internal_a_featurename());
 
-    // required bytes matchingList = 3;
+    // required bytes a_matchingList = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_matchinglist());
+        this->_internal_a_matchinglist());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -706,13 +706,13 @@ void URLClassifierLocalResult::MergeFrom(const URLClassifierLocalResult& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_uri(from._internal_uri());
+      _this->_internal_set_a_uri(from._internal_a_uri());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_featurename(from._internal_featurename());
+      _this->_internal_set_a_featurename(from._internal_a_featurename());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_matchinglist(from._internal_matchinglist());
+      _this->_internal_set_a_matchinglist(from._internal_a_matchinglist());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -737,16 +737,16 @@ void URLClassifierLocalResult::InternalSwap(URLClassifierLocalResult* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.uri_, lhs_arena,
-      &other->_impl_.uri_, rhs_arena
+      &_impl_.a_uri_, lhs_arena,
+      &other->_impl_.a_uri_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.featurename_, lhs_arena,
-      &other->_impl_.featurename_, rhs_arena
+      &_impl_.a_featurename_, lhs_arena,
+      &other->_impl_.a_featurename_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.matchinglist_, lhs_arena,
-      &other->_impl_.matchinglist_, rhs_arena
+      &_impl_.a_matchinglist_, lhs_arena,
+      &other->_impl_.a_matchinglist_, rhs_arena
   );
 }
 

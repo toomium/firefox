@@ -173,232 +173,232 @@ class FrameStats final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kCompositeStartFieldNumber = 2,
-    kRenderStartFieldNumber = 3,
-    kCompositeEndFieldNumber = 4,
-    kTransactionStartFieldNumber = 8,
-    kRefreshStartFieldNumber = 9,
-    kFwdTimeFieldNumber = 10,
-    kSceneBuiltTimeFieldNumber = 11,
-    kUrlFieldNumber = 13,
-    kResourceUploadTimeFieldNumber = 6,
-    kGpuCacheUploadTimeFieldNumber = 7,
-    kContentFrameTimeFieldNumber = 5,
-    kSkippedCompositesFieldNumber = 12,
+    kAIdFieldNumber = 1,
+    kACompositeStartFieldNumber = 2,
+    kARenderStartFieldNumber = 3,
+    kACompositeEndFieldNumber = 4,
+    kATransactionStartFieldNumber = 8,
+    kARefreshStartFieldNumber = 9,
+    kAFwdTimeFieldNumber = 10,
+    kASceneBuiltTimeFieldNumber = 11,
+    kAUrlFieldNumber = 13,
+    kAResourceUploadTimeFieldNumber = 6,
+    kAGpuCacheUploadTimeFieldNumber = 7,
+    kAContentFrameTimeFieldNumber = 5,
+    kASkippedCompositesFieldNumber = 12,
   };
-  // required bytes id = 1;
-  bool has_id() const;
+  // required bytes a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes compositeStart = 2;
-  bool has_compositestart() const;
+  // required bytes a_compositeStart = 2;
+  bool has_a_compositestart() const;
   private:
-  bool _internal_has_compositestart() const;
+  bool _internal_has_a_compositestart() const;
   public:
-  void clear_compositestart();
-  const std::string& compositestart() const;
+  void clear_a_compositestart();
+  const std::string& a_compositestart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_compositestart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_compositestart();
-  PROTOBUF_NODISCARD std::string* release_compositestart();
-  void set_allocated_compositestart(std::string* compositestart);
+  void set_a_compositestart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_compositestart();
+  PROTOBUF_NODISCARD std::string* release_a_compositestart();
+  void set_allocated_a_compositestart(std::string* a_compositestart);
   private:
-  const std::string& _internal_compositestart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_compositestart(const std::string& value);
-  std::string* _internal_mutable_compositestart();
+  const std::string& _internal_a_compositestart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_compositestart(const std::string& value);
+  std::string* _internal_mutable_a_compositestart();
   public:
 
-  // required bytes renderStart = 3;
-  bool has_renderstart() const;
+  // required bytes a_renderStart = 3;
+  bool has_a_renderstart() const;
   private:
-  bool _internal_has_renderstart() const;
+  bool _internal_has_a_renderstart() const;
   public:
-  void clear_renderstart();
-  const std::string& renderstart() const;
+  void clear_a_renderstart();
+  const std::string& a_renderstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_renderstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_renderstart();
-  PROTOBUF_NODISCARD std::string* release_renderstart();
-  void set_allocated_renderstart(std::string* renderstart);
+  void set_a_renderstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_renderstart();
+  PROTOBUF_NODISCARD std::string* release_a_renderstart();
+  void set_allocated_a_renderstart(std::string* a_renderstart);
   private:
-  const std::string& _internal_renderstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_renderstart(const std::string& value);
-  std::string* _internal_mutable_renderstart();
+  const std::string& _internal_a_renderstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_renderstart(const std::string& value);
+  std::string* _internal_mutable_a_renderstart();
   public:
 
-  // required bytes compositeEnd = 4;
-  bool has_compositeend() const;
+  // required bytes a_compositeEnd = 4;
+  bool has_a_compositeend() const;
   private:
-  bool _internal_has_compositeend() const;
+  bool _internal_has_a_compositeend() const;
   public:
-  void clear_compositeend();
-  const std::string& compositeend() const;
+  void clear_a_compositeend();
+  const std::string& a_compositeend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_compositeend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_compositeend();
-  PROTOBUF_NODISCARD std::string* release_compositeend();
-  void set_allocated_compositeend(std::string* compositeend);
+  void set_a_compositeend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_compositeend();
+  PROTOBUF_NODISCARD std::string* release_a_compositeend();
+  void set_allocated_a_compositeend(std::string* a_compositeend);
   private:
-  const std::string& _internal_compositeend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_compositeend(const std::string& value);
-  std::string* _internal_mutable_compositeend();
+  const std::string& _internal_a_compositeend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_compositeend(const std::string& value);
+  std::string* _internal_mutable_a_compositeend();
   public:
 
-  // required bytes transactionStart = 8;
-  bool has_transactionstart() const;
+  // required bytes a_transactionStart = 8;
+  bool has_a_transactionstart() const;
   private:
-  bool _internal_has_transactionstart() const;
+  bool _internal_has_a_transactionstart() const;
   public:
-  void clear_transactionstart();
-  const std::string& transactionstart() const;
+  void clear_a_transactionstart();
+  const std::string& a_transactionstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_transactionstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_transactionstart();
-  PROTOBUF_NODISCARD std::string* release_transactionstart();
-  void set_allocated_transactionstart(std::string* transactionstart);
+  void set_a_transactionstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_transactionstart();
+  PROTOBUF_NODISCARD std::string* release_a_transactionstart();
+  void set_allocated_a_transactionstart(std::string* a_transactionstart);
   private:
-  const std::string& _internal_transactionstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_transactionstart(const std::string& value);
-  std::string* _internal_mutable_transactionstart();
+  const std::string& _internal_a_transactionstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_transactionstart(const std::string& value);
+  std::string* _internal_mutable_a_transactionstart();
   public:
 
-  // required bytes refreshStart = 9;
-  bool has_refreshstart() const;
+  // required bytes a_refreshStart = 9;
+  bool has_a_refreshstart() const;
   private:
-  bool _internal_has_refreshstart() const;
+  bool _internal_has_a_refreshstart() const;
   public:
-  void clear_refreshstart();
-  const std::string& refreshstart() const;
+  void clear_a_refreshstart();
+  const std::string& a_refreshstart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_refreshstart(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_refreshstart();
-  PROTOBUF_NODISCARD std::string* release_refreshstart();
-  void set_allocated_refreshstart(std::string* refreshstart);
+  void set_a_refreshstart(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_refreshstart();
+  PROTOBUF_NODISCARD std::string* release_a_refreshstart();
+  void set_allocated_a_refreshstart(std::string* a_refreshstart);
   private:
-  const std::string& _internal_refreshstart() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_refreshstart(const std::string& value);
-  std::string* _internal_mutable_refreshstart();
+  const std::string& _internal_a_refreshstart() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_refreshstart(const std::string& value);
+  std::string* _internal_mutable_a_refreshstart();
   public:
 
-  // required bytes fwdTime = 10;
-  bool has_fwdtime() const;
+  // required bytes a_fwdTime = 10;
+  bool has_a_fwdtime() const;
   private:
-  bool _internal_has_fwdtime() const;
+  bool _internal_has_a_fwdtime() const;
   public:
-  void clear_fwdtime();
-  const std::string& fwdtime() const;
+  void clear_a_fwdtime();
+  const std::string& a_fwdtime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_fwdtime(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_fwdtime();
-  PROTOBUF_NODISCARD std::string* release_fwdtime();
-  void set_allocated_fwdtime(std::string* fwdtime);
+  void set_a_fwdtime(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_fwdtime();
+  PROTOBUF_NODISCARD std::string* release_a_fwdtime();
+  void set_allocated_a_fwdtime(std::string* a_fwdtime);
   private:
-  const std::string& _internal_fwdtime() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_fwdtime(const std::string& value);
-  std::string* _internal_mutable_fwdtime();
+  const std::string& _internal_a_fwdtime() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_fwdtime(const std::string& value);
+  std::string* _internal_mutable_a_fwdtime();
   public:
 
-  // required bytes sceneBuiltTime = 11;
-  bool has_scenebuilttime() const;
+  // required bytes a_sceneBuiltTime = 11;
+  bool has_a_scenebuilttime() const;
   private:
-  bool _internal_has_scenebuilttime() const;
+  bool _internal_has_a_scenebuilttime() const;
   public:
-  void clear_scenebuilttime();
-  const std::string& scenebuilttime() const;
+  void clear_a_scenebuilttime();
+  const std::string& a_scenebuilttime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_scenebuilttime(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_scenebuilttime();
-  PROTOBUF_NODISCARD std::string* release_scenebuilttime();
-  void set_allocated_scenebuilttime(std::string* scenebuilttime);
+  void set_a_scenebuilttime(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_scenebuilttime();
+  PROTOBUF_NODISCARD std::string* release_a_scenebuilttime();
+  void set_allocated_a_scenebuilttime(std::string* a_scenebuilttime);
   private:
-  const std::string& _internal_scenebuilttime() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_scenebuilttime(const std::string& value);
-  std::string* _internal_mutable_scenebuilttime();
+  const std::string& _internal_a_scenebuilttime() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_scenebuilttime(const std::string& value);
+  std::string* _internal_mutable_a_scenebuilttime();
   public:
 
-  // required bytes url = 13;
-  bool has_url() const;
+  // required bytes a_url = 13;
+  bool has_a_url() const;
   private:
-  bool _internal_has_url() const;
+  bool _internal_has_a_url() const;
   public:
-  void clear_url();
-  const std::string& url() const;
+  void clear_a_url();
+  const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_url(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_url();
-  PROTOBUF_NODISCARD std::string* release_url();
-  void set_allocated_url(std::string* url);
+  void set_a_url(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_url();
+  PROTOBUF_NODISCARD std::string* release_a_url();
+  void set_allocated_a_url(std::string* a_url);
   private:
-  const std::string& _internal_url() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& value);
-  std::string* _internal_mutable_url();
+  const std::string& _internal_a_url() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_url(const std::string& value);
+  std::string* _internal_mutable_a_url();
   public:
 
-  // required double resourceUploadTime = 6;
-  bool has_resourceuploadtime() const;
+  // required double a_resourceUploadTime = 6;
+  bool has_a_resourceuploadtime() const;
   private:
-  bool _internal_has_resourceuploadtime() const;
+  bool _internal_has_a_resourceuploadtime() const;
   public:
-  void clear_resourceuploadtime();
-  double resourceuploadtime() const;
-  void set_resourceuploadtime(double value);
+  void clear_a_resourceuploadtime();
+  double a_resourceuploadtime() const;
+  void set_a_resourceuploadtime(double value);
   private:
-  double _internal_resourceuploadtime() const;
-  void _internal_set_resourceuploadtime(double value);
-  public:
-
-  // required double gpuCacheUploadTime = 7;
-  bool has_gpucacheuploadtime() const;
-  private:
-  bool _internal_has_gpucacheuploadtime() const;
-  public:
-  void clear_gpucacheuploadtime();
-  double gpucacheuploadtime() const;
-  void set_gpucacheuploadtime(double value);
-  private:
-  double _internal_gpucacheuploadtime() const;
-  void _internal_set_gpucacheuploadtime(double value);
+  double _internal_a_resourceuploadtime() const;
+  void _internal_set_a_resourceuploadtime(double value);
   public:
 
-  // required sint32 contentFrameTime = 5;
-  bool has_contentframetime() const;
+  // required double a_gpuCacheUploadTime = 7;
+  bool has_a_gpucacheuploadtime() const;
   private:
-  bool _internal_has_contentframetime() const;
+  bool _internal_has_a_gpucacheuploadtime() const;
   public:
-  void clear_contentframetime();
-  int32_t contentframetime() const;
-  void set_contentframetime(int32_t value);
+  void clear_a_gpucacheuploadtime();
+  double a_gpucacheuploadtime() const;
+  void set_a_gpucacheuploadtime(double value);
   private:
-  int32_t _internal_contentframetime() const;
-  void _internal_set_contentframetime(int32_t value);
+  double _internal_a_gpucacheuploadtime() const;
+  void _internal_set_a_gpucacheuploadtime(double value);
   public:
 
-  // required uint32 skippedComposites = 12;
-  bool has_skippedcomposites() const;
+  // required sint32 a_contentFrameTime = 5;
+  bool has_a_contentframetime() const;
   private:
-  bool _internal_has_skippedcomposites() const;
+  bool _internal_has_a_contentframetime() const;
   public:
-  void clear_skippedcomposites();
-  uint32_t skippedcomposites() const;
-  void set_skippedcomposites(uint32_t value);
+  void clear_a_contentframetime();
+  int32_t a_contentframetime() const;
+  void set_a_contentframetime(int32_t value);
   private:
-  uint32_t _internal_skippedcomposites() const;
-  void _internal_set_skippedcomposites(uint32_t value);
+  int32_t _internal_a_contentframetime() const;
+  void _internal_set_a_contentframetime(int32_t value);
+  public:
+
+  // required uint32 a_skippedComposites = 12;
+  bool has_a_skippedcomposites() const;
+  private:
+  bool _internal_has_a_skippedcomposites() const;
+  public:
+  void clear_a_skippedcomposites();
+  uint32_t a_skippedcomposites() const;
+  void set_a_skippedcomposites(uint32_t value);
+  private:
+  uint32_t _internal_a_skippedcomposites() const;
+  void _internal_set_a_skippedcomposites(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.FrameStats)
@@ -414,19 +414,19 @@ class FrameStats final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compositestart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr renderstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr compositeend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr transactionstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr refreshstart_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr fwdtime_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr scenebuilttime_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
-    double resourceuploadtime_;
-    double gpucacheuploadtime_;
-    int32_t contentframetime_;
-    uint32_t skippedcomposites_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_compositestart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_renderstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_compositeend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_transactionstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_refreshstart_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fwdtime_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scenebuilttime_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_url_;
+    double a_resourceuploadtime_;
+    double a_gpucacheuploadtime_;
+    int32_t a_contentframetime_;
+    uint32_t a_skippedcomposites_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -442,728 +442,728 @@ class FrameStats final :
 #endif  // __GNUC__
 // FrameStats
 
-// required bytes id = 1;
-inline bool FrameStats::_internal_has_id() const {
+// required bytes a_id = 1;
+inline bool FrameStats::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FrameStats::has_id() const {
-  return _internal_has_id();
+inline bool FrameStats::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void FrameStats::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void FrameStats::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FrameStats::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.id)
-  return _internal_id();
+inline const std::string& FrameStats::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_id(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_id)
 }
-inline std::string* FrameStats::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.id)
+inline std::string* FrameStats::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_id)
   return _s;
 }
-inline const std::string& FrameStats::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& FrameStats::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void FrameStats::_internal_set_id(const std::string& value) {
+inline void FrameStats::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_id() {
+inline std::string* FrameStats::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.id)
-  if (!_internal_has_id()) {
+inline std::string* FrameStats::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void FrameStats::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_id)
 }
 
-// required bytes compositeStart = 2;
-inline bool FrameStats::_internal_has_compositestart() const {
+// required bytes a_compositeStart = 2;
+inline bool FrameStats::_internal_has_a_compositestart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FrameStats::has_compositestart() const {
-  return _internal_has_compositestart();
+inline bool FrameStats::has_a_compositestart() const {
+  return _internal_has_a_compositestart();
 }
-inline void FrameStats::clear_compositestart() {
-  _impl_.compositestart_.ClearToEmpty();
+inline void FrameStats::clear_a_compositestart() {
+  _impl_.a_compositestart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FrameStats::compositestart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.compositeStart)
-  return _internal_compositestart();
+inline const std::string& FrameStats::a_compositestart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_compositeStart)
+  return _internal_a_compositestart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_compositestart(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_compositestart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.compositestart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.compositeStart)
+ _impl_.a_compositestart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_compositeStart)
 }
-inline std::string* FrameStats::mutable_compositestart() {
-  std::string* _s = _internal_mutable_compositestart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.compositeStart)
+inline std::string* FrameStats::mutable_a_compositestart() {
+  std::string* _s = _internal_mutable_a_compositestart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_compositeStart)
   return _s;
 }
-inline const std::string& FrameStats::_internal_compositestart() const {
-  return _impl_.compositestart_.Get();
+inline const std::string& FrameStats::_internal_a_compositestart() const {
+  return _impl_.a_compositestart_.Get();
 }
-inline void FrameStats::_internal_set_compositestart(const std::string& value) {
+inline void FrameStats::_internal_set_a_compositestart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.compositestart_.Set(value, GetArenaForAllocation());
+  _impl_.a_compositestart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_compositestart() {
+inline std::string* FrameStats::_internal_mutable_a_compositestart() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.compositestart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_compositestart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_compositestart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.compositeStart)
-  if (!_internal_has_compositestart()) {
+inline std::string* FrameStats::release_a_compositestart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_compositeStart)
+  if (!_internal_has_a_compositestart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.compositestart_.Release();
+  auto* p = _impl_.a_compositestart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.compositestart_.IsDefault()) {
-    _impl_.compositestart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_compositestart_.IsDefault()) {
+    _impl_.a_compositestart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_compositestart(std::string* compositestart) {
-  if (compositestart != nullptr) {
+inline void FrameStats::set_allocated_a_compositestart(std::string* a_compositestart) {
+  if (a_compositestart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.compositestart_.SetAllocated(compositestart, GetArenaForAllocation());
+  _impl_.a_compositestart_.SetAllocated(a_compositestart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.compositestart_.IsDefault()) {
-    _impl_.compositestart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_compositestart_.IsDefault()) {
+    _impl_.a_compositestart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.compositeStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_compositeStart)
 }
 
-// required bytes renderStart = 3;
-inline bool FrameStats::_internal_has_renderstart() const {
+// required bytes a_renderStart = 3;
+inline bool FrameStats::_internal_has_a_renderstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FrameStats::has_renderstart() const {
-  return _internal_has_renderstart();
+inline bool FrameStats::has_a_renderstart() const {
+  return _internal_has_a_renderstart();
 }
-inline void FrameStats::clear_renderstart() {
-  _impl_.renderstart_.ClearToEmpty();
+inline void FrameStats::clear_a_renderstart() {
+  _impl_.a_renderstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& FrameStats::renderstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.renderStart)
-  return _internal_renderstart();
+inline const std::string& FrameStats::a_renderstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_renderStart)
+  return _internal_a_renderstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_renderstart(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_renderstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.renderstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.renderStart)
+ _impl_.a_renderstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_renderStart)
 }
-inline std::string* FrameStats::mutable_renderstart() {
-  std::string* _s = _internal_mutable_renderstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.renderStart)
+inline std::string* FrameStats::mutable_a_renderstart() {
+  std::string* _s = _internal_mutable_a_renderstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_renderStart)
   return _s;
 }
-inline const std::string& FrameStats::_internal_renderstart() const {
-  return _impl_.renderstart_.Get();
+inline const std::string& FrameStats::_internal_a_renderstart() const {
+  return _impl_.a_renderstart_.Get();
 }
-inline void FrameStats::_internal_set_renderstart(const std::string& value) {
+inline void FrameStats::_internal_set_a_renderstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.renderstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_renderstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_renderstart() {
+inline std::string* FrameStats::_internal_mutable_a_renderstart() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.renderstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_renderstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_renderstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.renderStart)
-  if (!_internal_has_renderstart()) {
+inline std::string* FrameStats::release_a_renderstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_renderStart)
+  if (!_internal_has_a_renderstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.renderstart_.Release();
+  auto* p = _impl_.a_renderstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.renderstart_.IsDefault()) {
-    _impl_.renderstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_renderstart_.IsDefault()) {
+    _impl_.a_renderstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_renderstart(std::string* renderstart) {
-  if (renderstart != nullptr) {
+inline void FrameStats::set_allocated_a_renderstart(std::string* a_renderstart) {
+  if (a_renderstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.renderstart_.SetAllocated(renderstart, GetArenaForAllocation());
+  _impl_.a_renderstart_.SetAllocated(a_renderstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.renderstart_.IsDefault()) {
-    _impl_.renderstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_renderstart_.IsDefault()) {
+    _impl_.a_renderstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.renderStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_renderStart)
 }
 
-// required bytes compositeEnd = 4;
-inline bool FrameStats::_internal_has_compositeend() const {
+// required bytes a_compositeEnd = 4;
+inline bool FrameStats::_internal_has_a_compositeend() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool FrameStats::has_compositeend() const {
-  return _internal_has_compositeend();
+inline bool FrameStats::has_a_compositeend() const {
+  return _internal_has_a_compositeend();
 }
-inline void FrameStats::clear_compositeend() {
-  _impl_.compositeend_.ClearToEmpty();
+inline void FrameStats::clear_a_compositeend() {
+  _impl_.a_compositeend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& FrameStats::compositeend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.compositeEnd)
-  return _internal_compositeend();
+inline const std::string& FrameStats::a_compositeend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_compositeEnd)
+  return _internal_a_compositeend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_compositeend(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_compositeend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.compositeend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.compositeEnd)
+ _impl_.a_compositeend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_compositeEnd)
 }
-inline std::string* FrameStats::mutable_compositeend() {
-  std::string* _s = _internal_mutable_compositeend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.compositeEnd)
+inline std::string* FrameStats::mutable_a_compositeend() {
+  std::string* _s = _internal_mutable_a_compositeend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_compositeEnd)
   return _s;
 }
-inline const std::string& FrameStats::_internal_compositeend() const {
-  return _impl_.compositeend_.Get();
+inline const std::string& FrameStats::_internal_a_compositeend() const {
+  return _impl_.a_compositeend_.Get();
 }
-inline void FrameStats::_internal_set_compositeend(const std::string& value) {
+inline void FrameStats::_internal_set_a_compositeend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.compositeend_.Set(value, GetArenaForAllocation());
+  _impl_.a_compositeend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_compositeend() {
+inline std::string* FrameStats::_internal_mutable_a_compositeend() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.compositeend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_compositeend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_compositeend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.compositeEnd)
-  if (!_internal_has_compositeend()) {
+inline std::string* FrameStats::release_a_compositeend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_compositeEnd)
+  if (!_internal_has_a_compositeend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.compositeend_.Release();
+  auto* p = _impl_.a_compositeend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.compositeend_.IsDefault()) {
-    _impl_.compositeend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_compositeend_.IsDefault()) {
+    _impl_.a_compositeend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_compositeend(std::string* compositeend) {
-  if (compositeend != nullptr) {
+inline void FrameStats::set_allocated_a_compositeend(std::string* a_compositeend) {
+  if (a_compositeend != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.compositeend_.SetAllocated(compositeend, GetArenaForAllocation());
+  _impl_.a_compositeend_.SetAllocated(a_compositeend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.compositeend_.IsDefault()) {
-    _impl_.compositeend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_compositeend_.IsDefault()) {
+    _impl_.a_compositeend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.compositeEnd)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_compositeEnd)
 }
 
-// required sint32 contentFrameTime = 5;
-inline bool FrameStats::_internal_has_contentframetime() const {
+// required sint32 a_contentFrameTime = 5;
+inline bool FrameStats::_internal_has_a_contentframetime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
-inline bool FrameStats::has_contentframetime() const {
-  return _internal_has_contentframetime();
+inline bool FrameStats::has_a_contentframetime() const {
+  return _internal_has_a_contentframetime();
 }
-inline void FrameStats::clear_contentframetime() {
-  _impl_.contentframetime_ = 0;
+inline void FrameStats::clear_a_contentframetime() {
+  _impl_.a_contentframetime_ = 0;
   _impl_._has_bits_[0] &= ~0x00000800u;
 }
-inline int32_t FrameStats::_internal_contentframetime() const {
-  return _impl_.contentframetime_;
+inline int32_t FrameStats::_internal_a_contentframetime() const {
+  return _impl_.a_contentframetime_;
 }
-inline int32_t FrameStats::contentframetime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.contentFrameTime)
-  return _internal_contentframetime();
+inline int32_t FrameStats::a_contentframetime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_contentFrameTime)
+  return _internal_a_contentframetime();
 }
-inline void FrameStats::_internal_set_contentframetime(int32_t value) {
+inline void FrameStats::_internal_set_a_contentframetime(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000800u;
-  _impl_.contentframetime_ = value;
+  _impl_.a_contentframetime_ = value;
 }
-inline void FrameStats::set_contentframetime(int32_t value) {
-  _internal_set_contentframetime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.contentFrameTime)
+inline void FrameStats::set_a_contentframetime(int32_t value) {
+  _internal_set_a_contentframetime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_contentFrameTime)
 }
 
-// required double resourceUploadTime = 6;
-inline bool FrameStats::_internal_has_resourceuploadtime() const {
+// required double a_resourceUploadTime = 6;
+inline bool FrameStats::_internal_has_a_resourceuploadtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
-inline bool FrameStats::has_resourceuploadtime() const {
-  return _internal_has_resourceuploadtime();
+inline bool FrameStats::has_a_resourceuploadtime() const {
+  return _internal_has_a_resourceuploadtime();
 }
-inline void FrameStats::clear_resourceuploadtime() {
-  _impl_.resourceuploadtime_ = 0;
+inline void FrameStats::clear_a_resourceuploadtime() {
+  _impl_.a_resourceuploadtime_ = 0;
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
-inline double FrameStats::_internal_resourceuploadtime() const {
-  return _impl_.resourceuploadtime_;
+inline double FrameStats::_internal_a_resourceuploadtime() const {
+  return _impl_.a_resourceuploadtime_;
 }
-inline double FrameStats::resourceuploadtime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.resourceUploadTime)
-  return _internal_resourceuploadtime();
+inline double FrameStats::a_resourceuploadtime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_resourceUploadTime)
+  return _internal_a_resourceuploadtime();
 }
-inline void FrameStats::_internal_set_resourceuploadtime(double value) {
+inline void FrameStats::_internal_set_a_resourceuploadtime(double value) {
   _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.resourceuploadtime_ = value;
+  _impl_.a_resourceuploadtime_ = value;
 }
-inline void FrameStats::set_resourceuploadtime(double value) {
-  _internal_set_resourceuploadtime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.resourceUploadTime)
+inline void FrameStats::set_a_resourceuploadtime(double value) {
+  _internal_set_a_resourceuploadtime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_resourceUploadTime)
 }
 
-// required double gpuCacheUploadTime = 7;
-inline bool FrameStats::_internal_has_gpucacheuploadtime() const {
+// required double a_gpuCacheUploadTime = 7;
+inline bool FrameStats::_internal_has_a_gpucacheuploadtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
-inline bool FrameStats::has_gpucacheuploadtime() const {
-  return _internal_has_gpucacheuploadtime();
+inline bool FrameStats::has_a_gpucacheuploadtime() const {
+  return _internal_has_a_gpucacheuploadtime();
 }
-inline void FrameStats::clear_gpucacheuploadtime() {
-  _impl_.gpucacheuploadtime_ = 0;
+inline void FrameStats::clear_a_gpucacheuploadtime() {
+  _impl_.a_gpucacheuploadtime_ = 0;
   _impl_._has_bits_[0] &= ~0x00000400u;
 }
-inline double FrameStats::_internal_gpucacheuploadtime() const {
-  return _impl_.gpucacheuploadtime_;
+inline double FrameStats::_internal_a_gpucacheuploadtime() const {
+  return _impl_.a_gpucacheuploadtime_;
 }
-inline double FrameStats::gpucacheuploadtime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.gpuCacheUploadTime)
-  return _internal_gpucacheuploadtime();
+inline double FrameStats::a_gpucacheuploadtime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_gpuCacheUploadTime)
+  return _internal_a_gpucacheuploadtime();
 }
-inline void FrameStats::_internal_set_gpucacheuploadtime(double value) {
+inline void FrameStats::_internal_set_a_gpucacheuploadtime(double value) {
   _impl_._has_bits_[0] |= 0x00000400u;
-  _impl_.gpucacheuploadtime_ = value;
+  _impl_.a_gpucacheuploadtime_ = value;
 }
-inline void FrameStats::set_gpucacheuploadtime(double value) {
-  _internal_set_gpucacheuploadtime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.gpuCacheUploadTime)
+inline void FrameStats::set_a_gpucacheuploadtime(double value) {
+  _internal_set_a_gpucacheuploadtime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_gpuCacheUploadTime)
 }
 
-// required bytes transactionStart = 8;
-inline bool FrameStats::_internal_has_transactionstart() const {
+// required bytes a_transactionStart = 8;
+inline bool FrameStats::_internal_has_a_transactionstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool FrameStats::has_transactionstart() const {
-  return _internal_has_transactionstart();
+inline bool FrameStats::has_a_transactionstart() const {
+  return _internal_has_a_transactionstart();
 }
-inline void FrameStats::clear_transactionstart() {
-  _impl_.transactionstart_.ClearToEmpty();
+inline void FrameStats::clear_a_transactionstart() {
+  _impl_.a_transactionstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& FrameStats::transactionstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.transactionStart)
-  return _internal_transactionstart();
+inline const std::string& FrameStats::a_transactionstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_transactionStart)
+  return _internal_a_transactionstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_transactionstart(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_transactionstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.transactionstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.transactionStart)
+ _impl_.a_transactionstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_transactionStart)
 }
-inline std::string* FrameStats::mutable_transactionstart() {
-  std::string* _s = _internal_mutable_transactionstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.transactionStart)
+inline std::string* FrameStats::mutable_a_transactionstart() {
+  std::string* _s = _internal_mutable_a_transactionstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_transactionStart)
   return _s;
 }
-inline const std::string& FrameStats::_internal_transactionstart() const {
-  return _impl_.transactionstart_.Get();
+inline const std::string& FrameStats::_internal_a_transactionstart() const {
+  return _impl_.a_transactionstart_.Get();
 }
-inline void FrameStats::_internal_set_transactionstart(const std::string& value) {
+inline void FrameStats::_internal_set_a_transactionstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.transactionstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_transactionstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_transactionstart() {
+inline std::string* FrameStats::_internal_mutable_a_transactionstart() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.transactionstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_transactionstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_transactionstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.transactionStart)
-  if (!_internal_has_transactionstart()) {
+inline std::string* FrameStats::release_a_transactionstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_transactionStart)
+  if (!_internal_has_a_transactionstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.transactionstart_.Release();
+  auto* p = _impl_.a_transactionstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.transactionstart_.IsDefault()) {
-    _impl_.transactionstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_transactionstart_.IsDefault()) {
+    _impl_.a_transactionstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_transactionstart(std::string* transactionstart) {
-  if (transactionstart != nullptr) {
+inline void FrameStats::set_allocated_a_transactionstart(std::string* a_transactionstart) {
+  if (a_transactionstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.transactionstart_.SetAllocated(transactionstart, GetArenaForAllocation());
+  _impl_.a_transactionstart_.SetAllocated(a_transactionstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.transactionstart_.IsDefault()) {
-    _impl_.transactionstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_transactionstart_.IsDefault()) {
+    _impl_.a_transactionstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.transactionStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_transactionStart)
 }
 
-// required bytes refreshStart = 9;
-inline bool FrameStats::_internal_has_refreshstart() const {
+// required bytes a_refreshStart = 9;
+inline bool FrameStats::_internal_has_a_refreshstart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool FrameStats::has_refreshstart() const {
-  return _internal_has_refreshstart();
+inline bool FrameStats::has_a_refreshstart() const {
+  return _internal_has_a_refreshstart();
 }
-inline void FrameStats::clear_refreshstart() {
-  _impl_.refreshstart_.ClearToEmpty();
+inline void FrameStats::clear_a_refreshstart() {
+  _impl_.a_refreshstart_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline const std::string& FrameStats::refreshstart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.refreshStart)
-  return _internal_refreshstart();
+inline const std::string& FrameStats::a_refreshstart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_refreshStart)
+  return _internal_a_refreshstart();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_refreshstart(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_refreshstart(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.refreshstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.refreshStart)
+ _impl_.a_refreshstart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_refreshStart)
 }
-inline std::string* FrameStats::mutable_refreshstart() {
-  std::string* _s = _internal_mutable_refreshstart();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.refreshStart)
+inline std::string* FrameStats::mutable_a_refreshstart() {
+  std::string* _s = _internal_mutable_a_refreshstart();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_refreshStart)
   return _s;
 }
-inline const std::string& FrameStats::_internal_refreshstart() const {
-  return _impl_.refreshstart_.Get();
+inline const std::string& FrameStats::_internal_a_refreshstart() const {
+  return _impl_.a_refreshstart_.Get();
 }
-inline void FrameStats::_internal_set_refreshstart(const std::string& value) {
+inline void FrameStats::_internal_set_a_refreshstart(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.refreshstart_.Set(value, GetArenaForAllocation());
+  _impl_.a_refreshstart_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_refreshstart() {
+inline std::string* FrameStats::_internal_mutable_a_refreshstart() {
   _impl_._has_bits_[0] |= 0x00000020u;
-  return _impl_.refreshstart_.Mutable(GetArenaForAllocation());
+  return _impl_.a_refreshstart_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_refreshstart() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.refreshStart)
-  if (!_internal_has_refreshstart()) {
+inline std::string* FrameStats::release_a_refreshstart() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_refreshStart)
+  if (!_internal_has_a_refreshstart()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.refreshstart_.Release();
+  auto* p = _impl_.a_refreshstart_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.refreshstart_.IsDefault()) {
-    _impl_.refreshstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_refreshstart_.IsDefault()) {
+    _impl_.a_refreshstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_refreshstart(std::string* refreshstart) {
-  if (refreshstart != nullptr) {
+inline void FrameStats::set_allocated_a_refreshstart(std::string* a_refreshstart) {
+  if (a_refreshstart != nullptr) {
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  _impl_.refreshstart_.SetAllocated(refreshstart, GetArenaForAllocation());
+  _impl_.a_refreshstart_.SetAllocated(a_refreshstart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.refreshstart_.IsDefault()) {
-    _impl_.refreshstart_.Set("", GetArenaForAllocation());
+  if (_impl_.a_refreshstart_.IsDefault()) {
+    _impl_.a_refreshstart_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.refreshStart)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_refreshStart)
 }
 
-// required bytes fwdTime = 10;
-inline bool FrameStats::_internal_has_fwdtime() const {
+// required bytes a_fwdTime = 10;
+inline bool FrameStats::_internal_has_a_fwdtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool FrameStats::has_fwdtime() const {
-  return _internal_has_fwdtime();
+inline bool FrameStats::has_a_fwdtime() const {
+  return _internal_has_a_fwdtime();
 }
-inline void FrameStats::clear_fwdtime() {
-  _impl_.fwdtime_.ClearToEmpty();
+inline void FrameStats::clear_a_fwdtime() {
+  _impl_.a_fwdtime_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline const std::string& FrameStats::fwdtime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.fwdTime)
-  return _internal_fwdtime();
+inline const std::string& FrameStats::a_fwdtime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_fwdTime)
+  return _internal_a_fwdtime();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_fwdtime(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_fwdtime(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.fwdtime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.fwdTime)
+ _impl_.a_fwdtime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_fwdTime)
 }
-inline std::string* FrameStats::mutable_fwdtime() {
-  std::string* _s = _internal_mutable_fwdtime();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.fwdTime)
+inline std::string* FrameStats::mutable_a_fwdtime() {
+  std::string* _s = _internal_mutable_a_fwdtime();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_fwdTime)
   return _s;
 }
-inline const std::string& FrameStats::_internal_fwdtime() const {
-  return _impl_.fwdtime_.Get();
+inline const std::string& FrameStats::_internal_a_fwdtime() const {
+  return _impl_.a_fwdtime_.Get();
 }
-inline void FrameStats::_internal_set_fwdtime(const std::string& value) {
+inline void FrameStats::_internal_set_a_fwdtime(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.fwdtime_.Set(value, GetArenaForAllocation());
+  _impl_.a_fwdtime_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_fwdtime() {
+inline std::string* FrameStats::_internal_mutable_a_fwdtime() {
   _impl_._has_bits_[0] |= 0x00000040u;
-  return _impl_.fwdtime_.Mutable(GetArenaForAllocation());
+  return _impl_.a_fwdtime_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_fwdtime() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.fwdTime)
-  if (!_internal_has_fwdtime()) {
+inline std::string* FrameStats::release_a_fwdtime() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_fwdTime)
+  if (!_internal_has_a_fwdtime()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000040u;
-  auto* p = _impl_.fwdtime_.Release();
+  auto* p = _impl_.a_fwdtime_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fwdtime_.IsDefault()) {
-    _impl_.fwdtime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fwdtime_.IsDefault()) {
+    _impl_.a_fwdtime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_fwdtime(std::string* fwdtime) {
-  if (fwdtime != nullptr) {
+inline void FrameStats::set_allocated_a_fwdtime(std::string* a_fwdtime) {
+  if (a_fwdtime != nullptr) {
     _impl_._has_bits_[0] |= 0x00000040u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000040u;
   }
-  _impl_.fwdtime_.SetAllocated(fwdtime, GetArenaForAllocation());
+  _impl_.a_fwdtime_.SetAllocated(a_fwdtime, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.fwdtime_.IsDefault()) {
-    _impl_.fwdtime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_fwdtime_.IsDefault()) {
+    _impl_.a_fwdtime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.fwdTime)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_fwdTime)
 }
 
-// required bytes sceneBuiltTime = 11;
-inline bool FrameStats::_internal_has_scenebuilttime() const {
+// required bytes a_sceneBuiltTime = 11;
+inline bool FrameStats::_internal_has_a_scenebuilttime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool FrameStats::has_scenebuilttime() const {
-  return _internal_has_scenebuilttime();
+inline bool FrameStats::has_a_scenebuilttime() const {
+  return _internal_has_a_scenebuilttime();
 }
-inline void FrameStats::clear_scenebuilttime() {
-  _impl_.scenebuilttime_.ClearToEmpty();
+inline void FrameStats::clear_a_scenebuilttime() {
+  _impl_.a_scenebuilttime_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline const std::string& FrameStats::scenebuilttime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.sceneBuiltTime)
-  return _internal_scenebuilttime();
+inline const std::string& FrameStats::a_scenebuilttime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_sceneBuiltTime)
+  return _internal_a_scenebuilttime();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_scenebuilttime(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_scenebuilttime(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.scenebuilttime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.sceneBuiltTime)
+ _impl_.a_scenebuilttime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_sceneBuiltTime)
 }
-inline std::string* FrameStats::mutable_scenebuilttime() {
-  std::string* _s = _internal_mutable_scenebuilttime();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.sceneBuiltTime)
+inline std::string* FrameStats::mutable_a_scenebuilttime() {
+  std::string* _s = _internal_mutable_a_scenebuilttime();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_sceneBuiltTime)
   return _s;
 }
-inline const std::string& FrameStats::_internal_scenebuilttime() const {
-  return _impl_.scenebuilttime_.Get();
+inline const std::string& FrameStats::_internal_a_scenebuilttime() const {
+  return _impl_.a_scenebuilttime_.Get();
 }
-inline void FrameStats::_internal_set_scenebuilttime(const std::string& value) {
+inline void FrameStats::_internal_set_a_scenebuilttime(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.scenebuilttime_.Set(value, GetArenaForAllocation());
+  _impl_.a_scenebuilttime_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_scenebuilttime() {
+inline std::string* FrameStats::_internal_mutable_a_scenebuilttime() {
   _impl_._has_bits_[0] |= 0x00000080u;
-  return _impl_.scenebuilttime_.Mutable(GetArenaForAllocation());
+  return _impl_.a_scenebuilttime_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_scenebuilttime() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.sceneBuiltTime)
-  if (!_internal_has_scenebuilttime()) {
+inline std::string* FrameStats::release_a_scenebuilttime() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_sceneBuiltTime)
+  if (!_internal_has_a_scenebuilttime()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000080u;
-  auto* p = _impl_.scenebuilttime_.Release();
+  auto* p = _impl_.a_scenebuilttime_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.scenebuilttime_.IsDefault()) {
-    _impl_.scenebuilttime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_scenebuilttime_.IsDefault()) {
+    _impl_.a_scenebuilttime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_scenebuilttime(std::string* scenebuilttime) {
-  if (scenebuilttime != nullptr) {
+inline void FrameStats::set_allocated_a_scenebuilttime(std::string* a_scenebuilttime) {
+  if (a_scenebuilttime != nullptr) {
     _impl_._has_bits_[0] |= 0x00000080u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000080u;
   }
-  _impl_.scenebuilttime_.SetAllocated(scenebuilttime, GetArenaForAllocation());
+  _impl_.a_scenebuilttime_.SetAllocated(a_scenebuilttime, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.scenebuilttime_.IsDefault()) {
-    _impl_.scenebuilttime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_scenebuilttime_.IsDefault()) {
+    _impl_.a_scenebuilttime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.sceneBuiltTime)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_sceneBuiltTime)
 }
 
-// required uint32 skippedComposites = 12;
-inline bool FrameStats::_internal_has_skippedcomposites() const {
+// required uint32 a_skippedComposites = 12;
+inline bool FrameStats::_internal_has_a_skippedcomposites() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
-inline bool FrameStats::has_skippedcomposites() const {
-  return _internal_has_skippedcomposites();
+inline bool FrameStats::has_a_skippedcomposites() const {
+  return _internal_has_a_skippedcomposites();
 }
-inline void FrameStats::clear_skippedcomposites() {
-  _impl_.skippedcomposites_ = 0u;
+inline void FrameStats::clear_a_skippedcomposites() {
+  _impl_.a_skippedcomposites_ = 0u;
   _impl_._has_bits_[0] &= ~0x00001000u;
 }
-inline uint32_t FrameStats::_internal_skippedcomposites() const {
-  return _impl_.skippedcomposites_;
+inline uint32_t FrameStats::_internal_a_skippedcomposites() const {
+  return _impl_.a_skippedcomposites_;
 }
-inline uint32_t FrameStats::skippedcomposites() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.skippedComposites)
-  return _internal_skippedcomposites();
+inline uint32_t FrameStats::a_skippedcomposites() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_skippedComposites)
+  return _internal_a_skippedcomposites();
 }
-inline void FrameStats::_internal_set_skippedcomposites(uint32_t value) {
+inline void FrameStats::_internal_set_a_skippedcomposites(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00001000u;
-  _impl_.skippedcomposites_ = value;
+  _impl_.a_skippedcomposites_ = value;
 }
-inline void FrameStats::set_skippedcomposites(uint32_t value) {
-  _internal_set_skippedcomposites(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.skippedComposites)
+inline void FrameStats::set_a_skippedcomposites(uint32_t value) {
+  _internal_set_a_skippedcomposites(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_skippedComposites)
 }
 
-// required bytes url = 13;
-inline bool FrameStats::_internal_has_url() const {
+// required bytes a_url = 13;
+inline bool FrameStats::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool FrameStats::has_url() const {
-  return _internal_has_url();
+inline bool FrameStats::has_a_url() const {
+  return _internal_has_a_url();
 }
-inline void FrameStats::clear_url() {
-  _impl_.url_.ClearToEmpty();
+inline void FrameStats::clear_a_url() {
+  _impl_.a_url_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline const std::string& FrameStats::url() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.url)
-  return _internal_url();
+inline const std::string& FrameStats::a_url() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.FrameStats.a_url)
+  return _internal_a_url();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FrameStats::set_url(ArgT0&& arg0, ArgT... args) {
+void FrameStats::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.url)
+ _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_url)
 }
-inline std::string* FrameStats::mutable_url() {
-  std::string* _s = _internal_mutable_url();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.url)
+inline std::string* FrameStats::mutable_a_url() {
+  std::string* _s = _internal_mutable_a_url();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.FrameStats.a_url)
   return _s;
 }
-inline const std::string& FrameStats::_internal_url() const {
-  return _impl_.url_.Get();
+inline const std::string& FrameStats::_internal_a_url() const {
+  return _impl_.a_url_.Get();
 }
-inline void FrameStats::_internal_set_url(const std::string& value) {
+inline void FrameStats::_internal_set_a_url(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.url_.Set(value, GetArenaForAllocation());
+  _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FrameStats::_internal_mutable_url() {
+inline std::string* FrameStats::_internal_mutable_a_url() {
   _impl_._has_bits_[0] |= 0x00000100u;
-  return _impl_.url_.Mutable(GetArenaForAllocation());
+  return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FrameStats::release_url() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.url)
-  if (!_internal_has_url()) {
+inline std::string* FrameStats::release_a_url() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.FrameStats.a_url)
+  if (!_internal_has_a_url()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000100u;
-  auto* p = _impl_.url_.Release();
+  auto* p = _impl_.a_url_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FrameStats::set_allocated_url(std::string* url) {
-  if (url != nullptr) {
+inline void FrameStats::set_allocated_a_url(std::string* a_url) {
+  if (a_url != nullptr) {
     _impl_._has_bits_[0] |= 0x00000100u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000100u;
   }
-  _impl_.url_.SetAllocated(url, GetArenaForAllocation());
+  _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.url)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.FrameStats.a_url)
 }
 
 #ifdef __GNUC__

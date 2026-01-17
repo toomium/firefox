@@ -180,19 +180,19 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAValidateResultFieldNumber = 1,
+    kAAValidateResultFieldNumber = 1,
   };
-  // required bool aValidateResult = 1;
-  bool has_avalidateresult() const;
+  // required bool a_aValidateResult = 1;
+  bool has_a_avalidateresult() const;
   private:
-  bool _internal_has_avalidateresult() const;
+  bool _internal_has_a_avalidateresult() const;
   public:
-  void clear_avalidateresult();
-  bool avalidateresult() const;
-  void set_avalidateresult(bool value);
+  void clear_a_avalidateresult();
+  bool a_avalidateresult() const;
+  void set_a_avalidateresult(bool value);
   private:
-  bool _internal_avalidateresult() const;
-  void _internal_set_avalidateresult(bool value);
+  bool _internal_a_avalidateresult() const;
+  void _internal_set_a_avalidateresult(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__)
@@ -205,7 +205,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool avalidateresult_;
+    bool a_avalidateresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAltSvcTransaction_2eproto;
@@ -446,19 +446,19 @@ class Msg_OnTransactionClose final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAValidateResultFieldNumber = 1,
+    kAAValidateResultFieldNumber = 1,
   };
-  // required bool aValidateResult = 1;
-  bool has_avalidateresult() const;
+  // required bool a_aValidateResult = 1;
+  bool has_a_avalidateresult() const;
   private:
-  bool _internal_has_avalidateresult() const;
+  bool _internal_has_a_avalidateresult() const;
   public:
-  void clear_avalidateresult();
-  bool avalidateresult() const;
-  void set_avalidateresult(bool value);
+  void clear_a_avalidateresult();
+  bool a_avalidateresult() const;
+  void set_a_avalidateresult(bool value);
   private:
-  bool _internal_avalidateresult() const;
-  void _internal_set_avalidateresult(bool value);
+  bool _internal_a_avalidateresult() const;
+  void _internal_set_a_avalidateresult(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose)
@@ -471,7 +471,7 @@ class Msg_OnTransactionClose final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool avalidateresult_;
+    bool a_avalidateresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAltSvcTransaction_2eproto;
@@ -487,32 +487,32 @@ class Msg_OnTransactionClose final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required bool aValidateResult = 1;
-inline bool Msg___delete__::_internal_has_avalidateresult() const {
+// required bool a_aValidateResult = 1;
+inline bool Msg___delete__::_internal_has_a_avalidateresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_avalidateresult() const {
-  return _internal_has_avalidateresult();
+inline bool Msg___delete__::has_a_avalidateresult() const {
+  return _internal_has_a_avalidateresult();
 }
-inline void Msg___delete__::clear_avalidateresult() {
-  _impl_.avalidateresult_ = false;
+inline void Msg___delete__::clear_a_avalidateresult() {
+  _impl_.a_avalidateresult_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg___delete__::_internal_avalidateresult() const {
-  return _impl_.avalidateresult_;
+inline bool Msg___delete__::_internal_a_avalidateresult() const {
+  return _impl_.a_avalidateresult_;
 }
-inline bool Msg___delete__::avalidateresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__.aValidateResult)
-  return _internal_avalidateresult();
+inline bool Msg___delete__::a_avalidateresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__.a_aValidateResult)
+  return _internal_a_avalidateresult();
 }
-inline void Msg___delete__::_internal_set_avalidateresult(bool value) {
+inline void Msg___delete__::_internal_set_a_avalidateresult(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.avalidateresult_ = value;
+  _impl_.a_avalidateresult_ = value;
 }
-inline void Msg___delete__::set_avalidateresult(bool value) {
-  _internal_set_avalidateresult(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__.aValidateResult)
+inline void Msg___delete__::set_a_avalidateresult(bool value) {
+  _internal_set_a_avalidateresult(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__.a_aValidateResult)
 }
 
 // -------------------------------------------------------------------
@@ -523,32 +523,32 @@ inline void Msg___delete__::set_avalidateresult(bool value) {
 
 // Msg_OnTransactionClose
 
-// required bool aValidateResult = 1;
-inline bool Msg_OnTransactionClose::_internal_has_avalidateresult() const {
+// required bool a_aValidateResult = 1;
+inline bool Msg_OnTransactionClose::_internal_has_a_avalidateresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnTransactionClose::has_avalidateresult() const {
-  return _internal_has_avalidateresult();
+inline bool Msg_OnTransactionClose::has_a_avalidateresult() const {
+  return _internal_has_a_avalidateresult();
 }
-inline void Msg_OnTransactionClose::clear_avalidateresult() {
-  _impl_.avalidateresult_ = false;
+inline void Msg_OnTransactionClose::clear_a_avalidateresult() {
+  _impl_.a_avalidateresult_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_OnTransactionClose::_internal_avalidateresult() const {
-  return _impl_.avalidateresult_;
+inline bool Msg_OnTransactionClose::_internal_a_avalidateresult() const {
+  return _impl_.a_avalidateresult_;
 }
-inline bool Msg_OnTransactionClose::avalidateresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose.aValidateResult)
-  return _internal_avalidateresult();
+inline bool Msg_OnTransactionClose::a_avalidateresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose.a_aValidateResult)
+  return _internal_a_avalidateresult();
 }
-inline void Msg_OnTransactionClose::_internal_set_avalidateresult(bool value) {
+inline void Msg_OnTransactionClose::_internal_set_a_avalidateresult(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.avalidateresult_ = value;
+  _impl_.a_avalidateresult_ = value;
 }
-inline void Msg_OnTransactionClose::set_avalidateresult(bool value) {
-  _internal_set_avalidateresult(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose.aValidateResult)
+inline void Msg_OnTransactionClose::set_a_avalidateresult(bool value) {
+  _internal_set_a_avalidateresult(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose.a_aValidateResult)
 }
 
 #ifdef __GNUC__

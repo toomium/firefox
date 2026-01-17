@@ -14,46 +14,46 @@ import "IPCBlob.proto";
 
 // Structs and unions declarations
 message FileSystemFileResponse {
-  required protobuf.mozilla.dom.IPCBlob blob = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileSystemDirectoryResponse {
-  required bytes realPath = 1;
+  required bytes a_realPath = 1;
 }
 
 message FileSystemDirectoryListingResponseFile {
-  required protobuf.mozilla.dom.IPCBlob blob = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileSystemDirectoryListingResponseDirectory {
-  required bytes directoryRealPath = 1;
+  required bytes a_directoryRealPath = 1;
 }
 
 message FileSystemDirectoryListingResponseData {
   oneof content {
-    protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile mVFileSystemDirectoryListingResponseFile = 1;
-    protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory mVFileSystemDirectoryListingResponseDirectory = 2;
+    protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile a_mVFileSystemDirectoryListingResponseFile = 1;
+    protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory a_mVFileSystemDirectoryListingResponseDirectory = 2;
   }
 }
 
 message FileSystemDirectoryListingResponse {
-  repeated protobuf.mozilla.dom.FileSystemDirectoryListingResponseData data = 1;
+  repeated protobuf.mozilla.dom.FileSystemDirectoryListingResponseData a_data = 1;
 }
 
 message FileSystemFilesResponse {
-  repeated protobuf.mozilla.dom.FileSystemFileResponse data = 1;
+  repeated protobuf.mozilla.dom.FileSystemFileResponse a_data = 1;
 }
 
 message FileSystemErrorResponse {
-  required bytes error = 1;
+  required bytes a_error = 1;
 }
 
 message FileSystemResponseValue {
   oneof content {
-    protobuf.mozilla.dom.FileSystemDirectoryResponse mVFileSystemDirectoryResponse = 1;
-    protobuf.mozilla.dom.FileSystemDirectoryListingResponse mVFileSystemDirectoryListingResponse = 2;
-    protobuf.mozilla.dom.FileSystemFileResponse mVFileSystemFileResponse = 3;
-    protobuf.mozilla.dom.FileSystemFilesResponse mVFileSystemFilesResponse = 4;
-    protobuf.mozilla.dom.FileSystemErrorResponse mVFileSystemErrorResponse = 5;
+    protobuf.mozilla.dom.FileSystemDirectoryResponse a_mVFileSystemDirectoryResponse = 1;
+    protobuf.mozilla.dom.FileSystemDirectoryListingResponse a_mVFileSystemDirectoryListingResponse = 2;
+    protobuf.mozilla.dom.FileSystemFileResponse a_mVFileSystemFileResponse = 3;
+    protobuf.mozilla.dom.FileSystemFilesResponse a_mVFileSystemFilesResponse = 4;
+    protobuf.mozilla.dom.FileSystemErrorResponse a_mVFileSystemErrorResponse = 5;
   }
 }

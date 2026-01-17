@@ -28,15 +28,15 @@ import "MIDITypes.proto";
 
 // Message declarations
 message Msg_PBackgroundTestConstructor {
-  required bytes testArg = 1;
+  required bytes a_testArg = 1;
 }
 
 message Reply_PBackgroundTestConstructor {
 }
 
 message Msg_PBackgroundIDBFactoryConstructor {
-  required protobuf.mozilla.dom.indexedDB.LoggingInfo loggingInfo = 1;
-  required bytes systemLocale = 2;
+  required protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 1;
+  required bytes a_systemLocale = 2;
 }
 
 message Reply_PBackgroundIDBFactoryConstructor {
@@ -52,45 +52,45 @@ message Msg_FlushPendingFileDeletions {
 }
 
 message Msg_PBackgroundSDBConnectionConstructor {
-  required bytes persistenceType = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 2;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message Reply_PBackgroundSDBConnectionConstructor {
 }
 
 message Msg_PBackgroundLSObserverConstructor {
-  required uint64 observerId = 1;
+  required uint64 a_observerId = 1;
 }
 
 message Reply_PBackgroundLSObserverConstructor {
 }
 
 message Msg_PBackgroundLSRequestConstructor {
-  required protobuf.mozilla.dom.LSRequestParams params = 1;
+  required protobuf.mozilla.dom.LSRequestParams a_params = 1;
 }
 
 message Reply_PBackgroundLSRequestConstructor {
 }
 
 message Msg_PBackgroundLSSimpleRequestConstructor {
-  required protobuf.mozilla.dom.LSSimpleRequestParams params = 1;
+  required protobuf.mozilla.dom.LSSimpleRequestParams a_params = 1;
 }
 
 message Reply_PBackgroundLSSimpleRequestConstructor {
 }
 
 message Msg_PBackgroundLocalStorageCacheConstructor {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required bytes originKey = 2;
-  required uint32 privateBrowsingId = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_originKey = 2;
+  required uint32 a_privateBrowsingId = 3;
 }
 
 message Reply_PBackgroundLocalStorageCacheConstructor {
 }
 
 message Msg_PBackgroundSessionStorageManagerConstructor {
-  required uint64 aTopContextId = 1;
+  required uint64 a_aTopContextId = 1;
 }
 
 message Reply_PBackgroundSessionStorageManagerConstructor {
@@ -103,49 +103,49 @@ message Reply_PBackgroundSessionStorageServiceConstructor {
 }
 
 message Msg_PBackgroundStorageConstructor {
-  required bytes profilePath = 1;
-  required uint32 privateBrowsingId = 2;
+  required bytes a_profilePath = 1;
+  required uint32 a_privateBrowsingId = 2;
 }
 
 message Reply_PBackgroundStorageConstructor {
 }
 
 message Msg_CreateFileSystemManagerParent {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required bytes aParentEndpoint = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_aParentEndpoint = 2;
 }
 
 message Reply_CreateFileSystemManagerParent {
-  required bytes rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg_CreateWebTransportParent {
-  required bytes aURL = 1;
-  required bytes aPrincipal = 2;
-  optional protobuf.mozilla.dom.IPCClientInfo aClientInfo = 3;
-  required bool aDedicated = 4;
-  required bool aRequireUnreliable = 5;
-  required uint32 aCongestionControl = 6;
-  repeated protobuf.mozilla.ipc.WebTransportHash aServerCertHashes = 7;
-  required bytes aParentEndpoint = 8;
+  required bytes a_aURL = 1;
+  required bytes a_aPrincipal = 2;
+  optional protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 3;
+  required bool a_aDedicated = 4;
+  required bool a_aRequireUnreliable = 5;
+  required uint32 a_aCongestionControl = 6;
+  repeated protobuf.mozilla.ipc.WebTransportHash a_aServerCertHashes = 7;
+  required bytes a_aParentEndpoint = 8;
 }
 
 message Reply_CreateWebTransportParent {
-  required bytes rv = 1;
-  required uint32 aReliability = 2;
+  required bytes a_rv = 1;
+  required uint32 a_aReliability = 2;
 }
 
 message Msg_CreateNotificationParent {
-  required bytes aParentEndpoint = 1;
-  required bytes aPrincipal = 2;
-  required bytes aEffectiveStoragePrincipal = 3;
-  required bool aIsSecureContext = 4;
-  required bytes aScope = 5;
-  required protobuf.mozilla.dom.IPCNotification aNotification = 6;
+  required bytes a_aParentEndpoint = 1;
+  required bytes a_aPrincipal = 2;
+  required bytes a_aEffectiveStoragePrincipal = 3;
+  required bool a_aIsSecureContext = 4;
+  required bytes a_aScope = 5;
+  required protobuf.mozilla.dom.IPCNotification a_aNotification = 6;
 }
 
 message Reply_CreateNotificationParent {
-  required bool rv = 1;
+  required bool a_rv = 1;
 }
 
 message Msg_PVsyncConstructor {
@@ -161,17 +161,17 @@ message Reply_PCamerasConstructor {
 }
 
 message Msg_PUDPSocketConstructor {
-  optional protobuf.mozilla.ipc.PrincipalInfo pInfo = 1;
-  required bytes filter = 2;
+  optional protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
+  required bytes a_filter = 2;
 }
 
 message Reply_PUDPSocketConstructor {
 }
 
 message Msg_PBroadcastChannelConstructor {
-  required protobuf.mozilla.ipc.PrincipalInfo pInfo = 1;
-  required bytes origin = 2;
-  required bytes channel = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
+  required bytes a_origin = 2;
+  required bytes a_channel = 3;
 }
 
 message Reply_PBroadcastChannelConstructor {
@@ -193,26 +193,26 @@ message Msg_ShutdownServiceWorkerRegistrar {
 }
 
 message Msg_PCacheStorageConstructor {
-  required bytes aNamespace = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo aPrincipalInfo = 2;
+  required bytes a_aNamespace = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
 }
 
 message Reply_PCacheStorageConstructor {
 }
 
 message Msg_PMessagePortConstructor {
-  required bytes uuid = 1;
-  required bytes destinationUuid = 2;
-  required uint32 sequenceId = 3;
+  required bytes a_uuid = 1;
+  required bytes a_destinationUuid = 2;
+  required uint32 a_sequenceId = 3;
 }
 
 message Reply_PMessagePortConstructor {
 }
 
 message Msg_MessagePortForceClose {
-  required bytes uuid = 1;
-  required bytes destinationUuid = 2;
-  required uint32 sequenceId = 3;
+  required bytes a_uuid = 1;
+  required bytes a_destinationUuid = 2;
+  required uint32 a_sequenceId = 3;
 }
 
 message Msg_PQuotaConstructor {
@@ -228,31 +228,31 @@ message Msg_ShutdownBackgroundSessionStorageManagers {
 }
 
 message Msg_PropagateBackgroundSessionStorageManager {
-  required uint64 currentTopContextId = 1;
-  required uint64 targetTopContextId = 2;
+  required uint64 a_currentTopContextId = 1;
+  required uint64 a_targetTopContextId = 2;
 }
 
 message Msg_RemoveBackgroundSessionStorageManager {
-  required uint64 topContextId = 1;
+  required uint64 a_topContextId = 1;
 }
 
 message Msg_GetSessionStorageManagerData {
-  required uint64 aTopContextId = 1;
-  required uint32 aSizeLimit = 2;
-  required bool aCancelSessionStoreTimer = 3;
+  required uint64 a_aTopContextId = 1;
+  required uint32 a_aSizeLimit = 2;
+  required bool a_aCancelSessionStoreTimer = 3;
 }
 
 message Reply_GetSessionStorageManagerData {
-  repeated bytes aCacheCopy = 1;
+  repeated bytes a_aCacheCopy = 1;
 }
 
 message Msg_LoadSessionStorageManagerData {
-  required uint64 aTopContextId = 1;
-  repeated bytes aOriginCacheCopy = 2;
+  required uint64 a_aTopContextId = 1;
+  repeated bytes a_aOriginCacheCopy = 2;
 }
 
 message Msg_PFileSystemRequestConstructor {
-  required protobuf.mozilla.dom.FileSystemParams params = 1;
+  required protobuf.mozilla.dom.FileSystemParams a_params = 1;
 }
 
 message Reply_PFileSystemRequestConstructor {
@@ -271,16 +271,16 @@ message Reply_PGamepadTestChannelConstructor {
 }
 
 message Msg_PHttpBackgroundChannelConstructor {
-  required uint64 channelId = 1;
+  required uint64 a_channelId = 1;
 }
 
 message Reply_PHttpBackgroundChannelConstructor {
 }
 
 message Msg_PSharedWorkerConstructor {
-  required protobuf.mozilla.dom.RemoteWorkerData data = 1;
-  required uint64 windowID = 2;
-  required protobuf.mozilla.dom.MessagePortIdentifier portIdentifier = 3;
+  required protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+  required uint64 a_windowID = 2;
+  required protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 3;
 }
 
 message Reply_PSharedWorkerConstructor {
@@ -293,12 +293,12 @@ message Reply_PTemporaryIPCBlobConstructor {
 }
 
 message Msg_PFileCreatorConstructor {
-  required bytes aFullPath = 1;
-  required bytes aType = 2;
-  required bytes aName = 3;
-  optional sint64 lastModified = 4;
-  required bool aExistenceCheck = 5;
-  required bool aIsFromNsIFile = 6;
+  required bytes a_aFullPath = 1;
+  required bytes a_aType = 2;
+  required bytes a_aName = 3;
+  optional sint64 a_lastModified = 4;
+  required bool a_aExistenceCheck = 5;
+  required bool a_aIsFromNsIFile = 6;
 }
 
 message Reply_PFileCreatorConstructor {
@@ -311,40 +311,40 @@ message Reply_PClientManagerConstructor {
 }
 
 message Msg_CreateMIDIManager {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 message Msg_CreateMIDIPort {
-  required bytes aEndpoint = 1;
-  required protobuf.mozilla.dom.MIDIPortInfo portInfo = 2;
-  required bool sysexEnabled = 3;
+  required bytes a_aEndpoint = 1;
+  required protobuf.mozilla.dom.MIDIPortInfo a_portInfo = 2;
+  required bool a_sysexEnabled = 3;
 }
 
 message Msg_HasMIDIDevice {
 }
 
 message Reply_HasMIDIDevice {
-  required bool hasDevice = 1;
+  required bool a_hasDevice = 1;
 }
 
 message Msg_CreateMLSTransaction {
-  required bytes aEndpoint = 1;
-  required bytes aPrincipal = 2;
+  required bytes a_aEndpoint = 1;
+  required bytes a_aPrincipal = 2;
 }
 
 message Msg_StorageActivity {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message Msg_PServiceWorkerConstructor {
-  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor aDescriptor = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 1;
 }
 
 message Reply_PServiceWorkerConstructor {
 }
 
 message Msg_PRemoteWorkerControllerConstructor {
-  required protobuf.mozilla.dom.RemoteWorkerData aData = 1;
+  required protobuf.mozilla.dom.RemoteWorkerData a_aData = 1;
 }
 
 message Reply_PRemoteWorkerControllerConstructor {
@@ -357,25 +357,25 @@ message Reply_PServiceWorkerContainerConstructor {
 }
 
 message Msg_PServiceWorkerRegistrationConstructor {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor aDescriptor = 1;
-  required protobuf.mozilla.dom.IPCClientInfo aForClient = 2;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aForClient = 2;
 }
 
 message Reply_PServiceWorkerRegistrationConstructor {
 }
 
 message Msg_PEndpointForReportConstructor {
-  required bytes aGroupName = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo aPrincipalInfo = 2;
+  required bytes a_aGroupName = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
 }
 
 message Reply_PEndpointForReportConstructor {
 }
 
 message Msg_RemoveEndpoint {
-  required bytes aGroupName = 1;
-  required bytes aEndpointURL = 2;
-  required protobuf.mozilla.ipc.PrincipalInfo aPrincipalInfo = 3;
+  required bytes a_aGroupName = 1;
+  required bytes a_aEndpointURL = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
 }
 
 message Msg_PIdleSchedulerConstructor {
@@ -388,22 +388,22 @@ message Msg_EnsureRDDProcessAndCreateBridge {
 }
 
 message Reply_EnsureRDDProcessAndCreateBridge {
-  required bytes rv = 1;
-  required bytes aEndpoint = 2;
+  required bytes a_rv = 1;
+  required bytes a_aEndpoint = 2;
 }
 
 message Msg_EnsureUtilityProcessAndCreateBridge {
-  required bytes aLocation = 1;
+  required bytes a_aLocation = 1;
 }
 
 message Reply_EnsureUtilityProcessAndCreateBridge {
-  required bytes rv = 1;
-  required bytes aEndpoint = 2;
+  required bytes a_rv = 1;
+  required bytes a_aEndpoint = 2;
 }
 
 message Msg_PLockManagerConstructor {
-  required bytes aPrincipalInfo = 1;
-  optional bytes aClientId = 2;
+  required bytes a_aPrincipalInfo = 1;
+  optional bytes a_aClientId = 2;
 }
 
 message Reply_PLockManagerConstructor {
@@ -416,11 +416,11 @@ message Reply_PFetchConstructor {
 }
 
 message Msg_RequestCameraAccess {
-  required bool aAllowPermissionRequest = 1;
+  required bool a_aAllowPermissionRequest = 1;
 }
 
 message Reply_RequestCameraAccess {
-  required bytes rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg_PCacheConstructor {

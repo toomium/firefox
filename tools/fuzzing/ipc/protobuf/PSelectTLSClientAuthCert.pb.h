@@ -181,44 +181,44 @@ class Msg_TLSClientAuthCertSelected final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASelectedCertChainBytesFieldNumber = 2,
-    kASelectedCertBytesFieldNumber = 1,
+    kAASelectedCertChainBytesFieldNumber = 2,
+    kAASelectedCertBytesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.psm.ByteArray aSelectedCertChainBytes = 2;
-  int aselectedcertchainbytes_size() const;
+  // repeated .protobuf.mozilla.psm.ByteArray a_aSelectedCertChainBytes = 2;
+  int a_aselectedcertchainbytes_size() const;
   private:
-  int _internal_aselectedcertchainbytes_size() const;
+  int _internal_a_aselectedcertchainbytes_size() const;
   public:
-  void clear_aselectedcertchainbytes();
-  ::protobuf::mozilla::psm::ByteArray* mutable_aselectedcertchainbytes(int index);
+  void clear_a_aselectedcertchainbytes();
+  ::protobuf::mozilla::psm::ByteArray* mutable_a_aselectedcertchainbytes(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >*
-      mutable_aselectedcertchainbytes();
+      mutable_a_aselectedcertchainbytes();
   private:
-  const ::protobuf::mozilla::psm::ByteArray& _internal_aselectedcertchainbytes(int index) const;
-  ::protobuf::mozilla::psm::ByteArray* _internal_add_aselectedcertchainbytes();
+  const ::protobuf::mozilla::psm::ByteArray& _internal_a_aselectedcertchainbytes(int index) const;
+  ::protobuf::mozilla::psm::ByteArray* _internal_add_a_aselectedcertchainbytes();
   public:
-  const ::protobuf::mozilla::psm::ByteArray& aselectedcertchainbytes(int index) const;
-  ::protobuf::mozilla::psm::ByteArray* add_aselectedcertchainbytes();
+  const ::protobuf::mozilla::psm::ByteArray& a_aselectedcertchainbytes(int index) const;
+  ::protobuf::mozilla::psm::ByteArray* add_a_aselectedcertchainbytes();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >&
-      aselectedcertchainbytes() const;
+      a_aselectedcertchainbytes() const;
 
-  // required .protobuf.mozilla.psm.ByteArray aSelectedCertBytes = 1;
-  bool has_aselectedcertbytes() const;
+  // required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+  bool has_a_aselectedcertbytes() const;
   private:
-  bool _internal_has_aselectedcertbytes() const;
+  bool _internal_has_a_aselectedcertbytes() const;
   public:
-  void clear_aselectedcertbytes();
-  const ::protobuf::mozilla::psm::ByteArray& aselectedcertbytes() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::ByteArray* release_aselectedcertbytes();
-  ::protobuf::mozilla::psm::ByteArray* mutable_aselectedcertbytes();
-  void set_allocated_aselectedcertbytes(::protobuf::mozilla::psm::ByteArray* aselectedcertbytes);
+  void clear_a_aselectedcertbytes();
+  const ::protobuf::mozilla::psm::ByteArray& a_aselectedcertbytes() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::ByteArray* release_a_aselectedcertbytes();
+  ::protobuf::mozilla::psm::ByteArray* mutable_a_aselectedcertbytes();
+  void set_allocated_a_aselectedcertbytes(::protobuf::mozilla::psm::ByteArray* a_aselectedcertbytes);
   private:
-  const ::protobuf::mozilla::psm::ByteArray& _internal_aselectedcertbytes() const;
-  ::protobuf::mozilla::psm::ByteArray* _internal_mutable_aselectedcertbytes();
+  const ::protobuf::mozilla::psm::ByteArray& _internal_a_aselectedcertbytes() const;
+  ::protobuf::mozilla::psm::ByteArray* _internal_mutable_a_aselectedcertbytes();
   public:
-  void unsafe_arena_set_allocated_aselectedcertbytes(
-      ::protobuf::mozilla::psm::ByteArray* aselectedcertbytes);
-  ::protobuf::mozilla::psm::ByteArray* unsafe_arena_release_aselectedcertbytes();
+  void unsafe_arena_set_allocated_a_aselectedcertbytes(
+      ::protobuf::mozilla::psm::ByteArray* a_aselectedcertbytes);
+  ::protobuf::mozilla::psm::ByteArray* unsafe_arena_release_a_aselectedcertbytes();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected)
  private:
@@ -230,8 +230,8 @@ class Msg_TLSClientAuthCertSelected final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray > aselectedcertchainbytes_;
-    ::protobuf::mozilla::psm::ByteArray* aselectedcertbytes_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray > a_aselectedcertchainbytes_;
+    ::protobuf::mozilla::psm::ByteArray* a_aselectedcertbytes_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSelectTLSClientAuthCert_2eproto;
@@ -495,41 +495,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_TLSClientAuthCertSelected
 
-// required .protobuf.mozilla.psm.ByteArray aSelectedCertBytes = 1;
-inline bool Msg_TLSClientAuthCertSelected::_internal_has_aselectedcertbytes() const {
+// required .protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+inline bool Msg_TLSClientAuthCertSelected::_internal_has_a_aselectedcertbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aselectedcertbytes_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aselectedcertbytes_ != nullptr);
   return value;
 }
-inline bool Msg_TLSClientAuthCertSelected::has_aselectedcertbytes() const {
-  return _internal_has_aselectedcertbytes();
+inline bool Msg_TLSClientAuthCertSelected::has_a_aselectedcertbytes() const {
+  return _internal_has_a_aselectedcertbytes();
 }
-inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::_internal_aselectedcertbytes() const {
-  const ::protobuf::mozilla::psm::ByteArray* p = _impl_.aselectedcertbytes_;
+inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::_internal_a_aselectedcertbytes() const {
+  const ::protobuf::mozilla::psm::ByteArray* p = _impl_.a_aselectedcertbytes_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::psm::ByteArray&>(
       ::protobuf::mozilla::psm::_ByteArray_default_instance_);
 }
-inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::aselectedcertbytes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertBytes)
-  return _internal_aselectedcertbytes();
+inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::a_aselectedcertbytes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
+  return _internal_a_aselectedcertbytes();
 }
-inline void Msg_TLSClientAuthCertSelected::unsafe_arena_set_allocated_aselectedcertbytes(
-    ::protobuf::mozilla::psm::ByteArray* aselectedcertbytes) {
+inline void Msg_TLSClientAuthCertSelected::unsafe_arena_set_allocated_a_aselectedcertbytes(
+    ::protobuf::mozilla::psm::ByteArray* a_aselectedcertbytes) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aselectedcertbytes_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aselectedcertbytes_);
   }
-  _impl_.aselectedcertbytes_ = aselectedcertbytes;
-  if (aselectedcertbytes) {
+  _impl_.a_aselectedcertbytes_ = a_aselectedcertbytes;
+  if (a_aselectedcertbytes) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertBytes)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::release_aselectedcertbytes() {
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::release_a_aselectedcertbytes() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::psm::ByteArray* temp = _impl_.aselectedcertbytes_;
-  _impl_.aselectedcertbytes_ = nullptr;
+  ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_aselectedcertbytes_;
+  _impl_.a_aselectedcertbytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -541,82 +541,82 @@ inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::relea
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::unsafe_arena_release_aselectedcertbytes() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertBytes)
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::unsafe_arena_release_a_aselectedcertbytes() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::psm::ByteArray* temp = _impl_.aselectedcertbytes_;
-  _impl_.aselectedcertbytes_ = nullptr;
+  ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_aselectedcertbytes_;
+  _impl_.a_aselectedcertbytes_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::_internal_mutable_aselectedcertbytes() {
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::_internal_mutable_a_aselectedcertbytes() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aselectedcertbytes_ == nullptr) {
+  if (_impl_.a_aselectedcertbytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::psm::ByteArray>(GetArenaForAllocation());
-    _impl_.aselectedcertbytes_ = p;
+    _impl_.a_aselectedcertbytes_ = p;
   }
-  return _impl_.aselectedcertbytes_;
+  return _impl_.a_aselectedcertbytes_;
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::mutable_aselectedcertbytes() {
-  ::protobuf::mozilla::psm::ByteArray* _msg = _internal_mutable_aselectedcertbytes();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertBytes)
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::mutable_a_aselectedcertbytes() {
+  ::protobuf::mozilla::psm::ByteArray* _msg = _internal_mutable_a_aselectedcertbytes();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
   return _msg;
 }
-inline void Msg_TLSClientAuthCertSelected::set_allocated_aselectedcertbytes(::protobuf::mozilla::psm::ByteArray* aselectedcertbytes) {
+inline void Msg_TLSClientAuthCertSelected::set_allocated_a_aselectedcertbytes(::protobuf::mozilla::psm::ByteArray* a_aselectedcertbytes) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aselectedcertbytes_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aselectedcertbytes_);
   }
-  if (aselectedcertbytes) {
+  if (a_aselectedcertbytes) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aselectedcertbytes));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aselectedcertbytes));
     if (message_arena != submessage_arena) {
-      aselectedcertbytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aselectedcertbytes, submessage_arena);
+      a_aselectedcertbytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aselectedcertbytes, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aselectedcertbytes_ = aselectedcertbytes;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertBytes)
+  _impl_.a_aselectedcertbytes_ = a_aselectedcertbytes;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertBytes)
 }
 
-// repeated .protobuf.mozilla.psm.ByteArray aSelectedCertChainBytes = 2;
-inline int Msg_TLSClientAuthCertSelected::_internal_aselectedcertchainbytes_size() const {
-  return _impl_.aselectedcertchainbytes_.size();
+// repeated .protobuf.mozilla.psm.ByteArray a_aSelectedCertChainBytes = 2;
+inline int Msg_TLSClientAuthCertSelected::_internal_a_aselectedcertchainbytes_size() const {
+  return _impl_.a_aselectedcertchainbytes_.size();
 }
-inline int Msg_TLSClientAuthCertSelected::aselectedcertchainbytes_size() const {
-  return _internal_aselectedcertchainbytes_size();
+inline int Msg_TLSClientAuthCertSelected::a_aselectedcertchainbytes_size() const {
+  return _internal_a_aselectedcertchainbytes_size();
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::mutable_aselectedcertchainbytes(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertChainBytes)
-  return _impl_.aselectedcertchainbytes_.Mutable(index);
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::mutable_a_aselectedcertchainbytes(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertChainBytes)
+  return _impl_.a_aselectedcertchainbytes_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >*
-Msg_TLSClientAuthCertSelected::mutable_aselectedcertchainbytes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertChainBytes)
-  return &_impl_.aselectedcertchainbytes_;
+Msg_TLSClientAuthCertSelected::mutable_a_aselectedcertchainbytes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertChainBytes)
+  return &_impl_.a_aselectedcertchainbytes_;
 }
-inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::_internal_aselectedcertchainbytes(int index) const {
-  return _impl_.aselectedcertchainbytes_.Get(index);
+inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::_internal_a_aselectedcertchainbytes(int index) const {
+  return _impl_.a_aselectedcertchainbytes_.Get(index);
 }
-inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::aselectedcertchainbytes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertChainBytes)
-  return _internal_aselectedcertchainbytes(index);
+inline const ::protobuf::mozilla::psm::ByteArray& Msg_TLSClientAuthCertSelected::a_aselectedcertchainbytes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertChainBytes)
+  return _internal_a_aselectedcertchainbytes(index);
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::_internal_add_aselectedcertchainbytes() {
-  return _impl_.aselectedcertchainbytes_.Add();
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::_internal_add_a_aselectedcertchainbytes() {
+  return _impl_.a_aselectedcertchainbytes_.Add();
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::add_aselectedcertchainbytes() {
-  ::protobuf::mozilla::psm::ByteArray* _add = _internal_add_aselectedcertchainbytes();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertChainBytes)
+inline ::protobuf::mozilla::psm::ByteArray* Msg_TLSClientAuthCertSelected::add_a_aselectedcertchainbytes() {
+  ::protobuf::mozilla::psm::ByteArray* _add = _internal_add_a_aselectedcertchainbytes();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertChainBytes)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >&
-Msg_TLSClientAuthCertSelected::aselectedcertchainbytes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.aSelectedCertChainBytes)
-  return _impl_.aselectedcertchainbytes_;
+Msg_TLSClientAuthCertSelected::a_aselectedcertchainbytes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.PSelectTLSClientAuthCert.Msg_TLSClientAuthCertSelected.a_aSelectedCertChainBytes)
+  return _impl_.a_aselectedcertchainbytes_;
 }
 
 // -------------------------------------------------------------------

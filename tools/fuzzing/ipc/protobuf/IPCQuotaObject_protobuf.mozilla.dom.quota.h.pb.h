@@ -172,24 +172,24 @@ class IPCQuotaObject final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChildEndpointFieldNumber = 1,
+    kAChildEndpointFieldNumber = 1,
   };
-  // required bytes childEndpoint = 1;
-  bool has_childendpoint() const;
+  // required bytes a_childEndpoint = 1;
+  bool has_a_childendpoint() const;
   private:
-  bool _internal_has_childendpoint() const;
+  bool _internal_has_a_childendpoint() const;
   public:
-  void clear_childendpoint();
-  const std::string& childendpoint() const;
+  void clear_a_childendpoint();
+  const std::string& a_childendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_childendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_childendpoint();
-  PROTOBUF_NODISCARD std::string* release_childendpoint();
-  void set_allocated_childendpoint(std::string* childendpoint);
+  void set_a_childendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_childendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_childendpoint();
+  void set_allocated_a_childendpoint(std::string* a_childendpoint);
   private:
-  const std::string& _internal_childendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_childendpoint(const std::string& value);
-  std::string* _internal_mutable_childendpoint();
+  const std::string& _internal_a_childendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_childendpoint(const std::string& value);
+  std::string* _internal_mutable_a_childendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.IPCQuotaObject)
@@ -202,7 +202,7 @@ class IPCQuotaObject final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr childendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -218,72 +218,72 @@ class IPCQuotaObject final :
 #endif  // __GNUC__
 // IPCQuotaObject
 
-// required bytes childEndpoint = 1;
-inline bool IPCQuotaObject::_internal_has_childendpoint() const {
+// required bytes a_childEndpoint = 1;
+inline bool IPCQuotaObject::_internal_has_a_childendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCQuotaObject::has_childendpoint() const {
-  return _internal_has_childendpoint();
+inline bool IPCQuotaObject::has_a_childendpoint() const {
+  return _internal_has_a_childendpoint();
 }
-inline void IPCQuotaObject::clear_childendpoint() {
-  _impl_.childendpoint_.ClearToEmpty();
+inline void IPCQuotaObject::clear_a_childendpoint() {
+  _impl_.a_childendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCQuotaObject::childendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.IPCQuotaObject.childEndpoint)
-  return _internal_childendpoint();
+inline const std::string& IPCQuotaObject::a_childendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
+  return _internal_a_childendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCQuotaObject::set_childendpoint(ArgT0&& arg0, ArgT... args) {
+void IPCQuotaObject::set_a_childendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.childendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.IPCQuotaObject.childEndpoint)
+ _impl_.a_childendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
 }
-inline std::string* IPCQuotaObject::mutable_childendpoint() {
-  std::string* _s = _internal_mutable_childendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.IPCQuotaObject.childEndpoint)
+inline std::string* IPCQuotaObject::mutable_a_childendpoint() {
+  std::string* _s = _internal_mutable_a_childendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
   return _s;
 }
-inline const std::string& IPCQuotaObject::_internal_childendpoint() const {
-  return _impl_.childendpoint_.Get();
+inline const std::string& IPCQuotaObject::_internal_a_childendpoint() const {
+  return _impl_.a_childendpoint_.Get();
 }
-inline void IPCQuotaObject::_internal_set_childendpoint(const std::string& value) {
+inline void IPCQuotaObject::_internal_set_a_childendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.childendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_childendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCQuotaObject::_internal_mutable_childendpoint() {
+inline std::string* IPCQuotaObject::_internal_mutable_a_childendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.childendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_childendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCQuotaObject::release_childendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.IPCQuotaObject.childEndpoint)
-  if (!_internal_has_childendpoint()) {
+inline std::string* IPCQuotaObject::release_a_childendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
+  if (!_internal_has_a_childendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.childendpoint_.Release();
+  auto* p = _impl_.a_childendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childendpoint_.IsDefault()) {
-    _impl_.childendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childendpoint_.IsDefault()) {
+    _impl_.a_childendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCQuotaObject::set_allocated_childendpoint(std::string* childendpoint) {
-  if (childendpoint != nullptr) {
+inline void IPCQuotaObject::set_allocated_a_childendpoint(std::string* a_childendpoint) {
+  if (a_childendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.childendpoint_.SetAllocated(childendpoint, GetArenaForAllocation());
+  _impl_.a_childendpoint_.SetAllocated(a_childendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childendpoint_.IsDefault()) {
-    _impl_.childendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childendpoint_.IsDefault()) {
+    _impl_.a_childendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.IPCQuotaObject.childEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
 }
 
 #ifdef __GNUC__

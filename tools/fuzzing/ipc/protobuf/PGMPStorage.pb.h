@@ -209,43 +209,43 @@ class Msg_OpenComplete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARecordNameFieldNumber = 1,
-    kAStatusFieldNumber = 2,
+    kAARecordNameFieldNumber = 1,
+    kAAStatusFieldNumber = 2,
   };
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
-  // required bytes aStatus = 2;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 2;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete)
@@ -261,8 +261,8 @@ class Msg_OpenComplete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -379,66 +379,66 @@ class Msg_ReadComplete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABytesFieldNumber = 3,
-    kARecordNameFieldNumber = 1,
-    kAStatusFieldNumber = 2,
+    kAABytesFieldNumber = 3,
+    kAARecordNameFieldNumber = 1,
+    kAAStatusFieldNumber = 2,
   };
-  // repeated uint32 aBytes = 3;
-  int abytes_size() const;
+  // repeated uint32 a_aBytes = 3;
+  int a_abytes_size() const;
   private:
-  int _internal_abytes_size() const;
+  int _internal_a_abytes_size() const;
   public:
-  void clear_abytes();
+  void clear_a_abytes();
   private:
-  uint32_t _internal_abytes(int index) const;
+  uint32_t _internal_a_abytes(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_abytes() const;
-  void _internal_add_abytes(uint32_t value);
+      _internal_a_abytes() const;
+  void _internal_add_a_abytes(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_abytes();
+      _internal_mutable_a_abytes();
   public:
-  uint32_t abytes(int index) const;
-  void set_abytes(int index, uint32_t value);
-  void add_abytes(uint32_t value);
+  uint32_t a_abytes(int index) const;
+  void set_a_abytes(int index, uint32_t value);
+  void add_a_abytes(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      abytes() const;
+      a_abytes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_abytes();
+      mutable_a_abytes();
 
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
-  // required bytes aStatus = 2;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 2;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete)
@@ -454,9 +454,9 @@ class Msg_ReadComplete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > abytes_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_abytes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -573,43 +573,43 @@ class Msg_WriteComplete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARecordNameFieldNumber = 1,
-    kAStatusFieldNumber = 2,
+    kAARecordNameFieldNumber = 1,
+    kAAStatusFieldNumber = 2,
   };
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
-  // required bytes aStatus = 2;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 2;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete)
@@ -625,8 +625,8 @@ class Msg_WriteComplete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -867,24 +867,24 @@ class Msg_Open final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARecordNameFieldNumber = 1,
+    kAARecordNameFieldNumber = 1,
   };
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_Open)
@@ -897,7 +897,7 @@ class Msg_Open final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -1014,24 +1014,24 @@ class Msg_Read final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARecordNameFieldNumber = 1,
+    kAARecordNameFieldNumber = 1,
   };
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_Read)
@@ -1044,7 +1044,7 @@ class Msg_Read final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -1161,47 +1161,47 @@ class Msg_Write final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABytesFieldNumber = 2,
-    kARecordNameFieldNumber = 1,
+    kAABytesFieldNumber = 2,
+    kAARecordNameFieldNumber = 1,
   };
-  // repeated uint32 aBytes = 2;
-  int abytes_size() const;
+  // repeated uint32 a_aBytes = 2;
+  int a_abytes_size() const;
   private:
-  int _internal_abytes_size() const;
+  int _internal_a_abytes_size() const;
   public:
-  void clear_abytes();
+  void clear_a_abytes();
   private:
-  uint32_t _internal_abytes(int index) const;
+  uint32_t _internal_a_abytes(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_abytes() const;
-  void _internal_add_abytes(uint32_t value);
+      _internal_a_abytes() const;
+  void _internal_add_a_abytes(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_abytes();
+      _internal_mutable_a_abytes();
   public:
-  uint32_t abytes(int index) const;
-  void set_abytes(int index, uint32_t value);
-  void add_abytes(uint32_t value);
+  uint32_t a_abytes(int index) const;
+  void set_a_abytes(int index, uint32_t value);
+  void add_a_abytes(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      abytes() const;
+      a_abytes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_abytes();
+      mutable_a_abytes();
 
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_Write)
@@ -1214,8 +1214,8 @@ class Msg_Write final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > abytes_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_abytes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -1332,24 +1332,24 @@ class Msg_Close final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARecordNameFieldNumber = 1,
+    kAARecordNameFieldNumber = 1,
   };
-  // required bytes aRecordName = 1;
-  bool has_arecordname() const;
+  // required bytes a_aRecordName = 1;
+  bool has_a_arecordname() const;
   private:
-  bool _internal_has_arecordname() const;
+  bool _internal_has_a_arecordname() const;
   public:
-  void clear_arecordname();
-  const std::string& arecordname() const;
+  void clear_a_arecordname();
+  const std::string& a_arecordname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arecordname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arecordname();
-  PROTOBUF_NODISCARD std::string* release_arecordname();
-  void set_allocated_arecordname(std::string* arecordname);
+  void set_a_arecordname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arecordname();
+  PROTOBUF_NODISCARD std::string* release_a_arecordname();
+  void set_allocated_a_arecordname(std::string* a_arecordname);
   private:
-  const std::string& _internal_arecordname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arecordname(const std::string& value);
-  std::string* _internal_mutable_arecordname();
+  const std::string& _internal_a_arecordname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arecordname(const std::string& value);
+  std::string* _internal_mutable_a_arecordname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPStorage.Msg_Close)
@@ -1362,7 +1362,7 @@ class Msg_Close final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arecordname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arecordname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPStorage_2eproto;
@@ -1626,467 +1626,467 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OpenComplete
 
-// required bytes aRecordName = 1;
-inline bool Msg_OpenComplete::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_OpenComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OpenComplete::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_OpenComplete::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_OpenComplete::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_OpenComplete::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OpenComplete::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_OpenComplete::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OpenComplete::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_OpenComplete::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aRecordName)
 }
-inline std::string* Msg_OpenComplete::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aRecordName)
+inline std::string* Msg_OpenComplete::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_OpenComplete::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_OpenComplete::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_OpenComplete::_internal_set_arecordname(const std::string& value) {
+inline void Msg_OpenComplete::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OpenComplete::_internal_mutable_arecordname() {
+inline std::string* Msg_OpenComplete::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OpenComplete::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_OpenComplete::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OpenComplete::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_OpenComplete::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aRecordName)
 }
 
-// required bytes aStatus = 2;
-inline bool Msg_OpenComplete::_internal_has_astatus() const {
+// required bytes a_aStatus = 2;
+inline bool Msg_OpenComplete::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_OpenComplete::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_OpenComplete::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_OpenComplete::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_OpenComplete::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_OpenComplete::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_OpenComplete::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OpenComplete::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_OpenComplete::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aStatus)
 }
-inline std::string* Msg_OpenComplete::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aStatus)
+inline std::string* Msg_OpenComplete::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_OpenComplete::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_OpenComplete::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_OpenComplete::_internal_set_astatus(const std::string& value) {
+inline void Msg_OpenComplete::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OpenComplete::_internal_mutable_astatus() {
+inline std::string* Msg_OpenComplete::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OpenComplete::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_OpenComplete::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OpenComplete::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_OpenComplete::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aStatus)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReadComplete
 
-// required bytes aRecordName = 1;
-inline bool Msg_ReadComplete::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_ReadComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReadComplete::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_ReadComplete::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_ReadComplete::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_ReadComplete::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReadComplete::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_ReadComplete::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReadComplete::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_ReadComplete::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aRecordName)
 }
-inline std::string* Msg_ReadComplete::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aRecordName)
+inline std::string* Msg_ReadComplete::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_ReadComplete::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_ReadComplete::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_ReadComplete::_internal_set_arecordname(const std::string& value) {
+inline void Msg_ReadComplete::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReadComplete::_internal_mutable_arecordname() {
+inline std::string* Msg_ReadComplete::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReadComplete::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_ReadComplete::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReadComplete::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_ReadComplete::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aRecordName)
 }
 
-// required bytes aStatus = 2;
-inline bool Msg_ReadComplete::_internal_has_astatus() const {
+// required bytes a_aStatus = 2;
+inline bool Msg_ReadComplete::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReadComplete::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_ReadComplete::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_ReadComplete::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_ReadComplete::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ReadComplete::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_ReadComplete::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReadComplete::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_ReadComplete::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aStatus)
 }
-inline std::string* Msg_ReadComplete::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aStatus)
+inline std::string* Msg_ReadComplete::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_ReadComplete::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_ReadComplete::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_ReadComplete::_internal_set_astatus(const std::string& value) {
+inline void Msg_ReadComplete::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReadComplete::_internal_mutable_astatus() {
+inline std::string* Msg_ReadComplete::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReadComplete::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_ReadComplete::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReadComplete::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_ReadComplete::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aStatus)
 }
 
-// repeated uint32 aBytes = 3;
-inline int Msg_ReadComplete::_internal_abytes_size() const {
-  return _impl_.abytes_.size();
+// repeated uint32 a_aBytes = 3;
+inline int Msg_ReadComplete::_internal_a_abytes_size() const {
+  return _impl_.a_abytes_.size();
 }
-inline int Msg_ReadComplete::abytes_size() const {
-  return _internal_abytes_size();
+inline int Msg_ReadComplete::a_abytes_size() const {
+  return _internal_a_abytes_size();
 }
-inline void Msg_ReadComplete::clear_abytes() {
-  _impl_.abytes_.Clear();
+inline void Msg_ReadComplete::clear_a_abytes() {
+  _impl_.a_abytes_.Clear();
 }
-inline uint32_t Msg_ReadComplete::_internal_abytes(int index) const {
-  return _impl_.abytes_.Get(index);
+inline uint32_t Msg_ReadComplete::_internal_a_abytes(int index) const {
+  return _impl_.a_abytes_.Get(index);
 }
-inline uint32_t Msg_ReadComplete::abytes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aBytes)
-  return _internal_abytes(index);
+inline uint32_t Msg_ReadComplete::a_abytes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aBytes)
+  return _internal_a_abytes(index);
 }
-inline void Msg_ReadComplete::set_abytes(int index, uint32_t value) {
-  _impl_.abytes_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aBytes)
+inline void Msg_ReadComplete::set_a_abytes(int index, uint32_t value) {
+  _impl_.a_abytes_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aBytes)
 }
-inline void Msg_ReadComplete::_internal_add_abytes(uint32_t value) {
-  _impl_.abytes_.Add(value);
+inline void Msg_ReadComplete::_internal_add_a_abytes(uint32_t value) {
+  _impl_.a_abytes_.Add(value);
 }
-inline void Msg_ReadComplete::add_abytes(uint32_t value) {
-  _internal_add_abytes(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aBytes)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_ReadComplete::_internal_abytes() const {
-  return _impl_.abytes_;
+inline void Msg_ReadComplete::add_a_abytes(uint32_t value) {
+  _internal_add_a_abytes(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aBytes)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_ReadComplete::abytes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aBytes)
-  return _internal_abytes();
+Msg_ReadComplete::_internal_a_abytes() const {
+  return _impl_.a_abytes_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_ReadComplete::a_abytes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aBytes)
+  return _internal_a_abytes();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_ReadComplete::_internal_mutable_abytes() {
-  return &_impl_.abytes_;
+Msg_ReadComplete::_internal_mutable_a_abytes() {
+  return &_impl_.a_abytes_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_ReadComplete::mutable_abytes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.aBytes)
-  return _internal_mutable_abytes();
+Msg_ReadComplete::mutable_a_abytes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aBytes)
+  return _internal_mutable_a_abytes();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_WriteComplete
 
-// required bytes aRecordName = 1;
-inline bool Msg_WriteComplete::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_WriteComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_WriteComplete::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_WriteComplete::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_WriteComplete::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_WriteComplete::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_WriteComplete::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_WriteComplete::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_WriteComplete::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_WriteComplete::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aRecordName)
 }
-inline std::string* Msg_WriteComplete::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aRecordName)
+inline std::string* Msg_WriteComplete::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_WriteComplete::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_WriteComplete::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_WriteComplete::_internal_set_arecordname(const std::string& value) {
+inline void Msg_WriteComplete::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_WriteComplete::_internal_mutable_arecordname() {
+inline std::string* Msg_WriteComplete::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_WriteComplete::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_WriteComplete::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_WriteComplete::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_WriteComplete::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aRecordName)
 }
 
-// required bytes aStatus = 2;
-inline bool Msg_WriteComplete::_internal_has_astatus() const {
+// required bytes a_aStatus = 2;
+inline bool Msg_WriteComplete::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_WriteComplete::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_WriteComplete::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_WriteComplete::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_WriteComplete::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_WriteComplete::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_WriteComplete::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_WriteComplete::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_WriteComplete::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aStatus)
 }
-inline std::string* Msg_WriteComplete::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aStatus)
+inline std::string* Msg_WriteComplete::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_WriteComplete::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_WriteComplete::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_WriteComplete::_internal_set_astatus(const std::string& value) {
+inline void Msg_WriteComplete::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_WriteComplete::_internal_mutable_astatus() {
+inline std::string* Msg_WriteComplete::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_WriteComplete::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_WriteComplete::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_WriteComplete::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_WriteComplete::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aStatus)
 }
 
 // -------------------------------------------------------------------
@@ -2097,335 +2097,335 @@ inline void Msg_WriteComplete::set_allocated_astatus(std::string* astatus) {
 
 // Msg_Open
 
-// required bytes aRecordName = 1;
-inline bool Msg_Open::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_Open::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Open::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_Open::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_Open::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_Open::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Open::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_Open::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Open::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_Open::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.a_aRecordName)
 }
-inline std::string* Msg_Open::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.aRecordName)
+inline std::string* Msg_Open::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_Open::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_Open::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_Open::_internal_set_arecordname(const std::string& value) {
+inline void Msg_Open::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Open::_internal_mutable_arecordname() {
+inline std::string* Msg_Open::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Open::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_Open::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Open::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_Open::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.a_aRecordName)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Read
 
-// required bytes aRecordName = 1;
-inline bool Msg_Read::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_Read::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Read::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_Read::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_Read::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_Read::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Read::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_Read::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Read::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_Read::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.a_aRecordName)
 }
-inline std::string* Msg_Read::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.aRecordName)
+inline std::string* Msg_Read::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_Read::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_Read::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_Read::_internal_set_arecordname(const std::string& value) {
+inline void Msg_Read::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Read::_internal_mutable_arecordname() {
+inline std::string* Msg_Read::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Read::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_Read::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Read::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_Read::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.a_aRecordName)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Write
 
-// required bytes aRecordName = 1;
-inline bool Msg_Write::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_Write::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Write::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_Write::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_Write::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_Write::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Write::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_Write::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Write::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_Write::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aRecordName)
 }
-inline std::string* Msg_Write::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aRecordName)
+inline std::string* Msg_Write::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_Write::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_Write::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_Write::_internal_set_arecordname(const std::string& value) {
+inline void Msg_Write::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Write::_internal_mutable_arecordname() {
+inline std::string* Msg_Write::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Write::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_Write::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Write::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_Write::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aRecordName)
 }
 
-// repeated uint32 aBytes = 2;
-inline int Msg_Write::_internal_abytes_size() const {
-  return _impl_.abytes_.size();
+// repeated uint32 a_aBytes = 2;
+inline int Msg_Write::_internal_a_abytes_size() const {
+  return _impl_.a_abytes_.size();
 }
-inline int Msg_Write::abytes_size() const {
-  return _internal_abytes_size();
+inline int Msg_Write::a_abytes_size() const {
+  return _internal_a_abytes_size();
 }
-inline void Msg_Write::clear_abytes() {
-  _impl_.abytes_.Clear();
+inline void Msg_Write::clear_a_abytes() {
+  _impl_.a_abytes_.Clear();
 }
-inline uint32_t Msg_Write::_internal_abytes(int index) const {
-  return _impl_.abytes_.Get(index);
+inline uint32_t Msg_Write::_internal_a_abytes(int index) const {
+  return _impl_.a_abytes_.Get(index);
 }
-inline uint32_t Msg_Write::abytes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aBytes)
-  return _internal_abytes(index);
+inline uint32_t Msg_Write::a_abytes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aBytes)
+  return _internal_a_abytes(index);
 }
-inline void Msg_Write::set_abytes(int index, uint32_t value) {
-  _impl_.abytes_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aBytes)
+inline void Msg_Write::set_a_abytes(int index, uint32_t value) {
+  _impl_.a_abytes_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aBytes)
 }
-inline void Msg_Write::_internal_add_abytes(uint32_t value) {
-  _impl_.abytes_.Add(value);
+inline void Msg_Write::_internal_add_a_abytes(uint32_t value) {
+  _impl_.a_abytes_.Add(value);
 }
-inline void Msg_Write::add_abytes(uint32_t value) {
-  _internal_add_abytes(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aBytes)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_Write::_internal_abytes() const {
-  return _impl_.abytes_;
+inline void Msg_Write::add_a_abytes(uint32_t value) {
+  _internal_add_a_abytes(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aBytes)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_Write::abytes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aBytes)
-  return _internal_abytes();
+Msg_Write::_internal_a_abytes() const {
+  return _impl_.a_abytes_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_Write::a_abytes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aBytes)
+  return _internal_a_abytes();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_Write::_internal_mutable_abytes() {
-  return &_impl_.abytes_;
+Msg_Write::_internal_mutable_a_abytes() {
+  return &_impl_.a_abytes_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_Write::mutable_abytes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.aBytes)
-  return _internal_mutable_abytes();
+Msg_Write::mutable_a_abytes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aBytes)
+  return _internal_mutable_a_abytes();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Close
 
-// required bytes aRecordName = 1;
-inline bool Msg_Close::_internal_has_arecordname() const {
+// required bytes a_aRecordName = 1;
+inline bool Msg_Close::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Close::has_arecordname() const {
-  return _internal_has_arecordname();
+inline bool Msg_Close::has_a_arecordname() const {
+  return _internal_has_a_arecordname();
 }
-inline void Msg_Close::clear_arecordname() {
-  _impl_.arecordname_.ClearToEmpty();
+inline void Msg_Close::clear_a_arecordname() {
+  _impl_.a_arecordname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Close::arecordname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.aRecordName)
-  return _internal_arecordname();
+inline const std::string& Msg_Close::a_arecordname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.a_aRecordName)
+  return _internal_a_arecordname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Close::set_arecordname(ArgT0&& arg0, ArgT... args) {
+void Msg_Close::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.aRecordName)
+ _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.a_aRecordName)
 }
-inline std::string* Msg_Close::mutable_arecordname() {
-  std::string* _s = _internal_mutable_arecordname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.aRecordName)
+inline std::string* Msg_Close::mutable_a_arecordname() {
+  std::string* _s = _internal_mutable_a_arecordname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.a_aRecordName)
   return _s;
 }
-inline const std::string& Msg_Close::_internal_arecordname() const {
-  return _impl_.arecordname_.Get();
+inline const std::string& Msg_Close::_internal_a_arecordname() const {
+  return _impl_.a_arecordname_.Get();
 }
-inline void Msg_Close::_internal_set_arecordname(const std::string& value) {
+inline void Msg_Close::_internal_set_a_arecordname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arecordname_.Set(value, GetArenaForAllocation());
+  _impl_.a_arecordname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Close::_internal_mutable_arecordname() {
+inline std::string* Msg_Close::_internal_mutable_a_arecordname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arecordname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arecordname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Close::release_arecordname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.aRecordName)
-  if (!_internal_has_arecordname()) {
+inline std::string* Msg_Close::release_a_arecordname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.a_aRecordName)
+  if (!_internal_has_a_arecordname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arecordname_.Release();
+  auto* p = _impl_.a_arecordname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Close::set_allocated_arecordname(std::string* arecordname) {
-  if (arecordname != nullptr) {
+inline void Msg_Close::set_allocated_a_arecordname(std::string* a_arecordname) {
+  if (a_arecordname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arecordname_.SetAllocated(arecordname, GetArenaForAllocation());
+  _impl_.a_arecordname_.SetAllocated(a_arecordname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arecordname_.IsDefault()) {
-    _impl_.arecordname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arecordname_.IsDefault()) {
+    _impl_.a_arecordname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.aRecordName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.a_aRecordName)
 }
 
 // -------------------------------------------------------------------

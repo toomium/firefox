@@ -34,18 +34,18 @@ message Reply_PWebGPUConstructor {
 }
 
 message Msg_Initialize {
-  required uint32 aManagerId = 1;
+  required uint32 a_aManagerId = 1;
 }
 
 message Msg_GetSnapshot {
-  required uint32 aManagerId = 1;
-  required bytes aProtocolId = 2;
-  optional bytes ownerId = 3;
-  optional bytes commandEncoderId = 4;
+  required uint32 a_aManagerId = 1;
+  required bytes a_aProtocolId = 2;
+  optional bytes a_ownerId = 3;
+  optional bytes a_commandEncoderId = 4;
 }
 
 message Reply_GetSnapshot {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 // Parameter mappings stats:

@@ -833,25 +833,25 @@ class Msg_Error final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValueFieldNumber = 1,
+    kAValueFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ErrorValue value = 1;
-  bool has_value() const;
+  // required .protobuf.mozilla.dom.ErrorValue a_value = 1;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const ::protobuf::mozilla::dom::ErrorValue& value() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorValue* release_value();
-  ::protobuf::mozilla::dom::ErrorValue* mutable_value();
-  void set_allocated_value(::protobuf::mozilla::dom::ErrorValue* value);
+  void clear_a_value();
+  const ::protobuf::mozilla::dom::ErrorValue& a_value() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorValue* release_a_value();
+  ::protobuf::mozilla::dom::ErrorValue* mutable_a_value();
+  void set_allocated_a_value(::protobuf::mozilla::dom::ErrorValue* a_value);
   private:
-  const ::protobuf::mozilla::dom::ErrorValue& _internal_value() const;
-  ::protobuf::mozilla::dom::ErrorValue* _internal_mutable_value();
+  const ::protobuf::mozilla::dom::ErrorValue& _internal_a_value() const;
+  ::protobuf::mozilla::dom::ErrorValue* _internal_mutable_a_value();
   public:
-  void unsafe_arena_set_allocated_value(
-      ::protobuf::mozilla::dom::ErrorValue* value);
-  ::protobuf::mozilla::dom::ErrorValue* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_a_value(
+      ::protobuf::mozilla::dom::ErrorValue* a_value);
+  ::protobuf::mozilla::dom::ErrorValue* unsafe_arena_release_a_value();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSharedWorker.Msg_Error)
  private:
@@ -863,7 +863,7 @@ class Msg_Error final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ErrorValue* value_;
+    ::protobuf::mozilla::dom::ErrorValue* a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSharedWorker_2eproto;
@@ -980,19 +980,19 @@ class Msg_NotifyLock final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACreatedFieldNumber = 1,
+    kAACreatedFieldNumber = 1,
   };
-  // required bool aCreated = 1;
-  bool has_acreated() const;
+  // required bool a_aCreated = 1;
+  bool has_a_acreated() const;
   private:
-  bool _internal_has_acreated() const;
+  bool _internal_has_a_acreated() const;
   public:
-  void clear_acreated();
-  bool acreated() const;
-  void set_acreated(bool value);
+  void clear_a_acreated();
+  bool a_acreated() const;
+  void set_a_acreated(bool value);
   private:
-  bool _internal_acreated() const;
-  void _internal_set_acreated(bool value);
+  bool _internal_a_acreated() const;
+  void _internal_set_a_acreated(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyLock)
@@ -1005,7 +1005,7 @@ class Msg_NotifyLock final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool acreated_;
+    bool a_acreated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSharedWorker_2eproto;
@@ -1122,19 +1122,19 @@ class Msg_NotifyWebTransport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACreatedFieldNumber = 1,
+    kAACreatedFieldNumber = 1,
   };
-  // required bool aCreated = 1;
-  bool has_acreated() const;
+  // required bool a_aCreated = 1;
+  bool has_a_acreated() const;
   private:
-  bool _internal_has_acreated() const;
+  bool _internal_has_a_acreated() const;
   public:
-  void clear_acreated();
-  bool acreated() const;
-  void set_acreated(bool value);
+  void clear_a_acreated();
+  bool a_acreated() const;
+  void set_a_acreated(bool value);
   private:
-  bool _internal_acreated() const;
-  void _internal_set_acreated(bool value);
+  bool _internal_a_acreated() const;
+  void _internal_set_a_acreated(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyWebTransport)
@@ -1147,7 +1147,7 @@ class Msg_NotifyWebTransport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool acreated_;
+    bool a_acreated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSharedWorker_2eproto;
@@ -1555,41 +1555,41 @@ class Reply___delete__ final :
 
 // Msg_Error
 
-// required .protobuf.mozilla.dom.ErrorValue value = 1;
-inline bool Msg_Error::_internal_has_value() const {
+// required .protobuf.mozilla.dom.ErrorValue a_value = 1;
+inline bool Msg_Error::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.value_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
   return value;
 }
-inline bool Msg_Error::has_value() const {
-  return _internal_has_value();
+inline bool Msg_Error::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline const ::protobuf::mozilla::dom::ErrorValue& Msg_Error::_internal_value() const {
-  const ::protobuf::mozilla::dom::ErrorValue* p = _impl_.value_;
+inline const ::protobuf::mozilla::dom::ErrorValue& Msg_Error::_internal_a_value() const {
+  const ::protobuf::mozilla::dom::ErrorValue* p = _impl_.a_value_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ErrorValue&>(
       ::protobuf::mozilla::dom::_ErrorValue_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ErrorValue& Msg_Error::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSharedWorker.Msg_Error.value)
-  return _internal_value();
+inline const ::protobuf::mozilla::dom::ErrorValue& Msg_Error::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
+  return _internal_a_value();
 }
-inline void Msg_Error::unsafe_arena_set_allocated_value(
-    ::protobuf::mozilla::dom::ErrorValue* value) {
+inline void Msg_Error::unsafe_arena_set_allocated_a_value(
+    ::protobuf::mozilla::dom::ErrorValue* a_value) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.value_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_value_);
   }
-  _impl_.value_ = value;
-  if (value) {
+  _impl_.a_value_ = a_value;
+  if (a_value) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PSharedWorker.Msg_Error.value)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::release_value() {
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::release_a_value() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1601,109 +1601,109 @@ inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::release_value() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::unsafe_arena_release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSharedWorker.Msg_Error.value)
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::unsafe_arena_release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::_internal_mutable_value() {
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.value_ == nullptr) {
+  if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ErrorValue>(GetArenaForAllocation());
-    _impl_.value_ = p;
+    _impl_.a_value_ = p;
   }
-  return _impl_.value_;
+  return _impl_.a_value_;
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::mutable_value() {
-  ::protobuf::mozilla::dom::ErrorValue* _msg = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSharedWorker.Msg_Error.value)
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_Error::mutable_a_value() {
+  ::protobuf::mozilla::dom::ErrorValue* _msg = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
   return _msg;
 }
-inline void Msg_Error::set_allocated_value(::protobuf::mozilla::dom::ErrorValue* value) {
+inline void Msg_Error::set_allocated_a_value(::protobuf::mozilla::dom::ErrorValue* a_value) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.value_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_value_);
   }
-  if (value) {
+  if (a_value) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(value));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_value));
     if (message_arena != submessage_arena) {
-      value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, value, submessage_arena);
+      a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_value, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.value_ = value;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSharedWorker.Msg_Error.value)
+  _impl_.a_value_ = a_value;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSharedWorker.Msg_Error.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NotifyLock
 
-// required bool aCreated = 1;
-inline bool Msg_NotifyLock::_internal_has_acreated() const {
+// required bool a_aCreated = 1;
+inline bool Msg_NotifyLock::_internal_has_a_acreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyLock::has_acreated() const {
-  return _internal_has_acreated();
+inline bool Msg_NotifyLock::has_a_acreated() const {
+  return _internal_has_a_acreated();
 }
-inline void Msg_NotifyLock::clear_acreated() {
-  _impl_.acreated_ = false;
+inline void Msg_NotifyLock::clear_a_acreated() {
+  _impl_.a_acreated_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_NotifyLock::_internal_acreated() const {
-  return _impl_.acreated_;
+inline bool Msg_NotifyLock::_internal_a_acreated() const {
+  return _impl_.a_acreated_;
 }
-inline bool Msg_NotifyLock::acreated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyLock.aCreated)
-  return _internal_acreated();
+inline bool Msg_NotifyLock::a_acreated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyLock.a_aCreated)
+  return _internal_a_acreated();
 }
-inline void Msg_NotifyLock::_internal_set_acreated(bool value) {
+inline void Msg_NotifyLock::_internal_set_a_acreated(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acreated_ = value;
+  _impl_.a_acreated_ = value;
 }
-inline void Msg_NotifyLock::set_acreated(bool value) {
-  _internal_set_acreated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyLock.aCreated)
+inline void Msg_NotifyLock::set_a_acreated(bool value) {
+  _internal_set_a_acreated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyLock.a_aCreated)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NotifyWebTransport
 
-// required bool aCreated = 1;
-inline bool Msg_NotifyWebTransport::_internal_has_acreated() const {
+// required bool a_aCreated = 1;
+inline bool Msg_NotifyWebTransport::_internal_has_a_acreated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyWebTransport::has_acreated() const {
-  return _internal_has_acreated();
+inline bool Msg_NotifyWebTransport::has_a_acreated() const {
+  return _internal_has_a_acreated();
 }
-inline void Msg_NotifyWebTransport::clear_acreated() {
-  _impl_.acreated_ = false;
+inline void Msg_NotifyWebTransport::clear_a_acreated() {
+  _impl_.a_acreated_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_NotifyWebTransport::_internal_acreated() const {
-  return _impl_.acreated_;
+inline bool Msg_NotifyWebTransport::_internal_a_acreated() const {
+  return _impl_.a_acreated_;
 }
-inline bool Msg_NotifyWebTransport::acreated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyWebTransport.aCreated)
-  return _internal_acreated();
+inline bool Msg_NotifyWebTransport::a_acreated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyWebTransport.a_aCreated)
+  return _internal_a_acreated();
 }
-inline void Msg_NotifyWebTransport::_internal_set_acreated(bool value) {
+inline void Msg_NotifyWebTransport::_internal_set_a_acreated(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acreated_ = value;
+  _impl_.a_acreated_ = value;
 }
-inline void Msg_NotifyWebTransport::set_acreated(bool value) {
-  _internal_set_acreated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyWebTransport.aCreated)
+inline void Msg_NotifyWebTransport::set_a_acreated(bool value) {
+  _internal_set_a_acreated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSharedWorker.Msg_NotifyWebTransport.a_aCreated)
 }
 
 // -------------------------------------------------------------------

@@ -14,60 +14,60 @@ import "DocAccessibleTypes.proto";
 
 // Structs and unions declarations
 message AccessibleData {
-  required uint64 ID = 1;
-  required bytes Role = 2;
-  required uint64 ParentID = 3;
-  required uint32 IndexInParent = 4;
-  required bytes Type = 5;
-  required bytes GenericTypes = 6;
-  required uint32 RoleMapEntryIndex = 7;
-  required bytes CacheFields = 8;
+  required uint64 a_ID = 1;
+  required bytes a_Role = 2;
+  required uint64 a_ParentID = 3;
+  required uint32 a_IndexInParent = 4;
+  required bytes a_Type = 5;
+  required bytes a_GenericTypes = 6;
+  required uint32 a_RoleMapEntryIndex = 7;
+  required bytes a_CacheFields = 8;
 }
 
 message CacheEventData {
-  required bytes UpdateType = 1;
-  repeated protobuf.mozilla.a11y.CacheData aData = 2;
+  required bytes a_UpdateType = 1;
+  repeated protobuf.mozilla.a11y.CacheData a_aData = 2;
 }
 
 message ShowEventData {
-  repeated protobuf.mozilla.a11y.AccessibleData NewTree = 1;
-  required bool EventSuppressed = 2;
-  required bool Complete = 3;
-  required bool FromUser = 4;
+  repeated protobuf.mozilla.a11y.AccessibleData a_NewTree = 1;
+  required bool a_EventSuppressed = 2;
+  required bool a_Complete = 3;
+  required bool a_FromUser = 4;
 }
 
 message HideEventData {
-  required uint64 ID = 1;
-  required bool IsFromUserInput = 2;
+  required uint64 a_ID = 1;
+  required bool a_IsFromUserInput = 2;
 }
 
 message ReorderEventData {
-  required uint64 ID = 1;
-  required uint32 Type = 2;
+  required uint64 a_ID = 1;
+  required uint32 a_Type = 2;
 }
 
 message TextChangeEventData {
-  required uint64 ID = 1;
-  required bytes Str = 2;
-  required sint32 Start = 3;
-  required uint32 Len = 4;
-  required bool IsInsert = 5;
-  required bool FromUser = 6;
+  required uint64 a_ID = 1;
+  required bytes a_Str = 2;
+  required sint32 a_Start = 3;
+  required uint32 a_Len = 4;
+  required bool a_IsInsert = 5;
+  required bool a_FromUser = 6;
 }
 
 message MutationEventData {
   oneof content {
-    protobuf.mozilla.a11y.CacheEventData mVCacheEventData = 1;
-    protobuf.mozilla.a11y.ShowEventData mVShowEventData = 2;
-    protobuf.mozilla.a11y.HideEventData mVHideEventData = 3;
-    protobuf.mozilla.a11y.ReorderEventData mVReorderEventData = 4;
-    protobuf.mozilla.a11y.TextChangeEventData mVTextChangeEventData = 5;
+    protobuf.mozilla.a11y.CacheEventData a_mVCacheEventData = 1;
+    protobuf.mozilla.a11y.ShowEventData a_mVShowEventData = 2;
+    protobuf.mozilla.a11y.HideEventData a_mVHideEventData = 3;
+    protobuf.mozilla.a11y.ReorderEventData a_mVReorderEventData = 4;
+    protobuf.mozilla.a11y.TextChangeEventData a_mVTextChangeEventData = 5;
   }
 }
 
 message TextRangeData {
-  required uint64 StartID = 1;
-  required uint64 EndID = 2;
-  required sint32 StartOffset = 3;
-  required sint32 EndOffset = 4;
+  required uint64 a_StartID = 1;
+  required uint64 a_EndID = 2;
+  required sint32 a_StartOffset = 3;
+  required sint32 a_EndOffset = 4;
 }

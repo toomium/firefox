@@ -17,7 +17,7 @@ import "PURLClassifierInfo.proto";
 
 // Message declarations
 message Msg___delete__ {
-  repeated protobuf.mozilla.dom.URLClassifierLocalResult results = 1;
+  repeated protobuf.mozilla.dom.URLClassifierLocalResult a_results = 1;
 }
 
 message Reply___delete__ {

@@ -14,26 +14,26 @@ package protobuf.mozilla.net.PWebSocketConnection;
 
 // Message declarations
 message Msg_OnTransportAvailable {
-  required bytes aSecurityInfo = 1;
+  required bytes a_aSecurityInfo = 1;
 }
 
 message Msg_OnError {
-  required bytes aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 message Msg_OnTCPClosed {
 }
 
 message Msg_OnDataReceived {
-  repeated uint32 aData = 1;
+  repeated uint32 a_aData = 1;
 }
 
 message Msg_OnUpgradeFailed {
-  required bytes aReason = 1;
+  required bytes a_aReason = 1;
 }
 
 message Msg_WriteOutputData {
-  repeated uint32 aData = 1;
+  repeated uint32 a_aData = 1;
 }
 
 message Msg_StartReading {

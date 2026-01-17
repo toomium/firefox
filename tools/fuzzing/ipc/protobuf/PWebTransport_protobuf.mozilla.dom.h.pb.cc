@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR UnidirectionalStream::UnidirectionalStream(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.outstream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.streamid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_outstream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_streamid_)*/uint64_t{0u}} {}
 struct UnidirectionalStreamDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UnidirectionalStreamDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -53,9 +53,9 @@ PROTOBUF_CONSTEXPR BidirectionalStream::BidirectionalStream(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.instream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.outstream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.streamid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_instream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_outstream_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_streamid_)*/uint64_t{0u}} {}
 struct BidirectionalStreamDefaultTypeInternal {
   PROTOBUF_CONSTEXPR BidirectionalStreamDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -83,7 +83,7 @@ PROTOBUF_CONSTEXPR ResetError::ResetError(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct ResetErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ResetErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -97,7 +97,7 @@ PROTOBUF_CONSTEXPR StopSendingError::StopSendingError(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct StopSendingErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR StopSendingErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -133,10 +133,10 @@ namespace dom {
 class UnidirectionalStream::_Internal {
  public:
   using HasBits = decltype(std::declval<UnidirectionalStream>()._impl_._has_bits_);
-  static void set_has_streamid(HasBits* has_bits) {
+  static void set_has_a_streamid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_outstream(HasBits* has_bits) {
+  static void set_has_a_outstream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -156,19 +156,19 @@ UnidirectionalStream::UnidirectionalStream(const UnidirectionalStream& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.outstream_){}
-    , decltype(_impl_.streamid_){}};
+    , decltype(_impl_.a_outstream_){}
+    , decltype(_impl_.a_streamid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.outstream_.InitDefault();
+  _impl_.a_outstream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.outstream_.Set("", GetArenaForAllocation());
+    _impl_.a_outstream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_outstream()) {
-    _this->_impl_.outstream_.Set(from._internal_outstream(), 
+  if (from._internal_has_a_outstream()) {
+    _this->_impl_.a_outstream_.Set(from._internal_a_outstream(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.streamid_ = from._impl_.streamid_;
+  _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.UnidirectionalStream)
 }
 
@@ -179,12 +179,12 @@ inline void UnidirectionalStream::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.outstream_){}
-    , decltype(_impl_.streamid_){uint64_t{0u}}
+    , decltype(_impl_.a_outstream_){}
+    , decltype(_impl_.a_streamid_){uint64_t{0u}}
   };
-  _impl_.outstream_.InitDefault();
+  _impl_.a_outstream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.outstream_.Set("", GetArenaForAllocation());
+    _impl_.a_outstream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -199,7 +199,7 @@ UnidirectionalStream::~UnidirectionalStream() {
 
 inline void UnidirectionalStream::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.outstream_.Destroy();
+  _impl_.a_outstream_.Destroy();
 }
 
 void UnidirectionalStream::SetCachedSize(int size) const {
@@ -214,9 +214,9 @@ void UnidirectionalStream::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.outstream_.ClearNonDefaultToEmpty();
+    _impl_.a_outstream_.ClearNonDefaultToEmpty();
   }
-  _impl_.streamid_ = uint64_t{0u};
+  _impl_.a_streamid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -228,19 +228,19 @@ const char* UnidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 streamId = 1;
+      // required uint64 a_streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_streamid(&has_bits);
-          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_streamid(&has_bits);
+          _impl_.a_streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes outStream = 2;
+      // required bytes a_outStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_outstream();
+          auto str = _internal_mutable_a_outstream();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -277,16 +277,16 @@ uint8_t* UnidirectionalStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 streamId = 1;
+  // required uint64 a_streamId = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_streamid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_streamid(), target);
   }
 
-  // required bytes outStream = 2;
+  // required bytes a_outStream = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_outstream(), target);
+        2, this->_internal_a_outstream(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -301,16 +301,16 @@ size_t UnidirectionalStream::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.UnidirectionalStream)
   size_t total_size = 0;
 
-  if (_internal_has_outstream()) {
-    // required bytes outStream = 2;
+  if (_internal_has_a_outstream()) {
+    // required bytes a_outStream = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_outstream());
+        this->_internal_a_outstream());
   }
 
-  if (_internal_has_streamid()) {
-    // required uint64 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_streamid());
+  if (_internal_has_a_streamid()) {
+    // required uint64 a_streamId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
   }
 
   return total_size;
@@ -320,13 +320,13 @@ size_t UnidirectionalStream::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes outStream = 2;
+    // required bytes a_outStream = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_outstream());
+        this->_internal_a_outstream());
 
-    // required uint64 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_streamid());
+    // required uint64 a_streamId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -359,10 +359,10 @@ void UnidirectionalStream::MergeFrom(const UnidirectionalStream& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_outstream(from._internal_outstream());
+      _this->_internal_set_a_outstream(from._internal_a_outstream());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.streamid_ = from._impl_.streamid_;
+      _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -388,10 +388,10 @@ void UnidirectionalStream::InternalSwap(UnidirectionalStream* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.outstream_, lhs_arena,
-      &other->_impl_.outstream_, rhs_arena
+      &_impl_.a_outstream_, lhs_arena,
+      &other->_impl_.a_outstream_, rhs_arena
   );
-  swap(_impl_.streamid_, other->_impl_.streamid_);
+  swap(_impl_.a_streamid_, other->_impl_.a_streamid_);
 }
 
 std::string UnidirectionalStream::GetTypeName() const {
@@ -403,27 +403,27 @@ std::string UnidirectionalStream::GetTypeName() const {
 
 class UnidirectionalStreamResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::UnidirectionalStream& mvunidirectionalstream(const UnidirectionalStreamResponse* msg);
+  static const ::protobuf::mozilla::dom::UnidirectionalStream& a_mvunidirectionalstream(const UnidirectionalStreamResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::UnidirectionalStream&
-UnidirectionalStreamResponse::_Internal::mvunidirectionalstream(const UnidirectionalStreamResponse* msg) {
-  return *msg->_impl_.content_.mvunidirectionalstream_;
+UnidirectionalStreamResponse::_Internal::a_mvunidirectionalstream(const UnidirectionalStreamResponse* msg) {
+  return *msg->_impl_.content_.a_mvunidirectionalstream_;
 }
-void UnidirectionalStreamResponse::set_allocated_mvunidirectionalstream(::protobuf::mozilla::dom::UnidirectionalStream* mvunidirectionalstream) {
+void UnidirectionalStreamResponse::set_allocated_a_mvunidirectionalstream(::protobuf::mozilla::dom::UnidirectionalStream* a_mvunidirectionalstream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvunidirectionalstream) {
+  if (a_mvunidirectionalstream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvunidirectionalstream);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvunidirectionalstream);
     if (message_arena != submessage_arena) {
-      mvunidirectionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvunidirectionalstream, submessage_arena);
+      a_mvunidirectionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvunidirectionalstream, submessage_arena);
     }
-    set_has_mvunidirectionalstream();
-    _impl_.content_.mvunidirectionalstream_ = mvunidirectionalstream;
+    set_has_a_mvunidirectionalstream();
+    _impl_.content_.a_mvunidirectionalstream_ = a_mvunidirectionalstream;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.UnidirectionalStreamResponse.mVUnidirectionalStream)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.UnidirectionalStreamResponse.a_mVUnidirectionalStream)
 }
 UnidirectionalStreamResponse::UnidirectionalStreamResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -442,13 +442,13 @@ UnidirectionalStreamResponse::UnidirectionalStreamResponse(const UnidirectionalS
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVUnidirectionalStream: {
-      _this->_internal_mutable_mvunidirectionalstream()->::protobuf::mozilla::dom::UnidirectionalStream::MergeFrom(
-          from._internal_mvunidirectionalstream());
+    case kAMVUnidirectionalStream: {
+      _this->_internal_mutable_a_mvunidirectionalstream()->::protobuf::mozilla::dom::UnidirectionalStream::MergeFrom(
+          from._internal_a_mvunidirectionalstream());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -493,13 +493,13 @@ void UnidirectionalStreamResponse::SetCachedSize(int size) const {
 void UnidirectionalStreamResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.UnidirectionalStreamResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVUnidirectionalStream: {
+    case kAMVUnidirectionalStream: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvunidirectionalstream_;
+        delete _impl_.content_.a_mvunidirectionalstream_;
       }
       break;
     }
@@ -527,19 +527,19 @@ const char* UnidirectionalStreamResponse::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.UnidirectionalStream mVUnidirectionalStream = 2;
+      // .protobuf.mozilla.dom.UnidirectionalStream a_mVUnidirectionalStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvunidirectionalstream(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvunidirectionalstream(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -574,15 +574,15 @@ uint8_t* UnidirectionalStreamResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVUnidirectionalStream: {
+    case kAMVUnidirectionalStream: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvunidirectionalstream(this),
-          _Internal::mvunidirectionalstream(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvunidirectionalstream(this),
+          _Internal::a_mvunidirectionalstream(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -604,18 +604,18 @@ size_t UnidirectionalStreamResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.UnidirectionalStream mVUnidirectionalStream = 2;
-    case kMVUnidirectionalStream: {
+    // .protobuf.mozilla.dom.UnidirectionalStream a_mVUnidirectionalStream = 2;
+    case kAMVUnidirectionalStream: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvunidirectionalstream_);
+          *_impl_.content_.a_mvunidirectionalstream_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -644,13 +644,13 @@ void UnidirectionalStreamResponse::MergeFrom(const UnidirectionalStreamResponse&
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVUnidirectionalStream: {
-      _this->_internal_mutable_mvunidirectionalstream()->::protobuf::mozilla::dom::UnidirectionalStream::MergeFrom(
-          from._internal_mvunidirectionalstream());
+    case kAMVUnidirectionalStream: {
+      _this->_internal_mutable_a_mvunidirectionalstream()->::protobuf::mozilla::dom::UnidirectionalStream::MergeFrom(
+          from._internal_a_mvunidirectionalstream());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -669,12 +669,12 @@ void UnidirectionalStreamResponse::CopyFrom(const UnidirectionalStreamResponse& 
 
 bool UnidirectionalStreamResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVUnidirectionalStream: {
-      if (_internal_has_mvunidirectionalstream()) {
-        if (!_impl_.content_.mvunidirectionalstream_->IsInitialized()) return false;
+    case kAMVUnidirectionalStream: {
+      if (_internal_has_a_mvunidirectionalstream()) {
+        if (!_impl_.content_.a_mvunidirectionalstream_->IsInitialized()) return false;
       }
       break;
     }
@@ -702,13 +702,13 @@ std::string UnidirectionalStreamResponse::GetTypeName() const {
 class BidirectionalStream::_Internal {
  public:
   using HasBits = decltype(std::declval<BidirectionalStream>()._impl_._has_bits_);
-  static void set_has_streamid(HasBits* has_bits) {
+  static void set_has_a_streamid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_instream(HasBits* has_bits) {
+  static void set_has_a_instream(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_outstream(HasBits* has_bits) {
+  static void set_has_a_outstream(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -728,28 +728,28 @@ BidirectionalStream::BidirectionalStream(const BidirectionalStream& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.instream_){}
-    , decltype(_impl_.outstream_){}
-    , decltype(_impl_.streamid_){}};
+    , decltype(_impl_.a_instream_){}
+    , decltype(_impl_.a_outstream_){}
+    , decltype(_impl_.a_streamid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.instream_.InitDefault();
+  _impl_.a_instream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.instream_.Set("", GetArenaForAllocation());
+    _impl_.a_instream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_instream()) {
-    _this->_impl_.instream_.Set(from._internal_instream(), 
+  if (from._internal_has_a_instream()) {
+    _this->_impl_.a_instream_.Set(from._internal_a_instream(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.outstream_.InitDefault();
+  _impl_.a_outstream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.outstream_.Set("", GetArenaForAllocation());
+    _impl_.a_outstream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_outstream()) {
-    _this->_impl_.outstream_.Set(from._internal_outstream(), 
+  if (from._internal_has_a_outstream()) {
+    _this->_impl_.a_outstream_.Set(from._internal_a_outstream(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.streamid_ = from._impl_.streamid_;
+  _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.BidirectionalStream)
 }
 
@@ -760,17 +760,17 @@ inline void BidirectionalStream::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.instream_){}
-    , decltype(_impl_.outstream_){}
-    , decltype(_impl_.streamid_){uint64_t{0u}}
+    , decltype(_impl_.a_instream_){}
+    , decltype(_impl_.a_outstream_){}
+    , decltype(_impl_.a_streamid_){uint64_t{0u}}
   };
-  _impl_.instream_.InitDefault();
+  _impl_.a_instream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.instream_.Set("", GetArenaForAllocation());
+    _impl_.a_instream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.outstream_.InitDefault();
+  _impl_.a_outstream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.outstream_.Set("", GetArenaForAllocation());
+    _impl_.a_outstream_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -785,8 +785,8 @@ BidirectionalStream::~BidirectionalStream() {
 
 inline void BidirectionalStream::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.instream_.Destroy();
-  _impl_.outstream_.Destroy();
+  _impl_.a_instream_.Destroy();
+  _impl_.a_outstream_.Destroy();
 }
 
 void BidirectionalStream::SetCachedSize(int size) const {
@@ -802,13 +802,13 @@ void BidirectionalStream::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.instream_.ClearNonDefaultToEmpty();
+      _impl_.a_instream_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.outstream_.ClearNonDefaultToEmpty();
+      _impl_.a_outstream_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.streamid_ = uint64_t{0u};
+  _impl_.a_streamid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -820,28 +820,28 @@ const char* BidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 streamId = 1;
+      // required uint64 a_streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_streamid(&has_bits);
-          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_streamid(&has_bits);
+          _impl_.a_streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes inStream = 2;
+      // required bytes a_inStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_instream();
+          auto str = _internal_mutable_a_instream();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes outStream = 3;
+      // required bytes a_outStream = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_outstream();
+          auto str = _internal_mutable_a_outstream();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -878,22 +878,22 @@ uint8_t* BidirectionalStream::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 streamId = 1;
+  // required uint64 a_streamId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_streamid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_streamid(), target);
   }
 
-  // required bytes inStream = 2;
+  // required bytes a_inStream = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_instream(), target);
+        2, this->_internal_a_instream(), target);
   }
 
-  // required bytes outStream = 3;
+  // required bytes a_outStream = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_outstream(), target);
+        3, this->_internal_a_outstream(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -908,23 +908,23 @@ size_t BidirectionalStream::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.BidirectionalStream)
   size_t total_size = 0;
 
-  if (_internal_has_instream()) {
-    // required bytes inStream = 2;
+  if (_internal_has_a_instream()) {
+    // required bytes a_inStream = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_instream());
+        this->_internal_a_instream());
   }
 
-  if (_internal_has_outstream()) {
-    // required bytes outStream = 3;
+  if (_internal_has_a_outstream()) {
+    // required bytes a_outStream = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_outstream());
+        this->_internal_a_outstream());
   }
 
-  if (_internal_has_streamid()) {
-    // required uint64 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_streamid());
+  if (_internal_has_a_streamid()) {
+    // required uint64 a_streamId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
   }
 
   return total_size;
@@ -934,18 +934,18 @@ size_t BidirectionalStream::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes inStream = 2;
+    // required bytes a_inStream = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_instream());
+        this->_internal_a_instream());
 
-    // required bytes outStream = 3;
+    // required bytes a_outStream = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_outstream());
+        this->_internal_a_outstream());
 
-    // required uint64 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_streamid());
+    // required uint64 a_streamId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -978,13 +978,13 @@ void BidirectionalStream::MergeFrom(const BidirectionalStream& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_instream(from._internal_instream());
+      _this->_internal_set_a_instream(from._internal_a_instream());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_outstream(from._internal_outstream());
+      _this->_internal_set_a_outstream(from._internal_a_outstream());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.streamid_ = from._impl_.streamid_;
+      _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1010,14 +1010,14 @@ void BidirectionalStream::InternalSwap(BidirectionalStream* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.instream_, lhs_arena,
-      &other->_impl_.instream_, rhs_arena
+      &_impl_.a_instream_, lhs_arena,
+      &other->_impl_.a_instream_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.outstream_, lhs_arena,
-      &other->_impl_.outstream_, rhs_arena
+      &_impl_.a_outstream_, lhs_arena,
+      &other->_impl_.a_outstream_, rhs_arena
   );
-  swap(_impl_.streamid_, other->_impl_.streamid_);
+  swap(_impl_.a_streamid_, other->_impl_.a_streamid_);
 }
 
 std::string BidirectionalStream::GetTypeName() const {
@@ -1029,27 +1029,27 @@ std::string BidirectionalStream::GetTypeName() const {
 
 class BidirectionalStreamResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::BidirectionalStream& mvbidirectionalstream(const BidirectionalStreamResponse* msg);
+  static const ::protobuf::mozilla::dom::BidirectionalStream& a_mvbidirectionalstream(const BidirectionalStreamResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::BidirectionalStream&
-BidirectionalStreamResponse::_Internal::mvbidirectionalstream(const BidirectionalStreamResponse* msg) {
-  return *msg->_impl_.content_.mvbidirectionalstream_;
+BidirectionalStreamResponse::_Internal::a_mvbidirectionalstream(const BidirectionalStreamResponse* msg) {
+  return *msg->_impl_.content_.a_mvbidirectionalstream_;
 }
-void BidirectionalStreamResponse::set_allocated_mvbidirectionalstream(::protobuf::mozilla::dom::BidirectionalStream* mvbidirectionalstream) {
+void BidirectionalStreamResponse::set_allocated_a_mvbidirectionalstream(::protobuf::mozilla::dom::BidirectionalStream* a_mvbidirectionalstream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvbidirectionalstream) {
+  if (a_mvbidirectionalstream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvbidirectionalstream);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvbidirectionalstream);
     if (message_arena != submessage_arena) {
-      mvbidirectionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvbidirectionalstream, submessage_arena);
+      a_mvbidirectionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvbidirectionalstream, submessage_arena);
     }
-    set_has_mvbidirectionalstream();
-    _impl_.content_.mvbidirectionalstream_ = mvbidirectionalstream;
+    set_has_a_mvbidirectionalstream();
+    _impl_.content_.a_mvbidirectionalstream_ = a_mvbidirectionalstream;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.BidirectionalStreamResponse.mVBidirectionalStream)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.BidirectionalStreamResponse.a_mVBidirectionalStream)
 }
 BidirectionalStreamResponse::BidirectionalStreamResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1068,13 +1068,13 @@ BidirectionalStreamResponse::BidirectionalStreamResponse(const BidirectionalStre
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVBidirectionalStream: {
-      _this->_internal_mutable_mvbidirectionalstream()->::protobuf::mozilla::dom::BidirectionalStream::MergeFrom(
-          from._internal_mvbidirectionalstream());
+    case kAMVBidirectionalStream: {
+      _this->_internal_mutable_a_mvbidirectionalstream()->::protobuf::mozilla::dom::BidirectionalStream::MergeFrom(
+          from._internal_a_mvbidirectionalstream());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1119,13 +1119,13 @@ void BidirectionalStreamResponse::SetCachedSize(int size) const {
 void BidirectionalStreamResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.BidirectionalStreamResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVBidirectionalStream: {
+    case kAMVBidirectionalStream: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvbidirectionalstream_;
+        delete _impl_.content_.a_mvbidirectionalstream_;
       }
       break;
     }
@@ -1153,19 +1153,19 @@ const char* BidirectionalStreamResponse::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.BidirectionalStream mVBidirectionalStream = 2;
+      // .protobuf.mozilla.dom.BidirectionalStream a_mVBidirectionalStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvbidirectionalstream(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvbidirectionalstream(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1200,15 +1200,15 @@ uint8_t* BidirectionalStreamResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVBidirectionalStream: {
+    case kAMVBidirectionalStream: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvbidirectionalstream(this),
-          _Internal::mvbidirectionalstream(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvbidirectionalstream(this),
+          _Internal::a_mvbidirectionalstream(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1230,18 +1230,18 @@ size_t BidirectionalStreamResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.BidirectionalStream mVBidirectionalStream = 2;
-    case kMVBidirectionalStream: {
+    // .protobuf.mozilla.dom.BidirectionalStream a_mVBidirectionalStream = 2;
+    case kAMVBidirectionalStream: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvbidirectionalstream_);
+          *_impl_.content_.a_mvbidirectionalstream_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1270,13 +1270,13 @@ void BidirectionalStreamResponse::MergeFrom(const BidirectionalStreamResponse& f
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVBidirectionalStream: {
-      _this->_internal_mutable_mvbidirectionalstream()->::protobuf::mozilla::dom::BidirectionalStream::MergeFrom(
-          from._internal_mvbidirectionalstream());
+    case kAMVBidirectionalStream: {
+      _this->_internal_mutable_a_mvbidirectionalstream()->::protobuf::mozilla::dom::BidirectionalStream::MergeFrom(
+          from._internal_a_mvbidirectionalstream());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1295,12 +1295,12 @@ void BidirectionalStreamResponse::CopyFrom(const BidirectionalStreamResponse& fr
 
 bool BidirectionalStreamResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVBidirectionalStream: {
-      if (_internal_has_mvbidirectionalstream()) {
-        if (!_impl_.content_.mvbidirectionalstream_->IsInitialized()) return false;
+    case kAMVBidirectionalStream: {
+      if (_internal_has_a_mvbidirectionalstream()) {
+        if (!_impl_.content_.a_mvbidirectionalstream_->IsInitialized()) return false;
       }
       break;
     }
@@ -1328,7 +1328,7 @@ std::string BidirectionalStreamResponse::GetTypeName() const {
 class ResetError::_Internal {
  public:
   using HasBits = decltype(std::declval<ResetError>()._impl_._has_bits_);
-  static void set_has_error(HasBits* has_bits) {
+  static void set_has_a_error(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1348,15 +1348,15 @@ ResetError::ResetError(const ResetError& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.error_){}};
+    , decltype(_impl_.a_error_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.error_.InitDefault();
+  _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.error_.Set("", GetArenaForAllocation());
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_error()) {
-    _this->_impl_.error_.Set(from._internal_error(), 
+  if (from._internal_has_a_error()) {
+    _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.ResetError)
@@ -1369,11 +1369,11 @@ inline void ResetError::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.error_){}
+    , decltype(_impl_.a_error_){}
   };
-  _impl_.error_.InitDefault();
+  _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.error_.Set("", GetArenaForAllocation());
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1388,7 +1388,7 @@ ResetError::~ResetError() {
 
 inline void ResetError::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.error_.Destroy();
+  _impl_.a_error_.Destroy();
 }
 
 void ResetError::SetCachedSize(int size) const {
@@ -1403,7 +1403,7 @@ void ResetError::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.error_.ClearNonDefaultToEmpty();
+    _impl_.a_error_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1416,10 +1416,10 @@ const char* ResetError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes error = 1;
+      // required bytes a_error = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_error();
+          auto str = _internal_mutable_a_error();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1456,10 +1456,10 @@ uint8_t* ResetError::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes error = 1;
+  // required bytes a_error = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_error(), target);
+        1, this->_internal_a_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1474,11 +1474,11 @@ size_t ResetError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ResetError)
   size_t total_size = 0;
 
-  // required bytes error = 1;
-  if (_internal_has_error()) {
+  // required bytes a_error = 1;
+  if (_internal_has_a_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_error());
+        this->_internal_a_error());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1505,8 +1505,8 @@ void ResetError::MergeFrom(const ResetError& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_error()) {
-    _this->_internal_set_error(from._internal_error());
+  if (from._internal_has_a_error()) {
+    _this->_internal_set_a_error(from._internal_a_error());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1530,8 +1530,8 @@ void ResetError::InternalSwap(ResetError* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.error_, lhs_arena,
-      &other->_impl_.error_, rhs_arena
+      &_impl_.a_error_, lhs_arena,
+      &other->_impl_.a_error_, rhs_arena
   );
 }
 
@@ -1545,7 +1545,7 @@ std::string ResetError::GetTypeName() const {
 class StopSendingError::_Internal {
  public:
   using HasBits = decltype(std::declval<StopSendingError>()._impl_._has_bits_);
-  static void set_has_error(HasBits* has_bits) {
+  static void set_has_a_error(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1565,15 +1565,15 @@ StopSendingError::StopSendingError(const StopSendingError& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.error_){}};
+    , decltype(_impl_.a_error_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.error_.InitDefault();
+  _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.error_.Set("", GetArenaForAllocation());
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_error()) {
-    _this->_impl_.error_.Set(from._internal_error(), 
+  if (from._internal_has_a_error()) {
+    _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.StopSendingError)
@@ -1586,11 +1586,11 @@ inline void StopSendingError::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.error_){}
+    , decltype(_impl_.a_error_){}
   };
-  _impl_.error_.InitDefault();
+  _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.error_.Set("", GetArenaForAllocation());
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1605,7 +1605,7 @@ StopSendingError::~StopSendingError() {
 
 inline void StopSendingError::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.error_.Destroy();
+  _impl_.a_error_.Destroy();
 }
 
 void StopSendingError::SetCachedSize(int size) const {
@@ -1620,7 +1620,7 @@ void StopSendingError::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.error_.ClearNonDefaultToEmpty();
+    _impl_.a_error_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1633,10 +1633,10 @@ const char* StopSendingError::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes error = 1;
+      // required bytes a_error = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_error();
+          auto str = _internal_mutable_a_error();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1673,10 +1673,10 @@ uint8_t* StopSendingError::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes error = 1;
+  // required bytes a_error = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_error(), target);
+        1, this->_internal_a_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1691,11 +1691,11 @@ size_t StopSendingError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.StopSendingError)
   size_t total_size = 0;
 
-  // required bytes error = 1;
-  if (_internal_has_error()) {
+  // required bytes a_error = 1;
+  if (_internal_has_a_error()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_error());
+        this->_internal_a_error());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1722,8 +1722,8 @@ void StopSendingError::MergeFrom(const StopSendingError& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_error()) {
-    _this->_internal_set_error(from._internal_error());
+  if (from._internal_has_a_error()) {
+    _this->_internal_set_a_error(from._internal_a_error());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1747,8 +1747,8 @@ void StopSendingError::InternalSwap(StopSendingError* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.error_, lhs_arena,
-      &other->_impl_.error_, rhs_arena
+      &_impl_.a_error_, lhs_arena,
+      &other->_impl_.a_error_, rhs_arena
   );
 }
 
@@ -1761,47 +1761,47 @@ std::string StopSendingError::GetTypeName() const {
 
 class StreamResetOrStopSendingError::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::ResetError& mvreseterror(const StreamResetOrStopSendingError* msg);
-  static const ::protobuf::mozilla::dom::StopSendingError& mvstopsendingerror(const StreamResetOrStopSendingError* msg);
+  static const ::protobuf::mozilla::dom::ResetError& a_mvreseterror(const StreamResetOrStopSendingError* msg);
+  static const ::protobuf::mozilla::dom::StopSendingError& a_mvstopsendingerror(const StreamResetOrStopSendingError* msg);
 };
 
 const ::protobuf::mozilla::dom::ResetError&
-StreamResetOrStopSendingError::_Internal::mvreseterror(const StreamResetOrStopSendingError* msg) {
-  return *msg->_impl_.content_.mvreseterror_;
+StreamResetOrStopSendingError::_Internal::a_mvreseterror(const StreamResetOrStopSendingError* msg) {
+  return *msg->_impl_.content_.a_mvreseterror_;
 }
 const ::protobuf::mozilla::dom::StopSendingError&
-StreamResetOrStopSendingError::_Internal::mvstopsendingerror(const StreamResetOrStopSendingError* msg) {
-  return *msg->_impl_.content_.mvstopsendingerror_;
+StreamResetOrStopSendingError::_Internal::a_mvstopsendingerror(const StreamResetOrStopSendingError* msg) {
+  return *msg->_impl_.content_.a_mvstopsendingerror_;
 }
-void StreamResetOrStopSendingError::set_allocated_mvreseterror(::protobuf::mozilla::dom::ResetError* mvreseterror) {
+void StreamResetOrStopSendingError::set_allocated_a_mvreseterror(::protobuf::mozilla::dom::ResetError* a_mvreseterror) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvreseterror) {
+  if (a_mvreseterror) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvreseterror);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvreseterror);
     if (message_arena != submessage_arena) {
-      mvreseterror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvreseterror, submessage_arena);
+      a_mvreseterror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvreseterror, submessage_arena);
     }
-    set_has_mvreseterror();
-    _impl_.content_.mvreseterror_ = mvreseterror;
+    set_has_a_mvreseterror();
+    _impl_.content_.a_mvreseterror_ = a_mvreseterror;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.StreamResetOrStopSendingError.mVResetError)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.StreamResetOrStopSendingError.a_mVResetError)
 }
-void StreamResetOrStopSendingError::set_allocated_mvstopsendingerror(::protobuf::mozilla::dom::StopSendingError* mvstopsendingerror) {
+void StreamResetOrStopSendingError::set_allocated_a_mvstopsendingerror(::protobuf::mozilla::dom::StopSendingError* a_mvstopsendingerror) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvstopsendingerror) {
+  if (a_mvstopsendingerror) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvstopsendingerror);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvstopsendingerror);
     if (message_arena != submessage_arena) {
-      mvstopsendingerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvstopsendingerror, submessage_arena);
+      a_mvstopsendingerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvstopsendingerror, submessage_arena);
     }
-    set_has_mvstopsendingerror();
-    _impl_.content_.mvstopsendingerror_ = mvstopsendingerror;
+    set_has_a_mvstopsendingerror();
+    _impl_.content_.a_mvstopsendingerror_ = a_mvstopsendingerror;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.StreamResetOrStopSendingError.mVStopSendingError)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.StreamResetOrStopSendingError.a_mVStopSendingError)
 }
 StreamResetOrStopSendingError::StreamResetOrStopSendingError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1820,14 +1820,14 @@ StreamResetOrStopSendingError::StreamResetOrStopSendingError(const StreamResetOr
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVResetError: {
-      _this->_internal_mutable_mvreseterror()->::protobuf::mozilla::dom::ResetError::MergeFrom(
-          from._internal_mvreseterror());
+    case kAMVResetError: {
+      _this->_internal_mutable_a_mvreseterror()->::protobuf::mozilla::dom::ResetError::MergeFrom(
+          from._internal_a_mvreseterror());
       break;
     }
-    case kMVStopSendingError: {
-      _this->_internal_mutable_mvstopsendingerror()->::protobuf::mozilla::dom::StopSendingError::MergeFrom(
-          from._internal_mvstopsendingerror());
+    case kAMVStopSendingError: {
+      _this->_internal_mutable_a_mvstopsendingerror()->::protobuf::mozilla::dom::StopSendingError::MergeFrom(
+          from._internal_a_mvstopsendingerror());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1872,15 +1872,15 @@ void StreamResetOrStopSendingError::SetCachedSize(int size) const {
 void StreamResetOrStopSendingError::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.StreamResetOrStopSendingError)
   switch (content_case()) {
-    case kMVResetError: {
+    case kAMVResetError: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvreseterror_;
+        delete _impl_.content_.a_mvreseterror_;
       }
       break;
     }
-    case kMVStopSendingError: {
+    case kAMVStopSendingError: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvstopsendingerror_;
+        delete _impl_.content_.a_mvstopsendingerror_;
       }
       break;
     }
@@ -1908,18 +1908,18 @@ const char* StreamResetOrStopSendingError::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.ResetError mVResetError = 1;
+      // .protobuf.mozilla.dom.ResetError a_mVResetError = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvreseterror(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvreseterror(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.StopSendingError mVStopSendingError = 2;
+      // .protobuf.mozilla.dom.StopSendingError a_mVStopSendingError = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvstopsendingerror(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvstopsendingerror(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1954,16 +1954,16 @@ uint8_t* StreamResetOrStopSendingError::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVResetError: {
+    case kAMVResetError: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvreseterror(this),
-          _Internal::mvreseterror(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvreseterror(this),
+          _Internal::a_mvreseterror(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVStopSendingError: {
+    case kAMVStopSendingError: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvstopsendingerror(this),
-          _Internal::mvstopsendingerror(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvstopsendingerror(this),
+          _Internal::a_mvstopsendingerror(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1985,18 +1985,18 @@ size_t StreamResetOrStopSendingError::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.dom.ResetError mVResetError = 1;
-    case kMVResetError: {
+    // .protobuf.mozilla.dom.ResetError a_mVResetError = 1;
+    case kAMVResetError: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvreseterror_);
+          *_impl_.content_.a_mvreseterror_);
       break;
     }
-    // .protobuf.mozilla.dom.StopSendingError mVStopSendingError = 2;
-    case kMVStopSendingError: {
+    // .protobuf.mozilla.dom.StopSendingError a_mVStopSendingError = 2;
+    case kAMVStopSendingError: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvstopsendingerror_);
+          *_impl_.content_.a_mvstopsendingerror_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -2025,14 +2025,14 @@ void StreamResetOrStopSendingError::MergeFrom(const StreamResetOrStopSendingErro
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVResetError: {
-      _this->_internal_mutable_mvreseterror()->::protobuf::mozilla::dom::ResetError::MergeFrom(
-          from._internal_mvreseterror());
+    case kAMVResetError: {
+      _this->_internal_mutable_a_mvreseterror()->::protobuf::mozilla::dom::ResetError::MergeFrom(
+          from._internal_a_mvreseterror());
       break;
     }
-    case kMVStopSendingError: {
-      _this->_internal_mutable_mvstopsendingerror()->::protobuf::mozilla::dom::StopSendingError::MergeFrom(
-          from._internal_mvstopsendingerror());
+    case kAMVStopSendingError: {
+      _this->_internal_mutable_a_mvstopsendingerror()->::protobuf::mozilla::dom::StopSendingError::MergeFrom(
+          from._internal_a_mvstopsendingerror());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -2051,15 +2051,15 @@ void StreamResetOrStopSendingError::CopyFrom(const StreamResetOrStopSendingError
 
 bool StreamResetOrStopSendingError::IsInitialized() const {
   switch (content_case()) {
-    case kMVResetError: {
-      if (_internal_has_mvreseterror()) {
-        if (!_impl_.content_.mvreseterror_->IsInitialized()) return false;
+    case kAMVResetError: {
+      if (_internal_has_a_mvreseterror()) {
+        if (!_impl_.content_.a_mvreseterror_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVStopSendingError: {
-      if (_internal_has_mvstopsendingerror()) {
-        if (!_impl_.content_.mvstopsendingerror_->IsInitialized()) return false;
+    case kAMVStopSendingError: {
+      if (_internal_has_a_mvstopsendingerror()) {
+        if (!_impl_.content_.a_mvstopsendingerror_->IsInitialized()) return false;
       }
       break;
     }

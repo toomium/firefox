@@ -25,10 +25,10 @@ PROTOBUF_CONSTEXPR Msg_LaunchGMP::Msg_LaunchGMP(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.tags_)*/{}
-  , /*decltype(_impl_.alreadybridgedto_)*/{}
-  , /*decltype(_impl_.api_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.nodeidvariant_)*/nullptr} {}
+  , /*decltype(_impl_.a_tags_)*/{}
+  , /*decltype(_impl_.a_alreadybridgedto_)*/{}
+  , /*decltype(_impl_.a_api_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_nodeidvariant_)*/nullptr} {}
 struct Msg_LaunchGMPDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_LaunchGMPDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -42,7 +42,7 @@ PROTOBUF_CONSTEXPR Reply_LaunchGMP::Reply_LaunchGMP(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aresult_)*/nullptr} {}
+  , /*decltype(_impl_.a_aresult_)*/nullptr} {}
 struct Reply_LaunchGMPDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_LaunchGMPDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -56,9 +56,9 @@ PROTOBUF_CONSTEXPR Msg_GetGMPNodeId::Msg_GetGMPNodeId(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.origin_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.toplevelorigin_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.gmpname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_origin_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_toplevelorigin_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_gmpname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_GetGMPNodeIdDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetGMPNodeIdDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -72,7 +72,7 @@ PROTOBUF_CONSTEXPR Reply_GetGMPNodeId::Reply_GetGMPNodeId(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_GetGMPNodeIdDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetGMPNodeIdDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -108,11 +108,11 @@ namespace PGMPService {
 class Msg_LaunchGMP::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_LaunchGMP>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::gmp::NodeIdVariant& nodeidvariant(const Msg_LaunchGMP* msg);
-  static void set_has_nodeidvariant(HasBits* has_bits) {
+  static const ::protobuf::mozilla::gmp::NodeIdVariant& a_nodeidvariant(const Msg_LaunchGMP* msg);
+  static void set_has_a_nodeidvariant(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_api(HasBits* has_bits) {
+  static void set_has_a_api(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -121,11 +121,11 @@ class Msg_LaunchGMP::_Internal {
 };
 
 const ::protobuf::mozilla::gmp::NodeIdVariant&
-Msg_LaunchGMP::_Internal::nodeidvariant(const Msg_LaunchGMP* msg) {
-  return *msg->_impl_.nodeidvariant_;
+Msg_LaunchGMP::_Internal::a_nodeidvariant(const Msg_LaunchGMP* msg) {
+  return *msg->_impl_.a_nodeidvariant_;
 }
-void Msg_LaunchGMP::clear_nodeidvariant() {
-  if (_impl_.nodeidvariant_ != nullptr) _impl_.nodeidvariant_->Clear();
+void Msg_LaunchGMP::clear_a_nodeidvariant() {
+  if (_impl_.a_nodeidvariant_ != nullptr) _impl_.a_nodeidvariant_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_LaunchGMP::Msg_LaunchGMP(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -140,22 +140,22 @@ Msg_LaunchGMP::Msg_LaunchGMP(const Msg_LaunchGMP& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.tags_){from._impl_.tags_}
-    , decltype(_impl_.alreadybridgedto_){from._impl_.alreadybridgedto_}
-    , decltype(_impl_.api_){}
-    , decltype(_impl_.nodeidvariant_){nullptr}};
+    , decltype(_impl_.a_tags_){from._impl_.a_tags_}
+    , decltype(_impl_.a_alreadybridgedto_){from._impl_.a_alreadybridgedto_}
+    , decltype(_impl_.a_api_){}
+    , decltype(_impl_.a_nodeidvariant_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.api_.InitDefault();
+  _impl_.a_api_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.api_.Set("", GetArenaForAllocation());
+    _impl_.a_api_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_api()) {
-    _this->_impl_.api_.Set(from._internal_api(), 
+  if (from._internal_has_a_api()) {
+    _this->_impl_.a_api_.Set(from._internal_a_api(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_nodeidvariant()) {
-    _this->_impl_.nodeidvariant_ = new ::protobuf::mozilla::gmp::NodeIdVariant(*from._impl_.nodeidvariant_);
+  if (from._internal_has_a_nodeidvariant()) {
+    _this->_impl_.a_nodeidvariant_ = new ::protobuf::mozilla::gmp::NodeIdVariant(*from._impl_.a_nodeidvariant_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP)
 }
@@ -167,14 +167,14 @@ inline void Msg_LaunchGMP::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.tags_){arena}
-    , decltype(_impl_.alreadybridgedto_){arena}
-    , decltype(_impl_.api_){}
-    , decltype(_impl_.nodeidvariant_){nullptr}
+    , decltype(_impl_.a_tags_){arena}
+    , decltype(_impl_.a_alreadybridgedto_){arena}
+    , decltype(_impl_.a_api_){}
+    , decltype(_impl_.a_nodeidvariant_){nullptr}
   };
-  _impl_.api_.InitDefault();
+  _impl_.a_api_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.api_.Set("", GetArenaForAllocation());
+    _impl_.a_api_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -189,10 +189,10 @@ Msg_LaunchGMP::~Msg_LaunchGMP() {
 
 inline void Msg_LaunchGMP::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.tags_.~RepeatedPtrField();
-  _impl_.alreadybridgedto_.~RepeatedPtrField();
-  _impl_.api_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.nodeidvariant_;
+  _impl_.a_tags_.~RepeatedPtrField();
+  _impl_.a_alreadybridgedto_.~RepeatedPtrField();
+  _impl_.a_api_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_nodeidvariant_;
 }
 
 void Msg_LaunchGMP::SetCachedSize(int size) const {
@@ -205,16 +205,16 @@ void Msg_LaunchGMP::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.tags_.Clear();
-  _impl_.alreadybridgedto_.Clear();
+  _impl_.a_tags_.Clear();
+  _impl_.a_alreadybridgedto_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.api_.ClearNonDefaultToEmpty();
+      _impl_.a_api_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.nodeidvariant_ != nullptr);
-      _impl_.nodeidvariant_->Clear();
+      GOOGLE_DCHECK(_impl_.a_nodeidvariant_ != nullptr);
+      _impl_.a_nodeidvariant_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -228,30 +228,30 @@ const char* Msg_LaunchGMP::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
+      // required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_nodeidvariant(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_nodeidvariant(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes api = 2;
+      // required bytes a_api = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_api();
+          auto str = _internal_mutable_a_api();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes tags = 3;
+      // repeated bytes a_tags = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_tags();
+            auto str = _internal_add_a_tags();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -259,13 +259,13 @@ const char* Msg_LaunchGMP::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes alreadyBridgedTo = 4;
+      // repeated bytes a_alreadyBridgedTo = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_alreadybridgedto();
+            auto str = _internal_add_a_alreadybridgedto();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -304,28 +304,28 @@ uint8_t* Msg_LaunchGMP::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
+  // required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::nodeidvariant(this),
-        _Internal::nodeidvariant(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_nodeidvariant(this),
+        _Internal::a_nodeidvariant(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes api = 2;
+  // required bytes a_api = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_api(), target);
+        2, this->_internal_a_api(), target);
   }
 
-  // repeated bytes tags = 3;
-  for (int i = 0, n = this->_internal_tags_size(); i < n; i++) {
-    const auto& s = this->_internal_tags(i);
+  // repeated bytes a_tags = 3;
+  for (int i = 0, n = this->_internal_a_tags_size(); i < n; i++) {
+    const auto& s = this->_internal_a_tags(i);
     target = stream->WriteBytes(3, s, target);
   }
 
-  // repeated bytes alreadyBridgedTo = 4;
-  for (int i = 0, n = this->_internal_alreadybridgedto_size(); i < n; i++) {
-    const auto& s = this->_internal_alreadybridgedto(i);
+  // repeated bytes a_alreadyBridgedTo = 4;
+  for (int i = 0, n = this->_internal_a_alreadybridgedto_size(); i < n; i++) {
+    const auto& s = this->_internal_a_alreadybridgedto(i);
     target = stream->WriteBytes(4, s, target);
   }
 
@@ -341,18 +341,18 @@ size_t Msg_LaunchGMP::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP)
   size_t total_size = 0;
 
-  if (_internal_has_api()) {
-    // required bytes api = 2;
+  if (_internal_has_a_api()) {
+    // required bytes a_api = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_api());
+        this->_internal_a_api());
   }
 
-  if (_internal_has_nodeidvariant()) {
-    // required .protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
+  if (_internal_has_a_nodeidvariant()) {
+    // required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.nodeidvariant_);
+        *_impl_.a_nodeidvariant_);
   }
 
   return total_size;
@@ -362,15 +362,15 @@ size_t Msg_LaunchGMP::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes api = 2;
+    // required bytes a_api = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_api());
+        this->_internal_a_api());
 
-    // required .protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
+    // required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.nodeidvariant_);
+        *_impl_.a_nodeidvariant_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -379,20 +379,20 @@ size_t Msg_LaunchGMP::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes tags = 3;
+  // repeated bytes a_tags = 3;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.tags_.size());
-  for (int i = 0, n = _impl_.tags_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_tags_.size());
+  for (int i = 0, n = _impl_.a_tags_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.tags_.Get(i));
+      _impl_.a_tags_.Get(i));
   }
 
-  // repeated bytes alreadyBridgedTo = 4;
+  // repeated bytes a_alreadyBridgedTo = 4;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.alreadybridgedto_.size());
-  for (int i = 0, n = _impl_.alreadybridgedto_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_alreadybridgedto_.size());
+  for (int i = 0, n = _impl_.a_alreadybridgedto_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.alreadybridgedto_.Get(i));
+      _impl_.a_alreadybridgedto_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -416,16 +416,16 @@ void Msg_LaunchGMP::MergeFrom(const Msg_LaunchGMP& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.tags_.MergeFrom(from._impl_.tags_);
-  _this->_impl_.alreadybridgedto_.MergeFrom(from._impl_.alreadybridgedto_);
+  _this->_impl_.a_tags_.MergeFrom(from._impl_.a_tags_);
+  _this->_impl_.a_alreadybridgedto_.MergeFrom(from._impl_.a_alreadybridgedto_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_api(from._internal_api());
+      _this->_internal_set_a_api(from._internal_a_api());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_nodeidvariant()->::protobuf::mozilla::gmp::NodeIdVariant::MergeFrom(
-          from._internal_nodeidvariant());
+      _this->_internal_mutable_a_nodeidvariant()->::protobuf::mozilla::gmp::NodeIdVariant::MergeFrom(
+          from._internal_a_nodeidvariant());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -440,8 +440,8 @@ void Msg_LaunchGMP::CopyFrom(const Msg_LaunchGMP& from) {
 
 bool Msg_LaunchGMP::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_nodeidvariant()) {
-    if (!_impl_.nodeidvariant_->IsInitialized()) return false;
+  if (_internal_has_a_nodeidvariant()) {
+    if (!_impl_.a_nodeidvariant_->IsInitialized()) return false;
   }
   return true;
 }
@@ -452,13 +452,13 @@ void Msg_LaunchGMP::InternalSwap(Msg_LaunchGMP* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.tags_.InternalSwap(&other->_impl_.tags_);
-  _impl_.alreadybridgedto_.InternalSwap(&other->_impl_.alreadybridgedto_);
+  _impl_.a_tags_.InternalSwap(&other->_impl_.a_tags_);
+  _impl_.a_alreadybridgedto_.InternalSwap(&other->_impl_.a_alreadybridgedto_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.api_, lhs_arena,
-      &other->_impl_.api_, rhs_arena
+      &_impl_.a_api_, lhs_arena,
+      &other->_impl_.a_api_, rhs_arena
   );
-  swap(_impl_.nodeidvariant_, other->_impl_.nodeidvariant_);
+  swap(_impl_.a_nodeidvariant_, other->_impl_.a_nodeidvariant_);
 }
 
 std::string Msg_LaunchGMP::GetTypeName() const {
@@ -471,8 +471,8 @@ std::string Msg_LaunchGMP::GetTypeName() const {
 class Reply_LaunchGMP::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_LaunchGMP>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::gmp::GMPLaunchResult& aresult(const Reply_LaunchGMP* msg);
-  static void set_has_aresult(HasBits* has_bits) {
+  static const ::protobuf::mozilla::gmp::GMPLaunchResult& a_aresult(const Reply_LaunchGMP* msg);
+  static void set_has_a_aresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -481,11 +481,11 @@ class Reply_LaunchGMP::_Internal {
 };
 
 const ::protobuf::mozilla::gmp::GMPLaunchResult&
-Reply_LaunchGMP::_Internal::aresult(const Reply_LaunchGMP* msg) {
-  return *msg->_impl_.aresult_;
+Reply_LaunchGMP::_Internal::a_aresult(const Reply_LaunchGMP* msg) {
+  return *msg->_impl_.a_aresult_;
 }
-void Reply_LaunchGMP::clear_aresult() {
-  if (_impl_.aresult_ != nullptr) _impl_.aresult_->Clear();
+void Reply_LaunchGMP::clear_a_aresult() {
+  if (_impl_.a_aresult_ != nullptr) _impl_.a_aresult_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_LaunchGMP::Reply_LaunchGMP(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -500,11 +500,11 @@ Reply_LaunchGMP::Reply_LaunchGMP(const Reply_LaunchGMP& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aresult_){nullptr}};
+    , decltype(_impl_.a_aresult_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_aresult()) {
-    _this->_impl_.aresult_ = new ::protobuf::mozilla::gmp::GMPLaunchResult(*from._impl_.aresult_);
+  if (from._internal_has_a_aresult()) {
+    _this->_impl_.a_aresult_ = new ::protobuf::mozilla::gmp::GMPLaunchResult(*from._impl_.a_aresult_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP)
 }
@@ -516,7 +516,7 @@ inline void Reply_LaunchGMP::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aresult_){nullptr}
+    , decltype(_impl_.a_aresult_){nullptr}
   };
 }
 
@@ -531,7 +531,7 @@ Reply_LaunchGMP::~Reply_LaunchGMP() {
 
 inline void Reply_LaunchGMP::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.aresult_;
+  if (this != internal_default_instance()) delete _impl_.a_aresult_;
 }
 
 void Reply_LaunchGMP::SetCachedSize(int size) const {
@@ -546,8 +546,8 @@ void Reply_LaunchGMP::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.aresult_ != nullptr);
-    _impl_.aresult_->Clear();
+    GOOGLE_DCHECK(_impl_.a_aresult_ != nullptr);
+    _impl_.a_aresult_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -560,10 +560,10 @@ const char* Reply_LaunchGMP::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.gmp.GMPLaunchResult aResult = 1;
+      // required .protobuf.mozilla.gmp.GMPLaunchResult a_aResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aresult(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aresult(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -599,11 +599,11 @@ uint8_t* Reply_LaunchGMP::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.gmp.GMPLaunchResult aResult = 1;
+  // required .protobuf.mozilla.gmp.GMPLaunchResult a_aResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::aresult(this),
-        _Internal::aresult(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_aresult(this),
+        _Internal::a_aresult(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -618,11 +618,11 @@ size_t Reply_LaunchGMP::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.gmp.GMPLaunchResult aResult = 1;
-  if (_internal_has_aresult()) {
+  // required .protobuf.mozilla.gmp.GMPLaunchResult a_aResult = 1;
+  if (_internal_has_a_aresult()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aresult_);
+        *_impl_.a_aresult_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -649,9 +649,9 @@ void Reply_LaunchGMP::MergeFrom(const Reply_LaunchGMP& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aresult()) {
-    _this->_internal_mutable_aresult()->::protobuf::mozilla::gmp::GMPLaunchResult::MergeFrom(
-        from._internal_aresult());
+  if (from._internal_has_a_aresult()) {
+    _this->_internal_mutable_a_aresult()->::protobuf::mozilla::gmp::GMPLaunchResult::MergeFrom(
+        from._internal_a_aresult());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -665,8 +665,8 @@ void Reply_LaunchGMP::CopyFrom(const Reply_LaunchGMP& from) {
 
 bool Reply_LaunchGMP::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_aresult()) {
-    if (!_impl_.aresult_->IsInitialized()) return false;
+  if (_internal_has_a_aresult()) {
+    if (!_impl_.a_aresult_->IsInitialized()) return false;
   }
   return true;
 }
@@ -675,7 +675,7 @@ void Reply_LaunchGMP::InternalSwap(Reply_LaunchGMP* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aresult_, other->_impl_.aresult_);
+  swap(_impl_.a_aresult_, other->_impl_.a_aresult_);
 }
 
 std::string Reply_LaunchGMP::GetTypeName() const {
@@ -688,13 +688,13 @@ std::string Reply_LaunchGMP::GetTypeName() const {
 class Msg_GetGMPNodeId::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_GetGMPNodeId>()._impl_._has_bits_);
-  static void set_has_origin(HasBits* has_bits) {
+  static void set_has_a_origin(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_toplevelorigin(HasBits* has_bits) {
+  static void set_has_a_toplevelorigin(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_gmpname(HasBits* has_bits) {
+  static void set_has_a_gmpname(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -714,33 +714,33 @@ Msg_GetGMPNodeId::Msg_GetGMPNodeId(const Msg_GetGMPNodeId& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.origin_){}
-    , decltype(_impl_.toplevelorigin_){}
-    , decltype(_impl_.gmpname_){}};
+    , decltype(_impl_.a_origin_){}
+    , decltype(_impl_.a_toplevelorigin_){}
+    , decltype(_impl_.a_gmpname_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.origin_.InitDefault();
+  _impl_.a_origin_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.origin_.Set("", GetArenaForAllocation());
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_origin()) {
-    _this->_impl_.origin_.Set(from._internal_origin(), 
+  if (from._internal_has_a_origin()) {
+    _this->_impl_.a_origin_.Set(from._internal_a_origin(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.toplevelorigin_.InitDefault();
+  _impl_.a_toplevelorigin_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.toplevelorigin_.Set("", GetArenaForAllocation());
+    _impl_.a_toplevelorigin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_toplevelorigin()) {
-    _this->_impl_.toplevelorigin_.Set(from._internal_toplevelorigin(), 
+  if (from._internal_has_a_toplevelorigin()) {
+    _this->_impl_.a_toplevelorigin_.Set(from._internal_a_toplevelorigin(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.gmpname_.InitDefault();
+  _impl_.a_gmpname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gmpname_.Set("", GetArenaForAllocation());
+    _impl_.a_gmpname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_gmpname()) {
-    _this->_impl_.gmpname_.Set(from._internal_gmpname(), 
+  if (from._internal_has_a_gmpname()) {
+    _this->_impl_.a_gmpname_.Set(from._internal_a_gmpname(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId)
@@ -753,21 +753,21 @@ inline void Msg_GetGMPNodeId::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.origin_){}
-    , decltype(_impl_.toplevelorigin_){}
-    , decltype(_impl_.gmpname_){}
+    , decltype(_impl_.a_origin_){}
+    , decltype(_impl_.a_toplevelorigin_){}
+    , decltype(_impl_.a_gmpname_){}
   };
-  _impl_.origin_.InitDefault();
+  _impl_.a_origin_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.origin_.Set("", GetArenaForAllocation());
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.toplevelorigin_.InitDefault();
+  _impl_.a_toplevelorigin_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.toplevelorigin_.Set("", GetArenaForAllocation());
+    _impl_.a_toplevelorigin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.gmpname_.InitDefault();
+  _impl_.a_gmpname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.gmpname_.Set("", GetArenaForAllocation());
+    _impl_.a_gmpname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -782,9 +782,9 @@ Msg_GetGMPNodeId::~Msg_GetGMPNodeId() {
 
 inline void Msg_GetGMPNodeId::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.origin_.Destroy();
-  _impl_.toplevelorigin_.Destroy();
-  _impl_.gmpname_.Destroy();
+  _impl_.a_origin_.Destroy();
+  _impl_.a_toplevelorigin_.Destroy();
+  _impl_.a_gmpname_.Destroy();
 }
 
 void Msg_GetGMPNodeId::SetCachedSize(int size) const {
@@ -800,13 +800,13 @@ void Msg_GetGMPNodeId::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.origin_.ClearNonDefaultToEmpty();
+      _impl_.a_origin_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.toplevelorigin_.ClearNonDefaultToEmpty();
+      _impl_.a_toplevelorigin_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.gmpname_.ClearNonDefaultToEmpty();
+      _impl_.a_gmpname_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -820,28 +820,28 @@ const char* Msg_GetGMPNodeId::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes origin = 1;
+      // required bytes a_origin = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_origin();
+          auto str = _internal_mutable_a_origin();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes topLevelOrigin = 2;
+      // required bytes a_topLevelOrigin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_toplevelorigin();
+          auto str = _internal_mutable_a_toplevelorigin();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes gmpName = 3;
+      // required bytes a_gmpName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_gmpname();
+          auto str = _internal_mutable_a_gmpname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -878,22 +878,22 @@ uint8_t* Msg_GetGMPNodeId::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes origin = 1;
+  // required bytes a_origin = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_origin(), target);
+        1, this->_internal_a_origin(), target);
   }
 
-  // required bytes topLevelOrigin = 2;
+  // required bytes a_topLevelOrigin = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_toplevelorigin(), target);
+        2, this->_internal_a_toplevelorigin(), target);
   }
 
-  // required bytes gmpName = 3;
+  // required bytes a_gmpName = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_gmpname(), target);
+        3, this->_internal_a_gmpname(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -908,25 +908,25 @@ size_t Msg_GetGMPNodeId::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId)
   size_t total_size = 0;
 
-  if (_internal_has_origin()) {
-    // required bytes origin = 1;
+  if (_internal_has_a_origin()) {
+    // required bytes a_origin = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_origin());
+        this->_internal_a_origin());
   }
 
-  if (_internal_has_toplevelorigin()) {
-    // required bytes topLevelOrigin = 2;
+  if (_internal_has_a_toplevelorigin()) {
+    // required bytes a_topLevelOrigin = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_toplevelorigin());
+        this->_internal_a_toplevelorigin());
   }
 
-  if (_internal_has_gmpname()) {
-    // required bytes gmpName = 3;
+  if (_internal_has_a_gmpname()) {
+    // required bytes a_gmpName = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_gmpname());
+        this->_internal_a_gmpname());
   }
 
   return total_size;
@@ -936,20 +936,20 @@ size_t Msg_GetGMPNodeId::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes origin = 1;
+    // required bytes a_origin = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_origin());
+        this->_internal_a_origin());
 
-    // required bytes topLevelOrigin = 2;
+    // required bytes a_topLevelOrigin = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_toplevelorigin());
+        this->_internal_a_toplevelorigin());
 
-    // required bytes gmpName = 3;
+    // required bytes a_gmpName = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_gmpname());
+        this->_internal_a_gmpname());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -982,13 +982,13 @@ void Msg_GetGMPNodeId::MergeFrom(const Msg_GetGMPNodeId& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_origin(from._internal_origin());
+      _this->_internal_set_a_origin(from._internal_a_origin());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_toplevelorigin(from._internal_toplevelorigin());
+      _this->_internal_set_a_toplevelorigin(from._internal_a_toplevelorigin());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_gmpname(from._internal_gmpname());
+      _this->_internal_set_a_gmpname(from._internal_a_gmpname());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1013,16 +1013,16 @@ void Msg_GetGMPNodeId::InternalSwap(Msg_GetGMPNodeId* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.origin_, lhs_arena,
-      &other->_impl_.origin_, rhs_arena
+      &_impl_.a_origin_, lhs_arena,
+      &other->_impl_.a_origin_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.toplevelorigin_, lhs_arena,
-      &other->_impl_.toplevelorigin_, rhs_arena
+      &_impl_.a_toplevelorigin_, lhs_arena,
+      &other->_impl_.a_toplevelorigin_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.gmpname_, lhs_arena,
-      &other->_impl_.gmpname_, rhs_arena
+      &_impl_.a_gmpname_, lhs_arena,
+      &other->_impl_.a_gmpname_, rhs_arena
   );
 }
 
@@ -1036,7 +1036,7 @@ std::string Msg_GetGMPNodeId::GetTypeName() const {
 class Reply_GetGMPNodeId::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_GetGMPNodeId>()._impl_._has_bits_);
-  static void set_has_id(HasBits* has_bits) {
+  static void set_has_a_id(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1056,15 +1056,15 @@ Reply_GetGMPNodeId::Reply_GetGMPNodeId(const Reply_GetGMPNodeId& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.id_){}};
+    , decltype(_impl_.a_id_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_id()) {
-    _this->_impl_.id_.Set(from._internal_id(), 
+  if (from._internal_has_a_id()) {
+    _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId)
@@ -1077,11 +1077,11 @@ inline void Reply_GetGMPNodeId::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.id_){}
+    , decltype(_impl_.a_id_){}
   };
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1096,7 +1096,7 @@ Reply_GetGMPNodeId::~Reply_GetGMPNodeId() {
 
 inline void Reply_GetGMPNodeId::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.id_.Destroy();
+  _impl_.a_id_.Destroy();
 }
 
 void Reply_GetGMPNodeId::SetCachedSize(int size) const {
@@ -1111,7 +1111,7 @@ void Reply_GetGMPNodeId::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.id_.ClearNonDefaultToEmpty();
+    _impl_.a_id_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1124,10 +1124,10 @@ const char* Reply_GetGMPNodeId::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes id = 1;
+      // required bytes a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_id();
+          auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1164,10 +1164,10 @@ uint8_t* Reply_GetGMPNodeId::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes id = 1;
+  // required bytes a_id = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_id(), target);
+        1, this->_internal_a_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1182,11 +1182,11 @@ size_t Reply_GetGMPNodeId::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId)
   size_t total_size = 0;
 
-  // required bytes id = 1;
-  if (_internal_has_id()) {
+  // required bytes a_id = 1;
+  if (_internal_has_a_id()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_id());
+        this->_internal_a_id());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1213,8 +1213,8 @@ void Reply_GetGMPNodeId::MergeFrom(const Reply_GetGMPNodeId& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_id()) {
-    _this->_internal_set_id(from._internal_id());
+  if (from._internal_has_a_id()) {
+    _this->_internal_set_a_id(from._internal_a_id());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1238,8 +1238,8 @@ void Reply_GetGMPNodeId::InternalSwap(Reply_GetGMPNodeId* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.id_, lhs_arena,
-      &other->_impl_.id_, rhs_arena
+      &_impl_.a_id_, lhs_arena,
+      &other->_impl_.a_id_, rhs_arena
   );
 }
 

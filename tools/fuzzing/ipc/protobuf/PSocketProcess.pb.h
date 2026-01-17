@@ -441,25 +441,25 @@ class Msg_InitCrashReporter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAInitArgsFieldNumber = 1,
+    kAAInitArgsFieldNumber = 1,
   };
-  // required .protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
-  bool has_ainitargs() const;
+  // required .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+  bool has_a_ainitargs() const;
   private:
-  bool _internal_has_ainitargs() const;
+  bool _internal_has_a_ainitargs() const;
   public:
-  void clear_ainitargs();
-  const ::protobuf::CrashReporter::CrashReporterInitArgs& ainitargs() const;
-  PROTOBUF_NODISCARD ::protobuf::CrashReporter::CrashReporterInitArgs* release_ainitargs();
-  ::protobuf::CrashReporter::CrashReporterInitArgs* mutable_ainitargs();
-  void set_allocated_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs);
+  void clear_a_ainitargs();
+  const ::protobuf::CrashReporter::CrashReporterInitArgs& a_ainitargs() const;
+  PROTOBUF_NODISCARD ::protobuf::CrashReporter::CrashReporterInitArgs* release_a_ainitargs();
+  ::protobuf::CrashReporter::CrashReporterInitArgs* mutable_a_ainitargs();
+  void set_allocated_a_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs);
   private:
-  const ::protobuf::CrashReporter::CrashReporterInitArgs& _internal_ainitargs() const;
-  ::protobuf::CrashReporter::CrashReporterInitArgs* _internal_mutable_ainitargs();
+  const ::protobuf::CrashReporter::CrashReporterInitArgs& _internal_a_ainitargs() const;
+  ::protobuf::CrashReporter::CrashReporterInitArgs* _internal_mutable_a_ainitargs();
   public:
-  void unsafe_arena_set_allocated_ainitargs(
-      ::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs);
-  ::protobuf::CrashReporter::CrashReporterInitArgs* unsafe_arena_release_ainitargs();
+  void unsafe_arena_set_allocated_a_ainitargs(
+      ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs);
+  ::protobuf::CrashReporter::CrashReporterInitArgs* unsafe_arena_release_a_ainitargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter)
  private:
@@ -471,7 +471,7 @@ class Msg_InitCrashReporter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs_;
+    ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -588,25 +588,25 @@ class Msg_AddMemoryReport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAReportFieldNumber = 1,
+    kAAReportFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.MemoryReport aReport = 1;
-  bool has_areport() const;
+  // required .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+  bool has_a_areport() const;
   private:
-  bool _internal_has_areport() const;
+  bool _internal_has_a_areport() const;
   public:
-  void clear_areport();
-  const ::protobuf::mozilla::dom::MemoryReport& areport() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MemoryReport* release_areport();
-  ::protobuf::mozilla::dom::MemoryReport* mutable_areport();
-  void set_allocated_areport(::protobuf::mozilla::dom::MemoryReport* areport);
+  void clear_a_areport();
+  const ::protobuf::mozilla::dom::MemoryReport& a_areport() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::MemoryReport* release_a_areport();
+  ::protobuf::mozilla::dom::MemoryReport* mutable_a_areport();
+  void set_allocated_a_areport(::protobuf::mozilla::dom::MemoryReport* a_areport);
   private:
-  const ::protobuf::mozilla::dom::MemoryReport& _internal_areport() const;
-  ::protobuf::mozilla::dom::MemoryReport* _internal_mutable_areport();
+  const ::protobuf::mozilla::dom::MemoryReport& _internal_a_areport() const;
+  ::protobuf::mozilla::dom::MemoryReport* _internal_mutable_a_areport();
   public:
-  void unsafe_arena_set_allocated_areport(
-      ::protobuf::mozilla::dom::MemoryReport* areport);
-  ::protobuf::mozilla::dom::MemoryReport* unsafe_arena_release_areport();
+  void unsafe_arena_set_allocated_a_areport(
+      ::protobuf::mozilla::dom::MemoryReport* a_areport);
+  ::protobuf::mozilla::dom::MemoryReport* unsafe_arena_release_a_areport();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport)
  private:
@@ -618,7 +618,7 @@ class Msg_AddMemoryReport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::MemoryReport* areport_;
+    ::protobuf::mozilla::dom::MemoryReport* a_areport_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -735,30 +735,30 @@ class Msg_AccumulateChildHistograms final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccumulationsFieldNumber = 1,
+    kAAccumulationsFieldNumber = 1,
   };
-  // repeated bytes accumulations = 1;
-  int accumulations_size() const;
+  // repeated bytes a_accumulations = 1;
+  int a_accumulations_size() const;
   private:
-  int _internal_accumulations_size() const;
+  int _internal_a_accumulations_size() const;
   public:
-  void clear_accumulations();
-  const std::string& accumulations(int index) const;
-  std::string* mutable_accumulations(int index);
-  void set_accumulations(int index, const std::string& value);
-  void set_accumulations(int index, std::string&& value);
-  void set_accumulations(int index, const char* value);
-  void set_accumulations(int index, const void* value, size_t size);
-  std::string* add_accumulations();
-  void add_accumulations(const std::string& value);
-  void add_accumulations(std::string&& value);
-  void add_accumulations(const char* value);
-  void add_accumulations(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& accumulations() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_accumulations();
+  void clear_a_accumulations();
+  const std::string& a_accumulations(int index) const;
+  std::string* mutable_a_accumulations(int index);
+  void set_a_accumulations(int index, const std::string& value);
+  void set_a_accumulations(int index, std::string&& value);
+  void set_a_accumulations(int index, const char* value);
+  void set_a_accumulations(int index, const void* value, size_t size);
+  std::string* add_a_accumulations();
+  void add_a_accumulations(const std::string& value);
+  void add_a_accumulations(std::string&& value);
+  void add_a_accumulations(const char* value);
+  void add_a_accumulations(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_accumulations() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_accumulations();
   private:
-  const std::string& _internal_accumulations(int index) const;
-  std::string* _internal_add_accumulations();
+  const std::string& _internal_a_accumulations(int index) const;
+  std::string* _internal_add_a_accumulations();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms)
@@ -769,7 +769,7 @@ class Msg_AccumulateChildHistograms final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> accumulations_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_accumulations_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -887,30 +887,30 @@ class Msg_AccumulateChildKeyedHistograms final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccumulationsFieldNumber = 1,
+    kAAccumulationsFieldNumber = 1,
   };
-  // repeated bytes accumulations = 1;
-  int accumulations_size() const;
+  // repeated bytes a_accumulations = 1;
+  int a_accumulations_size() const;
   private:
-  int _internal_accumulations_size() const;
+  int _internal_a_accumulations_size() const;
   public:
-  void clear_accumulations();
-  const std::string& accumulations(int index) const;
-  std::string* mutable_accumulations(int index);
-  void set_accumulations(int index, const std::string& value);
-  void set_accumulations(int index, std::string&& value);
-  void set_accumulations(int index, const char* value);
-  void set_accumulations(int index, const void* value, size_t size);
-  std::string* add_accumulations();
-  void add_accumulations(const std::string& value);
-  void add_accumulations(std::string&& value);
-  void add_accumulations(const char* value);
-  void add_accumulations(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& accumulations() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_accumulations();
+  void clear_a_accumulations();
+  const std::string& a_accumulations(int index) const;
+  std::string* mutable_a_accumulations(int index);
+  void set_a_accumulations(int index, const std::string& value);
+  void set_a_accumulations(int index, std::string&& value);
+  void set_a_accumulations(int index, const char* value);
+  void set_a_accumulations(int index, const void* value, size_t size);
+  std::string* add_a_accumulations();
+  void add_a_accumulations(const std::string& value);
+  void add_a_accumulations(std::string&& value);
+  void add_a_accumulations(const char* value);
+  void add_a_accumulations(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_accumulations() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_accumulations();
   private:
-  const std::string& _internal_accumulations(int index) const;
-  std::string* _internal_add_accumulations();
+  const std::string& _internal_a_accumulations(int index) const;
+  std::string* _internal_add_a_accumulations();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms)
@@ -921,7 +921,7 @@ class Msg_AccumulateChildKeyedHistograms final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> accumulations_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_accumulations_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1039,30 +1039,30 @@ class Msg_UpdateChildScalars final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionsFieldNumber = 1,
+    kAActionsFieldNumber = 1,
   };
-  // repeated bytes actions = 1;
-  int actions_size() const;
+  // repeated bytes a_actions = 1;
+  int a_actions_size() const;
   private:
-  int _internal_actions_size() const;
+  int _internal_a_actions_size() const;
   public:
-  void clear_actions();
-  const std::string& actions(int index) const;
-  std::string* mutable_actions(int index);
-  void set_actions(int index, const std::string& value);
-  void set_actions(int index, std::string&& value);
-  void set_actions(int index, const char* value);
-  void set_actions(int index, const void* value, size_t size);
-  std::string* add_actions();
-  void add_actions(const std::string& value);
-  void add_actions(std::string&& value);
-  void add_actions(const char* value);
-  void add_actions(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& actions() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_actions();
+  void clear_a_actions();
+  const std::string& a_actions(int index) const;
+  std::string* mutable_a_actions(int index);
+  void set_a_actions(int index, const std::string& value);
+  void set_a_actions(int index, std::string&& value);
+  void set_a_actions(int index, const char* value);
+  void set_a_actions(int index, const void* value, size_t size);
+  std::string* add_a_actions();
+  void add_a_actions(const std::string& value);
+  void add_a_actions(std::string&& value);
+  void add_a_actions(const char* value);
+  void add_a_actions(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_actions() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_actions();
   private:
-  const std::string& _internal_actions(int index) const;
-  std::string* _internal_add_actions();
+  const std::string& _internal_a_actions(int index) const;
+  std::string* _internal_add_a_actions();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars)
@@ -1073,7 +1073,7 @@ class Msg_UpdateChildScalars final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> actions_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_actions_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1191,30 +1191,30 @@ class Msg_UpdateChildKeyedScalars final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionsFieldNumber = 1,
+    kAActionsFieldNumber = 1,
   };
-  // repeated bytes actions = 1;
-  int actions_size() const;
+  // repeated bytes a_actions = 1;
+  int a_actions_size() const;
   private:
-  int _internal_actions_size() const;
+  int _internal_a_actions_size() const;
   public:
-  void clear_actions();
-  const std::string& actions(int index) const;
-  std::string* mutable_actions(int index);
-  void set_actions(int index, const std::string& value);
-  void set_actions(int index, std::string&& value);
-  void set_actions(int index, const char* value);
-  void set_actions(int index, const void* value, size_t size);
-  std::string* add_actions();
-  void add_actions(const std::string& value);
-  void add_actions(std::string&& value);
-  void add_actions(const char* value);
-  void add_actions(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& actions() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_actions();
+  void clear_a_actions();
+  const std::string& a_actions(int index) const;
+  std::string* mutable_a_actions(int index);
+  void set_a_actions(int index, const std::string& value);
+  void set_a_actions(int index, std::string&& value);
+  void set_a_actions(int index, const char* value);
+  void set_a_actions(int index, const void* value, size_t size);
+  std::string* add_a_actions();
+  void add_a_actions(const std::string& value);
+  void add_a_actions(std::string&& value);
+  void add_a_actions(const char* value);
+  void add_a_actions(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_actions() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_actions();
   private:
-  const std::string& _internal_actions(int index) const;
-  std::string* _internal_add_actions();
+  const std::string& _internal_a_actions(int index) const;
+  std::string* _internal_add_a_actions();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars)
@@ -1225,7 +1225,7 @@ class Msg_UpdateChildKeyedScalars final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> actions_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_actions_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1343,30 +1343,30 @@ class Msg_RecordChildEvents final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEventsFieldNumber = 1,
+    kAEventsFieldNumber = 1,
   };
-  // repeated bytes events = 1;
-  int events_size() const;
+  // repeated bytes a_events = 1;
+  int a_events_size() const;
   private:
-  int _internal_events_size() const;
+  int _internal_a_events_size() const;
   public:
-  void clear_events();
-  const std::string& events(int index) const;
-  std::string* mutable_events(int index);
-  void set_events(int index, const std::string& value);
-  void set_events(int index, std::string&& value);
-  void set_events(int index, const char* value);
-  void set_events(int index, const void* value, size_t size);
-  std::string* add_events();
-  void add_events(const std::string& value);
-  void add_events(std::string&& value);
-  void add_events(const char* value);
-  void add_events(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& events() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_events();
+  void clear_a_events();
+  const std::string& a_events(int index) const;
+  std::string* mutable_a_events(int index);
+  void set_a_events(int index, const std::string& value);
+  void set_a_events(int index, std::string&& value);
+  void set_a_events(int index, const char* value);
+  void set_a_events(int index, const void* value, size_t size);
+  std::string* add_a_events();
+  void add_a_events(const std::string& value);
+  void add_a_events(std::string&& value);
+  void add_a_events(const char* value);
+  void add_a_events(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_events() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_events();
   private:
-  const std::string& _internal_events(int index) const;
-  std::string* _internal_add_events();
+  const std::string& _internal_a_events(int index) const;
+  std::string* _internal_add_a_events();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents)
@@ -1377,7 +1377,7 @@ class Msg_RecordChildEvents final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> events_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_events_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1495,24 +1495,24 @@ class Msg_RecordDiscardedData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData)
@@ -1525,7 +1525,7 @@ class Msg_RecordDiscardedData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -1642,24 +1642,24 @@ class Msg_PWebrtcTCPSocketConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTabIdFieldNumber = 1,
+    kATabIdFieldNumber = 1,
   };
-  // optional bytes tabId = 1;
-  bool has_tabid() const;
+  // optional bytes a_tabId = 1;
+  bool has_a_tabid() const;
   private:
-  bool _internal_has_tabid() const;
+  bool _internal_has_a_tabid() const;
   public:
-  void clear_tabid();
-  const std::string& tabid() const;
+  void clear_a_tabid();
+  const std::string& a_tabid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_tabid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_tabid();
-  PROTOBUF_NODISCARD std::string* release_tabid();
-  void set_allocated_tabid(std::string* tabid);
+  void set_a_tabid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_tabid();
+  PROTOBUF_NODISCARD std::string* release_a_tabid();
+  void set_allocated_a_tabid(std::string* a_tabid);
   private:
-  const std::string& _internal_tabid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_tabid(const std::string& value);
-  std::string* _internal_mutable_tabid();
+  const std::string& _internal_a_tabid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_tabid(const std::string& value);
+  std::string* _internal_mutable_a_tabid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor)
@@ -1672,7 +1672,7 @@ class Msg_PWebrtcTCPSocketConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tabid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -1913,104 +1913,104 @@ class Msg_ObserveHttpActivity final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATimestampFieldNumber = 4,
-    kAExtraStringDataFieldNumber = 6,
-    kAActivityArgsFieldNumber = 1,
-    kAActivityTypeFieldNumber = 2,
-    kAActivitySubtypeFieldNumber = 3,
-    kAExtraSizeDataFieldNumber = 5,
+    kAATimestampFieldNumber = 4,
+    kAAExtraStringDataFieldNumber = 6,
+    kAAActivityArgsFieldNumber = 1,
+    kAAActivityTypeFieldNumber = 2,
+    kAAActivitySubtypeFieldNumber = 3,
+    kAAExtraSizeDataFieldNumber = 5,
   };
-  // required bytes aTimestamp = 4;
-  bool has_atimestamp() const;
+  // required bytes a_aTimestamp = 4;
+  bool has_a_atimestamp() const;
   private:
-  bool _internal_has_atimestamp() const;
+  bool _internal_has_a_atimestamp() const;
   public:
-  void clear_atimestamp();
-  const std::string& atimestamp() const;
+  void clear_a_atimestamp();
+  const std::string& a_atimestamp() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atimestamp(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atimestamp();
-  PROTOBUF_NODISCARD std::string* release_atimestamp();
-  void set_allocated_atimestamp(std::string* atimestamp);
+  void set_a_atimestamp(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atimestamp();
+  PROTOBUF_NODISCARD std::string* release_a_atimestamp();
+  void set_allocated_a_atimestamp(std::string* a_atimestamp);
   private:
-  const std::string& _internal_atimestamp() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atimestamp(const std::string& value);
-  std::string* _internal_mutable_atimestamp();
+  const std::string& _internal_a_atimestamp() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atimestamp(const std::string& value);
+  std::string* _internal_mutable_a_atimestamp();
   public:
 
-  // required bytes aExtraStringData = 6;
-  bool has_aextrastringdata() const;
+  // required bytes a_aExtraStringData = 6;
+  bool has_a_aextrastringdata() const;
   private:
-  bool _internal_has_aextrastringdata() const;
+  bool _internal_has_a_aextrastringdata() const;
   public:
-  void clear_aextrastringdata();
-  const std::string& aextrastringdata() const;
+  void clear_a_aextrastringdata();
+  const std::string& a_aextrastringdata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aextrastringdata(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aextrastringdata();
-  PROTOBUF_NODISCARD std::string* release_aextrastringdata();
-  void set_allocated_aextrastringdata(std::string* aextrastringdata);
+  void set_a_aextrastringdata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aextrastringdata();
+  PROTOBUF_NODISCARD std::string* release_a_aextrastringdata();
+  void set_allocated_a_aextrastringdata(std::string* a_aextrastringdata);
   private:
-  const std::string& _internal_aextrastringdata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aextrastringdata(const std::string& value);
-  std::string* _internal_mutable_aextrastringdata();
+  const std::string& _internal_a_aextrastringdata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aextrastringdata(const std::string& value);
+  std::string* _internal_mutable_a_aextrastringdata();
   public:
 
-  // required .protobuf.mozilla.net.HttpActivityArgs aActivityArgs = 1;
-  bool has_aactivityargs() const;
+  // required .protobuf.mozilla.net.HttpActivityArgs a_aActivityArgs = 1;
+  bool has_a_aactivityargs() const;
   private:
-  bool _internal_has_aactivityargs() const;
+  bool _internal_has_a_aactivityargs() const;
   public:
-  void clear_aactivityargs();
-  const ::protobuf::mozilla::net::HttpActivityArgs& aactivityargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpActivityArgs* release_aactivityargs();
-  ::protobuf::mozilla::net::HttpActivityArgs* mutable_aactivityargs();
-  void set_allocated_aactivityargs(::protobuf::mozilla::net::HttpActivityArgs* aactivityargs);
+  void clear_a_aactivityargs();
+  const ::protobuf::mozilla::net::HttpActivityArgs& a_aactivityargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpActivityArgs* release_a_aactivityargs();
+  ::protobuf::mozilla::net::HttpActivityArgs* mutable_a_aactivityargs();
+  void set_allocated_a_aactivityargs(::protobuf::mozilla::net::HttpActivityArgs* a_aactivityargs);
   private:
-  const ::protobuf::mozilla::net::HttpActivityArgs& _internal_aactivityargs() const;
-  ::protobuf::mozilla::net::HttpActivityArgs* _internal_mutable_aactivityargs();
+  const ::protobuf::mozilla::net::HttpActivityArgs& _internal_a_aactivityargs() const;
+  ::protobuf::mozilla::net::HttpActivityArgs* _internal_mutable_a_aactivityargs();
   public:
-  void unsafe_arena_set_allocated_aactivityargs(
-      ::protobuf::mozilla::net::HttpActivityArgs* aactivityargs);
-  ::protobuf::mozilla::net::HttpActivityArgs* unsafe_arena_release_aactivityargs();
+  void unsafe_arena_set_allocated_a_aactivityargs(
+      ::protobuf::mozilla::net::HttpActivityArgs* a_aactivityargs);
+  ::protobuf::mozilla::net::HttpActivityArgs* unsafe_arena_release_a_aactivityargs();
 
-  // required uint32 aActivityType = 2;
-  bool has_aactivitytype() const;
+  // required uint32 a_aActivityType = 2;
+  bool has_a_aactivitytype() const;
   private:
-  bool _internal_has_aactivitytype() const;
+  bool _internal_has_a_aactivitytype() const;
   public:
-  void clear_aactivitytype();
-  uint32_t aactivitytype() const;
-  void set_aactivitytype(uint32_t value);
+  void clear_a_aactivitytype();
+  uint32_t a_aactivitytype() const;
+  void set_a_aactivitytype(uint32_t value);
   private:
-  uint32_t _internal_aactivitytype() const;
-  void _internal_set_aactivitytype(uint32_t value);
-  public:
-
-  // required uint32 aActivitySubtype = 3;
-  bool has_aactivitysubtype() const;
-  private:
-  bool _internal_has_aactivitysubtype() const;
-  public:
-  void clear_aactivitysubtype();
-  uint32_t aactivitysubtype() const;
-  void set_aactivitysubtype(uint32_t value);
-  private:
-  uint32_t _internal_aactivitysubtype() const;
-  void _internal_set_aactivitysubtype(uint32_t value);
+  uint32_t _internal_a_aactivitytype() const;
+  void _internal_set_a_aactivitytype(uint32_t value);
   public:
 
-  // required uint64 aExtraSizeData = 5;
-  bool has_aextrasizedata() const;
+  // required uint32 a_aActivitySubtype = 3;
+  bool has_a_aactivitysubtype() const;
   private:
-  bool _internal_has_aextrasizedata() const;
+  bool _internal_has_a_aactivitysubtype() const;
   public:
-  void clear_aextrasizedata();
-  uint64_t aextrasizedata() const;
-  void set_aextrasizedata(uint64_t value);
+  void clear_a_aactivitysubtype();
+  uint32_t a_aactivitysubtype() const;
+  void set_a_aactivitysubtype(uint32_t value);
   private:
-  uint64_t _internal_aextrasizedata() const;
-  void _internal_set_aextrasizedata(uint64_t value);
+  uint32_t _internal_a_aactivitysubtype() const;
+  void _internal_set_a_aactivitysubtype(uint32_t value);
+  public:
+
+  // required uint64 a_aExtraSizeData = 5;
+  bool has_a_aextrasizedata() const;
+  private:
+  bool _internal_has_a_aextrasizedata() const;
+  public:
+  void clear_a_aextrasizedata();
+  uint64_t a_aextrasizedata() const;
+  void set_a_aextrasizedata(uint64_t value);
+  private:
+  uint64_t _internal_a_aextrasizedata() const;
+  void _internal_set_a_aextrasizedata(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity)
@@ -2026,12 +2026,12 @@ class Msg_ObserveHttpActivity final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atimestamp_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aextrastringdata_;
-    ::protobuf::mozilla::net::HttpActivityArgs* aactivityargs_;
-    uint32_t aactivitytype_;
-    uint32_t aactivitysubtype_;
-    uint64_t aextrasizedata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atimestamp_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aextrastringdata_;
+    ::protobuf::mozilla::net::HttpActivityArgs* a_aactivityargs_;
+    uint32_t a_aactivitytype_;
+    uint32_t a_aactivitysubtype_;
+    uint64_t a_aextrasizedata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -2148,24 +2148,24 @@ class Msg_InitSocketBackground final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEndpointFieldNumber = 1,
+    kAAEndpointFieldNumber = 1,
   };
-  // required bytes aEndpoint = 1;
-  bool has_aendpoint() const;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
   private:
-  bool _internal_has_aendpoint() const;
+  bool _internal_has_a_aendpoint() const;
   public:
-  void clear_aendpoint();
-  const std::string& aendpoint() const;
+  void clear_a_aendpoint();
+  const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aendpoint();
-  PROTOBUF_NODISCARD std::string* release_aendpoint();
-  void set_allocated_aendpoint(std::string* aendpoint);
+  void set_a_aendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_aendpoint();
+  void set_allocated_a_aendpoint(std::string* a_aendpoint);
   private:
-  const std::string& _internal_aendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aendpoint(const std::string& value);
-  std::string* _internal_mutable_aendpoint();
+  const std::string& _internal_a_aendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aendpoint(const std::string& value);
+  std::string* _internal_mutable_a_aendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground)
@@ -2178,7 +2178,7 @@ class Msg_InitSocketBackground final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -2543,38 +2543,38 @@ class Msg_PProxyConfigLookupConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAUriFieldNumber = 1,
-    kAFlagsFieldNumber = 2,
+    kAAUriFieldNumber = 1,
+    kAAFlagsFieldNumber = 2,
   };
-  // required bytes aUri = 1;
-  bool has_auri() const;
+  // required bytes a_aUri = 1;
+  bool has_a_auri() const;
   private:
-  bool _internal_has_auri() const;
+  bool _internal_has_a_auri() const;
   public:
-  void clear_auri();
-  const std::string& auri() const;
+  void clear_a_auri();
+  const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_auri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_auri();
-  PROTOBUF_NODISCARD std::string* release_auri();
-  void set_allocated_auri(std::string* auri);
+  void set_a_auri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_auri();
+  PROTOBUF_NODISCARD std::string* release_a_auri();
+  void set_allocated_a_auri(std::string* a_auri);
   private:
-  const std::string& _internal_auri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_auri(const std::string& value);
-  std::string* _internal_mutable_auri();
+  const std::string& _internal_a_auri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_auri(const std::string& value);
+  std::string* _internal_mutable_a_auri();
   public:
 
-  // required uint32 aFlags = 2;
-  bool has_aflags() const;
+  // required uint32 a_aFlags = 2;
+  bool has_a_aflags() const;
   private:
-  bool _internal_has_aflags() const;
+  bool _internal_has_a_aflags() const;
   public:
-  void clear_aflags();
-  uint32_t aflags() const;
-  void set_aflags(uint32_t value);
+  void clear_a_aflags();
+  uint32_t a_aflags() const;
+  void set_a_aflags(uint32_t value);
   private:
-  uint32_t _internal_aflags() const;
-  void _internal_set_aflags(uint32_t value);
+  uint32_t _internal_a_aflags() const;
+  void _internal_set_a_aflags(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor)
@@ -2590,8 +2590,8 @@ class Msg_PProxyConfigLookupConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr auri_;
-    uint32_t aflags_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
+    uint32_t a_aflags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -2832,25 +2832,25 @@ class Msg_ExcludeHttp2OrHttp3 final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs aArgs = 1;
-  bool has_aargs() const;
+  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
+  bool has_a_aargs() const;
   private:
-  bool _internal_has_aargs() const;
+  bool _internal_has_a_aargs() const;
   public:
-  void clear_aargs();
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& aargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_aargs();
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_aargs();
-  void set_allocated_aargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aargs);
+  void clear_a_aargs();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& a_aargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_a_aargs();
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_a_aargs();
+  void set_allocated_a_aargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aargs);
   private:
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_aargs() const;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_aargs();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_a_aargs() const;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_a_aargs();
   public:
-  void unsafe_arena_set_allocated_aargs(
-      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aargs);
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_aargs();
+  void unsafe_arena_set_allocated_a_aargs(
+      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aargs);
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_aargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3)
  private:
@@ -2862,7 +2862,7 @@ class Msg_ExcludeHttp2OrHttp3 final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aargs_;
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -2979,24 +2979,24 @@ class Msg_OnConsoleMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAMessageFieldNumber = 1,
+    kAAMessageFieldNumber = 1,
   };
-  // required bytes aMessage = 1;
-  bool has_amessage() const;
+  // required bytes a_aMessage = 1;
+  bool has_a_amessage() const;
   private:
-  bool _internal_has_amessage() const;
+  bool _internal_has_a_amessage() const;
   public:
-  void clear_amessage();
-  const std::string& amessage() const;
+  void clear_a_amessage();
+  const std::string& a_amessage() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_amessage(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_amessage();
-  PROTOBUF_NODISCARD std::string* release_amessage();
-  void set_allocated_amessage(std::string* amessage);
+  void set_a_amessage(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_amessage();
+  PROTOBUF_NODISCARD std::string* release_a_amessage();
+  void set_allocated_a_amessage(std::string* a_amessage);
   private:
-  const std::string& _internal_amessage() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_amessage(const std::string& value);
-  std::string* _internal_mutable_amessage();
+  const std::string& _internal_a_amessage() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_amessage(const std::string& value);
+  std::string* _internal_mutable_a_amessage();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage)
@@ -3009,7 +3009,7 @@ class Msg_OnConsoleMessage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr amessage_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amessage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -3126,24 +3126,24 @@ class Msg_FOGData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufFieldNumber = 1,
+    kABufFieldNumber = 1,
   };
-  // required bytes buf = 1;
-  bool has_buf() const;
+  // required bytes a_buf = 1;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_FOGData)
@@ -3156,7 +3156,7 @@ class Msg_FOGData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -3273,25 +3273,25 @@ class Msg_Init final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAttributesFieldNumber = 1,
+    kAAAttributesFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.SocketPorcessInitAttributes aAttributes = 1;
-  bool has_aattributes() const;
+  // required .protobuf.mozilla.net.SocketPorcessInitAttributes a_aAttributes = 1;
+  bool has_a_aattributes() const;
   private:
-  bool _internal_has_aattributes() const;
+  bool _internal_has_a_aattributes() const;
   public:
-  void clear_aattributes();
-  const ::protobuf::mozilla::net::SocketPorcessInitAttributes& aattributes() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::SocketPorcessInitAttributes* release_aattributes();
-  ::protobuf::mozilla::net::SocketPorcessInitAttributes* mutable_aattributes();
-  void set_allocated_aattributes(::protobuf::mozilla::net::SocketPorcessInitAttributes* aattributes);
+  void clear_a_aattributes();
+  const ::protobuf::mozilla::net::SocketPorcessInitAttributes& a_aattributes() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::SocketPorcessInitAttributes* release_a_aattributes();
+  ::protobuf::mozilla::net::SocketPorcessInitAttributes* mutable_a_aattributes();
+  void set_allocated_a_aattributes(::protobuf::mozilla::net::SocketPorcessInitAttributes* a_aattributes);
   private:
-  const ::protobuf::mozilla::net::SocketPorcessInitAttributes& _internal_aattributes() const;
-  ::protobuf::mozilla::net::SocketPorcessInitAttributes* _internal_mutable_aattributes();
+  const ::protobuf::mozilla::net::SocketPorcessInitAttributes& _internal_a_aattributes() const;
+  ::protobuf::mozilla::net::SocketPorcessInitAttributes* _internal_mutable_a_aattributes();
   public:
-  void unsafe_arena_set_allocated_aattributes(
-      ::protobuf::mozilla::net::SocketPorcessInitAttributes* aattributes);
-  ::protobuf::mozilla::net::SocketPorcessInitAttributes* unsafe_arena_release_aattributes();
+  void unsafe_arena_set_allocated_a_aattributes(
+      ::protobuf::mozilla::net::SocketPorcessInitAttributes* a_aattributes);
+  ::protobuf::mozilla::net::SocketPorcessInitAttributes* unsafe_arena_release_a_aattributes();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_Init)
  private:
@@ -3303,7 +3303,7 @@ class Msg_Init final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::SocketPorcessInitAttributes* aattributes_;
+    ::protobuf::mozilla::net::SocketPorcessInitAttributes* a_aattributes_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -3420,25 +3420,25 @@ class Msg_PreferenceUpdate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPrefFieldNumber = 1,
+    kAPrefFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.Pref pref = 1;
-  bool has_pref() const;
+  // required .protobuf.mozilla.dom.Pref a_pref = 1;
+  bool has_a_pref() const;
   private:
-  bool _internal_has_pref() const;
+  bool _internal_has_a_pref() const;
   public:
-  void clear_pref();
-  const ::protobuf::mozilla::dom::Pref& pref() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::Pref* release_pref();
-  ::protobuf::mozilla::dom::Pref* mutable_pref();
-  void set_allocated_pref(::protobuf::mozilla::dom::Pref* pref);
+  void clear_a_pref();
+  const ::protobuf::mozilla::dom::Pref& a_pref() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::Pref* release_a_pref();
+  ::protobuf::mozilla::dom::Pref* mutable_a_pref();
+  void set_allocated_a_pref(::protobuf::mozilla::dom::Pref* a_pref);
   private:
-  const ::protobuf::mozilla::dom::Pref& _internal_pref() const;
-  ::protobuf::mozilla::dom::Pref* _internal_mutable_pref();
+  const ::protobuf::mozilla::dom::Pref& _internal_a_pref() const;
+  ::protobuf::mozilla::dom::Pref* _internal_mutable_a_pref();
   public:
-  void unsafe_arena_set_allocated_pref(
-      ::protobuf::mozilla::dom::Pref* pref);
-  ::protobuf::mozilla::dom::Pref* unsafe_arena_release_pref();
+  void unsafe_arena_set_allocated_a_pref(
+      ::protobuf::mozilla::dom::Pref* a_pref);
+  ::protobuf::mozilla::dom::Pref* unsafe_arena_release_a_pref();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate)
  private:
@@ -3450,7 +3450,7 @@ class Msg_PreferenceUpdate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::Pref* pref_;
+    ::protobuf::mozilla::dom::Pref* a_pref_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -3567,66 +3567,66 @@ class Msg_RequestMemoryReport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDMDFileFieldNumber = 4,
-    kGenerationFieldNumber = 1,
-    kAnonymizeFieldNumber = 2,
-    kMinimizeMemoryUsageFieldNumber = 3,
+    kADMDFileFieldNumber = 4,
+    kAGenerationFieldNumber = 1,
+    kAAnonymizeFieldNumber = 2,
+    kAMinimizeMemoryUsageFieldNumber = 3,
   };
-  // optional bytes DMDFile = 4;
-  bool has_dmdfile() const;
+  // optional bytes a_DMDFile = 4;
+  bool has_a_dmdfile() const;
   private:
-  bool _internal_has_dmdfile() const;
+  bool _internal_has_a_dmdfile() const;
   public:
-  void clear_dmdfile();
-  const std::string& dmdfile() const;
+  void clear_a_dmdfile();
+  const std::string& a_dmdfile() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_dmdfile(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_dmdfile();
-  PROTOBUF_NODISCARD std::string* release_dmdfile();
-  void set_allocated_dmdfile(std::string* dmdfile);
+  void set_a_dmdfile(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_dmdfile();
+  PROTOBUF_NODISCARD std::string* release_a_dmdfile();
+  void set_allocated_a_dmdfile(std::string* a_dmdfile);
   private:
-  const std::string& _internal_dmdfile() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dmdfile(const std::string& value);
-  std::string* _internal_mutable_dmdfile();
+  const std::string& _internal_a_dmdfile() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_dmdfile(const std::string& value);
+  std::string* _internal_mutable_a_dmdfile();
   public:
 
-  // required uint32 generation = 1;
-  bool has_generation() const;
+  // required uint32 a_generation = 1;
+  bool has_a_generation() const;
   private:
-  bool _internal_has_generation() const;
+  bool _internal_has_a_generation() const;
   public:
-  void clear_generation();
-  uint32_t generation() const;
-  void set_generation(uint32_t value);
+  void clear_a_generation();
+  uint32_t a_generation() const;
+  void set_a_generation(uint32_t value);
   private:
-  uint32_t _internal_generation() const;
-  void _internal_set_generation(uint32_t value);
-  public:
-
-  // required bool anonymize = 2;
-  bool has_anonymize() const;
-  private:
-  bool _internal_has_anonymize() const;
-  public:
-  void clear_anonymize();
-  bool anonymize() const;
-  void set_anonymize(bool value);
-  private:
-  bool _internal_anonymize() const;
-  void _internal_set_anonymize(bool value);
+  uint32_t _internal_a_generation() const;
+  void _internal_set_a_generation(uint32_t value);
   public:
 
-  // required bool minimizeMemoryUsage = 3;
-  bool has_minimizememoryusage() const;
+  // required bool a_anonymize = 2;
+  bool has_a_anonymize() const;
   private:
-  bool _internal_has_minimizememoryusage() const;
+  bool _internal_has_a_anonymize() const;
   public:
-  void clear_minimizememoryusage();
-  bool minimizememoryusage() const;
-  void set_minimizememoryusage(bool value);
+  void clear_a_anonymize();
+  bool a_anonymize() const;
+  void set_a_anonymize(bool value);
   private:
-  bool _internal_minimizememoryusage() const;
-  void _internal_set_minimizememoryusage(bool value);
+  bool _internal_a_anonymize() const;
+  void _internal_set_a_anonymize(bool value);
+  public:
+
+  // required bool a_minimizeMemoryUsage = 3;
+  bool has_a_minimizememoryusage() const;
+  private:
+  bool _internal_has_a_minimizememoryusage() const;
+  public:
+  void clear_a_minimizememoryusage();
+  bool a_minimizememoryusage() const;
+  void set_a_minimizememoryusage(bool value);
+  private:
+  bool _internal_a_minimizememoryusage() const;
+  void _internal_set_a_minimizememoryusage(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport)
@@ -3642,10 +3642,10 @@ class Msg_RequestMemoryReport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dmdfile_;
-    uint32_t generation_;
-    bool anonymize_;
-    bool minimizememoryusage_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dmdfile_;
+    uint32_t a_generation_;
+    bool a_anonymize_;
+    bool a_minimizememoryusage_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -3762,19 +3762,19 @@ class Reply_RequestMemoryReport final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAGenerationFieldNumber = 1,
+    kAAGenerationFieldNumber = 1,
   };
-  // required uint32 aGeneration = 1;
-  bool has_ageneration() const;
+  // required uint32 a_aGeneration = 1;
+  bool has_a_ageneration() const;
   private:
-  bool _internal_has_ageneration() const;
+  bool _internal_has_a_ageneration() const;
   public:
-  void clear_ageneration();
-  uint32_t ageneration() const;
-  void set_ageneration(uint32_t value);
+  void clear_a_ageneration();
+  uint32_t a_ageneration() const;
+  void set_a_ageneration(uint32_t value);
   private:
-  uint32_t _internal_ageneration() const;
-  void _internal_set_ageneration(uint32_t value);
+  uint32_t _internal_a_ageneration() const;
+  void _internal_set_a_ageneration(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_RequestMemoryReport)
@@ -3787,7 +3787,7 @@ class Reply_RequestMemoryReport final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t ageneration_;
+    uint32_t a_ageneration_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -3904,19 +3904,19 @@ class Msg_SetOffline final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOfflineFieldNumber = 1,
+    kAOfflineFieldNumber = 1,
   };
-  // required bool offline = 1;
-  bool has_offline() const;
+  // required bool a_offline = 1;
+  bool has_a_offline() const;
   private:
-  bool _internal_has_offline() const;
+  bool _internal_has_a_offline() const;
   public:
-  void clear_offline();
-  bool offline() const;
-  void set_offline(bool value);
+  void clear_a_offline();
+  bool a_offline() const;
+  void set_a_offline(bool value);
   private:
-  bool _internal_offline() const;
-  void _internal_set_offline(bool value);
+  bool _internal_a_offline() const;
+  void _internal_set_a_offline(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_SetOffline)
@@ -3929,7 +3929,7 @@ class Msg_SetOffline final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool offline_;
+    bool a_offline_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -4046,19 +4046,19 @@ class Msg_SetConnectivity final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kConnectivityFieldNumber = 1,
+    kAConnectivityFieldNumber = 1,
   };
-  // required bool connectivity = 1;
-  bool has_connectivity() const;
+  // required bool a_connectivity = 1;
+  bool has_a_connectivity() const;
   private:
-  bool _internal_has_connectivity() const;
+  bool _internal_has_a_connectivity() const;
   public:
-  void clear_connectivity();
-  bool connectivity() const;
-  void set_connectivity(bool value);
+  void clear_a_connectivity();
+  bool a_connectivity() const;
+  void set_a_connectivity(bool value);
   private:
-  bool _internal_connectivity() const;
-  void _internal_set_connectivity(bool value);
+  bool _internal_a_connectivity() const;
+  void _internal_set_a_connectivity(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_SetConnectivity)
@@ -4071,7 +4071,7 @@ class Msg_SetConnectivity final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool connectivity_;
+    bool a_connectivity_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -4188,24 +4188,24 @@ class Msg_InitLinuxSandbox final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSandboxBrokerFieldNumber = 1,
+    kASandboxBrokerFieldNumber = 1,
   };
-  // optional bytes sandboxBroker = 1;
-  bool has_sandboxbroker() const;
+  // optional bytes a_sandboxBroker = 1;
+  bool has_a_sandboxbroker() const;
   private:
-  bool _internal_has_sandboxbroker() const;
+  bool _internal_has_a_sandboxbroker() const;
   public:
-  void clear_sandboxbroker();
-  const std::string& sandboxbroker() const;
+  void clear_a_sandboxbroker();
+  const std::string& a_sandboxbroker() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sandboxbroker(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sandboxbroker();
-  PROTOBUF_NODISCARD std::string* release_sandboxbroker();
-  void set_allocated_sandboxbroker(std::string* sandboxbroker);
+  void set_a_sandboxbroker(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_sandboxbroker();
+  PROTOBUF_NODISCARD std::string* release_a_sandboxbroker();
+  void set_allocated_a_sandboxbroker(std::string* a_sandboxbroker);
   private:
-  const std::string& _internal_sandboxbroker() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sandboxbroker(const std::string& value);
-  std::string* _internal_mutable_sandboxbroker();
+  const std::string& _internal_a_sandboxbroker() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_sandboxbroker(const std::string& value);
+  std::string* _internal_mutable_a_sandboxbroker();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox)
@@ -4218,7 +4218,7 @@ class Msg_InitLinuxSandbox final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sandboxbroker_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sandboxbroker_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -4335,43 +4335,43 @@ class Msg_InitSocketProcessBridgeParent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProcessIdFieldNumber = 1,
-    kEndpointFieldNumber = 2,
+    kAProcessIdFieldNumber = 1,
+    kAEndpointFieldNumber = 2,
   };
-  // required bytes processId = 1;
-  bool has_processid() const;
+  // required bytes a_processId = 1;
+  bool has_a_processid() const;
   private:
-  bool _internal_has_processid() const;
+  bool _internal_has_a_processid() const;
   public:
-  void clear_processid();
-  const std::string& processid() const;
+  void clear_a_processid();
+  const std::string& a_processid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_processid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_processid();
-  PROTOBUF_NODISCARD std::string* release_processid();
-  void set_allocated_processid(std::string* processid);
+  void set_a_processid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_processid();
+  PROTOBUF_NODISCARD std::string* release_a_processid();
+  void set_allocated_a_processid(std::string* a_processid);
   private:
-  const std::string& _internal_processid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_processid(const std::string& value);
-  std::string* _internal_mutable_processid();
+  const std::string& _internal_a_processid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_processid(const std::string& value);
+  std::string* _internal_mutable_a_processid();
   public:
 
-  // required bytes endpoint = 2;
-  bool has_endpoint() const;
+  // required bytes a_endpoint = 2;
+  bool has_a_endpoint() const;
   private:
-  bool _internal_has_endpoint() const;
+  bool _internal_has_a_endpoint() const;
   public:
-  void clear_endpoint();
-  const std::string& endpoint() const;
+  void clear_a_endpoint();
+  const std::string& a_endpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_endpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_endpoint();
-  PROTOBUF_NODISCARD std::string* release_endpoint();
-  void set_allocated_endpoint(std::string* endpoint);
+  void set_a_endpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_endpoint();
+  PROTOBUF_NODISCARD std::string* release_a_endpoint();
+  void set_allocated_a_endpoint(std::string* a_endpoint);
   private:
-  const std::string& _internal_endpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endpoint(const std::string& value);
-  std::string* _internal_mutable_endpoint();
+  const std::string& _internal_a_endpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_endpoint(const std::string& value);
+  std::string* _internal_mutable_a_endpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent)
@@ -4387,8 +4387,8 @@ class Msg_InitSocketProcessBridgeParent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr processid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_processid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -4505,24 +4505,24 @@ class Msg_InitProfiler final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEndpointFieldNumber = 1,
+    kAAEndpointFieldNumber = 1,
   };
-  // required bytes aEndpoint = 1;
-  bool has_aendpoint() const;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
   private:
-  bool _internal_has_aendpoint() const;
+  bool _internal_has_a_aendpoint() const;
   public:
-  void clear_aendpoint();
-  const std::string& aendpoint() const;
+  void clear_a_aendpoint();
+  const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aendpoint();
-  PROTOBUF_NODISCARD std::string* release_aendpoint();
-  void set_allocated_aendpoint(std::string* aendpoint);
+  void set_a_aendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_aendpoint();
+  void set_allocated_a_aendpoint(std::string* a_aendpoint);
   private:
-  const std::string& _internal_aendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aendpoint(const std::string& value);
-  std::string* _internal_mutable_aendpoint();
+  const std::string& _internal_a_aendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aendpoint(const std::string& value);
+  std::string* _internal_mutable_a_aendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler)
@@ -4535,7 +4535,7 @@ class Msg_InitProfiler final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5024,25 +5024,25 @@ class Msg_PHttpConnectionMgrConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.HttpHandlerInitArgs aArgs = 1;
-  bool has_aargs() const;
+  // required .protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 1;
+  bool has_a_aargs() const;
   private:
-  bool _internal_has_aargs() const;
+  bool _internal_has_a_aargs() const;
   public:
-  void clear_aargs();
-  const ::protobuf::mozilla::net::HttpHandlerInitArgs& aargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpHandlerInitArgs* release_aargs();
-  ::protobuf::mozilla::net::HttpHandlerInitArgs* mutable_aargs();
-  void set_allocated_aargs(::protobuf::mozilla::net::HttpHandlerInitArgs* aargs);
+  void clear_a_aargs();
+  const ::protobuf::mozilla::net::HttpHandlerInitArgs& a_aargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpHandlerInitArgs* release_a_aargs();
+  ::protobuf::mozilla::net::HttpHandlerInitArgs* mutable_a_aargs();
+  void set_allocated_a_aargs(::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs);
   private:
-  const ::protobuf::mozilla::net::HttpHandlerInitArgs& _internal_aargs() const;
-  ::protobuf::mozilla::net::HttpHandlerInitArgs* _internal_mutable_aargs();
+  const ::protobuf::mozilla::net::HttpHandlerInitArgs& _internal_a_aargs() const;
+  ::protobuf::mozilla::net::HttpHandlerInitArgs* _internal_mutable_a_aargs();
   public:
-  void unsafe_arena_set_allocated_aargs(
-      ::protobuf::mozilla::net::HttpHandlerInitArgs* aargs);
-  ::protobuf::mozilla::net::HttpHandlerInitArgs* unsafe_arena_release_aargs();
+  void unsafe_arena_set_allocated_a_aargs(
+      ::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs);
+  ::protobuf::mozilla::net::HttpHandlerInitArgs* unsafe_arena_release_a_aargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor)
  private:
@@ -5054,7 +5054,7 @@ class Msg_PHttpConnectionMgrConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::HttpHandlerInitArgs* aargs_;
+    ::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5295,24 +5295,24 @@ class Msg_UpdateDeviceModelId final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAModelIdFieldNumber = 1,
+    kAAModelIdFieldNumber = 1,
   };
-  // required bytes aModelId = 1;
-  bool has_amodelid() const;
+  // required bytes a_aModelId = 1;
+  bool has_a_amodelid() const;
   private:
-  bool _internal_has_amodelid() const;
+  bool _internal_has_a_amodelid() const;
   public:
-  void clear_amodelid();
-  const std::string& amodelid() const;
+  void clear_a_amodelid();
+  const std::string& a_amodelid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_amodelid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_amodelid();
-  PROTOBUF_NODISCARD std::string* release_amodelid();
-  void set_allocated_amodelid(std::string* amodelid);
+  void set_a_amodelid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_amodelid();
+  PROTOBUF_NODISCARD std::string* release_a_amodelid();
+  void set_allocated_a_amodelid(std::string* a_amodelid);
   private:
-  const std::string& _internal_amodelid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_amodelid(const std::string& value);
-  std::string* _internal_mutable_amodelid();
+  const std::string& _internal_a_amodelid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_amodelid(const std::string& value);
+  std::string* _internal_mutable_a_amodelid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId)
@@ -5325,7 +5325,7 @@ class Msg_UpdateDeviceModelId final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr amodelid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amodelid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5442,19 +5442,19 @@ class Msg_OnHttpActivityDistributorActivated final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIsActivatedFieldNumber = 1,
+    kAAIsActivatedFieldNumber = 1,
   };
-  // required bool aIsActivated = 1;
-  bool has_aisactivated() const;
+  // required bool a_aIsActivated = 1;
+  bool has_a_aisactivated() const;
   private:
-  bool _internal_has_aisactivated() const;
+  bool _internal_has_a_aisactivated() const;
   public:
-  void clear_aisactivated();
-  bool aisactivated() const;
-  void set_aisactivated(bool value);
+  void clear_a_aisactivated();
+  bool a_aisactivated() const;
+  void set_a_aisactivated(bool value);
   private:
-  bool _internal_aisactivated() const;
-  void _internal_set_aisactivated(bool value);
+  bool _internal_a_aisactivated() const;
+  void _internal_set_a_aisactivated(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorActivated)
@@ -5467,7 +5467,7 @@ class Msg_OnHttpActivityDistributorActivated final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aisactivated_;
+    bool a_aisactivated_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5584,19 +5584,19 @@ class Msg_OnHttpActivityDistributorObserveProxyResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIsEnabledFieldNumber = 1,
+    kAAIsEnabledFieldNumber = 1,
   };
-  // required bool aIsEnabled = 1;
-  bool has_aisenabled() const;
+  // required bool a_aIsEnabled = 1;
+  bool has_a_aisenabled() const;
   private:
-  bool _internal_has_aisenabled() const;
+  bool _internal_has_a_aisenabled() const;
   public:
-  void clear_aisenabled();
-  bool aisenabled() const;
-  void set_aisenabled(bool value);
+  void clear_a_aisenabled();
+  bool a_aisenabled() const;
+  void set_a_aisenabled(bool value);
   private:
-  bool _internal_aisenabled() const;
-  void _internal_set_aisenabled(bool value);
+  bool _internal_a_aisenabled() const;
+  void _internal_set_a_aisenabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveProxyResponse)
@@ -5609,7 +5609,7 @@ class Msg_OnHttpActivityDistributorObserveProxyResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aisenabled_;
+    bool a_aisenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5726,19 +5726,19 @@ class Msg_OnHttpActivityDistributorObserveConnection final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIsEnabledFieldNumber = 1,
+    kAAIsEnabledFieldNumber = 1,
   };
-  // required bool aIsEnabled = 1;
-  bool has_aisenabled() const;
+  // required bool a_aIsEnabled = 1;
+  bool has_a_aisenabled() const;
   private:
-  bool _internal_has_aisenabled() const;
+  bool _internal_has_a_aisenabled() const;
   public:
-  void clear_aisenabled();
-  bool aisenabled() const;
-  void set_aisenabled(bool value);
+  void clear_a_aisenabled();
+  bool a_aisenabled() const;
+  void set_a_aisenabled(bool value);
   private:
-  bool _internal_aisenabled() const;
-  void _internal_set_aisenabled(bool value);
+  bool _internal_a_aisenabled() const;
+  void _internal_set_a_aisenabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveConnection)
@@ -5751,7 +5751,7 @@ class Msg_OnHttpActivityDistributorObserveConnection final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aisenabled_;
+    bool a_aisenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5868,33 +5868,33 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMeanBytesPerSecondFieldNumber = 1,
-    kMaxBytesPerSecondFieldNumber = 2,
+    kAMeanBytesPerSecondFieldNumber = 1,
+    kAMaxBytesPerSecondFieldNumber = 2,
   };
-  // required uint32 meanBytesPerSecond = 1;
-  bool has_meanbytespersecond() const;
+  // required uint32 a_meanBytesPerSecond = 1;
+  bool has_a_meanbytespersecond() const;
   private:
-  bool _internal_has_meanbytespersecond() const;
+  bool _internal_has_a_meanbytespersecond() const;
   public:
-  void clear_meanbytespersecond();
-  uint32_t meanbytespersecond() const;
-  void set_meanbytespersecond(uint32_t value);
+  void clear_a_meanbytespersecond();
+  uint32_t a_meanbytespersecond() const;
+  void set_a_meanbytespersecond(uint32_t value);
   private:
-  uint32_t _internal_meanbytespersecond() const;
-  void _internal_set_meanbytespersecond(uint32_t value);
+  uint32_t _internal_a_meanbytespersecond() const;
+  void _internal_set_a_meanbytespersecond(uint32_t value);
   public:
 
-  // required uint32 maxBytesPerSecond = 2;
-  bool has_maxbytespersecond() const;
+  // required uint32 a_maxBytesPerSecond = 2;
+  bool has_a_maxbytespersecond() const;
   private:
-  bool _internal_has_maxbytespersecond() const;
+  bool _internal_has_a_maxbytespersecond() const;
   public:
-  void clear_maxbytespersecond();
-  uint32_t maxbytespersecond() const;
-  void set_maxbytespersecond(uint32_t value);
+  void clear_a_maxbytespersecond();
+  uint32_t a_maxbytespersecond() const;
+  void set_a_maxbytespersecond(uint32_t value);
   private:
-  uint32_t _internal_maxbytespersecond() const;
-  void _internal_set_maxbytespersecond(uint32_t value);
+  uint32_t _internal_a_maxbytespersecond() const;
+  void _internal_set_a_maxbytespersecond(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor)
@@ -5910,8 +5910,8 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t meanbytespersecond_;
-    uint32_t maxbytespersecond_;
+    uint32_t a_meanbytespersecond_;
+    uint32_t a_maxbytespersecond_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -6152,38 +6152,38 @@ class Msg_PAltSvcTransactionConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAConnInfoFieldNumber = 1,
-    kACapsFieldNumber = 2,
+    kAAConnInfoFieldNumber = 1,
+    kAACapsFieldNumber = 2,
   };
-  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs aConnInfo = 1;
-  bool has_aconninfo() const;
+  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  bool has_a_aconninfo() const;
   private:
-  bool _internal_has_aconninfo() const;
+  bool _internal_has_a_aconninfo() const;
   public:
-  void clear_aconninfo();
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& aconninfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_aconninfo();
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_aconninfo();
-  void set_allocated_aconninfo(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfo);
+  void clear_a_aconninfo();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& a_aconninfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_a_aconninfo();
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_a_aconninfo();
+  void set_allocated_a_aconninfo(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo);
   private:
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_aconninfo() const;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_aconninfo();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_a_aconninfo() const;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_a_aconninfo();
   public:
-  void unsafe_arena_set_allocated_aconninfo(
-      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfo);
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_aconninfo();
+  void unsafe_arena_set_allocated_a_aconninfo(
+      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo);
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_aconninfo();
 
-  // required uint32 aCaps = 2;
-  bool has_acaps() const;
+  // required uint32 a_aCaps = 2;
+  bool has_a_acaps() const;
   private:
-  bool _internal_has_acaps() const;
+  bool _internal_has_a_acaps() const;
   public:
-  void clear_acaps();
-  uint32_t acaps() const;
-  void set_acaps(uint32_t value);
+  void clear_a_acaps();
+  uint32_t a_acaps() const;
+  void set_a_acaps(uint32_t value);
   private:
-  uint32_t _internal_acaps() const;
-  void _internal_set_acaps(uint32_t value);
+  uint32_t _internal_a_acaps() const;
+  void _internal_set_a_acaps(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor)
@@ -6199,8 +6199,8 @@ class Msg_PAltSvcTransactionConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfo_;
-    uint32_t acaps_;
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo_;
+    uint32_t a_acaps_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -6565,24 +6565,24 @@ class Reply_ClearSessionCache final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOkFieldNumber = 1,
+    kAOkFieldNumber = 1,
   };
-  // required bytes ok = 1;
-  bool has_ok() const;
+  // required bytes a_ok = 1;
+  bool has_a_ok() const;
   private:
-  bool _internal_has_ok() const;
+  bool _internal_has_a_ok() const;
   public:
-  void clear_ok();
-  const std::string& ok() const;
+  void clear_a_ok();
+  const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ok(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ok();
-  PROTOBUF_NODISCARD std::string* release_ok();
-  void set_allocated_ok(std::string* ok);
+  void set_a_ok(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ok();
+  PROTOBUF_NODISCARD std::string* release_a_ok();
+  void set_allocated_a_ok(std::string* a_ok);
   private:
-  const std::string& _internal_ok() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ok(const std::string& value);
-  std::string* _internal_mutable_ok();
+  const std::string& _internal_a_ok() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ok(const std::string& value);
+  std::string* _internal_mutable_a_ok();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache)
@@ -6595,7 +6595,7 @@ class Reply_ClearSessionCache final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ok_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -6712,58 +6712,58 @@ class Msg_PTRRServiceConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADNSSuffixListFieldNumber = 3,
-    kACaptiveIsPassedFieldNumber = 1,
-    kAParentalControlEnabledFieldNumber = 2,
+    kAADNSSuffixListFieldNumber = 3,
+    kAACaptiveIsPassedFieldNumber = 1,
+    kAAParentalControlEnabledFieldNumber = 2,
   };
-  // repeated bytes aDNSSuffixList = 3;
-  int adnssuffixlist_size() const;
+  // repeated bytes a_aDNSSuffixList = 3;
+  int a_adnssuffixlist_size() const;
   private:
-  int _internal_adnssuffixlist_size() const;
+  int _internal_a_adnssuffixlist_size() const;
   public:
-  void clear_adnssuffixlist();
-  const std::string& adnssuffixlist(int index) const;
-  std::string* mutable_adnssuffixlist(int index);
-  void set_adnssuffixlist(int index, const std::string& value);
-  void set_adnssuffixlist(int index, std::string&& value);
-  void set_adnssuffixlist(int index, const char* value);
-  void set_adnssuffixlist(int index, const void* value, size_t size);
-  std::string* add_adnssuffixlist();
-  void add_adnssuffixlist(const std::string& value);
-  void add_adnssuffixlist(std::string&& value);
-  void add_adnssuffixlist(const char* value);
-  void add_adnssuffixlist(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& adnssuffixlist() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_adnssuffixlist();
+  void clear_a_adnssuffixlist();
+  const std::string& a_adnssuffixlist(int index) const;
+  std::string* mutable_a_adnssuffixlist(int index);
+  void set_a_adnssuffixlist(int index, const std::string& value);
+  void set_a_adnssuffixlist(int index, std::string&& value);
+  void set_a_adnssuffixlist(int index, const char* value);
+  void set_a_adnssuffixlist(int index, const void* value, size_t size);
+  std::string* add_a_adnssuffixlist();
+  void add_a_adnssuffixlist(const std::string& value);
+  void add_a_adnssuffixlist(std::string&& value);
+  void add_a_adnssuffixlist(const char* value);
+  void add_a_adnssuffixlist(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_adnssuffixlist() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_adnssuffixlist();
   private:
-  const std::string& _internal_adnssuffixlist(int index) const;
-  std::string* _internal_add_adnssuffixlist();
-  public:
-
-  // required bool aCaptiveIsPassed = 1;
-  bool has_acaptiveispassed() const;
-  private:
-  bool _internal_has_acaptiveispassed() const;
-  public:
-  void clear_acaptiveispassed();
-  bool acaptiveispassed() const;
-  void set_acaptiveispassed(bool value);
-  private:
-  bool _internal_acaptiveispassed() const;
-  void _internal_set_acaptiveispassed(bool value);
+  const std::string& _internal_a_adnssuffixlist(int index) const;
+  std::string* _internal_add_a_adnssuffixlist();
   public:
 
-  // required bool aParentalControlEnabled = 2;
-  bool has_aparentalcontrolenabled() const;
+  // required bool a_aCaptiveIsPassed = 1;
+  bool has_a_acaptiveispassed() const;
   private:
-  bool _internal_has_aparentalcontrolenabled() const;
+  bool _internal_has_a_acaptiveispassed() const;
   public:
-  void clear_aparentalcontrolenabled();
-  bool aparentalcontrolenabled() const;
-  void set_aparentalcontrolenabled(bool value);
+  void clear_a_acaptiveispassed();
+  bool a_acaptiveispassed() const;
+  void set_a_acaptiveispassed(bool value);
   private:
-  bool _internal_aparentalcontrolenabled() const;
-  void _internal_set_aparentalcontrolenabled(bool value);
+  bool _internal_a_acaptiveispassed() const;
+  void _internal_set_a_acaptiveispassed(bool value);
+  public:
+
+  // required bool a_aParentalControlEnabled = 2;
+  bool has_a_aparentalcontrolenabled() const;
+  private:
+  bool _internal_has_a_aparentalcontrolenabled() const;
+  public:
+  void clear_a_aparentalcontrolenabled();
+  bool a_aparentalcontrolenabled() const;
+  void set_a_aparentalcontrolenabled(bool value);
+  private:
+  bool _internal_a_aparentalcontrolenabled() const;
+  void _internal_set_a_aparentalcontrolenabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor)
@@ -6779,9 +6779,9 @@ class Msg_PTRRServiceConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> adnssuffixlist_;
-    bool acaptiveispassed_;
-    bool aparentalcontrolenabled_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_adnssuffixlist_;
+    bool a_acaptiveispassed_;
+    bool a_aparentalcontrolenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -7270,43 +7270,43 @@ class Msg_NotifyObserver final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATopicFieldNumber = 1,
-    kADataFieldNumber = 2,
+    kAATopicFieldNumber = 1,
+    kAADataFieldNumber = 2,
   };
-  // required bytes aTopic = 1;
-  bool has_atopic() const;
+  // required bytes a_aTopic = 1;
+  bool has_a_atopic() const;
   private:
-  bool _internal_has_atopic() const;
+  bool _internal_has_a_atopic() const;
   public:
-  void clear_atopic();
-  const std::string& atopic() const;
+  void clear_a_atopic();
+  const std::string& a_atopic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atopic(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atopic();
-  PROTOBUF_NODISCARD std::string* release_atopic();
-  void set_allocated_atopic(std::string* atopic);
+  void set_a_atopic(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atopic();
+  PROTOBUF_NODISCARD std::string* release_a_atopic();
+  void set_allocated_a_atopic(std::string* a_atopic);
   private:
-  const std::string& _internal_atopic() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atopic(const std::string& value);
-  std::string* _internal_mutable_atopic();
+  const std::string& _internal_a_atopic() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atopic(const std::string& value);
+  std::string* _internal_mutable_a_atopic();
   public:
 
-  // required bytes aData = 2;
-  bool has_adata() const;
+  // required bytes a_aData = 2;
+  bool has_a_adata() const;
   private:
-  bool _internal_has_adata() const;
+  bool _internal_has_a_adata() const;
   public:
-  void clear_adata();
-  const std::string& adata() const;
+  void clear_a_adata();
+  const std::string& a_adata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adata(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adata();
-  PROTOBUF_NODISCARD std::string* release_adata();
-  void set_allocated_adata(std::string* adata);
+  void set_a_adata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adata();
+  PROTOBUF_NODISCARD std::string* release_a_adata();
+  void set_allocated_a_adata(std::string* a_adata);
   private:
-  const std::string& _internal_adata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adata(const std::string& value);
-  std::string* _internal_mutable_adata();
+  const std::string& _internal_a_adata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adata(const std::string& value);
+  std::string* _internal_mutable_a_adata();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver)
@@ -7322,8 +7322,8 @@ class Msg_NotifyObserver final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atopic_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atopic_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -7564,25 +7564,25 @@ class Reply_GetSocketData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.SocketDataArgs data = 1;
-  bool has_data() const;
+  // required .protobuf.mozilla.net.SocketDataArgs a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const ::protobuf::mozilla::net::SocketDataArgs& data() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::SocketDataArgs* release_data();
-  ::protobuf::mozilla::net::SocketDataArgs* mutable_data();
-  void set_allocated_data(::protobuf::mozilla::net::SocketDataArgs* data);
+  void clear_a_data();
+  const ::protobuf::mozilla::net::SocketDataArgs& a_data() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::SocketDataArgs* release_a_data();
+  ::protobuf::mozilla::net::SocketDataArgs* mutable_a_data();
+  void set_allocated_a_data(::protobuf::mozilla::net::SocketDataArgs* a_data);
   private:
-  const ::protobuf::mozilla::net::SocketDataArgs& _internal_data() const;
-  ::protobuf::mozilla::net::SocketDataArgs* _internal_mutable_data();
+  const ::protobuf::mozilla::net::SocketDataArgs& _internal_a_data() const;
+  ::protobuf::mozilla::net::SocketDataArgs* _internal_mutable_a_data();
   public:
-  void unsafe_arena_set_allocated_data(
-      ::protobuf::mozilla::net::SocketDataArgs* data);
-  ::protobuf::mozilla::net::SocketDataArgs* unsafe_arena_release_data();
+  void unsafe_arena_set_allocated_a_data(
+      ::protobuf::mozilla::net::SocketDataArgs* a_data);
+  ::protobuf::mozilla::net::SocketDataArgs* unsafe_arena_release_a_data();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData)
  private:
@@ -7594,7 +7594,7 @@ class Reply_GetSocketData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::SocketDataArgs* data_;
+    ::protobuf::mozilla::net::SocketDataArgs* a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -7835,30 +7835,30 @@ class Reply_GetDNSCacheEntries final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntriesFieldNumber = 1,
+    kAEntriesFieldNumber = 1,
   };
-  // repeated bytes entries = 1;
-  int entries_size() const;
+  // repeated bytes a_entries = 1;
+  int a_entries_size() const;
   private:
-  int _internal_entries_size() const;
+  int _internal_a_entries_size() const;
   public:
-  void clear_entries();
-  const std::string& entries(int index) const;
-  std::string* mutable_entries(int index);
-  void set_entries(int index, const std::string& value);
-  void set_entries(int index, std::string&& value);
-  void set_entries(int index, const char* value);
-  void set_entries(int index, const void* value, size_t size);
-  std::string* add_entries();
-  void add_entries(const std::string& value);
-  void add_entries(std::string&& value);
-  void add_entries(const char* value);
-  void add_entries(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& entries() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_entries();
+  void clear_a_entries();
+  const std::string& a_entries(int index) const;
+  std::string* mutable_a_entries(int index);
+  void set_a_entries(int index, const std::string& value);
+  void set_a_entries(int index, std::string&& value);
+  void set_a_entries(int index, const char* value);
+  void set_a_entries(int index, const void* value, size_t size);
+  std::string* add_a_entries();
+  void add_a_entries(const std::string& value);
+  void add_a_entries(std::string&& value);
+  void add_a_entries(const char* value);
+  void add_a_entries(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_entries() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_entries();
   private:
-  const std::string& _internal_entries(int index) const;
-  std::string* _internal_add_entries();
+  const std::string& _internal_a_entries(int index) const;
+  std::string* _internal_add_a_entries();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries)
@@ -7869,7 +7869,7 @@ class Reply_GetDNSCacheEntries final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> entries_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_entries_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8111,30 +8111,30 @@ class Reply_GetHttpConnectionData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
+    kAParamsFieldNumber = 1,
   };
-  // repeated bytes params = 1;
-  int params_size() const;
+  // repeated bytes a_params = 1;
+  int a_params_size() const;
   private:
-  int _internal_params_size() const;
+  int _internal_a_params_size() const;
   public:
-  void clear_params();
-  const std::string& params(int index) const;
-  std::string* mutable_params(int index);
-  void set_params(int index, const std::string& value);
-  void set_params(int index, std::string&& value);
-  void set_params(int index, const char* value);
-  void set_params(int index, const void* value, size_t size);
-  std::string* add_params();
-  void add_params(const std::string& value);
-  void add_params(std::string&& value);
-  void add_params(const char* value);
-  void add_params(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& params() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_params();
+  void clear_a_params();
+  const std::string& a_params(int index) const;
+  std::string* mutable_a_params(int index);
+  void set_a_params(int index, const std::string& value);
+  void set_a_params(int index, std::string&& value);
+  void set_a_params(int index, const char* value);
+  void set_a_params(int index, const void* value, size_t size);
+  std::string* add_a_params();
+  void add_a_params(const std::string& value);
+  void add_a_params(std::string&& value);
+  void add_a_params(const char* value);
+  void add_a_params(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_params() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_params();
   private:
-  const std::string& _internal_params(int index) const;
-  std::string* _internal_add_params();
+  const std::string& _internal_a_params(int index) const;
+  std::string* _internal_add_a_params();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData)
@@ -8145,7 +8145,7 @@ class Reply_GetHttpConnectionData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> params_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_params_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8387,30 +8387,30 @@ class Reply_GetHttp3ConnectionStatsData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
+    kAParamsFieldNumber = 1,
   };
-  // repeated bytes params = 1;
-  int params_size() const;
+  // repeated bytes a_params = 1;
+  int a_params_size() const;
   private:
-  int _internal_params_size() const;
+  int _internal_a_params_size() const;
   public:
-  void clear_params();
-  const std::string& params(int index) const;
-  std::string* mutable_params(int index);
-  void set_params(int index, const std::string& value);
-  void set_params(int index, std::string&& value);
-  void set_params(int index, const char* value);
-  void set_params(int index, const void* value, size_t size);
-  std::string* add_params();
-  void add_params(const std::string& value);
-  void add_params(std::string&& value);
-  void add_params(const char* value);
-  void add_params(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& params() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_params();
+  void clear_a_params();
+  const std::string& a_params(int index) const;
+  std::string* mutable_a_params(int index);
+  void set_a_params(int index, const std::string& value);
+  void set_a_params(int index, std::string&& value);
+  void set_a_params(int index, const char* value);
+  void set_a_params(int index, const void* value, size_t size);
+  std::string* add_a_params();
+  void add_a_params(const std::string& value);
+  void add_a_params(std::string&& value);
+  void add_a_params(const char* value);
+  void add_a_params(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_params() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_params();
   private:
-  const std::string& _internal_params(int index) const;
-  std::string* _internal_add_params();
+  const std::string& _internal_a_params(int index) const;
+  std::string* _internal_add_a_params();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData)
@@ -8421,7 +8421,7 @@ class Reply_GetHttp3ConnectionStatsData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> params_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_params_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8539,24 +8539,24 @@ class Msg_InitProxyAutoConfigChild final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndpointFieldNumber = 1,
+    kAEndpointFieldNumber = 1,
   };
-  // required bytes endpoint = 1;
-  bool has_endpoint() const;
+  // required bytes a_endpoint = 1;
+  bool has_a_endpoint() const;
   private:
-  bool _internal_has_endpoint() const;
+  bool _internal_has_a_endpoint() const;
   public:
-  void clear_endpoint();
-  const std::string& endpoint() const;
+  void clear_a_endpoint();
+  const std::string& a_endpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_endpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_endpoint();
-  PROTOBUF_NODISCARD std::string* release_endpoint();
-  void set_allocated_endpoint(std::string* endpoint);
+  void set_a_endpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_endpoint();
+  PROTOBUF_NODISCARD std::string* release_a_endpoint();
+  void set_allocated_a_endpoint(std::string* a_endpoint);
   private:
-  const std::string& _internal_endpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endpoint(const std::string& value);
-  std::string* _internal_mutable_endpoint();
+  const std::string& _internal_a_endpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_endpoint(const std::string& value);
+  std::string* _internal_mutable_a_endpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild)
@@ -8569,7 +8569,7 @@ class Msg_InitProxyAutoConfigChild final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -9058,24 +9058,24 @@ class Reply_FlushFOGData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufFieldNumber = 1,
+    kABufFieldNumber = 1,
   };
-  // required bytes buf = 1;
-  bool has_buf() const;
+  // required bytes a_buf = 1;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData)
@@ -9088,7 +9088,7 @@ class Reply_FlushFOGData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -9329,19 +9329,19 @@ class Reply_TestTriggerMetrics final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Reply_TestTriggerMetrics)
@@ -9354,7 +9354,7 @@ class Reply_TestTriggerMetrics final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -9471,43 +9471,43 @@ class Msg_AddNetAddrOverride final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFromFieldNumber = 1,
-    kAToFieldNumber = 2,
+    kAAFromFieldNumber = 1,
+    kAAToFieldNumber = 2,
   };
-  // required bytes aFrom = 1;
-  bool has_afrom() const;
+  // required bytes a_aFrom = 1;
+  bool has_a_afrom() const;
   private:
-  bool _internal_has_afrom() const;
+  bool _internal_has_a_afrom() const;
   public:
-  void clear_afrom();
-  const std::string& afrom() const;
+  void clear_a_afrom();
+  const std::string& a_afrom() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_afrom(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_afrom();
-  PROTOBUF_NODISCARD std::string* release_afrom();
-  void set_allocated_afrom(std::string* afrom);
+  void set_a_afrom(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_afrom();
+  PROTOBUF_NODISCARD std::string* release_a_afrom();
+  void set_allocated_a_afrom(std::string* a_afrom);
   private:
-  const std::string& _internal_afrom() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_afrom(const std::string& value);
-  std::string* _internal_mutable_afrom();
+  const std::string& _internal_a_afrom() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_afrom(const std::string& value);
+  std::string* _internal_mutable_a_afrom();
   public:
 
-  // required bytes aTo = 2;
-  bool has_ato() const;
+  // required bytes a_aTo = 2;
+  bool has_a_ato() const;
   private:
-  bool _internal_has_ato() const;
+  bool _internal_has_a_ato() const;
   public:
-  void clear_ato();
-  const std::string& ato() const;
+  void clear_a_ato();
+  const std::string& a_ato() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ato(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ato();
-  PROTOBUF_NODISCARD std::string* release_ato();
-  void set_allocated_ato(std::string* ato);
+  void set_a_ato(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ato();
+  PROTOBUF_NODISCARD std::string* release_a_ato();
+  void set_allocated_a_ato(std::string* a_ato);
   private:
-  const std::string& _internal_ato() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ato(const std::string& value);
-  std::string* _internal_mutable_ato();
+  const std::string& _internal_a_ato() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ato(const std::string& value);
+  std::string* _internal_mutable_a_ato();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride)
@@ -9523,8 +9523,8 @@ class Msg_AddNetAddrOverride final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr afrom_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ato_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afrom_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ato_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -9765,109 +9765,109 @@ class Msg_PDNSRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHostNameFieldNumber = 1,
-    kTrrServerFieldNumber = 2,
-    kOriginAttributesFieldNumber = 5,
-    kFlagsFieldNumber = 6,
-    kPortFieldNumber = 3,
-    kTypeFieldNumber = 4,
+    kAHostNameFieldNumber = 1,
+    kATrrServerFieldNumber = 2,
+    kAOriginAttributesFieldNumber = 5,
+    kAFlagsFieldNumber = 6,
+    kAPortFieldNumber = 3,
+    kATypeFieldNumber = 4,
   };
-  // required bytes hostName = 1;
-  bool has_hostname() const;
+  // required bytes a_hostName = 1;
+  bool has_a_hostname() const;
   private:
-  bool _internal_has_hostname() const;
+  bool _internal_has_a_hostname() const;
   public:
-  void clear_hostname();
-  const std::string& hostname() const;
+  void clear_a_hostname();
+  const std::string& a_hostname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_hostname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_hostname();
-  PROTOBUF_NODISCARD std::string* release_hostname();
-  void set_allocated_hostname(std::string* hostname);
+  void set_a_hostname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_hostname();
+  PROTOBUF_NODISCARD std::string* release_a_hostname();
+  void set_allocated_a_hostname(std::string* a_hostname);
   private:
-  const std::string& _internal_hostname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_hostname(const std::string& value);
-  std::string* _internal_mutable_hostname();
+  const std::string& _internal_a_hostname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_hostname(const std::string& value);
+  std::string* _internal_mutable_a_hostname();
   public:
 
-  // required bytes trrServer = 2;
-  bool has_trrserver() const;
+  // required bytes a_trrServer = 2;
+  bool has_a_trrserver() const;
   private:
-  bool _internal_has_trrserver() const;
+  bool _internal_has_a_trrserver() const;
   public:
-  void clear_trrserver();
-  const std::string& trrserver() const;
+  void clear_a_trrserver();
+  const std::string& a_trrserver() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_trrserver(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_trrserver();
-  PROTOBUF_NODISCARD std::string* release_trrserver();
-  void set_allocated_trrserver(std::string* trrserver);
+  void set_a_trrserver(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_trrserver();
+  PROTOBUF_NODISCARD std::string* release_a_trrserver();
+  void set_allocated_a_trrserver(std::string* a_trrserver);
   private:
-  const std::string& _internal_trrserver() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_trrserver(const std::string& value);
-  std::string* _internal_mutable_trrserver();
+  const std::string& _internal_a_trrserver() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_trrserver(const std::string& value);
+  std::string* _internal_mutable_a_trrserver();
   public:
 
-  // required bytes originAttributes = 5;
-  bool has_originattributes() const;
+  // required bytes a_originAttributes = 5;
+  bool has_a_originattributes() const;
   private:
-  bool _internal_has_originattributes() const;
+  bool _internal_has_a_originattributes() const;
   public:
-  void clear_originattributes();
-  const std::string& originattributes() const;
+  void clear_a_originattributes();
+  const std::string& a_originattributes() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originattributes(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originattributes();
-  PROTOBUF_NODISCARD std::string* release_originattributes();
-  void set_allocated_originattributes(std::string* originattributes);
+  void set_a_originattributes(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originattributes();
+  PROTOBUF_NODISCARD std::string* release_a_originattributes();
+  void set_allocated_a_originattributes(std::string* a_originattributes);
   private:
-  const std::string& _internal_originattributes() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originattributes(const std::string& value);
-  std::string* _internal_mutable_originattributes();
+  const std::string& _internal_a_originattributes() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originattributes(const std::string& value);
+  std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required bytes flags = 6;
-  bool has_flags() const;
+  // required bytes a_flags = 6;
+  bool has_a_flags() const;
   private:
-  bool _internal_has_flags() const;
+  bool _internal_has_a_flags() const;
   public:
-  void clear_flags();
-  const std::string& flags() const;
+  void clear_a_flags();
+  const std::string& a_flags() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_flags(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_flags();
-  PROTOBUF_NODISCARD std::string* release_flags();
-  void set_allocated_flags(std::string* flags);
+  void set_a_flags(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_flags();
+  PROTOBUF_NODISCARD std::string* release_a_flags();
+  void set_allocated_a_flags(std::string* a_flags);
   private:
-  const std::string& _internal_flags() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_flags(const std::string& value);
-  std::string* _internal_mutable_flags();
+  const std::string& _internal_a_flags() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_flags(const std::string& value);
+  std::string* _internal_mutable_a_flags();
   public:
 
-  // required sint32 port = 3;
-  bool has_port() const;
+  // required sint32 a_port = 3;
+  bool has_a_port() const;
   private:
-  bool _internal_has_port() const;
+  bool _internal_has_a_port() const;
   public:
-  void clear_port();
-  int32_t port() const;
-  void set_port(int32_t value);
+  void clear_a_port();
+  int32_t a_port() const;
+  void set_a_port(int32_t value);
   private:
-  int32_t _internal_port() const;
-  void _internal_set_port(int32_t value);
+  int32_t _internal_a_port() const;
+  void _internal_set_a_port(int32_t value);
   public:
 
-  // required uint32 type = 4;
-  bool has_type() const;
+  // required uint32 a_type = 4;
+  bool has_a_type() const;
   private:
-  bool _internal_has_type() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_type();
-  uint32_t type() const;
-  void set_type(uint32_t value);
+  void clear_a_type();
+  uint32_t a_type() const;
+  void set_a_type(uint32_t value);
   private:
-  uint32_t _internal_type() const;
-  void _internal_set_type(uint32_t value);
+  uint32_t _internal_a_type() const;
+  void _internal_set_a_type(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor)
@@ -9883,12 +9883,12 @@ class Msg_PDNSRequestConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hostname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr trrserver_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originattributes_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr flags_;
-    int32_t port_;
-    uint32_t type_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hostname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_trrserver_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattributes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_flags_;
+    int32_t a_port_;
+    uint32_t a_type_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -10028,41 +10028,41 @@ class Reply_PDNSRequestConstructor final :
 #endif  // __GNUC__
 // Msg_InitCrashReporter
 
-// required .protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
-inline bool Msg_InitCrashReporter::_internal_has_ainitargs() const {
+// required .protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+inline bool Msg_InitCrashReporter::_internal_has_a_ainitargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.ainitargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_ainitargs_ != nullptr);
   return value;
 }
-inline bool Msg_InitCrashReporter::has_ainitargs() const {
-  return _internal_has_ainitargs();
+inline bool Msg_InitCrashReporter::has_a_ainitargs() const {
+  return _internal_has_a_ainitargs();
 }
-inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::_internal_ainitargs() const {
-  const ::protobuf::CrashReporter::CrashReporterInitArgs* p = _impl_.ainitargs_;
+inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::_internal_a_ainitargs() const {
+  const ::protobuf::CrashReporter::CrashReporterInitArgs* p = _impl_.a_ainitargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::CrashReporter::CrashReporterInitArgs&>(
       ::protobuf::CrashReporter::_CrashReporterInitArgs_default_instance_);
 }
-inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::ainitargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.aInitArgs)
-  return _internal_ainitargs();
+inline const ::protobuf::CrashReporter::CrashReporterInitArgs& Msg_InitCrashReporter::a_ainitargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.a_aInitArgs)
+  return _internal_a_ainitargs();
 }
-inline void Msg_InitCrashReporter::unsafe_arena_set_allocated_ainitargs(
-    ::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs) {
+inline void Msg_InitCrashReporter::unsafe_arena_set_allocated_a_ainitargs(
+    ::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ainitargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ainitargs_);
   }
-  _impl_.ainitargs_ = ainitargs;
-  if (ainitargs) {
+  _impl_.a_ainitargs_ = a_ainitargs;
+  if (a_ainitargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.aInitArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.a_aInitArgs)
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::release_ainitargs() {
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::release_a_ainitargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.ainitargs_;
-  _impl_.ainitargs_ = nullptr;
+  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.a_ainitargs_;
+  _impl_.a_ainitargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10074,86 +10074,86 @@ inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::unsafe_arena_release_ainitargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.aInitArgs)
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::unsafe_arena_release_a_ainitargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.a_aInitArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.ainitargs_;
-  _impl_.ainitargs_ = nullptr;
+  ::protobuf::CrashReporter::CrashReporterInitArgs* temp = _impl_.a_ainitargs_;
+  _impl_.a_ainitargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::_internal_mutable_ainitargs() {
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::_internal_mutable_a_ainitargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.ainitargs_ == nullptr) {
+  if (_impl_.a_ainitargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::CrashReporter::CrashReporterInitArgs>(GetArenaForAllocation());
-    _impl_.ainitargs_ = p;
+    _impl_.a_ainitargs_ = p;
   }
-  return _impl_.ainitargs_;
+  return _impl_.a_ainitargs_;
 }
-inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::mutable_ainitargs() {
-  ::protobuf::CrashReporter::CrashReporterInitArgs* _msg = _internal_mutable_ainitargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.aInitArgs)
+inline ::protobuf::CrashReporter::CrashReporterInitArgs* Msg_InitCrashReporter::mutable_a_ainitargs() {
+  ::protobuf::CrashReporter::CrashReporterInitArgs* _msg = _internal_mutable_a_ainitargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.a_aInitArgs)
   return _msg;
 }
-inline void Msg_InitCrashReporter::set_allocated_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* ainitargs) {
+inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashReporter::CrashReporterInitArgs* a_ainitargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ainitargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ainitargs_);
   }
-  if (ainitargs) {
+  if (a_ainitargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ainitargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_ainitargs));
     if (message_arena != submessage_arena) {
-      ainitargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, ainitargs, submessage_arena);
+      a_ainitargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_ainitargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ainitargs_ = ainitargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.aInitArgs)
+  _impl_.a_ainitargs_ = a_ainitargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitCrashReporter.a_aInitArgs)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AddMemoryReport
 
-// required .protobuf.mozilla.dom.MemoryReport aReport = 1;
-inline bool Msg_AddMemoryReport::_internal_has_areport() const {
+// required .protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+inline bool Msg_AddMemoryReport::_internal_has_a_areport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.areport_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_areport_ != nullptr);
   return value;
 }
-inline bool Msg_AddMemoryReport::has_areport() const {
-  return _internal_has_areport();
+inline bool Msg_AddMemoryReport::has_a_areport() const {
+  return _internal_has_a_areport();
 }
-inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::_internal_areport() const {
-  const ::protobuf::mozilla::dom::MemoryReport* p = _impl_.areport_;
+inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::_internal_a_areport() const {
+  const ::protobuf::mozilla::dom::MemoryReport* p = _impl_.a_areport_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::MemoryReport&>(
       ::protobuf::mozilla::dom::_MemoryReport_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::areport() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.aReport)
-  return _internal_areport();
+inline const ::protobuf::mozilla::dom::MemoryReport& Msg_AddMemoryReport::a_areport() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.a_aReport)
+  return _internal_a_areport();
 }
-inline void Msg_AddMemoryReport::unsafe_arena_set_allocated_areport(
-    ::protobuf::mozilla::dom::MemoryReport* areport) {
+inline void Msg_AddMemoryReport::unsafe_arena_set_allocated_a_areport(
+    ::protobuf::mozilla::dom::MemoryReport* a_areport) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.areport_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_areport_);
   }
-  _impl_.areport_ = areport;
-  if (areport) {
+  _impl_.a_areport_ = a_areport;
+  if (a_areport) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.aReport)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.a_aReport)
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_areport() {
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_a_areport() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.areport_;
-  _impl_.areport_ = nullptr;
+  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.a_areport_;
+  _impl_.a_areport_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10165,584 +10165,584 @@ inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::release_arep
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::unsafe_arena_release_areport() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.aReport)
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::unsafe_arena_release_a_areport() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.a_aReport)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.areport_;
-  _impl_.areport_ = nullptr;
+  ::protobuf::mozilla::dom::MemoryReport* temp = _impl_.a_areport_;
+  _impl_.a_areport_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::_internal_mutable_areport() {
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::_internal_mutable_a_areport() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.areport_ == nullptr) {
+  if (_impl_.a_areport_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MemoryReport>(GetArenaForAllocation());
-    _impl_.areport_ = p;
+    _impl_.a_areport_ = p;
   }
-  return _impl_.areport_;
+  return _impl_.a_areport_;
 }
-inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::mutable_areport() {
-  ::protobuf::mozilla::dom::MemoryReport* _msg = _internal_mutable_areport();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.aReport)
+inline ::protobuf::mozilla::dom::MemoryReport* Msg_AddMemoryReport::mutable_a_areport() {
+  ::protobuf::mozilla::dom::MemoryReport* _msg = _internal_mutable_a_areport();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.a_aReport)
   return _msg;
 }
-inline void Msg_AddMemoryReport::set_allocated_areport(::protobuf::mozilla::dom::MemoryReport* areport) {
+inline void Msg_AddMemoryReport::set_allocated_a_areport(::protobuf::mozilla::dom::MemoryReport* a_areport) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.areport_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_areport_);
   }
-  if (areport) {
+  if (a_areport) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(areport));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_areport));
     if (message_arena != submessage_arena) {
-      areport = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, areport, submessage_arena);
+      a_areport = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_areport, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.areport_ = areport;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.aReport)
+  _impl_.a_areport_ = a_areport;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddMemoryReport.a_aReport)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AccumulateChildHistograms
 
-// repeated bytes accumulations = 1;
-inline int Msg_AccumulateChildHistograms::_internal_accumulations_size() const {
-  return _impl_.accumulations_.size();
+// repeated bytes a_accumulations = 1;
+inline int Msg_AccumulateChildHistograms::_internal_a_accumulations_size() const {
+  return _impl_.a_accumulations_.size();
 }
-inline int Msg_AccumulateChildHistograms::accumulations_size() const {
-  return _internal_accumulations_size();
+inline int Msg_AccumulateChildHistograms::a_accumulations_size() const {
+  return _internal_a_accumulations_size();
 }
-inline void Msg_AccumulateChildHistograms::clear_accumulations() {
-  _impl_.accumulations_.Clear();
+inline void Msg_AccumulateChildHistograms::clear_a_accumulations() {
+  _impl_.a_accumulations_.Clear();
 }
-inline std::string* Msg_AccumulateChildHistograms::add_accumulations() {
-  std::string* _s = _internal_add_accumulations();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+inline std::string* Msg_AccumulateChildHistograms::add_a_accumulations() {
+  std::string* _s = _internal_add_a_accumulations();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
   return _s;
 }
-inline const std::string& Msg_AccumulateChildHistograms::_internal_accumulations(int index) const {
-  return _impl_.accumulations_.Get(index);
+inline const std::string& Msg_AccumulateChildHistograms::_internal_a_accumulations(int index) const {
+  return _impl_.a_accumulations_.Get(index);
 }
-inline const std::string& Msg_AccumulateChildHistograms::accumulations(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
-  return _internal_accumulations(index);
+inline const std::string& Msg_AccumulateChildHistograms::a_accumulations(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return _internal_a_accumulations(index);
 }
-inline std::string* Msg_AccumulateChildHistograms::mutable_accumulations(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
-  return _impl_.accumulations_.Mutable(index);
+inline std::string* Msg_AccumulateChildHistograms::mutable_a_accumulations(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return _impl_.a_accumulations_.Mutable(index);
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, const std::string& value) {
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, const std::string& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, std::string&& value) {
-  _impl_.accumulations_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, std::string&& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, const char* value) {
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::set_accumulations(int index, const void* value, size_t size) {
-  _impl_.accumulations_.Mutable(index)->assign(
+inline void Msg_AccumulateChildHistograms::set_a_accumulations(int index, const void* value, size_t size) {
+  _impl_.a_accumulations_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline std::string* Msg_AccumulateChildHistograms::_internal_add_accumulations() {
-  return _impl_.accumulations_.Add();
+inline std::string* Msg_AccumulateChildHistograms::_internal_add_a_accumulations() {
+  return _impl_.a_accumulations_.Add();
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(const std::string& value) {
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(const std::string& value) {
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(std::string&& value) {
-  _impl_.accumulations_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(std::string&& value) {
+  _impl_.a_accumulations_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(const char* value) {
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildHistograms::add_accumulations(const void* value, size_t size) {
-  _impl_.accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
+inline void Msg_AccumulateChildHistograms::add_a_accumulations(const void* value, size_t size) {
+  _impl_.a_accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_AccumulateChildHistograms::accumulations() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
-  return _impl_.accumulations_;
+Msg_AccumulateChildHistograms::a_accumulations() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return _impl_.a_accumulations_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_AccumulateChildHistograms::mutable_accumulations() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.accumulations)
-  return &_impl_.accumulations_;
+Msg_AccumulateChildHistograms::mutable_a_accumulations() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildHistograms.a_accumulations)
+  return &_impl_.a_accumulations_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AccumulateChildKeyedHistograms
 
-// repeated bytes accumulations = 1;
-inline int Msg_AccumulateChildKeyedHistograms::_internal_accumulations_size() const {
-  return _impl_.accumulations_.size();
+// repeated bytes a_accumulations = 1;
+inline int Msg_AccumulateChildKeyedHistograms::_internal_a_accumulations_size() const {
+  return _impl_.a_accumulations_.size();
 }
-inline int Msg_AccumulateChildKeyedHistograms::accumulations_size() const {
-  return _internal_accumulations_size();
+inline int Msg_AccumulateChildKeyedHistograms::a_accumulations_size() const {
+  return _internal_a_accumulations_size();
 }
-inline void Msg_AccumulateChildKeyedHistograms::clear_accumulations() {
-  _impl_.accumulations_.Clear();
+inline void Msg_AccumulateChildKeyedHistograms::clear_a_accumulations() {
+  _impl_.a_accumulations_.Clear();
 }
-inline std::string* Msg_AccumulateChildKeyedHistograms::add_accumulations() {
-  std::string* _s = _internal_add_accumulations();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline std::string* Msg_AccumulateChildKeyedHistograms::add_a_accumulations() {
+  std::string* _s = _internal_add_a_accumulations();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
   return _s;
 }
-inline const std::string& Msg_AccumulateChildKeyedHistograms::_internal_accumulations(int index) const {
-  return _impl_.accumulations_.Get(index);
+inline const std::string& Msg_AccumulateChildKeyedHistograms::_internal_a_accumulations(int index) const {
+  return _impl_.a_accumulations_.Get(index);
 }
-inline const std::string& Msg_AccumulateChildKeyedHistograms::accumulations(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return _internal_accumulations(index);
+inline const std::string& Msg_AccumulateChildKeyedHistograms::a_accumulations(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return _internal_a_accumulations(index);
 }
-inline std::string* Msg_AccumulateChildKeyedHistograms::mutable_accumulations(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return _impl_.accumulations_.Mutable(index);
+inline std::string* Msg_AccumulateChildKeyedHistograms::mutable_a_accumulations(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return _impl_.a_accumulations_.Mutable(index);
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, const std::string& value) {
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, const std::string& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, std::string&& value) {
-  _impl_.accumulations_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, std::string&& value) {
+  _impl_.a_accumulations_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, const char* value) {
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+  _impl_.a_accumulations_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::set_accumulations(int index, const void* value, size_t size) {
-  _impl_.accumulations_.Mutable(index)->assign(
+inline void Msg_AccumulateChildKeyedHistograms::set_a_accumulations(int index, const void* value, size_t size) {
+  _impl_.a_accumulations_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline std::string* Msg_AccumulateChildKeyedHistograms::_internal_add_accumulations() {
-  return _impl_.accumulations_.Add();
+inline std::string* Msg_AccumulateChildKeyedHistograms::_internal_add_a_accumulations() {
+  return _impl_.a_accumulations_.Add();
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(const std::string& value) {
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(const std::string& value) {
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(std::string&& value) {
-  _impl_.accumulations_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(std::string&& value) {
+  _impl_.a_accumulations_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(const char* value) {
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.accumulations_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+  _impl_.a_accumulations_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
-inline void Msg_AccumulateChildKeyedHistograms::add_accumulations(const void* value, size_t size) {
-  _impl_.accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
+inline void Msg_AccumulateChildKeyedHistograms::add_a_accumulations(const void* value, size_t size) {
+  _impl_.a_accumulations_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_AccumulateChildKeyedHistograms::accumulations() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return _impl_.accumulations_;
+Msg_AccumulateChildKeyedHistograms::a_accumulations() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return _impl_.a_accumulations_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_AccumulateChildKeyedHistograms::mutable_accumulations() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.accumulations)
-  return &_impl_.accumulations_;
+Msg_AccumulateChildKeyedHistograms::mutable_a_accumulations() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_AccumulateChildKeyedHistograms.a_accumulations)
+  return &_impl_.a_accumulations_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateChildScalars
 
-// repeated bytes actions = 1;
-inline int Msg_UpdateChildScalars::_internal_actions_size() const {
-  return _impl_.actions_.size();
+// repeated bytes a_actions = 1;
+inline int Msg_UpdateChildScalars::_internal_a_actions_size() const {
+  return _impl_.a_actions_.size();
 }
-inline int Msg_UpdateChildScalars::actions_size() const {
-  return _internal_actions_size();
+inline int Msg_UpdateChildScalars::a_actions_size() const {
+  return _internal_a_actions_size();
 }
-inline void Msg_UpdateChildScalars::clear_actions() {
-  _impl_.actions_.Clear();
+inline void Msg_UpdateChildScalars::clear_a_actions() {
+  _impl_.a_actions_.Clear();
 }
-inline std::string* Msg_UpdateChildScalars::add_actions() {
-  std::string* _s = _internal_add_actions();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+inline std::string* Msg_UpdateChildScalars::add_a_actions() {
+  std::string* _s = _internal_add_a_actions();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
   return _s;
 }
-inline const std::string& Msg_UpdateChildScalars::_internal_actions(int index) const {
-  return _impl_.actions_.Get(index);
+inline const std::string& Msg_UpdateChildScalars::_internal_a_actions(int index) const {
+  return _impl_.a_actions_.Get(index);
 }
-inline const std::string& Msg_UpdateChildScalars::actions(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
-  return _internal_actions(index);
+inline const std::string& Msg_UpdateChildScalars::a_actions(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
+  return _internal_a_actions(index);
 }
-inline std::string* Msg_UpdateChildScalars::mutable_actions(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
-  return _impl_.actions_.Mutable(index);
+inline std::string* Msg_UpdateChildScalars::mutable_a_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
+  return _impl_.a_actions_.Mutable(index);
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, const std::string& value) {
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::set_a_actions(int index, const std::string& value) {
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, std::string&& value) {
-  _impl_.actions_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::set_a_actions(int index, std::string&& value) {
+  _impl_.a_actions_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, const char* value) {
+inline void Msg_UpdateChildScalars::set_a_actions(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::set_actions(int index, const void* value, size_t size) {
-  _impl_.actions_.Mutable(index)->assign(
+inline void Msg_UpdateChildScalars::set_a_actions(int index, const void* value, size_t size) {
+  _impl_.a_actions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline std::string* Msg_UpdateChildScalars::_internal_add_actions() {
-  return _impl_.actions_.Add();
+inline std::string* Msg_UpdateChildScalars::_internal_add_a_actions() {
+  return _impl_.a_actions_.Add();
 }
-inline void Msg_UpdateChildScalars::add_actions(const std::string& value) {
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::add_a_actions(const std::string& value) {
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::add_actions(std::string&& value) {
-  _impl_.actions_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::add_a_actions(std::string&& value) {
+  _impl_.a_actions_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::add_actions(const char* value) {
+inline void Msg_UpdateChildScalars::add_a_actions(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
-inline void Msg_UpdateChildScalars::add_actions(const void* value, size_t size) {
-  _impl_.actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
+inline void Msg_UpdateChildScalars::add_a_actions(const void* value, size_t size) {
+  _impl_.a_actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_UpdateChildScalars::actions() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
-  return _impl_.actions_;
+Msg_UpdateChildScalars::a_actions() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
+  return _impl_.a_actions_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_UpdateChildScalars::mutable_actions() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.actions)
-  return &_impl_.actions_;
+Msg_UpdateChildScalars::mutable_a_actions() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildScalars.a_actions)
+  return &_impl_.a_actions_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateChildKeyedScalars
 
-// repeated bytes actions = 1;
-inline int Msg_UpdateChildKeyedScalars::_internal_actions_size() const {
-  return _impl_.actions_.size();
+// repeated bytes a_actions = 1;
+inline int Msg_UpdateChildKeyedScalars::_internal_a_actions_size() const {
+  return _impl_.a_actions_.size();
 }
-inline int Msg_UpdateChildKeyedScalars::actions_size() const {
-  return _internal_actions_size();
+inline int Msg_UpdateChildKeyedScalars::a_actions_size() const {
+  return _internal_a_actions_size();
 }
-inline void Msg_UpdateChildKeyedScalars::clear_actions() {
-  _impl_.actions_.Clear();
+inline void Msg_UpdateChildKeyedScalars::clear_a_actions() {
+  _impl_.a_actions_.Clear();
 }
-inline std::string* Msg_UpdateChildKeyedScalars::add_actions() {
-  std::string* _s = _internal_add_actions();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+inline std::string* Msg_UpdateChildKeyedScalars::add_a_actions() {
+  std::string* _s = _internal_add_a_actions();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
   return _s;
 }
-inline const std::string& Msg_UpdateChildKeyedScalars::_internal_actions(int index) const {
-  return _impl_.actions_.Get(index);
+inline const std::string& Msg_UpdateChildKeyedScalars::_internal_a_actions(int index) const {
+  return _impl_.a_actions_.Get(index);
 }
-inline const std::string& Msg_UpdateChildKeyedScalars::actions(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
-  return _internal_actions(index);
+inline const std::string& Msg_UpdateChildKeyedScalars::a_actions(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return _internal_a_actions(index);
 }
-inline std::string* Msg_UpdateChildKeyedScalars::mutable_actions(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
-  return _impl_.actions_.Mutable(index);
+inline std::string* Msg_UpdateChildKeyedScalars::mutable_a_actions(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return _impl_.a_actions_.Mutable(index);
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, const std::string& value) {
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, const std::string& value) {
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, std::string&& value) {
-  _impl_.actions_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, std::string&& value) {
+  _impl_.a_actions_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, const char* value) {
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+  _impl_.a_actions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::set_actions(int index, const void* value, size_t size) {
-  _impl_.actions_.Mutable(index)->assign(
+inline void Msg_UpdateChildKeyedScalars::set_a_actions(int index, const void* value, size_t size) {
+  _impl_.a_actions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline std::string* Msg_UpdateChildKeyedScalars::_internal_add_actions() {
-  return _impl_.actions_.Add();
+inline std::string* Msg_UpdateChildKeyedScalars::_internal_add_a_actions() {
+  return _impl_.a_actions_.Add();
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(const std::string& value) {
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(const std::string& value) {
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(std::string&& value) {
-  _impl_.actions_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(std::string&& value) {
+  _impl_.a_actions_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(const char* value) {
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.actions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+  _impl_.a_actions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
-inline void Msg_UpdateChildKeyedScalars::add_actions(const void* value, size_t size) {
-  _impl_.actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
+inline void Msg_UpdateChildKeyedScalars::add_a_actions(const void* value, size_t size) {
+  _impl_.a_actions_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_UpdateChildKeyedScalars::actions() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
-  return _impl_.actions_;
+Msg_UpdateChildKeyedScalars::a_actions() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return _impl_.a_actions_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_UpdateChildKeyedScalars::mutable_actions() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.actions)
-  return &_impl_.actions_;
+Msg_UpdateChildKeyedScalars::mutable_a_actions() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_UpdateChildKeyedScalars.a_actions)
+  return &_impl_.a_actions_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RecordChildEvents
 
-// repeated bytes events = 1;
-inline int Msg_RecordChildEvents::_internal_events_size() const {
-  return _impl_.events_.size();
+// repeated bytes a_events = 1;
+inline int Msg_RecordChildEvents::_internal_a_events_size() const {
+  return _impl_.a_events_.size();
 }
-inline int Msg_RecordChildEvents::events_size() const {
-  return _internal_events_size();
+inline int Msg_RecordChildEvents::a_events_size() const {
+  return _internal_a_events_size();
 }
-inline void Msg_RecordChildEvents::clear_events() {
-  _impl_.events_.Clear();
+inline void Msg_RecordChildEvents::clear_a_events() {
+  _impl_.a_events_.Clear();
 }
-inline std::string* Msg_RecordChildEvents::add_events() {
-  std::string* _s = _internal_add_events();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+inline std::string* Msg_RecordChildEvents::add_a_events() {
+  std::string* _s = _internal_add_a_events();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
   return _s;
 }
-inline const std::string& Msg_RecordChildEvents::_internal_events(int index) const {
-  return _impl_.events_.Get(index);
+inline const std::string& Msg_RecordChildEvents::_internal_a_events(int index) const {
+  return _impl_.a_events_.Get(index);
 }
-inline const std::string& Msg_RecordChildEvents::events(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
-  return _internal_events(index);
+inline const std::string& Msg_RecordChildEvents::a_events(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
+  return _internal_a_events(index);
 }
-inline std::string* Msg_RecordChildEvents::mutable_events(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
-  return _impl_.events_.Mutable(index);
+inline std::string* Msg_RecordChildEvents::mutable_a_events(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
+  return _impl_.a_events_.Mutable(index);
 }
-inline void Msg_RecordChildEvents::set_events(int index, const std::string& value) {
-  _impl_.events_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::set_a_events(int index, const std::string& value) {
+  _impl_.a_events_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::set_events(int index, std::string&& value) {
-  _impl_.events_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::set_a_events(int index, std::string&& value) {
+  _impl_.a_events_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::set_events(int index, const char* value) {
+inline void Msg_RecordChildEvents::set_a_events(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.events_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+  _impl_.a_events_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::set_events(int index, const void* value, size_t size) {
-  _impl_.events_.Mutable(index)->assign(
+inline void Msg_RecordChildEvents::set_a_events(int index, const void* value, size_t size) {
+  _impl_.a_events_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline std::string* Msg_RecordChildEvents::_internal_add_events() {
-  return _impl_.events_.Add();
+inline std::string* Msg_RecordChildEvents::_internal_add_a_events() {
+  return _impl_.a_events_.Add();
 }
-inline void Msg_RecordChildEvents::add_events(const std::string& value) {
-  _impl_.events_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::add_a_events(const std::string& value) {
+  _impl_.a_events_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::add_events(std::string&& value) {
-  _impl_.events_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::add_a_events(std::string&& value) {
+  _impl_.a_events_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::add_events(const char* value) {
+inline void Msg_RecordChildEvents::add_a_events(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.events_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+  _impl_.a_events_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
-inline void Msg_RecordChildEvents::add_events(const void* value, size_t size) {
-  _impl_.events_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
+inline void Msg_RecordChildEvents::add_a_events(const void* value, size_t size) {
+  _impl_.a_events_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_RecordChildEvents::events() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
-  return _impl_.events_;
+Msg_RecordChildEvents::a_events() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
+  return _impl_.a_events_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_RecordChildEvents::mutable_events() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.events)
-  return &_impl_.events_;
+Msg_RecordChildEvents::mutable_a_events() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_RecordChildEvents.a_events)
+  return &_impl_.a_events_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RecordDiscardedData
 
-// required bytes data = 1;
-inline bool Msg_RecordDiscardedData::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool Msg_RecordDiscardedData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RecordDiscardedData::has_data() const {
-  return _internal_has_data();
+inline bool Msg_RecordDiscardedData::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void Msg_RecordDiscardedData::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void Msg_RecordDiscardedData::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RecordDiscardedData::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.data)
-  return _internal_data();
+inline const std::string& Msg_RecordDiscardedData::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RecordDiscardedData::set_data(ArgT0&& arg0, ArgT... args) {
+void Msg_RecordDiscardedData::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.a_data)
 }
-inline std::string* Msg_RecordDiscardedData::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.data)
+inline std::string* Msg_RecordDiscardedData::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.a_data)
   return _s;
 }
-inline const std::string& Msg_RecordDiscardedData::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& Msg_RecordDiscardedData::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void Msg_RecordDiscardedData::_internal_set_data(const std::string& value) {
+inline void Msg_RecordDiscardedData::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RecordDiscardedData::_internal_mutable_data() {
+inline std::string* Msg_RecordDiscardedData::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RecordDiscardedData::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.data)
-  if (!_internal_has_data()) {
+inline std::string* Msg_RecordDiscardedData::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RecordDiscardedData::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void Msg_RecordDiscardedData::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_RecordDiscardedData.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PWebrtcTCPSocketConstructor
 
-// optional bytes tabId = 1;
-inline bool Msg_PWebrtcTCPSocketConstructor::_internal_has_tabid() const {
+// optional bytes a_tabId = 1;
+inline bool Msg_PWebrtcTCPSocketConstructor::_internal_has_a_tabid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PWebrtcTCPSocketConstructor::has_tabid() const {
-  return _internal_has_tabid();
+inline bool Msg_PWebrtcTCPSocketConstructor::has_a_tabid() const {
+  return _internal_has_a_tabid();
 }
-inline void Msg_PWebrtcTCPSocketConstructor::clear_tabid() {
-  _impl_.tabid_.ClearToEmpty();
+inline void Msg_PWebrtcTCPSocketConstructor::clear_a_tabid() {
+  _impl_.a_tabid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PWebrtcTCPSocketConstructor::tabid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.tabId)
-  return _internal_tabid();
+inline const std::string& Msg_PWebrtcTCPSocketConstructor::a_tabid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_tabId)
+  return _internal_a_tabid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PWebrtcTCPSocketConstructor::set_tabid(ArgT0&& arg0, ArgT... args) {
+void Msg_PWebrtcTCPSocketConstructor::set_a_tabid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.tabId)
+ _impl_.a_tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_tabId)
 }
-inline std::string* Msg_PWebrtcTCPSocketConstructor::mutable_tabid() {
-  std::string* _s = _internal_mutable_tabid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.tabId)
+inline std::string* Msg_PWebrtcTCPSocketConstructor::mutable_a_tabid() {
+  std::string* _s = _internal_mutable_a_tabid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_tabId)
   return _s;
 }
-inline const std::string& Msg_PWebrtcTCPSocketConstructor::_internal_tabid() const {
-  return _impl_.tabid_.Get();
+inline const std::string& Msg_PWebrtcTCPSocketConstructor::_internal_a_tabid() const {
+  return _impl_.a_tabid_.Get();
 }
-inline void Msg_PWebrtcTCPSocketConstructor::_internal_set_tabid(const std::string& value) {
+inline void Msg_PWebrtcTCPSocketConstructor::_internal_set_a_tabid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.tabid_.Set(value, GetArenaForAllocation());
+  _impl_.a_tabid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PWebrtcTCPSocketConstructor::_internal_mutable_tabid() {
+inline std::string* Msg_PWebrtcTCPSocketConstructor::_internal_mutable_a_tabid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.tabid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_tabid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PWebrtcTCPSocketConstructor::release_tabid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.tabId)
-  if (!_internal_has_tabid()) {
+inline std::string* Msg_PWebrtcTCPSocketConstructor::release_a_tabid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_tabId)
+  if (!_internal_has_a_tabid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.tabid_.Release();
+  auto* p = _impl_.a_tabid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.tabid_.IsDefault()) {
-    _impl_.tabid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_tabid_.IsDefault()) {
+    _impl_.a_tabid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PWebrtcTCPSocketConstructor::set_allocated_tabid(std::string* tabid) {
-  if (tabid != nullptr) {
+inline void Msg_PWebrtcTCPSocketConstructor::set_allocated_a_tabid(std::string* a_tabid) {
+  if (a_tabid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.tabid_.SetAllocated(tabid, GetArenaForAllocation());
+  _impl_.a_tabid_.SetAllocated(a_tabid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.tabid_.IsDefault()) {
-    _impl_.tabid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_tabid_.IsDefault()) {
+    _impl_.a_tabid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.tabId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_tabId)
 }
 
 // -------------------------------------------------------------------
@@ -10753,41 +10753,41 @@ inline void Msg_PWebrtcTCPSocketConstructor::set_allocated_tabid(std::string* ta
 
 // Msg_ObserveHttpActivity
 
-// required .protobuf.mozilla.net.HttpActivityArgs aActivityArgs = 1;
-inline bool Msg_ObserveHttpActivity::_internal_has_aactivityargs() const {
+// required .protobuf.mozilla.net.HttpActivityArgs a_aActivityArgs = 1;
+inline bool Msg_ObserveHttpActivity::_internal_has_a_aactivityargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aactivityargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aactivityargs_ != nullptr);
   return value;
 }
-inline bool Msg_ObserveHttpActivity::has_aactivityargs() const {
-  return _internal_has_aactivityargs();
+inline bool Msg_ObserveHttpActivity::has_a_aactivityargs() const {
+  return _internal_has_a_aactivityargs();
 }
-inline const ::protobuf::mozilla::net::HttpActivityArgs& Msg_ObserveHttpActivity::_internal_aactivityargs() const {
-  const ::protobuf::mozilla::net::HttpActivityArgs* p = _impl_.aactivityargs_;
+inline const ::protobuf::mozilla::net::HttpActivityArgs& Msg_ObserveHttpActivity::_internal_a_aactivityargs() const {
+  const ::protobuf::mozilla::net::HttpActivityArgs* p = _impl_.a_aactivityargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::HttpActivityArgs&>(
       ::protobuf::mozilla::net::_HttpActivityArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::HttpActivityArgs& Msg_ObserveHttpActivity::aactivityargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityArgs)
-  return _internal_aactivityargs();
+inline const ::protobuf::mozilla::net::HttpActivityArgs& Msg_ObserveHttpActivity::a_aactivityargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityArgs)
+  return _internal_a_aactivityargs();
 }
-inline void Msg_ObserveHttpActivity::unsafe_arena_set_allocated_aactivityargs(
-    ::protobuf::mozilla::net::HttpActivityArgs* aactivityargs) {
+inline void Msg_ObserveHttpActivity::unsafe_arena_set_allocated_a_aactivityargs(
+    ::protobuf::mozilla::net::HttpActivityArgs* a_aactivityargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aactivityargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aactivityargs_);
   }
-  _impl_.aactivityargs_ = aactivityargs;
-  if (aactivityargs) {
+  _impl_.a_aactivityargs_ = a_aactivityargs;
+  if (a_aactivityargs) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityArgs)
 }
-inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::release_aactivityargs() {
+inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::release_a_aactivityargs() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::HttpActivityArgs* temp = _impl_.aactivityargs_;
-  _impl_.aactivityargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpActivityArgs* temp = _impl_.a_aactivityargs_;
+  _impl_.a_aactivityargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10799,337 +10799,337 @@ inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::unsafe_arena_release_aactivityargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityArgs)
+inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::unsafe_arena_release_a_aactivityargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityArgs)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::net::HttpActivityArgs* temp = _impl_.aactivityargs_;
-  _impl_.aactivityargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpActivityArgs* temp = _impl_.a_aactivityargs_;
+  _impl_.a_aactivityargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::_internal_mutable_aactivityargs() {
+inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::_internal_mutable_a_aactivityargs() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.aactivityargs_ == nullptr) {
+  if (_impl_.a_aactivityargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpActivityArgs>(GetArenaForAllocation());
-    _impl_.aactivityargs_ = p;
+    _impl_.a_aactivityargs_ = p;
   }
-  return _impl_.aactivityargs_;
+  return _impl_.a_aactivityargs_;
 }
-inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::mutable_aactivityargs() {
-  ::protobuf::mozilla::net::HttpActivityArgs* _msg = _internal_mutable_aactivityargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityArgs)
+inline ::protobuf::mozilla::net::HttpActivityArgs* Msg_ObserveHttpActivity::mutable_a_aactivityargs() {
+  ::protobuf::mozilla::net::HttpActivityArgs* _msg = _internal_mutable_a_aactivityargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityArgs)
   return _msg;
 }
-inline void Msg_ObserveHttpActivity::set_allocated_aactivityargs(::protobuf::mozilla::net::HttpActivityArgs* aactivityargs) {
+inline void Msg_ObserveHttpActivity::set_allocated_a_aactivityargs(::protobuf::mozilla::net::HttpActivityArgs* a_aactivityargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aactivityargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aactivityargs_);
   }
-  if (aactivityargs) {
+  if (a_aactivityargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aactivityargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aactivityargs));
     if (message_arena != submessage_arena) {
-      aactivityargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aactivityargs, submessage_arena);
+      a_aactivityargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aactivityargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.aactivityargs_ = aactivityargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityArgs)
+  _impl_.a_aactivityargs_ = a_aactivityargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityArgs)
 }
 
-// required uint32 aActivityType = 2;
-inline bool Msg_ObserveHttpActivity::_internal_has_aactivitytype() const {
+// required uint32 a_aActivityType = 2;
+inline bool Msg_ObserveHttpActivity::_internal_has_a_aactivitytype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ObserveHttpActivity::has_aactivitytype() const {
-  return _internal_has_aactivitytype();
+inline bool Msg_ObserveHttpActivity::has_a_aactivitytype() const {
+  return _internal_has_a_aactivitytype();
 }
-inline void Msg_ObserveHttpActivity::clear_aactivitytype() {
-  _impl_.aactivitytype_ = 0u;
+inline void Msg_ObserveHttpActivity::clear_a_aactivitytype() {
+  _impl_.a_aactivitytype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_ObserveHttpActivity::_internal_aactivitytype() const {
-  return _impl_.aactivitytype_;
+inline uint32_t Msg_ObserveHttpActivity::_internal_a_aactivitytype() const {
+  return _impl_.a_aactivitytype_;
 }
-inline uint32_t Msg_ObserveHttpActivity::aactivitytype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityType)
-  return _internal_aactivitytype();
+inline uint32_t Msg_ObserveHttpActivity::a_aactivitytype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityType)
+  return _internal_a_aactivitytype();
 }
-inline void Msg_ObserveHttpActivity::_internal_set_aactivitytype(uint32_t value) {
+inline void Msg_ObserveHttpActivity::_internal_set_a_aactivitytype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aactivitytype_ = value;
+  _impl_.a_aactivitytype_ = value;
 }
-inline void Msg_ObserveHttpActivity::set_aactivitytype(uint32_t value) {
-  _internal_set_aactivitytype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivityType)
+inline void Msg_ObserveHttpActivity::set_a_aactivitytype(uint32_t value) {
+  _internal_set_a_aactivitytype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivityType)
 }
 
-// required uint32 aActivitySubtype = 3;
-inline bool Msg_ObserveHttpActivity::_internal_has_aactivitysubtype() const {
+// required uint32 a_aActivitySubtype = 3;
+inline bool Msg_ObserveHttpActivity::_internal_has_a_aactivitysubtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_ObserveHttpActivity::has_aactivitysubtype() const {
-  return _internal_has_aactivitysubtype();
+inline bool Msg_ObserveHttpActivity::has_a_aactivitysubtype() const {
+  return _internal_has_a_aactivitysubtype();
 }
-inline void Msg_ObserveHttpActivity::clear_aactivitysubtype() {
-  _impl_.aactivitysubtype_ = 0u;
+inline void Msg_ObserveHttpActivity::clear_a_aactivitysubtype() {
+  _impl_.a_aactivitysubtype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t Msg_ObserveHttpActivity::_internal_aactivitysubtype() const {
-  return _impl_.aactivitysubtype_;
+inline uint32_t Msg_ObserveHttpActivity::_internal_a_aactivitysubtype() const {
+  return _impl_.a_aactivitysubtype_;
 }
-inline uint32_t Msg_ObserveHttpActivity::aactivitysubtype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivitySubtype)
-  return _internal_aactivitysubtype();
+inline uint32_t Msg_ObserveHttpActivity::a_aactivitysubtype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivitySubtype)
+  return _internal_a_aactivitysubtype();
 }
-inline void Msg_ObserveHttpActivity::_internal_set_aactivitysubtype(uint32_t value) {
+inline void Msg_ObserveHttpActivity::_internal_set_a_aactivitysubtype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.aactivitysubtype_ = value;
+  _impl_.a_aactivitysubtype_ = value;
 }
-inline void Msg_ObserveHttpActivity::set_aactivitysubtype(uint32_t value) {
-  _internal_set_aactivitysubtype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aActivitySubtype)
+inline void Msg_ObserveHttpActivity::set_a_aactivitysubtype(uint32_t value) {
+  _internal_set_a_aactivitysubtype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aActivitySubtype)
 }
 
-// required bytes aTimestamp = 4;
-inline bool Msg_ObserveHttpActivity::_internal_has_atimestamp() const {
+// required bytes a_aTimestamp = 4;
+inline bool Msg_ObserveHttpActivity::_internal_has_a_atimestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ObserveHttpActivity::has_atimestamp() const {
-  return _internal_has_atimestamp();
+inline bool Msg_ObserveHttpActivity::has_a_atimestamp() const {
+  return _internal_has_a_atimestamp();
 }
-inline void Msg_ObserveHttpActivity::clear_atimestamp() {
-  _impl_.atimestamp_.ClearToEmpty();
+inline void Msg_ObserveHttpActivity::clear_a_atimestamp() {
+  _impl_.a_atimestamp_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ObserveHttpActivity::atimestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aTimestamp)
-  return _internal_atimestamp();
+inline const std::string& Msg_ObserveHttpActivity::a_atimestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aTimestamp)
+  return _internal_a_atimestamp();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ObserveHttpActivity::set_atimestamp(ArgT0&& arg0, ArgT... args) {
+void Msg_ObserveHttpActivity::set_a_atimestamp(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atimestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aTimestamp)
+ _impl_.a_atimestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aTimestamp)
 }
-inline std::string* Msg_ObserveHttpActivity::mutable_atimestamp() {
-  std::string* _s = _internal_mutable_atimestamp();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aTimestamp)
+inline std::string* Msg_ObserveHttpActivity::mutable_a_atimestamp() {
+  std::string* _s = _internal_mutable_a_atimestamp();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aTimestamp)
   return _s;
 }
-inline const std::string& Msg_ObserveHttpActivity::_internal_atimestamp() const {
-  return _impl_.atimestamp_.Get();
+inline const std::string& Msg_ObserveHttpActivity::_internal_a_atimestamp() const {
+  return _impl_.a_atimestamp_.Get();
 }
-inline void Msg_ObserveHttpActivity::_internal_set_atimestamp(const std::string& value) {
+inline void Msg_ObserveHttpActivity::_internal_set_a_atimestamp(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atimestamp_.Set(value, GetArenaForAllocation());
+  _impl_.a_atimestamp_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ObserveHttpActivity::_internal_mutable_atimestamp() {
+inline std::string* Msg_ObserveHttpActivity::_internal_mutable_a_atimestamp() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atimestamp_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atimestamp_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ObserveHttpActivity::release_atimestamp() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aTimestamp)
-  if (!_internal_has_atimestamp()) {
+inline std::string* Msg_ObserveHttpActivity::release_a_atimestamp() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aTimestamp)
+  if (!_internal_has_a_atimestamp()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atimestamp_.Release();
+  auto* p = _impl_.a_atimestamp_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atimestamp_.IsDefault()) {
-    _impl_.atimestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atimestamp_.IsDefault()) {
+    _impl_.a_atimestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ObserveHttpActivity::set_allocated_atimestamp(std::string* atimestamp) {
-  if (atimestamp != nullptr) {
+inline void Msg_ObserveHttpActivity::set_allocated_a_atimestamp(std::string* a_atimestamp) {
+  if (a_atimestamp != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atimestamp_.SetAllocated(atimestamp, GetArenaForAllocation());
+  _impl_.a_atimestamp_.SetAllocated(a_atimestamp, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atimestamp_.IsDefault()) {
-    _impl_.atimestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atimestamp_.IsDefault()) {
+    _impl_.a_atimestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aTimestamp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aTimestamp)
 }
 
-// required uint64 aExtraSizeData = 5;
-inline bool Msg_ObserveHttpActivity::_internal_has_aextrasizedata() const {
+// required uint64 a_aExtraSizeData = 5;
+inline bool Msg_ObserveHttpActivity::_internal_has_a_aextrasizedata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_ObserveHttpActivity::has_aextrasizedata() const {
-  return _internal_has_aextrasizedata();
+inline bool Msg_ObserveHttpActivity::has_a_aextrasizedata() const {
+  return _internal_has_a_aextrasizedata();
 }
-inline void Msg_ObserveHttpActivity::clear_aextrasizedata() {
-  _impl_.aextrasizedata_ = uint64_t{0u};
+inline void Msg_ObserveHttpActivity::clear_a_aextrasizedata() {
+  _impl_.a_aextrasizedata_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline uint64_t Msg_ObserveHttpActivity::_internal_aextrasizedata() const {
-  return _impl_.aextrasizedata_;
+inline uint64_t Msg_ObserveHttpActivity::_internal_a_aextrasizedata() const {
+  return _impl_.a_aextrasizedata_;
 }
-inline uint64_t Msg_ObserveHttpActivity::aextrasizedata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraSizeData)
-  return _internal_aextrasizedata();
+inline uint64_t Msg_ObserveHttpActivity::a_aextrasizedata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraSizeData)
+  return _internal_a_aextrasizedata();
 }
-inline void Msg_ObserveHttpActivity::_internal_set_aextrasizedata(uint64_t value) {
+inline void Msg_ObserveHttpActivity::_internal_set_a_aextrasizedata(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.aextrasizedata_ = value;
+  _impl_.a_aextrasizedata_ = value;
 }
-inline void Msg_ObserveHttpActivity::set_aextrasizedata(uint64_t value) {
-  _internal_set_aextrasizedata(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraSizeData)
+inline void Msg_ObserveHttpActivity::set_a_aextrasizedata(uint64_t value) {
+  _internal_set_a_aextrasizedata(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraSizeData)
 }
 
-// required bytes aExtraStringData = 6;
-inline bool Msg_ObserveHttpActivity::_internal_has_aextrastringdata() const {
+// required bytes a_aExtraStringData = 6;
+inline bool Msg_ObserveHttpActivity::_internal_has_a_aextrastringdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ObserveHttpActivity::has_aextrastringdata() const {
-  return _internal_has_aextrastringdata();
+inline bool Msg_ObserveHttpActivity::has_a_aextrastringdata() const {
+  return _internal_has_a_aextrastringdata();
 }
-inline void Msg_ObserveHttpActivity::clear_aextrastringdata() {
-  _impl_.aextrastringdata_.ClearToEmpty();
+inline void Msg_ObserveHttpActivity::clear_a_aextrastringdata() {
+  _impl_.a_aextrastringdata_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ObserveHttpActivity::aextrastringdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraStringData)
-  return _internal_aextrastringdata();
+inline const std::string& Msg_ObserveHttpActivity::a_aextrastringdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraStringData)
+  return _internal_a_aextrastringdata();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ObserveHttpActivity::set_aextrastringdata(ArgT0&& arg0, ArgT... args) {
+void Msg_ObserveHttpActivity::set_a_aextrastringdata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aextrastringdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraStringData)
+ _impl_.a_aextrastringdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraStringData)
 }
-inline std::string* Msg_ObserveHttpActivity::mutable_aextrastringdata() {
-  std::string* _s = _internal_mutable_aextrastringdata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraStringData)
+inline std::string* Msg_ObserveHttpActivity::mutable_a_aextrastringdata() {
+  std::string* _s = _internal_mutable_a_aextrastringdata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraStringData)
   return _s;
 }
-inline const std::string& Msg_ObserveHttpActivity::_internal_aextrastringdata() const {
-  return _impl_.aextrastringdata_.Get();
+inline const std::string& Msg_ObserveHttpActivity::_internal_a_aextrastringdata() const {
+  return _impl_.a_aextrastringdata_.Get();
 }
-inline void Msg_ObserveHttpActivity::_internal_set_aextrastringdata(const std::string& value) {
+inline void Msg_ObserveHttpActivity::_internal_set_a_aextrastringdata(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aextrastringdata_.Set(value, GetArenaForAllocation());
+  _impl_.a_aextrastringdata_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ObserveHttpActivity::_internal_mutable_aextrastringdata() {
+inline std::string* Msg_ObserveHttpActivity::_internal_mutable_a_aextrastringdata() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aextrastringdata_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aextrastringdata_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ObserveHttpActivity::release_aextrastringdata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraStringData)
-  if (!_internal_has_aextrastringdata()) {
+inline std::string* Msg_ObserveHttpActivity::release_a_aextrastringdata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraStringData)
+  if (!_internal_has_a_aextrastringdata()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aextrastringdata_.Release();
+  auto* p = _impl_.a_aextrastringdata_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aextrastringdata_.IsDefault()) {
-    _impl_.aextrastringdata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aextrastringdata_.IsDefault()) {
+    _impl_.a_aextrastringdata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ObserveHttpActivity::set_allocated_aextrastringdata(std::string* aextrastringdata) {
-  if (aextrastringdata != nullptr) {
+inline void Msg_ObserveHttpActivity::set_allocated_a_aextrastringdata(std::string* a_aextrastringdata) {
+  if (a_aextrastringdata != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aextrastringdata_.SetAllocated(aextrastringdata, GetArenaForAllocation());
+  _impl_.a_aextrastringdata_.SetAllocated(a_aextrastringdata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aextrastringdata_.IsDefault()) {
-    _impl_.aextrastringdata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aextrastringdata_.IsDefault()) {
+    _impl_.a_aextrastringdata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.aExtraStringData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ObserveHttpActivity.a_aExtraStringData)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitSocketBackground
 
-// required bytes aEndpoint = 1;
-inline bool Msg_InitSocketBackground::_internal_has_aendpoint() const {
+// required bytes a_aEndpoint = 1;
+inline bool Msg_InitSocketBackground::_internal_has_a_aendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitSocketBackground::has_aendpoint() const {
-  return _internal_has_aendpoint();
+inline bool Msg_InitSocketBackground::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
 }
-inline void Msg_InitSocketBackground::clear_aendpoint() {
-  _impl_.aendpoint_.ClearToEmpty();
+inline void Msg_InitSocketBackground::clear_a_aendpoint() {
+  _impl_.a_aendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitSocketBackground::aendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.aEndpoint)
-  return _internal_aendpoint();
+inline const std::string& Msg_InitSocketBackground::a_aendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.a_aEndpoint)
+  return _internal_a_aendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitSocketBackground::set_aendpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_InitSocketBackground::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.aEndpoint)
+ _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.a_aEndpoint)
 }
-inline std::string* Msg_InitSocketBackground::mutable_aendpoint() {
-  std::string* _s = _internal_mutable_aendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.aEndpoint)
+inline std::string* Msg_InitSocketBackground::mutable_a_aendpoint() {
+  std::string* _s = _internal_mutable_a_aendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.a_aEndpoint)
   return _s;
 }
-inline const std::string& Msg_InitSocketBackground::_internal_aendpoint() const {
-  return _impl_.aendpoint_.Get();
+inline const std::string& Msg_InitSocketBackground::_internal_a_aendpoint() const {
+  return _impl_.a_aendpoint_.Get();
 }
-inline void Msg_InitSocketBackground::_internal_set_aendpoint(const std::string& value) {
+inline void Msg_InitSocketBackground::_internal_set_a_aendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitSocketBackground::_internal_mutable_aendpoint() {
+inline std::string* Msg_InitSocketBackground::_internal_mutable_a_aendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitSocketBackground::release_aendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.aEndpoint)
-  if (!_internal_has_aendpoint()) {
+inline std::string* Msg_InitSocketBackground::release_a_aendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.a_aEndpoint)
+  if (!_internal_has_a_aendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aendpoint_.Release();
+  auto* p = _impl_.a_aendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitSocketBackground::set_allocated_aendpoint(std::string* aendpoint) {
-  if (aendpoint != nullptr) {
+inline void Msg_InitSocketBackground::set_allocated_a_aendpoint(std::string* a_aendpoint) {
+  if (a_aendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aendpoint_.SetAllocated(aendpoint, GetArenaForAllocation());
+  _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.aEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketBackground.a_aEndpoint)
 }
 
 // -------------------------------------------------------------------
@@ -11144,100 +11144,100 @@ inline void Msg_InitSocketBackground::set_allocated_aendpoint(std::string* aendp
 
 // Msg_PProxyConfigLookupConstructor
 
-// required bytes aUri = 1;
-inline bool Msg_PProxyConfigLookupConstructor::_internal_has_auri() const {
+// required bytes a_aUri = 1;
+inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PProxyConfigLookupConstructor::has_auri() const {
-  return _internal_has_auri();
+inline bool Msg_PProxyConfigLookupConstructor::has_a_auri() const {
+  return _internal_has_a_auri();
 }
-inline void Msg_PProxyConfigLookupConstructor::clear_auri() {
-  _impl_.auri_.ClearToEmpty();
+inline void Msg_PProxyConfigLookupConstructor::clear_a_auri() {
+  _impl_.a_auri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PProxyConfigLookupConstructor::auri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aUri)
-  return _internal_auri();
+inline const std::string& Msg_PProxyConfigLookupConstructor::a_auri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
+  return _internal_a_auri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PProxyConfigLookupConstructor::set_auri(ArgT0&& arg0, ArgT... args) {
+void Msg_PProxyConfigLookupConstructor::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aUri)
+ _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
 }
-inline std::string* Msg_PProxyConfigLookupConstructor::mutable_auri() {
-  std::string* _s = _internal_mutable_auri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aUri)
+inline std::string* Msg_PProxyConfigLookupConstructor::mutable_a_auri() {
+  std::string* _s = _internal_mutable_a_auri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
   return _s;
 }
-inline const std::string& Msg_PProxyConfigLookupConstructor::_internal_auri() const {
-  return _impl_.auri_.Get();
+inline const std::string& Msg_PProxyConfigLookupConstructor::_internal_a_auri() const {
+  return _impl_.a_auri_.Get();
 }
-inline void Msg_PProxyConfigLookupConstructor::_internal_set_auri(const std::string& value) {
+inline void Msg_PProxyConfigLookupConstructor::_internal_set_a_auri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.auri_.Set(value, GetArenaForAllocation());
+  _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PProxyConfigLookupConstructor::_internal_mutable_auri() {
+inline std::string* Msg_PProxyConfigLookupConstructor::_internal_mutable_a_auri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.auri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PProxyConfigLookupConstructor::release_auri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aUri)
-  if (!_internal_has_auri()) {
+inline std::string* Msg_PProxyConfigLookupConstructor::release_a_auri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
+  if (!_internal_has_a_auri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.auri_.Release();
+  auto* p = _impl_.a_auri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PProxyConfigLookupConstructor::set_allocated_auri(std::string* auri) {
-  if (auri != nullptr) {
+inline void Msg_PProxyConfigLookupConstructor::set_allocated_a_auri(std::string* a_auri) {
+  if (a_auri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.auri_.SetAllocated(auri, GetArenaForAllocation());
+  _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aUri)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
 }
 
-// required uint32 aFlags = 2;
-inline bool Msg_PProxyConfigLookupConstructor::_internal_has_aflags() const {
+// required uint32 a_aFlags = 2;
+inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_aflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PProxyConfigLookupConstructor::has_aflags() const {
-  return _internal_has_aflags();
+inline bool Msg_PProxyConfigLookupConstructor::has_a_aflags() const {
+  return _internal_has_a_aflags();
 }
-inline void Msg_PProxyConfigLookupConstructor::clear_aflags() {
-  _impl_.aflags_ = 0u;
+inline void Msg_PProxyConfigLookupConstructor::clear_a_aflags() {
+  _impl_.a_aflags_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_PProxyConfigLookupConstructor::_internal_aflags() const {
-  return _impl_.aflags_;
+inline uint32_t Msg_PProxyConfigLookupConstructor::_internal_a_aflags() const {
+  return _impl_.a_aflags_;
 }
-inline uint32_t Msg_PProxyConfigLookupConstructor::aflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aFlags)
-  return _internal_aflags();
+inline uint32_t Msg_PProxyConfigLookupConstructor::a_aflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aFlags)
+  return _internal_a_aflags();
 }
-inline void Msg_PProxyConfigLookupConstructor::_internal_set_aflags(uint32_t value) {
+inline void Msg_PProxyConfigLookupConstructor::_internal_set_a_aflags(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aflags_ = value;
+  _impl_.a_aflags_ = value;
 }
-inline void Msg_PProxyConfigLookupConstructor::set_aflags(uint32_t value) {
-  _internal_set_aflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.aFlags)
+inline void Msg_PProxyConfigLookupConstructor::set_a_aflags(uint32_t value) {
+  _internal_set_a_aflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aFlags)
 }
 
 // -------------------------------------------------------------------
@@ -11248,41 +11248,41 @@ inline void Msg_PProxyConfigLookupConstructor::set_aflags(uint32_t value) {
 
 // Msg_ExcludeHttp2OrHttp3
 
-// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs aArgs = 1;
-inline bool Msg_ExcludeHttp2OrHttp3::_internal_has_aargs() const {
+// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
+inline bool Msg_ExcludeHttp2OrHttp3::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
   return value;
 }
-inline bool Msg_ExcludeHttp2OrHttp3::has_aargs() const {
-  return _internal_has_aargs();
+inline bool Msg_ExcludeHttp2OrHttp3::has_a_aargs() const {
+  return _internal_has_a_aargs();
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ExcludeHttp2OrHttp3::_internal_aargs() const {
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.aargs_;
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ExcludeHttp2OrHttp3::_internal_a_aargs() const {
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.a_aargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs&>(
       ::protobuf::mozilla::net::_HttpConnectionInfoCloneArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ExcludeHttp2OrHttp3::aargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.aArgs)
-  return _internal_aargs();
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ExcludeHttp2OrHttp3::a_aargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.a_aArgs)
+  return _internal_a_aargs();
 }
-inline void Msg_ExcludeHttp2OrHttp3::unsafe_arena_set_allocated_aargs(
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aargs) {
+inline void Msg_ExcludeHttp2OrHttp3::unsafe_arena_set_allocated_a_aargs(
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  _impl_.aargs_ = aargs;
-  if (aargs) {
+  _impl_.a_aargs_ = a_aargs;
+  if (a_aargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.aArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.a_aArgs)
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::release_aargs() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::release_a_aargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11294,230 +11294,230 @@ inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2Or
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::unsafe_arena_release_aargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.aArgs)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::unsafe_arena_release_a_aargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.a_aArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::_internal_mutable_aargs() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::_internal_mutable_a_aargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aargs_ == nullptr) {
+  if (_impl_.a_aargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpConnectionInfoCloneArgs>(GetArenaForAllocation());
-    _impl_.aargs_ = p;
+    _impl_.a_aargs_ = p;
   }
-  return _impl_.aargs_;
+  return _impl_.a_aargs_;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::mutable_aargs() {
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_aargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.aArgs)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ExcludeHttp2OrHttp3::mutable_a_aargs() {
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_a_aargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.a_aArgs)
   return _msg;
 }
-inline void Msg_ExcludeHttp2OrHttp3::set_allocated_aargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aargs) {
+inline void Msg_ExcludeHttp2OrHttp3::set_allocated_a_aargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  if (aargs) {
+  if (a_aargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aargs));
     if (message_arena != submessage_arena) {
-      aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aargs, submessage_arena);
+      a_aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aargs_ = aargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.aArgs)
+  _impl_.a_aargs_ = a_aargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_ExcludeHttp2OrHttp3.a_aArgs)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnConsoleMessage
 
-// required bytes aMessage = 1;
-inline bool Msg_OnConsoleMessage::_internal_has_amessage() const {
+// required bytes a_aMessage = 1;
+inline bool Msg_OnConsoleMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnConsoleMessage::has_amessage() const {
-  return _internal_has_amessage();
+inline bool Msg_OnConsoleMessage::has_a_amessage() const {
+  return _internal_has_a_amessage();
 }
-inline void Msg_OnConsoleMessage::clear_amessage() {
-  _impl_.amessage_.ClearToEmpty();
+inline void Msg_OnConsoleMessage::clear_a_amessage() {
+  _impl_.a_amessage_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnConsoleMessage::amessage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.aMessage)
-  return _internal_amessage();
+inline const std::string& Msg_OnConsoleMessage::a_amessage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.a_aMessage)
+  return _internal_a_amessage();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnConsoleMessage::set_amessage(ArgT0&& arg0, ArgT... args) {
+void Msg_OnConsoleMessage::set_a_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.aMessage)
+ _impl_.a_amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.a_aMessage)
 }
-inline std::string* Msg_OnConsoleMessage::mutable_amessage() {
-  std::string* _s = _internal_mutable_amessage();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.aMessage)
+inline std::string* Msg_OnConsoleMessage::mutable_a_amessage() {
+  std::string* _s = _internal_mutable_a_amessage();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.a_aMessage)
   return _s;
 }
-inline const std::string& Msg_OnConsoleMessage::_internal_amessage() const {
-  return _impl_.amessage_.Get();
+inline const std::string& Msg_OnConsoleMessage::_internal_a_amessage() const {
+  return _impl_.a_amessage_.Get();
 }
-inline void Msg_OnConsoleMessage::_internal_set_amessage(const std::string& value) {
+inline void Msg_OnConsoleMessage::_internal_set_a_amessage(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.amessage_.Set(value, GetArenaForAllocation());
+  _impl_.a_amessage_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnConsoleMessage::_internal_mutable_amessage() {
+inline std::string* Msg_OnConsoleMessage::_internal_mutable_a_amessage() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.amessage_.Mutable(GetArenaForAllocation());
+  return _impl_.a_amessage_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnConsoleMessage::release_amessage() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.aMessage)
-  if (!_internal_has_amessage()) {
+inline std::string* Msg_OnConsoleMessage::release_a_amessage() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.a_aMessage)
+  if (!_internal_has_a_amessage()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.amessage_.Release();
+  auto* p = _impl_.a_amessage_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amessage_.IsDefault()) {
-    _impl_.amessage_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amessage_.IsDefault()) {
+    _impl_.a_amessage_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnConsoleMessage::set_allocated_amessage(std::string* amessage) {
-  if (amessage != nullptr) {
+inline void Msg_OnConsoleMessage::set_allocated_a_amessage(std::string* a_amessage) {
+  if (a_amessage != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.amessage_.SetAllocated(amessage, GetArenaForAllocation());
+  _impl_.a_amessage_.SetAllocated(a_amessage, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amessage_.IsDefault()) {
-    _impl_.amessage_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amessage_.IsDefault()) {
+    _impl_.a_amessage_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.aMessage)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_OnConsoleMessage.a_aMessage)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_FOGData
 
-// required bytes buf = 1;
-inline bool Msg_FOGData::_internal_has_buf() const {
+// required bytes a_buf = 1;
+inline bool Msg_FOGData::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FOGData::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_FOGData::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_FOGData::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_FOGData::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_FOGData::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.buf)
-  return _internal_buf();
+inline const std::string& Msg_FOGData::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_FOGData::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_FOGData::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.a_buf)
 }
-inline std::string* Msg_FOGData::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.buf)
+inline std::string* Msg_FOGData::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.a_buf)
   return _s;
 }
-inline const std::string& Msg_FOGData::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_FOGData::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_FOGData::_internal_set_buf(const std::string& value) {
+inline void Msg_FOGData::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_FOGData::_internal_mutable_buf() {
+inline std::string* Msg_FOGData::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_FOGData::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_FOGData::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_FOGData::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_FOGData::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_FOGData.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Init
 
-// required .protobuf.mozilla.net.SocketPorcessInitAttributes aAttributes = 1;
-inline bool Msg_Init::_internal_has_aattributes() const {
+// required .protobuf.mozilla.net.SocketPorcessInitAttributes a_aAttributes = 1;
+inline bool Msg_Init::_internal_has_a_aattributes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aattributes_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aattributes_ != nullptr);
   return value;
 }
-inline bool Msg_Init::has_aattributes() const {
-  return _internal_has_aattributes();
+inline bool Msg_Init::has_a_aattributes() const {
+  return _internal_has_a_aattributes();
 }
-inline const ::protobuf::mozilla::net::SocketPorcessInitAttributes& Msg_Init::_internal_aattributes() const {
-  const ::protobuf::mozilla::net::SocketPorcessInitAttributes* p = _impl_.aattributes_;
+inline const ::protobuf::mozilla::net::SocketPorcessInitAttributes& Msg_Init::_internal_a_aattributes() const {
+  const ::protobuf::mozilla::net::SocketPorcessInitAttributes* p = _impl_.a_aattributes_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::SocketPorcessInitAttributes&>(
       ::protobuf::mozilla::net::_SocketPorcessInitAttributes_default_instance_);
 }
-inline const ::protobuf::mozilla::net::SocketPorcessInitAttributes& Msg_Init::aattributes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_Init.aAttributes)
-  return _internal_aattributes();
+inline const ::protobuf::mozilla::net::SocketPorcessInitAttributes& Msg_Init::a_aattributes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_Init.a_aAttributes)
+  return _internal_a_aattributes();
 }
-inline void Msg_Init::unsafe_arena_set_allocated_aattributes(
-    ::protobuf::mozilla::net::SocketPorcessInitAttributes* aattributes) {
+inline void Msg_Init::unsafe_arena_set_allocated_a_aattributes(
+    ::protobuf::mozilla::net::SocketPorcessInitAttributes* a_aattributes) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aattributes_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aattributes_);
   }
-  _impl_.aattributes_ = aattributes;
-  if (aattributes) {
+  _impl_.a_aattributes_ = a_aattributes;
+  if (a_aattributes) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_Init.aAttributes)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_Init.a_aAttributes)
 }
-inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::release_aattributes() {
+inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::release_a_aattributes() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::SocketPorcessInitAttributes* temp = _impl_.aattributes_;
-  _impl_.aattributes_ = nullptr;
+  ::protobuf::mozilla::net::SocketPorcessInitAttributes* temp = _impl_.a_aattributes_;
+  _impl_.a_aattributes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11529,86 +11529,86 @@ inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::release_
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::unsafe_arena_release_aattributes() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_Init.aAttributes)
+inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::unsafe_arena_release_a_aattributes() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_Init.a_aAttributes)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::SocketPorcessInitAttributes* temp = _impl_.aattributes_;
-  _impl_.aattributes_ = nullptr;
+  ::protobuf::mozilla::net::SocketPorcessInitAttributes* temp = _impl_.a_aattributes_;
+  _impl_.a_aattributes_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::_internal_mutable_aattributes() {
+inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::_internal_mutable_a_aattributes() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aattributes_ == nullptr) {
+  if (_impl_.a_aattributes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::SocketPorcessInitAttributes>(GetArenaForAllocation());
-    _impl_.aattributes_ = p;
+    _impl_.a_aattributes_ = p;
   }
-  return _impl_.aattributes_;
+  return _impl_.a_aattributes_;
 }
-inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::mutable_aattributes() {
-  ::protobuf::mozilla::net::SocketPorcessInitAttributes* _msg = _internal_mutable_aattributes();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_Init.aAttributes)
+inline ::protobuf::mozilla::net::SocketPorcessInitAttributes* Msg_Init::mutable_a_aattributes() {
+  ::protobuf::mozilla::net::SocketPorcessInitAttributes* _msg = _internal_mutable_a_aattributes();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_Init.a_aAttributes)
   return _msg;
 }
-inline void Msg_Init::set_allocated_aattributes(::protobuf::mozilla::net::SocketPorcessInitAttributes* aattributes) {
+inline void Msg_Init::set_allocated_a_aattributes(::protobuf::mozilla::net::SocketPorcessInitAttributes* a_aattributes) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aattributes_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aattributes_);
   }
-  if (aattributes) {
+  if (a_aattributes) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aattributes));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aattributes));
     if (message_arena != submessage_arena) {
-      aattributes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aattributes, submessage_arena);
+      a_aattributes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aattributes, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aattributes_ = aattributes;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_Init.aAttributes)
+  _impl_.a_aattributes_ = a_aattributes;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_Init.a_aAttributes)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PreferenceUpdate
 
-// required .protobuf.mozilla.dom.Pref pref = 1;
-inline bool Msg_PreferenceUpdate::_internal_has_pref() const {
+// required .protobuf.mozilla.dom.Pref a_pref = 1;
+inline bool Msg_PreferenceUpdate::_internal_has_a_pref() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.pref_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_pref_ != nullptr);
   return value;
 }
-inline bool Msg_PreferenceUpdate::has_pref() const {
-  return _internal_has_pref();
+inline bool Msg_PreferenceUpdate::has_a_pref() const {
+  return _internal_has_a_pref();
 }
-inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::_internal_pref() const {
-  const ::protobuf::mozilla::dom::Pref* p = _impl_.pref_;
+inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::_internal_a_pref() const {
+  const ::protobuf::mozilla::dom::Pref* p = _impl_.a_pref_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::Pref&>(
       ::protobuf::mozilla::dom::_Pref_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::pref() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.pref)
-  return _internal_pref();
+inline const ::protobuf::mozilla::dom::Pref& Msg_PreferenceUpdate::a_pref() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.a_pref)
+  return _internal_a_pref();
 }
-inline void Msg_PreferenceUpdate::unsafe_arena_set_allocated_pref(
-    ::protobuf::mozilla::dom::Pref* pref) {
+inline void Msg_PreferenceUpdate::unsafe_arena_set_allocated_a_pref(
+    ::protobuf::mozilla::dom::Pref* a_pref) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.pref_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_pref_);
   }
-  _impl_.pref_ = pref;
-  if (pref) {
+  _impl_.a_pref_ = a_pref;
+  if (a_pref) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.pref)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.a_pref)
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_pref() {
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_a_pref() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::Pref* temp = _impl_.pref_;
-  _impl_.pref_ = nullptr;
+  ::protobuf::mozilla::dom::Pref* temp = _impl_.a_pref_;
+  _impl_.a_pref_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11620,581 +11620,581 @@ inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::release_pref() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::unsafe_arena_release_pref() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.pref)
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::unsafe_arena_release_a_pref() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.a_pref)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::Pref* temp = _impl_.pref_;
-  _impl_.pref_ = nullptr;
+  ::protobuf::mozilla::dom::Pref* temp = _impl_.a_pref_;
+  _impl_.a_pref_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::_internal_mutable_pref() {
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::_internal_mutable_a_pref() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.pref_ == nullptr) {
+  if (_impl_.a_pref_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::Pref>(GetArenaForAllocation());
-    _impl_.pref_ = p;
+    _impl_.a_pref_ = p;
   }
-  return _impl_.pref_;
+  return _impl_.a_pref_;
 }
-inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::mutable_pref() {
-  ::protobuf::mozilla::dom::Pref* _msg = _internal_mutable_pref();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.pref)
+inline ::protobuf::mozilla::dom::Pref* Msg_PreferenceUpdate::mutable_a_pref() {
+  ::protobuf::mozilla::dom::Pref* _msg = _internal_mutable_a_pref();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.a_pref)
   return _msg;
 }
-inline void Msg_PreferenceUpdate::set_allocated_pref(::protobuf::mozilla::dom::Pref* pref) {
+inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom::Pref* a_pref) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.pref_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_pref_);
   }
-  if (pref) {
+  if (a_pref) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(pref));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_pref));
     if (message_arena != submessage_arena) {
-      pref = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, pref, submessage_arena);
+      a_pref = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_pref, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.pref_ = pref;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.pref)
+  _impl_.a_pref_ = a_pref;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PreferenceUpdate.a_pref)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestMemoryReport
 
-// required uint32 generation = 1;
-inline bool Msg_RequestMemoryReport::_internal_has_generation() const {
+// required uint32 a_generation = 1;
+inline bool Msg_RequestMemoryReport::_internal_has_a_generation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_generation() const {
-  return _internal_has_generation();
+inline bool Msg_RequestMemoryReport::has_a_generation() const {
+  return _internal_has_a_generation();
 }
-inline void Msg_RequestMemoryReport::clear_generation() {
-  _impl_.generation_ = 0u;
+inline void Msg_RequestMemoryReport::clear_a_generation() {
+  _impl_.a_generation_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_RequestMemoryReport::_internal_generation() const {
-  return _impl_.generation_;
+inline uint32_t Msg_RequestMemoryReport::_internal_a_generation() const {
+  return _impl_.a_generation_;
 }
-inline uint32_t Msg_RequestMemoryReport::generation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.generation)
-  return _internal_generation();
+inline uint32_t Msg_RequestMemoryReport::a_generation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_generation)
+  return _internal_a_generation();
 }
-inline void Msg_RequestMemoryReport::_internal_set_generation(uint32_t value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_generation(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.generation_ = value;
+  _impl_.a_generation_ = value;
 }
-inline void Msg_RequestMemoryReport::set_generation(uint32_t value) {
-  _internal_set_generation(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.generation)
+inline void Msg_RequestMemoryReport::set_a_generation(uint32_t value) {
+  _internal_set_a_generation(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_generation)
 }
 
-// required bool anonymize = 2;
-inline bool Msg_RequestMemoryReport::_internal_has_anonymize() const {
+// required bool a_anonymize = 2;
+inline bool Msg_RequestMemoryReport::_internal_has_a_anonymize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_anonymize() const {
-  return _internal_has_anonymize();
+inline bool Msg_RequestMemoryReport::has_a_anonymize() const {
+  return _internal_has_a_anonymize();
 }
-inline void Msg_RequestMemoryReport::clear_anonymize() {
-  _impl_.anonymize_ = false;
+inline void Msg_RequestMemoryReport::clear_a_anonymize() {
+  _impl_.a_anonymize_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_RequestMemoryReport::_internal_anonymize() const {
-  return _impl_.anonymize_;
+inline bool Msg_RequestMemoryReport::_internal_a_anonymize() const {
+  return _impl_.a_anonymize_;
 }
-inline bool Msg_RequestMemoryReport::anonymize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.anonymize)
-  return _internal_anonymize();
+inline bool Msg_RequestMemoryReport::a_anonymize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_anonymize)
+  return _internal_a_anonymize();
 }
-inline void Msg_RequestMemoryReport::_internal_set_anonymize(bool value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_anonymize(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.anonymize_ = value;
+  _impl_.a_anonymize_ = value;
 }
-inline void Msg_RequestMemoryReport::set_anonymize(bool value) {
-  _internal_set_anonymize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.anonymize)
+inline void Msg_RequestMemoryReport::set_a_anonymize(bool value) {
+  _internal_set_a_anonymize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_anonymize)
 }
 
-// required bool minimizeMemoryUsage = 3;
-inline bool Msg_RequestMemoryReport::_internal_has_minimizememoryusage() const {
+// required bool a_minimizeMemoryUsage = 3;
+inline bool Msg_RequestMemoryReport::_internal_has_a_minimizememoryusage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_minimizememoryusage() const {
-  return _internal_has_minimizememoryusage();
+inline bool Msg_RequestMemoryReport::has_a_minimizememoryusage() const {
+  return _internal_has_a_minimizememoryusage();
 }
-inline void Msg_RequestMemoryReport::clear_minimizememoryusage() {
-  _impl_.minimizememoryusage_ = false;
+inline void Msg_RequestMemoryReport::clear_a_minimizememoryusage() {
+  _impl_.a_minimizememoryusage_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_RequestMemoryReport::_internal_minimizememoryusage() const {
-  return _impl_.minimizememoryusage_;
+inline bool Msg_RequestMemoryReport::_internal_a_minimizememoryusage() const {
+  return _impl_.a_minimizememoryusage_;
 }
-inline bool Msg_RequestMemoryReport::minimizememoryusage() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.minimizeMemoryUsage)
-  return _internal_minimizememoryusage();
+inline bool Msg_RequestMemoryReport::a_minimizememoryusage() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_minimizeMemoryUsage)
+  return _internal_a_minimizememoryusage();
 }
-inline void Msg_RequestMemoryReport::_internal_set_minimizememoryusage(bool value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_minimizememoryusage(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.minimizememoryusage_ = value;
+  _impl_.a_minimizememoryusage_ = value;
 }
-inline void Msg_RequestMemoryReport::set_minimizememoryusage(bool value) {
-  _internal_set_minimizememoryusage(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.minimizeMemoryUsage)
+inline void Msg_RequestMemoryReport::set_a_minimizememoryusage(bool value) {
+  _internal_set_a_minimizememoryusage(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_minimizeMemoryUsage)
 }
 
-// optional bytes DMDFile = 4;
-inline bool Msg_RequestMemoryReport::_internal_has_dmdfile() const {
+// optional bytes a_DMDFile = 4;
+inline bool Msg_RequestMemoryReport::_internal_has_a_dmdfile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RequestMemoryReport::has_dmdfile() const {
-  return _internal_has_dmdfile();
+inline bool Msg_RequestMemoryReport::has_a_dmdfile() const {
+  return _internal_has_a_dmdfile();
 }
-inline void Msg_RequestMemoryReport::clear_dmdfile() {
-  _impl_.dmdfile_.ClearToEmpty();
+inline void Msg_RequestMemoryReport::clear_a_dmdfile() {
+  _impl_.a_dmdfile_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RequestMemoryReport::dmdfile() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.DMDFile)
-  return _internal_dmdfile();
+inline const std::string& Msg_RequestMemoryReport::a_dmdfile() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_DMDFile)
+  return _internal_a_dmdfile();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RequestMemoryReport::set_dmdfile(ArgT0&& arg0, ArgT... args) {
+void Msg_RequestMemoryReport::set_a_dmdfile(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.dmdfile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.DMDFile)
+ _impl_.a_dmdfile_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_DMDFile)
 }
-inline std::string* Msg_RequestMemoryReport::mutable_dmdfile() {
-  std::string* _s = _internal_mutable_dmdfile();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.DMDFile)
+inline std::string* Msg_RequestMemoryReport::mutable_a_dmdfile() {
+  std::string* _s = _internal_mutable_a_dmdfile();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_DMDFile)
   return _s;
 }
-inline const std::string& Msg_RequestMemoryReport::_internal_dmdfile() const {
-  return _impl_.dmdfile_.Get();
+inline const std::string& Msg_RequestMemoryReport::_internal_a_dmdfile() const {
+  return _impl_.a_dmdfile_.Get();
 }
-inline void Msg_RequestMemoryReport::_internal_set_dmdfile(const std::string& value) {
+inline void Msg_RequestMemoryReport::_internal_set_a_dmdfile(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dmdfile_.Set(value, GetArenaForAllocation());
+  _impl_.a_dmdfile_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RequestMemoryReport::_internal_mutable_dmdfile() {
+inline std::string* Msg_RequestMemoryReport::_internal_mutable_a_dmdfile() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.dmdfile_.Mutable(GetArenaForAllocation());
+  return _impl_.a_dmdfile_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RequestMemoryReport::release_dmdfile() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.DMDFile)
-  if (!_internal_has_dmdfile()) {
+inline std::string* Msg_RequestMemoryReport::release_a_dmdfile() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_DMDFile)
+  if (!_internal_has_a_dmdfile()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.dmdfile_.Release();
+  auto* p = _impl_.a_dmdfile_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dmdfile_.IsDefault()) {
-    _impl_.dmdfile_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dmdfile_.IsDefault()) {
+    _impl_.a_dmdfile_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RequestMemoryReport::set_allocated_dmdfile(std::string* dmdfile) {
-  if (dmdfile != nullptr) {
+inline void Msg_RequestMemoryReport::set_allocated_a_dmdfile(std::string* a_dmdfile) {
+  if (a_dmdfile != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.dmdfile_.SetAllocated(dmdfile, GetArenaForAllocation());
+  _impl_.a_dmdfile_.SetAllocated(a_dmdfile, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dmdfile_.IsDefault()) {
-    _impl_.dmdfile_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dmdfile_.IsDefault()) {
+    _impl_.a_dmdfile_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.DMDFile)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_RequestMemoryReport.a_DMDFile)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestMemoryReport
 
-// required uint32 aGeneration = 1;
-inline bool Reply_RequestMemoryReport::_internal_has_ageneration() const {
+// required uint32 a_aGeneration = 1;
+inline bool Reply_RequestMemoryReport::_internal_has_a_ageneration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestMemoryReport::has_ageneration() const {
-  return _internal_has_ageneration();
+inline bool Reply_RequestMemoryReport::has_a_ageneration() const {
+  return _internal_has_a_ageneration();
 }
-inline void Reply_RequestMemoryReport::clear_ageneration() {
-  _impl_.ageneration_ = 0u;
+inline void Reply_RequestMemoryReport::clear_a_ageneration() {
+  _impl_.a_ageneration_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_RequestMemoryReport::_internal_ageneration() const {
-  return _impl_.ageneration_;
+inline uint32_t Reply_RequestMemoryReport::_internal_a_ageneration() const {
+  return _impl_.a_ageneration_;
 }
-inline uint32_t Reply_RequestMemoryReport::ageneration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_RequestMemoryReport.aGeneration)
-  return _internal_ageneration();
+inline uint32_t Reply_RequestMemoryReport::a_ageneration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_RequestMemoryReport.a_aGeneration)
+  return _internal_a_ageneration();
 }
-inline void Reply_RequestMemoryReport::_internal_set_ageneration(uint32_t value) {
+inline void Reply_RequestMemoryReport::_internal_set_a_ageneration(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ageneration_ = value;
+  _impl_.a_ageneration_ = value;
 }
-inline void Reply_RequestMemoryReport::set_ageneration(uint32_t value) {
-  _internal_set_ageneration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_RequestMemoryReport.aGeneration)
+inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
+  _internal_set_a_ageneration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_RequestMemoryReport.a_aGeneration)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetOffline
 
-// required bool offline = 1;
-inline bool Msg_SetOffline::_internal_has_offline() const {
+// required bool a_offline = 1;
+inline bool Msg_SetOffline::_internal_has_a_offline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetOffline::has_offline() const {
-  return _internal_has_offline();
+inline bool Msg_SetOffline::has_a_offline() const {
+  return _internal_has_a_offline();
 }
-inline void Msg_SetOffline::clear_offline() {
-  _impl_.offline_ = false;
+inline void Msg_SetOffline::clear_a_offline() {
+  _impl_.a_offline_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_SetOffline::_internal_offline() const {
-  return _impl_.offline_;
+inline bool Msg_SetOffline::_internal_a_offline() const {
+  return _impl_.a_offline_;
 }
-inline bool Msg_SetOffline::offline() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_SetOffline.offline)
-  return _internal_offline();
+inline bool Msg_SetOffline::a_offline() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_SetOffline.a_offline)
+  return _internal_a_offline();
 }
-inline void Msg_SetOffline::_internal_set_offline(bool value) {
+inline void Msg_SetOffline::_internal_set_a_offline(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.offline_ = value;
+  _impl_.a_offline_ = value;
 }
-inline void Msg_SetOffline::set_offline(bool value) {
-  _internal_set_offline(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_SetOffline.offline)
+inline void Msg_SetOffline::set_a_offline(bool value) {
+  _internal_set_a_offline(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_SetOffline.a_offline)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetConnectivity
 
-// required bool connectivity = 1;
-inline bool Msg_SetConnectivity::_internal_has_connectivity() const {
+// required bool a_connectivity = 1;
+inline bool Msg_SetConnectivity::_internal_has_a_connectivity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetConnectivity::has_connectivity() const {
-  return _internal_has_connectivity();
+inline bool Msg_SetConnectivity::has_a_connectivity() const {
+  return _internal_has_a_connectivity();
 }
-inline void Msg_SetConnectivity::clear_connectivity() {
-  _impl_.connectivity_ = false;
+inline void Msg_SetConnectivity::clear_a_connectivity() {
+  _impl_.a_connectivity_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_SetConnectivity::_internal_connectivity() const {
-  return _impl_.connectivity_;
+inline bool Msg_SetConnectivity::_internal_a_connectivity() const {
+  return _impl_.a_connectivity_;
 }
-inline bool Msg_SetConnectivity::connectivity() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_SetConnectivity.connectivity)
-  return _internal_connectivity();
+inline bool Msg_SetConnectivity::a_connectivity() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_SetConnectivity.a_connectivity)
+  return _internal_a_connectivity();
 }
-inline void Msg_SetConnectivity::_internal_set_connectivity(bool value) {
+inline void Msg_SetConnectivity::_internal_set_a_connectivity(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.connectivity_ = value;
+  _impl_.a_connectivity_ = value;
 }
-inline void Msg_SetConnectivity::set_connectivity(bool value) {
-  _internal_set_connectivity(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_SetConnectivity.connectivity)
+inline void Msg_SetConnectivity::set_a_connectivity(bool value) {
+  _internal_set_a_connectivity(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_SetConnectivity.a_connectivity)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitLinuxSandbox
 
-// optional bytes sandboxBroker = 1;
-inline bool Msg_InitLinuxSandbox::_internal_has_sandboxbroker() const {
+// optional bytes a_sandboxBroker = 1;
+inline bool Msg_InitLinuxSandbox::_internal_has_a_sandboxbroker() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitLinuxSandbox::has_sandboxbroker() const {
-  return _internal_has_sandboxbroker();
+inline bool Msg_InitLinuxSandbox::has_a_sandboxbroker() const {
+  return _internal_has_a_sandboxbroker();
 }
-inline void Msg_InitLinuxSandbox::clear_sandboxbroker() {
-  _impl_.sandboxbroker_.ClearToEmpty();
+inline void Msg_InitLinuxSandbox::clear_a_sandboxbroker() {
+  _impl_.a_sandboxbroker_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitLinuxSandbox::sandboxbroker() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.sandboxBroker)
-  return _internal_sandboxbroker();
+inline const std::string& Msg_InitLinuxSandbox::a_sandboxbroker() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.a_sandboxBroker)
+  return _internal_a_sandboxbroker();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitLinuxSandbox::set_sandboxbroker(ArgT0&& arg0, ArgT... args) {
+void Msg_InitLinuxSandbox::set_a_sandboxbroker(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.sandboxbroker_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.sandboxBroker)
+ _impl_.a_sandboxbroker_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.a_sandboxBroker)
 }
-inline std::string* Msg_InitLinuxSandbox::mutable_sandboxbroker() {
-  std::string* _s = _internal_mutable_sandboxbroker();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.sandboxBroker)
+inline std::string* Msg_InitLinuxSandbox::mutable_a_sandboxbroker() {
+  std::string* _s = _internal_mutable_a_sandboxbroker();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.a_sandboxBroker)
   return _s;
 }
-inline const std::string& Msg_InitLinuxSandbox::_internal_sandboxbroker() const {
-  return _impl_.sandboxbroker_.Get();
+inline const std::string& Msg_InitLinuxSandbox::_internal_a_sandboxbroker() const {
+  return _impl_.a_sandboxbroker_.Get();
 }
-inline void Msg_InitLinuxSandbox::_internal_set_sandboxbroker(const std::string& value) {
+inline void Msg_InitLinuxSandbox::_internal_set_a_sandboxbroker(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.sandboxbroker_.Set(value, GetArenaForAllocation());
+  _impl_.a_sandboxbroker_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitLinuxSandbox::_internal_mutable_sandboxbroker() {
+inline std::string* Msg_InitLinuxSandbox::_internal_mutable_a_sandboxbroker() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.sandboxbroker_.Mutable(GetArenaForAllocation());
+  return _impl_.a_sandboxbroker_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitLinuxSandbox::release_sandboxbroker() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.sandboxBroker)
-  if (!_internal_has_sandboxbroker()) {
+inline std::string* Msg_InitLinuxSandbox::release_a_sandboxbroker() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.a_sandboxBroker)
+  if (!_internal_has_a_sandboxbroker()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.sandboxbroker_.Release();
+  auto* p = _impl_.a_sandboxbroker_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sandboxbroker_.IsDefault()) {
-    _impl_.sandboxbroker_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sandboxbroker_.IsDefault()) {
+    _impl_.a_sandboxbroker_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitLinuxSandbox::set_allocated_sandboxbroker(std::string* sandboxbroker) {
-  if (sandboxbroker != nullptr) {
+inline void Msg_InitLinuxSandbox::set_allocated_a_sandboxbroker(std::string* a_sandboxbroker) {
+  if (a_sandboxbroker != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.sandboxbroker_.SetAllocated(sandboxbroker, GetArenaForAllocation());
+  _impl_.a_sandboxbroker_.SetAllocated(a_sandboxbroker, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sandboxbroker_.IsDefault()) {
-    _impl_.sandboxbroker_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sandboxbroker_.IsDefault()) {
+    _impl_.a_sandboxbroker_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.sandboxBroker)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitLinuxSandbox.a_sandboxBroker)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitSocketProcessBridgeParent
 
-// required bytes processId = 1;
-inline bool Msg_InitSocketProcessBridgeParent::_internal_has_processid() const {
+// required bytes a_processId = 1;
+inline bool Msg_InitSocketProcessBridgeParent::_internal_has_a_processid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitSocketProcessBridgeParent::has_processid() const {
-  return _internal_has_processid();
+inline bool Msg_InitSocketProcessBridgeParent::has_a_processid() const {
+  return _internal_has_a_processid();
 }
-inline void Msg_InitSocketProcessBridgeParent::clear_processid() {
-  _impl_.processid_.ClearToEmpty();
+inline void Msg_InitSocketProcessBridgeParent::clear_a_processid() {
+  _impl_.a_processid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitSocketProcessBridgeParent::processid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.processId)
-  return _internal_processid();
+inline const std::string& Msg_InitSocketProcessBridgeParent::a_processid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_processId)
+  return _internal_a_processid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitSocketProcessBridgeParent::set_processid(ArgT0&& arg0, ArgT... args) {
+void Msg_InitSocketProcessBridgeParent::set_a_processid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.processid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.processId)
+ _impl_.a_processid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_processId)
 }
-inline std::string* Msg_InitSocketProcessBridgeParent::mutable_processid() {
-  std::string* _s = _internal_mutable_processid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.processId)
+inline std::string* Msg_InitSocketProcessBridgeParent::mutable_a_processid() {
+  std::string* _s = _internal_mutable_a_processid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_processId)
   return _s;
 }
-inline const std::string& Msg_InitSocketProcessBridgeParent::_internal_processid() const {
-  return _impl_.processid_.Get();
+inline const std::string& Msg_InitSocketProcessBridgeParent::_internal_a_processid() const {
+  return _impl_.a_processid_.Get();
 }
-inline void Msg_InitSocketProcessBridgeParent::_internal_set_processid(const std::string& value) {
+inline void Msg_InitSocketProcessBridgeParent::_internal_set_a_processid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.processid_.Set(value, GetArenaForAllocation());
+  _impl_.a_processid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitSocketProcessBridgeParent::_internal_mutable_processid() {
+inline std::string* Msg_InitSocketProcessBridgeParent::_internal_mutable_a_processid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.processid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_processid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitSocketProcessBridgeParent::release_processid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.processId)
-  if (!_internal_has_processid()) {
+inline std::string* Msg_InitSocketProcessBridgeParent::release_a_processid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_processId)
+  if (!_internal_has_a_processid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.processid_.Release();
+  auto* p = _impl_.a_processid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.processid_.IsDefault()) {
-    _impl_.processid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_processid_.IsDefault()) {
+    _impl_.a_processid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitSocketProcessBridgeParent::set_allocated_processid(std::string* processid) {
-  if (processid != nullptr) {
+inline void Msg_InitSocketProcessBridgeParent::set_allocated_a_processid(std::string* a_processid) {
+  if (a_processid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.processid_.SetAllocated(processid, GetArenaForAllocation());
+  _impl_.a_processid_.SetAllocated(a_processid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.processid_.IsDefault()) {
-    _impl_.processid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_processid_.IsDefault()) {
+    _impl_.a_processid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.processId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_processId)
 }
 
-// required bytes endpoint = 2;
-inline bool Msg_InitSocketProcessBridgeParent::_internal_has_endpoint() const {
+// required bytes a_endpoint = 2;
+inline bool Msg_InitSocketProcessBridgeParent::_internal_has_a_endpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_InitSocketProcessBridgeParent::has_endpoint() const {
-  return _internal_has_endpoint();
+inline bool Msg_InitSocketProcessBridgeParent::has_a_endpoint() const {
+  return _internal_has_a_endpoint();
 }
-inline void Msg_InitSocketProcessBridgeParent::clear_endpoint() {
-  _impl_.endpoint_.ClearToEmpty();
+inline void Msg_InitSocketProcessBridgeParent::clear_a_endpoint() {
+  _impl_.a_endpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_InitSocketProcessBridgeParent::endpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.endpoint)
-  return _internal_endpoint();
+inline const std::string& Msg_InitSocketProcessBridgeParent::a_endpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_endpoint)
+  return _internal_a_endpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitSocketProcessBridgeParent::set_endpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_InitSocketProcessBridgeParent::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.endpoint)
+ _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_endpoint)
 }
-inline std::string* Msg_InitSocketProcessBridgeParent::mutable_endpoint() {
-  std::string* _s = _internal_mutable_endpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.endpoint)
+inline std::string* Msg_InitSocketProcessBridgeParent::mutable_a_endpoint() {
+  std::string* _s = _internal_mutable_a_endpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_endpoint)
   return _s;
 }
-inline const std::string& Msg_InitSocketProcessBridgeParent::_internal_endpoint() const {
-  return _impl_.endpoint_.Get();
+inline const std::string& Msg_InitSocketProcessBridgeParent::_internal_a_endpoint() const {
+  return _impl_.a_endpoint_.Get();
 }
-inline void Msg_InitSocketProcessBridgeParent::_internal_set_endpoint(const std::string& value) {
+inline void Msg_InitSocketProcessBridgeParent::_internal_set_a_endpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.endpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_endpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitSocketProcessBridgeParent::_internal_mutable_endpoint() {
+inline std::string* Msg_InitSocketProcessBridgeParent::_internal_mutable_a_endpoint() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.endpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_endpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitSocketProcessBridgeParent::release_endpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.endpoint)
-  if (!_internal_has_endpoint()) {
+inline std::string* Msg_InitSocketProcessBridgeParent::release_a_endpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_endpoint)
+  if (!_internal_has_a_endpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.endpoint_.Release();
+  auto* p = _impl_.a_endpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitSocketProcessBridgeParent::set_allocated_endpoint(std::string* endpoint) {
-  if (endpoint != nullptr) {
+inline void Msg_InitSocketProcessBridgeParent::set_allocated_a_endpoint(std::string* a_endpoint) {
+  if (a_endpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.endpoint_.SetAllocated(endpoint, GetArenaForAllocation());
+  _impl_.a_endpoint_.SetAllocated(a_endpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.endpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitSocketProcessBridgeParent.a_endpoint)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitProfiler
 
-// required bytes aEndpoint = 1;
-inline bool Msg_InitProfiler::_internal_has_aendpoint() const {
+// required bytes a_aEndpoint = 1;
+inline bool Msg_InitProfiler::_internal_has_a_aendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitProfiler::has_aendpoint() const {
-  return _internal_has_aendpoint();
+inline bool Msg_InitProfiler::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
 }
-inline void Msg_InitProfiler::clear_aendpoint() {
-  _impl_.aendpoint_.ClearToEmpty();
+inline void Msg_InitProfiler::clear_a_aendpoint() {
+  _impl_.a_aendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitProfiler::aendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.aEndpoint)
-  return _internal_aendpoint();
+inline const std::string& Msg_InitProfiler::a_aendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.a_aEndpoint)
+  return _internal_a_aendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitProfiler::set_aendpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_InitProfiler::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.aEndpoint)
+ _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.a_aEndpoint)
 }
-inline std::string* Msg_InitProfiler::mutable_aendpoint() {
-  std::string* _s = _internal_mutable_aendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.aEndpoint)
+inline std::string* Msg_InitProfiler::mutable_a_aendpoint() {
+  std::string* _s = _internal_mutable_a_aendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.a_aEndpoint)
   return _s;
 }
-inline const std::string& Msg_InitProfiler::_internal_aendpoint() const {
-  return _impl_.aendpoint_.Get();
+inline const std::string& Msg_InitProfiler::_internal_a_aendpoint() const {
+  return _impl_.a_aendpoint_.Get();
 }
-inline void Msg_InitProfiler::_internal_set_aendpoint(const std::string& value) {
+inline void Msg_InitProfiler::_internal_set_a_aendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitProfiler::_internal_mutable_aendpoint() {
+inline std::string* Msg_InitProfiler::_internal_mutable_a_aendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitProfiler::release_aendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.aEndpoint)
-  if (!_internal_has_aendpoint()) {
+inline std::string* Msg_InitProfiler::release_a_aendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.a_aEndpoint)
+  if (!_internal_has_a_aendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aendpoint_.Release();
+  auto* p = _impl_.a_aendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitProfiler::set_allocated_aendpoint(std::string* aendpoint) {
-  if (aendpoint != nullptr) {
+inline void Msg_InitProfiler::set_allocated_a_aendpoint(std::string* a_aendpoint) {
+  if (a_aendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aendpoint_.SetAllocated(aendpoint, GetArenaForAllocation());
+  _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.aEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitProfiler.a_aEndpoint)
 }
 
 // -------------------------------------------------------------------
@@ -12213,41 +12213,41 @@ inline void Msg_InitProfiler::set_allocated_aendpoint(std::string* aendpoint) {
 
 // Msg_PHttpConnectionMgrConstructor
 
-// required .protobuf.mozilla.net.HttpHandlerInitArgs aArgs = 1;
-inline bool Msg_PHttpConnectionMgrConstructor::_internal_has_aargs() const {
+// required .protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 1;
+inline bool Msg_PHttpConnectionMgrConstructor::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
   return value;
 }
-inline bool Msg_PHttpConnectionMgrConstructor::has_aargs() const {
-  return _internal_has_aargs();
+inline bool Msg_PHttpConnectionMgrConstructor::has_a_aargs() const {
+  return _internal_has_a_aargs();
 }
-inline const ::protobuf::mozilla::net::HttpHandlerInitArgs& Msg_PHttpConnectionMgrConstructor::_internal_aargs() const {
-  const ::protobuf::mozilla::net::HttpHandlerInitArgs* p = _impl_.aargs_;
+inline const ::protobuf::mozilla::net::HttpHandlerInitArgs& Msg_PHttpConnectionMgrConstructor::_internal_a_aargs() const {
+  const ::protobuf::mozilla::net::HttpHandlerInitArgs* p = _impl_.a_aargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::HttpHandlerInitArgs&>(
       ::protobuf::mozilla::net::_HttpHandlerInitArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::HttpHandlerInitArgs& Msg_PHttpConnectionMgrConstructor::aargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.aArgs)
-  return _internal_aargs();
+inline const ::protobuf::mozilla::net::HttpHandlerInitArgs& Msg_PHttpConnectionMgrConstructor::a_aargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_aArgs)
+  return _internal_a_aargs();
 }
-inline void Msg_PHttpConnectionMgrConstructor::unsafe_arena_set_allocated_aargs(
-    ::protobuf::mozilla::net::HttpHandlerInitArgs* aargs) {
+inline void Msg_PHttpConnectionMgrConstructor::unsafe_arena_set_allocated_a_aargs(
+    ::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  _impl_.aargs_ = aargs;
-  if (aargs) {
+  _impl_.a_aargs_ = a_aargs;
+  if (a_aargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.aArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_aArgs)
 }
-inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::release_aargs() {
+inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::release_a_aargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpHandlerInitArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpHandlerInitArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12259,45 +12259,45 @@ inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrCons
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::unsafe_arena_release_aargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.aArgs)
+inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::unsafe_arena_release_a_aargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_aArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpHandlerInitArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpHandlerInitArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::_internal_mutable_aargs() {
+inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::_internal_mutable_a_aargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aargs_ == nullptr) {
+  if (_impl_.a_aargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpHandlerInitArgs>(GetArenaForAllocation());
-    _impl_.aargs_ = p;
+    _impl_.a_aargs_ = p;
   }
-  return _impl_.aargs_;
+  return _impl_.a_aargs_;
 }
-inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::mutable_aargs() {
-  ::protobuf::mozilla::net::HttpHandlerInitArgs* _msg = _internal_mutable_aargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.aArgs)
+inline ::protobuf::mozilla::net::HttpHandlerInitArgs* Msg_PHttpConnectionMgrConstructor::mutable_a_aargs() {
+  ::protobuf::mozilla::net::HttpHandlerInitArgs* _msg = _internal_mutable_a_aargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_aArgs)
   return _msg;
 }
-inline void Msg_PHttpConnectionMgrConstructor::set_allocated_aargs(::protobuf::mozilla::net::HttpHandlerInitArgs* aargs) {
+inline void Msg_PHttpConnectionMgrConstructor::set_allocated_a_aargs(::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  if (aargs) {
+  if (a_aargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aargs));
     if (message_arena != submessage_arena) {
-      aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aargs, submessage_arena);
+      a_aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aargs_ = aargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.aArgs)
+  _impl_.a_aargs_ = a_aargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_aArgs)
 }
 
 // -------------------------------------------------------------------
@@ -12308,228 +12308,228 @@ inline void Msg_PHttpConnectionMgrConstructor::set_allocated_aargs(::protobuf::m
 
 // Msg_UpdateDeviceModelId
 
-// required bytes aModelId = 1;
-inline bool Msg_UpdateDeviceModelId::_internal_has_amodelid() const {
+// required bytes a_aModelId = 1;
+inline bool Msg_UpdateDeviceModelId::_internal_has_a_amodelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateDeviceModelId::has_amodelid() const {
-  return _internal_has_amodelid();
+inline bool Msg_UpdateDeviceModelId::has_a_amodelid() const {
+  return _internal_has_a_amodelid();
 }
-inline void Msg_UpdateDeviceModelId::clear_amodelid() {
-  _impl_.amodelid_.ClearToEmpty();
+inline void Msg_UpdateDeviceModelId::clear_a_amodelid() {
+  _impl_.a_amodelid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UpdateDeviceModelId::amodelid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.aModelId)
-  return _internal_amodelid();
+inline const std::string& Msg_UpdateDeviceModelId::a_amodelid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.a_aModelId)
+  return _internal_a_amodelid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateDeviceModelId::set_amodelid(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateDeviceModelId::set_a_amodelid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amodelid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.aModelId)
+ _impl_.a_amodelid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.a_aModelId)
 }
-inline std::string* Msg_UpdateDeviceModelId::mutable_amodelid() {
-  std::string* _s = _internal_mutable_amodelid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.aModelId)
+inline std::string* Msg_UpdateDeviceModelId::mutable_a_amodelid() {
+  std::string* _s = _internal_mutable_a_amodelid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.a_aModelId)
   return _s;
 }
-inline const std::string& Msg_UpdateDeviceModelId::_internal_amodelid() const {
-  return _impl_.amodelid_.Get();
+inline const std::string& Msg_UpdateDeviceModelId::_internal_a_amodelid() const {
+  return _impl_.a_amodelid_.Get();
 }
-inline void Msg_UpdateDeviceModelId::_internal_set_amodelid(const std::string& value) {
+inline void Msg_UpdateDeviceModelId::_internal_set_a_amodelid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.amodelid_.Set(value, GetArenaForAllocation());
+  _impl_.a_amodelid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDeviceModelId::_internal_mutable_amodelid() {
+inline std::string* Msg_UpdateDeviceModelId::_internal_mutable_a_amodelid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.amodelid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_amodelid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDeviceModelId::release_amodelid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.aModelId)
-  if (!_internal_has_amodelid()) {
+inline std::string* Msg_UpdateDeviceModelId::release_a_amodelid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.a_aModelId)
+  if (!_internal_has_a_amodelid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.amodelid_.Release();
+  auto* p = _impl_.a_amodelid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amodelid_.IsDefault()) {
-    _impl_.amodelid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amodelid_.IsDefault()) {
+    _impl_.a_amodelid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateDeviceModelId::set_allocated_amodelid(std::string* amodelid) {
-  if (amodelid != nullptr) {
+inline void Msg_UpdateDeviceModelId::set_allocated_a_amodelid(std::string* a_amodelid) {
+  if (a_amodelid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.amodelid_.SetAllocated(amodelid, GetArenaForAllocation());
+  _impl_.a_amodelid_.SetAllocated(a_amodelid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amodelid_.IsDefault()) {
-    _impl_.amodelid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amodelid_.IsDefault()) {
+    _impl_.a_amodelid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.aModelId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_UpdateDeviceModelId.a_aModelId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnHttpActivityDistributorActivated
 
-// required bool aIsActivated = 1;
-inline bool Msg_OnHttpActivityDistributorActivated::_internal_has_aisactivated() const {
+// required bool a_aIsActivated = 1;
+inline bool Msg_OnHttpActivityDistributorActivated::_internal_has_a_aisactivated() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnHttpActivityDistributorActivated::has_aisactivated() const {
-  return _internal_has_aisactivated();
+inline bool Msg_OnHttpActivityDistributorActivated::has_a_aisactivated() const {
+  return _internal_has_a_aisactivated();
 }
-inline void Msg_OnHttpActivityDistributorActivated::clear_aisactivated() {
-  _impl_.aisactivated_ = false;
+inline void Msg_OnHttpActivityDistributorActivated::clear_a_aisactivated() {
+  _impl_.a_aisactivated_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_OnHttpActivityDistributorActivated::_internal_aisactivated() const {
-  return _impl_.aisactivated_;
+inline bool Msg_OnHttpActivityDistributorActivated::_internal_a_aisactivated() const {
+  return _impl_.a_aisactivated_;
 }
-inline bool Msg_OnHttpActivityDistributorActivated::aisactivated() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorActivated.aIsActivated)
-  return _internal_aisactivated();
+inline bool Msg_OnHttpActivityDistributorActivated::a_aisactivated() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorActivated.a_aIsActivated)
+  return _internal_a_aisactivated();
 }
-inline void Msg_OnHttpActivityDistributorActivated::_internal_set_aisactivated(bool value) {
+inline void Msg_OnHttpActivityDistributorActivated::_internal_set_a_aisactivated(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aisactivated_ = value;
+  _impl_.a_aisactivated_ = value;
 }
-inline void Msg_OnHttpActivityDistributorActivated::set_aisactivated(bool value) {
-  _internal_set_aisactivated(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorActivated.aIsActivated)
+inline void Msg_OnHttpActivityDistributorActivated::set_a_aisactivated(bool value) {
+  _internal_set_a_aisactivated(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorActivated.a_aIsActivated)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnHttpActivityDistributorObserveProxyResponse
 
-// required bool aIsEnabled = 1;
-inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_has_aisenabled() const {
+// required bool a_aIsEnabled = 1;
+inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_has_a_aisenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::has_aisenabled() const {
-  return _internal_has_aisenabled();
+inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::has_a_aisenabled() const {
+  return _internal_has_a_aisenabled();
 }
-inline void Msg_OnHttpActivityDistributorObserveProxyResponse::clear_aisenabled() {
-  _impl_.aisenabled_ = false;
+inline void Msg_OnHttpActivityDistributorObserveProxyResponse::clear_a_aisenabled() {
+  _impl_.a_aisenabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_aisenabled() const {
-  return _impl_.aisenabled_;
+inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_a_aisenabled() const {
+  return _impl_.a_aisenabled_;
 }
-inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::aisenabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveProxyResponse.aIsEnabled)
-  return _internal_aisenabled();
+inline bool Msg_OnHttpActivityDistributorObserveProxyResponse::a_aisenabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveProxyResponse.a_aIsEnabled)
+  return _internal_a_aisenabled();
 }
-inline void Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_set_aisenabled(bool value) {
+inline void Msg_OnHttpActivityDistributorObserveProxyResponse::_internal_set_a_aisenabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aisenabled_ = value;
+  _impl_.a_aisenabled_ = value;
 }
-inline void Msg_OnHttpActivityDistributorObserveProxyResponse::set_aisenabled(bool value) {
-  _internal_set_aisenabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveProxyResponse.aIsEnabled)
+inline void Msg_OnHttpActivityDistributorObserveProxyResponse::set_a_aisenabled(bool value) {
+  _internal_set_a_aisenabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveProxyResponse.a_aIsEnabled)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnHttpActivityDistributorObserveConnection
 
-// required bool aIsEnabled = 1;
-inline bool Msg_OnHttpActivityDistributorObserveConnection::_internal_has_aisenabled() const {
+// required bool a_aIsEnabled = 1;
+inline bool Msg_OnHttpActivityDistributorObserveConnection::_internal_has_a_aisenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnHttpActivityDistributorObserveConnection::has_aisenabled() const {
-  return _internal_has_aisenabled();
+inline bool Msg_OnHttpActivityDistributorObserveConnection::has_a_aisenabled() const {
+  return _internal_has_a_aisenabled();
 }
-inline void Msg_OnHttpActivityDistributorObserveConnection::clear_aisenabled() {
-  _impl_.aisenabled_ = false;
+inline void Msg_OnHttpActivityDistributorObserveConnection::clear_a_aisenabled() {
+  _impl_.a_aisenabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_OnHttpActivityDistributorObserveConnection::_internal_aisenabled() const {
-  return _impl_.aisenabled_;
+inline bool Msg_OnHttpActivityDistributorObserveConnection::_internal_a_aisenabled() const {
+  return _impl_.a_aisenabled_;
 }
-inline bool Msg_OnHttpActivityDistributorObserveConnection::aisenabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveConnection.aIsEnabled)
-  return _internal_aisenabled();
+inline bool Msg_OnHttpActivityDistributorObserveConnection::a_aisenabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveConnection.a_aIsEnabled)
+  return _internal_a_aisenabled();
 }
-inline void Msg_OnHttpActivityDistributorObserveConnection::_internal_set_aisenabled(bool value) {
+inline void Msg_OnHttpActivityDistributorObserveConnection::_internal_set_a_aisenabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aisenabled_ = value;
+  _impl_.a_aisenabled_ = value;
 }
-inline void Msg_OnHttpActivityDistributorObserveConnection::set_aisenabled(bool value) {
-  _internal_set_aisenabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveConnection.aIsEnabled)
+inline void Msg_OnHttpActivityDistributorObserveConnection::set_a_aisenabled(bool value) {
+  _internal_set_a_aisenabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_OnHttpActivityDistributorObserveConnection.a_aIsEnabled)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PInputChannelThrottleQueueConstructor
 
-// required uint32 meanBytesPerSecond = 1;
-inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_meanbytespersecond() const {
+// required uint32 a_meanBytesPerSecond = 1;
+inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_meanbytespersecond() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PInputChannelThrottleQueueConstructor::has_meanbytespersecond() const {
-  return _internal_has_meanbytespersecond();
+inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_meanbytespersecond() const {
+  return _internal_has_a_meanbytespersecond();
 }
-inline void Msg_PInputChannelThrottleQueueConstructor::clear_meanbytespersecond() {
-  _impl_.meanbytespersecond_ = 0u;
+inline void Msg_PInputChannelThrottleQueueConstructor::clear_a_meanbytespersecond() {
+  _impl_.a_meanbytespersecond_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_PInputChannelThrottleQueueConstructor::_internal_meanbytespersecond() const {
-  return _impl_.meanbytespersecond_;
+inline uint32_t Msg_PInputChannelThrottleQueueConstructor::_internal_a_meanbytespersecond() const {
+  return _impl_.a_meanbytespersecond_;
 }
-inline uint32_t Msg_PInputChannelThrottleQueueConstructor::meanbytespersecond() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.meanBytesPerSecond)
-  return _internal_meanbytespersecond();
+inline uint32_t Msg_PInputChannelThrottleQueueConstructor::a_meanbytespersecond() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_meanBytesPerSecond)
+  return _internal_a_meanbytespersecond();
 }
-inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_meanbytespersecond(uint32_t value) {
+inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_a_meanbytespersecond(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.meanbytespersecond_ = value;
+  _impl_.a_meanbytespersecond_ = value;
 }
-inline void Msg_PInputChannelThrottleQueueConstructor::set_meanbytespersecond(uint32_t value) {
-  _internal_set_meanbytespersecond(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.meanBytesPerSecond)
+inline void Msg_PInputChannelThrottleQueueConstructor::set_a_meanbytespersecond(uint32_t value) {
+  _internal_set_a_meanbytespersecond(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_meanBytesPerSecond)
 }
 
-// required uint32 maxBytesPerSecond = 2;
-inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_maxbytespersecond() const {
+// required uint32 a_maxBytesPerSecond = 2;
+inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_maxbytespersecond() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PInputChannelThrottleQueueConstructor::has_maxbytespersecond() const {
-  return _internal_has_maxbytespersecond();
+inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_maxbytespersecond() const {
+  return _internal_has_a_maxbytespersecond();
 }
-inline void Msg_PInputChannelThrottleQueueConstructor::clear_maxbytespersecond() {
-  _impl_.maxbytespersecond_ = 0u;
+inline void Msg_PInputChannelThrottleQueueConstructor::clear_a_maxbytespersecond() {
+  _impl_.a_maxbytespersecond_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_PInputChannelThrottleQueueConstructor::_internal_maxbytespersecond() const {
-  return _impl_.maxbytespersecond_;
+inline uint32_t Msg_PInputChannelThrottleQueueConstructor::_internal_a_maxbytespersecond() const {
+  return _impl_.a_maxbytespersecond_;
 }
-inline uint32_t Msg_PInputChannelThrottleQueueConstructor::maxbytespersecond() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.maxBytesPerSecond)
-  return _internal_maxbytespersecond();
+inline uint32_t Msg_PInputChannelThrottleQueueConstructor::a_maxbytespersecond() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_maxBytesPerSecond)
+  return _internal_a_maxbytespersecond();
 }
-inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_maxbytespersecond(uint32_t value) {
+inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_a_maxbytespersecond(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.maxbytespersecond_ = value;
+  _impl_.a_maxbytespersecond_ = value;
 }
-inline void Msg_PInputChannelThrottleQueueConstructor::set_maxbytespersecond(uint32_t value) {
-  _internal_set_maxbytespersecond(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.maxBytesPerSecond)
+inline void Msg_PInputChannelThrottleQueueConstructor::set_a_maxbytespersecond(uint32_t value) {
+  _internal_set_a_maxbytespersecond(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_maxBytesPerSecond)
 }
 
 // -------------------------------------------------------------------
@@ -12540,41 +12540,41 @@ inline void Msg_PInputChannelThrottleQueueConstructor::set_maxbytespersecond(uin
 
 // Msg_PAltSvcTransactionConstructor
 
-// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs aConnInfo = 1;
-inline bool Msg_PAltSvcTransactionConstructor::_internal_has_aconninfo() const {
+// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_aconninfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aconninfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aconninfo_ != nullptr);
   return value;
 }
-inline bool Msg_PAltSvcTransactionConstructor::has_aconninfo() const {
-  return _internal_has_aconninfo();
+inline bool Msg_PAltSvcTransactionConstructor::has_a_aconninfo() const {
+  return _internal_has_a_aconninfo();
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_PAltSvcTransactionConstructor::_internal_aconninfo() const {
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.aconninfo_;
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_PAltSvcTransactionConstructor::_internal_a_aconninfo() const {
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.a_aconninfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs&>(
       ::protobuf::mozilla::net::_HttpConnectionInfoCloneArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_PAltSvcTransactionConstructor::aconninfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aConnInfo)
-  return _internal_aconninfo();
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_PAltSvcTransactionConstructor::a_aconninfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
+  return _internal_a_aconninfo();
 }
-inline void Msg_PAltSvcTransactionConstructor::unsafe_arena_set_allocated_aconninfo(
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfo) {
+inline void Msg_PAltSvcTransactionConstructor::unsafe_arena_set_allocated_a_aconninfo(
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aconninfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aconninfo_);
   }
-  _impl_.aconninfo_ = aconninfo;
-  if (aconninfo) {
+  _impl_.a_aconninfo_ = a_aconninfo;
+  if (a_aconninfo) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aConnInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::release_aconninfo() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::release_a_aconninfo() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.aconninfo_;
-  _impl_.aconninfo_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aconninfo_;
+  _impl_.a_aconninfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -12586,73 +12586,73 @@ inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransac
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::unsafe_arena_release_aconninfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aConnInfo)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::unsafe_arena_release_a_aconninfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.aconninfo_;
-  _impl_.aconninfo_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aconninfo_;
+  _impl_.a_aconninfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::_internal_mutable_aconninfo() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::_internal_mutable_a_aconninfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aconninfo_ == nullptr) {
+  if (_impl_.a_aconninfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpConnectionInfoCloneArgs>(GetArenaForAllocation());
-    _impl_.aconninfo_ = p;
+    _impl_.a_aconninfo_ = p;
   }
-  return _impl_.aconninfo_;
+  return _impl_.a_aconninfo_;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::mutable_aconninfo() {
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_aconninfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aConnInfo)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_PAltSvcTransactionConstructor::mutable_a_aconninfo() {
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_a_aconninfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
   return _msg;
 }
-inline void Msg_PAltSvcTransactionConstructor::set_allocated_aconninfo(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfo) {
+inline void Msg_PAltSvcTransactionConstructor::set_allocated_a_aconninfo(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aconninfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aconninfo_);
   }
-  if (aconninfo) {
+  if (a_aconninfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aconninfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aconninfo));
     if (message_arena != submessage_arena) {
-      aconninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aconninfo, submessage_arena);
+      a_aconninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aconninfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aconninfo_ = aconninfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aConnInfo)
+  _impl_.a_aconninfo_ = a_aconninfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
 }
 
-// required uint32 aCaps = 2;
-inline bool Msg_PAltSvcTransactionConstructor::_internal_has_acaps() const {
+// required uint32 a_aCaps = 2;
+inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_acaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PAltSvcTransactionConstructor::has_acaps() const {
-  return _internal_has_acaps();
+inline bool Msg_PAltSvcTransactionConstructor::has_a_acaps() const {
+  return _internal_has_a_acaps();
 }
-inline void Msg_PAltSvcTransactionConstructor::clear_acaps() {
-  _impl_.acaps_ = 0u;
+inline void Msg_PAltSvcTransactionConstructor::clear_a_acaps() {
+  _impl_.a_acaps_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_PAltSvcTransactionConstructor::_internal_acaps() const {
-  return _impl_.acaps_;
+inline uint32_t Msg_PAltSvcTransactionConstructor::_internal_a_acaps() const {
+  return _impl_.a_acaps_;
 }
-inline uint32_t Msg_PAltSvcTransactionConstructor::acaps() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aCaps)
-  return _internal_acaps();
+inline uint32_t Msg_PAltSvcTransactionConstructor::a_acaps() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aCaps)
+  return _internal_a_acaps();
 }
-inline void Msg_PAltSvcTransactionConstructor::_internal_set_acaps(uint32_t value) {
+inline void Msg_PAltSvcTransactionConstructor::_internal_set_a_acaps(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.acaps_ = value;
+  _impl_.a_acaps_ = value;
 }
-inline void Msg_PAltSvcTransactionConstructor::set_acaps(uint32_t value) {
-  _internal_set_acaps(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.aCaps)
+inline void Msg_PAltSvcTransactionConstructor::set_a_acaps(uint32_t value) {
+  _internal_set_a_acaps(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aCaps)
 }
 
 // -------------------------------------------------------------------
@@ -12667,207 +12667,207 @@ inline void Msg_PAltSvcTransactionConstructor::set_acaps(uint32_t value) {
 
 // Reply_ClearSessionCache
 
-// required bytes ok = 1;
-inline bool Reply_ClearSessionCache::_internal_has_ok() const {
+// required bytes a_ok = 1;
+inline bool Reply_ClearSessionCache::_internal_has_a_ok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_ClearSessionCache::has_ok() const {
-  return _internal_has_ok();
+inline bool Reply_ClearSessionCache::has_a_ok() const {
+  return _internal_has_a_ok();
 }
-inline void Reply_ClearSessionCache::clear_ok() {
-  _impl_.ok_.ClearToEmpty();
+inline void Reply_ClearSessionCache::clear_a_ok() {
+  _impl_.a_ok_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_ClearSessionCache::ok() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.ok)
-  return _internal_ok();
+inline const std::string& Reply_ClearSessionCache::a_ok() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.a_ok)
+  return _internal_a_ok();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_ClearSessionCache::set_ok(ArgT0&& arg0, ArgT... args) {
+void Reply_ClearSessionCache::set_a_ok(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.ok)
+ _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.a_ok)
 }
-inline std::string* Reply_ClearSessionCache::mutable_ok() {
-  std::string* _s = _internal_mutable_ok();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.ok)
+inline std::string* Reply_ClearSessionCache::mutable_a_ok() {
+  std::string* _s = _internal_mutable_a_ok();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.a_ok)
   return _s;
 }
-inline const std::string& Reply_ClearSessionCache::_internal_ok() const {
-  return _impl_.ok_.Get();
+inline const std::string& Reply_ClearSessionCache::_internal_a_ok() const {
+  return _impl_.a_ok_.Get();
 }
-inline void Reply_ClearSessionCache::_internal_set_ok(const std::string& value) {
+inline void Reply_ClearSessionCache::_internal_set_a_ok(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ok_.Set(value, GetArenaForAllocation());
+  _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_ClearSessionCache::_internal_mutable_ok() {
+inline std::string* Reply_ClearSessionCache::_internal_mutable_a_ok() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ok_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_ClearSessionCache::release_ok() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.ok)
-  if (!_internal_has_ok()) {
+inline std::string* Reply_ClearSessionCache::release_a_ok() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.a_ok)
+  if (!_internal_has_a_ok()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ok_.Release();
+  auto* p = _impl_.a_ok_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_ClearSessionCache::set_allocated_ok(std::string* ok) {
-  if (ok != nullptr) {
+inline void Reply_ClearSessionCache::set_allocated_a_ok(std::string* a_ok) {
+  if (a_ok != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ok_.SetAllocated(ok, GetArenaForAllocation());
+  _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.ok)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_ClearSessionCache.a_ok)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PTRRServiceConstructor
 
-// required bool aCaptiveIsPassed = 1;
-inline bool Msg_PTRRServiceConstructor::_internal_has_acaptiveispassed() const {
+// required bool a_aCaptiveIsPassed = 1;
+inline bool Msg_PTRRServiceConstructor::_internal_has_a_acaptiveispassed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PTRRServiceConstructor::has_acaptiveispassed() const {
-  return _internal_has_acaptiveispassed();
+inline bool Msg_PTRRServiceConstructor::has_a_acaptiveispassed() const {
+  return _internal_has_a_acaptiveispassed();
 }
-inline void Msg_PTRRServiceConstructor::clear_acaptiveispassed() {
-  _impl_.acaptiveispassed_ = false;
+inline void Msg_PTRRServiceConstructor::clear_a_acaptiveispassed() {
+  _impl_.a_acaptiveispassed_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_PTRRServiceConstructor::_internal_acaptiveispassed() const {
-  return _impl_.acaptiveispassed_;
+inline bool Msg_PTRRServiceConstructor::_internal_a_acaptiveispassed() const {
+  return _impl_.a_acaptiveispassed_;
 }
-inline bool Msg_PTRRServiceConstructor::acaptiveispassed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aCaptiveIsPassed)
-  return _internal_acaptiveispassed();
+inline bool Msg_PTRRServiceConstructor::a_acaptiveispassed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aCaptiveIsPassed)
+  return _internal_a_acaptiveispassed();
 }
-inline void Msg_PTRRServiceConstructor::_internal_set_acaptiveispassed(bool value) {
+inline void Msg_PTRRServiceConstructor::_internal_set_a_acaptiveispassed(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acaptiveispassed_ = value;
+  _impl_.a_acaptiveispassed_ = value;
 }
-inline void Msg_PTRRServiceConstructor::set_acaptiveispassed(bool value) {
-  _internal_set_acaptiveispassed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aCaptiveIsPassed)
+inline void Msg_PTRRServiceConstructor::set_a_acaptiveispassed(bool value) {
+  _internal_set_a_acaptiveispassed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aCaptiveIsPassed)
 }
 
-// required bool aParentalControlEnabled = 2;
-inline bool Msg_PTRRServiceConstructor::_internal_has_aparentalcontrolenabled() const {
+// required bool a_aParentalControlEnabled = 2;
+inline bool Msg_PTRRServiceConstructor::_internal_has_a_aparentalcontrolenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PTRRServiceConstructor::has_aparentalcontrolenabled() const {
-  return _internal_has_aparentalcontrolenabled();
+inline bool Msg_PTRRServiceConstructor::has_a_aparentalcontrolenabled() const {
+  return _internal_has_a_aparentalcontrolenabled();
 }
-inline void Msg_PTRRServiceConstructor::clear_aparentalcontrolenabled() {
-  _impl_.aparentalcontrolenabled_ = false;
+inline void Msg_PTRRServiceConstructor::clear_a_aparentalcontrolenabled() {
+  _impl_.a_aparentalcontrolenabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_PTRRServiceConstructor::_internal_aparentalcontrolenabled() const {
-  return _impl_.aparentalcontrolenabled_;
+inline bool Msg_PTRRServiceConstructor::_internal_a_aparentalcontrolenabled() const {
+  return _impl_.a_aparentalcontrolenabled_;
 }
-inline bool Msg_PTRRServiceConstructor::aparentalcontrolenabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aParentalControlEnabled)
-  return _internal_aparentalcontrolenabled();
+inline bool Msg_PTRRServiceConstructor::a_aparentalcontrolenabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aParentalControlEnabled)
+  return _internal_a_aparentalcontrolenabled();
 }
-inline void Msg_PTRRServiceConstructor::_internal_set_aparentalcontrolenabled(bool value) {
+inline void Msg_PTRRServiceConstructor::_internal_set_a_aparentalcontrolenabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aparentalcontrolenabled_ = value;
+  _impl_.a_aparentalcontrolenabled_ = value;
 }
-inline void Msg_PTRRServiceConstructor::set_aparentalcontrolenabled(bool value) {
-  _internal_set_aparentalcontrolenabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aParentalControlEnabled)
+inline void Msg_PTRRServiceConstructor::set_a_aparentalcontrolenabled(bool value) {
+  _internal_set_a_aparentalcontrolenabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aParentalControlEnabled)
 }
 
-// repeated bytes aDNSSuffixList = 3;
-inline int Msg_PTRRServiceConstructor::_internal_adnssuffixlist_size() const {
-  return _impl_.adnssuffixlist_.size();
+// repeated bytes a_aDNSSuffixList = 3;
+inline int Msg_PTRRServiceConstructor::_internal_a_adnssuffixlist_size() const {
+  return _impl_.a_adnssuffixlist_.size();
 }
-inline int Msg_PTRRServiceConstructor::adnssuffixlist_size() const {
-  return _internal_adnssuffixlist_size();
+inline int Msg_PTRRServiceConstructor::a_adnssuffixlist_size() const {
+  return _internal_a_adnssuffixlist_size();
 }
-inline void Msg_PTRRServiceConstructor::clear_adnssuffixlist() {
-  _impl_.adnssuffixlist_.Clear();
+inline void Msg_PTRRServiceConstructor::clear_a_adnssuffixlist() {
+  _impl_.a_adnssuffixlist_.Clear();
 }
-inline std::string* Msg_PTRRServiceConstructor::add_adnssuffixlist() {
-  std::string* _s = _internal_add_adnssuffixlist();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+inline std::string* Msg_PTRRServiceConstructor::add_a_adnssuffixlist() {
+  std::string* _s = _internal_add_a_adnssuffixlist();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
   return _s;
 }
-inline const std::string& Msg_PTRRServiceConstructor::_internal_adnssuffixlist(int index) const {
-  return _impl_.adnssuffixlist_.Get(index);
+inline const std::string& Msg_PTRRServiceConstructor::_internal_a_adnssuffixlist(int index) const {
+  return _impl_.a_adnssuffixlist_.Get(index);
 }
-inline const std::string& Msg_PTRRServiceConstructor::adnssuffixlist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
-  return _internal_adnssuffixlist(index);
+inline const std::string& Msg_PTRRServiceConstructor::a_adnssuffixlist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
+  return _internal_a_adnssuffixlist(index);
 }
-inline std::string* Msg_PTRRServiceConstructor::mutable_adnssuffixlist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
-  return _impl_.adnssuffixlist_.Mutable(index);
+inline std::string* Msg_PTRRServiceConstructor::mutable_a_adnssuffixlist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
+  return _impl_.a_adnssuffixlist_.Mutable(index);
 }
-inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, const std::string& value) {
-  _impl_.adnssuffixlist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+inline void Msg_PTRRServiceConstructor::set_a_adnssuffixlist(int index, const std::string& value) {
+  _impl_.a_adnssuffixlist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, std::string&& value) {
-  _impl_.adnssuffixlist_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+inline void Msg_PTRRServiceConstructor::set_a_adnssuffixlist(int index, std::string&& value) {
+  _impl_.a_adnssuffixlist_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, const char* value) {
+inline void Msg_PTRRServiceConstructor::set_a_adnssuffixlist(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.adnssuffixlist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+  _impl_.a_adnssuffixlist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::set_adnssuffixlist(int index, const void* value, size_t size) {
-  _impl_.adnssuffixlist_.Mutable(index)->assign(
+inline void Msg_PTRRServiceConstructor::set_a_adnssuffixlist(int index, const void* value, size_t size) {
+  _impl_.a_adnssuffixlist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline std::string* Msg_PTRRServiceConstructor::_internal_add_adnssuffixlist() {
-  return _impl_.adnssuffixlist_.Add();
+inline std::string* Msg_PTRRServiceConstructor::_internal_add_a_adnssuffixlist() {
+  return _impl_.a_adnssuffixlist_.Add();
 }
-inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(const std::string& value) {
-  _impl_.adnssuffixlist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+inline void Msg_PTRRServiceConstructor::add_a_adnssuffixlist(const std::string& value) {
+  _impl_.a_adnssuffixlist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(std::string&& value) {
-  _impl_.adnssuffixlist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+inline void Msg_PTRRServiceConstructor::add_a_adnssuffixlist(std::string&& value) {
+  _impl_.a_adnssuffixlist_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(const char* value) {
+inline void Msg_PTRRServiceConstructor::add_a_adnssuffixlist(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.adnssuffixlist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+  _impl_.a_adnssuffixlist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
-inline void Msg_PTRRServiceConstructor::add_adnssuffixlist(const void* value, size_t size) {
-  _impl_.adnssuffixlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
+inline void Msg_PTRRServiceConstructor::add_a_adnssuffixlist(const void* value, size_t size) {
+  _impl_.a_adnssuffixlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_PTRRServiceConstructor::adnssuffixlist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
-  return _impl_.adnssuffixlist_;
+Msg_PTRRServiceConstructor::a_adnssuffixlist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
+  return _impl_.a_adnssuffixlist_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_PTRRServiceConstructor::mutable_adnssuffixlist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.aDNSSuffixList)
-  return &_impl_.adnssuffixlist_;
+Msg_PTRRServiceConstructor::mutable_a_adnssuffixlist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aDNSSuffixList)
+  return &_impl_.a_adnssuffixlist_;
 }
 
 // -------------------------------------------------------------------
@@ -12886,140 +12886,140 @@ Msg_PTRRServiceConstructor::mutable_adnssuffixlist() {
 
 // Msg_NotifyObserver
 
-// required bytes aTopic = 1;
-inline bool Msg_NotifyObserver::_internal_has_atopic() const {
+// required bytes a_aTopic = 1;
+inline bool Msg_NotifyObserver::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyObserver::has_atopic() const {
-  return _internal_has_atopic();
+inline bool Msg_NotifyObserver::has_a_atopic() const {
+  return _internal_has_a_atopic();
 }
-inline void Msg_NotifyObserver::clear_atopic() {
-  _impl_.atopic_.ClearToEmpty();
+inline void Msg_NotifyObserver::clear_a_atopic() {
+  _impl_.a_atopic_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NotifyObserver::atopic() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
-  return _internal_atopic();
+inline const std::string& Msg_NotifyObserver::a_atopic() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aTopic)
+  return _internal_a_atopic();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyObserver::set_atopic(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyObserver::set_a_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
+ _impl_.a_atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aTopic)
 }
-inline std::string* Msg_NotifyObserver::mutable_atopic() {
-  std::string* _s = _internal_mutable_atopic();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
+inline std::string* Msg_NotifyObserver::mutable_a_atopic() {
+  std::string* _s = _internal_mutable_a_atopic();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aTopic)
   return _s;
 }
-inline const std::string& Msg_NotifyObserver::_internal_atopic() const {
-  return _impl_.atopic_.Get();
+inline const std::string& Msg_NotifyObserver::_internal_a_atopic() const {
+  return _impl_.a_atopic_.Get();
 }
-inline void Msg_NotifyObserver::_internal_set_atopic(const std::string& value) {
+inline void Msg_NotifyObserver::_internal_set_a_atopic(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atopic_.Set(value, GetArenaForAllocation());
+  _impl_.a_atopic_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyObserver::_internal_mutable_atopic() {
+inline std::string* Msg_NotifyObserver::_internal_mutable_a_atopic() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atopic_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atopic_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyObserver::release_atopic() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
-  if (!_internal_has_atopic()) {
+inline std::string* Msg_NotifyObserver::release_a_atopic() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aTopic)
+  if (!_internal_has_a_atopic()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atopic_.Release();
+  auto* p = _impl_.a_atopic_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atopic_.IsDefault()) {
-    _impl_.atopic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atopic_.IsDefault()) {
+    _impl_.a_atopic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyObserver::set_allocated_atopic(std::string* atopic) {
-  if (atopic != nullptr) {
+inline void Msg_NotifyObserver::set_allocated_a_atopic(std::string* a_atopic) {
+  if (a_atopic != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atopic_.SetAllocated(atopic, GetArenaForAllocation());
+  _impl_.a_atopic_.SetAllocated(a_atopic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atopic_.IsDefault()) {
-    _impl_.atopic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atopic_.IsDefault()) {
+    _impl_.a_atopic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aTopic)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aTopic)
 }
 
-// required bytes aData = 2;
-inline bool Msg_NotifyObserver::_internal_has_adata() const {
+// required bytes a_aData = 2;
+inline bool Msg_NotifyObserver::_internal_has_a_adata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_NotifyObserver::has_adata() const {
-  return _internal_has_adata();
+inline bool Msg_NotifyObserver::has_a_adata() const {
+  return _internal_has_a_adata();
 }
-inline void Msg_NotifyObserver::clear_adata() {
-  _impl_.adata_.ClearToEmpty();
+inline void Msg_NotifyObserver::clear_a_adata() {
+  _impl_.a_adata_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_NotifyObserver::adata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aData)
-  return _internal_adata();
+inline const std::string& Msg_NotifyObserver::a_adata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aData)
+  return _internal_a_adata();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyObserver::set_adata(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyObserver::set_a_adata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aData)
+ _impl_.a_adata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aData)
 }
-inline std::string* Msg_NotifyObserver::mutable_adata() {
-  std::string* _s = _internal_mutable_adata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aData)
+inline std::string* Msg_NotifyObserver::mutable_a_adata() {
+  std::string* _s = _internal_mutable_a_adata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aData)
   return _s;
 }
-inline const std::string& Msg_NotifyObserver::_internal_adata() const {
-  return _impl_.adata_.Get();
+inline const std::string& Msg_NotifyObserver::_internal_a_adata() const {
+  return _impl_.a_adata_.Get();
 }
-inline void Msg_NotifyObserver::_internal_set_adata(const std::string& value) {
+inline void Msg_NotifyObserver::_internal_set_a_adata(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adata_.Set(value, GetArenaForAllocation());
+  _impl_.a_adata_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyObserver::_internal_mutable_adata() {
+inline std::string* Msg_NotifyObserver::_internal_mutable_a_adata() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adata_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adata_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyObserver::release_adata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aData)
-  if (!_internal_has_adata()) {
+inline std::string* Msg_NotifyObserver::release_a_adata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aData)
+  if (!_internal_has_a_adata()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adata_.Release();
+  auto* p = _impl_.a_adata_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adata_.IsDefault()) {
-    _impl_.adata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adata_.IsDefault()) {
+    _impl_.a_adata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyObserver::set_allocated_adata(std::string* adata) {
-  if (adata != nullptr) {
+inline void Msg_NotifyObserver::set_allocated_a_adata(std::string* a_adata) {
+  if (a_adata != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adata_.SetAllocated(adata, GetArenaForAllocation());
+  _impl_.a_adata_.SetAllocated(a_adata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adata_.IsDefault()) {
-    _impl_.adata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adata_.IsDefault()) {
+    _impl_.a_adata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.aData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_NotifyObserver.a_aData)
 }
 
 // -------------------------------------------------------------------
@@ -13030,41 +13030,41 @@ inline void Msg_NotifyObserver::set_allocated_adata(std::string* adata) {
 
 // Reply_GetSocketData
 
-// required .protobuf.mozilla.net.SocketDataArgs data = 1;
-inline bool Reply_GetSocketData::_internal_has_data() const {
+// required .protobuf.mozilla.net.SocketDataArgs a_data = 1;
+inline bool Reply_GetSocketData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.data_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
   return value;
 }
-inline bool Reply_GetSocketData::has_data() const {
-  return _internal_has_data();
+inline bool Reply_GetSocketData::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline const ::protobuf::mozilla::net::SocketDataArgs& Reply_GetSocketData::_internal_data() const {
-  const ::protobuf::mozilla::net::SocketDataArgs* p = _impl_.data_;
+inline const ::protobuf::mozilla::net::SocketDataArgs& Reply_GetSocketData::_internal_a_data() const {
+  const ::protobuf::mozilla::net::SocketDataArgs* p = _impl_.a_data_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::SocketDataArgs&>(
       ::protobuf::mozilla::net::_SocketDataArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::SocketDataArgs& Reply_GetSocketData::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.data)
-  return _internal_data();
+inline const ::protobuf::mozilla::net::SocketDataArgs& Reply_GetSocketData::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.a_data)
+  return _internal_a_data();
 }
-inline void Reply_GetSocketData::unsafe_arena_set_allocated_data(
-    ::protobuf::mozilla::net::SocketDataArgs* data) {
+inline void Reply_GetSocketData::unsafe_arena_set_allocated_a_data(
+    ::protobuf::mozilla::net::SocketDataArgs* a_data) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  _impl_.data_ = data;
-  if (data) {
+  _impl_.a_data_ = a_data;
+  if (a_data) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.data)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.a_data)
 }
-inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::release_data() {
+inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::release_a_data() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::SocketDataArgs* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::net::SocketDataArgs* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -13076,45 +13076,45 @@ inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::release_da
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::unsafe_arena_release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.data)
+inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::unsafe_arena_release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.a_data)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::SocketDataArgs* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::net::SocketDataArgs* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::_internal_mutable_data() {
+inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.data_ == nullptr) {
+  if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::SocketDataArgs>(GetArenaForAllocation());
-    _impl_.data_ = p;
+    _impl_.a_data_ = p;
   }
-  return _impl_.data_;
+  return _impl_.a_data_;
 }
-inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::mutable_data() {
-  ::protobuf::mozilla::net::SocketDataArgs* _msg = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.data)
+inline ::protobuf::mozilla::net::SocketDataArgs* Reply_GetSocketData::mutable_a_data() {
+  ::protobuf::mozilla::net::SocketDataArgs* _msg = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.a_data)
   return _msg;
 }
-inline void Reply_GetSocketData::set_allocated_data(::protobuf::mozilla::net::SocketDataArgs* data) {
+inline void Reply_GetSocketData::set_allocated_a_data(::protobuf::mozilla::net::SocketDataArgs* a_data) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  if (data) {
+  if (a_data) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(data));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_data));
     if (message_arena != submessage_arena) {
-      data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, data, submessage_arena);
+      a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_data, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_ = data;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.data)
+  _impl_.a_data_ = a_data;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_GetSocketData.a_data)
 }
 
 // -------------------------------------------------------------------
@@ -13125,79 +13125,79 @@ inline void Reply_GetSocketData::set_allocated_data(::protobuf::mozilla::net::So
 
 // Reply_GetDNSCacheEntries
 
-// repeated bytes entries = 1;
-inline int Reply_GetDNSCacheEntries::_internal_entries_size() const {
-  return _impl_.entries_.size();
+// repeated bytes a_entries = 1;
+inline int Reply_GetDNSCacheEntries::_internal_a_entries_size() const {
+  return _impl_.a_entries_.size();
 }
-inline int Reply_GetDNSCacheEntries::entries_size() const {
-  return _internal_entries_size();
+inline int Reply_GetDNSCacheEntries::a_entries_size() const {
+  return _internal_a_entries_size();
 }
-inline void Reply_GetDNSCacheEntries::clear_entries() {
-  _impl_.entries_.Clear();
+inline void Reply_GetDNSCacheEntries::clear_a_entries() {
+  _impl_.a_entries_.Clear();
 }
-inline std::string* Reply_GetDNSCacheEntries::add_entries() {
-  std::string* _s = _internal_add_entries();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+inline std::string* Reply_GetDNSCacheEntries::add_a_entries() {
+  std::string* _s = _internal_add_a_entries();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
   return _s;
 }
-inline const std::string& Reply_GetDNSCacheEntries::_internal_entries(int index) const {
-  return _impl_.entries_.Get(index);
+inline const std::string& Reply_GetDNSCacheEntries::_internal_a_entries(int index) const {
+  return _impl_.a_entries_.Get(index);
 }
-inline const std::string& Reply_GetDNSCacheEntries::entries(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
-  return _internal_entries(index);
+inline const std::string& Reply_GetDNSCacheEntries::a_entries(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
+  return _internal_a_entries(index);
 }
-inline std::string* Reply_GetDNSCacheEntries::mutable_entries(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
-  return _impl_.entries_.Mutable(index);
+inline std::string* Reply_GetDNSCacheEntries::mutable_a_entries(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
+  return _impl_.a_entries_.Mutable(index);
 }
-inline void Reply_GetDNSCacheEntries::set_entries(int index, const std::string& value) {
-  _impl_.entries_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+inline void Reply_GetDNSCacheEntries::set_a_entries(int index, const std::string& value) {
+  _impl_.a_entries_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline void Reply_GetDNSCacheEntries::set_entries(int index, std::string&& value) {
-  _impl_.entries_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+inline void Reply_GetDNSCacheEntries::set_a_entries(int index, std::string&& value) {
+  _impl_.a_entries_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline void Reply_GetDNSCacheEntries::set_entries(int index, const char* value) {
+inline void Reply_GetDNSCacheEntries::set_a_entries(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.entries_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+  _impl_.a_entries_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline void Reply_GetDNSCacheEntries::set_entries(int index, const void* value, size_t size) {
-  _impl_.entries_.Mutable(index)->assign(
+inline void Reply_GetDNSCacheEntries::set_a_entries(int index, const void* value, size_t size) {
+  _impl_.a_entries_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline std::string* Reply_GetDNSCacheEntries::_internal_add_entries() {
-  return _impl_.entries_.Add();
+inline std::string* Reply_GetDNSCacheEntries::_internal_add_a_entries() {
+  return _impl_.a_entries_.Add();
 }
-inline void Reply_GetDNSCacheEntries::add_entries(const std::string& value) {
-  _impl_.entries_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+inline void Reply_GetDNSCacheEntries::add_a_entries(const std::string& value) {
+  _impl_.a_entries_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline void Reply_GetDNSCacheEntries::add_entries(std::string&& value) {
-  _impl_.entries_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+inline void Reply_GetDNSCacheEntries::add_a_entries(std::string&& value) {
+  _impl_.a_entries_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline void Reply_GetDNSCacheEntries::add_entries(const char* value) {
+inline void Reply_GetDNSCacheEntries::add_a_entries(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.entries_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+  _impl_.a_entries_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
-inline void Reply_GetDNSCacheEntries::add_entries(const void* value, size_t size) {
-  _impl_.entries_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
+inline void Reply_GetDNSCacheEntries::add_a_entries(const void* value, size_t size) {
+  _impl_.a_entries_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Reply_GetDNSCacheEntries::entries() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
-  return _impl_.entries_;
+Reply_GetDNSCacheEntries::a_entries() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
+  return _impl_.a_entries_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Reply_GetDNSCacheEntries::mutable_entries() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.entries)
-  return &_impl_.entries_;
+Reply_GetDNSCacheEntries::mutable_a_entries() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Reply_GetDNSCacheEntries.a_entries)
+  return &_impl_.a_entries_;
 }
 
 // -------------------------------------------------------------------
@@ -13208,79 +13208,79 @@ Reply_GetDNSCacheEntries::mutable_entries() {
 
 // Reply_GetHttpConnectionData
 
-// repeated bytes params = 1;
-inline int Reply_GetHttpConnectionData::_internal_params_size() const {
-  return _impl_.params_.size();
+// repeated bytes a_params = 1;
+inline int Reply_GetHttpConnectionData::_internal_a_params_size() const {
+  return _impl_.a_params_.size();
 }
-inline int Reply_GetHttpConnectionData::params_size() const {
-  return _internal_params_size();
+inline int Reply_GetHttpConnectionData::a_params_size() const {
+  return _internal_a_params_size();
 }
-inline void Reply_GetHttpConnectionData::clear_params() {
-  _impl_.params_.Clear();
+inline void Reply_GetHttpConnectionData::clear_a_params() {
+  _impl_.a_params_.Clear();
 }
-inline std::string* Reply_GetHttpConnectionData::add_params() {
-  std::string* _s = _internal_add_params();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+inline std::string* Reply_GetHttpConnectionData::add_a_params() {
+  std::string* _s = _internal_add_a_params();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
   return _s;
 }
-inline const std::string& Reply_GetHttpConnectionData::_internal_params(int index) const {
-  return _impl_.params_.Get(index);
+inline const std::string& Reply_GetHttpConnectionData::_internal_a_params(int index) const {
+  return _impl_.a_params_.Get(index);
 }
-inline const std::string& Reply_GetHttpConnectionData::params(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
-  return _internal_params(index);
+inline const std::string& Reply_GetHttpConnectionData::a_params(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
+  return _internal_a_params(index);
 }
-inline std::string* Reply_GetHttpConnectionData::mutable_params(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
-  return _impl_.params_.Mutable(index);
+inline std::string* Reply_GetHttpConnectionData::mutable_a_params(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
+  return _impl_.a_params_.Mutable(index);
 }
-inline void Reply_GetHttpConnectionData::set_params(int index, const std::string& value) {
-  _impl_.params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+inline void Reply_GetHttpConnectionData::set_a_params(int index, const std::string& value) {
+  _impl_.a_params_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline void Reply_GetHttpConnectionData::set_params(int index, std::string&& value) {
-  _impl_.params_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+inline void Reply_GetHttpConnectionData::set_a_params(int index, std::string&& value) {
+  _impl_.a_params_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline void Reply_GetHttpConnectionData::set_params(int index, const char* value) {
+inline void Reply_GetHttpConnectionData::set_a_params(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+  _impl_.a_params_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline void Reply_GetHttpConnectionData::set_params(int index, const void* value, size_t size) {
-  _impl_.params_.Mutable(index)->assign(
+inline void Reply_GetHttpConnectionData::set_a_params(int index, const void* value, size_t size) {
+  _impl_.a_params_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline std::string* Reply_GetHttpConnectionData::_internal_add_params() {
-  return _impl_.params_.Add();
+inline std::string* Reply_GetHttpConnectionData::_internal_add_a_params() {
+  return _impl_.a_params_.Add();
 }
-inline void Reply_GetHttpConnectionData::add_params(const std::string& value) {
-  _impl_.params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+inline void Reply_GetHttpConnectionData::add_a_params(const std::string& value) {
+  _impl_.a_params_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline void Reply_GetHttpConnectionData::add_params(std::string&& value) {
-  _impl_.params_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+inline void Reply_GetHttpConnectionData::add_a_params(std::string&& value) {
+  _impl_.a_params_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline void Reply_GetHttpConnectionData::add_params(const char* value) {
+inline void Reply_GetHttpConnectionData::add_a_params(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+  _impl_.a_params_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
-inline void Reply_GetHttpConnectionData::add_params(const void* value, size_t size) {
-  _impl_.params_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
+inline void Reply_GetHttpConnectionData::add_a_params(const void* value, size_t size) {
+  _impl_.a_params_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Reply_GetHttpConnectionData::params() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
-  return _impl_.params_;
+Reply_GetHttpConnectionData::a_params() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
+  return _impl_.a_params_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Reply_GetHttpConnectionData::mutable_params() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.params)
-  return &_impl_.params_;
+Reply_GetHttpConnectionData::mutable_a_params() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttpConnectionData.a_params)
+  return &_impl_.a_params_;
 }
 
 // -------------------------------------------------------------------
@@ -13291,151 +13291,151 @@ Reply_GetHttpConnectionData::mutable_params() {
 
 // Reply_GetHttp3ConnectionStatsData
 
-// repeated bytes params = 1;
-inline int Reply_GetHttp3ConnectionStatsData::_internal_params_size() const {
-  return _impl_.params_.size();
+// repeated bytes a_params = 1;
+inline int Reply_GetHttp3ConnectionStatsData::_internal_a_params_size() const {
+  return _impl_.a_params_.size();
 }
-inline int Reply_GetHttp3ConnectionStatsData::params_size() const {
-  return _internal_params_size();
+inline int Reply_GetHttp3ConnectionStatsData::a_params_size() const {
+  return _internal_a_params_size();
 }
-inline void Reply_GetHttp3ConnectionStatsData::clear_params() {
-  _impl_.params_.Clear();
+inline void Reply_GetHttp3ConnectionStatsData::clear_a_params() {
+  _impl_.a_params_.Clear();
 }
-inline std::string* Reply_GetHttp3ConnectionStatsData::add_params() {
-  std::string* _s = _internal_add_params();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+inline std::string* Reply_GetHttp3ConnectionStatsData::add_a_params() {
+  std::string* _s = _internal_add_a_params();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
   return _s;
 }
-inline const std::string& Reply_GetHttp3ConnectionStatsData::_internal_params(int index) const {
-  return _impl_.params_.Get(index);
+inline const std::string& Reply_GetHttp3ConnectionStatsData::_internal_a_params(int index) const {
+  return _impl_.a_params_.Get(index);
 }
-inline const std::string& Reply_GetHttp3ConnectionStatsData::params(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
-  return _internal_params(index);
+inline const std::string& Reply_GetHttp3ConnectionStatsData::a_params(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
+  return _internal_a_params(index);
 }
-inline std::string* Reply_GetHttp3ConnectionStatsData::mutable_params(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
-  return _impl_.params_.Mutable(index);
+inline std::string* Reply_GetHttp3ConnectionStatsData::mutable_a_params(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
+  return _impl_.a_params_.Mutable(index);
 }
-inline void Reply_GetHttp3ConnectionStatsData::set_params(int index, const std::string& value) {
-  _impl_.params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+inline void Reply_GetHttp3ConnectionStatsData::set_a_params(int index, const std::string& value) {
+  _impl_.a_params_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline void Reply_GetHttp3ConnectionStatsData::set_params(int index, std::string&& value) {
-  _impl_.params_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+inline void Reply_GetHttp3ConnectionStatsData::set_a_params(int index, std::string&& value) {
+  _impl_.a_params_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline void Reply_GetHttp3ConnectionStatsData::set_params(int index, const char* value) {
+inline void Reply_GetHttp3ConnectionStatsData::set_a_params(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+  _impl_.a_params_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline void Reply_GetHttp3ConnectionStatsData::set_params(int index, const void* value, size_t size) {
-  _impl_.params_.Mutable(index)->assign(
+inline void Reply_GetHttp3ConnectionStatsData::set_a_params(int index, const void* value, size_t size) {
+  _impl_.a_params_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline std::string* Reply_GetHttp3ConnectionStatsData::_internal_add_params() {
-  return _impl_.params_.Add();
+inline std::string* Reply_GetHttp3ConnectionStatsData::_internal_add_a_params() {
+  return _impl_.a_params_.Add();
 }
-inline void Reply_GetHttp3ConnectionStatsData::add_params(const std::string& value) {
-  _impl_.params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+inline void Reply_GetHttp3ConnectionStatsData::add_a_params(const std::string& value) {
+  _impl_.a_params_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline void Reply_GetHttp3ConnectionStatsData::add_params(std::string&& value) {
-  _impl_.params_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+inline void Reply_GetHttp3ConnectionStatsData::add_a_params(std::string&& value) {
+  _impl_.a_params_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline void Reply_GetHttp3ConnectionStatsData::add_params(const char* value) {
+inline void Reply_GetHttp3ConnectionStatsData::add_a_params(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+  _impl_.a_params_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
-inline void Reply_GetHttp3ConnectionStatsData::add_params(const void* value, size_t size) {
-  _impl_.params_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
+inline void Reply_GetHttp3ConnectionStatsData::add_a_params(const void* value, size_t size) {
+  _impl_.a_params_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Reply_GetHttp3ConnectionStatsData::params() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
-  return _impl_.params_;
+Reply_GetHttp3ConnectionStatsData::a_params() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
+  return _impl_.a_params_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Reply_GetHttp3ConnectionStatsData::mutable_params() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.params)
-  return &_impl_.params_;
+Reply_GetHttp3ConnectionStatsData::mutable_a_params() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PSocketProcess.Reply_GetHttp3ConnectionStatsData.a_params)
+  return &_impl_.a_params_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitProxyAutoConfigChild
 
-// required bytes endpoint = 1;
-inline bool Msg_InitProxyAutoConfigChild::_internal_has_endpoint() const {
+// required bytes a_endpoint = 1;
+inline bool Msg_InitProxyAutoConfigChild::_internal_has_a_endpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitProxyAutoConfigChild::has_endpoint() const {
-  return _internal_has_endpoint();
+inline bool Msg_InitProxyAutoConfigChild::has_a_endpoint() const {
+  return _internal_has_a_endpoint();
 }
-inline void Msg_InitProxyAutoConfigChild::clear_endpoint() {
-  _impl_.endpoint_.ClearToEmpty();
+inline void Msg_InitProxyAutoConfigChild::clear_a_endpoint() {
+  _impl_.a_endpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitProxyAutoConfigChild::endpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.endpoint)
-  return _internal_endpoint();
+inline const std::string& Msg_InitProxyAutoConfigChild::a_endpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.a_endpoint)
+  return _internal_a_endpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitProxyAutoConfigChild::set_endpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_InitProxyAutoConfigChild::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.endpoint)
+ _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.a_endpoint)
 }
-inline std::string* Msg_InitProxyAutoConfigChild::mutable_endpoint() {
-  std::string* _s = _internal_mutable_endpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.endpoint)
+inline std::string* Msg_InitProxyAutoConfigChild::mutable_a_endpoint() {
+  std::string* _s = _internal_mutable_a_endpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.a_endpoint)
   return _s;
 }
-inline const std::string& Msg_InitProxyAutoConfigChild::_internal_endpoint() const {
-  return _impl_.endpoint_.Get();
+inline const std::string& Msg_InitProxyAutoConfigChild::_internal_a_endpoint() const {
+  return _impl_.a_endpoint_.Get();
 }
-inline void Msg_InitProxyAutoConfigChild::_internal_set_endpoint(const std::string& value) {
+inline void Msg_InitProxyAutoConfigChild::_internal_set_a_endpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.endpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_endpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitProxyAutoConfigChild::_internal_mutable_endpoint() {
+inline std::string* Msg_InitProxyAutoConfigChild::_internal_mutable_a_endpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.endpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_endpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitProxyAutoConfigChild::release_endpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.endpoint)
-  if (!_internal_has_endpoint()) {
+inline std::string* Msg_InitProxyAutoConfigChild::release_a_endpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.a_endpoint)
+  if (!_internal_has_a_endpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.endpoint_.Release();
+  auto* p = _impl_.a_endpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitProxyAutoConfigChild::set_allocated_endpoint(std::string* endpoint) {
-  if (endpoint != nullptr) {
+inline void Msg_InitProxyAutoConfigChild::set_allocated_a_endpoint(std::string* a_endpoint) {
+  if (a_endpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.endpoint_.SetAllocated(endpoint, GetArenaForAllocation());
+  _impl_.a_endpoint_.SetAllocated(a_endpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.endpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_InitProxyAutoConfigChild.a_endpoint)
 }
 
 // -------------------------------------------------------------------
@@ -13454,72 +13454,72 @@ inline void Msg_InitProxyAutoConfigChild::set_allocated_endpoint(std::string* en
 
 // Reply_FlushFOGData
 
-// required bytes buf = 1;
-inline bool Reply_FlushFOGData::_internal_has_buf() const {
+// required bytes a_buf = 1;
+inline bool Reply_FlushFOGData::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_FlushFOGData::has_buf() const {
-  return _internal_has_buf();
+inline bool Reply_FlushFOGData::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Reply_FlushFOGData::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Reply_FlushFOGData::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_FlushFOGData::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.buf)
-  return _internal_buf();
+inline const std::string& Reply_FlushFOGData::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_FlushFOGData::set_buf(ArgT0&& arg0, ArgT... args) {
+void Reply_FlushFOGData::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.a_buf)
 }
-inline std::string* Reply_FlushFOGData::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.buf)
+inline std::string* Reply_FlushFOGData::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.a_buf)
   return _s;
 }
-inline const std::string& Reply_FlushFOGData::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Reply_FlushFOGData::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Reply_FlushFOGData::_internal_set_buf(const std::string& value) {
+inline void Reply_FlushFOGData::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_FlushFOGData::_internal_mutable_buf() {
+inline std::string* Reply_FlushFOGData::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_FlushFOGData::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Reply_FlushFOGData::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_FlushFOGData::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Reply_FlushFOGData::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Reply_FlushFOGData.a_buf)
 }
 
 // -------------------------------------------------------------------
@@ -13530,172 +13530,172 @@ inline void Reply_FlushFOGData::set_allocated_buf(std::string* buf) {
 
 // Reply_TestTriggerMetrics
 
-// required bool unused = 1;
-inline bool Reply_TestTriggerMetrics::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_TestTriggerMetrics::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_TestTriggerMetrics::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_TestTriggerMetrics::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_TestTriggerMetrics::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_TestTriggerMetrics::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_TestTriggerMetrics::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_TestTriggerMetrics::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_TestTriggerMetrics::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_TestTriggerMetrics.unused)
-  return _internal_unused();
+inline bool Reply_TestTriggerMetrics::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Reply_TestTriggerMetrics.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_TestTriggerMetrics::_internal_set_unused(bool value) {
+inline void Reply_TestTriggerMetrics::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_TestTriggerMetrics::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_TestTriggerMetrics.unused)
+inline void Reply_TestTriggerMetrics::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Reply_TestTriggerMetrics.a_unused)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AddNetAddrOverride
 
-// required bytes aFrom = 1;
-inline bool Msg_AddNetAddrOverride::_internal_has_afrom() const {
+// required bytes a_aFrom = 1;
+inline bool Msg_AddNetAddrOverride::_internal_has_a_afrom() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AddNetAddrOverride::has_afrom() const {
-  return _internal_has_afrom();
+inline bool Msg_AddNetAddrOverride::has_a_afrom() const {
+  return _internal_has_a_afrom();
 }
-inline void Msg_AddNetAddrOverride::clear_afrom() {
-  _impl_.afrom_.ClearToEmpty();
+inline void Msg_AddNetAddrOverride::clear_a_afrom() {
+  _impl_.a_afrom_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AddNetAddrOverride::afrom() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aFrom)
-  return _internal_afrom();
+inline const std::string& Msg_AddNetAddrOverride::a_afrom() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aFrom)
+  return _internal_a_afrom();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddNetAddrOverride::set_afrom(ArgT0&& arg0, ArgT... args) {
+void Msg_AddNetAddrOverride::set_a_afrom(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.afrom_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aFrom)
+ _impl_.a_afrom_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aFrom)
 }
-inline std::string* Msg_AddNetAddrOverride::mutable_afrom() {
-  std::string* _s = _internal_mutable_afrom();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aFrom)
+inline std::string* Msg_AddNetAddrOverride::mutable_a_afrom() {
+  std::string* _s = _internal_mutable_a_afrom();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aFrom)
   return _s;
 }
-inline const std::string& Msg_AddNetAddrOverride::_internal_afrom() const {
-  return _impl_.afrom_.Get();
+inline const std::string& Msg_AddNetAddrOverride::_internal_a_afrom() const {
+  return _impl_.a_afrom_.Get();
 }
-inline void Msg_AddNetAddrOverride::_internal_set_afrom(const std::string& value) {
+inline void Msg_AddNetAddrOverride::_internal_set_a_afrom(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.afrom_.Set(value, GetArenaForAllocation());
+  _impl_.a_afrom_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddNetAddrOverride::_internal_mutable_afrom() {
+inline std::string* Msg_AddNetAddrOverride::_internal_mutable_a_afrom() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.afrom_.Mutable(GetArenaForAllocation());
+  return _impl_.a_afrom_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddNetAddrOverride::release_afrom() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aFrom)
-  if (!_internal_has_afrom()) {
+inline std::string* Msg_AddNetAddrOverride::release_a_afrom() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aFrom)
+  if (!_internal_has_a_afrom()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.afrom_.Release();
+  auto* p = _impl_.a_afrom_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afrom_.IsDefault()) {
-    _impl_.afrom_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afrom_.IsDefault()) {
+    _impl_.a_afrom_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddNetAddrOverride::set_allocated_afrom(std::string* afrom) {
-  if (afrom != nullptr) {
+inline void Msg_AddNetAddrOverride::set_allocated_a_afrom(std::string* a_afrom) {
+  if (a_afrom != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.afrom_.SetAllocated(afrom, GetArenaForAllocation());
+  _impl_.a_afrom_.SetAllocated(a_afrom, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afrom_.IsDefault()) {
-    _impl_.afrom_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afrom_.IsDefault()) {
+    _impl_.a_afrom_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aFrom)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aFrom)
 }
 
-// required bytes aTo = 2;
-inline bool Msg_AddNetAddrOverride::_internal_has_ato() const {
+// required bytes a_aTo = 2;
+inline bool Msg_AddNetAddrOverride::_internal_has_a_ato() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AddNetAddrOverride::has_ato() const {
-  return _internal_has_ato();
+inline bool Msg_AddNetAddrOverride::has_a_ato() const {
+  return _internal_has_a_ato();
 }
-inline void Msg_AddNetAddrOverride::clear_ato() {
-  _impl_.ato_.ClearToEmpty();
+inline void Msg_AddNetAddrOverride::clear_a_ato() {
+  _impl_.a_ato_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_AddNetAddrOverride::ato() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aTo)
-  return _internal_ato();
+inline const std::string& Msg_AddNetAddrOverride::a_ato() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aTo)
+  return _internal_a_ato();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddNetAddrOverride::set_ato(ArgT0&& arg0, ArgT... args) {
+void Msg_AddNetAddrOverride::set_a_ato(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.ato_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aTo)
+ _impl_.a_ato_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aTo)
 }
-inline std::string* Msg_AddNetAddrOverride::mutable_ato() {
-  std::string* _s = _internal_mutable_ato();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aTo)
+inline std::string* Msg_AddNetAddrOverride::mutable_a_ato() {
+  std::string* _s = _internal_mutable_a_ato();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aTo)
   return _s;
 }
-inline const std::string& Msg_AddNetAddrOverride::_internal_ato() const {
-  return _impl_.ato_.Get();
+inline const std::string& Msg_AddNetAddrOverride::_internal_a_ato() const {
+  return _impl_.a_ato_.Get();
 }
-inline void Msg_AddNetAddrOverride::_internal_set_ato(const std::string& value) {
+inline void Msg_AddNetAddrOverride::_internal_set_a_ato(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.ato_.Set(value, GetArenaForAllocation());
+  _impl_.a_ato_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddNetAddrOverride::_internal_mutable_ato() {
+inline std::string* Msg_AddNetAddrOverride::_internal_mutable_a_ato() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.ato_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ato_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddNetAddrOverride::release_ato() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aTo)
-  if (!_internal_has_ato()) {
+inline std::string* Msg_AddNetAddrOverride::release_a_ato() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aTo)
+  if (!_internal_has_a_ato()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.ato_.Release();
+  auto* p = _impl_.a_ato_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ato_.IsDefault()) {
-    _impl_.ato_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ato_.IsDefault()) {
+    _impl_.a_ato_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddNetAddrOverride::set_allocated_ato(std::string* ato) {
-  if (ato != nullptr) {
+inline void Msg_AddNetAddrOverride::set_allocated_a_ato(std::string* a_ato) {
+  if (a_ato != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.ato_.SetAllocated(ato, GetArenaForAllocation());
+  _impl_.a_ato_.SetAllocated(a_ato, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ato_.IsDefault()) {
-    _impl_.ato_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ato_.IsDefault()) {
+    _impl_.a_ato_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.aTo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_AddNetAddrOverride.a_aTo)
 }
 
 // -------------------------------------------------------------------
@@ -13706,332 +13706,332 @@ inline void Msg_AddNetAddrOverride::set_allocated_ato(std::string* ato) {
 
 // Msg_PDNSRequestConstructor
 
-// required bytes hostName = 1;
-inline bool Msg_PDNSRequestConstructor::_internal_has_hostname() const {
+// required bytes a_hostName = 1;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PDNSRequestConstructor::has_hostname() const {
-  return _internal_has_hostname();
+inline bool Msg_PDNSRequestConstructor::has_a_hostname() const {
+  return _internal_has_a_hostname();
 }
-inline void Msg_PDNSRequestConstructor::clear_hostname() {
-  _impl_.hostname_.ClearToEmpty();
+inline void Msg_PDNSRequestConstructor::clear_a_hostname() {
+  _impl_.a_hostname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PDNSRequestConstructor::hostname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
-  return _internal_hostname();
+inline const std::string& Msg_PDNSRequestConstructor::a_hostname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
+  return _internal_a_hostname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PDNSRequestConstructor::set_hostname(ArgT0&& arg0, ArgT... args) {
+void Msg_PDNSRequestConstructor::set_a_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
+ _impl_.a_hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
 }
-inline std::string* Msg_PDNSRequestConstructor::mutable_hostname() {
-  std::string* _s = _internal_mutable_hostname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
+inline std::string* Msg_PDNSRequestConstructor::mutable_a_hostname() {
+  std::string* _s = _internal_mutable_a_hostname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
   return _s;
 }
-inline const std::string& Msg_PDNSRequestConstructor::_internal_hostname() const {
-  return _impl_.hostname_.Get();
+inline const std::string& Msg_PDNSRequestConstructor::_internal_a_hostname() const {
+  return _impl_.a_hostname_.Get();
 }
-inline void Msg_PDNSRequestConstructor::_internal_set_hostname(const std::string& value) {
+inline void Msg_PDNSRequestConstructor::_internal_set_a_hostname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.hostname_.Set(value, GetArenaForAllocation());
+  _impl_.a_hostname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_hostname() {
+inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_a_hostname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.hostname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_hostname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::release_hostname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
-  if (!_internal_has_hostname()) {
+inline std::string* Msg_PDNSRequestConstructor::release_a_hostname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
+  if (!_internal_has_a_hostname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.hostname_.Release();
+  auto* p = _impl_.a_hostname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.hostname_.IsDefault()) {
-    _impl_.hostname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_hostname_.IsDefault()) {
+    _impl_.a_hostname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PDNSRequestConstructor::set_allocated_hostname(std::string* hostname) {
-  if (hostname != nullptr) {
+inline void Msg_PDNSRequestConstructor::set_allocated_a_hostname(std::string* a_hostname) {
+  if (a_hostname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.hostname_.SetAllocated(hostname, GetArenaForAllocation());
+  _impl_.a_hostname_.SetAllocated(a_hostname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.hostname_.IsDefault()) {
-    _impl_.hostname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_hostname_.IsDefault()) {
+    _impl_.a_hostname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.hostName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
 }
 
-// required bytes trrServer = 2;
-inline bool Msg_PDNSRequestConstructor::_internal_has_trrserver() const {
+// required bytes a_trrServer = 2;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PDNSRequestConstructor::has_trrserver() const {
-  return _internal_has_trrserver();
+inline bool Msg_PDNSRequestConstructor::has_a_trrserver() const {
+  return _internal_has_a_trrserver();
 }
-inline void Msg_PDNSRequestConstructor::clear_trrserver() {
-  _impl_.trrserver_.ClearToEmpty();
+inline void Msg_PDNSRequestConstructor::clear_a_trrserver() {
+  _impl_.a_trrserver_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_PDNSRequestConstructor::trrserver() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.trrServer)
-  return _internal_trrserver();
+inline const std::string& Msg_PDNSRequestConstructor::a_trrserver() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
+  return _internal_a_trrserver();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PDNSRequestConstructor::set_trrserver(ArgT0&& arg0, ArgT... args) {
+void Msg_PDNSRequestConstructor::set_a_trrserver(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.trrserver_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.trrServer)
+ _impl_.a_trrserver_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
 }
-inline std::string* Msg_PDNSRequestConstructor::mutable_trrserver() {
-  std::string* _s = _internal_mutable_trrserver();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.trrServer)
+inline std::string* Msg_PDNSRequestConstructor::mutable_a_trrserver() {
+  std::string* _s = _internal_mutable_a_trrserver();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
   return _s;
 }
-inline const std::string& Msg_PDNSRequestConstructor::_internal_trrserver() const {
-  return _impl_.trrserver_.Get();
+inline const std::string& Msg_PDNSRequestConstructor::_internal_a_trrserver() const {
+  return _impl_.a_trrserver_.Get();
 }
-inline void Msg_PDNSRequestConstructor::_internal_set_trrserver(const std::string& value) {
+inline void Msg_PDNSRequestConstructor::_internal_set_a_trrserver(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.trrserver_.Set(value, GetArenaForAllocation());
+  _impl_.a_trrserver_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_trrserver() {
+inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_a_trrserver() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.trrserver_.Mutable(GetArenaForAllocation());
+  return _impl_.a_trrserver_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::release_trrserver() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.trrServer)
-  if (!_internal_has_trrserver()) {
+inline std::string* Msg_PDNSRequestConstructor::release_a_trrserver() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
+  if (!_internal_has_a_trrserver()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.trrserver_.Release();
+  auto* p = _impl_.a_trrserver_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.trrserver_.IsDefault()) {
-    _impl_.trrserver_.Set("", GetArenaForAllocation());
+  if (_impl_.a_trrserver_.IsDefault()) {
+    _impl_.a_trrserver_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PDNSRequestConstructor::set_allocated_trrserver(std::string* trrserver) {
-  if (trrserver != nullptr) {
+inline void Msg_PDNSRequestConstructor::set_allocated_a_trrserver(std::string* a_trrserver) {
+  if (a_trrserver != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.trrserver_.SetAllocated(trrserver, GetArenaForAllocation());
+  _impl_.a_trrserver_.SetAllocated(a_trrserver, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.trrserver_.IsDefault()) {
-    _impl_.trrserver_.Set("", GetArenaForAllocation());
+  if (_impl_.a_trrserver_.IsDefault()) {
+    _impl_.a_trrserver_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.trrServer)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
 }
 
-// required sint32 port = 3;
-inline bool Msg_PDNSRequestConstructor::_internal_has_port() const {
+// required sint32 a_port = 3;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_PDNSRequestConstructor::has_port() const {
-  return _internal_has_port();
+inline bool Msg_PDNSRequestConstructor::has_a_port() const {
+  return _internal_has_a_port();
 }
-inline void Msg_PDNSRequestConstructor::clear_port() {
-  _impl_.port_ = 0;
+inline void Msg_PDNSRequestConstructor::clear_a_port() {
+  _impl_.a_port_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t Msg_PDNSRequestConstructor::_internal_port() const {
-  return _impl_.port_;
+inline int32_t Msg_PDNSRequestConstructor::_internal_a_port() const {
+  return _impl_.a_port_;
 }
-inline int32_t Msg_PDNSRequestConstructor::port() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.port)
-  return _internal_port();
+inline int32_t Msg_PDNSRequestConstructor::a_port() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_port)
+  return _internal_a_port();
 }
-inline void Msg_PDNSRequestConstructor::_internal_set_port(int32_t value) {
+inline void Msg_PDNSRequestConstructor::_internal_set_a_port(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.port_ = value;
+  _impl_.a_port_ = value;
 }
-inline void Msg_PDNSRequestConstructor::set_port(int32_t value) {
-  _internal_set_port(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.port)
+inline void Msg_PDNSRequestConstructor::set_a_port(int32_t value) {
+  _internal_set_a_port(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_port)
 }
 
-// required uint32 type = 4;
-inline bool Msg_PDNSRequestConstructor::_internal_has_type() const {
+// required uint32 a_type = 4;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_PDNSRequestConstructor::has_type() const {
-  return _internal_has_type();
+inline bool Msg_PDNSRequestConstructor::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void Msg_PDNSRequestConstructor::clear_type() {
-  _impl_.type_ = 0u;
+inline void Msg_PDNSRequestConstructor::clear_a_type() {
+  _impl_.a_type_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline uint32_t Msg_PDNSRequestConstructor::_internal_type() const {
-  return _impl_.type_;
+inline uint32_t Msg_PDNSRequestConstructor::_internal_a_type() const {
+  return _impl_.a_type_;
 }
-inline uint32_t Msg_PDNSRequestConstructor::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.type)
-  return _internal_type();
+inline uint32_t Msg_PDNSRequestConstructor::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_type)
+  return _internal_a_type();
 }
-inline void Msg_PDNSRequestConstructor::_internal_set_type(uint32_t value) {
+inline void Msg_PDNSRequestConstructor::_internal_set_a_type(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.type_ = value;
+  _impl_.a_type_ = value;
 }
-inline void Msg_PDNSRequestConstructor::set_type(uint32_t value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.type)
+inline void Msg_PDNSRequestConstructor::set_a_type(uint32_t value) {
+  _internal_set_a_type(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_type)
 }
 
-// required bytes originAttributes = 5;
-inline bool Msg_PDNSRequestConstructor::_internal_has_originattributes() const {
+// required bytes a_originAttributes = 5;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_originattributes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_PDNSRequestConstructor::has_originattributes() const {
-  return _internal_has_originattributes();
+inline bool Msg_PDNSRequestConstructor::has_a_originattributes() const {
+  return _internal_has_a_originattributes();
 }
-inline void Msg_PDNSRequestConstructor::clear_originattributes() {
-  _impl_.originattributes_.ClearToEmpty();
+inline void Msg_PDNSRequestConstructor::clear_a_originattributes() {
+  _impl_.a_originattributes_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_PDNSRequestConstructor::originattributes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.originAttributes)
-  return _internal_originattributes();
+inline const std::string& Msg_PDNSRequestConstructor::a_originattributes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_originAttributes)
+  return _internal_a_originattributes();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PDNSRequestConstructor::set_originattributes(ArgT0&& arg0, ArgT... args) {
+void Msg_PDNSRequestConstructor::set_a_originattributes(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.originAttributes)
+ _impl_.a_originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_originAttributes)
 }
-inline std::string* Msg_PDNSRequestConstructor::mutable_originattributes() {
-  std::string* _s = _internal_mutable_originattributes();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.originAttributes)
+inline std::string* Msg_PDNSRequestConstructor::mutable_a_originattributes() {
+  std::string* _s = _internal_mutable_a_originattributes();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_originAttributes)
   return _s;
 }
-inline const std::string& Msg_PDNSRequestConstructor::_internal_originattributes() const {
-  return _impl_.originattributes_.Get();
+inline const std::string& Msg_PDNSRequestConstructor::_internal_a_originattributes() const {
+  return _impl_.a_originattributes_.Get();
 }
-inline void Msg_PDNSRequestConstructor::_internal_set_originattributes(const std::string& value) {
+inline void Msg_PDNSRequestConstructor::_internal_set_a_originattributes(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.originattributes_.Set(value, GetArenaForAllocation());
+  _impl_.a_originattributes_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_originattributes() {
+inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_a_originattributes() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.originattributes_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originattributes_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::release_originattributes() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.originAttributes)
-  if (!_internal_has_originattributes()) {
+inline std::string* Msg_PDNSRequestConstructor::release_a_originattributes() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_originAttributes)
+  if (!_internal_has_a_originattributes()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.originattributes_.Release();
+  auto* p = _impl_.a_originattributes_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributes_.IsDefault()) {
-    _impl_.originattributes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributes_.IsDefault()) {
+    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PDNSRequestConstructor::set_allocated_originattributes(std::string* originattributes) {
-  if (originattributes != nullptr) {
+inline void Msg_PDNSRequestConstructor::set_allocated_a_originattributes(std::string* a_originattributes) {
+  if (a_originattributes != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.originattributes_.SetAllocated(originattributes, GetArenaForAllocation());
+  _impl_.a_originattributes_.SetAllocated(a_originattributes, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributes_.IsDefault()) {
-    _impl_.originattributes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributes_.IsDefault()) {
+    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.originAttributes)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_originAttributes)
 }
 
-// required bytes flags = 6;
-inline bool Msg_PDNSRequestConstructor::_internal_has_flags() const {
+// required bytes a_flags = 6;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_PDNSRequestConstructor::has_flags() const {
-  return _internal_has_flags();
+inline bool Msg_PDNSRequestConstructor::has_a_flags() const {
+  return _internal_has_a_flags();
 }
-inline void Msg_PDNSRequestConstructor::clear_flags() {
-  _impl_.flags_.ClearToEmpty();
+inline void Msg_PDNSRequestConstructor::clear_a_flags() {
+  _impl_.a_flags_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_PDNSRequestConstructor::flags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.flags)
-  return _internal_flags();
+inline const std::string& Msg_PDNSRequestConstructor::a_flags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_flags)
+  return _internal_a_flags();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PDNSRequestConstructor::set_flags(ArgT0&& arg0, ArgT... args) {
+void Msg_PDNSRequestConstructor::set_a_flags(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.flags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.flags)
+ _impl_.a_flags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_flags)
 }
-inline std::string* Msg_PDNSRequestConstructor::mutable_flags() {
-  std::string* _s = _internal_mutable_flags();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.flags)
+inline std::string* Msg_PDNSRequestConstructor::mutable_a_flags() {
+  std::string* _s = _internal_mutable_a_flags();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_flags)
   return _s;
 }
-inline const std::string& Msg_PDNSRequestConstructor::_internal_flags() const {
-  return _impl_.flags_.Get();
+inline const std::string& Msg_PDNSRequestConstructor::_internal_a_flags() const {
+  return _impl_.a_flags_.Get();
 }
-inline void Msg_PDNSRequestConstructor::_internal_set_flags(const std::string& value) {
+inline void Msg_PDNSRequestConstructor::_internal_set_a_flags(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.flags_.Set(value, GetArenaForAllocation());
+  _impl_.a_flags_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_flags() {
+inline std::string* Msg_PDNSRequestConstructor::_internal_mutable_a_flags() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.flags_.Mutable(GetArenaForAllocation());
+  return _impl_.a_flags_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PDNSRequestConstructor::release_flags() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.flags)
-  if (!_internal_has_flags()) {
+inline std::string* Msg_PDNSRequestConstructor::release_a_flags() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_flags)
+  if (!_internal_has_a_flags()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.flags_.Release();
+  auto* p = _impl_.a_flags_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.flags_.IsDefault()) {
-    _impl_.flags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_flags_.IsDefault()) {
+    _impl_.a_flags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PDNSRequestConstructor::set_allocated_flags(std::string* flags) {
-  if (flags != nullptr) {
+inline void Msg_PDNSRequestConstructor::set_allocated_a_flags(std::string* a_flags) {
+  if (a_flags != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.flags_.SetAllocated(flags, GetArenaForAllocation());
+  _impl_.a_flags_.SetAllocated(a_flags, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.flags_.IsDefault()) {
-    _impl_.flags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_flags_.IsDefault()) {
+    _impl_.a_flags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.flags)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_flags)
 }
 
 // -------------------------------------------------------------------

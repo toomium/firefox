@@ -37,8 +37,8 @@ PROTOBUF_CONSTEXPR Msg_PostMessage::Msg_PostMessage(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.acloneddata_)*/nullptr
-  , /*decltype(_impl_.asource_)*/nullptr} {}
+  , /*decltype(_impl_.a_acloneddata_)*/nullptr
+  , /*decltype(_impl_.a_asource_)*/nullptr} {}
 struct Msg_PostMessageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PostMessageDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -234,12 +234,12 @@ std::string Msg_Teardown::GetTypeName() const {
 class Msg_PostMessage::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PostMessage>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& acloneddata(const Msg_PostMessage* msg);
-  static void set_has_acloneddata(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& a_acloneddata(const Msg_PostMessage* msg);
+  static void set_has_a_acloneddata(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::dom::PostMessageSource& asource(const Msg_PostMessage* msg);
-  static void set_has_asource(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::PostMessageSource& a_asource(const Msg_PostMessage* msg);
+  static void set_has_a_asource(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -248,19 +248,19 @@ class Msg_PostMessage::_Internal {
 };
 
 const ::protobuf::mozilla::dom::ClonedOrErrorMessageData&
-Msg_PostMessage::_Internal::acloneddata(const Msg_PostMessage* msg) {
-  return *msg->_impl_.acloneddata_;
+Msg_PostMessage::_Internal::a_acloneddata(const Msg_PostMessage* msg) {
+  return *msg->_impl_.a_acloneddata_;
 }
 const ::protobuf::mozilla::dom::PostMessageSource&
-Msg_PostMessage::_Internal::asource(const Msg_PostMessage* msg) {
-  return *msg->_impl_.asource_;
+Msg_PostMessage::_Internal::a_asource(const Msg_PostMessage* msg) {
+  return *msg->_impl_.a_asource_;
 }
-void Msg_PostMessage::clear_acloneddata() {
-  if (_impl_.acloneddata_ != nullptr) _impl_.acloneddata_->Clear();
+void Msg_PostMessage::clear_a_acloneddata() {
+  if (_impl_.a_acloneddata_ != nullptr) _impl_.a_acloneddata_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-void Msg_PostMessage::clear_asource() {
-  if (_impl_.asource_ != nullptr) _impl_.asource_->Clear();
+void Msg_PostMessage::clear_a_asource() {
+  if (_impl_.a_asource_ != nullptr) _impl_.a_asource_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_PostMessage::Msg_PostMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -275,15 +275,15 @@ Msg_PostMessage::Msg_PostMessage(const Msg_PostMessage& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.acloneddata_){nullptr}
-    , decltype(_impl_.asource_){nullptr}};
+    , decltype(_impl_.a_acloneddata_){nullptr}
+    , decltype(_impl_.a_asource_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_acloneddata()) {
-    _this->_impl_.acloneddata_ = new ::protobuf::mozilla::dom::ClonedOrErrorMessageData(*from._impl_.acloneddata_);
+  if (from._internal_has_a_acloneddata()) {
+    _this->_impl_.a_acloneddata_ = new ::protobuf::mozilla::dom::ClonedOrErrorMessageData(*from._impl_.a_acloneddata_);
   }
-  if (from._internal_has_asource()) {
-    _this->_impl_.asource_ = new ::protobuf::mozilla::dom::PostMessageSource(*from._impl_.asource_);
+  if (from._internal_has_a_asource()) {
+    _this->_impl_.a_asource_ = new ::protobuf::mozilla::dom::PostMessageSource(*from._impl_.a_asource_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage)
 }
@@ -295,8 +295,8 @@ inline void Msg_PostMessage::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.acloneddata_){nullptr}
-    , decltype(_impl_.asource_){nullptr}
+    , decltype(_impl_.a_acloneddata_){nullptr}
+    , decltype(_impl_.a_asource_){nullptr}
   };
 }
 
@@ -311,8 +311,8 @@ Msg_PostMessage::~Msg_PostMessage() {
 
 inline void Msg_PostMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.acloneddata_;
-  if (this != internal_default_instance()) delete _impl_.asource_;
+  if (this != internal_default_instance()) delete _impl_.a_acloneddata_;
+  if (this != internal_default_instance()) delete _impl_.a_asource_;
 }
 
 void Msg_PostMessage::SetCachedSize(int size) const {
@@ -328,12 +328,12 @@ void Msg_PostMessage::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(_impl_.acloneddata_ != nullptr);
-      _impl_.acloneddata_->Clear();
+      GOOGLE_DCHECK(_impl_.a_acloneddata_ != nullptr);
+      _impl_.a_acloneddata_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.asource_ != nullptr);
-      _impl_.asource_->Clear();
+      GOOGLE_DCHECK(_impl_.a_asource_ != nullptr);
+      _impl_.a_asource_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -347,18 +347,18 @@ const char* Msg_PostMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
+      // required .protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_acloneddata(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_acloneddata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.PostMessageSource aSource = 2;
+      // required .protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_asource(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_asource(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -394,18 +394,18 @@ uint8_t* Msg_PostMessage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
+  // required .protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::acloneddata(this),
-        _Internal::acloneddata(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_acloneddata(this),
+        _Internal::a_acloneddata(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.dom.PostMessageSource aSource = 2;
+  // required .protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::asource(this),
-        _Internal::asource(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_asource(this),
+        _Internal::a_asource(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -420,18 +420,18 @@ size_t Msg_PostMessage::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage)
   size_t total_size = 0;
 
-  if (_internal_has_acloneddata()) {
-    // required .protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
+  if (_internal_has_a_acloneddata()) {
+    // required .protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.acloneddata_);
+        *_impl_.a_acloneddata_);
   }
 
-  if (_internal_has_asource()) {
-    // required .protobuf.mozilla.dom.PostMessageSource aSource = 2;
+  if (_internal_has_a_asource()) {
+    // required .protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.asource_);
+        *_impl_.a_asource_);
   }
 
   return total_size;
@@ -441,15 +441,15 @@ size_t Msg_PostMessage::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
+    // required .protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.acloneddata_);
+        *_impl_.a_acloneddata_);
 
-    // required .protobuf.mozilla.dom.PostMessageSource aSource = 2;
+    // required .protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.asource_);
+        *_impl_.a_asource_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -482,12 +482,12 @@ void Msg_PostMessage::MergeFrom(const Msg_PostMessage& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_acloneddata()->::protobuf::mozilla::dom::ClonedOrErrorMessageData::MergeFrom(
-          from._internal_acloneddata());
+      _this->_internal_mutable_a_acloneddata()->::protobuf::mozilla::dom::ClonedOrErrorMessageData::MergeFrom(
+          from._internal_a_acloneddata());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_asource()->::protobuf::mozilla::dom::PostMessageSource::MergeFrom(
-          from._internal_asource());
+      _this->_internal_mutable_a_asource()->::protobuf::mozilla::dom::PostMessageSource::MergeFrom(
+          from._internal_a_asource());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -502,11 +502,11 @@ void Msg_PostMessage::CopyFrom(const Msg_PostMessage& from) {
 
 bool Msg_PostMessage::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_acloneddata()) {
-    if (!_impl_.acloneddata_->IsInitialized()) return false;
+  if (_internal_has_a_acloneddata()) {
+    if (!_impl_.a_acloneddata_->IsInitialized()) return false;
   }
-  if (_internal_has_asource()) {
-    if (!_impl_.asource_->IsInitialized()) return false;
+  if (_internal_has_a_asource()) {
+    if (!_impl_.a_asource_->IsInitialized()) return false;
   }
   return true;
 }
@@ -516,11 +516,11 @@ void Msg_PostMessage::InternalSwap(Msg_PostMessage* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_PostMessage, _impl_.asource_)
-      + sizeof(Msg_PostMessage::_impl_.asource_)
-      - PROTOBUF_FIELD_OFFSET(Msg_PostMessage, _impl_.acloneddata_)>(
-          reinterpret_cast<char*>(&_impl_.acloneddata_),
-          reinterpret_cast<char*>(&other->_impl_.acloneddata_));
+      PROTOBUF_FIELD_OFFSET(Msg_PostMessage, _impl_.a_asource_)
+      + sizeof(Msg_PostMessage::_impl_.a_asource_)
+      - PROTOBUF_FIELD_OFFSET(Msg_PostMessage, _impl_.a_acloneddata_)>(
+          reinterpret_cast<char*>(&_impl_.a_acloneddata_),
+          reinterpret_cast<char*>(&other->_impl_.a_acloneddata_));
 }
 
 std::string Msg_PostMessage::GetTypeName() const {

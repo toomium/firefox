@@ -12,8 +12,8 @@ package protobuf.mozilla;
 
 // Structs and unions declarations
 message SlowScriptData {
-  required bytes tabId = 1;
-  required bytes filename = 2;
-  required bytes addonId = 3;
-  required double duration = 4;
+  required bytes a_tabId = 1;
+  required bytes a_filename = 2;
+  required bytes a_addonId = 3;
+  required double a_duration = 4;
 }

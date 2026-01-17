@@ -14,19 +14,19 @@ package protobuf.mozilla._ipdltest.PTestHangs;
 
 // Message declarations
 message Msg_Hang {
-  required uint32 hangMode = 1;
-  required bytes timeout = 2;
+  required uint32 a_hangMode = 1;
+  required bytes a_timeout = 2;
 }
 
 message Reply_Hang {
 }
 
 message Msg_Start {
-  required uint32 hangMode = 1;
+  required uint32 a_hangMode = 1;
 }
 
 message Reply_Start {
-  required bool detectedHang = 1;
+  required bool a_detectedHang = 1;
 }
 
 // Parameter mappings stats:

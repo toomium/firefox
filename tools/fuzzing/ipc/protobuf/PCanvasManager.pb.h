@@ -948,19 +948,19 @@ class Msg_Initialize final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAManagerIdFieldNumber = 1,
+    kAAManagerIdFieldNumber = 1,
   };
-  // required uint32 aManagerId = 1;
-  bool has_amanagerid() const;
+  // required uint32 a_aManagerId = 1;
+  bool has_a_amanagerid() const;
   private:
-  bool _internal_has_amanagerid() const;
+  bool _internal_has_a_amanagerid() const;
   public:
-  void clear_amanagerid();
-  uint32_t amanagerid() const;
-  void set_amanagerid(uint32_t value);
+  void clear_a_amanagerid();
+  uint32_t a_amanagerid() const;
+  void set_a_amanagerid(uint32_t value);
   private:
-  uint32_t _internal_amanagerid() const;
-  void _internal_set_amanagerid(uint32_t value);
+  uint32_t _internal_a_amanagerid() const;
+  void _internal_set_a_amanagerid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize)
@@ -973,7 +973,7 @@ class Msg_Initialize final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t amanagerid_;
+    uint32_t a_amanagerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvasManager_2eproto;
@@ -1090,76 +1090,76 @@ class Msg_GetSnapshot final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAProtocolIdFieldNumber = 2,
-    kOwnerIdFieldNumber = 3,
-    kCommandEncoderIdFieldNumber = 4,
-    kAManagerIdFieldNumber = 1,
+    kAAProtocolIdFieldNumber = 2,
+    kAOwnerIdFieldNumber = 3,
+    kACommandEncoderIdFieldNumber = 4,
+    kAAManagerIdFieldNumber = 1,
   };
-  // required bytes aProtocolId = 2;
-  bool has_aprotocolid() const;
+  // required bytes a_aProtocolId = 2;
+  bool has_a_aprotocolid() const;
   private:
-  bool _internal_has_aprotocolid() const;
+  bool _internal_has_a_aprotocolid() const;
   public:
-  void clear_aprotocolid();
-  const std::string& aprotocolid() const;
+  void clear_a_aprotocolid();
+  const std::string& a_aprotocolid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aprotocolid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aprotocolid();
-  PROTOBUF_NODISCARD std::string* release_aprotocolid();
-  void set_allocated_aprotocolid(std::string* aprotocolid);
+  void set_a_aprotocolid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aprotocolid();
+  PROTOBUF_NODISCARD std::string* release_a_aprotocolid();
+  void set_allocated_a_aprotocolid(std::string* a_aprotocolid);
   private:
-  const std::string& _internal_aprotocolid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aprotocolid(const std::string& value);
-  std::string* _internal_mutable_aprotocolid();
+  const std::string& _internal_a_aprotocolid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aprotocolid(const std::string& value);
+  std::string* _internal_mutable_a_aprotocolid();
   public:
 
-  // optional bytes ownerId = 3;
-  bool has_ownerid() const;
+  // optional bytes a_ownerId = 3;
+  bool has_a_ownerid() const;
   private:
-  bool _internal_has_ownerid() const;
+  bool _internal_has_a_ownerid() const;
   public:
-  void clear_ownerid();
-  const std::string& ownerid() const;
+  void clear_a_ownerid();
+  const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ownerid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ownerid();
-  PROTOBUF_NODISCARD std::string* release_ownerid();
-  void set_allocated_ownerid(std::string* ownerid);
+  void set_a_ownerid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ownerid();
+  PROTOBUF_NODISCARD std::string* release_a_ownerid();
+  void set_allocated_a_ownerid(std::string* a_ownerid);
   private:
-  const std::string& _internal_ownerid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ownerid(const std::string& value);
-  std::string* _internal_mutable_ownerid();
+  const std::string& _internal_a_ownerid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ownerid(const std::string& value);
+  std::string* _internal_mutable_a_ownerid();
   public:
 
-  // optional bytes commandEncoderId = 4;
-  bool has_commandencoderid() const;
+  // optional bytes a_commandEncoderId = 4;
+  bool has_a_commandencoderid() const;
   private:
-  bool _internal_has_commandencoderid() const;
+  bool _internal_has_a_commandencoderid() const;
   public:
-  void clear_commandencoderid();
-  const std::string& commandencoderid() const;
+  void clear_a_commandencoderid();
+  const std::string& a_commandencoderid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_commandencoderid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_commandencoderid();
-  PROTOBUF_NODISCARD std::string* release_commandencoderid();
-  void set_allocated_commandencoderid(std::string* commandencoderid);
+  void set_a_commandencoderid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_commandencoderid();
+  PROTOBUF_NODISCARD std::string* release_a_commandencoderid();
+  void set_allocated_a_commandencoderid(std::string* a_commandencoderid);
   private:
-  const std::string& _internal_commandencoderid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_commandencoderid(const std::string& value);
-  std::string* _internal_mutable_commandencoderid();
+  const std::string& _internal_a_commandencoderid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_commandencoderid(const std::string& value);
+  std::string* _internal_mutable_a_commandencoderid();
   public:
 
-  // required uint32 aManagerId = 1;
-  bool has_amanagerid() const;
+  // required uint32 a_aManagerId = 1;
+  bool has_a_amanagerid() const;
   private:
-  bool _internal_has_amanagerid() const;
+  bool _internal_has_a_amanagerid() const;
   public:
-  void clear_amanagerid();
-  uint32_t amanagerid() const;
-  void set_amanagerid(uint32_t value);
+  void clear_a_amanagerid();
+  uint32_t a_amanagerid() const;
+  void set_a_amanagerid(uint32_t value);
   private:
-  uint32_t _internal_amanagerid() const;
-  void _internal_set_amanagerid(uint32_t value);
+  uint32_t _internal_a_amanagerid() const;
+  void _internal_set_a_amanagerid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot)
@@ -1175,10 +1175,10 @@ class Msg_GetSnapshot final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aprotocolid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ownerid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr commandencoderid_;
-    uint32_t amanagerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aprotocolid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_commandencoderid_;
+    uint32_t a_amanagerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvasManager_2eproto;
@@ -1295,24 +1295,24 @@ class Reply_GetSnapshot final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRetFieldNumber = 1,
+    kARetFieldNumber = 1,
   };
-  // required bytes ret = 1;
-  bool has_ret() const;
+  // required bytes a_ret = 1;
+  bool has_a_ret() const;
   private:
-  bool _internal_has_ret() const;
+  bool _internal_has_a_ret() const;
   public:
-  void clear_ret();
-  const std::string& ret() const;
+  void clear_a_ret();
+  const std::string& a_ret() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ret(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ret();
-  PROTOBUF_NODISCARD std::string* release_ret();
-  void set_allocated_ret(std::string* ret);
+  void set_a_ret(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ret();
+  PROTOBUF_NODISCARD std::string* release_a_ret();
+  void set_allocated_a_ret(std::string* a_ret);
   private:
-  const std::string& _internal_ret() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ret(const std::string& value);
-  std::string* _internal_mutable_ret();
+  const std::string& _internal_a_ret() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ret(const std::string& value);
+  std::string* _internal_mutable_a_ret();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot)
@@ -1325,7 +1325,7 @@ class Reply_GetSnapshot final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ret_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ret_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvasManager_2eproto;
@@ -1365,340 +1365,340 @@ class Reply_GetSnapshot final :
 
 // Msg_Initialize
 
-// required uint32 aManagerId = 1;
-inline bool Msg_Initialize::_internal_has_amanagerid() const {
+// required uint32 a_aManagerId = 1;
+inline bool Msg_Initialize::_internal_has_a_amanagerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Initialize::has_amanagerid() const {
-  return _internal_has_amanagerid();
+inline bool Msg_Initialize::has_a_amanagerid() const {
+  return _internal_has_a_amanagerid();
 }
-inline void Msg_Initialize::clear_amanagerid() {
-  _impl_.amanagerid_ = 0u;
+inline void Msg_Initialize::clear_a_amanagerid() {
+  _impl_.a_amanagerid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_Initialize::_internal_amanagerid() const {
-  return _impl_.amanagerid_;
+inline uint32_t Msg_Initialize::_internal_a_amanagerid() const {
+  return _impl_.a_amanagerid_;
 }
-inline uint32_t Msg_Initialize::amanagerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize.aManagerId)
-  return _internal_amanagerid();
+inline uint32_t Msg_Initialize::a_amanagerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize.a_aManagerId)
+  return _internal_a_amanagerid();
 }
-inline void Msg_Initialize::_internal_set_amanagerid(uint32_t value) {
+inline void Msg_Initialize::_internal_set_a_amanagerid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.amanagerid_ = value;
+  _impl_.a_amanagerid_ = value;
 }
-inline void Msg_Initialize::set_amanagerid(uint32_t value) {
-  _internal_set_amanagerid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize.aManagerId)
+inline void Msg_Initialize::set_a_amanagerid(uint32_t value) {
+  _internal_set_a_amanagerid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize.a_aManagerId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetSnapshot
 
-// required uint32 aManagerId = 1;
-inline bool Msg_GetSnapshot::_internal_has_amanagerid() const {
+// required uint32 a_aManagerId = 1;
+inline bool Msg_GetSnapshot::_internal_has_a_amanagerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_GetSnapshot::has_amanagerid() const {
-  return _internal_has_amanagerid();
+inline bool Msg_GetSnapshot::has_a_amanagerid() const {
+  return _internal_has_a_amanagerid();
 }
-inline void Msg_GetSnapshot::clear_amanagerid() {
-  _impl_.amanagerid_ = 0u;
+inline void Msg_GetSnapshot::clear_a_amanagerid() {
+  _impl_.a_amanagerid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_GetSnapshot::_internal_amanagerid() const {
-  return _impl_.amanagerid_;
+inline uint32_t Msg_GetSnapshot::_internal_a_amanagerid() const {
+  return _impl_.a_amanagerid_;
 }
-inline uint32_t Msg_GetSnapshot::amanagerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aManagerId)
-  return _internal_amanagerid();
+inline uint32_t Msg_GetSnapshot::a_amanagerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aManagerId)
+  return _internal_a_amanagerid();
 }
-inline void Msg_GetSnapshot::_internal_set_amanagerid(uint32_t value) {
+inline void Msg_GetSnapshot::_internal_set_a_amanagerid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.amanagerid_ = value;
+  _impl_.a_amanagerid_ = value;
 }
-inline void Msg_GetSnapshot::set_amanagerid(uint32_t value) {
-  _internal_set_amanagerid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aManagerId)
+inline void Msg_GetSnapshot::set_a_amanagerid(uint32_t value) {
+  _internal_set_a_amanagerid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aManagerId)
 }
 
-// required bytes aProtocolId = 2;
-inline bool Msg_GetSnapshot::_internal_has_aprotocolid() const {
+// required bytes a_aProtocolId = 2;
+inline bool Msg_GetSnapshot::_internal_has_a_aprotocolid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetSnapshot::has_aprotocolid() const {
-  return _internal_has_aprotocolid();
+inline bool Msg_GetSnapshot::has_a_aprotocolid() const {
+  return _internal_has_a_aprotocolid();
 }
-inline void Msg_GetSnapshot::clear_aprotocolid() {
-  _impl_.aprotocolid_.ClearToEmpty();
+inline void Msg_GetSnapshot::clear_a_aprotocolid() {
+  _impl_.a_aprotocolid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetSnapshot::aprotocolid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aProtocolId)
-  return _internal_aprotocolid();
+inline const std::string& Msg_GetSnapshot::a_aprotocolid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aProtocolId)
+  return _internal_a_aprotocolid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetSnapshot::set_aprotocolid(ArgT0&& arg0, ArgT... args) {
+void Msg_GetSnapshot::set_a_aprotocolid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aprotocolid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aProtocolId)
+ _impl_.a_aprotocolid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aProtocolId)
 }
-inline std::string* Msg_GetSnapshot::mutable_aprotocolid() {
-  std::string* _s = _internal_mutable_aprotocolid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aProtocolId)
+inline std::string* Msg_GetSnapshot::mutable_a_aprotocolid() {
+  std::string* _s = _internal_mutable_a_aprotocolid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aProtocolId)
   return _s;
 }
-inline const std::string& Msg_GetSnapshot::_internal_aprotocolid() const {
-  return _impl_.aprotocolid_.Get();
+inline const std::string& Msg_GetSnapshot::_internal_a_aprotocolid() const {
+  return _impl_.a_aprotocolid_.Get();
 }
-inline void Msg_GetSnapshot::_internal_set_aprotocolid(const std::string& value) {
+inline void Msg_GetSnapshot::_internal_set_a_aprotocolid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aprotocolid_.Set(value, GetArenaForAllocation());
+  _impl_.a_aprotocolid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetSnapshot::_internal_mutable_aprotocolid() {
+inline std::string* Msg_GetSnapshot::_internal_mutable_a_aprotocolid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aprotocolid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aprotocolid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetSnapshot::release_aprotocolid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aProtocolId)
-  if (!_internal_has_aprotocolid()) {
+inline std::string* Msg_GetSnapshot::release_a_aprotocolid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aProtocolId)
+  if (!_internal_has_a_aprotocolid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aprotocolid_.Release();
+  auto* p = _impl_.a_aprotocolid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aprotocolid_.IsDefault()) {
-    _impl_.aprotocolid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aprotocolid_.IsDefault()) {
+    _impl_.a_aprotocolid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetSnapshot::set_allocated_aprotocolid(std::string* aprotocolid) {
-  if (aprotocolid != nullptr) {
+inline void Msg_GetSnapshot::set_allocated_a_aprotocolid(std::string* a_aprotocolid) {
+  if (a_aprotocolid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aprotocolid_.SetAllocated(aprotocolid, GetArenaForAllocation());
+  _impl_.a_aprotocolid_.SetAllocated(a_aprotocolid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aprotocolid_.IsDefault()) {
-    _impl_.aprotocolid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aprotocolid_.IsDefault()) {
+    _impl_.a_aprotocolid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.aProtocolId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_aProtocolId)
 }
 
-// optional bytes ownerId = 3;
-inline bool Msg_GetSnapshot::_internal_has_ownerid() const {
+// optional bytes a_ownerId = 3;
+inline bool Msg_GetSnapshot::_internal_has_a_ownerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetSnapshot::has_ownerid() const {
-  return _internal_has_ownerid();
+inline bool Msg_GetSnapshot::has_a_ownerid() const {
+  return _internal_has_a_ownerid();
 }
-inline void Msg_GetSnapshot::clear_ownerid() {
-  _impl_.ownerid_.ClearToEmpty();
+inline void Msg_GetSnapshot::clear_a_ownerid() {
+  _impl_.a_ownerid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_GetSnapshot::ownerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.ownerId)
-  return _internal_ownerid();
+inline const std::string& Msg_GetSnapshot::a_ownerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_ownerId)
+  return _internal_a_ownerid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetSnapshot::set_ownerid(ArgT0&& arg0, ArgT... args) {
+void Msg_GetSnapshot::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.ownerId)
+ _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_ownerId)
 }
-inline std::string* Msg_GetSnapshot::mutable_ownerid() {
-  std::string* _s = _internal_mutable_ownerid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.ownerId)
+inline std::string* Msg_GetSnapshot::mutable_a_ownerid() {
+  std::string* _s = _internal_mutable_a_ownerid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_ownerId)
   return _s;
 }
-inline const std::string& Msg_GetSnapshot::_internal_ownerid() const {
-  return _impl_.ownerid_.Get();
+inline const std::string& Msg_GetSnapshot::_internal_a_ownerid() const {
+  return _impl_.a_ownerid_.Get();
 }
-inline void Msg_GetSnapshot::_internal_set_ownerid(const std::string& value) {
+inline void Msg_GetSnapshot::_internal_set_a_ownerid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.ownerid_.Set(value, GetArenaForAllocation());
+  _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetSnapshot::_internal_mutable_ownerid() {
+inline std::string* Msg_GetSnapshot::_internal_mutable_a_ownerid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.ownerid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetSnapshot::release_ownerid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.ownerId)
-  if (!_internal_has_ownerid()) {
+inline std::string* Msg_GetSnapshot::release_a_ownerid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_ownerId)
+  if (!_internal_has_a_ownerid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.ownerid_.Release();
+  auto* p = _impl_.a_ownerid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetSnapshot::set_allocated_ownerid(std::string* ownerid) {
-  if (ownerid != nullptr) {
+inline void Msg_GetSnapshot::set_allocated_a_ownerid(std::string* a_ownerid) {
+  if (a_ownerid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.ownerid_.SetAllocated(ownerid, GetArenaForAllocation());
+  _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.ownerId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_ownerId)
 }
 
-// optional bytes commandEncoderId = 4;
-inline bool Msg_GetSnapshot::_internal_has_commandencoderid() const {
+// optional bytes a_commandEncoderId = 4;
+inline bool Msg_GetSnapshot::_internal_has_a_commandencoderid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetSnapshot::has_commandencoderid() const {
-  return _internal_has_commandencoderid();
+inline bool Msg_GetSnapshot::has_a_commandencoderid() const {
+  return _internal_has_a_commandencoderid();
 }
-inline void Msg_GetSnapshot::clear_commandencoderid() {
-  _impl_.commandencoderid_.ClearToEmpty();
+inline void Msg_GetSnapshot::clear_a_commandencoderid() {
+  _impl_.a_commandencoderid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_GetSnapshot::commandencoderid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.commandEncoderId)
-  return _internal_commandencoderid();
+inline const std::string& Msg_GetSnapshot::a_commandencoderid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_commandEncoderId)
+  return _internal_a_commandencoderid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetSnapshot::set_commandencoderid(ArgT0&& arg0, ArgT... args) {
+void Msg_GetSnapshot::set_a_commandencoderid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.commandencoderid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.commandEncoderId)
+ _impl_.a_commandencoderid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_commandEncoderId)
 }
-inline std::string* Msg_GetSnapshot::mutable_commandencoderid() {
-  std::string* _s = _internal_mutable_commandencoderid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.commandEncoderId)
+inline std::string* Msg_GetSnapshot::mutable_a_commandencoderid() {
+  std::string* _s = _internal_mutable_a_commandencoderid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_commandEncoderId)
   return _s;
 }
-inline const std::string& Msg_GetSnapshot::_internal_commandencoderid() const {
-  return _impl_.commandencoderid_.Get();
+inline const std::string& Msg_GetSnapshot::_internal_a_commandencoderid() const {
+  return _impl_.a_commandencoderid_.Get();
 }
-inline void Msg_GetSnapshot::_internal_set_commandencoderid(const std::string& value) {
+inline void Msg_GetSnapshot::_internal_set_a_commandencoderid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.commandencoderid_.Set(value, GetArenaForAllocation());
+  _impl_.a_commandencoderid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetSnapshot::_internal_mutable_commandencoderid() {
+inline std::string* Msg_GetSnapshot::_internal_mutable_a_commandencoderid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.commandencoderid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_commandencoderid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetSnapshot::release_commandencoderid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.commandEncoderId)
-  if (!_internal_has_commandencoderid()) {
+inline std::string* Msg_GetSnapshot::release_a_commandencoderid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_commandEncoderId)
+  if (!_internal_has_a_commandencoderid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.commandencoderid_.Release();
+  auto* p = _impl_.a_commandencoderid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.commandencoderid_.IsDefault()) {
-    _impl_.commandencoderid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_commandencoderid_.IsDefault()) {
+    _impl_.a_commandencoderid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetSnapshot::set_allocated_commandencoderid(std::string* commandencoderid) {
-  if (commandencoderid != nullptr) {
+inline void Msg_GetSnapshot::set_allocated_a_commandencoderid(std::string* a_commandencoderid) {
+  if (a_commandencoderid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.commandencoderid_.SetAllocated(commandencoderid, GetArenaForAllocation());
+  _impl_.a_commandencoderid_.SetAllocated(a_commandencoderid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.commandencoderid_.IsDefault()) {
-    _impl_.commandencoderid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_commandencoderid_.IsDefault()) {
+    _impl_.a_commandencoderid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.commandEncoderId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot.a_commandEncoderId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetSnapshot
 
-// required bytes ret = 1;
-inline bool Reply_GetSnapshot::_internal_has_ret() const {
+// required bytes a_ret = 1;
+inline bool Reply_GetSnapshot::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetSnapshot::has_ret() const {
-  return _internal_has_ret();
+inline bool Reply_GetSnapshot::has_a_ret() const {
+  return _internal_has_a_ret();
 }
-inline void Reply_GetSnapshot::clear_ret() {
-  _impl_.ret_.ClearToEmpty();
+inline void Reply_GetSnapshot::clear_a_ret() {
+  _impl_.a_ret_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetSnapshot::ret() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.ret)
-  return _internal_ret();
+inline const std::string& Reply_GetSnapshot::a_ret() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.a_ret)
+  return _internal_a_ret();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetSnapshot::set_ret(ArgT0&& arg0, ArgT... args) {
+void Reply_GetSnapshot::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.ret)
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.a_ret)
 }
-inline std::string* Reply_GetSnapshot::mutable_ret() {
-  std::string* _s = _internal_mutable_ret();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.ret)
+inline std::string* Reply_GetSnapshot::mutable_a_ret() {
+  std::string* _s = _internal_mutable_a_ret();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.a_ret)
   return _s;
 }
-inline const std::string& Reply_GetSnapshot::_internal_ret() const {
-  return _impl_.ret_.Get();
+inline const std::string& Reply_GetSnapshot::_internal_a_ret() const {
+  return _impl_.a_ret_.Get();
 }
-inline void Reply_GetSnapshot::_internal_set_ret(const std::string& value) {
+inline void Reply_GetSnapshot::_internal_set_a_ret(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ret_.Set(value, GetArenaForAllocation());
+  _impl_.a_ret_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetSnapshot::_internal_mutable_ret() {
+inline std::string* Reply_GetSnapshot::_internal_mutable_a_ret() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ret_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ret_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetSnapshot::release_ret() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.ret)
-  if (!_internal_has_ret()) {
+inline std::string* Reply_GetSnapshot::release_a_ret() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.a_ret)
+  if (!_internal_has_a_ret()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ret_.Release();
+  auto* p = _impl_.a_ret_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetSnapshot::set_allocated_ret(std::string* ret) {
-  if (ret != nullptr) {
+inline void Reply_GetSnapshot::set_allocated_a_ret(std::string* a_ret) {
+  if (a_ret != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ret_.SetAllocated(ret, GetArenaForAllocation());
+  _impl_.a_ret_.SetAllocated(a_ret, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ret_.IsDefault()) {
-    _impl_.ret_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ret_.IsDefault()) {
+    _impl_.a_ret_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.ret)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot.a_ret)
 }
 
 #ifdef __GNUC__

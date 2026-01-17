@@ -23,47 +23,47 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message WebProgressData {
-  required bytes browsingContext = 1;
-  required uint32 loadType = 2;
+  required bytes a_browsingContext = 1;
+  required uint32 a_loadType = 2;
 }
 
 message RequestData {
-  required bytes requestURI = 1;
-  required bytes originalRequestURI = 2;
-  required bytes matchedList = 3;
-  required bytes canceledReason = 4;
+  required bytes a_requestURI = 1;
+  required bytes a_originalRequestURI = 2;
+  required bytes a_matchedList = 3;
+  required bytes a_canceledReason = 4;
 }
 
 message WebProgressStateChangeData {
-  required bool isNavigating = 1;
-  required bool mayEnableCharacterEncodingMenu = 2;
-  required bytes contentType = 3;
-  required bytes charset = 4;
-  required bytes documentURI = 5;
+  required bool a_isNavigating = 1;
+  required bool a_mayEnableCharacterEncodingMenu = 2;
+  required bytes a_contentType = 3;
+  required bytes a_charset = 4;
+  required bytes a_documentURI = 5;
 }
 
 message WebProgressLocationChangeData {
-  required bool isNavigating = 1;
-  required bool isSyntheticDocument = 2;
-  required bool mayEnableCharacterEncodingMenu = 3;
-  required bytes contentType = 4;
-  required bytes title = 5;
-  required bytes charset = 6;
-  required bytes documentURI = 7;
-  required bytes contentPrincipal = 8;
-  required bytes contentPartitionedPrincipal = 9;
-  required bytes csp = 10;
-  required bytes referrerInfo = 11;
-  optional uint64 requestContextID = 12;
+  required bool a_isNavigating = 1;
+  required bool a_isSyntheticDocument = 2;
+  required bool a_mayEnableCharacterEncodingMenu = 3;
+  required bytes a_contentType = 4;
+  required bytes a_title = 5;
+  required bytes a_charset = 6;
+  required bytes a_documentURI = 7;
+  required bytes a_contentPrincipal = 8;
+  required bytes a_contentPartitionedPrincipal = 9;
+  required bytes a_csp = 10;
+  required bytes a_referrerInfo = 11;
+  optional uint64 a_requestContextID = 12;
 }
 
 message PrintPreviewResultInfo {
-  required uint32 sheetCount = 1;
-  required uint32 totalPageCount = 2;
-  required bool isEmpty = 3;
-  required bool hasSelection = 4;
-  required bool hasSelfSelection = 5;
-  optional bool printLandscape = 6;
-  optional float pageWidth = 7;
-  optional float pageHeight = 8;
+  required uint32 a_sheetCount = 1;
+  required uint32 a_totalPageCount = 2;
+  required bool a_isEmpty = 3;
+  required bool a_hasSelection = 4;
+  required bool a_hasSelfSelection = 5;
+  optional bool a_printLandscape = 6;
+  optional float a_pageWidth = 7;
+  optional float a_pageHeight = 8;
 }

@@ -27,178 +27,178 @@ message Reply___delete__ {
 }
 
 message Msg_MakeFrameLocal {
-  required bytes aFrameContext = 1;
-  required uint64 aSwitchId = 2;
+  required bytes a_aFrameContext = 1;
+  required uint64 a_aSwitchId = 2;
 }
 
 message Msg_MakeFrameRemote {
-  required bytes aFrameContext = 1;
-  required bytes aEndpoint = 2;
-  required bytes aTabId = 3;
-  required bytes aLayersId = 4;
+  required bytes a_aFrameContext = 1;
+  required bytes a_aEndpoint = 2;
+  required bytes a_aTabId = 3;
+  required bytes a_aLayersId = 4;
 }
 
 message Reply_MakeFrameRemote {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_DrawSnapshot {
-  optional bytes aRect = 1;
-  required float aScale = 2;
-  required bytes aBackgroundColor = 3;
-  required uint32 aFlags = 4;
+  optional bytes a_aRect = 1;
+  required float a_aScale = 2;
+  required bytes a_aBackgroundColor = 3;
+  required uint32 a_aFlags = 4;
 }
 
 message Reply_DrawSnapshot {
-  required bytes retval = 1;
+  required bytes a_retval = 1;
 }
 
 message Msg_DispatchSecurityPolicyViolation {
-  required bytes aViolationEventJSON = 1;
+  required bytes a_aViolationEventJSON = 1;
 }
 
 message Msg_SaveStorageAccessPermissionGranted {
 }
 
 message Msg_AddBlockedFrameNodeByClassifier {
-  required bytes aNode = 1;
+  required bytes a_aNode = 1;
 }
 
 message Msg_ResetScalingZoom {
 }
 
 message Msg_RestoreDocShellState {
-  required protobuf.mozilla.dom.sessionstore.DocShellRestoreState aState = 1;
+  required protobuf.mozilla.dom.sessionstore.DocShellRestoreState a_aState = 1;
 }
 
 message Reply_RestoreDocShellState {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_RestoreTabContent {
-  required bytes aData = 1;
+  required bytes a_aData = 1;
 }
 
 message Reply_RestoreTabContent {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_RawMessage {
-  required protobuf.mozilla.dom.JSActorMessageMeta aMetadata = 1;
-  optional protobuf.mozilla.dom.ClonedMessageData aData = 2;
-  optional protobuf.mozilla.dom.ClonedMessageData aStack = 3;
+  required protobuf.mozilla.dom.JSActorMessageMeta a_aMetadata = 1;
+  optional protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
+  optional protobuf.mozilla.dom.ClonedMessageData a_aStack = 3;
 }
 
 message Msg_LoadURI {
-  required bytes aTargetBC = 1;
-  required bytes aLoadState = 2;
-  required bool aSetNavigating = 3;
+  required bytes a_aTargetBC = 1;
+  required bytes a_aLoadState = 2;
+  required bool a_aSetNavigating = 3;
 }
 
 message Msg_InternalLoad {
-  required bytes aLoadState = 1;
+  required bytes a_aLoadState = 1;
 }
 
 message Msg_UpdateDocumentURI {
-  required bytes aUri = 1;
+  required bytes a_aUri = 1;
 }
 
 message Msg_UpdateDocumentPrincipal {
-  required bytes aPrincipal = 1;
-  required bytes aStoragePrincipal = 2;
+  required bytes a_aPrincipal = 1;
+  required bytes a_aStoragePrincipal = 2;
 }
 
 message Msg_UpdateDocumentHasLoaded {
-  required bool aDocumentHasLoaded = 1;
+  required bool a_aDocumentHasLoaded = 1;
 }
 
 message Msg_UpdateDocumentHasUserInteracted {
-  required bool aDocumentHasUserInteracted = 1;
+  required bool a_aDocumentHasUserInteracted = 1;
 }
 
 message Msg_UpdateSandboxFlags {
-  required uint32 aSandboxFlags = 1;
+  required uint32 a_aSandboxFlags = 1;
 }
 
 message Msg_UpdateDocumentCspSettings {
-  required bool aBlockAllMixedContent = 1;
-  required bool aUpgradeInsecureRequests = 2;
+  required bool a_aBlockAllMixedContent = 1;
+  required bool a_aUpgradeInsecureRequests = 2;
 }
 
 message Msg_UpdateCookieJarSettings {
-  required protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 1;
+  required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 1;
 }
 
 message Msg_UpdateDocumentTitle {
-  required bytes aTitle = 1;
+  required bytes a_aTitle = 1;
 }
 
 message Msg_UpdateDocumentSecurityInfo {
-  required bytes aSecurityInfo = 1;
+  required bytes a_aSecurityInfo = 1;
 }
 
 message Msg_UpdateHttpsOnlyStatus {
-  required uint32 aHttpsOnlyStatus = 1;
+  required uint32 a_aHttpsOnlyStatus = 1;
 }
 
 message Msg_SetIsInitialDocument {
-  required bool aIsInitialDocument = 1;
+  required bool a_aIsInitialDocument = 1;
 }
 
 message Msg_Share {
-  required protobuf.mozilla.dom.IPCWebShareData aData = 1;
+  required protobuf.mozilla.dom.IPCWebShareData a_aData = 1;
 }
 
 message Reply_Share {
-  required bytes rv = 1;
+  required bytes a_rv = 1;
 }
 
 message Msg_GetContentBlockingEvents {
 }
 
 message Reply_GetContentBlockingEvents {
-  required uint32 events = 1;
+  required uint32 a_events = 1;
 }
 
 message Msg_SetClientInfo {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Msg_CheckPermitUnload {
-  required bool aHasInProcessBlocker = 1;
-  required bytes aAction = 2;
+  required bool a_aHasInProcessBlocker = 1;
+  required bytes a_aAction = 2;
 }
 
 message Reply_CheckPermitUnload {
-  required bool permitUnload = 1;
+  required bool a_permitUnload = 1;
 }
 
 message Msg_ExpectPageUseCounters {
-  required bytes aTop = 1;
+  required bytes a_aTop = 1;
 }
 
 message Msg_AccumulatePageUseCounters {
-  required bytes aUseCounters = 1;
+  required bytes a_aUseCounters = 1;
 }
 
 message Msg_RequestRestoreTabContent {
 }
 
 message Msg_UpdateBFCacheStatus {
-  required uint32 aOnFlags = 1;
-  required uint32 aOffFlags = 2;
+  required uint32 a_aOnFlags = 1;
+  required uint32 a_aOffFlags = 2;
 }
 
 message Msg_UpdateActivePeerConnectionStatus {
-  required bool aIsAdded = 1;
+  required bool a_aIsAdded = 1;
 }
 
 message Msg_SetSingleChannelId {
-  optional uint64 singleChannelId = 1;
+  optional uint64 a_singleChannelId = 1;
 }
 
 message Msg_SetDocumentDomain {
-  required bytes aDomain = 1;
+  required bytes a_aDomain = 1;
 }
 
 message Msg_Destroy {
@@ -208,20 +208,20 @@ message Msg_ReloadWithHttpsOnlyException {
 }
 
 message Msg_GetStorageAccessPermission {
-  required bool aIncludeIdentityCredential = 1;
+  required bool a_aIncludeIdentityCredential = 1;
 }
 
 message Reply_GetStorageAccessPermission {
-  required uint32 permission_action = 1;
+  required uint32 a_permission_action = 1;
 }
 
 message Msg_SetCookies {
-  required bytes baseDomain = 1;
-  required bytes attrs = 2;
-  required bytes host = 3;
-  required bool fromHttp = 4;
-  required bool isThirdParty = 5;
-  repeated protobuf.mozilla.net.CookieStruct cookies = 6;
+  required bytes a_baseDomain = 1;
+  required bytes a_attrs = 2;
+  required bytes a_host = 3;
+  required bool a_fromHttp = 4;
+  required bool a_isThirdParty = 5;
+  repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
 message Msg_OnInitialStorageAccess {
@@ -243,8 +243,8 @@ message Reply_PWebIdentityConstructor {
 }
 
 message Msg_NotifyPermissionChange {
-  required bytes type = 1;
-  required uint32 permission = 2;
+  required bytes a_type = 1;
+  required uint32 a_permission = 2;
 }
 
 // Parameter mappings stats:

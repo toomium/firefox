@@ -16,7 +16,7 @@ package protobuf.mozilla.extensions.PStreamFilter;
 
 // Message declarations
 message Msg_Write {
-  repeated uint32 data = 1;
+  repeated uint32 a_data = 1;
 }
 
 message Msg_FlushedData {
@@ -47,7 +47,7 @@ message Msg_Closed {
 }
 
 message Msg_Error {
-  required bytes error = 1;
+  required bytes a_error = 1;
 }
 
 message Msg_FlushData {
@@ -57,11 +57,11 @@ message Msg_StartRequest {
 }
 
 message Msg_Data {
-  repeated uint32 data = 1;
+  repeated uint32 a_data = 1;
 }
 
 message Msg_StopRequest {
-  required bytes aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 // Parameter mappings stats:

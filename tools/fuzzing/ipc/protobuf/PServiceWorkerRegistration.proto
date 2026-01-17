@@ -23,51 +23,51 @@ message Msg_Unregister {
 }
 
 message Reply_Unregister {
-  required bool aSuccess = 1;
-  required bytes aRv = 2;
+  required bool a_aSuccess = 1;
+  required bytes a_aRv = 2;
 }
 
 message Msg_Update {
-  required bytes aNewestWorkerScriptUrl = 1;
+  required bytes a_aNewestWorkerScriptUrl = 1;
 }
 
 message Reply_Update {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetNotifications {
-  required bytes aTag = 1;
+  required bytes a_aTag = 1;
 }
 
 message Reply_GetNotifications {
-  required protobuf.mozilla.dom.IPCNotificationsOrError aResult = 1;
+  required protobuf.mozilla.dom.IPCNotificationsOrError a_aResult = 1;
 }
 
 message Msg_SetNavigationPreloadEnabled {
-  required bool aEnabled = 1;
+  required bool a_aEnabled = 1;
 }
 
 message Reply_SetNavigationPreloadEnabled {
-  required bool aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_SetNavigationPreloadHeader {
-  required bytes aHeader = 1;
+  required bytes a_aHeader = 1;
 }
 
 message Reply_SetNavigationPreloadHeader {
-  required bool aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_GetNavigationPreloadState {
 }
 
 message Reply_GetNavigationPreloadState {
-  optional protobuf.mozilla.dom.IPCNavigationPreloadState aState = 1;
+  optional protobuf.mozilla.dom.IPCNavigationPreloadState a_aState = 1;
 }
 
 message Msg_UpdateState {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor aDescriptor = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
 }
 
 message Msg_FireUpdateFound {

@@ -17,7 +17,7 @@ import public "PScriptCache_protobuf.mozilla.loader.h.proto";
 
 // Message declarations
 message Msg___delete__ {
-  repeated protobuf.mozilla.loader.ScriptData scripts = 1;
+  repeated protobuf.mozilla.loader.ScriptData a_scripts = 1;
 }
 
 message Reply___delete__ {

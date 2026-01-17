@@ -58,16 +58,16 @@ ChromeRegistryItem::ChromeRegistryItem(const ChromeRegistryItem& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVChromePackage: {
-      _this->_internal_set_mvchromepackage(from._internal_mvchromepackage());
+    case kAMVChromePackage: {
+      _this->_internal_set_a_mvchromepackage(from._internal_a_mvchromepackage());
       break;
     }
-    case kMVOverrideMapping: {
-      _this->_internal_set_mvoverridemapping(from._internal_mvoverridemapping());
+    case kAMVOverrideMapping: {
+      _this->_internal_set_a_mvoverridemapping(from._internal_a_mvoverridemapping());
       break;
     }
-    case kMVSubstitutionMapping: {
-      _this->_internal_set_mvsubstitutionmapping(from._internal_mvsubstitutionmapping());
+    case kAMVSubstitutionMapping: {
+      _this->_internal_set_a_mvsubstitutionmapping(from._internal_a_mvsubstitutionmapping());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -112,16 +112,16 @@ void ChromeRegistryItem::SetCachedSize(int size) const {
 void ChromeRegistryItem::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.ChromeRegistryItem)
   switch (content_case()) {
-    case kMVChromePackage: {
-      _impl_.content_.mvchromepackage_.Destroy();
+    case kAMVChromePackage: {
+      _impl_.content_.a_mvchromepackage_.Destroy();
       break;
     }
-    case kMVOverrideMapping: {
-      _impl_.content_.mvoverridemapping_.Destroy();
+    case kAMVOverrideMapping: {
+      _impl_.content_.a_mvoverridemapping_.Destroy();
       break;
     }
-    case kMVSubstitutionMapping: {
-      _impl_.content_.mvsubstitutionmapping_.Destroy();
+    case kAMVSubstitutionMapping: {
+      _impl_.content_.a_mvsubstitutionmapping_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -148,28 +148,28 @@ const char* ChromeRegistryItem::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVChromePackage = 1;
+      // bytes a_mVChromePackage = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvchromepackage();
+          auto str = _internal_mutable_a_mvchromepackage();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVOverrideMapping = 2;
+      // bytes a_mVOverrideMapping = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvoverridemapping();
+          auto str = _internal_mutable_a_mvoverridemapping();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVSubstitutionMapping = 3;
+      // bytes a_mVSubstitutionMapping = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_mvsubstitutionmapping();
+          auto str = _internal_mutable_a_mvsubstitutionmapping();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -205,19 +205,19 @@ uint8_t* ChromeRegistryItem::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVChromePackage: {
+    case kAMVChromePackage: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvchromepackage(), target);
+          1, this->_internal_a_mvchromepackage(), target);
       break;
     }
-    case kMVOverrideMapping: {
+    case kAMVOverrideMapping: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvoverridemapping(), target);
+          2, this->_internal_a_mvoverridemapping(), target);
       break;
     }
-    case kMVSubstitutionMapping: {
+    case kAMVSubstitutionMapping: {
       target = stream->WriteBytesMaybeAliased(
-          3, this->_internal_mvsubstitutionmapping(), target);
+          3, this->_internal_a_mvsubstitutionmapping(), target);
       break;
     }
     default: ;
@@ -239,25 +239,25 @@ size_t ChromeRegistryItem::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVChromePackage = 1;
-    case kMVChromePackage: {
+    // bytes a_mVChromePackage = 1;
+    case kAMVChromePackage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvchromepackage());
+          this->_internal_a_mvchromepackage());
       break;
     }
-    // bytes mVOverrideMapping = 2;
-    case kMVOverrideMapping: {
+    // bytes a_mVOverrideMapping = 2;
+    case kAMVOverrideMapping: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvoverridemapping());
+          this->_internal_a_mvoverridemapping());
       break;
     }
-    // bytes mVSubstitutionMapping = 3;
-    case kMVSubstitutionMapping: {
+    // bytes a_mVSubstitutionMapping = 3;
+    case kAMVSubstitutionMapping: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvsubstitutionmapping());
+          this->_internal_a_mvsubstitutionmapping());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -286,16 +286,16 @@ void ChromeRegistryItem::MergeFrom(const ChromeRegistryItem& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVChromePackage: {
-      _this->_internal_set_mvchromepackage(from._internal_mvchromepackage());
+    case kAMVChromePackage: {
+      _this->_internal_set_a_mvchromepackage(from._internal_a_mvchromepackage());
       break;
     }
-    case kMVOverrideMapping: {
-      _this->_internal_set_mvoverridemapping(from._internal_mvoverridemapping());
+    case kAMVOverrideMapping: {
+      _this->_internal_set_a_mvoverridemapping(from._internal_a_mvoverridemapping());
       break;
     }
-    case kMVSubstitutionMapping: {
-      _this->_internal_set_mvsubstitutionmapping(from._internal_mvsubstitutionmapping());
+    case kAMVSubstitutionMapping: {
+      _this->_internal_set_a_mvsubstitutionmapping(from._internal_a_mvsubstitutionmapping());
       break;
     }
     case CONTENT_NOT_SET: {

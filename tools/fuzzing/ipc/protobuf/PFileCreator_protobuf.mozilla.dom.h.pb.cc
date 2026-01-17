@@ -24,7 +24,7 @@ PROTOBUF_CONSTEXPR FileCreationSuccessResult::FileCreationSuccessResult(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.blob_)*/nullptr} {}
+  , /*decltype(_impl_.a_blob_)*/nullptr} {}
 struct FileCreationSuccessResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileCreationSuccessResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -38,7 +38,7 @@ PROTOBUF_CONSTEXPR FileCreationErrorResult::FileCreationErrorResult(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.errorcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_errorcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct FileCreationErrorResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileCreationErrorResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -74,8 +74,8 @@ namespace dom {
 class FileCreationSuccessResult::_Internal {
  public:
   using HasBits = decltype(std::declval<FileCreationSuccessResult>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::IPCBlob& blob(const FileCreationSuccessResult* msg);
-  static void set_has_blob(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::IPCBlob& a_blob(const FileCreationSuccessResult* msg);
+  static void set_has_a_blob(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -84,11 +84,11 @@ class FileCreationSuccessResult::_Internal {
 };
 
 const ::protobuf::mozilla::dom::IPCBlob&
-FileCreationSuccessResult::_Internal::blob(const FileCreationSuccessResult* msg) {
-  return *msg->_impl_.blob_;
+FileCreationSuccessResult::_Internal::a_blob(const FileCreationSuccessResult* msg) {
+  return *msg->_impl_.a_blob_;
 }
-void FileCreationSuccessResult::clear_blob() {
-  if (_impl_.blob_ != nullptr) _impl_.blob_->Clear();
+void FileCreationSuccessResult::clear_a_blob() {
+  if (_impl_.a_blob_ != nullptr) _impl_.a_blob_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 FileCreationSuccessResult::FileCreationSuccessResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -103,11 +103,11 @@ FileCreationSuccessResult::FileCreationSuccessResult(const FileCreationSuccessRe
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.blob_){nullptr}};
+    , decltype(_impl_.a_blob_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_blob()) {
-    _this->_impl_.blob_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.blob_);
+  if (from._internal_has_a_blob()) {
+    _this->_impl_.a_blob_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.a_blob_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.FileCreationSuccessResult)
 }
@@ -119,7 +119,7 @@ inline void FileCreationSuccessResult::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.blob_){nullptr}
+    , decltype(_impl_.a_blob_){nullptr}
   };
 }
 
@@ -134,7 +134,7 @@ FileCreationSuccessResult::~FileCreationSuccessResult() {
 
 inline void FileCreationSuccessResult::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.blob_;
+  if (this != internal_default_instance()) delete _impl_.a_blob_;
 }
 
 void FileCreationSuccessResult::SetCachedSize(int size) const {
@@ -149,8 +149,8 @@ void FileCreationSuccessResult::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.blob_ != nullptr);
-    _impl_.blob_->Clear();
+    GOOGLE_DCHECK(_impl_.a_blob_ != nullptr);
+    _impl_.a_blob_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -163,10 +163,10 @@ const char* FileCreationSuccessResult::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.IPCBlob blob = 1;
+      // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blob(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_blob(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -202,11 +202,11 @@ uint8_t* FileCreationSuccessResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.IPCBlob blob = 1;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::blob(this),
-        _Internal::blob(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_blob(this),
+        _Internal::a_blob(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -221,11 +221,11 @@ size_t FileCreationSuccessResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileCreationSuccessResult)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.IPCBlob blob = 1;
-  if (_internal_has_blob()) {
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (_internal_has_a_blob()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.blob_);
+        *_impl_.a_blob_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -252,9 +252,9 @@ void FileCreationSuccessResult::MergeFrom(const FileCreationSuccessResult& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_blob()) {
-    _this->_internal_mutable_blob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
-        from._internal_blob());
+  if (from._internal_has_a_blob()) {
+    _this->_internal_mutable_a_blob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
+        from._internal_a_blob());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -268,8 +268,8 @@ void FileCreationSuccessResult::CopyFrom(const FileCreationSuccessResult& from) 
 
 bool FileCreationSuccessResult::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_blob()) {
-    if (!_impl_.blob_->IsInitialized()) return false;
+  if (_internal_has_a_blob()) {
+    if (!_impl_.a_blob_->IsInitialized()) return false;
   }
   return true;
 }
@@ -278,7 +278,7 @@ void FileCreationSuccessResult::InternalSwap(FileCreationSuccessResult* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.blob_, other->_impl_.blob_);
+  swap(_impl_.a_blob_, other->_impl_.a_blob_);
 }
 
 std::string FileCreationSuccessResult::GetTypeName() const {
@@ -291,7 +291,7 @@ std::string FileCreationSuccessResult::GetTypeName() const {
 class FileCreationErrorResult::_Internal {
  public:
   using HasBits = decltype(std::declval<FileCreationErrorResult>()._impl_._has_bits_);
-  static void set_has_errorcode(HasBits* has_bits) {
+  static void set_has_a_errorcode(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -311,15 +311,15 @@ FileCreationErrorResult::FileCreationErrorResult(const FileCreationErrorResult& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.errorcode_){}};
+    , decltype(_impl_.a_errorcode_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.errorcode_.InitDefault();
+  _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_errorcode()) {
-    _this->_impl_.errorcode_.Set(from._internal_errorcode(), 
+  if (from._internal_has_a_errorcode()) {
+    _this->_impl_.a_errorcode_.Set(from._internal_a_errorcode(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.FileCreationErrorResult)
@@ -332,11 +332,11 @@ inline void FileCreationErrorResult::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.errorcode_){}
+    , decltype(_impl_.a_errorcode_){}
   };
-  _impl_.errorcode_.InitDefault();
+  _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -351,7 +351,7 @@ FileCreationErrorResult::~FileCreationErrorResult() {
 
 inline void FileCreationErrorResult::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.errorcode_.Destroy();
+  _impl_.a_errorcode_.Destroy();
 }
 
 void FileCreationErrorResult::SetCachedSize(int size) const {
@@ -366,7 +366,7 @@ void FileCreationErrorResult::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.errorcode_.ClearNonDefaultToEmpty();
+    _impl_.a_errorcode_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -379,10 +379,10 @@ const char* FileCreationErrorResult::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes errorCode = 1;
+      // required bytes a_errorCode = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_errorcode();
+          auto str = _internal_mutable_a_errorcode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -419,10 +419,10 @@ uint8_t* FileCreationErrorResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes errorCode = 1;
+  // required bytes a_errorCode = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_errorcode(), target);
+        1, this->_internal_a_errorcode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -437,11 +437,11 @@ size_t FileCreationErrorResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileCreationErrorResult)
   size_t total_size = 0;
 
-  // required bytes errorCode = 1;
-  if (_internal_has_errorcode()) {
+  // required bytes a_errorCode = 1;
+  if (_internal_has_a_errorcode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_errorcode());
+        this->_internal_a_errorcode());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -468,8 +468,8 @@ void FileCreationErrorResult::MergeFrom(const FileCreationErrorResult& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_errorcode()) {
-    _this->_internal_set_errorcode(from._internal_errorcode());
+  if (from._internal_has_a_errorcode()) {
+    _this->_internal_set_a_errorcode(from._internal_a_errorcode());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -493,8 +493,8 @@ void FileCreationErrorResult::InternalSwap(FileCreationErrorResult* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.errorcode_, lhs_arena,
-      &other->_impl_.errorcode_, rhs_arena
+      &_impl_.a_errorcode_, lhs_arena,
+      &other->_impl_.a_errorcode_, rhs_arena
   );
 }
 
@@ -507,47 +507,47 @@ std::string FileCreationErrorResult::GetTypeName() const {
 
 class FileCreationResult::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::FileCreationSuccessResult& mvfilecreationsuccessresult(const FileCreationResult* msg);
-  static const ::protobuf::mozilla::dom::FileCreationErrorResult& mvfilecreationerrorresult(const FileCreationResult* msg);
+  static const ::protobuf::mozilla::dom::FileCreationSuccessResult& a_mvfilecreationsuccessresult(const FileCreationResult* msg);
+  static const ::protobuf::mozilla::dom::FileCreationErrorResult& a_mvfilecreationerrorresult(const FileCreationResult* msg);
 };
 
 const ::protobuf::mozilla::dom::FileCreationSuccessResult&
-FileCreationResult::_Internal::mvfilecreationsuccessresult(const FileCreationResult* msg) {
-  return *msg->_impl_.content_.mvfilecreationsuccessresult_;
+FileCreationResult::_Internal::a_mvfilecreationsuccessresult(const FileCreationResult* msg) {
+  return *msg->_impl_.content_.a_mvfilecreationsuccessresult_;
 }
 const ::protobuf::mozilla::dom::FileCreationErrorResult&
-FileCreationResult::_Internal::mvfilecreationerrorresult(const FileCreationResult* msg) {
-  return *msg->_impl_.content_.mvfilecreationerrorresult_;
+FileCreationResult::_Internal::a_mvfilecreationerrorresult(const FileCreationResult* msg) {
+  return *msg->_impl_.content_.a_mvfilecreationerrorresult_;
 }
-void FileCreationResult::set_allocated_mvfilecreationsuccessresult(::protobuf::mozilla::dom::FileCreationSuccessResult* mvfilecreationsuccessresult) {
+void FileCreationResult::set_allocated_a_mvfilecreationsuccessresult(::protobuf::mozilla::dom::FileCreationSuccessResult* a_mvfilecreationsuccessresult) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfilecreationsuccessresult) {
+  if (a_mvfilecreationsuccessresult) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfilecreationsuccessresult);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfilecreationsuccessresult);
     if (message_arena != submessage_arena) {
-      mvfilecreationsuccessresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfilecreationsuccessresult, submessage_arena);
+      a_mvfilecreationsuccessresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfilecreationsuccessresult, submessage_arena);
     }
-    set_has_mvfilecreationsuccessresult();
-    _impl_.content_.mvfilecreationsuccessresult_ = mvfilecreationsuccessresult;
+    set_has_a_mvfilecreationsuccessresult();
+    _impl_.content_.a_mvfilecreationsuccessresult_ = a_mvfilecreationsuccessresult;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationResult.mVFileCreationSuccessResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationSuccessResult)
 }
-void FileCreationResult::set_allocated_mvfilecreationerrorresult(::protobuf::mozilla::dom::FileCreationErrorResult* mvfilecreationerrorresult) {
+void FileCreationResult::set_allocated_a_mvfilecreationerrorresult(::protobuf::mozilla::dom::FileCreationErrorResult* a_mvfilecreationerrorresult) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfilecreationerrorresult) {
+  if (a_mvfilecreationerrorresult) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfilecreationerrorresult);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfilecreationerrorresult);
     if (message_arena != submessage_arena) {
-      mvfilecreationerrorresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfilecreationerrorresult, submessage_arena);
+      a_mvfilecreationerrorresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfilecreationerrorresult, submessage_arena);
     }
-    set_has_mvfilecreationerrorresult();
-    _impl_.content_.mvfilecreationerrorresult_ = mvfilecreationerrorresult;
+    set_has_a_mvfilecreationerrorresult();
+    _impl_.content_.a_mvfilecreationerrorresult_ = a_mvfilecreationerrorresult;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationResult.mVFileCreationErrorResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationErrorResult)
 }
 FileCreationResult::FileCreationResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -566,14 +566,14 @@ FileCreationResult::FileCreationResult(const FileCreationResult& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVFileCreationSuccessResult: {
-      _this->_internal_mutable_mvfilecreationsuccessresult()->::protobuf::mozilla::dom::FileCreationSuccessResult::MergeFrom(
-          from._internal_mvfilecreationsuccessresult());
+    case kAMVFileCreationSuccessResult: {
+      _this->_internal_mutable_a_mvfilecreationsuccessresult()->::protobuf::mozilla::dom::FileCreationSuccessResult::MergeFrom(
+          from._internal_a_mvfilecreationsuccessresult());
       break;
     }
-    case kMVFileCreationErrorResult: {
-      _this->_internal_mutable_mvfilecreationerrorresult()->::protobuf::mozilla::dom::FileCreationErrorResult::MergeFrom(
-          from._internal_mvfilecreationerrorresult());
+    case kAMVFileCreationErrorResult: {
+      _this->_internal_mutable_a_mvfilecreationerrorresult()->::protobuf::mozilla::dom::FileCreationErrorResult::MergeFrom(
+          from._internal_a_mvfilecreationerrorresult());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -618,15 +618,15 @@ void FileCreationResult::SetCachedSize(int size) const {
 void FileCreationResult::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.FileCreationResult)
   switch (content_case()) {
-    case kMVFileCreationSuccessResult: {
+    case kAMVFileCreationSuccessResult: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfilecreationsuccessresult_;
+        delete _impl_.content_.a_mvfilecreationsuccessresult_;
       }
       break;
     }
-    case kMVFileCreationErrorResult: {
+    case kAMVFileCreationErrorResult: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfilecreationerrorresult_;
+        delete _impl_.content_.a_mvfilecreationerrorresult_;
       }
       break;
     }
@@ -654,18 +654,18 @@ const char* FileCreationResult::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.FileCreationSuccessResult mVFileCreationSuccessResult = 1;
+      // .protobuf.mozilla.dom.FileCreationSuccessResult a_mVFileCreationSuccessResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfilecreationsuccessresult(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfilecreationsuccessresult(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.FileCreationErrorResult mVFileCreationErrorResult = 2;
+      // .protobuf.mozilla.dom.FileCreationErrorResult a_mVFileCreationErrorResult = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfilecreationerrorresult(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfilecreationerrorresult(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -700,16 +700,16 @@ uint8_t* FileCreationResult::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVFileCreationSuccessResult: {
+    case kAMVFileCreationSuccessResult: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvfilecreationsuccessresult(this),
-          _Internal::mvfilecreationsuccessresult(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvfilecreationsuccessresult(this),
+          _Internal::a_mvfilecreationsuccessresult(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVFileCreationErrorResult: {
+    case kAMVFileCreationErrorResult: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvfilecreationerrorresult(this),
-          _Internal::mvfilecreationerrorresult(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvfilecreationerrorresult(this),
+          _Internal::a_mvfilecreationerrorresult(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -731,18 +731,18 @@ size_t FileCreationResult::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.dom.FileCreationSuccessResult mVFileCreationSuccessResult = 1;
-    case kMVFileCreationSuccessResult: {
+    // .protobuf.mozilla.dom.FileCreationSuccessResult a_mVFileCreationSuccessResult = 1;
+    case kAMVFileCreationSuccessResult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfilecreationsuccessresult_);
+          *_impl_.content_.a_mvfilecreationsuccessresult_);
       break;
     }
-    // .protobuf.mozilla.dom.FileCreationErrorResult mVFileCreationErrorResult = 2;
-    case kMVFileCreationErrorResult: {
+    // .protobuf.mozilla.dom.FileCreationErrorResult a_mVFileCreationErrorResult = 2;
+    case kAMVFileCreationErrorResult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfilecreationerrorresult_);
+          *_impl_.content_.a_mvfilecreationerrorresult_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -771,14 +771,14 @@ void FileCreationResult::MergeFrom(const FileCreationResult& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVFileCreationSuccessResult: {
-      _this->_internal_mutable_mvfilecreationsuccessresult()->::protobuf::mozilla::dom::FileCreationSuccessResult::MergeFrom(
-          from._internal_mvfilecreationsuccessresult());
+    case kAMVFileCreationSuccessResult: {
+      _this->_internal_mutable_a_mvfilecreationsuccessresult()->::protobuf::mozilla::dom::FileCreationSuccessResult::MergeFrom(
+          from._internal_a_mvfilecreationsuccessresult());
       break;
     }
-    case kMVFileCreationErrorResult: {
-      _this->_internal_mutable_mvfilecreationerrorresult()->::protobuf::mozilla::dom::FileCreationErrorResult::MergeFrom(
-          from._internal_mvfilecreationerrorresult());
+    case kAMVFileCreationErrorResult: {
+      _this->_internal_mutable_a_mvfilecreationerrorresult()->::protobuf::mozilla::dom::FileCreationErrorResult::MergeFrom(
+          from._internal_a_mvfilecreationerrorresult());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -797,15 +797,15 @@ void FileCreationResult::CopyFrom(const FileCreationResult& from) {
 
 bool FileCreationResult::IsInitialized() const {
   switch (content_case()) {
-    case kMVFileCreationSuccessResult: {
-      if (_internal_has_mvfilecreationsuccessresult()) {
-        if (!_impl_.content_.mvfilecreationsuccessresult_->IsInitialized()) return false;
+    case kAMVFileCreationSuccessResult: {
+      if (_internal_has_a_mvfilecreationsuccessresult()) {
+        if (!_impl_.content_.a_mvfilecreationsuccessresult_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVFileCreationErrorResult: {
-      if (_internal_has_mvfilecreationerrorresult()) {
-        if (!_impl_.content_.mvfilecreationerrorresult_->IsInitialized()) return false;
+    case kAMVFileCreationErrorResult: {
+      if (_internal_has_a_mvfilecreationerrorresult()) {
+        if (!_impl_.content_.a_mvfilecreationerrorresult_->IsInitialized()) return false;
       }
       break;
     }

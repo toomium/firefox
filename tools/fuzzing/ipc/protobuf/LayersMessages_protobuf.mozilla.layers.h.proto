@@ -14,219 +14,219 @@ import "LayersSurfaces.proto";
 
 // Structs and unions declarations
 message TargetConfig {
-  required bytes naturalBounds = 1;
-  required bytes rotation = 2;
-  required bytes orientation = 3;
-  required bytes clearRegion = 4;
+  required bytes a_naturalBounds = 1;
+  required bytes a_rotation = 2;
+  required bytes a_orientation = 3;
+  required bytes a_clearRegion = 4;
 }
 
 message OpAttachCompositable {
-  required bytes layer = 1;
-  required bytes compositable = 2;
+  required bytes a_layer = 1;
+  required bytes a_compositable = 2;
 }
 
 message OpAttachAsyncCompositable {
-  required bytes layer = 1;
-  required bytes compositable = 2;
+  required bytes a_layer = 1;
+  required bytes a_compositable = 2;
 }
 
 message LayerColor {
-  required bytes value = 1;
+  required bytes a_value = 1;
 }
 
 message Animatable {
   oneof content {
-    bytes mVnull_t = 1;
-    float mVfloat = 2;
-    bytes mVnscolor = 3;
-    bytes mVStyleRotate = 4;
-    bytes mVStyleScale = 5;
-    bytes mVStyleTranslate = 6;
-    bytes mVStyleTransform = 7;
-    bytes mVStyleOffsetPath = 8;
-    bytes mVLengthPercentage = 9;
-    bytes mVStyleOffsetRotate = 10;
-    bytes mVStylePositionOrAuto = 11;
-    bytes mVStyleOffsetPosition = 12;
+    bytes a_mVnull_t = 1;
+    float a_mVfloat = 2;
+    bytes a_mVnscolor = 3;
+    bytes a_mVStyleRotate = 4;
+    bytes a_mVStyleScale = 5;
+    bytes a_mVStyleTranslate = 6;
+    bytes a_mVStyleTransform = 7;
+    bytes a_mVStyleOffsetPath = 8;
+    bytes a_mVLengthPercentage = 9;
+    bytes a_mVStyleOffsetRotate = 10;
+    bytes a_mVStylePositionOrAuto = 11;
+    bytes a_mVStyleOffsetPosition = 12;
   }
 }
 
 message AnimationSegment {
-  required protobuf.mozilla.layers.Animatable startState = 1;
-  required protobuf.mozilla.layers.Animatable endState = 2;
-  required float startPortion = 3;
-  required float endPortion = 4;
-  required uint32 startComposite = 5;
-  required uint32 endComposite = 6;
-  optional bytes sampleFn = 7;
+  required protobuf.mozilla.layers.Animatable a_startState = 1;
+  required protobuf.mozilla.layers.Animatable a_endState = 2;
+  required float a_startPortion = 3;
+  required float a_endPortion = 4;
+  required uint32 a_startComposite = 5;
+  required uint32 a_endComposite = 6;
+  optional bytes a_sampleFn = 7;
 }
 
 message MotionPathData {
-  required bytes origin = 1;
-  required bytes anchorAdjustment = 2;
-  required bytes coordBox = 3;
-  required bytes currentPosition = 4;
-  required bytes rayContainReferenceLength = 5;
-  repeated bytes coordBoxInsetRadii = 6;
+  required bytes a_origin = 1;
+  required bytes a_anchorAdjustment = 2;
+  required bytes a_coordBox = 3;
+  required bytes a_currentPosition = 4;
+  required bytes a_rayContainReferenceLength = 5;
+  repeated bytes a_coordBoxInsetRadii = 6;
 }
 
 message PartialPrerenderData {
-  required bytes rect = 1;
-  required bytes overflowedSides = 2;
-  required bytes scrollId = 3;
-  required bytes clipRect = 4;
-  required bytes transformInClip = 5;
-  required bytes position = 6;
+  required bytes a_rect = 1;
+  required bytes a_overflowedSides = 2;
+  required bytes a_scrollId = 3;
+  required bytes a_clipRect = 4;
+  required bytes a_transformInClip = 5;
+  required bytes a_position = 6;
 }
 
 message TransformData {
-  required bytes origin = 1;
-  required bytes transformOrigin = 2;
-  required bytes bounds = 3;
-  required sint32 appUnitsPerDevPixel = 4;
-  optional protobuf.mozilla.layers.MotionPathData motionPathData = 5;
-  optional protobuf.mozilla.layers.PartialPrerenderData partialPrerenderData = 6;
+  required bytes a_origin = 1;
+  required bytes a_transformOrigin = 2;
+  required bytes a_bounds = 3;
+  required sint32 a_appUnitsPerDevPixel = 4;
+  optional protobuf.mozilla.layers.MotionPathData a_motionPathData = 5;
+  optional protobuf.mozilla.layers.PartialPrerenderData a_partialPrerenderData = 6;
 }
 
 message ScrollTimelineOptions {
-  required bytes source = 1;
-  required bytes axis = 2;
+  required bytes a_source = 1;
+  required bytes a_axis = 2;
 }
 
 message Animation {
-  required bytes originTime = 1;
-  optional bytes startTime = 2;
-  required bytes delay = 3;
-  required bytes endDelay = 4;
-  required bytes holdTime = 5;
-  required bytes duration = 6;
-  repeated protobuf.mozilla.layers.AnimationSegment segments = 7;
-  required float iterations = 8;
-  required float iterationStart = 9;
-  required uint32 direction = 10;
-  required uint32 fillMode = 11;
-  required bytes property = 12;
-  required float playbackRate = 13;
-  required float previousPlaybackRate = 14;
-  optional bytes easingFunction = 15;
-  required uint32 iterationComposite = 16;
-  required bool isNotPlaying = 17;
-  required bool isNotAnimating = 18;
-  required protobuf.mozilla.layers.Animatable baseStyle = 19;
-  optional protobuf.mozilla.layers.TransformData transformData = 20;
-  optional uint64 replacedTransitionId = 21;
-  optional protobuf.mozilla.layers.ScrollTimelineOptions scrollTimelineOptions = 22;
+  required bytes a_originTime = 1;
+  optional bytes a_startTime = 2;
+  required bytes a_delay = 3;
+  required bytes a_endDelay = 4;
+  required bytes a_holdTime = 5;
+  required bytes a_duration = 6;
+  repeated protobuf.mozilla.layers.AnimationSegment a_segments = 7;
+  required float a_iterations = 8;
+  required float a_iterationStart = 9;
+  required uint32 a_direction = 10;
+  required uint32 a_fillMode = 11;
+  required bytes a_property = 12;
+  required float a_playbackRate = 13;
+  required float a_previousPlaybackRate = 14;
+  optional bytes a_easingFunction = 15;
+  required uint32 a_iterationComposite = 16;
+  required bool a_isNotPlaying = 17;
+  required bool a_isNotAnimating = 18;
+  required protobuf.mozilla.layers.Animatable a_baseStyle = 19;
+  optional protobuf.mozilla.layers.TransformData a_transformData = 20;
+  optional uint64 a_replacedTransitionId = 21;
+  optional protobuf.mozilla.layers.ScrollTimelineOptions a_scrollTimelineOptions = 22;
 }
 
 message CompositorAnimations {
-  repeated protobuf.mozilla.layers.Animation animations = 1;
-  required uint64 id = 2;
+  repeated protobuf.mozilla.layers.Animation a_animations = 1;
+  required uint64 a_id = 2;
 }
 
 message UntrustedShmemSection {
-  required bytes shmem = 1;
-  required uint32 offset = 2;
-  required uint32 size = 3;
+  required bytes a_shmem = 1;
+  required uint32 a_offset = 2;
+  required uint32 a_size = 3;
 }
 
 message CrossProcessSemaphoreDescriptor {
-  required bytes sem = 1;
+  required bytes a_sem = 1;
 }
 
 message ReadLockDescriptor {
   oneof content {
-    protobuf.mozilla.layers.UntrustedShmemSection mVUntrustedShmemSection = 1;
-    protobuf.mozilla.layers.CrossProcessSemaphoreDescriptor mVCrossProcessSemaphoreDescriptor = 2;
-    bytes mVuintptr_t = 3;
-    bytes mVnull_t = 4;
+    protobuf.mozilla.layers.UntrustedShmemSection a_mVUntrustedShmemSection = 1;
+    protobuf.mozilla.layers.CrossProcessSemaphoreDescriptor a_mVCrossProcessSemaphoreDescriptor = 2;
+    bytes a_mVuintptr_t = 3;
+    bytes a_mVnull_t = 4;
   }
 }
 
 message OpRemoveTexture {
-  required bytes texture = 1;
+  required bytes a_texture = 1;
 }
 
 message OpClearImages {
-  required bytes type = 1;
+  required bytes a_type = 1;
 }
 
 message TimedTexture {
-  required bytes texture = 1;
-  required bytes timeStamp = 2;
-  required bytes picture = 3;
-  required uint32 frameID = 4;
-  required uint32 producerID = 5;
-  required bool readLocked = 6;
+  required bytes a_texture = 1;
+  required bytes a_timeStamp = 2;
+  required bytes a_picture = 3;
+  required uint32 a_frameID = 4;
+  required uint32 a_producerID = 5;
+  required bool a_readLocked = 6;
 }
 
 message OpUseTexture {
-  repeated protobuf.mozilla.layers.TimedTexture textures = 1;
+  repeated protobuf.mozilla.layers.TimedTexture a_textures = 1;
 }
 
 message OpUseRemoteTexture {
-  required bytes textureId = 1;
-  required bytes ownerId = 2;
-  required bytes size = 3;
-  required bytes textureFlags = 4;
+  required bytes a_textureId = 1;
+  required bytes a_ownerId = 2;
+  required bytes a_size = 3;
+  required bytes a_textureFlags = 4;
 }
 
 message OpEnableRemoteTexturePushCallback {
-  required bytes ownerId = 1;
-  required bytes size = 2;
-  required bytes textureFlags = 3;
+  required bytes a_ownerId = 1;
+  required bytes a_size = 2;
+  required bytes a_textureFlags = 3;
 }
 
 message OpNotifyNotUsed {
-  required uint64 TextureId = 1;
-  required uint64 fwdTransactionId = 2;
+  required uint64 a_TextureId = 1;
+  required uint64 a_fwdTransactionId = 2;
 }
 
 message CompositableOperationDetail {
   oneof content {
-    protobuf.mozilla.layers.OpRemoveTexture mVOpRemoveTexture = 1;
-    protobuf.mozilla.layers.OpClearImages mVOpClearImages = 2;
-    protobuf.mozilla.layers.OpUseTexture mVOpUseTexture = 3;
-    protobuf.mozilla.layers.OpUseRemoteTexture mVOpUseRemoteTexture = 4;
-    protobuf.mozilla.layers.OpEnableRemoteTexturePushCallback mVOpEnableRemoteTexturePushCallback = 5;
+    protobuf.mozilla.layers.OpRemoveTexture a_mVOpRemoveTexture = 1;
+    protobuf.mozilla.layers.OpClearImages a_mVOpClearImages = 2;
+    protobuf.mozilla.layers.OpUseTexture a_mVOpUseTexture = 3;
+    protobuf.mozilla.layers.OpUseRemoteTexture a_mVOpUseRemoteTexture = 4;
+    protobuf.mozilla.layers.OpEnableRemoteTexturePushCallback a_mVOpEnableRemoteTexturePushCallback = 5;
   }
 }
 
 message CompositableOperation {
-  required bytes compositable = 1;
-  required protobuf.mozilla.layers.CompositableOperationDetail detail = 2;
+  required bytes a_compositable = 1;
+  required protobuf.mozilla.layers.CompositableOperationDetail a_detail = 2;
 }
 
 message OpDestroy {
   oneof content {
-    bytes mVPTexture = 1;
-    bytes mVCompositableHandle = 2;
+    bytes a_mVPTexture = 1;
+    bytes a_mVCompositableHandle = 2;
   }
 }
 
 message OpContentBufferSwap {
-  required bytes compositable = 1;
-  required bytes frontUpdatedRegion = 2;
+  required bytes a_compositable = 1;
+  required bytes a_frontUpdatedRegion = 2;
 }
 
 message ImageCompositeNotification {
-  required bytes compositable = 1;
-  required bytes imageTimeStamp = 2;
-  required bytes firstCompositeTimeStamp = 3;
-  required uint32 frameID = 4;
-  required uint32 producerID = 5;
+  required bytes a_compositable = 1;
+  required bytes a_imageTimeStamp = 2;
+  required bytes a_firstCompositeTimeStamp = 3;
+  required uint32 a_frameID = 4;
+  required uint32 a_producerID = 5;
 }
 
 message AsyncParentMessageData {
   oneof content {
-    protobuf.mozilla.layers.OpNotifyNotUsed mVOpNotifyNotUsed = 1;
+    protobuf.mozilla.layers.OpNotifyNotUsed a_mVOpNotifyNotUsed = 1;
   }
 }
 
 message OMTAValue {
   oneof content {
-    bytes mVnull_t = 1;
-    bytes mVnscolor = 2;
-    float mVfloat = 3;
-    bytes mVMatrix4x4 = 4;
+    bytes a_mVnull_t = 1;
+    bytes a_mVnscolor = 2;
+    float a_mVfloat = 3;
+    bytes a_mVMatrix4x4 = 4;
   }
 }

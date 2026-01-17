@@ -42,33 +42,33 @@ namespace mozilla {
 
 class RemoteLazyStream::_Internal {
  public:
-  static const ::protobuf::mozilla::ipc::IPCStream& mvipcstream(const RemoteLazyStream* msg);
+  static const ::protobuf::mozilla::ipc::IPCStream& a_mvipcstream(const RemoteLazyStream* msg);
 };
 
 const ::protobuf::mozilla::ipc::IPCStream&
-RemoteLazyStream::_Internal::mvipcstream(const RemoteLazyStream* msg) {
-  return *msg->_impl_.content_.mvipcstream_;
+RemoteLazyStream::_Internal::a_mvipcstream(const RemoteLazyStream* msg) {
+  return *msg->_impl_.content_.a_mvipcstream_;
 }
-void RemoteLazyStream::set_allocated_mvipcstream(::protobuf::mozilla::ipc::IPCStream* mvipcstream) {
+void RemoteLazyStream::set_allocated_a_mvipcstream(::protobuf::mozilla::ipc::IPCStream* a_mvipcstream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvipcstream) {
+  if (a_mvipcstream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mvipcstream));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_mvipcstream));
     if (message_arena != submessage_arena) {
-      mvipcstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvipcstream, submessage_arena);
+      a_mvipcstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvipcstream, submessage_arena);
     }
-    set_has_mvipcstream();
-    _impl_.content_.mvipcstream_ = mvipcstream;
+    set_has_a_mvipcstream();
+    _impl_.content_.a_mvipcstream_ = a_mvipcstream;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.RemoteLazyStream.mVIPCStream)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.RemoteLazyStream.a_mVIPCStream)
 }
-void RemoteLazyStream::clear_mvipcstream() {
-  if (_internal_has_mvipcstream()) {
+void RemoteLazyStream::clear_a_mvipcstream() {
+  if (_internal_has_a_mvipcstream()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipcstream_;
+      delete _impl_.content_.a_mvipcstream_;
     }
     clear_has_content();
   }
@@ -90,13 +90,13 @@ RemoteLazyStream::RemoteLazyStream(const RemoteLazyStream& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVRemoteLazyInputStream: {
-      _this->_internal_set_mvremotelazyinputstream(from._internal_mvremotelazyinputstream());
+    case kAMVRemoteLazyInputStream: {
+      _this->_internal_set_a_mvremotelazyinputstream(from._internal_a_mvremotelazyinputstream());
       break;
     }
-    case kMVIPCStream: {
-      _this->_internal_mutable_mvipcstream()->::protobuf::mozilla::ipc::IPCStream::MergeFrom(
-          from._internal_mvipcstream());
+    case kAMVIPCStream: {
+      _this->_internal_mutable_a_mvipcstream()->::protobuf::mozilla::ipc::IPCStream::MergeFrom(
+          from._internal_a_mvipcstream());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -141,13 +141,13 @@ void RemoteLazyStream::SetCachedSize(int size) const {
 void RemoteLazyStream::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.RemoteLazyStream)
   switch (content_case()) {
-    case kMVRemoteLazyInputStream: {
-      _impl_.content_.mvremotelazyinputstream_.Destroy();
+    case kAMVRemoteLazyInputStream: {
+      _impl_.content_.a_mvremotelazyinputstream_.Destroy();
       break;
     }
-    case kMVIPCStream: {
+    case kAMVIPCStream: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvipcstream_;
+        delete _impl_.content_.a_mvipcstream_;
       }
       break;
     }
@@ -175,19 +175,19 @@ const char* RemoteLazyStream::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVRemoteLazyInputStream = 1;
+      // bytes a_mVRemoteLazyInputStream = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvremotelazyinputstream();
+          auto str = _internal_mutable_a_mvremotelazyinputstream();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
+      // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvipcstream(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvipcstream(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -222,15 +222,15 @@ uint8_t* RemoteLazyStream::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVRemoteLazyInputStream: {
+    case kAMVRemoteLazyInputStream: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvremotelazyinputstream(), target);
+          1, this->_internal_a_mvremotelazyinputstream(), target);
       break;
     }
-    case kMVIPCStream: {
+    case kAMVIPCStream: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvipcstream(this),
-          _Internal::mvipcstream(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvipcstream(this),
+          _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -252,18 +252,18 @@ size_t RemoteLazyStream::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVRemoteLazyInputStream = 1;
-    case kMVRemoteLazyInputStream: {
+    // bytes a_mVRemoteLazyInputStream = 1;
+    case kAMVRemoteLazyInputStream: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvremotelazyinputstream());
+          this->_internal_a_mvremotelazyinputstream());
       break;
     }
-    // .protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
-    case kMVIPCStream: {
+    // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
+    case kAMVIPCStream: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvipcstream_);
+          *_impl_.content_.a_mvipcstream_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -292,13 +292,13 @@ void RemoteLazyStream::MergeFrom(const RemoteLazyStream& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVRemoteLazyInputStream: {
-      _this->_internal_set_mvremotelazyinputstream(from._internal_mvremotelazyinputstream());
+    case kAMVRemoteLazyInputStream: {
+      _this->_internal_set_a_mvremotelazyinputstream(from._internal_a_mvremotelazyinputstream());
       break;
     }
-    case kMVIPCStream: {
-      _this->_internal_mutable_mvipcstream()->::protobuf::mozilla::ipc::IPCStream::MergeFrom(
-          from._internal_mvipcstream());
+    case kAMVIPCStream: {
+      _this->_internal_mutable_a_mvipcstream()->::protobuf::mozilla::ipc::IPCStream::MergeFrom(
+          from._internal_a_mvipcstream());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -317,12 +317,12 @@ void RemoteLazyStream::CopyFrom(const RemoteLazyStream& from) {
 
 bool RemoteLazyStream::IsInitialized() const {
   switch (content_case()) {
-    case kMVRemoteLazyInputStream: {
+    case kAMVRemoteLazyInputStream: {
       break;
     }
-    case kMVIPCStream: {
-      if (_internal_has_mvipcstream()) {
-        if (!_impl_.content_.mvipcstream_->IsInitialized()) return false;
+    case kAMVIPCStream: {
+      if (_internal_has_a_mvipcstream()) {
+        if (!_impl_.content_.a_mvipcstream_->IsInitialized()) return false;
       }
       break;
     }

@@ -17,7 +17,7 @@ import "CacheTypes.proto";
 
 // Message declarations
 message Msg_PCacheOpConstructor {
-  required protobuf.mozilla.dom.cache.CacheOpArgs aOpArgs = 1;
+  required protobuf.mozilla.dom.cache.CacheOpArgs a_aOpArgs = 1;
 }
 
 message Reply_PCacheOpConstructor {

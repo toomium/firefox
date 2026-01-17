@@ -178,25 +178,25 @@ class FileCreationSuccessResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBlobFieldNumber = 1,
+    kABlobFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob blob = 1;
-  bool has_blob() const;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  bool has_a_blob() const;
   private:
-  bool _internal_has_blob() const;
+  bool _internal_has_a_blob() const;
   public:
-  void clear_blob();
-  const ::protobuf::mozilla::dom::IPCBlob& blob() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_blob();
-  ::protobuf::mozilla::dom::IPCBlob* mutable_blob();
-  void set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob);
+  void clear_a_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& a_blob() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_a_blob();
+  ::protobuf::mozilla::dom::IPCBlob* mutable_a_blob();
+  void set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob);
   private:
-  const ::protobuf::mozilla::dom::IPCBlob& _internal_blob() const;
-  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& _internal_a_blob() const;
+  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_a_blob();
   public:
-  void unsafe_arena_set_allocated_blob(
-      ::protobuf::mozilla::dom::IPCBlob* blob);
-  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_blob();
+  void unsafe_arena_set_allocated_a_blob(
+      ::protobuf::mozilla::dom::IPCBlob* a_blob);
+  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileCreationSuccessResult)
  private:
@@ -208,7 +208,7 @@ class FileCreationSuccessResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::IPCBlob* blob_;
+    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -325,24 +325,24 @@ class FileCreationErrorResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kErrorCodeFieldNumber = 1,
+    kAErrorCodeFieldNumber = 1,
   };
-  // required bytes errorCode = 1;
-  bool has_errorcode() const;
+  // required bytes a_errorCode = 1;
+  bool has_a_errorcode() const;
   private:
-  bool _internal_has_errorcode() const;
+  bool _internal_has_a_errorcode() const;
   public:
-  void clear_errorcode();
-  const std::string& errorcode() const;
+  void clear_a_errorcode();
+  const std::string& a_errorcode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_errorcode(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_errorcode();
-  PROTOBUF_NODISCARD std::string* release_errorcode();
-  void set_allocated_errorcode(std::string* errorcode);
+  void set_a_errorcode(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_errorcode();
+  PROTOBUF_NODISCARD std::string* release_a_errorcode();
+  void set_allocated_a_errorcode(std::string* a_errorcode);
   private:
-  const std::string& _internal_errorcode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_errorcode(const std::string& value);
-  std::string* _internal_mutable_errorcode();
+  const std::string& _internal_a_errorcode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_errorcode(const std::string& value);
+  std::string* _internal_mutable_a_errorcode();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileCreationErrorResult)
@@ -355,7 +355,7 @@ class FileCreationErrorResult final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr errorcode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_errorcode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -404,8 +404,8 @@ class FileCreationResult final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVFileCreationSuccessResult = 1,
-    kMVFileCreationErrorResult = 2,
+    kAMVFileCreationSuccessResult = 1,
+    kAMVFileCreationErrorResult = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -478,52 +478,52 @@ class FileCreationResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVFileCreationSuccessResultFieldNumber = 1,
-    kMVFileCreationErrorResultFieldNumber = 2,
+    kAMVFileCreationSuccessResultFieldNumber = 1,
+    kAMVFileCreationErrorResultFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.FileCreationSuccessResult mVFileCreationSuccessResult = 1;
-  bool has_mvfilecreationsuccessresult() const;
+  // .protobuf.mozilla.dom.FileCreationSuccessResult a_mVFileCreationSuccessResult = 1;
+  bool has_a_mvfilecreationsuccessresult() const;
   private:
-  bool _internal_has_mvfilecreationsuccessresult() const;
+  bool _internal_has_a_mvfilecreationsuccessresult() const;
   public:
-  void clear_mvfilecreationsuccessresult();
-  const ::protobuf::mozilla::dom::FileCreationSuccessResult& mvfilecreationsuccessresult() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileCreationSuccessResult* release_mvfilecreationsuccessresult();
-  ::protobuf::mozilla::dom::FileCreationSuccessResult* mutable_mvfilecreationsuccessresult();
-  void set_allocated_mvfilecreationsuccessresult(::protobuf::mozilla::dom::FileCreationSuccessResult* mvfilecreationsuccessresult);
+  void clear_a_mvfilecreationsuccessresult();
+  const ::protobuf::mozilla::dom::FileCreationSuccessResult& a_mvfilecreationsuccessresult() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileCreationSuccessResult* release_a_mvfilecreationsuccessresult();
+  ::protobuf::mozilla::dom::FileCreationSuccessResult* mutable_a_mvfilecreationsuccessresult();
+  void set_allocated_a_mvfilecreationsuccessresult(::protobuf::mozilla::dom::FileCreationSuccessResult* a_mvfilecreationsuccessresult);
   private:
-  const ::protobuf::mozilla::dom::FileCreationSuccessResult& _internal_mvfilecreationsuccessresult() const;
-  ::protobuf::mozilla::dom::FileCreationSuccessResult* _internal_mutable_mvfilecreationsuccessresult();
+  const ::protobuf::mozilla::dom::FileCreationSuccessResult& _internal_a_mvfilecreationsuccessresult() const;
+  ::protobuf::mozilla::dom::FileCreationSuccessResult* _internal_mutable_a_mvfilecreationsuccessresult();
   public:
-  void unsafe_arena_set_allocated_mvfilecreationsuccessresult(
-      ::protobuf::mozilla::dom::FileCreationSuccessResult* mvfilecreationsuccessresult);
-  ::protobuf::mozilla::dom::FileCreationSuccessResult* unsafe_arena_release_mvfilecreationsuccessresult();
+  void unsafe_arena_set_allocated_a_mvfilecreationsuccessresult(
+      ::protobuf::mozilla::dom::FileCreationSuccessResult* a_mvfilecreationsuccessresult);
+  ::protobuf::mozilla::dom::FileCreationSuccessResult* unsafe_arena_release_a_mvfilecreationsuccessresult();
 
-  // .protobuf.mozilla.dom.FileCreationErrorResult mVFileCreationErrorResult = 2;
-  bool has_mvfilecreationerrorresult() const;
+  // .protobuf.mozilla.dom.FileCreationErrorResult a_mVFileCreationErrorResult = 2;
+  bool has_a_mvfilecreationerrorresult() const;
   private:
-  bool _internal_has_mvfilecreationerrorresult() const;
+  bool _internal_has_a_mvfilecreationerrorresult() const;
   public:
-  void clear_mvfilecreationerrorresult();
-  const ::protobuf::mozilla::dom::FileCreationErrorResult& mvfilecreationerrorresult() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileCreationErrorResult* release_mvfilecreationerrorresult();
-  ::protobuf::mozilla::dom::FileCreationErrorResult* mutable_mvfilecreationerrorresult();
-  void set_allocated_mvfilecreationerrorresult(::protobuf::mozilla::dom::FileCreationErrorResult* mvfilecreationerrorresult);
+  void clear_a_mvfilecreationerrorresult();
+  const ::protobuf::mozilla::dom::FileCreationErrorResult& a_mvfilecreationerrorresult() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::FileCreationErrorResult* release_a_mvfilecreationerrorresult();
+  ::protobuf::mozilla::dom::FileCreationErrorResult* mutable_a_mvfilecreationerrorresult();
+  void set_allocated_a_mvfilecreationerrorresult(::protobuf::mozilla::dom::FileCreationErrorResult* a_mvfilecreationerrorresult);
   private:
-  const ::protobuf::mozilla::dom::FileCreationErrorResult& _internal_mvfilecreationerrorresult() const;
-  ::protobuf::mozilla::dom::FileCreationErrorResult* _internal_mutable_mvfilecreationerrorresult();
+  const ::protobuf::mozilla::dom::FileCreationErrorResult& _internal_a_mvfilecreationerrorresult() const;
+  ::protobuf::mozilla::dom::FileCreationErrorResult* _internal_mutable_a_mvfilecreationerrorresult();
   public:
-  void unsafe_arena_set_allocated_mvfilecreationerrorresult(
-      ::protobuf::mozilla::dom::FileCreationErrorResult* mvfilecreationerrorresult);
-  ::protobuf::mozilla::dom::FileCreationErrorResult* unsafe_arena_release_mvfilecreationerrorresult();
+  void unsafe_arena_set_allocated_a_mvfilecreationerrorresult(
+      ::protobuf::mozilla::dom::FileCreationErrorResult* a_mvfilecreationerrorresult);
+  ::protobuf::mozilla::dom::FileCreationErrorResult* unsafe_arena_release_a_mvfilecreationerrorresult();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.FileCreationResult)
  private:
   class _Internal;
-  void set_has_mvfilecreationsuccessresult();
-  void set_has_mvfilecreationerrorresult();
+  void set_has_a_mvfilecreationsuccessresult();
+  void set_has_a_mvfilecreationerrorresult();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -535,8 +535,8 @@ class FileCreationResult final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::FileCreationSuccessResult* mvfilecreationsuccessresult_;
-      ::protobuf::mozilla::dom::FileCreationErrorResult* mvfilecreationerrorresult_;
+      ::protobuf::mozilla::dom::FileCreationSuccessResult* a_mvfilecreationsuccessresult_;
+      ::protobuf::mozilla::dom::FileCreationErrorResult* a_mvfilecreationerrorresult_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -556,41 +556,41 @@ class FileCreationResult final :
 #endif  // __GNUC__
 // FileCreationSuccessResult
 
-// required .protobuf.mozilla.dom.IPCBlob blob = 1;
-inline bool FileCreationSuccessResult::_internal_has_blob() const {
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+inline bool FileCreationSuccessResult::_internal_has_a_blob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.blob_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
   return value;
 }
-inline bool FileCreationSuccessResult::has_blob() const {
-  return _internal_has_blob();
+inline bool FileCreationSuccessResult::has_a_blob() const {
+  return _internal_has_a_blob();
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileCreationSuccessResult::_internal_blob() const {
-  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.blob_;
+inline const ::protobuf::mozilla::dom::IPCBlob& FileCreationSuccessResult::_internal_a_blob() const {
+  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.a_blob_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCBlob&>(
       ::protobuf::mozilla::dom::_IPCBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileCreationSuccessResult::blob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationSuccessResult.blob)
-  return _internal_blob();
+inline const ::protobuf::mozilla::dom::IPCBlob& FileCreationSuccessResult::a_blob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
+  return _internal_a_blob();
 }
-inline void FileCreationSuccessResult::unsafe_arena_set_allocated_blob(
-    ::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void FileCreationSuccessResult::unsafe_arena_set_allocated_a_blob(
+    ::protobuf::mozilla::dom::IPCBlob* a_blob) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  _impl_.blob_ = blob;
-  if (blob) {
+  _impl_.a_blob_ = a_blob;
+  if (a_blob) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationSuccessResult.blob)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::release_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::release_a_blob() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -602,268 +602,268 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::release_blo
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::unsafe_arena_release_blob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationSuccessResult.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::unsafe_arena_release_a_blob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::_internal_mutable_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::_internal_mutable_a_blob() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.blob_ == nullptr) {
+  if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
-    _impl_.blob_ = p;
+    _impl_.a_blob_ = p;
   }
-  return _impl_.blob_;
+  return _impl_.a_blob_;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::mutable_blob() {
-  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_blob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationSuccessResult.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* FileCreationSuccessResult::mutable_a_blob() {
+  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_a_blob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
   return _msg;
 }
-inline void FileCreationSuccessResult::set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void FileCreationSuccessResult::set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  if (blob) {
+  if (a_blob) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(blob));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_blob));
     if (message_arena != submessage_arena) {
-      blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, blob, submessage_arena);
+      a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_blob, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.blob_ = blob;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationSuccessResult.blob)
+  _impl_.a_blob_ = a_blob;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationSuccessResult.a_blob)
 }
 
 // -------------------------------------------------------------------
 
 // FileCreationErrorResult
 
-// required bytes errorCode = 1;
-inline bool FileCreationErrorResult::_internal_has_errorcode() const {
+// required bytes a_errorCode = 1;
+inline bool FileCreationErrorResult::_internal_has_a_errorcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileCreationErrorResult::has_errorcode() const {
-  return _internal_has_errorcode();
+inline bool FileCreationErrorResult::has_a_errorcode() const {
+  return _internal_has_a_errorcode();
 }
-inline void FileCreationErrorResult::clear_errorcode() {
-  _impl_.errorcode_.ClearToEmpty();
+inline void FileCreationErrorResult::clear_a_errorcode() {
+  _impl_.a_errorcode_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileCreationErrorResult::errorcode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationErrorResult.errorCode)
-  return _internal_errorcode();
+inline const std::string& FileCreationErrorResult::a_errorcode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
+  return _internal_a_errorcode();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileCreationErrorResult::set_errorcode(ArgT0&& arg0, ArgT... args) {
+void FileCreationErrorResult::set_a_errorcode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileCreationErrorResult.errorCode)
+ _impl_.a_errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
 }
-inline std::string* FileCreationErrorResult::mutable_errorcode() {
-  std::string* _s = _internal_mutable_errorcode();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationErrorResult.errorCode)
+inline std::string* FileCreationErrorResult::mutable_a_errorcode() {
+  std::string* _s = _internal_mutable_a_errorcode();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
   return _s;
 }
-inline const std::string& FileCreationErrorResult::_internal_errorcode() const {
-  return _impl_.errorcode_.Get();
+inline const std::string& FileCreationErrorResult::_internal_a_errorcode() const {
+  return _impl_.a_errorcode_.Get();
 }
-inline void FileCreationErrorResult::_internal_set_errorcode(const std::string& value) {
+inline void FileCreationErrorResult::_internal_set_a_errorcode(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.errorcode_.Set(value, GetArenaForAllocation());
+  _impl_.a_errorcode_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileCreationErrorResult::_internal_mutable_errorcode() {
+inline std::string* FileCreationErrorResult::_internal_mutable_a_errorcode() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.errorcode_.Mutable(GetArenaForAllocation());
+  return _impl_.a_errorcode_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileCreationErrorResult::release_errorcode() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationErrorResult.errorCode)
-  if (!_internal_has_errorcode()) {
+inline std::string* FileCreationErrorResult::release_a_errorcode() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
+  if (!_internal_has_a_errorcode()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.errorcode_.Release();
+  auto* p = _impl_.a_errorcode_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.errorcode_.IsDefault()) {
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileCreationErrorResult::set_allocated_errorcode(std::string* errorcode) {
-  if (errorcode != nullptr) {
+inline void FileCreationErrorResult::set_allocated_a_errorcode(std::string* a_errorcode) {
+  if (a_errorcode != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.errorcode_.SetAllocated(errorcode, GetArenaForAllocation());
+  _impl_.a_errorcode_.SetAllocated(a_errorcode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.errorcode_.IsDefault()) {
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationErrorResult.errorCode)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileCreationErrorResult.a_errorCode)
 }
 
 // -------------------------------------------------------------------
 
 // FileCreationResult
 
-// .protobuf.mozilla.dom.FileCreationSuccessResult mVFileCreationSuccessResult = 1;
-inline bool FileCreationResult::_internal_has_mvfilecreationsuccessresult() const {
-  return content_case() == kMVFileCreationSuccessResult;
+// .protobuf.mozilla.dom.FileCreationSuccessResult a_mVFileCreationSuccessResult = 1;
+inline bool FileCreationResult::_internal_has_a_mvfilecreationsuccessresult() const {
+  return content_case() == kAMVFileCreationSuccessResult;
 }
-inline bool FileCreationResult::has_mvfilecreationsuccessresult() const {
-  return _internal_has_mvfilecreationsuccessresult();
+inline bool FileCreationResult::has_a_mvfilecreationsuccessresult() const {
+  return _internal_has_a_mvfilecreationsuccessresult();
 }
-inline void FileCreationResult::set_has_mvfilecreationsuccessresult() {
-  _impl_._oneof_case_[0] = kMVFileCreationSuccessResult;
+inline void FileCreationResult::set_has_a_mvfilecreationsuccessresult() {
+  _impl_._oneof_case_[0] = kAMVFileCreationSuccessResult;
 }
-inline void FileCreationResult::clear_mvfilecreationsuccessresult() {
-  if (_internal_has_mvfilecreationsuccessresult()) {
+inline void FileCreationResult::clear_a_mvfilecreationsuccessresult() {
+  if (_internal_has_a_mvfilecreationsuccessresult()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilecreationsuccessresult_;
+      delete _impl_.content_.a_mvfilecreationsuccessresult_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::release_mvfilecreationsuccessresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationResult.mVFileCreationSuccessResult)
-  if (_internal_has_mvfilecreationsuccessresult()) {
+inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::release_a_mvfilecreationsuccessresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationSuccessResult)
+  if (_internal_has_a_mvfilecreationsuccessresult()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileCreationSuccessResult* temp = _impl_.content_.mvfilecreationsuccessresult_;
+    ::protobuf::mozilla::dom::FileCreationSuccessResult* temp = _impl_.content_.a_mvfilecreationsuccessresult_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilecreationsuccessresult_ = nullptr;
+    _impl_.content_.a_mvfilecreationsuccessresult_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileCreationSuccessResult& FileCreationResult::_internal_mvfilecreationsuccessresult() const {
-  return _internal_has_mvfilecreationsuccessresult()
-      ? *_impl_.content_.mvfilecreationsuccessresult_
+inline const ::protobuf::mozilla::dom::FileCreationSuccessResult& FileCreationResult::_internal_a_mvfilecreationsuccessresult() const {
+  return _internal_has_a_mvfilecreationsuccessresult()
+      ? *_impl_.content_.a_mvfilecreationsuccessresult_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileCreationSuccessResult&>(::protobuf::mozilla::dom::_FileCreationSuccessResult_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileCreationSuccessResult& FileCreationResult::mvfilecreationsuccessresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationResult.mVFileCreationSuccessResult)
-  return _internal_mvfilecreationsuccessresult();
+inline const ::protobuf::mozilla::dom::FileCreationSuccessResult& FileCreationResult::a_mvfilecreationsuccessresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationSuccessResult)
+  return _internal_a_mvfilecreationsuccessresult();
 }
-inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::unsafe_arena_release_mvfilecreationsuccessresult() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileCreationResult.mVFileCreationSuccessResult)
-  if (_internal_has_mvfilecreationsuccessresult()) {
+inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::unsafe_arena_release_a_mvfilecreationsuccessresult() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationSuccessResult)
+  if (_internal_has_a_mvfilecreationsuccessresult()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileCreationSuccessResult* temp = _impl_.content_.mvfilecreationsuccessresult_;
-    _impl_.content_.mvfilecreationsuccessresult_ = nullptr;
+    ::protobuf::mozilla::dom::FileCreationSuccessResult* temp = _impl_.content_.a_mvfilecreationsuccessresult_;
+    _impl_.content_.a_mvfilecreationsuccessresult_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileCreationResult::unsafe_arena_set_allocated_mvfilecreationsuccessresult(::protobuf::mozilla::dom::FileCreationSuccessResult* mvfilecreationsuccessresult) {
+inline void FileCreationResult::unsafe_arena_set_allocated_a_mvfilecreationsuccessresult(::protobuf::mozilla::dom::FileCreationSuccessResult* a_mvfilecreationsuccessresult) {
   clear_content();
-  if (mvfilecreationsuccessresult) {
-    set_has_mvfilecreationsuccessresult();
-    _impl_.content_.mvfilecreationsuccessresult_ = mvfilecreationsuccessresult;
+  if (a_mvfilecreationsuccessresult) {
+    set_has_a_mvfilecreationsuccessresult();
+    _impl_.content_.a_mvfilecreationsuccessresult_ = a_mvfilecreationsuccessresult;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationResult.mVFileCreationSuccessResult)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationSuccessResult)
 }
-inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::_internal_mutable_mvfilecreationsuccessresult() {
-  if (!_internal_has_mvfilecreationsuccessresult()) {
+inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::_internal_mutable_a_mvfilecreationsuccessresult() {
+  if (!_internal_has_a_mvfilecreationsuccessresult()) {
     clear_content();
-    set_has_mvfilecreationsuccessresult();
-    _impl_.content_.mvfilecreationsuccessresult_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileCreationSuccessResult >(GetArenaForAllocation());
+    set_has_a_mvfilecreationsuccessresult();
+    _impl_.content_.a_mvfilecreationsuccessresult_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileCreationSuccessResult >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilecreationsuccessresult_;
+  return _impl_.content_.a_mvfilecreationsuccessresult_;
 }
-inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::mutable_mvfilecreationsuccessresult() {
-  ::protobuf::mozilla::dom::FileCreationSuccessResult* _msg = _internal_mutable_mvfilecreationsuccessresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationResult.mVFileCreationSuccessResult)
+inline ::protobuf::mozilla::dom::FileCreationSuccessResult* FileCreationResult::mutable_a_mvfilecreationsuccessresult() {
+  ::protobuf::mozilla::dom::FileCreationSuccessResult* _msg = _internal_mutable_a_mvfilecreationsuccessresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationSuccessResult)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.FileCreationErrorResult mVFileCreationErrorResult = 2;
-inline bool FileCreationResult::_internal_has_mvfilecreationerrorresult() const {
-  return content_case() == kMVFileCreationErrorResult;
+// .protobuf.mozilla.dom.FileCreationErrorResult a_mVFileCreationErrorResult = 2;
+inline bool FileCreationResult::_internal_has_a_mvfilecreationerrorresult() const {
+  return content_case() == kAMVFileCreationErrorResult;
 }
-inline bool FileCreationResult::has_mvfilecreationerrorresult() const {
-  return _internal_has_mvfilecreationerrorresult();
+inline bool FileCreationResult::has_a_mvfilecreationerrorresult() const {
+  return _internal_has_a_mvfilecreationerrorresult();
 }
-inline void FileCreationResult::set_has_mvfilecreationerrorresult() {
-  _impl_._oneof_case_[0] = kMVFileCreationErrorResult;
+inline void FileCreationResult::set_has_a_mvfilecreationerrorresult() {
+  _impl_._oneof_case_[0] = kAMVFileCreationErrorResult;
 }
-inline void FileCreationResult::clear_mvfilecreationerrorresult() {
-  if (_internal_has_mvfilecreationerrorresult()) {
+inline void FileCreationResult::clear_a_mvfilecreationerrorresult() {
+  if (_internal_has_a_mvfilecreationerrorresult()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilecreationerrorresult_;
+      delete _impl_.content_.a_mvfilecreationerrorresult_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::release_mvfilecreationerrorresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationResult.mVFileCreationErrorResult)
-  if (_internal_has_mvfilecreationerrorresult()) {
+inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::release_a_mvfilecreationerrorresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationErrorResult)
+  if (_internal_has_a_mvfilecreationerrorresult()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileCreationErrorResult* temp = _impl_.content_.mvfilecreationerrorresult_;
+    ::protobuf::mozilla::dom::FileCreationErrorResult* temp = _impl_.content_.a_mvfilecreationerrorresult_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilecreationerrorresult_ = nullptr;
+    _impl_.content_.a_mvfilecreationerrorresult_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::FileCreationErrorResult& FileCreationResult::_internal_mvfilecreationerrorresult() const {
-  return _internal_has_mvfilecreationerrorresult()
-      ? *_impl_.content_.mvfilecreationerrorresult_
+inline const ::protobuf::mozilla::dom::FileCreationErrorResult& FileCreationResult::_internal_a_mvfilecreationerrorresult() const {
+  return _internal_has_a_mvfilecreationerrorresult()
+      ? *_impl_.content_.a_mvfilecreationerrorresult_
       : reinterpret_cast< ::protobuf::mozilla::dom::FileCreationErrorResult&>(::protobuf::mozilla::dom::_FileCreationErrorResult_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::FileCreationErrorResult& FileCreationResult::mvfilecreationerrorresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationResult.mVFileCreationErrorResult)
-  return _internal_mvfilecreationerrorresult();
+inline const ::protobuf::mozilla::dom::FileCreationErrorResult& FileCreationResult::a_mvfilecreationerrorresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationErrorResult)
+  return _internal_a_mvfilecreationerrorresult();
 }
-inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::unsafe_arena_release_mvfilecreationerrorresult() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileCreationResult.mVFileCreationErrorResult)
-  if (_internal_has_mvfilecreationerrorresult()) {
+inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::unsafe_arena_release_a_mvfilecreationerrorresult() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationErrorResult)
+  if (_internal_has_a_mvfilecreationerrorresult()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::FileCreationErrorResult* temp = _impl_.content_.mvfilecreationerrorresult_;
-    _impl_.content_.mvfilecreationerrorresult_ = nullptr;
+    ::protobuf::mozilla::dom::FileCreationErrorResult* temp = _impl_.content_.a_mvfilecreationerrorresult_;
+    _impl_.content_.a_mvfilecreationerrorresult_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileCreationResult::unsafe_arena_set_allocated_mvfilecreationerrorresult(::protobuf::mozilla::dom::FileCreationErrorResult* mvfilecreationerrorresult) {
+inline void FileCreationResult::unsafe_arena_set_allocated_a_mvfilecreationerrorresult(::protobuf::mozilla::dom::FileCreationErrorResult* a_mvfilecreationerrorresult) {
   clear_content();
-  if (mvfilecreationerrorresult) {
-    set_has_mvfilecreationerrorresult();
-    _impl_.content_.mvfilecreationerrorresult_ = mvfilecreationerrorresult;
+  if (a_mvfilecreationerrorresult) {
+    set_has_a_mvfilecreationerrorresult();
+    _impl_.content_.a_mvfilecreationerrorresult_ = a_mvfilecreationerrorresult;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationResult.mVFileCreationErrorResult)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationErrorResult)
 }
-inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::_internal_mutable_mvfilecreationerrorresult() {
-  if (!_internal_has_mvfilecreationerrorresult()) {
+inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::_internal_mutable_a_mvfilecreationerrorresult() {
+  if (!_internal_has_a_mvfilecreationerrorresult()) {
     clear_content();
-    set_has_mvfilecreationerrorresult();
-    _impl_.content_.mvfilecreationerrorresult_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileCreationErrorResult >(GetArenaForAllocation());
+    set_has_a_mvfilecreationerrorresult();
+    _impl_.content_.a_mvfilecreationerrorresult_ = CreateMaybeMessage< ::protobuf::mozilla::dom::FileCreationErrorResult >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilecreationerrorresult_;
+  return _impl_.content_.a_mvfilecreationerrorresult_;
 }
-inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::mutable_mvfilecreationerrorresult() {
-  ::protobuf::mozilla::dom::FileCreationErrorResult* _msg = _internal_mutable_mvfilecreationerrorresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationResult.mVFileCreationErrorResult)
+inline ::protobuf::mozilla::dom::FileCreationErrorResult* FileCreationResult::mutable_a_mvfilecreationerrorresult() {
+  ::protobuf::mozilla::dom::FileCreationErrorResult* _msg = _internal_mutable_a_mvfilecreationerrorresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.FileCreationResult.a_mVFileCreationErrorResult)
   return _msg;
 }
 

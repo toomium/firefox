@@ -16,17 +16,17 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message MessagePortIdentifier {
-  required bytes uuid = 1;
-  required bytes destinationUuid = 2;
-  required uint32 sequenceId = 3;
-  required bool neutered = 4;
+  required bytes a_uuid = 1;
+  required bytes a_destinationUuid = 2;
+  required uint32 a_sequenceId = 3;
+  required bool a_neutered = 4;
 }
 
 message ClonedMessageData {
-  required bytes data = 1;
-  repeated protobuf.mozilla.dom.IPCBlob blobs = 2;
-  repeated protobuf.mozilla.ipc.IPCStream inputStreams = 3;
-  repeated protobuf.mozilla.dom.MessagePortIdentifier identifiers = 4;
+  required bytes a_data = 1;
+  repeated protobuf.mozilla.dom.IPCBlob a_blobs = 2;
+  repeated protobuf.mozilla.ipc.IPCStream a_inputStreams = 3;
+  repeated protobuf.mozilla.dom.MessagePortIdentifier a_identifiers = 4;
 }
 
 message ErrorMessageData {
@@ -34,235 +34,235 @@ message ErrorMessageData {
 
 message ClonedOrErrorMessageData {
   oneof content {
-    protobuf.mozilla.dom.ClonedMessageData mVClonedMessageData = 1;
-    protobuf.mozilla.dom.ErrorMessageData mVErrorMessageData = 2;
+    protobuf.mozilla.dom.ClonedMessageData a_mVClonedMessageData = 1;
+    protobuf.mozilla.dom.ErrorMessageData a_mVErrorMessageData = 2;
   }
 }
 
 message RefMessageData {
-  required bytes uuid = 1;
+  required bytes a_uuid = 1;
 }
 
 message MessageDataType {
   oneof content {
-    protobuf.mozilla.dom.ClonedMessageData mVClonedMessageData = 1;
-    protobuf.mozilla.dom.RefMessageData mVRefMessageData = 2;
+    protobuf.mozilla.dom.ClonedMessageData a_mVClonedMessageData = 1;
+    protobuf.mozilla.dom.RefMessageData a_mVRefMessageData = 2;
   }
 }
 
 message MessageData {
-  optional bytes agentClusterId = 1;
-  required protobuf.mozilla.dom.MessageDataType data = 2;
+  optional bytes a_agentClusterId = 1;
+  required protobuf.mozilla.dom.MessageDataType a_data = 2;
 }
 
 message ScreenDetails {
-  required bytes rect = 1;
-  required bytes rectDisplayPix = 2;
-  required bytes availRect = 3;
-  required bytes availRectDisplayPix = 4;
-  required sint32 pixelDepth = 5;
-  required sint32 colorDepth = 6;
-  required uint32 refreshRate = 7;
-  required bytes contentsScaleFactor = 8;
-  required bytes defaultCSSScaleFactor = 9;
-  required float dpi = 10;
-  required bytes orientation = 11;
-  required uint32 orientationAngle = 12;
-  required bool isPseudoDisplay = 13;
-  required bool isHDR = 14;
+  required bytes a_rect = 1;
+  required bytes a_rectDisplayPix = 2;
+  required bytes a_availRect = 3;
+  required bytes a_availRectDisplayPix = 4;
+  required sint32 a_pixelDepth = 5;
+  required sint32 a_colorDepth = 6;
+  required uint32 a_refreshRate = 7;
+  required bytes a_contentsScaleFactor = 8;
+  required bytes a_defaultCSSScaleFactor = 9;
+  required float a_dpi = 10;
+  required bytes a_orientation = 11;
+  required uint32 a_orientationAngle = 12;
+  required bool a_isPseudoDisplay = 13;
+  required bool a_isHDR = 14;
 }
 
 message DimensionInfo {
-  required bytes rect = 1;
-  required bytes size = 2;
-  required bytes clientOffset = 3;
-  required bytes chromeOffset = 4;
+  required bytes a_rect = 1;
+  required bytes a_size = 2;
+  required bytes a_clientOffset = 3;
+  required bytes a_chromeOffset = 4;
 }
 
 message FrameScriptInfo {
-  required bytes url = 1;
-  required bool runInGlobalScope = 2;
+  required bytes a_url = 1;
+  required bool a_runInGlobalScope = 2;
 }
 
 message CreatedWindowInfo {
-  required bytes rv = 1;
-  required bool windowOpened = 2;
-  repeated protobuf.mozilla.dom.FrameScriptInfo frameScripts = 3;
-  required uint32 maxTouchPoints = 4;
-  required protobuf.mozilla.dom.DimensionInfo dimensions = 5;
+  required bytes a_rv = 1;
+  required bool a_windowOpened = 2;
+  repeated protobuf.mozilla.dom.FrameScriptInfo a_frameScripts = 3;
+  required uint32 a_maxTouchPoints = 4;
+  required protobuf.mozilla.dom.DimensionInfo a_dimensions = 5;
 }
 
 message DocShellLoadStateInit {
-  required bytes URI = 1;
-  required bytes OriginalURI = 2;
-  required bytes ResultPrincipalURI = 3;
-  required bytes TriggeringPrincipal = 4;
-  required bytes ReferrerInfo = 5;
-  required bytes PrincipalToInherit = 6;
-  required bytes PartitionedPrincipalToInherit = 7;
-  required bytes BaseURI = 8;
-  required bytes Csp = 9;
-  required bytes PostDataStream = 10;
-  required bytes HeadersStream = 11;
-  required bytes UnstrippedURI = 12;
-  required uint64 LoadIdentifier = 13;
-  required bytes Target = 14;
-  required bytes TypeHint = 15;
-  required bytes FileName = 16;
-  required bytes SourceBrowsingContext = 17;
-  required bytes TargetBrowsingContext = 18;
-  required bytes TriggeringRemoteType = 19;
-  required bytes SrcdocData = 20;
-  optional bytes OriginalURIString = 21;
-  optional bytes RemoteTypeOverride = 22;
-  optional bytes loadingSessionHistoryInfo = 23;
-  required uint32 LoadType = 24;
-  required uint32 LoadFlags = 25;
-  required uint32 InternalLoadFlags = 26;
-  required bytes userNavigationInvolvement = 27;
-  required uint32 TriggeringSandboxFlags = 28;
-  required uint64 TriggeringWindowId = 29;
-  required bool TriggeringStorageAccess = 30;
-  required bytes TriggeringClassificationFlags = 31;
-  optional sint32 CancelContentJSEpoch = 32;
-  required bool ResultPrincipalURIIsSome = 33;
-  required bool KeepResultPrincipalURIIfSet = 34;
-  required bool LoadReplace = 35;
-  required bool InheritPrincipal = 36;
-  required bool PrincipalIsExplicit = 37;
-  required bool ForceAllowDataURI = 38;
-  required bool IsExemptFromHTTPSFirstMode = 39;
-  required bool OriginalFrameSrc = 40;
-  required bool ShouldCheckForRecursion = 41;
-  required bool IsFormSubmission = 42;
-  required bool FirstParty = 43;
-  required bool HasValidUserGestureActivation = 44;
-  required bool TextDirectiveUserActivation = 45;
-  required bool AllowFocusMove = 46;
-  required bool IsFromProcessingFrameAttributes = 47;
-  required bytes SchemelessInput = 48;
-  required bytes HttpsUpgradeTelemetry = 49;
-  required bool ChannelInitialized = 50;
-  required bool TryToReplaceWithSessionHistoryLoad = 51;
-  required bool IsMetaRefresh = 52;
+  required bytes a_URI = 1;
+  required bytes a_OriginalURI = 2;
+  required bytes a_ResultPrincipalURI = 3;
+  required bytes a_TriggeringPrincipal = 4;
+  required bytes a_ReferrerInfo = 5;
+  required bytes a_PrincipalToInherit = 6;
+  required bytes a_PartitionedPrincipalToInherit = 7;
+  required bytes a_BaseURI = 8;
+  required bytes a_Csp = 9;
+  required bytes a_PostDataStream = 10;
+  required bytes a_HeadersStream = 11;
+  required bytes a_UnstrippedURI = 12;
+  required uint64 a_LoadIdentifier = 13;
+  required bytes a_Target = 14;
+  required bytes a_TypeHint = 15;
+  required bytes a_FileName = 16;
+  required bytes a_SourceBrowsingContext = 17;
+  required bytes a_TargetBrowsingContext = 18;
+  required bytes a_TriggeringRemoteType = 19;
+  required bytes a_SrcdocData = 20;
+  optional bytes a_OriginalURIString = 21;
+  optional bytes a_RemoteTypeOverride = 22;
+  optional bytes a_loadingSessionHistoryInfo = 23;
+  required uint32 a_LoadType = 24;
+  required uint32 a_LoadFlags = 25;
+  required uint32 a_InternalLoadFlags = 26;
+  required bytes a_userNavigationInvolvement = 27;
+  required uint32 a_TriggeringSandboxFlags = 28;
+  required uint64 a_TriggeringWindowId = 29;
+  required bool a_TriggeringStorageAccess = 30;
+  required bytes a_TriggeringClassificationFlags = 31;
+  optional sint32 a_CancelContentJSEpoch = 32;
+  required bool a_ResultPrincipalURIIsSome = 33;
+  required bool a_KeepResultPrincipalURIIfSet = 34;
+  required bool a_LoadReplace = 35;
+  required bool a_InheritPrincipal = 36;
+  required bool a_PrincipalIsExplicit = 37;
+  required bool a_ForceAllowDataURI = 38;
+  required bool a_IsExemptFromHTTPSFirstMode = 39;
+  required bool a_OriginalFrameSrc = 40;
+  required bool a_ShouldCheckForRecursion = 41;
+  required bool a_IsFormSubmission = 42;
+  required bool a_FirstParty = 43;
+  required bool a_HasValidUserGestureActivation = 44;
+  required bool a_TextDirectiveUserActivation = 45;
+  required bool a_AllowFocusMove = 46;
+  required bool a_IsFromProcessingFrameAttributes = 47;
+  required bytes a_SchemelessInput = 48;
+  required bytes a_HttpsUpgradeTelemetry = 49;
+  required bool a_ChannelInitialized = 50;
+  required bool a_TryToReplaceWithSessionHistoryLoad = 51;
+  required bool a_IsMetaRefresh = 52;
 }
 
 message TimedChannelInfo {
-  required sint32 redirectCount = 1;
-  required sint32 internalRedirectCount = 2;
-  required bytes asyncOpen = 3;
-  required bytes channelCreation = 4;
-  required bytes redirectStart = 5;
-  required bytes redirectEnd = 6;
-  required bytes initiatorType = 7;
-  required bool allRedirectsSameOrigin = 8;
-  required bool allRedirectsPassTimingAllowCheck = 9;
-  optional bool timingAllowCheckForPrincipal = 10;
-  required bool renderBlocking = 11;
-  required bytes launchServiceWorkerStart = 12;
-  required bytes launchServiceWorkerEnd = 13;
-  required bytes dispatchFetchEventStart = 14;
-  required bytes dispatchFetchEventEnd = 15;
-  required bytes handleFetchEventStart = 16;
-  required bytes handleFetchEventEnd = 17;
-  required bytes responseStart = 18;
-  required bytes responseEnd = 19;
+  required sint32 a_redirectCount = 1;
+  required sint32 a_internalRedirectCount = 2;
+  required bytes a_asyncOpen = 3;
+  required bytes a_channelCreation = 4;
+  required bytes a_redirectStart = 5;
+  required bytes a_redirectEnd = 6;
+  required bytes a_initiatorType = 7;
+  required bool a_allRedirectsSameOrigin = 8;
+  required bool a_allRedirectsPassTimingAllowCheck = 9;
+  optional bool a_timingAllowCheckForPrincipal = 10;
+  required bool a_renderBlocking = 11;
+  required bytes a_launchServiceWorkerStart = 12;
+  required bytes a_launchServiceWorkerEnd = 13;
+  required bytes a_dispatchFetchEventStart = 14;
+  required bytes a_dispatchFetchEventEnd = 15;
+  required bytes a_handleFetchEventStart = 16;
+  required bytes a_handleFetchEventEnd = 17;
+  required bytes a_responseStart = 18;
+  required bytes a_responseEnd = 19;
 }
 
 message ReplacementChannelConfigInit {
-  required uint32 redirectFlags = 1;
-  required bytes classOfService = 2;
-  optional bool privateBrowsing = 3;
-  optional bytes method = 4;
-  required bytes referrerInfo = 5;
-  optional protobuf.mozilla.dom.TimedChannelInfo timedChannelInfo = 6;
-  required bytes uploadStream = 7;
-  required uint64 uploadStreamLength = 8;
-  required bool uploadStreamHasHeaders = 9;
-  optional bytes contentType = 10;
-  optional bytes contentLength = 11;
+  required uint32 a_redirectFlags = 1;
+  required bytes a_classOfService = 2;
+  optional bool a_privateBrowsing = 3;
+  optional bytes a_method = 4;
+  required bytes a_referrerInfo = 5;
+  optional protobuf.mozilla.dom.TimedChannelInfo a_timedChannelInfo = 6;
+  required bytes a_uploadStream = 7;
+  required uint64 a_uploadStreamLength = 8;
+  required bool a_uploadStreamHasHeaders = 9;
+  optional bytes a_contentType = 10;
+  optional bytes a_contentLength = 11;
 }
 
 message IPDLVariantValue {
   oneof content {
-    bool mVbool = 1;
-    uint32 mVuint8_t = 2;
-    sint32 mVint16_t = 3;
-    uint32 mVuint16_t = 4;
-    sint32 mVint32_t = 5;
-    uint32 mVuint32_t = 6;
-    float mVfloat = 7;
-    double mVdouble = 8;
-    bytes mVnsID = 9;
-    bytes mVnsString = 10;
-    bytes mVnsCString = 11;
-    bytes mVnsIURI = 12;
-    bytes mVnsIPrincipal = 13;
+    bool a_mVbool = 1;
+    uint32 a_mVuint8_t = 2;
+    sint32 a_mVint16_t = 3;
+    uint32 a_mVuint16_t = 4;
+    sint32 a_mVint32_t = 5;
+    uint32 a_mVuint32_t = 6;
+    float a_mVfloat = 7;
+    double a_mVdouble = 8;
+    bytes a_mVnsID = 9;
+    bytes a_mVnsString = 10;
+    bytes a_mVnsCString = 11;
+    bytes a_mVnsIURI = 12;
+    bytes a_mVnsIPrincipal = 13;
   }
 }
 
 message IDPLVariant {
-  required uint32 type = 1;
-  required protobuf.mozilla.dom.IPDLVariantValue data = 2;
+  required uint32 a_type = 1;
+  required protobuf.mozilla.dom.IPDLVariantValue a_data = 2;
 }
 
 message IPDLProperty {
-  required bytes name = 1;
-  required bytes value = 2;
+  required bytes a_name = 1;
+  required bytes a_value = 2;
 }
 
 message ParentShowInfo {
-  required bytes name = 1;
-  required bool fakeShowInfo = 2;
-  required bool isTransparent = 3;
-  required float dpi = 4;
-  required sint32 widgetRounding = 5;
-  required double defaultScale = 6;
+  required bytes a_name = 1;
+  required bool a_fakeShowInfo = 2;
+  required bool a_isTransparent = 3;
+  required float a_dpi = 4;
+  required sint32 a_widgetRounding = 5;
+  required double a_defaultScale = 6;
 }
 
 message OwnerShowInfo {
-  required bytes size = 1;
-  required bytes scrollbarPreference = 2;
-  required bytes sizeMode = 3;
+  required bytes a_size = 1;
+  required bytes a_scrollbarPreference = 2;
+  required bytes a_sizeMode = 3;
 }
 
 message IPCImage {
-  required bytes data = 1;
-  required uint32 stride = 2;
-  required bytes format = 3;
-  required bytes size = 4;
+  required bytes a_data = 1;
+  required uint32 a_stride = 2;
+  required bytes a_format = 3;
+  required bytes a_size = 4;
 }
 
 message IPCNotificationAction {
-  required bytes name = 1;
-  required bytes title = 2;
+  required bytes a_name = 1;
+  required bytes a_title = 2;
 }
 
 message IPCNotificationOptions {
-  required bytes title = 1;
-  required bytes dir = 2;
-  required bytes lang = 3;
-  required bytes body = 4;
-  required bytes tag = 5;
-  required bytes icon = 6;
-  required bool requireInteraction = 7;
-  required bool silent = 8;
-  repeated uint32 vibrate = 9;
-  required bytes dataSerialized = 10;
-  repeated protobuf.mozilla.dom.IPCNotificationAction actions = 11;
+  required bytes a_title = 1;
+  required bytes a_dir = 2;
+  required bytes a_lang = 3;
+  required bytes a_body = 4;
+  required bytes a_tag = 5;
+  required bytes a_icon = 6;
+  required bool a_requireInteraction = 7;
+  required bool a_silent = 8;
+  repeated uint32 a_vibrate = 9;
+  required bytes a_dataSerialized = 10;
+  repeated protobuf.mozilla.dom.IPCNotificationAction a_actions = 11;
 }
 
 message IPCNotification {
-  required bytes id = 1;
-  required protobuf.mozilla.dom.IPCNotificationOptions options = 2;
+  required bytes a_id = 1;
+  required protobuf.mozilla.dom.IPCNotificationOptions a_options = 2;
 }
 
 message IPCNotificationsOrError {
   message _mVArrayOfIPCNotification {
-    repeated protobuf.mozilla.dom.IPCNotification mVArrayOfIPCNotification = 1;
+    repeated protobuf.mozilla.dom.IPCNotification a_mVArrayOfIPCNotification = 1;
   }
   oneof content {
     _mVArrayOfIPCNotification mVArrayOfIPCNotification = 1;
-    bytes mVnsresult = 2;
+    bytes a_mVnsresult = 2;
   }
 }

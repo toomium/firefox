@@ -173,44 +173,44 @@ class Msg_Register final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAParentEpFieldNumber = 2,
-    kADebuggerInfoFieldNumber = 1,
+    kAAParentEpFieldNumber = 2,
+    kAADebuggerInfoFieldNumber = 1,
   };
-  // required bytes aParentEp = 2;
-  bool has_aparentep() const;
+  // required bytes a_aParentEp = 2;
+  bool has_a_aparentep() const;
   private:
-  bool _internal_has_aparentep() const;
+  bool _internal_has_a_aparentep() const;
   public:
-  void clear_aparentep();
-  const std::string& aparentep() const;
+  void clear_a_aparentep();
+  const std::string& a_aparentep() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aparentep(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aparentep();
-  PROTOBUF_NODISCARD std::string* release_aparentep();
-  void set_allocated_aparentep(std::string* aparentep);
+  void set_a_aparentep(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aparentep();
+  PROTOBUF_NODISCARD std::string* release_a_aparentep();
+  void set_allocated_a_aparentep(std::string* a_aparentep);
   private:
-  const std::string& _internal_aparentep() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aparentep(const std::string& value);
-  std::string* _internal_mutable_aparentep();
+  const std::string& _internal_a_aparentep() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aparentep(const std::string& value);
+  std::string* _internal_mutable_a_aparentep();
   public:
 
-  // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo aDebuggerInfo = 1;
-  bool has_adebuggerinfo() const;
+  // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
+  bool has_a_adebuggerinfo() const;
   private:
-  bool _internal_has_adebuggerinfo() const;
+  bool _internal_has_a_adebuggerinfo() const;
   public:
-  void clear_adebuggerinfo();
-  const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& adebuggerinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* release_adebuggerinfo();
-  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* mutable_adebuggerinfo();
-  void set_allocated_adebuggerinfo(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* adebuggerinfo);
+  void clear_a_adebuggerinfo();
+  const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& a_adebuggerinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* release_a_adebuggerinfo();
+  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* mutable_a_adebuggerinfo();
+  void set_allocated_a_adebuggerinfo(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* a_adebuggerinfo);
   private:
-  const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& _internal_adebuggerinfo() const;
-  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* _internal_mutable_adebuggerinfo();
+  const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& _internal_a_adebuggerinfo() const;
+  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* _internal_mutable_a_adebuggerinfo();
   public:
-  void unsafe_arena_set_allocated_adebuggerinfo(
-      ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* adebuggerinfo);
-  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* unsafe_arena_release_adebuggerinfo();
+  void unsafe_arena_set_allocated_a_adebuggerinfo(
+      ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* a_adebuggerinfo);
+  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* unsafe_arena_release_a_adebuggerinfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register)
  private:
@@ -225,8 +225,8 @@ class Msg_Register final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aparentep_;
-    ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* adebuggerinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aparentep_;
+    ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* a_adebuggerinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerDebuggerManager_2eproto;
@@ -242,41 +242,41 @@ class Msg_Register final :
 #endif  // __GNUC__
 // Msg_Register
 
-// required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo aDebuggerInfo = 1;
-inline bool Msg_Register::_internal_has_adebuggerinfo() const {
+// required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
+inline bool Msg_Register::_internal_has_a_adebuggerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.adebuggerinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_adebuggerinfo_ != nullptr);
   return value;
 }
-inline bool Msg_Register::has_adebuggerinfo() const {
-  return _internal_has_adebuggerinfo();
+inline bool Msg_Register::has_a_adebuggerinfo() const {
+  return _internal_has_a_adebuggerinfo();
 }
-inline const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& Msg_Register::_internal_adebuggerinfo() const {
-  const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* p = _impl_.adebuggerinfo_;
+inline const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& Msg_Register::_internal_a_adebuggerinfo() const {
+  const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* p = _impl_.a_adebuggerinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo&>(
       ::protobuf::mozilla::dom::_RemoteWorkerDebuggerInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& Msg_Register::adebuggerinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aDebuggerInfo)
-  return _internal_adebuggerinfo();
+inline const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& Msg_Register::a_adebuggerinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aDebuggerInfo)
+  return _internal_a_adebuggerinfo();
 }
-inline void Msg_Register::unsafe_arena_set_allocated_adebuggerinfo(
-    ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* adebuggerinfo) {
+inline void Msg_Register::unsafe_arena_set_allocated_a_adebuggerinfo(
+    ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* a_adebuggerinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.adebuggerinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_adebuggerinfo_);
   }
-  _impl_.adebuggerinfo_ = adebuggerinfo;
-  if (adebuggerinfo) {
+  _impl_.a_adebuggerinfo_ = a_adebuggerinfo;
+  if (a_adebuggerinfo) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aDebuggerInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aDebuggerInfo)
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::release_adebuggerinfo() {
+inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::release_a_adebuggerinfo() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* temp = _impl_.adebuggerinfo_;
-  _impl_.adebuggerinfo_ = nullptr;
+  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* temp = _impl_.a_adebuggerinfo_;
+  _impl_.a_adebuggerinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -288,113 +288,113 @@ inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::release
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::unsafe_arena_release_adebuggerinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aDebuggerInfo)
+inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::unsafe_arena_release_a_adebuggerinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aDebuggerInfo)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* temp = _impl_.adebuggerinfo_;
-  _impl_.adebuggerinfo_ = nullptr;
+  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* temp = _impl_.a_adebuggerinfo_;
+  _impl_.a_adebuggerinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::_internal_mutable_adebuggerinfo() {
+inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::_internal_mutable_a_adebuggerinfo() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.adebuggerinfo_ == nullptr) {
+  if (_impl_.a_adebuggerinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo>(GetArenaForAllocation());
-    _impl_.adebuggerinfo_ = p;
+    _impl_.a_adebuggerinfo_ = p;
   }
-  return _impl_.adebuggerinfo_;
+  return _impl_.a_adebuggerinfo_;
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::mutable_adebuggerinfo() {
-  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* _msg = _internal_mutable_adebuggerinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aDebuggerInfo)
+inline ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* Msg_Register::mutable_a_adebuggerinfo() {
+  ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* _msg = _internal_mutable_a_adebuggerinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aDebuggerInfo)
   return _msg;
 }
-inline void Msg_Register::set_allocated_adebuggerinfo(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* adebuggerinfo) {
+inline void Msg_Register::set_allocated_a_adebuggerinfo(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo* a_adebuggerinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.adebuggerinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_adebuggerinfo_);
   }
-  if (adebuggerinfo) {
+  if (a_adebuggerinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(adebuggerinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_adebuggerinfo));
     if (message_arena != submessage_arena) {
-      adebuggerinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, adebuggerinfo, submessage_arena);
+      a_adebuggerinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_adebuggerinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adebuggerinfo_ = adebuggerinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aDebuggerInfo)
+  _impl_.a_adebuggerinfo_ = a_adebuggerinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aDebuggerInfo)
 }
 
-// required bytes aParentEp = 2;
-inline bool Msg_Register::_internal_has_aparentep() const {
+// required bytes a_aParentEp = 2;
+inline bool Msg_Register::_internal_has_a_aparentep() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Register::has_aparentep() const {
-  return _internal_has_aparentep();
+inline bool Msg_Register::has_a_aparentep() const {
+  return _internal_has_a_aparentep();
 }
-inline void Msg_Register::clear_aparentep() {
-  _impl_.aparentep_.ClearToEmpty();
+inline void Msg_Register::clear_a_aparentep() {
+  _impl_.a_aparentep_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Register::aparentep() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aParentEp)
-  return _internal_aparentep();
+inline const std::string& Msg_Register::a_aparentep() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aParentEp)
+  return _internal_a_aparentep();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Register::set_aparentep(ArgT0&& arg0, ArgT... args) {
+void Msg_Register::set_a_aparentep(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aparentep_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aParentEp)
+ _impl_.a_aparentep_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aParentEp)
 }
-inline std::string* Msg_Register::mutable_aparentep() {
-  std::string* _s = _internal_mutable_aparentep();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aParentEp)
+inline std::string* Msg_Register::mutable_a_aparentep() {
+  std::string* _s = _internal_mutable_a_aparentep();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aParentEp)
   return _s;
 }
-inline const std::string& Msg_Register::_internal_aparentep() const {
-  return _impl_.aparentep_.Get();
+inline const std::string& Msg_Register::_internal_a_aparentep() const {
+  return _impl_.a_aparentep_.Get();
 }
-inline void Msg_Register::_internal_set_aparentep(const std::string& value) {
+inline void Msg_Register::_internal_set_a_aparentep(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aparentep_.Set(value, GetArenaForAllocation());
+  _impl_.a_aparentep_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Register::_internal_mutable_aparentep() {
+inline std::string* Msg_Register::_internal_mutable_a_aparentep() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aparentep_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aparentep_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Register::release_aparentep() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aParentEp)
-  if (!_internal_has_aparentep()) {
+inline std::string* Msg_Register::release_a_aparentep() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aParentEp)
+  if (!_internal_has_a_aparentep()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aparentep_.Release();
+  auto* p = _impl_.a_aparentep_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aparentep_.IsDefault()) {
-    _impl_.aparentep_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aparentep_.IsDefault()) {
+    _impl_.a_aparentep_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Register::set_allocated_aparentep(std::string* aparentep) {
-  if (aparentep != nullptr) {
+inline void Msg_Register::set_allocated_a_aparentep(std::string* a_aparentep) {
+  if (a_aparentep != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aparentep_.SetAllocated(aparentep, GetArenaForAllocation());
+  _impl_.a_aparentep_.SetAllocated(a_aparentep, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aparentep_.IsDefault()) {
-    _impl_.aparentep_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aparentep_.IsDefault()) {
+    _impl_.a_aparentep_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.aParentEp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register.a_aParentEp)
 }
 
 #ifdef __GNUC__

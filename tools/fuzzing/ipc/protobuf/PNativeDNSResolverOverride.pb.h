@@ -444,43 +444,43 @@ class Msg_AddIPOverride final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHostFieldNumber = 1,
-    kAIPLiteralFieldNumber = 2,
+    kAAHostFieldNumber = 1,
+    kAAIPLiteralFieldNumber = 2,
   };
-  // required bytes aHost = 1;
-  bool has_ahost() const;
+  // required bytes a_aHost = 1;
+  bool has_a_ahost() const;
   private:
-  bool _internal_has_ahost() const;
+  bool _internal_has_a_ahost() const;
   public:
-  void clear_ahost();
-  const std::string& ahost() const;
+  void clear_a_ahost();
+  const std::string& a_ahost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahost();
-  PROTOBUF_NODISCARD std::string* release_ahost();
-  void set_allocated_ahost(std::string* ahost);
+  void set_a_ahost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahost();
+  PROTOBUF_NODISCARD std::string* release_a_ahost();
+  void set_allocated_a_ahost(std::string* a_ahost);
   private:
-  const std::string& _internal_ahost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahost(const std::string& value);
-  std::string* _internal_mutable_ahost();
+  const std::string& _internal_a_ahost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahost(const std::string& value);
+  std::string* _internal_mutable_a_ahost();
   public:
 
-  // required bytes aIPLiteral = 2;
-  bool has_aipliteral() const;
+  // required bytes a_aIPLiteral = 2;
+  bool has_a_aipliteral() const;
   private:
-  bool _internal_has_aipliteral() const;
+  bool _internal_has_a_aipliteral() const;
   public:
-  void clear_aipliteral();
-  const std::string& aipliteral() const;
+  void clear_a_aipliteral();
+  const std::string& a_aipliteral() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aipliteral(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aipliteral();
-  PROTOBUF_NODISCARD std::string* release_aipliteral();
-  void set_allocated_aipliteral(std::string* aipliteral);
+  void set_a_aipliteral(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aipliteral();
+  PROTOBUF_NODISCARD std::string* release_a_aipliteral();
+  void set_allocated_a_aipliteral(std::string* a_aipliteral);
   private:
-  const std::string& _internal_aipliteral() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aipliteral(const std::string& value);
-  std::string* _internal_mutable_aipliteral();
+  const std::string& _internal_a_aipliteral() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aipliteral(const std::string& value);
+  std::string* _internal_mutable_a_aipliteral();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
@@ -496,8 +496,8 @@ class Msg_AddIPOverride final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahost_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aipliteral_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahost_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aipliteral_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PNativeDNSResolverOverride_2eproto;
@@ -614,47 +614,47 @@ class Msg_AddHTTPSRecordOverride final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 2,
-    kAHostFieldNumber = 1,
+    kAADataFieldNumber = 2,
+    kAAHostFieldNumber = 1,
   };
-  // repeated uint32 aData = 2;
-  int adata_size() const;
+  // repeated uint32 a_aData = 2;
+  int a_adata_size() const;
   private:
-  int _internal_adata_size() const;
+  int _internal_a_adata_size() const;
   public:
-  void clear_adata();
+  void clear_a_adata();
   private:
-  uint32_t _internal_adata(int index) const;
+  uint32_t _internal_a_adata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_adata() const;
-  void _internal_add_adata(uint32_t value);
+      _internal_a_adata() const;
+  void _internal_add_a_adata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_adata();
+      _internal_mutable_a_adata();
   public:
-  uint32_t adata(int index) const;
-  void set_adata(int index, uint32_t value);
-  void add_adata(uint32_t value);
+  uint32_t a_adata(int index) const;
+  void set_a_adata(int index, uint32_t value);
+  void add_a_adata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      adata() const;
+      a_adata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_adata();
+      mutable_a_adata();
 
-  // required bytes aHost = 1;
-  bool has_ahost() const;
+  // required bytes a_aHost = 1;
+  bool has_a_ahost() const;
   private:
-  bool _internal_has_ahost() const;
+  bool _internal_has_a_ahost() const;
   public:
-  void clear_ahost();
-  const std::string& ahost() const;
+  void clear_a_ahost();
+  const std::string& a_ahost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahost();
-  PROTOBUF_NODISCARD std::string* release_ahost();
-  void set_allocated_ahost(std::string* ahost);
+  void set_a_ahost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahost();
+  PROTOBUF_NODISCARD std::string* release_a_ahost();
+  void set_allocated_a_ahost(std::string* a_ahost);
   private:
-  const std::string& _internal_ahost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahost(const std::string& value);
-  std::string* _internal_mutable_ahost();
+  const std::string& _internal_a_ahost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahost(const std::string& value);
+  std::string* _internal_mutable_a_ahost();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
@@ -667,8 +667,8 @@ class Msg_AddHTTPSRecordOverride final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > adata_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahost_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahost_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PNativeDNSResolverOverride_2eproto;
@@ -785,43 +785,43 @@ class Msg_SetCnameOverride final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHostFieldNumber = 1,
-    kACNAMEFieldNumber = 2,
+    kAAHostFieldNumber = 1,
+    kAACNAMEFieldNumber = 2,
   };
-  // required bytes aHost = 1;
-  bool has_ahost() const;
+  // required bytes a_aHost = 1;
+  bool has_a_ahost() const;
   private:
-  bool _internal_has_ahost() const;
+  bool _internal_has_a_ahost() const;
   public:
-  void clear_ahost();
-  const std::string& ahost() const;
+  void clear_a_ahost();
+  const std::string& a_ahost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahost();
-  PROTOBUF_NODISCARD std::string* release_ahost();
-  void set_allocated_ahost(std::string* ahost);
+  void set_a_ahost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahost();
+  PROTOBUF_NODISCARD std::string* release_a_ahost();
+  void set_allocated_a_ahost(std::string* a_ahost);
   private:
-  const std::string& _internal_ahost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahost(const std::string& value);
-  std::string* _internal_mutable_ahost();
+  const std::string& _internal_a_ahost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahost(const std::string& value);
+  std::string* _internal_mutable_a_ahost();
   public:
 
-  // required bytes aCNAME = 2;
-  bool has_acname() const;
+  // required bytes a_aCNAME = 2;
+  bool has_a_acname() const;
   private:
-  bool _internal_has_acname() const;
+  bool _internal_has_a_acname() const;
   public:
-  void clear_acname();
-  const std::string& acname() const;
+  void clear_a_acname();
+  const std::string& a_acname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acname();
-  PROTOBUF_NODISCARD std::string* release_acname();
-  void set_allocated_acname(std::string* acname);
+  void set_a_acname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acname();
+  PROTOBUF_NODISCARD std::string* release_a_acname();
+  void set_allocated_a_acname(std::string* a_acname);
   private:
-  const std::string& _internal_acname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acname(const std::string& value);
-  std::string* _internal_mutable_acname();
+  const std::string& _internal_a_acname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acname(const std::string& value);
+  std::string* _internal_mutable_a_acname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
@@ -837,8 +837,8 @@ class Msg_SetCnameOverride final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahost_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahost_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PNativeDNSResolverOverride_2eproto;
@@ -955,24 +955,24 @@ class Msg_ClearHostOverride final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHostFieldNumber = 1,
+    kAAHostFieldNumber = 1,
   };
-  // required bytes aHost = 1;
-  bool has_ahost() const;
+  // required bytes a_aHost = 1;
+  bool has_a_ahost() const;
   private:
-  bool _internal_has_ahost() const;
+  bool _internal_has_a_ahost() const;
   public:
-  void clear_ahost();
-  const std::string& ahost() const;
+  void clear_a_ahost();
+  const std::string& a_ahost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahost();
-  PROTOBUF_NODISCARD std::string* release_ahost();
-  void set_allocated_ahost(std::string* ahost);
+  void set_a_ahost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahost();
+  PROTOBUF_NODISCARD std::string* release_a_ahost();
+  void set_allocated_a_ahost(std::string* a_ahost);
   private:
-  const std::string& _internal_ahost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahost(const std::string& value);
-  std::string* _internal_mutable_ahost();
+  const std::string& _internal_a_ahost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahost(const std::string& value);
+  std::string* _internal_mutable_a_ahost();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
@@ -985,7 +985,7 @@ class Msg_ClearHostOverride final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahost_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahost_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PNativeDNSResolverOverride_2eproto;
@@ -1133,471 +1133,471 @@ class Msg_ClearOverrides final :
 
 // Msg_AddIPOverride
 
-// required bytes aHost = 1;
-inline bool Msg_AddIPOverride::_internal_has_ahost() const {
+// required bytes a_aHost = 1;
+inline bool Msg_AddIPOverride::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AddIPOverride::has_ahost() const {
-  return _internal_has_ahost();
+inline bool Msg_AddIPOverride::has_a_ahost() const {
+  return _internal_has_a_ahost();
 }
-inline void Msg_AddIPOverride::clear_ahost() {
-  _impl_.ahost_.ClearToEmpty();
+inline void Msg_AddIPOverride::clear_a_ahost() {
+  _impl_.a_ahost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AddIPOverride::ahost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
-  return _internal_ahost();
+inline const std::string& Msg_AddIPOverride::a_ahost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost)
+  return _internal_a_ahost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddIPOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
+void Msg_AddIPOverride::set_a_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
+ _impl_.a_ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost)
 }
-inline std::string* Msg_AddIPOverride::mutable_ahost() {
-  std::string* _s = _internal_mutable_ahost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
+inline std::string* Msg_AddIPOverride::mutable_a_ahost() {
+  std::string* _s = _internal_mutable_a_ahost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost)
   return _s;
 }
-inline const std::string& Msg_AddIPOverride::_internal_ahost() const {
-  return _impl_.ahost_.Get();
+inline const std::string& Msg_AddIPOverride::_internal_a_ahost() const {
+  return _impl_.a_ahost_.Get();
 }
-inline void Msg_AddIPOverride::_internal_set_ahost(const std::string& value) {
+inline void Msg_AddIPOverride::_internal_set_a_ahost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahost_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddIPOverride::_internal_mutable_ahost() {
+inline std::string* Msg_AddIPOverride::_internal_mutable_a_ahost() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddIPOverride::release_ahost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
-  if (!_internal_has_ahost()) {
+inline std::string* Msg_AddIPOverride::release_a_ahost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost)
+  if (!_internal_has_a_ahost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahost_.Release();
+  auto* p = _impl_.a_ahost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddIPOverride::set_allocated_ahost(std::string* ahost) {
-  if (ahost != nullptr) {
+inline void Msg_AddIPOverride::set_allocated_a_ahost(std::string* a_ahost) {
+  if (a_ahost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahost_.SetAllocated(ahost, GetArenaForAllocation());
+  _impl_.a_ahost_.SetAllocated(a_ahost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost)
 }
 
-// required bytes aIPLiteral = 2;
-inline bool Msg_AddIPOverride::_internal_has_aipliteral() const {
+// required bytes a_aIPLiteral = 2;
+inline bool Msg_AddIPOverride::_internal_has_a_aipliteral() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AddIPOverride::has_aipliteral() const {
-  return _internal_has_aipliteral();
+inline bool Msg_AddIPOverride::has_a_aipliteral() const {
+  return _internal_has_a_aipliteral();
 }
-inline void Msg_AddIPOverride::clear_aipliteral() {
-  _impl_.aipliteral_.ClearToEmpty();
+inline void Msg_AddIPOverride::clear_a_aipliteral() {
+  _impl_.a_aipliteral_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_AddIPOverride::aipliteral() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aIPLiteral)
-  return _internal_aipliteral();
+inline const std::string& Msg_AddIPOverride::a_aipliteral() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral)
+  return _internal_a_aipliteral();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddIPOverride::set_aipliteral(ArgT0&& arg0, ArgT... args) {
+void Msg_AddIPOverride::set_a_aipliteral(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aipliteral_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aIPLiteral)
+ _impl_.a_aipliteral_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral)
 }
-inline std::string* Msg_AddIPOverride::mutable_aipliteral() {
-  std::string* _s = _internal_mutable_aipliteral();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aIPLiteral)
+inline std::string* Msg_AddIPOverride::mutable_a_aipliteral() {
+  std::string* _s = _internal_mutable_a_aipliteral();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral)
   return _s;
 }
-inline const std::string& Msg_AddIPOverride::_internal_aipliteral() const {
-  return _impl_.aipliteral_.Get();
+inline const std::string& Msg_AddIPOverride::_internal_a_aipliteral() const {
+  return _impl_.a_aipliteral_.Get();
 }
-inline void Msg_AddIPOverride::_internal_set_aipliteral(const std::string& value) {
+inline void Msg_AddIPOverride::_internal_set_a_aipliteral(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aipliteral_.Set(value, GetArenaForAllocation());
+  _impl_.a_aipliteral_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddIPOverride::_internal_mutable_aipliteral() {
+inline std::string* Msg_AddIPOverride::_internal_mutable_a_aipliteral() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aipliteral_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aipliteral_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddIPOverride::release_aipliteral() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aIPLiteral)
-  if (!_internal_has_aipliteral()) {
+inline std::string* Msg_AddIPOverride::release_a_aipliteral() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral)
+  if (!_internal_has_a_aipliteral()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aipliteral_.Release();
+  auto* p = _impl_.a_aipliteral_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aipliteral_.IsDefault()) {
-    _impl_.aipliteral_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aipliteral_.IsDefault()) {
+    _impl_.a_aipliteral_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddIPOverride::set_allocated_aipliteral(std::string* aipliteral) {
-  if (aipliteral != nullptr) {
+inline void Msg_AddIPOverride::set_allocated_a_aipliteral(std::string* a_aipliteral) {
+  if (a_aipliteral != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aipliteral_.SetAllocated(aipliteral, GetArenaForAllocation());
+  _impl_.a_aipliteral_.SetAllocated(a_aipliteral, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aipliteral_.IsDefault()) {
-    _impl_.aipliteral_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aipliteral_.IsDefault()) {
+    _impl_.a_aipliteral_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.aIPLiteral)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AddHTTPSRecordOverride
 
-// required bytes aHost = 1;
-inline bool Msg_AddHTTPSRecordOverride::_internal_has_ahost() const {
+// required bytes a_aHost = 1;
+inline bool Msg_AddHTTPSRecordOverride::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AddHTTPSRecordOverride::has_ahost() const {
-  return _internal_has_ahost();
+inline bool Msg_AddHTTPSRecordOverride::has_a_ahost() const {
+  return _internal_has_a_ahost();
 }
-inline void Msg_AddHTTPSRecordOverride::clear_ahost() {
-  _impl_.ahost_.ClearToEmpty();
+inline void Msg_AddHTTPSRecordOverride::clear_a_ahost() {
+  _impl_.a_ahost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AddHTTPSRecordOverride::ahost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aHost)
-  return _internal_ahost();
+inline const std::string& Msg_AddHTTPSRecordOverride::a_ahost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost)
+  return _internal_a_ahost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AddHTTPSRecordOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
+void Msg_AddHTTPSRecordOverride::set_a_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aHost)
+ _impl_.a_ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost)
 }
-inline std::string* Msg_AddHTTPSRecordOverride::mutable_ahost() {
-  std::string* _s = _internal_mutable_ahost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aHost)
+inline std::string* Msg_AddHTTPSRecordOverride::mutable_a_ahost() {
+  std::string* _s = _internal_mutable_a_ahost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost)
   return _s;
 }
-inline const std::string& Msg_AddHTTPSRecordOverride::_internal_ahost() const {
-  return _impl_.ahost_.Get();
+inline const std::string& Msg_AddHTTPSRecordOverride::_internal_a_ahost() const {
+  return _impl_.a_ahost_.Get();
 }
-inline void Msg_AddHTTPSRecordOverride::_internal_set_ahost(const std::string& value) {
+inline void Msg_AddHTTPSRecordOverride::_internal_set_a_ahost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahost_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AddHTTPSRecordOverride::_internal_mutable_ahost() {
+inline std::string* Msg_AddHTTPSRecordOverride::_internal_mutable_a_ahost() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AddHTTPSRecordOverride::release_ahost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aHost)
-  if (!_internal_has_ahost()) {
+inline std::string* Msg_AddHTTPSRecordOverride::release_a_ahost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost)
+  if (!_internal_has_a_ahost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahost_.Release();
+  auto* p = _impl_.a_ahost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AddHTTPSRecordOverride::set_allocated_ahost(std::string* ahost) {
-  if (ahost != nullptr) {
+inline void Msg_AddHTTPSRecordOverride::set_allocated_a_ahost(std::string* a_ahost) {
+  if (a_ahost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahost_.SetAllocated(ahost, GetArenaForAllocation());
+  _impl_.a_ahost_.SetAllocated(a_ahost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost)
 }
 
-// repeated uint32 aData = 2;
-inline int Msg_AddHTTPSRecordOverride::_internal_adata_size() const {
-  return _impl_.adata_.size();
+// repeated uint32 a_aData = 2;
+inline int Msg_AddHTTPSRecordOverride::_internal_a_adata_size() const {
+  return _impl_.a_adata_.size();
 }
-inline int Msg_AddHTTPSRecordOverride::adata_size() const {
-  return _internal_adata_size();
+inline int Msg_AddHTTPSRecordOverride::a_adata_size() const {
+  return _internal_a_adata_size();
 }
-inline void Msg_AddHTTPSRecordOverride::clear_adata() {
-  _impl_.adata_.Clear();
+inline void Msg_AddHTTPSRecordOverride::clear_a_adata() {
+  _impl_.a_adata_.Clear();
 }
-inline uint32_t Msg_AddHTTPSRecordOverride::_internal_adata(int index) const {
-  return _impl_.adata_.Get(index);
+inline uint32_t Msg_AddHTTPSRecordOverride::_internal_a_adata(int index) const {
+  return _impl_.a_adata_.Get(index);
 }
-inline uint32_t Msg_AddHTTPSRecordOverride::adata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aData)
-  return _internal_adata(index);
+inline uint32_t Msg_AddHTTPSRecordOverride::a_adata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aData)
+  return _internal_a_adata(index);
 }
-inline void Msg_AddHTTPSRecordOverride::set_adata(int index, uint32_t value) {
-  _impl_.adata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aData)
+inline void Msg_AddHTTPSRecordOverride::set_a_adata(int index, uint32_t value) {
+  _impl_.a_adata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aData)
 }
-inline void Msg_AddHTTPSRecordOverride::_internal_add_adata(uint32_t value) {
-  _impl_.adata_.Add(value);
+inline void Msg_AddHTTPSRecordOverride::_internal_add_a_adata(uint32_t value) {
+  _impl_.a_adata_.Add(value);
 }
-inline void Msg_AddHTTPSRecordOverride::add_adata(uint32_t value) {
-  _internal_add_adata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_AddHTTPSRecordOverride::_internal_adata() const {
-  return _impl_.adata_;
+inline void Msg_AddHTTPSRecordOverride::add_a_adata(uint32_t value) {
+  _internal_add_a_adata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_AddHTTPSRecordOverride::adata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aData)
-  return _internal_adata();
+Msg_AddHTTPSRecordOverride::_internal_a_adata() const {
+  return _impl_.a_adata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_AddHTTPSRecordOverride::a_adata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aData)
+  return _internal_a_adata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_AddHTTPSRecordOverride::_internal_mutable_adata() {
-  return &_impl_.adata_;
+Msg_AddHTTPSRecordOverride::_internal_mutable_a_adata() {
+  return &_impl_.a_adata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_AddHTTPSRecordOverride::mutable_adata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.aData)
-  return _internal_mutable_adata();
+Msg_AddHTTPSRecordOverride::mutable_a_adata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aData)
+  return _internal_mutable_a_adata();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetCnameOverride
 
-// required bytes aHost = 1;
-inline bool Msg_SetCnameOverride::_internal_has_ahost() const {
+// required bytes a_aHost = 1;
+inline bool Msg_SetCnameOverride::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetCnameOverride::has_ahost() const {
-  return _internal_has_ahost();
+inline bool Msg_SetCnameOverride::has_a_ahost() const {
+  return _internal_has_a_ahost();
 }
-inline void Msg_SetCnameOverride::clear_ahost() {
-  _impl_.ahost_.ClearToEmpty();
+inline void Msg_SetCnameOverride::clear_a_ahost() {
+  _impl_.a_ahost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SetCnameOverride::ahost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
-  return _internal_ahost();
+inline const std::string& Msg_SetCnameOverride::a_ahost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost)
+  return _internal_a_ahost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetCnameOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
+void Msg_SetCnameOverride::set_a_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
+ _impl_.a_ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost)
 }
-inline std::string* Msg_SetCnameOverride::mutable_ahost() {
-  std::string* _s = _internal_mutable_ahost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
+inline std::string* Msg_SetCnameOverride::mutable_a_ahost() {
+  std::string* _s = _internal_mutable_a_ahost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost)
   return _s;
 }
-inline const std::string& Msg_SetCnameOverride::_internal_ahost() const {
-  return _impl_.ahost_.Get();
+inline const std::string& Msg_SetCnameOverride::_internal_a_ahost() const {
+  return _impl_.a_ahost_.Get();
 }
-inline void Msg_SetCnameOverride::_internal_set_ahost(const std::string& value) {
+inline void Msg_SetCnameOverride::_internal_set_a_ahost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahost_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetCnameOverride::_internal_mutable_ahost() {
+inline std::string* Msg_SetCnameOverride::_internal_mutable_a_ahost() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetCnameOverride::release_ahost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
-  if (!_internal_has_ahost()) {
+inline std::string* Msg_SetCnameOverride::release_a_ahost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost)
+  if (!_internal_has_a_ahost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahost_.Release();
+  auto* p = _impl_.a_ahost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetCnameOverride::set_allocated_ahost(std::string* ahost) {
-  if (ahost != nullptr) {
+inline void Msg_SetCnameOverride::set_allocated_a_ahost(std::string* a_ahost) {
+  if (a_ahost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahost_.SetAllocated(ahost, GetArenaForAllocation());
+  _impl_.a_ahost_.SetAllocated(a_ahost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost)
 }
 
-// required bytes aCNAME = 2;
-inline bool Msg_SetCnameOverride::_internal_has_acname() const {
+// required bytes a_aCNAME = 2;
+inline bool Msg_SetCnameOverride::_internal_has_a_acname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetCnameOverride::has_acname() const {
-  return _internal_has_acname();
+inline bool Msg_SetCnameOverride::has_a_acname() const {
+  return _internal_has_a_acname();
 }
-inline void Msg_SetCnameOverride::clear_acname() {
-  _impl_.acname_.ClearToEmpty();
+inline void Msg_SetCnameOverride::clear_a_acname() {
+  _impl_.a_acname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_SetCnameOverride::acname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aCNAME)
-  return _internal_acname();
+inline const std::string& Msg_SetCnameOverride::a_acname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME)
+  return _internal_a_acname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetCnameOverride::set_acname(ArgT0&& arg0, ArgT... args) {
+void Msg_SetCnameOverride::set_a_acname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.acname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aCNAME)
+ _impl_.a_acname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME)
 }
-inline std::string* Msg_SetCnameOverride::mutable_acname() {
-  std::string* _s = _internal_mutable_acname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aCNAME)
+inline std::string* Msg_SetCnameOverride::mutable_a_acname() {
+  std::string* _s = _internal_mutable_a_acname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME)
   return _s;
 }
-inline const std::string& Msg_SetCnameOverride::_internal_acname() const {
-  return _impl_.acname_.Get();
+inline const std::string& Msg_SetCnameOverride::_internal_a_acname() const {
+  return _impl_.a_acname_.Get();
 }
-inline void Msg_SetCnameOverride::_internal_set_acname(const std::string& value) {
+inline void Msg_SetCnameOverride::_internal_set_a_acname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.acname_.Set(value, GetArenaForAllocation());
+  _impl_.a_acname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetCnameOverride::_internal_mutable_acname() {
+inline std::string* Msg_SetCnameOverride::_internal_mutable_a_acname() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.acname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetCnameOverride::release_acname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aCNAME)
-  if (!_internal_has_acname()) {
+inline std::string* Msg_SetCnameOverride::release_a_acname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME)
+  if (!_internal_has_a_acname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.acname_.Release();
+  auto* p = _impl_.a_acname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acname_.IsDefault()) {
-    _impl_.acname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acname_.IsDefault()) {
+    _impl_.a_acname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetCnameOverride::set_allocated_acname(std::string* acname) {
-  if (acname != nullptr) {
+inline void Msg_SetCnameOverride::set_allocated_a_acname(std::string* a_acname) {
+  if (a_acname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.acname_.SetAllocated(acname, GetArenaForAllocation());
+  _impl_.a_acname_.SetAllocated(a_acname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acname_.IsDefault()) {
-    _impl_.acname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acname_.IsDefault()) {
+    _impl_.a_acname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.aCNAME)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ClearHostOverride
 
-// required bytes aHost = 1;
-inline bool Msg_ClearHostOverride::_internal_has_ahost() const {
+// required bytes a_aHost = 1;
+inline bool Msg_ClearHostOverride::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ClearHostOverride::has_ahost() const {
-  return _internal_has_ahost();
+inline bool Msg_ClearHostOverride::has_a_ahost() const {
+  return _internal_has_a_ahost();
 }
-inline void Msg_ClearHostOverride::clear_ahost() {
-  _impl_.ahost_.ClearToEmpty();
+inline void Msg_ClearHostOverride::clear_a_ahost() {
+  _impl_.a_ahost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ClearHostOverride::ahost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.aHost)
-  return _internal_ahost();
+inline const std::string& Msg_ClearHostOverride::a_ahost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost)
+  return _internal_a_ahost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ClearHostOverride::set_ahost(ArgT0&& arg0, ArgT... args) {
+void Msg_ClearHostOverride::set_a_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.aHost)
+ _impl_.a_ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost)
 }
-inline std::string* Msg_ClearHostOverride::mutable_ahost() {
-  std::string* _s = _internal_mutable_ahost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.aHost)
+inline std::string* Msg_ClearHostOverride::mutable_a_ahost() {
+  std::string* _s = _internal_mutable_a_ahost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost)
   return _s;
 }
-inline const std::string& Msg_ClearHostOverride::_internal_ahost() const {
-  return _impl_.ahost_.Get();
+inline const std::string& Msg_ClearHostOverride::_internal_a_ahost() const {
+  return _impl_.a_ahost_.Get();
 }
-inline void Msg_ClearHostOverride::_internal_set_ahost(const std::string& value) {
+inline void Msg_ClearHostOverride::_internal_set_a_ahost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahost_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ClearHostOverride::_internal_mutable_ahost() {
+inline std::string* Msg_ClearHostOverride::_internal_mutable_a_ahost() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ClearHostOverride::release_ahost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.aHost)
-  if (!_internal_has_ahost()) {
+inline std::string* Msg_ClearHostOverride::release_a_ahost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost)
+  if (!_internal_has_a_ahost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahost_.Release();
+  auto* p = _impl_.a_ahost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ClearHostOverride::set_allocated_ahost(std::string* ahost) {
-  if (ahost != nullptr) {
+inline void Msg_ClearHostOverride::set_allocated_a_ahost(std::string* a_ahost) {
+  if (a_ahost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahost_.SetAllocated(ahost, GetArenaForAllocation());
+  _impl_.a_ahost_.SetAllocated(a_ahost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahost_.IsDefault()) {
-    _impl_.ahost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahost_.IsDefault()) {
+    _impl_.a_ahost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.aHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost)
 }
 
 // -------------------------------------------------------------------

@@ -172,24 +172,24 @@ class Msg_CrossProcessSemaphore final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASemFieldNumber = 1,
+    kAASemFieldNumber = 1,
   };
-  // required bytes aSem = 1;
-  bool has_asem() const;
+  // required bytes a_aSem = 1;
+  bool has_a_asem() const;
   private:
-  bool _internal_has_asem() const;
+  bool _internal_has_a_asem() const;
   public:
-  void clear_asem();
-  const std::string& asem() const;
+  void clear_a_asem();
+  const std::string& a_asem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_asem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_asem();
-  PROTOBUF_NODISCARD std::string* release_asem();
-  void set_allocated_asem(std::string* asem);
+  void set_a_asem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_asem();
+  PROTOBUF_NODISCARD std::string* release_a_asem();
+  void set_allocated_a_asem(std::string* a_asem);
   private:
-  const std::string& _internal_asem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_asem(const std::string& value);
-  std::string* _internal_mutable_asem();
+  const std::string& _internal_a_asem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_asem(const std::string& value);
+  std::string* _internal_mutable_a_asem();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore)
@@ -202,7 +202,7 @@ class Msg_CrossProcessSemaphore final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr asem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asem_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestCrossProcessSemaphore_2eproto;
@@ -218,72 +218,72 @@ class Msg_CrossProcessSemaphore final :
 #endif  // __GNUC__
 // Msg_CrossProcessSemaphore
 
-// required bytes aSem = 1;
-inline bool Msg_CrossProcessSemaphore::_internal_has_asem() const {
+// required bytes a_aSem = 1;
+inline bool Msg_CrossProcessSemaphore::_internal_has_a_asem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CrossProcessSemaphore::has_asem() const {
-  return _internal_has_asem();
+inline bool Msg_CrossProcessSemaphore::has_a_asem() const {
+  return _internal_has_a_asem();
 }
-inline void Msg_CrossProcessSemaphore::clear_asem() {
-  _impl_.asem_.ClearToEmpty();
+inline void Msg_CrossProcessSemaphore::clear_a_asem() {
+  _impl_.a_asem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CrossProcessSemaphore::asem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.aSem)
-  return _internal_asem();
+inline const std::string& Msg_CrossProcessSemaphore::a_asem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.a_aSem)
+  return _internal_a_asem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CrossProcessSemaphore::set_asem(ArgT0&& arg0, ArgT... args) {
+void Msg_CrossProcessSemaphore::set_a_asem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.aSem)
+ _impl_.a_asem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.a_aSem)
 }
-inline std::string* Msg_CrossProcessSemaphore::mutable_asem() {
-  std::string* _s = _internal_mutable_asem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.aSem)
+inline std::string* Msg_CrossProcessSemaphore::mutable_a_asem() {
+  std::string* _s = _internal_mutable_a_asem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.a_aSem)
   return _s;
 }
-inline const std::string& Msg_CrossProcessSemaphore::_internal_asem() const {
-  return _impl_.asem_.Get();
+inline const std::string& Msg_CrossProcessSemaphore::_internal_a_asem() const {
+  return _impl_.a_asem_.Get();
 }
-inline void Msg_CrossProcessSemaphore::_internal_set_asem(const std::string& value) {
+inline void Msg_CrossProcessSemaphore::_internal_set_a_asem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.asem_.Set(value, GetArenaForAllocation());
+  _impl_.a_asem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CrossProcessSemaphore::_internal_mutable_asem() {
+inline std::string* Msg_CrossProcessSemaphore::_internal_mutable_a_asem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.asem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_asem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CrossProcessSemaphore::release_asem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.aSem)
-  if (!_internal_has_asem()) {
+inline std::string* Msg_CrossProcessSemaphore::release_a_asem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.a_aSem)
+  if (!_internal_has_a_asem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.asem_.Release();
+  auto* p = _impl_.a_asem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asem_.IsDefault()) {
-    _impl_.asem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asem_.IsDefault()) {
+    _impl_.a_asem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CrossProcessSemaphore::set_allocated_asem(std::string* asem) {
-  if (asem != nullptr) {
+inline void Msg_CrossProcessSemaphore::set_allocated_a_asem(std::string* a_asem) {
+  if (a_asem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.asem_.SetAllocated(asem, GetArenaForAllocation());
+  _impl_.a_asem_.SetAllocated(a_asem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asem_.IsDefault()) {
-    _impl_.asem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asem_.IsDefault()) {
+    _impl_.a_asem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.aSem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore.a_aSem)
 }
 
 #ifdef __GNUC__

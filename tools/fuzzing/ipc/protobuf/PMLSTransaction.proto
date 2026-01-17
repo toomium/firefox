@@ -20,209 +20,209 @@ message Msg_RequestStateDelete {
 }
 
 message Reply_RequestStateDelete {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestGroupStateDelete {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestGroupStateDelete {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGenerateIdentityKeypair {
 }
 
 message Reply_RequestGenerateIdentityKeypair {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestGenerateCredentialBasic {
-  repeated uint32 credName = 1;
+  repeated uint32 a_credName = 1;
 }
 
 message Reply_RequestGenerateCredentialBasic {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestGenerateKeyPackage {
-  repeated uint32 identity = 1;
-  repeated uint32 credential = 2;
+  repeated uint32 a_identity = 1;
+  repeated uint32 a_credential = 2;
 }
 
 message Reply_RequestGenerateKeyPackage {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestGroupCreate {
-  repeated uint32 identifier = 1;
-  repeated uint32 credential = 2;
-  repeated uint32 inOptGroupIdentifier = 3;
+  repeated uint32 a_identifier = 1;
+  repeated uint32 a_credential = 2;
+  repeated uint32 a_inOptGroupIdentifier = 3;
 }
 
 message Reply_RequestGroupCreate {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGroupJoin {
-  repeated uint32 identifier = 1;
-  repeated uint32 welcome = 2;
+  repeated uint32 a_identifier = 1;
+  repeated uint32 a_welcome = 2;
 }
 
 message Reply_RequestGroupJoin {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGroupAdd {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
-  repeated uint32 keyPackage = 3;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
+  repeated uint32 a_keyPackage = 3;
 }
 
 message Reply_RequestGroupAdd {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGroupProposeAdd {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
-  repeated uint32 keyPackage = 3;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
+  repeated uint32 a_keyPackage = 3;
 }
 
 message Reply_RequestGroupProposeAdd {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestGroupRemove {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
-  repeated uint32 remIdentifier = 3;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
+  repeated uint32 a_remIdentifier = 3;
 }
 
 message Reply_RequestGroupRemove {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGroupProposeRemove {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
-  repeated uint32 remIdentifier = 3;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
+  repeated uint32 a_remIdentifier = 3;
 }
 
 message Reply_RequestGroupProposeRemove {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestGroupClose {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestGroupClose {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGroupDetails {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestGroupDetails {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestSend {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
-  repeated uint32 message = 3;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
+  repeated uint32 a_message = 3;
 }
 
 message Reply_RequestSend {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestReceive {
-  repeated uint32 identifier = 1;
-  repeated uint32 message = 2;
+  repeated uint32 a_identifier = 1;
+  repeated uint32 a_message = 2;
 }
 
 message Reply_RequestReceive {
-  required bytes result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_RequestHasPendingProposals {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestHasPendingProposals {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestClearPendingProposals {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestClearPendingProposals {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestHasPendingCommit {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestHasPendingCommit {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestClearPendingCommit {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestClearPendingCommit {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_RequestApplyPendingCommit {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
 }
 
 message Reply_RequestApplyPendingCommit {
-  required bytes result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_RequestExportSecret {
-  repeated uint32 groupIdentifier = 1;
-  repeated uint32 identifier = 2;
-  repeated uint32 label = 3;
-  repeated uint32 content = 4;
-  required uint64 len = 5;
+  repeated uint32 a_groupIdentifier = 1;
+  repeated uint32 a_identifier = 2;
+  repeated uint32 a_label = 3;
+  repeated uint32 a_content = 4;
+  required uint64 a_len = 5;
 }
 
 message Reply_RequestExportSecret {
-  optional bytes result = 1;
+  optional bytes a_result = 1;
 }
 
 message Msg_RequestGetGroupIdentifier {
-  repeated uint32 message = 1;
+  repeated uint32 a_message = 1;
 }
 
 message Reply_RequestGetGroupIdentifier {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 message Msg_RequestGetGroupEpoch {
-  repeated uint32 message = 1;
+  repeated uint32 a_message = 1;
 }
 
 message Reply_RequestGetGroupEpoch {
-  optional protobuf.mozilla.dom.RawBytes result = 1;
+  optional protobuf.mozilla.dom.RawBytes a_result = 1;
 }
 
 // Parameter mappings stats:

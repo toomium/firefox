@@ -17,22 +17,22 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_ClearHostMapping {
-  required bytes host = 1;
-  required sint32 port = 2;
-  required bytes originAttributes = 3;
+  required bytes a_host = 1;
+  required sint32 a_port = 2;
+  required bytes a_originAttributes = 3;
 }
 
 message Msg_ProcessHeader {
-  required bytes buf = 1;
-  required bytes originScheme = 2;
-  required bytes originHost = 3;
-  required sint32 originPort = 4;
-  required bytes username = 5;
-  required bool privateBrowsing = 6;
-  repeated protobuf.mozilla.net.ProxyInfoCloneArgs proxyInfo = 7;
-  required uint32 caps = 8;
-  required bytes originAttributes = 9;
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs connInfoArgs = 10;
+  required bytes a_buf = 1;
+  required bytes a_originScheme = 2;
+  required bytes a_originHost = 3;
+  required sint32 a_originPort = 4;
+  required bytes a_username = 5;
+  required bool a_privateBrowsing = 6;
+  repeated protobuf.mozilla.net.ProxyInfoCloneArgs a_proxyInfo = 7;
+  required uint32 a_caps = 8;
+  required bytes a_originAttributes = 9;
+  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 10;
 }
 
 message Msg___delete__ {

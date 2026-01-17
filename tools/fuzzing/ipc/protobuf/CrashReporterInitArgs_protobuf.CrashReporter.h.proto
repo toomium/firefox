@@ -12,5 +12,5 @@ package protobuf.CrashReporter;
 
 // Structs and unions declarations
 message CrashReporterInitArgs {
-  required bytes threadId = 1;
+  required bytes a_threadId = 1;
 }

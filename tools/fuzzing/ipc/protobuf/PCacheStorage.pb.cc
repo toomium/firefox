@@ -26,7 +26,7 @@ PROTOBUF_CONSTEXPR Msg_PCacheOpConstructor::Msg_PCacheOpConstructor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aopargs_)*/nullptr} {}
+  , /*decltype(_impl_.a_aopargs_)*/nullptr} {}
 struct Msg_PCacheOpConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PCacheOpConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -100,8 +100,8 @@ namespace PCacheStorage {
 class Msg_PCacheOpConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PCacheOpConstructor>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::cache::CacheOpArgs& aopargs(const Msg_PCacheOpConstructor* msg);
-  static void set_has_aopargs(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::cache::CacheOpArgs& a_aopargs(const Msg_PCacheOpConstructor* msg);
+  static void set_has_a_aopargs(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -110,11 +110,11 @@ class Msg_PCacheOpConstructor::_Internal {
 };
 
 const ::protobuf::mozilla::dom::cache::CacheOpArgs&
-Msg_PCacheOpConstructor::_Internal::aopargs(const Msg_PCacheOpConstructor* msg) {
-  return *msg->_impl_.aopargs_;
+Msg_PCacheOpConstructor::_Internal::a_aopargs(const Msg_PCacheOpConstructor* msg) {
+  return *msg->_impl_.a_aopargs_;
 }
-void Msg_PCacheOpConstructor::clear_aopargs() {
-  if (_impl_.aopargs_ != nullptr) _impl_.aopargs_->Clear();
+void Msg_PCacheOpConstructor::clear_a_aopargs() {
+  if (_impl_.a_aopargs_ != nullptr) _impl_.a_aopargs_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_PCacheOpConstructor::Msg_PCacheOpConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -129,11 +129,11 @@ Msg_PCacheOpConstructor::Msg_PCacheOpConstructor(const Msg_PCacheOpConstructor& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aopargs_){nullptr}};
+    , decltype(_impl_.a_aopargs_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_aopargs()) {
-    _this->_impl_.aopargs_ = new ::protobuf::mozilla::dom::cache::CacheOpArgs(*from._impl_.aopargs_);
+  if (from._internal_has_a_aopargs()) {
+    _this->_impl_.a_aopargs_ = new ::protobuf::mozilla::dom::cache::CacheOpArgs(*from._impl_.a_aopargs_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.cache.PCacheStorage.Msg_PCacheOpConstructor)
 }
@@ -145,7 +145,7 @@ inline void Msg_PCacheOpConstructor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aopargs_){nullptr}
+    , decltype(_impl_.a_aopargs_){nullptr}
   };
 }
 
@@ -160,7 +160,7 @@ Msg_PCacheOpConstructor::~Msg_PCacheOpConstructor() {
 
 inline void Msg_PCacheOpConstructor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.aopargs_;
+  if (this != internal_default_instance()) delete _impl_.a_aopargs_;
 }
 
 void Msg_PCacheOpConstructor::SetCachedSize(int size) const {
@@ -175,8 +175,8 @@ void Msg_PCacheOpConstructor::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.aopargs_ != nullptr);
-    _impl_.aopargs_->Clear();
+    GOOGLE_DCHECK(_impl_.a_aopargs_ != nullptr);
+    _impl_.a_aopargs_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -189,10 +189,10 @@ const char* Msg_PCacheOpConstructor::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.cache.CacheOpArgs aOpArgs = 1;
+      // required .protobuf.mozilla.dom.cache.CacheOpArgs a_aOpArgs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aopargs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aopargs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -228,11 +228,11 @@ uint8_t* Msg_PCacheOpConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.cache.CacheOpArgs aOpArgs = 1;
+  // required .protobuf.mozilla.dom.cache.CacheOpArgs a_aOpArgs = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::aopargs(this),
-        _Internal::aopargs(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_aopargs(this),
+        _Internal::a_aopargs(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -247,11 +247,11 @@ size_t Msg_PCacheOpConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.cache.PCacheStorage.Msg_PCacheOpConstructor)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.cache.CacheOpArgs aOpArgs = 1;
-  if (_internal_has_aopargs()) {
+  // required .protobuf.mozilla.dom.cache.CacheOpArgs a_aOpArgs = 1;
+  if (_internal_has_a_aopargs()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aopargs_);
+        *_impl_.a_aopargs_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -278,9 +278,9 @@ void Msg_PCacheOpConstructor::MergeFrom(const Msg_PCacheOpConstructor& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aopargs()) {
-    _this->_internal_mutable_aopargs()->::protobuf::mozilla::dom::cache::CacheOpArgs::MergeFrom(
-        from._internal_aopargs());
+  if (from._internal_has_a_aopargs()) {
+    _this->_internal_mutable_a_aopargs()->::protobuf::mozilla::dom::cache::CacheOpArgs::MergeFrom(
+        from._internal_a_aopargs());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -294,8 +294,8 @@ void Msg_PCacheOpConstructor::CopyFrom(const Msg_PCacheOpConstructor& from) {
 
 bool Msg_PCacheOpConstructor::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_aopargs()) {
-    if (!_impl_.aopargs_->IsInitialized()) return false;
+  if (_internal_has_a_aopargs()) {
+    if (!_impl_.a_aopargs_->IsInitialized()) return false;
   }
   return true;
 }
@@ -304,7 +304,7 @@ void Msg_PCacheOpConstructor::InternalSwap(Msg_PCacheOpConstructor* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aopargs_, other->_impl_.aopargs_);
+  swap(_impl_.a_aopargs_, other->_impl_.a_aopargs_);
 }
 
 std::string Msg_PCacheOpConstructor::GetTypeName() const {

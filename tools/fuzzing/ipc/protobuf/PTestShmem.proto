@@ -14,15 +14,15 @@ package protobuf.mozilla._ipdltest.PTestShmem;
 
 // Message declarations
 message Msg_Give {
-  required bytes mem = 1;
-  required bytes unsafe = 2;
-  required uint32 expectedSize = 3;
+  required bytes a_mem = 1;
+  required bytes a_unsafe = 2;
+  required uint32 a_expectedSize = 3;
 }
 
 message Msg_Take {
-  required bytes mem = 1;
-  required bytes unsafe = 2;
-  required uint32 expectedSize = 3;
+  required bytes a_mem = 1;
+  required bytes a_unsafe = 2;
+  required uint32 a_expectedSize = 3;
 }
 
 message Msg___delete__ {

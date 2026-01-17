@@ -22,7 +22,7 @@ import "HttpChannelParams.proto";
 
 // Message declarations
 message Msg_SetClassOfService {
-  required bytes cos = 1;
+  required bytes a_cos = 1;
 }
 
 message Msg_Suspend {
@@ -32,40 +32,40 @@ message Msg_Resume {
 }
 
 message Msg_Cancel {
-  required bytes status = 1;
-  required uint32 requestBlockingReason = 2;
-  required bytes aReason = 3;
-  optional bytes logString = 4;
+  required bytes a_status = 1;
+  required uint32 a_requestBlockingReason = 2;
+  required bytes a_aReason = 3;
+  optional bytes a_logString = 4;
 }
 
 message Msg_Redirect2Verify {
-  required bytes result = 1;
-  required bytes changedHeaders = 2;
-  required uint32 sourceRequestBlockingReason = 3;
-  optional protobuf.mozilla.net.ChildLoadInfoForwarderArgs targetLoadInfoForwarder = 4;
-  required uint32 loadFlags = 5;
-  required bytes referrerInfo = 6;
-  required bytes apiRedirectTo = 7;
-  optional protobuf.mozilla.net.CorsPreflightArgs corsPreflightArgs = 8;
+  required bytes a_result = 1;
+  required bytes a_changedHeaders = 2;
+  required uint32 a_sourceRequestBlockingReason = 3;
+  optional protobuf.mozilla.net.ChildLoadInfoForwarderArgs a_targetLoadInfoForwarder = 4;
+  required uint32 a_loadFlags = 5;
+  required bytes a_referrerInfo = 6;
+  required bytes a_apiRedirectTo = 7;
+  optional protobuf.mozilla.net.CorsPreflightArgs a_corsPreflightArgs = 8;
 }
 
 message Msg_DocumentChannelCleanup {
-  required bool clearCacheEntry = 1;
+  required bool a_clearCacheEntry = 1;
 }
 
 message Msg_RemoveCorsPreflightCacheEntry {
-  required bytes uri = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo requestingPrincipal = 2;
-  required bytes originAttributes = 3;
+  required bytes a_uri = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_requestingPrincipal = 2;
+  required bytes a_originAttributes = 3;
 }
 
 message Msg_SetCookies {
-  required bytes baseDomain = 1;
-  required bytes attrs = 2;
-  required bytes host = 3;
-  required bool fromHttp = 4;
-  required bool isThirdParty = 5;
-  repeated protobuf.mozilla.net.CookieStruct cookies = 6;
+  required bytes a_baseDomain = 1;
+  required bytes a_attrs = 2;
+  required bytes a_host = 3;
+  required bool a_fromHttp = 4;
+  required bool a_isThirdParty = 5;
+  repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
 message Msg_DeletingChannel {
@@ -75,7 +75,7 @@ message Msg_OpenOriginalCacheInputStream {
 }
 
 message Msg_BytesRead {
-  required sint32 count = 1;
+  required sint32 a_count = 1;
 }
 
 message Msg___delete__ {
@@ -85,59 +85,59 @@ message Reply___delete__ {
 }
 
 message Msg_FailedAsyncOpen {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_OnStartRequestSent {
 }
 
 message Msg_Redirect1Begin {
-  required uint32 registrarId = 1;
-  required bytes newOriginalUri = 2;
-  required uint32 newLoadFlags = 3;
-  required uint32 redirectFlags = 4;
-  required protobuf.mozilla.net.ParentLoadInfoForwarderArgs loadInfoForwarder = 5;
-  required bytes responseHead = 6;
-  required bytes securityInfo = 7;
-  required uint64 channelId = 8;
-  required bytes oldPeerAddr = 9;
-  required protobuf.mozilla.net.ResourceTimingStructArgs timing = 10;
+  required uint32 a_registrarId = 1;
+  required bytes a_newOriginalUri = 2;
+  required uint32 a_newLoadFlags = 3;
+  required uint32 a_redirectFlags = 4;
+  required protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 5;
+  required bytes a_responseHead = 6;
+  required bytes a_securityInfo = 7;
+  required uint64 a_channelId = 8;
+  required bytes a_oldPeerAddr = 9;
+  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 10;
 }
 
 message Msg_Redirect3Complete {
 }
 
 message Msg_RedirectFailed {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_ReportSecurityMessage {
-  required bytes messageTag = 1;
-  required bytes messageCategory = 2;
+  required bytes a_messageTag = 1;
+  required bytes a_messageCategory = 2;
 }
 
 message Msg_DeleteSelf {
 }
 
 message Msg_LogBlockedCORSRequest {
-  required bytes message = 1;
-  required bytes category = 2;
-  required bool isWarning = 3;
+  required bytes a_message = 1;
+  required bytes a_category = 2;
+  required bool a_isWarning = 3;
 }
 
 message Msg_LogMimeTypeMismatch {
-  required bytes messageName = 1;
-  required bool warning = 2;
-  required bytes url = 3;
-  required bytes contentType = 4;
+  required bytes a_messageName = 1;
+  required bool a_warning = 2;
+  required bytes a_url = 3;
+  required bytes a_contentType = 4;
 }
 
 message Msg_OriginalCacheInputStreamAvailable {
-  optional protobuf.mozilla.ipc.IPCStream stream = 1;
+  optional protobuf.mozilla.ipc.IPCStream a_stream = 1;
 }
 
 message Msg_SetPriority {
-  required sint32 priority = 1;
+  required sint32 a_priority = 1;
 }
 
 // Parameter mappings stats:

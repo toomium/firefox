@@ -17,8 +17,8 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_TLSClientAuthCertSelected {
-  required protobuf.mozilla.psm.ByteArray aSelectedCertBytes = 1;
-  repeated protobuf.mozilla.psm.ByteArray aSelectedCertChainBytes = 2;
+  required protobuf.mozilla.psm.ByteArray a_aSelectedCertBytes = 1;
+  repeated protobuf.mozilla.psm.ByteArray a_aSelectedCertChainBytes = 2;
 }
 
 message Msg___delete__ {

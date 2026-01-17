@@ -458,24 +458,24 @@ class Msg_Cancel final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStatusFieldNumber = 1,
+    kAStatusFieldNumber = 1,
   };
-  // required bytes status = 1;
-  bool has_status() const;
+  // required bytes a_status = 1;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  const std::string& status() const;
+  void clear_a_status();
+  const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_status(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_status();
-  PROTOBUF_NODISCARD std::string* release_status();
-  void set_allocated_status(std::string* status);
+  void set_a_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_status();
+  PROTOBUF_NODISCARD std::string* release_a_status();
+  void set_allocated_a_status(std::string* a_status);
   private:
-  const std::string& _internal_status() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_status(const std::string& value);
-  std::string* _internal_mutable_status();
+  const std::string& _internal_a_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_status(const std::string& value);
+  std::string* _internal_mutable_a_status();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PGIOChannel.Msg_Cancel)
@@ -488,7 +488,7 @@ class Msg_Cancel final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr status_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGIOChannel_2eproto;
@@ -853,95 +853,95 @@ class Msg_OnStartRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAChannelStatusFieldNumber = 1,
-    kAContentTypeFieldNumber = 3,
-    kAEntityIDFieldNumber = 4,
-    kAURIFieldNumber = 5,
-    kAContentLengthFieldNumber = 2,
+    kAAChannelStatusFieldNumber = 1,
+    kAAContentTypeFieldNumber = 3,
+    kAAEntityIDFieldNumber = 4,
+    kAAURIFieldNumber = 5,
+    kAAContentLengthFieldNumber = 2,
   };
-  // required bytes aChannelStatus = 1;
-  bool has_achannelstatus() const;
+  // required bytes a_aChannelStatus = 1;
+  bool has_a_achannelstatus() const;
   private:
-  bool _internal_has_achannelstatus() const;
+  bool _internal_has_a_achannelstatus() const;
   public:
-  void clear_achannelstatus();
-  const std::string& achannelstatus() const;
+  void clear_a_achannelstatus();
+  const std::string& a_achannelstatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_achannelstatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_achannelstatus();
-  PROTOBUF_NODISCARD std::string* release_achannelstatus();
-  void set_allocated_achannelstatus(std::string* achannelstatus);
+  void set_a_achannelstatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_achannelstatus();
+  PROTOBUF_NODISCARD std::string* release_a_achannelstatus();
+  void set_allocated_a_achannelstatus(std::string* a_achannelstatus);
   private:
-  const std::string& _internal_achannelstatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_achannelstatus(const std::string& value);
-  std::string* _internal_mutable_achannelstatus();
+  const std::string& _internal_a_achannelstatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_achannelstatus(const std::string& value);
+  std::string* _internal_mutable_a_achannelstatus();
   public:
 
-  // required bytes aContentType = 3;
-  bool has_acontenttype() const;
+  // required bytes a_aContentType = 3;
+  bool has_a_acontenttype() const;
   private:
-  bool _internal_has_acontenttype() const;
+  bool _internal_has_a_acontenttype() const;
   public:
-  void clear_acontenttype();
-  const std::string& acontenttype() const;
+  void clear_a_acontenttype();
+  const std::string& a_acontenttype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acontenttype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acontenttype();
-  PROTOBUF_NODISCARD std::string* release_acontenttype();
-  void set_allocated_acontenttype(std::string* acontenttype);
+  void set_a_acontenttype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acontenttype();
+  PROTOBUF_NODISCARD std::string* release_a_acontenttype();
+  void set_allocated_a_acontenttype(std::string* a_acontenttype);
   private:
-  const std::string& _internal_acontenttype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acontenttype(const std::string& value);
-  std::string* _internal_mutable_acontenttype();
+  const std::string& _internal_a_acontenttype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acontenttype(const std::string& value);
+  std::string* _internal_mutable_a_acontenttype();
   public:
 
-  // required bytes aEntityID = 4;
-  bool has_aentityid() const;
+  // required bytes a_aEntityID = 4;
+  bool has_a_aentityid() const;
   private:
-  bool _internal_has_aentityid() const;
+  bool _internal_has_a_aentityid() const;
   public:
-  void clear_aentityid();
-  const std::string& aentityid() const;
+  void clear_a_aentityid();
+  const std::string& a_aentityid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aentityid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aentityid();
-  PROTOBUF_NODISCARD std::string* release_aentityid();
-  void set_allocated_aentityid(std::string* aentityid);
+  void set_a_aentityid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aentityid();
+  PROTOBUF_NODISCARD std::string* release_a_aentityid();
+  void set_allocated_a_aentityid(std::string* a_aentityid);
   private:
-  const std::string& _internal_aentityid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aentityid(const std::string& value);
-  std::string* _internal_mutable_aentityid();
+  const std::string& _internal_a_aentityid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aentityid(const std::string& value);
+  std::string* _internal_mutable_a_aentityid();
   public:
 
-  // required .protobuf.mozilla.ipc.URIParams aURI = 5;
-  bool has_auri() const;
+  // required .protobuf.mozilla.ipc.URIParams a_aURI = 5;
+  bool has_a_auri() const;
   private:
-  bool _internal_has_auri() const;
+  bool _internal_has_a_auri() const;
   public:
-  void clear_auri();
-  const ::protobuf::mozilla::ipc::URIParams& auri() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::URIParams* release_auri();
-  ::protobuf::mozilla::ipc::URIParams* mutable_auri();
-  void set_allocated_auri(::protobuf::mozilla::ipc::URIParams* auri);
+  void clear_a_auri();
+  const ::protobuf::mozilla::ipc::URIParams& a_auri() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::URIParams* release_a_auri();
+  ::protobuf::mozilla::ipc::URIParams* mutable_a_auri();
+  void set_allocated_a_auri(::protobuf::mozilla::ipc::URIParams* a_auri);
   private:
-  const ::protobuf::mozilla::ipc::URIParams& _internal_auri() const;
-  ::protobuf::mozilla::ipc::URIParams* _internal_mutable_auri();
+  const ::protobuf::mozilla::ipc::URIParams& _internal_a_auri() const;
+  ::protobuf::mozilla::ipc::URIParams* _internal_mutable_a_auri();
   public:
-  void unsafe_arena_set_allocated_auri(
-      ::protobuf::mozilla::ipc::URIParams* auri);
-  ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_auri();
+  void unsafe_arena_set_allocated_a_auri(
+      ::protobuf::mozilla::ipc::URIParams* a_auri);
+  ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_a_auri();
 
-  // required sint64 aContentLength = 2;
-  bool has_acontentlength() const;
+  // required sint64 a_aContentLength = 2;
+  bool has_a_acontentlength() const;
   private:
-  bool _internal_has_acontentlength() const;
+  bool _internal_has_a_acontentlength() const;
   public:
-  void clear_acontentlength();
-  int64_t acontentlength() const;
-  void set_acontentlength(int64_t value);
+  void clear_a_acontentlength();
+  int64_t a_acontentlength() const;
+  void set_a_acontentlength(int64_t value);
   private:
-  int64_t _internal_acontentlength() const;
-  void _internal_set_acontentlength(int64_t value);
+  int64_t _internal_a_acontentlength() const;
+  void _internal_set_a_acontentlength(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest)
@@ -957,11 +957,11 @@ class Msg_OnStartRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr achannelstatus_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acontenttype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aentityid_;
-    ::protobuf::mozilla::ipc::URIParams* auri_;
-    int64_t acontentlength_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_achannelstatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acontenttype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aentityid_;
+    ::protobuf::mozilla::ipc::URIParams* a_auri_;
+    int64_t a_acontentlength_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGIOChannel_2eproto;
@@ -1078,71 +1078,71 @@ class Msg_OnDataAvailable final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChannelStatusFieldNumber = 1,
-    kDataFieldNumber = 2,
-    kOffsetFieldNumber = 3,
-    kCountFieldNumber = 4,
+    kAChannelStatusFieldNumber = 1,
+    kADataFieldNumber = 2,
+    kAOffsetFieldNumber = 3,
+    kACountFieldNumber = 4,
   };
-  // required bytes channelStatus = 1;
-  bool has_channelstatus() const;
+  // required bytes a_channelStatus = 1;
+  bool has_a_channelstatus() const;
   private:
-  bool _internal_has_channelstatus() const;
+  bool _internal_has_a_channelstatus() const;
   public:
-  void clear_channelstatus();
-  const std::string& channelstatus() const;
+  void clear_a_channelstatus();
+  const std::string& a_channelstatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_channelstatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_channelstatus();
-  PROTOBUF_NODISCARD std::string* release_channelstatus();
-  void set_allocated_channelstatus(std::string* channelstatus);
+  void set_a_channelstatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_channelstatus();
+  PROTOBUF_NODISCARD std::string* release_a_channelstatus();
+  void set_allocated_a_channelstatus(std::string* a_channelstatus);
   private:
-  const std::string& _internal_channelstatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_channelstatus(const std::string& value);
-  std::string* _internal_mutable_channelstatus();
+  const std::string& _internal_a_channelstatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_channelstatus(const std::string& value);
+  std::string* _internal_mutable_a_channelstatus();
   public:
 
-  // required bytes data = 2;
-  bool has_data() const;
+  // required bytes a_data = 2;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
-  // required uint64 offset = 3;
-  bool has_offset() const;
+  // required uint64 a_offset = 3;
+  bool has_a_offset() const;
   private:
-  bool _internal_has_offset() const;
+  bool _internal_has_a_offset() const;
   public:
-  void clear_offset();
-  uint64_t offset() const;
-  void set_offset(uint64_t value);
+  void clear_a_offset();
+  uint64_t a_offset() const;
+  void set_a_offset(uint64_t value);
   private:
-  uint64_t _internal_offset() const;
-  void _internal_set_offset(uint64_t value);
+  uint64_t _internal_a_offset() const;
+  void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 count = 4;
-  bool has_count() const;
+  // required uint32 a_count = 4;
+  bool has_a_count() const;
   private:
-  bool _internal_has_count() const;
+  bool _internal_has_a_count() const;
   public:
-  void clear_count();
-  uint32_t count() const;
-  void set_count(uint32_t value);
+  void clear_a_count();
+  uint32_t a_count() const;
+  void set_a_count(uint32_t value);
   private:
-  uint32_t _internal_count() const;
-  void _internal_set_count(uint32_t value);
+  uint32_t _internal_a_count() const;
+  void _internal_set_a_count(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable)
@@ -1158,10 +1158,10 @@ class Msg_OnDataAvailable final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr channelstatus_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
-    uint64_t offset_;
-    uint32_t count_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_channelstatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    uint64_t a_offset_;
+    uint32_t a_count_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGIOChannel_2eproto;
@@ -1278,24 +1278,24 @@ class Msg_OnStopRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChannelStatusFieldNumber = 1,
+    kAChannelStatusFieldNumber = 1,
   };
-  // required bytes channelStatus = 1;
-  bool has_channelstatus() const;
+  // required bytes a_channelStatus = 1;
+  bool has_a_channelstatus() const;
   private:
-  bool _internal_has_channelstatus() const;
+  bool _internal_has_a_channelstatus() const;
   public:
-  void clear_channelstatus();
-  const std::string& channelstatus() const;
+  void clear_a_channelstatus();
+  const std::string& a_channelstatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_channelstatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_channelstatus();
-  PROTOBUF_NODISCARD std::string* release_channelstatus();
-  void set_allocated_channelstatus(std::string* channelstatus);
+  void set_a_channelstatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_channelstatus();
+  PROTOBUF_NODISCARD std::string* release_a_channelstatus();
+  void set_allocated_a_channelstatus(std::string* a_channelstatus);
   private:
-  const std::string& _internal_channelstatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_channelstatus(const std::string& value);
-  std::string* _internal_mutable_channelstatus();
+  const std::string& _internal_a_channelstatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_channelstatus(const std::string& value);
+  std::string* _internal_mutable_a_channelstatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest)
@@ -1308,7 +1308,7 @@ class Msg_OnStopRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr channelstatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_channelstatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGIOChannel_2eproto;
@@ -1425,24 +1425,24 @@ class Msg_FailedAsyncOpen final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStatusCodeFieldNumber = 1,
+    kAStatusCodeFieldNumber = 1,
   };
-  // required bytes statusCode = 1;
-  bool has_statuscode() const;
+  // required bytes a_statusCode = 1;
+  bool has_a_statuscode() const;
   private:
-  bool _internal_has_statuscode() const;
+  bool _internal_has_a_statuscode() const;
   public:
-  void clear_statuscode();
-  const std::string& statuscode() const;
+  void clear_a_statuscode();
+  const std::string& a_statuscode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_statuscode(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_statuscode();
-  PROTOBUF_NODISCARD std::string* release_statuscode();
-  void set_allocated_statuscode(std::string* statuscode);
+  void set_a_statuscode(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_statuscode();
+  PROTOBUF_NODISCARD std::string* release_a_statuscode();
+  void set_allocated_a_statuscode(std::string* a_statuscode);
   private:
-  const std::string& _internal_statuscode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_statuscode(const std::string& value);
-  std::string* _internal_mutable_statuscode();
+  const std::string& _internal_a_statuscode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_statuscode(const std::string& value);
+  std::string* _internal_mutable_a_statuscode();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen)
@@ -1455,7 +1455,7 @@ class Msg_FailedAsyncOpen final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr statuscode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_statuscode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGIOChannel_2eproto;
@@ -1603,72 +1603,72 @@ class Msg_DeleteSelf final :
 
 // Msg_Cancel
 
-// required bytes status = 1;
-inline bool Msg_Cancel::_internal_has_status() const {
+// required bytes a_status = 1;
+inline bool Msg_Cancel::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Cancel::has_status() const {
-  return _internal_has_status();
+inline bool Msg_Cancel::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void Msg_Cancel::clear_status() {
-  _impl_.status_.ClearToEmpty();
+inline void Msg_Cancel::clear_a_status() {
+  _impl_.a_status_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Cancel::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.status)
-  return _internal_status();
+inline const std::string& Msg_Cancel::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.a_status)
+  return _internal_a_status();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Cancel::set_status(ArgT0&& arg0, ArgT... args) {
+void Msg_Cancel::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.status)
+ _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.a_status)
 }
-inline std::string* Msg_Cancel::mutable_status() {
-  std::string* _s = _internal_mutable_status();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.status)
+inline std::string* Msg_Cancel::mutable_a_status() {
+  std::string* _s = _internal_mutable_a_status();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.a_status)
   return _s;
 }
-inline const std::string& Msg_Cancel::_internal_status() const {
-  return _impl_.status_.Get();
+inline const std::string& Msg_Cancel::_internal_a_status() const {
+  return _impl_.a_status_.Get();
 }
-inline void Msg_Cancel::_internal_set_status(const std::string& value) {
+inline void Msg_Cancel::_internal_set_a_status(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.status_.Set(value, GetArenaForAllocation());
+  _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::_internal_mutable_status() {
+inline std::string* Msg_Cancel::_internal_mutable_a_status() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.status_.Mutable(GetArenaForAllocation());
+  return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::release_status() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.status)
-  if (!_internal_has_status()) {
+inline std::string* Msg_Cancel::release_a_status() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.a_status)
+  if (!_internal_has_a_status()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.status_.Release();
+  auto* p = _impl_.a_status_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Cancel::set_allocated_status(std::string* status) {
-  if (status != nullptr) {
+inline void Msg_Cancel::set_allocated_a_status(std::string* a_status) {
+  if (a_status != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.status_.SetAllocated(status, GetArenaForAllocation());
+  _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.status)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_Cancel.a_status)
 }
 
 // -------------------------------------------------------------------
@@ -1683,273 +1683,273 @@ inline void Msg_Cancel::set_allocated_status(std::string* status) {
 
 // Msg_OnStartRequest
 
-// required bytes aChannelStatus = 1;
-inline bool Msg_OnStartRequest::_internal_has_achannelstatus() const {
+// required bytes a_aChannelStatus = 1;
+inline bool Msg_OnStartRequest::_internal_has_a_achannelstatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnStartRequest::has_achannelstatus() const {
-  return _internal_has_achannelstatus();
+inline bool Msg_OnStartRequest::has_a_achannelstatus() const {
+  return _internal_has_a_achannelstatus();
 }
-inline void Msg_OnStartRequest::clear_achannelstatus() {
-  _impl_.achannelstatus_.ClearToEmpty();
+inline void Msg_OnStartRequest::clear_a_achannelstatus() {
+  _impl_.a_achannelstatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnStartRequest::achannelstatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aChannelStatus)
-  return _internal_achannelstatus();
+inline const std::string& Msg_OnStartRequest::a_achannelstatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aChannelStatus)
+  return _internal_a_achannelstatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnStartRequest::set_achannelstatus(ArgT0&& arg0, ArgT... args) {
+void Msg_OnStartRequest::set_a_achannelstatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.achannelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aChannelStatus)
+ _impl_.a_achannelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aChannelStatus)
 }
-inline std::string* Msg_OnStartRequest::mutable_achannelstatus() {
-  std::string* _s = _internal_mutable_achannelstatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aChannelStatus)
+inline std::string* Msg_OnStartRequest::mutable_a_achannelstatus() {
+  std::string* _s = _internal_mutable_a_achannelstatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aChannelStatus)
   return _s;
 }
-inline const std::string& Msg_OnStartRequest::_internal_achannelstatus() const {
-  return _impl_.achannelstatus_.Get();
+inline const std::string& Msg_OnStartRequest::_internal_a_achannelstatus() const {
+  return _impl_.a_achannelstatus_.Get();
 }
-inline void Msg_OnStartRequest::_internal_set_achannelstatus(const std::string& value) {
+inline void Msg_OnStartRequest::_internal_set_a_achannelstatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.achannelstatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_achannelstatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::_internal_mutable_achannelstatus() {
+inline std::string* Msg_OnStartRequest::_internal_mutable_a_achannelstatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.achannelstatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_achannelstatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::release_achannelstatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aChannelStatus)
-  if (!_internal_has_achannelstatus()) {
+inline std::string* Msg_OnStartRequest::release_a_achannelstatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aChannelStatus)
+  if (!_internal_has_a_achannelstatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.achannelstatus_.Release();
+  auto* p = _impl_.a_achannelstatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.achannelstatus_.IsDefault()) {
-    _impl_.achannelstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_achannelstatus_.IsDefault()) {
+    _impl_.a_achannelstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnStartRequest::set_allocated_achannelstatus(std::string* achannelstatus) {
-  if (achannelstatus != nullptr) {
+inline void Msg_OnStartRequest::set_allocated_a_achannelstatus(std::string* a_achannelstatus) {
+  if (a_achannelstatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.achannelstatus_.SetAllocated(achannelstatus, GetArenaForAllocation());
+  _impl_.a_achannelstatus_.SetAllocated(a_achannelstatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.achannelstatus_.IsDefault()) {
-    _impl_.achannelstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_achannelstatus_.IsDefault()) {
+    _impl_.a_achannelstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aChannelStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aChannelStatus)
 }
 
-// required sint64 aContentLength = 2;
-inline bool Msg_OnStartRequest::_internal_has_acontentlength() const {
+// required sint64 a_aContentLength = 2;
+inline bool Msg_OnStartRequest::_internal_has_a_acontentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_OnStartRequest::has_acontentlength() const {
-  return _internal_has_acontentlength();
+inline bool Msg_OnStartRequest::has_a_acontentlength() const {
+  return _internal_has_a_acontentlength();
 }
-inline void Msg_OnStartRequest::clear_acontentlength() {
-  _impl_.acontentlength_ = int64_t{0};
+inline void Msg_OnStartRequest::clear_a_acontentlength() {
+  _impl_.a_acontentlength_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int64_t Msg_OnStartRequest::_internal_acontentlength() const {
-  return _impl_.acontentlength_;
+inline int64_t Msg_OnStartRequest::_internal_a_acontentlength() const {
+  return _impl_.a_acontentlength_;
 }
-inline int64_t Msg_OnStartRequest::acontentlength() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentLength)
-  return _internal_acontentlength();
+inline int64_t Msg_OnStartRequest::a_acontentlength() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentLength)
+  return _internal_a_acontentlength();
 }
-inline void Msg_OnStartRequest::_internal_set_acontentlength(int64_t value) {
+inline void Msg_OnStartRequest::_internal_set_a_acontentlength(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.acontentlength_ = value;
+  _impl_.a_acontentlength_ = value;
 }
-inline void Msg_OnStartRequest::set_acontentlength(int64_t value) {
-  _internal_set_acontentlength(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentLength)
+inline void Msg_OnStartRequest::set_a_acontentlength(int64_t value) {
+  _internal_set_a_acontentlength(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentLength)
 }
 
-// required bytes aContentType = 3;
-inline bool Msg_OnStartRequest::_internal_has_acontenttype() const {
+// required bytes a_aContentType = 3;
+inline bool Msg_OnStartRequest::_internal_has_a_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_OnStartRequest::has_acontenttype() const {
-  return _internal_has_acontenttype();
+inline bool Msg_OnStartRequest::has_a_acontenttype() const {
+  return _internal_has_a_acontenttype();
 }
-inline void Msg_OnStartRequest::clear_acontenttype() {
-  _impl_.acontenttype_.ClearToEmpty();
+inline void Msg_OnStartRequest::clear_a_acontenttype() {
+  _impl_.a_acontenttype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_OnStartRequest::acontenttype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
-  return _internal_acontenttype();
+inline const std::string& Msg_OnStartRequest::a_acontenttype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentType)
+  return _internal_a_acontenttype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnStartRequest::set_acontenttype(ArgT0&& arg0, ArgT... args) {
+void Msg_OnStartRequest::set_a_acontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.acontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
+ _impl_.a_acontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentType)
 }
-inline std::string* Msg_OnStartRequest::mutable_acontenttype() {
-  std::string* _s = _internal_mutable_acontenttype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
+inline std::string* Msg_OnStartRequest::mutable_a_acontenttype() {
+  std::string* _s = _internal_mutable_a_acontenttype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentType)
   return _s;
 }
-inline const std::string& Msg_OnStartRequest::_internal_acontenttype() const {
-  return _impl_.acontenttype_.Get();
+inline const std::string& Msg_OnStartRequest::_internal_a_acontenttype() const {
+  return _impl_.a_acontenttype_.Get();
 }
-inline void Msg_OnStartRequest::_internal_set_acontenttype(const std::string& value) {
+inline void Msg_OnStartRequest::_internal_set_a_acontenttype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.acontenttype_.Set(value, GetArenaForAllocation());
+  _impl_.a_acontenttype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::_internal_mutable_acontenttype() {
+inline std::string* Msg_OnStartRequest::_internal_mutable_a_acontenttype() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.acontenttype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acontenttype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::release_acontenttype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
-  if (!_internal_has_acontenttype()) {
+inline std::string* Msg_OnStartRequest::release_a_acontenttype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentType)
+  if (!_internal_has_a_acontenttype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.acontenttype_.Release();
+  auto* p = _impl_.a_acontenttype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acontenttype_.IsDefault()) {
-    _impl_.acontenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acontenttype_.IsDefault()) {
+    _impl_.a_acontenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnStartRequest::set_allocated_acontenttype(std::string* acontenttype) {
-  if (acontenttype != nullptr) {
+inline void Msg_OnStartRequest::set_allocated_a_acontenttype(std::string* a_acontenttype) {
+  if (a_acontenttype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.acontenttype_.SetAllocated(acontenttype, GetArenaForAllocation());
+  _impl_.a_acontenttype_.SetAllocated(a_acontenttype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acontenttype_.IsDefault()) {
-    _impl_.acontenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acontenttype_.IsDefault()) {
+    _impl_.a_acontenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aContentType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aContentType)
 }
 
-// required bytes aEntityID = 4;
-inline bool Msg_OnStartRequest::_internal_has_aentityid() const {
+// required bytes a_aEntityID = 4;
+inline bool Msg_OnStartRequest::_internal_has_a_aentityid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_OnStartRequest::has_aentityid() const {
-  return _internal_has_aentityid();
+inline bool Msg_OnStartRequest::has_a_aentityid() const {
+  return _internal_has_a_aentityid();
 }
-inline void Msg_OnStartRequest::clear_aentityid() {
-  _impl_.aentityid_.ClearToEmpty();
+inline void Msg_OnStartRequest::clear_a_aentityid() {
+  _impl_.a_aentityid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_OnStartRequest::aentityid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aEntityID)
-  return _internal_aentityid();
+inline const std::string& Msg_OnStartRequest::a_aentityid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aEntityID)
+  return _internal_a_aentityid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnStartRequest::set_aentityid(ArgT0&& arg0, ArgT... args) {
+void Msg_OnStartRequest::set_a_aentityid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.aentityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aEntityID)
+ _impl_.a_aentityid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aEntityID)
 }
-inline std::string* Msg_OnStartRequest::mutable_aentityid() {
-  std::string* _s = _internal_mutable_aentityid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aEntityID)
+inline std::string* Msg_OnStartRequest::mutable_a_aentityid() {
+  std::string* _s = _internal_mutable_a_aentityid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aEntityID)
   return _s;
 }
-inline const std::string& Msg_OnStartRequest::_internal_aentityid() const {
-  return _impl_.aentityid_.Get();
+inline const std::string& Msg_OnStartRequest::_internal_a_aentityid() const {
+  return _impl_.a_aentityid_.Get();
 }
-inline void Msg_OnStartRequest::_internal_set_aentityid(const std::string& value) {
+inline void Msg_OnStartRequest::_internal_set_a_aentityid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aentityid_.Set(value, GetArenaForAllocation());
+  _impl_.a_aentityid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::_internal_mutable_aentityid() {
+inline std::string* Msg_OnStartRequest::_internal_mutable_a_aentityid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.aentityid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aentityid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnStartRequest::release_aentityid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aEntityID)
-  if (!_internal_has_aentityid()) {
+inline std::string* Msg_OnStartRequest::release_a_aentityid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aEntityID)
+  if (!_internal_has_a_aentityid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.aentityid_.Release();
+  auto* p = _impl_.a_aentityid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aentityid_.IsDefault()) {
-    _impl_.aentityid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aentityid_.IsDefault()) {
+    _impl_.a_aentityid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnStartRequest::set_allocated_aentityid(std::string* aentityid) {
-  if (aentityid != nullptr) {
+inline void Msg_OnStartRequest::set_allocated_a_aentityid(std::string* a_aentityid) {
+  if (a_aentityid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.aentityid_.SetAllocated(aentityid, GetArenaForAllocation());
+  _impl_.a_aentityid_.SetAllocated(a_aentityid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aentityid_.IsDefault()) {
-    _impl_.aentityid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aentityid_.IsDefault()) {
+    _impl_.a_aentityid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aEntityID)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aEntityID)
 }
 
-// required .protobuf.mozilla.ipc.URIParams aURI = 5;
-inline bool Msg_OnStartRequest::_internal_has_auri() const {
+// required .protobuf.mozilla.ipc.URIParams a_aURI = 5;
+inline bool Msg_OnStartRequest::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.auri_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_auri_ != nullptr);
   return value;
 }
-inline bool Msg_OnStartRequest::has_auri() const {
-  return _internal_has_auri();
+inline bool Msg_OnStartRequest::has_a_auri() const {
+  return _internal_has_a_auri();
 }
-inline const ::protobuf::mozilla::ipc::URIParams& Msg_OnStartRequest::_internal_auri() const {
-  const ::protobuf::mozilla::ipc::URIParams* p = _impl_.auri_;
+inline const ::protobuf::mozilla::ipc::URIParams& Msg_OnStartRequest::_internal_a_auri() const {
+  const ::protobuf::mozilla::ipc::URIParams* p = _impl_.a_auri_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::URIParams&>(
       ::protobuf::mozilla::ipc::_URIParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::URIParams& Msg_OnStartRequest::auri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aURI)
-  return _internal_auri();
+inline const ::protobuf::mozilla::ipc::URIParams& Msg_OnStartRequest::a_auri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aURI)
+  return _internal_a_auri();
 }
-inline void Msg_OnStartRequest::unsafe_arena_set_allocated_auri(
-    ::protobuf::mozilla::ipc::URIParams* auri) {
+inline void Msg_OnStartRequest::unsafe_arena_set_allocated_a_auri(
+    ::protobuf::mozilla::ipc::URIParams* a_auri) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.auri_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_auri_);
   }
-  _impl_.auri_ = auri;
-  if (auri) {
+  _impl_.a_auri_ = a_auri;
+  if (a_auri) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aURI)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aURI)
 }
-inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::release_auri() {
+inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::release_a_auri() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.auri_;
-  _impl_.auri_ = nullptr;
+  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.a_auri_;
+  _impl_.a_auri_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1961,385 +1961,385 @@ inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::release_auri() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::unsafe_arena_release_auri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aURI)
+inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::unsafe_arena_release_a_auri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aURI)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.auri_;
-  _impl_.auri_ = nullptr;
+  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.a_auri_;
+  _impl_.a_auri_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::_internal_mutable_auri() {
+inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::_internal_mutable_a_auri() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.auri_ == nullptr) {
+  if (_impl_.a_auri_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::URIParams>(GetArenaForAllocation());
-    _impl_.auri_ = p;
+    _impl_.a_auri_ = p;
   }
-  return _impl_.auri_;
+  return _impl_.a_auri_;
 }
-inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::mutable_auri() {
-  ::protobuf::mozilla::ipc::URIParams* _msg = _internal_mutable_auri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aURI)
+inline ::protobuf::mozilla::ipc::URIParams* Msg_OnStartRequest::mutable_a_auri() {
+  ::protobuf::mozilla::ipc::URIParams* _msg = _internal_mutable_a_auri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aURI)
   return _msg;
 }
-inline void Msg_OnStartRequest::set_allocated_auri(::protobuf::mozilla::ipc::URIParams* auri) {
+inline void Msg_OnStartRequest::set_allocated_a_auri(::protobuf::mozilla::ipc::URIParams* a_auri) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.auri_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_auri_);
   }
-  if (auri) {
+  if (a_auri) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(auri));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_auri));
     if (message_arena != submessage_arena) {
-      auri = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, auri, submessage_arena);
+      a_auri = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_auri, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.auri_ = auri;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.aURI)
+  _impl_.a_auri_ = a_auri;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStartRequest.a_aURI)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnDataAvailable
 
-// required bytes channelStatus = 1;
-inline bool Msg_OnDataAvailable::_internal_has_channelstatus() const {
+// required bytes a_channelStatus = 1;
+inline bool Msg_OnDataAvailable::_internal_has_a_channelstatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_channelstatus() const {
-  return _internal_has_channelstatus();
+inline bool Msg_OnDataAvailable::has_a_channelstatus() const {
+  return _internal_has_a_channelstatus();
 }
-inline void Msg_OnDataAvailable::clear_channelstatus() {
-  _impl_.channelstatus_.ClearToEmpty();
+inline void Msg_OnDataAvailable::clear_a_channelstatus() {
+  _impl_.a_channelstatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnDataAvailable::channelstatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.channelStatus)
-  return _internal_channelstatus();
+inline const std::string& Msg_OnDataAvailable::a_channelstatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_channelStatus)
+  return _internal_a_channelstatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnDataAvailable::set_channelstatus(ArgT0&& arg0, ArgT... args) {
+void Msg_OnDataAvailable::set_a_channelstatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.channelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.channelStatus)
+ _impl_.a_channelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_channelStatus)
 }
-inline std::string* Msg_OnDataAvailable::mutable_channelstatus() {
-  std::string* _s = _internal_mutable_channelstatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.channelStatus)
+inline std::string* Msg_OnDataAvailable::mutable_a_channelstatus() {
+  std::string* _s = _internal_mutable_a_channelstatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_channelStatus)
   return _s;
 }
-inline const std::string& Msg_OnDataAvailable::_internal_channelstatus() const {
-  return _impl_.channelstatus_.Get();
+inline const std::string& Msg_OnDataAvailable::_internal_a_channelstatus() const {
+  return _impl_.a_channelstatus_.Get();
 }
-inline void Msg_OnDataAvailable::_internal_set_channelstatus(const std::string& value) {
+inline void Msg_OnDataAvailable::_internal_set_a_channelstatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.channelstatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_channelstatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnDataAvailable::_internal_mutable_channelstatus() {
+inline std::string* Msg_OnDataAvailable::_internal_mutable_a_channelstatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.channelstatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_channelstatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnDataAvailable::release_channelstatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.channelStatus)
-  if (!_internal_has_channelstatus()) {
+inline std::string* Msg_OnDataAvailable::release_a_channelstatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_channelStatus)
+  if (!_internal_has_a_channelstatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.channelstatus_.Release();
+  auto* p = _impl_.a_channelstatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.channelstatus_.IsDefault()) {
-    _impl_.channelstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_channelstatus_.IsDefault()) {
+    _impl_.a_channelstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnDataAvailable::set_allocated_channelstatus(std::string* channelstatus) {
-  if (channelstatus != nullptr) {
+inline void Msg_OnDataAvailable::set_allocated_a_channelstatus(std::string* a_channelstatus) {
+  if (a_channelstatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.channelstatus_.SetAllocated(channelstatus, GetArenaForAllocation());
+  _impl_.a_channelstatus_.SetAllocated(a_channelstatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.channelstatus_.IsDefault()) {
-    _impl_.channelstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_channelstatus_.IsDefault()) {
+    _impl_.a_channelstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.channelStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_channelStatus)
 }
 
-// required bytes data = 2;
-inline bool Msg_OnDataAvailable::_internal_has_data() const {
+// required bytes a_data = 2;
+inline bool Msg_OnDataAvailable::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_data() const {
-  return _internal_has_data();
+inline bool Msg_OnDataAvailable::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void Msg_OnDataAvailable::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void Msg_OnDataAvailable::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_OnDataAvailable::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.data)
-  return _internal_data();
+inline const std::string& Msg_OnDataAvailable::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnDataAvailable::set_data(ArgT0&& arg0, ArgT... args) {
+void Msg_OnDataAvailable::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_data)
 }
-inline std::string* Msg_OnDataAvailable::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.data)
+inline std::string* Msg_OnDataAvailable::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_data)
   return _s;
 }
-inline const std::string& Msg_OnDataAvailable::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& Msg_OnDataAvailable::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void Msg_OnDataAvailable::_internal_set_data(const std::string& value) {
+inline void Msg_OnDataAvailable::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnDataAvailable::_internal_mutable_data() {
+inline std::string* Msg_OnDataAvailable::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnDataAvailable::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.data)
-  if (!_internal_has_data()) {
+inline std::string* Msg_OnDataAvailable::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnDataAvailable::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void Msg_OnDataAvailable::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_data)
 }
 
-// required uint64 offset = 3;
-inline bool Msg_OnDataAvailable::_internal_has_offset() const {
+// required uint64 a_offset = 3;
+inline bool Msg_OnDataAvailable::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_offset() const {
-  return _internal_has_offset();
+inline bool Msg_OnDataAvailable::has_a_offset() const {
+  return _internal_has_a_offset();
 }
-inline void Msg_OnDataAvailable::clear_offset() {
-  _impl_.offset_ = uint64_t{0u};
+inline void Msg_OnDataAvailable::clear_a_offset() {
+  _impl_.a_offset_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint64_t Msg_OnDataAvailable::_internal_offset() const {
-  return _impl_.offset_;
+inline uint64_t Msg_OnDataAvailable::_internal_a_offset() const {
+  return _impl_.a_offset_;
 }
-inline uint64_t Msg_OnDataAvailable::offset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.offset)
-  return _internal_offset();
+inline uint64_t Msg_OnDataAvailable::a_offset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_offset)
+  return _internal_a_offset();
 }
-inline void Msg_OnDataAvailable::_internal_set_offset(uint64_t value) {
+inline void Msg_OnDataAvailable::_internal_set_a_offset(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.offset_ = value;
+  _impl_.a_offset_ = value;
 }
-inline void Msg_OnDataAvailable::set_offset(uint64_t value) {
-  _internal_set_offset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.offset)
+inline void Msg_OnDataAvailable::set_a_offset(uint64_t value) {
+  _internal_set_a_offset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_offset)
 }
 
-// required uint32 count = 4;
-inline bool Msg_OnDataAvailable::_internal_has_count() const {
+// required uint32 a_count = 4;
+inline bool Msg_OnDataAvailable::_internal_has_a_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_OnDataAvailable::has_count() const {
-  return _internal_has_count();
+inline bool Msg_OnDataAvailable::has_a_count() const {
+  return _internal_has_a_count();
 }
-inline void Msg_OnDataAvailable::clear_count() {
-  _impl_.count_ = 0u;
+inline void Msg_OnDataAvailable::clear_a_count() {
+  _impl_.a_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_OnDataAvailable::_internal_count() const {
-  return _impl_.count_;
+inline uint32_t Msg_OnDataAvailable::_internal_a_count() const {
+  return _impl_.a_count_;
 }
-inline uint32_t Msg_OnDataAvailable::count() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.count)
-  return _internal_count();
+inline uint32_t Msg_OnDataAvailable::a_count() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_count)
+  return _internal_a_count();
 }
-inline void Msg_OnDataAvailable::_internal_set_count(uint32_t value) {
+inline void Msg_OnDataAvailable::_internal_set_a_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.count_ = value;
+  _impl_.a_count_ = value;
 }
-inline void Msg_OnDataAvailable::set_count(uint32_t value) {
-  _internal_set_count(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.count)
+inline void Msg_OnDataAvailable::set_a_count(uint32_t value) {
+  _internal_set_a_count(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnDataAvailable.a_count)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnStopRequest
 
-// required bytes channelStatus = 1;
-inline bool Msg_OnStopRequest::_internal_has_channelstatus() const {
+// required bytes a_channelStatus = 1;
+inline bool Msg_OnStopRequest::_internal_has_a_channelstatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnStopRequest::has_channelstatus() const {
-  return _internal_has_channelstatus();
+inline bool Msg_OnStopRequest::has_a_channelstatus() const {
+  return _internal_has_a_channelstatus();
 }
-inline void Msg_OnStopRequest::clear_channelstatus() {
-  _impl_.channelstatus_.ClearToEmpty();
+inline void Msg_OnStopRequest::clear_a_channelstatus() {
+  _impl_.a_channelstatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnStopRequest::channelstatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.channelStatus)
-  return _internal_channelstatus();
+inline const std::string& Msg_OnStopRequest::a_channelstatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.a_channelStatus)
+  return _internal_a_channelstatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnStopRequest::set_channelstatus(ArgT0&& arg0, ArgT... args) {
+void Msg_OnStopRequest::set_a_channelstatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.channelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.channelStatus)
+ _impl_.a_channelstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.a_channelStatus)
 }
-inline std::string* Msg_OnStopRequest::mutable_channelstatus() {
-  std::string* _s = _internal_mutable_channelstatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.channelStatus)
+inline std::string* Msg_OnStopRequest::mutable_a_channelstatus() {
+  std::string* _s = _internal_mutable_a_channelstatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.a_channelStatus)
   return _s;
 }
-inline const std::string& Msg_OnStopRequest::_internal_channelstatus() const {
-  return _impl_.channelstatus_.Get();
+inline const std::string& Msg_OnStopRequest::_internal_a_channelstatus() const {
+  return _impl_.a_channelstatus_.Get();
 }
-inline void Msg_OnStopRequest::_internal_set_channelstatus(const std::string& value) {
+inline void Msg_OnStopRequest::_internal_set_a_channelstatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.channelstatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_channelstatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnStopRequest::_internal_mutable_channelstatus() {
+inline std::string* Msg_OnStopRequest::_internal_mutable_a_channelstatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.channelstatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_channelstatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnStopRequest::release_channelstatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.channelStatus)
-  if (!_internal_has_channelstatus()) {
+inline std::string* Msg_OnStopRequest::release_a_channelstatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.a_channelStatus)
+  if (!_internal_has_a_channelstatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.channelstatus_.Release();
+  auto* p = _impl_.a_channelstatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.channelstatus_.IsDefault()) {
-    _impl_.channelstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_channelstatus_.IsDefault()) {
+    _impl_.a_channelstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnStopRequest::set_allocated_channelstatus(std::string* channelstatus) {
-  if (channelstatus != nullptr) {
+inline void Msg_OnStopRequest::set_allocated_a_channelstatus(std::string* a_channelstatus) {
+  if (a_channelstatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.channelstatus_.SetAllocated(channelstatus, GetArenaForAllocation());
+  _impl_.a_channelstatus_.SetAllocated(a_channelstatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.channelstatus_.IsDefault()) {
-    _impl_.channelstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_channelstatus_.IsDefault()) {
+    _impl_.a_channelstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.channelStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_OnStopRequest.a_channelStatus)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_FailedAsyncOpen
 
-// required bytes statusCode = 1;
-inline bool Msg_FailedAsyncOpen::_internal_has_statuscode() const {
+// required bytes a_statusCode = 1;
+inline bool Msg_FailedAsyncOpen::_internal_has_a_statuscode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FailedAsyncOpen::has_statuscode() const {
-  return _internal_has_statuscode();
+inline bool Msg_FailedAsyncOpen::has_a_statuscode() const {
+  return _internal_has_a_statuscode();
 }
-inline void Msg_FailedAsyncOpen::clear_statuscode() {
-  _impl_.statuscode_.ClearToEmpty();
+inline void Msg_FailedAsyncOpen::clear_a_statuscode() {
+  _impl_.a_statuscode_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_FailedAsyncOpen::statuscode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.statusCode)
-  return _internal_statuscode();
+inline const std::string& Msg_FailedAsyncOpen::a_statuscode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.a_statusCode)
+  return _internal_a_statuscode();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_FailedAsyncOpen::set_statuscode(ArgT0&& arg0, ArgT... args) {
+void Msg_FailedAsyncOpen::set_a_statuscode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.statuscode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.statusCode)
+ _impl_.a_statuscode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.a_statusCode)
 }
-inline std::string* Msg_FailedAsyncOpen::mutable_statuscode() {
-  std::string* _s = _internal_mutable_statuscode();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.statusCode)
+inline std::string* Msg_FailedAsyncOpen::mutable_a_statuscode() {
+  std::string* _s = _internal_mutable_a_statuscode();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.a_statusCode)
   return _s;
 }
-inline const std::string& Msg_FailedAsyncOpen::_internal_statuscode() const {
-  return _impl_.statuscode_.Get();
+inline const std::string& Msg_FailedAsyncOpen::_internal_a_statuscode() const {
+  return _impl_.a_statuscode_.Get();
 }
-inline void Msg_FailedAsyncOpen::_internal_set_statuscode(const std::string& value) {
+inline void Msg_FailedAsyncOpen::_internal_set_a_statuscode(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.statuscode_.Set(value, GetArenaForAllocation());
+  _impl_.a_statuscode_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_FailedAsyncOpen::_internal_mutable_statuscode() {
+inline std::string* Msg_FailedAsyncOpen::_internal_mutable_a_statuscode() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.statuscode_.Mutable(GetArenaForAllocation());
+  return _impl_.a_statuscode_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_FailedAsyncOpen::release_statuscode() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.statusCode)
-  if (!_internal_has_statuscode()) {
+inline std::string* Msg_FailedAsyncOpen::release_a_statuscode() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.a_statusCode)
+  if (!_internal_has_a_statuscode()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.statuscode_.Release();
+  auto* p = _impl_.a_statuscode_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.statuscode_.IsDefault()) {
-    _impl_.statuscode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_statuscode_.IsDefault()) {
+    _impl_.a_statuscode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_FailedAsyncOpen::set_allocated_statuscode(std::string* statuscode) {
-  if (statuscode != nullptr) {
+inline void Msg_FailedAsyncOpen::set_allocated_a_statuscode(std::string* a_statuscode) {
+  if (a_statuscode != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.statuscode_.SetAllocated(statuscode, GetArenaForAllocation());
+  _impl_.a_statuscode_.SetAllocated(a_statuscode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.statuscode_.IsDefault()) {
-    _impl_.statuscode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_statuscode_.IsDefault()) {
+    _impl_.a_statuscode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.statusCode)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PGIOChannel.Msg_FailedAsyncOpen.a_statusCode)
 }
 
 // -------------------------------------------------------------------

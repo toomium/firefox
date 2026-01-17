@@ -23,42 +23,42 @@ import "PerformanceTimingTypes.proto";
 
 // Message declarations
 message Msg_FetchOp {
-  required protobuf.mozilla.dom.FetchOpArgs aArgs = 1;
+  required protobuf.mozilla.dom.FetchOpArgs a_aArgs = 1;
 }
 
 message Msg_AbortFetchOp {
-  required bool aForceAbort = 1;
+  required bool a_aForceAbort = 1;
 }
 
 message Msg_OnResponseAvailableInternal {
-  required protobuf.mozilla.dom.ParentToChildInternalResponse aResponse = 1;
+  required protobuf.mozilla.dom.ParentToChildInternalResponse a_aResponse = 1;
 }
 
 message Msg_OnResponseEnd {
-  required protobuf.mozilla.dom.ResponseEndArgs aResponseEndArgs = 1;
+  required protobuf.mozilla.dom.ResponseEndArgs a_aResponseEndArgs = 1;
 }
 
 message Msg_OnDataAvailable {
 }
 
 message Msg_OnFlushConsoleReport {
-  repeated protobuf.mozilla.net.ConsoleReportCollected aReports = 1;
+  repeated protobuf.mozilla.net.ConsoleReportCollected a_aReports = 1;
 }
 
 message Msg_OnCSPViolationEvent {
-  required bytes aJSON = 1;
+  required bytes a_aJSON = 1;
 }
 
 message Msg_OnReportPerformanceTiming {
-  required protobuf.mozilla.dom.ResponseTiming aTiming = 1;
+  required protobuf.mozilla.dom.ResponseTiming a_aTiming = 1;
 }
 
 message Msg_OnNotifyNetworkMonitorAlternateStack {
-  required uint64 aChannelID = 1;
+  required uint64 a_aChannelID = 1;
 }
 
 message Msg___delete__ {
-  required bytes aResult = 1;
+  required bytes a_aResult = 1;
 }
 
 message Reply___delete__ {

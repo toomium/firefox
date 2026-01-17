@@ -214,43 +214,43 @@ class HeaderEntry final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
-    kValueFieldNumber = 2,
+    kANameFieldNumber = 1,
+    kAValueFieldNumber = 2,
   };
-  // required bytes name = 1;
-  bool has_name() const;
+  // required bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes value = 2;
-  bool has_value() const;
+  // required bytes a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.HeaderEntry)
@@ -266,8 +266,8 @@ class HeaderEntry final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -384,24 +384,24 @@ class StringInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.StringInputStreamParams)
@@ -414,7 +414,7 @@ class StringInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -531,52 +531,52 @@ class FileInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFileDescriptorFieldNumber = 1,
-    kBehaviorFlagsFieldNumber = 2,
-    kIoFlagsFieldNumber = 3,
+    kAFileDescriptorFieldNumber = 1,
+    kABehaviorFlagsFieldNumber = 2,
+    kAIoFlagsFieldNumber = 3,
   };
-  // required bytes fileDescriptor = 1;
-  bool has_filedescriptor() const;
+  // required bytes a_fileDescriptor = 1;
+  bool has_a_filedescriptor() const;
   private:
-  bool _internal_has_filedescriptor() const;
+  bool _internal_has_a_filedescriptor() const;
   public:
-  void clear_filedescriptor();
-  const std::string& filedescriptor() const;
+  void clear_a_filedescriptor();
+  const std::string& a_filedescriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filedescriptor(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filedescriptor();
-  PROTOBUF_NODISCARD std::string* release_filedescriptor();
-  void set_allocated_filedescriptor(std::string* filedescriptor);
+  void set_a_filedescriptor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filedescriptor();
+  PROTOBUF_NODISCARD std::string* release_a_filedescriptor();
+  void set_allocated_a_filedescriptor(std::string* a_filedescriptor);
   private:
-  const std::string& _internal_filedescriptor() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filedescriptor(const std::string& value);
-  std::string* _internal_mutable_filedescriptor();
+  const std::string& _internal_a_filedescriptor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filedescriptor(const std::string& value);
+  std::string* _internal_mutable_a_filedescriptor();
   public:
 
-  // required sint32 behaviorFlags = 2;
-  bool has_behaviorflags() const;
+  // required sint32 a_behaviorFlags = 2;
+  bool has_a_behaviorflags() const;
   private:
-  bool _internal_has_behaviorflags() const;
+  bool _internal_has_a_behaviorflags() const;
   public:
-  void clear_behaviorflags();
-  int32_t behaviorflags() const;
-  void set_behaviorflags(int32_t value);
+  void clear_a_behaviorflags();
+  int32_t a_behaviorflags() const;
+  void set_a_behaviorflags(int32_t value);
   private:
-  int32_t _internal_behaviorflags() const;
-  void _internal_set_behaviorflags(int32_t value);
+  int32_t _internal_a_behaviorflags() const;
+  void _internal_set_a_behaviorflags(int32_t value);
   public:
 
-  // required sint32 ioFlags = 3;
-  bool has_ioflags() const;
+  // required sint32 a_ioFlags = 3;
+  bool has_a_ioflags() const;
   private:
-  bool _internal_has_ioflags() const;
+  bool _internal_has_a_ioflags() const;
   public:
-  void clear_ioflags();
-  int32_t ioflags() const;
-  void set_ioflags(int32_t value);
+  void clear_a_ioflags();
+  int32_t a_ioflags() const;
+  void set_a_ioflags(int32_t value);
   private:
-  int32_t _internal_ioflags() const;
-  void _internal_set_ioflags(int32_t value);
+  int32_t _internal_a_ioflags() const;
+  void _internal_set_a_ioflags(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.FileInputStreamParams)
@@ -592,9 +592,9 @@ class FileInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filedescriptor_;
-    int32_t behaviorflags_;
-    int32_t ioflags_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filedescriptor_;
+    int32_t a_behaviorflags_;
+    int32_t a_ioflags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -711,71 +711,71 @@ class MultiplexInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamsFieldNumber = 1,
-    kStatusFieldNumber = 3,
-    kCurrentStreamFieldNumber = 2,
-    kStartedReadingCurrentFieldNumber = 4,
+    kAStreamsFieldNumber = 1,
+    kAStatusFieldNumber = 3,
+    kACurrentStreamFieldNumber = 2,
+    kAStartedReadingCurrentFieldNumber = 4,
   };
-  // repeated .protobuf.mozilla.ipc.InputStreamParams streams = 1;
-  int streams_size() const;
+  // repeated .protobuf.mozilla.ipc.InputStreamParams a_streams = 1;
+  int a_streams_size() const;
   private:
-  int _internal_streams_size() const;
+  int _internal_a_streams_size() const;
   public:
-  void clear_streams();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_streams(int index);
+  void clear_a_streams();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_streams(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams >*
-      mutable_streams();
+      mutable_a_streams();
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_streams(int index) const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_add_streams();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_streams(int index) const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_add_a_streams();
   public:
-  const ::protobuf::mozilla::ipc::InputStreamParams& streams(int index) const;
-  ::protobuf::mozilla::ipc::InputStreamParams* add_streams();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_streams(int index) const;
+  ::protobuf::mozilla::ipc::InputStreamParams* add_a_streams();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams >&
-      streams() const;
+      a_streams() const;
 
-  // required bytes status = 3;
-  bool has_status() const;
+  // required bytes a_status = 3;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  const std::string& status() const;
+  void clear_a_status();
+  const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_status(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_status();
-  PROTOBUF_NODISCARD std::string* release_status();
-  void set_allocated_status(std::string* status);
+  void set_a_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_status();
+  PROTOBUF_NODISCARD std::string* release_a_status();
+  void set_allocated_a_status(std::string* a_status);
   private:
-  const std::string& _internal_status() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_status(const std::string& value);
-  std::string* _internal_mutable_status();
+  const std::string& _internal_a_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_status(const std::string& value);
+  std::string* _internal_mutable_a_status();
   public:
 
-  // required uint32 currentStream = 2;
-  bool has_currentstream() const;
+  // required uint32 a_currentStream = 2;
+  bool has_a_currentstream() const;
   private:
-  bool _internal_has_currentstream() const;
+  bool _internal_has_a_currentstream() const;
   public:
-  void clear_currentstream();
-  uint32_t currentstream() const;
-  void set_currentstream(uint32_t value);
+  void clear_a_currentstream();
+  uint32_t a_currentstream() const;
+  void set_a_currentstream(uint32_t value);
   private:
-  uint32_t _internal_currentstream() const;
-  void _internal_set_currentstream(uint32_t value);
+  uint32_t _internal_a_currentstream() const;
+  void _internal_set_a_currentstream(uint32_t value);
   public:
 
-  // required bool startedReadingCurrent = 4;
-  bool has_startedreadingcurrent() const;
+  // required bool a_startedReadingCurrent = 4;
+  bool has_a_startedreadingcurrent() const;
   private:
-  bool _internal_has_startedreadingcurrent() const;
+  bool _internal_has_a_startedreadingcurrent() const;
   public:
-  void clear_startedreadingcurrent();
-  bool startedreadingcurrent() const;
-  void set_startedreadingcurrent(bool value);
+  void clear_a_startedreadingcurrent();
+  bool a_startedreadingcurrent() const;
+  void set_a_startedreadingcurrent(bool value);
   private:
-  bool _internal_startedreadingcurrent() const;
-  void _internal_set_startedreadingcurrent(bool value);
+  bool _internal_a_startedreadingcurrent() const;
+  void _internal_set_a_startedreadingcurrent(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.MultiplexInputStreamParams)
@@ -791,10 +791,10 @@ class MultiplexInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams > streams_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr status_;
-    uint32_t currentstream_;
-    bool startedreadingcurrent_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams > a_streams_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
+    uint32_t a_currentstream_;
+    bool a_startedreadingcurrent_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -911,80 +911,80 @@ class SlicedInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamFieldNumber = 1,
-    kStartFieldNumber = 2,
-    kLengthFieldNumber = 3,
-    kCurPosFieldNumber = 4,
-    kClosedFieldNumber = 5,
+    kAStreamFieldNumber = 1,
+    kAStartFieldNumber = 2,
+    kALengthFieldNumber = 3,
+    kACurPosFieldNumber = 4,
+    kAClosedFieldNumber = 5,
   };
-  // required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-  bool has_stream() const;
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  bool has_a_stream() const;
   private:
-  bool _internal_has_stream() const;
+  bool _internal_has_a_stream() const;
   public:
-  void clear_stream();
-  const ::protobuf::mozilla::ipc::InputStreamParams& stream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_stream();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_stream();
-  void set_allocated_stream(::protobuf::mozilla::ipc::InputStreamParams* stream);
+  void clear_a_stream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_stream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_a_stream();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_stream();
+  void set_allocated_a_stream(::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_stream() const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_stream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_stream() const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_a_stream();
   public:
-  void unsafe_arena_set_allocated_stream(
-      ::protobuf::mozilla::ipc::InputStreamParams* stream);
-  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_stream();
+  void unsafe_arena_set_allocated_a_stream(
+      ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
+  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
-  // required uint64 start = 2;
-  bool has_start() const;
+  // required uint64 a_start = 2;
+  bool has_a_start() const;
   private:
-  bool _internal_has_start() const;
+  bool _internal_has_a_start() const;
   public:
-  void clear_start();
-  uint64_t start() const;
-  void set_start(uint64_t value);
+  void clear_a_start();
+  uint64_t a_start() const;
+  void set_a_start(uint64_t value);
   private:
-  uint64_t _internal_start() const;
-  void _internal_set_start(uint64_t value);
-  public:
-
-  // required uint64 length = 3;
-  bool has_length() const;
-  private:
-  bool _internal_has_length() const;
-  public:
-  void clear_length();
-  uint64_t length() const;
-  void set_length(uint64_t value);
-  private:
-  uint64_t _internal_length() const;
-  void _internal_set_length(uint64_t value);
+  uint64_t _internal_a_start() const;
+  void _internal_set_a_start(uint64_t value);
   public:
 
-  // required uint64 curPos = 4;
-  bool has_curpos() const;
+  // required uint64 a_length = 3;
+  bool has_a_length() const;
   private:
-  bool _internal_has_curpos() const;
+  bool _internal_has_a_length() const;
   public:
-  void clear_curpos();
-  uint64_t curpos() const;
-  void set_curpos(uint64_t value);
+  void clear_a_length();
+  uint64_t a_length() const;
+  void set_a_length(uint64_t value);
   private:
-  uint64_t _internal_curpos() const;
-  void _internal_set_curpos(uint64_t value);
+  uint64_t _internal_a_length() const;
+  void _internal_set_a_length(uint64_t value);
   public:
 
-  // required bool closed = 5;
-  bool has_closed() const;
+  // required uint64 a_curPos = 4;
+  bool has_a_curpos() const;
   private:
-  bool _internal_has_closed() const;
+  bool _internal_has_a_curpos() const;
   public:
-  void clear_closed();
-  bool closed() const;
-  void set_closed(bool value);
+  void clear_a_curpos();
+  uint64_t a_curpos() const;
+  void set_a_curpos(uint64_t value);
   private:
-  bool _internal_closed() const;
-  void _internal_set_closed(bool value);
+  uint64_t _internal_a_curpos() const;
+  void _internal_set_a_curpos(uint64_t value);
+  public:
+
+  // required bool a_closed = 5;
+  bool has_a_closed() const;
+  private:
+  bool _internal_has_a_closed() const;
+  public:
+  void clear_a_closed();
+  bool a_closed() const;
+  void set_a_closed(bool value);
+  private:
+  bool _internal_a_closed() const;
+  void _internal_set_a_closed(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.SlicedInputStreamParams)
@@ -1000,11 +1000,11 @@ class SlicedInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::InputStreamParams* stream_;
-    uint64_t start_;
-    uint64_t length_;
-    uint64_t curpos_;
-    bool closed_;
+    ::protobuf::mozilla::ipc::InputStreamParams* a_stream_;
+    uint64_t a_start_;
+    uint64_t a_length_;
+    uint64_t a_curpos_;
+    bool a_closed_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1121,24 +1121,24 @@ class RemoteLazyInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamFieldNumber = 1,
+    kAStreamFieldNumber = 1,
   };
-  // required bytes stream = 1;
-  bool has_stream() const;
+  // required bytes a_stream = 1;
+  bool has_a_stream() const;
   private:
-  bool _internal_has_stream() const;
+  bool _internal_has_a_stream() const;
   public:
-  void clear_stream();
-  const std::string& stream() const;
+  void clear_a_stream();
+  const std::string& a_stream() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_stream(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_stream();
-  PROTOBUF_NODISCARD std::string* release_stream();
-  void set_allocated_stream(std::string* stream);
+  void set_a_stream(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_stream();
+  PROTOBUF_NODISCARD std::string* release_a_stream();
+  void set_allocated_a_stream(std::string* a_stream);
   private:
-  const std::string& _internal_stream() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_stream(const std::string& value);
-  std::string* _internal_mutable_stream();
+  const std::string& _internal_a_stream() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_stream(const std::string& value);
+  std::string* _internal_mutable_a_stream();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.RemoteLazyInputStreamParams)
@@ -1151,7 +1151,7 @@ class RemoteLazyInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr stream_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_stream_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1268,24 +1268,24 @@ class DataPipeReceiverStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPipeFieldNumber = 1,
+    kAPipeFieldNumber = 1,
   };
-  // required bytes pipe = 1;
-  bool has_pipe() const;
+  // required bytes a_pipe = 1;
+  bool has_a_pipe() const;
   private:
-  bool _internal_has_pipe() const;
+  bool _internal_has_a_pipe() const;
   public:
-  void clear_pipe();
-  const std::string& pipe() const;
+  void clear_a_pipe();
+  const std::string& a_pipe() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_pipe(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_pipe();
-  PROTOBUF_NODISCARD std::string* release_pipe();
-  void set_allocated_pipe(std::string* pipe);
+  void set_a_pipe(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_pipe();
+  PROTOBUF_NODISCARD std::string* release_a_pipe();
+  void set_allocated_a_pipe(std::string* a_pipe);
   private:
-  const std::string& _internal_pipe() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pipe(const std::string& value);
-  std::string* _internal_mutable_pipe();
+  const std::string& _internal_a_pipe() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_pipe(const std::string& value);
+  std::string* _internal_mutable_a_pipe();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.DataPipeReceiverStreamParams)
@@ -1298,7 +1298,7 @@ class DataPipeReceiverStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pipe_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1347,16 +1347,16 @@ class InputStreamParams final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVStringInputStreamParams = 1,
-    kMVFileInputStreamParams = 2,
-    kMVBufferedInputStreamParams = 3,
-    kMVMIMEInputStreamParams = 4,
-    kMVMultiplexInputStreamParams = 5,
-    kMVSlicedInputStreamParams = 6,
-    kMVRemoteLazyInputStreamParams = 7,
-    kMVInputStreamLengthWrapperParams = 8,
-    kMVEncryptedFileInputStreamParams = 9,
-    kMVDataPipeReceiverStreamParams = 10,
+    kAMVStringInputStreamParams = 1,
+    kAMVFileInputStreamParams = 2,
+    kAMVBufferedInputStreamParams = 3,
+    kAMVMIMEInputStreamParams = 4,
+    kAMVMultiplexInputStreamParams = 5,
+    kAMVSlicedInputStreamParams = 6,
+    kAMVRemoteLazyInputStreamParams = 7,
+    kAMVInputStreamLengthWrapperParams = 8,
+    kAMVEncryptedFileInputStreamParams = 9,
+    kAMVDataPipeReceiverStreamParams = 10,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1429,212 +1429,212 @@ class InputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVStringInputStreamParamsFieldNumber = 1,
-    kMVFileInputStreamParamsFieldNumber = 2,
-    kMVBufferedInputStreamParamsFieldNumber = 3,
-    kMVMIMEInputStreamParamsFieldNumber = 4,
-    kMVMultiplexInputStreamParamsFieldNumber = 5,
-    kMVSlicedInputStreamParamsFieldNumber = 6,
-    kMVRemoteLazyInputStreamParamsFieldNumber = 7,
-    kMVInputStreamLengthWrapperParamsFieldNumber = 8,
-    kMVEncryptedFileInputStreamParamsFieldNumber = 9,
-    kMVDataPipeReceiverStreamParamsFieldNumber = 10,
+    kAMVStringInputStreamParamsFieldNumber = 1,
+    kAMVFileInputStreamParamsFieldNumber = 2,
+    kAMVBufferedInputStreamParamsFieldNumber = 3,
+    kAMVMIMEInputStreamParamsFieldNumber = 4,
+    kAMVMultiplexInputStreamParamsFieldNumber = 5,
+    kAMVSlicedInputStreamParamsFieldNumber = 6,
+    kAMVRemoteLazyInputStreamParamsFieldNumber = 7,
+    kAMVInputStreamLengthWrapperParamsFieldNumber = 8,
+    kAMVEncryptedFileInputStreamParamsFieldNumber = 9,
+    kAMVDataPipeReceiverStreamParamsFieldNumber = 10,
   };
-  // .protobuf.mozilla.ipc.StringInputStreamParams mVStringInputStreamParams = 1;
-  bool has_mvstringinputstreamparams() const;
+  // .protobuf.mozilla.ipc.StringInputStreamParams a_mVStringInputStreamParams = 1;
+  bool has_a_mvstringinputstreamparams() const;
   private:
-  bool _internal_has_mvstringinputstreamparams() const;
+  bool _internal_has_a_mvstringinputstreamparams() const;
   public:
-  void clear_mvstringinputstreamparams();
-  const ::protobuf::mozilla::ipc::StringInputStreamParams& mvstringinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::StringInputStreamParams* release_mvstringinputstreamparams();
-  ::protobuf::mozilla::ipc::StringInputStreamParams* mutable_mvstringinputstreamparams();
-  void set_allocated_mvstringinputstreamparams(::protobuf::mozilla::ipc::StringInputStreamParams* mvstringinputstreamparams);
+  void clear_a_mvstringinputstreamparams();
+  const ::protobuf::mozilla::ipc::StringInputStreamParams& a_mvstringinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::StringInputStreamParams* release_a_mvstringinputstreamparams();
+  ::protobuf::mozilla::ipc::StringInputStreamParams* mutable_a_mvstringinputstreamparams();
+  void set_allocated_a_mvstringinputstreamparams(::protobuf::mozilla::ipc::StringInputStreamParams* a_mvstringinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::StringInputStreamParams& _internal_mvstringinputstreamparams() const;
-  ::protobuf::mozilla::ipc::StringInputStreamParams* _internal_mutable_mvstringinputstreamparams();
+  const ::protobuf::mozilla::ipc::StringInputStreamParams& _internal_a_mvstringinputstreamparams() const;
+  ::protobuf::mozilla::ipc::StringInputStreamParams* _internal_mutable_a_mvstringinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvstringinputstreamparams(
-      ::protobuf::mozilla::ipc::StringInputStreamParams* mvstringinputstreamparams);
-  ::protobuf::mozilla::ipc::StringInputStreamParams* unsafe_arena_release_mvstringinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvstringinputstreamparams(
+      ::protobuf::mozilla::ipc::StringInputStreamParams* a_mvstringinputstreamparams);
+  ::protobuf::mozilla::ipc::StringInputStreamParams* unsafe_arena_release_a_mvstringinputstreamparams();
 
-  // .protobuf.mozilla.ipc.FileInputStreamParams mVFileInputStreamParams = 2;
-  bool has_mvfileinputstreamparams() const;
+  // .protobuf.mozilla.ipc.FileInputStreamParams a_mVFileInputStreamParams = 2;
+  bool has_a_mvfileinputstreamparams() const;
   private:
-  bool _internal_has_mvfileinputstreamparams() const;
+  bool _internal_has_a_mvfileinputstreamparams() const;
   public:
-  void clear_mvfileinputstreamparams();
-  const ::protobuf::mozilla::ipc::FileInputStreamParams& mvfileinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::FileInputStreamParams* release_mvfileinputstreamparams();
-  ::protobuf::mozilla::ipc::FileInputStreamParams* mutable_mvfileinputstreamparams();
-  void set_allocated_mvfileinputstreamparams(::protobuf::mozilla::ipc::FileInputStreamParams* mvfileinputstreamparams);
+  void clear_a_mvfileinputstreamparams();
+  const ::protobuf::mozilla::ipc::FileInputStreamParams& a_mvfileinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::FileInputStreamParams* release_a_mvfileinputstreamparams();
+  ::protobuf::mozilla::ipc::FileInputStreamParams* mutable_a_mvfileinputstreamparams();
+  void set_allocated_a_mvfileinputstreamparams(::protobuf::mozilla::ipc::FileInputStreamParams* a_mvfileinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::FileInputStreamParams& _internal_mvfileinputstreamparams() const;
-  ::protobuf::mozilla::ipc::FileInputStreamParams* _internal_mutable_mvfileinputstreamparams();
+  const ::protobuf::mozilla::ipc::FileInputStreamParams& _internal_a_mvfileinputstreamparams() const;
+  ::protobuf::mozilla::ipc::FileInputStreamParams* _internal_mutable_a_mvfileinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvfileinputstreamparams(
-      ::protobuf::mozilla::ipc::FileInputStreamParams* mvfileinputstreamparams);
-  ::protobuf::mozilla::ipc::FileInputStreamParams* unsafe_arena_release_mvfileinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvfileinputstreamparams(
+      ::protobuf::mozilla::ipc::FileInputStreamParams* a_mvfileinputstreamparams);
+  ::protobuf::mozilla::ipc::FileInputStreamParams* unsafe_arena_release_a_mvfileinputstreamparams();
 
-  // .protobuf.mozilla.ipc.BufferedInputStreamParams mVBufferedInputStreamParams = 3;
-  bool has_mvbufferedinputstreamparams() const;
+  // .protobuf.mozilla.ipc.BufferedInputStreamParams a_mVBufferedInputStreamParams = 3;
+  bool has_a_mvbufferedinputstreamparams() const;
   private:
-  bool _internal_has_mvbufferedinputstreamparams() const;
+  bool _internal_has_a_mvbufferedinputstreamparams() const;
   public:
-  void clear_mvbufferedinputstreamparams();
-  const ::protobuf::mozilla::ipc::BufferedInputStreamParams& mvbufferedinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::BufferedInputStreamParams* release_mvbufferedinputstreamparams();
-  ::protobuf::mozilla::ipc::BufferedInputStreamParams* mutable_mvbufferedinputstreamparams();
-  void set_allocated_mvbufferedinputstreamparams(::protobuf::mozilla::ipc::BufferedInputStreamParams* mvbufferedinputstreamparams);
+  void clear_a_mvbufferedinputstreamparams();
+  const ::protobuf::mozilla::ipc::BufferedInputStreamParams& a_mvbufferedinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::BufferedInputStreamParams* release_a_mvbufferedinputstreamparams();
+  ::protobuf::mozilla::ipc::BufferedInputStreamParams* mutable_a_mvbufferedinputstreamparams();
+  void set_allocated_a_mvbufferedinputstreamparams(::protobuf::mozilla::ipc::BufferedInputStreamParams* a_mvbufferedinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::BufferedInputStreamParams& _internal_mvbufferedinputstreamparams() const;
-  ::protobuf::mozilla::ipc::BufferedInputStreamParams* _internal_mutable_mvbufferedinputstreamparams();
+  const ::protobuf::mozilla::ipc::BufferedInputStreamParams& _internal_a_mvbufferedinputstreamparams() const;
+  ::protobuf::mozilla::ipc::BufferedInputStreamParams* _internal_mutable_a_mvbufferedinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvbufferedinputstreamparams(
-      ::protobuf::mozilla::ipc::BufferedInputStreamParams* mvbufferedinputstreamparams);
-  ::protobuf::mozilla::ipc::BufferedInputStreamParams* unsafe_arena_release_mvbufferedinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvbufferedinputstreamparams(
+      ::protobuf::mozilla::ipc::BufferedInputStreamParams* a_mvbufferedinputstreamparams);
+  ::protobuf::mozilla::ipc::BufferedInputStreamParams* unsafe_arena_release_a_mvbufferedinputstreamparams();
 
-  // .protobuf.mozilla.ipc.MIMEInputStreamParams mVMIMEInputStreamParams = 4;
-  bool has_mvmimeinputstreamparams() const;
+  // .protobuf.mozilla.ipc.MIMEInputStreamParams a_mVMIMEInputStreamParams = 4;
+  bool has_a_mvmimeinputstreamparams() const;
   private:
-  bool _internal_has_mvmimeinputstreamparams() const;
+  bool _internal_has_a_mvmimeinputstreamparams() const;
   public:
-  void clear_mvmimeinputstreamparams();
-  const ::protobuf::mozilla::ipc::MIMEInputStreamParams& mvmimeinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::MIMEInputStreamParams* release_mvmimeinputstreamparams();
-  ::protobuf::mozilla::ipc::MIMEInputStreamParams* mutable_mvmimeinputstreamparams();
-  void set_allocated_mvmimeinputstreamparams(::protobuf::mozilla::ipc::MIMEInputStreamParams* mvmimeinputstreamparams);
+  void clear_a_mvmimeinputstreamparams();
+  const ::protobuf::mozilla::ipc::MIMEInputStreamParams& a_mvmimeinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::MIMEInputStreamParams* release_a_mvmimeinputstreamparams();
+  ::protobuf::mozilla::ipc::MIMEInputStreamParams* mutable_a_mvmimeinputstreamparams();
+  void set_allocated_a_mvmimeinputstreamparams(::protobuf::mozilla::ipc::MIMEInputStreamParams* a_mvmimeinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::MIMEInputStreamParams& _internal_mvmimeinputstreamparams() const;
-  ::protobuf::mozilla::ipc::MIMEInputStreamParams* _internal_mutable_mvmimeinputstreamparams();
+  const ::protobuf::mozilla::ipc::MIMEInputStreamParams& _internal_a_mvmimeinputstreamparams() const;
+  ::protobuf::mozilla::ipc::MIMEInputStreamParams* _internal_mutable_a_mvmimeinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvmimeinputstreamparams(
-      ::protobuf::mozilla::ipc::MIMEInputStreamParams* mvmimeinputstreamparams);
-  ::protobuf::mozilla::ipc::MIMEInputStreamParams* unsafe_arena_release_mvmimeinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvmimeinputstreamparams(
+      ::protobuf::mozilla::ipc::MIMEInputStreamParams* a_mvmimeinputstreamparams);
+  ::protobuf::mozilla::ipc::MIMEInputStreamParams* unsafe_arena_release_a_mvmimeinputstreamparams();
 
-  // .protobuf.mozilla.ipc.MultiplexInputStreamParams mVMultiplexInputStreamParams = 5;
-  bool has_mvmultiplexinputstreamparams() const;
+  // .protobuf.mozilla.ipc.MultiplexInputStreamParams a_mVMultiplexInputStreamParams = 5;
+  bool has_a_mvmultiplexinputstreamparams() const;
   private:
-  bool _internal_has_mvmultiplexinputstreamparams() const;
+  bool _internal_has_a_mvmultiplexinputstreamparams() const;
   public:
-  void clear_mvmultiplexinputstreamparams();
-  const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& mvmultiplexinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::MultiplexInputStreamParams* release_mvmultiplexinputstreamparams();
-  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* mutable_mvmultiplexinputstreamparams();
-  void set_allocated_mvmultiplexinputstreamparams(::protobuf::mozilla::ipc::MultiplexInputStreamParams* mvmultiplexinputstreamparams);
+  void clear_a_mvmultiplexinputstreamparams();
+  const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& a_mvmultiplexinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::MultiplexInputStreamParams* release_a_mvmultiplexinputstreamparams();
+  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* mutable_a_mvmultiplexinputstreamparams();
+  void set_allocated_a_mvmultiplexinputstreamparams(::protobuf::mozilla::ipc::MultiplexInputStreamParams* a_mvmultiplexinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& _internal_mvmultiplexinputstreamparams() const;
-  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* _internal_mutable_mvmultiplexinputstreamparams();
+  const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& _internal_a_mvmultiplexinputstreamparams() const;
+  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* _internal_mutable_a_mvmultiplexinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvmultiplexinputstreamparams(
-      ::protobuf::mozilla::ipc::MultiplexInputStreamParams* mvmultiplexinputstreamparams);
-  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* unsafe_arena_release_mvmultiplexinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvmultiplexinputstreamparams(
+      ::protobuf::mozilla::ipc::MultiplexInputStreamParams* a_mvmultiplexinputstreamparams);
+  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* unsafe_arena_release_a_mvmultiplexinputstreamparams();
 
-  // .protobuf.mozilla.ipc.SlicedInputStreamParams mVSlicedInputStreamParams = 6;
-  bool has_mvslicedinputstreamparams() const;
+  // .protobuf.mozilla.ipc.SlicedInputStreamParams a_mVSlicedInputStreamParams = 6;
+  bool has_a_mvslicedinputstreamparams() const;
   private:
-  bool _internal_has_mvslicedinputstreamparams() const;
+  bool _internal_has_a_mvslicedinputstreamparams() const;
   public:
-  void clear_mvslicedinputstreamparams();
-  const ::protobuf::mozilla::ipc::SlicedInputStreamParams& mvslicedinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::SlicedInputStreamParams* release_mvslicedinputstreamparams();
-  ::protobuf::mozilla::ipc::SlicedInputStreamParams* mutable_mvslicedinputstreamparams();
-  void set_allocated_mvslicedinputstreamparams(::protobuf::mozilla::ipc::SlicedInputStreamParams* mvslicedinputstreamparams);
+  void clear_a_mvslicedinputstreamparams();
+  const ::protobuf::mozilla::ipc::SlicedInputStreamParams& a_mvslicedinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::SlicedInputStreamParams* release_a_mvslicedinputstreamparams();
+  ::protobuf::mozilla::ipc::SlicedInputStreamParams* mutable_a_mvslicedinputstreamparams();
+  void set_allocated_a_mvslicedinputstreamparams(::protobuf::mozilla::ipc::SlicedInputStreamParams* a_mvslicedinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::SlicedInputStreamParams& _internal_mvslicedinputstreamparams() const;
-  ::protobuf::mozilla::ipc::SlicedInputStreamParams* _internal_mutable_mvslicedinputstreamparams();
+  const ::protobuf::mozilla::ipc::SlicedInputStreamParams& _internal_a_mvslicedinputstreamparams() const;
+  ::protobuf::mozilla::ipc::SlicedInputStreamParams* _internal_mutable_a_mvslicedinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvslicedinputstreamparams(
-      ::protobuf::mozilla::ipc::SlicedInputStreamParams* mvslicedinputstreamparams);
-  ::protobuf::mozilla::ipc::SlicedInputStreamParams* unsafe_arena_release_mvslicedinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvslicedinputstreamparams(
+      ::protobuf::mozilla::ipc::SlicedInputStreamParams* a_mvslicedinputstreamparams);
+  ::protobuf::mozilla::ipc::SlicedInputStreamParams* unsafe_arena_release_a_mvslicedinputstreamparams();
 
-  // .protobuf.mozilla.ipc.RemoteLazyInputStreamParams mVRemoteLazyInputStreamParams = 7;
-  bool has_mvremotelazyinputstreamparams() const;
+  // .protobuf.mozilla.ipc.RemoteLazyInputStreamParams a_mVRemoteLazyInputStreamParams = 7;
+  bool has_a_mvremotelazyinputstreamparams() const;
   private:
-  bool _internal_has_mvremotelazyinputstreamparams() const;
+  bool _internal_has_a_mvremotelazyinputstreamparams() const;
   public:
-  void clear_mvremotelazyinputstreamparams();
-  const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& mvremotelazyinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* release_mvremotelazyinputstreamparams();
-  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* mutable_mvremotelazyinputstreamparams();
-  void set_allocated_mvremotelazyinputstreamparams(::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* mvremotelazyinputstreamparams);
+  void clear_a_mvremotelazyinputstreamparams();
+  const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& a_mvremotelazyinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* release_a_mvremotelazyinputstreamparams();
+  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* mutable_a_mvremotelazyinputstreamparams();
+  void set_allocated_a_mvremotelazyinputstreamparams(::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* a_mvremotelazyinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& _internal_mvremotelazyinputstreamparams() const;
-  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* _internal_mutable_mvremotelazyinputstreamparams();
+  const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& _internal_a_mvremotelazyinputstreamparams() const;
+  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* _internal_mutable_a_mvremotelazyinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvremotelazyinputstreamparams(
-      ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* mvremotelazyinputstreamparams);
-  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* unsafe_arena_release_mvremotelazyinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvremotelazyinputstreamparams(
+      ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* a_mvremotelazyinputstreamparams);
+  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* unsafe_arena_release_a_mvremotelazyinputstreamparams();
 
-  // .protobuf.mozilla.ipc.InputStreamLengthWrapperParams mVInputStreamLengthWrapperParams = 8;
-  bool has_mvinputstreamlengthwrapperparams() const;
+  // .protobuf.mozilla.ipc.InputStreamLengthWrapperParams a_mVInputStreamLengthWrapperParams = 8;
+  bool has_a_mvinputstreamlengthwrapperparams() const;
   private:
-  bool _internal_has_mvinputstreamlengthwrapperparams() const;
+  bool _internal_has_a_mvinputstreamlengthwrapperparams() const;
   public:
-  void clear_mvinputstreamlengthwrapperparams();
-  const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& mvinputstreamlengthwrapperparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* release_mvinputstreamlengthwrapperparams();
-  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* mutable_mvinputstreamlengthwrapperparams();
-  void set_allocated_mvinputstreamlengthwrapperparams(::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* mvinputstreamlengthwrapperparams);
+  void clear_a_mvinputstreamlengthwrapperparams();
+  const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& a_mvinputstreamlengthwrapperparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* release_a_mvinputstreamlengthwrapperparams();
+  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* mutable_a_mvinputstreamlengthwrapperparams();
+  void set_allocated_a_mvinputstreamlengthwrapperparams(::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* a_mvinputstreamlengthwrapperparams);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& _internal_mvinputstreamlengthwrapperparams() const;
-  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* _internal_mutable_mvinputstreamlengthwrapperparams();
+  const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& _internal_a_mvinputstreamlengthwrapperparams() const;
+  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* _internal_mutable_a_mvinputstreamlengthwrapperparams();
   public:
-  void unsafe_arena_set_allocated_mvinputstreamlengthwrapperparams(
-      ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* mvinputstreamlengthwrapperparams);
-  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* unsafe_arena_release_mvinputstreamlengthwrapperparams();
+  void unsafe_arena_set_allocated_a_mvinputstreamlengthwrapperparams(
+      ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* a_mvinputstreamlengthwrapperparams);
+  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* unsafe_arena_release_a_mvinputstreamlengthwrapperparams();
 
-  // .protobuf.mozilla.ipc.EncryptedFileInputStreamParams mVEncryptedFileInputStreamParams = 9;
-  bool has_mvencryptedfileinputstreamparams() const;
+  // .protobuf.mozilla.ipc.EncryptedFileInputStreamParams a_mVEncryptedFileInputStreamParams = 9;
+  bool has_a_mvencryptedfileinputstreamparams() const;
   private:
-  bool _internal_has_mvencryptedfileinputstreamparams() const;
+  bool _internal_has_a_mvencryptedfileinputstreamparams() const;
   public:
-  void clear_mvencryptedfileinputstreamparams();
-  const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& mvencryptedfileinputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* release_mvencryptedfileinputstreamparams();
-  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* mutable_mvencryptedfileinputstreamparams();
-  void set_allocated_mvencryptedfileinputstreamparams(::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* mvencryptedfileinputstreamparams);
+  void clear_a_mvencryptedfileinputstreamparams();
+  const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& a_mvencryptedfileinputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* release_a_mvencryptedfileinputstreamparams();
+  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* mutable_a_mvencryptedfileinputstreamparams();
+  void set_allocated_a_mvencryptedfileinputstreamparams(::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* a_mvencryptedfileinputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& _internal_mvencryptedfileinputstreamparams() const;
-  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* _internal_mutable_mvencryptedfileinputstreamparams();
+  const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& _internal_a_mvencryptedfileinputstreamparams() const;
+  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* _internal_mutable_a_mvencryptedfileinputstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvencryptedfileinputstreamparams(
-      ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* mvencryptedfileinputstreamparams);
-  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* unsafe_arena_release_mvencryptedfileinputstreamparams();
+  void unsafe_arena_set_allocated_a_mvencryptedfileinputstreamparams(
+      ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* a_mvencryptedfileinputstreamparams);
+  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* unsafe_arena_release_a_mvencryptedfileinputstreamparams();
 
-  // .protobuf.mozilla.ipc.DataPipeReceiverStreamParams mVDataPipeReceiverStreamParams = 10;
-  bool has_mvdatapipereceiverstreamparams() const;
+  // .protobuf.mozilla.ipc.DataPipeReceiverStreamParams a_mVDataPipeReceiverStreamParams = 10;
+  bool has_a_mvdatapipereceiverstreamparams() const;
   private:
-  bool _internal_has_mvdatapipereceiverstreamparams() const;
+  bool _internal_has_a_mvdatapipereceiverstreamparams() const;
   public:
-  void clear_mvdatapipereceiverstreamparams();
-  const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& mvdatapipereceiverstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* release_mvdatapipereceiverstreamparams();
-  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* mutable_mvdatapipereceiverstreamparams();
-  void set_allocated_mvdatapipereceiverstreamparams(::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* mvdatapipereceiverstreamparams);
+  void clear_a_mvdatapipereceiverstreamparams();
+  const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& a_mvdatapipereceiverstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* release_a_mvdatapipereceiverstreamparams();
+  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* mutable_a_mvdatapipereceiverstreamparams();
+  void set_allocated_a_mvdatapipereceiverstreamparams(::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* a_mvdatapipereceiverstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& _internal_mvdatapipereceiverstreamparams() const;
-  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* _internal_mutable_mvdatapipereceiverstreamparams();
+  const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& _internal_a_mvdatapipereceiverstreamparams() const;
+  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* _internal_mutable_a_mvdatapipereceiverstreamparams();
   public:
-  void unsafe_arena_set_allocated_mvdatapipereceiverstreamparams(
-      ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* mvdatapipereceiverstreamparams);
-  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* unsafe_arena_release_mvdatapipereceiverstreamparams();
+  void unsafe_arena_set_allocated_a_mvdatapipereceiverstreamparams(
+      ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* a_mvdatapipereceiverstreamparams);
+  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* unsafe_arena_release_a_mvdatapipereceiverstreamparams();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.InputStreamParams)
  private:
   class _Internal;
-  void set_has_mvstringinputstreamparams();
-  void set_has_mvfileinputstreamparams();
-  void set_has_mvbufferedinputstreamparams();
-  void set_has_mvmimeinputstreamparams();
-  void set_has_mvmultiplexinputstreamparams();
-  void set_has_mvslicedinputstreamparams();
-  void set_has_mvremotelazyinputstreamparams();
-  void set_has_mvinputstreamlengthwrapperparams();
-  void set_has_mvencryptedfileinputstreamparams();
-  void set_has_mvdatapipereceiverstreamparams();
+  void set_has_a_mvstringinputstreamparams();
+  void set_has_a_mvfileinputstreamparams();
+  void set_has_a_mvbufferedinputstreamparams();
+  void set_has_a_mvmimeinputstreamparams();
+  void set_has_a_mvmultiplexinputstreamparams();
+  void set_has_a_mvslicedinputstreamparams();
+  void set_has_a_mvremotelazyinputstreamparams();
+  void set_has_a_mvinputstreamlengthwrapperparams();
+  void set_has_a_mvencryptedfileinputstreamparams();
+  void set_has_a_mvdatapipereceiverstreamparams();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1646,16 +1646,16 @@ class InputStreamParams final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::ipc::StringInputStreamParams* mvstringinputstreamparams_;
-      ::protobuf::mozilla::ipc::FileInputStreamParams* mvfileinputstreamparams_;
-      ::protobuf::mozilla::ipc::BufferedInputStreamParams* mvbufferedinputstreamparams_;
-      ::protobuf::mozilla::ipc::MIMEInputStreamParams* mvmimeinputstreamparams_;
-      ::protobuf::mozilla::ipc::MultiplexInputStreamParams* mvmultiplexinputstreamparams_;
-      ::protobuf::mozilla::ipc::SlicedInputStreamParams* mvslicedinputstreamparams_;
-      ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* mvremotelazyinputstreamparams_;
-      ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* mvinputstreamlengthwrapperparams_;
-      ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* mvencryptedfileinputstreamparams_;
-      ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* mvdatapipereceiverstreamparams_;
+      ::protobuf::mozilla::ipc::StringInputStreamParams* a_mvstringinputstreamparams_;
+      ::protobuf::mozilla::ipc::FileInputStreamParams* a_mvfileinputstreamparams_;
+      ::protobuf::mozilla::ipc::BufferedInputStreamParams* a_mvbufferedinputstreamparams_;
+      ::protobuf::mozilla::ipc::MIMEInputStreamParams* a_mvmimeinputstreamparams_;
+      ::protobuf::mozilla::ipc::MultiplexInputStreamParams* a_mvmultiplexinputstreamparams_;
+      ::protobuf::mozilla::ipc::SlicedInputStreamParams* a_mvslicedinputstreamparams_;
+      ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* a_mvremotelazyinputstreamparams_;
+      ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* a_mvinputstreamlengthwrapperparams_;
+      ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* a_mvencryptedfileinputstreamparams_;
+      ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* a_mvdatapipereceiverstreamparams_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1776,61 +1776,61 @@ class EncryptedFileInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 2,
-    kInputStreamParamsFieldNumber = 1,
-    kBlockSizeFieldNumber = 3,
+    kAKeyFieldNumber = 2,
+    kAInputStreamParamsFieldNumber = 1,
+    kABlockSizeFieldNumber = 3,
   };
-  // repeated uint32 key = 2;
-  int key_size() const;
+  // repeated uint32 a_key = 2;
+  int a_key_size() const;
   private:
-  int _internal_key_size() const;
+  int _internal_a_key_size() const;
   public:
-  void clear_key();
+  void clear_a_key();
   private:
-  uint32_t _internal_key(int index) const;
+  uint32_t _internal_a_key(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_key() const;
-  void _internal_add_key(uint32_t value);
+      _internal_a_key() const;
+  void _internal_add_a_key(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_key();
+      _internal_mutable_a_key();
   public:
-  uint32_t key(int index) const;
-  void set_key(int index, uint32_t value);
-  void add_key(uint32_t value);
+  uint32_t a_key(int index) const;
+  void set_a_key(int index, uint32_t value);
+  void add_a_key(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      key() const;
+      a_key() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_key();
+      mutable_a_key();
 
-  // required .protobuf.mozilla.ipc.InputStreamParams inputStreamParams = 1;
-  bool has_inputstreamparams() const;
+  // required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+  bool has_a_inputstreamparams() const;
   private:
-  bool _internal_has_inputstreamparams() const;
+  bool _internal_has_a_inputstreamparams() const;
   public:
-  void clear_inputstreamparams();
-  const ::protobuf::mozilla::ipc::InputStreamParams& inputstreamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_inputstreamparams();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_inputstreamparams();
-  void set_allocated_inputstreamparams(::protobuf::mozilla::ipc::InputStreamParams* inputstreamparams);
+  void clear_a_inputstreamparams();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_inputstreamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_a_inputstreamparams();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_inputstreamparams();
+  void set_allocated_a_inputstreamparams(::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_inputstreamparams() const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_inputstreamparams();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_inputstreamparams() const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_a_inputstreamparams();
   public:
-  void unsafe_arena_set_allocated_inputstreamparams(
-      ::protobuf::mozilla::ipc::InputStreamParams* inputstreamparams);
-  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_inputstreamparams();
+  void unsafe_arena_set_allocated_a_inputstreamparams(
+      ::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams);
+  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_inputstreamparams();
 
-  // required uint32 blockSize = 3;
-  bool has_blocksize() const;
+  // required uint32 a_blockSize = 3;
+  bool has_a_blocksize() const;
   private:
-  bool _internal_has_blocksize() const;
+  bool _internal_has_a_blocksize() const;
   public:
-  void clear_blocksize();
-  uint32_t blocksize() const;
-  void set_blocksize(uint32_t value);
+  void clear_a_blocksize();
+  uint32_t a_blocksize() const;
+  void set_a_blocksize(uint32_t value);
   private:
-  uint32_t _internal_blocksize() const;
-  void _internal_set_blocksize(uint32_t value);
+  uint32_t _internal_a_blocksize() const;
+  void _internal_set_a_blocksize(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.EncryptedFileInputStreamParams)
@@ -1846,9 +1846,9 @@ class EncryptedFileInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > key_;
-    ::protobuf::mozilla::ipc::InputStreamParams* inputstreamparams_;
-    uint32_t blocksize_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_key_;
+    ::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams_;
+    uint32_t a_blocksize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1965,38 +1965,38 @@ class BufferedInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOptionalStreamFieldNumber = 1,
-    kBufferSizeFieldNumber = 2,
+    kAOptionalStreamFieldNumber = 1,
+    kABufferSizeFieldNumber = 2,
   };
-  // optional .protobuf.mozilla.ipc.InputStreamParams optionalStream = 1;
-  bool has_optionalstream() const;
+  // optional .protobuf.mozilla.ipc.InputStreamParams a_optionalStream = 1;
+  bool has_a_optionalstream() const;
   private:
-  bool _internal_has_optionalstream() const;
+  bool _internal_has_a_optionalstream() const;
   public:
-  void clear_optionalstream();
-  const ::protobuf::mozilla::ipc::InputStreamParams& optionalstream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_optionalstream();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_optionalstream();
-  void set_allocated_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* optionalstream);
+  void clear_a_optionalstream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_optionalstream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_a_optionalstream();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_optionalstream();
+  void set_allocated_a_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_optionalstream() const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_optionalstream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_optionalstream() const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_a_optionalstream();
   public:
-  void unsafe_arena_set_allocated_optionalstream(
-      ::protobuf::mozilla::ipc::InputStreamParams* optionalstream);
-  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_optionalstream();
+  void unsafe_arena_set_allocated_a_optionalstream(
+      ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
+  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_optionalstream();
 
-  // required uint32 bufferSize = 2;
-  bool has_buffersize() const;
+  // required uint32 a_bufferSize = 2;
+  bool has_a_buffersize() const;
   private:
-  bool _internal_has_buffersize() const;
+  bool _internal_has_a_buffersize() const;
   public:
-  void clear_buffersize();
-  uint32_t buffersize() const;
-  void set_buffersize(uint32_t value);
+  void clear_a_buffersize();
+  uint32_t a_buffersize() const;
+  void set_a_buffersize(uint32_t value);
   private:
-  uint32_t _internal_buffersize() const;
-  void _internal_set_buffersize(uint32_t value);
+  uint32_t _internal_a_buffersize() const;
+  void _internal_set_a_buffersize(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.BufferedInputStreamParams)
@@ -2009,8 +2009,8 @@ class BufferedInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::InputStreamParams* optionalstream_;
-    uint32_t buffersize_;
+    ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream_;
+    uint32_t a_buffersize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -2127,57 +2127,57 @@ class MIMEInputStreamParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHeadersFieldNumber = 2,
-    kOptionalStreamFieldNumber = 1,
-    kStartedReadingFieldNumber = 3,
+    kAHeadersFieldNumber = 2,
+    kAOptionalStreamFieldNumber = 1,
+    kAStartedReadingFieldNumber = 3,
   };
-  // repeated .protobuf.mozilla.ipc.HeaderEntry headers = 2;
-  int headers_size() const;
+  // repeated .protobuf.mozilla.ipc.HeaderEntry a_headers = 2;
+  int a_headers_size() const;
   private:
-  int _internal_headers_size() const;
+  int _internal_a_headers_size() const;
   public:
-  void clear_headers();
-  ::protobuf::mozilla::ipc::HeaderEntry* mutable_headers(int index);
+  void clear_a_headers();
+  ::protobuf::mozilla::ipc::HeaderEntry* mutable_a_headers(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::HeaderEntry >*
-      mutable_headers();
+      mutable_a_headers();
   private:
-  const ::protobuf::mozilla::ipc::HeaderEntry& _internal_headers(int index) const;
-  ::protobuf::mozilla::ipc::HeaderEntry* _internal_add_headers();
+  const ::protobuf::mozilla::ipc::HeaderEntry& _internal_a_headers(int index) const;
+  ::protobuf::mozilla::ipc::HeaderEntry* _internal_add_a_headers();
   public:
-  const ::protobuf::mozilla::ipc::HeaderEntry& headers(int index) const;
-  ::protobuf::mozilla::ipc::HeaderEntry* add_headers();
+  const ::protobuf::mozilla::ipc::HeaderEntry& a_headers(int index) const;
+  ::protobuf::mozilla::ipc::HeaderEntry* add_a_headers();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::HeaderEntry >&
-      headers() const;
+      a_headers() const;
 
-  // optional .protobuf.mozilla.ipc.InputStreamParams optionalStream = 1;
-  bool has_optionalstream() const;
+  // optional .protobuf.mozilla.ipc.InputStreamParams a_optionalStream = 1;
+  bool has_a_optionalstream() const;
   private:
-  bool _internal_has_optionalstream() const;
+  bool _internal_has_a_optionalstream() const;
   public:
-  void clear_optionalstream();
-  const ::protobuf::mozilla::ipc::InputStreamParams& optionalstream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_optionalstream();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_optionalstream();
-  void set_allocated_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* optionalstream);
+  void clear_a_optionalstream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_optionalstream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_a_optionalstream();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_optionalstream();
+  void set_allocated_a_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_optionalstream() const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_optionalstream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_optionalstream() const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_a_optionalstream();
   public:
-  void unsafe_arena_set_allocated_optionalstream(
-      ::protobuf::mozilla::ipc::InputStreamParams* optionalstream);
-  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_optionalstream();
+  void unsafe_arena_set_allocated_a_optionalstream(
+      ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
+  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_optionalstream();
 
-  // required bool startedReading = 3;
-  bool has_startedreading() const;
+  // required bool a_startedReading = 3;
+  bool has_a_startedreading() const;
   private:
-  bool _internal_has_startedreading() const;
+  bool _internal_has_a_startedreading() const;
   public:
-  void clear_startedreading();
-  bool startedreading() const;
-  void set_startedreading(bool value);
+  void clear_a_startedreading();
+  bool a_startedreading() const;
+  void set_a_startedreading(bool value);
   private:
-  bool _internal_startedreading() const;
-  void _internal_set_startedreading(bool value);
+  bool _internal_a_startedreading() const;
+  void _internal_set_a_startedreading(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.MIMEInputStreamParams)
@@ -2190,9 +2190,9 @@ class MIMEInputStreamParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::HeaderEntry > headers_;
-    ::protobuf::mozilla::ipc::InputStreamParams* optionalstream_;
-    bool startedreading_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::HeaderEntry > a_headers_;
+    ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream_;
+    bool a_startedreading_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -2309,52 +2309,52 @@ class InputStreamLengthWrapperParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamFieldNumber = 1,
-    kLengthFieldNumber = 2,
-    kConsumedFieldNumber = 3,
+    kAStreamFieldNumber = 1,
+    kALengthFieldNumber = 2,
+    kAConsumedFieldNumber = 3,
   };
-  // required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-  bool has_stream() const;
+  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  bool has_a_stream() const;
   private:
-  bool _internal_has_stream() const;
+  bool _internal_has_a_stream() const;
   public:
-  void clear_stream();
-  const ::protobuf::mozilla::ipc::InputStreamParams& stream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_stream();
-  ::protobuf::mozilla::ipc::InputStreamParams* mutable_stream();
-  void set_allocated_stream(::protobuf::mozilla::ipc::InputStreamParams* stream);
+  void clear_a_stream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& a_stream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::InputStreamParams* release_a_stream();
+  ::protobuf::mozilla::ipc::InputStreamParams* mutable_a_stream();
+  void set_allocated_a_stream(::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   private:
-  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_stream() const;
-  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_stream();
+  const ::protobuf::mozilla::ipc::InputStreamParams& _internal_a_stream() const;
+  ::protobuf::mozilla::ipc::InputStreamParams* _internal_mutable_a_stream();
   public:
-  void unsafe_arena_set_allocated_stream(
-      ::protobuf::mozilla::ipc::InputStreamParams* stream);
-  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_stream();
+  void unsafe_arena_set_allocated_a_stream(
+      ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
+  ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
-  // required sint64 length = 2;
-  bool has_length() const;
+  // required sint64 a_length = 2;
+  bool has_a_length() const;
   private:
-  bool _internal_has_length() const;
+  bool _internal_has_a_length() const;
   public:
-  void clear_length();
-  int64_t length() const;
-  void set_length(int64_t value);
+  void clear_a_length();
+  int64_t a_length() const;
+  void set_a_length(int64_t value);
   private:
-  int64_t _internal_length() const;
-  void _internal_set_length(int64_t value);
+  int64_t _internal_a_length() const;
+  void _internal_set_a_length(int64_t value);
   public:
 
-  // required bool consumed = 3;
-  bool has_consumed() const;
+  // required bool a_consumed = 3;
+  bool has_a_consumed() const;
   private:
-  bool _internal_has_consumed() const;
+  bool _internal_has_a_consumed() const;
   public:
-  void clear_consumed();
-  bool consumed() const;
-  void set_consumed(bool value);
+  void clear_a_consumed();
+  bool a_consumed() const;
+  void set_a_consumed(bool value);
   private:
-  bool _internal_consumed() const;
-  void _internal_set_consumed(bool value);
+  bool _internal_a_consumed() const;
+  void _internal_set_a_consumed(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.InputStreamLengthWrapperParams)
@@ -2370,9 +2370,9 @@ class InputStreamLengthWrapperParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::InputStreamParams* stream_;
-    int64_t length_;
-    bool consumed_;
+    ::protobuf::mozilla::ipc::InputStreamParams* a_stream_;
+    int64_t a_length_;
+    bool a_consumed_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -2388,553 +2388,553 @@ class InputStreamLengthWrapperParams final :
 #endif  // __GNUC__
 // HeaderEntry
 
-// required bytes name = 1;
-inline bool HeaderEntry::_internal_has_name() const {
+// required bytes a_name = 1;
+inline bool HeaderEntry::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool HeaderEntry::has_name() const {
-  return _internal_has_name();
+inline bool HeaderEntry::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void HeaderEntry::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void HeaderEntry::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& HeaderEntry::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.HeaderEntry.name)
-  return _internal_name();
+inline const std::string& HeaderEntry::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.HeaderEntry.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void HeaderEntry::set_name(ArgT0&& arg0, ArgT... args) {
+void HeaderEntry::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.a_name)
 }
-inline std::string* HeaderEntry::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.HeaderEntry.name)
+inline std::string* HeaderEntry::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.HeaderEntry.a_name)
   return _s;
 }
-inline const std::string& HeaderEntry::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& HeaderEntry::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void HeaderEntry::_internal_set_name(const std::string& value) {
+inline void HeaderEntry::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* HeaderEntry::_internal_mutable_name() {
+inline std::string* HeaderEntry::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* HeaderEntry::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.HeaderEntry.name)
-  if (!_internal_has_name()) {
+inline std::string* HeaderEntry::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.HeaderEntry.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void HeaderEntry::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void HeaderEntry::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.a_name)
 }
 
-// required bytes value = 2;
-inline bool HeaderEntry::_internal_has_value() const {
+// required bytes a_value = 2;
+inline bool HeaderEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool HeaderEntry::has_value() const {
-  return _internal_has_value();
+inline bool HeaderEntry::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void HeaderEntry::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void HeaderEntry::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& HeaderEntry::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.HeaderEntry.value)
-  return _internal_value();
+inline const std::string& HeaderEntry::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.HeaderEntry.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void HeaderEntry::set_value(ArgT0&& arg0, ArgT... args) {
+void HeaderEntry::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.a_value)
 }
-inline std::string* HeaderEntry::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.HeaderEntry.value)
+inline std::string* HeaderEntry::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.HeaderEntry.a_value)
   return _s;
 }
-inline const std::string& HeaderEntry::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& HeaderEntry::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void HeaderEntry::_internal_set_value(const std::string& value) {
+inline void HeaderEntry::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* HeaderEntry::_internal_mutable_value() {
+inline std::string* HeaderEntry::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* HeaderEntry::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.HeaderEntry.value)
-  if (!_internal_has_value()) {
+inline std::string* HeaderEntry::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.HeaderEntry.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void HeaderEntry::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void HeaderEntry::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // StringInputStreamParams
 
-// required bytes data = 1;
-inline bool StringInputStreamParams::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool StringInputStreamParams::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool StringInputStreamParams::has_data() const {
-  return _internal_has_data();
+inline bool StringInputStreamParams::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void StringInputStreamParams::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void StringInputStreamParams::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& StringInputStreamParams::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.StringInputStreamParams.data)
-  return _internal_data();
+inline const std::string& StringInputStreamParams::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void StringInputStreamParams::set_data(ArgT0&& arg0, ArgT... args) {
+void StringInputStreamParams::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StringInputStreamParams.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
 }
-inline std::string* StringInputStreamParams::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.StringInputStreamParams.data)
+inline std::string* StringInputStreamParams::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
   return _s;
 }
-inline const std::string& StringInputStreamParams::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& StringInputStreamParams::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void StringInputStreamParams::_internal_set_data(const std::string& value) {
+inline void StringInputStreamParams::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* StringInputStreamParams::_internal_mutable_data() {
+inline std::string* StringInputStreamParams::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* StringInputStreamParams::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.StringInputStreamParams.data)
-  if (!_internal_has_data()) {
+inline std::string* StringInputStreamParams::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void StringInputStreamParams::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void StringInputStreamParams::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.StringInputStreamParams.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // FileInputStreamParams
 
-// required bytes fileDescriptor = 1;
-inline bool FileInputStreamParams::_internal_has_filedescriptor() const {
+// required bytes a_fileDescriptor = 1;
+inline bool FileInputStreamParams::_internal_has_a_filedescriptor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileInputStreamParams::has_filedescriptor() const {
-  return _internal_has_filedescriptor();
+inline bool FileInputStreamParams::has_a_filedescriptor() const {
+  return _internal_has_a_filedescriptor();
 }
-inline void FileInputStreamParams::clear_filedescriptor() {
-  _impl_.filedescriptor_.ClearToEmpty();
+inline void FileInputStreamParams::clear_a_filedescriptor() {
+  _impl_.a_filedescriptor_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileInputStreamParams::filedescriptor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.fileDescriptor)
-  return _internal_filedescriptor();
+inline const std::string& FileInputStreamParams::a_filedescriptor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
+  return _internal_a_filedescriptor();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileInputStreamParams::set_filedescriptor(ArgT0&& arg0, ArgT... args) {
+void FileInputStreamParams::set_a_filedescriptor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filedescriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.fileDescriptor)
+ _impl_.a_filedescriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
 }
-inline std::string* FileInputStreamParams::mutable_filedescriptor() {
-  std::string* _s = _internal_mutable_filedescriptor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.FileInputStreamParams.fileDescriptor)
+inline std::string* FileInputStreamParams::mutable_a_filedescriptor() {
+  std::string* _s = _internal_mutable_a_filedescriptor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
   return _s;
 }
-inline const std::string& FileInputStreamParams::_internal_filedescriptor() const {
-  return _impl_.filedescriptor_.Get();
+inline const std::string& FileInputStreamParams::_internal_a_filedescriptor() const {
+  return _impl_.a_filedescriptor_.Get();
 }
-inline void FileInputStreamParams::_internal_set_filedescriptor(const std::string& value) {
+inline void FileInputStreamParams::_internal_set_a_filedescriptor(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.filedescriptor_.Set(value, GetArenaForAllocation());
+  _impl_.a_filedescriptor_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileInputStreamParams::_internal_mutable_filedescriptor() {
+inline std::string* FileInputStreamParams::_internal_mutable_a_filedescriptor() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.filedescriptor_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filedescriptor_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileInputStreamParams::release_filedescriptor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.FileInputStreamParams.fileDescriptor)
-  if (!_internal_has_filedescriptor()) {
+inline std::string* FileInputStreamParams::release_a_filedescriptor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
+  if (!_internal_has_a_filedescriptor()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.filedescriptor_.Release();
+  auto* p = _impl_.a_filedescriptor_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filedescriptor_.IsDefault()) {
-    _impl_.filedescriptor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filedescriptor_.IsDefault()) {
+    _impl_.a_filedescriptor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileInputStreamParams::set_allocated_filedescriptor(std::string* filedescriptor) {
-  if (filedescriptor != nullptr) {
+inline void FileInputStreamParams::set_allocated_a_filedescriptor(std::string* a_filedescriptor) {
+  if (a_filedescriptor != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.filedescriptor_.SetAllocated(filedescriptor, GetArenaForAllocation());
+  _impl_.a_filedescriptor_.SetAllocated(a_filedescriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filedescriptor_.IsDefault()) {
-    _impl_.filedescriptor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filedescriptor_.IsDefault()) {
+    _impl_.a_filedescriptor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileInputStreamParams.fileDescriptor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
 }
 
-// required sint32 behaviorFlags = 2;
-inline bool FileInputStreamParams::_internal_has_behaviorflags() const {
+// required sint32 a_behaviorFlags = 2;
+inline bool FileInputStreamParams::_internal_has_a_behaviorflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileInputStreamParams::has_behaviorflags() const {
-  return _internal_has_behaviorflags();
+inline bool FileInputStreamParams::has_a_behaviorflags() const {
+  return _internal_has_a_behaviorflags();
 }
-inline void FileInputStreamParams::clear_behaviorflags() {
-  _impl_.behaviorflags_ = 0;
+inline void FileInputStreamParams::clear_a_behaviorflags() {
+  _impl_.a_behaviorflags_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t FileInputStreamParams::_internal_behaviorflags() const {
-  return _impl_.behaviorflags_;
+inline int32_t FileInputStreamParams::_internal_a_behaviorflags() const {
+  return _impl_.a_behaviorflags_;
 }
-inline int32_t FileInputStreamParams::behaviorflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.behaviorFlags)
-  return _internal_behaviorflags();
+inline int32_t FileInputStreamParams::a_behaviorflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.a_behaviorFlags)
+  return _internal_a_behaviorflags();
 }
-inline void FileInputStreamParams::_internal_set_behaviorflags(int32_t value) {
+inline void FileInputStreamParams::_internal_set_a_behaviorflags(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.behaviorflags_ = value;
+  _impl_.a_behaviorflags_ = value;
 }
-inline void FileInputStreamParams::set_behaviorflags(int32_t value) {
-  _internal_set_behaviorflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.behaviorFlags)
+inline void FileInputStreamParams::set_a_behaviorflags(int32_t value) {
+  _internal_set_a_behaviorflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.a_behaviorFlags)
 }
 
-// required sint32 ioFlags = 3;
-inline bool FileInputStreamParams::_internal_has_ioflags() const {
+// required sint32 a_ioFlags = 3;
+inline bool FileInputStreamParams::_internal_has_a_ioflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FileInputStreamParams::has_ioflags() const {
-  return _internal_has_ioflags();
+inline bool FileInputStreamParams::has_a_ioflags() const {
+  return _internal_has_a_ioflags();
 }
-inline void FileInputStreamParams::clear_ioflags() {
-  _impl_.ioflags_ = 0;
+inline void FileInputStreamParams::clear_a_ioflags() {
+  _impl_.a_ioflags_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t FileInputStreamParams::_internal_ioflags() const {
-  return _impl_.ioflags_;
+inline int32_t FileInputStreamParams::_internal_a_ioflags() const {
+  return _impl_.a_ioflags_;
 }
-inline int32_t FileInputStreamParams::ioflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.ioFlags)
-  return _internal_ioflags();
+inline int32_t FileInputStreamParams::a_ioflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.a_ioFlags)
+  return _internal_a_ioflags();
 }
-inline void FileInputStreamParams::_internal_set_ioflags(int32_t value) {
+inline void FileInputStreamParams::_internal_set_a_ioflags(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.ioflags_ = value;
+  _impl_.a_ioflags_ = value;
 }
-inline void FileInputStreamParams::set_ioflags(int32_t value) {
-  _internal_set_ioflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.ioFlags)
+inline void FileInputStreamParams::set_a_ioflags(int32_t value) {
+  _internal_set_a_ioflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.a_ioFlags)
 }
 
 // -------------------------------------------------------------------
 
 // MultiplexInputStreamParams
 
-// repeated .protobuf.mozilla.ipc.InputStreamParams streams = 1;
-inline int MultiplexInputStreamParams::_internal_streams_size() const {
-  return _impl_.streams_.size();
+// repeated .protobuf.mozilla.ipc.InputStreamParams a_streams = 1;
+inline int MultiplexInputStreamParams::_internal_a_streams_size() const {
+  return _impl_.a_streams_.size();
 }
-inline int MultiplexInputStreamParams::streams_size() const {
-  return _internal_streams_size();
+inline int MultiplexInputStreamParams::a_streams_size() const {
+  return _internal_a_streams_size();
 }
-inline void MultiplexInputStreamParams::clear_streams() {
-  _impl_.streams_.Clear();
+inline void MultiplexInputStreamParams::clear_a_streams() {
+  _impl_.a_streams_.Clear();
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MultiplexInputStreamParams::mutable_streams(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MultiplexInputStreamParams.streams)
-  return _impl_.streams_.Mutable(index);
+inline ::protobuf::mozilla::ipc::InputStreamParams* MultiplexInputStreamParams::mutable_a_streams(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_streams)
+  return _impl_.a_streams_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams >*
-MultiplexInputStreamParams::mutable_streams() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.MultiplexInputStreamParams.streams)
-  return &_impl_.streams_;
+MultiplexInputStreamParams::mutable_a_streams() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_streams)
+  return &_impl_.a_streams_;
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& MultiplexInputStreamParams::_internal_streams(int index) const {
-  return _impl_.streams_.Get(index);
+inline const ::protobuf::mozilla::ipc::InputStreamParams& MultiplexInputStreamParams::_internal_a_streams(int index) const {
+  return _impl_.a_streams_.Get(index);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& MultiplexInputStreamParams::streams(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.streams)
-  return _internal_streams(index);
+inline const ::protobuf::mozilla::ipc::InputStreamParams& MultiplexInputStreamParams::a_streams(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_streams)
+  return _internal_a_streams(index);
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MultiplexInputStreamParams::_internal_add_streams() {
-  return _impl_.streams_.Add();
+inline ::protobuf::mozilla::ipc::InputStreamParams* MultiplexInputStreamParams::_internal_add_a_streams() {
+  return _impl_.a_streams_.Add();
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MultiplexInputStreamParams::add_streams() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _add = _internal_add_streams();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.MultiplexInputStreamParams.streams)
+inline ::protobuf::mozilla::ipc::InputStreamParams* MultiplexInputStreamParams::add_a_streams() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _add = _internal_add_a_streams();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_streams)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams >&
-MultiplexInputStreamParams::streams() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.MultiplexInputStreamParams.streams)
-  return _impl_.streams_;
+MultiplexInputStreamParams::a_streams() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_streams)
+  return _impl_.a_streams_;
 }
 
-// required uint32 currentStream = 2;
-inline bool MultiplexInputStreamParams::_internal_has_currentstream() const {
+// required uint32 a_currentStream = 2;
+inline bool MultiplexInputStreamParams::_internal_has_a_currentstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool MultiplexInputStreamParams::has_currentstream() const {
-  return _internal_has_currentstream();
+inline bool MultiplexInputStreamParams::has_a_currentstream() const {
+  return _internal_has_a_currentstream();
 }
-inline void MultiplexInputStreamParams::clear_currentstream() {
-  _impl_.currentstream_ = 0u;
+inline void MultiplexInputStreamParams::clear_a_currentstream() {
+  _impl_.a_currentstream_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t MultiplexInputStreamParams::_internal_currentstream() const {
-  return _impl_.currentstream_;
+inline uint32_t MultiplexInputStreamParams::_internal_a_currentstream() const {
+  return _impl_.a_currentstream_;
 }
-inline uint32_t MultiplexInputStreamParams::currentstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.currentStream)
-  return _internal_currentstream();
+inline uint32_t MultiplexInputStreamParams::a_currentstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_currentStream)
+  return _internal_a_currentstream();
 }
-inline void MultiplexInputStreamParams::_internal_set_currentstream(uint32_t value) {
+inline void MultiplexInputStreamParams::_internal_set_a_currentstream(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.currentstream_ = value;
+  _impl_.a_currentstream_ = value;
 }
-inline void MultiplexInputStreamParams::set_currentstream(uint32_t value) {
-  _internal_set_currentstream(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.currentStream)
+inline void MultiplexInputStreamParams::set_a_currentstream(uint32_t value) {
+  _internal_set_a_currentstream(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_currentStream)
 }
 
-// required bytes status = 3;
-inline bool MultiplexInputStreamParams::_internal_has_status() const {
+// required bytes a_status = 3;
+inline bool MultiplexInputStreamParams::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool MultiplexInputStreamParams::has_status() const {
-  return _internal_has_status();
+inline bool MultiplexInputStreamParams::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void MultiplexInputStreamParams::clear_status() {
-  _impl_.status_.ClearToEmpty();
+inline void MultiplexInputStreamParams::clear_a_status() {
+  _impl_.a_status_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& MultiplexInputStreamParams::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.status)
-  return _internal_status();
+inline const std::string& MultiplexInputStreamParams::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
+  return _internal_a_status();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MultiplexInputStreamParams::set_status(ArgT0&& arg0, ArgT... args) {
+void MultiplexInputStreamParams::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.status)
+ _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
 }
-inline std::string* MultiplexInputStreamParams::mutable_status() {
-  std::string* _s = _internal_mutable_status();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MultiplexInputStreamParams.status)
+inline std::string* MultiplexInputStreamParams::mutable_a_status() {
+  std::string* _s = _internal_mutable_a_status();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
   return _s;
 }
-inline const std::string& MultiplexInputStreamParams::_internal_status() const {
-  return _impl_.status_.Get();
+inline const std::string& MultiplexInputStreamParams::_internal_a_status() const {
+  return _impl_.a_status_.Get();
 }
-inline void MultiplexInputStreamParams::_internal_set_status(const std::string& value) {
+inline void MultiplexInputStreamParams::_internal_set_a_status(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.status_.Set(value, GetArenaForAllocation());
+  _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MultiplexInputStreamParams::_internal_mutable_status() {
+inline std::string* MultiplexInputStreamParams::_internal_mutable_a_status() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.status_.Mutable(GetArenaForAllocation());
+  return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MultiplexInputStreamParams::release_status() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.MultiplexInputStreamParams.status)
-  if (!_internal_has_status()) {
+inline std::string* MultiplexInputStreamParams::release_a_status() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
+  if (!_internal_has_a_status()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.status_.Release();
+  auto* p = _impl_.a_status_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MultiplexInputStreamParams::set_allocated_status(std::string* status) {
-  if (status != nullptr) {
+inline void MultiplexInputStreamParams::set_allocated_a_status(std::string* a_status) {
+  if (a_status != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.status_.SetAllocated(status, GetArenaForAllocation());
+  _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.MultiplexInputStreamParams.status)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
 }
 
-// required bool startedReadingCurrent = 4;
-inline bool MultiplexInputStreamParams::_internal_has_startedreadingcurrent() const {
+// required bool a_startedReadingCurrent = 4;
+inline bool MultiplexInputStreamParams::_internal_has_a_startedreadingcurrent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool MultiplexInputStreamParams::has_startedreadingcurrent() const {
-  return _internal_has_startedreadingcurrent();
+inline bool MultiplexInputStreamParams::has_a_startedreadingcurrent() const {
+  return _internal_has_a_startedreadingcurrent();
 }
-inline void MultiplexInputStreamParams::clear_startedreadingcurrent() {
-  _impl_.startedreadingcurrent_ = false;
+inline void MultiplexInputStreamParams::clear_a_startedreadingcurrent() {
+  _impl_.a_startedreadingcurrent_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool MultiplexInputStreamParams::_internal_startedreadingcurrent() const {
-  return _impl_.startedreadingcurrent_;
+inline bool MultiplexInputStreamParams::_internal_a_startedreadingcurrent() const {
+  return _impl_.a_startedreadingcurrent_;
 }
-inline bool MultiplexInputStreamParams::startedreadingcurrent() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.startedReadingCurrent)
-  return _internal_startedreadingcurrent();
+inline bool MultiplexInputStreamParams::a_startedreadingcurrent() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_startedReadingCurrent)
+  return _internal_a_startedreadingcurrent();
 }
-inline void MultiplexInputStreamParams::_internal_set_startedreadingcurrent(bool value) {
+inline void MultiplexInputStreamParams::_internal_set_a_startedreadingcurrent(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.startedreadingcurrent_ = value;
+  _impl_.a_startedreadingcurrent_ = value;
 }
-inline void MultiplexInputStreamParams::set_startedreadingcurrent(bool value) {
-  _internal_set_startedreadingcurrent(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.startedReadingCurrent)
+inline void MultiplexInputStreamParams::set_a_startedreadingcurrent(bool value) {
+  _internal_set_a_startedreadingcurrent(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_startedReadingCurrent)
 }
 
 // -------------------------------------------------------------------
 
 // SlicedInputStreamParams
 
-// required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-inline bool SlicedInputStreamParams::_internal_has_stream() const {
+// required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+inline bool SlicedInputStreamParams::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.stream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
   return value;
 }
-inline bool SlicedInputStreamParams::has_stream() const {
-  return _internal_has_stream();
+inline bool SlicedInputStreamParams::has_a_stream() const {
+  return _internal_has_a_stream();
 }
-inline void SlicedInputStreamParams::clear_stream() {
-  if (_impl_.stream_ != nullptr) _impl_.stream_->Clear();
+inline void SlicedInputStreamParams::clear_a_stream() {
+  if (_impl_.a_stream_ != nullptr) _impl_.a_stream_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& SlicedInputStreamParams::_internal_stream() const {
-  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.stream_;
+inline const ::protobuf::mozilla::ipc::InputStreamParams& SlicedInputStreamParams::_internal_a_stream() const {
+  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_stream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::InputStreamParams&>(
       ::protobuf::mozilla::ipc::_InputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& SlicedInputStreamParams::stream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.stream)
-  return _internal_stream();
+inline const ::protobuf::mozilla::ipc::InputStreamParams& SlicedInputStreamParams::a_stream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
+  return _internal_a_stream();
 }
-inline void SlicedInputStreamParams::unsafe_arena_set_allocated_stream(
-    ::protobuf::mozilla::ipc::InputStreamParams* stream) {
+inline void SlicedInputStreamParams::unsafe_arena_set_allocated_a_stream(
+    ::protobuf::mozilla::ipc::InputStreamParams* a_stream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  _impl_.stream_ = stream;
-  if (stream) {
+  _impl_.a_stream_ = a_stream;
+  if (a_stream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.stream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::release_stream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::release_a_stream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2946,1043 +2946,1043 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::rel
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::unsafe_arena_release_stream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.SlicedInputStreamParams.stream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::unsafe_arena_release_a_stream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::_internal_mutable_stream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::_internal_mutable_a_stream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.stream_ == nullptr) {
+  if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
-    _impl_.stream_ = p;
+    _impl_.a_stream_ = p;
   }
-  return _impl_.stream_;
+  return _impl_.a_stream_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::mutable_stream() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_stream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.SlicedInputStreamParams.stream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::mutable_a_stream() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_a_stream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
   return _msg;
 }
-inline void SlicedInputStreamParams::set_allocated_stream(::protobuf::mozilla::ipc::InputStreamParams* stream) {
+inline void SlicedInputStreamParams::set_allocated_a_stream(::protobuf::mozilla::ipc::InputStreamParams* a_stream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.stream_;
+    delete _impl_.a_stream_;
   }
-  if (stream) {
+  if (a_stream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(stream);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_stream);
     if (message_arena != submessage_arena) {
-      stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, stream, submessage_arena);
+      a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_stream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.stream_ = stream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.stream)
+  _impl_.a_stream_ = a_stream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
 }
 
-// required uint64 start = 2;
-inline bool SlicedInputStreamParams::_internal_has_start() const {
+// required uint64 a_start = 2;
+inline bool SlicedInputStreamParams::_internal_has_a_start() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool SlicedInputStreamParams::has_start() const {
-  return _internal_has_start();
+inline bool SlicedInputStreamParams::has_a_start() const {
+  return _internal_has_a_start();
 }
-inline void SlicedInputStreamParams::clear_start() {
-  _impl_.start_ = uint64_t{0u};
+inline void SlicedInputStreamParams::clear_a_start() {
+  _impl_.a_start_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t SlicedInputStreamParams::_internal_start() const {
-  return _impl_.start_;
+inline uint64_t SlicedInputStreamParams::_internal_a_start() const {
+  return _impl_.a_start_;
 }
-inline uint64_t SlicedInputStreamParams::start() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.start)
-  return _internal_start();
+inline uint64_t SlicedInputStreamParams::a_start() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.a_start)
+  return _internal_a_start();
 }
-inline void SlicedInputStreamParams::_internal_set_start(uint64_t value) {
+inline void SlicedInputStreamParams::_internal_set_a_start(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.start_ = value;
+  _impl_.a_start_ = value;
 }
-inline void SlicedInputStreamParams::set_start(uint64_t value) {
-  _internal_set_start(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.start)
+inline void SlicedInputStreamParams::set_a_start(uint64_t value) {
+  _internal_set_a_start(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_start)
 }
 
-// required uint64 length = 3;
-inline bool SlicedInputStreamParams::_internal_has_length() const {
+// required uint64 a_length = 3;
+inline bool SlicedInputStreamParams::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool SlicedInputStreamParams::has_length() const {
-  return _internal_has_length();
+inline bool SlicedInputStreamParams::has_a_length() const {
+  return _internal_has_a_length();
 }
-inline void SlicedInputStreamParams::clear_length() {
-  _impl_.length_ = uint64_t{0u};
+inline void SlicedInputStreamParams::clear_a_length() {
+  _impl_.a_length_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint64_t SlicedInputStreamParams::_internal_length() const {
-  return _impl_.length_;
+inline uint64_t SlicedInputStreamParams::_internal_a_length() const {
+  return _impl_.a_length_;
 }
-inline uint64_t SlicedInputStreamParams::length() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.length)
-  return _internal_length();
+inline uint64_t SlicedInputStreamParams::a_length() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.a_length)
+  return _internal_a_length();
 }
-inline void SlicedInputStreamParams::_internal_set_length(uint64_t value) {
+inline void SlicedInputStreamParams::_internal_set_a_length(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.length_ = value;
+  _impl_.a_length_ = value;
 }
-inline void SlicedInputStreamParams::set_length(uint64_t value) {
-  _internal_set_length(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.length)
+inline void SlicedInputStreamParams::set_a_length(uint64_t value) {
+  _internal_set_a_length(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_length)
 }
 
-// required uint64 curPos = 4;
-inline bool SlicedInputStreamParams::_internal_has_curpos() const {
+// required uint64 a_curPos = 4;
+inline bool SlicedInputStreamParams::_internal_has_a_curpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool SlicedInputStreamParams::has_curpos() const {
-  return _internal_has_curpos();
+inline bool SlicedInputStreamParams::has_a_curpos() const {
+  return _internal_has_a_curpos();
 }
-inline void SlicedInputStreamParams::clear_curpos() {
-  _impl_.curpos_ = uint64_t{0u};
+inline void SlicedInputStreamParams::clear_a_curpos() {
+  _impl_.a_curpos_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint64_t SlicedInputStreamParams::_internal_curpos() const {
-  return _impl_.curpos_;
+inline uint64_t SlicedInputStreamParams::_internal_a_curpos() const {
+  return _impl_.a_curpos_;
 }
-inline uint64_t SlicedInputStreamParams::curpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.curPos)
-  return _internal_curpos();
+inline uint64_t SlicedInputStreamParams::a_curpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.a_curPos)
+  return _internal_a_curpos();
 }
-inline void SlicedInputStreamParams::_internal_set_curpos(uint64_t value) {
+inline void SlicedInputStreamParams::_internal_set_a_curpos(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.curpos_ = value;
+  _impl_.a_curpos_ = value;
 }
-inline void SlicedInputStreamParams::set_curpos(uint64_t value) {
-  _internal_set_curpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.curPos)
+inline void SlicedInputStreamParams::set_a_curpos(uint64_t value) {
+  _internal_set_a_curpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_curPos)
 }
 
-// required bool closed = 5;
-inline bool SlicedInputStreamParams::_internal_has_closed() const {
+// required bool a_closed = 5;
+inline bool SlicedInputStreamParams::_internal_has_a_closed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool SlicedInputStreamParams::has_closed() const {
-  return _internal_has_closed();
+inline bool SlicedInputStreamParams::has_a_closed() const {
+  return _internal_has_a_closed();
 }
-inline void SlicedInputStreamParams::clear_closed() {
-  _impl_.closed_ = false;
+inline void SlicedInputStreamParams::clear_a_closed() {
+  _impl_.a_closed_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool SlicedInputStreamParams::_internal_closed() const {
-  return _impl_.closed_;
+inline bool SlicedInputStreamParams::_internal_a_closed() const {
+  return _impl_.a_closed_;
 }
-inline bool SlicedInputStreamParams::closed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.closed)
-  return _internal_closed();
+inline bool SlicedInputStreamParams::a_closed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.SlicedInputStreamParams.a_closed)
+  return _internal_a_closed();
 }
-inline void SlicedInputStreamParams::_internal_set_closed(bool value) {
+inline void SlicedInputStreamParams::_internal_set_a_closed(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.closed_ = value;
+  _impl_.a_closed_ = value;
 }
-inline void SlicedInputStreamParams::set_closed(bool value) {
-  _internal_set_closed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.closed)
+inline void SlicedInputStreamParams::set_a_closed(bool value) {
+  _internal_set_a_closed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_closed)
 }
 
 // -------------------------------------------------------------------
 
 // RemoteLazyInputStreamParams
 
-// required bytes stream = 1;
-inline bool RemoteLazyInputStreamParams::_internal_has_stream() const {
+// required bytes a_stream = 1;
+inline bool RemoteLazyInputStreamParams::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RemoteLazyInputStreamParams::has_stream() const {
-  return _internal_has_stream();
+inline bool RemoteLazyInputStreamParams::has_a_stream() const {
+  return _internal_has_a_stream();
 }
-inline void RemoteLazyInputStreamParams::clear_stream() {
-  _impl_.stream_.ClearToEmpty();
+inline void RemoteLazyInputStreamParams::clear_a_stream() {
+  _impl_.a_stream_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& RemoteLazyInputStreamParams::stream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.stream)
-  return _internal_stream();
+inline const std::string& RemoteLazyInputStreamParams::a_stream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
+  return _internal_a_stream();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteLazyInputStreamParams::set_stream(ArgT0&& arg0, ArgT... args) {
+void RemoteLazyInputStreamParams::set_a_stream(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.stream_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.stream)
+ _impl_.a_stream_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
 }
-inline std::string* RemoteLazyInputStreamParams::mutable_stream() {
-  std::string* _s = _internal_mutable_stream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.stream)
+inline std::string* RemoteLazyInputStreamParams::mutable_a_stream() {
+  std::string* _s = _internal_mutable_a_stream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
   return _s;
 }
-inline const std::string& RemoteLazyInputStreamParams::_internal_stream() const {
-  return _impl_.stream_.Get();
+inline const std::string& RemoteLazyInputStreamParams::_internal_a_stream() const {
+  return _impl_.a_stream_.Get();
 }
-inline void RemoteLazyInputStreamParams::_internal_set_stream(const std::string& value) {
+inline void RemoteLazyInputStreamParams::_internal_set_a_stream(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.stream_.Set(value, GetArenaForAllocation());
+  _impl_.a_stream_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteLazyInputStreamParams::_internal_mutable_stream() {
+inline std::string* RemoteLazyInputStreamParams::_internal_mutable_a_stream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.stream_.Mutable(GetArenaForAllocation());
+  return _impl_.a_stream_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteLazyInputStreamParams::release_stream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.stream)
-  if (!_internal_has_stream()) {
+inline std::string* RemoteLazyInputStreamParams::release_a_stream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
+  if (!_internal_has_a_stream()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.stream_.Release();
+  auto* p = _impl_.a_stream_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.stream_.IsDefault()) {
-    _impl_.stream_.Set("", GetArenaForAllocation());
+  if (_impl_.a_stream_.IsDefault()) {
+    _impl_.a_stream_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteLazyInputStreamParams::set_allocated_stream(std::string* stream) {
-  if (stream != nullptr) {
+inline void RemoteLazyInputStreamParams::set_allocated_a_stream(std::string* a_stream) {
+  if (a_stream != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.stream_.SetAllocated(stream, GetArenaForAllocation());
+  _impl_.a_stream_.SetAllocated(a_stream, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.stream_.IsDefault()) {
-    _impl_.stream_.Set("", GetArenaForAllocation());
+  if (_impl_.a_stream_.IsDefault()) {
+    _impl_.a_stream_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.stream)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
 }
 
 // -------------------------------------------------------------------
 
 // DataPipeReceiverStreamParams
 
-// required bytes pipe = 1;
-inline bool DataPipeReceiverStreamParams::_internal_has_pipe() const {
+// required bytes a_pipe = 1;
+inline bool DataPipeReceiverStreamParams::_internal_has_a_pipe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool DataPipeReceiverStreamParams::has_pipe() const {
-  return _internal_has_pipe();
+inline bool DataPipeReceiverStreamParams::has_a_pipe() const {
+  return _internal_has_a_pipe();
 }
-inline void DataPipeReceiverStreamParams::clear_pipe() {
-  _impl_.pipe_.ClearToEmpty();
+inline void DataPipeReceiverStreamParams::clear_a_pipe() {
+  _impl_.a_pipe_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DataPipeReceiverStreamParams::pipe() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.pipe)
-  return _internal_pipe();
+inline const std::string& DataPipeReceiverStreamParams::a_pipe() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
+  return _internal_a_pipe();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DataPipeReceiverStreamParams::set_pipe(ArgT0&& arg0, ArgT... args) {
+void DataPipeReceiverStreamParams::set_a_pipe(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.pipe_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.pipe)
+ _impl_.a_pipe_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
 }
-inline std::string* DataPipeReceiverStreamParams::mutable_pipe() {
-  std::string* _s = _internal_mutable_pipe();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.pipe)
+inline std::string* DataPipeReceiverStreamParams::mutable_a_pipe() {
+  std::string* _s = _internal_mutable_a_pipe();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
   return _s;
 }
-inline const std::string& DataPipeReceiverStreamParams::_internal_pipe() const {
-  return _impl_.pipe_.Get();
+inline const std::string& DataPipeReceiverStreamParams::_internal_a_pipe() const {
+  return _impl_.a_pipe_.Get();
 }
-inline void DataPipeReceiverStreamParams::_internal_set_pipe(const std::string& value) {
+inline void DataPipeReceiverStreamParams::_internal_set_a_pipe(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.pipe_.Set(value, GetArenaForAllocation());
+  _impl_.a_pipe_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DataPipeReceiverStreamParams::_internal_mutable_pipe() {
+inline std::string* DataPipeReceiverStreamParams::_internal_mutable_a_pipe() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.pipe_.Mutable(GetArenaForAllocation());
+  return _impl_.a_pipe_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DataPipeReceiverStreamParams::release_pipe() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.pipe)
-  if (!_internal_has_pipe()) {
+inline std::string* DataPipeReceiverStreamParams::release_a_pipe() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
+  if (!_internal_has_a_pipe()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.pipe_.Release();
+  auto* p = _impl_.a_pipe_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.pipe_.IsDefault()) {
-    _impl_.pipe_.Set("", GetArenaForAllocation());
+  if (_impl_.a_pipe_.IsDefault()) {
+    _impl_.a_pipe_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DataPipeReceiverStreamParams::set_allocated_pipe(std::string* pipe) {
-  if (pipe != nullptr) {
+inline void DataPipeReceiverStreamParams::set_allocated_a_pipe(std::string* a_pipe) {
+  if (a_pipe != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.pipe_.SetAllocated(pipe, GetArenaForAllocation());
+  _impl_.a_pipe_.SetAllocated(a_pipe, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.pipe_.IsDefault()) {
-    _impl_.pipe_.Set("", GetArenaForAllocation());
+  if (_impl_.a_pipe_.IsDefault()) {
+    _impl_.a_pipe_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.pipe)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
 }
 
 // -------------------------------------------------------------------
 
 // InputStreamParams
 
-// .protobuf.mozilla.ipc.StringInputStreamParams mVStringInputStreamParams = 1;
-inline bool InputStreamParams::_internal_has_mvstringinputstreamparams() const {
-  return content_case() == kMVStringInputStreamParams;
+// .protobuf.mozilla.ipc.StringInputStreamParams a_mVStringInputStreamParams = 1;
+inline bool InputStreamParams::_internal_has_a_mvstringinputstreamparams() const {
+  return content_case() == kAMVStringInputStreamParams;
 }
-inline bool InputStreamParams::has_mvstringinputstreamparams() const {
-  return _internal_has_mvstringinputstreamparams();
+inline bool InputStreamParams::has_a_mvstringinputstreamparams() const {
+  return _internal_has_a_mvstringinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvstringinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVStringInputStreamParams;
+inline void InputStreamParams::set_has_a_mvstringinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVStringInputStreamParams;
 }
-inline void InputStreamParams::clear_mvstringinputstreamparams() {
-  if (_internal_has_mvstringinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvstringinputstreamparams() {
+  if (_internal_has_a_mvstringinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvstringinputstreamparams_;
+      delete _impl_.content_.a_mvstringinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::release_mvstringinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVStringInputStreamParams)
-  if (_internal_has_mvstringinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::release_a_mvstringinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVStringInputStreamParams)
+  if (_internal_has_a_mvstringinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::StringInputStreamParams* temp = _impl_.content_.mvstringinputstreamparams_;
+    ::protobuf::mozilla::ipc::StringInputStreamParams* temp = _impl_.content_.a_mvstringinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvstringinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvstringinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::StringInputStreamParams& InputStreamParams::_internal_mvstringinputstreamparams() const {
-  return _internal_has_mvstringinputstreamparams()
-      ? *_impl_.content_.mvstringinputstreamparams_
+inline const ::protobuf::mozilla::ipc::StringInputStreamParams& InputStreamParams::_internal_a_mvstringinputstreamparams() const {
+  return _internal_has_a_mvstringinputstreamparams()
+      ? *_impl_.content_.a_mvstringinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::StringInputStreamParams&>(::protobuf::mozilla::ipc::_StringInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::StringInputStreamParams& InputStreamParams::mvstringinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVStringInputStreamParams)
-  return _internal_mvstringinputstreamparams();
+inline const ::protobuf::mozilla::ipc::StringInputStreamParams& InputStreamParams::a_mvstringinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVStringInputStreamParams)
+  return _internal_a_mvstringinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::unsafe_arena_release_mvstringinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVStringInputStreamParams)
-  if (_internal_has_mvstringinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvstringinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVStringInputStreamParams)
+  if (_internal_has_a_mvstringinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::StringInputStreamParams* temp = _impl_.content_.mvstringinputstreamparams_;
-    _impl_.content_.mvstringinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::StringInputStreamParams* temp = _impl_.content_.a_mvstringinputstreamparams_;
+    _impl_.content_.a_mvstringinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvstringinputstreamparams(::protobuf::mozilla::ipc::StringInputStreamParams* mvstringinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvstringinputstreamparams(::protobuf::mozilla::ipc::StringInputStreamParams* a_mvstringinputstreamparams) {
   clear_content();
-  if (mvstringinputstreamparams) {
-    set_has_mvstringinputstreamparams();
-    _impl_.content_.mvstringinputstreamparams_ = mvstringinputstreamparams;
+  if (a_mvstringinputstreamparams) {
+    set_has_a_mvstringinputstreamparams();
+    _impl_.content_.a_mvstringinputstreamparams_ = a_mvstringinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVStringInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVStringInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::_internal_mutable_mvstringinputstreamparams() {
-  if (!_internal_has_mvstringinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::_internal_mutable_a_mvstringinputstreamparams() {
+  if (!_internal_has_a_mvstringinputstreamparams()) {
     clear_content();
-    set_has_mvstringinputstreamparams();
-    _impl_.content_.mvstringinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::StringInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvstringinputstreamparams();
+    _impl_.content_.a_mvstringinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::StringInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvstringinputstreamparams_;
+  return _impl_.content_.a_mvstringinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::mutable_mvstringinputstreamparams() {
-  ::protobuf::mozilla::ipc::StringInputStreamParams* _msg = _internal_mutable_mvstringinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVStringInputStreamParams)
+inline ::protobuf::mozilla::ipc::StringInputStreamParams* InputStreamParams::mutable_a_mvstringinputstreamparams() {
+  ::protobuf::mozilla::ipc::StringInputStreamParams* _msg = _internal_mutable_a_mvstringinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVStringInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.FileInputStreamParams mVFileInputStreamParams = 2;
-inline bool InputStreamParams::_internal_has_mvfileinputstreamparams() const {
-  return content_case() == kMVFileInputStreamParams;
+// .protobuf.mozilla.ipc.FileInputStreamParams a_mVFileInputStreamParams = 2;
+inline bool InputStreamParams::_internal_has_a_mvfileinputstreamparams() const {
+  return content_case() == kAMVFileInputStreamParams;
 }
-inline bool InputStreamParams::has_mvfileinputstreamparams() const {
-  return _internal_has_mvfileinputstreamparams();
+inline bool InputStreamParams::has_a_mvfileinputstreamparams() const {
+  return _internal_has_a_mvfileinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvfileinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVFileInputStreamParams;
+inline void InputStreamParams::set_has_a_mvfileinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVFileInputStreamParams;
 }
-inline void InputStreamParams::clear_mvfileinputstreamparams() {
-  if (_internal_has_mvfileinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvfileinputstreamparams() {
+  if (_internal_has_a_mvfileinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfileinputstreamparams_;
+      delete _impl_.content_.a_mvfileinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::release_mvfileinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVFileInputStreamParams)
-  if (_internal_has_mvfileinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::release_a_mvfileinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVFileInputStreamParams)
+  if (_internal_has_a_mvfileinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::FileInputStreamParams* temp = _impl_.content_.mvfileinputstreamparams_;
+    ::protobuf::mozilla::ipc::FileInputStreamParams* temp = _impl_.content_.a_mvfileinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfileinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvfileinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::FileInputStreamParams& InputStreamParams::_internal_mvfileinputstreamparams() const {
-  return _internal_has_mvfileinputstreamparams()
-      ? *_impl_.content_.mvfileinputstreamparams_
+inline const ::protobuf::mozilla::ipc::FileInputStreamParams& InputStreamParams::_internal_a_mvfileinputstreamparams() const {
+  return _internal_has_a_mvfileinputstreamparams()
+      ? *_impl_.content_.a_mvfileinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::FileInputStreamParams&>(::protobuf::mozilla::ipc::_FileInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::FileInputStreamParams& InputStreamParams::mvfileinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVFileInputStreamParams)
-  return _internal_mvfileinputstreamparams();
+inline const ::protobuf::mozilla::ipc::FileInputStreamParams& InputStreamParams::a_mvfileinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVFileInputStreamParams)
+  return _internal_a_mvfileinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::unsafe_arena_release_mvfileinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVFileInputStreamParams)
-  if (_internal_has_mvfileinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvfileinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVFileInputStreamParams)
+  if (_internal_has_a_mvfileinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::FileInputStreamParams* temp = _impl_.content_.mvfileinputstreamparams_;
-    _impl_.content_.mvfileinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::FileInputStreamParams* temp = _impl_.content_.a_mvfileinputstreamparams_;
+    _impl_.content_.a_mvfileinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvfileinputstreamparams(::protobuf::mozilla::ipc::FileInputStreamParams* mvfileinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvfileinputstreamparams(::protobuf::mozilla::ipc::FileInputStreamParams* a_mvfileinputstreamparams) {
   clear_content();
-  if (mvfileinputstreamparams) {
-    set_has_mvfileinputstreamparams();
-    _impl_.content_.mvfileinputstreamparams_ = mvfileinputstreamparams;
+  if (a_mvfileinputstreamparams) {
+    set_has_a_mvfileinputstreamparams();
+    _impl_.content_.a_mvfileinputstreamparams_ = a_mvfileinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVFileInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVFileInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::_internal_mutable_mvfileinputstreamparams() {
-  if (!_internal_has_mvfileinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::_internal_mutable_a_mvfileinputstreamparams() {
+  if (!_internal_has_a_mvfileinputstreamparams()) {
     clear_content();
-    set_has_mvfileinputstreamparams();
-    _impl_.content_.mvfileinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::FileInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvfileinputstreamparams();
+    _impl_.content_.a_mvfileinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::FileInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfileinputstreamparams_;
+  return _impl_.content_.a_mvfileinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::mutable_mvfileinputstreamparams() {
-  ::protobuf::mozilla::ipc::FileInputStreamParams* _msg = _internal_mutable_mvfileinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVFileInputStreamParams)
+inline ::protobuf::mozilla::ipc::FileInputStreamParams* InputStreamParams::mutable_a_mvfileinputstreamparams() {
+  ::protobuf::mozilla::ipc::FileInputStreamParams* _msg = _internal_mutable_a_mvfileinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVFileInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.BufferedInputStreamParams mVBufferedInputStreamParams = 3;
-inline bool InputStreamParams::_internal_has_mvbufferedinputstreamparams() const {
-  return content_case() == kMVBufferedInputStreamParams;
+// .protobuf.mozilla.ipc.BufferedInputStreamParams a_mVBufferedInputStreamParams = 3;
+inline bool InputStreamParams::_internal_has_a_mvbufferedinputstreamparams() const {
+  return content_case() == kAMVBufferedInputStreamParams;
 }
-inline bool InputStreamParams::has_mvbufferedinputstreamparams() const {
-  return _internal_has_mvbufferedinputstreamparams();
+inline bool InputStreamParams::has_a_mvbufferedinputstreamparams() const {
+  return _internal_has_a_mvbufferedinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvbufferedinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVBufferedInputStreamParams;
+inline void InputStreamParams::set_has_a_mvbufferedinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVBufferedInputStreamParams;
 }
-inline void InputStreamParams::clear_mvbufferedinputstreamparams() {
-  if (_internal_has_mvbufferedinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvbufferedinputstreamparams() {
+  if (_internal_has_a_mvbufferedinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvbufferedinputstreamparams_;
+      delete _impl_.content_.a_mvbufferedinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::release_mvbufferedinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVBufferedInputStreamParams)
-  if (_internal_has_mvbufferedinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::release_a_mvbufferedinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVBufferedInputStreamParams)
+  if (_internal_has_a_mvbufferedinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::BufferedInputStreamParams* temp = _impl_.content_.mvbufferedinputstreamparams_;
+    ::protobuf::mozilla::ipc::BufferedInputStreamParams* temp = _impl_.content_.a_mvbufferedinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvbufferedinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvbufferedinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::BufferedInputStreamParams& InputStreamParams::_internal_mvbufferedinputstreamparams() const {
-  return _internal_has_mvbufferedinputstreamparams()
-      ? *_impl_.content_.mvbufferedinputstreamparams_
+inline const ::protobuf::mozilla::ipc::BufferedInputStreamParams& InputStreamParams::_internal_a_mvbufferedinputstreamparams() const {
+  return _internal_has_a_mvbufferedinputstreamparams()
+      ? *_impl_.content_.a_mvbufferedinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::BufferedInputStreamParams&>(::protobuf::mozilla::ipc::_BufferedInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::BufferedInputStreamParams& InputStreamParams::mvbufferedinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVBufferedInputStreamParams)
-  return _internal_mvbufferedinputstreamparams();
+inline const ::protobuf::mozilla::ipc::BufferedInputStreamParams& InputStreamParams::a_mvbufferedinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVBufferedInputStreamParams)
+  return _internal_a_mvbufferedinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::unsafe_arena_release_mvbufferedinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVBufferedInputStreamParams)
-  if (_internal_has_mvbufferedinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvbufferedinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVBufferedInputStreamParams)
+  if (_internal_has_a_mvbufferedinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::BufferedInputStreamParams* temp = _impl_.content_.mvbufferedinputstreamparams_;
-    _impl_.content_.mvbufferedinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::BufferedInputStreamParams* temp = _impl_.content_.a_mvbufferedinputstreamparams_;
+    _impl_.content_.a_mvbufferedinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvbufferedinputstreamparams(::protobuf::mozilla::ipc::BufferedInputStreamParams* mvbufferedinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvbufferedinputstreamparams(::protobuf::mozilla::ipc::BufferedInputStreamParams* a_mvbufferedinputstreamparams) {
   clear_content();
-  if (mvbufferedinputstreamparams) {
-    set_has_mvbufferedinputstreamparams();
-    _impl_.content_.mvbufferedinputstreamparams_ = mvbufferedinputstreamparams;
+  if (a_mvbufferedinputstreamparams) {
+    set_has_a_mvbufferedinputstreamparams();
+    _impl_.content_.a_mvbufferedinputstreamparams_ = a_mvbufferedinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVBufferedInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVBufferedInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::_internal_mutable_mvbufferedinputstreamparams() {
-  if (!_internal_has_mvbufferedinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::_internal_mutable_a_mvbufferedinputstreamparams() {
+  if (!_internal_has_a_mvbufferedinputstreamparams()) {
     clear_content();
-    set_has_mvbufferedinputstreamparams();
-    _impl_.content_.mvbufferedinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::BufferedInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvbufferedinputstreamparams();
+    _impl_.content_.a_mvbufferedinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::BufferedInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvbufferedinputstreamparams_;
+  return _impl_.content_.a_mvbufferedinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::mutable_mvbufferedinputstreamparams() {
-  ::protobuf::mozilla::ipc::BufferedInputStreamParams* _msg = _internal_mutable_mvbufferedinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVBufferedInputStreamParams)
+inline ::protobuf::mozilla::ipc::BufferedInputStreamParams* InputStreamParams::mutable_a_mvbufferedinputstreamparams() {
+  ::protobuf::mozilla::ipc::BufferedInputStreamParams* _msg = _internal_mutable_a_mvbufferedinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVBufferedInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.MIMEInputStreamParams mVMIMEInputStreamParams = 4;
-inline bool InputStreamParams::_internal_has_mvmimeinputstreamparams() const {
-  return content_case() == kMVMIMEInputStreamParams;
+// .protobuf.mozilla.ipc.MIMEInputStreamParams a_mVMIMEInputStreamParams = 4;
+inline bool InputStreamParams::_internal_has_a_mvmimeinputstreamparams() const {
+  return content_case() == kAMVMIMEInputStreamParams;
 }
-inline bool InputStreamParams::has_mvmimeinputstreamparams() const {
-  return _internal_has_mvmimeinputstreamparams();
+inline bool InputStreamParams::has_a_mvmimeinputstreamparams() const {
+  return _internal_has_a_mvmimeinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvmimeinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVMIMEInputStreamParams;
+inline void InputStreamParams::set_has_a_mvmimeinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVMIMEInputStreamParams;
 }
-inline void InputStreamParams::clear_mvmimeinputstreamparams() {
-  if (_internal_has_mvmimeinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvmimeinputstreamparams() {
+  if (_internal_has_a_mvmimeinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvmimeinputstreamparams_;
+      delete _impl_.content_.a_mvmimeinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::release_mvmimeinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVMIMEInputStreamParams)
-  if (_internal_has_mvmimeinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::release_a_mvmimeinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVMIMEInputStreamParams)
+  if (_internal_has_a_mvmimeinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::MIMEInputStreamParams* temp = _impl_.content_.mvmimeinputstreamparams_;
+    ::protobuf::mozilla::ipc::MIMEInputStreamParams* temp = _impl_.content_.a_mvmimeinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvmimeinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvmimeinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::MIMEInputStreamParams& InputStreamParams::_internal_mvmimeinputstreamparams() const {
-  return _internal_has_mvmimeinputstreamparams()
-      ? *_impl_.content_.mvmimeinputstreamparams_
+inline const ::protobuf::mozilla::ipc::MIMEInputStreamParams& InputStreamParams::_internal_a_mvmimeinputstreamparams() const {
+  return _internal_has_a_mvmimeinputstreamparams()
+      ? *_impl_.content_.a_mvmimeinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::MIMEInputStreamParams&>(::protobuf::mozilla::ipc::_MIMEInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::MIMEInputStreamParams& InputStreamParams::mvmimeinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVMIMEInputStreamParams)
-  return _internal_mvmimeinputstreamparams();
+inline const ::protobuf::mozilla::ipc::MIMEInputStreamParams& InputStreamParams::a_mvmimeinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVMIMEInputStreamParams)
+  return _internal_a_mvmimeinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::unsafe_arena_release_mvmimeinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVMIMEInputStreamParams)
-  if (_internal_has_mvmimeinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvmimeinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVMIMEInputStreamParams)
+  if (_internal_has_a_mvmimeinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::MIMEInputStreamParams* temp = _impl_.content_.mvmimeinputstreamparams_;
-    _impl_.content_.mvmimeinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::MIMEInputStreamParams* temp = _impl_.content_.a_mvmimeinputstreamparams_;
+    _impl_.content_.a_mvmimeinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvmimeinputstreamparams(::protobuf::mozilla::ipc::MIMEInputStreamParams* mvmimeinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvmimeinputstreamparams(::protobuf::mozilla::ipc::MIMEInputStreamParams* a_mvmimeinputstreamparams) {
   clear_content();
-  if (mvmimeinputstreamparams) {
-    set_has_mvmimeinputstreamparams();
-    _impl_.content_.mvmimeinputstreamparams_ = mvmimeinputstreamparams;
+  if (a_mvmimeinputstreamparams) {
+    set_has_a_mvmimeinputstreamparams();
+    _impl_.content_.a_mvmimeinputstreamparams_ = a_mvmimeinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVMIMEInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVMIMEInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::_internal_mutable_mvmimeinputstreamparams() {
-  if (!_internal_has_mvmimeinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::_internal_mutable_a_mvmimeinputstreamparams() {
+  if (!_internal_has_a_mvmimeinputstreamparams()) {
     clear_content();
-    set_has_mvmimeinputstreamparams();
-    _impl_.content_.mvmimeinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::MIMEInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvmimeinputstreamparams();
+    _impl_.content_.a_mvmimeinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::MIMEInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvmimeinputstreamparams_;
+  return _impl_.content_.a_mvmimeinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::mutable_mvmimeinputstreamparams() {
-  ::protobuf::mozilla::ipc::MIMEInputStreamParams* _msg = _internal_mutable_mvmimeinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVMIMEInputStreamParams)
+inline ::protobuf::mozilla::ipc::MIMEInputStreamParams* InputStreamParams::mutable_a_mvmimeinputstreamparams() {
+  ::protobuf::mozilla::ipc::MIMEInputStreamParams* _msg = _internal_mutable_a_mvmimeinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVMIMEInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.MultiplexInputStreamParams mVMultiplexInputStreamParams = 5;
-inline bool InputStreamParams::_internal_has_mvmultiplexinputstreamparams() const {
-  return content_case() == kMVMultiplexInputStreamParams;
+// .protobuf.mozilla.ipc.MultiplexInputStreamParams a_mVMultiplexInputStreamParams = 5;
+inline bool InputStreamParams::_internal_has_a_mvmultiplexinputstreamparams() const {
+  return content_case() == kAMVMultiplexInputStreamParams;
 }
-inline bool InputStreamParams::has_mvmultiplexinputstreamparams() const {
-  return _internal_has_mvmultiplexinputstreamparams();
+inline bool InputStreamParams::has_a_mvmultiplexinputstreamparams() const {
+  return _internal_has_a_mvmultiplexinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvmultiplexinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVMultiplexInputStreamParams;
+inline void InputStreamParams::set_has_a_mvmultiplexinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVMultiplexInputStreamParams;
 }
-inline void InputStreamParams::clear_mvmultiplexinputstreamparams() {
-  if (_internal_has_mvmultiplexinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvmultiplexinputstreamparams() {
+  if (_internal_has_a_mvmultiplexinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvmultiplexinputstreamparams_;
+      delete _impl_.content_.a_mvmultiplexinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::release_mvmultiplexinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVMultiplexInputStreamParams)
-  if (_internal_has_mvmultiplexinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::release_a_mvmultiplexinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVMultiplexInputStreamParams)
+  if (_internal_has_a_mvmultiplexinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::MultiplexInputStreamParams* temp = _impl_.content_.mvmultiplexinputstreamparams_;
+    ::protobuf::mozilla::ipc::MultiplexInputStreamParams* temp = _impl_.content_.a_mvmultiplexinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvmultiplexinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvmultiplexinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& InputStreamParams::_internal_mvmultiplexinputstreamparams() const {
-  return _internal_has_mvmultiplexinputstreamparams()
-      ? *_impl_.content_.mvmultiplexinputstreamparams_
+inline const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& InputStreamParams::_internal_a_mvmultiplexinputstreamparams() const {
+  return _internal_has_a_mvmultiplexinputstreamparams()
+      ? *_impl_.content_.a_mvmultiplexinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::MultiplexInputStreamParams&>(::protobuf::mozilla::ipc::_MultiplexInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& InputStreamParams::mvmultiplexinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVMultiplexInputStreamParams)
-  return _internal_mvmultiplexinputstreamparams();
+inline const ::protobuf::mozilla::ipc::MultiplexInputStreamParams& InputStreamParams::a_mvmultiplexinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVMultiplexInputStreamParams)
+  return _internal_a_mvmultiplexinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::unsafe_arena_release_mvmultiplexinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVMultiplexInputStreamParams)
-  if (_internal_has_mvmultiplexinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvmultiplexinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVMultiplexInputStreamParams)
+  if (_internal_has_a_mvmultiplexinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::MultiplexInputStreamParams* temp = _impl_.content_.mvmultiplexinputstreamparams_;
-    _impl_.content_.mvmultiplexinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::MultiplexInputStreamParams* temp = _impl_.content_.a_mvmultiplexinputstreamparams_;
+    _impl_.content_.a_mvmultiplexinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvmultiplexinputstreamparams(::protobuf::mozilla::ipc::MultiplexInputStreamParams* mvmultiplexinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvmultiplexinputstreamparams(::protobuf::mozilla::ipc::MultiplexInputStreamParams* a_mvmultiplexinputstreamparams) {
   clear_content();
-  if (mvmultiplexinputstreamparams) {
-    set_has_mvmultiplexinputstreamparams();
-    _impl_.content_.mvmultiplexinputstreamparams_ = mvmultiplexinputstreamparams;
+  if (a_mvmultiplexinputstreamparams) {
+    set_has_a_mvmultiplexinputstreamparams();
+    _impl_.content_.a_mvmultiplexinputstreamparams_ = a_mvmultiplexinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVMultiplexInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVMultiplexInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::_internal_mutable_mvmultiplexinputstreamparams() {
-  if (!_internal_has_mvmultiplexinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::_internal_mutable_a_mvmultiplexinputstreamparams() {
+  if (!_internal_has_a_mvmultiplexinputstreamparams()) {
     clear_content();
-    set_has_mvmultiplexinputstreamparams();
-    _impl_.content_.mvmultiplexinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::MultiplexInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvmultiplexinputstreamparams();
+    _impl_.content_.a_mvmultiplexinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::MultiplexInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvmultiplexinputstreamparams_;
+  return _impl_.content_.a_mvmultiplexinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::mutable_mvmultiplexinputstreamparams() {
-  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* _msg = _internal_mutable_mvmultiplexinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVMultiplexInputStreamParams)
+inline ::protobuf::mozilla::ipc::MultiplexInputStreamParams* InputStreamParams::mutable_a_mvmultiplexinputstreamparams() {
+  ::protobuf::mozilla::ipc::MultiplexInputStreamParams* _msg = _internal_mutable_a_mvmultiplexinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVMultiplexInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.SlicedInputStreamParams mVSlicedInputStreamParams = 6;
-inline bool InputStreamParams::_internal_has_mvslicedinputstreamparams() const {
-  return content_case() == kMVSlicedInputStreamParams;
+// .protobuf.mozilla.ipc.SlicedInputStreamParams a_mVSlicedInputStreamParams = 6;
+inline bool InputStreamParams::_internal_has_a_mvslicedinputstreamparams() const {
+  return content_case() == kAMVSlicedInputStreamParams;
 }
-inline bool InputStreamParams::has_mvslicedinputstreamparams() const {
-  return _internal_has_mvslicedinputstreamparams();
+inline bool InputStreamParams::has_a_mvslicedinputstreamparams() const {
+  return _internal_has_a_mvslicedinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvslicedinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVSlicedInputStreamParams;
+inline void InputStreamParams::set_has_a_mvslicedinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVSlicedInputStreamParams;
 }
-inline void InputStreamParams::clear_mvslicedinputstreamparams() {
-  if (_internal_has_mvslicedinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvslicedinputstreamparams() {
+  if (_internal_has_a_mvslicedinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvslicedinputstreamparams_;
+      delete _impl_.content_.a_mvslicedinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::release_mvslicedinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVSlicedInputStreamParams)
-  if (_internal_has_mvslicedinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::release_a_mvslicedinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVSlicedInputStreamParams)
+  if (_internal_has_a_mvslicedinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::SlicedInputStreamParams* temp = _impl_.content_.mvslicedinputstreamparams_;
+    ::protobuf::mozilla::ipc::SlicedInputStreamParams* temp = _impl_.content_.a_mvslicedinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvslicedinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvslicedinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::SlicedInputStreamParams& InputStreamParams::_internal_mvslicedinputstreamparams() const {
-  return _internal_has_mvslicedinputstreamparams()
-      ? *_impl_.content_.mvslicedinputstreamparams_
+inline const ::protobuf::mozilla::ipc::SlicedInputStreamParams& InputStreamParams::_internal_a_mvslicedinputstreamparams() const {
+  return _internal_has_a_mvslicedinputstreamparams()
+      ? *_impl_.content_.a_mvslicedinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::SlicedInputStreamParams&>(::protobuf::mozilla::ipc::_SlicedInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::SlicedInputStreamParams& InputStreamParams::mvslicedinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVSlicedInputStreamParams)
-  return _internal_mvslicedinputstreamparams();
+inline const ::protobuf::mozilla::ipc::SlicedInputStreamParams& InputStreamParams::a_mvslicedinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVSlicedInputStreamParams)
+  return _internal_a_mvslicedinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::unsafe_arena_release_mvslicedinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVSlicedInputStreamParams)
-  if (_internal_has_mvslicedinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvslicedinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVSlicedInputStreamParams)
+  if (_internal_has_a_mvslicedinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::SlicedInputStreamParams* temp = _impl_.content_.mvslicedinputstreamparams_;
-    _impl_.content_.mvslicedinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::SlicedInputStreamParams* temp = _impl_.content_.a_mvslicedinputstreamparams_;
+    _impl_.content_.a_mvslicedinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvslicedinputstreamparams(::protobuf::mozilla::ipc::SlicedInputStreamParams* mvslicedinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvslicedinputstreamparams(::protobuf::mozilla::ipc::SlicedInputStreamParams* a_mvslicedinputstreamparams) {
   clear_content();
-  if (mvslicedinputstreamparams) {
-    set_has_mvslicedinputstreamparams();
-    _impl_.content_.mvslicedinputstreamparams_ = mvslicedinputstreamparams;
+  if (a_mvslicedinputstreamparams) {
+    set_has_a_mvslicedinputstreamparams();
+    _impl_.content_.a_mvslicedinputstreamparams_ = a_mvslicedinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVSlicedInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVSlicedInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::_internal_mutable_mvslicedinputstreamparams() {
-  if (!_internal_has_mvslicedinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::_internal_mutable_a_mvslicedinputstreamparams() {
+  if (!_internal_has_a_mvslicedinputstreamparams()) {
     clear_content();
-    set_has_mvslicedinputstreamparams();
-    _impl_.content_.mvslicedinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::SlicedInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvslicedinputstreamparams();
+    _impl_.content_.a_mvslicedinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::SlicedInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvslicedinputstreamparams_;
+  return _impl_.content_.a_mvslicedinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::mutable_mvslicedinputstreamparams() {
-  ::protobuf::mozilla::ipc::SlicedInputStreamParams* _msg = _internal_mutable_mvslicedinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVSlicedInputStreamParams)
+inline ::protobuf::mozilla::ipc::SlicedInputStreamParams* InputStreamParams::mutable_a_mvslicedinputstreamparams() {
+  ::protobuf::mozilla::ipc::SlicedInputStreamParams* _msg = _internal_mutable_a_mvslicedinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVSlicedInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.RemoteLazyInputStreamParams mVRemoteLazyInputStreamParams = 7;
-inline bool InputStreamParams::_internal_has_mvremotelazyinputstreamparams() const {
-  return content_case() == kMVRemoteLazyInputStreamParams;
+// .protobuf.mozilla.ipc.RemoteLazyInputStreamParams a_mVRemoteLazyInputStreamParams = 7;
+inline bool InputStreamParams::_internal_has_a_mvremotelazyinputstreamparams() const {
+  return content_case() == kAMVRemoteLazyInputStreamParams;
 }
-inline bool InputStreamParams::has_mvremotelazyinputstreamparams() const {
-  return _internal_has_mvremotelazyinputstreamparams();
+inline bool InputStreamParams::has_a_mvremotelazyinputstreamparams() const {
+  return _internal_has_a_mvremotelazyinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvremotelazyinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVRemoteLazyInputStreamParams;
+inline void InputStreamParams::set_has_a_mvremotelazyinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVRemoteLazyInputStreamParams;
 }
-inline void InputStreamParams::clear_mvremotelazyinputstreamparams() {
-  if (_internal_has_mvremotelazyinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvremotelazyinputstreamparams() {
+  if (_internal_has_a_mvremotelazyinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvremotelazyinputstreamparams_;
+      delete _impl_.content_.a_mvremotelazyinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::release_mvremotelazyinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVRemoteLazyInputStreamParams)
-  if (_internal_has_mvremotelazyinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::release_a_mvremotelazyinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVRemoteLazyInputStreamParams)
+  if (_internal_has_a_mvremotelazyinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* temp = _impl_.content_.mvremotelazyinputstreamparams_;
+    ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* temp = _impl_.content_.a_mvremotelazyinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvremotelazyinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvremotelazyinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& InputStreamParams::_internal_mvremotelazyinputstreamparams() const {
-  return _internal_has_mvremotelazyinputstreamparams()
-      ? *_impl_.content_.mvremotelazyinputstreamparams_
+inline const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& InputStreamParams::_internal_a_mvremotelazyinputstreamparams() const {
+  return _internal_has_a_mvremotelazyinputstreamparams()
+      ? *_impl_.content_.a_mvremotelazyinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams&>(::protobuf::mozilla::ipc::_RemoteLazyInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& InputStreamParams::mvremotelazyinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVRemoteLazyInputStreamParams)
-  return _internal_mvremotelazyinputstreamparams();
+inline const ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams& InputStreamParams::a_mvremotelazyinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVRemoteLazyInputStreamParams)
+  return _internal_a_mvremotelazyinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::unsafe_arena_release_mvremotelazyinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVRemoteLazyInputStreamParams)
-  if (_internal_has_mvremotelazyinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvremotelazyinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVRemoteLazyInputStreamParams)
+  if (_internal_has_a_mvremotelazyinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* temp = _impl_.content_.mvremotelazyinputstreamparams_;
-    _impl_.content_.mvremotelazyinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* temp = _impl_.content_.a_mvremotelazyinputstreamparams_;
+    _impl_.content_.a_mvremotelazyinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvremotelazyinputstreamparams(::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* mvremotelazyinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvremotelazyinputstreamparams(::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* a_mvremotelazyinputstreamparams) {
   clear_content();
-  if (mvremotelazyinputstreamparams) {
-    set_has_mvremotelazyinputstreamparams();
-    _impl_.content_.mvremotelazyinputstreamparams_ = mvremotelazyinputstreamparams;
+  if (a_mvremotelazyinputstreamparams) {
+    set_has_a_mvremotelazyinputstreamparams();
+    _impl_.content_.a_mvremotelazyinputstreamparams_ = a_mvremotelazyinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVRemoteLazyInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVRemoteLazyInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::_internal_mutable_mvremotelazyinputstreamparams() {
-  if (!_internal_has_mvremotelazyinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::_internal_mutable_a_mvremotelazyinputstreamparams() {
+  if (!_internal_has_a_mvremotelazyinputstreamparams()) {
     clear_content();
-    set_has_mvremotelazyinputstreamparams();
-    _impl_.content_.mvremotelazyinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvremotelazyinputstreamparams();
+    _impl_.content_.a_mvremotelazyinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvremotelazyinputstreamparams_;
+  return _impl_.content_.a_mvremotelazyinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::mutable_mvremotelazyinputstreamparams() {
-  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* _msg = _internal_mutable_mvremotelazyinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVRemoteLazyInputStreamParams)
+inline ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* InputStreamParams::mutable_a_mvremotelazyinputstreamparams() {
+  ::protobuf::mozilla::ipc::RemoteLazyInputStreamParams* _msg = _internal_mutable_a_mvremotelazyinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVRemoteLazyInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.InputStreamLengthWrapperParams mVInputStreamLengthWrapperParams = 8;
-inline bool InputStreamParams::_internal_has_mvinputstreamlengthwrapperparams() const {
-  return content_case() == kMVInputStreamLengthWrapperParams;
+// .protobuf.mozilla.ipc.InputStreamLengthWrapperParams a_mVInputStreamLengthWrapperParams = 8;
+inline bool InputStreamParams::_internal_has_a_mvinputstreamlengthwrapperparams() const {
+  return content_case() == kAMVInputStreamLengthWrapperParams;
 }
-inline bool InputStreamParams::has_mvinputstreamlengthwrapperparams() const {
-  return _internal_has_mvinputstreamlengthwrapperparams();
+inline bool InputStreamParams::has_a_mvinputstreamlengthwrapperparams() const {
+  return _internal_has_a_mvinputstreamlengthwrapperparams();
 }
-inline void InputStreamParams::set_has_mvinputstreamlengthwrapperparams() {
-  _impl_._oneof_case_[0] = kMVInputStreamLengthWrapperParams;
+inline void InputStreamParams::set_has_a_mvinputstreamlengthwrapperparams() {
+  _impl_._oneof_case_[0] = kAMVInputStreamLengthWrapperParams;
 }
-inline void InputStreamParams::clear_mvinputstreamlengthwrapperparams() {
-  if (_internal_has_mvinputstreamlengthwrapperparams()) {
+inline void InputStreamParams::clear_a_mvinputstreamlengthwrapperparams() {
+  if (_internal_has_a_mvinputstreamlengthwrapperparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvinputstreamlengthwrapperparams_;
+      delete _impl_.content_.a_mvinputstreamlengthwrapperparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::release_mvinputstreamlengthwrapperparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVInputStreamLengthWrapperParams)
-  if (_internal_has_mvinputstreamlengthwrapperparams()) {
+inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::release_a_mvinputstreamlengthwrapperparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVInputStreamLengthWrapperParams)
+  if (_internal_has_a_mvinputstreamlengthwrapperparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* temp = _impl_.content_.mvinputstreamlengthwrapperparams_;
+    ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* temp = _impl_.content_.a_mvinputstreamlengthwrapperparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvinputstreamlengthwrapperparams_ = nullptr;
+    _impl_.content_.a_mvinputstreamlengthwrapperparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& InputStreamParams::_internal_mvinputstreamlengthwrapperparams() const {
-  return _internal_has_mvinputstreamlengthwrapperparams()
-      ? *_impl_.content_.mvinputstreamlengthwrapperparams_
+inline const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& InputStreamParams::_internal_a_mvinputstreamlengthwrapperparams() const {
+  return _internal_has_a_mvinputstreamlengthwrapperparams()
+      ? *_impl_.content_.a_mvinputstreamlengthwrapperparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams&>(::protobuf::mozilla::ipc::_InputStreamLengthWrapperParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& InputStreamParams::mvinputstreamlengthwrapperparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVInputStreamLengthWrapperParams)
-  return _internal_mvinputstreamlengthwrapperparams();
+inline const ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams& InputStreamParams::a_mvinputstreamlengthwrapperparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVInputStreamLengthWrapperParams)
+  return _internal_a_mvinputstreamlengthwrapperparams();
 }
-inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::unsafe_arena_release_mvinputstreamlengthwrapperparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVInputStreamLengthWrapperParams)
-  if (_internal_has_mvinputstreamlengthwrapperparams()) {
+inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::unsafe_arena_release_a_mvinputstreamlengthwrapperparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVInputStreamLengthWrapperParams)
+  if (_internal_has_a_mvinputstreamlengthwrapperparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* temp = _impl_.content_.mvinputstreamlengthwrapperparams_;
-    _impl_.content_.mvinputstreamlengthwrapperparams_ = nullptr;
+    ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* temp = _impl_.content_.a_mvinputstreamlengthwrapperparams_;
+    _impl_.content_.a_mvinputstreamlengthwrapperparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvinputstreamlengthwrapperparams(::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* mvinputstreamlengthwrapperparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvinputstreamlengthwrapperparams(::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* a_mvinputstreamlengthwrapperparams) {
   clear_content();
-  if (mvinputstreamlengthwrapperparams) {
-    set_has_mvinputstreamlengthwrapperparams();
-    _impl_.content_.mvinputstreamlengthwrapperparams_ = mvinputstreamlengthwrapperparams;
+  if (a_mvinputstreamlengthwrapperparams) {
+    set_has_a_mvinputstreamlengthwrapperparams();
+    _impl_.content_.a_mvinputstreamlengthwrapperparams_ = a_mvinputstreamlengthwrapperparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVInputStreamLengthWrapperParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVInputStreamLengthWrapperParams)
 }
-inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::_internal_mutable_mvinputstreamlengthwrapperparams() {
-  if (!_internal_has_mvinputstreamlengthwrapperparams()) {
+inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::_internal_mutable_a_mvinputstreamlengthwrapperparams() {
+  if (!_internal_has_a_mvinputstreamlengthwrapperparams()) {
     clear_content();
-    set_has_mvinputstreamlengthwrapperparams();
-    _impl_.content_.mvinputstreamlengthwrapperparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams >(GetArenaForAllocation());
+    set_has_a_mvinputstreamlengthwrapperparams();
+    _impl_.content_.a_mvinputstreamlengthwrapperparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvinputstreamlengthwrapperparams_;
+  return _impl_.content_.a_mvinputstreamlengthwrapperparams_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::mutable_mvinputstreamlengthwrapperparams() {
-  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* _msg = _internal_mutable_mvinputstreamlengthwrapperparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVInputStreamLengthWrapperParams)
+inline ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* InputStreamParams::mutable_a_mvinputstreamlengthwrapperparams() {
+  ::protobuf::mozilla::ipc::InputStreamLengthWrapperParams* _msg = _internal_mutable_a_mvinputstreamlengthwrapperparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVInputStreamLengthWrapperParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.EncryptedFileInputStreamParams mVEncryptedFileInputStreamParams = 9;
-inline bool InputStreamParams::_internal_has_mvencryptedfileinputstreamparams() const {
-  return content_case() == kMVEncryptedFileInputStreamParams;
+// .protobuf.mozilla.ipc.EncryptedFileInputStreamParams a_mVEncryptedFileInputStreamParams = 9;
+inline bool InputStreamParams::_internal_has_a_mvencryptedfileinputstreamparams() const {
+  return content_case() == kAMVEncryptedFileInputStreamParams;
 }
-inline bool InputStreamParams::has_mvencryptedfileinputstreamparams() const {
-  return _internal_has_mvencryptedfileinputstreamparams();
+inline bool InputStreamParams::has_a_mvencryptedfileinputstreamparams() const {
+  return _internal_has_a_mvencryptedfileinputstreamparams();
 }
-inline void InputStreamParams::set_has_mvencryptedfileinputstreamparams() {
-  _impl_._oneof_case_[0] = kMVEncryptedFileInputStreamParams;
+inline void InputStreamParams::set_has_a_mvencryptedfileinputstreamparams() {
+  _impl_._oneof_case_[0] = kAMVEncryptedFileInputStreamParams;
 }
-inline void InputStreamParams::clear_mvencryptedfileinputstreamparams() {
-  if (_internal_has_mvencryptedfileinputstreamparams()) {
+inline void InputStreamParams::clear_a_mvencryptedfileinputstreamparams() {
+  if (_internal_has_a_mvencryptedfileinputstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvencryptedfileinputstreamparams_;
+      delete _impl_.content_.a_mvencryptedfileinputstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::release_mvencryptedfileinputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVEncryptedFileInputStreamParams)
-  if (_internal_has_mvencryptedfileinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::release_a_mvencryptedfileinputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVEncryptedFileInputStreamParams)
+  if (_internal_has_a_mvencryptedfileinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* temp = _impl_.content_.mvencryptedfileinputstreamparams_;
+    ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* temp = _impl_.content_.a_mvencryptedfileinputstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvencryptedfileinputstreamparams_ = nullptr;
+    _impl_.content_.a_mvencryptedfileinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& InputStreamParams::_internal_mvencryptedfileinputstreamparams() const {
-  return _internal_has_mvencryptedfileinputstreamparams()
-      ? *_impl_.content_.mvencryptedfileinputstreamparams_
+inline const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& InputStreamParams::_internal_a_mvencryptedfileinputstreamparams() const {
+  return _internal_has_a_mvencryptedfileinputstreamparams()
+      ? *_impl_.content_.a_mvencryptedfileinputstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams&>(::protobuf::mozilla::ipc::_EncryptedFileInputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& InputStreamParams::mvencryptedfileinputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVEncryptedFileInputStreamParams)
-  return _internal_mvencryptedfileinputstreamparams();
+inline const ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams& InputStreamParams::a_mvencryptedfileinputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVEncryptedFileInputStreamParams)
+  return _internal_a_mvencryptedfileinputstreamparams();
 }
-inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::unsafe_arena_release_mvencryptedfileinputstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVEncryptedFileInputStreamParams)
-  if (_internal_has_mvencryptedfileinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::unsafe_arena_release_a_mvencryptedfileinputstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVEncryptedFileInputStreamParams)
+  if (_internal_has_a_mvencryptedfileinputstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* temp = _impl_.content_.mvencryptedfileinputstreamparams_;
-    _impl_.content_.mvencryptedfileinputstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* temp = _impl_.content_.a_mvencryptedfileinputstreamparams_;
+    _impl_.content_.a_mvencryptedfileinputstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvencryptedfileinputstreamparams(::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* mvencryptedfileinputstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvencryptedfileinputstreamparams(::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* a_mvencryptedfileinputstreamparams) {
   clear_content();
-  if (mvencryptedfileinputstreamparams) {
-    set_has_mvencryptedfileinputstreamparams();
-    _impl_.content_.mvencryptedfileinputstreamparams_ = mvencryptedfileinputstreamparams;
+  if (a_mvencryptedfileinputstreamparams) {
+    set_has_a_mvencryptedfileinputstreamparams();
+    _impl_.content_.a_mvencryptedfileinputstreamparams_ = a_mvencryptedfileinputstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVEncryptedFileInputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVEncryptedFileInputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::_internal_mutable_mvencryptedfileinputstreamparams() {
-  if (!_internal_has_mvencryptedfileinputstreamparams()) {
+inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::_internal_mutable_a_mvencryptedfileinputstreamparams() {
+  if (!_internal_has_a_mvencryptedfileinputstreamparams()) {
     clear_content();
-    set_has_mvencryptedfileinputstreamparams();
-    _impl_.content_.mvencryptedfileinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams >(GetArenaForAllocation());
+    set_has_a_mvencryptedfileinputstreamparams();
+    _impl_.content_.a_mvencryptedfileinputstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvencryptedfileinputstreamparams_;
+  return _impl_.content_.a_mvencryptedfileinputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::mutable_mvencryptedfileinputstreamparams() {
-  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* _msg = _internal_mutable_mvencryptedfileinputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVEncryptedFileInputStreamParams)
+inline ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* InputStreamParams::mutable_a_mvencryptedfileinputstreamparams() {
+  ::protobuf::mozilla::ipc::EncryptedFileInputStreamParams* _msg = _internal_mutable_a_mvencryptedfileinputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVEncryptedFileInputStreamParams)
   return _msg;
 }
 
-// .protobuf.mozilla.ipc.DataPipeReceiverStreamParams mVDataPipeReceiverStreamParams = 10;
-inline bool InputStreamParams::_internal_has_mvdatapipereceiverstreamparams() const {
-  return content_case() == kMVDataPipeReceiverStreamParams;
+// .protobuf.mozilla.ipc.DataPipeReceiverStreamParams a_mVDataPipeReceiverStreamParams = 10;
+inline bool InputStreamParams::_internal_has_a_mvdatapipereceiverstreamparams() const {
+  return content_case() == kAMVDataPipeReceiverStreamParams;
 }
-inline bool InputStreamParams::has_mvdatapipereceiverstreamparams() const {
-  return _internal_has_mvdatapipereceiverstreamparams();
+inline bool InputStreamParams::has_a_mvdatapipereceiverstreamparams() const {
+  return _internal_has_a_mvdatapipereceiverstreamparams();
 }
-inline void InputStreamParams::set_has_mvdatapipereceiverstreamparams() {
-  _impl_._oneof_case_[0] = kMVDataPipeReceiverStreamParams;
+inline void InputStreamParams::set_has_a_mvdatapipereceiverstreamparams() {
+  _impl_._oneof_case_[0] = kAMVDataPipeReceiverStreamParams;
 }
-inline void InputStreamParams::clear_mvdatapipereceiverstreamparams() {
-  if (_internal_has_mvdatapipereceiverstreamparams()) {
+inline void InputStreamParams::clear_a_mvdatapipereceiverstreamparams() {
+  if (_internal_has_a_mvdatapipereceiverstreamparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvdatapipereceiverstreamparams_;
+      delete _impl_.content_.a_mvdatapipereceiverstreamparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::release_mvdatapipereceiverstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.mVDataPipeReceiverStreamParams)
-  if (_internal_has_mvdatapipereceiverstreamparams()) {
+inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::release_a_mvdatapipereceiverstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamParams.a_mVDataPipeReceiverStreamParams)
+  if (_internal_has_a_mvdatapipereceiverstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* temp = _impl_.content_.mvdatapipereceiverstreamparams_;
+    ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* temp = _impl_.content_.a_mvdatapipereceiverstreamparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvdatapipereceiverstreamparams_ = nullptr;
+    _impl_.content_.a_mvdatapipereceiverstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& InputStreamParams::_internal_mvdatapipereceiverstreamparams() const {
-  return _internal_has_mvdatapipereceiverstreamparams()
-      ? *_impl_.content_.mvdatapipereceiverstreamparams_
+inline const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& InputStreamParams::_internal_a_mvdatapipereceiverstreamparams() const {
+  return _internal_has_a_mvdatapipereceiverstreamparams()
+      ? *_impl_.content_.a_mvdatapipereceiverstreamparams_
       : reinterpret_cast< ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams&>(::protobuf::mozilla::ipc::_DataPipeReceiverStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& InputStreamParams::mvdatapipereceiverstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.mVDataPipeReceiverStreamParams)
-  return _internal_mvdatapipereceiverstreamparams();
+inline const ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams& InputStreamParams::a_mvdatapipereceiverstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamParams.a_mVDataPipeReceiverStreamParams)
+  return _internal_a_mvdatapipereceiverstreamparams();
 }
-inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::unsafe_arena_release_mvdatapipereceiverstreamparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.mVDataPipeReceiverStreamParams)
-  if (_internal_has_mvdatapipereceiverstreamparams()) {
+inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::unsafe_arena_release_a_mvdatapipereceiverstreamparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.InputStreamParams.a_mVDataPipeReceiverStreamParams)
+  if (_internal_has_a_mvdatapipereceiverstreamparams()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* temp = _impl_.content_.mvdatapipereceiverstreamparams_;
-    _impl_.content_.mvdatapipereceiverstreamparams_ = nullptr;
+    ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* temp = _impl_.content_.a_mvdatapipereceiverstreamparams_;
+    _impl_.content_.a_mvdatapipereceiverstreamparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InputStreamParams::unsafe_arena_set_allocated_mvdatapipereceiverstreamparams(::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* mvdatapipereceiverstreamparams) {
+inline void InputStreamParams::unsafe_arena_set_allocated_a_mvdatapipereceiverstreamparams(::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* a_mvdatapipereceiverstreamparams) {
   clear_content();
-  if (mvdatapipereceiverstreamparams) {
-    set_has_mvdatapipereceiverstreamparams();
-    _impl_.content_.mvdatapipereceiverstreamparams_ = mvdatapipereceiverstreamparams;
+  if (a_mvdatapipereceiverstreamparams) {
+    set_has_a_mvdatapipereceiverstreamparams();
+    _impl_.content_.a_mvdatapipereceiverstreamparams_ = a_mvdatapipereceiverstreamparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.mVDataPipeReceiverStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamParams.a_mVDataPipeReceiverStreamParams)
 }
-inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::_internal_mutable_mvdatapipereceiverstreamparams() {
-  if (!_internal_has_mvdatapipereceiverstreamparams()) {
+inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::_internal_mutable_a_mvdatapipereceiverstreamparams() {
+  if (!_internal_has_a_mvdatapipereceiverstreamparams()) {
     clear_content();
-    set_has_mvdatapipereceiverstreamparams();
-    _impl_.content_.mvdatapipereceiverstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams >(GetArenaForAllocation());
+    set_has_a_mvdatapipereceiverstreamparams();
+    _impl_.content_.a_mvdatapipereceiverstreamparams_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvdatapipereceiverstreamparams_;
+  return _impl_.content_.a_mvdatapipereceiverstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::mutable_mvdatapipereceiverstreamparams() {
-  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* _msg = _internal_mutable_mvdatapipereceiverstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.mVDataPipeReceiverStreamParams)
+inline ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* InputStreamParams::mutable_a_mvdatapipereceiverstreamparams() {
+  ::protobuf::mozilla::ipc::DataPipeReceiverStreamParams* _msg = _internal_mutable_a_mvdatapipereceiverstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamParams.a_mVDataPipeReceiverStreamParams)
   return _msg;
 }
 
@@ -3999,45 +3999,45 @@ inline InputStreamParams::ContentCase InputStreamParams::content_case() const {
 
 // EncryptedFileInputStreamParams
 
-// required .protobuf.mozilla.ipc.InputStreamParams inputStreamParams = 1;
-inline bool EncryptedFileInputStreamParams::_internal_has_inputstreamparams() const {
+// required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+inline bool EncryptedFileInputStreamParams::_internal_has_a_inputstreamparams() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.inputstreamparams_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_inputstreamparams_ != nullptr);
   return value;
 }
-inline bool EncryptedFileInputStreamParams::has_inputstreamparams() const {
-  return _internal_has_inputstreamparams();
+inline bool EncryptedFileInputStreamParams::has_a_inputstreamparams() const {
+  return _internal_has_a_inputstreamparams();
 }
-inline void EncryptedFileInputStreamParams::clear_inputstreamparams() {
-  if (_impl_.inputstreamparams_ != nullptr) _impl_.inputstreamparams_->Clear();
+inline void EncryptedFileInputStreamParams::clear_a_inputstreamparams() {
+  if (_impl_.a_inputstreamparams_ != nullptr) _impl_.a_inputstreamparams_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& EncryptedFileInputStreamParams::_internal_inputstreamparams() const {
-  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.inputstreamparams_;
+inline const ::protobuf::mozilla::ipc::InputStreamParams& EncryptedFileInputStreamParams::_internal_a_inputstreamparams() const {
+  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_inputstreamparams_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::InputStreamParams&>(
       ::protobuf::mozilla::ipc::_InputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& EncryptedFileInputStreamParams::inputstreamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.inputStreamParams)
-  return _internal_inputstreamparams();
+inline const ::protobuf::mozilla::ipc::InputStreamParams& EncryptedFileInputStreamParams::a_inputstreamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
+  return _internal_a_inputstreamparams();
 }
-inline void EncryptedFileInputStreamParams::unsafe_arena_set_allocated_inputstreamparams(
-    ::protobuf::mozilla::ipc::InputStreamParams* inputstreamparams) {
+inline void EncryptedFileInputStreamParams::unsafe_arena_set_allocated_a_inputstreamparams(
+    ::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.inputstreamparams_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_inputstreamparams_);
   }
-  _impl_.inputstreamparams_ = inputstreamparams;
-  if (inputstreamparams) {
+  _impl_.a_inputstreamparams_ = a_inputstreamparams;
+  if (a_inputstreamparams) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.inputStreamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::release_inputstreamparams() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::release_a_inputstreamparams() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.inputstreamparams_;
-  _impl_.inputstreamparams_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_inputstreamparams_;
+  _impl_.a_inputstreamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4049,164 +4049,164 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamPara
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::unsafe_arena_release_inputstreamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.inputStreamParams)
+inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::unsafe_arena_release_a_inputstreamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.inputstreamparams_;
-  _impl_.inputstreamparams_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_inputstreamparams_;
+  _impl_.a_inputstreamparams_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::_internal_mutable_inputstreamparams() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::_internal_mutable_a_inputstreamparams() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.inputstreamparams_ == nullptr) {
+  if (_impl_.a_inputstreamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
-    _impl_.inputstreamparams_ = p;
+    _impl_.a_inputstreamparams_ = p;
   }
-  return _impl_.inputstreamparams_;
+  return _impl_.a_inputstreamparams_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::mutable_inputstreamparams() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_inputstreamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.inputStreamParams)
+inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::mutable_a_inputstreamparams() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_a_inputstreamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
   return _msg;
 }
-inline void EncryptedFileInputStreamParams::set_allocated_inputstreamparams(::protobuf::mozilla::ipc::InputStreamParams* inputstreamparams) {
+inline void EncryptedFileInputStreamParams::set_allocated_a_inputstreamparams(::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.inputstreamparams_;
+    delete _impl_.a_inputstreamparams_;
   }
-  if (inputstreamparams) {
+  if (a_inputstreamparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(inputstreamparams);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_inputstreamparams);
     if (message_arena != submessage_arena) {
-      inputstreamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, inputstreamparams, submessage_arena);
+      a_inputstreamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_inputstreamparams, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.inputstreamparams_ = inputstreamparams;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.inputStreamParams)
+  _impl_.a_inputstreamparams_ = a_inputstreamparams;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
 }
 
-// repeated uint32 key = 2;
-inline int EncryptedFileInputStreamParams::_internal_key_size() const {
-  return _impl_.key_.size();
+// repeated uint32 a_key = 2;
+inline int EncryptedFileInputStreamParams::_internal_a_key_size() const {
+  return _impl_.a_key_.size();
 }
-inline int EncryptedFileInputStreamParams::key_size() const {
-  return _internal_key_size();
+inline int EncryptedFileInputStreamParams::a_key_size() const {
+  return _internal_a_key_size();
 }
-inline void EncryptedFileInputStreamParams::clear_key() {
-  _impl_.key_.Clear();
+inline void EncryptedFileInputStreamParams::clear_a_key() {
+  _impl_.a_key_.Clear();
 }
-inline uint32_t EncryptedFileInputStreamParams::_internal_key(int index) const {
-  return _impl_.key_.Get(index);
+inline uint32_t EncryptedFileInputStreamParams::_internal_a_key(int index) const {
+  return _impl_.a_key_.Get(index);
 }
-inline uint32_t EncryptedFileInputStreamParams::key(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.key)
-  return _internal_key(index);
+inline uint32_t EncryptedFileInputStreamParams::a_key(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_key)
+  return _internal_a_key(index);
 }
-inline void EncryptedFileInputStreamParams::set_key(int index, uint32_t value) {
-  _impl_.key_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.key)
+inline void EncryptedFileInputStreamParams::set_a_key(int index, uint32_t value) {
+  _impl_.a_key_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_key)
 }
-inline void EncryptedFileInputStreamParams::_internal_add_key(uint32_t value) {
-  _impl_.key_.Add(value);
+inline void EncryptedFileInputStreamParams::_internal_add_a_key(uint32_t value) {
+  _impl_.a_key_.Add(value);
 }
-inline void EncryptedFileInputStreamParams::add_key(uint32_t value) {
-  _internal_add_key(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.key)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-EncryptedFileInputStreamParams::_internal_key() const {
-  return _impl_.key_;
+inline void EncryptedFileInputStreamParams::add_a_key(uint32_t value) {
+  _internal_add_a_key(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_key)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-EncryptedFileInputStreamParams::key() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.key)
-  return _internal_key();
+EncryptedFileInputStreamParams::_internal_a_key() const {
+  return _impl_.a_key_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+EncryptedFileInputStreamParams::a_key() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_key)
+  return _internal_a_key();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-EncryptedFileInputStreamParams::_internal_mutable_key() {
-  return &_impl_.key_;
+EncryptedFileInputStreamParams::_internal_mutable_a_key() {
+  return &_impl_.a_key_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-EncryptedFileInputStreamParams::mutable_key() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.key)
-  return _internal_mutable_key();
+EncryptedFileInputStreamParams::mutable_a_key() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_key)
+  return _internal_mutable_a_key();
 }
 
-// required uint32 blockSize = 3;
-inline bool EncryptedFileInputStreamParams::_internal_has_blocksize() const {
+// required uint32 a_blockSize = 3;
+inline bool EncryptedFileInputStreamParams::_internal_has_a_blocksize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool EncryptedFileInputStreamParams::has_blocksize() const {
-  return _internal_has_blocksize();
+inline bool EncryptedFileInputStreamParams::has_a_blocksize() const {
+  return _internal_has_a_blocksize();
 }
-inline void EncryptedFileInputStreamParams::clear_blocksize() {
-  _impl_.blocksize_ = 0u;
+inline void EncryptedFileInputStreamParams::clear_a_blocksize() {
+  _impl_.a_blocksize_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t EncryptedFileInputStreamParams::_internal_blocksize() const {
-  return _impl_.blocksize_;
+inline uint32_t EncryptedFileInputStreamParams::_internal_a_blocksize() const {
+  return _impl_.a_blocksize_;
 }
-inline uint32_t EncryptedFileInputStreamParams::blocksize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.blockSize)
-  return _internal_blocksize();
+inline uint32_t EncryptedFileInputStreamParams::a_blocksize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_blockSize)
+  return _internal_a_blocksize();
 }
-inline void EncryptedFileInputStreamParams::_internal_set_blocksize(uint32_t value) {
+inline void EncryptedFileInputStreamParams::_internal_set_a_blocksize(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.blocksize_ = value;
+  _impl_.a_blocksize_ = value;
 }
-inline void EncryptedFileInputStreamParams::set_blocksize(uint32_t value) {
-  _internal_set_blocksize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.blockSize)
+inline void EncryptedFileInputStreamParams::set_a_blocksize(uint32_t value) {
+  _internal_set_a_blocksize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_blockSize)
 }
 
 // -------------------------------------------------------------------
 
 // BufferedInputStreamParams
 
-// optional .protobuf.mozilla.ipc.InputStreamParams optionalStream = 1;
-inline bool BufferedInputStreamParams::_internal_has_optionalstream() const {
+// optional .protobuf.mozilla.ipc.InputStreamParams a_optionalStream = 1;
+inline bool BufferedInputStreamParams::_internal_has_a_optionalstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.optionalstream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_optionalstream_ != nullptr);
   return value;
 }
-inline bool BufferedInputStreamParams::has_optionalstream() const {
-  return _internal_has_optionalstream();
+inline bool BufferedInputStreamParams::has_a_optionalstream() const {
+  return _internal_has_a_optionalstream();
 }
-inline void BufferedInputStreamParams::clear_optionalstream() {
-  if (_impl_.optionalstream_ != nullptr) _impl_.optionalstream_->Clear();
+inline void BufferedInputStreamParams::clear_a_optionalstream() {
+  if (_impl_.a_optionalstream_ != nullptr) _impl_.a_optionalstream_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& BufferedInputStreamParams::_internal_optionalstream() const {
-  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.optionalstream_;
+inline const ::protobuf::mozilla::ipc::InputStreamParams& BufferedInputStreamParams::_internal_a_optionalstream() const {
+  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_optionalstream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::InputStreamParams&>(
       ::protobuf::mozilla::ipc::_InputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& BufferedInputStreamParams::optionalstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.BufferedInputStreamParams.optionalStream)
-  return _internal_optionalstream();
+inline const ::protobuf::mozilla::ipc::InputStreamParams& BufferedInputStreamParams::a_optionalstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
+  return _internal_a_optionalstream();
 }
-inline void BufferedInputStreamParams::unsafe_arena_set_allocated_optionalstream(
-    ::protobuf::mozilla::ipc::InputStreamParams* optionalstream) {
+inline void BufferedInputStreamParams::unsafe_arena_set_allocated_a_optionalstream(
+    ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.optionalstream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_optionalstream_);
   }
-  _impl_.optionalstream_ = optionalstream;
-  if (optionalstream) {
+  _impl_.a_optionalstream_ = a_optionalstream;
+  if (a_optionalstream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.BufferedInputStreamParams.optionalStream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::release_optionalstream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::release_a_optionalstream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.optionalstream_;
-  _impl_.optionalstream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_optionalstream_;
+  _impl_.a_optionalstream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4218,117 +4218,117 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::r
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::unsafe_arena_release_optionalstream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.BufferedInputStreamParams.optionalStream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::unsafe_arena_release_a_optionalstream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.optionalstream_;
-  _impl_.optionalstream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_optionalstream_;
+  _impl_.a_optionalstream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::_internal_mutable_optionalstream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::_internal_mutable_a_optionalstream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.optionalstream_ == nullptr) {
+  if (_impl_.a_optionalstream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
-    _impl_.optionalstream_ = p;
+    _impl_.a_optionalstream_ = p;
   }
-  return _impl_.optionalstream_;
+  return _impl_.a_optionalstream_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::mutable_optionalstream() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_optionalstream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.BufferedInputStreamParams.optionalStream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* BufferedInputStreamParams::mutable_a_optionalstream() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_a_optionalstream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
   return _msg;
 }
-inline void BufferedInputStreamParams::set_allocated_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* optionalstream) {
+inline void BufferedInputStreamParams::set_allocated_a_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.optionalstream_;
+    delete _impl_.a_optionalstream_;
   }
-  if (optionalstream) {
+  if (a_optionalstream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(optionalstream);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_optionalstream);
     if (message_arena != submessage_arena) {
-      optionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, optionalstream, submessage_arena);
+      a_optionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_optionalstream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.optionalstream_ = optionalstream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.BufferedInputStreamParams.optionalStream)
+  _impl_.a_optionalstream_ = a_optionalstream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
 }
 
-// required uint32 bufferSize = 2;
-inline bool BufferedInputStreamParams::_internal_has_buffersize() const {
+// required uint32 a_bufferSize = 2;
+inline bool BufferedInputStreamParams::_internal_has_a_buffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool BufferedInputStreamParams::has_buffersize() const {
-  return _internal_has_buffersize();
+inline bool BufferedInputStreamParams::has_a_buffersize() const {
+  return _internal_has_a_buffersize();
 }
-inline void BufferedInputStreamParams::clear_buffersize() {
-  _impl_.buffersize_ = 0u;
+inline void BufferedInputStreamParams::clear_a_buffersize() {
+  _impl_.a_buffersize_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t BufferedInputStreamParams::_internal_buffersize() const {
-  return _impl_.buffersize_;
+inline uint32_t BufferedInputStreamParams::_internal_a_buffersize() const {
+  return _impl_.a_buffersize_;
 }
-inline uint32_t BufferedInputStreamParams::buffersize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.BufferedInputStreamParams.bufferSize)
-  return _internal_buffersize();
+inline uint32_t BufferedInputStreamParams::a_buffersize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.BufferedInputStreamParams.a_bufferSize)
+  return _internal_a_buffersize();
 }
-inline void BufferedInputStreamParams::_internal_set_buffersize(uint32_t value) {
+inline void BufferedInputStreamParams::_internal_set_a_buffersize(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.buffersize_ = value;
+  _impl_.a_buffersize_ = value;
 }
-inline void BufferedInputStreamParams::set_buffersize(uint32_t value) {
-  _internal_set_buffersize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.BufferedInputStreamParams.bufferSize)
+inline void BufferedInputStreamParams::set_a_buffersize(uint32_t value) {
+  _internal_set_a_buffersize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.BufferedInputStreamParams.a_bufferSize)
 }
 
 // -------------------------------------------------------------------
 
 // MIMEInputStreamParams
 
-// optional .protobuf.mozilla.ipc.InputStreamParams optionalStream = 1;
-inline bool MIMEInputStreamParams::_internal_has_optionalstream() const {
+// optional .protobuf.mozilla.ipc.InputStreamParams a_optionalStream = 1;
+inline bool MIMEInputStreamParams::_internal_has_a_optionalstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.optionalstream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_optionalstream_ != nullptr);
   return value;
 }
-inline bool MIMEInputStreamParams::has_optionalstream() const {
-  return _internal_has_optionalstream();
+inline bool MIMEInputStreamParams::has_a_optionalstream() const {
+  return _internal_has_a_optionalstream();
 }
-inline void MIMEInputStreamParams::clear_optionalstream() {
-  if (_impl_.optionalstream_ != nullptr) _impl_.optionalstream_->Clear();
+inline void MIMEInputStreamParams::clear_a_optionalstream() {
+  if (_impl_.a_optionalstream_ != nullptr) _impl_.a_optionalstream_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& MIMEInputStreamParams::_internal_optionalstream() const {
-  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.optionalstream_;
+inline const ::protobuf::mozilla::ipc::InputStreamParams& MIMEInputStreamParams::_internal_a_optionalstream() const {
+  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_optionalstream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::InputStreamParams&>(
       ::protobuf::mozilla::ipc::_InputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& MIMEInputStreamParams::optionalstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MIMEInputStreamParams.optionalStream)
-  return _internal_optionalstream();
+inline const ::protobuf::mozilla::ipc::InputStreamParams& MIMEInputStreamParams::a_optionalstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MIMEInputStreamParams.a_optionalStream)
+  return _internal_a_optionalstream();
 }
-inline void MIMEInputStreamParams::unsafe_arena_set_allocated_optionalstream(
-    ::protobuf::mozilla::ipc::InputStreamParams* optionalstream) {
+inline void MIMEInputStreamParams::unsafe_arena_set_allocated_a_optionalstream(
+    ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.optionalstream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_optionalstream_);
   }
-  _impl_.optionalstream_ = optionalstream;
-  if (optionalstream) {
+  _impl_.a_optionalstream_ = a_optionalstream;
+  if (a_optionalstream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.MIMEInputStreamParams.optionalStream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.MIMEInputStreamParams.a_optionalStream)
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::release_optionalstream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::release_a_optionalstream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.optionalstream_;
-  _impl_.optionalstream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_optionalstream_;
+  _impl_.a_optionalstream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4340,157 +4340,157 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::relea
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::unsafe_arena_release_optionalstream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.MIMEInputStreamParams.optionalStream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::unsafe_arena_release_a_optionalstream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.MIMEInputStreamParams.a_optionalStream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.optionalstream_;
-  _impl_.optionalstream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_optionalstream_;
+  _impl_.a_optionalstream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::_internal_mutable_optionalstream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::_internal_mutable_a_optionalstream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.optionalstream_ == nullptr) {
+  if (_impl_.a_optionalstream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
-    _impl_.optionalstream_ = p;
+    _impl_.a_optionalstream_ = p;
   }
-  return _impl_.optionalstream_;
+  return _impl_.a_optionalstream_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::mutable_optionalstream() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_optionalstream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MIMEInputStreamParams.optionalStream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* MIMEInputStreamParams::mutable_a_optionalstream() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_a_optionalstream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MIMEInputStreamParams.a_optionalStream)
   return _msg;
 }
-inline void MIMEInputStreamParams::set_allocated_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* optionalstream) {
+inline void MIMEInputStreamParams::set_allocated_a_optionalstream(::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.optionalstream_;
+    delete _impl_.a_optionalstream_;
   }
-  if (optionalstream) {
+  if (a_optionalstream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(optionalstream);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_optionalstream);
     if (message_arena != submessage_arena) {
-      optionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, optionalstream, submessage_arena);
+      a_optionalstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_optionalstream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.optionalstream_ = optionalstream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.MIMEInputStreamParams.optionalStream)
+  _impl_.a_optionalstream_ = a_optionalstream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.MIMEInputStreamParams.a_optionalStream)
 }
 
-// repeated .protobuf.mozilla.ipc.HeaderEntry headers = 2;
-inline int MIMEInputStreamParams::_internal_headers_size() const {
-  return _impl_.headers_.size();
+// repeated .protobuf.mozilla.ipc.HeaderEntry a_headers = 2;
+inline int MIMEInputStreamParams::_internal_a_headers_size() const {
+  return _impl_.a_headers_.size();
 }
-inline int MIMEInputStreamParams::headers_size() const {
-  return _internal_headers_size();
+inline int MIMEInputStreamParams::a_headers_size() const {
+  return _internal_a_headers_size();
 }
-inline void MIMEInputStreamParams::clear_headers() {
-  _impl_.headers_.Clear();
+inline void MIMEInputStreamParams::clear_a_headers() {
+  _impl_.a_headers_.Clear();
 }
-inline ::protobuf::mozilla::ipc::HeaderEntry* MIMEInputStreamParams::mutable_headers(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MIMEInputStreamParams.headers)
-  return _impl_.headers_.Mutable(index);
+inline ::protobuf::mozilla::ipc::HeaderEntry* MIMEInputStreamParams::mutable_a_headers(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.MIMEInputStreamParams.a_headers)
+  return _impl_.a_headers_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::HeaderEntry >*
-MIMEInputStreamParams::mutable_headers() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.MIMEInputStreamParams.headers)
-  return &_impl_.headers_;
+MIMEInputStreamParams::mutable_a_headers() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.MIMEInputStreamParams.a_headers)
+  return &_impl_.a_headers_;
 }
-inline const ::protobuf::mozilla::ipc::HeaderEntry& MIMEInputStreamParams::_internal_headers(int index) const {
-  return _impl_.headers_.Get(index);
+inline const ::protobuf::mozilla::ipc::HeaderEntry& MIMEInputStreamParams::_internal_a_headers(int index) const {
+  return _impl_.a_headers_.Get(index);
 }
-inline const ::protobuf::mozilla::ipc::HeaderEntry& MIMEInputStreamParams::headers(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MIMEInputStreamParams.headers)
-  return _internal_headers(index);
+inline const ::protobuf::mozilla::ipc::HeaderEntry& MIMEInputStreamParams::a_headers(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MIMEInputStreamParams.a_headers)
+  return _internal_a_headers(index);
 }
-inline ::protobuf::mozilla::ipc::HeaderEntry* MIMEInputStreamParams::_internal_add_headers() {
-  return _impl_.headers_.Add();
+inline ::protobuf::mozilla::ipc::HeaderEntry* MIMEInputStreamParams::_internal_add_a_headers() {
+  return _impl_.a_headers_.Add();
 }
-inline ::protobuf::mozilla::ipc::HeaderEntry* MIMEInputStreamParams::add_headers() {
-  ::protobuf::mozilla::ipc::HeaderEntry* _add = _internal_add_headers();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.MIMEInputStreamParams.headers)
+inline ::protobuf::mozilla::ipc::HeaderEntry* MIMEInputStreamParams::add_a_headers() {
+  ::protobuf::mozilla::ipc::HeaderEntry* _add = _internal_add_a_headers();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.MIMEInputStreamParams.a_headers)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::HeaderEntry >&
-MIMEInputStreamParams::headers() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.MIMEInputStreamParams.headers)
-  return _impl_.headers_;
+MIMEInputStreamParams::a_headers() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.MIMEInputStreamParams.a_headers)
+  return _impl_.a_headers_;
 }
 
-// required bool startedReading = 3;
-inline bool MIMEInputStreamParams::_internal_has_startedreading() const {
+// required bool a_startedReading = 3;
+inline bool MIMEInputStreamParams::_internal_has_a_startedreading() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool MIMEInputStreamParams::has_startedreading() const {
-  return _internal_has_startedreading();
+inline bool MIMEInputStreamParams::has_a_startedreading() const {
+  return _internal_has_a_startedreading();
 }
-inline void MIMEInputStreamParams::clear_startedreading() {
-  _impl_.startedreading_ = false;
+inline void MIMEInputStreamParams::clear_a_startedreading() {
+  _impl_.a_startedreading_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool MIMEInputStreamParams::_internal_startedreading() const {
-  return _impl_.startedreading_;
+inline bool MIMEInputStreamParams::_internal_a_startedreading() const {
+  return _impl_.a_startedreading_;
 }
-inline bool MIMEInputStreamParams::startedreading() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MIMEInputStreamParams.startedReading)
-  return _internal_startedreading();
+inline bool MIMEInputStreamParams::a_startedreading() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MIMEInputStreamParams.a_startedReading)
+  return _internal_a_startedreading();
 }
-inline void MIMEInputStreamParams::_internal_set_startedreading(bool value) {
+inline void MIMEInputStreamParams::_internal_set_a_startedreading(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.startedreading_ = value;
+  _impl_.a_startedreading_ = value;
 }
-inline void MIMEInputStreamParams::set_startedreading(bool value) {
-  _internal_set_startedreading(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MIMEInputStreamParams.startedReading)
+inline void MIMEInputStreamParams::set_a_startedreading(bool value) {
+  _internal_set_a_startedreading(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MIMEInputStreamParams.a_startedReading)
 }
 
 // -------------------------------------------------------------------
 
 // InputStreamLengthWrapperParams
 
-// required .protobuf.mozilla.ipc.InputStreamParams stream = 1;
-inline bool InputStreamLengthWrapperParams::_internal_has_stream() const {
+// required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+inline bool InputStreamLengthWrapperParams::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.stream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
   return value;
 }
-inline bool InputStreamLengthWrapperParams::has_stream() const {
-  return _internal_has_stream();
+inline bool InputStreamLengthWrapperParams::has_a_stream() const {
+  return _internal_has_a_stream();
 }
-inline void InputStreamLengthWrapperParams::clear_stream() {
-  if (_impl_.stream_ != nullptr) _impl_.stream_->Clear();
+inline void InputStreamLengthWrapperParams::clear_a_stream() {
+  if (_impl_.a_stream_ != nullptr) _impl_.a_stream_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& InputStreamLengthWrapperParams::_internal_stream() const {
-  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.stream_;
+inline const ::protobuf::mozilla::ipc::InputStreamParams& InputStreamLengthWrapperParams::_internal_a_stream() const {
+  const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_stream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::InputStreamParams&>(
       ::protobuf::mozilla::ipc::_InputStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::InputStreamParams& InputStreamLengthWrapperParams::stream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.stream)
-  return _internal_stream();
+inline const ::protobuf::mozilla::ipc::InputStreamParams& InputStreamLengthWrapperParams::a_stream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
+  return _internal_a_stream();
 }
-inline void InputStreamLengthWrapperParams::unsafe_arena_set_allocated_stream(
-    ::protobuf::mozilla::ipc::InputStreamParams* stream) {
+inline void InputStreamLengthWrapperParams::unsafe_arena_set_allocated_a_stream(
+    ::protobuf::mozilla::ipc::InputStreamParams* a_stream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  _impl_.stream_ = stream;
-  if (stream) {
+  _impl_.a_stream_ = a_stream;
+  if (a_stream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.stream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::release_stream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::release_a_stream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4502,100 +4502,100 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperPara
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::unsafe_arena_release_stream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.stream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::unsafe_arena_release_a_stream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::_internal_mutable_stream() {
+inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::_internal_mutable_a_stream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.stream_ == nullptr) {
+  if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
-    _impl_.stream_ = p;
+    _impl_.a_stream_ = p;
   }
-  return _impl_.stream_;
+  return _impl_.a_stream_;
 }
-inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::mutable_stream() {
-  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_stream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.stream)
+inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::mutable_a_stream() {
+  ::protobuf::mozilla::ipc::InputStreamParams* _msg = _internal_mutable_a_stream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
   return _msg;
 }
-inline void InputStreamLengthWrapperParams::set_allocated_stream(::protobuf::mozilla::ipc::InputStreamParams* stream) {
+inline void InputStreamLengthWrapperParams::set_allocated_a_stream(::protobuf::mozilla::ipc::InputStreamParams* a_stream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.stream_;
+    delete _impl_.a_stream_;
   }
-  if (stream) {
+  if (a_stream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(stream);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_stream);
     if (message_arena != submessage_arena) {
-      stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, stream, submessage_arena);
+      a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_stream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.stream_ = stream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.stream)
+  _impl_.a_stream_ = a_stream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
 }
 
-// required sint64 length = 2;
-inline bool InputStreamLengthWrapperParams::_internal_has_length() const {
+// required sint64 a_length = 2;
+inline bool InputStreamLengthWrapperParams::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool InputStreamLengthWrapperParams::has_length() const {
-  return _internal_has_length();
+inline bool InputStreamLengthWrapperParams::has_a_length() const {
+  return _internal_has_a_length();
 }
-inline void InputStreamLengthWrapperParams::clear_length() {
-  _impl_.length_ = int64_t{0};
+inline void InputStreamLengthWrapperParams::clear_a_length() {
+  _impl_.a_length_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int64_t InputStreamLengthWrapperParams::_internal_length() const {
-  return _impl_.length_;
+inline int64_t InputStreamLengthWrapperParams::_internal_a_length() const {
+  return _impl_.a_length_;
 }
-inline int64_t InputStreamLengthWrapperParams::length() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.length)
-  return _internal_length();
+inline int64_t InputStreamLengthWrapperParams::a_length() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_length)
+  return _internal_a_length();
 }
-inline void InputStreamLengthWrapperParams::_internal_set_length(int64_t value) {
+inline void InputStreamLengthWrapperParams::_internal_set_a_length(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.length_ = value;
+  _impl_.a_length_ = value;
 }
-inline void InputStreamLengthWrapperParams::set_length(int64_t value) {
-  _internal_set_length(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.length)
+inline void InputStreamLengthWrapperParams::set_a_length(int64_t value) {
+  _internal_set_a_length(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_length)
 }
 
-// required bool consumed = 3;
-inline bool InputStreamLengthWrapperParams::_internal_has_consumed() const {
+// required bool a_consumed = 3;
+inline bool InputStreamLengthWrapperParams::_internal_has_a_consumed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool InputStreamLengthWrapperParams::has_consumed() const {
-  return _internal_has_consumed();
+inline bool InputStreamLengthWrapperParams::has_a_consumed() const {
+  return _internal_has_a_consumed();
 }
-inline void InputStreamLengthWrapperParams::clear_consumed() {
-  _impl_.consumed_ = false;
+inline void InputStreamLengthWrapperParams::clear_a_consumed() {
+  _impl_.a_consumed_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool InputStreamLengthWrapperParams::_internal_consumed() const {
-  return _impl_.consumed_;
+inline bool InputStreamLengthWrapperParams::_internal_a_consumed() const {
+  return _impl_.a_consumed_;
 }
-inline bool InputStreamLengthWrapperParams::consumed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.consumed)
-  return _internal_consumed();
+inline bool InputStreamLengthWrapperParams::a_consumed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_consumed)
+  return _internal_a_consumed();
 }
-inline void InputStreamLengthWrapperParams::_internal_set_consumed(bool value) {
+inline void InputStreamLengthWrapperParams::_internal_set_a_consumed(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.consumed_ = value;
+  _impl_.a_consumed_ = value;
 }
-inline void InputStreamLengthWrapperParams::set_consumed(bool value) {
-  _internal_set_consumed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.consumed)
+inline void InputStreamLengthWrapperParams::set_a_consumed(bool value) {
+  _internal_set_a_consumed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_consumed)
 }
 
 #ifdef __GNUC__

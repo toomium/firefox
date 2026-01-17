@@ -173,43 +173,43 @@ class IPCIdentityCredential final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kTokenFieldNumber = 2,
+    kAIdFieldNumber = 1,
+    kATokenFieldNumber = 2,
   };
-  // required bytes id = 1;
-  bool has_id() const;
+  // required bytes a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
-  // optional bytes token = 2;
-  bool has_token() const;
+  // optional bytes a_token = 2;
+  bool has_a_token() const;
   private:
-  bool _internal_has_token() const;
+  bool _internal_has_a_token() const;
   public:
-  void clear_token();
-  const std::string& token() const;
+  void clear_a_token();
+  const std::string& a_token() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_token(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_token();
-  PROTOBUF_NODISCARD std::string* release_token();
-  void set_allocated_token(std::string* token);
+  void set_a_token(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_token();
+  PROTOBUF_NODISCARD std::string* release_a_token();
+  void set_allocated_a_token(std::string* a_token);
   private:
-  const std::string& _internal_token() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_token(const std::string& value);
-  std::string* _internal_mutable_token();
+  const std::string& _internal_a_token() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_token(const std::string& value);
+  std::string* _internal_mutable_a_token();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCIdentityCredential)
@@ -222,8 +222,8 @@ class IPCIdentityCredential final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_token_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -272,8 +272,8 @@ class WebIdentityGetCredentialResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVIPCIdentityCredential = 2,
+    kAMVnsresult = 1,
+    kAMVIPCIdentityCredential = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -346,52 +346,52 @@ class WebIdentityGetCredentialResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVIPCIdentityCredentialFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVIPCIdentityCredentialFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.IPCIdentityCredential mVIPCIdentityCredential = 2;
-  bool has_mvipcidentitycredential() const;
+  // .protobuf.mozilla.dom.IPCIdentityCredential a_mVIPCIdentityCredential = 2;
+  bool has_a_mvipcidentitycredential() const;
   private:
-  bool _internal_has_mvipcidentitycredential() const;
+  bool _internal_has_a_mvipcidentitycredential() const;
   public:
-  void clear_mvipcidentitycredential();
-  const ::protobuf::mozilla::dom::IPCIdentityCredential& mvipcidentitycredential() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCIdentityCredential* release_mvipcidentitycredential();
-  ::protobuf::mozilla::dom::IPCIdentityCredential* mutable_mvipcidentitycredential();
-  void set_allocated_mvipcidentitycredential(::protobuf::mozilla::dom::IPCIdentityCredential* mvipcidentitycredential);
+  void clear_a_mvipcidentitycredential();
+  const ::protobuf::mozilla::dom::IPCIdentityCredential& a_mvipcidentitycredential() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCIdentityCredential* release_a_mvipcidentitycredential();
+  ::protobuf::mozilla::dom::IPCIdentityCredential* mutable_a_mvipcidentitycredential();
+  void set_allocated_a_mvipcidentitycredential(::protobuf::mozilla::dom::IPCIdentityCredential* a_mvipcidentitycredential);
   private:
-  const ::protobuf::mozilla::dom::IPCIdentityCredential& _internal_mvipcidentitycredential() const;
-  ::protobuf::mozilla::dom::IPCIdentityCredential* _internal_mutable_mvipcidentitycredential();
+  const ::protobuf::mozilla::dom::IPCIdentityCredential& _internal_a_mvipcidentitycredential() const;
+  ::protobuf::mozilla::dom::IPCIdentityCredential* _internal_mutable_a_mvipcidentitycredential();
   public:
-  void unsafe_arena_set_allocated_mvipcidentitycredential(
-      ::protobuf::mozilla::dom::IPCIdentityCredential* mvipcidentitycredential);
-  ::protobuf::mozilla::dom::IPCIdentityCredential* unsafe_arena_release_mvipcidentitycredential();
+  void unsafe_arena_set_allocated_a_mvipcidentitycredential(
+      ::protobuf::mozilla::dom::IPCIdentityCredential* a_mvipcidentitycredential);
+  ::protobuf::mozilla::dom::IPCIdentityCredential* unsafe_arena_release_a_mvipcidentitycredential();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WebIdentityGetCredentialResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvipcidentitycredential();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvipcidentitycredential();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -403,8 +403,8 @@ class WebIdentityGetCredentialResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::IPCIdentityCredential* mvipcidentitycredential_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::IPCIdentityCredential* a_mvipcidentitycredential_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -424,294 +424,294 @@ class WebIdentityGetCredentialResponse final :
 #endif  // __GNUC__
 // IPCIdentityCredential
 
-// required bytes id = 1;
-inline bool IPCIdentityCredential::_internal_has_id() const {
+// required bytes a_id = 1;
+inline bool IPCIdentityCredential::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCIdentityCredential::has_id() const {
-  return _internal_has_id();
+inline bool IPCIdentityCredential::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void IPCIdentityCredential::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void IPCIdentityCredential::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCIdentityCredential::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.id)
-  return _internal_id();
+inline const std::string& IPCIdentityCredential::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCIdentityCredential::set_id(ArgT0&& arg0, ArgT... args) {
+void IPCIdentityCredential::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
 }
-inline std::string* IPCIdentityCredential::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCIdentityCredential.id)
+inline std::string* IPCIdentityCredential::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
   return _s;
 }
-inline const std::string& IPCIdentityCredential::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& IPCIdentityCredential::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void IPCIdentityCredential::_internal_set_id(const std::string& value) {
+inline void IPCIdentityCredential::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCIdentityCredential::_internal_mutable_id() {
+inline std::string* IPCIdentityCredential::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCIdentityCredential::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCIdentityCredential.id)
-  if (!_internal_has_id()) {
+inline std::string* IPCIdentityCredential::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCIdentityCredential::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void IPCIdentityCredential::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCIdentityCredential.id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
 }
 
-// optional bytes token = 2;
-inline bool IPCIdentityCredential::_internal_has_token() const {
+// optional bytes a_token = 2;
+inline bool IPCIdentityCredential::_internal_has_a_token() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IPCIdentityCredential::has_token() const {
-  return _internal_has_token();
+inline bool IPCIdentityCredential::has_a_token() const {
+  return _internal_has_a_token();
 }
-inline void IPCIdentityCredential::clear_token() {
-  _impl_.token_.ClearToEmpty();
+inline void IPCIdentityCredential::clear_a_token() {
+  _impl_.a_token_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IPCIdentityCredential::token() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.token)
-  return _internal_token();
+inline const std::string& IPCIdentityCredential::a_token() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
+  return _internal_a_token();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCIdentityCredential::set_token(ArgT0&& arg0, ArgT... args) {
+void IPCIdentityCredential::set_a_token(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.token_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.token)
+ _impl_.a_token_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
 }
-inline std::string* IPCIdentityCredential::mutable_token() {
-  std::string* _s = _internal_mutable_token();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCIdentityCredential.token)
+inline std::string* IPCIdentityCredential::mutable_a_token() {
+  std::string* _s = _internal_mutable_a_token();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
   return _s;
 }
-inline const std::string& IPCIdentityCredential::_internal_token() const {
-  return _impl_.token_.Get();
+inline const std::string& IPCIdentityCredential::_internal_a_token() const {
+  return _impl_.a_token_.Get();
 }
-inline void IPCIdentityCredential::_internal_set_token(const std::string& value) {
+inline void IPCIdentityCredential::_internal_set_a_token(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.token_.Set(value, GetArenaForAllocation());
+  _impl_.a_token_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCIdentityCredential::_internal_mutable_token() {
+inline std::string* IPCIdentityCredential::_internal_mutable_a_token() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.token_.Mutable(GetArenaForAllocation());
+  return _impl_.a_token_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCIdentityCredential::release_token() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCIdentityCredential.token)
-  if (!_internal_has_token()) {
+inline std::string* IPCIdentityCredential::release_a_token() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
+  if (!_internal_has_a_token()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.token_.Release();
+  auto* p = _impl_.a_token_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.token_.IsDefault()) {
-    _impl_.token_.Set("", GetArenaForAllocation());
+  if (_impl_.a_token_.IsDefault()) {
+    _impl_.a_token_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCIdentityCredential::set_allocated_token(std::string* token) {
-  if (token != nullptr) {
+inline void IPCIdentityCredential::set_allocated_a_token(std::string* a_token) {
+  if (a_token != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.token_.SetAllocated(token, GetArenaForAllocation());
+  _impl_.a_token_.SetAllocated(a_token, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.token_.IsDefault()) {
-    _impl_.token_.Set("", GetArenaForAllocation());
+  if (_impl_.a_token_.IsDefault()) {
+    _impl_.a_token_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCIdentityCredential.token)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
 }
 
 // -------------------------------------------------------------------
 
 // WebIdentityGetCredentialResponse
 
-// bytes mVnsresult = 1;
-inline bool WebIdentityGetCredentialResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool WebIdentityGetCredentialResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool WebIdentityGetCredentialResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool WebIdentityGetCredentialResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void WebIdentityGetCredentialResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void WebIdentityGetCredentialResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void WebIdentityGetCredentialResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void WebIdentityGetCredentialResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& WebIdentityGetCredentialResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& WebIdentityGetCredentialResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void WebIdentityGetCredentialResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void WebIdentityGetCredentialResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVnsresult)
 }
-inline std::string* WebIdentityGetCredentialResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVnsresult)
+inline std::string* WebIdentityGetCredentialResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& WebIdentityGetCredentialResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& WebIdentityGetCredentialResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void WebIdentityGetCredentialResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void WebIdentityGetCredentialResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* WebIdentityGetCredentialResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* WebIdentityGetCredentialResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* WebIdentityGetCredentialResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* WebIdentityGetCredentialResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void WebIdentityGetCredentialResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void WebIdentityGetCredentialResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.IPCIdentityCredential mVIPCIdentityCredential = 2;
-inline bool WebIdentityGetCredentialResponse::_internal_has_mvipcidentitycredential() const {
-  return content_case() == kMVIPCIdentityCredential;
+// .protobuf.mozilla.dom.IPCIdentityCredential a_mVIPCIdentityCredential = 2;
+inline bool WebIdentityGetCredentialResponse::_internal_has_a_mvipcidentitycredential() const {
+  return content_case() == kAMVIPCIdentityCredential;
 }
-inline bool WebIdentityGetCredentialResponse::has_mvipcidentitycredential() const {
-  return _internal_has_mvipcidentitycredential();
+inline bool WebIdentityGetCredentialResponse::has_a_mvipcidentitycredential() const {
+  return _internal_has_a_mvipcidentitycredential();
 }
-inline void WebIdentityGetCredentialResponse::set_has_mvipcidentitycredential() {
-  _impl_._oneof_case_[0] = kMVIPCIdentityCredential;
+inline void WebIdentityGetCredentialResponse::set_has_a_mvipcidentitycredential() {
+  _impl_._oneof_case_[0] = kAMVIPCIdentityCredential;
 }
-inline void WebIdentityGetCredentialResponse::clear_mvipcidentitycredential() {
-  if (_internal_has_mvipcidentitycredential()) {
+inline void WebIdentityGetCredentialResponse::clear_a_mvipcidentitycredential() {
+  if (_internal_has_a_mvipcidentitycredential()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipcidentitycredential_;
+      delete _impl_.content_.a_mvipcidentitycredential_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::release_mvipcidentitycredential() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVIPCIdentityCredential)
-  if (_internal_has_mvipcidentitycredential()) {
+inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::release_a_mvipcidentitycredential() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVIPCIdentityCredential)
+  if (_internal_has_a_mvipcidentitycredential()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCIdentityCredential* temp = _impl_.content_.mvipcidentitycredential_;
+    ::protobuf::mozilla::dom::IPCIdentityCredential* temp = _impl_.content_.a_mvipcidentitycredential_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipcidentitycredential_ = nullptr;
+    _impl_.content_.a_mvipcidentitycredential_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCIdentityCredential& WebIdentityGetCredentialResponse::_internal_mvipcidentitycredential() const {
-  return _internal_has_mvipcidentitycredential()
-      ? *_impl_.content_.mvipcidentitycredential_
+inline const ::protobuf::mozilla::dom::IPCIdentityCredential& WebIdentityGetCredentialResponse::_internal_a_mvipcidentitycredential() const {
+  return _internal_has_a_mvipcidentitycredential()
+      ? *_impl_.content_.a_mvipcidentitycredential_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCIdentityCredential&>(::protobuf::mozilla::dom::_IPCIdentityCredential_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCIdentityCredential& WebIdentityGetCredentialResponse::mvipcidentitycredential() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVIPCIdentityCredential)
-  return _internal_mvipcidentitycredential();
+inline const ::protobuf::mozilla::dom::IPCIdentityCredential& WebIdentityGetCredentialResponse::a_mvipcidentitycredential() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVIPCIdentityCredential)
+  return _internal_a_mvipcidentitycredential();
 }
-inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::unsafe_arena_release_mvipcidentitycredential() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVIPCIdentityCredential)
-  if (_internal_has_mvipcidentitycredential()) {
+inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::unsafe_arena_release_a_mvipcidentitycredential() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVIPCIdentityCredential)
+  if (_internal_has_a_mvipcidentitycredential()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCIdentityCredential* temp = _impl_.content_.mvipcidentitycredential_;
-    _impl_.content_.mvipcidentitycredential_ = nullptr;
+    ::protobuf::mozilla::dom::IPCIdentityCredential* temp = _impl_.content_.a_mvipcidentitycredential_;
+    _impl_.content_.a_mvipcidentitycredential_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void WebIdentityGetCredentialResponse::unsafe_arena_set_allocated_mvipcidentitycredential(::protobuf::mozilla::dom::IPCIdentityCredential* mvipcidentitycredential) {
+inline void WebIdentityGetCredentialResponse::unsafe_arena_set_allocated_a_mvipcidentitycredential(::protobuf::mozilla::dom::IPCIdentityCredential* a_mvipcidentitycredential) {
   clear_content();
-  if (mvipcidentitycredential) {
-    set_has_mvipcidentitycredential();
-    _impl_.content_.mvipcidentitycredential_ = mvipcidentitycredential;
+  if (a_mvipcidentitycredential) {
+    set_has_a_mvipcidentitycredential();
+    _impl_.content_.a_mvipcidentitycredential_ = a_mvipcidentitycredential;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVIPCIdentityCredential)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVIPCIdentityCredential)
 }
-inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::_internal_mutable_mvipcidentitycredential() {
-  if (!_internal_has_mvipcidentitycredential()) {
+inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::_internal_mutable_a_mvipcidentitycredential() {
+  if (!_internal_has_a_mvipcidentitycredential()) {
     clear_content();
-    set_has_mvipcidentitycredential();
-    _impl_.content_.mvipcidentitycredential_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCIdentityCredential >(GetArenaForAllocation());
+    set_has_a_mvipcidentitycredential();
+    _impl_.content_.a_mvipcidentitycredential_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCIdentityCredential >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipcidentitycredential_;
+  return _impl_.content_.a_mvipcidentitycredential_;
 }
-inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::mutable_mvipcidentitycredential() {
-  ::protobuf::mozilla::dom::IPCIdentityCredential* _msg = _internal_mutable_mvipcidentitycredential();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVIPCIdentityCredential)
+inline ::protobuf::mozilla::dom::IPCIdentityCredential* WebIdentityGetCredentialResponse::mutable_a_mvipcidentitycredential() {
+  ::protobuf::mozilla::dom::IPCIdentityCredential* _msg = _internal_mutable_a_mvipcidentitycredential();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVIPCIdentityCredential)
   return _msg;
 }
 

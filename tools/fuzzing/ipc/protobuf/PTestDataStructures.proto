@@ -17,7 +17,7 @@ import "PTestDataStructuresCommon.proto";
 
 // Message declarations
 message Msg_PTestDataStructuresSubConstructor {
-  required sint32 i = 1;
+  required sint32 a_i = 1;
 }
 
 message Reply_PTestDataStructuresSubConstructor {
@@ -33,174 +33,174 @@ message Reply___delete__ {
 }
 
 message Msg_TestArrayOfInt {
-  repeated sint32 i1 = 1;
+  repeated sint32 a_i1 = 1;
 }
 
 message Reply_TestArrayOfInt {
-  repeated sint32 o1 = 1;
+  repeated sint32 a_o1 = 1;
 }
 
 message Msg_TestArrayOfActor {
-  repeated bytes i1 = 1;
+  repeated bytes a_i1 = 1;
 }
 
 message Reply_TestArrayOfActor {
-  repeated bytes o1 = 1;
+  repeated bytes a_o1 = 1;
 }
 
 message Msg_TestUnion {
-  required protobuf.mozilla._foo.IntDouble i1 = 1;
-  required protobuf.mozilla._foo.IntDouble i2 = 2;
+  required protobuf.mozilla._foo.IntDouble a_i1 = 1;
+  required protobuf.mozilla._foo.IntDouble a_i2 = 2;
 }
 
 message Reply_TestUnion {
-  required protobuf.mozilla._foo.IntDouble o1 = 1;
-  required protobuf.mozilla._foo.IntDouble o2 = 2;
+  required protobuf.mozilla._foo.IntDouble a_o1 = 1;
+  required protobuf.mozilla._foo.IntDouble a_o2 = 2;
 }
 
 message Msg_TestArrayOfUnion {
-  repeated protobuf.mozilla._foo.IntDouble i1 = 1;
+  repeated protobuf.mozilla._foo.IntDouble a_i1 = 1;
 }
 
 message Reply_TestArrayOfUnion {
-  repeated protobuf.mozilla._foo.IntDouble o1 = 1;
+  repeated protobuf.mozilla._foo.IntDouble a_o1 = 1;
 }
 
 message Msg_TestUnionWithArray {
-  required protobuf.mozilla._foo.IntDoubleArrays i1 = 1;
-  required protobuf.mozilla._foo.IntDoubleArrays i2 = 2;
-  required protobuf.mozilla._foo.IntDoubleArrays i3 = 3;
+  required protobuf.mozilla._foo.IntDoubleArrays a_i1 = 1;
+  required protobuf.mozilla._foo.IntDoubleArrays a_i2 = 2;
+  required protobuf.mozilla._foo.IntDoubleArrays a_i3 = 3;
 }
 
 message Reply_TestUnionWithArray {
-  required protobuf.mozilla._foo.IntDoubleArrays o1 = 1;
-  required protobuf.mozilla._foo.IntDoubleArrays o2 = 2;
-  required protobuf.mozilla._foo.IntDoubleArrays o3 = 3;
+  required protobuf.mozilla._foo.IntDoubleArrays a_o1 = 1;
+  required protobuf.mozilla._foo.IntDoubleArrays a_o2 = 2;
+  required protobuf.mozilla._foo.IntDoubleArrays a_o3 = 3;
 }
 
 message Msg_TestArrayOfUnionWithArray {
-  repeated protobuf.mozilla._foo.IntDoubleArrays i1 = 1;
+  repeated protobuf.mozilla._foo.IntDoubleArrays a_i1 = 1;
 }
 
 message Reply_TestArrayOfUnionWithArray {
-  repeated protobuf.mozilla._foo.IntDoubleArrays o1 = 1;
+  repeated protobuf.mozilla._foo.IntDoubleArrays a_o1 = 1;
 }
 
 message Msg_TestStructWithActor {
-  required protobuf.mozilla._foo.ActorWrapper a1 = 1;
+  required protobuf.mozilla._foo.ActorWrapper a_a1 = 1;
 }
 
 message Reply_TestStructWithActor {
-  required protobuf.mozilla._foo.ActorWrapper o1 = 1;
+  required protobuf.mozilla._foo.ActorWrapper a_o1 = 1;
 }
 
 message Msg_TestUnionWithActors {
-  required protobuf.mozilla._foo.Actors i1 = 1;
-  required protobuf.mozilla._foo.Actors i2 = 2;
-  required protobuf.mozilla._foo.Actors i3 = 3;
+  required protobuf.mozilla._foo.Actors a_i1 = 1;
+  required protobuf.mozilla._foo.Actors a_i2 = 2;
+  required protobuf.mozilla._foo.Actors a_i3 = 3;
 }
 
 message Reply_TestUnionWithActors {
-  required protobuf.mozilla._foo.Actors o1 = 1;
-  required protobuf.mozilla._foo.Actors o2 = 2;
-  required protobuf.mozilla._foo.Actors o3 = 3;
+  required protobuf.mozilla._foo.Actors a_o1 = 1;
+  required protobuf.mozilla._foo.Actors a_o2 = 2;
+  required protobuf.mozilla._foo.Actors a_o3 = 3;
 }
 
 message Msg_TestArrayOfUnionWithActors {
-  repeated protobuf.mozilla._foo.Actors i1 = 1;
+  repeated protobuf.mozilla._foo.Actors a_i1 = 1;
 }
 
 message Reply_TestArrayOfUnionWithActors {
-  repeated protobuf.mozilla._foo.Actors o1 = 1;
+  repeated protobuf.mozilla._foo.Actors a_o1 = 1;
 }
 
 message Msg_TestUnions {
-  required protobuf.mozilla._foo.Unions i1 = 1;
-  required protobuf.mozilla._foo.Unions i2 = 2;
-  required protobuf.mozilla._foo.Unions i3 = 3;
-  required protobuf.mozilla._foo.Unions i4 = 4;
+  required protobuf.mozilla._foo.Unions a_i1 = 1;
+  required protobuf.mozilla._foo.Unions a_i2 = 2;
+  required protobuf.mozilla._foo.Unions a_i3 = 3;
+  required protobuf.mozilla._foo.Unions a_i4 = 4;
 }
 
 message Reply_TestUnions {
-  required protobuf.mozilla._foo.Unions o1 = 1;
-  required protobuf.mozilla._foo.Unions o2 = 2;
-  required protobuf.mozilla._foo.Unions o3 = 3;
-  required protobuf.mozilla._foo.Unions o4 = 4;
+  required protobuf.mozilla._foo.Unions a_o1 = 1;
+  required protobuf.mozilla._foo.Unions a_o2 = 2;
+  required protobuf.mozilla._foo.Unions a_o3 = 3;
+  required protobuf.mozilla._foo.Unions a_o4 = 4;
 }
 
 message Msg_TestArrayOfUnions {
-  repeated protobuf.mozilla._foo.Unions i1 = 1;
+  repeated protobuf.mozilla._foo.Unions a_i1 = 1;
 }
 
 message Reply_TestArrayOfUnions {
-  repeated protobuf.mozilla._foo.Unions o1 = 1;
+  repeated protobuf.mozilla._foo.Unions a_o1 = 1;
 }
 
 message Msg_TestStruct {
-  required protobuf.mozilla._foo.SIntDouble i = 1;
+  required protobuf.mozilla._foo.SIntDouble a_i = 1;
 }
 
 message Reply_TestStruct {
-  required protobuf.mozilla._foo.SIntDouble o = 1;
+  required protobuf.mozilla._foo.SIntDouble a_o = 1;
 }
 
 message Msg_TestStructWithArrays {
-  required protobuf.mozilla._foo.SIntDoubleArrays i = 1;
+  required protobuf.mozilla._foo.SIntDoubleArrays a_i = 1;
 }
 
 message Reply_TestStructWithArrays {
-  required protobuf.mozilla._foo.SIntDoubleArrays o = 1;
+  required protobuf.mozilla._foo.SIntDoubleArrays a_o = 1;
 }
 
 message Msg_TestStructWithActors {
-  required protobuf.mozilla._foo.SActors i = 1;
+  required protobuf.mozilla._foo.SActors a_i = 1;
 }
 
 message Reply_TestStructWithActors {
-  required protobuf.mozilla._foo.SActors o = 1;
+  required protobuf.mozilla._foo.SActors a_o = 1;
 }
 
 message Msg_TestStructs {
-  required protobuf.mozilla._foo.Structs i = 1;
+  required protobuf.mozilla._foo.Structs a_i = 1;
 }
 
 message Reply_TestStructs {
-  required protobuf.mozilla._foo.Structs o = 1;
+  required protobuf.mozilla._foo.Structs a_o = 1;
 }
 
 message Msg_TestUnionWithStructs {
-  required protobuf.mozilla._foo.WithStructs i1 = 1;
-  required protobuf.mozilla._foo.WithStructs i2 = 2;
-  required protobuf.mozilla._foo.WithStructs i3 = 3;
-  required protobuf.mozilla._foo.WithStructs i4 = 4;
-  required protobuf.mozilla._foo.WithStructs i5 = 5;
+  required protobuf.mozilla._foo.WithStructs a_i1 = 1;
+  required protobuf.mozilla._foo.WithStructs a_i2 = 2;
+  required protobuf.mozilla._foo.WithStructs a_i3 = 3;
+  required protobuf.mozilla._foo.WithStructs a_i4 = 4;
+  required protobuf.mozilla._foo.WithStructs a_i5 = 5;
 }
 
 message Reply_TestUnionWithStructs {
-  required protobuf.mozilla._foo.WithStructs o1 = 1;
-  required protobuf.mozilla._foo.WithStructs o2 = 2;
-  required protobuf.mozilla._foo.WithStructs o3 = 3;
-  required protobuf.mozilla._foo.WithStructs o4 = 4;
-  required protobuf.mozilla._foo.WithStructs o5 = 5;
+  required protobuf.mozilla._foo.WithStructs a_o1 = 1;
+  required protobuf.mozilla._foo.WithStructs a_o2 = 2;
+  required protobuf.mozilla._foo.WithStructs a_o3 = 3;
+  required protobuf.mozilla._foo.WithStructs a_o4 = 4;
+  required protobuf.mozilla._foo.WithStructs a_o5 = 5;
 }
 
 message Msg_TestStructWithUnions {
-  required protobuf.mozilla._foo.WithUnions i = 1;
+  required protobuf.mozilla._foo.WithUnions a_i = 1;
 }
 
 message Reply_TestStructWithUnions {
-  required protobuf.mozilla._foo.WithUnions o = 1;
+  required protobuf.mozilla._foo.WithUnions a_o = 1;
 }
 
 message Msg_TestUnionWithCxx {
-  repeated protobuf.mozilla._foo.Op ops = 1;
+  repeated protobuf.mozilla._foo.Op a_ops = 1;
 }
 
 message Reply_TestUnionWithCxx {
 }
 
 message Msg_TestNsIntRegion {
-  repeated bytes ops = 1;
+  repeated bytes a_ops = 1;
 }
 
 message Reply_TestNsIntRegion {

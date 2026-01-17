@@ -25,8 +25,8 @@ PROTOBUF_CONSTEXPR Msg_PVRLayerConstructor::Msg_PVRLayerConstructor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.adisplayid_)*/0u
-  , /*decltype(_impl_.agroup_)*/0u} {}
+  , /*decltype(_impl_.a_adisplayid_)*/0u
+  , /*decltype(_impl_.a_agroup_)*/0u} {}
 struct Msg_PVRLayerConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PVRLayerConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -76,8 +76,8 @@ PROTOBUF_CONSTEXPR Msg_SetGroupMask::Msg_SetGroupMask(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.adisplayid_)*/0u
-  , /*decltype(_impl_.agroupmask_)*/0u} {}
+  , /*decltype(_impl_.a_adisplayid_)*/0u
+  , /*decltype(_impl_.a_agroupmask_)*/0u} {}
 struct Msg_SetGroupMaskDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetGroupMaskDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -91,7 +91,7 @@ PROTOBUF_CONSTEXPR Msg_SetHaveEventListener::Msg_SetHaveEventListener(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ahaveeventlistener_)*/false} {}
+  , /*decltype(_impl_.a_ahaveeventlistener_)*/false} {}
 struct Msg_SetHaveEventListenerDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetHaveEventListenerDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -129,11 +129,11 @@ PROTOBUF_CONSTEXPR Msg_VibrateHaptic::Msg_VibrateHaptic(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.agamepadhandle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aintensity_)*/0
-  , /*decltype(_impl_.ahapticindex_)*/0u
-  , /*decltype(_impl_.apromiseid_)*/0u
-  , /*decltype(_impl_.aduration_)*/0} {}
+  , /*decltype(_impl_.a_agamepadhandle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aintensity_)*/0
+  , /*decltype(_impl_.a_ahapticindex_)*/0u
+  , /*decltype(_impl_.a_apromiseid_)*/0u
+  , /*decltype(_impl_.a_aduration_)*/0} {}
 struct Msg_VibrateHapticDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_VibrateHapticDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -147,7 +147,7 @@ PROTOBUF_CONSTEXPR Msg_StopVibrateHaptic::Msg_StopVibrateHaptic(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.agamepadhandle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_agamepadhandle_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_StopVibrateHapticDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StopVibrateHapticDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -161,7 +161,7 @@ PROTOBUF_CONSTEXPR Msg_StartVRNavigation::Msg_StartVRNavigation(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.adeviceid_)*/0u} {}
+  , /*decltype(_impl_.a_adeviceid_)*/0u} {}
 struct Msg_StartVRNavigationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartVRNavigationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -175,8 +175,8 @@ PROTOBUF_CONSTEXPR Msg_StopVRNavigation::Msg_StopVRNavigation(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aduration_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.adeviceid_)*/0u} {}
+  , /*decltype(_impl_.a_aduration_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_adeviceid_)*/0u} {}
 struct Msg_StopVRNavigationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StopVRNavigationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -212,7 +212,7 @@ struct Msg_StopActivityDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StopActivityDefaultTypeInternal _Msg_StopActivity_default_instance_;
 PROTOBUF_CONSTEXPR Msg_RunPuppet::Msg_RunPuppet(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.buffer_)*/{}
+    /*decltype(_impl_.a_buffer_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_RunPuppetDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RunPuppetDefaultTypeInternal()
@@ -239,7 +239,7 @@ PROTOBUF_CONSTEXPR Msg_UpdateDisplayInfo::Msg_UpdateDisplayInfo(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.adisplayinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_adisplayinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_UpdateDisplayInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateDisplayInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -253,7 +253,7 @@ PROTOBUF_CONSTEXPR Msg_UpdateRuntimeCapabilities::Msg_UpdateRuntimeCapabilities(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.acapabilities_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_acapabilities_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_UpdateRuntimeCapabilitiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateRuntimeCapabilitiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -267,7 +267,7 @@ PROTOBUF_CONSTEXPR Msg_ReplyGamepadVibrateHaptic::Msg_ReplyGamepadVibrateHaptic(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.apromiseid_)*/0u} {}
+  , /*decltype(_impl_.a_apromiseid_)*/0u} {}
 struct Msg_ReplyGamepadVibrateHapticDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyGamepadVibrateHapticDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -281,7 +281,7 @@ PROTOBUF_CONSTEXPR Msg_NotifyPuppetCommandBufferCompleted::Msg_NotifyPuppetComma
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.asuccess_)*/false} {}
+  , /*decltype(_impl_.a_asuccess_)*/false} {}
 struct Msg_NotifyPuppetCommandBufferCompletedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyPuppetCommandBufferCompletedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -341,10 +341,10 @@ namespace PVRManager {
 class Msg_PVRLayerConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PVRLayerConstructor>()._impl_._has_bits_);
-  static void set_has_adisplayid(HasBits* has_bits) {
+  static void set_has_a_adisplayid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_agroup(HasBits* has_bits) {
+  static void set_has_a_agroup(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -364,13 +364,13 @@ Msg_PVRLayerConstructor::Msg_PVRLayerConstructor(const Msg_PVRLayerConstructor& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adisplayid_){}
-    , decltype(_impl_.agroup_){}};
+    , decltype(_impl_.a_adisplayid_){}
+    , decltype(_impl_.a_agroup_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.adisplayid_, &from._impl_.adisplayid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.agroup_) -
-    reinterpret_cast<char*>(&_impl_.adisplayid_)) + sizeof(_impl_.agroup_));
+  ::memcpy(&_impl_.a_adisplayid_, &from._impl_.a_adisplayid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_agroup_) -
+    reinterpret_cast<char*>(&_impl_.a_adisplayid_)) + sizeof(_impl_.a_agroup_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
 }
 
@@ -381,8 +381,8 @@ inline void Msg_PVRLayerConstructor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adisplayid_){0u}
-    , decltype(_impl_.agroup_){0u}
+    , decltype(_impl_.a_adisplayid_){0u}
+    , decltype(_impl_.a_agroup_){0u}
   };
 }
 
@@ -411,9 +411,9 @@ void Msg_PVRLayerConstructor::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.adisplayid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.agroup_) -
-        reinterpret_cast<char*>(&_impl_.adisplayid_)) + sizeof(_impl_.agroup_));
+    ::memset(&_impl_.a_adisplayid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_agroup_) -
+        reinterpret_cast<char*>(&_impl_.a_adisplayid_)) + sizeof(_impl_.a_agroup_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -426,20 +426,20 @@ const char* Msg_PVRLayerConstructor::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aDisplayID = 1;
+      // required uint32 a_aDisplayID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_adisplayid(&has_bits);
-          _impl_.adisplayid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_adisplayid(&has_bits);
+          _impl_.a_adisplayid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aGroup = 2;
+      // required uint32 a_aGroup = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_agroup(&has_bits);
-          _impl_.agroup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_agroup(&has_bits);
+          _impl_.a_agroup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -475,16 +475,16 @@ uint8_t* Msg_PVRLayerConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aDisplayID = 1;
+  // required uint32 a_aDisplayID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_adisplayid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adisplayid(), target);
   }
 
-  // required uint32 aGroup = 2;
+  // required uint32 a_aGroup = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_agroup(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_agroup(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -499,14 +499,14 @@ size_t Msg_PVRLayerConstructor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
   size_t total_size = 0;
 
-  if (_internal_has_adisplayid()) {
-    // required uint32 aDisplayID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adisplayid());
+  if (_internal_has_a_adisplayid()) {
+    // required uint32 a_aDisplayID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
   }
 
-  if (_internal_has_agroup()) {
-    // required uint32 aGroup = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_agroup());
+  if (_internal_has_a_agroup()) {
+    // required uint32 a_aGroup = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
   }
 
   return total_size;
@@ -516,11 +516,11 @@ size_t Msg_PVRLayerConstructor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 aDisplayID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adisplayid());
+    // required uint32 a_aDisplayID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
 
-    // required uint32 aGroup = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_agroup());
+    // required uint32 a_aGroup = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -553,10 +553,10 @@ void Msg_PVRLayerConstructor::MergeFrom(const Msg_PVRLayerConstructor& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.adisplayid_ = from._impl_.adisplayid_;
+      _this->_impl_.a_adisplayid_ = from._impl_.a_adisplayid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.agroup_ = from._impl_.agroup_;
+      _this->_impl_.a_agroup_ = from._impl_.a_agroup_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -580,11 +580,11 @@ void Msg_PVRLayerConstructor::InternalSwap(Msg_PVRLayerConstructor* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.agroup_)
-      + sizeof(Msg_PVRLayerConstructor::_impl_.agroup_)
-      - PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.adisplayid_)>(
-          reinterpret_cast<char*>(&_impl_.adisplayid_),
-          reinterpret_cast<char*>(&other->_impl_.adisplayid_));
+      PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.a_agroup_)
+      + sizeof(Msg_PVRLayerConstructor::_impl_.a_agroup_)
+      - PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.a_adisplayid_)>(
+          reinterpret_cast<char*>(&_impl_.a_adisplayid_),
+          reinterpret_cast<char*>(&other->_impl_.a_adisplayid_));
 }
 
 std::string Msg_PVRLayerConstructor::GetTypeName() const {
@@ -1041,10 +1041,10 @@ std::string Msg_RefreshDisplays::GetTypeName() const {
 class Msg_SetGroupMask::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SetGroupMask>()._impl_._has_bits_);
-  static void set_has_adisplayid(HasBits* has_bits) {
+  static void set_has_a_adisplayid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_agroupmask(HasBits* has_bits) {
+  static void set_has_a_agroupmask(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1064,13 +1064,13 @@ Msg_SetGroupMask::Msg_SetGroupMask(const Msg_SetGroupMask& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adisplayid_){}
-    , decltype(_impl_.agroupmask_){}};
+    , decltype(_impl_.a_adisplayid_){}
+    , decltype(_impl_.a_agroupmask_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.adisplayid_, &from._impl_.adisplayid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.agroupmask_) -
-    reinterpret_cast<char*>(&_impl_.adisplayid_)) + sizeof(_impl_.agroupmask_));
+  ::memcpy(&_impl_.a_adisplayid_, &from._impl_.a_adisplayid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_agroupmask_) -
+    reinterpret_cast<char*>(&_impl_.a_adisplayid_)) + sizeof(_impl_.a_agroupmask_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask)
 }
 
@@ -1081,8 +1081,8 @@ inline void Msg_SetGroupMask::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adisplayid_){0u}
-    , decltype(_impl_.agroupmask_){0u}
+    , decltype(_impl_.a_adisplayid_){0u}
+    , decltype(_impl_.a_agroupmask_){0u}
   };
 }
 
@@ -1111,9 +1111,9 @@ void Msg_SetGroupMask::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.adisplayid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.agroupmask_) -
-        reinterpret_cast<char*>(&_impl_.adisplayid_)) + sizeof(_impl_.agroupmask_));
+    ::memset(&_impl_.a_adisplayid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_agroupmask_) -
+        reinterpret_cast<char*>(&_impl_.a_adisplayid_)) + sizeof(_impl_.a_agroupmask_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1126,20 +1126,20 @@ const char* Msg_SetGroupMask::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aDisplayID = 1;
+      // required uint32 a_aDisplayID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_adisplayid(&has_bits);
-          _impl_.adisplayid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_adisplayid(&has_bits);
+          _impl_.a_adisplayid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aGroupMask = 2;
+      // required uint32 a_aGroupMask = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_agroupmask(&has_bits);
-          _impl_.agroupmask_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_agroupmask(&has_bits);
+          _impl_.a_agroupmask_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1175,16 +1175,16 @@ uint8_t* Msg_SetGroupMask::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aDisplayID = 1;
+  // required uint32 a_aDisplayID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_adisplayid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adisplayid(), target);
   }
 
-  // required uint32 aGroupMask = 2;
+  // required uint32 a_aGroupMask = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_agroupmask(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_agroupmask(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1199,14 +1199,14 @@ size_t Msg_SetGroupMask::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask)
   size_t total_size = 0;
 
-  if (_internal_has_adisplayid()) {
-    // required uint32 aDisplayID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adisplayid());
+  if (_internal_has_a_adisplayid()) {
+    // required uint32 a_aDisplayID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
   }
 
-  if (_internal_has_agroupmask()) {
-    // required uint32 aGroupMask = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_agroupmask());
+  if (_internal_has_a_agroupmask()) {
+    // required uint32 a_aGroupMask = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroupmask());
   }
 
   return total_size;
@@ -1216,11 +1216,11 @@ size_t Msg_SetGroupMask::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 aDisplayID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adisplayid());
+    // required uint32 a_aDisplayID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
 
-    // required uint32 aGroupMask = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_agroupmask());
+    // required uint32 a_aGroupMask = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroupmask());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1253,10 +1253,10 @@ void Msg_SetGroupMask::MergeFrom(const Msg_SetGroupMask& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.adisplayid_ = from._impl_.adisplayid_;
+      _this->_impl_.a_adisplayid_ = from._impl_.a_adisplayid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.agroupmask_ = from._impl_.agroupmask_;
+      _this->_impl_.a_agroupmask_ = from._impl_.a_agroupmask_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1280,11 +1280,11 @@ void Msg_SetGroupMask::InternalSwap(Msg_SetGroupMask* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_SetGroupMask, _impl_.agroupmask_)
-      + sizeof(Msg_SetGroupMask::_impl_.agroupmask_)
-      - PROTOBUF_FIELD_OFFSET(Msg_SetGroupMask, _impl_.adisplayid_)>(
-          reinterpret_cast<char*>(&_impl_.adisplayid_),
-          reinterpret_cast<char*>(&other->_impl_.adisplayid_));
+      PROTOBUF_FIELD_OFFSET(Msg_SetGroupMask, _impl_.a_agroupmask_)
+      + sizeof(Msg_SetGroupMask::_impl_.a_agroupmask_)
+      - PROTOBUF_FIELD_OFFSET(Msg_SetGroupMask, _impl_.a_adisplayid_)>(
+          reinterpret_cast<char*>(&_impl_.a_adisplayid_),
+          reinterpret_cast<char*>(&other->_impl_.a_adisplayid_));
 }
 
 std::string Msg_SetGroupMask::GetTypeName() const {
@@ -1297,7 +1297,7 @@ std::string Msg_SetGroupMask::GetTypeName() const {
 class Msg_SetHaveEventListener::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SetHaveEventListener>()._impl_._has_bits_);
-  static void set_has_ahaveeventlistener(HasBits* has_bits) {
+  static void set_has_a_ahaveeventlistener(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1317,10 +1317,10 @@ Msg_SetHaveEventListener::Msg_SetHaveEventListener(const Msg_SetHaveEventListene
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ahaveeventlistener_){}};
+    , decltype(_impl_.a_ahaveeventlistener_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.ahaveeventlistener_ = from._impl_.ahaveeventlistener_;
+  _this->_impl_.a_ahaveeventlistener_ = from._impl_.a_ahaveeventlistener_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener)
 }
 
@@ -1331,7 +1331,7 @@ inline void Msg_SetHaveEventListener::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ahaveeventlistener_){false}
+    , decltype(_impl_.a_ahaveeventlistener_){false}
   };
 }
 
@@ -1358,7 +1358,7 @@ void Msg_SetHaveEventListener::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ahaveeventlistener_ = false;
+  _impl_.a_ahaveeventlistener_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1370,11 +1370,11 @@ const char* Msg_SetHaveEventListener::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aHaveEventListener = 1;
+      // required bool a_aHaveEventListener = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_ahaveeventlistener(&has_bits);
-          _impl_.ahaveeventlistener_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ahaveeventlistener(&has_bits);
+          _impl_.a_ahaveeventlistener_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1410,10 +1410,10 @@ uint8_t* Msg_SetHaveEventListener::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aHaveEventListener = 1;
+  // required bool a_aHaveEventListener = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_ahaveeventlistener(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_ahaveeventlistener(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1428,8 +1428,8 @@ size_t Msg_SetHaveEventListener::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener)
   size_t total_size = 0;
 
-  // required bool aHaveEventListener = 1;
-  if (_internal_has_ahaveeventlistener()) {
+  // required bool a_aHaveEventListener = 1;
+  if (_internal_has_a_ahaveeventlistener()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -1457,8 +1457,8 @@ void Msg_SetHaveEventListener::MergeFrom(const Msg_SetHaveEventListener& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_ahaveeventlistener()) {
-    _this->_internal_set_ahaveeventlistener(from._internal_ahaveeventlistener());
+  if (from._internal_has_a_ahaveeventlistener()) {
+    _this->_internal_set_a_ahaveeventlistener(from._internal_a_ahaveeventlistener());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1479,7 +1479,7 @@ void Msg_SetHaveEventListener::InternalSwap(Msg_SetHaveEventListener* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.ahaveeventlistener_, other->_impl_.ahaveeventlistener_);
+  swap(_impl_.a_ahaveeventlistener_, other->_impl_.a_ahaveeventlistener_);
 }
 
 std::string Msg_SetHaveEventListener::GetTypeName() const {
@@ -1788,19 +1788,19 @@ std::string Msg_ControllerListenerRemoved::GetTypeName() const {
 class Msg_VibrateHaptic::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_VibrateHaptic>()._impl_._has_bits_);
-  static void set_has_agamepadhandle(HasBits* has_bits) {
+  static void set_has_a_agamepadhandle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_ahapticindex(HasBits* has_bits) {
+  static void set_has_a_ahapticindex(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_aintensity(HasBits* has_bits) {
+  static void set_has_a_aintensity(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aduration(HasBits* has_bits) {
+  static void set_has_a_aduration(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_apromiseid(HasBits* has_bits) {
+  static void set_has_a_apromiseid(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1820,24 +1820,24 @@ Msg_VibrateHaptic::Msg_VibrateHaptic(const Msg_VibrateHaptic& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.agamepadhandle_){}
-    , decltype(_impl_.aintensity_){}
-    , decltype(_impl_.ahapticindex_){}
-    , decltype(_impl_.apromiseid_){}
-    , decltype(_impl_.aduration_){}};
+    , decltype(_impl_.a_agamepadhandle_){}
+    , decltype(_impl_.a_aintensity_){}
+    , decltype(_impl_.a_ahapticindex_){}
+    , decltype(_impl_.a_apromiseid_){}
+    , decltype(_impl_.a_aduration_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.agamepadhandle_.InitDefault();
+  _impl_.a_agamepadhandle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_agamepadhandle()) {
-    _this->_impl_.agamepadhandle_.Set(from._internal_agamepadhandle(), 
+  if (from._internal_has_a_agamepadhandle()) {
+    _this->_impl_.a_agamepadhandle_.Set(from._internal_a_agamepadhandle(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.aintensity_, &from._impl_.aintensity_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.aduration_) -
-    reinterpret_cast<char*>(&_impl_.aintensity_)) + sizeof(_impl_.aduration_));
+  ::memcpy(&_impl_.a_aintensity_, &from._impl_.a_aintensity_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_aduration_) -
+    reinterpret_cast<char*>(&_impl_.a_aintensity_)) + sizeof(_impl_.a_aduration_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic)
 }
 
@@ -1848,15 +1848,15 @@ inline void Msg_VibrateHaptic::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.agamepadhandle_){}
-    , decltype(_impl_.aintensity_){0}
-    , decltype(_impl_.ahapticindex_){0u}
-    , decltype(_impl_.apromiseid_){0u}
-    , decltype(_impl_.aduration_){0}
+    , decltype(_impl_.a_agamepadhandle_){}
+    , decltype(_impl_.a_aintensity_){0}
+    , decltype(_impl_.a_ahapticindex_){0u}
+    , decltype(_impl_.a_apromiseid_){0u}
+    , decltype(_impl_.a_aduration_){0}
   };
-  _impl_.agamepadhandle_.InitDefault();
+  _impl_.a_agamepadhandle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1871,7 +1871,7 @@ Msg_VibrateHaptic::~Msg_VibrateHaptic() {
 
 inline void Msg_VibrateHaptic::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.agamepadhandle_.Destroy();
+  _impl_.a_agamepadhandle_.Destroy();
 }
 
 void Msg_VibrateHaptic::SetCachedSize(int size) const {
@@ -1886,12 +1886,12 @@ void Msg_VibrateHaptic::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.agamepadhandle_.ClearNonDefaultToEmpty();
+    _impl_.a_agamepadhandle_.ClearNonDefaultToEmpty();
   }
   if (cached_has_bits & 0x0000001eu) {
-    ::memset(&_impl_.aintensity_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.aduration_) -
-        reinterpret_cast<char*>(&_impl_.aintensity_)) + sizeof(_impl_.aduration_));
+    ::memset(&_impl_.a_aintensity_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_aduration_) -
+        reinterpret_cast<char*>(&_impl_.a_aintensity_)) + sizeof(_impl_.a_aduration_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1904,47 +1904,47 @@ const char* Msg_VibrateHaptic::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aGamepadHandle = 1;
+      // required bytes a_aGamepadHandle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_agamepadhandle();
+          auto str = _internal_mutable_a_agamepadhandle();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aHapticIndex = 2;
+      // required uint32 a_aHapticIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_ahapticindex(&has_bits);
-          _impl_.ahapticindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_ahapticindex(&has_bits);
+          _impl_.a_ahapticindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required double aIntensity = 3;
+      // required double a_aIntensity = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
-          _Internal::set_has_aintensity(&has_bits);
-          _impl_.aintensity_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _Internal::set_has_a_aintensity(&has_bits);
+          _impl_.a_aintensity_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // required double aDuration = 4;
+      // required double a_aDuration = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
-          _Internal::set_has_aduration(&has_bits);
-          _impl_.aduration_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _Internal::set_has_a_aduration(&has_bits);
+          _impl_.a_aduration_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aPromiseID = 5;
+      // required uint32 a_aPromiseID = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_apromiseid(&has_bits);
-          _impl_.apromiseid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_apromiseid(&has_bits);
+          _impl_.a_apromiseid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1980,34 +1980,34 @@ uint8_t* Msg_VibrateHaptic::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aGamepadHandle = 1;
+  // required bytes a_aGamepadHandle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_agamepadhandle(), target);
+        1, this->_internal_a_agamepadhandle(), target);
   }
 
-  // required uint32 aHapticIndex = 2;
+  // required uint32 a_aHapticIndex = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_ahapticindex(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_ahapticindex(), target);
   }
 
-  // required double aIntensity = 3;
+  // required double a_aIntensity = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_aintensity(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_aintensity(), target);
   }
 
-  // required double aDuration = 4;
+  // required double a_aDuration = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_aduration(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_a_aduration(), target);
   }
 
-  // required uint32 aPromiseID = 5;
+  // required uint32 a_aPromiseID = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_apromiseid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_apromiseid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2022,30 +2022,30 @@ size_t Msg_VibrateHaptic::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic)
   size_t total_size = 0;
 
-  if (_internal_has_agamepadhandle()) {
-    // required bytes aGamepadHandle = 1;
+  if (_internal_has_a_agamepadhandle()) {
+    // required bytes a_aGamepadHandle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_agamepadhandle());
+        this->_internal_a_agamepadhandle());
   }
 
-  if (_internal_has_aintensity()) {
-    // required double aIntensity = 3;
+  if (_internal_has_a_aintensity()) {
+    // required double a_aIntensity = 3;
     total_size += 1 + 8;
   }
 
-  if (_internal_has_ahapticindex()) {
-    // required uint32 aHapticIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_ahapticindex());
+  if (_internal_has_a_ahapticindex()) {
+    // required uint32 a_aHapticIndex = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ahapticindex());
   }
 
-  if (_internal_has_apromiseid()) {
-    // required uint32 aPromiseID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_apromiseid());
+  if (_internal_has_a_apromiseid()) {
+    // required uint32 a_aPromiseID = 5;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
   }
 
-  if (_internal_has_aduration()) {
-    // required double aDuration = 4;
+  if (_internal_has_a_aduration()) {
+    // required double a_aDuration = 4;
     total_size += 1 + 8;
   }
 
@@ -2056,21 +2056,21 @@ size_t Msg_VibrateHaptic::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes aGamepadHandle = 1;
+    // required bytes a_aGamepadHandle = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_agamepadhandle());
+        this->_internal_a_agamepadhandle());
 
-    // required double aIntensity = 3;
+    // required double a_aIntensity = 3;
     total_size += 1 + 8;
 
-    // required uint32 aHapticIndex = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_ahapticindex());
+    // required uint32 a_aHapticIndex = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_ahapticindex());
 
-    // required uint32 aPromiseID = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_apromiseid());
+    // required uint32 a_aPromiseID = 5;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
 
-    // required double aDuration = 4;
+    // required double a_aDuration = 4;
     total_size += 1 + 8;
 
   } else {
@@ -2104,19 +2104,19 @@ void Msg_VibrateHaptic::MergeFrom(const Msg_VibrateHaptic& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_agamepadhandle(from._internal_agamepadhandle());
+      _this->_internal_set_a_agamepadhandle(from._internal_a_agamepadhandle());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.aintensity_ = from._impl_.aintensity_;
+      _this->_impl_.a_aintensity_ = from._impl_.a_aintensity_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.ahapticindex_ = from._impl_.ahapticindex_;
+      _this->_impl_.a_ahapticindex_ = from._impl_.a_ahapticindex_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.apromiseid_ = from._impl_.apromiseid_;
+      _this->_impl_.a_apromiseid_ = from._impl_.a_apromiseid_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.aduration_ = from._impl_.aduration_;
+      _this->_impl_.a_aduration_ = from._impl_.a_aduration_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2142,15 +2142,15 @@ void Msg_VibrateHaptic::InternalSwap(Msg_VibrateHaptic* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.agamepadhandle_, lhs_arena,
-      &other->_impl_.agamepadhandle_, rhs_arena
+      &_impl_.a_agamepadhandle_, lhs_arena,
+      &other->_impl_.a_agamepadhandle_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_VibrateHaptic, _impl_.aduration_)
-      + sizeof(Msg_VibrateHaptic::_impl_.aduration_)
-      - PROTOBUF_FIELD_OFFSET(Msg_VibrateHaptic, _impl_.aintensity_)>(
-          reinterpret_cast<char*>(&_impl_.aintensity_),
-          reinterpret_cast<char*>(&other->_impl_.aintensity_));
+      PROTOBUF_FIELD_OFFSET(Msg_VibrateHaptic, _impl_.a_aduration_)
+      + sizeof(Msg_VibrateHaptic::_impl_.a_aduration_)
+      - PROTOBUF_FIELD_OFFSET(Msg_VibrateHaptic, _impl_.a_aintensity_)>(
+          reinterpret_cast<char*>(&_impl_.a_aintensity_),
+          reinterpret_cast<char*>(&other->_impl_.a_aintensity_));
 }
 
 std::string Msg_VibrateHaptic::GetTypeName() const {
@@ -2163,7 +2163,7 @@ std::string Msg_VibrateHaptic::GetTypeName() const {
 class Msg_StopVibrateHaptic::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_StopVibrateHaptic>()._impl_._has_bits_);
-  static void set_has_agamepadhandle(HasBits* has_bits) {
+  static void set_has_a_agamepadhandle(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2183,15 +2183,15 @@ Msg_StopVibrateHaptic::Msg_StopVibrateHaptic(const Msg_StopVibrateHaptic& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.agamepadhandle_){}};
+    , decltype(_impl_.a_agamepadhandle_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.agamepadhandle_.InitDefault();
+  _impl_.a_agamepadhandle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_agamepadhandle()) {
-    _this->_impl_.agamepadhandle_.Set(from._internal_agamepadhandle(), 
+  if (from._internal_has_a_agamepadhandle()) {
+    _this->_impl_.a_agamepadhandle_.Set(from._internal_a_agamepadhandle(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic)
@@ -2204,11 +2204,11 @@ inline void Msg_StopVibrateHaptic::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.agamepadhandle_){}
+    , decltype(_impl_.a_agamepadhandle_){}
   };
-  _impl_.agamepadhandle_.InitDefault();
+  _impl_.a_agamepadhandle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2223,7 +2223,7 @@ Msg_StopVibrateHaptic::~Msg_StopVibrateHaptic() {
 
 inline void Msg_StopVibrateHaptic::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.agamepadhandle_.Destroy();
+  _impl_.a_agamepadhandle_.Destroy();
 }
 
 void Msg_StopVibrateHaptic::SetCachedSize(int size) const {
@@ -2238,7 +2238,7 @@ void Msg_StopVibrateHaptic::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.agamepadhandle_.ClearNonDefaultToEmpty();
+    _impl_.a_agamepadhandle_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2251,10 +2251,10 @@ const char* Msg_StopVibrateHaptic::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aGamepadHandle = 1;
+      // required bytes a_aGamepadHandle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_agamepadhandle();
+          auto str = _internal_mutable_a_agamepadhandle();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2291,10 +2291,10 @@ uint8_t* Msg_StopVibrateHaptic::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aGamepadHandle = 1;
+  // required bytes a_aGamepadHandle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_agamepadhandle(), target);
+        1, this->_internal_a_agamepadhandle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2309,11 +2309,11 @@ size_t Msg_StopVibrateHaptic::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic)
   size_t total_size = 0;
 
-  // required bytes aGamepadHandle = 1;
-  if (_internal_has_agamepadhandle()) {
+  // required bytes a_aGamepadHandle = 1;
+  if (_internal_has_a_agamepadhandle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_agamepadhandle());
+        this->_internal_a_agamepadhandle());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2340,8 +2340,8 @@ void Msg_StopVibrateHaptic::MergeFrom(const Msg_StopVibrateHaptic& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_agamepadhandle()) {
-    _this->_internal_set_agamepadhandle(from._internal_agamepadhandle());
+  if (from._internal_has_a_agamepadhandle()) {
+    _this->_internal_set_a_agamepadhandle(from._internal_a_agamepadhandle());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2365,8 +2365,8 @@ void Msg_StopVibrateHaptic::InternalSwap(Msg_StopVibrateHaptic* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.agamepadhandle_, lhs_arena,
-      &other->_impl_.agamepadhandle_, rhs_arena
+      &_impl_.a_agamepadhandle_, lhs_arena,
+      &other->_impl_.a_agamepadhandle_, rhs_arena
   );
 }
 
@@ -2380,7 +2380,7 @@ std::string Msg_StopVibrateHaptic::GetTypeName() const {
 class Msg_StartVRNavigation::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_StartVRNavigation>()._impl_._has_bits_);
-  static void set_has_adeviceid(HasBits* has_bits) {
+  static void set_has_a_adeviceid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2400,10 +2400,10 @@ Msg_StartVRNavigation::Msg_StartVRNavigation(const Msg_StartVRNavigation& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adeviceid_){}};
+    , decltype(_impl_.a_adeviceid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.adeviceid_ = from._impl_.adeviceid_;
+  _this->_impl_.a_adeviceid_ = from._impl_.a_adeviceid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation)
 }
 
@@ -2414,7 +2414,7 @@ inline void Msg_StartVRNavigation::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adeviceid_){0u}
+    , decltype(_impl_.a_adeviceid_){0u}
   };
 }
 
@@ -2441,7 +2441,7 @@ void Msg_StartVRNavigation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.adeviceid_ = 0u;
+  _impl_.a_adeviceid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2453,11 +2453,11 @@ const char* Msg_StartVRNavigation::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aDeviceID = 1;
+      // required uint32 a_aDeviceID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_adeviceid(&has_bits);
-          _impl_.adeviceid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_adeviceid(&has_bits);
+          _impl_.a_adeviceid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2493,10 +2493,10 @@ uint8_t* Msg_StartVRNavigation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aDeviceID = 1;
+  // required uint32 a_aDeviceID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_adeviceid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adeviceid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2511,9 +2511,9 @@ size_t Msg_StartVRNavigation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation)
   size_t total_size = 0;
 
-  // required uint32 aDeviceID = 1;
-  if (_internal_has_adeviceid()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adeviceid());
+  // required uint32 a_aDeviceID = 1;
+  if (_internal_has_a_adeviceid()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2540,8 +2540,8 @@ void Msg_StartVRNavigation::MergeFrom(const Msg_StartVRNavigation& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_adeviceid()) {
-    _this->_internal_set_adeviceid(from._internal_adeviceid());
+  if (from._internal_has_a_adeviceid()) {
+    _this->_internal_set_a_adeviceid(from._internal_a_adeviceid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2562,7 +2562,7 @@ void Msg_StartVRNavigation::InternalSwap(Msg_StartVRNavigation* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.adeviceid_, other->_impl_.adeviceid_);
+  swap(_impl_.a_adeviceid_, other->_impl_.a_adeviceid_);
 }
 
 std::string Msg_StartVRNavigation::GetTypeName() const {
@@ -2575,10 +2575,10 @@ std::string Msg_StartVRNavigation::GetTypeName() const {
 class Msg_StopVRNavigation::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_StopVRNavigation>()._impl_._has_bits_);
-  static void set_has_adeviceid(HasBits* has_bits) {
+  static void set_has_a_adeviceid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aduration(HasBits* has_bits) {
+  static void set_has_a_aduration(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2598,19 +2598,19 @@ Msg_StopVRNavigation::Msg_StopVRNavigation(const Msg_StopVRNavigation& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aduration_){}
-    , decltype(_impl_.adeviceid_){}};
+    , decltype(_impl_.a_aduration_){}
+    , decltype(_impl_.a_adeviceid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aduration_.InitDefault();
+  _impl_.a_aduration_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aduration_.Set("", GetArenaForAllocation());
+    _impl_.a_aduration_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aduration()) {
-    _this->_impl_.aduration_.Set(from._internal_aduration(), 
+  if (from._internal_has_a_aduration()) {
+    _this->_impl_.a_aduration_.Set(from._internal_a_aduration(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.adeviceid_ = from._impl_.adeviceid_;
+  _this->_impl_.a_adeviceid_ = from._impl_.a_adeviceid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation)
 }
 
@@ -2621,12 +2621,12 @@ inline void Msg_StopVRNavigation::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aduration_){}
-    , decltype(_impl_.adeviceid_){0u}
+    , decltype(_impl_.a_aduration_){}
+    , decltype(_impl_.a_adeviceid_){0u}
   };
-  _impl_.aduration_.InitDefault();
+  _impl_.a_aduration_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aduration_.Set("", GetArenaForAllocation());
+    _impl_.a_aduration_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2641,7 +2641,7 @@ Msg_StopVRNavigation::~Msg_StopVRNavigation() {
 
 inline void Msg_StopVRNavigation::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aduration_.Destroy();
+  _impl_.a_aduration_.Destroy();
 }
 
 void Msg_StopVRNavigation::SetCachedSize(int size) const {
@@ -2656,9 +2656,9 @@ void Msg_StopVRNavigation::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aduration_.ClearNonDefaultToEmpty();
+    _impl_.a_aduration_.ClearNonDefaultToEmpty();
   }
-  _impl_.adeviceid_ = 0u;
+  _impl_.a_adeviceid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2670,19 +2670,19 @@ const char* Msg_StopVRNavigation::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aDeviceID = 1;
+      // required uint32 a_aDeviceID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_adeviceid(&has_bits);
-          _impl_.adeviceid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_adeviceid(&has_bits);
+          _impl_.a_adeviceid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aDuration = 2;
+      // required bytes a_aDuration = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aduration();
+          auto str = _internal_mutable_a_aduration();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2719,16 +2719,16 @@ uint8_t* Msg_StopVRNavigation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aDeviceID = 1;
+  // required uint32 a_aDeviceID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_adeviceid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adeviceid(), target);
   }
 
-  // required bytes aDuration = 2;
+  // required bytes a_aDuration = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aduration(), target);
+        2, this->_internal_a_aduration(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2743,16 +2743,16 @@ size_t Msg_StopVRNavigation::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation)
   size_t total_size = 0;
 
-  if (_internal_has_aduration()) {
-    // required bytes aDuration = 2;
+  if (_internal_has_a_aduration()) {
+    // required bytes a_aDuration = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aduration());
+        this->_internal_a_aduration());
   }
 
-  if (_internal_has_adeviceid()) {
-    // required uint32 aDeviceID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adeviceid());
+  if (_internal_has_a_adeviceid()) {
+    // required uint32 a_aDeviceID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
   }
 
   return total_size;
@@ -2762,13 +2762,13 @@ size_t Msg_StopVRNavigation::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aDuration = 2;
+    // required bytes a_aDuration = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aduration());
+        this->_internal_a_aduration());
 
-    // required uint32 aDeviceID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_adeviceid());
+    // required uint32 a_aDeviceID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adeviceid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -2801,10 +2801,10 @@ void Msg_StopVRNavigation::MergeFrom(const Msg_StopVRNavigation& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aduration(from._internal_aduration());
+      _this->_internal_set_a_aduration(from._internal_a_aduration());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.adeviceid_ = from._impl_.adeviceid_;
+      _this->_impl_.a_adeviceid_ = from._impl_.a_adeviceid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2830,10 +2830,10 @@ void Msg_StopVRNavigation::InternalSwap(Msg_StopVRNavigation* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aduration_, lhs_arena,
-      &other->_impl_.aduration_, rhs_arena
+      &_impl_.a_aduration_, lhs_arena,
+      &other->_impl_.a_aduration_, rhs_arena
   );
-  swap(_impl_.adeviceid_, other->_impl_.adeviceid_);
+  swap(_impl_.a_adeviceid_, other->_impl_.a_adeviceid_);
 }
 
 std::string Msg_StopVRNavigation::GetTypeName() const {
@@ -3153,7 +3153,7 @@ Msg_RunPuppet::Msg_RunPuppet(const Msg_RunPuppet& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_RunPuppet* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.buffer_){from._impl_.buffer_}
+      decltype(_impl_.a_buffer_){from._impl_.a_buffer_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3165,7 +3165,7 @@ inline void Msg_RunPuppet::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.buffer_){arena}
+      decltype(_impl_.a_buffer_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -3181,7 +3181,7 @@ Msg_RunPuppet::~Msg_RunPuppet() {
 
 inline void Msg_RunPuppet::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.buffer_.~RepeatedField();
+  _impl_.a_buffer_.~RepeatedField();
 }
 
 void Msg_RunPuppet::SetCachedSize(int size) const {
@@ -3194,7 +3194,7 @@ void Msg_RunPuppet::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.buffer_.Clear();
+  _impl_.a_buffer_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -3204,18 +3204,18 @@ const char* Msg_RunPuppet::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint64 buffer = 1;
+      // repeated uint64 a_buffer = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_buffer(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            _internal_add_a_buffer(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_buffer(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_buffer(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3249,10 +3249,10 @@ uint8_t* Msg_RunPuppet::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint64 buffer = 1;
-  for (int i = 0, n = this->_internal_buffer_size(); i < n; i++) {
+  // repeated uint64 a_buffer = 1;
+  for (int i = 0, n = this->_internal_a_buffer_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_buffer(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_buffer(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3271,12 +3271,12 @@ size_t Msg_RunPuppet::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint64 buffer = 1;
+  // repeated uint64 a_buffer = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt64Size(this->_impl_.buffer_);
+      UInt64Size(this->_impl_.a_buffer_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_buffer_size());
+                  ::_pbi::FromIntSize(this->_internal_a_buffer_size());
     total_size += data_size;
   }
 
@@ -3301,7 +3301,7 @@ void Msg_RunPuppet::MergeFrom(const Msg_RunPuppet& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.buffer_.MergeFrom(from._impl_.buffer_);
+  _this->_impl_.a_buffer_.MergeFrom(from._impl_.a_buffer_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -3319,7 +3319,7 @@ bool Msg_RunPuppet::IsInitialized() const {
 void Msg_RunPuppet::InternalSwap(Msg_RunPuppet* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.buffer_.InternalSwap(&other->_impl_.buffer_);
+  _impl_.a_buffer_.InternalSwap(&other->_impl_.a_buffer_);
 }
 
 std::string Msg_RunPuppet::GetTypeName() const {
@@ -3480,7 +3480,7 @@ std::string Msg_ResetPuppet::GetTypeName() const {
 class Msg_UpdateDisplayInfo::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_UpdateDisplayInfo>()._impl_._has_bits_);
-  static void set_has_adisplayinfo(HasBits* has_bits) {
+  static void set_has_a_adisplayinfo(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3500,15 +3500,15 @@ Msg_UpdateDisplayInfo::Msg_UpdateDisplayInfo(const Msg_UpdateDisplayInfo& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adisplayinfo_){}};
+    , decltype(_impl_.a_adisplayinfo_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.adisplayinfo_.InitDefault();
+  _impl_.a_adisplayinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adisplayinfo_.Set("", GetArenaForAllocation());
+    _impl_.a_adisplayinfo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_adisplayinfo()) {
-    _this->_impl_.adisplayinfo_.Set(from._internal_adisplayinfo(), 
+  if (from._internal_has_a_adisplayinfo()) {
+    _this->_impl_.a_adisplayinfo_.Set(from._internal_a_adisplayinfo(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo)
@@ -3521,11 +3521,11 @@ inline void Msg_UpdateDisplayInfo::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adisplayinfo_){}
+    , decltype(_impl_.a_adisplayinfo_){}
   };
-  _impl_.adisplayinfo_.InitDefault();
+  _impl_.a_adisplayinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adisplayinfo_.Set("", GetArenaForAllocation());
+    _impl_.a_adisplayinfo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3540,7 +3540,7 @@ Msg_UpdateDisplayInfo::~Msg_UpdateDisplayInfo() {
 
 inline void Msg_UpdateDisplayInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.adisplayinfo_.Destroy();
+  _impl_.a_adisplayinfo_.Destroy();
 }
 
 void Msg_UpdateDisplayInfo::SetCachedSize(int size) const {
@@ -3555,7 +3555,7 @@ void Msg_UpdateDisplayInfo::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.adisplayinfo_.ClearNonDefaultToEmpty();
+    _impl_.a_adisplayinfo_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3568,10 +3568,10 @@ const char* Msg_UpdateDisplayInfo::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aDisplayInfo = 1;
+      // required bytes a_aDisplayInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_adisplayinfo();
+          auto str = _internal_mutable_a_adisplayinfo();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3608,10 +3608,10 @@ uint8_t* Msg_UpdateDisplayInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aDisplayInfo = 1;
+  // required bytes a_aDisplayInfo = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_adisplayinfo(), target);
+        1, this->_internal_a_adisplayinfo(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3626,11 +3626,11 @@ size_t Msg_UpdateDisplayInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo)
   size_t total_size = 0;
 
-  // required bytes aDisplayInfo = 1;
-  if (_internal_has_adisplayinfo()) {
+  // required bytes a_aDisplayInfo = 1;
+  if (_internal_has_a_adisplayinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_adisplayinfo());
+        this->_internal_a_adisplayinfo());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3657,8 +3657,8 @@ void Msg_UpdateDisplayInfo::MergeFrom(const Msg_UpdateDisplayInfo& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_adisplayinfo()) {
-    _this->_internal_set_adisplayinfo(from._internal_adisplayinfo());
+  if (from._internal_has_a_adisplayinfo()) {
+    _this->_internal_set_a_adisplayinfo(from._internal_a_adisplayinfo());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3682,8 +3682,8 @@ void Msg_UpdateDisplayInfo::InternalSwap(Msg_UpdateDisplayInfo* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.adisplayinfo_, lhs_arena,
-      &other->_impl_.adisplayinfo_, rhs_arena
+      &_impl_.a_adisplayinfo_, lhs_arena,
+      &other->_impl_.a_adisplayinfo_, rhs_arena
   );
 }
 
@@ -3697,7 +3697,7 @@ std::string Msg_UpdateDisplayInfo::GetTypeName() const {
 class Msg_UpdateRuntimeCapabilities::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_UpdateRuntimeCapabilities>()._impl_._has_bits_);
-  static void set_has_acapabilities(HasBits* has_bits) {
+  static void set_has_a_acapabilities(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3717,15 +3717,15 @@ Msg_UpdateRuntimeCapabilities::Msg_UpdateRuntimeCapabilities(const Msg_UpdateRun
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.acapabilities_){}};
+    , decltype(_impl_.a_acapabilities_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.acapabilities_.InitDefault();
+  _impl_.a_acapabilities_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.acapabilities_.Set("", GetArenaForAllocation());
+    _impl_.a_acapabilities_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_acapabilities()) {
-    _this->_impl_.acapabilities_.Set(from._internal_acapabilities(), 
+  if (from._internal_has_a_acapabilities()) {
+    _this->_impl_.a_acapabilities_.Set(from._internal_a_acapabilities(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities)
@@ -3738,11 +3738,11 @@ inline void Msg_UpdateRuntimeCapabilities::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.acapabilities_){}
+    , decltype(_impl_.a_acapabilities_){}
   };
-  _impl_.acapabilities_.InitDefault();
+  _impl_.a_acapabilities_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.acapabilities_.Set("", GetArenaForAllocation());
+    _impl_.a_acapabilities_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3757,7 +3757,7 @@ Msg_UpdateRuntimeCapabilities::~Msg_UpdateRuntimeCapabilities() {
 
 inline void Msg_UpdateRuntimeCapabilities::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.acapabilities_.Destroy();
+  _impl_.a_acapabilities_.Destroy();
 }
 
 void Msg_UpdateRuntimeCapabilities::SetCachedSize(int size) const {
@@ -3772,7 +3772,7 @@ void Msg_UpdateRuntimeCapabilities::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.acapabilities_.ClearNonDefaultToEmpty();
+    _impl_.a_acapabilities_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -3785,10 +3785,10 @@ const char* Msg_UpdateRuntimeCapabilities::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aCapabilities = 1;
+      // required bytes a_aCapabilities = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_acapabilities();
+          auto str = _internal_mutable_a_acapabilities();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3825,10 +3825,10 @@ uint8_t* Msg_UpdateRuntimeCapabilities::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aCapabilities = 1;
+  // required bytes a_aCapabilities = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_acapabilities(), target);
+        1, this->_internal_a_acapabilities(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3843,11 +3843,11 @@ size_t Msg_UpdateRuntimeCapabilities::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities)
   size_t total_size = 0;
 
-  // required bytes aCapabilities = 1;
-  if (_internal_has_acapabilities()) {
+  // required bytes a_aCapabilities = 1;
+  if (_internal_has_a_acapabilities()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_acapabilities());
+        this->_internal_a_acapabilities());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3874,8 +3874,8 @@ void Msg_UpdateRuntimeCapabilities::MergeFrom(const Msg_UpdateRuntimeCapabilitie
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_acapabilities()) {
-    _this->_internal_set_acapabilities(from._internal_acapabilities());
+  if (from._internal_has_a_acapabilities()) {
+    _this->_internal_set_a_acapabilities(from._internal_a_acapabilities());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3899,8 +3899,8 @@ void Msg_UpdateRuntimeCapabilities::InternalSwap(Msg_UpdateRuntimeCapabilities* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.acapabilities_, lhs_arena,
-      &other->_impl_.acapabilities_, rhs_arena
+      &_impl_.a_acapabilities_, lhs_arena,
+      &other->_impl_.a_acapabilities_, rhs_arena
   );
 }
 
@@ -3914,7 +3914,7 @@ std::string Msg_UpdateRuntimeCapabilities::GetTypeName() const {
 class Msg_ReplyGamepadVibrateHaptic::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReplyGamepadVibrateHaptic>()._impl_._has_bits_);
-  static void set_has_apromiseid(HasBits* has_bits) {
+  static void set_has_a_apromiseid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3934,10 +3934,10 @@ Msg_ReplyGamepadVibrateHaptic::Msg_ReplyGamepadVibrateHaptic(const Msg_ReplyGame
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.apromiseid_){}};
+    , decltype(_impl_.a_apromiseid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.apromiseid_ = from._impl_.apromiseid_;
+  _this->_impl_.a_apromiseid_ = from._impl_.a_apromiseid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic)
 }
 
@@ -3948,7 +3948,7 @@ inline void Msg_ReplyGamepadVibrateHaptic::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.apromiseid_){0u}
+    , decltype(_impl_.a_apromiseid_){0u}
   };
 }
 
@@ -3975,7 +3975,7 @@ void Msg_ReplyGamepadVibrateHaptic::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.apromiseid_ = 0u;
+  _impl_.a_apromiseid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -3987,11 +3987,11 @@ const char* Msg_ReplyGamepadVibrateHaptic::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aPromiseID = 1;
+      // required uint32 a_aPromiseID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_apromiseid(&has_bits);
-          _impl_.apromiseid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_apromiseid(&has_bits);
+          _impl_.a_apromiseid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4027,10 +4027,10 @@ uint8_t* Msg_ReplyGamepadVibrateHaptic::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aPromiseID = 1;
+  // required uint32 a_aPromiseID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_apromiseid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_apromiseid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4045,9 +4045,9 @@ size_t Msg_ReplyGamepadVibrateHaptic::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic)
   size_t total_size = 0;
 
-  // required uint32 aPromiseID = 1;
-  if (_internal_has_apromiseid()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_apromiseid());
+  // required uint32 a_aPromiseID = 1;
+  if (_internal_has_a_apromiseid()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_apromiseid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -4074,8 +4074,8 @@ void Msg_ReplyGamepadVibrateHaptic::MergeFrom(const Msg_ReplyGamepadVibrateHapti
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_apromiseid()) {
-    _this->_internal_set_apromiseid(from._internal_apromiseid());
+  if (from._internal_has_a_apromiseid()) {
+    _this->_internal_set_a_apromiseid(from._internal_a_apromiseid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4096,7 +4096,7 @@ void Msg_ReplyGamepadVibrateHaptic::InternalSwap(Msg_ReplyGamepadVibrateHaptic* 
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.apromiseid_, other->_impl_.apromiseid_);
+  swap(_impl_.a_apromiseid_, other->_impl_.a_apromiseid_);
 }
 
 std::string Msg_ReplyGamepadVibrateHaptic::GetTypeName() const {
@@ -4109,7 +4109,7 @@ std::string Msg_ReplyGamepadVibrateHaptic::GetTypeName() const {
 class Msg_NotifyPuppetCommandBufferCompleted::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_NotifyPuppetCommandBufferCompleted>()._impl_._has_bits_);
-  static void set_has_asuccess(HasBits* has_bits) {
+  static void set_has_a_asuccess(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4129,10 +4129,10 @@ Msg_NotifyPuppetCommandBufferCompleted::Msg_NotifyPuppetCommandBufferCompleted(c
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.asuccess_){}};
+    , decltype(_impl_.a_asuccess_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.asuccess_ = from._impl_.asuccess_;
+  _this->_impl_.a_asuccess_ = from._impl_.a_asuccess_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted)
 }
 
@@ -4143,7 +4143,7 @@ inline void Msg_NotifyPuppetCommandBufferCompleted::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.asuccess_){false}
+    , decltype(_impl_.a_asuccess_){false}
   };
 }
 
@@ -4170,7 +4170,7 @@ void Msg_NotifyPuppetCommandBufferCompleted::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.asuccess_ = false;
+  _impl_.a_asuccess_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4182,11 +4182,11 @@ const char* Msg_NotifyPuppetCommandBufferCompleted::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aSuccess = 1;
+      // required bool a_aSuccess = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_asuccess(&has_bits);
-          _impl_.asuccess_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_asuccess(&has_bits);
+          _impl_.a_asuccess_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4222,10 +4222,10 @@ uint8_t* Msg_NotifyPuppetCommandBufferCompleted::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aSuccess = 1;
+  // required bool a_aSuccess = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_asuccess(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_asuccess(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4240,8 +4240,8 @@ size_t Msg_NotifyPuppetCommandBufferCompleted::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted)
   size_t total_size = 0;
 
-  // required bool aSuccess = 1;
-  if (_internal_has_asuccess()) {
+  // required bool a_aSuccess = 1;
+  if (_internal_has_a_asuccess()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -4269,8 +4269,8 @@ void Msg_NotifyPuppetCommandBufferCompleted::MergeFrom(const Msg_NotifyPuppetCom
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_asuccess()) {
-    _this->_internal_set_asuccess(from._internal_asuccess());
+  if (from._internal_has_a_asuccess()) {
+    _this->_internal_set_a_asuccess(from._internal_a_asuccess());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4291,7 +4291,7 @@ void Msg_NotifyPuppetCommandBufferCompleted::InternalSwap(Msg_NotifyPuppetComman
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.asuccess_, other->_impl_.asuccess_);
+  swap(_impl_.a_asuccess_, other->_impl_.a_asuccess_);
 }
 
 std::string Msg_NotifyPuppetCommandBufferCompleted::GetTypeName() const {

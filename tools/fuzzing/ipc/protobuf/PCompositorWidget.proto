@@ -22,14 +22,14 @@ message Reply___delete__ {
 }
 
 message Msg_NotifyClientSizeChanged {
-  required bytes aClientSize = 1;
+  required bytes a_aClientSize = 1;
 }
 
 message Msg_CleanupResources {
 }
 
 message Msg_SetRenderingSurface {
-  required bytes aXWindow = 1;
+  required bytes a_aXWindow = 1;
 }
 
 message Msg_ObserveVsync {

@@ -17,22 +17,22 @@ message Msg_Ping {
 }
 
 message Reply_Ping {
-  required bool one = 1;
+  required bool a_one = 1;
 }
 
 message Msg_NoReturn {
 }
 
 message Reply_NoReturn {
-  required bool unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_Pong {
 }
 
 message Reply_Pong {
-  required uint32 param1 = 1;
-  required uint32 param2 = 2;
+  required uint32 a_param1 = 1;
+  required uint32 a_param2 = 2;
 }
 
 // Parameter mappings stats:

@@ -25,7 +25,7 @@ PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.avalidateresult_)*/false} {}
+  , /*decltype(_impl_.a_avalidateresult_)*/false} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,7 +51,7 @@ PROTOBUF_CONSTEXPR Msg_OnTransactionClose::Msg_OnTransactionClose(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.avalidateresult_)*/false} {}
+  , /*decltype(_impl_.a_avalidateresult_)*/false} {}
 struct Msg_OnTransactionCloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_OnTransactionCloseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -75,7 +75,7 @@ namespace PAltSvcTransaction {
 class Msg___delete__::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
-  static void set_has_avalidateresult(HasBits* has_bits) {
+  static void set_has_a_avalidateresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -95,10 +95,10 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.avalidateresult_){}};
+    , decltype(_impl_.a_avalidateresult_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.avalidateresult_ = from._impl_.avalidateresult_;
+  _this->_impl_.a_avalidateresult_ = from._impl_.a_avalidateresult_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__)
 }
 
@@ -109,7 +109,7 @@ inline void Msg___delete__::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.avalidateresult_){false}
+    , decltype(_impl_.a_avalidateresult_){false}
   };
 }
 
@@ -136,7 +136,7 @@ void Msg___delete__::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.avalidateresult_ = false;
+  _impl_.a_avalidateresult_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -148,11 +148,11 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aValidateResult = 1;
+      // required bool a_aValidateResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_avalidateresult(&has_bits);
-          _impl_.avalidateresult_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_avalidateresult(&has_bits);
+          _impl_.a_avalidateresult_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -188,10 +188,10 @@ uint8_t* Msg___delete__::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aValidateResult = 1;
+  // required bool a_aValidateResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_avalidateresult(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_avalidateresult(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -206,8 +206,8 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PAltSvcTransaction.Msg___delete__)
   size_t total_size = 0;
 
-  // required bool aValidateResult = 1;
-  if (_internal_has_avalidateresult()) {
+  // required bool a_aValidateResult = 1;
+  if (_internal_has_a_avalidateresult()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -235,8 +235,8 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_avalidateresult()) {
-    _this->_internal_set_avalidateresult(from._internal_avalidateresult());
+  if (from._internal_has_a_avalidateresult()) {
+    _this->_internal_set_a_avalidateresult(from._internal_a_avalidateresult());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -257,7 +257,7 @@ void Msg___delete__::InternalSwap(Msg___delete__* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.avalidateresult_, other->_impl_.avalidateresult_);
+  swap(_impl_.a_avalidateresult_, other->_impl_.a_avalidateresult_);
 }
 
 std::string Msg___delete__::GetTypeName() const {
@@ -418,7 +418,7 @@ std::string Reply___delete__::GetTypeName() const {
 class Msg_OnTransactionClose::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_OnTransactionClose>()._impl_._has_bits_);
-  static void set_has_avalidateresult(HasBits* has_bits) {
+  static void set_has_a_avalidateresult(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -438,10 +438,10 @@ Msg_OnTransactionClose::Msg_OnTransactionClose(const Msg_OnTransactionClose& fro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.avalidateresult_){}};
+    , decltype(_impl_.a_avalidateresult_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.avalidateresult_ = from._impl_.avalidateresult_;
+  _this->_impl_.a_avalidateresult_ = from._impl_.a_avalidateresult_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose)
 }
 
@@ -452,7 +452,7 @@ inline void Msg_OnTransactionClose::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.avalidateresult_){false}
+    , decltype(_impl_.a_avalidateresult_){false}
   };
 }
 
@@ -479,7 +479,7 @@ void Msg_OnTransactionClose::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.avalidateresult_ = false;
+  _impl_.a_avalidateresult_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -491,11 +491,11 @@ const char* Msg_OnTransactionClose::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aValidateResult = 1;
+      // required bool a_aValidateResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_avalidateresult(&has_bits);
-          _impl_.avalidateresult_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_avalidateresult(&has_bits);
+          _impl_.a_avalidateresult_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -531,10 +531,10 @@ uint8_t* Msg_OnTransactionClose::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aValidateResult = 1;
+  // required bool a_aValidateResult = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_avalidateresult(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_avalidateresult(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -549,8 +549,8 @@ size_t Msg_OnTransactionClose::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PAltSvcTransaction.Msg_OnTransactionClose)
   size_t total_size = 0;
 
-  // required bool aValidateResult = 1;
-  if (_internal_has_avalidateresult()) {
+  // required bool a_aValidateResult = 1;
+  if (_internal_has_a_avalidateresult()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -578,8 +578,8 @@ void Msg_OnTransactionClose::MergeFrom(const Msg_OnTransactionClose& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_avalidateresult()) {
-    _this->_internal_set_avalidateresult(from._internal_avalidateresult());
+  if (from._internal_has_a_avalidateresult()) {
+    _this->_internal_set_a_avalidateresult(from._internal_a_avalidateresult());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -600,7 +600,7 @@ void Msg_OnTransactionClose::InternalSwap(Msg_OnTransactionClose* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.avalidateresult_, other->_impl_.avalidateresult_);
+  swap(_impl_.a_avalidateresult_, other->_impl_.a_avalidateresult_);
 }
 
 std::string Msg_OnTransactionClose::GetTypeName() const {

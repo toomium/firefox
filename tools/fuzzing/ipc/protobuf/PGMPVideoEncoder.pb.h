@@ -221,75 +221,75 @@ class Msg_InitEncode final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACodecSpecificFieldNumber = 2,
-    kACodecSettingsFieldNumber = 1,
-    kANumberOfCoresFieldNumber = 3,
-    kAMaxPayloadSizeFieldNumber = 4,
+    kAACodecSpecificFieldNumber = 2,
+    kAACodecSettingsFieldNumber = 1,
+    kAANumberOfCoresFieldNumber = 3,
+    kAAMaxPayloadSizeFieldNumber = 4,
   };
-  // repeated uint32 aCodecSpecific = 2;
-  int acodecspecific_size() const;
+  // repeated uint32 a_aCodecSpecific = 2;
+  int a_acodecspecific_size() const;
   private:
-  int _internal_acodecspecific_size() const;
+  int _internal_a_acodecspecific_size() const;
   public:
-  void clear_acodecspecific();
+  void clear_a_acodecspecific();
   private:
-  uint32_t _internal_acodecspecific(int index) const;
+  uint32_t _internal_a_acodecspecific(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_acodecspecific() const;
-  void _internal_add_acodecspecific(uint32_t value);
+      _internal_a_acodecspecific() const;
+  void _internal_add_a_acodecspecific(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_acodecspecific();
+      _internal_mutable_a_acodecspecific();
   public:
-  uint32_t acodecspecific(int index) const;
-  void set_acodecspecific(int index, uint32_t value);
-  void add_acodecspecific(uint32_t value);
+  uint32_t a_acodecspecific(int index) const;
+  void set_a_acodecspecific(int index, uint32_t value);
+  void add_a_acodecspecific(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      acodecspecific() const;
+      a_acodecspecific() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_acodecspecific();
+      mutable_a_acodecspecific();
 
-  // required bytes aCodecSettings = 1;
-  bool has_acodecsettings() const;
+  // required bytes a_aCodecSettings = 1;
+  bool has_a_acodecsettings() const;
   private:
-  bool _internal_has_acodecsettings() const;
+  bool _internal_has_a_acodecsettings() const;
   public:
-  void clear_acodecsettings();
-  const std::string& acodecsettings() const;
+  void clear_a_acodecsettings();
+  const std::string& a_acodecsettings() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acodecsettings(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acodecsettings();
-  PROTOBUF_NODISCARD std::string* release_acodecsettings();
-  void set_allocated_acodecsettings(std::string* acodecsettings);
+  void set_a_acodecsettings(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acodecsettings();
+  PROTOBUF_NODISCARD std::string* release_a_acodecsettings();
+  void set_allocated_a_acodecsettings(std::string* a_acodecsettings);
   private:
-  const std::string& _internal_acodecsettings() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acodecsettings(const std::string& value);
-  std::string* _internal_mutable_acodecsettings();
+  const std::string& _internal_a_acodecsettings() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acodecsettings(const std::string& value);
+  std::string* _internal_mutable_a_acodecsettings();
   public:
 
-  // required sint32 aNumberOfCores = 3;
-  bool has_anumberofcores() const;
+  // required sint32 a_aNumberOfCores = 3;
+  bool has_a_anumberofcores() const;
   private:
-  bool _internal_has_anumberofcores() const;
+  bool _internal_has_a_anumberofcores() const;
   public:
-  void clear_anumberofcores();
-  int32_t anumberofcores() const;
-  void set_anumberofcores(int32_t value);
+  void clear_a_anumberofcores();
+  int32_t a_anumberofcores() const;
+  void set_a_anumberofcores(int32_t value);
   private:
-  int32_t _internal_anumberofcores() const;
-  void _internal_set_anumberofcores(int32_t value);
+  int32_t _internal_a_anumberofcores() const;
+  void _internal_set_a_anumberofcores(int32_t value);
   public:
 
-  // required uint32 aMaxPayloadSize = 4;
-  bool has_amaxpayloadsize() const;
+  // required uint32 a_aMaxPayloadSize = 4;
+  bool has_a_amaxpayloadsize() const;
   private:
-  bool _internal_has_amaxpayloadsize() const;
+  bool _internal_has_a_amaxpayloadsize() const;
   public:
-  void clear_amaxpayloadsize();
-  uint32_t amaxpayloadsize() const;
-  void set_amaxpayloadsize(uint32_t value);
+  void clear_a_amaxpayloadsize();
+  uint32_t a_amaxpayloadsize() const;
+  void set_a_amaxpayloadsize(uint32_t value);
   private:
-  uint32_t _internal_amaxpayloadsize() const;
-  void _internal_set_amaxpayloadsize(uint32_t value);
+  uint32_t _internal_a_amaxpayloadsize() const;
+  void _internal_set_a_amaxpayloadsize(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode)
@@ -305,10 +305,10 @@ class Msg_InitEncode final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > acodecspecific_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acodecsettings_;
-    int32_t anumberofcores_;
-    uint32_t amaxpayloadsize_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecific_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acodecsettings_;
+    int32_t a_anumberofcores_;
+    uint32_t a_amaxpayloadsize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -425,24 +425,24 @@ class Msg_GiveShmem final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOutputShmemFieldNumber = 1,
+    kAAOutputShmemFieldNumber = 1,
   };
-  // required bytes aOutputShmem = 1;
-  bool has_aoutputshmem() const;
+  // required bytes a_aOutputShmem = 1;
+  bool has_a_aoutputshmem() const;
   private:
-  bool _internal_has_aoutputshmem() const;
+  bool _internal_has_a_aoutputshmem() const;
   public:
-  void clear_aoutputshmem();
-  const std::string& aoutputshmem() const;
+  void clear_a_aoutputshmem();
+  const std::string& a_aoutputshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aoutputshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aoutputshmem();
-  PROTOBUF_NODISCARD std::string* release_aoutputshmem();
-  void set_allocated_aoutputshmem(std::string* aoutputshmem);
+  void set_a_aoutputshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aoutputshmem();
+  PROTOBUF_NODISCARD std::string* release_a_aoutputshmem();
+  void set_allocated_a_aoutputshmem(std::string* a_aoutputshmem);
   private:
-  const std::string& _internal_aoutputshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aoutputshmem(const std::string& value);
-  std::string* _internal_mutable_aoutputshmem();
+  const std::string& _internal_a_aoutputshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aoutputshmem(const std::string& value);
+  std::string* _internal_mutable_a_aoutputshmem();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem)
@@ -455,7 +455,7 @@ class Msg_GiveShmem final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aoutputshmem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutputshmem_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -572,92 +572,92 @@ class Msg_Encode final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACodecSpecificInfoFieldNumber = 3,
-    kAFrameTypesFieldNumber = 4,
-    kAInputShmemFieldNumber = 2,
-    kAInputFrameFieldNumber = 1,
+    kAACodecSpecificInfoFieldNumber = 3,
+    kAAFrameTypesFieldNumber = 4,
+    kAAInputShmemFieldNumber = 2,
+    kAAInputFrameFieldNumber = 1,
   };
-  // repeated uint32 aCodecSpecificInfo = 3;
-  int acodecspecificinfo_size() const;
+  // repeated uint32 a_aCodecSpecificInfo = 3;
+  int a_acodecspecificinfo_size() const;
   private:
-  int _internal_acodecspecificinfo_size() const;
+  int _internal_a_acodecspecificinfo_size() const;
   public:
-  void clear_acodecspecificinfo();
+  void clear_a_acodecspecificinfo();
   private:
-  uint32_t _internal_acodecspecificinfo(int index) const;
+  uint32_t _internal_a_acodecspecificinfo(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_acodecspecificinfo() const;
-  void _internal_add_acodecspecificinfo(uint32_t value);
+      _internal_a_acodecspecificinfo() const;
+  void _internal_add_a_acodecspecificinfo(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_acodecspecificinfo();
+      _internal_mutable_a_acodecspecificinfo();
   public:
-  uint32_t acodecspecificinfo(int index) const;
-  void set_acodecspecificinfo(int index, uint32_t value);
-  void add_acodecspecificinfo(uint32_t value);
+  uint32_t a_acodecspecificinfo(int index) const;
+  void set_a_acodecspecificinfo(int index, uint32_t value);
+  void add_a_acodecspecificinfo(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      acodecspecificinfo() const;
+      a_acodecspecificinfo() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_acodecspecificinfo();
+      mutable_a_acodecspecificinfo();
 
-  // repeated bytes aFrameTypes = 4;
-  int aframetypes_size() const;
+  // repeated bytes a_aFrameTypes = 4;
+  int a_aframetypes_size() const;
   private:
-  int _internal_aframetypes_size() const;
+  int _internal_a_aframetypes_size() const;
   public:
-  void clear_aframetypes();
-  const std::string& aframetypes(int index) const;
-  std::string* mutable_aframetypes(int index);
-  void set_aframetypes(int index, const std::string& value);
-  void set_aframetypes(int index, std::string&& value);
-  void set_aframetypes(int index, const char* value);
-  void set_aframetypes(int index, const void* value, size_t size);
-  std::string* add_aframetypes();
-  void add_aframetypes(const std::string& value);
-  void add_aframetypes(std::string&& value);
-  void add_aframetypes(const char* value);
-  void add_aframetypes(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aframetypes() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aframetypes();
+  void clear_a_aframetypes();
+  const std::string& a_aframetypes(int index) const;
+  std::string* mutable_a_aframetypes(int index);
+  void set_a_aframetypes(int index, const std::string& value);
+  void set_a_aframetypes(int index, std::string&& value);
+  void set_a_aframetypes(int index, const char* value);
+  void set_a_aframetypes(int index, const void* value, size_t size);
+  std::string* add_a_aframetypes();
+  void add_a_aframetypes(const std::string& value);
+  void add_a_aframetypes(std::string&& value);
+  void add_a_aframetypes(const char* value);
+  void add_a_aframetypes(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_aframetypes() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_aframetypes();
   private:
-  const std::string& _internal_aframetypes(int index) const;
-  std::string* _internal_add_aframetypes();
+  const std::string& _internal_a_aframetypes(int index) const;
+  std::string* _internal_add_a_aframetypes();
   public:
 
-  // required bytes aInputShmem = 2;
-  bool has_ainputshmem() const;
+  // required bytes a_aInputShmem = 2;
+  bool has_a_ainputshmem() const;
   private:
-  bool _internal_has_ainputshmem() const;
+  bool _internal_has_a_ainputshmem() const;
   public:
-  void clear_ainputshmem();
-  const std::string& ainputshmem() const;
+  void clear_a_ainputshmem();
+  const std::string& a_ainputshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ainputshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ainputshmem();
-  PROTOBUF_NODISCARD std::string* release_ainputshmem();
-  void set_allocated_ainputshmem(std::string* ainputshmem);
+  void set_a_ainputshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ainputshmem();
+  PROTOBUF_NODISCARD std::string* release_a_ainputshmem();
+  void set_allocated_a_ainputshmem(std::string* a_ainputshmem);
   private:
-  const std::string& _internal_ainputshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ainputshmem(const std::string& value);
-  std::string* _internal_mutable_ainputshmem();
+  const std::string& _internal_a_ainputshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ainputshmem(const std::string& value);
+  std::string* _internal_mutable_a_ainputshmem();
   public:
 
-  // required .protobuf.mozilla.gmp.GMPVideoi420FrameData aInputFrame = 1;
-  bool has_ainputframe() const;
+  // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
+  bool has_a_ainputframe() const;
   private:
-  bool _internal_has_ainputframe() const;
+  bool _internal_has_a_ainputframe() const;
   public:
-  void clear_ainputframe();
-  const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& ainputframe() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPVideoi420FrameData* release_ainputframe();
-  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* mutable_ainputframe();
-  void set_allocated_ainputframe(::protobuf::mozilla::gmp::GMPVideoi420FrameData* ainputframe);
+  void clear_a_ainputframe();
+  const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& a_ainputframe() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPVideoi420FrameData* release_a_ainputframe();
+  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* mutable_a_ainputframe();
+  void set_allocated_a_ainputframe(::protobuf::mozilla::gmp::GMPVideoi420FrameData* a_ainputframe);
   private:
-  const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& _internal_ainputframe() const;
-  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* _internal_mutable_ainputframe();
+  const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& _internal_a_ainputframe() const;
+  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* _internal_mutable_a_ainputframe();
   public:
-  void unsafe_arena_set_allocated_ainputframe(
-      ::protobuf::mozilla::gmp::GMPVideoi420FrameData* ainputframe);
-  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* unsafe_arena_release_ainputframe();
+  void unsafe_arena_set_allocated_a_ainputframe(
+      ::protobuf::mozilla::gmp::GMPVideoi420FrameData* a_ainputframe);
+  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* unsafe_arena_release_a_ainputframe();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode)
  private:
@@ -672,10 +672,10 @@ class Msg_Encode final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > acodecspecificinfo_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> aframetypes_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ainputshmem_;
-    ::protobuf::mozilla::gmp::GMPVideoi420FrameData* ainputframe_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecificinfo_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_aframetypes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ainputshmem_;
+    ::protobuf::mozilla::gmp::GMPVideoi420FrameData* a_ainputframe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -792,33 +792,33 @@ class Msg_SetChannelParameters final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPacketLossFieldNumber = 1,
-    kARTTFieldNumber = 2,
+    kAAPacketLossFieldNumber = 1,
+    kAARTTFieldNumber = 2,
   };
-  // required uint32 aPacketLoss = 1;
-  bool has_apacketloss() const;
+  // required uint32 a_aPacketLoss = 1;
+  bool has_a_apacketloss() const;
   private:
-  bool _internal_has_apacketloss() const;
+  bool _internal_has_a_apacketloss() const;
   public:
-  void clear_apacketloss();
-  uint32_t apacketloss() const;
-  void set_apacketloss(uint32_t value);
+  void clear_a_apacketloss();
+  uint32_t a_apacketloss() const;
+  void set_a_apacketloss(uint32_t value);
   private:
-  uint32_t _internal_apacketloss() const;
-  void _internal_set_apacketloss(uint32_t value);
+  uint32_t _internal_a_apacketloss() const;
+  void _internal_set_a_apacketloss(uint32_t value);
   public:
 
-  // required uint32 aRTT = 2;
-  bool has_artt() const;
+  // required uint32 a_aRTT = 2;
+  bool has_a_artt() const;
   private:
-  bool _internal_has_artt() const;
+  bool _internal_has_a_artt() const;
   public:
-  void clear_artt();
-  uint32_t artt() const;
-  void set_artt(uint32_t value);
+  void clear_a_artt();
+  uint32_t a_artt() const;
+  void set_a_artt(uint32_t value);
   private:
-  uint32_t _internal_artt() const;
-  void _internal_set_artt(uint32_t value);
+  uint32_t _internal_a_artt() const;
+  void _internal_set_a_artt(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters)
@@ -834,8 +834,8 @@ class Msg_SetChannelParameters final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t apacketloss_;
-    uint32_t artt_;
+    uint32_t a_apacketloss_;
+    uint32_t a_artt_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -952,33 +952,33 @@ class Msg_SetRates final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kANewBitRateFieldNumber = 1,
-    kAFrameRateFieldNumber = 2,
+    kAANewBitRateFieldNumber = 1,
+    kAAFrameRateFieldNumber = 2,
   };
-  // required uint32 aNewBitRate = 1;
-  bool has_anewbitrate() const;
+  // required uint32 a_aNewBitRate = 1;
+  bool has_a_anewbitrate() const;
   private:
-  bool _internal_has_anewbitrate() const;
+  bool _internal_has_a_anewbitrate() const;
   public:
-  void clear_anewbitrate();
-  uint32_t anewbitrate() const;
-  void set_anewbitrate(uint32_t value);
+  void clear_a_anewbitrate();
+  uint32_t a_anewbitrate() const;
+  void set_a_anewbitrate(uint32_t value);
   private:
-  uint32_t _internal_anewbitrate() const;
-  void _internal_set_anewbitrate(uint32_t value);
+  uint32_t _internal_a_anewbitrate() const;
+  void _internal_set_a_anewbitrate(uint32_t value);
   public:
 
-  // required uint32 aFrameRate = 2;
-  bool has_aframerate() const;
+  // required uint32 a_aFrameRate = 2;
+  bool has_a_aframerate() const;
   private:
-  bool _internal_has_aframerate() const;
+  bool _internal_has_a_aframerate() const;
   public:
-  void clear_aframerate();
-  uint32_t aframerate() const;
-  void set_aframerate(uint32_t value);
+  void clear_a_aframerate();
+  uint32_t a_aframerate() const;
+  void set_a_aframerate(uint32_t value);
   private:
-  uint32_t _internal_aframerate() const;
-  void _internal_set_aframerate(uint32_t value);
+  uint32_t _internal_a_aframerate() const;
+  void _internal_set_a_aframerate(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates)
@@ -994,8 +994,8 @@ class Msg_SetRates final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t anewbitrate_;
-    uint32_t aframerate_;
+    uint32_t a_anewbitrate_;
+    uint32_t a_aframerate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1112,19 +1112,19 @@ class Msg_SetPeriodicKeyFrames final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEnableFieldNumber = 1,
+    kAAEnableFieldNumber = 1,
   };
-  // required bool aEnable = 1;
-  bool has_aenable() const;
+  // required bool a_aEnable = 1;
+  bool has_a_aenable() const;
   private:
-  bool _internal_has_aenable() const;
+  bool _internal_has_a_aenable() const;
   public:
-  void clear_aenable();
-  bool aenable() const;
-  void set_aenable(bool value);
+  void clear_a_aenable();
+  bool a_aenable() const;
+  void set_a_aenable(bool value);
   private:
-  bool _internal_aenable() const;
-  void _internal_set_aenable(bool value);
+  bool _internal_a_aenable() const;
+  void _internal_set_a_aenable(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames)
@@ -1137,7 +1137,7 @@ class Msg_SetPeriodicKeyFrames final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aenable_;
+    bool a_aenable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1502,24 +1502,24 @@ class Msg_ReturnShmem final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAInputShmemFieldNumber = 1,
+    kAAInputShmemFieldNumber = 1,
   };
-  // required bytes aInputShmem = 1;
-  bool has_ainputshmem() const;
+  // required bytes a_aInputShmem = 1;
+  bool has_a_ainputshmem() const;
   private:
-  bool _internal_has_ainputshmem() const;
+  bool _internal_has_a_ainputshmem() const;
   public:
-  void clear_ainputshmem();
-  const std::string& ainputshmem() const;
+  void clear_a_ainputshmem();
+  const std::string& a_ainputshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ainputshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ainputshmem();
-  PROTOBUF_NODISCARD std::string* release_ainputshmem();
-  void set_allocated_ainputshmem(std::string* ainputshmem);
+  void set_a_ainputshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ainputshmem();
+  PROTOBUF_NODISCARD std::string* release_a_ainputshmem();
+  void set_allocated_a_ainputshmem(std::string* a_ainputshmem);
   private:
-  const std::string& _internal_ainputshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ainputshmem(const std::string& value);
-  std::string* _internal_mutable_ainputshmem();
+  const std::string& _internal_a_ainputshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ainputshmem(const std::string& value);
+  std::string* _internal_mutable_a_ainputshmem();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem)
@@ -1532,7 +1532,7 @@ class Msg_ReturnShmem final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ainputshmem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ainputshmem_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1649,67 +1649,67 @@ class Msg_EncodedShmem final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACodecSpecificInfoFieldNumber = 3,
-    kAEncodedShmemFieldNumber = 2,
-    kAEncodedFrameFieldNumber = 1,
+    kAACodecSpecificInfoFieldNumber = 3,
+    kAAEncodedShmemFieldNumber = 2,
+    kAAEncodedFrameFieldNumber = 1,
   };
-  // repeated uint32 aCodecSpecificInfo = 3;
-  int acodecspecificinfo_size() const;
+  // repeated uint32 a_aCodecSpecificInfo = 3;
+  int a_acodecspecificinfo_size() const;
   private:
-  int _internal_acodecspecificinfo_size() const;
+  int _internal_a_acodecspecificinfo_size() const;
   public:
-  void clear_acodecspecificinfo();
+  void clear_a_acodecspecificinfo();
   private:
-  uint32_t _internal_acodecspecificinfo(int index) const;
+  uint32_t _internal_a_acodecspecificinfo(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_acodecspecificinfo() const;
-  void _internal_add_acodecspecificinfo(uint32_t value);
+      _internal_a_acodecspecificinfo() const;
+  void _internal_add_a_acodecspecificinfo(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_acodecspecificinfo();
+      _internal_mutable_a_acodecspecificinfo();
   public:
-  uint32_t acodecspecificinfo(int index) const;
-  void set_acodecspecificinfo(int index, uint32_t value);
-  void add_acodecspecificinfo(uint32_t value);
+  uint32_t a_acodecspecificinfo(int index) const;
+  void set_a_acodecspecificinfo(int index, uint32_t value);
+  void add_a_acodecspecificinfo(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      acodecspecificinfo() const;
+      a_acodecspecificinfo() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_acodecspecificinfo();
+      mutable_a_acodecspecificinfo();
 
-  // required bytes aEncodedShmem = 2;
-  bool has_aencodedshmem() const;
+  // required bytes a_aEncodedShmem = 2;
+  bool has_a_aencodedshmem() const;
   private:
-  bool _internal_has_aencodedshmem() const;
+  bool _internal_has_a_aencodedshmem() const;
   public:
-  void clear_aencodedshmem();
-  const std::string& aencodedshmem() const;
+  void clear_a_aencodedshmem();
+  const std::string& a_aencodedshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aencodedshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aencodedshmem();
-  PROTOBUF_NODISCARD std::string* release_aencodedshmem();
-  void set_allocated_aencodedshmem(std::string* aencodedshmem);
+  void set_a_aencodedshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aencodedshmem();
+  PROTOBUF_NODISCARD std::string* release_a_aencodedshmem();
+  void set_allocated_a_aencodedshmem(std::string* a_aencodedshmem);
   private:
-  const std::string& _internal_aencodedshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aencodedshmem(const std::string& value);
-  std::string* _internal_mutable_aencodedshmem();
+  const std::string& _internal_a_aencodedshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aencodedshmem(const std::string& value);
+  std::string* _internal_mutable_a_aencodedshmem();
   public:
 
-  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData aEncodedFrame = 1;
-  bool has_aencodedframe() const;
+  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  bool has_a_aencodedframe() const;
   private:
-  bool _internal_has_aencodedframe() const;
+  bool _internal_has_a_aencodedframe() const;
   public:
-  void clear_aencodedframe();
-  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& aencodedframe() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* release_aencodedframe();
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* mutable_aencodedframe();
-  void set_allocated_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe);
+  void clear_a_aencodedframe();
+  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& a_aencodedframe() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* release_a_aencodedframe();
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* mutable_a_aencodedframe();
+  void set_allocated_a_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe);
   private:
-  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& _internal_aencodedframe() const;
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _internal_mutable_aencodedframe();
+  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& _internal_a_aencodedframe() const;
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _internal_mutable_a_aencodedframe();
   public:
-  void unsafe_arena_set_allocated_aencodedframe(
-      ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe);
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* unsafe_arena_release_aencodedframe();
+  void unsafe_arena_set_allocated_a_aencodedframe(
+      ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe);
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* unsafe_arena_release_a_aencodedframe();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem)
  private:
@@ -1724,9 +1724,9 @@ class Msg_EncodedShmem final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > acodecspecificinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aencodedshmem_;
-    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecificinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aencodedshmem_;
+    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1843,71 +1843,71 @@ class Msg_EncodedData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEncodedDataFieldNumber = 2,
-    kACodecSpecificInfoFieldNumber = 3,
-    kAEncodedFrameFieldNumber = 1,
+    kAAEncodedDataFieldNumber = 2,
+    kAACodecSpecificInfoFieldNumber = 3,
+    kAAEncodedFrameFieldNumber = 1,
   };
-  // repeated uint32 aEncodedData = 2;
-  int aencodeddata_size() const;
+  // repeated uint32 a_aEncodedData = 2;
+  int a_aencodeddata_size() const;
   private:
-  int _internal_aencodeddata_size() const;
+  int _internal_a_aencodeddata_size() const;
   public:
-  void clear_aencodeddata();
+  void clear_a_aencodeddata();
   private:
-  uint32_t _internal_aencodeddata(int index) const;
+  uint32_t _internal_a_aencodeddata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_aencodeddata() const;
-  void _internal_add_aencodeddata(uint32_t value);
+      _internal_a_aencodeddata() const;
+  void _internal_add_a_aencodeddata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_aencodeddata();
+      _internal_mutable_a_aencodeddata();
   public:
-  uint32_t aencodeddata(int index) const;
-  void set_aencodeddata(int index, uint32_t value);
-  void add_aencodeddata(uint32_t value);
+  uint32_t a_aencodeddata(int index) const;
+  void set_a_aencodeddata(int index, uint32_t value);
+  void add_a_aencodeddata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      aencodeddata() const;
+      a_aencodeddata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_aencodeddata();
+      mutable_a_aencodeddata();
 
-  // repeated uint32 aCodecSpecificInfo = 3;
-  int acodecspecificinfo_size() const;
+  // repeated uint32 a_aCodecSpecificInfo = 3;
+  int a_acodecspecificinfo_size() const;
   private:
-  int _internal_acodecspecificinfo_size() const;
+  int _internal_a_acodecspecificinfo_size() const;
   public:
-  void clear_acodecspecificinfo();
+  void clear_a_acodecspecificinfo();
   private:
-  uint32_t _internal_acodecspecificinfo(int index) const;
+  uint32_t _internal_a_acodecspecificinfo(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_acodecspecificinfo() const;
-  void _internal_add_acodecspecificinfo(uint32_t value);
+      _internal_a_acodecspecificinfo() const;
+  void _internal_add_a_acodecspecificinfo(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_acodecspecificinfo();
+      _internal_mutable_a_acodecspecificinfo();
   public:
-  uint32_t acodecspecificinfo(int index) const;
-  void set_acodecspecificinfo(int index, uint32_t value);
-  void add_acodecspecificinfo(uint32_t value);
+  uint32_t a_acodecspecificinfo(int index) const;
+  void set_a_acodecspecificinfo(int index, uint32_t value);
+  void add_a_acodecspecificinfo(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      acodecspecificinfo() const;
+      a_acodecspecificinfo() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_acodecspecificinfo();
+      mutable_a_acodecspecificinfo();
 
-  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData aEncodedFrame = 1;
-  bool has_aencodedframe() const;
+  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  bool has_a_aencodedframe() const;
   private:
-  bool _internal_has_aencodedframe() const;
+  bool _internal_has_a_aencodedframe() const;
   public:
-  void clear_aencodedframe();
-  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& aencodedframe() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* release_aencodedframe();
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* mutable_aencodedframe();
-  void set_allocated_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe);
+  void clear_a_aencodedframe();
+  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& a_aencodedframe() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* release_a_aencodedframe();
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* mutable_a_aencodedframe();
+  void set_allocated_a_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe);
   private:
-  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& _internal_aencodedframe() const;
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _internal_mutable_aencodedframe();
+  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& _internal_a_aencodedframe() const;
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _internal_mutable_a_aencodedframe();
   public:
-  void unsafe_arena_set_allocated_aencodedframe(
-      ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe);
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* unsafe_arena_release_aencodedframe();
+  void unsafe_arena_set_allocated_a_aencodedframe(
+      ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe);
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* unsafe_arena_release_a_aencodedframe();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData)
  private:
@@ -1919,9 +1919,9 @@ class Msg_EncodedData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > aencodeddata_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > acodecspecificinfo_;
-    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_aencodeddata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecificinfo_;
+    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -2038,24 +2038,24 @@ class Msg_Error final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAErrFieldNumber = 1,
+    kAAErrFieldNumber = 1,
   };
-  // required bytes aErr = 1;
-  bool has_aerr() const;
+  // required bytes a_aErr = 1;
+  bool has_a_aerr() const;
   private:
-  bool _internal_has_aerr() const;
+  bool _internal_has_a_aerr() const;
   public:
-  void clear_aerr();
-  const std::string& aerr() const;
+  void clear_a_aerr();
+  const std::string& a_aerr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aerr(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aerr();
-  PROTOBUF_NODISCARD std::string* release_aerr();
-  void set_allocated_aerr(std::string* aerr);
+  void set_a_aerr(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aerr();
+  PROTOBUF_NODISCARD std::string* release_a_aerr();
+  void set_allocated_a_aerr(std::string* a_aerr);
   private:
-  const std::string& _internal_aerr() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aerr(const std::string& value);
-  std::string* _internal_mutable_aerr();
+  const std::string& _internal_a_aerr() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aerr(const std::string& value);
+  std::string* _internal_mutable_a_aerr();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error)
@@ -2068,7 +2068,7 @@ class Msg_Error final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aerr_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aerr_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -2208,288 +2208,288 @@ class Msg_Shutdown final :
 #endif  // __GNUC__
 // Msg_InitEncode
 
-// required bytes aCodecSettings = 1;
-inline bool Msg_InitEncode::_internal_has_acodecsettings() const {
+// required bytes a_aCodecSettings = 1;
+inline bool Msg_InitEncode::_internal_has_a_acodecsettings() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitEncode::has_acodecsettings() const {
-  return _internal_has_acodecsettings();
+inline bool Msg_InitEncode::has_a_acodecsettings() const {
+  return _internal_has_a_acodecsettings();
 }
-inline void Msg_InitEncode::clear_acodecsettings() {
-  _impl_.acodecsettings_.ClearToEmpty();
+inline void Msg_InitEncode::clear_a_acodecsettings() {
+  _impl_.a_acodecsettings_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitEncode::acodecsettings() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSettings)
-  return _internal_acodecsettings();
+inline const std::string& Msg_InitEncode::a_acodecsettings() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
+  return _internal_a_acodecsettings();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitEncode::set_acodecsettings(ArgT0&& arg0, ArgT... args) {
+void Msg_InitEncode::set_a_acodecsettings(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acodecsettings_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSettings)
+ _impl_.a_acodecsettings_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
 }
-inline std::string* Msg_InitEncode::mutable_acodecsettings() {
-  std::string* _s = _internal_mutable_acodecsettings();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSettings)
+inline std::string* Msg_InitEncode::mutable_a_acodecsettings() {
+  std::string* _s = _internal_mutable_a_acodecsettings();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
   return _s;
 }
-inline const std::string& Msg_InitEncode::_internal_acodecsettings() const {
-  return _impl_.acodecsettings_.Get();
+inline const std::string& Msg_InitEncode::_internal_a_acodecsettings() const {
+  return _impl_.a_acodecsettings_.Get();
 }
-inline void Msg_InitEncode::_internal_set_acodecsettings(const std::string& value) {
+inline void Msg_InitEncode::_internal_set_a_acodecsettings(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acodecsettings_.Set(value, GetArenaForAllocation());
+  _impl_.a_acodecsettings_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitEncode::_internal_mutable_acodecsettings() {
+inline std::string* Msg_InitEncode::_internal_mutable_a_acodecsettings() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acodecsettings_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acodecsettings_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitEncode::release_acodecsettings() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSettings)
-  if (!_internal_has_acodecsettings()) {
+inline std::string* Msg_InitEncode::release_a_acodecsettings() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
+  if (!_internal_has_a_acodecsettings()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acodecsettings_.Release();
+  auto* p = _impl_.a_acodecsettings_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acodecsettings_.IsDefault()) {
-    _impl_.acodecsettings_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acodecsettings_.IsDefault()) {
+    _impl_.a_acodecsettings_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitEncode::set_allocated_acodecsettings(std::string* acodecsettings) {
-  if (acodecsettings != nullptr) {
+inline void Msg_InitEncode::set_allocated_a_acodecsettings(std::string* a_acodecsettings) {
+  if (a_acodecsettings != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acodecsettings_.SetAllocated(acodecsettings, GetArenaForAllocation());
+  _impl_.a_acodecsettings_.SetAllocated(a_acodecsettings, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acodecsettings_.IsDefault()) {
-    _impl_.acodecsettings_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acodecsettings_.IsDefault()) {
+    _impl_.a_acodecsettings_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSettings)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
 }
 
-// repeated uint32 aCodecSpecific = 2;
-inline int Msg_InitEncode::_internal_acodecspecific_size() const {
-  return _impl_.acodecspecific_.size();
+// repeated uint32 a_aCodecSpecific = 2;
+inline int Msg_InitEncode::_internal_a_acodecspecific_size() const {
+  return _impl_.a_acodecspecific_.size();
 }
-inline int Msg_InitEncode::acodecspecific_size() const {
-  return _internal_acodecspecific_size();
+inline int Msg_InitEncode::a_acodecspecific_size() const {
+  return _internal_a_acodecspecific_size();
 }
-inline void Msg_InitEncode::clear_acodecspecific() {
-  _impl_.acodecspecific_.Clear();
+inline void Msg_InitEncode::clear_a_acodecspecific() {
+  _impl_.a_acodecspecific_.Clear();
 }
-inline uint32_t Msg_InitEncode::_internal_acodecspecific(int index) const {
-  return _impl_.acodecspecific_.Get(index);
+inline uint32_t Msg_InitEncode::_internal_a_acodecspecific(int index) const {
+  return _impl_.a_acodecspecific_.Get(index);
 }
-inline uint32_t Msg_InitEncode::acodecspecific(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSpecific)
-  return _internal_acodecspecific(index);
+inline uint32_t Msg_InitEncode::a_acodecspecific(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSpecific)
+  return _internal_a_acodecspecific(index);
 }
-inline void Msg_InitEncode::set_acodecspecific(int index, uint32_t value) {
-  _impl_.acodecspecific_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSpecific)
+inline void Msg_InitEncode::set_a_acodecspecific(int index, uint32_t value) {
+  _impl_.a_acodecspecific_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSpecific)
 }
-inline void Msg_InitEncode::_internal_add_acodecspecific(uint32_t value) {
-  _impl_.acodecspecific_.Add(value);
+inline void Msg_InitEncode::_internal_add_a_acodecspecific(uint32_t value) {
+  _impl_.a_acodecspecific_.Add(value);
 }
-inline void Msg_InitEncode::add_acodecspecific(uint32_t value) {
-  _internal_add_acodecspecific(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSpecific)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_InitEncode::_internal_acodecspecific() const {
-  return _impl_.acodecspecific_;
+inline void Msg_InitEncode::add_a_acodecspecific(uint32_t value) {
+  _internal_add_a_acodecspecific(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSpecific)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_InitEncode::acodecspecific() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSpecific)
-  return _internal_acodecspecific();
+Msg_InitEncode::_internal_a_acodecspecific() const {
+  return _impl_.a_acodecspecific_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_InitEncode::a_acodecspecific() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSpecific)
+  return _internal_a_acodecspecific();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_InitEncode::_internal_mutable_acodecspecific() {
-  return &_impl_.acodecspecific_;
+Msg_InitEncode::_internal_mutable_a_acodecspecific() {
+  return &_impl_.a_acodecspecific_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_InitEncode::mutable_acodecspecific() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aCodecSpecific)
-  return _internal_mutable_acodecspecific();
+Msg_InitEncode::mutable_a_acodecspecific() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSpecific)
+  return _internal_mutable_a_acodecspecific();
 }
 
-// required sint32 aNumberOfCores = 3;
-inline bool Msg_InitEncode::_internal_has_anumberofcores() const {
+// required sint32 a_aNumberOfCores = 3;
+inline bool Msg_InitEncode::_internal_has_a_anumberofcores() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_InitEncode::has_anumberofcores() const {
-  return _internal_has_anumberofcores();
+inline bool Msg_InitEncode::has_a_anumberofcores() const {
+  return _internal_has_a_anumberofcores();
 }
-inline void Msg_InitEncode::clear_anumberofcores() {
-  _impl_.anumberofcores_ = 0;
+inline void Msg_InitEncode::clear_a_anumberofcores() {
+  _impl_.a_anumberofcores_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_InitEncode::_internal_anumberofcores() const {
-  return _impl_.anumberofcores_;
+inline int32_t Msg_InitEncode::_internal_a_anumberofcores() const {
+  return _impl_.a_anumberofcores_;
 }
-inline int32_t Msg_InitEncode::anumberofcores() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aNumberOfCores)
-  return _internal_anumberofcores();
+inline int32_t Msg_InitEncode::a_anumberofcores() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aNumberOfCores)
+  return _internal_a_anumberofcores();
 }
-inline void Msg_InitEncode::_internal_set_anumberofcores(int32_t value) {
+inline void Msg_InitEncode::_internal_set_a_anumberofcores(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.anumberofcores_ = value;
+  _impl_.a_anumberofcores_ = value;
 }
-inline void Msg_InitEncode::set_anumberofcores(int32_t value) {
-  _internal_set_anumberofcores(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aNumberOfCores)
+inline void Msg_InitEncode::set_a_anumberofcores(int32_t value) {
+  _internal_set_a_anumberofcores(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aNumberOfCores)
 }
 
-// required uint32 aMaxPayloadSize = 4;
-inline bool Msg_InitEncode::_internal_has_amaxpayloadsize() const {
+// required uint32 a_aMaxPayloadSize = 4;
+inline bool Msg_InitEncode::_internal_has_a_amaxpayloadsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_InitEncode::has_amaxpayloadsize() const {
-  return _internal_has_amaxpayloadsize();
+inline bool Msg_InitEncode::has_a_amaxpayloadsize() const {
+  return _internal_has_a_amaxpayloadsize();
 }
-inline void Msg_InitEncode::clear_amaxpayloadsize() {
-  _impl_.amaxpayloadsize_ = 0u;
+inline void Msg_InitEncode::clear_a_amaxpayloadsize() {
+  _impl_.a_amaxpayloadsize_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_InitEncode::_internal_amaxpayloadsize() const {
-  return _impl_.amaxpayloadsize_;
+inline uint32_t Msg_InitEncode::_internal_a_amaxpayloadsize() const {
+  return _impl_.a_amaxpayloadsize_;
 }
-inline uint32_t Msg_InitEncode::amaxpayloadsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aMaxPayloadSize)
-  return _internal_amaxpayloadsize();
+inline uint32_t Msg_InitEncode::a_amaxpayloadsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aMaxPayloadSize)
+  return _internal_a_amaxpayloadsize();
 }
-inline void Msg_InitEncode::_internal_set_amaxpayloadsize(uint32_t value) {
+inline void Msg_InitEncode::_internal_set_a_amaxpayloadsize(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.amaxpayloadsize_ = value;
+  _impl_.a_amaxpayloadsize_ = value;
 }
-inline void Msg_InitEncode::set_amaxpayloadsize(uint32_t value) {
-  _internal_set_amaxpayloadsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.aMaxPayloadSize)
+inline void Msg_InitEncode::set_a_amaxpayloadsize(uint32_t value) {
+  _internal_set_a_amaxpayloadsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aMaxPayloadSize)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GiveShmem
 
-// required bytes aOutputShmem = 1;
-inline bool Msg_GiveShmem::_internal_has_aoutputshmem() const {
+// required bytes a_aOutputShmem = 1;
+inline bool Msg_GiveShmem::_internal_has_a_aoutputshmem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GiveShmem::has_aoutputshmem() const {
-  return _internal_has_aoutputshmem();
+inline bool Msg_GiveShmem::has_a_aoutputshmem() const {
+  return _internal_has_a_aoutputshmem();
 }
-inline void Msg_GiveShmem::clear_aoutputshmem() {
-  _impl_.aoutputshmem_.ClearToEmpty();
+inline void Msg_GiveShmem::clear_a_aoutputshmem() {
+  _impl_.a_aoutputshmem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GiveShmem::aoutputshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.aOutputShmem)
-  return _internal_aoutputshmem();
+inline const std::string& Msg_GiveShmem::a_aoutputshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
+  return _internal_a_aoutputshmem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GiveShmem::set_aoutputshmem(ArgT0&& arg0, ArgT... args) {
+void Msg_GiveShmem::set_a_aoutputshmem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aoutputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.aOutputShmem)
+ _impl_.a_aoutputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
 }
-inline std::string* Msg_GiveShmem::mutable_aoutputshmem() {
-  std::string* _s = _internal_mutable_aoutputshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.aOutputShmem)
+inline std::string* Msg_GiveShmem::mutable_a_aoutputshmem() {
+  std::string* _s = _internal_mutable_a_aoutputshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
   return _s;
 }
-inline const std::string& Msg_GiveShmem::_internal_aoutputshmem() const {
-  return _impl_.aoutputshmem_.Get();
+inline const std::string& Msg_GiveShmem::_internal_a_aoutputshmem() const {
+  return _impl_.a_aoutputshmem_.Get();
 }
-inline void Msg_GiveShmem::_internal_set_aoutputshmem(const std::string& value) {
+inline void Msg_GiveShmem::_internal_set_a_aoutputshmem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aoutputshmem_.Set(value, GetArenaForAllocation());
+  _impl_.a_aoutputshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GiveShmem::_internal_mutable_aoutputshmem() {
+inline std::string* Msg_GiveShmem::_internal_mutable_a_aoutputshmem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aoutputshmem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aoutputshmem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GiveShmem::release_aoutputshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.aOutputShmem)
-  if (!_internal_has_aoutputshmem()) {
+inline std::string* Msg_GiveShmem::release_a_aoutputshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
+  if (!_internal_has_a_aoutputshmem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aoutputshmem_.Release();
+  auto* p = _impl_.a_aoutputshmem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aoutputshmem_.IsDefault()) {
-    _impl_.aoutputshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aoutputshmem_.IsDefault()) {
+    _impl_.a_aoutputshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GiveShmem::set_allocated_aoutputshmem(std::string* aoutputshmem) {
-  if (aoutputshmem != nullptr) {
+inline void Msg_GiveShmem::set_allocated_a_aoutputshmem(std::string* a_aoutputshmem) {
+  if (a_aoutputshmem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aoutputshmem_.SetAllocated(aoutputshmem, GetArenaForAllocation());
+  _impl_.a_aoutputshmem_.SetAllocated(a_aoutputshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aoutputshmem_.IsDefault()) {
-    _impl_.aoutputshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aoutputshmem_.IsDefault()) {
+    _impl_.a_aoutputshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.aOutputShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Encode
 
-// required .protobuf.mozilla.gmp.GMPVideoi420FrameData aInputFrame = 1;
-inline bool Msg_Encode::_internal_has_ainputframe() const {
+// required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
+inline bool Msg_Encode::_internal_has_a_ainputframe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.ainputframe_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_ainputframe_ != nullptr);
   return value;
 }
-inline bool Msg_Encode::has_ainputframe() const {
-  return _internal_has_ainputframe();
+inline bool Msg_Encode::has_a_ainputframe() const {
+  return _internal_has_a_ainputframe();
 }
-inline const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& Msg_Encode::_internal_ainputframe() const {
-  const ::protobuf::mozilla::gmp::GMPVideoi420FrameData* p = _impl_.ainputframe_;
+inline const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& Msg_Encode::_internal_a_ainputframe() const {
+  const ::protobuf::mozilla::gmp::GMPVideoi420FrameData* p = _impl_.a_ainputframe_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gmp::GMPVideoi420FrameData&>(
       ::protobuf::mozilla::gmp::_GMPVideoi420FrameData_default_instance_);
 }
-inline const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& Msg_Encode::ainputframe() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputFrame)
-  return _internal_ainputframe();
+inline const ::protobuf::mozilla::gmp::GMPVideoi420FrameData& Msg_Encode::a_ainputframe() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
+  return _internal_a_ainputframe();
 }
-inline void Msg_Encode::unsafe_arena_set_allocated_ainputframe(
-    ::protobuf::mozilla::gmp::GMPVideoi420FrameData* ainputframe) {
+inline void Msg_Encode::unsafe_arena_set_allocated_a_ainputframe(
+    ::protobuf::mozilla::gmp::GMPVideoi420FrameData* a_ainputframe) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ainputframe_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ainputframe_);
   }
-  _impl_.ainputframe_ = ainputframe;
-  if (ainputframe) {
+  _impl_.a_ainputframe_ = a_ainputframe;
+  if (a_ainputframe) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputFrame)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
 }
-inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::release_ainputframe() {
+inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::release_a_ainputframe() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* temp = _impl_.ainputframe_;
-  _impl_.ainputframe_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* temp = _impl_.a_ainputframe_;
+  _impl_.a_ainputframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2501,387 +2501,387 @@ inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::release_ainp
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::unsafe_arena_release_ainputframe() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputFrame)
+inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::unsafe_arena_release_a_ainputframe() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* temp = _impl_.ainputframe_;
-  _impl_.ainputframe_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* temp = _impl_.a_ainputframe_;
+  _impl_.a_ainputframe_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::_internal_mutable_ainputframe() {
+inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::_internal_mutable_a_ainputframe() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.ainputframe_ == nullptr) {
+  if (_impl_.a_ainputframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPVideoi420FrameData>(GetArenaForAllocation());
-    _impl_.ainputframe_ = p;
+    _impl_.a_ainputframe_ = p;
   }
-  return _impl_.ainputframe_;
+  return _impl_.a_ainputframe_;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::mutable_ainputframe() {
-  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* _msg = _internal_mutable_ainputframe();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputFrame)
+inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::mutable_a_ainputframe() {
+  ::protobuf::mozilla::gmp::GMPVideoi420FrameData* _msg = _internal_mutable_a_ainputframe();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
   return _msg;
 }
-inline void Msg_Encode::set_allocated_ainputframe(::protobuf::mozilla::gmp::GMPVideoi420FrameData* ainputframe) {
+inline void Msg_Encode::set_allocated_a_ainputframe(::protobuf::mozilla::gmp::GMPVideoi420FrameData* a_ainputframe) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ainputframe_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ainputframe_);
   }
-  if (ainputframe) {
+  if (a_ainputframe) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ainputframe));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_ainputframe));
     if (message_arena != submessage_arena) {
-      ainputframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, ainputframe, submessage_arena);
+      a_ainputframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_ainputframe, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.ainputframe_ = ainputframe;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputFrame)
+  _impl_.a_ainputframe_ = a_ainputframe;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
 }
 
-// required bytes aInputShmem = 2;
-inline bool Msg_Encode::_internal_has_ainputshmem() const {
+// required bytes a_aInputShmem = 2;
+inline bool Msg_Encode::_internal_has_a_ainputshmem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Encode::has_ainputshmem() const {
-  return _internal_has_ainputshmem();
+inline bool Msg_Encode::has_a_ainputshmem() const {
+  return _internal_has_a_ainputshmem();
 }
-inline void Msg_Encode::clear_ainputshmem() {
-  _impl_.ainputshmem_.ClearToEmpty();
+inline void Msg_Encode::clear_a_ainputshmem() {
+  _impl_.a_ainputshmem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Encode::ainputshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputShmem)
-  return _internal_ainputshmem();
+inline const std::string& Msg_Encode::a_ainputshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
+  return _internal_a_ainputshmem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Encode::set_ainputshmem(ArgT0&& arg0, ArgT... args) {
+void Msg_Encode::set_a_ainputshmem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ainputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputShmem)
+ _impl_.a_ainputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
 }
-inline std::string* Msg_Encode::mutable_ainputshmem() {
-  std::string* _s = _internal_mutable_ainputshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputShmem)
+inline std::string* Msg_Encode::mutable_a_ainputshmem() {
+  std::string* _s = _internal_mutable_a_ainputshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
   return _s;
 }
-inline const std::string& Msg_Encode::_internal_ainputshmem() const {
-  return _impl_.ainputshmem_.Get();
+inline const std::string& Msg_Encode::_internal_a_ainputshmem() const {
+  return _impl_.a_ainputshmem_.Get();
 }
-inline void Msg_Encode::_internal_set_ainputshmem(const std::string& value) {
+inline void Msg_Encode::_internal_set_a_ainputshmem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ainputshmem_.Set(value, GetArenaForAllocation());
+  _impl_.a_ainputshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Encode::_internal_mutable_ainputshmem() {
+inline std::string* Msg_Encode::_internal_mutable_a_ainputshmem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ainputshmem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ainputshmem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Encode::release_ainputshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputShmem)
-  if (!_internal_has_ainputshmem()) {
+inline std::string* Msg_Encode::release_a_ainputshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
+  if (!_internal_has_a_ainputshmem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ainputshmem_.Release();
+  auto* p = _impl_.a_ainputshmem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ainputshmem_.IsDefault()) {
-    _impl_.ainputshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ainputshmem_.IsDefault()) {
+    _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Encode::set_allocated_ainputshmem(std::string* ainputshmem) {
-  if (ainputshmem != nullptr) {
+inline void Msg_Encode::set_allocated_a_ainputshmem(std::string* a_ainputshmem) {
+  if (a_ainputshmem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ainputshmem_.SetAllocated(ainputshmem, GetArenaForAllocation());
+  _impl_.a_ainputshmem_.SetAllocated(a_ainputshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ainputshmem_.IsDefault()) {
-    _impl_.ainputshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ainputshmem_.IsDefault()) {
+    _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aInputShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
 }
 
-// repeated uint32 aCodecSpecificInfo = 3;
-inline int Msg_Encode::_internal_acodecspecificinfo_size() const {
-  return _impl_.acodecspecificinfo_.size();
+// repeated uint32 a_aCodecSpecificInfo = 3;
+inline int Msg_Encode::_internal_a_acodecspecificinfo_size() const {
+  return _impl_.a_acodecspecificinfo_.size();
 }
-inline int Msg_Encode::acodecspecificinfo_size() const {
-  return _internal_acodecspecificinfo_size();
+inline int Msg_Encode::a_acodecspecificinfo_size() const {
+  return _internal_a_acodecspecificinfo_size();
 }
-inline void Msg_Encode::clear_acodecspecificinfo() {
-  _impl_.acodecspecificinfo_.Clear();
+inline void Msg_Encode::clear_a_acodecspecificinfo() {
+  _impl_.a_acodecspecificinfo_.Clear();
 }
-inline uint32_t Msg_Encode::_internal_acodecspecificinfo(int index) const {
-  return _impl_.acodecspecificinfo_.Get(index);
+inline uint32_t Msg_Encode::_internal_a_acodecspecificinfo(int index) const {
+  return _impl_.a_acodecspecificinfo_.Get(index);
 }
-inline uint32_t Msg_Encode::acodecspecificinfo(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aCodecSpecificInfo)
-  return _internal_acodecspecificinfo(index);
+inline uint32_t Msg_Encode::a_acodecspecificinfo(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aCodecSpecificInfo)
+  return _internal_a_acodecspecificinfo(index);
 }
-inline void Msg_Encode::set_acodecspecificinfo(int index, uint32_t value) {
-  _impl_.acodecspecificinfo_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aCodecSpecificInfo)
+inline void Msg_Encode::set_a_acodecspecificinfo(int index, uint32_t value) {
+  _impl_.a_acodecspecificinfo_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aCodecSpecificInfo)
 }
-inline void Msg_Encode::_internal_add_acodecspecificinfo(uint32_t value) {
-  _impl_.acodecspecificinfo_.Add(value);
+inline void Msg_Encode::_internal_add_a_acodecspecificinfo(uint32_t value) {
+  _impl_.a_acodecspecificinfo_.Add(value);
 }
-inline void Msg_Encode::add_acodecspecificinfo(uint32_t value) {
-  _internal_add_acodecspecificinfo(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aCodecSpecificInfo)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_Encode::_internal_acodecspecificinfo() const {
-  return _impl_.acodecspecificinfo_;
+inline void Msg_Encode::add_a_acodecspecificinfo(uint32_t value) {
+  _internal_add_a_acodecspecificinfo(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aCodecSpecificInfo)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_Encode::acodecspecificinfo() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aCodecSpecificInfo)
-  return _internal_acodecspecificinfo();
+Msg_Encode::_internal_a_acodecspecificinfo() const {
+  return _impl_.a_acodecspecificinfo_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_Encode::a_acodecspecificinfo() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aCodecSpecificInfo)
+  return _internal_a_acodecspecificinfo();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_Encode::_internal_mutable_acodecspecificinfo() {
-  return &_impl_.acodecspecificinfo_;
+Msg_Encode::_internal_mutable_a_acodecspecificinfo() {
+  return &_impl_.a_acodecspecificinfo_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_Encode::mutable_acodecspecificinfo() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aCodecSpecificInfo)
-  return _internal_mutable_acodecspecificinfo();
+Msg_Encode::mutable_a_acodecspecificinfo() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aCodecSpecificInfo)
+  return _internal_mutable_a_acodecspecificinfo();
 }
 
-// repeated bytes aFrameTypes = 4;
-inline int Msg_Encode::_internal_aframetypes_size() const {
-  return _impl_.aframetypes_.size();
+// repeated bytes a_aFrameTypes = 4;
+inline int Msg_Encode::_internal_a_aframetypes_size() const {
+  return _impl_.a_aframetypes_.size();
 }
-inline int Msg_Encode::aframetypes_size() const {
-  return _internal_aframetypes_size();
+inline int Msg_Encode::a_aframetypes_size() const {
+  return _internal_a_aframetypes_size();
 }
-inline void Msg_Encode::clear_aframetypes() {
-  _impl_.aframetypes_.Clear();
+inline void Msg_Encode::clear_a_aframetypes() {
+  _impl_.a_aframetypes_.Clear();
 }
-inline std::string* Msg_Encode::add_aframetypes() {
-  std::string* _s = _internal_add_aframetypes();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+inline std::string* Msg_Encode::add_a_aframetypes() {
+  std::string* _s = _internal_add_a_aframetypes();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
   return _s;
 }
-inline const std::string& Msg_Encode::_internal_aframetypes(int index) const {
-  return _impl_.aframetypes_.Get(index);
+inline const std::string& Msg_Encode::_internal_a_aframetypes(int index) const {
+  return _impl_.a_aframetypes_.Get(index);
 }
-inline const std::string& Msg_Encode::aframetypes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
-  return _internal_aframetypes(index);
+inline const std::string& Msg_Encode::a_aframetypes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
+  return _internal_a_aframetypes(index);
 }
-inline std::string* Msg_Encode::mutable_aframetypes(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
-  return _impl_.aframetypes_.Mutable(index);
+inline std::string* Msg_Encode::mutable_a_aframetypes(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
+  return _impl_.a_aframetypes_.Mutable(index);
 }
-inline void Msg_Encode::set_aframetypes(int index, const std::string& value) {
-  _impl_.aframetypes_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+inline void Msg_Encode::set_a_aframetypes(int index, const std::string& value) {
+  _impl_.a_aframetypes_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline void Msg_Encode::set_aframetypes(int index, std::string&& value) {
-  _impl_.aframetypes_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+inline void Msg_Encode::set_a_aframetypes(int index, std::string&& value) {
+  _impl_.a_aframetypes_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline void Msg_Encode::set_aframetypes(int index, const char* value) {
+inline void Msg_Encode::set_a_aframetypes(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.aframetypes_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+  _impl_.a_aframetypes_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline void Msg_Encode::set_aframetypes(int index, const void* value, size_t size) {
-  _impl_.aframetypes_.Mutable(index)->assign(
+inline void Msg_Encode::set_a_aframetypes(int index, const void* value, size_t size) {
+  _impl_.a_aframetypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline std::string* Msg_Encode::_internal_add_aframetypes() {
-  return _impl_.aframetypes_.Add();
+inline std::string* Msg_Encode::_internal_add_a_aframetypes() {
+  return _impl_.a_aframetypes_.Add();
 }
-inline void Msg_Encode::add_aframetypes(const std::string& value) {
-  _impl_.aframetypes_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+inline void Msg_Encode::add_a_aframetypes(const std::string& value) {
+  _impl_.a_aframetypes_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline void Msg_Encode::add_aframetypes(std::string&& value) {
-  _impl_.aframetypes_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+inline void Msg_Encode::add_a_aframetypes(std::string&& value) {
+  _impl_.a_aframetypes_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline void Msg_Encode::add_aframetypes(const char* value) {
+inline void Msg_Encode::add_a_aframetypes(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.aframetypes_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+  _impl_.a_aframetypes_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
-inline void Msg_Encode::add_aframetypes(const void* value, size_t size) {
-  _impl_.aframetypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
+inline void Msg_Encode::add_a_aframetypes(const void* value, size_t size) {
+  _impl_.a_aframetypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_Encode::aframetypes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
-  return _impl_.aframetypes_;
+Msg_Encode::a_aframetypes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
+  return _impl_.a_aframetypes_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_Encode::mutable_aframetypes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.aFrameTypes)
-  return &_impl_.aframetypes_;
+Msg_Encode::mutable_a_aframetypes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aFrameTypes)
+  return &_impl_.a_aframetypes_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetChannelParameters
 
-// required uint32 aPacketLoss = 1;
-inline bool Msg_SetChannelParameters::_internal_has_apacketloss() const {
+// required uint32 a_aPacketLoss = 1;
+inline bool Msg_SetChannelParameters::_internal_has_a_apacketloss() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetChannelParameters::has_apacketloss() const {
-  return _internal_has_apacketloss();
+inline bool Msg_SetChannelParameters::has_a_apacketloss() const {
+  return _internal_has_a_apacketloss();
 }
-inline void Msg_SetChannelParameters::clear_apacketloss() {
-  _impl_.apacketloss_ = 0u;
+inline void Msg_SetChannelParameters::clear_a_apacketloss() {
+  _impl_.a_apacketloss_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetChannelParameters::_internal_apacketloss() const {
-  return _impl_.apacketloss_;
+inline uint32_t Msg_SetChannelParameters::_internal_a_apacketloss() const {
+  return _impl_.a_apacketloss_;
 }
-inline uint32_t Msg_SetChannelParameters::apacketloss() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.aPacketLoss)
-  return _internal_apacketloss();
+inline uint32_t Msg_SetChannelParameters::a_apacketloss() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.a_aPacketLoss)
+  return _internal_a_apacketloss();
 }
-inline void Msg_SetChannelParameters::_internal_set_apacketloss(uint32_t value) {
+inline void Msg_SetChannelParameters::_internal_set_a_apacketloss(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apacketloss_ = value;
+  _impl_.a_apacketloss_ = value;
 }
-inline void Msg_SetChannelParameters::set_apacketloss(uint32_t value) {
-  _internal_set_apacketloss(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.aPacketLoss)
+inline void Msg_SetChannelParameters::set_a_apacketloss(uint32_t value) {
+  _internal_set_a_apacketloss(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.a_aPacketLoss)
 }
 
-// required uint32 aRTT = 2;
-inline bool Msg_SetChannelParameters::_internal_has_artt() const {
+// required uint32 a_aRTT = 2;
+inline bool Msg_SetChannelParameters::_internal_has_a_artt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetChannelParameters::has_artt() const {
-  return _internal_has_artt();
+inline bool Msg_SetChannelParameters::has_a_artt() const {
+  return _internal_has_a_artt();
 }
-inline void Msg_SetChannelParameters::clear_artt() {
-  _impl_.artt_ = 0u;
+inline void Msg_SetChannelParameters::clear_a_artt() {
+  _impl_.a_artt_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_SetChannelParameters::_internal_artt() const {
-  return _impl_.artt_;
+inline uint32_t Msg_SetChannelParameters::_internal_a_artt() const {
+  return _impl_.a_artt_;
 }
-inline uint32_t Msg_SetChannelParameters::artt() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.aRTT)
-  return _internal_artt();
+inline uint32_t Msg_SetChannelParameters::a_artt() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.a_aRTT)
+  return _internal_a_artt();
 }
-inline void Msg_SetChannelParameters::_internal_set_artt(uint32_t value) {
+inline void Msg_SetChannelParameters::_internal_set_a_artt(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.artt_ = value;
+  _impl_.a_artt_ = value;
 }
-inline void Msg_SetChannelParameters::set_artt(uint32_t value) {
-  _internal_set_artt(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.aRTT)
+inline void Msg_SetChannelParameters::set_a_artt(uint32_t value) {
+  _internal_set_a_artt(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.a_aRTT)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetRates
 
-// required uint32 aNewBitRate = 1;
-inline bool Msg_SetRates::_internal_has_anewbitrate() const {
+// required uint32 a_aNewBitRate = 1;
+inline bool Msg_SetRates::_internal_has_a_anewbitrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetRates::has_anewbitrate() const {
-  return _internal_has_anewbitrate();
+inline bool Msg_SetRates::has_a_anewbitrate() const {
+  return _internal_has_a_anewbitrate();
 }
-inline void Msg_SetRates::clear_anewbitrate() {
-  _impl_.anewbitrate_ = 0u;
+inline void Msg_SetRates::clear_a_anewbitrate() {
+  _impl_.a_anewbitrate_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetRates::_internal_anewbitrate() const {
-  return _impl_.anewbitrate_;
+inline uint32_t Msg_SetRates::_internal_a_anewbitrate() const {
+  return _impl_.a_anewbitrate_;
 }
-inline uint32_t Msg_SetRates::anewbitrate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.aNewBitRate)
-  return _internal_anewbitrate();
+inline uint32_t Msg_SetRates::a_anewbitrate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.a_aNewBitRate)
+  return _internal_a_anewbitrate();
 }
-inline void Msg_SetRates::_internal_set_anewbitrate(uint32_t value) {
+inline void Msg_SetRates::_internal_set_a_anewbitrate(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.anewbitrate_ = value;
+  _impl_.a_anewbitrate_ = value;
 }
-inline void Msg_SetRates::set_anewbitrate(uint32_t value) {
-  _internal_set_anewbitrate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.aNewBitRate)
+inline void Msg_SetRates::set_a_anewbitrate(uint32_t value) {
+  _internal_set_a_anewbitrate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.a_aNewBitRate)
 }
 
-// required uint32 aFrameRate = 2;
-inline bool Msg_SetRates::_internal_has_aframerate() const {
+// required uint32 a_aFrameRate = 2;
+inline bool Msg_SetRates::_internal_has_a_aframerate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetRates::has_aframerate() const {
-  return _internal_has_aframerate();
+inline bool Msg_SetRates::has_a_aframerate() const {
+  return _internal_has_a_aframerate();
 }
-inline void Msg_SetRates::clear_aframerate() {
-  _impl_.aframerate_ = 0u;
+inline void Msg_SetRates::clear_a_aframerate() {
+  _impl_.a_aframerate_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_SetRates::_internal_aframerate() const {
-  return _impl_.aframerate_;
+inline uint32_t Msg_SetRates::_internal_a_aframerate() const {
+  return _impl_.a_aframerate_;
 }
-inline uint32_t Msg_SetRates::aframerate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.aFrameRate)
-  return _internal_aframerate();
+inline uint32_t Msg_SetRates::a_aframerate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.a_aFrameRate)
+  return _internal_a_aframerate();
 }
-inline void Msg_SetRates::_internal_set_aframerate(uint32_t value) {
+inline void Msg_SetRates::_internal_set_a_aframerate(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aframerate_ = value;
+  _impl_.a_aframerate_ = value;
 }
-inline void Msg_SetRates::set_aframerate(uint32_t value) {
-  _internal_set_aframerate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.aFrameRate)
+inline void Msg_SetRates::set_a_aframerate(uint32_t value) {
+  _internal_set_a_aframerate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.a_aFrameRate)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetPeriodicKeyFrames
 
-// required bool aEnable = 1;
-inline bool Msg_SetPeriodicKeyFrames::_internal_has_aenable() const {
+// required bool a_aEnable = 1;
+inline bool Msg_SetPeriodicKeyFrames::_internal_has_a_aenable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetPeriodicKeyFrames::has_aenable() const {
-  return _internal_has_aenable();
+inline bool Msg_SetPeriodicKeyFrames::has_a_aenable() const {
+  return _internal_has_a_aenable();
 }
-inline void Msg_SetPeriodicKeyFrames::clear_aenable() {
-  _impl_.aenable_ = false;
+inline void Msg_SetPeriodicKeyFrames::clear_a_aenable() {
+  _impl_.a_aenable_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_SetPeriodicKeyFrames::_internal_aenable() const {
-  return _impl_.aenable_;
+inline bool Msg_SetPeriodicKeyFrames::_internal_a_aenable() const {
+  return _impl_.a_aenable_;
 }
-inline bool Msg_SetPeriodicKeyFrames::aenable() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames.aEnable)
-  return _internal_aenable();
+inline bool Msg_SetPeriodicKeyFrames::a_aenable() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames.a_aEnable)
+  return _internal_a_aenable();
 }
-inline void Msg_SetPeriodicKeyFrames::_internal_set_aenable(bool value) {
+inline void Msg_SetPeriodicKeyFrames::_internal_set_a_aenable(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aenable_ = value;
+  _impl_.a_aenable_ = value;
 }
-inline void Msg_SetPeriodicKeyFrames::set_aenable(bool value) {
-  _internal_set_aenable(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames.aEnable)
+inline void Msg_SetPeriodicKeyFrames::set_a_aenable(bool value) {
+  _internal_set_a_aenable(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames.a_aEnable)
 }
 
 // -------------------------------------------------------------------
@@ -2896,113 +2896,113 @@ inline void Msg_SetPeriodicKeyFrames::set_aenable(bool value) {
 
 // Msg_ReturnShmem
 
-// required bytes aInputShmem = 1;
-inline bool Msg_ReturnShmem::_internal_has_ainputshmem() const {
+// required bytes a_aInputShmem = 1;
+inline bool Msg_ReturnShmem::_internal_has_a_ainputshmem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReturnShmem::has_ainputshmem() const {
-  return _internal_has_ainputshmem();
+inline bool Msg_ReturnShmem::has_a_ainputshmem() const {
+  return _internal_has_a_ainputshmem();
 }
-inline void Msg_ReturnShmem::clear_ainputshmem() {
-  _impl_.ainputshmem_.ClearToEmpty();
+inline void Msg_ReturnShmem::clear_a_ainputshmem() {
+  _impl_.a_ainputshmem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReturnShmem::ainputshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.aInputShmem)
-  return _internal_ainputshmem();
+inline const std::string& Msg_ReturnShmem::a_ainputshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
+  return _internal_a_ainputshmem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReturnShmem::set_ainputshmem(ArgT0&& arg0, ArgT... args) {
+void Msg_ReturnShmem::set_a_ainputshmem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ainputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.aInputShmem)
+ _impl_.a_ainputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
 }
-inline std::string* Msg_ReturnShmem::mutable_ainputshmem() {
-  std::string* _s = _internal_mutable_ainputshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.aInputShmem)
+inline std::string* Msg_ReturnShmem::mutable_a_ainputshmem() {
+  std::string* _s = _internal_mutable_a_ainputshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
   return _s;
 }
-inline const std::string& Msg_ReturnShmem::_internal_ainputshmem() const {
-  return _impl_.ainputshmem_.Get();
+inline const std::string& Msg_ReturnShmem::_internal_a_ainputshmem() const {
+  return _impl_.a_ainputshmem_.Get();
 }
-inline void Msg_ReturnShmem::_internal_set_ainputshmem(const std::string& value) {
+inline void Msg_ReturnShmem::_internal_set_a_ainputshmem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ainputshmem_.Set(value, GetArenaForAllocation());
+  _impl_.a_ainputshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReturnShmem::_internal_mutable_ainputshmem() {
+inline std::string* Msg_ReturnShmem::_internal_mutable_a_ainputshmem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ainputshmem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ainputshmem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReturnShmem::release_ainputshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.aInputShmem)
-  if (!_internal_has_ainputshmem()) {
+inline std::string* Msg_ReturnShmem::release_a_ainputshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
+  if (!_internal_has_a_ainputshmem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ainputshmem_.Release();
+  auto* p = _impl_.a_ainputshmem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ainputshmem_.IsDefault()) {
-    _impl_.ainputshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ainputshmem_.IsDefault()) {
+    _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReturnShmem::set_allocated_ainputshmem(std::string* ainputshmem) {
-  if (ainputshmem != nullptr) {
+inline void Msg_ReturnShmem::set_allocated_a_ainputshmem(std::string* a_ainputshmem) {
+  if (a_ainputshmem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ainputshmem_.SetAllocated(ainputshmem, GetArenaForAllocation());
+  _impl_.a_ainputshmem_.SetAllocated(a_ainputshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ainputshmem_.IsDefault()) {
-    _impl_.ainputshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ainputshmem_.IsDefault()) {
+    _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.aInputShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_EncodedShmem
 
-// required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData aEncodedFrame = 1;
-inline bool Msg_EncodedShmem::_internal_has_aencodedframe() const {
+// required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+inline bool Msg_EncodedShmem::_internal_has_a_aencodedframe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aencodedframe_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aencodedframe_ != nullptr);
   return value;
 }
-inline bool Msg_EncodedShmem::has_aencodedframe() const {
-  return _internal_has_aencodedframe();
+inline bool Msg_EncodedShmem::has_a_aencodedframe() const {
+  return _internal_has_a_aencodedframe();
 }
-inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedShmem::_internal_aencodedframe() const {
-  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* p = _impl_.aencodedframe_;
+inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedShmem::_internal_a_aencodedframe() const {
+  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* p = _impl_.a_aencodedframe_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData&>(
       ::protobuf::mozilla::gmp::_GMPVideoEncodedFrameData_default_instance_);
 }
-inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedShmem::aencodedframe() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedFrame)
-  return _internal_aencodedframe();
+inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedShmem::a_aencodedframe() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
+  return _internal_a_aencodedframe();
 }
-inline void Msg_EncodedShmem::unsafe_arena_set_allocated_aencodedframe(
-    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe) {
+inline void Msg_EncodedShmem::unsafe_arena_set_allocated_a_aencodedframe(
+    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aencodedframe_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aencodedframe_);
   }
-  _impl_.aencodedframe_ = aencodedframe;
-  if (aencodedframe) {
+  _impl_.a_aencodedframe_ = a_aencodedframe;
+  if (a_aencodedframe) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedFrame)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::release_aencodedframe() {
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::release_a_aencodedframe() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.aencodedframe_;
-  _impl_.aencodedframe_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
+  _impl_.a_aencodedframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3014,201 +3014,201 @@ inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::rel
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::unsafe_arena_release_aencodedframe() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedFrame)
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::unsafe_arena_release_a_aencodedframe() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.aencodedframe_;
-  _impl_.aencodedframe_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
+  _impl_.a_aencodedframe_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::_internal_mutable_aencodedframe() {
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::_internal_mutable_a_aencodedframe() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.aencodedframe_ == nullptr) {
+  if (_impl_.a_aencodedframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPVideoEncodedFrameData>(GetArenaForAllocation());
-    _impl_.aencodedframe_ = p;
+    _impl_.a_aencodedframe_ = p;
   }
-  return _impl_.aencodedframe_;
+  return _impl_.a_aencodedframe_;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::mutable_aencodedframe() {
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _msg = _internal_mutable_aencodedframe();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedFrame)
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::mutable_a_aencodedframe() {
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _msg = _internal_mutable_a_aencodedframe();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
   return _msg;
 }
-inline void Msg_EncodedShmem::set_allocated_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe) {
+inline void Msg_EncodedShmem::set_allocated_a_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aencodedframe_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aencodedframe_);
   }
-  if (aencodedframe) {
+  if (a_aencodedframe) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aencodedframe));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aencodedframe));
     if (message_arena != submessage_arena) {
-      aencodedframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aencodedframe, submessage_arena);
+      a_aencodedframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aencodedframe, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aencodedframe_ = aencodedframe;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedFrame)
+  _impl_.a_aencodedframe_ = a_aencodedframe;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
 }
 
-// required bytes aEncodedShmem = 2;
-inline bool Msg_EncodedShmem::_internal_has_aencodedshmem() const {
+// required bytes a_aEncodedShmem = 2;
+inline bool Msg_EncodedShmem::_internal_has_a_aencodedshmem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_EncodedShmem::has_aencodedshmem() const {
-  return _internal_has_aencodedshmem();
+inline bool Msg_EncodedShmem::has_a_aencodedshmem() const {
+  return _internal_has_a_aencodedshmem();
 }
-inline void Msg_EncodedShmem::clear_aencodedshmem() {
-  _impl_.aencodedshmem_.ClearToEmpty();
+inline void Msg_EncodedShmem::clear_a_aencodedshmem() {
+  _impl_.a_aencodedshmem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_EncodedShmem::aencodedshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedShmem)
-  return _internal_aencodedshmem();
+inline const std::string& Msg_EncodedShmem::a_aencodedshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
+  return _internal_a_aencodedshmem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_EncodedShmem::set_aencodedshmem(ArgT0&& arg0, ArgT... args) {
+void Msg_EncodedShmem::set_a_aencodedshmem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aencodedshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedShmem)
+ _impl_.a_aencodedshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
 }
-inline std::string* Msg_EncodedShmem::mutable_aencodedshmem() {
-  std::string* _s = _internal_mutable_aencodedshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedShmem)
+inline std::string* Msg_EncodedShmem::mutable_a_aencodedshmem() {
+  std::string* _s = _internal_mutable_a_aencodedshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
   return _s;
 }
-inline const std::string& Msg_EncodedShmem::_internal_aencodedshmem() const {
-  return _impl_.aencodedshmem_.Get();
+inline const std::string& Msg_EncodedShmem::_internal_a_aencodedshmem() const {
+  return _impl_.a_aencodedshmem_.Get();
 }
-inline void Msg_EncodedShmem::_internal_set_aencodedshmem(const std::string& value) {
+inline void Msg_EncodedShmem::_internal_set_a_aencodedshmem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aencodedshmem_.Set(value, GetArenaForAllocation());
+  _impl_.a_aencodedshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_EncodedShmem::_internal_mutable_aencodedshmem() {
+inline std::string* Msg_EncodedShmem::_internal_mutable_a_aencodedshmem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aencodedshmem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aencodedshmem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_EncodedShmem::release_aencodedshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedShmem)
-  if (!_internal_has_aencodedshmem()) {
+inline std::string* Msg_EncodedShmem::release_a_aencodedshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
+  if (!_internal_has_a_aencodedshmem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aencodedshmem_.Release();
+  auto* p = _impl_.a_aencodedshmem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aencodedshmem_.IsDefault()) {
-    _impl_.aencodedshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aencodedshmem_.IsDefault()) {
+    _impl_.a_aencodedshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_EncodedShmem::set_allocated_aencodedshmem(std::string* aencodedshmem) {
-  if (aencodedshmem != nullptr) {
+inline void Msg_EncodedShmem::set_allocated_a_aencodedshmem(std::string* a_aencodedshmem) {
+  if (a_aencodedshmem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aencodedshmem_.SetAllocated(aencodedshmem, GetArenaForAllocation());
+  _impl_.a_aencodedshmem_.SetAllocated(a_aencodedshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aencodedshmem_.IsDefault()) {
-    _impl_.aencodedshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aencodedshmem_.IsDefault()) {
+    _impl_.a_aencodedshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aEncodedShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
 }
 
-// repeated uint32 aCodecSpecificInfo = 3;
-inline int Msg_EncodedShmem::_internal_acodecspecificinfo_size() const {
-  return _impl_.acodecspecificinfo_.size();
+// repeated uint32 a_aCodecSpecificInfo = 3;
+inline int Msg_EncodedShmem::_internal_a_acodecspecificinfo_size() const {
+  return _impl_.a_acodecspecificinfo_.size();
 }
-inline int Msg_EncodedShmem::acodecspecificinfo_size() const {
-  return _internal_acodecspecificinfo_size();
+inline int Msg_EncodedShmem::a_acodecspecificinfo_size() const {
+  return _internal_a_acodecspecificinfo_size();
 }
-inline void Msg_EncodedShmem::clear_acodecspecificinfo() {
-  _impl_.acodecspecificinfo_.Clear();
+inline void Msg_EncodedShmem::clear_a_acodecspecificinfo() {
+  _impl_.a_acodecspecificinfo_.Clear();
 }
-inline uint32_t Msg_EncodedShmem::_internal_acodecspecificinfo(int index) const {
-  return _impl_.acodecspecificinfo_.Get(index);
+inline uint32_t Msg_EncodedShmem::_internal_a_acodecspecificinfo(int index) const {
+  return _impl_.a_acodecspecificinfo_.Get(index);
 }
-inline uint32_t Msg_EncodedShmem::acodecspecificinfo(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aCodecSpecificInfo)
-  return _internal_acodecspecificinfo(index);
+inline uint32_t Msg_EncodedShmem::a_acodecspecificinfo(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aCodecSpecificInfo)
+  return _internal_a_acodecspecificinfo(index);
 }
-inline void Msg_EncodedShmem::set_acodecspecificinfo(int index, uint32_t value) {
-  _impl_.acodecspecificinfo_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aCodecSpecificInfo)
+inline void Msg_EncodedShmem::set_a_acodecspecificinfo(int index, uint32_t value) {
+  _impl_.a_acodecspecificinfo_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aCodecSpecificInfo)
 }
-inline void Msg_EncodedShmem::_internal_add_acodecspecificinfo(uint32_t value) {
-  _impl_.acodecspecificinfo_.Add(value);
+inline void Msg_EncodedShmem::_internal_add_a_acodecspecificinfo(uint32_t value) {
+  _impl_.a_acodecspecificinfo_.Add(value);
 }
-inline void Msg_EncodedShmem::add_acodecspecificinfo(uint32_t value) {
-  _internal_add_acodecspecificinfo(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aCodecSpecificInfo)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_EncodedShmem::_internal_acodecspecificinfo() const {
-  return _impl_.acodecspecificinfo_;
+inline void Msg_EncodedShmem::add_a_acodecspecificinfo(uint32_t value) {
+  _internal_add_a_acodecspecificinfo(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aCodecSpecificInfo)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_EncodedShmem::acodecspecificinfo() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aCodecSpecificInfo)
-  return _internal_acodecspecificinfo();
+Msg_EncodedShmem::_internal_a_acodecspecificinfo() const {
+  return _impl_.a_acodecspecificinfo_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_EncodedShmem::a_acodecspecificinfo() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aCodecSpecificInfo)
+  return _internal_a_acodecspecificinfo();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_EncodedShmem::_internal_mutable_acodecspecificinfo() {
-  return &_impl_.acodecspecificinfo_;
+Msg_EncodedShmem::_internal_mutable_a_acodecspecificinfo() {
+  return &_impl_.a_acodecspecificinfo_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_EncodedShmem::mutable_acodecspecificinfo() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.aCodecSpecificInfo)
-  return _internal_mutable_acodecspecificinfo();
+Msg_EncodedShmem::mutable_a_acodecspecificinfo() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aCodecSpecificInfo)
+  return _internal_mutable_a_acodecspecificinfo();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_EncodedData
 
-// required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData aEncodedFrame = 1;
-inline bool Msg_EncodedData::_internal_has_aencodedframe() const {
+// required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+inline bool Msg_EncodedData::_internal_has_a_aencodedframe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aencodedframe_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aencodedframe_ != nullptr);
   return value;
 }
-inline bool Msg_EncodedData::has_aencodedframe() const {
-  return _internal_has_aencodedframe();
+inline bool Msg_EncodedData::has_a_aencodedframe() const {
+  return _internal_has_a_aencodedframe();
 }
-inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedData::_internal_aencodedframe() const {
-  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* p = _impl_.aencodedframe_;
+inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedData::_internal_a_aencodedframe() const {
+  const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* p = _impl_.a_aencodedframe_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData&>(
       ::protobuf::mozilla::gmp::_GMPVideoEncodedFrameData_default_instance_);
 }
-inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedData::aencodedframe() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedFrame)
-  return _internal_aencodedframe();
+inline const ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData& Msg_EncodedData::a_aencodedframe() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
+  return _internal_a_aencodedframe();
 }
-inline void Msg_EncodedData::unsafe_arena_set_allocated_aencodedframe(
-    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe) {
+inline void Msg_EncodedData::unsafe_arena_set_allocated_a_aencodedframe(
+    ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aencodedframe_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aencodedframe_);
   }
-  _impl_.aencodedframe_ = aencodedframe;
-  if (aencodedframe) {
+  _impl_.a_aencodedframe_ = a_aencodedframe;
+  if (a_aencodedframe) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedFrame)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::release_aencodedframe() {
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::release_a_aencodedframe() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.aencodedframe_;
-  _impl_.aencodedframe_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
+  _impl_.a_aencodedframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3220,211 +3220,211 @@ inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::unsafe_arena_release_aencodedframe() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedFrame)
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::unsafe_arena_release_a_aencodedframe() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.aencodedframe_;
-  _impl_.aencodedframe_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
+  _impl_.a_aencodedframe_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::_internal_mutable_aencodedframe() {
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::_internal_mutable_a_aencodedframe() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aencodedframe_ == nullptr) {
+  if (_impl_.a_aencodedframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPVideoEncodedFrameData>(GetArenaForAllocation());
-    _impl_.aencodedframe_ = p;
+    _impl_.a_aencodedframe_ = p;
   }
-  return _impl_.aencodedframe_;
+  return _impl_.a_aencodedframe_;
 }
-inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::mutable_aencodedframe() {
-  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _msg = _internal_mutable_aencodedframe();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedFrame)
+inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::mutable_a_aencodedframe() {
+  ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* _msg = _internal_mutable_a_aencodedframe();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
   return _msg;
 }
-inline void Msg_EncodedData::set_allocated_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* aencodedframe) {
+inline void Msg_EncodedData::set_allocated_a_aencodedframe(::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aencodedframe_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aencodedframe_);
   }
-  if (aencodedframe) {
+  if (a_aencodedframe) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aencodedframe));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aencodedframe));
     if (message_arena != submessage_arena) {
-      aencodedframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aencodedframe, submessage_arena);
+      a_aencodedframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aencodedframe, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aencodedframe_ = aencodedframe;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedFrame)
+  _impl_.a_aencodedframe_ = a_aencodedframe;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
 }
 
-// repeated uint32 aEncodedData = 2;
-inline int Msg_EncodedData::_internal_aencodeddata_size() const {
-  return _impl_.aencodeddata_.size();
+// repeated uint32 a_aEncodedData = 2;
+inline int Msg_EncodedData::_internal_a_aencodeddata_size() const {
+  return _impl_.a_aencodeddata_.size();
 }
-inline int Msg_EncodedData::aencodeddata_size() const {
-  return _internal_aencodeddata_size();
+inline int Msg_EncodedData::a_aencodeddata_size() const {
+  return _internal_a_aencodeddata_size();
 }
-inline void Msg_EncodedData::clear_aencodeddata() {
-  _impl_.aencodeddata_.Clear();
+inline void Msg_EncodedData::clear_a_aencodeddata() {
+  _impl_.a_aencodeddata_.Clear();
 }
-inline uint32_t Msg_EncodedData::_internal_aencodeddata(int index) const {
-  return _impl_.aencodeddata_.Get(index);
+inline uint32_t Msg_EncodedData::_internal_a_aencodeddata(int index) const {
+  return _impl_.a_aencodeddata_.Get(index);
 }
-inline uint32_t Msg_EncodedData::aencodeddata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedData)
-  return _internal_aencodeddata(index);
+inline uint32_t Msg_EncodedData::a_aencodeddata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedData)
+  return _internal_a_aencodeddata(index);
 }
-inline void Msg_EncodedData::set_aencodeddata(int index, uint32_t value) {
-  _impl_.aencodeddata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedData)
+inline void Msg_EncodedData::set_a_aencodeddata(int index, uint32_t value) {
+  _impl_.a_aencodeddata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedData)
 }
-inline void Msg_EncodedData::_internal_add_aencodeddata(uint32_t value) {
-  _impl_.aencodeddata_.Add(value);
+inline void Msg_EncodedData::_internal_add_a_aencodeddata(uint32_t value) {
+  _impl_.a_aencodeddata_.Add(value);
 }
-inline void Msg_EncodedData::add_aencodeddata(uint32_t value) {
-  _internal_add_aencodeddata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_EncodedData::_internal_aencodeddata() const {
-  return _impl_.aencodeddata_;
+inline void Msg_EncodedData::add_a_aencodeddata(uint32_t value) {
+  _internal_add_a_aencodeddata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_EncodedData::aencodeddata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedData)
-  return _internal_aencodeddata();
+Msg_EncodedData::_internal_a_aencodeddata() const {
+  return _impl_.a_aencodeddata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_EncodedData::a_aencodeddata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedData)
+  return _internal_a_aencodeddata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_EncodedData::_internal_mutable_aencodeddata() {
-  return &_impl_.aencodeddata_;
+Msg_EncodedData::_internal_mutable_a_aencodeddata() {
+  return &_impl_.a_aencodeddata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_EncodedData::mutable_aencodeddata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aEncodedData)
-  return _internal_mutable_aencodeddata();
+Msg_EncodedData::mutable_a_aencodeddata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedData)
+  return _internal_mutable_a_aencodeddata();
 }
 
-// repeated uint32 aCodecSpecificInfo = 3;
-inline int Msg_EncodedData::_internal_acodecspecificinfo_size() const {
-  return _impl_.acodecspecificinfo_.size();
+// repeated uint32 a_aCodecSpecificInfo = 3;
+inline int Msg_EncodedData::_internal_a_acodecspecificinfo_size() const {
+  return _impl_.a_acodecspecificinfo_.size();
 }
-inline int Msg_EncodedData::acodecspecificinfo_size() const {
-  return _internal_acodecspecificinfo_size();
+inline int Msg_EncodedData::a_acodecspecificinfo_size() const {
+  return _internal_a_acodecspecificinfo_size();
 }
-inline void Msg_EncodedData::clear_acodecspecificinfo() {
-  _impl_.acodecspecificinfo_.Clear();
+inline void Msg_EncodedData::clear_a_acodecspecificinfo() {
+  _impl_.a_acodecspecificinfo_.Clear();
 }
-inline uint32_t Msg_EncodedData::_internal_acodecspecificinfo(int index) const {
-  return _impl_.acodecspecificinfo_.Get(index);
+inline uint32_t Msg_EncodedData::_internal_a_acodecspecificinfo(int index) const {
+  return _impl_.a_acodecspecificinfo_.Get(index);
 }
-inline uint32_t Msg_EncodedData::acodecspecificinfo(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aCodecSpecificInfo)
-  return _internal_acodecspecificinfo(index);
+inline uint32_t Msg_EncodedData::a_acodecspecificinfo(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aCodecSpecificInfo)
+  return _internal_a_acodecspecificinfo(index);
 }
-inline void Msg_EncodedData::set_acodecspecificinfo(int index, uint32_t value) {
-  _impl_.acodecspecificinfo_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aCodecSpecificInfo)
+inline void Msg_EncodedData::set_a_acodecspecificinfo(int index, uint32_t value) {
+  _impl_.a_acodecspecificinfo_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aCodecSpecificInfo)
 }
-inline void Msg_EncodedData::_internal_add_acodecspecificinfo(uint32_t value) {
-  _impl_.acodecspecificinfo_.Add(value);
+inline void Msg_EncodedData::_internal_add_a_acodecspecificinfo(uint32_t value) {
+  _impl_.a_acodecspecificinfo_.Add(value);
 }
-inline void Msg_EncodedData::add_acodecspecificinfo(uint32_t value) {
-  _internal_add_acodecspecificinfo(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aCodecSpecificInfo)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_EncodedData::_internal_acodecspecificinfo() const {
-  return _impl_.acodecspecificinfo_;
+inline void Msg_EncodedData::add_a_acodecspecificinfo(uint32_t value) {
+  _internal_add_a_acodecspecificinfo(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aCodecSpecificInfo)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_EncodedData::acodecspecificinfo() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aCodecSpecificInfo)
-  return _internal_acodecspecificinfo();
+Msg_EncodedData::_internal_a_acodecspecificinfo() const {
+  return _impl_.a_acodecspecificinfo_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_EncodedData::a_acodecspecificinfo() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aCodecSpecificInfo)
+  return _internal_a_acodecspecificinfo();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_EncodedData::_internal_mutable_acodecspecificinfo() {
-  return &_impl_.acodecspecificinfo_;
+Msg_EncodedData::_internal_mutable_a_acodecspecificinfo() {
+  return &_impl_.a_acodecspecificinfo_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_EncodedData::mutable_acodecspecificinfo() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.aCodecSpecificInfo)
-  return _internal_mutable_acodecspecificinfo();
+Msg_EncodedData::mutable_a_acodecspecificinfo() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aCodecSpecificInfo)
+  return _internal_mutable_a_acodecspecificinfo();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Error
 
-// required bytes aErr = 1;
-inline bool Msg_Error::_internal_has_aerr() const {
+// required bytes a_aErr = 1;
+inline bool Msg_Error::_internal_has_a_aerr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Error::has_aerr() const {
-  return _internal_has_aerr();
+inline bool Msg_Error::has_a_aerr() const {
+  return _internal_has_a_aerr();
 }
-inline void Msg_Error::clear_aerr() {
-  _impl_.aerr_.ClearToEmpty();
+inline void Msg_Error::clear_a_aerr() {
+  _impl_.a_aerr_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Error::aerr() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.aErr)
-  return _internal_aerr();
+inline const std::string& Msg_Error::a_aerr() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
+  return _internal_a_aerr();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Error::set_aerr(ArgT0&& arg0, ArgT... args) {
+void Msg_Error::set_a_aerr(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aerr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.aErr)
+ _impl_.a_aerr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
 }
-inline std::string* Msg_Error::mutable_aerr() {
-  std::string* _s = _internal_mutable_aerr();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.aErr)
+inline std::string* Msg_Error::mutable_a_aerr() {
+  std::string* _s = _internal_mutable_a_aerr();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
   return _s;
 }
-inline const std::string& Msg_Error::_internal_aerr() const {
-  return _impl_.aerr_.Get();
+inline const std::string& Msg_Error::_internal_a_aerr() const {
+  return _impl_.a_aerr_.Get();
 }
-inline void Msg_Error::_internal_set_aerr(const std::string& value) {
+inline void Msg_Error::_internal_set_a_aerr(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aerr_.Set(value, GetArenaForAllocation());
+  _impl_.a_aerr_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Error::_internal_mutable_aerr() {
+inline std::string* Msg_Error::_internal_mutable_a_aerr() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aerr_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aerr_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Error::release_aerr() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.aErr)
-  if (!_internal_has_aerr()) {
+inline std::string* Msg_Error::release_a_aerr() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
+  if (!_internal_has_a_aerr()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aerr_.Release();
+  auto* p = _impl_.a_aerr_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aerr_.IsDefault()) {
-    _impl_.aerr_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aerr_.IsDefault()) {
+    _impl_.a_aerr_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Error::set_allocated_aerr(std::string* aerr) {
-  if (aerr != nullptr) {
+inline void Msg_Error::set_allocated_a_aerr(std::string* a_aerr) {
+  if (a_aerr != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aerr_.SetAllocated(aerr, GetArenaForAllocation());
+  _impl_.a_aerr_.SetAllocated(a_aerr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aerr_.IsDefault()) {
-    _impl_.aerr_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aerr_.IsDefault()) {
+    _impl_.a_aerr_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.aErr)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
 }
 
 // -------------------------------------------------------------------

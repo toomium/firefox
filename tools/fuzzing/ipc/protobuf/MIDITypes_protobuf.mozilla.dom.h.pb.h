@@ -177,95 +177,95 @@ class MIDIPortInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
-    kNameFieldNumber = 2,
-    kManufacturerFieldNumber = 3,
-    kVersionFieldNumber = 4,
-    kTypeFieldNumber = 5,
+    kAIdFieldNumber = 1,
+    kANameFieldNumber = 2,
+    kAManufacturerFieldNumber = 3,
+    kAVersionFieldNumber = 4,
+    kATypeFieldNumber = 5,
   };
-  // required bytes id = 1;
-  bool has_id() const;
+  // required bytes a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes name = 2;
-  bool has_name() const;
+  // required bytes a_name = 2;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes manufacturer = 3;
-  bool has_manufacturer() const;
+  // required bytes a_manufacturer = 3;
+  bool has_a_manufacturer() const;
   private:
-  bool _internal_has_manufacturer() const;
+  bool _internal_has_a_manufacturer() const;
   public:
-  void clear_manufacturer();
-  const std::string& manufacturer() const;
+  void clear_a_manufacturer();
+  const std::string& a_manufacturer() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_manufacturer(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_manufacturer();
-  PROTOBUF_NODISCARD std::string* release_manufacturer();
-  void set_allocated_manufacturer(std::string* manufacturer);
+  void set_a_manufacturer(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_manufacturer();
+  PROTOBUF_NODISCARD std::string* release_a_manufacturer();
+  void set_allocated_a_manufacturer(std::string* a_manufacturer);
   private:
-  const std::string& _internal_manufacturer() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_manufacturer(const std::string& value);
-  std::string* _internal_mutable_manufacturer();
+  const std::string& _internal_a_manufacturer() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_manufacturer(const std::string& value);
+  std::string* _internal_mutable_a_manufacturer();
   public:
 
-  // required bytes version = 4;
-  bool has_version() const;
+  // required bytes a_version = 4;
+  bool has_a_version() const;
   private:
-  bool _internal_has_version() const;
+  bool _internal_has_a_version() const;
   public:
-  void clear_version();
-  const std::string& version() const;
+  void clear_a_version();
+  const std::string& a_version() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_version(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_version();
-  PROTOBUF_NODISCARD std::string* release_version();
-  void set_allocated_version(std::string* version);
+  void set_a_version(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_version();
+  PROTOBUF_NODISCARD std::string* release_a_version();
+  void set_allocated_a_version(std::string* a_version);
   private:
-  const std::string& _internal_version() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_version(const std::string& value);
-  std::string* _internal_mutable_version();
+  const std::string& _internal_a_version() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_version(const std::string& value);
+  std::string* _internal_mutable_a_version();
   public:
 
-  // required uint32 type = 5;
-  bool has_type() const;
+  // required uint32 a_type = 5;
+  bool has_a_type() const;
   private:
-  bool _internal_has_type() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_type();
-  uint32_t type() const;
-  void set_type(uint32_t value);
+  void clear_a_type();
+  uint32_t a_type() const;
+  void set_a_type(uint32_t value);
   private:
-  uint32_t _internal_type() const;
-  void _internal_set_type(uint32_t value);
+  uint32_t _internal_a_type() const;
+  void _internal_set_a_type(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.MIDIPortInfo)
@@ -281,11 +281,11 @@ class MIDIPortInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr manufacturer_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
-    uint32_t type_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_manufacturer_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_version_;
+    uint32_t a_type_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -402,47 +402,47 @@ class MIDIMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
-    kTimestampFieldNumber = 2,
+    kADataFieldNumber = 1,
+    kATimestampFieldNumber = 2,
   };
-  // repeated uint32 data = 1;
-  int data_size() const;
+  // repeated uint32 a_data = 1;
+  int a_data_size() const;
   private:
-  int _internal_data_size() const;
+  int _internal_a_data_size() const;
   public:
-  void clear_data();
+  void clear_a_data();
   private:
-  uint32_t _internal_data(int index) const;
+  uint32_t _internal_a_data(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_data() const;
-  void _internal_add_data(uint32_t value);
+      _internal_a_data() const;
+  void _internal_add_a_data(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_data();
+      _internal_mutable_a_data();
   public:
-  uint32_t data(int index) const;
-  void set_data(int index, uint32_t value);
-  void add_data(uint32_t value);
+  uint32_t a_data(int index) const;
+  void set_a_data(int index, uint32_t value);
+  void add_a_data(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      data() const;
+      a_data() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_data();
+      mutable_a_data();
 
-  // required bytes timestamp = 2;
-  bool has_timestamp() const;
+  // required bytes a_timestamp = 2;
+  bool has_a_timestamp() const;
   private:
-  bool _internal_has_timestamp() const;
+  bool _internal_has_a_timestamp() const;
   public:
-  void clear_timestamp();
-  const std::string& timestamp() const;
+  void clear_a_timestamp();
+  const std::string& a_timestamp() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_timestamp(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_timestamp();
-  PROTOBUF_NODISCARD std::string* release_timestamp();
-  void set_allocated_timestamp(std::string* timestamp);
+  void set_a_timestamp(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_timestamp();
+  PROTOBUF_NODISCARD std::string* release_a_timestamp();
+  void set_allocated_a_timestamp(std::string* a_timestamp);
   private:
-  const std::string& _internal_timestamp() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_timestamp(const std::string& value);
-  std::string* _internal_mutable_timestamp();
+  const std::string& _internal_a_timestamp() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_timestamp(const std::string& value);
+  std::string* _internal_mutable_a_timestamp();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.MIDIMessage)
@@ -455,8 +455,8 @@ class MIDIMessage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > data_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr timestamp_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timestamp_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -573,25 +573,25 @@ class MIDIPortList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPortsFieldNumber = 1,
+    kAPortsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MIDIPortInfo ports = 1;
-  int ports_size() const;
+  // repeated .protobuf.mozilla.dom.MIDIPortInfo a_ports = 1;
+  int a_ports_size() const;
   private:
-  int _internal_ports_size() const;
+  int _internal_a_ports_size() const;
   public:
-  void clear_ports();
-  ::protobuf::mozilla::dom::MIDIPortInfo* mutable_ports(int index);
+  void clear_a_ports();
+  ::protobuf::mozilla::dom::MIDIPortInfo* mutable_a_ports(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIPortInfo >*
-      mutable_ports();
+      mutable_a_ports();
   private:
-  const ::protobuf::mozilla::dom::MIDIPortInfo& _internal_ports(int index) const;
-  ::protobuf::mozilla::dom::MIDIPortInfo* _internal_add_ports();
+  const ::protobuf::mozilla::dom::MIDIPortInfo& _internal_a_ports(int index) const;
+  ::protobuf::mozilla::dom::MIDIPortInfo* _internal_add_a_ports();
   public:
-  const ::protobuf::mozilla::dom::MIDIPortInfo& ports(int index) const;
-  ::protobuf::mozilla::dom::MIDIPortInfo* add_ports();
+  const ::protobuf::mozilla::dom::MIDIPortInfo& a_ports(int index) const;
+  ::protobuf::mozilla::dom::MIDIPortInfo* add_a_ports();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIPortInfo >&
-      ports() const;
+      a_ports() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.MIDIPortList)
  private:
@@ -601,7 +601,7 @@ class MIDIPortList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIPortInfo > ports_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIPortInfo > a_ports_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -618,467 +618,467 @@ class MIDIPortList final :
 #endif  // __GNUC__
 // MIDIPortInfo
 
-// required bytes id = 1;
-inline bool MIDIPortInfo::_internal_has_id() const {
+// required bytes a_id = 1;
+inline bool MIDIPortInfo::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool MIDIPortInfo::has_id() const {
-  return _internal_has_id();
+inline bool MIDIPortInfo::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void MIDIPortInfo::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void MIDIPortInfo::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& MIDIPortInfo::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.id)
-  return _internal_id();
+inline const std::string& MIDIPortInfo::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.a_id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MIDIPortInfo::set_id(ArgT0&& arg0, ArgT... args) {
+void MIDIPortInfo::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_id)
 }
-inline std::string* MIDIPortInfo::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.id)
+inline std::string* MIDIPortInfo::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.a_id)
   return _s;
 }
-inline const std::string& MIDIPortInfo::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& MIDIPortInfo::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void MIDIPortInfo::_internal_set_id(const std::string& value) {
+inline void MIDIPortInfo::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::_internal_mutable_id() {
+inline std::string* MIDIPortInfo::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.id)
-  if (!_internal_has_id()) {
+inline std::string* MIDIPortInfo::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.a_id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MIDIPortInfo::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void MIDIPortInfo::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_id)
 }
 
-// required bytes name = 2;
-inline bool MIDIPortInfo::_internal_has_name() const {
+// required bytes a_name = 2;
+inline bool MIDIPortInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool MIDIPortInfo::has_name() const {
-  return _internal_has_name();
+inline bool MIDIPortInfo::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void MIDIPortInfo::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void MIDIPortInfo::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& MIDIPortInfo::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.name)
-  return _internal_name();
+inline const std::string& MIDIPortInfo::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MIDIPortInfo::set_name(ArgT0&& arg0, ArgT... args) {
+void MIDIPortInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_name)
 }
-inline std::string* MIDIPortInfo::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.name)
+inline std::string* MIDIPortInfo::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.a_name)
   return _s;
 }
-inline const std::string& MIDIPortInfo::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& MIDIPortInfo::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void MIDIPortInfo::_internal_set_name(const std::string& value) {
+inline void MIDIPortInfo::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::_internal_mutable_name() {
+inline std::string* MIDIPortInfo::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.name)
-  if (!_internal_has_name()) {
+inline std::string* MIDIPortInfo::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MIDIPortInfo::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void MIDIPortInfo::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_name)
 }
 
-// required bytes manufacturer = 3;
-inline bool MIDIPortInfo::_internal_has_manufacturer() const {
+// required bytes a_manufacturer = 3;
+inline bool MIDIPortInfo::_internal_has_a_manufacturer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool MIDIPortInfo::has_manufacturer() const {
-  return _internal_has_manufacturer();
+inline bool MIDIPortInfo::has_a_manufacturer() const {
+  return _internal_has_a_manufacturer();
 }
-inline void MIDIPortInfo::clear_manufacturer() {
-  _impl_.manufacturer_.ClearToEmpty();
+inline void MIDIPortInfo::clear_a_manufacturer() {
+  _impl_.a_manufacturer_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& MIDIPortInfo::manufacturer() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.manufacturer)
-  return _internal_manufacturer();
+inline const std::string& MIDIPortInfo::a_manufacturer() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
+  return _internal_a_manufacturer();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MIDIPortInfo::set_manufacturer(ArgT0&& arg0, ArgT... args) {
+void MIDIPortInfo::set_a_manufacturer(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.manufacturer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.manufacturer)
+ _impl_.a_manufacturer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
 }
-inline std::string* MIDIPortInfo::mutable_manufacturer() {
-  std::string* _s = _internal_mutable_manufacturer();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.manufacturer)
+inline std::string* MIDIPortInfo::mutable_a_manufacturer() {
+  std::string* _s = _internal_mutable_a_manufacturer();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
   return _s;
 }
-inline const std::string& MIDIPortInfo::_internal_manufacturer() const {
-  return _impl_.manufacturer_.Get();
+inline const std::string& MIDIPortInfo::_internal_a_manufacturer() const {
+  return _impl_.a_manufacturer_.Get();
 }
-inline void MIDIPortInfo::_internal_set_manufacturer(const std::string& value) {
+inline void MIDIPortInfo::_internal_set_a_manufacturer(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.manufacturer_.Set(value, GetArenaForAllocation());
+  _impl_.a_manufacturer_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::_internal_mutable_manufacturer() {
+inline std::string* MIDIPortInfo::_internal_mutable_a_manufacturer() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.manufacturer_.Mutable(GetArenaForAllocation());
+  return _impl_.a_manufacturer_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::release_manufacturer() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.manufacturer)
-  if (!_internal_has_manufacturer()) {
+inline std::string* MIDIPortInfo::release_a_manufacturer() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
+  if (!_internal_has_a_manufacturer()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.manufacturer_.Release();
+  auto* p = _impl_.a_manufacturer_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.manufacturer_.IsDefault()) {
-    _impl_.manufacturer_.Set("", GetArenaForAllocation());
+  if (_impl_.a_manufacturer_.IsDefault()) {
+    _impl_.a_manufacturer_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MIDIPortInfo::set_allocated_manufacturer(std::string* manufacturer) {
-  if (manufacturer != nullptr) {
+inline void MIDIPortInfo::set_allocated_a_manufacturer(std::string* a_manufacturer) {
+  if (a_manufacturer != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.manufacturer_.SetAllocated(manufacturer, GetArenaForAllocation());
+  _impl_.a_manufacturer_.SetAllocated(a_manufacturer, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.manufacturer_.IsDefault()) {
-    _impl_.manufacturer_.Set("", GetArenaForAllocation());
+  if (_impl_.a_manufacturer_.IsDefault()) {
+    _impl_.a_manufacturer_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.manufacturer)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
 }
 
-// required bytes version = 4;
-inline bool MIDIPortInfo::_internal_has_version() const {
+// required bytes a_version = 4;
+inline bool MIDIPortInfo::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool MIDIPortInfo::has_version() const {
-  return _internal_has_version();
+inline bool MIDIPortInfo::has_a_version() const {
+  return _internal_has_a_version();
 }
-inline void MIDIPortInfo::clear_version() {
-  _impl_.version_.ClearToEmpty();
+inline void MIDIPortInfo::clear_a_version() {
+  _impl_.a_version_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& MIDIPortInfo::version() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.version)
-  return _internal_version();
+inline const std::string& MIDIPortInfo::a_version() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.a_version)
+  return _internal_a_version();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MIDIPortInfo::set_version(ArgT0&& arg0, ArgT... args) {
+void MIDIPortInfo::set_a_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.version)
+ _impl_.a_version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_version)
 }
-inline std::string* MIDIPortInfo::mutable_version() {
-  std::string* _s = _internal_mutable_version();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.version)
+inline std::string* MIDIPortInfo::mutable_a_version() {
+  std::string* _s = _internal_mutable_a_version();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortInfo.a_version)
   return _s;
 }
-inline const std::string& MIDIPortInfo::_internal_version() const {
-  return _impl_.version_.Get();
+inline const std::string& MIDIPortInfo::_internal_a_version() const {
+  return _impl_.a_version_.Get();
 }
-inline void MIDIPortInfo::_internal_set_version(const std::string& value) {
+inline void MIDIPortInfo::_internal_set_a_version(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.version_.Set(value, GetArenaForAllocation());
+  _impl_.a_version_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::_internal_mutable_version() {
+inline std::string* MIDIPortInfo::_internal_mutable_a_version() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.version_.Mutable(GetArenaForAllocation());
+  return _impl_.a_version_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MIDIPortInfo::release_version() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.version)
-  if (!_internal_has_version()) {
+inline std::string* MIDIPortInfo::release_a_version() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIPortInfo.a_version)
+  if (!_internal_has_a_version()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.version_.Release();
+  auto* p = _impl_.a_version_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.version_.IsDefault()) {
-    _impl_.version_.Set("", GetArenaForAllocation());
+  if (_impl_.a_version_.IsDefault()) {
+    _impl_.a_version_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MIDIPortInfo::set_allocated_version(std::string* version) {
-  if (version != nullptr) {
+inline void MIDIPortInfo::set_allocated_a_version(std::string* a_version) {
+  if (a_version != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.version_.SetAllocated(version, GetArenaForAllocation());
+  _impl_.a_version_.SetAllocated(a_version, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.version_.IsDefault()) {
-    _impl_.version_.Set("", GetArenaForAllocation());
+  if (_impl_.a_version_.IsDefault()) {
+    _impl_.a_version_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.version)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_version)
 }
 
-// required uint32 type = 5;
-inline bool MIDIPortInfo::_internal_has_type() const {
+// required uint32 a_type = 5;
+inline bool MIDIPortInfo::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool MIDIPortInfo::has_type() const {
-  return _internal_has_type();
+inline bool MIDIPortInfo::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void MIDIPortInfo::clear_type() {
-  _impl_.type_ = 0u;
+inline void MIDIPortInfo::clear_a_type() {
+  _impl_.a_type_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t MIDIPortInfo::_internal_type() const {
-  return _impl_.type_;
+inline uint32_t MIDIPortInfo::_internal_a_type() const {
+  return _impl_.a_type_;
 }
-inline uint32_t MIDIPortInfo::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.type)
-  return _internal_type();
+inline uint32_t MIDIPortInfo::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortInfo.a_type)
+  return _internal_a_type();
 }
-inline void MIDIPortInfo::_internal_set_type(uint32_t value) {
+inline void MIDIPortInfo::_internal_set_a_type(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.type_ = value;
+  _impl_.a_type_ = value;
 }
-inline void MIDIPortInfo::set_type(uint32_t value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.type)
+inline void MIDIPortInfo::set_a_type(uint32_t value) {
+  _internal_set_a_type(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_type)
 }
 
 // -------------------------------------------------------------------
 
 // MIDIMessage
 
-// repeated uint32 data = 1;
-inline int MIDIMessage::_internal_data_size() const {
-  return _impl_.data_.size();
+// repeated uint32 a_data = 1;
+inline int MIDIMessage::_internal_a_data_size() const {
+  return _impl_.a_data_.size();
 }
-inline int MIDIMessage::data_size() const {
-  return _internal_data_size();
+inline int MIDIMessage::a_data_size() const {
+  return _internal_a_data_size();
 }
-inline void MIDIMessage::clear_data() {
-  _impl_.data_.Clear();
+inline void MIDIMessage::clear_a_data() {
+  _impl_.a_data_.Clear();
 }
-inline uint32_t MIDIMessage::_internal_data(int index) const {
-  return _impl_.data_.Get(index);
+inline uint32_t MIDIMessage::_internal_a_data(int index) const {
+  return _impl_.a_data_.Get(index);
 }
-inline uint32_t MIDIMessage::data(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIMessage.data)
-  return _internal_data(index);
+inline uint32_t MIDIMessage::a_data(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIMessage.a_data)
+  return _internal_a_data(index);
 }
-inline void MIDIMessage::set_data(int index, uint32_t value) {
-  _impl_.data_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIMessage.data)
+inline void MIDIMessage::set_a_data(int index, uint32_t value) {
+  _impl_.a_data_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIMessage.a_data)
 }
-inline void MIDIMessage::_internal_add_data(uint32_t value) {
-  _impl_.data_.Add(value);
+inline void MIDIMessage::_internal_add_a_data(uint32_t value) {
+  _impl_.a_data_.Add(value);
 }
-inline void MIDIMessage::add_data(uint32_t value) {
-  _internal_add_data(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.MIDIMessage.data)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-MIDIMessage::_internal_data() const {
-  return _impl_.data_;
+inline void MIDIMessage::add_a_data(uint32_t value) {
+  _internal_add_a_data(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.MIDIMessage.a_data)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-MIDIMessage::data() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.MIDIMessage.data)
-  return _internal_data();
+MIDIMessage::_internal_a_data() const {
+  return _impl_.a_data_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+MIDIMessage::a_data() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.MIDIMessage.a_data)
+  return _internal_a_data();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-MIDIMessage::_internal_mutable_data() {
-  return &_impl_.data_;
+MIDIMessage::_internal_mutable_a_data() {
+  return &_impl_.a_data_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-MIDIMessage::mutable_data() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.MIDIMessage.data)
-  return _internal_mutable_data();
+MIDIMessage::mutable_a_data() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.MIDIMessage.a_data)
+  return _internal_mutable_a_data();
 }
 
-// required bytes timestamp = 2;
-inline bool MIDIMessage::_internal_has_timestamp() const {
+// required bytes a_timestamp = 2;
+inline bool MIDIMessage::_internal_has_a_timestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool MIDIMessage::has_timestamp() const {
-  return _internal_has_timestamp();
+inline bool MIDIMessage::has_a_timestamp() const {
+  return _internal_has_a_timestamp();
 }
-inline void MIDIMessage::clear_timestamp() {
-  _impl_.timestamp_.ClearToEmpty();
+inline void MIDIMessage::clear_a_timestamp() {
+  _impl_.a_timestamp_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& MIDIMessage::timestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIMessage.timestamp)
-  return _internal_timestamp();
+inline const std::string& MIDIMessage::a_timestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIMessage.a_timestamp)
+  return _internal_a_timestamp();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MIDIMessage::set_timestamp(ArgT0&& arg0, ArgT... args) {
+void MIDIMessage::set_a_timestamp(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.timestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIMessage.timestamp)
+ _impl_.a_timestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIMessage.a_timestamp)
 }
-inline std::string* MIDIMessage::mutable_timestamp() {
-  std::string* _s = _internal_mutable_timestamp();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIMessage.timestamp)
+inline std::string* MIDIMessage::mutable_a_timestamp() {
+  std::string* _s = _internal_mutable_a_timestamp();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIMessage.a_timestamp)
   return _s;
 }
-inline const std::string& MIDIMessage::_internal_timestamp() const {
-  return _impl_.timestamp_.Get();
+inline const std::string& MIDIMessage::_internal_a_timestamp() const {
+  return _impl_.a_timestamp_.Get();
 }
-inline void MIDIMessage::_internal_set_timestamp(const std::string& value) {
+inline void MIDIMessage::_internal_set_a_timestamp(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.timestamp_.Set(value, GetArenaForAllocation());
+  _impl_.a_timestamp_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MIDIMessage::_internal_mutable_timestamp() {
+inline std::string* MIDIMessage::_internal_mutable_a_timestamp() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.timestamp_.Mutable(GetArenaForAllocation());
+  return _impl_.a_timestamp_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MIDIMessage::release_timestamp() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIMessage.timestamp)
-  if (!_internal_has_timestamp()) {
+inline std::string* MIDIMessage::release_a_timestamp() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MIDIMessage.a_timestamp)
+  if (!_internal_has_a_timestamp()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.timestamp_.Release();
+  auto* p = _impl_.a_timestamp_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timestamp_.IsDefault()) {
-    _impl_.timestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timestamp_.IsDefault()) {
+    _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MIDIMessage::set_allocated_timestamp(std::string* timestamp) {
-  if (timestamp != nullptr) {
+inline void MIDIMessage::set_allocated_a_timestamp(std::string* a_timestamp) {
+  if (a_timestamp != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.timestamp_.SetAllocated(timestamp, GetArenaForAllocation());
+  _impl_.a_timestamp_.SetAllocated(a_timestamp, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timestamp_.IsDefault()) {
-    _impl_.timestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timestamp_.IsDefault()) {
+    _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIMessage.timestamp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIMessage.a_timestamp)
 }
 
 // -------------------------------------------------------------------
 
 // MIDIPortList
 
-// repeated .protobuf.mozilla.dom.MIDIPortInfo ports = 1;
-inline int MIDIPortList::_internal_ports_size() const {
-  return _impl_.ports_.size();
+// repeated .protobuf.mozilla.dom.MIDIPortInfo a_ports = 1;
+inline int MIDIPortList::_internal_a_ports_size() const {
+  return _impl_.a_ports_.size();
 }
-inline int MIDIPortList::ports_size() const {
-  return _internal_ports_size();
+inline int MIDIPortList::a_ports_size() const {
+  return _internal_a_ports_size();
 }
-inline void MIDIPortList::clear_ports() {
-  _impl_.ports_.Clear();
+inline void MIDIPortList::clear_a_ports() {
+  _impl_.a_ports_.Clear();
 }
-inline ::protobuf::mozilla::dom::MIDIPortInfo* MIDIPortList::mutable_ports(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortList.ports)
-  return _impl_.ports_.Mutable(index);
+inline ::protobuf::mozilla::dom::MIDIPortInfo* MIDIPortList::mutable_a_ports(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.MIDIPortList.a_ports)
+  return _impl_.a_ports_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIPortInfo >*
-MIDIPortList::mutable_ports() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.MIDIPortList.ports)
-  return &_impl_.ports_;
+MIDIPortList::mutable_a_ports() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.MIDIPortList.a_ports)
+  return &_impl_.a_ports_;
 }
-inline const ::protobuf::mozilla::dom::MIDIPortInfo& MIDIPortList::_internal_ports(int index) const {
-  return _impl_.ports_.Get(index);
+inline const ::protobuf::mozilla::dom::MIDIPortInfo& MIDIPortList::_internal_a_ports(int index) const {
+  return _impl_.a_ports_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MIDIPortInfo& MIDIPortList::ports(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortList.ports)
-  return _internal_ports(index);
+inline const ::protobuf::mozilla::dom::MIDIPortInfo& MIDIPortList::a_ports(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MIDIPortList.a_ports)
+  return _internal_a_ports(index);
 }
-inline ::protobuf::mozilla::dom::MIDIPortInfo* MIDIPortList::_internal_add_ports() {
-  return _impl_.ports_.Add();
+inline ::protobuf::mozilla::dom::MIDIPortInfo* MIDIPortList::_internal_add_a_ports() {
+  return _impl_.a_ports_.Add();
 }
-inline ::protobuf::mozilla::dom::MIDIPortInfo* MIDIPortList::add_ports() {
-  ::protobuf::mozilla::dom::MIDIPortInfo* _add = _internal_add_ports();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.MIDIPortList.ports)
+inline ::protobuf::mozilla::dom::MIDIPortInfo* MIDIPortList::add_a_ports() {
+  ::protobuf::mozilla::dom::MIDIPortInfo* _add = _internal_add_a_ports();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.MIDIPortList.a_ports)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MIDIPortInfo >&
-MIDIPortList::ports() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.MIDIPortList.ports)
-  return _impl_.ports_;
+MIDIPortList::a_ports() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.MIDIPortList.a_ports)
+  return _impl_.a_ports_;
 }
 
 #ifdef __GNUC__

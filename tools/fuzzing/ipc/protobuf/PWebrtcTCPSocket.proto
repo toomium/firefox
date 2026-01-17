@@ -17,31 +17,31 @@ import "WebrtcProxyConfig.proto";
 
 // Message declarations
 message Msg_AsyncOpen {
-  required bytes aHost = 1;
-  required sint32 aPort = 2;
-  required bytes aLocalAddress = 3;
-  required sint32 aLocalPort = 4;
-  required bool aUseTls = 5;
-  optional protobuf.mozilla.net.WebrtcProxyConfig aProxyConfig = 6;
+  required bytes a_aHost = 1;
+  required sint32 a_aPort = 2;
+  required bytes a_aLocalAddress = 3;
+  required sint32 a_aLocalPort = 4;
+  required bool a_aUseTls = 5;
+  optional protobuf.mozilla.net.WebrtcProxyConfig a_aProxyConfig = 6;
 }
 
 message Msg_Write {
-  repeated uint32 aWriteData = 1;
+  repeated uint32 a_aWriteData = 1;
 }
 
 message Msg_Close {
 }
 
 message Msg_OnClose {
-  required bytes aReason = 1;
+  required bytes a_aReason = 1;
 }
 
 message Msg_OnConnected {
-  required bytes aProxyType = 1;
+  required bytes a_aProxyType = 1;
 }
 
 message Msg_OnRead {
-  repeated uint32 aReadData = 1;
+  repeated uint32 a_aReadData = 1;
 }
 
 message Msg___delete__ {

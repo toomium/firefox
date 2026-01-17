@@ -16,8 +16,8 @@ package protobuf.mozilla.dom.PVsync;
 
 // Message declarations
 message Msg_Notify {
-  required bytes aVsync = 1;
-  required float aVsyncRate = 2;
+  required bytes a_aVsync = 1;
+  required float a_aVsyncRate = 2;
 }
 
 message Msg_Observe {

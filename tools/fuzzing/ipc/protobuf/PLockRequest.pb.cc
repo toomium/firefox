@@ -26,8 +26,8 @@ PROTOBUF_CONSTEXPR Msg_Resolve::Msg_Resolve(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.amode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aisavailable_)*/false} {}
+  , /*decltype(_impl_.a_amode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aisavailable_)*/false} {}
 struct Msg_ResolveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ResolveDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -41,7 +41,7 @@ PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aaborted_)*/false} {}
+  , /*decltype(_impl_.a_aaborted_)*/false} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -79,10 +79,10 @@ namespace PLockRequest {
 class Msg_Resolve::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Resolve>()._impl_._has_bits_);
-  static void set_has_amode(HasBits* has_bits) {
+  static void set_has_a_amode(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aisavailable(HasBits* has_bits) {
+  static void set_has_a_aisavailable(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -102,19 +102,19 @@ Msg_Resolve::Msg_Resolve(const Msg_Resolve& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.amode_){}
-    , decltype(_impl_.aisavailable_){}};
+    , decltype(_impl_.a_amode_){}
+    , decltype(_impl_.a_aisavailable_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.amode_.InitDefault();
+  _impl_.a_amode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.amode_.Set("", GetArenaForAllocation());
+    _impl_.a_amode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_amode()) {
-    _this->_impl_.amode_.Set(from._internal_amode(), 
+  if (from._internal_has_a_amode()) {
+    _this->_impl_.a_amode_.Set(from._internal_a_amode(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.aisavailable_ = from._impl_.aisavailable_;
+  _this->_impl_.a_aisavailable_ = from._impl_.a_aisavailable_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve)
 }
 
@@ -125,12 +125,12 @@ inline void Msg_Resolve::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.amode_){}
-    , decltype(_impl_.aisavailable_){false}
+    , decltype(_impl_.a_amode_){}
+    , decltype(_impl_.a_aisavailable_){false}
   };
-  _impl_.amode_.InitDefault();
+  _impl_.a_amode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.amode_.Set("", GetArenaForAllocation());
+    _impl_.a_amode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -145,7 +145,7 @@ Msg_Resolve::~Msg_Resolve() {
 
 inline void Msg_Resolve::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.amode_.Destroy();
+  _impl_.a_amode_.Destroy();
 }
 
 void Msg_Resolve::SetCachedSize(int size) const {
@@ -160,9 +160,9 @@ void Msg_Resolve::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.amode_.ClearNonDefaultToEmpty();
+    _impl_.a_amode_.ClearNonDefaultToEmpty();
   }
-  _impl_.aisavailable_ = false;
+  _impl_.a_aisavailable_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -174,20 +174,20 @@ const char* Msg_Resolve::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aMode = 1;
+      // required bytes a_aMode = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_amode();
+          auto str = _internal_mutable_a_amode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aIsAvailable = 2;
+      // required bool a_aIsAvailable = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_aisavailable(&has_bits);
-          _impl_.aisavailable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aisavailable(&has_bits);
+          _impl_.a_aisavailable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -223,16 +223,16 @@ uint8_t* Msg_Resolve::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aMode = 1;
+  // required bytes a_aMode = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_amode(), target);
+        1, this->_internal_a_amode(), target);
   }
 
-  // required bool aIsAvailable = 2;
+  // required bool a_aIsAvailable = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_aisavailable(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_aisavailable(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -247,15 +247,15 @@ size_t Msg_Resolve::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve)
   size_t total_size = 0;
 
-  if (_internal_has_amode()) {
-    // required bytes aMode = 1;
+  if (_internal_has_a_amode()) {
+    // required bytes a_aMode = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_amode());
+        this->_internal_a_amode());
   }
 
-  if (_internal_has_aisavailable()) {
-    // required bool aIsAvailable = 2;
+  if (_internal_has_a_aisavailable()) {
+    // required bool a_aIsAvailable = 2;
     total_size += 1 + 1;
   }
 
@@ -266,12 +266,12 @@ size_t Msg_Resolve::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aMode = 1;
+    // required bytes a_aMode = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_amode());
+        this->_internal_a_amode());
 
-    // required bool aIsAvailable = 2;
+    // required bool a_aIsAvailable = 2;
     total_size += 1 + 1;
 
   } else {
@@ -305,10 +305,10 @@ void Msg_Resolve::MergeFrom(const Msg_Resolve& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_amode(from._internal_amode());
+      _this->_internal_set_a_amode(from._internal_a_amode());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.aisavailable_ = from._impl_.aisavailable_;
+      _this->_impl_.a_aisavailable_ = from._impl_.a_aisavailable_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -334,10 +334,10 @@ void Msg_Resolve::InternalSwap(Msg_Resolve* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.amode_, lhs_arena,
-      &other->_impl_.amode_, rhs_arena
+      &_impl_.a_amode_, lhs_arena,
+      &other->_impl_.a_amode_, rhs_arena
   );
-  swap(_impl_.aisavailable_, other->_impl_.aisavailable_);
+  swap(_impl_.a_aisavailable_, other->_impl_.a_aisavailable_);
 }
 
 std::string Msg_Resolve::GetTypeName() const {
@@ -350,7 +350,7 @@ std::string Msg_Resolve::GetTypeName() const {
 class Msg___delete__::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
-  static void set_has_aaborted(HasBits* has_bits) {
+  static void set_has_a_aaborted(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -370,10 +370,10 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aaborted_){}};
+    , decltype(_impl_.a_aaborted_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.aaborted_ = from._impl_.aaborted_;
+  _this->_impl_.a_aaborted_ = from._impl_.a_aaborted_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__)
 }
 
@@ -384,7 +384,7 @@ inline void Msg___delete__::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aaborted_){false}
+    , decltype(_impl_.a_aaborted_){false}
   };
 }
 
@@ -411,7 +411,7 @@ void Msg___delete__::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.aaborted_ = false;
+  _impl_.a_aaborted_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -423,11 +423,11 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aAborted = 1;
+      // required bool a_aAborted = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_aaborted(&has_bits);
-          _impl_.aaborted_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aaborted(&has_bits);
+          _impl_.a_aaborted_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -463,10 +463,10 @@ uint8_t* Msg___delete__::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aAborted = 1;
+  // required bool a_aAborted = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_aaborted(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aaborted(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -481,8 +481,8 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__)
   size_t total_size = 0;
 
-  // required bool aAborted = 1;
-  if (_internal_has_aaborted()) {
+  // required bool a_aAborted = 1;
+  if (_internal_has_a_aaborted()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -510,8 +510,8 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aaborted()) {
-    _this->_internal_set_aaborted(from._internal_aaborted());
+  if (from._internal_has_a_aaborted()) {
+    _this->_internal_set_a_aaborted(from._internal_a_aaborted());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -532,7 +532,7 @@ void Msg___delete__::InternalSwap(Msg___delete__* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aaborted_, other->_impl_.aaborted_);
+  swap(_impl_.a_aaborted_, other->_impl_.a_aaborted_);
 }
 
 std::string Msg___delete__::GetTypeName() const {

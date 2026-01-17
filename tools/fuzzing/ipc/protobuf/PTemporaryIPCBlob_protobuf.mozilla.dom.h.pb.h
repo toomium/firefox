@@ -102,8 +102,8 @@ class IPCBlobOrError final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVIPCBlob = 1,
-    kMVnsresult = 2,
+    kAMVIPCBlob = 1,
+    kAMVnsresult = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -176,43 +176,43 @@ class IPCBlobOrError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVIPCBlobFieldNumber = 1,
-    kMVnsresultFieldNumber = 2,
+    kAMVIPCBlobFieldNumber = 1,
+    kAMVnsresultFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.IPCBlob mVIPCBlob = 1;
-  bool has_mvipcblob() const;
+  // .protobuf.mozilla.dom.IPCBlob a_mVIPCBlob = 1;
+  bool has_a_mvipcblob() const;
   private:
-  bool _internal_has_mvipcblob() const;
+  bool _internal_has_a_mvipcblob() const;
   public:
-  void clear_mvipcblob();
-  const ::protobuf::mozilla::dom::IPCBlob& mvipcblob() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_mvipcblob();
-  ::protobuf::mozilla::dom::IPCBlob* mutable_mvipcblob();
-  void set_allocated_mvipcblob(::protobuf::mozilla::dom::IPCBlob* mvipcblob);
+  void clear_a_mvipcblob();
+  const ::protobuf::mozilla::dom::IPCBlob& a_mvipcblob() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_a_mvipcblob();
+  ::protobuf::mozilla::dom::IPCBlob* mutable_a_mvipcblob();
+  void set_allocated_a_mvipcblob(::protobuf::mozilla::dom::IPCBlob* a_mvipcblob);
   private:
-  const ::protobuf::mozilla::dom::IPCBlob& _internal_mvipcblob() const;
-  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_mvipcblob();
+  const ::protobuf::mozilla::dom::IPCBlob& _internal_a_mvipcblob() const;
+  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_a_mvipcblob();
   public:
-  void unsafe_arena_set_allocated_mvipcblob(
-      ::protobuf::mozilla::dom::IPCBlob* mvipcblob);
-  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_mvipcblob();
+  void unsafe_arena_set_allocated_a_mvipcblob(
+      ::protobuf::mozilla::dom::IPCBlob* a_mvipcblob);
+  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_mvipcblob();
 
-  // bytes mVnsresult = 2;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 2;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
   void clear_content();
@@ -220,8 +220,8 @@ class IPCBlobOrError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCBlobOrError)
  private:
   class _Internal;
-  void set_has_mvipcblob();
-  void set_has_mvnsresult();
+  void set_has_a_mvipcblob();
+  void set_has_a_mvnsresult();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -233,8 +233,8 @@ class IPCBlobOrError final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::IPCBlob* mvipcblob_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
+      ::protobuf::mozilla::dom::IPCBlob* a_mvipcblob_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -254,147 +254,147 @@ class IPCBlobOrError final :
 #endif  // __GNUC__
 // IPCBlobOrError
 
-// .protobuf.mozilla.dom.IPCBlob mVIPCBlob = 1;
-inline bool IPCBlobOrError::_internal_has_mvipcblob() const {
-  return content_case() == kMVIPCBlob;
+// .protobuf.mozilla.dom.IPCBlob a_mVIPCBlob = 1;
+inline bool IPCBlobOrError::_internal_has_a_mvipcblob() const {
+  return content_case() == kAMVIPCBlob;
 }
-inline bool IPCBlobOrError::has_mvipcblob() const {
-  return _internal_has_mvipcblob();
+inline bool IPCBlobOrError::has_a_mvipcblob() const {
+  return _internal_has_a_mvipcblob();
 }
-inline void IPCBlobOrError::set_has_mvipcblob() {
-  _impl_._oneof_case_[0] = kMVIPCBlob;
+inline void IPCBlobOrError::set_has_a_mvipcblob() {
+  _impl_._oneof_case_[0] = kAMVIPCBlob;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::release_mvipcblob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlobOrError.mVIPCBlob)
-  if (_internal_has_mvipcblob()) {
+inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::release_a_mvipcblob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlobOrError.a_mVIPCBlob)
+  if (_internal_has_a_mvipcblob()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.content_.mvipcblob_;
+    ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.content_.a_mvipcblob_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipcblob_ = nullptr;
+    _impl_.content_.a_mvipcblob_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& IPCBlobOrError::_internal_mvipcblob() const {
-  return _internal_has_mvipcblob()
-      ? *_impl_.content_.mvipcblob_
+inline const ::protobuf::mozilla::dom::IPCBlob& IPCBlobOrError::_internal_a_mvipcblob() const {
+  return _internal_has_a_mvipcblob()
+      ? *_impl_.content_.a_mvipcblob_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCBlob&>(::protobuf::mozilla::dom::_IPCBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& IPCBlobOrError::mvipcblob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCBlobOrError.mVIPCBlob)
-  return _internal_mvipcblob();
+inline const ::protobuf::mozilla::dom::IPCBlob& IPCBlobOrError::a_mvipcblob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCBlobOrError.a_mVIPCBlob)
+  return _internal_a_mvipcblob();
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::unsafe_arena_release_mvipcblob() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCBlobOrError.mVIPCBlob)
-  if (_internal_has_mvipcblob()) {
+inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::unsafe_arena_release_a_mvipcblob() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCBlobOrError.a_mVIPCBlob)
+  if (_internal_has_a_mvipcblob()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.content_.mvipcblob_;
-    _impl_.content_.mvipcblob_ = nullptr;
+    ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.content_.a_mvipcblob_;
+    _impl_.content_.a_mvipcblob_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCBlobOrError::unsafe_arena_set_allocated_mvipcblob(::protobuf::mozilla::dom::IPCBlob* mvipcblob) {
+inline void IPCBlobOrError::unsafe_arena_set_allocated_a_mvipcblob(::protobuf::mozilla::dom::IPCBlob* a_mvipcblob) {
   clear_content();
-  if (mvipcblob) {
-    set_has_mvipcblob();
-    _impl_.content_.mvipcblob_ = mvipcblob;
+  if (a_mvipcblob) {
+    set_has_a_mvipcblob();
+    _impl_.content_.a_mvipcblob_ = a_mvipcblob;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCBlobOrError.mVIPCBlob)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCBlobOrError.a_mVIPCBlob)
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::_internal_mutable_mvipcblob() {
-  if (!_internal_has_mvipcblob()) {
+inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::_internal_mutable_a_mvipcblob() {
+  if (!_internal_has_a_mvipcblob()) {
     clear_content();
-    set_has_mvipcblob();
-    _impl_.content_.mvipcblob_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCBlob >(GetArenaForAllocation());
+    set_has_a_mvipcblob();
+    _impl_.content_.a_mvipcblob_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCBlob >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipcblob_;
+  return _impl_.content_.a_mvipcblob_;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::mutable_mvipcblob() {
-  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_mvipcblob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCBlobOrError.mVIPCBlob)
+inline ::protobuf::mozilla::dom::IPCBlob* IPCBlobOrError::mutable_a_mvipcblob() {
+  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_a_mvipcblob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCBlobOrError.a_mVIPCBlob)
   return _msg;
 }
 
-// bytes mVnsresult = 2;
-inline bool IPCBlobOrError::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 2;
+inline bool IPCBlobOrError::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool IPCBlobOrError::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool IPCBlobOrError::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void IPCBlobOrError::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void IPCBlobOrError::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void IPCBlobOrError::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void IPCBlobOrError::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& IPCBlobOrError::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCBlobOrError.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& IPCBlobOrError::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCBlobOrError.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void IPCBlobOrError::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void IPCBlobOrError::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlobOrError.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlobOrError.a_mVnsresult)
 }
-inline std::string* IPCBlobOrError::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCBlobOrError.mVnsresult)
+inline std::string* IPCBlobOrError::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCBlobOrError.a_mVnsresult)
   return _s;
 }
-inline const std::string& IPCBlobOrError::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& IPCBlobOrError::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void IPCBlobOrError::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void IPCBlobOrError::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCBlobOrError::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* IPCBlobOrError::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* IPCBlobOrError::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlobOrError.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* IPCBlobOrError::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlobOrError.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void IPCBlobOrError::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void IPCBlobOrError::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlobOrError.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlobOrError.a_mVnsresult)
 }
 
 inline bool IPCBlobOrError::has_content() const {

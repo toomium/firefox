@@ -19,7 +19,7 @@ message Msg_Start {
 }
 
 message Msg_StartSubprotocol {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg___delete__ {

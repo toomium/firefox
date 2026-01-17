@@ -171,170 +171,170 @@ class ServiceWorkerRegistrationData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kScopeFieldNumber = 1,
-    kCurrentWorkerURLFieldNumber = 2,
-    kCacheNameFieldNumber = 4,
-    kPrincipalFieldNumber = 5,
-    kNavigationPreloadStateFieldNumber = 10,
-    kCurrentWorkerHandlesFetchFieldNumber = 3,
-    kUpdateViaCacheFieldNumber = 6,
-    kCurrentWorkerInstalledTimeFieldNumber = 7,
-    kCurrentWorkerActivatedTimeFieldNumber = 8,
-    kLastUpdateTimeFieldNumber = 9,
+    kAScopeFieldNumber = 1,
+    kACurrentWorkerURLFieldNumber = 2,
+    kACacheNameFieldNumber = 4,
+    kAPrincipalFieldNumber = 5,
+    kANavigationPreloadStateFieldNumber = 10,
+    kACurrentWorkerHandlesFetchFieldNumber = 3,
+    kAUpdateViaCacheFieldNumber = 6,
+    kACurrentWorkerInstalledTimeFieldNumber = 7,
+    kACurrentWorkerActivatedTimeFieldNumber = 8,
+    kALastUpdateTimeFieldNumber = 9,
   };
-  // required bytes scope = 1;
-  bool has_scope() const;
+  // required bytes a_scope = 1;
+  bool has_a_scope() const;
   private:
-  bool _internal_has_scope() const;
+  bool _internal_has_a_scope() const;
   public:
-  void clear_scope();
-  const std::string& scope() const;
+  void clear_a_scope();
+  const std::string& a_scope() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_scope(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_scope();
-  PROTOBUF_NODISCARD std::string* release_scope();
-  void set_allocated_scope(std::string* scope);
+  void set_a_scope(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_scope();
+  PROTOBUF_NODISCARD std::string* release_a_scope();
+  void set_allocated_a_scope(std::string* a_scope);
   private:
-  const std::string& _internal_scope() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_scope(const std::string& value);
-  std::string* _internal_mutable_scope();
+  const std::string& _internal_a_scope() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_scope(const std::string& value);
+  std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes currentWorkerURL = 2;
-  bool has_currentworkerurl() const;
+  // required bytes a_currentWorkerURL = 2;
+  bool has_a_currentworkerurl() const;
   private:
-  bool _internal_has_currentworkerurl() const;
+  bool _internal_has_a_currentworkerurl() const;
   public:
-  void clear_currentworkerurl();
-  const std::string& currentworkerurl() const;
+  void clear_a_currentworkerurl();
+  const std::string& a_currentworkerurl() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_currentworkerurl(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_currentworkerurl();
-  PROTOBUF_NODISCARD std::string* release_currentworkerurl();
-  void set_allocated_currentworkerurl(std::string* currentworkerurl);
+  void set_a_currentworkerurl(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_currentworkerurl();
+  PROTOBUF_NODISCARD std::string* release_a_currentworkerurl();
+  void set_allocated_a_currentworkerurl(std::string* a_currentworkerurl);
   private:
-  const std::string& _internal_currentworkerurl() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_currentworkerurl(const std::string& value);
-  std::string* _internal_mutable_currentworkerurl();
+  const std::string& _internal_a_currentworkerurl() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_currentworkerurl(const std::string& value);
+  std::string* _internal_mutable_a_currentworkerurl();
   public:
 
-  // required bytes cacheName = 4;
-  bool has_cachename() const;
+  // required bytes a_cacheName = 4;
+  bool has_a_cachename() const;
   private:
-  bool _internal_has_cachename() const;
+  bool _internal_has_a_cachename() const;
   public:
-  void clear_cachename();
-  const std::string& cachename() const;
+  void clear_a_cachename();
+  const std::string& a_cachename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_cachename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_cachename();
-  PROTOBUF_NODISCARD std::string* release_cachename();
-  void set_allocated_cachename(std::string* cachename);
+  void set_a_cachename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_cachename();
+  PROTOBUF_NODISCARD std::string* release_a_cachename();
+  void set_allocated_a_cachename(std::string* a_cachename);
   private:
-  const std::string& _internal_cachename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cachename(const std::string& value);
-  std::string* _internal_mutable_cachename();
+  const std::string& _internal_a_cachename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_cachename(const std::string& value);
+  std::string* _internal_mutable_a_cachename();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo principal = 5;
-  bool has_principal() const;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
+  bool has_a_principal() const;
   private:
-  bool _internal_has_principal() const;
+  bool _internal_has_a_principal() const;
   public:
-  void clear_principal();
-  const ::protobuf::mozilla::ipc::PrincipalInfo& principal() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_principal();
-  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_principal();
-  void set_allocated_principal(::protobuf::mozilla::ipc::PrincipalInfo* principal);
+  void clear_a_principal();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& a_principal() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_a_principal();
+  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_a_principal();
+  void set_allocated_a_principal(::protobuf::mozilla::ipc::PrincipalInfo* a_principal);
   private:
-  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_principal() const;
-  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_principal();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_a_principal() const;
+  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_a_principal();
   public:
-  void unsafe_arena_set_allocated_principal(
-      ::protobuf::mozilla::ipc::PrincipalInfo* principal);
-  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_principal();
+  void unsafe_arena_set_allocated_a_principal(
+      ::protobuf::mozilla::ipc::PrincipalInfo* a_principal);
+  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principal();
 
-  // required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
-  bool has_navigationpreloadstate() const;
+  // required .protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
+  bool has_a_navigationpreloadstate() const;
   private:
-  bool _internal_has_navigationpreloadstate() const;
+  bool _internal_has_a_navigationpreloadstate() const;
   public:
-  void clear_navigationpreloadstate();
-  const ::protobuf::mozilla::dom::IPCNavigationPreloadState& navigationpreloadstate() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCNavigationPreloadState* release_navigationpreloadstate();
-  ::protobuf::mozilla::dom::IPCNavigationPreloadState* mutable_navigationpreloadstate();
-  void set_allocated_navigationpreloadstate(::protobuf::mozilla::dom::IPCNavigationPreloadState* navigationpreloadstate);
+  void clear_a_navigationpreloadstate();
+  const ::protobuf::mozilla::dom::IPCNavigationPreloadState& a_navigationpreloadstate() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCNavigationPreloadState* release_a_navigationpreloadstate();
+  ::protobuf::mozilla::dom::IPCNavigationPreloadState* mutable_a_navigationpreloadstate();
+  void set_allocated_a_navigationpreloadstate(::protobuf::mozilla::dom::IPCNavigationPreloadState* a_navigationpreloadstate);
   private:
-  const ::protobuf::mozilla::dom::IPCNavigationPreloadState& _internal_navigationpreloadstate() const;
-  ::protobuf::mozilla::dom::IPCNavigationPreloadState* _internal_mutable_navigationpreloadstate();
+  const ::protobuf::mozilla::dom::IPCNavigationPreloadState& _internal_a_navigationpreloadstate() const;
+  ::protobuf::mozilla::dom::IPCNavigationPreloadState* _internal_mutable_a_navigationpreloadstate();
   public:
-  void unsafe_arena_set_allocated_navigationpreloadstate(
-      ::protobuf::mozilla::dom::IPCNavigationPreloadState* navigationpreloadstate);
-  ::protobuf::mozilla::dom::IPCNavigationPreloadState* unsafe_arena_release_navigationpreloadstate();
+  void unsafe_arena_set_allocated_a_navigationpreloadstate(
+      ::protobuf::mozilla::dom::IPCNavigationPreloadState* a_navigationpreloadstate);
+  ::protobuf::mozilla::dom::IPCNavigationPreloadState* unsafe_arena_release_a_navigationpreloadstate();
 
-  // required bool currentWorkerHandlesFetch = 3;
-  bool has_currentworkerhandlesfetch() const;
+  // required bool a_currentWorkerHandlesFetch = 3;
+  bool has_a_currentworkerhandlesfetch() const;
   private:
-  bool _internal_has_currentworkerhandlesfetch() const;
+  bool _internal_has_a_currentworkerhandlesfetch() const;
   public:
-  void clear_currentworkerhandlesfetch();
-  bool currentworkerhandlesfetch() const;
-  void set_currentworkerhandlesfetch(bool value);
+  void clear_a_currentworkerhandlesfetch();
+  bool a_currentworkerhandlesfetch() const;
+  void set_a_currentworkerhandlesfetch(bool value);
   private:
-  bool _internal_currentworkerhandlesfetch() const;
-  void _internal_set_currentworkerhandlesfetch(bool value);
-  public:
-
-  // required uint32 updateViaCache = 6;
-  bool has_updateviacache() const;
-  private:
-  bool _internal_has_updateviacache() const;
-  public:
-  void clear_updateviacache();
-  uint32_t updateviacache() const;
-  void set_updateviacache(uint32_t value);
-  private:
-  uint32_t _internal_updateviacache() const;
-  void _internal_set_updateviacache(uint32_t value);
+  bool _internal_a_currentworkerhandlesfetch() const;
+  void _internal_set_a_currentworkerhandlesfetch(bool value);
   public:
 
-  // required sint64 currentWorkerInstalledTime = 7;
-  bool has_currentworkerinstalledtime() const;
+  // required uint32 a_updateViaCache = 6;
+  bool has_a_updateviacache() const;
   private:
-  bool _internal_has_currentworkerinstalledtime() const;
+  bool _internal_has_a_updateviacache() const;
   public:
-  void clear_currentworkerinstalledtime();
-  int64_t currentworkerinstalledtime() const;
-  void set_currentworkerinstalledtime(int64_t value);
+  void clear_a_updateviacache();
+  uint32_t a_updateviacache() const;
+  void set_a_updateviacache(uint32_t value);
   private:
-  int64_t _internal_currentworkerinstalledtime() const;
-  void _internal_set_currentworkerinstalledtime(int64_t value);
-  public:
-
-  // required sint64 currentWorkerActivatedTime = 8;
-  bool has_currentworkeractivatedtime() const;
-  private:
-  bool _internal_has_currentworkeractivatedtime() const;
-  public:
-  void clear_currentworkeractivatedtime();
-  int64_t currentworkeractivatedtime() const;
-  void set_currentworkeractivatedtime(int64_t value);
-  private:
-  int64_t _internal_currentworkeractivatedtime() const;
-  void _internal_set_currentworkeractivatedtime(int64_t value);
+  uint32_t _internal_a_updateviacache() const;
+  void _internal_set_a_updateviacache(uint32_t value);
   public:
 
-  // required sint64 lastUpdateTime = 9;
-  bool has_lastupdatetime() const;
+  // required sint64 a_currentWorkerInstalledTime = 7;
+  bool has_a_currentworkerinstalledtime() const;
   private:
-  bool _internal_has_lastupdatetime() const;
+  bool _internal_has_a_currentworkerinstalledtime() const;
   public:
-  void clear_lastupdatetime();
-  int64_t lastupdatetime() const;
-  void set_lastupdatetime(int64_t value);
+  void clear_a_currentworkerinstalledtime();
+  int64_t a_currentworkerinstalledtime() const;
+  void set_a_currentworkerinstalledtime(int64_t value);
   private:
-  int64_t _internal_lastupdatetime() const;
-  void _internal_set_lastupdatetime(int64_t value);
+  int64_t _internal_a_currentworkerinstalledtime() const;
+  void _internal_set_a_currentworkerinstalledtime(int64_t value);
+  public:
+
+  // required sint64 a_currentWorkerActivatedTime = 8;
+  bool has_a_currentworkeractivatedtime() const;
+  private:
+  bool _internal_has_a_currentworkeractivatedtime() const;
+  public:
+  void clear_a_currentworkeractivatedtime();
+  int64_t a_currentworkeractivatedtime() const;
+  void set_a_currentworkeractivatedtime(int64_t value);
+  private:
+  int64_t _internal_a_currentworkeractivatedtime() const;
+  void _internal_set_a_currentworkeractivatedtime(int64_t value);
+  public:
+
+  // required sint64 a_lastUpdateTime = 9;
+  bool has_a_lastupdatetime() const;
+  private:
+  bool _internal_has_a_lastupdatetime() const;
+  public:
+  void clear_a_lastupdatetime();
+  int64_t a_lastupdatetime() const;
+  void set_a_lastupdatetime(int64_t value);
+  private:
+  int64_t _internal_a_lastupdatetime() const;
+  void _internal_set_a_lastupdatetime(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ServiceWorkerRegistrationData)
@@ -350,16 +350,16 @@ class ServiceWorkerRegistrationData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr scope_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr currentworkerurl_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cachename_;
-    ::protobuf::mozilla::ipc::PrincipalInfo* principal_;
-    ::protobuf::mozilla::dom::IPCNavigationPreloadState* navigationpreloadstate_;
-    bool currentworkerhandlesfetch_;
-    uint32_t updateviacache_;
-    int64_t currentworkerinstalledtime_;
-    int64_t currentworkeractivatedtime_;
-    int64_t lastupdatetime_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scope_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_currentworkerurl_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_cachename_;
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_principal_;
+    ::protobuf::mozilla::dom::IPCNavigationPreloadState* a_navigationpreloadstate_;
+    bool a_currentworkerhandlesfetch_;
+    uint32_t a_updateviacache_;
+    int64_t a_currentworkerinstalledtime_;
+    int64_t a_currentworkeractivatedtime_;
+    int64_t a_lastupdatetime_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ServiceWorkerRegistrarTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -375,273 +375,273 @@ class ServiceWorkerRegistrationData final :
 #endif  // __GNUC__
 // ServiceWorkerRegistrationData
 
-// required bytes scope = 1;
-inline bool ServiceWorkerRegistrationData::_internal_has_scope() const {
+// required bytes a_scope = 1;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_scope() const {
-  return _internal_has_scope();
+inline bool ServiceWorkerRegistrationData::has_a_scope() const {
+  return _internal_has_a_scope();
 }
-inline void ServiceWorkerRegistrationData::clear_scope() {
-  _impl_.scope_.ClearToEmpty();
+inline void ServiceWorkerRegistrationData::clear_a_scope() {
+  _impl_.a_scope_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ServiceWorkerRegistrationData::scope() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.scope)
-  return _internal_scope();
+inline const std::string& ServiceWorkerRegistrationData::a_scope() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
+  return _internal_a_scope();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ServiceWorkerRegistrationData::set_scope(ArgT0&& arg0, ArgT... args) {
+void ServiceWorkerRegistrationData::set_a_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.scope)
+ _impl_.a_scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
 }
-inline std::string* ServiceWorkerRegistrationData::mutable_scope() {
-  std::string* _s = _internal_mutable_scope();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.scope)
+inline std::string* ServiceWorkerRegistrationData::mutable_a_scope() {
+  std::string* _s = _internal_mutable_a_scope();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
   return _s;
 }
-inline const std::string& ServiceWorkerRegistrationData::_internal_scope() const {
-  return _impl_.scope_.Get();
+inline const std::string& ServiceWorkerRegistrationData::_internal_a_scope() const {
+  return _impl_.a_scope_.Get();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_scope(const std::string& value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_scope(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.scope_.Set(value, GetArenaForAllocation());
+  _impl_.a_scope_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerRegistrationData::_internal_mutable_scope() {
+inline std::string* ServiceWorkerRegistrationData::_internal_mutable_a_scope() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.scope_.Mutable(GetArenaForAllocation());
+  return _impl_.a_scope_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerRegistrationData::release_scope() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.scope)
-  if (!_internal_has_scope()) {
+inline std::string* ServiceWorkerRegistrationData::release_a_scope() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
+  if (!_internal_has_a_scope()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.scope_.Release();
+  auto* p = _impl_.a_scope_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.scope_.IsDefault()) {
-    _impl_.scope_.Set("", GetArenaForAllocation());
+  if (_impl_.a_scope_.IsDefault()) {
+    _impl_.a_scope_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ServiceWorkerRegistrationData::set_allocated_scope(std::string* scope) {
-  if (scope != nullptr) {
+inline void ServiceWorkerRegistrationData::set_allocated_a_scope(std::string* a_scope) {
+  if (a_scope != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.scope_.SetAllocated(scope, GetArenaForAllocation());
+  _impl_.a_scope_.SetAllocated(a_scope, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.scope_.IsDefault()) {
-    _impl_.scope_.Set("", GetArenaForAllocation());
+  if (_impl_.a_scope_.IsDefault()) {
+    _impl_.a_scope_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.scope)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
 }
 
-// required bytes currentWorkerURL = 2;
-inline bool ServiceWorkerRegistrationData::_internal_has_currentworkerurl() const {
+// required bytes a_currentWorkerURL = 2;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_currentworkerurl() const {
-  return _internal_has_currentworkerurl();
+inline bool ServiceWorkerRegistrationData::has_a_currentworkerurl() const {
+  return _internal_has_a_currentworkerurl();
 }
-inline void ServiceWorkerRegistrationData::clear_currentworkerurl() {
-  _impl_.currentworkerurl_.ClearToEmpty();
+inline void ServiceWorkerRegistrationData::clear_a_currentworkerurl() {
+  _impl_.a_currentworkerurl_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ServiceWorkerRegistrationData::currentworkerurl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerURL)
-  return _internal_currentworkerurl();
+inline const std::string& ServiceWorkerRegistrationData::a_currentworkerurl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
+  return _internal_a_currentworkerurl();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ServiceWorkerRegistrationData::set_currentworkerurl(ArgT0&& arg0, ArgT... args) {
+void ServiceWorkerRegistrationData::set_a_currentworkerurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.currentworkerurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerURL)
+ _impl_.a_currentworkerurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
 }
-inline std::string* ServiceWorkerRegistrationData::mutable_currentworkerurl() {
-  std::string* _s = _internal_mutable_currentworkerurl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerURL)
+inline std::string* ServiceWorkerRegistrationData::mutable_a_currentworkerurl() {
+  std::string* _s = _internal_mutable_a_currentworkerurl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
   return _s;
 }
-inline const std::string& ServiceWorkerRegistrationData::_internal_currentworkerurl() const {
-  return _impl_.currentworkerurl_.Get();
+inline const std::string& ServiceWorkerRegistrationData::_internal_a_currentworkerurl() const {
+  return _impl_.a_currentworkerurl_.Get();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_currentworkerurl(const std::string& value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_currentworkerurl(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.currentworkerurl_.Set(value, GetArenaForAllocation());
+  _impl_.a_currentworkerurl_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerRegistrationData::_internal_mutable_currentworkerurl() {
+inline std::string* ServiceWorkerRegistrationData::_internal_mutable_a_currentworkerurl() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.currentworkerurl_.Mutable(GetArenaForAllocation());
+  return _impl_.a_currentworkerurl_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerRegistrationData::release_currentworkerurl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerURL)
-  if (!_internal_has_currentworkerurl()) {
+inline std::string* ServiceWorkerRegistrationData::release_a_currentworkerurl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
+  if (!_internal_has_a_currentworkerurl()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.currentworkerurl_.Release();
+  auto* p = _impl_.a_currentworkerurl_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.currentworkerurl_.IsDefault()) {
-    _impl_.currentworkerurl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_currentworkerurl_.IsDefault()) {
+    _impl_.a_currentworkerurl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ServiceWorkerRegistrationData::set_allocated_currentworkerurl(std::string* currentworkerurl) {
-  if (currentworkerurl != nullptr) {
+inline void ServiceWorkerRegistrationData::set_allocated_a_currentworkerurl(std::string* a_currentworkerurl) {
+  if (a_currentworkerurl != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.currentworkerurl_.SetAllocated(currentworkerurl, GetArenaForAllocation());
+  _impl_.a_currentworkerurl_.SetAllocated(a_currentworkerurl, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.currentworkerurl_.IsDefault()) {
-    _impl_.currentworkerurl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_currentworkerurl_.IsDefault()) {
+    _impl_.a_currentworkerurl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerURL)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
 }
 
-// required bool currentWorkerHandlesFetch = 3;
-inline bool ServiceWorkerRegistrationData::_internal_has_currentworkerhandlesfetch() const {
+// required bool a_currentWorkerHandlesFetch = 3;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerhandlesfetch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_currentworkerhandlesfetch() const {
-  return _internal_has_currentworkerhandlesfetch();
+inline bool ServiceWorkerRegistrationData::has_a_currentworkerhandlesfetch() const {
+  return _internal_has_a_currentworkerhandlesfetch();
 }
-inline void ServiceWorkerRegistrationData::clear_currentworkerhandlesfetch() {
-  _impl_.currentworkerhandlesfetch_ = false;
+inline void ServiceWorkerRegistrationData::clear_a_currentworkerhandlesfetch() {
+  _impl_.a_currentworkerhandlesfetch_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool ServiceWorkerRegistrationData::_internal_currentworkerhandlesfetch() const {
-  return _impl_.currentworkerhandlesfetch_;
+inline bool ServiceWorkerRegistrationData::_internal_a_currentworkerhandlesfetch() const {
+  return _impl_.a_currentworkerhandlesfetch_;
 }
-inline bool ServiceWorkerRegistrationData::currentworkerhandlesfetch() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerHandlesFetch)
-  return _internal_currentworkerhandlesfetch();
+inline bool ServiceWorkerRegistrationData::a_currentworkerhandlesfetch() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerHandlesFetch)
+  return _internal_a_currentworkerhandlesfetch();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_currentworkerhandlesfetch(bool value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_currentworkerhandlesfetch(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.currentworkerhandlesfetch_ = value;
+  _impl_.a_currentworkerhandlesfetch_ = value;
 }
-inline void ServiceWorkerRegistrationData::set_currentworkerhandlesfetch(bool value) {
-  _internal_set_currentworkerhandlesfetch(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerHandlesFetch)
+inline void ServiceWorkerRegistrationData::set_a_currentworkerhandlesfetch(bool value) {
+  _internal_set_a_currentworkerhandlesfetch(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerHandlesFetch)
 }
 
-// required bytes cacheName = 4;
-inline bool ServiceWorkerRegistrationData::_internal_has_cachename() const {
+// required bytes a_cacheName = 4;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_cachename() const {
-  return _internal_has_cachename();
+inline bool ServiceWorkerRegistrationData::has_a_cachename() const {
+  return _internal_has_a_cachename();
 }
-inline void ServiceWorkerRegistrationData::clear_cachename() {
-  _impl_.cachename_.ClearToEmpty();
+inline void ServiceWorkerRegistrationData::clear_a_cachename() {
+  _impl_.a_cachename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& ServiceWorkerRegistrationData::cachename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.cacheName)
-  return _internal_cachename();
+inline const std::string& ServiceWorkerRegistrationData::a_cachename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_cacheName)
+  return _internal_a_cachename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ServiceWorkerRegistrationData::set_cachename(ArgT0&& arg0, ArgT... args) {
+void ServiceWorkerRegistrationData::set_a_cachename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.cacheName)
+ _impl_.a_cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_cacheName)
 }
-inline std::string* ServiceWorkerRegistrationData::mutable_cachename() {
-  std::string* _s = _internal_mutable_cachename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.cacheName)
+inline std::string* ServiceWorkerRegistrationData::mutable_a_cachename() {
+  std::string* _s = _internal_mutable_a_cachename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_cacheName)
   return _s;
 }
-inline const std::string& ServiceWorkerRegistrationData::_internal_cachename() const {
-  return _impl_.cachename_.Get();
+inline const std::string& ServiceWorkerRegistrationData::_internal_a_cachename() const {
+  return _impl_.a_cachename_.Get();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_cachename(const std::string& value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_cachename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.cachename_.Set(value, GetArenaForAllocation());
+  _impl_.a_cachename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerRegistrationData::_internal_mutable_cachename() {
+inline std::string* ServiceWorkerRegistrationData::_internal_mutable_a_cachename() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.cachename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_cachename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerRegistrationData::release_cachename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.cacheName)
-  if (!_internal_has_cachename()) {
+inline std::string* ServiceWorkerRegistrationData::release_a_cachename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_cacheName)
+  if (!_internal_has_a_cachename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.cachename_.Release();
+  auto* p = _impl_.a_cachename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachename_.IsDefault()) {
-    _impl_.cachename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachename_.IsDefault()) {
+    _impl_.a_cachename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ServiceWorkerRegistrationData::set_allocated_cachename(std::string* cachename) {
-  if (cachename != nullptr) {
+inline void ServiceWorkerRegistrationData::set_allocated_a_cachename(std::string* a_cachename) {
+  if (a_cachename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.cachename_.SetAllocated(cachename, GetArenaForAllocation());
+  _impl_.a_cachename_.SetAllocated(a_cachename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachename_.IsDefault()) {
-    _impl_.cachename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachename_.IsDefault()) {
+    _impl_.a_cachename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.cacheName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_cacheName)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo principal = 5;
-inline bool ServiceWorkerRegistrationData::_internal_has_principal() const {
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.principal_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_principal_ != nullptr);
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_principal() const {
-  return _internal_has_principal();
+inline bool ServiceWorkerRegistrationData::has_a_principal() const {
+  return _internal_has_a_principal();
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& ServiceWorkerRegistrationData::_internal_principal() const {
-  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.principal_;
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& ServiceWorkerRegistrationData::_internal_a_principal() const {
+  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.a_principal_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::PrincipalInfo&>(
       ::protobuf::mozilla::ipc::_PrincipalInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& ServiceWorkerRegistrationData::principal() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.principal)
-  return _internal_principal();
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& ServiceWorkerRegistrationData::a_principal() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_principal)
+  return _internal_a_principal();
 }
-inline void ServiceWorkerRegistrationData::unsafe_arena_set_allocated_principal(
-    ::protobuf::mozilla::ipc::PrincipalInfo* principal) {
+inline void ServiceWorkerRegistrationData::unsafe_arena_set_allocated_a_principal(
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_principal) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.principal_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_principal_);
   }
-  _impl_.principal_ = principal;
-  if (principal) {
+  _impl_.a_principal_ = a_principal;
+  if (a_principal) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.principal)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_principal)
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::release_principal() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::release_a_principal() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.principal_;
-  _impl_.principal_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principal_;
+  _impl_.a_principal_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -653,194 +653,194 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::r
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::unsafe_arena_release_principal() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.principal)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::unsafe_arena_release_a_principal() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_principal)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.principal_;
-  _impl_.principal_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principal_;
+  _impl_.a_principal_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::_internal_mutable_principal() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::_internal_mutable_a_principal() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.principal_ == nullptr) {
+  if (_impl_.a_principal_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
-    _impl_.principal_ = p;
+    _impl_.a_principal_ = p;
   }
-  return _impl_.principal_;
+  return _impl_.a_principal_;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::mutable_principal() {
-  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_principal();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.principal)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* ServiceWorkerRegistrationData::mutable_a_principal() {
+  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_a_principal();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_principal)
   return _msg;
 }
-inline void ServiceWorkerRegistrationData::set_allocated_principal(::protobuf::mozilla::ipc::PrincipalInfo* principal) {
+inline void ServiceWorkerRegistrationData::set_allocated_a_principal(::protobuf::mozilla::ipc::PrincipalInfo* a_principal) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.principal_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_principal_);
   }
-  if (principal) {
+  if (a_principal) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(principal));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_principal));
     if (message_arena != submessage_arena) {
-      principal = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, principal, submessage_arena);
+      a_principal = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_principal, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.principal_ = principal;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.principal)
+  _impl_.a_principal_ = a_principal;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_principal)
 }
 
-// required uint32 updateViaCache = 6;
-inline bool ServiceWorkerRegistrationData::_internal_has_updateviacache() const {
+// required uint32 a_updateViaCache = 6;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_updateviacache() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_updateviacache() const {
-  return _internal_has_updateviacache();
+inline bool ServiceWorkerRegistrationData::has_a_updateviacache() const {
+  return _internal_has_a_updateviacache();
 }
-inline void ServiceWorkerRegistrationData::clear_updateviacache() {
-  _impl_.updateviacache_ = 0u;
+inline void ServiceWorkerRegistrationData::clear_a_updateviacache() {
+  _impl_.a_updateviacache_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline uint32_t ServiceWorkerRegistrationData::_internal_updateviacache() const {
-  return _impl_.updateviacache_;
+inline uint32_t ServiceWorkerRegistrationData::_internal_a_updateviacache() const {
+  return _impl_.a_updateviacache_;
 }
-inline uint32_t ServiceWorkerRegistrationData::updateviacache() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.updateViaCache)
-  return _internal_updateviacache();
+inline uint32_t ServiceWorkerRegistrationData::a_updateviacache() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_updateViaCache)
+  return _internal_a_updateviacache();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_updateviacache(uint32_t value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_updateviacache(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.updateviacache_ = value;
+  _impl_.a_updateviacache_ = value;
 }
-inline void ServiceWorkerRegistrationData::set_updateviacache(uint32_t value) {
-  _internal_set_updateviacache(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.updateViaCache)
+inline void ServiceWorkerRegistrationData::set_a_updateviacache(uint32_t value) {
+  _internal_set_a_updateviacache(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_updateViaCache)
 }
 
-// required sint64 currentWorkerInstalledTime = 7;
-inline bool ServiceWorkerRegistrationData::_internal_has_currentworkerinstalledtime() const {
+// required sint64 a_currentWorkerInstalledTime = 7;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerinstalledtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_currentworkerinstalledtime() const {
-  return _internal_has_currentworkerinstalledtime();
+inline bool ServiceWorkerRegistrationData::has_a_currentworkerinstalledtime() const {
+  return _internal_has_a_currentworkerinstalledtime();
 }
-inline void ServiceWorkerRegistrationData::clear_currentworkerinstalledtime() {
-  _impl_.currentworkerinstalledtime_ = int64_t{0};
+inline void ServiceWorkerRegistrationData::clear_a_currentworkerinstalledtime() {
+  _impl_.a_currentworkerinstalledtime_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline int64_t ServiceWorkerRegistrationData::_internal_currentworkerinstalledtime() const {
-  return _impl_.currentworkerinstalledtime_;
+inline int64_t ServiceWorkerRegistrationData::_internal_a_currentworkerinstalledtime() const {
+  return _impl_.a_currentworkerinstalledtime_;
 }
-inline int64_t ServiceWorkerRegistrationData::currentworkerinstalledtime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerInstalledTime)
-  return _internal_currentworkerinstalledtime();
+inline int64_t ServiceWorkerRegistrationData::a_currentworkerinstalledtime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerInstalledTime)
+  return _internal_a_currentworkerinstalledtime();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_currentworkerinstalledtime(int64_t value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_currentworkerinstalledtime(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.currentworkerinstalledtime_ = value;
+  _impl_.a_currentworkerinstalledtime_ = value;
 }
-inline void ServiceWorkerRegistrationData::set_currentworkerinstalledtime(int64_t value) {
-  _internal_set_currentworkerinstalledtime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerInstalledTime)
+inline void ServiceWorkerRegistrationData::set_a_currentworkerinstalledtime(int64_t value) {
+  _internal_set_a_currentworkerinstalledtime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerInstalledTime)
 }
 
-// required sint64 currentWorkerActivatedTime = 8;
-inline bool ServiceWorkerRegistrationData::_internal_has_currentworkeractivatedtime() const {
+// required sint64 a_currentWorkerActivatedTime = 8;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkeractivatedtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_currentworkeractivatedtime() const {
-  return _internal_has_currentworkeractivatedtime();
+inline bool ServiceWorkerRegistrationData::has_a_currentworkeractivatedtime() const {
+  return _internal_has_a_currentworkeractivatedtime();
 }
-inline void ServiceWorkerRegistrationData::clear_currentworkeractivatedtime() {
-  _impl_.currentworkeractivatedtime_ = int64_t{0};
+inline void ServiceWorkerRegistrationData::clear_a_currentworkeractivatedtime() {
+  _impl_.a_currentworkeractivatedtime_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline int64_t ServiceWorkerRegistrationData::_internal_currentworkeractivatedtime() const {
-  return _impl_.currentworkeractivatedtime_;
+inline int64_t ServiceWorkerRegistrationData::_internal_a_currentworkeractivatedtime() const {
+  return _impl_.a_currentworkeractivatedtime_;
 }
-inline int64_t ServiceWorkerRegistrationData::currentworkeractivatedtime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerActivatedTime)
-  return _internal_currentworkeractivatedtime();
+inline int64_t ServiceWorkerRegistrationData::a_currentworkeractivatedtime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerActivatedTime)
+  return _internal_a_currentworkeractivatedtime();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_currentworkeractivatedtime(int64_t value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_currentworkeractivatedtime(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.currentworkeractivatedtime_ = value;
+  _impl_.a_currentworkeractivatedtime_ = value;
 }
-inline void ServiceWorkerRegistrationData::set_currentworkeractivatedtime(int64_t value) {
-  _internal_set_currentworkeractivatedtime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.currentWorkerActivatedTime)
+inline void ServiceWorkerRegistrationData::set_a_currentworkeractivatedtime(int64_t value) {
+  _internal_set_a_currentworkeractivatedtime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerActivatedTime)
 }
 
-// required sint64 lastUpdateTime = 9;
-inline bool ServiceWorkerRegistrationData::_internal_has_lastupdatetime() const {
+// required sint64 a_lastUpdateTime = 9;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_lastupdatetime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_lastupdatetime() const {
-  return _internal_has_lastupdatetime();
+inline bool ServiceWorkerRegistrationData::has_a_lastupdatetime() const {
+  return _internal_has_a_lastupdatetime();
 }
-inline void ServiceWorkerRegistrationData::clear_lastupdatetime() {
-  _impl_.lastupdatetime_ = int64_t{0};
+inline void ServiceWorkerRegistrationData::clear_a_lastupdatetime() {
+  _impl_.a_lastupdatetime_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
-inline int64_t ServiceWorkerRegistrationData::_internal_lastupdatetime() const {
-  return _impl_.lastupdatetime_;
+inline int64_t ServiceWorkerRegistrationData::_internal_a_lastupdatetime() const {
+  return _impl_.a_lastupdatetime_;
 }
-inline int64_t ServiceWorkerRegistrationData::lastupdatetime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.lastUpdateTime)
-  return _internal_lastupdatetime();
+inline int64_t ServiceWorkerRegistrationData::a_lastupdatetime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_lastUpdateTime)
+  return _internal_a_lastupdatetime();
 }
-inline void ServiceWorkerRegistrationData::_internal_set_lastupdatetime(int64_t value) {
+inline void ServiceWorkerRegistrationData::_internal_set_a_lastupdatetime(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.lastupdatetime_ = value;
+  _impl_.a_lastupdatetime_ = value;
 }
-inline void ServiceWorkerRegistrationData::set_lastupdatetime(int64_t value) {
-  _internal_set_lastupdatetime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.lastUpdateTime)
+inline void ServiceWorkerRegistrationData::set_a_lastupdatetime(int64_t value) {
+  _internal_set_a_lastupdatetime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_lastUpdateTime)
 }
 
-// required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
-inline bool ServiceWorkerRegistrationData::_internal_has_navigationpreloadstate() const {
+// required .protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
+inline bool ServiceWorkerRegistrationData::_internal_has_a_navigationpreloadstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.navigationpreloadstate_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_navigationpreloadstate_ != nullptr);
   return value;
 }
-inline bool ServiceWorkerRegistrationData::has_navigationpreloadstate() const {
-  return _internal_has_navigationpreloadstate();
+inline bool ServiceWorkerRegistrationData::has_a_navigationpreloadstate() const {
+  return _internal_has_a_navigationpreloadstate();
 }
-inline const ::protobuf::mozilla::dom::IPCNavigationPreloadState& ServiceWorkerRegistrationData::_internal_navigationpreloadstate() const {
-  const ::protobuf::mozilla::dom::IPCNavigationPreloadState* p = _impl_.navigationpreloadstate_;
+inline const ::protobuf::mozilla::dom::IPCNavigationPreloadState& ServiceWorkerRegistrationData::_internal_a_navigationpreloadstate() const {
+  const ::protobuf::mozilla::dom::IPCNavigationPreloadState* p = _impl_.a_navigationpreloadstate_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCNavigationPreloadState&>(
       ::protobuf::mozilla::dom::_IPCNavigationPreloadState_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCNavigationPreloadState& ServiceWorkerRegistrationData::navigationpreloadstate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.navigationPreloadState)
-  return _internal_navigationpreloadstate();
+inline const ::protobuf::mozilla::dom::IPCNavigationPreloadState& ServiceWorkerRegistrationData::a_navigationpreloadstate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_navigationPreloadState)
+  return _internal_a_navigationpreloadstate();
 }
-inline void ServiceWorkerRegistrationData::unsafe_arena_set_allocated_navigationpreloadstate(
-    ::protobuf::mozilla::dom::IPCNavigationPreloadState* navigationpreloadstate) {
+inline void ServiceWorkerRegistrationData::unsafe_arena_set_allocated_a_navigationpreloadstate(
+    ::protobuf::mozilla::dom::IPCNavigationPreloadState* a_navigationpreloadstate) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.navigationpreloadstate_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_navigationpreloadstate_);
   }
-  _impl_.navigationpreloadstate_ = navigationpreloadstate;
-  if (navigationpreloadstate) {
+  _impl_.a_navigationpreloadstate_ = a_navigationpreloadstate;
+  if (a_navigationpreloadstate) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.navigationPreloadState)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_navigationPreloadState)
 }
-inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::release_navigationpreloadstate() {
+inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::release_a_navigationpreloadstate() {
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::protobuf::mozilla::dom::IPCNavigationPreloadState* temp = _impl_.navigationpreloadstate_;
-  _impl_.navigationpreloadstate_ = nullptr;
+  ::protobuf::mozilla::dom::IPCNavigationPreloadState* temp = _impl_.a_navigationpreloadstate_;
+  _impl_.a_navigationpreloadstate_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -852,45 +852,45 @@ inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistr
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::unsafe_arena_release_navigationpreloadstate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.navigationPreloadState)
+inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::unsafe_arena_release_a_navigationpreloadstate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_navigationPreloadState)
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::protobuf::mozilla::dom::IPCNavigationPreloadState* temp = _impl_.navigationpreloadstate_;
-  _impl_.navigationpreloadstate_ = nullptr;
+  ::protobuf::mozilla::dom::IPCNavigationPreloadState* temp = _impl_.a_navigationpreloadstate_;
+  _impl_.a_navigationpreloadstate_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::_internal_mutable_navigationpreloadstate() {
+inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::_internal_mutable_a_navigationpreloadstate() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  if (_impl_.navigationpreloadstate_ == nullptr) {
+  if (_impl_.a_navigationpreloadstate_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCNavigationPreloadState>(GetArenaForAllocation());
-    _impl_.navigationpreloadstate_ = p;
+    _impl_.a_navigationpreloadstate_ = p;
   }
-  return _impl_.navigationpreloadstate_;
+  return _impl_.a_navigationpreloadstate_;
 }
-inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::mutable_navigationpreloadstate() {
-  ::protobuf::mozilla::dom::IPCNavigationPreloadState* _msg = _internal_mutable_navigationpreloadstate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.navigationPreloadState)
+inline ::protobuf::mozilla::dom::IPCNavigationPreloadState* ServiceWorkerRegistrationData::mutable_a_navigationpreloadstate() {
+  ::protobuf::mozilla::dom::IPCNavigationPreloadState* _msg = _internal_mutable_a_navigationpreloadstate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_navigationPreloadState)
   return _msg;
 }
-inline void ServiceWorkerRegistrationData::set_allocated_navigationpreloadstate(::protobuf::mozilla::dom::IPCNavigationPreloadState* navigationpreloadstate) {
+inline void ServiceWorkerRegistrationData::set_allocated_a_navigationpreloadstate(::protobuf::mozilla::dom::IPCNavigationPreloadState* a_navigationpreloadstate) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.navigationpreloadstate_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_navigationpreloadstate_);
   }
-  if (navigationpreloadstate) {
+  if (a_navigationpreloadstate) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(navigationpreloadstate));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_navigationpreloadstate));
     if (message_arena != submessage_arena) {
-      navigationpreloadstate = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, navigationpreloadstate, submessage_arena);
+      a_navigationpreloadstate = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_navigationpreloadstate, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.navigationpreloadstate_ = navigationpreloadstate;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.navigationPreloadState)
+  _impl_.a_navigationpreloadstate_ = a_navigationpreloadstate;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_navigationPreloadState)
 }
 
 #ifdef __GNUC__

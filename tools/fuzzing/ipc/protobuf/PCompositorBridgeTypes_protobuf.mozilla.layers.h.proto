@@ -12,12 +12,12 @@ package protobuf.mozilla.layers;
 
 // Structs and unions declarations
 message RecordedFrameData {
-  required bytes timeOffset = 1;
-  required uint32 length = 2;
+  required bytes a_timeOffset = 1;
+  required uint32 a_length = 2;
 }
 
 message FrameRecording {
-  required bytes startTime = 1;
-  repeated protobuf.mozilla.layers.RecordedFrameData frames = 2;
-  required bytes bytes = 3;
+  required bytes a_startTime = 1;
+  repeated protobuf.mozilla.layers.RecordedFrameData a_frames = 2;
+  required bytes a_bytes = 3;
 }

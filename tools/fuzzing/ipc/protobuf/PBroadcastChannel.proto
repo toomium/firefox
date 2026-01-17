@@ -17,19 +17,19 @@ import "DOMTypes.proto";
 
 // Message declarations
 message Msg_PostMessage {
-  required protobuf.mozilla.dom.MessageData message = 1;
+  required protobuf.mozilla.dom.MessageData a_message = 1;
 }
 
 message Msg_Close {
 }
 
 message Msg_Notify {
-  required protobuf.mozilla.dom.MessageData message = 1;
+  required protobuf.mozilla.dom.MessageData a_message = 1;
 }
 
 message Msg_RefMessageDelivered {
-  required bytes messageID = 1;
-  required uint32 actorsOnSamePid = 2;
+  required bytes a_messageID = 1;
+  required uint32 a_actorsOnSamePid = 2;
 }
 
 message Msg___delete__ {

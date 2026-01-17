@@ -15,30 +15,30 @@ import "IPCServiceWorkerDescriptor.proto";
 
 // Structs and unions declarations
 message IPCServiceWorkerRegistrationDescriptor {
-  required uint64 id = 1;
-  required uint64 version = 2;
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 3;
-  required bytes scope = 4;
-  required bytes updateViaCache = 5;
-  optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor installing = 6;
-  optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor waiting = 7;
-  optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor active = 8;
+  required uint64 a_id = 1;
+  required uint64 a_version = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 3;
+  required bytes a_scope = 4;
+  required bytes a_updateViaCache = 5;
+  optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_installing = 6;
+  optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_waiting = 7;
+  optional protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_active = 8;
 }
 
 message IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult {
   oneof content {
-    protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor mVIPCServiceWorkerRegistrationDescriptor = 1;
-    bytes mVCopyableErrorResult = 2;
+    protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_mVIPCServiceWorkerRegistrationDescriptor = 1;
+    bytes a_mVCopyableErrorResult = 2;
   }
 }
 
 message IPCServiceWorkerRegistrationDescriptorList {
-  repeated protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor values = 1;
+  repeated protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_values = 1;
 }
 
 message IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult {
   oneof content {
-    protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList mVIPCServiceWorkerRegistrationDescriptorList = 1;
-    bytes mVCopyableErrorResult = 2;
+    protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList a_mVIPCServiceWorkerRegistrationDescriptorList = 1;
+    bytes a_mVCopyableErrorResult = 2;
   }
 }

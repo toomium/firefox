@@ -178,19 +178,19 @@ class LSSimpleRequestPreloadedResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPreloadedFieldNumber = 1,
+    kAPreloadedFieldNumber = 1,
   };
-  // required bool preloaded = 1;
-  bool has_preloaded() const;
+  // required bool a_preloaded = 1;
+  bool has_a_preloaded() const;
   private:
-  bool _internal_has_preloaded() const;
+  bool _internal_has_a_preloaded() const;
   public:
-  void clear_preloaded();
-  bool preloaded() const;
-  void set_preloaded(bool value);
+  void clear_a_preloaded();
+  bool a_preloaded() const;
+  void set_a_preloaded(bool value);
   private:
-  bool _internal_preloaded() const;
-  void _internal_set_preloaded(bool value);
+  bool _internal_a_preloaded() const;
+  void _internal_set_a_preloaded(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse)
@@ -203,7 +203,7 @@ class LSSimpleRequestPreloadedResponse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool preloaded_;
+    bool a_preloaded_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSimpleRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -320,25 +320,25 @@ class LSSimpleRequestGetStateResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kItemInfosFieldNumber = 1,
+    kAItemInfosFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.LSItemInfo itemInfos = 1;
-  int iteminfos_size() const;
+  // repeated .protobuf.mozilla.dom.LSItemInfo a_itemInfos = 1;
+  int a_iteminfos_size() const;
   private:
-  int _internal_iteminfos_size() const;
+  int _internal_a_iteminfos_size() const;
   public:
-  void clear_iteminfos();
-  ::protobuf::mozilla::dom::LSItemInfo* mutable_iteminfos(int index);
+  void clear_a_iteminfos();
+  ::protobuf::mozilla::dom::LSItemInfo* mutable_a_iteminfos(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >*
-      mutable_iteminfos();
+      mutable_a_iteminfos();
   private:
-  const ::protobuf::mozilla::dom::LSItemInfo& _internal_iteminfos(int index) const;
-  ::protobuf::mozilla::dom::LSItemInfo* _internal_add_iteminfos();
+  const ::protobuf::mozilla::dom::LSItemInfo& _internal_a_iteminfos(int index) const;
+  ::protobuf::mozilla::dom::LSItemInfo* _internal_add_a_iteminfos();
   public:
-  const ::protobuf::mozilla::dom::LSItemInfo& iteminfos(int index) const;
-  ::protobuf::mozilla::dom::LSItemInfo* add_iteminfos();
+  const ::protobuf::mozilla::dom::LSItemInfo& a_iteminfos(int index) const;
+  ::protobuf::mozilla::dom::LSItemInfo* add_a_iteminfos();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
-      iteminfos() const;
+      a_iteminfos() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse)
  private:
@@ -348,7 +348,7 @@ class LSSimpleRequestGetStateResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > iteminfos_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo > a_iteminfos_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -398,9 +398,9 @@ class LSSimpleRequestResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVLSSimpleRequestPreloadedResponse = 2,
-    kMVLSSimpleRequestGetStateResponse = 3,
+    kAMVnsresult = 1,
+    kAMVLSSimpleRequestPreloadedResponse = 2,
+    kAMVLSSimpleRequestGetStateResponse = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -473,72 +473,72 @@ class LSSimpleRequestResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVLSSimpleRequestPreloadedResponseFieldNumber = 2,
-    kMVLSSimpleRequestGetStateResponseFieldNumber = 3,
+    kAMVnsresultFieldNumber = 1,
+    kAMVLSSimpleRequestPreloadedResponseFieldNumber = 2,
+    kAMVLSSimpleRequestGetStateResponseFieldNumber = 3,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse mVLSSimpleRequestPreloadedResponse = 2;
-  bool has_mvlssimplerequestpreloadedresponse() const;
+  // .protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse a_mVLSSimpleRequestPreloadedResponse = 2;
+  bool has_a_mvlssimplerequestpreloadedresponse() const;
   private:
-  bool _internal_has_mvlssimplerequestpreloadedresponse() const;
+  bool _internal_has_a_mvlssimplerequestpreloadedresponse() const;
   public:
-  void clear_mvlssimplerequestpreloadedresponse();
-  const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& mvlssimplerequestpreloadedresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* release_mvlssimplerequestpreloadedresponse();
-  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* mutable_mvlssimplerequestpreloadedresponse();
-  void set_allocated_mvlssimplerequestpreloadedresponse(::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* mvlssimplerequestpreloadedresponse);
+  void clear_a_mvlssimplerequestpreloadedresponse();
+  const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& a_mvlssimplerequestpreloadedresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* release_a_mvlssimplerequestpreloadedresponse();
+  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* mutable_a_mvlssimplerequestpreloadedresponse();
+  void set_allocated_a_mvlssimplerequestpreloadedresponse(::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* a_mvlssimplerequestpreloadedresponse);
   private:
-  const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& _internal_mvlssimplerequestpreloadedresponse() const;
-  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* _internal_mutable_mvlssimplerequestpreloadedresponse();
+  const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& _internal_a_mvlssimplerequestpreloadedresponse() const;
+  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* _internal_mutable_a_mvlssimplerequestpreloadedresponse();
   public:
-  void unsafe_arena_set_allocated_mvlssimplerequestpreloadedresponse(
-      ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* mvlssimplerequestpreloadedresponse);
-  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* unsafe_arena_release_mvlssimplerequestpreloadedresponse();
+  void unsafe_arena_set_allocated_a_mvlssimplerequestpreloadedresponse(
+      ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* a_mvlssimplerequestpreloadedresponse);
+  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* unsafe_arena_release_a_mvlssimplerequestpreloadedresponse();
 
-  // .protobuf.mozilla.dom.LSSimpleRequestGetStateResponse mVLSSimpleRequestGetStateResponse = 3;
-  bool has_mvlssimplerequestgetstateresponse() const;
+  // .protobuf.mozilla.dom.LSSimpleRequestGetStateResponse a_mVLSSimpleRequestGetStateResponse = 3;
+  bool has_a_mvlssimplerequestgetstateresponse() const;
   private:
-  bool _internal_has_mvlssimplerequestgetstateresponse() const;
+  bool _internal_has_a_mvlssimplerequestgetstateresponse() const;
   public:
-  void clear_mvlssimplerequestgetstateresponse();
-  const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& mvlssimplerequestgetstateresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* release_mvlssimplerequestgetstateresponse();
-  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* mutable_mvlssimplerequestgetstateresponse();
-  void set_allocated_mvlssimplerequestgetstateresponse(::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* mvlssimplerequestgetstateresponse);
+  void clear_a_mvlssimplerequestgetstateresponse();
+  const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& a_mvlssimplerequestgetstateresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* release_a_mvlssimplerequestgetstateresponse();
+  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* mutable_a_mvlssimplerequestgetstateresponse();
+  void set_allocated_a_mvlssimplerequestgetstateresponse(::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* a_mvlssimplerequestgetstateresponse);
   private:
-  const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& _internal_mvlssimplerequestgetstateresponse() const;
-  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* _internal_mutable_mvlssimplerequestgetstateresponse();
+  const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& _internal_a_mvlssimplerequestgetstateresponse() const;
+  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* _internal_mutable_a_mvlssimplerequestgetstateresponse();
   public:
-  void unsafe_arena_set_allocated_mvlssimplerequestgetstateresponse(
-      ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* mvlssimplerequestgetstateresponse);
-  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* unsafe_arena_release_mvlssimplerequestgetstateresponse();
+  void unsafe_arena_set_allocated_a_mvlssimplerequestgetstateresponse(
+      ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* a_mvlssimplerequestgetstateresponse);
+  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* unsafe_arena_release_a_mvlssimplerequestgetstateresponse();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSimpleRequestResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvlssimplerequestpreloadedresponse();
-  void set_has_mvlssimplerequestgetstateresponse();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvlssimplerequestpreloadedresponse();
+  void set_has_a_mvlssimplerequestgetstateresponse();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -550,9 +550,9 @@ class LSSimpleRequestResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* mvlssimplerequestpreloadedresponse_;
-      ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* mvlssimplerequestgetstateresponse_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* a_mvlssimplerequestpreloadedresponse_;
+      ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* a_mvlssimplerequestgetstateresponse_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -572,301 +572,301 @@ class LSSimpleRequestResponse final :
 #endif  // __GNUC__
 // LSSimpleRequestPreloadedResponse
 
-// required bool preloaded = 1;
-inline bool LSSimpleRequestPreloadedResponse::_internal_has_preloaded() const {
+// required bool a_preloaded = 1;
+inline bool LSSimpleRequestPreloadedResponse::_internal_has_a_preloaded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSSimpleRequestPreloadedResponse::has_preloaded() const {
-  return _internal_has_preloaded();
+inline bool LSSimpleRequestPreloadedResponse::has_a_preloaded() const {
+  return _internal_has_a_preloaded();
 }
-inline void LSSimpleRequestPreloadedResponse::clear_preloaded() {
-  _impl_.preloaded_ = false;
+inline void LSSimpleRequestPreloadedResponse::clear_a_preloaded() {
+  _impl_.a_preloaded_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool LSSimpleRequestPreloadedResponse::_internal_preloaded() const {
-  return _impl_.preloaded_;
+inline bool LSSimpleRequestPreloadedResponse::_internal_a_preloaded() const {
+  return _impl_.a_preloaded_;
 }
-inline bool LSSimpleRequestPreloadedResponse::preloaded() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse.preloaded)
-  return _internal_preloaded();
+inline bool LSSimpleRequestPreloadedResponse::a_preloaded() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse.a_preloaded)
+  return _internal_a_preloaded();
 }
-inline void LSSimpleRequestPreloadedResponse::_internal_set_preloaded(bool value) {
+inline void LSSimpleRequestPreloadedResponse::_internal_set_a_preloaded(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.preloaded_ = value;
+  _impl_.a_preloaded_ = value;
 }
-inline void LSSimpleRequestPreloadedResponse::set_preloaded(bool value) {
-  _internal_set_preloaded(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse.preloaded)
+inline void LSSimpleRequestPreloadedResponse::set_a_preloaded(bool value) {
+  _internal_set_a_preloaded(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse.a_preloaded)
 }
 
 // -------------------------------------------------------------------
 
 // LSSimpleRequestGetStateResponse
 
-// repeated .protobuf.mozilla.dom.LSItemInfo itemInfos = 1;
-inline int LSSimpleRequestGetStateResponse::_internal_iteminfos_size() const {
-  return _impl_.iteminfos_.size();
+// repeated .protobuf.mozilla.dom.LSItemInfo a_itemInfos = 1;
+inline int LSSimpleRequestGetStateResponse::_internal_a_iteminfos_size() const {
+  return _impl_.a_iteminfos_.size();
 }
-inline int LSSimpleRequestGetStateResponse::iteminfos_size() const {
-  return _internal_iteminfos_size();
+inline int LSSimpleRequestGetStateResponse::a_iteminfos_size() const {
+  return _internal_a_iteminfos_size();
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* LSSimpleRequestGetStateResponse::mutable_iteminfos(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.itemInfos)
-  return _impl_.iteminfos_.Mutable(index);
+inline ::protobuf::mozilla::dom::LSItemInfo* LSSimpleRequestGetStateResponse::mutable_a_iteminfos(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.a_itemInfos)
+  return _impl_.a_iteminfos_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >*
-LSSimpleRequestGetStateResponse::mutable_iteminfos() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.itemInfos)
-  return &_impl_.iteminfos_;
+LSSimpleRequestGetStateResponse::mutable_a_iteminfos() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.a_itemInfos)
+  return &_impl_.a_iteminfos_;
 }
-inline const ::protobuf::mozilla::dom::LSItemInfo& LSSimpleRequestGetStateResponse::_internal_iteminfos(int index) const {
-  return _impl_.iteminfos_.Get(index);
+inline const ::protobuf::mozilla::dom::LSItemInfo& LSSimpleRequestGetStateResponse::_internal_a_iteminfos(int index) const {
+  return _impl_.a_iteminfos_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::LSItemInfo& LSSimpleRequestGetStateResponse::iteminfos(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.itemInfos)
-  return _internal_iteminfos(index);
+inline const ::protobuf::mozilla::dom::LSItemInfo& LSSimpleRequestGetStateResponse::a_iteminfos(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.a_itemInfos)
+  return _internal_a_iteminfos(index);
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* LSSimpleRequestGetStateResponse::_internal_add_iteminfos() {
-  return _impl_.iteminfos_.Add();
+inline ::protobuf::mozilla::dom::LSItemInfo* LSSimpleRequestGetStateResponse::_internal_add_a_iteminfos() {
+  return _impl_.a_iteminfos_.Add();
 }
-inline ::protobuf::mozilla::dom::LSItemInfo* LSSimpleRequestGetStateResponse::add_iteminfos() {
-  ::protobuf::mozilla::dom::LSItemInfo* _add = _internal_add_iteminfos();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.itemInfos)
+inline ::protobuf::mozilla::dom::LSItemInfo* LSSimpleRequestGetStateResponse::add_a_iteminfos() {
+  ::protobuf::mozilla::dom::LSItemInfo* _add = _internal_add_a_iteminfos();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.a_itemInfos)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::LSItemInfo >&
-LSSimpleRequestGetStateResponse::iteminfos() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.itemInfos)
-  return _impl_.iteminfos_;
+LSSimpleRequestGetStateResponse::a_iteminfos() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse.a_itemInfos)
+  return _impl_.a_iteminfos_;
 }
 
 // -------------------------------------------------------------------
 
 // LSSimpleRequestResponse
 
-// bytes mVnsresult = 1;
-inline bool LSSimpleRequestResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool LSSimpleRequestResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool LSSimpleRequestResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool LSSimpleRequestResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void LSSimpleRequestResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void LSSimpleRequestResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void LSSimpleRequestResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void LSSimpleRequestResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& LSSimpleRequestResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& LSSimpleRequestResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void LSSimpleRequestResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void LSSimpleRequestResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSimpleRequestResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVnsresult)
 }
-inline std::string* LSSimpleRequestResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestResponse.mVnsresult)
+inline std::string* LSSimpleRequestResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& LSSimpleRequestResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& LSSimpleRequestResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void LSSimpleRequestResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void LSSimpleRequestResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSimpleRequestResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* LSSimpleRequestResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* LSSimpleRequestResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSimpleRequestResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* LSSimpleRequestResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void LSSimpleRequestResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void LSSimpleRequestResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSimpleRequestResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse mVLSSimpleRequestPreloadedResponse = 2;
-inline bool LSSimpleRequestResponse::_internal_has_mvlssimplerequestpreloadedresponse() const {
-  return content_case() == kMVLSSimpleRequestPreloadedResponse;
+// .protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse a_mVLSSimpleRequestPreloadedResponse = 2;
+inline bool LSSimpleRequestResponse::_internal_has_a_mvlssimplerequestpreloadedresponse() const {
+  return content_case() == kAMVLSSimpleRequestPreloadedResponse;
 }
-inline bool LSSimpleRequestResponse::has_mvlssimplerequestpreloadedresponse() const {
-  return _internal_has_mvlssimplerequestpreloadedresponse();
+inline bool LSSimpleRequestResponse::has_a_mvlssimplerequestpreloadedresponse() const {
+  return _internal_has_a_mvlssimplerequestpreloadedresponse();
 }
-inline void LSSimpleRequestResponse::set_has_mvlssimplerequestpreloadedresponse() {
-  _impl_._oneof_case_[0] = kMVLSSimpleRequestPreloadedResponse;
+inline void LSSimpleRequestResponse::set_has_a_mvlssimplerequestpreloadedresponse() {
+  _impl_._oneof_case_[0] = kAMVLSSimpleRequestPreloadedResponse;
 }
-inline void LSSimpleRequestResponse::clear_mvlssimplerequestpreloadedresponse() {
-  if (_internal_has_mvlssimplerequestpreloadedresponse()) {
+inline void LSSimpleRequestResponse::clear_a_mvlssimplerequestpreloadedresponse() {
+  if (_internal_has_a_mvlssimplerequestpreloadedresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlssimplerequestpreloadedresponse_;
+      delete _impl_.content_.a_mvlssimplerequestpreloadedresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::release_mvlssimplerequestpreloadedresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestPreloadedResponse)
-  if (_internal_has_mvlssimplerequestpreloadedresponse()) {
+inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::release_a_mvlssimplerequestpreloadedresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestPreloadedResponse)
+  if (_internal_has_a_mvlssimplerequestpreloadedresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* temp = _impl_.content_.mvlssimplerequestpreloadedresponse_;
+    ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* temp = _impl_.content_.a_mvlssimplerequestpreloadedresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlssimplerequestpreloadedresponse_ = nullptr;
+    _impl_.content_.a_mvlssimplerequestpreloadedresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& LSSimpleRequestResponse::_internal_mvlssimplerequestpreloadedresponse() const {
-  return _internal_has_mvlssimplerequestpreloadedresponse()
-      ? *_impl_.content_.mvlssimplerequestpreloadedresponse_
+inline const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& LSSimpleRequestResponse::_internal_a_mvlssimplerequestpreloadedresponse() const {
+  return _internal_has_a_mvlssimplerequestpreloadedresponse()
+      ? *_impl_.content_.a_mvlssimplerequestpreloadedresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse&>(::protobuf::mozilla::dom::_LSSimpleRequestPreloadedResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& LSSimpleRequestResponse::mvlssimplerequestpreloadedresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestPreloadedResponse)
-  return _internal_mvlssimplerequestpreloadedresponse();
+inline const ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse& LSSimpleRequestResponse::a_mvlssimplerequestpreloadedresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestPreloadedResponse)
+  return _internal_a_mvlssimplerequestpreloadedresponse();
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::unsafe_arena_release_mvlssimplerequestpreloadedresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestPreloadedResponse)
-  if (_internal_has_mvlssimplerequestpreloadedresponse()) {
+inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::unsafe_arena_release_a_mvlssimplerequestpreloadedresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestPreloadedResponse)
+  if (_internal_has_a_mvlssimplerequestpreloadedresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* temp = _impl_.content_.mvlssimplerequestpreloadedresponse_;
-    _impl_.content_.mvlssimplerequestpreloadedresponse_ = nullptr;
+    ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* temp = _impl_.content_.a_mvlssimplerequestpreloadedresponse_;
+    _impl_.content_.a_mvlssimplerequestpreloadedresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSSimpleRequestResponse::unsafe_arena_set_allocated_mvlssimplerequestpreloadedresponse(::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* mvlssimplerequestpreloadedresponse) {
+inline void LSSimpleRequestResponse::unsafe_arena_set_allocated_a_mvlssimplerequestpreloadedresponse(::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* a_mvlssimplerequestpreloadedresponse) {
   clear_content();
-  if (mvlssimplerequestpreloadedresponse) {
-    set_has_mvlssimplerequestpreloadedresponse();
-    _impl_.content_.mvlssimplerequestpreloadedresponse_ = mvlssimplerequestpreloadedresponse;
+  if (a_mvlssimplerequestpreloadedresponse) {
+    set_has_a_mvlssimplerequestpreloadedresponse();
+    _impl_.content_.a_mvlssimplerequestpreloadedresponse_ = a_mvlssimplerequestpreloadedresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestPreloadedResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestPreloadedResponse)
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::_internal_mutable_mvlssimplerequestpreloadedresponse() {
-  if (!_internal_has_mvlssimplerequestpreloadedresponse()) {
+inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::_internal_mutable_a_mvlssimplerequestpreloadedresponse() {
+  if (!_internal_has_a_mvlssimplerequestpreloadedresponse()) {
     clear_content();
-    set_has_mvlssimplerequestpreloadedresponse();
-    _impl_.content_.mvlssimplerequestpreloadedresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse >(GetArenaForAllocation());
+    set_has_a_mvlssimplerequestpreloadedresponse();
+    _impl_.content_.a_mvlssimplerequestpreloadedresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlssimplerequestpreloadedresponse_;
+  return _impl_.content_.a_mvlssimplerequestpreloadedresponse_;
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::mutable_mvlssimplerequestpreloadedresponse() {
-  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* _msg = _internal_mutable_mvlssimplerequestpreloadedresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestPreloadedResponse)
+inline ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* LSSimpleRequestResponse::mutable_a_mvlssimplerequestpreloadedresponse() {
+  ::protobuf::mozilla::dom::LSSimpleRequestPreloadedResponse* _msg = _internal_mutable_a_mvlssimplerequestpreloadedresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestPreloadedResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSSimpleRequestGetStateResponse mVLSSimpleRequestGetStateResponse = 3;
-inline bool LSSimpleRequestResponse::_internal_has_mvlssimplerequestgetstateresponse() const {
-  return content_case() == kMVLSSimpleRequestGetStateResponse;
+// .protobuf.mozilla.dom.LSSimpleRequestGetStateResponse a_mVLSSimpleRequestGetStateResponse = 3;
+inline bool LSSimpleRequestResponse::_internal_has_a_mvlssimplerequestgetstateresponse() const {
+  return content_case() == kAMVLSSimpleRequestGetStateResponse;
 }
-inline bool LSSimpleRequestResponse::has_mvlssimplerequestgetstateresponse() const {
-  return _internal_has_mvlssimplerequestgetstateresponse();
+inline bool LSSimpleRequestResponse::has_a_mvlssimplerequestgetstateresponse() const {
+  return _internal_has_a_mvlssimplerequestgetstateresponse();
 }
-inline void LSSimpleRequestResponse::set_has_mvlssimplerequestgetstateresponse() {
-  _impl_._oneof_case_[0] = kMVLSSimpleRequestGetStateResponse;
+inline void LSSimpleRequestResponse::set_has_a_mvlssimplerequestgetstateresponse() {
+  _impl_._oneof_case_[0] = kAMVLSSimpleRequestGetStateResponse;
 }
-inline void LSSimpleRequestResponse::clear_mvlssimplerequestgetstateresponse() {
-  if (_internal_has_mvlssimplerequestgetstateresponse()) {
+inline void LSSimpleRequestResponse::clear_a_mvlssimplerequestgetstateresponse() {
+  if (_internal_has_a_mvlssimplerequestgetstateresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlssimplerequestgetstateresponse_;
+      delete _impl_.content_.a_mvlssimplerequestgetstateresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::release_mvlssimplerequestgetstateresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestGetStateResponse)
-  if (_internal_has_mvlssimplerequestgetstateresponse()) {
+inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::release_a_mvlssimplerequestgetstateresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestGetStateResponse)
+  if (_internal_has_a_mvlssimplerequestgetstateresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* temp = _impl_.content_.mvlssimplerequestgetstateresponse_;
+    ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* temp = _impl_.content_.a_mvlssimplerequestgetstateresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlssimplerequestgetstateresponse_ = nullptr;
+    _impl_.content_.a_mvlssimplerequestgetstateresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& LSSimpleRequestResponse::_internal_mvlssimplerequestgetstateresponse() const {
-  return _internal_has_mvlssimplerequestgetstateresponse()
-      ? *_impl_.content_.mvlssimplerequestgetstateresponse_
+inline const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& LSSimpleRequestResponse::_internal_a_mvlssimplerequestgetstateresponse() const {
+  return _internal_has_a_mvlssimplerequestgetstateresponse()
+      ? *_impl_.content_.a_mvlssimplerequestgetstateresponse_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse&>(::protobuf::mozilla::dom::_LSSimpleRequestGetStateResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& LSSimpleRequestResponse::mvlssimplerequestgetstateresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestGetStateResponse)
-  return _internal_mvlssimplerequestgetstateresponse();
+inline const ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse& LSSimpleRequestResponse::a_mvlssimplerequestgetstateresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestGetStateResponse)
+  return _internal_a_mvlssimplerequestgetstateresponse();
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::unsafe_arena_release_mvlssimplerequestgetstateresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestGetStateResponse)
-  if (_internal_has_mvlssimplerequestgetstateresponse()) {
+inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::unsafe_arena_release_a_mvlssimplerequestgetstateresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestGetStateResponse)
+  if (_internal_has_a_mvlssimplerequestgetstateresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* temp = _impl_.content_.mvlssimplerequestgetstateresponse_;
-    _impl_.content_.mvlssimplerequestgetstateresponse_ = nullptr;
+    ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* temp = _impl_.content_.a_mvlssimplerequestgetstateresponse_;
+    _impl_.content_.a_mvlssimplerequestgetstateresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSSimpleRequestResponse::unsafe_arena_set_allocated_mvlssimplerequestgetstateresponse(::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* mvlssimplerequestgetstateresponse) {
+inline void LSSimpleRequestResponse::unsafe_arena_set_allocated_a_mvlssimplerequestgetstateresponse(::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* a_mvlssimplerequestgetstateresponse) {
   clear_content();
-  if (mvlssimplerequestgetstateresponse) {
-    set_has_mvlssimplerequestgetstateresponse();
-    _impl_.content_.mvlssimplerequestgetstateresponse_ = mvlssimplerequestgetstateresponse;
+  if (a_mvlssimplerequestgetstateresponse) {
+    set_has_a_mvlssimplerequestgetstateresponse();
+    _impl_.content_.a_mvlssimplerequestgetstateresponse_ = a_mvlssimplerequestgetstateresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestGetStateResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestGetStateResponse)
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::_internal_mutable_mvlssimplerequestgetstateresponse() {
-  if (!_internal_has_mvlssimplerequestgetstateresponse()) {
+inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::_internal_mutable_a_mvlssimplerequestgetstateresponse() {
+  if (!_internal_has_a_mvlssimplerequestgetstateresponse()) {
     clear_content();
-    set_has_mvlssimplerequestgetstateresponse();
-    _impl_.content_.mvlssimplerequestgetstateresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse >(GetArenaForAllocation());
+    set_has_a_mvlssimplerequestgetstateresponse();
+    _impl_.content_.a_mvlssimplerequestgetstateresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlssimplerequestgetstateresponse_;
+  return _impl_.content_.a_mvlssimplerequestgetstateresponse_;
 }
-inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::mutable_mvlssimplerequestgetstateresponse() {
-  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* _msg = _internal_mutable_mvlssimplerequestgetstateresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestResponse.mVLSSimpleRequestGetStateResponse)
+inline ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* LSSimpleRequestResponse::mutable_a_mvlssimplerequestgetstateresponse() {
+  ::protobuf::mozilla::dom::LSSimpleRequestGetStateResponse* _msg = _internal_mutable_a_mvlssimplerequestgetstateresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSimpleRequestResponse.a_mVLSSimpleRequestGetStateResponse)
   return _msg;
 }
 

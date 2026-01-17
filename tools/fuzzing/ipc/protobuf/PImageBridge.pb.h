@@ -219,25 +219,25 @@ class Msg_ParentAsyncMessages final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAMessagesFieldNumber = 1,
+    kAAMessagesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.layers.AsyncParentMessageData aMessages = 1;
-  int amessages_size() const;
+  // repeated .protobuf.mozilla.layers.AsyncParentMessageData a_aMessages = 1;
+  int a_amessages_size() const;
   private:
-  int _internal_amessages_size() const;
+  int _internal_a_amessages_size() const;
   public:
-  void clear_amessages();
-  ::protobuf::mozilla::layers::AsyncParentMessageData* mutable_amessages(int index);
+  void clear_a_amessages();
+  ::protobuf::mozilla::layers::AsyncParentMessageData* mutable_a_amessages(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::AsyncParentMessageData >*
-      mutable_amessages();
+      mutable_a_amessages();
   private:
-  const ::protobuf::mozilla::layers::AsyncParentMessageData& _internal_amessages(int index) const;
-  ::protobuf::mozilla::layers::AsyncParentMessageData* _internal_add_amessages();
+  const ::protobuf::mozilla::layers::AsyncParentMessageData& _internal_a_amessages(int index) const;
+  ::protobuf::mozilla::layers::AsyncParentMessageData* _internal_add_a_amessages();
   public:
-  const ::protobuf::mozilla::layers::AsyncParentMessageData& amessages(int index) const;
-  ::protobuf::mozilla::layers::AsyncParentMessageData* add_amessages();
+  const ::protobuf::mozilla::layers::AsyncParentMessageData& a_amessages(int index) const;
+  ::protobuf::mozilla::layers::AsyncParentMessageData* add_a_amessages();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::AsyncParentMessageData >&
-      amessages() const;
+      a_amessages() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages)
  private:
@@ -247,7 +247,7 @@ class Msg_ParentAsyncMessages final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::AsyncParentMessageData > amessages_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::AsyncParentMessageData > a_amessages_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -365,25 +365,25 @@ class Msg_DidComposite final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kANotificationsFieldNumber = 1,
+    kAANotificationsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.layers.ImageCompositeNotification aNotifications = 1;
-  int anotifications_size() const;
+  // repeated .protobuf.mozilla.layers.ImageCompositeNotification a_aNotifications = 1;
+  int a_anotifications_size() const;
   private:
-  int _internal_anotifications_size() const;
+  int _internal_a_anotifications_size() const;
   public:
-  void clear_anotifications();
-  ::protobuf::mozilla::layers::ImageCompositeNotification* mutable_anotifications(int index);
+  void clear_a_anotifications();
+  ::protobuf::mozilla::layers::ImageCompositeNotification* mutable_a_anotifications(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::ImageCompositeNotification >*
-      mutable_anotifications();
+      mutable_a_anotifications();
   private:
-  const ::protobuf::mozilla::layers::ImageCompositeNotification& _internal_anotifications(int index) const;
-  ::protobuf::mozilla::layers::ImageCompositeNotification* _internal_add_anotifications();
+  const ::protobuf::mozilla::layers::ImageCompositeNotification& _internal_a_anotifications(int index) const;
+  ::protobuf::mozilla::layers::ImageCompositeNotification* _internal_add_a_anotifications();
   public:
-  const ::protobuf::mozilla::layers::ImageCompositeNotification& anotifications(int index) const;
-  ::protobuf::mozilla::layers::ImageCompositeNotification* add_anotifications();
+  const ::protobuf::mozilla::layers::ImageCompositeNotification& a_anotifications(int index) const;
+  ::protobuf::mozilla::layers::ImageCompositeNotification* add_a_anotifications();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::ImageCompositeNotification >&
-      anotifications() const;
+      a_anotifications() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite)
  private:
@@ -393,7 +393,7 @@ class Msg_DidComposite final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::ImageCompositeNotification > anotifications_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::ImageCompositeNotification > a_anotifications_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -511,38 +511,38 @@ class Msg_ReportFramesDropped final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHandleFieldNumber = 1,
-    kAFramesFieldNumber = 2,
+    kAAHandleFieldNumber = 1,
+    kAAFramesFieldNumber = 2,
   };
-  // required bytes aHandle = 1;
-  bool has_ahandle() const;
+  // required bytes a_aHandle = 1;
+  bool has_a_ahandle() const;
   private:
-  bool _internal_has_ahandle() const;
+  bool _internal_has_a_ahandle() const;
   public:
-  void clear_ahandle();
-  const std::string& ahandle() const;
+  void clear_a_ahandle();
+  const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahandle();
-  PROTOBUF_NODISCARD std::string* release_ahandle();
-  void set_allocated_ahandle(std::string* ahandle);
+  void set_a_ahandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahandle();
+  PROTOBUF_NODISCARD std::string* release_a_ahandle();
+  void set_allocated_a_ahandle(std::string* a_ahandle);
   private:
-  const std::string& _internal_ahandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahandle(const std::string& value);
-  std::string* _internal_mutable_ahandle();
+  const std::string& _internal_a_ahandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahandle(const std::string& value);
+  std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 aFrames = 2;
-  bool has_aframes() const;
+  // required uint32 a_aFrames = 2;
+  bool has_a_aframes() const;
   private:
-  bool _internal_has_aframes() const;
+  bool _internal_has_a_aframes() const;
   public:
-  void clear_aframes();
-  uint32_t aframes() const;
-  void set_aframes(uint32_t value);
+  void clear_a_aframes();
+  uint32_t a_aframes() const;
+  void set_a_aframes(uint32_t value);
   private:
-  uint32_t _internal_aframes() const;
-  void _internal_set_aframes(uint32_t value);
+  uint32_t _internal_a_aframes() const;
+  void _internal_set_a_aframes(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped)
@@ -558,8 +558,8 @@ class Msg_ReportFramesDropped final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahandle_;
-    uint32_t aframes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
+    uint32_t a_aframes_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PImageBridge_2eproto;
@@ -676,57 +676,57 @@ class Msg_Update final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOpsFieldNumber = 1,
-    kToDestroyFieldNumber = 2,
-    kFwdTransactionIdFieldNumber = 3,
+    kAOpsFieldNumber = 1,
+    kAToDestroyFieldNumber = 2,
+    kAFwdTransactionIdFieldNumber = 3,
   };
-  // repeated .protobuf.mozilla.layers.CompositableOperation ops = 1;
-  int ops_size() const;
+  // repeated .protobuf.mozilla.layers.CompositableOperation a_ops = 1;
+  int a_ops_size() const;
   private:
-  int _internal_ops_size() const;
+  int _internal_a_ops_size() const;
   public:
-  void clear_ops();
-  ::protobuf::mozilla::layers::CompositableOperation* mutable_ops(int index);
+  void clear_a_ops();
+  ::protobuf::mozilla::layers::CompositableOperation* mutable_a_ops(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::CompositableOperation >*
-      mutable_ops();
+      mutable_a_ops();
   private:
-  const ::protobuf::mozilla::layers::CompositableOperation& _internal_ops(int index) const;
-  ::protobuf::mozilla::layers::CompositableOperation* _internal_add_ops();
+  const ::protobuf::mozilla::layers::CompositableOperation& _internal_a_ops(int index) const;
+  ::protobuf::mozilla::layers::CompositableOperation* _internal_add_a_ops();
   public:
-  const ::protobuf::mozilla::layers::CompositableOperation& ops(int index) const;
-  ::protobuf::mozilla::layers::CompositableOperation* add_ops();
+  const ::protobuf::mozilla::layers::CompositableOperation& a_ops(int index) const;
+  ::protobuf::mozilla::layers::CompositableOperation* add_a_ops();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::CompositableOperation >&
-      ops() const;
+      a_ops() const;
 
-  // repeated .protobuf.mozilla.layers.OpDestroy toDestroy = 2;
-  int todestroy_size() const;
+  // repeated .protobuf.mozilla.layers.OpDestroy a_toDestroy = 2;
+  int a_todestroy_size() const;
   private:
-  int _internal_todestroy_size() const;
+  int _internal_a_todestroy_size() const;
   public:
-  void clear_todestroy();
-  ::protobuf::mozilla::layers::OpDestroy* mutable_todestroy(int index);
+  void clear_a_todestroy();
+  ::protobuf::mozilla::layers::OpDestroy* mutable_a_todestroy(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy >*
-      mutable_todestroy();
+      mutable_a_todestroy();
   private:
-  const ::protobuf::mozilla::layers::OpDestroy& _internal_todestroy(int index) const;
-  ::protobuf::mozilla::layers::OpDestroy* _internal_add_todestroy();
+  const ::protobuf::mozilla::layers::OpDestroy& _internal_a_todestroy(int index) const;
+  ::protobuf::mozilla::layers::OpDestroy* _internal_add_a_todestroy();
   public:
-  const ::protobuf::mozilla::layers::OpDestroy& todestroy(int index) const;
-  ::protobuf::mozilla::layers::OpDestroy* add_todestroy();
+  const ::protobuf::mozilla::layers::OpDestroy& a_todestroy(int index) const;
+  ::protobuf::mozilla::layers::OpDestroy* add_a_todestroy();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy >&
-      todestroy() const;
+      a_todestroy() const;
 
-  // required uint64 fwdTransactionId = 3;
-  bool has_fwdtransactionid() const;
+  // required uint64 a_fwdTransactionId = 3;
+  bool has_a_fwdtransactionid() const;
   private:
-  bool _internal_has_fwdtransactionid() const;
+  bool _internal_has_a_fwdtransactionid() const;
   public:
-  void clear_fwdtransactionid();
-  uint64_t fwdtransactionid() const;
-  void set_fwdtransactionid(uint64_t value);
+  void clear_a_fwdtransactionid();
+  uint64_t a_fwdtransactionid() const;
+  void set_a_fwdtransactionid(uint64_t value);
   private:
-  uint64_t _internal_fwdtransactionid() const;
-  void _internal_set_fwdtransactionid(uint64_t value);
+  uint64_t _internal_a_fwdtransactionid() const;
+  void _internal_set_a_fwdtransactionid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_Update)
@@ -739,9 +739,9 @@ class Msg_Update final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::CompositableOperation > ops_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy > todestroy_;
-    uint64_t fwdtransactionid_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::CompositableOperation > a_ops_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy > a_todestroy_;
+    uint64_t a_fwdtransactionid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PImageBridge_2eproto;
@@ -982,114 +982,114 @@ class Msg_PTextureConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABackendFieldNumber = 3,
-    kATextureFlagsFieldNumber = 4,
-    kAExternalImageIdFieldNumber = 6,
-    kASharedDataFieldNumber = 1,
-    kAReadLockFieldNumber = 2,
-    kASerialFieldNumber = 5,
+    kAABackendFieldNumber = 3,
+    kAATextureFlagsFieldNumber = 4,
+    kAAExternalImageIdFieldNumber = 6,
+    kAASharedDataFieldNumber = 1,
+    kAAReadLockFieldNumber = 2,
+    kAASerialFieldNumber = 5,
   };
-  // required bytes aBackend = 3;
-  bool has_abackend() const;
+  // required bytes a_aBackend = 3;
+  bool has_a_abackend() const;
   private:
-  bool _internal_has_abackend() const;
+  bool _internal_has_a_abackend() const;
   public:
-  void clear_abackend();
-  const std::string& abackend() const;
+  void clear_a_abackend();
+  const std::string& a_abackend() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_abackend(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_abackend();
-  PROTOBUF_NODISCARD std::string* release_abackend();
-  void set_allocated_abackend(std::string* abackend);
+  void set_a_abackend(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_abackend();
+  PROTOBUF_NODISCARD std::string* release_a_abackend();
+  void set_allocated_a_abackend(std::string* a_abackend);
   private:
-  const std::string& _internal_abackend() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_abackend(const std::string& value);
-  std::string* _internal_mutable_abackend();
+  const std::string& _internal_a_abackend() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_abackend(const std::string& value);
+  std::string* _internal_mutable_a_abackend();
   public:
 
-  // required bytes aTextureFlags = 4;
-  bool has_atextureflags() const;
+  // required bytes a_aTextureFlags = 4;
+  bool has_a_atextureflags() const;
   private:
-  bool _internal_has_atextureflags() const;
+  bool _internal_has_a_atextureflags() const;
   public:
-  void clear_atextureflags();
-  const std::string& atextureflags() const;
+  void clear_a_atextureflags();
+  const std::string& a_atextureflags() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atextureflags(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atextureflags();
-  PROTOBUF_NODISCARD std::string* release_atextureflags();
-  void set_allocated_atextureflags(std::string* atextureflags);
+  void set_a_atextureflags(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atextureflags();
+  PROTOBUF_NODISCARD std::string* release_a_atextureflags();
+  void set_allocated_a_atextureflags(std::string* a_atextureflags);
   private:
-  const std::string& _internal_atextureflags() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atextureflags(const std::string& value);
-  std::string* _internal_mutable_atextureflags();
+  const std::string& _internal_a_atextureflags() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atextureflags(const std::string& value);
+  std::string* _internal_mutable_a_atextureflags();
   public:
 
-  // required bytes aExternalImageId = 6;
-  bool has_aexternalimageid() const;
+  // required bytes a_aExternalImageId = 6;
+  bool has_a_aexternalimageid() const;
   private:
-  bool _internal_has_aexternalimageid() const;
+  bool _internal_has_a_aexternalimageid() const;
   public:
-  void clear_aexternalimageid();
-  const std::string& aexternalimageid() const;
+  void clear_a_aexternalimageid();
+  const std::string& a_aexternalimageid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aexternalimageid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aexternalimageid();
-  PROTOBUF_NODISCARD std::string* release_aexternalimageid();
-  void set_allocated_aexternalimageid(std::string* aexternalimageid);
+  void set_a_aexternalimageid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aexternalimageid();
+  PROTOBUF_NODISCARD std::string* release_a_aexternalimageid();
+  void set_allocated_a_aexternalimageid(std::string* a_aexternalimageid);
   private:
-  const std::string& _internal_aexternalimageid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aexternalimageid(const std::string& value);
-  std::string* _internal_mutable_aexternalimageid();
+  const std::string& _internal_a_aexternalimageid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aexternalimageid(const std::string& value);
+  std::string* _internal_mutable_a_aexternalimageid();
   public:
 
-  // required .protobuf.mozilla.layers.SurfaceDescriptor aSharedData = 1;
-  bool has_ashareddata() const;
+  // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
+  bool has_a_ashareddata() const;
   private:
-  bool _internal_has_ashareddata() const;
+  bool _internal_has_a_ashareddata() const;
   public:
-  void clear_ashareddata();
-  const ::protobuf::mozilla::layers::SurfaceDescriptor& ashareddata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::SurfaceDescriptor* release_ashareddata();
-  ::protobuf::mozilla::layers::SurfaceDescriptor* mutable_ashareddata();
-  void set_allocated_ashareddata(::protobuf::mozilla::layers::SurfaceDescriptor* ashareddata);
+  void clear_a_ashareddata();
+  const ::protobuf::mozilla::layers::SurfaceDescriptor& a_ashareddata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::SurfaceDescriptor* release_a_ashareddata();
+  ::protobuf::mozilla::layers::SurfaceDescriptor* mutable_a_ashareddata();
+  void set_allocated_a_ashareddata(::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata);
   private:
-  const ::protobuf::mozilla::layers::SurfaceDescriptor& _internal_ashareddata() const;
-  ::protobuf::mozilla::layers::SurfaceDescriptor* _internal_mutable_ashareddata();
+  const ::protobuf::mozilla::layers::SurfaceDescriptor& _internal_a_ashareddata() const;
+  ::protobuf::mozilla::layers::SurfaceDescriptor* _internal_mutable_a_ashareddata();
   public:
-  void unsafe_arena_set_allocated_ashareddata(
-      ::protobuf::mozilla::layers::SurfaceDescriptor* ashareddata);
-  ::protobuf::mozilla::layers::SurfaceDescriptor* unsafe_arena_release_ashareddata();
+  void unsafe_arena_set_allocated_a_ashareddata(
+      ::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata);
+  ::protobuf::mozilla::layers::SurfaceDescriptor* unsafe_arena_release_a_ashareddata();
 
-  // required .protobuf.mozilla.layers.ReadLockDescriptor aReadLock = 2;
-  bool has_areadlock() const;
+  // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
+  bool has_a_areadlock() const;
   private:
-  bool _internal_has_areadlock() const;
+  bool _internal_has_a_areadlock() const;
   public:
-  void clear_areadlock();
-  const ::protobuf::mozilla::layers::ReadLockDescriptor& areadlock() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::ReadLockDescriptor* release_areadlock();
-  ::protobuf::mozilla::layers::ReadLockDescriptor* mutable_areadlock();
-  void set_allocated_areadlock(::protobuf::mozilla::layers::ReadLockDescriptor* areadlock);
+  void clear_a_areadlock();
+  const ::protobuf::mozilla::layers::ReadLockDescriptor& a_areadlock() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::ReadLockDescriptor* release_a_areadlock();
+  ::protobuf::mozilla::layers::ReadLockDescriptor* mutable_a_areadlock();
+  void set_allocated_a_areadlock(::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock);
   private:
-  const ::protobuf::mozilla::layers::ReadLockDescriptor& _internal_areadlock() const;
-  ::protobuf::mozilla::layers::ReadLockDescriptor* _internal_mutable_areadlock();
+  const ::protobuf::mozilla::layers::ReadLockDescriptor& _internal_a_areadlock() const;
+  ::protobuf::mozilla::layers::ReadLockDescriptor* _internal_mutable_a_areadlock();
   public:
-  void unsafe_arena_set_allocated_areadlock(
-      ::protobuf::mozilla::layers::ReadLockDescriptor* areadlock);
-  ::protobuf::mozilla::layers::ReadLockDescriptor* unsafe_arena_release_areadlock();
+  void unsafe_arena_set_allocated_a_areadlock(
+      ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock);
+  ::protobuf::mozilla::layers::ReadLockDescriptor* unsafe_arena_release_a_areadlock();
 
-  // required uint64 aSerial = 5;
-  bool has_aserial() const;
+  // required uint64 a_aSerial = 5;
+  bool has_a_aserial() const;
   private:
-  bool _internal_has_aserial() const;
+  bool _internal_has_a_aserial() const;
   public:
-  void clear_aserial();
-  uint64_t aserial() const;
-  void set_aserial(uint64_t value);
+  void clear_a_aserial();
+  uint64_t a_aserial() const;
+  void set_a_aserial(uint64_t value);
   private:
-  uint64_t _internal_aserial() const;
-  void _internal_set_aserial(uint64_t value);
+  uint64_t _internal_a_aserial() const;
+  void _internal_set_a_aserial(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor)
@@ -1105,12 +1105,12 @@ class Msg_PTextureConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr abackend_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atextureflags_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aexternalimageid_;
-    ::protobuf::mozilla::layers::SurfaceDescriptor* ashareddata_;
-    ::protobuf::mozilla::layers::ReadLockDescriptor* areadlock_;
-    uint64_t aserial_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abackend_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureflags_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aexternalimageid_;
+    ::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata_;
+    ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock_;
+    uint64_t a_aserial_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PImageBridge_2eproto;
@@ -1599,43 +1599,43 @@ class Msg_NewCompositable final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHandleFieldNumber = 1,
-    kAInfoFieldNumber = 2,
+    kAAHandleFieldNumber = 1,
+    kAAInfoFieldNumber = 2,
   };
-  // required bytes aHandle = 1;
-  bool has_ahandle() const;
+  // required bytes a_aHandle = 1;
+  bool has_a_ahandle() const;
   private:
-  bool _internal_has_ahandle() const;
+  bool _internal_has_a_ahandle() const;
   public:
-  void clear_ahandle();
-  const std::string& ahandle() const;
+  void clear_a_ahandle();
+  const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahandle();
-  PROTOBUF_NODISCARD std::string* release_ahandle();
-  void set_allocated_ahandle(std::string* ahandle);
+  void set_a_ahandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahandle();
+  PROTOBUF_NODISCARD std::string* release_a_ahandle();
+  void set_allocated_a_ahandle(std::string* a_ahandle);
   private:
-  const std::string& _internal_ahandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahandle(const std::string& value);
-  std::string* _internal_mutable_ahandle();
+  const std::string& _internal_a_ahandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahandle(const std::string& value);
+  std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required bytes aInfo = 2;
-  bool has_ainfo() const;
+  // required bytes a_aInfo = 2;
+  bool has_a_ainfo() const;
   private:
-  bool _internal_has_ainfo() const;
+  bool _internal_has_a_ainfo() const;
   public:
-  void clear_ainfo();
-  const std::string& ainfo() const;
+  void clear_a_ainfo();
+  const std::string& a_ainfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ainfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ainfo();
-  PROTOBUF_NODISCARD std::string* release_ainfo();
-  void set_allocated_ainfo(std::string* ainfo);
+  void set_a_ainfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ainfo();
+  PROTOBUF_NODISCARD std::string* release_a_ainfo();
+  void set_allocated_a_ainfo(std::string* a_ainfo);
   private:
-  const std::string& _internal_ainfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ainfo(const std::string& value);
-  std::string* _internal_mutable_ainfo();
+  const std::string& _internal_a_ainfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ainfo(const std::string& value);
+  std::string* _internal_mutable_a_ainfo();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable)
@@ -1651,8 +1651,8 @@ class Msg_NewCompositable final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahandle_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ainfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ainfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PImageBridge_2eproto;
@@ -1893,24 +1893,24 @@ class Msg_ReleaseCompositable final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHandleFieldNumber = 1,
+    kAAHandleFieldNumber = 1,
   };
-  // required bytes aHandle = 1;
-  bool has_ahandle() const;
+  // required bytes a_aHandle = 1;
+  bool has_a_ahandle() const;
   private:
-  bool _internal_has_ahandle() const;
+  bool _internal_has_a_ahandle() const;
   public:
-  void clear_ahandle();
-  const std::string& ahandle() const;
+  void clear_a_ahandle();
+  const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahandle();
-  PROTOBUF_NODISCARD std::string* release_ahandle();
-  void set_allocated_ahandle(std::string* ahandle);
+  void set_a_ahandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahandle();
+  PROTOBUF_NODISCARD std::string* release_a_ahandle();
+  void set_allocated_a_ahandle(std::string* a_ahandle);
   private:
-  const std::string& _internal_ahandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahandle(const std::string& value);
-  std::string* _internal_mutable_ahandle();
+  const std::string& _internal_a_ahandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahandle(const std::string& value);
+  std::string* _internal_mutable_a_ahandle();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable)
@@ -1923,7 +1923,7 @@ class Msg_ReleaseCompositable final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PImageBridge_2eproto;
@@ -1939,288 +1939,288 @@ class Msg_ReleaseCompositable final :
 #endif  // __GNUC__
 // Msg_ParentAsyncMessages
 
-// repeated .protobuf.mozilla.layers.AsyncParentMessageData aMessages = 1;
-inline int Msg_ParentAsyncMessages::_internal_amessages_size() const {
-  return _impl_.amessages_.size();
+// repeated .protobuf.mozilla.layers.AsyncParentMessageData a_aMessages = 1;
+inline int Msg_ParentAsyncMessages::_internal_a_amessages_size() const {
+  return _impl_.a_amessages_.size();
 }
-inline int Msg_ParentAsyncMessages::amessages_size() const {
-  return _internal_amessages_size();
+inline int Msg_ParentAsyncMessages::a_amessages_size() const {
+  return _internal_a_amessages_size();
 }
-inline ::protobuf::mozilla::layers::AsyncParentMessageData* Msg_ParentAsyncMessages::mutable_amessages(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.aMessages)
-  return _impl_.amessages_.Mutable(index);
+inline ::protobuf::mozilla::layers::AsyncParentMessageData* Msg_ParentAsyncMessages::mutable_a_amessages(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.a_aMessages)
+  return _impl_.a_amessages_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::AsyncParentMessageData >*
-Msg_ParentAsyncMessages::mutable_amessages() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.aMessages)
-  return &_impl_.amessages_;
+Msg_ParentAsyncMessages::mutable_a_amessages() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.a_aMessages)
+  return &_impl_.a_amessages_;
 }
-inline const ::protobuf::mozilla::layers::AsyncParentMessageData& Msg_ParentAsyncMessages::_internal_amessages(int index) const {
-  return _impl_.amessages_.Get(index);
+inline const ::protobuf::mozilla::layers::AsyncParentMessageData& Msg_ParentAsyncMessages::_internal_a_amessages(int index) const {
+  return _impl_.a_amessages_.Get(index);
 }
-inline const ::protobuf::mozilla::layers::AsyncParentMessageData& Msg_ParentAsyncMessages::amessages(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.aMessages)
-  return _internal_amessages(index);
+inline const ::protobuf::mozilla::layers::AsyncParentMessageData& Msg_ParentAsyncMessages::a_amessages(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.a_aMessages)
+  return _internal_a_amessages(index);
 }
-inline ::protobuf::mozilla::layers::AsyncParentMessageData* Msg_ParentAsyncMessages::_internal_add_amessages() {
-  return _impl_.amessages_.Add();
+inline ::protobuf::mozilla::layers::AsyncParentMessageData* Msg_ParentAsyncMessages::_internal_add_a_amessages() {
+  return _impl_.a_amessages_.Add();
 }
-inline ::protobuf::mozilla::layers::AsyncParentMessageData* Msg_ParentAsyncMessages::add_amessages() {
-  ::protobuf::mozilla::layers::AsyncParentMessageData* _add = _internal_add_amessages();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.aMessages)
+inline ::protobuf::mozilla::layers::AsyncParentMessageData* Msg_ParentAsyncMessages::add_a_amessages() {
+  ::protobuf::mozilla::layers::AsyncParentMessageData* _add = _internal_add_a_amessages();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.a_aMessages)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::AsyncParentMessageData >&
-Msg_ParentAsyncMessages::amessages() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.aMessages)
-  return _impl_.amessages_;
+Msg_ParentAsyncMessages::a_amessages() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_ParentAsyncMessages.a_aMessages)
+  return _impl_.a_amessages_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DidComposite
 
-// repeated .protobuf.mozilla.layers.ImageCompositeNotification aNotifications = 1;
-inline int Msg_DidComposite::_internal_anotifications_size() const {
-  return _impl_.anotifications_.size();
+// repeated .protobuf.mozilla.layers.ImageCompositeNotification a_aNotifications = 1;
+inline int Msg_DidComposite::_internal_a_anotifications_size() const {
+  return _impl_.a_anotifications_.size();
 }
-inline int Msg_DidComposite::anotifications_size() const {
-  return _internal_anotifications_size();
+inline int Msg_DidComposite::a_anotifications_size() const {
+  return _internal_a_anotifications_size();
 }
-inline ::protobuf::mozilla::layers::ImageCompositeNotification* Msg_DidComposite::mutable_anotifications(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.aNotifications)
-  return _impl_.anotifications_.Mutable(index);
+inline ::protobuf::mozilla::layers::ImageCompositeNotification* Msg_DidComposite::mutable_a_anotifications(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.a_aNotifications)
+  return _impl_.a_anotifications_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::ImageCompositeNotification >*
-Msg_DidComposite::mutable_anotifications() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.aNotifications)
-  return &_impl_.anotifications_;
+Msg_DidComposite::mutable_a_anotifications() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.a_aNotifications)
+  return &_impl_.a_anotifications_;
 }
-inline const ::protobuf::mozilla::layers::ImageCompositeNotification& Msg_DidComposite::_internal_anotifications(int index) const {
-  return _impl_.anotifications_.Get(index);
+inline const ::protobuf::mozilla::layers::ImageCompositeNotification& Msg_DidComposite::_internal_a_anotifications(int index) const {
+  return _impl_.a_anotifications_.Get(index);
 }
-inline const ::protobuf::mozilla::layers::ImageCompositeNotification& Msg_DidComposite::anotifications(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.aNotifications)
-  return _internal_anotifications(index);
+inline const ::protobuf::mozilla::layers::ImageCompositeNotification& Msg_DidComposite::a_anotifications(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.a_aNotifications)
+  return _internal_a_anotifications(index);
 }
-inline ::protobuf::mozilla::layers::ImageCompositeNotification* Msg_DidComposite::_internal_add_anotifications() {
-  return _impl_.anotifications_.Add();
+inline ::protobuf::mozilla::layers::ImageCompositeNotification* Msg_DidComposite::_internal_add_a_anotifications() {
+  return _impl_.a_anotifications_.Add();
 }
-inline ::protobuf::mozilla::layers::ImageCompositeNotification* Msg_DidComposite::add_anotifications() {
-  ::protobuf::mozilla::layers::ImageCompositeNotification* _add = _internal_add_anotifications();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.aNotifications)
+inline ::protobuf::mozilla::layers::ImageCompositeNotification* Msg_DidComposite::add_a_anotifications() {
+  ::protobuf::mozilla::layers::ImageCompositeNotification* _add = _internal_add_a_anotifications();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.a_aNotifications)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::ImageCompositeNotification >&
-Msg_DidComposite::anotifications() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.aNotifications)
-  return _impl_.anotifications_;
+Msg_DidComposite::a_anotifications() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_DidComposite.a_aNotifications)
+  return _impl_.a_anotifications_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReportFramesDropped
 
-// required bytes aHandle = 1;
-inline bool Msg_ReportFramesDropped::_internal_has_ahandle() const {
+// required bytes a_aHandle = 1;
+inline bool Msg_ReportFramesDropped::_internal_has_a_ahandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReportFramesDropped::has_ahandle() const {
-  return _internal_has_ahandle();
+inline bool Msg_ReportFramesDropped::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
 }
-inline void Msg_ReportFramesDropped::clear_ahandle() {
-  _impl_.ahandle_.ClearToEmpty();
+inline void Msg_ReportFramesDropped::clear_a_ahandle() {
+  _impl_.a_ahandle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReportFramesDropped::ahandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aHandle)
-  return _internal_ahandle();
+inline const std::string& Msg_ReportFramesDropped::a_ahandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aHandle)
+  return _internal_a_ahandle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReportFramesDropped::set_ahandle(ArgT0&& arg0, ArgT... args) {
+void Msg_ReportFramesDropped::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aHandle)
+ _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aHandle)
 }
-inline std::string* Msg_ReportFramesDropped::mutable_ahandle() {
-  std::string* _s = _internal_mutable_ahandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aHandle)
+inline std::string* Msg_ReportFramesDropped::mutable_a_ahandle() {
+  std::string* _s = _internal_mutable_a_ahandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aHandle)
   return _s;
 }
-inline const std::string& Msg_ReportFramesDropped::_internal_ahandle() const {
-  return _impl_.ahandle_.Get();
+inline const std::string& Msg_ReportFramesDropped::_internal_a_ahandle() const {
+  return _impl_.a_ahandle_.Get();
 }
-inline void Msg_ReportFramesDropped::_internal_set_ahandle(const std::string& value) {
+inline void Msg_ReportFramesDropped::_internal_set_a_ahandle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahandle_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReportFramesDropped::_internal_mutable_ahandle() {
+inline std::string* Msg_ReportFramesDropped::_internal_mutable_a_ahandle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahandle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReportFramesDropped::release_ahandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aHandle)
-  if (!_internal_has_ahandle()) {
+inline std::string* Msg_ReportFramesDropped::release_a_ahandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aHandle)
+  if (!_internal_has_a_ahandle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahandle_.Release();
+  auto* p = _impl_.a_ahandle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReportFramesDropped::set_allocated_ahandle(std::string* ahandle) {
-  if (ahandle != nullptr) {
+inline void Msg_ReportFramesDropped::set_allocated_a_ahandle(std::string* a_ahandle) {
+  if (a_ahandle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahandle_.SetAllocated(ahandle, GetArenaForAllocation());
+  _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aHandle)
 }
 
-// required uint32 aFrames = 2;
-inline bool Msg_ReportFramesDropped::_internal_has_aframes() const {
+// required uint32 a_aFrames = 2;
+inline bool Msg_ReportFramesDropped::_internal_has_a_aframes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReportFramesDropped::has_aframes() const {
-  return _internal_has_aframes();
+inline bool Msg_ReportFramesDropped::has_a_aframes() const {
+  return _internal_has_a_aframes();
 }
-inline void Msg_ReportFramesDropped::clear_aframes() {
-  _impl_.aframes_ = 0u;
+inline void Msg_ReportFramesDropped::clear_a_aframes() {
+  _impl_.a_aframes_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_ReportFramesDropped::_internal_aframes() const {
-  return _impl_.aframes_;
+inline uint32_t Msg_ReportFramesDropped::_internal_a_aframes() const {
+  return _impl_.a_aframes_;
 }
-inline uint32_t Msg_ReportFramesDropped::aframes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aFrames)
-  return _internal_aframes();
+inline uint32_t Msg_ReportFramesDropped::a_aframes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aFrames)
+  return _internal_a_aframes();
 }
-inline void Msg_ReportFramesDropped::_internal_set_aframes(uint32_t value) {
+inline void Msg_ReportFramesDropped::_internal_set_a_aframes(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aframes_ = value;
+  _impl_.a_aframes_ = value;
 }
-inline void Msg_ReportFramesDropped::set_aframes(uint32_t value) {
-  _internal_set_aframes(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.aFrames)
+inline void Msg_ReportFramesDropped::set_a_aframes(uint32_t value) {
+  _internal_set_a_aframes(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_ReportFramesDropped.a_aFrames)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Update
 
-// repeated .protobuf.mozilla.layers.CompositableOperation ops = 1;
-inline int Msg_Update::_internal_ops_size() const {
-  return _impl_.ops_.size();
+// repeated .protobuf.mozilla.layers.CompositableOperation a_ops = 1;
+inline int Msg_Update::_internal_a_ops_size() const {
+  return _impl_.a_ops_.size();
 }
-inline int Msg_Update::ops_size() const {
-  return _internal_ops_size();
+inline int Msg_Update::a_ops_size() const {
+  return _internal_a_ops_size();
 }
-inline ::protobuf::mozilla::layers::CompositableOperation* Msg_Update::mutable_ops(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_Update.ops)
-  return _impl_.ops_.Mutable(index);
+inline ::protobuf::mozilla::layers::CompositableOperation* Msg_Update::mutable_a_ops(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_ops)
+  return _impl_.a_ops_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::CompositableOperation >*
-Msg_Update::mutable_ops() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.ops)
-  return &_impl_.ops_;
+Msg_Update::mutable_a_ops() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_ops)
+  return &_impl_.a_ops_;
 }
-inline const ::protobuf::mozilla::layers::CompositableOperation& Msg_Update::_internal_ops(int index) const {
-  return _impl_.ops_.Get(index);
+inline const ::protobuf::mozilla::layers::CompositableOperation& Msg_Update::_internal_a_ops(int index) const {
+  return _impl_.a_ops_.Get(index);
 }
-inline const ::protobuf::mozilla::layers::CompositableOperation& Msg_Update::ops(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_Update.ops)
-  return _internal_ops(index);
+inline const ::protobuf::mozilla::layers::CompositableOperation& Msg_Update::a_ops(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_ops)
+  return _internal_a_ops(index);
 }
-inline ::protobuf::mozilla::layers::CompositableOperation* Msg_Update::_internal_add_ops() {
-  return _impl_.ops_.Add();
+inline ::protobuf::mozilla::layers::CompositableOperation* Msg_Update::_internal_add_a_ops() {
+  return _impl_.a_ops_.Add();
 }
-inline ::protobuf::mozilla::layers::CompositableOperation* Msg_Update::add_ops() {
-  ::protobuf::mozilla::layers::CompositableOperation* _add = _internal_add_ops();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_Update.ops)
+inline ::protobuf::mozilla::layers::CompositableOperation* Msg_Update::add_a_ops() {
+  ::protobuf::mozilla::layers::CompositableOperation* _add = _internal_add_a_ops();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_ops)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::CompositableOperation >&
-Msg_Update::ops() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.ops)
-  return _impl_.ops_;
+Msg_Update::a_ops() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_ops)
+  return _impl_.a_ops_;
 }
 
-// repeated .protobuf.mozilla.layers.OpDestroy toDestroy = 2;
-inline int Msg_Update::_internal_todestroy_size() const {
-  return _impl_.todestroy_.size();
+// repeated .protobuf.mozilla.layers.OpDestroy a_toDestroy = 2;
+inline int Msg_Update::_internal_a_todestroy_size() const {
+  return _impl_.a_todestroy_.size();
 }
-inline int Msg_Update::todestroy_size() const {
-  return _internal_todestroy_size();
+inline int Msg_Update::a_todestroy_size() const {
+  return _internal_a_todestroy_size();
 }
-inline ::protobuf::mozilla::layers::OpDestroy* Msg_Update::mutable_todestroy(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_Update.toDestroy)
-  return _impl_.todestroy_.Mutable(index);
+inline ::protobuf::mozilla::layers::OpDestroy* Msg_Update::mutable_a_todestroy(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_toDestroy)
+  return _impl_.a_todestroy_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy >*
-Msg_Update::mutable_todestroy() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.toDestroy)
-  return &_impl_.todestroy_;
+Msg_Update::mutable_a_todestroy() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_toDestroy)
+  return &_impl_.a_todestroy_;
 }
-inline const ::protobuf::mozilla::layers::OpDestroy& Msg_Update::_internal_todestroy(int index) const {
-  return _impl_.todestroy_.Get(index);
+inline const ::protobuf::mozilla::layers::OpDestroy& Msg_Update::_internal_a_todestroy(int index) const {
+  return _impl_.a_todestroy_.Get(index);
 }
-inline const ::protobuf::mozilla::layers::OpDestroy& Msg_Update::todestroy(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_Update.toDestroy)
-  return _internal_todestroy(index);
+inline const ::protobuf::mozilla::layers::OpDestroy& Msg_Update::a_todestroy(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_toDestroy)
+  return _internal_a_todestroy(index);
 }
-inline ::protobuf::mozilla::layers::OpDestroy* Msg_Update::_internal_add_todestroy() {
-  return _impl_.todestroy_.Add();
+inline ::protobuf::mozilla::layers::OpDestroy* Msg_Update::_internal_add_a_todestroy() {
+  return _impl_.a_todestroy_.Add();
 }
-inline ::protobuf::mozilla::layers::OpDestroy* Msg_Update::add_todestroy() {
-  ::protobuf::mozilla::layers::OpDestroy* _add = _internal_add_todestroy();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_Update.toDestroy)
+inline ::protobuf::mozilla::layers::OpDestroy* Msg_Update::add_a_todestroy() {
+  ::protobuf::mozilla::layers::OpDestroy* _add = _internal_add_a_todestroy();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_toDestroy)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::layers::OpDestroy >&
-Msg_Update::todestroy() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.toDestroy)
-  return _impl_.todestroy_;
+Msg_Update::a_todestroy() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_toDestroy)
+  return _impl_.a_todestroy_;
 }
 
-// required uint64 fwdTransactionId = 3;
-inline bool Msg_Update::_internal_has_fwdtransactionid() const {
+// required uint64 a_fwdTransactionId = 3;
+inline bool Msg_Update::_internal_has_a_fwdtransactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Update::has_fwdtransactionid() const {
-  return _internal_has_fwdtransactionid();
+inline bool Msg_Update::has_a_fwdtransactionid() const {
+  return _internal_has_a_fwdtransactionid();
 }
-inline void Msg_Update::clear_fwdtransactionid() {
-  _impl_.fwdtransactionid_ = uint64_t{0u};
+inline void Msg_Update::clear_a_fwdtransactionid() {
+  _impl_.a_fwdtransactionid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_Update::_internal_fwdtransactionid() const {
-  return _impl_.fwdtransactionid_;
+inline uint64_t Msg_Update::_internal_a_fwdtransactionid() const {
+  return _impl_.a_fwdtransactionid_;
 }
-inline uint64_t Msg_Update::fwdtransactionid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_Update.fwdTransactionId)
-  return _internal_fwdtransactionid();
+inline uint64_t Msg_Update::a_fwdtransactionid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_fwdTransactionId)
+  return _internal_a_fwdtransactionid();
 }
-inline void Msg_Update::_internal_set_fwdtransactionid(uint64_t value) {
+inline void Msg_Update::_internal_set_a_fwdtransactionid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.fwdtransactionid_ = value;
+  _impl_.a_fwdtransactionid_ = value;
 }
-inline void Msg_Update::set_fwdtransactionid(uint64_t value) {
-  _internal_set_fwdtransactionid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_Update.fwdTransactionId)
+inline void Msg_Update::set_a_fwdtransactionid(uint64_t value) {
+  _internal_set_a_fwdtransactionid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_Update.a_fwdTransactionId)
 }
 
 // -------------------------------------------------------------------
@@ -2231,41 +2231,41 @@ inline void Msg_Update::set_fwdtransactionid(uint64_t value) {
 
 // Msg_PTextureConstructor
 
-// required .protobuf.mozilla.layers.SurfaceDescriptor aSharedData = 1;
-inline bool Msg_PTextureConstructor::_internal_has_ashareddata() const {
+// required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
+inline bool Msg_PTextureConstructor::_internal_has_a_ashareddata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.ashareddata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_ashareddata_ != nullptr);
   return value;
 }
-inline bool Msg_PTextureConstructor::has_ashareddata() const {
-  return _internal_has_ashareddata();
+inline bool Msg_PTextureConstructor::has_a_ashareddata() const {
+  return _internal_has_a_ashareddata();
 }
-inline const ::protobuf::mozilla::layers::SurfaceDescriptor& Msg_PTextureConstructor::_internal_ashareddata() const {
-  const ::protobuf::mozilla::layers::SurfaceDescriptor* p = _impl_.ashareddata_;
+inline const ::protobuf::mozilla::layers::SurfaceDescriptor& Msg_PTextureConstructor::_internal_a_ashareddata() const {
+  const ::protobuf::mozilla::layers::SurfaceDescriptor* p = _impl_.a_ashareddata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::layers::SurfaceDescriptor&>(
       ::protobuf::mozilla::layers::_SurfaceDescriptor_default_instance_);
 }
-inline const ::protobuf::mozilla::layers::SurfaceDescriptor& Msg_PTextureConstructor::ashareddata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSharedData)
-  return _internal_ashareddata();
+inline const ::protobuf::mozilla::layers::SurfaceDescriptor& Msg_PTextureConstructor::a_ashareddata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSharedData)
+  return _internal_a_ashareddata();
 }
-inline void Msg_PTextureConstructor::unsafe_arena_set_allocated_ashareddata(
-    ::protobuf::mozilla::layers::SurfaceDescriptor* ashareddata) {
+inline void Msg_PTextureConstructor::unsafe_arena_set_allocated_a_ashareddata(
+    ::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ashareddata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ashareddata_);
   }
-  _impl_.ashareddata_ = ashareddata;
-  if (ashareddata) {
+  _impl_.a_ashareddata_ = a_ashareddata;
+  if (a_ashareddata) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSharedData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSharedData)
 }
-inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::release_ashareddata() {
+inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::release_a_ashareddata() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::layers::SurfaceDescriptor* temp = _impl_.ashareddata_;
-  _impl_.ashareddata_ = nullptr;
+  ::protobuf::mozilla::layers::SurfaceDescriptor* temp = _impl_.a_ashareddata_;
+  _impl_.a_ashareddata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2277,82 +2277,82 @@ inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::unsafe_arena_release_ashareddata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSharedData)
+inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::unsafe_arena_release_a_ashareddata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSharedData)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::layers::SurfaceDescriptor* temp = _impl_.ashareddata_;
-  _impl_.ashareddata_ = nullptr;
+  ::protobuf::mozilla::layers::SurfaceDescriptor* temp = _impl_.a_ashareddata_;
+  _impl_.a_ashareddata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::_internal_mutable_ashareddata() {
+inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::_internal_mutable_a_ashareddata() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.ashareddata_ == nullptr) {
+  if (_impl_.a_ashareddata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::SurfaceDescriptor>(GetArenaForAllocation());
-    _impl_.ashareddata_ = p;
+    _impl_.a_ashareddata_ = p;
   }
-  return _impl_.ashareddata_;
+  return _impl_.a_ashareddata_;
 }
-inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::mutable_ashareddata() {
-  ::protobuf::mozilla::layers::SurfaceDescriptor* _msg = _internal_mutable_ashareddata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSharedData)
+inline ::protobuf::mozilla::layers::SurfaceDescriptor* Msg_PTextureConstructor::mutable_a_ashareddata() {
+  ::protobuf::mozilla::layers::SurfaceDescriptor* _msg = _internal_mutable_a_ashareddata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSharedData)
   return _msg;
 }
-inline void Msg_PTextureConstructor::set_allocated_ashareddata(::protobuf::mozilla::layers::SurfaceDescriptor* ashareddata) {
+inline void Msg_PTextureConstructor::set_allocated_a_ashareddata(::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.ashareddata_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_ashareddata_);
   }
-  if (ashareddata) {
+  if (a_ashareddata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ashareddata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_ashareddata));
     if (message_arena != submessage_arena) {
-      ashareddata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, ashareddata, submessage_arena);
+      a_ashareddata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_ashareddata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.ashareddata_ = ashareddata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSharedData)
+  _impl_.a_ashareddata_ = a_ashareddata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSharedData)
 }
 
-// required .protobuf.mozilla.layers.ReadLockDescriptor aReadLock = 2;
-inline bool Msg_PTextureConstructor::_internal_has_areadlock() const {
+// required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
+inline bool Msg_PTextureConstructor::_internal_has_a_areadlock() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.areadlock_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_areadlock_ != nullptr);
   return value;
 }
-inline bool Msg_PTextureConstructor::has_areadlock() const {
-  return _internal_has_areadlock();
+inline bool Msg_PTextureConstructor::has_a_areadlock() const {
+  return _internal_has_a_areadlock();
 }
-inline const ::protobuf::mozilla::layers::ReadLockDescriptor& Msg_PTextureConstructor::_internal_areadlock() const {
-  const ::protobuf::mozilla::layers::ReadLockDescriptor* p = _impl_.areadlock_;
+inline const ::protobuf::mozilla::layers::ReadLockDescriptor& Msg_PTextureConstructor::_internal_a_areadlock() const {
+  const ::protobuf::mozilla::layers::ReadLockDescriptor* p = _impl_.a_areadlock_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::layers::ReadLockDescriptor&>(
       ::protobuf::mozilla::layers::_ReadLockDescriptor_default_instance_);
 }
-inline const ::protobuf::mozilla::layers::ReadLockDescriptor& Msg_PTextureConstructor::areadlock() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aReadLock)
-  return _internal_areadlock();
+inline const ::protobuf::mozilla::layers::ReadLockDescriptor& Msg_PTextureConstructor::a_areadlock() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aReadLock)
+  return _internal_a_areadlock();
 }
-inline void Msg_PTextureConstructor::unsafe_arena_set_allocated_areadlock(
-    ::protobuf::mozilla::layers::ReadLockDescriptor* areadlock) {
+inline void Msg_PTextureConstructor::unsafe_arena_set_allocated_a_areadlock(
+    ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.areadlock_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_areadlock_);
   }
-  _impl_.areadlock_ = areadlock;
-  if (areadlock) {
+  _impl_.a_areadlock_ = a_areadlock;
+  if (a_areadlock) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aReadLock)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aReadLock)
 }
-inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::release_areadlock() {
+inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::release_a_areadlock() {
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::protobuf::mozilla::layers::ReadLockDescriptor* temp = _impl_.areadlock_;
-  _impl_.areadlock_ = nullptr;
+  ::protobuf::mozilla::layers::ReadLockDescriptor* temp = _impl_.a_areadlock_;
+  _impl_.a_areadlock_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2364,277 +2364,277 @@ inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::unsafe_arena_release_areadlock() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aReadLock)
+inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::unsafe_arena_release_a_areadlock() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aReadLock)
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::protobuf::mozilla::layers::ReadLockDescriptor* temp = _impl_.areadlock_;
-  _impl_.areadlock_ = nullptr;
+  ::protobuf::mozilla::layers::ReadLockDescriptor* temp = _impl_.a_areadlock_;
+  _impl_.a_areadlock_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::_internal_mutable_areadlock() {
+inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::_internal_mutable_a_areadlock() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  if (_impl_.areadlock_ == nullptr) {
+  if (_impl_.a_areadlock_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::ReadLockDescriptor>(GetArenaForAllocation());
-    _impl_.areadlock_ = p;
+    _impl_.a_areadlock_ = p;
   }
-  return _impl_.areadlock_;
+  return _impl_.a_areadlock_;
 }
-inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::mutable_areadlock() {
-  ::protobuf::mozilla::layers::ReadLockDescriptor* _msg = _internal_mutable_areadlock();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aReadLock)
+inline ::protobuf::mozilla::layers::ReadLockDescriptor* Msg_PTextureConstructor::mutable_a_areadlock() {
+  ::protobuf::mozilla::layers::ReadLockDescriptor* _msg = _internal_mutable_a_areadlock();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aReadLock)
   return _msg;
 }
-inline void Msg_PTextureConstructor::set_allocated_areadlock(::protobuf::mozilla::layers::ReadLockDescriptor* areadlock) {
+inline void Msg_PTextureConstructor::set_allocated_a_areadlock(::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.areadlock_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_areadlock_);
   }
-  if (areadlock) {
+  if (a_areadlock) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(areadlock));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_areadlock));
     if (message_arena != submessage_arena) {
-      areadlock = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, areadlock, submessage_arena);
+      a_areadlock = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_areadlock, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.areadlock_ = areadlock;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aReadLock)
+  _impl_.a_areadlock_ = a_areadlock;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aReadLock)
 }
 
-// required bytes aBackend = 3;
-inline bool Msg_PTextureConstructor::_internal_has_abackend() const {
+// required bytes a_aBackend = 3;
+inline bool Msg_PTextureConstructor::_internal_has_a_abackend() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PTextureConstructor::has_abackend() const {
-  return _internal_has_abackend();
+inline bool Msg_PTextureConstructor::has_a_abackend() const {
+  return _internal_has_a_abackend();
 }
-inline void Msg_PTextureConstructor::clear_abackend() {
-  _impl_.abackend_.ClearToEmpty();
+inline void Msg_PTextureConstructor::clear_a_abackend() {
+  _impl_.a_abackend_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PTextureConstructor::abackend() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aBackend)
-  return _internal_abackend();
+inline const std::string& Msg_PTextureConstructor::a_abackend() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aBackend)
+  return _internal_a_abackend();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PTextureConstructor::set_abackend(ArgT0&& arg0, ArgT... args) {
+void Msg_PTextureConstructor::set_a_abackend(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.abackend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aBackend)
+ _impl_.a_abackend_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aBackend)
 }
-inline std::string* Msg_PTextureConstructor::mutable_abackend() {
-  std::string* _s = _internal_mutable_abackend();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aBackend)
+inline std::string* Msg_PTextureConstructor::mutable_a_abackend() {
+  std::string* _s = _internal_mutable_a_abackend();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aBackend)
   return _s;
 }
-inline const std::string& Msg_PTextureConstructor::_internal_abackend() const {
-  return _impl_.abackend_.Get();
+inline const std::string& Msg_PTextureConstructor::_internal_a_abackend() const {
+  return _impl_.a_abackend_.Get();
 }
-inline void Msg_PTextureConstructor::_internal_set_abackend(const std::string& value) {
+inline void Msg_PTextureConstructor::_internal_set_a_abackend(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.abackend_.Set(value, GetArenaForAllocation());
+  _impl_.a_abackend_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PTextureConstructor::_internal_mutable_abackend() {
+inline std::string* Msg_PTextureConstructor::_internal_mutable_a_abackend() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.abackend_.Mutable(GetArenaForAllocation());
+  return _impl_.a_abackend_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PTextureConstructor::release_abackend() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aBackend)
-  if (!_internal_has_abackend()) {
+inline std::string* Msg_PTextureConstructor::release_a_abackend() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aBackend)
+  if (!_internal_has_a_abackend()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.abackend_.Release();
+  auto* p = _impl_.a_abackend_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.abackend_.IsDefault()) {
-    _impl_.abackend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_abackend_.IsDefault()) {
+    _impl_.a_abackend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PTextureConstructor::set_allocated_abackend(std::string* abackend) {
-  if (abackend != nullptr) {
+inline void Msg_PTextureConstructor::set_allocated_a_abackend(std::string* a_abackend) {
+  if (a_abackend != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.abackend_.SetAllocated(abackend, GetArenaForAllocation());
+  _impl_.a_abackend_.SetAllocated(a_abackend, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.abackend_.IsDefault()) {
-    _impl_.abackend_.Set("", GetArenaForAllocation());
+  if (_impl_.a_abackend_.IsDefault()) {
+    _impl_.a_abackend_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aBackend)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aBackend)
 }
 
-// required bytes aTextureFlags = 4;
-inline bool Msg_PTextureConstructor::_internal_has_atextureflags() const {
+// required bytes a_aTextureFlags = 4;
+inline bool Msg_PTextureConstructor::_internal_has_a_atextureflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PTextureConstructor::has_atextureflags() const {
-  return _internal_has_atextureflags();
+inline bool Msg_PTextureConstructor::has_a_atextureflags() const {
+  return _internal_has_a_atextureflags();
 }
-inline void Msg_PTextureConstructor::clear_atextureflags() {
-  _impl_.atextureflags_.ClearToEmpty();
+inline void Msg_PTextureConstructor::clear_a_atextureflags() {
+  _impl_.a_atextureflags_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_PTextureConstructor::atextureflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aTextureFlags)
-  return _internal_atextureflags();
+inline const std::string& Msg_PTextureConstructor::a_atextureflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aTextureFlags)
+  return _internal_a_atextureflags();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PTextureConstructor::set_atextureflags(ArgT0&& arg0, ArgT... args) {
+void Msg_PTextureConstructor::set_a_atextureflags(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atextureflags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aTextureFlags)
+ _impl_.a_atextureflags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aTextureFlags)
 }
-inline std::string* Msg_PTextureConstructor::mutable_atextureflags() {
-  std::string* _s = _internal_mutable_atextureflags();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aTextureFlags)
+inline std::string* Msg_PTextureConstructor::mutable_a_atextureflags() {
+  std::string* _s = _internal_mutable_a_atextureflags();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aTextureFlags)
   return _s;
 }
-inline const std::string& Msg_PTextureConstructor::_internal_atextureflags() const {
-  return _impl_.atextureflags_.Get();
+inline const std::string& Msg_PTextureConstructor::_internal_a_atextureflags() const {
+  return _impl_.a_atextureflags_.Get();
 }
-inline void Msg_PTextureConstructor::_internal_set_atextureflags(const std::string& value) {
+inline void Msg_PTextureConstructor::_internal_set_a_atextureflags(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.atextureflags_.Set(value, GetArenaForAllocation());
+  _impl_.a_atextureflags_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PTextureConstructor::_internal_mutable_atextureflags() {
+inline std::string* Msg_PTextureConstructor::_internal_mutable_a_atextureflags() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.atextureflags_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atextureflags_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PTextureConstructor::release_atextureflags() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aTextureFlags)
-  if (!_internal_has_atextureflags()) {
+inline std::string* Msg_PTextureConstructor::release_a_atextureflags() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aTextureFlags)
+  if (!_internal_has_a_atextureflags()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.atextureflags_.Release();
+  auto* p = _impl_.a_atextureflags_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atextureflags_.IsDefault()) {
-    _impl_.atextureflags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atextureflags_.IsDefault()) {
+    _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PTextureConstructor::set_allocated_atextureflags(std::string* atextureflags) {
-  if (atextureflags != nullptr) {
+inline void Msg_PTextureConstructor::set_allocated_a_atextureflags(std::string* a_atextureflags) {
+  if (a_atextureflags != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.atextureflags_.SetAllocated(atextureflags, GetArenaForAllocation());
+  _impl_.a_atextureflags_.SetAllocated(a_atextureflags, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atextureflags_.IsDefault()) {
-    _impl_.atextureflags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atextureflags_.IsDefault()) {
+    _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aTextureFlags)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aTextureFlags)
 }
 
-// required uint64 aSerial = 5;
-inline bool Msg_PTextureConstructor::_internal_has_aserial() const {
+// required uint64 a_aSerial = 5;
+inline bool Msg_PTextureConstructor::_internal_has_a_aserial() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_PTextureConstructor::has_aserial() const {
-  return _internal_has_aserial();
+inline bool Msg_PTextureConstructor::has_a_aserial() const {
+  return _internal_has_a_aserial();
 }
-inline void Msg_PTextureConstructor::clear_aserial() {
-  _impl_.aserial_ = uint64_t{0u};
+inline void Msg_PTextureConstructor::clear_a_aserial() {
+  _impl_.a_aserial_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline uint64_t Msg_PTextureConstructor::_internal_aserial() const {
-  return _impl_.aserial_;
+inline uint64_t Msg_PTextureConstructor::_internal_a_aserial() const {
+  return _impl_.a_aserial_;
 }
-inline uint64_t Msg_PTextureConstructor::aserial() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSerial)
-  return _internal_aserial();
+inline uint64_t Msg_PTextureConstructor::a_aserial() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSerial)
+  return _internal_a_aserial();
 }
-inline void Msg_PTextureConstructor::_internal_set_aserial(uint64_t value) {
+inline void Msg_PTextureConstructor::_internal_set_a_aserial(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.aserial_ = value;
+  _impl_.a_aserial_ = value;
 }
-inline void Msg_PTextureConstructor::set_aserial(uint64_t value) {
-  _internal_set_aserial(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aSerial)
+inline void Msg_PTextureConstructor::set_a_aserial(uint64_t value) {
+  _internal_set_a_aserial(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aSerial)
 }
 
-// required bytes aExternalImageId = 6;
-inline bool Msg_PTextureConstructor::_internal_has_aexternalimageid() const {
+// required bytes a_aExternalImageId = 6;
+inline bool Msg_PTextureConstructor::_internal_has_a_aexternalimageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_PTextureConstructor::has_aexternalimageid() const {
-  return _internal_has_aexternalimageid();
+inline bool Msg_PTextureConstructor::has_a_aexternalimageid() const {
+  return _internal_has_a_aexternalimageid();
 }
-inline void Msg_PTextureConstructor::clear_aexternalimageid() {
-  _impl_.aexternalimageid_.ClearToEmpty();
+inline void Msg_PTextureConstructor::clear_a_aexternalimageid() {
+  _impl_.a_aexternalimageid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_PTextureConstructor::aexternalimageid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aExternalImageId)
-  return _internal_aexternalimageid();
+inline const std::string& Msg_PTextureConstructor::a_aexternalimageid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aExternalImageId)
+  return _internal_a_aexternalimageid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PTextureConstructor::set_aexternalimageid(ArgT0&& arg0, ArgT... args) {
+void Msg_PTextureConstructor::set_a_aexternalimageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.aexternalimageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aExternalImageId)
+ _impl_.a_aexternalimageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aExternalImageId)
 }
-inline std::string* Msg_PTextureConstructor::mutable_aexternalimageid() {
-  std::string* _s = _internal_mutable_aexternalimageid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aExternalImageId)
+inline std::string* Msg_PTextureConstructor::mutable_a_aexternalimageid() {
+  std::string* _s = _internal_mutable_a_aexternalimageid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aExternalImageId)
   return _s;
 }
-inline const std::string& Msg_PTextureConstructor::_internal_aexternalimageid() const {
-  return _impl_.aexternalimageid_.Get();
+inline const std::string& Msg_PTextureConstructor::_internal_a_aexternalimageid() const {
+  return _impl_.a_aexternalimageid_.Get();
 }
-inline void Msg_PTextureConstructor::_internal_set_aexternalimageid(const std::string& value) {
+inline void Msg_PTextureConstructor::_internal_set_a_aexternalimageid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aexternalimageid_.Set(value, GetArenaForAllocation());
+  _impl_.a_aexternalimageid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PTextureConstructor::_internal_mutable_aexternalimageid() {
+inline std::string* Msg_PTextureConstructor::_internal_mutable_a_aexternalimageid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.aexternalimageid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aexternalimageid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PTextureConstructor::release_aexternalimageid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aExternalImageId)
-  if (!_internal_has_aexternalimageid()) {
+inline std::string* Msg_PTextureConstructor::release_a_aexternalimageid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aExternalImageId)
+  if (!_internal_has_a_aexternalimageid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.aexternalimageid_.Release();
+  auto* p = _impl_.a_aexternalimageid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aexternalimageid_.IsDefault()) {
-    _impl_.aexternalimageid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aexternalimageid_.IsDefault()) {
+    _impl_.a_aexternalimageid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PTextureConstructor::set_allocated_aexternalimageid(std::string* aexternalimageid) {
-  if (aexternalimageid != nullptr) {
+inline void Msg_PTextureConstructor::set_allocated_a_aexternalimageid(std::string* a_aexternalimageid) {
+  if (a_aexternalimageid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.aexternalimageid_.SetAllocated(aexternalimageid, GetArenaForAllocation());
+  _impl_.a_aexternalimageid_.SetAllocated(a_aexternalimageid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aexternalimageid_.IsDefault()) {
-    _impl_.aexternalimageid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aexternalimageid_.IsDefault()) {
+    _impl_.a_aexternalimageid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.aExternalImageId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_PTextureConstructor.a_aExternalImageId)
 }
 
 // -------------------------------------------------------------------
@@ -2653,140 +2653,140 @@ inline void Msg_PTextureConstructor::set_allocated_aexternalimageid(std::string*
 
 // Msg_NewCompositable
 
-// required bytes aHandle = 1;
-inline bool Msg_NewCompositable::_internal_has_ahandle() const {
+// required bytes a_aHandle = 1;
+inline bool Msg_NewCompositable::_internal_has_a_ahandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NewCompositable::has_ahandle() const {
-  return _internal_has_ahandle();
+inline bool Msg_NewCompositable::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
 }
-inline void Msg_NewCompositable::clear_ahandle() {
-  _impl_.ahandle_.ClearToEmpty();
+inline void Msg_NewCompositable::clear_a_ahandle() {
+  _impl_.a_ahandle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NewCompositable::ahandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aHandle)
-  return _internal_ahandle();
+inline const std::string& Msg_NewCompositable::a_ahandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aHandle)
+  return _internal_a_ahandle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NewCompositable::set_ahandle(ArgT0&& arg0, ArgT... args) {
+void Msg_NewCompositable::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aHandle)
+ _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aHandle)
 }
-inline std::string* Msg_NewCompositable::mutable_ahandle() {
-  std::string* _s = _internal_mutable_ahandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aHandle)
+inline std::string* Msg_NewCompositable::mutable_a_ahandle() {
+  std::string* _s = _internal_mutable_a_ahandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aHandle)
   return _s;
 }
-inline const std::string& Msg_NewCompositable::_internal_ahandle() const {
-  return _impl_.ahandle_.Get();
+inline const std::string& Msg_NewCompositable::_internal_a_ahandle() const {
+  return _impl_.a_ahandle_.Get();
 }
-inline void Msg_NewCompositable::_internal_set_ahandle(const std::string& value) {
+inline void Msg_NewCompositable::_internal_set_a_ahandle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahandle_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NewCompositable::_internal_mutable_ahandle() {
+inline std::string* Msg_NewCompositable::_internal_mutable_a_ahandle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahandle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NewCompositable::release_ahandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aHandle)
-  if (!_internal_has_ahandle()) {
+inline std::string* Msg_NewCompositable::release_a_ahandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aHandle)
+  if (!_internal_has_a_ahandle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahandle_.Release();
+  auto* p = _impl_.a_ahandle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NewCompositable::set_allocated_ahandle(std::string* ahandle) {
-  if (ahandle != nullptr) {
+inline void Msg_NewCompositable::set_allocated_a_ahandle(std::string* a_ahandle) {
+  if (a_ahandle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahandle_.SetAllocated(ahandle, GetArenaForAllocation());
+  _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aHandle)
 }
 
-// required bytes aInfo = 2;
-inline bool Msg_NewCompositable::_internal_has_ainfo() const {
+// required bytes a_aInfo = 2;
+inline bool Msg_NewCompositable::_internal_has_a_ainfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_NewCompositable::has_ainfo() const {
-  return _internal_has_ainfo();
+inline bool Msg_NewCompositable::has_a_ainfo() const {
+  return _internal_has_a_ainfo();
 }
-inline void Msg_NewCompositable::clear_ainfo() {
-  _impl_.ainfo_.ClearToEmpty();
+inline void Msg_NewCompositable::clear_a_ainfo() {
+  _impl_.a_ainfo_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_NewCompositable::ainfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aInfo)
-  return _internal_ainfo();
+inline const std::string& Msg_NewCompositable::a_ainfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aInfo)
+  return _internal_a_ainfo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NewCompositable::set_ainfo(ArgT0&& arg0, ArgT... args) {
+void Msg_NewCompositable::set_a_ainfo(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.ainfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aInfo)
+ _impl_.a_ainfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aInfo)
 }
-inline std::string* Msg_NewCompositable::mutable_ainfo() {
-  std::string* _s = _internal_mutable_ainfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aInfo)
+inline std::string* Msg_NewCompositable::mutable_a_ainfo() {
+  std::string* _s = _internal_mutable_a_ainfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aInfo)
   return _s;
 }
-inline const std::string& Msg_NewCompositable::_internal_ainfo() const {
-  return _impl_.ainfo_.Get();
+inline const std::string& Msg_NewCompositable::_internal_a_ainfo() const {
+  return _impl_.a_ainfo_.Get();
 }
-inline void Msg_NewCompositable::_internal_set_ainfo(const std::string& value) {
+inline void Msg_NewCompositable::_internal_set_a_ainfo(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.ainfo_.Set(value, GetArenaForAllocation());
+  _impl_.a_ainfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NewCompositable::_internal_mutable_ainfo() {
+inline std::string* Msg_NewCompositable::_internal_mutable_a_ainfo() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.ainfo_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ainfo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NewCompositable::release_ainfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aInfo)
-  if (!_internal_has_ainfo()) {
+inline std::string* Msg_NewCompositable::release_a_ainfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aInfo)
+  if (!_internal_has_a_ainfo()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.ainfo_.Release();
+  auto* p = _impl_.a_ainfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ainfo_.IsDefault()) {
-    _impl_.ainfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ainfo_.IsDefault()) {
+    _impl_.a_ainfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NewCompositable::set_allocated_ainfo(std::string* ainfo) {
-  if (ainfo != nullptr) {
+inline void Msg_NewCompositable::set_allocated_a_ainfo(std::string* a_ainfo) {
+  if (a_ainfo != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.ainfo_.SetAllocated(ainfo, GetArenaForAllocation());
+  _impl_.a_ainfo_.SetAllocated(a_ainfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ainfo_.IsDefault()) {
-    _impl_.ainfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ainfo_.IsDefault()) {
+    _impl_.a_ainfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.aInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_NewCompositable.a_aInfo)
 }
 
 // -------------------------------------------------------------------
@@ -2797,72 +2797,72 @@ inline void Msg_NewCompositable::set_allocated_ainfo(std::string* ainfo) {
 
 // Msg_ReleaseCompositable
 
-// required bytes aHandle = 1;
-inline bool Msg_ReleaseCompositable::_internal_has_ahandle() const {
+// required bytes a_aHandle = 1;
+inline bool Msg_ReleaseCompositable::_internal_has_a_ahandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReleaseCompositable::has_ahandle() const {
-  return _internal_has_ahandle();
+inline bool Msg_ReleaseCompositable::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
 }
-inline void Msg_ReleaseCompositable::clear_ahandle() {
-  _impl_.ahandle_.ClearToEmpty();
+inline void Msg_ReleaseCompositable::clear_a_ahandle() {
+  _impl_.a_ahandle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReleaseCompositable::ahandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.aHandle)
-  return _internal_ahandle();
+inline const std::string& Msg_ReleaseCompositable::a_ahandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.a_aHandle)
+  return _internal_a_ahandle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReleaseCompositable::set_ahandle(ArgT0&& arg0, ArgT... args) {
+void Msg_ReleaseCompositable::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.aHandle)
+ _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.a_aHandle)
 }
-inline std::string* Msg_ReleaseCompositable::mutable_ahandle() {
-  std::string* _s = _internal_mutable_ahandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.aHandle)
+inline std::string* Msg_ReleaseCompositable::mutable_a_ahandle() {
+  std::string* _s = _internal_mutable_a_ahandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.a_aHandle)
   return _s;
 }
-inline const std::string& Msg_ReleaseCompositable::_internal_ahandle() const {
-  return _impl_.ahandle_.Get();
+inline const std::string& Msg_ReleaseCompositable::_internal_a_ahandle() const {
+  return _impl_.a_ahandle_.Get();
 }
-inline void Msg_ReleaseCompositable::_internal_set_ahandle(const std::string& value) {
+inline void Msg_ReleaseCompositable::_internal_set_a_ahandle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahandle_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReleaseCompositable::_internal_mutable_ahandle() {
+inline std::string* Msg_ReleaseCompositable::_internal_mutable_a_ahandle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahandle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReleaseCompositable::release_ahandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.aHandle)
-  if (!_internal_has_ahandle()) {
+inline std::string* Msg_ReleaseCompositable::release_a_ahandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.a_aHandle)
+  if (!_internal_has_a_ahandle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahandle_.Release();
+  auto* p = _impl_.a_ahandle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReleaseCompositable::set_allocated_ahandle(std::string* ahandle) {
-  if (ahandle != nullptr) {
+inline void Msg_ReleaseCompositable::set_allocated_a_ahandle(std::string* a_ahandle) {
+  if (a_ahandle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahandle_.SetAllocated(ahandle, GetArenaForAllocation());
+  _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.aHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PImageBridge.Msg_ReleaseCompositable.a_aHandle)
 }
 
 #ifdef __GNUC__

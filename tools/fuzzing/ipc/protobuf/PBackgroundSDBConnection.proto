@@ -20,7 +20,7 @@ message Msg_DeleteMe {
 }
 
 message Msg_PBackgroundSDBRequestConstructor {
-  required protobuf.mozilla.dom.SDBRequestParams params = 1;
+  required protobuf.mozilla.dom.SDBRequestParams a_params = 1;
 }
 
 message Reply_PBackgroundSDBRequestConstructor {

@@ -557,24 +557,24 @@ class Msg_RecycleTexture final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATextureFlagsFieldNumber = 1,
+    kAATextureFlagsFieldNumber = 1,
   };
-  // required bytes aTextureFlags = 1;
-  bool has_atextureflags() const;
+  // required bytes a_aTextureFlags = 1;
+  bool has_a_atextureflags() const;
   private:
-  bool _internal_has_atextureflags() const;
+  bool _internal_has_a_atextureflags() const;
   public:
-  void clear_atextureflags();
-  const std::string& atextureflags() const;
+  void clear_a_atextureflags();
+  const std::string& a_atextureflags() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atextureflags(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atextureflags();
-  PROTOBUF_NODISCARD std::string* release_atextureflags();
-  void set_allocated_atextureflags(std::string* atextureflags);
+  void set_a_atextureflags(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atextureflags();
+  PROTOBUF_NODISCARD std::string* release_a_atextureflags();
+  void set_allocated_a_atextureflags(std::string* a_atextureflags);
   private:
-  const std::string& _internal_atextureflags() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atextureflags(const std::string& value);
-  std::string* _internal_mutable_atextureflags();
+  const std::string& _internal_a_atextureflags() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atextureflags(const std::string& value);
+  std::string* _internal_mutable_a_atextureflags();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture)
@@ -587,7 +587,7 @@ class Msg_RecycleTexture final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atextureflags_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atextureflags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTexture_2eproto;
@@ -615,72 +615,72 @@ class Msg_RecycleTexture final :
 
 // Msg_RecycleTexture
 
-// required bytes aTextureFlags = 1;
-inline bool Msg_RecycleTexture::_internal_has_atextureflags() const {
+// required bytes a_aTextureFlags = 1;
+inline bool Msg_RecycleTexture::_internal_has_a_atextureflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RecycleTexture::has_atextureflags() const {
-  return _internal_has_atextureflags();
+inline bool Msg_RecycleTexture::has_a_atextureflags() const {
+  return _internal_has_a_atextureflags();
 }
-inline void Msg_RecycleTexture::clear_atextureflags() {
-  _impl_.atextureflags_.ClearToEmpty();
+inline void Msg_RecycleTexture::clear_a_atextureflags() {
+  _impl_.a_atextureflags_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RecycleTexture::atextureflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.aTextureFlags)
-  return _internal_atextureflags();
+inline const std::string& Msg_RecycleTexture::a_atextureflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.a_aTextureFlags)
+  return _internal_a_atextureflags();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RecycleTexture::set_atextureflags(ArgT0&& arg0, ArgT... args) {
+void Msg_RecycleTexture::set_a_atextureflags(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atextureflags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.aTextureFlags)
+ _impl_.a_atextureflags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.a_aTextureFlags)
 }
-inline std::string* Msg_RecycleTexture::mutable_atextureflags() {
-  std::string* _s = _internal_mutable_atextureflags();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.aTextureFlags)
+inline std::string* Msg_RecycleTexture::mutable_a_atextureflags() {
+  std::string* _s = _internal_mutable_a_atextureflags();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.a_aTextureFlags)
   return _s;
 }
-inline const std::string& Msg_RecycleTexture::_internal_atextureflags() const {
-  return _impl_.atextureflags_.Get();
+inline const std::string& Msg_RecycleTexture::_internal_a_atextureflags() const {
+  return _impl_.a_atextureflags_.Get();
 }
-inline void Msg_RecycleTexture::_internal_set_atextureflags(const std::string& value) {
+inline void Msg_RecycleTexture::_internal_set_a_atextureflags(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atextureflags_.Set(value, GetArenaForAllocation());
+  _impl_.a_atextureflags_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RecycleTexture::_internal_mutable_atextureflags() {
+inline std::string* Msg_RecycleTexture::_internal_mutable_a_atextureflags() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atextureflags_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atextureflags_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RecycleTexture::release_atextureflags() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.aTextureFlags)
-  if (!_internal_has_atextureflags()) {
+inline std::string* Msg_RecycleTexture::release_a_atextureflags() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.a_aTextureFlags)
+  if (!_internal_has_a_atextureflags()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atextureflags_.Release();
+  auto* p = _impl_.a_atextureflags_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atextureflags_.IsDefault()) {
-    _impl_.atextureflags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atextureflags_.IsDefault()) {
+    _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RecycleTexture::set_allocated_atextureflags(std::string* atextureflags) {
-  if (atextureflags != nullptr) {
+inline void Msg_RecycleTexture::set_allocated_a_atextureflags(std::string* a_atextureflags) {
+  if (a_atextureflags != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atextureflags_.SetAllocated(atextureflags, GetArenaForAllocation());
+  _impl_.a_atextureflags_.SetAllocated(a_atextureflags, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atextureflags_.IsDefault()) {
-    _impl_.atextureflags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atextureflags_.IsDefault()) {
+    _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.aTextureFlags)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PTexture.Msg_RecycleTexture.a_aTextureFlags)
 }
 
 #ifdef __GNUC__

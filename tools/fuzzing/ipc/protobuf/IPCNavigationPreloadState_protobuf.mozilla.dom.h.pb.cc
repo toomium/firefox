@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR IPCNavigationPreloadState::IPCNavigationPreloadState(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.headervalue_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.enabled_)*/false} {}
+  , /*decltype(_impl_.a_headervalue_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_enabled_)*/false} {}
 struct IPCNavigationPreloadStateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCNavigationPreloadStateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,10 +47,10 @@ namespace dom {
 class IPCNavigationPreloadState::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCNavigationPreloadState>()._impl_._has_bits_);
-  static void set_has_enabled(HasBits* has_bits) {
+  static void set_has_a_enabled(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_headervalue(HasBits* has_bits) {
+  static void set_has_a_headervalue(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -70,19 +70,19 @@ IPCNavigationPreloadState::IPCNavigationPreloadState(const IPCNavigationPreloadS
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.headervalue_){}
-    , decltype(_impl_.enabled_){}};
+    , decltype(_impl_.a_headervalue_){}
+    , decltype(_impl_.a_enabled_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.headervalue_.InitDefault();
+  _impl_.a_headervalue_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.headervalue_.Set("", GetArenaForAllocation());
+    _impl_.a_headervalue_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_headervalue()) {
-    _this->_impl_.headervalue_.Set(from._internal_headervalue(), 
+  if (from._internal_has_a_headervalue()) {
+    _this->_impl_.a_headervalue_.Set(from._internal_a_headervalue(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.enabled_ = from._impl_.enabled_;
+  _this->_impl_.a_enabled_ = from._impl_.a_enabled_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.IPCNavigationPreloadState)
 }
 
@@ -93,12 +93,12 @@ inline void IPCNavigationPreloadState::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.headervalue_){}
-    , decltype(_impl_.enabled_){false}
+    , decltype(_impl_.a_headervalue_){}
+    , decltype(_impl_.a_enabled_){false}
   };
-  _impl_.headervalue_.InitDefault();
+  _impl_.a_headervalue_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.headervalue_.Set("", GetArenaForAllocation());
+    _impl_.a_headervalue_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -113,7 +113,7 @@ IPCNavigationPreloadState::~IPCNavigationPreloadState() {
 
 inline void IPCNavigationPreloadState::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.headervalue_.Destroy();
+  _impl_.a_headervalue_.Destroy();
 }
 
 void IPCNavigationPreloadState::SetCachedSize(int size) const {
@@ -128,9 +128,9 @@ void IPCNavigationPreloadState::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.headervalue_.ClearNonDefaultToEmpty();
+    _impl_.a_headervalue_.ClearNonDefaultToEmpty();
   }
-  _impl_.enabled_ = false;
+  _impl_.a_enabled_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -142,19 +142,19 @@ const char* IPCNavigationPreloadState::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool enabled = 1;
+      // required bool a_enabled = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_enabled(&has_bits);
-          _impl_.enabled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_enabled(&has_bits);
+          _impl_.a_enabled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes headerValue = 2;
+      // required bytes a_headerValue = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_headervalue();
+          auto str = _internal_mutable_a_headervalue();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -191,16 +191,16 @@ uint8_t* IPCNavigationPreloadState::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool enabled = 1;
+  // required bool a_enabled = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_enabled(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_enabled(), target);
   }
 
-  // required bytes headerValue = 2;
+  // required bytes a_headerValue = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_headervalue(), target);
+        2, this->_internal_a_headervalue(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -215,15 +215,15 @@ size_t IPCNavigationPreloadState::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCNavigationPreloadState)
   size_t total_size = 0;
 
-  if (_internal_has_headervalue()) {
-    // required bytes headerValue = 2;
+  if (_internal_has_a_headervalue()) {
+    // required bytes a_headerValue = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_headervalue());
+        this->_internal_a_headervalue());
   }
 
-  if (_internal_has_enabled()) {
-    // required bool enabled = 1;
+  if (_internal_has_a_enabled()) {
+    // required bool a_enabled = 1;
     total_size += 1 + 1;
   }
 
@@ -234,12 +234,12 @@ size_t IPCNavigationPreloadState::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes headerValue = 2;
+    // required bytes a_headerValue = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_headervalue());
+        this->_internal_a_headervalue());
 
-    // required bool enabled = 1;
+    // required bool a_enabled = 1;
     total_size += 1 + 1;
 
   } else {
@@ -273,10 +273,10 @@ void IPCNavigationPreloadState::MergeFrom(const IPCNavigationPreloadState& from)
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_headervalue(from._internal_headervalue());
+      _this->_internal_set_a_headervalue(from._internal_a_headervalue());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.enabled_ = from._impl_.enabled_;
+      _this->_impl_.a_enabled_ = from._impl_.a_enabled_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -302,10 +302,10 @@ void IPCNavigationPreloadState::InternalSwap(IPCNavigationPreloadState* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.headervalue_, lhs_arena,
-      &other->_impl_.headervalue_, rhs_arena
+      &_impl_.a_headervalue_, lhs_arena,
+      &other->_impl_.a_headervalue_, rhs_arena
   );
-  swap(_impl_.enabled_, other->_impl_.enabled_);
+  swap(_impl_.a_enabled_, other->_impl_.a_enabled_);
 }
 
 std::string IPCNavigationPreloadState::GetTypeName() const {

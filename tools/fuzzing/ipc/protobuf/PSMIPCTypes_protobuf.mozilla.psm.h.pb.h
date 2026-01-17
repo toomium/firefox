@@ -189,29 +189,29 @@ class ByteArray final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // repeated uint32 data = 1;
-  int data_size() const;
+  // repeated uint32 a_data = 1;
+  int a_data_size() const;
   private:
-  int _internal_data_size() const;
+  int _internal_a_data_size() const;
   public:
-  void clear_data();
+  void clear_a_data();
   private:
-  uint32_t _internal_data(int index) const;
+  uint32_t _internal_a_data(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_data() const;
-  void _internal_add_data(uint32_t value);
+      _internal_a_data() const;
+  void _internal_add_a_data(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_data();
+      _internal_mutable_a_data();
   public:
-  uint32_t data(int index) const;
-  void set_data(int index, uint32_t value);
-  void add_data(uint32_t value);
+  uint32_t a_data(int index) const;
+  void set_a_data(int index, uint32_t value);
+  void add_a_data(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      data() const;
+      a_data() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_data();
+      mutable_a_data();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.ByteArray)
  private:
@@ -221,7 +221,7 @@ class ByteArray final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > data_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -339,52 +339,52 @@ class ECKey final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
-    kCertFieldNumber = 2,
+    kAParamsFieldNumber = 1,
+    kACertFieldNumber = 2,
   };
-  // repeated uint32 params = 1;
-  int params_size() const;
+  // repeated uint32 a_params = 1;
+  int a_params_size() const;
   private:
-  int _internal_params_size() const;
+  int _internal_a_params_size() const;
   public:
-  void clear_params();
+  void clear_a_params();
   private:
-  uint32_t _internal_params(int index) const;
+  uint32_t _internal_a_params(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_params() const;
-  void _internal_add_params(uint32_t value);
+      _internal_a_params() const;
+  void _internal_add_a_params(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_params();
+      _internal_mutable_a_params();
   public:
-  uint32_t params(int index) const;
-  void set_params(int index, uint32_t value);
-  void add_params(uint32_t value);
+  uint32_t a_params(int index) const;
+  void set_a_params(int index, uint32_t value);
+  void add_a_params(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      params() const;
+      a_params() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_params();
+      mutable_a_params();
 
-  // repeated uint32 cert = 2;
-  int cert_size() const;
+  // repeated uint32 a_cert = 2;
+  int a_cert_size() const;
   private:
-  int _internal_cert_size() const;
+  int _internal_a_cert_size() const;
   public:
-  void clear_cert();
+  void clear_a_cert();
   private:
-  uint32_t _internal_cert(int index) const;
+  uint32_t _internal_a_cert(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_cert() const;
-  void _internal_add_cert(uint32_t value);
+      _internal_a_cert() const;
+  void _internal_add_a_cert(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_cert();
+      _internal_mutable_a_cert();
   public:
-  uint32_t cert(int index) const;
-  void set_cert(int index, uint32_t value);
-  void add_cert(uint32_t value);
+  uint32_t a_cert(int index) const;
+  void set_a_cert(int index, uint32_t value);
+  void add_a_cert(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      cert() const;
+      a_cert() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_cert();
+      mutable_a_cert();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.ECKey)
  private:
@@ -394,8 +394,8 @@ class ECKey final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > params_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > cert_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_params_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cert_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -513,52 +513,52 @@ class RSAKey final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kModulusFieldNumber = 1,
-    kCertFieldNumber = 2,
+    kAModulusFieldNumber = 1,
+    kACertFieldNumber = 2,
   };
-  // repeated uint32 modulus = 1;
-  int modulus_size() const;
+  // repeated uint32 a_modulus = 1;
+  int a_modulus_size() const;
   private:
-  int _internal_modulus_size() const;
+  int _internal_a_modulus_size() const;
   public:
-  void clear_modulus();
+  void clear_a_modulus();
   private:
-  uint32_t _internal_modulus(int index) const;
+  uint32_t _internal_a_modulus(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_modulus() const;
-  void _internal_add_modulus(uint32_t value);
+      _internal_a_modulus() const;
+  void _internal_add_a_modulus(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_modulus();
+      _internal_mutable_a_modulus();
   public:
-  uint32_t modulus(int index) const;
-  void set_modulus(int index, uint32_t value);
-  void add_modulus(uint32_t value);
+  uint32_t a_modulus(int index) const;
+  void set_a_modulus(int index, uint32_t value);
+  void add_a_modulus(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      modulus() const;
+      a_modulus() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_modulus();
+      mutable_a_modulus();
 
-  // repeated uint32 cert = 2;
-  int cert_size() const;
+  // repeated uint32 a_cert = 2;
+  int a_cert_size() const;
   private:
-  int _internal_cert_size() const;
+  int _internal_a_cert_size() const;
   public:
-  void clear_cert();
+  void clear_a_cert();
   private:
-  uint32_t _internal_cert(int index) const;
+  uint32_t _internal_a_cert(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_cert() const;
-  void _internal_add_cert(uint32_t value);
+      _internal_a_cert() const;
+  void _internal_add_a_cert(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_cert();
+      _internal_mutable_a_cert();
   public:
-  uint32_t cert(int index) const;
-  void set_cert(int index, uint32_t value);
-  void add_cert(uint32_t value);
+  uint32_t a_cert(int index) const;
+  void set_a_cert(int index, uint32_t value);
+  void add_a_cert(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      cert() const;
+      a_cert() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_cert();
+      mutable_a_cert();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.RSAKey)
  private:
@@ -568,8 +568,8 @@ class RSAKey final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > modulus_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > cert_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_modulus_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cert_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -687,29 +687,29 @@ class Certificate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDerFieldNumber = 1,
+    kADerFieldNumber = 1,
   };
-  // repeated uint32 der = 1;
-  int der_size() const;
+  // repeated uint32 a_der = 1;
+  int a_der_size() const;
   private:
-  int _internal_der_size() const;
+  int _internal_a_der_size() const;
   public:
-  void clear_der();
+  void clear_a_der();
   private:
-  uint32_t _internal_der(int index) const;
+  uint32_t _internal_a_der(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_der() const;
-  void _internal_add_der(uint32_t value);
+      _internal_a_der() const;
+  void _internal_add_a_der(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_der();
+      _internal_mutable_a_der();
   public:
-  uint32_t der(int index) const;
-  void set_der(int index, uint32_t value);
-  void add_der(uint32_t value);
+  uint32_t a_der(int index) const;
+  void set_a_der(int index, uint32_t value);
+  void add_a_der(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      der() const;
+      a_der() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_der();
+      mutable_a_der();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.Certificate)
  private:
@@ -719,7 +719,7 @@ class Certificate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > der_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_der_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -769,9 +769,9 @@ class IPCClientCertObject final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVECKey = 1,
-    kMVRSAKey = 2,
-    kMVCertificate = 3,
+    kAMVECKey = 1,
+    kAMVRSAKey = 2,
+    kAMVCertificate = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -844,72 +844,72 @@ class IPCClientCertObject final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVECKeyFieldNumber = 1,
-    kMVRSAKeyFieldNumber = 2,
-    kMVCertificateFieldNumber = 3,
+    kAMVECKeyFieldNumber = 1,
+    kAMVRSAKeyFieldNumber = 2,
+    kAMVCertificateFieldNumber = 3,
   };
-  // .protobuf.mozilla.psm.ECKey mVECKey = 1;
-  bool has_mveckey() const;
+  // .protobuf.mozilla.psm.ECKey a_mVECKey = 1;
+  bool has_a_mveckey() const;
   private:
-  bool _internal_has_mveckey() const;
+  bool _internal_has_a_mveckey() const;
   public:
-  void clear_mveckey();
-  const ::protobuf::mozilla::psm::ECKey& mveckey() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::ECKey* release_mveckey();
-  ::protobuf::mozilla::psm::ECKey* mutable_mveckey();
-  void set_allocated_mveckey(::protobuf::mozilla::psm::ECKey* mveckey);
+  void clear_a_mveckey();
+  const ::protobuf::mozilla::psm::ECKey& a_mveckey() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::ECKey* release_a_mveckey();
+  ::protobuf::mozilla::psm::ECKey* mutable_a_mveckey();
+  void set_allocated_a_mveckey(::protobuf::mozilla::psm::ECKey* a_mveckey);
   private:
-  const ::protobuf::mozilla::psm::ECKey& _internal_mveckey() const;
-  ::protobuf::mozilla::psm::ECKey* _internal_mutable_mveckey();
+  const ::protobuf::mozilla::psm::ECKey& _internal_a_mveckey() const;
+  ::protobuf::mozilla::psm::ECKey* _internal_mutable_a_mveckey();
   public:
-  void unsafe_arena_set_allocated_mveckey(
-      ::protobuf::mozilla::psm::ECKey* mveckey);
-  ::protobuf::mozilla::psm::ECKey* unsafe_arena_release_mveckey();
+  void unsafe_arena_set_allocated_a_mveckey(
+      ::protobuf::mozilla::psm::ECKey* a_mveckey);
+  ::protobuf::mozilla::psm::ECKey* unsafe_arena_release_a_mveckey();
 
-  // .protobuf.mozilla.psm.RSAKey mVRSAKey = 2;
-  bool has_mvrsakey() const;
+  // .protobuf.mozilla.psm.RSAKey a_mVRSAKey = 2;
+  bool has_a_mvrsakey() const;
   private:
-  bool _internal_has_mvrsakey() const;
+  bool _internal_has_a_mvrsakey() const;
   public:
-  void clear_mvrsakey();
-  const ::protobuf::mozilla::psm::RSAKey& mvrsakey() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::RSAKey* release_mvrsakey();
-  ::protobuf::mozilla::psm::RSAKey* mutable_mvrsakey();
-  void set_allocated_mvrsakey(::protobuf::mozilla::psm::RSAKey* mvrsakey);
+  void clear_a_mvrsakey();
+  const ::protobuf::mozilla::psm::RSAKey& a_mvrsakey() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::RSAKey* release_a_mvrsakey();
+  ::protobuf::mozilla::psm::RSAKey* mutable_a_mvrsakey();
+  void set_allocated_a_mvrsakey(::protobuf::mozilla::psm::RSAKey* a_mvrsakey);
   private:
-  const ::protobuf::mozilla::psm::RSAKey& _internal_mvrsakey() const;
-  ::protobuf::mozilla::psm::RSAKey* _internal_mutable_mvrsakey();
+  const ::protobuf::mozilla::psm::RSAKey& _internal_a_mvrsakey() const;
+  ::protobuf::mozilla::psm::RSAKey* _internal_mutable_a_mvrsakey();
   public:
-  void unsafe_arena_set_allocated_mvrsakey(
-      ::protobuf::mozilla::psm::RSAKey* mvrsakey);
-  ::protobuf::mozilla::psm::RSAKey* unsafe_arena_release_mvrsakey();
+  void unsafe_arena_set_allocated_a_mvrsakey(
+      ::protobuf::mozilla::psm::RSAKey* a_mvrsakey);
+  ::protobuf::mozilla::psm::RSAKey* unsafe_arena_release_a_mvrsakey();
 
-  // .protobuf.mozilla.psm.Certificate mVCertificate = 3;
-  bool has_mvcertificate() const;
+  // .protobuf.mozilla.psm.Certificate a_mVCertificate = 3;
+  bool has_a_mvcertificate() const;
   private:
-  bool _internal_has_mvcertificate() const;
+  bool _internal_has_a_mvcertificate() const;
   public:
-  void clear_mvcertificate();
-  const ::protobuf::mozilla::psm::Certificate& mvcertificate() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::Certificate* release_mvcertificate();
-  ::protobuf::mozilla::psm::Certificate* mutable_mvcertificate();
-  void set_allocated_mvcertificate(::protobuf::mozilla::psm::Certificate* mvcertificate);
+  void clear_a_mvcertificate();
+  const ::protobuf::mozilla::psm::Certificate& a_mvcertificate() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::psm::Certificate* release_a_mvcertificate();
+  ::protobuf::mozilla::psm::Certificate* mutable_a_mvcertificate();
+  void set_allocated_a_mvcertificate(::protobuf::mozilla::psm::Certificate* a_mvcertificate);
   private:
-  const ::protobuf::mozilla::psm::Certificate& _internal_mvcertificate() const;
-  ::protobuf::mozilla::psm::Certificate* _internal_mutable_mvcertificate();
+  const ::protobuf::mozilla::psm::Certificate& _internal_a_mvcertificate() const;
+  ::protobuf::mozilla::psm::Certificate* _internal_mutable_a_mvcertificate();
   public:
-  void unsafe_arena_set_allocated_mvcertificate(
-      ::protobuf::mozilla::psm::Certificate* mvcertificate);
-  ::protobuf::mozilla::psm::Certificate* unsafe_arena_release_mvcertificate();
+  void unsafe_arena_set_allocated_a_mvcertificate(
+      ::protobuf::mozilla::psm::Certificate* a_mvcertificate);
+  ::protobuf::mozilla::psm::Certificate* unsafe_arena_release_a_mvcertificate();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.IPCClientCertObject)
  private:
   class _Internal;
-  void set_has_mveckey();
-  void set_has_mvrsakey();
-  void set_has_mvcertificate();
+  void set_has_a_mveckey();
+  void set_has_a_mvrsakey();
+  void set_has_a_mvcertificate();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -921,9 +921,9 @@ class IPCClientCertObject final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::psm::ECKey* mveckey_;
-      ::protobuf::mozilla::psm::RSAKey* mvrsakey_;
-      ::protobuf::mozilla::psm::Certificate* mvcertificate_;
+      ::protobuf::mozilla::psm::ECKey* a_mveckey_;
+      ::protobuf::mozilla::psm::RSAKey* a_mvrsakey_;
+      ::protobuf::mozilla::psm::Certificate* a_mvcertificate_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1044,33 +1044,33 @@ class DelegatedCredentialInfoArg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSchemeFieldNumber = 1,
-    kAuthKeyBitsFieldNumber = 2,
+    kASchemeFieldNumber = 1,
+    kAAuthKeyBitsFieldNumber = 2,
   };
-  // required uint32 scheme = 1;
-  bool has_scheme() const;
+  // required uint32 a_scheme = 1;
+  bool has_a_scheme() const;
   private:
-  bool _internal_has_scheme() const;
+  bool _internal_has_a_scheme() const;
   public:
-  void clear_scheme();
-  uint32_t scheme() const;
-  void set_scheme(uint32_t value);
+  void clear_a_scheme();
+  uint32_t a_scheme() const;
+  void set_a_scheme(uint32_t value);
   private:
-  uint32_t _internal_scheme() const;
-  void _internal_set_scheme(uint32_t value);
+  uint32_t _internal_a_scheme() const;
+  void _internal_set_a_scheme(uint32_t value);
   public:
 
-  // required uint32 authKeyBits = 2;
-  bool has_authkeybits() const;
+  // required uint32 a_authKeyBits = 2;
+  bool has_a_authkeybits() const;
   private:
-  bool _internal_has_authkeybits() const;
+  bool _internal_has_a_authkeybits() const;
   public:
-  void clear_authkeybits();
-  uint32_t authkeybits() const;
-  void set_authkeybits(uint32_t value);
+  void clear_a_authkeybits();
+  uint32_t a_authkeybits() const;
+  void set_a_authkeybits(uint32_t value);
   private:
-  uint32_t _internal_authkeybits() const;
-  void _internal_set_authkeybits(uint32_t value);
+  uint32_t _internal_a_authkeybits() const;
+  void _internal_set_a_authkeybits(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.DelegatedCredentialInfoArg)
@@ -1086,8 +1086,8 @@ class DelegatedCredentialInfoArg final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t scheme_;
-    uint32_t authkeybits_;
+    uint32_t a_scheme_;
+    uint32_t a_authkeybits_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSMIPCTypes_5fprotobuf_2emozilla_2epsm_2eh_2eproto;
@@ -1103,523 +1103,523 @@ class DelegatedCredentialInfoArg final :
 #endif  // __GNUC__
 // ByteArray
 
-// repeated uint32 data = 1;
-inline int ByteArray::_internal_data_size() const {
-  return _impl_.data_.size();
+// repeated uint32 a_data = 1;
+inline int ByteArray::_internal_a_data_size() const {
+  return _impl_.a_data_.size();
 }
-inline int ByteArray::data_size() const {
-  return _internal_data_size();
+inline int ByteArray::a_data_size() const {
+  return _internal_a_data_size();
 }
-inline void ByteArray::clear_data() {
-  _impl_.data_.Clear();
+inline void ByteArray::clear_a_data() {
+  _impl_.a_data_.Clear();
 }
-inline uint32_t ByteArray::_internal_data(int index) const {
-  return _impl_.data_.Get(index);
+inline uint32_t ByteArray::_internal_a_data(int index) const {
+  return _impl_.a_data_.Get(index);
 }
-inline uint32_t ByteArray::data(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.ByteArray.data)
-  return _internal_data(index);
+inline uint32_t ByteArray::a_data(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.ByteArray.a_data)
+  return _internal_a_data(index);
 }
-inline void ByteArray::set_data(int index, uint32_t value) {
-  _impl_.data_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.ByteArray.data)
+inline void ByteArray::set_a_data(int index, uint32_t value) {
+  _impl_.a_data_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.ByteArray.a_data)
 }
-inline void ByteArray::_internal_add_data(uint32_t value) {
-  _impl_.data_.Add(value);
+inline void ByteArray::_internal_add_a_data(uint32_t value) {
+  _impl_.a_data_.Add(value);
 }
-inline void ByteArray::add_data(uint32_t value) {
-  _internal_add_data(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.ByteArray.data)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ByteArray::_internal_data() const {
-  return _impl_.data_;
+inline void ByteArray::add_a_data(uint32_t value) {
+  _internal_add_a_data(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.ByteArray.a_data)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ByteArray::data() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.ByteArray.data)
-  return _internal_data();
+ByteArray::_internal_a_data() const {
+  return _impl_.a_data_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+ByteArray::a_data() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.ByteArray.a_data)
+  return _internal_a_data();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ByteArray::_internal_mutable_data() {
-  return &_impl_.data_;
+ByteArray::_internal_mutable_a_data() {
+  return &_impl_.a_data_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ByteArray::mutable_data() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.ByteArray.data)
-  return _internal_mutable_data();
+ByteArray::mutable_a_data() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.ByteArray.a_data)
+  return _internal_mutable_a_data();
 }
 
 // -------------------------------------------------------------------
 
 // ECKey
 
-// repeated uint32 params = 1;
-inline int ECKey::_internal_params_size() const {
-  return _impl_.params_.size();
+// repeated uint32 a_params = 1;
+inline int ECKey::_internal_a_params_size() const {
+  return _impl_.a_params_.size();
 }
-inline int ECKey::params_size() const {
-  return _internal_params_size();
+inline int ECKey::a_params_size() const {
+  return _internal_a_params_size();
 }
-inline void ECKey::clear_params() {
-  _impl_.params_.Clear();
+inline void ECKey::clear_a_params() {
+  _impl_.a_params_.Clear();
 }
-inline uint32_t ECKey::_internal_params(int index) const {
-  return _impl_.params_.Get(index);
+inline uint32_t ECKey::_internal_a_params(int index) const {
+  return _impl_.a_params_.Get(index);
 }
-inline uint32_t ECKey::params(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.ECKey.params)
-  return _internal_params(index);
+inline uint32_t ECKey::a_params(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.ECKey.a_params)
+  return _internal_a_params(index);
 }
-inline void ECKey::set_params(int index, uint32_t value) {
-  _impl_.params_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.ECKey.params)
+inline void ECKey::set_a_params(int index, uint32_t value) {
+  _impl_.a_params_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.ECKey.a_params)
 }
-inline void ECKey::_internal_add_params(uint32_t value) {
-  _impl_.params_.Add(value);
+inline void ECKey::_internal_add_a_params(uint32_t value) {
+  _impl_.a_params_.Add(value);
 }
-inline void ECKey::add_params(uint32_t value) {
-  _internal_add_params(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.ECKey.params)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ECKey::_internal_params() const {
-  return _impl_.params_;
+inline void ECKey::add_a_params(uint32_t value) {
+  _internal_add_a_params(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.ECKey.a_params)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ECKey::params() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.ECKey.params)
-  return _internal_params();
+ECKey::_internal_a_params() const {
+  return _impl_.a_params_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+ECKey::a_params() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.ECKey.a_params)
+  return _internal_a_params();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ECKey::_internal_mutable_params() {
-  return &_impl_.params_;
+ECKey::_internal_mutable_a_params() {
+  return &_impl_.a_params_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ECKey::mutable_params() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.ECKey.params)
-  return _internal_mutable_params();
+ECKey::mutable_a_params() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.ECKey.a_params)
+  return _internal_mutable_a_params();
 }
 
-// repeated uint32 cert = 2;
-inline int ECKey::_internal_cert_size() const {
-  return _impl_.cert_.size();
+// repeated uint32 a_cert = 2;
+inline int ECKey::_internal_a_cert_size() const {
+  return _impl_.a_cert_.size();
 }
-inline int ECKey::cert_size() const {
-  return _internal_cert_size();
+inline int ECKey::a_cert_size() const {
+  return _internal_a_cert_size();
 }
-inline void ECKey::clear_cert() {
-  _impl_.cert_.Clear();
+inline void ECKey::clear_a_cert() {
+  _impl_.a_cert_.Clear();
 }
-inline uint32_t ECKey::_internal_cert(int index) const {
-  return _impl_.cert_.Get(index);
+inline uint32_t ECKey::_internal_a_cert(int index) const {
+  return _impl_.a_cert_.Get(index);
 }
-inline uint32_t ECKey::cert(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.ECKey.cert)
-  return _internal_cert(index);
+inline uint32_t ECKey::a_cert(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.ECKey.a_cert)
+  return _internal_a_cert(index);
 }
-inline void ECKey::set_cert(int index, uint32_t value) {
-  _impl_.cert_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.ECKey.cert)
+inline void ECKey::set_a_cert(int index, uint32_t value) {
+  _impl_.a_cert_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.ECKey.a_cert)
 }
-inline void ECKey::_internal_add_cert(uint32_t value) {
-  _impl_.cert_.Add(value);
+inline void ECKey::_internal_add_a_cert(uint32_t value) {
+  _impl_.a_cert_.Add(value);
 }
-inline void ECKey::add_cert(uint32_t value) {
-  _internal_add_cert(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.ECKey.cert)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ECKey::_internal_cert() const {
-  return _impl_.cert_;
+inline void ECKey::add_a_cert(uint32_t value) {
+  _internal_add_a_cert(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.ECKey.a_cert)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-ECKey::cert() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.ECKey.cert)
-  return _internal_cert();
+ECKey::_internal_a_cert() const {
+  return _impl_.a_cert_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+ECKey::a_cert() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.ECKey.a_cert)
+  return _internal_a_cert();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ECKey::_internal_mutable_cert() {
-  return &_impl_.cert_;
+ECKey::_internal_mutable_a_cert() {
+  return &_impl_.a_cert_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-ECKey::mutable_cert() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.ECKey.cert)
-  return _internal_mutable_cert();
+ECKey::mutable_a_cert() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.ECKey.a_cert)
+  return _internal_mutable_a_cert();
 }
 
 // -------------------------------------------------------------------
 
 // RSAKey
 
-// repeated uint32 modulus = 1;
-inline int RSAKey::_internal_modulus_size() const {
-  return _impl_.modulus_.size();
+// repeated uint32 a_modulus = 1;
+inline int RSAKey::_internal_a_modulus_size() const {
+  return _impl_.a_modulus_.size();
 }
-inline int RSAKey::modulus_size() const {
-  return _internal_modulus_size();
+inline int RSAKey::a_modulus_size() const {
+  return _internal_a_modulus_size();
 }
-inline void RSAKey::clear_modulus() {
-  _impl_.modulus_.Clear();
+inline void RSAKey::clear_a_modulus() {
+  _impl_.a_modulus_.Clear();
 }
-inline uint32_t RSAKey::_internal_modulus(int index) const {
-  return _impl_.modulus_.Get(index);
+inline uint32_t RSAKey::_internal_a_modulus(int index) const {
+  return _impl_.a_modulus_.Get(index);
 }
-inline uint32_t RSAKey::modulus(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.RSAKey.modulus)
-  return _internal_modulus(index);
+inline uint32_t RSAKey::a_modulus(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.RSAKey.a_modulus)
+  return _internal_a_modulus(index);
 }
-inline void RSAKey::set_modulus(int index, uint32_t value) {
-  _impl_.modulus_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.RSAKey.modulus)
+inline void RSAKey::set_a_modulus(int index, uint32_t value) {
+  _impl_.a_modulus_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.RSAKey.a_modulus)
 }
-inline void RSAKey::_internal_add_modulus(uint32_t value) {
-  _impl_.modulus_.Add(value);
+inline void RSAKey::_internal_add_a_modulus(uint32_t value) {
+  _impl_.a_modulus_.Add(value);
 }
-inline void RSAKey::add_modulus(uint32_t value) {
-  _internal_add_modulus(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.RSAKey.modulus)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-RSAKey::_internal_modulus() const {
-  return _impl_.modulus_;
+inline void RSAKey::add_a_modulus(uint32_t value) {
+  _internal_add_a_modulus(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.RSAKey.a_modulus)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-RSAKey::modulus() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.RSAKey.modulus)
-  return _internal_modulus();
+RSAKey::_internal_a_modulus() const {
+  return _impl_.a_modulus_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+RSAKey::a_modulus() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.RSAKey.a_modulus)
+  return _internal_a_modulus();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-RSAKey::_internal_mutable_modulus() {
-  return &_impl_.modulus_;
+RSAKey::_internal_mutable_a_modulus() {
+  return &_impl_.a_modulus_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-RSAKey::mutable_modulus() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.RSAKey.modulus)
-  return _internal_mutable_modulus();
+RSAKey::mutable_a_modulus() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.RSAKey.a_modulus)
+  return _internal_mutable_a_modulus();
 }
 
-// repeated uint32 cert = 2;
-inline int RSAKey::_internal_cert_size() const {
-  return _impl_.cert_.size();
+// repeated uint32 a_cert = 2;
+inline int RSAKey::_internal_a_cert_size() const {
+  return _impl_.a_cert_.size();
 }
-inline int RSAKey::cert_size() const {
-  return _internal_cert_size();
+inline int RSAKey::a_cert_size() const {
+  return _internal_a_cert_size();
 }
-inline void RSAKey::clear_cert() {
-  _impl_.cert_.Clear();
+inline void RSAKey::clear_a_cert() {
+  _impl_.a_cert_.Clear();
 }
-inline uint32_t RSAKey::_internal_cert(int index) const {
-  return _impl_.cert_.Get(index);
+inline uint32_t RSAKey::_internal_a_cert(int index) const {
+  return _impl_.a_cert_.Get(index);
 }
-inline uint32_t RSAKey::cert(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.RSAKey.cert)
-  return _internal_cert(index);
+inline uint32_t RSAKey::a_cert(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.RSAKey.a_cert)
+  return _internal_a_cert(index);
 }
-inline void RSAKey::set_cert(int index, uint32_t value) {
-  _impl_.cert_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.RSAKey.cert)
+inline void RSAKey::set_a_cert(int index, uint32_t value) {
+  _impl_.a_cert_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.RSAKey.a_cert)
 }
-inline void RSAKey::_internal_add_cert(uint32_t value) {
-  _impl_.cert_.Add(value);
+inline void RSAKey::_internal_add_a_cert(uint32_t value) {
+  _impl_.a_cert_.Add(value);
 }
-inline void RSAKey::add_cert(uint32_t value) {
-  _internal_add_cert(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.RSAKey.cert)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-RSAKey::_internal_cert() const {
-  return _impl_.cert_;
+inline void RSAKey::add_a_cert(uint32_t value) {
+  _internal_add_a_cert(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.RSAKey.a_cert)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-RSAKey::cert() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.RSAKey.cert)
-  return _internal_cert();
+RSAKey::_internal_a_cert() const {
+  return _impl_.a_cert_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+RSAKey::a_cert() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.RSAKey.a_cert)
+  return _internal_a_cert();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-RSAKey::_internal_mutable_cert() {
-  return &_impl_.cert_;
+RSAKey::_internal_mutable_a_cert() {
+  return &_impl_.a_cert_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-RSAKey::mutable_cert() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.RSAKey.cert)
-  return _internal_mutable_cert();
+RSAKey::mutable_a_cert() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.RSAKey.a_cert)
+  return _internal_mutable_a_cert();
 }
 
 // -------------------------------------------------------------------
 
 // Certificate
 
-// repeated uint32 der = 1;
-inline int Certificate::_internal_der_size() const {
-  return _impl_.der_.size();
+// repeated uint32 a_der = 1;
+inline int Certificate::_internal_a_der_size() const {
+  return _impl_.a_der_.size();
 }
-inline int Certificate::der_size() const {
-  return _internal_der_size();
+inline int Certificate::a_der_size() const {
+  return _internal_a_der_size();
 }
-inline void Certificate::clear_der() {
-  _impl_.der_.Clear();
+inline void Certificate::clear_a_der() {
+  _impl_.a_der_.Clear();
 }
-inline uint32_t Certificate::_internal_der(int index) const {
-  return _impl_.der_.Get(index);
+inline uint32_t Certificate::_internal_a_der(int index) const {
+  return _impl_.a_der_.Get(index);
 }
-inline uint32_t Certificate::der(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.Certificate.der)
-  return _internal_der(index);
+inline uint32_t Certificate::a_der(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.Certificate.a_der)
+  return _internal_a_der(index);
 }
-inline void Certificate::set_der(int index, uint32_t value) {
-  _impl_.der_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.Certificate.der)
+inline void Certificate::set_a_der(int index, uint32_t value) {
+  _impl_.a_der_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.Certificate.a_der)
 }
-inline void Certificate::_internal_add_der(uint32_t value) {
-  _impl_.der_.Add(value);
+inline void Certificate::_internal_add_a_der(uint32_t value) {
+  _impl_.a_der_.Add(value);
 }
-inline void Certificate::add_der(uint32_t value) {
-  _internal_add_der(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.Certificate.der)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Certificate::_internal_der() const {
-  return _impl_.der_;
+inline void Certificate::add_a_der(uint32_t value) {
+  _internal_add_a_der(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.Certificate.a_der)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Certificate::der() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.Certificate.der)
-  return _internal_der();
+Certificate::_internal_a_der() const {
+  return _impl_.a_der_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Certificate::a_der() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.Certificate.a_der)
+  return _internal_a_der();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Certificate::_internal_mutable_der() {
-  return &_impl_.der_;
+Certificate::_internal_mutable_a_der() {
+  return &_impl_.a_der_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Certificate::mutable_der() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.Certificate.der)
-  return _internal_mutable_der();
+Certificate::mutable_a_der() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.Certificate.a_der)
+  return _internal_mutable_a_der();
 }
 
 // -------------------------------------------------------------------
 
 // IPCClientCertObject
 
-// .protobuf.mozilla.psm.ECKey mVECKey = 1;
-inline bool IPCClientCertObject::_internal_has_mveckey() const {
-  return content_case() == kMVECKey;
+// .protobuf.mozilla.psm.ECKey a_mVECKey = 1;
+inline bool IPCClientCertObject::_internal_has_a_mveckey() const {
+  return content_case() == kAMVECKey;
 }
-inline bool IPCClientCertObject::has_mveckey() const {
-  return _internal_has_mveckey();
+inline bool IPCClientCertObject::has_a_mveckey() const {
+  return _internal_has_a_mveckey();
 }
-inline void IPCClientCertObject::set_has_mveckey() {
-  _impl_._oneof_case_[0] = kMVECKey;
+inline void IPCClientCertObject::set_has_a_mveckey() {
+  _impl_._oneof_case_[0] = kAMVECKey;
 }
-inline void IPCClientCertObject::clear_mveckey() {
-  if (_internal_has_mveckey()) {
+inline void IPCClientCertObject::clear_a_mveckey() {
+  if (_internal_has_a_mveckey()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mveckey_;
+      delete _impl_.content_.a_mveckey_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::release_mveckey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.IPCClientCertObject.mVECKey)
-  if (_internal_has_mveckey()) {
+inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::release_a_mveckey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.IPCClientCertObject.a_mVECKey)
+  if (_internal_has_a_mveckey()) {
     clear_has_content();
-    ::protobuf::mozilla::psm::ECKey* temp = _impl_.content_.mveckey_;
+    ::protobuf::mozilla::psm::ECKey* temp = _impl_.content_.a_mveckey_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mveckey_ = nullptr;
+    _impl_.content_.a_mveckey_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::psm::ECKey& IPCClientCertObject::_internal_mveckey() const {
-  return _internal_has_mveckey()
-      ? *_impl_.content_.mveckey_
+inline const ::protobuf::mozilla::psm::ECKey& IPCClientCertObject::_internal_a_mveckey() const {
+  return _internal_has_a_mveckey()
+      ? *_impl_.content_.a_mveckey_
       : reinterpret_cast< ::protobuf::mozilla::psm::ECKey&>(::protobuf::mozilla::psm::_ECKey_default_instance_);
 }
-inline const ::protobuf::mozilla::psm::ECKey& IPCClientCertObject::mveckey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.IPCClientCertObject.mVECKey)
-  return _internal_mveckey();
+inline const ::protobuf::mozilla::psm::ECKey& IPCClientCertObject::a_mveckey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.IPCClientCertObject.a_mVECKey)
+  return _internal_a_mveckey();
 }
-inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::unsafe_arena_release_mveckey() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.psm.IPCClientCertObject.mVECKey)
-  if (_internal_has_mveckey()) {
+inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::unsafe_arena_release_a_mveckey() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.psm.IPCClientCertObject.a_mVECKey)
+  if (_internal_has_a_mveckey()) {
     clear_has_content();
-    ::protobuf::mozilla::psm::ECKey* temp = _impl_.content_.mveckey_;
-    _impl_.content_.mveckey_ = nullptr;
+    ::protobuf::mozilla::psm::ECKey* temp = _impl_.content_.a_mveckey_;
+    _impl_.content_.a_mveckey_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCClientCertObject::unsafe_arena_set_allocated_mveckey(::protobuf::mozilla::psm::ECKey* mveckey) {
+inline void IPCClientCertObject::unsafe_arena_set_allocated_a_mveckey(::protobuf::mozilla::psm::ECKey* a_mveckey) {
   clear_content();
-  if (mveckey) {
-    set_has_mveckey();
-    _impl_.content_.mveckey_ = mveckey;
+  if (a_mveckey) {
+    set_has_a_mveckey();
+    _impl_.content_.a_mveckey_ = a_mveckey;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.mVECKey)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.a_mVECKey)
 }
-inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::_internal_mutable_mveckey() {
-  if (!_internal_has_mveckey()) {
+inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::_internal_mutable_a_mveckey() {
+  if (!_internal_has_a_mveckey()) {
     clear_content();
-    set_has_mveckey();
-    _impl_.content_.mveckey_ = CreateMaybeMessage< ::protobuf::mozilla::psm::ECKey >(GetArenaForAllocation());
+    set_has_a_mveckey();
+    _impl_.content_.a_mveckey_ = CreateMaybeMessage< ::protobuf::mozilla::psm::ECKey >(GetArenaForAllocation());
   }
-  return _impl_.content_.mveckey_;
+  return _impl_.content_.a_mveckey_;
 }
-inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::mutable_mveckey() {
-  ::protobuf::mozilla::psm::ECKey* _msg = _internal_mutable_mveckey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.IPCClientCertObject.mVECKey)
+inline ::protobuf::mozilla::psm::ECKey* IPCClientCertObject::mutable_a_mveckey() {
+  ::protobuf::mozilla::psm::ECKey* _msg = _internal_mutable_a_mveckey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.IPCClientCertObject.a_mVECKey)
   return _msg;
 }
 
-// .protobuf.mozilla.psm.RSAKey mVRSAKey = 2;
-inline bool IPCClientCertObject::_internal_has_mvrsakey() const {
-  return content_case() == kMVRSAKey;
+// .protobuf.mozilla.psm.RSAKey a_mVRSAKey = 2;
+inline bool IPCClientCertObject::_internal_has_a_mvrsakey() const {
+  return content_case() == kAMVRSAKey;
 }
-inline bool IPCClientCertObject::has_mvrsakey() const {
-  return _internal_has_mvrsakey();
+inline bool IPCClientCertObject::has_a_mvrsakey() const {
+  return _internal_has_a_mvrsakey();
 }
-inline void IPCClientCertObject::set_has_mvrsakey() {
-  _impl_._oneof_case_[0] = kMVRSAKey;
+inline void IPCClientCertObject::set_has_a_mvrsakey() {
+  _impl_._oneof_case_[0] = kAMVRSAKey;
 }
-inline void IPCClientCertObject::clear_mvrsakey() {
-  if (_internal_has_mvrsakey()) {
+inline void IPCClientCertObject::clear_a_mvrsakey() {
+  if (_internal_has_a_mvrsakey()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvrsakey_;
+      delete _impl_.content_.a_mvrsakey_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::release_mvrsakey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.IPCClientCertObject.mVRSAKey)
-  if (_internal_has_mvrsakey()) {
+inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::release_a_mvrsakey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.IPCClientCertObject.a_mVRSAKey)
+  if (_internal_has_a_mvrsakey()) {
     clear_has_content();
-    ::protobuf::mozilla::psm::RSAKey* temp = _impl_.content_.mvrsakey_;
+    ::protobuf::mozilla::psm::RSAKey* temp = _impl_.content_.a_mvrsakey_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvrsakey_ = nullptr;
+    _impl_.content_.a_mvrsakey_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::psm::RSAKey& IPCClientCertObject::_internal_mvrsakey() const {
-  return _internal_has_mvrsakey()
-      ? *_impl_.content_.mvrsakey_
+inline const ::protobuf::mozilla::psm::RSAKey& IPCClientCertObject::_internal_a_mvrsakey() const {
+  return _internal_has_a_mvrsakey()
+      ? *_impl_.content_.a_mvrsakey_
       : reinterpret_cast< ::protobuf::mozilla::psm::RSAKey&>(::protobuf::mozilla::psm::_RSAKey_default_instance_);
 }
-inline const ::protobuf::mozilla::psm::RSAKey& IPCClientCertObject::mvrsakey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.IPCClientCertObject.mVRSAKey)
-  return _internal_mvrsakey();
+inline const ::protobuf::mozilla::psm::RSAKey& IPCClientCertObject::a_mvrsakey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.IPCClientCertObject.a_mVRSAKey)
+  return _internal_a_mvrsakey();
 }
-inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::unsafe_arena_release_mvrsakey() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.psm.IPCClientCertObject.mVRSAKey)
-  if (_internal_has_mvrsakey()) {
+inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::unsafe_arena_release_a_mvrsakey() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.psm.IPCClientCertObject.a_mVRSAKey)
+  if (_internal_has_a_mvrsakey()) {
     clear_has_content();
-    ::protobuf::mozilla::psm::RSAKey* temp = _impl_.content_.mvrsakey_;
-    _impl_.content_.mvrsakey_ = nullptr;
+    ::protobuf::mozilla::psm::RSAKey* temp = _impl_.content_.a_mvrsakey_;
+    _impl_.content_.a_mvrsakey_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCClientCertObject::unsafe_arena_set_allocated_mvrsakey(::protobuf::mozilla::psm::RSAKey* mvrsakey) {
+inline void IPCClientCertObject::unsafe_arena_set_allocated_a_mvrsakey(::protobuf::mozilla::psm::RSAKey* a_mvrsakey) {
   clear_content();
-  if (mvrsakey) {
-    set_has_mvrsakey();
-    _impl_.content_.mvrsakey_ = mvrsakey;
+  if (a_mvrsakey) {
+    set_has_a_mvrsakey();
+    _impl_.content_.a_mvrsakey_ = a_mvrsakey;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.mVRSAKey)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.a_mVRSAKey)
 }
-inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::_internal_mutable_mvrsakey() {
-  if (!_internal_has_mvrsakey()) {
+inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::_internal_mutable_a_mvrsakey() {
+  if (!_internal_has_a_mvrsakey()) {
     clear_content();
-    set_has_mvrsakey();
-    _impl_.content_.mvrsakey_ = CreateMaybeMessage< ::protobuf::mozilla::psm::RSAKey >(GetArenaForAllocation());
+    set_has_a_mvrsakey();
+    _impl_.content_.a_mvrsakey_ = CreateMaybeMessage< ::protobuf::mozilla::psm::RSAKey >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvrsakey_;
+  return _impl_.content_.a_mvrsakey_;
 }
-inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::mutable_mvrsakey() {
-  ::protobuf::mozilla::psm::RSAKey* _msg = _internal_mutable_mvrsakey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.IPCClientCertObject.mVRSAKey)
+inline ::protobuf::mozilla::psm::RSAKey* IPCClientCertObject::mutable_a_mvrsakey() {
+  ::protobuf::mozilla::psm::RSAKey* _msg = _internal_mutable_a_mvrsakey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.IPCClientCertObject.a_mVRSAKey)
   return _msg;
 }
 
-// .protobuf.mozilla.psm.Certificate mVCertificate = 3;
-inline bool IPCClientCertObject::_internal_has_mvcertificate() const {
-  return content_case() == kMVCertificate;
+// .protobuf.mozilla.psm.Certificate a_mVCertificate = 3;
+inline bool IPCClientCertObject::_internal_has_a_mvcertificate() const {
+  return content_case() == kAMVCertificate;
 }
-inline bool IPCClientCertObject::has_mvcertificate() const {
-  return _internal_has_mvcertificate();
+inline bool IPCClientCertObject::has_a_mvcertificate() const {
+  return _internal_has_a_mvcertificate();
 }
-inline void IPCClientCertObject::set_has_mvcertificate() {
-  _impl_._oneof_case_[0] = kMVCertificate;
+inline void IPCClientCertObject::set_has_a_mvcertificate() {
+  _impl_._oneof_case_[0] = kAMVCertificate;
 }
-inline void IPCClientCertObject::clear_mvcertificate() {
-  if (_internal_has_mvcertificate()) {
+inline void IPCClientCertObject::clear_a_mvcertificate() {
+  if (_internal_has_a_mvcertificate()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcertificate_;
+      delete _impl_.content_.a_mvcertificate_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::release_mvcertificate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.IPCClientCertObject.mVCertificate)
-  if (_internal_has_mvcertificate()) {
+inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::release_a_mvcertificate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.IPCClientCertObject.a_mVCertificate)
+  if (_internal_has_a_mvcertificate()) {
     clear_has_content();
-    ::protobuf::mozilla::psm::Certificate* temp = _impl_.content_.mvcertificate_;
+    ::protobuf::mozilla::psm::Certificate* temp = _impl_.content_.a_mvcertificate_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcertificate_ = nullptr;
+    _impl_.content_.a_mvcertificate_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::psm::Certificate& IPCClientCertObject::_internal_mvcertificate() const {
-  return _internal_has_mvcertificate()
-      ? *_impl_.content_.mvcertificate_
+inline const ::protobuf::mozilla::psm::Certificate& IPCClientCertObject::_internal_a_mvcertificate() const {
+  return _internal_has_a_mvcertificate()
+      ? *_impl_.content_.a_mvcertificate_
       : reinterpret_cast< ::protobuf::mozilla::psm::Certificate&>(::protobuf::mozilla::psm::_Certificate_default_instance_);
 }
-inline const ::protobuf::mozilla::psm::Certificate& IPCClientCertObject::mvcertificate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.IPCClientCertObject.mVCertificate)
-  return _internal_mvcertificate();
+inline const ::protobuf::mozilla::psm::Certificate& IPCClientCertObject::a_mvcertificate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.IPCClientCertObject.a_mVCertificate)
+  return _internal_a_mvcertificate();
 }
-inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::unsafe_arena_release_mvcertificate() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.psm.IPCClientCertObject.mVCertificate)
-  if (_internal_has_mvcertificate()) {
+inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::unsafe_arena_release_a_mvcertificate() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.psm.IPCClientCertObject.a_mVCertificate)
+  if (_internal_has_a_mvcertificate()) {
     clear_has_content();
-    ::protobuf::mozilla::psm::Certificate* temp = _impl_.content_.mvcertificate_;
-    _impl_.content_.mvcertificate_ = nullptr;
+    ::protobuf::mozilla::psm::Certificate* temp = _impl_.content_.a_mvcertificate_;
+    _impl_.content_.a_mvcertificate_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCClientCertObject::unsafe_arena_set_allocated_mvcertificate(::protobuf::mozilla::psm::Certificate* mvcertificate) {
+inline void IPCClientCertObject::unsafe_arena_set_allocated_a_mvcertificate(::protobuf::mozilla::psm::Certificate* a_mvcertificate) {
   clear_content();
-  if (mvcertificate) {
-    set_has_mvcertificate();
-    _impl_.content_.mvcertificate_ = mvcertificate;
+  if (a_mvcertificate) {
+    set_has_a_mvcertificate();
+    _impl_.content_.a_mvcertificate_ = a_mvcertificate;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.mVCertificate)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.IPCClientCertObject.a_mVCertificate)
 }
-inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::_internal_mutable_mvcertificate() {
-  if (!_internal_has_mvcertificate()) {
+inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::_internal_mutable_a_mvcertificate() {
+  if (!_internal_has_a_mvcertificate()) {
     clear_content();
-    set_has_mvcertificate();
-    _impl_.content_.mvcertificate_ = CreateMaybeMessage< ::protobuf::mozilla::psm::Certificate >(GetArenaForAllocation());
+    set_has_a_mvcertificate();
+    _impl_.content_.a_mvcertificate_ = CreateMaybeMessage< ::protobuf::mozilla::psm::Certificate >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcertificate_;
+  return _impl_.content_.a_mvcertificate_;
 }
-inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::mutable_mvcertificate() {
-  ::protobuf::mozilla::psm::Certificate* _msg = _internal_mutable_mvcertificate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.IPCClientCertObject.mVCertificate)
+inline ::protobuf::mozilla::psm::Certificate* IPCClientCertObject::mutable_a_mvcertificate() {
+  ::protobuf::mozilla::psm::Certificate* _msg = _internal_mutable_a_mvcertificate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.IPCClientCertObject.a_mVCertificate)
   return _msg;
 }
 
@@ -1636,60 +1636,60 @@ inline IPCClientCertObject::ContentCase IPCClientCertObject::content_case() cons
 
 // DelegatedCredentialInfoArg
 
-// required uint32 scheme = 1;
-inline bool DelegatedCredentialInfoArg::_internal_has_scheme() const {
+// required uint32 a_scheme = 1;
+inline bool DelegatedCredentialInfoArg::_internal_has_a_scheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool DelegatedCredentialInfoArg::has_scheme() const {
-  return _internal_has_scheme();
+inline bool DelegatedCredentialInfoArg::has_a_scheme() const {
+  return _internal_has_a_scheme();
 }
-inline void DelegatedCredentialInfoArg::clear_scheme() {
-  _impl_.scheme_ = 0u;
+inline void DelegatedCredentialInfoArg::clear_a_scheme() {
+  _impl_.a_scheme_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t DelegatedCredentialInfoArg::_internal_scheme() const {
-  return _impl_.scheme_;
+inline uint32_t DelegatedCredentialInfoArg::_internal_a_scheme() const {
+  return _impl_.a_scheme_;
 }
-inline uint32_t DelegatedCredentialInfoArg::scheme() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.DelegatedCredentialInfoArg.scheme)
-  return _internal_scheme();
+inline uint32_t DelegatedCredentialInfoArg::a_scheme() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_scheme)
+  return _internal_a_scheme();
 }
-inline void DelegatedCredentialInfoArg::_internal_set_scheme(uint32_t value) {
+inline void DelegatedCredentialInfoArg::_internal_set_a_scheme(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.scheme_ = value;
+  _impl_.a_scheme_ = value;
 }
-inline void DelegatedCredentialInfoArg::set_scheme(uint32_t value) {
-  _internal_set_scheme(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.scheme)
+inline void DelegatedCredentialInfoArg::set_a_scheme(uint32_t value) {
+  _internal_set_a_scheme(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_scheme)
 }
 
-// required uint32 authKeyBits = 2;
-inline bool DelegatedCredentialInfoArg::_internal_has_authkeybits() const {
+// required uint32 a_authKeyBits = 2;
+inline bool DelegatedCredentialInfoArg::_internal_has_a_authkeybits() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool DelegatedCredentialInfoArg::has_authkeybits() const {
-  return _internal_has_authkeybits();
+inline bool DelegatedCredentialInfoArg::has_a_authkeybits() const {
+  return _internal_has_a_authkeybits();
 }
-inline void DelegatedCredentialInfoArg::clear_authkeybits() {
-  _impl_.authkeybits_ = 0u;
+inline void DelegatedCredentialInfoArg::clear_a_authkeybits() {
+  _impl_.a_authkeybits_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t DelegatedCredentialInfoArg::_internal_authkeybits() const {
-  return _impl_.authkeybits_;
+inline uint32_t DelegatedCredentialInfoArg::_internal_a_authkeybits() const {
+  return _impl_.a_authkeybits_;
 }
-inline uint32_t DelegatedCredentialInfoArg::authkeybits() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.DelegatedCredentialInfoArg.authKeyBits)
-  return _internal_authkeybits();
+inline uint32_t DelegatedCredentialInfoArg::a_authkeybits() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_authKeyBits)
+  return _internal_a_authkeybits();
 }
-inline void DelegatedCredentialInfoArg::_internal_set_authkeybits(uint32_t value) {
+inline void DelegatedCredentialInfoArg::_internal_set_a_authkeybits(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.authkeybits_ = value;
+  _impl_.a_authkeybits_ = value;
 }
-inline void DelegatedCredentialInfoArg::set_authkeybits(uint32_t value) {
-  _internal_set_authkeybits(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.authKeyBits)
+inline void DelegatedCredentialInfoArg::set_a_authkeybits(uint32_t value) {
+  _internal_set_a_authkeybits(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_authKeyBits)
 }
 
 #ifdef __GNUC__

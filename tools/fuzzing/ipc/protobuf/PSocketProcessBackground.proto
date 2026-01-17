@@ -17,37 +17,37 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_InitVerifySSLServerCert {
-  required bytes aEndpoint = 1;
-  repeated protobuf.mozilla.psm.ByteArray aPeerCertChain = 2;
-  required bytes aHostName = 3;
-  required sint32 aPort = 4;
-  required bytes aOriginAttributes = 5;
-  optional protobuf.mozilla.psm.ByteArray aStapledOCSPResponse = 6;
-  optional protobuf.mozilla.psm.ByteArray aSctsFromTLSExtension = 7;
-  optional protobuf.mozilla.psm.DelegatedCredentialInfoArg aDcInfo = 8;
-  required uint32 aProviderFlags = 9;
-  required uint32 aCertVerifierFlags = 10;
+  required bytes a_aEndpoint = 1;
+  repeated protobuf.mozilla.psm.ByteArray a_aPeerCertChain = 2;
+  required bytes a_aHostName = 3;
+  required sint32 a_aPort = 4;
+  required bytes a_aOriginAttributes = 5;
+  optional protobuf.mozilla.psm.ByteArray a_aStapledOCSPResponse = 6;
+  optional protobuf.mozilla.psm.ByteArray a_aSctsFromTLSExtension = 7;
+  optional protobuf.mozilla.psm.DelegatedCredentialInfoArg a_aDcInfo = 8;
+  required uint32 a_aProviderFlags = 9;
+  required uint32 a_aCertVerifierFlags = 10;
 }
 
 message Msg_InitSelectTLSClientAuthCert {
-  required bytes aEndpoint = 1;
-  required bytes aHostName = 2;
-  required bytes aOriginAttributes = 3;
-  required sint32 aPort = 4;
-  required uint32 aProviderFlags = 5;
-  required uint32 aProviderTlsFlags = 6;
-  required protobuf.mozilla.psm.ByteArray aServerCertBytes = 7;
-  repeated protobuf.mozilla.psm.ByteArray aCANames = 8;
-  required uint64 aBrowserId = 9;
+  required bytes a_aEndpoint = 1;
+  required bytes a_aHostName = 2;
+  required bytes a_aOriginAttributes = 3;
+  required sint32 a_aPort = 4;
+  required uint32 a_aProviderFlags = 5;
+  required uint32 a_aProviderTlsFlags = 6;
+  required protobuf.mozilla.psm.ByteArray a_aServerCertBytes = 7;
+  repeated protobuf.mozilla.psm.ByteArray a_aCANames = 8;
+  required uint64 a_aBrowserId = 9;
 }
 
 message Msg_InitIPCClientCerts {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 message Msg_InitWebSocketConnection {
-  required bytes aEndpoint = 1;
-  required uint32 aListenerId = 2;
+  required bytes a_aEndpoint = 1;
+  required uint32 a_aListenerId = 2;
 }
 
 // Parameter mappings stats:

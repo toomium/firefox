@@ -19,33 +19,33 @@ import "PMediaDecoderParams.proto";
 
 // Message declarations
 message Msg_PRemoteDecoderConstructor {
-  required protobuf.mozilla.RemoteDecoderInfoIPDL info = 1;
-  required bytes options = 2;
-  optional bytes identifier = 3;
-  optional uint64 mediaEngineId = 4;
-  optional bytes trackingId = 5;
+  required protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+  required bytes a_options = 2;
+  optional bytes a_identifier = 3;
+  optional uint64 a_mediaEngineId = 4;
+  optional bytes a_trackingId = 5;
 }
 
 message Reply_PRemoteDecoderConstructor {
 }
 
 message Msg_PRemoteEncoderConstructor {
-  required bytes config = 1;
+  required bytes a_config = 1;
 }
 
 message Reply_PRemoteEncoderConstructor {
 }
 
 message Msg_Readback {
-  required protobuf.mozilla.layers.SurfaceDescriptorGPUVideo sd = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
 }
 
 message Reply_Readback {
-  required protobuf.mozilla.layers.SurfaceDescriptor aResult = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptor a_aResult = 1;
 }
 
 message Msg_DeallocateSurfaceDescriptorGPUVideo {
-  required protobuf.mozilla.layers.SurfaceDescriptorGPUVideo sd = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
 }
 
 // Parameter mappings stats:

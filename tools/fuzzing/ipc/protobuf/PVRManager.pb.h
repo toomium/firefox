@@ -263,33 +263,33 @@ class Msg_PVRLayerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADisplayIDFieldNumber = 1,
-    kAGroupFieldNumber = 2,
+    kAADisplayIDFieldNumber = 1,
+    kAAGroupFieldNumber = 2,
   };
-  // required uint32 aDisplayID = 1;
-  bool has_adisplayid() const;
+  // required uint32 a_aDisplayID = 1;
+  bool has_a_adisplayid() const;
   private:
-  bool _internal_has_adisplayid() const;
+  bool _internal_has_a_adisplayid() const;
   public:
-  void clear_adisplayid();
-  uint32_t adisplayid() const;
-  void set_adisplayid(uint32_t value);
+  void clear_a_adisplayid();
+  uint32_t a_adisplayid() const;
+  void set_a_adisplayid(uint32_t value);
   private:
-  uint32_t _internal_adisplayid() const;
-  void _internal_set_adisplayid(uint32_t value);
+  uint32_t _internal_a_adisplayid() const;
+  void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // required uint32 aGroup = 2;
-  bool has_agroup() const;
+  // required uint32 a_aGroup = 2;
+  bool has_a_agroup() const;
   private:
-  bool _internal_has_agroup() const;
+  bool _internal_has_a_agroup() const;
   public:
-  void clear_agroup();
-  uint32_t agroup() const;
-  void set_agroup(uint32_t value);
+  void clear_a_agroup();
+  uint32_t a_agroup() const;
+  void set_a_agroup(uint32_t value);
   private:
-  uint32_t _internal_agroup() const;
-  void _internal_set_agroup(uint32_t value);
+  uint32_t _internal_a_agroup() const;
+  void _internal_set_a_agroup(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
@@ -305,8 +305,8 @@ class Msg_PVRLayerConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t adisplayid_;
-    uint32_t agroup_;
+    uint32_t a_adisplayid_;
+    uint32_t a_agroup_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -795,33 +795,33 @@ class Msg_SetGroupMask final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADisplayIDFieldNumber = 1,
-    kAGroupMaskFieldNumber = 2,
+    kAADisplayIDFieldNumber = 1,
+    kAAGroupMaskFieldNumber = 2,
   };
-  // required uint32 aDisplayID = 1;
-  bool has_adisplayid() const;
+  // required uint32 a_aDisplayID = 1;
+  bool has_a_adisplayid() const;
   private:
-  bool _internal_has_adisplayid() const;
+  bool _internal_has_a_adisplayid() const;
   public:
-  void clear_adisplayid();
-  uint32_t adisplayid() const;
-  void set_adisplayid(uint32_t value);
+  void clear_a_adisplayid();
+  uint32_t a_adisplayid() const;
+  void set_a_adisplayid(uint32_t value);
   private:
-  uint32_t _internal_adisplayid() const;
-  void _internal_set_adisplayid(uint32_t value);
+  uint32_t _internal_a_adisplayid() const;
+  void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // required uint32 aGroupMask = 2;
-  bool has_agroupmask() const;
+  // required uint32 a_aGroupMask = 2;
+  bool has_a_agroupmask() const;
   private:
-  bool _internal_has_agroupmask() const;
+  bool _internal_has_a_agroupmask() const;
   public:
-  void clear_agroupmask();
-  uint32_t agroupmask() const;
-  void set_agroupmask(uint32_t value);
+  void clear_a_agroupmask();
+  uint32_t a_agroupmask() const;
+  void set_a_agroupmask(uint32_t value);
   private:
-  uint32_t _internal_agroupmask() const;
-  void _internal_set_agroupmask(uint32_t value);
+  uint32_t _internal_a_agroupmask() const;
+  void _internal_set_a_agroupmask(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask)
@@ -837,8 +837,8 @@ class Msg_SetGroupMask final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t adisplayid_;
-    uint32_t agroupmask_;
+    uint32_t a_adisplayid_;
+    uint32_t a_agroupmask_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -955,19 +955,19 @@ class Msg_SetHaveEventListener final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHaveEventListenerFieldNumber = 1,
+    kAAHaveEventListenerFieldNumber = 1,
   };
-  // required bool aHaveEventListener = 1;
-  bool has_ahaveeventlistener() const;
+  // required bool a_aHaveEventListener = 1;
+  bool has_a_ahaveeventlistener() const;
   private:
-  bool _internal_has_ahaveeventlistener() const;
+  bool _internal_has_a_ahaveeventlistener() const;
   public:
-  void clear_ahaveeventlistener();
-  bool ahaveeventlistener() const;
-  void set_ahaveeventlistener(bool value);
+  void clear_a_ahaveeventlistener();
+  bool a_ahaveeventlistener() const;
+  void set_a_ahaveeventlistener(bool value);
   private:
-  bool _internal_ahaveeventlistener() const;
-  void _internal_set_ahaveeventlistener(bool value);
+  bool _internal_a_ahaveeventlistener() const;
+  void _internal_set_a_ahaveeventlistener(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener)
@@ -980,7 +980,7 @@ class Msg_SetHaveEventListener final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool ahaveeventlistener_;
+    bool a_ahaveeventlistener_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1345,80 +1345,80 @@ class Msg_VibrateHaptic final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAGamepadHandleFieldNumber = 1,
-    kAIntensityFieldNumber = 3,
-    kAHapticIndexFieldNumber = 2,
-    kAPromiseIDFieldNumber = 5,
-    kADurationFieldNumber = 4,
+    kAAGamepadHandleFieldNumber = 1,
+    kAAIntensityFieldNumber = 3,
+    kAAHapticIndexFieldNumber = 2,
+    kAAPromiseIDFieldNumber = 5,
+    kAADurationFieldNumber = 4,
   };
-  // required bytes aGamepadHandle = 1;
-  bool has_agamepadhandle() const;
+  // required bytes a_aGamepadHandle = 1;
+  bool has_a_agamepadhandle() const;
   private:
-  bool _internal_has_agamepadhandle() const;
+  bool _internal_has_a_agamepadhandle() const;
   public:
-  void clear_agamepadhandle();
-  const std::string& agamepadhandle() const;
+  void clear_a_agamepadhandle();
+  const std::string& a_agamepadhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_agamepadhandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_agamepadhandle();
-  PROTOBUF_NODISCARD std::string* release_agamepadhandle();
-  void set_allocated_agamepadhandle(std::string* agamepadhandle);
+  void set_a_agamepadhandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_agamepadhandle();
+  PROTOBUF_NODISCARD std::string* release_a_agamepadhandle();
+  void set_allocated_a_agamepadhandle(std::string* a_agamepadhandle);
   private:
-  const std::string& _internal_agamepadhandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_agamepadhandle(const std::string& value);
-  std::string* _internal_mutable_agamepadhandle();
+  const std::string& _internal_a_agamepadhandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_agamepadhandle(const std::string& value);
+  std::string* _internal_mutable_a_agamepadhandle();
   public:
 
-  // required double aIntensity = 3;
-  bool has_aintensity() const;
+  // required double a_aIntensity = 3;
+  bool has_a_aintensity() const;
   private:
-  bool _internal_has_aintensity() const;
+  bool _internal_has_a_aintensity() const;
   public:
-  void clear_aintensity();
-  double aintensity() const;
-  void set_aintensity(double value);
+  void clear_a_aintensity();
+  double a_aintensity() const;
+  void set_a_aintensity(double value);
   private:
-  double _internal_aintensity() const;
-  void _internal_set_aintensity(double value);
-  public:
-
-  // required uint32 aHapticIndex = 2;
-  bool has_ahapticindex() const;
-  private:
-  bool _internal_has_ahapticindex() const;
-  public:
-  void clear_ahapticindex();
-  uint32_t ahapticindex() const;
-  void set_ahapticindex(uint32_t value);
-  private:
-  uint32_t _internal_ahapticindex() const;
-  void _internal_set_ahapticindex(uint32_t value);
+  double _internal_a_aintensity() const;
+  void _internal_set_a_aintensity(double value);
   public:
 
-  // required uint32 aPromiseID = 5;
-  bool has_apromiseid() const;
+  // required uint32 a_aHapticIndex = 2;
+  bool has_a_ahapticindex() const;
   private:
-  bool _internal_has_apromiseid() const;
+  bool _internal_has_a_ahapticindex() const;
   public:
-  void clear_apromiseid();
-  uint32_t apromiseid() const;
-  void set_apromiseid(uint32_t value);
+  void clear_a_ahapticindex();
+  uint32_t a_ahapticindex() const;
+  void set_a_ahapticindex(uint32_t value);
   private:
-  uint32_t _internal_apromiseid() const;
-  void _internal_set_apromiseid(uint32_t value);
+  uint32_t _internal_a_ahapticindex() const;
+  void _internal_set_a_ahapticindex(uint32_t value);
   public:
 
-  // required double aDuration = 4;
-  bool has_aduration() const;
+  // required uint32 a_aPromiseID = 5;
+  bool has_a_apromiseid() const;
   private:
-  bool _internal_has_aduration() const;
+  bool _internal_has_a_apromiseid() const;
   public:
-  void clear_aduration();
-  double aduration() const;
-  void set_aduration(double value);
+  void clear_a_apromiseid();
+  uint32_t a_apromiseid() const;
+  void set_a_apromiseid(uint32_t value);
   private:
-  double _internal_aduration() const;
-  void _internal_set_aduration(double value);
+  uint32_t _internal_a_apromiseid() const;
+  void _internal_set_a_apromiseid(uint32_t value);
+  public:
+
+  // required double a_aDuration = 4;
+  bool has_a_aduration() const;
+  private:
+  bool _internal_has_a_aduration() const;
+  public:
+  void clear_a_aduration();
+  double a_aduration() const;
+  void set_a_aduration(double value);
+  private:
+  double _internal_a_aduration() const;
+  void _internal_set_a_aduration(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic)
@@ -1434,11 +1434,11 @@ class Msg_VibrateHaptic final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr agamepadhandle_;
-    double aintensity_;
-    uint32_t ahapticindex_;
-    uint32_t apromiseid_;
-    double aduration_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agamepadhandle_;
+    double a_aintensity_;
+    uint32_t a_ahapticindex_;
+    uint32_t a_apromiseid_;
+    double a_aduration_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1555,24 +1555,24 @@ class Msg_StopVibrateHaptic final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAGamepadHandleFieldNumber = 1,
+    kAAGamepadHandleFieldNumber = 1,
   };
-  // required bytes aGamepadHandle = 1;
-  bool has_agamepadhandle() const;
+  // required bytes a_aGamepadHandle = 1;
+  bool has_a_agamepadhandle() const;
   private:
-  bool _internal_has_agamepadhandle() const;
+  bool _internal_has_a_agamepadhandle() const;
   public:
-  void clear_agamepadhandle();
-  const std::string& agamepadhandle() const;
+  void clear_a_agamepadhandle();
+  const std::string& a_agamepadhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_agamepadhandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_agamepadhandle();
-  PROTOBUF_NODISCARD std::string* release_agamepadhandle();
-  void set_allocated_agamepadhandle(std::string* agamepadhandle);
+  void set_a_agamepadhandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_agamepadhandle();
+  PROTOBUF_NODISCARD std::string* release_a_agamepadhandle();
+  void set_allocated_a_agamepadhandle(std::string* a_agamepadhandle);
   private:
-  const std::string& _internal_agamepadhandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_agamepadhandle(const std::string& value);
-  std::string* _internal_mutable_agamepadhandle();
+  const std::string& _internal_a_agamepadhandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_agamepadhandle(const std::string& value);
+  std::string* _internal_mutable_a_agamepadhandle();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic)
@@ -1585,7 +1585,7 @@ class Msg_StopVibrateHaptic final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr agamepadhandle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agamepadhandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1702,19 +1702,19 @@ class Msg_StartVRNavigation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADeviceIDFieldNumber = 1,
+    kAADeviceIDFieldNumber = 1,
   };
-  // required uint32 aDeviceID = 1;
-  bool has_adeviceid() const;
+  // required uint32 a_aDeviceID = 1;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  uint32_t adeviceid() const;
-  void set_adeviceid(uint32_t value);
+  void clear_a_adeviceid();
+  uint32_t a_adeviceid() const;
+  void set_a_adeviceid(uint32_t value);
   private:
-  uint32_t _internal_adeviceid() const;
-  void _internal_set_adeviceid(uint32_t value);
+  uint32_t _internal_a_adeviceid() const;
+  void _internal_set_a_adeviceid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation)
@@ -1727,7 +1727,7 @@ class Msg_StartVRNavigation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t adeviceid_;
+    uint32_t a_adeviceid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -1844,38 +1844,38 @@ class Msg_StopVRNavigation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADurationFieldNumber = 2,
-    kADeviceIDFieldNumber = 1,
+    kAADurationFieldNumber = 2,
+    kAADeviceIDFieldNumber = 1,
   };
-  // required bytes aDuration = 2;
-  bool has_aduration() const;
+  // required bytes a_aDuration = 2;
+  bool has_a_aduration() const;
   private:
-  bool _internal_has_aduration() const;
+  bool _internal_has_a_aduration() const;
   public:
-  void clear_aduration();
-  const std::string& aduration() const;
+  void clear_a_aduration();
+  const std::string& a_aduration() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aduration(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aduration();
-  PROTOBUF_NODISCARD std::string* release_aduration();
-  void set_allocated_aduration(std::string* aduration);
+  void set_a_aduration(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aduration();
+  PROTOBUF_NODISCARD std::string* release_a_aduration();
+  void set_allocated_a_aduration(std::string* a_aduration);
   private:
-  const std::string& _internal_aduration() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aduration(const std::string& value);
-  std::string* _internal_mutable_aduration();
+  const std::string& _internal_a_aduration() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aduration(const std::string& value);
+  std::string* _internal_mutable_a_aduration();
   public:
 
-  // required uint32 aDeviceID = 1;
-  bool has_adeviceid() const;
+  // required uint32 a_aDeviceID = 1;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  uint32_t adeviceid() const;
-  void set_adeviceid(uint32_t value);
+  void clear_a_adeviceid();
+  uint32_t a_adeviceid() const;
+  void set_a_adeviceid(uint32_t value);
   private:
-  uint32_t _internal_adeviceid() const;
-  void _internal_set_adeviceid(uint32_t value);
+  uint32_t _internal_a_adeviceid() const;
+  void _internal_set_a_adeviceid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation)
@@ -1891,8 +1891,8 @@ class Msg_StopVRNavigation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aduration_;
-    uint32_t adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aduration_;
+    uint32_t a_adeviceid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2257,29 +2257,29 @@ class Msg_RunPuppet final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufferFieldNumber = 1,
+    kABufferFieldNumber = 1,
   };
-  // repeated uint64 buffer = 1;
-  int buffer_size() const;
+  // repeated uint64 a_buffer = 1;
+  int a_buffer_size() const;
   private:
-  int _internal_buffer_size() const;
+  int _internal_a_buffer_size() const;
   public:
-  void clear_buffer();
+  void clear_a_buffer();
   private:
-  uint64_t _internal_buffer(int index) const;
+  uint64_t _internal_a_buffer(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_buffer() const;
-  void _internal_add_buffer(uint64_t value);
+      _internal_a_buffer() const;
+  void _internal_add_a_buffer(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_buffer();
+      _internal_mutable_a_buffer();
   public:
-  uint64_t buffer(int index) const;
-  void set_buffer(int index, uint64_t value);
-  void add_buffer(uint64_t value);
+  uint64_t a_buffer(int index) const;
+  void set_a_buffer(int index, uint64_t value);
+  void add_a_buffer(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      buffer() const;
+      a_buffer() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_buffer();
+      mutable_a_buffer();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet)
  private:
@@ -2289,7 +2289,7 @@ class Msg_RunPuppet final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > buffer_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_buffer_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2531,24 +2531,24 @@ class Msg_UpdateDisplayInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADisplayInfoFieldNumber = 1,
+    kAADisplayInfoFieldNumber = 1,
   };
-  // required bytes aDisplayInfo = 1;
-  bool has_adisplayinfo() const;
+  // required bytes a_aDisplayInfo = 1;
+  bool has_a_adisplayinfo() const;
   private:
-  bool _internal_has_adisplayinfo() const;
+  bool _internal_has_a_adisplayinfo() const;
   public:
-  void clear_adisplayinfo();
-  const std::string& adisplayinfo() const;
+  void clear_a_adisplayinfo();
+  const std::string& a_adisplayinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adisplayinfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adisplayinfo();
-  PROTOBUF_NODISCARD std::string* release_adisplayinfo();
-  void set_allocated_adisplayinfo(std::string* adisplayinfo);
+  void set_a_adisplayinfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adisplayinfo();
+  PROTOBUF_NODISCARD std::string* release_a_adisplayinfo();
+  void set_allocated_a_adisplayinfo(std::string* a_adisplayinfo);
   private:
-  const std::string& _internal_adisplayinfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adisplayinfo(const std::string& value);
-  std::string* _internal_mutable_adisplayinfo();
+  const std::string& _internal_a_adisplayinfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adisplayinfo(const std::string& value);
+  std::string* _internal_mutable_a_adisplayinfo();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo)
@@ -2561,7 +2561,7 @@ class Msg_UpdateDisplayInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adisplayinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adisplayinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2678,24 +2678,24 @@ class Msg_UpdateRuntimeCapabilities final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACapabilitiesFieldNumber = 1,
+    kAACapabilitiesFieldNumber = 1,
   };
-  // required bytes aCapabilities = 1;
-  bool has_acapabilities() const;
+  // required bytes a_aCapabilities = 1;
+  bool has_a_acapabilities() const;
   private:
-  bool _internal_has_acapabilities() const;
+  bool _internal_has_a_acapabilities() const;
   public:
-  void clear_acapabilities();
-  const std::string& acapabilities() const;
+  void clear_a_acapabilities();
+  const std::string& a_acapabilities() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acapabilities(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acapabilities();
-  PROTOBUF_NODISCARD std::string* release_acapabilities();
-  void set_allocated_acapabilities(std::string* acapabilities);
+  void set_a_acapabilities(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acapabilities();
+  PROTOBUF_NODISCARD std::string* release_a_acapabilities();
+  void set_allocated_a_acapabilities(std::string* a_acapabilities);
   private:
-  const std::string& _internal_acapabilities() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acapabilities(const std::string& value);
-  std::string* _internal_mutable_acapabilities();
+  const std::string& _internal_a_acapabilities() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acapabilities(const std::string& value);
+  std::string* _internal_mutable_a_acapabilities();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities)
@@ -2708,7 +2708,7 @@ class Msg_UpdateRuntimeCapabilities final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acapabilities_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acapabilities_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2825,19 +2825,19 @@ class Msg_ReplyGamepadVibrateHaptic final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPromiseIDFieldNumber = 1,
+    kAAPromiseIDFieldNumber = 1,
   };
-  // required uint32 aPromiseID = 1;
-  bool has_apromiseid() const;
+  // required uint32 a_aPromiseID = 1;
+  bool has_a_apromiseid() const;
   private:
-  bool _internal_has_apromiseid() const;
+  bool _internal_has_a_apromiseid() const;
   public:
-  void clear_apromiseid();
-  uint32_t apromiseid() const;
-  void set_apromiseid(uint32_t value);
+  void clear_a_apromiseid();
+  uint32_t a_apromiseid() const;
+  void set_a_apromiseid(uint32_t value);
   private:
-  uint32_t _internal_apromiseid() const;
-  void _internal_set_apromiseid(uint32_t value);
+  uint32_t _internal_a_apromiseid() const;
+  void _internal_set_a_apromiseid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic)
@@ -2850,7 +2850,7 @@ class Msg_ReplyGamepadVibrateHaptic final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t apromiseid_;
+    uint32_t a_apromiseid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -2967,19 +2967,19 @@ class Msg_NotifyPuppetCommandBufferCompleted final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASuccessFieldNumber = 1,
+    kAASuccessFieldNumber = 1,
   };
-  // required bool aSuccess = 1;
-  bool has_asuccess() const;
+  // required bool a_aSuccess = 1;
+  bool has_a_asuccess() const;
   private:
-  bool _internal_has_asuccess() const;
+  bool _internal_has_a_asuccess() const;
   public:
-  void clear_asuccess();
-  bool asuccess() const;
-  void set_asuccess(bool value);
+  void clear_a_asuccess();
+  bool a_asuccess() const;
+  void set_a_asuccess(bool value);
   private:
-  bool _internal_asuccess() const;
-  void _internal_set_asuccess(bool value);
+  bool _internal_a_asuccess() const;
+  void _internal_set_a_asuccess(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted)
@@ -2992,7 +2992,7 @@ class Msg_NotifyPuppetCommandBufferCompleted final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool asuccess_;
+    bool a_asuccess_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVRManager_2eproto;
@@ -3380,60 +3380,60 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PVRLayerConstructor
 
-// required uint32 aDisplayID = 1;
-inline bool Msg_PVRLayerConstructor::_internal_has_adisplayid() const {
+// required uint32 a_aDisplayID = 1;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_adisplayid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PVRLayerConstructor::has_adisplayid() const {
-  return _internal_has_adisplayid();
+inline bool Msg_PVRLayerConstructor::has_a_adisplayid() const {
+  return _internal_has_a_adisplayid();
 }
-inline void Msg_PVRLayerConstructor::clear_adisplayid() {
-  _impl_.adisplayid_ = 0u;
+inline void Msg_PVRLayerConstructor::clear_a_adisplayid() {
+  _impl_.a_adisplayid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_PVRLayerConstructor::_internal_adisplayid() const {
-  return _impl_.adisplayid_;
+inline uint32_t Msg_PVRLayerConstructor::_internal_a_adisplayid() const {
+  return _impl_.a_adisplayid_;
 }
-inline uint32_t Msg_PVRLayerConstructor::adisplayid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.aDisplayID)
-  return _internal_adisplayid();
+inline uint32_t Msg_PVRLayerConstructor::a_adisplayid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aDisplayID)
+  return _internal_a_adisplayid();
 }
-inline void Msg_PVRLayerConstructor::_internal_set_adisplayid(uint32_t value) {
+inline void Msg_PVRLayerConstructor::_internal_set_a_adisplayid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adisplayid_ = value;
+  _impl_.a_adisplayid_ = value;
 }
-inline void Msg_PVRLayerConstructor::set_adisplayid(uint32_t value) {
-  _internal_set_adisplayid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.aDisplayID)
+inline void Msg_PVRLayerConstructor::set_a_adisplayid(uint32_t value) {
+  _internal_set_a_adisplayid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aDisplayID)
 }
 
-// required uint32 aGroup = 2;
-inline bool Msg_PVRLayerConstructor::_internal_has_agroup() const {
+// required uint32 a_aGroup = 2;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_agroup() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PVRLayerConstructor::has_agroup() const {
-  return _internal_has_agroup();
+inline bool Msg_PVRLayerConstructor::has_a_agroup() const {
+  return _internal_has_a_agroup();
 }
-inline void Msg_PVRLayerConstructor::clear_agroup() {
-  _impl_.agroup_ = 0u;
+inline void Msg_PVRLayerConstructor::clear_a_agroup() {
+  _impl_.a_agroup_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_PVRLayerConstructor::_internal_agroup() const {
-  return _impl_.agroup_;
+inline uint32_t Msg_PVRLayerConstructor::_internal_a_agroup() const {
+  return _impl_.a_agroup_;
 }
-inline uint32_t Msg_PVRLayerConstructor::agroup() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.aGroup)
-  return _internal_agroup();
+inline uint32_t Msg_PVRLayerConstructor::a_agroup() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aGroup)
+  return _internal_a_agroup();
 }
-inline void Msg_PVRLayerConstructor::_internal_set_agroup(uint32_t value) {
+inline void Msg_PVRLayerConstructor::_internal_set_a_agroup(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.agroup_ = value;
+  _impl_.a_agroup_ = value;
 }
-inline void Msg_PVRLayerConstructor::set_agroup(uint32_t value) {
-  _internal_set_agroup(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.aGroup)
+inline void Msg_PVRLayerConstructor::set_a_agroup(uint32_t value) {
+  _internal_set_a_agroup(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aGroup)
 }
 
 // -------------------------------------------------------------------
@@ -3452,92 +3452,92 @@ inline void Msg_PVRLayerConstructor::set_agroup(uint32_t value) {
 
 // Msg_SetGroupMask
 
-// required uint32 aDisplayID = 1;
-inline bool Msg_SetGroupMask::_internal_has_adisplayid() const {
+// required uint32 a_aDisplayID = 1;
+inline bool Msg_SetGroupMask::_internal_has_a_adisplayid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetGroupMask::has_adisplayid() const {
-  return _internal_has_adisplayid();
+inline bool Msg_SetGroupMask::has_a_adisplayid() const {
+  return _internal_has_a_adisplayid();
 }
-inline void Msg_SetGroupMask::clear_adisplayid() {
-  _impl_.adisplayid_ = 0u;
+inline void Msg_SetGroupMask::clear_a_adisplayid() {
+  _impl_.a_adisplayid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetGroupMask::_internal_adisplayid() const {
-  return _impl_.adisplayid_;
+inline uint32_t Msg_SetGroupMask::_internal_a_adisplayid() const {
+  return _impl_.a_adisplayid_;
 }
-inline uint32_t Msg_SetGroupMask::adisplayid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.aDisplayID)
-  return _internal_adisplayid();
+inline uint32_t Msg_SetGroupMask::a_adisplayid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.a_aDisplayID)
+  return _internal_a_adisplayid();
 }
-inline void Msg_SetGroupMask::_internal_set_adisplayid(uint32_t value) {
+inline void Msg_SetGroupMask::_internal_set_a_adisplayid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adisplayid_ = value;
+  _impl_.a_adisplayid_ = value;
 }
-inline void Msg_SetGroupMask::set_adisplayid(uint32_t value) {
-  _internal_set_adisplayid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.aDisplayID)
+inline void Msg_SetGroupMask::set_a_adisplayid(uint32_t value) {
+  _internal_set_a_adisplayid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.a_aDisplayID)
 }
 
-// required uint32 aGroupMask = 2;
-inline bool Msg_SetGroupMask::_internal_has_agroupmask() const {
+// required uint32 a_aGroupMask = 2;
+inline bool Msg_SetGroupMask::_internal_has_a_agroupmask() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetGroupMask::has_agroupmask() const {
-  return _internal_has_agroupmask();
+inline bool Msg_SetGroupMask::has_a_agroupmask() const {
+  return _internal_has_a_agroupmask();
 }
-inline void Msg_SetGroupMask::clear_agroupmask() {
-  _impl_.agroupmask_ = 0u;
+inline void Msg_SetGroupMask::clear_a_agroupmask() {
+  _impl_.a_agroupmask_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_SetGroupMask::_internal_agroupmask() const {
-  return _impl_.agroupmask_;
+inline uint32_t Msg_SetGroupMask::_internal_a_agroupmask() const {
+  return _impl_.a_agroupmask_;
 }
-inline uint32_t Msg_SetGroupMask::agroupmask() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.aGroupMask)
-  return _internal_agroupmask();
+inline uint32_t Msg_SetGroupMask::a_agroupmask() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.a_aGroupMask)
+  return _internal_a_agroupmask();
 }
-inline void Msg_SetGroupMask::_internal_set_agroupmask(uint32_t value) {
+inline void Msg_SetGroupMask::_internal_set_a_agroupmask(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.agroupmask_ = value;
+  _impl_.a_agroupmask_ = value;
 }
-inline void Msg_SetGroupMask::set_agroupmask(uint32_t value) {
-  _internal_set_agroupmask(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.aGroupMask)
+inline void Msg_SetGroupMask::set_a_agroupmask(uint32_t value) {
+  _internal_set_a_agroupmask(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetGroupMask.a_aGroupMask)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetHaveEventListener
 
-// required bool aHaveEventListener = 1;
-inline bool Msg_SetHaveEventListener::_internal_has_ahaveeventlistener() const {
+// required bool a_aHaveEventListener = 1;
+inline bool Msg_SetHaveEventListener::_internal_has_a_ahaveeventlistener() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetHaveEventListener::has_ahaveeventlistener() const {
-  return _internal_has_ahaveeventlistener();
+inline bool Msg_SetHaveEventListener::has_a_ahaveeventlistener() const {
+  return _internal_has_a_ahaveeventlistener();
 }
-inline void Msg_SetHaveEventListener::clear_ahaveeventlistener() {
-  _impl_.ahaveeventlistener_ = false;
+inline void Msg_SetHaveEventListener::clear_a_ahaveeventlistener() {
+  _impl_.a_ahaveeventlistener_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_SetHaveEventListener::_internal_ahaveeventlistener() const {
-  return _impl_.ahaveeventlistener_;
+inline bool Msg_SetHaveEventListener::_internal_a_ahaveeventlistener() const {
+  return _impl_.a_ahaveeventlistener_;
 }
-inline bool Msg_SetHaveEventListener::ahaveeventlistener() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener.aHaveEventListener)
-  return _internal_ahaveeventlistener();
+inline bool Msg_SetHaveEventListener::a_ahaveeventlistener() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener.a_aHaveEventListener)
+  return _internal_a_ahaveeventlistener();
 }
-inline void Msg_SetHaveEventListener::_internal_set_ahaveeventlistener(bool value) {
+inline void Msg_SetHaveEventListener::_internal_set_a_ahaveeventlistener(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahaveeventlistener_ = value;
+  _impl_.a_ahaveeventlistener_ = value;
 }
-inline void Msg_SetHaveEventListener::set_ahaveeventlistener(bool value) {
-  _internal_set_ahaveeventlistener(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener.aHaveEventListener)
+inline void Msg_SetHaveEventListener::set_a_ahaveeventlistener(bool value) {
+  _internal_set_a_ahaveeventlistener(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_SetHaveEventListener.a_aHaveEventListener)
 }
 
 // -------------------------------------------------------------------
@@ -3552,388 +3552,388 @@ inline void Msg_SetHaveEventListener::set_ahaveeventlistener(bool value) {
 
 // Msg_VibrateHaptic
 
-// required bytes aGamepadHandle = 1;
-inline bool Msg_VibrateHaptic::_internal_has_agamepadhandle() const {
+// required bytes a_aGamepadHandle = 1;
+inline bool Msg_VibrateHaptic::_internal_has_a_agamepadhandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_VibrateHaptic::has_agamepadhandle() const {
-  return _internal_has_agamepadhandle();
+inline bool Msg_VibrateHaptic::has_a_agamepadhandle() const {
+  return _internal_has_a_agamepadhandle();
 }
-inline void Msg_VibrateHaptic::clear_agamepadhandle() {
-  _impl_.agamepadhandle_.ClearToEmpty();
+inline void Msg_VibrateHaptic::clear_a_agamepadhandle() {
+  _impl_.a_agamepadhandle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_VibrateHaptic::agamepadhandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aGamepadHandle)
-  return _internal_agamepadhandle();
+inline const std::string& Msg_VibrateHaptic::a_agamepadhandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
+  return _internal_a_agamepadhandle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_VibrateHaptic::set_agamepadhandle(ArgT0&& arg0, ArgT... args) {
+void Msg_VibrateHaptic::set_a_agamepadhandle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.agamepadhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aGamepadHandle)
+ _impl_.a_agamepadhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
 }
-inline std::string* Msg_VibrateHaptic::mutable_agamepadhandle() {
-  std::string* _s = _internal_mutable_agamepadhandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aGamepadHandle)
+inline std::string* Msg_VibrateHaptic::mutable_a_agamepadhandle() {
+  std::string* _s = _internal_mutable_a_agamepadhandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
   return _s;
 }
-inline const std::string& Msg_VibrateHaptic::_internal_agamepadhandle() const {
-  return _impl_.agamepadhandle_.Get();
+inline const std::string& Msg_VibrateHaptic::_internal_a_agamepadhandle() const {
+  return _impl_.a_agamepadhandle_.Get();
 }
-inline void Msg_VibrateHaptic::_internal_set_agamepadhandle(const std::string& value) {
+inline void Msg_VibrateHaptic::_internal_set_a_agamepadhandle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.agamepadhandle_.Set(value, GetArenaForAllocation());
+  _impl_.a_agamepadhandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_VibrateHaptic::_internal_mutable_agamepadhandle() {
+inline std::string* Msg_VibrateHaptic::_internal_mutable_a_agamepadhandle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.agamepadhandle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_agamepadhandle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_VibrateHaptic::release_agamepadhandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aGamepadHandle)
-  if (!_internal_has_agamepadhandle()) {
+inline std::string* Msg_VibrateHaptic::release_a_agamepadhandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
+  if (!_internal_has_a_agamepadhandle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.agamepadhandle_.Release();
+  auto* p = _impl_.a_agamepadhandle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.agamepadhandle_.IsDefault()) {
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_agamepadhandle_.IsDefault()) {
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_VibrateHaptic::set_allocated_agamepadhandle(std::string* agamepadhandle) {
-  if (agamepadhandle != nullptr) {
+inline void Msg_VibrateHaptic::set_allocated_a_agamepadhandle(std::string* a_agamepadhandle) {
+  if (a_agamepadhandle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.agamepadhandle_.SetAllocated(agamepadhandle, GetArenaForAllocation());
+  _impl_.a_agamepadhandle_.SetAllocated(a_agamepadhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.agamepadhandle_.IsDefault()) {
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_agamepadhandle_.IsDefault()) {
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aGamepadHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aGamepadHandle)
 }
 
-// required uint32 aHapticIndex = 2;
-inline bool Msg_VibrateHaptic::_internal_has_ahapticindex() const {
+// required uint32 a_aHapticIndex = 2;
+inline bool Msg_VibrateHaptic::_internal_has_a_ahapticindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_VibrateHaptic::has_ahapticindex() const {
-  return _internal_has_ahapticindex();
+inline bool Msg_VibrateHaptic::has_a_ahapticindex() const {
+  return _internal_has_a_ahapticindex();
 }
-inline void Msg_VibrateHaptic::clear_ahapticindex() {
-  _impl_.ahapticindex_ = 0u;
+inline void Msg_VibrateHaptic::clear_a_ahapticindex() {
+  _impl_.a_ahapticindex_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_VibrateHaptic::_internal_ahapticindex() const {
-  return _impl_.ahapticindex_;
+inline uint32_t Msg_VibrateHaptic::_internal_a_ahapticindex() const {
+  return _impl_.a_ahapticindex_;
 }
-inline uint32_t Msg_VibrateHaptic::ahapticindex() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aHapticIndex)
-  return _internal_ahapticindex();
+inline uint32_t Msg_VibrateHaptic::a_ahapticindex() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aHapticIndex)
+  return _internal_a_ahapticindex();
 }
-inline void Msg_VibrateHaptic::_internal_set_ahapticindex(uint32_t value) {
+inline void Msg_VibrateHaptic::_internal_set_a_ahapticindex(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.ahapticindex_ = value;
+  _impl_.a_ahapticindex_ = value;
 }
-inline void Msg_VibrateHaptic::set_ahapticindex(uint32_t value) {
-  _internal_set_ahapticindex(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aHapticIndex)
+inline void Msg_VibrateHaptic::set_a_ahapticindex(uint32_t value) {
+  _internal_set_a_ahapticindex(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aHapticIndex)
 }
 
-// required double aIntensity = 3;
-inline bool Msg_VibrateHaptic::_internal_has_aintensity() const {
+// required double a_aIntensity = 3;
+inline bool Msg_VibrateHaptic::_internal_has_a_aintensity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_VibrateHaptic::has_aintensity() const {
-  return _internal_has_aintensity();
+inline bool Msg_VibrateHaptic::has_a_aintensity() const {
+  return _internal_has_a_aintensity();
 }
-inline void Msg_VibrateHaptic::clear_aintensity() {
-  _impl_.aintensity_ = 0;
+inline void Msg_VibrateHaptic::clear_a_aintensity() {
+  _impl_.a_aintensity_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline double Msg_VibrateHaptic::_internal_aintensity() const {
-  return _impl_.aintensity_;
+inline double Msg_VibrateHaptic::_internal_a_aintensity() const {
+  return _impl_.a_aintensity_;
 }
-inline double Msg_VibrateHaptic::aintensity() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aIntensity)
-  return _internal_aintensity();
+inline double Msg_VibrateHaptic::a_aintensity() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aIntensity)
+  return _internal_a_aintensity();
 }
-inline void Msg_VibrateHaptic::_internal_set_aintensity(double value) {
+inline void Msg_VibrateHaptic::_internal_set_a_aintensity(double value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aintensity_ = value;
+  _impl_.a_aintensity_ = value;
 }
-inline void Msg_VibrateHaptic::set_aintensity(double value) {
-  _internal_set_aintensity(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aIntensity)
+inline void Msg_VibrateHaptic::set_a_aintensity(double value) {
+  _internal_set_a_aintensity(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aIntensity)
 }
 
-// required double aDuration = 4;
-inline bool Msg_VibrateHaptic::_internal_has_aduration() const {
+// required double a_aDuration = 4;
+inline bool Msg_VibrateHaptic::_internal_has_a_aduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_VibrateHaptic::has_aduration() const {
-  return _internal_has_aduration();
+inline bool Msg_VibrateHaptic::has_a_aduration() const {
+  return _internal_has_a_aduration();
 }
-inline void Msg_VibrateHaptic::clear_aduration() {
-  _impl_.aduration_ = 0;
+inline void Msg_VibrateHaptic::clear_a_aduration() {
+  _impl_.a_aduration_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline double Msg_VibrateHaptic::_internal_aduration() const {
-  return _impl_.aduration_;
+inline double Msg_VibrateHaptic::_internal_a_aduration() const {
+  return _impl_.a_aduration_;
 }
-inline double Msg_VibrateHaptic::aduration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aDuration)
-  return _internal_aduration();
+inline double Msg_VibrateHaptic::a_aduration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aDuration)
+  return _internal_a_aduration();
 }
-inline void Msg_VibrateHaptic::_internal_set_aduration(double value) {
+inline void Msg_VibrateHaptic::_internal_set_a_aduration(double value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.aduration_ = value;
+  _impl_.a_aduration_ = value;
 }
-inline void Msg_VibrateHaptic::set_aduration(double value) {
-  _internal_set_aduration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aDuration)
+inline void Msg_VibrateHaptic::set_a_aduration(double value) {
+  _internal_set_a_aduration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aDuration)
 }
 
-// required uint32 aPromiseID = 5;
-inline bool Msg_VibrateHaptic::_internal_has_apromiseid() const {
+// required uint32 a_aPromiseID = 5;
+inline bool Msg_VibrateHaptic::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_VibrateHaptic::has_apromiseid() const {
-  return _internal_has_apromiseid();
+inline bool Msg_VibrateHaptic::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
 }
-inline void Msg_VibrateHaptic::clear_apromiseid() {
-  _impl_.apromiseid_ = 0u;
+inline void Msg_VibrateHaptic::clear_a_apromiseid() {
+  _impl_.a_apromiseid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_VibrateHaptic::_internal_apromiseid() const {
-  return _impl_.apromiseid_;
+inline uint32_t Msg_VibrateHaptic::_internal_a_apromiseid() const {
+  return _impl_.a_apromiseid_;
 }
-inline uint32_t Msg_VibrateHaptic::apromiseid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aPromiseID)
-  return _internal_apromiseid();
+inline uint32_t Msg_VibrateHaptic::a_apromiseid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aPromiseID)
+  return _internal_a_apromiseid();
 }
-inline void Msg_VibrateHaptic::_internal_set_apromiseid(uint32_t value) {
+inline void Msg_VibrateHaptic::_internal_set_a_apromiseid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.apromiseid_ = value;
+  _impl_.a_apromiseid_ = value;
 }
-inline void Msg_VibrateHaptic::set_apromiseid(uint32_t value) {
-  _internal_set_apromiseid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.aPromiseID)
+inline void Msg_VibrateHaptic::set_a_apromiseid(uint32_t value) {
+  _internal_set_a_apromiseid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_VibrateHaptic.a_aPromiseID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StopVibrateHaptic
 
-// required bytes aGamepadHandle = 1;
-inline bool Msg_StopVibrateHaptic::_internal_has_agamepadhandle() const {
+// required bytes a_aGamepadHandle = 1;
+inline bool Msg_StopVibrateHaptic::_internal_has_a_agamepadhandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StopVibrateHaptic::has_agamepadhandle() const {
-  return _internal_has_agamepadhandle();
+inline bool Msg_StopVibrateHaptic::has_a_agamepadhandle() const {
+  return _internal_has_a_agamepadhandle();
 }
-inline void Msg_StopVibrateHaptic::clear_agamepadhandle() {
-  _impl_.agamepadhandle_.ClearToEmpty();
+inline void Msg_StopVibrateHaptic::clear_a_agamepadhandle() {
+  _impl_.a_agamepadhandle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StopVibrateHaptic::agamepadhandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.aGamepadHandle)
-  return _internal_agamepadhandle();
+inline const std::string& Msg_StopVibrateHaptic::a_agamepadhandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
+  return _internal_a_agamepadhandle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StopVibrateHaptic::set_agamepadhandle(ArgT0&& arg0, ArgT... args) {
+void Msg_StopVibrateHaptic::set_a_agamepadhandle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.agamepadhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.aGamepadHandle)
+ _impl_.a_agamepadhandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
 }
-inline std::string* Msg_StopVibrateHaptic::mutable_agamepadhandle() {
-  std::string* _s = _internal_mutable_agamepadhandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.aGamepadHandle)
+inline std::string* Msg_StopVibrateHaptic::mutable_a_agamepadhandle() {
+  std::string* _s = _internal_mutable_a_agamepadhandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
   return _s;
 }
-inline const std::string& Msg_StopVibrateHaptic::_internal_agamepadhandle() const {
-  return _impl_.agamepadhandle_.Get();
+inline const std::string& Msg_StopVibrateHaptic::_internal_a_agamepadhandle() const {
+  return _impl_.a_agamepadhandle_.Get();
 }
-inline void Msg_StopVibrateHaptic::_internal_set_agamepadhandle(const std::string& value) {
+inline void Msg_StopVibrateHaptic::_internal_set_a_agamepadhandle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.agamepadhandle_.Set(value, GetArenaForAllocation());
+  _impl_.a_agamepadhandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StopVibrateHaptic::_internal_mutable_agamepadhandle() {
+inline std::string* Msg_StopVibrateHaptic::_internal_mutable_a_agamepadhandle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.agamepadhandle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_agamepadhandle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StopVibrateHaptic::release_agamepadhandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.aGamepadHandle)
-  if (!_internal_has_agamepadhandle()) {
+inline std::string* Msg_StopVibrateHaptic::release_a_agamepadhandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
+  if (!_internal_has_a_agamepadhandle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.agamepadhandle_.Release();
+  auto* p = _impl_.a_agamepadhandle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.agamepadhandle_.IsDefault()) {
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_agamepadhandle_.IsDefault()) {
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StopVibrateHaptic::set_allocated_agamepadhandle(std::string* agamepadhandle) {
-  if (agamepadhandle != nullptr) {
+inline void Msg_StopVibrateHaptic::set_allocated_a_agamepadhandle(std::string* a_agamepadhandle) {
+  if (a_agamepadhandle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.agamepadhandle_.SetAllocated(agamepadhandle, GetArenaForAllocation());
+  _impl_.a_agamepadhandle_.SetAllocated(a_agamepadhandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.agamepadhandle_.IsDefault()) {
-    _impl_.agamepadhandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_agamepadhandle_.IsDefault()) {
+    _impl_.a_agamepadhandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.aGamepadHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_StopVibrateHaptic.a_aGamepadHandle)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StartVRNavigation
 
-// required uint32 aDeviceID = 1;
-inline bool Msg_StartVRNavigation::_internal_has_adeviceid() const {
+// required uint32 a_aDeviceID = 1;
+inline bool Msg_StartVRNavigation::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StartVRNavigation::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_StartVRNavigation::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_StartVRNavigation::clear_adeviceid() {
-  _impl_.adeviceid_ = 0u;
+inline void Msg_StartVRNavigation::clear_a_adeviceid() {
+  _impl_.a_adeviceid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_StartVRNavigation::_internal_adeviceid() const {
-  return _impl_.adeviceid_;
+inline uint32_t Msg_StartVRNavigation::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_;
 }
-inline uint32_t Msg_StartVRNavigation::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation.aDeviceID)
-  return _internal_adeviceid();
+inline uint32_t Msg_StartVRNavigation::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation.a_aDeviceID)
+  return _internal_a_adeviceid();
 }
-inline void Msg_StartVRNavigation::_internal_set_adeviceid(uint32_t value) {
+inline void Msg_StartVRNavigation::_internal_set_a_adeviceid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adeviceid_ = value;
+  _impl_.a_adeviceid_ = value;
 }
-inline void Msg_StartVRNavigation::set_adeviceid(uint32_t value) {
-  _internal_set_adeviceid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation.aDeviceID)
+inline void Msg_StartVRNavigation::set_a_adeviceid(uint32_t value) {
+  _internal_set_a_adeviceid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StartVRNavigation.a_aDeviceID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StopVRNavigation
 
-// required uint32 aDeviceID = 1;
-inline bool Msg_StopVRNavigation::_internal_has_adeviceid() const {
+// required uint32 a_aDeviceID = 1;
+inline bool Msg_StopVRNavigation::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_StopVRNavigation::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_StopVRNavigation::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_StopVRNavigation::clear_adeviceid() {
-  _impl_.adeviceid_ = 0u;
+inline void Msg_StopVRNavigation::clear_a_adeviceid() {
+  _impl_.a_adeviceid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_StopVRNavigation::_internal_adeviceid() const {
-  return _impl_.adeviceid_;
+inline uint32_t Msg_StopVRNavigation::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_;
 }
-inline uint32_t Msg_StopVRNavigation::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDeviceID)
-  return _internal_adeviceid();
+inline uint32_t Msg_StopVRNavigation::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDeviceID)
+  return _internal_a_adeviceid();
 }
-inline void Msg_StopVRNavigation::_internal_set_adeviceid(uint32_t value) {
+inline void Msg_StopVRNavigation::_internal_set_a_adeviceid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_ = value;
+  _impl_.a_adeviceid_ = value;
 }
-inline void Msg_StopVRNavigation::set_adeviceid(uint32_t value) {
-  _internal_set_adeviceid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDeviceID)
+inline void Msg_StopVRNavigation::set_a_adeviceid(uint32_t value) {
+  _internal_set_a_adeviceid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDeviceID)
 }
 
-// required bytes aDuration = 2;
-inline bool Msg_StopVRNavigation::_internal_has_aduration() const {
+// required bytes a_aDuration = 2;
+inline bool Msg_StopVRNavigation::_internal_has_a_aduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StopVRNavigation::has_aduration() const {
-  return _internal_has_aduration();
+inline bool Msg_StopVRNavigation::has_a_aduration() const {
+  return _internal_has_a_aduration();
 }
-inline void Msg_StopVRNavigation::clear_aduration() {
-  _impl_.aduration_.ClearToEmpty();
+inline void Msg_StopVRNavigation::clear_a_aduration() {
+  _impl_.a_aduration_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StopVRNavigation::aduration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDuration)
-  return _internal_aduration();
+inline const std::string& Msg_StopVRNavigation::a_aduration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
+  return _internal_a_aduration();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StopVRNavigation::set_aduration(ArgT0&& arg0, ArgT... args) {
+void Msg_StopVRNavigation::set_a_aduration(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aduration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDuration)
+ _impl_.a_aduration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
 }
-inline std::string* Msg_StopVRNavigation::mutable_aduration() {
-  std::string* _s = _internal_mutable_aduration();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDuration)
+inline std::string* Msg_StopVRNavigation::mutable_a_aduration() {
+  std::string* _s = _internal_mutable_a_aduration();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
   return _s;
 }
-inline const std::string& Msg_StopVRNavigation::_internal_aduration() const {
-  return _impl_.aduration_.Get();
+inline const std::string& Msg_StopVRNavigation::_internal_a_aduration() const {
+  return _impl_.a_aduration_.Get();
 }
-inline void Msg_StopVRNavigation::_internal_set_aduration(const std::string& value) {
+inline void Msg_StopVRNavigation::_internal_set_a_aduration(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aduration_.Set(value, GetArenaForAllocation());
+  _impl_.a_aduration_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StopVRNavigation::_internal_mutable_aduration() {
+inline std::string* Msg_StopVRNavigation::_internal_mutable_a_aduration() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aduration_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aduration_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StopVRNavigation::release_aduration() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDuration)
-  if (!_internal_has_aduration()) {
+inline std::string* Msg_StopVRNavigation::release_a_aduration() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
+  if (!_internal_has_a_aduration()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aduration_.Release();
+  auto* p = _impl_.a_aduration_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aduration_.IsDefault()) {
-    _impl_.aduration_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aduration_.IsDefault()) {
+    _impl_.a_aduration_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StopVRNavigation::set_allocated_aduration(std::string* aduration) {
-  if (aduration != nullptr) {
+inline void Msg_StopVRNavigation::set_allocated_a_aduration(std::string* a_aduration) {
+  if (a_aduration != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aduration_.SetAllocated(aduration, GetArenaForAllocation());
+  _impl_.a_aduration_.SetAllocated(a_aduration, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aduration_.IsDefault()) {
-    _impl_.aduration_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aduration_.IsDefault()) {
+    _impl_.a_aduration_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.aDuration)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_StopVRNavigation.a_aDuration)
 }
 
 // -------------------------------------------------------------------
@@ -3948,51 +3948,51 @@ inline void Msg_StopVRNavigation::set_allocated_aduration(std::string* aduration
 
 // Msg_RunPuppet
 
-// repeated uint64 buffer = 1;
-inline int Msg_RunPuppet::_internal_buffer_size() const {
-  return _impl_.buffer_.size();
+// repeated uint64 a_buffer = 1;
+inline int Msg_RunPuppet::_internal_a_buffer_size() const {
+  return _impl_.a_buffer_.size();
 }
-inline int Msg_RunPuppet::buffer_size() const {
-  return _internal_buffer_size();
+inline int Msg_RunPuppet::a_buffer_size() const {
+  return _internal_a_buffer_size();
 }
-inline void Msg_RunPuppet::clear_buffer() {
-  _impl_.buffer_.Clear();
+inline void Msg_RunPuppet::clear_a_buffer() {
+  _impl_.a_buffer_.Clear();
 }
-inline uint64_t Msg_RunPuppet::_internal_buffer(int index) const {
-  return _impl_.buffer_.Get(index);
+inline uint64_t Msg_RunPuppet::_internal_a_buffer(int index) const {
+  return _impl_.a_buffer_.Get(index);
 }
-inline uint64_t Msg_RunPuppet::buffer(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.buffer)
-  return _internal_buffer(index);
+inline uint64_t Msg_RunPuppet::a_buffer(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.a_buffer)
+  return _internal_a_buffer(index);
 }
-inline void Msg_RunPuppet::set_buffer(int index, uint64_t value) {
-  _impl_.buffer_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.buffer)
+inline void Msg_RunPuppet::set_a_buffer(int index, uint64_t value) {
+  _impl_.a_buffer_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.a_buffer)
 }
-inline void Msg_RunPuppet::_internal_add_buffer(uint64_t value) {
-  _impl_.buffer_.Add(value);
+inline void Msg_RunPuppet::_internal_add_a_buffer(uint64_t value) {
+  _impl_.a_buffer_.Add(value);
 }
-inline void Msg_RunPuppet::add_buffer(uint64_t value) {
-  _internal_add_buffer(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.buffer)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_RunPuppet::_internal_buffer() const {
-  return _impl_.buffer_;
+inline void Msg_RunPuppet::add_a_buffer(uint64_t value) {
+  _internal_add_a_buffer(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.a_buffer)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_RunPuppet::buffer() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.buffer)
-  return _internal_buffer();
+Msg_RunPuppet::_internal_a_buffer() const {
+  return _impl_.a_buffer_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+Msg_RunPuppet::a_buffer() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.a_buffer)
+  return _internal_a_buffer();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_RunPuppet::_internal_mutable_buffer() {
-  return &_impl_.buffer_;
+Msg_RunPuppet::_internal_mutable_a_buffer() {
+  return &_impl_.a_buffer_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_RunPuppet::mutable_buffer() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.buffer)
-  return _internal_mutable_buffer();
+Msg_RunPuppet::mutable_a_buffer() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.PVRManager.Msg_RunPuppet.a_buffer)
+  return _internal_mutable_a_buffer();
 }
 
 // -------------------------------------------------------------------
@@ -4003,208 +4003,208 @@ Msg_RunPuppet::mutable_buffer() {
 
 // Msg_UpdateDisplayInfo
 
-// required bytes aDisplayInfo = 1;
-inline bool Msg_UpdateDisplayInfo::_internal_has_adisplayinfo() const {
+// required bytes a_aDisplayInfo = 1;
+inline bool Msg_UpdateDisplayInfo::_internal_has_a_adisplayinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateDisplayInfo::has_adisplayinfo() const {
-  return _internal_has_adisplayinfo();
+inline bool Msg_UpdateDisplayInfo::has_a_adisplayinfo() const {
+  return _internal_has_a_adisplayinfo();
 }
-inline void Msg_UpdateDisplayInfo::clear_adisplayinfo() {
-  _impl_.adisplayinfo_.ClearToEmpty();
+inline void Msg_UpdateDisplayInfo::clear_a_adisplayinfo() {
+  _impl_.a_adisplayinfo_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UpdateDisplayInfo::adisplayinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.aDisplayInfo)
-  return _internal_adisplayinfo();
+inline const std::string& Msg_UpdateDisplayInfo::a_adisplayinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
+  return _internal_a_adisplayinfo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateDisplayInfo::set_adisplayinfo(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateDisplayInfo::set_a_adisplayinfo(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adisplayinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.aDisplayInfo)
+ _impl_.a_adisplayinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
 }
-inline std::string* Msg_UpdateDisplayInfo::mutable_adisplayinfo() {
-  std::string* _s = _internal_mutable_adisplayinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.aDisplayInfo)
+inline std::string* Msg_UpdateDisplayInfo::mutable_a_adisplayinfo() {
+  std::string* _s = _internal_mutable_a_adisplayinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
   return _s;
 }
-inline const std::string& Msg_UpdateDisplayInfo::_internal_adisplayinfo() const {
-  return _impl_.adisplayinfo_.Get();
+inline const std::string& Msg_UpdateDisplayInfo::_internal_a_adisplayinfo() const {
+  return _impl_.a_adisplayinfo_.Get();
 }
-inline void Msg_UpdateDisplayInfo::_internal_set_adisplayinfo(const std::string& value) {
+inline void Msg_UpdateDisplayInfo::_internal_set_a_adisplayinfo(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adisplayinfo_.Set(value, GetArenaForAllocation());
+  _impl_.a_adisplayinfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDisplayInfo::_internal_mutable_adisplayinfo() {
+inline std::string* Msg_UpdateDisplayInfo::_internal_mutable_a_adisplayinfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.adisplayinfo_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adisplayinfo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDisplayInfo::release_adisplayinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.aDisplayInfo)
-  if (!_internal_has_adisplayinfo()) {
+inline std::string* Msg_UpdateDisplayInfo::release_a_adisplayinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
+  if (!_internal_has_a_adisplayinfo()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.adisplayinfo_.Release();
+  auto* p = _impl_.a_adisplayinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adisplayinfo_.IsDefault()) {
-    _impl_.adisplayinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adisplayinfo_.IsDefault()) {
+    _impl_.a_adisplayinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateDisplayInfo::set_allocated_adisplayinfo(std::string* adisplayinfo) {
-  if (adisplayinfo != nullptr) {
+inline void Msg_UpdateDisplayInfo::set_allocated_a_adisplayinfo(std::string* a_adisplayinfo) {
+  if (a_adisplayinfo != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.adisplayinfo_.SetAllocated(adisplayinfo, GetArenaForAllocation());
+  _impl_.a_adisplayinfo_.SetAllocated(a_adisplayinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adisplayinfo_.IsDefault()) {
-    _impl_.adisplayinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adisplayinfo_.IsDefault()) {
+    _impl_.a_adisplayinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.aDisplayInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_UpdateDisplayInfo.a_aDisplayInfo)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateRuntimeCapabilities
 
-// required bytes aCapabilities = 1;
-inline bool Msg_UpdateRuntimeCapabilities::_internal_has_acapabilities() const {
+// required bytes a_aCapabilities = 1;
+inline bool Msg_UpdateRuntimeCapabilities::_internal_has_a_acapabilities() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateRuntimeCapabilities::has_acapabilities() const {
-  return _internal_has_acapabilities();
+inline bool Msg_UpdateRuntimeCapabilities::has_a_acapabilities() const {
+  return _internal_has_a_acapabilities();
 }
-inline void Msg_UpdateRuntimeCapabilities::clear_acapabilities() {
-  _impl_.acapabilities_.ClearToEmpty();
+inline void Msg_UpdateRuntimeCapabilities::clear_a_acapabilities() {
+  _impl_.a_acapabilities_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UpdateRuntimeCapabilities::acapabilities() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.aCapabilities)
-  return _internal_acapabilities();
+inline const std::string& Msg_UpdateRuntimeCapabilities::a_acapabilities() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
+  return _internal_a_acapabilities();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateRuntimeCapabilities::set_acapabilities(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateRuntimeCapabilities::set_a_acapabilities(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acapabilities_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.aCapabilities)
+ _impl_.a_acapabilities_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
 }
-inline std::string* Msg_UpdateRuntimeCapabilities::mutable_acapabilities() {
-  std::string* _s = _internal_mutable_acapabilities();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.aCapabilities)
+inline std::string* Msg_UpdateRuntimeCapabilities::mutable_a_acapabilities() {
+  std::string* _s = _internal_mutable_a_acapabilities();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
   return _s;
 }
-inline const std::string& Msg_UpdateRuntimeCapabilities::_internal_acapabilities() const {
-  return _impl_.acapabilities_.Get();
+inline const std::string& Msg_UpdateRuntimeCapabilities::_internal_a_acapabilities() const {
+  return _impl_.a_acapabilities_.Get();
 }
-inline void Msg_UpdateRuntimeCapabilities::_internal_set_acapabilities(const std::string& value) {
+inline void Msg_UpdateRuntimeCapabilities::_internal_set_a_acapabilities(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acapabilities_.Set(value, GetArenaForAllocation());
+  _impl_.a_acapabilities_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateRuntimeCapabilities::_internal_mutable_acapabilities() {
+inline std::string* Msg_UpdateRuntimeCapabilities::_internal_mutable_a_acapabilities() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acapabilities_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acapabilities_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateRuntimeCapabilities::release_acapabilities() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.aCapabilities)
-  if (!_internal_has_acapabilities()) {
+inline std::string* Msg_UpdateRuntimeCapabilities::release_a_acapabilities() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
+  if (!_internal_has_a_acapabilities()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acapabilities_.Release();
+  auto* p = _impl_.a_acapabilities_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acapabilities_.IsDefault()) {
-    _impl_.acapabilities_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acapabilities_.IsDefault()) {
+    _impl_.a_acapabilities_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateRuntimeCapabilities::set_allocated_acapabilities(std::string* acapabilities) {
-  if (acapabilities != nullptr) {
+inline void Msg_UpdateRuntimeCapabilities::set_allocated_a_acapabilities(std::string* a_acapabilities) {
+  if (a_acapabilities != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acapabilities_.SetAllocated(acapabilities, GetArenaForAllocation());
+  _impl_.a_acapabilities_.SetAllocated(a_acapabilities, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acapabilities_.IsDefault()) {
-    _impl_.acapabilities_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acapabilities_.IsDefault()) {
+    _impl_.a_acapabilities_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.aCapabilities)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVRManager.Msg_UpdateRuntimeCapabilities.a_aCapabilities)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReplyGamepadVibrateHaptic
 
-// required uint32 aPromiseID = 1;
-inline bool Msg_ReplyGamepadVibrateHaptic::_internal_has_apromiseid() const {
+// required uint32 a_aPromiseID = 1;
+inline bool Msg_ReplyGamepadVibrateHaptic::_internal_has_a_apromiseid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplyGamepadVibrateHaptic::has_apromiseid() const {
-  return _internal_has_apromiseid();
+inline bool Msg_ReplyGamepadVibrateHaptic::has_a_apromiseid() const {
+  return _internal_has_a_apromiseid();
 }
-inline void Msg_ReplyGamepadVibrateHaptic::clear_apromiseid() {
-  _impl_.apromiseid_ = 0u;
+inline void Msg_ReplyGamepadVibrateHaptic::clear_a_apromiseid() {
+  _impl_.a_apromiseid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_ReplyGamepadVibrateHaptic::_internal_apromiseid() const {
-  return _impl_.apromiseid_;
+inline uint32_t Msg_ReplyGamepadVibrateHaptic::_internal_a_apromiseid() const {
+  return _impl_.a_apromiseid_;
 }
-inline uint32_t Msg_ReplyGamepadVibrateHaptic::apromiseid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic.aPromiseID)
-  return _internal_apromiseid();
+inline uint32_t Msg_ReplyGamepadVibrateHaptic::a_apromiseid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic.a_aPromiseID)
+  return _internal_a_apromiseid();
 }
-inline void Msg_ReplyGamepadVibrateHaptic::_internal_set_apromiseid(uint32_t value) {
+inline void Msg_ReplyGamepadVibrateHaptic::_internal_set_a_apromiseid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apromiseid_ = value;
+  _impl_.a_apromiseid_ = value;
 }
-inline void Msg_ReplyGamepadVibrateHaptic::set_apromiseid(uint32_t value) {
-  _internal_set_apromiseid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic.aPromiseID)
+inline void Msg_ReplyGamepadVibrateHaptic::set_a_apromiseid(uint32_t value) {
+  _internal_set_a_apromiseid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_ReplyGamepadVibrateHaptic.a_aPromiseID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NotifyPuppetCommandBufferCompleted
 
-// required bool aSuccess = 1;
-inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_has_asuccess() const {
+// required bool a_aSuccess = 1;
+inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyPuppetCommandBufferCompleted::has_asuccess() const {
-  return _internal_has_asuccess();
+inline bool Msg_NotifyPuppetCommandBufferCompleted::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
 }
-inline void Msg_NotifyPuppetCommandBufferCompleted::clear_asuccess() {
-  _impl_.asuccess_ = false;
+inline void Msg_NotifyPuppetCommandBufferCompleted::clear_a_asuccess() {
+  _impl_.a_asuccess_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_asuccess() const {
-  return _impl_.asuccess_;
+inline bool Msg_NotifyPuppetCommandBufferCompleted::_internal_a_asuccess() const {
+  return _impl_.a_asuccess_;
 }
-inline bool Msg_NotifyPuppetCommandBufferCompleted::asuccess() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted.aSuccess)
-  return _internal_asuccess();
+inline bool Msg_NotifyPuppetCommandBufferCompleted::a_asuccess() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted.a_aSuccess)
+  return _internal_a_asuccess();
 }
-inline void Msg_NotifyPuppetCommandBufferCompleted::_internal_set_asuccess(bool value) {
+inline void Msg_NotifyPuppetCommandBufferCompleted::_internal_set_a_asuccess(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.asuccess_ = value;
+  _impl_.a_asuccess_ = value;
 }
-inline void Msg_NotifyPuppetCommandBufferCompleted::set_asuccess(bool value) {
-  _internal_set_asuccess(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted.aSuccess)
+inline void Msg_NotifyPuppetCommandBufferCompleted::set_a_asuccess(bool value) {
+  _internal_set_a_asuccess(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_NotifyPuppetCommandBufferCompleted.a_aSuccess)
 }
 
 // -------------------------------------------------------------------

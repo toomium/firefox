@@ -20,11 +20,11 @@ message Msg_Query {
 }
 
 message Reply_Query {
-  required bytes snapshot = 1;
+  required bytes a_snapshot = 1;
 }
 
 message Msg_PLockRequestConstructor {
-  required protobuf.mozilla.dom.locks.IPCLockRequest aRequest = 1;
+  required protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 1;
 }
 
 message Reply_PLockRequestConstructor {

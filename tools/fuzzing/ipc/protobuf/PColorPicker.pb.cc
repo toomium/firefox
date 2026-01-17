@@ -37,7 +37,7 @@ PROTOBUF_CONSTEXPR Msg_Update::Msg_Update(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_UpdateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,7 +51,7 @@ PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_color_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -235,7 +235,7 @@ std::string Msg_Open::GetTypeName() const {
 class Msg_Update::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Update>()._impl_._has_bits_);
-  static void set_has_color(HasBits* has_bits) {
+  static void set_has_a_color(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -255,15 +255,15 @@ Msg_Update::Msg_Update(const Msg_Update& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.color_){}};
+    , decltype(_impl_.a_color_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.color_.InitDefault();
+  _impl_.a_color_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.color_.Set("", GetArenaForAllocation());
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_color()) {
-    _this->_impl_.color_.Set(from._internal_color(), 
+  if (from._internal_has_a_color()) {
+    _this->_impl_.a_color_.Set(from._internal_a_color(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PColorPicker.Msg_Update)
@@ -276,11 +276,11 @@ inline void Msg_Update::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.color_){}
+    , decltype(_impl_.a_color_){}
   };
-  _impl_.color_.InitDefault();
+  _impl_.a_color_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.color_.Set("", GetArenaForAllocation());
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -295,7 +295,7 @@ Msg_Update::~Msg_Update() {
 
 inline void Msg_Update::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.color_.Destroy();
+  _impl_.a_color_.Destroy();
 }
 
 void Msg_Update::SetCachedSize(int size) const {
@@ -310,7 +310,7 @@ void Msg_Update::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.color_.ClearNonDefaultToEmpty();
+    _impl_.a_color_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -323,10 +323,10 @@ const char* Msg_Update::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes color = 1;
+      // required bytes a_color = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_color();
+          auto str = _internal_mutable_a_color();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -363,10 +363,10 @@ uint8_t* Msg_Update::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes color = 1;
+  // required bytes a_color = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_color(), target);
+        1, this->_internal_a_color(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -381,11 +381,11 @@ size_t Msg_Update::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PColorPicker.Msg_Update)
   size_t total_size = 0;
 
-  // required bytes color = 1;
-  if (_internal_has_color()) {
+  // required bytes a_color = 1;
+  if (_internal_has_a_color()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_color());
+        this->_internal_a_color());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -412,8 +412,8 @@ void Msg_Update::MergeFrom(const Msg_Update& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_color()) {
-    _this->_internal_set_color(from._internal_color());
+  if (from._internal_has_a_color()) {
+    _this->_internal_set_a_color(from._internal_a_color());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -437,8 +437,8 @@ void Msg_Update::InternalSwap(Msg_Update* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.color_, lhs_arena,
-      &other->_impl_.color_, rhs_arena
+      &_impl_.a_color_, lhs_arena,
+      &other->_impl_.a_color_, rhs_arena
   );
 }
 
@@ -452,7 +452,7 @@ std::string Msg_Update::GetTypeName() const {
 class Msg___delete__::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg___delete__>()._impl_._has_bits_);
-  static void set_has_color(HasBits* has_bits) {
+  static void set_has_a_color(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -472,15 +472,15 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.color_){}};
+    , decltype(_impl_.a_color_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.color_.InitDefault();
+  _impl_.a_color_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.color_.Set("", GetArenaForAllocation());
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_color()) {
-    _this->_impl_.color_.Set(from._internal_color(), 
+  if (from._internal_has_a_color()) {
+    _this->_impl_.a_color_.Set(from._internal_a_color(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PColorPicker.Msg___delete__)
@@ -493,11 +493,11 @@ inline void Msg___delete__::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.color_){}
+    , decltype(_impl_.a_color_){}
   };
-  _impl_.color_.InitDefault();
+  _impl_.a_color_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.color_.Set("", GetArenaForAllocation());
+    _impl_.a_color_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -512,7 +512,7 @@ Msg___delete__::~Msg___delete__() {
 
 inline void Msg___delete__::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.color_.Destroy();
+  _impl_.a_color_.Destroy();
 }
 
 void Msg___delete__::SetCachedSize(int size) const {
@@ -527,7 +527,7 @@ void Msg___delete__::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.color_.ClearNonDefaultToEmpty();
+    _impl_.a_color_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -540,10 +540,10 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes color = 1;
+      // required bytes a_color = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_color();
+          auto str = _internal_mutable_a_color();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -580,10 +580,10 @@ uint8_t* Msg___delete__::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes color = 1;
+  // required bytes a_color = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_color(), target);
+        1, this->_internal_a_color(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -598,11 +598,11 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PColorPicker.Msg___delete__)
   size_t total_size = 0;
 
-  // required bytes color = 1;
-  if (_internal_has_color()) {
+  // required bytes a_color = 1;
+  if (_internal_has_a_color()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_color());
+        this->_internal_a_color());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -629,8 +629,8 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_color()) {
-    _this->_internal_set_color(from._internal_color());
+  if (from._internal_has_a_color()) {
+    _this->_internal_set_a_color(from._internal_a_color());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -654,8 +654,8 @@ void Msg___delete__::InternalSwap(Msg___delete__* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.color_, lhs_arena,
-      &other->_impl_.color_, rhs_arena
+      &_impl_.a_color_, lhs_arena,
+      &other->_impl_.a_color_, rhs_arena
   );
 }
 

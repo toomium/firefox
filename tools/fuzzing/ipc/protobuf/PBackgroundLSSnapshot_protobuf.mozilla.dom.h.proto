@@ -14,12 +14,12 @@ import "PBackgroundLSSharedTypes.proto";
 
 // Structs and unions declarations
 message LSSetItemInfo {
-  required bytes key = 1;
-  required bytes value = 2;
+  required bytes a_key = 1;
+  required bytes a_value = 2;
 }
 
 message LSRemoveItemInfo {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message LSClearInfo {
@@ -27,27 +27,27 @@ message LSClearInfo {
 
 message LSWriteInfo {
   oneof content {
-    protobuf.mozilla.dom.LSSetItemInfo mVLSSetItemInfo = 1;
-    protobuf.mozilla.dom.LSRemoveItemInfo mVLSRemoveItemInfo = 2;
-    protobuf.mozilla.dom.LSClearInfo mVLSClearInfo = 3;
+    protobuf.mozilla.dom.LSSetItemInfo a_mVLSSetItemInfo = 1;
+    protobuf.mozilla.dom.LSRemoveItemInfo a_mVLSRemoveItemInfo = 2;
+    protobuf.mozilla.dom.LSClearInfo a_mVLSClearInfo = 3;
   }
 }
 
 message LSSetItemAndNotifyInfo {
-  required bytes key = 1;
-  required bytes oldValue = 2;
-  required bytes value = 3;
+  required bytes a_key = 1;
+  required bytes a_oldValue = 2;
+  required bytes a_value = 3;
 }
 
 message LSRemoveItemAndNotifyInfo {
-  required bytes key = 1;
-  required bytes oldValue = 2;
+  required bytes a_key = 1;
+  required bytes a_oldValue = 2;
 }
 
 message LSWriteAndNotifyInfo {
   oneof content {
-    protobuf.mozilla.dom.LSSetItemAndNotifyInfo mVLSSetItemAndNotifyInfo = 1;
-    protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo mVLSRemoveItemAndNotifyInfo = 2;
-    protobuf.mozilla.dom.LSClearInfo mVLSClearInfo = 3;
+    protobuf.mozilla.dom.LSSetItemAndNotifyInfo a_mVLSSetItemAndNotifyInfo = 1;
+    protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo a_mVLSRemoveItemAndNotifyInfo = 2;
+    protobuf.mozilla.dom.LSClearInfo a_mVLSClearInfo = 3;
   }
 }

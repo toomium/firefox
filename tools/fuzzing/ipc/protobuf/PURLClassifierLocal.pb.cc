@@ -23,7 +23,7 @@ namespace dom {
 namespace PURLClassifierLocal {
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.results_)*/{}
+    /*decltype(_impl_.a_results_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
@@ -61,8 +61,8 @@ class Msg___delete__::_Internal {
  public:
 };
 
-void Msg___delete__::clear_results() {
-  _impl_.results_.Clear();
+void Msg___delete__::clear_a_results() {
+  _impl_.a_results_.Clear();
 }
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -74,7 +74,7 @@ Msg___delete__::Msg___delete__(const Msg___delete__& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg___delete__* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.results_){from._impl_.results_}
+      decltype(_impl_.a_results_){from._impl_.a_results_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -86,7 +86,7 @@ inline void Msg___delete__::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.results_){arena}
+      decltype(_impl_.a_results_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -102,7 +102,7 @@ Msg___delete__::~Msg___delete__() {
 
 inline void Msg___delete__::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.results_.~RepeatedPtrField();
+  _impl_.a_results_.~RepeatedPtrField();
 }
 
 void Msg___delete__::SetCachedSize(int size) const {
@@ -115,7 +115,7 @@ void Msg___delete__::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.results_.Clear();
+  _impl_.a_results_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -125,13 +125,13 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.URLClassifierLocalResult results = 1;
+      // repeated .protobuf.mozilla.dom.URLClassifierLocalResult a_results = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_results(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_results(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -167,10 +167,10 @@ uint8_t* Msg___delete__::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.URLClassifierLocalResult results = 1;
+  // repeated .protobuf.mozilla.dom.URLClassifierLocalResult a_results = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_results_size()); i < n; i++) {
-    const auto& repfield = this->_internal_results(i);
+      n = static_cast<unsigned>(this->_internal_a_results_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_results(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -191,9 +191,9 @@ size_t Msg___delete__::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.URLClassifierLocalResult results = 1;
-  total_size += 1UL * this->_internal_results_size();
-  for (const auto& msg : this->_impl_.results_) {
+  // repeated .protobuf.mozilla.dom.URLClassifierLocalResult a_results = 1;
+  total_size += 1UL * this->_internal_a_results_size();
+  for (const auto& msg : this->_impl_.a_results_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -219,7 +219,7 @@ void Msg___delete__::MergeFrom(const Msg___delete__& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.results_.MergeFrom(from._impl_.results_);
+  _this->_impl_.a_results_.MergeFrom(from._impl_.a_results_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -231,7 +231,7 @@ void Msg___delete__::CopyFrom(const Msg___delete__& from) {
 }
 
 bool Msg___delete__::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.results_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_results_))
     return false;
   return true;
 }
@@ -239,7 +239,7 @@ bool Msg___delete__::IsInitialized() const {
 void Msg___delete__::InternalSwap(Msg___delete__* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.results_.InternalSwap(&other->_impl_.results_);
+  _impl_.a_results_.InternalSwap(&other->_impl_.a_results_);
 }
 
 std::string Msg___delete__::GetTypeName() const {

@@ -16,40 +16,40 @@ package protobuf.mozilla.net.PWebSocketEventListener;
 
 // Message declarations
 message Msg_WebSocketCreated {
-  required uint32 awebSocketSerialID = 1;
-  required bytes aURI = 2;
-  required bytes aProtocols = 3;
+  required uint32 a_awebSocketSerialID = 1;
+  required bytes a_aURI = 2;
+  required bytes a_aProtocols = 3;
 }
 
 message Msg_WebSocketOpened {
-  required uint32 awebSocketSerialID = 1;
-  required bytes aEffectiveURI = 2;
-  required bytes aProtocols = 3;
-  required bytes aExtensions = 4;
-  required uint64 aHttpChannelId = 5;
+  required uint32 a_awebSocketSerialID = 1;
+  required bytes a_aEffectiveURI = 2;
+  required bytes a_aProtocols = 3;
+  required bytes a_aExtensions = 4;
+  required uint64 a_aHttpChannelId = 5;
 }
 
 message Msg_WebSocketMessageAvailable {
-  required uint32 awebSocketSerialID = 1;
-  required bytes aData = 2;
-  required uint32 aMessageType = 3;
+  required uint32 a_awebSocketSerialID = 1;
+  required bytes a_aData = 2;
+  required uint32 a_aMessageType = 3;
 }
 
 message Msg_WebSocketClosed {
-  required uint32 awebSocketSerialID = 1;
-  required bool aWasClean = 2;
-  required uint32 aCode = 3;
-  required bytes aReason = 4;
+  required uint32 a_awebSocketSerialID = 1;
+  required bool a_aWasClean = 2;
+  required uint32 a_aCode = 3;
+  required bytes a_aReason = 4;
 }
 
 message Msg_FrameReceived {
-  required uint32 aWebSocketSerialID = 1;
-  required bytes aFrameData = 2;
+  required uint32 a_aWebSocketSerialID = 1;
+  required bytes a_aFrameData = 2;
 }
 
 message Msg_FrameSent {
-  required uint32 aWebSocketSerialID = 1;
-  required bytes aFrameData = 2;
+  required uint32 a_aWebSocketSerialID = 1;
+  required bytes a_aFrameData = 2;
 }
 
 message Msg___delete__ {

@@ -176,24 +176,24 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTestArgFieldNumber = 1,
+    kATestArgFieldNumber = 1,
   };
-  // required bytes testArg = 1;
-  bool has_testarg() const;
+  // required bytes a_testArg = 1;
+  bool has_a_testarg() const;
   private:
-  bool _internal_has_testarg() const;
+  bool _internal_has_a_testarg() const;
   public:
-  void clear_testarg();
-  const std::string& testarg() const;
+  void clear_a_testarg();
+  const std::string& a_testarg() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_testarg(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_testarg();
-  PROTOBUF_NODISCARD std::string* release_testarg();
-  void set_allocated_testarg(std::string* testarg);
+  void set_a_testarg(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_testarg();
+  PROTOBUF_NODISCARD std::string* release_a_testarg();
+  void set_allocated_a_testarg(std::string* a_testarg);
   private:
-  const std::string& _internal_testarg() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_testarg(const std::string& value);
-  std::string* _internal_mutable_testarg();
+  const std::string& _internal_a_testarg() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_testarg(const std::string& value);
+  std::string* _internal_mutable_a_testarg();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__)
@@ -206,7 +206,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr testarg_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_testarg_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundTest_2eproto;
@@ -346,72 +346,72 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required bytes testArg = 1;
-inline bool Msg___delete__::_internal_has_testarg() const {
+// required bytes a_testArg = 1;
+inline bool Msg___delete__::_internal_has_a_testarg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_testarg() const {
-  return _internal_has_testarg();
+inline bool Msg___delete__::has_a_testarg() const {
+  return _internal_has_a_testarg();
 }
-inline void Msg___delete__::clear_testarg() {
-  _impl_.testarg_.ClearToEmpty();
+inline void Msg___delete__::clear_a_testarg() {
+  _impl_.a_testarg_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg___delete__::testarg() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.testArg)
-  return _internal_testarg();
+inline const std::string& Msg___delete__::a_testarg() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.a_testArg)
+  return _internal_a_testarg();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_testarg(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_testarg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.testarg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.testArg)
+ _impl_.a_testarg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.a_testArg)
 }
-inline std::string* Msg___delete__::mutable_testarg() {
-  std::string* _s = _internal_mutable_testarg();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.testArg)
+inline std::string* Msg___delete__::mutable_a_testarg() {
+  std::string* _s = _internal_mutable_a_testarg();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.a_testArg)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_testarg() const {
-  return _impl_.testarg_.Get();
+inline const std::string& Msg___delete__::_internal_a_testarg() const {
+  return _impl_.a_testarg_.Get();
 }
-inline void Msg___delete__::_internal_set_testarg(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_testarg(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.testarg_.Set(value, GetArenaForAllocation());
+  _impl_.a_testarg_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_testarg() {
+inline std::string* Msg___delete__::_internal_mutable_a_testarg() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.testarg_.Mutable(GetArenaForAllocation());
+  return _impl_.a_testarg_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_testarg() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.testArg)
-  if (!_internal_has_testarg()) {
+inline std::string* Msg___delete__::release_a_testarg() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.a_testArg)
+  if (!_internal_has_a_testarg()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.testarg_.Release();
+  auto* p = _impl_.a_testarg_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.testarg_.IsDefault()) {
-    _impl_.testarg_.Set("", GetArenaForAllocation());
+  if (_impl_.a_testarg_.IsDefault()) {
+    _impl_.a_testarg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_testarg(std::string* testarg) {
-  if (testarg != nullptr) {
+inline void Msg___delete__::set_allocated_a_testarg(std::string* a_testarg) {
+  if (a_testarg != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.testarg_.SetAllocated(testarg, GetArenaForAllocation());
+  _impl_.a_testarg_.SetAllocated(a_testarg, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.testarg_.IsDefault()) {
-    _impl_.testarg_.Set("", GetArenaForAllocation());
+  if (_impl_.a_testarg_.IsDefault()) {
+    _impl_.a_testarg_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.testArg)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackgroundTest.Msg___delete__.a_testArg)
 }
 
 // -------------------------------------------------------------------

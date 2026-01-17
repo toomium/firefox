@@ -25,8 +25,8 @@ PROTOBUF_CONSTEXPR Msg_Register::Msg_Register(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aparentep_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.adebuggerinfo_)*/nullptr} {}
+  , /*decltype(_impl_.a_aparentep_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_adebuggerinfo_)*/nullptr} {}
 struct Msg_RegisterDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_RegisterDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -50,11 +50,11 @@ namespace PRemoteWorkerDebuggerManager {
 class Msg_Register::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Register>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& adebuggerinfo(const Msg_Register* msg);
-  static void set_has_adebuggerinfo(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo& a_adebuggerinfo(const Msg_Register* msg);
+  static void set_has_a_adebuggerinfo(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aparentep(HasBits* has_bits) {
+  static void set_has_a_aparentep(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -63,11 +63,11 @@ class Msg_Register::_Internal {
 };
 
 const ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo&
-Msg_Register::_Internal::adebuggerinfo(const Msg_Register* msg) {
-  return *msg->_impl_.adebuggerinfo_;
+Msg_Register::_Internal::a_adebuggerinfo(const Msg_Register* msg) {
+  return *msg->_impl_.a_adebuggerinfo_;
 }
-void Msg_Register::clear_adebuggerinfo() {
-  if (_impl_.adebuggerinfo_ != nullptr) _impl_.adebuggerinfo_->Clear();
+void Msg_Register::clear_a_adebuggerinfo() {
+  if (_impl_.a_adebuggerinfo_ != nullptr) _impl_.a_adebuggerinfo_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_Register::Msg_Register(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -82,20 +82,20 @@ Msg_Register::Msg_Register(const Msg_Register& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aparentep_){}
-    , decltype(_impl_.adebuggerinfo_){nullptr}};
+    , decltype(_impl_.a_aparentep_){}
+    , decltype(_impl_.a_adebuggerinfo_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aparentep_.InitDefault();
+  _impl_.a_aparentep_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aparentep_.Set("", GetArenaForAllocation());
+    _impl_.a_aparentep_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aparentep()) {
-    _this->_impl_.aparentep_.Set(from._internal_aparentep(), 
+  if (from._internal_has_a_aparentep()) {
+    _this->_impl_.a_aparentep_.Set(from._internal_a_aparentep(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_adebuggerinfo()) {
-    _this->_impl_.adebuggerinfo_ = new ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo(*from._impl_.adebuggerinfo_);
+  if (from._internal_has_a_adebuggerinfo()) {
+    _this->_impl_.a_adebuggerinfo_ = new ::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo(*from._impl_.a_adebuggerinfo_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register)
 }
@@ -107,12 +107,12 @@ inline void Msg_Register::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aparentep_){}
-    , decltype(_impl_.adebuggerinfo_){nullptr}
+    , decltype(_impl_.a_aparentep_){}
+    , decltype(_impl_.a_adebuggerinfo_){nullptr}
   };
-  _impl_.aparentep_.InitDefault();
+  _impl_.a_aparentep_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aparentep_.Set("", GetArenaForAllocation());
+    _impl_.a_aparentep_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -127,8 +127,8 @@ Msg_Register::~Msg_Register() {
 
 inline void Msg_Register::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aparentep_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.adebuggerinfo_;
+  _impl_.a_aparentep_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_adebuggerinfo_;
 }
 
 void Msg_Register::SetCachedSize(int size) const {
@@ -144,11 +144,11 @@ void Msg_Register::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aparentep_.ClearNonDefaultToEmpty();
+      _impl_.a_aparentep_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.adebuggerinfo_ != nullptr);
-      _impl_.adebuggerinfo_->Clear();
+      GOOGLE_DCHECK(_impl_.a_adebuggerinfo_ != nullptr);
+      _impl_.a_adebuggerinfo_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -162,18 +162,18 @@ const char* Msg_Register::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo aDebuggerInfo = 1;
+      // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_adebuggerinfo(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_adebuggerinfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aParentEp = 2;
+      // required bytes a_aParentEp = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_aparentep();
+          auto str = _internal_mutable_a_aparentep();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -210,17 +210,17 @@ uint8_t* Msg_Register::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo aDebuggerInfo = 1;
+  // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::adebuggerinfo(this),
-        _Internal::adebuggerinfo(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_adebuggerinfo(this),
+        _Internal::a_adebuggerinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes aParentEp = 2;
+  // required bytes a_aParentEp = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_aparentep(), target);
+        2, this->_internal_a_aparentep(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -235,18 +235,18 @@ size_t Msg_Register::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PRemoteWorkerDebuggerManager.Msg_Register)
   size_t total_size = 0;
 
-  if (_internal_has_aparentep()) {
-    // required bytes aParentEp = 2;
+  if (_internal_has_a_aparentep()) {
+    // required bytes a_aParentEp = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aparentep());
+        this->_internal_a_aparentep());
   }
 
-  if (_internal_has_adebuggerinfo()) {
-    // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo aDebuggerInfo = 1;
+  if (_internal_has_a_adebuggerinfo()) {
+    // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.adebuggerinfo_);
+        *_impl_.a_adebuggerinfo_);
   }
 
   return total_size;
@@ -256,15 +256,15 @@ size_t Msg_Register::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aParentEp = 2;
+    // required bytes a_aParentEp = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aparentep());
+        this->_internal_a_aparentep());
 
-    // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo aDebuggerInfo = 1;
+    // required .protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.adebuggerinfo_);
+        *_impl_.a_adebuggerinfo_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -297,11 +297,11 @@ void Msg_Register::MergeFrom(const Msg_Register& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aparentep(from._internal_aparentep());
+      _this->_internal_set_a_aparentep(from._internal_a_aparentep());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_adebuggerinfo()->::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo::MergeFrom(
-          from._internal_adebuggerinfo());
+      _this->_internal_mutable_a_adebuggerinfo()->::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo::MergeFrom(
+          from._internal_a_adebuggerinfo());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -316,8 +316,8 @@ void Msg_Register::CopyFrom(const Msg_Register& from) {
 
 bool Msg_Register::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_adebuggerinfo()) {
-    if (!_impl_.adebuggerinfo_->IsInitialized()) return false;
+  if (_internal_has_a_adebuggerinfo()) {
+    if (!_impl_.a_adebuggerinfo_->IsInitialized()) return false;
   }
   return true;
 }
@@ -329,10 +329,10 @@ void Msg_Register::InternalSwap(Msg_Register* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aparentep_, lhs_arena,
-      &other->_impl_.aparentep_, rhs_arena
+      &_impl_.a_aparentep_, lhs_arena,
+      &other->_impl_.a_aparentep_, rhs_arena
   );
-  swap(_impl_.adebuggerinfo_, other->_impl_.adebuggerinfo_);
+  swap(_impl_.a_adebuggerinfo_, other->_impl_.a_adebuggerinfo_);
 }
 
 std::string Msg_Register::GetTypeName() const {

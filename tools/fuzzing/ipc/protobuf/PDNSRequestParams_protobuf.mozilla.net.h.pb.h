@@ -173,143 +173,143 @@ class DNSRecord final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAddrsFieldNumber = 2,
-    kCanonicalNameFieldNumber = 1,
-    kEffectiveTRRModeFieldNumber = 6,
-    kLastUpdateFieldNumber = 8,
-    kTrrFetchDurationFieldNumber = 3,
-    kTrrFetchDurationNetworkOnlyFieldNumber = 4,
-    kIsTRRFieldNumber = 5,
-    kTtlFieldNumber = 7,
+    kAAddrsFieldNumber = 2,
+    kACanonicalNameFieldNumber = 1,
+    kAEffectiveTRRModeFieldNumber = 6,
+    kALastUpdateFieldNumber = 8,
+    kATrrFetchDurationFieldNumber = 3,
+    kATrrFetchDurationNetworkOnlyFieldNumber = 4,
+    kAIsTRRFieldNumber = 5,
+    kATtlFieldNumber = 7,
   };
-  // repeated bytes addrs = 2;
-  int addrs_size() const;
+  // repeated bytes a_addrs = 2;
+  int a_addrs_size() const;
   private:
-  int _internal_addrs_size() const;
+  int _internal_a_addrs_size() const;
   public:
-  void clear_addrs();
-  const std::string& addrs(int index) const;
-  std::string* mutable_addrs(int index);
-  void set_addrs(int index, const std::string& value);
-  void set_addrs(int index, std::string&& value);
-  void set_addrs(int index, const char* value);
-  void set_addrs(int index, const void* value, size_t size);
-  std::string* add_addrs();
-  void add_addrs(const std::string& value);
-  void add_addrs(std::string&& value);
-  void add_addrs(const char* value);
-  void add_addrs(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& addrs() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_addrs();
+  void clear_a_addrs();
+  const std::string& a_addrs(int index) const;
+  std::string* mutable_a_addrs(int index);
+  void set_a_addrs(int index, const std::string& value);
+  void set_a_addrs(int index, std::string&& value);
+  void set_a_addrs(int index, const char* value);
+  void set_a_addrs(int index, const void* value, size_t size);
+  std::string* add_a_addrs();
+  void add_a_addrs(const std::string& value);
+  void add_a_addrs(std::string&& value);
+  void add_a_addrs(const char* value);
+  void add_a_addrs(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_addrs() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_addrs();
   private:
-  const std::string& _internal_addrs(int index) const;
-  std::string* _internal_add_addrs();
+  const std::string& _internal_a_addrs(int index) const;
+  std::string* _internal_add_a_addrs();
   public:
 
-  // required bytes canonicalName = 1;
-  bool has_canonicalname() const;
+  // required bytes a_canonicalName = 1;
+  bool has_a_canonicalname() const;
   private:
-  bool _internal_has_canonicalname() const;
+  bool _internal_has_a_canonicalname() const;
   public:
-  void clear_canonicalname();
-  const std::string& canonicalname() const;
+  void clear_a_canonicalname();
+  const std::string& a_canonicalname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_canonicalname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_canonicalname();
-  PROTOBUF_NODISCARD std::string* release_canonicalname();
-  void set_allocated_canonicalname(std::string* canonicalname);
+  void set_a_canonicalname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_canonicalname();
+  PROTOBUF_NODISCARD std::string* release_a_canonicalname();
+  void set_allocated_a_canonicalname(std::string* a_canonicalname);
   private:
-  const std::string& _internal_canonicalname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_canonicalname(const std::string& value);
-  std::string* _internal_mutable_canonicalname();
+  const std::string& _internal_a_canonicalname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_canonicalname(const std::string& value);
+  std::string* _internal_mutable_a_canonicalname();
   public:
 
-  // required bytes effectiveTRRMode = 6;
-  bool has_effectivetrrmode() const;
+  // required bytes a_effectiveTRRMode = 6;
+  bool has_a_effectivetrrmode() const;
   private:
-  bool _internal_has_effectivetrrmode() const;
+  bool _internal_has_a_effectivetrrmode() const;
   public:
-  void clear_effectivetrrmode();
-  const std::string& effectivetrrmode() const;
+  void clear_a_effectivetrrmode();
+  const std::string& a_effectivetrrmode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_effectivetrrmode(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_effectivetrrmode();
-  PROTOBUF_NODISCARD std::string* release_effectivetrrmode();
-  void set_allocated_effectivetrrmode(std::string* effectivetrrmode);
+  void set_a_effectivetrrmode(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_effectivetrrmode();
+  PROTOBUF_NODISCARD std::string* release_a_effectivetrrmode();
+  void set_allocated_a_effectivetrrmode(std::string* a_effectivetrrmode);
   private:
-  const std::string& _internal_effectivetrrmode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_effectivetrrmode(const std::string& value);
-  std::string* _internal_mutable_effectivetrrmode();
+  const std::string& _internal_a_effectivetrrmode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_effectivetrrmode(const std::string& value);
+  std::string* _internal_mutable_a_effectivetrrmode();
   public:
 
-  // required bytes lastUpdate = 8;
-  bool has_lastupdate() const;
+  // required bytes a_lastUpdate = 8;
+  bool has_a_lastupdate() const;
   private:
-  bool _internal_has_lastupdate() const;
+  bool _internal_has_a_lastupdate() const;
   public:
-  void clear_lastupdate();
-  const std::string& lastupdate() const;
+  void clear_a_lastupdate();
+  const std::string& a_lastupdate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_lastupdate(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_lastupdate();
-  PROTOBUF_NODISCARD std::string* release_lastupdate();
-  void set_allocated_lastupdate(std::string* lastupdate);
+  void set_a_lastupdate(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_lastupdate();
+  PROTOBUF_NODISCARD std::string* release_a_lastupdate();
+  void set_allocated_a_lastupdate(std::string* a_lastupdate);
   private:
-  const std::string& _internal_lastupdate() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_lastupdate(const std::string& value);
-  std::string* _internal_mutable_lastupdate();
+  const std::string& _internal_a_lastupdate() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_lastupdate(const std::string& value);
+  std::string* _internal_mutable_a_lastupdate();
   public:
 
-  // required double trrFetchDuration = 3;
-  bool has_trrfetchduration() const;
+  // required double a_trrFetchDuration = 3;
+  bool has_a_trrfetchduration() const;
   private:
-  bool _internal_has_trrfetchduration() const;
+  bool _internal_has_a_trrfetchduration() const;
   public:
-  void clear_trrfetchduration();
-  double trrfetchduration() const;
-  void set_trrfetchduration(double value);
+  void clear_a_trrfetchduration();
+  double a_trrfetchduration() const;
+  void set_a_trrfetchduration(double value);
   private:
-  double _internal_trrfetchduration() const;
-  void _internal_set_trrfetchduration(double value);
-  public:
-
-  // required double trrFetchDurationNetworkOnly = 4;
-  bool has_trrfetchdurationnetworkonly() const;
-  private:
-  bool _internal_has_trrfetchdurationnetworkonly() const;
-  public:
-  void clear_trrfetchdurationnetworkonly();
-  double trrfetchdurationnetworkonly() const;
-  void set_trrfetchdurationnetworkonly(double value);
-  private:
-  double _internal_trrfetchdurationnetworkonly() const;
-  void _internal_set_trrfetchdurationnetworkonly(double value);
+  double _internal_a_trrfetchduration() const;
+  void _internal_set_a_trrfetchduration(double value);
   public:
 
-  // required bool isTRR = 5;
-  bool has_istrr() const;
+  // required double a_trrFetchDurationNetworkOnly = 4;
+  bool has_a_trrfetchdurationnetworkonly() const;
   private:
-  bool _internal_has_istrr() const;
+  bool _internal_has_a_trrfetchdurationnetworkonly() const;
   public:
-  void clear_istrr();
-  bool istrr() const;
-  void set_istrr(bool value);
+  void clear_a_trrfetchdurationnetworkonly();
+  double a_trrfetchdurationnetworkonly() const;
+  void set_a_trrfetchdurationnetworkonly(double value);
   private:
-  bool _internal_istrr() const;
-  void _internal_set_istrr(bool value);
+  double _internal_a_trrfetchdurationnetworkonly() const;
+  void _internal_set_a_trrfetchdurationnetworkonly(double value);
   public:
 
-  // required uint32 ttl = 7;
-  bool has_ttl() const;
+  // required bool a_isTRR = 5;
+  bool has_a_istrr() const;
   private:
-  bool _internal_has_ttl() const;
+  bool _internal_has_a_istrr() const;
   public:
-  void clear_ttl();
-  uint32_t ttl() const;
-  void set_ttl(uint32_t value);
+  void clear_a_istrr();
+  bool a_istrr() const;
+  void set_a_istrr(bool value);
   private:
-  uint32_t _internal_ttl() const;
-  void _internal_set_ttl(uint32_t value);
+  bool _internal_a_istrr() const;
+  void _internal_set_a_istrr(bool value);
+  public:
+
+  // required uint32 a_ttl = 7;
+  bool has_a_ttl() const;
+  private:
+  bool _internal_has_a_ttl() const;
+  public:
+  void clear_a_ttl();
+  uint32_t a_ttl() const;
+  void set_a_ttl(uint32_t value);
+  private:
+  uint32_t _internal_a_ttl() const;
+  void _internal_set_a_ttl(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.DNSRecord)
@@ -325,14 +325,14 @@ class DNSRecord final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> addrs_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr canonicalname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr effectivetrrmode_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr lastupdate_;
-    double trrfetchduration_;
-    double trrfetchdurationnetworkonly_;
-    bool istrr_;
-    uint32_t ttl_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_addrs_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_canonicalname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_effectivetrrmode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_lastupdate_;
+    double a_trrfetchduration_;
+    double a_trrfetchdurationnetworkonly_;
+    bool a_istrr_;
+    uint32_t a_ttl_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDNSRequestParams_5fprotobuf_2emozilla_2enet_2eh_2eproto;
@@ -381,9 +381,9 @@ class DNSRequestResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVDNSRecord = 1,
-    kMVIPCTypeRecord = 2,
-    kMVnsresult = 3,
+    kAMVDNSRecord = 1,
+    kAMVIPCTypeRecord = 2,
+    kAMVnsresult = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -456,62 +456,62 @@ class DNSRequestResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVDNSRecordFieldNumber = 1,
-    kMVIPCTypeRecordFieldNumber = 2,
-    kMVnsresultFieldNumber = 3,
+    kAMVDNSRecordFieldNumber = 1,
+    kAMVIPCTypeRecordFieldNumber = 2,
+    kAMVnsresultFieldNumber = 3,
   };
-  // .protobuf.mozilla.net.DNSRecord mVDNSRecord = 1;
-  bool has_mvdnsrecord() const;
+  // .protobuf.mozilla.net.DNSRecord a_mVDNSRecord = 1;
+  bool has_a_mvdnsrecord() const;
   private:
-  bool _internal_has_mvdnsrecord() const;
+  bool _internal_has_a_mvdnsrecord() const;
   public:
-  void clear_mvdnsrecord();
-  const ::protobuf::mozilla::net::DNSRecord& mvdnsrecord() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::DNSRecord* release_mvdnsrecord();
-  ::protobuf::mozilla::net::DNSRecord* mutable_mvdnsrecord();
-  void set_allocated_mvdnsrecord(::protobuf::mozilla::net::DNSRecord* mvdnsrecord);
+  void clear_a_mvdnsrecord();
+  const ::protobuf::mozilla::net::DNSRecord& a_mvdnsrecord() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::DNSRecord* release_a_mvdnsrecord();
+  ::protobuf::mozilla::net::DNSRecord* mutable_a_mvdnsrecord();
+  void set_allocated_a_mvdnsrecord(::protobuf::mozilla::net::DNSRecord* a_mvdnsrecord);
   private:
-  const ::protobuf::mozilla::net::DNSRecord& _internal_mvdnsrecord() const;
-  ::protobuf::mozilla::net::DNSRecord* _internal_mutable_mvdnsrecord();
+  const ::protobuf::mozilla::net::DNSRecord& _internal_a_mvdnsrecord() const;
+  ::protobuf::mozilla::net::DNSRecord* _internal_mutable_a_mvdnsrecord();
   public:
-  void unsafe_arena_set_allocated_mvdnsrecord(
-      ::protobuf::mozilla::net::DNSRecord* mvdnsrecord);
-  ::protobuf::mozilla::net::DNSRecord* unsafe_arena_release_mvdnsrecord();
+  void unsafe_arena_set_allocated_a_mvdnsrecord(
+      ::protobuf::mozilla::net::DNSRecord* a_mvdnsrecord);
+  ::protobuf::mozilla::net::DNSRecord* unsafe_arena_release_a_mvdnsrecord();
 
-  // bytes mVIPCTypeRecord = 2;
-  bool has_mvipctyperecord() const;
+  // bytes a_mVIPCTypeRecord = 2;
+  bool has_a_mvipctyperecord() const;
   private:
-  bool _internal_has_mvipctyperecord() const;
+  bool _internal_has_a_mvipctyperecord() const;
   public:
-  void clear_mvipctyperecord();
-  const std::string& mvipctyperecord() const;
+  void clear_a_mvipctyperecord();
+  const std::string& a_mvipctyperecord() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvipctyperecord(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvipctyperecord();
-  PROTOBUF_NODISCARD std::string* release_mvipctyperecord();
-  void set_allocated_mvipctyperecord(std::string* mvipctyperecord);
+  void set_a_mvipctyperecord(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvipctyperecord();
+  PROTOBUF_NODISCARD std::string* release_a_mvipctyperecord();
+  void set_allocated_a_mvipctyperecord(std::string* a_mvipctyperecord);
   private:
-  const std::string& _internal_mvipctyperecord() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvipctyperecord(const std::string& value);
-  std::string* _internal_mutable_mvipctyperecord();
+  const std::string& _internal_a_mvipctyperecord() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvipctyperecord(const std::string& value);
+  std::string* _internal_mutable_a_mvipctyperecord();
   public:
 
-  // bytes mVnsresult = 3;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 3;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
   void clear_content();
@@ -519,9 +519,9 @@ class DNSRequestResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.DNSRequestResponse)
  private:
   class _Internal;
-  void set_has_mvdnsrecord();
-  void set_has_mvipctyperecord();
-  void set_has_mvnsresult();
+  void set_has_a_mvdnsrecord();
+  void set_has_a_mvipctyperecord();
+  void set_has_a_mvnsresult();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -533,9 +533,9 @@ class DNSRequestResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::net::DNSRecord* mvdnsrecord_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvipctyperecord_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
+      ::protobuf::mozilla::net::DNSRecord* a_mvdnsrecord_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvipctyperecord_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -555,627 +555,627 @@ class DNSRequestResponse final :
 #endif  // __GNUC__
 // DNSRecord
 
-// required bytes canonicalName = 1;
-inline bool DNSRecord::_internal_has_canonicalname() const {
+// required bytes a_canonicalName = 1;
+inline bool DNSRecord::_internal_has_a_canonicalname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool DNSRecord::has_canonicalname() const {
-  return _internal_has_canonicalname();
+inline bool DNSRecord::has_a_canonicalname() const {
+  return _internal_has_a_canonicalname();
 }
-inline void DNSRecord::clear_canonicalname() {
-  _impl_.canonicalname_.ClearToEmpty();
+inline void DNSRecord::clear_a_canonicalname() {
+  _impl_.a_canonicalname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DNSRecord::canonicalname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.canonicalName)
-  return _internal_canonicalname();
+inline const std::string& DNSRecord::a_canonicalname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_canonicalName)
+  return _internal_a_canonicalname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DNSRecord::set_canonicalname(ArgT0&& arg0, ArgT... args) {
+void DNSRecord::set_a_canonicalname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.canonicalname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.canonicalName)
+ _impl_.a_canonicalname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_canonicalName)
 }
-inline std::string* DNSRecord::mutable_canonicalname() {
-  std::string* _s = _internal_mutable_canonicalname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.canonicalName)
+inline std::string* DNSRecord::mutable_a_canonicalname() {
+  std::string* _s = _internal_mutable_a_canonicalname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.a_canonicalName)
   return _s;
 }
-inline const std::string& DNSRecord::_internal_canonicalname() const {
-  return _impl_.canonicalname_.Get();
+inline const std::string& DNSRecord::_internal_a_canonicalname() const {
+  return _impl_.a_canonicalname_.Get();
 }
-inline void DNSRecord::_internal_set_canonicalname(const std::string& value) {
+inline void DNSRecord::_internal_set_a_canonicalname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.canonicalname_.Set(value, GetArenaForAllocation());
+  _impl_.a_canonicalname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DNSRecord::_internal_mutable_canonicalname() {
+inline std::string* DNSRecord::_internal_mutable_a_canonicalname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.canonicalname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_canonicalname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DNSRecord::release_canonicalname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRecord.canonicalName)
-  if (!_internal_has_canonicalname()) {
+inline std::string* DNSRecord::release_a_canonicalname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRecord.a_canonicalName)
+  if (!_internal_has_a_canonicalname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.canonicalname_.Release();
+  auto* p = _impl_.a_canonicalname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.canonicalname_.IsDefault()) {
-    _impl_.canonicalname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_canonicalname_.IsDefault()) {
+    _impl_.a_canonicalname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DNSRecord::set_allocated_canonicalname(std::string* canonicalname) {
-  if (canonicalname != nullptr) {
+inline void DNSRecord::set_allocated_a_canonicalname(std::string* a_canonicalname) {
+  if (a_canonicalname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.canonicalname_.SetAllocated(canonicalname, GetArenaForAllocation());
+  _impl_.a_canonicalname_.SetAllocated(a_canonicalname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.canonicalname_.IsDefault()) {
-    _impl_.canonicalname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_canonicalname_.IsDefault()) {
+    _impl_.a_canonicalname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.canonicalName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.a_canonicalName)
 }
 
-// repeated bytes addrs = 2;
-inline int DNSRecord::_internal_addrs_size() const {
-  return _impl_.addrs_.size();
+// repeated bytes a_addrs = 2;
+inline int DNSRecord::_internal_a_addrs_size() const {
+  return _impl_.a_addrs_.size();
 }
-inline int DNSRecord::addrs_size() const {
-  return _internal_addrs_size();
+inline int DNSRecord::a_addrs_size() const {
+  return _internal_a_addrs_size();
 }
-inline void DNSRecord::clear_addrs() {
-  _impl_.addrs_.Clear();
+inline void DNSRecord::clear_a_addrs() {
+  _impl_.a_addrs_.Clear();
 }
-inline std::string* DNSRecord::add_addrs() {
-  std::string* _s = _internal_add_addrs();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.DNSRecord.addrs)
+inline std::string* DNSRecord::add_a_addrs() {
+  std::string* _s = _internal_add_a_addrs();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.DNSRecord.a_addrs)
   return _s;
 }
-inline const std::string& DNSRecord::_internal_addrs(int index) const {
-  return _impl_.addrs_.Get(index);
+inline const std::string& DNSRecord::_internal_a_addrs(int index) const {
+  return _impl_.a_addrs_.Get(index);
 }
-inline const std::string& DNSRecord::addrs(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.addrs)
-  return _internal_addrs(index);
+inline const std::string& DNSRecord::a_addrs(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_addrs)
+  return _internal_a_addrs(index);
 }
-inline std::string* DNSRecord::mutable_addrs(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.addrs)
-  return _impl_.addrs_.Mutable(index);
+inline std::string* DNSRecord::mutable_a_addrs(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.a_addrs)
+  return _impl_.a_addrs_.Mutable(index);
 }
-inline void DNSRecord::set_addrs(int index, const std::string& value) {
-  _impl_.addrs_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.addrs)
+inline void DNSRecord::set_a_addrs(int index, const std::string& value) {
+  _impl_.a_addrs_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline void DNSRecord::set_addrs(int index, std::string&& value) {
-  _impl_.addrs_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.addrs)
+inline void DNSRecord::set_a_addrs(int index, std::string&& value) {
+  _impl_.a_addrs_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline void DNSRecord::set_addrs(int index, const char* value) {
+inline void DNSRecord::set_a_addrs(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.addrs_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.DNSRecord.addrs)
+  _impl_.a_addrs_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline void DNSRecord::set_addrs(int index, const void* value, size_t size) {
-  _impl_.addrs_.Mutable(index)->assign(
+inline void DNSRecord::set_a_addrs(int index, const void* value, size_t size) {
+  _impl_.a_addrs_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.DNSRecord.addrs)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline std::string* DNSRecord::_internal_add_addrs() {
-  return _impl_.addrs_.Add();
+inline std::string* DNSRecord::_internal_add_a_addrs() {
+  return _impl_.a_addrs_.Add();
 }
-inline void DNSRecord::add_addrs(const std::string& value) {
-  _impl_.addrs_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.DNSRecord.addrs)
+inline void DNSRecord::add_a_addrs(const std::string& value) {
+  _impl_.a_addrs_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline void DNSRecord::add_addrs(std::string&& value) {
-  _impl_.addrs_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.DNSRecord.addrs)
+inline void DNSRecord::add_a_addrs(std::string&& value) {
+  _impl_.a_addrs_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline void DNSRecord::add_addrs(const char* value) {
+inline void DNSRecord::add_a_addrs(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.addrs_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.DNSRecord.addrs)
+  _impl_.a_addrs_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
-inline void DNSRecord::add_addrs(const void* value, size_t size) {
-  _impl_.addrs_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.DNSRecord.addrs)
+inline void DNSRecord::add_a_addrs(const void* value, size_t size) {
+  _impl_.a_addrs_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.DNSRecord.a_addrs)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-DNSRecord::addrs() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.DNSRecord.addrs)
-  return _impl_.addrs_;
+DNSRecord::a_addrs() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.DNSRecord.a_addrs)
+  return _impl_.a_addrs_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-DNSRecord::mutable_addrs() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.DNSRecord.addrs)
-  return &_impl_.addrs_;
+DNSRecord::mutable_a_addrs() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.DNSRecord.a_addrs)
+  return &_impl_.a_addrs_;
 }
 
-// required double trrFetchDuration = 3;
-inline bool DNSRecord::_internal_has_trrfetchduration() const {
+// required double a_trrFetchDuration = 3;
+inline bool DNSRecord::_internal_has_a_trrfetchduration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool DNSRecord::has_trrfetchduration() const {
-  return _internal_has_trrfetchduration();
+inline bool DNSRecord::has_a_trrfetchduration() const {
+  return _internal_has_a_trrfetchduration();
 }
-inline void DNSRecord::clear_trrfetchduration() {
-  _impl_.trrfetchduration_ = 0;
+inline void DNSRecord::clear_a_trrfetchduration() {
+  _impl_.a_trrfetchduration_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline double DNSRecord::_internal_trrfetchduration() const {
-  return _impl_.trrfetchduration_;
+inline double DNSRecord::_internal_a_trrfetchduration() const {
+  return _impl_.a_trrfetchduration_;
 }
-inline double DNSRecord::trrfetchduration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.trrFetchDuration)
-  return _internal_trrfetchduration();
+inline double DNSRecord::a_trrfetchduration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_trrFetchDuration)
+  return _internal_a_trrfetchduration();
 }
-inline void DNSRecord::_internal_set_trrfetchduration(double value) {
+inline void DNSRecord::_internal_set_a_trrfetchduration(double value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.trrfetchduration_ = value;
+  _impl_.a_trrfetchduration_ = value;
 }
-inline void DNSRecord::set_trrfetchduration(double value) {
-  _internal_set_trrfetchduration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.trrFetchDuration)
+inline void DNSRecord::set_a_trrfetchduration(double value) {
+  _internal_set_a_trrfetchduration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_trrFetchDuration)
 }
 
-// required double trrFetchDurationNetworkOnly = 4;
-inline bool DNSRecord::_internal_has_trrfetchdurationnetworkonly() const {
+// required double a_trrFetchDurationNetworkOnly = 4;
+inline bool DNSRecord::_internal_has_a_trrfetchdurationnetworkonly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool DNSRecord::has_trrfetchdurationnetworkonly() const {
-  return _internal_has_trrfetchdurationnetworkonly();
+inline bool DNSRecord::has_a_trrfetchdurationnetworkonly() const {
+  return _internal_has_a_trrfetchdurationnetworkonly();
 }
-inline void DNSRecord::clear_trrfetchdurationnetworkonly() {
-  _impl_.trrfetchdurationnetworkonly_ = 0;
+inline void DNSRecord::clear_a_trrfetchdurationnetworkonly() {
+  _impl_.a_trrfetchdurationnetworkonly_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline double DNSRecord::_internal_trrfetchdurationnetworkonly() const {
-  return _impl_.trrfetchdurationnetworkonly_;
+inline double DNSRecord::_internal_a_trrfetchdurationnetworkonly() const {
+  return _impl_.a_trrfetchdurationnetworkonly_;
 }
-inline double DNSRecord::trrfetchdurationnetworkonly() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.trrFetchDurationNetworkOnly)
-  return _internal_trrfetchdurationnetworkonly();
+inline double DNSRecord::a_trrfetchdurationnetworkonly() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_trrFetchDurationNetworkOnly)
+  return _internal_a_trrfetchdurationnetworkonly();
 }
-inline void DNSRecord::_internal_set_trrfetchdurationnetworkonly(double value) {
+inline void DNSRecord::_internal_set_a_trrfetchdurationnetworkonly(double value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.trrfetchdurationnetworkonly_ = value;
+  _impl_.a_trrfetchdurationnetworkonly_ = value;
 }
-inline void DNSRecord::set_trrfetchdurationnetworkonly(double value) {
-  _internal_set_trrfetchdurationnetworkonly(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.trrFetchDurationNetworkOnly)
+inline void DNSRecord::set_a_trrfetchdurationnetworkonly(double value) {
+  _internal_set_a_trrfetchdurationnetworkonly(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_trrFetchDurationNetworkOnly)
 }
 
-// required bool isTRR = 5;
-inline bool DNSRecord::_internal_has_istrr() const {
+// required bool a_isTRR = 5;
+inline bool DNSRecord::_internal_has_a_istrr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool DNSRecord::has_istrr() const {
-  return _internal_has_istrr();
+inline bool DNSRecord::has_a_istrr() const {
+  return _internal_has_a_istrr();
 }
-inline void DNSRecord::clear_istrr() {
-  _impl_.istrr_ = false;
+inline void DNSRecord::clear_a_istrr() {
+  _impl_.a_istrr_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool DNSRecord::_internal_istrr() const {
-  return _impl_.istrr_;
+inline bool DNSRecord::_internal_a_istrr() const {
+  return _impl_.a_istrr_;
 }
-inline bool DNSRecord::istrr() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.isTRR)
-  return _internal_istrr();
+inline bool DNSRecord::a_istrr() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_isTRR)
+  return _internal_a_istrr();
 }
-inline void DNSRecord::_internal_set_istrr(bool value) {
+inline void DNSRecord::_internal_set_a_istrr(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.istrr_ = value;
+  _impl_.a_istrr_ = value;
 }
-inline void DNSRecord::set_istrr(bool value) {
-  _internal_set_istrr(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.isTRR)
+inline void DNSRecord::set_a_istrr(bool value) {
+  _internal_set_a_istrr(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_isTRR)
 }
 
-// required bytes effectiveTRRMode = 6;
-inline bool DNSRecord::_internal_has_effectivetrrmode() const {
+// required bytes a_effectiveTRRMode = 6;
+inline bool DNSRecord::_internal_has_a_effectivetrrmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool DNSRecord::has_effectivetrrmode() const {
-  return _internal_has_effectivetrrmode();
+inline bool DNSRecord::has_a_effectivetrrmode() const {
+  return _internal_has_a_effectivetrrmode();
 }
-inline void DNSRecord::clear_effectivetrrmode() {
-  _impl_.effectivetrrmode_.ClearToEmpty();
+inline void DNSRecord::clear_a_effectivetrrmode() {
+  _impl_.a_effectivetrrmode_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& DNSRecord::effectivetrrmode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.effectiveTRRMode)
-  return _internal_effectivetrrmode();
+inline const std::string& DNSRecord::a_effectivetrrmode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_effectiveTRRMode)
+  return _internal_a_effectivetrrmode();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DNSRecord::set_effectivetrrmode(ArgT0&& arg0, ArgT... args) {
+void DNSRecord::set_a_effectivetrrmode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.effectivetrrmode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.effectiveTRRMode)
+ _impl_.a_effectivetrrmode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_effectiveTRRMode)
 }
-inline std::string* DNSRecord::mutable_effectivetrrmode() {
-  std::string* _s = _internal_mutable_effectivetrrmode();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.effectiveTRRMode)
+inline std::string* DNSRecord::mutable_a_effectivetrrmode() {
+  std::string* _s = _internal_mutable_a_effectivetrrmode();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.a_effectiveTRRMode)
   return _s;
 }
-inline const std::string& DNSRecord::_internal_effectivetrrmode() const {
-  return _impl_.effectivetrrmode_.Get();
+inline const std::string& DNSRecord::_internal_a_effectivetrrmode() const {
+  return _impl_.a_effectivetrrmode_.Get();
 }
-inline void DNSRecord::_internal_set_effectivetrrmode(const std::string& value) {
+inline void DNSRecord::_internal_set_a_effectivetrrmode(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.effectivetrrmode_.Set(value, GetArenaForAllocation());
+  _impl_.a_effectivetrrmode_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DNSRecord::_internal_mutable_effectivetrrmode() {
+inline std::string* DNSRecord::_internal_mutable_a_effectivetrrmode() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.effectivetrrmode_.Mutable(GetArenaForAllocation());
+  return _impl_.a_effectivetrrmode_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DNSRecord::release_effectivetrrmode() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRecord.effectiveTRRMode)
-  if (!_internal_has_effectivetrrmode()) {
+inline std::string* DNSRecord::release_a_effectivetrrmode() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRecord.a_effectiveTRRMode)
+  if (!_internal_has_a_effectivetrrmode()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.effectivetrrmode_.Release();
+  auto* p = _impl_.a_effectivetrrmode_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.effectivetrrmode_.IsDefault()) {
-    _impl_.effectivetrrmode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_effectivetrrmode_.IsDefault()) {
+    _impl_.a_effectivetrrmode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DNSRecord::set_allocated_effectivetrrmode(std::string* effectivetrrmode) {
-  if (effectivetrrmode != nullptr) {
+inline void DNSRecord::set_allocated_a_effectivetrrmode(std::string* a_effectivetrrmode) {
+  if (a_effectivetrrmode != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.effectivetrrmode_.SetAllocated(effectivetrrmode, GetArenaForAllocation());
+  _impl_.a_effectivetrrmode_.SetAllocated(a_effectivetrrmode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.effectivetrrmode_.IsDefault()) {
-    _impl_.effectivetrrmode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_effectivetrrmode_.IsDefault()) {
+    _impl_.a_effectivetrrmode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.effectiveTRRMode)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.a_effectiveTRRMode)
 }
 
-// required uint32 ttl = 7;
-inline bool DNSRecord::_internal_has_ttl() const {
+// required uint32 a_ttl = 7;
+inline bool DNSRecord::_internal_has_a_ttl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool DNSRecord::has_ttl() const {
-  return _internal_has_ttl();
+inline bool DNSRecord::has_a_ttl() const {
+  return _internal_has_a_ttl();
 }
-inline void DNSRecord::clear_ttl() {
-  _impl_.ttl_ = 0u;
+inline void DNSRecord::clear_a_ttl() {
+  _impl_.a_ttl_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline uint32_t DNSRecord::_internal_ttl() const {
-  return _impl_.ttl_;
+inline uint32_t DNSRecord::_internal_a_ttl() const {
+  return _impl_.a_ttl_;
 }
-inline uint32_t DNSRecord::ttl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.ttl)
-  return _internal_ttl();
+inline uint32_t DNSRecord::a_ttl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_ttl)
+  return _internal_a_ttl();
 }
-inline void DNSRecord::_internal_set_ttl(uint32_t value) {
+inline void DNSRecord::_internal_set_a_ttl(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.ttl_ = value;
+  _impl_.a_ttl_ = value;
 }
-inline void DNSRecord::set_ttl(uint32_t value) {
-  _internal_set_ttl(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.ttl)
+inline void DNSRecord::set_a_ttl(uint32_t value) {
+  _internal_set_a_ttl(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_ttl)
 }
 
-// required bytes lastUpdate = 8;
-inline bool DNSRecord::_internal_has_lastupdate() const {
+// required bytes a_lastUpdate = 8;
+inline bool DNSRecord::_internal_has_a_lastupdate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool DNSRecord::has_lastupdate() const {
-  return _internal_has_lastupdate();
+inline bool DNSRecord::has_a_lastupdate() const {
+  return _internal_has_a_lastupdate();
 }
-inline void DNSRecord::clear_lastupdate() {
-  _impl_.lastupdate_.ClearToEmpty();
+inline void DNSRecord::clear_a_lastupdate() {
+  _impl_.a_lastupdate_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& DNSRecord::lastupdate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.lastUpdate)
-  return _internal_lastupdate();
+inline const std::string& DNSRecord::a_lastupdate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRecord.a_lastUpdate)
+  return _internal_a_lastupdate();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void DNSRecord::set_lastupdate(ArgT0&& arg0, ArgT... args) {
+void DNSRecord::set_a_lastupdate(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.lastupdate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.lastUpdate)
+ _impl_.a_lastupdate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRecord.a_lastUpdate)
 }
-inline std::string* DNSRecord::mutable_lastupdate() {
-  std::string* _s = _internal_mutable_lastupdate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.lastUpdate)
+inline std::string* DNSRecord::mutable_a_lastupdate() {
+  std::string* _s = _internal_mutable_a_lastupdate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRecord.a_lastUpdate)
   return _s;
 }
-inline const std::string& DNSRecord::_internal_lastupdate() const {
-  return _impl_.lastupdate_.Get();
+inline const std::string& DNSRecord::_internal_a_lastupdate() const {
+  return _impl_.a_lastupdate_.Get();
 }
-inline void DNSRecord::_internal_set_lastupdate(const std::string& value) {
+inline void DNSRecord::_internal_set_a_lastupdate(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.lastupdate_.Set(value, GetArenaForAllocation());
+  _impl_.a_lastupdate_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DNSRecord::_internal_mutable_lastupdate() {
+inline std::string* DNSRecord::_internal_mutable_a_lastupdate() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.lastupdate_.Mutable(GetArenaForAllocation());
+  return _impl_.a_lastupdate_.Mutable(GetArenaForAllocation());
 }
-inline std::string* DNSRecord::release_lastupdate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRecord.lastUpdate)
-  if (!_internal_has_lastupdate()) {
+inline std::string* DNSRecord::release_a_lastupdate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRecord.a_lastUpdate)
+  if (!_internal_has_a_lastupdate()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.lastupdate_.Release();
+  auto* p = _impl_.a_lastupdate_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.lastupdate_.IsDefault()) {
-    _impl_.lastupdate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_lastupdate_.IsDefault()) {
+    _impl_.a_lastupdate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void DNSRecord::set_allocated_lastupdate(std::string* lastupdate) {
-  if (lastupdate != nullptr) {
+inline void DNSRecord::set_allocated_a_lastupdate(std::string* a_lastupdate) {
+  if (a_lastupdate != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.lastupdate_.SetAllocated(lastupdate, GetArenaForAllocation());
+  _impl_.a_lastupdate_.SetAllocated(a_lastupdate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.lastupdate_.IsDefault()) {
-    _impl_.lastupdate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_lastupdate_.IsDefault()) {
+    _impl_.a_lastupdate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.lastUpdate)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRecord.a_lastUpdate)
 }
 
 // -------------------------------------------------------------------
 
 // DNSRequestResponse
 
-// .protobuf.mozilla.net.DNSRecord mVDNSRecord = 1;
-inline bool DNSRequestResponse::_internal_has_mvdnsrecord() const {
-  return content_case() == kMVDNSRecord;
+// .protobuf.mozilla.net.DNSRecord a_mVDNSRecord = 1;
+inline bool DNSRequestResponse::_internal_has_a_mvdnsrecord() const {
+  return content_case() == kAMVDNSRecord;
 }
-inline bool DNSRequestResponse::has_mvdnsrecord() const {
-  return _internal_has_mvdnsrecord();
+inline bool DNSRequestResponse::has_a_mvdnsrecord() const {
+  return _internal_has_a_mvdnsrecord();
 }
-inline void DNSRequestResponse::set_has_mvdnsrecord() {
-  _impl_._oneof_case_[0] = kMVDNSRecord;
+inline void DNSRequestResponse::set_has_a_mvdnsrecord() {
+  _impl_._oneof_case_[0] = kAMVDNSRecord;
 }
-inline void DNSRequestResponse::clear_mvdnsrecord() {
-  if (_internal_has_mvdnsrecord()) {
+inline void DNSRequestResponse::clear_a_mvdnsrecord() {
+  if (_internal_has_a_mvdnsrecord()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvdnsrecord_;
+      delete _impl_.content_.a_mvdnsrecord_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::release_mvdnsrecord() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRequestResponse.mVDNSRecord)
-  if (_internal_has_mvdnsrecord()) {
+inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::release_a_mvdnsrecord() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRequestResponse.a_mVDNSRecord)
+  if (_internal_has_a_mvdnsrecord()) {
     clear_has_content();
-    ::protobuf::mozilla::net::DNSRecord* temp = _impl_.content_.mvdnsrecord_;
+    ::protobuf::mozilla::net::DNSRecord* temp = _impl_.content_.a_mvdnsrecord_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvdnsrecord_ = nullptr;
+    _impl_.content_.a_mvdnsrecord_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::net::DNSRecord& DNSRequestResponse::_internal_mvdnsrecord() const {
-  return _internal_has_mvdnsrecord()
-      ? *_impl_.content_.mvdnsrecord_
+inline const ::protobuf::mozilla::net::DNSRecord& DNSRequestResponse::_internal_a_mvdnsrecord() const {
+  return _internal_has_a_mvdnsrecord()
+      ? *_impl_.content_.a_mvdnsrecord_
       : reinterpret_cast< ::protobuf::mozilla::net::DNSRecord&>(::protobuf::mozilla::net::_DNSRecord_default_instance_);
 }
-inline const ::protobuf::mozilla::net::DNSRecord& DNSRequestResponse::mvdnsrecord() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRequestResponse.mVDNSRecord)
-  return _internal_mvdnsrecord();
+inline const ::protobuf::mozilla::net::DNSRecord& DNSRequestResponse::a_mvdnsrecord() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRequestResponse.a_mVDNSRecord)
+  return _internal_a_mvdnsrecord();
 }
-inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::unsafe_arena_release_mvdnsrecord() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.net.DNSRequestResponse.mVDNSRecord)
-  if (_internal_has_mvdnsrecord()) {
+inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::unsafe_arena_release_a_mvdnsrecord() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.net.DNSRequestResponse.a_mVDNSRecord)
+  if (_internal_has_a_mvdnsrecord()) {
     clear_has_content();
-    ::protobuf::mozilla::net::DNSRecord* temp = _impl_.content_.mvdnsrecord_;
-    _impl_.content_.mvdnsrecord_ = nullptr;
+    ::protobuf::mozilla::net::DNSRecord* temp = _impl_.content_.a_mvdnsrecord_;
+    _impl_.content_.a_mvdnsrecord_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void DNSRequestResponse::unsafe_arena_set_allocated_mvdnsrecord(::protobuf::mozilla::net::DNSRecord* mvdnsrecord) {
+inline void DNSRequestResponse::unsafe_arena_set_allocated_a_mvdnsrecord(::protobuf::mozilla::net::DNSRecord* a_mvdnsrecord) {
   clear_content();
-  if (mvdnsrecord) {
-    set_has_mvdnsrecord();
-    _impl_.content_.mvdnsrecord_ = mvdnsrecord;
+  if (a_mvdnsrecord) {
+    set_has_a_mvdnsrecord();
+    _impl_.content_.a_mvdnsrecord_ = a_mvdnsrecord;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.DNSRequestResponse.mVDNSRecord)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.DNSRequestResponse.a_mVDNSRecord)
 }
-inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::_internal_mutable_mvdnsrecord() {
-  if (!_internal_has_mvdnsrecord()) {
+inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::_internal_mutable_a_mvdnsrecord() {
+  if (!_internal_has_a_mvdnsrecord()) {
     clear_content();
-    set_has_mvdnsrecord();
-    _impl_.content_.mvdnsrecord_ = CreateMaybeMessage< ::protobuf::mozilla::net::DNSRecord >(GetArenaForAllocation());
+    set_has_a_mvdnsrecord();
+    _impl_.content_.a_mvdnsrecord_ = CreateMaybeMessage< ::protobuf::mozilla::net::DNSRecord >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvdnsrecord_;
+  return _impl_.content_.a_mvdnsrecord_;
 }
-inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::mutable_mvdnsrecord() {
-  ::protobuf::mozilla::net::DNSRecord* _msg = _internal_mutable_mvdnsrecord();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRequestResponse.mVDNSRecord)
+inline ::protobuf::mozilla::net::DNSRecord* DNSRequestResponse::mutable_a_mvdnsrecord() {
+  ::protobuf::mozilla::net::DNSRecord* _msg = _internal_mutable_a_mvdnsrecord();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRequestResponse.a_mVDNSRecord)
   return _msg;
 }
 
-// bytes mVIPCTypeRecord = 2;
-inline bool DNSRequestResponse::_internal_has_mvipctyperecord() const {
-  return content_case() == kMVIPCTypeRecord;
+// bytes a_mVIPCTypeRecord = 2;
+inline bool DNSRequestResponse::_internal_has_a_mvipctyperecord() const {
+  return content_case() == kAMVIPCTypeRecord;
 }
-inline bool DNSRequestResponse::has_mvipctyperecord() const {
-  return _internal_has_mvipctyperecord();
+inline bool DNSRequestResponse::has_a_mvipctyperecord() const {
+  return _internal_has_a_mvipctyperecord();
 }
-inline void DNSRequestResponse::set_has_mvipctyperecord() {
-  _impl_._oneof_case_[0] = kMVIPCTypeRecord;
+inline void DNSRequestResponse::set_has_a_mvipctyperecord() {
+  _impl_._oneof_case_[0] = kAMVIPCTypeRecord;
 }
-inline void DNSRequestResponse::clear_mvipctyperecord() {
-  if (_internal_has_mvipctyperecord()) {
-    _impl_.content_.mvipctyperecord_.Destroy();
+inline void DNSRequestResponse::clear_a_mvipctyperecord() {
+  if (_internal_has_a_mvipctyperecord()) {
+    _impl_.content_.a_mvipctyperecord_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& DNSRequestResponse::mvipctyperecord() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRequestResponse.mVIPCTypeRecord)
-  return _internal_mvipctyperecord();
+inline const std::string& DNSRequestResponse::a_mvipctyperecord() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRequestResponse.a_mVIPCTypeRecord)
+  return _internal_a_mvipctyperecord();
 }
 template <typename ArgT0, typename... ArgT>
-inline void DNSRequestResponse::set_mvipctyperecord(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvipctyperecord()) {
+inline void DNSRequestResponse::set_a_mvipctyperecord(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvipctyperecord()) {
     clear_content();
-    set_has_mvipctyperecord();
-    _impl_.content_.mvipctyperecord_.InitDefault();
+    set_has_a_mvipctyperecord();
+    _impl_.content_.a_mvipctyperecord_.InitDefault();
   }
-  _impl_.content_.mvipctyperecord_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRequestResponse.mVIPCTypeRecord)
+  _impl_.content_.a_mvipctyperecord_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRequestResponse.a_mVIPCTypeRecord)
 }
-inline std::string* DNSRequestResponse::mutable_mvipctyperecord() {
-  std::string* _s = _internal_mutable_mvipctyperecord();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRequestResponse.mVIPCTypeRecord)
+inline std::string* DNSRequestResponse::mutable_a_mvipctyperecord() {
+  std::string* _s = _internal_mutable_a_mvipctyperecord();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRequestResponse.a_mVIPCTypeRecord)
   return _s;
 }
-inline const std::string& DNSRequestResponse::_internal_mvipctyperecord() const {
-  if (_internal_has_mvipctyperecord()) {
-    return _impl_.content_.mvipctyperecord_.Get();
+inline const std::string& DNSRequestResponse::_internal_a_mvipctyperecord() const {
+  if (_internal_has_a_mvipctyperecord()) {
+    return _impl_.content_.a_mvipctyperecord_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void DNSRequestResponse::_internal_set_mvipctyperecord(const std::string& value) {
-  if (!_internal_has_mvipctyperecord()) {
+inline void DNSRequestResponse::_internal_set_a_mvipctyperecord(const std::string& value) {
+  if (!_internal_has_a_mvipctyperecord()) {
     clear_content();
-    set_has_mvipctyperecord();
-    _impl_.content_.mvipctyperecord_.InitDefault();
+    set_has_a_mvipctyperecord();
+    _impl_.content_.a_mvipctyperecord_.InitDefault();
   }
-  _impl_.content_.mvipctyperecord_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvipctyperecord_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DNSRequestResponse::_internal_mutable_mvipctyperecord() {
-  if (!_internal_has_mvipctyperecord()) {
+inline std::string* DNSRequestResponse::_internal_mutable_a_mvipctyperecord() {
+  if (!_internal_has_a_mvipctyperecord()) {
     clear_content();
-    set_has_mvipctyperecord();
-    _impl_.content_.mvipctyperecord_.InitDefault();
+    set_has_a_mvipctyperecord();
+    _impl_.content_.a_mvipctyperecord_.InitDefault();
   }
-  return _impl_.content_.mvipctyperecord_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvipctyperecord_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* DNSRequestResponse::release_mvipctyperecord() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRequestResponse.mVIPCTypeRecord)
-  if (_internal_has_mvipctyperecord()) {
+inline std::string* DNSRequestResponse::release_a_mvipctyperecord() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRequestResponse.a_mVIPCTypeRecord)
+  if (_internal_has_a_mvipctyperecord()) {
     clear_has_content();
-    return _impl_.content_.mvipctyperecord_.Release();
+    return _impl_.content_.a_mvipctyperecord_.Release();
   } else {
     return nullptr;
   }
 }
-inline void DNSRequestResponse::set_allocated_mvipctyperecord(std::string* mvipctyperecord) {
+inline void DNSRequestResponse::set_allocated_a_mvipctyperecord(std::string* a_mvipctyperecord) {
   if (has_content()) {
     clear_content();
   }
-  if (mvipctyperecord != nullptr) {
-    set_has_mvipctyperecord();
-    _impl_.content_.mvipctyperecord_.InitAllocated(mvipctyperecord, GetArenaForAllocation());
+  if (a_mvipctyperecord != nullptr) {
+    set_has_a_mvipctyperecord();
+    _impl_.content_.a_mvipctyperecord_.InitAllocated(a_mvipctyperecord, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRequestResponse.mVIPCTypeRecord)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRequestResponse.a_mVIPCTypeRecord)
 }
 
-// bytes mVnsresult = 3;
-inline bool DNSRequestResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 3;
+inline bool DNSRequestResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool DNSRequestResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool DNSRequestResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void DNSRequestResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void DNSRequestResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void DNSRequestResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void DNSRequestResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& DNSRequestResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRequestResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& DNSRequestResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.DNSRequestResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void DNSRequestResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void DNSRequestResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRequestResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DNSRequestResponse.a_mVnsresult)
 }
-inline std::string* DNSRequestResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRequestResponse.mVnsresult)
+inline std::string* DNSRequestResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.DNSRequestResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& DNSRequestResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& DNSRequestResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void DNSRequestResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void DNSRequestResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DNSRequestResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* DNSRequestResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* DNSRequestResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRequestResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* DNSRequestResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.DNSRequestResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void DNSRequestResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void DNSRequestResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRequestResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.DNSRequestResponse.a_mVnsresult)
 }
 
 inline bool DNSRequestResponse::has_content() const {

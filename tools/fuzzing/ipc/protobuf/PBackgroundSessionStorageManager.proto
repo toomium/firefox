@@ -17,16 +17,16 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_PBackgroundSessionStorageCacheConstructor {
-  required protobuf.mozilla.ipc.PrincipalInfo aPrincipalInfo = 1;
-  required bytes aOriginKey = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+  required bytes a_aOriginKey = 2;
 }
 
 message Reply_PBackgroundSessionStorageCacheConstructor {
 }
 
 message Msg_ClearStorages {
-  required bytes aPattern = 1;
-  required bytes aOriginScope = 2;
+  required bytes a_aPattern = 1;
+  required bytes a_aOriginScope = 2;
 }
 
 message Msg_DeleteMe {
@@ -39,8 +39,8 @@ message Reply___delete__ {
 }
 
 message Msg_ClearStoragesForOrigin {
-  required bytes aOriginAttrs = 1;
-  required bytes aOriginKey = 2;
+  required bytes a_aOriginAttrs = 1;
+  required bytes a_aOriginKey = 2;
 }
 
 // Parameter mappings stats:

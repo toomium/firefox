@@ -16,12 +16,12 @@ import "NeckoChannelParams.proto";
 // Structs and unions declarations
 message MaybeCookieStruct {
   oneof content {
-    protobuf.mozilla.net.CookieStruct mVCookieStruct = 1;
-    bytes mVvoid_t = 2;
+    protobuf.mozilla.net.CookieStruct a_mVCookieStruct = 1;
+    bytes a_mVvoid_t = 2;
   }
 }
 
 message CookieSubscription {
-  optional bytes name = 1;
-  required bytes url = 2;
+  optional bytes a_name = 1;
+  required bytes a_url = 2;
 }

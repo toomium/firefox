@@ -177,76 +177,76 @@ class JSActorMessageMeta final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActorNameFieldNumber = 1,
-    kMessageNameFieldNumber = 2,
-    kKindFieldNumber = 4,
-    kQueryIdFieldNumber = 3,
+    kAActorNameFieldNumber = 1,
+    kAMessageNameFieldNumber = 2,
+    kAKindFieldNumber = 4,
+    kAQueryIdFieldNumber = 3,
   };
-  // required bytes actorName = 1;
-  bool has_actorname() const;
+  // required bytes a_actorName = 1;
+  bool has_a_actorname() const;
   private:
-  bool _internal_has_actorname() const;
+  bool _internal_has_a_actorname() const;
   public:
-  void clear_actorname();
-  const std::string& actorname() const;
+  void clear_a_actorname();
+  const std::string& a_actorname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_actorname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_actorname();
-  PROTOBUF_NODISCARD std::string* release_actorname();
-  void set_allocated_actorname(std::string* actorname);
+  void set_a_actorname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_actorname();
+  PROTOBUF_NODISCARD std::string* release_a_actorname();
+  void set_allocated_a_actorname(std::string* a_actorname);
   private:
-  const std::string& _internal_actorname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_actorname(const std::string& value);
-  std::string* _internal_mutable_actorname();
+  const std::string& _internal_a_actorname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_actorname(const std::string& value);
+  std::string* _internal_mutable_a_actorname();
   public:
 
-  // required bytes messageName = 2;
-  bool has_messagename() const;
+  // required bytes a_messageName = 2;
+  bool has_a_messagename() const;
   private:
-  bool _internal_has_messagename() const;
+  bool _internal_has_a_messagename() const;
   public:
-  void clear_messagename();
-  const std::string& messagename() const;
+  void clear_a_messagename();
+  const std::string& a_messagename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_messagename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_messagename();
-  PROTOBUF_NODISCARD std::string* release_messagename();
-  void set_allocated_messagename(std::string* messagename);
+  void set_a_messagename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_messagename();
+  PROTOBUF_NODISCARD std::string* release_a_messagename();
+  void set_allocated_a_messagename(std::string* a_messagename);
   private:
-  const std::string& _internal_messagename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_messagename(const std::string& value);
-  std::string* _internal_mutable_messagename();
+  const std::string& _internal_a_messagename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_messagename(const std::string& value);
+  std::string* _internal_mutable_a_messagename();
   public:
 
-  // required bytes kind = 4;
-  bool has_kind() const;
+  // required bytes a_kind = 4;
+  bool has_a_kind() const;
   private:
-  bool _internal_has_kind() const;
+  bool _internal_has_a_kind() const;
   public:
-  void clear_kind();
-  const std::string& kind() const;
+  void clear_a_kind();
+  const std::string& a_kind() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_kind(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_kind();
-  PROTOBUF_NODISCARD std::string* release_kind();
-  void set_allocated_kind(std::string* kind);
+  void set_a_kind(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_kind();
+  PROTOBUF_NODISCARD std::string* release_a_kind();
+  void set_allocated_a_kind(std::string* a_kind);
   private:
-  const std::string& _internal_kind() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_kind(const std::string& value);
-  std::string* _internal_mutable_kind();
+  const std::string& _internal_a_kind() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_kind(const std::string& value);
+  std::string* _internal_mutable_a_kind();
   public:
 
-  // required uint64 queryId = 3;
-  bool has_queryid() const;
+  // required uint64 a_queryId = 3;
+  bool has_a_queryid() const;
   private:
-  bool _internal_has_queryid() const;
+  bool _internal_has_a_queryid() const;
   public:
-  void clear_queryid();
-  uint64_t queryid() const;
-  void set_queryid(uint64_t value);
+  void clear_a_queryid();
+  uint64_t a_queryid() const;
+  void set_a_queryid(uint64_t value);
   private:
-  uint64_t _internal_queryid() const;
-  void _internal_set_queryid(uint64_t value);
+  uint64_t _internal_a_queryid() const;
+  void _internal_set_a_queryid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.JSActorMessageMeta)
@@ -262,10 +262,10 @@ class JSActorMessageMeta final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr actorname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr messagename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr kind_;
-    uint64_t queryid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_actorname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_messagename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_kind_;
+    uint64_t a_queryid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWindowGlobal_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -382,62 +382,62 @@ class IPCWebShareData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTitleFieldNumber = 1,
-    kTextFieldNumber = 2,
-    kUrlFieldNumber = 3,
+    kATitleFieldNumber = 1,
+    kATextFieldNumber = 2,
+    kAUrlFieldNumber = 3,
   };
-  // required bytes title = 1;
-  bool has_title() const;
+  // required bytes a_title = 1;
+  bool has_a_title() const;
   private:
-  bool _internal_has_title() const;
+  bool _internal_has_a_title() const;
   public:
-  void clear_title();
-  const std::string& title() const;
+  void clear_a_title();
+  const std::string& a_title() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_title(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_title();
-  PROTOBUF_NODISCARD std::string* release_title();
-  void set_allocated_title(std::string* title);
+  void set_a_title(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_title();
+  PROTOBUF_NODISCARD std::string* release_a_title();
+  void set_allocated_a_title(std::string* a_title);
   private:
-  const std::string& _internal_title() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_title(const std::string& value);
-  std::string* _internal_mutable_title();
+  const std::string& _internal_a_title() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_title(const std::string& value);
+  std::string* _internal_mutable_a_title();
   public:
 
-  // required bytes text = 2;
-  bool has_text() const;
+  // required bytes a_text = 2;
+  bool has_a_text() const;
   private:
-  bool _internal_has_text() const;
+  bool _internal_has_a_text() const;
   public:
-  void clear_text();
-  const std::string& text() const;
+  void clear_a_text();
+  const std::string& a_text() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_text(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_text();
-  PROTOBUF_NODISCARD std::string* release_text();
-  void set_allocated_text(std::string* text);
+  void set_a_text(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_text();
+  PROTOBUF_NODISCARD std::string* release_a_text();
+  void set_allocated_a_text(std::string* a_text);
   private:
-  const std::string& _internal_text() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_text(const std::string& value);
-  std::string* _internal_mutable_text();
+  const std::string& _internal_a_text() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_text(const std::string& value);
+  std::string* _internal_mutable_a_text();
   public:
 
-  // required bytes url = 3;
-  bool has_url() const;
+  // required bytes a_url = 3;
+  bool has_a_url() const;
   private:
-  bool _internal_has_url() const;
+  bool _internal_has_a_url() const;
   public:
-  void clear_url();
-  const std::string& url() const;
+  void clear_a_url();
+  const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_url(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_url();
-  PROTOBUF_NODISCARD std::string* release_url();
-  void set_allocated_url(std::string* url);
+  void set_a_url(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_url();
+  PROTOBUF_NODISCARD std::string* release_a_url();
+  void set_allocated_a_url(std::string* a_url);
   private:
-  const std::string& _internal_url() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& value);
-  std::string* _internal_mutable_url();
+  const std::string& _internal_a_url() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_url(const std::string& value);
+  std::string* _internal_mutable_a_url();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCWebShareData)
@@ -453,9 +453,9 @@ class IPCWebShareData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr title_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr text_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_title_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_text_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_url_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWindowGlobal_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -471,444 +471,444 @@ class IPCWebShareData final :
 #endif  // __GNUC__
 // JSActorMessageMeta
 
-// required bytes actorName = 1;
-inline bool JSActorMessageMeta::_internal_has_actorname() const {
+// required bytes a_actorName = 1;
+inline bool JSActorMessageMeta::_internal_has_a_actorname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool JSActorMessageMeta::has_actorname() const {
-  return _internal_has_actorname();
+inline bool JSActorMessageMeta::has_a_actorname() const {
+  return _internal_has_a_actorname();
 }
-inline void JSActorMessageMeta::clear_actorname() {
-  _impl_.actorname_.ClearToEmpty();
+inline void JSActorMessageMeta::clear_a_actorname() {
+  _impl_.a_actorname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& JSActorMessageMeta::actorname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
-  return _internal_actorname();
+inline const std::string& JSActorMessageMeta::a_actorname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.a_actorName)
+  return _internal_a_actorname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void JSActorMessageMeta::set_actorname(ArgT0&& arg0, ArgT... args) {
+void JSActorMessageMeta::set_a_actorname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.actorname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
+ _impl_.a_actorname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.a_actorName)
 }
-inline std::string* JSActorMessageMeta::mutable_actorname() {
-  std::string* _s = _internal_mutable_actorname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
+inline std::string* JSActorMessageMeta::mutable_a_actorname() {
+  std::string* _s = _internal_mutable_a_actorname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.JSActorMessageMeta.a_actorName)
   return _s;
 }
-inline const std::string& JSActorMessageMeta::_internal_actorname() const {
-  return _impl_.actorname_.Get();
+inline const std::string& JSActorMessageMeta::_internal_a_actorname() const {
+  return _impl_.a_actorname_.Get();
 }
-inline void JSActorMessageMeta::_internal_set_actorname(const std::string& value) {
+inline void JSActorMessageMeta::_internal_set_a_actorname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.actorname_.Set(value, GetArenaForAllocation());
+  _impl_.a_actorname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSActorMessageMeta::_internal_mutable_actorname() {
+inline std::string* JSActorMessageMeta::_internal_mutable_a_actorname() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.actorname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_actorname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* JSActorMessageMeta::release_actorname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
-  if (!_internal_has_actorname()) {
+inline std::string* JSActorMessageMeta::release_a_actorname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.JSActorMessageMeta.a_actorName)
+  if (!_internal_has_a_actorname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.actorname_.Release();
+  auto* p = _impl_.a_actorname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.actorname_.IsDefault()) {
-    _impl_.actorname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_actorname_.IsDefault()) {
+    _impl_.a_actorname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void JSActorMessageMeta::set_allocated_actorname(std::string* actorname) {
-  if (actorname != nullptr) {
+inline void JSActorMessageMeta::set_allocated_a_actorname(std::string* a_actorname) {
+  if (a_actorname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.actorname_.SetAllocated(actorname, GetArenaForAllocation());
+  _impl_.a_actorname_.SetAllocated(a_actorname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.actorname_.IsDefault()) {
-    _impl_.actorname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_actorname_.IsDefault()) {
+    _impl_.a_actorname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.actorName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.a_actorName)
 }
 
-// required bytes messageName = 2;
-inline bool JSActorMessageMeta::_internal_has_messagename() const {
+// required bytes a_messageName = 2;
+inline bool JSActorMessageMeta::_internal_has_a_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool JSActorMessageMeta::has_messagename() const {
-  return _internal_has_messagename();
+inline bool JSActorMessageMeta::has_a_messagename() const {
+  return _internal_has_a_messagename();
 }
-inline void JSActorMessageMeta::clear_messagename() {
-  _impl_.messagename_.ClearToEmpty();
+inline void JSActorMessageMeta::clear_a_messagename() {
+  _impl_.a_messagename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& JSActorMessageMeta::messagename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.messageName)
-  return _internal_messagename();
+inline const std::string& JSActorMessageMeta::a_messagename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.a_messageName)
+  return _internal_a_messagename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void JSActorMessageMeta::set_messagename(ArgT0&& arg0, ArgT... args) {
+void JSActorMessageMeta::set_a_messagename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.messagename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.messageName)
+ _impl_.a_messagename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.a_messageName)
 }
-inline std::string* JSActorMessageMeta::mutable_messagename() {
-  std::string* _s = _internal_mutable_messagename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.JSActorMessageMeta.messageName)
+inline std::string* JSActorMessageMeta::mutable_a_messagename() {
+  std::string* _s = _internal_mutable_a_messagename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.JSActorMessageMeta.a_messageName)
   return _s;
 }
-inline const std::string& JSActorMessageMeta::_internal_messagename() const {
-  return _impl_.messagename_.Get();
+inline const std::string& JSActorMessageMeta::_internal_a_messagename() const {
+  return _impl_.a_messagename_.Get();
 }
-inline void JSActorMessageMeta::_internal_set_messagename(const std::string& value) {
+inline void JSActorMessageMeta::_internal_set_a_messagename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.messagename_.Set(value, GetArenaForAllocation());
+  _impl_.a_messagename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSActorMessageMeta::_internal_mutable_messagename() {
+inline std::string* JSActorMessageMeta::_internal_mutable_a_messagename() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.messagename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_messagename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* JSActorMessageMeta::release_messagename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.JSActorMessageMeta.messageName)
-  if (!_internal_has_messagename()) {
+inline std::string* JSActorMessageMeta::release_a_messagename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.JSActorMessageMeta.a_messageName)
+  if (!_internal_has_a_messagename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.messagename_.Release();
+  auto* p = _impl_.a_messagename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.messagename_.IsDefault()) {
-    _impl_.messagename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_messagename_.IsDefault()) {
+    _impl_.a_messagename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void JSActorMessageMeta::set_allocated_messagename(std::string* messagename) {
-  if (messagename != nullptr) {
+inline void JSActorMessageMeta::set_allocated_a_messagename(std::string* a_messagename) {
+  if (a_messagename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.messagename_.SetAllocated(messagename, GetArenaForAllocation());
+  _impl_.a_messagename_.SetAllocated(a_messagename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.messagename_.IsDefault()) {
-    _impl_.messagename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_messagename_.IsDefault()) {
+    _impl_.a_messagename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.messageName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.a_messageName)
 }
 
-// required uint64 queryId = 3;
-inline bool JSActorMessageMeta::_internal_has_queryid() const {
+// required uint64 a_queryId = 3;
+inline bool JSActorMessageMeta::_internal_has_a_queryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool JSActorMessageMeta::has_queryid() const {
-  return _internal_has_queryid();
+inline bool JSActorMessageMeta::has_a_queryid() const {
+  return _internal_has_a_queryid();
 }
-inline void JSActorMessageMeta::clear_queryid() {
-  _impl_.queryid_ = uint64_t{0u};
+inline void JSActorMessageMeta::clear_a_queryid() {
+  _impl_.a_queryid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint64_t JSActorMessageMeta::_internal_queryid() const {
-  return _impl_.queryid_;
+inline uint64_t JSActorMessageMeta::_internal_a_queryid() const {
+  return _impl_.a_queryid_;
 }
-inline uint64_t JSActorMessageMeta::queryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.queryId)
-  return _internal_queryid();
+inline uint64_t JSActorMessageMeta::a_queryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.a_queryId)
+  return _internal_a_queryid();
 }
-inline void JSActorMessageMeta::_internal_set_queryid(uint64_t value) {
+inline void JSActorMessageMeta::_internal_set_a_queryid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.queryid_ = value;
+  _impl_.a_queryid_ = value;
 }
-inline void JSActorMessageMeta::set_queryid(uint64_t value) {
-  _internal_set_queryid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.queryId)
+inline void JSActorMessageMeta::set_a_queryid(uint64_t value) {
+  _internal_set_a_queryid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.a_queryId)
 }
 
-// required bytes kind = 4;
-inline bool JSActorMessageMeta::_internal_has_kind() const {
+// required bytes a_kind = 4;
+inline bool JSActorMessageMeta::_internal_has_a_kind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool JSActorMessageMeta::has_kind() const {
-  return _internal_has_kind();
+inline bool JSActorMessageMeta::has_a_kind() const {
+  return _internal_has_a_kind();
 }
-inline void JSActorMessageMeta::clear_kind() {
-  _impl_.kind_.ClearToEmpty();
+inline void JSActorMessageMeta::clear_a_kind() {
+  _impl_.a_kind_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& JSActorMessageMeta::kind() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.kind)
-  return _internal_kind();
+inline const std::string& JSActorMessageMeta::a_kind() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.JSActorMessageMeta.a_kind)
+  return _internal_a_kind();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void JSActorMessageMeta::set_kind(ArgT0&& arg0, ArgT... args) {
+void JSActorMessageMeta::set_a_kind(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.kind)
+ _impl_.a_kind_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.JSActorMessageMeta.a_kind)
 }
-inline std::string* JSActorMessageMeta::mutable_kind() {
-  std::string* _s = _internal_mutable_kind();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.JSActorMessageMeta.kind)
+inline std::string* JSActorMessageMeta::mutable_a_kind() {
+  std::string* _s = _internal_mutable_a_kind();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.JSActorMessageMeta.a_kind)
   return _s;
 }
-inline const std::string& JSActorMessageMeta::_internal_kind() const {
-  return _impl_.kind_.Get();
+inline const std::string& JSActorMessageMeta::_internal_a_kind() const {
+  return _impl_.a_kind_.Get();
 }
-inline void JSActorMessageMeta::_internal_set_kind(const std::string& value) {
+inline void JSActorMessageMeta::_internal_set_a_kind(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.kind_.Set(value, GetArenaForAllocation());
+  _impl_.a_kind_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSActorMessageMeta::_internal_mutable_kind() {
+inline std::string* JSActorMessageMeta::_internal_mutable_a_kind() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.kind_.Mutable(GetArenaForAllocation());
+  return _impl_.a_kind_.Mutable(GetArenaForAllocation());
 }
-inline std::string* JSActorMessageMeta::release_kind() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.JSActorMessageMeta.kind)
-  if (!_internal_has_kind()) {
+inline std::string* JSActorMessageMeta::release_a_kind() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.JSActorMessageMeta.a_kind)
+  if (!_internal_has_a_kind()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.kind_.Release();
+  auto* p = _impl_.a_kind_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.kind_.IsDefault()) {
-    _impl_.kind_.Set("", GetArenaForAllocation());
+  if (_impl_.a_kind_.IsDefault()) {
+    _impl_.a_kind_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void JSActorMessageMeta::set_allocated_kind(std::string* kind) {
-  if (kind != nullptr) {
+inline void JSActorMessageMeta::set_allocated_a_kind(std::string* a_kind) {
+  if (a_kind != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.kind_.SetAllocated(kind, GetArenaForAllocation());
+  _impl_.a_kind_.SetAllocated(a_kind, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.kind_.IsDefault()) {
-    _impl_.kind_.Set("", GetArenaForAllocation());
+  if (_impl_.a_kind_.IsDefault()) {
+    _impl_.a_kind_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.kind)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.JSActorMessageMeta.a_kind)
 }
 
 // -------------------------------------------------------------------
 
 // IPCWebShareData
 
-// required bytes title = 1;
-inline bool IPCWebShareData::_internal_has_title() const {
+// required bytes a_title = 1;
+inline bool IPCWebShareData::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCWebShareData::has_title() const {
-  return _internal_has_title();
+inline bool IPCWebShareData::has_a_title() const {
+  return _internal_has_a_title();
 }
-inline void IPCWebShareData::clear_title() {
-  _impl_.title_.ClearToEmpty();
+inline void IPCWebShareData::clear_a_title() {
+  _impl_.a_title_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCWebShareData::title() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCWebShareData.title)
-  return _internal_title();
+inline const std::string& IPCWebShareData::a_title() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCWebShareData.a_title)
+  return _internal_a_title();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCWebShareData::set_title(ArgT0&& arg0, ArgT... args) {
+void IPCWebShareData::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.title)
+ _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.a_title)
 }
-inline std::string* IPCWebShareData::mutable_title() {
-  std::string* _s = _internal_mutable_title();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCWebShareData.title)
+inline std::string* IPCWebShareData::mutable_a_title() {
+  std::string* _s = _internal_mutable_a_title();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCWebShareData.a_title)
   return _s;
 }
-inline const std::string& IPCWebShareData::_internal_title() const {
-  return _impl_.title_.Get();
+inline const std::string& IPCWebShareData::_internal_a_title() const {
+  return _impl_.a_title_.Get();
 }
-inline void IPCWebShareData::_internal_set_title(const std::string& value) {
+inline void IPCWebShareData::_internal_set_a_title(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.title_.Set(value, GetArenaForAllocation());
+  _impl_.a_title_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCWebShareData::_internal_mutable_title() {
+inline std::string* IPCWebShareData::_internal_mutable_a_title() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.title_.Mutable(GetArenaForAllocation());
+  return _impl_.a_title_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCWebShareData::release_title() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCWebShareData.title)
-  if (!_internal_has_title()) {
+inline std::string* IPCWebShareData::release_a_title() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCWebShareData.a_title)
+  if (!_internal_has_a_title()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.title_.Release();
+  auto* p = _impl_.a_title_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.title_.IsDefault()) {
-    _impl_.title_.Set("", GetArenaForAllocation());
+  if (_impl_.a_title_.IsDefault()) {
+    _impl_.a_title_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCWebShareData::set_allocated_title(std::string* title) {
-  if (title != nullptr) {
+inline void IPCWebShareData::set_allocated_a_title(std::string* a_title) {
+  if (a_title != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.title_.SetAllocated(title, GetArenaForAllocation());
+  _impl_.a_title_.SetAllocated(a_title, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.title_.IsDefault()) {
-    _impl_.title_.Set("", GetArenaForAllocation());
+  if (_impl_.a_title_.IsDefault()) {
+    _impl_.a_title_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.title)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.a_title)
 }
 
-// required bytes text = 2;
-inline bool IPCWebShareData::_internal_has_text() const {
+// required bytes a_text = 2;
+inline bool IPCWebShareData::_internal_has_a_text() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IPCWebShareData::has_text() const {
-  return _internal_has_text();
+inline bool IPCWebShareData::has_a_text() const {
+  return _internal_has_a_text();
 }
-inline void IPCWebShareData::clear_text() {
-  _impl_.text_.ClearToEmpty();
+inline void IPCWebShareData::clear_a_text() {
+  _impl_.a_text_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IPCWebShareData::text() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCWebShareData.text)
-  return _internal_text();
+inline const std::string& IPCWebShareData::a_text() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCWebShareData.a_text)
+  return _internal_a_text();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCWebShareData::set_text(ArgT0&& arg0, ArgT... args) {
+void IPCWebShareData::set_a_text(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.text_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.text)
+ _impl_.a_text_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.a_text)
 }
-inline std::string* IPCWebShareData::mutable_text() {
-  std::string* _s = _internal_mutable_text();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCWebShareData.text)
+inline std::string* IPCWebShareData::mutable_a_text() {
+  std::string* _s = _internal_mutable_a_text();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCWebShareData.a_text)
   return _s;
 }
-inline const std::string& IPCWebShareData::_internal_text() const {
-  return _impl_.text_.Get();
+inline const std::string& IPCWebShareData::_internal_a_text() const {
+  return _impl_.a_text_.Get();
 }
-inline void IPCWebShareData::_internal_set_text(const std::string& value) {
+inline void IPCWebShareData::_internal_set_a_text(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.text_.Set(value, GetArenaForAllocation());
+  _impl_.a_text_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCWebShareData::_internal_mutable_text() {
+inline std::string* IPCWebShareData::_internal_mutable_a_text() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.text_.Mutable(GetArenaForAllocation());
+  return _impl_.a_text_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCWebShareData::release_text() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCWebShareData.text)
-  if (!_internal_has_text()) {
+inline std::string* IPCWebShareData::release_a_text() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCWebShareData.a_text)
+  if (!_internal_has_a_text()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.text_.Release();
+  auto* p = _impl_.a_text_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.text_.IsDefault()) {
-    _impl_.text_.Set("", GetArenaForAllocation());
+  if (_impl_.a_text_.IsDefault()) {
+    _impl_.a_text_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCWebShareData::set_allocated_text(std::string* text) {
-  if (text != nullptr) {
+inline void IPCWebShareData::set_allocated_a_text(std::string* a_text) {
+  if (a_text != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.text_.SetAllocated(text, GetArenaForAllocation());
+  _impl_.a_text_.SetAllocated(a_text, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.text_.IsDefault()) {
-    _impl_.text_.Set("", GetArenaForAllocation());
+  if (_impl_.a_text_.IsDefault()) {
+    _impl_.a_text_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.text)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.a_text)
 }
 
-// required bytes url = 3;
-inline bool IPCWebShareData::_internal_has_url() const {
+// required bytes a_url = 3;
+inline bool IPCWebShareData::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool IPCWebShareData::has_url() const {
-  return _internal_has_url();
+inline bool IPCWebShareData::has_a_url() const {
+  return _internal_has_a_url();
 }
-inline void IPCWebShareData::clear_url() {
-  _impl_.url_.ClearToEmpty();
+inline void IPCWebShareData::clear_a_url() {
+  _impl_.a_url_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& IPCWebShareData::url() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCWebShareData.url)
-  return _internal_url();
+inline const std::string& IPCWebShareData::a_url() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCWebShareData.a_url)
+  return _internal_a_url();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCWebShareData::set_url(ArgT0&& arg0, ArgT... args) {
+void IPCWebShareData::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.url)
+ _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCWebShareData.a_url)
 }
-inline std::string* IPCWebShareData::mutable_url() {
-  std::string* _s = _internal_mutable_url();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCWebShareData.url)
+inline std::string* IPCWebShareData::mutable_a_url() {
+  std::string* _s = _internal_mutable_a_url();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCWebShareData.a_url)
   return _s;
 }
-inline const std::string& IPCWebShareData::_internal_url() const {
-  return _impl_.url_.Get();
+inline const std::string& IPCWebShareData::_internal_a_url() const {
+  return _impl_.a_url_.Get();
 }
-inline void IPCWebShareData::_internal_set_url(const std::string& value) {
+inline void IPCWebShareData::_internal_set_a_url(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.url_.Set(value, GetArenaForAllocation());
+  _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCWebShareData::_internal_mutable_url() {
+inline std::string* IPCWebShareData::_internal_mutable_a_url() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.url_.Mutable(GetArenaForAllocation());
+  return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCWebShareData::release_url() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCWebShareData.url)
-  if (!_internal_has_url()) {
+inline std::string* IPCWebShareData::release_a_url() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCWebShareData.a_url)
+  if (!_internal_has_a_url()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.url_.Release();
+  auto* p = _impl_.a_url_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCWebShareData::set_allocated_url(std::string* url) {
-  if (url != nullptr) {
+inline void IPCWebShareData::set_allocated_a_url(std::string* a_url) {
+  if (a_url != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.url_.SetAllocated(url, GetArenaForAllocation());
+  _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.url)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.a_url)
 }
 
 #ifdef __GNUC__

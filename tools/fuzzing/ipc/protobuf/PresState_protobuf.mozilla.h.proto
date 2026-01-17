@@ -14,46 +14,46 @@ import "CustomElementTypes.proto";
 
 // Structs and unions declarations
 message SelectContentData {
-  repeated uint32 indices = 1;
-  repeated bytes values = 2;
+  repeated uint32 a_indices = 1;
+  repeated bytes a_values = 2;
 }
 
 message CheckedContentData {
-  required bool checked = 1;
+  required bool a_checked = 1;
 }
 
 message FileContentData {
   oneof content {
-    bytes mVBlobImpl = 1;
-    bytes mVnsString = 2;
+    bytes a_mVBlobImpl = 1;
+    bytes a_mVnsString = 2;
   }
 }
 
 message TextContentData {
-  required bytes value = 1;
-  required bool lastValueChangeWasInteractive = 2;
+  required bytes a_value = 1;
+  required bool a_lastValueChangeWasInteractive = 2;
 }
 
 message PresContentData {
   message _mVArrayOfFileContentData {
-    repeated protobuf.mozilla.FileContentData mVArrayOfFileContentData = 1;
+    repeated protobuf.mozilla.FileContentData a_mVArrayOfFileContentData = 1;
   }
   oneof content {
-    bytes mVvoid_t = 1;
-    protobuf.mozilla.TextContentData mVTextContentData = 2;
-    protobuf.mozilla.SelectContentData mVSelectContentData = 3;
-    protobuf.mozilla.CheckedContentData mVCheckedContentData = 4;
+    bytes a_mVvoid_t = 1;
+    protobuf.mozilla.TextContentData a_mVTextContentData = 2;
+    protobuf.mozilla.SelectContentData a_mVSelectContentData = 3;
+    protobuf.mozilla.CheckedContentData a_mVCheckedContentData = 4;
     _mVArrayOfFileContentData mVArrayOfFileContentData = 5;
-    protobuf.mozilla.dom.CustomElementTuple mVCustomElementTuple = 6;
+    protobuf.mozilla.dom.CustomElementTuple a_mVCustomElementTuple = 6;
   }
 }
 
 message PresState {
-  required protobuf.mozilla.PresContentData contentData = 1;
-  required bytes scrollState = 2;
-  required bool allowScrollOriginDowngrade = 3;
-  required float resolution = 4;
-  required bool disabledSet = 5;
-  required bool disabled = 6;
-  required bool droppedDown = 7;
+  required protobuf.mozilla.PresContentData a_contentData = 1;
+  required bytes a_scrollState = 2;
+  required bool a_allowScrollOriginDowngrade = 3;
+  required float a_resolution = 4;
+  required bool a_disabledSet = 5;
+  required bool a_disabled = 6;
+  required bool a_droppedDown = 7;
 }

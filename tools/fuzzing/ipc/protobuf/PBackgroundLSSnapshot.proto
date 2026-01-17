@@ -21,22 +21,22 @@ message Msg_DeleteMe {
 }
 
 message Msg_AsyncCheckpoint {
-  repeated protobuf.mozilla.dom.LSWriteInfo writeInfos = 1;
+  repeated protobuf.mozilla.dom.LSWriteInfo a_writeInfos = 1;
 }
 
 message Msg_AsyncCheckpointAndNotify {
-  repeated protobuf.mozilla.dom.LSWriteAndNotifyInfo writeAndNotifyInfos = 1;
+  repeated protobuf.mozilla.dom.LSWriteAndNotifyInfo a_writeAndNotifyInfos = 1;
 }
 
 message Msg_SyncCheckpoint {
-  repeated protobuf.mozilla.dom.LSWriteInfo writeInfos = 1;
+  repeated protobuf.mozilla.dom.LSWriteInfo a_writeInfos = 1;
 }
 
 message Reply_SyncCheckpoint {
 }
 
 message Msg_SyncCheckpointAndNotify {
-  repeated protobuf.mozilla.dom.LSWriteAndNotifyInfo writeAndNotifyInfos = 1;
+  repeated protobuf.mozilla.dom.LSWriteAndNotifyInfo a_writeAndNotifyInfos = 1;
 }
 
 message Reply_SyncCheckpointAndNotify {
@@ -55,27 +55,27 @@ message Msg_Loaded {
 }
 
 message Msg_LoadValueAndMoreItems {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message Reply_LoadValueAndMoreItems {
-  required bytes value = 1;
-  repeated protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
+  required bytes a_value = 1;
+  repeated protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
 }
 
 message Msg_LoadKeys {
 }
 
 message Reply_LoadKeys {
-  repeated bytes keys = 1;
+  repeated bytes a_keys = 1;
 }
 
 message Msg_IncreasePeakUsage {
-  required sint64 minSize = 1;
+  required sint64 a_minSize = 1;
 }
 
 message Reply_IncreasePeakUsage {
-  required sint64 size = 1;
+  required sint64 a_size = 1;
 }
 
 message Msg_MarkDirty {

@@ -308,24 +308,24 @@ class Msg_StartSubprotocol final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndpointFieldNumber = 1,
+    kAEndpointFieldNumber = 1,
   };
-  // required bytes endpoint = 1;
-  bool has_endpoint() const;
+  // required bytes a_endpoint = 1;
+  bool has_a_endpoint() const;
   private:
-  bool _internal_has_endpoint() const;
+  bool _internal_has_a_endpoint() const;
   public:
-  void clear_endpoint();
-  const std::string& endpoint() const;
+  void clear_a_endpoint();
+  const std::string& a_endpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_endpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_endpoint();
-  PROTOBUF_NODISCARD std::string* release_endpoint();
-  void set_allocated_endpoint(std::string* endpoint);
+  void set_a_endpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_endpoint();
+  PROTOBUF_NODISCARD std::string* release_a_endpoint();
+  void set_allocated_a_endpoint(std::string* a_endpoint);
   private:
-  const std::string& _internal_endpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_endpoint(const std::string& value);
-  std::string* _internal_mutable_endpoint();
+  const std::string& _internal_a_endpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_endpoint(const std::string& value);
+  std::string* _internal_mutable_a_endpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol)
@@ -338,7 +338,7 @@ class Msg_StartSubprotocol final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr endpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_endpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestEndpointOpens_2eproto;
@@ -606,72 +606,72 @@ class Reply___delete__ final :
 
 // Msg_StartSubprotocol
 
-// required bytes endpoint = 1;
-inline bool Msg_StartSubprotocol::_internal_has_endpoint() const {
+// required bytes a_endpoint = 1;
+inline bool Msg_StartSubprotocol::_internal_has_a_endpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StartSubprotocol::has_endpoint() const {
-  return _internal_has_endpoint();
+inline bool Msg_StartSubprotocol::has_a_endpoint() const {
+  return _internal_has_a_endpoint();
 }
-inline void Msg_StartSubprotocol::clear_endpoint() {
-  _impl_.endpoint_.ClearToEmpty();
+inline void Msg_StartSubprotocol::clear_a_endpoint() {
+  _impl_.a_endpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StartSubprotocol::endpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.endpoint)
-  return _internal_endpoint();
+inline const std::string& Msg_StartSubprotocol::a_endpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.a_endpoint)
+  return _internal_a_endpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StartSubprotocol::set_endpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_StartSubprotocol::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.endpoint)
+ _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.a_endpoint)
 }
-inline std::string* Msg_StartSubprotocol::mutable_endpoint() {
-  std::string* _s = _internal_mutable_endpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.endpoint)
+inline std::string* Msg_StartSubprotocol::mutable_a_endpoint() {
+  std::string* _s = _internal_mutable_a_endpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.a_endpoint)
   return _s;
 }
-inline const std::string& Msg_StartSubprotocol::_internal_endpoint() const {
-  return _impl_.endpoint_.Get();
+inline const std::string& Msg_StartSubprotocol::_internal_a_endpoint() const {
+  return _impl_.a_endpoint_.Get();
 }
-inline void Msg_StartSubprotocol::_internal_set_endpoint(const std::string& value) {
+inline void Msg_StartSubprotocol::_internal_set_a_endpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.endpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_endpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StartSubprotocol::_internal_mutable_endpoint() {
+inline std::string* Msg_StartSubprotocol::_internal_mutable_a_endpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.endpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_endpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StartSubprotocol::release_endpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.endpoint)
-  if (!_internal_has_endpoint()) {
+inline std::string* Msg_StartSubprotocol::release_a_endpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.a_endpoint)
+  if (!_internal_has_a_endpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.endpoint_.Release();
+  auto* p = _impl_.a_endpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StartSubprotocol::set_allocated_endpoint(std::string* endpoint) {
-  if (endpoint != nullptr) {
+inline void Msg_StartSubprotocol::set_allocated_a_endpoint(std::string* a_endpoint) {
+  if (a_endpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.endpoint_.SetAllocated(endpoint, GetArenaForAllocation());
+  _impl_.a_endpoint_.SetAllocated(a_endpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.endpoint_.IsDefault()) {
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_endpoint_.IsDefault()) {
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.endpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestEndpointOpens.Msg_StartSubprotocol.a_endpoint)
 }
 
 // -------------------------------------------------------------------

@@ -262,25 +262,25 @@ class Msg_Start final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
+    kAParamsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.ProfilerInitParams params = 1;
-  bool has_params() const;
+  // required .protobuf.mozilla.ProfilerInitParams a_params = 1;
+  bool has_a_params() const;
   private:
-  bool _internal_has_params() const;
+  bool _internal_has_a_params() const;
   public:
-  void clear_params();
-  const ::protobuf::mozilla::ProfilerInitParams& params() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ProfilerInitParams* release_params();
-  ::protobuf::mozilla::ProfilerInitParams* mutable_params();
-  void set_allocated_params(::protobuf::mozilla::ProfilerInitParams* params);
+  void clear_a_params();
+  const ::protobuf::mozilla::ProfilerInitParams& a_params() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ProfilerInitParams* release_a_params();
+  ::protobuf::mozilla::ProfilerInitParams* mutable_a_params();
+  void set_allocated_a_params(::protobuf::mozilla::ProfilerInitParams* a_params);
   private:
-  const ::protobuf::mozilla::ProfilerInitParams& _internal_params() const;
-  ::protobuf::mozilla::ProfilerInitParams* _internal_mutable_params();
+  const ::protobuf::mozilla::ProfilerInitParams& _internal_a_params() const;
+  ::protobuf::mozilla::ProfilerInitParams* _internal_mutable_a_params();
   public:
-  void unsafe_arena_set_allocated_params(
-      ::protobuf::mozilla::ProfilerInitParams* params);
-  ::protobuf::mozilla::ProfilerInitParams* unsafe_arena_release_params();
+  void unsafe_arena_set_allocated_a_params(
+      ::protobuf::mozilla::ProfilerInitParams* a_params);
+  ::protobuf::mozilla::ProfilerInitParams* unsafe_arena_release_a_params();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Msg_Start)
  private:
@@ -292,7 +292,7 @@ class Msg_Start final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ProfilerInitParams* params_;
+    ::protobuf::mozilla::ProfilerInitParams* a_params_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -409,19 +409,19 @@ class Reply_Start final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_Start)
@@ -434,7 +434,7 @@ class Reply_Start final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -551,25 +551,25 @@ class Msg_EnsureStarted final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
+    kAParamsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.ProfilerInitParams params = 1;
-  bool has_params() const;
+  // required .protobuf.mozilla.ProfilerInitParams a_params = 1;
+  bool has_a_params() const;
   private:
-  bool _internal_has_params() const;
+  bool _internal_has_a_params() const;
   public:
-  void clear_params();
-  const ::protobuf::mozilla::ProfilerInitParams& params() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ProfilerInitParams* release_params();
-  ::protobuf::mozilla::ProfilerInitParams* mutable_params();
-  void set_allocated_params(::protobuf::mozilla::ProfilerInitParams* params);
+  void clear_a_params();
+  const ::protobuf::mozilla::ProfilerInitParams& a_params() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ProfilerInitParams* release_a_params();
+  ::protobuf::mozilla::ProfilerInitParams* mutable_a_params();
+  void set_allocated_a_params(::protobuf::mozilla::ProfilerInitParams* a_params);
   private:
-  const ::protobuf::mozilla::ProfilerInitParams& _internal_params() const;
-  ::protobuf::mozilla::ProfilerInitParams* _internal_mutable_params();
+  const ::protobuf::mozilla::ProfilerInitParams& _internal_a_params() const;
+  ::protobuf::mozilla::ProfilerInitParams* _internal_mutable_a_params();
   public:
-  void unsafe_arena_set_allocated_params(
-      ::protobuf::mozilla::ProfilerInitParams* params);
-  ::protobuf::mozilla::ProfilerInitParams* unsafe_arena_release_params();
+  void unsafe_arena_set_allocated_a_params(
+      ::protobuf::mozilla::ProfilerInitParams* a_params);
+  ::protobuf::mozilla::ProfilerInitParams* unsafe_arena_release_a_params();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Msg_EnsureStarted)
  private:
@@ -581,7 +581,7 @@ class Msg_EnsureStarted final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ProfilerInitParams* params_;
+    ::protobuf::mozilla::ProfilerInitParams* a_params_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -698,19 +698,19 @@ class Reply_EnsureStarted final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_EnsureStarted)
@@ -723,7 +723,7 @@ class Reply_EnsureStarted final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -964,19 +964,19 @@ class Reply_Stop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_Stop)
@@ -989,7 +989,7 @@ class Reply_Stop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -1230,19 +1230,19 @@ class Reply_Pause final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_Pause)
@@ -1255,7 +1255,7 @@ class Reply_Pause final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -1496,19 +1496,19 @@ class Reply_Resume final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_Resume)
@@ -1521,7 +1521,7 @@ class Reply_Resume final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -1762,19 +1762,19 @@ class Reply_PauseSampling final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_PauseSampling)
@@ -1787,7 +1787,7 @@ class Reply_PauseSampling final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -2028,19 +2028,19 @@ class Reply_ResumeSampling final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_ResumeSampling)
@@ -2053,7 +2053,7 @@ class Reply_ResumeSampling final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -2294,19 +2294,19 @@ class Reply_WaitOnePeriodicSampling final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSampledFieldNumber = 1,
+    kASampledFieldNumber = 1,
   };
-  // required bool sampled = 1;
-  bool has_sampled() const;
+  // required bool a_sampled = 1;
+  bool has_a_sampled() const;
   private:
-  bool _internal_has_sampled() const;
+  bool _internal_has_a_sampled() const;
   public:
-  void clear_sampled();
-  bool sampled() const;
-  void set_sampled(bool value);
+  void clear_a_sampled();
+  bool a_sampled() const;
+  void set_a_sampled(bool value);
   private:
-  bool _internal_sampled() const;
-  void _internal_set_sampled(bool value);
+  bool _internal_a_sampled() const;
+  void _internal_set_a_sampled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_WaitOnePeriodicSampling)
@@ -2319,7 +2319,7 @@ class Reply_WaitOnePeriodicSampling final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool sampled_;
+    bool a_sampled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -2560,25 +2560,25 @@ class Reply_AwaitNextChunkManagerUpdate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUpdateFieldNumber = 1,
+    kAUpdateFieldNumber = 1,
   };
-  // required .protobuf.mozilla.ProfileBufferChunkManagerUpdate update = 1;
-  bool has_update() const;
+  // required .protobuf.mozilla.ProfileBufferChunkManagerUpdate a_update = 1;
+  bool has_a_update() const;
   private:
-  bool _internal_has_update() const;
+  bool _internal_has_a_update() const;
   public:
-  void clear_update();
-  const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& update() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* release_update();
-  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* mutable_update();
-  void set_allocated_update(::protobuf::mozilla::ProfileBufferChunkManagerUpdate* update);
+  void clear_a_update();
+  const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& a_update() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* release_a_update();
+  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* mutable_a_update();
+  void set_allocated_a_update(::protobuf::mozilla::ProfileBufferChunkManagerUpdate* a_update);
   private:
-  const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& _internal_update() const;
-  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* _internal_mutable_update();
+  const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& _internal_a_update() const;
+  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* _internal_mutable_a_update();
   public:
-  void unsafe_arena_set_allocated_update(
-      ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* update);
-  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* unsafe_arena_release_update();
+  void unsafe_arena_set_allocated_a_update(
+      ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* a_update);
+  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* unsafe_arena_release_a_update();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate)
  private:
@@ -2590,7 +2590,7 @@ class Reply_AwaitNextChunkManagerUpdate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* update_;
+    ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* a_update_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -2707,24 +2707,24 @@ class Msg_DestroyReleasedChunksAtOrBefore final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTimeStampFieldNumber = 1,
+    kATimeStampFieldNumber = 1,
   };
-  // required bytes timeStamp = 1;
-  bool has_timestamp() const;
+  // required bytes a_timeStamp = 1;
+  bool has_a_timestamp() const;
   private:
-  bool _internal_has_timestamp() const;
+  bool _internal_has_a_timestamp() const;
   public:
-  void clear_timestamp();
-  const std::string& timestamp() const;
+  void clear_a_timestamp();
+  const std::string& a_timestamp() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_timestamp(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_timestamp();
-  PROTOBUF_NODISCARD std::string* release_timestamp();
-  void set_allocated_timestamp(std::string* timestamp);
+  void set_a_timestamp(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_timestamp();
+  PROTOBUF_NODISCARD std::string* release_a_timestamp();
+  void set_allocated_a_timestamp(std::string* a_timestamp);
   private:
-  const std::string& _internal_timestamp() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_timestamp(const std::string& value);
-  std::string* _internal_mutable_timestamp();
+  const std::string& _internal_a_timestamp() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_timestamp(const std::string& value);
+  std::string* _internal_mutable_a_timestamp();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore)
@@ -2737,7 +2737,7 @@ class Msg_DestroyReleasedChunksAtOrBefore final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr timestamp_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timestamp_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -2978,25 +2978,25 @@ class Reply_GatherProfile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProfileAndAdditionalInformationFieldNumber = 1,
+    kAProfileAndAdditionalInformationFieldNumber = 1,
   };
-  // required .protobuf.mozilla.IPCProfileAndAdditionalInformation profileAndAdditionalInformation = 1;
-  bool has_profileandadditionalinformation() const;
+  // required .protobuf.mozilla.IPCProfileAndAdditionalInformation a_profileAndAdditionalInformation = 1;
+  bool has_a_profileandadditionalinformation() const;
   private:
-  bool _internal_has_profileandadditionalinformation() const;
+  bool _internal_has_a_profileandadditionalinformation() const;
   public:
-  void clear_profileandadditionalinformation();
-  const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& profileandadditionalinformation() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::IPCProfileAndAdditionalInformation* release_profileandadditionalinformation();
-  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* mutable_profileandadditionalinformation();
-  void set_allocated_profileandadditionalinformation(::protobuf::mozilla::IPCProfileAndAdditionalInformation* profileandadditionalinformation);
+  void clear_a_profileandadditionalinformation();
+  const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& a_profileandadditionalinformation() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::IPCProfileAndAdditionalInformation* release_a_profileandadditionalinformation();
+  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* mutable_a_profileandadditionalinformation();
+  void set_allocated_a_profileandadditionalinformation(::protobuf::mozilla::IPCProfileAndAdditionalInformation* a_profileandadditionalinformation);
   private:
-  const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& _internal_profileandadditionalinformation() const;
-  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* _internal_mutable_profileandadditionalinformation();
+  const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& _internal_a_profileandadditionalinformation() const;
+  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* _internal_mutable_a_profileandadditionalinformation();
   public:
-  void unsafe_arena_set_allocated_profileandadditionalinformation(
-      ::protobuf::mozilla::IPCProfileAndAdditionalInformation* profileandadditionalinformation);
-  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* unsafe_arena_release_profileandadditionalinformation();
+  void unsafe_arena_set_allocated_a_profileandadditionalinformation(
+      ::protobuf::mozilla::IPCProfileAndAdditionalInformation* a_profileandadditionalinformation);
+  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* unsafe_arena_release_a_profileandadditionalinformation();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_GatherProfile)
  private:
@@ -3008,7 +3008,7 @@ class Reply_GatherProfile final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::IPCProfileAndAdditionalInformation* profileandadditionalinformation_;
+    ::protobuf::mozilla::IPCProfileAndAdditionalInformation* a_profileandadditionalinformation_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -3249,25 +3249,25 @@ class Reply_GetGatherProfileProgress final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProgressFieldNumber = 1,
+    kAProgressFieldNumber = 1,
   };
-  // required .protobuf.mozilla.GatherProfileProgress progress = 1;
-  bool has_progress() const;
+  // required .protobuf.mozilla.GatherProfileProgress a_progress = 1;
+  bool has_a_progress() const;
   private:
-  bool _internal_has_progress() const;
+  bool _internal_has_a_progress() const;
   public:
-  void clear_progress();
-  const ::protobuf::mozilla::GatherProfileProgress& progress() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::GatherProfileProgress* release_progress();
-  ::protobuf::mozilla::GatherProfileProgress* mutable_progress();
-  void set_allocated_progress(::protobuf::mozilla::GatherProfileProgress* progress);
+  void clear_a_progress();
+  const ::protobuf::mozilla::GatherProfileProgress& a_progress() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::GatherProfileProgress* release_a_progress();
+  ::protobuf::mozilla::GatherProfileProgress* mutable_a_progress();
+  void set_allocated_a_progress(::protobuf::mozilla::GatherProfileProgress* a_progress);
   private:
-  const ::protobuf::mozilla::GatherProfileProgress& _internal_progress() const;
-  ::protobuf::mozilla::GatherProfileProgress* _internal_mutable_progress();
+  const ::protobuf::mozilla::GatherProfileProgress& _internal_a_progress() const;
+  ::protobuf::mozilla::GatherProfileProgress* _internal_mutable_a_progress();
   public:
-  void unsafe_arena_set_allocated_progress(
-      ::protobuf::mozilla::GatherProfileProgress* progress);
-  ::protobuf::mozilla::GatherProfileProgress* unsafe_arena_release_progress();
+  void unsafe_arena_set_allocated_a_progress(
+      ::protobuf::mozilla::GatherProfileProgress* a_progress);
+  ::protobuf::mozilla::GatherProfileProgress* unsafe_arena_release_a_progress();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress)
  private:
@@ -3279,7 +3279,7 @@ class Reply_GetGatherProfileProgress final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::GatherProfileProgress* progress_;
+    ::protobuf::mozilla::GatherProfileProgress* a_progress_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProfiler_2eproto;
@@ -3419,41 +3419,41 @@ class Msg_ClearAllPages final :
 #endif  // __GNUC__
 // Msg_Start
 
-// required .protobuf.mozilla.ProfilerInitParams params = 1;
-inline bool Msg_Start::_internal_has_params() const {
+// required .protobuf.mozilla.ProfilerInitParams a_params = 1;
+inline bool Msg_Start::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.params_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
   return value;
 }
-inline bool Msg_Start::has_params() const {
-  return _internal_has_params();
+inline bool Msg_Start::has_a_params() const {
+  return _internal_has_a_params();
 }
-inline const ::protobuf::mozilla::ProfilerInitParams& Msg_Start::_internal_params() const {
-  const ::protobuf::mozilla::ProfilerInitParams* p = _impl_.params_;
+inline const ::protobuf::mozilla::ProfilerInitParams& Msg_Start::_internal_a_params() const {
+  const ::protobuf::mozilla::ProfilerInitParams* p = _impl_.a_params_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ProfilerInitParams&>(
       ::protobuf::mozilla::_ProfilerInitParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ProfilerInitParams& Msg_Start::params() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Msg_Start.params)
-  return _internal_params();
+inline const ::protobuf::mozilla::ProfilerInitParams& Msg_Start::a_params() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Msg_Start.a_params)
+  return _internal_a_params();
 }
-inline void Msg_Start::unsafe_arena_set_allocated_params(
-    ::protobuf::mozilla::ProfilerInitParams* params) {
+inline void Msg_Start::unsafe_arena_set_allocated_a_params(
+    ::protobuf::mozilla::ProfilerInitParams* a_params) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  _impl_.params_ = params;
-  if (params) {
+  _impl_.a_params_ = a_params;
+  if (a_params) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Msg_Start.params)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Msg_Start.a_params)
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::release_params() {
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::release_a_params() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3465,118 +3465,118 @@ inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::release_params() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::unsafe_arena_release_params() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Msg_Start.params)
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::unsafe_arena_release_a_params() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Msg_Start.a_params)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::_internal_mutable_params() {
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::_internal_mutable_a_params() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.params_ == nullptr) {
+  if (_impl_.a_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ProfilerInitParams>(GetArenaForAllocation());
-    _impl_.params_ = p;
+    _impl_.a_params_ = p;
   }
-  return _impl_.params_;
+  return _impl_.a_params_;
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::mutable_params() {
-  ::protobuf::mozilla::ProfilerInitParams* _msg = _internal_mutable_params();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Msg_Start.params)
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_Start::mutable_a_params() {
+  ::protobuf::mozilla::ProfilerInitParams* _msg = _internal_mutable_a_params();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Msg_Start.a_params)
   return _msg;
 }
-inline void Msg_Start::set_allocated_params(::protobuf::mozilla::ProfilerInitParams* params) {
+inline void Msg_Start::set_allocated_a_params(::protobuf::mozilla::ProfilerInitParams* a_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  if (params) {
+  if (a_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(params));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_params));
     if (message_arena != submessage_arena) {
-      params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, params, submessage_arena);
+      a_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_params, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.params_ = params;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Msg_Start.params)
+  _impl_.a_params_ = a_params;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Msg_Start.a_params)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Start
 
-// required bool unused = 1;
-inline bool Reply_Start::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_Start::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Start::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_Start::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_Start::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_Start::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Start::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_Start::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_Start::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Start.unused)
-  return _internal_unused();
+inline bool Reply_Start::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Start.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_Start::_internal_set_unused(bool value) {
+inline void Reply_Start::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_Start::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Start.unused)
+inline void Reply_Start::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Start.a_unused)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_EnsureStarted
 
-// required .protobuf.mozilla.ProfilerInitParams params = 1;
-inline bool Msg_EnsureStarted::_internal_has_params() const {
+// required .protobuf.mozilla.ProfilerInitParams a_params = 1;
+inline bool Msg_EnsureStarted::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.params_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
   return value;
 }
-inline bool Msg_EnsureStarted::has_params() const {
-  return _internal_has_params();
+inline bool Msg_EnsureStarted::has_a_params() const {
+  return _internal_has_a_params();
 }
-inline const ::protobuf::mozilla::ProfilerInitParams& Msg_EnsureStarted::_internal_params() const {
-  const ::protobuf::mozilla::ProfilerInitParams* p = _impl_.params_;
+inline const ::protobuf::mozilla::ProfilerInitParams& Msg_EnsureStarted::_internal_a_params() const {
+  const ::protobuf::mozilla::ProfilerInitParams* p = _impl_.a_params_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ProfilerInitParams&>(
       ::protobuf::mozilla::_ProfilerInitParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ProfilerInitParams& Msg_EnsureStarted::params() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Msg_EnsureStarted.params)
-  return _internal_params();
+inline const ::protobuf::mozilla::ProfilerInitParams& Msg_EnsureStarted::a_params() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Msg_EnsureStarted.a_params)
+  return _internal_a_params();
 }
-inline void Msg_EnsureStarted::unsafe_arena_set_allocated_params(
-    ::protobuf::mozilla::ProfilerInitParams* params) {
+inline void Msg_EnsureStarted::unsafe_arena_set_allocated_a_params(
+    ::protobuf::mozilla::ProfilerInitParams* a_params) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  _impl_.params_ = params;
-  if (params) {
+  _impl_.a_params_ = a_params;
+  if (a_params) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Msg_EnsureStarted.params)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Msg_EnsureStarted.a_params)
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::release_params() {
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::release_a_params() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3588,77 +3588,77 @@ inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::release_param
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::unsafe_arena_release_params() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Msg_EnsureStarted.params)
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::unsafe_arena_release_a_params() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Msg_EnsureStarted.a_params)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::ProfilerInitParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::_internal_mutable_params() {
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::_internal_mutable_a_params() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.params_ == nullptr) {
+  if (_impl_.a_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ProfilerInitParams>(GetArenaForAllocation());
-    _impl_.params_ = p;
+    _impl_.a_params_ = p;
   }
-  return _impl_.params_;
+  return _impl_.a_params_;
 }
-inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::mutable_params() {
-  ::protobuf::mozilla::ProfilerInitParams* _msg = _internal_mutable_params();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Msg_EnsureStarted.params)
+inline ::protobuf::mozilla::ProfilerInitParams* Msg_EnsureStarted::mutable_a_params() {
+  ::protobuf::mozilla::ProfilerInitParams* _msg = _internal_mutable_a_params();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Msg_EnsureStarted.a_params)
   return _msg;
 }
-inline void Msg_EnsureStarted::set_allocated_params(::protobuf::mozilla::ProfilerInitParams* params) {
+inline void Msg_EnsureStarted::set_allocated_a_params(::protobuf::mozilla::ProfilerInitParams* a_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  if (params) {
+  if (a_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(params));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_params));
     if (message_arena != submessage_arena) {
-      params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, params, submessage_arena);
+      a_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_params, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.params_ = params;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Msg_EnsureStarted.params)
+  _impl_.a_params_ = a_params;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Msg_EnsureStarted.a_params)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_EnsureStarted
 
-// required bool unused = 1;
-inline bool Reply_EnsureStarted::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_EnsureStarted::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_EnsureStarted::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_EnsureStarted::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_EnsureStarted::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_EnsureStarted::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_EnsureStarted::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_EnsureStarted::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_EnsureStarted::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_EnsureStarted.unused)
-  return _internal_unused();
+inline bool Reply_EnsureStarted::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_EnsureStarted.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_EnsureStarted::_internal_set_unused(bool value) {
+inline void Reply_EnsureStarted::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_EnsureStarted::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_EnsureStarted.unused)
+inline void Reply_EnsureStarted::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_EnsureStarted.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -3669,32 +3669,32 @@ inline void Reply_EnsureStarted::set_unused(bool value) {
 
 // Reply_Stop
 
-// required bool unused = 1;
-inline bool Reply_Stop::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_Stop::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Stop::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_Stop::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_Stop::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_Stop::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Stop::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_Stop::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_Stop::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Stop.unused)
-  return _internal_unused();
+inline bool Reply_Stop::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Stop.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_Stop::_internal_set_unused(bool value) {
+inline void Reply_Stop::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_Stop::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Stop.unused)
+inline void Reply_Stop::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Stop.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -3705,32 +3705,32 @@ inline void Reply_Stop::set_unused(bool value) {
 
 // Reply_Pause
 
-// required bool unused = 1;
-inline bool Reply_Pause::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_Pause::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Pause::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_Pause::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_Pause::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_Pause::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Pause::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_Pause::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_Pause::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Pause.unused)
-  return _internal_unused();
+inline bool Reply_Pause::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Pause.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_Pause::_internal_set_unused(bool value) {
+inline void Reply_Pause::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_Pause::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Pause.unused)
+inline void Reply_Pause::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Pause.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -3741,32 +3741,32 @@ inline void Reply_Pause::set_unused(bool value) {
 
 // Reply_Resume
 
-// required bool unused = 1;
-inline bool Reply_Resume::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_Resume::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Resume::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_Resume::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_Resume::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_Resume::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Resume::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_Resume::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_Resume::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Resume.unused)
-  return _internal_unused();
+inline bool Reply_Resume::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_Resume.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_Resume::_internal_set_unused(bool value) {
+inline void Reply_Resume::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_Resume::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Resume.unused)
+inline void Reply_Resume::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_Resume.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -3777,32 +3777,32 @@ inline void Reply_Resume::set_unused(bool value) {
 
 // Reply_PauseSampling
 
-// required bool unused = 1;
-inline bool Reply_PauseSampling::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_PauseSampling::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_PauseSampling::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_PauseSampling::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_PauseSampling::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_PauseSampling::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_PauseSampling::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_PauseSampling::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_PauseSampling::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_PauseSampling.unused)
-  return _internal_unused();
+inline bool Reply_PauseSampling::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_PauseSampling.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_PauseSampling::_internal_set_unused(bool value) {
+inline void Reply_PauseSampling::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_PauseSampling::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_PauseSampling.unused)
+inline void Reply_PauseSampling::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_PauseSampling.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -3813,32 +3813,32 @@ inline void Reply_PauseSampling::set_unused(bool value) {
 
 // Reply_ResumeSampling
 
-// required bool unused = 1;
-inline bool Reply_ResumeSampling::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_ResumeSampling::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_ResumeSampling::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_ResumeSampling::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_ResumeSampling::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_ResumeSampling::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_ResumeSampling::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_ResumeSampling::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_ResumeSampling::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_ResumeSampling.unused)
-  return _internal_unused();
+inline bool Reply_ResumeSampling::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_ResumeSampling.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_ResumeSampling::_internal_set_unused(bool value) {
+inline void Reply_ResumeSampling::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_ResumeSampling::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_ResumeSampling.unused)
+inline void Reply_ResumeSampling::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_ResumeSampling.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -3849,32 +3849,32 @@ inline void Reply_ResumeSampling::set_unused(bool value) {
 
 // Reply_WaitOnePeriodicSampling
 
-// required bool sampled = 1;
-inline bool Reply_WaitOnePeriodicSampling::_internal_has_sampled() const {
+// required bool a_sampled = 1;
+inline bool Reply_WaitOnePeriodicSampling::_internal_has_a_sampled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_WaitOnePeriodicSampling::has_sampled() const {
-  return _internal_has_sampled();
+inline bool Reply_WaitOnePeriodicSampling::has_a_sampled() const {
+  return _internal_has_a_sampled();
 }
-inline void Reply_WaitOnePeriodicSampling::clear_sampled() {
-  _impl_.sampled_ = false;
+inline void Reply_WaitOnePeriodicSampling::clear_a_sampled() {
+  _impl_.a_sampled_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_WaitOnePeriodicSampling::_internal_sampled() const {
-  return _impl_.sampled_;
+inline bool Reply_WaitOnePeriodicSampling::_internal_a_sampled() const {
+  return _impl_.a_sampled_;
 }
-inline bool Reply_WaitOnePeriodicSampling::sampled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_WaitOnePeriodicSampling.sampled)
-  return _internal_sampled();
+inline bool Reply_WaitOnePeriodicSampling::a_sampled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_WaitOnePeriodicSampling.a_sampled)
+  return _internal_a_sampled();
 }
-inline void Reply_WaitOnePeriodicSampling::_internal_set_sampled(bool value) {
+inline void Reply_WaitOnePeriodicSampling::_internal_set_a_sampled(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.sampled_ = value;
+  _impl_.a_sampled_ = value;
 }
-inline void Reply_WaitOnePeriodicSampling::set_sampled(bool value) {
-  _internal_set_sampled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_WaitOnePeriodicSampling.sampled)
+inline void Reply_WaitOnePeriodicSampling::set_a_sampled(bool value) {
+  _internal_set_a_sampled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Reply_WaitOnePeriodicSampling.a_sampled)
 }
 
 // -------------------------------------------------------------------
@@ -3885,41 +3885,41 @@ inline void Reply_WaitOnePeriodicSampling::set_sampled(bool value) {
 
 // Reply_AwaitNextChunkManagerUpdate
 
-// required .protobuf.mozilla.ProfileBufferChunkManagerUpdate update = 1;
-inline bool Reply_AwaitNextChunkManagerUpdate::_internal_has_update() const {
+// required .protobuf.mozilla.ProfileBufferChunkManagerUpdate a_update = 1;
+inline bool Reply_AwaitNextChunkManagerUpdate::_internal_has_a_update() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.update_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_update_ != nullptr);
   return value;
 }
-inline bool Reply_AwaitNextChunkManagerUpdate::has_update() const {
-  return _internal_has_update();
+inline bool Reply_AwaitNextChunkManagerUpdate::has_a_update() const {
+  return _internal_has_a_update();
 }
-inline const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& Reply_AwaitNextChunkManagerUpdate::_internal_update() const {
-  const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* p = _impl_.update_;
+inline const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& Reply_AwaitNextChunkManagerUpdate::_internal_a_update() const {
+  const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* p = _impl_.a_update_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate&>(
       ::protobuf::mozilla::_ProfileBufferChunkManagerUpdate_default_instance_);
 }
-inline const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& Reply_AwaitNextChunkManagerUpdate::update() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.update)
-  return _internal_update();
+inline const ::protobuf::mozilla::ProfileBufferChunkManagerUpdate& Reply_AwaitNextChunkManagerUpdate::a_update() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.a_update)
+  return _internal_a_update();
 }
-inline void Reply_AwaitNextChunkManagerUpdate::unsafe_arena_set_allocated_update(
-    ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* update) {
+inline void Reply_AwaitNextChunkManagerUpdate::unsafe_arena_set_allocated_a_update(
+    ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* a_update) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.update_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_update_);
   }
-  _impl_.update_ = update;
-  if (update) {
+  _impl_.a_update_ = a_update;
+  if (a_update) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.update)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.a_update)
 }
-inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::release_update() {
+inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::release_a_update() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* temp = _impl_.update_;
-  _impl_.update_ = nullptr;
+  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* temp = _impl_.a_update_;
+  _impl_.a_update_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3931,117 +3931,117 @@ inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChun
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::unsafe_arena_release_update() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.update)
+inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::unsafe_arena_release_a_update() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.a_update)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* temp = _impl_.update_;
-  _impl_.update_ = nullptr;
+  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* temp = _impl_.a_update_;
+  _impl_.a_update_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::_internal_mutable_update() {
+inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::_internal_mutable_a_update() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.update_ == nullptr) {
+  if (_impl_.a_update_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ProfileBufferChunkManagerUpdate>(GetArenaForAllocation());
-    _impl_.update_ = p;
+    _impl_.a_update_ = p;
   }
-  return _impl_.update_;
+  return _impl_.a_update_;
 }
-inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::mutable_update() {
-  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* _msg = _internal_mutable_update();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.update)
+inline ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* Reply_AwaitNextChunkManagerUpdate::mutable_a_update() {
+  ::protobuf::mozilla::ProfileBufferChunkManagerUpdate* _msg = _internal_mutable_a_update();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.a_update)
   return _msg;
 }
-inline void Reply_AwaitNextChunkManagerUpdate::set_allocated_update(::protobuf::mozilla::ProfileBufferChunkManagerUpdate* update) {
+inline void Reply_AwaitNextChunkManagerUpdate::set_allocated_a_update(::protobuf::mozilla::ProfileBufferChunkManagerUpdate* a_update) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.update_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_update_);
   }
-  if (update) {
+  if (a_update) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(update));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_update));
     if (message_arena != submessage_arena) {
-      update = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, update, submessage_arena);
+      a_update = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_update, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.update_ = update;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.update)
+  _impl_.a_update_ = a_update;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Reply_AwaitNextChunkManagerUpdate.a_update)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DestroyReleasedChunksAtOrBefore
 
-// required bytes timeStamp = 1;
-inline bool Msg_DestroyReleasedChunksAtOrBefore::_internal_has_timestamp() const {
+// required bytes a_timeStamp = 1;
+inline bool Msg_DestroyReleasedChunksAtOrBefore::_internal_has_a_timestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DestroyReleasedChunksAtOrBefore::has_timestamp() const {
-  return _internal_has_timestamp();
+inline bool Msg_DestroyReleasedChunksAtOrBefore::has_a_timestamp() const {
+  return _internal_has_a_timestamp();
 }
-inline void Msg_DestroyReleasedChunksAtOrBefore::clear_timestamp() {
-  _impl_.timestamp_.ClearToEmpty();
+inline void Msg_DestroyReleasedChunksAtOrBefore::clear_a_timestamp() {
+  _impl_.a_timestamp_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DestroyReleasedChunksAtOrBefore::timestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.timeStamp)
-  return _internal_timestamp();
+inline const std::string& Msg_DestroyReleasedChunksAtOrBefore::a_timestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.a_timeStamp)
+  return _internal_a_timestamp();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DestroyReleasedChunksAtOrBefore::set_timestamp(ArgT0&& arg0, ArgT... args) {
+void Msg_DestroyReleasedChunksAtOrBefore::set_a_timestamp(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.timestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.timeStamp)
+ _impl_.a_timestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.a_timeStamp)
 }
-inline std::string* Msg_DestroyReleasedChunksAtOrBefore::mutable_timestamp() {
-  std::string* _s = _internal_mutable_timestamp();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.timeStamp)
+inline std::string* Msg_DestroyReleasedChunksAtOrBefore::mutable_a_timestamp() {
+  std::string* _s = _internal_mutable_a_timestamp();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.a_timeStamp)
   return _s;
 }
-inline const std::string& Msg_DestroyReleasedChunksAtOrBefore::_internal_timestamp() const {
-  return _impl_.timestamp_.Get();
+inline const std::string& Msg_DestroyReleasedChunksAtOrBefore::_internal_a_timestamp() const {
+  return _impl_.a_timestamp_.Get();
 }
-inline void Msg_DestroyReleasedChunksAtOrBefore::_internal_set_timestamp(const std::string& value) {
+inline void Msg_DestroyReleasedChunksAtOrBefore::_internal_set_a_timestamp(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.timestamp_.Set(value, GetArenaForAllocation());
+  _impl_.a_timestamp_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DestroyReleasedChunksAtOrBefore::_internal_mutable_timestamp() {
+inline std::string* Msg_DestroyReleasedChunksAtOrBefore::_internal_mutable_a_timestamp() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.timestamp_.Mutable(GetArenaForAllocation());
+  return _impl_.a_timestamp_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DestroyReleasedChunksAtOrBefore::release_timestamp() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.timeStamp)
-  if (!_internal_has_timestamp()) {
+inline std::string* Msg_DestroyReleasedChunksAtOrBefore::release_a_timestamp() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.a_timeStamp)
+  if (!_internal_has_a_timestamp()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.timestamp_.Release();
+  auto* p = _impl_.a_timestamp_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timestamp_.IsDefault()) {
-    _impl_.timestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timestamp_.IsDefault()) {
+    _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DestroyReleasedChunksAtOrBefore::set_allocated_timestamp(std::string* timestamp) {
-  if (timestamp != nullptr) {
+inline void Msg_DestroyReleasedChunksAtOrBefore::set_allocated_a_timestamp(std::string* a_timestamp) {
+  if (a_timestamp != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.timestamp_.SetAllocated(timestamp, GetArenaForAllocation());
+  _impl_.a_timestamp_.SetAllocated(a_timestamp, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timestamp_.IsDefault()) {
-    _impl_.timestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timestamp_.IsDefault()) {
+    _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.timeStamp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Msg_DestroyReleasedChunksAtOrBefore.a_timeStamp)
 }
 
 // -------------------------------------------------------------------
@@ -4052,41 +4052,41 @@ inline void Msg_DestroyReleasedChunksAtOrBefore::set_allocated_timestamp(std::st
 
 // Reply_GatherProfile
 
-// required .protobuf.mozilla.IPCProfileAndAdditionalInformation profileAndAdditionalInformation = 1;
-inline bool Reply_GatherProfile::_internal_has_profileandadditionalinformation() const {
+// required .protobuf.mozilla.IPCProfileAndAdditionalInformation a_profileAndAdditionalInformation = 1;
+inline bool Reply_GatherProfile::_internal_has_a_profileandadditionalinformation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.profileandadditionalinformation_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_profileandadditionalinformation_ != nullptr);
   return value;
 }
-inline bool Reply_GatherProfile::has_profileandadditionalinformation() const {
-  return _internal_has_profileandadditionalinformation();
+inline bool Reply_GatherProfile::has_a_profileandadditionalinformation() const {
+  return _internal_has_a_profileandadditionalinformation();
 }
-inline const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& Reply_GatherProfile::_internal_profileandadditionalinformation() const {
-  const ::protobuf::mozilla::IPCProfileAndAdditionalInformation* p = _impl_.profileandadditionalinformation_;
+inline const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& Reply_GatherProfile::_internal_a_profileandadditionalinformation() const {
+  const ::protobuf::mozilla::IPCProfileAndAdditionalInformation* p = _impl_.a_profileandadditionalinformation_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::IPCProfileAndAdditionalInformation&>(
       ::protobuf::mozilla::_IPCProfileAndAdditionalInformation_default_instance_);
 }
-inline const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& Reply_GatherProfile::profileandadditionalinformation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_GatherProfile.profileAndAdditionalInformation)
-  return _internal_profileandadditionalinformation();
+inline const ::protobuf::mozilla::IPCProfileAndAdditionalInformation& Reply_GatherProfile::a_profileandadditionalinformation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_GatherProfile.a_profileAndAdditionalInformation)
+  return _internal_a_profileandadditionalinformation();
 }
-inline void Reply_GatherProfile::unsafe_arena_set_allocated_profileandadditionalinformation(
-    ::protobuf::mozilla::IPCProfileAndAdditionalInformation* profileandadditionalinformation) {
+inline void Reply_GatherProfile::unsafe_arena_set_allocated_a_profileandadditionalinformation(
+    ::protobuf::mozilla::IPCProfileAndAdditionalInformation* a_profileandadditionalinformation) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.profileandadditionalinformation_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_profileandadditionalinformation_);
   }
-  _impl_.profileandadditionalinformation_ = profileandadditionalinformation;
-  if (profileandadditionalinformation) {
+  _impl_.a_profileandadditionalinformation_ = a_profileandadditionalinformation;
+  if (a_profileandadditionalinformation) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Reply_GatherProfile.profileAndAdditionalInformation)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Reply_GatherProfile.a_profileAndAdditionalInformation)
 }
-inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::release_profileandadditionalinformation() {
+inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::release_a_profileandadditionalinformation() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* temp = _impl_.profileandadditionalinformation_;
-  _impl_.profileandadditionalinformation_ = nullptr;
+  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* temp = _impl_.a_profileandadditionalinformation_;
+  _impl_.a_profileandadditionalinformation_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4098,45 +4098,45 @@ inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProf
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::unsafe_arena_release_profileandadditionalinformation() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Reply_GatherProfile.profileAndAdditionalInformation)
+inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::unsafe_arena_release_a_profileandadditionalinformation() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Reply_GatherProfile.a_profileAndAdditionalInformation)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* temp = _impl_.profileandadditionalinformation_;
-  _impl_.profileandadditionalinformation_ = nullptr;
+  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* temp = _impl_.a_profileandadditionalinformation_;
+  _impl_.a_profileandadditionalinformation_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::_internal_mutable_profileandadditionalinformation() {
+inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::_internal_mutable_a_profileandadditionalinformation() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.profileandadditionalinformation_ == nullptr) {
+  if (_impl_.a_profileandadditionalinformation_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::IPCProfileAndAdditionalInformation>(GetArenaForAllocation());
-    _impl_.profileandadditionalinformation_ = p;
+    _impl_.a_profileandadditionalinformation_ = p;
   }
-  return _impl_.profileandadditionalinformation_;
+  return _impl_.a_profileandadditionalinformation_;
 }
-inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::mutable_profileandadditionalinformation() {
-  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* _msg = _internal_mutable_profileandadditionalinformation();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Reply_GatherProfile.profileAndAdditionalInformation)
+inline ::protobuf::mozilla::IPCProfileAndAdditionalInformation* Reply_GatherProfile::mutable_a_profileandadditionalinformation() {
+  ::protobuf::mozilla::IPCProfileAndAdditionalInformation* _msg = _internal_mutable_a_profileandadditionalinformation();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Reply_GatherProfile.a_profileAndAdditionalInformation)
   return _msg;
 }
-inline void Reply_GatherProfile::set_allocated_profileandadditionalinformation(::protobuf::mozilla::IPCProfileAndAdditionalInformation* profileandadditionalinformation) {
+inline void Reply_GatherProfile::set_allocated_a_profileandadditionalinformation(::protobuf::mozilla::IPCProfileAndAdditionalInformation* a_profileandadditionalinformation) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.profileandadditionalinformation_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_profileandadditionalinformation_);
   }
-  if (profileandadditionalinformation) {
+  if (a_profileandadditionalinformation) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(profileandadditionalinformation));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_profileandadditionalinformation));
     if (message_arena != submessage_arena) {
-      profileandadditionalinformation = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, profileandadditionalinformation, submessage_arena);
+      a_profileandadditionalinformation = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_profileandadditionalinformation, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.profileandadditionalinformation_ = profileandadditionalinformation;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Reply_GatherProfile.profileAndAdditionalInformation)
+  _impl_.a_profileandadditionalinformation_ = a_profileandadditionalinformation;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Reply_GatherProfile.a_profileAndAdditionalInformation)
 }
 
 // -------------------------------------------------------------------
@@ -4147,41 +4147,41 @@ inline void Reply_GatherProfile::set_allocated_profileandadditionalinformation(:
 
 // Reply_GetGatherProfileProgress
 
-// required .protobuf.mozilla.GatherProfileProgress progress = 1;
-inline bool Reply_GetGatherProfileProgress::_internal_has_progress() const {
+// required .protobuf.mozilla.GatherProfileProgress a_progress = 1;
+inline bool Reply_GetGatherProfileProgress::_internal_has_a_progress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.progress_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_progress_ != nullptr);
   return value;
 }
-inline bool Reply_GetGatherProfileProgress::has_progress() const {
-  return _internal_has_progress();
+inline bool Reply_GetGatherProfileProgress::has_a_progress() const {
+  return _internal_has_a_progress();
 }
-inline const ::protobuf::mozilla::GatherProfileProgress& Reply_GetGatherProfileProgress::_internal_progress() const {
-  const ::protobuf::mozilla::GatherProfileProgress* p = _impl_.progress_;
+inline const ::protobuf::mozilla::GatherProfileProgress& Reply_GetGatherProfileProgress::_internal_a_progress() const {
+  const ::protobuf::mozilla::GatherProfileProgress* p = _impl_.a_progress_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::GatherProfileProgress&>(
       ::protobuf::mozilla::_GatherProfileProgress_default_instance_);
 }
-inline const ::protobuf::mozilla::GatherProfileProgress& Reply_GetGatherProfileProgress::progress() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.progress)
-  return _internal_progress();
+inline const ::protobuf::mozilla::GatherProfileProgress& Reply_GetGatherProfileProgress::a_progress() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.a_progress)
+  return _internal_a_progress();
 }
-inline void Reply_GetGatherProfileProgress::unsafe_arena_set_allocated_progress(
-    ::protobuf::mozilla::GatherProfileProgress* progress) {
+inline void Reply_GetGatherProfileProgress::unsafe_arena_set_allocated_a_progress(
+    ::protobuf::mozilla::GatherProfileProgress* a_progress) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.progress_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_progress_);
   }
-  _impl_.progress_ = progress;
-  if (progress) {
+  _impl_.a_progress_ = a_progress;
+  if (a_progress) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.progress)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.a_progress)
 }
-inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::release_progress() {
+inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::release_a_progress() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::GatherProfileProgress* temp = _impl_.progress_;
-  _impl_.progress_ = nullptr;
+  ::protobuf::mozilla::GatherProfileProgress* temp = _impl_.a_progress_;
+  _impl_.a_progress_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4193,45 +4193,45 @@ inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgres
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::unsafe_arena_release_progress() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.progress)
+inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::unsafe_arena_release_a_progress() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.a_progress)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::GatherProfileProgress* temp = _impl_.progress_;
-  _impl_.progress_ = nullptr;
+  ::protobuf::mozilla::GatherProfileProgress* temp = _impl_.a_progress_;
+  _impl_.a_progress_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::_internal_mutable_progress() {
+inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::_internal_mutable_a_progress() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.progress_ == nullptr) {
+  if (_impl_.a_progress_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::GatherProfileProgress>(GetArenaForAllocation());
-    _impl_.progress_ = p;
+    _impl_.a_progress_ = p;
   }
-  return _impl_.progress_;
+  return _impl_.a_progress_;
 }
-inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::mutable_progress() {
-  ::protobuf::mozilla::GatherProfileProgress* _msg = _internal_mutable_progress();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.progress)
+inline ::protobuf::mozilla::GatherProfileProgress* Reply_GetGatherProfileProgress::mutable_a_progress() {
+  ::protobuf::mozilla::GatherProfileProgress* _msg = _internal_mutable_a_progress();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.a_progress)
   return _msg;
 }
-inline void Reply_GetGatherProfileProgress::set_allocated_progress(::protobuf::mozilla::GatherProfileProgress* progress) {
+inline void Reply_GetGatherProfileProgress::set_allocated_a_progress(::protobuf::mozilla::GatherProfileProgress* a_progress) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.progress_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_progress_);
   }
-  if (progress) {
+  if (a_progress) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(progress));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_progress));
     if (message_arena != submessage_arena) {
-      progress = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, progress, submessage_arena);
+      a_progress = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_progress, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.progress_ = progress;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.progress)
+  _impl_.a_progress_ = a_progress;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProfiler.Reply_GetGatherProfileProgress.a_progress)
 }
 
 // -------------------------------------------------------------------

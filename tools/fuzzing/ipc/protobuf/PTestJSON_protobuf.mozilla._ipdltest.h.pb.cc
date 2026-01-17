@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR KeyValue::KeyValue(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.value_)*/nullptr} {}
+  , /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_value_)*/nullptr} {}
 struct KeyValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR KeyValueDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -37,7 +37,7 @@ struct KeyValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 KeyValueDefaultTypeInternal _KeyValue_default_instance_;
 PROTOBUF_CONSTEXPR JSONVariant__mVArrayOfKeyValue::JSONVariant__mVArrayOfKeyValue(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofkeyvalue_)*/{}
+    /*decltype(_impl_.a_mvarrayofkeyvalue_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct JSONVariant__mVArrayOfKeyValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR JSONVariant__mVArrayOfKeyValueDefaultTypeInternal()
@@ -50,7 +50,7 @@ struct JSONVariant__mVArrayOfKeyValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JSONVariant__mVArrayOfKeyValueDefaultTypeInternal _JSONVariant__mVArrayOfKeyValue_default_instance_;
 PROTOBUF_CONSTEXPR JSONVariant__mVArrayOfJSONVariant::JSONVariant__mVArrayOfJSONVariant(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofjsonvariant_)*/{}
+    /*decltype(_impl_.a_mvarrayofjsonvariant_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct JSONVariant__mVArrayOfJSONVariantDefaultTypeInternal {
   PROTOBUF_CONSTEXPR JSONVariant__mVArrayOfJSONVariantDefaultTypeInternal()
@@ -87,11 +87,11 @@ namespace _ipdltest {
 class KeyValue::_Internal {
  public:
   using HasBits = decltype(std::declval<KeyValue>()._impl_._has_bits_);
-  static void set_has_key(HasBits* has_bits) {
+  static void set_has_a_key(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::_ipdltest::JSONVariant& value(const KeyValue* msg);
-  static void set_has_value(HasBits* has_bits) {
+  static const ::protobuf::mozilla::_ipdltest::JSONVariant& a_value(const KeyValue* msg);
+  static void set_has_a_value(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -100,8 +100,8 @@ class KeyValue::_Internal {
 };
 
 const ::protobuf::mozilla::_ipdltest::JSONVariant&
-KeyValue::_Internal::value(const KeyValue* msg) {
-  return *msg->_impl_.value_;
+KeyValue::_Internal::a_value(const KeyValue* msg) {
+  return *msg->_impl_.a_value_;
 }
 KeyValue::KeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -115,20 +115,20 @@ KeyValue::KeyValue(const KeyValue& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.key_){}
-    , decltype(_impl_.value_){nullptr}};
+    , decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_value_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.key_.InitDefault();
+  _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.key_.Set("", GetArenaForAllocation());
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_key()) {
-    _this->_impl_.key_.Set(from._internal_key(), 
+  if (from._internal_has_a_key()) {
+    _this->_impl_.a_key_.Set(from._internal_a_key(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_value()) {
-    _this->_impl_.value_ = new ::protobuf::mozilla::_ipdltest::JSONVariant(*from._impl_.value_);
+  if (from._internal_has_a_value()) {
+    _this->_impl_.a_value_ = new ::protobuf::mozilla::_ipdltest::JSONVariant(*from._impl_.a_value_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.KeyValue)
 }
@@ -140,12 +140,12 @@ inline void KeyValue::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.key_){}
-    , decltype(_impl_.value_){nullptr}
+    , decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_value_){nullptr}
   };
-  _impl_.key_.InitDefault();
+  _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.key_.Set("", GetArenaForAllocation());
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -160,8 +160,8 @@ KeyValue::~KeyValue() {
 
 inline void KeyValue::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.key_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.value_;
+  _impl_.a_key_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_value_;
 }
 
 void KeyValue::SetCachedSize(int size) const {
@@ -177,11 +177,11 @@ void KeyValue::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.key_.ClearNonDefaultToEmpty();
+      _impl_.a_key_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.value_ != nullptr);
-      _impl_.value_->Clear();
+      GOOGLE_DCHECK(_impl_.a_value_ != nullptr);
+      _impl_.a_value_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -195,19 +195,19 @@ const char* KeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes key = 1;
+      // required bytes a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_key();
+          auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
+      // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_value(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_value(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -243,17 +243,17 @@ uint8_t* KeyValue::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes key = 1;
+  // required bytes a_key = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_key(), target);
+        1, this->_internal_a_key(), target);
   }
 
-  // required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::value(this),
-        _Internal::value(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_value(this),
+        _Internal::a_value(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -268,18 +268,18 @@ size_t KeyValue::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.KeyValue)
   size_t total_size = 0;
 
-  if (_internal_has_key()) {
-    // required bytes key = 1;
+  if (_internal_has_a_key()) {
+    // required bytes a_key = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_key());
+        this->_internal_a_key());
   }
 
-  if (_internal_has_value()) {
-    // required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
+  if (_internal_has_a_value()) {
+    // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.value_);
+        *_impl_.a_value_);
   }
 
   return total_size;
@@ -289,15 +289,15 @@ size_t KeyValue::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes key = 1;
+    // required bytes a_key = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_key());
+        this->_internal_a_key());
 
-    // required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
+    // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.value_);
+        *_impl_.a_value_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -330,11 +330,11 @@ void KeyValue::MergeFrom(const KeyValue& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_key(from._internal_key());
+      _this->_internal_set_a_key(from._internal_a_key());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_value()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
-          from._internal_value());
+      _this->_internal_mutable_a_value()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
+          from._internal_a_value());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -349,8 +349,8 @@ void KeyValue::CopyFrom(const KeyValue& from) {
 
 bool KeyValue::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_value()) {
-    if (!_impl_.value_->IsInitialized()) return false;
+  if (_internal_has_a_value()) {
+    if (!_impl_.a_value_->IsInitialized()) return false;
   }
   return true;
 }
@@ -362,10 +362,10 @@ void KeyValue::InternalSwap(KeyValue* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.key_, lhs_arena,
-      &other->_impl_.key_, rhs_arena
+      &_impl_.a_key_, lhs_arena,
+      &other->_impl_.a_key_, rhs_arena
   );
-  swap(_impl_.value_, other->_impl_.value_);
+  swap(_impl_.a_value_, other->_impl_.a_value_);
 }
 
 std::string KeyValue::GetTypeName() const {
@@ -389,7 +389,7 @@ JSONVariant__mVArrayOfKeyValue::JSONVariant__mVArrayOfKeyValue(const JSONVariant
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   JSONVariant__mVArrayOfKeyValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofkeyvalue_){from._impl_.mvarrayofkeyvalue_}
+      decltype(_impl_.a_mvarrayofkeyvalue_){from._impl_.a_mvarrayofkeyvalue_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -401,7 +401,7 @@ inline void JSONVariant__mVArrayOfKeyValue::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofkeyvalue_){arena}
+      decltype(_impl_.a_mvarrayofkeyvalue_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -417,7 +417,7 @@ JSONVariant__mVArrayOfKeyValue::~JSONVariant__mVArrayOfKeyValue() {
 
 inline void JSONVariant__mVArrayOfKeyValue::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofkeyvalue_.~RepeatedPtrField();
+  _impl_.a_mvarrayofkeyvalue_.~RepeatedPtrField();
 }
 
 void JSONVariant__mVArrayOfKeyValue::SetCachedSize(int size) const {
@@ -430,7 +430,7 @@ void JSONVariant__mVArrayOfKeyValue::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofkeyvalue_.Clear();
+  _impl_.a_mvarrayofkeyvalue_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -440,13 +440,13 @@ const char* JSONVariant__mVArrayOfKeyValue::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla._ipdltest.KeyValue mVArrayOfKeyValue = 1;
+      // repeated .protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_mvarrayofkeyvalue(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_mvarrayofkeyvalue(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -482,10 +482,10 @@ uint8_t* JSONVariant__mVArrayOfKeyValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._ipdltest.KeyValue mVArrayOfKeyValue = 1;
+  // repeated .protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_mvarrayofkeyvalue_size()); i < n; i++) {
-    const auto& repfield = this->_internal_mvarrayofkeyvalue(i);
+      n = static_cast<unsigned>(this->_internal_a_mvarrayofkeyvalue_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_mvarrayofkeyvalue(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -506,9 +506,9 @@ size_t JSONVariant__mVArrayOfKeyValue::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._ipdltest.KeyValue mVArrayOfKeyValue = 1;
-  total_size += 1UL * this->_internal_mvarrayofkeyvalue_size();
-  for (const auto& msg : this->_impl_.mvarrayofkeyvalue_) {
+  // repeated .protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
+  total_size += 1UL * this->_internal_a_mvarrayofkeyvalue_size();
+  for (const auto& msg : this->_impl_.a_mvarrayofkeyvalue_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -534,7 +534,7 @@ void JSONVariant__mVArrayOfKeyValue::MergeFrom(const JSONVariant__mVArrayOfKeyVa
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofkeyvalue_.MergeFrom(from._impl_.mvarrayofkeyvalue_);
+  _this->_impl_.a_mvarrayofkeyvalue_.MergeFrom(from._impl_.a_mvarrayofkeyvalue_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -546,7 +546,7 @@ void JSONVariant__mVArrayOfKeyValue::CopyFrom(const JSONVariant__mVArrayOfKeyVal
 }
 
 bool JSONVariant__mVArrayOfKeyValue::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.mvarrayofkeyvalue_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofkeyvalue_))
     return false;
   return true;
 }
@@ -554,7 +554,7 @@ bool JSONVariant__mVArrayOfKeyValue::IsInitialized() const {
 void JSONVariant__mVArrayOfKeyValue::InternalSwap(JSONVariant__mVArrayOfKeyValue* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofkeyvalue_.InternalSwap(&other->_impl_.mvarrayofkeyvalue_);
+  _impl_.a_mvarrayofkeyvalue_.InternalSwap(&other->_impl_.a_mvarrayofkeyvalue_);
 }
 
 std::string JSONVariant__mVArrayOfKeyValue::GetTypeName() const {
@@ -578,7 +578,7 @@ JSONVariant__mVArrayOfJSONVariant::JSONVariant__mVArrayOfJSONVariant(const JSONV
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   JSONVariant__mVArrayOfJSONVariant* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofjsonvariant_){from._impl_.mvarrayofjsonvariant_}
+      decltype(_impl_.a_mvarrayofjsonvariant_){from._impl_.a_mvarrayofjsonvariant_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -590,7 +590,7 @@ inline void JSONVariant__mVArrayOfJSONVariant::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofjsonvariant_){arena}
+      decltype(_impl_.a_mvarrayofjsonvariant_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -606,7 +606,7 @@ JSONVariant__mVArrayOfJSONVariant::~JSONVariant__mVArrayOfJSONVariant() {
 
 inline void JSONVariant__mVArrayOfJSONVariant::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofjsonvariant_.~RepeatedPtrField();
+  _impl_.a_mvarrayofjsonvariant_.~RepeatedPtrField();
 }
 
 void JSONVariant__mVArrayOfJSONVariant::SetCachedSize(int size) const {
@@ -619,7 +619,7 @@ void JSONVariant__mVArrayOfJSONVariant::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofjsonvariant_.Clear();
+  _impl_.a_mvarrayofjsonvariant_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -629,13 +629,13 @@ const char* JSONVariant__mVArrayOfJSONVariant::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla._ipdltest.JSONVariant mVArrayOfJSONVariant = 1;
+      // repeated .protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_mvarrayofjsonvariant(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_mvarrayofjsonvariant(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -671,10 +671,10 @@ uint8_t* JSONVariant__mVArrayOfJSONVariant::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._ipdltest.JSONVariant mVArrayOfJSONVariant = 1;
+  // repeated .protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_mvarrayofjsonvariant_size()); i < n; i++) {
-    const auto& repfield = this->_internal_mvarrayofjsonvariant(i);
+      n = static_cast<unsigned>(this->_internal_a_mvarrayofjsonvariant_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_mvarrayofjsonvariant(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -695,9 +695,9 @@ size_t JSONVariant__mVArrayOfJSONVariant::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._ipdltest.JSONVariant mVArrayOfJSONVariant = 1;
-  total_size += 1UL * this->_internal_mvarrayofjsonvariant_size();
-  for (const auto& msg : this->_impl_.mvarrayofjsonvariant_) {
+  // repeated .protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
+  total_size += 1UL * this->_internal_a_mvarrayofjsonvariant_size();
+  for (const auto& msg : this->_impl_.a_mvarrayofjsonvariant_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -723,7 +723,7 @@ void JSONVariant__mVArrayOfJSONVariant::MergeFrom(const JSONVariant__mVArrayOfJS
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofjsonvariant_.MergeFrom(from._impl_.mvarrayofjsonvariant_);
+  _this->_impl_.a_mvarrayofjsonvariant_.MergeFrom(from._impl_.a_mvarrayofjsonvariant_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -735,7 +735,7 @@ void JSONVariant__mVArrayOfJSONVariant::CopyFrom(const JSONVariant__mVArrayOfJSO
 }
 
 bool JSONVariant__mVArrayOfJSONVariant::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.mvarrayofjsonvariant_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofjsonvariant_))
     return false;
   return true;
 }
@@ -743,7 +743,7 @@ bool JSONVariant__mVArrayOfJSONVariant::IsInitialized() const {
 void JSONVariant__mVArrayOfJSONVariant::InternalSwap(JSONVariant__mVArrayOfJSONVariant* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofjsonvariant_.InternalSwap(&other->_impl_.mvarrayofjsonvariant_);
+  _impl_.a_mvarrayofjsonvariant_.InternalSwap(&other->_impl_.a_mvarrayofjsonvariant_);
 }
 
 std::string JSONVariant__mVArrayOfJSONVariant::GetTypeName() const {
@@ -814,32 +814,32 @@ JSONVariant::JSONVariant(const JSONVariant& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
-    case kMVbool: {
-      _this->_internal_set_mvbool(from._internal_mvbool());
+    case kAMVbool: {
+      _this->_internal_set_a_mvbool(from._internal_a_mvbool());
       break;
     }
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
-    case kMVdouble: {
-      _this->_internal_set_mvdouble(from._internal_mvdouble());
+    case kAMVdouble: {
+      _this->_internal_set_a_mvdouble(from._internal_a_mvdouble());
       break;
     }
-    case kMVnsString: {
-      _this->_internal_set_mvnsstring(from._internal_mvnsstring());
+    case kAMVnsString: {
+      _this->_internal_set_a_mvnsstring(from._internal_a_mvnsstring());
       break;
     }
-    case kMVPTestJSONHandle: {
-      _this->_internal_set_mvptestjsonhandle(from._internal_mvptestjsonhandle());
+    case kAMVPTestJSONHandle: {
+      _this->_internal_set_a_mvptestjsonhandle(from._internal_a_mvptestjsonhandle());
       break;
     }
     case kMVArrayOfKeyValue: {
@@ -894,32 +894,32 @@ void JSONVariant::SetCachedSize(int size) const {
 void JSONVariant::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._ipdltest.JSONVariant)
   switch (content_case()) {
-    case kMVvoidT: {
-      _impl_.content_.mvvoid_t_.Destroy();
+    case kAMVvoidT: {
+      _impl_.content_.a_mvvoid_t_.Destroy();
       break;
     }
-    case kMVnullT: {
-      _impl_.content_.mvnull_t_.Destroy();
+    case kAMVnullT: {
+      _impl_.content_.a_mvnull_t_.Destroy();
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       // No need to clear
       break;
     }
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
-    case kMVdouble: {
+    case kAMVdouble: {
       // No need to clear
       break;
     }
-    case kMVnsString: {
-      _impl_.content_.mvnsstring_.Destroy();
+    case kAMVnsString: {
+      _impl_.content_.a_mvnsstring_.Destroy();
       break;
     }
-    case kMVPTestJSONHandle: {
-      _impl_.content_.mvptestjsonhandle_.Destroy();
+    case kAMVPTestJSONHandle: {
+      _impl_.content_.a_mvptestjsonhandle_.Destroy();
       break;
     }
     case kMVArrayOfKeyValue: {
@@ -958,61 +958,61 @@ const char* JSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVvoid_t = 1;
+      // bytes a_mVvoid_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvvoid_t();
+          auto str = _internal_mutable_a_mvvoid_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVnull_t = 2;
+      // bytes a_mVnull_t = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvnull_t();
+          auto str = _internal_mutable_a_mvnull_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool mVbool = 3;
+      // bool a_mVbool = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _internal_set_mvbool(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          _internal_set_a_mvbool(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 mVint = 4;
+      // sint32 a_mVint = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // double mVdouble = 5;
+      // double a_mVdouble = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 41)) {
-          _internal_set_mvdouble(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          _internal_set_a_mvdouble(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVnsString = 6;
+      // bytes a_mVnsString = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_mvnsstring();
+          auto str = _internal_mutable_a_mvnsstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVPTestJSONHandle = 7;
+      // bytes a_mVPTestJSONHandle = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_mvptestjsonhandle();
+          auto str = _internal_mutable_a_mvptestjsonhandle();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1064,39 +1064,39 @@ uint8_t* JSONVariant::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVvoidT: {
+    case kAMVvoidT: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvvoid_t(), target);
+          1, this->_internal_a_mvvoid_t(), target);
       break;
     }
-    case kMVnullT: {
+    case kAMVnullT: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvnull_t(), target);
+          2, this->_internal_a_mvnull_t(), target);
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_mvbool(), target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_mvbool(), target);
       break;
     }
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_mvint(), target);
       break;
     }
-    case kMVdouble: {
+    case kAMVdouble: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteDoubleToArray(5, this->_internal_mvdouble(), target);
+      target = ::_pbi::WireFormatLite::WriteDoubleToArray(5, this->_internal_a_mvdouble(), target);
       break;
     }
-    case kMVnsString: {
+    case kAMVnsString: {
       target = stream->WriteBytesMaybeAliased(
-          6, this->_internal_mvnsstring(), target);
+          6, this->_internal_a_mvnsstring(), target);
       break;
     }
-    case kMVPTestJSONHandle: {
+    case kAMVPTestJSONHandle: {
       target = stream->WriteBytesMaybeAliased(
-          7, this->_internal_mvptestjsonhandle(), target);
+          7, this->_internal_a_mvptestjsonhandle(), target);
       break;
     }
     case kMVArrayOfKeyValue: {
@@ -1130,47 +1130,47 @@ size_t JSONVariant::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVvoid_t = 1;
-    case kMVvoidT: {
+    // bytes a_mVvoid_t = 1;
+    case kAMVvoidT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvvoid_t());
+          this->_internal_a_mvvoid_t());
       break;
     }
-    // bytes mVnull_t = 2;
-    case kMVnullT: {
+    // bytes a_mVnull_t = 2;
+    case kAMVnullT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnull_t());
+          this->_internal_a_mvnull_t());
       break;
     }
-    // bool mVbool = 3;
-    case kMVbool: {
+    // bool a_mVbool = 3;
+    case kAMVbool: {
       total_size += 1 + 1;
       break;
     }
-    // sint32 mVint = 4;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 4;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
-    // double mVdouble = 5;
-    case kMVdouble: {
+    // double a_mVdouble = 5;
+    case kAMVdouble: {
       total_size += 1 + 8;
       break;
     }
-    // bytes mVnsString = 6;
-    case kMVnsString: {
+    // bytes a_mVnsString = 6;
+    case kAMVnsString: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsstring());
+          this->_internal_a_mvnsstring());
       break;
     }
-    // bytes mVPTestJSONHandle = 7;
-    case kMVPTestJSONHandle: {
+    // bytes a_mVPTestJSONHandle = 7;
+    case kAMVPTestJSONHandle: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvptestjsonhandle());
+          this->_internal_a_mvptestjsonhandle());
       break;
     }
     // .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue mVArrayOfKeyValue = 8;
@@ -1213,32 +1213,32 @@ void JSONVariant::MergeFrom(const JSONVariant& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
-    case kMVbool: {
-      _this->_internal_set_mvbool(from._internal_mvbool());
+    case kAMVbool: {
+      _this->_internal_set_a_mvbool(from._internal_a_mvbool());
       break;
     }
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
-    case kMVdouble: {
-      _this->_internal_set_mvdouble(from._internal_mvdouble());
+    case kAMVdouble: {
+      _this->_internal_set_a_mvdouble(from._internal_a_mvdouble());
       break;
     }
-    case kMVnsString: {
-      _this->_internal_set_mvnsstring(from._internal_mvnsstring());
+    case kAMVnsString: {
+      _this->_internal_set_a_mvnsstring(from._internal_a_mvnsstring());
       break;
     }
-    case kMVPTestJSONHandle: {
-      _this->_internal_set_mvptestjsonhandle(from._internal_mvptestjsonhandle());
+    case kAMVPTestJSONHandle: {
+      _this->_internal_set_a_mvptestjsonhandle(from._internal_a_mvptestjsonhandle());
       break;
     }
     case kMVArrayOfKeyValue: {
@@ -1267,25 +1267,25 @@ void JSONVariant::CopyFrom(const JSONVariant& from) {
 
 bool JSONVariant::IsInitialized() const {
   switch (content_case()) {
-    case kMVvoidT: {
+    case kAMVvoidT: {
       break;
     }
-    case kMVnullT: {
+    case kAMVnullT: {
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       break;
     }
-    case kMVint: {
+    case kAMVint: {
       break;
     }
-    case kMVdouble: {
+    case kAMVdouble: {
       break;
     }
-    case kMVnsString: {
+    case kAMVnsString: {
       break;
     }
-    case kMVPTestJSONHandle: {
+    case kAMVPTestJSONHandle: {
       break;
     }
     case kMVArrayOfKeyValue: {

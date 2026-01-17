@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR IPCIdentityCredential::IPCIdentityCredential(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.token_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_token_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct IPCIdentityCredentialDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCIdentityCredentialDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -61,10 +61,10 @@ namespace dom {
 class IPCIdentityCredential::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCIdentityCredential>()._impl_._has_bits_);
-  static void set_has_id(HasBits* has_bits) {
+  static void set_has_a_id(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_token(HasBits* has_bits) {
+  static void set_has_a_token(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -84,24 +84,24 @@ IPCIdentityCredential::IPCIdentityCredential(const IPCIdentityCredential& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.id_){}
-    , decltype(_impl_.token_){}};
+    , decltype(_impl_.a_id_){}
+    , decltype(_impl_.a_token_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_id()) {
-    _this->_impl_.id_.Set(from._internal_id(), 
+  if (from._internal_has_a_id()) {
+    _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.token_.InitDefault();
+  _impl_.a_token_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.token_.Set("", GetArenaForAllocation());
+    _impl_.a_token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_token()) {
-    _this->_impl_.token_.Set(from._internal_token(), 
+  if (from._internal_has_a_token()) {
+    _this->_impl_.a_token_.Set(from._internal_a_token(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.IPCIdentityCredential)
@@ -114,16 +114,16 @@ inline void IPCIdentityCredential::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.id_){}
-    , decltype(_impl_.token_){}
+    , decltype(_impl_.a_id_){}
+    , decltype(_impl_.a_token_){}
   };
-  _impl_.id_.InitDefault();
+  _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.id_.Set("", GetArenaForAllocation());
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.token_.InitDefault();
+  _impl_.a_token_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.token_.Set("", GetArenaForAllocation());
+    _impl_.a_token_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -138,8 +138,8 @@ IPCIdentityCredential::~IPCIdentityCredential() {
 
 inline void IPCIdentityCredential::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.id_.Destroy();
-  _impl_.token_.Destroy();
+  _impl_.a_id_.Destroy();
+  _impl_.a_token_.Destroy();
 }
 
 void IPCIdentityCredential::SetCachedSize(int size) const {
@@ -155,10 +155,10 @@ void IPCIdentityCredential::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.id_.ClearNonDefaultToEmpty();
+      _impl_.a_id_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.token_.ClearNonDefaultToEmpty();
+      _impl_.a_token_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -172,19 +172,19 @@ const char* IPCIdentityCredential::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes id = 1;
+      // required bytes a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_id();
+          auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes token = 2;
+      // optional bytes a_token = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_token();
+          auto str = _internal_mutable_a_token();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -221,16 +221,16 @@ uint8_t* IPCIdentityCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes id = 1;
+  // required bytes a_id = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_id(), target);
+        1, this->_internal_a_id(), target);
   }
 
-  // optional bytes token = 2;
+  // optional bytes a_token = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_token(), target);
+        2, this->_internal_a_token(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -245,22 +245,22 @@ size_t IPCIdentityCredential::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCIdentityCredential)
   size_t total_size = 0;
 
-  // required bytes id = 1;
-  if (_internal_has_id()) {
+  // required bytes a_id = 1;
+  if (_internal_has_a_id()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_id());
+        this->_internal_a_id());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes token = 2;
+  // optional bytes a_token = 2;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_token());
+        this->_internal_a_token());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -287,10 +287,10 @@ void IPCIdentityCredential::MergeFrom(const IPCIdentityCredential& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_id(from._internal_id());
+      _this->_internal_set_a_id(from._internal_a_id());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_token(from._internal_token());
+      _this->_internal_set_a_token(from._internal_a_token());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -315,12 +315,12 @@ void IPCIdentityCredential::InternalSwap(IPCIdentityCredential* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.id_, lhs_arena,
-      &other->_impl_.id_, rhs_arena
+      &_impl_.a_id_, lhs_arena,
+      &other->_impl_.a_id_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.token_, lhs_arena,
-      &other->_impl_.token_, rhs_arena
+      &_impl_.a_token_, lhs_arena,
+      &other->_impl_.a_token_, rhs_arena
   );
 }
 
@@ -333,27 +333,27 @@ std::string IPCIdentityCredential::GetTypeName() const {
 
 class WebIdentityGetCredentialResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::IPCIdentityCredential& mvipcidentitycredential(const WebIdentityGetCredentialResponse* msg);
+  static const ::protobuf::mozilla::dom::IPCIdentityCredential& a_mvipcidentitycredential(const WebIdentityGetCredentialResponse* msg);
 };
 
 const ::protobuf::mozilla::dom::IPCIdentityCredential&
-WebIdentityGetCredentialResponse::_Internal::mvipcidentitycredential(const WebIdentityGetCredentialResponse* msg) {
-  return *msg->_impl_.content_.mvipcidentitycredential_;
+WebIdentityGetCredentialResponse::_Internal::a_mvipcidentitycredential(const WebIdentityGetCredentialResponse* msg) {
+  return *msg->_impl_.content_.a_mvipcidentitycredential_;
 }
-void WebIdentityGetCredentialResponse::set_allocated_mvipcidentitycredential(::protobuf::mozilla::dom::IPCIdentityCredential* mvipcidentitycredential) {
+void WebIdentityGetCredentialResponse::set_allocated_a_mvipcidentitycredential(::protobuf::mozilla::dom::IPCIdentityCredential* a_mvipcidentitycredential) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvipcidentitycredential) {
+  if (a_mvipcidentitycredential) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvipcidentitycredential);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvipcidentitycredential);
     if (message_arena != submessage_arena) {
-      mvipcidentitycredential = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvipcidentitycredential, submessage_arena);
+      a_mvipcidentitycredential = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvipcidentitycredential, submessage_arena);
     }
-    set_has_mvipcidentitycredential();
-    _impl_.content_.mvipcidentitycredential_ = mvipcidentitycredential;
+    set_has_a_mvipcidentitycredential();
+    _impl_.content_.a_mvipcidentitycredential_ = a_mvipcidentitycredential;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.mVIPCIdentityCredential)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebIdentityGetCredentialResponse.a_mVIPCIdentityCredential)
 }
 WebIdentityGetCredentialResponse::WebIdentityGetCredentialResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -372,13 +372,13 @@ WebIdentityGetCredentialResponse::WebIdentityGetCredentialResponse(const WebIden
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVIPCIdentityCredential: {
-      _this->_internal_mutable_mvipcidentitycredential()->::protobuf::mozilla::dom::IPCIdentityCredential::MergeFrom(
-          from._internal_mvipcidentitycredential());
+    case kAMVIPCIdentityCredential: {
+      _this->_internal_mutable_a_mvipcidentitycredential()->::protobuf::mozilla::dom::IPCIdentityCredential::MergeFrom(
+          from._internal_a_mvipcidentitycredential());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -423,13 +423,13 @@ void WebIdentityGetCredentialResponse::SetCachedSize(int size) const {
 void WebIdentityGetCredentialResponse::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.WebIdentityGetCredentialResponse)
   switch (content_case()) {
-    case kMVnsresult: {
-      _impl_.content_.mvnsresult_.Destroy();
+    case kAMVnsresult: {
+      _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVIPCIdentityCredential: {
+    case kAMVIPCIdentityCredential: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvipcidentitycredential_;
+        delete _impl_.content_.a_mvipcidentitycredential_;
       }
       break;
     }
@@ -457,19 +457,19 @@ const char* WebIdentityGetCredentialResponse::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsresult = 1;
+      // bytes a_mVnsresult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnsresult();
+          auto str = _internal_mutable_a_mvnsresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.IPCIdentityCredential mVIPCIdentityCredential = 2;
+      // .protobuf.mozilla.dom.IPCIdentityCredential a_mVIPCIdentityCredential = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvipcidentitycredential(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvipcidentitycredential(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -504,15 +504,15 @@ uint8_t* WebIdentityGetCredentialResponse::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnsresult(), target);
+          1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVIPCIdentityCredential: {
+    case kAMVIPCIdentityCredential: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvipcidentitycredential(this),
-          _Internal::mvipcidentitycredential(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvipcidentitycredential(this),
+          _Internal::a_mvipcidentitycredential(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -534,18 +534,18 @@ size_t WebIdentityGetCredentialResponse::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsresult = 1;
-    case kMVnsresult: {
+    // bytes a_mVnsresult = 1;
+    case kAMVnsresult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnsresult());
+          this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.dom.IPCIdentityCredential mVIPCIdentityCredential = 2;
-    case kMVIPCIdentityCredential: {
+    // .protobuf.mozilla.dom.IPCIdentityCredential a_mVIPCIdentityCredential = 2;
+    case kAMVIPCIdentityCredential: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvipcidentitycredential_);
+          *_impl_.content_.a_mvipcidentitycredential_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -574,13 +574,13 @@ void WebIdentityGetCredentialResponse::MergeFrom(const WebIdentityGetCredentialR
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsresult: {
-      _this->_internal_set_mvnsresult(from._internal_mvnsresult());
+    case kAMVnsresult: {
+      _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVIPCIdentityCredential: {
-      _this->_internal_mutable_mvipcidentitycredential()->::protobuf::mozilla::dom::IPCIdentityCredential::MergeFrom(
-          from._internal_mvipcidentitycredential());
+    case kAMVIPCIdentityCredential: {
+      _this->_internal_mutable_a_mvipcidentitycredential()->::protobuf::mozilla::dom::IPCIdentityCredential::MergeFrom(
+          from._internal_a_mvipcidentitycredential());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -599,12 +599,12 @@ void WebIdentityGetCredentialResponse::CopyFrom(const WebIdentityGetCredentialRe
 
 bool WebIdentityGetCredentialResponse::IsInitialized() const {
   switch (content_case()) {
-    case kMVnsresult: {
+    case kAMVnsresult: {
       break;
     }
-    case kMVIPCIdentityCredential: {
-      if (_internal_has_mvipcidentitycredential()) {
-        if (!_impl_.content_.mvipcidentitycredential_->IsInitialized()) return false;
+    case kAMVIPCIdentityCredential: {
+      if (_internal_has_a_mvipcidentitycredential()) {
+        if (!_impl_.content_.a_mvipcidentitycredential_->IsInitialized()) return false;
       }
       break;
     }

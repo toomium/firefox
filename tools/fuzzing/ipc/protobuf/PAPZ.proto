@@ -22,57 +22,57 @@ message Reply___delete__ {
 }
 
 message Msg_LayerTransforms {
-  repeated bytes aTransforms = 1;
+  repeated bytes a_aTransforms = 1;
 }
 
 message Msg_RequestContentRepaint {
-  required bytes request = 1;
+  required bytes a_request = 1;
 }
 
 message Msg_UpdateOverscrollVelocity {
-  required bytes aGuid = 1;
-  required float aX = 2;
-  required float aY = 3;
-  required bool aIsRootContent = 4;
+  required bytes a_aGuid = 1;
+  required float a_aX = 2;
+  required float a_aY = 3;
+  required bool a_aIsRootContent = 4;
 }
 
 message Msg_UpdateOverscrollOffset {
-  required bytes aGuid = 1;
-  required float aX = 2;
-  required float aY = 3;
-  required bool aIsRootContent = 4;
+  required bytes a_aGuid = 1;
+  required float a_aX = 2;
+  required float a_aY = 3;
+  required bool a_aIsRootContent = 4;
 }
 
 message Msg_HideDynamicToolbar {
 }
 
 message Msg_NotifyMozMouseScrollEvent {
-  required bytes aScrollId = 1;
-  required bytes aEvent = 2;
+  required bytes a_aScrollId = 1;
+  required bytes a_aEvent = 2;
 }
 
 message Msg_NotifyAPZStateChange {
-  required bytes aGuid = 1;
-  required bytes aChange = 2;
-  required sint32 aArg = 3;
-  optional uint64 aInputBlockId = 4;
+  required bytes a_aGuid = 1;
+  required bytes a_aChange = 2;
+  required sint32 a_aArg = 3;
+  optional uint64 a_aInputBlockId = 4;
 }
 
 message Msg_NotifyFlushComplete {
 }
 
 message Msg_NotifyAsyncScrollbarDragInitiated {
-  required uint64 aDragBlockId = 1;
-  required bytes aScrollId = 2;
-  required bytes aDirection = 3;
+  required uint64 a_aDragBlockId = 1;
+  required bytes a_aScrollId = 2;
+  required bytes a_aDirection = 3;
 }
 
 message Msg_NotifyAsyncScrollbarDragRejected {
-  required bytes aScrollId = 1;
+  required bytes a_aScrollId = 1;
 }
 
 message Msg_NotifyAsyncAutoscrollRejected {
-  required bytes aScrollId = 1;
+  required bytes a_aScrollId = 1;
 }
 
 message Msg_Destroy {

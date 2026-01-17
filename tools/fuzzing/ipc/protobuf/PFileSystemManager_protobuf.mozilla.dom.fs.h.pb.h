@@ -270,57 +270,57 @@ class FileSystemEntryMetadata final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntryIdFieldNumber = 1,
-    kEntryNameFieldNumber = 2,
-    kDirectoryFieldNumber = 3,
+    kAEntryIdFieldNumber = 1,
+    kAEntryNameFieldNumber = 2,
+    kADirectoryFieldNumber = 3,
   };
-  // required bytes entryId = 1;
-  bool has_entryid() const;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
   private:
-  bool _internal_has_entryid() const;
+  bool _internal_has_a_entryid() const;
   public:
-  void clear_entryid();
-  const std::string& entryid() const;
+  void clear_a_entryid();
+  const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_entryid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_entryid();
-  PROTOBUF_NODISCARD std::string* release_entryid();
-  void set_allocated_entryid(std::string* entryid);
+  void set_a_entryid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_entryid();
+  PROTOBUF_NODISCARD std::string* release_a_entryid();
+  void set_allocated_a_entryid(std::string* a_entryid);
   private:
-  const std::string& _internal_entryid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entryid(const std::string& value);
-  std::string* _internal_mutable_entryid();
+  const std::string& _internal_a_entryid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_entryid(const std::string& value);
+  std::string* _internal_mutable_a_entryid();
   public:
 
-  // required bytes entryName = 2;
-  bool has_entryname() const;
+  // required bytes a_entryName = 2;
+  bool has_a_entryname() const;
   private:
-  bool _internal_has_entryname() const;
+  bool _internal_has_a_entryname() const;
   public:
-  void clear_entryname();
-  const std::string& entryname() const;
+  void clear_a_entryname();
+  const std::string& a_entryname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_entryname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_entryname();
-  PROTOBUF_NODISCARD std::string* release_entryname();
-  void set_allocated_entryname(std::string* entryname);
+  void set_a_entryname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_entryname();
+  PROTOBUF_NODISCARD std::string* release_a_entryname();
+  void set_allocated_a_entryname(std::string* a_entryname);
   private:
-  const std::string& _internal_entryname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entryname(const std::string& value);
-  std::string* _internal_mutable_entryname();
+  const std::string& _internal_a_entryname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_entryname(const std::string& value);
+  std::string* _internal_mutable_a_entryname();
   public:
 
-  // required bool directory = 3;
-  bool has_directory() const;
+  // required bool a_directory = 3;
+  bool has_a_directory() const;
   private:
-  bool _internal_has_directory() const;
+  bool _internal_has_a_directory() const;
   public:
-  void clear_directory();
-  bool directory() const;
-  void set_directory(bool value);
+  void clear_a_directory();
+  bool a_directory() const;
+  void set_a_directory(bool value);
   private:
-  bool _internal_directory() const;
-  void _internal_set_directory(bool value);
+  bool _internal_a_directory() const;
+  void _internal_set_a_directory(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemEntryMetadata)
@@ -336,9 +336,9 @@ class FileSystemEntryMetadata final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entryid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entryname_;
-    bool directory_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryname_;
+    bool a_directory_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -455,43 +455,43 @@ class FileSystemChildMetadata final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParentIdFieldNumber = 1,
-    kChildNameFieldNumber = 2,
+    kAParentIdFieldNumber = 1,
+    kAChildNameFieldNumber = 2,
   };
-  // required bytes parentId = 1;
-  bool has_parentid() const;
+  // required bytes a_parentId = 1;
+  bool has_a_parentid() const;
   private:
-  bool _internal_has_parentid() const;
+  bool _internal_has_a_parentid() const;
   public:
-  void clear_parentid();
-  const std::string& parentid() const;
+  void clear_a_parentid();
+  const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_parentid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_parentid();
-  PROTOBUF_NODISCARD std::string* release_parentid();
-  void set_allocated_parentid(std::string* parentid);
+  void set_a_parentid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_parentid();
+  PROTOBUF_NODISCARD std::string* release_a_parentid();
+  void set_allocated_a_parentid(std::string* a_parentid);
   private:
-  const std::string& _internal_parentid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_parentid(const std::string& value);
-  std::string* _internal_mutable_parentid();
+  const std::string& _internal_a_parentid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_parentid(const std::string& value);
+  std::string* _internal_mutable_a_parentid();
   public:
 
-  // required bytes childName = 2;
-  bool has_childname() const;
+  // required bytes a_childName = 2;
+  bool has_a_childname() const;
   private:
-  bool _internal_has_childname() const;
+  bool _internal_has_a_childname() const;
   public:
-  void clear_childname();
-  const std::string& childname() const;
+  void clear_a_childname();
+  const std::string& a_childname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_childname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_childname();
-  PROTOBUF_NODISCARD std::string* release_childname();
-  void set_allocated_childname(std::string* childname);
+  void set_a_childname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_childname();
+  PROTOBUF_NODISCARD std::string* release_a_childname();
+  void set_allocated_a_childname(std::string* a_childname);
   private:
-  const std::string& _internal_childname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_childname(const std::string& value);
-  std::string* _internal_mutable_childname();
+  const std::string& _internal_a_childname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_childname(const std::string& value);
+  std::string* _internal_mutable_a_childname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemChildMetadata)
@@ -507,8 +507,8 @@ class FileSystemChildMetadata final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr parentid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr childname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -625,38 +625,38 @@ class FileSystemGetHandleRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHandleFieldNumber = 1,
-    kCreateFieldNumber = 2,
+    kAHandleFieldNumber = 1,
+    kACreateFieldNumber = 2,
   };
-  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
-  bool has_handle() const;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  bool has_a_handle() const;
   private:
-  bool _internal_has_handle() const;
+  bool _internal_has_a_handle() const;
   public:
-  void clear_handle();
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& handle() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* release_handle();
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* mutable_handle();
-  void set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle);
+  void clear_a_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& a_handle() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* release_a_handle();
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* mutable_a_handle();
+  void set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& _internal_handle() const;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _internal_mutable_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& _internal_a_handle() const;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _internal_mutable_a_handle();
   public:
-  void unsafe_arena_set_allocated_handle(
-      ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle);
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_handle();
+  void unsafe_arena_set_allocated_a_handle(
+      ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_handle();
 
-  // required bool create = 2;
-  bool has_create() const;
+  // required bool a_create = 2;
+  bool has_a_create() const;
   private:
-  bool _internal_has_create() const;
+  bool _internal_has_a_create() const;
   public:
-  void clear_create();
-  bool create() const;
-  void set_create(bool value);
+  void clear_a_create();
+  bool a_create() const;
+  void set_a_create(bool value);
   private:
-  bool _internal_create() const;
-  void _internal_set_create(bool value);
+  bool _internal_a_create() const;
+  void _internal_set_a_create(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest)
@@ -672,8 +672,8 @@ class FileSystemGetHandleRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle_;
-    bool create_;
+    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle_;
+    bool a_create_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -722,8 +722,8 @@ class FileSystemGetHandleResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVEntryId = 2,
+    kAMVnsresult = 1,
+    kAMVEntryId = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -796,43 +796,43 @@ class FileSystemGetHandleResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVEntryIdFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVEntryIdFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // bytes mVEntryId = 2;
-  bool has_mventryid() const;
+  // bytes a_mVEntryId = 2;
+  bool has_a_mventryid() const;
   private:
-  bool _internal_has_mventryid() const;
+  bool _internal_has_a_mventryid() const;
   public:
-  void clear_mventryid();
-  const std::string& mventryid() const;
+  void clear_a_mventryid();
+  const std::string& a_mventryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mventryid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mventryid();
-  PROTOBUF_NODISCARD std::string* release_mventryid();
-  void set_allocated_mventryid(std::string* mventryid);
+  void set_a_mventryid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mventryid();
+  PROTOBUF_NODISCARD std::string* release_a_mventryid();
+  void set_allocated_a_mventryid(std::string* a_mventryid);
   private:
-  const std::string& _internal_mventryid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mventryid(const std::string& value);
-  std::string* _internal_mutable_mventryid();
+  const std::string& _internal_a_mventryid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mventryid(const std::string& value);
+  std::string* _internal_mutable_a_mventryid();
   public:
 
   void clear_content();
@@ -840,8 +840,8 @@ class FileSystemGetHandleResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mventryid();
+  void set_has_a_mvnsresult();
+  void set_has_a_mventryid();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -853,8 +853,8 @@ class FileSystemGetHandleResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mventryid_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mventryid_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -975,43 +975,43 @@ class FileSystemGetEntriesRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParentIdFieldNumber = 1,
-    kPageFieldNumber = 2,
+    kAParentIdFieldNumber = 1,
+    kAPageFieldNumber = 2,
   };
-  // required bytes parentId = 1;
-  bool has_parentid() const;
+  // required bytes a_parentId = 1;
+  bool has_a_parentid() const;
   private:
-  bool _internal_has_parentid() const;
+  bool _internal_has_a_parentid() const;
   public:
-  void clear_parentid();
-  const std::string& parentid() const;
+  void clear_a_parentid();
+  const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_parentid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_parentid();
-  PROTOBUF_NODISCARD std::string* release_parentid();
-  void set_allocated_parentid(std::string* parentid);
+  void set_a_parentid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_parentid();
+  PROTOBUF_NODISCARD std::string* release_a_parentid();
+  void set_allocated_a_parentid(std::string* a_parentid);
   private:
-  const std::string& _internal_parentid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_parentid(const std::string& value);
-  std::string* _internal_mutable_parentid();
+  const std::string& _internal_a_parentid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_parentid(const std::string& value);
+  std::string* _internal_mutable_a_parentid();
   public:
 
-  // required bytes page = 2;
-  bool has_page() const;
+  // required bytes a_page = 2;
+  bool has_a_page() const;
   private:
-  bool _internal_has_page() const;
+  bool _internal_has_a_page() const;
   public:
-  void clear_page();
-  const std::string& page() const;
+  void clear_a_page();
+  const std::string& a_page() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_page(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_page();
-  PROTOBUF_NODISCARD std::string* release_page();
-  void set_allocated_page(std::string* page);
+  void set_a_page(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_page();
+  PROTOBUF_NODISCARD std::string* release_a_page();
+  void set_allocated_a_page(std::string* a_page);
   private:
-  const std::string& _internal_page() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_page(const std::string& value);
-  std::string* _internal_mutable_page();
+  const std::string& _internal_a_page() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_page(const std::string& value);
+  std::string* _internal_mutable_a_page();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest)
@@ -1027,8 +1027,8 @@ class FileSystemGetEntriesRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr parentid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr page_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_page_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -1145,44 +1145,44 @@ class FileSystemDirectoryListing final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDirectoriesFieldNumber = 1,
-    kFilesFieldNumber = 2,
+    kADirectoriesFieldNumber = 1,
+    kAFilesFieldNumber = 2,
   };
-  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata directories = 1;
-  int directories_size() const;
+  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_directories = 1;
+  int a_directories_size() const;
   private:
-  int _internal_directories_size() const;
+  int _internal_a_directories_size() const;
   public:
-  void clear_directories();
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_directories(int index);
+  void clear_a_directories();
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_a_directories(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >*
-      mutable_directories();
+      mutable_a_directories();
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_directories(int index) const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_add_directories();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_a_directories(int index) const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_add_a_directories();
   public:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& directories(int index) const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* add_directories();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& a_directories(int index) const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* add_a_directories();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >&
-      directories() const;
+      a_directories() const;
 
-  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata files = 2;
-  int files_size() const;
+  // repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_files = 2;
+  int a_files_size() const;
   private:
-  int _internal_files_size() const;
+  int _internal_a_files_size() const;
   public:
-  void clear_files();
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_files(int index);
+  void clear_a_files();
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_a_files(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >*
-      mutable_files();
+      mutable_a_files();
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_files(int index) const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_add_files();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_a_files(int index) const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_add_a_files();
   public:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& files(int index) const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* add_files();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& a_files(int index) const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* add_a_files();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >&
-      files() const;
+      a_files() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemDirectoryListing)
  private:
@@ -1192,8 +1192,8 @@ class FileSystemDirectoryListing final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata > directories_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata > files_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata > a_directories_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata > a_files_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1243,8 +1243,8 @@ class FileSystemGetEntriesResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVFileSystemDirectoryListing = 2,
+    kAMVnsresult = 1,
+    kAMVFileSystemDirectoryListing = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1317,52 +1317,52 @@ class FileSystemGetEntriesResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVFileSystemDirectoryListingFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVFileSystemDirectoryListingFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.fs.FileSystemDirectoryListing mVFileSystemDirectoryListing = 2;
-  bool has_mvfilesystemdirectorylisting() const;
+  // .protobuf.mozilla.dom.fs.FileSystemDirectoryListing a_mVFileSystemDirectoryListing = 2;
+  bool has_a_mvfilesystemdirectorylisting() const;
   private:
-  bool _internal_has_mvfilesystemdirectorylisting() const;
+  bool _internal_has_a_mvfilesystemdirectorylisting() const;
   public:
-  void clear_mvfilesystemdirectorylisting();
-  const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& mvfilesystemdirectorylisting() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* release_mvfilesystemdirectorylisting();
-  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mutable_mvfilesystemdirectorylisting();
-  void set_allocated_mvfilesystemdirectorylisting(::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mvfilesystemdirectorylisting);
+  void clear_a_mvfilesystemdirectorylisting();
+  const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& a_mvfilesystemdirectorylisting() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* release_a_mvfilesystemdirectorylisting();
+  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mutable_a_mvfilesystemdirectorylisting();
+  void set_allocated_a_mvfilesystemdirectorylisting(::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* a_mvfilesystemdirectorylisting);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& _internal_mvfilesystemdirectorylisting() const;
-  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* _internal_mutable_mvfilesystemdirectorylisting();
+  const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& _internal_a_mvfilesystemdirectorylisting() const;
+  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* _internal_mutable_a_mvfilesystemdirectorylisting();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemdirectorylisting(
-      ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mvfilesystemdirectorylisting);
-  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* unsafe_arena_release_mvfilesystemdirectorylisting();
+  void unsafe_arena_set_allocated_a_mvfilesystemdirectorylisting(
+      ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* a_mvfilesystemdirectorylisting);
+  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* unsafe_arena_release_a_mvfilesystemdirectorylisting();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvfilesystemdirectorylisting();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvfilesystemdirectorylisting();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1374,8 +1374,8 @@ class FileSystemGetEntriesResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mvfilesystemdirectorylisting_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* a_mvfilesystemdirectorylisting_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1496,24 +1496,24 @@ class FileSystemGetFileRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntryIdFieldNumber = 1,
+    kAEntryIdFieldNumber = 1,
   };
-  // required bytes entryId = 1;
-  bool has_entryid() const;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
   private:
-  bool _internal_has_entryid() const;
+  bool _internal_has_a_entryid() const;
   public:
-  void clear_entryid();
-  const std::string& entryid() const;
+  void clear_a_entryid();
+  const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_entryid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_entryid();
-  PROTOBUF_NODISCARD std::string* release_entryid();
-  void set_allocated_entryid(std::string* entryid);
+  void set_a_entryid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_entryid();
+  PROTOBUF_NODISCARD std::string* release_a_entryid();
+  void set_allocated_a_entryid(std::string* a_entryid);
   private:
-  const std::string& _internal_entryid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entryid(const std::string& value);
-  std::string* _internal_mutable_entryid();
+  const std::string& _internal_a_entryid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_entryid(const std::string& value);
+  std::string* _internal_mutable_a_entryid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetFileRequest)
@@ -1526,7 +1526,7 @@ class FileSystemGetFileRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entryid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -1643,88 +1643,88 @@ class FileSystemFileProperties final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPathFieldNumber = 4,
-    kLastModifiedMsFieldNumber = 1,
-    kTypeFieldNumber = 3,
-    kFileFieldNumber = 2,
+    kAPathFieldNumber = 4,
+    kALastModifiedMsFieldNumber = 1,
+    kATypeFieldNumber = 3,
+    kAFileFieldNumber = 2,
   };
-  // repeated bytes path = 4;
-  int path_size() const;
+  // repeated bytes a_path = 4;
+  int a_path_size() const;
   private:
-  int _internal_path_size() const;
+  int _internal_a_path_size() const;
   public:
-  void clear_path();
-  const std::string& path(int index) const;
-  std::string* mutable_path(int index);
-  void set_path(int index, const std::string& value);
-  void set_path(int index, std::string&& value);
-  void set_path(int index, const char* value);
-  void set_path(int index, const void* value, size_t size);
-  std::string* add_path();
-  void add_path(const std::string& value);
-  void add_path(std::string&& value);
-  void add_path(const char* value);
-  void add_path(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& path() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_path();
+  void clear_a_path();
+  const std::string& a_path(int index) const;
+  std::string* mutable_a_path(int index);
+  void set_a_path(int index, const std::string& value);
+  void set_a_path(int index, std::string&& value);
+  void set_a_path(int index, const char* value);
+  void set_a_path(int index, const void* value, size_t size);
+  std::string* add_a_path();
+  void add_a_path(const std::string& value);
+  void add_a_path(std::string&& value);
+  void add_a_path(const char* value);
+  void add_a_path(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_path() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_path();
   private:
-  const std::string& _internal_path(int index) const;
-  std::string* _internal_add_path();
+  const std::string& _internal_a_path(int index) const;
+  std::string* _internal_add_a_path();
   public:
 
-  // required bytes last_modified_ms = 1;
-  bool has_last_modified_ms() const;
+  // required bytes a_last_modified_ms = 1;
+  bool has_a_last_modified_ms() const;
   private:
-  bool _internal_has_last_modified_ms() const;
+  bool _internal_has_a_last_modified_ms() const;
   public:
-  void clear_last_modified_ms();
-  const std::string& last_modified_ms() const;
+  void clear_a_last_modified_ms();
+  const std::string& a_last_modified_ms() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_last_modified_ms(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_last_modified_ms();
-  PROTOBUF_NODISCARD std::string* release_last_modified_ms();
-  void set_allocated_last_modified_ms(std::string* last_modified_ms);
+  void set_a_last_modified_ms(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_last_modified_ms();
+  PROTOBUF_NODISCARD std::string* release_a_last_modified_ms();
+  void set_allocated_a_last_modified_ms(std::string* a_last_modified_ms);
   private:
-  const std::string& _internal_last_modified_ms() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_last_modified_ms(const std::string& value);
-  std::string* _internal_mutable_last_modified_ms();
+  const std::string& _internal_a_last_modified_ms() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_last_modified_ms(const std::string& value);
+  std::string* _internal_mutable_a_last_modified_ms();
   public:
 
-  // required bytes type = 3;
-  bool has_type() const;
+  // required bytes a_type = 3;
+  bool has_a_type() const;
   private:
-  bool _internal_has_type() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_type();
-  const std::string& type() const;
+  void clear_a_type();
+  const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_type(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_type();
-  PROTOBUF_NODISCARD std::string* release_type();
-  void set_allocated_type(std::string* type);
+  void set_a_type(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_type();
+  PROTOBUF_NODISCARD std::string* release_a_type();
+  void set_allocated_a_type(std::string* a_type);
   private:
-  const std::string& _internal_type() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_type(const std::string& value);
-  std::string* _internal_mutable_type();
+  const std::string& _internal_a_type() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_type(const std::string& value);
+  std::string* _internal_mutable_a_type();
   public:
 
-  // required .protobuf.mozilla.dom.IPCBlob file = 2;
-  bool has_file() const;
+  // required .protobuf.mozilla.dom.IPCBlob a_file = 2;
+  bool has_a_file() const;
   private:
-  bool _internal_has_file() const;
+  bool _internal_has_a_file() const;
   public:
-  void clear_file();
-  const ::protobuf::mozilla::dom::IPCBlob& file() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_file();
-  ::protobuf::mozilla::dom::IPCBlob* mutable_file();
-  void set_allocated_file(::protobuf::mozilla::dom::IPCBlob* file);
+  void clear_a_file();
+  const ::protobuf::mozilla::dom::IPCBlob& a_file() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_a_file();
+  ::protobuf::mozilla::dom::IPCBlob* mutable_a_file();
+  void set_allocated_a_file(::protobuf::mozilla::dom::IPCBlob* a_file);
   private:
-  const ::protobuf::mozilla::dom::IPCBlob& _internal_file() const;
-  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_file();
+  const ::protobuf::mozilla::dom::IPCBlob& _internal_a_file() const;
+  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_a_file();
   public:
-  void unsafe_arena_set_allocated_file(
-      ::protobuf::mozilla::dom::IPCBlob* file);
-  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_file();
+  void unsafe_arena_set_allocated_a_file(
+      ::protobuf::mozilla::dom::IPCBlob* a_file);
+  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_file();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemFileProperties)
  private:
@@ -1739,10 +1739,10 @@ class FileSystemFileProperties final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> path_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr last_modified_ms_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr type_;
-    ::protobuf::mozilla::dom::IPCBlob* file_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_path_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_last_modified_ms_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
+    ::protobuf::mozilla::dom::IPCBlob* a_file_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -1791,8 +1791,8 @@ class FileSystemGetFileResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVFileSystemFileProperties = 2,
+    kAMVnsresult = 1,
+    kAMVFileSystemFileProperties = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1865,52 +1865,52 @@ class FileSystemGetFileResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVFileSystemFilePropertiesFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVFileSystemFilePropertiesFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.fs.FileSystemFileProperties mVFileSystemFileProperties = 2;
-  bool has_mvfilesystemfileproperties() const;
+  // .protobuf.mozilla.dom.fs.FileSystemFileProperties a_mVFileSystemFileProperties = 2;
+  bool has_a_mvfilesystemfileproperties() const;
   private:
-  bool _internal_has_mvfilesystemfileproperties() const;
+  bool _internal_has_a_mvfilesystemfileproperties() const;
   public:
-  void clear_mvfilesystemfileproperties();
-  const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& mvfilesystemfileproperties() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemFileProperties* release_mvfilesystemfileproperties();
-  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* mutable_mvfilesystemfileproperties();
-  void set_allocated_mvfilesystemfileproperties(::protobuf::mozilla::dom::fs::FileSystemFileProperties* mvfilesystemfileproperties);
+  void clear_a_mvfilesystemfileproperties();
+  const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& a_mvfilesystemfileproperties() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemFileProperties* release_a_mvfilesystemfileproperties();
+  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* mutable_a_mvfilesystemfileproperties();
+  void set_allocated_a_mvfilesystemfileproperties(::protobuf::mozilla::dom::fs::FileSystemFileProperties* a_mvfilesystemfileproperties);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& _internal_mvfilesystemfileproperties() const;
-  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* _internal_mutable_mvfilesystemfileproperties();
+  const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& _internal_a_mvfilesystemfileproperties() const;
+  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* _internal_mutable_a_mvfilesystemfileproperties();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemfileproperties(
-      ::protobuf::mozilla::dom::fs::FileSystemFileProperties* mvfilesystemfileproperties);
-  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* unsafe_arena_release_mvfilesystemfileproperties();
+  void unsafe_arena_set_allocated_a_mvfilesystemfileproperties(
+      ::protobuf::mozilla::dom::fs::FileSystemFileProperties* a_mvfilesystemfileproperties);
+  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* unsafe_arena_release_a_mvfilesystemfileproperties();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetFileResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvfilesystemfileproperties();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvfilesystemfileproperties();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1922,8 +1922,8 @@ class FileSystemGetFileResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::fs::FileSystemFileProperties* mvfilesystemfileproperties_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::fs::FileSystemFileProperties* a_mvfilesystemfileproperties_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -2044,24 +2044,24 @@ class FileSystemGetAccessHandleRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntryIdFieldNumber = 1,
+    kAEntryIdFieldNumber = 1,
   };
-  // required bytes entryId = 1;
-  bool has_entryid() const;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
   private:
-  bool _internal_has_entryid() const;
+  bool _internal_has_a_entryid() const;
   public:
-  void clear_entryid();
-  const std::string& entryid() const;
+  void clear_a_entryid();
+  const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_entryid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_entryid();
-  PROTOBUF_NODISCARD std::string* release_entryid();
-  void set_allocated_entryid(std::string* entryid);
+  void set_a_entryid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_entryid();
+  PROTOBUF_NODISCARD std::string* release_a_entryid();
+  void set_allocated_a_entryid(std::string* a_entryid);
   private:
-  const std::string& _internal_entryid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entryid(const std::string& value);
-  std::string* _internal_mutable_entryid();
+  const std::string& _internal_a_entryid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_entryid(const std::string& value);
+  std::string* _internal_mutable_a_entryid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest)
@@ -2074,7 +2074,7 @@ class FileSystemGetAccessHandleRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entryid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2191,63 +2191,63 @@ class FileSystemAccessHandleProperties final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessHandleChildEndpointFieldNumber = 2,
-    kAccessHandleControlChildEndpointFieldNumber = 3,
-    kStreamParamsFieldNumber = 1,
+    kAAccessHandleChildEndpointFieldNumber = 2,
+    kAAccessHandleControlChildEndpointFieldNumber = 3,
+    kAStreamParamsFieldNumber = 1,
   };
-  // required bytes accessHandleChildEndpoint = 2;
-  bool has_accesshandlechildendpoint() const;
+  // required bytes a_accessHandleChildEndpoint = 2;
+  bool has_a_accesshandlechildendpoint() const;
   private:
-  bool _internal_has_accesshandlechildendpoint() const;
+  bool _internal_has_a_accesshandlechildendpoint() const;
   public:
-  void clear_accesshandlechildendpoint();
-  const std::string& accesshandlechildendpoint() const;
+  void clear_a_accesshandlechildendpoint();
+  const std::string& a_accesshandlechildendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_accesshandlechildendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_accesshandlechildendpoint();
-  PROTOBUF_NODISCARD std::string* release_accesshandlechildendpoint();
-  void set_allocated_accesshandlechildendpoint(std::string* accesshandlechildendpoint);
+  void set_a_accesshandlechildendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_accesshandlechildendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_accesshandlechildendpoint();
+  void set_allocated_a_accesshandlechildendpoint(std::string* a_accesshandlechildendpoint);
   private:
-  const std::string& _internal_accesshandlechildendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_accesshandlechildendpoint(const std::string& value);
-  std::string* _internal_mutable_accesshandlechildendpoint();
+  const std::string& _internal_a_accesshandlechildendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_accesshandlechildendpoint(const std::string& value);
+  std::string* _internal_mutable_a_accesshandlechildendpoint();
   public:
 
-  // required bytes accessHandleControlChildEndpoint = 3;
-  bool has_accesshandlecontrolchildendpoint() const;
+  // required bytes a_accessHandleControlChildEndpoint = 3;
+  bool has_a_accesshandlecontrolchildendpoint() const;
   private:
-  bool _internal_has_accesshandlecontrolchildendpoint() const;
+  bool _internal_has_a_accesshandlecontrolchildendpoint() const;
   public:
-  void clear_accesshandlecontrolchildendpoint();
-  const std::string& accesshandlecontrolchildendpoint() const;
+  void clear_a_accesshandlecontrolchildendpoint();
+  const std::string& a_accesshandlecontrolchildendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_accesshandlecontrolchildendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_accesshandlecontrolchildendpoint();
-  PROTOBUF_NODISCARD std::string* release_accesshandlecontrolchildendpoint();
-  void set_allocated_accesshandlecontrolchildendpoint(std::string* accesshandlecontrolchildendpoint);
+  void set_a_accesshandlecontrolchildendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_accesshandlecontrolchildendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_accesshandlecontrolchildendpoint();
+  void set_allocated_a_accesshandlecontrolchildendpoint(std::string* a_accesshandlecontrolchildendpoint);
   private:
-  const std::string& _internal_accesshandlecontrolchildendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_accesshandlecontrolchildendpoint(const std::string& value);
-  std::string* _internal_mutable_accesshandlecontrolchildendpoint();
+  const std::string& _internal_a_accesshandlecontrolchildendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_accesshandlecontrolchildendpoint(const std::string& value);
+  std::string* _internal_mutable_a_accesshandlecontrolchildendpoint();
   public:
 
-  // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
-  bool has_streamparams() const;
+  // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+  bool has_a_streamparams() const;
   private:
-  bool _internal_has_streamparams() const;
+  bool _internal_has_a_streamparams() const;
   public:
-  void clear_streamparams();
-  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& streamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::RandomAccessStreamParams* release_streamparams();
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* mutable_streamparams();
-  void set_allocated_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams);
+  void clear_a_streamparams();
+  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& a_streamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::RandomAccessStreamParams* release_a_streamparams();
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* mutable_a_streamparams();
+  void set_allocated_a_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams);
   private:
-  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& _internal_streamparams() const;
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _internal_mutable_streamparams();
+  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& _internal_a_streamparams() const;
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _internal_mutable_a_streamparams();
   public:
-  void unsafe_arena_set_allocated_streamparams(
-      ::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams);
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* unsafe_arena_release_streamparams();
+  void unsafe_arena_set_allocated_a_streamparams(
+      ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams);
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* unsafe_arena_release_a_streamparams();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties)
  private:
@@ -2262,9 +2262,9 @@ class FileSystemAccessHandleProperties final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr accesshandlechildendpoint_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr accesshandlecontrolchildendpoint_;
-    ::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_accesshandlechildendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_accesshandlecontrolchildendpoint_;
+    ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2313,8 +2313,8 @@ class FileSystemGetAccessHandleResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVFileSystemAccessHandleProperties = 2,
+    kAMVnsresult = 1,
+    kAMVFileSystemAccessHandleProperties = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -2387,52 +2387,52 @@ class FileSystemGetAccessHandleResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVFileSystemAccessHandlePropertiesFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVFileSystemAccessHandlePropertiesFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties mVFileSystemAccessHandleProperties = 2;
-  bool has_mvfilesystemaccesshandleproperties() const;
+  // .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties a_mVFileSystemAccessHandleProperties = 2;
+  bool has_a_mvfilesystemaccesshandleproperties() const;
   private:
-  bool _internal_has_mvfilesystemaccesshandleproperties() const;
+  bool _internal_has_a_mvfilesystemaccesshandleproperties() const;
   public:
-  void clear_mvfilesystemaccesshandleproperties();
-  const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& mvfilesystemaccesshandleproperties() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* release_mvfilesystemaccesshandleproperties();
-  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mutable_mvfilesystemaccesshandleproperties();
-  void set_allocated_mvfilesystemaccesshandleproperties(::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mvfilesystemaccesshandleproperties);
+  void clear_a_mvfilesystemaccesshandleproperties();
+  const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& a_mvfilesystemaccesshandleproperties() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* release_a_mvfilesystemaccesshandleproperties();
+  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mutable_a_mvfilesystemaccesshandleproperties();
+  void set_allocated_a_mvfilesystemaccesshandleproperties(::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* a_mvfilesystemaccesshandleproperties);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& _internal_mvfilesystemaccesshandleproperties() const;
-  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* _internal_mutable_mvfilesystemaccesshandleproperties();
+  const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& _internal_a_mvfilesystemaccesshandleproperties() const;
+  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* _internal_mutable_a_mvfilesystemaccesshandleproperties();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemaccesshandleproperties(
-      ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mvfilesystemaccesshandleproperties);
-  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* unsafe_arena_release_mvfilesystemaccesshandleproperties();
+  void unsafe_arena_set_allocated_a_mvfilesystemaccesshandleproperties(
+      ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* a_mvfilesystemaccesshandleproperties);
+  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* unsafe_arena_release_a_mvfilesystemaccesshandleproperties();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvfilesystemaccesshandleproperties();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvfilesystemaccesshandleproperties();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -2444,8 +2444,8 @@ class FileSystemGetAccessHandleResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mvfilesystemaccesshandleproperties_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* a_mvfilesystemaccesshandleproperties_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -2566,38 +2566,38 @@ class FileSystemGetWritableRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntryIdFieldNumber = 1,
-    kKeepDataFieldNumber = 2,
+    kAEntryIdFieldNumber = 1,
+    kAKeepDataFieldNumber = 2,
   };
-  // required bytes entryId = 1;
-  bool has_entryid() const;
+  // required bytes a_entryId = 1;
+  bool has_a_entryid() const;
   private:
-  bool _internal_has_entryid() const;
+  bool _internal_has_a_entryid() const;
   public:
-  void clear_entryid();
-  const std::string& entryid() const;
+  void clear_a_entryid();
+  const std::string& a_entryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_entryid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_entryid();
-  PROTOBUF_NODISCARD std::string* release_entryid();
-  void set_allocated_entryid(std::string* entryid);
+  void set_a_entryid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_entryid();
+  PROTOBUF_NODISCARD std::string* release_a_entryid();
+  void set_allocated_a_entryid(std::string* a_entryid);
   private:
-  const std::string& _internal_entryid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entryid(const std::string& value);
-  std::string* _internal_mutable_entryid();
+  const std::string& _internal_a_entryid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_entryid(const std::string& value);
+  std::string* _internal_mutable_a_entryid();
   public:
 
-  // required bool keepData = 2;
-  bool has_keepdata() const;
+  // required bool a_keepData = 2;
+  bool has_a_keepdata() const;
   private:
-  bool _internal_has_keepdata() const;
+  bool _internal_has_a_keepdata() const;
   public:
-  void clear_keepdata();
-  bool keepdata() const;
-  void set_keepdata(bool value);
+  void clear_a_keepdata();
+  bool a_keepdata() const;
+  void set_a_keepdata(bool value);
   private:
-  bool _internal_keepdata() const;
-  void _internal_set_keepdata(bool value);
+  bool _internal_a_keepdata() const;
+  void _internal_set_a_keepdata(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest)
@@ -2613,8 +2613,8 @@ class FileSystemGetWritableRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entryid_;
-    bool keepdata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_entryid_;
+    bool a_keepdata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2731,44 +2731,44 @@ class FileSystemWritableFileStreamProperties final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWritableFileStreamFieldNumber = 2,
-    kStreamParamsFieldNumber = 1,
+    kAWritableFileStreamFieldNumber = 2,
+    kAStreamParamsFieldNumber = 1,
   };
-  // required bytes writableFileStream = 2;
-  bool has_writablefilestream() const;
+  // required bytes a_writableFileStream = 2;
+  bool has_a_writablefilestream() const;
   private:
-  bool _internal_has_writablefilestream() const;
+  bool _internal_has_a_writablefilestream() const;
   public:
-  void clear_writablefilestream();
-  const std::string& writablefilestream() const;
+  void clear_a_writablefilestream();
+  const std::string& a_writablefilestream() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_writablefilestream(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_writablefilestream();
-  PROTOBUF_NODISCARD std::string* release_writablefilestream();
-  void set_allocated_writablefilestream(std::string* writablefilestream);
+  void set_a_writablefilestream(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_writablefilestream();
+  PROTOBUF_NODISCARD std::string* release_a_writablefilestream();
+  void set_allocated_a_writablefilestream(std::string* a_writablefilestream);
   private:
-  const std::string& _internal_writablefilestream() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_writablefilestream(const std::string& value);
-  std::string* _internal_mutable_writablefilestream();
+  const std::string& _internal_a_writablefilestream() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_writablefilestream(const std::string& value);
+  std::string* _internal_mutable_a_writablefilestream();
   public:
 
-  // required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
-  bool has_streamparams() const;
+  // required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+  bool has_a_streamparams() const;
   private:
-  bool _internal_has_streamparams() const;
+  bool _internal_has_a_streamparams() const;
   public:
-  void clear_streamparams();
-  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& streamparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::RandomAccessStreamParams* release_streamparams();
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* mutable_streamparams();
-  void set_allocated_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams);
+  void clear_a_streamparams();
+  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& a_streamparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::RandomAccessStreamParams* release_a_streamparams();
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* mutable_a_streamparams();
+  void set_allocated_a_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams);
   private:
-  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& _internal_streamparams() const;
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _internal_mutable_streamparams();
+  const ::protobuf::mozilla::ipc::RandomAccessStreamParams& _internal_a_streamparams() const;
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _internal_mutable_a_streamparams();
   public:
-  void unsafe_arena_set_allocated_streamparams(
-      ::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams);
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* unsafe_arena_release_streamparams();
+  void unsafe_arena_set_allocated_a_streamparams(
+      ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams);
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* unsafe_arena_release_a_streamparams();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties)
  private:
@@ -2783,8 +2783,8 @@ class FileSystemWritableFileStreamProperties final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr writablefilestream_;
-    ::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_writablefilestream_;
+    ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -2833,8 +2833,8 @@ class FileSystemGetWritableFileStreamResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVFileSystemWritableFileStreamProperties = 2,
+    kAMVnsresult = 1,
+    kAMVFileSystemWritableFileStreamProperties = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -2907,52 +2907,52 @@ class FileSystemGetWritableFileStreamResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVFileSystemWritableFileStreamPropertiesFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVFileSystemWritableFileStreamPropertiesFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties mVFileSystemWritableFileStreamProperties = 2;
-  bool has_mvfilesystemwritablefilestreamproperties() const;
+  // .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties a_mVFileSystemWritableFileStreamProperties = 2;
+  bool has_a_mvfilesystemwritablefilestreamproperties() const;
   private:
-  bool _internal_has_mvfilesystemwritablefilestreamproperties() const;
+  bool _internal_has_a_mvfilesystemwritablefilestreamproperties() const;
   public:
-  void clear_mvfilesystemwritablefilestreamproperties();
-  const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& mvfilesystemwritablefilestreamproperties() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* release_mvfilesystemwritablefilestreamproperties();
-  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mutable_mvfilesystemwritablefilestreamproperties();
-  void set_allocated_mvfilesystemwritablefilestreamproperties(::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mvfilesystemwritablefilestreamproperties);
+  void clear_a_mvfilesystemwritablefilestreamproperties();
+  const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& a_mvfilesystemwritablefilestreamproperties() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* release_a_mvfilesystemwritablefilestreamproperties();
+  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mutable_a_mvfilesystemwritablefilestreamproperties();
+  void set_allocated_a_mvfilesystemwritablefilestreamproperties(::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* a_mvfilesystemwritablefilestreamproperties);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& _internal_mvfilesystemwritablefilestreamproperties() const;
-  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* _internal_mutable_mvfilesystemwritablefilestreamproperties();
+  const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& _internal_a_mvfilesystemwritablefilestreamproperties() const;
+  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* _internal_mutable_a_mvfilesystemwritablefilestreamproperties();
   public:
-  void unsafe_arena_set_allocated_mvfilesystemwritablefilestreamproperties(
-      ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mvfilesystemwritablefilestreamproperties);
-  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* unsafe_arena_release_mvfilesystemwritablefilestreamproperties();
+  void unsafe_arena_set_allocated_a_mvfilesystemwritablefilestreamproperties(
+      ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* a_mvfilesystemwritablefilestreamproperties);
+  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* unsafe_arena_release_a_mvfilesystemwritablefilestreamproperties();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvfilesystemwritablefilestreamproperties();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvfilesystemwritablefilestreamproperties();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -2964,8 +2964,8 @@ class FileSystemGetWritableFileStreamResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mvfilesystemwritablefilestreamproperties_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* a_mvfilesystemwritablefilestreamproperties_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -3086,43 +3086,43 @@ class FileSystemEntryPair final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParentIdFieldNumber = 1,
-    kChildIdFieldNumber = 2,
+    kAParentIdFieldNumber = 1,
+    kAChildIdFieldNumber = 2,
   };
-  // required bytes parentId = 1;
-  bool has_parentid() const;
+  // required bytes a_parentId = 1;
+  bool has_a_parentid() const;
   private:
-  bool _internal_has_parentid() const;
+  bool _internal_has_a_parentid() const;
   public:
-  void clear_parentid();
-  const std::string& parentid() const;
+  void clear_a_parentid();
+  const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_parentid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_parentid();
-  PROTOBUF_NODISCARD std::string* release_parentid();
-  void set_allocated_parentid(std::string* parentid);
+  void set_a_parentid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_parentid();
+  PROTOBUF_NODISCARD std::string* release_a_parentid();
+  void set_allocated_a_parentid(std::string* a_parentid);
   private:
-  const std::string& _internal_parentid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_parentid(const std::string& value);
-  std::string* _internal_mutable_parentid();
+  const std::string& _internal_a_parentid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_parentid(const std::string& value);
+  std::string* _internal_mutable_a_parentid();
   public:
 
-  // required bytes childId = 2;
-  bool has_childid() const;
+  // required bytes a_childId = 2;
+  bool has_a_childid() const;
   private:
-  bool _internal_has_childid() const;
+  bool _internal_has_a_childid() const;
   public:
-  void clear_childid();
-  const std::string& childid() const;
+  void clear_a_childid();
+  const std::string& a_childid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_childid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_childid();
-  PROTOBUF_NODISCARD std::string* release_childid();
-  void set_allocated_childid(std::string* childid);
+  void set_a_childid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_childid();
+  PROTOBUF_NODISCARD std::string* release_a_childid();
+  void set_allocated_a_childid(std::string* a_childid);
   private:
-  const std::string& _internal_childid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_childid(const std::string& value);
-  std::string* _internal_mutable_childid();
+  const std::string& _internal_a_childid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_childid(const std::string& value);
+  std::string* _internal_mutable_a_childid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemEntryPair)
@@ -3138,8 +3138,8 @@ class FileSystemEntryPair final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr parentid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr childid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -3256,25 +3256,25 @@ class FileSystemResolveRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEndpointsFieldNumber = 1,
+    kAEndpointsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair endpoints = 1;
-  bool has_endpoints() const;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
+  bool has_a_endpoints() const;
   private:
-  bool _internal_has_endpoints() const;
+  bool _internal_has_a_endpoints() const;
   public:
-  void clear_endpoints();
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& endpoints() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemEntryPair* release_endpoints();
-  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* mutable_endpoints();
-  void set_allocated_endpoints(::protobuf::mozilla::dom::fs::FileSystemEntryPair* endpoints);
+  void clear_a_endpoints();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& a_endpoints() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemEntryPair* release_a_endpoints();
+  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* mutable_a_endpoints();
+  void set_allocated_a_endpoints(::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& _internal_endpoints() const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* _internal_mutable_endpoints();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& _internal_a_endpoints() const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* _internal_mutable_a_endpoints();
   public:
-  void unsafe_arena_set_allocated_endpoints(
-      ::protobuf::mozilla::dom::fs::FileSystemEntryPair* endpoints);
-  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* unsafe_arena_release_endpoints();
+  void unsafe_arena_set_allocated_a_endpoints(
+      ::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints);
+  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* unsafe_arena_release_a_endpoints();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemResolveRequest)
  private:
@@ -3286,7 +3286,7 @@ class FileSystemResolveRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::fs::FileSystemEntryPair* endpoints_;
+    ::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -3403,30 +3403,30 @@ class FileSystemPath final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPathFieldNumber = 1,
+    kAPathFieldNumber = 1,
   };
-  // repeated bytes path = 1;
-  int path_size() const;
+  // repeated bytes a_path = 1;
+  int a_path_size() const;
   private:
-  int _internal_path_size() const;
+  int _internal_a_path_size() const;
   public:
-  void clear_path();
-  const std::string& path(int index) const;
-  std::string* mutable_path(int index);
-  void set_path(int index, const std::string& value);
-  void set_path(int index, std::string&& value);
-  void set_path(int index, const char* value);
-  void set_path(int index, const void* value, size_t size);
-  std::string* add_path();
-  void add_path(const std::string& value);
-  void add_path(std::string&& value);
-  void add_path(const char* value);
-  void add_path(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& path() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_path();
+  void clear_a_path();
+  const std::string& a_path(int index) const;
+  std::string* mutable_a_path(int index);
+  void set_a_path(int index, const std::string& value);
+  void set_a_path(int index, std::string&& value);
+  void set_a_path(int index, const char* value);
+  void set_a_path(int index, const void* value, size_t size);
+  std::string* add_a_path();
+  void add_a_path(const std::string& value);
+  void add_a_path(std::string&& value);
+  void add_a_path(const char* value);
+  void add_a_path(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_path() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_path();
   private:
-  const std::string& _internal_path(int index) const;
-  std::string* _internal_add_path();
+  const std::string& _internal_a_path(int index) const;
+  std::string* _internal_add_a_path();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemPath)
@@ -3437,7 +3437,7 @@ class FileSystemPath final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> path_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_path_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3487,8 +3487,8 @@ class FileSystemResolveResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVMaybeFileSystemPath = 2,
+    kAMVnsresult = 1,
+    kAMVMaybeFileSystemPath = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -3561,52 +3561,52 @@ class FileSystemResolveResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVMaybeFileSystemPathFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVMaybeFileSystemPathFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.fs.FileSystemPath mVMaybeFileSystemPath = 2;
-  bool has_mvmaybefilesystempath() const;
+  // .protobuf.mozilla.dom.fs.FileSystemPath a_mVMaybeFileSystemPath = 2;
+  bool has_a_mvmaybefilesystempath() const;
   private:
-  bool _internal_has_mvmaybefilesystempath() const;
+  bool _internal_has_a_mvmaybefilesystempath() const;
   public:
-  void clear_mvmaybefilesystempath();
-  const ::protobuf::mozilla::dom::fs::FileSystemPath& mvmaybefilesystempath() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemPath* release_mvmaybefilesystempath();
-  ::protobuf::mozilla::dom::fs::FileSystemPath* mutable_mvmaybefilesystempath();
-  void set_allocated_mvmaybefilesystempath(::protobuf::mozilla::dom::fs::FileSystemPath* mvmaybefilesystempath);
+  void clear_a_mvmaybefilesystempath();
+  const ::protobuf::mozilla::dom::fs::FileSystemPath& a_mvmaybefilesystempath() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemPath* release_a_mvmaybefilesystempath();
+  ::protobuf::mozilla::dom::fs::FileSystemPath* mutable_a_mvmaybefilesystempath();
+  void set_allocated_a_mvmaybefilesystempath(::protobuf::mozilla::dom::fs::FileSystemPath* a_mvmaybefilesystempath);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemPath& _internal_mvmaybefilesystempath() const;
-  ::protobuf::mozilla::dom::fs::FileSystemPath* _internal_mutable_mvmaybefilesystempath();
+  const ::protobuf::mozilla::dom::fs::FileSystemPath& _internal_a_mvmaybefilesystempath() const;
+  ::protobuf::mozilla::dom::fs::FileSystemPath* _internal_mutable_a_mvmaybefilesystempath();
   public:
-  void unsafe_arena_set_allocated_mvmaybefilesystempath(
-      ::protobuf::mozilla::dom::fs::FileSystemPath* mvmaybefilesystempath);
-  ::protobuf::mozilla::dom::fs::FileSystemPath* unsafe_arena_release_mvmaybefilesystempath();
+  void unsafe_arena_set_allocated_a_mvmaybefilesystempath(
+      ::protobuf::mozilla::dom::fs::FileSystemPath* a_mvmaybefilesystempath);
+  ::protobuf::mozilla::dom::fs::FileSystemPath* unsafe_arena_release_a_mvmaybefilesystempath();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemResolveResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvmaybefilesystempath();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvmaybefilesystempath();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -3618,8 +3618,8 @@ class FileSystemResolveResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::fs::FileSystemPath* mvmaybefilesystempath_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::fs::FileSystemPath* a_mvmaybefilesystempath_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -3740,38 +3740,38 @@ class FileSystemRemoveEntryRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHandleFieldNumber = 1,
-    kRecursiveFieldNumber = 2,
+    kAHandleFieldNumber = 1,
+    kARecursiveFieldNumber = 2,
   };
-  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
-  bool has_handle() const;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  bool has_a_handle() const;
   private:
-  bool _internal_has_handle() const;
+  bool _internal_has_a_handle() const;
   public:
-  void clear_handle();
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& handle() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* release_handle();
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* mutable_handle();
-  void set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle);
+  void clear_a_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& a_handle() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* release_a_handle();
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* mutable_a_handle();
+  void set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& _internal_handle() const;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _internal_mutable_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& _internal_a_handle() const;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _internal_mutable_a_handle();
   public:
-  void unsafe_arena_set_allocated_handle(
-      ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle);
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_handle();
+  void unsafe_arena_set_allocated_a_handle(
+      ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle);
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_handle();
 
-  // required bool recursive = 2;
-  bool has_recursive() const;
+  // required bool a_recursive = 2;
+  bool has_a_recursive() const;
   private:
-  bool _internal_has_recursive() const;
+  bool _internal_has_a_recursive() const;
   public:
-  void clear_recursive();
-  bool recursive() const;
-  void set_recursive(bool value);
+  void clear_a_recursive();
+  bool a_recursive() const;
+  void set_a_recursive(bool value);
   private:
-  bool _internal_recursive() const;
-  void _internal_set_recursive(bool value);
+  bool _internal_a_recursive() const;
+  void _internal_set_a_recursive(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest)
@@ -3787,8 +3787,8 @@ class FileSystemRemoveEntryRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle_;
-    bool recursive_;
+    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle_;
+    bool a_recursive_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -3837,8 +3837,8 @@ class FileSystemRemoveEntryResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVvoidT = 2,
+    kAMVnsresult = 1,
+    kAMVvoidT = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -3911,43 +3911,43 @@ class FileSystemRemoveEntryResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVvoidTFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVvoidTFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // bytes mVvoid_t = 2;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 2;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
   void clear_content();
@@ -3955,8 +3955,8 @@ class FileSystemRemoveEntryResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvvoid_t();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvvoid_t();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -3968,8 +3968,8 @@ class FileSystemRemoveEntryResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -4090,44 +4090,44 @@ class FileSystemMoveEntryRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHandleFieldNumber = 1,
-    kDestHandleFieldNumber = 2,
+    kAHandleFieldNumber = 1,
+    kADestHandleFieldNumber = 2,
   };
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
-  bool has_handle() const;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+  bool has_a_handle() const;
   private:
-  bool _internal_has_handle() const;
+  bool _internal_has_a_handle() const;
   public:
-  void clear_handle();
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& handle() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* release_handle();
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_handle();
-  void set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle);
+  void clear_a_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& a_handle() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* release_a_handle();
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_a_handle();
+  void set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_handle() const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_mutable_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_a_handle() const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_mutable_a_handle();
   public:
-  void unsafe_arena_set_allocated_handle(
-      ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle);
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* unsafe_arena_release_handle();
+  void unsafe_arena_set_allocated_a_handle(
+      ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle);
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* unsafe_arena_release_a_handle();
 
-  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata destHandle = 2;
-  bool has_desthandle() const;
+  // required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
+  bool has_a_desthandle() const;
   private:
-  bool _internal_has_desthandle() const;
+  bool _internal_has_a_desthandle() const;
   public:
-  void clear_desthandle();
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& desthandle() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* release_desthandle();
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* mutable_desthandle();
-  void set_allocated_desthandle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* desthandle);
+  void clear_a_desthandle();
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& a_desthandle() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* release_a_desthandle();
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* mutable_a_desthandle();
+  void set_allocated_a_desthandle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_desthandle);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& _internal_desthandle() const;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _internal_mutable_desthandle();
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& _internal_a_desthandle() const;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _internal_mutable_a_desthandle();
   public:
-  void unsafe_arena_set_allocated_desthandle(
-      ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* desthandle);
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_desthandle();
+  void unsafe_arena_set_allocated_a_desthandle(
+      ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_desthandle);
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* unsafe_arena_release_a_desthandle();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest)
  private:
@@ -4142,8 +4142,8 @@ class FileSystemMoveEntryRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle_;
-    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* desthandle_;
+    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle_;
+    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_desthandle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -4260,44 +4260,44 @@ class FileSystemRenameEntryRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 2,
-    kHandleFieldNumber = 1,
+    kANameFieldNumber = 2,
+    kAHandleFieldNumber = 1,
   };
-  // required bytes name = 2;
-  bool has_name() const;
+  // required bytes a_name = 2;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
-  bool has_handle() const;
+  // required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+  bool has_a_handle() const;
   private:
-  bool _internal_has_handle() const;
+  bool _internal_has_a_handle() const;
   public:
-  void clear_handle();
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& handle() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* release_handle();
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_handle();
-  void set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle);
+  void clear_a_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& a_handle() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* release_a_handle();
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* mutable_a_handle();
+  void set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle);
   private:
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_handle() const;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_mutable_handle();
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& _internal_a_handle() const;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _internal_mutable_a_handle();
   public:
-  void unsafe_arena_set_allocated_handle(
-      ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle);
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* unsafe_arena_release_handle();
+  void unsafe_arena_set_allocated_a_handle(
+      ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle);
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* unsafe_arena_release_a_handle();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest)
  private:
@@ -4312,8 +4312,8 @@ class FileSystemRenameEntryRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemManager_5fprotobuf_2emozilla_2edom_2efs_2eh_2eproto;
@@ -4362,8 +4362,8 @@ class FileSystemMoveEntryResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVEntryId = 2,
+    kAMVnsresult = 1,
+    kAMVEntryId = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -4436,43 +4436,43 @@ class FileSystemMoveEntryResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVEntryIdFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVEntryIdFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // bytes mVEntryId = 2;
-  bool has_mventryid() const;
+  // bytes a_mVEntryId = 2;
+  bool has_a_mventryid() const;
   private:
-  bool _internal_has_mventryid() const;
+  bool _internal_has_a_mventryid() const;
   public:
-  void clear_mventryid();
-  const std::string& mventryid() const;
+  void clear_a_mventryid();
+  const std::string& a_mventryid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mventryid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mventryid();
-  PROTOBUF_NODISCARD std::string* release_mventryid();
-  void set_allocated_mventryid(std::string* mventryid);
+  void set_a_mventryid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mventryid();
+  PROTOBUF_NODISCARD std::string* release_a_mventryid();
+  void set_allocated_a_mventryid(std::string* a_mventryid);
   private:
-  const std::string& _internal_mventryid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mventryid(const std::string& value);
-  std::string* _internal_mutable_mventryid();
+  const std::string& _internal_a_mventryid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mventryid(const std::string& value);
+  std::string* _internal_mutable_a_mventryid();
   public:
 
   void clear_content();
@@ -4480,8 +4480,8 @@ class FileSystemMoveEntryResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mventryid();
+  void set_has_a_mvnsresult();
+  void set_has_a_mventryid();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -4493,8 +4493,8 @@ class FileSystemMoveEntryResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mventryid_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mventryid_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -4514,353 +4514,353 @@ class FileSystemMoveEntryResponse final :
 #endif  // __GNUC__
 // FileSystemEntryMetadata
 
-// required bytes entryId = 1;
-inline bool FileSystemEntryMetadata::_internal_has_entryid() const {
+// required bytes a_entryId = 1;
+inline bool FileSystemEntryMetadata::_internal_has_a_entryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemEntryMetadata::has_entryid() const {
-  return _internal_has_entryid();
+inline bool FileSystemEntryMetadata::has_a_entryid() const {
+  return _internal_has_a_entryid();
 }
-inline void FileSystemEntryMetadata::clear_entryid() {
-  _impl_.entryid_.ClearToEmpty();
+inline void FileSystemEntryMetadata::clear_a_entryid() {
+  _impl_.a_entryid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemEntryMetadata::entryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryId)
-  return _internal_entryid();
+inline const std::string& FileSystemEntryMetadata::a_entryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
+  return _internal_a_entryid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemEntryMetadata::set_entryid(ArgT0&& arg0, ArgT... args) {
+void FileSystemEntryMetadata::set_a_entryid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryId)
+ _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
 }
-inline std::string* FileSystemEntryMetadata::mutable_entryid() {
-  std::string* _s = _internal_mutable_entryid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryId)
+inline std::string* FileSystemEntryMetadata::mutable_a_entryid() {
+  std::string* _s = _internal_mutable_a_entryid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
   return _s;
 }
-inline const std::string& FileSystemEntryMetadata::_internal_entryid() const {
-  return _impl_.entryid_.Get();
+inline const std::string& FileSystemEntryMetadata::_internal_a_entryid() const {
+  return _impl_.a_entryid_.Get();
 }
-inline void FileSystemEntryMetadata::_internal_set_entryid(const std::string& value) {
+inline void FileSystemEntryMetadata::_internal_set_a_entryid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.entryid_.Set(value, GetArenaForAllocation());
+  _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryMetadata::_internal_mutable_entryid() {
+inline std::string* FileSystemEntryMetadata::_internal_mutable_a_entryid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.entryid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryMetadata::release_entryid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryId)
-  if (!_internal_has_entryid()) {
+inline std::string* FileSystemEntryMetadata::release_a_entryid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
+  if (!_internal_has_a_entryid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.entryid_.Release();
+  auto* p = _impl_.a_entryid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemEntryMetadata::set_allocated_entryid(std::string* entryid) {
-  if (entryid != nullptr) {
+inline void FileSystemEntryMetadata::set_allocated_a_entryid(std::string* a_entryid) {
+  if (a_entryid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.entryid_.SetAllocated(entryid, GetArenaForAllocation());
+  _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryId)
 }
 
-// required bytes entryName = 2;
-inline bool FileSystemEntryMetadata::_internal_has_entryname() const {
+// required bytes a_entryName = 2;
+inline bool FileSystemEntryMetadata::_internal_has_a_entryname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemEntryMetadata::has_entryname() const {
-  return _internal_has_entryname();
+inline bool FileSystemEntryMetadata::has_a_entryname() const {
+  return _internal_has_a_entryname();
 }
-inline void FileSystemEntryMetadata::clear_entryname() {
-  _impl_.entryname_.ClearToEmpty();
+inline void FileSystemEntryMetadata::clear_a_entryname() {
+  _impl_.a_entryname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemEntryMetadata::entryname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryName)
-  return _internal_entryname();
+inline const std::string& FileSystemEntryMetadata::a_entryname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
+  return _internal_a_entryname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemEntryMetadata::set_entryname(ArgT0&& arg0, ArgT... args) {
+void FileSystemEntryMetadata::set_a_entryname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.entryname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryName)
+ _impl_.a_entryname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
 }
-inline std::string* FileSystemEntryMetadata::mutable_entryname() {
-  std::string* _s = _internal_mutable_entryname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryName)
+inline std::string* FileSystemEntryMetadata::mutable_a_entryname() {
+  std::string* _s = _internal_mutable_a_entryname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
   return _s;
 }
-inline const std::string& FileSystemEntryMetadata::_internal_entryname() const {
-  return _impl_.entryname_.Get();
+inline const std::string& FileSystemEntryMetadata::_internal_a_entryname() const {
+  return _impl_.a_entryname_.Get();
 }
-inline void FileSystemEntryMetadata::_internal_set_entryname(const std::string& value) {
+inline void FileSystemEntryMetadata::_internal_set_a_entryname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.entryname_.Set(value, GetArenaForAllocation());
+  _impl_.a_entryname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryMetadata::_internal_mutable_entryname() {
+inline std::string* FileSystemEntryMetadata::_internal_mutable_a_entryname() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.entryname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_entryname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryMetadata::release_entryname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryName)
-  if (!_internal_has_entryname()) {
+inline std::string* FileSystemEntryMetadata::release_a_entryname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
+  if (!_internal_has_a_entryname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.entryname_.Release();
+  auto* p = _impl_.a_entryname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryname_.IsDefault()) {
-    _impl_.entryname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryname_.IsDefault()) {
+    _impl_.a_entryname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemEntryMetadata::set_allocated_entryname(std::string* entryname) {
-  if (entryname != nullptr) {
+inline void FileSystemEntryMetadata::set_allocated_a_entryname(std::string* a_entryname) {
+  if (a_entryname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.entryname_.SetAllocated(entryname, GetArenaForAllocation());
+  _impl_.a_entryname_.SetAllocated(a_entryname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryname_.IsDefault()) {
-    _impl_.entryname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryname_.IsDefault()) {
+    _impl_.a_entryname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.entryName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_entryName)
 }
 
-// required bool directory = 3;
-inline bool FileSystemEntryMetadata::_internal_has_directory() const {
+// required bool a_directory = 3;
+inline bool FileSystemEntryMetadata::_internal_has_a_directory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool FileSystemEntryMetadata::has_directory() const {
-  return _internal_has_directory();
+inline bool FileSystemEntryMetadata::has_a_directory() const {
+  return _internal_has_a_directory();
 }
-inline void FileSystemEntryMetadata::clear_directory() {
-  _impl_.directory_ = false;
+inline void FileSystemEntryMetadata::clear_a_directory() {
+  _impl_.a_directory_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool FileSystemEntryMetadata::_internal_directory() const {
-  return _impl_.directory_;
+inline bool FileSystemEntryMetadata::_internal_a_directory() const {
+  return _impl_.a_directory_;
 }
-inline bool FileSystemEntryMetadata::directory() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.directory)
-  return _internal_directory();
+inline bool FileSystemEntryMetadata::a_directory() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_directory)
+  return _internal_a_directory();
 }
-inline void FileSystemEntryMetadata::_internal_set_directory(bool value) {
+inline void FileSystemEntryMetadata::_internal_set_a_directory(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.directory_ = value;
+  _impl_.a_directory_ = value;
 }
-inline void FileSystemEntryMetadata::set_directory(bool value) {
-  _internal_set_directory(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.directory)
+inline void FileSystemEntryMetadata::set_a_directory(bool value) {
+  _internal_set_a_directory(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryMetadata.a_directory)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemChildMetadata
 
-// required bytes parentId = 1;
-inline bool FileSystemChildMetadata::_internal_has_parentid() const {
+// required bytes a_parentId = 1;
+inline bool FileSystemChildMetadata::_internal_has_a_parentid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemChildMetadata::has_parentid() const {
-  return _internal_has_parentid();
+inline bool FileSystemChildMetadata::has_a_parentid() const {
+  return _internal_has_a_parentid();
 }
-inline void FileSystemChildMetadata::clear_parentid() {
-  _impl_.parentid_.ClearToEmpty();
+inline void FileSystemChildMetadata::clear_a_parentid() {
+  _impl_.a_parentid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemChildMetadata::parentid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemChildMetadata.parentId)
-  return _internal_parentid();
+inline const std::string& FileSystemChildMetadata::a_parentid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
+  return _internal_a_parentid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemChildMetadata::set_parentid(ArgT0&& arg0, ArgT... args) {
+void FileSystemChildMetadata::set_a_parentid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemChildMetadata.parentId)
+ _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
 }
-inline std::string* FileSystemChildMetadata::mutable_parentid() {
-  std::string* _s = _internal_mutable_parentid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemChildMetadata.parentId)
+inline std::string* FileSystemChildMetadata::mutable_a_parentid() {
+  std::string* _s = _internal_mutable_a_parentid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
   return _s;
 }
-inline const std::string& FileSystemChildMetadata::_internal_parentid() const {
-  return _impl_.parentid_.Get();
+inline const std::string& FileSystemChildMetadata::_internal_a_parentid() const {
+  return _impl_.a_parentid_.Get();
 }
-inline void FileSystemChildMetadata::_internal_set_parentid(const std::string& value) {
+inline void FileSystemChildMetadata::_internal_set_a_parentid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.parentid_.Set(value, GetArenaForAllocation());
+  _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemChildMetadata::_internal_mutable_parentid() {
+inline std::string* FileSystemChildMetadata::_internal_mutable_a_parentid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.parentid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemChildMetadata::release_parentid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemChildMetadata.parentId)
-  if (!_internal_has_parentid()) {
+inline std::string* FileSystemChildMetadata::release_a_parentid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
+  if (!_internal_has_a_parentid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.parentid_.Release();
+  auto* p = _impl_.a_parentid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemChildMetadata::set_allocated_parentid(std::string* parentid) {
-  if (parentid != nullptr) {
+inline void FileSystemChildMetadata::set_allocated_a_parentid(std::string* a_parentid) {
+  if (a_parentid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.parentid_.SetAllocated(parentid, GetArenaForAllocation());
+  _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemChildMetadata.parentId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_parentId)
 }
 
-// required bytes childName = 2;
-inline bool FileSystemChildMetadata::_internal_has_childname() const {
+// required bytes a_childName = 2;
+inline bool FileSystemChildMetadata::_internal_has_a_childname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemChildMetadata::has_childname() const {
-  return _internal_has_childname();
+inline bool FileSystemChildMetadata::has_a_childname() const {
+  return _internal_has_a_childname();
 }
-inline void FileSystemChildMetadata::clear_childname() {
-  _impl_.childname_.ClearToEmpty();
+inline void FileSystemChildMetadata::clear_a_childname() {
+  _impl_.a_childname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemChildMetadata::childname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemChildMetadata.childName)
-  return _internal_childname();
+inline const std::string& FileSystemChildMetadata::a_childname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
+  return _internal_a_childname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemChildMetadata::set_childname(ArgT0&& arg0, ArgT... args) {
+void FileSystemChildMetadata::set_a_childname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.childname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemChildMetadata.childName)
+ _impl_.a_childname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
 }
-inline std::string* FileSystemChildMetadata::mutable_childname() {
-  std::string* _s = _internal_mutable_childname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemChildMetadata.childName)
+inline std::string* FileSystemChildMetadata::mutable_a_childname() {
+  std::string* _s = _internal_mutable_a_childname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
   return _s;
 }
-inline const std::string& FileSystemChildMetadata::_internal_childname() const {
-  return _impl_.childname_.Get();
+inline const std::string& FileSystemChildMetadata::_internal_a_childname() const {
+  return _impl_.a_childname_.Get();
 }
-inline void FileSystemChildMetadata::_internal_set_childname(const std::string& value) {
+inline void FileSystemChildMetadata::_internal_set_a_childname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.childname_.Set(value, GetArenaForAllocation());
+  _impl_.a_childname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemChildMetadata::_internal_mutable_childname() {
+inline std::string* FileSystemChildMetadata::_internal_mutable_a_childname() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.childname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_childname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemChildMetadata::release_childname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemChildMetadata.childName)
-  if (!_internal_has_childname()) {
+inline std::string* FileSystemChildMetadata::release_a_childname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
+  if (!_internal_has_a_childname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.childname_.Release();
+  auto* p = _impl_.a_childname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childname_.IsDefault()) {
-    _impl_.childname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childname_.IsDefault()) {
+    _impl_.a_childname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemChildMetadata::set_allocated_childname(std::string* childname) {
-  if (childname != nullptr) {
+inline void FileSystemChildMetadata::set_allocated_a_childname(std::string* a_childname) {
+  if (a_childname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.childname_.SetAllocated(childname, GetArenaForAllocation());
+  _impl_.a_childname_.SetAllocated(a_childname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childname_.IsDefault()) {
-    _impl_.childname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childname_.IsDefault()) {
+    _impl_.a_childname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemChildMetadata.childName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemChildMetadata.a_childName)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetHandleRequest
 
-// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
-inline bool FileSystemGetHandleRequest::_internal_has_handle() const {
+// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+inline bool FileSystemGetHandleRequest::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.handle_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
   return value;
 }
-inline bool FileSystemGetHandleRequest::has_handle() const {
-  return _internal_has_handle();
+inline bool FileSystemGetHandleRequest::has_a_handle() const {
+  return _internal_has_a_handle();
 }
-inline void FileSystemGetHandleRequest::clear_handle() {
-  if (_impl_.handle_ != nullptr) _impl_.handle_->Clear();
+inline void FileSystemGetHandleRequest::clear_a_handle() {
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemGetHandleRequest::_internal_handle() const {
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.handle_;
+inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemGetHandleRequest::_internal_a_handle() const {
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.a_handle_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata&>(
       ::protobuf::mozilla::dom::fs::_FileSystemChildMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemGetHandleRequest::handle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.handle)
-  return _internal_handle();
+inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemGetHandleRequest::a_handle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
+  return _internal_a_handle();
 }
-inline void FileSystemGetHandleRequest::unsafe_arena_set_allocated_handle(
-    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle) {
+inline void FileSystemGetHandleRequest::unsafe_arena_set_allocated_a_handle(
+    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.handle_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_handle_);
   }
-  _impl_.handle_ = handle;
-  if (handle) {
+  _impl_.a_handle_ = a_handle;
+  if (a_handle) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::release_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::release_a_handle() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4872,230 +4872,230 @@ inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandl
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::unsafe_arena_release_handle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::unsafe_arena_release_a_handle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::_internal_mutable_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::_internal_mutable_a_handle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.handle_ == nullptr) {
+  if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemChildMetadata>(GetArenaForAllocation());
-    _impl_.handle_ = p;
+    _impl_.a_handle_ = p;
   }
-  return _impl_.handle_;
+  return _impl_.a_handle_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::mutable_handle() {
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _msg = _internal_mutable_handle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemGetHandleRequest::mutable_a_handle() {
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _msg = _internal_mutable_a_handle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
   return _msg;
 }
-inline void FileSystemGetHandleRequest::set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle) {
+inline void FileSystemGetHandleRequest::set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.handle_;
+    delete _impl_.a_handle_;
   }
-  if (handle) {
+  if (a_handle) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(handle);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_handle);
     if (message_arena != submessage_arena) {
-      handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, handle, submessage_arena);
+      a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_handle, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.handle_ = handle;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.handle)
+  _impl_.a_handle_ = a_handle;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_handle)
 }
 
-// required bool create = 2;
-inline bool FileSystemGetHandleRequest::_internal_has_create() const {
+// required bool a_create = 2;
+inline bool FileSystemGetHandleRequest::_internal_has_a_create() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemGetHandleRequest::has_create() const {
-  return _internal_has_create();
+inline bool FileSystemGetHandleRequest::has_a_create() const {
+  return _internal_has_a_create();
 }
-inline void FileSystemGetHandleRequest::clear_create() {
-  _impl_.create_ = false;
+inline void FileSystemGetHandleRequest::clear_a_create() {
+  _impl_.a_create_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool FileSystemGetHandleRequest::_internal_create() const {
-  return _impl_.create_;
+inline bool FileSystemGetHandleRequest::_internal_a_create() const {
+  return _impl_.a_create_;
 }
-inline bool FileSystemGetHandleRequest::create() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.create)
-  return _internal_create();
+inline bool FileSystemGetHandleRequest::a_create() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_create)
+  return _internal_a_create();
 }
-inline void FileSystemGetHandleRequest::_internal_set_create(bool value) {
+inline void FileSystemGetHandleRequest::_internal_set_a_create(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.create_ = value;
+  _impl_.a_create_ = value;
 }
-inline void FileSystemGetHandleRequest::set_create(bool value) {
-  _internal_set_create(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.create)
+inline void FileSystemGetHandleRequest::set_a_create(bool value) {
+  _internal_set_a_create(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetHandleRequest.a_create)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetHandleResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemGetHandleResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemGetHandleResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemGetHandleResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemGetHandleResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemGetHandleResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemGetHandleResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemGetHandleResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemGetHandleResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemGetHandleResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemGetHandleResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemGetHandleResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetHandleResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVnsresult)
 }
-inline std::string* FileSystemGetHandleResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVnsresult)
+inline std::string* FileSystemGetHandleResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemGetHandleResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemGetHandleResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemGetHandleResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetHandleResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetHandleResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetHandleResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemGetHandleResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetHandleResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetHandleResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemGetHandleResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVnsresult)
 }
 
-// bytes mVEntryId = 2;
-inline bool FileSystemGetHandleResponse::_internal_has_mventryid() const {
-  return content_case() == kMVEntryId;
+// bytes a_mVEntryId = 2;
+inline bool FileSystemGetHandleResponse::_internal_has_a_mventryid() const {
+  return content_case() == kAMVEntryId;
 }
-inline bool FileSystemGetHandleResponse::has_mventryid() const {
-  return _internal_has_mventryid();
+inline bool FileSystemGetHandleResponse::has_a_mventryid() const {
+  return _internal_has_a_mventryid();
 }
-inline void FileSystemGetHandleResponse::set_has_mventryid() {
-  _impl_._oneof_case_[0] = kMVEntryId;
+inline void FileSystemGetHandleResponse::set_has_a_mventryid() {
+  _impl_._oneof_case_[0] = kAMVEntryId;
 }
-inline void FileSystemGetHandleResponse::clear_mventryid() {
-  if (_internal_has_mventryid()) {
-    _impl_.content_.mventryid_.Destroy();
+inline void FileSystemGetHandleResponse::clear_a_mventryid() {
+  if (_internal_has_a_mventryid()) {
+    _impl_.content_.a_mventryid_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemGetHandleResponse::mventryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVEntryId)
-  return _internal_mventryid();
+inline const std::string& FileSystemGetHandleResponse::a_mventryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVEntryId)
+  return _internal_a_mventryid();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemGetHandleResponse::set_mventryid(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mventryid()) {
+inline void FileSystemGetHandleResponse::set_a_mventryid(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mventryid()) {
     clear_content();
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitDefault();
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitDefault();
   }
-  _impl_.content_.mventryid_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVEntryId)
+  _impl_.content_.a_mventryid_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVEntryId)
 }
-inline std::string* FileSystemGetHandleResponse::mutable_mventryid() {
-  std::string* _s = _internal_mutable_mventryid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVEntryId)
+inline std::string* FileSystemGetHandleResponse::mutable_a_mventryid() {
+  std::string* _s = _internal_mutable_a_mventryid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVEntryId)
   return _s;
 }
-inline const std::string& FileSystemGetHandleResponse::_internal_mventryid() const {
-  if (_internal_has_mventryid()) {
-    return _impl_.content_.mventryid_.Get();
+inline const std::string& FileSystemGetHandleResponse::_internal_a_mventryid() const {
+  if (_internal_has_a_mventryid()) {
+    return _impl_.content_.a_mventryid_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemGetHandleResponse::_internal_set_mventryid(const std::string& value) {
-  if (!_internal_has_mventryid()) {
+inline void FileSystemGetHandleResponse::_internal_set_a_mventryid(const std::string& value) {
+  if (!_internal_has_a_mventryid()) {
     clear_content();
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitDefault();
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitDefault();
   }
-  _impl_.content_.mventryid_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mventryid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetHandleResponse::_internal_mutable_mventryid() {
-  if (!_internal_has_mventryid()) {
+inline std::string* FileSystemGetHandleResponse::_internal_mutable_a_mventryid() {
+  if (!_internal_has_a_mventryid()) {
     clear_content();
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitDefault();
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitDefault();
   }
-  return _impl_.content_.mventryid_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mventryid_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemGetHandleResponse::release_mventryid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVEntryId)
-  if (_internal_has_mventryid()) {
+inline std::string* FileSystemGetHandleResponse::release_a_mventryid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVEntryId)
+  if (_internal_has_a_mventryid()) {
     clear_has_content();
-    return _impl_.content_.mventryid_.Release();
+    return _impl_.content_.a_mventryid_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetHandleResponse::set_allocated_mventryid(std::string* mventryid) {
+inline void FileSystemGetHandleResponse::set_allocated_a_mventryid(std::string* a_mventryid) {
   if (has_content()) {
     clear_content();
   }
-  if (mventryid != nullptr) {
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitAllocated(mventryid, GetArenaForAllocation());
+  if (a_mventryid != nullptr) {
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitAllocated(a_mventryid, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.mVEntryId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetHandleResponse.a_mVEntryId)
 }
 
 inline bool FileSystemGetHandleResponse::has_content() const {
@@ -5111,378 +5111,378 @@ inline FileSystemGetHandleResponse::ContentCase FileSystemGetHandleResponse::con
 
 // FileSystemGetEntriesRequest
 
-// required bytes parentId = 1;
-inline bool FileSystemGetEntriesRequest::_internal_has_parentid() const {
+// required bytes a_parentId = 1;
+inline bool FileSystemGetEntriesRequest::_internal_has_a_parentid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetEntriesRequest::has_parentid() const {
-  return _internal_has_parentid();
+inline bool FileSystemGetEntriesRequest::has_a_parentid() const {
+  return _internal_has_a_parentid();
 }
-inline void FileSystemGetEntriesRequest::clear_parentid() {
-  _impl_.parentid_.ClearToEmpty();
+inline void FileSystemGetEntriesRequest::clear_a_parentid() {
+  _impl_.a_parentid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetEntriesRequest::parentid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.parentId)
-  return _internal_parentid();
+inline const std::string& FileSystemGetEntriesRequest::a_parentid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
+  return _internal_a_parentid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetEntriesRequest::set_parentid(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetEntriesRequest::set_a_parentid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.parentId)
+ _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
 }
-inline std::string* FileSystemGetEntriesRequest::mutable_parentid() {
-  std::string* _s = _internal_mutable_parentid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.parentId)
+inline std::string* FileSystemGetEntriesRequest::mutable_a_parentid() {
+  std::string* _s = _internal_mutable_a_parentid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
   return _s;
 }
-inline const std::string& FileSystemGetEntriesRequest::_internal_parentid() const {
-  return _impl_.parentid_.Get();
+inline const std::string& FileSystemGetEntriesRequest::_internal_a_parentid() const {
+  return _impl_.a_parentid_.Get();
 }
-inline void FileSystemGetEntriesRequest::_internal_set_parentid(const std::string& value) {
+inline void FileSystemGetEntriesRequest::_internal_set_a_parentid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.parentid_.Set(value, GetArenaForAllocation());
+  _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetEntriesRequest::_internal_mutable_parentid() {
+inline std::string* FileSystemGetEntriesRequest::_internal_mutable_a_parentid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.parentid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetEntriesRequest::release_parentid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.parentId)
-  if (!_internal_has_parentid()) {
+inline std::string* FileSystemGetEntriesRequest::release_a_parentid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
+  if (!_internal_has_a_parentid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.parentid_.Release();
+  auto* p = _impl_.a_parentid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetEntriesRequest::set_allocated_parentid(std::string* parentid) {
-  if (parentid != nullptr) {
+inline void FileSystemGetEntriesRequest::set_allocated_a_parentid(std::string* a_parentid) {
+  if (a_parentid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.parentid_.SetAllocated(parentid, GetArenaForAllocation());
+  _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.parentId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_parentId)
 }
 
-// required bytes page = 2;
-inline bool FileSystemGetEntriesRequest::_internal_has_page() const {
+// required bytes a_page = 2;
+inline bool FileSystemGetEntriesRequest::_internal_has_a_page() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemGetEntriesRequest::has_page() const {
-  return _internal_has_page();
+inline bool FileSystemGetEntriesRequest::has_a_page() const {
+  return _internal_has_a_page();
 }
-inline void FileSystemGetEntriesRequest::clear_page() {
-  _impl_.page_.ClearToEmpty();
+inline void FileSystemGetEntriesRequest::clear_a_page() {
+  _impl_.a_page_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemGetEntriesRequest::page() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.page)
-  return _internal_page();
+inline const std::string& FileSystemGetEntriesRequest::a_page() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
+  return _internal_a_page();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetEntriesRequest::set_page(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetEntriesRequest::set_a_page(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.page_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.page)
+ _impl_.a_page_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
 }
-inline std::string* FileSystemGetEntriesRequest::mutable_page() {
-  std::string* _s = _internal_mutable_page();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.page)
+inline std::string* FileSystemGetEntriesRequest::mutable_a_page() {
+  std::string* _s = _internal_mutable_a_page();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
   return _s;
 }
-inline const std::string& FileSystemGetEntriesRequest::_internal_page() const {
-  return _impl_.page_.Get();
+inline const std::string& FileSystemGetEntriesRequest::_internal_a_page() const {
+  return _impl_.a_page_.Get();
 }
-inline void FileSystemGetEntriesRequest::_internal_set_page(const std::string& value) {
+inline void FileSystemGetEntriesRequest::_internal_set_a_page(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.page_.Set(value, GetArenaForAllocation());
+  _impl_.a_page_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetEntriesRequest::_internal_mutable_page() {
+inline std::string* FileSystemGetEntriesRequest::_internal_mutable_a_page() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.page_.Mutable(GetArenaForAllocation());
+  return _impl_.a_page_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetEntriesRequest::release_page() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.page)
-  if (!_internal_has_page()) {
+inline std::string* FileSystemGetEntriesRequest::release_a_page() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
+  if (!_internal_has_a_page()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.page_.Release();
+  auto* p = _impl_.a_page_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.page_.IsDefault()) {
-    _impl_.page_.Set("", GetArenaForAllocation());
+  if (_impl_.a_page_.IsDefault()) {
+    _impl_.a_page_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetEntriesRequest::set_allocated_page(std::string* page) {
-  if (page != nullptr) {
+inline void FileSystemGetEntriesRequest::set_allocated_a_page(std::string* a_page) {
+  if (a_page != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.page_.SetAllocated(page, GetArenaForAllocation());
+  _impl_.a_page_.SetAllocated(a_page, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.page_.IsDefault()) {
-    _impl_.page_.Set("", GetArenaForAllocation());
+  if (_impl_.a_page_.IsDefault()) {
+    _impl_.a_page_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.page)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest.a_page)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemDirectoryListing
 
-// repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata directories = 1;
-inline int FileSystemDirectoryListing::_internal_directories_size() const {
-  return _impl_.directories_.size();
+// repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_directories = 1;
+inline int FileSystemDirectoryListing::_internal_a_directories_size() const {
+  return _impl_.a_directories_.size();
 }
-inline int FileSystemDirectoryListing::directories_size() const {
-  return _internal_directories_size();
+inline int FileSystemDirectoryListing::a_directories_size() const {
+  return _internal_a_directories_size();
 }
-inline void FileSystemDirectoryListing::clear_directories() {
-  _impl_.directories_.Clear();
+inline void FileSystemDirectoryListing::clear_a_directories() {
+  _impl_.a_directories_.Clear();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::mutable_directories(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.directories)
-  return _impl_.directories_.Mutable(index);
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::mutable_a_directories(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_directories)
+  return _impl_.a_directories_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >*
-FileSystemDirectoryListing::mutable_directories() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.directories)
-  return &_impl_.directories_;
+FileSystemDirectoryListing::mutable_a_directories() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_directories)
+  return &_impl_.a_directories_;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::_internal_directories(int index) const {
-  return _impl_.directories_.Get(index);
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::_internal_a_directories(int index) const {
+  return _impl_.a_directories_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::directories(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.directories)
-  return _internal_directories(index);
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::a_directories(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_directories)
+  return _internal_a_directories(index);
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::_internal_add_directories() {
-  return _impl_.directories_.Add();
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::_internal_add_a_directories() {
+  return _impl_.a_directories_.Add();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::add_directories() {
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _add = _internal_add_directories();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.directories)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::add_a_directories() {
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _add = _internal_add_a_directories();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_directories)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >&
-FileSystemDirectoryListing::directories() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.directories)
-  return _impl_.directories_;
+FileSystemDirectoryListing::a_directories() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_directories)
+  return _impl_.a_directories_;
 }
 
-// repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata files = 2;
-inline int FileSystemDirectoryListing::_internal_files_size() const {
-  return _impl_.files_.size();
+// repeated .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_files = 2;
+inline int FileSystemDirectoryListing::_internal_a_files_size() const {
+  return _impl_.a_files_.size();
 }
-inline int FileSystemDirectoryListing::files_size() const {
-  return _internal_files_size();
+inline int FileSystemDirectoryListing::a_files_size() const {
+  return _internal_a_files_size();
 }
-inline void FileSystemDirectoryListing::clear_files() {
-  _impl_.files_.Clear();
+inline void FileSystemDirectoryListing::clear_a_files() {
+  _impl_.a_files_.Clear();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::mutable_files(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.files)
-  return _impl_.files_.Mutable(index);
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::mutable_a_files(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_files)
+  return _impl_.a_files_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >*
-FileSystemDirectoryListing::mutable_files() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.files)
-  return &_impl_.files_;
+FileSystemDirectoryListing::mutable_a_files() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_files)
+  return &_impl_.a_files_;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::_internal_files(int index) const {
-  return _impl_.files_.Get(index);
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::_internal_a_files(int index) const {
+  return _impl_.a_files_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::files(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.files)
-  return _internal_files(index);
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemDirectoryListing::a_files(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_files)
+  return _internal_a_files(index);
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::_internal_add_files() {
-  return _impl_.files_.Add();
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::_internal_add_a_files() {
+  return _impl_.a_files_.Add();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::add_files() {
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _add = _internal_add_files();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.files)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemDirectoryListing::add_a_files() {
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _add = _internal_add_a_files();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_files)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata >&
-FileSystemDirectoryListing::files() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.files)
-  return _impl_.files_;
+FileSystemDirectoryListing::a_files() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemDirectoryListing.a_files)
+  return _impl_.a_files_;
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetEntriesResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemGetEntriesResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemGetEntriesResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemGetEntriesResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemGetEntriesResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemGetEntriesResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemGetEntriesResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemGetEntriesResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemGetEntriesResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemGetEntriesResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemGetEntriesResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemGetEntriesResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetEntriesResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVnsresult)
 }
-inline std::string* FileSystemGetEntriesResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVnsresult)
+inline std::string* FileSystemGetEntriesResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemGetEntriesResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemGetEntriesResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemGetEntriesResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetEntriesResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetEntriesResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetEntriesResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemGetEntriesResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetEntriesResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetEntriesResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemGetEntriesResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.fs.FileSystemDirectoryListing mVFileSystemDirectoryListing = 2;
-inline bool FileSystemGetEntriesResponse::_internal_has_mvfilesystemdirectorylisting() const {
-  return content_case() == kMVFileSystemDirectoryListing;
+// .protobuf.mozilla.dom.fs.FileSystemDirectoryListing a_mVFileSystemDirectoryListing = 2;
+inline bool FileSystemGetEntriesResponse::_internal_has_a_mvfilesystemdirectorylisting() const {
+  return content_case() == kAMVFileSystemDirectoryListing;
 }
-inline bool FileSystemGetEntriesResponse::has_mvfilesystemdirectorylisting() const {
-  return _internal_has_mvfilesystemdirectorylisting();
+inline bool FileSystemGetEntriesResponse::has_a_mvfilesystemdirectorylisting() const {
+  return _internal_has_a_mvfilesystemdirectorylisting();
 }
-inline void FileSystemGetEntriesResponse::set_has_mvfilesystemdirectorylisting() {
-  _impl_._oneof_case_[0] = kMVFileSystemDirectoryListing;
+inline void FileSystemGetEntriesResponse::set_has_a_mvfilesystemdirectorylisting() {
+  _impl_._oneof_case_[0] = kAMVFileSystemDirectoryListing;
 }
-inline void FileSystemGetEntriesResponse::clear_mvfilesystemdirectorylisting() {
-  if (_internal_has_mvfilesystemdirectorylisting()) {
+inline void FileSystemGetEntriesResponse::clear_a_mvfilesystemdirectorylisting() {
+  if (_internal_has_a_mvfilesystemdirectorylisting()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemdirectorylisting_;
+      delete _impl_.content_.a_mvfilesystemdirectorylisting_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::release_mvfilesystemdirectorylisting() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVFileSystemDirectoryListing)
-  if (_internal_has_mvfilesystemdirectorylisting()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::release_a_mvfilesystemdirectorylisting() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVFileSystemDirectoryListing)
+  if (_internal_has_a_mvfilesystemdirectorylisting()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* temp = _impl_.content_.mvfilesystemdirectorylisting_;
+    ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* temp = _impl_.content_.a_mvfilesystemdirectorylisting_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemdirectorylisting_ = nullptr;
+    _impl_.content_.a_mvfilesystemdirectorylisting_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& FileSystemGetEntriesResponse::_internal_mvfilesystemdirectorylisting() const {
-  return _internal_has_mvfilesystemdirectorylisting()
-      ? *_impl_.content_.mvfilesystemdirectorylisting_
+inline const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& FileSystemGetEntriesResponse::_internal_a_mvfilesystemdirectorylisting() const {
+  return _internal_has_a_mvfilesystemdirectorylisting()
+      ? *_impl_.content_.a_mvfilesystemdirectorylisting_
       : reinterpret_cast< ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing&>(::protobuf::mozilla::dom::fs::_FileSystemDirectoryListing_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& FileSystemGetEntriesResponse::mvfilesystemdirectorylisting() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVFileSystemDirectoryListing)
-  return _internal_mvfilesystemdirectorylisting();
+inline const ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing& FileSystemGetEntriesResponse::a_mvfilesystemdirectorylisting() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVFileSystemDirectoryListing)
+  return _internal_a_mvfilesystemdirectorylisting();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::unsafe_arena_release_mvfilesystemdirectorylisting() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVFileSystemDirectoryListing)
-  if (_internal_has_mvfilesystemdirectorylisting()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::unsafe_arena_release_a_mvfilesystemdirectorylisting() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVFileSystemDirectoryListing)
+  if (_internal_has_a_mvfilesystemdirectorylisting()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* temp = _impl_.content_.mvfilesystemdirectorylisting_;
-    _impl_.content_.mvfilesystemdirectorylisting_ = nullptr;
+    ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* temp = _impl_.content_.a_mvfilesystemdirectorylisting_;
+    _impl_.content_.a_mvfilesystemdirectorylisting_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetEntriesResponse::unsafe_arena_set_allocated_mvfilesystemdirectorylisting(::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* mvfilesystemdirectorylisting) {
+inline void FileSystemGetEntriesResponse::unsafe_arena_set_allocated_a_mvfilesystemdirectorylisting(::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* a_mvfilesystemdirectorylisting) {
   clear_content();
-  if (mvfilesystemdirectorylisting) {
-    set_has_mvfilesystemdirectorylisting();
-    _impl_.content_.mvfilesystemdirectorylisting_ = mvfilesystemdirectorylisting;
+  if (a_mvfilesystemdirectorylisting) {
+    set_has_a_mvfilesystemdirectorylisting();
+    _impl_.content_.a_mvfilesystemdirectorylisting_ = a_mvfilesystemdirectorylisting;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVFileSystemDirectoryListing)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVFileSystemDirectoryListing)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::_internal_mutable_mvfilesystemdirectorylisting() {
-  if (!_internal_has_mvfilesystemdirectorylisting()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::_internal_mutable_a_mvfilesystemdirectorylisting() {
+  if (!_internal_has_a_mvfilesystemdirectorylisting()) {
     clear_content();
-    set_has_mvfilesystemdirectorylisting();
-    _impl_.content_.mvfilesystemdirectorylisting_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing >(GetArenaForAllocation());
+    set_has_a_mvfilesystemdirectorylisting();
+    _impl_.content_.a_mvfilesystemdirectorylisting_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemdirectorylisting_;
+  return _impl_.content_.a_mvfilesystemdirectorylisting_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::mutable_mvfilesystemdirectorylisting() {
-  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* _msg = _internal_mutable_mvfilesystemdirectorylisting();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.mVFileSystemDirectoryListing)
+inline ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* FileSystemGetEntriesResponse::mutable_a_mvfilesystemdirectorylisting() {
+  ::protobuf::mozilla::dom::fs::FileSystemDirectoryListing* _msg = _internal_mutable_a_mvfilesystemdirectorylisting();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse.a_mVFileSystemDirectoryListing)
   return _msg;
 }
 
@@ -5499,181 +5499,181 @@ inline FileSystemGetEntriesResponse::ContentCase FileSystemGetEntriesResponse::c
 
 // FileSystemGetFileRequest
 
-// required bytes entryId = 1;
-inline bool FileSystemGetFileRequest::_internal_has_entryid() const {
+// required bytes a_entryId = 1;
+inline bool FileSystemGetFileRequest::_internal_has_a_entryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetFileRequest::has_entryid() const {
-  return _internal_has_entryid();
+inline bool FileSystemGetFileRequest::has_a_entryid() const {
+  return _internal_has_a_entryid();
 }
-inline void FileSystemGetFileRequest::clear_entryid() {
-  _impl_.entryid_.ClearToEmpty();
+inline void FileSystemGetFileRequest::clear_a_entryid() {
+  _impl_.a_entryid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetFileRequest::entryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.entryId)
-  return _internal_entryid();
+inline const std::string& FileSystemGetFileRequest::a_entryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
+  return _internal_a_entryid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetFileRequest::set_entryid(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetFileRequest::set_a_entryid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.entryId)
+ _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
 }
-inline std::string* FileSystemGetFileRequest::mutable_entryid() {
-  std::string* _s = _internal_mutable_entryid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.entryId)
+inline std::string* FileSystemGetFileRequest::mutable_a_entryid() {
+  std::string* _s = _internal_mutable_a_entryid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
   return _s;
 }
-inline const std::string& FileSystemGetFileRequest::_internal_entryid() const {
-  return _impl_.entryid_.Get();
+inline const std::string& FileSystemGetFileRequest::_internal_a_entryid() const {
+  return _impl_.a_entryid_.Get();
 }
-inline void FileSystemGetFileRequest::_internal_set_entryid(const std::string& value) {
+inline void FileSystemGetFileRequest::_internal_set_a_entryid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.entryid_.Set(value, GetArenaForAllocation());
+  _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileRequest::_internal_mutable_entryid() {
+inline std::string* FileSystemGetFileRequest::_internal_mutable_a_entryid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.entryid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileRequest::release_entryid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.entryId)
-  if (!_internal_has_entryid()) {
+inline std::string* FileSystemGetFileRequest::release_a_entryid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
+  if (!_internal_has_a_entryid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.entryid_.Release();
+  auto* p = _impl_.a_entryid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetFileRequest::set_allocated_entryid(std::string* entryid) {
-  if (entryid != nullptr) {
+inline void FileSystemGetFileRequest::set_allocated_a_entryid(std::string* a_entryid) {
+  if (a_entryid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.entryid_.SetAllocated(entryid, GetArenaForAllocation());
+  _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.entryId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileRequest.a_entryId)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemFileProperties
 
-// required bytes last_modified_ms = 1;
-inline bool FileSystemFileProperties::_internal_has_last_modified_ms() const {
+// required bytes a_last_modified_ms = 1;
+inline bool FileSystemFileProperties::_internal_has_a_last_modified_ms() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemFileProperties::has_last_modified_ms() const {
-  return _internal_has_last_modified_ms();
+inline bool FileSystemFileProperties::has_a_last_modified_ms() const {
+  return _internal_has_a_last_modified_ms();
 }
-inline void FileSystemFileProperties::clear_last_modified_ms() {
-  _impl_.last_modified_ms_.ClearToEmpty();
+inline void FileSystemFileProperties::clear_a_last_modified_ms() {
+  _impl_.a_last_modified_ms_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemFileProperties::last_modified_ms() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.last_modified_ms)
-  return _internal_last_modified_ms();
+inline const std::string& FileSystemFileProperties::a_last_modified_ms() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
+  return _internal_a_last_modified_ms();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemFileProperties::set_last_modified_ms(ArgT0&& arg0, ArgT... args) {
+void FileSystemFileProperties::set_a_last_modified_ms(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.last_modified_ms_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.last_modified_ms)
+ _impl_.a_last_modified_ms_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
 }
-inline std::string* FileSystemFileProperties::mutable_last_modified_ms() {
-  std::string* _s = _internal_mutable_last_modified_ms();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.last_modified_ms)
+inline std::string* FileSystemFileProperties::mutable_a_last_modified_ms() {
+  std::string* _s = _internal_mutable_a_last_modified_ms();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
   return _s;
 }
-inline const std::string& FileSystemFileProperties::_internal_last_modified_ms() const {
-  return _impl_.last_modified_ms_.Get();
+inline const std::string& FileSystemFileProperties::_internal_a_last_modified_ms() const {
+  return _impl_.a_last_modified_ms_.Get();
 }
-inline void FileSystemFileProperties::_internal_set_last_modified_ms(const std::string& value) {
+inline void FileSystemFileProperties::_internal_set_a_last_modified_ms(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.last_modified_ms_.Set(value, GetArenaForAllocation());
+  _impl_.a_last_modified_ms_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemFileProperties::_internal_mutable_last_modified_ms() {
+inline std::string* FileSystemFileProperties::_internal_mutable_a_last_modified_ms() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.last_modified_ms_.Mutable(GetArenaForAllocation());
+  return _impl_.a_last_modified_ms_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemFileProperties::release_last_modified_ms() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.last_modified_ms)
-  if (!_internal_has_last_modified_ms()) {
+inline std::string* FileSystemFileProperties::release_a_last_modified_ms() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
+  if (!_internal_has_a_last_modified_ms()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.last_modified_ms_.Release();
+  auto* p = _impl_.a_last_modified_ms_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.last_modified_ms_.IsDefault()) {
-    _impl_.last_modified_ms_.Set("", GetArenaForAllocation());
+  if (_impl_.a_last_modified_ms_.IsDefault()) {
+    _impl_.a_last_modified_ms_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemFileProperties::set_allocated_last_modified_ms(std::string* last_modified_ms) {
-  if (last_modified_ms != nullptr) {
+inline void FileSystemFileProperties::set_allocated_a_last_modified_ms(std::string* a_last_modified_ms) {
+  if (a_last_modified_ms != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.last_modified_ms_.SetAllocated(last_modified_ms, GetArenaForAllocation());
+  _impl_.a_last_modified_ms_.SetAllocated(a_last_modified_ms, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.last_modified_ms_.IsDefault()) {
-    _impl_.last_modified_ms_.Set("", GetArenaForAllocation());
+  if (_impl_.a_last_modified_ms_.IsDefault()) {
+    _impl_.a_last_modified_ms_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.last_modified_ms)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_last_modified_ms)
 }
 
-// required .protobuf.mozilla.dom.IPCBlob file = 2;
-inline bool FileSystemFileProperties::_internal_has_file() const {
+// required .protobuf.mozilla.dom.IPCBlob a_file = 2;
+inline bool FileSystemFileProperties::_internal_has_a_file() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.file_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_file_ != nullptr);
   return value;
 }
-inline bool FileSystemFileProperties::has_file() const {
-  return _internal_has_file();
+inline bool FileSystemFileProperties::has_a_file() const {
+  return _internal_has_a_file();
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileProperties::_internal_file() const {
-  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.file_;
+inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileProperties::_internal_a_file() const {
+  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.a_file_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCBlob&>(
       ::protobuf::mozilla::dom::_IPCBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileProperties::file() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.file)
-  return _internal_file();
+inline const ::protobuf::mozilla::dom::IPCBlob& FileSystemFileProperties::a_file() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
+  return _internal_a_file();
 }
-inline void FileSystemFileProperties::unsafe_arena_set_allocated_file(
-    ::protobuf::mozilla::dom::IPCBlob* file) {
+inline void FileSystemFileProperties::unsafe_arena_set_allocated_a_file(
+    ::protobuf::mozilla::dom::IPCBlob* a_file) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.file_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_file_);
   }
-  _impl_.file_ = file;
-  if (file) {
+  _impl_.a_file_ = a_file;
+  if (a_file) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.file)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::release_file() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::release_a_file() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.file_;
-  _impl_.file_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_file_;
+  _impl_.a_file_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -5685,342 +5685,342 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::release_file
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::unsafe_arena_release_file() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.file)
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::unsafe_arena_release_a_file() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.file_;
-  _impl_.file_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_file_;
+  _impl_.a_file_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::_internal_mutable_file() {
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::_internal_mutable_a_file() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.file_ == nullptr) {
+  if (_impl_.a_file_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
-    _impl_.file_ = p;
+    _impl_.a_file_ = p;
   }
-  return _impl_.file_;
+  return _impl_.a_file_;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::mutable_file() {
-  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_file();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.file)
+inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileProperties::mutable_a_file() {
+  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_a_file();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
   return _msg;
 }
-inline void FileSystemFileProperties::set_allocated_file(::protobuf::mozilla::dom::IPCBlob* file) {
+inline void FileSystemFileProperties::set_allocated_a_file(::protobuf::mozilla::dom::IPCBlob* a_file) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.file_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_file_);
   }
-  if (file) {
+  if (a_file) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(file));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_file));
     if (message_arena != submessage_arena) {
-      file = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, file, submessage_arena);
+      a_file = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_file, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.file_ = file;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.file)
+  _impl_.a_file_ = a_file;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_file)
 }
 
-// required bytes type = 3;
-inline bool FileSystemFileProperties::_internal_has_type() const {
+// required bytes a_type = 3;
+inline bool FileSystemFileProperties::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemFileProperties::has_type() const {
-  return _internal_has_type();
+inline bool FileSystemFileProperties::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void FileSystemFileProperties::clear_type() {
-  _impl_.type_.ClearToEmpty();
+inline void FileSystemFileProperties::clear_a_type() {
+  _impl_.a_type_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemFileProperties::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.type)
-  return _internal_type();
+inline const std::string& FileSystemFileProperties::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
+  return _internal_a_type();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemFileProperties::set_type(ArgT0&& arg0, ArgT... args) {
+void FileSystemFileProperties::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.type)
+ _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
 }
-inline std::string* FileSystemFileProperties::mutable_type() {
-  std::string* _s = _internal_mutable_type();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.type)
+inline std::string* FileSystemFileProperties::mutable_a_type() {
+  std::string* _s = _internal_mutable_a_type();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
   return _s;
 }
-inline const std::string& FileSystemFileProperties::_internal_type() const {
-  return _impl_.type_.Get();
+inline const std::string& FileSystemFileProperties::_internal_a_type() const {
+  return _impl_.a_type_.Get();
 }
-inline void FileSystemFileProperties::_internal_set_type(const std::string& value) {
+inline void FileSystemFileProperties::_internal_set_a_type(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.type_.Set(value, GetArenaForAllocation());
+  _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemFileProperties::_internal_mutable_type() {
+inline std::string* FileSystemFileProperties::_internal_mutable_a_type() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.type_.Mutable(GetArenaForAllocation());
+  return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemFileProperties::release_type() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.type)
-  if (!_internal_has_type()) {
+inline std::string* FileSystemFileProperties::release_a_type() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
+  if (!_internal_has_a_type()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.type_.Release();
+  auto* p = _impl_.a_type_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.type_.IsDefault()) {
-    _impl_.type_.Set("", GetArenaForAllocation());
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemFileProperties::set_allocated_type(std::string* type) {
-  if (type != nullptr) {
+inline void FileSystemFileProperties::set_allocated_a_type(std::string* a_type) {
+  if (a_type != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.type_.SetAllocated(type, GetArenaForAllocation());
+  _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.type_.IsDefault()) {
-    _impl_.type_.Set("", GetArenaForAllocation());
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.type)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_type)
 }
 
-// repeated bytes path = 4;
-inline int FileSystemFileProperties::_internal_path_size() const {
-  return _impl_.path_.size();
+// repeated bytes a_path = 4;
+inline int FileSystemFileProperties::_internal_a_path_size() const {
+  return _impl_.a_path_.size();
 }
-inline int FileSystemFileProperties::path_size() const {
-  return _internal_path_size();
+inline int FileSystemFileProperties::a_path_size() const {
+  return _internal_a_path_size();
 }
-inline void FileSystemFileProperties::clear_path() {
-  _impl_.path_.Clear();
+inline void FileSystemFileProperties::clear_a_path() {
+  _impl_.a_path_.Clear();
 }
-inline std::string* FileSystemFileProperties::add_path() {
-  std::string* _s = _internal_add_path();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+inline std::string* FileSystemFileProperties::add_a_path() {
+  std::string* _s = _internal_add_a_path();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
   return _s;
 }
-inline const std::string& FileSystemFileProperties::_internal_path(int index) const {
-  return _impl_.path_.Get(index);
+inline const std::string& FileSystemFileProperties::_internal_a_path(int index) const {
+  return _impl_.a_path_.Get(index);
 }
-inline const std::string& FileSystemFileProperties::path(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
-  return _internal_path(index);
+inline const std::string& FileSystemFileProperties::a_path(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
+  return _internal_a_path(index);
 }
-inline std::string* FileSystemFileProperties::mutable_path(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
-  return _impl_.path_.Mutable(index);
+inline std::string* FileSystemFileProperties::mutable_a_path(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
+  return _impl_.a_path_.Mutable(index);
 }
-inline void FileSystemFileProperties::set_path(int index, const std::string& value) {
-  _impl_.path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+inline void FileSystemFileProperties::set_a_path(int index, const std::string& value) {
+  _impl_.a_path_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline void FileSystemFileProperties::set_path(int index, std::string&& value) {
-  _impl_.path_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+inline void FileSystemFileProperties::set_a_path(int index, std::string&& value) {
+  _impl_.a_path_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline void FileSystemFileProperties::set_path(int index, const char* value) {
+inline void FileSystemFileProperties::set_a_path(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+  _impl_.a_path_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline void FileSystemFileProperties::set_path(int index, const void* value, size_t size) {
-  _impl_.path_.Mutable(index)->assign(
+inline void FileSystemFileProperties::set_a_path(int index, const void* value, size_t size) {
+  _impl_.a_path_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline std::string* FileSystemFileProperties::_internal_add_path() {
-  return _impl_.path_.Add();
+inline std::string* FileSystemFileProperties::_internal_add_a_path() {
+  return _impl_.a_path_.Add();
 }
-inline void FileSystemFileProperties::add_path(const std::string& value) {
-  _impl_.path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+inline void FileSystemFileProperties::add_a_path(const std::string& value) {
+  _impl_.a_path_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline void FileSystemFileProperties::add_path(std::string&& value) {
-  _impl_.path_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+inline void FileSystemFileProperties::add_a_path(std::string&& value) {
+  _impl_.a_path_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline void FileSystemFileProperties::add_path(const char* value) {
+inline void FileSystemFileProperties::add_a_path(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+  _impl_.a_path_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
-inline void FileSystemFileProperties::add_path(const void* value, size_t size) {
-  _impl_.path_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
+inline void FileSystemFileProperties::add_a_path(const void* value, size_t size) {
+  _impl_.a_path_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-FileSystemFileProperties::path() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
-  return _impl_.path_;
+FileSystemFileProperties::a_path() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
+  return _impl_.a_path_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-FileSystemFileProperties::mutable_path() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemFileProperties.path)
-  return &_impl_.path_;
+FileSystemFileProperties::mutable_a_path() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemFileProperties.a_path)
+  return &_impl_.a_path_;
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetFileResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemGetFileResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemGetFileResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemGetFileResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemGetFileResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemGetFileResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemGetFileResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemGetFileResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemGetFileResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemGetFileResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemGetFileResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemGetFileResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetFileResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVnsresult)
 }
-inline std::string* FileSystemGetFileResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVnsresult)
+inline std::string* FileSystemGetFileResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemGetFileResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemGetFileResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemGetFileResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetFileResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetFileResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemGetFileResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetFileResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetFileResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemGetFileResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.fs.FileSystemFileProperties mVFileSystemFileProperties = 2;
-inline bool FileSystemGetFileResponse::_internal_has_mvfilesystemfileproperties() const {
-  return content_case() == kMVFileSystemFileProperties;
+// .protobuf.mozilla.dom.fs.FileSystemFileProperties a_mVFileSystemFileProperties = 2;
+inline bool FileSystemGetFileResponse::_internal_has_a_mvfilesystemfileproperties() const {
+  return content_case() == kAMVFileSystemFileProperties;
 }
-inline bool FileSystemGetFileResponse::has_mvfilesystemfileproperties() const {
-  return _internal_has_mvfilesystemfileproperties();
+inline bool FileSystemGetFileResponse::has_a_mvfilesystemfileproperties() const {
+  return _internal_has_a_mvfilesystemfileproperties();
 }
-inline void FileSystemGetFileResponse::set_has_mvfilesystemfileproperties() {
-  _impl_._oneof_case_[0] = kMVFileSystemFileProperties;
+inline void FileSystemGetFileResponse::set_has_a_mvfilesystemfileproperties() {
+  _impl_._oneof_case_[0] = kAMVFileSystemFileProperties;
 }
-inline void FileSystemGetFileResponse::clear_mvfilesystemfileproperties() {
-  if (_internal_has_mvfilesystemfileproperties()) {
+inline void FileSystemGetFileResponse::clear_a_mvfilesystemfileproperties() {
+  if (_internal_has_a_mvfilesystemfileproperties()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemfileproperties_;
+      delete _impl_.content_.a_mvfilesystemfileproperties_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::release_mvfilesystemfileproperties() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVFileSystemFileProperties)
-  if (_internal_has_mvfilesystemfileproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::release_a_mvfilesystemfileproperties() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVFileSystemFileProperties)
+  if (_internal_has_a_mvfilesystemfileproperties()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemFileProperties* temp = _impl_.content_.mvfilesystemfileproperties_;
+    ::protobuf::mozilla::dom::fs::FileSystemFileProperties* temp = _impl_.content_.a_mvfilesystemfileproperties_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemfileproperties_ = nullptr;
+    _impl_.content_.a_mvfilesystemfileproperties_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& FileSystemGetFileResponse::_internal_mvfilesystemfileproperties() const {
-  return _internal_has_mvfilesystemfileproperties()
-      ? *_impl_.content_.mvfilesystemfileproperties_
+inline const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& FileSystemGetFileResponse::_internal_a_mvfilesystemfileproperties() const {
+  return _internal_has_a_mvfilesystemfileproperties()
+      ? *_impl_.content_.a_mvfilesystemfileproperties_
       : reinterpret_cast< ::protobuf::mozilla::dom::fs::FileSystemFileProperties&>(::protobuf::mozilla::dom::fs::_FileSystemFileProperties_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& FileSystemGetFileResponse::mvfilesystemfileproperties() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVFileSystemFileProperties)
-  return _internal_mvfilesystemfileproperties();
+inline const ::protobuf::mozilla::dom::fs::FileSystemFileProperties& FileSystemGetFileResponse::a_mvfilesystemfileproperties() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVFileSystemFileProperties)
+  return _internal_a_mvfilesystemfileproperties();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::unsafe_arena_release_mvfilesystemfileproperties() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVFileSystemFileProperties)
-  if (_internal_has_mvfilesystemfileproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::unsafe_arena_release_a_mvfilesystemfileproperties() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVFileSystemFileProperties)
+  if (_internal_has_a_mvfilesystemfileproperties()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemFileProperties* temp = _impl_.content_.mvfilesystemfileproperties_;
-    _impl_.content_.mvfilesystemfileproperties_ = nullptr;
+    ::protobuf::mozilla::dom::fs::FileSystemFileProperties* temp = _impl_.content_.a_mvfilesystemfileproperties_;
+    _impl_.content_.a_mvfilesystemfileproperties_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetFileResponse::unsafe_arena_set_allocated_mvfilesystemfileproperties(::protobuf::mozilla::dom::fs::FileSystemFileProperties* mvfilesystemfileproperties) {
+inline void FileSystemGetFileResponse::unsafe_arena_set_allocated_a_mvfilesystemfileproperties(::protobuf::mozilla::dom::fs::FileSystemFileProperties* a_mvfilesystemfileproperties) {
   clear_content();
-  if (mvfilesystemfileproperties) {
-    set_has_mvfilesystemfileproperties();
-    _impl_.content_.mvfilesystemfileproperties_ = mvfilesystemfileproperties;
+  if (a_mvfilesystemfileproperties) {
+    set_has_a_mvfilesystemfileproperties();
+    _impl_.content_.a_mvfilesystemfileproperties_ = a_mvfilesystemfileproperties;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVFileSystemFileProperties)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVFileSystemFileProperties)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::_internal_mutable_mvfilesystemfileproperties() {
-  if (!_internal_has_mvfilesystemfileproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::_internal_mutable_a_mvfilesystemfileproperties() {
+  if (!_internal_has_a_mvfilesystemfileproperties()) {
     clear_content();
-    set_has_mvfilesystemfileproperties();
-    _impl_.content_.mvfilesystemfileproperties_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemFileProperties >(GetArenaForAllocation());
+    set_has_a_mvfilesystemfileproperties();
+    _impl_.content_.a_mvfilesystemfileproperties_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemFileProperties >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemfileproperties_;
+  return _impl_.content_.a_mvfilesystemfileproperties_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::mutable_mvfilesystemfileproperties() {
-  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* _msg = _internal_mutable_mvfilesystemfileproperties();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.mVFileSystemFileProperties)
+inline ::protobuf::mozilla::dom::fs::FileSystemFileProperties* FileSystemGetFileResponse::mutable_a_mvfilesystemfileproperties() {
+  ::protobuf::mozilla::dom::fs::FileSystemFileProperties* _msg = _internal_mutable_a_mvfilesystemfileproperties();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetFileResponse.a_mVFileSystemFileProperties)
   return _msg;
 }
 
@@ -6037,113 +6037,113 @@ inline FileSystemGetFileResponse::ContentCase FileSystemGetFileResponse::content
 
 // FileSystemGetAccessHandleRequest
 
-// required bytes entryId = 1;
-inline bool FileSystemGetAccessHandleRequest::_internal_has_entryid() const {
+// required bytes a_entryId = 1;
+inline bool FileSystemGetAccessHandleRequest::_internal_has_a_entryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetAccessHandleRequest::has_entryid() const {
-  return _internal_has_entryid();
+inline bool FileSystemGetAccessHandleRequest::has_a_entryid() const {
+  return _internal_has_a_entryid();
 }
-inline void FileSystemGetAccessHandleRequest::clear_entryid() {
-  _impl_.entryid_.ClearToEmpty();
+inline void FileSystemGetAccessHandleRequest::clear_a_entryid() {
+  _impl_.a_entryid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetAccessHandleRequest::entryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.entryId)
-  return _internal_entryid();
+inline const std::string& FileSystemGetAccessHandleRequest::a_entryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
+  return _internal_a_entryid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetAccessHandleRequest::set_entryid(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetAccessHandleRequest::set_a_entryid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.entryId)
+ _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
 }
-inline std::string* FileSystemGetAccessHandleRequest::mutable_entryid() {
-  std::string* _s = _internal_mutable_entryid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.entryId)
+inline std::string* FileSystemGetAccessHandleRequest::mutable_a_entryid() {
+  std::string* _s = _internal_mutable_a_entryid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
   return _s;
 }
-inline const std::string& FileSystemGetAccessHandleRequest::_internal_entryid() const {
-  return _impl_.entryid_.Get();
+inline const std::string& FileSystemGetAccessHandleRequest::_internal_a_entryid() const {
+  return _impl_.a_entryid_.Get();
 }
-inline void FileSystemGetAccessHandleRequest::_internal_set_entryid(const std::string& value) {
+inline void FileSystemGetAccessHandleRequest::_internal_set_a_entryid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.entryid_.Set(value, GetArenaForAllocation());
+  _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetAccessHandleRequest::_internal_mutable_entryid() {
+inline std::string* FileSystemGetAccessHandleRequest::_internal_mutable_a_entryid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.entryid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetAccessHandleRequest::release_entryid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.entryId)
-  if (!_internal_has_entryid()) {
+inline std::string* FileSystemGetAccessHandleRequest::release_a_entryid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
+  if (!_internal_has_a_entryid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.entryid_.Release();
+  auto* p = _impl_.a_entryid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetAccessHandleRequest::set_allocated_entryid(std::string* entryid) {
-  if (entryid != nullptr) {
+inline void FileSystemGetAccessHandleRequest::set_allocated_a_entryid(std::string* a_entryid) {
+  if (a_entryid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.entryid_.SetAllocated(entryid, GetArenaForAllocation());
+  _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.entryId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest.a_entryId)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemAccessHandleProperties
 
-// required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
-inline bool FileSystemAccessHandleProperties::_internal_has_streamparams() const {
+// required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+inline bool FileSystemAccessHandleProperties::_internal_has_a_streamparams() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.streamparams_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_streamparams_ != nullptr);
   return value;
 }
-inline bool FileSystemAccessHandleProperties::has_streamparams() const {
-  return _internal_has_streamparams();
+inline bool FileSystemAccessHandleProperties::has_a_streamparams() const {
+  return _internal_has_a_streamparams();
 }
-inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemAccessHandleProperties::_internal_streamparams() const {
-  const ::protobuf::mozilla::ipc::RandomAccessStreamParams* p = _impl_.streamparams_;
+inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemAccessHandleProperties::_internal_a_streamparams() const {
+  const ::protobuf::mozilla::ipc::RandomAccessStreamParams* p = _impl_.a_streamparams_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::RandomAccessStreamParams&>(
       ::protobuf::mozilla::ipc::_RandomAccessStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemAccessHandleProperties::streamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.streamParams)
-  return _internal_streamparams();
+inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemAccessHandleProperties::a_streamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
+  return _internal_a_streamparams();
 }
-inline void FileSystemAccessHandleProperties::unsafe_arena_set_allocated_streamparams(
-    ::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams) {
+inline void FileSystemAccessHandleProperties::unsafe_arena_set_allocated_a_streamparams(
+    ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.streamparams_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_streamparams_);
   }
-  _impl_.streamparams_ = streamparams;
-  if (streamparams) {
+  _impl_.a_streamparams_ = a_streamparams;
+  if (a_streamparams) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.streamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::release_streamparams() {
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::release_a_streamparams() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.streamparams_;
-  _impl_.streamparams_ = nullptr;
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
+  _impl_.a_streamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -6155,335 +6155,335 @@ inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandl
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::unsafe_arena_release_streamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.streamParams)
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::unsafe_arena_release_a_streamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.streamparams_;
-  _impl_.streamparams_ = nullptr;
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
+  _impl_.a_streamparams_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::_internal_mutable_streamparams() {
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::_internal_mutable_a_streamparams() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.streamparams_ == nullptr) {
+  if (_impl_.a_streamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::RandomAccessStreamParams>(GetArenaForAllocation());
-    _impl_.streamparams_ = p;
+    _impl_.a_streamparams_ = p;
   }
-  return _impl_.streamparams_;
+  return _impl_.a_streamparams_;
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::mutable_streamparams() {
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _msg = _internal_mutable_streamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.streamParams)
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemAccessHandleProperties::mutable_a_streamparams() {
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _msg = _internal_mutable_a_streamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
   return _msg;
 }
-inline void FileSystemAccessHandleProperties::set_allocated_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams) {
+inline void FileSystemAccessHandleProperties::set_allocated_a_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.streamparams_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_streamparams_);
   }
-  if (streamparams) {
+  if (a_streamparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(streamparams));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_streamparams));
     if (message_arena != submessage_arena) {
-      streamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, streamparams, submessage_arena);
+      a_streamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_streamparams, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.streamparams_ = streamparams;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.streamParams)
+  _impl_.a_streamparams_ = a_streamparams;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_streamParams)
 }
 
-// required bytes accessHandleChildEndpoint = 2;
-inline bool FileSystemAccessHandleProperties::_internal_has_accesshandlechildendpoint() const {
+// required bytes a_accessHandleChildEndpoint = 2;
+inline bool FileSystemAccessHandleProperties::_internal_has_a_accesshandlechildendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemAccessHandleProperties::has_accesshandlechildendpoint() const {
-  return _internal_has_accesshandlechildendpoint();
+inline bool FileSystemAccessHandleProperties::has_a_accesshandlechildendpoint() const {
+  return _internal_has_a_accesshandlechildendpoint();
 }
-inline void FileSystemAccessHandleProperties::clear_accesshandlechildendpoint() {
-  _impl_.accesshandlechildendpoint_.ClearToEmpty();
+inline void FileSystemAccessHandleProperties::clear_a_accesshandlechildendpoint() {
+  _impl_.a_accesshandlechildendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemAccessHandleProperties::accesshandlechildendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleChildEndpoint)
-  return _internal_accesshandlechildendpoint();
+inline const std::string& FileSystemAccessHandleProperties::a_accesshandlechildendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
+  return _internal_a_accesshandlechildendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemAccessHandleProperties::set_accesshandlechildendpoint(ArgT0&& arg0, ArgT... args) {
+void FileSystemAccessHandleProperties::set_a_accesshandlechildendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.accesshandlechildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleChildEndpoint)
+ _impl_.a_accesshandlechildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
 }
-inline std::string* FileSystemAccessHandleProperties::mutable_accesshandlechildendpoint() {
-  std::string* _s = _internal_mutable_accesshandlechildendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleChildEndpoint)
+inline std::string* FileSystemAccessHandleProperties::mutable_a_accesshandlechildendpoint() {
+  std::string* _s = _internal_mutable_a_accesshandlechildendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
   return _s;
 }
-inline const std::string& FileSystemAccessHandleProperties::_internal_accesshandlechildendpoint() const {
-  return _impl_.accesshandlechildendpoint_.Get();
+inline const std::string& FileSystemAccessHandleProperties::_internal_a_accesshandlechildendpoint() const {
+  return _impl_.a_accesshandlechildendpoint_.Get();
 }
-inline void FileSystemAccessHandleProperties::_internal_set_accesshandlechildendpoint(const std::string& value) {
+inline void FileSystemAccessHandleProperties::_internal_set_a_accesshandlechildendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.accesshandlechildendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_accesshandlechildendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemAccessHandleProperties::_internal_mutable_accesshandlechildendpoint() {
+inline std::string* FileSystemAccessHandleProperties::_internal_mutable_a_accesshandlechildendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.accesshandlechildendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_accesshandlechildendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemAccessHandleProperties::release_accesshandlechildendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleChildEndpoint)
-  if (!_internal_has_accesshandlechildendpoint()) {
+inline std::string* FileSystemAccessHandleProperties::release_a_accesshandlechildendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
+  if (!_internal_has_a_accesshandlechildendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.accesshandlechildendpoint_.Release();
+  auto* p = _impl_.a_accesshandlechildendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.accesshandlechildendpoint_.IsDefault()) {
-    _impl_.accesshandlechildendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_accesshandlechildendpoint_.IsDefault()) {
+    _impl_.a_accesshandlechildendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemAccessHandleProperties::set_allocated_accesshandlechildendpoint(std::string* accesshandlechildendpoint) {
-  if (accesshandlechildendpoint != nullptr) {
+inline void FileSystemAccessHandleProperties::set_allocated_a_accesshandlechildendpoint(std::string* a_accesshandlechildendpoint) {
+  if (a_accesshandlechildendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.accesshandlechildendpoint_.SetAllocated(accesshandlechildendpoint, GetArenaForAllocation());
+  _impl_.a_accesshandlechildendpoint_.SetAllocated(a_accesshandlechildendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.accesshandlechildendpoint_.IsDefault()) {
-    _impl_.accesshandlechildendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_accesshandlechildendpoint_.IsDefault()) {
+    _impl_.a_accesshandlechildendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleChildEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleChildEndpoint)
 }
 
-// required bytes accessHandleControlChildEndpoint = 3;
-inline bool FileSystemAccessHandleProperties::_internal_has_accesshandlecontrolchildendpoint() const {
+// required bytes a_accessHandleControlChildEndpoint = 3;
+inline bool FileSystemAccessHandleProperties::_internal_has_a_accesshandlecontrolchildendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemAccessHandleProperties::has_accesshandlecontrolchildendpoint() const {
-  return _internal_has_accesshandlecontrolchildendpoint();
+inline bool FileSystemAccessHandleProperties::has_a_accesshandlecontrolchildendpoint() const {
+  return _internal_has_a_accesshandlecontrolchildendpoint();
 }
-inline void FileSystemAccessHandleProperties::clear_accesshandlecontrolchildendpoint() {
-  _impl_.accesshandlecontrolchildendpoint_.ClearToEmpty();
+inline void FileSystemAccessHandleProperties::clear_a_accesshandlecontrolchildendpoint() {
+  _impl_.a_accesshandlecontrolchildendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemAccessHandleProperties::accesshandlecontrolchildendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleControlChildEndpoint)
-  return _internal_accesshandlecontrolchildendpoint();
+inline const std::string& FileSystemAccessHandleProperties::a_accesshandlecontrolchildendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
+  return _internal_a_accesshandlecontrolchildendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemAccessHandleProperties::set_accesshandlecontrolchildendpoint(ArgT0&& arg0, ArgT... args) {
+void FileSystemAccessHandleProperties::set_a_accesshandlecontrolchildendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.accesshandlecontrolchildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleControlChildEndpoint)
+ _impl_.a_accesshandlecontrolchildendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
 }
-inline std::string* FileSystemAccessHandleProperties::mutable_accesshandlecontrolchildendpoint() {
-  std::string* _s = _internal_mutable_accesshandlecontrolchildendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleControlChildEndpoint)
+inline std::string* FileSystemAccessHandleProperties::mutable_a_accesshandlecontrolchildendpoint() {
+  std::string* _s = _internal_mutable_a_accesshandlecontrolchildendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
   return _s;
 }
-inline const std::string& FileSystemAccessHandleProperties::_internal_accesshandlecontrolchildendpoint() const {
-  return _impl_.accesshandlecontrolchildendpoint_.Get();
+inline const std::string& FileSystemAccessHandleProperties::_internal_a_accesshandlecontrolchildendpoint() const {
+  return _impl_.a_accesshandlecontrolchildendpoint_.Get();
 }
-inline void FileSystemAccessHandleProperties::_internal_set_accesshandlecontrolchildendpoint(const std::string& value) {
+inline void FileSystemAccessHandleProperties::_internal_set_a_accesshandlecontrolchildendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.accesshandlecontrolchildendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_accesshandlecontrolchildendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemAccessHandleProperties::_internal_mutable_accesshandlecontrolchildendpoint() {
+inline std::string* FileSystemAccessHandleProperties::_internal_mutable_a_accesshandlecontrolchildendpoint() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.accesshandlecontrolchildendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_accesshandlecontrolchildendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemAccessHandleProperties::release_accesshandlecontrolchildendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleControlChildEndpoint)
-  if (!_internal_has_accesshandlecontrolchildendpoint()) {
+inline std::string* FileSystemAccessHandleProperties::release_a_accesshandlecontrolchildendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
+  if (!_internal_has_a_accesshandlecontrolchildendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.accesshandlecontrolchildendpoint_.Release();
+  auto* p = _impl_.a_accesshandlecontrolchildendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.accesshandlecontrolchildendpoint_.IsDefault()) {
-    _impl_.accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_accesshandlecontrolchildendpoint_.IsDefault()) {
+    _impl_.a_accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemAccessHandleProperties::set_allocated_accesshandlecontrolchildendpoint(std::string* accesshandlecontrolchildendpoint) {
-  if (accesshandlecontrolchildendpoint != nullptr) {
+inline void FileSystemAccessHandleProperties::set_allocated_a_accesshandlecontrolchildendpoint(std::string* a_accesshandlecontrolchildendpoint) {
+  if (a_accesshandlecontrolchildendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.accesshandlecontrolchildendpoint_.SetAllocated(accesshandlecontrolchildendpoint, GetArenaForAllocation());
+  _impl_.a_accesshandlecontrolchildendpoint_.SetAllocated(a_accesshandlecontrolchildendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.accesshandlecontrolchildendpoint_.IsDefault()) {
-    _impl_.accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_accesshandlecontrolchildendpoint_.IsDefault()) {
+    _impl_.a_accesshandlecontrolchildendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.accessHandleControlChildEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties.a_accessHandleControlChildEndpoint)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetAccessHandleResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemGetAccessHandleResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemGetAccessHandleResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemGetAccessHandleResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemGetAccessHandleResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemGetAccessHandleResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemGetAccessHandleResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemGetAccessHandleResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemGetAccessHandleResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemGetAccessHandleResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemGetAccessHandleResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemGetAccessHandleResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetAccessHandleResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVnsresult)
 }
-inline std::string* FileSystemGetAccessHandleResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVnsresult)
+inline std::string* FileSystemGetAccessHandleResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemGetAccessHandleResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemGetAccessHandleResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemGetAccessHandleResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetAccessHandleResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetAccessHandleResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetAccessHandleResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemGetAccessHandleResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetAccessHandleResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetAccessHandleResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemGetAccessHandleResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties mVFileSystemAccessHandleProperties = 2;
-inline bool FileSystemGetAccessHandleResponse::_internal_has_mvfilesystemaccesshandleproperties() const {
-  return content_case() == kMVFileSystemAccessHandleProperties;
+// .protobuf.mozilla.dom.fs.FileSystemAccessHandleProperties a_mVFileSystemAccessHandleProperties = 2;
+inline bool FileSystemGetAccessHandleResponse::_internal_has_a_mvfilesystemaccesshandleproperties() const {
+  return content_case() == kAMVFileSystemAccessHandleProperties;
 }
-inline bool FileSystemGetAccessHandleResponse::has_mvfilesystemaccesshandleproperties() const {
-  return _internal_has_mvfilesystemaccesshandleproperties();
+inline bool FileSystemGetAccessHandleResponse::has_a_mvfilesystemaccesshandleproperties() const {
+  return _internal_has_a_mvfilesystemaccesshandleproperties();
 }
-inline void FileSystemGetAccessHandleResponse::set_has_mvfilesystemaccesshandleproperties() {
-  _impl_._oneof_case_[0] = kMVFileSystemAccessHandleProperties;
+inline void FileSystemGetAccessHandleResponse::set_has_a_mvfilesystemaccesshandleproperties() {
+  _impl_._oneof_case_[0] = kAMVFileSystemAccessHandleProperties;
 }
-inline void FileSystemGetAccessHandleResponse::clear_mvfilesystemaccesshandleproperties() {
-  if (_internal_has_mvfilesystemaccesshandleproperties()) {
+inline void FileSystemGetAccessHandleResponse::clear_a_mvfilesystemaccesshandleproperties() {
+  if (_internal_has_a_mvfilesystemaccesshandleproperties()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemaccesshandleproperties_;
+      delete _impl_.content_.a_mvfilesystemaccesshandleproperties_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::release_mvfilesystemaccesshandleproperties() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVFileSystemAccessHandleProperties)
-  if (_internal_has_mvfilesystemaccesshandleproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::release_a_mvfilesystemaccesshandleproperties() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVFileSystemAccessHandleProperties)
+  if (_internal_has_a_mvfilesystemaccesshandleproperties()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* temp = _impl_.content_.mvfilesystemaccesshandleproperties_;
+    ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* temp = _impl_.content_.a_mvfilesystemaccesshandleproperties_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemaccesshandleproperties_ = nullptr;
+    _impl_.content_.a_mvfilesystemaccesshandleproperties_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& FileSystemGetAccessHandleResponse::_internal_mvfilesystemaccesshandleproperties() const {
-  return _internal_has_mvfilesystemaccesshandleproperties()
-      ? *_impl_.content_.mvfilesystemaccesshandleproperties_
+inline const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& FileSystemGetAccessHandleResponse::_internal_a_mvfilesystemaccesshandleproperties() const {
+  return _internal_has_a_mvfilesystemaccesshandleproperties()
+      ? *_impl_.content_.a_mvfilesystemaccesshandleproperties_
       : reinterpret_cast< ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties&>(::protobuf::mozilla::dom::fs::_FileSystemAccessHandleProperties_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& FileSystemGetAccessHandleResponse::mvfilesystemaccesshandleproperties() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVFileSystemAccessHandleProperties)
-  return _internal_mvfilesystemaccesshandleproperties();
+inline const ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties& FileSystemGetAccessHandleResponse::a_mvfilesystemaccesshandleproperties() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVFileSystemAccessHandleProperties)
+  return _internal_a_mvfilesystemaccesshandleproperties();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::unsafe_arena_release_mvfilesystemaccesshandleproperties() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVFileSystemAccessHandleProperties)
-  if (_internal_has_mvfilesystemaccesshandleproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::unsafe_arena_release_a_mvfilesystemaccesshandleproperties() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVFileSystemAccessHandleProperties)
+  if (_internal_has_a_mvfilesystemaccesshandleproperties()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* temp = _impl_.content_.mvfilesystemaccesshandleproperties_;
-    _impl_.content_.mvfilesystemaccesshandleproperties_ = nullptr;
+    ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* temp = _impl_.content_.a_mvfilesystemaccesshandleproperties_;
+    _impl_.content_.a_mvfilesystemaccesshandleproperties_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetAccessHandleResponse::unsafe_arena_set_allocated_mvfilesystemaccesshandleproperties(::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* mvfilesystemaccesshandleproperties) {
+inline void FileSystemGetAccessHandleResponse::unsafe_arena_set_allocated_a_mvfilesystemaccesshandleproperties(::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* a_mvfilesystemaccesshandleproperties) {
   clear_content();
-  if (mvfilesystemaccesshandleproperties) {
-    set_has_mvfilesystemaccesshandleproperties();
-    _impl_.content_.mvfilesystemaccesshandleproperties_ = mvfilesystemaccesshandleproperties;
+  if (a_mvfilesystemaccesshandleproperties) {
+    set_has_a_mvfilesystemaccesshandleproperties();
+    _impl_.content_.a_mvfilesystemaccesshandleproperties_ = a_mvfilesystemaccesshandleproperties;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVFileSystemAccessHandleProperties)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVFileSystemAccessHandleProperties)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::_internal_mutable_mvfilesystemaccesshandleproperties() {
-  if (!_internal_has_mvfilesystemaccesshandleproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::_internal_mutable_a_mvfilesystemaccesshandleproperties() {
+  if (!_internal_has_a_mvfilesystemaccesshandleproperties()) {
     clear_content();
-    set_has_mvfilesystemaccesshandleproperties();
-    _impl_.content_.mvfilesystemaccesshandleproperties_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties >(GetArenaForAllocation());
+    set_has_a_mvfilesystemaccesshandleproperties();
+    _impl_.content_.a_mvfilesystemaccesshandleproperties_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemaccesshandleproperties_;
+  return _impl_.content_.a_mvfilesystemaccesshandleproperties_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::mutable_mvfilesystemaccesshandleproperties() {
-  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* _msg = _internal_mutable_mvfilesystemaccesshandleproperties();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.mVFileSystemAccessHandleProperties)
+inline ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* FileSystemGetAccessHandleResponse::mutable_a_mvfilesystemaccesshandleproperties() {
+  ::protobuf::mozilla::dom::fs::FileSystemAccessHandleProperties* _msg = _internal_mutable_a_mvfilesystemaccesshandleproperties();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse.a_mVFileSystemAccessHandleProperties)
   return _msg;
 }
 
@@ -6500,141 +6500,141 @@ inline FileSystemGetAccessHandleResponse::ContentCase FileSystemGetAccessHandleR
 
 // FileSystemGetWritableRequest
 
-// required bytes entryId = 1;
-inline bool FileSystemGetWritableRequest::_internal_has_entryid() const {
+// required bytes a_entryId = 1;
+inline bool FileSystemGetWritableRequest::_internal_has_a_entryid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemGetWritableRequest::has_entryid() const {
-  return _internal_has_entryid();
+inline bool FileSystemGetWritableRequest::has_a_entryid() const {
+  return _internal_has_a_entryid();
 }
-inline void FileSystemGetWritableRequest::clear_entryid() {
-  _impl_.entryid_.ClearToEmpty();
+inline void FileSystemGetWritableRequest::clear_a_entryid() {
+  _impl_.a_entryid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemGetWritableRequest::entryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.entryId)
-  return _internal_entryid();
+inline const std::string& FileSystemGetWritableRequest::a_entryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
+  return _internal_a_entryid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemGetWritableRequest::set_entryid(ArgT0&& arg0, ArgT... args) {
+void FileSystemGetWritableRequest::set_a_entryid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.entryId)
+ _impl_.a_entryid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
 }
-inline std::string* FileSystemGetWritableRequest::mutable_entryid() {
-  std::string* _s = _internal_mutable_entryid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.entryId)
+inline std::string* FileSystemGetWritableRequest::mutable_a_entryid() {
+  std::string* _s = _internal_mutable_a_entryid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
   return _s;
 }
-inline const std::string& FileSystemGetWritableRequest::_internal_entryid() const {
-  return _impl_.entryid_.Get();
+inline const std::string& FileSystemGetWritableRequest::_internal_a_entryid() const {
+  return _impl_.a_entryid_.Get();
 }
-inline void FileSystemGetWritableRequest::_internal_set_entryid(const std::string& value) {
+inline void FileSystemGetWritableRequest::_internal_set_a_entryid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.entryid_.Set(value, GetArenaForAllocation());
+  _impl_.a_entryid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetWritableRequest::_internal_mutable_entryid() {
+inline std::string* FileSystemGetWritableRequest::_internal_mutable_a_entryid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.entryid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_entryid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemGetWritableRequest::release_entryid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.entryId)
-  if (!_internal_has_entryid()) {
+inline std::string* FileSystemGetWritableRequest::release_a_entryid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
+  if (!_internal_has_a_entryid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.entryid_.Release();
+  auto* p = _impl_.a_entryid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemGetWritableRequest::set_allocated_entryid(std::string* entryid) {
-  if (entryid != nullptr) {
+inline void FileSystemGetWritableRequest::set_allocated_a_entryid(std::string* a_entryid) {
+  if (a_entryid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.entryid_.SetAllocated(entryid, GetArenaForAllocation());
+  _impl_.a_entryid_.SetAllocated(a_entryid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.entryid_.IsDefault()) {
-    _impl_.entryid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_entryid_.IsDefault()) {
+    _impl_.a_entryid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.entryId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_entryId)
 }
 
-// required bool keepData = 2;
-inline bool FileSystemGetWritableRequest::_internal_has_keepdata() const {
+// required bool a_keepData = 2;
+inline bool FileSystemGetWritableRequest::_internal_has_a_keepdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemGetWritableRequest::has_keepdata() const {
-  return _internal_has_keepdata();
+inline bool FileSystemGetWritableRequest::has_a_keepdata() const {
+  return _internal_has_a_keepdata();
 }
-inline void FileSystemGetWritableRequest::clear_keepdata() {
-  _impl_.keepdata_ = false;
+inline void FileSystemGetWritableRequest::clear_a_keepdata() {
+  _impl_.a_keepdata_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool FileSystemGetWritableRequest::_internal_keepdata() const {
-  return _impl_.keepdata_;
+inline bool FileSystemGetWritableRequest::_internal_a_keepdata() const {
+  return _impl_.a_keepdata_;
 }
-inline bool FileSystemGetWritableRequest::keepdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.keepData)
-  return _internal_keepdata();
+inline bool FileSystemGetWritableRequest::a_keepdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_keepData)
+  return _internal_a_keepdata();
 }
-inline void FileSystemGetWritableRequest::_internal_set_keepdata(bool value) {
+inline void FileSystemGetWritableRequest::_internal_set_a_keepdata(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.keepdata_ = value;
+  _impl_.a_keepdata_ = value;
 }
-inline void FileSystemGetWritableRequest::set_keepdata(bool value) {
-  _internal_set_keepdata(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.keepData)
+inline void FileSystemGetWritableRequest::set_a_keepdata(bool value) {
+  _internal_set_a_keepdata(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableRequest.a_keepData)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemWritableFileStreamProperties
 
-// required .protobuf.mozilla.ipc.RandomAccessStreamParams streamParams = 1;
-inline bool FileSystemWritableFileStreamProperties::_internal_has_streamparams() const {
+// required .protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+inline bool FileSystemWritableFileStreamProperties::_internal_has_a_streamparams() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.streamparams_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_streamparams_ != nullptr);
   return value;
 }
-inline bool FileSystemWritableFileStreamProperties::has_streamparams() const {
-  return _internal_has_streamparams();
+inline bool FileSystemWritableFileStreamProperties::has_a_streamparams() const {
+  return _internal_has_a_streamparams();
 }
-inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemWritableFileStreamProperties::_internal_streamparams() const {
-  const ::protobuf::mozilla::ipc::RandomAccessStreamParams* p = _impl_.streamparams_;
+inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemWritableFileStreamProperties::_internal_a_streamparams() const {
+  const ::protobuf::mozilla::ipc::RandomAccessStreamParams* p = _impl_.a_streamparams_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::RandomAccessStreamParams&>(
       ::protobuf::mozilla::ipc::_RandomAccessStreamParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemWritableFileStreamProperties::streamparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.streamParams)
-  return _internal_streamparams();
+inline const ::protobuf::mozilla::ipc::RandomAccessStreamParams& FileSystemWritableFileStreamProperties::a_streamparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
+  return _internal_a_streamparams();
 }
-inline void FileSystemWritableFileStreamProperties::unsafe_arena_set_allocated_streamparams(
-    ::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams) {
+inline void FileSystemWritableFileStreamProperties::unsafe_arena_set_allocated_a_streamparams(
+    ::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.streamparams_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_streamparams_);
   }
-  _impl_.streamparams_ = streamparams;
-  if (streamparams) {
+  _impl_.a_streamparams_ = a_streamparams;
+  if (a_streamparams) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.streamParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::release_streamparams() {
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::release_a_streamparams() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.streamparams_;
-  _impl_.streamparams_ = nullptr;
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
+  _impl_.a_streamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -6646,267 +6646,267 @@ inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFil
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::unsafe_arena_release_streamparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.streamParams)
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::unsafe_arena_release_a_streamparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.streamparams_;
-  _impl_.streamparams_ = nullptr;
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* temp = _impl_.a_streamparams_;
+  _impl_.a_streamparams_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::_internal_mutable_streamparams() {
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::_internal_mutable_a_streamparams() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.streamparams_ == nullptr) {
+  if (_impl_.a_streamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::RandomAccessStreamParams>(GetArenaForAllocation());
-    _impl_.streamparams_ = p;
+    _impl_.a_streamparams_ = p;
   }
-  return _impl_.streamparams_;
+  return _impl_.a_streamparams_;
 }
-inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::mutable_streamparams() {
-  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _msg = _internal_mutable_streamparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.streamParams)
+inline ::protobuf::mozilla::ipc::RandomAccessStreamParams* FileSystemWritableFileStreamProperties::mutable_a_streamparams() {
+  ::protobuf::mozilla::ipc::RandomAccessStreamParams* _msg = _internal_mutable_a_streamparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
   return _msg;
 }
-inline void FileSystemWritableFileStreamProperties::set_allocated_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* streamparams) {
+inline void FileSystemWritableFileStreamProperties::set_allocated_a_streamparams(::protobuf::mozilla::ipc::RandomAccessStreamParams* a_streamparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.streamparams_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_streamparams_);
   }
-  if (streamparams) {
+  if (a_streamparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(streamparams));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_streamparams));
     if (message_arena != submessage_arena) {
-      streamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, streamparams, submessage_arena);
+      a_streamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_streamparams, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.streamparams_ = streamparams;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.streamParams)
+  _impl_.a_streamparams_ = a_streamparams;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_streamParams)
 }
 
-// required bytes writableFileStream = 2;
-inline bool FileSystemWritableFileStreamProperties::_internal_has_writablefilestream() const {
+// required bytes a_writableFileStream = 2;
+inline bool FileSystemWritableFileStreamProperties::_internal_has_a_writablefilestream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemWritableFileStreamProperties::has_writablefilestream() const {
-  return _internal_has_writablefilestream();
+inline bool FileSystemWritableFileStreamProperties::has_a_writablefilestream() const {
+  return _internal_has_a_writablefilestream();
 }
-inline void FileSystemWritableFileStreamProperties::clear_writablefilestream() {
-  _impl_.writablefilestream_.ClearToEmpty();
+inline void FileSystemWritableFileStreamProperties::clear_a_writablefilestream() {
+  _impl_.a_writablefilestream_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemWritableFileStreamProperties::writablefilestream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.writableFileStream)
-  return _internal_writablefilestream();
+inline const std::string& FileSystemWritableFileStreamProperties::a_writablefilestream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
+  return _internal_a_writablefilestream();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemWritableFileStreamProperties::set_writablefilestream(ArgT0&& arg0, ArgT... args) {
+void FileSystemWritableFileStreamProperties::set_a_writablefilestream(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.writablefilestream_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.writableFileStream)
+ _impl_.a_writablefilestream_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
 }
-inline std::string* FileSystemWritableFileStreamProperties::mutable_writablefilestream() {
-  std::string* _s = _internal_mutable_writablefilestream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.writableFileStream)
+inline std::string* FileSystemWritableFileStreamProperties::mutable_a_writablefilestream() {
+  std::string* _s = _internal_mutable_a_writablefilestream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
   return _s;
 }
-inline const std::string& FileSystemWritableFileStreamProperties::_internal_writablefilestream() const {
-  return _impl_.writablefilestream_.Get();
+inline const std::string& FileSystemWritableFileStreamProperties::_internal_a_writablefilestream() const {
+  return _impl_.a_writablefilestream_.Get();
 }
-inline void FileSystemWritableFileStreamProperties::_internal_set_writablefilestream(const std::string& value) {
+inline void FileSystemWritableFileStreamProperties::_internal_set_a_writablefilestream(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.writablefilestream_.Set(value, GetArenaForAllocation());
+  _impl_.a_writablefilestream_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemWritableFileStreamProperties::_internal_mutable_writablefilestream() {
+inline std::string* FileSystemWritableFileStreamProperties::_internal_mutable_a_writablefilestream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.writablefilestream_.Mutable(GetArenaForAllocation());
+  return _impl_.a_writablefilestream_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemWritableFileStreamProperties::release_writablefilestream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.writableFileStream)
-  if (!_internal_has_writablefilestream()) {
+inline std::string* FileSystemWritableFileStreamProperties::release_a_writablefilestream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
+  if (!_internal_has_a_writablefilestream()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.writablefilestream_.Release();
+  auto* p = _impl_.a_writablefilestream_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.writablefilestream_.IsDefault()) {
-    _impl_.writablefilestream_.Set("", GetArenaForAllocation());
+  if (_impl_.a_writablefilestream_.IsDefault()) {
+    _impl_.a_writablefilestream_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemWritableFileStreamProperties::set_allocated_writablefilestream(std::string* writablefilestream) {
-  if (writablefilestream != nullptr) {
+inline void FileSystemWritableFileStreamProperties::set_allocated_a_writablefilestream(std::string* a_writablefilestream) {
+  if (a_writablefilestream != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.writablefilestream_.SetAllocated(writablefilestream, GetArenaForAllocation());
+  _impl_.a_writablefilestream_.SetAllocated(a_writablefilestream, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.writablefilestream_.IsDefault()) {
-    _impl_.writablefilestream_.Set("", GetArenaForAllocation());
+  if (_impl_.a_writablefilestream_.IsDefault()) {
+    _impl_.a_writablefilestream_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.writableFileStream)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties.a_writableFileStream)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemGetWritableFileStreamResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemGetWritableFileStreamResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemGetWritableFileStreamResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemGetWritableFileStreamResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemGetWritableFileStreamResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemGetWritableFileStreamResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemGetWritableFileStreamResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemGetWritableFileStreamResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemGetWritableFileStreamResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemGetWritableFileStreamResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemGetWritableFileStreamResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemGetWritableFileStreamResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetWritableFileStreamResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVnsresult)
 }
-inline std::string* FileSystemGetWritableFileStreamResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVnsresult)
+inline std::string* FileSystemGetWritableFileStreamResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemGetWritableFileStreamResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemGetWritableFileStreamResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemGetWritableFileStreamResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemGetWritableFileStreamResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemGetWritableFileStreamResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetWritableFileStreamResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemGetWritableFileStreamResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemGetWritableFileStreamResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetWritableFileStreamResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemGetWritableFileStreamResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties mVFileSystemWritableFileStreamProperties = 2;
-inline bool FileSystemGetWritableFileStreamResponse::_internal_has_mvfilesystemwritablefilestreamproperties() const {
-  return content_case() == kMVFileSystemWritableFileStreamProperties;
+// .protobuf.mozilla.dom.fs.FileSystemWritableFileStreamProperties a_mVFileSystemWritableFileStreamProperties = 2;
+inline bool FileSystemGetWritableFileStreamResponse::_internal_has_a_mvfilesystemwritablefilestreamproperties() const {
+  return content_case() == kAMVFileSystemWritableFileStreamProperties;
 }
-inline bool FileSystemGetWritableFileStreamResponse::has_mvfilesystemwritablefilestreamproperties() const {
-  return _internal_has_mvfilesystemwritablefilestreamproperties();
+inline bool FileSystemGetWritableFileStreamResponse::has_a_mvfilesystemwritablefilestreamproperties() const {
+  return _internal_has_a_mvfilesystemwritablefilestreamproperties();
 }
-inline void FileSystemGetWritableFileStreamResponse::set_has_mvfilesystemwritablefilestreamproperties() {
-  _impl_._oneof_case_[0] = kMVFileSystemWritableFileStreamProperties;
+inline void FileSystemGetWritableFileStreamResponse::set_has_a_mvfilesystemwritablefilestreamproperties() {
+  _impl_._oneof_case_[0] = kAMVFileSystemWritableFileStreamProperties;
 }
-inline void FileSystemGetWritableFileStreamResponse::clear_mvfilesystemwritablefilestreamproperties() {
-  if (_internal_has_mvfilesystemwritablefilestreamproperties()) {
+inline void FileSystemGetWritableFileStreamResponse::clear_a_mvfilesystemwritablefilestreamproperties() {
+  if (_internal_has_a_mvfilesystemwritablefilestreamproperties()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvfilesystemwritablefilestreamproperties_;
+      delete _impl_.content_.a_mvfilesystemwritablefilestreamproperties_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::release_mvfilesystemwritablefilestreamproperties() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVFileSystemWritableFileStreamProperties)
-  if (_internal_has_mvfilesystemwritablefilestreamproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::release_a_mvfilesystemwritablefilestreamproperties() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVFileSystemWritableFileStreamProperties)
+  if (_internal_has_a_mvfilesystemwritablefilestreamproperties()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* temp = _impl_.content_.mvfilesystemwritablefilestreamproperties_;
+    ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* temp = _impl_.content_.a_mvfilesystemwritablefilestreamproperties_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvfilesystemwritablefilestreamproperties_ = nullptr;
+    _impl_.content_.a_mvfilesystemwritablefilestreamproperties_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& FileSystemGetWritableFileStreamResponse::_internal_mvfilesystemwritablefilestreamproperties() const {
-  return _internal_has_mvfilesystemwritablefilestreamproperties()
-      ? *_impl_.content_.mvfilesystemwritablefilestreamproperties_
+inline const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& FileSystemGetWritableFileStreamResponse::_internal_a_mvfilesystemwritablefilestreamproperties() const {
+  return _internal_has_a_mvfilesystemwritablefilestreamproperties()
+      ? *_impl_.content_.a_mvfilesystemwritablefilestreamproperties_
       : reinterpret_cast< ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties&>(::protobuf::mozilla::dom::fs::_FileSystemWritableFileStreamProperties_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& FileSystemGetWritableFileStreamResponse::mvfilesystemwritablefilestreamproperties() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVFileSystemWritableFileStreamProperties)
-  return _internal_mvfilesystemwritablefilestreamproperties();
+inline const ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties& FileSystemGetWritableFileStreamResponse::a_mvfilesystemwritablefilestreamproperties() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVFileSystemWritableFileStreamProperties)
+  return _internal_a_mvfilesystemwritablefilestreamproperties();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::unsafe_arena_release_mvfilesystemwritablefilestreamproperties() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVFileSystemWritableFileStreamProperties)
-  if (_internal_has_mvfilesystemwritablefilestreamproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::unsafe_arena_release_a_mvfilesystemwritablefilestreamproperties() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVFileSystemWritableFileStreamProperties)
+  if (_internal_has_a_mvfilesystemwritablefilestreamproperties()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* temp = _impl_.content_.mvfilesystemwritablefilestreamproperties_;
-    _impl_.content_.mvfilesystemwritablefilestreamproperties_ = nullptr;
+    ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* temp = _impl_.content_.a_mvfilesystemwritablefilestreamproperties_;
+    _impl_.content_.a_mvfilesystemwritablefilestreamproperties_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemGetWritableFileStreamResponse::unsafe_arena_set_allocated_mvfilesystemwritablefilestreamproperties(::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* mvfilesystemwritablefilestreamproperties) {
+inline void FileSystemGetWritableFileStreamResponse::unsafe_arena_set_allocated_a_mvfilesystemwritablefilestreamproperties(::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* a_mvfilesystemwritablefilestreamproperties) {
   clear_content();
-  if (mvfilesystemwritablefilestreamproperties) {
-    set_has_mvfilesystemwritablefilestreamproperties();
-    _impl_.content_.mvfilesystemwritablefilestreamproperties_ = mvfilesystemwritablefilestreamproperties;
+  if (a_mvfilesystemwritablefilestreamproperties) {
+    set_has_a_mvfilesystemwritablefilestreamproperties();
+    _impl_.content_.a_mvfilesystemwritablefilestreamproperties_ = a_mvfilesystemwritablefilestreamproperties;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVFileSystemWritableFileStreamProperties)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVFileSystemWritableFileStreamProperties)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::_internal_mutable_mvfilesystemwritablefilestreamproperties() {
-  if (!_internal_has_mvfilesystemwritablefilestreamproperties()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::_internal_mutable_a_mvfilesystemwritablefilestreamproperties() {
+  if (!_internal_has_a_mvfilesystemwritablefilestreamproperties()) {
     clear_content();
-    set_has_mvfilesystemwritablefilestreamproperties();
-    _impl_.content_.mvfilesystemwritablefilestreamproperties_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties >(GetArenaForAllocation());
+    set_has_a_mvfilesystemwritablefilestreamproperties();
+    _impl_.content_.a_mvfilesystemwritablefilestreamproperties_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvfilesystemwritablefilestreamproperties_;
+  return _impl_.content_.a_mvfilesystemwritablefilestreamproperties_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::mutable_mvfilesystemwritablefilestreamproperties() {
-  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* _msg = _internal_mutable_mvfilesystemwritablefilestreamproperties();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.mVFileSystemWritableFileStreamProperties)
+inline ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* FileSystemGetWritableFileStreamResponse::mutable_a_mvfilesystemwritablefilestreamproperties() {
+  ::protobuf::mozilla::dom::fs::FileSystemWritableFileStreamProperties* _msg = _internal_mutable_a_mvfilesystemwritablefilestreamproperties();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse.a_mVFileSystemWritableFileStreamProperties)
   return _msg;
 }
 
@@ -6923,185 +6923,185 @@ inline FileSystemGetWritableFileStreamResponse::ContentCase FileSystemGetWritabl
 
 // FileSystemEntryPair
 
-// required bytes parentId = 1;
-inline bool FileSystemEntryPair::_internal_has_parentid() const {
+// required bytes a_parentId = 1;
+inline bool FileSystemEntryPair::_internal_has_a_parentid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemEntryPair::has_parentid() const {
-  return _internal_has_parentid();
+inline bool FileSystemEntryPair::has_a_parentid() const {
+  return _internal_has_a_parentid();
 }
-inline void FileSystemEntryPair::clear_parentid() {
-  _impl_.parentid_.ClearToEmpty();
+inline void FileSystemEntryPair::clear_a_parentid() {
+  _impl_.a_parentid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemEntryPair::parentid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryPair.parentId)
-  return _internal_parentid();
+inline const std::string& FileSystemEntryPair::a_parentid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
+  return _internal_a_parentid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemEntryPair::set_parentid(ArgT0&& arg0, ArgT... args) {
+void FileSystemEntryPair::set_a_parentid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryPair.parentId)
+ _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
 }
-inline std::string* FileSystemEntryPair::mutable_parentid() {
-  std::string* _s = _internal_mutable_parentid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryPair.parentId)
+inline std::string* FileSystemEntryPair::mutable_a_parentid() {
+  std::string* _s = _internal_mutable_a_parentid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
   return _s;
 }
-inline const std::string& FileSystemEntryPair::_internal_parentid() const {
-  return _impl_.parentid_.Get();
+inline const std::string& FileSystemEntryPair::_internal_a_parentid() const {
+  return _impl_.a_parentid_.Get();
 }
-inline void FileSystemEntryPair::_internal_set_parentid(const std::string& value) {
+inline void FileSystemEntryPair::_internal_set_a_parentid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.parentid_.Set(value, GetArenaForAllocation());
+  _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryPair::_internal_mutable_parentid() {
+inline std::string* FileSystemEntryPair::_internal_mutable_a_parentid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.parentid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryPair::release_parentid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryPair.parentId)
-  if (!_internal_has_parentid()) {
+inline std::string* FileSystemEntryPair::release_a_parentid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
+  if (!_internal_has_a_parentid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.parentid_.Release();
+  auto* p = _impl_.a_parentid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemEntryPair::set_allocated_parentid(std::string* parentid) {
-  if (parentid != nullptr) {
+inline void FileSystemEntryPair::set_allocated_a_parentid(std::string* a_parentid) {
+  if (a_parentid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.parentid_.SetAllocated(parentid, GetArenaForAllocation());
+  _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryPair.parentId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_parentId)
 }
 
-// required bytes childId = 2;
-inline bool FileSystemEntryPair::_internal_has_childid() const {
+// required bytes a_childId = 2;
+inline bool FileSystemEntryPair::_internal_has_a_childid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemEntryPair::has_childid() const {
-  return _internal_has_childid();
+inline bool FileSystemEntryPair::has_a_childid() const {
+  return _internal_has_a_childid();
 }
-inline void FileSystemEntryPair::clear_childid() {
-  _impl_.childid_.ClearToEmpty();
+inline void FileSystemEntryPair::clear_a_childid() {
+  _impl_.a_childid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& FileSystemEntryPair::childid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryPair.childId)
-  return _internal_childid();
+inline const std::string& FileSystemEntryPair::a_childid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
+  return _internal_a_childid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemEntryPair::set_childid(ArgT0&& arg0, ArgT... args) {
+void FileSystemEntryPair::set_a_childid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.childid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryPair.childId)
+ _impl_.a_childid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
 }
-inline std::string* FileSystemEntryPair::mutable_childid() {
-  std::string* _s = _internal_mutable_childid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryPair.childId)
+inline std::string* FileSystemEntryPair::mutable_a_childid() {
+  std::string* _s = _internal_mutable_a_childid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
   return _s;
 }
-inline const std::string& FileSystemEntryPair::_internal_childid() const {
-  return _impl_.childid_.Get();
+inline const std::string& FileSystemEntryPair::_internal_a_childid() const {
+  return _impl_.a_childid_.Get();
 }
-inline void FileSystemEntryPair::_internal_set_childid(const std::string& value) {
+inline void FileSystemEntryPair::_internal_set_a_childid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.childid_.Set(value, GetArenaForAllocation());
+  _impl_.a_childid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryPair::_internal_mutable_childid() {
+inline std::string* FileSystemEntryPair::_internal_mutable_a_childid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.childid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_childid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemEntryPair::release_childid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryPair.childId)
-  if (!_internal_has_childid()) {
+inline std::string* FileSystemEntryPair::release_a_childid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
+  if (!_internal_has_a_childid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.childid_.Release();
+  auto* p = _impl_.a_childid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childid_.IsDefault()) {
-    _impl_.childid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childid_.IsDefault()) {
+    _impl_.a_childid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemEntryPair::set_allocated_childid(std::string* childid) {
-  if (childid != nullptr) {
+inline void FileSystemEntryPair::set_allocated_a_childid(std::string* a_childid) {
+  if (a_childid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.childid_.SetAllocated(childid, GetArenaForAllocation());
+  _impl_.a_childid_.SetAllocated(a_childid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childid_.IsDefault()) {
-    _impl_.childid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childid_.IsDefault()) {
+    _impl_.a_childid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryPair.childId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemEntryPair.a_childId)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemResolveRequest
 
-// required .protobuf.mozilla.dom.fs.FileSystemEntryPair endpoints = 1;
-inline bool FileSystemResolveRequest::_internal_has_endpoints() const {
+// required .protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
+inline bool FileSystemResolveRequest::_internal_has_a_endpoints() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.endpoints_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_endpoints_ != nullptr);
   return value;
 }
-inline bool FileSystemResolveRequest::has_endpoints() const {
-  return _internal_has_endpoints();
+inline bool FileSystemResolveRequest::has_a_endpoints() const {
+  return _internal_has_a_endpoints();
 }
-inline void FileSystemResolveRequest::clear_endpoints() {
-  if (_impl_.endpoints_ != nullptr) _impl_.endpoints_->Clear();
+inline void FileSystemResolveRequest::clear_a_endpoints() {
+  if (_impl_.a_endpoints_ != nullptr) _impl_.a_endpoints_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& FileSystemResolveRequest::_internal_endpoints() const {
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryPair* p = _impl_.endpoints_;
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& FileSystemResolveRequest::_internal_a_endpoints() const {
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryPair* p = _impl_.a_endpoints_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::fs::FileSystemEntryPair&>(
       ::protobuf::mozilla::dom::fs::_FileSystemEntryPair_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& FileSystemResolveRequest::endpoints() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemResolveRequest.endpoints)
-  return _internal_endpoints();
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryPair& FileSystemResolveRequest::a_endpoints() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
+  return _internal_a_endpoints();
 }
-inline void FileSystemResolveRequest::unsafe_arena_set_allocated_endpoints(
-    ::protobuf::mozilla::dom::fs::FileSystemEntryPair* endpoints) {
+inline void FileSystemResolveRequest::unsafe_arena_set_allocated_a_endpoints(
+    ::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.endpoints_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_endpoints_);
   }
-  _impl_.endpoints_ = endpoints;
-  if (endpoints) {
+  _impl_.a_endpoints_ = a_endpoints;
+  if (a_endpoints) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveRequest.endpoints)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::release_endpoints() {
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::release_a_endpoints() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* temp = _impl_.endpoints_;
-  _impl_.endpoints_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* temp = _impl_.a_endpoints_;
+  _impl_.a_endpoints_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7113,277 +7113,277 @@ inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveReque
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::unsafe_arena_release_endpoints() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveRequest.endpoints)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::unsafe_arena_release_a_endpoints() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* temp = _impl_.endpoints_;
-  _impl_.endpoints_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* temp = _impl_.a_endpoints_;
+  _impl_.a_endpoints_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::_internal_mutable_endpoints() {
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::_internal_mutable_a_endpoints() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.endpoints_ == nullptr) {
+  if (_impl_.a_endpoints_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemEntryPair>(GetArenaForAllocation());
-    _impl_.endpoints_ = p;
+    _impl_.a_endpoints_ = p;
   }
-  return _impl_.endpoints_;
+  return _impl_.a_endpoints_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::mutable_endpoints() {
-  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* _msg = _internal_mutable_endpoints();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemResolveRequest.endpoints)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryPair* FileSystemResolveRequest::mutable_a_endpoints() {
+  ::protobuf::mozilla::dom::fs::FileSystemEntryPair* _msg = _internal_mutable_a_endpoints();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
   return _msg;
 }
-inline void FileSystemResolveRequest::set_allocated_endpoints(::protobuf::mozilla::dom::fs::FileSystemEntryPair* endpoints) {
+inline void FileSystemResolveRequest::set_allocated_a_endpoints(::protobuf::mozilla::dom::fs::FileSystemEntryPair* a_endpoints) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.endpoints_;
+    delete _impl_.a_endpoints_;
   }
-  if (endpoints) {
+  if (a_endpoints) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(endpoints);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_endpoints);
     if (message_arena != submessage_arena) {
-      endpoints = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, endpoints, submessage_arena);
+      a_endpoints = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_endpoints, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.endpoints_ = endpoints;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveRequest.endpoints)
+  _impl_.a_endpoints_ = a_endpoints;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveRequest.a_endpoints)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemPath
 
-// repeated bytes path = 1;
-inline int FileSystemPath::_internal_path_size() const {
-  return _impl_.path_.size();
+// repeated bytes a_path = 1;
+inline int FileSystemPath::_internal_a_path_size() const {
+  return _impl_.a_path_.size();
 }
-inline int FileSystemPath::path_size() const {
-  return _internal_path_size();
+inline int FileSystemPath::a_path_size() const {
+  return _internal_a_path_size();
 }
-inline void FileSystemPath::clear_path() {
-  _impl_.path_.Clear();
+inline void FileSystemPath::clear_a_path() {
+  _impl_.a_path_.Clear();
 }
-inline std::string* FileSystemPath::add_path() {
-  std::string* _s = _internal_add_path();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.fs.FileSystemPath.path)
+inline std::string* FileSystemPath::add_a_path() {
+  std::string* _s = _internal_add_a_path();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
   return _s;
 }
-inline const std::string& FileSystemPath::_internal_path(int index) const {
-  return _impl_.path_.Get(index);
+inline const std::string& FileSystemPath::_internal_a_path(int index) const {
+  return _impl_.a_path_.Get(index);
 }
-inline const std::string& FileSystemPath::path(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemPath.path)
-  return _internal_path(index);
+inline const std::string& FileSystemPath::a_path(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
+  return _internal_a_path(index);
 }
-inline std::string* FileSystemPath::mutable_path(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemPath.path)
-  return _impl_.path_.Mutable(index);
+inline std::string* FileSystemPath::mutable_a_path(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
+  return _impl_.a_path_.Mutable(index);
 }
-inline void FileSystemPath::set_path(int index, const std::string& value) {
-  _impl_.path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemPath.path)
+inline void FileSystemPath::set_a_path(int index, const std::string& value) {
+  _impl_.a_path_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline void FileSystemPath::set_path(int index, std::string&& value) {
-  _impl_.path_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemPath.path)
+inline void FileSystemPath::set_a_path(int index, std::string&& value) {
+  _impl_.a_path_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline void FileSystemPath::set_path(int index, const char* value) {
+inline void FileSystemPath::set_a_path(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.fs.FileSystemPath.path)
+  _impl_.a_path_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline void FileSystemPath::set_path(int index, const void* value, size_t size) {
-  _impl_.path_.Mutable(index)->assign(
+inline void FileSystemPath::set_a_path(int index, const void* value, size_t size) {
+  _impl_.a_path_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.fs.FileSystemPath.path)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline std::string* FileSystemPath::_internal_add_path() {
-  return _impl_.path_.Add();
+inline std::string* FileSystemPath::_internal_add_a_path() {
+  return _impl_.a_path_.Add();
 }
-inline void FileSystemPath::add_path(const std::string& value) {
-  _impl_.path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemPath.path)
+inline void FileSystemPath::add_a_path(const std::string& value) {
+  _impl_.a_path_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline void FileSystemPath::add_path(std::string&& value) {
-  _impl_.path_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemPath.path)
+inline void FileSystemPath::add_a_path(std::string&& value) {
+  _impl_.a_path_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline void FileSystemPath::add_path(const char* value) {
+inline void FileSystemPath::add_a_path(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.fs.FileSystemPath.path)
+  _impl_.a_path_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
-inline void FileSystemPath::add_path(const void* value, size_t size) {
-  _impl_.path_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.fs.FileSystemPath.path)
+inline void FileSystemPath::add_a_path(const void* value, size_t size) {
+  _impl_.a_path_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-FileSystemPath::path() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemPath.path)
-  return _impl_.path_;
+FileSystemPath::a_path() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
+  return _impl_.a_path_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-FileSystemPath::mutable_path() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemPath.path)
-  return &_impl_.path_;
+FileSystemPath::mutable_a_path() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.fs.FileSystemPath.a_path)
+  return &_impl_.a_path_;
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemResolveResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemResolveResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemResolveResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemResolveResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemResolveResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemResolveResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemResolveResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemResolveResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemResolveResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemResolveResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemResolveResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemResolveResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemResolveResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVnsresult)
 }
-inline std::string* FileSystemResolveResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVnsresult)
+inline std::string* FileSystemResolveResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemResolveResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemResolveResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemResolveResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemResolveResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemResolveResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemResolveResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemResolveResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemResolveResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResolveResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemResolveResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.fs.FileSystemPath mVMaybeFileSystemPath = 2;
-inline bool FileSystemResolveResponse::_internal_has_mvmaybefilesystempath() const {
-  return content_case() == kMVMaybeFileSystemPath;
+// .protobuf.mozilla.dom.fs.FileSystemPath a_mVMaybeFileSystemPath = 2;
+inline bool FileSystemResolveResponse::_internal_has_a_mvmaybefilesystempath() const {
+  return content_case() == kAMVMaybeFileSystemPath;
 }
-inline bool FileSystemResolveResponse::has_mvmaybefilesystempath() const {
-  return _internal_has_mvmaybefilesystempath();
+inline bool FileSystemResolveResponse::has_a_mvmaybefilesystempath() const {
+  return _internal_has_a_mvmaybefilesystempath();
 }
-inline void FileSystemResolveResponse::set_has_mvmaybefilesystempath() {
-  _impl_._oneof_case_[0] = kMVMaybeFileSystemPath;
+inline void FileSystemResolveResponse::set_has_a_mvmaybefilesystempath() {
+  _impl_._oneof_case_[0] = kAMVMaybeFileSystemPath;
 }
-inline void FileSystemResolveResponse::clear_mvmaybefilesystempath() {
-  if (_internal_has_mvmaybefilesystempath()) {
+inline void FileSystemResolveResponse::clear_a_mvmaybefilesystempath() {
+  if (_internal_has_a_mvmaybefilesystempath()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvmaybefilesystempath_;
+      delete _impl_.content_.a_mvmaybefilesystempath_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::release_mvmaybefilesystempath() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVMaybeFileSystemPath)
-  if (_internal_has_mvmaybefilesystempath()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::release_a_mvmaybefilesystempath() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVMaybeFileSystemPath)
+  if (_internal_has_a_mvmaybefilesystempath()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemPath* temp = _impl_.content_.mvmaybefilesystempath_;
+    ::protobuf::mozilla::dom::fs::FileSystemPath* temp = _impl_.content_.a_mvmaybefilesystempath_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvmaybefilesystempath_ = nullptr;
+    _impl_.content_.a_mvmaybefilesystempath_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemPath& FileSystemResolveResponse::_internal_mvmaybefilesystempath() const {
-  return _internal_has_mvmaybefilesystempath()
-      ? *_impl_.content_.mvmaybefilesystempath_
+inline const ::protobuf::mozilla::dom::fs::FileSystemPath& FileSystemResolveResponse::_internal_a_mvmaybefilesystempath() const {
+  return _internal_has_a_mvmaybefilesystempath()
+      ? *_impl_.content_.a_mvmaybefilesystempath_
       : reinterpret_cast< ::protobuf::mozilla::dom::fs::FileSystemPath&>(::protobuf::mozilla::dom::fs::_FileSystemPath_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemPath& FileSystemResolveResponse::mvmaybefilesystempath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVMaybeFileSystemPath)
-  return _internal_mvmaybefilesystempath();
+inline const ::protobuf::mozilla::dom::fs::FileSystemPath& FileSystemResolveResponse::a_mvmaybefilesystempath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVMaybeFileSystemPath)
+  return _internal_a_mvmaybefilesystempath();
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::unsafe_arena_release_mvmaybefilesystempath() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVMaybeFileSystemPath)
-  if (_internal_has_mvmaybefilesystempath()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::unsafe_arena_release_a_mvmaybefilesystempath() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVMaybeFileSystemPath)
+  if (_internal_has_a_mvmaybefilesystempath()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::fs::FileSystemPath* temp = _impl_.content_.mvmaybefilesystempath_;
-    _impl_.content_.mvmaybefilesystempath_ = nullptr;
+    ::protobuf::mozilla::dom::fs::FileSystemPath* temp = _impl_.content_.a_mvmaybefilesystempath_;
+    _impl_.content_.a_mvmaybefilesystempath_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FileSystemResolveResponse::unsafe_arena_set_allocated_mvmaybefilesystempath(::protobuf::mozilla::dom::fs::FileSystemPath* mvmaybefilesystempath) {
+inline void FileSystemResolveResponse::unsafe_arena_set_allocated_a_mvmaybefilesystempath(::protobuf::mozilla::dom::fs::FileSystemPath* a_mvmaybefilesystempath) {
   clear_content();
-  if (mvmaybefilesystempath) {
-    set_has_mvmaybefilesystempath();
-    _impl_.content_.mvmaybefilesystempath_ = mvmaybefilesystempath;
+  if (a_mvmaybefilesystempath) {
+    set_has_a_mvmaybefilesystempath();
+    _impl_.content_.a_mvmaybefilesystempath_ = a_mvmaybefilesystempath;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVMaybeFileSystemPath)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVMaybeFileSystemPath)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::_internal_mutable_mvmaybefilesystempath() {
-  if (!_internal_has_mvmaybefilesystempath()) {
+inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::_internal_mutable_a_mvmaybefilesystempath() {
+  if (!_internal_has_a_mvmaybefilesystempath()) {
     clear_content();
-    set_has_mvmaybefilesystempath();
-    _impl_.content_.mvmaybefilesystempath_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemPath >(GetArenaForAllocation());
+    set_has_a_mvmaybefilesystempath();
+    _impl_.content_.a_mvmaybefilesystempath_ = CreateMaybeMessage< ::protobuf::mozilla::dom::fs::FileSystemPath >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvmaybefilesystempath_;
+  return _impl_.content_.a_mvmaybefilesystempath_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::mutable_mvmaybefilesystempath() {
-  ::protobuf::mozilla::dom::fs::FileSystemPath* _msg = _internal_mutable_mvmaybefilesystempath();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemResolveResponse.mVMaybeFileSystemPath)
+inline ::protobuf::mozilla::dom::fs::FileSystemPath* FileSystemResolveResponse::mutable_a_mvmaybefilesystempath() {
+  ::protobuf::mozilla::dom::fs::FileSystemPath* _msg = _internal_mutable_a_mvmaybefilesystempath();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemResolveResponse.a_mVMaybeFileSystemPath)
   return _msg;
 }
 
@@ -7400,45 +7400,45 @@ inline FileSystemResolveResponse::ContentCase FileSystemResolveResponse::content
 
 // FileSystemRemoveEntryRequest
 
-// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata handle = 1;
-inline bool FileSystemRemoveEntryRequest::_internal_has_handle() const {
+// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+inline bool FileSystemRemoveEntryRequest::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.handle_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
   return value;
 }
-inline bool FileSystemRemoveEntryRequest::has_handle() const {
-  return _internal_has_handle();
+inline bool FileSystemRemoveEntryRequest::has_a_handle() const {
+  return _internal_has_a_handle();
 }
-inline void FileSystemRemoveEntryRequest::clear_handle() {
-  if (_impl_.handle_ != nullptr) _impl_.handle_->Clear();
+inline void FileSystemRemoveEntryRequest::clear_a_handle() {
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemRemoveEntryRequest::_internal_handle() const {
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.handle_;
+inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemRemoveEntryRequest::_internal_a_handle() const {
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.a_handle_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata&>(
       ::protobuf::mozilla::dom::fs::_FileSystemChildMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemRemoveEntryRequest::handle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.handle)
-  return _internal_handle();
+inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemRemoveEntryRequest::a_handle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
+  return _internal_a_handle();
 }
-inline void FileSystemRemoveEntryRequest::unsafe_arena_set_allocated_handle(
-    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle) {
+inline void FileSystemRemoveEntryRequest::unsafe_arena_set_allocated_a_handle(
+    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.handle_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_handle_);
   }
-  _impl_.handle_ = handle;
-  if (handle) {
+  _impl_.a_handle_ = a_handle;
+  if (a_handle) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::release_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::release_a_handle() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7450,230 +7450,230 @@ inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEn
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::unsafe_arena_release_handle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::unsafe_arena_release_a_handle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::_internal_mutable_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::_internal_mutable_a_handle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.handle_ == nullptr) {
+  if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemChildMetadata>(GetArenaForAllocation());
-    _impl_.handle_ = p;
+    _impl_.a_handle_ = p;
   }
-  return _impl_.handle_;
+  return _impl_.a_handle_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::mutable_handle() {
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _msg = _internal_mutable_handle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemRemoveEntryRequest::mutable_a_handle() {
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _msg = _internal_mutable_a_handle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
   return _msg;
 }
-inline void FileSystemRemoveEntryRequest::set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* handle) {
+inline void FileSystemRemoveEntryRequest::set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.handle_;
+    delete _impl_.a_handle_;
   }
-  if (handle) {
+  if (a_handle) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(handle);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_handle);
     if (message_arena != submessage_arena) {
-      handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, handle, submessage_arena);
+      a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_handle, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.handle_ = handle;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.handle)
+  _impl_.a_handle_ = a_handle;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_handle)
 }
 
-// required bool recursive = 2;
-inline bool FileSystemRemoveEntryRequest::_internal_has_recursive() const {
+// required bool a_recursive = 2;
+inline bool FileSystemRemoveEntryRequest::_internal_has_a_recursive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool FileSystemRemoveEntryRequest::has_recursive() const {
-  return _internal_has_recursive();
+inline bool FileSystemRemoveEntryRequest::has_a_recursive() const {
+  return _internal_has_a_recursive();
 }
-inline void FileSystemRemoveEntryRequest::clear_recursive() {
-  _impl_.recursive_ = false;
+inline void FileSystemRemoveEntryRequest::clear_a_recursive() {
+  _impl_.a_recursive_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool FileSystemRemoveEntryRequest::_internal_recursive() const {
-  return _impl_.recursive_;
+inline bool FileSystemRemoveEntryRequest::_internal_a_recursive() const {
+  return _impl_.a_recursive_;
 }
-inline bool FileSystemRemoveEntryRequest::recursive() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.recursive)
-  return _internal_recursive();
+inline bool FileSystemRemoveEntryRequest::a_recursive() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_recursive)
+  return _internal_a_recursive();
 }
-inline void FileSystemRemoveEntryRequest::_internal_set_recursive(bool value) {
+inline void FileSystemRemoveEntryRequest::_internal_set_a_recursive(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.recursive_ = value;
+  _impl_.a_recursive_ = value;
 }
-inline void FileSystemRemoveEntryRequest::set_recursive(bool value) {
-  _internal_set_recursive(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.recursive)
+inline void FileSystemRemoveEntryRequest::set_a_recursive(bool value) {
+  _internal_set_a_recursive(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest.a_recursive)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemRemoveEntryResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemRemoveEntryResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemRemoveEntryResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemRemoveEntryResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemRemoveEntryResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemRemoveEntryResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemRemoveEntryResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemRemoveEntryResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemRemoveEntryResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemRemoveEntryResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemRemoveEntryResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemRemoveEntryResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemRemoveEntryResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVnsresult)
 }
-inline std::string* FileSystemRemoveEntryResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVnsresult)
+inline std::string* FileSystemRemoveEntryResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemRemoveEntryResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemRemoveEntryResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemRemoveEntryResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemRemoveEntryResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemRemoveEntryResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemRemoveEntryResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemRemoveEntryResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemRemoveEntryResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemRemoveEntryResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemRemoveEntryResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVnsresult)
 }
 
-// bytes mVvoid_t = 2;
-inline bool FileSystemRemoveEntryResponse::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 2;
+inline bool FileSystemRemoveEntryResponse::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool FileSystemRemoveEntryResponse::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool FileSystemRemoveEntryResponse::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void FileSystemRemoveEntryResponse::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void FileSystemRemoveEntryResponse::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void FileSystemRemoveEntryResponse::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void FileSystemRemoveEntryResponse::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemRemoveEntryResponse::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& FileSystemRemoveEntryResponse::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemRemoveEntryResponse::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void FileSystemRemoveEntryResponse::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVvoid_t)
 }
-inline std::string* FileSystemRemoveEntryResponse::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVvoid_t)
+inline std::string* FileSystemRemoveEntryResponse::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVvoid_t)
   return _s;
 }
-inline const std::string& FileSystemRemoveEntryResponse::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& FileSystemRemoveEntryResponse::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemRemoveEntryResponse::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void FileSystemRemoveEntryResponse::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemRemoveEntryResponse::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* FileSystemRemoveEntryResponse::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemRemoveEntryResponse::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* FileSystemRemoveEntryResponse::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemRemoveEntryResponse::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void FileSystemRemoveEntryResponse::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse.a_mVvoid_t)
 }
 
 inline bool FileSystemRemoveEntryResponse::has_content() const {
@@ -7689,45 +7689,45 @@ inline FileSystemRemoveEntryResponse::ContentCase FileSystemRemoveEntryResponse:
 
 // FileSystemMoveEntryRequest
 
-// required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
-inline bool FileSystemMoveEntryRequest::_internal_has_handle() const {
+// required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+inline bool FileSystemMoveEntryRequest::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.handle_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
   return value;
 }
-inline bool FileSystemMoveEntryRequest::has_handle() const {
-  return _internal_has_handle();
+inline bool FileSystemMoveEntryRequest::has_a_handle() const {
+  return _internal_has_a_handle();
 }
-inline void FileSystemMoveEntryRequest::clear_handle() {
-  if (_impl_.handle_ != nullptr) _impl_.handle_->Clear();
+inline void FileSystemMoveEntryRequest::clear_a_handle() {
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemMoveEntryRequest::_internal_handle() const {
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* p = _impl_.handle_;
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemMoveEntryRequest::_internal_a_handle() const {
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* p = _impl_.a_handle_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata&>(
       ::protobuf::mozilla::dom::fs::_FileSystemEntryMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemMoveEntryRequest::handle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.handle)
-  return _internal_handle();
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemMoveEntryRequest::a_handle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
+  return _internal_a_handle();
 }
-inline void FileSystemMoveEntryRequest::unsafe_arena_set_allocated_handle(
-    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle) {
+inline void FileSystemMoveEntryRequest::unsafe_arena_set_allocated_a_handle(
+    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.handle_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_handle_);
   }
-  _impl_.handle_ = handle;
-  if (handle) {
+  _impl_.a_handle_ = a_handle;
+  if (a_handle) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::release_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::release_a_handle() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7739,85 +7739,85 @@ inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntr
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::unsafe_arena_release_handle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::unsafe_arena_release_a_handle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::_internal_mutable_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::_internal_mutable_a_handle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.handle_ == nullptr) {
+  if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemEntryMetadata>(GetArenaForAllocation());
-    _impl_.handle_ = p;
+    _impl_.a_handle_ = p;
   }
-  return _impl_.handle_;
+  return _impl_.a_handle_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::mutable_handle() {
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _msg = _internal_mutable_handle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemMoveEntryRequest::mutable_a_handle() {
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _msg = _internal_mutable_a_handle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
   return _msg;
 }
-inline void FileSystemMoveEntryRequest::set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle) {
+inline void FileSystemMoveEntryRequest::set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.handle_;
+    delete _impl_.a_handle_;
   }
-  if (handle) {
+  if (a_handle) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(handle);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_handle);
     if (message_arena != submessage_arena) {
-      handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, handle, submessage_arena);
+      a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_handle, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.handle_ = handle;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.handle)
+  _impl_.a_handle_ = a_handle;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_handle)
 }
 
-// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata destHandle = 2;
-inline bool FileSystemMoveEntryRequest::_internal_has_desthandle() const {
+// required .protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
+inline bool FileSystemMoveEntryRequest::_internal_has_a_desthandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.desthandle_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_desthandle_ != nullptr);
   return value;
 }
-inline bool FileSystemMoveEntryRequest::has_desthandle() const {
-  return _internal_has_desthandle();
+inline bool FileSystemMoveEntryRequest::has_a_desthandle() const {
+  return _internal_has_a_desthandle();
 }
-inline void FileSystemMoveEntryRequest::clear_desthandle() {
-  if (_impl_.desthandle_ != nullptr) _impl_.desthandle_->Clear();
+inline void FileSystemMoveEntryRequest::clear_a_desthandle() {
+  if (_impl_.a_desthandle_ != nullptr) _impl_.a_desthandle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemMoveEntryRequest::_internal_desthandle() const {
-  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.desthandle_;
+inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemMoveEntryRequest::_internal_a_desthandle() const {
+  const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* p = _impl_.a_desthandle_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata&>(
       ::protobuf::mozilla::dom::fs::_FileSystemChildMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemMoveEntryRequest::desthandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.destHandle)
-  return _internal_desthandle();
+inline const ::protobuf::mozilla::dom::fs::FileSystemChildMetadata& FileSystemMoveEntryRequest::a_desthandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
+  return _internal_a_desthandle();
 }
-inline void FileSystemMoveEntryRequest::unsafe_arena_set_allocated_desthandle(
-    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* desthandle) {
+inline void FileSystemMoveEntryRequest::unsafe_arena_set_allocated_a_desthandle(
+    ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_desthandle) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.desthandle_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_desthandle_);
   }
-  _impl_.desthandle_ = desthandle;
-  if (desthandle) {
+  _impl_.a_desthandle_ = a_desthandle;
+  if (a_desthandle) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.destHandle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::release_desthandle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::release_a_desthandle() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.desthandle_;
-  _impl_.desthandle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_desthandle_;
+  _impl_.a_desthandle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7829,89 +7829,89 @@ inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntr
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::unsafe_arena_release_desthandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.destHandle)
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::unsafe_arena_release_a_desthandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.desthandle_;
-  _impl_.desthandle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* temp = _impl_.a_desthandle_;
+  _impl_.a_desthandle_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::_internal_mutable_desthandle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::_internal_mutable_a_desthandle() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.desthandle_ == nullptr) {
+  if (_impl_.a_desthandle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemChildMetadata>(GetArenaForAllocation());
-    _impl_.desthandle_ = p;
+    _impl_.a_desthandle_ = p;
   }
-  return _impl_.desthandle_;
+  return _impl_.a_desthandle_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::mutable_desthandle() {
-  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _msg = _internal_mutable_desthandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.destHandle)
+inline ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* FileSystemMoveEntryRequest::mutable_a_desthandle() {
+  ::protobuf::mozilla::dom::fs::FileSystemChildMetadata* _msg = _internal_mutable_a_desthandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
   return _msg;
 }
-inline void FileSystemMoveEntryRequest::set_allocated_desthandle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* desthandle) {
+inline void FileSystemMoveEntryRequest::set_allocated_a_desthandle(::protobuf::mozilla::dom::fs::FileSystemChildMetadata* a_desthandle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.desthandle_;
+    delete _impl_.a_desthandle_;
   }
-  if (desthandle) {
+  if (a_desthandle) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(desthandle);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_desthandle);
     if (message_arena != submessage_arena) {
-      desthandle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, desthandle, submessage_arena);
+      a_desthandle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_desthandle, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.desthandle_ = desthandle;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.destHandle)
+  _impl_.a_desthandle_ = a_desthandle;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest.a_destHandle)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemRenameEntryRequest
 
-// required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata handle = 1;
-inline bool FileSystemRenameEntryRequest::_internal_has_handle() const {
+// required .protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+inline bool FileSystemRenameEntryRequest::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.handle_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_handle_ != nullptr);
   return value;
 }
-inline bool FileSystemRenameEntryRequest::has_handle() const {
-  return _internal_has_handle();
+inline bool FileSystemRenameEntryRequest::has_a_handle() const {
+  return _internal_has_a_handle();
 }
-inline void FileSystemRenameEntryRequest::clear_handle() {
-  if (_impl_.handle_ != nullptr) _impl_.handle_->Clear();
+inline void FileSystemRenameEntryRequest::clear_a_handle() {
+  if (_impl_.a_handle_ != nullptr) _impl_.a_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemRenameEntryRequest::_internal_handle() const {
-  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* p = _impl_.handle_;
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemRenameEntryRequest::_internal_a_handle() const {
+  const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* p = _impl_.a_handle_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata&>(
       ::protobuf::mozilla::dom::fs::_FileSystemEntryMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemRenameEntryRequest::handle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.handle)
-  return _internal_handle();
+inline const ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata& FileSystemRenameEntryRequest::a_handle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
+  return _internal_a_handle();
 }
-inline void FileSystemRenameEntryRequest::unsafe_arena_set_allocated_handle(
-    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle) {
+inline void FileSystemRenameEntryRequest::unsafe_arena_set_allocated_a_handle(
+    ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.handle_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_handle_);
   }
-  _impl_.handle_ = handle;
-  if (handle) {
+  _impl_.a_handle_ = a_handle;
+  if (a_handle) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::release_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::release_a_handle() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7923,270 +7923,270 @@ inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEn
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::unsafe_arena_release_handle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::unsafe_arena_release_a_handle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.handle_;
-  _impl_.handle_ = nullptr;
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* temp = _impl_.a_handle_;
+  _impl_.a_handle_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::_internal_mutable_handle() {
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::_internal_mutable_a_handle() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.handle_ == nullptr) {
+  if (_impl_.a_handle_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::fs::FileSystemEntryMetadata>(GetArenaForAllocation());
-    _impl_.handle_ = p;
+    _impl_.a_handle_ = p;
   }
-  return _impl_.handle_;
+  return _impl_.a_handle_;
 }
-inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::mutable_handle() {
-  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _msg = _internal_mutable_handle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.handle)
+inline ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* FileSystemRenameEntryRequest::mutable_a_handle() {
+  ::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* _msg = _internal_mutable_a_handle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
   return _msg;
 }
-inline void FileSystemRenameEntryRequest::set_allocated_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* handle) {
+inline void FileSystemRenameEntryRequest::set_allocated_a_handle(::protobuf::mozilla::dom::fs::FileSystemEntryMetadata* a_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.handle_;
+    delete _impl_.a_handle_;
   }
-  if (handle) {
+  if (a_handle) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(handle);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_handle);
     if (message_arena != submessage_arena) {
-      handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, handle, submessage_arena);
+      a_handle = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_handle, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.handle_ = handle;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.handle)
+  _impl_.a_handle_ = a_handle;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_handle)
 }
 
-// required bytes name = 2;
-inline bool FileSystemRenameEntryRequest::_internal_has_name() const {
+// required bytes a_name = 2;
+inline bool FileSystemRenameEntryRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool FileSystemRenameEntryRequest::has_name() const {
-  return _internal_has_name();
+inline bool FileSystemRenameEntryRequest::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void FileSystemRenameEntryRequest::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void FileSystemRenameEntryRequest::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& FileSystemRenameEntryRequest::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.name)
-  return _internal_name();
+inline const std::string& FileSystemRenameEntryRequest::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void FileSystemRenameEntryRequest::set_name(ArgT0&& arg0, ArgT... args) {
+void FileSystemRenameEntryRequest::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
 }
-inline std::string* FileSystemRenameEntryRequest::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.name)
+inline std::string* FileSystemRenameEntryRequest::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
   return _s;
 }
-inline const std::string& FileSystemRenameEntryRequest::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& FileSystemRenameEntryRequest::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void FileSystemRenameEntryRequest::_internal_set_name(const std::string& value) {
+inline void FileSystemRenameEntryRequest::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemRenameEntryRequest::_internal_mutable_name() {
+inline std::string* FileSystemRenameEntryRequest::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* FileSystemRenameEntryRequest::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.name)
-  if (!_internal_has_name()) {
+inline std::string* FileSystemRenameEntryRequest::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void FileSystemRenameEntryRequest::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void FileSystemRenameEntryRequest::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest.a_name)
 }
 
 // -------------------------------------------------------------------
 
 // FileSystemMoveEntryResponse
 
-// bytes mVnsresult = 1;
-inline bool FileSystemMoveEntryResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool FileSystemMoveEntryResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool FileSystemMoveEntryResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool FileSystemMoveEntryResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void FileSystemMoveEntryResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void FileSystemMoveEntryResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void FileSystemMoveEntryResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void FileSystemMoveEntryResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemMoveEntryResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& FileSystemMoveEntryResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemMoveEntryResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemMoveEntryResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVnsresult)
 }
-inline std::string* FileSystemMoveEntryResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVnsresult)
+inline std::string* FileSystemMoveEntryResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& FileSystemMoveEntryResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& FileSystemMoveEntryResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemMoveEntryResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void FileSystemMoveEntryResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemMoveEntryResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* FileSystemMoveEntryResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemMoveEntryResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* FileSystemMoveEntryResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemMoveEntryResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void FileSystemMoveEntryResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVnsresult)
 }
 
-// bytes mVEntryId = 2;
-inline bool FileSystemMoveEntryResponse::_internal_has_mventryid() const {
-  return content_case() == kMVEntryId;
+// bytes a_mVEntryId = 2;
+inline bool FileSystemMoveEntryResponse::_internal_has_a_mventryid() const {
+  return content_case() == kAMVEntryId;
 }
-inline bool FileSystemMoveEntryResponse::has_mventryid() const {
-  return _internal_has_mventryid();
+inline bool FileSystemMoveEntryResponse::has_a_mventryid() const {
+  return _internal_has_a_mventryid();
 }
-inline void FileSystemMoveEntryResponse::set_has_mventryid() {
-  _impl_._oneof_case_[0] = kMVEntryId;
+inline void FileSystemMoveEntryResponse::set_has_a_mventryid() {
+  _impl_._oneof_case_[0] = kAMVEntryId;
 }
-inline void FileSystemMoveEntryResponse::clear_mventryid() {
-  if (_internal_has_mventryid()) {
-    _impl_.content_.mventryid_.Destroy();
+inline void FileSystemMoveEntryResponse::clear_a_mventryid() {
+  if (_internal_has_a_mventryid()) {
+    _impl_.content_.a_mventryid_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& FileSystemMoveEntryResponse::mventryid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVEntryId)
-  return _internal_mventryid();
+inline const std::string& FileSystemMoveEntryResponse::a_mventryid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVEntryId)
+  return _internal_a_mventryid();
 }
 template <typename ArgT0, typename... ArgT>
-inline void FileSystemMoveEntryResponse::set_mventryid(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mventryid()) {
+inline void FileSystemMoveEntryResponse::set_a_mventryid(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mventryid()) {
     clear_content();
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitDefault();
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitDefault();
   }
-  _impl_.content_.mventryid_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVEntryId)
+  _impl_.content_.a_mventryid_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVEntryId)
 }
-inline std::string* FileSystemMoveEntryResponse::mutable_mventryid() {
-  std::string* _s = _internal_mutable_mventryid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVEntryId)
+inline std::string* FileSystemMoveEntryResponse::mutable_a_mventryid() {
+  std::string* _s = _internal_mutable_a_mventryid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVEntryId)
   return _s;
 }
-inline const std::string& FileSystemMoveEntryResponse::_internal_mventryid() const {
-  if (_internal_has_mventryid()) {
-    return _impl_.content_.mventryid_.Get();
+inline const std::string& FileSystemMoveEntryResponse::_internal_a_mventryid() const {
+  if (_internal_has_a_mventryid()) {
+    return _impl_.content_.a_mventryid_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void FileSystemMoveEntryResponse::_internal_set_mventryid(const std::string& value) {
-  if (!_internal_has_mventryid()) {
+inline void FileSystemMoveEntryResponse::_internal_set_a_mventryid(const std::string& value) {
+  if (!_internal_has_a_mventryid()) {
     clear_content();
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitDefault();
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitDefault();
   }
-  _impl_.content_.mventryid_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mventryid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* FileSystemMoveEntryResponse::_internal_mutable_mventryid() {
-  if (!_internal_has_mventryid()) {
+inline std::string* FileSystemMoveEntryResponse::_internal_mutable_a_mventryid() {
+  if (!_internal_has_a_mventryid()) {
     clear_content();
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitDefault();
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitDefault();
   }
-  return _impl_.content_.mventryid_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mventryid_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* FileSystemMoveEntryResponse::release_mventryid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVEntryId)
-  if (_internal_has_mventryid()) {
+inline std::string* FileSystemMoveEntryResponse::release_a_mventryid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVEntryId)
+  if (_internal_has_a_mventryid()) {
     clear_has_content();
-    return _impl_.content_.mventryid_.Release();
+    return _impl_.content_.a_mventryid_.Release();
   } else {
     return nullptr;
   }
 }
-inline void FileSystemMoveEntryResponse::set_allocated_mventryid(std::string* mventryid) {
+inline void FileSystemMoveEntryResponse::set_allocated_a_mventryid(std::string* a_mventryid) {
   if (has_content()) {
     clear_content();
   }
-  if (mventryid != nullptr) {
-    set_has_mventryid();
-    _impl_.content_.mventryid_.InitAllocated(mventryid, GetArenaForAllocation());
+  if (a_mventryid != nullptr) {
+    set_has_a_mventryid();
+    _impl_.content_.a_mventryid_.InitAllocated(a_mventryid, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.mVEntryId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse.a_mVEntryId)
 }
 
 inline bool FileSystemMoveEntryResponse::has_content() const {

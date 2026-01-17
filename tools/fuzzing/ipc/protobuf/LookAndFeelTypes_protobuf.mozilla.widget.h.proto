@@ -12,28 +12,28 @@ package protobuf.mozilla.widget;
 
 // Structs and unions declarations
 message LookAndFeelFont {
-  required bool haveFont = 1;
-  required bytes name = 2;
-  required float size = 3;
-  required float weight = 4;
-  required bool italic = 5;
+  required bool a_haveFont = 1;
+  required bytes a_name = 2;
+  required float a_size = 3;
+  required float a_weight = 4;
+  required bool a_italic = 5;
 }
 
 message LookAndFeelTables {
-  repeated sint32 ints = 1;
-  repeated float floats = 2;
-  repeated protobuf.mozilla.widget.LookAndFeelFont fonts = 3;
-  repeated bytes lightColors = 4;
-  repeated bytes darkColors = 5;
-  repeated uint32 intMap = 6;
-  repeated uint32 floatMap = 7;
-  repeated uint32 fontMap = 8;
-  repeated uint32 lightColorMap = 9;
-  repeated uint32 darkColorMap = 10;
-  required uint32 passwordChar = 11;
-  required bool passwordEcho = 12;
+  repeated sint32 a_ints = 1;
+  repeated float a_floats = 2;
+  repeated protobuf.mozilla.widget.LookAndFeelFont a_fonts = 3;
+  repeated bytes a_lightColors = 4;
+  repeated bytes a_darkColors = 5;
+  repeated uint32 a_intMap = 6;
+  repeated uint32 a_floatMap = 7;
+  repeated uint32 a_fontMap = 8;
+  repeated uint32 a_lightColorMap = 9;
+  repeated uint32 a_darkColorMap = 10;
+  required uint32 a_passwordChar = 11;
+  required bool a_passwordEcho = 12;
 }
 
 message FullLookAndFeel {
-  required protobuf.mozilla.widget.LookAndFeelTables tables = 1;
+  required protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
 }

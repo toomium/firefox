@@ -15,54 +15,54 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message LSRequestCommonParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo storagePrincipalInfo = 2;
-  required bytes originKey = 3;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
+  required bytes a_originKey = 3;
 }
 
 message LSRequestPreloadDatastoreParams {
-  required protobuf.mozilla.dom.LSRequestCommonParams commonParams = 1;
+  required protobuf.mozilla.dom.LSRequestCommonParams a_commonParams = 1;
 }
 
 message LSRequestPrepareDatastoreParams {
-  required protobuf.mozilla.dom.LSRequestCommonParams commonParams = 1;
-  optional bytes clientId = 2;
-  optional protobuf.mozilla.ipc.PrincipalInfo clientPrincipalInfo = 3;
+  required protobuf.mozilla.dom.LSRequestCommonParams a_commonParams = 1;
+  optional bytes a_clientId = 2;
+  optional protobuf.mozilla.ipc.PrincipalInfo a_clientPrincipalInfo = 3;
 }
 
 message LSRequestPrepareObserverParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo storagePrincipalInfo = 2;
-  optional bytes clientId = 3;
-  optional protobuf.mozilla.ipc.PrincipalInfo clientPrincipalInfo = 4;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
+  optional bytes a_clientId = 3;
+  optional protobuf.mozilla.ipc.PrincipalInfo a_clientPrincipalInfo = 4;
 }
 
 message LSRequestParams {
   oneof content {
-    protobuf.mozilla.dom.LSRequestPreloadDatastoreParams mVLSRequestPreloadDatastoreParams = 1;
-    protobuf.mozilla.dom.LSRequestPrepareDatastoreParams mVLSRequestPrepareDatastoreParams = 2;
-    protobuf.mozilla.dom.LSRequestPrepareObserverParams mVLSRequestPrepareObserverParams = 3;
+    protobuf.mozilla.dom.LSRequestPreloadDatastoreParams a_mVLSRequestPreloadDatastoreParams = 1;
+    protobuf.mozilla.dom.LSRequestPrepareDatastoreParams a_mVLSRequestPrepareDatastoreParams = 2;
+    protobuf.mozilla.dom.LSRequestPrepareObserverParams a_mVLSRequestPrepareObserverParams = 3;
   }
 }
 
 message LSSimpleRequestPreloadedParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo storagePrincipalInfo = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
 }
 
 message LSSimpleRequestGetStateParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo storagePrincipalInfo = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
 }
 
 message LSSimpleRequestParams {
   oneof content {
-    protobuf.mozilla.dom.LSSimpleRequestPreloadedParams mVLSSimpleRequestPreloadedParams = 1;
-    protobuf.mozilla.dom.LSSimpleRequestGetStateParams mVLSSimpleRequestGetStateParams = 2;
+    protobuf.mozilla.dom.LSSimpleRequestPreloadedParams a_mVLSSimpleRequestPreloadedParams = 1;
+    protobuf.mozilla.dom.LSSimpleRequestGetStateParams a_mVLSSimpleRequestGetStateParams = 2;
   }
 }
 
 message LSItemInfo {
-  required bytes key = 1;
-  required bytes value = 2;
+  required bytes a_key = 1;
+  required bytes a_value = 2;
 }

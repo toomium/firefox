@@ -38,8 +38,8 @@ PROTOBUF_CONSTEXPR CookieSubscription::CookieSubscription(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct CookieSubscriptionDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CookieSubscriptionDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,33 +60,33 @@ namespace dom {
 
 class MaybeCookieStruct::_Internal {
  public:
-  static const ::protobuf::mozilla::net::CookieStruct& mvcookiestruct(const MaybeCookieStruct* msg);
+  static const ::protobuf::mozilla::net::CookieStruct& a_mvcookiestruct(const MaybeCookieStruct* msg);
 };
 
 const ::protobuf::mozilla::net::CookieStruct&
-MaybeCookieStruct::_Internal::mvcookiestruct(const MaybeCookieStruct* msg) {
-  return *msg->_impl_.content_.mvcookiestruct_;
+MaybeCookieStruct::_Internal::a_mvcookiestruct(const MaybeCookieStruct* msg) {
+  return *msg->_impl_.content_.a_mvcookiestruct_;
 }
-void MaybeCookieStruct::set_allocated_mvcookiestruct(::protobuf::mozilla::net::CookieStruct* mvcookiestruct) {
+void MaybeCookieStruct::set_allocated_a_mvcookiestruct(::protobuf::mozilla::net::CookieStruct* a_mvcookiestruct) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvcookiestruct) {
+  if (a_mvcookiestruct) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mvcookiestruct));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_mvcookiestruct));
     if (message_arena != submessage_arena) {
-      mvcookiestruct = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvcookiestruct, submessage_arena);
+      a_mvcookiestruct = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvcookiestruct, submessage_arena);
     }
-    set_has_mvcookiestruct();
-    _impl_.content_.mvcookiestruct_ = mvcookiestruct;
+    set_has_a_mvcookiestruct();
+    _impl_.content_.a_mvcookiestruct_ = a_mvcookiestruct;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeCookieStruct.mVCookieStruct)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MaybeCookieStruct.a_mVCookieStruct)
 }
-void MaybeCookieStruct::clear_mvcookiestruct() {
-  if (_internal_has_mvcookiestruct()) {
+void MaybeCookieStruct::clear_a_mvcookiestruct() {
+  if (_internal_has_a_mvcookiestruct()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcookiestruct_;
+      delete _impl_.content_.a_mvcookiestruct_;
     }
     clear_has_content();
   }
@@ -108,13 +108,13 @@ MaybeCookieStruct::MaybeCookieStruct(const MaybeCookieStruct& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVCookieStruct: {
-      _this->_internal_mutable_mvcookiestruct()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
-          from._internal_mvcookiestruct());
+    case kAMVCookieStruct: {
+      _this->_internal_mutable_a_mvcookiestruct()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
+          from._internal_a_mvcookiestruct());
       break;
     }
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -159,14 +159,14 @@ void MaybeCookieStruct::SetCachedSize(int size) const {
 void MaybeCookieStruct::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.MaybeCookieStruct)
   switch (content_case()) {
-    case kMVCookieStruct: {
+    case kAMVCookieStruct: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvcookiestruct_;
+        delete _impl_.content_.a_mvcookiestruct_;
       }
       break;
     }
-    case kMVvoidT: {
-      _impl_.content_.mvvoid_t_.Destroy();
+    case kAMVvoidT: {
+      _impl_.content_.a_mvvoid_t_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -193,18 +193,18 @@ const char* MaybeCookieStruct::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.net.CookieStruct mVCookieStruct = 1;
+      // .protobuf.mozilla.net.CookieStruct a_mVCookieStruct = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvcookiestruct(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvcookiestruct(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVvoid_t = 2;
+      // bytes a_mVvoid_t = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvvoid_t();
+          auto str = _internal_mutable_a_mvvoid_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -240,15 +240,15 @@ uint8_t* MaybeCookieStruct::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVCookieStruct: {
+    case kAMVCookieStruct: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvcookiestruct(this),
-          _Internal::mvcookiestruct(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvcookiestruct(this),
+          _Internal::a_mvcookiestruct(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVvoidT: {
+    case kAMVvoidT: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvvoid_t(), target);
+          2, this->_internal_a_mvvoid_t(), target);
       break;
     }
     default: ;
@@ -270,18 +270,18 @@ size_t MaybeCookieStruct::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.net.CookieStruct mVCookieStruct = 1;
-    case kMVCookieStruct: {
+    // .protobuf.mozilla.net.CookieStruct a_mVCookieStruct = 1;
+    case kAMVCookieStruct: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvcookiestruct_);
+          *_impl_.content_.a_mvcookiestruct_);
       break;
     }
-    // bytes mVvoid_t = 2;
-    case kMVvoidT: {
+    // bytes a_mVvoid_t = 2;
+    case kAMVvoidT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvvoid_t());
+          this->_internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -310,13 +310,13 @@ void MaybeCookieStruct::MergeFrom(const MaybeCookieStruct& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVCookieStruct: {
-      _this->_internal_mutable_mvcookiestruct()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
-          from._internal_mvcookiestruct());
+    case kAMVCookieStruct: {
+      _this->_internal_mutable_a_mvcookiestruct()->::protobuf::mozilla::net::CookieStruct::MergeFrom(
+          from._internal_a_mvcookiestruct());
       break;
     }
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -335,13 +335,13 @@ void MaybeCookieStruct::CopyFrom(const MaybeCookieStruct& from) {
 
 bool MaybeCookieStruct::IsInitialized() const {
   switch (content_case()) {
-    case kMVCookieStruct: {
-      if (_internal_has_mvcookiestruct()) {
-        if (!_impl_.content_.mvcookiestruct_->IsInitialized()) return false;
+    case kAMVCookieStruct: {
+      if (_internal_has_a_mvcookiestruct()) {
+        if (!_impl_.content_.a_mvcookiestruct_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVvoidT: {
+    case kAMVvoidT: {
       break;
     }
     case CONTENT_NOT_SET: {
@@ -368,10 +368,10 @@ std::string MaybeCookieStruct::GetTypeName() const {
 class CookieSubscription::_Internal {
  public:
   using HasBits = decltype(std::declval<CookieSubscription>()._impl_._has_bits_);
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_url(HasBits* has_bits) {
+  static void set_has_a_url(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -391,24 +391,24 @@ CookieSubscription::CookieSubscription(const CookieSubscription& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.url_){}};
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_url_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.url_.InitDefault();
+  _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.url_.Set("", GetArenaForAllocation());
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(), 
+  if (from._internal_has_a_url()) {
+    _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.CookieSubscription)
@@ -421,16 +421,16 @@ inline void CookieSubscription::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.url_){}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_url_){}
   };
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.url_.InitDefault();
+  _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.url_.Set("", GetArenaForAllocation());
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -445,8 +445,8 @@ CookieSubscription::~CookieSubscription() {
 
 inline void CookieSubscription::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
-  _impl_.url_.Destroy();
+  _impl_.a_name_.Destroy();
+  _impl_.a_url_.Destroy();
 }
 
 void CookieSubscription::SetCachedSize(int size) const {
@@ -462,10 +462,10 @@ void CookieSubscription::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.name_.ClearNonDefaultToEmpty();
+      _impl_.a_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.url_.ClearNonDefaultToEmpty();
+      _impl_.a_url_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -479,19 +479,19 @@ const char* CookieSubscription::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes name = 1;
+      // optional bytes a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes url = 2;
+      // required bytes a_url = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_url();
+          auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -528,16 +528,16 @@ uint8_t* CookieSubscription::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes name = 1;
+  // optional bytes a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_name(), target);
+        1, this->_internal_a_name(), target);
   }
 
-  // required bytes url = 2;
+  // required bytes a_url = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_url(), target);
+        2, this->_internal_a_url(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -552,22 +552,22 @@ size_t CookieSubscription::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CookieSubscription)
   size_t total_size = 0;
 
-  // required bytes url = 2;
-  if (_internal_has_url()) {
+  // required bytes a_url = 2;
+  if (_internal_has_a_url()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_url());
+        this->_internal_a_url());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes name = 1;
+  // optional bytes a_name = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -594,10 +594,10 @@ void CookieSubscription::MergeFrom(const CookieSubscription& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_name(from._internal_name());
+      _this->_internal_set_a_name(from._internal_a_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_url(from._internal_url());
+      _this->_internal_set_a_url(from._internal_a_url());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -622,12 +622,12 @@ void CookieSubscription::InternalSwap(CookieSubscription* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.url_, lhs_arena,
-      &other->_impl_.url_, rhs_arena
+      &_impl_.a_url_, lhs_arena,
+      &other->_impl_.a_url_, rhs_arena
   );
 }
 

@@ -184,19 +184,19 @@ class Msg_TimerExpired final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATimerIdFieldNumber = 1,
+    kAATimerIdFieldNumber = 1,
   };
-  // required uint32 aTimerId = 1;
-  bool has_atimerid() const;
+  // required uint32 a_aTimerId = 1;
+  bool has_a_atimerid() const;
   private:
-  bool _internal_has_atimerid() const;
+  bool _internal_has_a_atimerid() const;
   public:
-  void clear_atimerid();
-  uint32_t atimerid() const;
-  void set_atimerid(uint32_t value);
+  void clear_a_atimerid();
+  uint32_t a_atimerid() const;
+  void set_a_atimerid(uint32_t value);
   private:
-  uint32_t _internal_atimerid() const;
-  void _internal_set_atimerid(uint32_t value);
+  uint32_t _internal_a_atimerid() const;
+  void _internal_set_a_atimerid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired)
@@ -209,7 +209,7 @@ class Msg_TimerExpired final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t atimerid_;
+    uint32_t a_atimerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPTimer_2eproto;
@@ -326,33 +326,33 @@ class Msg_SetTimer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATimerIdFieldNumber = 1,
-    kATimeoutMsFieldNumber = 2,
+    kAATimerIdFieldNumber = 1,
+    kAATimeoutMsFieldNumber = 2,
   };
-  // required uint32 aTimerId = 1;
-  bool has_atimerid() const;
+  // required uint32 a_aTimerId = 1;
+  bool has_a_atimerid() const;
   private:
-  bool _internal_has_atimerid() const;
+  bool _internal_has_a_atimerid() const;
   public:
-  void clear_atimerid();
-  uint32_t atimerid() const;
-  void set_atimerid(uint32_t value);
+  void clear_a_atimerid();
+  uint32_t a_atimerid() const;
+  void set_a_atimerid(uint32_t value);
   private:
-  uint32_t _internal_atimerid() const;
-  void _internal_set_atimerid(uint32_t value);
+  uint32_t _internal_a_atimerid() const;
+  void _internal_set_a_atimerid(uint32_t value);
   public:
 
-  // required uint32 aTimeoutMs = 2;
-  bool has_atimeoutms() const;
+  // required uint32 a_aTimeoutMs = 2;
+  bool has_a_atimeoutms() const;
   private:
-  bool _internal_has_atimeoutms() const;
+  bool _internal_has_a_atimeoutms() const;
   public:
-  void clear_atimeoutms();
-  uint32_t atimeoutms() const;
-  void set_atimeoutms(uint32_t value);
+  void clear_a_atimeoutms();
+  uint32_t a_atimeoutms() const;
+  void set_a_atimeoutms(uint32_t value);
   private:
-  uint32_t _internal_atimeoutms() const;
-  void _internal_set_atimeoutms(uint32_t value);
+  uint32_t _internal_a_atimeoutms() const;
+  void _internal_set_a_atimeoutms(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer)
@@ -368,8 +368,8 @@ class Msg_SetTimer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t atimerid_;
-    uint32_t atimeoutms_;
+    uint32_t a_atimerid_;
+    uint32_t a_atimeoutms_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPTimer_2eproto;
@@ -633,92 +633,92 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_TimerExpired
 
-// required uint32 aTimerId = 1;
-inline bool Msg_TimerExpired::_internal_has_atimerid() const {
+// required uint32 a_aTimerId = 1;
+inline bool Msg_TimerExpired::_internal_has_a_atimerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TimerExpired::has_atimerid() const {
-  return _internal_has_atimerid();
+inline bool Msg_TimerExpired::has_a_atimerid() const {
+  return _internal_has_a_atimerid();
 }
-inline void Msg_TimerExpired::clear_atimerid() {
-  _impl_.atimerid_ = 0u;
+inline void Msg_TimerExpired::clear_a_atimerid() {
+  _impl_.a_atimerid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_TimerExpired::_internal_atimerid() const {
-  return _impl_.atimerid_;
+inline uint32_t Msg_TimerExpired::_internal_a_atimerid() const {
+  return _impl_.a_atimerid_;
 }
-inline uint32_t Msg_TimerExpired::atimerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired.aTimerId)
-  return _internal_atimerid();
+inline uint32_t Msg_TimerExpired::a_atimerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired.a_aTimerId)
+  return _internal_a_atimerid();
 }
-inline void Msg_TimerExpired::_internal_set_atimerid(uint32_t value) {
+inline void Msg_TimerExpired::_internal_set_a_atimerid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atimerid_ = value;
+  _impl_.a_atimerid_ = value;
 }
-inline void Msg_TimerExpired::set_atimerid(uint32_t value) {
-  _internal_set_atimerid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired.aTimerId)
+inline void Msg_TimerExpired::set_a_atimerid(uint32_t value) {
+  _internal_set_a_atimerid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired.a_aTimerId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetTimer
 
-// required uint32 aTimerId = 1;
-inline bool Msg_SetTimer::_internal_has_atimerid() const {
+// required uint32 a_aTimerId = 1;
+inline bool Msg_SetTimer::_internal_has_a_atimerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetTimer::has_atimerid() const {
-  return _internal_has_atimerid();
+inline bool Msg_SetTimer::has_a_atimerid() const {
+  return _internal_has_a_atimerid();
 }
-inline void Msg_SetTimer::clear_atimerid() {
-  _impl_.atimerid_ = 0u;
+inline void Msg_SetTimer::clear_a_atimerid() {
+  _impl_.a_atimerid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetTimer::_internal_atimerid() const {
-  return _impl_.atimerid_;
+inline uint32_t Msg_SetTimer::_internal_a_atimerid() const {
+  return _impl_.a_atimerid_;
 }
-inline uint32_t Msg_SetTimer::atimerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.aTimerId)
-  return _internal_atimerid();
+inline uint32_t Msg_SetTimer::a_atimerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.a_aTimerId)
+  return _internal_a_atimerid();
 }
-inline void Msg_SetTimer::_internal_set_atimerid(uint32_t value) {
+inline void Msg_SetTimer::_internal_set_a_atimerid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atimerid_ = value;
+  _impl_.a_atimerid_ = value;
 }
-inline void Msg_SetTimer::set_atimerid(uint32_t value) {
-  _internal_set_atimerid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.aTimerId)
+inline void Msg_SetTimer::set_a_atimerid(uint32_t value) {
+  _internal_set_a_atimerid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.a_aTimerId)
 }
 
-// required uint32 aTimeoutMs = 2;
-inline bool Msg_SetTimer::_internal_has_atimeoutms() const {
+// required uint32 a_aTimeoutMs = 2;
+inline bool Msg_SetTimer::_internal_has_a_atimeoutms() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetTimer::has_atimeoutms() const {
-  return _internal_has_atimeoutms();
+inline bool Msg_SetTimer::has_a_atimeoutms() const {
+  return _internal_has_a_atimeoutms();
 }
-inline void Msg_SetTimer::clear_atimeoutms() {
-  _impl_.atimeoutms_ = 0u;
+inline void Msg_SetTimer::clear_a_atimeoutms() {
+  _impl_.a_atimeoutms_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_SetTimer::_internal_atimeoutms() const {
-  return _impl_.atimeoutms_;
+inline uint32_t Msg_SetTimer::_internal_a_atimeoutms() const {
+  return _impl_.a_atimeoutms_;
 }
-inline uint32_t Msg_SetTimer::atimeoutms() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.aTimeoutMs)
-  return _internal_atimeoutms();
+inline uint32_t Msg_SetTimer::a_atimeoutms() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.a_aTimeoutMs)
+  return _internal_a_atimeoutms();
 }
-inline void Msg_SetTimer::_internal_set_atimeoutms(uint32_t value) {
+inline void Msg_SetTimer::_internal_set_a_atimeoutms(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.atimeoutms_ = value;
+  _impl_.a_atimeoutms_ = value;
 }
-inline void Msg_SetTimer::set_atimeoutms(uint32_t value) {
-  _internal_set_atimeoutms(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.aTimeoutMs)
+inline void Msg_SetTimer::set_a_atimeoutms(uint32_t value) {
+  _internal_set_a_atimeoutms(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer.a_aTimeoutMs)
 }
 
 // -------------------------------------------------------------------

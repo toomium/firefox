@@ -26,7 +26,7 @@ message Msg_Teardown {
 }
 
 message Msg_ExecutionReady {
-  required protobuf.mozilla.dom.ClientSourceExecutionReadyArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientSourceExecutionReadyArgs a_aArgs = 1;
 }
 
 message Msg_Freeze {
@@ -36,14 +36,14 @@ message Msg_Thaw {
 }
 
 message Msg_InheritController {
-  required protobuf.mozilla.dom.ClientControlledArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientControlledArgs a_aArgs = 1;
 }
 
 message Msg_NoteDOMContentLoaded {
 }
 
 message Msg_PClientSourceOpConstructor {
-  required protobuf.mozilla.dom.ClientOpConstructorArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 1;
 }
 
 message Reply_PClientSourceOpConstructor {

@@ -15,7 +15,7 @@ import "IPCBlob.proto";
 // Structs and unions declarations
 message IPCBlobOrError {
   oneof content {
-    protobuf.mozilla.dom.IPCBlob mVIPCBlob = 1;
-    bytes mVnsresult = 2;
+    protobuf.mozilla.dom.IPCBlob a_mVIPCBlob = 1;
+    bytes a_mVnsresult = 2;
   }
 }

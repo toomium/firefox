@@ -25,7 +25,7 @@ PROTOBUF_CONSTEXPR Msg_Close::Msg_Close(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aabort_)*/false} {}
+  , /*decltype(_impl_.a_aabort_)*/false} {}
 struct Msg_CloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CloseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,7 +39,7 @@ PROTOBUF_CONSTEXPR Reply_Close::Reply_Close(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ok_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_ok_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_CloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CloseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -87,7 +87,7 @@ namespace PFileSystemWritableFileStream {
 class Msg_Close::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Close>()._impl_._has_bits_);
-  static void set_has_aabort(HasBits* has_bits) {
+  static void set_has_a_aabort(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -107,10 +107,10 @@ Msg_Close::Msg_Close(const Msg_Close& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aabort_){}};
+    , decltype(_impl_.a_aabort_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.aabort_ = from._impl_.aabort_;
+  _this->_impl_.a_aabort_ = from._impl_.a_aabort_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close)
 }
 
@@ -121,7 +121,7 @@ inline void Msg_Close::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aabort_){false}
+    , decltype(_impl_.a_aabort_){false}
   };
 }
 
@@ -148,7 +148,7 @@ void Msg_Close::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.aabort_ = false;
+  _impl_.a_aabort_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -160,11 +160,11 @@ const char* Msg_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aAbort = 1;
+      // required bool a_aAbort = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_aabort(&has_bits);
-          _impl_.aabort_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aabort(&has_bits);
+          _impl_.a_aabort_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -200,10 +200,10 @@ uint8_t* Msg_Close::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aAbort = 1;
+  // required bool a_aAbort = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_aabort(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aabort(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -218,8 +218,8 @@ size_t Msg_Close::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close)
   size_t total_size = 0;
 
-  // required bool aAbort = 1;
-  if (_internal_has_aabort()) {
+  // required bool a_aAbort = 1;
+  if (_internal_has_a_aabort()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -247,8 +247,8 @@ void Msg_Close::MergeFrom(const Msg_Close& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aabort()) {
-    _this->_internal_set_aabort(from._internal_aabort());
+  if (from._internal_has_a_aabort()) {
+    _this->_internal_set_a_aabort(from._internal_a_aabort());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -269,7 +269,7 @@ void Msg_Close::InternalSwap(Msg_Close* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.aabort_, other->_impl_.aabort_);
+  swap(_impl_.a_aabort_, other->_impl_.a_aabort_);
 }
 
 std::string Msg_Close::GetTypeName() const {
@@ -282,7 +282,7 @@ std::string Msg_Close::GetTypeName() const {
 class Reply_Close::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_Close>()._impl_._has_bits_);
-  static void set_has_ok(HasBits* has_bits) {
+  static void set_has_a_ok(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -302,15 +302,15 @@ Reply_Close::Reply_Close(const Reply_Close& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ok_){}};
+    , decltype(_impl_.a_ok_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.ok_.InitDefault();
+  _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ok_.Set("", GetArenaForAllocation());
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_ok()) {
-    _this->_impl_.ok_.Set(from._internal_ok(), 
+  if (from._internal_has_a_ok()) {
+    _this->_impl_.a_ok_.Set(from._internal_a_ok(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close)
@@ -323,11 +323,11 @@ inline void Reply_Close::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ok_){}
+    , decltype(_impl_.a_ok_){}
   };
-  _impl_.ok_.InitDefault();
+  _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ok_.Set("", GetArenaForAllocation());
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -342,7 +342,7 @@ Reply_Close::~Reply_Close() {
 
 inline void Reply_Close::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.ok_.Destroy();
+  _impl_.a_ok_.Destroy();
 }
 
 void Reply_Close::SetCachedSize(int size) const {
@@ -357,7 +357,7 @@ void Reply_Close::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.ok_.ClearNonDefaultToEmpty();
+    _impl_.a_ok_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -370,10 +370,10 @@ const char* Reply_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes ok = 1;
+      // required bytes a_ok = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_ok();
+          auto str = _internal_mutable_a_ok();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -410,10 +410,10 @@ uint8_t* Reply_Close::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes ok = 1;
+  // required bytes a_ok = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_ok(), target);
+        1, this->_internal_a_ok(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -428,11 +428,11 @@ size_t Reply_Close::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close)
   size_t total_size = 0;
 
-  // required bytes ok = 1;
-  if (_internal_has_ok()) {
+  // required bytes a_ok = 1;
+  if (_internal_has_a_ok()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_ok());
+        this->_internal_a_ok());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -459,8 +459,8 @@ void Reply_Close::MergeFrom(const Reply_Close& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_ok()) {
-    _this->_internal_set_ok(from._internal_ok());
+  if (from._internal_has_a_ok()) {
+    _this->_internal_set_a_ok(from._internal_a_ok());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -484,8 +484,8 @@ void Reply_Close::InternalSwap(Reply_Close* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.ok_, lhs_arena,
-      &other->_impl_.ok_, rhs_arena
+      &_impl_.a_ok_, lhs_arena,
+      &other->_impl_.a_ok_, rhs_arena
   );
 }
 

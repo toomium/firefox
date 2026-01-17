@@ -474,25 +474,25 @@ class Msg_ErrorReceived final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAErrorFieldNumber = 1,
+    kAAErrorFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ErrorValue aError = 1;
-  bool has_aerror() const;
+  // required .protobuf.mozilla.dom.ErrorValue a_aError = 1;
+  bool has_a_aerror() const;
   private:
-  bool _internal_has_aerror() const;
+  bool _internal_has_a_aerror() const;
   public:
-  void clear_aerror();
-  const ::protobuf::mozilla::dom::ErrorValue& aerror() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorValue* release_aerror();
-  ::protobuf::mozilla::dom::ErrorValue* mutable_aerror();
-  void set_allocated_aerror(::protobuf::mozilla::dom::ErrorValue* aerror);
+  void clear_a_aerror();
+  const ::protobuf::mozilla::dom::ErrorValue& a_aerror() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorValue* release_a_aerror();
+  ::protobuf::mozilla::dom::ErrorValue* mutable_a_aerror();
+  void set_allocated_a_aerror(::protobuf::mozilla::dom::ErrorValue* a_aerror);
   private:
-  const ::protobuf::mozilla::dom::ErrorValue& _internal_aerror() const;
-  ::protobuf::mozilla::dom::ErrorValue* _internal_mutable_aerror();
+  const ::protobuf::mozilla::dom::ErrorValue& _internal_a_aerror() const;
+  ::protobuf::mozilla::dom::ErrorValue* _internal_mutable_a_aerror();
   public:
-  void unsafe_arena_set_allocated_aerror(
-      ::protobuf::mozilla::dom::ErrorValue* aerror);
-  ::protobuf::mozilla::dom::ErrorValue* unsafe_arena_release_aerror();
+  void unsafe_arena_set_allocated_a_aerror(
+      ::protobuf::mozilla::dom::ErrorValue* a_aerror);
+  ::protobuf::mozilla::dom::ErrorValue* unsafe_arena_release_a_aerror();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived)
  private:
@@ -504,7 +504,7 @@ class Msg_ErrorReceived final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ErrorValue* aerror_;
+    ::protobuf::mozilla::dom::ErrorValue* a_aerror_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerController_2eproto;
@@ -869,19 +869,19 @@ class Reply_SetServiceWorkerSkipWaitingFlag final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOkFieldNumber = 1,
+    kAAOkFieldNumber = 1,
   };
-  // required bool aOk = 1;
-  bool has_aok() const;
+  // required bool a_aOk = 1;
+  bool has_a_aok() const;
   private:
-  bool _internal_has_aok() const;
+  bool _internal_has_a_aok() const;
   public:
-  void clear_aok();
-  bool aok() const;
-  void set_aok(bool value);
+  void clear_a_aok();
+  bool a_aok() const;
+  void set_a_aok(bool value);
   private:
-  bool _internal_aok() const;
-  void _internal_set_aok(bool value);
+  bool _internal_a_aok() const;
+  void _internal_set_a_aok(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Reply_SetServiceWorkerSkipWaitingFlag)
@@ -894,7 +894,7 @@ class Reply_SetServiceWorkerSkipWaitingFlag final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aok_;
+    bool a_aok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerController_2eproto;
@@ -1011,25 +1011,25 @@ class Msg_PFetchEventOpConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs aArgs = 1;
-  bool has_aargs() const;
+  // required .protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs a_aArgs = 1;
+  bool has_a_aargs() const;
   private:
-  bool _internal_has_aargs() const;
+  bool _internal_has_a_aargs() const;
   public:
-  void clear_aargs();
-  const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& aargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* release_aargs();
-  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* mutable_aargs();
-  void set_allocated_aargs(::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* aargs);
+  void clear_a_aargs();
+  const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& a_aargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* release_a_aargs();
+  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* mutable_a_aargs();
+  void set_allocated_a_aargs(::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* a_aargs);
   private:
-  const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& _internal_aargs() const;
-  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* _internal_mutable_aargs();
+  const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& _internal_a_aargs() const;
+  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* _internal_mutable_a_aargs();
   public:
-  void unsafe_arena_set_allocated_aargs(
-      ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* aargs);
-  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* unsafe_arena_release_aargs();
+  void unsafe_arena_set_allocated_a_aargs(
+      ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* a_aargs);
+  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* unsafe_arena_release_a_aargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor)
  private:
@@ -1041,7 +1041,7 @@ class Msg_PFetchEventOpConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* aargs_;
+    ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* a_aargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerController_2eproto;
@@ -1654,19 +1654,19 @@ class Reply_Shutdown final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOkFieldNumber = 1,
+    kAAOkFieldNumber = 1,
   };
-  // required bool aOk = 1;
-  bool has_aok() const;
+  // required bool a_aOk = 1;
+  bool has_a_aok() const;
   private:
-  bool _internal_has_aok() const;
+  bool _internal_has_a_aok() const;
   public:
-  void clear_aok();
-  bool aok() const;
-  void set_aok(bool value);
+  void clear_a_aok();
+  bool a_aok() const;
+  void set_a_aok(bool value);
   private:
-  bool _internal_aok() const;
-  void _internal_set_aok(bool value);
+  bool _internal_a_aok() const;
+  void _internal_set_a_aok(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Reply_Shutdown)
@@ -1679,7 +1679,7 @@ class Reply_Shutdown final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aok_;
+    bool a_aok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerController_2eproto;
@@ -1796,25 +1796,25 @@ class Msg_ExecServiceWorkerOp final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ServiceWorkerOpArgs aArgs = 1;
-  bool has_aargs() const;
+  // required .protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
+  bool has_a_aargs() const;
   private:
-  bool _internal_has_aargs() const;
+  bool _internal_has_a_aargs() const;
   public:
-  void clear_aargs();
-  const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& aargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ServiceWorkerOpArgs* release_aargs();
-  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* mutable_aargs();
-  void set_allocated_aargs(::protobuf::mozilla::dom::ServiceWorkerOpArgs* aargs);
+  void clear_a_aargs();
+  const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& a_aargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ServiceWorkerOpArgs* release_a_aargs();
+  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* mutable_a_aargs();
+  void set_allocated_a_aargs(::protobuf::mozilla::dom::ServiceWorkerOpArgs* a_aargs);
   private:
-  const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& _internal_aargs() const;
-  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* _internal_mutable_aargs();
+  const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& _internal_a_aargs() const;
+  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* _internal_mutable_a_aargs();
   public:
-  void unsafe_arena_set_allocated_aargs(
-      ::protobuf::mozilla::dom::ServiceWorkerOpArgs* aargs);
-  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* unsafe_arena_release_aargs();
+  void unsafe_arena_set_allocated_a_aargs(
+      ::protobuf::mozilla::dom::ServiceWorkerOpArgs* a_aargs);
+  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* unsafe_arena_release_a_aargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp)
  private:
@@ -1826,7 +1826,7 @@ class Msg_ExecServiceWorkerOp final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ServiceWorkerOpArgs* aargs_;
+    ::protobuf::mozilla::dom::ServiceWorkerOpArgs* a_aargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerController_2eproto;
@@ -1943,25 +1943,25 @@ class Reply_ExecServiceWorkerOp final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAResultFieldNumber = 1,
+    kAAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ServiceWorkerOpResult aResult = 1;
-  bool has_aresult() const;
+  // required .protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const ::protobuf::mozilla::dom::ServiceWorkerOpResult& aresult() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ServiceWorkerOpResult* release_aresult();
-  ::protobuf::mozilla::dom::ServiceWorkerOpResult* mutable_aresult();
-  void set_allocated_aresult(::protobuf::mozilla::dom::ServiceWorkerOpResult* aresult);
+  void clear_a_aresult();
+  const ::protobuf::mozilla::dom::ServiceWorkerOpResult& a_aresult() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ServiceWorkerOpResult* release_a_aresult();
+  ::protobuf::mozilla::dom::ServiceWorkerOpResult* mutable_a_aresult();
+  void set_allocated_a_aresult(::protobuf::mozilla::dom::ServiceWorkerOpResult* a_aresult);
   private:
-  const ::protobuf::mozilla::dom::ServiceWorkerOpResult& _internal_aresult() const;
-  ::protobuf::mozilla::dom::ServiceWorkerOpResult* _internal_mutable_aresult();
+  const ::protobuf::mozilla::dom::ServiceWorkerOpResult& _internal_a_aresult() const;
+  ::protobuf::mozilla::dom::ServiceWorkerOpResult* _internal_mutable_a_aresult();
   public:
-  void unsafe_arena_set_allocated_aresult(
-      ::protobuf::mozilla::dom::ServiceWorkerOpResult* aresult);
-  ::protobuf::mozilla::dom::ServiceWorkerOpResult* unsafe_arena_release_aresult();
+  void unsafe_arena_set_allocated_a_aresult(
+      ::protobuf::mozilla::dom::ServiceWorkerOpResult* a_aresult);
+  ::protobuf::mozilla::dom::ServiceWorkerOpResult* unsafe_arena_release_a_aresult();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp)
  private:
@@ -1973,7 +1973,7 @@ class Reply_ExecServiceWorkerOp final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ServiceWorkerOpResult* aresult_;
+    ::protobuf::mozilla::dom::ServiceWorkerOpResult* a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerController_2eproto;
@@ -1997,41 +1997,41 @@ class Reply_ExecServiceWorkerOp final :
 
 // Msg_ErrorReceived
 
-// required .protobuf.mozilla.dom.ErrorValue aError = 1;
-inline bool Msg_ErrorReceived::_internal_has_aerror() const {
+// required .protobuf.mozilla.dom.ErrorValue a_aError = 1;
+inline bool Msg_ErrorReceived::_internal_has_a_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aerror_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aerror_ != nullptr);
   return value;
 }
-inline bool Msg_ErrorReceived::has_aerror() const {
-  return _internal_has_aerror();
+inline bool Msg_ErrorReceived::has_a_aerror() const {
+  return _internal_has_a_aerror();
 }
-inline const ::protobuf::mozilla::dom::ErrorValue& Msg_ErrorReceived::_internal_aerror() const {
-  const ::protobuf::mozilla::dom::ErrorValue* p = _impl_.aerror_;
+inline const ::protobuf::mozilla::dom::ErrorValue& Msg_ErrorReceived::_internal_a_aerror() const {
+  const ::protobuf::mozilla::dom::ErrorValue* p = _impl_.a_aerror_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ErrorValue&>(
       ::protobuf::mozilla::dom::_ErrorValue_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ErrorValue& Msg_ErrorReceived::aerror() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.aError)
-  return _internal_aerror();
+inline const ::protobuf::mozilla::dom::ErrorValue& Msg_ErrorReceived::a_aerror() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.a_aError)
+  return _internal_a_aerror();
 }
-inline void Msg_ErrorReceived::unsafe_arena_set_allocated_aerror(
-    ::protobuf::mozilla::dom::ErrorValue* aerror) {
+inline void Msg_ErrorReceived::unsafe_arena_set_allocated_a_aerror(
+    ::protobuf::mozilla::dom::ErrorValue* a_aerror) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aerror_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aerror_);
   }
-  _impl_.aerror_ = aerror;
-  if (aerror) {
+  _impl_.a_aerror_ = a_aerror;
+  if (a_aerror) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.aError)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.a_aError)
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::release_aerror() {
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::release_a_aerror() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.aerror_;
-  _impl_.aerror_ = nullptr;
+  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.a_aerror_;
+  _impl_.a_aerror_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2043,45 +2043,45 @@ inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::release_aerror()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::unsafe_arena_release_aerror() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.aError)
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::unsafe_arena_release_a_aerror() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.a_aError)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.aerror_;
-  _impl_.aerror_ = nullptr;
+  ::protobuf::mozilla::dom::ErrorValue* temp = _impl_.a_aerror_;
+  _impl_.a_aerror_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::_internal_mutable_aerror() {
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::_internal_mutable_a_aerror() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aerror_ == nullptr) {
+  if (_impl_.a_aerror_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ErrorValue>(GetArenaForAllocation());
-    _impl_.aerror_ = p;
+    _impl_.a_aerror_ = p;
   }
-  return _impl_.aerror_;
+  return _impl_.a_aerror_;
 }
-inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::mutable_aerror() {
-  ::protobuf::mozilla::dom::ErrorValue* _msg = _internal_mutable_aerror();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.aError)
+inline ::protobuf::mozilla::dom::ErrorValue* Msg_ErrorReceived::mutable_a_aerror() {
+  ::protobuf::mozilla::dom::ErrorValue* _msg = _internal_mutable_a_aerror();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.a_aError)
   return _msg;
 }
-inline void Msg_ErrorReceived::set_allocated_aerror(::protobuf::mozilla::dom::ErrorValue* aerror) {
+inline void Msg_ErrorReceived::set_allocated_a_aerror(::protobuf::mozilla::dom::ErrorValue* a_aerror) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aerror_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aerror_);
   }
-  if (aerror) {
+  if (a_aerror) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aerror));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aerror));
     if (message_arena != submessage_arena) {
-      aerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aerror, submessage_arena);
+      a_aerror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aerror, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aerror_ = aerror;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.aError)
+  _impl_.a_aerror_ = a_aerror;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ErrorReceived.a_aError)
 }
 
 // -------------------------------------------------------------------
@@ -2096,73 +2096,73 @@ inline void Msg_ErrorReceived::set_allocated_aerror(::protobuf::mozilla::dom::Er
 
 // Reply_SetServiceWorkerSkipWaitingFlag
 
-// required bool aOk = 1;
-inline bool Reply_SetServiceWorkerSkipWaitingFlag::_internal_has_aok() const {
+// required bool a_aOk = 1;
+inline bool Reply_SetServiceWorkerSkipWaitingFlag::_internal_has_a_aok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_SetServiceWorkerSkipWaitingFlag::has_aok() const {
-  return _internal_has_aok();
+inline bool Reply_SetServiceWorkerSkipWaitingFlag::has_a_aok() const {
+  return _internal_has_a_aok();
 }
-inline void Reply_SetServiceWorkerSkipWaitingFlag::clear_aok() {
-  _impl_.aok_ = false;
+inline void Reply_SetServiceWorkerSkipWaitingFlag::clear_a_aok() {
+  _impl_.a_aok_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_SetServiceWorkerSkipWaitingFlag::_internal_aok() const {
-  return _impl_.aok_;
+inline bool Reply_SetServiceWorkerSkipWaitingFlag::_internal_a_aok() const {
+  return _impl_.a_aok_;
 }
-inline bool Reply_SetServiceWorkerSkipWaitingFlag::aok() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Reply_SetServiceWorkerSkipWaitingFlag.aOk)
-  return _internal_aok();
+inline bool Reply_SetServiceWorkerSkipWaitingFlag::a_aok() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Reply_SetServiceWorkerSkipWaitingFlag.a_aOk)
+  return _internal_a_aok();
 }
-inline void Reply_SetServiceWorkerSkipWaitingFlag::_internal_set_aok(bool value) {
+inline void Reply_SetServiceWorkerSkipWaitingFlag::_internal_set_a_aok(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aok_ = value;
+  _impl_.a_aok_ = value;
 }
-inline void Reply_SetServiceWorkerSkipWaitingFlag::set_aok(bool value) {
-  _internal_set_aok(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerController.Reply_SetServiceWorkerSkipWaitingFlag.aOk)
+inline void Reply_SetServiceWorkerSkipWaitingFlag::set_a_aok(bool value) {
+  _internal_set_a_aok(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerController.Reply_SetServiceWorkerSkipWaitingFlag.a_aOk)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PFetchEventOpConstructor
 
-// required .protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs aArgs = 1;
-inline bool Msg_PFetchEventOpConstructor::_internal_has_aargs() const {
+// required .protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs a_aArgs = 1;
+inline bool Msg_PFetchEventOpConstructor::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
   return value;
 }
-inline bool Msg_PFetchEventOpConstructor::has_aargs() const {
-  return _internal_has_aargs();
+inline bool Msg_PFetchEventOpConstructor::has_a_aargs() const {
+  return _internal_has_a_aargs();
 }
-inline const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& Msg_PFetchEventOpConstructor::_internal_aargs() const {
-  const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* p = _impl_.aargs_;
+inline const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& Msg_PFetchEventOpConstructor::_internal_a_aargs() const {
+  const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* p = _impl_.a_aargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs&>(
       ::protobuf::mozilla::dom::_ParentToParentServiceWorkerFetchEventOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& Msg_PFetchEventOpConstructor::aargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.aArgs)
-  return _internal_aargs();
+inline const ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs& Msg_PFetchEventOpConstructor::a_aargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.a_aArgs)
+  return _internal_a_aargs();
 }
-inline void Msg_PFetchEventOpConstructor::unsafe_arena_set_allocated_aargs(
-    ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* aargs) {
+inline void Msg_PFetchEventOpConstructor::unsafe_arena_set_allocated_a_aargs(
+    ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* a_aargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  _impl_.aargs_ = aargs;
-  if (aargs) {
+  _impl_.a_aargs_ = a_aargs;
+  if (a_aargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.aArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.a_aArgs)
 }
-inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::release_aargs() {
+inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::release_a_aargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2174,45 +2174,45 @@ inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Ms
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::unsafe_arena_release_aargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.aArgs)
+inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::unsafe_arena_release_a_aargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.a_aArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::_internal_mutable_aargs() {
+inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::_internal_mutable_a_aargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aargs_ == nullptr) {
+  if (_impl_.a_aargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs>(GetArenaForAllocation());
-    _impl_.aargs_ = p;
+    _impl_.a_aargs_ = p;
   }
-  return _impl_.aargs_;
+  return _impl_.a_aargs_;
 }
-inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::mutable_aargs() {
-  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* _msg = _internal_mutable_aargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.aArgs)
+inline ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Msg_PFetchEventOpConstructor::mutable_a_aargs() {
+  ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* _msg = _internal_mutable_a_aargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.a_aArgs)
   return _msg;
 }
-inline void Msg_PFetchEventOpConstructor::set_allocated_aargs(::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* aargs) {
+inline void Msg_PFetchEventOpConstructor::set_allocated_a_aargs(::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* a_aargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  if (aargs) {
+  if (a_aargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aargs));
     if (message_arena != submessage_arena) {
-      aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aargs, submessage_arena);
+      a_aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aargs_ = aargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.aArgs)
+  _impl_.a_aargs_ = a_aargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_PFetchEventOpConstructor.a_aArgs)
 }
 
 // -------------------------------------------------------------------
@@ -2235,73 +2235,73 @@ inline void Msg_PFetchEventOpConstructor::set_allocated_aargs(::protobuf::mozill
 
 // Reply_Shutdown
 
-// required bool aOk = 1;
-inline bool Reply_Shutdown::_internal_has_aok() const {
+// required bool a_aOk = 1;
+inline bool Reply_Shutdown::_internal_has_a_aok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Shutdown::has_aok() const {
-  return _internal_has_aok();
+inline bool Reply_Shutdown::has_a_aok() const {
+  return _internal_has_a_aok();
 }
-inline void Reply_Shutdown::clear_aok() {
-  _impl_.aok_ = false;
+inline void Reply_Shutdown::clear_a_aok() {
+  _impl_.a_aok_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Shutdown::_internal_aok() const {
-  return _impl_.aok_;
+inline bool Reply_Shutdown::_internal_a_aok() const {
+  return _impl_.a_aok_;
 }
-inline bool Reply_Shutdown::aok() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Reply_Shutdown.aOk)
-  return _internal_aok();
+inline bool Reply_Shutdown::a_aok() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Reply_Shutdown.a_aOk)
+  return _internal_a_aok();
 }
-inline void Reply_Shutdown::_internal_set_aok(bool value) {
+inline void Reply_Shutdown::_internal_set_a_aok(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aok_ = value;
+  _impl_.a_aok_ = value;
 }
-inline void Reply_Shutdown::set_aok(bool value) {
-  _internal_set_aok(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerController.Reply_Shutdown.aOk)
+inline void Reply_Shutdown::set_a_aok(bool value) {
+  _internal_set_a_aok(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerController.Reply_Shutdown.a_aOk)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ExecServiceWorkerOp
 
-// required .protobuf.mozilla.dom.ServiceWorkerOpArgs aArgs = 1;
-inline bool Msg_ExecServiceWorkerOp::_internal_has_aargs() const {
+// required .protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
+inline bool Msg_ExecServiceWorkerOp::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
   return value;
 }
-inline bool Msg_ExecServiceWorkerOp::has_aargs() const {
-  return _internal_has_aargs();
+inline bool Msg_ExecServiceWorkerOp::has_a_aargs() const {
+  return _internal_has_a_aargs();
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& Msg_ExecServiceWorkerOp::_internal_aargs() const {
-  const ::protobuf::mozilla::dom::ServiceWorkerOpArgs* p = _impl_.aargs_;
+inline const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& Msg_ExecServiceWorkerOp::_internal_a_aargs() const {
+  const ::protobuf::mozilla::dom::ServiceWorkerOpArgs* p = _impl_.a_aargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ServiceWorkerOpArgs&>(
       ::protobuf::mozilla::dom::_ServiceWorkerOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& Msg_ExecServiceWorkerOp::aargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.aArgs)
-  return _internal_aargs();
+inline const ::protobuf::mozilla::dom::ServiceWorkerOpArgs& Msg_ExecServiceWorkerOp::a_aargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.a_aArgs)
+  return _internal_a_aargs();
 }
-inline void Msg_ExecServiceWorkerOp::unsafe_arena_set_allocated_aargs(
-    ::protobuf::mozilla::dom::ServiceWorkerOpArgs* aargs) {
+inline void Msg_ExecServiceWorkerOp::unsafe_arena_set_allocated_a_aargs(
+    ::protobuf::mozilla::dom::ServiceWorkerOpArgs* a_aargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  _impl_.aargs_ = aargs;
-  if (aargs) {
+  _impl_.a_aargs_ = a_aargs;
+  if (a_aargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.aArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.a_aArgs)
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::release_aargs() {
+inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::release_a_aargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2313,86 +2313,86 @@ inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::r
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::unsafe_arena_release_aargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.aArgs)
+inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::unsafe_arena_release_a_aargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.a_aArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* temp = _impl_.aargs_;
-  _impl_.aargs_ = nullptr;
+  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* temp = _impl_.a_aargs_;
+  _impl_.a_aargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::_internal_mutable_aargs() {
+inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::_internal_mutable_a_aargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aargs_ == nullptr) {
+  if (_impl_.a_aargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ServiceWorkerOpArgs>(GetArenaForAllocation());
-    _impl_.aargs_ = p;
+    _impl_.a_aargs_ = p;
   }
-  return _impl_.aargs_;
+  return _impl_.a_aargs_;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::mutable_aargs() {
-  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* _msg = _internal_mutable_aargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.aArgs)
+inline ::protobuf::mozilla::dom::ServiceWorkerOpArgs* Msg_ExecServiceWorkerOp::mutable_a_aargs() {
+  ::protobuf::mozilla::dom::ServiceWorkerOpArgs* _msg = _internal_mutable_a_aargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.a_aArgs)
   return _msg;
 }
-inline void Msg_ExecServiceWorkerOp::set_allocated_aargs(::protobuf::mozilla::dom::ServiceWorkerOpArgs* aargs) {
+inline void Msg_ExecServiceWorkerOp::set_allocated_a_aargs(::protobuf::mozilla::dom::ServiceWorkerOpArgs* a_aargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aargs_);
   }
-  if (aargs) {
+  if (a_aargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aargs));
     if (message_arena != submessage_arena) {
-      aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aargs, submessage_arena);
+      a_aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aargs_ = aargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.aArgs)
+  _impl_.a_aargs_ = a_aargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Msg_ExecServiceWorkerOp.a_aArgs)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_ExecServiceWorkerOp
 
-// required .protobuf.mozilla.dom.ServiceWorkerOpResult aResult = 1;
-inline bool Reply_ExecServiceWorkerOp::_internal_has_aresult() const {
+// required .protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+inline bool Reply_ExecServiceWorkerOp::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aresult_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aresult_ != nullptr);
   return value;
 }
-inline bool Reply_ExecServiceWorkerOp::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Reply_ExecServiceWorkerOp::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerOpResult& Reply_ExecServiceWorkerOp::_internal_aresult() const {
-  const ::protobuf::mozilla::dom::ServiceWorkerOpResult* p = _impl_.aresult_;
+inline const ::protobuf::mozilla::dom::ServiceWorkerOpResult& Reply_ExecServiceWorkerOp::_internal_a_aresult() const {
+  const ::protobuf::mozilla::dom::ServiceWorkerOpResult* p = _impl_.a_aresult_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ServiceWorkerOpResult&>(
       ::protobuf::mozilla::dom::_ServiceWorkerOpResult_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerOpResult& Reply_ExecServiceWorkerOp::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.aResult)
-  return _internal_aresult();
+inline const ::protobuf::mozilla::dom::ServiceWorkerOpResult& Reply_ExecServiceWorkerOp::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.a_aResult)
+  return _internal_a_aresult();
 }
-inline void Reply_ExecServiceWorkerOp::unsafe_arena_set_allocated_aresult(
-    ::protobuf::mozilla::dom::ServiceWorkerOpResult* aresult) {
+inline void Reply_ExecServiceWorkerOp::unsafe_arena_set_allocated_a_aresult(
+    ::protobuf::mozilla::dom::ServiceWorkerOpResult* a_aresult) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aresult_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aresult_);
   }
-  _impl_.aresult_ = aresult;
-  if (aresult) {
+  _impl_.a_aresult_ = a_aresult;
+  if (a_aresult) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.aResult)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.a_aResult)
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::release_aresult() {
+inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::release_a_aresult() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ServiceWorkerOpResult* temp = _impl_.aresult_;
-  _impl_.aresult_ = nullptr;
+  ::protobuf::mozilla::dom::ServiceWorkerOpResult* temp = _impl_.a_aresult_;
+  _impl_.a_aresult_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2404,45 +2404,45 @@ inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerO
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::unsafe_arena_release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.aResult)
+inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::unsafe_arena_release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.a_aResult)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ServiceWorkerOpResult* temp = _impl_.aresult_;
-  _impl_.aresult_ = nullptr;
+  ::protobuf::mozilla::dom::ServiceWorkerOpResult* temp = _impl_.a_aresult_;
+  _impl_.a_aresult_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::_internal_mutable_aresult() {
+inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aresult_ == nullptr) {
+  if (_impl_.a_aresult_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ServiceWorkerOpResult>(GetArenaForAllocation());
-    _impl_.aresult_ = p;
+    _impl_.a_aresult_ = p;
   }
-  return _impl_.aresult_;
+  return _impl_.a_aresult_;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::mutable_aresult() {
-  ::protobuf::mozilla::dom::ServiceWorkerOpResult* _msg = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.aResult)
+inline ::protobuf::mozilla::dom::ServiceWorkerOpResult* Reply_ExecServiceWorkerOp::mutable_a_aresult() {
+  ::protobuf::mozilla::dom::ServiceWorkerOpResult* _msg = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.a_aResult)
   return _msg;
 }
-inline void Reply_ExecServiceWorkerOp::set_allocated_aresult(::protobuf::mozilla::dom::ServiceWorkerOpResult* aresult) {
+inline void Reply_ExecServiceWorkerOp::set_allocated_a_aresult(::protobuf::mozilla::dom::ServiceWorkerOpResult* a_aresult) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aresult_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aresult_);
   }
-  if (aresult) {
+  if (a_aresult) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aresult));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aresult));
     if (message_arena != submessage_arena) {
-      aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aresult, submessage_arena);
+      a_aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aresult, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresult_ = aresult;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.aResult)
+  _impl_.a_aresult_ = a_aresult;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerController.Reply_ExecServiceWorkerOp.a_aResult)
 }
 
 #ifdef __GNUC__

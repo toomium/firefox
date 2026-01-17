@@ -17,8 +17,8 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg___delete__ {
-  repeated protobuf.mozilla.net.ProxyInfoCloneArgs aProxyInfo = 1;
-  required bytes aResult = 2;
+  repeated protobuf.mozilla.net.ProxyInfoCloneArgs a_aProxyInfo = 1;
+  required bytes a_aResult = 2;
 }
 
 message Reply___delete__ {

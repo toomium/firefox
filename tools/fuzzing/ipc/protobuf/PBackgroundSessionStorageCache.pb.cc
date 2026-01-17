@@ -47,7 +47,7 @@ struct Msg_LoadDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_LoadDefaultTypeInternal _Msg_Load_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Load::Reply_Load(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.adata_)*/{}
+    /*decltype(_impl_.a_adata_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_LoadDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_LoadDefaultTypeInternal()
@@ -60,7 +60,7 @@ struct Reply_LoadDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_LoadDefaultTypeInternal _Reply_Load_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Checkpoint::Msg_Checkpoint(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.awriteinfos_)*/{}
+    /*decltype(_impl_.a_awriteinfos_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_CheckpointDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CheckpointDefaultTypeInternal()
@@ -406,8 +406,8 @@ class Reply_Load::_Internal {
  public:
 };
 
-void Reply_Load::clear_adata() {
-  _impl_.adata_.Clear();
+void Reply_Load::clear_a_adata() {
+  _impl_.a_adata_.Clear();
 }
 Reply_Load::Reply_Load(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -419,7 +419,7 @@ Reply_Load::Reply_Load(const Reply_Load& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Load* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.adata_){from._impl_.adata_}
+      decltype(_impl_.a_adata_){from._impl_.a_adata_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -431,7 +431,7 @@ inline void Reply_Load::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.adata_){arena}
+      decltype(_impl_.a_adata_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -447,7 +447,7 @@ Reply_Load::~Reply_Load() {
 
 inline void Reply_Load::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.adata_.~RepeatedPtrField();
+  _impl_.a_adata_.~RepeatedPtrField();
 }
 
 void Reply_Load::SetCachedSize(int size) const {
@@ -460,7 +460,7 @@ void Reply_Load::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.adata_.Clear();
+  _impl_.a_adata_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -470,13 +470,13 @@ const char* Reply_Load::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.SSSetItemInfo aData = 1;
+      // repeated .protobuf.mozilla.dom.SSSetItemInfo a_aData = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_adata(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_adata(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -512,10 +512,10 @@ uint8_t* Reply_Load::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.SSSetItemInfo aData = 1;
+  // repeated .protobuf.mozilla.dom.SSSetItemInfo a_aData = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_adata_size()); i < n; i++) {
-    const auto& repfield = this->_internal_adata(i);
+      n = static_cast<unsigned>(this->_internal_a_adata_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_adata(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -536,9 +536,9 @@ size_t Reply_Load::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.SSSetItemInfo aData = 1;
-  total_size += 1UL * this->_internal_adata_size();
-  for (const auto& msg : this->_impl_.adata_) {
+  // repeated .protobuf.mozilla.dom.SSSetItemInfo a_aData = 1;
+  total_size += 1UL * this->_internal_a_adata_size();
+  for (const auto& msg : this->_impl_.a_adata_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -564,7 +564,7 @@ void Reply_Load::MergeFrom(const Reply_Load& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.adata_.MergeFrom(from._impl_.adata_);
+  _this->_impl_.a_adata_.MergeFrom(from._impl_.a_adata_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -576,7 +576,7 @@ void Reply_Load::CopyFrom(const Reply_Load& from) {
 }
 
 bool Reply_Load::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.adata_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_adata_))
     return false;
   return true;
 }
@@ -584,7 +584,7 @@ bool Reply_Load::IsInitialized() const {
 void Reply_Load::InternalSwap(Reply_Load* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.adata_.InternalSwap(&other->_impl_.adata_);
+  _impl_.a_adata_.InternalSwap(&other->_impl_.a_adata_);
 }
 
 std::string Reply_Load::GetTypeName() const {
@@ -598,8 +598,8 @@ class Msg_Checkpoint::_Internal {
  public:
 };
 
-void Msg_Checkpoint::clear_awriteinfos() {
-  _impl_.awriteinfos_.Clear();
+void Msg_Checkpoint::clear_a_awriteinfos() {
+  _impl_.a_awriteinfos_.Clear();
 }
 Msg_Checkpoint::Msg_Checkpoint(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -611,7 +611,7 @@ Msg_Checkpoint::Msg_Checkpoint(const Msg_Checkpoint& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Checkpoint* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.awriteinfos_){from._impl_.awriteinfos_}
+      decltype(_impl_.a_awriteinfos_){from._impl_.a_awriteinfos_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -623,7 +623,7 @@ inline void Msg_Checkpoint::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.awriteinfos_){arena}
+      decltype(_impl_.a_awriteinfos_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -639,7 +639,7 @@ Msg_Checkpoint::~Msg_Checkpoint() {
 
 inline void Msg_Checkpoint::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.awriteinfos_.~RepeatedPtrField();
+  _impl_.a_awriteinfos_.~RepeatedPtrField();
 }
 
 void Msg_Checkpoint::SetCachedSize(int size) const {
@@ -652,7 +652,7 @@ void Msg_Checkpoint::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.awriteinfos_.Clear();
+  _impl_.a_awriteinfos_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -662,13 +662,13 @@ const char* Msg_Checkpoint::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.SSWriteInfo aWriteInfos = 1;
+      // repeated .protobuf.mozilla.dom.SSWriteInfo a_aWriteInfos = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_awriteinfos(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_awriteinfos(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -704,10 +704,10 @@ uint8_t* Msg_Checkpoint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.SSWriteInfo aWriteInfos = 1;
+  // repeated .protobuf.mozilla.dom.SSWriteInfo a_aWriteInfos = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_awriteinfos_size()); i < n; i++) {
-    const auto& repfield = this->_internal_awriteinfos(i);
+      n = static_cast<unsigned>(this->_internal_a_awriteinfos_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_awriteinfos(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -728,9 +728,9 @@ size_t Msg_Checkpoint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.SSWriteInfo aWriteInfos = 1;
-  total_size += 1UL * this->_internal_awriteinfos_size();
-  for (const auto& msg : this->_impl_.awriteinfos_) {
+  // repeated .protobuf.mozilla.dom.SSWriteInfo a_aWriteInfos = 1;
+  total_size += 1UL * this->_internal_a_awriteinfos_size();
+  for (const auto& msg : this->_impl_.a_awriteinfos_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -756,7 +756,7 @@ void Msg_Checkpoint::MergeFrom(const Msg_Checkpoint& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.awriteinfos_.MergeFrom(from._impl_.awriteinfos_);
+  _this->_impl_.a_awriteinfos_.MergeFrom(from._impl_.a_awriteinfos_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -768,7 +768,7 @@ void Msg_Checkpoint::CopyFrom(const Msg_Checkpoint& from) {
 }
 
 bool Msg_Checkpoint::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.awriteinfos_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_awriteinfos_))
     return false;
   return true;
 }
@@ -776,7 +776,7 @@ bool Msg_Checkpoint::IsInitialized() const {
 void Msg_Checkpoint::InternalSwap(Msg_Checkpoint* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.awriteinfos_.InternalSwap(&other->_impl_.awriteinfos_);
+  _impl_.a_awriteinfos_.InternalSwap(&other->_impl_.a_awriteinfos_);
 }
 
 std::string Msg_Checkpoint::GetTypeName() const {

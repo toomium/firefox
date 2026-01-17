@@ -14,32 +14,32 @@ package protobuf.mozilla;
 // Structs and unions declarations
 message EncodedInputIPDL {
   oneof content {
-    bytes mVArrayOfRemoteAudioData = 1;
-    bytes mVArrayOfRemoteVideoData = 2;
+    bytes a_mVArrayOfRemoteAudioData = 1;
+    bytes a_mVArrayOfRemoteVideoData = 2;
   }
 }
 
 message EncodeInitCompletionIPDL {
-  required bytes description = 1;
-  required bool hardware = 2;
-  required bytes hardwareReason = 3;
+  required bytes a_description = 1;
+  required bool a_hardware = 2;
+  required bytes a_hardwareReason = 3;
 }
 
 message EncodeInitResultIPDL {
   oneof content {
-    bytes mVMediaResult = 1;
-    protobuf.mozilla.EncodeInitCompletionIPDL mVEncodeInitCompletionIPDL = 2;
+    bytes a_mVMediaResult = 1;
+    protobuf.mozilla.EncodeInitCompletionIPDL a_mVEncodeInitCompletionIPDL = 2;
   }
 }
 
 message EncodeCompletionIPDL {
-  required bytes samples = 1;
-  required uint32 ticketId = 2;
+  required bytes a_samples = 1;
+  required uint32 a_ticketId = 2;
 }
 
 message EncodeResultIPDL {
   oneof content {
-    bytes mVMediaResult = 1;
-    protobuf.mozilla.EncodeCompletionIPDL mVEncodeCompletionIPDL = 2;
+    bytes a_mVMediaResult = 1;
+    protobuf.mozilla.EncodeCompletionIPDL a_mVEncodeCompletionIPDL = 2;
   }
 }

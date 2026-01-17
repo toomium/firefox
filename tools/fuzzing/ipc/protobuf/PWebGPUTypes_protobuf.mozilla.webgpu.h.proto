@@ -12,18 +12,18 @@ package protobuf.mozilla.webgpu;
 
 // Structs and unions declarations
 message BufferMapSuccess {
-  required uint64 offset = 1;
-  required uint64 size = 2;
-  required bool writable = 3;
+  required uint64 a_offset = 1;
+  required uint64 a_size = 2;
+  required bool a_writable = 3;
 }
 
 message BufferMapError {
-  required bytes message = 1;
+  required bytes a_message = 1;
 }
 
 message BufferMapResult {
   oneof content {
-    protobuf.mozilla.webgpu.BufferMapSuccess mVBufferMapSuccess = 1;
-    protobuf.mozilla.webgpu.BufferMapError mVBufferMapError = 2;
+    protobuf.mozilla.webgpu.BufferMapSuccess a_mVBufferMapSuccess = 1;
+    protobuf.mozilla.webgpu.BufferMapError a_mVBufferMapError = 2;
   }
 }

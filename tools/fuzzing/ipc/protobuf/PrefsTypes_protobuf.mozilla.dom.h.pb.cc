@@ -38,11 +38,11 @@ PROTOBUF_CONSTEXPR Pref::Pref(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.defaultvalue_)*/nullptr
-  , /*decltype(_impl_.uservalue_)*/nullptr
-  , /*decltype(_impl_.islocked_)*/false
-  , /*decltype(_impl_.issanitized_)*/false} {}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_defaultvalue_)*/nullptr
+  , /*decltype(_impl_.a_uservalue_)*/nullptr
+  , /*decltype(_impl_.a_islocked_)*/false
+  , /*decltype(_impl_.a_issanitized_)*/false} {}
 struct PrefDefaultTypeInternal {
   PROTOBUF_CONSTEXPR PrefDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -82,16 +82,16 @@ PrefValue::PrefValue(const PrefValue& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnsCString: {
-      _this->_internal_set_mvnscstring(from._internal_mvnscstring());
+    case kAMVnsCString: {
+      _this->_internal_set_a_mvnscstring(from._internal_a_mvnscstring());
       break;
     }
-    case kMVint32T: {
-      _this->_internal_set_mvint32_t(from._internal_mvint32_t());
+    case kAMVint32T: {
+      _this->_internal_set_a_mvint32_t(from._internal_a_mvint32_t());
       break;
     }
-    case kMVbool: {
-      _this->_internal_set_mvbool(from._internal_mvbool());
+    case kAMVbool: {
+      _this->_internal_set_a_mvbool(from._internal_a_mvbool());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -136,15 +136,15 @@ void PrefValue::SetCachedSize(int size) const {
 void PrefValue::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.PrefValue)
   switch (content_case()) {
-    case kMVnsCString: {
-      _impl_.content_.mvnscstring_.Destroy();
+    case kAMVnsCString: {
+      _impl_.content_.a_mvnscstring_.Destroy();
       break;
     }
-    case kMVint32T: {
+    case kAMVint32T: {
       // No need to clear
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       // No need to clear
       break;
     }
@@ -172,27 +172,27 @@ const char* PrefValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnsCString = 1;
+      // bytes a_mVnsCString = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnscstring();
+          auto str = _internal_mutable_a_mvnscstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 mVint32_t = 2;
+      // sint32 a_mVint32_t = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint32_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool mVbool = 3;
+      // bool a_mVbool = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _internal_set_mvbool(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          _internal_set_a_mvbool(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -227,19 +227,19 @@ uint8_t* PrefValue::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnsCString: {
+    case kAMVnsCString: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnscstring(), target);
+          1, this->_internal_a_mvnscstring(), target);
       break;
     }
-    case kMVint32T: {
+    case kAMVint32T: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_mvint32_t(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_mvint32_t(), target);
       break;
     }
-    case kMVbool: {
+    case kAMVbool: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_mvbool(), target);
+      target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_mvbool(), target);
       break;
     }
     default: ;
@@ -261,20 +261,20 @@ size_t PrefValue::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnsCString = 1;
-    case kMVnsCString: {
+    // bytes a_mVnsCString = 1;
+    case kAMVnsCString: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnscstring());
+          this->_internal_a_mvnscstring());
       break;
     }
-    // sint32 mVint32_t = 2;
-    case kMVint32T: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint32_t());
+    // sint32 a_mVint32_t = 2;
+    case kAMVint32T: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint32_t());
       break;
     }
-    // bool mVbool = 3;
-    case kMVbool: {
+    // bool a_mVbool = 3;
+    case kAMVbool: {
       total_size += 1 + 1;
       break;
     }
@@ -304,16 +304,16 @@ void PrefValue::MergeFrom(const PrefValue& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnsCString: {
-      _this->_internal_set_mvnscstring(from._internal_mvnscstring());
+    case kAMVnsCString: {
+      _this->_internal_set_a_mvnscstring(from._internal_a_mvnscstring());
       break;
     }
-    case kMVint32T: {
-      _this->_internal_set_mvint32_t(from._internal_mvint32_t());
+    case kAMVint32T: {
+      _this->_internal_set_a_mvint32_t(from._internal_a_mvint32_t());
       break;
     }
-    case kMVbool: {
-      _this->_internal_set_mvbool(from._internal_mvbool());
+    case kAMVbool: {
+      _this->_internal_set_a_mvbool(from._internal_a_mvbool());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -351,21 +351,21 @@ std::string PrefValue::GetTypeName() const {
 class Pref::_Internal {
  public:
   using HasBits = decltype(std::declval<Pref>()._impl_._has_bits_);
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_islocked(HasBits* has_bits) {
+  static void set_has_a_islocked(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_issanitized(HasBits* has_bits) {
+  static void set_has_a_issanitized(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static const ::protobuf::mozilla::dom::PrefValue& defaultvalue(const Pref* msg);
-  static void set_has_defaultvalue(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::PrefValue& a_defaultvalue(const Pref* msg);
+  static void set_has_a_defaultvalue(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static const ::protobuf::mozilla::dom::PrefValue& uservalue(const Pref* msg);
-  static void set_has_uservalue(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::PrefValue& a_uservalue(const Pref* msg);
+  static void set_has_a_uservalue(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -374,12 +374,12 @@ class Pref::_Internal {
 };
 
 const ::protobuf::mozilla::dom::PrefValue&
-Pref::_Internal::defaultvalue(const Pref* msg) {
-  return *msg->_impl_.defaultvalue_;
+Pref::_Internal::a_defaultvalue(const Pref* msg) {
+  return *msg->_impl_.a_defaultvalue_;
 }
 const ::protobuf::mozilla::dom::PrefValue&
-Pref::_Internal::uservalue(const Pref* msg) {
-  return *msg->_impl_.uservalue_;
+Pref::_Internal::a_uservalue(const Pref* msg) {
+  return *msg->_impl_.a_uservalue_;
 }
 Pref::Pref(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -393,30 +393,30 @@ Pref::Pref(const Pref& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.defaultvalue_){nullptr}
-    , decltype(_impl_.uservalue_){nullptr}
-    , decltype(_impl_.islocked_){}
-    , decltype(_impl_.issanitized_){}};
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_defaultvalue_){nullptr}
+    , decltype(_impl_.a_uservalue_){nullptr}
+    , decltype(_impl_.a_islocked_){}
+    , decltype(_impl_.a_issanitized_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_defaultvalue()) {
-    _this->_impl_.defaultvalue_ = new ::protobuf::mozilla::dom::PrefValue(*from._impl_.defaultvalue_);
+  if (from._internal_has_a_defaultvalue()) {
+    _this->_impl_.a_defaultvalue_ = new ::protobuf::mozilla::dom::PrefValue(*from._impl_.a_defaultvalue_);
   }
-  if (from._internal_has_uservalue()) {
-    _this->_impl_.uservalue_ = new ::protobuf::mozilla::dom::PrefValue(*from._impl_.uservalue_);
+  if (from._internal_has_a_uservalue()) {
+    _this->_impl_.a_uservalue_ = new ::protobuf::mozilla::dom::PrefValue(*from._impl_.a_uservalue_);
   }
-  ::memcpy(&_impl_.islocked_, &from._impl_.islocked_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.issanitized_) -
-    reinterpret_cast<char*>(&_impl_.islocked_)) + sizeof(_impl_.issanitized_));
+  ::memcpy(&_impl_.a_islocked_, &from._impl_.a_islocked_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_issanitized_) -
+    reinterpret_cast<char*>(&_impl_.a_islocked_)) + sizeof(_impl_.a_issanitized_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.Pref)
 }
 
@@ -427,15 +427,15 @@ inline void Pref::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.defaultvalue_){nullptr}
-    , decltype(_impl_.uservalue_){nullptr}
-    , decltype(_impl_.islocked_){false}
-    , decltype(_impl_.issanitized_){false}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_defaultvalue_){nullptr}
+    , decltype(_impl_.a_uservalue_){nullptr}
+    , decltype(_impl_.a_islocked_){false}
+    , decltype(_impl_.a_issanitized_){false}
   };
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -450,9 +450,9 @@ Pref::~Pref() {
 
 inline void Pref::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.defaultvalue_;
-  if (this != internal_default_instance()) delete _impl_.uservalue_;
+  _impl_.a_name_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_defaultvalue_;
+  if (this != internal_default_instance()) delete _impl_.a_uservalue_;
 }
 
 void Pref::SetCachedSize(int size) const {
@@ -468,20 +468,20 @@ void Pref::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.name_.ClearNonDefaultToEmpty();
+      _impl_.a_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.defaultvalue_ != nullptr);
-      _impl_.defaultvalue_->Clear();
+      GOOGLE_DCHECK(_impl_.a_defaultvalue_ != nullptr);
+      _impl_.a_defaultvalue_->Clear();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.uservalue_ != nullptr);
-      _impl_.uservalue_->Clear();
+      GOOGLE_DCHECK(_impl_.a_uservalue_ != nullptr);
+      _impl_.a_uservalue_->Clear();
     }
   }
-  ::memset(&_impl_.islocked_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.issanitized_) -
-      reinterpret_cast<char*>(&_impl_.islocked_)) + sizeof(_impl_.issanitized_));
+  ::memset(&_impl_.a_islocked_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_issanitized_) -
+      reinterpret_cast<char*>(&_impl_.a_islocked_)) + sizeof(_impl_.a_issanitized_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -493,45 +493,45 @@ const char* Pref::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes name = 1;
+      // required bytes a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool isLocked = 2;
+      // required bool a_isLocked = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_islocked(&has_bits);
-          _impl_.islocked_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_islocked(&has_bits);
+          _impl_.a_islocked_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool isSanitized = 3;
+      // required bool a_isSanitized = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_issanitized(&has_bits);
-          _impl_.issanitized_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_issanitized(&has_bits);
+          _impl_.a_issanitized_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional .protobuf.mozilla.dom.PrefValue defaultValue = 4;
+      // optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_defaultvalue(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_defaultvalue(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional .protobuf.mozilla.dom.PrefValue userValue = 5;
+      // optional .protobuf.mozilla.dom.PrefValue a_userValue = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_uservalue(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_uservalue(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -567,36 +567,36 @@ uint8_t* Pref::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes name = 1;
+  // required bytes a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_name(), target);
+        1, this->_internal_a_name(), target);
   }
 
-  // required bool isLocked = 2;
+  // required bool a_isLocked = 2;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_islocked(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_islocked(), target);
   }
 
-  // required bool isSanitized = 3;
+  // required bool a_isSanitized = 3;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_issanitized(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_issanitized(), target);
   }
 
-  // optional .protobuf.mozilla.dom.PrefValue defaultValue = 4;
+  // optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::defaultvalue(this),
-        _Internal::defaultvalue(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(4, _Internal::a_defaultvalue(this),
+        _Internal::a_defaultvalue(this).GetCachedSize(), target, stream);
   }
 
-  // optional .protobuf.mozilla.dom.PrefValue userValue = 5;
+  // optional .protobuf.mozilla.dom.PrefValue a_userValue = 5;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::uservalue(this),
-        _Internal::uservalue(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(5, _Internal::a_uservalue(this),
+        _Internal::a_uservalue(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -611,20 +611,20 @@ size_t Pref::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.Pref)
   size_t total_size = 0;
 
-  if (_internal_has_name()) {
-    // required bytes name = 1;
+  if (_internal_has_a_name()) {
+    // required bytes a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
 
-  if (_internal_has_islocked()) {
-    // required bool isLocked = 2;
+  if (_internal_has_a_islocked()) {
+    // required bool a_isLocked = 2;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_issanitized()) {
-    // required bool isSanitized = 3;
+  if (_internal_has_a_issanitized()) {
+    // required bool a_isSanitized = 3;
     total_size += 1 + 1;
   }
 
@@ -635,15 +635,15 @@ size_t Pref::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000019) ^ 0x00000019) == 0) {  // All required fields are present.
-    // required bytes name = 1;
+    // required bytes a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
 
-    // required bool isLocked = 2;
+    // required bool a_isLocked = 2;
     total_size += 1 + 1;
 
-    // required bool isSanitized = 3;
+    // required bool a_isSanitized = 3;
     total_size += 1 + 1;
 
   } else {
@@ -655,18 +655,18 @@ size_t Pref::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000006u) {
-    // optional .protobuf.mozilla.dom.PrefValue defaultValue = 4;
+    // optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.defaultvalue_);
+          *_impl_.a_defaultvalue_);
     }
 
-    // optional .protobuf.mozilla.dom.PrefValue userValue = 5;
+    // optional .protobuf.mozilla.dom.PrefValue a_userValue = 5;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.uservalue_);
+          *_impl_.a_uservalue_);
     }
 
   }
@@ -694,21 +694,21 @@ void Pref::MergeFrom(const Pref& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_name(from._internal_name());
+      _this->_internal_set_a_name(from._internal_a_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_defaultvalue()->::protobuf::mozilla::dom::PrefValue::MergeFrom(
-          from._internal_defaultvalue());
+      _this->_internal_mutable_a_defaultvalue()->::protobuf::mozilla::dom::PrefValue::MergeFrom(
+          from._internal_a_defaultvalue());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_uservalue()->::protobuf::mozilla::dom::PrefValue::MergeFrom(
-          from._internal_uservalue());
+      _this->_internal_mutable_a_uservalue()->::protobuf::mozilla::dom::PrefValue::MergeFrom(
+          from._internal_a_uservalue());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.islocked_ = from._impl_.islocked_;
+      _this->_impl_.a_islocked_ = from._impl_.a_islocked_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.issanitized_ = from._impl_.issanitized_;
+      _this->_impl_.a_issanitized_ = from._impl_.a_issanitized_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -734,15 +734,15 @@ void Pref::InternalSwap(Pref* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Pref, _impl_.issanitized_)
-      + sizeof(Pref::_impl_.issanitized_)
-      - PROTOBUF_FIELD_OFFSET(Pref, _impl_.defaultvalue_)>(
-          reinterpret_cast<char*>(&_impl_.defaultvalue_),
-          reinterpret_cast<char*>(&other->_impl_.defaultvalue_));
+      PROTOBUF_FIELD_OFFSET(Pref, _impl_.a_issanitized_)
+      + sizeof(Pref::_impl_.a_issanitized_)
+      - PROTOBUF_FIELD_OFFSET(Pref, _impl_.a_defaultvalue_)>(
+          reinterpret_cast<char*>(&_impl_.a_defaultvalue_),
+          reinterpret_cast<char*>(&other->_impl_.a_defaultvalue_));
 }
 
 std::string Pref::GetTypeName() const {

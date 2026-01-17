@@ -180,25 +180,25 @@ class Msg_SetData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATransferableFieldNumber = 1,
+    kAATransferableFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCTransferable aTransferable = 1;
-  bool has_atransferable() const;
+  // required .protobuf.mozilla.dom.IPCTransferable a_aTransferable = 1;
+  bool has_a_atransferable() const;
   private:
-  bool _internal_has_atransferable() const;
+  bool _internal_has_a_atransferable() const;
   public:
-  void clear_atransferable();
-  const ::protobuf::mozilla::dom::IPCTransferable& atransferable() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferable* release_atransferable();
-  ::protobuf::mozilla::dom::IPCTransferable* mutable_atransferable();
-  void set_allocated_atransferable(::protobuf::mozilla::dom::IPCTransferable* atransferable);
+  void clear_a_atransferable();
+  const ::protobuf::mozilla::dom::IPCTransferable& a_atransferable() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferable* release_a_atransferable();
+  ::protobuf::mozilla::dom::IPCTransferable* mutable_a_atransferable();
+  void set_allocated_a_atransferable(::protobuf::mozilla::dom::IPCTransferable* a_atransferable);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferable& _internal_atransferable() const;
-  ::protobuf::mozilla::dom::IPCTransferable* _internal_mutable_atransferable();
+  const ::protobuf::mozilla::dom::IPCTransferable& _internal_a_atransferable() const;
+  ::protobuf::mozilla::dom::IPCTransferable* _internal_mutable_a_atransferable();
   public:
-  void unsafe_arena_set_allocated_atransferable(
-      ::protobuf::mozilla::dom::IPCTransferable* atransferable);
-  ::protobuf::mozilla::dom::IPCTransferable* unsafe_arena_release_atransferable();
+  void unsafe_arena_set_allocated_a_atransferable(
+      ::protobuf::mozilla::dom::IPCTransferable* a_atransferable);
+  ::protobuf::mozilla::dom::IPCTransferable* unsafe_arena_release_a_atransferable();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData)
  private:
@@ -210,7 +210,7 @@ class Msg_SetData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::IPCTransferable* atransferable_;
+    ::protobuf::mozilla::dom::IPCTransferable* a_atransferable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardWriteRequest_2eproto;
@@ -327,24 +327,24 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAResultFieldNumber = 1,
+    kAAResultFieldNumber = 1,
   };
-  // required bytes aResult = 1;
-  bool has_aresult() const;
+  // required bytes a_aResult = 1;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const std::string& aresult() const;
+  void clear_a_aresult();
+  const std::string& a_aresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aresult();
-  PROTOBUF_NODISCARD std::string* release_aresult();
-  void set_allocated_aresult(std::string* aresult);
+  void set_a_aresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aresult();
+  PROTOBUF_NODISCARD std::string* release_a_aresult();
+  void set_allocated_a_aresult(std::string* a_aresult);
   private:
-  const std::string& _internal_aresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aresult(const std::string& value);
-  std::string* _internal_mutable_aresult();
+  const std::string& _internal_a_aresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aresult(const std::string& value);
+  std::string* _internal_mutable_a_aresult();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__)
@@ -357,7 +357,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aresult_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClipboardWriteRequest_2eproto;
@@ -497,41 +497,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_SetData
 
-// required .protobuf.mozilla.dom.IPCTransferable aTransferable = 1;
-inline bool Msg_SetData::_internal_has_atransferable() const {
+// required .protobuf.mozilla.dom.IPCTransferable a_aTransferable = 1;
+inline bool Msg_SetData::_internal_has_a_atransferable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.atransferable_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_atransferable_ != nullptr);
   return value;
 }
-inline bool Msg_SetData::has_atransferable() const {
-  return _internal_has_atransferable();
+inline bool Msg_SetData::has_a_atransferable() const {
+  return _internal_has_a_atransferable();
 }
-inline const ::protobuf::mozilla::dom::IPCTransferable& Msg_SetData::_internal_atransferable() const {
-  const ::protobuf::mozilla::dom::IPCTransferable* p = _impl_.atransferable_;
+inline const ::protobuf::mozilla::dom::IPCTransferable& Msg_SetData::_internal_a_atransferable() const {
+  const ::protobuf::mozilla::dom::IPCTransferable* p = _impl_.a_atransferable_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCTransferable&>(
       ::protobuf::mozilla::dom::_IPCTransferable_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferable& Msg_SetData::atransferable() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.aTransferable)
-  return _internal_atransferable();
+inline const ::protobuf::mozilla::dom::IPCTransferable& Msg_SetData::a_atransferable() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.a_aTransferable)
+  return _internal_a_atransferable();
 }
-inline void Msg_SetData::unsafe_arena_set_allocated_atransferable(
-    ::protobuf::mozilla::dom::IPCTransferable* atransferable) {
+inline void Msg_SetData::unsafe_arena_set_allocated_a_atransferable(
+    ::protobuf::mozilla::dom::IPCTransferable* a_atransferable) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.atransferable_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_atransferable_);
   }
-  _impl_.atransferable_ = atransferable;
-  if (atransferable) {
+  _impl_.a_atransferable_ = a_atransferable;
+  if (a_atransferable) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.aTransferable)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.a_aTransferable)
 }
-inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::release_atransferable() {
+inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::release_a_atransferable() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCTransferable* temp = _impl_.atransferable_;
-  _impl_.atransferable_ = nullptr;
+  ::protobuf::mozilla::dom::IPCTransferable* temp = _impl_.a_atransferable_;
+  _impl_.a_atransferable_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -543,117 +543,117 @@ inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::release_atransfer
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::unsafe_arena_release_atransferable() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.aTransferable)
+inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::unsafe_arena_release_a_atransferable() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.a_aTransferable)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCTransferable* temp = _impl_.atransferable_;
-  _impl_.atransferable_ = nullptr;
+  ::protobuf::mozilla::dom::IPCTransferable* temp = _impl_.a_atransferable_;
+  _impl_.a_atransferable_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::_internal_mutable_atransferable() {
+inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::_internal_mutable_a_atransferable() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.atransferable_ == nullptr) {
+  if (_impl_.a_atransferable_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferable>(GetArenaForAllocation());
-    _impl_.atransferable_ = p;
+    _impl_.a_atransferable_ = p;
   }
-  return _impl_.atransferable_;
+  return _impl_.a_atransferable_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::mutable_atransferable() {
-  ::protobuf::mozilla::dom::IPCTransferable* _msg = _internal_mutable_atransferable();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.aTransferable)
+inline ::protobuf::mozilla::dom::IPCTransferable* Msg_SetData::mutable_a_atransferable() {
+  ::protobuf::mozilla::dom::IPCTransferable* _msg = _internal_mutable_a_atransferable();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.a_aTransferable)
   return _msg;
 }
-inline void Msg_SetData::set_allocated_atransferable(::protobuf::mozilla::dom::IPCTransferable* atransferable) {
+inline void Msg_SetData::set_allocated_a_atransferable(::protobuf::mozilla::dom::IPCTransferable* a_atransferable) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.atransferable_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_atransferable_);
   }
-  if (atransferable) {
+  if (a_atransferable) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(atransferable));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_atransferable));
     if (message_arena != submessage_arena) {
-      atransferable = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, atransferable, submessage_arena);
+      a_atransferable = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_atransferable, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atransferable_ = atransferable;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.aTransferable)
+  _impl_.a_atransferable_ = a_atransferable;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardWriteRequest.Msg_SetData.a_aTransferable)
 }
 
 // -------------------------------------------------------------------
 
 // Msg___delete__
 
-// required bytes aResult = 1;
-inline bool Msg___delete__::_internal_has_aresult() const {
+// required bytes a_aResult = 1;
+inline bool Msg___delete__::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Msg___delete__::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline void Msg___delete__::clear_aresult() {
-  _impl_.aresult_.ClearToEmpty();
+inline void Msg___delete__::clear_a_aresult() {
+  _impl_.a_aresult_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg___delete__::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.aResult)
-  return _internal_aresult();
+inline const std::string& Msg___delete__::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.a_aResult)
+  return _internal_a_aresult();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_aresult(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_aresult(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.aResult)
+ _impl_.a_aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.a_aResult)
 }
-inline std::string* Msg___delete__::mutable_aresult() {
-  std::string* _s = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.aResult)
+inline std::string* Msg___delete__::mutable_a_aresult() {
+  std::string* _s = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.a_aResult)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_aresult() const {
-  return _impl_.aresult_.Get();
+inline const std::string& Msg___delete__::_internal_a_aresult() const {
+  return _impl_.a_aresult_.Get();
 }
-inline void Msg___delete__::_internal_set_aresult(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_aresult(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aresult_.Set(value, GetArenaForAllocation());
+  _impl_.a_aresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_aresult() {
+inline std::string* Msg___delete__::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aresult_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aresult_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.aResult)
-  if (!_internal_has_aresult()) {
+inline std::string* Msg___delete__::release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.a_aResult)
+  if (!_internal_has_a_aresult()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aresult_.Release();
+  auto* p = _impl_.a_aresult_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_aresult(std::string* aresult) {
-  if (aresult != nullptr) {
+inline void Msg___delete__::set_allocated_a_aresult(std::string* a_aresult) {
+  if (a_aresult != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresult_.SetAllocated(aresult, GetArenaForAllocation());
+  _impl_.a_aresult_.SetAllocated(a_aresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.aResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PClipboardWriteRequest.Msg___delete__.a_aResult)
 }
 
 // -------------------------------------------------------------------

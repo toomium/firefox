@@ -208,24 +208,24 @@ class IPCTransferableDataString final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataString)
@@ -238,7 +238,7 @@ class IPCTransferableDataString final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -355,24 +355,24 @@ class IPCTransferableDataCString final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataCString)
@@ -385,7 +385,7 @@ class IPCTransferableDataCString final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -502,24 +502,24 @@ class IPCTransferableDataInputStream final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required bytes data = 1;
-  bool has_data() const;
+  // required bytes a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const std::string& data() const;
+  void clear_a_data();
+  const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_data(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_data();
-  PROTOBUF_NODISCARD std::string* release_data();
-  void set_allocated_data(std::string* data);
+  void set_a_data(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_data();
+  PROTOBUF_NODISCARD std::string* release_a_data();
+  void set_allocated_a_data(std::string* a_data);
   private:
-  const std::string& _internal_data() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data(const std::string& value);
-  std::string* _internal_mutable_data();
+  const std::string& _internal_a_data() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_data(const std::string& value);
+  std::string* _internal_mutable_a_data();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataInputStream)
@@ -532,7 +532,7 @@ class IPCTransferableDataInputStream final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -649,25 +649,25 @@ class IPCTransferableDataImageContainer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kImageFieldNumber = 1,
+    kAImageFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCImage image = 1;
-  bool has_image() const;
+  // required .protobuf.mozilla.dom.IPCImage a_image = 1;
+  bool has_a_image() const;
   private:
-  bool _internal_has_image() const;
+  bool _internal_has_a_image() const;
   public:
-  void clear_image();
-  const ::protobuf::mozilla::dom::IPCImage& image() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCImage* release_image();
-  ::protobuf::mozilla::dom::IPCImage* mutable_image();
-  void set_allocated_image(::protobuf::mozilla::dom::IPCImage* image);
+  void clear_a_image();
+  const ::protobuf::mozilla::dom::IPCImage& a_image() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCImage* release_a_image();
+  ::protobuf::mozilla::dom::IPCImage* mutable_a_image();
+  void set_allocated_a_image(::protobuf::mozilla::dom::IPCImage* a_image);
   private:
-  const ::protobuf::mozilla::dom::IPCImage& _internal_image() const;
-  ::protobuf::mozilla::dom::IPCImage* _internal_mutable_image();
+  const ::protobuf::mozilla::dom::IPCImage& _internal_a_image() const;
+  ::protobuf::mozilla::dom::IPCImage* _internal_mutable_a_image();
   public:
-  void unsafe_arena_set_allocated_image(
-      ::protobuf::mozilla::dom::IPCImage* image);
-  ::protobuf::mozilla::dom::IPCImage* unsafe_arena_release_image();
+  void unsafe_arena_set_allocated_a_image(
+      ::protobuf::mozilla::dom::IPCImage* a_image);
+  ::protobuf::mozilla::dom::IPCImage* unsafe_arena_release_a_image();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataImageContainer)
  private:
@@ -679,7 +679,7 @@ class IPCTransferableDataImageContainer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::IPCImage* image_;
+    ::protobuf::mozilla::dom::IPCImage* a_image_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -796,25 +796,25 @@ class IPCTransferableDataBlob final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBlobFieldNumber = 1,
+    kABlobFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob blob = 1;
-  bool has_blob() const;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  bool has_a_blob() const;
   private:
-  bool _internal_has_blob() const;
+  bool _internal_has_a_blob() const;
   public:
-  void clear_blob();
-  const ::protobuf::mozilla::dom::IPCBlob& blob() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_blob();
-  ::protobuf::mozilla::dom::IPCBlob* mutable_blob();
-  void set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob);
+  void clear_a_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& a_blob() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCBlob* release_a_blob();
+  ::protobuf::mozilla::dom::IPCBlob* mutable_a_blob();
+  void set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob);
   private:
-  const ::protobuf::mozilla::dom::IPCBlob& _internal_blob() const;
-  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_blob();
+  const ::protobuf::mozilla::dom::IPCBlob& _internal_a_blob() const;
+  ::protobuf::mozilla::dom::IPCBlob* _internal_mutable_a_blob();
   public:
-  void unsafe_arena_set_allocated_blob(
-      ::protobuf::mozilla::dom::IPCBlob* blob);
-  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_blob();
+  void unsafe_arena_set_allocated_a_blob(
+      ::protobuf::mozilla::dom::IPCBlob* a_blob);
+  ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataBlob)
  private:
@@ -826,7 +826,7 @@ class IPCTransferableDataBlob final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::IPCBlob* blob_;
+    ::protobuf::mozilla::dom::IPCBlob* a_blob_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -875,11 +875,11 @@ class IPCTransferableDataType final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVIPCTransferableDataString = 1,
-    kMVIPCTransferableDataCString = 2,
-    kMVIPCTransferableDataInputStream = 3,
-    kMVIPCTransferableDataImageContainer = 4,
-    kMVIPCTransferableDataBlob = 5,
+    kAMVIPCTransferableDataString = 1,
+    kAMVIPCTransferableDataCString = 2,
+    kAMVIPCTransferableDataInputStream = 3,
+    kAMVIPCTransferableDataImageContainer = 4,
+    kAMVIPCTransferableDataBlob = 5,
     CONTENT_NOT_SET = 0,
   };
 
@@ -952,112 +952,112 @@ class IPCTransferableDataType final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVIPCTransferableDataStringFieldNumber = 1,
-    kMVIPCTransferableDataCStringFieldNumber = 2,
-    kMVIPCTransferableDataInputStreamFieldNumber = 3,
-    kMVIPCTransferableDataImageContainerFieldNumber = 4,
-    kMVIPCTransferableDataBlobFieldNumber = 5,
+    kAMVIPCTransferableDataStringFieldNumber = 1,
+    kAMVIPCTransferableDataCStringFieldNumber = 2,
+    kAMVIPCTransferableDataInputStreamFieldNumber = 3,
+    kAMVIPCTransferableDataImageContainerFieldNumber = 4,
+    kAMVIPCTransferableDataBlobFieldNumber = 5,
   };
-  // .protobuf.mozilla.dom.IPCTransferableDataString mVIPCTransferableDataString = 1;
-  bool has_mvipctransferabledatastring() const;
+  // .protobuf.mozilla.dom.IPCTransferableDataString a_mVIPCTransferableDataString = 1;
+  bool has_a_mvipctransferabledatastring() const;
   private:
-  bool _internal_has_mvipctransferabledatastring() const;
+  bool _internal_has_a_mvipctransferabledatastring() const;
   public:
-  void clear_mvipctransferabledatastring();
-  const ::protobuf::mozilla::dom::IPCTransferableDataString& mvipctransferabledatastring() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataString* release_mvipctransferabledatastring();
-  ::protobuf::mozilla::dom::IPCTransferableDataString* mutable_mvipctransferabledatastring();
-  void set_allocated_mvipctransferabledatastring(::protobuf::mozilla::dom::IPCTransferableDataString* mvipctransferabledatastring);
+  void clear_a_mvipctransferabledatastring();
+  const ::protobuf::mozilla::dom::IPCTransferableDataString& a_mvipctransferabledatastring() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataString* release_a_mvipctransferabledatastring();
+  ::protobuf::mozilla::dom::IPCTransferableDataString* mutable_a_mvipctransferabledatastring();
+  void set_allocated_a_mvipctransferabledatastring(::protobuf::mozilla::dom::IPCTransferableDataString* a_mvipctransferabledatastring);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataString& _internal_mvipctransferabledatastring() const;
-  ::protobuf::mozilla::dom::IPCTransferableDataString* _internal_mutable_mvipctransferabledatastring();
+  const ::protobuf::mozilla::dom::IPCTransferableDataString& _internal_a_mvipctransferabledatastring() const;
+  ::protobuf::mozilla::dom::IPCTransferableDataString* _internal_mutable_a_mvipctransferabledatastring();
   public:
-  void unsafe_arena_set_allocated_mvipctransferabledatastring(
-      ::protobuf::mozilla::dom::IPCTransferableDataString* mvipctransferabledatastring);
-  ::protobuf::mozilla::dom::IPCTransferableDataString* unsafe_arena_release_mvipctransferabledatastring();
+  void unsafe_arena_set_allocated_a_mvipctransferabledatastring(
+      ::protobuf::mozilla::dom::IPCTransferableDataString* a_mvipctransferabledatastring);
+  ::protobuf::mozilla::dom::IPCTransferableDataString* unsafe_arena_release_a_mvipctransferabledatastring();
 
-  // .protobuf.mozilla.dom.IPCTransferableDataCString mVIPCTransferableDataCString = 2;
-  bool has_mvipctransferabledatacstring() const;
+  // .protobuf.mozilla.dom.IPCTransferableDataCString a_mVIPCTransferableDataCString = 2;
+  bool has_a_mvipctransferabledatacstring() const;
   private:
-  bool _internal_has_mvipctransferabledatacstring() const;
+  bool _internal_has_a_mvipctransferabledatacstring() const;
   public:
-  void clear_mvipctransferabledatacstring();
-  const ::protobuf::mozilla::dom::IPCTransferableDataCString& mvipctransferabledatacstring() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataCString* release_mvipctransferabledatacstring();
-  ::protobuf::mozilla::dom::IPCTransferableDataCString* mutable_mvipctransferabledatacstring();
-  void set_allocated_mvipctransferabledatacstring(::protobuf::mozilla::dom::IPCTransferableDataCString* mvipctransferabledatacstring);
+  void clear_a_mvipctransferabledatacstring();
+  const ::protobuf::mozilla::dom::IPCTransferableDataCString& a_mvipctransferabledatacstring() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataCString* release_a_mvipctransferabledatacstring();
+  ::protobuf::mozilla::dom::IPCTransferableDataCString* mutable_a_mvipctransferabledatacstring();
+  void set_allocated_a_mvipctransferabledatacstring(::protobuf::mozilla::dom::IPCTransferableDataCString* a_mvipctransferabledatacstring);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataCString& _internal_mvipctransferabledatacstring() const;
-  ::protobuf::mozilla::dom::IPCTransferableDataCString* _internal_mutable_mvipctransferabledatacstring();
+  const ::protobuf::mozilla::dom::IPCTransferableDataCString& _internal_a_mvipctransferabledatacstring() const;
+  ::protobuf::mozilla::dom::IPCTransferableDataCString* _internal_mutable_a_mvipctransferabledatacstring();
   public:
-  void unsafe_arena_set_allocated_mvipctransferabledatacstring(
-      ::protobuf::mozilla::dom::IPCTransferableDataCString* mvipctransferabledatacstring);
-  ::protobuf::mozilla::dom::IPCTransferableDataCString* unsafe_arena_release_mvipctransferabledatacstring();
+  void unsafe_arena_set_allocated_a_mvipctransferabledatacstring(
+      ::protobuf::mozilla::dom::IPCTransferableDataCString* a_mvipctransferabledatacstring);
+  ::protobuf::mozilla::dom::IPCTransferableDataCString* unsafe_arena_release_a_mvipctransferabledatacstring();
 
-  // .protobuf.mozilla.dom.IPCTransferableDataInputStream mVIPCTransferableDataInputStream = 3;
-  bool has_mvipctransferabledatainputstream() const;
+  // .protobuf.mozilla.dom.IPCTransferableDataInputStream a_mVIPCTransferableDataInputStream = 3;
+  bool has_a_mvipctransferabledatainputstream() const;
   private:
-  bool _internal_has_mvipctransferabledatainputstream() const;
+  bool _internal_has_a_mvipctransferabledatainputstream() const;
   public:
-  void clear_mvipctransferabledatainputstream();
-  const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& mvipctransferabledatainputstream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataInputStream* release_mvipctransferabledatainputstream();
-  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* mutable_mvipctransferabledatainputstream();
-  void set_allocated_mvipctransferabledatainputstream(::protobuf::mozilla::dom::IPCTransferableDataInputStream* mvipctransferabledatainputstream);
+  void clear_a_mvipctransferabledatainputstream();
+  const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& a_mvipctransferabledatainputstream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataInputStream* release_a_mvipctransferabledatainputstream();
+  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* mutable_a_mvipctransferabledatainputstream();
+  void set_allocated_a_mvipctransferabledatainputstream(::protobuf::mozilla::dom::IPCTransferableDataInputStream* a_mvipctransferabledatainputstream);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& _internal_mvipctransferabledatainputstream() const;
-  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* _internal_mutable_mvipctransferabledatainputstream();
+  const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& _internal_a_mvipctransferabledatainputstream() const;
+  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* _internal_mutable_a_mvipctransferabledatainputstream();
   public:
-  void unsafe_arena_set_allocated_mvipctransferabledatainputstream(
-      ::protobuf::mozilla::dom::IPCTransferableDataInputStream* mvipctransferabledatainputstream);
-  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* unsafe_arena_release_mvipctransferabledatainputstream();
+  void unsafe_arena_set_allocated_a_mvipctransferabledatainputstream(
+      ::protobuf::mozilla::dom::IPCTransferableDataInputStream* a_mvipctransferabledatainputstream);
+  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* unsafe_arena_release_a_mvipctransferabledatainputstream();
 
-  // .protobuf.mozilla.dom.IPCTransferableDataImageContainer mVIPCTransferableDataImageContainer = 4;
-  bool has_mvipctransferabledataimagecontainer() const;
+  // .protobuf.mozilla.dom.IPCTransferableDataImageContainer a_mVIPCTransferableDataImageContainer = 4;
+  bool has_a_mvipctransferabledataimagecontainer() const;
   private:
-  bool _internal_has_mvipctransferabledataimagecontainer() const;
+  bool _internal_has_a_mvipctransferabledataimagecontainer() const;
   public:
-  void clear_mvipctransferabledataimagecontainer();
-  const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& mvipctransferabledataimagecontainer() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* release_mvipctransferabledataimagecontainer();
-  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* mutable_mvipctransferabledataimagecontainer();
-  void set_allocated_mvipctransferabledataimagecontainer(::protobuf::mozilla::dom::IPCTransferableDataImageContainer* mvipctransferabledataimagecontainer);
+  void clear_a_mvipctransferabledataimagecontainer();
+  const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& a_mvipctransferabledataimagecontainer() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* release_a_mvipctransferabledataimagecontainer();
+  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* mutable_a_mvipctransferabledataimagecontainer();
+  void set_allocated_a_mvipctransferabledataimagecontainer(::protobuf::mozilla::dom::IPCTransferableDataImageContainer* a_mvipctransferabledataimagecontainer);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& _internal_mvipctransferabledataimagecontainer() const;
-  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* _internal_mutable_mvipctransferabledataimagecontainer();
+  const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& _internal_a_mvipctransferabledataimagecontainer() const;
+  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* _internal_mutable_a_mvipctransferabledataimagecontainer();
   public:
-  void unsafe_arena_set_allocated_mvipctransferabledataimagecontainer(
-      ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* mvipctransferabledataimagecontainer);
-  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* unsafe_arena_release_mvipctransferabledataimagecontainer();
+  void unsafe_arena_set_allocated_a_mvipctransferabledataimagecontainer(
+      ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* a_mvipctransferabledataimagecontainer);
+  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* unsafe_arena_release_a_mvipctransferabledataimagecontainer();
 
-  // .protobuf.mozilla.dom.IPCTransferableDataBlob mVIPCTransferableDataBlob = 5;
-  bool has_mvipctransferabledatablob() const;
+  // .protobuf.mozilla.dom.IPCTransferableDataBlob a_mVIPCTransferableDataBlob = 5;
+  bool has_a_mvipctransferabledatablob() const;
   private:
-  bool _internal_has_mvipctransferabledatablob() const;
+  bool _internal_has_a_mvipctransferabledatablob() const;
   public:
-  void clear_mvipctransferabledatablob();
-  const ::protobuf::mozilla::dom::IPCTransferableDataBlob& mvipctransferabledatablob() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataBlob* release_mvipctransferabledatablob();
-  ::protobuf::mozilla::dom::IPCTransferableDataBlob* mutable_mvipctransferabledatablob();
-  void set_allocated_mvipctransferabledatablob(::protobuf::mozilla::dom::IPCTransferableDataBlob* mvipctransferabledatablob);
+  void clear_a_mvipctransferabledatablob();
+  const ::protobuf::mozilla::dom::IPCTransferableDataBlob& a_mvipctransferabledatablob() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataBlob* release_a_mvipctransferabledatablob();
+  ::protobuf::mozilla::dom::IPCTransferableDataBlob* mutable_a_mvipctransferabledatablob();
+  void set_allocated_a_mvipctransferabledatablob(::protobuf::mozilla::dom::IPCTransferableDataBlob* a_mvipctransferabledatablob);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataBlob& _internal_mvipctransferabledatablob() const;
-  ::protobuf::mozilla::dom::IPCTransferableDataBlob* _internal_mutable_mvipctransferabledatablob();
+  const ::protobuf::mozilla::dom::IPCTransferableDataBlob& _internal_a_mvipctransferabledatablob() const;
+  ::protobuf::mozilla::dom::IPCTransferableDataBlob* _internal_mutable_a_mvipctransferabledatablob();
   public:
-  void unsafe_arena_set_allocated_mvipctransferabledatablob(
-      ::protobuf::mozilla::dom::IPCTransferableDataBlob* mvipctransferabledatablob);
-  ::protobuf::mozilla::dom::IPCTransferableDataBlob* unsafe_arena_release_mvipctransferabledatablob();
+  void unsafe_arena_set_allocated_a_mvipctransferabledatablob(
+      ::protobuf::mozilla::dom::IPCTransferableDataBlob* a_mvipctransferabledatablob);
+  ::protobuf::mozilla::dom::IPCTransferableDataBlob* unsafe_arena_release_a_mvipctransferabledatablob();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataType)
  private:
   class _Internal;
-  void set_has_mvipctransferabledatastring();
-  void set_has_mvipctransferabledatacstring();
-  void set_has_mvipctransferabledatainputstream();
-  void set_has_mvipctransferabledataimagecontainer();
-  void set_has_mvipctransferabledatablob();
+  void set_has_a_mvipctransferabledatastring();
+  void set_has_a_mvipctransferabledatacstring();
+  void set_has_a_mvipctransferabledatainputstream();
+  void set_has_a_mvipctransferabledataimagecontainer();
+  void set_has_a_mvipctransferabledatablob();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1069,11 +1069,11 @@ class IPCTransferableDataType final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::IPCTransferableDataString* mvipctransferabledatastring_;
-      ::protobuf::mozilla::dom::IPCTransferableDataCString* mvipctransferabledatacstring_;
-      ::protobuf::mozilla::dom::IPCTransferableDataInputStream* mvipctransferabledatainputstream_;
-      ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* mvipctransferabledataimagecontainer_;
-      ::protobuf::mozilla::dom::IPCTransferableDataBlob* mvipctransferabledatablob_;
+      ::protobuf::mozilla::dom::IPCTransferableDataString* a_mvipctransferabledatastring_;
+      ::protobuf::mozilla::dom::IPCTransferableDataCString* a_mvipctransferabledatacstring_;
+      ::protobuf::mozilla::dom::IPCTransferableDataInputStream* a_mvipctransferabledatainputstream_;
+      ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* a_mvipctransferabledataimagecontainer_;
+      ::protobuf::mozilla::dom::IPCTransferableDataBlob* a_mvipctransferabledatablob_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1194,44 +1194,44 @@ class IPCTransferableDataItem final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFlavorFieldNumber = 1,
-    kDataFieldNumber = 2,
+    kAFlavorFieldNumber = 1,
+    kADataFieldNumber = 2,
   };
-  // required bytes flavor = 1;
-  bool has_flavor() const;
+  // required bytes a_flavor = 1;
+  bool has_a_flavor() const;
   private:
-  bool _internal_has_flavor() const;
+  bool _internal_has_a_flavor() const;
   public:
-  void clear_flavor();
-  const std::string& flavor() const;
+  void clear_a_flavor();
+  const std::string& a_flavor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_flavor(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_flavor();
-  PROTOBUF_NODISCARD std::string* release_flavor();
-  void set_allocated_flavor(std::string* flavor);
+  void set_a_flavor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_flavor();
+  PROTOBUF_NODISCARD std::string* release_a_flavor();
+  void set_allocated_a_flavor(std::string* a_flavor);
   private:
-  const std::string& _internal_flavor() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_flavor(const std::string& value);
-  std::string* _internal_mutable_flavor();
+  const std::string& _internal_a_flavor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_flavor(const std::string& value);
+  std::string* _internal_mutable_a_flavor();
   public:
 
-  // required .protobuf.mozilla.dom.IPCTransferableDataType data = 2;
-  bool has_data() const;
+  // required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const ::protobuf::mozilla::dom::IPCTransferableDataType& data() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataType* release_data();
-  ::protobuf::mozilla::dom::IPCTransferableDataType* mutable_data();
-  void set_allocated_data(::protobuf::mozilla::dom::IPCTransferableDataType* data);
+  void clear_a_data();
+  const ::protobuf::mozilla::dom::IPCTransferableDataType& a_data() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableDataType* release_a_data();
+  ::protobuf::mozilla::dom::IPCTransferableDataType* mutable_a_data();
+  void set_allocated_a_data(::protobuf::mozilla::dom::IPCTransferableDataType* a_data);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataType& _internal_data() const;
-  ::protobuf::mozilla::dom::IPCTransferableDataType* _internal_mutable_data();
+  const ::protobuf::mozilla::dom::IPCTransferableDataType& _internal_a_data() const;
+  ::protobuf::mozilla::dom::IPCTransferableDataType* _internal_mutable_a_data();
   public:
-  void unsafe_arena_set_allocated_data(
-      ::protobuf::mozilla::dom::IPCTransferableDataType* data);
-  ::protobuf::mozilla::dom::IPCTransferableDataType* unsafe_arena_release_data();
+  void unsafe_arena_set_allocated_a_data(
+      ::protobuf::mozilla::dom::IPCTransferableDataType* a_data);
+  ::protobuf::mozilla::dom::IPCTransferableDataType* unsafe_arena_release_a_data();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataItem)
  private:
@@ -1246,8 +1246,8 @@ class IPCTransferableDataItem final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr flavor_;
-    ::protobuf::mozilla::dom::IPCTransferableDataType* data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_flavor_;
+    ::protobuf::mozilla::dom::IPCTransferableDataType* a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1364,25 +1364,25 @@ class IPCTransferableData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kItemsFieldNumber = 1,
+    kAItemsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.IPCTransferableDataItem items = 1;
-  int items_size() const;
+  // repeated .protobuf.mozilla.dom.IPCTransferableDataItem a_items = 1;
+  int a_items_size() const;
   private:
-  int _internal_items_size() const;
+  int _internal_a_items_size() const;
   public:
-  void clear_items();
-  ::protobuf::mozilla::dom::IPCTransferableDataItem* mutable_items(int index);
+  void clear_a_items();
+  ::protobuf::mozilla::dom::IPCTransferableDataItem* mutable_a_items(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableDataItem >*
-      mutable_items();
+      mutable_a_items();
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableDataItem& _internal_items(int index) const;
-  ::protobuf::mozilla::dom::IPCTransferableDataItem* _internal_add_items();
+  const ::protobuf::mozilla::dom::IPCTransferableDataItem& _internal_a_items(int index) const;
+  ::protobuf::mozilla::dom::IPCTransferableDataItem* _internal_add_a_items();
   public:
-  const ::protobuf::mozilla::dom::IPCTransferableDataItem& items(int index) const;
-  ::protobuf::mozilla::dom::IPCTransferableDataItem* add_items();
+  const ::protobuf::mozilla::dom::IPCTransferableDataItem& a_items(int index) const;
+  ::protobuf::mozilla::dom::IPCTransferableDataItem* add_a_items();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableDataItem >&
-      items() const;
+      a_items() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableData)
  private:
@@ -1392,7 +1392,7 @@ class IPCTransferableData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableDataItem > items_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableDataItem > a_items_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1442,8 +1442,8 @@ class IPCTransferableDataOrError final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVIPCTransferableData = 1,
-    kMVnsresult = 2,
+    kAMVIPCTransferableData = 1,
+    kAMVnsresult = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1516,43 +1516,43 @@ class IPCTransferableDataOrError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVIPCTransferableDataFieldNumber = 1,
-    kMVnsresultFieldNumber = 2,
+    kAMVIPCTransferableDataFieldNumber = 1,
+    kAMVnsresultFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.IPCTransferableData mVIPCTransferableData = 1;
-  bool has_mvipctransferabledata() const;
+  // .protobuf.mozilla.dom.IPCTransferableData a_mVIPCTransferableData = 1;
+  bool has_a_mvipctransferabledata() const;
   private:
-  bool _internal_has_mvipctransferabledata() const;
+  bool _internal_has_a_mvipctransferabledata() const;
   public:
-  void clear_mvipctransferabledata();
-  const ::protobuf::mozilla::dom::IPCTransferableData& mvipctransferabledata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableData* release_mvipctransferabledata();
-  ::protobuf::mozilla::dom::IPCTransferableData* mutable_mvipctransferabledata();
-  void set_allocated_mvipctransferabledata(::protobuf::mozilla::dom::IPCTransferableData* mvipctransferabledata);
+  void clear_a_mvipctransferabledata();
+  const ::protobuf::mozilla::dom::IPCTransferableData& a_mvipctransferabledata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableData* release_a_mvipctransferabledata();
+  ::protobuf::mozilla::dom::IPCTransferableData* mutable_a_mvipctransferabledata();
+  void set_allocated_a_mvipctransferabledata(::protobuf::mozilla::dom::IPCTransferableData* a_mvipctransferabledata);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableData& _internal_mvipctransferabledata() const;
-  ::protobuf::mozilla::dom::IPCTransferableData* _internal_mutable_mvipctransferabledata();
+  const ::protobuf::mozilla::dom::IPCTransferableData& _internal_a_mvipctransferabledata() const;
+  ::protobuf::mozilla::dom::IPCTransferableData* _internal_mutable_a_mvipctransferabledata();
   public:
-  void unsafe_arena_set_allocated_mvipctransferabledata(
-      ::protobuf::mozilla::dom::IPCTransferableData* mvipctransferabledata);
-  ::protobuf::mozilla::dom::IPCTransferableData* unsafe_arena_release_mvipctransferabledata();
+  void unsafe_arena_set_allocated_a_mvipctransferabledata(
+      ::protobuf::mozilla::dom::IPCTransferableData* a_mvipctransferabledata);
+  ::protobuf::mozilla::dom::IPCTransferableData* unsafe_arena_release_a_mvipctransferabledata();
 
-  // bytes mVnsresult = 2;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 2;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
   void clear_content();
@@ -1560,8 +1560,8 @@ class IPCTransferableDataOrError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferableDataOrError)
  private:
   class _Internal;
-  void set_has_mvipctransferabledata();
-  void set_has_mvnsresult();
+  void set_has_a_mvipctransferabledata();
+  void set_has_a_mvnsresult();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1573,8 +1573,8 @@ class IPCTransferableDataOrError final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::IPCTransferableData* mvipctransferabledata_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
+      ::protobuf::mozilla::dom::IPCTransferableData* a_mvipctransferabledata_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1695,114 +1695,114 @@ class IPCTransferable final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataPrincipalFieldNumber = 3,
-    kContentPolicyTypeFieldNumber = 5,
-    kReferrerInfoFieldNumber = 6,
-    kDataFieldNumber = 1,
-    kCookieJarSettingsFieldNumber = 4,
-    kIsPrivateDataFieldNumber = 2,
+    kADataPrincipalFieldNumber = 3,
+    kAContentPolicyTypeFieldNumber = 5,
+    kAReferrerInfoFieldNumber = 6,
+    kADataFieldNumber = 1,
+    kACookieJarSettingsFieldNumber = 4,
+    kAIsPrivateDataFieldNumber = 2,
   };
-  // required bytes dataPrincipal = 3;
-  bool has_dataprincipal() const;
+  // required bytes a_dataPrincipal = 3;
+  bool has_a_dataprincipal() const;
   private:
-  bool _internal_has_dataprincipal() const;
+  bool _internal_has_a_dataprincipal() const;
   public:
-  void clear_dataprincipal();
-  const std::string& dataprincipal() const;
+  void clear_a_dataprincipal();
+  const std::string& a_dataprincipal() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_dataprincipal(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_dataprincipal();
-  PROTOBUF_NODISCARD std::string* release_dataprincipal();
-  void set_allocated_dataprincipal(std::string* dataprincipal);
+  void set_a_dataprincipal(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_dataprincipal();
+  PROTOBUF_NODISCARD std::string* release_a_dataprincipal();
+  void set_allocated_a_dataprincipal(std::string* a_dataprincipal);
   private:
-  const std::string& _internal_dataprincipal() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_dataprincipal(const std::string& value);
-  std::string* _internal_mutable_dataprincipal();
+  const std::string& _internal_a_dataprincipal() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_dataprincipal(const std::string& value);
+  std::string* _internal_mutable_a_dataprincipal();
   public:
 
-  // required bytes contentPolicyType = 5;
-  bool has_contentpolicytype() const;
+  // required bytes a_contentPolicyType = 5;
+  bool has_a_contentpolicytype() const;
   private:
-  bool _internal_has_contentpolicytype() const;
+  bool _internal_has_a_contentpolicytype() const;
   public:
-  void clear_contentpolicytype();
-  const std::string& contentpolicytype() const;
+  void clear_a_contentpolicytype();
+  const std::string& a_contentpolicytype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_contentpolicytype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_contentpolicytype();
-  PROTOBUF_NODISCARD std::string* release_contentpolicytype();
-  void set_allocated_contentpolicytype(std::string* contentpolicytype);
+  void set_a_contentpolicytype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_contentpolicytype();
+  PROTOBUF_NODISCARD std::string* release_a_contentpolicytype();
+  void set_allocated_a_contentpolicytype(std::string* a_contentpolicytype);
   private:
-  const std::string& _internal_contentpolicytype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_contentpolicytype(const std::string& value);
-  std::string* _internal_mutable_contentpolicytype();
+  const std::string& _internal_a_contentpolicytype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_contentpolicytype(const std::string& value);
+  std::string* _internal_mutable_a_contentpolicytype();
   public:
 
-  // required bytes referrerInfo = 6;
-  bool has_referrerinfo() const;
+  // required bytes a_referrerInfo = 6;
+  bool has_a_referrerinfo() const;
   private:
-  bool _internal_has_referrerinfo() const;
+  bool _internal_has_a_referrerinfo() const;
   public:
-  void clear_referrerinfo();
-  const std::string& referrerinfo() const;
+  void clear_a_referrerinfo();
+  const std::string& a_referrerinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_referrerinfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_referrerinfo();
-  PROTOBUF_NODISCARD std::string* release_referrerinfo();
-  void set_allocated_referrerinfo(std::string* referrerinfo);
+  void set_a_referrerinfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_referrerinfo();
+  PROTOBUF_NODISCARD std::string* release_a_referrerinfo();
+  void set_allocated_a_referrerinfo(std::string* a_referrerinfo);
   private:
-  const std::string& _internal_referrerinfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_referrerinfo(const std::string& value);
-  std::string* _internal_mutable_referrerinfo();
+  const std::string& _internal_a_referrerinfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_referrerinfo(const std::string& value);
+  std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required .protobuf.mozilla.dom.IPCTransferableData data = 1;
-  bool has_data() const;
+  // required .protobuf.mozilla.dom.IPCTransferableData a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const ::protobuf::mozilla::dom::IPCTransferableData& data() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableData* release_data();
-  ::protobuf::mozilla::dom::IPCTransferableData* mutable_data();
-  void set_allocated_data(::protobuf::mozilla::dom::IPCTransferableData* data);
+  void clear_a_data();
+  const ::protobuf::mozilla::dom::IPCTransferableData& a_data() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCTransferableData* release_a_data();
+  ::protobuf::mozilla::dom::IPCTransferableData* mutable_a_data();
+  void set_allocated_a_data(::protobuf::mozilla::dom::IPCTransferableData* a_data);
   private:
-  const ::protobuf::mozilla::dom::IPCTransferableData& _internal_data() const;
-  ::protobuf::mozilla::dom::IPCTransferableData* _internal_mutable_data();
+  const ::protobuf::mozilla::dom::IPCTransferableData& _internal_a_data() const;
+  ::protobuf::mozilla::dom::IPCTransferableData* _internal_mutable_a_data();
   public:
-  void unsafe_arena_set_allocated_data(
-      ::protobuf::mozilla::dom::IPCTransferableData* data);
-  ::protobuf::mozilla::dom::IPCTransferableData* unsafe_arena_release_data();
+  void unsafe_arena_set_allocated_a_data(
+      ::protobuf::mozilla::dom::IPCTransferableData* a_data);
+  ::protobuf::mozilla::dom::IPCTransferableData* unsafe_arena_release_a_data();
 
-  // optional .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 4;
-  bool has_cookiejarsettings() const;
+  // optional .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
+  bool has_a_cookiejarsettings() const;
   private:
-  bool _internal_has_cookiejarsettings() const;
+  bool _internal_has_a_cookiejarsettings() const;
   public:
-  void clear_cookiejarsettings();
-  const ::protobuf::mozilla::net::CookieJarSettingsArgs& cookiejarsettings() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieJarSettingsArgs* release_cookiejarsettings();
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* mutable_cookiejarsettings();
-  void set_allocated_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings);
+  void clear_a_cookiejarsettings();
+  const ::protobuf::mozilla::net::CookieJarSettingsArgs& a_cookiejarsettings() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieJarSettingsArgs* release_a_cookiejarsettings();
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* mutable_a_cookiejarsettings();
+  void set_allocated_a_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   private:
-  const ::protobuf::mozilla::net::CookieJarSettingsArgs& _internal_cookiejarsettings() const;
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* _internal_mutable_cookiejarsettings();
+  const ::protobuf::mozilla::net::CookieJarSettingsArgs& _internal_a_cookiejarsettings() const;
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* _internal_mutable_a_cookiejarsettings();
   public:
-  void unsafe_arena_set_allocated_cookiejarsettings(
-      ::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings);
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_cookiejarsettings();
+  void unsafe_arena_set_allocated_a_cookiejarsettings(
+      ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // required bool isPrivateData = 2;
-  bool has_isprivatedata() const;
+  // required bool a_isPrivateData = 2;
+  bool has_a_isprivatedata() const;
   private:
-  bool _internal_has_isprivatedata() const;
+  bool _internal_has_a_isprivatedata() const;
   public:
-  void clear_isprivatedata();
-  bool isprivatedata() const;
-  void set_isprivatedata(bool value);
+  void clear_a_isprivatedata();
+  bool a_isprivatedata() const;
+  void set_a_isprivatedata(bool value);
   private:
-  bool _internal_isprivatedata() const;
-  void _internal_set_isprivatedata(bool value);
+  bool _internal_a_isprivatedata() const;
+  void _internal_set_a_isprivatedata(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCTransferable)
@@ -1818,12 +1818,12 @@ class IPCTransferable final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr dataprincipal_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr contentpolicytype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr referrerinfo_;
-    ::protobuf::mozilla::dom::IPCTransferableData* data_;
-    ::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings_;
-    bool isprivatedata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dataprincipal_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_contentpolicytype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_referrerinfo_;
+    ::protobuf::mozilla::dom::IPCTransferableData* a_data_;
+    ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings_;
+    bool a_isprivatedata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1839,257 +1839,257 @@ class IPCTransferable final :
 #endif  // __GNUC__
 // IPCTransferableDataString
 
-// required bytes data = 1;
-inline bool IPCTransferableDataString::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool IPCTransferableDataString::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCTransferableDataString::has_data() const {
-  return _internal_has_data();
+inline bool IPCTransferableDataString::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void IPCTransferableDataString::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void IPCTransferableDataString::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCTransferableDataString::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataString.data)
-  return _internal_data();
+inline const std::string& IPCTransferableDataString::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferableDataString::set_data(ArgT0&& arg0, ArgT... args) {
+void IPCTransferableDataString::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataString.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
 }
-inline std::string* IPCTransferableDataString::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataString.data)
+inline std::string* IPCTransferableDataString::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
   return _s;
 }
-inline const std::string& IPCTransferableDataString::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& IPCTransferableDataString::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void IPCTransferableDataString::_internal_set_data(const std::string& value) {
+inline void IPCTransferableDataString::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataString::_internal_mutable_data() {
+inline std::string* IPCTransferableDataString::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataString::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataString.data)
-  if (!_internal_has_data()) {
+inline std::string* IPCTransferableDataString::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferableDataString::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void IPCTransferableDataString::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataString.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataString.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableDataCString
 
-// required bytes data = 1;
-inline bool IPCTransferableDataCString::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool IPCTransferableDataCString::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCTransferableDataCString::has_data() const {
-  return _internal_has_data();
+inline bool IPCTransferableDataCString::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void IPCTransferableDataCString::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void IPCTransferableDataCString::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCTransferableDataCString::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataCString.data)
-  return _internal_data();
+inline const std::string& IPCTransferableDataCString::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferableDataCString::set_data(ArgT0&& arg0, ArgT... args) {
+void IPCTransferableDataCString::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataCString.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
 }
-inline std::string* IPCTransferableDataCString::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataCString.data)
+inline std::string* IPCTransferableDataCString::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
   return _s;
 }
-inline const std::string& IPCTransferableDataCString::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& IPCTransferableDataCString::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void IPCTransferableDataCString::_internal_set_data(const std::string& value) {
+inline void IPCTransferableDataCString::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataCString::_internal_mutable_data() {
+inline std::string* IPCTransferableDataCString::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataCString::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataCString.data)
-  if (!_internal_has_data()) {
+inline std::string* IPCTransferableDataCString::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferableDataCString::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void IPCTransferableDataCString::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataCString.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataCString.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableDataInputStream
 
-// required bytes data = 1;
-inline bool IPCTransferableDataInputStream::_internal_has_data() const {
+// required bytes a_data = 1;
+inline bool IPCTransferableDataInputStream::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCTransferableDataInputStream::has_data() const {
-  return _internal_has_data();
+inline bool IPCTransferableDataInputStream::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void IPCTransferableDataInputStream::clear_data() {
-  _impl_.data_.ClearToEmpty();
+inline void IPCTransferableDataInputStream::clear_a_data() {
+  _impl_.a_data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCTransferableDataInputStream::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataInputStream.data)
-  return _internal_data();
+inline const std::string& IPCTransferableDataInputStream::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
+  return _internal_a_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferableDataInputStream::set_data(ArgT0&& arg0, ArgT... args) {
+void IPCTransferableDataInputStream::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataInputStream.data)
+ _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
 }
-inline std::string* IPCTransferableDataInputStream::mutable_data() {
-  std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataInputStream.data)
+inline std::string* IPCTransferableDataInputStream::mutable_a_data() {
+  std::string* _s = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
   return _s;
 }
-inline const std::string& IPCTransferableDataInputStream::_internal_data() const {
-  return _impl_.data_.Get();
+inline const std::string& IPCTransferableDataInputStream::_internal_a_data() const {
+  return _impl_.a_data_.Get();
 }
-inline void IPCTransferableDataInputStream::_internal_set_data(const std::string& value) {
+inline void IPCTransferableDataInputStream::_internal_set_a_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.data_.Set(value, GetArenaForAllocation());
+  _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataInputStream::_internal_mutable_data() {
+inline std::string* IPCTransferableDataInputStream::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.data_.Mutable(GetArenaForAllocation());
+  return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataInputStream::release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataInputStream.data)
-  if (!_internal_has_data()) {
+inline std::string* IPCTransferableDataInputStream::release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
+  if (!_internal_has_a_data()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.data_.Release();
+  auto* p = _impl_.a_data_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferableDataInputStream::set_allocated_data(std::string* data) {
-  if (data != nullptr) {
+inline void IPCTransferableDataInputStream::set_allocated_a_data(std::string* a_data) {
+  if (a_data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_.SetAllocated(data, GetArenaForAllocation());
+  _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.data_.IsDefault()) {
-    _impl_.data_.Set("", GetArenaForAllocation());
+  if (_impl_.a_data_.IsDefault()) {
+    _impl_.a_data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataInputStream.data)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataInputStream.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableDataImageContainer
 
-// required .protobuf.mozilla.dom.IPCImage image = 1;
-inline bool IPCTransferableDataImageContainer::_internal_has_image() const {
+// required .protobuf.mozilla.dom.IPCImage a_image = 1;
+inline bool IPCTransferableDataImageContainer::_internal_has_a_image() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.image_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_image_ != nullptr);
   return value;
 }
-inline bool IPCTransferableDataImageContainer::has_image() const {
-  return _internal_has_image();
+inline bool IPCTransferableDataImageContainer::has_a_image() const {
+  return _internal_has_a_image();
 }
-inline const ::protobuf::mozilla::dom::IPCImage& IPCTransferableDataImageContainer::_internal_image() const {
-  const ::protobuf::mozilla::dom::IPCImage* p = _impl_.image_;
+inline const ::protobuf::mozilla::dom::IPCImage& IPCTransferableDataImageContainer::_internal_a_image() const {
+  const ::protobuf::mozilla::dom::IPCImage* p = _impl_.a_image_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCImage&>(
       ::protobuf::mozilla::dom::_IPCImage_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCImage& IPCTransferableDataImageContainer::image() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataImageContainer.image)
-  return _internal_image();
+inline const ::protobuf::mozilla::dom::IPCImage& IPCTransferableDataImageContainer::a_image() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
+  return _internal_a_image();
 }
-inline void IPCTransferableDataImageContainer::unsafe_arena_set_allocated_image(
-    ::protobuf::mozilla::dom::IPCImage* image) {
+inline void IPCTransferableDataImageContainer::unsafe_arena_set_allocated_a_image(
+    ::protobuf::mozilla::dom::IPCImage* a_image) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.image_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_image_);
   }
-  _impl_.image_ = image;
-  if (image) {
+  _impl_.a_image_ = a_image;
+  if (a_image) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataImageContainer.image)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
 }
-inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::release_image() {
+inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::release_a_image() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCImage* temp = _impl_.image_;
-  _impl_.image_ = nullptr;
+  ::protobuf::mozilla::dom::IPCImage* temp = _impl_.a_image_;
+  _impl_.a_image_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2101,86 +2101,86 @@ inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::unsafe_arena_release_image() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataImageContainer.image)
+inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::unsafe_arena_release_a_image() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCImage* temp = _impl_.image_;
-  _impl_.image_ = nullptr;
+  ::protobuf::mozilla::dom::IPCImage* temp = _impl_.a_image_;
+  _impl_.a_image_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::_internal_mutable_image() {
+inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::_internal_mutable_a_image() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.image_ == nullptr) {
+  if (_impl_.a_image_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCImage>(GetArenaForAllocation());
-    _impl_.image_ = p;
+    _impl_.a_image_ = p;
   }
-  return _impl_.image_;
+  return _impl_.a_image_;
 }
-inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::mutable_image() {
-  ::protobuf::mozilla::dom::IPCImage* _msg = _internal_mutable_image();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataImageContainer.image)
+inline ::protobuf::mozilla::dom::IPCImage* IPCTransferableDataImageContainer::mutable_a_image() {
+  ::protobuf::mozilla::dom::IPCImage* _msg = _internal_mutable_a_image();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
   return _msg;
 }
-inline void IPCTransferableDataImageContainer::set_allocated_image(::protobuf::mozilla::dom::IPCImage* image) {
+inline void IPCTransferableDataImageContainer::set_allocated_a_image(::protobuf::mozilla::dom::IPCImage* a_image) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.image_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_image_);
   }
-  if (image) {
+  if (a_image) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(image));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_image));
     if (message_arena != submessage_arena) {
-      image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, image, submessage_arena);
+      a_image = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_image, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.image_ = image;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataImageContainer.image)
+  _impl_.a_image_ = a_image;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataImageContainer.a_image)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableDataBlob
 
-// required .protobuf.mozilla.dom.IPCBlob blob = 1;
-inline bool IPCTransferableDataBlob::_internal_has_blob() const {
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+inline bool IPCTransferableDataBlob::_internal_has_a_blob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.blob_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
   return value;
 }
-inline bool IPCTransferableDataBlob::has_blob() const {
-  return _internal_has_blob();
+inline bool IPCTransferableDataBlob::has_a_blob() const {
+  return _internal_has_a_blob();
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& IPCTransferableDataBlob::_internal_blob() const {
-  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.blob_;
+inline const ::protobuf::mozilla::dom::IPCBlob& IPCTransferableDataBlob::_internal_a_blob() const {
+  const ::protobuf::mozilla::dom::IPCBlob* p = _impl_.a_blob_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCBlob&>(
       ::protobuf::mozilla::dom::_IPCBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCBlob& IPCTransferableDataBlob::blob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataBlob.blob)
-  return _internal_blob();
+inline const ::protobuf::mozilla::dom::IPCBlob& IPCTransferableDataBlob::a_blob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
+  return _internal_a_blob();
 }
-inline void IPCTransferableDataBlob::unsafe_arena_set_allocated_blob(
-    ::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void IPCTransferableDataBlob::unsafe_arena_set_allocated_a_blob(
+    ::protobuf::mozilla::dom::IPCBlob* a_blob) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  _impl_.blob_ = blob;
-  if (blob) {
+  _impl_.a_blob_ = a_blob;
+  if (a_blob) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataBlob.blob)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::release_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::release_a_blob() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2192,418 +2192,418 @@ inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::release_blob(
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::unsafe_arena_release_blob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataBlob.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::unsafe_arena_release_a_blob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.blob_;
-  _impl_.blob_ = nullptr;
+  ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
+  _impl_.a_blob_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::_internal_mutable_blob() {
+inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::_internal_mutable_a_blob() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.blob_ == nullptr) {
+  if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
-    _impl_.blob_ = p;
+    _impl_.a_blob_ = p;
   }
-  return _impl_.blob_;
+  return _impl_.a_blob_;
 }
-inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::mutable_blob() {
-  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_blob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataBlob.blob)
+inline ::protobuf::mozilla::dom::IPCBlob* IPCTransferableDataBlob::mutable_a_blob() {
+  ::protobuf::mozilla::dom::IPCBlob* _msg = _internal_mutable_a_blob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
   return _msg;
 }
-inline void IPCTransferableDataBlob::set_allocated_blob(::protobuf::mozilla::dom::IPCBlob* blob) {
+inline void IPCTransferableDataBlob::set_allocated_a_blob(::protobuf::mozilla::dom::IPCBlob* a_blob) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.blob_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_blob_);
   }
-  if (blob) {
+  if (a_blob) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(blob));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_blob));
     if (message_arena != submessage_arena) {
-      blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, blob, submessage_arena);
+      a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_blob, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.blob_ = blob;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataBlob.blob)
+  _impl_.a_blob_ = a_blob;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataBlob.a_blob)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableDataType
 
-// .protobuf.mozilla.dom.IPCTransferableDataString mVIPCTransferableDataString = 1;
-inline bool IPCTransferableDataType::_internal_has_mvipctransferabledatastring() const {
-  return content_case() == kMVIPCTransferableDataString;
+// .protobuf.mozilla.dom.IPCTransferableDataString a_mVIPCTransferableDataString = 1;
+inline bool IPCTransferableDataType::_internal_has_a_mvipctransferabledatastring() const {
+  return content_case() == kAMVIPCTransferableDataString;
 }
-inline bool IPCTransferableDataType::has_mvipctransferabledatastring() const {
-  return _internal_has_mvipctransferabledatastring();
+inline bool IPCTransferableDataType::has_a_mvipctransferabledatastring() const {
+  return _internal_has_a_mvipctransferabledatastring();
 }
-inline void IPCTransferableDataType::set_has_mvipctransferabledatastring() {
-  _impl_._oneof_case_[0] = kMVIPCTransferableDataString;
+inline void IPCTransferableDataType::set_has_a_mvipctransferabledatastring() {
+  _impl_._oneof_case_[0] = kAMVIPCTransferableDataString;
 }
-inline void IPCTransferableDataType::clear_mvipctransferabledatastring() {
-  if (_internal_has_mvipctransferabledatastring()) {
+inline void IPCTransferableDataType::clear_a_mvipctransferabledatastring() {
+  if (_internal_has_a_mvipctransferabledatastring()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipctransferabledatastring_;
+      delete _impl_.content_.a_mvipctransferabledatastring_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::release_mvipctransferabledatastring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataString)
-  if (_internal_has_mvipctransferabledatastring()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::release_a_mvipctransferabledatastring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataString)
+  if (_internal_has_a_mvipctransferabledatastring()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataString* temp = _impl_.content_.mvipctransferabledatastring_;
+    ::protobuf::mozilla::dom::IPCTransferableDataString* temp = _impl_.content_.a_mvipctransferabledatastring_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipctransferabledatastring_ = nullptr;
+    _impl_.content_.a_mvipctransferabledatastring_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataString& IPCTransferableDataType::_internal_mvipctransferabledatastring() const {
-  return _internal_has_mvipctransferabledatastring()
-      ? *_impl_.content_.mvipctransferabledatastring_
+inline const ::protobuf::mozilla::dom::IPCTransferableDataString& IPCTransferableDataType::_internal_a_mvipctransferabledatastring() const {
+  return _internal_has_a_mvipctransferabledatastring()
+      ? *_impl_.content_.a_mvipctransferabledatastring_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCTransferableDataString&>(::protobuf::mozilla::dom::_IPCTransferableDataString_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataString& IPCTransferableDataType::mvipctransferabledatastring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataString)
-  return _internal_mvipctransferabledatastring();
+inline const ::protobuf::mozilla::dom::IPCTransferableDataString& IPCTransferableDataType::a_mvipctransferabledatastring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataString)
+  return _internal_a_mvipctransferabledatastring();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::unsafe_arena_release_mvipctransferabledatastring() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataString)
-  if (_internal_has_mvipctransferabledatastring()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::unsafe_arena_release_a_mvipctransferabledatastring() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataString)
+  if (_internal_has_a_mvipctransferabledatastring()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataString* temp = _impl_.content_.mvipctransferabledatastring_;
-    _impl_.content_.mvipctransferabledatastring_ = nullptr;
+    ::protobuf::mozilla::dom::IPCTransferableDataString* temp = _impl_.content_.a_mvipctransferabledatastring_;
+    _impl_.content_.a_mvipctransferabledatastring_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataType::unsafe_arena_set_allocated_mvipctransferabledatastring(::protobuf::mozilla::dom::IPCTransferableDataString* mvipctransferabledatastring) {
+inline void IPCTransferableDataType::unsafe_arena_set_allocated_a_mvipctransferabledatastring(::protobuf::mozilla::dom::IPCTransferableDataString* a_mvipctransferabledatastring) {
   clear_content();
-  if (mvipctransferabledatastring) {
-    set_has_mvipctransferabledatastring();
-    _impl_.content_.mvipctransferabledatastring_ = mvipctransferabledatastring;
+  if (a_mvipctransferabledatastring) {
+    set_has_a_mvipctransferabledatastring();
+    _impl_.content_.a_mvipctransferabledatastring_ = a_mvipctransferabledatastring;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataString)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataString)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::_internal_mutable_mvipctransferabledatastring() {
-  if (!_internal_has_mvipctransferabledatastring()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::_internal_mutable_a_mvipctransferabledatastring() {
+  if (!_internal_has_a_mvipctransferabledatastring()) {
     clear_content();
-    set_has_mvipctransferabledatastring();
-    _impl_.content_.mvipctransferabledatastring_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataString >(GetArenaForAllocation());
+    set_has_a_mvipctransferabledatastring();
+    _impl_.content_.a_mvipctransferabledatastring_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataString >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipctransferabledatastring_;
+  return _impl_.content_.a_mvipctransferabledatastring_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::mutable_mvipctransferabledatastring() {
-  ::protobuf::mozilla::dom::IPCTransferableDataString* _msg = _internal_mutable_mvipctransferabledatastring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataString)
+inline ::protobuf::mozilla::dom::IPCTransferableDataString* IPCTransferableDataType::mutable_a_mvipctransferabledatastring() {
+  ::protobuf::mozilla::dom::IPCTransferableDataString* _msg = _internal_mutable_a_mvipctransferabledatastring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataString)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.IPCTransferableDataCString mVIPCTransferableDataCString = 2;
-inline bool IPCTransferableDataType::_internal_has_mvipctransferabledatacstring() const {
-  return content_case() == kMVIPCTransferableDataCString;
+// .protobuf.mozilla.dom.IPCTransferableDataCString a_mVIPCTransferableDataCString = 2;
+inline bool IPCTransferableDataType::_internal_has_a_mvipctransferabledatacstring() const {
+  return content_case() == kAMVIPCTransferableDataCString;
 }
-inline bool IPCTransferableDataType::has_mvipctransferabledatacstring() const {
-  return _internal_has_mvipctransferabledatacstring();
+inline bool IPCTransferableDataType::has_a_mvipctransferabledatacstring() const {
+  return _internal_has_a_mvipctransferabledatacstring();
 }
-inline void IPCTransferableDataType::set_has_mvipctransferabledatacstring() {
-  _impl_._oneof_case_[0] = kMVIPCTransferableDataCString;
+inline void IPCTransferableDataType::set_has_a_mvipctransferabledatacstring() {
+  _impl_._oneof_case_[0] = kAMVIPCTransferableDataCString;
 }
-inline void IPCTransferableDataType::clear_mvipctransferabledatacstring() {
-  if (_internal_has_mvipctransferabledatacstring()) {
+inline void IPCTransferableDataType::clear_a_mvipctransferabledatacstring() {
+  if (_internal_has_a_mvipctransferabledatacstring()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipctransferabledatacstring_;
+      delete _impl_.content_.a_mvipctransferabledatacstring_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::release_mvipctransferabledatacstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataCString)
-  if (_internal_has_mvipctransferabledatacstring()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::release_a_mvipctransferabledatacstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataCString)
+  if (_internal_has_a_mvipctransferabledatacstring()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataCString* temp = _impl_.content_.mvipctransferabledatacstring_;
+    ::protobuf::mozilla::dom::IPCTransferableDataCString* temp = _impl_.content_.a_mvipctransferabledatacstring_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipctransferabledatacstring_ = nullptr;
+    _impl_.content_.a_mvipctransferabledatacstring_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataCString& IPCTransferableDataType::_internal_mvipctransferabledatacstring() const {
-  return _internal_has_mvipctransferabledatacstring()
-      ? *_impl_.content_.mvipctransferabledatacstring_
+inline const ::protobuf::mozilla::dom::IPCTransferableDataCString& IPCTransferableDataType::_internal_a_mvipctransferabledatacstring() const {
+  return _internal_has_a_mvipctransferabledatacstring()
+      ? *_impl_.content_.a_mvipctransferabledatacstring_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCTransferableDataCString&>(::protobuf::mozilla::dom::_IPCTransferableDataCString_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataCString& IPCTransferableDataType::mvipctransferabledatacstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataCString)
-  return _internal_mvipctransferabledatacstring();
+inline const ::protobuf::mozilla::dom::IPCTransferableDataCString& IPCTransferableDataType::a_mvipctransferabledatacstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataCString)
+  return _internal_a_mvipctransferabledatacstring();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::unsafe_arena_release_mvipctransferabledatacstring() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataCString)
-  if (_internal_has_mvipctransferabledatacstring()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::unsafe_arena_release_a_mvipctransferabledatacstring() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataCString)
+  if (_internal_has_a_mvipctransferabledatacstring()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataCString* temp = _impl_.content_.mvipctransferabledatacstring_;
-    _impl_.content_.mvipctransferabledatacstring_ = nullptr;
+    ::protobuf::mozilla::dom::IPCTransferableDataCString* temp = _impl_.content_.a_mvipctransferabledatacstring_;
+    _impl_.content_.a_mvipctransferabledatacstring_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataType::unsafe_arena_set_allocated_mvipctransferabledatacstring(::protobuf::mozilla::dom::IPCTransferableDataCString* mvipctransferabledatacstring) {
+inline void IPCTransferableDataType::unsafe_arena_set_allocated_a_mvipctransferabledatacstring(::protobuf::mozilla::dom::IPCTransferableDataCString* a_mvipctransferabledatacstring) {
   clear_content();
-  if (mvipctransferabledatacstring) {
-    set_has_mvipctransferabledatacstring();
-    _impl_.content_.mvipctransferabledatacstring_ = mvipctransferabledatacstring;
+  if (a_mvipctransferabledatacstring) {
+    set_has_a_mvipctransferabledatacstring();
+    _impl_.content_.a_mvipctransferabledatacstring_ = a_mvipctransferabledatacstring;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataCString)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataCString)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::_internal_mutable_mvipctransferabledatacstring() {
-  if (!_internal_has_mvipctransferabledatacstring()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::_internal_mutable_a_mvipctransferabledatacstring() {
+  if (!_internal_has_a_mvipctransferabledatacstring()) {
     clear_content();
-    set_has_mvipctransferabledatacstring();
-    _impl_.content_.mvipctransferabledatacstring_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataCString >(GetArenaForAllocation());
+    set_has_a_mvipctransferabledatacstring();
+    _impl_.content_.a_mvipctransferabledatacstring_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataCString >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipctransferabledatacstring_;
+  return _impl_.content_.a_mvipctransferabledatacstring_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::mutable_mvipctransferabledatacstring() {
-  ::protobuf::mozilla::dom::IPCTransferableDataCString* _msg = _internal_mutable_mvipctransferabledatacstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataCString)
+inline ::protobuf::mozilla::dom::IPCTransferableDataCString* IPCTransferableDataType::mutable_a_mvipctransferabledatacstring() {
+  ::protobuf::mozilla::dom::IPCTransferableDataCString* _msg = _internal_mutable_a_mvipctransferabledatacstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataCString)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.IPCTransferableDataInputStream mVIPCTransferableDataInputStream = 3;
-inline bool IPCTransferableDataType::_internal_has_mvipctransferabledatainputstream() const {
-  return content_case() == kMVIPCTransferableDataInputStream;
+// .protobuf.mozilla.dom.IPCTransferableDataInputStream a_mVIPCTransferableDataInputStream = 3;
+inline bool IPCTransferableDataType::_internal_has_a_mvipctransferabledatainputstream() const {
+  return content_case() == kAMVIPCTransferableDataInputStream;
 }
-inline bool IPCTransferableDataType::has_mvipctransferabledatainputstream() const {
-  return _internal_has_mvipctransferabledatainputstream();
+inline bool IPCTransferableDataType::has_a_mvipctransferabledatainputstream() const {
+  return _internal_has_a_mvipctransferabledatainputstream();
 }
-inline void IPCTransferableDataType::set_has_mvipctransferabledatainputstream() {
-  _impl_._oneof_case_[0] = kMVIPCTransferableDataInputStream;
+inline void IPCTransferableDataType::set_has_a_mvipctransferabledatainputstream() {
+  _impl_._oneof_case_[0] = kAMVIPCTransferableDataInputStream;
 }
-inline void IPCTransferableDataType::clear_mvipctransferabledatainputstream() {
-  if (_internal_has_mvipctransferabledatainputstream()) {
+inline void IPCTransferableDataType::clear_a_mvipctransferabledatainputstream() {
+  if (_internal_has_a_mvipctransferabledatainputstream()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipctransferabledatainputstream_;
+      delete _impl_.content_.a_mvipctransferabledatainputstream_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::release_mvipctransferabledatainputstream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataInputStream)
-  if (_internal_has_mvipctransferabledatainputstream()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::release_a_mvipctransferabledatainputstream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataInputStream)
+  if (_internal_has_a_mvipctransferabledatainputstream()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataInputStream* temp = _impl_.content_.mvipctransferabledatainputstream_;
+    ::protobuf::mozilla::dom::IPCTransferableDataInputStream* temp = _impl_.content_.a_mvipctransferabledatainputstream_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipctransferabledatainputstream_ = nullptr;
+    _impl_.content_.a_mvipctransferabledatainputstream_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& IPCTransferableDataType::_internal_mvipctransferabledatainputstream() const {
-  return _internal_has_mvipctransferabledatainputstream()
-      ? *_impl_.content_.mvipctransferabledatainputstream_
+inline const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& IPCTransferableDataType::_internal_a_mvipctransferabledatainputstream() const {
+  return _internal_has_a_mvipctransferabledatainputstream()
+      ? *_impl_.content_.a_mvipctransferabledatainputstream_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCTransferableDataInputStream&>(::protobuf::mozilla::dom::_IPCTransferableDataInputStream_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& IPCTransferableDataType::mvipctransferabledatainputstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataInputStream)
-  return _internal_mvipctransferabledatainputstream();
+inline const ::protobuf::mozilla::dom::IPCTransferableDataInputStream& IPCTransferableDataType::a_mvipctransferabledatainputstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataInputStream)
+  return _internal_a_mvipctransferabledatainputstream();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::unsafe_arena_release_mvipctransferabledatainputstream() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataInputStream)
-  if (_internal_has_mvipctransferabledatainputstream()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::unsafe_arena_release_a_mvipctransferabledatainputstream() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataInputStream)
+  if (_internal_has_a_mvipctransferabledatainputstream()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataInputStream* temp = _impl_.content_.mvipctransferabledatainputstream_;
-    _impl_.content_.mvipctransferabledatainputstream_ = nullptr;
+    ::protobuf::mozilla::dom::IPCTransferableDataInputStream* temp = _impl_.content_.a_mvipctransferabledatainputstream_;
+    _impl_.content_.a_mvipctransferabledatainputstream_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataType::unsafe_arena_set_allocated_mvipctransferabledatainputstream(::protobuf::mozilla::dom::IPCTransferableDataInputStream* mvipctransferabledatainputstream) {
+inline void IPCTransferableDataType::unsafe_arena_set_allocated_a_mvipctransferabledatainputstream(::protobuf::mozilla::dom::IPCTransferableDataInputStream* a_mvipctransferabledatainputstream) {
   clear_content();
-  if (mvipctransferabledatainputstream) {
-    set_has_mvipctransferabledatainputstream();
-    _impl_.content_.mvipctransferabledatainputstream_ = mvipctransferabledatainputstream;
+  if (a_mvipctransferabledatainputstream) {
+    set_has_a_mvipctransferabledatainputstream();
+    _impl_.content_.a_mvipctransferabledatainputstream_ = a_mvipctransferabledatainputstream;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataInputStream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataInputStream)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::_internal_mutable_mvipctransferabledatainputstream() {
-  if (!_internal_has_mvipctransferabledatainputstream()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::_internal_mutable_a_mvipctransferabledatainputstream() {
+  if (!_internal_has_a_mvipctransferabledatainputstream()) {
     clear_content();
-    set_has_mvipctransferabledatainputstream();
-    _impl_.content_.mvipctransferabledatainputstream_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataInputStream >(GetArenaForAllocation());
+    set_has_a_mvipctransferabledatainputstream();
+    _impl_.content_.a_mvipctransferabledatainputstream_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataInputStream >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipctransferabledatainputstream_;
+  return _impl_.content_.a_mvipctransferabledatainputstream_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::mutable_mvipctransferabledatainputstream() {
-  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* _msg = _internal_mutable_mvipctransferabledatainputstream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataInputStream)
+inline ::protobuf::mozilla::dom::IPCTransferableDataInputStream* IPCTransferableDataType::mutable_a_mvipctransferabledatainputstream() {
+  ::protobuf::mozilla::dom::IPCTransferableDataInputStream* _msg = _internal_mutable_a_mvipctransferabledatainputstream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataInputStream)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.IPCTransferableDataImageContainer mVIPCTransferableDataImageContainer = 4;
-inline bool IPCTransferableDataType::_internal_has_mvipctransferabledataimagecontainer() const {
-  return content_case() == kMVIPCTransferableDataImageContainer;
+// .protobuf.mozilla.dom.IPCTransferableDataImageContainer a_mVIPCTransferableDataImageContainer = 4;
+inline bool IPCTransferableDataType::_internal_has_a_mvipctransferabledataimagecontainer() const {
+  return content_case() == kAMVIPCTransferableDataImageContainer;
 }
-inline bool IPCTransferableDataType::has_mvipctransferabledataimagecontainer() const {
-  return _internal_has_mvipctransferabledataimagecontainer();
+inline bool IPCTransferableDataType::has_a_mvipctransferabledataimagecontainer() const {
+  return _internal_has_a_mvipctransferabledataimagecontainer();
 }
-inline void IPCTransferableDataType::set_has_mvipctransferabledataimagecontainer() {
-  _impl_._oneof_case_[0] = kMVIPCTransferableDataImageContainer;
+inline void IPCTransferableDataType::set_has_a_mvipctransferabledataimagecontainer() {
+  _impl_._oneof_case_[0] = kAMVIPCTransferableDataImageContainer;
 }
-inline void IPCTransferableDataType::clear_mvipctransferabledataimagecontainer() {
-  if (_internal_has_mvipctransferabledataimagecontainer()) {
+inline void IPCTransferableDataType::clear_a_mvipctransferabledataimagecontainer() {
+  if (_internal_has_a_mvipctransferabledataimagecontainer()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipctransferabledataimagecontainer_;
+      delete _impl_.content_.a_mvipctransferabledataimagecontainer_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::release_mvipctransferabledataimagecontainer() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataImageContainer)
-  if (_internal_has_mvipctransferabledataimagecontainer()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::release_a_mvipctransferabledataimagecontainer() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataImageContainer)
+  if (_internal_has_a_mvipctransferabledataimagecontainer()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* temp = _impl_.content_.mvipctransferabledataimagecontainer_;
+    ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* temp = _impl_.content_.a_mvipctransferabledataimagecontainer_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipctransferabledataimagecontainer_ = nullptr;
+    _impl_.content_.a_mvipctransferabledataimagecontainer_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& IPCTransferableDataType::_internal_mvipctransferabledataimagecontainer() const {
-  return _internal_has_mvipctransferabledataimagecontainer()
-      ? *_impl_.content_.mvipctransferabledataimagecontainer_
+inline const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& IPCTransferableDataType::_internal_a_mvipctransferabledataimagecontainer() const {
+  return _internal_has_a_mvipctransferabledataimagecontainer()
+      ? *_impl_.content_.a_mvipctransferabledataimagecontainer_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCTransferableDataImageContainer&>(::protobuf::mozilla::dom::_IPCTransferableDataImageContainer_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& IPCTransferableDataType::mvipctransferabledataimagecontainer() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataImageContainer)
-  return _internal_mvipctransferabledataimagecontainer();
+inline const ::protobuf::mozilla::dom::IPCTransferableDataImageContainer& IPCTransferableDataType::a_mvipctransferabledataimagecontainer() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataImageContainer)
+  return _internal_a_mvipctransferabledataimagecontainer();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::unsafe_arena_release_mvipctransferabledataimagecontainer() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataImageContainer)
-  if (_internal_has_mvipctransferabledataimagecontainer()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::unsafe_arena_release_a_mvipctransferabledataimagecontainer() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataImageContainer)
+  if (_internal_has_a_mvipctransferabledataimagecontainer()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* temp = _impl_.content_.mvipctransferabledataimagecontainer_;
-    _impl_.content_.mvipctransferabledataimagecontainer_ = nullptr;
+    ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* temp = _impl_.content_.a_mvipctransferabledataimagecontainer_;
+    _impl_.content_.a_mvipctransferabledataimagecontainer_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataType::unsafe_arena_set_allocated_mvipctransferabledataimagecontainer(::protobuf::mozilla::dom::IPCTransferableDataImageContainer* mvipctransferabledataimagecontainer) {
+inline void IPCTransferableDataType::unsafe_arena_set_allocated_a_mvipctransferabledataimagecontainer(::protobuf::mozilla::dom::IPCTransferableDataImageContainer* a_mvipctransferabledataimagecontainer) {
   clear_content();
-  if (mvipctransferabledataimagecontainer) {
-    set_has_mvipctransferabledataimagecontainer();
-    _impl_.content_.mvipctransferabledataimagecontainer_ = mvipctransferabledataimagecontainer;
+  if (a_mvipctransferabledataimagecontainer) {
+    set_has_a_mvipctransferabledataimagecontainer();
+    _impl_.content_.a_mvipctransferabledataimagecontainer_ = a_mvipctransferabledataimagecontainer;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataImageContainer)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataImageContainer)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::_internal_mutable_mvipctransferabledataimagecontainer() {
-  if (!_internal_has_mvipctransferabledataimagecontainer()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::_internal_mutable_a_mvipctransferabledataimagecontainer() {
+  if (!_internal_has_a_mvipctransferabledataimagecontainer()) {
     clear_content();
-    set_has_mvipctransferabledataimagecontainer();
-    _impl_.content_.mvipctransferabledataimagecontainer_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataImageContainer >(GetArenaForAllocation());
+    set_has_a_mvipctransferabledataimagecontainer();
+    _impl_.content_.a_mvipctransferabledataimagecontainer_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataImageContainer >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipctransferabledataimagecontainer_;
+  return _impl_.content_.a_mvipctransferabledataimagecontainer_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::mutable_mvipctransferabledataimagecontainer() {
-  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* _msg = _internal_mutable_mvipctransferabledataimagecontainer();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataImageContainer)
+inline ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* IPCTransferableDataType::mutable_a_mvipctransferabledataimagecontainer() {
+  ::protobuf::mozilla::dom::IPCTransferableDataImageContainer* _msg = _internal_mutable_a_mvipctransferabledataimagecontainer();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataImageContainer)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.IPCTransferableDataBlob mVIPCTransferableDataBlob = 5;
-inline bool IPCTransferableDataType::_internal_has_mvipctransferabledatablob() const {
-  return content_case() == kMVIPCTransferableDataBlob;
+// .protobuf.mozilla.dom.IPCTransferableDataBlob a_mVIPCTransferableDataBlob = 5;
+inline bool IPCTransferableDataType::_internal_has_a_mvipctransferabledatablob() const {
+  return content_case() == kAMVIPCTransferableDataBlob;
 }
-inline bool IPCTransferableDataType::has_mvipctransferabledatablob() const {
-  return _internal_has_mvipctransferabledatablob();
+inline bool IPCTransferableDataType::has_a_mvipctransferabledatablob() const {
+  return _internal_has_a_mvipctransferabledatablob();
 }
-inline void IPCTransferableDataType::set_has_mvipctransferabledatablob() {
-  _impl_._oneof_case_[0] = kMVIPCTransferableDataBlob;
+inline void IPCTransferableDataType::set_has_a_mvipctransferabledatablob() {
+  _impl_._oneof_case_[0] = kAMVIPCTransferableDataBlob;
 }
-inline void IPCTransferableDataType::clear_mvipctransferabledatablob() {
-  if (_internal_has_mvipctransferabledatablob()) {
+inline void IPCTransferableDataType::clear_a_mvipctransferabledatablob() {
+  if (_internal_has_a_mvipctransferabledatablob()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipctransferabledatablob_;
+      delete _impl_.content_.a_mvipctransferabledatablob_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::release_mvipctransferabledatablob() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataBlob)
-  if (_internal_has_mvipctransferabledatablob()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::release_a_mvipctransferabledatablob() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataBlob)
+  if (_internal_has_a_mvipctransferabledatablob()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataBlob* temp = _impl_.content_.mvipctransferabledatablob_;
+    ::protobuf::mozilla::dom::IPCTransferableDataBlob* temp = _impl_.content_.a_mvipctransferabledatablob_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipctransferabledatablob_ = nullptr;
+    _impl_.content_.a_mvipctransferabledatablob_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataBlob& IPCTransferableDataType::_internal_mvipctransferabledatablob() const {
-  return _internal_has_mvipctransferabledatablob()
-      ? *_impl_.content_.mvipctransferabledatablob_
+inline const ::protobuf::mozilla::dom::IPCTransferableDataBlob& IPCTransferableDataType::_internal_a_mvipctransferabledatablob() const {
+  return _internal_has_a_mvipctransferabledatablob()
+      ? *_impl_.content_.a_mvipctransferabledatablob_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCTransferableDataBlob&>(::protobuf::mozilla::dom::_IPCTransferableDataBlob_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataBlob& IPCTransferableDataType::mvipctransferabledatablob() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataBlob)
-  return _internal_mvipctransferabledatablob();
+inline const ::protobuf::mozilla::dom::IPCTransferableDataBlob& IPCTransferableDataType::a_mvipctransferabledatablob() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataBlob)
+  return _internal_a_mvipctransferabledatablob();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::unsafe_arena_release_mvipctransferabledatablob() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataBlob)
-  if (_internal_has_mvipctransferabledatablob()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::unsafe_arena_release_a_mvipctransferabledatablob() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataBlob)
+  if (_internal_has_a_mvipctransferabledatablob()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableDataBlob* temp = _impl_.content_.mvipctransferabledatablob_;
-    _impl_.content_.mvipctransferabledatablob_ = nullptr;
+    ::protobuf::mozilla::dom::IPCTransferableDataBlob* temp = _impl_.content_.a_mvipctransferabledatablob_;
+    _impl_.content_.a_mvipctransferabledatablob_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataType::unsafe_arena_set_allocated_mvipctransferabledatablob(::protobuf::mozilla::dom::IPCTransferableDataBlob* mvipctransferabledatablob) {
+inline void IPCTransferableDataType::unsafe_arena_set_allocated_a_mvipctransferabledatablob(::protobuf::mozilla::dom::IPCTransferableDataBlob* a_mvipctransferabledatablob) {
   clear_content();
-  if (mvipctransferabledatablob) {
-    set_has_mvipctransferabledatablob();
-    _impl_.content_.mvipctransferabledatablob_ = mvipctransferabledatablob;
+  if (a_mvipctransferabledatablob) {
+    set_has_a_mvipctransferabledatablob();
+    _impl_.content_.a_mvipctransferabledatablob_ = a_mvipctransferabledatablob;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataBlob)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataBlob)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::_internal_mutable_mvipctransferabledatablob() {
-  if (!_internal_has_mvipctransferabledatablob()) {
+inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::_internal_mutable_a_mvipctransferabledatablob() {
+  if (!_internal_has_a_mvipctransferabledatablob()) {
     clear_content();
-    set_has_mvipctransferabledatablob();
-    _impl_.content_.mvipctransferabledatablob_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataBlob >(GetArenaForAllocation());
+    set_has_a_mvipctransferabledatablob();
+    _impl_.content_.a_mvipctransferabledatablob_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableDataBlob >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipctransferabledatablob_;
+  return _impl_.content_.a_mvipctransferabledatablob_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::mutable_mvipctransferabledatablob() {
-  ::protobuf::mozilla::dom::IPCTransferableDataBlob* _msg = _internal_mutable_mvipctransferabledatablob();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.mVIPCTransferableDataBlob)
+inline ::protobuf::mozilla::dom::IPCTransferableDataBlob* IPCTransferableDataType::mutable_a_mvipctransferabledatablob() {
+  ::protobuf::mozilla::dom::IPCTransferableDataBlob* _msg = _internal_mutable_a_mvipctransferabledatablob();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataType.a_mVIPCTransferableDataBlob)
   return _msg;
 }
 
@@ -2620,113 +2620,113 @@ inline IPCTransferableDataType::ContentCase IPCTransferableDataType::content_cas
 
 // IPCTransferableDataItem
 
-// required bytes flavor = 1;
-inline bool IPCTransferableDataItem::_internal_has_flavor() const {
+// required bytes a_flavor = 1;
+inline bool IPCTransferableDataItem::_internal_has_a_flavor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCTransferableDataItem::has_flavor() const {
-  return _internal_has_flavor();
+inline bool IPCTransferableDataItem::has_a_flavor() const {
+  return _internal_has_a_flavor();
 }
-inline void IPCTransferableDataItem::clear_flavor() {
-  _impl_.flavor_.ClearToEmpty();
+inline void IPCTransferableDataItem::clear_a_flavor() {
+  _impl_.a_flavor_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCTransferableDataItem::flavor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataItem.flavor)
-  return _internal_flavor();
+inline const std::string& IPCTransferableDataItem::a_flavor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
+  return _internal_a_flavor();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferableDataItem::set_flavor(ArgT0&& arg0, ArgT... args) {
+void IPCTransferableDataItem::set_a_flavor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.flavor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataItem.flavor)
+ _impl_.a_flavor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
 }
-inline std::string* IPCTransferableDataItem::mutable_flavor() {
-  std::string* _s = _internal_mutable_flavor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataItem.flavor)
+inline std::string* IPCTransferableDataItem::mutable_a_flavor() {
+  std::string* _s = _internal_mutable_a_flavor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
   return _s;
 }
-inline const std::string& IPCTransferableDataItem::_internal_flavor() const {
-  return _impl_.flavor_.Get();
+inline const std::string& IPCTransferableDataItem::_internal_a_flavor() const {
+  return _impl_.a_flavor_.Get();
 }
-inline void IPCTransferableDataItem::_internal_set_flavor(const std::string& value) {
+inline void IPCTransferableDataItem::_internal_set_a_flavor(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.flavor_.Set(value, GetArenaForAllocation());
+  _impl_.a_flavor_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataItem::_internal_mutable_flavor() {
+inline std::string* IPCTransferableDataItem::_internal_mutable_a_flavor() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.flavor_.Mutable(GetArenaForAllocation());
+  return _impl_.a_flavor_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataItem::release_flavor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataItem.flavor)
-  if (!_internal_has_flavor()) {
+inline std::string* IPCTransferableDataItem::release_a_flavor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
+  if (!_internal_has_a_flavor()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.flavor_.Release();
+  auto* p = _impl_.a_flavor_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.flavor_.IsDefault()) {
-    _impl_.flavor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_flavor_.IsDefault()) {
+    _impl_.a_flavor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferableDataItem::set_allocated_flavor(std::string* flavor) {
-  if (flavor != nullptr) {
+inline void IPCTransferableDataItem::set_allocated_a_flavor(std::string* a_flavor) {
+  if (a_flavor != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.flavor_.SetAllocated(flavor, GetArenaForAllocation());
+  _impl_.a_flavor_.SetAllocated(a_flavor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.flavor_.IsDefault()) {
-    _impl_.flavor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_flavor_.IsDefault()) {
+    _impl_.a_flavor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.flavor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor)
 }
 
-// required .protobuf.mozilla.dom.IPCTransferableDataType data = 2;
-inline bool IPCTransferableDataItem::_internal_has_data() const {
+// required .protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+inline bool IPCTransferableDataItem::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.data_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
   return value;
 }
-inline bool IPCTransferableDataItem::has_data() const {
-  return _internal_has_data();
+inline bool IPCTransferableDataItem::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void IPCTransferableDataItem::clear_data() {
-  if (_impl_.data_ != nullptr) _impl_.data_->Clear();
+inline void IPCTransferableDataItem::clear_a_data() {
+  if (_impl_.a_data_ != nullptr) _impl_.a_data_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataType& IPCTransferableDataItem::_internal_data() const {
-  const ::protobuf::mozilla::dom::IPCTransferableDataType* p = _impl_.data_;
+inline const ::protobuf::mozilla::dom::IPCTransferableDataType& IPCTransferableDataItem::_internal_a_data() const {
+  const ::protobuf::mozilla::dom::IPCTransferableDataType* p = _impl_.a_data_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCTransferableDataType&>(
       ::protobuf::mozilla::dom::_IPCTransferableDataType_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataType& IPCTransferableDataItem::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataItem.data)
-  return _internal_data();
+inline const ::protobuf::mozilla::dom::IPCTransferableDataType& IPCTransferableDataItem::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
+  return _internal_a_data();
 }
-inline void IPCTransferableDataItem::unsafe_arena_set_allocated_data(
-    ::protobuf::mozilla::dom::IPCTransferableDataType* data) {
+inline void IPCTransferableDataItem::unsafe_arena_set_allocated_a_data(
+    ::protobuf::mozilla::dom::IPCTransferableDataType* a_data) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  _impl_.data_ = data;
-  if (data) {
+  _impl_.a_data_ = a_data;
+  if (a_data) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.data)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::release_data() {
+inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::release_a_data() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::IPCTransferableDataType* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::dom::IPCTransferableDataType* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2738,243 +2738,243 @@ inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataIte
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::unsafe_arena_release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataItem.data)
+inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::unsafe_arena_release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::IPCTransferableDataType* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::dom::IPCTransferableDataType* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::_internal_mutable_data() {
+inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.data_ == nullptr) {
+  if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableDataType>(GetArenaForAllocation());
-    _impl_.data_ = p;
+    _impl_.a_data_ = p;
   }
-  return _impl_.data_;
+  return _impl_.a_data_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::mutable_data() {
-  ::protobuf::mozilla::dom::IPCTransferableDataType* _msg = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataItem.data)
+inline ::protobuf::mozilla::dom::IPCTransferableDataType* IPCTransferableDataItem::mutable_a_data() {
+  ::protobuf::mozilla::dom::IPCTransferableDataType* _msg = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
   return _msg;
 }
-inline void IPCTransferableDataItem::set_allocated_data(::protobuf::mozilla::dom::IPCTransferableDataType* data) {
+inline void IPCTransferableDataItem::set_allocated_a_data(::protobuf::mozilla::dom::IPCTransferableDataType* a_data) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.data_;
+    delete _impl_.a_data_;
   }
-  if (data) {
+  if (a_data) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(data);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_data);
     if (message_arena != submessage_arena) {
-      data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, data, submessage_arena);
+      a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_data, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.data_ = data;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.data)
+  _impl_.a_data_ = a_data;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataItem.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableData
 
-// repeated .protobuf.mozilla.dom.IPCTransferableDataItem items = 1;
-inline int IPCTransferableData::_internal_items_size() const {
-  return _impl_.items_.size();
+// repeated .protobuf.mozilla.dom.IPCTransferableDataItem a_items = 1;
+inline int IPCTransferableData::_internal_a_items_size() const {
+  return _impl_.a_items_.size();
 }
-inline int IPCTransferableData::items_size() const {
-  return _internal_items_size();
+inline int IPCTransferableData::a_items_size() const {
+  return _internal_a_items_size();
 }
-inline void IPCTransferableData::clear_items() {
-  _impl_.items_.Clear();
+inline void IPCTransferableData::clear_a_items() {
+  _impl_.a_items_.Clear();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataItem* IPCTransferableData::mutable_items(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableData.items)
-  return _impl_.items_.Mutable(index);
+inline ::protobuf::mozilla::dom::IPCTransferableDataItem* IPCTransferableData::mutable_a_items(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableData.a_items)
+  return _impl_.a_items_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableDataItem >*
-IPCTransferableData::mutable_items() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.IPCTransferableData.items)
-  return &_impl_.items_;
+IPCTransferableData::mutable_a_items() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.IPCTransferableData.a_items)
+  return &_impl_.a_items_;
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataItem& IPCTransferableData::_internal_items(int index) const {
-  return _impl_.items_.Get(index);
+inline const ::protobuf::mozilla::dom::IPCTransferableDataItem& IPCTransferableData::_internal_a_items(int index) const {
+  return _impl_.a_items_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableDataItem& IPCTransferableData::items(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableData.items)
-  return _internal_items(index);
+inline const ::protobuf::mozilla::dom::IPCTransferableDataItem& IPCTransferableData::a_items(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableData.a_items)
+  return _internal_a_items(index);
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataItem* IPCTransferableData::_internal_add_items() {
-  return _impl_.items_.Add();
+inline ::protobuf::mozilla::dom::IPCTransferableDataItem* IPCTransferableData::_internal_add_a_items() {
+  return _impl_.a_items_.Add();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableDataItem* IPCTransferableData::add_items() {
-  ::protobuf::mozilla::dom::IPCTransferableDataItem* _add = _internal_add_items();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.IPCTransferableData.items)
+inline ::protobuf::mozilla::dom::IPCTransferableDataItem* IPCTransferableData::add_a_items() {
+  ::protobuf::mozilla::dom::IPCTransferableDataItem* _add = _internal_add_a_items();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.IPCTransferableData.a_items)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableDataItem >&
-IPCTransferableData::items() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.IPCTransferableData.items)
-  return _impl_.items_;
+IPCTransferableData::a_items() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.IPCTransferableData.a_items)
+  return _impl_.a_items_;
 }
 
 // -------------------------------------------------------------------
 
 // IPCTransferableDataOrError
 
-// .protobuf.mozilla.dom.IPCTransferableData mVIPCTransferableData = 1;
-inline bool IPCTransferableDataOrError::_internal_has_mvipctransferabledata() const {
-  return content_case() == kMVIPCTransferableData;
+// .protobuf.mozilla.dom.IPCTransferableData a_mVIPCTransferableData = 1;
+inline bool IPCTransferableDataOrError::_internal_has_a_mvipctransferabledata() const {
+  return content_case() == kAMVIPCTransferableData;
 }
-inline bool IPCTransferableDataOrError::has_mvipctransferabledata() const {
-  return _internal_has_mvipctransferabledata();
+inline bool IPCTransferableDataOrError::has_a_mvipctransferabledata() const {
+  return _internal_has_a_mvipctransferabledata();
 }
-inline void IPCTransferableDataOrError::set_has_mvipctransferabledata() {
-  _impl_._oneof_case_[0] = kMVIPCTransferableData;
+inline void IPCTransferableDataOrError::set_has_a_mvipctransferabledata() {
+  _impl_._oneof_case_[0] = kAMVIPCTransferableData;
 }
-inline void IPCTransferableDataOrError::clear_mvipctransferabledata() {
-  if (_internal_has_mvipctransferabledata()) {
+inline void IPCTransferableDataOrError::clear_a_mvipctransferabledata() {
+  if (_internal_has_a_mvipctransferabledata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvipctransferabledata_;
+      delete _impl_.content_.a_mvipctransferabledata_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::release_mvipctransferabledata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataOrError.mVIPCTransferableData)
-  if (_internal_has_mvipctransferabledata()) {
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::release_a_mvipctransferabledata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVIPCTransferableData)
+  if (_internal_has_a_mvipctransferabledata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.content_.mvipctransferabledata_;
+    ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.content_.a_mvipctransferabledata_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipctransferabledata_ = nullptr;
+    _impl_.content_.a_mvipctransferabledata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferableDataOrError::_internal_mvipctransferabledata() const {
-  return _internal_has_mvipctransferabledata()
-      ? *_impl_.content_.mvipctransferabledata_
+inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferableDataOrError::_internal_a_mvipctransferabledata() const {
+  return _internal_has_a_mvipctransferabledata()
+      ? *_impl_.content_.a_mvipctransferabledata_
       : reinterpret_cast< ::protobuf::mozilla::dom::IPCTransferableData&>(::protobuf::mozilla::dom::_IPCTransferableData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferableDataOrError::mvipctransferabledata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataOrError.mVIPCTransferableData)
-  return _internal_mvipctransferabledata();
+inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferableDataOrError::a_mvipctransferabledata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVIPCTransferableData)
+  return _internal_a_mvipctransferabledata();
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::unsafe_arena_release_mvipctransferabledata() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataOrError.mVIPCTransferableData)
-  if (_internal_has_mvipctransferabledata()) {
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::unsafe_arena_release_a_mvipctransferabledata() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVIPCTransferableData)
+  if (_internal_has_a_mvipctransferabledata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.content_.mvipctransferabledata_;
-    _impl_.content_.mvipctransferabledata_ = nullptr;
+    ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.content_.a_mvipctransferabledata_;
+    _impl_.content_.a_mvipctransferabledata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataOrError::unsafe_arena_set_allocated_mvipctransferabledata(::protobuf::mozilla::dom::IPCTransferableData* mvipctransferabledata) {
+inline void IPCTransferableDataOrError::unsafe_arena_set_allocated_a_mvipctransferabledata(::protobuf::mozilla::dom::IPCTransferableData* a_mvipctransferabledata) {
   clear_content();
-  if (mvipctransferabledata) {
-    set_has_mvipctransferabledata();
-    _impl_.content_.mvipctransferabledata_ = mvipctransferabledata;
+  if (a_mvipctransferabledata) {
+    set_has_a_mvipctransferabledata();
+    _impl_.content_.a_mvipctransferabledata_ = a_mvipctransferabledata;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataOrError.mVIPCTransferableData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVIPCTransferableData)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::_internal_mutable_mvipctransferabledata() {
-  if (!_internal_has_mvipctransferabledata()) {
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::_internal_mutable_a_mvipctransferabledata() {
+  if (!_internal_has_a_mvipctransferabledata()) {
     clear_content();
-    set_has_mvipctransferabledata();
-    _impl_.content_.mvipctransferabledata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableData >(GetArenaForAllocation());
+    set_has_a_mvipctransferabledata();
+    _impl_.content_.a_mvipctransferabledata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCTransferableData >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipctransferabledata_;
+  return _impl_.content_.a_mvipctransferabledata_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::mutable_mvipctransferabledata() {
-  ::protobuf::mozilla::dom::IPCTransferableData* _msg = _internal_mutable_mvipctransferabledata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataOrError.mVIPCTransferableData)
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferableDataOrError::mutable_a_mvipctransferabledata() {
+  ::protobuf::mozilla::dom::IPCTransferableData* _msg = _internal_mutable_a_mvipctransferabledata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVIPCTransferableData)
   return _msg;
 }
 
-// bytes mVnsresult = 2;
-inline bool IPCTransferableDataOrError::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 2;
+inline bool IPCTransferableDataOrError::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool IPCTransferableDataOrError::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool IPCTransferableDataOrError::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void IPCTransferableDataOrError::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void IPCTransferableDataOrError::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void IPCTransferableDataOrError::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void IPCTransferableDataOrError::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& IPCTransferableDataOrError::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataOrError.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& IPCTransferableDataOrError::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void IPCTransferableDataOrError::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void IPCTransferableDataOrError::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataOrError.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVnsresult)
 }
-inline std::string* IPCTransferableDataOrError::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataOrError.mVnsresult)
+inline std::string* IPCTransferableDataOrError::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVnsresult)
   return _s;
 }
-inline const std::string& IPCTransferableDataOrError::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& IPCTransferableDataOrError::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void IPCTransferableDataOrError::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void IPCTransferableDataOrError::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataOrError::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* IPCTransferableDataOrError::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* IPCTransferableDataOrError::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataOrError.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* IPCTransferableDataOrError::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void IPCTransferableDataOrError::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void IPCTransferableDataOrError::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataOrError.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferableDataOrError.a_mVnsresult)
 }
 
 inline bool IPCTransferableDataOrError::has_content() const {
@@ -2990,45 +2990,45 @@ inline IPCTransferableDataOrError::ContentCase IPCTransferableDataOrError::conte
 
 // IPCTransferable
 
-// required .protobuf.mozilla.dom.IPCTransferableData data = 1;
-inline bool IPCTransferable::_internal_has_data() const {
+// required .protobuf.mozilla.dom.IPCTransferableData a_data = 1;
+inline bool IPCTransferable::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.data_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
   return value;
 }
-inline bool IPCTransferable::has_data() const {
-  return _internal_has_data();
+inline bool IPCTransferable::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline void IPCTransferable::clear_data() {
-  if (_impl_.data_ != nullptr) _impl_.data_->Clear();
+inline void IPCTransferable::clear_a_data() {
+  if (_impl_.a_data_ != nullptr) _impl_.a_data_->Clear();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferable::_internal_data() const {
-  const ::protobuf::mozilla::dom::IPCTransferableData* p = _impl_.data_;
+inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferable::_internal_a_data() const {
+  const ::protobuf::mozilla::dom::IPCTransferableData* p = _impl_.a_data_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCTransferableData&>(
       ::protobuf::mozilla::dom::_IPCTransferableData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferable::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.data)
-  return _internal_data();
+inline const ::protobuf::mozilla::dom::IPCTransferableData& IPCTransferable::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_data)
+  return _internal_a_data();
 }
-inline void IPCTransferable::unsafe_arena_set_allocated_data(
-    ::protobuf::mozilla::dom::IPCTransferableData* data) {
+inline void IPCTransferable::unsafe_arena_set_allocated_a_data(
+    ::protobuf::mozilla::dom::IPCTransferableData* a_data) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  _impl_.data_ = data;
-  if (data) {
+  _impl_.a_data_ = a_data;
+  if (a_data) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferable.data)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_data)
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::release_data() {
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::release_a_data() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3040,177 +3040,177 @@ inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::release_d
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::unsafe_arena_release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.data)
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::unsafe_arena_release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_data)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::dom::IPCTransferableData* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::_internal_mutable_data() {
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.data_ == nullptr) {
+  if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCTransferableData>(GetArenaForAllocation());
-    _impl_.data_ = p;
+    _impl_.a_data_ = p;
   }
-  return _impl_.data_;
+  return _impl_.a_data_;
 }
-inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::mutable_data() {
-  ::protobuf::mozilla::dom::IPCTransferableData* _msg = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.data)
+inline ::protobuf::mozilla::dom::IPCTransferableData* IPCTransferable::mutable_a_data() {
+  ::protobuf::mozilla::dom::IPCTransferableData* _msg = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.a_data)
   return _msg;
 }
-inline void IPCTransferable::set_allocated_data(::protobuf::mozilla::dom::IPCTransferableData* data) {
+inline void IPCTransferable::set_allocated_a_data(::protobuf::mozilla::dom::IPCTransferableData* a_data) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.data_;
+    delete _impl_.a_data_;
   }
-  if (data) {
+  if (a_data) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(data);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_data);
     if (message_arena != submessage_arena) {
-      data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, data, submessage_arena);
+      a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_data, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.data_ = data;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.data)
+  _impl_.a_data_ = a_data;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_data)
 }
 
-// required bool isPrivateData = 2;
-inline bool IPCTransferable::_internal_has_isprivatedata() const {
+// required bool a_isPrivateData = 2;
+inline bool IPCTransferable::_internal_has_a_isprivatedata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool IPCTransferable::has_isprivatedata() const {
-  return _internal_has_isprivatedata();
+inline bool IPCTransferable::has_a_isprivatedata() const {
+  return _internal_has_a_isprivatedata();
 }
-inline void IPCTransferable::clear_isprivatedata() {
-  _impl_.isprivatedata_ = false;
+inline void IPCTransferable::clear_a_isprivatedata() {
+  _impl_.a_isprivatedata_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool IPCTransferable::_internal_isprivatedata() const {
-  return _impl_.isprivatedata_;
+inline bool IPCTransferable::_internal_a_isprivatedata() const {
+  return _impl_.a_isprivatedata_;
 }
-inline bool IPCTransferable::isprivatedata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.isPrivateData)
-  return _internal_isprivatedata();
+inline bool IPCTransferable::a_isprivatedata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_isPrivateData)
+  return _internal_a_isprivatedata();
 }
-inline void IPCTransferable::_internal_set_isprivatedata(bool value) {
+inline void IPCTransferable::_internal_set_a_isprivatedata(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.isprivatedata_ = value;
+  _impl_.a_isprivatedata_ = value;
 }
-inline void IPCTransferable::set_isprivatedata(bool value) {
-  _internal_set_isprivatedata(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.isPrivateData)
+inline void IPCTransferable::set_a_isprivatedata(bool value) {
+  _internal_set_a_isprivatedata(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_isPrivateData)
 }
 
-// required bytes dataPrincipal = 3;
-inline bool IPCTransferable::_internal_has_dataprincipal() const {
+// required bytes a_dataPrincipal = 3;
+inline bool IPCTransferable::_internal_has_a_dataprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCTransferable::has_dataprincipal() const {
-  return _internal_has_dataprincipal();
+inline bool IPCTransferable::has_a_dataprincipal() const {
+  return _internal_has_a_dataprincipal();
 }
-inline void IPCTransferable::clear_dataprincipal() {
-  _impl_.dataprincipal_.ClearToEmpty();
+inline void IPCTransferable::clear_a_dataprincipal() {
+  _impl_.a_dataprincipal_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCTransferable::dataprincipal() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.dataPrincipal)
-  return _internal_dataprincipal();
+inline const std::string& IPCTransferable::a_dataprincipal() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_dataPrincipal)
+  return _internal_a_dataprincipal();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferable::set_dataprincipal(ArgT0&& arg0, ArgT... args) {
+void IPCTransferable::set_a_dataprincipal(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.dataprincipal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.dataPrincipal)
+ _impl_.a_dataprincipal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_dataPrincipal)
 }
-inline std::string* IPCTransferable::mutable_dataprincipal() {
-  std::string* _s = _internal_mutable_dataprincipal();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.dataPrincipal)
+inline std::string* IPCTransferable::mutable_a_dataprincipal() {
+  std::string* _s = _internal_mutable_a_dataprincipal();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.a_dataPrincipal)
   return _s;
 }
-inline const std::string& IPCTransferable::_internal_dataprincipal() const {
-  return _impl_.dataprincipal_.Get();
+inline const std::string& IPCTransferable::_internal_a_dataprincipal() const {
+  return _impl_.a_dataprincipal_.Get();
 }
-inline void IPCTransferable::_internal_set_dataprincipal(const std::string& value) {
+inline void IPCTransferable::_internal_set_a_dataprincipal(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dataprincipal_.Set(value, GetArenaForAllocation());
+  _impl_.a_dataprincipal_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferable::_internal_mutable_dataprincipal() {
+inline std::string* IPCTransferable::_internal_mutable_a_dataprincipal() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.dataprincipal_.Mutable(GetArenaForAllocation());
+  return _impl_.a_dataprincipal_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferable::release_dataprincipal() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.dataPrincipal)
-  if (!_internal_has_dataprincipal()) {
+inline std::string* IPCTransferable::release_a_dataprincipal() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_dataPrincipal)
+  if (!_internal_has_a_dataprincipal()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.dataprincipal_.Release();
+  auto* p = _impl_.a_dataprincipal_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dataprincipal_.IsDefault()) {
-    _impl_.dataprincipal_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dataprincipal_.IsDefault()) {
+    _impl_.a_dataprincipal_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferable::set_allocated_dataprincipal(std::string* dataprincipal) {
-  if (dataprincipal != nullptr) {
+inline void IPCTransferable::set_allocated_a_dataprincipal(std::string* a_dataprincipal) {
+  if (a_dataprincipal != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.dataprincipal_.SetAllocated(dataprincipal, GetArenaForAllocation());
+  _impl_.a_dataprincipal_.SetAllocated(a_dataprincipal, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.dataprincipal_.IsDefault()) {
-    _impl_.dataprincipal_.Set("", GetArenaForAllocation());
+  if (_impl_.a_dataprincipal_.IsDefault()) {
+    _impl_.a_dataprincipal_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.dataPrincipal)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_dataPrincipal)
 }
 
-// optional .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 4;
-inline bool IPCTransferable::_internal_has_cookiejarsettings() const {
+// optional .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
+inline bool IPCTransferable::_internal_has_a_cookiejarsettings() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cookiejarsettings_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cookiejarsettings_ != nullptr);
   return value;
 }
-inline bool IPCTransferable::has_cookiejarsettings() const {
-  return _internal_has_cookiejarsettings();
+inline bool IPCTransferable::has_a_cookiejarsettings() const {
+  return _internal_has_a_cookiejarsettings();
 }
-inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& IPCTransferable::_internal_cookiejarsettings() const {
-  const ::protobuf::mozilla::net::CookieJarSettingsArgs* p = _impl_.cookiejarsettings_;
+inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& IPCTransferable::_internal_a_cookiejarsettings() const {
+  const ::protobuf::mozilla::net::CookieJarSettingsArgs* p = _impl_.a_cookiejarsettings_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::CookieJarSettingsArgs&>(
       ::protobuf::mozilla::net::_CookieJarSettingsArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& IPCTransferable::cookiejarsettings() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.cookieJarSettings)
-  return _internal_cookiejarsettings();
+inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& IPCTransferable::a_cookiejarsettings() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
+  return _internal_a_cookiejarsettings();
 }
-inline void IPCTransferable::unsafe_arena_set_allocated_cookiejarsettings(
-    ::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings) {
+inline void IPCTransferable::unsafe_arena_set_allocated_a_cookiejarsettings(
+    ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookiejarsettings_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookiejarsettings_);
   }
-  _impl_.cookiejarsettings_ = cookiejarsettings;
-  if (cookiejarsettings) {
+  _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
+  if (a_cookiejarsettings) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferable.cookieJarSettings)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::release_cookiejarsettings() {
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::release_a_cookiejarsettings() {
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.cookiejarsettings_;
-  _impl_.cookiejarsettings_ = nullptr;
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
+  _impl_.a_cookiejarsettings_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3222,181 +3222,181 @@ inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::release
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::unsafe_arena_release_cookiejarsettings() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.cookieJarSettings)
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::unsafe_arena_release_a_cookiejarsettings() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
   _impl_._has_bits_[0] &= ~0x00000010u;
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.cookiejarsettings_;
-  _impl_.cookiejarsettings_ = nullptr;
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
+  _impl_.a_cookiejarsettings_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::_internal_mutable_cookiejarsettings() {
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::_internal_mutable_a_cookiejarsettings() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  if (_impl_.cookiejarsettings_ == nullptr) {
+  if (_impl_.a_cookiejarsettings_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::CookieJarSettingsArgs>(GetArenaForAllocation());
-    _impl_.cookiejarsettings_ = p;
+    _impl_.a_cookiejarsettings_ = p;
   }
-  return _impl_.cookiejarsettings_;
+  return _impl_.a_cookiejarsettings_;
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::mutable_cookiejarsettings() {
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* _msg = _internal_mutable_cookiejarsettings();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.cookieJarSettings)
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* IPCTransferable::mutable_a_cookiejarsettings() {
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* _msg = _internal_mutable_a_cookiejarsettings();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
   return _msg;
 }
-inline void IPCTransferable::set_allocated_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings) {
+inline void IPCTransferable::set_allocated_a_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookiejarsettings_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookiejarsettings_);
   }
-  if (cookiejarsettings) {
+  if (a_cookiejarsettings) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cookiejarsettings));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cookiejarsettings));
     if (message_arena != submessage_arena) {
-      cookiejarsettings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cookiejarsettings, submessage_arena);
+      a_cookiejarsettings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cookiejarsettings, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.cookiejarsettings_ = cookiejarsettings;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.cookieJarSettings)
+  _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_cookieJarSettings)
 }
 
-// required bytes contentPolicyType = 5;
-inline bool IPCTransferable::_internal_has_contentpolicytype() const {
+// required bytes a_contentPolicyType = 5;
+inline bool IPCTransferable::_internal_has_a_contentpolicytype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IPCTransferable::has_contentpolicytype() const {
-  return _internal_has_contentpolicytype();
+inline bool IPCTransferable::has_a_contentpolicytype() const {
+  return _internal_has_a_contentpolicytype();
 }
-inline void IPCTransferable::clear_contentpolicytype() {
-  _impl_.contentpolicytype_.ClearToEmpty();
+inline void IPCTransferable::clear_a_contentpolicytype() {
+  _impl_.a_contentpolicytype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IPCTransferable::contentpolicytype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.contentPolicyType)
-  return _internal_contentpolicytype();
+inline const std::string& IPCTransferable::a_contentpolicytype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
+  return _internal_a_contentpolicytype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferable::set_contentpolicytype(ArgT0&& arg0, ArgT... args) {
+void IPCTransferable::set_a_contentpolicytype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.contentpolicytype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.contentPolicyType)
+ _impl_.a_contentpolicytype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
 }
-inline std::string* IPCTransferable::mutable_contentpolicytype() {
-  std::string* _s = _internal_mutable_contentpolicytype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.contentPolicyType)
+inline std::string* IPCTransferable::mutable_a_contentpolicytype() {
+  std::string* _s = _internal_mutable_a_contentpolicytype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
   return _s;
 }
-inline const std::string& IPCTransferable::_internal_contentpolicytype() const {
-  return _impl_.contentpolicytype_.Get();
+inline const std::string& IPCTransferable::_internal_a_contentpolicytype() const {
+  return _impl_.a_contentpolicytype_.Get();
 }
-inline void IPCTransferable::_internal_set_contentpolicytype(const std::string& value) {
+inline void IPCTransferable::_internal_set_a_contentpolicytype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.contentpolicytype_.Set(value, GetArenaForAllocation());
+  _impl_.a_contentpolicytype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferable::_internal_mutable_contentpolicytype() {
+inline std::string* IPCTransferable::_internal_mutable_a_contentpolicytype() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.contentpolicytype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_contentpolicytype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferable::release_contentpolicytype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.contentPolicyType)
-  if (!_internal_has_contentpolicytype()) {
+inline std::string* IPCTransferable::release_a_contentpolicytype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
+  if (!_internal_has_a_contentpolicytype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.contentpolicytype_.Release();
+  auto* p = _impl_.a_contentpolicytype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.contentpolicytype_.IsDefault()) {
-    _impl_.contentpolicytype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_contentpolicytype_.IsDefault()) {
+    _impl_.a_contentpolicytype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferable::set_allocated_contentpolicytype(std::string* contentpolicytype) {
-  if (contentpolicytype != nullptr) {
+inline void IPCTransferable::set_allocated_a_contentpolicytype(std::string* a_contentpolicytype) {
+  if (a_contentpolicytype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.contentpolicytype_.SetAllocated(contentpolicytype, GetArenaForAllocation());
+  _impl_.a_contentpolicytype_.SetAllocated(a_contentpolicytype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.contentpolicytype_.IsDefault()) {
-    _impl_.contentpolicytype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_contentpolicytype_.IsDefault()) {
+    _impl_.a_contentpolicytype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.contentPolicyType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
 }
 
-// required bytes referrerInfo = 6;
-inline bool IPCTransferable::_internal_has_referrerinfo() const {
+// required bytes a_referrerInfo = 6;
+inline bool IPCTransferable::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool IPCTransferable::has_referrerinfo() const {
-  return _internal_has_referrerinfo();
+inline bool IPCTransferable::has_a_referrerinfo() const {
+  return _internal_has_a_referrerinfo();
 }
-inline void IPCTransferable::clear_referrerinfo() {
-  _impl_.referrerinfo_.ClearToEmpty();
+inline void IPCTransferable::clear_a_referrerinfo() {
+  _impl_.a_referrerinfo_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& IPCTransferable::referrerinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.referrerInfo)
-  return _internal_referrerinfo();
+inline const std::string& IPCTransferable::a_referrerinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
+  return _internal_a_referrerinfo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCTransferable::set_referrerinfo(ArgT0&& arg0, ArgT... args) {
+void IPCTransferable::set_a_referrerinfo(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.referrerinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.referrerInfo)
+ _impl_.a_referrerinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
 }
-inline std::string* IPCTransferable::mutable_referrerinfo() {
-  std::string* _s = _internal_mutable_referrerinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.referrerInfo)
+inline std::string* IPCTransferable::mutable_a_referrerinfo() {
+  std::string* _s = _internal_mutable_a_referrerinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
   return _s;
 }
-inline const std::string& IPCTransferable::_internal_referrerinfo() const {
-  return _impl_.referrerinfo_.Get();
+inline const std::string& IPCTransferable::_internal_a_referrerinfo() const {
+  return _impl_.a_referrerinfo_.Get();
 }
-inline void IPCTransferable::_internal_set_referrerinfo(const std::string& value) {
+inline void IPCTransferable::_internal_set_a_referrerinfo(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.referrerinfo_.Set(value, GetArenaForAllocation());
+  _impl_.a_referrerinfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCTransferable::_internal_mutable_referrerinfo() {
+inline std::string* IPCTransferable::_internal_mutable_a_referrerinfo() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.referrerinfo_.Mutable(GetArenaForAllocation());
+  return _impl_.a_referrerinfo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCTransferable::release_referrerinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.referrerInfo)
-  if (!_internal_has_referrerinfo()) {
+inline std::string* IPCTransferable::release_a_referrerinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
+  if (!_internal_has_a_referrerinfo()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.referrerinfo_.Release();
+  auto* p = _impl_.a_referrerinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.referrerinfo_.IsDefault()) {
-    _impl_.referrerinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_referrerinfo_.IsDefault()) {
+    _impl_.a_referrerinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCTransferable::set_allocated_referrerinfo(std::string* referrerinfo) {
-  if (referrerinfo != nullptr) {
+inline void IPCTransferable::set_allocated_a_referrerinfo(std::string* a_referrerinfo) {
+  if (a_referrerinfo != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.referrerinfo_.SetAllocated(referrerinfo, GetArenaForAllocation());
+  _impl_.a_referrerinfo_.SetAllocated(a_referrerinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.referrerinfo_.IsDefault()) {
-    _impl_.referrerinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_referrerinfo_.IsDefault()) {
+    _impl_.a_referrerinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.referrerInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_referrerInfo)
 }
 
 #ifdef __GNUC__

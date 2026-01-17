@@ -19,50 +19,50 @@ message Msg_DeleteMe {
 }
 
 message Msg_Preload {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required uint32 alreadyLoadedCount = 3;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required uint32 a_alreadyLoadedCount = 3;
 }
 
 message Reply_Preload {
-  repeated bytes keys = 1;
-  repeated bytes values = 2;
-  required bytes rv = 3;
+  repeated bytes a_keys = 1;
+  repeated bytes a_values = 2;
+  required bytes a_rv = 3;
 }
 
 message Msg_AsyncPreload {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required bool priority = 3;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required bool a_priority = 3;
 }
 
 message Msg_AsyncGetUsage {
-  required bytes scope = 1;
+  required bytes a_scope = 1;
 }
 
 message Msg_AsyncAddItem {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required bytes key = 3;
-  required bytes value = 4;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required bytes a_key = 3;
+  required bytes a_value = 4;
 }
 
 message Msg_AsyncUpdateItem {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required bytes key = 3;
-  required bytes value = 4;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required bytes a_key = 3;
+  required bytes a_value = 4;
 }
 
 message Msg_AsyncRemoveItem {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required bytes key = 3;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required bytes a_key = 3;
 }
 
 message Msg_AsyncClear {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
 }
 
 message Msg_AsyncFlush {
@@ -75,11 +75,11 @@ message Msg_ClearAll {
 }
 
 message Msg_ClearMatchingOrigin {
-  required bytes originNoSuffix = 1;
+  required bytes a_originNoSuffix = 1;
 }
 
 message Msg_ClearMatchingOriginAttributes {
-  required bytes pattern = 1;
+  required bytes a_pattern = 1;
 }
 
 message Msg___delete__ {
@@ -89,35 +89,35 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  required bytes topic = 1;
-  required bytes originAttributesPattern = 2;
-  required bytes originScope = 3;
+  required bytes a_topic = 1;
+  required bytes a_originAttributesPattern = 2;
+  required bytes a_originScope = 3;
 }
 
 message Msg_OriginsHavingData {
-  repeated bytes origins = 1;
+  repeated bytes a_origins = 1;
 }
 
 message Msg_LoadItem {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required bytes key = 3;
-  required bytes value = 4;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required bytes a_key = 3;
+  required bytes a_value = 4;
 }
 
 message Msg_LoadDone {
-  required bytes originSuffix = 1;
-  required bytes originNoSuffix = 2;
-  required bytes rv = 3;
+  required bytes a_originSuffix = 1;
+  required bytes a_originNoSuffix = 2;
+  required bytes a_rv = 3;
 }
 
 message Msg_LoadUsage {
-  required bytes scope = 1;
-  required sint64 usage = 2;
+  required bytes a_scope = 1;
+  required sint64 a_usage = 2;
 }
 
 message Msg_Error {
-  required bytes rv = 1;
+  required bytes a_rv = 1;
 }
 
 // Parameter mappings stats:

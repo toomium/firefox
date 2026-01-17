@@ -18,71 +18,71 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_AsyncOpen {
-  required bytes aURI = 1;
-  required bytes aOrigin = 2;
-  required bytes aOriginAttributes = 3;
-  required uint64 aInnerWindowID = 4;
-  required bytes aProtocol = 5;
-  required bool aSecure = 6;
-  required uint32 aPingInterval = 7;
-  required bool aClientSetPingInterval = 8;
-  required uint32 aPingTimeout = 9;
-  required bool aClientSetPingTimeout = 10;
-  required protobuf.mozilla.net.LoadInfoArgs aLoadInfoArgs = 11;
-  optional bytes aProvider = 12;
-  required bytes aNegotiatedExtensions = 13;
+  required bytes a_aURI = 1;
+  required bytes a_aOrigin = 2;
+  required bytes a_aOriginAttributes = 3;
+  required uint64 a_aInnerWindowID = 4;
+  required bytes a_aProtocol = 5;
+  required bool a_aSecure = 6;
+  required uint32 a_aPingInterval = 7;
+  required bool a_aClientSetPingInterval = 8;
+  required uint32 a_aPingTimeout = 9;
+  required bool a_aClientSetPingTimeout = 10;
+  required protobuf.mozilla.net.LoadInfoArgs a_aLoadInfoArgs = 11;
+  optional bytes a_aProvider = 12;
+  required bytes a_aNegotiatedExtensions = 13;
 }
 
 message Msg_Close {
-  required uint32 code = 1;
-  required bytes reason = 2;
+  required uint32 a_code = 1;
+  required bytes a_reason = 2;
 }
 
 message Msg_SendMsg {
-  required bytes aMsg = 1;
+  required bytes a_aMsg = 1;
 }
 
 message Msg_SendBinaryMsg {
-  required bytes aMsg = 1;
+  required bytes a_aMsg = 1;
 }
 
 message Msg_SendBinaryStream {
-  required protobuf.mozilla.ipc.IPCStream aStream = 1;
-  required uint32 aLength = 2;
+  required protobuf.mozilla.ipc.IPCStream a_aStream = 1;
+  required uint32 a_aLength = 2;
 }
 
 message Msg_DeleteSelf {
 }
 
 message Msg_OnStart {
-  required bytes aProtocol = 1;
-  required bytes aExtensions = 2;
-  required bytes aEffectiveURL = 3;
-  required bool aEncrypted = 4;
-  required uint64 aHttpChannelId = 5;
+  required bytes a_aProtocol = 1;
+  required bytes a_aExtensions = 2;
+  required bytes a_aEffectiveURL = 3;
+  required bool a_aEncrypted = 4;
+  required uint64 a_aHttpChannelId = 5;
 }
 
 message Msg_OnStop {
-  required bytes aStatusCode = 1;
+  required bytes a_aStatusCode = 1;
 }
 
 message Msg_OnMessageAvailable {
-  required bytes aMsg = 1;
-  required bool aMoreData = 2;
+  required bytes a_aMsg = 1;
+  required bool a_aMoreData = 2;
 }
 
 message Msg_OnBinaryMessageAvailable {
-  required bytes aMsg = 1;
-  required bool aMoreData = 2;
+  required bytes a_aMsg = 1;
+  required bool a_aMoreData = 2;
 }
 
 message Msg_OnAcknowledge {
-  required uint32 aSize = 1;
+  required uint32 a_aSize = 1;
 }
 
 message Msg_OnServerClose {
-  required uint32 code = 1;
-  required bytes aReason = 2;
+  required uint32 a_code = 1;
+  required bytes a_aReason = 2;
 }
 
 message Msg___delete__ {

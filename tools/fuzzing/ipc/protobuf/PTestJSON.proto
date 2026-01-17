@@ -26,11 +26,11 @@ message Reply_PTestJSONHandleConstructor {
 }
 
 message Msg_Test {
-  required protobuf.mozilla._ipdltest.JSONVariant i = 1;
+  required protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
 }
 
 message Reply_Test {
-  required protobuf.mozilla._ipdltest.JSONVariant o = 1;
+  required protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
 }
 
 message Msg___delete__ {

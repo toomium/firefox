@@ -173,62 +173,62 @@ class OpenedFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPathFieldNumber = 1,
-    kSnapshotIdFieldNumber = 2,
-    kDescriptorFieldNumber = 3,
+    kAPathFieldNumber = 1,
+    kASnapshotIdFieldNumber = 2,
+    kADescriptorFieldNumber = 3,
   };
-  // required bytes path = 1;
-  bool has_path() const;
+  // required bytes a_path = 1;
+  bool has_a_path() const;
   private:
-  bool _internal_has_path() const;
+  bool _internal_has_a_path() const;
   public:
-  void clear_path();
-  const std::string& path() const;
+  void clear_a_path();
+  const std::string& a_path() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_path(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_path();
-  PROTOBUF_NODISCARD std::string* release_path();
-  void set_allocated_path(std::string* path);
+  void set_a_path(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_path();
+  PROTOBUF_NODISCARD std::string* release_a_path();
+  void set_allocated_a_path(std::string* a_path);
   private:
-  const std::string& _internal_path() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_path(const std::string& value);
-  std::string* _internal_mutable_path();
+  const std::string& _internal_a_path() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_path(const std::string& value);
+  std::string* _internal_mutable_a_path();
   public:
 
-  // required bytes snapshotId = 2;
-  bool has_snapshotid() const;
+  // required bytes a_snapshotId = 2;
+  bool has_a_snapshotid() const;
   private:
-  bool _internal_has_snapshotid() const;
+  bool _internal_has_a_snapshotid() const;
   public:
-  void clear_snapshotid();
-  const std::string& snapshotid() const;
+  void clear_a_snapshotid();
+  const std::string& a_snapshotid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_snapshotid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_snapshotid();
-  PROTOBUF_NODISCARD std::string* release_snapshotid();
-  void set_allocated_snapshotid(std::string* snapshotid);
+  void set_a_snapshotid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_snapshotid();
+  PROTOBUF_NODISCARD std::string* release_a_snapshotid();
+  void set_allocated_a_snapshotid(std::string* a_snapshotid);
   private:
-  const std::string& _internal_snapshotid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_snapshotid(const std::string& value);
-  std::string* _internal_mutable_snapshotid();
+  const std::string& _internal_a_snapshotid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_snapshotid(const std::string& value);
+  std::string* _internal_mutable_a_snapshotid();
   public:
 
-  // required bytes descriptor = 3;
-  bool has_descriptor() const;
+  // required bytes a_descriptor = 3;
+  bool has_a_descriptor() const;
   private:
-  bool _internal_has_descriptor() const;
+  bool _internal_has_a_descriptor() const;
   public:
-  void clear_descriptor();
-  const std::string& descriptor() const;
+  void clear_a_descriptor();
+  const std::string& a_descriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_descriptor(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_descriptor();
-  PROTOBUF_NODISCARD std::string* release_descriptor();
-  void set_allocated_descriptor(std::string* descriptor);
+  void set_a_descriptor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_descriptor();
+  PROTOBUF_NODISCARD std::string* release_a_descriptor();
+  void set_allocated_a_descriptor(std::string* a_descriptor);
   private:
-  const std::string& _internal_descriptor() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_descriptor(const std::string& value);
-  std::string* _internal_mutable_descriptor();
+  const std::string& _internal_a_descriptor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_descriptor(const std::string& value);
+  std::string* _internal_mutable_a_descriptor();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.devtools.OpenedFile)
@@ -244,9 +244,9 @@ class OpenedFile final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr path_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr snapshotid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr descriptor_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_path_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_snapshotid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptor_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto;
@@ -295,8 +295,8 @@ class OpenHeapSnapshotTempFileResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVOpenedFile = 2,
+    kAMVnsresult = 1,
+    kAMVOpenedFile = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -369,52 +369,52 @@ class OpenHeapSnapshotTempFileResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVOpenedFileFieldNumber = 2,
+    kAMVnsresultFieldNumber = 1,
+    kAMVOpenedFileFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.devtools.OpenedFile mVOpenedFile = 2;
-  bool has_mvopenedfile() const;
+  // .protobuf.mozilla.devtools.OpenedFile a_mVOpenedFile = 2;
+  bool has_a_mvopenedfile() const;
   private:
-  bool _internal_has_mvopenedfile() const;
+  bool _internal_has_a_mvopenedfile() const;
   public:
-  void clear_mvopenedfile();
-  const ::protobuf::mozilla::devtools::OpenedFile& mvopenedfile() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::devtools::OpenedFile* release_mvopenedfile();
-  ::protobuf::mozilla::devtools::OpenedFile* mutable_mvopenedfile();
-  void set_allocated_mvopenedfile(::protobuf::mozilla::devtools::OpenedFile* mvopenedfile);
+  void clear_a_mvopenedfile();
+  const ::protobuf::mozilla::devtools::OpenedFile& a_mvopenedfile() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::devtools::OpenedFile* release_a_mvopenedfile();
+  ::protobuf::mozilla::devtools::OpenedFile* mutable_a_mvopenedfile();
+  void set_allocated_a_mvopenedfile(::protobuf::mozilla::devtools::OpenedFile* a_mvopenedfile);
   private:
-  const ::protobuf::mozilla::devtools::OpenedFile& _internal_mvopenedfile() const;
-  ::protobuf::mozilla::devtools::OpenedFile* _internal_mutable_mvopenedfile();
+  const ::protobuf::mozilla::devtools::OpenedFile& _internal_a_mvopenedfile() const;
+  ::protobuf::mozilla::devtools::OpenedFile* _internal_mutable_a_mvopenedfile();
   public:
-  void unsafe_arena_set_allocated_mvopenedfile(
-      ::protobuf::mozilla::devtools::OpenedFile* mvopenedfile);
-  ::protobuf::mozilla::devtools::OpenedFile* unsafe_arena_release_mvopenedfile();
+  void unsafe_arena_set_allocated_a_mvopenedfile(
+      ::protobuf::mozilla::devtools::OpenedFile* a_mvopenedfile);
+  ::protobuf::mozilla::devtools::OpenedFile* unsafe_arena_release_a_mvopenedfile();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mvopenedfile();
+  void set_has_a_mvnsresult();
+  void set_has_a_mvopenedfile();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -426,8 +426,8 @@ class OpenHeapSnapshotTempFileResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::devtools::OpenedFile* mvopenedfile_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::devtools::OpenedFile* a_mvopenedfile_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -447,362 +447,362 @@ class OpenHeapSnapshotTempFileResponse final :
 #endif  // __GNUC__
 // OpenedFile
 
-// required bytes path = 1;
-inline bool OpenedFile::_internal_has_path() const {
+// required bytes a_path = 1;
+inline bool OpenedFile::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool OpenedFile::has_path() const {
-  return _internal_has_path();
+inline bool OpenedFile::has_a_path() const {
+  return _internal_has_a_path();
 }
-inline void OpenedFile::clear_path() {
-  _impl_.path_.ClearToEmpty();
+inline void OpenedFile::clear_a_path() {
+  _impl_.a_path_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& OpenedFile::path() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.path)
-  return _internal_path();
+inline const std::string& OpenedFile::a_path() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.a_path)
+  return _internal_a_path();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void OpenedFile::set_path(ArgT0&& arg0, ArgT... args) {
+void OpenedFile::set_a_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.path)
+ _impl_.a_path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.a_path)
 }
-inline std::string* OpenedFile::mutable_path() {
-  std::string* _s = _internal_mutable_path();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenedFile.path)
+inline std::string* OpenedFile::mutable_a_path() {
+  std::string* _s = _internal_mutable_a_path();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenedFile.a_path)
   return _s;
 }
-inline const std::string& OpenedFile::_internal_path() const {
-  return _impl_.path_.Get();
+inline const std::string& OpenedFile::_internal_a_path() const {
+  return _impl_.a_path_.Get();
 }
-inline void OpenedFile::_internal_set_path(const std::string& value) {
+inline void OpenedFile::_internal_set_a_path(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.path_.Set(value, GetArenaForAllocation());
+  _impl_.a_path_.Set(value, GetArenaForAllocation());
 }
-inline std::string* OpenedFile::_internal_mutable_path() {
+inline std::string* OpenedFile::_internal_mutable_a_path() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.path_.Mutable(GetArenaForAllocation());
+  return _impl_.a_path_.Mutable(GetArenaForAllocation());
 }
-inline std::string* OpenedFile::release_path() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.path)
-  if (!_internal_has_path()) {
+inline std::string* OpenedFile::release_a_path() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.a_path)
+  if (!_internal_has_a_path()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.path_.Release();
+  auto* p = _impl_.a_path_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.path_.IsDefault()) {
-    _impl_.path_.Set("", GetArenaForAllocation());
+  if (_impl_.a_path_.IsDefault()) {
+    _impl_.a_path_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void OpenedFile::set_allocated_path(std::string* path) {
-  if (path != nullptr) {
+inline void OpenedFile::set_allocated_a_path(std::string* a_path) {
+  if (a_path != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.path_.SetAllocated(path, GetArenaForAllocation());
+  _impl_.a_path_.SetAllocated(a_path, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.path_.IsDefault()) {
-    _impl_.path_.Set("", GetArenaForAllocation());
+  if (_impl_.a_path_.IsDefault()) {
+    _impl_.a_path_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.path)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.a_path)
 }
 
-// required bytes snapshotId = 2;
-inline bool OpenedFile::_internal_has_snapshotid() const {
+// required bytes a_snapshotId = 2;
+inline bool OpenedFile::_internal_has_a_snapshotid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool OpenedFile::has_snapshotid() const {
-  return _internal_has_snapshotid();
+inline bool OpenedFile::has_a_snapshotid() const {
+  return _internal_has_a_snapshotid();
 }
-inline void OpenedFile::clear_snapshotid() {
-  _impl_.snapshotid_.ClearToEmpty();
+inline void OpenedFile::clear_a_snapshotid() {
+  _impl_.a_snapshotid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& OpenedFile::snapshotid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.snapshotId)
-  return _internal_snapshotid();
+inline const std::string& OpenedFile::a_snapshotid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
+  return _internal_a_snapshotid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void OpenedFile::set_snapshotid(ArgT0&& arg0, ArgT... args) {
+void OpenedFile::set_a_snapshotid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.snapshotid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.snapshotId)
+ _impl_.a_snapshotid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
 }
-inline std::string* OpenedFile::mutable_snapshotid() {
-  std::string* _s = _internal_mutable_snapshotid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenedFile.snapshotId)
+inline std::string* OpenedFile::mutable_a_snapshotid() {
+  std::string* _s = _internal_mutable_a_snapshotid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
   return _s;
 }
-inline const std::string& OpenedFile::_internal_snapshotid() const {
-  return _impl_.snapshotid_.Get();
+inline const std::string& OpenedFile::_internal_a_snapshotid() const {
+  return _impl_.a_snapshotid_.Get();
 }
-inline void OpenedFile::_internal_set_snapshotid(const std::string& value) {
+inline void OpenedFile::_internal_set_a_snapshotid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.snapshotid_.Set(value, GetArenaForAllocation());
+  _impl_.a_snapshotid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* OpenedFile::_internal_mutable_snapshotid() {
+inline std::string* OpenedFile::_internal_mutable_a_snapshotid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.snapshotid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_snapshotid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* OpenedFile::release_snapshotid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.snapshotId)
-  if (!_internal_has_snapshotid()) {
+inline std::string* OpenedFile::release_a_snapshotid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
+  if (!_internal_has_a_snapshotid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.snapshotid_.Release();
+  auto* p = _impl_.a_snapshotid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.snapshotid_.IsDefault()) {
-    _impl_.snapshotid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_snapshotid_.IsDefault()) {
+    _impl_.a_snapshotid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void OpenedFile::set_allocated_snapshotid(std::string* snapshotid) {
-  if (snapshotid != nullptr) {
+inline void OpenedFile::set_allocated_a_snapshotid(std::string* a_snapshotid) {
+  if (a_snapshotid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.snapshotid_.SetAllocated(snapshotid, GetArenaForAllocation());
+  _impl_.a_snapshotid_.SetAllocated(a_snapshotid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.snapshotid_.IsDefault()) {
-    _impl_.snapshotid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_snapshotid_.IsDefault()) {
+    _impl_.a_snapshotid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.snapshotId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.a_snapshotId)
 }
 
-// required bytes descriptor = 3;
-inline bool OpenedFile::_internal_has_descriptor() const {
+// required bytes a_descriptor = 3;
+inline bool OpenedFile::_internal_has_a_descriptor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool OpenedFile::has_descriptor() const {
-  return _internal_has_descriptor();
+inline bool OpenedFile::has_a_descriptor() const {
+  return _internal_has_a_descriptor();
 }
-inline void OpenedFile::clear_descriptor() {
-  _impl_.descriptor_.ClearToEmpty();
+inline void OpenedFile::clear_a_descriptor() {
+  _impl_.a_descriptor_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& OpenedFile::descriptor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.descriptor)
-  return _internal_descriptor();
+inline const std::string& OpenedFile::a_descriptor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
+  return _internal_a_descriptor();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void OpenedFile::set_descriptor(ArgT0&& arg0, ArgT... args) {
+void OpenedFile::set_a_descriptor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.descriptor)
+ _impl_.a_descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
 }
-inline std::string* OpenedFile::mutable_descriptor() {
-  std::string* _s = _internal_mutable_descriptor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenedFile.descriptor)
+inline std::string* OpenedFile::mutable_a_descriptor() {
+  std::string* _s = _internal_mutable_a_descriptor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
   return _s;
 }
-inline const std::string& OpenedFile::_internal_descriptor() const {
-  return _impl_.descriptor_.Get();
+inline const std::string& OpenedFile::_internal_a_descriptor() const {
+  return _impl_.a_descriptor_.Get();
 }
-inline void OpenedFile::_internal_set_descriptor(const std::string& value) {
+inline void OpenedFile::_internal_set_a_descriptor(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.descriptor_.Set(value, GetArenaForAllocation());
+  _impl_.a_descriptor_.Set(value, GetArenaForAllocation());
 }
-inline std::string* OpenedFile::_internal_mutable_descriptor() {
+inline std::string* OpenedFile::_internal_mutable_a_descriptor() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.descriptor_.Mutable(GetArenaForAllocation());
+  return _impl_.a_descriptor_.Mutable(GetArenaForAllocation());
 }
-inline std::string* OpenedFile::release_descriptor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.descriptor)
-  if (!_internal_has_descriptor()) {
+inline std::string* OpenedFile::release_a_descriptor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
+  if (!_internal_has_a_descriptor()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.descriptor_.Release();
+  auto* p = _impl_.a_descriptor_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.descriptor_.IsDefault()) {
-    _impl_.descriptor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_descriptor_.IsDefault()) {
+    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void OpenedFile::set_allocated_descriptor(std::string* descriptor) {
-  if (descriptor != nullptr) {
+inline void OpenedFile::set_allocated_a_descriptor(std::string* a_descriptor) {
+  if (a_descriptor != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.descriptor_.SetAllocated(descriptor, GetArenaForAllocation());
+  _impl_.a_descriptor_.SetAllocated(a_descriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.descriptor_.IsDefault()) {
-    _impl_.descriptor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_descriptor_.IsDefault()) {
+    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.descriptor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenedFile.a_descriptor)
 }
 
 // -------------------------------------------------------------------
 
 // OpenHeapSnapshotTempFileResponse
 
-// bytes mVnsresult = 1;
-inline bool OpenHeapSnapshotTempFileResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool OpenHeapSnapshotTempFileResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool OpenHeapSnapshotTempFileResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool OpenHeapSnapshotTempFileResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void OpenHeapSnapshotTempFileResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void OpenHeapSnapshotTempFileResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void OpenHeapSnapshotTempFileResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void OpenHeapSnapshotTempFileResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& OpenHeapSnapshotTempFileResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& OpenHeapSnapshotTempFileResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void OpenHeapSnapshotTempFileResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void OpenHeapSnapshotTempFileResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVnsresult)
 }
-inline std::string* OpenHeapSnapshotTempFileResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVnsresult)
+inline std::string* OpenHeapSnapshotTempFileResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& OpenHeapSnapshotTempFileResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& OpenHeapSnapshotTempFileResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void OpenHeapSnapshotTempFileResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void OpenHeapSnapshotTempFileResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* OpenHeapSnapshotTempFileResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* OpenHeapSnapshotTempFileResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* OpenHeapSnapshotTempFileResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* OpenHeapSnapshotTempFileResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void OpenHeapSnapshotTempFileResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void OpenHeapSnapshotTempFileResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.devtools.OpenedFile mVOpenedFile = 2;
-inline bool OpenHeapSnapshotTempFileResponse::_internal_has_mvopenedfile() const {
-  return content_case() == kMVOpenedFile;
+// .protobuf.mozilla.devtools.OpenedFile a_mVOpenedFile = 2;
+inline bool OpenHeapSnapshotTempFileResponse::_internal_has_a_mvopenedfile() const {
+  return content_case() == kAMVOpenedFile;
 }
-inline bool OpenHeapSnapshotTempFileResponse::has_mvopenedfile() const {
-  return _internal_has_mvopenedfile();
+inline bool OpenHeapSnapshotTempFileResponse::has_a_mvopenedfile() const {
+  return _internal_has_a_mvopenedfile();
 }
-inline void OpenHeapSnapshotTempFileResponse::set_has_mvopenedfile() {
-  _impl_._oneof_case_[0] = kMVOpenedFile;
+inline void OpenHeapSnapshotTempFileResponse::set_has_a_mvopenedfile() {
+  _impl_._oneof_case_[0] = kAMVOpenedFile;
 }
-inline void OpenHeapSnapshotTempFileResponse::clear_mvopenedfile() {
-  if (_internal_has_mvopenedfile()) {
+inline void OpenHeapSnapshotTempFileResponse::clear_a_mvopenedfile() {
+  if (_internal_has_a_mvopenedfile()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvopenedfile_;
+      delete _impl_.content_.a_mvopenedfile_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::release_mvopenedfile() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVOpenedFile)
-  if (_internal_has_mvopenedfile()) {
+inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::release_a_mvopenedfile() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVOpenedFile)
+  if (_internal_has_a_mvopenedfile()) {
     clear_has_content();
-    ::protobuf::mozilla::devtools::OpenedFile* temp = _impl_.content_.mvopenedfile_;
+    ::protobuf::mozilla::devtools::OpenedFile* temp = _impl_.content_.a_mvopenedfile_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvopenedfile_ = nullptr;
+    _impl_.content_.a_mvopenedfile_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::devtools::OpenedFile& OpenHeapSnapshotTempFileResponse::_internal_mvopenedfile() const {
-  return _internal_has_mvopenedfile()
-      ? *_impl_.content_.mvopenedfile_
+inline const ::protobuf::mozilla::devtools::OpenedFile& OpenHeapSnapshotTempFileResponse::_internal_a_mvopenedfile() const {
+  return _internal_has_a_mvopenedfile()
+      ? *_impl_.content_.a_mvopenedfile_
       : reinterpret_cast< ::protobuf::mozilla::devtools::OpenedFile&>(::protobuf::mozilla::devtools::_OpenedFile_default_instance_);
 }
-inline const ::protobuf::mozilla::devtools::OpenedFile& OpenHeapSnapshotTempFileResponse::mvopenedfile() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVOpenedFile)
-  return _internal_mvopenedfile();
+inline const ::protobuf::mozilla::devtools::OpenedFile& OpenHeapSnapshotTempFileResponse::a_mvopenedfile() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVOpenedFile)
+  return _internal_a_mvopenedfile();
 }
-inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::unsafe_arena_release_mvopenedfile() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVOpenedFile)
-  if (_internal_has_mvopenedfile()) {
+inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::unsafe_arena_release_a_mvopenedfile() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVOpenedFile)
+  if (_internal_has_a_mvopenedfile()) {
     clear_has_content();
-    ::protobuf::mozilla::devtools::OpenedFile* temp = _impl_.content_.mvopenedfile_;
-    _impl_.content_.mvopenedfile_ = nullptr;
+    ::protobuf::mozilla::devtools::OpenedFile* temp = _impl_.content_.a_mvopenedfile_;
+    _impl_.content_.a_mvopenedfile_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void OpenHeapSnapshotTempFileResponse::unsafe_arena_set_allocated_mvopenedfile(::protobuf::mozilla::devtools::OpenedFile* mvopenedfile) {
+inline void OpenHeapSnapshotTempFileResponse::unsafe_arena_set_allocated_a_mvopenedfile(::protobuf::mozilla::devtools::OpenedFile* a_mvopenedfile) {
   clear_content();
-  if (mvopenedfile) {
-    set_has_mvopenedfile();
-    _impl_.content_.mvopenedfile_ = mvopenedfile;
+  if (a_mvopenedfile) {
+    set_has_a_mvopenedfile();
+    _impl_.content_.a_mvopenedfile_ = a_mvopenedfile;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVOpenedFile)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVOpenedFile)
 }
-inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::_internal_mutable_mvopenedfile() {
-  if (!_internal_has_mvopenedfile()) {
+inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::_internal_mutable_a_mvopenedfile() {
+  if (!_internal_has_a_mvopenedfile()) {
     clear_content();
-    set_has_mvopenedfile();
-    _impl_.content_.mvopenedfile_ = CreateMaybeMessage< ::protobuf::mozilla::devtools::OpenedFile >(GetArenaForAllocation());
+    set_has_a_mvopenedfile();
+    _impl_.content_.a_mvopenedfile_ = CreateMaybeMessage< ::protobuf::mozilla::devtools::OpenedFile >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvopenedfile_;
+  return _impl_.content_.a_mvopenedfile_;
 }
-inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::mutable_mvopenedfile() {
-  ::protobuf::mozilla::devtools::OpenedFile* _msg = _internal_mutable_mvopenedfile();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.mVOpenedFile)
+inline ::protobuf::mozilla::devtools::OpenedFile* OpenHeapSnapshotTempFileResponse::mutable_a_mvopenedfile() {
+  ::protobuf::mozilla::devtools::OpenedFile* _msg = _internal_mutable_a_mvopenedfile();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse.a_mVOpenedFile)
   return _msg;
 }
 

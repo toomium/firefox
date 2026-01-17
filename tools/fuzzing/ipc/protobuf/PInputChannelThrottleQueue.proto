@@ -16,7 +16,7 @@ package protobuf.mozilla.net.PInputChannelThrottleQueue;
 
 // Message declarations
 message Msg_RecordRead {
-  required uint32 aBytesRead = 1;
+  required uint32 a_aBytesRead = 1;
 }
 
 message Msg___delete__ {

@@ -181,62 +181,62 @@ class Msg_Start final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
-    kPortFieldNumber = 2,
-    kChannelIdFieldNumber = 3,
+    kANameFieldNumber = 1,
+    kAPortFieldNumber = 2,
+    kAChannelIdFieldNumber = 3,
   };
-  // required bytes name = 1;
-  bool has_name() const;
+  // required bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes port = 2;
-  bool has_port() const;
+  // required bytes a_port = 2;
+  bool has_a_port() const;
   private:
-  bool _internal_has_port() const;
+  bool _internal_has_a_port() const;
   public:
-  void clear_port();
-  const std::string& port() const;
+  void clear_a_port();
+  const std::string& a_port() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_port(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_port();
-  PROTOBUF_NODISCARD std::string* release_port();
-  void set_allocated_port(std::string* port);
+  void set_a_port(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_port();
+  PROTOBUF_NODISCARD std::string* release_a_port();
+  void set_allocated_a_port(std::string* a_port);
   private:
-  const std::string& _internal_port() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_port(const std::string& value);
-  std::string* _internal_mutable_port();
+  const std::string& _internal_a_port() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_port(const std::string& value);
+  std::string* _internal_mutable_a_port();
   public:
 
-  // required bytes channelId = 3;
-  bool has_channelid() const;
+  // required bytes a_channelId = 3;
+  bool has_a_channelid() const;
   private:
-  bool _internal_has_channelid() const;
+  bool _internal_has_a_channelid() const;
   public:
-  void clear_channelid();
-  const std::string& channelid() const;
+  void clear_a_channelid();
+  const std::string& a_channelid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_channelid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_channelid();
-  PROTOBUF_NODISCARD std::string* release_channelid();
-  void set_allocated_channelid(std::string* channelid);
+  void set_a_channelid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_channelid();
+  PROTOBUF_NODISCARD std::string* release_a_channelid();
+  void set_allocated_a_channelid(std::string* a_channelid);
   private:
-  const std::string& _internal_channelid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_channelid(const std::string& value);
-  std::string* _internal_mutable_channelid();
+  const std::string& _internal_a_channelid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_channelid(const std::string& value);
+  std::string* _internal_mutable_a_channelid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start)
@@ -252,9 +252,9 @@ class Msg_Start final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr port_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr channelid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_port_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_channelid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPDLUnitTest_2eproto;
@@ -371,25 +371,25 @@ class Msg_Report final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla._ipdltest.TestPartResult result = 1;
-  bool has_result() const;
+  // required .protobuf.mozilla._ipdltest.TestPartResult a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::_ipdltest::TestPartResult& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::TestPartResult* release_result();
-  ::protobuf::mozilla::_ipdltest::TestPartResult* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::_ipdltest::TestPartResult* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::_ipdltest::TestPartResult& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::TestPartResult* release_a_result();
+  ::protobuf::mozilla::_ipdltest::TestPartResult* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::_ipdltest::TestPartResult* a_result);
   private:
-  const ::protobuf::mozilla::_ipdltest::TestPartResult& _internal_result() const;
-  ::protobuf::mozilla::_ipdltest::TestPartResult* _internal_mutable_result();
+  const ::protobuf::mozilla::_ipdltest::TestPartResult& _internal_a_result() const;
+  ::protobuf::mozilla::_ipdltest::TestPartResult* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::_ipdltest::TestPartResult* result);
-  ::protobuf::mozilla::_ipdltest::TestPartResult* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::_ipdltest::TestPartResult* a_result);
+  ::protobuf::mozilla::_ipdltest::TestPartResult* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report)
  private:
@@ -401,7 +401,7 @@ class Msg_Report final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::_ipdltest::TestPartResult* result_;
+    ::protobuf::mozilla::_ipdltest::TestPartResult* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPDLUnitTest_2eproto;
@@ -541,249 +541,249 @@ class Msg_Complete final :
 #endif  // __GNUC__
 // Msg_Start
 
-// required bytes name = 1;
-inline bool Msg_Start::_internal_has_name() const {
+// required bytes a_name = 1;
+inline bool Msg_Start::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Start::has_name() const {
-  return _internal_has_name();
+inline bool Msg_Start::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void Msg_Start::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void Msg_Start::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Start::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.name)
-  return _internal_name();
+inline const std::string& Msg_Start::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Start::set_name(ArgT0&& arg0, ArgT... args) {
+void Msg_Start::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_name)
 }
-inline std::string* Msg_Start::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.name)
+inline std::string* Msg_Start::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_name)
   return _s;
 }
-inline const std::string& Msg_Start::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& Msg_Start::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void Msg_Start::_internal_set_name(const std::string& value) {
+inline void Msg_Start::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Start::_internal_mutable_name() {
+inline std::string* Msg_Start::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Start::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.name)
-  if (!_internal_has_name()) {
+inline std::string* Msg_Start::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Start::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void Msg_Start::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_name)
 }
 
-// required bytes port = 2;
-inline bool Msg_Start::_internal_has_port() const {
+// required bytes a_port = 2;
+inline bool Msg_Start::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Start::has_port() const {
-  return _internal_has_port();
+inline bool Msg_Start::has_a_port() const {
+  return _internal_has_a_port();
 }
-inline void Msg_Start::clear_port() {
-  _impl_.port_.ClearToEmpty();
+inline void Msg_Start::clear_a_port() {
+  _impl_.a_port_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_Start::port() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.port)
-  return _internal_port();
+inline const std::string& Msg_Start::a_port() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_port)
+  return _internal_a_port();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Start::set_port(ArgT0&& arg0, ArgT... args) {
+void Msg_Start::set_a_port(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.port_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.port)
+ _impl_.a_port_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_port)
 }
-inline std::string* Msg_Start::mutable_port() {
-  std::string* _s = _internal_mutable_port();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.port)
+inline std::string* Msg_Start::mutable_a_port() {
+  std::string* _s = _internal_mutable_a_port();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_port)
   return _s;
 }
-inline const std::string& Msg_Start::_internal_port() const {
-  return _impl_.port_.Get();
+inline const std::string& Msg_Start::_internal_a_port() const {
+  return _impl_.a_port_.Get();
 }
-inline void Msg_Start::_internal_set_port(const std::string& value) {
+inline void Msg_Start::_internal_set_a_port(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.port_.Set(value, GetArenaForAllocation());
+  _impl_.a_port_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Start::_internal_mutable_port() {
+inline std::string* Msg_Start::_internal_mutable_a_port() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.port_.Mutable(GetArenaForAllocation());
+  return _impl_.a_port_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Start::release_port() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.port)
-  if (!_internal_has_port()) {
+inline std::string* Msg_Start::release_a_port() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_port)
+  if (!_internal_has_a_port()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.port_.Release();
+  auto* p = _impl_.a_port_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.port_.IsDefault()) {
-    _impl_.port_.Set("", GetArenaForAllocation());
+  if (_impl_.a_port_.IsDefault()) {
+    _impl_.a_port_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Start::set_allocated_port(std::string* port) {
-  if (port != nullptr) {
+inline void Msg_Start::set_allocated_a_port(std::string* a_port) {
+  if (a_port != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.port_.SetAllocated(port, GetArenaForAllocation());
+  _impl_.a_port_.SetAllocated(a_port, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.port_.IsDefault()) {
-    _impl_.port_.Set("", GetArenaForAllocation());
+  if (_impl_.a_port_.IsDefault()) {
+    _impl_.a_port_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.port)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_port)
 }
 
-// required bytes channelId = 3;
-inline bool Msg_Start::_internal_has_channelid() const {
+// required bytes a_channelId = 3;
+inline bool Msg_Start::_internal_has_a_channelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_Start::has_channelid() const {
-  return _internal_has_channelid();
+inline bool Msg_Start::has_a_channelid() const {
+  return _internal_has_a_channelid();
 }
-inline void Msg_Start::clear_channelid() {
-  _impl_.channelid_.ClearToEmpty();
+inline void Msg_Start::clear_a_channelid() {
+  _impl_.a_channelid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_Start::channelid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.channelId)
-  return _internal_channelid();
+inline const std::string& Msg_Start::a_channelid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_channelId)
+  return _internal_a_channelid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Start::set_channelid(ArgT0&& arg0, ArgT... args) {
+void Msg_Start::set_a_channelid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.channelid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.channelId)
+ _impl_.a_channelid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_channelId)
 }
-inline std::string* Msg_Start::mutable_channelid() {
-  std::string* _s = _internal_mutable_channelid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.channelId)
+inline std::string* Msg_Start::mutable_a_channelid() {
+  std::string* _s = _internal_mutable_a_channelid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_channelId)
   return _s;
 }
-inline const std::string& Msg_Start::_internal_channelid() const {
-  return _impl_.channelid_.Get();
+inline const std::string& Msg_Start::_internal_a_channelid() const {
+  return _impl_.a_channelid_.Get();
 }
-inline void Msg_Start::_internal_set_channelid(const std::string& value) {
+inline void Msg_Start::_internal_set_a_channelid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.channelid_.Set(value, GetArenaForAllocation());
+  _impl_.a_channelid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Start::_internal_mutable_channelid() {
+inline std::string* Msg_Start::_internal_mutable_a_channelid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.channelid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_channelid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Start::release_channelid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.channelId)
-  if (!_internal_has_channelid()) {
+inline std::string* Msg_Start::release_a_channelid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_channelId)
+  if (!_internal_has_a_channelid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.channelid_.Release();
+  auto* p = _impl_.a_channelid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.channelid_.IsDefault()) {
-    _impl_.channelid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_channelid_.IsDefault()) {
+    _impl_.a_channelid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Start::set_allocated_channelid(std::string* channelid) {
-  if (channelid != nullptr) {
+inline void Msg_Start::set_allocated_a_channelid(std::string* a_channelid) {
+  if (a_channelid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.channelid_.SetAllocated(channelid, GetArenaForAllocation());
+  _impl_.a_channelid_.SetAllocated(a_channelid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.channelid_.IsDefault()) {
-    _impl_.channelid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_channelid_.IsDefault()) {
+    _impl_.a_channelid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.channelId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Start.a_channelId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Report
 
-// required .protobuf.mozilla._ipdltest.TestPartResult result = 1;
-inline bool Msg_Report::_internal_has_result() const {
+// required .protobuf.mozilla._ipdltest.TestPartResult a_result = 1;
+inline bool Msg_Report::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Msg_Report::has_result() const {
-  return _internal_has_result();
+inline bool Msg_Report::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::_ipdltest::TestPartResult& Msg_Report::_internal_result() const {
-  const ::protobuf::mozilla::_ipdltest::TestPartResult* p = _impl_.result_;
+inline const ::protobuf::mozilla::_ipdltest::TestPartResult& Msg_Report::_internal_a_result() const {
+  const ::protobuf::mozilla::_ipdltest::TestPartResult* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_ipdltest::TestPartResult&>(
       ::protobuf::mozilla::_ipdltest::_TestPartResult_default_instance_);
 }
-inline const ::protobuf::mozilla::_ipdltest::TestPartResult& Msg_Report::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::_ipdltest::TestPartResult& Msg_Report::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.a_result)
+  return _internal_a_result();
 }
-inline void Msg_Report::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::_ipdltest::TestPartResult* result) {
+inline void Msg_Report::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::_ipdltest::TestPartResult* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.a_result)
 }
-inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::release_result() {
+inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_ipdltest::TestPartResult* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::TestPartResult* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -795,45 +795,45 @@ inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::release_resul
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.result)
+inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_ipdltest::TestPartResult* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::TestPartResult* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::_internal_mutable_result() {
+inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::TestPartResult>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::mutable_result() {
-  ::protobuf::mozilla::_ipdltest::TestPartResult* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.result)
+inline ::protobuf::mozilla::_ipdltest::TestPartResult* Msg_Report::mutable_a_result() {
+  ::protobuf::mozilla::_ipdltest::TestPartResult* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.a_result)
   return _msg;
 }
-inline void Msg_Report::set_allocated_result(::protobuf::mozilla::_ipdltest::TestPartResult* result) {
+inline void Msg_Report::set_allocated_a_result(::protobuf::mozilla::_ipdltest::TestPartResult* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PIPDLUnitTest.Msg_Report.a_result)
 }
 
 // -------------------------------------------------------------------

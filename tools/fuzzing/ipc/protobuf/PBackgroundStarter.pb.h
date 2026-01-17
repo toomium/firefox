@@ -172,24 +172,24 @@ class Msg_InitBackground final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEndpointFieldNumber = 1,
+    kAAEndpointFieldNumber = 1,
   };
-  // required bytes aEndpoint = 1;
-  bool has_aendpoint() const;
+  // required bytes a_aEndpoint = 1;
+  bool has_a_aendpoint() const;
   private:
-  bool _internal_has_aendpoint() const;
+  bool _internal_has_a_aendpoint() const;
   public:
-  void clear_aendpoint();
-  const std::string& aendpoint() const;
+  void clear_a_aendpoint();
+  const std::string& a_aendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aendpoint();
-  PROTOBUF_NODISCARD std::string* release_aendpoint();
-  void set_allocated_aendpoint(std::string* aendpoint);
+  void set_a_aendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_aendpoint();
+  void set_allocated_a_aendpoint(std::string* a_aendpoint);
   private:
-  const std::string& _internal_aendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aendpoint(const std::string& value);
-  std::string* _internal_mutable_aendpoint();
+  const std::string& _internal_a_aendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aendpoint(const std::string& value);
+  std::string* _internal_mutable_a_aendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground)
@@ -202,7 +202,7 @@ class Msg_InitBackground final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundStarter_2eproto;
@@ -218,72 +218,72 @@ class Msg_InitBackground final :
 #endif  // __GNUC__
 // Msg_InitBackground
 
-// required bytes aEndpoint = 1;
-inline bool Msg_InitBackground::_internal_has_aendpoint() const {
+// required bytes a_aEndpoint = 1;
+inline bool Msg_InitBackground::_internal_has_a_aendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitBackground::has_aendpoint() const {
-  return _internal_has_aendpoint();
+inline bool Msg_InitBackground::has_a_aendpoint() const {
+  return _internal_has_a_aendpoint();
 }
-inline void Msg_InitBackground::clear_aendpoint() {
-  _impl_.aendpoint_.ClearToEmpty();
+inline void Msg_InitBackground::clear_a_aendpoint() {
+  _impl_.a_aendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitBackground::aendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.aEndpoint)
-  return _internal_aendpoint();
+inline const std::string& Msg_InitBackground::a_aendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.a_aEndpoint)
+  return _internal_a_aendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitBackground::set_aendpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_InitBackground::set_a_aendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.aEndpoint)
+ _impl_.a_aendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.a_aEndpoint)
 }
-inline std::string* Msg_InitBackground::mutable_aendpoint() {
-  std::string* _s = _internal_mutable_aendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.aEndpoint)
+inline std::string* Msg_InitBackground::mutable_a_aendpoint() {
+  std::string* _s = _internal_mutable_a_aendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.a_aEndpoint)
   return _s;
 }
-inline const std::string& Msg_InitBackground::_internal_aendpoint() const {
-  return _impl_.aendpoint_.Get();
+inline const std::string& Msg_InitBackground::_internal_a_aendpoint() const {
+  return _impl_.a_aendpoint_.Get();
 }
-inline void Msg_InitBackground::_internal_set_aendpoint(const std::string& value) {
+inline void Msg_InitBackground::_internal_set_a_aendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_aendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitBackground::_internal_mutable_aendpoint() {
+inline std::string* Msg_InitBackground::_internal_mutable_a_aendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitBackground::release_aendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.aEndpoint)
-  if (!_internal_has_aendpoint()) {
+inline std::string* Msg_InitBackground::release_a_aendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.a_aEndpoint)
+  if (!_internal_has_a_aendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aendpoint_.Release();
+  auto* p = _impl_.a_aendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitBackground::set_allocated_aendpoint(std::string* aendpoint) {
-  if (aendpoint != nullptr) {
+inline void Msg_InitBackground::set_allocated_a_aendpoint(std::string* a_aendpoint) {
+  if (a_aendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aendpoint_.SetAllocated(aendpoint, GetArenaForAllocation());
+  _impl_.a_aendpoint_.SetAllocated(a_aendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aendpoint_.IsDefault()) {
-    _impl_.aendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aendpoint_.IsDefault()) {
+    _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.aEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackgroundStarter.Msg_InitBackground.a_aEndpoint)
 }
 
 #ifdef __GNUC__

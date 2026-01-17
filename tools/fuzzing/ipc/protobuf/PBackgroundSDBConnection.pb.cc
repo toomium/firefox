@@ -37,7 +37,7 @@ PROTOBUF_CONSTEXPR Msg_PBackgroundSDBRequestConstructor::Msg_PBackgroundSDBReque
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.params_)*/nullptr} {}
+  , /*decltype(_impl_.a_params_)*/nullptr} {}
 struct Msg_PBackgroundSDBRequestConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PBackgroundSDBRequestConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -269,8 +269,8 @@ std::string Msg_DeleteMe::GetTypeName() const {
 class Msg_PBackgroundSDBRequestConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PBackgroundSDBRequestConstructor>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::SDBRequestParams& params(const Msg_PBackgroundSDBRequestConstructor* msg);
-  static void set_has_params(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::SDBRequestParams& a_params(const Msg_PBackgroundSDBRequestConstructor* msg);
+  static void set_has_a_params(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -279,11 +279,11 @@ class Msg_PBackgroundSDBRequestConstructor::_Internal {
 };
 
 const ::protobuf::mozilla::dom::SDBRequestParams&
-Msg_PBackgroundSDBRequestConstructor::_Internal::params(const Msg_PBackgroundSDBRequestConstructor* msg) {
-  return *msg->_impl_.params_;
+Msg_PBackgroundSDBRequestConstructor::_Internal::a_params(const Msg_PBackgroundSDBRequestConstructor* msg) {
+  return *msg->_impl_.a_params_;
 }
-void Msg_PBackgroundSDBRequestConstructor::clear_params() {
-  if (_impl_.params_ != nullptr) _impl_.params_->Clear();
+void Msg_PBackgroundSDBRequestConstructor::clear_a_params() {
+  if (_impl_.a_params_ != nullptr) _impl_.a_params_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_PBackgroundSDBRequestConstructor::Msg_PBackgroundSDBRequestConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -298,11 +298,11 @@ Msg_PBackgroundSDBRequestConstructor::Msg_PBackgroundSDBRequestConstructor(const
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.params_){nullptr}};
+    , decltype(_impl_.a_params_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_params()) {
-    _this->_impl_.params_ = new ::protobuf::mozilla::dom::SDBRequestParams(*from._impl_.params_);
+  if (from._internal_has_a_params()) {
+    _this->_impl_.a_params_ = new ::protobuf::mozilla::dom::SDBRequestParams(*from._impl_.a_params_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor)
 }
@@ -314,7 +314,7 @@ inline void Msg_PBackgroundSDBRequestConstructor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.a_params_){nullptr}
   };
 }
 
@@ -329,7 +329,7 @@ Msg_PBackgroundSDBRequestConstructor::~Msg_PBackgroundSDBRequestConstructor() {
 
 inline void Msg_PBackgroundSDBRequestConstructor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.params_;
+  if (this != internal_default_instance()) delete _impl_.a_params_;
 }
 
 void Msg_PBackgroundSDBRequestConstructor::SetCachedSize(int size) const {
@@ -344,8 +344,8 @@ void Msg_PBackgroundSDBRequestConstructor::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.params_ != nullptr);
-    _impl_.params_->Clear();
+    GOOGLE_DCHECK(_impl_.a_params_ != nullptr);
+    _impl_.a_params_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -358,10 +358,10 @@ const char* Msg_PBackgroundSDBRequestConstructor::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.SDBRequestParams params = 1;
+      // required .protobuf.mozilla.dom.SDBRequestParams a_params = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_params(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_params(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -397,11 +397,11 @@ uint8_t* Msg_PBackgroundSDBRequestConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.SDBRequestParams params = 1;
+  // required .protobuf.mozilla.dom.SDBRequestParams a_params = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::params(this),
-        _Internal::params(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_params(this),
+        _Internal::a_params(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -416,11 +416,11 @@ size_t Msg_PBackgroundSDBRequestConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.SDBRequestParams params = 1;
-  if (_internal_has_params()) {
+  // required .protobuf.mozilla.dom.SDBRequestParams a_params = 1;
+  if (_internal_has_a_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.params_);
+        *_impl_.a_params_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -447,9 +447,9 @@ void Msg_PBackgroundSDBRequestConstructor::MergeFrom(const Msg_PBackgroundSDBReq
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_params()) {
-    _this->_internal_mutable_params()->::protobuf::mozilla::dom::SDBRequestParams::MergeFrom(
-        from._internal_params());
+  if (from._internal_has_a_params()) {
+    _this->_internal_mutable_a_params()->::protobuf::mozilla::dom::SDBRequestParams::MergeFrom(
+        from._internal_a_params());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -463,8 +463,8 @@ void Msg_PBackgroundSDBRequestConstructor::CopyFrom(const Msg_PBackgroundSDBRequ
 
 bool Msg_PBackgroundSDBRequestConstructor::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_params()) {
-    if (!_impl_.params_->IsInitialized()) return false;
+  if (_internal_has_a_params()) {
+    if (!_impl_.a_params_->IsInitialized()) return false;
   }
   return true;
 }
@@ -473,7 +473,7 @@ void Msg_PBackgroundSDBRequestConstructor::InternalSwap(Msg_PBackgroundSDBReques
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.params_, other->_impl_.params_);
+  swap(_impl_.a_params_, other->_impl_.a_params_);
 }
 
 std::string Msg_PBackgroundSDBRequestConstructor::GetTypeName() const {

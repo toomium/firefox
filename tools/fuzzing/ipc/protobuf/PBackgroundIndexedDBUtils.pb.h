@@ -323,76 +323,76 @@ class Msg_GetFileReferences final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPersistenceTypeFieldNumber = 1,
-    kOriginFieldNumber = 2,
-    kDatabaseNameFieldNumber = 3,
-    kFileIdFieldNumber = 4,
+    kAPersistenceTypeFieldNumber = 1,
+    kAOriginFieldNumber = 2,
+    kADatabaseNameFieldNumber = 3,
+    kAFileIdFieldNumber = 4,
   };
-  // required bytes persistenceType = 1;
-  bool has_persistencetype() const;
+  // required bytes a_persistenceType = 1;
+  bool has_a_persistencetype() const;
   private:
-  bool _internal_has_persistencetype() const;
+  bool _internal_has_a_persistencetype() const;
   public:
-  void clear_persistencetype();
-  const std::string& persistencetype() const;
+  void clear_a_persistencetype();
+  const std::string& a_persistencetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_persistencetype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_persistencetype();
-  PROTOBUF_NODISCARD std::string* release_persistencetype();
-  void set_allocated_persistencetype(std::string* persistencetype);
+  void set_a_persistencetype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_persistencetype();
+  PROTOBUF_NODISCARD std::string* release_a_persistencetype();
+  void set_allocated_a_persistencetype(std::string* a_persistencetype);
   private:
-  const std::string& _internal_persistencetype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_persistencetype(const std::string& value);
-  std::string* _internal_mutable_persistencetype();
+  const std::string& _internal_a_persistencetype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_persistencetype(const std::string& value);
+  std::string* _internal_mutable_a_persistencetype();
   public:
 
-  // required bytes origin = 2;
-  bool has_origin() const;
+  // required bytes a_origin = 2;
+  bool has_a_origin() const;
   private:
-  bool _internal_has_origin() const;
+  bool _internal_has_a_origin() const;
   public:
-  void clear_origin();
-  const std::string& origin() const;
+  void clear_a_origin();
+  const std::string& a_origin() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_origin(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_origin();
-  PROTOBUF_NODISCARD std::string* release_origin();
-  void set_allocated_origin(std::string* origin);
+  void set_a_origin(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_origin();
+  PROTOBUF_NODISCARD std::string* release_a_origin();
+  void set_allocated_a_origin(std::string* a_origin);
   private:
-  const std::string& _internal_origin() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_origin(const std::string& value);
-  std::string* _internal_mutable_origin();
+  const std::string& _internal_a_origin() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_origin(const std::string& value);
+  std::string* _internal_mutable_a_origin();
   public:
 
-  // required bytes databaseName = 3;
-  bool has_databasename() const;
+  // required bytes a_databaseName = 3;
+  bool has_a_databasename() const;
   private:
-  bool _internal_has_databasename() const;
+  bool _internal_has_a_databasename() const;
   public:
-  void clear_databasename();
-  const std::string& databasename() const;
+  void clear_a_databasename();
+  const std::string& a_databasename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_databasename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_databasename();
-  PROTOBUF_NODISCARD std::string* release_databasename();
-  void set_allocated_databasename(std::string* databasename);
+  void set_a_databasename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_databasename();
+  PROTOBUF_NODISCARD std::string* release_a_databasename();
+  void set_allocated_a_databasename(std::string* a_databasename);
   private:
-  const std::string& _internal_databasename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_databasename(const std::string& value);
-  std::string* _internal_mutable_databasename();
+  const std::string& _internal_a_databasename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_databasename(const std::string& value);
+  std::string* _internal_mutable_a_databasename();
   public:
 
-  // required sint64 fileId = 4;
-  bool has_fileid() const;
+  // required sint64 a_fileId = 4;
+  bool has_a_fileid() const;
   private:
-  bool _internal_has_fileid() const;
+  bool _internal_has_a_fileid() const;
   public:
-  void clear_fileid();
-  int64_t fileid() const;
-  void set_fileid(int64_t value);
+  void clear_a_fileid();
+  int64_t a_fileid() const;
+  void set_a_fileid(int64_t value);
   private:
-  int64_t _internal_fileid() const;
-  void _internal_set_fileid(int64_t value);
+  int64_t _internal_a_fileid() const;
+  void _internal_set_a_fileid(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences)
@@ -408,10 +408,10 @@ class Msg_GetFileReferences final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr persistencetype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr origin_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr databasename_;
-    int64_t fileid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_persistencetype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_origin_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_databasename_;
+    int64_t a_fileid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIndexedDBUtils_2eproto;
@@ -528,47 +528,47 @@ class Reply_GetFileReferences final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRefCntFieldNumber = 1,
-    kDBRefCntFieldNumber = 2,
-    kResultFieldNumber = 3,
+    kARefCntFieldNumber = 1,
+    kADBRefCntFieldNumber = 2,
+    kAResultFieldNumber = 3,
   };
-  // required sint32 refCnt = 1;
-  bool has_refcnt() const;
+  // required sint32 a_refCnt = 1;
+  bool has_a_refcnt() const;
   private:
-  bool _internal_has_refcnt() const;
+  bool _internal_has_a_refcnt() const;
   public:
-  void clear_refcnt();
-  int32_t refcnt() const;
-  void set_refcnt(int32_t value);
+  void clear_a_refcnt();
+  int32_t a_refcnt() const;
+  void set_a_refcnt(int32_t value);
   private:
-  int32_t _internal_refcnt() const;
-  void _internal_set_refcnt(int32_t value);
-  public:
-
-  // required sint32 dBRefCnt = 2;
-  bool has_dbrefcnt() const;
-  private:
-  bool _internal_has_dbrefcnt() const;
-  public:
-  void clear_dbrefcnt();
-  int32_t dbrefcnt() const;
-  void set_dbrefcnt(int32_t value);
-  private:
-  int32_t _internal_dbrefcnt() const;
-  void _internal_set_dbrefcnt(int32_t value);
+  int32_t _internal_a_refcnt() const;
+  void _internal_set_a_refcnt(int32_t value);
   public:
 
-  // required bool result = 3;
-  bool has_result() const;
+  // required sint32 a_dBRefCnt = 2;
+  bool has_a_dbrefcnt() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_dbrefcnt() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_dbrefcnt();
+  int32_t a_dbrefcnt() const;
+  void set_a_dbrefcnt(int32_t value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  int32_t _internal_a_dbrefcnt() const;
+  void _internal_set_a_dbrefcnt(int32_t value);
+  public:
+
+  // required bool a_result = 3;
+  bool has_a_result() const;
+  private:
+  bool _internal_has_a_result() const;
+  public:
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
+  private:
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences)
@@ -584,9 +584,9 @@ class Reply_GetFileReferences final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t refcnt_;
-    int32_t dbrefcnt_;
-    bool result_;
+    int32_t a_refcnt_;
+    int32_t a_dbrefcnt_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIndexedDBUtils_2eproto;
@@ -827,24 +827,24 @@ class Reply_DoMaintenance final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRvFieldNumber = 1,
+    kARvFieldNumber = 1,
   };
-  // required bytes rv = 1;
-  bool has_rv() const;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
   private:
-  bool _internal_has_rv() const;
+  bool _internal_has_a_rv() const;
   public:
-  void clear_rv();
-  const std::string& rv() const;
+  void clear_a_rv();
+  const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_rv(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_rv();
-  PROTOBUF_NODISCARD std::string* release_rv();
-  void set_allocated_rv(std::string* rv);
+  void set_a_rv(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_rv();
+  PROTOBUF_NODISCARD std::string* release_a_rv();
+  void set_allocated_a_rv(std::string* a_rv);
   private:
-  const std::string& _internal_rv() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rv(const std::string& value);
-  std::string* _internal_mutable_rv();
+  const std::string& _internal_a_rv() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_rv(const std::string& value);
+  std::string* _internal_mutable_a_rv();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance)
@@ -857,7 +857,7 @@ class Reply_DoMaintenance final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIndexedDBUtils_2eproto;
@@ -1125,324 +1125,324 @@ class Reply___delete__ final :
 
 // Msg_GetFileReferences
 
-// required bytes persistenceType = 1;
-inline bool Msg_GetFileReferences::_internal_has_persistencetype() const {
+// required bytes a_persistenceType = 1;
+inline bool Msg_GetFileReferences::_internal_has_a_persistencetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetFileReferences::has_persistencetype() const {
-  return _internal_has_persistencetype();
+inline bool Msg_GetFileReferences::has_a_persistencetype() const {
+  return _internal_has_a_persistencetype();
 }
-inline void Msg_GetFileReferences::clear_persistencetype() {
-  _impl_.persistencetype_.ClearToEmpty();
+inline void Msg_GetFileReferences::clear_a_persistencetype() {
+  _impl_.a_persistencetype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetFileReferences::persistencetype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.persistenceType)
-  return _internal_persistencetype();
+inline const std::string& Msg_GetFileReferences::a_persistencetype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_persistenceType)
+  return _internal_a_persistencetype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetFileReferences::set_persistencetype(ArgT0&& arg0, ArgT... args) {
+void Msg_GetFileReferences::set_a_persistencetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.persistencetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.persistenceType)
+ _impl_.a_persistencetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_persistenceType)
 }
-inline std::string* Msg_GetFileReferences::mutable_persistencetype() {
-  std::string* _s = _internal_mutable_persistencetype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.persistenceType)
+inline std::string* Msg_GetFileReferences::mutable_a_persistencetype() {
+  std::string* _s = _internal_mutable_a_persistencetype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_persistenceType)
   return _s;
 }
-inline const std::string& Msg_GetFileReferences::_internal_persistencetype() const {
-  return _impl_.persistencetype_.Get();
+inline const std::string& Msg_GetFileReferences::_internal_a_persistencetype() const {
+  return _impl_.a_persistencetype_.Get();
 }
-inline void Msg_GetFileReferences::_internal_set_persistencetype(const std::string& value) {
+inline void Msg_GetFileReferences::_internal_set_a_persistencetype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.persistencetype_.Set(value, GetArenaForAllocation());
+  _impl_.a_persistencetype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetFileReferences::_internal_mutable_persistencetype() {
+inline std::string* Msg_GetFileReferences::_internal_mutable_a_persistencetype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.persistencetype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_persistencetype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetFileReferences::release_persistencetype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.persistenceType)
-  if (!_internal_has_persistencetype()) {
+inline std::string* Msg_GetFileReferences::release_a_persistencetype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_persistenceType)
+  if (!_internal_has_a_persistencetype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.persistencetype_.Release();
+  auto* p = _impl_.a_persistencetype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.persistencetype_.IsDefault()) {
-    _impl_.persistencetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_persistencetype_.IsDefault()) {
+    _impl_.a_persistencetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetFileReferences::set_allocated_persistencetype(std::string* persistencetype) {
-  if (persistencetype != nullptr) {
+inline void Msg_GetFileReferences::set_allocated_a_persistencetype(std::string* a_persistencetype) {
+  if (a_persistencetype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.persistencetype_.SetAllocated(persistencetype, GetArenaForAllocation());
+  _impl_.a_persistencetype_.SetAllocated(a_persistencetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.persistencetype_.IsDefault()) {
-    _impl_.persistencetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_persistencetype_.IsDefault()) {
+    _impl_.a_persistencetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.persistenceType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_persistenceType)
 }
 
-// required bytes origin = 2;
-inline bool Msg_GetFileReferences::_internal_has_origin() const {
+// required bytes a_origin = 2;
+inline bool Msg_GetFileReferences::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetFileReferences::has_origin() const {
-  return _internal_has_origin();
+inline bool Msg_GetFileReferences::has_a_origin() const {
+  return _internal_has_a_origin();
 }
-inline void Msg_GetFileReferences::clear_origin() {
-  _impl_.origin_.ClearToEmpty();
+inline void Msg_GetFileReferences::clear_a_origin() {
+  _impl_.a_origin_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_GetFileReferences::origin() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
-  return _internal_origin();
+inline const std::string& Msg_GetFileReferences::a_origin() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_origin)
+  return _internal_a_origin();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetFileReferences::set_origin(ArgT0&& arg0, ArgT... args) {
+void Msg_GetFileReferences::set_a_origin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.origin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
+ _impl_.a_origin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_origin)
 }
-inline std::string* Msg_GetFileReferences::mutable_origin() {
-  std::string* _s = _internal_mutable_origin();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
+inline std::string* Msg_GetFileReferences::mutable_a_origin() {
+  std::string* _s = _internal_mutable_a_origin();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_origin)
   return _s;
 }
-inline const std::string& Msg_GetFileReferences::_internal_origin() const {
-  return _impl_.origin_.Get();
+inline const std::string& Msg_GetFileReferences::_internal_a_origin() const {
+  return _impl_.a_origin_.Get();
 }
-inline void Msg_GetFileReferences::_internal_set_origin(const std::string& value) {
+inline void Msg_GetFileReferences::_internal_set_a_origin(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.origin_.Set(value, GetArenaForAllocation());
+  _impl_.a_origin_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetFileReferences::_internal_mutable_origin() {
+inline std::string* Msg_GetFileReferences::_internal_mutable_a_origin() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.origin_.Mutable(GetArenaForAllocation());
+  return _impl_.a_origin_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetFileReferences::release_origin() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
-  if (!_internal_has_origin()) {
+inline std::string* Msg_GetFileReferences::release_a_origin() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_origin)
+  if (!_internal_has_a_origin()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.origin_.Release();
+  auto* p = _impl_.a_origin_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.origin_.IsDefault()) {
-    _impl_.origin_.Set("", GetArenaForAllocation());
+  if (_impl_.a_origin_.IsDefault()) {
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetFileReferences::set_allocated_origin(std::string* origin) {
-  if (origin != nullptr) {
+inline void Msg_GetFileReferences::set_allocated_a_origin(std::string* a_origin) {
+  if (a_origin != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.origin_.SetAllocated(origin, GetArenaForAllocation());
+  _impl_.a_origin_.SetAllocated(a_origin, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.origin_.IsDefault()) {
-    _impl_.origin_.Set("", GetArenaForAllocation());
+  if (_impl_.a_origin_.IsDefault()) {
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.origin)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_origin)
 }
 
-// required bytes databaseName = 3;
-inline bool Msg_GetFileReferences::_internal_has_databasename() const {
+// required bytes a_databaseName = 3;
+inline bool Msg_GetFileReferences::_internal_has_a_databasename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetFileReferences::has_databasename() const {
-  return _internal_has_databasename();
+inline bool Msg_GetFileReferences::has_a_databasename() const {
+  return _internal_has_a_databasename();
 }
-inline void Msg_GetFileReferences::clear_databasename() {
-  _impl_.databasename_.ClearToEmpty();
+inline void Msg_GetFileReferences::clear_a_databasename() {
+  _impl_.a_databasename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_GetFileReferences::databasename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
-  return _internal_databasename();
+inline const std::string& Msg_GetFileReferences::a_databasename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_databaseName)
+  return _internal_a_databasename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetFileReferences::set_databasename(ArgT0&& arg0, ArgT... args) {
+void Msg_GetFileReferences::set_a_databasename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.databasename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
+ _impl_.a_databasename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_databaseName)
 }
-inline std::string* Msg_GetFileReferences::mutable_databasename() {
-  std::string* _s = _internal_mutable_databasename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
+inline std::string* Msg_GetFileReferences::mutable_a_databasename() {
+  std::string* _s = _internal_mutable_a_databasename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_databaseName)
   return _s;
 }
-inline const std::string& Msg_GetFileReferences::_internal_databasename() const {
-  return _impl_.databasename_.Get();
+inline const std::string& Msg_GetFileReferences::_internal_a_databasename() const {
+  return _impl_.a_databasename_.Get();
 }
-inline void Msg_GetFileReferences::_internal_set_databasename(const std::string& value) {
+inline void Msg_GetFileReferences::_internal_set_a_databasename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.databasename_.Set(value, GetArenaForAllocation());
+  _impl_.a_databasename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetFileReferences::_internal_mutable_databasename() {
+inline std::string* Msg_GetFileReferences::_internal_mutable_a_databasename() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.databasename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_databasename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetFileReferences::release_databasename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
-  if (!_internal_has_databasename()) {
+inline std::string* Msg_GetFileReferences::release_a_databasename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_databaseName)
+  if (!_internal_has_a_databasename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.databasename_.Release();
+  auto* p = _impl_.a_databasename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.databasename_.IsDefault()) {
-    _impl_.databasename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_databasename_.IsDefault()) {
+    _impl_.a_databasename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetFileReferences::set_allocated_databasename(std::string* databasename) {
-  if (databasename != nullptr) {
+inline void Msg_GetFileReferences::set_allocated_a_databasename(std::string* a_databasename) {
+  if (a_databasename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.databasename_.SetAllocated(databasename, GetArenaForAllocation());
+  _impl_.a_databasename_.SetAllocated(a_databasename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.databasename_.IsDefault()) {
-    _impl_.databasename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_databasename_.IsDefault()) {
+    _impl_.a_databasename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.databaseName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_databaseName)
 }
 
-// required sint64 fileId = 4;
-inline bool Msg_GetFileReferences::_internal_has_fileid() const {
+// required sint64 a_fileId = 4;
+inline bool Msg_GetFileReferences::_internal_has_a_fileid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_GetFileReferences::has_fileid() const {
-  return _internal_has_fileid();
+inline bool Msg_GetFileReferences::has_a_fileid() const {
+  return _internal_has_a_fileid();
 }
-inline void Msg_GetFileReferences::clear_fileid() {
-  _impl_.fileid_ = int64_t{0};
+inline void Msg_GetFileReferences::clear_a_fileid() {
+  _impl_.a_fileid_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t Msg_GetFileReferences::_internal_fileid() const {
-  return _impl_.fileid_;
+inline int64_t Msg_GetFileReferences::_internal_a_fileid() const {
+  return _impl_.a_fileid_;
 }
-inline int64_t Msg_GetFileReferences::fileid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.fileId)
-  return _internal_fileid();
+inline int64_t Msg_GetFileReferences::a_fileid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_fileId)
+  return _internal_a_fileid();
 }
-inline void Msg_GetFileReferences::_internal_set_fileid(int64_t value) {
+inline void Msg_GetFileReferences::_internal_set_a_fileid(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.fileid_ = value;
+  _impl_.a_fileid_ = value;
 }
-inline void Msg_GetFileReferences::set_fileid(int64_t value) {
-  _internal_set_fileid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.fileId)
+inline void Msg_GetFileReferences::set_a_fileid(int64_t value) {
+  _internal_set_a_fileid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences.a_fileId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetFileReferences
 
-// required sint32 refCnt = 1;
-inline bool Reply_GetFileReferences::_internal_has_refcnt() const {
+// required sint32 a_refCnt = 1;
+inline bool Reply_GetFileReferences::_internal_has_a_refcnt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetFileReferences::has_refcnt() const {
-  return _internal_has_refcnt();
+inline bool Reply_GetFileReferences::has_a_refcnt() const {
+  return _internal_has_a_refcnt();
 }
-inline void Reply_GetFileReferences::clear_refcnt() {
-  _impl_.refcnt_ = 0;
+inline void Reply_GetFileReferences::clear_a_refcnt() {
+  _impl_.a_refcnt_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Reply_GetFileReferences::_internal_refcnt() const {
-  return _impl_.refcnt_;
+inline int32_t Reply_GetFileReferences::_internal_a_refcnt() const {
+  return _impl_.a_refcnt_;
 }
-inline int32_t Reply_GetFileReferences::refcnt() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.refCnt)
-  return _internal_refcnt();
+inline int32_t Reply_GetFileReferences::a_refcnt() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_refCnt)
+  return _internal_a_refcnt();
 }
-inline void Reply_GetFileReferences::_internal_set_refcnt(int32_t value) {
+inline void Reply_GetFileReferences::_internal_set_a_refcnt(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.refcnt_ = value;
+  _impl_.a_refcnt_ = value;
 }
-inline void Reply_GetFileReferences::set_refcnt(int32_t value) {
-  _internal_set_refcnt(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.refCnt)
+inline void Reply_GetFileReferences::set_a_refcnt(int32_t value) {
+  _internal_set_a_refcnt(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_refCnt)
 }
 
-// required sint32 dBRefCnt = 2;
-inline bool Reply_GetFileReferences::_internal_has_dbrefcnt() const {
+// required sint32 a_dBRefCnt = 2;
+inline bool Reply_GetFileReferences::_internal_has_a_dbrefcnt() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Reply_GetFileReferences::has_dbrefcnt() const {
-  return _internal_has_dbrefcnt();
+inline bool Reply_GetFileReferences::has_a_dbrefcnt() const {
+  return _internal_has_a_dbrefcnt();
 }
-inline void Reply_GetFileReferences::clear_dbrefcnt() {
-  _impl_.dbrefcnt_ = 0;
+inline void Reply_GetFileReferences::clear_a_dbrefcnt() {
+  _impl_.a_dbrefcnt_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Reply_GetFileReferences::_internal_dbrefcnt() const {
-  return _impl_.dbrefcnt_;
+inline int32_t Reply_GetFileReferences::_internal_a_dbrefcnt() const {
+  return _impl_.a_dbrefcnt_;
 }
-inline int32_t Reply_GetFileReferences::dbrefcnt() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.dBRefCnt)
-  return _internal_dbrefcnt();
+inline int32_t Reply_GetFileReferences::a_dbrefcnt() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_dBRefCnt)
+  return _internal_a_dbrefcnt();
 }
-inline void Reply_GetFileReferences::_internal_set_dbrefcnt(int32_t value) {
+inline void Reply_GetFileReferences::_internal_set_a_dbrefcnt(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.dbrefcnt_ = value;
+  _impl_.a_dbrefcnt_ = value;
 }
-inline void Reply_GetFileReferences::set_dbrefcnt(int32_t value) {
-  _internal_set_dbrefcnt(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.dBRefCnt)
+inline void Reply_GetFileReferences::set_a_dbrefcnt(int32_t value) {
+  _internal_set_a_dbrefcnt(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_dBRefCnt)
 }
 
-// required bool result = 3;
-inline bool Reply_GetFileReferences::_internal_has_result() const {
+// required bool a_result = 3;
+inline bool Reply_GetFileReferences::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Reply_GetFileReferences::has_result() const {
-  return _internal_has_result();
+inline bool Reply_GetFileReferences::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_GetFileReferences::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_GetFileReferences::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Reply_GetFileReferences::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_GetFileReferences::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_GetFileReferences::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.result)
-  return _internal_result();
+inline bool Reply_GetFileReferences::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_result)
+  return _internal_a_result();
 }
-inline void Reply_GetFileReferences::_internal_set_result(bool value) {
+inline void Reply_GetFileReferences::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_GetFileReferences::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.result)
+inline void Reply_GetFileReferences::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences.a_result)
 }
 
 // -------------------------------------------------------------------
@@ -1453,72 +1453,72 @@ inline void Reply_GetFileReferences::set_result(bool value) {
 
 // Reply_DoMaintenance
 
-// required bytes rv = 1;
-inline bool Reply_DoMaintenance::_internal_has_rv() const {
+// required bytes a_rv = 1;
+inline bool Reply_DoMaintenance::_internal_has_a_rv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_DoMaintenance::has_rv() const {
-  return _internal_has_rv();
+inline bool Reply_DoMaintenance::has_a_rv() const {
+  return _internal_has_a_rv();
 }
-inline void Reply_DoMaintenance::clear_rv() {
-  _impl_.rv_.ClearToEmpty();
+inline void Reply_DoMaintenance::clear_a_rv() {
+  _impl_.a_rv_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_DoMaintenance::rv() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.rv)
-  return _internal_rv();
+inline const std::string& Reply_DoMaintenance::a_rv() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.a_rv)
+  return _internal_a_rv();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_DoMaintenance::set_rv(ArgT0&& arg0, ArgT... args) {
+void Reply_DoMaintenance::set_a_rv(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.rv)
+ _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.a_rv)
 }
-inline std::string* Reply_DoMaintenance::mutable_rv() {
-  std::string* _s = _internal_mutable_rv();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.rv)
+inline std::string* Reply_DoMaintenance::mutable_a_rv() {
+  std::string* _s = _internal_mutable_a_rv();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.a_rv)
   return _s;
 }
-inline const std::string& Reply_DoMaintenance::_internal_rv() const {
-  return _impl_.rv_.Get();
+inline const std::string& Reply_DoMaintenance::_internal_a_rv() const {
+  return _impl_.a_rv_.Get();
 }
-inline void Reply_DoMaintenance::_internal_set_rv(const std::string& value) {
+inline void Reply_DoMaintenance::_internal_set_a_rv(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.rv_.Set(value, GetArenaForAllocation());
+  _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_DoMaintenance::_internal_mutable_rv() {
+inline std::string* Reply_DoMaintenance::_internal_mutable_a_rv() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.rv_.Mutable(GetArenaForAllocation());
+  return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_DoMaintenance::release_rv() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.rv)
-  if (!_internal_has_rv()) {
+inline std::string* Reply_DoMaintenance::release_a_rv() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.a_rv)
+  if (!_internal_has_a_rv()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.rv_.Release();
+  auto* p = _impl_.a_rv_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_DoMaintenance::set_allocated_rv(std::string* rv) {
-  if (rv != nullptr) {
+inline void Reply_DoMaintenance::set_allocated_a_rv(std::string* a_rv) {
+  if (a_rv != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.rv_.SetAllocated(rv, GetArenaForAllocation());
+  _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.rv)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance.a_rv)
 }
 
 // -------------------------------------------------------------------

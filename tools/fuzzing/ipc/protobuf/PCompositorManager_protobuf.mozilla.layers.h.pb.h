@@ -182,109 +182,109 @@ class WidgetCompositorOptions final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kScaleFieldNumber = 1,
-    kVsyncRateFieldNumber = 2,
-    kOptionsFieldNumber = 3,
-    kSurfaceSizeFieldNumber = 5,
-    kInnerWindowIdFieldNumber = 6,
-    kUseExternalSurfaceSizeFieldNumber = 4,
+    kAScaleFieldNumber = 1,
+    kAVsyncRateFieldNumber = 2,
+    kAOptionsFieldNumber = 3,
+    kASurfaceSizeFieldNumber = 5,
+    kAInnerWindowIdFieldNumber = 6,
+    kAUseExternalSurfaceSizeFieldNumber = 4,
   };
-  // required bytes scale = 1;
-  bool has_scale() const;
+  // required bytes a_scale = 1;
+  bool has_a_scale() const;
   private:
-  bool _internal_has_scale() const;
+  bool _internal_has_a_scale() const;
   public:
-  void clear_scale();
-  const std::string& scale() const;
+  void clear_a_scale();
+  const std::string& a_scale() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_scale(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_scale();
-  PROTOBUF_NODISCARD std::string* release_scale();
-  void set_allocated_scale(std::string* scale);
+  void set_a_scale(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_scale();
+  PROTOBUF_NODISCARD std::string* release_a_scale();
+  void set_allocated_a_scale(std::string* a_scale);
   private:
-  const std::string& _internal_scale() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_scale(const std::string& value);
-  std::string* _internal_mutable_scale();
+  const std::string& _internal_a_scale() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_scale(const std::string& value);
+  std::string* _internal_mutable_a_scale();
   public:
 
-  // required bytes vsyncRate = 2;
-  bool has_vsyncrate() const;
+  // required bytes a_vsyncRate = 2;
+  bool has_a_vsyncrate() const;
   private:
-  bool _internal_has_vsyncrate() const;
+  bool _internal_has_a_vsyncrate() const;
   public:
-  void clear_vsyncrate();
-  const std::string& vsyncrate() const;
+  void clear_a_vsyncrate();
+  const std::string& a_vsyncrate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_vsyncrate(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_vsyncrate();
-  PROTOBUF_NODISCARD std::string* release_vsyncrate();
-  void set_allocated_vsyncrate(std::string* vsyncrate);
+  void set_a_vsyncrate(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_vsyncrate();
+  PROTOBUF_NODISCARD std::string* release_a_vsyncrate();
+  void set_allocated_a_vsyncrate(std::string* a_vsyncrate);
   private:
-  const std::string& _internal_vsyncrate() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_vsyncrate(const std::string& value);
-  std::string* _internal_mutable_vsyncrate();
+  const std::string& _internal_a_vsyncrate() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_vsyncrate(const std::string& value);
+  std::string* _internal_mutable_a_vsyncrate();
   public:
 
-  // required bytes options = 3;
-  bool has_options() const;
+  // required bytes a_options = 3;
+  bool has_a_options() const;
   private:
-  bool _internal_has_options() const;
+  bool _internal_has_a_options() const;
   public:
-  void clear_options();
-  const std::string& options() const;
+  void clear_a_options();
+  const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_options(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_options();
-  PROTOBUF_NODISCARD std::string* release_options();
-  void set_allocated_options(std::string* options);
+  void set_a_options(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_options();
+  PROTOBUF_NODISCARD std::string* release_a_options();
+  void set_allocated_a_options(std::string* a_options);
   private:
-  const std::string& _internal_options() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_options(const std::string& value);
-  std::string* _internal_mutable_options();
+  const std::string& _internal_a_options() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_options(const std::string& value);
+  std::string* _internal_mutable_a_options();
   public:
 
-  // required bytes surfaceSize = 5;
-  bool has_surfacesize() const;
+  // required bytes a_surfaceSize = 5;
+  bool has_a_surfacesize() const;
   private:
-  bool _internal_has_surfacesize() const;
+  bool _internal_has_a_surfacesize() const;
   public:
-  void clear_surfacesize();
-  const std::string& surfacesize() const;
+  void clear_a_surfacesize();
+  const std::string& a_surfacesize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_surfacesize(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_surfacesize();
-  PROTOBUF_NODISCARD std::string* release_surfacesize();
-  void set_allocated_surfacesize(std::string* surfacesize);
+  void set_a_surfacesize(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_surfacesize();
+  PROTOBUF_NODISCARD std::string* release_a_surfacesize();
+  void set_allocated_a_surfacesize(std::string* a_surfacesize);
   private:
-  const std::string& _internal_surfacesize() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_surfacesize(const std::string& value);
-  std::string* _internal_mutable_surfacesize();
+  const std::string& _internal_a_surfacesize() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_surfacesize(const std::string& value);
+  std::string* _internal_mutable_a_surfacesize();
   public:
 
-  // required uint64 innerWindowId = 6;
-  bool has_innerwindowid() const;
+  // required uint64 a_innerWindowId = 6;
+  bool has_a_innerwindowid() const;
   private:
-  bool _internal_has_innerwindowid() const;
+  bool _internal_has_a_innerwindowid() const;
   public:
-  void clear_innerwindowid();
-  uint64_t innerwindowid() const;
-  void set_innerwindowid(uint64_t value);
+  void clear_a_innerwindowid();
+  uint64_t a_innerwindowid() const;
+  void set_a_innerwindowid(uint64_t value);
   private:
-  uint64_t _internal_innerwindowid() const;
-  void _internal_set_innerwindowid(uint64_t value);
+  uint64_t _internal_a_innerwindowid() const;
+  void _internal_set_a_innerwindowid(uint64_t value);
   public:
 
-  // required bool useExternalSurfaceSize = 4;
-  bool has_useexternalsurfacesize() const;
+  // required bool a_useExternalSurfaceSize = 4;
+  bool has_a_useexternalsurfacesize() const;
   private:
-  bool _internal_has_useexternalsurfacesize() const;
+  bool _internal_has_a_useexternalsurfacesize() const;
   public:
-  void clear_useexternalsurfacesize();
-  bool useexternalsurfacesize() const;
-  void set_useexternalsurfacesize(bool value);
+  void clear_a_useexternalsurfacesize();
+  bool a_useexternalsurfacesize() const;
+  void set_a_useexternalsurfacesize(bool value);
   private:
-  bool _internal_useexternalsurfacesize() const;
-  void _internal_set_useexternalsurfacesize(bool value);
+  bool _internal_a_useexternalsurfacesize() const;
+  void _internal_set_a_useexternalsurfacesize(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.WidgetCompositorOptions)
@@ -300,12 +300,12 @@ class WidgetCompositorOptions final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr scale_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vsyncrate_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr options_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr surfacesize_;
-    uint64_t innerwindowid_;
-    bool useexternalsurfacesize_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scale_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_vsyncrate_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_surfacesize_;
+    uint64_t a_innerwindowid_;
+    bool a_useexternalsurfacesize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorManager_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -602,9 +602,9 @@ class CompositorBridgeOptions final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVContentCompositorOptions = 1,
-    kMVWidgetCompositorOptions = 2,
-    kMVSameProcessWidgetCompositorOptions = 3,
+    kAMVContentCompositorOptions = 1,
+    kAMVWidgetCompositorOptions = 2,
+    kAMVSameProcessWidgetCompositorOptions = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -677,72 +677,72 @@ class CompositorBridgeOptions final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVContentCompositorOptionsFieldNumber = 1,
-    kMVWidgetCompositorOptionsFieldNumber = 2,
-    kMVSameProcessWidgetCompositorOptionsFieldNumber = 3,
+    kAMVContentCompositorOptionsFieldNumber = 1,
+    kAMVWidgetCompositorOptionsFieldNumber = 2,
+    kAMVSameProcessWidgetCompositorOptionsFieldNumber = 3,
   };
-  // .protobuf.mozilla.layers.ContentCompositorOptions mVContentCompositorOptions = 1;
-  bool has_mvcontentcompositoroptions() const;
+  // .protobuf.mozilla.layers.ContentCompositorOptions a_mVContentCompositorOptions = 1;
+  bool has_a_mvcontentcompositoroptions() const;
   private:
-  bool _internal_has_mvcontentcompositoroptions() const;
+  bool _internal_has_a_mvcontentcompositoroptions() const;
   public:
-  void clear_mvcontentcompositoroptions();
-  const ::protobuf::mozilla::layers::ContentCompositorOptions& mvcontentcompositoroptions() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::ContentCompositorOptions* release_mvcontentcompositoroptions();
-  ::protobuf::mozilla::layers::ContentCompositorOptions* mutable_mvcontentcompositoroptions();
-  void set_allocated_mvcontentcompositoroptions(::protobuf::mozilla::layers::ContentCompositorOptions* mvcontentcompositoroptions);
+  void clear_a_mvcontentcompositoroptions();
+  const ::protobuf::mozilla::layers::ContentCompositorOptions& a_mvcontentcompositoroptions() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::ContentCompositorOptions* release_a_mvcontentcompositoroptions();
+  ::protobuf::mozilla::layers::ContentCompositorOptions* mutable_a_mvcontentcompositoroptions();
+  void set_allocated_a_mvcontentcompositoroptions(::protobuf::mozilla::layers::ContentCompositorOptions* a_mvcontentcompositoroptions);
   private:
-  const ::protobuf::mozilla::layers::ContentCompositorOptions& _internal_mvcontentcompositoroptions() const;
-  ::protobuf::mozilla::layers::ContentCompositorOptions* _internal_mutable_mvcontentcompositoroptions();
+  const ::protobuf::mozilla::layers::ContentCompositorOptions& _internal_a_mvcontentcompositoroptions() const;
+  ::protobuf::mozilla::layers::ContentCompositorOptions* _internal_mutable_a_mvcontentcompositoroptions();
   public:
-  void unsafe_arena_set_allocated_mvcontentcompositoroptions(
-      ::protobuf::mozilla::layers::ContentCompositorOptions* mvcontentcompositoroptions);
-  ::protobuf::mozilla::layers::ContentCompositorOptions* unsafe_arena_release_mvcontentcompositoroptions();
+  void unsafe_arena_set_allocated_a_mvcontentcompositoroptions(
+      ::protobuf::mozilla::layers::ContentCompositorOptions* a_mvcontentcompositoroptions);
+  ::protobuf::mozilla::layers::ContentCompositorOptions* unsafe_arena_release_a_mvcontentcompositoroptions();
 
-  // .protobuf.mozilla.layers.WidgetCompositorOptions mVWidgetCompositorOptions = 2;
-  bool has_mvwidgetcompositoroptions() const;
+  // .protobuf.mozilla.layers.WidgetCompositorOptions a_mVWidgetCompositorOptions = 2;
+  bool has_a_mvwidgetcompositoroptions() const;
   private:
-  bool _internal_has_mvwidgetcompositoroptions() const;
+  bool _internal_has_a_mvwidgetcompositoroptions() const;
   public:
-  void clear_mvwidgetcompositoroptions();
-  const ::protobuf::mozilla::layers::WidgetCompositorOptions& mvwidgetcompositoroptions() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::WidgetCompositorOptions* release_mvwidgetcompositoroptions();
-  ::protobuf::mozilla::layers::WidgetCompositorOptions* mutable_mvwidgetcompositoroptions();
-  void set_allocated_mvwidgetcompositoroptions(::protobuf::mozilla::layers::WidgetCompositorOptions* mvwidgetcompositoroptions);
+  void clear_a_mvwidgetcompositoroptions();
+  const ::protobuf::mozilla::layers::WidgetCompositorOptions& a_mvwidgetcompositoroptions() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::WidgetCompositorOptions* release_a_mvwidgetcompositoroptions();
+  ::protobuf::mozilla::layers::WidgetCompositorOptions* mutable_a_mvwidgetcompositoroptions();
+  void set_allocated_a_mvwidgetcompositoroptions(::protobuf::mozilla::layers::WidgetCompositorOptions* a_mvwidgetcompositoroptions);
   private:
-  const ::protobuf::mozilla::layers::WidgetCompositorOptions& _internal_mvwidgetcompositoroptions() const;
-  ::protobuf::mozilla::layers::WidgetCompositorOptions* _internal_mutable_mvwidgetcompositoroptions();
+  const ::protobuf::mozilla::layers::WidgetCompositorOptions& _internal_a_mvwidgetcompositoroptions() const;
+  ::protobuf::mozilla::layers::WidgetCompositorOptions* _internal_mutable_a_mvwidgetcompositoroptions();
   public:
-  void unsafe_arena_set_allocated_mvwidgetcompositoroptions(
-      ::protobuf::mozilla::layers::WidgetCompositorOptions* mvwidgetcompositoroptions);
-  ::protobuf::mozilla::layers::WidgetCompositorOptions* unsafe_arena_release_mvwidgetcompositoroptions();
+  void unsafe_arena_set_allocated_a_mvwidgetcompositoroptions(
+      ::protobuf::mozilla::layers::WidgetCompositorOptions* a_mvwidgetcompositoroptions);
+  ::protobuf::mozilla::layers::WidgetCompositorOptions* unsafe_arena_release_a_mvwidgetcompositoroptions();
 
-  // .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions mVSameProcessWidgetCompositorOptions = 3;
-  bool has_mvsameprocesswidgetcompositoroptions() const;
+  // .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions a_mVSameProcessWidgetCompositorOptions = 3;
+  bool has_a_mvsameprocesswidgetcompositoroptions() const;
   private:
-  bool _internal_has_mvsameprocesswidgetcompositoroptions() const;
+  bool _internal_has_a_mvsameprocesswidgetcompositoroptions() const;
   public:
-  void clear_mvsameprocesswidgetcompositoroptions();
-  const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& mvsameprocesswidgetcompositoroptions() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* release_mvsameprocesswidgetcompositoroptions();
-  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mutable_mvsameprocesswidgetcompositoroptions();
-  void set_allocated_mvsameprocesswidgetcompositoroptions(::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mvsameprocesswidgetcompositoroptions);
+  void clear_a_mvsameprocesswidgetcompositoroptions();
+  const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& a_mvsameprocesswidgetcompositoroptions() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* release_a_mvsameprocesswidgetcompositoroptions();
+  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mutable_a_mvsameprocesswidgetcompositoroptions();
+  void set_allocated_a_mvsameprocesswidgetcompositoroptions(::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* a_mvsameprocesswidgetcompositoroptions);
   private:
-  const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& _internal_mvsameprocesswidgetcompositoroptions() const;
-  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* _internal_mutable_mvsameprocesswidgetcompositoroptions();
+  const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& _internal_a_mvsameprocesswidgetcompositoroptions() const;
+  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* _internal_mutable_a_mvsameprocesswidgetcompositoroptions();
   public:
-  void unsafe_arena_set_allocated_mvsameprocesswidgetcompositoroptions(
-      ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mvsameprocesswidgetcompositoroptions);
-  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* unsafe_arena_release_mvsameprocesswidgetcompositoroptions();
+  void unsafe_arena_set_allocated_a_mvsameprocesswidgetcompositoroptions(
+      ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* a_mvsameprocesswidgetcompositoroptions);
+  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* unsafe_arena_release_a_mvsameprocesswidgetcompositoroptions();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.CompositorBridgeOptions)
  private:
   class _Internal;
-  void set_has_mvcontentcompositoroptions();
-  void set_has_mvwidgetcompositoroptions();
-  void set_has_mvsameprocesswidgetcompositoroptions();
+  void set_has_a_mvcontentcompositoroptions();
+  void set_has_a_mvwidgetcompositoroptions();
+  void set_has_a_mvsameprocesswidgetcompositoroptions();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -754,9 +754,9 @@ class CompositorBridgeOptions final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::layers::ContentCompositorOptions* mvcontentcompositoroptions_;
-      ::protobuf::mozilla::layers::WidgetCompositorOptions* mvwidgetcompositoroptions_;
-      ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mvsameprocesswidgetcompositoroptions_;
+      ::protobuf::mozilla::layers::ContentCompositorOptions* a_mvcontentcompositoroptions_;
+      ::protobuf::mozilla::layers::WidgetCompositorOptions* a_mvwidgetcompositoroptions_;
+      ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* a_mvsameprocesswidgetcompositoroptions_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -776,332 +776,332 @@ class CompositorBridgeOptions final :
 #endif  // __GNUC__
 // WidgetCompositorOptions
 
-// required bytes scale = 1;
-inline bool WidgetCompositorOptions::_internal_has_scale() const {
+// required bytes a_scale = 1;
+inline bool WidgetCompositorOptions::_internal_has_a_scale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool WidgetCompositorOptions::has_scale() const {
-  return _internal_has_scale();
+inline bool WidgetCompositorOptions::has_a_scale() const {
+  return _internal_has_a_scale();
 }
-inline void WidgetCompositorOptions::clear_scale() {
-  _impl_.scale_.ClearToEmpty();
+inline void WidgetCompositorOptions::clear_a_scale() {
+  _impl_.a_scale_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& WidgetCompositorOptions::scale() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.scale)
-  return _internal_scale();
+inline const std::string& WidgetCompositorOptions::a_scale() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
+  return _internal_a_scale();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WidgetCompositorOptions::set_scale(ArgT0&& arg0, ArgT... args) {
+void WidgetCompositorOptions::set_a_scale(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.scale_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.scale)
+ _impl_.a_scale_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
 }
-inline std::string* WidgetCompositorOptions::mutable_scale() {
-  std::string* _s = _internal_mutable_scale();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.scale)
+inline std::string* WidgetCompositorOptions::mutable_a_scale() {
+  std::string* _s = _internal_mutable_a_scale();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
   return _s;
 }
-inline const std::string& WidgetCompositorOptions::_internal_scale() const {
-  return _impl_.scale_.Get();
+inline const std::string& WidgetCompositorOptions::_internal_a_scale() const {
+  return _impl_.a_scale_.Get();
 }
-inline void WidgetCompositorOptions::_internal_set_scale(const std::string& value) {
+inline void WidgetCompositorOptions::_internal_set_a_scale(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.scale_.Set(value, GetArenaForAllocation());
+  _impl_.a_scale_.Set(value, GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::_internal_mutable_scale() {
+inline std::string* WidgetCompositorOptions::_internal_mutable_a_scale() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.scale_.Mutable(GetArenaForAllocation());
+  return _impl_.a_scale_.Mutable(GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::release_scale() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.scale)
-  if (!_internal_has_scale()) {
+inline std::string* WidgetCompositorOptions::release_a_scale() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
+  if (!_internal_has_a_scale()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.scale_.Release();
+  auto* p = _impl_.a_scale_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.scale_.IsDefault()) {
-    _impl_.scale_.Set("", GetArenaForAllocation());
+  if (_impl_.a_scale_.IsDefault()) {
+    _impl_.a_scale_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WidgetCompositorOptions::set_allocated_scale(std::string* scale) {
-  if (scale != nullptr) {
+inline void WidgetCompositorOptions::set_allocated_a_scale(std::string* a_scale) {
+  if (a_scale != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.scale_.SetAllocated(scale, GetArenaForAllocation());
+  _impl_.a_scale_.SetAllocated(a_scale, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.scale_.IsDefault()) {
-    _impl_.scale_.Set("", GetArenaForAllocation());
+  if (_impl_.a_scale_.IsDefault()) {
+    _impl_.a_scale_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.scale)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_scale)
 }
 
-// required bytes vsyncRate = 2;
-inline bool WidgetCompositorOptions::_internal_has_vsyncrate() const {
+// required bytes a_vsyncRate = 2;
+inline bool WidgetCompositorOptions::_internal_has_a_vsyncrate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool WidgetCompositorOptions::has_vsyncrate() const {
-  return _internal_has_vsyncrate();
+inline bool WidgetCompositorOptions::has_a_vsyncrate() const {
+  return _internal_has_a_vsyncrate();
 }
-inline void WidgetCompositorOptions::clear_vsyncrate() {
-  _impl_.vsyncrate_.ClearToEmpty();
+inline void WidgetCompositorOptions::clear_a_vsyncrate() {
+  _impl_.a_vsyncrate_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& WidgetCompositorOptions::vsyncrate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.vsyncRate)
-  return _internal_vsyncrate();
+inline const std::string& WidgetCompositorOptions::a_vsyncrate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
+  return _internal_a_vsyncrate();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WidgetCompositorOptions::set_vsyncrate(ArgT0&& arg0, ArgT... args) {
+void WidgetCompositorOptions::set_a_vsyncrate(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.vsyncrate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.vsyncRate)
+ _impl_.a_vsyncrate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
 }
-inline std::string* WidgetCompositorOptions::mutable_vsyncrate() {
-  std::string* _s = _internal_mutable_vsyncrate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.vsyncRate)
+inline std::string* WidgetCompositorOptions::mutable_a_vsyncrate() {
+  std::string* _s = _internal_mutable_a_vsyncrate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
   return _s;
 }
-inline const std::string& WidgetCompositorOptions::_internal_vsyncrate() const {
-  return _impl_.vsyncrate_.Get();
+inline const std::string& WidgetCompositorOptions::_internal_a_vsyncrate() const {
+  return _impl_.a_vsyncrate_.Get();
 }
-inline void WidgetCompositorOptions::_internal_set_vsyncrate(const std::string& value) {
+inline void WidgetCompositorOptions::_internal_set_a_vsyncrate(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.vsyncrate_.Set(value, GetArenaForAllocation());
+  _impl_.a_vsyncrate_.Set(value, GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::_internal_mutable_vsyncrate() {
+inline std::string* WidgetCompositorOptions::_internal_mutable_a_vsyncrate() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.vsyncrate_.Mutable(GetArenaForAllocation());
+  return _impl_.a_vsyncrate_.Mutable(GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::release_vsyncrate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.vsyncRate)
-  if (!_internal_has_vsyncrate()) {
+inline std::string* WidgetCompositorOptions::release_a_vsyncrate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
+  if (!_internal_has_a_vsyncrate()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.vsyncrate_.Release();
+  auto* p = _impl_.a_vsyncrate_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.vsyncrate_.IsDefault()) {
-    _impl_.vsyncrate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_vsyncrate_.IsDefault()) {
+    _impl_.a_vsyncrate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WidgetCompositorOptions::set_allocated_vsyncrate(std::string* vsyncrate) {
-  if (vsyncrate != nullptr) {
+inline void WidgetCompositorOptions::set_allocated_a_vsyncrate(std::string* a_vsyncrate) {
+  if (a_vsyncrate != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.vsyncrate_.SetAllocated(vsyncrate, GetArenaForAllocation());
+  _impl_.a_vsyncrate_.SetAllocated(a_vsyncrate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.vsyncrate_.IsDefault()) {
-    _impl_.vsyncrate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_vsyncrate_.IsDefault()) {
+    _impl_.a_vsyncrate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.vsyncRate)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_vsyncRate)
 }
 
-// required bytes options = 3;
-inline bool WidgetCompositorOptions::_internal_has_options() const {
+// required bytes a_options = 3;
+inline bool WidgetCompositorOptions::_internal_has_a_options() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool WidgetCompositorOptions::has_options() const {
-  return _internal_has_options();
+inline bool WidgetCompositorOptions::has_a_options() const {
+  return _internal_has_a_options();
 }
-inline void WidgetCompositorOptions::clear_options() {
-  _impl_.options_.ClearToEmpty();
+inline void WidgetCompositorOptions::clear_a_options() {
+  _impl_.a_options_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& WidgetCompositorOptions::options() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.options)
-  return _internal_options();
+inline const std::string& WidgetCompositorOptions::a_options() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
+  return _internal_a_options();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WidgetCompositorOptions::set_options(ArgT0&& arg0, ArgT... args) {
+void WidgetCompositorOptions::set_a_options(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.options)
+ _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
 }
-inline std::string* WidgetCompositorOptions::mutable_options() {
-  std::string* _s = _internal_mutable_options();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.options)
+inline std::string* WidgetCompositorOptions::mutable_a_options() {
+  std::string* _s = _internal_mutable_a_options();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
   return _s;
 }
-inline const std::string& WidgetCompositorOptions::_internal_options() const {
-  return _impl_.options_.Get();
+inline const std::string& WidgetCompositorOptions::_internal_a_options() const {
+  return _impl_.a_options_.Get();
 }
-inline void WidgetCompositorOptions::_internal_set_options(const std::string& value) {
+inline void WidgetCompositorOptions::_internal_set_a_options(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.options_.Set(value, GetArenaForAllocation());
+  _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::_internal_mutable_options() {
+inline std::string* WidgetCompositorOptions::_internal_mutable_a_options() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.options_.Mutable(GetArenaForAllocation());
+  return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::release_options() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.options)
-  if (!_internal_has_options()) {
+inline std::string* WidgetCompositorOptions::release_a_options() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
+  if (!_internal_has_a_options()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.options_.Release();
+  auto* p = _impl_.a_options_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.options_.IsDefault()) {
-    _impl_.options_.Set("", GetArenaForAllocation());
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WidgetCompositorOptions::set_allocated_options(std::string* options) {
-  if (options != nullptr) {
+inline void WidgetCompositorOptions::set_allocated_a_options(std::string* a_options) {
+  if (a_options != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.options_.SetAllocated(options, GetArenaForAllocation());
+  _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.options_.IsDefault()) {
-    _impl_.options_.Set("", GetArenaForAllocation());
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.options)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_options)
 }
 
-// required bool useExternalSurfaceSize = 4;
-inline bool WidgetCompositorOptions::_internal_has_useexternalsurfacesize() const {
+// required bool a_useExternalSurfaceSize = 4;
+inline bool WidgetCompositorOptions::_internal_has_a_useexternalsurfacesize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool WidgetCompositorOptions::has_useexternalsurfacesize() const {
-  return _internal_has_useexternalsurfacesize();
+inline bool WidgetCompositorOptions::has_a_useexternalsurfacesize() const {
+  return _internal_has_a_useexternalsurfacesize();
 }
-inline void WidgetCompositorOptions::clear_useexternalsurfacesize() {
-  _impl_.useexternalsurfacesize_ = false;
+inline void WidgetCompositorOptions::clear_a_useexternalsurfacesize() {
+  _impl_.a_useexternalsurfacesize_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool WidgetCompositorOptions::_internal_useexternalsurfacesize() const {
-  return _impl_.useexternalsurfacesize_;
+inline bool WidgetCompositorOptions::_internal_a_useexternalsurfacesize() const {
+  return _impl_.a_useexternalsurfacesize_;
 }
-inline bool WidgetCompositorOptions::useexternalsurfacesize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.useExternalSurfaceSize)
-  return _internal_useexternalsurfacesize();
+inline bool WidgetCompositorOptions::a_useexternalsurfacesize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_useExternalSurfaceSize)
+  return _internal_a_useexternalsurfacesize();
 }
-inline void WidgetCompositorOptions::_internal_set_useexternalsurfacesize(bool value) {
+inline void WidgetCompositorOptions::_internal_set_a_useexternalsurfacesize(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.useexternalsurfacesize_ = value;
+  _impl_.a_useexternalsurfacesize_ = value;
 }
-inline void WidgetCompositorOptions::set_useexternalsurfacesize(bool value) {
-  _internal_set_useexternalsurfacesize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.useExternalSurfaceSize)
+inline void WidgetCompositorOptions::set_a_useexternalsurfacesize(bool value) {
+  _internal_set_a_useexternalsurfacesize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_useExternalSurfaceSize)
 }
 
-// required bytes surfaceSize = 5;
-inline bool WidgetCompositorOptions::_internal_has_surfacesize() const {
+// required bytes a_surfaceSize = 5;
+inline bool WidgetCompositorOptions::_internal_has_a_surfacesize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool WidgetCompositorOptions::has_surfacesize() const {
-  return _internal_has_surfacesize();
+inline bool WidgetCompositorOptions::has_a_surfacesize() const {
+  return _internal_has_a_surfacesize();
 }
-inline void WidgetCompositorOptions::clear_surfacesize() {
-  _impl_.surfacesize_.ClearToEmpty();
+inline void WidgetCompositorOptions::clear_a_surfacesize() {
+  _impl_.a_surfacesize_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& WidgetCompositorOptions::surfacesize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.surfaceSize)
-  return _internal_surfacesize();
+inline const std::string& WidgetCompositorOptions::a_surfacesize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
+  return _internal_a_surfacesize();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WidgetCompositorOptions::set_surfacesize(ArgT0&& arg0, ArgT... args) {
+void WidgetCompositorOptions::set_a_surfacesize(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.surfacesize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.surfaceSize)
+ _impl_.a_surfacesize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
 }
-inline std::string* WidgetCompositorOptions::mutable_surfacesize() {
-  std::string* _s = _internal_mutable_surfacesize();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.surfaceSize)
+inline std::string* WidgetCompositorOptions::mutable_a_surfacesize() {
+  std::string* _s = _internal_mutable_a_surfacesize();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
   return _s;
 }
-inline const std::string& WidgetCompositorOptions::_internal_surfacesize() const {
-  return _impl_.surfacesize_.Get();
+inline const std::string& WidgetCompositorOptions::_internal_a_surfacesize() const {
+  return _impl_.a_surfacesize_.Get();
 }
-inline void WidgetCompositorOptions::_internal_set_surfacesize(const std::string& value) {
+inline void WidgetCompositorOptions::_internal_set_a_surfacesize(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.surfacesize_.Set(value, GetArenaForAllocation());
+  _impl_.a_surfacesize_.Set(value, GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::_internal_mutable_surfacesize() {
+inline std::string* WidgetCompositorOptions::_internal_mutable_a_surfacesize() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.surfacesize_.Mutable(GetArenaForAllocation());
+  return _impl_.a_surfacesize_.Mutable(GetArenaForAllocation());
 }
-inline std::string* WidgetCompositorOptions::release_surfacesize() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.surfaceSize)
-  if (!_internal_has_surfacesize()) {
+inline std::string* WidgetCompositorOptions::release_a_surfacesize() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
+  if (!_internal_has_a_surfacesize()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.surfacesize_.Release();
+  auto* p = _impl_.a_surfacesize_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.surfacesize_.IsDefault()) {
-    _impl_.surfacesize_.Set("", GetArenaForAllocation());
+  if (_impl_.a_surfacesize_.IsDefault()) {
+    _impl_.a_surfacesize_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WidgetCompositorOptions::set_allocated_surfacesize(std::string* surfacesize) {
-  if (surfacesize != nullptr) {
+inline void WidgetCompositorOptions::set_allocated_a_surfacesize(std::string* a_surfacesize) {
+  if (a_surfacesize != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.surfacesize_.SetAllocated(surfacesize, GetArenaForAllocation());
+  _impl_.a_surfacesize_.SetAllocated(a_surfacesize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.surfacesize_.IsDefault()) {
-    _impl_.surfacesize_.Set("", GetArenaForAllocation());
+  if (_impl_.a_surfacesize_.IsDefault()) {
+    _impl_.a_surfacesize_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.surfaceSize)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.WidgetCompositorOptions.a_surfaceSize)
 }
 
-// required uint64 innerWindowId = 6;
-inline bool WidgetCompositorOptions::_internal_has_innerwindowid() const {
+// required uint64 a_innerWindowId = 6;
+inline bool WidgetCompositorOptions::_internal_has_a_innerwindowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool WidgetCompositorOptions::has_innerwindowid() const {
-  return _internal_has_innerwindowid();
+inline bool WidgetCompositorOptions::has_a_innerwindowid() const {
+  return _internal_has_a_innerwindowid();
 }
-inline void WidgetCompositorOptions::clear_innerwindowid() {
-  _impl_.innerwindowid_ = uint64_t{0u};
+inline void WidgetCompositorOptions::clear_a_innerwindowid() {
+  _impl_.a_innerwindowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint64_t WidgetCompositorOptions::_internal_innerwindowid() const {
-  return _impl_.innerwindowid_;
+inline uint64_t WidgetCompositorOptions::_internal_a_innerwindowid() const {
+  return _impl_.a_innerwindowid_;
 }
-inline uint64_t WidgetCompositorOptions::innerwindowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.innerWindowId)
-  return _internal_innerwindowid();
+inline uint64_t WidgetCompositorOptions::a_innerwindowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.WidgetCompositorOptions.a_innerWindowId)
+  return _internal_a_innerwindowid();
 }
-inline void WidgetCompositorOptions::_internal_set_innerwindowid(uint64_t value) {
+inline void WidgetCompositorOptions::_internal_set_a_innerwindowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.innerwindowid_ = value;
+  _impl_.a_innerwindowid_ = value;
 }
-inline void WidgetCompositorOptions::set_innerwindowid(uint64_t value) {
-  _internal_set_innerwindowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.innerWindowId)
+inline void WidgetCompositorOptions::set_a_innerwindowid(uint64_t value) {
+  _internal_set_a_innerwindowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.WidgetCompositorOptions.a_innerWindowId)
 }
 
 // -------------------------------------------------------------------
@@ -1116,225 +1116,225 @@ inline void WidgetCompositorOptions::set_innerwindowid(uint64_t value) {
 
 // CompositorBridgeOptions
 
-// .protobuf.mozilla.layers.ContentCompositorOptions mVContentCompositorOptions = 1;
-inline bool CompositorBridgeOptions::_internal_has_mvcontentcompositoroptions() const {
-  return content_case() == kMVContentCompositorOptions;
+// .protobuf.mozilla.layers.ContentCompositorOptions a_mVContentCompositorOptions = 1;
+inline bool CompositorBridgeOptions::_internal_has_a_mvcontentcompositoroptions() const {
+  return content_case() == kAMVContentCompositorOptions;
 }
-inline bool CompositorBridgeOptions::has_mvcontentcompositoroptions() const {
-  return _internal_has_mvcontentcompositoroptions();
+inline bool CompositorBridgeOptions::has_a_mvcontentcompositoroptions() const {
+  return _internal_has_a_mvcontentcompositoroptions();
 }
-inline void CompositorBridgeOptions::set_has_mvcontentcompositoroptions() {
-  _impl_._oneof_case_[0] = kMVContentCompositorOptions;
+inline void CompositorBridgeOptions::set_has_a_mvcontentcompositoroptions() {
+  _impl_._oneof_case_[0] = kAMVContentCompositorOptions;
 }
-inline void CompositorBridgeOptions::clear_mvcontentcompositoroptions() {
-  if (_internal_has_mvcontentcompositoroptions()) {
+inline void CompositorBridgeOptions::clear_a_mvcontentcompositoroptions() {
+  if (_internal_has_a_mvcontentcompositoroptions()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcontentcompositoroptions_;
+      delete _impl_.content_.a_mvcontentcompositoroptions_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::release_mvcontentcompositoroptions() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.CompositorBridgeOptions.mVContentCompositorOptions)
-  if (_internal_has_mvcontentcompositoroptions()) {
+inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::release_a_mvcontentcompositoroptions() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVContentCompositorOptions)
+  if (_internal_has_a_mvcontentcompositoroptions()) {
     clear_has_content();
-    ::protobuf::mozilla::layers::ContentCompositorOptions* temp = _impl_.content_.mvcontentcompositoroptions_;
+    ::protobuf::mozilla::layers::ContentCompositorOptions* temp = _impl_.content_.a_mvcontentcompositoroptions_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcontentcompositoroptions_ = nullptr;
+    _impl_.content_.a_mvcontentcompositoroptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::layers::ContentCompositorOptions& CompositorBridgeOptions::_internal_mvcontentcompositoroptions() const {
-  return _internal_has_mvcontentcompositoroptions()
-      ? *_impl_.content_.mvcontentcompositoroptions_
+inline const ::protobuf::mozilla::layers::ContentCompositorOptions& CompositorBridgeOptions::_internal_a_mvcontentcompositoroptions() const {
+  return _internal_has_a_mvcontentcompositoroptions()
+      ? *_impl_.content_.a_mvcontentcompositoroptions_
       : reinterpret_cast< ::protobuf::mozilla::layers::ContentCompositorOptions&>(::protobuf::mozilla::layers::_ContentCompositorOptions_default_instance_);
 }
-inline const ::protobuf::mozilla::layers::ContentCompositorOptions& CompositorBridgeOptions::mvcontentcompositoroptions() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.CompositorBridgeOptions.mVContentCompositorOptions)
-  return _internal_mvcontentcompositoroptions();
+inline const ::protobuf::mozilla::layers::ContentCompositorOptions& CompositorBridgeOptions::a_mvcontentcompositoroptions() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVContentCompositorOptions)
+  return _internal_a_mvcontentcompositoroptions();
 }
-inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::unsafe_arena_release_mvcontentcompositoroptions() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.layers.CompositorBridgeOptions.mVContentCompositorOptions)
-  if (_internal_has_mvcontentcompositoroptions()) {
+inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::unsafe_arena_release_a_mvcontentcompositoroptions() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVContentCompositorOptions)
+  if (_internal_has_a_mvcontentcompositoroptions()) {
     clear_has_content();
-    ::protobuf::mozilla::layers::ContentCompositorOptions* temp = _impl_.content_.mvcontentcompositoroptions_;
-    _impl_.content_.mvcontentcompositoroptions_ = nullptr;
+    ::protobuf::mozilla::layers::ContentCompositorOptions* temp = _impl_.content_.a_mvcontentcompositoroptions_;
+    _impl_.content_.a_mvcontentcompositoroptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CompositorBridgeOptions::unsafe_arena_set_allocated_mvcontentcompositoroptions(::protobuf::mozilla::layers::ContentCompositorOptions* mvcontentcompositoroptions) {
+inline void CompositorBridgeOptions::unsafe_arena_set_allocated_a_mvcontentcompositoroptions(::protobuf::mozilla::layers::ContentCompositorOptions* a_mvcontentcompositoroptions) {
   clear_content();
-  if (mvcontentcompositoroptions) {
-    set_has_mvcontentcompositoroptions();
-    _impl_.content_.mvcontentcompositoroptions_ = mvcontentcompositoroptions;
+  if (a_mvcontentcompositoroptions) {
+    set_has_a_mvcontentcompositoroptions();
+    _impl_.content_.a_mvcontentcompositoroptions_ = a_mvcontentcompositoroptions;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.mVContentCompositorOptions)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVContentCompositorOptions)
 }
-inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::_internal_mutable_mvcontentcompositoroptions() {
-  if (!_internal_has_mvcontentcompositoroptions()) {
+inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::_internal_mutable_a_mvcontentcompositoroptions() {
+  if (!_internal_has_a_mvcontentcompositoroptions()) {
     clear_content();
-    set_has_mvcontentcompositoroptions();
-    _impl_.content_.mvcontentcompositoroptions_ = CreateMaybeMessage< ::protobuf::mozilla::layers::ContentCompositorOptions >(GetArenaForAllocation());
+    set_has_a_mvcontentcompositoroptions();
+    _impl_.content_.a_mvcontentcompositoroptions_ = CreateMaybeMessage< ::protobuf::mozilla::layers::ContentCompositorOptions >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcontentcompositoroptions_;
+  return _impl_.content_.a_mvcontentcompositoroptions_;
 }
-inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::mutable_mvcontentcompositoroptions() {
-  ::protobuf::mozilla::layers::ContentCompositorOptions* _msg = _internal_mutable_mvcontentcompositoroptions();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.CompositorBridgeOptions.mVContentCompositorOptions)
+inline ::protobuf::mozilla::layers::ContentCompositorOptions* CompositorBridgeOptions::mutable_a_mvcontentcompositoroptions() {
+  ::protobuf::mozilla::layers::ContentCompositorOptions* _msg = _internal_mutable_a_mvcontentcompositoroptions();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVContentCompositorOptions)
   return _msg;
 }
 
-// .protobuf.mozilla.layers.WidgetCompositorOptions mVWidgetCompositorOptions = 2;
-inline bool CompositorBridgeOptions::_internal_has_mvwidgetcompositoroptions() const {
-  return content_case() == kMVWidgetCompositorOptions;
+// .protobuf.mozilla.layers.WidgetCompositorOptions a_mVWidgetCompositorOptions = 2;
+inline bool CompositorBridgeOptions::_internal_has_a_mvwidgetcompositoroptions() const {
+  return content_case() == kAMVWidgetCompositorOptions;
 }
-inline bool CompositorBridgeOptions::has_mvwidgetcompositoroptions() const {
-  return _internal_has_mvwidgetcompositoroptions();
+inline bool CompositorBridgeOptions::has_a_mvwidgetcompositoroptions() const {
+  return _internal_has_a_mvwidgetcompositoroptions();
 }
-inline void CompositorBridgeOptions::set_has_mvwidgetcompositoroptions() {
-  _impl_._oneof_case_[0] = kMVWidgetCompositorOptions;
+inline void CompositorBridgeOptions::set_has_a_mvwidgetcompositoroptions() {
+  _impl_._oneof_case_[0] = kAMVWidgetCompositorOptions;
 }
-inline void CompositorBridgeOptions::clear_mvwidgetcompositoroptions() {
-  if (_internal_has_mvwidgetcompositoroptions()) {
+inline void CompositorBridgeOptions::clear_a_mvwidgetcompositoroptions() {
+  if (_internal_has_a_mvwidgetcompositoroptions()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvwidgetcompositoroptions_;
+      delete _impl_.content_.a_mvwidgetcompositoroptions_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::release_mvwidgetcompositoroptions() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.CompositorBridgeOptions.mVWidgetCompositorOptions)
-  if (_internal_has_mvwidgetcompositoroptions()) {
+inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::release_a_mvwidgetcompositoroptions() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVWidgetCompositorOptions)
+  if (_internal_has_a_mvwidgetcompositoroptions()) {
     clear_has_content();
-    ::protobuf::mozilla::layers::WidgetCompositorOptions* temp = _impl_.content_.mvwidgetcompositoroptions_;
+    ::protobuf::mozilla::layers::WidgetCompositorOptions* temp = _impl_.content_.a_mvwidgetcompositoroptions_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvwidgetcompositoroptions_ = nullptr;
+    _impl_.content_.a_mvwidgetcompositoroptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::layers::WidgetCompositorOptions& CompositorBridgeOptions::_internal_mvwidgetcompositoroptions() const {
-  return _internal_has_mvwidgetcompositoroptions()
-      ? *_impl_.content_.mvwidgetcompositoroptions_
+inline const ::protobuf::mozilla::layers::WidgetCompositorOptions& CompositorBridgeOptions::_internal_a_mvwidgetcompositoroptions() const {
+  return _internal_has_a_mvwidgetcompositoroptions()
+      ? *_impl_.content_.a_mvwidgetcompositoroptions_
       : reinterpret_cast< ::protobuf::mozilla::layers::WidgetCompositorOptions&>(::protobuf::mozilla::layers::_WidgetCompositorOptions_default_instance_);
 }
-inline const ::protobuf::mozilla::layers::WidgetCompositorOptions& CompositorBridgeOptions::mvwidgetcompositoroptions() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.CompositorBridgeOptions.mVWidgetCompositorOptions)
-  return _internal_mvwidgetcompositoroptions();
+inline const ::protobuf::mozilla::layers::WidgetCompositorOptions& CompositorBridgeOptions::a_mvwidgetcompositoroptions() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVWidgetCompositorOptions)
+  return _internal_a_mvwidgetcompositoroptions();
 }
-inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::unsafe_arena_release_mvwidgetcompositoroptions() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.layers.CompositorBridgeOptions.mVWidgetCompositorOptions)
-  if (_internal_has_mvwidgetcompositoroptions()) {
+inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::unsafe_arena_release_a_mvwidgetcompositoroptions() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVWidgetCompositorOptions)
+  if (_internal_has_a_mvwidgetcompositoroptions()) {
     clear_has_content();
-    ::protobuf::mozilla::layers::WidgetCompositorOptions* temp = _impl_.content_.mvwidgetcompositoroptions_;
-    _impl_.content_.mvwidgetcompositoroptions_ = nullptr;
+    ::protobuf::mozilla::layers::WidgetCompositorOptions* temp = _impl_.content_.a_mvwidgetcompositoroptions_;
+    _impl_.content_.a_mvwidgetcompositoroptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CompositorBridgeOptions::unsafe_arena_set_allocated_mvwidgetcompositoroptions(::protobuf::mozilla::layers::WidgetCompositorOptions* mvwidgetcompositoroptions) {
+inline void CompositorBridgeOptions::unsafe_arena_set_allocated_a_mvwidgetcompositoroptions(::protobuf::mozilla::layers::WidgetCompositorOptions* a_mvwidgetcompositoroptions) {
   clear_content();
-  if (mvwidgetcompositoroptions) {
-    set_has_mvwidgetcompositoroptions();
-    _impl_.content_.mvwidgetcompositoroptions_ = mvwidgetcompositoroptions;
+  if (a_mvwidgetcompositoroptions) {
+    set_has_a_mvwidgetcompositoroptions();
+    _impl_.content_.a_mvwidgetcompositoroptions_ = a_mvwidgetcompositoroptions;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.mVWidgetCompositorOptions)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVWidgetCompositorOptions)
 }
-inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::_internal_mutable_mvwidgetcompositoroptions() {
-  if (!_internal_has_mvwidgetcompositoroptions()) {
+inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::_internal_mutable_a_mvwidgetcompositoroptions() {
+  if (!_internal_has_a_mvwidgetcompositoroptions()) {
     clear_content();
-    set_has_mvwidgetcompositoroptions();
-    _impl_.content_.mvwidgetcompositoroptions_ = CreateMaybeMessage< ::protobuf::mozilla::layers::WidgetCompositorOptions >(GetArenaForAllocation());
+    set_has_a_mvwidgetcompositoroptions();
+    _impl_.content_.a_mvwidgetcompositoroptions_ = CreateMaybeMessage< ::protobuf::mozilla::layers::WidgetCompositorOptions >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvwidgetcompositoroptions_;
+  return _impl_.content_.a_mvwidgetcompositoroptions_;
 }
-inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::mutable_mvwidgetcompositoroptions() {
-  ::protobuf::mozilla::layers::WidgetCompositorOptions* _msg = _internal_mutable_mvwidgetcompositoroptions();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.CompositorBridgeOptions.mVWidgetCompositorOptions)
+inline ::protobuf::mozilla::layers::WidgetCompositorOptions* CompositorBridgeOptions::mutable_a_mvwidgetcompositoroptions() {
+  ::protobuf::mozilla::layers::WidgetCompositorOptions* _msg = _internal_mutable_a_mvwidgetcompositoroptions();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVWidgetCompositorOptions)
   return _msg;
 }
 
-// .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions mVSameProcessWidgetCompositorOptions = 3;
-inline bool CompositorBridgeOptions::_internal_has_mvsameprocesswidgetcompositoroptions() const {
-  return content_case() == kMVSameProcessWidgetCompositorOptions;
+// .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions a_mVSameProcessWidgetCompositorOptions = 3;
+inline bool CompositorBridgeOptions::_internal_has_a_mvsameprocesswidgetcompositoroptions() const {
+  return content_case() == kAMVSameProcessWidgetCompositorOptions;
 }
-inline bool CompositorBridgeOptions::has_mvsameprocesswidgetcompositoroptions() const {
-  return _internal_has_mvsameprocesswidgetcompositoroptions();
+inline bool CompositorBridgeOptions::has_a_mvsameprocesswidgetcompositoroptions() const {
+  return _internal_has_a_mvsameprocesswidgetcompositoroptions();
 }
-inline void CompositorBridgeOptions::set_has_mvsameprocesswidgetcompositoroptions() {
-  _impl_._oneof_case_[0] = kMVSameProcessWidgetCompositorOptions;
+inline void CompositorBridgeOptions::set_has_a_mvsameprocesswidgetcompositoroptions() {
+  _impl_._oneof_case_[0] = kAMVSameProcessWidgetCompositorOptions;
 }
-inline void CompositorBridgeOptions::clear_mvsameprocesswidgetcompositoroptions() {
-  if (_internal_has_mvsameprocesswidgetcompositoroptions()) {
+inline void CompositorBridgeOptions::clear_a_mvsameprocesswidgetcompositoroptions() {
+  if (_internal_has_a_mvsameprocesswidgetcompositoroptions()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsameprocesswidgetcompositoroptions_;
+      delete _impl_.content_.a_mvsameprocesswidgetcompositoroptions_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::release_mvsameprocesswidgetcompositoroptions() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.CompositorBridgeOptions.mVSameProcessWidgetCompositorOptions)
-  if (_internal_has_mvsameprocesswidgetcompositoroptions()) {
+inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::release_a_mvsameprocesswidgetcompositoroptions() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVSameProcessWidgetCompositorOptions)
+  if (_internal_has_a_mvsameprocesswidgetcompositoroptions()) {
     clear_has_content();
-    ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* temp = _impl_.content_.mvsameprocesswidgetcompositoroptions_;
+    ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* temp = _impl_.content_.a_mvsameprocesswidgetcompositoroptions_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsameprocesswidgetcompositoroptions_ = nullptr;
+    _impl_.content_.a_mvsameprocesswidgetcompositoroptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& CompositorBridgeOptions::_internal_mvsameprocesswidgetcompositoroptions() const {
-  return _internal_has_mvsameprocesswidgetcompositoroptions()
-      ? *_impl_.content_.mvsameprocesswidgetcompositoroptions_
+inline const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& CompositorBridgeOptions::_internal_a_mvsameprocesswidgetcompositoroptions() const {
+  return _internal_has_a_mvsameprocesswidgetcompositoroptions()
+      ? *_impl_.content_.a_mvsameprocesswidgetcompositoroptions_
       : reinterpret_cast< ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions&>(::protobuf::mozilla::layers::_SameProcessWidgetCompositorOptions_default_instance_);
 }
-inline const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& CompositorBridgeOptions::mvsameprocesswidgetcompositoroptions() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.CompositorBridgeOptions.mVSameProcessWidgetCompositorOptions)
-  return _internal_mvsameprocesswidgetcompositoroptions();
+inline const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& CompositorBridgeOptions::a_mvsameprocesswidgetcompositoroptions() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVSameProcessWidgetCompositorOptions)
+  return _internal_a_mvsameprocesswidgetcompositoroptions();
 }
-inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::unsafe_arena_release_mvsameprocesswidgetcompositoroptions() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.layers.CompositorBridgeOptions.mVSameProcessWidgetCompositorOptions)
-  if (_internal_has_mvsameprocesswidgetcompositoroptions()) {
+inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::unsafe_arena_release_a_mvsameprocesswidgetcompositoroptions() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVSameProcessWidgetCompositorOptions)
+  if (_internal_has_a_mvsameprocesswidgetcompositoroptions()) {
     clear_has_content();
-    ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* temp = _impl_.content_.mvsameprocesswidgetcompositoroptions_;
-    _impl_.content_.mvsameprocesswidgetcompositoroptions_ = nullptr;
+    ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* temp = _impl_.content_.a_mvsameprocesswidgetcompositoroptions_;
+    _impl_.content_.a_mvsameprocesswidgetcompositoroptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CompositorBridgeOptions::unsafe_arena_set_allocated_mvsameprocesswidgetcompositoroptions(::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mvsameprocesswidgetcompositoroptions) {
+inline void CompositorBridgeOptions::unsafe_arena_set_allocated_a_mvsameprocesswidgetcompositoroptions(::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* a_mvsameprocesswidgetcompositoroptions) {
   clear_content();
-  if (mvsameprocesswidgetcompositoroptions) {
-    set_has_mvsameprocesswidgetcompositoroptions();
-    _impl_.content_.mvsameprocesswidgetcompositoroptions_ = mvsameprocesswidgetcompositoroptions;
+  if (a_mvsameprocesswidgetcompositoroptions) {
+    set_has_a_mvsameprocesswidgetcompositoroptions();
+    _impl_.content_.a_mvsameprocesswidgetcompositoroptions_ = a_mvsameprocesswidgetcompositoroptions;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.mVSameProcessWidgetCompositorOptions)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVSameProcessWidgetCompositorOptions)
 }
-inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::_internal_mutable_mvsameprocesswidgetcompositoroptions() {
-  if (!_internal_has_mvsameprocesswidgetcompositoroptions()) {
+inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::_internal_mutable_a_mvsameprocesswidgetcompositoroptions() {
+  if (!_internal_has_a_mvsameprocesswidgetcompositoroptions()) {
     clear_content();
-    set_has_mvsameprocesswidgetcompositoroptions();
-    _impl_.content_.mvsameprocesswidgetcompositoroptions_ = CreateMaybeMessage< ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions >(GetArenaForAllocation());
+    set_has_a_mvsameprocesswidgetcompositoroptions();
+    _impl_.content_.a_mvsameprocesswidgetcompositoroptions_ = CreateMaybeMessage< ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsameprocesswidgetcompositoroptions_;
+  return _impl_.content_.a_mvsameprocesswidgetcompositoroptions_;
 }
-inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::mutable_mvsameprocesswidgetcompositoroptions() {
-  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* _msg = _internal_mutable_mvsameprocesswidgetcompositoroptions();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.CompositorBridgeOptions.mVSameProcessWidgetCompositorOptions)
+inline ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* CompositorBridgeOptions::mutable_a_mvsameprocesswidgetcompositoroptions() {
+  ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* _msg = _internal_mutable_a_mvsameprocesswidgetcompositoroptions();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVSameProcessWidgetCompositorOptions)
   return _msg;
 }
 

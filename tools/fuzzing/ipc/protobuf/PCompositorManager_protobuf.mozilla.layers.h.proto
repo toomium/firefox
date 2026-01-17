@@ -14,12 +14,12 @@ import "LayersSurfaces.proto";
 
 // Structs and unions declarations
 message WidgetCompositorOptions {
-  required bytes scale = 1;
-  required bytes vsyncRate = 2;
-  required bytes options = 3;
-  required bool useExternalSurfaceSize = 4;
-  required bytes surfaceSize = 5;
-  required uint64 innerWindowId = 6;
+  required bytes a_scale = 1;
+  required bytes a_vsyncRate = 2;
+  required bytes a_options = 3;
+  required bool a_useExternalSurfaceSize = 4;
+  required bytes a_surfaceSize = 5;
+  required uint64 a_innerWindowId = 6;
 }
 
 message ContentCompositorOptions {
@@ -30,8 +30,8 @@ message SameProcessWidgetCompositorOptions {
 
 message CompositorBridgeOptions {
   oneof content {
-    protobuf.mozilla.layers.ContentCompositorOptions mVContentCompositorOptions = 1;
-    protobuf.mozilla.layers.WidgetCompositorOptions mVWidgetCompositorOptions = 2;
-    protobuf.mozilla.layers.SameProcessWidgetCompositorOptions mVSameProcessWidgetCompositorOptions = 3;
+    protobuf.mozilla.layers.ContentCompositorOptions a_mVContentCompositorOptions = 1;
+    protobuf.mozilla.layers.WidgetCompositorOptions a_mVWidgetCompositorOptions = 2;
+    protobuf.mozilla.layers.SameProcessWidgetCompositorOptions a_mVSameProcessWidgetCompositorOptions = 3;
   }
 }

@@ -21,8 +21,8 @@ message Msg_Teardown {
 }
 
 message Msg_PostMessage {
-  required protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
-  required protobuf.mozilla.dom.PostMessageSource aSource = 2;
+  required protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
+  required protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
 }
 
 message Msg___delete__ {

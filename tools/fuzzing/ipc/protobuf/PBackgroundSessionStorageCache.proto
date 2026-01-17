@@ -24,11 +24,11 @@ message Msg_Load {
 }
 
 message Reply_Load {
-  repeated protobuf.mozilla.dom.SSSetItemInfo aData = 1;
+  repeated protobuf.mozilla.dom.SSSetItemInfo a_aData = 1;
 }
 
 message Msg_Checkpoint {
-  repeated protobuf.mozilla.dom.SSWriteInfo aWriteInfos = 1;
+  repeated protobuf.mozilla.dom.SSWriteInfo a_aWriteInfos = 1;
 }
 
 message Msg___delete__ {

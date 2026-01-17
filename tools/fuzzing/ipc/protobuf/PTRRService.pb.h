@@ -214,24 +214,24 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATopicFieldNumber = 1,
+    kAATopicFieldNumber = 1,
   };
-  // required bytes aTopic = 1;
-  bool has_atopic() const;
+  // required bytes a_aTopic = 1;
+  bool has_a_atopic() const;
   private:
-  bool _internal_has_atopic() const;
+  bool _internal_has_a_atopic() const;
   public:
-  void clear_atopic();
-  const std::string& atopic() const;
+  void clear_a_atopic();
+  const std::string& a_atopic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atopic(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atopic();
-  PROTOBUF_NODISCARD std::string* release_atopic();
-  void set_allocated_atopic(std::string* atopic);
+  void set_a_atopic(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atopic();
+  PROTOBUF_NODISCARD std::string* release_a_atopic();
+  void set_allocated_a_atopic(std::string* a_atopic);
   private:
-  const std::string& _internal_atopic() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atopic(const std::string& value);
-  std::string* _internal_mutable_atopic();
+  const std::string& _internal_a_atopic() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atopic(const std::string& value);
+  std::string* _internal_mutable_a_atopic();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers)
@@ -244,7 +244,7 @@ class Msg_NotifyNetworkConnectivityServiceObservers final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atopic_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atopic_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -485,19 +485,19 @@ class Msg_SetConfirmationState final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kANewStateFieldNumber = 1,
+    kAANewStateFieldNumber = 1,
   };
-  // required uint32 aNewState = 1;
-  bool has_anewstate() const;
+  // required uint32 a_aNewState = 1;
+  bool has_a_anewstate() const;
   private:
-  bool _internal_has_anewstate() const;
+  bool _internal_has_a_anewstate() const;
   public:
-  void clear_anewstate();
-  uint32_t anewstate() const;
-  void set_anewstate(uint32_t value);
+  void clear_a_anewstate();
+  uint32_t a_anewstate() const;
+  void set_a_anewstate(uint32_t value);
   private:
-  uint32_t _internal_anewstate() const;
-  void _internal_set_anewstate(uint32_t value);
+  uint32_t _internal_a_anewstate() const;
+  void _internal_set_a_anewstate(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_SetConfirmationState)
@@ -510,7 +510,7 @@ class Msg_SetConfirmationState final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t anewstate_;
+    uint32_t a_anewstate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -875,30 +875,30 @@ class Msg_UpdatePlatformDNSInformation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASuffixListFieldNumber = 1,
+    kAASuffixListFieldNumber = 1,
   };
-  // repeated bytes aSuffixList = 1;
-  int asuffixlist_size() const;
+  // repeated bytes a_aSuffixList = 1;
+  int a_asuffixlist_size() const;
   private:
-  int _internal_asuffixlist_size() const;
+  int _internal_a_asuffixlist_size() const;
   public:
-  void clear_asuffixlist();
-  const std::string& asuffixlist(int index) const;
-  std::string* mutable_asuffixlist(int index);
-  void set_asuffixlist(int index, const std::string& value);
-  void set_asuffixlist(int index, std::string&& value);
-  void set_asuffixlist(int index, const char* value);
-  void set_asuffixlist(int index, const void* value, size_t size);
-  std::string* add_asuffixlist();
-  void add_asuffixlist(const std::string& value);
-  void add_asuffixlist(std::string&& value);
-  void add_asuffixlist(const char* value);
-  void add_asuffixlist(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& asuffixlist() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_asuffixlist();
+  void clear_a_asuffixlist();
+  const std::string& a_asuffixlist(int index) const;
+  std::string* mutable_a_asuffixlist(int index);
+  void set_a_asuffixlist(int index, const std::string& value);
+  void set_a_asuffixlist(int index, std::string&& value);
+  void set_a_asuffixlist(int index, const char* value);
+  void set_a_asuffixlist(int index, const void* value, size_t size);
+  std::string* add_a_asuffixlist();
+  void add_a_asuffixlist(const std::string& value);
+  void add_a_asuffixlist(std::string&& value);
+  void add_a_asuffixlist(const char* value);
+  void add_a_asuffixlist(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_asuffixlist() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_asuffixlist();
   private:
-  const std::string& _internal_asuffixlist(int index) const;
-  std::string* _internal_add_asuffixlist();
+  const std::string& _internal_a_asuffixlist(int index) const;
+  std::string* _internal_add_a_asuffixlist();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation)
@@ -909,7 +909,7 @@ class Msg_UpdatePlatformDNSInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> asuffixlist_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_asuffixlist_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1027,19 +1027,19 @@ class Msg_UpdateParentalControlEnabled final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEnabledFieldNumber = 1,
+    kAAEnabledFieldNumber = 1,
   };
-  // required bool aEnabled = 1;
-  bool has_aenabled() const;
+  // required bool a_aEnabled = 1;
+  bool has_a_aenabled() const;
   private:
-  bool _internal_has_aenabled() const;
+  bool _internal_has_a_aenabled() const;
   public:
-  void clear_aenabled();
-  bool aenabled() const;
-  void set_aenabled(bool value);
+  void clear_a_aenabled();
+  bool a_aenabled() const;
+  void set_a_aenabled(bool value);
   private:
-  bool _internal_aenabled() const;
-  void _internal_set_aenabled(bool value);
+  bool _internal_a_aenabled() const;
+  void _internal_set_a_aenabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_UpdateParentalControlEnabled)
@@ -1052,7 +1052,7 @@ class Msg_UpdateParentalControlEnabled final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aenabled_;
+    bool a_aenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1169,19 +1169,19 @@ class Msg_ClearDNSCache final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATrrTooFieldNumber = 1,
+    kAATrrTooFieldNumber = 1,
   };
-  // required bool aTrrToo = 1;
-  bool has_atrrtoo() const;
+  // required bool a_aTrrToo = 1;
+  bool has_a_atrrtoo() const;
   private:
-  bool _internal_has_atrrtoo() const;
+  bool _internal_has_a_atrrtoo() const;
   public:
-  void clear_atrrtoo();
-  bool atrrtoo() const;
-  void set_atrrtoo(bool value);
+  void clear_a_atrrtoo();
+  bool a_atrrtoo() const;
+  void set_a_atrrtoo(bool value);
   private:
-  bool _internal_atrrtoo() const;
-  void _internal_set_atrrtoo(bool value);
+  bool _internal_a_atrrtoo() const;
+  void _internal_set_a_atrrtoo(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_ClearDNSCache)
@@ -1194,7 +1194,7 @@ class Msg_ClearDNSCache final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool atrrtoo_;
+    bool a_atrrtoo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1311,24 +1311,24 @@ class Msg_SetDetectedTrrURI final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAURIFieldNumber = 1,
+    kAAURIFieldNumber = 1,
   };
-  // required bytes aURI = 1;
-  bool has_auri() const;
+  // required bytes a_aURI = 1;
+  bool has_a_auri() const;
   private:
-  bool _internal_has_auri() const;
+  bool _internal_has_a_auri() const;
   public:
-  void clear_auri();
-  const std::string& auri() const;
+  void clear_a_auri();
+  const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_auri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_auri();
-  PROTOBUF_NODISCARD std::string* release_auri();
-  void set_allocated_auri(std::string* auri);
+  void set_a_auri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_auri();
+  PROTOBUF_NODISCARD std::string* release_a_auri();
+  void set_allocated_a_auri(std::string* a_auri);
   private:
-  const std::string& _internal_auri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_auri(const std::string& value);
-  std::string* _internal_mutable_auri();
+  const std::string& _internal_a_auri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_auri(const std::string& value);
+  std::string* _internal_mutable_a_auri();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI)
@@ -1341,7 +1341,7 @@ class Msg_SetDetectedTrrURI final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr auri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1458,25 +1458,25 @@ class Msg_SetDefaultTRRConnectionInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAConnInfoArgsFieldNumber = 1,
+    kAAConnInfoArgsFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.net.HttpConnectionInfoCloneArgs aConnInfoArgs = 1;
-  bool has_aconninfoargs() const;
+  // optional .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfoArgs = 1;
+  bool has_a_aconninfoargs() const;
   private:
-  bool _internal_has_aconninfoargs() const;
+  bool _internal_has_a_aconninfoargs() const;
   public:
-  void clear_aconninfoargs();
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& aconninfoargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_aconninfoargs();
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_aconninfoargs();
-  void set_allocated_aconninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfoargs);
+  void clear_a_aconninfoargs();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& a_aconninfoargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_a_aconninfoargs();
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_a_aconninfoargs();
+  void set_allocated_a_aconninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfoargs);
   private:
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_aconninfoargs() const;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_aconninfoargs();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_a_aconninfoargs() const;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_a_aconninfoargs();
   public:
-  void unsafe_arena_set_allocated_aconninfoargs(
-      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfoargs);
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_aconninfoargs();
+  void unsafe_arena_set_allocated_a_aconninfoargs(
+      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfoargs);
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_aconninfoargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo)
  private:
@@ -1488,7 +1488,7 @@ class Msg_SetDefaultTRRConnectionInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfoargs_;
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfoargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTRRService_2eproto;
@@ -1605,30 +1605,30 @@ class Msg_UpdateEtcHosts final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHostsFieldNumber = 1,
+    kAAHostsFieldNumber = 1,
   };
-  // repeated bytes aHosts = 1;
-  int ahosts_size() const;
+  // repeated bytes a_aHosts = 1;
+  int a_ahosts_size() const;
   private:
-  int _internal_ahosts_size() const;
+  int _internal_a_ahosts_size() const;
   public:
-  void clear_ahosts();
-  const std::string& ahosts(int index) const;
-  std::string* mutable_ahosts(int index);
-  void set_ahosts(int index, const std::string& value);
-  void set_ahosts(int index, std::string&& value);
-  void set_ahosts(int index, const char* value);
-  void set_ahosts(int index, const void* value, size_t size);
-  std::string* add_ahosts();
-  void add_ahosts(const std::string& value);
-  void add_ahosts(std::string&& value);
-  void add_ahosts(const char* value);
-  void add_ahosts(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& ahosts() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_ahosts();
+  void clear_a_ahosts();
+  const std::string& a_ahosts(int index) const;
+  std::string* mutable_a_ahosts(int index);
+  void set_a_ahosts(int index, const std::string& value);
+  void set_a_ahosts(int index, std::string&& value);
+  void set_a_ahosts(int index, const char* value);
+  void set_a_ahosts(int index, const void* value, size_t size);
+  std::string* add_a_ahosts();
+  void add_a_ahosts(const std::string& value);
+  void add_a_ahosts(std::string&& value);
+  void add_a_ahosts(const char* value);
+  void add_a_ahosts(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_ahosts() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_ahosts();
   private:
-  const std::string& _internal_ahosts(int index) const;
-  std::string* _internal_add_ahosts();
+  const std::string& _internal_a_ahosts(int index) const;
+  std::string* _internal_add_a_ahosts();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts)
@@ -1639,7 +1639,7 @@ class Msg_UpdateEtcHosts final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> ahosts_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_ahosts_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1656,72 +1656,72 @@ class Msg_UpdateEtcHosts final :
 #endif  // __GNUC__
 // Msg_NotifyNetworkConnectivityServiceObservers
 
-// required bytes aTopic = 1;
-inline bool Msg_NotifyNetworkConnectivityServiceObservers::_internal_has_atopic() const {
+// required bytes a_aTopic = 1;
+inline bool Msg_NotifyNetworkConnectivityServiceObservers::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyNetworkConnectivityServiceObservers::has_atopic() const {
-  return _internal_has_atopic();
+inline bool Msg_NotifyNetworkConnectivityServiceObservers::has_a_atopic() const {
+  return _internal_has_a_atopic();
 }
-inline void Msg_NotifyNetworkConnectivityServiceObservers::clear_atopic() {
-  _impl_.atopic_.ClearToEmpty();
+inline void Msg_NotifyNetworkConnectivityServiceObservers::clear_a_atopic() {
+  _impl_.a_atopic_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::atopic() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.aTopic)
-  return _internal_atopic();
+inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::a_atopic() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
+  return _internal_a_atopic();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyNetworkConnectivityServiceObservers::set_atopic(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyNetworkConnectivityServiceObservers::set_a_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.aTopic)
+ _impl_.a_atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
 }
-inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::mutable_atopic() {
-  std::string* _s = _internal_mutable_atopic();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.aTopic)
+inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::mutable_a_atopic() {
+  std::string* _s = _internal_mutable_a_atopic();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
   return _s;
 }
-inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::_internal_atopic() const {
-  return _impl_.atopic_.Get();
+inline const std::string& Msg_NotifyNetworkConnectivityServiceObservers::_internal_a_atopic() const {
+  return _impl_.a_atopic_.Get();
 }
-inline void Msg_NotifyNetworkConnectivityServiceObservers::_internal_set_atopic(const std::string& value) {
+inline void Msg_NotifyNetworkConnectivityServiceObservers::_internal_set_a_atopic(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atopic_.Set(value, GetArenaForAllocation());
+  _impl_.a_atopic_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::_internal_mutable_atopic() {
+inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::_internal_mutable_a_atopic() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atopic_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atopic_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::release_atopic() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.aTopic)
-  if (!_internal_has_atopic()) {
+inline std::string* Msg_NotifyNetworkConnectivityServiceObservers::release_a_atopic() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
+  if (!_internal_has_a_atopic()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atopic_.Release();
+  auto* p = _impl_.a_atopic_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atopic_.IsDefault()) {
-    _impl_.atopic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atopic_.IsDefault()) {
+    _impl_.a_atopic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyNetworkConnectivityServiceObservers::set_allocated_atopic(std::string* atopic) {
-  if (atopic != nullptr) {
+inline void Msg_NotifyNetworkConnectivityServiceObservers::set_allocated_a_atopic(std::string* a_atopic) {
+  if (a_atopic != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atopic_.SetAllocated(atopic, GetArenaForAllocation());
+  _impl_.a_atopic_.SetAllocated(a_atopic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atopic_.IsDefault()) {
-    _impl_.atopic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atopic_.IsDefault()) {
+    _impl_.a_atopic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.aTopic)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers.a_aTopic)
 }
 
 // -------------------------------------------------------------------
@@ -1732,32 +1732,32 @@ inline void Msg_NotifyNetworkConnectivityServiceObservers::set_allocated_atopic(
 
 // Msg_SetConfirmationState
 
-// required uint32 aNewState = 1;
-inline bool Msg_SetConfirmationState::_internal_has_anewstate() const {
+// required uint32 a_aNewState = 1;
+inline bool Msg_SetConfirmationState::_internal_has_a_anewstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetConfirmationState::has_anewstate() const {
-  return _internal_has_anewstate();
+inline bool Msg_SetConfirmationState::has_a_anewstate() const {
+  return _internal_has_a_anewstate();
 }
-inline void Msg_SetConfirmationState::clear_anewstate() {
-  _impl_.anewstate_ = 0u;
+inline void Msg_SetConfirmationState::clear_a_anewstate() {
+  _impl_.a_anewstate_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetConfirmationState::_internal_anewstate() const {
-  return _impl_.anewstate_;
+inline uint32_t Msg_SetConfirmationState::_internal_a_anewstate() const {
+  return _impl_.a_anewstate_;
 }
-inline uint32_t Msg_SetConfirmationState::anewstate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetConfirmationState.aNewState)
-  return _internal_anewstate();
+inline uint32_t Msg_SetConfirmationState::a_anewstate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetConfirmationState.a_aNewState)
+  return _internal_a_anewstate();
 }
-inline void Msg_SetConfirmationState::_internal_set_anewstate(uint32_t value) {
+inline void Msg_SetConfirmationState::_internal_set_a_anewstate(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.anewstate_ = value;
+  _impl_.a_anewstate_ = value;
 }
-inline void Msg_SetConfirmationState::set_anewstate(uint32_t value) {
-  _internal_set_anewstate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_SetConfirmationState.aNewState)
+inline void Msg_SetConfirmationState::set_a_anewstate(uint32_t value) {
+  _internal_set_a_anewstate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_SetConfirmationState.a_aNewState)
 }
 
 // -------------------------------------------------------------------
@@ -1772,256 +1772,256 @@ inline void Msg_SetConfirmationState::set_anewstate(uint32_t value) {
 
 // Msg_UpdatePlatformDNSInformation
 
-// repeated bytes aSuffixList = 1;
-inline int Msg_UpdatePlatformDNSInformation::_internal_asuffixlist_size() const {
-  return _impl_.asuffixlist_.size();
+// repeated bytes a_aSuffixList = 1;
+inline int Msg_UpdatePlatformDNSInformation::_internal_a_asuffixlist_size() const {
+  return _impl_.a_asuffixlist_.size();
 }
-inline int Msg_UpdatePlatformDNSInformation::asuffixlist_size() const {
-  return _internal_asuffixlist_size();
+inline int Msg_UpdatePlatformDNSInformation::a_asuffixlist_size() const {
+  return _internal_a_asuffixlist_size();
 }
-inline void Msg_UpdatePlatformDNSInformation::clear_asuffixlist() {
-  _impl_.asuffixlist_.Clear();
+inline void Msg_UpdatePlatformDNSInformation::clear_a_asuffixlist() {
+  _impl_.a_asuffixlist_.Clear();
 }
-inline std::string* Msg_UpdatePlatformDNSInformation::add_asuffixlist() {
-  std::string* _s = _internal_add_asuffixlist();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+inline std::string* Msg_UpdatePlatformDNSInformation::add_a_asuffixlist() {
+  std::string* _s = _internal_add_a_asuffixlist();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
   return _s;
 }
-inline const std::string& Msg_UpdatePlatformDNSInformation::_internal_asuffixlist(int index) const {
-  return _impl_.asuffixlist_.Get(index);
+inline const std::string& Msg_UpdatePlatformDNSInformation::_internal_a_asuffixlist(int index) const {
+  return _impl_.a_asuffixlist_.Get(index);
 }
-inline const std::string& Msg_UpdatePlatformDNSInformation::asuffixlist(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
-  return _internal_asuffixlist(index);
+inline const std::string& Msg_UpdatePlatformDNSInformation::a_asuffixlist(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
+  return _internal_a_asuffixlist(index);
 }
-inline std::string* Msg_UpdatePlatformDNSInformation::mutable_asuffixlist(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
-  return _impl_.asuffixlist_.Mutable(index);
+inline std::string* Msg_UpdatePlatformDNSInformation::mutable_a_asuffixlist(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
+  return _impl_.a_asuffixlist_.Mutable(index);
 }
-inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, const std::string& value) {
-  _impl_.asuffixlist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+inline void Msg_UpdatePlatformDNSInformation::set_a_asuffixlist(int index, const std::string& value) {
+  _impl_.a_asuffixlist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, std::string&& value) {
-  _impl_.asuffixlist_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+inline void Msg_UpdatePlatformDNSInformation::set_a_asuffixlist(int index, std::string&& value) {
+  _impl_.a_asuffixlist_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, const char* value) {
+inline void Msg_UpdatePlatformDNSInformation::set_a_asuffixlist(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.asuffixlist_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+  _impl_.a_asuffixlist_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::set_asuffixlist(int index, const void* value, size_t size) {
-  _impl_.asuffixlist_.Mutable(index)->assign(
+inline void Msg_UpdatePlatformDNSInformation::set_a_asuffixlist(int index, const void* value, size_t size) {
+  _impl_.a_asuffixlist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline std::string* Msg_UpdatePlatformDNSInformation::_internal_add_asuffixlist() {
-  return _impl_.asuffixlist_.Add();
+inline std::string* Msg_UpdatePlatformDNSInformation::_internal_add_a_asuffixlist() {
+  return _impl_.a_asuffixlist_.Add();
 }
-inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(const std::string& value) {
-  _impl_.asuffixlist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+inline void Msg_UpdatePlatformDNSInformation::add_a_asuffixlist(const std::string& value) {
+  _impl_.a_asuffixlist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(std::string&& value) {
-  _impl_.asuffixlist_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+inline void Msg_UpdatePlatformDNSInformation::add_a_asuffixlist(std::string&& value) {
+  _impl_.a_asuffixlist_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(const char* value) {
+inline void Msg_UpdatePlatformDNSInformation::add_a_asuffixlist(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.asuffixlist_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+  _impl_.a_asuffixlist_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
-inline void Msg_UpdatePlatformDNSInformation::add_asuffixlist(const void* value, size_t size) {
-  _impl_.asuffixlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
+inline void Msg_UpdatePlatformDNSInformation::add_a_asuffixlist(const void* value, size_t size) {
+  _impl_.a_asuffixlist_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_UpdatePlatformDNSInformation::asuffixlist() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
-  return _impl_.asuffixlist_;
+Msg_UpdatePlatformDNSInformation::a_asuffixlist() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
+  return _impl_.a_asuffixlist_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_UpdatePlatformDNSInformation::mutable_asuffixlist() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.aSuffixList)
-  return &_impl_.asuffixlist_;
+Msg_UpdatePlatformDNSInformation::mutable_a_asuffixlist() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PTRRService.Msg_UpdatePlatformDNSInformation.a_aSuffixList)
+  return &_impl_.a_asuffixlist_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateParentalControlEnabled
 
-// required bool aEnabled = 1;
-inline bool Msg_UpdateParentalControlEnabled::_internal_has_aenabled() const {
+// required bool a_aEnabled = 1;
+inline bool Msg_UpdateParentalControlEnabled::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateParentalControlEnabled::has_aenabled() const {
-  return _internal_has_aenabled();
+inline bool Msg_UpdateParentalControlEnabled::has_a_aenabled() const {
+  return _internal_has_a_aenabled();
 }
-inline void Msg_UpdateParentalControlEnabled::clear_aenabled() {
-  _impl_.aenabled_ = false;
+inline void Msg_UpdateParentalControlEnabled::clear_a_aenabled() {
+  _impl_.a_aenabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_UpdateParentalControlEnabled::_internal_aenabled() const {
-  return _impl_.aenabled_;
+inline bool Msg_UpdateParentalControlEnabled::_internal_a_aenabled() const {
+  return _impl_.a_aenabled_;
 }
-inline bool Msg_UpdateParentalControlEnabled::aenabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_UpdateParentalControlEnabled.aEnabled)
-  return _internal_aenabled();
+inline bool Msg_UpdateParentalControlEnabled::a_aenabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_UpdateParentalControlEnabled.a_aEnabled)
+  return _internal_a_aenabled();
 }
-inline void Msg_UpdateParentalControlEnabled::_internal_set_aenabled(bool value) {
+inline void Msg_UpdateParentalControlEnabled::_internal_set_a_aenabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aenabled_ = value;
+  _impl_.a_aenabled_ = value;
 }
-inline void Msg_UpdateParentalControlEnabled::set_aenabled(bool value) {
-  _internal_set_aenabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdateParentalControlEnabled.aEnabled)
+inline void Msg_UpdateParentalControlEnabled::set_a_aenabled(bool value) {
+  _internal_set_a_aenabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdateParentalControlEnabled.a_aEnabled)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ClearDNSCache
 
-// required bool aTrrToo = 1;
-inline bool Msg_ClearDNSCache::_internal_has_atrrtoo() const {
+// required bool a_aTrrToo = 1;
+inline bool Msg_ClearDNSCache::_internal_has_a_atrrtoo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ClearDNSCache::has_atrrtoo() const {
-  return _internal_has_atrrtoo();
+inline bool Msg_ClearDNSCache::has_a_atrrtoo() const {
+  return _internal_has_a_atrrtoo();
 }
-inline void Msg_ClearDNSCache::clear_atrrtoo() {
-  _impl_.atrrtoo_ = false;
+inline void Msg_ClearDNSCache::clear_a_atrrtoo() {
+  _impl_.a_atrrtoo_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_ClearDNSCache::_internal_atrrtoo() const {
-  return _impl_.atrrtoo_;
+inline bool Msg_ClearDNSCache::_internal_a_atrrtoo() const {
+  return _impl_.a_atrrtoo_;
 }
-inline bool Msg_ClearDNSCache::atrrtoo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_ClearDNSCache.aTrrToo)
-  return _internal_atrrtoo();
+inline bool Msg_ClearDNSCache::a_atrrtoo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_ClearDNSCache.a_aTrrToo)
+  return _internal_a_atrrtoo();
 }
-inline void Msg_ClearDNSCache::_internal_set_atrrtoo(bool value) {
+inline void Msg_ClearDNSCache::_internal_set_a_atrrtoo(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atrrtoo_ = value;
+  _impl_.a_atrrtoo_ = value;
 }
-inline void Msg_ClearDNSCache::set_atrrtoo(bool value) {
-  _internal_set_atrrtoo(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_ClearDNSCache.aTrrToo)
+inline void Msg_ClearDNSCache::set_a_atrrtoo(bool value) {
+  _internal_set_a_atrrtoo(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_ClearDNSCache.a_aTrrToo)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetDetectedTrrURI
 
-// required bytes aURI = 1;
-inline bool Msg_SetDetectedTrrURI::_internal_has_auri() const {
+// required bytes a_aURI = 1;
+inline bool Msg_SetDetectedTrrURI::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetDetectedTrrURI::has_auri() const {
-  return _internal_has_auri();
+inline bool Msg_SetDetectedTrrURI::has_a_auri() const {
+  return _internal_has_a_auri();
 }
-inline void Msg_SetDetectedTrrURI::clear_auri() {
-  _impl_.auri_.ClearToEmpty();
+inline void Msg_SetDetectedTrrURI::clear_a_auri() {
+  _impl_.a_auri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SetDetectedTrrURI::auri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.aURI)
-  return _internal_auri();
+inline const std::string& Msg_SetDetectedTrrURI::a_auri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
+  return _internal_a_auri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetDetectedTrrURI::set_auri(ArgT0&& arg0, ArgT... args) {
+void Msg_SetDetectedTrrURI::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.aURI)
+ _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
 }
-inline std::string* Msg_SetDetectedTrrURI::mutable_auri() {
-  std::string* _s = _internal_mutable_auri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.aURI)
+inline std::string* Msg_SetDetectedTrrURI::mutable_a_auri() {
+  std::string* _s = _internal_mutable_a_auri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
   return _s;
 }
-inline const std::string& Msg_SetDetectedTrrURI::_internal_auri() const {
-  return _impl_.auri_.Get();
+inline const std::string& Msg_SetDetectedTrrURI::_internal_a_auri() const {
+  return _impl_.a_auri_.Get();
 }
-inline void Msg_SetDetectedTrrURI::_internal_set_auri(const std::string& value) {
+inline void Msg_SetDetectedTrrURI::_internal_set_a_auri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.auri_.Set(value, GetArenaForAllocation());
+  _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetDetectedTrrURI::_internal_mutable_auri() {
+inline std::string* Msg_SetDetectedTrrURI::_internal_mutable_a_auri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.auri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetDetectedTrrURI::release_auri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.aURI)
-  if (!_internal_has_auri()) {
+inline std::string* Msg_SetDetectedTrrURI::release_a_auri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
+  if (!_internal_has_a_auri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.auri_.Release();
+  auto* p = _impl_.a_auri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetDetectedTrrURI::set_allocated_auri(std::string* auri) {
-  if (auri != nullptr) {
+inline void Msg_SetDetectedTrrURI::set_allocated_a_auri(std::string* a_auri) {
+  if (a_auri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.auri_.SetAllocated(auri, GetArenaForAllocation());
+  _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.aURI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI.a_aURI)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetDefaultTRRConnectionInfo
 
-// optional .protobuf.mozilla.net.HttpConnectionInfoCloneArgs aConnInfoArgs = 1;
-inline bool Msg_SetDefaultTRRConnectionInfo::_internal_has_aconninfoargs() const {
+// optional .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfoArgs = 1;
+inline bool Msg_SetDefaultTRRConnectionInfo::_internal_has_a_aconninfoargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aconninfoargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aconninfoargs_ != nullptr);
   return value;
 }
-inline bool Msg_SetDefaultTRRConnectionInfo::has_aconninfoargs() const {
-  return _internal_has_aconninfoargs();
+inline bool Msg_SetDefaultTRRConnectionInfo::has_a_aconninfoargs() const {
+  return _internal_has_a_aconninfoargs();
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_SetDefaultTRRConnectionInfo::_internal_aconninfoargs() const {
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.aconninfoargs_;
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_SetDefaultTRRConnectionInfo::_internal_a_aconninfoargs() const {
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.a_aconninfoargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs&>(
       ::protobuf::mozilla::net::_HttpConnectionInfoCloneArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_SetDefaultTRRConnectionInfo::aconninfoargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.aConnInfoArgs)
-  return _internal_aconninfoargs();
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_SetDefaultTRRConnectionInfo::a_aconninfoargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.a_aConnInfoArgs)
+  return _internal_a_aconninfoargs();
 }
-inline void Msg_SetDefaultTRRConnectionInfo::unsafe_arena_set_allocated_aconninfoargs(
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfoargs) {
+inline void Msg_SetDefaultTRRConnectionInfo::unsafe_arena_set_allocated_a_aconninfoargs(
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfoargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aconninfoargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aconninfoargs_);
   }
-  _impl_.aconninfoargs_ = aconninfoargs;
-  if (aconninfoargs) {
+  _impl_.a_aconninfoargs_ = a_aconninfoargs;
+  if (a_aconninfoargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.aConnInfoArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.a_aConnInfoArgs)
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::release_aconninfoargs() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::release_a_aconninfoargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.aconninfoargs_;
-  _impl_.aconninfoargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aconninfoargs_;
+  _impl_.a_aconninfoargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2033,124 +2033,124 @@ inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRC
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::unsafe_arena_release_aconninfoargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.aConnInfoArgs)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::unsafe_arena_release_a_aconninfoargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.a_aConnInfoArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.aconninfoargs_;
-  _impl_.aconninfoargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aconninfoargs_;
+  _impl_.a_aconninfoargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::_internal_mutable_aconninfoargs() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::_internal_mutable_a_aconninfoargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aconninfoargs_ == nullptr) {
+  if (_impl_.a_aconninfoargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpConnectionInfoCloneArgs>(GetArenaForAllocation());
-    _impl_.aconninfoargs_ = p;
+    _impl_.a_aconninfoargs_ = p;
   }
-  return _impl_.aconninfoargs_;
+  return _impl_.a_aconninfoargs_;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::mutable_aconninfoargs() {
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_aconninfoargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.aConnInfoArgs)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SetDefaultTRRConnectionInfo::mutable_a_aconninfoargs() {
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_a_aconninfoargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.a_aConnInfoArgs)
   return _msg;
 }
-inline void Msg_SetDefaultTRRConnectionInfo::set_allocated_aconninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* aconninfoargs) {
+inline void Msg_SetDefaultTRRConnectionInfo::set_allocated_a_aconninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfoargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aconninfoargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aconninfoargs_);
   }
-  if (aconninfoargs) {
+  if (a_aconninfoargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aconninfoargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aconninfoargs));
     if (message_arena != submessage_arena) {
-      aconninfoargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aconninfoargs, submessage_arena);
+      a_aconninfoargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aconninfoargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aconninfoargs_ = aconninfoargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.aConnInfoArgs)
+  _impl_.a_aconninfoargs_ = a_aconninfoargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PTRRService.Msg_SetDefaultTRRConnectionInfo.a_aConnInfoArgs)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateEtcHosts
 
-// repeated bytes aHosts = 1;
-inline int Msg_UpdateEtcHosts::_internal_ahosts_size() const {
-  return _impl_.ahosts_.size();
+// repeated bytes a_aHosts = 1;
+inline int Msg_UpdateEtcHosts::_internal_a_ahosts_size() const {
+  return _impl_.a_ahosts_.size();
 }
-inline int Msg_UpdateEtcHosts::ahosts_size() const {
-  return _internal_ahosts_size();
+inline int Msg_UpdateEtcHosts::a_ahosts_size() const {
+  return _internal_a_ahosts_size();
 }
-inline void Msg_UpdateEtcHosts::clear_ahosts() {
-  _impl_.ahosts_.Clear();
+inline void Msg_UpdateEtcHosts::clear_a_ahosts() {
+  _impl_.a_ahosts_.Clear();
 }
-inline std::string* Msg_UpdateEtcHosts::add_ahosts() {
-  std::string* _s = _internal_add_ahosts();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+inline std::string* Msg_UpdateEtcHosts::add_a_ahosts() {
+  std::string* _s = _internal_add_a_ahosts();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
   return _s;
 }
-inline const std::string& Msg_UpdateEtcHosts::_internal_ahosts(int index) const {
-  return _impl_.ahosts_.Get(index);
+inline const std::string& Msg_UpdateEtcHosts::_internal_a_ahosts(int index) const {
+  return _impl_.a_ahosts_.Get(index);
 }
-inline const std::string& Msg_UpdateEtcHosts::ahosts(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
-  return _internal_ahosts(index);
+inline const std::string& Msg_UpdateEtcHosts::a_ahosts(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
+  return _internal_a_ahosts(index);
 }
-inline std::string* Msg_UpdateEtcHosts::mutable_ahosts(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
-  return _impl_.ahosts_.Mutable(index);
+inline std::string* Msg_UpdateEtcHosts::mutable_a_ahosts(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
+  return _impl_.a_ahosts_.Mutable(index);
 }
-inline void Msg_UpdateEtcHosts::set_ahosts(int index, const std::string& value) {
-  _impl_.ahosts_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+inline void Msg_UpdateEtcHosts::set_a_ahosts(int index, const std::string& value) {
+  _impl_.a_ahosts_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline void Msg_UpdateEtcHosts::set_ahosts(int index, std::string&& value) {
-  _impl_.ahosts_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+inline void Msg_UpdateEtcHosts::set_a_ahosts(int index, std::string&& value) {
+  _impl_.a_ahosts_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline void Msg_UpdateEtcHosts::set_ahosts(int index, const char* value) {
+inline void Msg_UpdateEtcHosts::set_a_ahosts(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ahosts_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+  _impl_.a_ahosts_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline void Msg_UpdateEtcHosts::set_ahosts(int index, const void* value, size_t size) {
-  _impl_.ahosts_.Mutable(index)->assign(
+inline void Msg_UpdateEtcHosts::set_a_ahosts(int index, const void* value, size_t size) {
+  _impl_.a_ahosts_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline std::string* Msg_UpdateEtcHosts::_internal_add_ahosts() {
-  return _impl_.ahosts_.Add();
+inline std::string* Msg_UpdateEtcHosts::_internal_add_a_ahosts() {
+  return _impl_.a_ahosts_.Add();
 }
-inline void Msg_UpdateEtcHosts::add_ahosts(const std::string& value) {
-  _impl_.ahosts_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+inline void Msg_UpdateEtcHosts::add_a_ahosts(const std::string& value) {
+  _impl_.a_ahosts_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline void Msg_UpdateEtcHosts::add_ahosts(std::string&& value) {
-  _impl_.ahosts_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+inline void Msg_UpdateEtcHosts::add_a_ahosts(std::string&& value) {
+  _impl_.a_ahosts_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline void Msg_UpdateEtcHosts::add_ahosts(const char* value) {
+inline void Msg_UpdateEtcHosts::add_a_ahosts(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.ahosts_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+  _impl_.a_ahosts_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
-inline void Msg_UpdateEtcHosts::add_ahosts(const void* value, size_t size) {
-  _impl_.ahosts_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
+inline void Msg_UpdateEtcHosts::add_a_ahosts(const void* value, size_t size) {
+  _impl_.a_ahosts_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_UpdateEtcHosts::ahosts() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
-  return _impl_.ahosts_;
+Msg_UpdateEtcHosts::a_ahosts() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
+  return _impl_.a_ahosts_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_UpdateEtcHosts::mutable_ahosts() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.aHosts)
-  return &_impl_.ahosts_;
+Msg_UpdateEtcHosts::mutable_a_ahosts() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PTRRService.Msg_UpdateEtcHosts.a_aHosts)
+  return &_impl_.a_ahosts_;
 }
 
 #ifdef __GNUC__

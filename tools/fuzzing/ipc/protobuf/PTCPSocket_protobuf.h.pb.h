@@ -175,62 +175,62 @@ class TCPError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNameFieldNumber = 1,
-    kMessageFieldNumber = 2,
-    kErrorCodeFieldNumber = 3,
+    kANameFieldNumber = 1,
+    kAMessageFieldNumber = 2,
+    kAErrorCodeFieldNumber = 3,
   };
-  // required bytes name = 1;
-  bool has_name() const;
+  // required bytes a_name = 1;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes message = 2;
-  bool has_message() const;
+  // required bytes a_message = 2;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes errorCode = 3;
-  bool has_errorcode() const;
+  // required bytes a_errorCode = 3;
+  bool has_a_errorcode() const;
   private:
-  bool _internal_has_errorcode() const;
+  bool _internal_has_a_errorcode() const;
   public:
-  void clear_errorcode();
-  const std::string& errorcode() const;
+  void clear_a_errorcode();
+  const std::string& a_errorcode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_errorcode(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_errorcode();
-  PROTOBUF_NODISCARD std::string* release_errorcode();
-  void set_allocated_errorcode(std::string* errorcode);
+  void set_a_errorcode(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_errorcode();
+  PROTOBUF_NODISCARD std::string* release_a_errorcode();
+  void set_allocated_a_errorcode(std::string* a_errorcode);
   private:
-  const std::string& _internal_errorcode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_errorcode(const std::string& value);
-  std::string* _internal_mutable_errorcode();
+  const std::string& _internal_a_errorcode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_errorcode(const std::string& value);
+  std::string* _internal_mutable_a_errorcode();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.TCPError)
@@ -246,9 +246,9 @@ class TCPError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr errorcode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_errorcode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTCPSocket_5fprotobuf_2eh_2eproto;
@@ -365,29 +365,29 @@ class SendableData__mVArrayOfuint8_t final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfuint8TFieldNumber = 1,
+    kAMVArrayOfuint8TFieldNumber = 1,
   };
-  // repeated uint32 mVArrayOfuint8_t = 1;
-  int mvarrayofuint8_t_size() const;
+  // repeated uint32 a_mVArrayOfuint8_t = 1;
+  int a_mvarrayofuint8_t_size() const;
   private:
-  int _internal_mvarrayofuint8_t_size() const;
+  int _internal_a_mvarrayofuint8_t_size() const;
   public:
-  void clear_mvarrayofuint8_t();
+  void clear_a_mvarrayofuint8_t();
   private:
-  uint32_t _internal_mvarrayofuint8_t(int index) const;
+  uint32_t _internal_a_mvarrayofuint8_t(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_mvarrayofuint8_t() const;
-  void _internal_add_mvarrayofuint8_t(uint32_t value);
+      _internal_a_mvarrayofuint8_t() const;
+  void _internal_add_a_mvarrayofuint8_t(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_mvarrayofuint8_t();
+      _internal_mutable_a_mvarrayofuint8_t();
   public:
-  uint32_t mvarrayofuint8_t(int index) const;
-  void set_mvarrayofuint8_t(int index, uint32_t value);
-  void add_mvarrayofuint8_t(uint32_t value);
+  uint32_t a_mvarrayofuint8_t(int index) const;
+  void set_a_mvarrayofuint8_t(int index, uint32_t value);
+  void add_a_mvarrayofuint8_t(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      mvarrayofuint8_t() const;
+      a_mvarrayofuint8_t() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_mvarrayofuint8_t();
+      mutable_a_mvarrayofuint8_t();
 
   // @@protoc_insertion_point(class_scope:protobuf.SendableData._mVArrayOfuint8_t)
  private:
@@ -397,7 +397,7 @@ class SendableData__mVArrayOfuint8_t final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > mvarrayofuint8_t_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mvarrayofuint8_t_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -448,7 +448,7 @@ class SendableData final :
   }
   enum ContentCase {
     kMVArrayOfuint8T = 1,
-    kMVnsCString = 2,
+    kAMVnsCString = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -524,7 +524,7 @@ class SendableData final :
 
   enum : int {
     kMVArrayOfuint8TFieldNumber = 1,
-    kMVnsCStringFieldNumber = 2,
+    kAMVnsCStringFieldNumber = 2,
   };
   // .protobuf.SendableData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
   bool has_mvarrayofuint8_t() const;
@@ -544,22 +544,22 @@ class SendableData final :
       ::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t);
   ::protobuf::SendableData__mVArrayOfuint8_t* unsafe_arena_release_mvarrayofuint8_t();
 
-  // bytes mVnsCString = 2;
-  bool has_mvnscstring() const;
+  // bytes a_mVnsCString = 2;
+  bool has_a_mvnscstring() const;
   private:
-  bool _internal_has_mvnscstring() const;
+  bool _internal_has_a_mvnscstring() const;
   public:
-  void clear_mvnscstring();
-  const std::string& mvnscstring() const;
+  void clear_a_mvnscstring();
+  const std::string& a_mvnscstring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnscstring(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnscstring();
-  PROTOBUF_NODISCARD std::string* release_mvnscstring();
-  void set_allocated_mvnscstring(std::string* mvnscstring);
+  void set_a_mvnscstring(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnscstring();
+  PROTOBUF_NODISCARD std::string* release_a_mvnscstring();
+  void set_allocated_a_mvnscstring(std::string* a_mvnscstring);
   private:
-  const std::string& _internal_mvnscstring() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnscstring(const std::string& value);
-  std::string* _internal_mutable_mvnscstring();
+  const std::string& _internal_a_mvnscstring() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnscstring(const std::string& value);
+  std::string* _internal_mutable_a_mvnscstring();
   public:
 
   void clear_content();
@@ -568,7 +568,7 @@ class SendableData final :
  private:
   class _Internal;
   void set_has_mvarrayofuint8_t();
-  void set_has_mvnscstring();
+  void set_has_a_mvnscstring();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -581,7 +581,7 @@ class SendableData final :
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnscstring_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnscstring_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -634,9 +634,9 @@ class CallbackData final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVvoidT = 1,
-    kMVSendableData = 2,
-    kMVTCPError = 3,
+    kAMVvoidT = 1,
+    kAMVSendableData = 2,
+    kAMVTCPError = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -709,72 +709,72 @@ class CallbackData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVvoidTFieldNumber = 1,
-    kMVSendableDataFieldNumber = 2,
-    kMVTCPErrorFieldNumber = 3,
+    kAMVvoidTFieldNumber = 1,
+    kAMVSendableDataFieldNumber = 2,
+    kAMVTCPErrorFieldNumber = 3,
   };
-  // bytes mVvoid_t = 1;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 1;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
-  // .protobuf.SendableData mVSendableData = 2;
-  bool has_mvsendabledata() const;
+  // .protobuf.SendableData a_mVSendableData = 2;
+  bool has_a_mvsendabledata() const;
   private:
-  bool _internal_has_mvsendabledata() const;
+  bool _internal_has_a_mvsendabledata() const;
   public:
-  void clear_mvsendabledata();
-  const ::protobuf::SendableData& mvsendabledata() const;
-  PROTOBUF_NODISCARD ::protobuf::SendableData* release_mvsendabledata();
-  ::protobuf::SendableData* mutable_mvsendabledata();
-  void set_allocated_mvsendabledata(::protobuf::SendableData* mvsendabledata);
+  void clear_a_mvsendabledata();
+  const ::protobuf::SendableData& a_mvsendabledata() const;
+  PROTOBUF_NODISCARD ::protobuf::SendableData* release_a_mvsendabledata();
+  ::protobuf::SendableData* mutable_a_mvsendabledata();
+  void set_allocated_a_mvsendabledata(::protobuf::SendableData* a_mvsendabledata);
   private:
-  const ::protobuf::SendableData& _internal_mvsendabledata() const;
-  ::protobuf::SendableData* _internal_mutable_mvsendabledata();
+  const ::protobuf::SendableData& _internal_a_mvsendabledata() const;
+  ::protobuf::SendableData* _internal_mutable_a_mvsendabledata();
   public:
-  void unsafe_arena_set_allocated_mvsendabledata(
-      ::protobuf::SendableData* mvsendabledata);
-  ::protobuf::SendableData* unsafe_arena_release_mvsendabledata();
+  void unsafe_arena_set_allocated_a_mvsendabledata(
+      ::protobuf::SendableData* a_mvsendabledata);
+  ::protobuf::SendableData* unsafe_arena_release_a_mvsendabledata();
 
-  // .protobuf.TCPError mVTCPError = 3;
-  bool has_mvtcperror() const;
+  // .protobuf.TCPError a_mVTCPError = 3;
+  bool has_a_mvtcperror() const;
   private:
-  bool _internal_has_mvtcperror() const;
+  bool _internal_has_a_mvtcperror() const;
   public:
-  void clear_mvtcperror();
-  const ::protobuf::TCPError& mvtcperror() const;
-  PROTOBUF_NODISCARD ::protobuf::TCPError* release_mvtcperror();
-  ::protobuf::TCPError* mutable_mvtcperror();
-  void set_allocated_mvtcperror(::protobuf::TCPError* mvtcperror);
+  void clear_a_mvtcperror();
+  const ::protobuf::TCPError& a_mvtcperror() const;
+  PROTOBUF_NODISCARD ::protobuf::TCPError* release_a_mvtcperror();
+  ::protobuf::TCPError* mutable_a_mvtcperror();
+  void set_allocated_a_mvtcperror(::protobuf::TCPError* a_mvtcperror);
   private:
-  const ::protobuf::TCPError& _internal_mvtcperror() const;
-  ::protobuf::TCPError* _internal_mutable_mvtcperror();
+  const ::protobuf::TCPError& _internal_a_mvtcperror() const;
+  ::protobuf::TCPError* _internal_mutable_a_mvtcperror();
   public:
-  void unsafe_arena_set_allocated_mvtcperror(
-      ::protobuf::TCPError* mvtcperror);
-  ::protobuf::TCPError* unsafe_arena_release_mvtcperror();
+  void unsafe_arena_set_allocated_a_mvtcperror(
+      ::protobuf::TCPError* a_mvtcperror);
+  ::protobuf::TCPError* unsafe_arena_release_a_mvtcperror();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.CallbackData)
  private:
   class _Internal;
-  void set_has_mvvoid_t();
-  void set_has_mvsendabledata();
-  void set_has_mvtcperror();
+  void set_has_a_mvvoid_t();
+  void set_has_a_mvsendabledata();
+  void set_has_a_mvtcperror();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -786,9 +786,9 @@ class CallbackData final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
-      ::protobuf::SendableData* mvsendabledata_;
-      ::protobuf::TCPError* mvtcperror_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
+      ::protobuf::SendableData* a_mvsendabledata_;
+      ::protobuf::TCPError* a_mvtcperror_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -808,259 +808,259 @@ class CallbackData final :
 #endif  // __GNUC__
 // TCPError
 
-// required bytes name = 1;
-inline bool TCPError::_internal_has_name() const {
+// required bytes a_name = 1;
+inline bool TCPError::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool TCPError::has_name() const {
-  return _internal_has_name();
+inline bool TCPError::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void TCPError::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void TCPError::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& TCPError::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.TCPError.name)
-  return _internal_name();
+inline const std::string& TCPError::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.TCPError.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void TCPError::set_name(ArgT0&& arg0, ArgT... args) {
+void TCPError::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.TCPError.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.TCPError.a_name)
 }
-inline std::string* TCPError::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.TCPError.name)
+inline std::string* TCPError::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.TCPError.a_name)
   return _s;
 }
-inline const std::string& TCPError::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& TCPError::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void TCPError::_internal_set_name(const std::string& value) {
+inline void TCPError::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* TCPError::_internal_mutable_name() {
+inline std::string* TCPError::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* TCPError::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.TCPError.name)
-  if (!_internal_has_name()) {
+inline std::string* TCPError::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.TCPError.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void TCPError::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void TCPError::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.a_name)
 }
 
-// required bytes message = 2;
-inline bool TCPError::_internal_has_message() const {
+// required bytes a_message = 2;
+inline bool TCPError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool TCPError::has_message() const {
-  return _internal_has_message();
+inline bool TCPError::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void TCPError::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void TCPError::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& TCPError::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.TCPError.message)
-  return _internal_message();
+inline const std::string& TCPError::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.TCPError.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void TCPError::set_message(ArgT0&& arg0, ArgT... args) {
+void TCPError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.TCPError.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.TCPError.a_message)
 }
-inline std::string* TCPError::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.TCPError.message)
+inline std::string* TCPError::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.TCPError.a_message)
   return _s;
 }
-inline const std::string& TCPError::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& TCPError::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void TCPError::_internal_set_message(const std::string& value) {
+inline void TCPError::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* TCPError::_internal_mutable_message() {
+inline std::string* TCPError::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* TCPError::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.TCPError.message)
-  if (!_internal_has_message()) {
+inline std::string* TCPError::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.TCPError.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void TCPError::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void TCPError::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.a_message)
 }
 
-// required bytes errorCode = 3;
-inline bool TCPError::_internal_has_errorcode() const {
+// required bytes a_errorCode = 3;
+inline bool TCPError::_internal_has_a_errorcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool TCPError::has_errorcode() const {
-  return _internal_has_errorcode();
+inline bool TCPError::has_a_errorcode() const {
+  return _internal_has_a_errorcode();
 }
-inline void TCPError::clear_errorcode() {
-  _impl_.errorcode_.ClearToEmpty();
+inline void TCPError::clear_a_errorcode() {
+  _impl_.a_errorcode_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& TCPError::errorcode() const {
-  // @@protoc_insertion_point(field_get:protobuf.TCPError.errorCode)
-  return _internal_errorcode();
+inline const std::string& TCPError::a_errorcode() const {
+  // @@protoc_insertion_point(field_get:protobuf.TCPError.a_errorCode)
+  return _internal_a_errorcode();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void TCPError::set_errorcode(ArgT0&& arg0, ArgT... args) {
+void TCPError::set_a_errorcode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.TCPError.errorCode)
+ _impl_.a_errorcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.TCPError.a_errorCode)
 }
-inline std::string* TCPError::mutable_errorcode() {
-  std::string* _s = _internal_mutable_errorcode();
-  // @@protoc_insertion_point(field_mutable:protobuf.TCPError.errorCode)
+inline std::string* TCPError::mutable_a_errorcode() {
+  std::string* _s = _internal_mutable_a_errorcode();
+  // @@protoc_insertion_point(field_mutable:protobuf.TCPError.a_errorCode)
   return _s;
 }
-inline const std::string& TCPError::_internal_errorcode() const {
-  return _impl_.errorcode_.Get();
+inline const std::string& TCPError::_internal_a_errorcode() const {
+  return _impl_.a_errorcode_.Get();
 }
-inline void TCPError::_internal_set_errorcode(const std::string& value) {
+inline void TCPError::_internal_set_a_errorcode(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.errorcode_.Set(value, GetArenaForAllocation());
+  _impl_.a_errorcode_.Set(value, GetArenaForAllocation());
 }
-inline std::string* TCPError::_internal_mutable_errorcode() {
+inline std::string* TCPError::_internal_mutable_a_errorcode() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.errorcode_.Mutable(GetArenaForAllocation());
+  return _impl_.a_errorcode_.Mutable(GetArenaForAllocation());
 }
-inline std::string* TCPError::release_errorcode() {
-  // @@protoc_insertion_point(field_release:protobuf.TCPError.errorCode)
-  if (!_internal_has_errorcode()) {
+inline std::string* TCPError::release_a_errorcode() {
+  // @@protoc_insertion_point(field_release:protobuf.TCPError.a_errorCode)
+  if (!_internal_has_a_errorcode()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.errorcode_.Release();
+  auto* p = _impl_.a_errorcode_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.errorcode_.IsDefault()) {
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void TCPError::set_allocated_errorcode(std::string* errorcode) {
-  if (errorcode != nullptr) {
+inline void TCPError::set_allocated_a_errorcode(std::string* a_errorcode) {
+  if (a_errorcode != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.errorcode_.SetAllocated(errorcode, GetArenaForAllocation());
+  _impl_.a_errorcode_.SetAllocated(a_errorcode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.errorcode_.IsDefault()) {
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_errorcode_.IsDefault()) {
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.errorCode)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.TCPError.a_errorCode)
 }
 
 // -------------------------------------------------------------------
 
 // SendableData__mVArrayOfuint8_t
 
-// repeated uint32 mVArrayOfuint8_t = 1;
-inline int SendableData__mVArrayOfuint8_t::_internal_mvarrayofuint8_t_size() const {
-  return _impl_.mvarrayofuint8_t_.size();
+// repeated uint32 a_mVArrayOfuint8_t = 1;
+inline int SendableData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
+  return _impl_.a_mvarrayofuint8_t_.size();
 }
-inline int SendableData__mVArrayOfuint8_t::mvarrayofuint8_t_size() const {
-  return _internal_mvarrayofuint8_t_size();
+inline int SendableData__mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
+  return _internal_a_mvarrayofuint8_t_size();
 }
-inline void SendableData__mVArrayOfuint8_t::clear_mvarrayofuint8_t() {
-  _impl_.mvarrayofuint8_t_.Clear();
+inline void SendableData__mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
+  _impl_.a_mvarrayofuint8_t_.Clear();
 }
-inline uint32_t SendableData__mVArrayOfuint8_t::_internal_mvarrayofuint8_t(int index) const {
-  return _impl_.mvarrayofuint8_t_.Get(index);
+inline uint32_t SendableData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
+  return _impl_.a_mvarrayofuint8_t_.Get(index);
 }
-inline uint32_t SendableData__mVArrayOfuint8_t::mvarrayofuint8_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.SendableData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t(index);
+inline uint32_t SendableData__mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t(index);
 }
-inline void SendableData__mVArrayOfuint8_t::set_mvarrayofuint8_t(int index, uint32_t value) {
-  _impl_.mvarrayofuint8_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.SendableData._mVArrayOfuint8_t.mVArrayOfuint8_t)
+inline void SendableData__mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
+  _impl_.a_mvarrayofuint8_t_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
-inline void SendableData__mVArrayOfuint8_t::_internal_add_mvarrayofuint8_t(uint32_t value) {
-  _impl_.mvarrayofuint8_t_.Add(value);
+inline void SendableData__mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
+  _impl_.a_mvarrayofuint8_t_.Add(value);
 }
-inline void SendableData__mVArrayOfuint8_t::add_mvarrayofuint8_t(uint32_t value) {
-  _internal_add_mvarrayofuint8_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.SendableData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-SendableData__mVArrayOfuint8_t::_internal_mvarrayofuint8_t() const {
-  return _impl_.mvarrayofuint8_t_;
+inline void SendableData__mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
+  _internal_add_a_mvarrayofuint8_t(value);
+  // @@protoc_insertion_point(field_add:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-SendableData__mVArrayOfuint8_t::mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.SendableData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t();
+SendableData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
+  return _impl_.a_mvarrayofuint8_t_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+SendableData__mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-SendableData__mVArrayOfuint8_t::_internal_mutable_mvarrayofuint8_t() {
-  return &_impl_.mvarrayofuint8_t_;
+SendableData__mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
+  return &_impl_.a_mvarrayofuint8_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-SendableData__mVArrayOfuint8_t::mutable_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.SendableData._mVArrayOfuint8_t.mVArrayOfuint8_t)
-  return _internal_mutable_mvarrayofuint8_t();
+SendableData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  return _internal_mutable_a_mvarrayofuint8_t();
 }
 
 // -------------------------------------------------------------------
@@ -1141,81 +1141,81 @@ inline ::protobuf::SendableData__mVArrayOfuint8_t* SendableData::mutable_mvarray
   return _msg;
 }
 
-// bytes mVnsCString = 2;
-inline bool SendableData::_internal_has_mvnscstring() const {
-  return content_case() == kMVnsCString;
+// bytes a_mVnsCString = 2;
+inline bool SendableData::_internal_has_a_mvnscstring() const {
+  return content_case() == kAMVnsCString;
 }
-inline bool SendableData::has_mvnscstring() const {
-  return _internal_has_mvnscstring();
+inline bool SendableData::has_a_mvnscstring() const {
+  return _internal_has_a_mvnscstring();
 }
-inline void SendableData::set_has_mvnscstring() {
-  _impl_._oneof_case_[0] = kMVnsCString;
+inline void SendableData::set_has_a_mvnscstring() {
+  _impl_._oneof_case_[0] = kAMVnsCString;
 }
-inline void SendableData::clear_mvnscstring() {
-  if (_internal_has_mvnscstring()) {
-    _impl_.content_.mvnscstring_.Destroy();
+inline void SendableData::clear_a_mvnscstring() {
+  if (_internal_has_a_mvnscstring()) {
+    _impl_.content_.a_mvnscstring_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& SendableData::mvnscstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.SendableData.mVnsCString)
-  return _internal_mvnscstring();
+inline const std::string& SendableData::a_mvnscstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.SendableData.a_mVnsCString)
+  return _internal_a_mvnscstring();
 }
 template <typename ArgT0, typename... ArgT>
-inline void SendableData::set_mvnscstring(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnscstring()) {
+inline void SendableData::set_a_mvnscstring(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.SendableData.mVnsCString)
+  _impl_.content_.a_mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.SendableData.a_mVnsCString)
 }
-inline std::string* SendableData::mutable_mvnscstring() {
-  std::string* _s = _internal_mutable_mvnscstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.SendableData.mVnsCString)
+inline std::string* SendableData::mutable_a_mvnscstring() {
+  std::string* _s = _internal_mutable_a_mvnscstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.SendableData.a_mVnsCString)
   return _s;
 }
-inline const std::string& SendableData::_internal_mvnscstring() const {
-  if (_internal_has_mvnscstring()) {
-    return _impl_.content_.mvnscstring_.Get();
+inline const std::string& SendableData::_internal_a_mvnscstring() const {
+  if (_internal_has_a_mvnscstring()) {
+    return _impl_.content_.a_mvnscstring_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void SendableData::_internal_set_mvnscstring(const std::string& value) {
-  if (!_internal_has_mvnscstring()) {
+inline void SendableData::_internal_set_a_mvnscstring(const std::string& value) {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.mvnscstring_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnscstring_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SendableData::_internal_mutable_mvnscstring() {
-  if (!_internal_has_mvnscstring()) {
+inline std::string* SendableData::_internal_mutable_a_mvnscstring() {
+  if (!_internal_has_a_mvnscstring()) {
     clear_content();
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitDefault();
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  return _impl_.content_.mvnscstring_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnscstring_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* SendableData::release_mvnscstring() {
-  // @@protoc_insertion_point(field_release:protobuf.SendableData.mVnsCString)
-  if (_internal_has_mvnscstring()) {
+inline std::string* SendableData::release_a_mvnscstring() {
+  // @@protoc_insertion_point(field_release:protobuf.SendableData.a_mVnsCString)
+  if (_internal_has_a_mvnscstring()) {
     clear_has_content();
-    return _impl_.content_.mvnscstring_.Release();
+    return _impl_.content_.a_mvnscstring_.Release();
   } else {
     return nullptr;
   }
 }
-inline void SendableData::set_allocated_mvnscstring(std::string* mvnscstring) {
+inline void SendableData::set_allocated_a_mvnscstring(std::string* a_mvnscstring) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnscstring != nullptr) {
-    set_has_mvnscstring();
-    _impl_.content_.mvnscstring_.InitAllocated(mvnscstring, GetArenaForAllocation());
+  if (a_mvnscstring != nullptr) {
+    set_has_a_mvnscstring();
+    _impl_.content_.a_mvnscstring_.InitAllocated(a_mvnscstring, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.SendableData.mVnsCString)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.SendableData.a_mVnsCString)
 }
 
 inline bool SendableData::has_content() const {
@@ -1231,228 +1231,228 @@ inline SendableData::ContentCase SendableData::content_case() const {
 
 // CallbackData
 
-// bytes mVvoid_t = 1;
-inline bool CallbackData::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 1;
+inline bool CallbackData::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool CallbackData::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool CallbackData::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void CallbackData::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void CallbackData::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void CallbackData::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void CallbackData::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& CallbackData::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.CallbackData.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& CallbackData::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.CallbackData.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void CallbackData::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void CallbackData::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.CallbackData.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.CallbackData.a_mVvoid_t)
 }
-inline std::string* CallbackData::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.CallbackData.mVvoid_t)
+inline std::string* CallbackData::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.CallbackData.a_mVvoid_t)
   return _s;
 }
-inline const std::string& CallbackData::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& CallbackData::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void CallbackData::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void CallbackData::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CallbackData::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* CallbackData::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* CallbackData::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.CallbackData.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* CallbackData::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.CallbackData.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void CallbackData::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void CallbackData::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.CallbackData.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.CallbackData.a_mVvoid_t)
 }
 
-// .protobuf.SendableData mVSendableData = 2;
-inline bool CallbackData::_internal_has_mvsendabledata() const {
-  return content_case() == kMVSendableData;
+// .protobuf.SendableData a_mVSendableData = 2;
+inline bool CallbackData::_internal_has_a_mvsendabledata() const {
+  return content_case() == kAMVSendableData;
 }
-inline bool CallbackData::has_mvsendabledata() const {
-  return _internal_has_mvsendabledata();
+inline bool CallbackData::has_a_mvsendabledata() const {
+  return _internal_has_a_mvsendabledata();
 }
-inline void CallbackData::set_has_mvsendabledata() {
-  _impl_._oneof_case_[0] = kMVSendableData;
+inline void CallbackData::set_has_a_mvsendabledata() {
+  _impl_._oneof_case_[0] = kAMVSendableData;
 }
-inline void CallbackData::clear_mvsendabledata() {
-  if (_internal_has_mvsendabledata()) {
+inline void CallbackData::clear_a_mvsendabledata() {
+  if (_internal_has_a_mvsendabledata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvsendabledata_;
+      delete _impl_.content_.a_mvsendabledata_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::SendableData* CallbackData::release_mvsendabledata() {
-  // @@protoc_insertion_point(field_release:protobuf.CallbackData.mVSendableData)
-  if (_internal_has_mvsendabledata()) {
+inline ::protobuf::SendableData* CallbackData::release_a_mvsendabledata() {
+  // @@protoc_insertion_point(field_release:protobuf.CallbackData.a_mVSendableData)
+  if (_internal_has_a_mvsendabledata()) {
     clear_has_content();
-    ::protobuf::SendableData* temp = _impl_.content_.mvsendabledata_;
+    ::protobuf::SendableData* temp = _impl_.content_.a_mvsendabledata_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvsendabledata_ = nullptr;
+    _impl_.content_.a_mvsendabledata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::SendableData& CallbackData::_internal_mvsendabledata() const {
-  return _internal_has_mvsendabledata()
-      ? *_impl_.content_.mvsendabledata_
+inline const ::protobuf::SendableData& CallbackData::_internal_a_mvsendabledata() const {
+  return _internal_has_a_mvsendabledata()
+      ? *_impl_.content_.a_mvsendabledata_
       : reinterpret_cast< ::protobuf::SendableData&>(::protobuf::_SendableData_default_instance_);
 }
-inline const ::protobuf::SendableData& CallbackData::mvsendabledata() const {
-  // @@protoc_insertion_point(field_get:protobuf.CallbackData.mVSendableData)
-  return _internal_mvsendabledata();
+inline const ::protobuf::SendableData& CallbackData::a_mvsendabledata() const {
+  // @@protoc_insertion_point(field_get:protobuf.CallbackData.a_mVSendableData)
+  return _internal_a_mvsendabledata();
 }
-inline ::protobuf::SendableData* CallbackData::unsafe_arena_release_mvsendabledata() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.CallbackData.mVSendableData)
-  if (_internal_has_mvsendabledata()) {
+inline ::protobuf::SendableData* CallbackData::unsafe_arena_release_a_mvsendabledata() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.CallbackData.a_mVSendableData)
+  if (_internal_has_a_mvsendabledata()) {
     clear_has_content();
-    ::protobuf::SendableData* temp = _impl_.content_.mvsendabledata_;
-    _impl_.content_.mvsendabledata_ = nullptr;
+    ::protobuf::SendableData* temp = _impl_.content_.a_mvsendabledata_;
+    _impl_.content_.a_mvsendabledata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CallbackData::unsafe_arena_set_allocated_mvsendabledata(::protobuf::SendableData* mvsendabledata) {
+inline void CallbackData::unsafe_arena_set_allocated_a_mvsendabledata(::protobuf::SendableData* a_mvsendabledata) {
   clear_content();
-  if (mvsendabledata) {
-    set_has_mvsendabledata();
-    _impl_.content_.mvsendabledata_ = mvsendabledata;
+  if (a_mvsendabledata) {
+    set_has_a_mvsendabledata();
+    _impl_.content_.a_mvsendabledata_ = a_mvsendabledata;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.CallbackData.mVSendableData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.CallbackData.a_mVSendableData)
 }
-inline ::protobuf::SendableData* CallbackData::_internal_mutable_mvsendabledata() {
-  if (!_internal_has_mvsendabledata()) {
+inline ::protobuf::SendableData* CallbackData::_internal_mutable_a_mvsendabledata() {
+  if (!_internal_has_a_mvsendabledata()) {
     clear_content();
-    set_has_mvsendabledata();
-    _impl_.content_.mvsendabledata_ = CreateMaybeMessage< ::protobuf::SendableData >(GetArenaForAllocation());
+    set_has_a_mvsendabledata();
+    _impl_.content_.a_mvsendabledata_ = CreateMaybeMessage< ::protobuf::SendableData >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvsendabledata_;
+  return _impl_.content_.a_mvsendabledata_;
 }
-inline ::protobuf::SendableData* CallbackData::mutable_mvsendabledata() {
-  ::protobuf::SendableData* _msg = _internal_mutable_mvsendabledata();
-  // @@protoc_insertion_point(field_mutable:protobuf.CallbackData.mVSendableData)
+inline ::protobuf::SendableData* CallbackData::mutable_a_mvsendabledata() {
+  ::protobuf::SendableData* _msg = _internal_mutable_a_mvsendabledata();
+  // @@protoc_insertion_point(field_mutable:protobuf.CallbackData.a_mVSendableData)
   return _msg;
 }
 
-// .protobuf.TCPError mVTCPError = 3;
-inline bool CallbackData::_internal_has_mvtcperror() const {
-  return content_case() == kMVTCPError;
+// .protobuf.TCPError a_mVTCPError = 3;
+inline bool CallbackData::_internal_has_a_mvtcperror() const {
+  return content_case() == kAMVTCPError;
 }
-inline bool CallbackData::has_mvtcperror() const {
-  return _internal_has_mvtcperror();
+inline bool CallbackData::has_a_mvtcperror() const {
+  return _internal_has_a_mvtcperror();
 }
-inline void CallbackData::set_has_mvtcperror() {
-  _impl_._oneof_case_[0] = kMVTCPError;
+inline void CallbackData::set_has_a_mvtcperror() {
+  _impl_._oneof_case_[0] = kAMVTCPError;
 }
-inline void CallbackData::clear_mvtcperror() {
-  if (_internal_has_mvtcperror()) {
+inline void CallbackData::clear_a_mvtcperror() {
+  if (_internal_has_a_mvtcperror()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvtcperror_;
+      delete _impl_.content_.a_mvtcperror_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::TCPError* CallbackData::release_mvtcperror() {
-  // @@protoc_insertion_point(field_release:protobuf.CallbackData.mVTCPError)
-  if (_internal_has_mvtcperror()) {
+inline ::protobuf::TCPError* CallbackData::release_a_mvtcperror() {
+  // @@protoc_insertion_point(field_release:protobuf.CallbackData.a_mVTCPError)
+  if (_internal_has_a_mvtcperror()) {
     clear_has_content();
-    ::protobuf::TCPError* temp = _impl_.content_.mvtcperror_;
+    ::protobuf::TCPError* temp = _impl_.content_.a_mvtcperror_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvtcperror_ = nullptr;
+    _impl_.content_.a_mvtcperror_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::TCPError& CallbackData::_internal_mvtcperror() const {
-  return _internal_has_mvtcperror()
-      ? *_impl_.content_.mvtcperror_
+inline const ::protobuf::TCPError& CallbackData::_internal_a_mvtcperror() const {
+  return _internal_has_a_mvtcperror()
+      ? *_impl_.content_.a_mvtcperror_
       : reinterpret_cast< ::protobuf::TCPError&>(::protobuf::_TCPError_default_instance_);
 }
-inline const ::protobuf::TCPError& CallbackData::mvtcperror() const {
-  // @@protoc_insertion_point(field_get:protobuf.CallbackData.mVTCPError)
-  return _internal_mvtcperror();
+inline const ::protobuf::TCPError& CallbackData::a_mvtcperror() const {
+  // @@protoc_insertion_point(field_get:protobuf.CallbackData.a_mVTCPError)
+  return _internal_a_mvtcperror();
 }
-inline ::protobuf::TCPError* CallbackData::unsafe_arena_release_mvtcperror() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.CallbackData.mVTCPError)
-  if (_internal_has_mvtcperror()) {
+inline ::protobuf::TCPError* CallbackData::unsafe_arena_release_a_mvtcperror() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.CallbackData.a_mVTCPError)
+  if (_internal_has_a_mvtcperror()) {
     clear_has_content();
-    ::protobuf::TCPError* temp = _impl_.content_.mvtcperror_;
-    _impl_.content_.mvtcperror_ = nullptr;
+    ::protobuf::TCPError* temp = _impl_.content_.a_mvtcperror_;
+    _impl_.content_.a_mvtcperror_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CallbackData::unsafe_arena_set_allocated_mvtcperror(::protobuf::TCPError* mvtcperror) {
+inline void CallbackData::unsafe_arena_set_allocated_a_mvtcperror(::protobuf::TCPError* a_mvtcperror) {
   clear_content();
-  if (mvtcperror) {
-    set_has_mvtcperror();
-    _impl_.content_.mvtcperror_ = mvtcperror;
+  if (a_mvtcperror) {
+    set_has_a_mvtcperror();
+    _impl_.content_.a_mvtcperror_ = a_mvtcperror;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.CallbackData.mVTCPError)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.CallbackData.a_mVTCPError)
 }
-inline ::protobuf::TCPError* CallbackData::_internal_mutable_mvtcperror() {
-  if (!_internal_has_mvtcperror()) {
+inline ::protobuf::TCPError* CallbackData::_internal_mutable_a_mvtcperror() {
+  if (!_internal_has_a_mvtcperror()) {
     clear_content();
-    set_has_mvtcperror();
-    _impl_.content_.mvtcperror_ = CreateMaybeMessage< ::protobuf::TCPError >(GetArenaForAllocation());
+    set_has_a_mvtcperror();
+    _impl_.content_.a_mvtcperror_ = CreateMaybeMessage< ::protobuf::TCPError >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvtcperror_;
+  return _impl_.content_.a_mvtcperror_;
 }
-inline ::protobuf::TCPError* CallbackData::mutable_mvtcperror() {
-  ::protobuf::TCPError* _msg = _internal_mutable_mvtcperror();
-  // @@protoc_insertion_point(field_mutable:protobuf.CallbackData.mVTCPError)
+inline ::protobuf::TCPError* CallbackData::mutable_a_mvtcperror() {
+  ::protobuf::TCPError* _msg = _internal_mutable_a_mvtcperror();
+  // @@protoc_insertion_point(field_mutable:protobuf.CallbackData.a_mVTCPError)
   return _msg;
 }
 

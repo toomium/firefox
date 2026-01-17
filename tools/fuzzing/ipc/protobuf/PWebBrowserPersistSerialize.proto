@@ -16,12 +16,12 @@ package protobuf.mozilla.PWebBrowserPersistSerialize;
 
 // Message declarations
 message Msg_WriteData {
-  repeated uint32 aData = 1;
+  repeated uint32 a_aData = 1;
 }
 
 message Msg___delete__ {
-  required bytes aContentType = 1;
-  required bytes aStatus = 2;
+  required bytes a_aContentType = 1;
+  required bytes a_aStatus = 2;
 }
 
 message Reply___delete__ {

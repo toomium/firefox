@@ -21,14 +21,14 @@ message Msg_AllowToClose {
 }
 
 message Msg_PBackgroundLSSnapshotConstructor {
-  required bytes documentURI = 1;
-  required bytes key = 2;
-  required bool increasePeakUsage = 3;
-  required sint64 minSize = 4;
+  required bytes a_documentURI = 1;
+  required bytes a_key = 2;
+  required bool a_increasePeakUsage = 3;
+  required sint64 a_minSize = 4;
 }
 
 message Reply_PBackgroundLSSnapshotConstructor {
-  required protobuf.mozilla.dom.LSSnapshotInitInfo initInfo = 1;
+  required protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
 }
 
 message Msg_RequestAllowToClose {

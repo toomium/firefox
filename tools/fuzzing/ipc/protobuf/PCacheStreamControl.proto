@@ -17,15 +17,15 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_OpenStream {
-  required bytes aStreamId = 1;
+  required bytes a_aStreamId = 1;
 }
 
 message Reply_OpenStream {
-  optional protobuf.mozilla.ipc.IPCStream aStream = 1;
+  optional protobuf.mozilla.ipc.IPCStream a_aStream = 1;
 }
 
 message Msg_NoteClosed {
-  required bytes aStreamId = 1;
+  required bytes a_aStreamId = 1;
 }
 
 message Msg_CloseAll {

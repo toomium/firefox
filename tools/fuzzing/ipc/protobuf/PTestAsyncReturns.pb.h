@@ -316,19 +316,19 @@ class Reply_Ping final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOneFieldNumber = 1,
+    kAOneFieldNumber = 1,
   };
-  // required bool one = 1;
-  bool has_one() const;
+  // required bool a_one = 1;
+  bool has_a_one() const;
   private:
-  bool _internal_has_one() const;
+  bool _internal_has_a_one() const;
   public:
-  void clear_one();
-  bool one() const;
-  void set_one(bool value);
+  void clear_a_one();
+  bool a_one() const;
+  void set_a_one(bool value);
   private:
-  bool _internal_one() const;
-  void _internal_set_one(bool value);
+  bool _internal_a_one() const;
+  void _internal_set_a_one(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping)
@@ -341,7 +341,7 @@ class Reply_Ping final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool one_;
+    bool a_one_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestAsyncReturns_2eproto;
@@ -582,19 +582,19 @@ class Reply_NoReturn final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn)
@@ -607,7 +607,7 @@ class Reply_NoReturn final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestAsyncReturns_2eproto;
@@ -848,33 +848,33 @@ class Reply_Pong final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParam1FieldNumber = 1,
-    kParam2FieldNumber = 2,
+    kAParam1FieldNumber = 1,
+    kAParam2FieldNumber = 2,
   };
-  // required uint32 param1 = 1;
-  bool has_param1() const;
+  // required uint32 a_param1 = 1;
+  bool has_a_param1() const;
   private:
-  bool _internal_has_param1() const;
+  bool _internal_has_a_param1() const;
   public:
-  void clear_param1();
-  uint32_t param1() const;
-  void set_param1(uint32_t value);
+  void clear_a_param1();
+  uint32_t a_param1() const;
+  void set_a_param1(uint32_t value);
   private:
-  uint32_t _internal_param1() const;
-  void _internal_set_param1(uint32_t value);
+  uint32_t _internal_a_param1() const;
+  void _internal_set_a_param1(uint32_t value);
   public:
 
-  // required uint32 param2 = 2;
-  bool has_param2() const;
+  // required uint32 a_param2 = 2;
+  bool has_a_param2() const;
   private:
-  bool _internal_has_param2() const;
+  bool _internal_has_a_param2() const;
   public:
-  void clear_param2();
-  uint32_t param2() const;
-  void set_param2(uint32_t value);
+  void clear_a_param2();
+  uint32_t a_param2() const;
+  void set_a_param2(uint32_t value);
   private:
-  uint32_t _internal_param2() const;
-  void _internal_set_param2(uint32_t value);
+  uint32_t _internal_a_param2() const;
+  void _internal_set_a_param2(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong)
@@ -890,8 +890,8 @@ class Reply_Pong final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t param1_;
-    uint32_t param2_;
+    uint32_t a_param1_;
+    uint32_t a_param2_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestAsyncReturns_2eproto;
@@ -911,32 +911,32 @@ class Reply_Pong final :
 
 // Reply_Ping
 
-// required bool one = 1;
-inline bool Reply_Ping::_internal_has_one() const {
+// required bool a_one = 1;
+inline bool Reply_Ping::_internal_has_a_one() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Ping::has_one() const {
-  return _internal_has_one();
+inline bool Reply_Ping::has_a_one() const {
+  return _internal_has_a_one();
 }
-inline void Reply_Ping::clear_one() {
-  _impl_.one_ = false;
+inline void Reply_Ping::clear_a_one() {
+  _impl_.a_one_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Ping::_internal_one() const {
-  return _impl_.one_;
+inline bool Reply_Ping::_internal_a_one() const {
+  return _impl_.a_one_;
 }
-inline bool Reply_Ping::one() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping.one)
-  return _internal_one();
+inline bool Reply_Ping::a_one() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping.a_one)
+  return _internal_a_one();
 }
-inline void Reply_Ping::_internal_set_one(bool value) {
+inline void Reply_Ping::_internal_set_a_one(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.one_ = value;
+  _impl_.a_one_ = value;
 }
-inline void Reply_Ping::set_one(bool value) {
-  _internal_set_one(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping.one)
+inline void Reply_Ping::set_a_one(bool value) {
+  _internal_set_a_one(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping.a_one)
 }
 
 // -------------------------------------------------------------------
@@ -947,32 +947,32 @@ inline void Reply_Ping::set_one(bool value) {
 
 // Reply_NoReturn
 
-// required bool unused = 1;
-inline bool Reply_NoReturn::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_NoReturn::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_NoReturn::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_NoReturn::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_NoReturn::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_NoReturn::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_NoReturn::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_NoReturn::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_NoReturn::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn.unused)
-  return _internal_unused();
+inline bool Reply_NoReturn::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_NoReturn::_internal_set_unused(bool value) {
+inline void Reply_NoReturn::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_NoReturn::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn.unused)
+inline void Reply_NoReturn::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn.a_unused)
 }
 
 // -------------------------------------------------------------------
@@ -983,60 +983,60 @@ inline void Reply_NoReturn::set_unused(bool value) {
 
 // Reply_Pong
 
-// required uint32 param1 = 1;
-inline bool Reply_Pong::_internal_has_param1() const {
+// required uint32 a_param1 = 1;
+inline bool Reply_Pong::_internal_has_a_param1() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Pong::has_param1() const {
-  return _internal_has_param1();
+inline bool Reply_Pong::has_a_param1() const {
+  return _internal_has_a_param1();
 }
-inline void Reply_Pong::clear_param1() {
-  _impl_.param1_ = 0u;
+inline void Reply_Pong::clear_a_param1() {
+  _impl_.a_param1_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_Pong::_internal_param1() const {
-  return _impl_.param1_;
+inline uint32_t Reply_Pong::_internal_a_param1() const {
+  return _impl_.a_param1_;
 }
-inline uint32_t Reply_Pong::param1() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.param1)
-  return _internal_param1();
+inline uint32_t Reply_Pong::a_param1() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.a_param1)
+  return _internal_a_param1();
 }
-inline void Reply_Pong::_internal_set_param1(uint32_t value) {
+inline void Reply_Pong::_internal_set_a_param1(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.param1_ = value;
+  _impl_.a_param1_ = value;
 }
-inline void Reply_Pong::set_param1(uint32_t value) {
-  _internal_set_param1(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.param1)
+inline void Reply_Pong::set_a_param1(uint32_t value) {
+  _internal_set_a_param1(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.a_param1)
 }
 
-// required uint32 param2 = 2;
-inline bool Reply_Pong::_internal_has_param2() const {
+// required uint32 a_param2 = 2;
+inline bool Reply_Pong::_internal_has_a_param2() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Reply_Pong::has_param2() const {
-  return _internal_has_param2();
+inline bool Reply_Pong::has_a_param2() const {
+  return _internal_has_a_param2();
 }
-inline void Reply_Pong::clear_param2() {
-  _impl_.param2_ = 0u;
+inline void Reply_Pong::clear_a_param2() {
+  _impl_.a_param2_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Reply_Pong::_internal_param2() const {
-  return _impl_.param2_;
+inline uint32_t Reply_Pong::_internal_a_param2() const {
+  return _impl_.a_param2_;
 }
-inline uint32_t Reply_Pong::param2() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.param2)
-  return _internal_param2();
+inline uint32_t Reply_Pong::a_param2() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.a_param2)
+  return _internal_a_param2();
 }
-inline void Reply_Pong::_internal_set_param2(uint32_t value) {
+inline void Reply_Pong::_internal_set_a_param2(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.param2_ = value;
+  _impl_.a_param2_ = value;
 }
-inline void Reply_Pong::set_param2(uint32_t value) {
-  _internal_set_param2(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.param2)
+inline void Reply_Pong::set_a_param2(uint32_t value) {
+  _internal_set_a_param2(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong.a_param2)
 }
 
 #ifdef __GNUC__

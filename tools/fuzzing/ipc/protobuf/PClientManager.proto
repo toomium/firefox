@@ -20,36 +20,36 @@ message Msg_Teardown {
 }
 
 message Msg_PClientHandleConstructor {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Reply_PClientHandleConstructor {
 }
 
 message Msg_PClientManagerOpConstructor {
-  required protobuf.mozilla.dom.ClientOpConstructorArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 1;
 }
 
 message Reply_PClientManagerOpConstructor {
 }
 
 message Msg_PClientSourceConstructor {
-  required protobuf.mozilla.dom.ClientSourceConstructorArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientSourceConstructorArgs a_aArgs = 1;
 }
 
 message Reply_PClientSourceConstructor {
 }
 
 message Msg_ExpectFutureClientSource {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Msg_ForgetFutureClientSource {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Msg_PClientNavigateOpConstructor {
-  required protobuf.mozilla.dom.ClientNavigateOpConstructorArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientNavigateOpConstructorArgs a_aArgs = 1;
 }
 
 message Reply_PClientNavigateOpConstructor {

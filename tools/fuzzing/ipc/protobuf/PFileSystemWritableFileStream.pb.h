@@ -184,19 +184,19 @@ class Msg_Close final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAbortFieldNumber = 1,
+    kAAAbortFieldNumber = 1,
   };
-  // required bool aAbort = 1;
-  bool has_aabort() const;
+  // required bool a_aAbort = 1;
+  bool has_a_aabort() const;
   private:
-  bool _internal_has_aabort() const;
+  bool _internal_has_a_aabort() const;
   public:
-  void clear_aabort();
-  bool aabort() const;
-  void set_aabort(bool value);
+  void clear_a_aabort();
+  bool a_aabort() const;
+  void set_a_aabort(bool value);
   private:
-  bool _internal_aabort() const;
-  void _internal_set_aabort(bool value);
+  bool _internal_a_aabort() const;
+  void _internal_set_a_aabort(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close)
@@ -209,7 +209,7 @@ class Msg_Close final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aabort_;
+    bool a_aabort_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemWritableFileStream_2eproto;
@@ -326,24 +326,24 @@ class Reply_Close final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOkFieldNumber = 1,
+    kAOkFieldNumber = 1,
   };
-  // required bytes ok = 1;
-  bool has_ok() const;
+  // required bytes a_ok = 1;
+  bool has_a_ok() const;
   private:
-  bool _internal_has_ok() const;
+  bool _internal_has_a_ok() const;
   public:
-  void clear_ok();
-  const std::string& ok() const;
+  void clear_a_ok();
+  const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ok(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ok();
-  PROTOBUF_NODISCARD std::string* release_ok();
-  void set_allocated_ok(std::string* ok);
+  void set_a_ok(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ok();
+  PROTOBUF_NODISCARD std::string* release_a_ok();
+  void set_allocated_a_ok(std::string* a_ok);
   private:
-  const std::string& _internal_ok() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ok(const std::string& value);
-  std::string* _internal_mutable_ok();
+  const std::string& _internal_a_ok() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ok(const std::string& value);
+  std::string* _internal_mutable_a_ok();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close)
@@ -356,7 +356,7 @@ class Reply_Close final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ok_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemWritableFileStream_2eproto;
@@ -620,104 +620,104 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Close
 
-// required bool aAbort = 1;
-inline bool Msg_Close::_internal_has_aabort() const {
+// required bool a_aAbort = 1;
+inline bool Msg_Close::_internal_has_a_aabort() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Close::has_aabort() const {
-  return _internal_has_aabort();
+inline bool Msg_Close::has_a_aabort() const {
+  return _internal_has_a_aabort();
 }
-inline void Msg_Close::clear_aabort() {
-  _impl_.aabort_ = false;
+inline void Msg_Close::clear_a_aabort() {
+  _impl_.a_aabort_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_Close::_internal_aabort() const {
-  return _impl_.aabort_;
+inline bool Msg_Close::_internal_a_aabort() const {
+  return _impl_.a_aabort_;
 }
-inline bool Msg_Close::aabort() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close.aAbort)
-  return _internal_aabort();
+inline bool Msg_Close::a_aabort() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close.a_aAbort)
+  return _internal_a_aabort();
 }
-inline void Msg_Close::_internal_set_aabort(bool value) {
+inline void Msg_Close::_internal_set_a_aabort(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aabort_ = value;
+  _impl_.a_aabort_ = value;
 }
-inline void Msg_Close::set_aabort(bool value) {
-  _internal_set_aabort(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close.aAbort)
+inline void Msg_Close::set_a_aabort(bool value) {
+  _internal_set_a_aabort(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFileSystemWritableFileStream.Msg_Close.a_aAbort)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Close
 
-// required bytes ok = 1;
-inline bool Reply_Close::_internal_has_ok() const {
+// required bytes a_ok = 1;
+inline bool Reply_Close::_internal_has_a_ok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Close::has_ok() const {
-  return _internal_has_ok();
+inline bool Reply_Close::has_a_ok() const {
+  return _internal_has_a_ok();
 }
-inline void Reply_Close::clear_ok() {
-  _impl_.ok_.ClearToEmpty();
+inline void Reply_Close::clear_a_ok() {
+  _impl_.a_ok_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Close::ok() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.ok)
-  return _internal_ok();
+inline const std::string& Reply_Close::a_ok() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.a_ok)
+  return _internal_a_ok();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Close::set_ok(ArgT0&& arg0, ArgT... args) {
+void Reply_Close::set_a_ok(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.ok)
+ _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.a_ok)
 }
-inline std::string* Reply_Close::mutable_ok() {
-  std::string* _s = _internal_mutable_ok();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.ok)
+inline std::string* Reply_Close::mutable_a_ok() {
+  std::string* _s = _internal_mutable_a_ok();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.a_ok)
   return _s;
 }
-inline const std::string& Reply_Close::_internal_ok() const {
-  return _impl_.ok_.Get();
+inline const std::string& Reply_Close::_internal_a_ok() const {
+  return _impl_.a_ok_.Get();
 }
-inline void Reply_Close::_internal_set_ok(const std::string& value) {
+inline void Reply_Close::_internal_set_a_ok(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ok_.Set(value, GetArenaForAllocation());
+  _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Close::_internal_mutable_ok() {
+inline std::string* Reply_Close::_internal_mutable_a_ok() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ok_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Close::release_ok() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.ok)
-  if (!_internal_has_ok()) {
+inline std::string* Reply_Close::release_a_ok() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.a_ok)
+  if (!_internal_has_a_ok()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ok_.Release();
+  auto* p = _impl_.a_ok_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Close::set_allocated_ok(std::string* ok) {
-  if (ok != nullptr) {
+inline void Reply_Close::set_allocated_a_ok(std::string* a_ok) {
+  if (a_ok != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ok_.SetAllocated(ok, GetArenaForAllocation());
+  _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.ok)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PFileSystemWritableFileStream.Reply_Close.a_ok)
 }
 
 // -------------------------------------------------------------------

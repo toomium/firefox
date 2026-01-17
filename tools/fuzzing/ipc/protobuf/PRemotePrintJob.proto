@@ -16,42 +16,42 @@ package protobuf.mozilla.layout.PRemotePrintJob;
 
 // Message declarations
 message Msg_AbortPrint {
-  required bytes aRv = 1;
+  required bytes a_aRv = 1;
 }
 
 message Msg_InitializePrint {
-  required bytes aDocumentTitle = 1;
-  required sint32 aStartPage = 2;
-  required sint32 aEndPage = 3;
+  required bytes a_aDocumentTitle = 1;
+  required sint32 a_aStartPage = 2;
+  required sint32 a_aEndPage = 3;
 }
 
 message Msg_ProcessPage {
-  required sint32 aWidthInPoints = 1;
-  required sint32 aHeightInPoints = 2;
-  repeated uint64 aDeps = 3;
+  required sint32 a_aWidthInPoints = 1;
+  required sint32 a_aHeightInPoints = 2;
+  repeated uint64 a_aDeps = 3;
 }
 
 message Msg_FinalizePrint {
 }
 
 message Msg_ProgressChange {
-  required sint64 aCurSelfProgress = 1;
-  required sint64 aMaxSelfProgress = 2;
-  required sint64 aCurTotalProgress = 3;
-  required sint64 aMaxTotalProgress = 4;
+  required sint64 a_aCurSelfProgress = 1;
+  required sint64 a_aMaxSelfProgress = 2;
+  required sint64 a_aCurTotalProgress = 3;
+  required sint64 a_aMaxTotalProgress = 4;
 }
 
 message Msg_StatusChange {
-  required bytes aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 message Msg_PrintInitializationResult {
-  required bytes aRv = 1;
-  required bytes aFd = 2;
+  required bytes a_aRv = 1;
+  required bytes a_aFd = 2;
 }
 
 message Msg_PageProcessed {
-  required bytes aFd = 1;
+  required bytes a_aFd = 1;
 }
 
 message Msg___delete__ {

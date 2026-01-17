@@ -22,19 +22,19 @@ message Msg_DeleteMe {
 }
 
 message Msg_PBackgroundIDBFactoryRequestConstructor {
-  required protobuf.mozilla.dom.indexedDB.FactoryRequestParams params = 1;
+  required protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 1;
 }
 
 message Reply_PBackgroundIDBFactoryRequestConstructor {
 }
 
 message Msg_GetDatabases {
-  required bytes persistenceType = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 2;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message Reply_GetDatabases {
-  required protobuf.mozilla.dom.indexedDB.GetDatabasesResponse response = 1;
+  required protobuf.mozilla.dom.indexedDB.GetDatabasesResponse a_response = 1;
 }
 
 message Msg___delete__ {
@@ -44,8 +44,8 @@ message Reply___delete__ {
 }
 
 message Msg_PBackgroundIDBDatabaseConstructor {
-  required protobuf.mozilla.dom.indexedDB.DatabaseSpec spec = 1;
-  required bytes request = 2;
+  required protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 1;
+  required bytes a_request = 2;
 }
 
 message Reply_PBackgroundIDBDatabaseConstructor {

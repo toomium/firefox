@@ -24,12 +24,12 @@ PROTOBUF_CONSTEXPR NetworkAddressArg::NetworkAddressArg(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.selfaddr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.peeraddr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.trrskipreason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.resolvedbytrr_)*/false
-  , /*decltype(_impl_.echconfigused_)*/false} {}
+  , /*decltype(_impl_.a_selfaddr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_peeraddr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_trrskipreason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_resolvedbytrr_)*/false
+  , /*decltype(_impl_.a_echconfigused_)*/false} {}
 struct NetworkAddressArgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR NetworkAddressArgDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,22 +51,22 @@ namespace net {
 class NetworkAddressArg::_Internal {
  public:
   using HasBits = decltype(std::declval<NetworkAddressArg>()._impl_._has_bits_);
-  static void set_has_selfaddr(HasBits* has_bits) {
+  static void set_has_a_selfaddr(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_peeraddr(HasBits* has_bits) {
+  static void set_has_a_peeraddr(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_resolvedbytrr(HasBits* has_bits) {
+  static void set_has_a_resolvedbytrr(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_mode(HasBits* has_bits) {
+  static void set_has_a_mode(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_trrskipreason(HasBits* has_bits) {
+  static void set_has_a_trrskipreason(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_echconfigused(HasBits* has_bits) {
+  static void set_has_a_echconfigused(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -86,49 +86,49 @@ NetworkAddressArg::NetworkAddressArg(const NetworkAddressArg& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.selfaddr_){}
-    , decltype(_impl_.peeraddr_){}
-    , decltype(_impl_.mode_){}
-    , decltype(_impl_.trrskipreason_){}
-    , decltype(_impl_.resolvedbytrr_){}
-    , decltype(_impl_.echconfigused_){}};
+    , decltype(_impl_.a_selfaddr_){}
+    , decltype(_impl_.a_peeraddr_){}
+    , decltype(_impl_.a_mode_){}
+    , decltype(_impl_.a_trrskipreason_){}
+    , decltype(_impl_.a_resolvedbytrr_){}
+    , decltype(_impl_.a_echconfigused_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.selfaddr_.InitDefault();
+  _impl_.a_selfaddr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.selfaddr_.Set("", GetArenaForAllocation());
+    _impl_.a_selfaddr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_selfaddr()) {
-    _this->_impl_.selfaddr_.Set(from._internal_selfaddr(), 
+  if (from._internal_has_a_selfaddr()) {
+    _this->_impl_.a_selfaddr_.Set(from._internal_a_selfaddr(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.peeraddr_.InitDefault();
+  _impl_.a_peeraddr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.peeraddr_.Set("", GetArenaForAllocation());
+    _impl_.a_peeraddr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_peeraddr()) {
-    _this->_impl_.peeraddr_.Set(from._internal_peeraddr(), 
+  if (from._internal_has_a_peeraddr()) {
+    _this->_impl_.a_peeraddr_.Set(from._internal_a_peeraddr(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mode_.InitDefault();
+  _impl_.a_mode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mode_.Set("", GetArenaForAllocation());
+    _impl_.a_mode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mode()) {
-    _this->_impl_.mode_.Set(from._internal_mode(), 
+  if (from._internal_has_a_mode()) {
+    _this->_impl_.a_mode_.Set(from._internal_a_mode(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.trrskipreason_.InitDefault();
+  _impl_.a_trrskipreason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.trrskipreason_.Set("", GetArenaForAllocation());
+    _impl_.a_trrskipreason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_trrskipreason()) {
-    _this->_impl_.trrskipreason_.Set(from._internal_trrskipreason(), 
+  if (from._internal_has_a_trrskipreason()) {
+    _this->_impl_.a_trrskipreason_.Set(from._internal_a_trrskipreason(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.resolvedbytrr_, &from._impl_.resolvedbytrr_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.echconfigused_) -
-    reinterpret_cast<char*>(&_impl_.resolvedbytrr_)) + sizeof(_impl_.echconfigused_));
+  ::memcpy(&_impl_.a_resolvedbytrr_, &from._impl_.a_resolvedbytrr_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_echconfigused_) -
+    reinterpret_cast<char*>(&_impl_.a_resolvedbytrr_)) + sizeof(_impl_.a_echconfigused_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.NetworkAddressArg)
 }
 
@@ -139,28 +139,28 @@ inline void NetworkAddressArg::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.selfaddr_){}
-    , decltype(_impl_.peeraddr_){}
-    , decltype(_impl_.mode_){}
-    , decltype(_impl_.trrskipreason_){}
-    , decltype(_impl_.resolvedbytrr_){false}
-    , decltype(_impl_.echconfigused_){false}
+    , decltype(_impl_.a_selfaddr_){}
+    , decltype(_impl_.a_peeraddr_){}
+    , decltype(_impl_.a_mode_){}
+    , decltype(_impl_.a_trrskipreason_){}
+    , decltype(_impl_.a_resolvedbytrr_){false}
+    , decltype(_impl_.a_echconfigused_){false}
   };
-  _impl_.selfaddr_.InitDefault();
+  _impl_.a_selfaddr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.selfaddr_.Set("", GetArenaForAllocation());
+    _impl_.a_selfaddr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.peeraddr_.InitDefault();
+  _impl_.a_peeraddr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.peeraddr_.Set("", GetArenaForAllocation());
+    _impl_.a_peeraddr_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mode_.InitDefault();
+  _impl_.a_mode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mode_.Set("", GetArenaForAllocation());
+    _impl_.a_mode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.trrskipreason_.InitDefault();
+  _impl_.a_trrskipreason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.trrskipreason_.Set("", GetArenaForAllocation());
+    _impl_.a_trrskipreason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -175,10 +175,10 @@ NetworkAddressArg::~NetworkAddressArg() {
 
 inline void NetworkAddressArg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.selfaddr_.Destroy();
-  _impl_.peeraddr_.Destroy();
-  _impl_.mode_.Destroy();
-  _impl_.trrskipreason_.Destroy();
+  _impl_.a_selfaddr_.Destroy();
+  _impl_.a_peeraddr_.Destroy();
+  _impl_.a_mode_.Destroy();
+  _impl_.a_trrskipreason_.Destroy();
 }
 
 void NetworkAddressArg::SetCachedSize(int size) const {
@@ -194,21 +194,21 @@ void NetworkAddressArg::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.selfaddr_.ClearNonDefaultToEmpty();
+      _impl_.a_selfaddr_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.peeraddr_.ClearNonDefaultToEmpty();
+      _impl_.a_peeraddr_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.mode_.ClearNonDefaultToEmpty();
+      _impl_.a_mode_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.trrskipreason_.ClearNonDefaultToEmpty();
+      _impl_.a_trrskipreason_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.resolvedbytrr_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.echconfigused_) -
-      reinterpret_cast<char*>(&_impl_.resolvedbytrr_)) + sizeof(_impl_.echconfigused_));
+  ::memset(&_impl_.a_resolvedbytrr_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_echconfigused_) -
+      reinterpret_cast<char*>(&_impl_.a_resolvedbytrr_)) + sizeof(_impl_.a_echconfigused_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -220,56 +220,56 @@ const char* NetworkAddressArg::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes selfAddr = 1;
+      // required bytes a_selfAddr = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_selfaddr();
+          auto str = _internal_mutable_a_selfaddr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes peerAddr = 2;
+      // required bytes a_peerAddr = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_peeraddr();
+          auto str = _internal_mutable_a_peeraddr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool resolvedByTRR = 3;
+      // required bool a_resolvedByTRR = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_resolvedbytrr(&has_bits);
-          _impl_.resolvedbytrr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_resolvedbytrr(&has_bits);
+          _impl_.a_resolvedbytrr_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mode = 4;
+      // required bytes a_mode = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_mode();
+          auto str = _internal_mutable_a_mode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes trrSkipReason = 5;
+      // required bytes a_trrSkipReason = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_trrskipreason();
+          auto str = _internal_mutable_a_trrskipreason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool echConfigUsed = 6;
+      // required bool a_echConfigUsed = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_echconfigused(&has_bits);
-          _impl_.echconfigused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_echconfigused(&has_bits);
+          _impl_.a_echconfigused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -305,40 +305,40 @@ uint8_t* NetworkAddressArg::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes selfAddr = 1;
+  // required bytes a_selfAddr = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_selfaddr(), target);
+        1, this->_internal_a_selfaddr(), target);
   }
 
-  // required bytes peerAddr = 2;
+  // required bytes a_peerAddr = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_peeraddr(), target);
+        2, this->_internal_a_peeraddr(), target);
   }
 
-  // required bool resolvedByTRR = 3;
+  // required bool a_resolvedByTRR = 3;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_resolvedbytrr(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_resolvedbytrr(), target);
   }
 
-  // required bytes mode = 4;
+  // required bytes a_mode = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_mode(), target);
+        4, this->_internal_a_mode(), target);
   }
 
-  // required bytes trrSkipReason = 5;
+  // required bytes a_trrSkipReason = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_trrskipreason(), target);
+        5, this->_internal_a_trrskipreason(), target);
   }
 
-  // required bool echConfigUsed = 6;
+  // required bool a_echConfigUsed = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_echconfigused(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(6, this->_internal_a_echconfigused(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -353,41 +353,41 @@ size_t NetworkAddressArg::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.NetworkAddressArg)
   size_t total_size = 0;
 
-  if (_internal_has_selfaddr()) {
-    // required bytes selfAddr = 1;
+  if (_internal_has_a_selfaddr()) {
+    // required bytes a_selfAddr = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_selfaddr());
+        this->_internal_a_selfaddr());
   }
 
-  if (_internal_has_peeraddr()) {
-    // required bytes peerAddr = 2;
+  if (_internal_has_a_peeraddr()) {
+    // required bytes a_peerAddr = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_peeraddr());
+        this->_internal_a_peeraddr());
   }
 
-  if (_internal_has_mode()) {
-    // required bytes mode = 4;
+  if (_internal_has_a_mode()) {
+    // required bytes a_mode = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mode());
+        this->_internal_a_mode());
   }
 
-  if (_internal_has_trrskipreason()) {
-    // required bytes trrSkipReason = 5;
+  if (_internal_has_a_trrskipreason()) {
+    // required bytes a_trrSkipReason = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_trrskipreason());
+        this->_internal_a_trrskipreason());
   }
 
-  if (_internal_has_resolvedbytrr()) {
-    // required bool resolvedByTRR = 3;
+  if (_internal_has_a_resolvedbytrr()) {
+    // required bool a_resolvedByTRR = 3;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_echconfigused()) {
-    // required bool echConfigUsed = 6;
+  if (_internal_has_a_echconfigused()) {
+    // required bool a_echConfigUsed = 6;
     total_size += 1 + 1;
   }
 
@@ -398,30 +398,30 @@ size_t NetworkAddressArg::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required bytes selfAddr = 1;
+    // required bytes a_selfAddr = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_selfaddr());
+        this->_internal_a_selfaddr());
 
-    // required bytes peerAddr = 2;
+    // required bytes a_peerAddr = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_peeraddr());
+        this->_internal_a_peeraddr());
 
-    // required bytes mode = 4;
+    // required bytes a_mode = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mode());
+        this->_internal_a_mode());
 
-    // required bytes trrSkipReason = 5;
+    // required bytes a_trrSkipReason = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_trrskipreason());
+        this->_internal_a_trrskipreason());
 
-    // required bool resolvedByTRR = 3;
+    // required bool a_resolvedByTRR = 3;
     total_size += 1 + 1;
 
-    // required bool echConfigUsed = 6;
+    // required bool a_echConfigUsed = 6;
     total_size += 1 + 1;
 
   } else {
@@ -455,22 +455,22 @@ void NetworkAddressArg::MergeFrom(const NetworkAddressArg& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_selfaddr(from._internal_selfaddr());
+      _this->_internal_set_a_selfaddr(from._internal_a_selfaddr());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_peeraddr(from._internal_peeraddr());
+      _this->_internal_set_a_peeraddr(from._internal_a_peeraddr());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_mode(from._internal_mode());
+      _this->_internal_set_a_mode(from._internal_a_mode());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_trrskipreason(from._internal_trrskipreason());
+      _this->_internal_set_a_trrskipreason(from._internal_a_trrskipreason());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.resolvedbytrr_ = from._impl_.resolvedbytrr_;
+      _this->_impl_.a_resolvedbytrr_ = from._impl_.a_resolvedbytrr_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.echconfigused_ = from._impl_.echconfigused_;
+      _this->_impl_.a_echconfigused_ = from._impl_.a_echconfigused_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -496,27 +496,27 @@ void NetworkAddressArg::InternalSwap(NetworkAddressArg* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.selfaddr_, lhs_arena,
-      &other->_impl_.selfaddr_, rhs_arena
+      &_impl_.a_selfaddr_, lhs_arena,
+      &other->_impl_.a_selfaddr_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.peeraddr_, lhs_arena,
-      &other->_impl_.peeraddr_, rhs_arena
+      &_impl_.a_peeraddr_, lhs_arena,
+      &other->_impl_.a_peeraddr_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mode_, lhs_arena,
-      &other->_impl_.mode_, rhs_arena
+      &_impl_.a_mode_, lhs_arena,
+      &other->_impl_.a_mode_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.trrskipreason_, lhs_arena,
-      &other->_impl_.trrskipreason_, rhs_arena
+      &_impl_.a_trrskipreason_, lhs_arena,
+      &other->_impl_.a_trrskipreason_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(NetworkAddressArg, _impl_.echconfigused_)
-      + sizeof(NetworkAddressArg::_impl_.echconfigused_)
-      - PROTOBUF_FIELD_OFFSET(NetworkAddressArg, _impl_.resolvedbytrr_)>(
-          reinterpret_cast<char*>(&_impl_.resolvedbytrr_),
-          reinterpret_cast<char*>(&other->_impl_.resolvedbytrr_));
+      PROTOBUF_FIELD_OFFSET(NetworkAddressArg, _impl_.a_echconfigused_)
+      + sizeof(NetworkAddressArg::_impl_.a_echconfigused_)
+      - PROTOBUF_FIELD_OFFSET(NetworkAddressArg, _impl_.a_resolvedbytrr_)>(
+          reinterpret_cast<char*>(&_impl_.a_resolvedbytrr_),
+          reinterpret_cast<char*>(&other->_impl_.a_resolvedbytrr_));
 }
 
 std::string NetworkAddressArg::GetTypeName() const {

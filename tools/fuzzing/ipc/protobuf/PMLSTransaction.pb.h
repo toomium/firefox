@@ -477,19 +477,19 @@ class Reply_RequestStateDelete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bool result = 1;
-  bool has_result() const;
+  // required bool a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete)
@@ -502,7 +502,7 @@ class Reply_RequestStateDelete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool result_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -619,52 +619,52 @@ class Msg_RequestGroupStateDelete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete)
  private:
@@ -674,8 +674,8 @@ class Msg_RequestGroupStateDelete final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -793,24 +793,24 @@ class Reply_RequestGroupStateDelete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete)
@@ -823,7 +823,7 @@ class Reply_RequestGroupStateDelete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -1064,25 +1064,25 @@ class Reply_RequestGenerateIdentityKeypair final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair)
  private:
@@ -1094,7 +1094,7 @@ class Reply_RequestGenerateIdentityKeypair final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -1211,29 +1211,29 @@ class Msg_RequestGenerateCredentialBasic final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCredNameFieldNumber = 1,
+    kACredNameFieldNumber = 1,
   };
-  // repeated uint32 credName = 1;
-  int credname_size() const;
+  // repeated uint32 a_credName = 1;
+  int a_credname_size() const;
   private:
-  int _internal_credname_size() const;
+  int _internal_a_credname_size() const;
   public:
-  void clear_credname();
+  void clear_a_credname();
   private:
-  uint32_t _internal_credname(int index) const;
+  uint32_t _internal_a_credname(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_credname() const;
-  void _internal_add_credname(uint32_t value);
+      _internal_a_credname() const;
+  void _internal_add_a_credname(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_credname();
+      _internal_mutable_a_credname();
   public:
-  uint32_t credname(int index) const;
-  void set_credname(int index, uint32_t value);
-  void add_credname(uint32_t value);
+  uint32_t a_credname(int index) const;
+  void set_a_credname(int index, uint32_t value);
+  void add_a_credname(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      credname() const;
+      a_credname() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_credname();
+      mutable_a_credname();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic)
  private:
@@ -1243,7 +1243,7 @@ class Msg_RequestGenerateCredentialBasic final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > credname_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credname_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1361,25 +1361,25 @@ class Reply_RequestGenerateCredentialBasic final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic)
  private:
@@ -1391,7 +1391,7 @@ class Reply_RequestGenerateCredentialBasic final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -1508,52 +1508,52 @@ class Msg_RequestGenerateKeyPackage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdentityFieldNumber = 1,
-    kCredentialFieldNumber = 2,
+    kAIdentityFieldNumber = 1,
+    kACredentialFieldNumber = 2,
   };
-  // repeated uint32 identity = 1;
-  int identity_size() const;
+  // repeated uint32 a_identity = 1;
+  int a_identity_size() const;
   private:
-  int _internal_identity_size() const;
+  int _internal_a_identity_size() const;
   public:
-  void clear_identity();
+  void clear_a_identity();
   private:
-  uint32_t _internal_identity(int index) const;
+  uint32_t _internal_a_identity(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identity() const;
-  void _internal_add_identity(uint32_t value);
+      _internal_a_identity() const;
+  void _internal_add_a_identity(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identity();
+      _internal_mutable_a_identity();
   public:
-  uint32_t identity(int index) const;
-  void set_identity(int index, uint32_t value);
-  void add_identity(uint32_t value);
+  uint32_t a_identity(int index) const;
+  void set_a_identity(int index, uint32_t value);
+  void add_a_identity(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identity() const;
+      a_identity() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identity();
+      mutable_a_identity();
 
-  // repeated uint32 credential = 2;
-  int credential_size() const;
+  // repeated uint32 a_credential = 2;
+  int a_credential_size() const;
   private:
-  int _internal_credential_size() const;
+  int _internal_a_credential_size() const;
   public:
-  void clear_credential();
+  void clear_a_credential();
   private:
-  uint32_t _internal_credential(int index) const;
+  uint32_t _internal_a_credential(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_credential() const;
-  void _internal_add_credential(uint32_t value);
+      _internal_a_credential() const;
+  void _internal_add_a_credential(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_credential();
+      _internal_mutable_a_credential();
   public:
-  uint32_t credential(int index) const;
-  void set_credential(int index, uint32_t value);
-  void add_credential(uint32_t value);
+  uint32_t a_credential(int index) const;
+  void set_a_credential(int index, uint32_t value);
+  void add_a_credential(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      credential() const;
+      a_credential() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_credential();
+      mutable_a_credential();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage)
  private:
@@ -1563,8 +1563,8 @@ class Msg_RequestGenerateKeyPackage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identity_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > credential_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identity_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credential_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1682,25 +1682,25 @@ class Reply_RequestGenerateKeyPackage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage)
  private:
@@ -1712,7 +1712,7 @@ class Reply_RequestGenerateKeyPackage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -1829,75 +1829,75 @@ class Msg_RequestGroupCreate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdentifierFieldNumber = 1,
-    kCredentialFieldNumber = 2,
-    kInOptGroupIdentifierFieldNumber = 3,
+    kAIdentifierFieldNumber = 1,
+    kACredentialFieldNumber = 2,
+    kAInOptGroupIdentifierFieldNumber = 3,
   };
-  // repeated uint32 identifier = 1;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 1;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 credential = 2;
-  int credential_size() const;
+  // repeated uint32 a_credential = 2;
+  int a_credential_size() const;
   private:
-  int _internal_credential_size() const;
+  int _internal_a_credential_size() const;
   public:
-  void clear_credential();
+  void clear_a_credential();
   private:
-  uint32_t _internal_credential(int index) const;
+  uint32_t _internal_a_credential(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_credential() const;
-  void _internal_add_credential(uint32_t value);
+      _internal_a_credential() const;
+  void _internal_add_a_credential(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_credential();
+      _internal_mutable_a_credential();
   public:
-  uint32_t credential(int index) const;
-  void set_credential(int index, uint32_t value);
-  void add_credential(uint32_t value);
+  uint32_t a_credential(int index) const;
+  void set_a_credential(int index, uint32_t value);
+  void add_a_credential(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      credential() const;
+      a_credential() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_credential();
+      mutable_a_credential();
 
-  // repeated uint32 inOptGroupIdentifier = 3;
-  int inoptgroupidentifier_size() const;
+  // repeated uint32 a_inOptGroupIdentifier = 3;
+  int a_inoptgroupidentifier_size() const;
   private:
-  int _internal_inoptgroupidentifier_size() const;
+  int _internal_a_inoptgroupidentifier_size() const;
   public:
-  void clear_inoptgroupidentifier();
+  void clear_a_inoptgroupidentifier();
   private:
-  uint32_t _internal_inoptgroupidentifier(int index) const;
+  uint32_t _internal_a_inoptgroupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_inoptgroupidentifier() const;
-  void _internal_add_inoptgroupidentifier(uint32_t value);
+      _internal_a_inoptgroupidentifier() const;
+  void _internal_add_a_inoptgroupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_inoptgroupidentifier();
+      _internal_mutable_a_inoptgroupidentifier();
   public:
-  uint32_t inoptgroupidentifier(int index) const;
-  void set_inoptgroupidentifier(int index, uint32_t value);
-  void add_inoptgroupidentifier(uint32_t value);
+  uint32_t a_inoptgroupidentifier(int index) const;
+  void set_a_inoptgroupidentifier(int index, uint32_t value);
+  void add_a_inoptgroupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      inoptgroupidentifier() const;
+      a_inoptgroupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_inoptgroupidentifier();
+      mutable_a_inoptgroupidentifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate)
  private:
@@ -1907,9 +1907,9 @@ class Msg_RequestGroupCreate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > credential_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > inoptgroupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_credential_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_inoptgroupidentifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2027,24 +2027,24 @@ class Reply_RequestGroupCreate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate)
@@ -2057,7 +2057,7 @@ class Reply_RequestGroupCreate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -2174,52 +2174,52 @@ class Msg_RequestGroupJoin final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdentifierFieldNumber = 1,
-    kWelcomeFieldNumber = 2,
+    kAIdentifierFieldNumber = 1,
+    kAWelcomeFieldNumber = 2,
   };
-  // repeated uint32 identifier = 1;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 1;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 welcome = 2;
-  int welcome_size() const;
+  // repeated uint32 a_welcome = 2;
+  int a_welcome_size() const;
   private:
-  int _internal_welcome_size() const;
+  int _internal_a_welcome_size() const;
   public:
-  void clear_welcome();
+  void clear_a_welcome();
   private:
-  uint32_t _internal_welcome(int index) const;
+  uint32_t _internal_a_welcome(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_welcome() const;
-  void _internal_add_welcome(uint32_t value);
+      _internal_a_welcome() const;
+  void _internal_add_a_welcome(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_welcome();
+      _internal_mutable_a_welcome();
   public:
-  uint32_t welcome(int index) const;
-  void set_welcome(int index, uint32_t value);
-  void add_welcome(uint32_t value);
+  uint32_t a_welcome(int index) const;
+  void set_a_welcome(int index, uint32_t value);
+  void add_a_welcome(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      welcome() const;
+      a_welcome() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_welcome();
+      mutable_a_welcome();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin)
  private:
@@ -2229,8 +2229,8 @@ class Msg_RequestGroupJoin final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > welcome_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_welcome_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2348,24 +2348,24 @@ class Reply_RequestGroupJoin final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin)
@@ -2378,7 +2378,7 @@ class Reply_RequestGroupJoin final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -2495,75 +2495,75 @@ class Msg_RequestGroupAdd final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
-    kKeyPackageFieldNumber = 3,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
+    kAKeyPackageFieldNumber = 3,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 keyPackage = 3;
-  int keypackage_size() const;
+  // repeated uint32 a_keyPackage = 3;
+  int a_keypackage_size() const;
   private:
-  int _internal_keypackage_size() const;
+  int _internal_a_keypackage_size() const;
   public:
-  void clear_keypackage();
+  void clear_a_keypackage();
   private:
-  uint32_t _internal_keypackage(int index) const;
+  uint32_t _internal_a_keypackage(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_keypackage() const;
-  void _internal_add_keypackage(uint32_t value);
+      _internal_a_keypackage() const;
+  void _internal_add_a_keypackage(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_keypackage();
+      _internal_mutable_a_keypackage();
   public:
-  uint32_t keypackage(int index) const;
-  void set_keypackage(int index, uint32_t value);
-  void add_keypackage(uint32_t value);
+  uint32_t a_keypackage(int index) const;
+  void set_a_keypackage(int index, uint32_t value);
+  void add_a_keypackage(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      keypackage() const;
+      a_keypackage() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_keypackage();
+      mutable_a_keypackage();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd)
  private:
@@ -2573,9 +2573,9 @@ class Msg_RequestGroupAdd final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > keypackage_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_keypackage_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2693,24 +2693,24 @@ class Reply_RequestGroupAdd final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd)
@@ -2723,7 +2723,7 @@ class Reply_RequestGroupAdd final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -2840,75 +2840,75 @@ class Msg_RequestGroupProposeAdd final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
-    kKeyPackageFieldNumber = 3,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
+    kAKeyPackageFieldNumber = 3,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 keyPackage = 3;
-  int keypackage_size() const;
+  // repeated uint32 a_keyPackage = 3;
+  int a_keypackage_size() const;
   private:
-  int _internal_keypackage_size() const;
+  int _internal_a_keypackage_size() const;
   public:
-  void clear_keypackage();
+  void clear_a_keypackage();
   private:
-  uint32_t _internal_keypackage(int index) const;
+  uint32_t _internal_a_keypackage(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_keypackage() const;
-  void _internal_add_keypackage(uint32_t value);
+      _internal_a_keypackage() const;
+  void _internal_add_a_keypackage(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_keypackage();
+      _internal_mutable_a_keypackage();
   public:
-  uint32_t keypackage(int index) const;
-  void set_keypackage(int index, uint32_t value);
-  void add_keypackage(uint32_t value);
+  uint32_t a_keypackage(int index) const;
+  void set_a_keypackage(int index, uint32_t value);
+  void add_a_keypackage(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      keypackage() const;
+      a_keypackage() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_keypackage();
+      mutable_a_keypackage();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd)
  private:
@@ -2918,9 +2918,9 @@ class Msg_RequestGroupProposeAdd final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > keypackage_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_keypackage_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3038,25 +3038,25 @@ class Reply_RequestGroupProposeAdd final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd)
  private:
@@ -3068,7 +3068,7 @@ class Reply_RequestGroupProposeAdd final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -3185,75 +3185,75 @@ class Msg_RequestGroupRemove final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
-    kRemIdentifierFieldNumber = 3,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
+    kARemIdentifierFieldNumber = 3,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 remIdentifier = 3;
-  int remidentifier_size() const;
+  // repeated uint32 a_remIdentifier = 3;
+  int a_remidentifier_size() const;
   private:
-  int _internal_remidentifier_size() const;
+  int _internal_a_remidentifier_size() const;
   public:
-  void clear_remidentifier();
+  void clear_a_remidentifier();
   private:
-  uint32_t _internal_remidentifier(int index) const;
+  uint32_t _internal_a_remidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_remidentifier() const;
-  void _internal_add_remidentifier(uint32_t value);
+      _internal_a_remidentifier() const;
+  void _internal_add_a_remidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_remidentifier();
+      _internal_mutable_a_remidentifier();
   public:
-  uint32_t remidentifier(int index) const;
-  void set_remidentifier(int index, uint32_t value);
-  void add_remidentifier(uint32_t value);
+  uint32_t a_remidentifier(int index) const;
+  void set_a_remidentifier(int index, uint32_t value);
+  void add_a_remidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      remidentifier() const;
+      a_remidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_remidentifier();
+      mutable_a_remidentifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove)
  private:
@@ -3263,9 +3263,9 @@ class Msg_RequestGroupRemove final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > remidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_remidentifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3383,24 +3383,24 @@ class Reply_RequestGroupRemove final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove)
@@ -3413,7 +3413,7 @@ class Reply_RequestGroupRemove final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -3530,75 +3530,75 @@ class Msg_RequestGroupProposeRemove final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
-    kRemIdentifierFieldNumber = 3,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
+    kARemIdentifierFieldNumber = 3,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 remIdentifier = 3;
-  int remidentifier_size() const;
+  // repeated uint32 a_remIdentifier = 3;
+  int a_remidentifier_size() const;
   private:
-  int _internal_remidentifier_size() const;
+  int _internal_a_remidentifier_size() const;
   public:
-  void clear_remidentifier();
+  void clear_a_remidentifier();
   private:
-  uint32_t _internal_remidentifier(int index) const;
+  uint32_t _internal_a_remidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_remidentifier() const;
-  void _internal_add_remidentifier(uint32_t value);
+      _internal_a_remidentifier() const;
+  void _internal_add_a_remidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_remidentifier();
+      _internal_mutable_a_remidentifier();
   public:
-  uint32_t remidentifier(int index) const;
-  void set_remidentifier(int index, uint32_t value);
-  void add_remidentifier(uint32_t value);
+  uint32_t a_remidentifier(int index) const;
+  void set_a_remidentifier(int index, uint32_t value);
+  void add_a_remidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      remidentifier() const;
+      a_remidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_remidentifier();
+      mutable_a_remidentifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove)
  private:
@@ -3608,9 +3608,9 @@ class Msg_RequestGroupProposeRemove final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > remidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_remidentifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3728,25 +3728,25 @@ class Reply_RequestGroupProposeRemove final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove)
  private:
@@ -3758,7 +3758,7 @@ class Reply_RequestGroupProposeRemove final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -3875,52 +3875,52 @@ class Msg_RequestGroupClose final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose)
  private:
@@ -3930,8 +3930,8 @@ class Msg_RequestGroupClose final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4049,24 +4049,24 @@ class Reply_RequestGroupClose final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose)
@@ -4079,7 +4079,7 @@ class Reply_RequestGroupClose final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -4196,52 +4196,52 @@ class Msg_RequestGroupDetails final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails)
  private:
@@ -4251,8 +4251,8 @@ class Msg_RequestGroupDetails final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4370,24 +4370,24 @@ class Reply_RequestGroupDetails final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails)
@@ -4400,7 +4400,7 @@ class Reply_RequestGroupDetails final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -4517,75 +4517,75 @@ class Msg_RequestSend final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
-    kMessageFieldNumber = 3,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
+    kAMessageFieldNumber = 3,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 message = 3;
-  int message_size() const;
+  // repeated uint32 a_message = 3;
+  int a_message_size() const;
   private:
-  int _internal_message_size() const;
+  int _internal_a_message_size() const;
   public:
-  void clear_message();
+  void clear_a_message();
   private:
-  uint32_t _internal_message(int index) const;
+  uint32_t _internal_a_message(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_message() const;
-  void _internal_add_message(uint32_t value);
+      _internal_a_message() const;
+  void _internal_add_a_message(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_message();
+      _internal_mutable_a_message();
   public:
-  uint32_t message(int index) const;
-  void set_message(int index, uint32_t value);
-  void add_message(uint32_t value);
+  uint32_t a_message(int index) const;
+  void set_a_message(int index, uint32_t value);
+  void add_a_message(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      message() const;
+      a_message() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_message();
+      mutable_a_message();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend)
  private:
@@ -4595,9 +4595,9 @@ class Msg_RequestSend final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > message_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4715,25 +4715,25 @@ class Reply_RequestSend final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend)
  private:
@@ -4745,7 +4745,7 @@ class Reply_RequestSend final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -4862,52 +4862,52 @@ class Msg_RequestReceive final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdentifierFieldNumber = 1,
-    kMessageFieldNumber = 2,
+    kAIdentifierFieldNumber = 1,
+    kAMessageFieldNumber = 2,
   };
-  // repeated uint32 identifier = 1;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 1;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 message = 2;
-  int message_size() const;
+  // repeated uint32 a_message = 2;
+  int a_message_size() const;
   private:
-  int _internal_message_size() const;
+  int _internal_a_message_size() const;
   public:
-  void clear_message();
+  void clear_a_message();
   private:
-  uint32_t _internal_message(int index) const;
+  uint32_t _internal_a_message(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_message() const;
-  void _internal_add_message(uint32_t value);
+      _internal_a_message() const;
+  void _internal_add_a_message(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_message();
+      _internal_mutable_a_message();
   public:
-  uint32_t message(int index) const;
-  void set_message(int index, uint32_t value);
-  void add_message(uint32_t value);
+  uint32_t a_message(int index) const;
+  void set_a_message(int index, uint32_t value);
+  void add_a_message(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      message() const;
+      a_message() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_message();
+      mutable_a_message();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive)
  private:
@@ -4917,8 +4917,8 @@ class Msg_RequestReceive final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > message_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5036,24 +5036,24 @@ class Reply_RequestReceive final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bytes result = 1;
-  bool has_result() const;
+  // required bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive)
@@ -5066,7 +5066,7 @@ class Reply_RequestReceive final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -5183,52 +5183,52 @@ class Msg_RequestHasPendingProposals final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals)
  private:
@@ -5238,8 +5238,8 @@ class Msg_RequestHasPendingProposals final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5357,19 +5357,19 @@ class Reply_RequestHasPendingProposals final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bool result = 1;
-  bool has_result() const;
+  // required bool a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals)
@@ -5382,7 +5382,7 @@ class Reply_RequestHasPendingProposals final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool result_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -5499,52 +5499,52 @@ class Msg_RequestClearPendingProposals final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals)
  private:
@@ -5554,8 +5554,8 @@ class Msg_RequestClearPendingProposals final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5673,19 +5673,19 @@ class Reply_RequestClearPendingProposals final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bool result = 1;
-  bool has_result() const;
+  // required bool a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals)
@@ -5698,7 +5698,7 @@ class Reply_RequestClearPendingProposals final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool result_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -5815,52 +5815,52 @@ class Msg_RequestHasPendingCommit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit)
  private:
@@ -5870,8 +5870,8 @@ class Msg_RequestHasPendingCommit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5989,19 +5989,19 @@ class Reply_RequestHasPendingCommit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bool result = 1;
-  bool has_result() const;
+  // required bool a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit)
@@ -6014,7 +6014,7 @@ class Reply_RequestHasPendingCommit final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool result_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -6131,52 +6131,52 @@ class Msg_RequestClearPendingCommit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit)
  private:
@@ -6186,8 +6186,8 @@ class Msg_RequestClearPendingCommit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6305,19 +6305,19 @@ class Reply_RequestClearPendingCommit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bool result = 1;
-  bool has_result() const;
+  // required bool a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  bool result() const;
-  void set_result(bool value);
+  void clear_a_result();
+  bool a_result() const;
+  void set_a_result(bool value);
   private:
-  bool _internal_result() const;
-  void _internal_set_result(bool value);
+  bool _internal_a_result() const;
+  void _internal_set_a_result(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit)
@@ -6330,7 +6330,7 @@ class Reply_RequestClearPendingCommit final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool result_;
+    bool a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -6447,52 +6447,52 @@ class Msg_RequestApplyPendingCommit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit)
  private:
@@ -6502,8 +6502,8 @@ class Msg_RequestApplyPendingCommit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6621,24 +6621,24 @@ class Reply_RequestApplyPendingCommit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bytes result = 1;
-  bool has_result() const;
+  // required bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit)
@@ -6651,7 +6651,7 @@ class Reply_RequestApplyPendingCommit final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -6768,111 +6768,111 @@ class Msg_RequestExportSecret final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdentifierFieldNumber = 1,
-    kIdentifierFieldNumber = 2,
-    kLabelFieldNumber = 3,
-    kContentFieldNumber = 4,
-    kLenFieldNumber = 5,
+    kAGroupIdentifierFieldNumber = 1,
+    kAIdentifierFieldNumber = 2,
+    kALabelFieldNumber = 3,
+    kAContentFieldNumber = 4,
+    kALenFieldNumber = 5,
   };
-  // repeated uint32 groupIdentifier = 1;
-  int groupidentifier_size() const;
+  // repeated uint32 a_groupIdentifier = 1;
+  int a_groupidentifier_size() const;
   private:
-  int _internal_groupidentifier_size() const;
+  int _internal_a_groupidentifier_size() const;
   public:
-  void clear_groupidentifier();
+  void clear_a_groupidentifier();
   private:
-  uint32_t _internal_groupidentifier(int index) const;
+  uint32_t _internal_a_groupidentifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_groupidentifier() const;
-  void _internal_add_groupidentifier(uint32_t value);
+      _internal_a_groupidentifier() const;
+  void _internal_add_a_groupidentifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_groupidentifier();
+      _internal_mutable_a_groupidentifier();
   public:
-  uint32_t groupidentifier(int index) const;
-  void set_groupidentifier(int index, uint32_t value);
-  void add_groupidentifier(uint32_t value);
+  uint32_t a_groupidentifier(int index) const;
+  void set_a_groupidentifier(int index, uint32_t value);
+  void add_a_groupidentifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      groupidentifier() const;
+      a_groupidentifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_groupidentifier();
+      mutable_a_groupidentifier();
 
-  // repeated uint32 identifier = 2;
-  int identifier_size() const;
+  // repeated uint32 a_identifier = 2;
+  int a_identifier_size() const;
   private:
-  int _internal_identifier_size() const;
+  int _internal_a_identifier_size() const;
   public:
-  void clear_identifier();
+  void clear_a_identifier();
   private:
-  uint32_t _internal_identifier(int index) const;
+  uint32_t _internal_a_identifier(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_identifier() const;
-  void _internal_add_identifier(uint32_t value);
+      _internal_a_identifier() const;
+  void _internal_add_a_identifier(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_identifier();
+      _internal_mutable_a_identifier();
   public:
-  uint32_t identifier(int index) const;
-  void set_identifier(int index, uint32_t value);
-  void add_identifier(uint32_t value);
+  uint32_t a_identifier(int index) const;
+  void set_a_identifier(int index, uint32_t value);
+  void add_a_identifier(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      identifier() const;
+      a_identifier() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_identifier();
+      mutable_a_identifier();
 
-  // repeated uint32 label = 3;
-  int label_size() const;
+  // repeated uint32 a_label = 3;
+  int a_label_size() const;
   private:
-  int _internal_label_size() const;
+  int _internal_a_label_size() const;
   public:
-  void clear_label();
+  void clear_a_label();
   private:
-  uint32_t _internal_label(int index) const;
+  uint32_t _internal_a_label(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_label() const;
-  void _internal_add_label(uint32_t value);
+      _internal_a_label() const;
+  void _internal_add_a_label(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_label();
+      _internal_mutable_a_label();
   public:
-  uint32_t label(int index) const;
-  void set_label(int index, uint32_t value);
-  void add_label(uint32_t value);
+  uint32_t a_label(int index) const;
+  void set_a_label(int index, uint32_t value);
+  void add_a_label(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      label() const;
+      a_label() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_label();
+      mutable_a_label();
 
-  // repeated uint32 content = 4;
-  int content_size() const;
+  // repeated uint32 a_content = 4;
+  int a_content_size() const;
   private:
-  int _internal_content_size() const;
+  int _internal_a_content_size() const;
   public:
-  void clear_content();
+  void clear_a_content();
   private:
-  uint32_t _internal_content(int index) const;
+  uint32_t _internal_a_content(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_content() const;
-  void _internal_add_content(uint32_t value);
+      _internal_a_content() const;
+  void _internal_add_a_content(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_content();
+      _internal_mutable_a_content();
   public:
-  uint32_t content(int index) const;
-  void set_content(int index, uint32_t value);
-  void add_content(uint32_t value);
+  uint32_t a_content(int index) const;
+  void set_a_content(int index, uint32_t value);
+  void add_a_content(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      content() const;
+      a_content() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_content();
+      mutable_a_content();
 
-  // required uint64 len = 5;
-  bool has_len() const;
+  // required uint64 a_len = 5;
+  bool has_a_len() const;
   private:
-  bool _internal_has_len() const;
+  bool _internal_has_a_len() const;
   public:
-  void clear_len();
-  uint64_t len() const;
-  void set_len(uint64_t value);
+  void clear_a_len();
+  uint64_t a_len() const;
+  void set_a_len(uint64_t value);
   private:
-  uint64_t _internal_len() const;
-  void _internal_set_len(uint64_t value);
+  uint64_t _internal_a_len() const;
+  void _internal_set_a_len(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret)
@@ -6885,11 +6885,11 @@ class Msg_RequestExportSecret final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > groupidentifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > identifier_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > label_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > content_;
-    uint64_t len_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_groupidentifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_identifier_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_label_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_content_;
+    uint64_t a_len_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -7006,24 +7006,24 @@ class Reply_RequestExportSecret final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional bytes result = 1;
-  bool has_result() const;
+  // optional bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret)
@@ -7036,7 +7036,7 @@ class Reply_RequestExportSecret final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -7153,29 +7153,29 @@ class Msg_RequestGetGroupIdentifier final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 1,
+    kAMessageFieldNumber = 1,
   };
-  // repeated uint32 message = 1;
-  int message_size() const;
+  // repeated uint32 a_message = 1;
+  int a_message_size() const;
   private:
-  int _internal_message_size() const;
+  int _internal_a_message_size() const;
   public:
-  void clear_message();
+  void clear_a_message();
   private:
-  uint32_t _internal_message(int index) const;
+  uint32_t _internal_a_message(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_message() const;
-  void _internal_add_message(uint32_t value);
+      _internal_a_message() const;
+  void _internal_add_a_message(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_message();
+      _internal_mutable_a_message();
   public:
-  uint32_t message(int index) const;
-  void set_message(int index, uint32_t value);
-  void add_message(uint32_t value);
+  uint32_t a_message(int index) const;
+  void set_a_message(int index, uint32_t value);
+  void add_a_message(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      message() const;
+      a_message() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_message();
+      mutable_a_message();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier)
  private:
@@ -7185,7 +7185,7 @@ class Msg_RequestGetGroupIdentifier final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > message_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7303,25 +7303,25 @@ class Reply_RequestGetGroupIdentifier final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier)
  private:
@@ -7333,7 +7333,7 @@ class Reply_RequestGetGroupIdentifier final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -7450,29 +7450,29 @@ class Msg_RequestGetGroupEpoch final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 1,
+    kAMessageFieldNumber = 1,
   };
-  // repeated uint32 message = 1;
-  int message_size() const;
+  // repeated uint32 a_message = 1;
+  int a_message_size() const;
   private:
-  int _internal_message_size() const;
+  int _internal_a_message_size() const;
   public:
-  void clear_message();
+  void clear_a_message();
   private:
-  uint32_t _internal_message(int index) const;
+  uint32_t _internal_a_message(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_message() const;
-  void _internal_add_message(uint32_t value);
+      _internal_a_message() const;
+  void _internal_add_a_message(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_message();
+      _internal_mutable_a_message();
   public:
-  uint32_t message(int index) const;
-  void set_message(int index, uint32_t value);
-  void add_message(uint32_t value);
+  uint32_t a_message(int index) const;
+  void set_a_message(int index, uint32_t value);
+  void add_a_message(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      message() const;
+      a_message() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_message();
+      mutable_a_message();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch)
  private:
@@ -7482,7 +7482,7 @@ class Msg_RequestGetGroupEpoch final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > message_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_message_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7600,25 +7600,25 @@ class Reply_RequestGetGroupEpoch final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.dom.RawBytes result = 1;
-  bool has_result() const;
+  // optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::dom::RawBytes& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_result();
-  ::protobuf::mozilla::dom::RawBytes* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::dom::RawBytes* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::dom::RawBytes& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RawBytes* release_a_result();
+  ::protobuf::mozilla::dom::RawBytes* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result);
   private:
-  const ::protobuf::mozilla::dom::RawBytes& _internal_result() const;
-  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_result();
+  const ::protobuf::mozilla::dom::RawBytes& _internal_a_result() const;
+  ::protobuf::mozilla::dom::RawBytes* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::dom::RawBytes* result);
-  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::dom::RawBytes* a_result);
+  ::protobuf::mozilla::dom::RawBytes* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch)
  private:
@@ -7630,7 +7630,7 @@ class Reply_RequestGetGroupEpoch final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RawBytes* result_;
+    ::protobuf::mozilla::dom::RawBytes* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMLSTransaction_2eproto;
@@ -7650,202 +7650,202 @@ class Reply_RequestGetGroupEpoch final :
 
 // Reply_RequestStateDelete
 
-// required bool result = 1;
-inline bool Reply_RequestStateDelete::_internal_has_result() const {
+// required bool a_result = 1;
+inline bool Reply_RequestStateDelete::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestStateDelete::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestStateDelete::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestStateDelete::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_RequestStateDelete::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestStateDelete::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_RequestStateDelete::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_RequestStateDelete::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete.result)
-  return _internal_result();
+inline bool Reply_RequestStateDelete::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestStateDelete::_internal_set_result(bool value) {
+inline void Reply_RequestStateDelete::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_RequestStateDelete::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete.result)
+inline void Reply_RequestStateDelete::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestStateDelete.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupStateDelete
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupStateDelete::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupStateDelete::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupStateDelete::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupStateDelete::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupStateDelete::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupStateDelete::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupStateDelete::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupStateDelete::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupStateDelete::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupStateDelete::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupStateDelete::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.groupIdentifier)
+inline void Msg_RequestGroupStateDelete::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_groupIdentifier)
 }
-inline void Msg_RequestGroupStateDelete::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupStateDelete::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupStateDelete::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupStateDelete::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupStateDelete::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupStateDelete::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupStateDelete::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupStateDelete::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupStateDelete::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupStateDelete::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupStateDelete::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupStateDelete::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupStateDelete::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupStateDelete::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupStateDelete::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupStateDelete::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupStateDelete::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupStateDelete::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupStateDelete::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupStateDelete::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupStateDelete::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupStateDelete::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupStateDelete::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.identifier)
+inline void Msg_RequestGroupStateDelete::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_identifier)
 }
-inline void Msg_RequestGroupStateDelete::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupStateDelete::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupStateDelete::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupStateDelete::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupStateDelete::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupStateDelete::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.identifier)
-  return _internal_identifier();
+Msg_RequestGroupStateDelete::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupStateDelete::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupStateDelete::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupStateDelete::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupStateDelete::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupStateDelete::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupStateDelete.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupStateDelete
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupStateDelete::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupStateDelete::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupStateDelete::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupStateDelete::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupStateDelete::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupStateDelete::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupStateDelete::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupStateDelete::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupStateDelete::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupStateDelete::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.a_result)
 }
-inline std::string* Reply_RequestGroupStateDelete::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.result)
+inline std::string* Reply_RequestGroupStateDelete::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupStateDelete::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupStateDelete::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupStateDelete::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupStateDelete::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupStateDelete::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupStateDelete::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupStateDelete::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupStateDelete::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupStateDelete::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupStateDelete::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupStateDelete.a_result)
 }
 
 // -------------------------------------------------------------------
@@ -7856,41 +7856,41 @@ inline void Reply_RequestGroupStateDelete::set_allocated_result(std::string* res
 
 // Reply_RequestGenerateIdentityKeypair
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGenerateIdentityKeypair::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGenerateIdentityKeypair::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGenerateIdentityKeypair::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGenerateIdentityKeypair::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateIdentityKeypair::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateIdentityKeypair::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateIdentityKeypair::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateIdentityKeypair::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGenerateIdentityKeypair::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGenerateIdentityKeypair::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -7902,137 +7902,137 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateIdentityKeypair::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.a_result)
   return _msg;
 }
-inline void Reply_RequestGenerateIdentityKeypair::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGenerateIdentityKeypair::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateIdentityKeypair.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGenerateCredentialBasic
 
-// repeated uint32 credName = 1;
-inline int Msg_RequestGenerateCredentialBasic::_internal_credname_size() const {
-  return _impl_.credname_.size();
+// repeated uint32 a_credName = 1;
+inline int Msg_RequestGenerateCredentialBasic::_internal_a_credname_size() const {
+  return _impl_.a_credname_.size();
 }
-inline int Msg_RequestGenerateCredentialBasic::credname_size() const {
-  return _internal_credname_size();
+inline int Msg_RequestGenerateCredentialBasic::a_credname_size() const {
+  return _internal_a_credname_size();
 }
-inline void Msg_RequestGenerateCredentialBasic::clear_credname() {
-  _impl_.credname_.Clear();
+inline void Msg_RequestGenerateCredentialBasic::clear_a_credname() {
+  _impl_.a_credname_.Clear();
 }
-inline uint32_t Msg_RequestGenerateCredentialBasic::_internal_credname(int index) const {
-  return _impl_.credname_.Get(index);
+inline uint32_t Msg_RequestGenerateCredentialBasic::_internal_a_credname(int index) const {
+  return _impl_.a_credname_.Get(index);
 }
-inline uint32_t Msg_RequestGenerateCredentialBasic::credname(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.credName)
-  return _internal_credname(index);
+inline uint32_t Msg_RequestGenerateCredentialBasic::a_credname(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.a_credName)
+  return _internal_a_credname(index);
 }
-inline void Msg_RequestGenerateCredentialBasic::set_credname(int index, uint32_t value) {
-  _impl_.credname_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.credName)
+inline void Msg_RequestGenerateCredentialBasic::set_a_credname(int index, uint32_t value) {
+  _impl_.a_credname_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.a_credName)
 }
-inline void Msg_RequestGenerateCredentialBasic::_internal_add_credname(uint32_t value) {
-  _impl_.credname_.Add(value);
+inline void Msg_RequestGenerateCredentialBasic::_internal_add_a_credname(uint32_t value) {
+  _impl_.a_credname_.Add(value);
 }
-inline void Msg_RequestGenerateCredentialBasic::add_credname(uint32_t value) {
-  _internal_add_credname(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.credName)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGenerateCredentialBasic::_internal_credname() const {
-  return _impl_.credname_;
+inline void Msg_RequestGenerateCredentialBasic::add_a_credname(uint32_t value) {
+  _internal_add_a_credname(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.a_credName)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGenerateCredentialBasic::credname() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.credName)
-  return _internal_credname();
+Msg_RequestGenerateCredentialBasic::_internal_a_credname() const {
+  return _impl_.a_credname_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGenerateCredentialBasic::a_credname() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.a_credName)
+  return _internal_a_credname();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGenerateCredentialBasic::_internal_mutable_credname() {
-  return &_impl_.credname_;
+Msg_RequestGenerateCredentialBasic::_internal_mutable_a_credname() {
+  return &_impl_.a_credname_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGenerateCredentialBasic::mutable_credname() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.credName)
-  return _internal_mutable_credname();
+Msg_RequestGenerateCredentialBasic::mutable_a_credname() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateCredentialBasic.a_credName)
+  return _internal_mutable_a_credname();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGenerateCredentialBasic
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGenerateCredentialBasic::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGenerateCredentialBasic::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGenerateCredentialBasic::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGenerateCredentialBasic::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateCredentialBasic::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateCredentialBasic::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateCredentialBasic::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateCredentialBasic::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGenerateCredentialBasic::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGenerateCredentialBasic::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8044,184 +8044,184 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateCredentialBasic::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.a_result)
   return _msg;
 }
-inline void Reply_RequestGenerateCredentialBasic::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGenerateCredentialBasic::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateCredentialBasic.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGenerateKeyPackage
 
-// repeated uint32 identity = 1;
-inline int Msg_RequestGenerateKeyPackage::_internal_identity_size() const {
-  return _impl_.identity_.size();
+// repeated uint32 a_identity = 1;
+inline int Msg_RequestGenerateKeyPackage::_internal_a_identity_size() const {
+  return _impl_.a_identity_.size();
 }
-inline int Msg_RequestGenerateKeyPackage::identity_size() const {
-  return _internal_identity_size();
+inline int Msg_RequestGenerateKeyPackage::a_identity_size() const {
+  return _internal_a_identity_size();
 }
-inline void Msg_RequestGenerateKeyPackage::clear_identity() {
-  _impl_.identity_.Clear();
+inline void Msg_RequestGenerateKeyPackage::clear_a_identity() {
+  _impl_.a_identity_.Clear();
 }
-inline uint32_t Msg_RequestGenerateKeyPackage::_internal_identity(int index) const {
-  return _impl_.identity_.Get(index);
+inline uint32_t Msg_RequestGenerateKeyPackage::_internal_a_identity(int index) const {
+  return _impl_.a_identity_.Get(index);
 }
-inline uint32_t Msg_RequestGenerateKeyPackage::identity(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.identity)
-  return _internal_identity(index);
+inline uint32_t Msg_RequestGenerateKeyPackage::a_identity(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_identity)
+  return _internal_a_identity(index);
 }
-inline void Msg_RequestGenerateKeyPackage::set_identity(int index, uint32_t value) {
-  _impl_.identity_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.identity)
+inline void Msg_RequestGenerateKeyPackage::set_a_identity(int index, uint32_t value) {
+  _impl_.a_identity_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_identity)
 }
-inline void Msg_RequestGenerateKeyPackage::_internal_add_identity(uint32_t value) {
-  _impl_.identity_.Add(value);
+inline void Msg_RequestGenerateKeyPackage::_internal_add_a_identity(uint32_t value) {
+  _impl_.a_identity_.Add(value);
 }
-inline void Msg_RequestGenerateKeyPackage::add_identity(uint32_t value) {
-  _internal_add_identity(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.identity)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGenerateKeyPackage::_internal_identity() const {
-  return _impl_.identity_;
+inline void Msg_RequestGenerateKeyPackage::add_a_identity(uint32_t value) {
+  _internal_add_a_identity(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_identity)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGenerateKeyPackage::identity() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.identity)
-  return _internal_identity();
+Msg_RequestGenerateKeyPackage::_internal_a_identity() const {
+  return _impl_.a_identity_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGenerateKeyPackage::a_identity() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_identity)
+  return _internal_a_identity();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGenerateKeyPackage::_internal_mutable_identity() {
-  return &_impl_.identity_;
+Msg_RequestGenerateKeyPackage::_internal_mutable_a_identity() {
+  return &_impl_.a_identity_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGenerateKeyPackage::mutable_identity() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.identity)
-  return _internal_mutable_identity();
+Msg_RequestGenerateKeyPackage::mutable_a_identity() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_identity)
+  return _internal_mutable_a_identity();
 }
 
-// repeated uint32 credential = 2;
-inline int Msg_RequestGenerateKeyPackage::_internal_credential_size() const {
-  return _impl_.credential_.size();
+// repeated uint32 a_credential = 2;
+inline int Msg_RequestGenerateKeyPackage::_internal_a_credential_size() const {
+  return _impl_.a_credential_.size();
 }
-inline int Msg_RequestGenerateKeyPackage::credential_size() const {
-  return _internal_credential_size();
+inline int Msg_RequestGenerateKeyPackage::a_credential_size() const {
+  return _internal_a_credential_size();
 }
-inline void Msg_RequestGenerateKeyPackage::clear_credential() {
-  _impl_.credential_.Clear();
+inline void Msg_RequestGenerateKeyPackage::clear_a_credential() {
+  _impl_.a_credential_.Clear();
 }
-inline uint32_t Msg_RequestGenerateKeyPackage::_internal_credential(int index) const {
-  return _impl_.credential_.Get(index);
+inline uint32_t Msg_RequestGenerateKeyPackage::_internal_a_credential(int index) const {
+  return _impl_.a_credential_.Get(index);
 }
-inline uint32_t Msg_RequestGenerateKeyPackage::credential(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.credential)
-  return _internal_credential(index);
+inline uint32_t Msg_RequestGenerateKeyPackage::a_credential(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_credential)
+  return _internal_a_credential(index);
 }
-inline void Msg_RequestGenerateKeyPackage::set_credential(int index, uint32_t value) {
-  _impl_.credential_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.credential)
+inline void Msg_RequestGenerateKeyPackage::set_a_credential(int index, uint32_t value) {
+  _impl_.a_credential_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_credential)
 }
-inline void Msg_RequestGenerateKeyPackage::_internal_add_credential(uint32_t value) {
-  _impl_.credential_.Add(value);
+inline void Msg_RequestGenerateKeyPackage::_internal_add_a_credential(uint32_t value) {
+  _impl_.a_credential_.Add(value);
 }
-inline void Msg_RequestGenerateKeyPackage::add_credential(uint32_t value) {
-  _internal_add_credential(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.credential)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGenerateKeyPackage::_internal_credential() const {
-  return _impl_.credential_;
+inline void Msg_RequestGenerateKeyPackage::add_a_credential(uint32_t value) {
+  _internal_add_a_credential(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_credential)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGenerateKeyPackage::credential() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.credential)
-  return _internal_credential();
+Msg_RequestGenerateKeyPackage::_internal_a_credential() const {
+  return _impl_.a_credential_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGenerateKeyPackage::a_credential() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_credential)
+  return _internal_a_credential();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGenerateKeyPackage::_internal_mutable_credential() {
-  return &_impl_.credential_;
+Msg_RequestGenerateKeyPackage::_internal_mutable_a_credential() {
+  return &_impl_.a_credential_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGenerateKeyPackage::mutable_credential() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.credential)
-  return _internal_mutable_credential();
+Msg_RequestGenerateKeyPackage::mutable_a_credential() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGenerateKeyPackage.a_credential)
+  return _internal_mutable_a_credential();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGenerateKeyPackage
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGenerateKeyPackage::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGenerateKeyPackage::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGenerateKeyPackage::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGenerateKeyPackage::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateKeyPackage::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateKeyPackage::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateKeyPackage::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGenerateKeyPackage::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGenerateKeyPackage::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGenerateKeyPackage::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -8233,835 +8233,835 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGenerateKeyPackage::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.a_result)
   return _msg;
 }
-inline void Reply_RequestGenerateKeyPackage::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGenerateKeyPackage::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGenerateKeyPackage.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupCreate
 
-// repeated uint32 identifier = 1;
-inline int Msg_RequestGroupCreate::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 1;
+inline int Msg_RequestGroupCreate::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupCreate::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupCreate::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupCreate::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupCreate::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupCreate::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupCreate::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupCreate::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupCreate::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupCreate::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.identifier)
+inline void Msg_RequestGroupCreate::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_identifier)
 }
-inline void Msg_RequestGroupCreate::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupCreate::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupCreate::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupCreate::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupCreate::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupCreate::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.identifier)
-  return _internal_identifier();
+Msg_RequestGroupCreate::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupCreate::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupCreate::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupCreate::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupCreate::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupCreate::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 credential = 2;
-inline int Msg_RequestGroupCreate::_internal_credential_size() const {
-  return _impl_.credential_.size();
+// repeated uint32 a_credential = 2;
+inline int Msg_RequestGroupCreate::_internal_a_credential_size() const {
+  return _impl_.a_credential_.size();
 }
-inline int Msg_RequestGroupCreate::credential_size() const {
-  return _internal_credential_size();
+inline int Msg_RequestGroupCreate::a_credential_size() const {
+  return _internal_a_credential_size();
 }
-inline void Msg_RequestGroupCreate::clear_credential() {
-  _impl_.credential_.Clear();
+inline void Msg_RequestGroupCreate::clear_a_credential() {
+  _impl_.a_credential_.Clear();
 }
-inline uint32_t Msg_RequestGroupCreate::_internal_credential(int index) const {
-  return _impl_.credential_.Get(index);
+inline uint32_t Msg_RequestGroupCreate::_internal_a_credential(int index) const {
+  return _impl_.a_credential_.Get(index);
 }
-inline uint32_t Msg_RequestGroupCreate::credential(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.credential)
-  return _internal_credential(index);
+inline uint32_t Msg_RequestGroupCreate::a_credential(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_credential)
+  return _internal_a_credential(index);
 }
-inline void Msg_RequestGroupCreate::set_credential(int index, uint32_t value) {
-  _impl_.credential_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.credential)
+inline void Msg_RequestGroupCreate::set_a_credential(int index, uint32_t value) {
+  _impl_.a_credential_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_credential)
 }
-inline void Msg_RequestGroupCreate::_internal_add_credential(uint32_t value) {
-  _impl_.credential_.Add(value);
+inline void Msg_RequestGroupCreate::_internal_add_a_credential(uint32_t value) {
+  _impl_.a_credential_.Add(value);
 }
-inline void Msg_RequestGroupCreate::add_credential(uint32_t value) {
-  _internal_add_credential(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.credential)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupCreate::_internal_credential() const {
-  return _impl_.credential_;
+inline void Msg_RequestGroupCreate::add_a_credential(uint32_t value) {
+  _internal_add_a_credential(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_credential)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupCreate::credential() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.credential)
-  return _internal_credential();
+Msg_RequestGroupCreate::_internal_a_credential() const {
+  return _impl_.a_credential_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupCreate::a_credential() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_credential)
+  return _internal_a_credential();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupCreate::_internal_mutable_credential() {
-  return &_impl_.credential_;
+Msg_RequestGroupCreate::_internal_mutable_a_credential() {
+  return &_impl_.a_credential_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupCreate::mutable_credential() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.credential)
-  return _internal_mutable_credential();
+Msg_RequestGroupCreate::mutable_a_credential() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_credential)
+  return _internal_mutable_a_credential();
 }
 
-// repeated uint32 inOptGroupIdentifier = 3;
-inline int Msg_RequestGroupCreate::_internal_inoptgroupidentifier_size() const {
-  return _impl_.inoptgroupidentifier_.size();
+// repeated uint32 a_inOptGroupIdentifier = 3;
+inline int Msg_RequestGroupCreate::_internal_a_inoptgroupidentifier_size() const {
+  return _impl_.a_inoptgroupidentifier_.size();
 }
-inline int Msg_RequestGroupCreate::inoptgroupidentifier_size() const {
-  return _internal_inoptgroupidentifier_size();
+inline int Msg_RequestGroupCreate::a_inoptgroupidentifier_size() const {
+  return _internal_a_inoptgroupidentifier_size();
 }
-inline void Msg_RequestGroupCreate::clear_inoptgroupidentifier() {
-  _impl_.inoptgroupidentifier_.Clear();
+inline void Msg_RequestGroupCreate::clear_a_inoptgroupidentifier() {
+  _impl_.a_inoptgroupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupCreate::_internal_inoptgroupidentifier(int index) const {
-  return _impl_.inoptgroupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupCreate::_internal_a_inoptgroupidentifier(int index) const {
+  return _impl_.a_inoptgroupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupCreate::inoptgroupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.inOptGroupIdentifier)
-  return _internal_inoptgroupidentifier(index);
+inline uint32_t Msg_RequestGroupCreate::a_inoptgroupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_inOptGroupIdentifier)
+  return _internal_a_inoptgroupidentifier(index);
 }
-inline void Msg_RequestGroupCreate::set_inoptgroupidentifier(int index, uint32_t value) {
-  _impl_.inoptgroupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.inOptGroupIdentifier)
+inline void Msg_RequestGroupCreate::set_a_inoptgroupidentifier(int index, uint32_t value) {
+  _impl_.a_inoptgroupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_inOptGroupIdentifier)
 }
-inline void Msg_RequestGroupCreate::_internal_add_inoptgroupidentifier(uint32_t value) {
-  _impl_.inoptgroupidentifier_.Add(value);
+inline void Msg_RequestGroupCreate::_internal_add_a_inoptgroupidentifier(uint32_t value) {
+  _impl_.a_inoptgroupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupCreate::add_inoptgroupidentifier(uint32_t value) {
-  _internal_add_inoptgroupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.inOptGroupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupCreate::_internal_inoptgroupidentifier() const {
-  return _impl_.inoptgroupidentifier_;
+inline void Msg_RequestGroupCreate::add_a_inoptgroupidentifier(uint32_t value) {
+  _internal_add_a_inoptgroupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_inOptGroupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupCreate::inoptgroupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.inOptGroupIdentifier)
-  return _internal_inoptgroupidentifier();
+Msg_RequestGroupCreate::_internal_a_inoptgroupidentifier() const {
+  return _impl_.a_inoptgroupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupCreate::a_inoptgroupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_inOptGroupIdentifier)
+  return _internal_a_inoptgroupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupCreate::_internal_mutable_inoptgroupidentifier() {
-  return &_impl_.inoptgroupidentifier_;
+Msg_RequestGroupCreate::_internal_mutable_a_inoptgroupidentifier() {
+  return &_impl_.a_inoptgroupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupCreate::mutable_inoptgroupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.inOptGroupIdentifier)
-  return _internal_mutable_inoptgroupidentifier();
+Msg_RequestGroupCreate::mutable_a_inoptgroupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupCreate.a_inOptGroupIdentifier)
+  return _internal_mutable_a_inoptgroupidentifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupCreate
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupCreate::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupCreate::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupCreate::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupCreate::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupCreate::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupCreate::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupCreate::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupCreate::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupCreate::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupCreate::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.a_result)
 }
-inline std::string* Reply_RequestGroupCreate::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.result)
+inline std::string* Reply_RequestGroupCreate::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupCreate::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupCreate::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupCreate::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupCreate::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupCreate::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupCreate::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupCreate::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupCreate::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupCreate::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupCreate::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupCreate.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupJoin
 
-// repeated uint32 identifier = 1;
-inline int Msg_RequestGroupJoin::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 1;
+inline int Msg_RequestGroupJoin::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupJoin::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupJoin::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupJoin::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupJoin::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupJoin::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupJoin::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupJoin::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupJoin::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupJoin::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.identifier)
+inline void Msg_RequestGroupJoin::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_identifier)
 }
-inline void Msg_RequestGroupJoin::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupJoin::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupJoin::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupJoin::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupJoin::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupJoin::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.identifier)
-  return _internal_identifier();
+Msg_RequestGroupJoin::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupJoin::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupJoin::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupJoin::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupJoin::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupJoin::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 welcome = 2;
-inline int Msg_RequestGroupJoin::_internal_welcome_size() const {
-  return _impl_.welcome_.size();
+// repeated uint32 a_welcome = 2;
+inline int Msg_RequestGroupJoin::_internal_a_welcome_size() const {
+  return _impl_.a_welcome_.size();
 }
-inline int Msg_RequestGroupJoin::welcome_size() const {
-  return _internal_welcome_size();
+inline int Msg_RequestGroupJoin::a_welcome_size() const {
+  return _internal_a_welcome_size();
 }
-inline void Msg_RequestGroupJoin::clear_welcome() {
-  _impl_.welcome_.Clear();
+inline void Msg_RequestGroupJoin::clear_a_welcome() {
+  _impl_.a_welcome_.Clear();
 }
-inline uint32_t Msg_RequestGroupJoin::_internal_welcome(int index) const {
-  return _impl_.welcome_.Get(index);
+inline uint32_t Msg_RequestGroupJoin::_internal_a_welcome(int index) const {
+  return _impl_.a_welcome_.Get(index);
 }
-inline uint32_t Msg_RequestGroupJoin::welcome(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.welcome)
-  return _internal_welcome(index);
+inline uint32_t Msg_RequestGroupJoin::a_welcome(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_welcome)
+  return _internal_a_welcome(index);
 }
-inline void Msg_RequestGroupJoin::set_welcome(int index, uint32_t value) {
-  _impl_.welcome_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.welcome)
+inline void Msg_RequestGroupJoin::set_a_welcome(int index, uint32_t value) {
+  _impl_.a_welcome_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_welcome)
 }
-inline void Msg_RequestGroupJoin::_internal_add_welcome(uint32_t value) {
-  _impl_.welcome_.Add(value);
+inline void Msg_RequestGroupJoin::_internal_add_a_welcome(uint32_t value) {
+  _impl_.a_welcome_.Add(value);
 }
-inline void Msg_RequestGroupJoin::add_welcome(uint32_t value) {
-  _internal_add_welcome(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.welcome)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupJoin::_internal_welcome() const {
-  return _impl_.welcome_;
+inline void Msg_RequestGroupJoin::add_a_welcome(uint32_t value) {
+  _internal_add_a_welcome(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_welcome)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupJoin::welcome() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.welcome)
-  return _internal_welcome();
+Msg_RequestGroupJoin::_internal_a_welcome() const {
+  return _impl_.a_welcome_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupJoin::a_welcome() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_welcome)
+  return _internal_a_welcome();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupJoin::_internal_mutable_welcome() {
-  return &_impl_.welcome_;
+Msg_RequestGroupJoin::_internal_mutable_a_welcome() {
+  return &_impl_.a_welcome_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupJoin::mutable_welcome() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.welcome)
-  return _internal_mutable_welcome();
+Msg_RequestGroupJoin::mutable_a_welcome() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupJoin.a_welcome)
+  return _internal_mutable_a_welcome();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupJoin
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupJoin::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupJoin::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupJoin::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupJoin::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupJoin::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupJoin::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupJoin::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupJoin::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupJoin::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupJoin::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.a_result)
 }
-inline std::string* Reply_RequestGroupJoin::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.result)
+inline std::string* Reply_RequestGroupJoin::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupJoin::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupJoin::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupJoin::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupJoin::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupJoin::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupJoin::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupJoin::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupJoin::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupJoin::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupJoin::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupJoin.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupAdd
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupAdd::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupAdd::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupAdd::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupAdd::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupAdd::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupAdd::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupAdd::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupAdd::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupAdd::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupAdd::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupAdd::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.groupIdentifier)
+inline void Msg_RequestGroupAdd::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_groupIdentifier)
 }
-inline void Msg_RequestGroupAdd::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupAdd::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupAdd::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupAdd::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupAdd::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupAdd::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupAdd::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupAdd::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupAdd::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupAdd::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupAdd::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupAdd::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupAdd::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupAdd::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupAdd::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupAdd::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupAdd::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupAdd::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupAdd::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupAdd::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupAdd::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupAdd::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupAdd::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.identifier)
+inline void Msg_RequestGroupAdd::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_identifier)
 }
-inline void Msg_RequestGroupAdd::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupAdd::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupAdd::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupAdd::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupAdd::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupAdd::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.identifier)
-  return _internal_identifier();
+Msg_RequestGroupAdd::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupAdd::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupAdd::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupAdd::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupAdd::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupAdd::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 keyPackage = 3;
-inline int Msg_RequestGroupAdd::_internal_keypackage_size() const {
-  return _impl_.keypackage_.size();
+// repeated uint32 a_keyPackage = 3;
+inline int Msg_RequestGroupAdd::_internal_a_keypackage_size() const {
+  return _impl_.a_keypackage_.size();
 }
-inline int Msg_RequestGroupAdd::keypackage_size() const {
-  return _internal_keypackage_size();
+inline int Msg_RequestGroupAdd::a_keypackage_size() const {
+  return _internal_a_keypackage_size();
 }
-inline void Msg_RequestGroupAdd::clear_keypackage() {
-  _impl_.keypackage_.Clear();
+inline void Msg_RequestGroupAdd::clear_a_keypackage() {
+  _impl_.a_keypackage_.Clear();
 }
-inline uint32_t Msg_RequestGroupAdd::_internal_keypackage(int index) const {
-  return _impl_.keypackage_.Get(index);
+inline uint32_t Msg_RequestGroupAdd::_internal_a_keypackage(int index) const {
+  return _impl_.a_keypackage_.Get(index);
 }
-inline uint32_t Msg_RequestGroupAdd::keypackage(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.keyPackage)
-  return _internal_keypackage(index);
+inline uint32_t Msg_RequestGroupAdd::a_keypackage(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_keyPackage)
+  return _internal_a_keypackage(index);
 }
-inline void Msg_RequestGroupAdd::set_keypackage(int index, uint32_t value) {
-  _impl_.keypackage_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.keyPackage)
+inline void Msg_RequestGroupAdd::set_a_keypackage(int index, uint32_t value) {
+  _impl_.a_keypackage_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_keyPackage)
 }
-inline void Msg_RequestGroupAdd::_internal_add_keypackage(uint32_t value) {
-  _impl_.keypackage_.Add(value);
+inline void Msg_RequestGroupAdd::_internal_add_a_keypackage(uint32_t value) {
+  _impl_.a_keypackage_.Add(value);
 }
-inline void Msg_RequestGroupAdd::add_keypackage(uint32_t value) {
-  _internal_add_keypackage(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.keyPackage)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupAdd::_internal_keypackage() const {
-  return _impl_.keypackage_;
+inline void Msg_RequestGroupAdd::add_a_keypackage(uint32_t value) {
+  _internal_add_a_keypackage(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_keyPackage)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupAdd::keypackage() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.keyPackage)
-  return _internal_keypackage();
+Msg_RequestGroupAdd::_internal_a_keypackage() const {
+  return _impl_.a_keypackage_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupAdd::a_keypackage() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_keyPackage)
+  return _internal_a_keypackage();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupAdd::_internal_mutable_keypackage() {
-  return &_impl_.keypackage_;
+Msg_RequestGroupAdd::_internal_mutable_a_keypackage() {
+  return &_impl_.a_keypackage_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupAdd::mutable_keypackage() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.keyPackage)
-  return _internal_mutable_keypackage();
+Msg_RequestGroupAdd::mutable_a_keypackage() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupAdd.a_keyPackage)
+  return _internal_mutable_a_keypackage();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupAdd
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupAdd::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupAdd::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupAdd::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupAdd::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupAdd::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupAdd::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupAdd::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupAdd::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupAdd::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupAdd::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.a_result)
 }
-inline std::string* Reply_RequestGroupAdd::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.result)
+inline std::string* Reply_RequestGroupAdd::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupAdd::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupAdd::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupAdd::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupAdd::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupAdd::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupAdd::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupAdd::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupAdd::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupAdd::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupAdd::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupAdd.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupProposeAdd
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupProposeAdd::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupProposeAdd::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupProposeAdd::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupProposeAdd::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupProposeAdd::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupProposeAdd::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupProposeAdd::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupProposeAdd::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupProposeAdd::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupProposeAdd::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupProposeAdd::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.groupIdentifier)
+inline void Msg_RequestGroupProposeAdd::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_groupIdentifier)
 }
-inline void Msg_RequestGroupProposeAdd::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupProposeAdd::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupProposeAdd::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeAdd::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupProposeAdd::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeAdd::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupProposeAdd::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupProposeAdd::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeAdd::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupProposeAdd::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeAdd::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupProposeAdd::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupProposeAdd::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupProposeAdd::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupProposeAdd::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupProposeAdd::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupProposeAdd::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupProposeAdd::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupProposeAdd::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupProposeAdd::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupProposeAdd::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupProposeAdd::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupProposeAdd::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.identifier)
+inline void Msg_RequestGroupProposeAdd::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_identifier)
 }
-inline void Msg_RequestGroupProposeAdd::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupProposeAdd::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupProposeAdd::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeAdd::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupProposeAdd::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeAdd::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.identifier)
-  return _internal_identifier();
+Msg_RequestGroupProposeAdd::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupProposeAdd::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeAdd::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupProposeAdd::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeAdd::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupProposeAdd::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 keyPackage = 3;
-inline int Msg_RequestGroupProposeAdd::_internal_keypackage_size() const {
-  return _impl_.keypackage_.size();
+// repeated uint32 a_keyPackage = 3;
+inline int Msg_RequestGroupProposeAdd::_internal_a_keypackage_size() const {
+  return _impl_.a_keypackage_.size();
 }
-inline int Msg_RequestGroupProposeAdd::keypackage_size() const {
-  return _internal_keypackage_size();
+inline int Msg_RequestGroupProposeAdd::a_keypackage_size() const {
+  return _internal_a_keypackage_size();
 }
-inline void Msg_RequestGroupProposeAdd::clear_keypackage() {
-  _impl_.keypackage_.Clear();
+inline void Msg_RequestGroupProposeAdd::clear_a_keypackage() {
+  _impl_.a_keypackage_.Clear();
 }
-inline uint32_t Msg_RequestGroupProposeAdd::_internal_keypackage(int index) const {
-  return _impl_.keypackage_.Get(index);
+inline uint32_t Msg_RequestGroupProposeAdd::_internal_a_keypackage(int index) const {
+  return _impl_.a_keypackage_.Get(index);
 }
-inline uint32_t Msg_RequestGroupProposeAdd::keypackage(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.keyPackage)
-  return _internal_keypackage(index);
+inline uint32_t Msg_RequestGroupProposeAdd::a_keypackage(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_keyPackage)
+  return _internal_a_keypackage(index);
 }
-inline void Msg_RequestGroupProposeAdd::set_keypackage(int index, uint32_t value) {
-  _impl_.keypackage_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.keyPackage)
+inline void Msg_RequestGroupProposeAdd::set_a_keypackage(int index, uint32_t value) {
+  _impl_.a_keypackage_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_keyPackage)
 }
-inline void Msg_RequestGroupProposeAdd::_internal_add_keypackage(uint32_t value) {
-  _impl_.keypackage_.Add(value);
+inline void Msg_RequestGroupProposeAdd::_internal_add_a_keypackage(uint32_t value) {
+  _impl_.a_keypackage_.Add(value);
 }
-inline void Msg_RequestGroupProposeAdd::add_keypackage(uint32_t value) {
-  _internal_add_keypackage(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.keyPackage)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeAdd::_internal_keypackage() const {
-  return _impl_.keypackage_;
+inline void Msg_RequestGroupProposeAdd::add_a_keypackage(uint32_t value) {
+  _internal_add_a_keypackage(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_keyPackage)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeAdd::keypackage() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.keyPackage)
-  return _internal_keypackage();
+Msg_RequestGroupProposeAdd::_internal_a_keypackage() const {
+  return _impl_.a_keypackage_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupProposeAdd::a_keypackage() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_keyPackage)
+  return _internal_a_keypackage();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeAdd::_internal_mutable_keypackage() {
-  return &_impl_.keypackage_;
+Msg_RequestGroupProposeAdd::_internal_mutable_a_keypackage() {
+  return &_impl_.a_keypackage_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeAdd::mutable_keypackage() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.keyPackage)
-  return _internal_mutable_keypackage();
+Msg_RequestGroupProposeAdd::mutable_a_keypackage() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeAdd.a_keyPackage)
+  return _internal_mutable_a_keypackage();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupProposeAdd
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGroupProposeAdd::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGroupProposeAdd::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGroupProposeAdd::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupProposeAdd::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeAdd::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeAdd::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeAdd::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeAdd::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGroupProposeAdd::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGroupProposeAdd::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9073,448 +9073,448 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::release
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeAdd::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.a_result)
   return _msg;
 }
-inline void Reply_RequestGroupProposeAdd::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGroupProposeAdd::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeAdd.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupRemove
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupRemove::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupRemove::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupRemove::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupRemove::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupRemove::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupRemove::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupRemove::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupRemove::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupRemove::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupRemove::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupRemove::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.groupIdentifier)
+inline void Msg_RequestGroupRemove::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_groupIdentifier)
 }
-inline void Msg_RequestGroupRemove::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupRemove::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupRemove::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupRemove::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupRemove::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupRemove::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupRemove::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupRemove::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupRemove::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupRemove::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupRemove::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupRemove::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupRemove::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupRemove::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupRemove::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupRemove::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupRemove::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupRemove::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupRemove::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupRemove::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupRemove::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupRemove::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupRemove::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.identifier)
+inline void Msg_RequestGroupRemove::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_identifier)
 }
-inline void Msg_RequestGroupRemove::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupRemove::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupRemove::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupRemove::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupRemove::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupRemove::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.identifier)
-  return _internal_identifier();
+Msg_RequestGroupRemove::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupRemove::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupRemove::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupRemove::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupRemove::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupRemove::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 remIdentifier = 3;
-inline int Msg_RequestGroupRemove::_internal_remidentifier_size() const {
-  return _impl_.remidentifier_.size();
+// repeated uint32 a_remIdentifier = 3;
+inline int Msg_RequestGroupRemove::_internal_a_remidentifier_size() const {
+  return _impl_.a_remidentifier_.size();
 }
-inline int Msg_RequestGroupRemove::remidentifier_size() const {
-  return _internal_remidentifier_size();
+inline int Msg_RequestGroupRemove::a_remidentifier_size() const {
+  return _internal_a_remidentifier_size();
 }
-inline void Msg_RequestGroupRemove::clear_remidentifier() {
-  _impl_.remidentifier_.Clear();
+inline void Msg_RequestGroupRemove::clear_a_remidentifier() {
+  _impl_.a_remidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupRemove::_internal_remidentifier(int index) const {
-  return _impl_.remidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupRemove::_internal_a_remidentifier(int index) const {
+  return _impl_.a_remidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupRemove::remidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.remIdentifier)
-  return _internal_remidentifier(index);
+inline uint32_t Msg_RequestGroupRemove::a_remidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_remIdentifier)
+  return _internal_a_remidentifier(index);
 }
-inline void Msg_RequestGroupRemove::set_remidentifier(int index, uint32_t value) {
-  _impl_.remidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.remIdentifier)
+inline void Msg_RequestGroupRemove::set_a_remidentifier(int index, uint32_t value) {
+  _impl_.a_remidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_remIdentifier)
 }
-inline void Msg_RequestGroupRemove::_internal_add_remidentifier(uint32_t value) {
-  _impl_.remidentifier_.Add(value);
+inline void Msg_RequestGroupRemove::_internal_add_a_remidentifier(uint32_t value) {
+  _impl_.a_remidentifier_.Add(value);
 }
-inline void Msg_RequestGroupRemove::add_remidentifier(uint32_t value) {
-  _internal_add_remidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.remIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupRemove::_internal_remidentifier() const {
-  return _impl_.remidentifier_;
+inline void Msg_RequestGroupRemove::add_a_remidentifier(uint32_t value) {
+  _internal_add_a_remidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_remIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupRemove::remidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.remIdentifier)
-  return _internal_remidentifier();
+Msg_RequestGroupRemove::_internal_a_remidentifier() const {
+  return _impl_.a_remidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupRemove::a_remidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_remIdentifier)
+  return _internal_a_remidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupRemove::_internal_mutable_remidentifier() {
-  return &_impl_.remidentifier_;
+Msg_RequestGroupRemove::_internal_mutable_a_remidentifier() {
+  return &_impl_.a_remidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupRemove::mutable_remidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.remIdentifier)
-  return _internal_mutable_remidentifier();
+Msg_RequestGroupRemove::mutable_a_remidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupRemove.a_remIdentifier)
+  return _internal_mutable_a_remidentifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupRemove
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupRemove::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupRemove::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupRemove::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupRemove::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupRemove::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupRemove::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupRemove::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupRemove::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupRemove::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupRemove::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.a_result)
 }
-inline std::string* Reply_RequestGroupRemove::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.result)
+inline std::string* Reply_RequestGroupRemove::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupRemove::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupRemove::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupRemove::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupRemove::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupRemove::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupRemove::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupRemove::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupRemove::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupRemove::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupRemove::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupRemove.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupProposeRemove
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupProposeRemove::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupProposeRemove::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupProposeRemove::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupProposeRemove::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupProposeRemove::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupProposeRemove::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupProposeRemove::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupProposeRemove::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupProposeRemove::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupProposeRemove::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupProposeRemove::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.groupIdentifier)
+inline void Msg_RequestGroupProposeRemove::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_groupIdentifier)
 }
-inline void Msg_RequestGroupProposeRemove::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupProposeRemove::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupProposeRemove::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeRemove::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupProposeRemove::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeRemove::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupProposeRemove::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupProposeRemove::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeRemove::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupProposeRemove::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeRemove::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupProposeRemove::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupProposeRemove::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupProposeRemove::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupProposeRemove::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupProposeRemove::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupProposeRemove::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupProposeRemove::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupProposeRemove::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupProposeRemove::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupProposeRemove::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupProposeRemove::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupProposeRemove::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.identifier)
+inline void Msg_RequestGroupProposeRemove::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_identifier)
 }
-inline void Msg_RequestGroupProposeRemove::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupProposeRemove::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupProposeRemove::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeRemove::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupProposeRemove::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeRemove::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.identifier)
-  return _internal_identifier();
+Msg_RequestGroupProposeRemove::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupProposeRemove::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeRemove::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupProposeRemove::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeRemove::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupProposeRemove::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 remIdentifier = 3;
-inline int Msg_RequestGroupProposeRemove::_internal_remidentifier_size() const {
-  return _impl_.remidentifier_.size();
+// repeated uint32 a_remIdentifier = 3;
+inline int Msg_RequestGroupProposeRemove::_internal_a_remidentifier_size() const {
+  return _impl_.a_remidentifier_.size();
 }
-inline int Msg_RequestGroupProposeRemove::remidentifier_size() const {
-  return _internal_remidentifier_size();
+inline int Msg_RequestGroupProposeRemove::a_remidentifier_size() const {
+  return _internal_a_remidentifier_size();
 }
-inline void Msg_RequestGroupProposeRemove::clear_remidentifier() {
-  _impl_.remidentifier_.Clear();
+inline void Msg_RequestGroupProposeRemove::clear_a_remidentifier() {
+  _impl_.a_remidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupProposeRemove::_internal_remidentifier(int index) const {
-  return _impl_.remidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupProposeRemove::_internal_a_remidentifier(int index) const {
+  return _impl_.a_remidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupProposeRemove::remidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.remIdentifier)
-  return _internal_remidentifier(index);
+inline uint32_t Msg_RequestGroupProposeRemove::a_remidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_remIdentifier)
+  return _internal_a_remidentifier(index);
 }
-inline void Msg_RequestGroupProposeRemove::set_remidentifier(int index, uint32_t value) {
-  _impl_.remidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.remIdentifier)
+inline void Msg_RequestGroupProposeRemove::set_a_remidentifier(int index, uint32_t value) {
+  _impl_.a_remidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_remIdentifier)
 }
-inline void Msg_RequestGroupProposeRemove::_internal_add_remidentifier(uint32_t value) {
-  _impl_.remidentifier_.Add(value);
+inline void Msg_RequestGroupProposeRemove::_internal_add_a_remidentifier(uint32_t value) {
+  _impl_.a_remidentifier_.Add(value);
 }
-inline void Msg_RequestGroupProposeRemove::add_remidentifier(uint32_t value) {
-  _internal_add_remidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.remIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeRemove::_internal_remidentifier() const {
-  return _impl_.remidentifier_;
+inline void Msg_RequestGroupProposeRemove::add_a_remidentifier(uint32_t value) {
+  _internal_add_a_remidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_remIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupProposeRemove::remidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.remIdentifier)
-  return _internal_remidentifier();
+Msg_RequestGroupProposeRemove::_internal_a_remidentifier() const {
+  return _impl_.a_remidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupProposeRemove::a_remidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_remIdentifier)
+  return _internal_a_remidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeRemove::_internal_mutable_remidentifier() {
-  return &_impl_.remidentifier_;
+Msg_RequestGroupProposeRemove::_internal_mutable_a_remidentifier() {
+  return &_impl_.a_remidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupProposeRemove::mutable_remidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.remIdentifier)
-  return _internal_mutable_remidentifier();
+Msg_RequestGroupProposeRemove::mutable_a_remidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupProposeRemove.a_remIdentifier)
+  return _internal_mutable_a_remidentifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupProposeRemove
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGroupProposeRemove::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGroupProposeRemove::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGroupProposeRemove::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupProposeRemove::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeRemove::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeRemove::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeRemove::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGroupProposeRemove::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGroupProposeRemove::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGroupProposeRemove::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -9526,571 +9526,571 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGroupProposeRemove::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.a_result)
   return _msg;
 }
-inline void Reply_RequestGroupProposeRemove::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGroupProposeRemove::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupProposeRemove.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupClose
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupClose::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupClose::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupClose::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupClose::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupClose::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupClose::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupClose::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupClose::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupClose::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupClose::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupClose::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.groupIdentifier)
+inline void Msg_RequestGroupClose::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_groupIdentifier)
 }
-inline void Msg_RequestGroupClose::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupClose::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupClose::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupClose::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupClose::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupClose::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupClose::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupClose::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupClose::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupClose::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupClose::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupClose::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupClose::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupClose::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupClose::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupClose::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupClose::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupClose::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupClose::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupClose::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupClose::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupClose::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupClose::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.identifier)
+inline void Msg_RequestGroupClose::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_identifier)
 }
-inline void Msg_RequestGroupClose::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupClose::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupClose::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupClose::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupClose::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupClose::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.identifier)
-  return _internal_identifier();
+Msg_RequestGroupClose::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupClose::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupClose::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupClose::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupClose::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupClose::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupClose.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupClose
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupClose::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupClose::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupClose::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupClose::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupClose::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupClose::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupClose::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupClose::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupClose::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupClose::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.a_result)
 }
-inline std::string* Reply_RequestGroupClose::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.result)
+inline std::string* Reply_RequestGroupClose::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupClose::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupClose::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupClose::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupClose::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupClose::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupClose::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupClose::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupClose::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupClose::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupClose::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupClose.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGroupDetails
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestGroupDetails::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestGroupDetails::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestGroupDetails::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestGroupDetails::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestGroupDetails::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestGroupDetails::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupDetails::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestGroupDetails::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupDetails::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestGroupDetails::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestGroupDetails::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.groupIdentifier)
+inline void Msg_RequestGroupDetails::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_groupIdentifier)
 }
-inline void Msg_RequestGroupDetails::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestGroupDetails::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestGroupDetails::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupDetails::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestGroupDetails::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupDetails::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestGroupDetails::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupDetails::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupDetails::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestGroupDetails::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupDetails::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestGroupDetails::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestGroupDetails::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestGroupDetails::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestGroupDetails::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestGroupDetails::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestGroupDetails::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestGroupDetails::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestGroupDetails::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestGroupDetails::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestGroupDetails::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestGroupDetails::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestGroupDetails::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.identifier)
+inline void Msg_RequestGroupDetails::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_identifier)
 }
-inline void Msg_RequestGroupDetails::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestGroupDetails::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestGroupDetails::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupDetails::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestGroupDetails::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGroupDetails::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.identifier)
-  return _internal_identifier();
+Msg_RequestGroupDetails::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGroupDetails::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupDetails::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestGroupDetails::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGroupDetails::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestGroupDetails::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGroupDetails.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGroupDetails
 
-// optional bytes result = 1;
-inline bool Reply_RequestGroupDetails::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestGroupDetails::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGroupDetails::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGroupDetails::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestGroupDetails::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestGroupDetails::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestGroupDetails::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.result)
-  return _internal_result();
+inline const std::string& Reply_RequestGroupDetails::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestGroupDetails::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestGroupDetails::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.a_result)
 }
-inline std::string* Reply_RequestGroupDetails::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.result)
+inline std::string* Reply_RequestGroupDetails::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestGroupDetails::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestGroupDetails::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestGroupDetails::_internal_set_result(const std::string& value) {
+inline void Reply_RequestGroupDetails::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupDetails::_internal_mutable_result() {
+inline std::string* Reply_RequestGroupDetails::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestGroupDetails::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestGroupDetails::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestGroupDetails::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestGroupDetails::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGroupDetails.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestSend
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestSend::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestSend::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestSend::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestSend::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestSend::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestSend::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestSend::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestSend::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestSend::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestSend::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestSend::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.groupIdentifier)
+inline void Msg_RequestSend::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_groupIdentifier)
 }
-inline void Msg_RequestSend::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestSend::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestSend::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestSend::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestSend::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestSend::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestSend::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestSend::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestSend::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestSend::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestSend::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestSend::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestSend::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestSend::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestSend::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestSend::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestSend::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestSend::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestSend::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestSend::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestSend::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestSend::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestSend::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.identifier)
+inline void Msg_RequestSend::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_identifier)
 }
-inline void Msg_RequestSend::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestSend::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestSend::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestSend::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestSend::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestSend::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.identifier)
-  return _internal_identifier();
+Msg_RequestSend::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestSend::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestSend::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestSend::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestSend::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestSend::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 message = 3;
-inline int Msg_RequestSend::_internal_message_size() const {
-  return _impl_.message_.size();
+// repeated uint32 a_message = 3;
+inline int Msg_RequestSend::_internal_a_message_size() const {
+  return _impl_.a_message_.size();
 }
-inline int Msg_RequestSend::message_size() const {
-  return _internal_message_size();
+inline int Msg_RequestSend::a_message_size() const {
+  return _internal_a_message_size();
 }
-inline void Msg_RequestSend::clear_message() {
-  _impl_.message_.Clear();
+inline void Msg_RequestSend::clear_a_message() {
+  _impl_.a_message_.Clear();
 }
-inline uint32_t Msg_RequestSend::_internal_message(int index) const {
-  return _impl_.message_.Get(index);
+inline uint32_t Msg_RequestSend::_internal_a_message(int index) const {
+  return _impl_.a_message_.Get(index);
 }
-inline uint32_t Msg_RequestSend::message(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.message)
-  return _internal_message(index);
+inline uint32_t Msg_RequestSend::a_message(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_message)
+  return _internal_a_message(index);
 }
-inline void Msg_RequestSend::set_message(int index, uint32_t value) {
-  _impl_.message_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.message)
+inline void Msg_RequestSend::set_a_message(int index, uint32_t value) {
+  _impl_.a_message_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_message)
 }
-inline void Msg_RequestSend::_internal_add_message(uint32_t value) {
-  _impl_.message_.Add(value);
+inline void Msg_RequestSend::_internal_add_a_message(uint32_t value) {
+  _impl_.a_message_.Add(value);
 }
-inline void Msg_RequestSend::add_message(uint32_t value) {
-  _internal_add_message(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.message)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestSend::_internal_message() const {
-  return _impl_.message_;
+inline void Msg_RequestSend::add_a_message(uint32_t value) {
+  _internal_add_a_message(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_message)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestSend::message() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.message)
-  return _internal_message();
+Msg_RequestSend::_internal_a_message() const {
+  return _impl_.a_message_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestSend::a_message() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_message)
+  return _internal_a_message();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestSend::_internal_mutable_message() {
-  return &_impl_.message_;
+Msg_RequestSend::_internal_mutable_a_message() {
+  return &_impl_.a_message_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestSend::mutable_message() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.message)
-  return _internal_mutable_message();
+Msg_RequestSend::mutable_a_message() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestSend.a_message)
+  return _internal_mutable_a_message();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestSend
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestSend::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestSend::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestSend::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestSend::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestSend::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestSend::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestSend::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestSend::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestSend::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestSend::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -10102,1289 +10102,1289 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::release_result() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestSend::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.a_result)
   return _msg;
 }
-inline void Reply_RequestSend::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestSend::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestSend.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestReceive
 
-// repeated uint32 identifier = 1;
-inline int Msg_RequestReceive::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 1;
+inline int Msg_RequestReceive::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestReceive::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestReceive::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestReceive::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestReceive::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestReceive::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestReceive::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestReceive::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestReceive::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestReceive::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.identifier)
+inline void Msg_RequestReceive::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_identifier)
 }
-inline void Msg_RequestReceive::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestReceive::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestReceive::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestReceive::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestReceive::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestReceive::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.identifier)
-  return _internal_identifier();
+Msg_RequestReceive::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestReceive::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestReceive::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestReceive::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestReceive::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestReceive::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 message = 2;
-inline int Msg_RequestReceive::_internal_message_size() const {
-  return _impl_.message_.size();
+// repeated uint32 a_message = 2;
+inline int Msg_RequestReceive::_internal_a_message_size() const {
+  return _impl_.a_message_.size();
 }
-inline int Msg_RequestReceive::message_size() const {
-  return _internal_message_size();
+inline int Msg_RequestReceive::a_message_size() const {
+  return _internal_a_message_size();
 }
-inline void Msg_RequestReceive::clear_message() {
-  _impl_.message_.Clear();
+inline void Msg_RequestReceive::clear_a_message() {
+  _impl_.a_message_.Clear();
 }
-inline uint32_t Msg_RequestReceive::_internal_message(int index) const {
-  return _impl_.message_.Get(index);
+inline uint32_t Msg_RequestReceive::_internal_a_message(int index) const {
+  return _impl_.a_message_.Get(index);
 }
-inline uint32_t Msg_RequestReceive::message(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.message)
-  return _internal_message(index);
+inline uint32_t Msg_RequestReceive::a_message(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_message)
+  return _internal_a_message(index);
 }
-inline void Msg_RequestReceive::set_message(int index, uint32_t value) {
-  _impl_.message_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.message)
+inline void Msg_RequestReceive::set_a_message(int index, uint32_t value) {
+  _impl_.a_message_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_message)
 }
-inline void Msg_RequestReceive::_internal_add_message(uint32_t value) {
-  _impl_.message_.Add(value);
+inline void Msg_RequestReceive::_internal_add_a_message(uint32_t value) {
+  _impl_.a_message_.Add(value);
 }
-inline void Msg_RequestReceive::add_message(uint32_t value) {
-  _internal_add_message(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.message)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestReceive::_internal_message() const {
-  return _impl_.message_;
+inline void Msg_RequestReceive::add_a_message(uint32_t value) {
+  _internal_add_a_message(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_message)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestReceive::message() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.message)
-  return _internal_message();
+Msg_RequestReceive::_internal_a_message() const {
+  return _impl_.a_message_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestReceive::a_message() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_message)
+  return _internal_a_message();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestReceive::_internal_mutable_message() {
-  return &_impl_.message_;
+Msg_RequestReceive::_internal_mutable_a_message() {
+  return &_impl_.a_message_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestReceive::mutable_message() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.message)
-  return _internal_mutable_message();
+Msg_RequestReceive::mutable_a_message() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestReceive.a_message)
+  return _internal_mutable_a_message();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestReceive
 
-// required bytes result = 1;
-inline bool Reply_RequestReceive::_internal_has_result() const {
+// required bytes a_result = 1;
+inline bool Reply_RequestReceive::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestReceive::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestReceive::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestReceive::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestReceive::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestReceive::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.result)
-  return _internal_result();
+inline const std::string& Reply_RequestReceive::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestReceive::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestReceive::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
 }
-inline std::string* Reply_RequestReceive::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.result)
+inline std::string* Reply_RequestReceive::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestReceive::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestReceive::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestReceive::_internal_set_result(const std::string& value) {
+inline void Reply_RequestReceive::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestReceive::_internal_mutable_result() {
+inline std::string* Reply_RequestReceive::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestReceive::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestReceive::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestReceive::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestReceive::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestReceive.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestHasPendingProposals
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestHasPendingProposals::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestHasPendingProposals::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestHasPendingProposals::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestHasPendingProposals::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestHasPendingProposals::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestHasPendingProposals::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestHasPendingProposals::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestHasPendingProposals::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestHasPendingProposals::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestHasPendingProposals::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestHasPendingProposals::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.groupIdentifier)
+inline void Msg_RequestHasPendingProposals::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_groupIdentifier)
 }
-inline void Msg_RequestHasPendingProposals::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestHasPendingProposals::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestHasPendingProposals::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingProposals::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestHasPendingProposals::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingProposals::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestHasPendingProposals::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestHasPendingProposals::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingProposals::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestHasPendingProposals::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingProposals::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestHasPendingProposals::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestHasPendingProposals::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestHasPendingProposals::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestHasPendingProposals::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestHasPendingProposals::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestHasPendingProposals::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestHasPendingProposals::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestHasPendingProposals::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestHasPendingProposals::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestHasPendingProposals::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestHasPendingProposals::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestHasPendingProposals::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.identifier)
+inline void Msg_RequestHasPendingProposals::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_identifier)
 }
-inline void Msg_RequestHasPendingProposals::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestHasPendingProposals::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestHasPendingProposals::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingProposals::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestHasPendingProposals::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingProposals::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.identifier)
-  return _internal_identifier();
+Msg_RequestHasPendingProposals::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestHasPendingProposals::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingProposals::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestHasPendingProposals::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingProposals::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestHasPendingProposals::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingProposals.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestHasPendingProposals
 
-// required bool result = 1;
-inline bool Reply_RequestHasPendingProposals::_internal_has_result() const {
+// required bool a_result = 1;
+inline bool Reply_RequestHasPendingProposals::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestHasPendingProposals::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestHasPendingProposals::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestHasPendingProposals::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_RequestHasPendingProposals::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestHasPendingProposals::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_RequestHasPendingProposals::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_RequestHasPendingProposals::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals.result)
-  return _internal_result();
+inline bool Reply_RequestHasPendingProposals::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestHasPendingProposals::_internal_set_result(bool value) {
+inline void Reply_RequestHasPendingProposals::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_RequestHasPendingProposals::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals.result)
+inline void Reply_RequestHasPendingProposals::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingProposals.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestClearPendingProposals
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestClearPendingProposals::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestClearPendingProposals::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestClearPendingProposals::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestClearPendingProposals::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestClearPendingProposals::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestClearPendingProposals::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestClearPendingProposals::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestClearPendingProposals::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestClearPendingProposals::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestClearPendingProposals::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestClearPendingProposals::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.groupIdentifier)
+inline void Msg_RequestClearPendingProposals::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_groupIdentifier)
 }
-inline void Msg_RequestClearPendingProposals::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestClearPendingProposals::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestClearPendingProposals::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingProposals::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestClearPendingProposals::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingProposals::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestClearPendingProposals::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestClearPendingProposals::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingProposals::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestClearPendingProposals::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingProposals::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestClearPendingProposals::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestClearPendingProposals::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestClearPendingProposals::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestClearPendingProposals::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestClearPendingProposals::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestClearPendingProposals::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestClearPendingProposals::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestClearPendingProposals::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestClearPendingProposals::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestClearPendingProposals::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestClearPendingProposals::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestClearPendingProposals::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.identifier)
+inline void Msg_RequestClearPendingProposals::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_identifier)
 }
-inline void Msg_RequestClearPendingProposals::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestClearPendingProposals::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestClearPendingProposals::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingProposals::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestClearPendingProposals::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingProposals::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.identifier)
-  return _internal_identifier();
+Msg_RequestClearPendingProposals::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestClearPendingProposals::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingProposals::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestClearPendingProposals::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingProposals::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestClearPendingProposals::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingProposals.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestClearPendingProposals
 
-// required bool result = 1;
-inline bool Reply_RequestClearPendingProposals::_internal_has_result() const {
+// required bool a_result = 1;
+inline bool Reply_RequestClearPendingProposals::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestClearPendingProposals::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestClearPendingProposals::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestClearPendingProposals::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_RequestClearPendingProposals::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestClearPendingProposals::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_RequestClearPendingProposals::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_RequestClearPendingProposals::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals.result)
-  return _internal_result();
+inline bool Reply_RequestClearPendingProposals::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestClearPendingProposals::_internal_set_result(bool value) {
+inline void Reply_RequestClearPendingProposals::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_RequestClearPendingProposals::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals.result)
+inline void Reply_RequestClearPendingProposals::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingProposals.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestHasPendingCommit
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestHasPendingCommit::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestHasPendingCommit::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestHasPendingCommit::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestHasPendingCommit::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestHasPendingCommit::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestHasPendingCommit::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestHasPendingCommit::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestHasPendingCommit::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestHasPendingCommit::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestHasPendingCommit::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestHasPendingCommit::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.groupIdentifier)
+inline void Msg_RequestHasPendingCommit::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_groupIdentifier)
 }
-inline void Msg_RequestHasPendingCommit::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestHasPendingCommit::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestHasPendingCommit::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingCommit::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestHasPendingCommit::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingCommit::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestHasPendingCommit::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestHasPendingCommit::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingCommit::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestHasPendingCommit::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingCommit::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestHasPendingCommit::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestHasPendingCommit::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestHasPendingCommit::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestHasPendingCommit::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestHasPendingCommit::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestHasPendingCommit::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestHasPendingCommit::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestHasPendingCommit::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestHasPendingCommit::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestHasPendingCommit::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestHasPendingCommit::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestHasPendingCommit::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.identifier)
+inline void Msg_RequestHasPendingCommit::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_identifier)
 }
-inline void Msg_RequestHasPendingCommit::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestHasPendingCommit::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestHasPendingCommit::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingCommit::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestHasPendingCommit::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestHasPendingCommit::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.identifier)
-  return _internal_identifier();
+Msg_RequestHasPendingCommit::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestHasPendingCommit::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingCommit::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestHasPendingCommit::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestHasPendingCommit::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestHasPendingCommit::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestHasPendingCommit.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestHasPendingCommit
 
-// required bool result = 1;
-inline bool Reply_RequestHasPendingCommit::_internal_has_result() const {
+// required bool a_result = 1;
+inline bool Reply_RequestHasPendingCommit::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestHasPendingCommit::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestHasPendingCommit::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestHasPendingCommit::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_RequestHasPendingCommit::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestHasPendingCommit::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_RequestHasPendingCommit::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_RequestHasPendingCommit::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit.result)
-  return _internal_result();
+inline bool Reply_RequestHasPendingCommit::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestHasPendingCommit::_internal_set_result(bool value) {
+inline void Reply_RequestHasPendingCommit::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_RequestHasPendingCommit::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit.result)
+inline void Reply_RequestHasPendingCommit::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestHasPendingCommit.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestClearPendingCommit
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestClearPendingCommit::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestClearPendingCommit::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestClearPendingCommit::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestClearPendingCommit::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestClearPendingCommit::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestClearPendingCommit::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestClearPendingCommit::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestClearPendingCommit::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestClearPendingCommit::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestClearPendingCommit::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestClearPendingCommit::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.groupIdentifier)
+inline void Msg_RequestClearPendingCommit::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_groupIdentifier)
 }
-inline void Msg_RequestClearPendingCommit::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestClearPendingCommit::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestClearPendingCommit::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingCommit::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestClearPendingCommit::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingCommit::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestClearPendingCommit::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestClearPendingCommit::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingCommit::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestClearPendingCommit::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingCommit::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestClearPendingCommit::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestClearPendingCommit::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestClearPendingCommit::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestClearPendingCommit::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestClearPendingCommit::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestClearPendingCommit::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestClearPendingCommit::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestClearPendingCommit::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestClearPendingCommit::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestClearPendingCommit::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestClearPendingCommit::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestClearPendingCommit::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.identifier)
+inline void Msg_RequestClearPendingCommit::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_identifier)
 }
-inline void Msg_RequestClearPendingCommit::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestClearPendingCommit::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestClearPendingCommit::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingCommit::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestClearPendingCommit::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestClearPendingCommit::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.identifier)
-  return _internal_identifier();
+Msg_RequestClearPendingCommit::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestClearPendingCommit::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingCommit::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestClearPendingCommit::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestClearPendingCommit::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestClearPendingCommit::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestClearPendingCommit.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestClearPendingCommit
 
-// required bool result = 1;
-inline bool Reply_RequestClearPendingCommit::_internal_has_result() const {
+// required bool a_result = 1;
+inline bool Reply_RequestClearPendingCommit::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestClearPendingCommit::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestClearPendingCommit::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestClearPendingCommit::clear_result() {
-  _impl_.result_ = false;
+inline void Reply_RequestClearPendingCommit::clear_a_result() {
+  _impl_.a_result_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestClearPendingCommit::_internal_result() const {
-  return _impl_.result_;
+inline bool Reply_RequestClearPendingCommit::_internal_a_result() const {
+  return _impl_.a_result_;
 }
-inline bool Reply_RequestClearPendingCommit::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit.result)
-  return _internal_result();
+inline bool Reply_RequestClearPendingCommit::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestClearPendingCommit::_internal_set_result(bool value) {
+inline void Reply_RequestClearPendingCommit::_internal_set_a_result(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_ = value;
+  _impl_.a_result_ = value;
 }
-inline void Reply_RequestClearPendingCommit::set_result(bool value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit.result)
+inline void Reply_RequestClearPendingCommit::set_a_result(bool value) {
+  _internal_set_a_result(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestClearPendingCommit.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestApplyPendingCommit
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestApplyPendingCommit::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestApplyPendingCommit::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestApplyPendingCommit::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestApplyPendingCommit::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestApplyPendingCommit::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestApplyPendingCommit::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestApplyPendingCommit::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestApplyPendingCommit::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestApplyPendingCommit::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestApplyPendingCommit::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestApplyPendingCommit::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.groupIdentifier)
+inline void Msg_RequestApplyPendingCommit::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_groupIdentifier)
 }
-inline void Msg_RequestApplyPendingCommit::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestApplyPendingCommit::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestApplyPendingCommit::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestApplyPendingCommit::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestApplyPendingCommit::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestApplyPendingCommit::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestApplyPendingCommit::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestApplyPendingCommit::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestApplyPendingCommit::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestApplyPendingCommit::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestApplyPendingCommit::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestApplyPendingCommit::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestApplyPendingCommit::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestApplyPendingCommit::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestApplyPendingCommit::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestApplyPendingCommit::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestApplyPendingCommit::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestApplyPendingCommit::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestApplyPendingCommit::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestApplyPendingCommit::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestApplyPendingCommit::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestApplyPendingCommit::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestApplyPendingCommit::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.identifier)
+inline void Msg_RequestApplyPendingCommit::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_identifier)
 }
-inline void Msg_RequestApplyPendingCommit::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestApplyPendingCommit::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestApplyPendingCommit::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestApplyPendingCommit::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestApplyPendingCommit::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestApplyPendingCommit::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.identifier)
-  return _internal_identifier();
+Msg_RequestApplyPendingCommit::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestApplyPendingCommit::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestApplyPendingCommit::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestApplyPendingCommit::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestApplyPendingCommit::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestApplyPendingCommit::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestApplyPendingCommit.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestApplyPendingCommit
 
-// required bytes result = 1;
-inline bool Reply_RequestApplyPendingCommit::_internal_has_result() const {
+// required bytes a_result = 1;
+inline bool Reply_RequestApplyPendingCommit::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestApplyPendingCommit::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestApplyPendingCommit::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestApplyPendingCommit::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestApplyPendingCommit::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestApplyPendingCommit::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.result)
-  return _internal_result();
+inline const std::string& Reply_RequestApplyPendingCommit::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestApplyPendingCommit::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestApplyPendingCommit::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
 }
-inline std::string* Reply_RequestApplyPendingCommit::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.result)
+inline std::string* Reply_RequestApplyPendingCommit::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestApplyPendingCommit::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestApplyPendingCommit::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestApplyPendingCommit::_internal_set_result(const std::string& value) {
+inline void Reply_RequestApplyPendingCommit::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestApplyPendingCommit::_internal_mutable_result() {
+inline std::string* Reply_RequestApplyPendingCommit::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestApplyPendingCommit::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestApplyPendingCommit::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestApplyPendingCommit::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestApplyPendingCommit::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestApplyPendingCommit.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestExportSecret
 
-// repeated uint32 groupIdentifier = 1;
-inline int Msg_RequestExportSecret::_internal_groupidentifier_size() const {
-  return _impl_.groupidentifier_.size();
+// repeated uint32 a_groupIdentifier = 1;
+inline int Msg_RequestExportSecret::_internal_a_groupidentifier_size() const {
+  return _impl_.a_groupidentifier_.size();
 }
-inline int Msg_RequestExportSecret::groupidentifier_size() const {
-  return _internal_groupidentifier_size();
+inline int Msg_RequestExportSecret::a_groupidentifier_size() const {
+  return _internal_a_groupidentifier_size();
 }
-inline void Msg_RequestExportSecret::clear_groupidentifier() {
-  _impl_.groupidentifier_.Clear();
+inline void Msg_RequestExportSecret::clear_a_groupidentifier() {
+  _impl_.a_groupidentifier_.Clear();
 }
-inline uint32_t Msg_RequestExportSecret::_internal_groupidentifier(int index) const {
-  return _impl_.groupidentifier_.Get(index);
+inline uint32_t Msg_RequestExportSecret::_internal_a_groupidentifier(int index) const {
+  return _impl_.a_groupidentifier_.Get(index);
 }
-inline uint32_t Msg_RequestExportSecret::groupidentifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.groupIdentifier)
-  return _internal_groupidentifier(index);
+inline uint32_t Msg_RequestExportSecret::a_groupidentifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_groupIdentifier)
+  return _internal_a_groupidentifier(index);
 }
-inline void Msg_RequestExportSecret::set_groupidentifier(int index, uint32_t value) {
-  _impl_.groupidentifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.groupIdentifier)
+inline void Msg_RequestExportSecret::set_a_groupidentifier(int index, uint32_t value) {
+  _impl_.a_groupidentifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_groupIdentifier)
 }
-inline void Msg_RequestExportSecret::_internal_add_groupidentifier(uint32_t value) {
-  _impl_.groupidentifier_.Add(value);
+inline void Msg_RequestExportSecret::_internal_add_a_groupidentifier(uint32_t value) {
+  _impl_.a_groupidentifier_.Add(value);
 }
-inline void Msg_RequestExportSecret::add_groupidentifier(uint32_t value) {
-  _internal_add_groupidentifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.groupIdentifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::_internal_groupidentifier() const {
-  return _impl_.groupidentifier_;
+inline void Msg_RequestExportSecret::add_a_groupidentifier(uint32_t value) {
+  _internal_add_a_groupidentifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_groupIdentifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::groupidentifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.groupIdentifier)
-  return _internal_groupidentifier();
+Msg_RequestExportSecret::_internal_a_groupidentifier() const {
+  return _impl_.a_groupidentifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestExportSecret::a_groupidentifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_groupIdentifier)
+  return _internal_a_groupidentifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::_internal_mutable_groupidentifier() {
-  return &_impl_.groupidentifier_;
+Msg_RequestExportSecret::_internal_mutable_a_groupidentifier() {
+  return &_impl_.a_groupidentifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::mutable_groupidentifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.groupIdentifier)
-  return _internal_mutable_groupidentifier();
+Msg_RequestExportSecret::mutable_a_groupidentifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_groupIdentifier)
+  return _internal_mutable_a_groupidentifier();
 }
 
-// repeated uint32 identifier = 2;
-inline int Msg_RequestExportSecret::_internal_identifier_size() const {
-  return _impl_.identifier_.size();
+// repeated uint32 a_identifier = 2;
+inline int Msg_RequestExportSecret::_internal_a_identifier_size() const {
+  return _impl_.a_identifier_.size();
 }
-inline int Msg_RequestExportSecret::identifier_size() const {
-  return _internal_identifier_size();
+inline int Msg_RequestExportSecret::a_identifier_size() const {
+  return _internal_a_identifier_size();
 }
-inline void Msg_RequestExportSecret::clear_identifier() {
-  _impl_.identifier_.Clear();
+inline void Msg_RequestExportSecret::clear_a_identifier() {
+  _impl_.a_identifier_.Clear();
 }
-inline uint32_t Msg_RequestExportSecret::_internal_identifier(int index) const {
-  return _impl_.identifier_.Get(index);
+inline uint32_t Msg_RequestExportSecret::_internal_a_identifier(int index) const {
+  return _impl_.a_identifier_.Get(index);
 }
-inline uint32_t Msg_RequestExportSecret::identifier(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.identifier)
-  return _internal_identifier(index);
+inline uint32_t Msg_RequestExportSecret::a_identifier(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_identifier)
+  return _internal_a_identifier(index);
 }
-inline void Msg_RequestExportSecret::set_identifier(int index, uint32_t value) {
-  _impl_.identifier_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.identifier)
+inline void Msg_RequestExportSecret::set_a_identifier(int index, uint32_t value) {
+  _impl_.a_identifier_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_identifier)
 }
-inline void Msg_RequestExportSecret::_internal_add_identifier(uint32_t value) {
-  _impl_.identifier_.Add(value);
+inline void Msg_RequestExportSecret::_internal_add_a_identifier(uint32_t value) {
+  _impl_.a_identifier_.Add(value);
 }
-inline void Msg_RequestExportSecret::add_identifier(uint32_t value) {
-  _internal_add_identifier(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.identifier)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::_internal_identifier() const {
-  return _impl_.identifier_;
+inline void Msg_RequestExportSecret::add_a_identifier(uint32_t value) {
+  _internal_add_a_identifier(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_identifier)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::identifier() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.identifier)
-  return _internal_identifier();
+Msg_RequestExportSecret::_internal_a_identifier() const {
+  return _impl_.a_identifier_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestExportSecret::a_identifier() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_identifier)
+  return _internal_a_identifier();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::_internal_mutable_identifier() {
-  return &_impl_.identifier_;
+Msg_RequestExportSecret::_internal_mutable_a_identifier() {
+  return &_impl_.a_identifier_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::mutable_identifier() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.identifier)
-  return _internal_mutable_identifier();
+Msg_RequestExportSecret::mutable_a_identifier() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_identifier)
+  return _internal_mutable_a_identifier();
 }
 
-// repeated uint32 label = 3;
-inline int Msg_RequestExportSecret::_internal_label_size() const {
-  return _impl_.label_.size();
+// repeated uint32 a_label = 3;
+inline int Msg_RequestExportSecret::_internal_a_label_size() const {
+  return _impl_.a_label_.size();
 }
-inline int Msg_RequestExportSecret::label_size() const {
-  return _internal_label_size();
+inline int Msg_RequestExportSecret::a_label_size() const {
+  return _internal_a_label_size();
 }
-inline void Msg_RequestExportSecret::clear_label() {
-  _impl_.label_.Clear();
+inline void Msg_RequestExportSecret::clear_a_label() {
+  _impl_.a_label_.Clear();
 }
-inline uint32_t Msg_RequestExportSecret::_internal_label(int index) const {
-  return _impl_.label_.Get(index);
+inline uint32_t Msg_RequestExportSecret::_internal_a_label(int index) const {
+  return _impl_.a_label_.Get(index);
 }
-inline uint32_t Msg_RequestExportSecret::label(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.label)
-  return _internal_label(index);
+inline uint32_t Msg_RequestExportSecret::a_label(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_label)
+  return _internal_a_label(index);
 }
-inline void Msg_RequestExportSecret::set_label(int index, uint32_t value) {
-  _impl_.label_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.label)
+inline void Msg_RequestExportSecret::set_a_label(int index, uint32_t value) {
+  _impl_.a_label_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_label)
 }
-inline void Msg_RequestExportSecret::_internal_add_label(uint32_t value) {
-  _impl_.label_.Add(value);
+inline void Msg_RequestExportSecret::_internal_add_a_label(uint32_t value) {
+  _impl_.a_label_.Add(value);
 }
-inline void Msg_RequestExportSecret::add_label(uint32_t value) {
-  _internal_add_label(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.label)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::_internal_label() const {
-  return _impl_.label_;
+inline void Msg_RequestExportSecret::add_a_label(uint32_t value) {
+  _internal_add_a_label(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_label)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::label() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.label)
-  return _internal_label();
+Msg_RequestExportSecret::_internal_a_label() const {
+  return _impl_.a_label_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestExportSecret::a_label() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_label)
+  return _internal_a_label();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::_internal_mutable_label() {
-  return &_impl_.label_;
+Msg_RequestExportSecret::_internal_mutable_a_label() {
+  return &_impl_.a_label_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::mutable_label() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.label)
-  return _internal_mutable_label();
+Msg_RequestExportSecret::mutable_a_label() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_label)
+  return _internal_mutable_a_label();
 }
 
-// repeated uint32 content = 4;
-inline int Msg_RequestExportSecret::_internal_content_size() const {
-  return _impl_.content_.size();
+// repeated uint32 a_content = 4;
+inline int Msg_RequestExportSecret::_internal_a_content_size() const {
+  return _impl_.a_content_.size();
 }
-inline int Msg_RequestExportSecret::content_size() const {
-  return _internal_content_size();
+inline int Msg_RequestExportSecret::a_content_size() const {
+  return _internal_a_content_size();
 }
-inline void Msg_RequestExportSecret::clear_content() {
-  _impl_.content_.Clear();
+inline void Msg_RequestExportSecret::clear_a_content() {
+  _impl_.a_content_.Clear();
 }
-inline uint32_t Msg_RequestExportSecret::_internal_content(int index) const {
-  return _impl_.content_.Get(index);
+inline uint32_t Msg_RequestExportSecret::_internal_a_content(int index) const {
+  return _impl_.a_content_.Get(index);
 }
-inline uint32_t Msg_RequestExportSecret::content(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.content)
-  return _internal_content(index);
+inline uint32_t Msg_RequestExportSecret::a_content(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_content)
+  return _internal_a_content(index);
 }
-inline void Msg_RequestExportSecret::set_content(int index, uint32_t value) {
-  _impl_.content_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.content)
+inline void Msg_RequestExportSecret::set_a_content(int index, uint32_t value) {
+  _impl_.a_content_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_content)
 }
-inline void Msg_RequestExportSecret::_internal_add_content(uint32_t value) {
-  _impl_.content_.Add(value);
+inline void Msg_RequestExportSecret::_internal_add_a_content(uint32_t value) {
+  _impl_.a_content_.Add(value);
 }
-inline void Msg_RequestExportSecret::add_content(uint32_t value) {
-  _internal_add_content(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.content)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::_internal_content() const {
-  return _impl_.content_;
+inline void Msg_RequestExportSecret::add_a_content(uint32_t value) {
+  _internal_add_a_content(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_content)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestExportSecret::content() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.content)
-  return _internal_content();
+Msg_RequestExportSecret::_internal_a_content() const {
+  return _impl_.a_content_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestExportSecret::a_content() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_content)
+  return _internal_a_content();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::_internal_mutable_content() {
-  return &_impl_.content_;
+Msg_RequestExportSecret::_internal_mutable_a_content() {
+  return &_impl_.a_content_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestExportSecret::mutable_content() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.content)
-  return _internal_mutable_content();
+Msg_RequestExportSecret::mutable_a_content() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_content)
+  return _internal_mutable_a_content();
 }
 
-// required uint64 len = 5;
-inline bool Msg_RequestExportSecret::_internal_has_len() const {
+// required uint64 a_len = 5;
+inline bool Msg_RequestExportSecret::_internal_has_a_len() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RequestExportSecret::has_len() const {
-  return _internal_has_len();
+inline bool Msg_RequestExportSecret::has_a_len() const {
+  return _internal_has_a_len();
 }
-inline void Msg_RequestExportSecret::clear_len() {
-  _impl_.len_ = uint64_t{0u};
+inline void Msg_RequestExportSecret::clear_a_len() {
+  _impl_.a_len_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_RequestExportSecret::_internal_len() const {
-  return _impl_.len_;
+inline uint64_t Msg_RequestExportSecret::_internal_a_len() const {
+  return _impl_.a_len_;
 }
-inline uint64_t Msg_RequestExportSecret::len() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.len)
-  return _internal_len();
+inline uint64_t Msg_RequestExportSecret::a_len() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_len)
+  return _internal_a_len();
 }
-inline void Msg_RequestExportSecret::_internal_set_len(uint64_t value) {
+inline void Msg_RequestExportSecret::_internal_set_a_len(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.len_ = value;
+  _impl_.a_len_ = value;
 }
-inline void Msg_RequestExportSecret::set_len(uint64_t value) {
-  _internal_set_len(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.len)
+inline void Msg_RequestExportSecret::set_a_len(uint64_t value) {
+  _internal_set_a_len(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestExportSecret.a_len)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestExportSecret
 
-// optional bytes result = 1;
-inline bool Reply_RequestExportSecret::_internal_has_result() const {
+// optional bytes a_result = 1;
+inline bool Reply_RequestExportSecret::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestExportSecret::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestExportSecret::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_RequestExportSecret::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_RequestExportSecret::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RequestExportSecret::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.result)
-  return _internal_result();
+inline const std::string& Reply_RequestExportSecret::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RequestExportSecret::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_RequestExportSecret::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.a_result)
 }
-inline std::string* Reply_RequestExportSecret::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.result)
+inline std::string* Reply_RequestExportSecret::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.a_result)
   return _s;
 }
-inline const std::string& Reply_RequestExportSecret::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_RequestExportSecret::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_RequestExportSecret::_internal_set_result(const std::string& value) {
+inline void Reply_RequestExportSecret::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RequestExportSecret::_internal_mutable_result() {
+inline std::string* Reply_RequestExportSecret::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RequestExportSecret::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_RequestExportSecret::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RequestExportSecret::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_RequestExportSecret::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestExportSecret.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGetGroupIdentifier
 
-// repeated uint32 message = 1;
-inline int Msg_RequestGetGroupIdentifier::_internal_message_size() const {
-  return _impl_.message_.size();
+// repeated uint32 a_message = 1;
+inline int Msg_RequestGetGroupIdentifier::_internal_a_message_size() const {
+  return _impl_.a_message_.size();
 }
-inline int Msg_RequestGetGroupIdentifier::message_size() const {
-  return _internal_message_size();
+inline int Msg_RequestGetGroupIdentifier::a_message_size() const {
+  return _internal_a_message_size();
 }
-inline void Msg_RequestGetGroupIdentifier::clear_message() {
-  _impl_.message_.Clear();
+inline void Msg_RequestGetGroupIdentifier::clear_a_message() {
+  _impl_.a_message_.Clear();
 }
-inline uint32_t Msg_RequestGetGroupIdentifier::_internal_message(int index) const {
-  return _impl_.message_.Get(index);
+inline uint32_t Msg_RequestGetGroupIdentifier::_internal_a_message(int index) const {
+  return _impl_.a_message_.Get(index);
 }
-inline uint32_t Msg_RequestGetGroupIdentifier::message(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.message)
-  return _internal_message(index);
+inline uint32_t Msg_RequestGetGroupIdentifier::a_message(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.a_message)
+  return _internal_a_message(index);
 }
-inline void Msg_RequestGetGroupIdentifier::set_message(int index, uint32_t value) {
-  _impl_.message_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.message)
+inline void Msg_RequestGetGroupIdentifier::set_a_message(int index, uint32_t value) {
+  _impl_.a_message_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.a_message)
 }
-inline void Msg_RequestGetGroupIdentifier::_internal_add_message(uint32_t value) {
-  _impl_.message_.Add(value);
+inline void Msg_RequestGetGroupIdentifier::_internal_add_a_message(uint32_t value) {
+  _impl_.a_message_.Add(value);
 }
-inline void Msg_RequestGetGroupIdentifier::add_message(uint32_t value) {
-  _internal_add_message(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.message)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGetGroupIdentifier::_internal_message() const {
-  return _impl_.message_;
+inline void Msg_RequestGetGroupIdentifier::add_a_message(uint32_t value) {
+  _internal_add_a_message(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.a_message)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGetGroupIdentifier::message() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.message)
-  return _internal_message();
+Msg_RequestGetGroupIdentifier::_internal_a_message() const {
+  return _impl_.a_message_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGetGroupIdentifier::a_message() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.a_message)
+  return _internal_a_message();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGetGroupIdentifier::_internal_mutable_message() {
-  return &_impl_.message_;
+Msg_RequestGetGroupIdentifier::_internal_mutable_a_message() {
+  return &_impl_.a_message_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGetGroupIdentifier::mutable_message() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.message)
-  return _internal_mutable_message();
+Msg_RequestGetGroupIdentifier::mutable_a_message() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupIdentifier.a_message)
+  return _internal_mutable_a_message();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGetGroupIdentifier
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGetGroupIdentifier::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGetGroupIdentifier::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGetGroupIdentifier::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGetGroupIdentifier::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupIdentifier::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupIdentifier::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupIdentifier::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupIdentifier::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGetGroupIdentifier::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGetGroupIdentifier::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11396,137 +11396,137 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupIdentifier::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.a_result)
   return _msg;
 }
-inline void Reply_RequestGetGroupIdentifier::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGetGroupIdentifier::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupIdentifier.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestGetGroupEpoch
 
-// repeated uint32 message = 1;
-inline int Msg_RequestGetGroupEpoch::_internal_message_size() const {
-  return _impl_.message_.size();
+// repeated uint32 a_message = 1;
+inline int Msg_RequestGetGroupEpoch::_internal_a_message_size() const {
+  return _impl_.a_message_.size();
 }
-inline int Msg_RequestGetGroupEpoch::message_size() const {
-  return _internal_message_size();
+inline int Msg_RequestGetGroupEpoch::a_message_size() const {
+  return _internal_a_message_size();
 }
-inline void Msg_RequestGetGroupEpoch::clear_message() {
-  _impl_.message_.Clear();
+inline void Msg_RequestGetGroupEpoch::clear_a_message() {
+  _impl_.a_message_.Clear();
 }
-inline uint32_t Msg_RequestGetGroupEpoch::_internal_message(int index) const {
-  return _impl_.message_.Get(index);
+inline uint32_t Msg_RequestGetGroupEpoch::_internal_a_message(int index) const {
+  return _impl_.a_message_.Get(index);
 }
-inline uint32_t Msg_RequestGetGroupEpoch::message(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.message)
-  return _internal_message(index);
+inline uint32_t Msg_RequestGetGroupEpoch::a_message(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.a_message)
+  return _internal_a_message(index);
 }
-inline void Msg_RequestGetGroupEpoch::set_message(int index, uint32_t value) {
-  _impl_.message_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.message)
+inline void Msg_RequestGetGroupEpoch::set_a_message(int index, uint32_t value) {
+  _impl_.a_message_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.a_message)
 }
-inline void Msg_RequestGetGroupEpoch::_internal_add_message(uint32_t value) {
-  _impl_.message_.Add(value);
+inline void Msg_RequestGetGroupEpoch::_internal_add_a_message(uint32_t value) {
+  _impl_.a_message_.Add(value);
 }
-inline void Msg_RequestGetGroupEpoch::add_message(uint32_t value) {
-  _internal_add_message(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.message)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGetGroupEpoch::_internal_message() const {
-  return _impl_.message_;
+inline void Msg_RequestGetGroupEpoch::add_a_message(uint32_t value) {
+  _internal_add_a_message(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.a_message)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_RequestGetGroupEpoch::message() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.message)
-  return _internal_message();
+Msg_RequestGetGroupEpoch::_internal_a_message() const {
+  return _impl_.a_message_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_RequestGetGroupEpoch::a_message() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.a_message)
+  return _internal_a_message();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGetGroupEpoch::_internal_mutable_message() {
-  return &_impl_.message_;
+Msg_RequestGetGroupEpoch::_internal_mutable_a_message() {
+  return &_impl_.a_message_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_RequestGetGroupEpoch::mutable_message() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.message)
-  return _internal_mutable_message();
+Msg_RequestGetGroupEpoch::mutable_a_message() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMLSTransaction.Msg_RequestGetGroupEpoch.a_message)
+  return _internal_mutable_a_message();
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestGetGroupEpoch
 
-// optional .protobuf.mozilla.dom.RawBytes result = 1;
-inline bool Reply_RequestGetGroupEpoch::_internal_has_result() const {
+// optional .protobuf.mozilla.dom.RawBytes a_result = 1;
+inline bool Reply_RequestGetGroupEpoch::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_RequestGetGroupEpoch::has_result() const {
-  return _internal_has_result();
+inline bool Reply_RequestGetGroupEpoch::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupEpoch::_internal_result() const {
-  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.result_;
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupEpoch::_internal_a_result() const {
+  const ::protobuf::mozilla::dom::RawBytes* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RawBytes&>(
       ::protobuf::mozilla::dom::_RawBytes_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupEpoch::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::dom::RawBytes& Reply_RequestGetGroupEpoch::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.a_result)
+  return _internal_a_result();
 }
-inline void Reply_RequestGetGroupEpoch::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGetGroupEpoch::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::dom::RawBytes* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.a_result)
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::release_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11538,45 +11538,45 @@ inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::release_r
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::dom::RawBytes* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::_internal_mutable_result() {
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RawBytes>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::mutable_result() {
-  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.result)
+inline ::protobuf::mozilla::dom::RawBytes* Reply_RequestGetGroupEpoch::mutable_a_result() {
+  ::protobuf::mozilla::dom::RawBytes* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.a_result)
   return _msg;
 }
-inline void Reply_RequestGetGroupEpoch::set_allocated_result(::protobuf::mozilla::dom::RawBytes* result) {
+inline void Reply_RequestGetGroupEpoch::set_allocated_a_result(::protobuf::mozilla::dom::RawBytes* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMLSTransaction.Reply_RequestGetGroupEpoch.a_result)
 }
 
 #ifdef __GNUC__

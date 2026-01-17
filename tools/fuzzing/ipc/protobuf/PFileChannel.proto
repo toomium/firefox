@@ -23,11 +23,11 @@ message Reply___delete__ {
 }
 
 message Msg_NotifyListeners {
-  required protobuf.mozilla.net.FileChannelInfo aFileChannelInfo = 1;
+  required protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
 }
 
 message Msg_SetChannelIdForRedirect {
-  required uint64 aChannelId = 1;
+  required uint64 a_aChannelId = 1;
 }
 
 // Parameter mappings stats:

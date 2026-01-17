@@ -20,185 +20,185 @@ message ServiceWorkerCheckScriptEvaluationOpArgs {
 }
 
 message ServiceWorkerUpdateStateOpArgs {
-  required bytes state = 1;
+  required bytes a_state = 1;
 }
 
 message ServiceWorkerTerminateWorkerOpArgs {
-  required uint32 shutdownStateId = 1;
+  required uint32 a_shutdownStateId = 1;
 }
 
 message ServiceWorkerLifeCycleEventOpArgs {
-  required bytes eventName = 1;
+  required bytes a_eventName = 1;
 }
 
 message ServiceWorkerCookieChangeEventOpArgs {
-  required protobuf.mozilla.net.CookieStruct cookie = 1;
-  required bool deleted = 2;
+  required protobuf.mozilla.net.CookieStruct a_cookie = 1;
+  required bool a_deleted = 2;
 }
 
 message OptionalPushData {
   message _mVArrayOfuint8_t {
-    repeated uint32 mVArrayOfuint8_t = 1;
+    repeated uint32 a_mVArrayOfuint8_t = 1;
   }
   oneof content {
-    bytes mVvoid_t = 1;
+    bytes a_mVvoid_t = 1;
     _mVArrayOfuint8_t mVArrayOfuint8_t = 2;
   }
 }
 
 message ServiceWorkerPushEventOpArgs {
-  required bytes messageId = 1;
-  required protobuf.mozilla.dom.OptionalPushData data = 2;
+  required bytes a_messageId = 1;
+  required protobuf.mozilla.dom.OptionalPushData a_data = 2;
 }
 
 message PushSubscriptionData {
-  required bytes endpoint = 1;
-  repeated uint32 rawP256dhKey = 2;
-  repeated uint32 authSecret = 3;
-  repeated uint32 appServerKey = 4;
+  required bytes a_endpoint = 1;
+  repeated uint32 a_rawP256dhKey = 2;
+  repeated uint32 a_authSecret = 3;
+  repeated uint32 a_appServerKey = 4;
 }
 
 message ServiceWorkerPushSubscriptionChangeEventOpArgs {
-  optional protobuf.mozilla.dom.PushSubscriptionData oldSubscription = 1;
+  optional protobuf.mozilla.dom.PushSubscriptionData a_oldSubscription = 1;
 }
 
 message ServiceWorkerNotificationClickEventOpArgs {
-  required protobuf.mozilla.dom.IPCNotification notification = 1;
-  required bytes action = 2;
+  required protobuf.mozilla.dom.IPCNotification a_notification = 1;
+  required bytes a_action = 2;
 }
 
 message ServiceWorkerNotificationCloseEventOpArgs {
-  required protobuf.mozilla.dom.IPCNotification notification = 1;
+  required protobuf.mozilla.dom.IPCNotification a_notification = 1;
 }
 
 message ServiceWorkerNotificationEventOpArgs {
   oneof content {
-    protobuf.mozilla.dom.ServiceWorkerNotificationClickEventOpArgs mVServiceWorkerNotificationClickEventOpArgs = 1;
-    protobuf.mozilla.dom.ServiceWorkerNotificationCloseEventOpArgs mVServiceWorkerNotificationCloseEventOpArgs = 2;
+    protobuf.mozilla.dom.ServiceWorkerNotificationClickEventOpArgs a_mVServiceWorkerNotificationClickEventOpArgs = 1;
+    protobuf.mozilla.dom.ServiceWorkerNotificationCloseEventOpArgs a_mVServiceWorkerNotificationCloseEventOpArgs = 2;
   }
 }
 
 message ServiceWorkerExtensionAPIEventOpArgs {
-  required bytes apiNamespace = 1;
-  required bytes apiEventName = 2;
+  required bytes a_apiNamespace = 1;
+  required bytes a_apiEventName = 2;
 }
 
 message ServiceWorkerMessageEventOpArgs {
-  required protobuf.mozilla.dom.PostMessageSource source = 1;
-  required protobuf.mozilla.dom.ClonedOrErrorMessageData clonedData = 2;
+  required protobuf.mozilla.dom.PostMessageSource a_source = 1;
+  required protobuf.mozilla.dom.ClonedOrErrorMessageData a_clonedData = 2;
 }
 
 message ServiceWorkerFetchEventOpArgsCommon {
-  required bytes workerScriptSpec = 1;
-  required protobuf.mozilla.dom.IPCInternalRequest internalRequest = 2;
-  required bytes clientId = 3;
-  required bytes resultingClientId = 4;
-  required bool isNonSubresourceRequest = 5;
-  required bool preloadNavigation = 6;
-  required bytes testingInjectCancellation = 7;
+  required bytes a_workerScriptSpec = 1;
+  required protobuf.mozilla.dom.IPCInternalRequest a_internalRequest = 2;
+  required bytes a_clientId = 3;
+  required bytes a_resultingClientId = 4;
+  required bool a_isNonSubresourceRequest = 5;
+  required bool a_preloadNavigation = 6;
+  required bytes a_testingInjectCancellation = 7;
 }
 
 message ParentToParentServiceWorkerFetchEventOpArgs {
-  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon common = 1;
-  optional protobuf.mozilla.dom.ParentToParentInternalResponse preloadResponse = 2;
-  optional protobuf.mozilla.dom.ResponseTiming preloadResponseTiming = 3;
-  optional protobuf.mozilla.dom.ResponseEndArgs preloadResponseEndArgs = 4;
+  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon a_common = 1;
+  optional protobuf.mozilla.dom.ParentToParentInternalResponse a_preloadResponse = 2;
+  optional protobuf.mozilla.dom.ResponseTiming a_preloadResponseTiming = 3;
+  optional protobuf.mozilla.dom.ResponseEndArgs a_preloadResponseEndArgs = 4;
 }
 
 message ParentToChildServiceWorkerFetchEventOpArgs {
-  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon common = 1;
-  optional protobuf.mozilla.dom.ParentToChildInternalResponse preloadResponse = 2;
-  optional protobuf.mozilla.dom.ResponseTiming preloadResponseTiming = 3;
-  optional protobuf.mozilla.dom.ResponseEndArgs preloadResponseEndArgs = 4;
+  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon a_common = 1;
+  optional protobuf.mozilla.dom.ParentToChildInternalResponse a_preloadResponse = 2;
+  optional protobuf.mozilla.dom.ResponseTiming a_preloadResponseTiming = 3;
+  optional protobuf.mozilla.dom.ResponseEndArgs a_preloadResponseEndArgs = 4;
 }
 
 message ServiceWorkerUpdateIsOnContentBlockingAllowListOpArgs {
-  required bool onContentBlockingAllowList = 1;
+  required bool a_onContentBlockingAllowList = 1;
 }
 
 message ServiceWorkerOpArgs {
   oneof content {
-    protobuf.mozilla.dom.ServiceWorkerCheckScriptEvaluationOpArgs mVServiceWorkerCheckScriptEvaluationOpArgs = 1;
-    protobuf.mozilla.dom.ServiceWorkerUpdateStateOpArgs mVServiceWorkerUpdateStateOpArgs = 2;
-    protobuf.mozilla.dom.ServiceWorkerTerminateWorkerOpArgs mVServiceWorkerTerminateWorkerOpArgs = 3;
-    protobuf.mozilla.dom.ServiceWorkerLifeCycleEventOpArgs mVServiceWorkerLifeCycleEventOpArgs = 4;
-    protobuf.mozilla.dom.ServiceWorkerCookieChangeEventOpArgs mVServiceWorkerCookieChangeEventOpArgs = 5;
-    protobuf.mozilla.dom.ServiceWorkerPushEventOpArgs mVServiceWorkerPushEventOpArgs = 6;
-    protobuf.mozilla.dom.ServiceWorkerPushSubscriptionChangeEventOpArgs mVServiceWorkerPushSubscriptionChangeEventOpArgs = 7;
-    protobuf.mozilla.dom.ServiceWorkerNotificationEventOpArgs mVServiceWorkerNotificationEventOpArgs = 8;
-    protobuf.mozilla.dom.ServiceWorkerMessageEventOpArgs mVServiceWorkerMessageEventOpArgs = 9;
-    protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpArgs mVServiceWorkerExtensionAPIEventOpArgs = 10;
-    protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs mVParentToChildServiceWorkerFetchEventOpArgs = 11;
-    protobuf.mozilla.dom.ServiceWorkerUpdateIsOnContentBlockingAllowListOpArgs mVServiceWorkerUpdateIsOnContentBlockingAllowListOpArgs = 12;
+    protobuf.mozilla.dom.ServiceWorkerCheckScriptEvaluationOpArgs a_mVServiceWorkerCheckScriptEvaluationOpArgs = 1;
+    protobuf.mozilla.dom.ServiceWorkerUpdateStateOpArgs a_mVServiceWorkerUpdateStateOpArgs = 2;
+    protobuf.mozilla.dom.ServiceWorkerTerminateWorkerOpArgs a_mVServiceWorkerTerminateWorkerOpArgs = 3;
+    protobuf.mozilla.dom.ServiceWorkerLifeCycleEventOpArgs a_mVServiceWorkerLifeCycleEventOpArgs = 4;
+    protobuf.mozilla.dom.ServiceWorkerCookieChangeEventOpArgs a_mVServiceWorkerCookieChangeEventOpArgs = 5;
+    protobuf.mozilla.dom.ServiceWorkerPushEventOpArgs a_mVServiceWorkerPushEventOpArgs = 6;
+    protobuf.mozilla.dom.ServiceWorkerPushSubscriptionChangeEventOpArgs a_mVServiceWorkerPushSubscriptionChangeEventOpArgs = 7;
+    protobuf.mozilla.dom.ServiceWorkerNotificationEventOpArgs a_mVServiceWorkerNotificationEventOpArgs = 8;
+    protobuf.mozilla.dom.ServiceWorkerMessageEventOpArgs a_mVServiceWorkerMessageEventOpArgs = 9;
+    protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpArgs a_mVServiceWorkerExtensionAPIEventOpArgs = 10;
+    protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_mVParentToChildServiceWorkerFetchEventOpArgs = 11;
+    protobuf.mozilla.dom.ServiceWorkerUpdateIsOnContentBlockingAllowListOpArgs a_mVServiceWorkerUpdateIsOnContentBlockingAllowListOpArgs = 12;
   }
 }
 
 message FetchEventRespondWithClosure {
-  required bytes respondWithScriptSpec = 1;
-  required uint32 respondWithLineNumber = 2;
-  required uint32 respondWithColumnNumber = 3;
+  required bytes a_respondWithScriptSpec = 1;
+  required uint32 a_respondWithLineNumber = 2;
+  required uint32 a_respondWithColumnNumber = 3;
 }
 
 message FetchEventTimeStamps {
-  required bytes fetchHandlerStart = 1;
-  required bytes fetchHandlerFinish = 2;
+  required bytes a_fetchHandlerStart = 1;
+  required bytes a_fetchHandlerFinish = 2;
 }
 
 message ChildToParentSynthesizeResponseArgs {
-  required protobuf.mozilla.dom.ChildToParentInternalResponse internalResponse = 1;
-  required protobuf.mozilla.dom.FetchEventRespondWithClosure closure = 2;
-  required protobuf.mozilla.dom.FetchEventTimeStamps timeStamps = 3;
+  required protobuf.mozilla.dom.ChildToParentInternalResponse a_internalResponse = 1;
+  required protobuf.mozilla.dom.FetchEventRespondWithClosure a_closure = 2;
+  required protobuf.mozilla.dom.FetchEventTimeStamps a_timeStamps = 3;
 }
 
 message ParentToParentSynthesizeResponseArgs {
-  required protobuf.mozilla.dom.ParentToParentInternalResponse internalResponse = 1;
-  required protobuf.mozilla.dom.FetchEventRespondWithClosure closure = 2;
-  required protobuf.mozilla.dom.FetchEventTimeStamps timeStamps = 3;
+  required protobuf.mozilla.dom.ParentToParentInternalResponse a_internalResponse = 1;
+  required protobuf.mozilla.dom.FetchEventRespondWithClosure a_closure = 2;
+  required protobuf.mozilla.dom.FetchEventTimeStamps a_timeStamps = 3;
 }
 
 message ResetInterceptionArgs {
-  required protobuf.mozilla.dom.FetchEventTimeStamps timeStamps = 1;
+  required protobuf.mozilla.dom.FetchEventTimeStamps a_timeStamps = 1;
 }
 
 message CancelInterceptionArgs {
-  required bytes status = 1;
-  required protobuf.mozilla.dom.FetchEventTimeStamps timeStamps = 2;
+  required bytes a_status = 1;
+  required protobuf.mozilla.dom.FetchEventTimeStamps a_timeStamps = 2;
 }
 
 message ChildToParentFetchEventRespondWithResult {
   oneof content {
-    protobuf.mozilla.dom.ChildToParentSynthesizeResponseArgs mVChildToParentSynthesizeResponseArgs = 1;
-    protobuf.mozilla.dom.ResetInterceptionArgs mVResetInterceptionArgs = 2;
-    protobuf.mozilla.dom.CancelInterceptionArgs mVCancelInterceptionArgs = 3;
+    protobuf.mozilla.dom.ChildToParentSynthesizeResponseArgs a_mVChildToParentSynthesizeResponseArgs = 1;
+    protobuf.mozilla.dom.ResetInterceptionArgs a_mVResetInterceptionArgs = 2;
+    protobuf.mozilla.dom.CancelInterceptionArgs a_mVCancelInterceptionArgs = 3;
   }
 }
 
 message ParentToParentFetchEventRespondWithResult {
   oneof content {
-    protobuf.mozilla.dom.ParentToParentSynthesizeResponseArgs mVParentToParentSynthesizeResponseArgs = 1;
-    protobuf.mozilla.dom.ResetInterceptionArgs mVResetInterceptionArgs = 2;
-    protobuf.mozilla.dom.CancelInterceptionArgs mVCancelInterceptionArgs = 3;
+    protobuf.mozilla.dom.ParentToParentSynthesizeResponseArgs a_mVParentToParentSynthesizeResponseArgs = 1;
+    protobuf.mozilla.dom.ResetInterceptionArgs a_mVResetInterceptionArgs = 2;
+    protobuf.mozilla.dom.CancelInterceptionArgs a_mVCancelInterceptionArgs = 3;
   }
 }
 
 message ServiceWorkerCheckScriptEvaluationOpResult {
-  required bool workerScriptExecutedSuccessfully = 1;
-  required bool fetchHandlerWasAdded = 2;
+  required bool a_workerScriptExecutedSuccessfully = 1;
+  required bool a_fetchHandlerWasAdded = 2;
 }
 
 message ServiceWorkerFetchEventOpResult {
-  required bytes rv = 1;
+  required bytes a_rv = 1;
 }
 
 message ServiceWorkerExtensionAPIEventOpResult {
-  required bool extensionAPIEventListenerWasAdded = 1;
+  required bool a_extensionAPIEventListenerWasAdded = 1;
 }
 
 message ServiceWorkerOpResult {
   oneof content {
-    bytes mVnsresult = 1;
-    protobuf.mozilla.dom.ServiceWorkerCheckScriptEvaluationOpResult mVServiceWorkerCheckScriptEvaluationOpResult = 2;
-    protobuf.mozilla.dom.ServiceWorkerFetchEventOpResult mVServiceWorkerFetchEventOpResult = 3;
-    protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpResult mVServiceWorkerExtensionAPIEventOpResult = 4;
+    bytes a_mVnsresult = 1;
+    protobuf.mozilla.dom.ServiceWorkerCheckScriptEvaluationOpResult a_mVServiceWorkerCheckScriptEvaluationOpResult = 2;
+    protobuf.mozilla.dom.ServiceWorkerFetchEventOpResult a_mVServiceWorkerFetchEventOpResult = 3;
+    protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpResult a_mVServiceWorkerExtensionAPIEventOpResult = 4;
   }
 }

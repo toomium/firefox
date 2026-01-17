@@ -205,25 +205,25 @@ class Msg_RequestRegister final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATransactionInfoFieldNumber = 1,
+    kAATransactionInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo aTransactionInfo = 1;
-  bool has_atransactioninfo() const;
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
+  bool has_a_atransactioninfo() const;
   private:
-  bool _internal_has_atransactioninfo() const;
+  bool _internal_has_a_atransactioninfo() const;
   public:
-  void clear_atransactioninfo();
-  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& atransactioninfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* release_atransactioninfo();
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* mutable_atransactioninfo();
-  void set_allocated_atransactioninfo(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* atransactioninfo);
+  void clear_a_atransactioninfo();
+  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& a_atransactioninfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* release_a_atransactioninfo();
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* mutable_a_atransactioninfo();
+  void set_allocated_a_atransactioninfo(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* a_atransactioninfo);
   private:
-  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& _internal_atransactioninfo() const;
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* _internal_mutable_atransactioninfo();
+  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& _internal_a_atransactioninfo() const;
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* _internal_mutable_a_atransactioninfo();
   public:
-  void unsafe_arena_set_allocated_atransactioninfo(
-      ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* atransactioninfo);
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* unsafe_arena_release_atransactioninfo();
+  void unsafe_arena_set_allocated_a_atransactioninfo(
+      ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* a_atransactioninfo);
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* unsafe_arena_release_a_atransactioninfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister)
  private:
@@ -235,7 +235,7 @@ class Msg_RequestRegister final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* atransactioninfo_;
+    ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* a_atransactioninfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_2eproto;
@@ -352,25 +352,25 @@ class Reply_RequestRegister final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
+    kAResponseFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse response = 1;
-  bool has_response() const;
+  // required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
+  bool has_a_response() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_a_response() const;
   public:
-  void clear_response();
-  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& response() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* release_response();
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* mutable_response();
-  void set_allocated_response(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* response);
+  void clear_a_response();
+  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& a_response() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* release_a_response();
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* mutable_a_response();
+  void set_allocated_a_response(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* a_response);
   private:
-  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& _internal_response() const;
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* _internal_mutable_response();
+  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& _internal_a_response() const;
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* _internal_mutable_a_response();
   public:
-  void unsafe_arena_set_allocated_response(
-      ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* response);
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* unsafe_arena_release_response();
+  void unsafe_arena_set_allocated_a_response(
+      ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* a_response);
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* unsafe_arena_release_a_response();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister)
  private:
@@ -382,7 +382,7 @@ class Reply_RequestRegister final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* response_;
+    ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_2eproto;
@@ -499,25 +499,25 @@ class Msg_RequestSign final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATransactionInfoFieldNumber = 1,
+    kAATransactionInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo aTransactionInfo = 1;
-  bool has_atransactioninfo() const;
+  // required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
+  bool has_a_atransactioninfo() const;
   private:
-  bool _internal_has_atransactioninfo() const;
+  bool _internal_has_a_atransactioninfo() const;
   public:
-  void clear_atransactioninfo();
-  const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& atransactioninfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* release_atransactioninfo();
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* mutable_atransactioninfo();
-  void set_allocated_atransactioninfo(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* atransactioninfo);
+  void clear_a_atransactioninfo();
+  const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& a_atransactioninfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* release_a_atransactioninfo();
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* mutable_a_atransactioninfo();
+  void set_allocated_a_atransactioninfo(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* a_atransactioninfo);
   private:
-  const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& _internal_atransactioninfo() const;
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* _internal_mutable_atransactioninfo();
+  const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& _internal_a_atransactioninfo() const;
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* _internal_mutable_a_atransactioninfo();
   public:
-  void unsafe_arena_set_allocated_atransactioninfo(
-      ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* atransactioninfo);
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* unsafe_arena_release_atransactioninfo();
+  void unsafe_arena_set_allocated_a_atransactioninfo(
+      ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* a_atransactioninfo);
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* unsafe_arena_release_a_atransactioninfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign)
  private:
@@ -529,7 +529,7 @@ class Msg_RequestSign final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* atransactioninfo_;
+    ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* a_atransactioninfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_2eproto;
@@ -646,25 +646,25 @@ class Reply_RequestSign final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
+    kAResponseFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse response = 1;
-  bool has_response() const;
+  // required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
+  bool has_a_response() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_a_response() const;
   public:
-  void clear_response();
-  const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& response() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* release_response();
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* mutable_response();
-  void set_allocated_response(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* response);
+  void clear_a_response();
+  const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& a_response() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* release_a_response();
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* mutable_a_response();
+  void set_allocated_a_response(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* a_response);
   private:
-  const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& _internal_response() const;
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* _internal_mutable_response();
+  const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& _internal_a_response() const;
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* _internal_mutable_a_response();
   public:
-  void unsafe_arena_set_allocated_response(
-      ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* response);
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* unsafe_arena_release_response();
+  void unsafe_arena_set_allocated_a_response(
+      ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* a_response);
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* unsafe_arena_release_a_response();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign)
  private:
@@ -676,7 +676,7 @@ class Reply_RequestSign final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* response_;
+    ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_2eproto;
@@ -917,19 +917,19 @@ class Reply_RequestIsUVPAA final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAvailableFieldNumber = 1,
+    kAAvailableFieldNumber = 1,
   };
-  // required bool available = 1;
-  bool has_available() const;
+  // required bool a_available = 1;
+  bool has_a_available() const;
   private:
-  bool _internal_has_available() const;
+  bool _internal_has_a_available() const;
   public:
-  void clear_available();
-  bool available() const;
-  void set_available(bool value);
+  void clear_a_available();
+  bool a_available() const;
+  void set_a_available(bool value);
   private:
-  bool _internal_available() const;
-  void _internal_set_available(bool value);
+  bool _internal_a_available() const;
+  void _internal_set_a_available(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA)
@@ -942,7 +942,7 @@ class Reply_RequestIsUVPAA final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool available_;
+    bool a_available_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebAuthnTransaction_2eproto;
@@ -1330,41 +1330,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_RequestRegister
 
-// required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo aTransactionInfo = 1;
-inline bool Msg_RequestRegister::_internal_has_atransactioninfo() const {
+// required .protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
+inline bool Msg_RequestRegister::_internal_has_a_atransactioninfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.atransactioninfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_atransactioninfo_ != nullptr);
   return value;
 }
-inline bool Msg_RequestRegister::has_atransactioninfo() const {
-  return _internal_has_atransactioninfo();
+inline bool Msg_RequestRegister::has_a_atransactioninfo() const {
+  return _internal_has_a_atransactioninfo();
 }
-inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& Msg_RequestRegister::_internal_atransactioninfo() const {
-  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* p = _impl_.atransactioninfo_;
+inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& Msg_RequestRegister::_internal_a_atransactioninfo() const {
+  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* p = _impl_.a_atransactioninfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo&>(
       ::protobuf::mozilla::dom::_WebAuthnMakeCredentialInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& Msg_RequestRegister::atransactioninfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.aTransactionInfo)
-  return _internal_atransactioninfo();
+inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo& Msg_RequestRegister::a_atransactioninfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.a_aTransactionInfo)
+  return _internal_a_atransactioninfo();
 }
-inline void Msg_RequestRegister::unsafe_arena_set_allocated_atransactioninfo(
-    ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* atransactioninfo) {
+inline void Msg_RequestRegister::unsafe_arena_set_allocated_a_atransactioninfo(
+    ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* a_atransactioninfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.atransactioninfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_atransactioninfo_);
   }
-  _impl_.atransactioninfo_ = atransactioninfo;
-  if (atransactioninfo) {
+  _impl_.a_atransactioninfo_ = a_atransactioninfo;
+  if (a_atransactioninfo) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.aTransactionInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.a_aTransactionInfo)
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::release_atransactioninfo() {
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::release_a_atransactioninfo() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* temp = _impl_.atransactioninfo_;
-  _impl_.atransactioninfo_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* temp = _impl_.a_atransactioninfo_;
+  _impl_.a_atransactioninfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1376,86 +1376,86 @@ inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::unsafe_arena_release_atransactioninfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.aTransactionInfo)
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::unsafe_arena_release_a_atransactioninfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.a_aTransactionInfo)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* temp = _impl_.atransactioninfo_;
-  _impl_.atransactioninfo_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* temp = _impl_.a_atransactioninfo_;
+  _impl_.a_atransactioninfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::_internal_mutable_atransactioninfo() {
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::_internal_mutable_a_atransactioninfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.atransactioninfo_ == nullptr) {
+  if (_impl_.a_atransactioninfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo>(GetArenaForAllocation());
-    _impl_.atransactioninfo_ = p;
+    _impl_.a_atransactioninfo_ = p;
   }
-  return _impl_.atransactioninfo_;
+  return _impl_.a_atransactioninfo_;
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::mutable_atransactioninfo() {
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* _msg = _internal_mutable_atransactioninfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.aTransactionInfo)
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* Msg_RequestRegister::mutable_a_atransactioninfo() {
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* _msg = _internal_mutable_a_atransactioninfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.a_aTransactionInfo)
   return _msg;
 }
-inline void Msg_RequestRegister::set_allocated_atransactioninfo(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* atransactioninfo) {
+inline void Msg_RequestRegister::set_allocated_a_atransactioninfo(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo* a_atransactioninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.atransactioninfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_atransactioninfo_);
   }
-  if (atransactioninfo) {
+  if (a_atransactioninfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(atransactioninfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_atransactioninfo));
     if (message_arena != submessage_arena) {
-      atransactioninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, atransactioninfo, submessage_arena);
+      a_atransactioninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_atransactioninfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atransactioninfo_ = atransactioninfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.aTransactionInfo)
+  _impl_.a_atransactioninfo_ = a_atransactioninfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestRegister.a_aTransactionInfo)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestRegister
 
-// required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse response = 1;
-inline bool Reply_RequestRegister::_internal_has_response() const {
+// required .protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
+inline bool Reply_RequestRegister::_internal_has_a_response() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.response_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
   return value;
 }
-inline bool Reply_RequestRegister::has_response() const {
-  return _internal_has_response();
+inline bool Reply_RequestRegister::has_a_response() const {
+  return _internal_has_a_response();
 }
-inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& Reply_RequestRegister::_internal_response() const {
-  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* p = _impl_.response_;
+inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& Reply_RequestRegister::_internal_a_response() const {
+  const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* p = _impl_.a_response_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse&>(
       ::protobuf::mozilla::dom::_WebAuthnMakeCredentialResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& Reply_RequestRegister::response() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.response)
-  return _internal_response();
+inline const ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse& Reply_RequestRegister::a_response() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.a_response)
+  return _internal_a_response();
 }
-inline void Reply_RequestRegister::unsafe_arena_set_allocated_response(
-    ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* response) {
+inline void Reply_RequestRegister::unsafe_arena_set_allocated_a_response(
+    ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* a_response) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  _impl_.response_ = response;
-  if (response) {
+  _impl_.a_response_ = a_response;
+  if (a_response) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.a_response)
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::release_response() {
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::release_a_response() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1467,86 +1467,86 @@ inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRe
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.response)
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::unsafe_arena_release_a_response() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.a_response)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::_internal_mutable_response() {
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::_internal_mutable_a_response() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.response_ == nullptr) {
+  if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse>(GetArenaForAllocation());
-    _impl_.response_ = p;
+    _impl_.a_response_ = p;
   }
-  return _impl_.response_;
+  return _impl_.a_response_;
 }
-inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::mutable_response() {
-  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.response)
+inline ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* Reply_RequestRegister::mutable_a_response() {
+  ::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* _msg = _internal_mutable_a_response();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.a_response)
   return _msg;
 }
-inline void Reply_RequestRegister::set_allocated_response(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* response) {
+inline void Reply_RequestRegister::set_allocated_a_response(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse* a_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  if (response) {
+  if (a_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_response));
     if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
+      a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_response, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.response)
+  _impl_.a_response_ = a_response;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestRegister.a_response)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestSign
 
-// required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo aTransactionInfo = 1;
-inline bool Msg_RequestSign::_internal_has_atransactioninfo() const {
+// required .protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
+inline bool Msg_RequestSign::_internal_has_a_atransactioninfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.atransactioninfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_atransactioninfo_ != nullptr);
   return value;
 }
-inline bool Msg_RequestSign::has_atransactioninfo() const {
-  return _internal_has_atransactioninfo();
+inline bool Msg_RequestSign::has_a_atransactioninfo() const {
+  return _internal_has_a_atransactioninfo();
 }
-inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& Msg_RequestSign::_internal_atransactioninfo() const {
-  const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* p = _impl_.atransactioninfo_;
+inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& Msg_RequestSign::_internal_a_atransactioninfo() const {
+  const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* p = _impl_.a_atransactioninfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo&>(
       ::protobuf::mozilla::dom::_WebAuthnGetAssertionInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& Msg_RequestSign::atransactioninfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.aTransactionInfo)
-  return _internal_atransactioninfo();
+inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo& Msg_RequestSign::a_atransactioninfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.a_aTransactionInfo)
+  return _internal_a_atransactioninfo();
 }
-inline void Msg_RequestSign::unsafe_arena_set_allocated_atransactioninfo(
-    ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* atransactioninfo) {
+inline void Msg_RequestSign::unsafe_arena_set_allocated_a_atransactioninfo(
+    ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* a_atransactioninfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.atransactioninfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_atransactioninfo_);
   }
-  _impl_.atransactioninfo_ = atransactioninfo;
-  if (atransactioninfo) {
+  _impl_.a_atransactioninfo_ = a_atransactioninfo;
+  if (a_atransactioninfo) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.aTransactionInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.a_aTransactionInfo)
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::release_atransactioninfo() {
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::release_a_atransactioninfo() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* temp = _impl_.atransactioninfo_;
-  _impl_.atransactioninfo_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* temp = _impl_.a_atransactioninfo_;
+  _impl_.a_atransactioninfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1558,86 +1558,86 @@ inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::unsafe_arena_release_atransactioninfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.aTransactionInfo)
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::unsafe_arena_release_a_atransactioninfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.a_aTransactionInfo)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* temp = _impl_.atransactioninfo_;
-  _impl_.atransactioninfo_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* temp = _impl_.a_atransactioninfo_;
+  _impl_.a_atransactioninfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::_internal_mutable_atransactioninfo() {
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::_internal_mutable_a_atransactioninfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.atransactioninfo_ == nullptr) {
+  if (_impl_.a_atransactioninfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnGetAssertionInfo>(GetArenaForAllocation());
-    _impl_.atransactioninfo_ = p;
+    _impl_.a_atransactioninfo_ = p;
   }
-  return _impl_.atransactioninfo_;
+  return _impl_.a_atransactioninfo_;
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::mutable_atransactioninfo() {
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* _msg = _internal_mutable_atransactioninfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.aTransactionInfo)
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* Msg_RequestSign::mutable_a_atransactioninfo() {
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* _msg = _internal_mutable_a_atransactioninfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.a_aTransactionInfo)
   return _msg;
 }
-inline void Msg_RequestSign::set_allocated_atransactioninfo(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* atransactioninfo) {
+inline void Msg_RequestSign::set_allocated_a_atransactioninfo(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo* a_atransactioninfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.atransactioninfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_atransactioninfo_);
   }
-  if (atransactioninfo) {
+  if (a_atransactioninfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(atransactioninfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_atransactioninfo));
     if (message_arena != submessage_arena) {
-      atransactioninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, atransactioninfo, submessage_arena);
+      a_atransactioninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_atransactioninfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atransactioninfo_ = atransactioninfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.aTransactionInfo)
+  _impl_.a_atransactioninfo_ = a_atransactioninfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Msg_RequestSign.a_aTransactionInfo)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RequestSign
 
-// required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse response = 1;
-inline bool Reply_RequestSign::_internal_has_response() const {
+// required .protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
+inline bool Reply_RequestSign::_internal_has_a_response() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.response_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
   return value;
 }
-inline bool Reply_RequestSign::has_response() const {
-  return _internal_has_response();
+inline bool Reply_RequestSign::has_a_response() const {
+  return _internal_has_a_response();
 }
-inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& Reply_RequestSign::_internal_response() const {
-  const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* p = _impl_.response_;
+inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& Reply_RequestSign::_internal_a_response() const {
+  const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* p = _impl_.a_response_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse&>(
       ::protobuf::mozilla::dom::_WebAuthnGetAssertionResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& Reply_RequestSign::response() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.response)
-  return _internal_response();
+inline const ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse& Reply_RequestSign::a_response() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.a_response)
+  return _internal_a_response();
 }
-inline void Reply_RequestSign::unsafe_arena_set_allocated_response(
-    ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* response) {
+inline void Reply_RequestSign::unsafe_arena_set_allocated_a_response(
+    ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* a_response) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  _impl_.response_ = response;
-  if (response) {
+  _impl_.a_response_ = a_response;
+  if (a_response) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.a_response)
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::release_response() {
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::release_a_response() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1649,45 +1649,45 @@ inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.response)
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::unsafe_arena_release_a_response() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.a_response)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::_internal_mutable_response() {
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::_internal_mutable_a_response() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.response_ == nullptr) {
+  if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::WebAuthnGetAssertionResponse>(GetArenaForAllocation());
-    _impl_.response_ = p;
+    _impl_.a_response_ = p;
   }
-  return _impl_.response_;
+  return _impl_.a_response_;
 }
-inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::mutable_response() {
-  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.response)
+inline ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* Reply_RequestSign::mutable_a_response() {
+  ::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* _msg = _internal_mutable_a_response();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.a_response)
   return _msg;
 }
-inline void Reply_RequestSign::set_allocated_response(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* response) {
+inline void Reply_RequestSign::set_allocated_a_response(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse* a_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  if (response) {
+  if (a_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_response));
     if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
+      a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_response, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.response)
+  _impl_.a_response_ = a_response;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestSign.a_response)
 }
 
 // -------------------------------------------------------------------
@@ -1698,32 +1698,32 @@ inline void Reply_RequestSign::set_allocated_response(::protobuf::mozilla::dom::
 
 // Reply_RequestIsUVPAA
 
-// required bool available = 1;
-inline bool Reply_RequestIsUVPAA::_internal_has_available() const {
+// required bool a_available = 1;
+inline bool Reply_RequestIsUVPAA::_internal_has_a_available() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestIsUVPAA::has_available() const {
-  return _internal_has_available();
+inline bool Reply_RequestIsUVPAA::has_a_available() const {
+  return _internal_has_a_available();
 }
-inline void Reply_RequestIsUVPAA::clear_available() {
-  _impl_.available_ = false;
+inline void Reply_RequestIsUVPAA::clear_a_available() {
+  _impl_.a_available_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestIsUVPAA::_internal_available() const {
-  return _impl_.available_;
+inline bool Reply_RequestIsUVPAA::_internal_a_available() const {
+  return _impl_.a_available_;
 }
-inline bool Reply_RequestIsUVPAA::available() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA.available)
-  return _internal_available();
+inline bool Reply_RequestIsUVPAA::a_available() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA.a_available)
+  return _internal_a_available();
 }
-inline void Reply_RequestIsUVPAA::_internal_set_available(bool value) {
+inline void Reply_RequestIsUVPAA::_internal_set_a_available(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.available_ = value;
+  _impl_.a_available_ = value;
 }
-inline void Reply_RequestIsUVPAA::set_available(bool value) {
-  _internal_set_available(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA.available)
+inline void Reply_RequestIsUVPAA::set_a_available(bool value) {
+  _internal_set_a_available(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebAuthnTransaction.Reply_RequestIsUVPAA.a_available)
 }
 
 // -------------------------------------------------------------------

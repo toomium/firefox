@@ -177,25 +177,25 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAResultFieldNumber = 1,
+    kAAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ClientOpResult aResult = 1;
-  bool has_aresult() const;
+  // required .protobuf.mozilla.dom.ClientOpResult a_aResult = 1;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const ::protobuf::mozilla::dom::ClientOpResult& aresult() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ClientOpResult* release_aresult();
-  ::protobuf::mozilla::dom::ClientOpResult* mutable_aresult();
-  void set_allocated_aresult(::protobuf::mozilla::dom::ClientOpResult* aresult);
+  void clear_a_aresult();
+  const ::protobuf::mozilla::dom::ClientOpResult& a_aresult() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ClientOpResult* release_a_aresult();
+  ::protobuf::mozilla::dom::ClientOpResult* mutable_a_aresult();
+  void set_allocated_a_aresult(::protobuf::mozilla::dom::ClientOpResult* a_aresult);
   private:
-  const ::protobuf::mozilla::dom::ClientOpResult& _internal_aresult() const;
-  ::protobuf::mozilla::dom::ClientOpResult* _internal_mutable_aresult();
+  const ::protobuf::mozilla::dom::ClientOpResult& _internal_a_aresult() const;
+  ::protobuf::mozilla::dom::ClientOpResult* _internal_mutable_a_aresult();
   public:
-  void unsafe_arena_set_allocated_aresult(
-      ::protobuf::mozilla::dom::ClientOpResult* aresult);
-  ::protobuf::mozilla::dom::ClientOpResult* unsafe_arena_release_aresult();
+  void unsafe_arena_set_allocated_a_aresult(
+      ::protobuf::mozilla::dom::ClientOpResult* a_aresult);
+  ::protobuf::mozilla::dom::ClientOpResult* unsafe_arena_release_a_aresult();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__)
  private:
@@ -207,7 +207,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ClientOpResult* aresult_;
+    ::protobuf::mozilla::dom::ClientOpResult* a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClientNavigateOp_2eproto;
@@ -347,41 +347,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required .protobuf.mozilla.dom.ClientOpResult aResult = 1;
-inline bool Msg___delete__::_internal_has_aresult() const {
+// required .protobuf.mozilla.dom.ClientOpResult a_aResult = 1;
+inline bool Msg___delete__::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aresult_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aresult_ != nullptr);
   return value;
 }
-inline bool Msg___delete__::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Msg___delete__::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline const ::protobuf::mozilla::dom::ClientOpResult& Msg___delete__::_internal_aresult() const {
-  const ::protobuf::mozilla::dom::ClientOpResult* p = _impl_.aresult_;
+inline const ::protobuf::mozilla::dom::ClientOpResult& Msg___delete__::_internal_a_aresult() const {
+  const ::protobuf::mozilla::dom::ClientOpResult* p = _impl_.a_aresult_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ClientOpResult&>(
       ::protobuf::mozilla::dom::_ClientOpResult_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ClientOpResult& Msg___delete__::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.aResult)
-  return _internal_aresult();
+inline const ::protobuf::mozilla::dom::ClientOpResult& Msg___delete__::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.a_aResult)
+  return _internal_a_aresult();
 }
-inline void Msg___delete__::unsafe_arena_set_allocated_aresult(
-    ::protobuf::mozilla::dom::ClientOpResult* aresult) {
+inline void Msg___delete__::unsafe_arena_set_allocated_a_aresult(
+    ::protobuf::mozilla::dom::ClientOpResult* a_aresult) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aresult_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aresult_);
   }
-  _impl_.aresult_ = aresult;
-  if (aresult) {
+  _impl_.a_aresult_ = a_aresult;
+  if (a_aresult) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.aResult)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.a_aResult)
 }
-inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::release_aresult() {
+inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::release_a_aresult() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ClientOpResult* temp = _impl_.aresult_;
-  _impl_.aresult_ = nullptr;
+  ::protobuf::mozilla::dom::ClientOpResult* temp = _impl_.a_aresult_;
+  _impl_.a_aresult_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -393,45 +393,45 @@ inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::release_aresult
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::unsafe_arena_release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.aResult)
+inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::unsafe_arena_release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.a_aResult)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ClientOpResult* temp = _impl_.aresult_;
-  _impl_.aresult_ = nullptr;
+  ::protobuf::mozilla::dom::ClientOpResult* temp = _impl_.a_aresult_;
+  _impl_.a_aresult_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::_internal_mutable_aresult() {
+inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aresult_ == nullptr) {
+  if (_impl_.a_aresult_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ClientOpResult>(GetArenaForAllocation());
-    _impl_.aresult_ = p;
+    _impl_.a_aresult_ = p;
   }
-  return _impl_.aresult_;
+  return _impl_.a_aresult_;
 }
-inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::mutable_aresult() {
-  ::protobuf::mozilla::dom::ClientOpResult* _msg = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.aResult)
+inline ::protobuf::mozilla::dom::ClientOpResult* Msg___delete__::mutable_a_aresult() {
+  ::protobuf::mozilla::dom::ClientOpResult* _msg = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.a_aResult)
   return _msg;
 }
-inline void Msg___delete__::set_allocated_aresult(::protobuf::mozilla::dom::ClientOpResult* aresult) {
+inline void Msg___delete__::set_allocated_a_aresult(::protobuf::mozilla::dom::ClientOpResult* a_aresult) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aresult_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aresult_);
   }
-  if (aresult) {
+  if (a_aresult) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aresult));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aresult));
     if (message_arena != submessage_arena) {
-      aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aresult, submessage_arena);
+      a_aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aresult, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresult_ = aresult;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.aResult)
+  _impl_.a_aresult_ = a_aresult;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PClientNavigateOp.Msg___delete__.a_aResult)
 }
 
 // -------------------------------------------------------------------

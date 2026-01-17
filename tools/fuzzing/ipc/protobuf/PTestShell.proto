@@ -22,11 +22,11 @@ message Reply___delete__ {
 }
 
 message Msg_ExecuteCommand {
-  required bytes aCommand = 1;
+  required bytes a_aCommand = 1;
 }
 
 message Msg_PTestShellCommandConstructor {
-  required bytes aCommand = 1;
+  required bytes a_aCommand = 1;
 }
 
 message Reply_PTestShellCommandConstructor {

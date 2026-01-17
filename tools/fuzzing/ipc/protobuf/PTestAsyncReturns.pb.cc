@@ -37,7 +37,7 @@ PROTOBUF_CONSTEXPR Reply_Ping::Reply_Ping(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.one_)*/false} {}
+  , /*decltype(_impl_.a_one_)*/false} {}
 struct Reply_PingDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PingDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -63,7 +63,7 @@ PROTOBUF_CONSTEXPR Reply_NoReturn::Reply_NoReturn(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.unused_)*/false} {}
+  , /*decltype(_impl_.a_unused_)*/false} {}
 struct Reply_NoReturnDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_NoReturnDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -89,8 +89,8 @@ PROTOBUF_CONSTEXPR Reply_Pong::Reply_Pong(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.param1_)*/0u
-  , /*decltype(_impl_.param2_)*/0u} {}
+  , /*decltype(_impl_.a_param1_)*/0u
+  , /*decltype(_impl_.a_param2_)*/0u} {}
 struct Reply_PongDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PongDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -262,7 +262,7 @@ std::string Msg_Ping::GetTypeName() const {
 class Reply_Ping::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_Ping>()._impl_._has_bits_);
-  static void set_has_one(HasBits* has_bits) {
+  static void set_has_a_one(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -282,10 +282,10 @@ Reply_Ping::Reply_Ping(const Reply_Ping& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.one_){}};
+    , decltype(_impl_.a_one_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.one_ = from._impl_.one_;
+  _this->_impl_.a_one_ = from._impl_.a_one_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping)
 }
 
@@ -296,7 +296,7 @@ inline void Reply_Ping::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.one_){false}
+    , decltype(_impl_.a_one_){false}
   };
 }
 
@@ -323,7 +323,7 @@ void Reply_Ping::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.one_ = false;
+  _impl_.a_one_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -335,11 +335,11 @@ const char* Reply_Ping::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool one = 1;
+      // required bool a_one = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_one(&has_bits);
-          _impl_.one_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_one(&has_bits);
+          _impl_.a_one_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -375,10 +375,10 @@ uint8_t* Reply_Ping::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool one = 1;
+  // required bool a_one = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_one(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_one(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -393,8 +393,8 @@ size_t Reply_Ping::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Ping)
   size_t total_size = 0;
 
-  // required bool one = 1;
-  if (_internal_has_one()) {
+  // required bool a_one = 1;
+  if (_internal_has_a_one()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -422,8 +422,8 @@ void Reply_Ping::MergeFrom(const Reply_Ping& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_one()) {
-    _this->_internal_set_one(from._internal_one());
+  if (from._internal_has_a_one()) {
+    _this->_internal_set_a_one(from._internal_a_one());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -444,7 +444,7 @@ void Reply_Ping::InternalSwap(Reply_Ping* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.one_, other->_impl_.one_);
+  swap(_impl_.a_one_, other->_impl_.a_one_);
 }
 
 std::string Reply_Ping::GetTypeName() const {
@@ -605,7 +605,7 @@ std::string Msg_NoReturn::GetTypeName() const {
 class Reply_NoReturn::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_NoReturn>()._impl_._has_bits_);
-  static void set_has_unused(HasBits* has_bits) {
+  static void set_has_a_unused(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -625,10 +625,10 @@ Reply_NoReturn::Reply_NoReturn(const Reply_NoReturn& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.unused_){}};
+    , decltype(_impl_.a_unused_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.unused_ = from._impl_.unused_;
+  _this->_impl_.a_unused_ = from._impl_.a_unused_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn)
 }
 
@@ -639,7 +639,7 @@ inline void Reply_NoReturn::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.unused_){false}
+    , decltype(_impl_.a_unused_){false}
   };
 }
 
@@ -666,7 +666,7 @@ void Reply_NoReturn::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.unused_ = false;
+  _impl_.a_unused_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -678,11 +678,11 @@ const char* Reply_NoReturn::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool unused = 1;
+      // required bool a_unused = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_unused(&has_bits);
-          _impl_.unused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_unused(&has_bits);
+          _impl_.a_unused_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -718,10 +718,10 @@ uint8_t* Reply_NoReturn::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool unused = 1;
+  // required bool a_unused = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_unused(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_unused(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -736,8 +736,8 @@ size_t Reply_NoReturn::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_NoReturn)
   size_t total_size = 0;
 
-  // required bool unused = 1;
-  if (_internal_has_unused()) {
+  // required bool a_unused = 1;
+  if (_internal_has_a_unused()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -765,8 +765,8 @@ void Reply_NoReturn::MergeFrom(const Reply_NoReturn& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_unused()) {
-    _this->_internal_set_unused(from._internal_unused());
+  if (from._internal_has_a_unused()) {
+    _this->_internal_set_a_unused(from._internal_a_unused());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -787,7 +787,7 @@ void Reply_NoReturn::InternalSwap(Reply_NoReturn* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.unused_, other->_impl_.unused_);
+  swap(_impl_.a_unused_, other->_impl_.a_unused_);
 }
 
 std::string Reply_NoReturn::GetTypeName() const {
@@ -948,10 +948,10 @@ std::string Msg_Pong::GetTypeName() const {
 class Reply_Pong::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_Pong>()._impl_._has_bits_);
-  static void set_has_param1(HasBits* has_bits) {
+  static void set_has_a_param1(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_param2(HasBits* has_bits) {
+  static void set_has_a_param2(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -971,13 +971,13 @@ Reply_Pong::Reply_Pong(const Reply_Pong& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.param1_){}
-    , decltype(_impl_.param2_){}};
+    , decltype(_impl_.a_param1_){}
+    , decltype(_impl_.a_param2_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.param1_, &from._impl_.param1_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.param2_) -
-    reinterpret_cast<char*>(&_impl_.param1_)) + sizeof(_impl_.param2_));
+  ::memcpy(&_impl_.a_param1_, &from._impl_.a_param1_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_param2_) -
+    reinterpret_cast<char*>(&_impl_.a_param1_)) + sizeof(_impl_.a_param2_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong)
 }
 
@@ -988,8 +988,8 @@ inline void Reply_Pong::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.param1_){0u}
-    , decltype(_impl_.param2_){0u}
+    , decltype(_impl_.a_param1_){0u}
+    , decltype(_impl_.a_param2_){0u}
   };
 }
 
@@ -1018,9 +1018,9 @@ void Reply_Pong::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.param1_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.param2_) -
-        reinterpret_cast<char*>(&_impl_.param1_)) + sizeof(_impl_.param2_));
+    ::memset(&_impl_.a_param1_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_param2_) -
+        reinterpret_cast<char*>(&_impl_.a_param1_)) + sizeof(_impl_.a_param2_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1033,20 +1033,20 @@ const char* Reply_Pong::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 param1 = 1;
+      // required uint32 a_param1 = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_param1(&has_bits);
-          _impl_.param1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_param1(&has_bits);
+          _impl_.a_param1_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 param2 = 2;
+      // required uint32 a_param2 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_param2(&has_bits);
-          _impl_.param2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_param2(&has_bits);
+          _impl_.a_param2_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1082,16 +1082,16 @@ uint8_t* Reply_Pong::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 param1 = 1;
+  // required uint32 a_param1 = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_param1(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_param1(), target);
   }
 
-  // required uint32 param2 = 2;
+  // required uint32 a_param2 = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_param2(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_param2(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1106,14 +1106,14 @@ size_t Reply_Pong::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.PTestAsyncReturns.Reply_Pong)
   size_t total_size = 0;
 
-  if (_internal_has_param1()) {
-    // required uint32 param1 = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_param1());
+  if (_internal_has_a_param1()) {
+    // required uint32 a_param1 = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_param1());
   }
 
-  if (_internal_has_param2()) {
-    // required uint32 param2 = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_param2());
+  if (_internal_has_a_param2()) {
+    // required uint32 a_param2 = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_param2());
   }
 
   return total_size;
@@ -1123,11 +1123,11 @@ size_t Reply_Pong::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 param1 = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_param1());
+    // required uint32 a_param1 = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_param1());
 
-    // required uint32 param2 = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_param2());
+    // required uint32 a_param2 = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_param2());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1160,10 +1160,10 @@ void Reply_Pong::MergeFrom(const Reply_Pong& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.param1_ = from._impl_.param1_;
+      _this->_impl_.a_param1_ = from._impl_.a_param1_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.param2_ = from._impl_.param2_;
+      _this->_impl_.a_param2_ = from._impl_.a_param2_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1187,11 +1187,11 @@ void Reply_Pong::InternalSwap(Reply_Pong* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Reply_Pong, _impl_.param2_)
-      + sizeof(Reply_Pong::_impl_.param2_)
-      - PROTOBUF_FIELD_OFFSET(Reply_Pong, _impl_.param1_)>(
-          reinterpret_cast<char*>(&_impl_.param1_),
-          reinterpret_cast<char*>(&other->_impl_.param1_));
+      PROTOBUF_FIELD_OFFSET(Reply_Pong, _impl_.a_param2_)
+      + sizeof(Reply_Pong::_impl_.a_param2_)
+      - PROTOBUF_FIELD_OFFSET(Reply_Pong, _impl_.a_param1_)>(
+          reinterpret_cast<char*>(&_impl_.a_param1_),
+          reinterpret_cast<char*>(&other->_impl_.a_param1_));
 }
 
 std::string Reply_Pong::GetTypeName() const {

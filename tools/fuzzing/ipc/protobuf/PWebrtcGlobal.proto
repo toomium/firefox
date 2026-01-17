@@ -22,24 +22,24 @@ message Reply___delete__ {
 }
 
 message Msg_PeerConnectionCreated {
-  required bytes aPcId = 1;
-  required bool aIsLongTermStatsDisabled = 2;
+  required bytes a_aPcId = 1;
+  required bool a_aIsLongTermStatsDisabled = 2;
 }
 
 message Msg_PeerConnectionDestroyed {
-  required bytes aPcId = 1;
+  required bytes a_aPcId = 1;
 }
 
 message Msg_PeerConnectionFinalStats {
-  required bytes aFinalStats = 1;
+  required bytes a_aFinalStats = 1;
 }
 
 message Msg_GetStats {
-  required bytes aPcIdFilter = 1;
+  required bytes a_aPcIdFilter = 1;
 }
 
 message Reply_GetStats {
-  repeated bytes stats = 1;
+  repeated bytes a_stats = 1;
 }
 
 message Msg_ClearStats {
@@ -49,14 +49,14 @@ message Msg_GetLog {
 }
 
 message Reply_GetLog {
-  required bytes logs = 1;
+  required bytes a_logs = 1;
 }
 
 message Msg_ClearLog {
 }
 
 message Msg_SetAecLogging {
-  required bool aEnable = 1;
+  required bool a_aEnable = 1;
 }
 
 // Parameter mappings stats:

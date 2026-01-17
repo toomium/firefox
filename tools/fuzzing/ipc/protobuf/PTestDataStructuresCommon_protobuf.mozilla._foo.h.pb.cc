@@ -38,8 +38,8 @@ PROTOBUF_CONSTEXPR SIntDouble::SIntDouble(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.d_)*/0
-  , /*decltype(_impl_.i_)*/0} {}
+  , /*decltype(_impl_.a_d_)*/0
+  , /*decltype(_impl_.a_i_)*/0} {}
 struct SIntDoubleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SIntDoubleDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,7 +51,7 @@ struct SIntDoubleDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SIntDoubleDefaultTypeInternal _SIntDouble_default_instance_;
 PROTOBUF_CONSTEXPR IntDoubleArrays__mVArrayOfint::IntDoubleArrays__mVArrayOfint(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofint_)*/{}
+    /*decltype(_impl_.a_mvarrayofint_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IntDoubleArrays__mVArrayOfintDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IntDoubleArrays__mVArrayOfintDefaultTypeInternal()
@@ -64,7 +64,7 @@ struct IntDoubleArrays__mVArrayOfintDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IntDoubleArrays__mVArrayOfintDefaultTypeInternal _IntDoubleArrays__mVArrayOfint_default_instance_;
 PROTOBUF_CONSTEXPR IntDoubleArrays__mVArrayOfdouble::IntDoubleArrays__mVArrayOfdouble(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofdouble_)*/{}
+    /*decltype(_impl_.a_mvarrayofdouble_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IntDoubleArrays__mVArrayOfdoubleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IntDoubleArrays__mVArrayOfdoubleDefaultTypeInternal()
@@ -93,9 +93,9 @@ PROTOBUF_CONSTEXPR SIntDoubleArrays::SIntDoubleArrays(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ai_)*/{}
-  , /*decltype(_impl_.ad_)*/{}
-  , /*decltype(_impl_.i_)*/0} {}
+  , /*decltype(_impl_.a_ai_)*/{}
+  , /*decltype(_impl_.a_ad_)*/{}
+  , /*decltype(_impl_.a_i_)*/0} {}
 struct SIntDoubleArraysDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SIntDoubleArraysDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -109,7 +109,7 @@ PROTOBUF_CONSTEXPR ActorWrapper::ActorWrapper(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.actor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_actor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct ActorWrapperDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ActorWrapperDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -121,7 +121,7 @@ struct ActorWrapperDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ActorWrapperDefaultTypeInternal _ActorWrapper_default_instance_;
 PROTOBUF_CONSTEXPR Actors__mVArrayOfint::Actors__mVArrayOfint(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofint_)*/{}
+    /*decltype(_impl_.a_mvarrayofint_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Actors__mVArrayOfintDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Actors__mVArrayOfintDefaultTypeInternal()
@@ -134,7 +134,7 @@ struct Actors__mVArrayOfintDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Actors__mVArrayOfintDefaultTypeInternal _Actors__mVArrayOfint_default_instance_;
 PROTOBUF_CONSTEXPR Actors__mVArrayOfPTestDataStructuresSub::Actors__mVArrayOfPTestDataStructuresSub(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofptestdatastructuressub_)*/{}
+    /*decltype(_impl_.a_mvarrayofptestdatastructuressub_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Actors__mVArrayOfPTestDataStructuresSubDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Actors__mVArrayOfPTestDataStructuresSubDefaultTypeInternal()
@@ -163,9 +163,9 @@ PROTOBUF_CONSTEXPR SActors::SActors(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ai_)*/{}
-  , /*decltype(_impl_.ap_)*/{}
-  , /*decltype(_impl_.i_)*/0} {}
+  , /*decltype(_impl_.a_ai_)*/{}
+  , /*decltype(_impl_.a_ap_)*/{}
+  , /*decltype(_impl_.a_i_)*/0} {}
 struct SActorsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SActorsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -177,7 +177,7 @@ struct SActorsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SActorsDefaultTypeInternal _SActors_default_instance_;
 PROTOBUF_CONSTEXPR Unions__mVArrayOfint::Unions__mVArrayOfint(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofint_)*/{}
+    /*decltype(_impl_.a_mvarrayofint_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Unions__mVArrayOfintDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Unions__mVArrayOfintDefaultTypeInternal()
@@ -190,7 +190,7 @@ struct Unions__mVArrayOfintDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Unions__mVArrayOfintDefaultTypeInternal _Unions__mVArrayOfint_default_instance_;
 PROTOBUF_CONSTEXPR Unions__mVArrayOfPTestDataStructuresSub::Unions__mVArrayOfPTestDataStructuresSub(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofptestdatastructuressub_)*/{}
+    /*decltype(_impl_.a_mvarrayofptestdatastructuressub_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Unions__mVArrayOfPTestDataStructuresSubDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Unions__mVArrayOfPTestDataStructuresSubDefaultTypeInternal()
@@ -203,7 +203,7 @@ struct Unions__mVArrayOfPTestDataStructuresSubDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Unions__mVArrayOfPTestDataStructuresSubDefaultTypeInternal _Unions__mVArrayOfPTestDataStructuresSub_default_instance_;
 PROTOBUF_CONSTEXPR Unions__mVArrayOfActors::Unions__mVArrayOfActors(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofactors_)*/{}
+    /*decltype(_impl_.a_mvarrayofactors_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Unions__mVArrayOfActorsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Unions__mVArrayOfActorsDefaultTypeInternal()
@@ -232,10 +232,10 @@ PROTOBUF_CONSTEXPR Structs::Structs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ai_)*/{}
-  , /*decltype(_impl_.ap_)*/{}
-  , /*decltype(_impl_.aa_)*/{}
-  , /*decltype(_impl_.i_)*/0} {}
+  , /*decltype(_impl_.a_ai_)*/{}
+  , /*decltype(_impl_.a_ap_)*/{}
+  , /*decltype(_impl_.a_aa_)*/{}
+  , /*decltype(_impl_.a_i_)*/0} {}
 struct StructsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR StructsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -247,7 +247,7 @@ struct StructsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StructsDefaultTypeInternal _Structs_default_instance_;
 PROTOBUF_CONSTEXPR WithStructs__mVArrayOfint::WithStructs__mVArrayOfint(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofint_)*/{}
+    /*decltype(_impl_.a_mvarrayofint_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WithStructs__mVArrayOfintDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WithStructs__mVArrayOfintDefaultTypeInternal()
@@ -260,7 +260,7 @@ struct WithStructs__mVArrayOfintDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WithStructs__mVArrayOfintDefaultTypeInternal _WithStructs__mVArrayOfint_default_instance_;
 PROTOBUF_CONSTEXPR WithStructs__mVArrayOfPTestDataStructuresSub::WithStructs__mVArrayOfPTestDataStructuresSub(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofptestdatastructuressub_)*/{}
+    /*decltype(_impl_.a_mvarrayofptestdatastructuressub_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WithStructs__mVArrayOfPTestDataStructuresSubDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WithStructs__mVArrayOfPTestDataStructuresSubDefaultTypeInternal()
@@ -273,7 +273,7 @@ struct WithStructs__mVArrayOfPTestDataStructuresSubDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WithStructs__mVArrayOfPTestDataStructuresSubDefaultTypeInternal _WithStructs__mVArrayOfPTestDataStructuresSub_default_instance_;
 PROTOBUF_CONSTEXPR WithStructs__mVArrayOfSActors::WithStructs__mVArrayOfSActors(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofsactors_)*/{}
+    /*decltype(_impl_.a_mvarrayofsactors_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WithStructs__mVArrayOfSActorsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WithStructs__mVArrayOfSActorsDefaultTypeInternal()
@@ -286,7 +286,7 @@ struct WithStructs__mVArrayOfSActorsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WithStructs__mVArrayOfSActorsDefaultTypeInternal _WithStructs__mVArrayOfSActors_default_instance_;
 PROTOBUF_CONSTEXPR WithStructs__mVArrayOfStructs::WithStructs__mVArrayOfStructs(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofstructs_)*/{}
+    /*decltype(_impl_.a_mvarrayofstructs_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct WithStructs__mVArrayOfStructsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WithStructs__mVArrayOfStructsDefaultTypeInternal()
@@ -315,11 +315,11 @@ PROTOBUF_CONSTEXPR WithUnions::WithUnions(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ai_)*/{}
-  , /*decltype(_impl_.ap_)*/{}
-  , /*decltype(_impl_.aa_)*/{}
-  , /*decltype(_impl_.au_)*/{}
-  , /*decltype(_impl_.i_)*/0} {}
+  , /*decltype(_impl_.a_ai_)*/{}
+  , /*decltype(_impl_.a_ap_)*/{}
+  , /*decltype(_impl_.a_aa_)*/{}
+  , /*decltype(_impl_.a_au_)*/{}
+  , /*decltype(_impl_.a_i_)*/0} {}
 struct WithUnionsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WithUnionsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -333,7 +333,7 @@ PROTOBUF_CONSTEXPR CommonAttrs::CommonAttrs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.dummy_)*/false} {}
+  , /*decltype(_impl_.a_dummy_)*/false} {}
 struct CommonAttrsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CommonAttrsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -347,7 +347,7 @@ PROTOBUF_CONSTEXPR FooAttrs::FooAttrs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.dummy_)*/0} {}
+  , /*decltype(_impl_.a_dummy_)*/0} {}
 struct FooAttrsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FooAttrsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -361,7 +361,7 @@ PROTOBUF_CONSTEXPR BarAttrs::BarAttrs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.dummy_)*/0} {}
+  , /*decltype(_impl_.a_dummy_)*/0} {}
 struct BarAttrsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR BarAttrsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -389,8 +389,8 @@ PROTOBUF_CONSTEXPR Attrs::Attrs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.common_)*/nullptr
-  , /*decltype(_impl_.specific_)*/nullptr} {}
+  , /*decltype(_impl_.a_common_)*/nullptr
+  , /*decltype(_impl_.a_specific_)*/nullptr} {}
 struct AttrsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR AttrsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -404,8 +404,8 @@ PROTOBUF_CONSTEXPR SetAttrs::SetAttrs(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.x_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.attrs_)*/nullptr} {}
+  , /*decltype(_impl_.a_x_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_attrs_)*/nullptr} {}
 struct SetAttrsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetAttrsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -433,8 +433,8 @@ PROTOBUF_CONSTEXPR ShmemStruct::ShmemStruct(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.mem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.i_)*/0} {}
+  , /*decltype(_impl_.a_mem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_i_)*/0} {}
 struct ShmemStructDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ShmemStructDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -500,12 +500,12 @@ IntDouble::IntDouble(const IntDouble& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
-    case kMVdouble: {
-      _this->_internal_set_mvdouble(from._internal_mvdouble());
+    case kAMVdouble: {
+      _this->_internal_set_a_mvdouble(from._internal_a_mvdouble());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -550,11 +550,11 @@ void IntDouble::SetCachedSize(int size) const {
 void IntDouble::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.IntDouble)
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
-    case kMVdouble: {
+    case kAMVdouble: {
       // No need to clear
       break;
     }
@@ -582,18 +582,18 @@ const char* IntDouble::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 mVint = 1;
+      // sint32 a_mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // double mVdouble = 2;
+      // double a_mVdouble = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          _internal_set_mvdouble(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          _internal_set_a_mvdouble(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -628,14 +628,14 @@ uint8_t* IntDouble::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvint(), target);
       break;
     }
-    case kMVdouble: {
+    case kAMVdouble: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_mvdouble(), target);
+      target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_a_mvdouble(), target);
       break;
     }
     default: ;
@@ -657,13 +657,13 @@ size_t IntDouble::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // sint32 mVint = 1;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 1;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
-    // double mVdouble = 2;
-    case kMVdouble: {
+    // double a_mVdouble = 2;
+    case kAMVdouble: {
       total_size += 1 + 8;
       break;
     }
@@ -693,12 +693,12 @@ void IntDouble::MergeFrom(const IntDouble& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
-    case kMVdouble: {
-      _this->_internal_set_mvdouble(from._internal_mvdouble());
+    case kAMVdouble: {
+      _this->_internal_set_a_mvdouble(from._internal_a_mvdouble());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -736,10 +736,10 @@ std::string IntDouble::GetTypeName() const {
 class SIntDouble::_Internal {
  public:
   using HasBits = decltype(std::declval<SIntDouble>()._impl_._has_bits_);
-  static void set_has_i(HasBits* has_bits) {
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_d(HasBits* has_bits) {
+  static void set_has_a_d(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -759,13 +759,13 @@ SIntDouble::SIntDouble(const SIntDouble& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.d_){}
-    , decltype(_impl_.i_){}};
+    , decltype(_impl_.a_d_){}
+    , decltype(_impl_.a_i_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.d_, &from._impl_.d_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.i_) -
-    reinterpret_cast<char*>(&_impl_.d_)) + sizeof(_impl_.i_));
+  ::memcpy(&_impl_.a_d_, &from._impl_.a_d_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_i_) -
+    reinterpret_cast<char*>(&_impl_.a_d_)) + sizeof(_impl_.a_i_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.SIntDouble)
 }
 
@@ -776,8 +776,8 @@ inline void SIntDouble::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.d_){0}
-    , decltype(_impl_.i_){0}
+    , decltype(_impl_.a_d_){0}
+    , decltype(_impl_.a_i_){0}
   };
 }
 
@@ -806,9 +806,9 @@ void SIntDouble::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.d_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.i_) -
-        reinterpret_cast<char*>(&_impl_.d_)) + sizeof(_impl_.i_));
+    ::memset(&_impl_.a_d_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_i_) -
+        reinterpret_cast<char*>(&_impl_.a_d_)) + sizeof(_impl_.a_i_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -821,20 +821,20 @@ const char* SIntDouble::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 i = 1;
+      // required sint32 a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_i(&has_bits);
+          _impl_.a_i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required double d = 2;
+      // required double a_d = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          _Internal::set_has_d(&has_bits);
-          _impl_.d_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          _Internal::set_has_a_d(&has_bits);
+          _impl_.a_d_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -870,16 +870,16 @@ uint8_t* SIntDouble::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 i = 1;
+  // required sint32 a_i = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_i(), target);
   }
 
-  // required double d = 2;
+  // required double a_d = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_d(), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_a_d(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -894,14 +894,14 @@ size_t SIntDouble::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._foo.SIntDouble)
   size_t total_size = 0;
 
-  if (_internal_has_d()) {
-    // required double d = 2;
+  if (_internal_has_a_d()) {
+    // required double a_d = 2;
     total_size += 1 + 8;
   }
 
-  if (_internal_has_i()) {
-    // required sint32 i = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+  if (_internal_has_a_i()) {
+    // required sint32 a_i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
   }
 
   return total_size;
@@ -911,11 +911,11 @@ size_t SIntDouble::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required double d = 2;
+    // required double a_d = 2;
     total_size += 1 + 8;
 
-    // required sint32 i = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+    // required sint32 a_i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -948,10 +948,10 @@ void SIntDouble::MergeFrom(const SIntDouble& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.d_ = from._impl_.d_;
+      _this->_impl_.a_d_ = from._impl_.a_d_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.i_ = from._impl_.i_;
+      _this->_impl_.a_i_ = from._impl_.a_i_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -975,11 +975,11 @@ void SIntDouble::InternalSwap(SIntDouble* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SIntDouble, _impl_.i_)
-      + sizeof(SIntDouble::_impl_.i_)
-      - PROTOBUF_FIELD_OFFSET(SIntDouble, _impl_.d_)>(
-          reinterpret_cast<char*>(&_impl_.d_),
-          reinterpret_cast<char*>(&other->_impl_.d_));
+      PROTOBUF_FIELD_OFFSET(SIntDouble, _impl_.a_i_)
+      + sizeof(SIntDouble::_impl_.a_i_)
+      - PROTOBUF_FIELD_OFFSET(SIntDouble, _impl_.a_d_)>(
+          reinterpret_cast<char*>(&_impl_.a_d_),
+          reinterpret_cast<char*>(&other->_impl_.a_d_));
 }
 
 std::string SIntDouble::GetTypeName() const {
@@ -1003,7 +1003,7 @@ IntDoubleArrays__mVArrayOfint::IntDoubleArrays__mVArrayOfint(const IntDoubleArra
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IntDoubleArrays__mVArrayOfint* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){from._impl_.mvarrayofint_}
+      decltype(_impl_.a_mvarrayofint_){from._impl_.a_mvarrayofint_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1015,7 +1015,7 @@ inline void IntDoubleArrays__mVArrayOfint::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){arena}
+      decltype(_impl_.a_mvarrayofint_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1031,7 +1031,7 @@ IntDoubleArrays__mVArrayOfint::~IntDoubleArrays__mVArrayOfint() {
 
 inline void IntDoubleArrays__mVArrayOfint::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofint_.~RepeatedField();
+  _impl_.a_mvarrayofint_.~RepeatedField();
 }
 
 void IntDoubleArrays__mVArrayOfint::SetCachedSize(int size) const {
@@ -1044,7 +1044,7 @@ void IntDoubleArrays__mVArrayOfint::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofint_.Clear();
+  _impl_.a_mvarrayofint_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -1054,18 +1054,18 @@ const char* IntDoubleArrays__mVArrayOfint::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated sint32 mVArrayOfint = 1;
+      // repeated sint32 a_mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1099,10 +1099,10 @@ uint8_t* IntDoubleArrays__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
-  for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
+  // repeated sint32 a_mVArrayOfint = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1121,12 +1121,12 @@ size_t IntDoubleArrays__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
+  // repeated sint32 a_mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.a_mvarrayofint_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofint_size());
     total_size += data_size;
   }
 
@@ -1151,7 +1151,7 @@ void IntDoubleArrays__mVArrayOfint::MergeFrom(const IntDoubleArrays__mVArrayOfin
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofint_.MergeFrom(from._impl_.mvarrayofint_);
+  _this->_impl_.a_mvarrayofint_.MergeFrom(from._impl_.a_mvarrayofint_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -1169,7 +1169,7 @@ bool IntDoubleArrays__mVArrayOfint::IsInitialized() const {
 void IntDoubleArrays__mVArrayOfint::InternalSwap(IntDoubleArrays__mVArrayOfint* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofint_.InternalSwap(&other->_impl_.mvarrayofint_);
+  _impl_.a_mvarrayofint_.InternalSwap(&other->_impl_.a_mvarrayofint_);
 }
 
 std::string IntDoubleArrays__mVArrayOfint::GetTypeName() const {
@@ -1193,7 +1193,7 @@ IntDoubleArrays__mVArrayOfdouble::IntDoubleArrays__mVArrayOfdouble(const IntDoub
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IntDoubleArrays__mVArrayOfdouble* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofdouble_){from._impl_.mvarrayofdouble_}
+      decltype(_impl_.a_mvarrayofdouble_){from._impl_.a_mvarrayofdouble_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1205,7 +1205,7 @@ inline void IntDoubleArrays__mVArrayOfdouble::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofdouble_){arena}
+      decltype(_impl_.a_mvarrayofdouble_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1221,7 +1221,7 @@ IntDoubleArrays__mVArrayOfdouble::~IntDoubleArrays__mVArrayOfdouble() {
 
 inline void IntDoubleArrays__mVArrayOfdouble::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofdouble_.~RepeatedField();
+  _impl_.a_mvarrayofdouble_.~RepeatedField();
 }
 
 void IntDoubleArrays__mVArrayOfdouble::SetCachedSize(int size) const {
@@ -1234,7 +1234,7 @@ void IntDoubleArrays__mVArrayOfdouble::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofdouble_.Clear();
+  _impl_.a_mvarrayofdouble_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -1244,18 +1244,18 @@ const char* IntDoubleArrays__mVArrayOfdouble::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated double mVArrayOfdouble = 1;
+      // repeated double a_mVArrayOfdouble = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofdouble(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+            _internal_add_a_mvarrayofdouble(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
             ptr += sizeof(double);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<9>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_mvarrayofdouble(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_a_mvarrayofdouble(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1289,10 +1289,10 @@ uint8_t* IntDoubleArrays__mVArrayOfdouble::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated double mVArrayOfdouble = 1;
-  for (int i = 0, n = this->_internal_mvarrayofdouble_size(); i < n; i++) {
+  // repeated double a_mVArrayOfdouble = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofdouble_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_mvarrayofdouble(i), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_a_mvarrayofdouble(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1311,12 +1311,12 @@ size_t IntDoubleArrays__mVArrayOfdouble::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated double mVArrayOfdouble = 1;
+  // repeated double a_mVArrayOfdouble = 1;
   {
-    unsigned int count = static_cast<unsigned int>(this->_internal_mvarrayofdouble_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_a_mvarrayofdouble_size());
     size_t data_size = 8UL * count;
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_mvarrayofdouble_size());
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofdouble_size());
     total_size += data_size;
   }
 
@@ -1341,7 +1341,7 @@ void IntDoubleArrays__mVArrayOfdouble::MergeFrom(const IntDoubleArrays__mVArrayO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofdouble_.MergeFrom(from._impl_.mvarrayofdouble_);
+  _this->_impl_.a_mvarrayofdouble_.MergeFrom(from._impl_.a_mvarrayofdouble_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -1359,7 +1359,7 @@ bool IntDoubleArrays__mVArrayOfdouble::IsInitialized() const {
 void IntDoubleArrays__mVArrayOfdouble::InternalSwap(IntDoubleArrays__mVArrayOfdouble* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofdouble_.InternalSwap(&other->_impl_.mvarrayofdouble_);
+  _impl_.a_mvarrayofdouble_.InternalSwap(&other->_impl_.a_mvarrayofdouble_);
 }
 
 std::string IntDoubleArrays__mVArrayOfdouble::GetTypeName() const {
@@ -1430,8 +1430,8 @@ IntDoubleArrays::IntDoubleArrays(const IntDoubleArrays& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -1486,7 +1486,7 @@ void IntDoubleArrays::SetCachedSize(int size) const {
 void IntDoubleArrays::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.IntDoubleArrays)
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
@@ -1526,10 +1526,10 @@ const char* IntDoubleArrays::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 mVint = 1;
+      // sint32 a_mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1580,9 +1580,9 @@ uint8_t* IntDoubleArrays::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -1616,9 +1616,9 @@ size_t IntDoubleArrays::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // sint32 mVint = 1;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 1;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
     // .protobuf.mozilla._foo.IntDoubleArrays._mVArrayOfint mVArrayOfint = 2;
@@ -1661,8 +1661,8 @@ void IntDoubleArrays::MergeFrom(const IntDoubleArrays& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -1710,7 +1710,7 @@ std::string IntDoubleArrays::GetTypeName() const {
 class SIntDoubleArrays::_Internal {
  public:
   using HasBits = decltype(std::declval<SIntDoubleArrays>()._impl_._has_bits_);
-  static void set_has_i(HasBits* has_bits) {
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1730,12 +1730,12 @@ SIntDoubleArrays::SIntDoubleArrays(const SIntDoubleArrays& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){from._impl_.ai_}
-    , decltype(_impl_.ad_){from._impl_.ad_}
-    , decltype(_impl_.i_){}};
+    , decltype(_impl_.a_ai_){from._impl_.a_ai_}
+    , decltype(_impl_.a_ad_){from._impl_.a_ad_}
+    , decltype(_impl_.a_i_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.i_ = from._impl_.i_;
+  _this->_impl_.a_i_ = from._impl_.a_i_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.SIntDoubleArrays)
 }
 
@@ -1746,9 +1746,9 @@ inline void SIntDoubleArrays::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){arena}
-    , decltype(_impl_.ad_){arena}
-    , decltype(_impl_.i_){0}
+    , decltype(_impl_.a_ai_){arena}
+    , decltype(_impl_.a_ad_){arena}
+    , decltype(_impl_.a_i_){0}
   };
 }
 
@@ -1763,8 +1763,8 @@ SIntDoubleArrays::~SIntDoubleArrays() {
 
 inline void SIntDoubleArrays::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.ai_.~RepeatedField();
-  _impl_.ad_.~RepeatedField();
+  _impl_.a_ai_.~RepeatedField();
+  _impl_.a_ad_.~RepeatedField();
 }
 
 void SIntDoubleArrays::SetCachedSize(int size) const {
@@ -1777,9 +1777,9 @@ void SIntDoubleArrays::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ai_.Clear();
-  _impl_.ad_.Clear();
-  _impl_.i_ = 0;
+  _impl_.a_ai_.Clear();
+  _impl_.a_ad_.Clear();
+  _impl_.a_i_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1791,43 +1791,43 @@ const char* SIntDoubleArrays::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 i = 1;
+      // required sint32 a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_i(&has_bits);
+          _impl_.a_i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated sint32 ai = 2;
+      // repeated sint32 a_ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated double ad = 3;
+      // repeated double a_ad = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ad(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+            _internal_add_a_ad(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
             ptr += sizeof(double);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<25>(ptr));
         } else if (static_cast<uint8_t>(tag) == 26) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_ad(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_a_ad(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1863,22 +1863,22 @@ uint8_t* SIntDoubleArrays::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 i = 1;
+  // required sint32 a_i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_i(), target);
   }
 
-  // repeated sint32 ai = 2;
-  for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
+  // repeated sint32 a_ai = 2;
+  for (int i = 0, n = this->_internal_a_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_ai(i), target);
   }
 
-  // repeated double ad = 3;
-  for (int i = 0, n = this->_internal_ad_size(); i < n; i++) {
+  // repeated double a_ad = 3;
+  for (int i = 0, n = this->_internal_a_ad_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_ad(i), target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_a_ad(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1893,29 +1893,29 @@ size_t SIntDoubleArrays::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.SIntDoubleArrays)
   size_t total_size = 0;
 
-  // required sint32 i = 1;
-  if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+  // required sint32 a_i = 1;
+  if (_internal_has_a_i()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 ai = 2;
+  // repeated sint32 a_ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.a_ai_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_ai_size());
+                  ::_pbi::FromIntSize(this->_internal_a_ai_size());
     total_size += data_size;
   }
 
-  // repeated double ad = 3;
+  // repeated double a_ad = 3;
   {
-    unsigned int count = static_cast<unsigned int>(this->_internal_ad_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_a_ad_size());
     size_t data_size = 8UL * count;
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_ad_size());
+                  ::_pbi::FromIntSize(this->_internal_a_ad_size());
     total_size += data_size;
   }
 
@@ -1940,10 +1940,10 @@ void SIntDoubleArrays::MergeFrom(const SIntDoubleArrays& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.ai_.MergeFrom(from._impl_.ai_);
-  _this->_impl_.ad_.MergeFrom(from._impl_.ad_);
-  if (from._internal_has_i()) {
-    _this->_internal_set_i(from._internal_i());
+  _this->_impl_.a_ai_.MergeFrom(from._impl_.a_ai_);
+  _this->_impl_.a_ad_.MergeFrom(from._impl_.a_ad_);
+  if (from._internal_has_a_i()) {
+    _this->_internal_set_a_i(from._internal_a_i());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1964,9 +1964,9 @@ void SIntDoubleArrays::InternalSwap(SIntDoubleArrays* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.ai_.InternalSwap(&other->_impl_.ai_);
-  _impl_.ad_.InternalSwap(&other->_impl_.ad_);
-  swap(_impl_.i_, other->_impl_.i_);
+  _impl_.a_ai_.InternalSwap(&other->_impl_.a_ai_);
+  _impl_.a_ad_.InternalSwap(&other->_impl_.a_ad_);
+  swap(_impl_.a_i_, other->_impl_.a_i_);
 }
 
 std::string SIntDoubleArrays::GetTypeName() const {
@@ -1979,7 +1979,7 @@ std::string SIntDoubleArrays::GetTypeName() const {
 class ActorWrapper::_Internal {
  public:
   using HasBits = decltype(std::declval<ActorWrapper>()._impl_._has_bits_);
-  static void set_has_actor(HasBits* has_bits) {
+  static void set_has_a_actor(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1999,15 +1999,15 @@ ActorWrapper::ActorWrapper(const ActorWrapper& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.actor_){}};
+    , decltype(_impl_.a_actor_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.actor_.InitDefault();
+  _impl_.a_actor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.actor_.Set("", GetArenaForAllocation());
+    _impl_.a_actor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_actor()) {
-    _this->_impl_.actor_.Set(from._internal_actor(), 
+  if (from._internal_has_a_actor()) {
+    _this->_impl_.a_actor_.Set(from._internal_a_actor(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.ActorWrapper)
@@ -2020,11 +2020,11 @@ inline void ActorWrapper::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.actor_){}
+    , decltype(_impl_.a_actor_){}
   };
-  _impl_.actor_.InitDefault();
+  _impl_.a_actor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.actor_.Set("", GetArenaForAllocation());
+    _impl_.a_actor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2039,7 +2039,7 @@ ActorWrapper::~ActorWrapper() {
 
 inline void ActorWrapper::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.actor_.Destroy();
+  _impl_.a_actor_.Destroy();
 }
 
 void ActorWrapper::SetCachedSize(int size) const {
@@ -2054,7 +2054,7 @@ void ActorWrapper::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.actor_.ClearNonDefaultToEmpty();
+    _impl_.a_actor_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2067,10 +2067,10 @@ const char* ActorWrapper::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes actor = 1;
+      // required bytes a_actor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_actor();
+          auto str = _internal_mutable_a_actor();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2107,10 +2107,10 @@ uint8_t* ActorWrapper::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes actor = 1;
+  // required bytes a_actor = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_actor(), target);
+        1, this->_internal_a_actor(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2125,11 +2125,11 @@ size_t ActorWrapper::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.ActorWrapper)
   size_t total_size = 0;
 
-  // required bytes actor = 1;
-  if (_internal_has_actor()) {
+  // required bytes a_actor = 1;
+  if (_internal_has_a_actor()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_actor());
+        this->_internal_a_actor());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2156,8 +2156,8 @@ void ActorWrapper::MergeFrom(const ActorWrapper& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_actor()) {
-    _this->_internal_set_actor(from._internal_actor());
+  if (from._internal_has_a_actor()) {
+    _this->_internal_set_a_actor(from._internal_a_actor());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2181,8 +2181,8 @@ void ActorWrapper::InternalSwap(ActorWrapper* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.actor_, lhs_arena,
-      &other->_impl_.actor_, rhs_arena
+      &_impl_.a_actor_, lhs_arena,
+      &other->_impl_.a_actor_, rhs_arena
   );
 }
 
@@ -2207,7 +2207,7 @@ Actors__mVArrayOfint::Actors__mVArrayOfint(const Actors__mVArrayOfint& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Actors__mVArrayOfint* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){from._impl_.mvarrayofint_}
+      decltype(_impl_.a_mvarrayofint_){from._impl_.a_mvarrayofint_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2219,7 +2219,7 @@ inline void Actors__mVArrayOfint::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){arena}
+      decltype(_impl_.a_mvarrayofint_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -2235,7 +2235,7 @@ Actors__mVArrayOfint::~Actors__mVArrayOfint() {
 
 inline void Actors__mVArrayOfint::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofint_.~RepeatedField();
+  _impl_.a_mvarrayofint_.~RepeatedField();
 }
 
 void Actors__mVArrayOfint::SetCachedSize(int size) const {
@@ -2248,7 +2248,7 @@ void Actors__mVArrayOfint::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofint_.Clear();
+  _impl_.a_mvarrayofint_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -2258,18 +2258,18 @@ const char* Actors__mVArrayOfint::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated sint32 mVArrayOfint = 1;
+      // repeated sint32 a_mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2303,10 +2303,10 @@ uint8_t* Actors__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
-  for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
+  // repeated sint32 a_mVArrayOfint = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2325,12 +2325,12 @@ size_t Actors__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
+  // repeated sint32 a_mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.a_mvarrayofint_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofint_size());
     total_size += data_size;
   }
 
@@ -2355,7 +2355,7 @@ void Actors__mVArrayOfint::MergeFrom(const Actors__mVArrayOfint& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofint_.MergeFrom(from._impl_.mvarrayofint_);
+  _this->_impl_.a_mvarrayofint_.MergeFrom(from._impl_.a_mvarrayofint_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -2373,7 +2373,7 @@ bool Actors__mVArrayOfint::IsInitialized() const {
 void Actors__mVArrayOfint::InternalSwap(Actors__mVArrayOfint* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofint_.InternalSwap(&other->_impl_.mvarrayofint_);
+  _impl_.a_mvarrayofint_.InternalSwap(&other->_impl_.a_mvarrayofint_);
 }
 
 std::string Actors__mVArrayOfint::GetTypeName() const {
@@ -2397,7 +2397,7 @@ Actors__mVArrayOfPTestDataStructuresSub::Actors__mVArrayOfPTestDataStructuresSub
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Actors__mVArrayOfPTestDataStructuresSub* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofptestdatastructuressub_){from._impl_.mvarrayofptestdatastructuressub_}
+      decltype(_impl_.a_mvarrayofptestdatastructuressub_){from._impl_.a_mvarrayofptestdatastructuressub_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -2409,7 +2409,7 @@ inline void Actors__mVArrayOfPTestDataStructuresSub::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofptestdatastructuressub_){arena}
+      decltype(_impl_.a_mvarrayofptestdatastructuressub_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -2425,7 +2425,7 @@ Actors__mVArrayOfPTestDataStructuresSub::~Actors__mVArrayOfPTestDataStructuresSu
 
 inline void Actors__mVArrayOfPTestDataStructuresSub::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.~RepeatedPtrField();
+  _impl_.a_mvarrayofptestdatastructuressub_.~RepeatedPtrField();
 }
 
 void Actors__mVArrayOfPTestDataStructuresSub::SetCachedSize(int size) const {
@@ -2438,7 +2438,7 @@ void Actors__mVArrayOfPTestDataStructuresSub::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofptestdatastructuressub_.Clear();
+  _impl_.a_mvarrayofptestdatastructuressub_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -2448,13 +2448,13 @@ const char* Actors__mVArrayOfPTestDataStructuresSub::_InternalParse(const char* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+      // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_mvarrayofptestdatastructuressub();
+            auto str = _internal_add_a_mvarrayofptestdatastructuressub();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -2491,9 +2491,9 @@ uint8_t* Actors__mVArrayOfPTestDataStructuresSub::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-  for (int i = 0, n = this->_internal_mvarrayofptestdatastructuressub_size(); i < n; i++) {
-    const auto& s = this->_internal_mvarrayofptestdatastructuressub(i);
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofptestdatastructuressub_size(); i < n; i++) {
+    const auto& s = this->_internal_a_mvarrayofptestdatastructuressub(i);
     target = stream->WriteBytes(1, s, target);
   }
 
@@ -2513,12 +2513,12 @@ size_t Actors__mVArrayOfPTestDataStructuresSub::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.mvarrayofptestdatastructuressub_.size());
-  for (int i = 0, n = _impl_.mvarrayofptestdatastructuressub_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_mvarrayofptestdatastructuressub_.size());
+  for (int i = 0, n = _impl_.a_mvarrayofptestdatastructuressub_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.mvarrayofptestdatastructuressub_.Get(i));
+      _impl_.a_mvarrayofptestdatastructuressub_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2542,7 +2542,7 @@ void Actors__mVArrayOfPTestDataStructuresSub::MergeFrom(const Actors__mVArrayOfP
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofptestdatastructuressub_.MergeFrom(from._impl_.mvarrayofptestdatastructuressub_);
+  _this->_impl_.a_mvarrayofptestdatastructuressub_.MergeFrom(from._impl_.a_mvarrayofptestdatastructuressub_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -2560,7 +2560,7 @@ bool Actors__mVArrayOfPTestDataStructuresSub::IsInitialized() const {
 void Actors__mVArrayOfPTestDataStructuresSub::InternalSwap(Actors__mVArrayOfPTestDataStructuresSub* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofptestdatastructuressub_.InternalSwap(&other->_impl_.mvarrayofptestdatastructuressub_);
+  _impl_.a_mvarrayofptestdatastructuressub_.InternalSwap(&other->_impl_.a_mvarrayofptestdatastructuressub_);
 }
 
 std::string Actors__mVArrayOfPTestDataStructuresSub::GetTypeName() const {
@@ -2631,8 +2631,8 @@ Actors::Actors(const Actors& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -2687,7 +2687,7 @@ void Actors::SetCachedSize(int size) const {
 void Actors::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.Actors)
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
@@ -2727,10 +2727,10 @@ const char* Actors::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 mVint = 1;
+      // sint32 a_mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2781,9 +2781,9 @@ uint8_t* Actors::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -2817,9 +2817,9 @@ size_t Actors::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // sint32 mVint = 1;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 1;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
     // .protobuf.mozilla._foo.Actors._mVArrayOfint mVArrayOfint = 2;
@@ -2862,8 +2862,8 @@ void Actors::MergeFrom(const Actors& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -2911,7 +2911,7 @@ std::string Actors::GetTypeName() const {
 class SActors::_Internal {
  public:
   using HasBits = decltype(std::declval<SActors>()._impl_._has_bits_);
-  static void set_has_i(HasBits* has_bits) {
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2931,12 +2931,12 @@ SActors::SActors(const SActors& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){from._impl_.ai_}
-    , decltype(_impl_.ap_){from._impl_.ap_}
-    , decltype(_impl_.i_){}};
+    , decltype(_impl_.a_ai_){from._impl_.a_ai_}
+    , decltype(_impl_.a_ap_){from._impl_.a_ap_}
+    , decltype(_impl_.a_i_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.i_ = from._impl_.i_;
+  _this->_impl_.a_i_ = from._impl_.a_i_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.SActors)
 }
 
@@ -2947,9 +2947,9 @@ inline void SActors::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){arena}
-    , decltype(_impl_.ap_){arena}
-    , decltype(_impl_.i_){0}
+    , decltype(_impl_.a_ai_){arena}
+    , decltype(_impl_.a_ap_){arena}
+    , decltype(_impl_.a_i_){0}
   };
 }
 
@@ -2964,8 +2964,8 @@ SActors::~SActors() {
 
 inline void SActors::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.ai_.~RepeatedField();
-  _impl_.ap_.~RepeatedPtrField();
+  _impl_.a_ai_.~RepeatedField();
+  _impl_.a_ap_.~RepeatedPtrField();
 }
 
 void SActors::SetCachedSize(int size) const {
@@ -2978,9 +2978,9 @@ void SActors::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ai_.Clear();
-  _impl_.ap_.Clear();
-  _impl_.i_ = 0;
+  _impl_.a_ai_.Clear();
+  _impl_.a_ap_.Clear();
+  _impl_.a_i_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2992,38 +2992,38 @@ const char* SActors::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 i = 1;
+      // required sint32 a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_i(&has_bits);
+          _impl_.a_i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated sint32 ai = 2;
+      // repeated sint32 a_ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes ap = 3;
+      // repeated bytes a_ap = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_ap();
+            auto str = _internal_add_a_ap();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -3062,21 +3062,21 @@ uint8_t* SActors::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 i = 1;
+  // required sint32 a_i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_i(), target);
   }
 
-  // repeated sint32 ai = 2;
-  for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
+  // repeated sint32 a_ai = 2;
+  for (int i = 0, n = this->_internal_a_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_ai(i), target);
   }
 
-  // repeated bytes ap = 3;
-  for (int i = 0, n = this->_internal_ap_size(); i < n; i++) {
-    const auto& s = this->_internal_ap(i);
+  // repeated bytes a_ap = 3;
+  for (int i = 0, n = this->_internal_a_ap_size(); i < n; i++) {
+    const auto& s = this->_internal_a_ap(i);
     target = stream->WriteBytes(3, s, target);
   }
 
@@ -3092,29 +3092,29 @@ size_t SActors::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.SActors)
   size_t total_size = 0;
 
-  // required sint32 i = 1;
-  if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+  // required sint32 a_i = 1;
+  if (_internal_has_a_i()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 ai = 2;
+  // repeated sint32 a_ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.a_ai_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_ai_size());
+                  ::_pbi::FromIntSize(this->_internal_a_ai_size());
     total_size += data_size;
   }
 
-  // repeated bytes ap = 3;
+  // repeated bytes a_ap = 3;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.ap_.size());
-  for (int i = 0, n = _impl_.ap_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_ap_.size());
+  for (int i = 0, n = _impl_.a_ap_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.ap_.Get(i));
+      _impl_.a_ap_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3138,10 +3138,10 @@ void SActors::MergeFrom(const SActors& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.ai_.MergeFrom(from._impl_.ai_);
-  _this->_impl_.ap_.MergeFrom(from._impl_.ap_);
-  if (from._internal_has_i()) {
-    _this->_internal_set_i(from._internal_i());
+  _this->_impl_.a_ai_.MergeFrom(from._impl_.a_ai_);
+  _this->_impl_.a_ap_.MergeFrom(from._impl_.a_ap_);
+  if (from._internal_has_a_i()) {
+    _this->_internal_set_a_i(from._internal_a_i());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3162,9 +3162,9 @@ void SActors::InternalSwap(SActors* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.ai_.InternalSwap(&other->_impl_.ai_);
-  _impl_.ap_.InternalSwap(&other->_impl_.ap_);
-  swap(_impl_.i_, other->_impl_.i_);
+  _impl_.a_ai_.InternalSwap(&other->_impl_.a_ai_);
+  _impl_.a_ap_.InternalSwap(&other->_impl_.a_ap_);
+  swap(_impl_.a_i_, other->_impl_.a_i_);
 }
 
 std::string SActors::GetTypeName() const {
@@ -3188,7 +3188,7 @@ Unions__mVArrayOfint::Unions__mVArrayOfint(const Unions__mVArrayOfint& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Unions__mVArrayOfint* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){from._impl_.mvarrayofint_}
+      decltype(_impl_.a_mvarrayofint_){from._impl_.a_mvarrayofint_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3200,7 +3200,7 @@ inline void Unions__mVArrayOfint::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){arena}
+      decltype(_impl_.a_mvarrayofint_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -3216,7 +3216,7 @@ Unions__mVArrayOfint::~Unions__mVArrayOfint() {
 
 inline void Unions__mVArrayOfint::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofint_.~RepeatedField();
+  _impl_.a_mvarrayofint_.~RepeatedField();
 }
 
 void Unions__mVArrayOfint::SetCachedSize(int size) const {
@@ -3229,7 +3229,7 @@ void Unions__mVArrayOfint::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofint_.Clear();
+  _impl_.a_mvarrayofint_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -3239,18 +3239,18 @@ const char* Unions__mVArrayOfint::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated sint32 mVArrayOfint = 1;
+      // repeated sint32 a_mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3284,10 +3284,10 @@ uint8_t* Unions__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
-  for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
+  // repeated sint32 a_mVArrayOfint = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3306,12 +3306,12 @@ size_t Unions__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
+  // repeated sint32 a_mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.a_mvarrayofint_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofint_size());
     total_size += data_size;
   }
 
@@ -3336,7 +3336,7 @@ void Unions__mVArrayOfint::MergeFrom(const Unions__mVArrayOfint& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofint_.MergeFrom(from._impl_.mvarrayofint_);
+  _this->_impl_.a_mvarrayofint_.MergeFrom(from._impl_.a_mvarrayofint_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -3354,7 +3354,7 @@ bool Unions__mVArrayOfint::IsInitialized() const {
 void Unions__mVArrayOfint::InternalSwap(Unions__mVArrayOfint* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofint_.InternalSwap(&other->_impl_.mvarrayofint_);
+  _impl_.a_mvarrayofint_.InternalSwap(&other->_impl_.a_mvarrayofint_);
 }
 
 std::string Unions__mVArrayOfint::GetTypeName() const {
@@ -3378,7 +3378,7 @@ Unions__mVArrayOfPTestDataStructuresSub::Unions__mVArrayOfPTestDataStructuresSub
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Unions__mVArrayOfPTestDataStructuresSub* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofptestdatastructuressub_){from._impl_.mvarrayofptestdatastructuressub_}
+      decltype(_impl_.a_mvarrayofptestdatastructuressub_){from._impl_.a_mvarrayofptestdatastructuressub_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3390,7 +3390,7 @@ inline void Unions__mVArrayOfPTestDataStructuresSub::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofptestdatastructuressub_){arena}
+      decltype(_impl_.a_mvarrayofptestdatastructuressub_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -3406,7 +3406,7 @@ Unions__mVArrayOfPTestDataStructuresSub::~Unions__mVArrayOfPTestDataStructuresSu
 
 inline void Unions__mVArrayOfPTestDataStructuresSub::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.~RepeatedPtrField();
+  _impl_.a_mvarrayofptestdatastructuressub_.~RepeatedPtrField();
 }
 
 void Unions__mVArrayOfPTestDataStructuresSub::SetCachedSize(int size) const {
@@ -3419,7 +3419,7 @@ void Unions__mVArrayOfPTestDataStructuresSub::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofptestdatastructuressub_.Clear();
+  _impl_.a_mvarrayofptestdatastructuressub_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -3429,13 +3429,13 @@ const char* Unions__mVArrayOfPTestDataStructuresSub::_InternalParse(const char* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+      // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_mvarrayofptestdatastructuressub();
+            auto str = _internal_add_a_mvarrayofptestdatastructuressub();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -3472,9 +3472,9 @@ uint8_t* Unions__mVArrayOfPTestDataStructuresSub::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-  for (int i = 0, n = this->_internal_mvarrayofptestdatastructuressub_size(); i < n; i++) {
-    const auto& s = this->_internal_mvarrayofptestdatastructuressub(i);
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofptestdatastructuressub_size(); i < n; i++) {
+    const auto& s = this->_internal_a_mvarrayofptestdatastructuressub(i);
     target = stream->WriteBytes(1, s, target);
   }
 
@@ -3494,12 +3494,12 @@ size_t Unions__mVArrayOfPTestDataStructuresSub::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.mvarrayofptestdatastructuressub_.size());
-  for (int i = 0, n = _impl_.mvarrayofptestdatastructuressub_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_mvarrayofptestdatastructuressub_.size());
+  for (int i = 0, n = _impl_.a_mvarrayofptestdatastructuressub_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.mvarrayofptestdatastructuressub_.Get(i));
+      _impl_.a_mvarrayofptestdatastructuressub_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3523,7 +3523,7 @@ void Unions__mVArrayOfPTestDataStructuresSub::MergeFrom(const Unions__mVArrayOfP
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofptestdatastructuressub_.MergeFrom(from._impl_.mvarrayofptestdatastructuressub_);
+  _this->_impl_.a_mvarrayofptestdatastructuressub_.MergeFrom(from._impl_.a_mvarrayofptestdatastructuressub_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -3541,7 +3541,7 @@ bool Unions__mVArrayOfPTestDataStructuresSub::IsInitialized() const {
 void Unions__mVArrayOfPTestDataStructuresSub::InternalSwap(Unions__mVArrayOfPTestDataStructuresSub* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofptestdatastructuressub_.InternalSwap(&other->_impl_.mvarrayofptestdatastructuressub_);
+  _impl_.a_mvarrayofptestdatastructuressub_.InternalSwap(&other->_impl_.a_mvarrayofptestdatastructuressub_);
 }
 
 std::string Unions__mVArrayOfPTestDataStructuresSub::GetTypeName() const {
@@ -3565,7 +3565,7 @@ Unions__mVArrayOfActors::Unions__mVArrayOfActors(const Unions__mVArrayOfActors& 
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Unions__mVArrayOfActors* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofactors_){from._impl_.mvarrayofactors_}
+      decltype(_impl_.a_mvarrayofactors_){from._impl_.a_mvarrayofactors_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3577,7 +3577,7 @@ inline void Unions__mVArrayOfActors::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofactors_){arena}
+      decltype(_impl_.a_mvarrayofactors_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -3593,7 +3593,7 @@ Unions__mVArrayOfActors::~Unions__mVArrayOfActors() {
 
 inline void Unions__mVArrayOfActors::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofactors_.~RepeatedPtrField();
+  _impl_.a_mvarrayofactors_.~RepeatedPtrField();
 }
 
 void Unions__mVArrayOfActors::SetCachedSize(int size) const {
@@ -3606,7 +3606,7 @@ void Unions__mVArrayOfActors::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofactors_.Clear();
+  _impl_.a_mvarrayofactors_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -3616,13 +3616,13 @@ const char* Unions__mVArrayOfActors::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla._foo.Actors mVArrayOfActors = 1;
+      // repeated .protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_mvarrayofactors(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_mvarrayofactors(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -3658,10 +3658,10 @@ uint8_t* Unions__mVArrayOfActors::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._foo.Actors mVArrayOfActors = 1;
+  // repeated .protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_mvarrayofactors_size()); i < n; i++) {
-    const auto& repfield = this->_internal_mvarrayofactors(i);
+      n = static_cast<unsigned>(this->_internal_a_mvarrayofactors_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_mvarrayofactors(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -3682,9 +3682,9 @@ size_t Unions__mVArrayOfActors::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._foo.Actors mVArrayOfActors = 1;
-  total_size += 1UL * this->_internal_mvarrayofactors_size();
-  for (const auto& msg : this->_impl_.mvarrayofactors_) {
+  // repeated .protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
+  total_size += 1UL * this->_internal_a_mvarrayofactors_size();
+  for (const auto& msg : this->_impl_.a_mvarrayofactors_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -3710,7 +3710,7 @@ void Unions__mVArrayOfActors::MergeFrom(const Unions__mVArrayOfActors& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofactors_.MergeFrom(from._impl_.mvarrayofactors_);
+  _this->_impl_.a_mvarrayofactors_.MergeFrom(from._impl_.a_mvarrayofactors_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -3728,7 +3728,7 @@ bool Unions__mVArrayOfActors::IsInitialized() const {
 void Unions__mVArrayOfActors::InternalSwap(Unions__mVArrayOfActors* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofactors_.InternalSwap(&other->_impl_.mvarrayofactors_);
+  _impl_.a_mvarrayofactors_.InternalSwap(&other->_impl_.a_mvarrayofactors_);
 }
 
 std::string Unions__mVArrayOfActors::GetTypeName() const {
@@ -3819,8 +3819,8 @@ Unions::Unions(const Unions& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -3880,7 +3880,7 @@ void Unions::SetCachedSize(int size) const {
 void Unions::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.Unions)
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
@@ -3926,10 +3926,10 @@ const char* Unions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 mVint = 1;
+      // sint32 a_mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3988,9 +3988,9 @@ uint8_t* Unions::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -4030,9 +4030,9 @@ size_t Unions::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // sint32 mVint = 1;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 1;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
     // .protobuf.mozilla._foo.Unions._mVArrayOfint mVArrayOfint = 2;
@@ -4082,8 +4082,8 @@ void Unions::MergeFrom(const Unions& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -4136,7 +4136,7 @@ std::string Unions::GetTypeName() const {
 class Structs::_Internal {
  public:
   using HasBits = decltype(std::declval<Structs>()._impl_._has_bits_);
-  static void set_has_i(HasBits* has_bits) {
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4156,13 +4156,13 @@ Structs::Structs(const Structs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){from._impl_.ai_}
-    , decltype(_impl_.ap_){from._impl_.ap_}
-    , decltype(_impl_.aa_){from._impl_.aa_}
-    , decltype(_impl_.i_){}};
+    , decltype(_impl_.a_ai_){from._impl_.a_ai_}
+    , decltype(_impl_.a_ap_){from._impl_.a_ap_}
+    , decltype(_impl_.a_aa_){from._impl_.a_aa_}
+    , decltype(_impl_.a_i_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.i_ = from._impl_.i_;
+  _this->_impl_.a_i_ = from._impl_.a_i_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.Structs)
 }
 
@@ -4173,10 +4173,10 @@ inline void Structs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){arena}
-    , decltype(_impl_.ap_){arena}
-    , decltype(_impl_.aa_){arena}
-    , decltype(_impl_.i_){0}
+    , decltype(_impl_.a_ai_){arena}
+    , decltype(_impl_.a_ap_){arena}
+    , decltype(_impl_.a_aa_){arena}
+    , decltype(_impl_.a_i_){0}
   };
 }
 
@@ -4191,9 +4191,9 @@ Structs::~Structs() {
 
 inline void Structs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.ai_.~RepeatedField();
-  _impl_.ap_.~RepeatedPtrField();
-  _impl_.aa_.~RepeatedPtrField();
+  _impl_.a_ai_.~RepeatedField();
+  _impl_.a_ap_.~RepeatedPtrField();
+  _impl_.a_aa_.~RepeatedPtrField();
 }
 
 void Structs::SetCachedSize(int size) const {
@@ -4206,10 +4206,10 @@ void Structs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ai_.Clear();
-  _impl_.ap_.Clear();
-  _impl_.aa_.Clear();
-  _impl_.i_ = 0;
+  _impl_.a_ai_.Clear();
+  _impl_.a_ap_.Clear();
+  _impl_.a_aa_.Clear();
+  _impl_.a_i_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4221,38 +4221,38 @@ const char* Structs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 i = 1;
+      // required sint32 a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_i(&has_bits);
+          _impl_.a_i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated sint32 ai = 2;
+      // repeated sint32 a_ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes ap = 3;
+      // repeated bytes a_ap = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_ap();
+            auto str = _internal_add_a_ap();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -4260,13 +4260,13 @@ const char* Structs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
         } else
           goto handle_unusual;
         continue;
-      // repeated .protobuf.mozilla._foo.SActors aa = 4;
+      // repeated .protobuf.mozilla._foo.SActors a_aa = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_aa(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_aa(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
@@ -4304,28 +4304,28 @@ uint8_t* Structs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 i = 1;
+  // required sint32 a_i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_i(), target);
   }
 
-  // repeated sint32 ai = 2;
-  for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
+  // repeated sint32 a_ai = 2;
+  for (int i = 0, n = this->_internal_a_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_ai(i), target);
   }
 
-  // repeated bytes ap = 3;
-  for (int i = 0, n = this->_internal_ap_size(); i < n; i++) {
-    const auto& s = this->_internal_ap(i);
+  // repeated bytes a_ap = 3;
+  for (int i = 0, n = this->_internal_a_ap_size(); i < n; i++) {
+    const auto& s = this->_internal_a_ap(i);
     target = stream->WriteBytes(3, s, target);
   }
 
-  // repeated .protobuf.mozilla._foo.SActors aa = 4;
+  // repeated .protobuf.mozilla._foo.SActors a_aa = 4;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_aa_size()); i < n; i++) {
-    const auto& repfield = this->_internal_aa(i);
+      n = static_cast<unsigned>(this->_internal_a_aa_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_aa(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -4342,34 +4342,34 @@ size_t Structs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.Structs)
   size_t total_size = 0;
 
-  // required sint32 i = 1;
-  if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+  // required sint32 a_i = 1;
+  if (_internal_has_a_i()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 ai = 2;
+  // repeated sint32 a_ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.a_ai_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_ai_size());
+                  ::_pbi::FromIntSize(this->_internal_a_ai_size());
     total_size += data_size;
   }
 
-  // repeated bytes ap = 3;
+  // repeated bytes a_ap = 3;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.ap_.size());
-  for (int i = 0, n = _impl_.ap_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_ap_.size());
+  for (int i = 0, n = _impl_.a_ap_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.ap_.Get(i));
+      _impl_.a_ap_.Get(i));
   }
 
-  // repeated .protobuf.mozilla._foo.SActors aa = 4;
-  total_size += 1UL * this->_internal_aa_size();
-  for (const auto& msg : this->_impl_.aa_) {
+  // repeated .protobuf.mozilla._foo.SActors a_aa = 4;
+  total_size += 1UL * this->_internal_a_aa_size();
+  for (const auto& msg : this->_impl_.a_aa_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -4395,11 +4395,11 @@ void Structs::MergeFrom(const Structs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.ai_.MergeFrom(from._impl_.ai_);
-  _this->_impl_.ap_.MergeFrom(from._impl_.ap_);
-  _this->_impl_.aa_.MergeFrom(from._impl_.aa_);
-  if (from._internal_has_i()) {
-    _this->_internal_set_i(from._internal_i());
+  _this->_impl_.a_ai_.MergeFrom(from._impl_.a_ai_);
+  _this->_impl_.a_ap_.MergeFrom(from._impl_.a_ap_);
+  _this->_impl_.a_aa_.MergeFrom(from._impl_.a_aa_);
+  if (from._internal_has_a_i()) {
+    _this->_internal_set_a_i(from._internal_a_i());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -4413,7 +4413,7 @@ void Structs::CopyFrom(const Structs& from) {
 
 bool Structs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.aa_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_aa_))
     return false;
   return true;
 }
@@ -4422,10 +4422,10 @@ void Structs::InternalSwap(Structs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.ai_.InternalSwap(&other->_impl_.ai_);
-  _impl_.ap_.InternalSwap(&other->_impl_.ap_);
-  _impl_.aa_.InternalSwap(&other->_impl_.aa_);
-  swap(_impl_.i_, other->_impl_.i_);
+  _impl_.a_ai_.InternalSwap(&other->_impl_.a_ai_);
+  _impl_.a_ap_.InternalSwap(&other->_impl_.a_ap_);
+  _impl_.a_aa_.InternalSwap(&other->_impl_.a_aa_);
+  swap(_impl_.a_i_, other->_impl_.a_i_);
 }
 
 std::string Structs::GetTypeName() const {
@@ -4449,7 +4449,7 @@ WithStructs__mVArrayOfint::WithStructs__mVArrayOfint(const WithStructs__mVArrayO
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WithStructs__mVArrayOfint* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){from._impl_.mvarrayofint_}
+      decltype(_impl_.a_mvarrayofint_){from._impl_.a_mvarrayofint_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4461,7 +4461,7 @@ inline void WithStructs__mVArrayOfint::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofint_){arena}
+      decltype(_impl_.a_mvarrayofint_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -4477,7 +4477,7 @@ WithStructs__mVArrayOfint::~WithStructs__mVArrayOfint() {
 
 inline void WithStructs__mVArrayOfint::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofint_.~RepeatedField();
+  _impl_.a_mvarrayofint_.~RepeatedField();
 }
 
 void WithStructs__mVArrayOfint::SetCachedSize(int size) const {
@@ -4490,7 +4490,7 @@ void WithStructs__mVArrayOfint::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofint_.Clear();
+  _impl_.a_mvarrayofint_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -4500,18 +4500,18 @@ const char* WithStructs__mVArrayOfint::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated sint32 mVArrayOfint = 1;
+      // repeated sint32 a_mVArrayOfint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_mvarrayofint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_mvarrayofint(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_mvarrayofint(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4545,10 +4545,10 @@ uint8_t* WithStructs__mVArrayOfint::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
-  for (int i = 0, n = this->_internal_mvarrayofint_size(); i < n; i++) {
+  // repeated sint32 a_mVArrayOfint = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofint_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvarrayofint(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvarrayofint(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4567,12 +4567,12 @@ size_t WithStructs__mVArrayOfint::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 mVArrayOfint = 1;
+  // repeated sint32 a_mVArrayOfint = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.mvarrayofint_);
+      SInt32Size(this->_impl_.a_mvarrayofint_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_mvarrayofint_size());
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofint_size());
     total_size += data_size;
   }
 
@@ -4597,7 +4597,7 @@ void WithStructs__mVArrayOfint::MergeFrom(const WithStructs__mVArrayOfint& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofint_.MergeFrom(from._impl_.mvarrayofint_);
+  _this->_impl_.a_mvarrayofint_.MergeFrom(from._impl_.a_mvarrayofint_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -4615,7 +4615,7 @@ bool WithStructs__mVArrayOfint::IsInitialized() const {
 void WithStructs__mVArrayOfint::InternalSwap(WithStructs__mVArrayOfint* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofint_.InternalSwap(&other->_impl_.mvarrayofint_);
+  _impl_.a_mvarrayofint_.InternalSwap(&other->_impl_.a_mvarrayofint_);
 }
 
 std::string WithStructs__mVArrayOfint::GetTypeName() const {
@@ -4639,7 +4639,7 @@ WithStructs__mVArrayOfPTestDataStructuresSub::WithStructs__mVArrayOfPTestDataStr
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WithStructs__mVArrayOfPTestDataStructuresSub* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofptestdatastructuressub_){from._impl_.mvarrayofptestdatastructuressub_}
+      decltype(_impl_.a_mvarrayofptestdatastructuressub_){from._impl_.a_mvarrayofptestdatastructuressub_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4651,7 +4651,7 @@ inline void WithStructs__mVArrayOfPTestDataStructuresSub::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofptestdatastructuressub_){arena}
+      decltype(_impl_.a_mvarrayofptestdatastructuressub_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -4667,7 +4667,7 @@ WithStructs__mVArrayOfPTestDataStructuresSub::~WithStructs__mVArrayOfPTestDataSt
 
 inline void WithStructs__mVArrayOfPTestDataStructuresSub::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofptestdatastructuressub_.~RepeatedPtrField();
+  _impl_.a_mvarrayofptestdatastructuressub_.~RepeatedPtrField();
 }
 
 void WithStructs__mVArrayOfPTestDataStructuresSub::SetCachedSize(int size) const {
@@ -4680,7 +4680,7 @@ void WithStructs__mVArrayOfPTestDataStructuresSub::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofptestdatastructuressub_.Clear();
+  _impl_.a_mvarrayofptestdatastructuressub_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -4690,13 +4690,13 @@ const char* WithStructs__mVArrayOfPTestDataStructuresSub::_InternalParse(const c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+      // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_mvarrayofptestdatastructuressub();
+            auto str = _internal_add_a_mvarrayofptestdatastructuressub();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -4733,9 +4733,9 @@ uint8_t* WithStructs__mVArrayOfPTestDataStructuresSub::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
-  for (int i = 0, n = this->_internal_mvarrayofptestdatastructuressub_size(); i < n; i++) {
-    const auto& s = this->_internal_mvarrayofptestdatastructuressub(i);
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofptestdatastructuressub_size(); i < n; i++) {
+    const auto& s = this->_internal_a_mvarrayofptestdatastructuressub(i);
     target = stream->WriteBytes(1, s, target);
   }
 
@@ -4755,12 +4755,12 @@ size_t WithStructs__mVArrayOfPTestDataStructuresSub::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+  // repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.mvarrayofptestdatastructuressub_.size());
-  for (int i = 0, n = _impl_.mvarrayofptestdatastructuressub_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_mvarrayofptestdatastructuressub_.size());
+  for (int i = 0, n = _impl_.a_mvarrayofptestdatastructuressub_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.mvarrayofptestdatastructuressub_.Get(i));
+      _impl_.a_mvarrayofptestdatastructuressub_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4784,7 +4784,7 @@ void WithStructs__mVArrayOfPTestDataStructuresSub::MergeFrom(const WithStructs__
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofptestdatastructuressub_.MergeFrom(from._impl_.mvarrayofptestdatastructuressub_);
+  _this->_impl_.a_mvarrayofptestdatastructuressub_.MergeFrom(from._impl_.a_mvarrayofptestdatastructuressub_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -4802,7 +4802,7 @@ bool WithStructs__mVArrayOfPTestDataStructuresSub::IsInitialized() const {
 void WithStructs__mVArrayOfPTestDataStructuresSub::InternalSwap(WithStructs__mVArrayOfPTestDataStructuresSub* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofptestdatastructuressub_.InternalSwap(&other->_impl_.mvarrayofptestdatastructuressub_);
+  _impl_.a_mvarrayofptestdatastructuressub_.InternalSwap(&other->_impl_.a_mvarrayofptestdatastructuressub_);
 }
 
 std::string WithStructs__mVArrayOfPTestDataStructuresSub::GetTypeName() const {
@@ -4826,7 +4826,7 @@ WithStructs__mVArrayOfSActors::WithStructs__mVArrayOfSActors(const WithStructs__
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WithStructs__mVArrayOfSActors* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofsactors_){from._impl_.mvarrayofsactors_}
+      decltype(_impl_.a_mvarrayofsactors_){from._impl_.a_mvarrayofsactors_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -4838,7 +4838,7 @@ inline void WithStructs__mVArrayOfSActors::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofsactors_){arena}
+      decltype(_impl_.a_mvarrayofsactors_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -4854,7 +4854,7 @@ WithStructs__mVArrayOfSActors::~WithStructs__mVArrayOfSActors() {
 
 inline void WithStructs__mVArrayOfSActors::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofsactors_.~RepeatedPtrField();
+  _impl_.a_mvarrayofsactors_.~RepeatedPtrField();
 }
 
 void WithStructs__mVArrayOfSActors::SetCachedSize(int size) const {
@@ -4867,7 +4867,7 @@ void WithStructs__mVArrayOfSActors::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofsactors_.Clear();
+  _impl_.a_mvarrayofsactors_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -4877,13 +4877,13 @@ const char* WithStructs__mVArrayOfSActors::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla._foo.SActors mVArrayOfSActors = 1;
+      // repeated .protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_mvarrayofsactors(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_mvarrayofsactors(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -4919,10 +4919,10 @@ uint8_t* WithStructs__mVArrayOfSActors::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._foo.SActors mVArrayOfSActors = 1;
+  // repeated .protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_mvarrayofsactors_size()); i < n; i++) {
-    const auto& repfield = this->_internal_mvarrayofsactors(i);
+      n = static_cast<unsigned>(this->_internal_a_mvarrayofsactors_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_mvarrayofsactors(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -4943,9 +4943,9 @@ size_t WithStructs__mVArrayOfSActors::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._foo.SActors mVArrayOfSActors = 1;
-  total_size += 1UL * this->_internal_mvarrayofsactors_size();
-  for (const auto& msg : this->_impl_.mvarrayofsactors_) {
+  // repeated .protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
+  total_size += 1UL * this->_internal_a_mvarrayofsactors_size();
+  for (const auto& msg : this->_impl_.a_mvarrayofsactors_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -4971,7 +4971,7 @@ void WithStructs__mVArrayOfSActors::MergeFrom(const WithStructs__mVArrayOfSActor
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofsactors_.MergeFrom(from._impl_.mvarrayofsactors_);
+  _this->_impl_.a_mvarrayofsactors_.MergeFrom(from._impl_.a_mvarrayofsactors_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -4983,7 +4983,7 @@ void WithStructs__mVArrayOfSActors::CopyFrom(const WithStructs__mVArrayOfSActors
 }
 
 bool WithStructs__mVArrayOfSActors::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.mvarrayofsactors_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofsactors_))
     return false;
   return true;
 }
@@ -4991,7 +4991,7 @@ bool WithStructs__mVArrayOfSActors::IsInitialized() const {
 void WithStructs__mVArrayOfSActors::InternalSwap(WithStructs__mVArrayOfSActors* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofsactors_.InternalSwap(&other->_impl_.mvarrayofsactors_);
+  _impl_.a_mvarrayofsactors_.InternalSwap(&other->_impl_.a_mvarrayofsactors_);
 }
 
 std::string WithStructs__mVArrayOfSActors::GetTypeName() const {
@@ -5015,7 +5015,7 @@ WithStructs__mVArrayOfStructs::WithStructs__mVArrayOfStructs(const WithStructs__
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WithStructs__mVArrayOfStructs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofstructs_){from._impl_.mvarrayofstructs_}
+      decltype(_impl_.a_mvarrayofstructs_){from._impl_.a_mvarrayofstructs_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -5027,7 +5027,7 @@ inline void WithStructs__mVArrayOfStructs::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofstructs_){arena}
+      decltype(_impl_.a_mvarrayofstructs_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -5043,7 +5043,7 @@ WithStructs__mVArrayOfStructs::~WithStructs__mVArrayOfStructs() {
 
 inline void WithStructs__mVArrayOfStructs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofstructs_.~RepeatedPtrField();
+  _impl_.a_mvarrayofstructs_.~RepeatedPtrField();
 }
 
 void WithStructs__mVArrayOfStructs::SetCachedSize(int size) const {
@@ -5056,7 +5056,7 @@ void WithStructs__mVArrayOfStructs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofstructs_.Clear();
+  _impl_.a_mvarrayofstructs_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -5066,13 +5066,13 @@ const char* WithStructs__mVArrayOfStructs::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla._foo.Structs mVArrayOfStructs = 1;
+      // repeated .protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_mvarrayofstructs(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_mvarrayofstructs(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -5108,10 +5108,10 @@ uint8_t* WithStructs__mVArrayOfStructs::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._foo.Structs mVArrayOfStructs = 1;
+  // repeated .protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_mvarrayofstructs_size()); i < n; i++) {
-    const auto& repfield = this->_internal_mvarrayofstructs(i);
+      n = static_cast<unsigned>(this->_internal_a_mvarrayofstructs_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_mvarrayofstructs(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -5132,9 +5132,9 @@ size_t WithStructs__mVArrayOfStructs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla._foo.Structs mVArrayOfStructs = 1;
-  total_size += 1UL * this->_internal_mvarrayofstructs_size();
-  for (const auto& msg : this->_impl_.mvarrayofstructs_) {
+  // repeated .protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
+  total_size += 1UL * this->_internal_a_mvarrayofstructs_size();
+  for (const auto& msg : this->_impl_.a_mvarrayofstructs_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -5160,7 +5160,7 @@ void WithStructs__mVArrayOfStructs::MergeFrom(const WithStructs__mVArrayOfStruct
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofstructs_.MergeFrom(from._impl_.mvarrayofstructs_);
+  _this->_impl_.a_mvarrayofstructs_.MergeFrom(from._impl_.a_mvarrayofstructs_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -5172,7 +5172,7 @@ void WithStructs__mVArrayOfStructs::CopyFrom(const WithStructs__mVArrayOfStructs
 }
 
 bool WithStructs__mVArrayOfStructs::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.mvarrayofstructs_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofstructs_))
     return false;
   return true;
 }
@@ -5180,7 +5180,7 @@ bool WithStructs__mVArrayOfStructs::IsInitialized() const {
 void WithStructs__mVArrayOfStructs::InternalSwap(WithStructs__mVArrayOfStructs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofstructs_.InternalSwap(&other->_impl_.mvarrayofstructs_);
+  _impl_.a_mvarrayofstructs_.InternalSwap(&other->_impl_.a_mvarrayofstructs_);
 }
 
 std::string WithStructs__mVArrayOfStructs::GetTypeName() const {
@@ -5291,8 +5291,8 @@ WithStructs::WithStructs(const WithStructs& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -5357,7 +5357,7 @@ void WithStructs::SetCachedSize(int size) const {
 void WithStructs::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.WithStructs)
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
@@ -5409,10 +5409,10 @@ const char* WithStructs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 mVint = 1;
+      // sint32 a_mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5479,9 +5479,9 @@ uint8_t* WithStructs::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvint(), target);
       break;
     }
     case kMVArrayOfint: {
@@ -5527,9 +5527,9 @@ size_t WithStructs::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // sint32 mVint = 1;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 1;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
     // .protobuf.mozilla._foo.WithStructs._mVArrayOfint mVArrayOfint = 2;
@@ -5586,8 +5586,8 @@ void WithStructs::MergeFrom(const WithStructs& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case kMVArrayOfint: {
@@ -5626,7 +5626,7 @@ void WithStructs::CopyFrom(const WithStructs& from) {
 
 bool WithStructs::IsInitialized() const {
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       break;
     }
     case kMVArrayOfint: {
@@ -5671,7 +5671,7 @@ std::string WithStructs::GetTypeName() const {
 class WithUnions::_Internal {
  public:
   using HasBits = decltype(std::declval<WithUnions>()._impl_._has_bits_);
-  static void set_has_i(HasBits* has_bits) {
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5691,14 +5691,14 @@ WithUnions::WithUnions(const WithUnions& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){from._impl_.ai_}
-    , decltype(_impl_.ap_){from._impl_.ap_}
-    , decltype(_impl_.aa_){from._impl_.aa_}
-    , decltype(_impl_.au_){from._impl_.au_}
-    , decltype(_impl_.i_){}};
+    , decltype(_impl_.a_ai_){from._impl_.a_ai_}
+    , decltype(_impl_.a_ap_){from._impl_.a_ap_}
+    , decltype(_impl_.a_aa_){from._impl_.a_aa_}
+    , decltype(_impl_.a_au_){from._impl_.a_au_}
+    , decltype(_impl_.a_i_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.i_ = from._impl_.i_;
+  _this->_impl_.a_i_ = from._impl_.a_i_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.WithUnions)
 }
 
@@ -5709,11 +5709,11 @@ inline void WithUnions::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ai_){arena}
-    , decltype(_impl_.ap_){arena}
-    , decltype(_impl_.aa_){arena}
-    , decltype(_impl_.au_){arena}
-    , decltype(_impl_.i_){0}
+    , decltype(_impl_.a_ai_){arena}
+    , decltype(_impl_.a_ap_){arena}
+    , decltype(_impl_.a_aa_){arena}
+    , decltype(_impl_.a_au_){arena}
+    , decltype(_impl_.a_i_){0}
   };
 }
 
@@ -5728,10 +5728,10 @@ WithUnions::~WithUnions() {
 
 inline void WithUnions::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.ai_.~RepeatedField();
-  _impl_.ap_.~RepeatedPtrField();
-  _impl_.aa_.~RepeatedPtrField();
-  _impl_.au_.~RepeatedPtrField();
+  _impl_.a_ai_.~RepeatedField();
+  _impl_.a_ap_.~RepeatedPtrField();
+  _impl_.a_aa_.~RepeatedPtrField();
+  _impl_.a_au_.~RepeatedPtrField();
 }
 
 void WithUnions::SetCachedSize(int size) const {
@@ -5744,11 +5744,11 @@ void WithUnions::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ai_.Clear();
-  _impl_.ap_.Clear();
-  _impl_.aa_.Clear();
-  _impl_.au_.Clear();
-  _impl_.i_ = 0;
+  _impl_.a_ai_.Clear();
+  _impl_.a_ap_.Clear();
+  _impl_.a_aa_.Clear();
+  _impl_.a_au_.Clear();
+  _impl_.a_i_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -5760,38 +5760,38 @@ const char* WithUnions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 i = 1;
+      // required sint32 a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_i(&has_bits);
+          _impl_.a_i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated sint32 ai = 2;
+      // repeated sint32 a_ai = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+            _internal_add_a_ai(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
         } else if (static_cast<uint8_t>(tag) == 18) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_ai(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_ai(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes ap = 3;
+      // repeated bytes a_ap = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_ap();
+            auto str = _internal_add_a_ap();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -5799,26 +5799,26 @@ const char* WithUnions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // repeated .protobuf.mozilla._foo.Actors aa = 4;
+      // repeated .protobuf.mozilla._foo.Actors a_aa = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_aa(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_aa(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // repeated .protobuf.mozilla._foo.Unions au = 5;
+      // repeated .protobuf.mozilla._foo.Unions a_au = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_au(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_au(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
@@ -5856,36 +5856,36 @@ uint8_t* WithUnions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 i = 1;
+  // required sint32 a_i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_i(), target);
   }
 
-  // repeated sint32 ai = 2;
-  for (int i = 0, n = this->_internal_ai_size(); i < n; i++) {
+  // repeated sint32 a_ai = 2;
+  for (int i = 0, n = this->_internal_a_ai_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_ai(i), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_ai(i), target);
   }
 
-  // repeated bytes ap = 3;
-  for (int i = 0, n = this->_internal_ap_size(); i < n; i++) {
-    const auto& s = this->_internal_ap(i);
+  // repeated bytes a_ap = 3;
+  for (int i = 0, n = this->_internal_a_ap_size(); i < n; i++) {
+    const auto& s = this->_internal_a_ap(i);
     target = stream->WriteBytes(3, s, target);
   }
 
-  // repeated .protobuf.mozilla._foo.Actors aa = 4;
+  // repeated .protobuf.mozilla._foo.Actors a_aa = 4;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_aa_size()); i < n; i++) {
-    const auto& repfield = this->_internal_aa(i);
+      n = static_cast<unsigned>(this->_internal_a_aa_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_aa(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // repeated .protobuf.mozilla._foo.Unions au = 5;
+  // repeated .protobuf.mozilla._foo.Unions a_au = 5;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_au_size()); i < n; i++) {
-    const auto& repfield = this->_internal_au(i);
+      n = static_cast<unsigned>(this->_internal_a_au_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_au(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -5902,41 +5902,41 @@ size_t WithUnions::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.WithUnions)
   size_t total_size = 0;
 
-  // required sint32 i = 1;
-  if (_internal_has_i()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+  // required sint32 a_i = 1;
+  if (_internal_has_a_i()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated sint32 ai = 2;
+  // repeated sint32 a_ai = 2;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      SInt32Size(this->_impl_.ai_);
+      SInt32Size(this->_impl_.a_ai_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_ai_size());
+                  ::_pbi::FromIntSize(this->_internal_a_ai_size());
     total_size += data_size;
   }
 
-  // repeated bytes ap = 3;
+  // repeated bytes a_ap = 3;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.ap_.size());
-  for (int i = 0, n = _impl_.ap_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_ap_.size());
+  for (int i = 0, n = _impl_.a_ap_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.ap_.Get(i));
+      _impl_.a_ap_.Get(i));
   }
 
-  // repeated .protobuf.mozilla._foo.Actors aa = 4;
-  total_size += 1UL * this->_internal_aa_size();
-  for (const auto& msg : this->_impl_.aa_) {
+  // repeated .protobuf.mozilla._foo.Actors a_aa = 4;
+  total_size += 1UL * this->_internal_a_aa_size();
+  for (const auto& msg : this->_impl_.a_aa_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated .protobuf.mozilla._foo.Unions au = 5;
-  total_size += 1UL * this->_internal_au_size();
-  for (const auto& msg : this->_impl_.au_) {
+  // repeated .protobuf.mozilla._foo.Unions a_au = 5;
+  total_size += 1UL * this->_internal_a_au_size();
+  for (const auto& msg : this->_impl_.a_au_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -5962,12 +5962,12 @@ void WithUnions::MergeFrom(const WithUnions& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.ai_.MergeFrom(from._impl_.ai_);
-  _this->_impl_.ap_.MergeFrom(from._impl_.ap_);
-  _this->_impl_.aa_.MergeFrom(from._impl_.aa_);
-  _this->_impl_.au_.MergeFrom(from._impl_.au_);
-  if (from._internal_has_i()) {
-    _this->_internal_set_i(from._internal_i());
+  _this->_impl_.a_ai_.MergeFrom(from._impl_.a_ai_);
+  _this->_impl_.a_ap_.MergeFrom(from._impl_.a_ap_);
+  _this->_impl_.a_aa_.MergeFrom(from._impl_.a_aa_);
+  _this->_impl_.a_au_.MergeFrom(from._impl_.a_au_);
+  if (from._internal_has_a_i()) {
+    _this->_internal_set_a_i(from._internal_a_i());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5988,11 +5988,11 @@ void WithUnions::InternalSwap(WithUnions* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.ai_.InternalSwap(&other->_impl_.ai_);
-  _impl_.ap_.InternalSwap(&other->_impl_.ap_);
-  _impl_.aa_.InternalSwap(&other->_impl_.aa_);
-  _impl_.au_.InternalSwap(&other->_impl_.au_);
-  swap(_impl_.i_, other->_impl_.i_);
+  _impl_.a_ai_.InternalSwap(&other->_impl_.a_ai_);
+  _impl_.a_ap_.InternalSwap(&other->_impl_.a_ap_);
+  _impl_.a_aa_.InternalSwap(&other->_impl_.a_aa_);
+  _impl_.a_au_.InternalSwap(&other->_impl_.a_au_);
+  swap(_impl_.a_i_, other->_impl_.a_i_);
 }
 
 std::string WithUnions::GetTypeName() const {
@@ -6005,7 +6005,7 @@ std::string WithUnions::GetTypeName() const {
 class CommonAttrs::_Internal {
  public:
   using HasBits = decltype(std::declval<CommonAttrs>()._impl_._has_bits_);
-  static void set_has_dummy(HasBits* has_bits) {
+  static void set_has_a_dummy(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6025,10 +6025,10 @@ CommonAttrs::CommonAttrs(const CommonAttrs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){}};
+    , decltype(_impl_.a_dummy_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.dummy_ = from._impl_.dummy_;
+  _this->_impl_.a_dummy_ = from._impl_.a_dummy_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.CommonAttrs)
 }
 
@@ -6039,7 +6039,7 @@ inline void CommonAttrs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){false}
+    , decltype(_impl_.a_dummy_){false}
   };
 }
 
@@ -6066,7 +6066,7 @@ void CommonAttrs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.dummy_ = false;
+  _impl_.a_dummy_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -6078,11 +6078,11 @@ const char* CommonAttrs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool dummy = 1;
+      // required bool a_dummy = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_dummy(&has_bits);
-          _impl_.dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_dummy(&has_bits);
+          _impl_.a_dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6118,10 +6118,10 @@ uint8_t* CommonAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool dummy = 1;
+  // required bool a_dummy = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_dummy(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_dummy(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6136,8 +6136,8 @@ size_t CommonAttrs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.CommonAttrs)
   size_t total_size = 0;
 
-  // required bool dummy = 1;
-  if (_internal_has_dummy()) {
+  // required bool a_dummy = 1;
+  if (_internal_has_a_dummy()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -6165,8 +6165,8 @@ void CommonAttrs::MergeFrom(const CommonAttrs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_dummy()) {
-    _this->_internal_set_dummy(from._internal_dummy());
+  if (from._internal_has_a_dummy()) {
+    _this->_internal_set_a_dummy(from._internal_a_dummy());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6187,7 +6187,7 @@ void CommonAttrs::InternalSwap(CommonAttrs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.dummy_, other->_impl_.dummy_);
+  swap(_impl_.a_dummy_, other->_impl_.a_dummy_);
 }
 
 std::string CommonAttrs::GetTypeName() const {
@@ -6200,7 +6200,7 @@ std::string CommonAttrs::GetTypeName() const {
 class FooAttrs::_Internal {
  public:
   using HasBits = decltype(std::declval<FooAttrs>()._impl_._has_bits_);
-  static void set_has_dummy(HasBits* has_bits) {
+  static void set_has_a_dummy(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6220,10 +6220,10 @@ FooAttrs::FooAttrs(const FooAttrs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){}};
+    , decltype(_impl_.a_dummy_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.dummy_ = from._impl_.dummy_;
+  _this->_impl_.a_dummy_ = from._impl_.a_dummy_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.FooAttrs)
 }
 
@@ -6234,7 +6234,7 @@ inline void FooAttrs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){0}
+    , decltype(_impl_.a_dummy_){0}
   };
 }
 
@@ -6261,7 +6261,7 @@ void FooAttrs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.dummy_ = 0;
+  _impl_.a_dummy_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -6273,11 +6273,11 @@ const char* FooAttrs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 dummy = 1;
+      // required sint32 a_dummy = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_dummy(&has_bits);
-          _impl_.dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_dummy(&has_bits);
+          _impl_.a_dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6313,10 +6313,10 @@ uint8_t* FooAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 dummy = 1;
+  // required sint32 a_dummy = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_dummy(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_dummy(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6331,9 +6331,9 @@ size_t FooAttrs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.FooAttrs)
   size_t total_size = 0;
 
-  // required sint32 dummy = 1;
-  if (_internal_has_dummy()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_dummy());
+  // required sint32 a_dummy = 1;
+  if (_internal_has_a_dummy()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_dummy());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -6360,8 +6360,8 @@ void FooAttrs::MergeFrom(const FooAttrs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_dummy()) {
-    _this->_internal_set_dummy(from._internal_dummy());
+  if (from._internal_has_a_dummy()) {
+    _this->_internal_set_a_dummy(from._internal_a_dummy());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6382,7 +6382,7 @@ void FooAttrs::InternalSwap(FooAttrs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.dummy_, other->_impl_.dummy_);
+  swap(_impl_.a_dummy_, other->_impl_.a_dummy_);
 }
 
 std::string FooAttrs::GetTypeName() const {
@@ -6395,7 +6395,7 @@ std::string FooAttrs::GetTypeName() const {
 class BarAttrs::_Internal {
  public:
   using HasBits = decltype(std::declval<BarAttrs>()._impl_._has_bits_);
-  static void set_has_dummy(HasBits* has_bits) {
+  static void set_has_a_dummy(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6415,10 +6415,10 @@ BarAttrs::BarAttrs(const BarAttrs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){}};
+    , decltype(_impl_.a_dummy_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.dummy_ = from._impl_.dummy_;
+  _this->_impl_.a_dummy_ = from._impl_.a_dummy_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.BarAttrs)
 }
 
@@ -6429,7 +6429,7 @@ inline void BarAttrs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.dummy_){0}
+    , decltype(_impl_.a_dummy_){0}
   };
 }
 
@@ -6456,7 +6456,7 @@ void BarAttrs::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.dummy_ = 0;
+  _impl_.a_dummy_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -6468,11 +6468,11 @@ const char* BarAttrs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required float dummy = 1;
+      // required float a_dummy = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
-          _Internal::set_has_dummy(&has_bits);
-          _impl_.dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          _Internal::set_has_a_dummy(&has_bits);
+          _impl_.a_dummy_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
@@ -6508,10 +6508,10 @@ uint8_t* BarAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required float dummy = 1;
+  // required float a_dummy = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_dummy(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_a_dummy(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6526,8 +6526,8 @@ size_t BarAttrs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._foo.BarAttrs)
   size_t total_size = 0;
 
-  // required float dummy = 1;
-  if (_internal_has_dummy()) {
+  // required float a_dummy = 1;
+  if (_internal_has_a_dummy()) {
     total_size += 1 + 4;
   }
   uint32_t cached_has_bits = 0;
@@ -6555,8 +6555,8 @@ void BarAttrs::MergeFrom(const BarAttrs& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_dummy()) {
-    _this->_internal_set_dummy(from._internal_dummy());
+  if (from._internal_has_a_dummy()) {
+    _this->_internal_set_a_dummy(from._internal_a_dummy());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -6577,7 +6577,7 @@ void BarAttrs::InternalSwap(BarAttrs* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.dummy_, other->_impl_.dummy_);
+  swap(_impl_.a_dummy_, other->_impl_.a_dummy_);
 }
 
 std::string BarAttrs::GetTypeName() const {
@@ -6589,47 +6589,47 @@ std::string BarAttrs::GetTypeName() const {
 
 class SpecificAttrs::_Internal {
  public:
-  static const ::protobuf::mozilla::_foo::FooAttrs& mvfooattrs(const SpecificAttrs* msg);
-  static const ::protobuf::mozilla::_foo::BarAttrs& mvbarattrs(const SpecificAttrs* msg);
+  static const ::protobuf::mozilla::_foo::FooAttrs& a_mvfooattrs(const SpecificAttrs* msg);
+  static const ::protobuf::mozilla::_foo::BarAttrs& a_mvbarattrs(const SpecificAttrs* msg);
 };
 
 const ::protobuf::mozilla::_foo::FooAttrs&
-SpecificAttrs::_Internal::mvfooattrs(const SpecificAttrs* msg) {
-  return *msg->_impl_.content_.mvfooattrs_;
+SpecificAttrs::_Internal::a_mvfooattrs(const SpecificAttrs* msg) {
+  return *msg->_impl_.content_.a_mvfooattrs_;
 }
 const ::protobuf::mozilla::_foo::BarAttrs&
-SpecificAttrs::_Internal::mvbarattrs(const SpecificAttrs* msg) {
-  return *msg->_impl_.content_.mvbarattrs_;
+SpecificAttrs::_Internal::a_mvbarattrs(const SpecificAttrs* msg) {
+  return *msg->_impl_.content_.a_mvbarattrs_;
 }
-void SpecificAttrs::set_allocated_mvfooattrs(::protobuf::mozilla::_foo::FooAttrs* mvfooattrs) {
+void SpecificAttrs::set_allocated_a_mvfooattrs(::protobuf::mozilla::_foo::FooAttrs* a_mvfooattrs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvfooattrs) {
+  if (a_mvfooattrs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvfooattrs);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvfooattrs);
     if (message_arena != submessage_arena) {
-      mvfooattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvfooattrs, submessage_arena);
+      a_mvfooattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvfooattrs, submessage_arena);
     }
-    set_has_mvfooattrs();
-    _impl_.content_.mvfooattrs_ = mvfooattrs;
+    set_has_a_mvfooattrs();
+    _impl_.content_.a_mvfooattrs_ = a_mvfooattrs;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SpecificAttrs.mVFooAttrs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SpecificAttrs.a_mVFooAttrs)
 }
-void SpecificAttrs::set_allocated_mvbarattrs(::protobuf::mozilla::_foo::BarAttrs* mvbarattrs) {
+void SpecificAttrs::set_allocated_a_mvbarattrs(::protobuf::mozilla::_foo::BarAttrs* a_mvbarattrs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvbarattrs) {
+  if (a_mvbarattrs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvbarattrs);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvbarattrs);
     if (message_arena != submessage_arena) {
-      mvbarattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvbarattrs, submessage_arena);
+      a_mvbarattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvbarattrs, submessage_arena);
     }
-    set_has_mvbarattrs();
-    _impl_.content_.mvbarattrs_ = mvbarattrs;
+    set_has_a_mvbarattrs();
+    _impl_.content_.a_mvbarattrs_ = a_mvbarattrs;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SpecificAttrs.mVBarAttrs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.SpecificAttrs.a_mVBarAttrs)
 }
 SpecificAttrs::SpecificAttrs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6648,14 +6648,14 @@ SpecificAttrs::SpecificAttrs(const SpecificAttrs& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVFooAttrs: {
-      _this->_internal_mutable_mvfooattrs()->::protobuf::mozilla::_foo::FooAttrs::MergeFrom(
-          from._internal_mvfooattrs());
+    case kAMVFooAttrs: {
+      _this->_internal_mutable_a_mvfooattrs()->::protobuf::mozilla::_foo::FooAttrs::MergeFrom(
+          from._internal_a_mvfooattrs());
       break;
     }
-    case kMVBarAttrs: {
-      _this->_internal_mutable_mvbarattrs()->::protobuf::mozilla::_foo::BarAttrs::MergeFrom(
-          from._internal_mvbarattrs());
+    case kAMVBarAttrs: {
+      _this->_internal_mutable_a_mvbarattrs()->::protobuf::mozilla::_foo::BarAttrs::MergeFrom(
+          from._internal_a_mvbarattrs());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6700,15 +6700,15 @@ void SpecificAttrs::SetCachedSize(int size) const {
 void SpecificAttrs::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.SpecificAttrs)
   switch (content_case()) {
-    case kMVFooAttrs: {
+    case kAMVFooAttrs: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvfooattrs_;
+        delete _impl_.content_.a_mvfooattrs_;
       }
       break;
     }
-    case kMVBarAttrs: {
+    case kAMVBarAttrs: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvbarattrs_;
+        delete _impl_.content_.a_mvbarattrs_;
       }
       break;
     }
@@ -6736,18 +6736,18 @@ const char* SpecificAttrs::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla._foo.FooAttrs mVFooAttrs = 1;
+      // .protobuf.mozilla._foo.FooAttrs a_mVFooAttrs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvfooattrs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvfooattrs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla._foo.BarAttrs mVBarAttrs = 2;
+      // .protobuf.mozilla._foo.BarAttrs a_mVBarAttrs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvbarattrs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvbarattrs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6782,16 +6782,16 @@ uint8_t* SpecificAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVFooAttrs: {
+    case kAMVFooAttrs: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvfooattrs(this),
-          _Internal::mvfooattrs(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvfooattrs(this),
+          _Internal::a_mvfooattrs(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVBarAttrs: {
+    case kAMVBarAttrs: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvbarattrs(this),
-          _Internal::mvbarattrs(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvbarattrs(this),
+          _Internal::a_mvbarattrs(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -6813,18 +6813,18 @@ size_t SpecificAttrs::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla._foo.FooAttrs mVFooAttrs = 1;
-    case kMVFooAttrs: {
+    // .protobuf.mozilla._foo.FooAttrs a_mVFooAttrs = 1;
+    case kAMVFooAttrs: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvfooattrs_);
+          *_impl_.content_.a_mvfooattrs_);
       break;
     }
-    // .protobuf.mozilla._foo.BarAttrs mVBarAttrs = 2;
-    case kMVBarAttrs: {
+    // .protobuf.mozilla._foo.BarAttrs a_mVBarAttrs = 2;
+    case kAMVBarAttrs: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvbarattrs_);
+          *_impl_.content_.a_mvbarattrs_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6853,14 +6853,14 @@ void SpecificAttrs::MergeFrom(const SpecificAttrs& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVFooAttrs: {
-      _this->_internal_mutable_mvfooattrs()->::protobuf::mozilla::_foo::FooAttrs::MergeFrom(
-          from._internal_mvfooattrs());
+    case kAMVFooAttrs: {
+      _this->_internal_mutable_a_mvfooattrs()->::protobuf::mozilla::_foo::FooAttrs::MergeFrom(
+          from._internal_a_mvfooattrs());
       break;
     }
-    case kMVBarAttrs: {
-      _this->_internal_mutable_mvbarattrs()->::protobuf::mozilla::_foo::BarAttrs::MergeFrom(
-          from._internal_mvbarattrs());
+    case kAMVBarAttrs: {
+      _this->_internal_mutable_a_mvbarattrs()->::protobuf::mozilla::_foo::BarAttrs::MergeFrom(
+          from._internal_a_mvbarattrs());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -6879,15 +6879,15 @@ void SpecificAttrs::CopyFrom(const SpecificAttrs& from) {
 
 bool SpecificAttrs::IsInitialized() const {
   switch (content_case()) {
-    case kMVFooAttrs: {
-      if (_internal_has_mvfooattrs()) {
-        if (!_impl_.content_.mvfooattrs_->IsInitialized()) return false;
+    case kAMVFooAttrs: {
+      if (_internal_has_a_mvfooattrs()) {
+        if (!_impl_.content_.a_mvfooattrs_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVBarAttrs: {
-      if (_internal_has_mvbarattrs()) {
-        if (!_impl_.content_.mvbarattrs_->IsInitialized()) return false;
+    case kAMVBarAttrs: {
+      if (_internal_has_a_mvbarattrs()) {
+        if (!_impl_.content_.a_mvbarattrs_->IsInitialized()) return false;
       }
       break;
     }
@@ -6915,12 +6915,12 @@ std::string SpecificAttrs::GetTypeName() const {
 class Attrs::_Internal {
  public:
   using HasBits = decltype(std::declval<Attrs>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::_foo::CommonAttrs& common(const Attrs* msg);
-  static void set_has_common(HasBits* has_bits) {
+  static const ::protobuf::mozilla::_foo::CommonAttrs& a_common(const Attrs* msg);
+  static void set_has_a_common(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::_foo::SpecificAttrs& specific(const Attrs* msg);
-  static void set_has_specific(HasBits* has_bits) {
+  static const ::protobuf::mozilla::_foo::SpecificAttrs& a_specific(const Attrs* msg);
+  static void set_has_a_specific(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -6929,12 +6929,12 @@ class Attrs::_Internal {
 };
 
 const ::protobuf::mozilla::_foo::CommonAttrs&
-Attrs::_Internal::common(const Attrs* msg) {
-  return *msg->_impl_.common_;
+Attrs::_Internal::a_common(const Attrs* msg) {
+  return *msg->_impl_.a_common_;
 }
 const ::protobuf::mozilla::_foo::SpecificAttrs&
-Attrs::_Internal::specific(const Attrs* msg) {
-  return *msg->_impl_.specific_;
+Attrs::_Internal::a_specific(const Attrs* msg) {
+  return *msg->_impl_.a_specific_;
 }
 Attrs::Attrs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -6948,15 +6948,15 @@ Attrs::Attrs(const Attrs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.common_){nullptr}
-    , decltype(_impl_.specific_){nullptr}};
+    , decltype(_impl_.a_common_){nullptr}
+    , decltype(_impl_.a_specific_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_common()) {
-    _this->_impl_.common_ = new ::protobuf::mozilla::_foo::CommonAttrs(*from._impl_.common_);
+  if (from._internal_has_a_common()) {
+    _this->_impl_.a_common_ = new ::protobuf::mozilla::_foo::CommonAttrs(*from._impl_.a_common_);
   }
-  if (from._internal_has_specific()) {
-    _this->_impl_.specific_ = new ::protobuf::mozilla::_foo::SpecificAttrs(*from._impl_.specific_);
+  if (from._internal_has_a_specific()) {
+    _this->_impl_.a_specific_ = new ::protobuf::mozilla::_foo::SpecificAttrs(*from._impl_.a_specific_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.Attrs)
 }
@@ -6968,8 +6968,8 @@ inline void Attrs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.common_){nullptr}
-    , decltype(_impl_.specific_){nullptr}
+    , decltype(_impl_.a_common_){nullptr}
+    , decltype(_impl_.a_specific_){nullptr}
   };
 }
 
@@ -6984,8 +6984,8 @@ Attrs::~Attrs() {
 
 inline void Attrs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.common_;
-  if (this != internal_default_instance()) delete _impl_.specific_;
+  if (this != internal_default_instance()) delete _impl_.a_common_;
+  if (this != internal_default_instance()) delete _impl_.a_specific_;
 }
 
 void Attrs::SetCachedSize(int size) const {
@@ -7001,12 +7001,12 @@ void Attrs::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(_impl_.common_ != nullptr);
-      _impl_.common_->Clear();
+      GOOGLE_DCHECK(_impl_.a_common_ != nullptr);
+      _impl_.a_common_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.specific_ != nullptr);
-      _impl_.specific_->Clear();
+      GOOGLE_DCHECK(_impl_.a_specific_ != nullptr);
+      _impl_.a_specific_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -7020,18 +7020,18 @@ const char* Attrs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla._foo.CommonAttrs common = 1;
+      // required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_common(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_common(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla._foo.SpecificAttrs specific = 2;
+      // required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_specific(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_specific(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7067,18 +7067,18 @@ uint8_t* Attrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla._foo.CommonAttrs common = 1;
+  // required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::common(this),
-        _Internal::common(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_common(this),
+        _Internal::a_common(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla._foo.SpecificAttrs specific = 2;
+  // required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::specific(this),
-        _Internal::specific(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_specific(this),
+        _Internal::a_specific(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7093,18 +7093,18 @@ size_t Attrs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._foo.Attrs)
   size_t total_size = 0;
 
-  if (_internal_has_common()) {
-    // required .protobuf.mozilla._foo.CommonAttrs common = 1;
+  if (_internal_has_a_common()) {
+    // required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.common_);
+        *_impl_.a_common_);
   }
 
-  if (_internal_has_specific()) {
-    // required .protobuf.mozilla._foo.SpecificAttrs specific = 2;
+  if (_internal_has_a_specific()) {
+    // required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.specific_);
+        *_impl_.a_specific_);
   }
 
   return total_size;
@@ -7114,15 +7114,15 @@ size_t Attrs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla._foo.CommonAttrs common = 1;
+    // required .protobuf.mozilla._foo.CommonAttrs a_common = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.common_);
+        *_impl_.a_common_);
 
-    // required .protobuf.mozilla._foo.SpecificAttrs specific = 2;
+    // required .protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.specific_);
+        *_impl_.a_specific_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7155,12 +7155,12 @@ void Attrs::MergeFrom(const Attrs& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_common()->::protobuf::mozilla::_foo::CommonAttrs::MergeFrom(
-          from._internal_common());
+      _this->_internal_mutable_a_common()->::protobuf::mozilla::_foo::CommonAttrs::MergeFrom(
+          from._internal_a_common());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_specific()->::protobuf::mozilla::_foo::SpecificAttrs::MergeFrom(
-          from._internal_specific());
+      _this->_internal_mutable_a_specific()->::protobuf::mozilla::_foo::SpecificAttrs::MergeFrom(
+          from._internal_a_specific());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -7175,11 +7175,11 @@ void Attrs::CopyFrom(const Attrs& from) {
 
 bool Attrs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_common()) {
-    if (!_impl_.common_->IsInitialized()) return false;
+  if (_internal_has_a_common()) {
+    if (!_impl_.a_common_->IsInitialized()) return false;
   }
-  if (_internal_has_specific()) {
-    if (!_impl_.specific_->IsInitialized()) return false;
+  if (_internal_has_a_specific()) {
+    if (!_impl_.a_specific_->IsInitialized()) return false;
   }
   return true;
 }
@@ -7189,11 +7189,11 @@ void Attrs::InternalSwap(Attrs* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Attrs, _impl_.specific_)
-      + sizeof(Attrs::_impl_.specific_)
-      - PROTOBUF_FIELD_OFFSET(Attrs, _impl_.common_)>(
-          reinterpret_cast<char*>(&_impl_.common_),
-          reinterpret_cast<char*>(&other->_impl_.common_));
+      PROTOBUF_FIELD_OFFSET(Attrs, _impl_.a_specific_)
+      + sizeof(Attrs::_impl_.a_specific_)
+      - PROTOBUF_FIELD_OFFSET(Attrs, _impl_.a_common_)>(
+          reinterpret_cast<char*>(&_impl_.a_common_),
+          reinterpret_cast<char*>(&other->_impl_.a_common_));
 }
 
 std::string Attrs::GetTypeName() const {
@@ -7206,11 +7206,11 @@ std::string Attrs::GetTypeName() const {
 class SetAttrs::_Internal {
  public:
   using HasBits = decltype(std::declval<SetAttrs>()._impl_._has_bits_);
-  static void set_has_x(HasBits* has_bits) {
+  static void set_has_a_x(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::_foo::Attrs& attrs(const SetAttrs* msg);
-  static void set_has_attrs(HasBits* has_bits) {
+  static const ::protobuf::mozilla::_foo::Attrs& a_attrs(const SetAttrs* msg);
+  static void set_has_a_attrs(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -7219,8 +7219,8 @@ class SetAttrs::_Internal {
 };
 
 const ::protobuf::mozilla::_foo::Attrs&
-SetAttrs::_Internal::attrs(const SetAttrs* msg) {
-  return *msg->_impl_.attrs_;
+SetAttrs::_Internal::a_attrs(const SetAttrs* msg) {
+  return *msg->_impl_.a_attrs_;
 }
 SetAttrs::SetAttrs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -7234,20 +7234,20 @@ SetAttrs::SetAttrs(const SetAttrs& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.x_){}
-    , decltype(_impl_.attrs_){nullptr}};
+    , decltype(_impl_.a_x_){}
+    , decltype(_impl_.a_attrs_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.x_.InitDefault();
+  _impl_.a_x_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.x_.Set("", GetArenaForAllocation());
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_x()) {
-    _this->_impl_.x_.Set(from._internal_x(), 
+  if (from._internal_has_a_x()) {
+    _this->_impl_.a_x_.Set(from._internal_a_x(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_attrs()) {
-    _this->_impl_.attrs_ = new ::protobuf::mozilla::_foo::Attrs(*from._impl_.attrs_);
+  if (from._internal_has_a_attrs()) {
+    _this->_impl_.a_attrs_ = new ::protobuf::mozilla::_foo::Attrs(*from._impl_.a_attrs_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.SetAttrs)
 }
@@ -7259,12 +7259,12 @@ inline void SetAttrs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.x_){}
-    , decltype(_impl_.attrs_){nullptr}
+    , decltype(_impl_.a_x_){}
+    , decltype(_impl_.a_attrs_){nullptr}
   };
-  _impl_.x_.InitDefault();
+  _impl_.a_x_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.x_.Set("", GetArenaForAllocation());
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -7279,8 +7279,8 @@ SetAttrs::~SetAttrs() {
 
 inline void SetAttrs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.x_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.attrs_;
+  _impl_.a_x_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_attrs_;
 }
 
 void SetAttrs::SetCachedSize(int size) const {
@@ -7296,11 +7296,11 @@ void SetAttrs::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.x_.ClearNonDefaultToEmpty();
+      _impl_.a_x_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.attrs_ != nullptr);
-      _impl_.attrs_->Clear();
+      GOOGLE_DCHECK(_impl_.a_attrs_ != nullptr);
+      _impl_.a_attrs_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -7314,19 +7314,19 @@ const char* SetAttrs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes x = 1;
+      // required bytes a_x = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_x();
+          auto str = _internal_mutable_a_x();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla._foo.Attrs attrs = 2;
+      // required .protobuf.mozilla._foo.Attrs a_attrs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_attrs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_attrs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7362,17 +7362,17 @@ uint8_t* SetAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes x = 1;
+  // required bytes a_x = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_x(), target);
+        1, this->_internal_a_x(), target);
   }
 
-  // required .protobuf.mozilla._foo.Attrs attrs = 2;
+  // required .protobuf.mozilla._foo.Attrs a_attrs = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::attrs(this),
-        _Internal::attrs(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_attrs(this),
+        _Internal::a_attrs(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7387,18 +7387,18 @@ size_t SetAttrs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._foo.SetAttrs)
   size_t total_size = 0;
 
-  if (_internal_has_x()) {
-    // required bytes x = 1;
+  if (_internal_has_a_x()) {
+    // required bytes a_x = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_x());
+        this->_internal_a_x());
   }
 
-  if (_internal_has_attrs()) {
-    // required .protobuf.mozilla._foo.Attrs attrs = 2;
+  if (_internal_has_a_attrs()) {
+    // required .protobuf.mozilla._foo.Attrs a_attrs = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.attrs_);
+        *_impl_.a_attrs_);
   }
 
   return total_size;
@@ -7408,15 +7408,15 @@ size_t SetAttrs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes x = 1;
+    // required bytes a_x = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_x());
+        this->_internal_a_x());
 
-    // required .protobuf.mozilla._foo.Attrs attrs = 2;
+    // required .protobuf.mozilla._foo.Attrs a_attrs = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.attrs_);
+        *_impl_.a_attrs_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -7449,11 +7449,11 @@ void SetAttrs::MergeFrom(const SetAttrs& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_x(from._internal_x());
+      _this->_internal_set_a_x(from._internal_a_x());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_attrs()->::protobuf::mozilla::_foo::Attrs::MergeFrom(
-          from._internal_attrs());
+      _this->_internal_mutable_a_attrs()->::protobuf::mozilla::_foo::Attrs::MergeFrom(
+          from._internal_a_attrs());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -7468,8 +7468,8 @@ void SetAttrs::CopyFrom(const SetAttrs& from) {
 
 bool SetAttrs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_attrs()) {
-    if (!_impl_.attrs_->IsInitialized()) return false;
+  if (_internal_has_a_attrs()) {
+    if (!_impl_.a_attrs_->IsInitialized()) return false;
   }
   return true;
 }
@@ -7481,10 +7481,10 @@ void SetAttrs::InternalSwap(SetAttrs* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.x_, lhs_arena,
-      &other->_impl_.x_, rhs_arena
+      &_impl_.a_x_, lhs_arena,
+      &other->_impl_.a_x_, rhs_arena
   );
-  swap(_impl_.attrs_, other->_impl_.attrs_);
+  swap(_impl_.a_attrs_, other->_impl_.a_attrs_);
 }
 
 std::string SetAttrs::GetTypeName() const {
@@ -7496,27 +7496,27 @@ std::string SetAttrs::GetTypeName() const {
 
 class Op::_Internal {
  public:
-  static const ::protobuf::mozilla::_foo::SetAttrs& mvsetattrs(const Op* msg);
+  static const ::protobuf::mozilla::_foo::SetAttrs& a_mvsetattrs(const Op* msg);
 };
 
 const ::protobuf::mozilla::_foo::SetAttrs&
-Op::_Internal::mvsetattrs(const Op* msg) {
-  return *msg->_impl_.content_.mvsetattrs_;
+Op::_Internal::a_mvsetattrs(const Op* msg) {
+  return *msg->_impl_.content_.a_mvsetattrs_;
 }
-void Op::set_allocated_mvsetattrs(::protobuf::mozilla::_foo::SetAttrs* mvsetattrs) {
+void Op::set_allocated_a_mvsetattrs(::protobuf::mozilla::_foo::SetAttrs* a_mvsetattrs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsetattrs) {
+  if (a_mvsetattrs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsetattrs);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsetattrs);
     if (message_arena != submessage_arena) {
-      mvsetattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsetattrs, submessage_arena);
+      a_mvsetattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsetattrs, submessage_arena);
     }
-    set_has_mvsetattrs();
-    _impl_.content_.mvsetattrs_ = mvsetattrs;
+    set_has_a_mvsetattrs();
+    _impl_.content_.a_mvsetattrs_ = a_mvsetattrs;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Op.mVSetAttrs)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._foo.Op.a_mVSetAttrs)
 }
 Op::Op(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -7535,13 +7535,13 @@ Op::Op(const Op& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
-    case kMVSetAttrs: {
-      _this->_internal_mutable_mvsetattrs()->::protobuf::mozilla::_foo::SetAttrs::MergeFrom(
-          from._internal_mvsetattrs());
+    case kAMVSetAttrs: {
+      _this->_internal_mutable_a_mvsetattrs()->::protobuf::mozilla::_foo::SetAttrs::MergeFrom(
+          from._internal_a_mvsetattrs());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7586,13 +7586,13 @@ void Op::SetCachedSize(int size) const {
 void Op::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.Op)
   switch (content_case()) {
-    case kMVnullT: {
-      _impl_.content_.mvnull_t_.Destroy();
+    case kAMVnullT: {
+      _impl_.content_.a_mvnull_t_.Destroy();
       break;
     }
-    case kMVSetAttrs: {
+    case kAMVSetAttrs: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsetattrs_;
+        delete _impl_.content_.a_mvsetattrs_;
       }
       break;
     }
@@ -7620,19 +7620,19 @@ const char* Op::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVnull_t = 1;
+      // bytes a_mVnull_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvnull_t();
+          auto str = _internal_mutable_a_mvnull_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla._foo.SetAttrs mVSetAttrs = 2;
+      // .protobuf.mozilla._foo.SetAttrs a_mVSetAttrs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsetattrs(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsetattrs(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -7667,15 +7667,15 @@ uint8_t* Op::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVnullT: {
+    case kAMVnullT: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvnull_t(), target);
+          1, this->_internal_a_mvnull_t(), target);
       break;
     }
-    case kMVSetAttrs: {
+    case kAMVSetAttrs: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvsetattrs(this),
-          _Internal::mvsetattrs(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvsetattrs(this),
+          _Internal::a_mvsetattrs(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -7697,18 +7697,18 @@ size_t Op::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVnull_t = 1;
-    case kMVnullT: {
+    // bytes a_mVnull_t = 1;
+    case kAMVnullT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnull_t());
+          this->_internal_a_mvnull_t());
       break;
     }
-    // .protobuf.mozilla._foo.SetAttrs mVSetAttrs = 2;
-    case kMVSetAttrs: {
+    // .protobuf.mozilla._foo.SetAttrs a_mVSetAttrs = 2;
+    case kAMVSetAttrs: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsetattrs_);
+          *_impl_.content_.a_mvsetattrs_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7737,13 +7737,13 @@ void Op::MergeFrom(const Op& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVnullT: {
-      _this->_internal_set_mvnull_t(from._internal_mvnull_t());
+    case kAMVnullT: {
+      _this->_internal_set_a_mvnull_t(from._internal_a_mvnull_t());
       break;
     }
-    case kMVSetAttrs: {
-      _this->_internal_mutable_mvsetattrs()->::protobuf::mozilla::_foo::SetAttrs::MergeFrom(
-          from._internal_mvsetattrs());
+    case kAMVSetAttrs: {
+      _this->_internal_mutable_a_mvsetattrs()->::protobuf::mozilla::_foo::SetAttrs::MergeFrom(
+          from._internal_a_mvsetattrs());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -7762,12 +7762,12 @@ void Op::CopyFrom(const Op& from) {
 
 bool Op::IsInitialized() const {
   switch (content_case()) {
-    case kMVnullT: {
+    case kAMVnullT: {
       break;
     }
-    case kMVSetAttrs: {
-      if (_internal_has_mvsetattrs()) {
-        if (!_impl_.content_.mvsetattrs_->IsInitialized()) return false;
+    case kAMVSetAttrs: {
+      if (_internal_has_a_mvsetattrs()) {
+        if (!_impl_.content_.a_mvsetattrs_->IsInitialized()) return false;
       }
       break;
     }
@@ -7795,10 +7795,10 @@ std::string Op::GetTypeName() const {
 class ShmemStruct::_Internal {
  public:
   using HasBits = decltype(std::declval<ShmemStruct>()._impl_._has_bits_);
-  static void set_has_i(HasBits* has_bits) {
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_mem(HasBits* has_bits) {
+  static void set_has_a_mem(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -7818,19 +7818,19 @@ ShmemStruct::ShmemStruct(const ShmemStruct& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mem_){}
-    , decltype(_impl_.i_){}};
+    , decltype(_impl_.a_mem_){}
+    , decltype(_impl_.a_i_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.mem_.InitDefault();
+  _impl_.a_mem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mem_.Set("", GetArenaForAllocation());
+    _impl_.a_mem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mem()) {
-    _this->_impl_.mem_.Set(from._internal_mem(), 
+  if (from._internal_has_a_mem()) {
+    _this->_impl_.a_mem_.Set(from._internal_a_mem(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.i_ = from._impl_.i_;
+  _this->_impl_.a_i_ = from._impl_.a_i_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._foo.ShmemStruct)
 }
 
@@ -7841,12 +7841,12 @@ inline void ShmemStruct::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mem_){}
-    , decltype(_impl_.i_){0}
+    , decltype(_impl_.a_mem_){}
+    , decltype(_impl_.a_i_){0}
   };
-  _impl_.mem_.InitDefault();
+  _impl_.a_mem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mem_.Set("", GetArenaForAllocation());
+    _impl_.a_mem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -7861,7 +7861,7 @@ ShmemStruct::~ShmemStruct() {
 
 inline void ShmemStruct::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mem_.Destroy();
+  _impl_.a_mem_.Destroy();
 }
 
 void ShmemStruct::SetCachedSize(int size) const {
@@ -7876,9 +7876,9 @@ void ShmemStruct::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.mem_.ClearNonDefaultToEmpty();
+    _impl_.a_mem_.ClearNonDefaultToEmpty();
   }
-  _impl_.i_ = 0;
+  _impl_.a_i_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -7890,19 +7890,19 @@ const char* ShmemStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 i = 1;
+      // required sint32 a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_i(&has_bits);
-          _impl_.i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_i(&has_bits);
+          _impl_.a_i_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mem = 2;
+      // required bytes a_mem = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mem();
+          auto str = _internal_mutable_a_mem();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -7939,16 +7939,16 @@ uint8_t* ShmemStruct::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 i = 1;
+  // required sint32 a_i = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_i(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_i(), target);
   }
 
-  // required bytes mem = 2;
+  // required bytes a_mem = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_mem(), target);
+        2, this->_internal_a_mem(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -7963,16 +7963,16 @@ size_t ShmemStruct::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._foo.ShmemStruct)
   size_t total_size = 0;
 
-  if (_internal_has_mem()) {
-    // required bytes mem = 2;
+  if (_internal_has_a_mem()) {
+    // required bytes a_mem = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mem());
+        this->_internal_a_mem());
   }
 
-  if (_internal_has_i()) {
-    // required sint32 i = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+  if (_internal_has_a_i()) {
+    // required sint32 a_i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
   }
 
   return total_size;
@@ -7982,13 +7982,13 @@ size_t ShmemStruct::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes mem = 2;
+    // required bytes a_mem = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mem());
+        this->_internal_a_mem());
 
-    // required sint32 i = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_i());
+    // required sint32 a_i = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_i());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -8021,10 +8021,10 @@ void ShmemStruct::MergeFrom(const ShmemStruct& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_mem(from._internal_mem());
+      _this->_internal_set_a_mem(from._internal_a_mem());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.i_ = from._impl_.i_;
+      _this->_impl_.a_i_ = from._impl_.a_i_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -8050,10 +8050,10 @@ void ShmemStruct::InternalSwap(ShmemStruct* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mem_, lhs_arena,
-      &other->_impl_.mem_, rhs_arena
+      &_impl_.a_mem_, lhs_arena,
+      &other->_impl_.a_mem_, rhs_arena
   );
-  swap(_impl_.i_, other->_impl_.i_);
+  swap(_impl_.a_i_, other->_impl_.a_i_);
 }
 
 std::string ShmemStruct::GetTypeName() const {
@@ -8084,12 +8084,12 @@ ShmemUnion::ShmemUnion(const ShmemUnion& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
-    case kMVShmem: {
-      _this->_internal_set_mvshmem(from._internal_mvshmem());
+    case kAMVShmem: {
+      _this->_internal_set_a_mvshmem(from._internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -8134,12 +8134,12 @@ void ShmemUnion::SetCachedSize(int size) const {
 void ShmemUnion::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._foo.ShmemUnion)
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
-    case kMVShmem: {
-      _impl_.content_.mvshmem_.Destroy();
+    case kAMVShmem: {
+      _impl_.content_.a_mvshmem_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -8166,18 +8166,18 @@ const char* ShmemUnion::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // sint32 mVint = 1;
+      // sint32 a_mVint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVShmem = 2;
+      // bytes a_mVShmem = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvshmem();
+          auto str = _internal_mutable_a_mvshmem();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -8213,14 +8213,14 @@ uint8_t* ShmemUnion::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_mvint(), target);
       break;
     }
-    case kMVShmem: {
+    case kAMVShmem: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvshmem(), target);
+          2, this->_internal_a_mvshmem(), target);
       break;
     }
     default: ;
@@ -8242,16 +8242,16 @@ size_t ShmemUnion::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // sint32 mVint = 1;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 1;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
-    // bytes mVShmem = 2;
-    case kMVShmem: {
+    // bytes a_mVShmem = 2;
+    case kAMVShmem: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvshmem());
+          this->_internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -8280,12 +8280,12 @@ void ShmemUnion::MergeFrom(const ShmemUnion& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
-    case kMVShmem: {
-      _this->_internal_set_mvshmem(from._internal_mvshmem());
+    case kAMVShmem: {
+      _this->_internal_set_a_mvshmem(from._internal_a_mvshmem());
       break;
     }
     case CONTENT_NOT_SET: {

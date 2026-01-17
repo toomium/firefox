@@ -450,33 +450,33 @@ class Msg_Event final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kTypeFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kATypeFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 type = 2;
-  bool has_type() const;
+  // required uint32 a_type = 2;
+  bool has_a_type() const;
   private:
-  bool _internal_has_type() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_type();
-  uint32_t type() const;
-  void set_type(uint32_t value);
+  void clear_a_type();
+  uint32_t a_type() const;
+  void set_a_type(uint32_t value);
   private:
-  uint32_t _internal_type() const;
-  void _internal_set_type(uint32_t value);
+  uint32_t _internal_a_type() const;
+  void _internal_set_a_type(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_Event)
@@ -492,8 +492,8 @@ class Msg_Event final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint32_t type_;
+    uint64_t a_aid_;
+    uint32_t a_type_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -610,47 +610,47 @@ class Msg_StateChangeEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAStateFieldNumber = 2,
-    kAEnabledFieldNumber = 3,
+    kAAIDFieldNumber = 1,
+    kAAStateFieldNumber = 2,
+    kAAEnabledFieldNumber = 3,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required uint64 aState = 2;
-  bool has_astate() const;
-  private:
-  bool _internal_has_astate() const;
-  public:
-  void clear_astate();
-  uint64_t astate() const;
-  void set_astate(uint64_t value);
-  private:
-  uint64_t _internal_astate() const;
-  void _internal_set_astate(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required bool aEnabled = 3;
-  bool has_aenabled() const;
+  // required uint64 a_aState = 2;
+  bool has_a_astate() const;
   private:
-  bool _internal_has_aenabled() const;
+  bool _internal_has_a_astate() const;
   public:
-  void clear_aenabled();
-  bool aenabled() const;
-  void set_aenabled(bool value);
+  void clear_a_astate();
+  uint64_t a_astate() const;
+  void set_a_astate(uint64_t value);
   private:
-  bool _internal_aenabled() const;
-  void _internal_set_aenabled(bool value);
+  uint64_t _internal_a_astate() const;
+  void _internal_set_a_astate(uint64_t value);
+  public:
+
+  // required bool a_aEnabled = 3;
+  bool has_a_aenabled() const;
+  private:
+  bool _internal_has_a_aenabled() const;
+  public:
+  void clear_a_aenabled();
+  bool a_aenabled() const;
+  void set_a_aenabled(bool value);
+  private:
+  bool _internal_a_aenabled() const;
+  void _internal_set_a_aenabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent)
@@ -666,9 +666,9 @@ class Msg_StateChangeEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint64_t astate_;
-    bool aenabled_;
+    uint64_t a_aid_;
+    uint64_t a_astate_;
+    bool a_aenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -785,108 +785,108 @@ class Msg_CaretMoveEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACaretRectFieldNumber = 2,
-    kAIDFieldNumber = 1,
-    kAOffsetFieldNumber = 3,
-    kAIsSelectionCollapsedFieldNumber = 4,
-    kAIsAtEndOfLineFieldNumber = 5,
-    kAFromUserFieldNumber = 7,
-    kAGranularityFieldNumber = 6,
+    kAACaretRectFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAOffsetFieldNumber = 3,
+    kAAIsSelectionCollapsedFieldNumber = 4,
+    kAAIsAtEndOfLineFieldNumber = 5,
+    kAAFromUserFieldNumber = 7,
+    kAAGranularityFieldNumber = 6,
   };
-  // required bytes aCaretRect = 2;
-  bool has_acaretrect() const;
+  // required bytes a_aCaretRect = 2;
+  bool has_a_acaretrect() const;
   private:
-  bool _internal_has_acaretrect() const;
+  bool _internal_has_a_acaretrect() const;
   public:
-  void clear_acaretrect();
-  const std::string& acaretrect() const;
+  void clear_a_acaretrect();
+  const std::string& a_acaretrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acaretrect(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acaretrect();
-  PROTOBUF_NODISCARD std::string* release_acaretrect();
-  void set_allocated_acaretrect(std::string* acaretrect);
+  void set_a_acaretrect(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acaretrect();
+  PROTOBUF_NODISCARD std::string* release_a_acaretrect();
+  void set_allocated_a_acaretrect(std::string* a_acaretrect);
   private:
-  const std::string& _internal_acaretrect() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acaretrect(const std::string& value);
-  std::string* _internal_mutable_acaretrect();
+  const std::string& _internal_a_acaretrect() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acaretrect(const std::string& value);
+  std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required sint32 aOffset = 3;
-  bool has_aoffset() const;
-  private:
-  bool _internal_has_aoffset() const;
-  public:
-  void clear_aoffset();
-  int32_t aoffset() const;
-  void set_aoffset(int32_t value);
-  private:
-  int32_t _internal_aoffset() const;
-  void _internal_set_aoffset(int32_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required bool aIsSelectionCollapsed = 4;
-  bool has_aisselectioncollapsed() const;
+  // required sint32 a_aOffset = 3;
+  bool has_a_aoffset() const;
   private:
-  bool _internal_has_aisselectioncollapsed() const;
+  bool _internal_has_a_aoffset() const;
   public:
-  void clear_aisselectioncollapsed();
-  bool aisselectioncollapsed() const;
-  void set_aisselectioncollapsed(bool value);
+  void clear_a_aoffset();
+  int32_t a_aoffset() const;
+  void set_a_aoffset(int32_t value);
   private:
-  bool _internal_aisselectioncollapsed() const;
-  void _internal_set_aisselectioncollapsed(bool value);
-  public:
-
-  // required bool aIsAtEndOfLine = 5;
-  bool has_aisatendofline() const;
-  private:
-  bool _internal_has_aisatendofline() const;
-  public:
-  void clear_aisatendofline();
-  bool aisatendofline() const;
-  void set_aisatendofline(bool value);
-  private:
-  bool _internal_aisatendofline() const;
-  void _internal_set_aisatendofline(bool value);
+  int32_t _internal_a_aoffset() const;
+  void _internal_set_a_aoffset(int32_t value);
   public:
 
-  // required bool aFromUser = 7;
-  bool has_afromuser() const;
+  // required bool a_aIsSelectionCollapsed = 4;
+  bool has_a_aisselectioncollapsed() const;
   private:
-  bool _internal_has_afromuser() const;
+  bool _internal_has_a_aisselectioncollapsed() const;
   public:
-  void clear_afromuser();
-  bool afromuser() const;
-  void set_afromuser(bool value);
+  void clear_a_aisselectioncollapsed();
+  bool a_aisselectioncollapsed() const;
+  void set_a_aisselectioncollapsed(bool value);
   private:
-  bool _internal_afromuser() const;
-  void _internal_set_afromuser(bool value);
+  bool _internal_a_aisselectioncollapsed() const;
+  void _internal_set_a_aisselectioncollapsed(bool value);
   public:
 
-  // required sint32 aGranularity = 6;
-  bool has_agranularity() const;
+  // required bool a_aIsAtEndOfLine = 5;
+  bool has_a_aisatendofline() const;
   private:
-  bool _internal_has_agranularity() const;
+  bool _internal_has_a_aisatendofline() const;
   public:
-  void clear_agranularity();
-  int32_t agranularity() const;
-  void set_agranularity(int32_t value);
+  void clear_a_aisatendofline();
+  bool a_aisatendofline() const;
+  void set_a_aisatendofline(bool value);
   private:
-  int32_t _internal_agranularity() const;
-  void _internal_set_agranularity(int32_t value);
+  bool _internal_a_aisatendofline() const;
+  void _internal_set_a_aisatendofline(bool value);
+  public:
+
+  // required bool a_aFromUser = 7;
+  bool has_a_afromuser() const;
+  private:
+  bool _internal_has_a_afromuser() const;
+  public:
+  void clear_a_afromuser();
+  bool a_afromuser() const;
+  void set_a_afromuser(bool value);
+  private:
+  bool _internal_a_afromuser() const;
+  void _internal_set_a_afromuser(bool value);
+  public:
+
+  // required sint32 a_aGranularity = 6;
+  bool has_a_agranularity() const;
+  private:
+  bool _internal_has_a_agranularity() const;
+  public:
+  void clear_a_agranularity();
+  int32_t a_agranularity() const;
+  void set_a_agranularity(int32_t value);
+  private:
+  int32_t _internal_a_agranularity() const;
+  void _internal_set_a_agranularity(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent)
@@ -902,13 +902,13 @@ class Msg_CaretMoveEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acaretrect_;
-    uint64_t aid_;
-    int32_t aoffset_;
-    bool aisselectioncollapsed_;
-    bool aisatendofline_;
-    bool afromuser_;
-    int32_t agranularity_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acaretrect_;
+    uint64_t a_aid_;
+    int32_t a_aoffset_;
+    bool a_aisselectioncollapsed_;
+    bool a_aisatendofline_;
+    bool a_afromuser_;
+    int32_t a_agranularity_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1025,25 +1025,25 @@ class Msg_MutationEvents final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 1,
+    kAADataFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.a11y.MutationEventData aData = 1;
-  int adata_size() const;
+  // repeated .protobuf.mozilla.a11y.MutationEventData a_aData = 1;
+  int a_adata_size() const;
   private:
-  int _internal_adata_size() const;
+  int _internal_a_adata_size() const;
   public:
-  void clear_adata();
-  ::protobuf::mozilla::a11y::MutationEventData* mutable_adata(int index);
+  void clear_a_adata();
+  ::protobuf::mozilla::a11y::MutationEventData* mutable_a_adata(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::MutationEventData >*
-      mutable_adata();
+      mutable_a_adata();
   private:
-  const ::protobuf::mozilla::a11y::MutationEventData& _internal_adata(int index) const;
-  ::protobuf::mozilla::a11y::MutationEventData* _internal_add_adata();
+  const ::protobuf::mozilla::a11y::MutationEventData& _internal_a_adata(int index) const;
+  ::protobuf::mozilla::a11y::MutationEventData* _internal_add_a_adata();
   public:
-  const ::protobuf::mozilla::a11y::MutationEventData& adata(int index) const;
-  ::protobuf::mozilla::a11y::MutationEventData* add_adata();
+  const ::protobuf::mozilla::a11y::MutationEventData& a_adata(int index) const;
+  ::protobuf::mozilla::a11y::MutationEventData* add_a_adata();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::MutationEventData >&
-      adata() const;
+      a_adata() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents)
  private:
@@ -1053,7 +1053,7 @@ class Msg_MutationEvents final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::MutationEventData > adata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::MutationEventData > a_adata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1295,47 +1295,47 @@ class Msg_SelectionEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAWidgetIDFieldNumber = 2,
-    kATypeFieldNumber = 3,
+    kAAIDFieldNumber = 1,
+    kAAWidgetIDFieldNumber = 2,
+    kAATypeFieldNumber = 3,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required uint64 aWidgetID = 2;
-  bool has_awidgetid() const;
-  private:
-  bool _internal_has_awidgetid() const;
-  public:
-  void clear_awidgetid();
-  uint64_t awidgetid() const;
-  void set_awidgetid(uint64_t value);
-  private:
-  uint64_t _internal_awidgetid() const;
-  void _internal_set_awidgetid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 aType = 3;
-  bool has_atype() const;
+  // required uint64 a_aWidgetID = 2;
+  bool has_a_awidgetid() const;
   private:
-  bool _internal_has_atype() const;
+  bool _internal_has_a_awidgetid() const;
   public:
-  void clear_atype();
-  uint32_t atype() const;
-  void set_atype(uint32_t value);
+  void clear_a_awidgetid();
+  uint64_t a_awidgetid() const;
+  void set_a_awidgetid(uint64_t value);
   private:
-  uint32_t _internal_atype() const;
-  void _internal_set_atype(uint32_t value);
+  uint64_t _internal_a_awidgetid() const;
+  void _internal_set_a_awidgetid(uint64_t value);
+  public:
+
+  // required uint32 a_aType = 3;
+  bool has_a_atype() const;
+  private:
+  bool _internal_has_a_atype() const;
+  public:
+  void clear_a_atype();
+  uint32_t a_atype() const;
+  void set_a_atype(uint32_t value);
+  private:
+  uint32_t _internal_a_atype() const;
+  void _internal_set_a_atype(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent)
@@ -1351,9 +1351,9 @@ class Msg_SelectionEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint64_t awidgetid_;
-    uint32_t atype_;
+    uint64_t a_aid_;
+    uint64_t a_awidgetid_;
+    uint32_t a_atype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1470,38 +1470,38 @@ class Msg_RoleChangedEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARoleFieldNumber = 1,
-    kARoleMapEntryIndexFieldNumber = 2,
+    kAARoleFieldNumber = 1,
+    kAARoleMapEntryIndexFieldNumber = 2,
   };
-  // required bytes aRole = 1;
-  bool has_arole() const;
+  // required bytes a_aRole = 1;
+  bool has_a_arole() const;
   private:
-  bool _internal_has_arole() const;
+  bool _internal_has_a_arole() const;
   public:
-  void clear_arole();
-  const std::string& arole() const;
+  void clear_a_arole();
+  const std::string& a_arole() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arole(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arole();
-  PROTOBUF_NODISCARD std::string* release_arole();
-  void set_allocated_arole(std::string* arole);
+  void set_a_arole(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arole();
+  PROTOBUF_NODISCARD std::string* release_a_arole();
+  void set_allocated_a_arole(std::string* a_arole);
   private:
-  const std::string& _internal_arole() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arole(const std::string& value);
-  std::string* _internal_mutable_arole();
+  const std::string& _internal_a_arole() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arole(const std::string& value);
+  std::string* _internal_mutable_a_arole();
   public:
 
-  // required uint32 aRoleMapEntryIndex = 2;
-  bool has_arolemapentryindex() const;
+  // required uint32 a_aRoleMapEntryIndex = 2;
+  bool has_a_arolemapentryindex() const;
   private:
-  bool _internal_has_arolemapentryindex() const;
+  bool _internal_has_a_arolemapentryindex() const;
   public:
-  void clear_arolemapentryindex();
-  uint32_t arolemapentryindex() const;
-  void set_arolemapentryindex(uint32_t value);
+  void clear_a_arolemapentryindex();
+  uint32_t a_arolemapentryindex() const;
+  void set_a_arolemapentryindex(uint32_t value);
   private:
-  uint32_t _internal_arolemapentryindex() const;
-  void _internal_set_arolemapentryindex(uint32_t value);
+  uint32_t _internal_a_arolemapentryindex() const;
+  void _internal_set_a_arolemapentryindex(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent)
@@ -1517,8 +1517,8 @@ class Msg_RoleChangedEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arole_;
-    uint32_t arolemapentryindex_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arole_;
+    uint32_t a_arolemapentryindex_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1635,38 +1635,38 @@ class Msg_FocusEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACaretRectFieldNumber = 2,
-    kAIDFieldNumber = 1,
+    kAACaretRectFieldNumber = 2,
+    kAAIDFieldNumber = 1,
   };
-  // required bytes aCaretRect = 2;
-  bool has_acaretrect() const;
+  // required bytes a_aCaretRect = 2;
+  bool has_a_acaretrect() const;
   private:
-  bool _internal_has_acaretrect() const;
+  bool _internal_has_a_acaretrect() const;
   public:
-  void clear_acaretrect();
-  const std::string& acaretrect() const;
+  void clear_a_acaretrect();
+  const std::string& a_acaretrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acaretrect(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acaretrect();
-  PROTOBUF_NODISCARD std::string* release_acaretrect();
-  void set_allocated_acaretrect(std::string* acaretrect);
+  void set_a_acaretrect(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acaretrect();
+  PROTOBUF_NODISCARD std::string* release_a_acaretrect();
+  void set_allocated_a_acaretrect(std::string* a_acaretrect);
   private:
-  const std::string& _internal_acaretrect() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acaretrect(const std::string& value);
-  std::string* _internal_mutable_acaretrect();
+  const std::string& _internal_a_acaretrect() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acaretrect(const std::string& value);
+  std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent)
@@ -1682,8 +1682,8 @@ class Msg_FocusEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acaretrect_;
-    uint64_t aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acaretrect_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1800,89 +1800,89 @@ class Msg_ScrollingEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kATypeFieldNumber = 2,
-    kAScrollXFieldNumber = 3,
-    kAScrollYFieldNumber = 4,
-    kAMaxScrollXFieldNumber = 5,
-    kAMaxScrollYFieldNumber = 6,
+    kAAIDFieldNumber = 1,
+    kAATypeFieldNumber = 2,
+    kAAScrollXFieldNumber = 3,
+    kAAScrollYFieldNumber = 4,
+    kAAMaxScrollXFieldNumber = 5,
+    kAAMaxScrollYFieldNumber = 6,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required uint64 aType = 2;
-  bool has_atype() const;
-  private:
-  bool _internal_has_atype() const;
-  public:
-  void clear_atype();
-  uint64_t atype() const;
-  void set_atype(uint64_t value);
-  private:
-  uint64_t _internal_atype() const;
-  void _internal_set_atype(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 aScrollX = 3;
-  bool has_ascrollx() const;
+  // required uint64 a_aType = 2;
+  bool has_a_atype() const;
   private:
-  bool _internal_has_ascrollx() const;
+  bool _internal_has_a_atype() const;
   public:
-  void clear_ascrollx();
-  uint32_t ascrollx() const;
-  void set_ascrollx(uint32_t value);
+  void clear_a_atype();
+  uint64_t a_atype() const;
+  void set_a_atype(uint64_t value);
   private:
-  uint32_t _internal_ascrollx() const;
-  void _internal_set_ascrollx(uint32_t value);
-  public:
-
-  // required uint32 aScrollY = 4;
-  bool has_ascrolly() const;
-  private:
-  bool _internal_has_ascrolly() const;
-  public:
-  void clear_ascrolly();
-  uint32_t ascrolly() const;
-  void set_ascrolly(uint32_t value);
-  private:
-  uint32_t _internal_ascrolly() const;
-  void _internal_set_ascrolly(uint32_t value);
+  uint64_t _internal_a_atype() const;
+  void _internal_set_a_atype(uint64_t value);
   public:
 
-  // required uint32 aMaxScrollX = 5;
-  bool has_amaxscrollx() const;
+  // required uint32 a_aScrollX = 3;
+  bool has_a_ascrollx() const;
   private:
-  bool _internal_has_amaxscrollx() const;
+  bool _internal_has_a_ascrollx() const;
   public:
-  void clear_amaxscrollx();
-  uint32_t amaxscrollx() const;
-  void set_amaxscrollx(uint32_t value);
+  void clear_a_ascrollx();
+  uint32_t a_ascrollx() const;
+  void set_a_ascrollx(uint32_t value);
   private:
-  uint32_t _internal_amaxscrollx() const;
-  void _internal_set_amaxscrollx(uint32_t value);
+  uint32_t _internal_a_ascrollx() const;
+  void _internal_set_a_ascrollx(uint32_t value);
   public:
 
-  // required uint32 aMaxScrollY = 6;
-  bool has_amaxscrolly() const;
+  // required uint32 a_aScrollY = 4;
+  bool has_a_ascrolly() const;
   private:
-  bool _internal_has_amaxscrolly() const;
+  bool _internal_has_a_ascrolly() const;
   public:
-  void clear_amaxscrolly();
-  uint32_t amaxscrolly() const;
-  void set_amaxscrolly(uint32_t value);
+  void clear_a_ascrolly();
+  uint32_t a_ascrolly() const;
+  void set_a_ascrolly(uint32_t value);
   private:
-  uint32_t _internal_amaxscrolly() const;
-  void _internal_set_amaxscrolly(uint32_t value);
+  uint32_t _internal_a_ascrolly() const;
+  void _internal_set_a_ascrolly(uint32_t value);
+  public:
+
+  // required uint32 a_aMaxScrollX = 5;
+  bool has_a_amaxscrollx() const;
+  private:
+  bool _internal_has_a_amaxscrollx() const;
+  public:
+  void clear_a_amaxscrollx();
+  uint32_t a_amaxscrollx() const;
+  void set_a_amaxscrollx(uint32_t value);
+  private:
+  uint32_t _internal_a_amaxscrollx() const;
+  void _internal_set_a_amaxscrollx(uint32_t value);
+  public:
+
+  // required uint32 a_aMaxScrollY = 6;
+  bool has_a_amaxscrolly() const;
+  private:
+  bool _internal_has_a_amaxscrolly() const;
+  public:
+  void clear_a_amaxscrolly();
+  uint32_t a_amaxscrolly() const;
+  void set_a_amaxscrolly(uint32_t value);
+  private:
+  uint32_t _internal_a_amaxscrolly() const;
+  void _internal_set_a_amaxscrolly(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent)
@@ -1898,12 +1898,12 @@ class Msg_ScrollingEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint64_t atype_;
-    uint32_t ascrollx_;
-    uint32_t ascrolly_;
-    uint32_t amaxscrollx_;
-    uint32_t amaxscrolly_;
+    uint64_t a_aid_;
+    uint64_t a_atype_;
+    uint32_t a_ascrollx_;
+    uint32_t a_ascrolly_;
+    uint32_t a_amaxscrollx_;
+    uint32_t a_amaxscrolly_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2020,52 +2020,52 @@ class Msg_AnnouncementEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAnnouncementFieldNumber = 2,
-    kAIDFieldNumber = 1,
-    kAPriorityFieldNumber = 3,
+    kAAAnnouncementFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAPriorityFieldNumber = 3,
   };
-  // required bytes aAnnouncement = 2;
-  bool has_aannouncement() const;
+  // required bytes a_aAnnouncement = 2;
+  bool has_a_aannouncement() const;
   private:
-  bool _internal_has_aannouncement() const;
+  bool _internal_has_a_aannouncement() const;
   public:
-  void clear_aannouncement();
-  const std::string& aannouncement() const;
+  void clear_a_aannouncement();
+  const std::string& a_aannouncement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aannouncement(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aannouncement();
-  PROTOBUF_NODISCARD std::string* release_aannouncement();
-  void set_allocated_aannouncement(std::string* aannouncement);
+  void set_a_aannouncement(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aannouncement();
+  PROTOBUF_NODISCARD std::string* release_a_aannouncement();
+  void set_allocated_a_aannouncement(std::string* a_aannouncement);
   private:
-  const std::string& _internal_aannouncement() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aannouncement(const std::string& value);
-  std::string* _internal_mutable_aannouncement();
+  const std::string& _internal_a_aannouncement() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aannouncement(const std::string& value);
+  std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 aPriority = 3;
-  bool has_apriority() const;
+  // required uint32 a_aPriority = 3;
+  bool has_a_apriority() const;
   private:
-  bool _internal_has_apriority() const;
+  bool _internal_has_a_apriority() const;
   public:
-  void clear_apriority();
-  uint32_t apriority() const;
-  void set_apriority(uint32_t value);
+  void clear_a_apriority();
+  uint32_t a_apriority() const;
+  void set_a_apriority(uint32_t value);
   private:
-  uint32_t _internal_apriority() const;
-  void _internal_set_apriority(uint32_t value);
+  uint32_t _internal_a_apriority() const;
+  void _internal_set_a_apriority(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent)
@@ -2081,9 +2081,9 @@ class Msg_AnnouncementEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aannouncement_;
-    uint64_t aid_;
-    uint32_t apriority_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aannouncement_;
+    uint64_t a_aid_;
+    uint32_t a_apriority_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2200,38 +2200,38 @@ class Msg_TextSelectionChangeEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASelectionFieldNumber = 2,
-    kAIDFieldNumber = 1,
+    kAASelectionFieldNumber = 2,
+    kAAIDFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.a11y.TextRangeData aSelection = 2;
-  int aselection_size() const;
+  // repeated .protobuf.mozilla.a11y.TextRangeData a_aSelection = 2;
+  int a_aselection_size() const;
   private:
-  int _internal_aselection_size() const;
+  int _internal_a_aselection_size() const;
   public:
-  void clear_aselection();
-  ::protobuf::mozilla::a11y::TextRangeData* mutable_aselection(int index);
+  void clear_a_aselection();
+  ::protobuf::mozilla::a11y::TextRangeData* mutable_a_aselection(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >*
-      mutable_aselection();
+      mutable_a_aselection();
   private:
-  const ::protobuf::mozilla::a11y::TextRangeData& _internal_aselection(int index) const;
-  ::protobuf::mozilla::a11y::TextRangeData* _internal_add_aselection();
+  const ::protobuf::mozilla::a11y::TextRangeData& _internal_a_aselection(int index) const;
+  ::protobuf::mozilla::a11y::TextRangeData* _internal_add_a_aselection();
   public:
-  const ::protobuf::mozilla::a11y::TextRangeData& aselection(int index) const;
-  ::protobuf::mozilla::a11y::TextRangeData* add_aselection();
+  const ::protobuf::mozilla::a11y::TextRangeData& a_aselection(int index) const;
+  ::protobuf::mozilla::a11y::TextRangeData* add_a_aselection();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >&
-      aselection() const;
+      a_aselection() const;
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent)
@@ -2244,8 +2244,8 @@ class Msg_TextSelectionChangeEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData > aselection_;
-    uint64_t aid_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData > a_aselection_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2362,38 +2362,38 @@ class Msg_BindChildDoc final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAChildDocFieldNumber = 1,
-    kAIDFieldNumber = 2,
+    kAAChildDocFieldNumber = 1,
+    kAAIDFieldNumber = 2,
   };
-  // required bytes aChildDoc = 1;
-  bool has_achilddoc() const;
+  // required bytes a_aChildDoc = 1;
+  bool has_a_achilddoc() const;
   private:
-  bool _internal_has_achilddoc() const;
+  bool _internal_has_a_achilddoc() const;
   public:
-  void clear_achilddoc();
-  const std::string& achilddoc() const;
+  void clear_a_achilddoc();
+  const std::string& a_achilddoc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_achilddoc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_achilddoc();
-  PROTOBUF_NODISCARD std::string* release_achilddoc();
-  void set_allocated_achilddoc(std::string* achilddoc);
+  void set_a_achilddoc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_achilddoc();
+  PROTOBUF_NODISCARD std::string* release_a_achilddoc();
+  void set_allocated_a_achilddoc(std::string* a_achilddoc);
   private:
-  const std::string& _internal_achilddoc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_achilddoc(const std::string& value);
-  std::string* _internal_mutable_achilddoc();
+  const std::string& _internal_a_achilddoc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_achilddoc(const std::string& value);
+  std::string* _internal_mutable_a_achilddoc();
   public:
 
-  // required uint64 aID = 2;
-  bool has_aid() const;
+  // required uint64 a_aID = 2;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc)
@@ -2409,8 +2409,8 @@ class Msg_BindChildDoc final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr achilddoc_;
-    uint64_t aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_achilddoc_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2527,43 +2527,43 @@ class Msg_Cache final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 2,
-    kAUpdateTypeFieldNumber = 1,
+    kAADataFieldNumber = 2,
+    kAAUpdateTypeFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.a11y.CacheData aData = 2;
-  int adata_size() const;
+  // repeated .protobuf.mozilla.a11y.CacheData a_aData = 2;
+  int a_adata_size() const;
   private:
-  int _internal_adata_size() const;
+  int _internal_a_adata_size() const;
   public:
-  void clear_adata();
-  ::protobuf::mozilla::a11y::CacheData* mutable_adata(int index);
+  void clear_a_adata();
+  ::protobuf::mozilla::a11y::CacheData* mutable_a_adata(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >*
-      mutable_adata();
+      mutable_a_adata();
   private:
-  const ::protobuf::mozilla::a11y::CacheData& _internal_adata(int index) const;
-  ::protobuf::mozilla::a11y::CacheData* _internal_add_adata();
+  const ::protobuf::mozilla::a11y::CacheData& _internal_a_adata(int index) const;
+  ::protobuf::mozilla::a11y::CacheData* _internal_add_a_adata();
   public:
-  const ::protobuf::mozilla::a11y::CacheData& adata(int index) const;
-  ::protobuf::mozilla::a11y::CacheData* add_adata();
+  const ::protobuf::mozilla::a11y::CacheData& a_adata(int index) const;
+  ::protobuf::mozilla::a11y::CacheData* add_a_adata();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >&
-      adata() const;
+      a_adata() const;
 
-  // required bytes aUpdateType = 1;
-  bool has_aupdatetype() const;
+  // required bytes a_aUpdateType = 1;
+  bool has_a_aupdatetype() const;
   private:
-  bool _internal_has_aupdatetype() const;
+  bool _internal_has_a_aupdatetype() const;
   public:
-  void clear_aupdatetype();
-  const std::string& aupdatetype() const;
+  void clear_a_aupdatetype();
+  const std::string& a_aupdatetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aupdatetype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aupdatetype();
-  PROTOBUF_NODISCARD std::string* release_aupdatetype();
-  void set_allocated_aupdatetype(std::string* aupdatetype);
+  void set_a_aupdatetype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aupdatetype();
+  PROTOBUF_NODISCARD std::string* release_a_aupdatetype();
+  void set_allocated_a_aupdatetype(std::string* a_aupdatetype);
   private:
-  const std::string& _internal_aupdatetype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aupdatetype(const std::string& value);
-  std::string* _internal_mutable_aupdatetype();
+  const std::string& _internal_a_aupdatetype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aupdatetype(const std::string& value);
+  std::string* _internal_mutable_a_aupdatetype();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache)
@@ -2576,8 +2576,8 @@ class Msg_Cache final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData > adata_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aupdatetype_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData > a_adata_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aupdatetype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2694,52 +2694,52 @@ class Msg_SelectedAccessiblesChanged final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASelectedIDsFieldNumber = 1,
-    kAUnselectedIDsFieldNumber = 2,
+    kAASelectedIDsFieldNumber = 1,
+    kAAUnselectedIDsFieldNumber = 2,
   };
-  // repeated uint64 aSelectedIDs = 1;
-  int aselectedids_size() const;
+  // repeated uint64 a_aSelectedIDs = 1;
+  int a_aselectedids_size() const;
   private:
-  int _internal_aselectedids_size() const;
+  int _internal_a_aselectedids_size() const;
   public:
-  void clear_aselectedids();
+  void clear_a_aselectedids();
   private:
-  uint64_t _internal_aselectedids(int index) const;
+  uint64_t _internal_a_aselectedids(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_aselectedids() const;
-  void _internal_add_aselectedids(uint64_t value);
+      _internal_a_aselectedids() const;
+  void _internal_add_a_aselectedids(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_aselectedids();
+      _internal_mutable_a_aselectedids();
   public:
-  uint64_t aselectedids(int index) const;
-  void set_aselectedids(int index, uint64_t value);
-  void add_aselectedids(uint64_t value);
+  uint64_t a_aselectedids(int index) const;
+  void set_a_aselectedids(int index, uint64_t value);
+  void add_a_aselectedids(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      aselectedids() const;
+      a_aselectedids() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_aselectedids();
+      mutable_a_aselectedids();
 
-  // repeated uint64 aUnselectedIDs = 2;
-  int aunselectedids_size() const;
+  // repeated uint64 a_aUnselectedIDs = 2;
+  int a_aunselectedids_size() const;
   private:
-  int _internal_aunselectedids_size() const;
+  int _internal_a_aunselectedids_size() const;
   public:
-  void clear_aunselectedids();
+  void clear_a_aunselectedids();
   private:
-  uint64_t _internal_aunselectedids(int index) const;
+  uint64_t _internal_a_aunselectedids(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_aunselectedids() const;
-  void _internal_add_aunselectedids(uint64_t value);
+      _internal_a_aunselectedids() const;
+  void _internal_add_a_aunselectedids(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_aunselectedids();
+      _internal_mutable_a_aunselectedids();
   public:
-  uint64_t aunselectedids(int index) const;
-  void set_aunselectedids(int index, uint64_t value);
-  void add_aunselectedids(uint64_t value);
+  uint64_t a_aunselectedids(int index) const;
+  void set_a_aunselectedids(int index, uint64_t value);
+  void add_a_aunselectedids(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      aunselectedids() const;
+      a_aunselectedids() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_aunselectedids();
+      mutable_a_aunselectedids();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged)
  private:
@@ -2749,8 +2749,8 @@ class Msg_SelectedAccessiblesChanged final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > aselectedids_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > aunselectedids_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aselectedids_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aunselectedids_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2868,29 +2868,29 @@ class Msg_AccessiblesWillMove final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDsFieldNumber = 1,
+    kAAIDsFieldNumber = 1,
   };
-  // repeated uint64 aIDs = 1;
-  int aids_size() const;
+  // repeated uint64 a_aIDs = 1;
+  int a_aids_size() const;
   private:
-  int _internal_aids_size() const;
+  int _internal_a_aids_size() const;
   public:
-  void clear_aids();
+  void clear_a_aids();
   private:
-  uint64_t _internal_aids(int index) const;
+  uint64_t _internal_a_aids(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_aids() const;
-  void _internal_add_aids(uint64_t value);
+      _internal_a_aids() const;
+  void _internal_add_a_aids(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_aids();
+      _internal_mutable_a_aids();
   public:
-  uint64_t aids(int index) const;
-  void set_aids(int index, uint64_t value);
-  void add_aids(uint64_t value);
+  uint64_t a_aids(int index) const;
+  void set_a_aids(int index, uint64_t value);
+  void add_a_aids(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      aids() const;
+      a_aids() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_aids();
+      mutable_a_aids();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove)
  private:
@@ -2900,7 +2900,7 @@ class Msg_AccessiblesWillMove final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > aids_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aids_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3390,33 +3390,33 @@ class Msg_ScrollTo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAScrollTypeFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAScrollTypeFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 aScrollType = 2;
-  bool has_ascrolltype() const;
+  // required uint32 a_aScrollType = 2;
+  bool has_a_ascrolltype() const;
   private:
-  bool _internal_has_ascrolltype() const;
+  bool _internal_has_a_ascrolltype() const;
   public:
-  void clear_ascrolltype();
-  uint32_t ascrolltype() const;
-  void set_ascrolltype(uint32_t value);
+  void clear_a_ascrolltype();
+  uint32_t a_ascrolltype() const;
+  void set_a_ascrolltype(uint32_t value);
   private:
-  uint32_t _internal_ascrolltype() const;
-  void _internal_set_ascrolltype(uint32_t value);
+  uint32_t _internal_a_ascrolltype() const;
+  void _internal_set_a_ascrolltype(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo)
@@ -3432,8 +3432,8 @@ class Msg_ScrollTo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint32_t ascrolltype_;
+    uint64_t a_aid_;
+    uint32_t a_ascrolltype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3550,61 +3550,61 @@ class Msg_ScrollToPoint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAScrollTypeFieldNumber = 2,
-    kAXFieldNumber = 3,
-    kAYFieldNumber = 4,
+    kAAIDFieldNumber = 1,
+    kAAScrollTypeFieldNumber = 2,
+    kAAXFieldNumber = 3,
+    kAAYFieldNumber = 4,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required uint32 aScrollType = 2;
-  bool has_ascrolltype() const;
-  private:
-  bool _internal_has_ascrolltype() const;
-  public:
-  void clear_ascrolltype();
-  uint32_t ascrolltype() const;
-  void set_ascrolltype(uint32_t value);
-  private:
-  uint32_t _internal_ascrolltype() const;
-  void _internal_set_ascrolltype(uint32_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aX = 3;
-  bool has_ax() const;
+  // required uint32 a_aScrollType = 2;
+  bool has_a_ascrolltype() const;
   private:
-  bool _internal_has_ax() const;
+  bool _internal_has_a_ascrolltype() const;
   public:
-  void clear_ax();
-  int32_t ax() const;
-  void set_ax(int32_t value);
+  void clear_a_ascrolltype();
+  uint32_t a_ascrolltype() const;
+  void set_a_ascrolltype(uint32_t value);
   private:
-  int32_t _internal_ax() const;
-  void _internal_set_ax(int32_t value);
+  uint32_t _internal_a_ascrolltype() const;
+  void _internal_set_a_ascrolltype(uint32_t value);
   public:
 
-  // required sint32 aY = 4;
-  bool has_ay() const;
+  // required sint32 a_aX = 3;
+  bool has_a_ax() const;
   private:
-  bool _internal_has_ay() const;
+  bool _internal_has_a_ax() const;
   public:
-  void clear_ay();
-  int32_t ay() const;
-  void set_ay(int32_t value);
+  void clear_a_ax();
+  int32_t a_ax() const;
+  void set_a_ax(int32_t value);
   private:
-  int32_t _internal_ay() const;
-  void _internal_set_ay(int32_t value);
+  int32_t _internal_a_ax() const;
+  void _internal_set_a_ax(int32_t value);
+  public:
+
+  // required sint32 a_aY = 4;
+  bool has_a_ay() const;
+  private:
+  bool _internal_has_a_ay() const;
+  public:
+  void clear_a_ay();
+  int32_t a_ay() const;
+  void set_a_ay(int32_t value);
+  private:
+  int32_t _internal_a_ay() const;
+  void _internal_set_a_ay(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint)
@@ -3620,10 +3620,10 @@ class Msg_ScrollToPoint final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint32_t ascrolltype_;
-    int32_t ax_;
-    int32_t ay_;
+    uint64_t a_aid_;
+    uint32_t a_ascrolltype_;
+    int32_t a_ax_;
+    int32_t a_ay_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3740,52 +3740,52 @@ class Msg_Announce final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAnnouncementFieldNumber = 2,
-    kAIDFieldNumber = 1,
-    kAPriorityFieldNumber = 3,
+    kAAAnnouncementFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAPriorityFieldNumber = 3,
   };
-  // required bytes aAnnouncement = 2;
-  bool has_aannouncement() const;
+  // required bytes a_aAnnouncement = 2;
+  bool has_a_aannouncement() const;
   private:
-  bool _internal_has_aannouncement() const;
+  bool _internal_has_a_aannouncement() const;
   public:
-  void clear_aannouncement();
-  const std::string& aannouncement() const;
+  void clear_a_aannouncement();
+  const std::string& a_aannouncement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aannouncement(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aannouncement();
-  PROTOBUF_NODISCARD std::string* release_aannouncement();
-  void set_allocated_aannouncement(std::string* aannouncement);
+  void set_a_aannouncement(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aannouncement();
+  PROTOBUF_NODISCARD std::string* release_a_aannouncement();
+  void set_allocated_a_aannouncement(std::string* a_aannouncement);
   private:
-  const std::string& _internal_aannouncement() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aannouncement(const std::string& value);
-  std::string* _internal_mutable_aannouncement();
+  const std::string& _internal_a_aannouncement() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aannouncement(const std::string& value);
+  std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 aPriority = 3;
-  bool has_apriority() const;
+  // required uint32 a_aPriority = 3;
+  bool has_a_apriority() const;
   private:
-  bool _internal_has_apriority() const;
+  bool _internal_has_a_apriority() const;
   public:
-  void clear_apriority();
-  uint32_t apriority() const;
-  void set_apriority(uint32_t value);
+  void clear_a_apriority();
+  uint32_t a_apriority() const;
+  void set_a_apriority(uint32_t value);
   private:
-  uint32_t _internal_apriority() const;
-  void _internal_set_apriority(uint32_t value);
+  uint32_t _internal_a_apriority() const;
+  void _internal_set_a_apriority(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce)
@@ -3801,9 +3801,9 @@ class Msg_Announce final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aannouncement_;
-    uint64_t aid_;
-    uint32_t apriority_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aannouncement_;
+    uint64_t a_aid_;
+    uint32_t a_apriority_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3920,89 +3920,89 @@ class Msg_SetTextSelection final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStartIDFieldNumber = 1,
-    kAEndIDFieldNumber = 3,
-    kAStartOffsetFieldNumber = 2,
-    kAEndOffsetFieldNumber = 4,
-    kASelectionNumFieldNumber = 5,
-    kASetFocusFieldNumber = 6,
+    kAAStartIDFieldNumber = 1,
+    kAAEndIDFieldNumber = 3,
+    kAAStartOffsetFieldNumber = 2,
+    kAAEndOffsetFieldNumber = 4,
+    kAASelectionNumFieldNumber = 5,
+    kAASetFocusFieldNumber = 6,
   };
-  // required uint64 aStartID = 1;
-  bool has_astartid() const;
+  // required uint64 a_aStartID = 1;
+  bool has_a_astartid() const;
   private:
-  bool _internal_has_astartid() const;
+  bool _internal_has_a_astartid() const;
   public:
-  void clear_astartid();
-  uint64_t astartid() const;
-  void set_astartid(uint64_t value);
+  void clear_a_astartid();
+  uint64_t a_astartid() const;
+  void set_a_astartid(uint64_t value);
   private:
-  uint64_t _internal_astartid() const;
-  void _internal_set_astartid(uint64_t value);
-  public:
-
-  // required uint64 aEndID = 3;
-  bool has_aendid() const;
-  private:
-  bool _internal_has_aendid() const;
-  public:
-  void clear_aendid();
-  uint64_t aendid() const;
-  void set_aendid(uint64_t value);
-  private:
-  uint64_t _internal_aendid() const;
-  void _internal_set_aendid(uint64_t value);
+  uint64_t _internal_a_astartid() const;
+  void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // required sint32 aStartOffset = 2;
-  bool has_astartoffset() const;
+  // required uint64 a_aEndID = 3;
+  bool has_a_aendid() const;
   private:
-  bool _internal_has_astartoffset() const;
+  bool _internal_has_a_aendid() const;
   public:
-  void clear_astartoffset();
-  int32_t astartoffset() const;
-  void set_astartoffset(int32_t value);
+  void clear_a_aendid();
+  uint64_t a_aendid() const;
+  void set_a_aendid(uint64_t value);
   private:
-  int32_t _internal_astartoffset() const;
-  void _internal_set_astartoffset(int32_t value);
-  public:
-
-  // required sint32 aEndOffset = 4;
-  bool has_aendoffset() const;
-  private:
-  bool _internal_has_aendoffset() const;
-  public:
-  void clear_aendoffset();
-  int32_t aendoffset() const;
-  void set_aendoffset(int32_t value);
-  private:
-  int32_t _internal_aendoffset() const;
-  void _internal_set_aendoffset(int32_t value);
+  uint64_t _internal_a_aendid() const;
+  void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // required sint32 aSelectionNum = 5;
-  bool has_aselectionnum() const;
+  // required sint32 a_aStartOffset = 2;
+  bool has_a_astartoffset() const;
   private:
-  bool _internal_has_aselectionnum() const;
+  bool _internal_has_a_astartoffset() const;
   public:
-  void clear_aselectionnum();
-  int32_t aselectionnum() const;
-  void set_aselectionnum(int32_t value);
+  void clear_a_astartoffset();
+  int32_t a_astartoffset() const;
+  void set_a_astartoffset(int32_t value);
   private:
-  int32_t _internal_aselectionnum() const;
-  void _internal_set_aselectionnum(int32_t value);
+  int32_t _internal_a_astartoffset() const;
+  void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required bool aSetFocus = 6;
-  bool has_asetfocus() const;
+  // required sint32 a_aEndOffset = 4;
+  bool has_a_aendoffset() const;
   private:
-  bool _internal_has_asetfocus() const;
+  bool _internal_has_a_aendoffset() const;
   public:
-  void clear_asetfocus();
-  bool asetfocus() const;
-  void set_asetfocus(bool value);
+  void clear_a_aendoffset();
+  int32_t a_aendoffset() const;
+  void set_a_aendoffset(int32_t value);
   private:
-  bool _internal_asetfocus() const;
-  void _internal_set_asetfocus(bool value);
+  int32_t _internal_a_aendoffset() const;
+  void _internal_set_a_aendoffset(int32_t value);
+  public:
+
+  // required sint32 a_aSelectionNum = 5;
+  bool has_a_aselectionnum() const;
+  private:
+  bool _internal_has_a_aselectionnum() const;
+  public:
+  void clear_a_aselectionnum();
+  int32_t a_aselectionnum() const;
+  void set_a_aselectionnum(int32_t value);
+  private:
+  int32_t _internal_a_aselectionnum() const;
+  void _internal_set_a_aselectionnum(int32_t value);
+  public:
+
+  // required bool a_aSetFocus = 6;
+  bool has_a_asetfocus() const;
+  private:
+  bool _internal_has_a_asetfocus() const;
+  public:
+  void clear_a_asetfocus();
+  bool a_asetfocus() const;
+  void set_a_asetfocus(bool value);
+  private:
+  bool _internal_a_asetfocus() const;
+  void _internal_set_a_asetfocus(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection)
@@ -4018,12 +4018,12 @@ class Msg_SetTextSelection final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t astartid_;
-    uint64_t aendid_;
-    int32_t astartoffset_;
-    int32_t aendoffset_;
-    int32_t aselectionnum_;
-    bool asetfocus_;
+    uint64_t a_astartid_;
+    uint64_t a_aendid_;
+    int32_t a_astartoffset_;
+    int32_t a_aendoffset_;
+    int32_t a_aselectionnum_;
+    bool a_asetfocus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4140,33 +4140,33 @@ class Msg_RemoveTextSelection final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kASelectionNumFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAASelectionNumFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aSelectionNum = 2;
-  bool has_aselectionnum() const;
+  // required sint32 a_aSelectionNum = 2;
+  bool has_a_aselectionnum() const;
   private:
-  bool _internal_has_aselectionnum() const;
+  bool _internal_has_a_aselectionnum() const;
   public:
-  void clear_aselectionnum();
-  int32_t aselectionnum() const;
-  void set_aselectionnum(int32_t value);
+  void clear_a_aselectionnum();
+  int32_t a_aselectionnum() const;
+  void set_a_aselectionnum(int32_t value);
   private:
-  int32_t _internal_aselectionnum() const;
-  void _internal_set_aselectionnum(int32_t value);
+  int32_t _internal_a_aselectionnum() const;
+  void _internal_set_a_aselectionnum(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection)
@@ -4182,8 +4182,8 @@ class Msg_RemoveTextSelection final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    int32_t aselectionnum_;
+    uint64_t a_aid_;
+    int32_t a_aselectionnum_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4300,75 +4300,75 @@ class Msg_ScrollTextLeafRangeIntoView final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStartIDFieldNumber = 1,
-    kAEndIDFieldNumber = 3,
-    kAStartOffsetFieldNumber = 2,
-    kAEndOffsetFieldNumber = 4,
-    kAScrollTypeFieldNumber = 5,
+    kAAStartIDFieldNumber = 1,
+    kAAEndIDFieldNumber = 3,
+    kAAStartOffsetFieldNumber = 2,
+    kAAEndOffsetFieldNumber = 4,
+    kAAScrollTypeFieldNumber = 5,
   };
-  // required uint64 aStartID = 1;
-  bool has_astartid() const;
+  // required uint64 a_aStartID = 1;
+  bool has_a_astartid() const;
   private:
-  bool _internal_has_astartid() const;
+  bool _internal_has_a_astartid() const;
   public:
-  void clear_astartid();
-  uint64_t astartid() const;
-  void set_astartid(uint64_t value);
+  void clear_a_astartid();
+  uint64_t a_astartid() const;
+  void set_a_astartid(uint64_t value);
   private:
-  uint64_t _internal_astartid() const;
-  void _internal_set_astartid(uint64_t value);
-  public:
-
-  // required uint64 aEndID = 3;
-  bool has_aendid() const;
-  private:
-  bool _internal_has_aendid() const;
-  public:
-  void clear_aendid();
-  uint64_t aendid() const;
-  void set_aendid(uint64_t value);
-  private:
-  uint64_t _internal_aendid() const;
-  void _internal_set_aendid(uint64_t value);
+  uint64_t _internal_a_astartid() const;
+  void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // required sint32 aStartOffset = 2;
-  bool has_astartoffset() const;
+  // required uint64 a_aEndID = 3;
+  bool has_a_aendid() const;
   private:
-  bool _internal_has_astartoffset() const;
+  bool _internal_has_a_aendid() const;
   public:
-  void clear_astartoffset();
-  int32_t astartoffset() const;
-  void set_astartoffset(int32_t value);
+  void clear_a_aendid();
+  uint64_t a_aendid() const;
+  void set_a_aendid(uint64_t value);
   private:
-  int32_t _internal_astartoffset() const;
-  void _internal_set_astartoffset(int32_t value);
-  public:
-
-  // required sint32 aEndOffset = 4;
-  bool has_aendoffset() const;
-  private:
-  bool _internal_has_aendoffset() const;
-  public:
-  void clear_aendoffset();
-  int32_t aendoffset() const;
-  void set_aendoffset(int32_t value);
-  private:
-  int32_t _internal_aendoffset() const;
-  void _internal_set_aendoffset(int32_t value);
+  uint64_t _internal_a_aendid() const;
+  void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // required uint32 aScrollType = 5;
-  bool has_ascrolltype() const;
+  // required sint32 a_aStartOffset = 2;
+  bool has_a_astartoffset() const;
   private:
-  bool _internal_has_ascrolltype() const;
+  bool _internal_has_a_astartoffset() const;
   public:
-  void clear_ascrolltype();
-  uint32_t ascrolltype() const;
-  void set_ascrolltype(uint32_t value);
+  void clear_a_astartoffset();
+  int32_t a_astartoffset() const;
+  void set_a_astartoffset(int32_t value);
   private:
-  uint32_t _internal_ascrolltype() const;
-  void _internal_set_ascrolltype(uint32_t value);
+  int32_t _internal_a_astartoffset() const;
+  void _internal_set_a_astartoffset(int32_t value);
+  public:
+
+  // required sint32 a_aEndOffset = 4;
+  bool has_a_aendoffset() const;
+  private:
+  bool _internal_has_a_aendoffset() const;
+  public:
+  void clear_a_aendoffset();
+  int32_t a_aendoffset() const;
+  void set_a_aendoffset(int32_t value);
+  private:
+  int32_t _internal_a_aendoffset() const;
+  void _internal_set_a_aendoffset(int32_t value);
+  public:
+
+  // required uint32 a_aScrollType = 5;
+  bool has_a_ascrolltype() const;
+  private:
+  bool _internal_has_a_ascrolltype() const;
+  public:
+  void clear_a_ascrolltype();
+  uint32_t a_ascrolltype() const;
+  void set_a_ascrolltype(uint32_t value);
+  private:
+  uint32_t _internal_a_ascrolltype() const;
+  void _internal_set_a_ascrolltype(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView)
@@ -4384,11 +4384,11 @@ class Msg_ScrollTextLeafRangeIntoView final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t astartid_;
-    uint64_t aendid_;
-    int32_t astartoffset_;
-    int32_t aendoffset_;
-    uint32_t ascrolltype_;
+    uint64_t a_astartid_;
+    uint64_t a_aendid_;
+    int32_t a_astartoffset_;
+    int32_t a_aendoffset_;
+    uint32_t a_ascrolltype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4505,89 +4505,89 @@ class Msg_ScrollSubstringToPoint final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAStartOffsetFieldNumber = 2,
-    kAEndOffsetFieldNumber = 3,
-    kACoordinateTypeFieldNumber = 4,
-    kAXFieldNumber = 5,
-    kAYFieldNumber = 6,
+    kAAIDFieldNumber = 1,
+    kAAStartOffsetFieldNumber = 2,
+    kAAEndOffsetFieldNumber = 3,
+    kAACoordinateTypeFieldNumber = 4,
+    kAAXFieldNumber = 5,
+    kAAYFieldNumber = 6,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required sint32 aStartOffset = 2;
-  bool has_astartoffset() const;
-  private:
-  bool _internal_has_astartoffset() const;
-  public:
-  void clear_astartoffset();
-  int32_t astartoffset() const;
-  void set_astartoffset(int32_t value);
-  private:
-  int32_t _internal_astartoffset() const;
-  void _internal_set_astartoffset(int32_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aEndOffset = 3;
-  bool has_aendoffset() const;
+  // required sint32 a_aStartOffset = 2;
+  bool has_a_astartoffset() const;
   private:
-  bool _internal_has_aendoffset() const;
+  bool _internal_has_a_astartoffset() const;
   public:
-  void clear_aendoffset();
-  int32_t aendoffset() const;
-  void set_aendoffset(int32_t value);
+  void clear_a_astartoffset();
+  int32_t a_astartoffset() const;
+  void set_a_astartoffset(int32_t value);
   private:
-  int32_t _internal_aendoffset() const;
-  void _internal_set_aendoffset(int32_t value);
-  public:
-
-  // required uint32 aCoordinateType = 4;
-  bool has_acoordinatetype() const;
-  private:
-  bool _internal_has_acoordinatetype() const;
-  public:
-  void clear_acoordinatetype();
-  uint32_t acoordinatetype() const;
-  void set_acoordinatetype(uint32_t value);
-  private:
-  uint32_t _internal_acoordinatetype() const;
-  void _internal_set_acoordinatetype(uint32_t value);
+  int32_t _internal_a_astartoffset() const;
+  void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 aX = 5;
-  bool has_ax() const;
+  // required sint32 a_aEndOffset = 3;
+  bool has_a_aendoffset() const;
   private:
-  bool _internal_has_ax() const;
+  bool _internal_has_a_aendoffset() const;
   public:
-  void clear_ax();
-  int32_t ax() const;
-  void set_ax(int32_t value);
+  void clear_a_aendoffset();
+  int32_t a_aendoffset() const;
+  void set_a_aendoffset(int32_t value);
   private:
-  int32_t _internal_ax() const;
-  void _internal_set_ax(int32_t value);
+  int32_t _internal_a_aendoffset() const;
+  void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required sint32 aY = 6;
-  bool has_ay() const;
+  // required uint32 a_aCoordinateType = 4;
+  bool has_a_acoordinatetype() const;
   private:
-  bool _internal_has_ay() const;
+  bool _internal_has_a_acoordinatetype() const;
   public:
-  void clear_ay();
-  int32_t ay() const;
-  void set_ay(int32_t value);
+  void clear_a_acoordinatetype();
+  uint32_t a_acoordinatetype() const;
+  void set_a_acoordinatetype(uint32_t value);
   private:
-  int32_t _internal_ay() const;
-  void _internal_set_ay(int32_t value);
+  uint32_t _internal_a_acoordinatetype() const;
+  void _internal_set_a_acoordinatetype(uint32_t value);
+  public:
+
+  // required sint32 a_aX = 5;
+  bool has_a_ax() const;
+  private:
+  bool _internal_has_a_ax() const;
+  public:
+  void clear_a_ax();
+  int32_t a_ax() const;
+  void set_a_ax(int32_t value);
+  private:
+  int32_t _internal_a_ax() const;
+  void _internal_set_a_ax(int32_t value);
+  public:
+
+  // required sint32 a_aY = 6;
+  bool has_a_ay() const;
+  private:
+  bool _internal_has_a_ay() const;
+  public:
+  void clear_a_ay();
+  int32_t a_ay() const;
+  void set_a_ay(int32_t value);
+  private:
+  int32_t _internal_a_ay() const;
+  void _internal_set_a_ay(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint)
@@ -4603,12 +4603,12 @@ class Msg_ScrollSubstringToPoint final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    int32_t astartoffset_;
-    int32_t aendoffset_;
-    uint32_t acoordinatetype_;
-    int32_t ax_;
-    int32_t ay_;
+    uint64_t a_aid_;
+    int32_t a_astartoffset_;
+    int32_t a_aendoffset_;
+    uint32_t a_acoordinatetype_;
+    int32_t a_ax_;
+    int32_t a_ay_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4725,38 +4725,38 @@ class Msg_ReplaceText final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATextFieldNumber = 2,
-    kAIDFieldNumber = 1,
+    kAATextFieldNumber = 2,
+    kAAIDFieldNumber = 1,
   };
-  // required bytes aText = 2;
-  bool has_atext() const;
+  // required bytes a_aText = 2;
+  bool has_a_atext() const;
   private:
-  bool _internal_has_atext() const;
+  bool _internal_has_a_atext() const;
   public:
-  void clear_atext();
-  const std::string& atext() const;
+  void clear_a_atext();
+  const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atext(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atext();
-  PROTOBUF_NODISCARD std::string* release_atext();
-  void set_allocated_atext(std::string* atext);
+  void set_a_atext(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atext();
+  PROTOBUF_NODISCARD std::string* release_a_atext();
+  void set_allocated_a_atext(std::string* a_atext);
   private:
-  const std::string& _internal_atext() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atext(const std::string& value);
-  std::string* _internal_mutable_atext();
+  const std::string& _internal_a_atext() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atext(const std::string& value);
+  std::string* _internal_mutable_a_atext();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText)
@@ -4772,8 +4772,8 @@ class Msg_ReplaceText final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atext_;
-    uint64_t aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4890,52 +4890,52 @@ class Msg_InsertText final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATextFieldNumber = 2,
-    kAIDFieldNumber = 1,
-    kAPositionFieldNumber = 3,
+    kAATextFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAPositionFieldNumber = 3,
   };
-  // required bytes aText = 2;
-  bool has_atext() const;
+  // required bytes a_aText = 2;
+  bool has_a_atext() const;
   private:
-  bool _internal_has_atext() const;
+  bool _internal_has_a_atext() const;
   public:
-  void clear_atext();
-  const std::string& atext() const;
+  void clear_a_atext();
+  const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atext(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atext();
-  PROTOBUF_NODISCARD std::string* release_atext();
-  void set_allocated_atext(std::string* atext);
+  void set_a_atext(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atext();
+  PROTOBUF_NODISCARD std::string* release_a_atext();
+  void set_allocated_a_atext(std::string* a_atext);
   private:
-  const std::string& _internal_atext() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atext(const std::string& value);
-  std::string* _internal_mutable_atext();
+  const std::string& _internal_a_atext() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atext(const std::string& value);
+  std::string* _internal_mutable_a_atext();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aPosition = 3;
-  bool has_aposition() const;
+  // required sint32 a_aPosition = 3;
+  bool has_a_aposition() const;
   private:
-  bool _internal_has_aposition() const;
+  bool _internal_has_a_aposition() const;
   public:
-  void clear_aposition();
-  int32_t aposition() const;
-  void set_aposition(int32_t value);
+  void clear_a_aposition();
+  int32_t a_aposition() const;
+  void set_a_aposition(int32_t value);
   private:
-  int32_t _internal_aposition() const;
-  void _internal_set_aposition(int32_t value);
+  int32_t _internal_a_aposition() const;
+  void _internal_set_a_aposition(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText)
@@ -4951,9 +4951,9 @@ class Msg_InsertText final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atext_;
-    uint64_t aid_;
-    int32_t aposition_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
+    uint64_t a_aid_;
+    int32_t a_aposition_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5070,47 +5070,47 @@ class Msg_CopyText final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAStartPosFieldNumber = 2,
-    kAEndPosFieldNumber = 3,
+    kAAIDFieldNumber = 1,
+    kAAStartPosFieldNumber = 2,
+    kAAEndPosFieldNumber = 3,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required sint32 aStartPos = 2;
-  bool has_astartpos() const;
-  private:
-  bool _internal_has_astartpos() const;
-  public:
-  void clear_astartpos();
-  int32_t astartpos() const;
-  void set_astartpos(int32_t value);
-  private:
-  int32_t _internal_astartpos() const;
-  void _internal_set_astartpos(int32_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aEndPos = 3;
-  bool has_aendpos() const;
+  // required sint32 a_aStartPos = 2;
+  bool has_a_astartpos() const;
   private:
-  bool _internal_has_aendpos() const;
+  bool _internal_has_a_astartpos() const;
   public:
-  void clear_aendpos();
-  int32_t aendpos() const;
-  void set_aendpos(int32_t value);
+  void clear_a_astartpos();
+  int32_t a_astartpos() const;
+  void set_a_astartpos(int32_t value);
   private:
-  int32_t _internal_aendpos() const;
-  void _internal_set_aendpos(int32_t value);
+  int32_t _internal_a_astartpos() const;
+  void _internal_set_a_astartpos(int32_t value);
+  public:
+
+  // required sint32 a_aEndPos = 3;
+  bool has_a_aendpos() const;
+  private:
+  bool _internal_has_a_aendpos() const;
+  public:
+  void clear_a_aendpos();
+  int32_t a_aendpos() const;
+  void set_a_aendpos(int32_t value);
+  private:
+  int32_t _internal_a_aendpos() const;
+  void _internal_set_a_aendpos(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText)
@@ -5126,9 +5126,9 @@ class Msg_CopyText final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    int32_t astartpos_;
-    int32_t aendpos_;
+    uint64_t a_aid_;
+    int32_t a_astartpos_;
+    int32_t a_aendpos_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5245,47 +5245,47 @@ class Msg_CutText final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAStartPosFieldNumber = 2,
-    kAEndPosFieldNumber = 3,
+    kAAIDFieldNumber = 1,
+    kAAStartPosFieldNumber = 2,
+    kAAEndPosFieldNumber = 3,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required sint32 aStartPos = 2;
-  bool has_astartpos() const;
-  private:
-  bool _internal_has_astartpos() const;
-  public:
-  void clear_astartpos();
-  int32_t astartpos() const;
-  void set_astartpos(int32_t value);
-  private:
-  int32_t _internal_astartpos() const;
-  void _internal_set_astartpos(int32_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aEndPos = 3;
-  bool has_aendpos() const;
+  // required sint32 a_aStartPos = 2;
+  bool has_a_astartpos() const;
   private:
-  bool _internal_has_aendpos() const;
+  bool _internal_has_a_astartpos() const;
   public:
-  void clear_aendpos();
-  int32_t aendpos() const;
-  void set_aendpos(int32_t value);
+  void clear_a_astartpos();
+  int32_t a_astartpos() const;
+  void set_a_astartpos(int32_t value);
   private:
-  int32_t _internal_aendpos() const;
-  void _internal_set_aendpos(int32_t value);
+  int32_t _internal_a_astartpos() const;
+  void _internal_set_a_astartpos(int32_t value);
+  public:
+
+  // required sint32 a_aEndPos = 3;
+  bool has_a_aendpos() const;
+  private:
+  bool _internal_has_a_aendpos() const;
+  public:
+  void clear_a_aendpos();
+  int32_t a_aendpos() const;
+  void set_a_aendpos(int32_t value);
+  private:
+  int32_t _internal_a_aendpos() const;
+  void _internal_set_a_aendpos(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText)
@@ -5301,9 +5301,9 @@ class Msg_CutText final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    int32_t astartpos_;
-    int32_t aendpos_;
+    uint64_t a_aid_;
+    int32_t a_astartpos_;
+    int32_t a_aendpos_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5420,47 +5420,47 @@ class Msg_DeleteText final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAStartPosFieldNumber = 2,
-    kAEndPosFieldNumber = 3,
+    kAAIDFieldNumber = 1,
+    kAAStartPosFieldNumber = 2,
+    kAAEndPosFieldNumber = 3,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
-  public:
-
-  // required sint32 aStartPos = 2;
-  bool has_astartpos() const;
-  private:
-  bool _internal_has_astartpos() const;
-  public:
-  void clear_astartpos();
-  int32_t astartpos() const;
-  void set_astartpos(int32_t value);
-  private:
-  int32_t _internal_astartpos() const;
-  void _internal_set_astartpos(int32_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aEndPos = 3;
-  bool has_aendpos() const;
+  // required sint32 a_aStartPos = 2;
+  bool has_a_astartpos() const;
   private:
-  bool _internal_has_aendpos() const;
+  bool _internal_has_a_astartpos() const;
   public:
-  void clear_aendpos();
-  int32_t aendpos() const;
-  void set_aendpos(int32_t value);
+  void clear_a_astartpos();
+  int32_t a_astartpos() const;
+  void set_a_astartpos(int32_t value);
   private:
-  int32_t _internal_aendpos() const;
-  void _internal_set_aendpos(int32_t value);
+  int32_t _internal_a_astartpos() const;
+  void _internal_set_a_astartpos(int32_t value);
+  public:
+
+  // required sint32 a_aEndPos = 3;
+  bool has_a_aendpos() const;
+  private:
+  bool _internal_has_a_aendpos() const;
+  public:
+  void clear_a_aendpos();
+  int32_t a_aendpos() const;
+  void set_a_aendpos(int32_t value);
+  private:
+  int32_t _internal_a_aendpos() const;
+  void _internal_set_a_aendpos(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText)
@@ -5476,9 +5476,9 @@ class Msg_DeleteText final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    int32_t astartpos_;
-    int32_t aendpos_;
+    uint64_t a_aid_;
+    int32_t a_astartpos_;
+    int32_t a_aendpos_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5595,33 +5595,33 @@ class Msg_PasteText final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAPositionFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAPositionFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 aPosition = 2;
-  bool has_aposition() const;
+  // required sint32 a_aPosition = 2;
+  bool has_a_aposition() const;
   private:
-  bool _internal_has_aposition() const;
+  bool _internal_has_a_aposition() const;
   public:
-  void clear_aposition();
-  int32_t aposition() const;
-  void set_aposition(int32_t value);
+  void clear_a_aposition();
+  int32_t a_aposition() const;
+  void set_a_aposition(int32_t value);
   private:
-  int32_t _internal_aposition() const;
-  void _internal_set_aposition(int32_t value);
+  int32_t _internal_a_aposition() const;
+  void _internal_set_a_aposition(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText)
@@ -5637,8 +5637,8 @@ class Msg_PasteText final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    int32_t aposition_;
+    uint64_t a_aid_;
+    int32_t a_aposition_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5755,19 +5755,19 @@ class Msg_TakeSelection final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
+    kAAIDFieldNumber = 1,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection)
@@ -5780,7 +5780,7 @@ class Msg_TakeSelection final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5897,33 +5897,33 @@ class Msg_SetSelected final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kASelectedFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAASelectedFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required bool aSelected = 2;
-  bool has_aselected() const;
+  // required bool a_aSelected = 2;
+  bool has_a_aselected() const;
   private:
-  bool _internal_has_aselected() const;
+  bool _internal_has_a_aselected() const;
   public:
-  void clear_aselected();
-  bool aselected() const;
-  void set_aselected(bool value);
+  void clear_a_aselected();
+  bool a_aselected() const;
+  void set_a_aselected(bool value);
   private:
-  bool _internal_aselected() const;
-  void _internal_set_aselected(bool value);
+  bool _internal_a_aselected() const;
+  void _internal_set_a_aselected(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected)
@@ -5939,8 +5939,8 @@ class Msg_SetSelected final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    bool aselected_;
+    uint64_t a_aid_;
+    bool a_aselected_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6057,33 +6057,33 @@ class Msg_DoActionAsync final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAIndexFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAIndexFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 aIndex = 2;
-  bool has_aindex() const;
+  // required uint32 a_aIndex = 2;
+  bool has_a_aindex() const;
   private:
-  bool _internal_has_aindex() const;
+  bool _internal_has_a_aindex() const;
   public:
-  void clear_aindex();
-  uint32_t aindex() const;
-  void set_aindex(uint32_t value);
+  void clear_a_aindex();
+  uint32_t a_aindex() const;
+  void set_a_aindex(uint32_t value);
   private:
-  uint32_t _internal_aindex() const;
-  void _internal_set_aindex(uint32_t value);
+  uint32_t _internal_a_aindex() const;
+  void _internal_set_a_aindex(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync)
@@ -6099,8 +6099,8 @@ class Msg_DoActionAsync final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    uint32_t aindex_;
+    uint64_t a_aid_;
+    uint32_t a_aindex_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6217,33 +6217,33 @@ class Msg_SetCurValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
-    kAValueFieldNumber = 2,
+    kAAIDFieldNumber = 1,
+    kAAValueFieldNumber = 2,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required double aValue = 2;
-  bool has_avalue() const;
+  // required double a_aValue = 2;
+  bool has_a_avalue() const;
   private:
-  bool _internal_has_avalue() const;
+  bool _internal_has_a_avalue() const;
   public:
-  void clear_avalue();
-  double avalue() const;
-  void set_avalue(double value);
+  void clear_a_avalue();
+  double a_avalue() const;
+  void set_a_avalue(double value);
   private:
-  double _internal_avalue() const;
-  void _internal_set_avalue(double value);
+  double _internal_a_avalue() const;
+  void _internal_set_a_avalue(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue)
@@ -6259,8 +6259,8 @@ class Msg_SetCurValue final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
-    double avalue_;
+    uint64_t a_aid_;
+    double a_avalue_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6377,19 +6377,19 @@ class Msg_TakeFocus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIDFieldNumber = 1,
+    kAAIDFieldNumber = 1,
   };
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus)
@@ -6402,7 +6402,7 @@ class Msg_TakeFocus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aid_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6519,52 +6519,52 @@ class Msg_VerifyCache final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFieldsFieldNumber = 3,
-    kAIDFieldNumber = 1,
-    kACacheDomainFieldNumber = 2,
+    kAAFieldsFieldNumber = 3,
+    kAAIDFieldNumber = 1,
+    kAACacheDomainFieldNumber = 2,
   };
-  // required bytes aFields = 3;
-  bool has_afields() const;
+  // required bytes a_aFields = 3;
+  bool has_a_afields() const;
   private:
-  bool _internal_has_afields() const;
+  bool _internal_has_a_afields() const;
   public:
-  void clear_afields();
-  const std::string& afields() const;
+  void clear_a_afields();
+  const std::string& a_afields() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_afields(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_afields();
-  PROTOBUF_NODISCARD std::string* release_afields();
-  void set_allocated_afields(std::string* afields);
+  void set_a_afields(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_afields();
+  PROTOBUF_NODISCARD std::string* release_a_afields();
+  void set_allocated_a_afields(std::string* a_afields);
   private:
-  const std::string& _internal_afields() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_afields(const std::string& value);
-  std::string* _internal_mutable_afields();
+  const std::string& _internal_a_afields() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_afields(const std::string& value);
+  std::string* _internal_mutable_a_afields();
   public:
 
-  // required uint64 aID = 1;
-  bool has_aid() const;
+  // required uint64 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 aCacheDomain = 2;
-  bool has_acachedomain() const;
+  // required uint64 a_aCacheDomain = 2;
+  bool has_a_acachedomain() const;
   private:
-  bool _internal_has_acachedomain() const;
+  bool _internal_has_a_acachedomain() const;
   public:
-  void clear_acachedomain();
-  uint64_t acachedomain() const;
-  void set_acachedomain(uint64_t value);
+  void clear_a_acachedomain();
+  uint64_t a_acachedomain() const;
+  void set_a_acachedomain(uint64_t value);
   private:
-  uint64_t _internal_acachedomain() const;
-  void _internal_set_acachedomain(uint64_t value);
+  uint64_t _internal_a_acachedomain() const;
+  void _internal_set_a_acachedomain(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache)
@@ -6580,9 +6580,9 @@ class Msg_VerifyCache final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr afields_;
-    uint64_t aid_;
-    uint64_t acachedomain_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afields_;
+    uint64_t a_aid_;
+    uint64_t a_acachedomain_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6726,429 +6726,429 @@ class Msg_AckMutationEvents final :
 
 // Msg_Event
 
-// required uint64 aID = 1;
-inline bool Msg_Event::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_Event::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Event::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_Event::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_Event::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_Event::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_Event::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_Event::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_Event::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.aID)
-  return _internal_aid();
+inline uint64_t Msg_Event::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_Event::_internal_set_aid(uint64_t value) {
+inline void Msg_Event::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_Event::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.aID)
+inline void Msg_Event::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_aID)
 }
 
-// required uint32 type = 2;
-inline bool Msg_Event::_internal_has_type() const {
+// required uint32 a_type = 2;
+inline bool Msg_Event::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Event::has_type() const {
-  return _internal_has_type();
+inline bool Msg_Event::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void Msg_Event::clear_type() {
-  _impl_.type_ = 0u;
+inline void Msg_Event::clear_a_type() {
+  _impl_.a_type_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_Event::_internal_type() const {
-  return _impl_.type_;
+inline uint32_t Msg_Event::_internal_a_type() const {
+  return _impl_.a_type_;
 }
-inline uint32_t Msg_Event::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.type)
-  return _internal_type();
+inline uint32_t Msg_Event::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_type)
+  return _internal_a_type();
 }
-inline void Msg_Event::_internal_set_type(uint32_t value) {
+inline void Msg_Event::_internal_set_a_type(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.type_ = value;
+  _impl_.a_type_ = value;
 }
-inline void Msg_Event::set_type(uint32_t value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.type)
+inline void Msg_Event::set_a_type(uint32_t value) {
+  _internal_set_a_type(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_type)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StateChangeEvent
 
-// required uint64 aID = 1;
-inline bool Msg_StateChangeEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_StateChangeEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StateChangeEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_StateChangeEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_StateChangeEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_StateChangeEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_StateChangeEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_StateChangeEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_StateChangeEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_StateChangeEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_StateChangeEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_StateChangeEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_StateChangeEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.aID)
+inline void Msg_StateChangeEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aID)
 }
 
-// required uint64 aState = 2;
-inline bool Msg_StateChangeEvent::_internal_has_astate() const {
+// required uint64 a_aState = 2;
+inline bool Msg_StateChangeEvent::_internal_has_a_astate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_StateChangeEvent::has_astate() const {
-  return _internal_has_astate();
+inline bool Msg_StateChangeEvent::has_a_astate() const {
+  return _internal_has_a_astate();
 }
-inline void Msg_StateChangeEvent::clear_astate() {
-  _impl_.astate_ = uint64_t{0u};
+inline void Msg_StateChangeEvent::clear_a_astate() {
+  _impl_.a_astate_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_StateChangeEvent::_internal_astate() const {
-  return _impl_.astate_;
+inline uint64_t Msg_StateChangeEvent::_internal_a_astate() const {
+  return _impl_.a_astate_;
 }
-inline uint64_t Msg_StateChangeEvent::astate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.aState)
-  return _internal_astate();
+inline uint64_t Msg_StateChangeEvent::a_astate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aState)
+  return _internal_a_astate();
 }
-inline void Msg_StateChangeEvent::_internal_set_astate(uint64_t value) {
+inline void Msg_StateChangeEvent::_internal_set_a_astate(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astate_ = value;
+  _impl_.a_astate_ = value;
 }
-inline void Msg_StateChangeEvent::set_astate(uint64_t value) {
-  _internal_set_astate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.aState)
+inline void Msg_StateChangeEvent::set_a_astate(uint64_t value) {
+  _internal_set_a_astate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aState)
 }
 
-// required bool aEnabled = 3;
-inline bool Msg_StateChangeEvent::_internal_has_aenabled() const {
+// required bool a_aEnabled = 3;
+inline bool Msg_StateChangeEvent::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_StateChangeEvent::has_aenabled() const {
-  return _internal_has_aenabled();
+inline bool Msg_StateChangeEvent::has_a_aenabled() const {
+  return _internal_has_a_aenabled();
 }
-inline void Msg_StateChangeEvent::clear_aenabled() {
-  _impl_.aenabled_ = false;
+inline void Msg_StateChangeEvent::clear_a_aenabled() {
+  _impl_.a_aenabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_StateChangeEvent::_internal_aenabled() const {
-  return _impl_.aenabled_;
+inline bool Msg_StateChangeEvent::_internal_a_aenabled() const {
+  return _impl_.a_aenabled_;
 }
-inline bool Msg_StateChangeEvent::aenabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.aEnabled)
-  return _internal_aenabled();
+inline bool Msg_StateChangeEvent::a_aenabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aEnabled)
+  return _internal_a_aenabled();
 }
-inline void Msg_StateChangeEvent::_internal_set_aenabled(bool value) {
+inline void Msg_StateChangeEvent::_internal_set_a_aenabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aenabled_ = value;
+  _impl_.a_aenabled_ = value;
 }
-inline void Msg_StateChangeEvent::set_aenabled(bool value) {
-  _internal_set_aenabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.aEnabled)
+inline void Msg_StateChangeEvent::set_a_aenabled(bool value) {
+  _internal_set_a_aenabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aEnabled)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CaretMoveEvent
 
-// required uint64 aID = 1;
-inline bool Msg_CaretMoveEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_CaretMoveEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_CaretMoveEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_CaretMoveEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_CaretMoveEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_CaretMoveEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_CaretMoveEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_CaretMoveEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_CaretMoveEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_CaretMoveEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aID)
+inline void Msg_CaretMoveEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aID)
 }
 
-// required bytes aCaretRect = 2;
-inline bool Msg_CaretMoveEvent::_internal_has_acaretrect() const {
+// required bytes a_aCaretRect = 2;
+inline bool Msg_CaretMoveEvent::_internal_has_a_acaretrect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_acaretrect() const {
-  return _internal_has_acaretrect();
+inline bool Msg_CaretMoveEvent::has_a_acaretrect() const {
+  return _internal_has_a_acaretrect();
 }
-inline void Msg_CaretMoveEvent::clear_acaretrect() {
-  _impl_.acaretrect_.ClearToEmpty();
+inline void Msg_CaretMoveEvent::clear_a_acaretrect() {
+  _impl_.a_acaretrect_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CaretMoveEvent::acaretrect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aCaretRect)
-  return _internal_acaretrect();
+inline const std::string& Msg_CaretMoveEvent::a_acaretrect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
+  return _internal_a_acaretrect();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CaretMoveEvent::set_acaretrect(ArgT0&& arg0, ArgT... args) {
+void Msg_CaretMoveEvent::set_a_acaretrect(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aCaretRect)
+ _impl_.a_acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
-inline std::string* Msg_CaretMoveEvent::mutable_acaretrect() {
-  std::string* _s = _internal_mutable_acaretrect();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aCaretRect)
+inline std::string* Msg_CaretMoveEvent::mutable_a_acaretrect() {
+  std::string* _s = _internal_mutable_a_acaretrect();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
   return _s;
 }
-inline const std::string& Msg_CaretMoveEvent::_internal_acaretrect() const {
-  return _impl_.acaretrect_.Get();
+inline const std::string& Msg_CaretMoveEvent::_internal_a_acaretrect() const {
+  return _impl_.a_acaretrect_.Get();
 }
-inline void Msg_CaretMoveEvent::_internal_set_acaretrect(const std::string& value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_acaretrect(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acaretrect_.Set(value, GetArenaForAllocation());
+  _impl_.a_acaretrect_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CaretMoveEvent::_internal_mutable_acaretrect() {
+inline std::string* Msg_CaretMoveEvent::_internal_mutable_a_acaretrect() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acaretrect_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acaretrect_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CaretMoveEvent::release_acaretrect() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aCaretRect)
-  if (!_internal_has_acaretrect()) {
+inline std::string* Msg_CaretMoveEvent::release_a_acaretrect() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
+  if (!_internal_has_a_acaretrect()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acaretrect_.Release();
+  auto* p = _impl_.a_acaretrect_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acaretrect_.IsDefault()) {
-    _impl_.acaretrect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acaretrect_.IsDefault()) {
+    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CaretMoveEvent::set_allocated_acaretrect(std::string* acaretrect) {
-  if (acaretrect != nullptr) {
+inline void Msg_CaretMoveEvent::set_allocated_a_acaretrect(std::string* a_acaretrect) {
+  if (a_acaretrect != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acaretrect_.SetAllocated(acaretrect, GetArenaForAllocation());
+  _impl_.a_acaretrect_.SetAllocated(a_acaretrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acaretrect_.IsDefault()) {
-    _impl_.acaretrect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acaretrect_.IsDefault()) {
+    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aCaretRect)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
 
-// required sint32 aOffset = 3;
-inline bool Msg_CaretMoveEvent::_internal_has_aoffset() const {
+// required sint32 a_aOffset = 3;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_aoffset() const {
-  return _internal_has_aoffset();
+inline bool Msg_CaretMoveEvent::has_a_aoffset() const {
+  return _internal_has_a_aoffset();
 }
-inline void Msg_CaretMoveEvent::clear_aoffset() {
-  _impl_.aoffset_ = 0;
+inline void Msg_CaretMoveEvent::clear_a_aoffset() {
+  _impl_.a_aoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_CaretMoveEvent::_internal_aoffset() const {
-  return _impl_.aoffset_;
+inline int32_t Msg_CaretMoveEvent::_internal_a_aoffset() const {
+  return _impl_.a_aoffset_;
 }
-inline int32_t Msg_CaretMoveEvent::aoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aOffset)
-  return _internal_aoffset();
+inline int32_t Msg_CaretMoveEvent::a_aoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aOffset)
+  return _internal_a_aoffset();
 }
-inline void Msg_CaretMoveEvent::_internal_set_aoffset(int32_t value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_aoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aoffset_ = value;
+  _impl_.a_aoffset_ = value;
 }
-inline void Msg_CaretMoveEvent::set_aoffset(int32_t value) {
-  _internal_set_aoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aOffset)
+inline void Msg_CaretMoveEvent::set_a_aoffset(int32_t value) {
+  _internal_set_a_aoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aOffset)
 }
 
-// required bool aIsSelectionCollapsed = 4;
-inline bool Msg_CaretMoveEvent::_internal_has_aisselectioncollapsed() const {
+// required bool a_aIsSelectionCollapsed = 4;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aisselectioncollapsed() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_aisselectioncollapsed() const {
-  return _internal_has_aisselectioncollapsed();
+inline bool Msg_CaretMoveEvent::has_a_aisselectioncollapsed() const {
+  return _internal_has_a_aisselectioncollapsed();
 }
-inline void Msg_CaretMoveEvent::clear_aisselectioncollapsed() {
-  _impl_.aisselectioncollapsed_ = false;
+inline void Msg_CaretMoveEvent::clear_a_aisselectioncollapsed() {
+  _impl_.a_aisselectioncollapsed_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_CaretMoveEvent::_internal_aisselectioncollapsed() const {
-  return _impl_.aisselectioncollapsed_;
+inline bool Msg_CaretMoveEvent::_internal_a_aisselectioncollapsed() const {
+  return _impl_.a_aisselectioncollapsed_;
 }
-inline bool Msg_CaretMoveEvent::aisselectioncollapsed() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aIsSelectionCollapsed)
-  return _internal_aisselectioncollapsed();
+inline bool Msg_CaretMoveEvent::a_aisselectioncollapsed() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsSelectionCollapsed)
+  return _internal_a_aisselectioncollapsed();
 }
-inline void Msg_CaretMoveEvent::_internal_set_aisselectioncollapsed(bool value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_aisselectioncollapsed(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aisselectioncollapsed_ = value;
+  _impl_.a_aisselectioncollapsed_ = value;
 }
-inline void Msg_CaretMoveEvent::set_aisselectioncollapsed(bool value) {
-  _internal_set_aisselectioncollapsed(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aIsSelectionCollapsed)
+inline void Msg_CaretMoveEvent::set_a_aisselectioncollapsed(bool value) {
+  _internal_set_a_aisselectioncollapsed(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsSelectionCollapsed)
 }
 
-// required bool aIsAtEndOfLine = 5;
-inline bool Msg_CaretMoveEvent::_internal_has_aisatendofline() const {
+// required bool a_aIsAtEndOfLine = 5;
+inline bool Msg_CaretMoveEvent::_internal_has_a_aisatendofline() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_aisatendofline() const {
-  return _internal_has_aisatendofline();
+inline bool Msg_CaretMoveEvent::has_a_aisatendofline() const {
+  return _internal_has_a_aisatendofline();
 }
-inline void Msg_CaretMoveEvent::clear_aisatendofline() {
-  _impl_.aisatendofline_ = false;
+inline void Msg_CaretMoveEvent::clear_a_aisatendofline() {
+  _impl_.a_aisatendofline_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Msg_CaretMoveEvent::_internal_aisatendofline() const {
-  return _impl_.aisatendofline_;
+inline bool Msg_CaretMoveEvent::_internal_a_aisatendofline() const {
+  return _impl_.a_aisatendofline_;
 }
-inline bool Msg_CaretMoveEvent::aisatendofline() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aIsAtEndOfLine)
-  return _internal_aisatendofline();
+inline bool Msg_CaretMoveEvent::a_aisatendofline() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsAtEndOfLine)
+  return _internal_a_aisatendofline();
 }
-inline void Msg_CaretMoveEvent::_internal_set_aisatendofline(bool value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_aisatendofline(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.aisatendofline_ = value;
+  _impl_.a_aisatendofline_ = value;
 }
-inline void Msg_CaretMoveEvent::set_aisatendofline(bool value) {
-  _internal_set_aisatendofline(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aIsAtEndOfLine)
+inline void Msg_CaretMoveEvent::set_a_aisatendofline(bool value) {
+  _internal_set_a_aisatendofline(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsAtEndOfLine)
 }
 
-// required sint32 aGranularity = 6;
-inline bool Msg_CaretMoveEvent::_internal_has_agranularity() const {
+// required sint32 a_aGranularity = 6;
+inline bool Msg_CaretMoveEvent::_internal_has_a_agranularity() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_agranularity() const {
-  return _internal_has_agranularity();
+inline bool Msg_CaretMoveEvent::has_a_agranularity() const {
+  return _internal_has_a_agranularity();
 }
-inline void Msg_CaretMoveEvent::clear_agranularity() {
-  _impl_.agranularity_ = 0;
+inline void Msg_CaretMoveEvent::clear_a_agranularity() {
+  _impl_.a_agranularity_ = 0;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline int32_t Msg_CaretMoveEvent::_internal_agranularity() const {
-  return _impl_.agranularity_;
+inline int32_t Msg_CaretMoveEvent::_internal_a_agranularity() const {
+  return _impl_.a_agranularity_;
 }
-inline int32_t Msg_CaretMoveEvent::agranularity() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aGranularity)
-  return _internal_agranularity();
+inline int32_t Msg_CaretMoveEvent::a_agranularity() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aGranularity)
+  return _internal_a_agranularity();
 }
-inline void Msg_CaretMoveEvent::_internal_set_agranularity(int32_t value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_agranularity(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.agranularity_ = value;
+  _impl_.a_agranularity_ = value;
 }
-inline void Msg_CaretMoveEvent::set_agranularity(int32_t value) {
-  _internal_set_agranularity(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aGranularity)
+inline void Msg_CaretMoveEvent::set_a_agranularity(int32_t value) {
+  _internal_set_a_agranularity(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aGranularity)
 }
 
-// required bool aFromUser = 7;
-inline bool Msg_CaretMoveEvent::_internal_has_afromuser() const {
+// required bool a_aFromUser = 7;
+inline bool Msg_CaretMoveEvent::_internal_has_a_afromuser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_CaretMoveEvent::has_afromuser() const {
-  return _internal_has_afromuser();
+inline bool Msg_CaretMoveEvent::has_a_afromuser() const {
+  return _internal_has_a_afromuser();
 }
-inline void Msg_CaretMoveEvent::clear_afromuser() {
-  _impl_.afromuser_ = false;
+inline void Msg_CaretMoveEvent::clear_a_afromuser() {
+  _impl_.a_afromuser_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool Msg_CaretMoveEvent::_internal_afromuser() const {
-  return _impl_.afromuser_;
+inline bool Msg_CaretMoveEvent::_internal_a_afromuser() const {
+  return _impl_.a_afromuser_;
 }
-inline bool Msg_CaretMoveEvent::afromuser() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aFromUser)
-  return _internal_afromuser();
+inline bool Msg_CaretMoveEvent::a_afromuser() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aFromUser)
+  return _internal_a_afromuser();
 }
-inline void Msg_CaretMoveEvent::_internal_set_afromuser(bool value) {
+inline void Msg_CaretMoveEvent::_internal_set_a_afromuser(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.afromuser_ = value;
+  _impl_.a_afromuser_ = value;
 }
-inline void Msg_CaretMoveEvent::set_afromuser(bool value) {
-  _internal_set_afromuser(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.aFromUser)
+inline void Msg_CaretMoveEvent::set_a_afromuser(bool value) {
+  _internal_set_a_afromuser(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aFromUser)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_MutationEvents
 
-// repeated .protobuf.mozilla.a11y.MutationEventData aData = 1;
-inline int Msg_MutationEvents::_internal_adata_size() const {
-  return _impl_.adata_.size();
+// repeated .protobuf.mozilla.a11y.MutationEventData a_aData = 1;
+inline int Msg_MutationEvents::_internal_a_adata_size() const {
+  return _impl_.a_adata_.size();
 }
-inline int Msg_MutationEvents::adata_size() const {
-  return _internal_adata_size();
+inline int Msg_MutationEvents::a_adata_size() const {
+  return _internal_a_adata_size();
 }
-inline ::protobuf::mozilla::a11y::MutationEventData* Msg_MutationEvents::mutable_adata(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.aData)
-  return _impl_.adata_.Mutable(index);
+inline ::protobuf::mozilla::a11y::MutationEventData* Msg_MutationEvents::mutable_a_adata(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.a_aData)
+  return _impl_.a_adata_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::MutationEventData >*
-Msg_MutationEvents::mutable_adata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.aData)
-  return &_impl_.adata_;
+Msg_MutationEvents::mutable_a_adata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.a_aData)
+  return &_impl_.a_adata_;
 }
-inline const ::protobuf::mozilla::a11y::MutationEventData& Msg_MutationEvents::_internal_adata(int index) const {
-  return _impl_.adata_.Get(index);
+inline const ::protobuf::mozilla::a11y::MutationEventData& Msg_MutationEvents::_internal_a_adata(int index) const {
+  return _impl_.a_adata_.Get(index);
 }
-inline const ::protobuf::mozilla::a11y::MutationEventData& Msg_MutationEvents::adata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.aData)
-  return _internal_adata(index);
+inline const ::protobuf::mozilla::a11y::MutationEventData& Msg_MutationEvents::a_adata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.a_aData)
+  return _internal_a_adata(index);
 }
-inline ::protobuf::mozilla::a11y::MutationEventData* Msg_MutationEvents::_internal_add_adata() {
-  return _impl_.adata_.Add();
+inline ::protobuf::mozilla::a11y::MutationEventData* Msg_MutationEvents::_internal_add_a_adata() {
+  return _impl_.a_adata_.Add();
 }
-inline ::protobuf::mozilla::a11y::MutationEventData* Msg_MutationEvents::add_adata() {
-  ::protobuf::mozilla::a11y::MutationEventData* _add = _internal_add_adata();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.aData)
+inline ::protobuf::mozilla::a11y::MutationEventData* Msg_MutationEvents::add_a_adata() {
+  ::protobuf::mozilla::a11y::MutationEventData* _add = _internal_add_a_adata();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.a_aData)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::MutationEventData >&
-Msg_MutationEvents::adata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.aData)
-  return _impl_.adata_;
+Msg_MutationEvents::a_adata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents.a_aData)
+  return _impl_.a_adata_;
 }
 
 // -------------------------------------------------------------------
@@ -7159,1015 +7159,1015 @@ Msg_MutationEvents::adata() const {
 
 // Msg_SelectionEvent
 
-// required uint64 aID = 1;
-inline bool Msg_SelectionEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_SelectionEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SelectionEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_SelectionEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_SelectionEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_SelectionEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_SelectionEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_SelectionEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_SelectionEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_SelectionEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_SelectionEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_SelectionEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_SelectionEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.aID)
+inline void Msg_SelectionEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aID)
 }
 
-// required uint64 aWidgetID = 2;
-inline bool Msg_SelectionEvent::_internal_has_awidgetid() const {
+// required uint64 a_aWidgetID = 2;
+inline bool Msg_SelectionEvent::_internal_has_a_awidgetid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SelectionEvent::has_awidgetid() const {
-  return _internal_has_awidgetid();
+inline bool Msg_SelectionEvent::has_a_awidgetid() const {
+  return _internal_has_a_awidgetid();
 }
-inline void Msg_SelectionEvent::clear_awidgetid() {
-  _impl_.awidgetid_ = uint64_t{0u};
+inline void Msg_SelectionEvent::clear_a_awidgetid() {
+  _impl_.a_awidgetid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_SelectionEvent::_internal_awidgetid() const {
-  return _impl_.awidgetid_;
+inline uint64_t Msg_SelectionEvent::_internal_a_awidgetid() const {
+  return _impl_.a_awidgetid_;
 }
-inline uint64_t Msg_SelectionEvent::awidgetid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.aWidgetID)
-  return _internal_awidgetid();
+inline uint64_t Msg_SelectionEvent::a_awidgetid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aWidgetID)
+  return _internal_a_awidgetid();
 }
-inline void Msg_SelectionEvent::_internal_set_awidgetid(uint64_t value) {
+inline void Msg_SelectionEvent::_internal_set_a_awidgetid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.awidgetid_ = value;
+  _impl_.a_awidgetid_ = value;
 }
-inline void Msg_SelectionEvent::set_awidgetid(uint64_t value) {
-  _internal_set_awidgetid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.aWidgetID)
+inline void Msg_SelectionEvent::set_a_awidgetid(uint64_t value) {
+  _internal_set_a_awidgetid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aWidgetID)
 }
 
-// required uint32 aType = 3;
-inline bool Msg_SelectionEvent::_internal_has_atype() const {
+// required uint32 a_aType = 3;
+inline bool Msg_SelectionEvent::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_SelectionEvent::has_atype() const {
-  return _internal_has_atype();
+inline bool Msg_SelectionEvent::has_a_atype() const {
+  return _internal_has_a_atype();
 }
-inline void Msg_SelectionEvent::clear_atype() {
-  _impl_.atype_ = 0u;
+inline void Msg_SelectionEvent::clear_a_atype() {
+  _impl_.a_atype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_SelectionEvent::_internal_atype() const {
-  return _impl_.atype_;
+inline uint32_t Msg_SelectionEvent::_internal_a_atype() const {
+  return _impl_.a_atype_;
 }
-inline uint32_t Msg_SelectionEvent::atype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.aType)
-  return _internal_atype();
+inline uint32_t Msg_SelectionEvent::a_atype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aType)
+  return _internal_a_atype();
 }
-inline void Msg_SelectionEvent::_internal_set_atype(uint32_t value) {
+inline void Msg_SelectionEvent::_internal_set_a_atype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.atype_ = value;
+  _impl_.a_atype_ = value;
 }
-inline void Msg_SelectionEvent::set_atype(uint32_t value) {
-  _internal_set_atype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.aType)
+inline void Msg_SelectionEvent::set_a_atype(uint32_t value) {
+  _internal_set_a_atype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aType)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RoleChangedEvent
 
-// required bytes aRole = 1;
-inline bool Msg_RoleChangedEvent::_internal_has_arole() const {
+// required bytes a_aRole = 1;
+inline bool Msg_RoleChangedEvent::_internal_has_a_arole() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RoleChangedEvent::has_arole() const {
-  return _internal_has_arole();
+inline bool Msg_RoleChangedEvent::has_a_arole() const {
+  return _internal_has_a_arole();
 }
-inline void Msg_RoleChangedEvent::clear_arole() {
-  _impl_.arole_.ClearToEmpty();
+inline void Msg_RoleChangedEvent::clear_a_arole() {
+  _impl_.a_arole_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RoleChangedEvent::arole() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRole)
-  return _internal_arole();
+inline const std::string& Msg_RoleChangedEvent::a_arole() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
+  return _internal_a_arole();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RoleChangedEvent::set_arole(ArgT0&& arg0, ArgT... args) {
+void Msg_RoleChangedEvent::set_a_arole(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arole_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRole)
+ _impl_.a_arole_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
-inline std::string* Msg_RoleChangedEvent::mutable_arole() {
-  std::string* _s = _internal_mutable_arole();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRole)
+inline std::string* Msg_RoleChangedEvent::mutable_a_arole() {
+  std::string* _s = _internal_mutable_a_arole();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
   return _s;
 }
-inline const std::string& Msg_RoleChangedEvent::_internal_arole() const {
-  return _impl_.arole_.Get();
+inline const std::string& Msg_RoleChangedEvent::_internal_a_arole() const {
+  return _impl_.a_arole_.Get();
 }
-inline void Msg_RoleChangedEvent::_internal_set_arole(const std::string& value) {
+inline void Msg_RoleChangedEvent::_internal_set_a_arole(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arole_.Set(value, GetArenaForAllocation());
+  _impl_.a_arole_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RoleChangedEvent::_internal_mutable_arole() {
+inline std::string* Msg_RoleChangedEvent::_internal_mutable_a_arole() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arole_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arole_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RoleChangedEvent::release_arole() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRole)
-  if (!_internal_has_arole()) {
+inline std::string* Msg_RoleChangedEvent::release_a_arole() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
+  if (!_internal_has_a_arole()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arole_.Release();
+  auto* p = _impl_.a_arole_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arole_.IsDefault()) {
-    _impl_.arole_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arole_.IsDefault()) {
+    _impl_.a_arole_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RoleChangedEvent::set_allocated_arole(std::string* arole) {
-  if (arole != nullptr) {
+inline void Msg_RoleChangedEvent::set_allocated_a_arole(std::string* a_arole) {
+  if (a_arole != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arole_.SetAllocated(arole, GetArenaForAllocation());
+  _impl_.a_arole_.SetAllocated(a_arole, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arole_.IsDefault()) {
-    _impl_.arole_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arole_.IsDefault()) {
+    _impl_.a_arole_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRole)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
 
-// required uint32 aRoleMapEntryIndex = 2;
-inline bool Msg_RoleChangedEvent::_internal_has_arolemapentryindex() const {
+// required uint32 a_aRoleMapEntryIndex = 2;
+inline bool Msg_RoleChangedEvent::_internal_has_a_arolemapentryindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RoleChangedEvent::has_arolemapentryindex() const {
-  return _internal_has_arolemapentryindex();
+inline bool Msg_RoleChangedEvent::has_a_arolemapentryindex() const {
+  return _internal_has_a_arolemapentryindex();
 }
-inline void Msg_RoleChangedEvent::clear_arolemapentryindex() {
-  _impl_.arolemapentryindex_ = 0u;
+inline void Msg_RoleChangedEvent::clear_a_arolemapentryindex() {
+  _impl_.a_arolemapentryindex_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_RoleChangedEvent::_internal_arolemapentryindex() const {
-  return _impl_.arolemapentryindex_;
+inline uint32_t Msg_RoleChangedEvent::_internal_a_arolemapentryindex() const {
+  return _impl_.a_arolemapentryindex_;
 }
-inline uint32_t Msg_RoleChangedEvent::arolemapentryindex() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRoleMapEntryIndex)
-  return _internal_arolemapentryindex();
+inline uint32_t Msg_RoleChangedEvent::a_arolemapentryindex() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRoleMapEntryIndex)
+  return _internal_a_arolemapentryindex();
 }
-inline void Msg_RoleChangedEvent::_internal_set_arolemapentryindex(uint32_t value) {
+inline void Msg_RoleChangedEvent::_internal_set_a_arolemapentryindex(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.arolemapentryindex_ = value;
+  _impl_.a_arolemapentryindex_ = value;
 }
-inline void Msg_RoleChangedEvent::set_arolemapentryindex(uint32_t value) {
-  _internal_set_arolemapentryindex(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.aRoleMapEntryIndex)
+inline void Msg_RoleChangedEvent::set_a_arolemapentryindex(uint32_t value) {
+  _internal_set_a_arolemapentryindex(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRoleMapEntryIndex)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_FocusEvent
 
-// required uint64 aID = 1;
-inline bool Msg_FocusEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_FocusEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_FocusEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_FocusEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_FocusEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_FocusEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_FocusEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_FocusEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_FocusEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_FocusEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_FocusEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_FocusEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_FocusEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aID)
+inline void Msg_FocusEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aID)
 }
 
-// required bytes aCaretRect = 2;
-inline bool Msg_FocusEvent::_internal_has_acaretrect() const {
+// required bytes a_aCaretRect = 2;
+inline bool Msg_FocusEvent::_internal_has_a_acaretrect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FocusEvent::has_acaretrect() const {
-  return _internal_has_acaretrect();
+inline bool Msg_FocusEvent::has_a_acaretrect() const {
+  return _internal_has_a_acaretrect();
 }
-inline void Msg_FocusEvent::clear_acaretrect() {
-  _impl_.acaretrect_.ClearToEmpty();
+inline void Msg_FocusEvent::clear_a_acaretrect() {
+  _impl_.a_acaretrect_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_FocusEvent::acaretrect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aCaretRect)
-  return _internal_acaretrect();
+inline const std::string& Msg_FocusEvent::a_acaretrect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
+  return _internal_a_acaretrect();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_FocusEvent::set_acaretrect(ArgT0&& arg0, ArgT... args) {
+void Msg_FocusEvent::set_a_acaretrect(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aCaretRect)
+ _impl_.a_acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
 }
-inline std::string* Msg_FocusEvent::mutable_acaretrect() {
-  std::string* _s = _internal_mutable_acaretrect();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aCaretRect)
+inline std::string* Msg_FocusEvent::mutable_a_acaretrect() {
+  std::string* _s = _internal_mutable_a_acaretrect();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
   return _s;
 }
-inline const std::string& Msg_FocusEvent::_internal_acaretrect() const {
-  return _impl_.acaretrect_.Get();
+inline const std::string& Msg_FocusEvent::_internal_a_acaretrect() const {
+  return _impl_.a_acaretrect_.Get();
 }
-inline void Msg_FocusEvent::_internal_set_acaretrect(const std::string& value) {
+inline void Msg_FocusEvent::_internal_set_a_acaretrect(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acaretrect_.Set(value, GetArenaForAllocation());
+  _impl_.a_acaretrect_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_FocusEvent::_internal_mutable_acaretrect() {
+inline std::string* Msg_FocusEvent::_internal_mutable_a_acaretrect() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acaretrect_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acaretrect_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_FocusEvent::release_acaretrect() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aCaretRect)
-  if (!_internal_has_acaretrect()) {
+inline std::string* Msg_FocusEvent::release_a_acaretrect() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
+  if (!_internal_has_a_acaretrect()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acaretrect_.Release();
+  auto* p = _impl_.a_acaretrect_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acaretrect_.IsDefault()) {
-    _impl_.acaretrect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acaretrect_.IsDefault()) {
+    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_FocusEvent::set_allocated_acaretrect(std::string* acaretrect) {
-  if (acaretrect != nullptr) {
+inline void Msg_FocusEvent::set_allocated_a_acaretrect(std::string* a_acaretrect) {
+  if (a_acaretrect != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acaretrect_.SetAllocated(acaretrect, GetArenaForAllocation());
+  _impl_.a_acaretrect_.SetAllocated(a_acaretrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acaretrect_.IsDefault()) {
-    _impl_.acaretrect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acaretrect_.IsDefault()) {
+    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.aCaretRect)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScrollingEvent
 
-// required uint64 aID = 1;
-inline bool Msg_ScrollingEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollingEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollingEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_ScrollingEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_ScrollingEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_ScrollingEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ScrollingEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_ScrollingEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_ScrollingEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_ScrollingEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_ScrollingEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_ScrollingEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_ScrollingEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aID)
+inline void Msg_ScrollingEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aID)
 }
 
-// required uint64 aType = 2;
-inline bool Msg_ScrollingEvent::_internal_has_atype() const {
+// required uint64 a_aType = 2;
+inline bool Msg_ScrollingEvent::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScrollingEvent::has_atype() const {
-  return _internal_has_atype();
+inline bool Msg_ScrollingEvent::has_a_atype() const {
+  return _internal_has_a_atype();
 }
-inline void Msg_ScrollingEvent::clear_atype() {
-  _impl_.atype_ = uint64_t{0u};
+inline void Msg_ScrollingEvent::clear_a_atype() {
+  _impl_.a_atype_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_ScrollingEvent::_internal_atype() const {
-  return _impl_.atype_;
+inline uint64_t Msg_ScrollingEvent::_internal_a_atype() const {
+  return _impl_.a_atype_;
 }
-inline uint64_t Msg_ScrollingEvent::atype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aType)
-  return _internal_atype();
+inline uint64_t Msg_ScrollingEvent::a_atype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aType)
+  return _internal_a_atype();
 }
-inline void Msg_ScrollingEvent::_internal_set_atype(uint64_t value) {
+inline void Msg_ScrollingEvent::_internal_set_a_atype(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.atype_ = value;
+  _impl_.a_atype_ = value;
 }
-inline void Msg_ScrollingEvent::set_atype(uint64_t value) {
-  _internal_set_atype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aType)
+inline void Msg_ScrollingEvent::set_a_atype(uint64_t value) {
+  _internal_set_a_atype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aType)
 }
 
-// required uint32 aScrollX = 3;
-inline bool Msg_ScrollingEvent::_internal_has_ascrollx() const {
+// required uint32 a_aScrollX = 3;
+inline bool Msg_ScrollingEvent::_internal_has_a_ascrollx() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ScrollingEvent::has_ascrollx() const {
-  return _internal_has_ascrollx();
+inline bool Msg_ScrollingEvent::has_a_ascrollx() const {
+  return _internal_has_a_ascrollx();
 }
-inline void Msg_ScrollingEvent::clear_ascrollx() {
-  _impl_.ascrollx_ = 0u;
+inline void Msg_ScrollingEvent::clear_a_ascrollx() {
+  _impl_.a_ascrollx_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_ScrollingEvent::_internal_ascrollx() const {
-  return _impl_.ascrollx_;
+inline uint32_t Msg_ScrollingEvent::_internal_a_ascrollx() const {
+  return _impl_.a_ascrollx_;
 }
-inline uint32_t Msg_ScrollingEvent::ascrollx() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aScrollX)
-  return _internal_ascrollx();
+inline uint32_t Msg_ScrollingEvent::a_ascrollx() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollX)
+  return _internal_a_ascrollx();
 }
-inline void Msg_ScrollingEvent::_internal_set_ascrollx(uint32_t value) {
+inline void Msg_ScrollingEvent::_internal_set_a_ascrollx(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.ascrollx_ = value;
+  _impl_.a_ascrollx_ = value;
 }
-inline void Msg_ScrollingEvent::set_ascrollx(uint32_t value) {
-  _internal_set_ascrollx(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aScrollX)
+inline void Msg_ScrollingEvent::set_a_ascrollx(uint32_t value) {
+  _internal_set_a_ascrollx(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollX)
 }
 
-// required uint32 aScrollY = 4;
-inline bool Msg_ScrollingEvent::_internal_has_ascrolly() const {
+// required uint32 a_aScrollY = 4;
+inline bool Msg_ScrollingEvent::_internal_has_a_ascrolly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ScrollingEvent::has_ascrolly() const {
-  return _internal_has_ascrolly();
+inline bool Msg_ScrollingEvent::has_a_ascrolly() const {
+  return _internal_has_a_ascrolly();
 }
-inline void Msg_ScrollingEvent::clear_ascrolly() {
-  _impl_.ascrolly_ = 0u;
+inline void Msg_ScrollingEvent::clear_a_ascrolly() {
+  _impl_.a_ascrolly_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_ScrollingEvent::_internal_ascrolly() const {
-  return _impl_.ascrolly_;
+inline uint32_t Msg_ScrollingEvent::_internal_a_ascrolly() const {
+  return _impl_.a_ascrolly_;
 }
-inline uint32_t Msg_ScrollingEvent::ascrolly() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aScrollY)
-  return _internal_ascrolly();
+inline uint32_t Msg_ScrollingEvent::a_ascrolly() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollY)
+  return _internal_a_ascrolly();
 }
-inline void Msg_ScrollingEvent::_internal_set_ascrolly(uint32_t value) {
+inline void Msg_ScrollingEvent::_internal_set_a_ascrolly(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.ascrolly_ = value;
+  _impl_.a_ascrolly_ = value;
 }
-inline void Msg_ScrollingEvent::set_ascrolly(uint32_t value) {
-  _internal_set_ascrolly(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aScrollY)
+inline void Msg_ScrollingEvent::set_a_ascrolly(uint32_t value) {
+  _internal_set_a_ascrolly(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollY)
 }
 
-// required uint32 aMaxScrollX = 5;
-inline bool Msg_ScrollingEvent::_internal_has_amaxscrollx() const {
+// required uint32 a_aMaxScrollX = 5;
+inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrollx() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_ScrollingEvent::has_amaxscrollx() const {
-  return _internal_has_amaxscrollx();
+inline bool Msg_ScrollingEvent::has_a_amaxscrollx() const {
+  return _internal_has_a_amaxscrollx();
 }
-inline void Msg_ScrollingEvent::clear_amaxscrollx() {
-  _impl_.amaxscrollx_ = 0u;
+inline void Msg_ScrollingEvent::clear_a_amaxscrollx() {
+  _impl_.a_amaxscrollx_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t Msg_ScrollingEvent::_internal_amaxscrollx() const {
-  return _impl_.amaxscrollx_;
+inline uint32_t Msg_ScrollingEvent::_internal_a_amaxscrollx() const {
+  return _impl_.a_amaxscrollx_;
 }
-inline uint32_t Msg_ScrollingEvent::amaxscrollx() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aMaxScrollX)
-  return _internal_amaxscrollx();
+inline uint32_t Msg_ScrollingEvent::a_amaxscrollx() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollX)
+  return _internal_a_amaxscrollx();
 }
-inline void Msg_ScrollingEvent::_internal_set_amaxscrollx(uint32_t value) {
+inline void Msg_ScrollingEvent::_internal_set_a_amaxscrollx(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.amaxscrollx_ = value;
+  _impl_.a_amaxscrollx_ = value;
 }
-inline void Msg_ScrollingEvent::set_amaxscrollx(uint32_t value) {
-  _internal_set_amaxscrollx(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aMaxScrollX)
+inline void Msg_ScrollingEvent::set_a_amaxscrollx(uint32_t value) {
+  _internal_set_a_amaxscrollx(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollX)
 }
 
-// required uint32 aMaxScrollY = 6;
-inline bool Msg_ScrollingEvent::_internal_has_amaxscrolly() const {
+// required uint32 a_aMaxScrollY = 6;
+inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrolly() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_ScrollingEvent::has_amaxscrolly() const {
-  return _internal_has_amaxscrolly();
+inline bool Msg_ScrollingEvent::has_a_amaxscrolly() const {
+  return _internal_has_a_amaxscrolly();
 }
-inline void Msg_ScrollingEvent::clear_amaxscrolly() {
-  _impl_.amaxscrolly_ = 0u;
+inline void Msg_ScrollingEvent::clear_a_amaxscrolly() {
+  _impl_.a_amaxscrolly_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline uint32_t Msg_ScrollingEvent::_internal_amaxscrolly() const {
-  return _impl_.amaxscrolly_;
+inline uint32_t Msg_ScrollingEvent::_internal_a_amaxscrolly() const {
+  return _impl_.a_amaxscrolly_;
 }
-inline uint32_t Msg_ScrollingEvent::amaxscrolly() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aMaxScrollY)
-  return _internal_amaxscrolly();
+inline uint32_t Msg_ScrollingEvent::a_amaxscrolly() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollY)
+  return _internal_a_amaxscrolly();
 }
-inline void Msg_ScrollingEvent::_internal_set_amaxscrolly(uint32_t value) {
+inline void Msg_ScrollingEvent::_internal_set_a_amaxscrolly(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.amaxscrolly_ = value;
+  _impl_.a_amaxscrolly_ = value;
 }
-inline void Msg_ScrollingEvent::set_amaxscrolly(uint32_t value) {
-  _internal_set_amaxscrolly(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.aMaxScrollY)
+inline void Msg_ScrollingEvent::set_a_amaxscrolly(uint32_t value) {
+  _internal_set_a_amaxscrolly(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollY)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AnnouncementEvent
 
-// required uint64 aID = 1;
-inline bool Msg_AnnouncementEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_AnnouncementEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AnnouncementEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_AnnouncementEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_AnnouncementEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_AnnouncementEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_AnnouncementEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_AnnouncementEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_AnnouncementEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_AnnouncementEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_AnnouncementEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_AnnouncementEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_AnnouncementEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aID)
+inline void Msg_AnnouncementEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aID)
 }
 
-// required bytes aAnnouncement = 2;
-inline bool Msg_AnnouncementEvent::_internal_has_aannouncement() const {
+// required bytes a_aAnnouncement = 2;
+inline bool Msg_AnnouncementEvent::_internal_has_a_aannouncement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AnnouncementEvent::has_aannouncement() const {
-  return _internal_has_aannouncement();
+inline bool Msg_AnnouncementEvent::has_a_aannouncement() const {
+  return _internal_has_a_aannouncement();
 }
-inline void Msg_AnnouncementEvent::clear_aannouncement() {
-  _impl_.aannouncement_.ClearToEmpty();
+inline void Msg_AnnouncementEvent::clear_a_aannouncement() {
+  _impl_.a_aannouncement_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AnnouncementEvent::aannouncement() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aAnnouncement)
-  return _internal_aannouncement();
+inline const std::string& Msg_AnnouncementEvent::a_aannouncement() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
+  return _internal_a_aannouncement();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AnnouncementEvent::set_aannouncement(ArgT0&& arg0, ArgT... args) {
+void Msg_AnnouncementEvent::set_a_aannouncement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aannouncement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aAnnouncement)
+ _impl_.a_aannouncement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
-inline std::string* Msg_AnnouncementEvent::mutable_aannouncement() {
-  std::string* _s = _internal_mutable_aannouncement();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aAnnouncement)
+inline std::string* Msg_AnnouncementEvent::mutable_a_aannouncement() {
+  std::string* _s = _internal_mutable_a_aannouncement();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
   return _s;
 }
-inline const std::string& Msg_AnnouncementEvent::_internal_aannouncement() const {
-  return _impl_.aannouncement_.Get();
+inline const std::string& Msg_AnnouncementEvent::_internal_a_aannouncement() const {
+  return _impl_.a_aannouncement_.Get();
 }
-inline void Msg_AnnouncementEvent::_internal_set_aannouncement(const std::string& value) {
+inline void Msg_AnnouncementEvent::_internal_set_a_aannouncement(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aannouncement_.Set(value, GetArenaForAllocation());
+  _impl_.a_aannouncement_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AnnouncementEvent::_internal_mutable_aannouncement() {
+inline std::string* Msg_AnnouncementEvent::_internal_mutable_a_aannouncement() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aannouncement_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aannouncement_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AnnouncementEvent::release_aannouncement() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aAnnouncement)
-  if (!_internal_has_aannouncement()) {
+inline std::string* Msg_AnnouncementEvent::release_a_aannouncement() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
+  if (!_internal_has_a_aannouncement()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aannouncement_.Release();
+  auto* p = _impl_.a_aannouncement_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aannouncement_.IsDefault()) {
-    _impl_.aannouncement_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aannouncement_.IsDefault()) {
+    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AnnouncementEvent::set_allocated_aannouncement(std::string* aannouncement) {
-  if (aannouncement != nullptr) {
+inline void Msg_AnnouncementEvent::set_allocated_a_aannouncement(std::string* a_aannouncement) {
+  if (a_aannouncement != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aannouncement_.SetAllocated(aannouncement, GetArenaForAllocation());
+  _impl_.a_aannouncement_.SetAllocated(a_aannouncement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aannouncement_.IsDefault()) {
-    _impl_.aannouncement_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aannouncement_.IsDefault()) {
+    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aAnnouncement)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
 
-// required uint32 aPriority = 3;
-inline bool Msg_AnnouncementEvent::_internal_has_apriority() const {
+// required uint32 a_aPriority = 3;
+inline bool Msg_AnnouncementEvent::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_AnnouncementEvent::has_apriority() const {
-  return _internal_has_apriority();
+inline bool Msg_AnnouncementEvent::has_a_apriority() const {
+  return _internal_has_a_apriority();
 }
-inline void Msg_AnnouncementEvent::clear_apriority() {
-  _impl_.apriority_ = 0u;
+inline void Msg_AnnouncementEvent::clear_a_apriority() {
+  _impl_.a_apriority_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_AnnouncementEvent::_internal_apriority() const {
-  return _impl_.apriority_;
+inline uint32_t Msg_AnnouncementEvent::_internal_a_apriority() const {
+  return _impl_.a_apriority_;
 }
-inline uint32_t Msg_AnnouncementEvent::apriority() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aPriority)
-  return _internal_apriority();
+inline uint32_t Msg_AnnouncementEvent::a_apriority() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aPriority)
+  return _internal_a_apriority();
 }
-inline void Msg_AnnouncementEvent::_internal_set_apriority(uint32_t value) {
+inline void Msg_AnnouncementEvent::_internal_set_a_apriority(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.apriority_ = value;
+  _impl_.a_apriority_ = value;
 }
-inline void Msg_AnnouncementEvent::set_apriority(uint32_t value) {
-  _internal_set_apriority(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.aPriority)
+inline void Msg_AnnouncementEvent::set_a_apriority(uint32_t value) {
+  _internal_set_a_apriority(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aPriority)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TextSelectionChangeEvent
 
-// required uint64 aID = 1;
-inline bool Msg_TextSelectionChangeEvent::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_TextSelectionChangeEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TextSelectionChangeEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_TextSelectionChangeEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_TextSelectionChangeEvent::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_TextSelectionChangeEvent::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_TextSelectionChangeEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_TextSelectionChangeEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_TextSelectionChangeEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aID)
-  return _internal_aid();
+inline uint64_t Msg_TextSelectionChangeEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_TextSelectionChangeEvent::_internal_set_aid(uint64_t value) {
+inline void Msg_TextSelectionChangeEvent::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_TextSelectionChangeEvent::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aID)
+inline void Msg_TextSelectionChangeEvent::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aID)
 }
 
-// repeated .protobuf.mozilla.a11y.TextRangeData aSelection = 2;
-inline int Msg_TextSelectionChangeEvent::_internal_aselection_size() const {
-  return _impl_.aselection_.size();
+// repeated .protobuf.mozilla.a11y.TextRangeData a_aSelection = 2;
+inline int Msg_TextSelectionChangeEvent::_internal_a_aselection_size() const {
+  return _impl_.a_aselection_.size();
 }
-inline int Msg_TextSelectionChangeEvent::aselection_size() const {
-  return _internal_aselection_size();
+inline int Msg_TextSelectionChangeEvent::a_aselection_size() const {
+  return _internal_a_aselection_size();
 }
-inline ::protobuf::mozilla::a11y::TextRangeData* Msg_TextSelectionChangeEvent::mutable_aselection(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aSelection)
-  return _impl_.aselection_.Mutable(index);
+inline ::protobuf::mozilla::a11y::TextRangeData* Msg_TextSelectionChangeEvent::mutable_a_aselection(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aSelection)
+  return _impl_.a_aselection_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >*
-Msg_TextSelectionChangeEvent::mutable_aselection() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aSelection)
-  return &_impl_.aselection_;
+Msg_TextSelectionChangeEvent::mutable_a_aselection() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aSelection)
+  return &_impl_.a_aselection_;
 }
-inline const ::protobuf::mozilla::a11y::TextRangeData& Msg_TextSelectionChangeEvent::_internal_aselection(int index) const {
-  return _impl_.aselection_.Get(index);
+inline const ::protobuf::mozilla::a11y::TextRangeData& Msg_TextSelectionChangeEvent::_internal_a_aselection(int index) const {
+  return _impl_.a_aselection_.Get(index);
 }
-inline const ::protobuf::mozilla::a11y::TextRangeData& Msg_TextSelectionChangeEvent::aselection(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aSelection)
-  return _internal_aselection(index);
+inline const ::protobuf::mozilla::a11y::TextRangeData& Msg_TextSelectionChangeEvent::a_aselection(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aSelection)
+  return _internal_a_aselection(index);
 }
-inline ::protobuf::mozilla::a11y::TextRangeData* Msg_TextSelectionChangeEvent::_internal_add_aselection() {
-  return _impl_.aselection_.Add();
+inline ::protobuf::mozilla::a11y::TextRangeData* Msg_TextSelectionChangeEvent::_internal_add_a_aselection() {
+  return _impl_.a_aselection_.Add();
 }
-inline ::protobuf::mozilla::a11y::TextRangeData* Msg_TextSelectionChangeEvent::add_aselection() {
-  ::protobuf::mozilla::a11y::TextRangeData* _add = _internal_add_aselection();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aSelection)
+inline ::protobuf::mozilla::a11y::TextRangeData* Msg_TextSelectionChangeEvent::add_a_aselection() {
+  ::protobuf::mozilla::a11y::TextRangeData* _add = _internal_add_a_aselection();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aSelection)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >&
-Msg_TextSelectionChangeEvent::aselection() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.aSelection)
-  return _impl_.aselection_;
+Msg_TextSelectionChangeEvent::a_aselection() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent.a_aSelection)
+  return _impl_.a_aselection_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BindChildDoc
 
-// required bytes aChildDoc = 1;
-inline bool Msg_BindChildDoc::_internal_has_achilddoc() const {
+// required bytes a_aChildDoc = 1;
+inline bool Msg_BindChildDoc::_internal_has_a_achilddoc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BindChildDoc::has_achilddoc() const {
-  return _internal_has_achilddoc();
+inline bool Msg_BindChildDoc::has_a_achilddoc() const {
+  return _internal_has_a_achilddoc();
 }
-inline void Msg_BindChildDoc::clear_achilddoc() {
-  _impl_.achilddoc_.ClearToEmpty();
+inline void Msg_BindChildDoc::clear_a_achilddoc() {
+  _impl_.a_achilddoc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BindChildDoc::achilddoc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aChildDoc)
-  return _internal_achilddoc();
+inline const std::string& Msg_BindChildDoc::a_achilddoc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
+  return _internal_a_achilddoc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BindChildDoc::set_achilddoc(ArgT0&& arg0, ArgT... args) {
+void Msg_BindChildDoc::set_a_achilddoc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.achilddoc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aChildDoc)
+ _impl_.a_achilddoc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
-inline std::string* Msg_BindChildDoc::mutable_achilddoc() {
-  std::string* _s = _internal_mutable_achilddoc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aChildDoc)
+inline std::string* Msg_BindChildDoc::mutable_a_achilddoc() {
+  std::string* _s = _internal_mutable_a_achilddoc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
   return _s;
 }
-inline const std::string& Msg_BindChildDoc::_internal_achilddoc() const {
-  return _impl_.achilddoc_.Get();
+inline const std::string& Msg_BindChildDoc::_internal_a_achilddoc() const {
+  return _impl_.a_achilddoc_.Get();
 }
-inline void Msg_BindChildDoc::_internal_set_achilddoc(const std::string& value) {
+inline void Msg_BindChildDoc::_internal_set_a_achilddoc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.achilddoc_.Set(value, GetArenaForAllocation());
+  _impl_.a_achilddoc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BindChildDoc::_internal_mutable_achilddoc() {
+inline std::string* Msg_BindChildDoc::_internal_mutable_a_achilddoc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.achilddoc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_achilddoc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BindChildDoc::release_achilddoc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aChildDoc)
-  if (!_internal_has_achilddoc()) {
+inline std::string* Msg_BindChildDoc::release_a_achilddoc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
+  if (!_internal_has_a_achilddoc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.achilddoc_.Release();
+  auto* p = _impl_.a_achilddoc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.achilddoc_.IsDefault()) {
-    _impl_.achilddoc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_achilddoc_.IsDefault()) {
+    _impl_.a_achilddoc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BindChildDoc::set_allocated_achilddoc(std::string* achilddoc) {
-  if (achilddoc != nullptr) {
+inline void Msg_BindChildDoc::set_allocated_a_achilddoc(std::string* a_achilddoc) {
+  if (a_achilddoc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.achilddoc_.SetAllocated(achilddoc, GetArenaForAllocation());
+  _impl_.a_achilddoc_.SetAllocated(a_achilddoc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.achilddoc_.IsDefault()) {
-    _impl_.achilddoc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_achilddoc_.IsDefault()) {
+    _impl_.a_achilddoc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aChildDoc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
 
-// required uint64 aID = 2;
-inline bool Msg_BindChildDoc::_internal_has_aid() const {
+// required uint64 a_aID = 2;
+inline bool Msg_BindChildDoc::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_BindChildDoc::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_BindChildDoc::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_BindChildDoc::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_BindChildDoc::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_BindChildDoc::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_BindChildDoc::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_BindChildDoc::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aID)
-  return _internal_aid();
+inline uint64_t Msg_BindChildDoc::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_BindChildDoc::_internal_set_aid(uint64_t value) {
+inline void Msg_BindChildDoc::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_BindChildDoc::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.aID)
+inline void Msg_BindChildDoc::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Cache
 
-// required bytes aUpdateType = 1;
-inline bool Msg_Cache::_internal_has_aupdatetype() const {
+// required bytes a_aUpdateType = 1;
+inline bool Msg_Cache::_internal_has_a_aupdatetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Cache::has_aupdatetype() const {
-  return _internal_has_aupdatetype();
+inline bool Msg_Cache::has_a_aupdatetype() const {
+  return _internal_has_a_aupdatetype();
 }
-inline void Msg_Cache::clear_aupdatetype() {
-  _impl_.aupdatetype_.ClearToEmpty();
+inline void Msg_Cache::clear_a_aupdatetype() {
+  _impl_.a_aupdatetype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Cache::aupdatetype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aUpdateType)
-  return _internal_aupdatetype();
+inline const std::string& Msg_Cache::a_aupdatetype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
+  return _internal_a_aupdatetype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Cache::set_aupdatetype(ArgT0&& arg0, ArgT... args) {
+void Msg_Cache::set_a_aupdatetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aupdatetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aUpdateType)
+ _impl_.a_aupdatetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
 }
-inline std::string* Msg_Cache::mutable_aupdatetype() {
-  std::string* _s = _internal_mutable_aupdatetype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aUpdateType)
+inline std::string* Msg_Cache::mutable_a_aupdatetype() {
+  std::string* _s = _internal_mutable_a_aupdatetype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
   return _s;
 }
-inline const std::string& Msg_Cache::_internal_aupdatetype() const {
-  return _impl_.aupdatetype_.Get();
+inline const std::string& Msg_Cache::_internal_a_aupdatetype() const {
+  return _impl_.a_aupdatetype_.Get();
 }
-inline void Msg_Cache::_internal_set_aupdatetype(const std::string& value) {
+inline void Msg_Cache::_internal_set_a_aupdatetype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aupdatetype_.Set(value, GetArenaForAllocation());
+  _impl_.a_aupdatetype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Cache::_internal_mutable_aupdatetype() {
+inline std::string* Msg_Cache::_internal_mutable_a_aupdatetype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aupdatetype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aupdatetype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Cache::release_aupdatetype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aUpdateType)
-  if (!_internal_has_aupdatetype()) {
+inline std::string* Msg_Cache::release_a_aupdatetype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
+  if (!_internal_has_a_aupdatetype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aupdatetype_.Release();
+  auto* p = _impl_.a_aupdatetype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aupdatetype_.IsDefault()) {
-    _impl_.aupdatetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aupdatetype_.IsDefault()) {
+    _impl_.a_aupdatetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Cache::set_allocated_aupdatetype(std::string* aupdatetype) {
-  if (aupdatetype != nullptr) {
+inline void Msg_Cache::set_allocated_a_aupdatetype(std::string* a_aupdatetype) {
+  if (a_aupdatetype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aupdatetype_.SetAllocated(aupdatetype, GetArenaForAllocation());
+  _impl_.a_aupdatetype_.SetAllocated(a_aupdatetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aupdatetype_.IsDefault()) {
-    _impl_.aupdatetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aupdatetype_.IsDefault()) {
+    _impl_.a_aupdatetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aUpdateType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
 }
 
-// repeated .protobuf.mozilla.a11y.CacheData aData = 2;
-inline int Msg_Cache::_internal_adata_size() const {
-  return _impl_.adata_.size();
+// repeated .protobuf.mozilla.a11y.CacheData a_aData = 2;
+inline int Msg_Cache::_internal_a_adata_size() const {
+  return _impl_.a_adata_.size();
 }
-inline int Msg_Cache::adata_size() const {
-  return _internal_adata_size();
+inline int Msg_Cache::a_adata_size() const {
+  return _internal_a_adata_size();
 }
-inline ::protobuf::mozilla::a11y::CacheData* Msg_Cache::mutable_adata(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aData)
-  return _impl_.adata_.Mutable(index);
+inline ::protobuf::mozilla::a11y::CacheData* Msg_Cache::mutable_a_adata(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aData)
+  return _impl_.a_adata_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >*
-Msg_Cache::mutable_adata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aData)
-  return &_impl_.adata_;
+Msg_Cache::mutable_a_adata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aData)
+  return &_impl_.a_adata_;
 }
-inline const ::protobuf::mozilla::a11y::CacheData& Msg_Cache::_internal_adata(int index) const {
-  return _impl_.adata_.Get(index);
+inline const ::protobuf::mozilla::a11y::CacheData& Msg_Cache::_internal_a_adata(int index) const {
+  return _impl_.a_adata_.Get(index);
 }
-inline const ::protobuf::mozilla::a11y::CacheData& Msg_Cache::adata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aData)
-  return _internal_adata(index);
+inline const ::protobuf::mozilla::a11y::CacheData& Msg_Cache::a_adata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aData)
+  return _internal_a_adata(index);
 }
-inline ::protobuf::mozilla::a11y::CacheData* Msg_Cache::_internal_add_adata() {
-  return _impl_.adata_.Add();
+inline ::protobuf::mozilla::a11y::CacheData* Msg_Cache::_internal_add_a_adata() {
+  return _impl_.a_adata_.Add();
 }
-inline ::protobuf::mozilla::a11y::CacheData* Msg_Cache::add_adata() {
-  ::protobuf::mozilla::a11y::CacheData* _add = _internal_add_adata();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aData)
+inline ::protobuf::mozilla::a11y::CacheData* Msg_Cache::add_a_adata() {
+  ::protobuf::mozilla::a11y::CacheData* _add = _internal_add_a_adata();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aData)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >&
-Msg_Cache::adata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.aData)
-  return _impl_.adata_;
+Msg_Cache::a_adata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aData)
+  return _impl_.a_adata_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SelectedAccessiblesChanged
 
-// repeated uint64 aSelectedIDs = 1;
-inline int Msg_SelectedAccessiblesChanged::_internal_aselectedids_size() const {
-  return _impl_.aselectedids_.size();
+// repeated uint64 a_aSelectedIDs = 1;
+inline int Msg_SelectedAccessiblesChanged::_internal_a_aselectedids_size() const {
+  return _impl_.a_aselectedids_.size();
 }
-inline int Msg_SelectedAccessiblesChanged::aselectedids_size() const {
-  return _internal_aselectedids_size();
+inline int Msg_SelectedAccessiblesChanged::a_aselectedids_size() const {
+  return _internal_a_aselectedids_size();
 }
-inline void Msg_SelectedAccessiblesChanged::clear_aselectedids() {
-  _impl_.aselectedids_.Clear();
+inline void Msg_SelectedAccessiblesChanged::clear_a_aselectedids() {
+  _impl_.a_aselectedids_.Clear();
 }
-inline uint64_t Msg_SelectedAccessiblesChanged::_internal_aselectedids(int index) const {
-  return _impl_.aselectedids_.Get(index);
+inline uint64_t Msg_SelectedAccessiblesChanged::_internal_a_aselectedids(int index) const {
+  return _impl_.a_aselectedids_.Get(index);
 }
-inline uint64_t Msg_SelectedAccessiblesChanged::aselectedids(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aSelectedIDs)
-  return _internal_aselectedids(index);
+inline uint64_t Msg_SelectedAccessiblesChanged::a_aselectedids(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aSelectedIDs)
+  return _internal_a_aselectedids(index);
 }
-inline void Msg_SelectedAccessiblesChanged::set_aselectedids(int index, uint64_t value) {
-  _impl_.aselectedids_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aSelectedIDs)
+inline void Msg_SelectedAccessiblesChanged::set_a_aselectedids(int index, uint64_t value) {
+  _impl_.a_aselectedids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aSelectedIDs)
 }
-inline void Msg_SelectedAccessiblesChanged::_internal_add_aselectedids(uint64_t value) {
-  _impl_.aselectedids_.Add(value);
+inline void Msg_SelectedAccessiblesChanged::_internal_add_a_aselectedids(uint64_t value) {
+  _impl_.a_aselectedids_.Add(value);
 }
-inline void Msg_SelectedAccessiblesChanged::add_aselectedids(uint64_t value) {
-  _internal_add_aselectedids(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aSelectedIDs)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_SelectedAccessiblesChanged::_internal_aselectedids() const {
-  return _impl_.aselectedids_;
+inline void Msg_SelectedAccessiblesChanged::add_a_aselectedids(uint64_t value) {
+  _internal_add_a_aselectedids(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aSelectedIDs)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_SelectedAccessiblesChanged::aselectedids() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aSelectedIDs)
-  return _internal_aselectedids();
+Msg_SelectedAccessiblesChanged::_internal_a_aselectedids() const {
+  return _impl_.a_aselectedids_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+Msg_SelectedAccessiblesChanged::a_aselectedids() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aSelectedIDs)
+  return _internal_a_aselectedids();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_SelectedAccessiblesChanged::_internal_mutable_aselectedids() {
-  return &_impl_.aselectedids_;
+Msg_SelectedAccessiblesChanged::_internal_mutable_a_aselectedids() {
+  return &_impl_.a_aselectedids_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_SelectedAccessiblesChanged::mutable_aselectedids() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aSelectedIDs)
-  return _internal_mutable_aselectedids();
+Msg_SelectedAccessiblesChanged::mutable_a_aselectedids() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aSelectedIDs)
+  return _internal_mutable_a_aselectedids();
 }
 
-// repeated uint64 aUnselectedIDs = 2;
-inline int Msg_SelectedAccessiblesChanged::_internal_aunselectedids_size() const {
-  return _impl_.aunselectedids_.size();
+// repeated uint64 a_aUnselectedIDs = 2;
+inline int Msg_SelectedAccessiblesChanged::_internal_a_aunselectedids_size() const {
+  return _impl_.a_aunselectedids_.size();
 }
-inline int Msg_SelectedAccessiblesChanged::aunselectedids_size() const {
-  return _internal_aunselectedids_size();
+inline int Msg_SelectedAccessiblesChanged::a_aunselectedids_size() const {
+  return _internal_a_aunselectedids_size();
 }
-inline void Msg_SelectedAccessiblesChanged::clear_aunselectedids() {
-  _impl_.aunselectedids_.Clear();
+inline void Msg_SelectedAccessiblesChanged::clear_a_aunselectedids() {
+  _impl_.a_aunselectedids_.Clear();
 }
-inline uint64_t Msg_SelectedAccessiblesChanged::_internal_aunselectedids(int index) const {
-  return _impl_.aunselectedids_.Get(index);
+inline uint64_t Msg_SelectedAccessiblesChanged::_internal_a_aunselectedids(int index) const {
+  return _impl_.a_aunselectedids_.Get(index);
 }
-inline uint64_t Msg_SelectedAccessiblesChanged::aunselectedids(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aUnselectedIDs)
-  return _internal_aunselectedids(index);
+inline uint64_t Msg_SelectedAccessiblesChanged::a_aunselectedids(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aUnselectedIDs)
+  return _internal_a_aunselectedids(index);
 }
-inline void Msg_SelectedAccessiblesChanged::set_aunselectedids(int index, uint64_t value) {
-  _impl_.aunselectedids_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aUnselectedIDs)
+inline void Msg_SelectedAccessiblesChanged::set_a_aunselectedids(int index, uint64_t value) {
+  _impl_.a_aunselectedids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aUnselectedIDs)
 }
-inline void Msg_SelectedAccessiblesChanged::_internal_add_aunselectedids(uint64_t value) {
-  _impl_.aunselectedids_.Add(value);
+inline void Msg_SelectedAccessiblesChanged::_internal_add_a_aunselectedids(uint64_t value) {
+  _impl_.a_aunselectedids_.Add(value);
 }
-inline void Msg_SelectedAccessiblesChanged::add_aunselectedids(uint64_t value) {
-  _internal_add_aunselectedids(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aUnselectedIDs)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_SelectedAccessiblesChanged::_internal_aunselectedids() const {
-  return _impl_.aunselectedids_;
+inline void Msg_SelectedAccessiblesChanged::add_a_aunselectedids(uint64_t value) {
+  _internal_add_a_aunselectedids(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aUnselectedIDs)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_SelectedAccessiblesChanged::aunselectedids() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aUnselectedIDs)
-  return _internal_aunselectedids();
+Msg_SelectedAccessiblesChanged::_internal_a_aunselectedids() const {
+  return _impl_.a_aunselectedids_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+Msg_SelectedAccessiblesChanged::a_aunselectedids() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aUnselectedIDs)
+  return _internal_a_aunselectedids();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_SelectedAccessiblesChanged::_internal_mutable_aunselectedids() {
-  return &_impl_.aunselectedids_;
+Msg_SelectedAccessiblesChanged::_internal_mutable_a_aunselectedids() {
+  return &_impl_.a_aunselectedids_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_SelectedAccessiblesChanged::mutable_aunselectedids() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.aUnselectedIDs)
-  return _internal_mutable_aunselectedids();
+Msg_SelectedAccessiblesChanged::mutable_a_aunselectedids() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged.a_aUnselectedIDs)
+  return _internal_mutable_a_aunselectedids();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AccessiblesWillMove
 
-// repeated uint64 aIDs = 1;
-inline int Msg_AccessiblesWillMove::_internal_aids_size() const {
-  return _impl_.aids_.size();
+// repeated uint64 a_aIDs = 1;
+inline int Msg_AccessiblesWillMove::_internal_a_aids_size() const {
+  return _impl_.a_aids_.size();
 }
-inline int Msg_AccessiblesWillMove::aids_size() const {
-  return _internal_aids_size();
+inline int Msg_AccessiblesWillMove::a_aids_size() const {
+  return _internal_a_aids_size();
 }
-inline void Msg_AccessiblesWillMove::clear_aids() {
-  _impl_.aids_.Clear();
+inline void Msg_AccessiblesWillMove::clear_a_aids() {
+  _impl_.a_aids_.Clear();
 }
-inline uint64_t Msg_AccessiblesWillMove::_internal_aids(int index) const {
-  return _impl_.aids_.Get(index);
+inline uint64_t Msg_AccessiblesWillMove::_internal_a_aids(int index) const {
+  return _impl_.a_aids_.Get(index);
 }
-inline uint64_t Msg_AccessiblesWillMove::aids(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.aIDs)
-  return _internal_aids(index);
+inline uint64_t Msg_AccessiblesWillMove::a_aids(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.a_aIDs)
+  return _internal_a_aids(index);
 }
-inline void Msg_AccessiblesWillMove::set_aids(int index, uint64_t value) {
-  _impl_.aids_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.aIDs)
+inline void Msg_AccessiblesWillMove::set_a_aids(int index, uint64_t value) {
+  _impl_.a_aids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.a_aIDs)
 }
-inline void Msg_AccessiblesWillMove::_internal_add_aids(uint64_t value) {
-  _impl_.aids_.Add(value);
+inline void Msg_AccessiblesWillMove::_internal_add_a_aids(uint64_t value) {
+  _impl_.a_aids_.Add(value);
 }
-inline void Msg_AccessiblesWillMove::add_aids(uint64_t value) {
-  _internal_add_aids(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.aIDs)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_AccessiblesWillMove::_internal_aids() const {
-  return _impl_.aids_;
+inline void Msg_AccessiblesWillMove::add_a_aids(uint64_t value) {
+  _internal_add_a_aids(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.a_aIDs)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_AccessiblesWillMove::aids() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.aIDs)
-  return _internal_aids();
+Msg_AccessiblesWillMove::_internal_a_aids() const {
+  return _impl_.a_aids_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+Msg_AccessiblesWillMove::a_aids() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.a_aIDs)
+  return _internal_a_aids();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_AccessiblesWillMove::_internal_mutable_aids() {
-  return &_impl_.aids_;
+Msg_AccessiblesWillMove::_internal_mutable_a_aids() {
+  return &_impl_.a_aids_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_AccessiblesWillMove::mutable_aids() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.aIDs)
-  return _internal_mutable_aids();
+Msg_AccessiblesWillMove::mutable_a_aids() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove.a_aIDs)
+  return _internal_mutable_a_aids();
 }
 
 // -------------------------------------------------------------------
@@ -8186,1776 +8186,1776 @@ Msg_AccessiblesWillMove::mutable_aids() {
 
 // Msg_ScrollTo
 
-// required uint64 aID = 1;
-inline bool Msg_ScrollTo::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollTo::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollTo::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_ScrollTo::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_ScrollTo::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_ScrollTo::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ScrollTo::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_ScrollTo::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_ScrollTo::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.aID)
-  return _internal_aid();
+inline uint64_t Msg_ScrollTo::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_ScrollTo::_internal_set_aid(uint64_t value) {
+inline void Msg_ScrollTo::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_ScrollTo::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.aID)
+inline void Msg_ScrollTo::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aID)
 }
 
-// required uint32 aScrollType = 2;
-inline bool Msg_ScrollTo::_internal_has_ascrolltype() const {
+// required uint32 a_aScrollType = 2;
+inline bool Msg_ScrollTo::_internal_has_a_ascrolltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScrollTo::has_ascrolltype() const {
-  return _internal_has_ascrolltype();
+inline bool Msg_ScrollTo::has_a_ascrolltype() const {
+  return _internal_has_a_ascrolltype();
 }
-inline void Msg_ScrollTo::clear_ascrolltype() {
-  _impl_.ascrolltype_ = 0u;
+inline void Msg_ScrollTo::clear_a_ascrolltype() {
+  _impl_.a_ascrolltype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_ScrollTo::_internal_ascrolltype() const {
-  return _impl_.ascrolltype_;
+inline uint32_t Msg_ScrollTo::_internal_a_ascrolltype() const {
+  return _impl_.a_ascrolltype_;
 }
-inline uint32_t Msg_ScrollTo::ascrolltype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.aScrollType)
-  return _internal_ascrolltype();
+inline uint32_t Msg_ScrollTo::a_ascrolltype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aScrollType)
+  return _internal_a_ascrolltype();
 }
-inline void Msg_ScrollTo::_internal_set_ascrolltype(uint32_t value) {
+inline void Msg_ScrollTo::_internal_set_a_ascrolltype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.ascrolltype_ = value;
+  _impl_.a_ascrolltype_ = value;
 }
-inline void Msg_ScrollTo::set_ascrolltype(uint32_t value) {
-  _internal_set_ascrolltype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.aScrollType)
+inline void Msg_ScrollTo::set_a_ascrolltype(uint32_t value) {
+  _internal_set_a_ascrolltype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aScrollType)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScrollToPoint
 
-// required uint64 aID = 1;
-inline bool Msg_ScrollToPoint::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollToPoint::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollToPoint::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_ScrollToPoint::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_ScrollToPoint::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_ScrollToPoint::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ScrollToPoint::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_ScrollToPoint::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_ScrollToPoint::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aID)
-  return _internal_aid();
+inline uint64_t Msg_ScrollToPoint::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_ScrollToPoint::_internal_set_aid(uint64_t value) {
+inline void Msg_ScrollToPoint::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_ScrollToPoint::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aID)
+inline void Msg_ScrollToPoint::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aID)
 }
 
-// required uint32 aScrollType = 2;
-inline bool Msg_ScrollToPoint::_internal_has_ascrolltype() const {
+// required uint32 a_aScrollType = 2;
+inline bool Msg_ScrollToPoint::_internal_has_a_ascrolltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScrollToPoint::has_ascrolltype() const {
-  return _internal_has_ascrolltype();
+inline bool Msg_ScrollToPoint::has_a_ascrolltype() const {
+  return _internal_has_a_ascrolltype();
 }
-inline void Msg_ScrollToPoint::clear_ascrolltype() {
-  _impl_.ascrolltype_ = 0u;
+inline void Msg_ScrollToPoint::clear_a_ascrolltype() {
+  _impl_.a_ascrolltype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_ScrollToPoint::_internal_ascrolltype() const {
-  return _impl_.ascrolltype_;
+inline uint32_t Msg_ScrollToPoint::_internal_a_ascrolltype() const {
+  return _impl_.a_ascrolltype_;
 }
-inline uint32_t Msg_ScrollToPoint::ascrolltype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aScrollType)
-  return _internal_ascrolltype();
+inline uint32_t Msg_ScrollToPoint::a_ascrolltype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aScrollType)
+  return _internal_a_ascrolltype();
 }
-inline void Msg_ScrollToPoint::_internal_set_ascrolltype(uint32_t value) {
+inline void Msg_ScrollToPoint::_internal_set_a_ascrolltype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.ascrolltype_ = value;
+  _impl_.a_ascrolltype_ = value;
 }
-inline void Msg_ScrollToPoint::set_ascrolltype(uint32_t value) {
-  _internal_set_ascrolltype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aScrollType)
+inline void Msg_ScrollToPoint::set_a_ascrolltype(uint32_t value) {
+  _internal_set_a_ascrolltype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aScrollType)
 }
 
-// required sint32 aX = 3;
-inline bool Msg_ScrollToPoint::_internal_has_ax() const {
+// required sint32 a_aX = 3;
+inline bool Msg_ScrollToPoint::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ScrollToPoint::has_ax() const {
-  return _internal_has_ax();
+inline bool Msg_ScrollToPoint::has_a_ax() const {
+  return _internal_has_a_ax();
 }
-inline void Msg_ScrollToPoint::clear_ax() {
-  _impl_.ax_ = 0;
+inline void Msg_ScrollToPoint::clear_a_ax() {
+  _impl_.a_ax_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_ScrollToPoint::_internal_ax() const {
-  return _impl_.ax_;
+inline int32_t Msg_ScrollToPoint::_internal_a_ax() const {
+  return _impl_.a_ax_;
 }
-inline int32_t Msg_ScrollToPoint::ax() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aX)
-  return _internal_ax();
+inline int32_t Msg_ScrollToPoint::a_ax() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aX)
+  return _internal_a_ax();
 }
-inline void Msg_ScrollToPoint::_internal_set_ax(int32_t value) {
+inline void Msg_ScrollToPoint::_internal_set_a_ax(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.ax_ = value;
+  _impl_.a_ax_ = value;
 }
-inline void Msg_ScrollToPoint::set_ax(int32_t value) {
-  _internal_set_ax(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aX)
+inline void Msg_ScrollToPoint::set_a_ax(int32_t value) {
+  _internal_set_a_ax(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aX)
 }
 
-// required sint32 aY = 4;
-inline bool Msg_ScrollToPoint::_internal_has_ay() const {
+// required sint32 a_aY = 4;
+inline bool Msg_ScrollToPoint::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ScrollToPoint::has_ay() const {
-  return _internal_has_ay();
+inline bool Msg_ScrollToPoint::has_a_ay() const {
+  return _internal_has_a_ay();
 }
-inline void Msg_ScrollToPoint::clear_ay() {
-  _impl_.ay_ = 0;
+inline void Msg_ScrollToPoint::clear_a_ay() {
+  _impl_.a_ay_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t Msg_ScrollToPoint::_internal_ay() const {
-  return _impl_.ay_;
+inline int32_t Msg_ScrollToPoint::_internal_a_ay() const {
+  return _impl_.a_ay_;
 }
-inline int32_t Msg_ScrollToPoint::ay() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aY)
-  return _internal_ay();
+inline int32_t Msg_ScrollToPoint::a_ay() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aY)
+  return _internal_a_ay();
 }
-inline void Msg_ScrollToPoint::_internal_set_ay(int32_t value) {
+inline void Msg_ScrollToPoint::_internal_set_a_ay(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.ay_ = value;
+  _impl_.a_ay_ = value;
 }
-inline void Msg_ScrollToPoint::set_ay(int32_t value) {
-  _internal_set_ay(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.aY)
+inline void Msg_ScrollToPoint::set_a_ay(int32_t value) {
+  _internal_set_a_ay(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aY)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Announce
 
-// required uint64 aID = 1;
-inline bool Msg_Announce::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_Announce::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Announce::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_Announce::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_Announce::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_Announce::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_Announce::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_Announce::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_Announce::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aID)
-  return _internal_aid();
+inline uint64_t Msg_Announce::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_Announce::_internal_set_aid(uint64_t value) {
+inline void Msg_Announce::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_Announce::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aID)
+inline void Msg_Announce::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aID)
 }
 
-// required bytes aAnnouncement = 2;
-inline bool Msg_Announce::_internal_has_aannouncement() const {
+// required bytes a_aAnnouncement = 2;
+inline bool Msg_Announce::_internal_has_a_aannouncement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Announce::has_aannouncement() const {
-  return _internal_has_aannouncement();
+inline bool Msg_Announce::has_a_aannouncement() const {
+  return _internal_has_a_aannouncement();
 }
-inline void Msg_Announce::clear_aannouncement() {
-  _impl_.aannouncement_.ClearToEmpty();
+inline void Msg_Announce::clear_a_aannouncement() {
+  _impl_.a_aannouncement_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Announce::aannouncement() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aAnnouncement)
-  return _internal_aannouncement();
+inline const std::string& Msg_Announce::a_aannouncement() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
+  return _internal_a_aannouncement();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Announce::set_aannouncement(ArgT0&& arg0, ArgT... args) {
+void Msg_Announce::set_a_aannouncement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aannouncement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aAnnouncement)
+ _impl_.a_aannouncement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
-inline std::string* Msg_Announce::mutable_aannouncement() {
-  std::string* _s = _internal_mutable_aannouncement();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aAnnouncement)
+inline std::string* Msg_Announce::mutable_a_aannouncement() {
+  std::string* _s = _internal_mutable_a_aannouncement();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
   return _s;
 }
-inline const std::string& Msg_Announce::_internal_aannouncement() const {
-  return _impl_.aannouncement_.Get();
+inline const std::string& Msg_Announce::_internal_a_aannouncement() const {
+  return _impl_.a_aannouncement_.Get();
 }
-inline void Msg_Announce::_internal_set_aannouncement(const std::string& value) {
+inline void Msg_Announce::_internal_set_a_aannouncement(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aannouncement_.Set(value, GetArenaForAllocation());
+  _impl_.a_aannouncement_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Announce::_internal_mutable_aannouncement() {
+inline std::string* Msg_Announce::_internal_mutable_a_aannouncement() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aannouncement_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aannouncement_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Announce::release_aannouncement() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aAnnouncement)
-  if (!_internal_has_aannouncement()) {
+inline std::string* Msg_Announce::release_a_aannouncement() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
+  if (!_internal_has_a_aannouncement()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aannouncement_.Release();
+  auto* p = _impl_.a_aannouncement_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aannouncement_.IsDefault()) {
-    _impl_.aannouncement_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aannouncement_.IsDefault()) {
+    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Announce::set_allocated_aannouncement(std::string* aannouncement) {
-  if (aannouncement != nullptr) {
+inline void Msg_Announce::set_allocated_a_aannouncement(std::string* a_aannouncement) {
+  if (a_aannouncement != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aannouncement_.SetAllocated(aannouncement, GetArenaForAllocation());
+  _impl_.a_aannouncement_.SetAllocated(a_aannouncement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aannouncement_.IsDefault()) {
-    _impl_.aannouncement_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aannouncement_.IsDefault()) {
+    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aAnnouncement)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
 
-// required uint32 aPriority = 3;
-inline bool Msg_Announce::_internal_has_apriority() const {
+// required uint32 a_aPriority = 3;
+inline bool Msg_Announce::_internal_has_a_apriority() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_Announce::has_apriority() const {
-  return _internal_has_apriority();
+inline bool Msg_Announce::has_a_apriority() const {
+  return _internal_has_a_apriority();
 }
-inline void Msg_Announce::clear_apriority() {
-  _impl_.apriority_ = 0u;
+inline void Msg_Announce::clear_a_apriority() {
+  _impl_.a_apriority_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_Announce::_internal_apriority() const {
-  return _impl_.apriority_;
+inline uint32_t Msg_Announce::_internal_a_apriority() const {
+  return _impl_.a_apriority_;
 }
-inline uint32_t Msg_Announce::apriority() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aPriority)
-  return _internal_apriority();
+inline uint32_t Msg_Announce::a_apriority() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aPriority)
+  return _internal_a_apriority();
 }
-inline void Msg_Announce::_internal_set_apriority(uint32_t value) {
+inline void Msg_Announce::_internal_set_a_apriority(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.apriority_ = value;
+  _impl_.a_apriority_ = value;
 }
-inline void Msg_Announce::set_apriority(uint32_t value) {
-  _internal_set_apriority(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.aPriority)
+inline void Msg_Announce::set_a_apriority(uint32_t value) {
+  _internal_set_a_apriority(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aPriority)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetTextSelection
 
-// required uint64 aStartID = 1;
-inline bool Msg_SetTextSelection::_internal_has_astartid() const {
+// required uint64 a_aStartID = 1;
+inline bool Msg_SetTextSelection::_internal_has_a_astartid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetTextSelection::has_astartid() const {
-  return _internal_has_astartid();
+inline bool Msg_SetTextSelection::has_a_astartid() const {
+  return _internal_has_a_astartid();
 }
-inline void Msg_SetTextSelection::clear_astartid() {
-  _impl_.astartid_ = uint64_t{0u};
+inline void Msg_SetTextSelection::clear_a_astartid() {
+  _impl_.a_astartid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_SetTextSelection::_internal_astartid() const {
-  return _impl_.astartid_;
+inline uint64_t Msg_SetTextSelection::_internal_a_astartid() const {
+  return _impl_.a_astartid_;
 }
-inline uint64_t Msg_SetTextSelection::astartid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aStartID)
-  return _internal_astartid();
+inline uint64_t Msg_SetTextSelection::a_astartid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartID)
+  return _internal_a_astartid();
 }
-inline void Msg_SetTextSelection::_internal_set_astartid(uint64_t value) {
+inline void Msg_SetTextSelection::_internal_set_a_astartid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astartid_ = value;
+  _impl_.a_astartid_ = value;
 }
-inline void Msg_SetTextSelection::set_astartid(uint64_t value) {
-  _internal_set_astartid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aStartID)
+inline void Msg_SetTextSelection::set_a_astartid(uint64_t value) {
+  _internal_set_a_astartid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartID)
 }
 
-// required sint32 aStartOffset = 2;
-inline bool Msg_SetTextSelection::_internal_has_astartoffset() const {
+// required sint32 a_aStartOffset = 2;
+inline bool Msg_SetTextSelection::_internal_has_a_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_SetTextSelection::has_astartoffset() const {
-  return _internal_has_astartoffset();
+inline bool Msg_SetTextSelection::has_a_astartoffset() const {
+  return _internal_has_a_astartoffset();
 }
-inline void Msg_SetTextSelection::clear_astartoffset() {
-  _impl_.astartoffset_ = 0;
+inline void Msg_SetTextSelection::clear_a_astartoffset() {
+  _impl_.a_astartoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_SetTextSelection::_internal_astartoffset() const {
-  return _impl_.astartoffset_;
+inline int32_t Msg_SetTextSelection::_internal_a_astartoffset() const {
+  return _impl_.a_astartoffset_;
 }
-inline int32_t Msg_SetTextSelection::astartoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aStartOffset)
-  return _internal_astartoffset();
+inline int32_t Msg_SetTextSelection::a_astartoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartOffset)
+  return _internal_a_astartoffset();
 }
-inline void Msg_SetTextSelection::_internal_set_astartoffset(int32_t value) {
+inline void Msg_SetTextSelection::_internal_set_a_astartoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.astartoffset_ = value;
+  _impl_.a_astartoffset_ = value;
 }
-inline void Msg_SetTextSelection::set_astartoffset(int32_t value) {
-  _internal_set_astartoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aStartOffset)
+inline void Msg_SetTextSelection::set_a_astartoffset(int32_t value) {
+  _internal_set_a_astartoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartOffset)
 }
 
-// required uint64 aEndID = 3;
-inline bool Msg_SetTextSelection::_internal_has_aendid() const {
+// required uint64 a_aEndID = 3;
+inline bool Msg_SetTextSelection::_internal_has_a_aendid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetTextSelection::has_aendid() const {
-  return _internal_has_aendid();
+inline bool Msg_SetTextSelection::has_a_aendid() const {
+  return _internal_has_a_aendid();
 }
-inline void Msg_SetTextSelection::clear_aendid() {
-  _impl_.aendid_ = uint64_t{0u};
+inline void Msg_SetTextSelection::clear_a_aendid() {
+  _impl_.a_aendid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_SetTextSelection::_internal_aendid() const {
-  return _impl_.aendid_;
+inline uint64_t Msg_SetTextSelection::_internal_a_aendid() const {
+  return _impl_.a_aendid_;
 }
-inline uint64_t Msg_SetTextSelection::aendid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aEndID)
-  return _internal_aendid();
+inline uint64_t Msg_SetTextSelection::a_aendid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndID)
+  return _internal_a_aendid();
 }
-inline void Msg_SetTextSelection::_internal_set_aendid(uint64_t value) {
+inline void Msg_SetTextSelection::_internal_set_a_aendid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aendid_ = value;
+  _impl_.a_aendid_ = value;
 }
-inline void Msg_SetTextSelection::set_aendid(uint64_t value) {
-  _internal_set_aendid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aEndID)
+inline void Msg_SetTextSelection::set_a_aendid(uint64_t value) {
+  _internal_set_a_aendid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndID)
 }
 
-// required sint32 aEndOffset = 4;
-inline bool Msg_SetTextSelection::_internal_has_aendoffset() const {
+// required sint32 a_aEndOffset = 4;
+inline bool Msg_SetTextSelection::_internal_has_a_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_SetTextSelection::has_aendoffset() const {
-  return _internal_has_aendoffset();
+inline bool Msg_SetTextSelection::has_a_aendoffset() const {
+  return _internal_has_a_aendoffset();
 }
-inline void Msg_SetTextSelection::clear_aendoffset() {
-  _impl_.aendoffset_ = 0;
+inline void Msg_SetTextSelection::clear_a_aendoffset() {
+  _impl_.a_aendoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t Msg_SetTextSelection::_internal_aendoffset() const {
-  return _impl_.aendoffset_;
+inline int32_t Msg_SetTextSelection::_internal_a_aendoffset() const {
+  return _impl_.a_aendoffset_;
 }
-inline int32_t Msg_SetTextSelection::aendoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aEndOffset)
-  return _internal_aendoffset();
+inline int32_t Msg_SetTextSelection::a_aendoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndOffset)
+  return _internal_a_aendoffset();
 }
-inline void Msg_SetTextSelection::_internal_set_aendoffset(int32_t value) {
+inline void Msg_SetTextSelection::_internal_set_a_aendoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aendoffset_ = value;
+  _impl_.a_aendoffset_ = value;
 }
-inline void Msg_SetTextSelection::set_aendoffset(int32_t value) {
-  _internal_set_aendoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aEndOffset)
+inline void Msg_SetTextSelection::set_a_aendoffset(int32_t value) {
+  _internal_set_a_aendoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndOffset)
 }
 
-// required sint32 aSelectionNum = 5;
-inline bool Msg_SetTextSelection::_internal_has_aselectionnum() const {
+// required sint32 a_aSelectionNum = 5;
+inline bool Msg_SetTextSelection::_internal_has_a_aselectionnum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_SetTextSelection::has_aselectionnum() const {
-  return _internal_has_aselectionnum();
+inline bool Msg_SetTextSelection::has_a_aselectionnum() const {
+  return _internal_has_a_aselectionnum();
 }
-inline void Msg_SetTextSelection::clear_aselectionnum() {
-  _impl_.aselectionnum_ = 0;
+inline void Msg_SetTextSelection::clear_a_aselectionnum() {
+  _impl_.a_aselectionnum_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t Msg_SetTextSelection::_internal_aselectionnum() const {
-  return _impl_.aselectionnum_;
+inline int32_t Msg_SetTextSelection::_internal_a_aselectionnum() const {
+  return _impl_.a_aselectionnum_;
 }
-inline int32_t Msg_SetTextSelection::aselectionnum() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aSelectionNum)
-  return _internal_aselectionnum();
+inline int32_t Msg_SetTextSelection::a_aselectionnum() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSelectionNum)
+  return _internal_a_aselectionnum();
 }
-inline void Msg_SetTextSelection::_internal_set_aselectionnum(int32_t value) {
+inline void Msg_SetTextSelection::_internal_set_a_aselectionnum(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.aselectionnum_ = value;
+  _impl_.a_aselectionnum_ = value;
 }
-inline void Msg_SetTextSelection::set_aselectionnum(int32_t value) {
-  _internal_set_aselectionnum(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aSelectionNum)
+inline void Msg_SetTextSelection::set_a_aselectionnum(int32_t value) {
+  _internal_set_a_aselectionnum(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSelectionNum)
 }
 
-// required bool aSetFocus = 6;
-inline bool Msg_SetTextSelection::_internal_has_asetfocus() const {
+// required bool a_aSetFocus = 6;
+inline bool Msg_SetTextSelection::_internal_has_a_asetfocus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_SetTextSelection::has_asetfocus() const {
-  return _internal_has_asetfocus();
+inline bool Msg_SetTextSelection::has_a_asetfocus() const {
+  return _internal_has_a_asetfocus();
 }
-inline void Msg_SetTextSelection::clear_asetfocus() {
-  _impl_.asetfocus_ = false;
+inline void Msg_SetTextSelection::clear_a_asetfocus() {
+  _impl_.a_asetfocus_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool Msg_SetTextSelection::_internal_asetfocus() const {
-  return _impl_.asetfocus_;
+inline bool Msg_SetTextSelection::_internal_a_asetfocus() const {
+  return _impl_.a_asetfocus_;
 }
-inline bool Msg_SetTextSelection::asetfocus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aSetFocus)
-  return _internal_asetfocus();
+inline bool Msg_SetTextSelection::a_asetfocus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSetFocus)
+  return _internal_a_asetfocus();
 }
-inline void Msg_SetTextSelection::_internal_set_asetfocus(bool value) {
+inline void Msg_SetTextSelection::_internal_set_a_asetfocus(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.asetfocus_ = value;
+  _impl_.a_asetfocus_ = value;
 }
-inline void Msg_SetTextSelection::set_asetfocus(bool value) {
-  _internal_set_asetfocus(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.aSetFocus)
+inline void Msg_SetTextSelection::set_a_asetfocus(bool value) {
+  _internal_set_a_asetfocus(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSetFocus)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RemoveTextSelection
 
-// required uint64 aID = 1;
-inline bool Msg_RemoveTextSelection::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_RemoveTextSelection::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RemoveTextSelection::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_RemoveTextSelection::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_RemoveTextSelection::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_RemoveTextSelection::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_RemoveTextSelection::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_RemoveTextSelection::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_RemoveTextSelection::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.aID)
-  return _internal_aid();
+inline uint64_t Msg_RemoveTextSelection::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_RemoveTextSelection::_internal_set_aid(uint64_t value) {
+inline void Msg_RemoveTextSelection::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_RemoveTextSelection::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.aID)
+inline void Msg_RemoveTextSelection::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aID)
 }
 
-// required sint32 aSelectionNum = 2;
-inline bool Msg_RemoveTextSelection::_internal_has_aselectionnum() const {
+// required sint32 a_aSelectionNum = 2;
+inline bool Msg_RemoveTextSelection::_internal_has_a_aselectionnum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RemoveTextSelection::has_aselectionnum() const {
-  return _internal_has_aselectionnum();
+inline bool Msg_RemoveTextSelection::has_a_aselectionnum() const {
+  return _internal_has_a_aselectionnum();
 }
-inline void Msg_RemoveTextSelection::clear_aselectionnum() {
-  _impl_.aselectionnum_ = 0;
+inline void Msg_RemoveTextSelection::clear_a_aselectionnum() {
+  _impl_.a_aselectionnum_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_RemoveTextSelection::_internal_aselectionnum() const {
-  return _impl_.aselectionnum_;
+inline int32_t Msg_RemoveTextSelection::_internal_a_aselectionnum() const {
+  return _impl_.a_aselectionnum_;
 }
-inline int32_t Msg_RemoveTextSelection::aselectionnum() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.aSelectionNum)
-  return _internal_aselectionnum();
+inline int32_t Msg_RemoveTextSelection::a_aselectionnum() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aSelectionNum)
+  return _internal_a_aselectionnum();
 }
-inline void Msg_RemoveTextSelection::_internal_set_aselectionnum(int32_t value) {
+inline void Msg_RemoveTextSelection::_internal_set_a_aselectionnum(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aselectionnum_ = value;
+  _impl_.a_aselectionnum_ = value;
 }
-inline void Msg_RemoveTextSelection::set_aselectionnum(int32_t value) {
-  _internal_set_aselectionnum(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.aSelectionNum)
+inline void Msg_RemoveTextSelection::set_a_aselectionnum(int32_t value) {
+  _internal_set_a_aselectionnum(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aSelectionNum)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScrollTextLeafRangeIntoView
 
-// required uint64 aStartID = 1;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_astartid() const {
+// required uint64 a_aStartID = 1;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollTextLeafRangeIntoView::has_astartid() const {
-  return _internal_has_astartid();
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_astartid() const {
+  return _internal_has_a_astartid();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::clear_astartid() {
-  _impl_.astartid_ = uint64_t{0u};
+inline void Msg_ScrollTextLeafRangeIntoView::clear_a_astartid() {
+  _impl_.a_astartid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_astartid() const {
-  return _impl_.astartid_;
+inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_a_astartid() const {
+  return _impl_.a_astartid_;
 }
-inline uint64_t Msg_ScrollTextLeafRangeIntoView::astartid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aStartID)
-  return _internal_astartid();
+inline uint64_t Msg_ScrollTextLeafRangeIntoView::a_astartid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartID)
+  return _internal_a_astartid();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_astartid(uint64_t value) {
+inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_astartid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astartid_ = value;
+  _impl_.a_astartid_ = value;
 }
-inline void Msg_ScrollTextLeafRangeIntoView::set_astartid(uint64_t value) {
-  _internal_set_astartid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aStartID)
+inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartid(uint64_t value) {
+  _internal_set_a_astartid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartID)
 }
 
-// required sint32 aStartOffset = 2;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_astartoffset() const {
+// required sint32 a_aStartOffset = 2;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ScrollTextLeafRangeIntoView::has_astartoffset() const {
-  return _internal_has_astartoffset();
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_astartoffset() const {
+  return _internal_has_a_astartoffset();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::clear_astartoffset() {
-  _impl_.astartoffset_ = 0;
+inline void Msg_ScrollTextLeafRangeIntoView::clear_a_astartoffset() {
+  _impl_.a_astartoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_astartoffset() const {
-  return _impl_.astartoffset_;
+inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_astartoffset() const {
+  return _impl_.a_astartoffset_;
 }
-inline int32_t Msg_ScrollTextLeafRangeIntoView::astartoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aStartOffset)
-  return _internal_astartoffset();
+inline int32_t Msg_ScrollTextLeafRangeIntoView::a_astartoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartOffset)
+  return _internal_a_astartoffset();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_astartoffset(int32_t value) {
+inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_astartoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.astartoffset_ = value;
+  _impl_.a_astartoffset_ = value;
 }
-inline void Msg_ScrollTextLeafRangeIntoView::set_astartoffset(int32_t value) {
-  _internal_set_astartoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aStartOffset)
+inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartoffset(int32_t value) {
+  _internal_set_a_astartoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartOffset)
 }
 
-// required uint64 aEndID = 3;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_aendid() const {
+// required uint64 a_aEndID = 3;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScrollTextLeafRangeIntoView::has_aendid() const {
-  return _internal_has_aendid();
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_aendid() const {
+  return _internal_has_a_aendid();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::clear_aendid() {
-  _impl_.aendid_ = uint64_t{0u};
+inline void Msg_ScrollTextLeafRangeIntoView::clear_a_aendid() {
+  _impl_.a_aendid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_aendid() const {
-  return _impl_.aendid_;
+inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_a_aendid() const {
+  return _impl_.a_aendid_;
 }
-inline uint64_t Msg_ScrollTextLeafRangeIntoView::aendid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aEndID)
-  return _internal_aendid();
+inline uint64_t Msg_ScrollTextLeafRangeIntoView::a_aendid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndID)
+  return _internal_a_aendid();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_aendid(uint64_t value) {
+inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_aendid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aendid_ = value;
+  _impl_.a_aendid_ = value;
 }
-inline void Msg_ScrollTextLeafRangeIntoView::set_aendid(uint64_t value) {
-  _internal_set_aendid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aEndID)
+inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendid(uint64_t value) {
+  _internal_set_a_aendid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndID)
 }
 
-// required sint32 aEndOffset = 4;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_aendoffset() const {
+// required sint32 a_aEndOffset = 4;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ScrollTextLeafRangeIntoView::has_aendoffset() const {
-  return _internal_has_aendoffset();
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_aendoffset() const {
+  return _internal_has_a_aendoffset();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::clear_aendoffset() {
-  _impl_.aendoffset_ = 0;
+inline void Msg_ScrollTextLeafRangeIntoView::clear_a_aendoffset() {
+  _impl_.a_aendoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_aendoffset() const {
-  return _impl_.aendoffset_;
+inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_aendoffset() const {
+  return _impl_.a_aendoffset_;
 }
-inline int32_t Msg_ScrollTextLeafRangeIntoView::aendoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aEndOffset)
-  return _internal_aendoffset();
+inline int32_t Msg_ScrollTextLeafRangeIntoView::a_aendoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndOffset)
+  return _internal_a_aendoffset();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_aendoffset(int32_t value) {
+inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_aendoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aendoffset_ = value;
+  _impl_.a_aendoffset_ = value;
 }
-inline void Msg_ScrollTextLeafRangeIntoView::set_aendoffset(int32_t value) {
-  _internal_set_aendoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aEndOffset)
+inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendoffset(int32_t value) {
+  _internal_set_a_aendoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndOffset)
 }
 
-// required uint32 aScrollType = 5;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_ascrolltype() const {
+// required uint32 a_aScrollType = 5;
+inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_ascrolltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_ScrollTextLeafRangeIntoView::has_ascrolltype() const {
-  return _internal_has_ascrolltype();
+inline bool Msg_ScrollTextLeafRangeIntoView::has_a_ascrolltype() const {
+  return _internal_has_a_ascrolltype();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::clear_ascrolltype() {
-  _impl_.ascrolltype_ = 0u;
+inline void Msg_ScrollTextLeafRangeIntoView::clear_a_ascrolltype() {
+  _impl_.a_ascrolltype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t Msg_ScrollTextLeafRangeIntoView::_internal_ascrolltype() const {
-  return _impl_.ascrolltype_;
+inline uint32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_ascrolltype() const {
+  return _impl_.a_ascrolltype_;
 }
-inline uint32_t Msg_ScrollTextLeafRangeIntoView::ascrolltype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aScrollType)
-  return _internal_ascrolltype();
+inline uint32_t Msg_ScrollTextLeafRangeIntoView::a_ascrolltype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aScrollType)
+  return _internal_a_ascrolltype();
 }
-inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_ascrolltype(uint32_t value) {
+inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_ascrolltype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.ascrolltype_ = value;
+  _impl_.a_ascrolltype_ = value;
 }
-inline void Msg_ScrollTextLeafRangeIntoView::set_ascrolltype(uint32_t value) {
-  _internal_set_ascrolltype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.aScrollType)
+inline void Msg_ScrollTextLeafRangeIntoView::set_a_ascrolltype(uint32_t value) {
+  _internal_set_a_ascrolltype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aScrollType)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScrollSubstringToPoint
 
-// required uint64 aID = 1;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollSubstringToPoint::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_ScrollSubstringToPoint::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_ScrollSubstringToPoint::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_ScrollSubstringToPoint::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ScrollSubstringToPoint::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_ScrollSubstringToPoint::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_ScrollSubstringToPoint::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aID)
-  return _internal_aid();
+inline uint64_t Msg_ScrollSubstringToPoint::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_ScrollSubstringToPoint::_internal_set_aid(uint64_t value) {
+inline void Msg_ScrollSubstringToPoint::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_ScrollSubstringToPoint::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aID)
+inline void Msg_ScrollSubstringToPoint::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aID)
 }
 
-// required sint32 aStartOffset = 2;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_astartoffset() const {
+// required sint32 a_aStartOffset = 2;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_astartoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScrollSubstringToPoint::has_astartoffset() const {
-  return _internal_has_astartoffset();
+inline bool Msg_ScrollSubstringToPoint::has_a_astartoffset() const {
+  return _internal_has_a_astartoffset();
 }
-inline void Msg_ScrollSubstringToPoint::clear_astartoffset() {
-  _impl_.astartoffset_ = 0;
+inline void Msg_ScrollSubstringToPoint::clear_a_astartoffset() {
+  _impl_.a_astartoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_ScrollSubstringToPoint::_internal_astartoffset() const {
-  return _impl_.astartoffset_;
+inline int32_t Msg_ScrollSubstringToPoint::_internal_a_astartoffset() const {
+  return _impl_.a_astartoffset_;
 }
-inline int32_t Msg_ScrollSubstringToPoint::astartoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aStartOffset)
-  return _internal_astartoffset();
+inline int32_t Msg_ScrollSubstringToPoint::a_astartoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aStartOffset)
+  return _internal_a_astartoffset();
 }
-inline void Msg_ScrollSubstringToPoint::_internal_set_astartoffset(int32_t value) {
+inline void Msg_ScrollSubstringToPoint::_internal_set_a_astartoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astartoffset_ = value;
+  _impl_.a_astartoffset_ = value;
 }
-inline void Msg_ScrollSubstringToPoint::set_astartoffset(int32_t value) {
-  _internal_set_astartoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aStartOffset)
+inline void Msg_ScrollSubstringToPoint::set_a_astartoffset(int32_t value) {
+  _internal_set_a_astartoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aStartOffset)
 }
 
-// required sint32 aEndOffset = 3;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_aendoffset() const {
+// required sint32 a_aEndOffset = 3;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aendoffset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ScrollSubstringToPoint::has_aendoffset() const {
-  return _internal_has_aendoffset();
+inline bool Msg_ScrollSubstringToPoint::has_a_aendoffset() const {
+  return _internal_has_a_aendoffset();
 }
-inline void Msg_ScrollSubstringToPoint::clear_aendoffset() {
-  _impl_.aendoffset_ = 0;
+inline void Msg_ScrollSubstringToPoint::clear_a_aendoffset() {
+  _impl_.a_aendoffset_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_ScrollSubstringToPoint::_internal_aendoffset() const {
-  return _impl_.aendoffset_;
+inline int32_t Msg_ScrollSubstringToPoint::_internal_a_aendoffset() const {
+  return _impl_.a_aendoffset_;
 }
-inline int32_t Msg_ScrollSubstringToPoint::aendoffset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aEndOffset)
-  return _internal_aendoffset();
+inline int32_t Msg_ScrollSubstringToPoint::a_aendoffset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aEndOffset)
+  return _internal_a_aendoffset();
 }
-inline void Msg_ScrollSubstringToPoint::_internal_set_aendoffset(int32_t value) {
+inline void Msg_ScrollSubstringToPoint::_internal_set_a_aendoffset(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aendoffset_ = value;
+  _impl_.a_aendoffset_ = value;
 }
-inline void Msg_ScrollSubstringToPoint::set_aendoffset(int32_t value) {
-  _internal_set_aendoffset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aEndOffset)
+inline void Msg_ScrollSubstringToPoint::set_a_aendoffset(int32_t value) {
+  _internal_set_a_aendoffset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aEndOffset)
 }
 
-// required uint32 aCoordinateType = 4;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_acoordinatetype() const {
+// required uint32 a_aCoordinateType = 4;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_acoordinatetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ScrollSubstringToPoint::has_acoordinatetype() const {
-  return _internal_has_acoordinatetype();
+inline bool Msg_ScrollSubstringToPoint::has_a_acoordinatetype() const {
+  return _internal_has_a_acoordinatetype();
 }
-inline void Msg_ScrollSubstringToPoint::clear_acoordinatetype() {
-  _impl_.acoordinatetype_ = 0u;
+inline void Msg_ScrollSubstringToPoint::clear_a_acoordinatetype() {
+  _impl_.a_acoordinatetype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_ScrollSubstringToPoint::_internal_acoordinatetype() const {
-  return _impl_.acoordinatetype_;
+inline uint32_t Msg_ScrollSubstringToPoint::_internal_a_acoordinatetype() const {
+  return _impl_.a_acoordinatetype_;
 }
-inline uint32_t Msg_ScrollSubstringToPoint::acoordinatetype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aCoordinateType)
-  return _internal_acoordinatetype();
+inline uint32_t Msg_ScrollSubstringToPoint::a_acoordinatetype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aCoordinateType)
+  return _internal_a_acoordinatetype();
 }
-inline void Msg_ScrollSubstringToPoint::_internal_set_acoordinatetype(uint32_t value) {
+inline void Msg_ScrollSubstringToPoint::_internal_set_a_acoordinatetype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.acoordinatetype_ = value;
+  _impl_.a_acoordinatetype_ = value;
 }
-inline void Msg_ScrollSubstringToPoint::set_acoordinatetype(uint32_t value) {
-  _internal_set_acoordinatetype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aCoordinateType)
+inline void Msg_ScrollSubstringToPoint::set_a_acoordinatetype(uint32_t value) {
+  _internal_set_a_acoordinatetype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aCoordinateType)
 }
 
-// required sint32 aX = 5;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_ax() const {
+// required sint32 a_aX = 5;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ax() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_ScrollSubstringToPoint::has_ax() const {
-  return _internal_has_ax();
+inline bool Msg_ScrollSubstringToPoint::has_a_ax() const {
+  return _internal_has_a_ax();
 }
-inline void Msg_ScrollSubstringToPoint::clear_ax() {
-  _impl_.ax_ = 0;
+inline void Msg_ScrollSubstringToPoint::clear_a_ax() {
+  _impl_.a_ax_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t Msg_ScrollSubstringToPoint::_internal_ax() const {
-  return _impl_.ax_;
+inline int32_t Msg_ScrollSubstringToPoint::_internal_a_ax() const {
+  return _impl_.a_ax_;
 }
-inline int32_t Msg_ScrollSubstringToPoint::ax() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aX)
-  return _internal_ax();
+inline int32_t Msg_ScrollSubstringToPoint::a_ax() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aX)
+  return _internal_a_ax();
 }
-inline void Msg_ScrollSubstringToPoint::_internal_set_ax(int32_t value) {
+inline void Msg_ScrollSubstringToPoint::_internal_set_a_ax(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.ax_ = value;
+  _impl_.a_ax_ = value;
 }
-inline void Msg_ScrollSubstringToPoint::set_ax(int32_t value) {
-  _internal_set_ax(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aX)
+inline void Msg_ScrollSubstringToPoint::set_a_ax(int32_t value) {
+  _internal_set_a_ax(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aX)
 }
 
-// required sint32 aY = 6;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_ay() const {
+// required sint32 a_aY = 6;
+inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ay() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_ScrollSubstringToPoint::has_ay() const {
-  return _internal_has_ay();
+inline bool Msg_ScrollSubstringToPoint::has_a_ay() const {
+  return _internal_has_a_ay();
 }
-inline void Msg_ScrollSubstringToPoint::clear_ay() {
-  _impl_.ay_ = 0;
+inline void Msg_ScrollSubstringToPoint::clear_a_ay() {
+  _impl_.a_ay_ = 0;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline int32_t Msg_ScrollSubstringToPoint::_internal_ay() const {
-  return _impl_.ay_;
+inline int32_t Msg_ScrollSubstringToPoint::_internal_a_ay() const {
+  return _impl_.a_ay_;
 }
-inline int32_t Msg_ScrollSubstringToPoint::ay() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aY)
-  return _internal_ay();
+inline int32_t Msg_ScrollSubstringToPoint::a_ay() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aY)
+  return _internal_a_ay();
 }
-inline void Msg_ScrollSubstringToPoint::_internal_set_ay(int32_t value) {
+inline void Msg_ScrollSubstringToPoint::_internal_set_a_ay(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.ay_ = value;
+  _impl_.a_ay_ = value;
 }
-inline void Msg_ScrollSubstringToPoint::set_ay(int32_t value) {
-  _internal_set_ay(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.aY)
+inline void Msg_ScrollSubstringToPoint::set_a_ay(int32_t value) {
+  _internal_set_a_ay(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aY)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReplaceText
 
-// required uint64 aID = 1;
-inline bool Msg_ReplaceText::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_ReplaceText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReplaceText::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_ReplaceText::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_ReplaceText::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_ReplaceText::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_ReplaceText::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_ReplaceText::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_ReplaceText::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aID)
-  return _internal_aid();
+inline uint64_t Msg_ReplaceText::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_ReplaceText::_internal_set_aid(uint64_t value) {
+inline void Msg_ReplaceText::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_ReplaceText::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aID)
+inline void Msg_ReplaceText::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aID)
 }
 
-// required bytes aText = 2;
-inline bool Msg_ReplaceText::_internal_has_atext() const {
+// required bytes a_aText = 2;
+inline bool Msg_ReplaceText::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplaceText::has_atext() const {
-  return _internal_has_atext();
+inline bool Msg_ReplaceText::has_a_atext() const {
+  return _internal_has_a_atext();
 }
-inline void Msg_ReplaceText::clear_atext() {
-  _impl_.atext_.ClearToEmpty();
+inline void Msg_ReplaceText::clear_a_atext() {
+  _impl_.a_atext_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReplaceText::atext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aText)
-  return _internal_atext();
+inline const std::string& Msg_ReplaceText::a_atext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
+  return _internal_a_atext();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReplaceText::set_atext(ArgT0&& arg0, ArgT... args) {
+void Msg_ReplaceText::set_a_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aText)
+ _impl_.a_atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
 }
-inline std::string* Msg_ReplaceText::mutable_atext() {
-  std::string* _s = _internal_mutable_atext();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aText)
+inline std::string* Msg_ReplaceText::mutable_a_atext() {
+  std::string* _s = _internal_mutable_a_atext();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
   return _s;
 }
-inline const std::string& Msg_ReplaceText::_internal_atext() const {
-  return _impl_.atext_.Get();
+inline const std::string& Msg_ReplaceText::_internal_a_atext() const {
+  return _impl_.a_atext_.Get();
 }
-inline void Msg_ReplaceText::_internal_set_atext(const std::string& value) {
+inline void Msg_ReplaceText::_internal_set_a_atext(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atext_.Set(value, GetArenaForAllocation());
+  _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReplaceText::_internal_mutable_atext() {
+inline std::string* Msg_ReplaceText::_internal_mutable_a_atext() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atext_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReplaceText::release_atext() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aText)
-  if (!_internal_has_atext()) {
+inline std::string* Msg_ReplaceText::release_a_atext() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
+  if (!_internal_has_a_atext()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atext_.Release();
+  auto* p = _impl_.a_atext_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atext_.IsDefault()) {
-    _impl_.atext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReplaceText::set_allocated_atext(std::string* atext) {
-  if (atext != nullptr) {
+inline void Msg_ReplaceText::set_allocated_a_atext(std::string* a_atext) {
+  if (a_atext != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atext_.SetAllocated(atext, GetArenaForAllocation());
+  _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atext_.IsDefault()) {
-    _impl_.atext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.aText)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InsertText
 
-// required uint64 aID = 1;
-inline bool Msg_InsertText::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_InsertText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_InsertText::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_InsertText::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_InsertText::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_InsertText::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_InsertText::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_InsertText::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_InsertText::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aID)
-  return _internal_aid();
+inline uint64_t Msg_InsertText::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_InsertText::_internal_set_aid(uint64_t value) {
+inline void Msg_InsertText::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_InsertText::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aID)
+inline void Msg_InsertText::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aID)
 }
 
-// required bytes aText = 2;
-inline bool Msg_InsertText::_internal_has_atext() const {
+// required bytes a_aText = 2;
+inline bool Msg_InsertText::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InsertText::has_atext() const {
-  return _internal_has_atext();
+inline bool Msg_InsertText::has_a_atext() const {
+  return _internal_has_a_atext();
 }
-inline void Msg_InsertText::clear_atext() {
-  _impl_.atext_.ClearToEmpty();
+inline void Msg_InsertText::clear_a_atext() {
+  _impl_.a_atext_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InsertText::atext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
-  return _internal_atext();
+inline const std::string& Msg_InsertText::a_atext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
+  return _internal_a_atext();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InsertText::set_atext(ArgT0&& arg0, ArgT... args) {
+void Msg_InsertText::set_a_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
+ _impl_.a_atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
-inline std::string* Msg_InsertText::mutable_atext() {
-  std::string* _s = _internal_mutable_atext();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
+inline std::string* Msg_InsertText::mutable_a_atext() {
+  std::string* _s = _internal_mutable_a_atext();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
   return _s;
 }
-inline const std::string& Msg_InsertText::_internal_atext() const {
-  return _impl_.atext_.Get();
+inline const std::string& Msg_InsertText::_internal_a_atext() const {
+  return _impl_.a_atext_.Get();
 }
-inline void Msg_InsertText::_internal_set_atext(const std::string& value) {
+inline void Msg_InsertText::_internal_set_a_atext(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atext_.Set(value, GetArenaForAllocation());
+  _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InsertText::_internal_mutable_atext() {
+inline std::string* Msg_InsertText::_internal_mutable_a_atext() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atext_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InsertText::release_atext() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
-  if (!_internal_has_atext()) {
+inline std::string* Msg_InsertText::release_a_atext() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
+  if (!_internal_has_a_atext()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atext_.Release();
+  auto* p = _impl_.a_atext_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atext_.IsDefault()) {
-    _impl_.atext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InsertText::set_allocated_atext(std::string* atext) {
-  if (atext != nullptr) {
+inline void Msg_InsertText::set_allocated_a_atext(std::string* a_atext) {
+  if (a_atext != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atext_.SetAllocated(atext, GetArenaForAllocation());
+  _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atext_.IsDefault()) {
-    _impl_.atext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aText)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
 
-// required sint32 aPosition = 3;
-inline bool Msg_InsertText::_internal_has_aposition() const {
+// required sint32 a_aPosition = 3;
+inline bool Msg_InsertText::_internal_has_a_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_InsertText::has_aposition() const {
-  return _internal_has_aposition();
+inline bool Msg_InsertText::has_a_aposition() const {
+  return _internal_has_a_aposition();
 }
-inline void Msg_InsertText::clear_aposition() {
-  _impl_.aposition_ = 0;
+inline void Msg_InsertText::clear_a_aposition() {
+  _impl_.a_aposition_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_InsertText::_internal_aposition() const {
-  return _impl_.aposition_;
+inline int32_t Msg_InsertText::_internal_a_aposition() const {
+  return _impl_.a_aposition_;
 }
-inline int32_t Msg_InsertText::aposition() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aPosition)
-  return _internal_aposition();
+inline int32_t Msg_InsertText::a_aposition() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aPosition)
+  return _internal_a_aposition();
 }
-inline void Msg_InsertText::_internal_set_aposition(int32_t value) {
+inline void Msg_InsertText::_internal_set_a_aposition(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aposition_ = value;
+  _impl_.a_aposition_ = value;
 }
-inline void Msg_InsertText::set_aposition(int32_t value) {
-  _internal_set_aposition(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.aPosition)
+inline void Msg_InsertText::set_a_aposition(int32_t value) {
+  _internal_set_a_aposition(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aPosition)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CopyText
 
-// required uint64 aID = 1;
-inline bool Msg_CopyText::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_CopyText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CopyText::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_CopyText::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_CopyText::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_CopyText::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_CopyText::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_CopyText::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_CopyText::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aID)
-  return _internal_aid();
+inline uint64_t Msg_CopyText::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_CopyText::_internal_set_aid(uint64_t value) {
+inline void Msg_CopyText::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_CopyText::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aID)
+inline void Msg_CopyText::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aID)
 }
 
-// required sint32 aStartPos = 2;
-inline bool Msg_CopyText::_internal_has_astartpos() const {
+// required sint32 a_aStartPos = 2;
+inline bool Msg_CopyText::_internal_has_a_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CopyText::has_astartpos() const {
-  return _internal_has_astartpos();
+inline bool Msg_CopyText::has_a_astartpos() const {
+  return _internal_has_a_astartpos();
 }
-inline void Msg_CopyText::clear_astartpos() {
-  _impl_.astartpos_ = 0;
+inline void Msg_CopyText::clear_a_astartpos() {
+  _impl_.a_astartpos_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_CopyText::_internal_astartpos() const {
-  return _impl_.astartpos_;
+inline int32_t Msg_CopyText::_internal_a_astartpos() const {
+  return _impl_.a_astartpos_;
 }
-inline int32_t Msg_CopyText::astartpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aStartPos)
-  return _internal_astartpos();
+inline int32_t Msg_CopyText::a_astartpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aStartPos)
+  return _internal_a_astartpos();
 }
-inline void Msg_CopyText::_internal_set_astartpos(int32_t value) {
+inline void Msg_CopyText::_internal_set_a_astartpos(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astartpos_ = value;
+  _impl_.a_astartpos_ = value;
 }
-inline void Msg_CopyText::set_astartpos(int32_t value) {
-  _internal_set_astartpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aStartPos)
+inline void Msg_CopyText::set_a_astartpos(int32_t value) {
+  _internal_set_a_astartpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aStartPos)
 }
 
-// required sint32 aEndPos = 3;
-inline bool Msg_CopyText::_internal_has_aendpos() const {
+// required sint32 a_aEndPos = 3;
+inline bool Msg_CopyText::_internal_has_a_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_CopyText::has_aendpos() const {
-  return _internal_has_aendpos();
+inline bool Msg_CopyText::has_a_aendpos() const {
+  return _internal_has_a_aendpos();
 }
-inline void Msg_CopyText::clear_aendpos() {
-  _impl_.aendpos_ = 0;
+inline void Msg_CopyText::clear_a_aendpos() {
+  _impl_.a_aendpos_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_CopyText::_internal_aendpos() const {
-  return _impl_.aendpos_;
+inline int32_t Msg_CopyText::_internal_a_aendpos() const {
+  return _impl_.a_aendpos_;
 }
-inline int32_t Msg_CopyText::aendpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aEndPos)
-  return _internal_aendpos();
+inline int32_t Msg_CopyText::a_aendpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aEndPos)
+  return _internal_a_aendpos();
 }
-inline void Msg_CopyText::_internal_set_aendpos(int32_t value) {
+inline void Msg_CopyText::_internal_set_a_aendpos(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aendpos_ = value;
+  _impl_.a_aendpos_ = value;
 }
-inline void Msg_CopyText::set_aendpos(int32_t value) {
-  _internal_set_aendpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.aEndPos)
+inline void Msg_CopyText::set_a_aendpos(int32_t value) {
+  _internal_set_a_aendpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aEndPos)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CutText
 
-// required uint64 aID = 1;
-inline bool Msg_CutText::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_CutText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CutText::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_CutText::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_CutText::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_CutText::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_CutText::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_CutText::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_CutText::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aID)
-  return _internal_aid();
+inline uint64_t Msg_CutText::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_CutText::_internal_set_aid(uint64_t value) {
+inline void Msg_CutText::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_CutText::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aID)
+inline void Msg_CutText::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aID)
 }
 
-// required sint32 aStartPos = 2;
-inline bool Msg_CutText::_internal_has_astartpos() const {
+// required sint32 a_aStartPos = 2;
+inline bool Msg_CutText::_internal_has_a_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CutText::has_astartpos() const {
-  return _internal_has_astartpos();
+inline bool Msg_CutText::has_a_astartpos() const {
+  return _internal_has_a_astartpos();
 }
-inline void Msg_CutText::clear_astartpos() {
-  _impl_.astartpos_ = 0;
+inline void Msg_CutText::clear_a_astartpos() {
+  _impl_.a_astartpos_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_CutText::_internal_astartpos() const {
-  return _impl_.astartpos_;
+inline int32_t Msg_CutText::_internal_a_astartpos() const {
+  return _impl_.a_astartpos_;
 }
-inline int32_t Msg_CutText::astartpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aStartPos)
-  return _internal_astartpos();
+inline int32_t Msg_CutText::a_astartpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aStartPos)
+  return _internal_a_astartpos();
 }
-inline void Msg_CutText::_internal_set_astartpos(int32_t value) {
+inline void Msg_CutText::_internal_set_a_astartpos(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astartpos_ = value;
+  _impl_.a_astartpos_ = value;
 }
-inline void Msg_CutText::set_astartpos(int32_t value) {
-  _internal_set_astartpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aStartPos)
+inline void Msg_CutText::set_a_astartpos(int32_t value) {
+  _internal_set_a_astartpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aStartPos)
 }
 
-// required sint32 aEndPos = 3;
-inline bool Msg_CutText::_internal_has_aendpos() const {
+// required sint32 a_aEndPos = 3;
+inline bool Msg_CutText::_internal_has_a_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_CutText::has_aendpos() const {
-  return _internal_has_aendpos();
+inline bool Msg_CutText::has_a_aendpos() const {
+  return _internal_has_a_aendpos();
 }
-inline void Msg_CutText::clear_aendpos() {
-  _impl_.aendpos_ = 0;
+inline void Msg_CutText::clear_a_aendpos() {
+  _impl_.a_aendpos_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_CutText::_internal_aendpos() const {
-  return _impl_.aendpos_;
+inline int32_t Msg_CutText::_internal_a_aendpos() const {
+  return _impl_.a_aendpos_;
 }
-inline int32_t Msg_CutText::aendpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aEndPos)
-  return _internal_aendpos();
+inline int32_t Msg_CutText::a_aendpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aEndPos)
+  return _internal_a_aendpos();
 }
-inline void Msg_CutText::_internal_set_aendpos(int32_t value) {
+inline void Msg_CutText::_internal_set_a_aendpos(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aendpos_ = value;
+  _impl_.a_aendpos_ = value;
 }
-inline void Msg_CutText::set_aendpos(int32_t value) {
-  _internal_set_aendpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.aEndPos)
+inline void Msg_CutText::set_a_aendpos(int32_t value) {
+  _internal_set_a_aendpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aEndPos)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeleteText
 
-// required uint64 aID = 1;
-inline bool Msg_DeleteText::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_DeleteText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeleteText::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_DeleteText::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_DeleteText::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_DeleteText::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_DeleteText::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_DeleteText::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_DeleteText::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aID)
-  return _internal_aid();
+inline uint64_t Msg_DeleteText::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_DeleteText::_internal_set_aid(uint64_t value) {
+inline void Msg_DeleteText::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_DeleteText::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aID)
+inline void Msg_DeleteText::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aID)
 }
 
-// required sint32 aStartPos = 2;
-inline bool Msg_DeleteText::_internal_has_astartpos() const {
+// required sint32 a_aStartPos = 2;
+inline bool Msg_DeleteText::_internal_has_a_astartpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeleteText::has_astartpos() const {
-  return _internal_has_astartpos();
+inline bool Msg_DeleteText::has_a_astartpos() const {
+  return _internal_has_a_astartpos();
 }
-inline void Msg_DeleteText::clear_astartpos() {
-  _impl_.astartpos_ = 0;
+inline void Msg_DeleteText::clear_a_astartpos() {
+  _impl_.a_astartpos_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_DeleteText::_internal_astartpos() const {
-  return _impl_.astartpos_;
+inline int32_t Msg_DeleteText::_internal_a_astartpos() const {
+  return _impl_.a_astartpos_;
 }
-inline int32_t Msg_DeleteText::astartpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aStartPos)
-  return _internal_astartpos();
+inline int32_t Msg_DeleteText::a_astartpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aStartPos)
+  return _internal_a_astartpos();
 }
-inline void Msg_DeleteText::_internal_set_astartpos(int32_t value) {
+inline void Msg_DeleteText::_internal_set_a_astartpos(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astartpos_ = value;
+  _impl_.a_astartpos_ = value;
 }
-inline void Msg_DeleteText::set_astartpos(int32_t value) {
-  _internal_set_astartpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aStartPos)
+inline void Msg_DeleteText::set_a_astartpos(int32_t value) {
+  _internal_set_a_astartpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aStartPos)
 }
 
-// required sint32 aEndPos = 3;
-inline bool Msg_DeleteText::_internal_has_aendpos() const {
+// required sint32 a_aEndPos = 3;
+inline bool Msg_DeleteText::_internal_has_a_aendpos() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DeleteText::has_aendpos() const {
-  return _internal_has_aendpos();
+inline bool Msg_DeleteText::has_a_aendpos() const {
+  return _internal_has_a_aendpos();
 }
-inline void Msg_DeleteText::clear_aendpos() {
-  _impl_.aendpos_ = 0;
+inline void Msg_DeleteText::clear_a_aendpos() {
+  _impl_.a_aendpos_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_DeleteText::_internal_aendpos() const {
-  return _impl_.aendpos_;
+inline int32_t Msg_DeleteText::_internal_a_aendpos() const {
+  return _impl_.a_aendpos_;
 }
-inline int32_t Msg_DeleteText::aendpos() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aEndPos)
-  return _internal_aendpos();
+inline int32_t Msg_DeleteText::a_aendpos() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aEndPos)
+  return _internal_a_aendpos();
 }
-inline void Msg_DeleteText::_internal_set_aendpos(int32_t value) {
+inline void Msg_DeleteText::_internal_set_a_aendpos(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aendpos_ = value;
+  _impl_.a_aendpos_ = value;
 }
-inline void Msg_DeleteText::set_aendpos(int32_t value) {
-  _internal_set_aendpos(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.aEndPos)
+inline void Msg_DeleteText::set_a_aendpos(int32_t value) {
+  _internal_set_a_aendpos(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aEndPos)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PasteText
 
-// required uint64 aID = 1;
-inline bool Msg_PasteText::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_PasteText::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PasteText::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_PasteText::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_PasteText::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_PasteText::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_PasteText::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_PasteText::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_PasteText::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.aID)
-  return _internal_aid();
+inline uint64_t Msg_PasteText::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_PasteText::_internal_set_aid(uint64_t value) {
+inline void Msg_PasteText::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_PasteText::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.aID)
+inline void Msg_PasteText::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aID)
 }
 
-// required sint32 aPosition = 2;
-inline bool Msg_PasteText::_internal_has_aposition() const {
+// required sint32 a_aPosition = 2;
+inline bool Msg_PasteText::_internal_has_a_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PasteText::has_aposition() const {
-  return _internal_has_aposition();
+inline bool Msg_PasteText::has_a_aposition() const {
+  return _internal_has_a_aposition();
 }
-inline void Msg_PasteText::clear_aposition() {
-  _impl_.aposition_ = 0;
+inline void Msg_PasteText::clear_a_aposition() {
+  _impl_.a_aposition_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_PasteText::_internal_aposition() const {
-  return _impl_.aposition_;
+inline int32_t Msg_PasteText::_internal_a_aposition() const {
+  return _impl_.a_aposition_;
 }
-inline int32_t Msg_PasteText::aposition() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.aPosition)
-  return _internal_aposition();
+inline int32_t Msg_PasteText::a_aposition() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aPosition)
+  return _internal_a_aposition();
 }
-inline void Msg_PasteText::_internal_set_aposition(int32_t value) {
+inline void Msg_PasteText::_internal_set_a_aposition(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aposition_ = value;
+  _impl_.a_aposition_ = value;
 }
-inline void Msg_PasteText::set_aposition(int32_t value) {
-  _internal_set_aposition(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.aPosition)
+inline void Msg_PasteText::set_a_aposition(int32_t value) {
+  _internal_set_a_aposition(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aPosition)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TakeSelection
 
-// required uint64 aID = 1;
-inline bool Msg_TakeSelection::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_TakeSelection::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TakeSelection::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_TakeSelection::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_TakeSelection::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_TakeSelection::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_TakeSelection::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_TakeSelection::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_TakeSelection::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection.aID)
-  return _internal_aid();
+inline uint64_t Msg_TakeSelection::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_TakeSelection::_internal_set_aid(uint64_t value) {
+inline void Msg_TakeSelection::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_TakeSelection::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection.aID)
+inline void Msg_TakeSelection::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection.a_aID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetSelected
 
-// required uint64 aID = 1;
-inline bool Msg_SetSelected::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_SetSelected::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetSelected::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_SetSelected::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_SetSelected::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_SetSelected::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_SetSelected::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_SetSelected::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_SetSelected::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.aID)
-  return _internal_aid();
+inline uint64_t Msg_SetSelected::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_SetSelected::_internal_set_aid(uint64_t value) {
+inline void Msg_SetSelected::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_SetSelected::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.aID)
+inline void Msg_SetSelected::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aID)
 }
 
-// required bool aSelected = 2;
-inline bool Msg_SetSelected::_internal_has_aselected() const {
+// required bool a_aSelected = 2;
+inline bool Msg_SetSelected::_internal_has_a_aselected() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetSelected::has_aselected() const {
-  return _internal_has_aselected();
+inline bool Msg_SetSelected::has_a_aselected() const {
+  return _internal_has_a_aselected();
 }
-inline void Msg_SetSelected::clear_aselected() {
-  _impl_.aselected_ = false;
+inline void Msg_SetSelected::clear_a_aselected() {
+  _impl_.a_aselected_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_SetSelected::_internal_aselected() const {
-  return _impl_.aselected_;
+inline bool Msg_SetSelected::_internal_a_aselected() const {
+  return _impl_.a_aselected_;
 }
-inline bool Msg_SetSelected::aselected() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.aSelected)
-  return _internal_aselected();
+inline bool Msg_SetSelected::a_aselected() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aSelected)
+  return _internal_a_aselected();
 }
-inline void Msg_SetSelected::_internal_set_aselected(bool value) {
+inline void Msg_SetSelected::_internal_set_a_aselected(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aselected_ = value;
+  _impl_.a_aselected_ = value;
 }
-inline void Msg_SetSelected::set_aselected(bool value) {
-  _internal_set_aselected(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.aSelected)
+inline void Msg_SetSelected::set_a_aselected(bool value) {
+  _internal_set_a_aselected(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aSelected)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DoActionAsync
 
-// required uint64 aID = 1;
-inline bool Msg_DoActionAsync::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_DoActionAsync::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DoActionAsync::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_DoActionAsync::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_DoActionAsync::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_DoActionAsync::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_DoActionAsync::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_DoActionAsync::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_DoActionAsync::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.aID)
-  return _internal_aid();
+inline uint64_t Msg_DoActionAsync::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_DoActionAsync::_internal_set_aid(uint64_t value) {
+inline void Msg_DoActionAsync::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_DoActionAsync::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.aID)
+inline void Msg_DoActionAsync::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aID)
 }
 
-// required uint32 aIndex = 2;
-inline bool Msg_DoActionAsync::_internal_has_aindex() const {
+// required uint32 a_aIndex = 2;
+inline bool Msg_DoActionAsync::_internal_has_a_aindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DoActionAsync::has_aindex() const {
-  return _internal_has_aindex();
+inline bool Msg_DoActionAsync::has_a_aindex() const {
+  return _internal_has_a_aindex();
 }
-inline void Msg_DoActionAsync::clear_aindex() {
-  _impl_.aindex_ = 0u;
+inline void Msg_DoActionAsync::clear_a_aindex() {
+  _impl_.a_aindex_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_DoActionAsync::_internal_aindex() const {
-  return _impl_.aindex_;
+inline uint32_t Msg_DoActionAsync::_internal_a_aindex() const {
+  return _impl_.a_aindex_;
 }
-inline uint32_t Msg_DoActionAsync::aindex() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.aIndex)
-  return _internal_aindex();
+inline uint32_t Msg_DoActionAsync::a_aindex() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aIndex)
+  return _internal_a_aindex();
 }
-inline void Msg_DoActionAsync::_internal_set_aindex(uint32_t value) {
+inline void Msg_DoActionAsync::_internal_set_a_aindex(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aindex_ = value;
+  _impl_.a_aindex_ = value;
 }
-inline void Msg_DoActionAsync::set_aindex(uint32_t value) {
-  _internal_set_aindex(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.aIndex)
+inline void Msg_DoActionAsync::set_a_aindex(uint32_t value) {
+  _internal_set_a_aindex(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aIndex)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetCurValue
 
-// required uint64 aID = 1;
-inline bool Msg_SetCurValue::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_SetCurValue::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetCurValue::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_SetCurValue::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_SetCurValue::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_SetCurValue::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_SetCurValue::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_SetCurValue::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_SetCurValue::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.aID)
-  return _internal_aid();
+inline uint64_t Msg_SetCurValue::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_SetCurValue::_internal_set_aid(uint64_t value) {
+inline void Msg_SetCurValue::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_SetCurValue::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.aID)
+inline void Msg_SetCurValue::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aID)
 }
 
-// required double aValue = 2;
-inline bool Msg_SetCurValue::_internal_has_avalue() const {
+// required double a_aValue = 2;
+inline bool Msg_SetCurValue::_internal_has_a_avalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetCurValue::has_avalue() const {
-  return _internal_has_avalue();
+inline bool Msg_SetCurValue::has_a_avalue() const {
+  return _internal_has_a_avalue();
 }
-inline void Msg_SetCurValue::clear_avalue() {
-  _impl_.avalue_ = 0;
+inline void Msg_SetCurValue::clear_a_avalue() {
+  _impl_.a_avalue_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline double Msg_SetCurValue::_internal_avalue() const {
-  return _impl_.avalue_;
+inline double Msg_SetCurValue::_internal_a_avalue() const {
+  return _impl_.a_avalue_;
 }
-inline double Msg_SetCurValue::avalue() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.aValue)
-  return _internal_avalue();
+inline double Msg_SetCurValue::a_avalue() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aValue)
+  return _internal_a_avalue();
 }
-inline void Msg_SetCurValue::_internal_set_avalue(double value) {
+inline void Msg_SetCurValue::_internal_set_a_avalue(double value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.avalue_ = value;
+  _impl_.a_avalue_ = value;
 }
-inline void Msg_SetCurValue::set_avalue(double value) {
-  _internal_set_avalue(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.aValue)
+inline void Msg_SetCurValue::set_a_avalue(double value) {
+  _internal_set_a_avalue(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aValue)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TakeFocus
 
-// required uint64 aID = 1;
-inline bool Msg_TakeFocus::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_TakeFocus::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TakeFocus::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_TakeFocus::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_TakeFocus::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_TakeFocus::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_TakeFocus::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_TakeFocus::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_TakeFocus::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus.aID)
-  return _internal_aid();
+inline uint64_t Msg_TakeFocus::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_TakeFocus::_internal_set_aid(uint64_t value) {
+inline void Msg_TakeFocus::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_TakeFocus::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus.aID)
+inline void Msg_TakeFocus::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus.a_aID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_VerifyCache
 
-// required uint64 aID = 1;
-inline bool Msg_VerifyCache::_internal_has_aid() const {
+// required uint64 a_aID = 1;
+inline bool Msg_VerifyCache::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_VerifyCache::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_VerifyCache::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_VerifyCache::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_VerifyCache::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_VerifyCache::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_VerifyCache::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_VerifyCache::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aID)
-  return _internal_aid();
+inline uint64_t Msg_VerifyCache::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_VerifyCache::_internal_set_aid(uint64_t value) {
+inline void Msg_VerifyCache::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_VerifyCache::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aID)
+inline void Msg_VerifyCache::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aID)
 }
 
-// required uint64 aCacheDomain = 2;
-inline bool Msg_VerifyCache::_internal_has_acachedomain() const {
+// required uint64 a_aCacheDomain = 2;
+inline bool Msg_VerifyCache::_internal_has_a_acachedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_VerifyCache::has_acachedomain() const {
-  return _internal_has_acachedomain();
+inline bool Msg_VerifyCache::has_a_acachedomain() const {
+  return _internal_has_a_acachedomain();
 }
-inline void Msg_VerifyCache::clear_acachedomain() {
-  _impl_.acachedomain_ = uint64_t{0u};
+inline void Msg_VerifyCache::clear_a_acachedomain() {
+  _impl_.a_acachedomain_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint64_t Msg_VerifyCache::_internal_acachedomain() const {
-  return _impl_.acachedomain_;
+inline uint64_t Msg_VerifyCache::_internal_a_acachedomain() const {
+  return _impl_.a_acachedomain_;
 }
-inline uint64_t Msg_VerifyCache::acachedomain() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aCacheDomain)
-  return _internal_acachedomain();
+inline uint64_t Msg_VerifyCache::a_acachedomain() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aCacheDomain)
+  return _internal_a_acachedomain();
 }
-inline void Msg_VerifyCache::_internal_set_acachedomain(uint64_t value) {
+inline void Msg_VerifyCache::_internal_set_a_acachedomain(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.acachedomain_ = value;
+  _impl_.a_acachedomain_ = value;
 }
-inline void Msg_VerifyCache::set_acachedomain(uint64_t value) {
-  _internal_set_acachedomain(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aCacheDomain)
+inline void Msg_VerifyCache::set_a_acachedomain(uint64_t value) {
+  _internal_set_a_acachedomain(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aCacheDomain)
 }
 
-// required bytes aFields = 3;
-inline bool Msg_VerifyCache::_internal_has_afields() const {
+// required bytes a_aFields = 3;
+inline bool Msg_VerifyCache::_internal_has_a_afields() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_VerifyCache::has_afields() const {
-  return _internal_has_afields();
+inline bool Msg_VerifyCache::has_a_afields() const {
+  return _internal_has_a_afields();
 }
-inline void Msg_VerifyCache::clear_afields() {
-  _impl_.afields_.ClearToEmpty();
+inline void Msg_VerifyCache::clear_a_afields() {
+  _impl_.a_afields_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_VerifyCache::afields() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aFields)
-  return _internal_afields();
+inline const std::string& Msg_VerifyCache::a_afields() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aFields)
+  return _internal_a_afields();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_VerifyCache::set_afields(ArgT0&& arg0, ArgT... args) {
+void Msg_VerifyCache::set_a_afields(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.afields_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aFields)
+ _impl_.a_afields_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aFields)
 }
-inline std::string* Msg_VerifyCache::mutable_afields() {
-  std::string* _s = _internal_mutable_afields();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aFields)
+inline std::string* Msg_VerifyCache::mutable_a_afields() {
+  std::string* _s = _internal_mutable_a_afields();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aFields)
   return _s;
 }
-inline const std::string& Msg_VerifyCache::_internal_afields() const {
-  return _impl_.afields_.Get();
+inline const std::string& Msg_VerifyCache::_internal_a_afields() const {
+  return _impl_.a_afields_.Get();
 }
-inline void Msg_VerifyCache::_internal_set_afields(const std::string& value) {
+inline void Msg_VerifyCache::_internal_set_a_afields(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.afields_.Set(value, GetArenaForAllocation());
+  _impl_.a_afields_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_VerifyCache::_internal_mutable_afields() {
+inline std::string* Msg_VerifyCache::_internal_mutable_a_afields() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.afields_.Mutable(GetArenaForAllocation());
+  return _impl_.a_afields_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_VerifyCache::release_afields() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aFields)
-  if (!_internal_has_afields()) {
+inline std::string* Msg_VerifyCache::release_a_afields() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aFields)
+  if (!_internal_has_a_afields()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.afields_.Release();
+  auto* p = _impl_.a_afields_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afields_.IsDefault()) {
-    _impl_.afields_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afields_.IsDefault()) {
+    _impl_.a_afields_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_VerifyCache::set_allocated_afields(std::string* afields) {
-  if (afields != nullptr) {
+inline void Msg_VerifyCache::set_allocated_a_afields(std::string* a_afields) {
+  if (a_afields != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.afields_.SetAllocated(afields, GetArenaForAllocation());
+  _impl_.a_afields_.SetAllocated(a_afields, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afields_.IsDefault()) {
-    _impl_.afields_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afields_.IsDefault()) {
+    _impl_.a_afields_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.aFields)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aFields)
 }
 
 // -------------------------------------------------------------------

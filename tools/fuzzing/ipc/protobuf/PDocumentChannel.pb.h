@@ -210,43 +210,43 @@ class Msg_Cancel final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStatusFieldNumber = 1,
-    kReasonFieldNumber = 2,
+    kAStatusFieldNumber = 1,
+    kAReasonFieldNumber = 2,
   };
-  // required bytes status = 1;
-  bool has_status() const;
+  // required bytes a_status = 1;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  const std::string& status() const;
+  void clear_a_status();
+  const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_status(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_status();
-  PROTOBUF_NODISCARD std::string* release_status();
-  void set_allocated_status(std::string* status);
+  void set_a_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_status();
+  PROTOBUF_NODISCARD std::string* release_a_status();
+  void set_allocated_a_status(std::string* a_status);
   private:
-  const std::string& _internal_status() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_status(const std::string& value);
-  std::string* _internal_mutable_status();
+  const std::string& _internal_a_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_status(const std::string& value);
+  std::string* _internal_mutable_a_status();
   public:
 
-  // required bytes reason = 2;
-  bool has_reason() const;
+  // required bytes a_reason = 2;
+  bool has_a_reason() const;
   private:
-  bool _internal_has_reason() const;
+  bool _internal_has_a_reason() const;
   public:
-  void clear_reason();
-  const std::string& reason() const;
+  void clear_a_reason();
+  const std::string& a_reason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_reason(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_reason();
-  PROTOBUF_NODISCARD std::string* release_reason();
-  void set_allocated_reason(std::string* reason);
+  void set_a_reason(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_reason();
+  PROTOBUF_NODISCARD std::string* release_a_reason();
+  void set_allocated_a_reason(std::string* a_reason);
   private:
-  const std::string& _internal_reason() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_reason(const std::string& value);
-  std::string* _internal_mutable_reason();
+  const std::string& _internal_a_reason() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_reason(const std::string& value);
+  std::string* _internal_mutable_a_reason();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel)
@@ -262,8 +262,8 @@ class Msg_Cancel final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr status_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_reason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocumentChannel_2eproto;
@@ -628,24 +628,24 @@ class Msg_FailedAsyncOpen final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStatusFieldNumber = 1,
+    kAStatusFieldNumber = 1,
   };
-  // required bytes status = 1;
-  bool has_status() const;
+  // required bytes a_status = 1;
+  bool has_a_status() const;
   private:
-  bool _internal_has_status() const;
+  bool _internal_has_a_status() const;
   public:
-  void clear_status();
-  const std::string& status() const;
+  void clear_a_status();
+  const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_status(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_status();
-  PROTOBUF_NODISCARD std::string* release_status();
-  void set_allocated_status(std::string* status);
+  void set_a_status(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_status();
+  PROTOBUF_NODISCARD std::string* release_a_status();
+  void set_allocated_a_status(std::string* a_status);
   private:
-  const std::string& _internal_status() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_status(const std::string& value);
-  std::string* _internal_mutable_status();
+  const std::string& _internal_a_status() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_status(const std::string& value);
+  std::string* _internal_mutable_a_status();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen)
@@ -658,7 +658,7 @@ class Msg_FailedAsyncOpen final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr status_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocumentChannel_2eproto;
@@ -775,57 +775,57 @@ class Msg_DisconnectChildListeners final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStatusFieldNumber = 1,
-    kALoadGroupReasonFieldNumber = 2,
-    kAContinueNavigatingFieldNumber = 3,
+    kAAStatusFieldNumber = 1,
+    kAALoadGroupReasonFieldNumber = 2,
+    kAAContinueNavigatingFieldNumber = 3,
   };
-  // required bytes aStatus = 1;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
-  // required bytes aLoadGroupReason = 2;
-  bool has_aloadgroupreason() const;
+  // required bytes a_aLoadGroupReason = 2;
+  bool has_a_aloadgroupreason() const;
   private:
-  bool _internal_has_aloadgroupreason() const;
+  bool _internal_has_a_aloadgroupreason() const;
   public:
-  void clear_aloadgroupreason();
-  const std::string& aloadgroupreason() const;
+  void clear_a_aloadgroupreason();
+  const std::string& a_aloadgroupreason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aloadgroupreason(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aloadgroupreason();
-  PROTOBUF_NODISCARD std::string* release_aloadgroupreason();
-  void set_allocated_aloadgroupreason(std::string* aloadgroupreason);
+  void set_a_aloadgroupreason(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aloadgroupreason();
+  PROTOBUF_NODISCARD std::string* release_a_aloadgroupreason();
+  void set_allocated_a_aloadgroupreason(std::string* a_aloadgroupreason);
   private:
-  const std::string& _internal_aloadgroupreason() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aloadgroupreason(const std::string& value);
-  std::string* _internal_mutable_aloadgroupreason();
+  const std::string& _internal_a_aloadgroupreason() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aloadgroupreason(const std::string& value);
+  std::string* _internal_mutable_a_aloadgroupreason();
   public:
 
-  // required bool aContinueNavigating = 3;
-  bool has_acontinuenavigating() const;
+  // required bool a_aContinueNavigating = 3;
+  bool has_a_acontinuenavigating() const;
   private:
-  bool _internal_has_acontinuenavigating() const;
+  bool _internal_has_a_acontinuenavigating() const;
   public:
-  void clear_acontinuenavigating();
-  bool acontinuenavigating() const;
-  void set_acontinuenavigating(bool value);
+  void clear_a_acontinuenavigating();
+  bool a_acontinuenavigating() const;
+  void set_a_acontinuenavigating(bool value);
   private:
-  bool _internal_acontinuenavigating() const;
-  void _internal_set_acontinuenavigating(bool value);
+  bool _internal_a_acontinuenavigating() const;
+  void _internal_set_a_acontinuenavigating(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners)
@@ -841,9 +841,9 @@ class Msg_DisconnectChildListeners final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aloadgroupreason_;
-    bool acontinuenavigating_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aloadgroupreason_;
+    bool a_acontinuenavigating_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocumentChannel_2eproto;
@@ -960,50 +960,50 @@ class Msg_RedirectToRealChannel final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEndpointFieldNumber = 2,
-    kArgsFieldNumber = 1,
+    kAAEndpointFieldNumber = 2,
+    kAArgsFieldNumber = 1,
   };
-  // repeated bytes aEndpoint = 2;
-  int aendpoint_size() const;
+  // repeated bytes a_aEndpoint = 2;
+  int a_aendpoint_size() const;
   private:
-  int _internal_aendpoint_size() const;
+  int _internal_a_aendpoint_size() const;
   public:
-  void clear_aendpoint();
-  const std::string& aendpoint(int index) const;
-  std::string* mutable_aendpoint(int index);
-  void set_aendpoint(int index, const std::string& value);
-  void set_aendpoint(int index, std::string&& value);
-  void set_aendpoint(int index, const char* value);
-  void set_aendpoint(int index, const void* value, size_t size);
-  std::string* add_aendpoint();
-  void add_aendpoint(const std::string& value);
-  void add_aendpoint(std::string&& value);
-  void add_aendpoint(const char* value);
-  void add_aendpoint(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& aendpoint() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_aendpoint();
+  void clear_a_aendpoint();
+  const std::string& a_aendpoint(int index) const;
+  std::string* mutable_a_aendpoint(int index);
+  void set_a_aendpoint(int index, const std::string& value);
+  void set_a_aendpoint(int index, std::string&& value);
+  void set_a_aendpoint(int index, const char* value);
+  void set_a_aendpoint(int index, const void* value, size_t size);
+  std::string* add_a_aendpoint();
+  void add_a_aendpoint(const std::string& value);
+  void add_a_aendpoint(std::string&& value);
+  void add_a_aendpoint(const char* value);
+  void add_a_aendpoint(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_aendpoint() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_aendpoint();
   private:
-  const std::string& _internal_aendpoint(int index) const;
-  std::string* _internal_add_aendpoint();
+  const std::string& _internal_a_aendpoint(int index) const;
+  std::string* _internal_add_a_aendpoint();
   public:
 
-  // required .protobuf.mozilla.net.RedirectToRealChannelArgs args = 1;
-  bool has_args() const;
+  // required .protobuf.mozilla.net.RedirectToRealChannelArgs a_args = 1;
+  bool has_a_args() const;
   private:
-  bool _internal_has_args() const;
+  bool _internal_has_a_args() const;
   public:
-  void clear_args();
-  const ::protobuf::mozilla::net::RedirectToRealChannelArgs& args() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::RedirectToRealChannelArgs* release_args();
-  ::protobuf::mozilla::net::RedirectToRealChannelArgs* mutable_args();
-  void set_allocated_args(::protobuf::mozilla::net::RedirectToRealChannelArgs* args);
+  void clear_a_args();
+  const ::protobuf::mozilla::net::RedirectToRealChannelArgs& a_args() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::RedirectToRealChannelArgs* release_a_args();
+  ::protobuf::mozilla::net::RedirectToRealChannelArgs* mutable_a_args();
+  void set_allocated_a_args(::protobuf::mozilla::net::RedirectToRealChannelArgs* a_args);
   private:
-  const ::protobuf::mozilla::net::RedirectToRealChannelArgs& _internal_args() const;
-  ::protobuf::mozilla::net::RedirectToRealChannelArgs* _internal_mutable_args();
+  const ::protobuf::mozilla::net::RedirectToRealChannelArgs& _internal_a_args() const;
+  ::protobuf::mozilla::net::RedirectToRealChannelArgs* _internal_mutable_a_args();
   public:
-  void unsafe_arena_set_allocated_args(
-      ::protobuf::mozilla::net::RedirectToRealChannelArgs* args);
-  ::protobuf::mozilla::net::RedirectToRealChannelArgs* unsafe_arena_release_args();
+  void unsafe_arena_set_allocated_a_args(
+      ::protobuf::mozilla::net::RedirectToRealChannelArgs* a_args);
+  ::protobuf::mozilla::net::RedirectToRealChannelArgs* unsafe_arena_release_a_args();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel)
  private:
@@ -1015,8 +1015,8 @@ class Msg_RedirectToRealChannel final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> aendpoint_;
-    ::protobuf::mozilla::net::RedirectToRealChannelArgs* args_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_aendpoint_;
+    ::protobuf::mozilla::net::RedirectToRealChannelArgs* a_args_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocumentChannel_2eproto;
@@ -1133,24 +1133,24 @@ class Reply_RedirectToRealChannel final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRvFieldNumber = 1,
+    kARvFieldNumber = 1,
   };
-  // required bytes rv = 1;
-  bool has_rv() const;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
   private:
-  bool _internal_has_rv() const;
+  bool _internal_has_a_rv() const;
   public:
-  void clear_rv();
-  const std::string& rv() const;
+  void clear_a_rv();
+  const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_rv(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_rv();
-  PROTOBUF_NODISCARD std::string* release_rv();
-  void set_allocated_rv(std::string* rv);
+  void set_a_rv(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_rv();
+  PROTOBUF_NODISCARD std::string* release_a_rv();
+  void set_allocated_a_rv(std::string* a_rv);
   private:
-  const std::string& _internal_rv() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rv(const std::string& value);
-  std::string* _internal_mutable_rv();
+  const std::string& _internal_a_rv() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_rv(const std::string& value);
+  std::string* _internal_mutable_a_rv();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel)
@@ -1163,7 +1163,7 @@ class Reply_RedirectToRealChannel final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocumentChannel_2eproto;
@@ -1404,24 +1404,24 @@ class Reply_UpgradeObjectLoad final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFrameContextFieldNumber = 1,
+    kAFrameContextFieldNumber = 1,
   };
-  // required bytes frameContext = 1;
-  bool has_framecontext() const;
+  // required bytes a_frameContext = 1;
+  bool has_a_framecontext() const;
   private:
-  bool _internal_has_framecontext() const;
+  bool _internal_has_a_framecontext() const;
   public:
-  void clear_framecontext();
-  const std::string& framecontext() const;
+  void clear_a_framecontext();
+  const std::string& a_framecontext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_framecontext(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_framecontext();
-  PROTOBUF_NODISCARD std::string* release_framecontext();
-  void set_allocated_framecontext(std::string* framecontext);
+  void set_a_framecontext(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_framecontext();
+  PROTOBUF_NODISCARD std::string* release_a_framecontext();
+  void set_allocated_a_framecontext(std::string* a_framecontext);
   private:
-  const std::string& _internal_framecontext() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_framecontext(const std::string& value);
-  std::string* _internal_mutable_framecontext();
+  const std::string& _internal_a_framecontext() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_framecontext(const std::string& value);
+  std::string* _internal_mutable_a_framecontext();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad)
@@ -1434,7 +1434,7 @@ class Reply_UpgradeObjectLoad final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr framecontext_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_framecontext_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocumentChannel_2eproto;
@@ -1450,140 +1450,140 @@ class Reply_UpgradeObjectLoad final :
 #endif  // __GNUC__
 // Msg_Cancel
 
-// required bytes status = 1;
-inline bool Msg_Cancel::_internal_has_status() const {
+// required bytes a_status = 1;
+inline bool Msg_Cancel::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Cancel::has_status() const {
-  return _internal_has_status();
+inline bool Msg_Cancel::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void Msg_Cancel::clear_status() {
-  _impl_.status_.ClearToEmpty();
+inline void Msg_Cancel::clear_a_status() {
+  _impl_.a_status_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Cancel::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.status)
-  return _internal_status();
+inline const std::string& Msg_Cancel::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_status)
+  return _internal_a_status();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Cancel::set_status(ArgT0&& arg0, ArgT... args) {
+void Msg_Cancel::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.status)
+ _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_status)
 }
-inline std::string* Msg_Cancel::mutable_status() {
-  std::string* _s = _internal_mutable_status();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.status)
+inline std::string* Msg_Cancel::mutable_a_status() {
+  std::string* _s = _internal_mutable_a_status();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_status)
   return _s;
 }
-inline const std::string& Msg_Cancel::_internal_status() const {
-  return _impl_.status_.Get();
+inline const std::string& Msg_Cancel::_internal_a_status() const {
+  return _impl_.a_status_.Get();
 }
-inline void Msg_Cancel::_internal_set_status(const std::string& value) {
+inline void Msg_Cancel::_internal_set_a_status(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.status_.Set(value, GetArenaForAllocation());
+  _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::_internal_mutable_status() {
+inline std::string* Msg_Cancel::_internal_mutable_a_status() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.status_.Mutable(GetArenaForAllocation());
+  return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::release_status() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.status)
-  if (!_internal_has_status()) {
+inline std::string* Msg_Cancel::release_a_status() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_status)
+  if (!_internal_has_a_status()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.status_.Release();
+  auto* p = _impl_.a_status_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Cancel::set_allocated_status(std::string* status) {
-  if (status != nullptr) {
+inline void Msg_Cancel::set_allocated_a_status(std::string* a_status) {
+  if (a_status != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.status_.SetAllocated(status, GetArenaForAllocation());
+  _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.status)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_status)
 }
 
-// required bytes reason = 2;
-inline bool Msg_Cancel::_internal_has_reason() const {
+// required bytes a_reason = 2;
+inline bool Msg_Cancel::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Cancel::has_reason() const {
-  return _internal_has_reason();
+inline bool Msg_Cancel::has_a_reason() const {
+  return _internal_has_a_reason();
 }
-inline void Msg_Cancel::clear_reason() {
-  _impl_.reason_.ClearToEmpty();
+inline void Msg_Cancel::clear_a_reason() {
+  _impl_.a_reason_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_Cancel::reason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.reason)
-  return _internal_reason();
+inline const std::string& Msg_Cancel::a_reason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_reason)
+  return _internal_a_reason();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Cancel::set_reason(ArgT0&& arg0, ArgT... args) {
+void Msg_Cancel::set_a_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.reason)
+ _impl_.a_reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_reason)
 }
-inline std::string* Msg_Cancel::mutable_reason() {
-  std::string* _s = _internal_mutable_reason();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.reason)
+inline std::string* Msg_Cancel::mutable_a_reason() {
+  std::string* _s = _internal_mutable_a_reason();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_reason)
   return _s;
 }
-inline const std::string& Msg_Cancel::_internal_reason() const {
-  return _impl_.reason_.Get();
+inline const std::string& Msg_Cancel::_internal_a_reason() const {
+  return _impl_.a_reason_.Get();
 }
-inline void Msg_Cancel::_internal_set_reason(const std::string& value) {
+inline void Msg_Cancel::_internal_set_a_reason(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.reason_.Set(value, GetArenaForAllocation());
+  _impl_.a_reason_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::_internal_mutable_reason() {
+inline std::string* Msg_Cancel::_internal_mutable_a_reason() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.reason_.Mutable(GetArenaForAllocation());
+  return _impl_.a_reason_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Cancel::release_reason() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.reason)
-  if (!_internal_has_reason()) {
+inline std::string* Msg_Cancel::release_a_reason() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_reason)
+  if (!_internal_has_a_reason()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.reason_.Release();
+  auto* p = _impl_.a_reason_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.reason_.IsDefault()) {
-    _impl_.reason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_reason_.IsDefault()) {
+    _impl_.a_reason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Cancel::set_allocated_reason(std::string* reason) {
-  if (reason != nullptr) {
+inline void Msg_Cancel::set_allocated_a_reason(std::string* a_reason) {
+  if (a_reason != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.reason_.SetAllocated(reason, GetArenaForAllocation());
+  _impl_.a_reason_.SetAllocated(a_reason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.reason_.IsDefault()) {
-    _impl_.reason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_reason_.IsDefault()) {
+    _impl_.a_reason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.reason)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_Cancel.a_reason)
 }
 
 // -------------------------------------------------------------------
@@ -1598,281 +1598,281 @@ inline void Msg_Cancel::set_allocated_reason(std::string* reason) {
 
 // Msg_FailedAsyncOpen
 
-// required bytes status = 1;
-inline bool Msg_FailedAsyncOpen::_internal_has_status() const {
+// required bytes a_status = 1;
+inline bool Msg_FailedAsyncOpen::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FailedAsyncOpen::has_status() const {
-  return _internal_has_status();
+inline bool Msg_FailedAsyncOpen::has_a_status() const {
+  return _internal_has_a_status();
 }
-inline void Msg_FailedAsyncOpen::clear_status() {
-  _impl_.status_.ClearToEmpty();
+inline void Msg_FailedAsyncOpen::clear_a_status() {
+  _impl_.a_status_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_FailedAsyncOpen::status() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.status)
-  return _internal_status();
+inline const std::string& Msg_FailedAsyncOpen::a_status() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.a_status)
+  return _internal_a_status();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_FailedAsyncOpen::set_status(ArgT0&& arg0, ArgT... args) {
+void Msg_FailedAsyncOpen::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.status)
+ _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.a_status)
 }
-inline std::string* Msg_FailedAsyncOpen::mutable_status() {
-  std::string* _s = _internal_mutable_status();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.status)
+inline std::string* Msg_FailedAsyncOpen::mutable_a_status() {
+  std::string* _s = _internal_mutable_a_status();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.a_status)
   return _s;
 }
-inline const std::string& Msg_FailedAsyncOpen::_internal_status() const {
-  return _impl_.status_.Get();
+inline const std::string& Msg_FailedAsyncOpen::_internal_a_status() const {
+  return _impl_.a_status_.Get();
 }
-inline void Msg_FailedAsyncOpen::_internal_set_status(const std::string& value) {
+inline void Msg_FailedAsyncOpen::_internal_set_a_status(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.status_.Set(value, GetArenaForAllocation());
+  _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_FailedAsyncOpen::_internal_mutable_status() {
+inline std::string* Msg_FailedAsyncOpen::_internal_mutable_a_status() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.status_.Mutable(GetArenaForAllocation());
+  return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_FailedAsyncOpen::release_status() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.status)
-  if (!_internal_has_status()) {
+inline std::string* Msg_FailedAsyncOpen::release_a_status() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.a_status)
+  if (!_internal_has_a_status()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.status_.Release();
+  auto* p = _impl_.a_status_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_FailedAsyncOpen::set_allocated_status(std::string* status) {
-  if (status != nullptr) {
+inline void Msg_FailedAsyncOpen::set_allocated_a_status(std::string* a_status) {
+  if (a_status != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.status_.SetAllocated(status, GetArenaForAllocation());
+  _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.status_.IsDefault()) {
-    _impl_.status_.Set("", GetArenaForAllocation());
+  if (_impl_.a_status_.IsDefault()) {
+    _impl_.a_status_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.status)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_FailedAsyncOpen.a_status)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DisconnectChildListeners
 
-// required bytes aStatus = 1;
-inline bool Msg_DisconnectChildListeners::_internal_has_astatus() const {
+// required bytes a_aStatus = 1;
+inline bool Msg_DisconnectChildListeners::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DisconnectChildListeners::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_DisconnectChildListeners::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_DisconnectChildListeners::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_DisconnectChildListeners::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DisconnectChildListeners::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_DisconnectChildListeners::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DisconnectChildListeners::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_DisconnectChildListeners::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aStatus)
 }
-inline std::string* Msg_DisconnectChildListeners::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aStatus)
+inline std::string* Msg_DisconnectChildListeners::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_DisconnectChildListeners::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_DisconnectChildListeners::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_DisconnectChildListeners::_internal_set_astatus(const std::string& value) {
+inline void Msg_DisconnectChildListeners::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DisconnectChildListeners::_internal_mutable_astatus() {
+inline std::string* Msg_DisconnectChildListeners::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DisconnectChildListeners::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_DisconnectChildListeners::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DisconnectChildListeners::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_DisconnectChildListeners::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aStatus)
 }
 
-// required bytes aLoadGroupReason = 2;
-inline bool Msg_DisconnectChildListeners::_internal_has_aloadgroupreason() const {
+// required bytes a_aLoadGroupReason = 2;
+inline bool Msg_DisconnectChildListeners::_internal_has_a_aloadgroupreason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DisconnectChildListeners::has_aloadgroupreason() const {
-  return _internal_has_aloadgroupreason();
+inline bool Msg_DisconnectChildListeners::has_a_aloadgroupreason() const {
+  return _internal_has_a_aloadgroupreason();
 }
-inline void Msg_DisconnectChildListeners::clear_aloadgroupreason() {
-  _impl_.aloadgroupreason_.ClearToEmpty();
+inline void Msg_DisconnectChildListeners::clear_a_aloadgroupreason() {
+  _impl_.a_aloadgroupreason_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DisconnectChildListeners::aloadgroupreason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aLoadGroupReason)
-  return _internal_aloadgroupreason();
+inline const std::string& Msg_DisconnectChildListeners::a_aloadgroupreason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aLoadGroupReason)
+  return _internal_a_aloadgroupreason();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DisconnectChildListeners::set_aloadgroupreason(ArgT0&& arg0, ArgT... args) {
+void Msg_DisconnectChildListeners::set_a_aloadgroupreason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aloadgroupreason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aLoadGroupReason)
+ _impl_.a_aloadgroupreason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aLoadGroupReason)
 }
-inline std::string* Msg_DisconnectChildListeners::mutable_aloadgroupreason() {
-  std::string* _s = _internal_mutable_aloadgroupreason();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aLoadGroupReason)
+inline std::string* Msg_DisconnectChildListeners::mutable_a_aloadgroupreason() {
+  std::string* _s = _internal_mutable_a_aloadgroupreason();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aLoadGroupReason)
   return _s;
 }
-inline const std::string& Msg_DisconnectChildListeners::_internal_aloadgroupreason() const {
-  return _impl_.aloadgroupreason_.Get();
+inline const std::string& Msg_DisconnectChildListeners::_internal_a_aloadgroupreason() const {
+  return _impl_.a_aloadgroupreason_.Get();
 }
-inline void Msg_DisconnectChildListeners::_internal_set_aloadgroupreason(const std::string& value) {
+inline void Msg_DisconnectChildListeners::_internal_set_a_aloadgroupreason(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aloadgroupreason_.Set(value, GetArenaForAllocation());
+  _impl_.a_aloadgroupreason_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DisconnectChildListeners::_internal_mutable_aloadgroupreason() {
+inline std::string* Msg_DisconnectChildListeners::_internal_mutable_a_aloadgroupreason() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aloadgroupreason_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aloadgroupreason_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DisconnectChildListeners::release_aloadgroupreason() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aLoadGroupReason)
-  if (!_internal_has_aloadgroupreason()) {
+inline std::string* Msg_DisconnectChildListeners::release_a_aloadgroupreason() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aLoadGroupReason)
+  if (!_internal_has_a_aloadgroupreason()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aloadgroupreason_.Release();
+  auto* p = _impl_.a_aloadgroupreason_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aloadgroupreason_.IsDefault()) {
-    _impl_.aloadgroupreason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aloadgroupreason_.IsDefault()) {
+    _impl_.a_aloadgroupreason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DisconnectChildListeners::set_allocated_aloadgroupreason(std::string* aloadgroupreason) {
-  if (aloadgroupreason != nullptr) {
+inline void Msg_DisconnectChildListeners::set_allocated_a_aloadgroupreason(std::string* a_aloadgroupreason) {
+  if (a_aloadgroupreason != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aloadgroupreason_.SetAllocated(aloadgroupreason, GetArenaForAllocation());
+  _impl_.a_aloadgroupreason_.SetAllocated(a_aloadgroupreason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aloadgroupreason_.IsDefault()) {
-    _impl_.aloadgroupreason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aloadgroupreason_.IsDefault()) {
+    _impl_.a_aloadgroupreason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aLoadGroupReason)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aLoadGroupReason)
 }
 
-// required bool aContinueNavigating = 3;
-inline bool Msg_DisconnectChildListeners::_internal_has_acontinuenavigating() const {
+// required bool a_aContinueNavigating = 3;
+inline bool Msg_DisconnectChildListeners::_internal_has_a_acontinuenavigating() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DisconnectChildListeners::has_acontinuenavigating() const {
-  return _internal_has_acontinuenavigating();
+inline bool Msg_DisconnectChildListeners::has_a_acontinuenavigating() const {
+  return _internal_has_a_acontinuenavigating();
 }
-inline void Msg_DisconnectChildListeners::clear_acontinuenavigating() {
-  _impl_.acontinuenavigating_ = false;
+inline void Msg_DisconnectChildListeners::clear_a_acontinuenavigating() {
+  _impl_.a_acontinuenavigating_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_DisconnectChildListeners::_internal_acontinuenavigating() const {
-  return _impl_.acontinuenavigating_;
+inline bool Msg_DisconnectChildListeners::_internal_a_acontinuenavigating() const {
+  return _impl_.a_acontinuenavigating_;
 }
-inline bool Msg_DisconnectChildListeners::acontinuenavigating() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aContinueNavigating)
-  return _internal_acontinuenavigating();
+inline bool Msg_DisconnectChildListeners::a_acontinuenavigating() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aContinueNavigating)
+  return _internal_a_acontinuenavigating();
 }
-inline void Msg_DisconnectChildListeners::_internal_set_acontinuenavigating(bool value) {
+inline void Msg_DisconnectChildListeners::_internal_set_a_acontinuenavigating(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.acontinuenavigating_ = value;
+  _impl_.a_acontinuenavigating_ = value;
 }
-inline void Msg_DisconnectChildListeners::set_acontinuenavigating(bool value) {
-  _internal_set_acontinuenavigating(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.aContinueNavigating)
+inline void Msg_DisconnectChildListeners::set_a_acontinuenavigating(bool value) {
+  _internal_set_a_acontinuenavigating(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_DisconnectChildListeners.a_aContinueNavigating)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RedirectToRealChannel
 
-// required .protobuf.mozilla.net.RedirectToRealChannelArgs args = 1;
-inline bool Msg_RedirectToRealChannel::_internal_has_args() const {
+// required .protobuf.mozilla.net.RedirectToRealChannelArgs a_args = 1;
+inline bool Msg_RedirectToRealChannel::_internal_has_a_args() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.args_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_args_ != nullptr);
   return value;
 }
-inline bool Msg_RedirectToRealChannel::has_args() const {
-  return _internal_has_args();
+inline bool Msg_RedirectToRealChannel::has_a_args() const {
+  return _internal_has_a_args();
 }
-inline const ::protobuf::mozilla::net::RedirectToRealChannelArgs& Msg_RedirectToRealChannel::_internal_args() const {
-  const ::protobuf::mozilla::net::RedirectToRealChannelArgs* p = _impl_.args_;
+inline const ::protobuf::mozilla::net::RedirectToRealChannelArgs& Msg_RedirectToRealChannel::_internal_a_args() const {
+  const ::protobuf::mozilla::net::RedirectToRealChannelArgs* p = _impl_.a_args_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::RedirectToRealChannelArgs&>(
       ::protobuf::mozilla::net::_RedirectToRealChannelArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::RedirectToRealChannelArgs& Msg_RedirectToRealChannel::args() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.args)
-  return _internal_args();
+inline const ::protobuf::mozilla::net::RedirectToRealChannelArgs& Msg_RedirectToRealChannel::a_args() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_args)
+  return _internal_a_args();
 }
-inline void Msg_RedirectToRealChannel::unsafe_arena_set_allocated_args(
-    ::protobuf::mozilla::net::RedirectToRealChannelArgs* args) {
+inline void Msg_RedirectToRealChannel::unsafe_arena_set_allocated_a_args(
+    ::protobuf::mozilla::net::RedirectToRealChannelArgs* a_args) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.args_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_args_);
   }
-  _impl_.args_ = args;
-  if (args) {
+  _impl_.a_args_ = a_args;
+  if (a_args) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.args)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_args)
 }
-inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::release_args() {
+inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::release_a_args() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::RedirectToRealChannelArgs* temp = _impl_.args_;
-  _impl_.args_ = nullptr;
+  ::protobuf::mozilla::net::RedirectToRealChannelArgs* temp = _impl_.a_args_;
+  _impl_.a_args_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1884,192 +1884,192 @@ inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealCh
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::unsafe_arena_release_args() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.args)
+inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::unsafe_arena_release_a_args() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_args)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::RedirectToRealChannelArgs* temp = _impl_.args_;
-  _impl_.args_ = nullptr;
+  ::protobuf::mozilla::net::RedirectToRealChannelArgs* temp = _impl_.a_args_;
+  _impl_.a_args_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::_internal_mutable_args() {
+inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::_internal_mutable_a_args() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.args_ == nullptr) {
+  if (_impl_.a_args_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::RedirectToRealChannelArgs>(GetArenaForAllocation());
-    _impl_.args_ = p;
+    _impl_.a_args_ = p;
   }
-  return _impl_.args_;
+  return _impl_.a_args_;
 }
-inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::mutable_args() {
-  ::protobuf::mozilla::net::RedirectToRealChannelArgs* _msg = _internal_mutable_args();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.args)
+inline ::protobuf::mozilla::net::RedirectToRealChannelArgs* Msg_RedirectToRealChannel::mutable_a_args() {
+  ::protobuf::mozilla::net::RedirectToRealChannelArgs* _msg = _internal_mutable_a_args();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_args)
   return _msg;
 }
-inline void Msg_RedirectToRealChannel::set_allocated_args(::protobuf::mozilla::net::RedirectToRealChannelArgs* args) {
+inline void Msg_RedirectToRealChannel::set_allocated_a_args(::protobuf::mozilla::net::RedirectToRealChannelArgs* a_args) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.args_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_args_);
   }
-  if (args) {
+  if (a_args) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(args));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_args));
     if (message_arena != submessage_arena) {
-      args = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, args, submessage_arena);
+      a_args = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_args, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.args_ = args;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.args)
+  _impl_.a_args_ = a_args;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_args)
 }
 
-// repeated bytes aEndpoint = 2;
-inline int Msg_RedirectToRealChannel::_internal_aendpoint_size() const {
-  return _impl_.aendpoint_.size();
+// repeated bytes a_aEndpoint = 2;
+inline int Msg_RedirectToRealChannel::_internal_a_aendpoint_size() const {
+  return _impl_.a_aendpoint_.size();
 }
-inline int Msg_RedirectToRealChannel::aendpoint_size() const {
-  return _internal_aendpoint_size();
+inline int Msg_RedirectToRealChannel::a_aendpoint_size() const {
+  return _internal_a_aendpoint_size();
 }
-inline void Msg_RedirectToRealChannel::clear_aendpoint() {
-  _impl_.aendpoint_.Clear();
+inline void Msg_RedirectToRealChannel::clear_a_aendpoint() {
+  _impl_.a_aendpoint_.Clear();
 }
-inline std::string* Msg_RedirectToRealChannel::add_aendpoint() {
-  std::string* _s = _internal_add_aendpoint();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+inline std::string* Msg_RedirectToRealChannel::add_a_aendpoint() {
+  std::string* _s = _internal_add_a_aendpoint();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
   return _s;
 }
-inline const std::string& Msg_RedirectToRealChannel::_internal_aendpoint(int index) const {
-  return _impl_.aendpoint_.Get(index);
+inline const std::string& Msg_RedirectToRealChannel::_internal_a_aendpoint(int index) const {
+  return _impl_.a_aendpoint_.Get(index);
 }
-inline const std::string& Msg_RedirectToRealChannel::aendpoint(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
-  return _internal_aendpoint(index);
+inline const std::string& Msg_RedirectToRealChannel::a_aendpoint(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
+  return _internal_a_aendpoint(index);
 }
-inline std::string* Msg_RedirectToRealChannel::mutable_aendpoint(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
-  return _impl_.aendpoint_.Mutable(index);
+inline std::string* Msg_RedirectToRealChannel::mutable_a_aendpoint(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
+  return _impl_.a_aendpoint_.Mutable(index);
 }
-inline void Msg_RedirectToRealChannel::set_aendpoint(int index, const std::string& value) {
-  _impl_.aendpoint_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+inline void Msg_RedirectToRealChannel::set_a_aendpoint(int index, const std::string& value) {
+  _impl_.a_aendpoint_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline void Msg_RedirectToRealChannel::set_aendpoint(int index, std::string&& value) {
-  _impl_.aendpoint_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+inline void Msg_RedirectToRealChannel::set_a_aendpoint(int index, std::string&& value) {
+  _impl_.a_aendpoint_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline void Msg_RedirectToRealChannel::set_aendpoint(int index, const char* value) {
+inline void Msg_RedirectToRealChannel::set_a_aendpoint(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.aendpoint_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+  _impl_.a_aendpoint_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline void Msg_RedirectToRealChannel::set_aendpoint(int index, const void* value, size_t size) {
-  _impl_.aendpoint_.Mutable(index)->assign(
+inline void Msg_RedirectToRealChannel::set_a_aendpoint(int index, const void* value, size_t size) {
+  _impl_.a_aendpoint_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline std::string* Msg_RedirectToRealChannel::_internal_add_aendpoint() {
-  return _impl_.aendpoint_.Add();
+inline std::string* Msg_RedirectToRealChannel::_internal_add_a_aendpoint() {
+  return _impl_.a_aendpoint_.Add();
 }
-inline void Msg_RedirectToRealChannel::add_aendpoint(const std::string& value) {
-  _impl_.aendpoint_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+inline void Msg_RedirectToRealChannel::add_a_aendpoint(const std::string& value) {
+  _impl_.a_aendpoint_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline void Msg_RedirectToRealChannel::add_aendpoint(std::string&& value) {
-  _impl_.aendpoint_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+inline void Msg_RedirectToRealChannel::add_a_aendpoint(std::string&& value) {
+  _impl_.a_aendpoint_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline void Msg_RedirectToRealChannel::add_aendpoint(const char* value) {
+inline void Msg_RedirectToRealChannel::add_a_aendpoint(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.aendpoint_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+  _impl_.a_aendpoint_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
-inline void Msg_RedirectToRealChannel::add_aendpoint(const void* value, size_t size) {
-  _impl_.aendpoint_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
+inline void Msg_RedirectToRealChannel::add_a_aendpoint(const void* value, size_t size) {
+  _impl_.a_aendpoint_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_RedirectToRealChannel::aendpoint() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
-  return _impl_.aendpoint_;
+Msg_RedirectToRealChannel::a_aendpoint() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
+  return _impl_.a_aendpoint_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_RedirectToRealChannel::mutable_aendpoint() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.aEndpoint)
-  return &_impl_.aendpoint_;
+Msg_RedirectToRealChannel::mutable_a_aendpoint() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PDocumentChannel.Msg_RedirectToRealChannel.a_aEndpoint)
+  return &_impl_.a_aendpoint_;
 }
 
 // -------------------------------------------------------------------
 
 // Reply_RedirectToRealChannel
 
-// required bytes rv = 1;
-inline bool Reply_RedirectToRealChannel::_internal_has_rv() const {
+// required bytes a_rv = 1;
+inline bool Reply_RedirectToRealChannel::_internal_has_a_rv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RedirectToRealChannel::has_rv() const {
-  return _internal_has_rv();
+inline bool Reply_RedirectToRealChannel::has_a_rv() const {
+  return _internal_has_a_rv();
 }
-inline void Reply_RedirectToRealChannel::clear_rv() {
-  _impl_.rv_.ClearToEmpty();
+inline void Reply_RedirectToRealChannel::clear_a_rv() {
+  _impl_.a_rv_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_RedirectToRealChannel::rv() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.rv)
-  return _internal_rv();
+inline const std::string& Reply_RedirectToRealChannel::a_rv() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.a_rv)
+  return _internal_a_rv();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_RedirectToRealChannel::set_rv(ArgT0&& arg0, ArgT... args) {
+void Reply_RedirectToRealChannel::set_a_rv(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.rv)
+ _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.a_rv)
 }
-inline std::string* Reply_RedirectToRealChannel::mutable_rv() {
-  std::string* _s = _internal_mutable_rv();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.rv)
+inline std::string* Reply_RedirectToRealChannel::mutable_a_rv() {
+  std::string* _s = _internal_mutable_a_rv();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.a_rv)
   return _s;
 }
-inline const std::string& Reply_RedirectToRealChannel::_internal_rv() const {
-  return _impl_.rv_.Get();
+inline const std::string& Reply_RedirectToRealChannel::_internal_a_rv() const {
+  return _impl_.a_rv_.Get();
 }
-inline void Reply_RedirectToRealChannel::_internal_set_rv(const std::string& value) {
+inline void Reply_RedirectToRealChannel::_internal_set_a_rv(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.rv_.Set(value, GetArenaForAllocation());
+  _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_RedirectToRealChannel::_internal_mutable_rv() {
+inline std::string* Reply_RedirectToRealChannel::_internal_mutable_a_rv() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.rv_.Mutable(GetArenaForAllocation());
+  return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_RedirectToRealChannel::release_rv() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.rv)
-  if (!_internal_has_rv()) {
+inline std::string* Reply_RedirectToRealChannel::release_a_rv() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.a_rv)
+  if (!_internal_has_a_rv()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.rv_.Release();
+  auto* p = _impl_.a_rv_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_RedirectToRealChannel::set_allocated_rv(std::string* rv) {
-  if (rv != nullptr) {
+inline void Reply_RedirectToRealChannel::set_allocated_a_rv(std::string* a_rv) {
+  if (a_rv != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.rv_.SetAllocated(rv, GetArenaForAllocation());
+  _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.rv)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Reply_RedirectToRealChannel.a_rv)
 }
 
 // -------------------------------------------------------------------
@@ -2080,72 +2080,72 @@ inline void Reply_RedirectToRealChannel::set_allocated_rv(std::string* rv) {
 
 // Reply_UpgradeObjectLoad
 
-// required bytes frameContext = 1;
-inline bool Reply_UpgradeObjectLoad::_internal_has_framecontext() const {
+// required bytes a_frameContext = 1;
+inline bool Reply_UpgradeObjectLoad::_internal_has_a_framecontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_UpgradeObjectLoad::has_framecontext() const {
-  return _internal_has_framecontext();
+inline bool Reply_UpgradeObjectLoad::has_a_framecontext() const {
+  return _internal_has_a_framecontext();
 }
-inline void Reply_UpgradeObjectLoad::clear_framecontext() {
-  _impl_.framecontext_.ClearToEmpty();
+inline void Reply_UpgradeObjectLoad::clear_a_framecontext() {
+  _impl_.a_framecontext_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_UpgradeObjectLoad::framecontext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.frameContext)
-  return _internal_framecontext();
+inline const std::string& Reply_UpgradeObjectLoad::a_framecontext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.a_frameContext)
+  return _internal_a_framecontext();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_UpgradeObjectLoad::set_framecontext(ArgT0&& arg0, ArgT... args) {
+void Reply_UpgradeObjectLoad::set_a_framecontext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.framecontext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.frameContext)
+ _impl_.a_framecontext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.a_frameContext)
 }
-inline std::string* Reply_UpgradeObjectLoad::mutable_framecontext() {
-  std::string* _s = _internal_mutable_framecontext();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.frameContext)
+inline std::string* Reply_UpgradeObjectLoad::mutable_a_framecontext() {
+  std::string* _s = _internal_mutable_a_framecontext();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.a_frameContext)
   return _s;
 }
-inline const std::string& Reply_UpgradeObjectLoad::_internal_framecontext() const {
-  return _impl_.framecontext_.Get();
+inline const std::string& Reply_UpgradeObjectLoad::_internal_a_framecontext() const {
+  return _impl_.a_framecontext_.Get();
 }
-inline void Reply_UpgradeObjectLoad::_internal_set_framecontext(const std::string& value) {
+inline void Reply_UpgradeObjectLoad::_internal_set_a_framecontext(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.framecontext_.Set(value, GetArenaForAllocation());
+  _impl_.a_framecontext_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_UpgradeObjectLoad::_internal_mutable_framecontext() {
+inline std::string* Reply_UpgradeObjectLoad::_internal_mutable_a_framecontext() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.framecontext_.Mutable(GetArenaForAllocation());
+  return _impl_.a_framecontext_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_UpgradeObjectLoad::release_framecontext() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.frameContext)
-  if (!_internal_has_framecontext()) {
+inline std::string* Reply_UpgradeObjectLoad::release_a_framecontext() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.a_frameContext)
+  if (!_internal_has_a_framecontext()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.framecontext_.Release();
+  auto* p = _impl_.a_framecontext_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.framecontext_.IsDefault()) {
-    _impl_.framecontext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_framecontext_.IsDefault()) {
+    _impl_.a_framecontext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_UpgradeObjectLoad::set_allocated_framecontext(std::string* framecontext) {
-  if (framecontext != nullptr) {
+inline void Reply_UpgradeObjectLoad::set_allocated_a_framecontext(std::string* a_framecontext) {
+  if (a_framecontext != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.framecontext_.SetAllocated(framecontext, GetArenaForAllocation());
+  _impl_.a_framecontext_.SetAllocated(a_framecontext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.framecontext_.IsDefault()) {
-    _impl_.framecontext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_framecontext_.IsDefault()) {
+    _impl_.a_framecontext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.frameContext)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDocumentChannel.Reply_UpgradeObjectLoad.a_frameContext)
 }
 
 #ifdef __GNUC__

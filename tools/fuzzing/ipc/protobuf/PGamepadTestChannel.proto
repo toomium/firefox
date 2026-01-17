@@ -17,8 +17,8 @@ import "GamepadEventTypes.proto";
 
 // Message declarations
 message Msg_GamepadTestEvent {
-  required uint32 aID = 1;
-  required protobuf.mozilla.dom.GamepadChangeEvent aGamepadEvent = 2;
+  required uint32 a_aID = 1;
+  required protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
 }
 
 message Msg___delete__ {
@@ -28,8 +28,8 @@ message Reply___delete__ {
 }
 
 message Msg_ReplyGamepadHandle {
-  required uint32 aID = 1;
-  required bytes aHandle = 2;
+  required uint32 a_aID = 1;
+  required bytes a_aHandle = 2;
 }
 
 // Parameter mappings stats:

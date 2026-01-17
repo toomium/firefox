@@ -17,26 +17,26 @@ import public "PWebAuthnTransaction_protobuf.mozilla.dom.h.proto";
 
 // Message declarations
 message Msg_RequestRegister {
-  required protobuf.mozilla.dom.WebAuthnMakeCredentialInfo aTransactionInfo = 1;
+  required protobuf.mozilla.dom.WebAuthnMakeCredentialInfo a_aTransactionInfo = 1;
 }
 
 message Reply_RequestRegister {
-  required protobuf.mozilla.dom.WebAuthnMakeCredentialResponse response = 1;
+  required protobuf.mozilla.dom.WebAuthnMakeCredentialResponse a_response = 1;
 }
 
 message Msg_RequestSign {
-  required protobuf.mozilla.dom.WebAuthnGetAssertionInfo aTransactionInfo = 1;
+  required protobuf.mozilla.dom.WebAuthnGetAssertionInfo a_aTransactionInfo = 1;
 }
 
 message Reply_RequestSign {
-  required protobuf.mozilla.dom.WebAuthnGetAssertionResponse response = 1;
+  required protobuf.mozilla.dom.WebAuthnGetAssertionResponse a_response = 1;
 }
 
 message Msg_RequestIsUVPAA {
 }
 
 message Reply_RequestIsUVPAA {
-  required bool available = 1;
+  required bool a_available = 1;
 }
 
 message Msg_RequestCancel {

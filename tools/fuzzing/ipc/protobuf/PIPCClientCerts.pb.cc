@@ -35,7 +35,7 @@ struct Msg_FindObjectsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_FindObjectsDefaultTypeInternal _Msg_FindObjects_default_instance_;
 PROTOBUF_CONSTEXPR Reply_FindObjects::Reply_FindObjects(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.aobjects_)*/{}
+    /*decltype(_impl_.a_aobjects_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_FindObjectsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_FindObjectsDefaultTypeInternal()
@@ -50,9 +50,9 @@ PROTOBUF_CONSTEXPR Msg_Sign::Msg_Sign(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.acert_)*/nullptr
-  , /*decltype(_impl_.adata_)*/nullptr
-  , /*decltype(_impl_.aparams_)*/nullptr} {}
+  , /*decltype(_impl_.a_acert_)*/nullptr
+  , /*decltype(_impl_.a_adata_)*/nullptr
+  , /*decltype(_impl_.a_aparams_)*/nullptr} {}
 struct Msg_SignDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SignDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -66,7 +66,7 @@ PROTOBUF_CONSTEXPR Reply_Sign::Reply_Sign(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.asignature_)*/nullptr} {}
+  , /*decltype(_impl_.a_asignature_)*/nullptr} {}
 struct Reply_SignDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SignDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -263,8 +263,8 @@ class Reply_FindObjects::_Internal {
  public:
 };
 
-void Reply_FindObjects::clear_aobjects() {
-  _impl_.aobjects_.Clear();
+void Reply_FindObjects::clear_a_aobjects() {
+  _impl_.a_aobjects_.Clear();
 }
 Reply_FindObjects::Reply_FindObjects(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -276,7 +276,7 @@ Reply_FindObjects::Reply_FindObjects(const Reply_FindObjects& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_FindObjects* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.aobjects_){from._impl_.aobjects_}
+      decltype(_impl_.a_aobjects_){from._impl_.a_aobjects_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -288,7 +288,7 @@ inline void Reply_FindObjects::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.aobjects_){arena}
+      decltype(_impl_.a_aobjects_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -304,7 +304,7 @@ Reply_FindObjects::~Reply_FindObjects() {
 
 inline void Reply_FindObjects::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aobjects_.~RepeatedPtrField();
+  _impl_.a_aobjects_.~RepeatedPtrField();
 }
 
 void Reply_FindObjects::SetCachedSize(int size) const {
@@ -317,7 +317,7 @@ void Reply_FindObjects::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.aobjects_.Clear();
+  _impl_.a_aobjects_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -327,13 +327,13 @@ const char* Reply_FindObjects::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.psm.IPCClientCertObject aObjects = 1;
+      // repeated .protobuf.mozilla.psm.IPCClientCertObject a_aObjects = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_aobjects(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_aobjects(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -369,10 +369,10 @@ uint8_t* Reply_FindObjects::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.psm.IPCClientCertObject aObjects = 1;
+  // repeated .protobuf.mozilla.psm.IPCClientCertObject a_aObjects = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_aobjects_size()); i < n; i++) {
-    const auto& repfield = this->_internal_aobjects(i);
+      n = static_cast<unsigned>(this->_internal_a_aobjects_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_aobjects(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -393,9 +393,9 @@ size_t Reply_FindObjects::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.psm.IPCClientCertObject aObjects = 1;
-  total_size += 1UL * this->_internal_aobjects_size();
-  for (const auto& msg : this->_impl_.aobjects_) {
+  // repeated .protobuf.mozilla.psm.IPCClientCertObject a_aObjects = 1;
+  total_size += 1UL * this->_internal_a_aobjects_size();
+  for (const auto& msg : this->_impl_.a_aobjects_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -421,7 +421,7 @@ void Reply_FindObjects::MergeFrom(const Reply_FindObjects& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.aobjects_.MergeFrom(from._impl_.aobjects_);
+  _this->_impl_.a_aobjects_.MergeFrom(from._impl_.a_aobjects_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -439,7 +439,7 @@ bool Reply_FindObjects::IsInitialized() const {
 void Reply_FindObjects::InternalSwap(Reply_FindObjects* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.aobjects_.InternalSwap(&other->_impl_.aobjects_);
+  _impl_.a_aobjects_.InternalSwap(&other->_impl_.a_aobjects_);
 }
 
 std::string Reply_FindObjects::GetTypeName() const {
@@ -452,16 +452,16 @@ std::string Reply_FindObjects::GetTypeName() const {
 class Msg_Sign::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Sign>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::psm::ByteArray& acert(const Msg_Sign* msg);
-  static void set_has_acert(HasBits* has_bits) {
+  static const ::protobuf::mozilla::psm::ByteArray& a_acert(const Msg_Sign* msg);
+  static void set_has_a_acert(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::psm::ByteArray& adata(const Msg_Sign* msg);
-  static void set_has_adata(HasBits* has_bits) {
+  static const ::protobuf::mozilla::psm::ByteArray& a_adata(const Msg_Sign* msg);
+  static void set_has_a_adata(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static const ::protobuf::mozilla::psm::ByteArray& aparams(const Msg_Sign* msg);
-  static void set_has_aparams(HasBits* has_bits) {
+  static const ::protobuf::mozilla::psm::ByteArray& a_aparams(const Msg_Sign* msg);
+  static void set_has_a_aparams(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -470,27 +470,27 @@ class Msg_Sign::_Internal {
 };
 
 const ::protobuf::mozilla::psm::ByteArray&
-Msg_Sign::_Internal::acert(const Msg_Sign* msg) {
-  return *msg->_impl_.acert_;
+Msg_Sign::_Internal::a_acert(const Msg_Sign* msg) {
+  return *msg->_impl_.a_acert_;
 }
 const ::protobuf::mozilla::psm::ByteArray&
-Msg_Sign::_Internal::adata(const Msg_Sign* msg) {
-  return *msg->_impl_.adata_;
+Msg_Sign::_Internal::a_adata(const Msg_Sign* msg) {
+  return *msg->_impl_.a_adata_;
 }
 const ::protobuf::mozilla::psm::ByteArray&
-Msg_Sign::_Internal::aparams(const Msg_Sign* msg) {
-  return *msg->_impl_.aparams_;
+Msg_Sign::_Internal::a_aparams(const Msg_Sign* msg) {
+  return *msg->_impl_.a_aparams_;
 }
-void Msg_Sign::clear_acert() {
-  if (_impl_.acert_ != nullptr) _impl_.acert_->Clear();
+void Msg_Sign::clear_a_acert() {
+  if (_impl_.a_acert_ != nullptr) _impl_.a_acert_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-void Msg_Sign::clear_adata() {
-  if (_impl_.adata_ != nullptr) _impl_.adata_->Clear();
+void Msg_Sign::clear_a_adata() {
+  if (_impl_.a_adata_ != nullptr) _impl_.a_adata_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-void Msg_Sign::clear_aparams() {
-  if (_impl_.aparams_ != nullptr) _impl_.aparams_->Clear();
+void Msg_Sign::clear_a_aparams() {
+  if (_impl_.a_aparams_ != nullptr) _impl_.a_aparams_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 Msg_Sign::Msg_Sign(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -505,19 +505,19 @@ Msg_Sign::Msg_Sign(const Msg_Sign& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.acert_){nullptr}
-    , decltype(_impl_.adata_){nullptr}
-    , decltype(_impl_.aparams_){nullptr}};
+    , decltype(_impl_.a_acert_){nullptr}
+    , decltype(_impl_.a_adata_){nullptr}
+    , decltype(_impl_.a_aparams_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_acert()) {
-    _this->_impl_.acert_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.acert_);
+  if (from._internal_has_a_acert()) {
+    _this->_impl_.a_acert_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.a_acert_);
   }
-  if (from._internal_has_adata()) {
-    _this->_impl_.adata_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.adata_);
+  if (from._internal_has_a_adata()) {
+    _this->_impl_.a_adata_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.a_adata_);
   }
-  if (from._internal_has_aparams()) {
-    _this->_impl_.aparams_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.aparams_);
+  if (from._internal_has_a_aparams()) {
+    _this->_impl_.a_aparams_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.a_aparams_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign)
 }
@@ -529,9 +529,9 @@ inline void Msg_Sign::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.acert_){nullptr}
-    , decltype(_impl_.adata_){nullptr}
-    , decltype(_impl_.aparams_){nullptr}
+    , decltype(_impl_.a_acert_){nullptr}
+    , decltype(_impl_.a_adata_){nullptr}
+    , decltype(_impl_.a_aparams_){nullptr}
   };
 }
 
@@ -546,9 +546,9 @@ Msg_Sign::~Msg_Sign() {
 
 inline void Msg_Sign::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.acert_;
-  if (this != internal_default_instance()) delete _impl_.adata_;
-  if (this != internal_default_instance()) delete _impl_.aparams_;
+  if (this != internal_default_instance()) delete _impl_.a_acert_;
+  if (this != internal_default_instance()) delete _impl_.a_adata_;
+  if (this != internal_default_instance()) delete _impl_.a_aparams_;
 }
 
 void Msg_Sign::SetCachedSize(int size) const {
@@ -564,16 +564,16 @@ void Msg_Sign::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(_impl_.acert_ != nullptr);
-      _impl_.acert_->Clear();
+      GOOGLE_DCHECK(_impl_.a_acert_ != nullptr);
+      _impl_.a_acert_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.adata_ != nullptr);
-      _impl_.adata_->Clear();
+      GOOGLE_DCHECK(_impl_.a_adata_ != nullptr);
+      _impl_.a_adata_->Clear();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.aparams_ != nullptr);
-      _impl_.aparams_->Clear();
+      GOOGLE_DCHECK(_impl_.a_aparams_ != nullptr);
+      _impl_.a_aparams_->Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -587,26 +587,26 @@ const char* Msg_Sign::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.psm.ByteArray aCert = 1;
+      // required .protobuf.mozilla.psm.ByteArray a_aCert = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_acert(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_acert(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.psm.ByteArray aData = 2;
+      // required .protobuf.mozilla.psm.ByteArray a_aData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_adata(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_adata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.psm.ByteArray aParams = 3;
+      // required .protobuf.mozilla.psm.ByteArray a_aParams = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aparams(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aparams(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -642,25 +642,25 @@ uint8_t* Msg_Sign::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.psm.ByteArray aCert = 1;
+  // required .protobuf.mozilla.psm.ByteArray a_aCert = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::acert(this),
-        _Internal::acert(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_acert(this),
+        _Internal::a_acert(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.psm.ByteArray aData = 2;
+  // required .protobuf.mozilla.psm.ByteArray a_aData = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::adata(this),
-        _Internal::adata(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_adata(this),
+        _Internal::a_adata(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.psm.ByteArray aParams = 3;
+  // required .protobuf.mozilla.psm.ByteArray a_aParams = 3;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::aparams(this),
-        _Internal::aparams(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(3, _Internal::a_aparams(this),
+        _Internal::a_aparams(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -675,25 +675,25 @@ size_t Msg_Sign::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign)
   size_t total_size = 0;
 
-  if (_internal_has_acert()) {
-    // required .protobuf.mozilla.psm.ByteArray aCert = 1;
+  if (_internal_has_a_acert()) {
+    // required .protobuf.mozilla.psm.ByteArray a_aCert = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.acert_);
+        *_impl_.a_acert_);
   }
 
-  if (_internal_has_adata()) {
-    // required .protobuf.mozilla.psm.ByteArray aData = 2;
+  if (_internal_has_a_adata()) {
+    // required .protobuf.mozilla.psm.ByteArray a_aData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.adata_);
+        *_impl_.a_adata_);
   }
 
-  if (_internal_has_aparams()) {
-    // required .protobuf.mozilla.psm.ByteArray aParams = 3;
+  if (_internal_has_a_aparams()) {
+    // required .protobuf.mozilla.psm.ByteArray a_aParams = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aparams_);
+        *_impl_.a_aparams_);
   }
 
   return total_size;
@@ -703,20 +703,20 @@ size_t Msg_Sign::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.psm.ByteArray aCert = 1;
+    // required .protobuf.mozilla.psm.ByteArray a_aCert = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.acert_);
+        *_impl_.a_acert_);
 
-    // required .protobuf.mozilla.psm.ByteArray aData = 2;
+    // required .protobuf.mozilla.psm.ByteArray a_aData = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.adata_);
+        *_impl_.a_adata_);
 
-    // required .protobuf.mozilla.psm.ByteArray aParams = 3;
+    // required .protobuf.mozilla.psm.ByteArray a_aParams = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.aparams_);
+        *_impl_.a_aparams_);
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -749,16 +749,16 @@ void Msg_Sign::MergeFrom(const Msg_Sign& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_acert()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
-          from._internal_acert());
+      _this->_internal_mutable_a_acert()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
+          from._internal_a_acert());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_adata()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
-          from._internal_adata());
+      _this->_internal_mutable_a_adata()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
+          from._internal_a_adata());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_aparams()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
-          from._internal_aparams());
+      _this->_internal_mutable_a_aparams()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
+          from._internal_a_aparams());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -781,11 +781,11 @@ void Msg_Sign::InternalSwap(Msg_Sign* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_Sign, _impl_.aparams_)
-      + sizeof(Msg_Sign::_impl_.aparams_)
-      - PROTOBUF_FIELD_OFFSET(Msg_Sign, _impl_.acert_)>(
-          reinterpret_cast<char*>(&_impl_.acert_),
-          reinterpret_cast<char*>(&other->_impl_.acert_));
+      PROTOBUF_FIELD_OFFSET(Msg_Sign, _impl_.a_aparams_)
+      + sizeof(Msg_Sign::_impl_.a_aparams_)
+      - PROTOBUF_FIELD_OFFSET(Msg_Sign, _impl_.a_acert_)>(
+          reinterpret_cast<char*>(&_impl_.a_acert_),
+          reinterpret_cast<char*>(&other->_impl_.a_acert_));
 }
 
 std::string Msg_Sign::GetTypeName() const {
@@ -798,8 +798,8 @@ std::string Msg_Sign::GetTypeName() const {
 class Reply_Sign::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_Sign>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::psm::ByteArray& asignature(const Reply_Sign* msg);
-  static void set_has_asignature(HasBits* has_bits) {
+  static const ::protobuf::mozilla::psm::ByteArray& a_asignature(const Reply_Sign* msg);
+  static void set_has_a_asignature(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -808,11 +808,11 @@ class Reply_Sign::_Internal {
 };
 
 const ::protobuf::mozilla::psm::ByteArray&
-Reply_Sign::_Internal::asignature(const Reply_Sign* msg) {
-  return *msg->_impl_.asignature_;
+Reply_Sign::_Internal::a_asignature(const Reply_Sign* msg) {
+  return *msg->_impl_.a_asignature_;
 }
-void Reply_Sign::clear_asignature() {
-  if (_impl_.asignature_ != nullptr) _impl_.asignature_->Clear();
+void Reply_Sign::clear_a_asignature() {
+  if (_impl_.a_asignature_ != nullptr) _impl_.a_asignature_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_Sign::Reply_Sign(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -827,11 +827,11 @@ Reply_Sign::Reply_Sign(const Reply_Sign& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.asignature_){nullptr}};
+    , decltype(_impl_.a_asignature_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_asignature()) {
-    _this->_impl_.asignature_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.asignature_);
+  if (from._internal_has_a_asignature()) {
+    _this->_impl_.a_asignature_ = new ::protobuf::mozilla::psm::ByteArray(*from._impl_.a_asignature_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign)
 }
@@ -843,7 +843,7 @@ inline void Reply_Sign::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.asignature_){nullptr}
+    , decltype(_impl_.a_asignature_){nullptr}
   };
 }
 
@@ -858,7 +858,7 @@ Reply_Sign::~Reply_Sign() {
 
 inline void Reply_Sign::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.asignature_;
+  if (this != internal_default_instance()) delete _impl_.a_asignature_;
 }
 
 void Reply_Sign::SetCachedSize(int size) const {
@@ -873,8 +873,8 @@ void Reply_Sign::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.asignature_ != nullptr);
-    _impl_.asignature_->Clear();
+    GOOGLE_DCHECK(_impl_.a_asignature_ != nullptr);
+    _impl_.a_asignature_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -887,10 +887,10 @@ const char* Reply_Sign::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.psm.ByteArray aSignature = 1;
+      // required .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_asignature(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_asignature(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -926,11 +926,11 @@ uint8_t* Reply_Sign::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.psm.ByteArray aSignature = 1;
+  // required .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::asignature(this),
-        _Internal::asignature(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_asignature(this),
+        _Internal::a_asignature(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -945,11 +945,11 @@ size_t Reply_Sign::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.psm.ByteArray aSignature = 1;
-  if (_internal_has_asignature()) {
+  // required .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
+  if (_internal_has_a_asignature()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.asignature_);
+        *_impl_.a_asignature_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -976,9 +976,9 @@ void Reply_Sign::MergeFrom(const Reply_Sign& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_asignature()) {
-    _this->_internal_mutable_asignature()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
-        from._internal_asignature());
+  if (from._internal_has_a_asignature()) {
+    _this->_internal_mutable_a_asignature()->::protobuf::mozilla::psm::ByteArray::MergeFrom(
+        from._internal_a_asignature());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -999,7 +999,7 @@ void Reply_Sign::InternalSwap(Reply_Sign* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.asignature_, other->_impl_.asignature_);
+  swap(_impl_.a_asignature_, other->_impl_.a_asignature_);
 }
 
 std::string Reply_Sign::GetTypeName() const {

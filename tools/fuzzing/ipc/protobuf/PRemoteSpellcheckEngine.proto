@@ -22,45 +22,45 @@ message Reply___delete__ {
 }
 
 message Msg_CheckAsync {
-  repeated bytes aWord = 1;
+  repeated bytes a_aWord = 1;
 }
 
 message Reply_CheckAsync {
-  repeated bool aIsMisspelled = 1;
+  repeated bool a_aIsMisspelled = 1;
 }
 
 message Msg_SetDictionary {
-  required bytes aDictionary = 1;
+  required bytes a_aDictionary = 1;
 }
 
 message Reply_SetDictionary {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_SetDictionaries {
-  repeated bytes aDictionaries = 1;
+  repeated bytes a_aDictionaries = 1;
 }
 
 message Reply_SetDictionaries {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message Msg_Suggest {
-  required bytes aWord = 1;
-  required uint32 aCount = 2;
+  required bytes a_aWord = 1;
+  required uint32 a_aCount = 2;
 }
 
 message Reply_Suggest {
-  repeated bytes aSuggestions = 1;
+  repeated bytes a_aSuggestions = 1;
 }
 
 message Msg_SetDictionaryFromList {
-  repeated bytes aList = 1;
+  repeated bytes a_aList = 1;
 }
 
 message Reply_SetDictionaryFromList {
-  required bool aSuccess = 1;
-  required bytes aDictionary = 2;
+  required bool a_aSuccess = 1;
+  required bytes a_aDictionary = 2;
 }
 
 // Parameter mappings stats:

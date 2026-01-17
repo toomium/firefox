@@ -170,90 +170,90 @@ class MediaDataIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTimeFieldNumber = 2,
-    kTimecodeFieldNumber = 3,
-    kDurationFieldNumber = 4,
-    kOffsetFieldNumber = 1,
-    kKeyframeFieldNumber = 5,
+    kATimeFieldNumber = 2,
+    kATimecodeFieldNumber = 3,
+    kADurationFieldNumber = 4,
+    kAOffsetFieldNumber = 1,
+    kAKeyframeFieldNumber = 5,
   };
-  // required bytes time = 2;
-  bool has_time() const;
+  // required bytes a_time = 2;
+  bool has_a_time() const;
   private:
-  bool _internal_has_time() const;
+  bool _internal_has_a_time() const;
   public:
-  void clear_time();
-  const std::string& time() const;
+  void clear_a_time();
+  const std::string& a_time() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_time(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_time();
-  PROTOBUF_NODISCARD std::string* release_time();
-  void set_allocated_time(std::string* time);
+  void set_a_time(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_time();
+  PROTOBUF_NODISCARD std::string* release_a_time();
+  void set_allocated_a_time(std::string* a_time);
   private:
-  const std::string& _internal_time() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_time(const std::string& value);
-  std::string* _internal_mutable_time();
+  const std::string& _internal_a_time() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_time(const std::string& value);
+  std::string* _internal_mutable_a_time();
   public:
 
-  // required bytes timecode = 3;
-  bool has_timecode() const;
+  // required bytes a_timecode = 3;
+  bool has_a_timecode() const;
   private:
-  bool _internal_has_timecode() const;
+  bool _internal_has_a_timecode() const;
   public:
-  void clear_timecode();
-  const std::string& timecode() const;
+  void clear_a_timecode();
+  const std::string& a_timecode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_timecode(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_timecode();
-  PROTOBUF_NODISCARD std::string* release_timecode();
-  void set_allocated_timecode(std::string* timecode);
+  void set_a_timecode(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_timecode();
+  PROTOBUF_NODISCARD std::string* release_a_timecode();
+  void set_allocated_a_timecode(std::string* a_timecode);
   private:
-  const std::string& _internal_timecode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_timecode(const std::string& value);
-  std::string* _internal_mutable_timecode();
+  const std::string& _internal_a_timecode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_timecode(const std::string& value);
+  std::string* _internal_mutable_a_timecode();
   public:
 
-  // required bytes duration = 4;
-  bool has_duration() const;
+  // required bytes a_duration = 4;
+  bool has_a_duration() const;
   private:
-  bool _internal_has_duration() const;
+  bool _internal_has_a_duration() const;
   public:
-  void clear_duration();
-  const std::string& duration() const;
+  void clear_a_duration();
+  const std::string& a_duration() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_duration(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_duration();
-  PROTOBUF_NODISCARD std::string* release_duration();
-  void set_allocated_duration(std::string* duration);
+  void set_a_duration(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_duration();
+  PROTOBUF_NODISCARD std::string* release_a_duration();
+  void set_allocated_a_duration(std::string* a_duration);
   private:
-  const std::string& _internal_duration() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_duration(const std::string& value);
-  std::string* _internal_mutable_duration();
+  const std::string& _internal_a_duration() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_duration(const std::string& value);
+  std::string* _internal_mutable_a_duration();
   public:
 
-  // required sint64 offset = 1;
-  bool has_offset() const;
+  // required sint64 a_offset = 1;
+  bool has_a_offset() const;
   private:
-  bool _internal_has_offset() const;
+  bool _internal_has_a_offset() const;
   public:
-  void clear_offset();
-  int64_t offset() const;
-  void set_offset(int64_t value);
+  void clear_a_offset();
+  int64_t a_offset() const;
+  void set_a_offset(int64_t value);
   private:
-  int64_t _internal_offset() const;
-  void _internal_set_offset(int64_t value);
+  int64_t _internal_a_offset() const;
+  void _internal_set_a_offset(int64_t value);
   public:
 
-  // required bool keyframe = 5;
-  bool has_keyframe() const;
+  // required bool a_keyframe = 5;
+  bool has_a_keyframe() const;
   private:
-  bool _internal_has_keyframe() const;
+  bool _internal_has_a_keyframe() const;
   public:
-  void clear_keyframe();
-  bool keyframe() const;
-  void set_keyframe(bool value);
+  void clear_a_keyframe();
+  bool a_keyframe() const;
+  void set_a_keyframe(bool value);
   private:
-  bool _internal_keyframe() const;
-  void _internal_set_keyframe(bool value);
+  bool _internal_a_keyframe() const;
+  void _internal_set_a_keyframe(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.MediaDataIPDL)
@@ -269,11 +269,11 @@ class MediaDataIPDL final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr time_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr timecode_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr duration_;
-    int64_t offset_;
-    bool keyframe_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_time_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timecode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_duration_;
+    int64_t a_offset_;
+    bool a_keyframe_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto;
@@ -390,116 +390,116 @@ class CryptoInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMIVFieldNumber = 2,
-    kMKeyIdFieldNumber = 3,
-    kMClearBytesFieldNumber = 4,
-    kMCipherBytesFieldNumber = 5,
-    kMEncryptionSchemeFieldNumber = 1,
+    kAMIVFieldNumber = 2,
+    kAMKeyIdFieldNumber = 3,
+    kAMClearBytesFieldNumber = 4,
+    kAMCipherBytesFieldNumber = 5,
+    kAMEncryptionSchemeFieldNumber = 1,
   };
-  // repeated uint32 mIV = 2;
-  int miv_size() const;
+  // repeated uint32 a_mIV = 2;
+  int a_miv_size() const;
   private:
-  int _internal_miv_size() const;
+  int _internal_a_miv_size() const;
   public:
-  void clear_miv();
+  void clear_a_miv();
   private:
-  uint32_t _internal_miv(int index) const;
+  uint32_t _internal_a_miv(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_miv() const;
-  void _internal_add_miv(uint32_t value);
+      _internal_a_miv() const;
+  void _internal_add_a_miv(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_miv();
+      _internal_mutable_a_miv();
   public:
-  uint32_t miv(int index) const;
-  void set_miv(int index, uint32_t value);
-  void add_miv(uint32_t value);
+  uint32_t a_miv(int index) const;
+  void set_a_miv(int index, uint32_t value);
+  void add_a_miv(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      miv() const;
+      a_miv() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_miv();
+      mutable_a_miv();
 
-  // repeated uint32 mKeyId = 3;
-  int mkeyid_size() const;
+  // repeated uint32 a_mKeyId = 3;
+  int a_mkeyid_size() const;
   private:
-  int _internal_mkeyid_size() const;
+  int _internal_a_mkeyid_size() const;
   public:
-  void clear_mkeyid();
+  void clear_a_mkeyid();
   private:
-  uint32_t _internal_mkeyid(int index) const;
+  uint32_t _internal_a_mkeyid(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_mkeyid() const;
-  void _internal_add_mkeyid(uint32_t value);
+      _internal_a_mkeyid() const;
+  void _internal_add_a_mkeyid(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_mkeyid();
+      _internal_mutable_a_mkeyid();
   public:
-  uint32_t mkeyid(int index) const;
-  void set_mkeyid(int index, uint32_t value);
-  void add_mkeyid(uint32_t value);
+  uint32_t a_mkeyid(int index) const;
+  void set_a_mkeyid(int index, uint32_t value);
+  void add_a_mkeyid(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      mkeyid() const;
+      a_mkeyid() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_mkeyid();
+      mutable_a_mkeyid();
 
-  // repeated uint32 mClearBytes = 4;
-  int mclearbytes_size() const;
+  // repeated uint32 a_mClearBytes = 4;
+  int a_mclearbytes_size() const;
   private:
-  int _internal_mclearbytes_size() const;
+  int _internal_a_mclearbytes_size() const;
   public:
-  void clear_mclearbytes();
+  void clear_a_mclearbytes();
   private:
-  uint32_t _internal_mclearbytes(int index) const;
+  uint32_t _internal_a_mclearbytes(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_mclearbytes() const;
-  void _internal_add_mclearbytes(uint32_t value);
+      _internal_a_mclearbytes() const;
+  void _internal_add_a_mclearbytes(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_mclearbytes();
+      _internal_mutable_a_mclearbytes();
   public:
-  uint32_t mclearbytes(int index) const;
-  void set_mclearbytes(int index, uint32_t value);
-  void add_mclearbytes(uint32_t value);
+  uint32_t a_mclearbytes(int index) const;
+  void set_a_mclearbytes(int index, uint32_t value);
+  void add_a_mclearbytes(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      mclearbytes() const;
+      a_mclearbytes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_mclearbytes();
+      mutable_a_mclearbytes();
 
-  // repeated uint32 mCipherBytes = 5;
-  int mcipherbytes_size() const;
+  // repeated uint32 a_mCipherBytes = 5;
+  int a_mcipherbytes_size() const;
   private:
-  int _internal_mcipherbytes_size() const;
+  int _internal_a_mcipherbytes_size() const;
   public:
-  void clear_mcipherbytes();
+  void clear_a_mcipherbytes();
   private:
-  uint32_t _internal_mcipherbytes(int index) const;
+  uint32_t _internal_a_mcipherbytes(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_mcipherbytes() const;
-  void _internal_add_mcipherbytes(uint32_t value);
+      _internal_a_mcipherbytes() const;
+  void _internal_add_a_mcipherbytes(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_mcipherbytes();
+      _internal_mutable_a_mcipherbytes();
   public:
-  uint32_t mcipherbytes(int index) const;
-  void set_mcipherbytes(int index, uint32_t value);
-  void add_mcipherbytes(uint32_t value);
+  uint32_t a_mcipherbytes(int index) const;
+  void set_a_mcipherbytes(int index, uint32_t value);
+  void add_a_mcipherbytes(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      mcipherbytes() const;
+      a_mcipherbytes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_mcipherbytes();
+      mutable_a_mcipherbytes();
 
-  // required bytes mEncryptionScheme = 1;
-  bool has_mencryptionscheme() const;
+  // required bytes a_mEncryptionScheme = 1;
+  bool has_a_mencryptionscheme() const;
   private:
-  bool _internal_has_mencryptionscheme() const;
+  bool _internal_has_a_mencryptionscheme() const;
   public:
-  void clear_mencryptionscheme();
-  const std::string& mencryptionscheme() const;
+  void clear_a_mencryptionscheme();
+  const std::string& a_mencryptionscheme() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mencryptionscheme(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mencryptionscheme();
-  PROTOBUF_NODISCARD std::string* release_mencryptionscheme();
-  void set_allocated_mencryptionscheme(std::string* mencryptionscheme);
+  void set_a_mencryptionscheme(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mencryptionscheme();
+  PROTOBUF_NODISCARD std::string* release_a_mencryptionscheme();
+  void set_allocated_a_mencryptionscheme(std::string* a_mencryptionscheme);
   private:
-  const std::string& _internal_mencryptionscheme() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mencryptionscheme(const std::string& value);
-  std::string* _internal_mutable_mencryptionscheme();
+  const std::string& _internal_a_mencryptionscheme() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mencryptionscheme(const std::string& value);
+  std::string* _internal_mutable_a_mencryptionscheme();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.CryptoInfo)
@@ -512,11 +512,11 @@ class CryptoInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > miv_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > mkeyid_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > mclearbytes_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > mcipherbytes_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mencryptionscheme_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_miv_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mkeyid_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mclearbytes_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mcipherbytes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mencryptionscheme_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto;
@@ -532,524 +532,524 @@ class CryptoInfo final :
 #endif  // __GNUC__
 // MediaDataIPDL
 
-// required sint64 offset = 1;
-inline bool MediaDataIPDL::_internal_has_offset() const {
+// required sint64 a_offset = 1;
+inline bool MediaDataIPDL::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool MediaDataIPDL::has_offset() const {
-  return _internal_has_offset();
+inline bool MediaDataIPDL::has_a_offset() const {
+  return _internal_has_a_offset();
 }
-inline void MediaDataIPDL::clear_offset() {
-  _impl_.offset_ = int64_t{0};
+inline void MediaDataIPDL::clear_a_offset() {
+  _impl_.a_offset_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t MediaDataIPDL::_internal_offset() const {
-  return _impl_.offset_;
+inline int64_t MediaDataIPDL::_internal_a_offset() const {
+  return _impl_.a_offset_;
 }
-inline int64_t MediaDataIPDL::offset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.offset)
-  return _internal_offset();
+inline int64_t MediaDataIPDL::a_offset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_offset)
+  return _internal_a_offset();
 }
-inline void MediaDataIPDL::_internal_set_offset(int64_t value) {
+inline void MediaDataIPDL::_internal_set_a_offset(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.offset_ = value;
+  _impl_.a_offset_ = value;
 }
-inline void MediaDataIPDL::set_offset(int64_t value) {
-  _internal_set_offset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.offset)
+inline void MediaDataIPDL::set_a_offset(int64_t value) {
+  _internal_set_a_offset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_offset)
 }
 
-// required bytes time = 2;
-inline bool MediaDataIPDL::_internal_has_time() const {
+// required bytes a_time = 2;
+inline bool MediaDataIPDL::_internal_has_a_time() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool MediaDataIPDL::has_time() const {
-  return _internal_has_time();
+inline bool MediaDataIPDL::has_a_time() const {
+  return _internal_has_a_time();
 }
-inline void MediaDataIPDL::clear_time() {
-  _impl_.time_.ClearToEmpty();
+inline void MediaDataIPDL::clear_a_time() {
+  _impl_.a_time_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& MediaDataIPDL::time() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.time)
-  return _internal_time();
+inline const std::string& MediaDataIPDL::a_time() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_time)
+  return _internal_a_time();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MediaDataIPDL::set_time(ArgT0&& arg0, ArgT... args) {
+void MediaDataIPDL::set_a_time(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.time_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.time)
+ _impl_.a_time_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_time)
 }
-inline std::string* MediaDataIPDL::mutable_time() {
-  std::string* _s = _internal_mutable_time();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.MediaDataIPDL.time)
+inline std::string* MediaDataIPDL::mutable_a_time() {
+  std::string* _s = _internal_mutable_a_time();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.MediaDataIPDL.a_time)
   return _s;
 }
-inline const std::string& MediaDataIPDL::_internal_time() const {
-  return _impl_.time_.Get();
+inline const std::string& MediaDataIPDL::_internal_a_time() const {
+  return _impl_.a_time_.Get();
 }
-inline void MediaDataIPDL::_internal_set_time(const std::string& value) {
+inline void MediaDataIPDL::_internal_set_a_time(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.time_.Set(value, GetArenaForAllocation());
+  _impl_.a_time_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MediaDataIPDL::_internal_mutable_time() {
+inline std::string* MediaDataIPDL::_internal_mutable_a_time() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.time_.Mutable(GetArenaForAllocation());
+  return _impl_.a_time_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MediaDataIPDL::release_time() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.time)
-  if (!_internal_has_time()) {
+inline std::string* MediaDataIPDL::release_a_time() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.a_time)
+  if (!_internal_has_a_time()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.time_.Release();
+  auto* p = _impl_.a_time_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.time_.IsDefault()) {
-    _impl_.time_.Set("", GetArenaForAllocation());
+  if (_impl_.a_time_.IsDefault()) {
+    _impl_.a_time_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MediaDataIPDL::set_allocated_time(std::string* time) {
-  if (time != nullptr) {
+inline void MediaDataIPDL::set_allocated_a_time(std::string* a_time) {
+  if (a_time != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.time_.SetAllocated(time, GetArenaForAllocation());
+  _impl_.a_time_.SetAllocated(a_time, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.time_.IsDefault()) {
-    _impl_.time_.Set("", GetArenaForAllocation());
+  if (_impl_.a_time_.IsDefault()) {
+    _impl_.a_time_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.time)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_time)
 }
 
-// required bytes timecode = 3;
-inline bool MediaDataIPDL::_internal_has_timecode() const {
+// required bytes a_timecode = 3;
+inline bool MediaDataIPDL::_internal_has_a_timecode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool MediaDataIPDL::has_timecode() const {
-  return _internal_has_timecode();
+inline bool MediaDataIPDL::has_a_timecode() const {
+  return _internal_has_a_timecode();
 }
-inline void MediaDataIPDL::clear_timecode() {
-  _impl_.timecode_.ClearToEmpty();
+inline void MediaDataIPDL::clear_a_timecode() {
+  _impl_.a_timecode_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& MediaDataIPDL::timecode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.timecode)
-  return _internal_timecode();
+inline const std::string& MediaDataIPDL::a_timecode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_timecode)
+  return _internal_a_timecode();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MediaDataIPDL::set_timecode(ArgT0&& arg0, ArgT... args) {
+void MediaDataIPDL::set_a_timecode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.timecode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.timecode)
+ _impl_.a_timecode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_timecode)
 }
-inline std::string* MediaDataIPDL::mutable_timecode() {
-  std::string* _s = _internal_mutable_timecode();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.MediaDataIPDL.timecode)
+inline std::string* MediaDataIPDL::mutable_a_timecode() {
+  std::string* _s = _internal_mutable_a_timecode();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.MediaDataIPDL.a_timecode)
   return _s;
 }
-inline const std::string& MediaDataIPDL::_internal_timecode() const {
-  return _impl_.timecode_.Get();
+inline const std::string& MediaDataIPDL::_internal_a_timecode() const {
+  return _impl_.a_timecode_.Get();
 }
-inline void MediaDataIPDL::_internal_set_timecode(const std::string& value) {
+inline void MediaDataIPDL::_internal_set_a_timecode(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.timecode_.Set(value, GetArenaForAllocation());
+  _impl_.a_timecode_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MediaDataIPDL::_internal_mutable_timecode() {
+inline std::string* MediaDataIPDL::_internal_mutable_a_timecode() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.timecode_.Mutable(GetArenaForAllocation());
+  return _impl_.a_timecode_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MediaDataIPDL::release_timecode() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.timecode)
-  if (!_internal_has_timecode()) {
+inline std::string* MediaDataIPDL::release_a_timecode() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.a_timecode)
+  if (!_internal_has_a_timecode()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.timecode_.Release();
+  auto* p = _impl_.a_timecode_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timecode_.IsDefault()) {
-    _impl_.timecode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timecode_.IsDefault()) {
+    _impl_.a_timecode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MediaDataIPDL::set_allocated_timecode(std::string* timecode) {
-  if (timecode != nullptr) {
+inline void MediaDataIPDL::set_allocated_a_timecode(std::string* a_timecode) {
+  if (a_timecode != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.timecode_.SetAllocated(timecode, GetArenaForAllocation());
+  _impl_.a_timecode_.SetAllocated(a_timecode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timecode_.IsDefault()) {
-    _impl_.timecode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timecode_.IsDefault()) {
+    _impl_.a_timecode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.timecode)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_timecode)
 }
 
-// required bytes duration = 4;
-inline bool MediaDataIPDL::_internal_has_duration() const {
+// required bytes a_duration = 4;
+inline bool MediaDataIPDL::_internal_has_a_duration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool MediaDataIPDL::has_duration() const {
-  return _internal_has_duration();
+inline bool MediaDataIPDL::has_a_duration() const {
+  return _internal_has_a_duration();
 }
-inline void MediaDataIPDL::clear_duration() {
-  _impl_.duration_.ClearToEmpty();
+inline void MediaDataIPDL::clear_a_duration() {
+  _impl_.a_duration_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& MediaDataIPDL::duration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.duration)
-  return _internal_duration();
+inline const std::string& MediaDataIPDL::a_duration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_duration)
+  return _internal_a_duration();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void MediaDataIPDL::set_duration(ArgT0&& arg0, ArgT... args) {
+void MediaDataIPDL::set_a_duration(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.duration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.duration)
+ _impl_.a_duration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_duration)
 }
-inline std::string* MediaDataIPDL::mutable_duration() {
-  std::string* _s = _internal_mutable_duration();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.MediaDataIPDL.duration)
+inline std::string* MediaDataIPDL::mutable_a_duration() {
+  std::string* _s = _internal_mutable_a_duration();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.MediaDataIPDL.a_duration)
   return _s;
 }
-inline const std::string& MediaDataIPDL::_internal_duration() const {
-  return _impl_.duration_.Get();
+inline const std::string& MediaDataIPDL::_internal_a_duration() const {
+  return _impl_.a_duration_.Get();
 }
-inline void MediaDataIPDL::_internal_set_duration(const std::string& value) {
+inline void MediaDataIPDL::_internal_set_a_duration(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.duration_.Set(value, GetArenaForAllocation());
+  _impl_.a_duration_.Set(value, GetArenaForAllocation());
 }
-inline std::string* MediaDataIPDL::_internal_mutable_duration() {
+inline std::string* MediaDataIPDL::_internal_mutable_a_duration() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.duration_.Mutable(GetArenaForAllocation());
+  return _impl_.a_duration_.Mutable(GetArenaForAllocation());
 }
-inline std::string* MediaDataIPDL::release_duration() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.duration)
-  if (!_internal_has_duration()) {
+inline std::string* MediaDataIPDL::release_a_duration() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.a_duration)
+  if (!_internal_has_a_duration()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.duration_.Release();
+  auto* p = _impl_.a_duration_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.duration_.IsDefault()) {
-    _impl_.duration_.Set("", GetArenaForAllocation());
+  if (_impl_.a_duration_.IsDefault()) {
+    _impl_.a_duration_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void MediaDataIPDL::set_allocated_duration(std::string* duration) {
-  if (duration != nullptr) {
+inline void MediaDataIPDL::set_allocated_a_duration(std::string* a_duration) {
+  if (a_duration != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.duration_.SetAllocated(duration, GetArenaForAllocation());
+  _impl_.a_duration_.SetAllocated(a_duration, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.duration_.IsDefault()) {
-    _impl_.duration_.Set("", GetArenaForAllocation());
+  if (_impl_.a_duration_.IsDefault()) {
+    _impl_.a_duration_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.duration)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_duration)
 }
 
-// required bool keyframe = 5;
-inline bool MediaDataIPDL::_internal_has_keyframe() const {
+// required bool a_keyframe = 5;
+inline bool MediaDataIPDL::_internal_has_a_keyframe() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool MediaDataIPDL::has_keyframe() const {
-  return _internal_has_keyframe();
+inline bool MediaDataIPDL::has_a_keyframe() const {
+  return _internal_has_a_keyframe();
 }
-inline void MediaDataIPDL::clear_keyframe() {
-  _impl_.keyframe_ = false;
+inline void MediaDataIPDL::clear_a_keyframe() {
+  _impl_.a_keyframe_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool MediaDataIPDL::_internal_keyframe() const {
-  return _impl_.keyframe_;
+inline bool MediaDataIPDL::_internal_a_keyframe() const {
+  return _impl_.a_keyframe_;
 }
-inline bool MediaDataIPDL::keyframe() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.keyframe)
-  return _internal_keyframe();
+inline bool MediaDataIPDL::a_keyframe() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_keyframe)
+  return _internal_a_keyframe();
 }
-inline void MediaDataIPDL::_internal_set_keyframe(bool value) {
+inline void MediaDataIPDL::_internal_set_a_keyframe(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.keyframe_ = value;
+  _impl_.a_keyframe_ = value;
 }
-inline void MediaDataIPDL::set_keyframe(bool value) {
-  _internal_set_keyframe(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.keyframe)
+inline void MediaDataIPDL::set_a_keyframe(bool value) {
+  _internal_set_a_keyframe(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_keyframe)
 }
 
 // -------------------------------------------------------------------
 
 // CryptoInfo
 
-// required bytes mEncryptionScheme = 1;
-inline bool CryptoInfo::_internal_has_mencryptionscheme() const {
+// required bytes a_mEncryptionScheme = 1;
+inline bool CryptoInfo::_internal_has_a_mencryptionscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CryptoInfo::has_mencryptionscheme() const {
-  return _internal_has_mencryptionscheme();
+inline bool CryptoInfo::has_a_mencryptionscheme() const {
+  return _internal_has_a_mencryptionscheme();
 }
-inline void CryptoInfo::clear_mencryptionscheme() {
-  _impl_.mencryptionscheme_.ClearToEmpty();
+inline void CryptoInfo::clear_a_mencryptionscheme() {
+  _impl_.a_mencryptionscheme_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CryptoInfo::mencryptionscheme() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.mEncryptionScheme)
-  return _internal_mencryptionscheme();
+inline const std::string& CryptoInfo::a_mencryptionscheme() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
+  return _internal_a_mencryptionscheme();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CryptoInfo::set_mencryptionscheme(ArgT0&& arg0, ArgT... args) {
+void CryptoInfo::set_a_mencryptionscheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.mencryptionscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.mEncryptionScheme)
+ _impl_.a_mencryptionscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
 }
-inline std::string* CryptoInfo::mutable_mencryptionscheme() {
-  std::string* _s = _internal_mutable_mencryptionscheme();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.CryptoInfo.mEncryptionScheme)
+inline std::string* CryptoInfo::mutable_a_mencryptionscheme() {
+  std::string* _s = _internal_mutable_a_mencryptionscheme();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
   return _s;
 }
-inline const std::string& CryptoInfo::_internal_mencryptionscheme() const {
-  return _impl_.mencryptionscheme_.Get();
+inline const std::string& CryptoInfo::_internal_a_mencryptionscheme() const {
+  return _impl_.a_mencryptionscheme_.Get();
 }
-inline void CryptoInfo::_internal_set_mencryptionscheme(const std::string& value) {
+inline void CryptoInfo::_internal_set_a_mencryptionscheme(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.mencryptionscheme_.Set(value, GetArenaForAllocation());
+  _impl_.a_mencryptionscheme_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CryptoInfo::_internal_mutable_mencryptionscheme() {
+inline std::string* CryptoInfo::_internal_mutable_a_mencryptionscheme() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.mencryptionscheme_.Mutable(GetArenaForAllocation());
+  return _impl_.a_mencryptionscheme_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CryptoInfo::release_mencryptionscheme() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.CryptoInfo.mEncryptionScheme)
-  if (!_internal_has_mencryptionscheme()) {
+inline std::string* CryptoInfo::release_a_mencryptionscheme() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
+  if (!_internal_has_a_mencryptionscheme()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.mencryptionscheme_.Release();
+  auto* p = _impl_.a_mencryptionscheme_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.mencryptionscheme_.IsDefault()) {
-    _impl_.mencryptionscheme_.Set("", GetArenaForAllocation());
+  if (_impl_.a_mencryptionscheme_.IsDefault()) {
+    _impl_.a_mencryptionscheme_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CryptoInfo::set_allocated_mencryptionscheme(std::string* mencryptionscheme) {
-  if (mencryptionscheme != nullptr) {
+inline void CryptoInfo::set_allocated_a_mencryptionscheme(std::string* a_mencryptionscheme) {
+  if (a_mencryptionscheme != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.mencryptionscheme_.SetAllocated(mencryptionscheme, GetArenaForAllocation());
+  _impl_.a_mencryptionscheme_.SetAllocated(a_mencryptionscheme, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.mencryptionscheme_.IsDefault()) {
-    _impl_.mencryptionscheme_.Set("", GetArenaForAllocation());
+  if (_impl_.a_mencryptionscheme_.IsDefault()) {
+    _impl_.a_mencryptionscheme_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.CryptoInfo.mEncryptionScheme)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
 }
 
-// repeated uint32 mIV = 2;
-inline int CryptoInfo::_internal_miv_size() const {
-  return _impl_.miv_.size();
+// repeated uint32 a_mIV = 2;
+inline int CryptoInfo::_internal_a_miv_size() const {
+  return _impl_.a_miv_.size();
 }
-inline int CryptoInfo::miv_size() const {
-  return _internal_miv_size();
+inline int CryptoInfo::a_miv_size() const {
+  return _internal_a_miv_size();
 }
-inline void CryptoInfo::clear_miv() {
-  _impl_.miv_.Clear();
+inline void CryptoInfo::clear_a_miv() {
+  _impl_.a_miv_.Clear();
 }
-inline uint32_t CryptoInfo::_internal_miv(int index) const {
-  return _impl_.miv_.Get(index);
+inline uint32_t CryptoInfo::_internal_a_miv(int index) const {
+  return _impl_.a_miv_.Get(index);
 }
-inline uint32_t CryptoInfo::miv(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.mIV)
-  return _internal_miv(index);
+inline uint32_t CryptoInfo::a_miv(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.a_mIV)
+  return _internal_a_miv(index);
 }
-inline void CryptoInfo::set_miv(int index, uint32_t value) {
-  _impl_.miv_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.mIV)
+inline void CryptoInfo::set_a_miv(int index, uint32_t value) {
+  _impl_.a_miv_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.a_mIV)
 }
-inline void CryptoInfo::_internal_add_miv(uint32_t value) {
-  _impl_.miv_.Add(value);
+inline void CryptoInfo::_internal_add_a_miv(uint32_t value) {
+  _impl_.a_miv_.Add(value);
 }
-inline void CryptoInfo::add_miv(uint32_t value) {
-  _internal_add_miv(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.mIV)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::_internal_miv() const {
-  return _impl_.miv_;
+inline void CryptoInfo::add_a_miv(uint32_t value) {
+  _internal_add_a_miv(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.a_mIV)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::miv() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.mIV)
-  return _internal_miv();
+CryptoInfo::_internal_a_miv() const {
+  return _impl_.a_miv_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CryptoInfo::a_miv() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.a_mIV)
+  return _internal_a_miv();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::_internal_mutable_miv() {
-  return &_impl_.miv_;
+CryptoInfo::_internal_mutable_a_miv() {
+  return &_impl_.a_miv_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::mutable_miv() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.mIV)
-  return _internal_mutable_miv();
+CryptoInfo::mutable_a_miv() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.a_mIV)
+  return _internal_mutable_a_miv();
 }
 
-// repeated uint32 mKeyId = 3;
-inline int CryptoInfo::_internal_mkeyid_size() const {
-  return _impl_.mkeyid_.size();
+// repeated uint32 a_mKeyId = 3;
+inline int CryptoInfo::_internal_a_mkeyid_size() const {
+  return _impl_.a_mkeyid_.size();
 }
-inline int CryptoInfo::mkeyid_size() const {
-  return _internal_mkeyid_size();
+inline int CryptoInfo::a_mkeyid_size() const {
+  return _internal_a_mkeyid_size();
 }
-inline void CryptoInfo::clear_mkeyid() {
-  _impl_.mkeyid_.Clear();
+inline void CryptoInfo::clear_a_mkeyid() {
+  _impl_.a_mkeyid_.Clear();
 }
-inline uint32_t CryptoInfo::_internal_mkeyid(int index) const {
-  return _impl_.mkeyid_.Get(index);
+inline uint32_t CryptoInfo::_internal_a_mkeyid(int index) const {
+  return _impl_.a_mkeyid_.Get(index);
 }
-inline uint32_t CryptoInfo::mkeyid(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.mKeyId)
-  return _internal_mkeyid(index);
+inline uint32_t CryptoInfo::a_mkeyid(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.a_mKeyId)
+  return _internal_a_mkeyid(index);
 }
-inline void CryptoInfo::set_mkeyid(int index, uint32_t value) {
-  _impl_.mkeyid_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.mKeyId)
+inline void CryptoInfo::set_a_mkeyid(int index, uint32_t value) {
+  _impl_.a_mkeyid_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.a_mKeyId)
 }
-inline void CryptoInfo::_internal_add_mkeyid(uint32_t value) {
-  _impl_.mkeyid_.Add(value);
+inline void CryptoInfo::_internal_add_a_mkeyid(uint32_t value) {
+  _impl_.a_mkeyid_.Add(value);
 }
-inline void CryptoInfo::add_mkeyid(uint32_t value) {
-  _internal_add_mkeyid(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.mKeyId)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::_internal_mkeyid() const {
-  return _impl_.mkeyid_;
+inline void CryptoInfo::add_a_mkeyid(uint32_t value) {
+  _internal_add_a_mkeyid(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.a_mKeyId)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::mkeyid() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.mKeyId)
-  return _internal_mkeyid();
+CryptoInfo::_internal_a_mkeyid() const {
+  return _impl_.a_mkeyid_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CryptoInfo::a_mkeyid() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.a_mKeyId)
+  return _internal_a_mkeyid();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::_internal_mutable_mkeyid() {
-  return &_impl_.mkeyid_;
+CryptoInfo::_internal_mutable_a_mkeyid() {
+  return &_impl_.a_mkeyid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::mutable_mkeyid() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.mKeyId)
-  return _internal_mutable_mkeyid();
+CryptoInfo::mutable_a_mkeyid() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.a_mKeyId)
+  return _internal_mutable_a_mkeyid();
 }
 
-// repeated uint32 mClearBytes = 4;
-inline int CryptoInfo::_internal_mclearbytes_size() const {
-  return _impl_.mclearbytes_.size();
+// repeated uint32 a_mClearBytes = 4;
+inline int CryptoInfo::_internal_a_mclearbytes_size() const {
+  return _impl_.a_mclearbytes_.size();
 }
-inline int CryptoInfo::mclearbytes_size() const {
-  return _internal_mclearbytes_size();
+inline int CryptoInfo::a_mclearbytes_size() const {
+  return _internal_a_mclearbytes_size();
 }
-inline void CryptoInfo::clear_mclearbytes() {
-  _impl_.mclearbytes_.Clear();
+inline void CryptoInfo::clear_a_mclearbytes() {
+  _impl_.a_mclearbytes_.Clear();
 }
-inline uint32_t CryptoInfo::_internal_mclearbytes(int index) const {
-  return _impl_.mclearbytes_.Get(index);
+inline uint32_t CryptoInfo::_internal_a_mclearbytes(int index) const {
+  return _impl_.a_mclearbytes_.Get(index);
 }
-inline uint32_t CryptoInfo::mclearbytes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.mClearBytes)
-  return _internal_mclearbytes(index);
+inline uint32_t CryptoInfo::a_mclearbytes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.a_mClearBytes)
+  return _internal_a_mclearbytes(index);
 }
-inline void CryptoInfo::set_mclearbytes(int index, uint32_t value) {
-  _impl_.mclearbytes_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.mClearBytes)
+inline void CryptoInfo::set_a_mclearbytes(int index, uint32_t value) {
+  _impl_.a_mclearbytes_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.a_mClearBytes)
 }
-inline void CryptoInfo::_internal_add_mclearbytes(uint32_t value) {
-  _impl_.mclearbytes_.Add(value);
+inline void CryptoInfo::_internal_add_a_mclearbytes(uint32_t value) {
+  _impl_.a_mclearbytes_.Add(value);
 }
-inline void CryptoInfo::add_mclearbytes(uint32_t value) {
-  _internal_add_mclearbytes(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.mClearBytes)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::_internal_mclearbytes() const {
-  return _impl_.mclearbytes_;
+inline void CryptoInfo::add_a_mclearbytes(uint32_t value) {
+  _internal_add_a_mclearbytes(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.a_mClearBytes)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::mclearbytes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.mClearBytes)
-  return _internal_mclearbytes();
+CryptoInfo::_internal_a_mclearbytes() const {
+  return _impl_.a_mclearbytes_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CryptoInfo::a_mclearbytes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.a_mClearBytes)
+  return _internal_a_mclearbytes();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::_internal_mutable_mclearbytes() {
-  return &_impl_.mclearbytes_;
+CryptoInfo::_internal_mutable_a_mclearbytes() {
+  return &_impl_.a_mclearbytes_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::mutable_mclearbytes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.mClearBytes)
-  return _internal_mutable_mclearbytes();
+CryptoInfo::mutable_a_mclearbytes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.a_mClearBytes)
+  return _internal_mutable_a_mclearbytes();
 }
 
-// repeated uint32 mCipherBytes = 5;
-inline int CryptoInfo::_internal_mcipherbytes_size() const {
-  return _impl_.mcipherbytes_.size();
+// repeated uint32 a_mCipherBytes = 5;
+inline int CryptoInfo::_internal_a_mcipherbytes_size() const {
+  return _impl_.a_mcipherbytes_.size();
 }
-inline int CryptoInfo::mcipherbytes_size() const {
-  return _internal_mcipherbytes_size();
+inline int CryptoInfo::a_mcipherbytes_size() const {
+  return _internal_a_mcipherbytes_size();
 }
-inline void CryptoInfo::clear_mcipherbytes() {
-  _impl_.mcipherbytes_.Clear();
+inline void CryptoInfo::clear_a_mcipherbytes() {
+  _impl_.a_mcipherbytes_.Clear();
 }
-inline uint32_t CryptoInfo::_internal_mcipherbytes(int index) const {
-  return _impl_.mcipherbytes_.Get(index);
+inline uint32_t CryptoInfo::_internal_a_mcipherbytes(int index) const {
+  return _impl_.a_mcipherbytes_.Get(index);
 }
-inline uint32_t CryptoInfo::mcipherbytes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.mCipherBytes)
-  return _internal_mcipherbytes(index);
+inline uint32_t CryptoInfo::a_mcipherbytes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.a_mCipherBytes)
+  return _internal_a_mcipherbytes(index);
 }
-inline void CryptoInfo::set_mcipherbytes(int index, uint32_t value) {
-  _impl_.mcipherbytes_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.mCipherBytes)
+inline void CryptoInfo::set_a_mcipherbytes(int index, uint32_t value) {
+  _impl_.a_mcipherbytes_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.a_mCipherBytes)
 }
-inline void CryptoInfo::_internal_add_mcipherbytes(uint32_t value) {
-  _impl_.mcipherbytes_.Add(value);
+inline void CryptoInfo::_internal_add_a_mcipherbytes(uint32_t value) {
+  _impl_.a_mcipherbytes_.Add(value);
 }
-inline void CryptoInfo::add_mcipherbytes(uint32_t value) {
-  _internal_add_mcipherbytes(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.mCipherBytes)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::_internal_mcipherbytes() const {
-  return _impl_.mcipherbytes_;
+inline void CryptoInfo::add_a_mcipherbytes(uint32_t value) {
+  _internal_add_a_mcipherbytes(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.CryptoInfo.a_mCipherBytes)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-CryptoInfo::mcipherbytes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.mCipherBytes)
-  return _internal_mcipherbytes();
+CryptoInfo::_internal_a_mcipherbytes() const {
+  return _impl_.a_mcipherbytes_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+CryptoInfo::a_mcipherbytes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.CryptoInfo.a_mCipherBytes)
+  return _internal_a_mcipherbytes();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::_internal_mutable_mcipherbytes() {
-  return &_impl_.mcipherbytes_;
+CryptoInfo::_internal_mutable_a_mcipherbytes() {
+  return &_impl_.a_mcipherbytes_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-CryptoInfo::mutable_mcipherbytes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.mCipherBytes)
-  return _internal_mutable_mcipherbytes();
+CryptoInfo::mutable_a_mcipherbytes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.CryptoInfo.a_mCipherBytes)
+  return _internal_mutable_a_mcipherbytes();
 }
 
 #ifdef __GNUC__

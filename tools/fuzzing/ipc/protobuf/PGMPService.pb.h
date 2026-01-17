@@ -190,94 +190,94 @@ class Msg_LaunchGMP final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTagsFieldNumber = 3,
-    kAlreadyBridgedToFieldNumber = 4,
-    kApiFieldNumber = 2,
-    kNodeIdVariantFieldNumber = 1,
+    kATagsFieldNumber = 3,
+    kAAlreadyBridgedToFieldNumber = 4,
+    kAApiFieldNumber = 2,
+    kANodeIdVariantFieldNumber = 1,
   };
-  // repeated bytes tags = 3;
-  int tags_size() const;
+  // repeated bytes a_tags = 3;
+  int a_tags_size() const;
   private:
-  int _internal_tags_size() const;
+  int _internal_a_tags_size() const;
   public:
-  void clear_tags();
-  const std::string& tags(int index) const;
-  std::string* mutable_tags(int index);
-  void set_tags(int index, const std::string& value);
-  void set_tags(int index, std::string&& value);
-  void set_tags(int index, const char* value);
-  void set_tags(int index, const void* value, size_t size);
-  std::string* add_tags();
-  void add_tags(const std::string& value);
-  void add_tags(std::string&& value);
-  void add_tags(const char* value);
-  void add_tags(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& tags() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_tags();
+  void clear_a_tags();
+  const std::string& a_tags(int index) const;
+  std::string* mutable_a_tags(int index);
+  void set_a_tags(int index, const std::string& value);
+  void set_a_tags(int index, std::string&& value);
+  void set_a_tags(int index, const char* value);
+  void set_a_tags(int index, const void* value, size_t size);
+  std::string* add_a_tags();
+  void add_a_tags(const std::string& value);
+  void add_a_tags(std::string&& value);
+  void add_a_tags(const char* value);
+  void add_a_tags(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_tags() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_tags();
   private:
-  const std::string& _internal_tags(int index) const;
-  std::string* _internal_add_tags();
-  public:
-
-  // repeated bytes alreadyBridgedTo = 4;
-  int alreadybridgedto_size() const;
-  private:
-  int _internal_alreadybridgedto_size() const;
-  public:
-  void clear_alreadybridgedto();
-  const std::string& alreadybridgedto(int index) const;
-  std::string* mutable_alreadybridgedto(int index);
-  void set_alreadybridgedto(int index, const std::string& value);
-  void set_alreadybridgedto(int index, std::string&& value);
-  void set_alreadybridgedto(int index, const char* value);
-  void set_alreadybridgedto(int index, const void* value, size_t size);
-  std::string* add_alreadybridgedto();
-  void add_alreadybridgedto(const std::string& value);
-  void add_alreadybridgedto(std::string&& value);
-  void add_alreadybridgedto(const char* value);
-  void add_alreadybridgedto(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& alreadybridgedto() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_alreadybridgedto();
-  private:
-  const std::string& _internal_alreadybridgedto(int index) const;
-  std::string* _internal_add_alreadybridgedto();
+  const std::string& _internal_a_tags(int index) const;
+  std::string* _internal_add_a_tags();
   public:
 
-  // required bytes api = 2;
-  bool has_api() const;
+  // repeated bytes a_alreadyBridgedTo = 4;
+  int a_alreadybridgedto_size() const;
   private:
-  bool _internal_has_api() const;
+  int _internal_a_alreadybridgedto_size() const;
   public:
-  void clear_api();
-  const std::string& api() const;
+  void clear_a_alreadybridgedto();
+  const std::string& a_alreadybridgedto(int index) const;
+  std::string* mutable_a_alreadybridgedto(int index);
+  void set_a_alreadybridgedto(int index, const std::string& value);
+  void set_a_alreadybridgedto(int index, std::string&& value);
+  void set_a_alreadybridgedto(int index, const char* value);
+  void set_a_alreadybridgedto(int index, const void* value, size_t size);
+  std::string* add_a_alreadybridgedto();
+  void add_a_alreadybridgedto(const std::string& value);
+  void add_a_alreadybridgedto(std::string&& value);
+  void add_a_alreadybridgedto(const char* value);
+  void add_a_alreadybridgedto(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_alreadybridgedto() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_alreadybridgedto();
+  private:
+  const std::string& _internal_a_alreadybridgedto(int index) const;
+  std::string* _internal_add_a_alreadybridgedto();
+  public:
+
+  // required bytes a_api = 2;
+  bool has_a_api() const;
+  private:
+  bool _internal_has_a_api() const;
+  public:
+  void clear_a_api();
+  const std::string& a_api() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_api(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_api();
-  PROTOBUF_NODISCARD std::string* release_api();
-  void set_allocated_api(std::string* api);
+  void set_a_api(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_api();
+  PROTOBUF_NODISCARD std::string* release_a_api();
+  void set_allocated_a_api(std::string* a_api);
   private:
-  const std::string& _internal_api() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_api(const std::string& value);
-  std::string* _internal_mutable_api();
+  const std::string& _internal_a_api() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_api(const std::string& value);
+  std::string* _internal_mutable_a_api();
   public:
 
-  // required .protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
-  bool has_nodeidvariant() const;
+  // required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
+  bool has_a_nodeidvariant() const;
   private:
-  bool _internal_has_nodeidvariant() const;
+  bool _internal_has_a_nodeidvariant() const;
   public:
-  void clear_nodeidvariant();
-  const ::protobuf::mozilla::gmp::NodeIdVariant& nodeidvariant() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::NodeIdVariant* release_nodeidvariant();
-  ::protobuf::mozilla::gmp::NodeIdVariant* mutable_nodeidvariant();
-  void set_allocated_nodeidvariant(::protobuf::mozilla::gmp::NodeIdVariant* nodeidvariant);
+  void clear_a_nodeidvariant();
+  const ::protobuf::mozilla::gmp::NodeIdVariant& a_nodeidvariant() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::NodeIdVariant* release_a_nodeidvariant();
+  ::protobuf::mozilla::gmp::NodeIdVariant* mutable_a_nodeidvariant();
+  void set_allocated_a_nodeidvariant(::protobuf::mozilla::gmp::NodeIdVariant* a_nodeidvariant);
   private:
-  const ::protobuf::mozilla::gmp::NodeIdVariant& _internal_nodeidvariant() const;
-  ::protobuf::mozilla::gmp::NodeIdVariant* _internal_mutable_nodeidvariant();
+  const ::protobuf::mozilla::gmp::NodeIdVariant& _internal_a_nodeidvariant() const;
+  ::protobuf::mozilla::gmp::NodeIdVariant* _internal_mutable_a_nodeidvariant();
   public:
-  void unsafe_arena_set_allocated_nodeidvariant(
-      ::protobuf::mozilla::gmp::NodeIdVariant* nodeidvariant);
-  ::protobuf::mozilla::gmp::NodeIdVariant* unsafe_arena_release_nodeidvariant();
+  void unsafe_arena_set_allocated_a_nodeidvariant(
+      ::protobuf::mozilla::gmp::NodeIdVariant* a_nodeidvariant);
+  ::protobuf::mozilla::gmp::NodeIdVariant* unsafe_arena_release_a_nodeidvariant();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP)
  private:
@@ -292,10 +292,10 @@ class Msg_LaunchGMP final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> tags_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> alreadybridgedto_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr api_;
-    ::protobuf::mozilla::gmp::NodeIdVariant* nodeidvariant_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_tags_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_alreadybridgedto_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_api_;
+    ::protobuf::mozilla::gmp::NodeIdVariant* a_nodeidvariant_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPService_2eproto;
@@ -412,25 +412,25 @@ class Reply_LaunchGMP final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAResultFieldNumber = 1,
+    kAAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.gmp.GMPLaunchResult aResult = 1;
-  bool has_aresult() const;
+  // required .protobuf.mozilla.gmp.GMPLaunchResult a_aResult = 1;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const ::protobuf::mozilla::gmp::GMPLaunchResult& aresult() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPLaunchResult* release_aresult();
-  ::protobuf::mozilla::gmp::GMPLaunchResult* mutable_aresult();
-  void set_allocated_aresult(::protobuf::mozilla::gmp::GMPLaunchResult* aresult);
+  void clear_a_aresult();
+  const ::protobuf::mozilla::gmp::GMPLaunchResult& a_aresult() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gmp::GMPLaunchResult* release_a_aresult();
+  ::protobuf::mozilla::gmp::GMPLaunchResult* mutable_a_aresult();
+  void set_allocated_a_aresult(::protobuf::mozilla::gmp::GMPLaunchResult* a_aresult);
   private:
-  const ::protobuf::mozilla::gmp::GMPLaunchResult& _internal_aresult() const;
-  ::protobuf::mozilla::gmp::GMPLaunchResult* _internal_mutable_aresult();
+  const ::protobuf::mozilla::gmp::GMPLaunchResult& _internal_a_aresult() const;
+  ::protobuf::mozilla::gmp::GMPLaunchResult* _internal_mutable_a_aresult();
   public:
-  void unsafe_arena_set_allocated_aresult(
-      ::protobuf::mozilla::gmp::GMPLaunchResult* aresult);
-  ::protobuf::mozilla::gmp::GMPLaunchResult* unsafe_arena_release_aresult();
+  void unsafe_arena_set_allocated_a_aresult(
+      ::protobuf::mozilla::gmp::GMPLaunchResult* a_aresult);
+  ::protobuf::mozilla::gmp::GMPLaunchResult* unsafe_arena_release_a_aresult();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP)
  private:
@@ -442,7 +442,7 @@ class Reply_LaunchGMP final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::gmp::GMPLaunchResult* aresult_;
+    ::protobuf::mozilla::gmp::GMPLaunchResult* a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPService_2eproto;
@@ -559,62 +559,62 @@ class Msg_GetGMPNodeId final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOriginFieldNumber = 1,
-    kTopLevelOriginFieldNumber = 2,
-    kGmpNameFieldNumber = 3,
+    kAOriginFieldNumber = 1,
+    kATopLevelOriginFieldNumber = 2,
+    kAGmpNameFieldNumber = 3,
   };
-  // required bytes origin = 1;
-  bool has_origin() const;
+  // required bytes a_origin = 1;
+  bool has_a_origin() const;
   private:
-  bool _internal_has_origin() const;
+  bool _internal_has_a_origin() const;
   public:
-  void clear_origin();
-  const std::string& origin() const;
+  void clear_a_origin();
+  const std::string& a_origin() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_origin(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_origin();
-  PROTOBUF_NODISCARD std::string* release_origin();
-  void set_allocated_origin(std::string* origin);
+  void set_a_origin(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_origin();
+  PROTOBUF_NODISCARD std::string* release_a_origin();
+  void set_allocated_a_origin(std::string* a_origin);
   private:
-  const std::string& _internal_origin() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_origin(const std::string& value);
-  std::string* _internal_mutable_origin();
+  const std::string& _internal_a_origin() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_origin(const std::string& value);
+  std::string* _internal_mutable_a_origin();
   public:
 
-  // required bytes topLevelOrigin = 2;
-  bool has_toplevelorigin() const;
+  // required bytes a_topLevelOrigin = 2;
+  bool has_a_toplevelorigin() const;
   private:
-  bool _internal_has_toplevelorigin() const;
+  bool _internal_has_a_toplevelorigin() const;
   public:
-  void clear_toplevelorigin();
-  const std::string& toplevelorigin() const;
+  void clear_a_toplevelorigin();
+  const std::string& a_toplevelorigin() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_toplevelorigin(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_toplevelorigin();
-  PROTOBUF_NODISCARD std::string* release_toplevelorigin();
-  void set_allocated_toplevelorigin(std::string* toplevelorigin);
+  void set_a_toplevelorigin(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_toplevelorigin();
+  PROTOBUF_NODISCARD std::string* release_a_toplevelorigin();
+  void set_allocated_a_toplevelorigin(std::string* a_toplevelorigin);
   private:
-  const std::string& _internal_toplevelorigin() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_toplevelorigin(const std::string& value);
-  std::string* _internal_mutable_toplevelorigin();
+  const std::string& _internal_a_toplevelorigin() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_toplevelorigin(const std::string& value);
+  std::string* _internal_mutable_a_toplevelorigin();
   public:
 
-  // required bytes gmpName = 3;
-  bool has_gmpname() const;
+  // required bytes a_gmpName = 3;
+  bool has_a_gmpname() const;
   private:
-  bool _internal_has_gmpname() const;
+  bool _internal_has_a_gmpname() const;
   public:
-  void clear_gmpname();
-  const std::string& gmpname() const;
+  void clear_a_gmpname();
+  const std::string& a_gmpname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_gmpname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_gmpname();
-  PROTOBUF_NODISCARD std::string* release_gmpname();
-  void set_allocated_gmpname(std::string* gmpname);
+  void set_a_gmpname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_gmpname();
+  PROTOBUF_NODISCARD std::string* release_a_gmpname();
+  void set_allocated_a_gmpname(std::string* a_gmpname);
   private:
-  const std::string& _internal_gmpname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_gmpname(const std::string& value);
-  std::string* _internal_mutable_gmpname();
+  const std::string& _internal_a_gmpname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_gmpname(const std::string& value);
+  std::string* _internal_mutable_a_gmpname();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId)
@@ -630,9 +630,9 @@ class Msg_GetGMPNodeId final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr origin_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr toplevelorigin_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr gmpname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_origin_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_toplevelorigin_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_gmpname_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPService_2eproto;
@@ -749,24 +749,24 @@ class Reply_GetGMPNodeId final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
+    kAIdFieldNumber = 1,
   };
-  // required bytes id = 1;
-  bool has_id() const;
+  // required bytes a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId)
@@ -779,7 +779,7 @@ class Reply_GetGMPNodeId final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPService_2eproto;
@@ -919,41 +919,41 @@ class Msg_BeginShutdown final :
 #endif  // __GNUC__
 // Msg_LaunchGMP
 
-// required .protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
-inline bool Msg_LaunchGMP::_internal_has_nodeidvariant() const {
+// required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
+inline bool Msg_LaunchGMP::_internal_has_a_nodeidvariant() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.nodeidvariant_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_nodeidvariant_ != nullptr);
   return value;
 }
-inline bool Msg_LaunchGMP::has_nodeidvariant() const {
-  return _internal_has_nodeidvariant();
+inline bool Msg_LaunchGMP::has_a_nodeidvariant() const {
+  return _internal_has_a_nodeidvariant();
 }
-inline const ::protobuf::mozilla::gmp::NodeIdVariant& Msg_LaunchGMP::_internal_nodeidvariant() const {
-  const ::protobuf::mozilla::gmp::NodeIdVariant* p = _impl_.nodeidvariant_;
+inline const ::protobuf::mozilla::gmp::NodeIdVariant& Msg_LaunchGMP::_internal_a_nodeidvariant() const {
+  const ::protobuf::mozilla::gmp::NodeIdVariant* p = _impl_.a_nodeidvariant_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gmp::NodeIdVariant&>(
       ::protobuf::mozilla::gmp::_NodeIdVariant_default_instance_);
 }
-inline const ::protobuf::mozilla::gmp::NodeIdVariant& Msg_LaunchGMP::nodeidvariant() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.nodeIdVariant)
-  return _internal_nodeidvariant();
+inline const ::protobuf::mozilla::gmp::NodeIdVariant& Msg_LaunchGMP::a_nodeidvariant() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_nodeIdVariant)
+  return _internal_a_nodeidvariant();
 }
-inline void Msg_LaunchGMP::unsafe_arena_set_allocated_nodeidvariant(
-    ::protobuf::mozilla::gmp::NodeIdVariant* nodeidvariant) {
+inline void Msg_LaunchGMP::unsafe_arena_set_allocated_a_nodeidvariant(
+    ::protobuf::mozilla::gmp::NodeIdVariant* a_nodeidvariant) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.nodeidvariant_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_nodeidvariant_);
   }
-  _impl_.nodeidvariant_ = nodeidvariant;
-  if (nodeidvariant) {
+  _impl_.a_nodeidvariant_ = a_nodeidvariant;
+  if (a_nodeidvariant) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.nodeIdVariant)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_nodeIdVariant)
 }
-inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::release_nodeidvariant() {
+inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::release_a_nodeidvariant() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gmp::NodeIdVariant* temp = _impl_.nodeidvariant_;
-  _impl_.nodeidvariant_ = nullptr;
+  ::protobuf::mozilla::gmp::NodeIdVariant* temp = _impl_.a_nodeidvariant_;
+  _impl_.a_nodeidvariant_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -965,304 +965,304 @@ inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::release_nodeidvar
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::unsafe_arena_release_nodeidvariant() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.nodeIdVariant)
+inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::unsafe_arena_release_a_nodeidvariant() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_nodeIdVariant)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::gmp::NodeIdVariant* temp = _impl_.nodeidvariant_;
-  _impl_.nodeidvariant_ = nullptr;
+  ::protobuf::mozilla::gmp::NodeIdVariant* temp = _impl_.a_nodeidvariant_;
+  _impl_.a_nodeidvariant_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::_internal_mutable_nodeidvariant() {
+inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::_internal_mutable_a_nodeidvariant() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.nodeidvariant_ == nullptr) {
+  if (_impl_.a_nodeidvariant_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::NodeIdVariant>(GetArenaForAllocation());
-    _impl_.nodeidvariant_ = p;
+    _impl_.a_nodeidvariant_ = p;
   }
-  return _impl_.nodeidvariant_;
+  return _impl_.a_nodeidvariant_;
 }
-inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::mutable_nodeidvariant() {
-  ::protobuf::mozilla::gmp::NodeIdVariant* _msg = _internal_mutable_nodeidvariant();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.nodeIdVariant)
+inline ::protobuf::mozilla::gmp::NodeIdVariant* Msg_LaunchGMP::mutable_a_nodeidvariant() {
+  ::protobuf::mozilla::gmp::NodeIdVariant* _msg = _internal_mutable_a_nodeidvariant();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_nodeIdVariant)
   return _msg;
 }
-inline void Msg_LaunchGMP::set_allocated_nodeidvariant(::protobuf::mozilla::gmp::NodeIdVariant* nodeidvariant) {
+inline void Msg_LaunchGMP::set_allocated_a_nodeidvariant(::protobuf::mozilla::gmp::NodeIdVariant* a_nodeidvariant) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.nodeidvariant_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_nodeidvariant_);
   }
-  if (nodeidvariant) {
+  if (a_nodeidvariant) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(nodeidvariant));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_nodeidvariant));
     if (message_arena != submessage_arena) {
-      nodeidvariant = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, nodeidvariant, submessage_arena);
+      a_nodeidvariant = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_nodeidvariant, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.nodeidvariant_ = nodeidvariant;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.nodeIdVariant)
+  _impl_.a_nodeidvariant_ = a_nodeidvariant;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_nodeIdVariant)
 }
 
-// required bytes api = 2;
-inline bool Msg_LaunchGMP::_internal_has_api() const {
+// required bytes a_api = 2;
+inline bool Msg_LaunchGMP::_internal_has_a_api() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_LaunchGMP::has_api() const {
-  return _internal_has_api();
+inline bool Msg_LaunchGMP::has_a_api() const {
+  return _internal_has_a_api();
 }
-inline void Msg_LaunchGMP::clear_api() {
-  _impl_.api_.ClearToEmpty();
+inline void Msg_LaunchGMP::clear_a_api() {
+  _impl_.a_api_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_LaunchGMP::api() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.api)
-  return _internal_api();
+inline const std::string& Msg_LaunchGMP::a_api() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_api)
+  return _internal_a_api();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_LaunchGMP::set_api(ArgT0&& arg0, ArgT... args) {
+void Msg_LaunchGMP::set_a_api(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.api_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.api)
+ _impl_.a_api_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_api)
 }
-inline std::string* Msg_LaunchGMP::mutable_api() {
-  std::string* _s = _internal_mutable_api();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.api)
+inline std::string* Msg_LaunchGMP::mutable_a_api() {
+  std::string* _s = _internal_mutable_a_api();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_api)
   return _s;
 }
-inline const std::string& Msg_LaunchGMP::_internal_api() const {
-  return _impl_.api_.Get();
+inline const std::string& Msg_LaunchGMP::_internal_a_api() const {
+  return _impl_.a_api_.Get();
 }
-inline void Msg_LaunchGMP::_internal_set_api(const std::string& value) {
+inline void Msg_LaunchGMP::_internal_set_a_api(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.api_.Set(value, GetArenaForAllocation());
+  _impl_.a_api_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_LaunchGMP::_internal_mutable_api() {
+inline std::string* Msg_LaunchGMP::_internal_mutable_a_api() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.api_.Mutable(GetArenaForAllocation());
+  return _impl_.a_api_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_LaunchGMP::release_api() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.api)
-  if (!_internal_has_api()) {
+inline std::string* Msg_LaunchGMP::release_a_api() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_api)
+  if (!_internal_has_a_api()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.api_.Release();
+  auto* p = _impl_.a_api_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.api_.IsDefault()) {
-    _impl_.api_.Set("", GetArenaForAllocation());
+  if (_impl_.a_api_.IsDefault()) {
+    _impl_.a_api_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_LaunchGMP::set_allocated_api(std::string* api) {
-  if (api != nullptr) {
+inline void Msg_LaunchGMP::set_allocated_a_api(std::string* a_api) {
+  if (a_api != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.api_.SetAllocated(api, GetArenaForAllocation());
+  _impl_.a_api_.SetAllocated(a_api, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.api_.IsDefault()) {
-    _impl_.api_.Set("", GetArenaForAllocation());
+  if (_impl_.a_api_.IsDefault()) {
+    _impl_.a_api_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.api)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_api)
 }
 
-// repeated bytes tags = 3;
-inline int Msg_LaunchGMP::_internal_tags_size() const {
-  return _impl_.tags_.size();
+// repeated bytes a_tags = 3;
+inline int Msg_LaunchGMP::_internal_a_tags_size() const {
+  return _impl_.a_tags_.size();
 }
-inline int Msg_LaunchGMP::tags_size() const {
-  return _internal_tags_size();
+inline int Msg_LaunchGMP::a_tags_size() const {
+  return _internal_a_tags_size();
 }
-inline void Msg_LaunchGMP::clear_tags() {
-  _impl_.tags_.Clear();
+inline void Msg_LaunchGMP::clear_a_tags() {
+  _impl_.a_tags_.Clear();
 }
-inline std::string* Msg_LaunchGMP::add_tags() {
-  std::string* _s = _internal_add_tags();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+inline std::string* Msg_LaunchGMP::add_a_tags() {
+  std::string* _s = _internal_add_a_tags();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
   return _s;
 }
-inline const std::string& Msg_LaunchGMP::_internal_tags(int index) const {
-  return _impl_.tags_.Get(index);
+inline const std::string& Msg_LaunchGMP::_internal_a_tags(int index) const {
+  return _impl_.a_tags_.Get(index);
 }
-inline const std::string& Msg_LaunchGMP::tags(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
-  return _internal_tags(index);
+inline const std::string& Msg_LaunchGMP::a_tags(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
+  return _internal_a_tags(index);
 }
-inline std::string* Msg_LaunchGMP::mutable_tags(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
-  return _impl_.tags_.Mutable(index);
+inline std::string* Msg_LaunchGMP::mutable_a_tags(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
+  return _impl_.a_tags_.Mutable(index);
 }
-inline void Msg_LaunchGMP::set_tags(int index, const std::string& value) {
-  _impl_.tags_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+inline void Msg_LaunchGMP::set_a_tags(int index, const std::string& value) {
+  _impl_.a_tags_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline void Msg_LaunchGMP::set_tags(int index, std::string&& value) {
-  _impl_.tags_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+inline void Msg_LaunchGMP::set_a_tags(int index, std::string&& value) {
+  _impl_.a_tags_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline void Msg_LaunchGMP::set_tags(int index, const char* value) {
+inline void Msg_LaunchGMP::set_a_tags(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.tags_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+  _impl_.a_tags_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline void Msg_LaunchGMP::set_tags(int index, const void* value, size_t size) {
-  _impl_.tags_.Mutable(index)->assign(
+inline void Msg_LaunchGMP::set_a_tags(int index, const void* value, size_t size) {
+  _impl_.a_tags_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline std::string* Msg_LaunchGMP::_internal_add_tags() {
-  return _impl_.tags_.Add();
+inline std::string* Msg_LaunchGMP::_internal_add_a_tags() {
+  return _impl_.a_tags_.Add();
 }
-inline void Msg_LaunchGMP::add_tags(const std::string& value) {
-  _impl_.tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+inline void Msg_LaunchGMP::add_a_tags(const std::string& value) {
+  _impl_.a_tags_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline void Msg_LaunchGMP::add_tags(std::string&& value) {
-  _impl_.tags_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+inline void Msg_LaunchGMP::add_a_tags(std::string&& value) {
+  _impl_.a_tags_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline void Msg_LaunchGMP::add_tags(const char* value) {
+inline void Msg_LaunchGMP::add_a_tags(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+  _impl_.a_tags_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
-inline void Msg_LaunchGMP::add_tags(const void* value, size_t size) {
-  _impl_.tags_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
+inline void Msg_LaunchGMP::add_a_tags(const void* value, size_t size) {
+  _impl_.a_tags_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_LaunchGMP::tags() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
-  return _impl_.tags_;
+Msg_LaunchGMP::a_tags() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
+  return _impl_.a_tags_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_LaunchGMP::mutable_tags() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.tags)
-  return &_impl_.tags_;
+Msg_LaunchGMP::mutable_a_tags() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_tags)
+  return &_impl_.a_tags_;
 }
 
-// repeated bytes alreadyBridgedTo = 4;
-inline int Msg_LaunchGMP::_internal_alreadybridgedto_size() const {
-  return _impl_.alreadybridgedto_.size();
+// repeated bytes a_alreadyBridgedTo = 4;
+inline int Msg_LaunchGMP::_internal_a_alreadybridgedto_size() const {
+  return _impl_.a_alreadybridgedto_.size();
 }
-inline int Msg_LaunchGMP::alreadybridgedto_size() const {
-  return _internal_alreadybridgedto_size();
+inline int Msg_LaunchGMP::a_alreadybridgedto_size() const {
+  return _internal_a_alreadybridgedto_size();
 }
-inline void Msg_LaunchGMP::clear_alreadybridgedto() {
-  _impl_.alreadybridgedto_.Clear();
+inline void Msg_LaunchGMP::clear_a_alreadybridgedto() {
+  _impl_.a_alreadybridgedto_.Clear();
 }
-inline std::string* Msg_LaunchGMP::add_alreadybridgedto() {
-  std::string* _s = _internal_add_alreadybridgedto();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+inline std::string* Msg_LaunchGMP::add_a_alreadybridgedto() {
+  std::string* _s = _internal_add_a_alreadybridgedto();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
   return _s;
 }
-inline const std::string& Msg_LaunchGMP::_internal_alreadybridgedto(int index) const {
-  return _impl_.alreadybridgedto_.Get(index);
+inline const std::string& Msg_LaunchGMP::_internal_a_alreadybridgedto(int index) const {
+  return _impl_.a_alreadybridgedto_.Get(index);
 }
-inline const std::string& Msg_LaunchGMP::alreadybridgedto(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
-  return _internal_alreadybridgedto(index);
+inline const std::string& Msg_LaunchGMP::a_alreadybridgedto(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
+  return _internal_a_alreadybridgedto(index);
 }
-inline std::string* Msg_LaunchGMP::mutable_alreadybridgedto(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
-  return _impl_.alreadybridgedto_.Mutable(index);
+inline std::string* Msg_LaunchGMP::mutable_a_alreadybridgedto(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
+  return _impl_.a_alreadybridgedto_.Mutable(index);
 }
-inline void Msg_LaunchGMP::set_alreadybridgedto(int index, const std::string& value) {
-  _impl_.alreadybridgedto_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+inline void Msg_LaunchGMP::set_a_alreadybridgedto(int index, const std::string& value) {
+  _impl_.a_alreadybridgedto_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline void Msg_LaunchGMP::set_alreadybridgedto(int index, std::string&& value) {
-  _impl_.alreadybridgedto_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+inline void Msg_LaunchGMP::set_a_alreadybridgedto(int index, std::string&& value) {
+  _impl_.a_alreadybridgedto_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline void Msg_LaunchGMP::set_alreadybridgedto(int index, const char* value) {
+inline void Msg_LaunchGMP::set_a_alreadybridgedto(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.alreadybridgedto_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+  _impl_.a_alreadybridgedto_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline void Msg_LaunchGMP::set_alreadybridgedto(int index, const void* value, size_t size) {
-  _impl_.alreadybridgedto_.Mutable(index)->assign(
+inline void Msg_LaunchGMP::set_a_alreadybridgedto(int index, const void* value, size_t size) {
+  _impl_.a_alreadybridgedto_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline std::string* Msg_LaunchGMP::_internal_add_alreadybridgedto() {
-  return _impl_.alreadybridgedto_.Add();
+inline std::string* Msg_LaunchGMP::_internal_add_a_alreadybridgedto() {
+  return _impl_.a_alreadybridgedto_.Add();
 }
-inline void Msg_LaunchGMP::add_alreadybridgedto(const std::string& value) {
-  _impl_.alreadybridgedto_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+inline void Msg_LaunchGMP::add_a_alreadybridgedto(const std::string& value) {
+  _impl_.a_alreadybridgedto_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline void Msg_LaunchGMP::add_alreadybridgedto(std::string&& value) {
-  _impl_.alreadybridgedto_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+inline void Msg_LaunchGMP::add_a_alreadybridgedto(std::string&& value) {
+  _impl_.a_alreadybridgedto_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline void Msg_LaunchGMP::add_alreadybridgedto(const char* value) {
+inline void Msg_LaunchGMP::add_a_alreadybridgedto(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.alreadybridgedto_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+  _impl_.a_alreadybridgedto_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
-inline void Msg_LaunchGMP::add_alreadybridgedto(const void* value, size_t size) {
-  _impl_.alreadybridgedto_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
+inline void Msg_LaunchGMP::add_a_alreadybridgedto(const void* value, size_t size) {
+  _impl_.a_alreadybridgedto_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_LaunchGMP::alreadybridgedto() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
-  return _impl_.alreadybridgedto_;
+Msg_LaunchGMP::a_alreadybridgedto() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
+  return _impl_.a_alreadybridgedto_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_LaunchGMP::mutable_alreadybridgedto() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.alreadyBridgedTo)
-  return &_impl_.alreadybridgedto_;
+Msg_LaunchGMP::mutable_a_alreadybridgedto() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gmp.PGMPService.Msg_LaunchGMP.a_alreadyBridgedTo)
+  return &_impl_.a_alreadybridgedto_;
 }
 
 // -------------------------------------------------------------------
 
 // Reply_LaunchGMP
 
-// required .protobuf.mozilla.gmp.GMPLaunchResult aResult = 1;
-inline bool Reply_LaunchGMP::_internal_has_aresult() const {
+// required .protobuf.mozilla.gmp.GMPLaunchResult a_aResult = 1;
+inline bool Reply_LaunchGMP::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aresult_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aresult_ != nullptr);
   return value;
 }
-inline bool Reply_LaunchGMP::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Reply_LaunchGMP::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline const ::protobuf::mozilla::gmp::GMPLaunchResult& Reply_LaunchGMP::_internal_aresult() const {
-  const ::protobuf::mozilla::gmp::GMPLaunchResult* p = _impl_.aresult_;
+inline const ::protobuf::mozilla::gmp::GMPLaunchResult& Reply_LaunchGMP::_internal_a_aresult() const {
+  const ::protobuf::mozilla::gmp::GMPLaunchResult* p = _impl_.a_aresult_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::gmp::GMPLaunchResult&>(
       ::protobuf::mozilla::gmp::_GMPLaunchResult_default_instance_);
 }
-inline const ::protobuf::mozilla::gmp::GMPLaunchResult& Reply_LaunchGMP::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.aResult)
-  return _internal_aresult();
+inline const ::protobuf::mozilla::gmp::GMPLaunchResult& Reply_LaunchGMP::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.a_aResult)
+  return _internal_a_aresult();
 }
-inline void Reply_LaunchGMP::unsafe_arena_set_allocated_aresult(
-    ::protobuf::mozilla::gmp::GMPLaunchResult* aresult) {
+inline void Reply_LaunchGMP::unsafe_arena_set_allocated_a_aresult(
+    ::protobuf::mozilla::gmp::GMPLaunchResult* a_aresult) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aresult_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aresult_);
   }
-  _impl_.aresult_ = aresult;
-  if (aresult) {
+  _impl_.a_aresult_ = a_aresult;
+  if (a_aresult) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.aResult)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.a_aResult)
 }
-inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::release_aresult() {
+inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::release_a_aresult() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gmp::GMPLaunchResult* temp = _impl_.aresult_;
-  _impl_.aresult_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPLaunchResult* temp = _impl_.a_aresult_;
+  _impl_.a_aresult_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1274,325 +1274,325 @@ inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::release_aresu
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::unsafe_arena_release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.aResult)
+inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::unsafe_arena_release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.a_aResult)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::gmp::GMPLaunchResult* temp = _impl_.aresult_;
-  _impl_.aresult_ = nullptr;
+  ::protobuf::mozilla::gmp::GMPLaunchResult* temp = _impl_.a_aresult_;
+  _impl_.a_aresult_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::_internal_mutable_aresult() {
+inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aresult_ == nullptr) {
+  if (_impl_.a_aresult_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPLaunchResult>(GetArenaForAllocation());
-    _impl_.aresult_ = p;
+    _impl_.a_aresult_ = p;
   }
-  return _impl_.aresult_;
+  return _impl_.a_aresult_;
 }
-inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::mutable_aresult() {
-  ::protobuf::mozilla::gmp::GMPLaunchResult* _msg = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.aResult)
+inline ::protobuf::mozilla::gmp::GMPLaunchResult* Reply_LaunchGMP::mutable_a_aresult() {
+  ::protobuf::mozilla::gmp::GMPLaunchResult* _msg = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.a_aResult)
   return _msg;
 }
-inline void Reply_LaunchGMP::set_allocated_aresult(::protobuf::mozilla::gmp::GMPLaunchResult* aresult) {
+inline void Reply_LaunchGMP::set_allocated_a_aresult(::protobuf::mozilla::gmp::GMPLaunchResult* a_aresult) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aresult_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aresult_);
   }
-  if (aresult) {
+  if (a_aresult) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aresult));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aresult));
     if (message_arena != submessage_arena) {
-      aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aresult, submessage_arena);
+      a_aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aresult, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresult_ = aresult;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.aResult)
+  _impl_.a_aresult_ = a_aresult;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Reply_LaunchGMP.a_aResult)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetGMPNodeId
 
-// required bytes origin = 1;
-inline bool Msg_GetGMPNodeId::_internal_has_origin() const {
+// required bytes a_origin = 1;
+inline bool Msg_GetGMPNodeId::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetGMPNodeId::has_origin() const {
-  return _internal_has_origin();
+inline bool Msg_GetGMPNodeId::has_a_origin() const {
+  return _internal_has_a_origin();
 }
-inline void Msg_GetGMPNodeId::clear_origin() {
-  _impl_.origin_.ClearToEmpty();
+inline void Msg_GetGMPNodeId::clear_a_origin() {
+  _impl_.a_origin_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetGMPNodeId::origin() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.origin)
-  return _internal_origin();
+inline const std::string& Msg_GetGMPNodeId::a_origin() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_origin)
+  return _internal_a_origin();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetGMPNodeId::set_origin(ArgT0&& arg0, ArgT... args) {
+void Msg_GetGMPNodeId::set_a_origin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.origin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.origin)
+ _impl_.a_origin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_origin)
 }
-inline std::string* Msg_GetGMPNodeId::mutable_origin() {
-  std::string* _s = _internal_mutable_origin();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.origin)
+inline std::string* Msg_GetGMPNodeId::mutable_a_origin() {
+  std::string* _s = _internal_mutable_a_origin();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_origin)
   return _s;
 }
-inline const std::string& Msg_GetGMPNodeId::_internal_origin() const {
-  return _impl_.origin_.Get();
+inline const std::string& Msg_GetGMPNodeId::_internal_a_origin() const {
+  return _impl_.a_origin_.Get();
 }
-inline void Msg_GetGMPNodeId::_internal_set_origin(const std::string& value) {
+inline void Msg_GetGMPNodeId::_internal_set_a_origin(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.origin_.Set(value, GetArenaForAllocation());
+  _impl_.a_origin_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetGMPNodeId::_internal_mutable_origin() {
+inline std::string* Msg_GetGMPNodeId::_internal_mutable_a_origin() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.origin_.Mutable(GetArenaForAllocation());
+  return _impl_.a_origin_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetGMPNodeId::release_origin() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.origin)
-  if (!_internal_has_origin()) {
+inline std::string* Msg_GetGMPNodeId::release_a_origin() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_origin)
+  if (!_internal_has_a_origin()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.origin_.Release();
+  auto* p = _impl_.a_origin_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.origin_.IsDefault()) {
-    _impl_.origin_.Set("", GetArenaForAllocation());
+  if (_impl_.a_origin_.IsDefault()) {
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetGMPNodeId::set_allocated_origin(std::string* origin) {
-  if (origin != nullptr) {
+inline void Msg_GetGMPNodeId::set_allocated_a_origin(std::string* a_origin) {
+  if (a_origin != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.origin_.SetAllocated(origin, GetArenaForAllocation());
+  _impl_.a_origin_.SetAllocated(a_origin, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.origin_.IsDefault()) {
-    _impl_.origin_.Set("", GetArenaForAllocation());
+  if (_impl_.a_origin_.IsDefault()) {
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.origin)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_origin)
 }
 
-// required bytes topLevelOrigin = 2;
-inline bool Msg_GetGMPNodeId::_internal_has_toplevelorigin() const {
+// required bytes a_topLevelOrigin = 2;
+inline bool Msg_GetGMPNodeId::_internal_has_a_toplevelorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetGMPNodeId::has_toplevelorigin() const {
-  return _internal_has_toplevelorigin();
+inline bool Msg_GetGMPNodeId::has_a_toplevelorigin() const {
+  return _internal_has_a_toplevelorigin();
 }
-inline void Msg_GetGMPNodeId::clear_toplevelorigin() {
-  _impl_.toplevelorigin_.ClearToEmpty();
+inline void Msg_GetGMPNodeId::clear_a_toplevelorigin() {
+  _impl_.a_toplevelorigin_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_GetGMPNodeId::toplevelorigin() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.topLevelOrigin)
-  return _internal_toplevelorigin();
+inline const std::string& Msg_GetGMPNodeId::a_toplevelorigin() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_topLevelOrigin)
+  return _internal_a_toplevelorigin();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetGMPNodeId::set_toplevelorigin(ArgT0&& arg0, ArgT... args) {
+void Msg_GetGMPNodeId::set_a_toplevelorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.toplevelorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.topLevelOrigin)
+ _impl_.a_toplevelorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_topLevelOrigin)
 }
-inline std::string* Msg_GetGMPNodeId::mutable_toplevelorigin() {
-  std::string* _s = _internal_mutable_toplevelorigin();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.topLevelOrigin)
+inline std::string* Msg_GetGMPNodeId::mutable_a_toplevelorigin() {
+  std::string* _s = _internal_mutable_a_toplevelorigin();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_topLevelOrigin)
   return _s;
 }
-inline const std::string& Msg_GetGMPNodeId::_internal_toplevelorigin() const {
-  return _impl_.toplevelorigin_.Get();
+inline const std::string& Msg_GetGMPNodeId::_internal_a_toplevelorigin() const {
+  return _impl_.a_toplevelorigin_.Get();
 }
-inline void Msg_GetGMPNodeId::_internal_set_toplevelorigin(const std::string& value) {
+inline void Msg_GetGMPNodeId::_internal_set_a_toplevelorigin(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.toplevelorigin_.Set(value, GetArenaForAllocation());
+  _impl_.a_toplevelorigin_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetGMPNodeId::_internal_mutable_toplevelorigin() {
+inline std::string* Msg_GetGMPNodeId::_internal_mutable_a_toplevelorigin() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.toplevelorigin_.Mutable(GetArenaForAllocation());
+  return _impl_.a_toplevelorigin_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetGMPNodeId::release_toplevelorigin() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.topLevelOrigin)
-  if (!_internal_has_toplevelorigin()) {
+inline std::string* Msg_GetGMPNodeId::release_a_toplevelorigin() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_topLevelOrigin)
+  if (!_internal_has_a_toplevelorigin()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.toplevelorigin_.Release();
+  auto* p = _impl_.a_toplevelorigin_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.toplevelorigin_.IsDefault()) {
-    _impl_.toplevelorigin_.Set("", GetArenaForAllocation());
+  if (_impl_.a_toplevelorigin_.IsDefault()) {
+    _impl_.a_toplevelorigin_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetGMPNodeId::set_allocated_toplevelorigin(std::string* toplevelorigin) {
-  if (toplevelorigin != nullptr) {
+inline void Msg_GetGMPNodeId::set_allocated_a_toplevelorigin(std::string* a_toplevelorigin) {
+  if (a_toplevelorigin != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.toplevelorigin_.SetAllocated(toplevelorigin, GetArenaForAllocation());
+  _impl_.a_toplevelorigin_.SetAllocated(a_toplevelorigin, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.toplevelorigin_.IsDefault()) {
-    _impl_.toplevelorigin_.Set("", GetArenaForAllocation());
+  if (_impl_.a_toplevelorigin_.IsDefault()) {
+    _impl_.a_toplevelorigin_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.topLevelOrigin)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_topLevelOrigin)
 }
 
-// required bytes gmpName = 3;
-inline bool Msg_GetGMPNodeId::_internal_has_gmpname() const {
+// required bytes a_gmpName = 3;
+inline bool Msg_GetGMPNodeId::_internal_has_a_gmpname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetGMPNodeId::has_gmpname() const {
-  return _internal_has_gmpname();
+inline bool Msg_GetGMPNodeId::has_a_gmpname() const {
+  return _internal_has_a_gmpname();
 }
-inline void Msg_GetGMPNodeId::clear_gmpname() {
-  _impl_.gmpname_.ClearToEmpty();
+inline void Msg_GetGMPNodeId::clear_a_gmpname() {
+  _impl_.a_gmpname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_GetGMPNodeId::gmpname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.gmpName)
-  return _internal_gmpname();
+inline const std::string& Msg_GetGMPNodeId::a_gmpname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_gmpName)
+  return _internal_a_gmpname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetGMPNodeId::set_gmpname(ArgT0&& arg0, ArgT... args) {
+void Msg_GetGMPNodeId::set_a_gmpname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.gmpname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.gmpName)
+ _impl_.a_gmpname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_gmpName)
 }
-inline std::string* Msg_GetGMPNodeId::mutable_gmpname() {
-  std::string* _s = _internal_mutable_gmpname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.gmpName)
+inline std::string* Msg_GetGMPNodeId::mutable_a_gmpname() {
+  std::string* _s = _internal_mutable_a_gmpname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_gmpName)
   return _s;
 }
-inline const std::string& Msg_GetGMPNodeId::_internal_gmpname() const {
-  return _impl_.gmpname_.Get();
+inline const std::string& Msg_GetGMPNodeId::_internal_a_gmpname() const {
+  return _impl_.a_gmpname_.Get();
 }
-inline void Msg_GetGMPNodeId::_internal_set_gmpname(const std::string& value) {
+inline void Msg_GetGMPNodeId::_internal_set_a_gmpname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.gmpname_.Set(value, GetArenaForAllocation());
+  _impl_.a_gmpname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetGMPNodeId::_internal_mutable_gmpname() {
+inline std::string* Msg_GetGMPNodeId::_internal_mutable_a_gmpname() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.gmpname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_gmpname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetGMPNodeId::release_gmpname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.gmpName)
-  if (!_internal_has_gmpname()) {
+inline std::string* Msg_GetGMPNodeId::release_a_gmpname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_gmpName)
+  if (!_internal_has_a_gmpname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.gmpname_.Release();
+  auto* p = _impl_.a_gmpname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.gmpname_.IsDefault()) {
-    _impl_.gmpname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_gmpname_.IsDefault()) {
+    _impl_.a_gmpname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetGMPNodeId::set_allocated_gmpname(std::string* gmpname) {
-  if (gmpname != nullptr) {
+inline void Msg_GetGMPNodeId::set_allocated_a_gmpname(std::string* a_gmpname) {
+  if (a_gmpname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.gmpname_.SetAllocated(gmpname, GetArenaForAllocation());
+  _impl_.a_gmpname_.SetAllocated(a_gmpname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.gmpname_.IsDefault()) {
-    _impl_.gmpname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_gmpname_.IsDefault()) {
+    _impl_.a_gmpname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.gmpName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Msg_GetGMPNodeId.a_gmpName)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetGMPNodeId
 
-// required bytes id = 1;
-inline bool Reply_GetGMPNodeId::_internal_has_id() const {
+// required bytes a_id = 1;
+inline bool Reply_GetGMPNodeId::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetGMPNodeId::has_id() const {
-  return _internal_has_id();
+inline bool Reply_GetGMPNodeId::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Reply_GetGMPNodeId::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void Reply_GetGMPNodeId::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetGMPNodeId::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.id)
-  return _internal_id();
+inline const std::string& Reply_GetGMPNodeId::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.a_id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetGMPNodeId::set_id(ArgT0&& arg0, ArgT... args) {
+void Reply_GetGMPNodeId::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.a_id)
 }
-inline std::string* Reply_GetGMPNodeId::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.id)
+inline std::string* Reply_GetGMPNodeId::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.a_id)
   return _s;
 }
-inline const std::string& Reply_GetGMPNodeId::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& Reply_GetGMPNodeId::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void Reply_GetGMPNodeId::_internal_set_id(const std::string& value) {
+inline void Reply_GetGMPNodeId::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetGMPNodeId::_internal_mutable_id() {
+inline std::string* Reply_GetGMPNodeId::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetGMPNodeId::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.id)
-  if (!_internal_has_id()) {
+inline std::string* Reply_GetGMPNodeId::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.a_id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetGMPNodeId::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void Reply_GetGMPNodeId::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId.a_id)
 }
 
 // -------------------------------------------------------------------

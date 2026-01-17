@@ -14,12 +14,12 @@ import "PBackgroundLSSharedTypes.proto";
 
 // Structs and unions declarations
 message LSSnapshotInitInfo {
-  required bool addKeyToUnknownItems = 1;
-  repeated protobuf.mozilla.dom.LSItemInfo itemInfos = 2;
-  required uint32 totalLength = 3;
-  required sint64 usage = 4;
-  required sint64 peakUsage = 5;
-  required bytes loadState = 6;
-  required bool hasOtherProcessDatabases = 7;
-  required bool hasOtherProcessObservers = 8;
+  required bool a_addKeyToUnknownItems = 1;
+  repeated protobuf.mozilla.dom.LSItemInfo a_itemInfos = 2;
+  required uint32 a_totalLength = 3;
+  required sint64 a_usage = 4;
+  required sint64 a_peakUsage = 5;
+  required bytes a_loadState = 6;
+  required bool a_hasOtherProcessDatabases = 7;
+  required bool a_hasOtherProcessObservers = 8;
 }

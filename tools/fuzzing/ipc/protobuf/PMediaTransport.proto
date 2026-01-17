@@ -17,11 +17,11 @@ import "WebrtcProxyConfig.proto";
 
 // Message declarations
 message Msg_GetIceLog {
-  required bytes pattern = 1;
+  required bytes a_pattern = 1;
 }
 
 message Reply_GetIceLog {
-  required bytes loglines = 1;
+  required bytes a_loglines = 1;
 }
 
 message Msg_ClearIceLog {
@@ -34,122 +34,122 @@ message Msg_ExitPrivateMode {
 }
 
 message Msg_CreateIceCtx {
-  required string name = 1;
+  required string a_name = 1;
 }
 
 message Msg_SetIceConfig {
-  repeated bytes iceServers = 1;
-  required bytes icePolicy = 2;
+  repeated bytes a_iceServers = 1;
+  required bytes a_icePolicy = 2;
 }
 
 message Msg_SetProxyConfig {
-  required protobuf.mozilla.net.WebrtcProxyConfig proxyConfig = 1;
+  required protobuf.mozilla.net.WebrtcProxyConfig a_proxyConfig = 1;
 }
 
 message Msg_EnsureProvisionalTransport {
-  required string transportId = 1;
-  required string localUfrag = 2;
-  required string localPwd = 3;
-  required sint32 componentCount = 4;
+  required string a_transportId = 1;
+  required string a_localUfrag = 2;
+  required string a_localPwd = 3;
+  required sint32 a_componentCount = 4;
 }
 
 message Msg_SetTargetForDefaultLocalAddressLookup {
-  required string targetIp = 1;
-  required uint32 targetPort = 2;
+  required string a_targetIp = 1;
+  required uint32 a_targetPort = 2;
 }
 
 message Msg_StartIceGathering {
-  required bool defaultRouteOnly = 1;
-  required bool obfuscateHostAddresses = 2;
-  required bytes stunAddrs = 3;
+  required bool a_defaultRouteOnly = 1;
+  required bool a_obfuscateHostAddresses = 2;
+  required bytes a_stunAddrs = 3;
 }
 
 message Msg_ActivateTransport {
-  required string transportId = 1;
-  required string localUfrag = 2;
-  required string localPwd = 3;
-  required sint32 componentCount = 4;
-  required string remoteUfrag = 5;
-  required string remotePwd = 6;
-  repeated uint32 keyDer = 7;
-  repeated uint32 certDer = 8;
-  required sint32 authType = 9;
-  required bool dtlsClient = 10;
-  required bytes digests = 11;
-  required bool privacyRequested = 12;
+  required string a_transportId = 1;
+  required string a_localUfrag = 2;
+  required string a_localPwd = 3;
+  required sint32 a_componentCount = 4;
+  required string a_remoteUfrag = 5;
+  required string a_remotePwd = 6;
+  repeated uint32 a_keyDer = 7;
+  repeated uint32 a_certDer = 8;
+  required sint32 a_authType = 9;
+  required bool a_dtlsClient = 10;
+  required bytes a_digests = 11;
+  required bool a_privacyRequested = 12;
 }
 
 message Msg_RemoveTransportsExcept {
-  required bytes transportIds = 1;
+  required bytes a_transportIds = 1;
 }
 
 message Msg_StartIceChecks {
-  required bool isControlling = 1;
-  required bytes iceOptions = 2;
+  required bool a_isControlling = 1;
+  required bytes a_iceOptions = 2;
 }
 
 message Msg_SendPacket {
-  required string transportId = 1;
-  required bytes packet = 2;
+  required string a_transportId = 1;
+  required bytes a_packet = 2;
 }
 
 message Msg_AddIceCandidate {
-  required string transportId = 1;
-  required string candidate = 2;
-  required string ufrag = 3;
-  required string obfuscatedAddr = 4;
+  required string a_transportId = 1;
+  required string a_candidate = 2;
+  required string a_ufrag = 3;
+  required string a_obfuscatedAddr = 4;
 }
 
 message Msg_UpdateNetworkState {
-  required bool online = 1;
+  required bool a_online = 1;
 }
 
 message Msg_GetIceStats {
-  required string transportId = 1;
-  required double now = 2;
+  required string a_transportId = 1;
+  required double a_now = 2;
 }
 
 message Reply_GetIceStats {
-  required bytes stats = 1;
+  required bytes a_stats = 1;
 }
 
 message Msg_OnCandidate {
-  required string transportId = 1;
-  required bytes candidateInfo = 2;
+  required string a_transportId = 1;
+  required bytes a_candidateInfo = 2;
 }
 
 message Msg_OnAlpnNegotiated {
-  required string alpn = 1;
+  required string a_alpn = 1;
 }
 
 message Msg_OnGatheringStateChange {
-  required string transportId = 1;
-  required sint32 state = 2;
+  required string a_transportId = 1;
+  required sint32 a_state = 2;
 }
 
 message Msg_OnConnectionStateChange {
-  required string transportId = 1;
-  required sint32 state = 2;
+  required string a_transportId = 1;
+  required sint32 a_state = 2;
 }
 
 message Msg_OnPacketReceived {
-  required string transportId = 1;
-  required bytes packet = 2;
+  required string a_transportId = 1;
+  required bytes a_packet = 2;
 }
 
 message Msg_OnEncryptedSending {
-  required string transportId = 1;
-  required bytes packet = 2;
+  required string a_transportId = 1;
+  required bytes a_packet = 2;
 }
 
 message Msg_OnStateChange {
-  required string transportId = 1;
-  required sint32 state = 2;
+  required string a_transportId = 1;
+  required sint32 a_state = 2;
 }
 
 message Msg_OnRtcpStateChange {
-  required string transportId = 1;
-  required sint32 state = 2;
+  required string a_transportId = 1;
+  required sint32 a_state = 2;
 }
 
 // Parameter mappings stats:

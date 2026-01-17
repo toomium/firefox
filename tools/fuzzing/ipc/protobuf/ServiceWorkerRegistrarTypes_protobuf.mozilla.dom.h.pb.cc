@@ -24,16 +24,16 @@ PROTOBUF_CONSTEXPR ServiceWorkerRegistrationData::ServiceWorkerRegistrationData(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.scope_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.currentworkerurl_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.cachename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.principal_)*/nullptr
-  , /*decltype(_impl_.navigationpreloadstate_)*/nullptr
-  , /*decltype(_impl_.currentworkerhandlesfetch_)*/false
-  , /*decltype(_impl_.updateviacache_)*/0u
-  , /*decltype(_impl_.currentworkerinstalledtime_)*/int64_t{0}
-  , /*decltype(_impl_.currentworkeractivatedtime_)*/int64_t{0}
-  , /*decltype(_impl_.lastupdatetime_)*/int64_t{0}} {}
+  , /*decltype(_impl_.a_scope_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_currentworkerurl_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_cachename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_principal_)*/nullptr
+  , /*decltype(_impl_.a_navigationpreloadstate_)*/nullptr
+  , /*decltype(_impl_.a_currentworkerhandlesfetch_)*/false
+  , /*decltype(_impl_.a_updateviacache_)*/0u
+  , /*decltype(_impl_.a_currentworkerinstalledtime_)*/int64_t{0}
+  , /*decltype(_impl_.a_currentworkeractivatedtime_)*/int64_t{0}
+  , /*decltype(_impl_.a_lastupdatetime_)*/int64_t{0}} {}
 struct ServiceWorkerRegistrationDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ServiceWorkerRegistrationDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -55,36 +55,36 @@ namespace dom {
 class ServiceWorkerRegistrationData::_Internal {
  public:
   using HasBits = decltype(std::declval<ServiceWorkerRegistrationData>()._impl_._has_bits_);
-  static void set_has_scope(HasBits* has_bits) {
+  static void set_has_a_scope(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_currentworkerurl(HasBits* has_bits) {
+  static void set_has_a_currentworkerurl(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_currentworkerhandlesfetch(HasBits* has_bits) {
+  static void set_has_a_currentworkerhandlesfetch(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_cachename(HasBits* has_bits) {
+  static void set_has_a_cachename(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static const ::protobuf::mozilla::ipc::PrincipalInfo& principal(const ServiceWorkerRegistrationData* msg);
-  static void set_has_principal(HasBits* has_bits) {
+  static const ::protobuf::mozilla::ipc::PrincipalInfo& a_principal(const ServiceWorkerRegistrationData* msg);
+  static void set_has_a_principal(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_updateviacache(HasBits* has_bits) {
+  static void set_has_a_updateviacache(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_currentworkerinstalledtime(HasBits* has_bits) {
+  static void set_has_a_currentworkerinstalledtime(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_currentworkeractivatedtime(HasBits* has_bits) {
+  static void set_has_a_currentworkeractivatedtime(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
-  static void set_has_lastupdatetime(HasBits* has_bits) {
+  static void set_has_a_lastupdatetime(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
-  static const ::protobuf::mozilla::dom::IPCNavigationPreloadState& navigationpreloadstate(const ServiceWorkerRegistrationData* msg);
-  static void set_has_navigationpreloadstate(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::IPCNavigationPreloadState& a_navigationpreloadstate(const ServiceWorkerRegistrationData* msg);
+  static void set_has_a_navigationpreloadstate(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -93,19 +93,19 @@ class ServiceWorkerRegistrationData::_Internal {
 };
 
 const ::protobuf::mozilla::ipc::PrincipalInfo&
-ServiceWorkerRegistrationData::_Internal::principal(const ServiceWorkerRegistrationData* msg) {
-  return *msg->_impl_.principal_;
+ServiceWorkerRegistrationData::_Internal::a_principal(const ServiceWorkerRegistrationData* msg) {
+  return *msg->_impl_.a_principal_;
 }
 const ::protobuf::mozilla::dom::IPCNavigationPreloadState&
-ServiceWorkerRegistrationData::_Internal::navigationpreloadstate(const ServiceWorkerRegistrationData* msg) {
-  return *msg->_impl_.navigationpreloadstate_;
+ServiceWorkerRegistrationData::_Internal::a_navigationpreloadstate(const ServiceWorkerRegistrationData* msg) {
+  return *msg->_impl_.a_navigationpreloadstate_;
 }
-void ServiceWorkerRegistrationData::clear_principal() {
-  if (_impl_.principal_ != nullptr) _impl_.principal_->Clear();
+void ServiceWorkerRegistrationData::clear_a_principal() {
+  if (_impl_.a_principal_ != nullptr) _impl_.a_principal_->Clear();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-void ServiceWorkerRegistrationData::clear_navigationpreloadstate() {
-  if (_impl_.navigationpreloadstate_ != nullptr) _impl_.navigationpreloadstate_->Clear();
+void ServiceWorkerRegistrationData::clear_a_navigationpreloadstate() {
+  if (_impl_.a_navigationpreloadstate_ != nullptr) _impl_.a_navigationpreloadstate_->Clear();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
 ServiceWorkerRegistrationData::ServiceWorkerRegistrationData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -120,51 +120,51 @@ ServiceWorkerRegistrationData::ServiceWorkerRegistrationData(const ServiceWorker
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.scope_){}
-    , decltype(_impl_.currentworkerurl_){}
-    , decltype(_impl_.cachename_){}
-    , decltype(_impl_.principal_){nullptr}
-    , decltype(_impl_.navigationpreloadstate_){nullptr}
-    , decltype(_impl_.currentworkerhandlesfetch_){}
-    , decltype(_impl_.updateviacache_){}
-    , decltype(_impl_.currentworkerinstalledtime_){}
-    , decltype(_impl_.currentworkeractivatedtime_){}
-    , decltype(_impl_.lastupdatetime_){}};
+    , decltype(_impl_.a_scope_){}
+    , decltype(_impl_.a_currentworkerurl_){}
+    , decltype(_impl_.a_cachename_){}
+    , decltype(_impl_.a_principal_){nullptr}
+    , decltype(_impl_.a_navigationpreloadstate_){nullptr}
+    , decltype(_impl_.a_currentworkerhandlesfetch_){}
+    , decltype(_impl_.a_updateviacache_){}
+    , decltype(_impl_.a_currentworkerinstalledtime_){}
+    , decltype(_impl_.a_currentworkeractivatedtime_){}
+    , decltype(_impl_.a_lastupdatetime_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.scope_.InitDefault();
+  _impl_.a_scope_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.scope_.Set("", GetArenaForAllocation());
+    _impl_.a_scope_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_scope()) {
-    _this->_impl_.scope_.Set(from._internal_scope(), 
+  if (from._internal_has_a_scope()) {
+    _this->_impl_.a_scope_.Set(from._internal_a_scope(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.currentworkerurl_.InitDefault();
+  _impl_.a_currentworkerurl_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.currentworkerurl_.Set("", GetArenaForAllocation());
+    _impl_.a_currentworkerurl_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_currentworkerurl()) {
-    _this->_impl_.currentworkerurl_.Set(from._internal_currentworkerurl(), 
+  if (from._internal_has_a_currentworkerurl()) {
+    _this->_impl_.a_currentworkerurl_.Set(from._internal_a_currentworkerurl(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.cachename_.InitDefault();
+  _impl_.a_cachename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cachename_.Set("", GetArenaForAllocation());
+    _impl_.a_cachename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_cachename()) {
-    _this->_impl_.cachename_.Set(from._internal_cachename(), 
+  if (from._internal_has_a_cachename()) {
+    _this->_impl_.a_cachename_.Set(from._internal_a_cachename(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_principal()) {
-    _this->_impl_.principal_ = new ::protobuf::mozilla::ipc::PrincipalInfo(*from._impl_.principal_);
+  if (from._internal_has_a_principal()) {
+    _this->_impl_.a_principal_ = new ::protobuf::mozilla::ipc::PrincipalInfo(*from._impl_.a_principal_);
   }
-  if (from._internal_has_navigationpreloadstate()) {
-    _this->_impl_.navigationpreloadstate_ = new ::protobuf::mozilla::dom::IPCNavigationPreloadState(*from._impl_.navigationpreloadstate_);
+  if (from._internal_has_a_navigationpreloadstate()) {
+    _this->_impl_.a_navigationpreloadstate_ = new ::protobuf::mozilla::dom::IPCNavigationPreloadState(*from._impl_.a_navigationpreloadstate_);
   }
-  ::memcpy(&_impl_.currentworkerhandlesfetch_, &from._impl_.currentworkerhandlesfetch_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.lastupdatetime_) -
-    reinterpret_cast<char*>(&_impl_.currentworkerhandlesfetch_)) + sizeof(_impl_.lastupdatetime_));
+  ::memcpy(&_impl_.a_currentworkerhandlesfetch_, &from._impl_.a_currentworkerhandlesfetch_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_lastupdatetime_) -
+    reinterpret_cast<char*>(&_impl_.a_currentworkerhandlesfetch_)) + sizeof(_impl_.a_lastupdatetime_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.ServiceWorkerRegistrationData)
 }
 
@@ -175,28 +175,28 @@ inline void ServiceWorkerRegistrationData::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.scope_){}
-    , decltype(_impl_.currentworkerurl_){}
-    , decltype(_impl_.cachename_){}
-    , decltype(_impl_.principal_){nullptr}
-    , decltype(_impl_.navigationpreloadstate_){nullptr}
-    , decltype(_impl_.currentworkerhandlesfetch_){false}
-    , decltype(_impl_.updateviacache_){0u}
-    , decltype(_impl_.currentworkerinstalledtime_){int64_t{0}}
-    , decltype(_impl_.currentworkeractivatedtime_){int64_t{0}}
-    , decltype(_impl_.lastupdatetime_){int64_t{0}}
+    , decltype(_impl_.a_scope_){}
+    , decltype(_impl_.a_currentworkerurl_){}
+    , decltype(_impl_.a_cachename_){}
+    , decltype(_impl_.a_principal_){nullptr}
+    , decltype(_impl_.a_navigationpreloadstate_){nullptr}
+    , decltype(_impl_.a_currentworkerhandlesfetch_){false}
+    , decltype(_impl_.a_updateviacache_){0u}
+    , decltype(_impl_.a_currentworkerinstalledtime_){int64_t{0}}
+    , decltype(_impl_.a_currentworkeractivatedtime_){int64_t{0}}
+    , decltype(_impl_.a_lastupdatetime_){int64_t{0}}
   };
-  _impl_.scope_.InitDefault();
+  _impl_.a_scope_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.scope_.Set("", GetArenaForAllocation());
+    _impl_.a_scope_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.currentworkerurl_.InitDefault();
+  _impl_.a_currentworkerurl_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.currentworkerurl_.Set("", GetArenaForAllocation());
+    _impl_.a_currentworkerurl_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.cachename_.InitDefault();
+  _impl_.a_cachename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cachename_.Set("", GetArenaForAllocation());
+    _impl_.a_cachename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -211,11 +211,11 @@ ServiceWorkerRegistrationData::~ServiceWorkerRegistrationData() {
 
 inline void ServiceWorkerRegistrationData::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.scope_.Destroy();
-  _impl_.currentworkerurl_.Destroy();
-  _impl_.cachename_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.principal_;
-  if (this != internal_default_instance()) delete _impl_.navigationpreloadstate_;
+  _impl_.a_scope_.Destroy();
+  _impl_.a_currentworkerurl_.Destroy();
+  _impl_.a_cachename_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_principal_;
+  if (this != internal_default_instance()) delete _impl_.a_navigationpreloadstate_;
 }
 
 void ServiceWorkerRegistrationData::SetCachedSize(int size) const {
@@ -231,32 +231,32 @@ void ServiceWorkerRegistrationData::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.scope_.ClearNonDefaultToEmpty();
+      _impl_.a_scope_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.currentworkerurl_.ClearNonDefaultToEmpty();
+      _impl_.a_currentworkerurl_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.cachename_.ClearNonDefaultToEmpty();
+      _impl_.a_cachename_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(_impl_.principal_ != nullptr);
-      _impl_.principal_->Clear();
+      GOOGLE_DCHECK(_impl_.a_principal_ != nullptr);
+      _impl_.a_principal_->Clear();
     }
     if (cached_has_bits & 0x00000010u) {
-      GOOGLE_DCHECK(_impl_.navigationpreloadstate_ != nullptr);
-      _impl_.navigationpreloadstate_->Clear();
+      GOOGLE_DCHECK(_impl_.a_navigationpreloadstate_ != nullptr);
+      _impl_.a_navigationpreloadstate_->Clear();
     }
   }
   if (cached_has_bits & 0x000000e0u) {
-    ::memset(&_impl_.currentworkerhandlesfetch_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.currentworkerinstalledtime_) -
-        reinterpret_cast<char*>(&_impl_.currentworkerhandlesfetch_)) + sizeof(_impl_.currentworkerinstalledtime_));
+    ::memset(&_impl_.a_currentworkerhandlesfetch_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_currentworkerinstalledtime_) -
+        reinterpret_cast<char*>(&_impl_.a_currentworkerhandlesfetch_)) + sizeof(_impl_.a_currentworkerinstalledtime_));
   }
   if (cached_has_bits & 0x00000300u) {
-    ::memset(&_impl_.currentworkeractivatedtime_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.lastupdatetime_) -
-        reinterpret_cast<char*>(&_impl_.currentworkeractivatedtime_)) + sizeof(_impl_.lastupdatetime_));
+    ::memset(&_impl_.a_currentworkeractivatedtime_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_lastupdatetime_) -
+        reinterpret_cast<char*>(&_impl_.a_currentworkeractivatedtime_)) + sizeof(_impl_.a_lastupdatetime_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -269,90 +269,90 @@ const char* ServiceWorkerRegistrationData::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes scope = 1;
+      // required bytes a_scope = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_scope();
+          auto str = _internal_mutable_a_scope();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes currentWorkerURL = 2;
+      // required bytes a_currentWorkerURL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_currentworkerurl();
+          auto str = _internal_mutable_a_currentworkerurl();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool currentWorkerHandlesFetch = 3;
+      // required bool a_currentWorkerHandlesFetch = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_currentworkerhandlesfetch(&has_bits);
-          _impl_.currentworkerhandlesfetch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_currentworkerhandlesfetch(&has_bits);
+          _impl_.a_currentworkerhandlesfetch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes cacheName = 4;
+      // required bytes a_cacheName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_cachename();
+          auto str = _internal_mutable_a_cachename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.PrincipalInfo principal = 5;
+      // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_principal(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_principal(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 updateViaCache = 6;
+      // required uint32 a_updateViaCache = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_updateviacache(&has_bits);
-          _impl_.updateviacache_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_updateviacache(&has_bits);
+          _impl_.a_updateviacache_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 currentWorkerInstalledTime = 7;
+      // required sint64 a_currentWorkerInstalledTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_currentworkerinstalledtime(&has_bits);
-          _impl_.currentworkerinstalledtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          _Internal::set_has_a_currentworkerinstalledtime(&has_bits);
+          _impl_.a_currentworkerinstalledtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 currentWorkerActivatedTime = 8;
+      // required sint64 a_currentWorkerActivatedTime = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_currentworkeractivatedtime(&has_bits);
-          _impl_.currentworkeractivatedtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          _Internal::set_has_a_currentworkeractivatedtime(&has_bits);
+          _impl_.a_currentworkeractivatedtime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 lastUpdateTime = 9;
+      // required sint64 a_lastUpdateTime = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          _Internal::set_has_lastupdatetime(&has_bits);
-          _impl_.lastupdatetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          _Internal::set_has_a_lastupdatetime(&has_bits);
+          _impl_.a_lastupdatetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
+      // required .protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_navigationpreloadstate(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_navigationpreloadstate(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -388,66 +388,66 @@ uint8_t* ServiceWorkerRegistrationData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes scope = 1;
+  // required bytes a_scope = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_scope(), target);
+        1, this->_internal_a_scope(), target);
   }
 
-  // required bytes currentWorkerURL = 2;
+  // required bytes a_currentWorkerURL = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_currentworkerurl(), target);
+        2, this->_internal_a_currentworkerurl(), target);
   }
 
-  // required bool currentWorkerHandlesFetch = 3;
+  // required bool a_currentWorkerHandlesFetch = 3;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_currentworkerhandlesfetch(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_currentworkerhandlesfetch(), target);
   }
 
-  // required bytes cacheName = 4;
+  // required bytes a_cacheName = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_cachename(), target);
+        4, this->_internal_a_cachename(), target);
   }
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo principal = 5;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
   if (cached_has_bits & 0x00000008u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, _Internal::principal(this),
-        _Internal::principal(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(5, _Internal::a_principal(this),
+        _Internal::a_principal(this).GetCachedSize(), target, stream);
   }
 
-  // required uint32 updateViaCache = 6;
+  // required uint32 a_updateViaCache = 6;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_updateviacache(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_updateviacache(), target);
   }
 
-  // required sint64 currentWorkerInstalledTime = 7;
+  // required sint64 a_currentWorkerInstalledTime = 7;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(7, this->_internal_currentworkerinstalledtime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(7, this->_internal_a_currentworkerinstalledtime(), target);
   }
 
-  // required sint64 currentWorkerActivatedTime = 8;
+  // required sint64 a_currentWorkerActivatedTime = 8;
   if (cached_has_bits & 0x00000100u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(8, this->_internal_currentworkeractivatedtime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(8, this->_internal_a_currentworkeractivatedtime(), target);
   }
 
-  // required sint64 lastUpdateTime = 9;
+  // required sint64 a_lastUpdateTime = 9;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(9, this->_internal_lastupdatetime(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(9, this->_internal_a_lastupdatetime(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
+  // required .protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
   if (cached_has_bits & 0x00000010u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(10, _Internal::navigationpreloadstate(this),
-        _Internal::navigationpreloadstate(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(10, _Internal::a_navigationpreloadstate(this),
+        _Internal::a_navigationpreloadstate(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -462,64 +462,64 @@ size_t ServiceWorkerRegistrationData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.ServiceWorkerRegistrationData)
   size_t total_size = 0;
 
-  if (_internal_has_scope()) {
-    // required bytes scope = 1;
+  if (_internal_has_a_scope()) {
+    // required bytes a_scope = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_scope());
+        this->_internal_a_scope());
   }
 
-  if (_internal_has_currentworkerurl()) {
-    // required bytes currentWorkerURL = 2;
+  if (_internal_has_a_currentworkerurl()) {
+    // required bytes a_currentWorkerURL = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_currentworkerurl());
+        this->_internal_a_currentworkerurl());
   }
 
-  if (_internal_has_cachename()) {
-    // required bytes cacheName = 4;
+  if (_internal_has_a_cachename()) {
+    // required bytes a_cacheName = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_cachename());
+        this->_internal_a_cachename());
   }
 
-  if (_internal_has_principal()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo principal = 5;
+  if (_internal_has_a_principal()) {
+    // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.principal_);
+        *_impl_.a_principal_);
   }
 
-  if (_internal_has_navigationpreloadstate()) {
-    // required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
+  if (_internal_has_a_navigationpreloadstate()) {
+    // required .protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.navigationpreloadstate_);
+        *_impl_.a_navigationpreloadstate_);
   }
 
-  if (_internal_has_currentworkerhandlesfetch()) {
-    // required bool currentWorkerHandlesFetch = 3;
+  if (_internal_has_a_currentworkerhandlesfetch()) {
+    // required bool a_currentWorkerHandlesFetch = 3;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_updateviacache()) {
-    // required uint32 updateViaCache = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_updateviacache());
+  if (_internal_has_a_updateviacache()) {
+    // required uint32 a_updateViaCache = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_updateviacache());
   }
 
-  if (_internal_has_currentworkerinstalledtime()) {
-    // required sint64 currentWorkerInstalledTime = 7;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkerinstalledtime());
+  if (_internal_has_a_currentworkerinstalledtime()) {
+    // required sint64 a_currentWorkerInstalledTime = 7;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_currentworkerinstalledtime());
   }
 
-  if (_internal_has_currentworkeractivatedtime()) {
-    // required sint64 currentWorkerActivatedTime = 8;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkeractivatedtime());
+  if (_internal_has_a_currentworkeractivatedtime()) {
+    // required sint64 a_currentWorkerActivatedTime = 8;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_currentworkeractivatedtime());
   }
 
-  if (_internal_has_lastupdatetime()) {
-    // required sint64 lastUpdateTime = 9;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastupdatetime());
+  if (_internal_has_a_lastupdatetime()) {
+    // required sint64 a_lastUpdateTime = 9;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_lastupdatetime());
   }
 
   return total_size;
@@ -529,45 +529,45 @@ size_t ServiceWorkerRegistrationData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required bytes scope = 1;
+    // required bytes a_scope = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_scope());
+        this->_internal_a_scope());
 
-    // required bytes currentWorkerURL = 2;
+    // required bytes a_currentWorkerURL = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_currentworkerurl());
+        this->_internal_a_currentworkerurl());
 
-    // required bytes cacheName = 4;
+    // required bytes a_cacheName = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_cachename());
+        this->_internal_a_cachename());
 
-    // required .protobuf.mozilla.ipc.PrincipalInfo principal = 5;
+    // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.principal_);
+        *_impl_.a_principal_);
 
-    // required .protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
+    // required .protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.navigationpreloadstate_);
+        *_impl_.a_navigationpreloadstate_);
 
-    // required bool currentWorkerHandlesFetch = 3;
+    // required bool a_currentWorkerHandlesFetch = 3;
     total_size += 1 + 1;
 
-    // required uint32 updateViaCache = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_updateviacache());
+    // required uint32 a_updateViaCache = 6;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_updateviacache());
 
-    // required sint64 currentWorkerInstalledTime = 7;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkerinstalledtime());
+    // required sint64 a_currentWorkerInstalledTime = 7;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_currentworkerinstalledtime());
 
-    // required sint64 currentWorkerActivatedTime = 8;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_currentworkeractivatedtime());
+    // required sint64 a_currentWorkerActivatedTime = 8;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_currentworkeractivatedtime());
 
-    // required sint64 lastUpdateTime = 9;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_lastupdatetime());
+    // required sint64 a_lastUpdateTime = 9;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_lastupdatetime());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -600,39 +600,39 @@ void ServiceWorkerRegistrationData::MergeFrom(const ServiceWorkerRegistrationDat
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_scope(from._internal_scope());
+      _this->_internal_set_a_scope(from._internal_a_scope());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_currentworkerurl(from._internal_currentworkerurl());
+      _this->_internal_set_a_currentworkerurl(from._internal_a_currentworkerurl());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_cachename(from._internal_cachename());
+      _this->_internal_set_a_cachename(from._internal_a_cachename());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_principal()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
-          from._internal_principal());
+      _this->_internal_mutable_a_principal()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
+          from._internal_a_principal());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_mutable_navigationpreloadstate()->::protobuf::mozilla::dom::IPCNavigationPreloadState::MergeFrom(
-          from._internal_navigationpreloadstate());
+      _this->_internal_mutable_a_navigationpreloadstate()->::protobuf::mozilla::dom::IPCNavigationPreloadState::MergeFrom(
+          from._internal_a_navigationpreloadstate());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.currentworkerhandlesfetch_ = from._impl_.currentworkerhandlesfetch_;
+      _this->_impl_.a_currentworkerhandlesfetch_ = from._impl_.a_currentworkerhandlesfetch_;
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.updateviacache_ = from._impl_.updateviacache_;
+      _this->_impl_.a_updateviacache_ = from._impl_.a_updateviacache_;
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.currentworkerinstalledtime_ = from._impl_.currentworkerinstalledtime_;
+      _this->_impl_.a_currentworkerinstalledtime_ = from._impl_.a_currentworkerinstalledtime_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   if (cached_has_bits & 0x00000300u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.currentworkeractivatedtime_ = from._impl_.currentworkeractivatedtime_;
+      _this->_impl_.a_currentworkeractivatedtime_ = from._impl_.a_currentworkeractivatedtime_;
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.lastupdatetime_ = from._impl_.lastupdatetime_;
+      _this->_impl_.a_lastupdatetime_ = from._impl_.a_lastupdatetime_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -648,11 +648,11 @@ void ServiceWorkerRegistrationData::CopyFrom(const ServiceWorkerRegistrationData
 
 bool ServiceWorkerRegistrationData::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_principal()) {
-    if (!_impl_.principal_->IsInitialized()) return false;
+  if (_internal_has_a_principal()) {
+    if (!_impl_.a_principal_->IsInitialized()) return false;
   }
-  if (_internal_has_navigationpreloadstate()) {
-    if (!_impl_.navigationpreloadstate_->IsInitialized()) return false;
+  if (_internal_has_a_navigationpreloadstate()) {
+    if (!_impl_.a_navigationpreloadstate_->IsInitialized()) return false;
   }
   return true;
 }
@@ -664,23 +664,23 @@ void ServiceWorkerRegistrationData::InternalSwap(ServiceWorkerRegistrationData* 
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.scope_, lhs_arena,
-      &other->_impl_.scope_, rhs_arena
+      &_impl_.a_scope_, lhs_arena,
+      &other->_impl_.a_scope_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.currentworkerurl_, lhs_arena,
-      &other->_impl_.currentworkerurl_, rhs_arena
+      &_impl_.a_currentworkerurl_, lhs_arena,
+      &other->_impl_.a_currentworkerurl_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.cachename_, lhs_arena,
-      &other->_impl_.cachename_, rhs_arena
+      &_impl_.a_cachename_, lhs_arena,
+      &other->_impl_.a_cachename_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ServiceWorkerRegistrationData, _impl_.lastupdatetime_)
-      + sizeof(ServiceWorkerRegistrationData::_impl_.lastupdatetime_)
-      - PROTOBUF_FIELD_OFFSET(ServiceWorkerRegistrationData, _impl_.principal_)>(
-          reinterpret_cast<char*>(&_impl_.principal_),
-          reinterpret_cast<char*>(&other->_impl_.principal_));
+      PROTOBUF_FIELD_OFFSET(ServiceWorkerRegistrationData, _impl_.a_lastupdatetime_)
+      + sizeof(ServiceWorkerRegistrationData::_impl_.a_lastupdatetime_)
+      - PROTOBUF_FIELD_OFFSET(ServiceWorkerRegistrationData, _impl_.a_principal_)>(
+          reinterpret_cast<char*>(&_impl_.a_principal_),
+          reinterpret_cast<char*>(&other->_impl_.a_principal_));
 }
 
 std::string ServiceWorkerRegistrationData::GetTypeName() const {

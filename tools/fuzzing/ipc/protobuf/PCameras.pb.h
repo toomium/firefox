@@ -262,19 +262,19 @@ class Msg_CaptureEnded final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamIdFieldNumber = 1,
+    kAStreamIdFieldNumber = 1,
   };
-  // required sint32 streamId = 1;
-  bool has_streamid() const;
+  // required sint32 a_streamId = 1;
+  bool has_a_streamid() const;
   private:
-  bool _internal_has_streamid() const;
+  bool _internal_has_a_streamid() const;
   public:
-  void clear_streamid();
-  int32_t streamid() const;
-  void set_streamid(int32_t value);
+  void clear_a_streamid();
+  int32_t a_streamid() const;
+  void set_a_streamid(int32_t value);
   private:
-  int32_t _internal_streamid() const;
-  void _internal_set_streamid(int32_t value);
+  int32_t _internal_a_streamid() const;
+  void _internal_set_a_streamid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded)
@@ -287,7 +287,7 @@ class Msg_CaptureEnded final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t streamid_;
+    int32_t a_streamid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -404,57 +404,57 @@ class Msg_DeliverFrame final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufferFieldNumber = 2,
-    kPropsFieldNumber = 3,
-    kStreamIdFieldNumber = 1,
+    kABufferFieldNumber = 2,
+    kAPropsFieldNumber = 3,
+    kAStreamIdFieldNumber = 1,
   };
-  // required bytes buffer = 2;
-  bool has_buffer() const;
+  // required bytes a_buffer = 2;
+  bool has_a_buffer() const;
   private:
-  bool _internal_has_buffer() const;
+  bool _internal_has_a_buffer() const;
   public:
-  void clear_buffer();
-  const std::string& buffer() const;
+  void clear_a_buffer();
+  const std::string& a_buffer() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buffer(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buffer();
-  PROTOBUF_NODISCARD std::string* release_buffer();
-  void set_allocated_buffer(std::string* buffer);
+  void set_a_buffer(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buffer();
+  PROTOBUF_NODISCARD std::string* release_a_buffer();
+  void set_allocated_a_buffer(std::string* a_buffer);
   private:
-  const std::string& _internal_buffer() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buffer(const std::string& value);
-  std::string* _internal_mutable_buffer();
+  const std::string& _internal_a_buffer() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buffer(const std::string& value);
+  std::string* _internal_mutable_a_buffer();
   public:
 
-  // required .protobuf.mozilla.camera.VideoFrameProperties props = 3;
-  bool has_props() const;
+  // required .protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
+  bool has_a_props() const;
   private:
-  bool _internal_has_props() const;
+  bool _internal_has_a_props() const;
   public:
-  void clear_props();
-  const ::protobuf::mozilla::camera::VideoFrameProperties& props() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::camera::VideoFrameProperties* release_props();
-  ::protobuf::mozilla::camera::VideoFrameProperties* mutable_props();
-  void set_allocated_props(::protobuf::mozilla::camera::VideoFrameProperties* props);
+  void clear_a_props();
+  const ::protobuf::mozilla::camera::VideoFrameProperties& a_props() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::camera::VideoFrameProperties* release_a_props();
+  ::protobuf::mozilla::camera::VideoFrameProperties* mutable_a_props();
+  void set_allocated_a_props(::protobuf::mozilla::camera::VideoFrameProperties* a_props);
   private:
-  const ::protobuf::mozilla::camera::VideoFrameProperties& _internal_props() const;
-  ::protobuf::mozilla::camera::VideoFrameProperties* _internal_mutable_props();
+  const ::protobuf::mozilla::camera::VideoFrameProperties& _internal_a_props() const;
+  ::protobuf::mozilla::camera::VideoFrameProperties* _internal_mutable_a_props();
   public:
-  void unsafe_arena_set_allocated_props(
-      ::protobuf::mozilla::camera::VideoFrameProperties* props);
-  ::protobuf::mozilla::camera::VideoFrameProperties* unsafe_arena_release_props();
+  void unsafe_arena_set_allocated_a_props(
+      ::protobuf::mozilla::camera::VideoFrameProperties* a_props);
+  ::protobuf::mozilla::camera::VideoFrameProperties* unsafe_arena_release_a_props();
 
-  // required sint32 streamId = 1;
-  bool has_streamid() const;
+  // required sint32 a_streamId = 1;
+  bool has_a_streamid() const;
   private:
-  bool _internal_has_streamid() const;
+  bool _internal_has_a_streamid() const;
   public:
-  void clear_streamid();
-  int32_t streamid() const;
-  void set_streamid(int32_t value);
+  void clear_a_streamid();
+  int32_t a_streamid() const;
+  void set_a_streamid(int32_t value);
   private:
-  int32_t _internal_streamid() const;
-  void _internal_set_streamid(int32_t value);
+  int32_t _internal_a_streamid() const;
+  void _internal_set_a_streamid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame)
@@ -470,9 +470,9 @@ class Msg_DeliverFrame final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buffer_;
-    ::protobuf::mozilla::camera::VideoFrameProperties* props_;
-    int32_t streamid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buffer_;
+    ::protobuf::mozilla::camera::VideoFrameProperties* a_props_;
+    int32_t a_streamid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -713,19 +713,19 @@ class Msg_ReplyNumberOfCaptureDevices final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceCountFieldNumber = 1,
+    kADeviceCountFieldNumber = 1,
   };
-  // required sint32 deviceCount = 1;
-  bool has_devicecount() const;
+  // required sint32 a_deviceCount = 1;
+  bool has_a_devicecount() const;
   private:
-  bool _internal_has_devicecount() const;
+  bool _internal_has_a_devicecount() const;
   public:
-  void clear_devicecount();
-  int32_t devicecount() const;
-  void set_devicecount(int32_t value);
+  void clear_a_devicecount();
+  int32_t a_devicecount() const;
+  void set_a_devicecount(int32_t value);
   private:
-  int32_t _internal_devicecount() const;
-  void _internal_set_devicecount(int32_t value);
+  int32_t _internal_a_devicecount() const;
+  void _internal_set_a_devicecount(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices)
@@ -738,7 +738,7 @@ class Msg_ReplyNumberOfCaptureDevices final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t devicecount_;
+    int32_t a_devicecount_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -855,19 +855,19 @@ class Msg_ReplyNumberOfCapabilities final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCapabilityCountFieldNumber = 1,
+    kACapabilityCountFieldNumber = 1,
   };
-  // required sint32 capabilityCount = 1;
-  bool has_capabilitycount() const;
+  // required sint32 a_capabilityCount = 1;
+  bool has_a_capabilitycount() const;
   private:
-  bool _internal_has_capabilitycount() const;
+  bool _internal_has_a_capabilitycount() const;
   public:
-  void clear_capabilitycount();
-  int32_t capabilitycount() const;
-  void set_capabilitycount(int32_t value);
+  void clear_a_capabilitycount();
+  int32_t a_capabilitycount() const;
+  void set_a_capabilitycount(int32_t value);
   private:
-  int32_t _internal_capabilitycount() const;
-  void _internal_set_capabilitycount(int32_t value);
+  int32_t _internal_a_capabilitycount() const;
+  void _internal_set_a_capabilitycount(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities)
@@ -880,7 +880,7 @@ class Msg_ReplyNumberOfCapabilities final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t capabilitycount_;
+    int32_t a_capabilitycount_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -997,19 +997,19 @@ class Msg_ReplyAllocateCapture final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCaptureIdFieldNumber = 1,
+    kACaptureIdFieldNumber = 1,
   };
-  // required sint32 captureId = 1;
-  bool has_captureid() const;
+  // required sint32 a_captureId = 1;
+  bool has_a_captureid() const;
   private:
-  bool _internal_has_captureid() const;
+  bool _internal_has_a_captureid() const;
   public:
-  void clear_captureid();
-  int32_t captureid() const;
-  void set_captureid(int32_t value);
+  void clear_a_captureid();
+  int32_t a_captureid() const;
+  void set_a_captureid(int32_t value);
   private:
-  int32_t _internal_captureid() const;
-  void _internal_set_captureid(int32_t value);
+  int32_t _internal_a_captureid() const;
+  void _internal_set_a_captureid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture)
@@ -1022,7 +1022,7 @@ class Msg_ReplyAllocateCapture final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t captureid_;
+    int32_t a_captureid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -1139,25 +1139,25 @@ class Msg_ReplyGetCaptureCapability final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCapFieldNumber = 1,
+    kACapFieldNumber = 1,
   };
-  // required .protobuf.mozilla.camera.VideoCaptureCapability cap = 1;
-  bool has_cap() const;
+  // required .protobuf.mozilla.camera.VideoCaptureCapability a_cap = 1;
+  bool has_a_cap() const;
   private:
-  bool _internal_has_cap() const;
+  bool _internal_has_a_cap() const;
   public:
-  void clear_cap();
-  const ::protobuf::mozilla::camera::VideoCaptureCapability& cap() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::camera::VideoCaptureCapability* release_cap();
-  ::protobuf::mozilla::camera::VideoCaptureCapability* mutable_cap();
-  void set_allocated_cap(::protobuf::mozilla::camera::VideoCaptureCapability* cap);
+  void clear_a_cap();
+  const ::protobuf::mozilla::camera::VideoCaptureCapability& a_cap() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::camera::VideoCaptureCapability* release_a_cap();
+  ::protobuf::mozilla::camera::VideoCaptureCapability* mutable_a_cap();
+  void set_allocated_a_cap(::protobuf::mozilla::camera::VideoCaptureCapability* a_cap);
   private:
-  const ::protobuf::mozilla::camera::VideoCaptureCapability& _internal_cap() const;
-  ::protobuf::mozilla::camera::VideoCaptureCapability* _internal_mutable_cap();
+  const ::protobuf::mozilla::camera::VideoCaptureCapability& _internal_a_cap() const;
+  ::protobuf::mozilla::camera::VideoCaptureCapability* _internal_mutable_a_cap();
   public:
-  void unsafe_arena_set_allocated_cap(
-      ::protobuf::mozilla::camera::VideoCaptureCapability* cap);
-  ::protobuf::mozilla::camera::VideoCaptureCapability* unsafe_arena_release_cap();
+  void unsafe_arena_set_allocated_a_cap(
+      ::protobuf::mozilla::camera::VideoCaptureCapability* a_cap);
+  ::protobuf::mozilla::camera::VideoCaptureCapability* unsafe_arena_release_a_cap();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability)
  private:
@@ -1169,7 +1169,7 @@ class Msg_ReplyGetCaptureCapability final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::camera::VideoCaptureCapability* cap_;
+    ::protobuf::mozilla::camera::VideoCaptureCapability* a_cap_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -1286,71 +1286,71 @@ class Msg_ReplyGetCaptureDevice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceNameFieldNumber = 1,
-    kDeviceIdFieldNumber = 2,
-    kScaryFieldNumber = 3,
-    kPlaceholderFieldNumber = 4,
+    kADeviceNameFieldNumber = 1,
+    kADeviceIdFieldNumber = 2,
+    kAScaryFieldNumber = 3,
+    kAPlaceholderFieldNumber = 4,
   };
-  // required bytes device_name = 1;
-  bool has_device_name() const;
+  // required bytes a_device_name = 1;
+  bool has_a_device_name() const;
   private:
-  bool _internal_has_device_name() const;
+  bool _internal_has_a_device_name() const;
   public:
-  void clear_device_name();
-  const std::string& device_name() const;
+  void clear_a_device_name();
+  const std::string& a_device_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_device_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_device_name();
-  PROTOBUF_NODISCARD std::string* release_device_name();
-  void set_allocated_device_name(std::string* device_name);
+  void set_a_device_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_device_name();
+  PROTOBUF_NODISCARD std::string* release_a_device_name();
+  void set_allocated_a_device_name(std::string* a_device_name);
   private:
-  const std::string& _internal_device_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_device_name(const std::string& value);
-  std::string* _internal_mutable_device_name();
+  const std::string& _internal_a_device_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_device_name(const std::string& value);
+  std::string* _internal_mutable_a_device_name();
   public:
 
-  // required bytes device_id = 2;
-  bool has_device_id() const;
+  // required bytes a_device_id = 2;
+  bool has_a_device_id() const;
   private:
-  bool _internal_has_device_id() const;
+  bool _internal_has_a_device_id() const;
   public:
-  void clear_device_id();
-  const std::string& device_id() const;
+  void clear_a_device_id();
+  const std::string& a_device_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_device_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_device_id();
-  PROTOBUF_NODISCARD std::string* release_device_id();
-  void set_allocated_device_id(std::string* device_id);
+  void set_a_device_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_device_id();
+  PROTOBUF_NODISCARD std::string* release_a_device_id();
+  void set_allocated_a_device_id(std::string* a_device_id);
   private:
-  const std::string& _internal_device_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_device_id(const std::string& value);
-  std::string* _internal_mutable_device_id();
+  const std::string& _internal_a_device_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_device_id(const std::string& value);
+  std::string* _internal_mutable_a_device_id();
   public:
 
-  // required bool scary = 3;
-  bool has_scary() const;
+  // required bool a_scary = 3;
+  bool has_a_scary() const;
   private:
-  bool _internal_has_scary() const;
+  bool _internal_has_a_scary() const;
   public:
-  void clear_scary();
-  bool scary() const;
-  void set_scary(bool value);
+  void clear_a_scary();
+  bool a_scary() const;
+  void set_a_scary(bool value);
   private:
-  bool _internal_scary() const;
-  void _internal_set_scary(bool value);
+  bool _internal_a_scary() const;
+  void _internal_set_a_scary(bool value);
   public:
 
-  // required bool placeholder = 4;
-  bool has_placeholder() const;
+  // required bool a_placeholder = 4;
+  bool has_a_placeholder() const;
   private:
-  bool _internal_has_placeholder() const;
+  bool _internal_has_a_placeholder() const;
   public:
-  void clear_placeholder();
-  bool placeholder() const;
-  void set_placeholder(bool value);
+  void clear_a_placeholder();
+  bool a_placeholder() const;
+  void set_a_placeholder(bool value);
   private:
-  bool _internal_placeholder() const;
-  void _internal_set_placeholder(bool value);
+  bool _internal_a_placeholder() const;
+  void _internal_set_a_placeholder(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice)
@@ -1366,10 +1366,10 @@ class Msg_ReplyGetCaptureDevice final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr device_name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr device_id_;
-    bool scary_;
-    bool placeholder_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_device_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_device_id_;
+    bool a_scary_;
+    bool a_placeholder_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -1982,24 +1982,24 @@ class Msg_NumberOfCaptureDevices final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
+    kAEngineFieldNumber = 1,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices)
@@ -2012,7 +2012,7 @@ class Msg_NumberOfCaptureDevices final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -2129,43 +2129,43 @@ class Msg_NumberOfCapabilities final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kDeviceUniqueIdUTF8FieldNumber = 2,
+    kAEngineFieldNumber = 1,
+    kADeviceUniqueIdUTF8FieldNumber = 2,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required bytes deviceUniqueIdUTF8 = 2;
-  bool has_deviceuniqueidutf8() const;
+  // required bytes a_deviceUniqueIdUTF8 = 2;
+  bool has_a_deviceuniqueidutf8() const;
   private:
-  bool _internal_has_deviceuniqueidutf8() const;
+  bool _internal_has_a_deviceuniqueidutf8() const;
   public:
-  void clear_deviceuniqueidutf8();
-  const std::string& deviceuniqueidutf8() const;
+  void clear_a_deviceuniqueidutf8();
+  const std::string& a_deviceuniqueidutf8() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_deviceuniqueidutf8(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_deviceuniqueidutf8();
-  PROTOBUF_NODISCARD std::string* release_deviceuniqueidutf8();
-  void set_allocated_deviceuniqueidutf8(std::string* deviceuniqueidutf8);
+  void set_a_deviceuniqueidutf8(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_deviceuniqueidutf8();
+  PROTOBUF_NODISCARD std::string* release_a_deviceuniqueidutf8();
+  void set_allocated_a_deviceuniqueidutf8(std::string* a_deviceuniqueidutf8);
   private:
-  const std::string& _internal_deviceuniqueidutf8() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_deviceuniqueidutf8(const std::string& value);
-  std::string* _internal_mutable_deviceuniqueidutf8();
+  const std::string& _internal_a_deviceuniqueidutf8() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_deviceuniqueidutf8(const std::string& value);
+  std::string* _internal_mutable_a_deviceuniqueidutf8();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities)
@@ -2181,8 +2181,8 @@ class Msg_NumberOfCapabilities final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr deviceuniqueidutf8_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceuniqueidutf8_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -2299,57 +2299,57 @@ class Msg_GetCaptureCapability final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kUniqueIdUTF8FieldNumber = 2,
-    kCapabilityNumberFieldNumber = 3,
+    kAEngineFieldNumber = 1,
+    kAUniqueIdUTF8FieldNumber = 2,
+    kACapabilityNumberFieldNumber = 3,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required bytes unique_idUTF8 = 2;
-  bool has_unique_idutf8() const;
+  // required bytes a_unique_idUTF8 = 2;
+  bool has_a_unique_idutf8() const;
   private:
-  bool _internal_has_unique_idutf8() const;
+  bool _internal_has_a_unique_idutf8() const;
   public:
-  void clear_unique_idutf8();
-  const std::string& unique_idutf8() const;
+  void clear_a_unique_idutf8();
+  const std::string& a_unique_idutf8() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_unique_idutf8(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_unique_idutf8();
-  PROTOBUF_NODISCARD std::string* release_unique_idutf8();
-  void set_allocated_unique_idutf8(std::string* unique_idutf8);
+  void set_a_unique_idutf8(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_unique_idutf8();
+  PROTOBUF_NODISCARD std::string* release_a_unique_idutf8();
+  void set_allocated_a_unique_idutf8(std::string* a_unique_idutf8);
   private:
-  const std::string& _internal_unique_idutf8() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_unique_idutf8(const std::string& value);
-  std::string* _internal_mutable_unique_idutf8();
+  const std::string& _internal_a_unique_idutf8() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_unique_idutf8(const std::string& value);
+  std::string* _internal_mutable_a_unique_idutf8();
   public:
 
-  // required sint32 capability_number = 3;
-  bool has_capability_number() const;
+  // required sint32 a_capability_number = 3;
+  bool has_a_capability_number() const;
   private:
-  bool _internal_has_capability_number() const;
+  bool _internal_has_a_capability_number() const;
   public:
-  void clear_capability_number();
-  int32_t capability_number() const;
-  void set_capability_number(int32_t value);
+  void clear_a_capability_number();
+  int32_t a_capability_number() const;
+  void set_a_capability_number(int32_t value);
   private:
-  int32_t _internal_capability_number() const;
-  void _internal_set_capability_number(int32_t value);
+  int32_t _internal_a_capability_number() const;
+  void _internal_set_a_capability_number(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability)
@@ -2365,9 +2365,9 @@ class Msg_GetCaptureCapability final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr unique_idutf8_;
-    int32_t capability_number_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_unique_idutf8_;
+    int32_t a_capability_number_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -2484,38 +2484,38 @@ class Msg_GetCaptureDevice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kDeviceIndexFieldNumber = 2,
+    kAEngineFieldNumber = 1,
+    kADeviceIndexFieldNumber = 2,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 deviceIndex = 2;
-  bool has_deviceindex() const;
+  // required sint32 a_deviceIndex = 2;
+  bool has_a_deviceindex() const;
   private:
-  bool _internal_has_deviceindex() const;
+  bool _internal_has_a_deviceindex() const;
   public:
-  void clear_deviceindex();
-  int32_t deviceindex() const;
-  void set_deviceindex(int32_t value);
+  void clear_a_deviceindex();
+  int32_t a_deviceindex() const;
+  void set_a_deviceindex(int32_t value);
   private:
-  int32_t _internal_deviceindex() const;
-  void _internal_set_deviceindex(int32_t value);
+  int32_t _internal_a_deviceindex() const;
+  void _internal_set_a_deviceindex(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice)
@@ -2531,8 +2531,8 @@ class Msg_GetCaptureDevice final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    int32_t deviceindex_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    int32_t a_deviceindex_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -2649,57 +2649,57 @@ class Msg_AllocateCapture final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kUniqueIdUTF8FieldNumber = 2,
-    kWindowIDFieldNumber = 3,
+    kAEngineFieldNumber = 1,
+    kAUniqueIdUTF8FieldNumber = 2,
+    kAWindowIDFieldNumber = 3,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required bytes unique_idUTF8 = 2;
-  bool has_unique_idutf8() const;
+  // required bytes a_unique_idUTF8 = 2;
+  bool has_a_unique_idutf8() const;
   private:
-  bool _internal_has_unique_idutf8() const;
+  bool _internal_has_a_unique_idutf8() const;
   public:
-  void clear_unique_idutf8();
-  const std::string& unique_idutf8() const;
+  void clear_a_unique_idutf8();
+  const std::string& a_unique_idutf8() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_unique_idutf8(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_unique_idutf8();
-  PROTOBUF_NODISCARD std::string* release_unique_idutf8();
-  void set_allocated_unique_idutf8(std::string* unique_idutf8);
+  void set_a_unique_idutf8(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_unique_idutf8();
+  PROTOBUF_NODISCARD std::string* release_a_unique_idutf8();
+  void set_allocated_a_unique_idutf8(std::string* a_unique_idutf8);
   private:
-  const std::string& _internal_unique_idutf8() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_unique_idutf8(const std::string& value);
-  std::string* _internal_mutable_unique_idutf8();
+  const std::string& _internal_a_unique_idutf8() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_unique_idutf8(const std::string& value);
+  std::string* _internal_mutable_a_unique_idutf8();
   public:
 
-  // required uint64 windowID = 3;
-  bool has_windowid() const;
+  // required uint64 a_windowID = 3;
+  bool has_a_windowid() const;
   private:
-  bool _internal_has_windowid() const;
+  bool _internal_has_a_windowid() const;
   public:
-  void clear_windowid();
-  uint64_t windowid() const;
-  void set_windowid(uint64_t value);
+  void clear_a_windowid();
+  uint64_t a_windowid() const;
+  void set_a_windowid(uint64_t value);
   private:
-  uint64_t _internal_windowid() const;
-  void _internal_set_windowid(uint64_t value);
+  uint64_t _internal_a_windowid() const;
+  void _internal_set_a_windowid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture)
@@ -2715,9 +2715,9 @@ class Msg_AllocateCapture final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr unique_idutf8_;
-    uint64_t windowid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_unique_idutf8_;
+    uint64_t a_windowid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -2834,38 +2834,38 @@ class Msg_ReleaseCapture final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kCaptureIdFieldNumber = 2,
+    kAEngineFieldNumber = 1,
+    kACaptureIdFieldNumber = 2,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 captureId = 2;
-  bool has_captureid() const;
+  // required sint32 a_captureId = 2;
+  bool has_a_captureid() const;
   private:
-  bool _internal_has_captureid() const;
+  bool _internal_has_a_captureid() const;
   public:
-  void clear_captureid();
-  int32_t captureid() const;
-  void set_captureid(int32_t value);
+  void clear_a_captureid();
+  int32_t a_captureid() const;
+  void set_a_captureid(int32_t value);
   private:
-  int32_t _internal_captureid() const;
-  void _internal_set_captureid(int32_t value);
+  int32_t _internal_a_captureid() const;
+  void _internal_set_a_captureid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture)
@@ -2881,8 +2881,8 @@ class Msg_ReleaseCapture final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    int32_t captureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    int32_t a_captureid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -2999,57 +2999,57 @@ class Msg_StartCapture final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kCapabilityFieldNumber = 3,
-    kCaptureIdFieldNumber = 2,
+    kAEngineFieldNumber = 1,
+    kACapabilityFieldNumber = 3,
+    kACaptureIdFieldNumber = 2,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
-  bool has_capability() const;
+  // required .protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
+  bool has_a_capability() const;
   private:
-  bool _internal_has_capability() const;
+  bool _internal_has_a_capability() const;
   public:
-  void clear_capability();
-  const ::protobuf::mozilla::camera::VideoCaptureCapability& capability() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::camera::VideoCaptureCapability* release_capability();
-  ::protobuf::mozilla::camera::VideoCaptureCapability* mutable_capability();
-  void set_allocated_capability(::protobuf::mozilla::camera::VideoCaptureCapability* capability);
+  void clear_a_capability();
+  const ::protobuf::mozilla::camera::VideoCaptureCapability& a_capability() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::camera::VideoCaptureCapability* release_a_capability();
+  ::protobuf::mozilla::camera::VideoCaptureCapability* mutable_a_capability();
+  void set_allocated_a_capability(::protobuf::mozilla::camera::VideoCaptureCapability* a_capability);
   private:
-  const ::protobuf::mozilla::camera::VideoCaptureCapability& _internal_capability() const;
-  ::protobuf::mozilla::camera::VideoCaptureCapability* _internal_mutable_capability();
+  const ::protobuf::mozilla::camera::VideoCaptureCapability& _internal_a_capability() const;
+  ::protobuf::mozilla::camera::VideoCaptureCapability* _internal_mutable_a_capability();
   public:
-  void unsafe_arena_set_allocated_capability(
-      ::protobuf::mozilla::camera::VideoCaptureCapability* capability);
-  ::protobuf::mozilla::camera::VideoCaptureCapability* unsafe_arena_release_capability();
+  void unsafe_arena_set_allocated_a_capability(
+      ::protobuf::mozilla::camera::VideoCaptureCapability* a_capability);
+  ::protobuf::mozilla::camera::VideoCaptureCapability* unsafe_arena_release_a_capability();
 
-  // required sint32 captureId = 2;
-  bool has_captureid() const;
+  // required sint32 a_captureId = 2;
+  bool has_a_captureid() const;
   private:
-  bool _internal_has_captureid() const;
+  bool _internal_has_a_captureid() const;
   public:
-  void clear_captureid();
-  int32_t captureid() const;
-  void set_captureid(int32_t value);
+  void clear_a_captureid();
+  int32_t a_captureid() const;
+  void set_a_captureid(int32_t value);
   private:
-  int32_t _internal_captureid() const;
-  void _internal_set_captureid(int32_t value);
+  int32_t _internal_a_captureid() const;
+  void _internal_set_a_captureid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_StartCapture)
@@ -3065,9 +3065,9 @@ class Msg_StartCapture final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    ::protobuf::mozilla::camera::VideoCaptureCapability* capability_;
-    int32_t captureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    ::protobuf::mozilla::camera::VideoCaptureCapability* a_capability_;
+    int32_t a_captureid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -3184,38 +3184,38 @@ class Msg_FocusOnSelectedSource final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kCaptureIdFieldNumber = 2,
+    kAEngineFieldNumber = 1,
+    kACaptureIdFieldNumber = 2,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 captureId = 2;
-  bool has_captureid() const;
+  // required sint32 a_captureId = 2;
+  bool has_a_captureid() const;
   private:
-  bool _internal_has_captureid() const;
+  bool _internal_has_a_captureid() const;
   public:
-  void clear_captureid();
-  int32_t captureid() const;
-  void set_captureid(int32_t value);
+  void clear_a_captureid();
+  int32_t a_captureid() const;
+  void set_a_captureid(int32_t value);
   private:
-  int32_t _internal_captureid() const;
-  void _internal_set_captureid(int32_t value);
+  int32_t _internal_a_captureid() const;
+  void _internal_set_a_captureid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource)
@@ -3231,8 +3231,8 @@ class Msg_FocusOnSelectedSource final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    int32_t captureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    int32_t a_captureid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -3349,38 +3349,38 @@ class Msg_StopCapture final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
-    kCaptureIdFieldNumber = 2,
+    kAEngineFieldNumber = 1,
+    kACaptureIdFieldNumber = 2,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
-  // required sint32 captureId = 2;
-  bool has_captureid() const;
+  // required sint32 a_captureId = 2;
+  bool has_a_captureid() const;
   private:
-  bool _internal_has_captureid() const;
+  bool _internal_has_a_captureid() const;
   public:
-  void clear_captureid();
-  int32_t captureid() const;
-  void set_captureid(int32_t value);
+  void clear_a_captureid();
+  int32_t a_captureid() const;
+  void set_a_captureid(int32_t value);
   private:
-  int32_t _internal_captureid() const;
-  void _internal_set_captureid(int32_t value);
+  int32_t _internal_a_captureid() const;
+  void _internal_set_a_captureid(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_StopCapture)
@@ -3396,8 +3396,8 @@ class Msg_StopCapture final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
-    int32_t captureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
+    int32_t a_captureid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -3514,24 +3514,24 @@ class Msg_ReleaseFrame final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSFieldNumber = 1,
+    kASFieldNumber = 1,
   };
-  // required bytes s = 1;
-  bool has_s() const;
+  // required bytes a_s = 1;
+  bool has_a_s() const;
   private:
-  bool _internal_has_s() const;
+  bool _internal_has_a_s() const;
   public:
-  void clear_s();
-  const std::string& s() const;
+  void clear_a_s();
+  const std::string& a_s() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_s(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_s();
-  PROTOBUF_NODISCARD std::string* release_s();
-  void set_allocated_s(std::string* s);
+  void set_a_s(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_s();
+  PROTOBUF_NODISCARD std::string* release_a_s();
+  void set_allocated_a_s(std::string* a_s);
   private:
-  const std::string& _internal_s() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_s(const std::string& value);
-  std::string* _internal_mutable_s();
+  const std::string& _internal_a_s() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_s(const std::string& value);
+  std::string* _internal_mutable_a_s();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame)
@@ -3544,7 +3544,7 @@ class Msg_ReleaseFrame final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr s_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_s_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -3661,24 +3661,24 @@ class Msg_EnsureInitialized final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEngineFieldNumber = 1,
+    kAEngineFieldNumber = 1,
   };
-  // required bytes engine = 1;
-  bool has_engine() const;
+  // required bytes a_engine = 1;
+  bool has_a_engine() const;
   private:
-  bool _internal_has_engine() const;
+  bool _internal_has_a_engine() const;
   public:
-  void clear_engine();
-  const std::string& engine() const;
+  void clear_a_engine();
+  const std::string& a_engine() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_engine(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_engine();
-  PROTOBUF_NODISCARD std::string* release_engine();
-  void set_allocated_engine(std::string* engine);
+  void set_a_engine(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_engine();
+  PROTOBUF_NODISCARD std::string* release_a_engine();
+  void set_allocated_a_engine(std::string* a_engine);
   private:
-  const std::string& _internal_engine() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_engine(const std::string& value);
-  std::string* _internal_mutable_engine();
+  const std::string& _internal_a_engine() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_engine(const std::string& value);
+  std::string* _internal_mutable_a_engine();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized)
@@ -3691,7 +3691,7 @@ class Msg_EnsureInitialized final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr engine_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_engine_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_2eproto;
@@ -3707,169 +3707,169 @@ class Msg_EnsureInitialized final :
 #endif  // __GNUC__
 // Msg_CaptureEnded
 
-// required sint32 streamId = 1;
-inline bool Msg_CaptureEnded::_internal_has_streamid() const {
+// required sint32 a_streamId = 1;
+inline bool Msg_CaptureEnded::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CaptureEnded::has_streamid() const {
-  return _internal_has_streamid();
+inline bool Msg_CaptureEnded::has_a_streamid() const {
+  return _internal_has_a_streamid();
 }
-inline void Msg_CaptureEnded::clear_streamid() {
-  _impl_.streamid_ = 0;
+inline void Msg_CaptureEnded::clear_a_streamid() {
+  _impl_.a_streamid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_CaptureEnded::_internal_streamid() const {
-  return _impl_.streamid_;
+inline int32_t Msg_CaptureEnded::_internal_a_streamid() const {
+  return _impl_.a_streamid_;
 }
-inline int32_t Msg_CaptureEnded::streamid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded.streamId)
-  return _internal_streamid();
+inline int32_t Msg_CaptureEnded::a_streamid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded.a_streamId)
+  return _internal_a_streamid();
 }
-inline void Msg_CaptureEnded::_internal_set_streamid(int32_t value) {
+inline void Msg_CaptureEnded::_internal_set_a_streamid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.streamid_ = value;
+  _impl_.a_streamid_ = value;
 }
-inline void Msg_CaptureEnded::set_streamid(int32_t value) {
-  _internal_set_streamid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded.streamId)
+inline void Msg_CaptureEnded::set_a_streamid(int32_t value) {
+  _internal_set_a_streamid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded.a_streamId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeliverFrame
 
-// required sint32 streamId = 1;
-inline bool Msg_DeliverFrame::_internal_has_streamid() const {
+// required sint32 a_streamId = 1;
+inline bool Msg_DeliverFrame::_internal_has_a_streamid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DeliverFrame::has_streamid() const {
-  return _internal_has_streamid();
+inline bool Msg_DeliverFrame::has_a_streamid() const {
+  return _internal_has_a_streamid();
 }
-inline void Msg_DeliverFrame::clear_streamid() {
-  _impl_.streamid_ = 0;
+inline void Msg_DeliverFrame::clear_a_streamid() {
+  _impl_.a_streamid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_DeliverFrame::_internal_streamid() const {
-  return _impl_.streamid_;
+inline int32_t Msg_DeliverFrame::_internal_a_streamid() const {
+  return _impl_.a_streamid_;
 }
-inline int32_t Msg_DeliverFrame::streamid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.streamId)
-  return _internal_streamid();
+inline int32_t Msg_DeliverFrame::a_streamid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_streamId)
+  return _internal_a_streamid();
 }
-inline void Msg_DeliverFrame::_internal_set_streamid(int32_t value) {
+inline void Msg_DeliverFrame::_internal_set_a_streamid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.streamid_ = value;
+  _impl_.a_streamid_ = value;
 }
-inline void Msg_DeliverFrame::set_streamid(int32_t value) {
-  _internal_set_streamid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.streamId)
+inline void Msg_DeliverFrame::set_a_streamid(int32_t value) {
+  _internal_set_a_streamid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_streamId)
 }
 
-// required bytes buffer = 2;
-inline bool Msg_DeliverFrame::_internal_has_buffer() const {
+// required bytes a_buffer = 2;
+inline bool Msg_DeliverFrame::_internal_has_a_buffer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeliverFrame::has_buffer() const {
-  return _internal_has_buffer();
+inline bool Msg_DeliverFrame::has_a_buffer() const {
+  return _internal_has_a_buffer();
 }
-inline void Msg_DeliverFrame::clear_buffer() {
-  _impl_.buffer_.ClearToEmpty();
+inline void Msg_DeliverFrame::clear_a_buffer() {
+  _impl_.a_buffer_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeliverFrame::buffer() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.buffer)
-  return _internal_buffer();
+inline const std::string& Msg_DeliverFrame::a_buffer() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_buffer)
+  return _internal_a_buffer();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeliverFrame::set_buffer(ArgT0&& arg0, ArgT... args) {
+void Msg_DeliverFrame::set_a_buffer(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.buffer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.buffer)
+ _impl_.a_buffer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_buffer)
 }
-inline std::string* Msg_DeliverFrame::mutable_buffer() {
-  std::string* _s = _internal_mutable_buffer();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.buffer)
+inline std::string* Msg_DeliverFrame::mutable_a_buffer() {
+  std::string* _s = _internal_mutable_a_buffer();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_buffer)
   return _s;
 }
-inline const std::string& Msg_DeliverFrame::_internal_buffer() const {
-  return _impl_.buffer_.Get();
+inline const std::string& Msg_DeliverFrame::_internal_a_buffer() const {
+  return _impl_.a_buffer_.Get();
 }
-inline void Msg_DeliverFrame::_internal_set_buffer(const std::string& value) {
+inline void Msg_DeliverFrame::_internal_set_a_buffer(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.buffer_.Set(value, GetArenaForAllocation());
+  _impl_.a_buffer_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeliverFrame::_internal_mutable_buffer() {
+inline std::string* Msg_DeliverFrame::_internal_mutable_a_buffer() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.buffer_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buffer_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeliverFrame::release_buffer() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.buffer)
-  if (!_internal_has_buffer()) {
+inline std::string* Msg_DeliverFrame::release_a_buffer() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_buffer)
+  if (!_internal_has_a_buffer()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.buffer_.Release();
+  auto* p = _impl_.a_buffer_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buffer_.IsDefault()) {
-    _impl_.buffer_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buffer_.IsDefault()) {
+    _impl_.a_buffer_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeliverFrame::set_allocated_buffer(std::string* buffer) {
-  if (buffer != nullptr) {
+inline void Msg_DeliverFrame::set_allocated_a_buffer(std::string* a_buffer) {
+  if (a_buffer != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.buffer_.SetAllocated(buffer, GetArenaForAllocation());
+  _impl_.a_buffer_.SetAllocated(a_buffer, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buffer_.IsDefault()) {
-    _impl_.buffer_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buffer_.IsDefault()) {
+    _impl_.a_buffer_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.buffer)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_buffer)
 }
 
-// required .protobuf.mozilla.camera.VideoFrameProperties props = 3;
-inline bool Msg_DeliverFrame::_internal_has_props() const {
+// required .protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
+inline bool Msg_DeliverFrame::_internal_has_a_props() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.props_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_props_ != nullptr);
   return value;
 }
-inline bool Msg_DeliverFrame::has_props() const {
-  return _internal_has_props();
+inline bool Msg_DeliverFrame::has_a_props() const {
+  return _internal_has_a_props();
 }
-inline const ::protobuf::mozilla::camera::VideoFrameProperties& Msg_DeliverFrame::_internal_props() const {
-  const ::protobuf::mozilla::camera::VideoFrameProperties* p = _impl_.props_;
+inline const ::protobuf::mozilla::camera::VideoFrameProperties& Msg_DeliverFrame::_internal_a_props() const {
+  const ::protobuf::mozilla::camera::VideoFrameProperties* p = _impl_.a_props_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::camera::VideoFrameProperties&>(
       ::protobuf::mozilla::camera::_VideoFrameProperties_default_instance_);
 }
-inline const ::protobuf::mozilla::camera::VideoFrameProperties& Msg_DeliverFrame::props() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.props)
-  return _internal_props();
+inline const ::protobuf::mozilla::camera::VideoFrameProperties& Msg_DeliverFrame::a_props() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_props)
+  return _internal_a_props();
 }
-inline void Msg_DeliverFrame::unsafe_arena_set_allocated_props(
-    ::protobuf::mozilla::camera::VideoFrameProperties* props) {
+inline void Msg_DeliverFrame::unsafe_arena_set_allocated_a_props(
+    ::protobuf::mozilla::camera::VideoFrameProperties* a_props) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.props_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_props_);
   }
-  _impl_.props_ = props;
-  if (props) {
+  _impl_.a_props_ = a_props;
+  if (a_props) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.props)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_props)
 }
-inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::release_props() {
+inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::release_a_props() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::camera::VideoFrameProperties* temp = _impl_.props_;
-  _impl_.props_ = nullptr;
+  ::protobuf::mozilla::camera::VideoFrameProperties* temp = _impl_.a_props_;
+  _impl_.a_props_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3881,45 +3881,45 @@ inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::unsafe_arena_release_props() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.props)
+inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::unsafe_arena_release_a_props() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_props)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::camera::VideoFrameProperties* temp = _impl_.props_;
-  _impl_.props_ = nullptr;
+  ::protobuf::mozilla::camera::VideoFrameProperties* temp = _impl_.a_props_;
+  _impl_.a_props_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::_internal_mutable_props() {
+inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::_internal_mutable_a_props() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.props_ == nullptr) {
+  if (_impl_.a_props_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::camera::VideoFrameProperties>(GetArenaForAllocation());
-    _impl_.props_ = p;
+    _impl_.a_props_ = p;
   }
-  return _impl_.props_;
+  return _impl_.a_props_;
 }
-inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::mutable_props() {
-  ::protobuf::mozilla::camera::VideoFrameProperties* _msg = _internal_mutable_props();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.props)
+inline ::protobuf::mozilla::camera::VideoFrameProperties* Msg_DeliverFrame::mutable_a_props() {
+  ::protobuf::mozilla::camera::VideoFrameProperties* _msg = _internal_mutable_a_props();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_props)
   return _msg;
 }
-inline void Msg_DeliverFrame::set_allocated_props(::protobuf::mozilla::camera::VideoFrameProperties* props) {
+inline void Msg_DeliverFrame::set_allocated_a_props(::protobuf::mozilla::camera::VideoFrameProperties* a_props) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.props_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_props_);
   }
-  if (props) {
+  if (a_props) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(props));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_props));
     if (message_arena != submessage_arena) {
-      props = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, props, submessage_arena);
+      a_props = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_props, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.props_ = props;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.props)
+  _impl_.a_props_ = a_props;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame.a_props)
 }
 
 // -------------------------------------------------------------------
@@ -3930,137 +3930,137 @@ inline void Msg_DeliverFrame::set_allocated_props(::protobuf::mozilla::camera::V
 
 // Msg_ReplyNumberOfCaptureDevices
 
-// required sint32 deviceCount = 1;
-inline bool Msg_ReplyNumberOfCaptureDevices::_internal_has_devicecount() const {
+// required sint32 a_deviceCount = 1;
+inline bool Msg_ReplyNumberOfCaptureDevices::_internal_has_a_devicecount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplyNumberOfCaptureDevices::has_devicecount() const {
-  return _internal_has_devicecount();
+inline bool Msg_ReplyNumberOfCaptureDevices::has_a_devicecount() const {
+  return _internal_has_a_devicecount();
 }
-inline void Msg_ReplyNumberOfCaptureDevices::clear_devicecount() {
-  _impl_.devicecount_ = 0;
+inline void Msg_ReplyNumberOfCaptureDevices::clear_a_devicecount() {
+  _impl_.a_devicecount_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_ReplyNumberOfCaptureDevices::_internal_devicecount() const {
-  return _impl_.devicecount_;
+inline int32_t Msg_ReplyNumberOfCaptureDevices::_internal_a_devicecount() const {
+  return _impl_.a_devicecount_;
 }
-inline int32_t Msg_ReplyNumberOfCaptureDevices::devicecount() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices.deviceCount)
-  return _internal_devicecount();
+inline int32_t Msg_ReplyNumberOfCaptureDevices::a_devicecount() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices.a_deviceCount)
+  return _internal_a_devicecount();
 }
-inline void Msg_ReplyNumberOfCaptureDevices::_internal_set_devicecount(int32_t value) {
+inline void Msg_ReplyNumberOfCaptureDevices::_internal_set_a_devicecount(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.devicecount_ = value;
+  _impl_.a_devicecount_ = value;
 }
-inline void Msg_ReplyNumberOfCaptureDevices::set_devicecount(int32_t value) {
-  _internal_set_devicecount(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices.deviceCount)
+inline void Msg_ReplyNumberOfCaptureDevices::set_a_devicecount(int32_t value) {
+  _internal_set_a_devicecount(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices.a_deviceCount)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReplyNumberOfCapabilities
 
-// required sint32 capabilityCount = 1;
-inline bool Msg_ReplyNumberOfCapabilities::_internal_has_capabilitycount() const {
+// required sint32 a_capabilityCount = 1;
+inline bool Msg_ReplyNumberOfCapabilities::_internal_has_a_capabilitycount() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplyNumberOfCapabilities::has_capabilitycount() const {
-  return _internal_has_capabilitycount();
+inline bool Msg_ReplyNumberOfCapabilities::has_a_capabilitycount() const {
+  return _internal_has_a_capabilitycount();
 }
-inline void Msg_ReplyNumberOfCapabilities::clear_capabilitycount() {
-  _impl_.capabilitycount_ = 0;
+inline void Msg_ReplyNumberOfCapabilities::clear_a_capabilitycount() {
+  _impl_.a_capabilitycount_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_ReplyNumberOfCapabilities::_internal_capabilitycount() const {
-  return _impl_.capabilitycount_;
+inline int32_t Msg_ReplyNumberOfCapabilities::_internal_a_capabilitycount() const {
+  return _impl_.a_capabilitycount_;
 }
-inline int32_t Msg_ReplyNumberOfCapabilities::capabilitycount() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities.capabilityCount)
-  return _internal_capabilitycount();
+inline int32_t Msg_ReplyNumberOfCapabilities::a_capabilitycount() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities.a_capabilityCount)
+  return _internal_a_capabilitycount();
 }
-inline void Msg_ReplyNumberOfCapabilities::_internal_set_capabilitycount(int32_t value) {
+inline void Msg_ReplyNumberOfCapabilities::_internal_set_a_capabilitycount(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.capabilitycount_ = value;
+  _impl_.a_capabilitycount_ = value;
 }
-inline void Msg_ReplyNumberOfCapabilities::set_capabilitycount(int32_t value) {
-  _internal_set_capabilitycount(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities.capabilityCount)
+inline void Msg_ReplyNumberOfCapabilities::set_a_capabilitycount(int32_t value) {
+  _internal_set_a_capabilitycount(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities.a_capabilityCount)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReplyAllocateCapture
 
-// required sint32 captureId = 1;
-inline bool Msg_ReplyAllocateCapture::_internal_has_captureid() const {
+// required sint32 a_captureId = 1;
+inline bool Msg_ReplyAllocateCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplyAllocateCapture::has_captureid() const {
-  return _internal_has_captureid();
+inline bool Msg_ReplyAllocateCapture::has_a_captureid() const {
+  return _internal_has_a_captureid();
 }
-inline void Msg_ReplyAllocateCapture::clear_captureid() {
-  _impl_.captureid_ = 0;
+inline void Msg_ReplyAllocateCapture::clear_a_captureid() {
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Msg_ReplyAllocateCapture::_internal_captureid() const {
-  return _impl_.captureid_;
+inline int32_t Msg_ReplyAllocateCapture::_internal_a_captureid() const {
+  return _impl_.a_captureid_;
 }
-inline int32_t Msg_ReplyAllocateCapture::captureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture.captureId)
-  return _internal_captureid();
+inline int32_t Msg_ReplyAllocateCapture::a_captureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture.a_captureId)
+  return _internal_a_captureid();
 }
-inline void Msg_ReplyAllocateCapture::_internal_set_captureid(int32_t value) {
+inline void Msg_ReplyAllocateCapture::_internal_set_a_captureid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.captureid_ = value;
+  _impl_.a_captureid_ = value;
 }
-inline void Msg_ReplyAllocateCapture::set_captureid(int32_t value) {
-  _internal_set_captureid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture.captureId)
+inline void Msg_ReplyAllocateCapture::set_a_captureid(int32_t value) {
+  _internal_set_a_captureid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture.a_captureId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReplyGetCaptureCapability
 
-// required .protobuf.mozilla.camera.VideoCaptureCapability cap = 1;
-inline bool Msg_ReplyGetCaptureCapability::_internal_has_cap() const {
+// required .protobuf.mozilla.camera.VideoCaptureCapability a_cap = 1;
+inline bool Msg_ReplyGetCaptureCapability::_internal_has_a_cap() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cap_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cap_ != nullptr);
   return value;
 }
-inline bool Msg_ReplyGetCaptureCapability::has_cap() const {
-  return _internal_has_cap();
+inline bool Msg_ReplyGetCaptureCapability::has_a_cap() const {
+  return _internal_has_a_cap();
 }
-inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_ReplyGetCaptureCapability::_internal_cap() const {
-  const ::protobuf::mozilla::camera::VideoCaptureCapability* p = _impl_.cap_;
+inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_ReplyGetCaptureCapability::_internal_a_cap() const {
+  const ::protobuf::mozilla::camera::VideoCaptureCapability* p = _impl_.a_cap_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::camera::VideoCaptureCapability&>(
       ::protobuf::mozilla::camera::_VideoCaptureCapability_default_instance_);
 }
-inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_ReplyGetCaptureCapability::cap() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.cap)
-  return _internal_cap();
+inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_ReplyGetCaptureCapability::a_cap() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.a_cap)
+  return _internal_a_cap();
 }
-inline void Msg_ReplyGetCaptureCapability::unsafe_arena_set_allocated_cap(
-    ::protobuf::mozilla::camera::VideoCaptureCapability* cap) {
+inline void Msg_ReplyGetCaptureCapability::unsafe_arena_set_allocated_a_cap(
+    ::protobuf::mozilla::camera::VideoCaptureCapability* a_cap) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cap_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cap_);
   }
-  _impl_.cap_ = cap;
-  if (cap) {
+  _impl_.a_cap_ = a_cap;
+  if (a_cap) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.cap)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.a_cap)
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::release_cap() {
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::release_a_cap() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.cap_;
-  _impl_.cap_ = nullptr;
+  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.a_cap_;
+  _impl_.a_cap_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4072,241 +4072,241 @@ inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureC
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::unsafe_arena_release_cap() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.cap)
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::unsafe_arena_release_a_cap() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.a_cap)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.cap_;
-  _impl_.cap_ = nullptr;
+  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.a_cap_;
+  _impl_.a_cap_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::_internal_mutable_cap() {
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::_internal_mutable_a_cap() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.cap_ == nullptr) {
+  if (_impl_.a_cap_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::camera::VideoCaptureCapability>(GetArenaForAllocation());
-    _impl_.cap_ = p;
+    _impl_.a_cap_ = p;
   }
-  return _impl_.cap_;
+  return _impl_.a_cap_;
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::mutable_cap() {
-  ::protobuf::mozilla::camera::VideoCaptureCapability* _msg = _internal_mutable_cap();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.cap)
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_ReplyGetCaptureCapability::mutable_a_cap() {
+  ::protobuf::mozilla::camera::VideoCaptureCapability* _msg = _internal_mutable_a_cap();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.a_cap)
   return _msg;
 }
-inline void Msg_ReplyGetCaptureCapability::set_allocated_cap(::protobuf::mozilla::camera::VideoCaptureCapability* cap) {
+inline void Msg_ReplyGetCaptureCapability::set_allocated_a_cap(::protobuf::mozilla::camera::VideoCaptureCapability* a_cap) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cap_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cap_);
   }
-  if (cap) {
+  if (a_cap) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cap));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cap));
     if (message_arena != submessage_arena) {
-      cap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cap, submessage_arena);
+      a_cap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cap, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.cap_ = cap;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.cap)
+  _impl_.a_cap_ = a_cap;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability.a_cap)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReplyGetCaptureDevice
 
-// required bytes device_name = 1;
-inline bool Msg_ReplyGetCaptureDevice::_internal_has_device_name() const {
+// required bytes a_device_name = 1;
+inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_device_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplyGetCaptureDevice::has_device_name() const {
-  return _internal_has_device_name();
+inline bool Msg_ReplyGetCaptureDevice::has_a_device_name() const {
+  return _internal_has_a_device_name();
 }
-inline void Msg_ReplyGetCaptureDevice::clear_device_name() {
-  _impl_.device_name_.ClearToEmpty();
+inline void Msg_ReplyGetCaptureDevice::clear_a_device_name() {
+  _impl_.a_device_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReplyGetCaptureDevice::device_name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
-  return _internal_device_name();
+inline const std::string& Msg_ReplyGetCaptureDevice::a_device_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_name)
+  return _internal_a_device_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReplyGetCaptureDevice::set_device_name(ArgT0&& arg0, ArgT... args) {
+void Msg_ReplyGetCaptureDevice::set_a_device_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.device_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
+ _impl_.a_device_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_name)
 }
-inline std::string* Msg_ReplyGetCaptureDevice::mutable_device_name() {
-  std::string* _s = _internal_mutable_device_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
+inline std::string* Msg_ReplyGetCaptureDevice::mutable_a_device_name() {
+  std::string* _s = _internal_mutable_a_device_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_name)
   return _s;
 }
-inline const std::string& Msg_ReplyGetCaptureDevice::_internal_device_name() const {
-  return _impl_.device_name_.Get();
+inline const std::string& Msg_ReplyGetCaptureDevice::_internal_a_device_name() const {
+  return _impl_.a_device_name_.Get();
 }
-inline void Msg_ReplyGetCaptureDevice::_internal_set_device_name(const std::string& value) {
+inline void Msg_ReplyGetCaptureDevice::_internal_set_a_device_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.device_name_.Set(value, GetArenaForAllocation());
+  _impl_.a_device_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReplyGetCaptureDevice::_internal_mutable_device_name() {
+inline std::string* Msg_ReplyGetCaptureDevice::_internal_mutable_a_device_name() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.device_name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_device_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReplyGetCaptureDevice::release_device_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
-  if (!_internal_has_device_name()) {
+inline std::string* Msg_ReplyGetCaptureDevice::release_a_device_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_name)
+  if (!_internal_has_a_device_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.device_name_.Release();
+  auto* p = _impl_.a_device_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.device_name_.IsDefault()) {
-    _impl_.device_name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_device_name_.IsDefault()) {
+    _impl_.a_device_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReplyGetCaptureDevice::set_allocated_device_name(std::string* device_name) {
-  if (device_name != nullptr) {
+inline void Msg_ReplyGetCaptureDevice::set_allocated_a_device_name(std::string* a_device_name) {
+  if (a_device_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.device_name_.SetAllocated(device_name, GetArenaForAllocation());
+  _impl_.a_device_name_.SetAllocated(a_device_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.device_name_.IsDefault()) {
-    _impl_.device_name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_device_name_.IsDefault()) {
+    _impl_.a_device_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_name)
 }
 
-// required bytes device_id = 2;
-inline bool Msg_ReplyGetCaptureDevice::_internal_has_device_id() const {
+// required bytes a_device_id = 2;
+inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_device_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReplyGetCaptureDevice::has_device_id() const {
-  return _internal_has_device_id();
+inline bool Msg_ReplyGetCaptureDevice::has_a_device_id() const {
+  return _internal_has_a_device_id();
 }
-inline void Msg_ReplyGetCaptureDevice::clear_device_id() {
-  _impl_.device_id_.ClearToEmpty();
+inline void Msg_ReplyGetCaptureDevice::clear_a_device_id() {
+  _impl_.a_device_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ReplyGetCaptureDevice::device_id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_id)
-  return _internal_device_id();
+inline const std::string& Msg_ReplyGetCaptureDevice::a_device_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_id)
+  return _internal_a_device_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReplyGetCaptureDevice::set_device_id(ArgT0&& arg0, ArgT... args) {
+void Msg_ReplyGetCaptureDevice::set_a_device_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.device_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_id)
+ _impl_.a_device_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_id)
 }
-inline std::string* Msg_ReplyGetCaptureDevice::mutable_device_id() {
-  std::string* _s = _internal_mutable_device_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_id)
+inline std::string* Msg_ReplyGetCaptureDevice::mutable_a_device_id() {
+  std::string* _s = _internal_mutable_a_device_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_id)
   return _s;
 }
-inline const std::string& Msg_ReplyGetCaptureDevice::_internal_device_id() const {
-  return _impl_.device_id_.Get();
+inline const std::string& Msg_ReplyGetCaptureDevice::_internal_a_device_id() const {
+  return _impl_.a_device_id_.Get();
 }
-inline void Msg_ReplyGetCaptureDevice::_internal_set_device_id(const std::string& value) {
+inline void Msg_ReplyGetCaptureDevice::_internal_set_a_device_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.device_id_.Set(value, GetArenaForAllocation());
+  _impl_.a_device_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReplyGetCaptureDevice::_internal_mutable_device_id() {
+inline std::string* Msg_ReplyGetCaptureDevice::_internal_mutable_a_device_id() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.device_id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_device_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReplyGetCaptureDevice::release_device_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_id)
-  if (!_internal_has_device_id()) {
+inline std::string* Msg_ReplyGetCaptureDevice::release_a_device_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_id)
+  if (!_internal_has_a_device_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.device_id_.Release();
+  auto* p = _impl_.a_device_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.device_id_.IsDefault()) {
-    _impl_.device_id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_device_id_.IsDefault()) {
+    _impl_.a_device_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReplyGetCaptureDevice::set_allocated_device_id(std::string* device_id) {
-  if (device_id != nullptr) {
+inline void Msg_ReplyGetCaptureDevice::set_allocated_a_device_id(std::string* a_device_id) {
+  if (a_device_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.device_id_.SetAllocated(device_id, GetArenaForAllocation());
+  _impl_.a_device_id_.SetAllocated(a_device_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.device_id_.IsDefault()) {
-    _impl_.device_id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_device_id_.IsDefault()) {
+    _impl_.a_device_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.device_id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_device_id)
 }
 
-// required bool scary = 3;
-inline bool Msg_ReplyGetCaptureDevice::_internal_has_scary() const {
+// required bool a_scary = 3;
+inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_scary() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ReplyGetCaptureDevice::has_scary() const {
-  return _internal_has_scary();
+inline bool Msg_ReplyGetCaptureDevice::has_a_scary() const {
+  return _internal_has_a_scary();
 }
-inline void Msg_ReplyGetCaptureDevice::clear_scary() {
-  _impl_.scary_ = false;
+inline void Msg_ReplyGetCaptureDevice::clear_a_scary() {
+  _impl_.a_scary_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_ReplyGetCaptureDevice::_internal_scary() const {
-  return _impl_.scary_;
+inline bool Msg_ReplyGetCaptureDevice::_internal_a_scary() const {
+  return _impl_.a_scary_;
 }
-inline bool Msg_ReplyGetCaptureDevice::scary() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.scary)
-  return _internal_scary();
+inline bool Msg_ReplyGetCaptureDevice::a_scary() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_scary)
+  return _internal_a_scary();
 }
-inline void Msg_ReplyGetCaptureDevice::_internal_set_scary(bool value) {
+inline void Msg_ReplyGetCaptureDevice::_internal_set_a_scary(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.scary_ = value;
+  _impl_.a_scary_ = value;
 }
-inline void Msg_ReplyGetCaptureDevice::set_scary(bool value) {
-  _internal_set_scary(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.scary)
+inline void Msg_ReplyGetCaptureDevice::set_a_scary(bool value) {
+  _internal_set_a_scary(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_scary)
 }
 
-// required bool placeholder = 4;
-inline bool Msg_ReplyGetCaptureDevice::_internal_has_placeholder() const {
+// required bool a_placeholder = 4;
+inline bool Msg_ReplyGetCaptureDevice::_internal_has_a_placeholder() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ReplyGetCaptureDevice::has_placeholder() const {
-  return _internal_has_placeholder();
+inline bool Msg_ReplyGetCaptureDevice::has_a_placeholder() const {
+  return _internal_has_a_placeholder();
 }
-inline void Msg_ReplyGetCaptureDevice::clear_placeholder() {
-  _impl_.placeholder_ = false;
+inline void Msg_ReplyGetCaptureDevice::clear_a_placeholder() {
+  _impl_.a_placeholder_ = false;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline bool Msg_ReplyGetCaptureDevice::_internal_placeholder() const {
-  return _impl_.placeholder_;
+inline bool Msg_ReplyGetCaptureDevice::_internal_a_placeholder() const {
+  return _impl_.a_placeholder_;
 }
-inline bool Msg_ReplyGetCaptureDevice::placeholder() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.placeholder)
-  return _internal_placeholder();
+inline bool Msg_ReplyGetCaptureDevice::a_placeholder() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_placeholder)
+  return _internal_a_placeholder();
 }
-inline void Msg_ReplyGetCaptureDevice::_internal_set_placeholder(bool value) {
+inline void Msg_ReplyGetCaptureDevice::_internal_set_a_placeholder(bool value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.placeholder_ = value;
+  _impl_.a_placeholder_ = value;
 }
-inline void Msg_ReplyGetCaptureDevice::set_placeholder(bool value) {
-  _internal_set_placeholder(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.placeholder)
+inline void Msg_ReplyGetCaptureDevice::set_a_placeholder(bool value) {
+  _internal_set_a_placeholder(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice.a_placeholder)
 }
 
 // -------------------------------------------------------------------
@@ -4329,885 +4329,885 @@ inline void Msg_ReplyGetCaptureDevice::set_placeholder(bool value) {
 
 // Msg_NumberOfCaptureDevices
 
-// required bytes engine = 1;
-inline bool Msg_NumberOfCaptureDevices::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_NumberOfCaptureDevices::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NumberOfCaptureDevices::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_NumberOfCaptureDevices::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_NumberOfCaptureDevices::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_NumberOfCaptureDevices::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NumberOfCaptureDevices::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.engine)
-  return _internal_engine();
+inline const std::string& Msg_NumberOfCaptureDevices::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NumberOfCaptureDevices::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_NumberOfCaptureDevices::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.a_engine)
 }
-inline std::string* Msg_NumberOfCaptureDevices::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.engine)
+inline std::string* Msg_NumberOfCaptureDevices::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.a_engine)
   return _s;
 }
-inline const std::string& Msg_NumberOfCaptureDevices::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_NumberOfCaptureDevices::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_NumberOfCaptureDevices::_internal_set_engine(const std::string& value) {
+inline void Msg_NumberOfCaptureDevices::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NumberOfCaptureDevices::_internal_mutable_engine() {
+inline std::string* Msg_NumberOfCaptureDevices::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NumberOfCaptureDevices::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_NumberOfCaptureDevices::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NumberOfCaptureDevices::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_NumberOfCaptureDevices::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices.a_engine)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NumberOfCapabilities
 
-// required bytes engine = 1;
-inline bool Msg_NumberOfCapabilities::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_NumberOfCapabilities::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NumberOfCapabilities::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_NumberOfCapabilities::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_NumberOfCapabilities::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_NumberOfCapabilities::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NumberOfCapabilities::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.engine)
-  return _internal_engine();
+inline const std::string& Msg_NumberOfCapabilities::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NumberOfCapabilities::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_NumberOfCapabilities::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_engine)
 }
-inline std::string* Msg_NumberOfCapabilities::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.engine)
+inline std::string* Msg_NumberOfCapabilities::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_engine)
   return _s;
 }
-inline const std::string& Msg_NumberOfCapabilities::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_NumberOfCapabilities::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_NumberOfCapabilities::_internal_set_engine(const std::string& value) {
+inline void Msg_NumberOfCapabilities::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NumberOfCapabilities::_internal_mutable_engine() {
+inline std::string* Msg_NumberOfCapabilities::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NumberOfCapabilities::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_NumberOfCapabilities::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NumberOfCapabilities::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_NumberOfCapabilities::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_engine)
 }
 
-// required bytes deviceUniqueIdUTF8 = 2;
-inline bool Msg_NumberOfCapabilities::_internal_has_deviceuniqueidutf8() const {
+// required bytes a_deviceUniqueIdUTF8 = 2;
+inline bool Msg_NumberOfCapabilities::_internal_has_a_deviceuniqueidutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_NumberOfCapabilities::has_deviceuniqueidutf8() const {
-  return _internal_has_deviceuniqueidutf8();
+inline bool Msg_NumberOfCapabilities::has_a_deviceuniqueidutf8() const {
+  return _internal_has_a_deviceuniqueidutf8();
 }
-inline void Msg_NumberOfCapabilities::clear_deviceuniqueidutf8() {
-  _impl_.deviceuniqueidutf8_.ClearToEmpty();
+inline void Msg_NumberOfCapabilities::clear_a_deviceuniqueidutf8() {
+  _impl_.a_deviceuniqueidutf8_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_NumberOfCapabilities::deviceuniqueidutf8() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.deviceUniqueIdUTF8)
-  return _internal_deviceuniqueidutf8();
+inline const std::string& Msg_NumberOfCapabilities::a_deviceuniqueidutf8() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_deviceUniqueIdUTF8)
+  return _internal_a_deviceuniqueidutf8();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NumberOfCapabilities::set_deviceuniqueidutf8(ArgT0&& arg0, ArgT... args) {
+void Msg_NumberOfCapabilities::set_a_deviceuniqueidutf8(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.deviceuniqueidutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.deviceUniqueIdUTF8)
+ _impl_.a_deviceuniqueidutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_deviceUniqueIdUTF8)
 }
-inline std::string* Msg_NumberOfCapabilities::mutable_deviceuniqueidutf8() {
-  std::string* _s = _internal_mutable_deviceuniqueidutf8();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.deviceUniqueIdUTF8)
+inline std::string* Msg_NumberOfCapabilities::mutable_a_deviceuniqueidutf8() {
+  std::string* _s = _internal_mutable_a_deviceuniqueidutf8();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_deviceUniqueIdUTF8)
   return _s;
 }
-inline const std::string& Msg_NumberOfCapabilities::_internal_deviceuniqueidutf8() const {
-  return _impl_.deviceuniqueidutf8_.Get();
+inline const std::string& Msg_NumberOfCapabilities::_internal_a_deviceuniqueidutf8() const {
+  return _impl_.a_deviceuniqueidutf8_.Get();
 }
-inline void Msg_NumberOfCapabilities::_internal_set_deviceuniqueidutf8(const std::string& value) {
+inline void Msg_NumberOfCapabilities::_internal_set_a_deviceuniqueidutf8(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.deviceuniqueidutf8_.Set(value, GetArenaForAllocation());
+  _impl_.a_deviceuniqueidutf8_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NumberOfCapabilities::_internal_mutable_deviceuniqueidutf8() {
+inline std::string* Msg_NumberOfCapabilities::_internal_mutable_a_deviceuniqueidutf8() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.deviceuniqueidutf8_.Mutable(GetArenaForAllocation());
+  return _impl_.a_deviceuniqueidutf8_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NumberOfCapabilities::release_deviceuniqueidutf8() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.deviceUniqueIdUTF8)
-  if (!_internal_has_deviceuniqueidutf8()) {
+inline std::string* Msg_NumberOfCapabilities::release_a_deviceuniqueidutf8() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_deviceUniqueIdUTF8)
+  if (!_internal_has_a_deviceuniqueidutf8()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.deviceuniqueidutf8_.Release();
+  auto* p = _impl_.a_deviceuniqueidutf8_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceuniqueidutf8_.IsDefault()) {
-    _impl_.deviceuniqueidutf8_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceuniqueidutf8_.IsDefault()) {
+    _impl_.a_deviceuniqueidutf8_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NumberOfCapabilities::set_allocated_deviceuniqueidutf8(std::string* deviceuniqueidutf8) {
-  if (deviceuniqueidutf8 != nullptr) {
+inline void Msg_NumberOfCapabilities::set_allocated_a_deviceuniqueidutf8(std::string* a_deviceuniqueidutf8) {
+  if (a_deviceuniqueidutf8 != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.deviceuniqueidutf8_.SetAllocated(deviceuniqueidutf8, GetArenaForAllocation());
+  _impl_.a_deviceuniqueidutf8_.SetAllocated(a_deviceuniqueidutf8, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceuniqueidutf8_.IsDefault()) {
-    _impl_.deviceuniqueidutf8_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceuniqueidutf8_.IsDefault()) {
+    _impl_.a_deviceuniqueidutf8_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.deviceUniqueIdUTF8)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities.a_deviceUniqueIdUTF8)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetCaptureCapability
 
-// required bytes engine = 1;
-inline bool Msg_GetCaptureCapability::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_GetCaptureCapability::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetCaptureCapability::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_GetCaptureCapability::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_GetCaptureCapability::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_GetCaptureCapability::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetCaptureCapability::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.engine)
-  return _internal_engine();
+inline const std::string& Msg_GetCaptureCapability::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetCaptureCapability::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_GetCaptureCapability::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_engine)
 }
-inline std::string* Msg_GetCaptureCapability::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.engine)
+inline std::string* Msg_GetCaptureCapability::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_engine)
   return _s;
 }
-inline const std::string& Msg_GetCaptureCapability::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_GetCaptureCapability::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_GetCaptureCapability::_internal_set_engine(const std::string& value) {
+inline void Msg_GetCaptureCapability::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetCaptureCapability::_internal_mutable_engine() {
+inline std::string* Msg_GetCaptureCapability::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetCaptureCapability::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_GetCaptureCapability::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetCaptureCapability::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_GetCaptureCapability::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_engine)
 }
 
-// required bytes unique_idUTF8 = 2;
-inline bool Msg_GetCaptureCapability::_internal_has_unique_idutf8() const {
+// required bytes a_unique_idUTF8 = 2;
+inline bool Msg_GetCaptureCapability::_internal_has_a_unique_idutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetCaptureCapability::has_unique_idutf8() const {
-  return _internal_has_unique_idutf8();
+inline bool Msg_GetCaptureCapability::has_a_unique_idutf8() const {
+  return _internal_has_a_unique_idutf8();
 }
-inline void Msg_GetCaptureCapability::clear_unique_idutf8() {
-  _impl_.unique_idutf8_.ClearToEmpty();
+inline void Msg_GetCaptureCapability::clear_a_unique_idutf8() {
+  _impl_.a_unique_idutf8_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_GetCaptureCapability::unique_idutf8() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
-  return _internal_unique_idutf8();
+inline const std::string& Msg_GetCaptureCapability::a_unique_idutf8() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_unique_idUTF8)
+  return _internal_a_unique_idutf8();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetCaptureCapability::set_unique_idutf8(ArgT0&& arg0, ArgT... args) {
+void Msg_GetCaptureCapability::set_a_unique_idutf8(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.unique_idutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
+ _impl_.a_unique_idutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_unique_idUTF8)
 }
-inline std::string* Msg_GetCaptureCapability::mutable_unique_idutf8() {
-  std::string* _s = _internal_mutable_unique_idutf8();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
+inline std::string* Msg_GetCaptureCapability::mutable_a_unique_idutf8() {
+  std::string* _s = _internal_mutable_a_unique_idutf8();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_unique_idUTF8)
   return _s;
 }
-inline const std::string& Msg_GetCaptureCapability::_internal_unique_idutf8() const {
-  return _impl_.unique_idutf8_.Get();
+inline const std::string& Msg_GetCaptureCapability::_internal_a_unique_idutf8() const {
+  return _impl_.a_unique_idutf8_.Get();
 }
-inline void Msg_GetCaptureCapability::_internal_set_unique_idutf8(const std::string& value) {
+inline void Msg_GetCaptureCapability::_internal_set_a_unique_idutf8(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.unique_idutf8_.Set(value, GetArenaForAllocation());
+  _impl_.a_unique_idutf8_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetCaptureCapability::_internal_mutable_unique_idutf8() {
+inline std::string* Msg_GetCaptureCapability::_internal_mutable_a_unique_idutf8() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.unique_idutf8_.Mutable(GetArenaForAllocation());
+  return _impl_.a_unique_idutf8_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetCaptureCapability::release_unique_idutf8() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
-  if (!_internal_has_unique_idutf8()) {
+inline std::string* Msg_GetCaptureCapability::release_a_unique_idutf8() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_unique_idUTF8)
+  if (!_internal_has_a_unique_idutf8()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.unique_idutf8_.Release();
+  auto* p = _impl_.a_unique_idutf8_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unique_idutf8_.IsDefault()) {
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+  if (_impl_.a_unique_idutf8_.IsDefault()) {
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetCaptureCapability::set_allocated_unique_idutf8(std::string* unique_idutf8) {
-  if (unique_idutf8 != nullptr) {
+inline void Msg_GetCaptureCapability::set_allocated_a_unique_idutf8(std::string* a_unique_idutf8) {
+  if (a_unique_idutf8 != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.unique_idutf8_.SetAllocated(unique_idutf8, GetArenaForAllocation());
+  _impl_.a_unique_idutf8_.SetAllocated(a_unique_idutf8, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unique_idutf8_.IsDefault()) {
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+  if (_impl_.a_unique_idutf8_.IsDefault()) {
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.unique_idUTF8)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_unique_idUTF8)
 }
 
-// required sint32 capability_number = 3;
-inline bool Msg_GetCaptureCapability::_internal_has_capability_number() const {
+// required sint32 a_capability_number = 3;
+inline bool Msg_GetCaptureCapability::_internal_has_a_capability_number() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_GetCaptureCapability::has_capability_number() const {
-  return _internal_has_capability_number();
+inline bool Msg_GetCaptureCapability::has_a_capability_number() const {
+  return _internal_has_a_capability_number();
 }
-inline void Msg_GetCaptureCapability::clear_capability_number() {
-  _impl_.capability_number_ = 0;
+inline void Msg_GetCaptureCapability::clear_a_capability_number() {
+  _impl_.a_capability_number_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_GetCaptureCapability::_internal_capability_number() const {
-  return _impl_.capability_number_;
+inline int32_t Msg_GetCaptureCapability::_internal_a_capability_number() const {
+  return _impl_.a_capability_number_;
 }
-inline int32_t Msg_GetCaptureCapability::capability_number() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.capability_number)
-  return _internal_capability_number();
+inline int32_t Msg_GetCaptureCapability::a_capability_number() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_capability_number)
+  return _internal_a_capability_number();
 }
-inline void Msg_GetCaptureCapability::_internal_set_capability_number(int32_t value) {
+inline void Msg_GetCaptureCapability::_internal_set_a_capability_number(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.capability_number_ = value;
+  _impl_.a_capability_number_ = value;
 }
-inline void Msg_GetCaptureCapability::set_capability_number(int32_t value) {
-  _internal_set_capability_number(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.capability_number)
+inline void Msg_GetCaptureCapability::set_a_capability_number(int32_t value) {
+  _internal_set_a_capability_number(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability.a_capability_number)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetCaptureDevice
 
-// required bytes engine = 1;
-inline bool Msg_GetCaptureDevice::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_GetCaptureDevice::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetCaptureDevice::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_GetCaptureDevice::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_GetCaptureDevice::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_GetCaptureDevice::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetCaptureDevice::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.engine)
-  return _internal_engine();
+inline const std::string& Msg_GetCaptureDevice::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetCaptureDevice::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_GetCaptureDevice::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_engine)
 }
-inline std::string* Msg_GetCaptureDevice::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.engine)
+inline std::string* Msg_GetCaptureDevice::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_engine)
   return _s;
 }
-inline const std::string& Msg_GetCaptureDevice::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_GetCaptureDevice::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_GetCaptureDevice::_internal_set_engine(const std::string& value) {
+inline void Msg_GetCaptureDevice::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetCaptureDevice::_internal_mutable_engine() {
+inline std::string* Msg_GetCaptureDevice::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetCaptureDevice::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_GetCaptureDevice::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetCaptureDevice::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_GetCaptureDevice::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_engine)
 }
 
-// required sint32 deviceIndex = 2;
-inline bool Msg_GetCaptureDevice::_internal_has_deviceindex() const {
+// required sint32 a_deviceIndex = 2;
+inline bool Msg_GetCaptureDevice::_internal_has_a_deviceindex() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetCaptureDevice::has_deviceindex() const {
-  return _internal_has_deviceindex();
+inline bool Msg_GetCaptureDevice::has_a_deviceindex() const {
+  return _internal_has_a_deviceindex();
 }
-inline void Msg_GetCaptureDevice::clear_deviceindex() {
-  _impl_.deviceindex_ = 0;
+inline void Msg_GetCaptureDevice::clear_a_deviceindex() {
+  _impl_.a_deviceindex_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_GetCaptureDevice::_internal_deviceindex() const {
-  return _impl_.deviceindex_;
+inline int32_t Msg_GetCaptureDevice::_internal_a_deviceindex() const {
+  return _impl_.a_deviceindex_;
 }
-inline int32_t Msg_GetCaptureDevice::deviceindex() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.deviceIndex)
-  return _internal_deviceindex();
+inline int32_t Msg_GetCaptureDevice::a_deviceindex() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_deviceIndex)
+  return _internal_a_deviceindex();
 }
-inline void Msg_GetCaptureDevice::_internal_set_deviceindex(int32_t value) {
+inline void Msg_GetCaptureDevice::_internal_set_a_deviceindex(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.deviceindex_ = value;
+  _impl_.a_deviceindex_ = value;
 }
-inline void Msg_GetCaptureDevice::set_deviceindex(int32_t value) {
-  _internal_set_deviceindex(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.deviceIndex)
+inline void Msg_GetCaptureDevice::set_a_deviceindex(int32_t value) {
+  _internal_set_a_deviceindex(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice.a_deviceIndex)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AllocateCapture
 
-// required bytes engine = 1;
-inline bool Msg_AllocateCapture::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_AllocateCapture::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AllocateCapture::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_AllocateCapture::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_AllocateCapture::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_AllocateCapture::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AllocateCapture::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.engine)
-  return _internal_engine();
+inline const std::string& Msg_AllocateCapture::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AllocateCapture::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_AllocateCapture::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_engine)
 }
-inline std::string* Msg_AllocateCapture::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.engine)
+inline std::string* Msg_AllocateCapture::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_engine)
   return _s;
 }
-inline const std::string& Msg_AllocateCapture::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_AllocateCapture::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_AllocateCapture::_internal_set_engine(const std::string& value) {
+inline void Msg_AllocateCapture::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AllocateCapture::_internal_mutable_engine() {
+inline std::string* Msg_AllocateCapture::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AllocateCapture::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_AllocateCapture::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AllocateCapture::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_AllocateCapture::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_engine)
 }
 
-// required bytes unique_idUTF8 = 2;
-inline bool Msg_AllocateCapture::_internal_has_unique_idutf8() const {
+// required bytes a_unique_idUTF8 = 2;
+inline bool Msg_AllocateCapture::_internal_has_a_unique_idutf8() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AllocateCapture::has_unique_idutf8() const {
-  return _internal_has_unique_idutf8();
+inline bool Msg_AllocateCapture::has_a_unique_idutf8() const {
+  return _internal_has_a_unique_idutf8();
 }
-inline void Msg_AllocateCapture::clear_unique_idutf8() {
-  _impl_.unique_idutf8_.ClearToEmpty();
+inline void Msg_AllocateCapture::clear_a_unique_idutf8() {
+  _impl_.a_unique_idutf8_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_AllocateCapture::unique_idutf8() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.unique_idUTF8)
-  return _internal_unique_idutf8();
+inline const std::string& Msg_AllocateCapture::a_unique_idutf8() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_unique_idUTF8)
+  return _internal_a_unique_idutf8();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AllocateCapture::set_unique_idutf8(ArgT0&& arg0, ArgT... args) {
+void Msg_AllocateCapture::set_a_unique_idutf8(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.unique_idutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.unique_idUTF8)
+ _impl_.a_unique_idutf8_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_unique_idUTF8)
 }
-inline std::string* Msg_AllocateCapture::mutable_unique_idutf8() {
-  std::string* _s = _internal_mutable_unique_idutf8();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.unique_idUTF8)
+inline std::string* Msg_AllocateCapture::mutable_a_unique_idutf8() {
+  std::string* _s = _internal_mutable_a_unique_idutf8();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_unique_idUTF8)
   return _s;
 }
-inline const std::string& Msg_AllocateCapture::_internal_unique_idutf8() const {
-  return _impl_.unique_idutf8_.Get();
+inline const std::string& Msg_AllocateCapture::_internal_a_unique_idutf8() const {
+  return _impl_.a_unique_idutf8_.Get();
 }
-inline void Msg_AllocateCapture::_internal_set_unique_idutf8(const std::string& value) {
+inline void Msg_AllocateCapture::_internal_set_a_unique_idutf8(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.unique_idutf8_.Set(value, GetArenaForAllocation());
+  _impl_.a_unique_idutf8_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AllocateCapture::_internal_mutable_unique_idutf8() {
+inline std::string* Msg_AllocateCapture::_internal_mutable_a_unique_idutf8() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.unique_idutf8_.Mutable(GetArenaForAllocation());
+  return _impl_.a_unique_idutf8_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AllocateCapture::release_unique_idutf8() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.unique_idUTF8)
-  if (!_internal_has_unique_idutf8()) {
+inline std::string* Msg_AllocateCapture::release_a_unique_idutf8() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_unique_idUTF8)
+  if (!_internal_has_a_unique_idutf8()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.unique_idutf8_.Release();
+  auto* p = _impl_.a_unique_idutf8_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unique_idutf8_.IsDefault()) {
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+  if (_impl_.a_unique_idutf8_.IsDefault()) {
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AllocateCapture::set_allocated_unique_idutf8(std::string* unique_idutf8) {
-  if (unique_idutf8 != nullptr) {
+inline void Msg_AllocateCapture::set_allocated_a_unique_idutf8(std::string* a_unique_idutf8) {
+  if (a_unique_idutf8 != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.unique_idutf8_.SetAllocated(unique_idutf8, GetArenaForAllocation());
+  _impl_.a_unique_idutf8_.SetAllocated(a_unique_idutf8, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.unique_idutf8_.IsDefault()) {
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+  if (_impl_.a_unique_idutf8_.IsDefault()) {
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.unique_idUTF8)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_unique_idUTF8)
 }
 
-// required uint64 windowID = 3;
-inline bool Msg_AllocateCapture::_internal_has_windowid() const {
+// required uint64 a_windowID = 3;
+inline bool Msg_AllocateCapture::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_AllocateCapture::has_windowid() const {
-  return _internal_has_windowid();
+inline bool Msg_AllocateCapture::has_a_windowid() const {
+  return _internal_has_a_windowid();
 }
-inline void Msg_AllocateCapture::clear_windowid() {
-  _impl_.windowid_ = uint64_t{0u};
+inline void Msg_AllocateCapture::clear_a_windowid() {
+  _impl_.a_windowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint64_t Msg_AllocateCapture::_internal_windowid() const {
-  return _impl_.windowid_;
+inline uint64_t Msg_AllocateCapture::_internal_a_windowid() const {
+  return _impl_.a_windowid_;
 }
-inline uint64_t Msg_AllocateCapture::windowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.windowID)
-  return _internal_windowid();
+inline uint64_t Msg_AllocateCapture::a_windowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_windowID)
+  return _internal_a_windowid();
 }
-inline void Msg_AllocateCapture::_internal_set_windowid(uint64_t value) {
+inline void Msg_AllocateCapture::_internal_set_a_windowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.windowid_ = value;
+  _impl_.a_windowid_ = value;
 }
-inline void Msg_AllocateCapture::set_windowid(uint64_t value) {
-  _internal_set_windowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.windowID)
+inline void Msg_AllocateCapture::set_a_windowid(uint64_t value) {
+  _internal_set_a_windowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture.a_windowID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReleaseCapture
 
-// required bytes engine = 1;
-inline bool Msg_ReleaseCapture::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_ReleaseCapture::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReleaseCapture::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_ReleaseCapture::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_ReleaseCapture::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_ReleaseCapture::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReleaseCapture::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.engine)
-  return _internal_engine();
+inline const std::string& Msg_ReleaseCapture::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReleaseCapture::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_ReleaseCapture::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_engine)
 }
-inline std::string* Msg_ReleaseCapture::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.engine)
+inline std::string* Msg_ReleaseCapture::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_engine)
   return _s;
 }
-inline const std::string& Msg_ReleaseCapture::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_ReleaseCapture::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_ReleaseCapture::_internal_set_engine(const std::string& value) {
+inline void Msg_ReleaseCapture::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReleaseCapture::_internal_mutable_engine() {
+inline std::string* Msg_ReleaseCapture::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReleaseCapture::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_ReleaseCapture::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReleaseCapture::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_ReleaseCapture::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_engine)
 }
 
-// required sint32 captureId = 2;
-inline bool Msg_ReleaseCapture::_internal_has_captureid() const {
+// required sint32 a_captureId = 2;
+inline bool Msg_ReleaseCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReleaseCapture::has_captureid() const {
-  return _internal_has_captureid();
+inline bool Msg_ReleaseCapture::has_a_captureid() const {
+  return _internal_has_a_captureid();
 }
-inline void Msg_ReleaseCapture::clear_captureid() {
-  _impl_.captureid_ = 0;
+inline void Msg_ReleaseCapture::clear_a_captureid() {
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_ReleaseCapture::_internal_captureid() const {
-  return _impl_.captureid_;
+inline int32_t Msg_ReleaseCapture::_internal_a_captureid() const {
+  return _impl_.a_captureid_;
 }
-inline int32_t Msg_ReleaseCapture::captureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.captureId)
-  return _internal_captureid();
+inline int32_t Msg_ReleaseCapture::a_captureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_captureId)
+  return _internal_a_captureid();
 }
-inline void Msg_ReleaseCapture::_internal_set_captureid(int32_t value) {
+inline void Msg_ReleaseCapture::_internal_set_a_captureid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.captureid_ = value;
+  _impl_.a_captureid_ = value;
 }
-inline void Msg_ReleaseCapture::set_captureid(int32_t value) {
-  _internal_set_captureid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.captureId)
+inline void Msg_ReleaseCapture::set_a_captureid(int32_t value) {
+  _internal_set_a_captureid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture.a_captureId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StartCapture
 
-// required bytes engine = 1;
-inline bool Msg_StartCapture::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_StartCapture::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StartCapture::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_StartCapture::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_StartCapture::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_StartCapture::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StartCapture::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StartCapture.engine)
-  return _internal_engine();
+inline const std::string& Msg_StartCapture::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StartCapture::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_StartCapture::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StartCapture.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_engine)
 }
-inline std::string* Msg_StartCapture::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_StartCapture.engine)
+inline std::string* Msg_StartCapture::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_engine)
   return _s;
 }
-inline const std::string& Msg_StartCapture::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_StartCapture::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_StartCapture::_internal_set_engine(const std::string& value) {
+inline void Msg_StartCapture::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StartCapture::_internal_mutable_engine() {
+inline std::string* Msg_StartCapture::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StartCapture::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_StartCapture.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_StartCapture::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StartCapture::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_StartCapture::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_engine)
 }
 
-// required sint32 captureId = 2;
-inline bool Msg_StartCapture::_internal_has_captureid() const {
+// required sint32 a_captureId = 2;
+inline bool Msg_StartCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_StartCapture::has_captureid() const {
-  return _internal_has_captureid();
+inline bool Msg_StartCapture::has_a_captureid() const {
+  return _internal_has_a_captureid();
 }
-inline void Msg_StartCapture::clear_captureid() {
-  _impl_.captureid_ = 0;
+inline void Msg_StartCapture::clear_a_captureid() {
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_StartCapture::_internal_captureid() const {
-  return _impl_.captureid_;
+inline int32_t Msg_StartCapture::_internal_a_captureid() const {
+  return _impl_.a_captureid_;
 }
-inline int32_t Msg_StartCapture::captureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StartCapture.captureId)
-  return _internal_captureid();
+inline int32_t Msg_StartCapture::a_captureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_captureId)
+  return _internal_a_captureid();
 }
-inline void Msg_StartCapture::_internal_set_captureid(int32_t value) {
+inline void Msg_StartCapture::_internal_set_a_captureid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.captureid_ = value;
+  _impl_.a_captureid_ = value;
 }
-inline void Msg_StartCapture::set_captureid(int32_t value) {
-  _internal_set_captureid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StartCapture.captureId)
+inline void Msg_StartCapture::set_a_captureid(int32_t value) {
+  _internal_set_a_captureid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_captureId)
 }
 
-// required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
-inline bool Msg_StartCapture::_internal_has_capability() const {
+// required .protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
+inline bool Msg_StartCapture::_internal_has_a_capability() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.capability_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_capability_ != nullptr);
   return value;
 }
-inline bool Msg_StartCapture::has_capability() const {
-  return _internal_has_capability();
+inline bool Msg_StartCapture::has_a_capability() const {
+  return _internal_has_a_capability();
 }
-inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_StartCapture::_internal_capability() const {
-  const ::protobuf::mozilla::camera::VideoCaptureCapability* p = _impl_.capability_;
+inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_StartCapture::_internal_a_capability() const {
+  const ::protobuf::mozilla::camera::VideoCaptureCapability* p = _impl_.a_capability_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::camera::VideoCaptureCapability&>(
       ::protobuf::mozilla::camera::_VideoCaptureCapability_default_instance_);
 }
-inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_StartCapture::capability() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StartCapture.capability)
-  return _internal_capability();
+inline const ::protobuf::mozilla::camera::VideoCaptureCapability& Msg_StartCapture::a_capability() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_capability)
+  return _internal_a_capability();
 }
-inline void Msg_StartCapture::unsafe_arena_set_allocated_capability(
-    ::protobuf::mozilla::camera::VideoCaptureCapability* capability) {
+inline void Msg_StartCapture::unsafe_arena_set_allocated_a_capability(
+    ::protobuf::mozilla::camera::VideoCaptureCapability* a_capability) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.capability_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_capability_);
   }
-  _impl_.capability_ = capability;
-  if (capability) {
+  _impl_.a_capability_ = a_capability;
+  if (a_capability) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.capability)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_capability)
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::release_capability() {
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::release_a_capability() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.capability_;
-  _impl_.capability_ = nullptr;
+  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.a_capability_;
+  _impl_.a_capability_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -5219,389 +5219,389 @@ inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::unsafe_arena_release_capability() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_StartCapture.capability)
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::unsafe_arena_release_a_capability() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_capability)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.capability_;
-  _impl_.capability_ = nullptr;
+  ::protobuf::mozilla::camera::VideoCaptureCapability* temp = _impl_.a_capability_;
+  _impl_.a_capability_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::_internal_mutable_capability() {
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::_internal_mutable_a_capability() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.capability_ == nullptr) {
+  if (_impl_.a_capability_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::camera::VideoCaptureCapability>(GetArenaForAllocation());
-    _impl_.capability_ = p;
+    _impl_.a_capability_ = p;
   }
-  return _impl_.capability_;
+  return _impl_.a_capability_;
 }
-inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::mutable_capability() {
-  ::protobuf::mozilla::camera::VideoCaptureCapability* _msg = _internal_mutable_capability();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_StartCapture.capability)
+inline ::protobuf::mozilla::camera::VideoCaptureCapability* Msg_StartCapture::mutable_a_capability() {
+  ::protobuf::mozilla::camera::VideoCaptureCapability* _msg = _internal_mutable_a_capability();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_capability)
   return _msg;
 }
-inline void Msg_StartCapture::set_allocated_capability(::protobuf::mozilla::camera::VideoCaptureCapability* capability) {
+inline void Msg_StartCapture::set_allocated_a_capability(::protobuf::mozilla::camera::VideoCaptureCapability* a_capability) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.capability_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_capability_);
   }
-  if (capability) {
+  if (a_capability) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(capability));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_capability));
     if (message_arena != submessage_arena) {
-      capability = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, capability, submessage_arena);
+      a_capability = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_capability, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.capability_ = capability;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.capability)
+  _impl_.a_capability_ = a_capability;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StartCapture.a_capability)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_FocusOnSelectedSource
 
-// required bytes engine = 1;
-inline bool Msg_FocusOnSelectedSource::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_FocusOnSelectedSource::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_FocusOnSelectedSource::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_FocusOnSelectedSource::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_FocusOnSelectedSource::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_FocusOnSelectedSource::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_FocusOnSelectedSource::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.engine)
-  return _internal_engine();
+inline const std::string& Msg_FocusOnSelectedSource::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_FocusOnSelectedSource::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_FocusOnSelectedSource::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_engine)
 }
-inline std::string* Msg_FocusOnSelectedSource::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.engine)
+inline std::string* Msg_FocusOnSelectedSource::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_engine)
   return _s;
 }
-inline const std::string& Msg_FocusOnSelectedSource::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_FocusOnSelectedSource::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_FocusOnSelectedSource::_internal_set_engine(const std::string& value) {
+inline void Msg_FocusOnSelectedSource::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_FocusOnSelectedSource::_internal_mutable_engine() {
+inline std::string* Msg_FocusOnSelectedSource::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_FocusOnSelectedSource::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_FocusOnSelectedSource::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_FocusOnSelectedSource::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_FocusOnSelectedSource::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_engine)
 }
 
-// required sint32 captureId = 2;
-inline bool Msg_FocusOnSelectedSource::_internal_has_captureid() const {
+// required sint32 a_captureId = 2;
+inline bool Msg_FocusOnSelectedSource::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_FocusOnSelectedSource::has_captureid() const {
-  return _internal_has_captureid();
+inline bool Msg_FocusOnSelectedSource::has_a_captureid() const {
+  return _internal_has_a_captureid();
 }
-inline void Msg_FocusOnSelectedSource::clear_captureid() {
-  _impl_.captureid_ = 0;
+inline void Msg_FocusOnSelectedSource::clear_a_captureid() {
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_FocusOnSelectedSource::_internal_captureid() const {
-  return _impl_.captureid_;
+inline int32_t Msg_FocusOnSelectedSource::_internal_a_captureid() const {
+  return _impl_.a_captureid_;
 }
-inline int32_t Msg_FocusOnSelectedSource::captureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.captureId)
-  return _internal_captureid();
+inline int32_t Msg_FocusOnSelectedSource::a_captureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_captureId)
+  return _internal_a_captureid();
 }
-inline void Msg_FocusOnSelectedSource::_internal_set_captureid(int32_t value) {
+inline void Msg_FocusOnSelectedSource::_internal_set_a_captureid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.captureid_ = value;
+  _impl_.a_captureid_ = value;
 }
-inline void Msg_FocusOnSelectedSource::set_captureid(int32_t value) {
-  _internal_set_captureid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.captureId)
+inline void Msg_FocusOnSelectedSource::set_a_captureid(int32_t value) {
+  _internal_set_a_captureid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource.a_captureId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StopCapture
 
-// required bytes engine = 1;
-inline bool Msg_StopCapture::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_StopCapture::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StopCapture::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_StopCapture::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_StopCapture::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_StopCapture::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_StopCapture::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StopCapture.engine)
-  return _internal_engine();
+inline const std::string& Msg_StopCapture::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_StopCapture::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_StopCapture::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StopCapture.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_engine)
 }
-inline std::string* Msg_StopCapture::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_StopCapture.engine)
+inline std::string* Msg_StopCapture::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_engine)
   return _s;
 }
-inline const std::string& Msg_StopCapture::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_StopCapture::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_StopCapture::_internal_set_engine(const std::string& value) {
+inline void Msg_StopCapture::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_StopCapture::_internal_mutable_engine() {
+inline std::string* Msg_StopCapture::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_StopCapture::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_StopCapture.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_StopCapture::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_StopCapture::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_StopCapture::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StopCapture.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_engine)
 }
 
-// required sint32 captureId = 2;
-inline bool Msg_StopCapture::_internal_has_captureid() const {
+// required sint32 a_captureId = 2;
+inline bool Msg_StopCapture::_internal_has_a_captureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_StopCapture::has_captureid() const {
-  return _internal_has_captureid();
+inline bool Msg_StopCapture::has_a_captureid() const {
+  return _internal_has_a_captureid();
 }
-inline void Msg_StopCapture::clear_captureid() {
-  _impl_.captureid_ = 0;
+inline void Msg_StopCapture::clear_a_captureid() {
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t Msg_StopCapture::_internal_captureid() const {
-  return _impl_.captureid_;
+inline int32_t Msg_StopCapture::_internal_a_captureid() const {
+  return _impl_.a_captureid_;
 }
-inline int32_t Msg_StopCapture::captureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StopCapture.captureId)
-  return _internal_captureid();
+inline int32_t Msg_StopCapture::a_captureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_captureId)
+  return _internal_a_captureid();
 }
-inline void Msg_StopCapture::_internal_set_captureid(int32_t value) {
+inline void Msg_StopCapture::_internal_set_a_captureid(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.captureid_ = value;
+  _impl_.a_captureid_ = value;
 }
-inline void Msg_StopCapture::set_captureid(int32_t value) {
-  _internal_set_captureid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StopCapture.captureId)
+inline void Msg_StopCapture::set_a_captureid(int32_t value) {
+  _internal_set_a_captureid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_StopCapture.a_captureId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReleaseFrame
 
-// required bytes s = 1;
-inline bool Msg_ReleaseFrame::_internal_has_s() const {
+// required bytes a_s = 1;
+inline bool Msg_ReleaseFrame::_internal_has_a_s() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReleaseFrame::has_s() const {
-  return _internal_has_s();
+inline bool Msg_ReleaseFrame::has_a_s() const {
+  return _internal_has_a_s();
 }
-inline void Msg_ReleaseFrame::clear_s() {
-  _impl_.s_.ClearToEmpty();
+inline void Msg_ReleaseFrame::clear_a_s() {
+  _impl_.a_s_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReleaseFrame::s() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.s)
-  return _internal_s();
+inline const std::string& Msg_ReleaseFrame::a_s() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.a_s)
+  return _internal_a_s();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReleaseFrame::set_s(ArgT0&& arg0, ArgT... args) {
+void Msg_ReleaseFrame::set_a_s(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.s_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.s)
+ _impl_.a_s_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.a_s)
 }
-inline std::string* Msg_ReleaseFrame::mutable_s() {
-  std::string* _s = _internal_mutable_s();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.s)
+inline std::string* Msg_ReleaseFrame::mutable_a_s() {
+  std::string* _s = _internal_mutable_a_s();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.a_s)
   return _s;
 }
-inline const std::string& Msg_ReleaseFrame::_internal_s() const {
-  return _impl_.s_.Get();
+inline const std::string& Msg_ReleaseFrame::_internal_a_s() const {
+  return _impl_.a_s_.Get();
 }
-inline void Msg_ReleaseFrame::_internal_set_s(const std::string& value) {
+inline void Msg_ReleaseFrame::_internal_set_a_s(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.s_.Set(value, GetArenaForAllocation());
+  _impl_.a_s_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReleaseFrame::_internal_mutable_s() {
+inline std::string* Msg_ReleaseFrame::_internal_mutable_a_s() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.s_.Mutable(GetArenaForAllocation());
+  return _impl_.a_s_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReleaseFrame::release_s() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.s)
-  if (!_internal_has_s()) {
+inline std::string* Msg_ReleaseFrame::release_a_s() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.a_s)
+  if (!_internal_has_a_s()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.s_.Release();
+  auto* p = _impl_.a_s_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.s_.IsDefault()) {
-    _impl_.s_.Set("", GetArenaForAllocation());
+  if (_impl_.a_s_.IsDefault()) {
+    _impl_.a_s_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReleaseFrame::set_allocated_s(std::string* s) {
-  if (s != nullptr) {
+inline void Msg_ReleaseFrame::set_allocated_a_s(std::string* a_s) {
+  if (a_s != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.s_.SetAllocated(s, GetArenaForAllocation());
+  _impl_.a_s_.SetAllocated(a_s, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.s_.IsDefault()) {
-    _impl_.s_.Set("", GetArenaForAllocation());
+  if (_impl_.a_s_.IsDefault()) {
+    _impl_.a_s_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.s)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame.a_s)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_EnsureInitialized
 
-// required bytes engine = 1;
-inline bool Msg_EnsureInitialized::_internal_has_engine() const {
+// required bytes a_engine = 1;
+inline bool Msg_EnsureInitialized::_internal_has_a_engine() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_EnsureInitialized::has_engine() const {
-  return _internal_has_engine();
+inline bool Msg_EnsureInitialized::has_a_engine() const {
+  return _internal_has_a_engine();
 }
-inline void Msg_EnsureInitialized::clear_engine() {
-  _impl_.engine_.ClearToEmpty();
+inline void Msg_EnsureInitialized::clear_a_engine() {
+  _impl_.a_engine_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_EnsureInitialized::engine() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.engine)
-  return _internal_engine();
+inline const std::string& Msg_EnsureInitialized::a_engine() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.a_engine)
+  return _internal_a_engine();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_EnsureInitialized::set_engine(ArgT0&& arg0, ArgT... args) {
+void Msg_EnsureInitialized::set_a_engine(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.engine)
+ _impl_.a_engine_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.a_engine)
 }
-inline std::string* Msg_EnsureInitialized::mutable_engine() {
-  std::string* _s = _internal_mutable_engine();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.engine)
+inline std::string* Msg_EnsureInitialized::mutable_a_engine() {
+  std::string* _s = _internal_mutable_a_engine();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.a_engine)
   return _s;
 }
-inline const std::string& Msg_EnsureInitialized::_internal_engine() const {
-  return _impl_.engine_.Get();
+inline const std::string& Msg_EnsureInitialized::_internal_a_engine() const {
+  return _impl_.a_engine_.Get();
 }
-inline void Msg_EnsureInitialized::_internal_set_engine(const std::string& value) {
+inline void Msg_EnsureInitialized::_internal_set_a_engine(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.engine_.Set(value, GetArenaForAllocation());
+  _impl_.a_engine_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_EnsureInitialized::_internal_mutable_engine() {
+inline std::string* Msg_EnsureInitialized::_internal_mutable_a_engine() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.engine_.Mutable(GetArenaForAllocation());
+  return _impl_.a_engine_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_EnsureInitialized::release_engine() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.engine)
-  if (!_internal_has_engine()) {
+inline std::string* Msg_EnsureInitialized::release_a_engine() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.a_engine)
+  if (!_internal_has_a_engine()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.engine_.Release();
+  auto* p = _impl_.a_engine_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_EnsureInitialized::set_allocated_engine(std::string* engine) {
-  if (engine != nullptr) {
+inline void Msg_EnsureInitialized::set_allocated_a_engine(std::string* a_engine) {
+  if (a_engine != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.engine_.SetAllocated(engine, GetArenaForAllocation());
+  _impl_.a_engine_.SetAllocated(a_engine, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.engine_.IsDefault()) {
-    _impl_.engine_.Set("", GetArenaForAllocation());
+  if (_impl_.a_engine_.IsDefault()) {
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.engine)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized.a_engine)
 }
 
 #ifdef __GNUC__

@@ -192,25 +192,25 @@ class Msg_PCacheOpConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOpArgsFieldNumber = 1,
+    kAAOpArgsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.cache.CacheOpArgs aOpArgs = 1;
-  bool has_aopargs() const;
+  // required .protobuf.mozilla.dom.cache.CacheOpArgs a_aOpArgs = 1;
+  bool has_a_aopargs() const;
   private:
-  bool _internal_has_aopargs() const;
+  bool _internal_has_a_aopargs() const;
   public:
-  void clear_aopargs();
-  const ::protobuf::mozilla::dom::cache::CacheOpArgs& aopargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::cache::CacheOpArgs* release_aopargs();
-  ::protobuf::mozilla::dom::cache::CacheOpArgs* mutable_aopargs();
-  void set_allocated_aopargs(::protobuf::mozilla::dom::cache::CacheOpArgs* aopargs);
+  void clear_a_aopargs();
+  const ::protobuf::mozilla::dom::cache::CacheOpArgs& a_aopargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::cache::CacheOpArgs* release_a_aopargs();
+  ::protobuf::mozilla::dom::cache::CacheOpArgs* mutable_a_aopargs();
+  void set_allocated_a_aopargs(::protobuf::mozilla::dom::cache::CacheOpArgs* a_aopargs);
   private:
-  const ::protobuf::mozilla::dom::cache::CacheOpArgs& _internal_aopargs() const;
-  ::protobuf::mozilla::dom::cache::CacheOpArgs* _internal_mutable_aopargs();
+  const ::protobuf::mozilla::dom::cache::CacheOpArgs& _internal_a_aopargs() const;
+  ::protobuf::mozilla::dom::cache::CacheOpArgs* _internal_mutable_a_aopargs();
   public:
-  void unsafe_arena_set_allocated_aopargs(
-      ::protobuf::mozilla::dom::cache::CacheOpArgs* aopargs);
-  ::protobuf::mozilla::dom::cache::CacheOpArgs* unsafe_arena_release_aopargs();
+  void unsafe_arena_set_allocated_a_aopargs(
+      ::protobuf::mozilla::dom::cache::CacheOpArgs* a_aopargs);
+  ::protobuf::mozilla::dom::cache::CacheOpArgs* unsafe_arena_release_a_aopargs();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor)
  private:
@@ -222,7 +222,7 @@ class Msg_PCacheOpConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::cache::CacheOpArgs* aopargs_;
+    ::protobuf::mozilla::dom::cache::CacheOpArgs* a_aopargs_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCache_2eproto;
@@ -734,41 +734,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PCacheOpConstructor
 
-// required .protobuf.mozilla.dom.cache.CacheOpArgs aOpArgs = 1;
-inline bool Msg_PCacheOpConstructor::_internal_has_aopargs() const {
+// required .protobuf.mozilla.dom.cache.CacheOpArgs a_aOpArgs = 1;
+inline bool Msg_PCacheOpConstructor::_internal_has_a_aopargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aopargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aopargs_ != nullptr);
   return value;
 }
-inline bool Msg_PCacheOpConstructor::has_aopargs() const {
-  return _internal_has_aopargs();
+inline bool Msg_PCacheOpConstructor::has_a_aopargs() const {
+  return _internal_has_a_aopargs();
 }
-inline const ::protobuf::mozilla::dom::cache::CacheOpArgs& Msg_PCacheOpConstructor::_internal_aopargs() const {
-  const ::protobuf::mozilla::dom::cache::CacheOpArgs* p = _impl_.aopargs_;
+inline const ::protobuf::mozilla::dom::cache::CacheOpArgs& Msg_PCacheOpConstructor::_internal_a_aopargs() const {
+  const ::protobuf::mozilla::dom::cache::CacheOpArgs* p = _impl_.a_aopargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::cache::CacheOpArgs&>(
       ::protobuf::mozilla::dom::cache::_CacheOpArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::cache::CacheOpArgs& Msg_PCacheOpConstructor::aopargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.aOpArgs)
-  return _internal_aopargs();
+inline const ::protobuf::mozilla::dom::cache::CacheOpArgs& Msg_PCacheOpConstructor::a_aopargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.a_aOpArgs)
+  return _internal_a_aopargs();
 }
-inline void Msg_PCacheOpConstructor::unsafe_arena_set_allocated_aopargs(
-    ::protobuf::mozilla::dom::cache::CacheOpArgs* aopargs) {
+inline void Msg_PCacheOpConstructor::unsafe_arena_set_allocated_a_aopargs(
+    ::protobuf::mozilla::dom::cache::CacheOpArgs* a_aopargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aopargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aopargs_);
   }
-  _impl_.aopargs_ = aopargs;
-  if (aopargs) {
+  _impl_.a_aopargs_ = a_aopargs;
+  if (a_aopargs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.aOpArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.a_aOpArgs)
 }
-inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::release_aopargs() {
+inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::release_a_aopargs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::cache::CacheOpArgs* temp = _impl_.aopargs_;
-  _impl_.aopargs_ = nullptr;
+  ::protobuf::mozilla::dom::cache::CacheOpArgs* temp = _impl_.a_aopargs_;
+  _impl_.a_aopargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -780,45 +780,45 @@ inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::unsafe_arena_release_aopargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.aOpArgs)
+inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::unsafe_arena_release_a_aopargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.a_aOpArgs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::cache::CacheOpArgs* temp = _impl_.aopargs_;
-  _impl_.aopargs_ = nullptr;
+  ::protobuf::mozilla::dom::cache::CacheOpArgs* temp = _impl_.a_aopargs_;
+  _impl_.a_aopargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::_internal_mutable_aopargs() {
+inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::_internal_mutable_a_aopargs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aopargs_ == nullptr) {
+  if (_impl_.a_aopargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::cache::CacheOpArgs>(GetArenaForAllocation());
-    _impl_.aopargs_ = p;
+    _impl_.a_aopargs_ = p;
   }
-  return _impl_.aopargs_;
+  return _impl_.a_aopargs_;
 }
-inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::mutable_aopargs() {
-  ::protobuf::mozilla::dom::cache::CacheOpArgs* _msg = _internal_mutable_aopargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.aOpArgs)
+inline ::protobuf::mozilla::dom::cache::CacheOpArgs* Msg_PCacheOpConstructor::mutable_a_aopargs() {
+  ::protobuf::mozilla::dom::cache::CacheOpArgs* _msg = _internal_mutable_a_aopargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.a_aOpArgs)
   return _msg;
 }
-inline void Msg_PCacheOpConstructor::set_allocated_aopargs(::protobuf::mozilla::dom::cache::CacheOpArgs* aopargs) {
+inline void Msg_PCacheOpConstructor::set_allocated_a_aopargs(::protobuf::mozilla::dom::cache::CacheOpArgs* a_aopargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aopargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aopargs_);
   }
-  if (aopargs) {
+  if (a_aopargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aopargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aopargs));
     if (message_arena != submessage_arena) {
-      aopargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aopargs, submessage_arena);
+      a_aopargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aopargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aopargs_ = aopargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.aOpArgs)
+  _impl_.a_aopargs_ = a_aopargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.PCache.Msg_PCacheOpConstructor.a_aOpArgs)
 }
 
 // -------------------------------------------------------------------

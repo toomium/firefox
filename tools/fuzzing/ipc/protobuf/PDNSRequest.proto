@@ -17,13 +17,13 @@ import "PDNSRequestParams.proto";
 
 // Message declarations
 message Msg_CancelDNSRequest {
-  required bytes hostName = 1;
-  required bytes trrServer = 2;
-  required sint32 port = 3;
-  required uint32 type = 4;
-  required bytes originAttributes = 5;
-  required bytes flags = 6;
-  required bytes reason = 7;
+  required bytes a_hostName = 1;
+  required bytes a_trrServer = 2;
+  required sint32 a_port = 3;
+  required uint32 a_type = 4;
+  required bytes a_originAttributes = 5;
+  required bytes a_flags = 6;
+  required bytes a_reason = 7;
 }
 
 message Msg___delete__ {
@@ -33,7 +33,7 @@ message Reply___delete__ {
 }
 
 message Msg_LookupCompleted {
-  required protobuf.mozilla.net.DNSRequestResponse reply = 1;
+  required protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
 }
 
 // Parameter mappings stats:

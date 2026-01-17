@@ -37,14 +37,14 @@ PROTOBUF_CONSTEXPR InitCompletionIPDL::InitCompletionIPDL(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.decoderdescription_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.decoderprocessname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.decodercodecname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.hardwarereason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.conversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.hardware_)*/false
-  , /*decltype(_impl_.shoulddecoderalwaysberecycled_)*/false} {}
+  , /*decltype(_impl_.a_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_decoderdescription_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_decoderprocessname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_decodercodecname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_hardwarereason_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_conversion_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_hardware_)*/false
+  , /*decltype(_impl_.a_shoulddecoderalwaysberecycled_)*/false} {}
 struct InitCompletionIPDLDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InitCompletionIPDLDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -110,12 +110,12 @@ DecodedOutputIPDL::DecodedOutputIPDL(const DecodedOutputIPDL& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVArrayOfRemoteAudioData: {
-      _this->_internal_set_mvarrayofremoteaudiodata(from._internal_mvarrayofremoteaudiodata());
+    case kAMVArrayOfRemoteAudioData: {
+      _this->_internal_set_a_mvarrayofremoteaudiodata(from._internal_a_mvarrayofremoteaudiodata());
       break;
     }
-    case kMVArrayOfRemoteVideoData: {
-      _this->_internal_set_mvarrayofremotevideodata(from._internal_mvarrayofremotevideodata());
+    case kAMVArrayOfRemoteVideoData: {
+      _this->_internal_set_a_mvarrayofremotevideodata(from._internal_a_mvarrayofremotevideodata());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -160,12 +160,12 @@ void DecodedOutputIPDL::SetCachedSize(int size) const {
 void DecodedOutputIPDL::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.DecodedOutputIPDL)
   switch (content_case()) {
-    case kMVArrayOfRemoteAudioData: {
-      _impl_.content_.mvarrayofremoteaudiodata_.Destroy();
+    case kAMVArrayOfRemoteAudioData: {
+      _impl_.content_.a_mvarrayofremoteaudiodata_.Destroy();
       break;
     }
-    case kMVArrayOfRemoteVideoData: {
-      _impl_.content_.mvarrayofremotevideodata_.Destroy();
+    case kAMVArrayOfRemoteVideoData: {
+      _impl_.content_.a_mvarrayofremotevideodata_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -192,19 +192,19 @@ const char* DecodedOutputIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVArrayOfRemoteAudioData = 1;
+      // bytes a_mVArrayOfRemoteAudioData = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvarrayofremoteaudiodata();
+          auto str = _internal_mutable_a_mvarrayofremoteaudiodata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bytes mVArrayOfRemoteVideoData = 2;
+      // bytes a_mVArrayOfRemoteVideoData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvarrayofremotevideodata();
+          auto str = _internal_mutable_a_mvarrayofremotevideodata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -240,14 +240,14 @@ uint8_t* DecodedOutputIPDL::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVArrayOfRemoteAudioData: {
+    case kAMVArrayOfRemoteAudioData: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvarrayofremoteaudiodata(), target);
+          1, this->_internal_a_mvarrayofremoteaudiodata(), target);
       break;
     }
-    case kMVArrayOfRemoteVideoData: {
+    case kAMVArrayOfRemoteVideoData: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvarrayofremotevideodata(), target);
+          2, this->_internal_a_mvarrayofremotevideodata(), target);
       break;
     }
     default: ;
@@ -269,18 +269,18 @@ size_t DecodedOutputIPDL::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVArrayOfRemoteAudioData = 1;
-    case kMVArrayOfRemoteAudioData: {
+    // bytes a_mVArrayOfRemoteAudioData = 1;
+    case kAMVArrayOfRemoteAudioData: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvarrayofremoteaudiodata());
+          this->_internal_a_mvarrayofremoteaudiodata());
       break;
     }
-    // bytes mVArrayOfRemoteVideoData = 2;
-    case kMVArrayOfRemoteVideoData: {
+    // bytes a_mVArrayOfRemoteVideoData = 2;
+    case kAMVArrayOfRemoteVideoData: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvarrayofremotevideodata());
+          this->_internal_a_mvarrayofremotevideodata());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -309,12 +309,12 @@ void DecodedOutputIPDL::MergeFrom(const DecodedOutputIPDL& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVArrayOfRemoteAudioData: {
-      _this->_internal_set_mvarrayofremoteaudiodata(from._internal_mvarrayofremoteaudiodata());
+    case kAMVArrayOfRemoteAudioData: {
+      _this->_internal_set_a_mvarrayofremoteaudiodata(from._internal_a_mvarrayofremoteaudiodata());
       break;
     }
-    case kMVArrayOfRemoteVideoData: {
-      _this->_internal_set_mvarrayofremotevideodata(from._internal_mvarrayofremotevideodata());
+    case kAMVArrayOfRemoteVideoData: {
+      _this->_internal_set_a_mvarrayofremotevideodata(from._internal_a_mvarrayofremotevideodata());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -352,28 +352,28 @@ std::string DecodedOutputIPDL::GetTypeName() const {
 class InitCompletionIPDL::_Internal {
  public:
   using HasBits = decltype(std::declval<InitCompletionIPDL>()._impl_._has_bits_);
-  static void set_has_type(HasBits* has_bits) {
+  static void set_has_a_type(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_decoderdescription(HasBits* has_bits) {
+  static void set_has_a_decoderdescription(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_decoderprocessname(HasBits* has_bits) {
+  static void set_has_a_decoderprocessname(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_decodercodecname(HasBits* has_bits) {
+  static void set_has_a_decodercodecname(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_hardware(HasBits* has_bits) {
+  static void set_has_a_hardware(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_hardwarereason(HasBits* has_bits) {
+  static void set_has_a_hardwarereason(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_conversion(HasBits* has_bits) {
+  static void set_has_a_conversion(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_shoulddecoderalwaysberecycled(HasBits* has_bits) {
+  static void set_has_a_shoulddecoderalwaysberecycled(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -393,67 +393,67 @@ InitCompletionIPDL::InitCompletionIPDL(const InitCompletionIPDL& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.type_){}
-    , decltype(_impl_.decoderdescription_){}
-    , decltype(_impl_.decoderprocessname_){}
-    , decltype(_impl_.decodercodecname_){}
-    , decltype(_impl_.hardwarereason_){}
-    , decltype(_impl_.conversion_){}
-    , decltype(_impl_.hardware_){}
-    , decltype(_impl_.shoulddecoderalwaysberecycled_){}};
+    , decltype(_impl_.a_type_){}
+    , decltype(_impl_.a_decoderdescription_){}
+    , decltype(_impl_.a_decoderprocessname_){}
+    , decltype(_impl_.a_decodercodecname_){}
+    , decltype(_impl_.a_hardwarereason_){}
+    , decltype(_impl_.a_conversion_){}
+    , decltype(_impl_.a_hardware_){}
+    , decltype(_impl_.a_shoulddecoderalwaysberecycled_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_type()) {
-    _this->_impl_.type_.Set(from._internal_type(), 
+  if (from._internal_has_a_type()) {
+    _this->_impl_.a_type_.Set(from._internal_a_type(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.decoderdescription_.InitDefault();
+  _impl_.a_decoderdescription_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.decoderdescription_.Set("", GetArenaForAllocation());
+    _impl_.a_decoderdescription_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_decoderdescription()) {
-    _this->_impl_.decoderdescription_.Set(from._internal_decoderdescription(), 
+  if (from._internal_has_a_decoderdescription()) {
+    _this->_impl_.a_decoderdescription_.Set(from._internal_a_decoderdescription(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.decoderprocessname_.InitDefault();
+  _impl_.a_decoderprocessname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.decoderprocessname_.Set("", GetArenaForAllocation());
+    _impl_.a_decoderprocessname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_decoderprocessname()) {
-    _this->_impl_.decoderprocessname_.Set(from._internal_decoderprocessname(), 
+  if (from._internal_has_a_decoderprocessname()) {
+    _this->_impl_.a_decoderprocessname_.Set(from._internal_a_decoderprocessname(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.decodercodecname_.InitDefault();
+  _impl_.a_decodercodecname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.decodercodecname_.Set("", GetArenaForAllocation());
+    _impl_.a_decodercodecname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_decodercodecname()) {
-    _this->_impl_.decodercodecname_.Set(from._internal_decodercodecname(), 
+  if (from._internal_has_a_decodercodecname()) {
+    _this->_impl_.a_decodercodecname_.Set(from._internal_a_decodercodecname(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.hardwarereason_.InitDefault();
+  _impl_.a_hardwarereason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.hardwarereason_.Set("", GetArenaForAllocation());
+    _impl_.a_hardwarereason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_hardwarereason()) {
-    _this->_impl_.hardwarereason_.Set(from._internal_hardwarereason(), 
+  if (from._internal_has_a_hardwarereason()) {
+    _this->_impl_.a_hardwarereason_.Set(from._internal_a_hardwarereason(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.conversion_.InitDefault();
+  _impl_.a_conversion_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.conversion_.Set("", GetArenaForAllocation());
+    _impl_.a_conversion_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_conversion()) {
-    _this->_impl_.conversion_.Set(from._internal_conversion(), 
+  if (from._internal_has_a_conversion()) {
+    _this->_impl_.a_conversion_.Set(from._internal_a_conversion(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.hardware_, &from._impl_.hardware_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.shoulddecoderalwaysberecycled_) -
-    reinterpret_cast<char*>(&_impl_.hardware_)) + sizeof(_impl_.shoulddecoderalwaysberecycled_));
+  ::memcpy(&_impl_.a_hardware_, &from._impl_.a_hardware_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_shoulddecoderalwaysberecycled_) -
+    reinterpret_cast<char*>(&_impl_.a_hardware_)) + sizeof(_impl_.a_shoulddecoderalwaysberecycled_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.InitCompletionIPDL)
 }
 
@@ -464,38 +464,38 @@ inline void InitCompletionIPDL::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.type_){}
-    , decltype(_impl_.decoderdescription_){}
-    , decltype(_impl_.decoderprocessname_){}
-    , decltype(_impl_.decodercodecname_){}
-    , decltype(_impl_.hardwarereason_){}
-    , decltype(_impl_.conversion_){}
-    , decltype(_impl_.hardware_){false}
-    , decltype(_impl_.shoulddecoderalwaysberecycled_){false}
+    , decltype(_impl_.a_type_){}
+    , decltype(_impl_.a_decoderdescription_){}
+    , decltype(_impl_.a_decoderprocessname_){}
+    , decltype(_impl_.a_decodercodecname_){}
+    , decltype(_impl_.a_hardwarereason_){}
+    , decltype(_impl_.a_conversion_){}
+    , decltype(_impl_.a_hardware_){false}
+    , decltype(_impl_.a_shoulddecoderalwaysberecycled_){false}
   };
-  _impl_.type_.InitDefault();
+  _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.type_.Set("", GetArenaForAllocation());
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.decoderdescription_.InitDefault();
+  _impl_.a_decoderdescription_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.decoderdescription_.Set("", GetArenaForAllocation());
+    _impl_.a_decoderdescription_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.decoderprocessname_.InitDefault();
+  _impl_.a_decoderprocessname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.decoderprocessname_.Set("", GetArenaForAllocation());
+    _impl_.a_decoderprocessname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.decodercodecname_.InitDefault();
+  _impl_.a_decodercodecname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.decodercodecname_.Set("", GetArenaForAllocation());
+    _impl_.a_decodercodecname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.hardwarereason_.InitDefault();
+  _impl_.a_hardwarereason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.hardwarereason_.Set("", GetArenaForAllocation());
+    _impl_.a_hardwarereason_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.conversion_.InitDefault();
+  _impl_.a_conversion_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.conversion_.Set("", GetArenaForAllocation());
+    _impl_.a_conversion_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -510,12 +510,12 @@ InitCompletionIPDL::~InitCompletionIPDL() {
 
 inline void InitCompletionIPDL::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.type_.Destroy();
-  _impl_.decoderdescription_.Destroy();
-  _impl_.decoderprocessname_.Destroy();
-  _impl_.decodercodecname_.Destroy();
-  _impl_.hardwarereason_.Destroy();
-  _impl_.conversion_.Destroy();
+  _impl_.a_type_.Destroy();
+  _impl_.a_decoderdescription_.Destroy();
+  _impl_.a_decoderprocessname_.Destroy();
+  _impl_.a_decodercodecname_.Destroy();
+  _impl_.a_hardwarereason_.Destroy();
+  _impl_.a_conversion_.Destroy();
 }
 
 void InitCompletionIPDL::SetCachedSize(int size) const {
@@ -531,27 +531,27 @@ void InitCompletionIPDL::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.type_.ClearNonDefaultToEmpty();
+      _impl_.a_type_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.decoderdescription_.ClearNonDefaultToEmpty();
+      _impl_.a_decoderdescription_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.decoderprocessname_.ClearNonDefaultToEmpty();
+      _impl_.a_decoderprocessname_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.decodercodecname_.ClearNonDefaultToEmpty();
+      _impl_.a_decodercodecname_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.hardwarereason_.ClearNonDefaultToEmpty();
+      _impl_.a_hardwarereason_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.conversion_.ClearNonDefaultToEmpty();
+      _impl_.a_conversion_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.hardware_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.shoulddecoderalwaysberecycled_) -
-      reinterpret_cast<char*>(&_impl_.hardware_)) + sizeof(_impl_.shoulddecoderalwaysberecycled_));
+  ::memset(&_impl_.a_hardware_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_shoulddecoderalwaysberecycled_) -
+      reinterpret_cast<char*>(&_impl_.a_hardware_)) + sizeof(_impl_.a_shoulddecoderalwaysberecycled_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -563,74 +563,74 @@ const char* InitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes type = 1;
+      // required bytes a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_type();
+          auto str = _internal_mutable_a_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes decoderDescription = 2;
+      // required bytes a_decoderDescription = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_decoderdescription();
+          auto str = _internal_mutable_a_decoderdescription();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes decoderProcessName = 3;
+      // required bytes a_decoderProcessName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_decoderprocessname();
+          auto str = _internal_mutable_a_decoderprocessname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes decoderCodecName = 4;
+      // required bytes a_decoderCodecName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_decodercodecname();
+          auto str = _internal_mutable_a_decodercodecname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool hardware = 5;
+      // required bool a_hardware = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_hardware(&has_bits);
-          _impl_.hardware_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_hardware(&has_bits);
+          _impl_.a_hardware_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes hardwareReason = 6;
+      // required bytes a_hardwareReason = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_hardwarereason();
+          auto str = _internal_mutable_a_hardwarereason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes conversion = 7;
+      // required bytes a_conversion = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_conversion();
+          auto str = _internal_mutable_a_conversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool shouldDecoderAlwaysBeRecycled = 8;
+      // required bool a_shouldDecoderAlwaysBeRecycled = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_shoulddecoderalwaysberecycled(&has_bits);
-          _impl_.shoulddecoderalwaysberecycled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_shoulddecoderalwaysberecycled(&has_bits);
+          _impl_.a_shoulddecoderalwaysberecycled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -666,52 +666,52 @@ uint8_t* InitCompletionIPDL::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes type = 1;
+  // required bytes a_type = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_type(), target);
+        1, this->_internal_a_type(), target);
   }
 
-  // required bytes decoderDescription = 2;
+  // required bytes a_decoderDescription = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_decoderdescription(), target);
+        2, this->_internal_a_decoderdescription(), target);
   }
 
-  // required bytes decoderProcessName = 3;
+  // required bytes a_decoderProcessName = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_decoderprocessname(), target);
+        3, this->_internal_a_decoderprocessname(), target);
   }
 
-  // required bytes decoderCodecName = 4;
+  // required bytes a_decoderCodecName = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_decodercodecname(), target);
+        4, this->_internal_a_decodercodecname(), target);
   }
 
-  // required bool hardware = 5;
+  // required bool a_hardware = 5;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_hardware(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_hardware(), target);
   }
 
-  // required bytes hardwareReason = 6;
+  // required bytes a_hardwareReason = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_hardwarereason(), target);
+        6, this->_internal_a_hardwarereason(), target);
   }
 
-  // required bytes conversion = 7;
+  // required bytes a_conversion = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_conversion(), target);
+        7, this->_internal_a_conversion(), target);
   }
 
-  // required bool shouldDecoderAlwaysBeRecycled = 8;
+  // required bool a_shouldDecoderAlwaysBeRecycled = 8;
   if (cached_has_bits & 0x00000080u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_shoulddecoderalwaysberecycled(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_shoulddecoderalwaysberecycled(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -726,55 +726,55 @@ size_t InitCompletionIPDL::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.InitCompletionIPDL)
   size_t total_size = 0;
 
-  if (_internal_has_type()) {
-    // required bytes type = 1;
+  if (_internal_has_a_type()) {
+    // required bytes a_type = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
   }
 
-  if (_internal_has_decoderdescription()) {
-    // required bytes decoderDescription = 2;
+  if (_internal_has_a_decoderdescription()) {
+    // required bytes a_decoderDescription = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_decoderdescription());
+        this->_internal_a_decoderdescription());
   }
 
-  if (_internal_has_decoderprocessname()) {
-    // required bytes decoderProcessName = 3;
+  if (_internal_has_a_decoderprocessname()) {
+    // required bytes a_decoderProcessName = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_decoderprocessname());
+        this->_internal_a_decoderprocessname());
   }
 
-  if (_internal_has_decodercodecname()) {
-    // required bytes decoderCodecName = 4;
+  if (_internal_has_a_decodercodecname()) {
+    // required bytes a_decoderCodecName = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_decodercodecname());
+        this->_internal_a_decodercodecname());
   }
 
-  if (_internal_has_hardwarereason()) {
-    // required bytes hardwareReason = 6;
+  if (_internal_has_a_hardwarereason()) {
+    // required bytes a_hardwareReason = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_hardwarereason());
+        this->_internal_a_hardwarereason());
   }
 
-  if (_internal_has_conversion()) {
-    // required bytes conversion = 7;
+  if (_internal_has_a_conversion()) {
+    // required bytes a_conversion = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_conversion());
+        this->_internal_a_conversion());
   }
 
-  if (_internal_has_hardware()) {
-    // required bool hardware = 5;
+  if (_internal_has_a_hardware()) {
+    // required bool a_hardware = 5;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_shoulddecoderalwaysberecycled()) {
-    // required bool shouldDecoderAlwaysBeRecycled = 8;
+  if (_internal_has_a_shoulddecoderalwaysberecycled()) {
+    // required bool a_shouldDecoderAlwaysBeRecycled = 8;
     total_size += 1 + 1;
   }
 
@@ -785,40 +785,40 @@ size_t InitCompletionIPDL::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
-    // required bytes type = 1;
+    // required bytes a_type = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_type());
+        this->_internal_a_type());
 
-    // required bytes decoderDescription = 2;
+    // required bytes a_decoderDescription = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_decoderdescription());
+        this->_internal_a_decoderdescription());
 
-    // required bytes decoderProcessName = 3;
+    // required bytes a_decoderProcessName = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_decoderprocessname());
+        this->_internal_a_decoderprocessname());
 
-    // required bytes decoderCodecName = 4;
+    // required bytes a_decoderCodecName = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_decodercodecname());
+        this->_internal_a_decodercodecname());
 
-    // required bytes hardwareReason = 6;
+    // required bytes a_hardwareReason = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_hardwarereason());
+        this->_internal_a_hardwarereason());
 
-    // required bytes conversion = 7;
+    // required bytes a_conversion = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_conversion());
+        this->_internal_a_conversion());
 
-    // required bool hardware = 5;
+    // required bool a_hardware = 5;
     total_size += 1 + 1;
 
-    // required bool shouldDecoderAlwaysBeRecycled = 8;
+    // required bool a_shouldDecoderAlwaysBeRecycled = 8;
     total_size += 1 + 1;
 
   } else {
@@ -852,28 +852,28 @@ void InitCompletionIPDL::MergeFrom(const InitCompletionIPDL& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_type(from._internal_type());
+      _this->_internal_set_a_type(from._internal_a_type());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_decoderdescription(from._internal_decoderdescription());
+      _this->_internal_set_a_decoderdescription(from._internal_a_decoderdescription());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_decoderprocessname(from._internal_decoderprocessname());
+      _this->_internal_set_a_decoderprocessname(from._internal_a_decoderprocessname());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_decodercodecname(from._internal_decodercodecname());
+      _this->_internal_set_a_decodercodecname(from._internal_a_decodercodecname());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_hardwarereason(from._internal_hardwarereason());
+      _this->_internal_set_a_hardwarereason(from._internal_a_hardwarereason());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_conversion(from._internal_conversion());
+      _this->_internal_set_a_conversion(from._internal_a_conversion());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.hardware_ = from._impl_.hardware_;
+      _this->_impl_.a_hardware_ = from._impl_.a_hardware_;
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.shoulddecoderalwaysberecycled_ = from._impl_.shoulddecoderalwaysberecycled_;
+      _this->_impl_.a_shoulddecoderalwaysberecycled_ = from._impl_.a_shoulddecoderalwaysberecycled_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -899,35 +899,35 @@ void InitCompletionIPDL::InternalSwap(InitCompletionIPDL* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.type_, lhs_arena,
-      &other->_impl_.type_, rhs_arena
+      &_impl_.a_type_, lhs_arena,
+      &other->_impl_.a_type_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.decoderdescription_, lhs_arena,
-      &other->_impl_.decoderdescription_, rhs_arena
+      &_impl_.a_decoderdescription_, lhs_arena,
+      &other->_impl_.a_decoderdescription_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.decoderprocessname_, lhs_arena,
-      &other->_impl_.decoderprocessname_, rhs_arena
+      &_impl_.a_decoderprocessname_, lhs_arena,
+      &other->_impl_.a_decoderprocessname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.decodercodecname_, lhs_arena,
-      &other->_impl_.decodercodecname_, rhs_arena
+      &_impl_.a_decodercodecname_, lhs_arena,
+      &other->_impl_.a_decodercodecname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.hardwarereason_, lhs_arena,
-      &other->_impl_.hardwarereason_, rhs_arena
+      &_impl_.a_hardwarereason_, lhs_arena,
+      &other->_impl_.a_hardwarereason_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.conversion_, lhs_arena,
-      &other->_impl_.conversion_, rhs_arena
+      &_impl_.a_conversion_, lhs_arena,
+      &other->_impl_.a_conversion_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(InitCompletionIPDL, _impl_.shoulddecoderalwaysberecycled_)
-      + sizeof(InitCompletionIPDL::_impl_.shoulddecoderalwaysberecycled_)
-      - PROTOBUF_FIELD_OFFSET(InitCompletionIPDL, _impl_.hardware_)>(
-          reinterpret_cast<char*>(&_impl_.hardware_),
-          reinterpret_cast<char*>(&other->_impl_.hardware_));
+      PROTOBUF_FIELD_OFFSET(InitCompletionIPDL, _impl_.a_shoulddecoderalwaysberecycled_)
+      + sizeof(InitCompletionIPDL::_impl_.a_shoulddecoderalwaysberecycled_)
+      - PROTOBUF_FIELD_OFFSET(InitCompletionIPDL, _impl_.a_hardware_)>(
+          reinterpret_cast<char*>(&_impl_.a_hardware_),
+          reinterpret_cast<char*>(&other->_impl_.a_hardware_));
 }
 
 std::string InitCompletionIPDL::GetTypeName() const {
@@ -939,27 +939,27 @@ std::string InitCompletionIPDL::GetTypeName() const {
 
 class InitResultIPDL::_Internal {
  public:
-  static const ::protobuf::mozilla::InitCompletionIPDL& mvinitcompletionipdl(const InitResultIPDL* msg);
+  static const ::protobuf::mozilla::InitCompletionIPDL& a_mvinitcompletionipdl(const InitResultIPDL* msg);
 };
 
 const ::protobuf::mozilla::InitCompletionIPDL&
-InitResultIPDL::_Internal::mvinitcompletionipdl(const InitResultIPDL* msg) {
-  return *msg->_impl_.content_.mvinitcompletionipdl_;
+InitResultIPDL::_Internal::a_mvinitcompletionipdl(const InitResultIPDL* msg) {
+  return *msg->_impl_.content_.a_mvinitcompletionipdl_;
 }
-void InitResultIPDL::set_allocated_mvinitcompletionipdl(::protobuf::mozilla::InitCompletionIPDL* mvinitcompletionipdl) {
+void InitResultIPDL::set_allocated_a_mvinitcompletionipdl(::protobuf::mozilla::InitCompletionIPDL* a_mvinitcompletionipdl) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvinitcompletionipdl) {
+  if (a_mvinitcompletionipdl) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvinitcompletionipdl);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvinitcompletionipdl);
     if (message_arena != submessage_arena) {
-      mvinitcompletionipdl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvinitcompletionipdl, submessage_arena);
+      a_mvinitcompletionipdl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvinitcompletionipdl, submessage_arena);
     }
-    set_has_mvinitcompletionipdl();
-    _impl_.content_.mvinitcompletionipdl_ = mvinitcompletionipdl;
+    set_has_a_mvinitcompletionipdl();
+    _impl_.content_.a_mvinitcompletionipdl_ = a_mvinitcompletionipdl;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitResultIPDL.mVInitCompletionIPDL)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitResultIPDL.a_mVInitCompletionIPDL)
 }
 InitResultIPDL::InitResultIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -978,13 +978,13 @@ InitResultIPDL::InitResultIPDL(const InitResultIPDL& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVMediaResult: {
-      _this->_internal_set_mvmediaresult(from._internal_mvmediaresult());
+    case kAMVMediaResult: {
+      _this->_internal_set_a_mvmediaresult(from._internal_a_mvmediaresult());
       break;
     }
-    case kMVInitCompletionIPDL: {
-      _this->_internal_mutable_mvinitcompletionipdl()->::protobuf::mozilla::InitCompletionIPDL::MergeFrom(
-          from._internal_mvinitcompletionipdl());
+    case kAMVInitCompletionIPDL: {
+      _this->_internal_mutable_a_mvinitcompletionipdl()->::protobuf::mozilla::InitCompletionIPDL::MergeFrom(
+          from._internal_a_mvinitcompletionipdl());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1029,13 +1029,13 @@ void InitResultIPDL::SetCachedSize(int size) const {
 void InitResultIPDL::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.InitResultIPDL)
   switch (content_case()) {
-    case kMVMediaResult: {
-      _impl_.content_.mvmediaresult_.Destroy();
+    case kAMVMediaResult: {
+      _impl_.content_.a_mvmediaresult_.Destroy();
       break;
     }
-    case kMVInitCompletionIPDL: {
+    case kAMVInitCompletionIPDL: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvinitcompletionipdl_;
+        delete _impl_.content_.a_mvinitcompletionipdl_;
       }
       break;
     }
@@ -1063,19 +1063,19 @@ const char* InitResultIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVMediaResult = 1;
+      // bytes a_mVMediaResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvmediaresult();
+          auto str = _internal_mutable_a_mvmediaresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.InitCompletionIPDL mVInitCompletionIPDL = 2;
+      // .protobuf.mozilla.InitCompletionIPDL a_mVInitCompletionIPDL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvinitcompletionipdl(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvinitcompletionipdl(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1110,15 +1110,15 @@ uint8_t* InitResultIPDL::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVMediaResult: {
+    case kAMVMediaResult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvmediaresult(), target);
+          1, this->_internal_a_mvmediaresult(), target);
       break;
     }
-    case kMVInitCompletionIPDL: {
+    case kAMVInitCompletionIPDL: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvinitcompletionipdl(this),
-          _Internal::mvinitcompletionipdl(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvinitcompletionipdl(this),
+          _Internal::a_mvinitcompletionipdl(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1140,18 +1140,18 @@ size_t InitResultIPDL::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVMediaResult = 1;
-    case kMVMediaResult: {
+    // bytes a_mVMediaResult = 1;
+    case kAMVMediaResult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvmediaresult());
+          this->_internal_a_mvmediaresult());
       break;
     }
-    // .protobuf.mozilla.InitCompletionIPDL mVInitCompletionIPDL = 2;
-    case kMVInitCompletionIPDL: {
+    // .protobuf.mozilla.InitCompletionIPDL a_mVInitCompletionIPDL = 2;
+    case kAMVInitCompletionIPDL: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvinitcompletionipdl_);
+          *_impl_.content_.a_mvinitcompletionipdl_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1180,13 +1180,13 @@ void InitResultIPDL::MergeFrom(const InitResultIPDL& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVMediaResult: {
-      _this->_internal_set_mvmediaresult(from._internal_mvmediaresult());
+    case kAMVMediaResult: {
+      _this->_internal_set_a_mvmediaresult(from._internal_a_mvmediaresult());
       break;
     }
-    case kMVInitCompletionIPDL: {
-      _this->_internal_mutable_mvinitcompletionipdl()->::protobuf::mozilla::InitCompletionIPDL::MergeFrom(
-          from._internal_mvinitcompletionipdl());
+    case kAMVInitCompletionIPDL: {
+      _this->_internal_mutable_a_mvinitcompletionipdl()->::protobuf::mozilla::InitCompletionIPDL::MergeFrom(
+          from._internal_a_mvinitcompletionipdl());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1205,12 +1205,12 @@ void InitResultIPDL::CopyFrom(const InitResultIPDL& from) {
 
 bool InitResultIPDL::IsInitialized() const {
   switch (content_case()) {
-    case kMVMediaResult: {
+    case kAMVMediaResult: {
       break;
     }
-    case kMVInitCompletionIPDL: {
-      if (_internal_has_mvinitcompletionipdl()) {
-        if (!_impl_.content_.mvinitcompletionipdl_->IsInitialized()) return false;
+    case kAMVInitCompletionIPDL: {
+      if (_internal_has_a_mvinitcompletionipdl()) {
+        if (!_impl_.content_.a_mvinitcompletionipdl_->IsInitialized()) return false;
       }
       break;
     }
@@ -1237,27 +1237,27 @@ std::string InitResultIPDL::GetTypeName() const {
 
 class DecodeResultIPDL::_Internal {
  public:
-  static const ::protobuf::mozilla::DecodedOutputIPDL& mvdecodedoutputipdl(const DecodeResultIPDL* msg);
+  static const ::protobuf::mozilla::DecodedOutputIPDL& a_mvdecodedoutputipdl(const DecodeResultIPDL* msg);
 };
 
 const ::protobuf::mozilla::DecodedOutputIPDL&
-DecodeResultIPDL::_Internal::mvdecodedoutputipdl(const DecodeResultIPDL* msg) {
-  return *msg->_impl_.content_.mvdecodedoutputipdl_;
+DecodeResultIPDL::_Internal::a_mvdecodedoutputipdl(const DecodeResultIPDL* msg) {
+  return *msg->_impl_.content_.a_mvdecodedoutputipdl_;
 }
-void DecodeResultIPDL::set_allocated_mvdecodedoutputipdl(::protobuf::mozilla::DecodedOutputIPDL* mvdecodedoutputipdl) {
+void DecodeResultIPDL::set_allocated_a_mvdecodedoutputipdl(::protobuf::mozilla::DecodedOutputIPDL* a_mvdecodedoutputipdl) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvdecodedoutputipdl) {
+  if (a_mvdecodedoutputipdl) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvdecodedoutputipdl);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvdecodedoutputipdl);
     if (message_arena != submessage_arena) {
-      mvdecodedoutputipdl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvdecodedoutputipdl, submessage_arena);
+      a_mvdecodedoutputipdl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvdecodedoutputipdl, submessage_arena);
     }
-    set_has_mvdecodedoutputipdl();
-    _impl_.content_.mvdecodedoutputipdl_ = mvdecodedoutputipdl;
+    set_has_a_mvdecodedoutputipdl();
+    _impl_.content_.a_mvdecodedoutputipdl_ = a_mvdecodedoutputipdl;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodeResultIPDL.mVDecodedOutputIPDL)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodeResultIPDL.a_mVDecodedOutputIPDL)
 }
 DecodeResultIPDL::DecodeResultIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1276,13 +1276,13 @@ DecodeResultIPDL::DecodeResultIPDL(const DecodeResultIPDL& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVMediaResult: {
-      _this->_internal_set_mvmediaresult(from._internal_mvmediaresult());
+    case kAMVMediaResult: {
+      _this->_internal_set_a_mvmediaresult(from._internal_a_mvmediaresult());
       break;
     }
-    case kMVDecodedOutputIPDL: {
-      _this->_internal_mutable_mvdecodedoutputipdl()->::protobuf::mozilla::DecodedOutputIPDL::MergeFrom(
-          from._internal_mvdecodedoutputipdl());
+    case kAMVDecodedOutputIPDL: {
+      _this->_internal_mutable_a_mvdecodedoutputipdl()->::protobuf::mozilla::DecodedOutputIPDL::MergeFrom(
+          from._internal_a_mvdecodedoutputipdl());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1327,13 +1327,13 @@ void DecodeResultIPDL::SetCachedSize(int size) const {
 void DecodeResultIPDL::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.DecodeResultIPDL)
   switch (content_case()) {
-    case kMVMediaResult: {
-      _impl_.content_.mvmediaresult_.Destroy();
+    case kAMVMediaResult: {
+      _impl_.content_.a_mvmediaresult_.Destroy();
       break;
     }
-    case kMVDecodedOutputIPDL: {
+    case kAMVDecodedOutputIPDL: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvdecodedoutputipdl_;
+        delete _impl_.content_.a_mvdecodedoutputipdl_;
       }
       break;
     }
@@ -1361,19 +1361,19 @@ const char* DecodeResultIPDL::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVMediaResult = 1;
+      // bytes a_mVMediaResult = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvmediaresult();
+          auto str = _internal_mutable_a_mvmediaresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.DecodedOutputIPDL mVDecodedOutputIPDL = 2;
+      // .protobuf.mozilla.DecodedOutputIPDL a_mVDecodedOutputIPDL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvdecodedoutputipdl(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvdecodedoutputipdl(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1408,15 +1408,15 @@ uint8_t* DecodeResultIPDL::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVMediaResult: {
+    case kAMVMediaResult: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvmediaresult(), target);
+          1, this->_internal_a_mvmediaresult(), target);
       break;
     }
-    case kMVDecodedOutputIPDL: {
+    case kAMVDecodedOutputIPDL: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvdecodedoutputipdl(this),
-          _Internal::mvdecodedoutputipdl(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvdecodedoutputipdl(this),
+          _Internal::a_mvdecodedoutputipdl(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1438,18 +1438,18 @@ size_t DecodeResultIPDL::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVMediaResult = 1;
-    case kMVMediaResult: {
+    // bytes a_mVMediaResult = 1;
+    case kAMVMediaResult: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvmediaresult());
+          this->_internal_a_mvmediaresult());
       break;
     }
-    // .protobuf.mozilla.DecodedOutputIPDL mVDecodedOutputIPDL = 2;
-    case kMVDecodedOutputIPDL: {
+    // .protobuf.mozilla.DecodedOutputIPDL a_mVDecodedOutputIPDL = 2;
+    case kAMVDecodedOutputIPDL: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvdecodedoutputipdl_);
+          *_impl_.content_.a_mvdecodedoutputipdl_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1478,13 +1478,13 @@ void DecodeResultIPDL::MergeFrom(const DecodeResultIPDL& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVMediaResult: {
-      _this->_internal_set_mvmediaresult(from._internal_mvmediaresult());
+    case kAMVMediaResult: {
+      _this->_internal_set_a_mvmediaresult(from._internal_a_mvmediaresult());
       break;
     }
-    case kMVDecodedOutputIPDL: {
-      _this->_internal_mutable_mvdecodedoutputipdl()->::protobuf::mozilla::DecodedOutputIPDL::MergeFrom(
-          from._internal_mvdecodedoutputipdl());
+    case kAMVDecodedOutputIPDL: {
+      _this->_internal_mutable_a_mvdecodedoutputipdl()->::protobuf::mozilla::DecodedOutputIPDL::MergeFrom(
+          from._internal_a_mvdecodedoutputipdl());
       break;
     }
     case CONTENT_NOT_SET: {

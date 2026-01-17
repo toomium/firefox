@@ -19,19 +19,19 @@ message Msg_IsOpaqueResponseAllowed {
 }
 
 message Reply_IsOpaqueResponseAllowed {
-  optional bytes aMem = 1;
-  required bytes aResult = 2;
+  optional bytes a_aMem = 1;
+  required bytes a_aResult = 2;
 }
 
 message Msg_OnDataAvailable {
-  required bytes aData = 1;
+  required bytes a_aData = 1;
 }
 
 message Msg_OnStopRequest {
-  required bytes aReason = 1;
-  required bytes aContentCharset = 2;
-  required bytes aHintCharset = 3;
-  required bytes aDocumentCharset = 4;
+  required bytes a_aReason = 1;
+  required bytes a_aContentCharset = 2;
+  required bytes a_aHintCharset = 3;
+  required bytes a_aDocumentCharset = 4;
 }
 
 message Msg___delete__ {

@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR CacheData::CacheData(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.fields_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.id_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_fields_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_id_)*/uint64_t{0u}} {}
 struct CacheDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CacheDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,10 +47,10 @@ namespace a11y {
 class CacheData::_Internal {
  public:
   using HasBits = decltype(std::declval<CacheData>()._impl_._has_bits_);
-  static void set_has_id(HasBits* has_bits) {
+  static void set_has_a_id(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_fields(HasBits* has_bits) {
+  static void set_has_a_fields(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -70,19 +70,19 @@ CacheData::CacheData(const CacheData& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.fields_){}
-    , decltype(_impl_.id_){}};
+    , decltype(_impl_.a_fields_){}
+    , decltype(_impl_.a_id_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.fields_.InitDefault();
+  _impl_.a_fields_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fields_.Set("", GetArenaForAllocation());
+    _impl_.a_fields_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_fields()) {
-    _this->_impl_.fields_.Set(from._internal_fields(), 
+  if (from._internal_has_a_fields()) {
+    _this->_impl_.a_fields_.Set(from._internal_a_fields(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.id_ = from._impl_.id_;
+  _this->_impl_.a_id_ = from._impl_.a_id_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.a11y.CacheData)
 }
 
@@ -93,12 +93,12 @@ inline void CacheData::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.fields_){}
-    , decltype(_impl_.id_){uint64_t{0u}}
+    , decltype(_impl_.a_fields_){}
+    , decltype(_impl_.a_id_){uint64_t{0u}}
   };
-  _impl_.fields_.InitDefault();
+  _impl_.a_fields_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.fields_.Set("", GetArenaForAllocation());
+    _impl_.a_fields_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -113,7 +113,7 @@ CacheData::~CacheData() {
 
 inline void CacheData::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.fields_.Destroy();
+  _impl_.a_fields_.Destroy();
 }
 
 void CacheData::SetCachedSize(int size) const {
@@ -128,9 +128,9 @@ void CacheData::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.fields_.ClearNonDefaultToEmpty();
+    _impl_.a_fields_.ClearNonDefaultToEmpty();
   }
-  _impl_.id_ = uint64_t{0u};
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -142,19 +142,19 @@ const char* CacheData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 ID = 1;
+      // required uint64 a_ID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_id(&has_bits);
-          _impl_.id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_id(&has_bits);
+          _impl_.a_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes Fields = 2;
+      // required bytes a_Fields = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_fields();
+          auto str = _internal_mutable_a_fields();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -191,16 +191,16 @@ uint8_t* CacheData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 ID = 1;
+  // required uint64 a_ID = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_id(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_id(), target);
   }
 
-  // required bytes Fields = 2;
+  // required bytes a_Fields = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_fields(), target);
+        2, this->_internal_a_fields(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -215,16 +215,16 @@ size_t CacheData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.a11y.CacheData)
   size_t total_size = 0;
 
-  if (_internal_has_fields()) {
-    // required bytes Fields = 2;
+  if (_internal_has_a_fields()) {
+    // required bytes a_Fields = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fields());
+        this->_internal_a_fields());
   }
 
-  if (_internal_has_id()) {
-    // required uint64 ID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_id());
+  if (_internal_has_a_id()) {
+    // required uint64 a_ID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
   }
 
   return total_size;
@@ -234,13 +234,13 @@ size_t CacheData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes Fields = 2;
+    // required bytes a_Fields = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_fields());
+        this->_internal_a_fields());
 
-    // required uint64 ID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_id());
+    // required uint64 a_ID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -273,10 +273,10 @@ void CacheData::MergeFrom(const CacheData& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_fields(from._internal_fields());
+      _this->_internal_set_a_fields(from._internal_a_fields());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.id_ = from._impl_.id_;
+      _this->_impl_.a_id_ = from._impl_.a_id_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -302,10 +302,10 @@ void CacheData::InternalSwap(CacheData* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.fields_, lhs_arena,
-      &other->_impl_.fields_, rhs_arena
+      &_impl_.a_fields_, lhs_arena,
+      &other->_impl_.a_fields_, rhs_arena
   );
-  swap(_impl_.id_, other->_impl_.id_);
+  swap(_impl_.a_id_, other->_impl_.a_id_);
 }
 
 std::string CacheData::GetTypeName() const {

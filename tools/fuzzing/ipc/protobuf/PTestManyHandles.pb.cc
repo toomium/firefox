@@ -23,7 +23,7 @@ namespace _ipdltest {
 namespace PTestManyHandles {
 PROTOBUF_CONSTEXPR Msg_ManyHandles::Msg_ManyHandles(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.descrs_)*/{}
+    /*decltype(_impl_.a_descrs_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_ManyHandlesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ManyHandlesDefaultTypeInternal()
@@ -59,7 +59,7 @@ Msg_ManyHandles::Msg_ManyHandles(const Msg_ManyHandles& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ManyHandles* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.descrs_){from._impl_.descrs_}
+      decltype(_impl_.a_descrs_){from._impl_.a_descrs_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -71,7 +71,7 @@ inline void Msg_ManyHandles::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.descrs_){arena}
+      decltype(_impl_.a_descrs_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -87,7 +87,7 @@ Msg_ManyHandles::~Msg_ManyHandles() {
 
 inline void Msg_ManyHandles::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.descrs_.~RepeatedPtrField();
+  _impl_.a_descrs_.~RepeatedPtrField();
 }
 
 void Msg_ManyHandles::SetCachedSize(int size) const {
@@ -100,7 +100,7 @@ void Msg_ManyHandles::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.descrs_.Clear();
+  _impl_.a_descrs_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -110,13 +110,13 @@ const char* Msg_ManyHandles::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes descrs = 1;
+      // repeated bytes a_descrs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            auto str = _internal_add_descrs();
+            auto str = _internal_add_a_descrs();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
@@ -153,9 +153,9 @@ uint8_t* Msg_ManyHandles::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes descrs = 1;
-  for (int i = 0, n = this->_internal_descrs_size(); i < n; i++) {
-    const auto& s = this->_internal_descrs(i);
+  // repeated bytes a_descrs = 1;
+  for (int i = 0, n = this->_internal_a_descrs_size(); i < n; i++) {
+    const auto& s = this->_internal_a_descrs(i);
     target = stream->WriteBytes(1, s, target);
   }
 
@@ -175,12 +175,12 @@ size_t Msg_ManyHandles::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes descrs = 1;
+  // repeated bytes a_descrs = 1;
   total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.descrs_.size());
-  for (int i = 0, n = _impl_.descrs_.size(); i < n; i++) {
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_descrs_.size());
+  for (int i = 0, n = _impl_.a_descrs_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-      _impl_.descrs_.Get(i));
+      _impl_.a_descrs_.Get(i));
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -204,7 +204,7 @@ void Msg_ManyHandles::MergeFrom(const Msg_ManyHandles& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.descrs_.MergeFrom(from._impl_.descrs_);
+  _this->_impl_.a_descrs_.MergeFrom(from._impl_.a_descrs_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -222,7 +222,7 @@ bool Msg_ManyHandles::IsInitialized() const {
 void Msg_ManyHandles::InternalSwap(Msg_ManyHandles* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.descrs_.InternalSwap(&other->_impl_.descrs_);
+  _impl_.a_descrs_.InternalSwap(&other->_impl_.a_descrs_);
 }
 
 std::string Msg_ManyHandles::GetTypeName() const {

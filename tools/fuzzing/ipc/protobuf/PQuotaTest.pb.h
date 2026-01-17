@@ -327,19 +327,19 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTryDidNotReturnFieldNumber = 1,
+    kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool tryDidNotReturn = 1;
-  bool has_trydidnotreturn() const;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
   private:
-  bool _internal_has_trydidnotreturn() const;
+  bool _internal_has_a_trydidnotreturn() const;
   public:
-  void clear_trydidnotreturn();
-  bool trydidnotreturn() const;
-  void set_trydidnotreturn(bool value);
+  void clear_a_trydidnotreturn();
+  bool a_trydidnotreturn() const;
+  void set_a_trydidnotreturn(bool value);
   private:
-  bool _internal_trydidnotreturn() const;
-  void _internal_set_trydidnotreturn(bool value);
+  bool _internal_a_trydidnotreturn() const;
+  void _internal_set_a_trydidnotreturn(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
@@ -352,7 +352,7 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool trydidnotreturn_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -593,19 +593,19 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTryDidNotReturnFieldNumber = 1,
+    kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool tryDidNotReturn = 1;
-  bool has_trydidnotreturn() const;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
   private:
-  bool _internal_has_trydidnotreturn() const;
+  bool _internal_has_a_trydidnotreturn() const;
   public:
-  void clear_trydidnotreturn();
-  bool trydidnotreturn() const;
-  void set_trydidnotreturn(bool value);
+  void clear_a_trydidnotreturn();
+  bool a_trydidnotreturn() const;
+  void set_a_trydidnotreturn(bool value);
   private:
-  bool _internal_trydidnotreturn() const;
-  void _internal_set_trydidnotreturn(bool value);
+  bool _internal_a_trydidnotreturn() const;
+  void _internal_set_a_trydidnotreturn(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
@@ -618,7 +618,7 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool trydidnotreturn_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -859,19 +859,19 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTryDidNotReturnFieldNumber = 1,
+    kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool tryDidNotReturn = 1;
-  bool has_trydidnotreturn() const;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
   private:
-  bool _internal_has_trydidnotreturn() const;
+  bool _internal_has_a_trydidnotreturn() const;
   public:
-  void clear_trydidnotreturn();
-  bool trydidnotreturn() const;
-  void set_trydidnotreturn(bool value);
+  void clear_a_trydidnotreturn();
+  bool a_trydidnotreturn() const;
+  void set_a_trydidnotreturn(bool value);
   private:
-  bool _internal_trydidnotreturn() const;
-  void _internal_set_trydidnotreturn(bool value);
+  bool _internal_a_trydidnotreturn() const;
+  void _internal_set_a_trydidnotreturn(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
@@ -884,7 +884,7 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool trydidnotreturn_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -1125,19 +1125,19 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTryDidNotReturnFieldNumber = 1,
+    kATryDidNotReturnFieldNumber = 1,
   };
-  // required bool tryDidNotReturn = 1;
-  bool has_trydidnotreturn() const;
+  // required bool a_tryDidNotReturn = 1;
+  bool has_a_trydidnotreturn() const;
   private:
-  bool _internal_has_trydidnotreturn() const;
+  bool _internal_has_a_trydidnotreturn() const;
   public:
-  void clear_trydidnotreturn();
-  bool trydidnotreturn() const;
-  void set_trydidnotreturn(bool value);
+  void clear_a_trydidnotreturn();
+  bool a_trydidnotreturn() const;
+  void set_a_trydidnotreturn(bool value);
   private:
-  bool _internal_trydidnotreturn() const;
-  void _internal_set_trydidnotreturn(bool value);
+  bool _internal_a_trydidnotreturn() const;
+  void _internal_set_a_trydidnotreturn(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
@@ -1150,7 +1150,7 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool trydidnotreturn_;
+    bool a_trydidnotreturn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
@@ -1170,32 +1170,32 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
 
 // Reply_Try_Success_CustomErr_QmIpcFail
 
-// required bool tryDidNotReturn = 1;
-inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_has_trydidnotreturn() const {
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Try_Success_CustomErr_QmIpcFail::has_trydidnotreturn() const {
-  return _internal_has_trydidnotreturn();
+inline bool Reply_Try_Success_CustomErr_QmIpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
 }
-inline void Reply_Try_Success_CustomErr_QmIpcFail::clear_trydidnotreturn() {
-  _impl_.trydidnotreturn_ = false;
+inline void Reply_Try_Success_CustomErr_QmIpcFail::clear_a_trydidnotreturn() {
+  _impl_.a_trydidnotreturn_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_trydidnotreturn() const {
-  return _impl_.trydidnotreturn_;
+inline bool Reply_Try_Success_CustomErr_QmIpcFail::_internal_a_trydidnotreturn() const {
+  return _impl_.a_trydidnotreturn_;
 }
-inline bool Reply_Try_Success_CustomErr_QmIpcFail::trydidnotreturn() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail.tryDidNotReturn)
-  return _internal_trydidnotreturn();
+inline bool Reply_Try_Success_CustomErr_QmIpcFail::a_trydidnotreturn() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail.a_tryDidNotReturn)
+  return _internal_a_trydidnotreturn();
 }
-inline void Reply_Try_Success_CustomErr_QmIpcFail::_internal_set_trydidnotreturn(bool value) {
+inline void Reply_Try_Success_CustomErr_QmIpcFail::_internal_set_a_trydidnotreturn(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.trydidnotreturn_ = value;
+  _impl_.a_trydidnotreturn_ = value;
 }
-inline void Reply_Try_Success_CustomErr_QmIpcFail::set_trydidnotreturn(bool value) {
-  _internal_set_trydidnotreturn(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail.tryDidNotReturn)
+inline void Reply_Try_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(bool value) {
+  _internal_set_a_trydidnotreturn(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail.a_tryDidNotReturn)
 }
 
 // -------------------------------------------------------------------
@@ -1206,32 +1206,32 @@ inline void Reply_Try_Success_CustomErr_QmIpcFail::set_trydidnotreturn(bool valu
 
 // Reply_Try_Success_CustomErr_IpcFail
 
-// required bool tryDidNotReturn = 1;
-inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_has_trydidnotreturn() const {
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Try_Success_CustomErr_IpcFail::has_trydidnotreturn() const {
-  return _internal_has_trydidnotreturn();
+inline bool Reply_Try_Success_CustomErr_IpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
 }
-inline void Reply_Try_Success_CustomErr_IpcFail::clear_trydidnotreturn() {
-  _impl_.trydidnotreturn_ = false;
+inline void Reply_Try_Success_CustomErr_IpcFail::clear_a_trydidnotreturn() {
+  _impl_.a_trydidnotreturn_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_trydidnotreturn() const {
-  return _impl_.trydidnotreturn_;
+inline bool Reply_Try_Success_CustomErr_IpcFail::_internal_a_trydidnotreturn() const {
+  return _impl_.a_trydidnotreturn_;
 }
-inline bool Reply_Try_Success_CustomErr_IpcFail::trydidnotreturn() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail.tryDidNotReturn)
-  return _internal_trydidnotreturn();
+inline bool Reply_Try_Success_CustomErr_IpcFail::a_trydidnotreturn() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail.a_tryDidNotReturn)
+  return _internal_a_trydidnotreturn();
 }
-inline void Reply_Try_Success_CustomErr_IpcFail::_internal_set_trydidnotreturn(bool value) {
+inline void Reply_Try_Success_CustomErr_IpcFail::_internal_set_a_trydidnotreturn(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.trydidnotreturn_ = value;
+  _impl_.a_trydidnotreturn_ = value;
 }
-inline void Reply_Try_Success_CustomErr_IpcFail::set_trydidnotreturn(bool value) {
-  _internal_set_trydidnotreturn(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail.tryDidNotReturn)
+inline void Reply_Try_Success_CustomErr_IpcFail::set_a_trydidnotreturn(bool value) {
+  _internal_set_a_trydidnotreturn(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail.a_tryDidNotReturn)
 }
 
 // -------------------------------------------------------------------
@@ -1242,32 +1242,32 @@ inline void Reply_Try_Success_CustomErr_IpcFail::set_trydidnotreturn(bool value)
 
 // Reply_TryInspect_Success_CustomErr_QmIpcFail
 
-// required bool tryDidNotReturn = 1;
-inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_has_trydidnotreturn() const {
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::has_trydidnotreturn() const {
-  return _internal_has_trydidnotreturn();
+inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
 }
-inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::clear_trydidnotreturn() {
-  _impl_.trydidnotreturn_ = false;
+inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::clear_a_trydidnotreturn() {
+  _impl_.a_trydidnotreturn_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_trydidnotreturn() const {
-  return _impl_.trydidnotreturn_;
+inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_a_trydidnotreturn() const {
+  return _impl_.a_trydidnotreturn_;
 }
-inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::trydidnotreturn() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail.tryDidNotReturn)
-  return _internal_trydidnotreturn();
+inline bool Reply_TryInspect_Success_CustomErr_QmIpcFail::a_trydidnotreturn() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail.a_tryDidNotReturn)
+  return _internal_a_trydidnotreturn();
 }
-inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_set_trydidnotreturn(bool value) {
+inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::_internal_set_a_trydidnotreturn(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.trydidnotreturn_ = value;
+  _impl_.a_trydidnotreturn_ = value;
 }
-inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::set_trydidnotreturn(bool value) {
-  _internal_set_trydidnotreturn(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail.tryDidNotReturn)
+inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::set_a_trydidnotreturn(bool value) {
+  _internal_set_a_trydidnotreturn(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail.a_tryDidNotReturn)
 }
 
 // -------------------------------------------------------------------
@@ -1278,32 +1278,32 @@ inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::set_trydidnotreturn(bo
 
 // Reply_TryInspect_Success_CustomErr_IpcFail
 
-// required bool tryDidNotReturn = 1;
-inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_has_trydidnotreturn() const {
+// required bool a_tryDidNotReturn = 1;
+inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_has_a_trydidnotreturn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_TryInspect_Success_CustomErr_IpcFail::has_trydidnotreturn() const {
-  return _internal_has_trydidnotreturn();
+inline bool Reply_TryInspect_Success_CustomErr_IpcFail::has_a_trydidnotreturn() const {
+  return _internal_has_a_trydidnotreturn();
 }
-inline void Reply_TryInspect_Success_CustomErr_IpcFail::clear_trydidnotreturn() {
-  _impl_.trydidnotreturn_ = false;
+inline void Reply_TryInspect_Success_CustomErr_IpcFail::clear_a_trydidnotreturn() {
+  _impl_.a_trydidnotreturn_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_trydidnotreturn() const {
-  return _impl_.trydidnotreturn_;
+inline bool Reply_TryInspect_Success_CustomErr_IpcFail::_internal_a_trydidnotreturn() const {
+  return _impl_.a_trydidnotreturn_;
 }
-inline bool Reply_TryInspect_Success_CustomErr_IpcFail::trydidnotreturn() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail.tryDidNotReturn)
-  return _internal_trydidnotreturn();
+inline bool Reply_TryInspect_Success_CustomErr_IpcFail::a_trydidnotreturn() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail.a_tryDidNotReturn)
+  return _internal_a_trydidnotreturn();
 }
-inline void Reply_TryInspect_Success_CustomErr_IpcFail::_internal_set_trydidnotreturn(bool value) {
+inline void Reply_TryInspect_Success_CustomErr_IpcFail::_internal_set_a_trydidnotreturn(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.trydidnotreturn_ = value;
+  _impl_.a_trydidnotreturn_ = value;
 }
-inline void Reply_TryInspect_Success_CustomErr_IpcFail::set_trydidnotreturn(bool value) {
-  _internal_set_trydidnotreturn(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail.tryDidNotReturn)
+inline void Reply_TryInspect_Success_CustomErr_IpcFail::set_a_trydidnotreturn(bool value) {
+  _internal_set_a_trydidnotreturn(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail.a_tryDidNotReturn)
 }
 
 #ifdef __GNUC__

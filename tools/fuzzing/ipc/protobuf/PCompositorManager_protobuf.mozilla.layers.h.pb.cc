@@ -24,12 +24,12 @@ PROTOBUF_CONSTEXPR WidgetCompositorOptions::WidgetCompositorOptions(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.scale_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.vsyncrate_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.options_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.surfacesize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.innerwindowid_)*/uint64_t{0u}
-  , /*decltype(_impl_.useexternalsurfacesize_)*/false} {}
+  , /*decltype(_impl_.a_scale_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_vsyncrate_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_options_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_surfacesize_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_innerwindowid_)*/uint64_t{0u}
+  , /*decltype(_impl_.a_useexternalsurfacesize_)*/false} {}
 struct WidgetCompositorOptionsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WidgetCompositorOptionsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -89,22 +89,22 @@ namespace layers {
 class WidgetCompositorOptions::_Internal {
  public:
   using HasBits = decltype(std::declval<WidgetCompositorOptions>()._impl_._has_bits_);
-  static void set_has_scale(HasBits* has_bits) {
+  static void set_has_a_scale(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_vsyncrate(HasBits* has_bits) {
+  static void set_has_a_vsyncrate(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_options(HasBits* has_bits) {
+  static void set_has_a_options(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_useexternalsurfacesize(HasBits* has_bits) {
+  static void set_has_a_useexternalsurfacesize(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_surfacesize(HasBits* has_bits) {
+  static void set_has_a_surfacesize(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_innerwindowid(HasBits* has_bits) {
+  static void set_has_a_innerwindowid(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -124,49 +124,49 @@ WidgetCompositorOptions::WidgetCompositorOptions(const WidgetCompositorOptions& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.scale_){}
-    , decltype(_impl_.vsyncrate_){}
-    , decltype(_impl_.options_){}
-    , decltype(_impl_.surfacesize_){}
-    , decltype(_impl_.innerwindowid_){}
-    , decltype(_impl_.useexternalsurfacesize_){}};
+    , decltype(_impl_.a_scale_){}
+    , decltype(_impl_.a_vsyncrate_){}
+    , decltype(_impl_.a_options_){}
+    , decltype(_impl_.a_surfacesize_){}
+    , decltype(_impl_.a_innerwindowid_){}
+    , decltype(_impl_.a_useexternalsurfacesize_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.scale_.InitDefault();
+  _impl_.a_scale_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.scale_.Set("", GetArenaForAllocation());
+    _impl_.a_scale_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_scale()) {
-    _this->_impl_.scale_.Set(from._internal_scale(), 
+  if (from._internal_has_a_scale()) {
+    _this->_impl_.a_scale_.Set(from._internal_a_scale(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.vsyncrate_.InitDefault();
+  _impl_.a_vsyncrate_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.vsyncrate_.Set("", GetArenaForAllocation());
+    _impl_.a_vsyncrate_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_vsyncrate()) {
-    _this->_impl_.vsyncrate_.Set(from._internal_vsyncrate(), 
+  if (from._internal_has_a_vsyncrate()) {
+    _this->_impl_.a_vsyncrate_.Set(from._internal_a_vsyncrate(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.options_.InitDefault();
+  _impl_.a_options_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.options_.Set("", GetArenaForAllocation());
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_options()) {
-    _this->_impl_.options_.Set(from._internal_options(), 
+  if (from._internal_has_a_options()) {
+    _this->_impl_.a_options_.Set(from._internal_a_options(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.surfacesize_.InitDefault();
+  _impl_.a_surfacesize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.surfacesize_.Set("", GetArenaForAllocation());
+    _impl_.a_surfacesize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_surfacesize()) {
-    _this->_impl_.surfacesize_.Set(from._internal_surfacesize(), 
+  if (from._internal_has_a_surfacesize()) {
+    _this->_impl_.a_surfacesize_.Set(from._internal_a_surfacesize(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.innerwindowid_, &from._impl_.innerwindowid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.useexternalsurfacesize_) -
-    reinterpret_cast<char*>(&_impl_.innerwindowid_)) + sizeof(_impl_.useexternalsurfacesize_));
+  ::memcpy(&_impl_.a_innerwindowid_, &from._impl_.a_innerwindowid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_useexternalsurfacesize_) -
+    reinterpret_cast<char*>(&_impl_.a_innerwindowid_)) + sizeof(_impl_.a_useexternalsurfacesize_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.WidgetCompositorOptions)
 }
 
@@ -177,28 +177,28 @@ inline void WidgetCompositorOptions::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.scale_){}
-    , decltype(_impl_.vsyncrate_){}
-    , decltype(_impl_.options_){}
-    , decltype(_impl_.surfacesize_){}
-    , decltype(_impl_.innerwindowid_){uint64_t{0u}}
-    , decltype(_impl_.useexternalsurfacesize_){false}
+    , decltype(_impl_.a_scale_){}
+    , decltype(_impl_.a_vsyncrate_){}
+    , decltype(_impl_.a_options_){}
+    , decltype(_impl_.a_surfacesize_){}
+    , decltype(_impl_.a_innerwindowid_){uint64_t{0u}}
+    , decltype(_impl_.a_useexternalsurfacesize_){false}
   };
-  _impl_.scale_.InitDefault();
+  _impl_.a_scale_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.scale_.Set("", GetArenaForAllocation());
+    _impl_.a_scale_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.vsyncrate_.InitDefault();
+  _impl_.a_vsyncrate_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.vsyncrate_.Set("", GetArenaForAllocation());
+    _impl_.a_vsyncrate_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.options_.InitDefault();
+  _impl_.a_options_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.options_.Set("", GetArenaForAllocation());
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.surfacesize_.InitDefault();
+  _impl_.a_surfacesize_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.surfacesize_.Set("", GetArenaForAllocation());
+    _impl_.a_surfacesize_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -213,10 +213,10 @@ WidgetCompositorOptions::~WidgetCompositorOptions() {
 
 inline void WidgetCompositorOptions::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.scale_.Destroy();
-  _impl_.vsyncrate_.Destroy();
-  _impl_.options_.Destroy();
-  _impl_.surfacesize_.Destroy();
+  _impl_.a_scale_.Destroy();
+  _impl_.a_vsyncrate_.Destroy();
+  _impl_.a_options_.Destroy();
+  _impl_.a_surfacesize_.Destroy();
 }
 
 void WidgetCompositorOptions::SetCachedSize(int size) const {
@@ -232,22 +232,22 @@ void WidgetCompositorOptions::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.scale_.ClearNonDefaultToEmpty();
+      _impl_.a_scale_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.vsyncrate_.ClearNonDefaultToEmpty();
+      _impl_.a_vsyncrate_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.options_.ClearNonDefaultToEmpty();
+      _impl_.a_options_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.surfacesize_.ClearNonDefaultToEmpty();
+      _impl_.a_surfacesize_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x00000030u) {
-    ::memset(&_impl_.innerwindowid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.useexternalsurfacesize_) -
-        reinterpret_cast<char*>(&_impl_.innerwindowid_)) + sizeof(_impl_.useexternalsurfacesize_));
+    ::memset(&_impl_.a_innerwindowid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_useexternalsurfacesize_) -
+        reinterpret_cast<char*>(&_impl_.a_innerwindowid_)) + sizeof(_impl_.a_useexternalsurfacesize_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -260,56 +260,56 @@ const char* WidgetCompositorOptions::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes scale = 1;
+      // required bytes a_scale = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_scale();
+          auto str = _internal_mutable_a_scale();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes vsyncRate = 2;
+      // required bytes a_vsyncRate = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_vsyncrate();
+          auto str = _internal_mutable_a_vsyncrate();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes options = 3;
+      // required bytes a_options = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_options();
+          auto str = _internal_mutable_a_options();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool useExternalSurfaceSize = 4;
+      // required bool a_useExternalSurfaceSize = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_useexternalsurfacesize(&has_bits);
-          _impl_.useexternalsurfacesize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_useexternalsurfacesize(&has_bits);
+          _impl_.a_useexternalsurfacesize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes surfaceSize = 5;
+      // required bytes a_surfaceSize = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_surfacesize();
+          auto str = _internal_mutable_a_surfacesize();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 innerWindowId = 6;
+      // required uint64 a_innerWindowId = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_innerwindowid(&has_bits);
-          _impl_.innerwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_innerwindowid(&has_bits);
+          _impl_.a_innerwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -345,40 +345,40 @@ uint8_t* WidgetCompositorOptions::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes scale = 1;
+  // required bytes a_scale = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_scale(), target);
+        1, this->_internal_a_scale(), target);
   }
 
-  // required bytes vsyncRate = 2;
+  // required bytes a_vsyncRate = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_vsyncrate(), target);
+        2, this->_internal_a_vsyncrate(), target);
   }
 
-  // required bytes options = 3;
+  // required bytes a_options = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_options(), target);
+        3, this->_internal_a_options(), target);
   }
 
-  // required bool useExternalSurfaceSize = 4;
+  // required bool a_useExternalSurfaceSize = 4;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_useexternalsurfacesize(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_useexternalsurfacesize(), target);
   }
 
-  // required bytes surfaceSize = 5;
+  // required bytes a_surfaceSize = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_surfacesize(), target);
+        5, this->_internal_a_surfacesize(), target);
   }
 
-  // required uint64 innerWindowId = 6;
+  // required uint64 a_innerWindowId = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_innerwindowid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_a_innerwindowid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -393,41 +393,41 @@ size_t WidgetCompositorOptions::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.WidgetCompositorOptions)
   size_t total_size = 0;
 
-  if (_internal_has_scale()) {
-    // required bytes scale = 1;
+  if (_internal_has_a_scale()) {
+    // required bytes a_scale = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_scale());
+        this->_internal_a_scale());
   }
 
-  if (_internal_has_vsyncrate()) {
-    // required bytes vsyncRate = 2;
+  if (_internal_has_a_vsyncrate()) {
+    // required bytes a_vsyncRate = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_vsyncrate());
+        this->_internal_a_vsyncrate());
   }
 
-  if (_internal_has_options()) {
-    // required bytes options = 3;
+  if (_internal_has_a_options()) {
+    // required bytes a_options = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_options());
+        this->_internal_a_options());
   }
 
-  if (_internal_has_surfacesize()) {
-    // required bytes surfaceSize = 5;
+  if (_internal_has_a_surfacesize()) {
+    // required bytes a_surfaceSize = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_surfacesize());
+        this->_internal_a_surfacesize());
   }
 
-  if (_internal_has_innerwindowid()) {
-    // required uint64 innerWindowId = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_innerwindowid());
+  if (_internal_has_a_innerwindowid()) {
+    // required uint64 a_innerWindowId = 6;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_innerwindowid());
   }
 
-  if (_internal_has_useexternalsurfacesize()) {
-    // required bool useExternalSurfaceSize = 4;
+  if (_internal_has_a_useexternalsurfacesize()) {
+    // required bool a_useExternalSurfaceSize = 4;
     total_size += 1 + 1;
   }
 
@@ -438,30 +438,30 @@ size_t WidgetCompositorOptions::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required bytes scale = 1;
+    // required bytes a_scale = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_scale());
+        this->_internal_a_scale());
 
-    // required bytes vsyncRate = 2;
+    // required bytes a_vsyncRate = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_vsyncrate());
+        this->_internal_a_vsyncrate());
 
-    // required bytes options = 3;
+    // required bytes a_options = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_options());
+        this->_internal_a_options());
 
-    // required bytes surfaceSize = 5;
+    // required bytes a_surfaceSize = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_surfacesize());
+        this->_internal_a_surfacesize());
 
-    // required uint64 innerWindowId = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_innerwindowid());
+    // required uint64 a_innerWindowId = 6;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_innerwindowid());
 
-    // required bool useExternalSurfaceSize = 4;
+    // required bool a_useExternalSurfaceSize = 4;
     total_size += 1 + 1;
 
   } else {
@@ -495,22 +495,22 @@ void WidgetCompositorOptions::MergeFrom(const WidgetCompositorOptions& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_scale(from._internal_scale());
+      _this->_internal_set_a_scale(from._internal_a_scale());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_vsyncrate(from._internal_vsyncrate());
+      _this->_internal_set_a_vsyncrate(from._internal_a_vsyncrate());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_options(from._internal_options());
+      _this->_internal_set_a_options(from._internal_a_options());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_surfacesize(from._internal_surfacesize());
+      _this->_internal_set_a_surfacesize(from._internal_a_surfacesize());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.innerwindowid_ = from._impl_.innerwindowid_;
+      _this->_impl_.a_innerwindowid_ = from._impl_.a_innerwindowid_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.useexternalsurfacesize_ = from._impl_.useexternalsurfacesize_;
+      _this->_impl_.a_useexternalsurfacesize_ = from._impl_.a_useexternalsurfacesize_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -536,27 +536,27 @@ void WidgetCompositorOptions::InternalSwap(WidgetCompositorOptions* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.scale_, lhs_arena,
-      &other->_impl_.scale_, rhs_arena
+      &_impl_.a_scale_, lhs_arena,
+      &other->_impl_.a_scale_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.vsyncrate_, lhs_arena,
-      &other->_impl_.vsyncrate_, rhs_arena
+      &_impl_.a_vsyncrate_, lhs_arena,
+      &other->_impl_.a_vsyncrate_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.options_, lhs_arena,
-      &other->_impl_.options_, rhs_arena
+      &_impl_.a_options_, lhs_arena,
+      &other->_impl_.a_options_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.surfacesize_, lhs_arena,
-      &other->_impl_.surfacesize_, rhs_arena
+      &_impl_.a_surfacesize_, lhs_arena,
+      &other->_impl_.a_surfacesize_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WidgetCompositorOptions, _impl_.useexternalsurfacesize_)
-      + sizeof(WidgetCompositorOptions::_impl_.useexternalsurfacesize_)
-      - PROTOBUF_FIELD_OFFSET(WidgetCompositorOptions, _impl_.innerwindowid_)>(
-          reinterpret_cast<char*>(&_impl_.innerwindowid_),
-          reinterpret_cast<char*>(&other->_impl_.innerwindowid_));
+      PROTOBUF_FIELD_OFFSET(WidgetCompositorOptions, _impl_.a_useexternalsurfacesize_)
+      + sizeof(WidgetCompositorOptions::_impl_.a_useexternalsurfacesize_)
+      - PROTOBUF_FIELD_OFFSET(WidgetCompositorOptions, _impl_.a_innerwindowid_)>(
+          reinterpret_cast<char*>(&_impl_.a_innerwindowid_),
+          reinterpret_cast<char*>(&other->_impl_.a_innerwindowid_));
 }
 
 std::string WidgetCompositorOptions::GetTypeName() const {
@@ -864,67 +864,67 @@ std::string SameProcessWidgetCompositorOptions::GetTypeName() const {
 
 class CompositorBridgeOptions::_Internal {
  public:
-  static const ::protobuf::mozilla::layers::ContentCompositorOptions& mvcontentcompositoroptions(const CompositorBridgeOptions* msg);
-  static const ::protobuf::mozilla::layers::WidgetCompositorOptions& mvwidgetcompositoroptions(const CompositorBridgeOptions* msg);
-  static const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& mvsameprocesswidgetcompositoroptions(const CompositorBridgeOptions* msg);
+  static const ::protobuf::mozilla::layers::ContentCompositorOptions& a_mvcontentcompositoroptions(const CompositorBridgeOptions* msg);
+  static const ::protobuf::mozilla::layers::WidgetCompositorOptions& a_mvwidgetcompositoroptions(const CompositorBridgeOptions* msg);
+  static const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions& a_mvsameprocesswidgetcompositoroptions(const CompositorBridgeOptions* msg);
 };
 
 const ::protobuf::mozilla::layers::ContentCompositorOptions&
-CompositorBridgeOptions::_Internal::mvcontentcompositoroptions(const CompositorBridgeOptions* msg) {
-  return *msg->_impl_.content_.mvcontentcompositoroptions_;
+CompositorBridgeOptions::_Internal::a_mvcontentcompositoroptions(const CompositorBridgeOptions* msg) {
+  return *msg->_impl_.content_.a_mvcontentcompositoroptions_;
 }
 const ::protobuf::mozilla::layers::WidgetCompositorOptions&
-CompositorBridgeOptions::_Internal::mvwidgetcompositoroptions(const CompositorBridgeOptions* msg) {
-  return *msg->_impl_.content_.mvwidgetcompositoroptions_;
+CompositorBridgeOptions::_Internal::a_mvwidgetcompositoroptions(const CompositorBridgeOptions* msg) {
+  return *msg->_impl_.content_.a_mvwidgetcompositoroptions_;
 }
 const ::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions&
-CompositorBridgeOptions::_Internal::mvsameprocesswidgetcompositoroptions(const CompositorBridgeOptions* msg) {
-  return *msg->_impl_.content_.mvsameprocesswidgetcompositoroptions_;
+CompositorBridgeOptions::_Internal::a_mvsameprocesswidgetcompositoroptions(const CompositorBridgeOptions* msg) {
+  return *msg->_impl_.content_.a_mvsameprocesswidgetcompositoroptions_;
 }
-void CompositorBridgeOptions::set_allocated_mvcontentcompositoroptions(::protobuf::mozilla::layers::ContentCompositorOptions* mvcontentcompositoroptions) {
+void CompositorBridgeOptions::set_allocated_a_mvcontentcompositoroptions(::protobuf::mozilla::layers::ContentCompositorOptions* a_mvcontentcompositoroptions) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvcontentcompositoroptions) {
+  if (a_mvcontentcompositoroptions) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvcontentcompositoroptions);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvcontentcompositoroptions);
     if (message_arena != submessage_arena) {
-      mvcontentcompositoroptions = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvcontentcompositoroptions, submessage_arena);
+      a_mvcontentcompositoroptions = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvcontentcompositoroptions, submessage_arena);
     }
-    set_has_mvcontentcompositoroptions();
-    _impl_.content_.mvcontentcompositoroptions_ = mvcontentcompositoroptions;
+    set_has_a_mvcontentcompositoroptions();
+    _impl_.content_.a_mvcontentcompositoroptions_ = a_mvcontentcompositoroptions;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.mVContentCompositorOptions)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVContentCompositorOptions)
 }
-void CompositorBridgeOptions::set_allocated_mvwidgetcompositoroptions(::protobuf::mozilla::layers::WidgetCompositorOptions* mvwidgetcompositoroptions) {
+void CompositorBridgeOptions::set_allocated_a_mvwidgetcompositoroptions(::protobuf::mozilla::layers::WidgetCompositorOptions* a_mvwidgetcompositoroptions) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvwidgetcompositoroptions) {
+  if (a_mvwidgetcompositoroptions) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvwidgetcompositoroptions);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvwidgetcompositoroptions);
     if (message_arena != submessage_arena) {
-      mvwidgetcompositoroptions = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvwidgetcompositoroptions, submessage_arena);
+      a_mvwidgetcompositoroptions = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvwidgetcompositoroptions, submessage_arena);
     }
-    set_has_mvwidgetcompositoroptions();
-    _impl_.content_.mvwidgetcompositoroptions_ = mvwidgetcompositoroptions;
+    set_has_a_mvwidgetcompositoroptions();
+    _impl_.content_.a_mvwidgetcompositoroptions_ = a_mvwidgetcompositoroptions;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.mVWidgetCompositorOptions)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVWidgetCompositorOptions)
 }
-void CompositorBridgeOptions::set_allocated_mvsameprocesswidgetcompositoroptions(::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* mvsameprocesswidgetcompositoroptions) {
+void CompositorBridgeOptions::set_allocated_a_mvsameprocesswidgetcompositoroptions(::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions* a_mvsameprocesswidgetcompositoroptions) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsameprocesswidgetcompositoroptions) {
+  if (a_mvsameprocesswidgetcompositoroptions) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsameprocesswidgetcompositoroptions);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsameprocesswidgetcompositoroptions);
     if (message_arena != submessage_arena) {
-      mvsameprocesswidgetcompositoroptions = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsameprocesswidgetcompositoroptions, submessage_arena);
+      a_mvsameprocesswidgetcompositoroptions = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsameprocesswidgetcompositoroptions, submessage_arena);
     }
-    set_has_mvsameprocesswidgetcompositoroptions();
-    _impl_.content_.mvsameprocesswidgetcompositoroptions_ = mvsameprocesswidgetcompositoroptions;
+    set_has_a_mvsameprocesswidgetcompositoroptions();
+    _impl_.content_.a_mvsameprocesswidgetcompositoroptions_ = a_mvsameprocesswidgetcompositoroptions;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.mVSameProcessWidgetCompositorOptions)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.CompositorBridgeOptions.a_mVSameProcessWidgetCompositorOptions)
 }
 CompositorBridgeOptions::CompositorBridgeOptions(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -943,19 +943,19 @@ CompositorBridgeOptions::CompositorBridgeOptions(const CompositorBridgeOptions& 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVContentCompositorOptions: {
-      _this->_internal_mutable_mvcontentcompositoroptions()->::protobuf::mozilla::layers::ContentCompositorOptions::MergeFrom(
-          from._internal_mvcontentcompositoroptions());
+    case kAMVContentCompositorOptions: {
+      _this->_internal_mutable_a_mvcontentcompositoroptions()->::protobuf::mozilla::layers::ContentCompositorOptions::MergeFrom(
+          from._internal_a_mvcontentcompositoroptions());
       break;
     }
-    case kMVWidgetCompositorOptions: {
-      _this->_internal_mutable_mvwidgetcompositoroptions()->::protobuf::mozilla::layers::WidgetCompositorOptions::MergeFrom(
-          from._internal_mvwidgetcompositoroptions());
+    case kAMVWidgetCompositorOptions: {
+      _this->_internal_mutable_a_mvwidgetcompositoroptions()->::protobuf::mozilla::layers::WidgetCompositorOptions::MergeFrom(
+          from._internal_a_mvwidgetcompositoroptions());
       break;
     }
-    case kMVSameProcessWidgetCompositorOptions: {
-      _this->_internal_mutable_mvsameprocesswidgetcompositoroptions()->::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions::MergeFrom(
-          from._internal_mvsameprocesswidgetcompositoroptions());
+    case kAMVSameProcessWidgetCompositorOptions: {
+      _this->_internal_mutable_a_mvsameprocesswidgetcompositoroptions()->::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions::MergeFrom(
+          from._internal_a_mvsameprocesswidgetcompositoroptions());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1000,21 +1000,21 @@ void CompositorBridgeOptions::SetCachedSize(int size) const {
 void CompositorBridgeOptions::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.layers.CompositorBridgeOptions)
   switch (content_case()) {
-    case kMVContentCompositorOptions: {
+    case kAMVContentCompositorOptions: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvcontentcompositoroptions_;
+        delete _impl_.content_.a_mvcontentcompositoroptions_;
       }
       break;
     }
-    case kMVWidgetCompositorOptions: {
+    case kAMVWidgetCompositorOptions: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvwidgetcompositoroptions_;
+        delete _impl_.content_.a_mvwidgetcompositoroptions_;
       }
       break;
     }
-    case kMVSameProcessWidgetCompositorOptions: {
+    case kAMVSameProcessWidgetCompositorOptions: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsameprocesswidgetcompositoroptions_;
+        delete _impl_.content_.a_mvsameprocesswidgetcompositoroptions_;
       }
       break;
     }
@@ -1042,26 +1042,26 @@ const char* CompositorBridgeOptions::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.layers.ContentCompositorOptions mVContentCompositorOptions = 1;
+      // .protobuf.mozilla.layers.ContentCompositorOptions a_mVContentCompositorOptions = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvcontentcompositoroptions(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvcontentcompositoroptions(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.WidgetCompositorOptions mVWidgetCompositorOptions = 2;
+      // .protobuf.mozilla.layers.WidgetCompositorOptions a_mVWidgetCompositorOptions = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvwidgetcompositoroptions(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvwidgetcompositoroptions(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions mVSameProcessWidgetCompositorOptions = 3;
+      // .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions a_mVSameProcessWidgetCompositorOptions = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsameprocesswidgetcompositoroptions(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsameprocesswidgetcompositoroptions(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1096,22 +1096,22 @@ uint8_t* CompositorBridgeOptions::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVContentCompositorOptions: {
+    case kAMVContentCompositorOptions: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvcontentcompositoroptions(this),
-          _Internal::mvcontentcompositoroptions(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvcontentcompositoroptions(this),
+          _Internal::a_mvcontentcompositoroptions(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVWidgetCompositorOptions: {
+    case kAMVWidgetCompositorOptions: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvwidgetcompositoroptions(this),
-          _Internal::mvwidgetcompositoroptions(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvwidgetcompositoroptions(this),
+          _Internal::a_mvwidgetcompositoroptions(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVSameProcessWidgetCompositorOptions: {
+    case kAMVSameProcessWidgetCompositorOptions: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::mvsameprocesswidgetcompositoroptions(this),
-          _Internal::mvsameprocesswidgetcompositoroptions(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(3, _Internal::a_mvsameprocesswidgetcompositoroptions(this),
+          _Internal::a_mvsameprocesswidgetcompositoroptions(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1133,25 +1133,25 @@ size_t CompositorBridgeOptions::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.layers.ContentCompositorOptions mVContentCompositorOptions = 1;
-    case kMVContentCompositorOptions: {
+    // .protobuf.mozilla.layers.ContentCompositorOptions a_mVContentCompositorOptions = 1;
+    case kAMVContentCompositorOptions: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvcontentcompositoroptions_);
+          *_impl_.content_.a_mvcontentcompositoroptions_);
       break;
     }
-    // .protobuf.mozilla.layers.WidgetCompositorOptions mVWidgetCompositorOptions = 2;
-    case kMVWidgetCompositorOptions: {
+    // .protobuf.mozilla.layers.WidgetCompositorOptions a_mVWidgetCompositorOptions = 2;
+    case kAMVWidgetCompositorOptions: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvwidgetcompositoroptions_);
+          *_impl_.content_.a_mvwidgetcompositoroptions_);
       break;
     }
-    // .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions mVSameProcessWidgetCompositorOptions = 3;
-    case kMVSameProcessWidgetCompositorOptions: {
+    // .protobuf.mozilla.layers.SameProcessWidgetCompositorOptions a_mVSameProcessWidgetCompositorOptions = 3;
+    case kAMVSameProcessWidgetCompositorOptions: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsameprocesswidgetcompositoroptions_);
+          *_impl_.content_.a_mvsameprocesswidgetcompositoroptions_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1180,19 +1180,19 @@ void CompositorBridgeOptions::MergeFrom(const CompositorBridgeOptions& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVContentCompositorOptions: {
-      _this->_internal_mutable_mvcontentcompositoroptions()->::protobuf::mozilla::layers::ContentCompositorOptions::MergeFrom(
-          from._internal_mvcontentcompositoroptions());
+    case kAMVContentCompositorOptions: {
+      _this->_internal_mutable_a_mvcontentcompositoroptions()->::protobuf::mozilla::layers::ContentCompositorOptions::MergeFrom(
+          from._internal_a_mvcontentcompositoroptions());
       break;
     }
-    case kMVWidgetCompositorOptions: {
-      _this->_internal_mutable_mvwidgetcompositoroptions()->::protobuf::mozilla::layers::WidgetCompositorOptions::MergeFrom(
-          from._internal_mvwidgetcompositoroptions());
+    case kAMVWidgetCompositorOptions: {
+      _this->_internal_mutable_a_mvwidgetcompositoroptions()->::protobuf::mozilla::layers::WidgetCompositorOptions::MergeFrom(
+          from._internal_a_mvwidgetcompositoroptions());
       break;
     }
-    case kMVSameProcessWidgetCompositorOptions: {
-      _this->_internal_mutable_mvsameprocesswidgetcompositoroptions()->::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions::MergeFrom(
-          from._internal_mvsameprocesswidgetcompositoroptions());
+    case kAMVSameProcessWidgetCompositorOptions: {
+      _this->_internal_mutable_a_mvsameprocesswidgetcompositoroptions()->::protobuf::mozilla::layers::SameProcessWidgetCompositorOptions::MergeFrom(
+          from._internal_a_mvsameprocesswidgetcompositoroptions());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1211,16 +1211,16 @@ void CompositorBridgeOptions::CopyFrom(const CompositorBridgeOptions& from) {
 
 bool CompositorBridgeOptions::IsInitialized() const {
   switch (content_case()) {
-    case kMVContentCompositorOptions: {
+    case kAMVContentCompositorOptions: {
       break;
     }
-    case kMVWidgetCompositorOptions: {
-      if (_internal_has_mvwidgetcompositoroptions()) {
-        if (!_impl_.content_.mvwidgetcompositoroptions_->IsInitialized()) return false;
+    case kAMVWidgetCompositorOptions: {
+      if (_internal_has_a_mvwidgetcompositoroptions()) {
+        if (!_impl_.content_.a_mvwidgetcompositoroptions_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVSameProcessWidgetCompositorOptions: {
+    case kAMVSameProcessWidgetCompositorOptions: {
       break;
     }
     case CONTENT_NOT_SET: {

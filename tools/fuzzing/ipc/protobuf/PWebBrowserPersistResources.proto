@@ -16,20 +16,20 @@ package protobuf.mozilla.PWebBrowserPersistResources;
 
 // Message declarations
 message Msg_VisitResource {
-  required bytes aURI = 1;
-  required bytes aContentPolicyType = 2;
+  required bytes a_aURI = 1;
+  required bytes a_aContentPolicyType = 2;
 }
 
 message Msg_VisitDocument {
-  required bytes aSubDocument = 1;
+  required bytes a_aSubDocument = 1;
 }
 
 message Msg_VisitBrowsingContext {
-  required bytes aContext = 1;
+  required bytes a_aContext = 1;
 }
 
 message Msg___delete__ {
-  required bytes aStatus = 1;
+  required bytes a_aStatus = 1;
 }
 
 message Reply___delete__ {

@@ -15,5 +15,5 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message IPCStream {
-  required protobuf.mozilla.ipc.InputStreamParams stream = 1;
+  required protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
 }

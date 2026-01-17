@@ -24,11 +24,11 @@ PROTOBUF_CONSTEXPR FrameTransitionData::FrameTransitionData(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.clientredirect_)*/false
-  , /*decltype(_impl_.formsubmit_)*/false
-  , /*decltype(_impl_.forwardback_)*/false
-  , /*decltype(_impl_.reload_)*/false
-  , /*decltype(_impl_.serverredirect_)*/false} {}
+  , /*decltype(_impl_.a_clientredirect_)*/false
+  , /*decltype(_impl_.a_formsubmit_)*/false
+  , /*decltype(_impl_.a_forwardback_)*/false
+  , /*decltype(_impl_.a_reload_)*/false
+  , /*decltype(_impl_.a_serverredirect_)*/false} {}
 struct FrameTransitionDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FrameTransitionDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -50,19 +50,19 @@ namespace extensions {
 class FrameTransitionData::_Internal {
  public:
   using HasBits = decltype(std::declval<FrameTransitionData>()._impl_._has_bits_);
-  static void set_has_clientredirect(HasBits* has_bits) {
+  static void set_has_a_clientredirect(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_formsubmit(HasBits* has_bits) {
+  static void set_has_a_formsubmit(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_forwardback(HasBits* has_bits) {
+  static void set_has_a_forwardback(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_reload(HasBits* has_bits) {
+  static void set_has_a_reload(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_serverredirect(HasBits* has_bits) {
+  static void set_has_a_serverredirect(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -82,16 +82,16 @@ FrameTransitionData::FrameTransitionData(const FrameTransitionData& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.clientredirect_){}
-    , decltype(_impl_.formsubmit_){}
-    , decltype(_impl_.forwardback_){}
-    , decltype(_impl_.reload_){}
-    , decltype(_impl_.serverredirect_){}};
+    , decltype(_impl_.a_clientredirect_){}
+    , decltype(_impl_.a_formsubmit_){}
+    , decltype(_impl_.a_forwardback_){}
+    , decltype(_impl_.a_reload_){}
+    , decltype(_impl_.a_serverredirect_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.clientredirect_, &from._impl_.clientredirect_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.serverredirect_) -
-    reinterpret_cast<char*>(&_impl_.clientredirect_)) + sizeof(_impl_.serverredirect_));
+  ::memcpy(&_impl_.a_clientredirect_, &from._impl_.a_clientredirect_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_serverredirect_) -
+    reinterpret_cast<char*>(&_impl_.a_clientredirect_)) + sizeof(_impl_.a_serverredirect_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.extensions.FrameTransitionData)
 }
 
@@ -102,11 +102,11 @@ inline void FrameTransitionData::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.clientredirect_){false}
-    , decltype(_impl_.formsubmit_){false}
-    , decltype(_impl_.forwardback_){false}
-    , decltype(_impl_.reload_){false}
-    , decltype(_impl_.serverredirect_){false}
+    , decltype(_impl_.a_clientredirect_){false}
+    , decltype(_impl_.a_formsubmit_){false}
+    , decltype(_impl_.a_forwardback_){false}
+    , decltype(_impl_.a_reload_){false}
+    , decltype(_impl_.a_serverredirect_){false}
   };
 }
 
@@ -135,9 +135,9 @@ void FrameTransitionData::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
-    ::memset(&_impl_.clientredirect_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.serverredirect_) -
-        reinterpret_cast<char*>(&_impl_.clientredirect_)) + sizeof(_impl_.serverredirect_));
+    ::memset(&_impl_.a_clientredirect_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_serverredirect_) -
+        reinterpret_cast<char*>(&_impl_.a_clientredirect_)) + sizeof(_impl_.a_serverredirect_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -150,47 +150,47 @@ const char* FrameTransitionData::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool clientRedirect = 1;
+      // required bool a_clientRedirect = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_clientredirect(&has_bits);
-          _impl_.clientredirect_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_clientredirect(&has_bits);
+          _impl_.a_clientredirect_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool formSubmit = 2;
+      // required bool a_formSubmit = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_formsubmit(&has_bits);
-          _impl_.formsubmit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_formsubmit(&has_bits);
+          _impl_.a_formsubmit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool forwardBack = 3;
+      // required bool a_forwardBack = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_forwardback(&has_bits);
-          _impl_.forwardback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_forwardback(&has_bits);
+          _impl_.a_forwardback_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool reload = 4;
+      // required bool a_reload = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_reload(&has_bits);
-          _impl_.reload_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_reload(&has_bits);
+          _impl_.a_reload_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool serverRedirect = 5;
+      // required bool a_serverRedirect = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_serverredirect(&has_bits);
-          _impl_.serverredirect_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_serverredirect(&has_bits);
+          _impl_.a_serverredirect_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -226,34 +226,34 @@ uint8_t* FrameTransitionData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool clientRedirect = 1;
+  // required bool a_clientRedirect = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_clientredirect(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_clientredirect(), target);
   }
 
-  // required bool formSubmit = 2;
+  // required bool a_formSubmit = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_formsubmit(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_formsubmit(), target);
   }
 
-  // required bool forwardBack = 3;
+  // required bool a_forwardBack = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_forwardback(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_forwardback(), target);
   }
 
-  // required bool reload = 4;
+  // required bool a_reload = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_reload(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_reload(), target);
   }
 
-  // required bool serverRedirect = 5;
+  // required bool a_serverRedirect = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_serverredirect(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_serverredirect(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -268,28 +268,28 @@ size_t FrameTransitionData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.extensions.FrameTransitionData)
   size_t total_size = 0;
 
-  if (_internal_has_clientredirect()) {
-    // required bool clientRedirect = 1;
+  if (_internal_has_a_clientredirect()) {
+    // required bool a_clientRedirect = 1;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_formsubmit()) {
-    // required bool formSubmit = 2;
+  if (_internal_has_a_formsubmit()) {
+    // required bool a_formSubmit = 2;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_forwardback()) {
-    // required bool forwardBack = 3;
+  if (_internal_has_a_forwardback()) {
+    // required bool a_forwardBack = 3;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_reload()) {
-    // required bool reload = 4;
+  if (_internal_has_a_reload()) {
+    // required bool a_reload = 4;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_serverredirect()) {
-    // required bool serverRedirect = 5;
+  if (_internal_has_a_serverredirect()) {
+    // required bool a_serverRedirect = 5;
     total_size += 1 + 1;
   }
 
@@ -300,19 +300,19 @@ size_t FrameTransitionData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bool clientRedirect = 1;
+    // required bool a_clientRedirect = 1;
     total_size += 1 + 1;
 
-    // required bool formSubmit = 2;
+    // required bool a_formSubmit = 2;
     total_size += 1 + 1;
 
-    // required bool forwardBack = 3;
+    // required bool a_forwardBack = 3;
     total_size += 1 + 1;
 
-    // required bool reload = 4;
+    // required bool a_reload = 4;
     total_size += 1 + 1;
 
-    // required bool serverRedirect = 5;
+    // required bool a_serverRedirect = 5;
     total_size += 1 + 1;
 
   } else {
@@ -346,19 +346,19 @@ void FrameTransitionData::MergeFrom(const FrameTransitionData& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.clientredirect_ = from._impl_.clientredirect_;
+      _this->_impl_.a_clientredirect_ = from._impl_.a_clientredirect_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.formsubmit_ = from._impl_.formsubmit_;
+      _this->_impl_.a_formsubmit_ = from._impl_.a_formsubmit_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.forwardback_ = from._impl_.forwardback_;
+      _this->_impl_.a_forwardback_ = from._impl_.a_forwardback_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.reload_ = from._impl_.reload_;
+      _this->_impl_.a_reload_ = from._impl_.a_reload_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.serverredirect_ = from._impl_.serverredirect_;
+      _this->_impl_.a_serverredirect_ = from._impl_.a_serverredirect_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -382,11 +382,11 @@ void FrameTransitionData::InternalSwap(FrameTransitionData* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FrameTransitionData, _impl_.serverredirect_)
-      + sizeof(FrameTransitionData::_impl_.serverredirect_)
-      - PROTOBUF_FIELD_OFFSET(FrameTransitionData, _impl_.clientredirect_)>(
-          reinterpret_cast<char*>(&_impl_.clientredirect_),
-          reinterpret_cast<char*>(&other->_impl_.clientredirect_));
+      PROTOBUF_FIELD_OFFSET(FrameTransitionData, _impl_.a_serverredirect_)
+      + sizeof(FrameTransitionData::_impl_.a_serverredirect_)
+      - PROTOBUF_FIELD_OFFSET(FrameTransitionData, _impl_.a_clientredirect_)>(
+          reinterpret_cast<char*>(&_impl_.a_clientredirect_),
+          reinterpret_cast<char*>(&other->_impl_.a_clientredirect_));
 }
 
 std::string FrameTransitionData::GetTypeName() const {

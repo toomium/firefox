@@ -24,13 +24,13 @@ PROTOBUF_CONSTEXPR GMPLaunchResult::GMPLaunchResult(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.plugintype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.pid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.displayname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.endpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.errordescription_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.pluginid_)*/0u} {}
+  , /*decltype(_impl_.a_plugintype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_pid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_displayname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_endpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_errordescription_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_pluginid_)*/0u} {}
 struct GMPLaunchResultDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GMPLaunchResultDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,25 +52,25 @@ namespace gmp {
 class GMPLaunchResult::_Internal {
  public:
   using HasBits = decltype(std::declval<GMPLaunchResult>()._impl_._has_bits_);
-  static void set_has_pluginid(HasBits* has_bits) {
+  static void set_has_a_pluginid(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_plugintype(HasBits* has_bits) {
+  static void set_has_a_plugintype(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_pid(HasBits* has_bits) {
+  static void set_has_a_pid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_displayname(HasBits* has_bits) {
+  static void set_has_a_displayname(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_endpoint(HasBits* has_bits) {
+  static void set_has_a_endpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_errordescription(HasBits* has_bits) {
+  static void set_has_a_errordescription(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -90,64 +90,64 @@ GMPLaunchResult::GMPLaunchResult(const GMPLaunchResult& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.plugintype_){}
-    , decltype(_impl_.pid_){}
-    , decltype(_impl_.displayname_){}
-    , decltype(_impl_.endpoint_){}
-    , decltype(_impl_.result_){}
-    , decltype(_impl_.errordescription_){}
-    , decltype(_impl_.pluginid_){}};
+    , decltype(_impl_.a_plugintype_){}
+    , decltype(_impl_.a_pid_){}
+    , decltype(_impl_.a_displayname_){}
+    , decltype(_impl_.a_endpoint_){}
+    , decltype(_impl_.a_result_){}
+    , decltype(_impl_.a_errordescription_){}
+    , decltype(_impl_.a_pluginid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.plugintype_.InitDefault();
+  _impl_.a_plugintype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.plugintype_.Set("", GetArenaForAllocation());
+    _impl_.a_plugintype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_plugintype()) {
-    _this->_impl_.plugintype_.Set(from._internal_plugintype(), 
+  if (from._internal_has_a_plugintype()) {
+    _this->_impl_.a_plugintype_.Set(from._internal_a_plugintype(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.pid_.InitDefault();
+  _impl_.a_pid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.pid_.Set("", GetArenaForAllocation());
+    _impl_.a_pid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_pid()) {
-    _this->_impl_.pid_.Set(from._internal_pid(), 
+  if (from._internal_has_a_pid()) {
+    _this->_impl_.a_pid_.Set(from._internal_a_pid(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.displayname_.InitDefault();
+  _impl_.a_displayname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.displayname_.Set("", GetArenaForAllocation());
+    _impl_.a_displayname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_displayname()) {
-    _this->_impl_.displayname_.Set(from._internal_displayname(), 
+  if (from._internal_has_a_displayname()) {
+    _this->_impl_.a_displayname_.Set(from._internal_a_displayname(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.endpoint_.InitDefault();
+  _impl_.a_endpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_endpoint()) {
-    _this->_impl_.endpoint_.Set(from._internal_endpoint(), 
+  if (from._internal_has_a_endpoint()) {
+    _this->_impl_.a_endpoint_.Set(from._internal_a_endpoint(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_result()) {
-    _this->_impl_.result_.Set(from._internal_result(), 
+  if (from._internal_has_a_result()) {
+    _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.errordescription_.InitDefault();
+  _impl_.a_errordescription_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.errordescription_.Set("", GetArenaForAllocation());
+    _impl_.a_errordescription_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_errordescription()) {
-    _this->_impl_.errordescription_.Set(from._internal_errordescription(), 
+  if (from._internal_has_a_errordescription()) {
+    _this->_impl_.a_errordescription_.Set(from._internal_a_errordescription(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.pluginid_ = from._impl_.pluginid_;
+  _this->_impl_.a_pluginid_ = from._impl_.a_pluginid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.GMPLaunchResult)
 }
 
@@ -158,37 +158,37 @@ inline void GMPLaunchResult::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.plugintype_){}
-    , decltype(_impl_.pid_){}
-    , decltype(_impl_.displayname_){}
-    , decltype(_impl_.endpoint_){}
-    , decltype(_impl_.result_){}
-    , decltype(_impl_.errordescription_){}
-    , decltype(_impl_.pluginid_){0u}
+    , decltype(_impl_.a_plugintype_){}
+    , decltype(_impl_.a_pid_){}
+    , decltype(_impl_.a_displayname_){}
+    , decltype(_impl_.a_endpoint_){}
+    , decltype(_impl_.a_result_){}
+    , decltype(_impl_.a_errordescription_){}
+    , decltype(_impl_.a_pluginid_){0u}
   };
-  _impl_.plugintype_.InitDefault();
+  _impl_.a_plugintype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.plugintype_.Set("", GetArenaForAllocation());
+    _impl_.a_plugintype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.pid_.InitDefault();
+  _impl_.a_pid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.pid_.Set("", GetArenaForAllocation());
+    _impl_.a_pid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.displayname_.InitDefault();
+  _impl_.a_displayname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.displayname_.Set("", GetArenaForAllocation());
+    _impl_.a_displayname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.endpoint_.InitDefault();
+  _impl_.a_endpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.endpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_endpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.result_.InitDefault();
+  _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.result_.Set("", GetArenaForAllocation());
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.errordescription_.InitDefault();
+  _impl_.a_errordescription_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.errordescription_.Set("", GetArenaForAllocation());
+    _impl_.a_errordescription_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -203,12 +203,12 @@ GMPLaunchResult::~GMPLaunchResult() {
 
 inline void GMPLaunchResult::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.plugintype_.Destroy();
-  _impl_.pid_.Destroy();
-  _impl_.displayname_.Destroy();
-  _impl_.endpoint_.Destroy();
-  _impl_.result_.Destroy();
-  _impl_.errordescription_.Destroy();
+  _impl_.a_plugintype_.Destroy();
+  _impl_.a_pid_.Destroy();
+  _impl_.a_displayname_.Destroy();
+  _impl_.a_endpoint_.Destroy();
+  _impl_.a_result_.Destroy();
+  _impl_.a_errordescription_.Destroy();
 }
 
 void GMPLaunchResult::SetCachedSize(int size) const {
@@ -224,25 +224,25 @@ void GMPLaunchResult::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.plugintype_.ClearNonDefaultToEmpty();
+      _impl_.a_plugintype_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.pid_.ClearNonDefaultToEmpty();
+      _impl_.a_pid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.displayname_.ClearNonDefaultToEmpty();
+      _impl_.a_displayname_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.endpoint_.ClearNonDefaultToEmpty();
+      _impl_.a_endpoint_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.result_.ClearNonDefaultToEmpty();
+      _impl_.a_result_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.errordescription_.ClearNonDefaultToEmpty();
+      _impl_.a_errordescription_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.pluginid_ = 0u;
+  _impl_.a_pluginid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -254,64 +254,64 @@ const char* GMPLaunchResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 pluginId = 1;
+      // required uint32 a_pluginId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_pluginid(&has_bits);
-          _impl_.pluginid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_pluginid(&has_bits);
+          _impl_.a_pluginid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes pluginType = 2;
+      // required bytes a_pluginType = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_plugintype();
+          auto str = _internal_mutable_a_plugintype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes pid = 3;
+      // required bytes a_pid = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_pid();
+          auto str = _internal_mutable_a_pid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes displayName = 4;
+      // required bytes a_displayName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_displayname();
+          auto str = _internal_mutable_a_displayname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes endpoint = 5;
+      // required bytes a_endpoint = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_endpoint();
+          auto str = _internal_mutable_a_endpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes result = 6;
+      // required bytes a_result = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_result();
+          auto str = _internal_mutable_a_result();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes errorDescription = 7;
+      // required bytes a_errorDescription = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_errordescription();
+          auto str = _internal_mutable_a_errordescription();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -348,46 +348,46 @@ uint8_t* GMPLaunchResult::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 pluginId = 1;
+  // required uint32 a_pluginId = 1;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_pluginid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_pluginid(), target);
   }
 
-  // required bytes pluginType = 2;
+  // required bytes a_pluginType = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_plugintype(), target);
+        2, this->_internal_a_plugintype(), target);
   }
 
-  // required bytes pid = 3;
+  // required bytes a_pid = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_pid(), target);
+        3, this->_internal_a_pid(), target);
   }
 
-  // required bytes displayName = 4;
+  // required bytes a_displayName = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_displayname(), target);
+        4, this->_internal_a_displayname(), target);
   }
 
-  // required bytes endpoint = 5;
+  // required bytes a_endpoint = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_endpoint(), target);
+        5, this->_internal_a_endpoint(), target);
   }
 
-  // required bytes result = 6;
+  // required bytes a_result = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_result(), target);
+        6, this->_internal_a_result(), target);
   }
 
-  // required bytes errorDescription = 7;
+  // required bytes a_errorDescription = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_errordescription(), target);
+        7, this->_internal_a_errordescription(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -402,51 +402,51 @@ size_t GMPLaunchResult::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.GMPLaunchResult)
   size_t total_size = 0;
 
-  if (_internal_has_plugintype()) {
-    // required bytes pluginType = 2;
+  if (_internal_has_a_plugintype()) {
+    // required bytes a_pluginType = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_plugintype());
+        this->_internal_a_plugintype());
   }
 
-  if (_internal_has_pid()) {
-    // required bytes pid = 3;
+  if (_internal_has_a_pid()) {
+    // required bytes a_pid = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_pid());
+        this->_internal_a_pid());
   }
 
-  if (_internal_has_displayname()) {
-    // required bytes displayName = 4;
+  if (_internal_has_a_displayname()) {
+    // required bytes a_displayName = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_displayname());
+        this->_internal_a_displayname());
   }
 
-  if (_internal_has_endpoint()) {
-    // required bytes endpoint = 5;
+  if (_internal_has_a_endpoint()) {
+    // required bytes a_endpoint = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_endpoint());
+        this->_internal_a_endpoint());
   }
 
-  if (_internal_has_result()) {
-    // required bytes result = 6;
+  if (_internal_has_a_result()) {
+    // required bytes a_result = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
   }
 
-  if (_internal_has_errordescription()) {
-    // required bytes errorDescription = 7;
+  if (_internal_has_a_errordescription()) {
+    // required bytes a_errorDescription = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_errordescription());
+        this->_internal_a_errordescription());
   }
 
-  if (_internal_has_pluginid()) {
-    // required uint32 pluginId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_pluginid());
+  if (_internal_has_a_pluginid()) {
+    // required uint32 a_pluginId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_pluginid());
   }
 
   return total_size;
@@ -456,38 +456,38 @@ size_t GMPLaunchResult::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes pluginType = 2;
+    // required bytes a_pluginType = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_plugintype());
+        this->_internal_a_plugintype());
 
-    // required bytes pid = 3;
+    // required bytes a_pid = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_pid());
+        this->_internal_a_pid());
 
-    // required bytes displayName = 4;
+    // required bytes a_displayName = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_displayname());
+        this->_internal_a_displayname());
 
-    // required bytes endpoint = 5;
+    // required bytes a_endpoint = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_endpoint());
+        this->_internal_a_endpoint());
 
-    // required bytes result = 6;
+    // required bytes a_result = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_result());
+        this->_internal_a_result());
 
-    // required bytes errorDescription = 7;
+    // required bytes a_errorDescription = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_errordescription());
+        this->_internal_a_errordescription());
 
-    // required uint32 pluginId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_pluginid());
+    // required uint32 a_pluginId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_pluginid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -520,25 +520,25 @@ void GMPLaunchResult::MergeFrom(const GMPLaunchResult& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_plugintype(from._internal_plugintype());
+      _this->_internal_set_a_plugintype(from._internal_a_plugintype());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_pid(from._internal_pid());
+      _this->_internal_set_a_pid(from._internal_a_pid());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_displayname(from._internal_displayname());
+      _this->_internal_set_a_displayname(from._internal_a_displayname());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_endpoint(from._internal_endpoint());
+      _this->_internal_set_a_endpoint(from._internal_a_endpoint());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_result(from._internal_result());
+      _this->_internal_set_a_result(from._internal_a_result());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_errordescription(from._internal_errordescription());
+      _this->_internal_set_a_errordescription(from._internal_a_errordescription());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.pluginid_ = from._impl_.pluginid_;
+      _this->_impl_.a_pluginid_ = from._impl_.a_pluginid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -564,30 +564,30 @@ void GMPLaunchResult::InternalSwap(GMPLaunchResult* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.plugintype_, lhs_arena,
-      &other->_impl_.plugintype_, rhs_arena
+      &_impl_.a_plugintype_, lhs_arena,
+      &other->_impl_.a_plugintype_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.pid_, lhs_arena,
-      &other->_impl_.pid_, rhs_arena
+      &_impl_.a_pid_, lhs_arena,
+      &other->_impl_.a_pid_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.displayname_, lhs_arena,
-      &other->_impl_.displayname_, rhs_arena
+      &_impl_.a_displayname_, lhs_arena,
+      &other->_impl_.a_displayname_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.endpoint_, lhs_arena,
-      &other->_impl_.endpoint_, rhs_arena
+      &_impl_.a_endpoint_, lhs_arena,
+      &other->_impl_.a_endpoint_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.result_, lhs_arena,
-      &other->_impl_.result_, rhs_arena
+      &_impl_.a_result_, lhs_arena,
+      &other->_impl_.a_result_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.errordescription_, lhs_arena,
-      &other->_impl_.errordescription_, rhs_arena
+      &_impl_.a_errordescription_, lhs_arena,
+      &other->_impl_.a_errordescription_, rhs_arena
   );
-  swap(_impl_.pluginid_, other->_impl_.pluginid_);
+  swap(_impl_.a_pluginid_, other->_impl_.a_pluginid_);
 }
 
 std::string GMPLaunchResult::GetTypeName() const {

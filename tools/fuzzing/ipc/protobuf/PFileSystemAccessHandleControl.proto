@@ -17,7 +17,7 @@ message Msg_Close {
 }
 
 message Reply_Close {
-  required bytes ok = 1;
+  required bytes a_ok = 1;
 }
 
 // Parameter mappings stats:

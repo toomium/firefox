@@ -1716,19 +1716,19 @@ class Reply_CheckChild final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kReplyFieldNumber = 1,
+    kAReplyFieldNumber = 1,
   };
-  // required uint32 reply = 1;
-  bool has_reply() const;
+  // required uint32 a_reply = 1;
+  bool has_a_reply() const;
   private:
-  bool _internal_has_reply() const;
+  bool _internal_has_a_reply() const;
   public:
-  void clear_reply();
-  uint32_t reply() const;
-  void set_reply(uint32_t value);
+  void clear_a_reply();
+  uint32_t a_reply() const;
+  void set_a_reply(uint32_t value);
   private:
-  uint32_t _internal_reply() const;
-  void _internal_set_reply(uint32_t value);
+  uint32_t _internal_a_reply() const;
+  void _internal_set_a_reply(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
@@ -1741,7 +1741,7 @@ class Reply_CheckChild final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t reply_;
+    uint32_t a_reply_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestCancel_2eproto;
@@ -1982,19 +1982,19 @@ class Reply_CheckParent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kReplyFieldNumber = 1,
+    kAReplyFieldNumber = 1,
   };
-  // required uint32 reply = 1;
-  bool has_reply() const;
+  // required uint32 a_reply = 1;
+  bool has_a_reply() const;
   private:
-  bool _internal_has_reply() const;
+  bool _internal_has_a_reply() const;
   public:
-  void clear_reply();
-  uint32_t reply() const;
-  void set_reply(uint32_t value);
+  void clear_a_reply();
+  uint32_t a_reply() const;
+  void set_a_reply(uint32_t value);
   private:
-  uint32_t _internal_reply() const;
-  void _internal_set_reply(uint32_t value);
+  uint32_t _internal_a_reply() const;
+  void _internal_set_a_reply(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
@@ -2007,7 +2007,7 @@ class Reply_CheckParent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t reply_;
+    uint32_t a_reply_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestCancel_2eproto;
@@ -2071,32 +2071,32 @@ class Reply_CheckParent final :
 
 // Reply_CheckChild
 
-// required uint32 reply = 1;
-inline bool Reply_CheckChild::_internal_has_reply() const {
+// required uint32 a_reply = 1;
+inline bool Reply_CheckChild::_internal_has_a_reply() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_CheckChild::has_reply() const {
-  return _internal_has_reply();
+inline bool Reply_CheckChild::has_a_reply() const {
+  return _internal_has_a_reply();
 }
-inline void Reply_CheckChild::clear_reply() {
-  _impl_.reply_ = 0u;
+inline void Reply_CheckChild::clear_a_reply() {
+  _impl_.a_reply_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_CheckChild::_internal_reply() const {
-  return _impl_.reply_;
+inline uint32_t Reply_CheckChild::_internal_a_reply() const {
+  return _impl_.a_reply_;
 }
-inline uint32_t Reply_CheckChild::reply() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild.reply)
-  return _internal_reply();
+inline uint32_t Reply_CheckChild::a_reply() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild.a_reply)
+  return _internal_a_reply();
 }
-inline void Reply_CheckChild::_internal_set_reply(uint32_t value) {
+inline void Reply_CheckChild::_internal_set_a_reply(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.reply_ = value;
+  _impl_.a_reply_ = value;
 }
-inline void Reply_CheckChild::set_reply(uint32_t value) {
-  _internal_set_reply(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild.reply)
+inline void Reply_CheckChild::set_a_reply(uint32_t value) {
+  _internal_set_a_reply(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild.a_reply)
 }
 
 // -------------------------------------------------------------------
@@ -2107,32 +2107,32 @@ inline void Reply_CheckChild::set_reply(uint32_t value) {
 
 // Reply_CheckParent
 
-// required uint32 reply = 1;
-inline bool Reply_CheckParent::_internal_has_reply() const {
+// required uint32 a_reply = 1;
+inline bool Reply_CheckParent::_internal_has_a_reply() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_CheckParent::has_reply() const {
-  return _internal_has_reply();
+inline bool Reply_CheckParent::has_a_reply() const {
+  return _internal_has_a_reply();
 }
-inline void Reply_CheckParent::clear_reply() {
-  _impl_.reply_ = 0u;
+inline void Reply_CheckParent::clear_a_reply() {
+  _impl_.a_reply_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Reply_CheckParent::_internal_reply() const {
-  return _impl_.reply_;
+inline uint32_t Reply_CheckParent::_internal_a_reply() const {
+  return _impl_.a_reply_;
 }
-inline uint32_t Reply_CheckParent::reply() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent.reply)
-  return _internal_reply();
+inline uint32_t Reply_CheckParent::a_reply() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent.a_reply)
+  return _internal_a_reply();
 }
-inline void Reply_CheckParent::_internal_set_reply(uint32_t value) {
+inline void Reply_CheckParent::_internal_set_a_reply(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.reply_ = value;
+  _impl_.a_reply_ = value;
 }
-inline void Reply_CheckParent::set_reply(uint32_t value) {
-  _internal_set_reply(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent.reply)
+inline void Reply_CheckParent::set_a_reply(uint32_t value) {
+  _internal_set_a_reply(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent.a_reply)
 }
 
 #ifdef __GNUC__

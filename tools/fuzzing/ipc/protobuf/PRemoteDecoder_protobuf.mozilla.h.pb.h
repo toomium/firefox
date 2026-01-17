@@ -112,8 +112,8 @@ class DecodedOutputIPDL final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVArrayOfRemoteAudioData = 1,
-    kMVArrayOfRemoteVideoData = 2,
+    kAMVArrayOfRemoteAudioData = 1,
+    kAMVArrayOfRemoteVideoData = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -186,43 +186,43 @@ class DecodedOutputIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfRemoteAudioDataFieldNumber = 1,
-    kMVArrayOfRemoteVideoDataFieldNumber = 2,
+    kAMVArrayOfRemoteAudioDataFieldNumber = 1,
+    kAMVArrayOfRemoteVideoDataFieldNumber = 2,
   };
-  // bytes mVArrayOfRemoteAudioData = 1;
-  bool has_mvarrayofremoteaudiodata() const;
+  // bytes a_mVArrayOfRemoteAudioData = 1;
+  bool has_a_mvarrayofremoteaudiodata() const;
   private:
-  bool _internal_has_mvarrayofremoteaudiodata() const;
+  bool _internal_has_a_mvarrayofremoteaudiodata() const;
   public:
-  void clear_mvarrayofremoteaudiodata();
-  const std::string& mvarrayofremoteaudiodata() const;
+  void clear_a_mvarrayofremoteaudiodata();
+  const std::string& a_mvarrayofremoteaudiodata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvarrayofremoteaudiodata(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvarrayofremoteaudiodata();
-  PROTOBUF_NODISCARD std::string* release_mvarrayofremoteaudiodata();
-  void set_allocated_mvarrayofremoteaudiodata(std::string* mvarrayofremoteaudiodata);
+  void set_a_mvarrayofremoteaudiodata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvarrayofremoteaudiodata();
+  PROTOBUF_NODISCARD std::string* release_a_mvarrayofremoteaudiodata();
+  void set_allocated_a_mvarrayofremoteaudiodata(std::string* a_mvarrayofremoteaudiodata);
   private:
-  const std::string& _internal_mvarrayofremoteaudiodata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvarrayofremoteaudiodata(const std::string& value);
-  std::string* _internal_mutable_mvarrayofremoteaudiodata();
+  const std::string& _internal_a_mvarrayofremoteaudiodata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvarrayofremoteaudiodata(const std::string& value);
+  std::string* _internal_mutable_a_mvarrayofremoteaudiodata();
   public:
 
-  // bytes mVArrayOfRemoteVideoData = 2;
-  bool has_mvarrayofremotevideodata() const;
+  // bytes a_mVArrayOfRemoteVideoData = 2;
+  bool has_a_mvarrayofremotevideodata() const;
   private:
-  bool _internal_has_mvarrayofremotevideodata() const;
+  bool _internal_has_a_mvarrayofremotevideodata() const;
   public:
-  void clear_mvarrayofremotevideodata();
-  const std::string& mvarrayofremotevideodata() const;
+  void clear_a_mvarrayofremotevideodata();
+  const std::string& a_mvarrayofremotevideodata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvarrayofremotevideodata(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvarrayofremotevideodata();
-  PROTOBUF_NODISCARD std::string* release_mvarrayofremotevideodata();
-  void set_allocated_mvarrayofremotevideodata(std::string* mvarrayofremotevideodata);
+  void set_a_mvarrayofremotevideodata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvarrayofremotevideodata();
+  PROTOBUF_NODISCARD std::string* release_a_mvarrayofremotevideodata();
+  void set_allocated_a_mvarrayofremotevideodata(std::string* a_mvarrayofremotevideodata);
   private:
-  const std::string& _internal_mvarrayofremotevideodata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvarrayofremotevideodata(const std::string& value);
-  std::string* _internal_mutable_mvarrayofremotevideodata();
+  const std::string& _internal_a_mvarrayofremotevideodata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvarrayofremotevideodata(const std::string& value);
+  std::string* _internal_mutable_a_mvarrayofremotevideodata();
   public:
 
   void clear_content();
@@ -230,8 +230,8 @@ class DecodedOutputIPDL final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.DecodedOutputIPDL)
  private:
   class _Internal;
-  void set_has_mvarrayofremoteaudiodata();
-  void set_has_mvarrayofremotevideodata();
+  void set_has_a_mvarrayofremoteaudiodata();
+  void set_has_a_mvarrayofremotevideodata();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -243,8 +243,8 @@ class DecodedOutputIPDL final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvarrayofremoteaudiodata_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvarrayofremotevideodata_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvarrayofremoteaudiodata_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvarrayofremotevideodata_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -365,147 +365,147 @@ class InitCompletionIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTypeFieldNumber = 1,
-    kDecoderDescriptionFieldNumber = 2,
-    kDecoderProcessNameFieldNumber = 3,
-    kDecoderCodecNameFieldNumber = 4,
-    kHardwareReasonFieldNumber = 6,
-    kConversionFieldNumber = 7,
-    kHardwareFieldNumber = 5,
-    kShouldDecoderAlwaysBeRecycledFieldNumber = 8,
+    kATypeFieldNumber = 1,
+    kADecoderDescriptionFieldNumber = 2,
+    kADecoderProcessNameFieldNumber = 3,
+    kADecoderCodecNameFieldNumber = 4,
+    kAHardwareReasonFieldNumber = 6,
+    kAConversionFieldNumber = 7,
+    kAHardwareFieldNumber = 5,
+    kAShouldDecoderAlwaysBeRecycledFieldNumber = 8,
   };
-  // required bytes type = 1;
-  bool has_type() const;
+  // required bytes a_type = 1;
+  bool has_a_type() const;
   private:
-  bool _internal_has_type() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_type();
-  const std::string& type() const;
+  void clear_a_type();
+  const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_type(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_type();
-  PROTOBUF_NODISCARD std::string* release_type();
-  void set_allocated_type(std::string* type);
+  void set_a_type(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_type();
+  PROTOBUF_NODISCARD std::string* release_a_type();
+  void set_allocated_a_type(std::string* a_type);
   private:
-  const std::string& _internal_type() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_type(const std::string& value);
-  std::string* _internal_mutable_type();
+  const std::string& _internal_a_type() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_type(const std::string& value);
+  std::string* _internal_mutable_a_type();
   public:
 
-  // required bytes decoderDescription = 2;
-  bool has_decoderdescription() const;
+  // required bytes a_decoderDescription = 2;
+  bool has_a_decoderdescription() const;
   private:
-  bool _internal_has_decoderdescription() const;
+  bool _internal_has_a_decoderdescription() const;
   public:
-  void clear_decoderdescription();
-  const std::string& decoderdescription() const;
+  void clear_a_decoderdescription();
+  const std::string& a_decoderdescription() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_decoderdescription(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_decoderdescription();
-  PROTOBUF_NODISCARD std::string* release_decoderdescription();
-  void set_allocated_decoderdescription(std::string* decoderdescription);
+  void set_a_decoderdescription(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_decoderdescription();
+  PROTOBUF_NODISCARD std::string* release_a_decoderdescription();
+  void set_allocated_a_decoderdescription(std::string* a_decoderdescription);
   private:
-  const std::string& _internal_decoderdescription() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_decoderdescription(const std::string& value);
-  std::string* _internal_mutable_decoderdescription();
+  const std::string& _internal_a_decoderdescription() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_decoderdescription(const std::string& value);
+  std::string* _internal_mutable_a_decoderdescription();
   public:
 
-  // required bytes decoderProcessName = 3;
-  bool has_decoderprocessname() const;
+  // required bytes a_decoderProcessName = 3;
+  bool has_a_decoderprocessname() const;
   private:
-  bool _internal_has_decoderprocessname() const;
+  bool _internal_has_a_decoderprocessname() const;
   public:
-  void clear_decoderprocessname();
-  const std::string& decoderprocessname() const;
+  void clear_a_decoderprocessname();
+  const std::string& a_decoderprocessname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_decoderprocessname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_decoderprocessname();
-  PROTOBUF_NODISCARD std::string* release_decoderprocessname();
-  void set_allocated_decoderprocessname(std::string* decoderprocessname);
+  void set_a_decoderprocessname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_decoderprocessname();
+  PROTOBUF_NODISCARD std::string* release_a_decoderprocessname();
+  void set_allocated_a_decoderprocessname(std::string* a_decoderprocessname);
   private:
-  const std::string& _internal_decoderprocessname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_decoderprocessname(const std::string& value);
-  std::string* _internal_mutable_decoderprocessname();
+  const std::string& _internal_a_decoderprocessname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_decoderprocessname(const std::string& value);
+  std::string* _internal_mutable_a_decoderprocessname();
   public:
 
-  // required bytes decoderCodecName = 4;
-  bool has_decodercodecname() const;
+  // required bytes a_decoderCodecName = 4;
+  bool has_a_decodercodecname() const;
   private:
-  bool _internal_has_decodercodecname() const;
+  bool _internal_has_a_decodercodecname() const;
   public:
-  void clear_decodercodecname();
-  const std::string& decodercodecname() const;
+  void clear_a_decodercodecname();
+  const std::string& a_decodercodecname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_decodercodecname(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_decodercodecname();
-  PROTOBUF_NODISCARD std::string* release_decodercodecname();
-  void set_allocated_decodercodecname(std::string* decodercodecname);
+  void set_a_decodercodecname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_decodercodecname();
+  PROTOBUF_NODISCARD std::string* release_a_decodercodecname();
+  void set_allocated_a_decodercodecname(std::string* a_decodercodecname);
   private:
-  const std::string& _internal_decodercodecname() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_decodercodecname(const std::string& value);
-  std::string* _internal_mutable_decodercodecname();
+  const std::string& _internal_a_decodercodecname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_decodercodecname(const std::string& value);
+  std::string* _internal_mutable_a_decodercodecname();
   public:
 
-  // required bytes hardwareReason = 6;
-  bool has_hardwarereason() const;
+  // required bytes a_hardwareReason = 6;
+  bool has_a_hardwarereason() const;
   private:
-  bool _internal_has_hardwarereason() const;
+  bool _internal_has_a_hardwarereason() const;
   public:
-  void clear_hardwarereason();
-  const std::string& hardwarereason() const;
+  void clear_a_hardwarereason();
+  const std::string& a_hardwarereason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_hardwarereason(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_hardwarereason();
-  PROTOBUF_NODISCARD std::string* release_hardwarereason();
-  void set_allocated_hardwarereason(std::string* hardwarereason);
+  void set_a_hardwarereason(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_hardwarereason();
+  PROTOBUF_NODISCARD std::string* release_a_hardwarereason();
+  void set_allocated_a_hardwarereason(std::string* a_hardwarereason);
   private:
-  const std::string& _internal_hardwarereason() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_hardwarereason(const std::string& value);
-  std::string* _internal_mutable_hardwarereason();
+  const std::string& _internal_a_hardwarereason() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_hardwarereason(const std::string& value);
+  std::string* _internal_mutable_a_hardwarereason();
   public:
 
-  // required bytes conversion = 7;
-  bool has_conversion() const;
+  // required bytes a_conversion = 7;
+  bool has_a_conversion() const;
   private:
-  bool _internal_has_conversion() const;
+  bool _internal_has_a_conversion() const;
   public:
-  void clear_conversion();
-  const std::string& conversion() const;
+  void clear_a_conversion();
+  const std::string& a_conversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_conversion(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_conversion();
-  PROTOBUF_NODISCARD std::string* release_conversion();
-  void set_allocated_conversion(std::string* conversion);
+  void set_a_conversion(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_conversion();
+  PROTOBUF_NODISCARD std::string* release_a_conversion();
+  void set_allocated_a_conversion(std::string* a_conversion);
   private:
-  const std::string& _internal_conversion() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_conversion(const std::string& value);
-  std::string* _internal_mutable_conversion();
+  const std::string& _internal_a_conversion() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_conversion(const std::string& value);
+  std::string* _internal_mutable_a_conversion();
   public:
 
-  // required bool hardware = 5;
-  bool has_hardware() const;
+  // required bool a_hardware = 5;
+  bool has_a_hardware() const;
   private:
-  bool _internal_has_hardware() const;
+  bool _internal_has_a_hardware() const;
   public:
-  void clear_hardware();
-  bool hardware() const;
-  void set_hardware(bool value);
+  void clear_a_hardware();
+  bool a_hardware() const;
+  void set_a_hardware(bool value);
   private:
-  bool _internal_hardware() const;
-  void _internal_set_hardware(bool value);
+  bool _internal_a_hardware() const;
+  void _internal_set_a_hardware(bool value);
   public:
 
-  // required bool shouldDecoderAlwaysBeRecycled = 8;
-  bool has_shoulddecoderalwaysberecycled() const;
+  // required bool a_shouldDecoderAlwaysBeRecycled = 8;
+  bool has_a_shoulddecoderalwaysberecycled() const;
   private:
-  bool _internal_has_shoulddecoderalwaysberecycled() const;
+  bool _internal_has_a_shoulddecoderalwaysberecycled() const;
   public:
-  void clear_shoulddecoderalwaysberecycled();
-  bool shoulddecoderalwaysberecycled() const;
-  void set_shoulddecoderalwaysberecycled(bool value);
+  void clear_a_shoulddecoderalwaysberecycled();
+  bool a_shoulddecoderalwaysberecycled() const;
+  void set_a_shoulddecoderalwaysberecycled(bool value);
   private:
-  bool _internal_shoulddecoderalwaysberecycled() const;
-  void _internal_set_shoulddecoderalwaysberecycled(bool value);
+  bool _internal_a_shoulddecoderalwaysberecycled() const;
+  void _internal_set_a_shoulddecoderalwaysberecycled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.InitCompletionIPDL)
@@ -521,14 +521,14 @@ class InitCompletionIPDL final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr type_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr decoderdescription_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr decoderprocessname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr decodercodecname_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hardwarereason_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr conversion_;
-    bool hardware_;
-    bool shoulddecoderalwaysberecycled_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_decoderdescription_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_decoderprocessname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_decodercodecname_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hardwarereason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_conversion_;
+    bool a_hardware_;
+    bool a_shoulddecoderalwaysberecycled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteDecoder_5fprotobuf_2emozilla_2eh_2eproto;
@@ -577,8 +577,8 @@ class InitResultIPDL final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVMediaResult = 1,
-    kMVInitCompletionIPDL = 2,
+    kAMVMediaResult = 1,
+    kAMVInitCompletionIPDL = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -651,52 +651,52 @@ class InitResultIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVMediaResultFieldNumber = 1,
-    kMVInitCompletionIPDLFieldNumber = 2,
+    kAMVMediaResultFieldNumber = 1,
+    kAMVInitCompletionIPDLFieldNumber = 2,
   };
-  // bytes mVMediaResult = 1;
-  bool has_mvmediaresult() const;
+  // bytes a_mVMediaResult = 1;
+  bool has_a_mvmediaresult() const;
   private:
-  bool _internal_has_mvmediaresult() const;
+  bool _internal_has_a_mvmediaresult() const;
   public:
-  void clear_mvmediaresult();
-  const std::string& mvmediaresult() const;
+  void clear_a_mvmediaresult();
+  const std::string& a_mvmediaresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvmediaresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvmediaresult();
-  PROTOBUF_NODISCARD std::string* release_mvmediaresult();
-  void set_allocated_mvmediaresult(std::string* mvmediaresult);
+  void set_a_mvmediaresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvmediaresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvmediaresult();
+  void set_allocated_a_mvmediaresult(std::string* a_mvmediaresult);
   private:
-  const std::string& _internal_mvmediaresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvmediaresult(const std::string& value);
-  std::string* _internal_mutable_mvmediaresult();
+  const std::string& _internal_a_mvmediaresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvmediaresult(const std::string& value);
+  std::string* _internal_mutable_a_mvmediaresult();
   public:
 
-  // .protobuf.mozilla.InitCompletionIPDL mVInitCompletionIPDL = 2;
-  bool has_mvinitcompletionipdl() const;
+  // .protobuf.mozilla.InitCompletionIPDL a_mVInitCompletionIPDL = 2;
+  bool has_a_mvinitcompletionipdl() const;
   private:
-  bool _internal_has_mvinitcompletionipdl() const;
+  bool _internal_has_a_mvinitcompletionipdl() const;
   public:
-  void clear_mvinitcompletionipdl();
-  const ::protobuf::mozilla::InitCompletionIPDL& mvinitcompletionipdl() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::InitCompletionIPDL* release_mvinitcompletionipdl();
-  ::protobuf::mozilla::InitCompletionIPDL* mutable_mvinitcompletionipdl();
-  void set_allocated_mvinitcompletionipdl(::protobuf::mozilla::InitCompletionIPDL* mvinitcompletionipdl);
+  void clear_a_mvinitcompletionipdl();
+  const ::protobuf::mozilla::InitCompletionIPDL& a_mvinitcompletionipdl() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::InitCompletionIPDL* release_a_mvinitcompletionipdl();
+  ::protobuf::mozilla::InitCompletionIPDL* mutable_a_mvinitcompletionipdl();
+  void set_allocated_a_mvinitcompletionipdl(::protobuf::mozilla::InitCompletionIPDL* a_mvinitcompletionipdl);
   private:
-  const ::protobuf::mozilla::InitCompletionIPDL& _internal_mvinitcompletionipdl() const;
-  ::protobuf::mozilla::InitCompletionIPDL* _internal_mutable_mvinitcompletionipdl();
+  const ::protobuf::mozilla::InitCompletionIPDL& _internal_a_mvinitcompletionipdl() const;
+  ::protobuf::mozilla::InitCompletionIPDL* _internal_mutable_a_mvinitcompletionipdl();
   public:
-  void unsafe_arena_set_allocated_mvinitcompletionipdl(
-      ::protobuf::mozilla::InitCompletionIPDL* mvinitcompletionipdl);
-  ::protobuf::mozilla::InitCompletionIPDL* unsafe_arena_release_mvinitcompletionipdl();
+  void unsafe_arena_set_allocated_a_mvinitcompletionipdl(
+      ::protobuf::mozilla::InitCompletionIPDL* a_mvinitcompletionipdl);
+  ::protobuf::mozilla::InitCompletionIPDL* unsafe_arena_release_a_mvinitcompletionipdl();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.InitResultIPDL)
  private:
   class _Internal;
-  void set_has_mvmediaresult();
-  void set_has_mvinitcompletionipdl();
+  void set_has_a_mvmediaresult();
+  void set_has_a_mvinitcompletionipdl();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -708,8 +708,8 @@ class InitResultIPDL final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvmediaresult_;
-      ::protobuf::mozilla::InitCompletionIPDL* mvinitcompletionipdl_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvmediaresult_;
+      ::protobuf::mozilla::InitCompletionIPDL* a_mvinitcompletionipdl_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -762,8 +762,8 @@ class DecodeResultIPDL final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVMediaResult = 1,
-    kMVDecodedOutputIPDL = 2,
+    kAMVMediaResult = 1,
+    kAMVDecodedOutputIPDL = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -836,52 +836,52 @@ class DecodeResultIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVMediaResultFieldNumber = 1,
-    kMVDecodedOutputIPDLFieldNumber = 2,
+    kAMVMediaResultFieldNumber = 1,
+    kAMVDecodedOutputIPDLFieldNumber = 2,
   };
-  // bytes mVMediaResult = 1;
-  bool has_mvmediaresult() const;
+  // bytes a_mVMediaResult = 1;
+  bool has_a_mvmediaresult() const;
   private:
-  bool _internal_has_mvmediaresult() const;
+  bool _internal_has_a_mvmediaresult() const;
   public:
-  void clear_mvmediaresult();
-  const std::string& mvmediaresult() const;
+  void clear_a_mvmediaresult();
+  const std::string& a_mvmediaresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvmediaresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvmediaresult();
-  PROTOBUF_NODISCARD std::string* release_mvmediaresult();
-  void set_allocated_mvmediaresult(std::string* mvmediaresult);
+  void set_a_mvmediaresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvmediaresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvmediaresult();
+  void set_allocated_a_mvmediaresult(std::string* a_mvmediaresult);
   private:
-  const std::string& _internal_mvmediaresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvmediaresult(const std::string& value);
-  std::string* _internal_mutable_mvmediaresult();
+  const std::string& _internal_a_mvmediaresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvmediaresult(const std::string& value);
+  std::string* _internal_mutable_a_mvmediaresult();
   public:
 
-  // .protobuf.mozilla.DecodedOutputIPDL mVDecodedOutputIPDL = 2;
-  bool has_mvdecodedoutputipdl() const;
+  // .protobuf.mozilla.DecodedOutputIPDL a_mVDecodedOutputIPDL = 2;
+  bool has_a_mvdecodedoutputipdl() const;
   private:
-  bool _internal_has_mvdecodedoutputipdl() const;
+  bool _internal_has_a_mvdecodedoutputipdl() const;
   public:
-  void clear_mvdecodedoutputipdl();
-  const ::protobuf::mozilla::DecodedOutputIPDL& mvdecodedoutputipdl() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::DecodedOutputIPDL* release_mvdecodedoutputipdl();
-  ::protobuf::mozilla::DecodedOutputIPDL* mutable_mvdecodedoutputipdl();
-  void set_allocated_mvdecodedoutputipdl(::protobuf::mozilla::DecodedOutputIPDL* mvdecodedoutputipdl);
+  void clear_a_mvdecodedoutputipdl();
+  const ::protobuf::mozilla::DecodedOutputIPDL& a_mvdecodedoutputipdl() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::DecodedOutputIPDL* release_a_mvdecodedoutputipdl();
+  ::protobuf::mozilla::DecodedOutputIPDL* mutable_a_mvdecodedoutputipdl();
+  void set_allocated_a_mvdecodedoutputipdl(::protobuf::mozilla::DecodedOutputIPDL* a_mvdecodedoutputipdl);
   private:
-  const ::protobuf::mozilla::DecodedOutputIPDL& _internal_mvdecodedoutputipdl() const;
-  ::protobuf::mozilla::DecodedOutputIPDL* _internal_mutable_mvdecodedoutputipdl();
+  const ::protobuf::mozilla::DecodedOutputIPDL& _internal_a_mvdecodedoutputipdl() const;
+  ::protobuf::mozilla::DecodedOutputIPDL* _internal_mutable_a_mvdecodedoutputipdl();
   public:
-  void unsafe_arena_set_allocated_mvdecodedoutputipdl(
-      ::protobuf::mozilla::DecodedOutputIPDL* mvdecodedoutputipdl);
-  ::protobuf::mozilla::DecodedOutputIPDL* unsafe_arena_release_mvdecodedoutputipdl();
+  void unsafe_arena_set_allocated_a_mvdecodedoutputipdl(
+      ::protobuf::mozilla::DecodedOutputIPDL* a_mvdecodedoutputipdl);
+  ::protobuf::mozilla::DecodedOutputIPDL* unsafe_arena_release_a_mvdecodedoutputipdl();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.DecodeResultIPDL)
  private:
   class _Internal;
-  void set_has_mvmediaresult();
-  void set_has_mvdecodedoutputipdl();
+  void set_has_a_mvmediaresult();
+  void set_has_a_mvdecodedoutputipdl();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -893,8 +893,8 @@ class DecodeResultIPDL final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvmediaresult_;
-      ::protobuf::mozilla::DecodedOutputIPDL* mvdecodedoutputipdl_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvmediaresult_;
+      ::protobuf::mozilla::DecodedOutputIPDL* a_mvdecodedoutputipdl_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -914,158 +914,158 @@ class DecodeResultIPDL final :
 #endif  // __GNUC__
 // DecodedOutputIPDL
 
-// bytes mVArrayOfRemoteAudioData = 1;
-inline bool DecodedOutputIPDL::_internal_has_mvarrayofremoteaudiodata() const {
-  return content_case() == kMVArrayOfRemoteAudioData;
+// bytes a_mVArrayOfRemoteAudioData = 1;
+inline bool DecodedOutputIPDL::_internal_has_a_mvarrayofremoteaudiodata() const {
+  return content_case() == kAMVArrayOfRemoteAudioData;
 }
-inline bool DecodedOutputIPDL::has_mvarrayofremoteaudiodata() const {
-  return _internal_has_mvarrayofremoteaudiodata();
+inline bool DecodedOutputIPDL::has_a_mvarrayofremoteaudiodata() const {
+  return _internal_has_a_mvarrayofremoteaudiodata();
 }
-inline void DecodedOutputIPDL::set_has_mvarrayofremoteaudiodata() {
-  _impl_._oneof_case_[0] = kMVArrayOfRemoteAudioData;
+inline void DecodedOutputIPDL::set_has_a_mvarrayofremoteaudiodata() {
+  _impl_._oneof_case_[0] = kAMVArrayOfRemoteAudioData;
 }
-inline void DecodedOutputIPDL::clear_mvarrayofremoteaudiodata() {
-  if (_internal_has_mvarrayofremoteaudiodata()) {
-    _impl_.content_.mvarrayofremoteaudiodata_.Destroy();
+inline void DecodedOutputIPDL::clear_a_mvarrayofremoteaudiodata() {
+  if (_internal_has_a_mvarrayofremoteaudiodata()) {
+    _impl_.content_.a_mvarrayofremoteaudiodata_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& DecodedOutputIPDL::mvarrayofremoteaudiodata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteAudioData)
-  return _internal_mvarrayofremoteaudiodata();
+inline const std::string& DecodedOutputIPDL::a_mvarrayofremoteaudiodata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteAudioData)
+  return _internal_a_mvarrayofremoteaudiodata();
 }
 template <typename ArgT0, typename... ArgT>
-inline void DecodedOutputIPDL::set_mvarrayofremoteaudiodata(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvarrayofremoteaudiodata()) {
+inline void DecodedOutputIPDL::set_a_mvarrayofremoteaudiodata(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvarrayofremoteaudiodata()) {
     clear_content();
-    set_has_mvarrayofremoteaudiodata();
-    _impl_.content_.mvarrayofremoteaudiodata_.InitDefault();
+    set_has_a_mvarrayofremoteaudiodata();
+    _impl_.content_.a_mvarrayofremoteaudiodata_.InitDefault();
   }
-  _impl_.content_.mvarrayofremoteaudiodata_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteAudioData)
+  _impl_.content_.a_mvarrayofremoteaudiodata_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteAudioData)
 }
-inline std::string* DecodedOutputIPDL::mutable_mvarrayofremoteaudiodata() {
-  std::string* _s = _internal_mutable_mvarrayofremoteaudiodata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteAudioData)
+inline std::string* DecodedOutputIPDL::mutable_a_mvarrayofremoteaudiodata() {
+  std::string* _s = _internal_mutable_a_mvarrayofremoteaudiodata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteAudioData)
   return _s;
 }
-inline const std::string& DecodedOutputIPDL::_internal_mvarrayofremoteaudiodata() const {
-  if (_internal_has_mvarrayofremoteaudiodata()) {
-    return _impl_.content_.mvarrayofremoteaudiodata_.Get();
+inline const std::string& DecodedOutputIPDL::_internal_a_mvarrayofremoteaudiodata() const {
+  if (_internal_has_a_mvarrayofremoteaudiodata()) {
+    return _impl_.content_.a_mvarrayofremoteaudiodata_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void DecodedOutputIPDL::_internal_set_mvarrayofremoteaudiodata(const std::string& value) {
-  if (!_internal_has_mvarrayofremoteaudiodata()) {
+inline void DecodedOutputIPDL::_internal_set_a_mvarrayofremoteaudiodata(const std::string& value) {
+  if (!_internal_has_a_mvarrayofremoteaudiodata()) {
     clear_content();
-    set_has_mvarrayofremoteaudiodata();
-    _impl_.content_.mvarrayofremoteaudiodata_.InitDefault();
+    set_has_a_mvarrayofremoteaudiodata();
+    _impl_.content_.a_mvarrayofremoteaudiodata_.InitDefault();
   }
-  _impl_.content_.mvarrayofremoteaudiodata_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvarrayofremoteaudiodata_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DecodedOutputIPDL::_internal_mutable_mvarrayofremoteaudiodata() {
-  if (!_internal_has_mvarrayofremoteaudiodata()) {
+inline std::string* DecodedOutputIPDL::_internal_mutable_a_mvarrayofremoteaudiodata() {
+  if (!_internal_has_a_mvarrayofremoteaudiodata()) {
     clear_content();
-    set_has_mvarrayofremoteaudiodata();
-    _impl_.content_.mvarrayofremoteaudiodata_.InitDefault();
+    set_has_a_mvarrayofremoteaudiodata();
+    _impl_.content_.a_mvarrayofremoteaudiodata_.InitDefault();
   }
-  return _impl_.content_.mvarrayofremoteaudiodata_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvarrayofremoteaudiodata_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* DecodedOutputIPDL::release_mvarrayofremoteaudiodata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteAudioData)
-  if (_internal_has_mvarrayofremoteaudiodata()) {
+inline std::string* DecodedOutputIPDL::release_a_mvarrayofremoteaudiodata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteAudioData)
+  if (_internal_has_a_mvarrayofremoteaudiodata()) {
     clear_has_content();
-    return _impl_.content_.mvarrayofremoteaudiodata_.Release();
+    return _impl_.content_.a_mvarrayofremoteaudiodata_.Release();
   } else {
     return nullptr;
   }
 }
-inline void DecodedOutputIPDL::set_allocated_mvarrayofremoteaudiodata(std::string* mvarrayofremoteaudiodata) {
+inline void DecodedOutputIPDL::set_allocated_a_mvarrayofremoteaudiodata(std::string* a_mvarrayofremoteaudiodata) {
   if (has_content()) {
     clear_content();
   }
-  if (mvarrayofremoteaudiodata != nullptr) {
-    set_has_mvarrayofremoteaudiodata();
-    _impl_.content_.mvarrayofremoteaudiodata_.InitAllocated(mvarrayofremoteaudiodata, GetArenaForAllocation());
+  if (a_mvarrayofremoteaudiodata != nullptr) {
+    set_has_a_mvarrayofremoteaudiodata();
+    _impl_.content_.a_mvarrayofremoteaudiodata_.InitAllocated(a_mvarrayofremoteaudiodata, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteAudioData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteAudioData)
 }
 
-// bytes mVArrayOfRemoteVideoData = 2;
-inline bool DecodedOutputIPDL::_internal_has_mvarrayofremotevideodata() const {
-  return content_case() == kMVArrayOfRemoteVideoData;
+// bytes a_mVArrayOfRemoteVideoData = 2;
+inline bool DecodedOutputIPDL::_internal_has_a_mvarrayofremotevideodata() const {
+  return content_case() == kAMVArrayOfRemoteVideoData;
 }
-inline bool DecodedOutputIPDL::has_mvarrayofremotevideodata() const {
-  return _internal_has_mvarrayofremotevideodata();
+inline bool DecodedOutputIPDL::has_a_mvarrayofremotevideodata() const {
+  return _internal_has_a_mvarrayofremotevideodata();
 }
-inline void DecodedOutputIPDL::set_has_mvarrayofremotevideodata() {
-  _impl_._oneof_case_[0] = kMVArrayOfRemoteVideoData;
+inline void DecodedOutputIPDL::set_has_a_mvarrayofremotevideodata() {
+  _impl_._oneof_case_[0] = kAMVArrayOfRemoteVideoData;
 }
-inline void DecodedOutputIPDL::clear_mvarrayofremotevideodata() {
-  if (_internal_has_mvarrayofremotevideodata()) {
-    _impl_.content_.mvarrayofremotevideodata_.Destroy();
+inline void DecodedOutputIPDL::clear_a_mvarrayofremotevideodata() {
+  if (_internal_has_a_mvarrayofremotevideodata()) {
+    _impl_.content_.a_mvarrayofremotevideodata_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& DecodedOutputIPDL::mvarrayofremotevideodata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteVideoData)
-  return _internal_mvarrayofremotevideodata();
+inline const std::string& DecodedOutputIPDL::a_mvarrayofremotevideodata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteVideoData)
+  return _internal_a_mvarrayofremotevideodata();
 }
 template <typename ArgT0, typename... ArgT>
-inline void DecodedOutputIPDL::set_mvarrayofremotevideodata(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvarrayofremotevideodata()) {
+inline void DecodedOutputIPDL::set_a_mvarrayofremotevideodata(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvarrayofremotevideodata()) {
     clear_content();
-    set_has_mvarrayofremotevideodata();
-    _impl_.content_.mvarrayofremotevideodata_.InitDefault();
+    set_has_a_mvarrayofremotevideodata();
+    _impl_.content_.a_mvarrayofremotevideodata_.InitDefault();
   }
-  _impl_.content_.mvarrayofremotevideodata_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteVideoData)
+  _impl_.content_.a_mvarrayofremotevideodata_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteVideoData)
 }
-inline std::string* DecodedOutputIPDL::mutable_mvarrayofremotevideodata() {
-  std::string* _s = _internal_mutable_mvarrayofremotevideodata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteVideoData)
+inline std::string* DecodedOutputIPDL::mutable_a_mvarrayofremotevideodata() {
+  std::string* _s = _internal_mutable_a_mvarrayofremotevideodata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteVideoData)
   return _s;
 }
-inline const std::string& DecodedOutputIPDL::_internal_mvarrayofremotevideodata() const {
-  if (_internal_has_mvarrayofremotevideodata()) {
-    return _impl_.content_.mvarrayofremotevideodata_.Get();
+inline const std::string& DecodedOutputIPDL::_internal_a_mvarrayofremotevideodata() const {
+  if (_internal_has_a_mvarrayofremotevideodata()) {
+    return _impl_.content_.a_mvarrayofremotevideodata_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void DecodedOutputIPDL::_internal_set_mvarrayofremotevideodata(const std::string& value) {
-  if (!_internal_has_mvarrayofremotevideodata()) {
+inline void DecodedOutputIPDL::_internal_set_a_mvarrayofremotevideodata(const std::string& value) {
+  if (!_internal_has_a_mvarrayofremotevideodata()) {
     clear_content();
-    set_has_mvarrayofremotevideodata();
-    _impl_.content_.mvarrayofremotevideodata_.InitDefault();
+    set_has_a_mvarrayofremotevideodata();
+    _impl_.content_.a_mvarrayofremotevideodata_.InitDefault();
   }
-  _impl_.content_.mvarrayofremotevideodata_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvarrayofremotevideodata_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DecodedOutputIPDL::_internal_mutable_mvarrayofremotevideodata() {
-  if (!_internal_has_mvarrayofremotevideodata()) {
+inline std::string* DecodedOutputIPDL::_internal_mutable_a_mvarrayofremotevideodata() {
+  if (!_internal_has_a_mvarrayofremotevideodata()) {
     clear_content();
-    set_has_mvarrayofremotevideodata();
-    _impl_.content_.mvarrayofremotevideodata_.InitDefault();
+    set_has_a_mvarrayofremotevideodata();
+    _impl_.content_.a_mvarrayofremotevideodata_.InitDefault();
   }
-  return _impl_.content_.mvarrayofremotevideodata_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvarrayofremotevideodata_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* DecodedOutputIPDL::release_mvarrayofremotevideodata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteVideoData)
-  if (_internal_has_mvarrayofremotevideodata()) {
+inline std::string* DecodedOutputIPDL::release_a_mvarrayofremotevideodata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteVideoData)
+  if (_internal_has_a_mvarrayofremotevideodata()) {
     clear_has_content();
-    return _impl_.content_.mvarrayofremotevideodata_.Release();
+    return _impl_.content_.a_mvarrayofremotevideodata_.Release();
   } else {
     return nullptr;
   }
 }
-inline void DecodedOutputIPDL::set_allocated_mvarrayofremotevideodata(std::string* mvarrayofremotevideodata) {
+inline void DecodedOutputIPDL::set_allocated_a_mvarrayofremotevideodata(std::string* a_mvarrayofremotevideodata) {
   if (has_content()) {
     clear_content();
   }
-  if (mvarrayofremotevideodata != nullptr) {
-    set_has_mvarrayofremotevideodata();
-    _impl_.content_.mvarrayofremotevideodata_.InitAllocated(mvarrayofremotevideodata, GetArenaForAllocation());
+  if (a_mvarrayofremotevideodata != nullptr) {
+    set_has_a_mvarrayofremotevideodata();
+    _impl_.content_.a_mvarrayofremotevideodata_.InitAllocated(a_mvarrayofremotevideodata, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodedOutputIPDL.mVArrayOfRemoteVideoData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodedOutputIPDL.a_mVArrayOfRemoteVideoData)
 }
 
 inline bool DecodedOutputIPDL::has_content() const {
@@ -1081,622 +1081,622 @@ inline DecodedOutputIPDL::ContentCase DecodedOutputIPDL::content_case() const {
 
 // InitCompletionIPDL
 
-// required bytes type = 1;
-inline bool InitCompletionIPDL::_internal_has_type() const {
+// required bytes a_type = 1;
+inline bool InitCompletionIPDL::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_type() const {
-  return _internal_has_type();
+inline bool InitCompletionIPDL::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void InitCompletionIPDL::clear_type() {
-  _impl_.type_.ClearToEmpty();
+inline void InitCompletionIPDL::clear_a_type() {
+  _impl_.a_type_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& InitCompletionIPDL::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.type)
-  return _internal_type();
+inline const std::string& InitCompletionIPDL::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_type)
+  return _internal_a_type();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void InitCompletionIPDL::set_type(ArgT0&& arg0, ArgT... args) {
+void InitCompletionIPDL::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.type)
+ _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_type)
 }
-inline std::string* InitCompletionIPDL::mutable_type() {
-  std::string* _s = _internal_mutable_type();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.type)
+inline std::string* InitCompletionIPDL::mutable_a_type() {
+  std::string* _s = _internal_mutable_a_type();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.a_type)
   return _s;
 }
-inline const std::string& InitCompletionIPDL::_internal_type() const {
-  return _impl_.type_.Get();
+inline const std::string& InitCompletionIPDL::_internal_a_type() const {
+  return _impl_.a_type_.Get();
 }
-inline void InitCompletionIPDL::_internal_set_type(const std::string& value) {
+inline void InitCompletionIPDL::_internal_set_a_type(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.type_.Set(value, GetArenaForAllocation());
+  _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::_internal_mutable_type() {
+inline std::string* InitCompletionIPDL::_internal_mutable_a_type() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.type_.Mutable(GetArenaForAllocation());
+  return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::release_type() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.type)
-  if (!_internal_has_type()) {
+inline std::string* InitCompletionIPDL::release_a_type() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_type)
+  if (!_internal_has_a_type()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.type_.Release();
+  auto* p = _impl_.a_type_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.type_.IsDefault()) {
-    _impl_.type_.Set("", GetArenaForAllocation());
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void InitCompletionIPDL::set_allocated_type(std::string* type) {
-  if (type != nullptr) {
+inline void InitCompletionIPDL::set_allocated_a_type(std::string* a_type) {
+  if (a_type != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.type_.SetAllocated(type, GetArenaForAllocation());
+  _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.type_.IsDefault()) {
-    _impl_.type_.Set("", GetArenaForAllocation());
+  if (_impl_.a_type_.IsDefault()) {
+    _impl_.a_type_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.type)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_type)
 }
 
-// required bytes decoderDescription = 2;
-inline bool InitCompletionIPDL::_internal_has_decoderdescription() const {
+// required bytes a_decoderDescription = 2;
+inline bool InitCompletionIPDL::_internal_has_a_decoderdescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_decoderdescription() const {
-  return _internal_has_decoderdescription();
+inline bool InitCompletionIPDL::has_a_decoderdescription() const {
+  return _internal_has_a_decoderdescription();
 }
-inline void InitCompletionIPDL::clear_decoderdescription() {
-  _impl_.decoderdescription_.ClearToEmpty();
+inline void InitCompletionIPDL::clear_a_decoderdescription() {
+  _impl_.a_decoderdescription_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& InitCompletionIPDL::decoderdescription() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.decoderDescription)
-  return _internal_decoderdescription();
+inline const std::string& InitCompletionIPDL::a_decoderdescription() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
+  return _internal_a_decoderdescription();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void InitCompletionIPDL::set_decoderdescription(ArgT0&& arg0, ArgT... args) {
+void InitCompletionIPDL::set_a_decoderdescription(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.decoderdescription_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.decoderDescription)
+ _impl_.a_decoderdescription_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
-inline std::string* InitCompletionIPDL::mutable_decoderdescription() {
-  std::string* _s = _internal_mutable_decoderdescription();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.decoderDescription)
+inline std::string* InitCompletionIPDL::mutable_a_decoderdescription() {
+  std::string* _s = _internal_mutable_a_decoderdescription();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
   return _s;
 }
-inline const std::string& InitCompletionIPDL::_internal_decoderdescription() const {
-  return _impl_.decoderdescription_.Get();
+inline const std::string& InitCompletionIPDL::_internal_a_decoderdescription() const {
+  return _impl_.a_decoderdescription_.Get();
 }
-inline void InitCompletionIPDL::_internal_set_decoderdescription(const std::string& value) {
+inline void InitCompletionIPDL::_internal_set_a_decoderdescription(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.decoderdescription_.Set(value, GetArenaForAllocation());
+  _impl_.a_decoderdescription_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::_internal_mutable_decoderdescription() {
+inline std::string* InitCompletionIPDL::_internal_mutable_a_decoderdescription() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.decoderdescription_.Mutable(GetArenaForAllocation());
+  return _impl_.a_decoderdescription_.Mutable(GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::release_decoderdescription() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.decoderDescription)
-  if (!_internal_has_decoderdescription()) {
+inline std::string* InitCompletionIPDL::release_a_decoderdescription() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
+  if (!_internal_has_a_decoderdescription()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.decoderdescription_.Release();
+  auto* p = _impl_.a_decoderdescription_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.decoderdescription_.IsDefault()) {
-    _impl_.decoderdescription_.Set("", GetArenaForAllocation());
+  if (_impl_.a_decoderdescription_.IsDefault()) {
+    _impl_.a_decoderdescription_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void InitCompletionIPDL::set_allocated_decoderdescription(std::string* decoderdescription) {
-  if (decoderdescription != nullptr) {
+inline void InitCompletionIPDL::set_allocated_a_decoderdescription(std::string* a_decoderdescription) {
+  if (a_decoderdescription != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.decoderdescription_.SetAllocated(decoderdescription, GetArenaForAllocation());
+  _impl_.a_decoderdescription_.SetAllocated(a_decoderdescription, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.decoderdescription_.IsDefault()) {
-    _impl_.decoderdescription_.Set("", GetArenaForAllocation());
+  if (_impl_.a_decoderdescription_.IsDefault()) {
+    _impl_.a_decoderdescription_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.decoderDescription)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
 
-// required bytes decoderProcessName = 3;
-inline bool InitCompletionIPDL::_internal_has_decoderprocessname() const {
+// required bytes a_decoderProcessName = 3;
+inline bool InitCompletionIPDL::_internal_has_a_decoderprocessname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_decoderprocessname() const {
-  return _internal_has_decoderprocessname();
+inline bool InitCompletionIPDL::has_a_decoderprocessname() const {
+  return _internal_has_a_decoderprocessname();
 }
-inline void InitCompletionIPDL::clear_decoderprocessname() {
-  _impl_.decoderprocessname_.ClearToEmpty();
+inline void InitCompletionIPDL::clear_a_decoderprocessname() {
+  _impl_.a_decoderprocessname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& InitCompletionIPDL::decoderprocessname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.decoderProcessName)
-  return _internal_decoderprocessname();
+inline const std::string& InitCompletionIPDL::a_decoderprocessname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
+  return _internal_a_decoderprocessname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void InitCompletionIPDL::set_decoderprocessname(ArgT0&& arg0, ArgT... args) {
+void InitCompletionIPDL::set_a_decoderprocessname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.decoderprocessname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.decoderProcessName)
+ _impl_.a_decoderprocessname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
-inline std::string* InitCompletionIPDL::mutable_decoderprocessname() {
-  std::string* _s = _internal_mutable_decoderprocessname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.decoderProcessName)
+inline std::string* InitCompletionIPDL::mutable_a_decoderprocessname() {
+  std::string* _s = _internal_mutable_a_decoderprocessname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
   return _s;
 }
-inline const std::string& InitCompletionIPDL::_internal_decoderprocessname() const {
-  return _impl_.decoderprocessname_.Get();
+inline const std::string& InitCompletionIPDL::_internal_a_decoderprocessname() const {
+  return _impl_.a_decoderprocessname_.Get();
 }
-inline void InitCompletionIPDL::_internal_set_decoderprocessname(const std::string& value) {
+inline void InitCompletionIPDL::_internal_set_a_decoderprocessname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.decoderprocessname_.Set(value, GetArenaForAllocation());
+  _impl_.a_decoderprocessname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::_internal_mutable_decoderprocessname() {
+inline std::string* InitCompletionIPDL::_internal_mutable_a_decoderprocessname() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.decoderprocessname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_decoderprocessname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::release_decoderprocessname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.decoderProcessName)
-  if (!_internal_has_decoderprocessname()) {
+inline std::string* InitCompletionIPDL::release_a_decoderprocessname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
+  if (!_internal_has_a_decoderprocessname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.decoderprocessname_.Release();
+  auto* p = _impl_.a_decoderprocessname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.decoderprocessname_.IsDefault()) {
-    _impl_.decoderprocessname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_decoderprocessname_.IsDefault()) {
+    _impl_.a_decoderprocessname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void InitCompletionIPDL::set_allocated_decoderprocessname(std::string* decoderprocessname) {
-  if (decoderprocessname != nullptr) {
+inline void InitCompletionIPDL::set_allocated_a_decoderprocessname(std::string* a_decoderprocessname) {
+  if (a_decoderprocessname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.decoderprocessname_.SetAllocated(decoderprocessname, GetArenaForAllocation());
+  _impl_.a_decoderprocessname_.SetAllocated(a_decoderprocessname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.decoderprocessname_.IsDefault()) {
-    _impl_.decoderprocessname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_decoderprocessname_.IsDefault()) {
+    _impl_.a_decoderprocessname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.decoderProcessName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
 
-// required bytes decoderCodecName = 4;
-inline bool InitCompletionIPDL::_internal_has_decodercodecname() const {
+// required bytes a_decoderCodecName = 4;
+inline bool InitCompletionIPDL::_internal_has_a_decodercodecname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_decodercodecname() const {
-  return _internal_has_decodercodecname();
+inline bool InitCompletionIPDL::has_a_decodercodecname() const {
+  return _internal_has_a_decodercodecname();
 }
-inline void InitCompletionIPDL::clear_decodercodecname() {
-  _impl_.decodercodecname_.ClearToEmpty();
+inline void InitCompletionIPDL::clear_a_decodercodecname() {
+  _impl_.a_decodercodecname_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& InitCompletionIPDL::decodercodecname() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.decoderCodecName)
-  return _internal_decodercodecname();
+inline const std::string& InitCompletionIPDL::a_decodercodecname() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
+  return _internal_a_decodercodecname();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void InitCompletionIPDL::set_decodercodecname(ArgT0&& arg0, ArgT... args) {
+void InitCompletionIPDL::set_a_decodercodecname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.decodercodecname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.decoderCodecName)
+ _impl_.a_decodercodecname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
 }
-inline std::string* InitCompletionIPDL::mutable_decodercodecname() {
-  std::string* _s = _internal_mutable_decodercodecname();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.decoderCodecName)
+inline std::string* InitCompletionIPDL::mutable_a_decodercodecname() {
+  std::string* _s = _internal_mutable_a_decodercodecname();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
   return _s;
 }
-inline const std::string& InitCompletionIPDL::_internal_decodercodecname() const {
-  return _impl_.decodercodecname_.Get();
+inline const std::string& InitCompletionIPDL::_internal_a_decodercodecname() const {
+  return _impl_.a_decodercodecname_.Get();
 }
-inline void InitCompletionIPDL::_internal_set_decodercodecname(const std::string& value) {
+inline void InitCompletionIPDL::_internal_set_a_decodercodecname(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.decodercodecname_.Set(value, GetArenaForAllocation());
+  _impl_.a_decodercodecname_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::_internal_mutable_decodercodecname() {
+inline std::string* InitCompletionIPDL::_internal_mutable_a_decodercodecname() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.decodercodecname_.Mutable(GetArenaForAllocation());
+  return _impl_.a_decodercodecname_.Mutable(GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::release_decodercodecname() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.decoderCodecName)
-  if (!_internal_has_decodercodecname()) {
+inline std::string* InitCompletionIPDL::release_a_decodercodecname() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
+  if (!_internal_has_a_decodercodecname()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.decodercodecname_.Release();
+  auto* p = _impl_.a_decodercodecname_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.decodercodecname_.IsDefault()) {
-    _impl_.decodercodecname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_decodercodecname_.IsDefault()) {
+    _impl_.a_decodercodecname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void InitCompletionIPDL::set_allocated_decodercodecname(std::string* decodercodecname) {
-  if (decodercodecname != nullptr) {
+inline void InitCompletionIPDL::set_allocated_a_decodercodecname(std::string* a_decodercodecname) {
+  if (a_decodercodecname != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.decodercodecname_.SetAllocated(decodercodecname, GetArenaForAllocation());
+  _impl_.a_decodercodecname_.SetAllocated(a_decodercodecname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.decodercodecname_.IsDefault()) {
-    _impl_.decodercodecname_.Set("", GetArenaForAllocation());
+  if (_impl_.a_decodercodecname_.IsDefault()) {
+    _impl_.a_decodercodecname_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.decoderCodecName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
 }
 
-// required bool hardware = 5;
-inline bool InitCompletionIPDL::_internal_has_hardware() const {
+// required bool a_hardware = 5;
+inline bool InitCompletionIPDL::_internal_has_a_hardware() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_hardware() const {
-  return _internal_has_hardware();
+inline bool InitCompletionIPDL::has_a_hardware() const {
+  return _internal_has_a_hardware();
 }
-inline void InitCompletionIPDL::clear_hardware() {
-  _impl_.hardware_ = false;
+inline void InitCompletionIPDL::clear_a_hardware() {
+  _impl_.a_hardware_ = false;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline bool InitCompletionIPDL::_internal_hardware() const {
-  return _impl_.hardware_;
+inline bool InitCompletionIPDL::_internal_a_hardware() const {
+  return _impl_.a_hardware_;
 }
-inline bool InitCompletionIPDL::hardware() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.hardware)
-  return _internal_hardware();
+inline bool InitCompletionIPDL::a_hardware() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_hardware)
+  return _internal_a_hardware();
 }
-inline void InitCompletionIPDL::_internal_set_hardware(bool value) {
+inline void InitCompletionIPDL::_internal_set_a_hardware(bool value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.hardware_ = value;
+  _impl_.a_hardware_ = value;
 }
-inline void InitCompletionIPDL::set_hardware(bool value) {
-  _internal_set_hardware(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.hardware)
+inline void InitCompletionIPDL::set_a_hardware(bool value) {
+  _internal_set_a_hardware(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardware)
 }
 
-// required bytes hardwareReason = 6;
-inline bool InitCompletionIPDL::_internal_has_hardwarereason() const {
+// required bytes a_hardwareReason = 6;
+inline bool InitCompletionIPDL::_internal_has_a_hardwarereason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_hardwarereason() const {
-  return _internal_has_hardwarereason();
+inline bool InitCompletionIPDL::has_a_hardwarereason() const {
+  return _internal_has_a_hardwarereason();
 }
-inline void InitCompletionIPDL::clear_hardwarereason() {
-  _impl_.hardwarereason_.ClearToEmpty();
+inline void InitCompletionIPDL::clear_a_hardwarereason() {
+  _impl_.a_hardwarereason_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& InitCompletionIPDL::hardwarereason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.hardwareReason)
-  return _internal_hardwarereason();
+inline const std::string& InitCompletionIPDL::a_hardwarereason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
+  return _internal_a_hardwarereason();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void InitCompletionIPDL::set_hardwarereason(ArgT0&& arg0, ArgT... args) {
+void InitCompletionIPDL::set_a_hardwarereason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.hardwarereason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.hardwareReason)
+ _impl_.a_hardwarereason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
 }
-inline std::string* InitCompletionIPDL::mutable_hardwarereason() {
-  std::string* _s = _internal_mutable_hardwarereason();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.hardwareReason)
+inline std::string* InitCompletionIPDL::mutable_a_hardwarereason() {
+  std::string* _s = _internal_mutable_a_hardwarereason();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
   return _s;
 }
-inline const std::string& InitCompletionIPDL::_internal_hardwarereason() const {
-  return _impl_.hardwarereason_.Get();
+inline const std::string& InitCompletionIPDL::_internal_a_hardwarereason() const {
+  return _impl_.a_hardwarereason_.Get();
 }
-inline void InitCompletionIPDL::_internal_set_hardwarereason(const std::string& value) {
+inline void InitCompletionIPDL::_internal_set_a_hardwarereason(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.hardwarereason_.Set(value, GetArenaForAllocation());
+  _impl_.a_hardwarereason_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::_internal_mutable_hardwarereason() {
+inline std::string* InitCompletionIPDL::_internal_mutable_a_hardwarereason() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.hardwarereason_.Mutable(GetArenaForAllocation());
+  return _impl_.a_hardwarereason_.Mutable(GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::release_hardwarereason() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.hardwareReason)
-  if (!_internal_has_hardwarereason()) {
+inline std::string* InitCompletionIPDL::release_a_hardwarereason() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
+  if (!_internal_has_a_hardwarereason()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.hardwarereason_.Release();
+  auto* p = _impl_.a_hardwarereason_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.hardwarereason_.IsDefault()) {
-    _impl_.hardwarereason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_hardwarereason_.IsDefault()) {
+    _impl_.a_hardwarereason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void InitCompletionIPDL::set_allocated_hardwarereason(std::string* hardwarereason) {
-  if (hardwarereason != nullptr) {
+inline void InitCompletionIPDL::set_allocated_a_hardwarereason(std::string* a_hardwarereason) {
+  if (a_hardwarereason != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.hardwarereason_.SetAllocated(hardwarereason, GetArenaForAllocation());
+  _impl_.a_hardwarereason_.SetAllocated(a_hardwarereason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.hardwarereason_.IsDefault()) {
-    _impl_.hardwarereason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_hardwarereason_.IsDefault()) {
+    _impl_.a_hardwarereason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.hardwareReason)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
 }
 
-// required bytes conversion = 7;
-inline bool InitCompletionIPDL::_internal_has_conversion() const {
+// required bytes a_conversion = 7;
+inline bool InitCompletionIPDL::_internal_has_a_conversion() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_conversion() const {
-  return _internal_has_conversion();
+inline bool InitCompletionIPDL::has_a_conversion() const {
+  return _internal_has_a_conversion();
 }
-inline void InitCompletionIPDL::clear_conversion() {
-  _impl_.conversion_.ClearToEmpty();
+inline void InitCompletionIPDL::clear_a_conversion() {
+  _impl_.a_conversion_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline const std::string& InitCompletionIPDL::conversion() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.conversion)
-  return _internal_conversion();
+inline const std::string& InitCompletionIPDL::a_conversion() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_conversion)
+  return _internal_a_conversion();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void InitCompletionIPDL::set_conversion(ArgT0&& arg0, ArgT... args) {
+void InitCompletionIPDL::set_a_conversion(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.conversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.conversion)
+ _impl_.a_conversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_conversion)
 }
-inline std::string* InitCompletionIPDL::mutable_conversion() {
-  std::string* _s = _internal_mutable_conversion();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.conversion)
+inline std::string* InitCompletionIPDL::mutable_a_conversion() {
+  std::string* _s = _internal_mutable_a_conversion();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitCompletionIPDL.a_conversion)
   return _s;
 }
-inline const std::string& InitCompletionIPDL::_internal_conversion() const {
-  return _impl_.conversion_.Get();
+inline const std::string& InitCompletionIPDL::_internal_a_conversion() const {
+  return _impl_.a_conversion_.Get();
 }
-inline void InitCompletionIPDL::_internal_set_conversion(const std::string& value) {
+inline void InitCompletionIPDL::_internal_set_a_conversion(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.conversion_.Set(value, GetArenaForAllocation());
+  _impl_.a_conversion_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::_internal_mutable_conversion() {
+inline std::string* InitCompletionIPDL::_internal_mutable_a_conversion() {
   _impl_._has_bits_[0] |= 0x00000020u;
-  return _impl_.conversion_.Mutable(GetArenaForAllocation());
+  return _impl_.a_conversion_.Mutable(GetArenaForAllocation());
 }
-inline std::string* InitCompletionIPDL::release_conversion() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.conversion)
-  if (!_internal_has_conversion()) {
+inline std::string* InitCompletionIPDL::release_a_conversion() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_conversion)
+  if (!_internal_has_a_conversion()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.conversion_.Release();
+  auto* p = _impl_.a_conversion_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.conversion_.IsDefault()) {
-    _impl_.conversion_.Set("", GetArenaForAllocation());
+  if (_impl_.a_conversion_.IsDefault()) {
+    _impl_.a_conversion_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void InitCompletionIPDL::set_allocated_conversion(std::string* conversion) {
-  if (conversion != nullptr) {
+inline void InitCompletionIPDL::set_allocated_a_conversion(std::string* a_conversion) {
+  if (a_conversion != nullptr) {
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  _impl_.conversion_.SetAllocated(conversion, GetArenaForAllocation());
+  _impl_.a_conversion_.SetAllocated(a_conversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.conversion_.IsDefault()) {
-    _impl_.conversion_.Set("", GetArenaForAllocation());
+  if (_impl_.a_conversion_.IsDefault()) {
+    _impl_.a_conversion_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.conversion)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_conversion)
 }
 
-// required bool shouldDecoderAlwaysBeRecycled = 8;
-inline bool InitCompletionIPDL::_internal_has_shoulddecoderalwaysberecycled() const {
+// required bool a_shouldDecoderAlwaysBeRecycled = 8;
+inline bool InitCompletionIPDL::_internal_has_a_shoulddecoderalwaysberecycled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool InitCompletionIPDL::has_shoulddecoderalwaysberecycled() const {
-  return _internal_has_shoulddecoderalwaysberecycled();
+inline bool InitCompletionIPDL::has_a_shoulddecoderalwaysberecycled() const {
+  return _internal_has_a_shoulddecoderalwaysberecycled();
 }
-inline void InitCompletionIPDL::clear_shoulddecoderalwaysberecycled() {
-  _impl_.shoulddecoderalwaysberecycled_ = false;
+inline void InitCompletionIPDL::clear_a_shoulddecoderalwaysberecycled() {
+  _impl_.a_shoulddecoderalwaysberecycled_ = false;
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline bool InitCompletionIPDL::_internal_shoulddecoderalwaysberecycled() const {
-  return _impl_.shoulddecoderalwaysberecycled_;
+inline bool InitCompletionIPDL::_internal_a_shoulddecoderalwaysberecycled() const {
+  return _impl_.a_shoulddecoderalwaysberecycled_;
 }
-inline bool InitCompletionIPDL::shoulddecoderalwaysberecycled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.shouldDecoderAlwaysBeRecycled)
-  return _internal_shoulddecoderalwaysberecycled();
+inline bool InitCompletionIPDL::a_shoulddecoderalwaysberecycled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_shouldDecoderAlwaysBeRecycled)
+  return _internal_a_shoulddecoderalwaysberecycled();
 }
-inline void InitCompletionIPDL::_internal_set_shoulddecoderalwaysberecycled(bool value) {
+inline void InitCompletionIPDL::_internal_set_a_shoulddecoderalwaysberecycled(bool value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.shoulddecoderalwaysberecycled_ = value;
+  _impl_.a_shoulddecoderalwaysberecycled_ = value;
 }
-inline void InitCompletionIPDL::set_shoulddecoderalwaysberecycled(bool value) {
-  _internal_set_shoulddecoderalwaysberecycled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.shouldDecoderAlwaysBeRecycled)
+inline void InitCompletionIPDL::set_a_shoulddecoderalwaysberecycled(bool value) {
+  _internal_set_a_shoulddecoderalwaysberecycled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_shouldDecoderAlwaysBeRecycled)
 }
 
 // -------------------------------------------------------------------
 
 // InitResultIPDL
 
-// bytes mVMediaResult = 1;
-inline bool InitResultIPDL::_internal_has_mvmediaresult() const {
-  return content_case() == kMVMediaResult;
+// bytes a_mVMediaResult = 1;
+inline bool InitResultIPDL::_internal_has_a_mvmediaresult() const {
+  return content_case() == kAMVMediaResult;
 }
-inline bool InitResultIPDL::has_mvmediaresult() const {
-  return _internal_has_mvmediaresult();
+inline bool InitResultIPDL::has_a_mvmediaresult() const {
+  return _internal_has_a_mvmediaresult();
 }
-inline void InitResultIPDL::set_has_mvmediaresult() {
-  _impl_._oneof_case_[0] = kMVMediaResult;
+inline void InitResultIPDL::set_has_a_mvmediaresult() {
+  _impl_._oneof_case_[0] = kAMVMediaResult;
 }
-inline void InitResultIPDL::clear_mvmediaresult() {
-  if (_internal_has_mvmediaresult()) {
-    _impl_.content_.mvmediaresult_.Destroy();
+inline void InitResultIPDL::clear_a_mvmediaresult() {
+  if (_internal_has_a_mvmediaresult()) {
+    _impl_.content_.a_mvmediaresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& InitResultIPDL::mvmediaresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitResultIPDL.mVMediaResult)
-  return _internal_mvmediaresult();
+inline const std::string& InitResultIPDL::a_mvmediaresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitResultIPDL.a_mVMediaResult)
+  return _internal_a_mvmediaresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void InitResultIPDL::set_mvmediaresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvmediaresult()) {
+inline void InitResultIPDL::set_a_mvmediaresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvmediaresult()) {
     clear_content();
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitDefault();
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitDefault();
   }
-  _impl_.content_.mvmediaresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitResultIPDL.mVMediaResult)
+  _impl_.content_.a_mvmediaresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.InitResultIPDL.a_mVMediaResult)
 }
-inline std::string* InitResultIPDL::mutable_mvmediaresult() {
-  std::string* _s = _internal_mutable_mvmediaresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitResultIPDL.mVMediaResult)
+inline std::string* InitResultIPDL::mutable_a_mvmediaresult() {
+  std::string* _s = _internal_mutable_a_mvmediaresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitResultIPDL.a_mVMediaResult)
   return _s;
 }
-inline const std::string& InitResultIPDL::_internal_mvmediaresult() const {
-  if (_internal_has_mvmediaresult()) {
-    return _impl_.content_.mvmediaresult_.Get();
+inline const std::string& InitResultIPDL::_internal_a_mvmediaresult() const {
+  if (_internal_has_a_mvmediaresult()) {
+    return _impl_.content_.a_mvmediaresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void InitResultIPDL::_internal_set_mvmediaresult(const std::string& value) {
-  if (!_internal_has_mvmediaresult()) {
+inline void InitResultIPDL::_internal_set_a_mvmediaresult(const std::string& value) {
+  if (!_internal_has_a_mvmediaresult()) {
     clear_content();
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitDefault();
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitDefault();
   }
-  _impl_.content_.mvmediaresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvmediaresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* InitResultIPDL::_internal_mutable_mvmediaresult() {
-  if (!_internal_has_mvmediaresult()) {
+inline std::string* InitResultIPDL::_internal_mutable_a_mvmediaresult() {
+  if (!_internal_has_a_mvmediaresult()) {
     clear_content();
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitDefault();
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitDefault();
   }
-  return _impl_.content_.mvmediaresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvmediaresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* InitResultIPDL::release_mvmediaresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitResultIPDL.mVMediaResult)
-  if (_internal_has_mvmediaresult()) {
+inline std::string* InitResultIPDL::release_a_mvmediaresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitResultIPDL.a_mVMediaResult)
+  if (_internal_has_a_mvmediaresult()) {
     clear_has_content();
-    return _impl_.content_.mvmediaresult_.Release();
+    return _impl_.content_.a_mvmediaresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void InitResultIPDL::set_allocated_mvmediaresult(std::string* mvmediaresult) {
+inline void InitResultIPDL::set_allocated_a_mvmediaresult(std::string* a_mvmediaresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvmediaresult != nullptr) {
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitAllocated(mvmediaresult, GetArenaForAllocation());
+  if (a_mvmediaresult != nullptr) {
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitAllocated(a_mvmediaresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitResultIPDL.mVMediaResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitResultIPDL.a_mVMediaResult)
 }
 
-// .protobuf.mozilla.InitCompletionIPDL mVInitCompletionIPDL = 2;
-inline bool InitResultIPDL::_internal_has_mvinitcompletionipdl() const {
-  return content_case() == kMVInitCompletionIPDL;
+// .protobuf.mozilla.InitCompletionIPDL a_mVInitCompletionIPDL = 2;
+inline bool InitResultIPDL::_internal_has_a_mvinitcompletionipdl() const {
+  return content_case() == kAMVInitCompletionIPDL;
 }
-inline bool InitResultIPDL::has_mvinitcompletionipdl() const {
-  return _internal_has_mvinitcompletionipdl();
+inline bool InitResultIPDL::has_a_mvinitcompletionipdl() const {
+  return _internal_has_a_mvinitcompletionipdl();
 }
-inline void InitResultIPDL::set_has_mvinitcompletionipdl() {
-  _impl_._oneof_case_[0] = kMVInitCompletionIPDL;
+inline void InitResultIPDL::set_has_a_mvinitcompletionipdl() {
+  _impl_._oneof_case_[0] = kAMVInitCompletionIPDL;
 }
-inline void InitResultIPDL::clear_mvinitcompletionipdl() {
-  if (_internal_has_mvinitcompletionipdl()) {
+inline void InitResultIPDL::clear_a_mvinitcompletionipdl() {
+  if (_internal_has_a_mvinitcompletionipdl()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvinitcompletionipdl_;
+      delete _impl_.content_.a_mvinitcompletionipdl_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::release_mvinitcompletionipdl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitResultIPDL.mVInitCompletionIPDL)
-  if (_internal_has_mvinitcompletionipdl()) {
+inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::release_a_mvinitcompletionipdl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.InitResultIPDL.a_mVInitCompletionIPDL)
+  if (_internal_has_a_mvinitcompletionipdl()) {
     clear_has_content();
-    ::protobuf::mozilla::InitCompletionIPDL* temp = _impl_.content_.mvinitcompletionipdl_;
+    ::protobuf::mozilla::InitCompletionIPDL* temp = _impl_.content_.a_mvinitcompletionipdl_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvinitcompletionipdl_ = nullptr;
+    _impl_.content_.a_mvinitcompletionipdl_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::InitCompletionIPDL& InitResultIPDL::_internal_mvinitcompletionipdl() const {
-  return _internal_has_mvinitcompletionipdl()
-      ? *_impl_.content_.mvinitcompletionipdl_
+inline const ::protobuf::mozilla::InitCompletionIPDL& InitResultIPDL::_internal_a_mvinitcompletionipdl() const {
+  return _internal_has_a_mvinitcompletionipdl()
+      ? *_impl_.content_.a_mvinitcompletionipdl_
       : reinterpret_cast< ::protobuf::mozilla::InitCompletionIPDL&>(::protobuf::mozilla::_InitCompletionIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::InitCompletionIPDL& InitResultIPDL::mvinitcompletionipdl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitResultIPDL.mVInitCompletionIPDL)
-  return _internal_mvinitcompletionipdl();
+inline const ::protobuf::mozilla::InitCompletionIPDL& InitResultIPDL::a_mvinitcompletionipdl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.InitResultIPDL.a_mVInitCompletionIPDL)
+  return _internal_a_mvinitcompletionipdl();
 }
-inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::unsafe_arena_release_mvinitcompletionipdl() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.InitResultIPDL.mVInitCompletionIPDL)
-  if (_internal_has_mvinitcompletionipdl()) {
+inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::unsafe_arena_release_a_mvinitcompletionipdl() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.InitResultIPDL.a_mVInitCompletionIPDL)
+  if (_internal_has_a_mvinitcompletionipdl()) {
     clear_has_content();
-    ::protobuf::mozilla::InitCompletionIPDL* temp = _impl_.content_.mvinitcompletionipdl_;
-    _impl_.content_.mvinitcompletionipdl_ = nullptr;
+    ::protobuf::mozilla::InitCompletionIPDL* temp = _impl_.content_.a_mvinitcompletionipdl_;
+    _impl_.content_.a_mvinitcompletionipdl_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void InitResultIPDL::unsafe_arena_set_allocated_mvinitcompletionipdl(::protobuf::mozilla::InitCompletionIPDL* mvinitcompletionipdl) {
+inline void InitResultIPDL::unsafe_arena_set_allocated_a_mvinitcompletionipdl(::protobuf::mozilla::InitCompletionIPDL* a_mvinitcompletionipdl) {
   clear_content();
-  if (mvinitcompletionipdl) {
-    set_has_mvinitcompletionipdl();
-    _impl_.content_.mvinitcompletionipdl_ = mvinitcompletionipdl;
+  if (a_mvinitcompletionipdl) {
+    set_has_a_mvinitcompletionipdl();
+    _impl_.content_.a_mvinitcompletionipdl_ = a_mvinitcompletionipdl;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.InitResultIPDL.mVInitCompletionIPDL)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.InitResultIPDL.a_mVInitCompletionIPDL)
 }
-inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::_internal_mutable_mvinitcompletionipdl() {
-  if (!_internal_has_mvinitcompletionipdl()) {
+inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::_internal_mutable_a_mvinitcompletionipdl() {
+  if (!_internal_has_a_mvinitcompletionipdl()) {
     clear_content();
-    set_has_mvinitcompletionipdl();
-    _impl_.content_.mvinitcompletionipdl_ = CreateMaybeMessage< ::protobuf::mozilla::InitCompletionIPDL >(GetArenaForAllocation());
+    set_has_a_mvinitcompletionipdl();
+    _impl_.content_.a_mvinitcompletionipdl_ = CreateMaybeMessage< ::protobuf::mozilla::InitCompletionIPDL >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvinitcompletionipdl_;
+  return _impl_.content_.a_mvinitcompletionipdl_;
 }
-inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::mutable_mvinitcompletionipdl() {
-  ::protobuf::mozilla::InitCompletionIPDL* _msg = _internal_mutable_mvinitcompletionipdl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitResultIPDL.mVInitCompletionIPDL)
+inline ::protobuf::mozilla::InitCompletionIPDL* InitResultIPDL::mutable_a_mvinitcompletionipdl() {
+  ::protobuf::mozilla::InitCompletionIPDL* _msg = _internal_mutable_a_mvinitcompletionipdl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.InitResultIPDL.a_mVInitCompletionIPDL)
   return _msg;
 }
 
@@ -1713,154 +1713,154 @@ inline InitResultIPDL::ContentCase InitResultIPDL::content_case() const {
 
 // DecodeResultIPDL
 
-// bytes mVMediaResult = 1;
-inline bool DecodeResultIPDL::_internal_has_mvmediaresult() const {
-  return content_case() == kMVMediaResult;
+// bytes a_mVMediaResult = 1;
+inline bool DecodeResultIPDL::_internal_has_a_mvmediaresult() const {
+  return content_case() == kAMVMediaResult;
 }
-inline bool DecodeResultIPDL::has_mvmediaresult() const {
-  return _internal_has_mvmediaresult();
+inline bool DecodeResultIPDL::has_a_mvmediaresult() const {
+  return _internal_has_a_mvmediaresult();
 }
-inline void DecodeResultIPDL::set_has_mvmediaresult() {
-  _impl_._oneof_case_[0] = kMVMediaResult;
+inline void DecodeResultIPDL::set_has_a_mvmediaresult() {
+  _impl_._oneof_case_[0] = kAMVMediaResult;
 }
-inline void DecodeResultIPDL::clear_mvmediaresult() {
-  if (_internal_has_mvmediaresult()) {
-    _impl_.content_.mvmediaresult_.Destroy();
+inline void DecodeResultIPDL::clear_a_mvmediaresult() {
+  if (_internal_has_a_mvmediaresult()) {
+    _impl_.content_.a_mvmediaresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& DecodeResultIPDL::mvmediaresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodeResultIPDL.mVMediaResult)
-  return _internal_mvmediaresult();
+inline const std::string& DecodeResultIPDL::a_mvmediaresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodeResultIPDL.a_mVMediaResult)
+  return _internal_a_mvmediaresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void DecodeResultIPDL::set_mvmediaresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvmediaresult()) {
+inline void DecodeResultIPDL::set_a_mvmediaresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvmediaresult()) {
     clear_content();
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitDefault();
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitDefault();
   }
-  _impl_.content_.mvmediaresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.DecodeResultIPDL.mVMediaResult)
+  _impl_.content_.a_mvmediaresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.DecodeResultIPDL.a_mVMediaResult)
 }
-inline std::string* DecodeResultIPDL::mutable_mvmediaresult() {
-  std::string* _s = _internal_mutable_mvmediaresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodeResultIPDL.mVMediaResult)
+inline std::string* DecodeResultIPDL::mutable_a_mvmediaresult() {
+  std::string* _s = _internal_mutable_a_mvmediaresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodeResultIPDL.a_mVMediaResult)
   return _s;
 }
-inline const std::string& DecodeResultIPDL::_internal_mvmediaresult() const {
-  if (_internal_has_mvmediaresult()) {
-    return _impl_.content_.mvmediaresult_.Get();
+inline const std::string& DecodeResultIPDL::_internal_a_mvmediaresult() const {
+  if (_internal_has_a_mvmediaresult()) {
+    return _impl_.content_.a_mvmediaresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void DecodeResultIPDL::_internal_set_mvmediaresult(const std::string& value) {
-  if (!_internal_has_mvmediaresult()) {
+inline void DecodeResultIPDL::_internal_set_a_mvmediaresult(const std::string& value) {
+  if (!_internal_has_a_mvmediaresult()) {
     clear_content();
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitDefault();
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitDefault();
   }
-  _impl_.content_.mvmediaresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvmediaresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* DecodeResultIPDL::_internal_mutable_mvmediaresult() {
-  if (!_internal_has_mvmediaresult()) {
+inline std::string* DecodeResultIPDL::_internal_mutable_a_mvmediaresult() {
+  if (!_internal_has_a_mvmediaresult()) {
     clear_content();
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitDefault();
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitDefault();
   }
-  return _impl_.content_.mvmediaresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvmediaresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* DecodeResultIPDL::release_mvmediaresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodeResultIPDL.mVMediaResult)
-  if (_internal_has_mvmediaresult()) {
+inline std::string* DecodeResultIPDL::release_a_mvmediaresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodeResultIPDL.a_mVMediaResult)
+  if (_internal_has_a_mvmediaresult()) {
     clear_has_content();
-    return _impl_.content_.mvmediaresult_.Release();
+    return _impl_.content_.a_mvmediaresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void DecodeResultIPDL::set_allocated_mvmediaresult(std::string* mvmediaresult) {
+inline void DecodeResultIPDL::set_allocated_a_mvmediaresult(std::string* a_mvmediaresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvmediaresult != nullptr) {
-    set_has_mvmediaresult();
-    _impl_.content_.mvmediaresult_.InitAllocated(mvmediaresult, GetArenaForAllocation());
+  if (a_mvmediaresult != nullptr) {
+    set_has_a_mvmediaresult();
+    _impl_.content_.a_mvmediaresult_.InitAllocated(a_mvmediaresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodeResultIPDL.mVMediaResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.DecodeResultIPDL.a_mVMediaResult)
 }
 
-// .protobuf.mozilla.DecodedOutputIPDL mVDecodedOutputIPDL = 2;
-inline bool DecodeResultIPDL::_internal_has_mvdecodedoutputipdl() const {
-  return content_case() == kMVDecodedOutputIPDL;
+// .protobuf.mozilla.DecodedOutputIPDL a_mVDecodedOutputIPDL = 2;
+inline bool DecodeResultIPDL::_internal_has_a_mvdecodedoutputipdl() const {
+  return content_case() == kAMVDecodedOutputIPDL;
 }
-inline bool DecodeResultIPDL::has_mvdecodedoutputipdl() const {
-  return _internal_has_mvdecodedoutputipdl();
+inline bool DecodeResultIPDL::has_a_mvdecodedoutputipdl() const {
+  return _internal_has_a_mvdecodedoutputipdl();
 }
-inline void DecodeResultIPDL::set_has_mvdecodedoutputipdl() {
-  _impl_._oneof_case_[0] = kMVDecodedOutputIPDL;
+inline void DecodeResultIPDL::set_has_a_mvdecodedoutputipdl() {
+  _impl_._oneof_case_[0] = kAMVDecodedOutputIPDL;
 }
-inline void DecodeResultIPDL::clear_mvdecodedoutputipdl() {
-  if (_internal_has_mvdecodedoutputipdl()) {
+inline void DecodeResultIPDL::clear_a_mvdecodedoutputipdl() {
+  if (_internal_has_a_mvdecodedoutputipdl()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvdecodedoutputipdl_;
+      delete _impl_.content_.a_mvdecodedoutputipdl_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::release_mvdecodedoutputipdl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodeResultIPDL.mVDecodedOutputIPDL)
-  if (_internal_has_mvdecodedoutputipdl()) {
+inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::release_a_mvdecodedoutputipdl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.DecodeResultIPDL.a_mVDecodedOutputIPDL)
+  if (_internal_has_a_mvdecodedoutputipdl()) {
     clear_has_content();
-    ::protobuf::mozilla::DecodedOutputIPDL* temp = _impl_.content_.mvdecodedoutputipdl_;
+    ::protobuf::mozilla::DecodedOutputIPDL* temp = _impl_.content_.a_mvdecodedoutputipdl_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvdecodedoutputipdl_ = nullptr;
+    _impl_.content_.a_mvdecodedoutputipdl_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::DecodedOutputIPDL& DecodeResultIPDL::_internal_mvdecodedoutputipdl() const {
-  return _internal_has_mvdecodedoutputipdl()
-      ? *_impl_.content_.mvdecodedoutputipdl_
+inline const ::protobuf::mozilla::DecodedOutputIPDL& DecodeResultIPDL::_internal_a_mvdecodedoutputipdl() const {
+  return _internal_has_a_mvdecodedoutputipdl()
+      ? *_impl_.content_.a_mvdecodedoutputipdl_
       : reinterpret_cast< ::protobuf::mozilla::DecodedOutputIPDL&>(::protobuf::mozilla::_DecodedOutputIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::DecodedOutputIPDL& DecodeResultIPDL::mvdecodedoutputipdl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodeResultIPDL.mVDecodedOutputIPDL)
-  return _internal_mvdecodedoutputipdl();
+inline const ::protobuf::mozilla::DecodedOutputIPDL& DecodeResultIPDL::a_mvdecodedoutputipdl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.DecodeResultIPDL.a_mVDecodedOutputIPDL)
+  return _internal_a_mvdecodedoutputipdl();
 }
-inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::unsafe_arena_release_mvdecodedoutputipdl() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.DecodeResultIPDL.mVDecodedOutputIPDL)
-  if (_internal_has_mvdecodedoutputipdl()) {
+inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::unsafe_arena_release_a_mvdecodedoutputipdl() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.DecodeResultIPDL.a_mVDecodedOutputIPDL)
+  if (_internal_has_a_mvdecodedoutputipdl()) {
     clear_has_content();
-    ::protobuf::mozilla::DecodedOutputIPDL* temp = _impl_.content_.mvdecodedoutputipdl_;
-    _impl_.content_.mvdecodedoutputipdl_ = nullptr;
+    ::protobuf::mozilla::DecodedOutputIPDL* temp = _impl_.content_.a_mvdecodedoutputipdl_;
+    _impl_.content_.a_mvdecodedoutputipdl_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void DecodeResultIPDL::unsafe_arena_set_allocated_mvdecodedoutputipdl(::protobuf::mozilla::DecodedOutputIPDL* mvdecodedoutputipdl) {
+inline void DecodeResultIPDL::unsafe_arena_set_allocated_a_mvdecodedoutputipdl(::protobuf::mozilla::DecodedOutputIPDL* a_mvdecodedoutputipdl) {
   clear_content();
-  if (mvdecodedoutputipdl) {
-    set_has_mvdecodedoutputipdl();
-    _impl_.content_.mvdecodedoutputipdl_ = mvdecodedoutputipdl;
+  if (a_mvdecodedoutputipdl) {
+    set_has_a_mvdecodedoutputipdl();
+    _impl_.content_.a_mvdecodedoutputipdl_ = a_mvdecodedoutputipdl;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.DecodeResultIPDL.mVDecodedOutputIPDL)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.DecodeResultIPDL.a_mVDecodedOutputIPDL)
 }
-inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::_internal_mutable_mvdecodedoutputipdl() {
-  if (!_internal_has_mvdecodedoutputipdl()) {
+inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::_internal_mutable_a_mvdecodedoutputipdl() {
+  if (!_internal_has_a_mvdecodedoutputipdl()) {
     clear_content();
-    set_has_mvdecodedoutputipdl();
-    _impl_.content_.mvdecodedoutputipdl_ = CreateMaybeMessage< ::protobuf::mozilla::DecodedOutputIPDL >(GetArenaForAllocation());
+    set_has_a_mvdecodedoutputipdl();
+    _impl_.content_.a_mvdecodedoutputipdl_ = CreateMaybeMessage< ::protobuf::mozilla::DecodedOutputIPDL >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvdecodedoutputipdl_;
+  return _impl_.content_.a_mvdecodedoutputipdl_;
 }
-inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::mutable_mvdecodedoutputipdl() {
-  ::protobuf::mozilla::DecodedOutputIPDL* _msg = _internal_mutable_mvdecodedoutputipdl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodeResultIPDL.mVDecodedOutputIPDL)
+inline ::protobuf::mozilla::DecodedOutputIPDL* DecodeResultIPDL::mutable_a_mvdecodedoutputipdl() {
+  ::protobuf::mozilla::DecodedOutputIPDL* _msg = _internal_mutable_a_mvdecodedoutputipdl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.DecodeResultIPDL.a_mVDecodedOutputIPDL)
   return _msg;
 }
 

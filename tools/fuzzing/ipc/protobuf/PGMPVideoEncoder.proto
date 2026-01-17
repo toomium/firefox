@@ -17,35 +17,35 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_InitEncode {
-  required bytes aCodecSettings = 1;
-  repeated uint32 aCodecSpecific = 2;
-  required sint32 aNumberOfCores = 3;
-  required uint32 aMaxPayloadSize = 4;
+  required bytes a_aCodecSettings = 1;
+  repeated uint32 a_aCodecSpecific = 2;
+  required sint32 a_aNumberOfCores = 3;
+  required uint32 a_aMaxPayloadSize = 4;
 }
 
 message Msg_GiveShmem {
-  required bytes aOutputShmem = 1;
+  required bytes a_aOutputShmem = 1;
 }
 
 message Msg_Encode {
-  required protobuf.mozilla.gmp.GMPVideoi420FrameData aInputFrame = 1;
-  required bytes aInputShmem = 2;
-  repeated uint32 aCodecSpecificInfo = 3;
-  repeated bytes aFrameTypes = 4;
+  required protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
+  required bytes a_aInputShmem = 2;
+  repeated uint32 a_aCodecSpecificInfo = 3;
+  repeated bytes a_aFrameTypes = 4;
 }
 
 message Msg_SetChannelParameters {
-  required uint32 aPacketLoss = 1;
-  required uint32 aRTT = 2;
+  required uint32 a_aPacketLoss = 1;
+  required uint32 a_aRTT = 2;
 }
 
 message Msg_SetRates {
-  required uint32 aNewBitRate = 1;
-  required uint32 aFrameRate = 2;
+  required uint32 a_aNewBitRate = 1;
+  required uint32 a_aFrameRate = 2;
 }
 
 message Msg_SetPeriodicKeyFrames {
-  required bool aEnable = 1;
+  required bool a_aEnable = 1;
 }
 
 message Msg___delete__ {
@@ -55,23 +55,23 @@ message Reply___delete__ {
 }
 
 message Msg_ReturnShmem {
-  required bytes aInputShmem = 1;
+  required bytes a_aInputShmem = 1;
 }
 
 message Msg_EncodedShmem {
-  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData aEncodedFrame = 1;
-  required bytes aEncodedShmem = 2;
-  repeated uint32 aCodecSpecificInfo = 3;
+  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  required bytes a_aEncodedShmem = 2;
+  repeated uint32 a_aCodecSpecificInfo = 3;
 }
 
 message Msg_EncodedData {
-  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData aEncodedFrame = 1;
-  repeated uint32 aEncodedData = 2;
-  repeated uint32 aCodecSpecificInfo = 3;
+  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  repeated uint32 a_aEncodedData = 2;
+  repeated uint32 a_aCodecSpecificInfo = 3;
 }
 
 message Msg_Error {
-  required bytes aErr = 1;
+  required bytes a_aErr = 1;
 }
 
 message Msg_Shutdown {

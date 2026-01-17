@@ -12,20 +12,20 @@ package protobuf.mozilla.net;
 
 // Structs and unions declarations
 message DNSRecord {
-  required bytes canonicalName = 1;
-  repeated bytes addrs = 2;
-  required double trrFetchDuration = 3;
-  required double trrFetchDurationNetworkOnly = 4;
-  required bool isTRR = 5;
-  required bytes effectiveTRRMode = 6;
-  required uint32 ttl = 7;
-  required bytes lastUpdate = 8;
+  required bytes a_canonicalName = 1;
+  repeated bytes a_addrs = 2;
+  required double a_trrFetchDuration = 3;
+  required double a_trrFetchDurationNetworkOnly = 4;
+  required bool a_isTRR = 5;
+  required bytes a_effectiveTRRMode = 6;
+  required uint32 a_ttl = 7;
+  required bytes a_lastUpdate = 8;
 }
 
 message DNSRequestResponse {
   oneof content {
-    protobuf.mozilla.net.DNSRecord mVDNSRecord = 1;
-    bytes mVIPCTypeRecord = 2;
-    bytes mVnsresult = 3;
+    protobuf.mozilla.net.DNSRecord a_mVDNSRecord = 1;
+    bytes a_mVIPCTypeRecord = 2;
+    bytes a_mVnsresult = 3;
   }
 }

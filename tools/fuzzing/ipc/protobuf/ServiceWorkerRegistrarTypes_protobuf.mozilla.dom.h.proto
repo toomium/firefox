@@ -15,14 +15,14 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message ServiceWorkerRegistrationData {
-  required bytes scope = 1;
-  required bytes currentWorkerURL = 2;
-  required bool currentWorkerHandlesFetch = 3;
-  required bytes cacheName = 4;
-  required protobuf.mozilla.ipc.PrincipalInfo principal = 5;
-  required uint32 updateViaCache = 6;
-  required sint64 currentWorkerInstalledTime = 7;
-  required sint64 currentWorkerActivatedTime = 8;
-  required sint64 lastUpdateTime = 9;
-  required protobuf.mozilla.dom.IPCNavigationPreloadState navigationPreloadState = 10;
+  required bytes a_scope = 1;
+  required bytes a_currentWorkerURL = 2;
+  required bool a_currentWorkerHandlesFetch = 3;
+  required bytes a_cacheName = 4;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;
+  required uint32 a_updateViaCache = 6;
+  required sint64 a_currentWorkerInstalledTime = 7;
+  required sint64 a_currentWorkerActivatedTime = 8;
+  required sint64 a_lastUpdateTime = 9;
+  required protobuf.mozilla.dom.IPCNavigationPreloadState a_navigationPreloadState = 10;
 }

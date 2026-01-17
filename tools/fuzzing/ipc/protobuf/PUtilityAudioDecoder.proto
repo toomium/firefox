@@ -17,13 +17,13 @@ import "GraphicsMessages.proto";
 
 // Message declarations
 message Msg_NewContentRemoteMediaManager {
-  required bytes endpoint = 1;
-  required bytes parentId = 2;
+  required bytes a_endpoint = 1;
+  required bytes a_parentId = 2;
 }
 
 message Msg_UpdateMediaCodecsSupported {
-  required bytes aLocation = 1;
-  required bytes aSupported = 2;
+  required bytes a_aLocation = 1;
+  required bytes a_aSupported = 2;
 }
 
 // Parameter mappings stats:

@@ -178,44 +178,44 @@ class Msg_PRemoteWorkerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChildEpFieldNumber = 2,
-    kDataFieldNumber = 1,
+    kAChildEpFieldNumber = 2,
+    kADataFieldNumber = 1,
   };
-  // required bytes childEp = 2;
-  bool has_childep() const;
+  // required bytes a_childEp = 2;
+  bool has_a_childep() const;
   private:
-  bool _internal_has_childep() const;
+  bool _internal_has_a_childep() const;
   public:
-  void clear_childep();
-  const std::string& childep() const;
+  void clear_a_childep();
+  const std::string& a_childep() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_childep(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_childep();
-  PROTOBUF_NODISCARD std::string* release_childep();
-  void set_allocated_childep(std::string* childep);
+  void set_a_childep(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_childep();
+  PROTOBUF_NODISCARD std::string* release_a_childep();
+  void set_allocated_a_childep(std::string* a_childep);
   private:
-  const std::string& _internal_childep() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_childep(const std::string& value);
-  std::string* _internal_mutable_childep();
+  const std::string& _internal_a_childep() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_childep(const std::string& value);
+  std::string* _internal_mutable_a_childep();
   public:
 
-  // required .protobuf.mozilla.dom.RemoteWorkerData data = 1;
-  bool has_data() const;
+  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const ::protobuf::mozilla::dom::RemoteWorkerData& data() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RemoteWorkerData* release_data();
-  ::protobuf::mozilla::dom::RemoteWorkerData* mutable_data();
-  void set_allocated_data(::protobuf::mozilla::dom::RemoteWorkerData* data);
+  void clear_a_data();
+  const ::protobuf::mozilla::dom::RemoteWorkerData& a_data() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RemoteWorkerData* release_a_data();
+  ::protobuf::mozilla::dom::RemoteWorkerData* mutable_a_data();
+  void set_allocated_a_data(::protobuf::mozilla::dom::RemoteWorkerData* a_data);
   private:
-  const ::protobuf::mozilla::dom::RemoteWorkerData& _internal_data() const;
-  ::protobuf::mozilla::dom::RemoteWorkerData* _internal_mutable_data();
+  const ::protobuf::mozilla::dom::RemoteWorkerData& _internal_a_data() const;
+  ::protobuf::mozilla::dom::RemoteWorkerData* _internal_mutable_a_data();
   public:
-  void unsafe_arena_set_allocated_data(
-      ::protobuf::mozilla::dom::RemoteWorkerData* data);
-  ::protobuf::mozilla::dom::RemoteWorkerData* unsafe_arena_release_data();
+  void unsafe_arena_set_allocated_a_data(
+      ::protobuf::mozilla::dom::RemoteWorkerData* a_data);
+  ::protobuf::mozilla::dom::RemoteWorkerData* unsafe_arena_release_a_data();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor)
  private:
@@ -230,8 +230,8 @@ class Msg_PRemoteWorkerConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr childep_;
-    ::protobuf::mozilla::dom::RemoteWorkerData* data_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childep_;
+    ::protobuf::mozilla::dom::RemoteWorkerData* a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerService_2eproto;
@@ -371,41 +371,41 @@ class Reply_PRemoteWorkerConstructor final :
 #endif  // __GNUC__
 // Msg_PRemoteWorkerConstructor
 
-// required .protobuf.mozilla.dom.RemoteWorkerData data = 1;
-inline bool Msg_PRemoteWorkerConstructor::_internal_has_data() const {
+// required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+inline bool Msg_PRemoteWorkerConstructor::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.data_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
   return value;
 }
-inline bool Msg_PRemoteWorkerConstructor::has_data() const {
-  return _internal_has_data();
+inline bool Msg_PRemoteWorkerConstructor::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline const ::protobuf::mozilla::dom::RemoteWorkerData& Msg_PRemoteWorkerConstructor::_internal_data() const {
-  const ::protobuf::mozilla::dom::RemoteWorkerData* p = _impl_.data_;
+inline const ::protobuf::mozilla::dom::RemoteWorkerData& Msg_PRemoteWorkerConstructor::_internal_a_data() const {
+  const ::protobuf::mozilla::dom::RemoteWorkerData* p = _impl_.a_data_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RemoteWorkerData&>(
       ::protobuf::mozilla::dom::_RemoteWorkerData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RemoteWorkerData& Msg_PRemoteWorkerConstructor::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.data)
-  return _internal_data();
+inline const ::protobuf::mozilla::dom::RemoteWorkerData& Msg_PRemoteWorkerConstructor::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_data)
+  return _internal_a_data();
 }
-inline void Msg_PRemoteWorkerConstructor::unsafe_arena_set_allocated_data(
-    ::protobuf::mozilla::dom::RemoteWorkerData* data) {
+inline void Msg_PRemoteWorkerConstructor::unsafe_arena_set_allocated_a_data(
+    ::protobuf::mozilla::dom::RemoteWorkerData* a_data) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  _impl_.data_ = data;
-  if (data) {
+  _impl_.a_data_ = a_data;
+  if (a_data) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.data)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_data)
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::release_data() {
+inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::release_a_data() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::RemoteWorkerData* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::dom::RemoteWorkerData* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -417,113 +417,113 @@ inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::unsafe_arena_release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.data)
+inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::unsafe_arena_release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_data)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::RemoteWorkerData* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::dom::RemoteWorkerData* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::_internal_mutable_data() {
+inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.data_ == nullptr) {
+  if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RemoteWorkerData>(GetArenaForAllocation());
-    _impl_.data_ = p;
+    _impl_.a_data_ = p;
   }
-  return _impl_.data_;
+  return _impl_.a_data_;
 }
-inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::mutable_data() {
-  ::protobuf::mozilla::dom::RemoteWorkerData* _msg = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.data)
+inline ::protobuf::mozilla::dom::RemoteWorkerData* Msg_PRemoteWorkerConstructor::mutable_a_data() {
+  ::protobuf::mozilla::dom::RemoteWorkerData* _msg = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_data)
   return _msg;
 }
-inline void Msg_PRemoteWorkerConstructor::set_allocated_data(::protobuf::mozilla::dom::RemoteWorkerData* data) {
+inline void Msg_PRemoteWorkerConstructor::set_allocated_a_data(::protobuf::mozilla::dom::RemoteWorkerData* a_data) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  if (data) {
+  if (a_data) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(data));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_data));
     if (message_arena != submessage_arena) {
-      data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, data, submessage_arena);
+      a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_data, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.data_ = data;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.data)
+  _impl_.a_data_ = a_data;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_data)
 }
 
-// required bytes childEp = 2;
-inline bool Msg_PRemoteWorkerConstructor::_internal_has_childep() const {
+// required bytes a_childEp = 2;
+inline bool Msg_PRemoteWorkerConstructor::_internal_has_a_childep() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PRemoteWorkerConstructor::has_childep() const {
-  return _internal_has_childep();
+inline bool Msg_PRemoteWorkerConstructor::has_a_childep() const {
+  return _internal_has_a_childep();
 }
-inline void Msg_PRemoteWorkerConstructor::clear_childep() {
-  _impl_.childep_.ClearToEmpty();
+inline void Msg_PRemoteWorkerConstructor::clear_a_childep() {
+  _impl_.a_childep_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PRemoteWorkerConstructor::childep() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.childEp)
-  return _internal_childep();
+inline const std::string& Msg_PRemoteWorkerConstructor::a_childep() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_childEp)
+  return _internal_a_childep();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PRemoteWorkerConstructor::set_childep(ArgT0&& arg0, ArgT... args) {
+void Msg_PRemoteWorkerConstructor::set_a_childep(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.childep_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.childEp)
+ _impl_.a_childep_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_childEp)
 }
-inline std::string* Msg_PRemoteWorkerConstructor::mutable_childep() {
-  std::string* _s = _internal_mutable_childep();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.childEp)
+inline std::string* Msg_PRemoteWorkerConstructor::mutable_a_childep() {
+  std::string* _s = _internal_mutable_a_childep();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_childEp)
   return _s;
 }
-inline const std::string& Msg_PRemoteWorkerConstructor::_internal_childep() const {
-  return _impl_.childep_.Get();
+inline const std::string& Msg_PRemoteWorkerConstructor::_internal_a_childep() const {
+  return _impl_.a_childep_.Get();
 }
-inline void Msg_PRemoteWorkerConstructor::_internal_set_childep(const std::string& value) {
+inline void Msg_PRemoteWorkerConstructor::_internal_set_a_childep(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.childep_.Set(value, GetArenaForAllocation());
+  _impl_.a_childep_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PRemoteWorkerConstructor::_internal_mutable_childep() {
+inline std::string* Msg_PRemoteWorkerConstructor::_internal_mutable_a_childep() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.childep_.Mutable(GetArenaForAllocation());
+  return _impl_.a_childep_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PRemoteWorkerConstructor::release_childep() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.childEp)
-  if (!_internal_has_childep()) {
+inline std::string* Msg_PRemoteWorkerConstructor::release_a_childep() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_childEp)
+  if (!_internal_has_a_childep()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.childep_.Release();
+  auto* p = _impl_.a_childep_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childep_.IsDefault()) {
-    _impl_.childep_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childep_.IsDefault()) {
+    _impl_.a_childep_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PRemoteWorkerConstructor::set_allocated_childep(std::string* childep) {
-  if (childep != nullptr) {
+inline void Msg_PRemoteWorkerConstructor::set_allocated_a_childep(std::string* a_childep) {
+  if (a_childep != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.childep_.SetAllocated(childep, GetArenaForAllocation());
+  _impl_.a_childep_.SetAllocated(a_childep, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.childep_.IsDefault()) {
-    _impl_.childep_.Set("", GetArenaForAllocation());
+  if (_impl_.a_childep_.IsDefault()) {
+    _impl_.a_childep_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.childEp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_childEp)
 }
 
 // -------------------------------------------------------------------

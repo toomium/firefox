@@ -24,10 +24,10 @@ PROTOBUF_CONSTEXPR ScriptData::ScriptData(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.xdrdata_)*/{}
-  , /*decltype(_impl_.url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.cachepath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.loadtime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_xdrdata_)*/{}
+  , /*decltype(_impl_.a_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_cachepath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_loadtime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct ScriptDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ScriptDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,13 +49,13 @@ namespace loader {
 class ScriptData::_Internal {
  public:
   using HasBits = decltype(std::declval<ScriptData>()._impl_._has_bits_);
-  static void set_has_url(HasBits* has_bits) {
+  static void set_has_a_url(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_cachepath(HasBits* has_bits) {
+  static void set_has_a_cachepath(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_loadtime(HasBits* has_bits) {
+  static void set_has_a_loadtime(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -75,34 +75,34 @@ ScriptData::ScriptData(const ScriptData& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.xdrdata_){from._impl_.xdrdata_}
-    , decltype(_impl_.url_){}
-    , decltype(_impl_.cachepath_){}
-    , decltype(_impl_.loadtime_){}};
+    , decltype(_impl_.a_xdrdata_){from._impl_.a_xdrdata_}
+    , decltype(_impl_.a_url_){}
+    , decltype(_impl_.a_cachepath_){}
+    , decltype(_impl_.a_loadtime_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.url_.InitDefault();
+  _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.url_.Set("", GetArenaForAllocation());
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_url()) {
-    _this->_impl_.url_.Set(from._internal_url(), 
+  if (from._internal_has_a_url()) {
+    _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.cachepath_.InitDefault();
+  _impl_.a_cachepath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cachepath_.Set("", GetArenaForAllocation());
+    _impl_.a_cachepath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_cachepath()) {
-    _this->_impl_.cachepath_.Set(from._internal_cachepath(), 
+  if (from._internal_has_a_cachepath()) {
+    _this->_impl_.a_cachepath_.Set(from._internal_a_cachepath(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.loadtime_.InitDefault();
+  _impl_.a_loadtime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.loadtime_.Set("", GetArenaForAllocation());
+    _impl_.a_loadtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_loadtime()) {
-    _this->_impl_.loadtime_.Set(from._internal_loadtime(), 
+  if (from._internal_has_a_loadtime()) {
+    _this->_impl_.a_loadtime_.Set(from._internal_a_loadtime(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.loader.ScriptData)
@@ -115,22 +115,22 @@ inline void ScriptData::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.xdrdata_){arena}
-    , decltype(_impl_.url_){}
-    , decltype(_impl_.cachepath_){}
-    , decltype(_impl_.loadtime_){}
+    , decltype(_impl_.a_xdrdata_){arena}
+    , decltype(_impl_.a_url_){}
+    , decltype(_impl_.a_cachepath_){}
+    , decltype(_impl_.a_loadtime_){}
   };
-  _impl_.url_.InitDefault();
+  _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.url_.Set("", GetArenaForAllocation());
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.cachepath_.InitDefault();
+  _impl_.a_cachepath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.cachepath_.Set("", GetArenaForAllocation());
+    _impl_.a_cachepath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.loadtime_.InitDefault();
+  _impl_.a_loadtime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.loadtime_.Set("", GetArenaForAllocation());
+    _impl_.a_loadtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -145,10 +145,10 @@ ScriptData::~ScriptData() {
 
 inline void ScriptData::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.xdrdata_.~RepeatedField();
-  _impl_.url_.Destroy();
-  _impl_.cachepath_.Destroy();
-  _impl_.loadtime_.Destroy();
+  _impl_.a_xdrdata_.~RepeatedField();
+  _impl_.a_url_.Destroy();
+  _impl_.a_cachepath_.Destroy();
+  _impl_.a_loadtime_.Destroy();
 }
 
 void ScriptData::SetCachedSize(int size) const {
@@ -161,17 +161,17 @@ void ScriptData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.xdrdata_.Clear();
+  _impl_.a_xdrdata_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.url_.ClearNonDefaultToEmpty();
+      _impl_.a_url_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.cachepath_.ClearNonDefaultToEmpty();
+      _impl_.a_cachepath_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.loadtime_.ClearNonDefaultToEmpty();
+      _impl_.a_loadtime_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -185,45 +185,45 @@ const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes url = 1;
+      // required bytes a_url = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_url();
+          auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes cachePath = 2;
+      // required bytes a_cachePath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_cachepath();
+          auto str = _internal_mutable_a_cachepath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes loadTime = 3;
+      // required bytes a_loadTime = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_loadtime();
+          auto str = _internal_mutable_a_loadtime();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // repeated uint32 xdrData = 4;
+      // repeated uint32 a_xdrData = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_xdrdata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_xdrdata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<32>(ptr));
         } else if (static_cast<uint8_t>(tag) == 34) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_xdrdata(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_xdrdata(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -259,28 +259,28 @@ uint8_t* ScriptData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes url = 1;
+  // required bytes a_url = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_url(), target);
+        1, this->_internal_a_url(), target);
   }
 
-  // required bytes cachePath = 2;
+  // required bytes a_cachePath = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_cachepath(), target);
+        2, this->_internal_a_cachepath(), target);
   }
 
-  // required bytes loadTime = 3;
+  // required bytes a_loadTime = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_loadtime(), target);
+        3, this->_internal_a_loadtime(), target);
   }
 
-  // repeated uint32 xdrData = 4;
-  for (int i = 0, n = this->_internal_xdrdata_size(); i < n; i++) {
+  // repeated uint32 a_xdrData = 4;
+  for (int i = 0, n = this->_internal_a_xdrdata_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_xdrdata(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_xdrdata(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -295,25 +295,25 @@ size_t ScriptData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.loader.ScriptData)
   size_t total_size = 0;
 
-  if (_internal_has_url()) {
-    // required bytes url = 1;
+  if (_internal_has_a_url()) {
+    // required bytes a_url = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_url());
+        this->_internal_a_url());
   }
 
-  if (_internal_has_cachepath()) {
-    // required bytes cachePath = 2;
+  if (_internal_has_a_cachepath()) {
+    // required bytes a_cachePath = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_cachepath());
+        this->_internal_a_cachepath());
   }
 
-  if (_internal_has_loadtime()) {
-    // required bytes loadTime = 3;
+  if (_internal_has_a_loadtime()) {
+    // required bytes a_loadTime = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_loadtime());
+        this->_internal_a_loadtime());
   }
 
   return total_size;
@@ -323,20 +323,20 @@ size_t ScriptData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes url = 1;
+    // required bytes a_url = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_url());
+        this->_internal_a_url());
 
-    // required bytes cachePath = 2;
+    // required bytes a_cachePath = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_cachepath());
+        this->_internal_a_cachepath());
 
-    // required bytes loadTime = 3;
+    // required bytes a_loadTime = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_loadtime());
+        this->_internal_a_loadtime());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -345,12 +345,12 @@ size_t ScriptData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 xdrData = 4;
+  // repeated uint32 a_xdrData = 4;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.xdrdata_);
+      UInt32Size(this->_impl_.a_xdrdata_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_xdrdata_size());
+                  ::_pbi::FromIntSize(this->_internal_a_xdrdata_size());
     total_size += data_size;
   }
 
@@ -375,17 +375,17 @@ void ScriptData::MergeFrom(const ScriptData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.xdrdata_.MergeFrom(from._impl_.xdrdata_);
+  _this->_impl_.a_xdrdata_.MergeFrom(from._impl_.a_xdrdata_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_url(from._internal_url());
+      _this->_internal_set_a_url(from._internal_a_url());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_cachepath(from._internal_cachepath());
+      _this->_internal_set_a_cachepath(from._internal_a_cachepath());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_loadtime(from._internal_loadtime());
+      _this->_internal_set_a_loadtime(from._internal_a_loadtime());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -409,18 +409,18 @@ void ScriptData::InternalSwap(ScriptData* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.xdrdata_.InternalSwap(&other->_impl_.xdrdata_);
+  _impl_.a_xdrdata_.InternalSwap(&other->_impl_.a_xdrdata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.url_, lhs_arena,
-      &other->_impl_.url_, rhs_arena
+      &_impl_.a_url_, lhs_arena,
+      &other->_impl_.a_url_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.cachepath_, lhs_arena,
-      &other->_impl_.cachepath_, rhs_arena
+      &_impl_.a_cachepath_, lhs_arena,
+      &other->_impl_.a_cachepath_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.loadtime_, lhs_arena,
-      &other->_impl_.loadtime_, rhs_arena
+      &_impl_.a_loadtime_, lhs_arena,
+      &other->_impl_.a_loadtime_, rhs_arena
   );
 }
 

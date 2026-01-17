@@ -172,30 +172,30 @@ class Msg_ManyHandles final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDescrsFieldNumber = 1,
+    kADescrsFieldNumber = 1,
   };
-  // repeated bytes descrs = 1;
-  int descrs_size() const;
+  // repeated bytes a_descrs = 1;
+  int a_descrs_size() const;
   private:
-  int _internal_descrs_size() const;
+  int _internal_a_descrs_size() const;
   public:
-  void clear_descrs();
-  const std::string& descrs(int index) const;
-  std::string* mutable_descrs(int index);
-  void set_descrs(int index, const std::string& value);
-  void set_descrs(int index, std::string&& value);
-  void set_descrs(int index, const char* value);
-  void set_descrs(int index, const void* value, size_t size);
-  std::string* add_descrs();
-  void add_descrs(const std::string& value);
-  void add_descrs(std::string&& value);
-  void add_descrs(const char* value);
-  void add_descrs(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& descrs() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_descrs();
+  void clear_a_descrs();
+  const std::string& a_descrs(int index) const;
+  std::string* mutable_a_descrs(int index);
+  void set_a_descrs(int index, const std::string& value);
+  void set_a_descrs(int index, std::string&& value);
+  void set_a_descrs(int index, const char* value);
+  void set_a_descrs(int index, const void* value, size_t size);
+  std::string* add_a_descrs();
+  void add_a_descrs(const std::string& value);
+  void add_a_descrs(std::string&& value);
+  void add_a_descrs(const char* value);
+  void add_a_descrs(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_descrs() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_descrs();
   private:
-  const std::string& _internal_descrs(int index) const;
-  std::string* _internal_add_descrs();
+  const std::string& _internal_a_descrs(int index) const;
+  std::string* _internal_add_a_descrs();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles)
@@ -206,7 +206,7 @@ class Msg_ManyHandles final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> descrs_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_descrs_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -223,79 +223,79 @@ class Msg_ManyHandles final :
 #endif  // __GNUC__
 // Msg_ManyHandles
 
-// repeated bytes descrs = 1;
-inline int Msg_ManyHandles::_internal_descrs_size() const {
-  return _impl_.descrs_.size();
+// repeated bytes a_descrs = 1;
+inline int Msg_ManyHandles::_internal_a_descrs_size() const {
+  return _impl_.a_descrs_.size();
 }
-inline int Msg_ManyHandles::descrs_size() const {
-  return _internal_descrs_size();
+inline int Msg_ManyHandles::a_descrs_size() const {
+  return _internal_a_descrs_size();
 }
-inline void Msg_ManyHandles::clear_descrs() {
-  _impl_.descrs_.Clear();
+inline void Msg_ManyHandles::clear_a_descrs() {
+  _impl_.a_descrs_.Clear();
 }
-inline std::string* Msg_ManyHandles::add_descrs() {
-  std::string* _s = _internal_add_descrs();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+inline std::string* Msg_ManyHandles::add_a_descrs() {
+  std::string* _s = _internal_add_a_descrs();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
   return _s;
 }
-inline const std::string& Msg_ManyHandles::_internal_descrs(int index) const {
-  return _impl_.descrs_.Get(index);
+inline const std::string& Msg_ManyHandles::_internal_a_descrs(int index) const {
+  return _impl_.a_descrs_.Get(index);
 }
-inline const std::string& Msg_ManyHandles::descrs(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
-  return _internal_descrs(index);
+inline const std::string& Msg_ManyHandles::a_descrs(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
+  return _internal_a_descrs(index);
 }
-inline std::string* Msg_ManyHandles::mutable_descrs(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
-  return _impl_.descrs_.Mutable(index);
+inline std::string* Msg_ManyHandles::mutable_a_descrs(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
+  return _impl_.a_descrs_.Mutable(index);
 }
-inline void Msg_ManyHandles::set_descrs(int index, const std::string& value) {
-  _impl_.descrs_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+inline void Msg_ManyHandles::set_a_descrs(int index, const std::string& value) {
+  _impl_.a_descrs_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline void Msg_ManyHandles::set_descrs(int index, std::string&& value) {
-  _impl_.descrs_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+inline void Msg_ManyHandles::set_a_descrs(int index, std::string&& value) {
+  _impl_.a_descrs_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline void Msg_ManyHandles::set_descrs(int index, const char* value) {
+inline void Msg_ManyHandles::set_a_descrs(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.descrs_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+  _impl_.a_descrs_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline void Msg_ManyHandles::set_descrs(int index, const void* value, size_t size) {
-  _impl_.descrs_.Mutable(index)->assign(
+inline void Msg_ManyHandles::set_a_descrs(int index, const void* value, size_t size) {
+  _impl_.a_descrs_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline std::string* Msg_ManyHandles::_internal_add_descrs() {
-  return _impl_.descrs_.Add();
+inline std::string* Msg_ManyHandles::_internal_add_a_descrs() {
+  return _impl_.a_descrs_.Add();
 }
-inline void Msg_ManyHandles::add_descrs(const std::string& value) {
-  _impl_.descrs_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+inline void Msg_ManyHandles::add_a_descrs(const std::string& value) {
+  _impl_.a_descrs_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline void Msg_ManyHandles::add_descrs(std::string&& value) {
-  _impl_.descrs_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+inline void Msg_ManyHandles::add_a_descrs(std::string&& value) {
+  _impl_.a_descrs_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline void Msg_ManyHandles::add_descrs(const char* value) {
+inline void Msg_ManyHandles::add_a_descrs(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.descrs_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+  _impl_.a_descrs_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
-inline void Msg_ManyHandles::add_descrs(const void* value, size_t size) {
-  _impl_.descrs_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
+inline void Msg_ManyHandles::add_a_descrs(const void* value, size_t size) {
+  _impl_.a_descrs_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_ManyHandles::descrs() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
-  return _impl_.descrs_;
+Msg_ManyHandles::a_descrs() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
+  return _impl_.a_descrs_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_ManyHandles::mutable_descrs() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.descrs)
-  return &_impl_.descrs_;
+Msg_ManyHandles::mutable_a_descrs() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.PTestManyHandles.Msg_ManyHandles.a_descrs)
+  return &_impl_.a_descrs_;
 }
 
 #ifdef __GNUC__

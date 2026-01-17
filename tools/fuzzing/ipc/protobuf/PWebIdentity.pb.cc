@@ -37,9 +37,9 @@ PROTOBUF_CONSTEXPR Msg_GetIdentityCredential::Msg_GetIdentityCredential(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoptions_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.amediationrequirement_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ahasuseractivation_)*/false} {}
+  , /*decltype(_impl_.a_aoptions_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_amediationrequirement_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ahasuseractivation_)*/false} {}
 struct Msg_GetIdentityCredentialDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetIdentityCredentialDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -53,7 +53,7 @@ PROTOBUF_CONSTEXPR Reply_GetIdentityCredential::Reply_GetIdentityCredential(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.response_)*/nullptr} {}
+  , /*decltype(_impl_.a_response_)*/nullptr} {}
 struct Reply_GetIdentityCredentialDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetIdentityCredentialDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -67,7 +67,7 @@ PROTOBUF_CONSTEXPR Msg_DisconnectIdentityCredential::Msg_DisconnectIdentityCrede
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.aoptions_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_aoptions_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_DisconnectIdentityCredentialDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DisconnectIdentityCredentialDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -81,7 +81,7 @@ PROTOBUF_CONSTEXPR Reply_DisconnectIdentityCredential::Reply_DisconnectIdentityC
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_DisconnectIdentityCredentialDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_DisconnectIdentityCredentialDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -107,7 +107,7 @@ PROTOBUF_CONSTEXPR Reply_PreventSilentAccess::Reply_PreventSilentAccess(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_PreventSilentAccessDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PreventSilentAccessDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -121,7 +121,7 @@ PROTOBUF_CONSTEXPR Msg_SetLoginStatus::Msg_SetLoginStatus(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.foo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_foo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_SetLoginStatusDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetLoginStatusDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -135,7 +135,7 @@ PROTOBUF_CONSTEXPR Reply_SetLoginStatus::Reply_SetLoginStatus(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_SetLoginStatusDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetLoginStatusDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -331,13 +331,13 @@ std::string Msg_RequestCancel::GetTypeName() const {
 class Msg_GetIdentityCredential::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_GetIdentityCredential>()._impl_._has_bits_);
-  static void set_has_aoptions(HasBits* has_bits) {
+  static void set_has_a_aoptions(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_amediationrequirement(HasBits* has_bits) {
+  static void set_has_a_amediationrequirement(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_ahasuseractivation(HasBits* has_bits) {
+  static void set_has_a_ahasuseractivation(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -357,28 +357,28 @@ Msg_GetIdentityCredential::Msg_GetIdentityCredential(const Msg_GetIdentityCreden
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoptions_){}
-    , decltype(_impl_.amediationrequirement_){}
-    , decltype(_impl_.ahasuseractivation_){}};
+    , decltype(_impl_.a_aoptions_){}
+    , decltype(_impl_.a_amediationrequirement_){}
+    , decltype(_impl_.a_ahasuseractivation_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoptions_.InitDefault();
+  _impl_.a_aoptions_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoptions_.Set("", GetArenaForAllocation());
+    _impl_.a_aoptions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoptions()) {
-    _this->_impl_.aoptions_.Set(from._internal_aoptions(), 
+  if (from._internal_has_a_aoptions()) {
+    _this->_impl_.a_aoptions_.Set(from._internal_a_aoptions(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.amediationrequirement_.InitDefault();
+  _impl_.a_amediationrequirement_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.amediationrequirement_.Set("", GetArenaForAllocation());
+    _impl_.a_amediationrequirement_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_amediationrequirement()) {
-    _this->_impl_.amediationrequirement_.Set(from._internal_amediationrequirement(), 
+  if (from._internal_has_a_amediationrequirement()) {
+    _this->_impl_.a_amediationrequirement_.Set(from._internal_a_amediationrequirement(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.ahasuseractivation_ = from._impl_.ahasuseractivation_;
+  _this->_impl_.a_ahasuseractivation_ = from._impl_.a_ahasuseractivation_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential)
 }
 
@@ -389,17 +389,17 @@ inline void Msg_GetIdentityCredential::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoptions_){}
-    , decltype(_impl_.amediationrequirement_){}
-    , decltype(_impl_.ahasuseractivation_){false}
+    , decltype(_impl_.a_aoptions_){}
+    , decltype(_impl_.a_amediationrequirement_){}
+    , decltype(_impl_.a_ahasuseractivation_){false}
   };
-  _impl_.aoptions_.InitDefault();
+  _impl_.a_aoptions_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoptions_.Set("", GetArenaForAllocation());
+    _impl_.a_aoptions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.amediationrequirement_.InitDefault();
+  _impl_.a_amediationrequirement_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.amediationrequirement_.Set("", GetArenaForAllocation());
+    _impl_.a_amediationrequirement_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -414,8 +414,8 @@ Msg_GetIdentityCredential::~Msg_GetIdentityCredential() {
 
 inline void Msg_GetIdentityCredential::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoptions_.Destroy();
-  _impl_.amediationrequirement_.Destroy();
+  _impl_.a_aoptions_.Destroy();
+  _impl_.a_amediationrequirement_.Destroy();
 }
 
 void Msg_GetIdentityCredential::SetCachedSize(int size) const {
@@ -431,13 +431,13 @@ void Msg_GetIdentityCredential::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aoptions_.ClearNonDefaultToEmpty();
+      _impl_.a_aoptions_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.amediationrequirement_.ClearNonDefaultToEmpty();
+      _impl_.a_amediationrequirement_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.ahasuseractivation_ = false;
+  _impl_.a_ahasuseractivation_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -449,29 +449,29 @@ const char* Msg_GetIdentityCredential::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOptions = 1;
+      // required bytes a_aOptions = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoptions();
+          auto str = _internal_mutable_a_aoptions();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aMediationRequirement = 2;
+      // required bytes a_aMediationRequirement = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_amediationrequirement();
+          auto str = _internal_mutable_a_amediationrequirement();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aHasUserActivation = 3;
+      // required bool a_aHasUserActivation = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_ahasuseractivation(&has_bits);
-          _impl_.ahasuseractivation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ahasuseractivation(&has_bits);
+          _impl_.a_ahasuseractivation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -507,22 +507,22 @@ uint8_t* Msg_GetIdentityCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOptions = 1;
+  // required bytes a_aOptions = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoptions(), target);
+        1, this->_internal_a_aoptions(), target);
   }
 
-  // required bytes aMediationRequirement = 2;
+  // required bytes a_aMediationRequirement = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_amediationrequirement(), target);
+        2, this->_internal_a_amediationrequirement(), target);
   }
 
-  // required bool aHasUserActivation = 3;
+  // required bool a_aHasUserActivation = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_ahasuseractivation(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_ahasuseractivation(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -537,22 +537,22 @@ size_t Msg_GetIdentityCredential::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PWebIdentity.Msg_GetIdentityCredential)
   size_t total_size = 0;
 
-  if (_internal_has_aoptions()) {
-    // required bytes aOptions = 1;
+  if (_internal_has_a_aoptions()) {
+    // required bytes a_aOptions = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoptions());
+        this->_internal_a_aoptions());
   }
 
-  if (_internal_has_amediationrequirement()) {
-    // required bytes aMediationRequirement = 2;
+  if (_internal_has_a_amediationrequirement()) {
+    // required bytes a_aMediationRequirement = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_amediationrequirement());
+        this->_internal_a_amediationrequirement());
   }
 
-  if (_internal_has_ahasuseractivation()) {
-    // required bool aHasUserActivation = 3;
+  if (_internal_has_a_ahasuseractivation()) {
+    // required bool a_aHasUserActivation = 3;
     total_size += 1 + 1;
   }
 
@@ -563,17 +563,17 @@ size_t Msg_GetIdentityCredential::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes aOptions = 1;
+    // required bytes a_aOptions = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoptions());
+        this->_internal_a_aoptions());
 
-    // required bytes aMediationRequirement = 2;
+    // required bytes a_aMediationRequirement = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_amediationrequirement());
+        this->_internal_a_amediationrequirement());
 
-    // required bool aHasUserActivation = 3;
+    // required bool a_aHasUserActivation = 3;
     total_size += 1 + 1;
 
   } else {
@@ -607,13 +607,13 @@ void Msg_GetIdentityCredential::MergeFrom(const Msg_GetIdentityCredential& from)
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aoptions(from._internal_aoptions());
+      _this->_internal_set_a_aoptions(from._internal_a_aoptions());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_amediationrequirement(from._internal_amediationrequirement());
+      _this->_internal_set_a_amediationrequirement(from._internal_a_amediationrequirement());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.ahasuseractivation_ = from._impl_.ahasuseractivation_;
+      _this->_impl_.a_ahasuseractivation_ = from._impl_.a_ahasuseractivation_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -639,14 +639,14 @@ void Msg_GetIdentityCredential::InternalSwap(Msg_GetIdentityCredential* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoptions_, lhs_arena,
-      &other->_impl_.aoptions_, rhs_arena
+      &_impl_.a_aoptions_, lhs_arena,
+      &other->_impl_.a_aoptions_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.amediationrequirement_, lhs_arena,
-      &other->_impl_.amediationrequirement_, rhs_arena
+      &_impl_.a_amediationrequirement_, lhs_arena,
+      &other->_impl_.a_amediationrequirement_, rhs_arena
   );
-  swap(_impl_.ahasuseractivation_, other->_impl_.ahasuseractivation_);
+  swap(_impl_.a_ahasuseractivation_, other->_impl_.a_ahasuseractivation_);
 }
 
 std::string Msg_GetIdentityCredential::GetTypeName() const {
@@ -659,8 +659,8 @@ std::string Msg_GetIdentityCredential::GetTypeName() const {
 class Reply_GetIdentityCredential::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_GetIdentityCredential>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse& response(const Reply_GetIdentityCredential* msg);
-  static void set_has_response(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse& a_response(const Reply_GetIdentityCredential* msg);
+  static void set_has_a_response(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -669,11 +669,11 @@ class Reply_GetIdentityCredential::_Internal {
 };
 
 const ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse&
-Reply_GetIdentityCredential::_Internal::response(const Reply_GetIdentityCredential* msg) {
-  return *msg->_impl_.response_;
+Reply_GetIdentityCredential::_Internal::a_response(const Reply_GetIdentityCredential* msg) {
+  return *msg->_impl_.a_response_;
 }
-void Reply_GetIdentityCredential::clear_response() {
-  if (_impl_.response_ != nullptr) _impl_.response_->Clear();
+void Reply_GetIdentityCredential::clear_a_response() {
+  if (_impl_.a_response_ != nullptr) _impl_.a_response_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_GetIdentityCredential::Reply_GetIdentityCredential(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -688,11 +688,11 @@ Reply_GetIdentityCredential::Reply_GetIdentityCredential(const Reply_GetIdentity
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.response_){nullptr}};
+    , decltype(_impl_.a_response_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_response()) {
-    _this->_impl_.response_ = new ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse(*from._impl_.response_);
+  if (from._internal_has_a_response()) {
+    _this->_impl_.a_response_ = new ::protobuf::mozilla::dom::WebIdentityGetCredentialResponse(*from._impl_.a_response_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Reply_GetIdentityCredential)
 }
@@ -704,7 +704,7 @@ inline void Reply_GetIdentityCredential::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.response_){nullptr}
+    , decltype(_impl_.a_response_){nullptr}
   };
 }
 
@@ -719,7 +719,7 @@ Reply_GetIdentityCredential::~Reply_GetIdentityCredential() {
 
 inline void Reply_GetIdentityCredential::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.response_;
+  if (this != internal_default_instance()) delete _impl_.a_response_;
 }
 
 void Reply_GetIdentityCredential::SetCachedSize(int size) const {
@@ -734,8 +734,8 @@ void Reply_GetIdentityCredential::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.response_ != nullptr);
-    _impl_.response_->Clear();
+    GOOGLE_DCHECK(_impl_.a_response_ != nullptr);
+    _impl_.a_response_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -748,10 +748,10 @@ const char* Reply_GetIdentityCredential::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse response = 1;
+      // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_response(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_response(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -787,11 +787,11 @@ uint8_t* Reply_GetIdentityCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse response = 1;
+  // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::response(this),
-        _Internal::response(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_response(this),
+        _Internal::a_response(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -806,11 +806,11 @@ size_t Reply_GetIdentityCredential::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebIdentity.Reply_GetIdentityCredential)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse response = 1;
-  if (_internal_has_response()) {
+  // required .protobuf.mozilla.dom.WebIdentityGetCredentialResponse a_response = 1;
+  if (_internal_has_a_response()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.response_);
+        *_impl_.a_response_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -837,9 +837,9 @@ void Reply_GetIdentityCredential::MergeFrom(const Reply_GetIdentityCredential& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_response()) {
-    _this->_internal_mutable_response()->::protobuf::mozilla::dom::WebIdentityGetCredentialResponse::MergeFrom(
-        from._internal_response());
+  if (from._internal_has_a_response()) {
+    _this->_internal_mutable_a_response()->::protobuf::mozilla::dom::WebIdentityGetCredentialResponse::MergeFrom(
+        from._internal_a_response());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -853,8 +853,8 @@ void Reply_GetIdentityCredential::CopyFrom(const Reply_GetIdentityCredential& fr
 
 bool Reply_GetIdentityCredential::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_response()) {
-    if (!_impl_.response_->IsInitialized()) return false;
+  if (_internal_has_a_response()) {
+    if (!_impl_.a_response_->IsInitialized()) return false;
   }
   return true;
 }
@@ -863,7 +863,7 @@ void Reply_GetIdentityCredential::InternalSwap(Reply_GetIdentityCredential* othe
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.response_, other->_impl_.response_);
+  swap(_impl_.a_response_, other->_impl_.a_response_);
 }
 
 std::string Reply_GetIdentityCredential::GetTypeName() const {
@@ -876,7 +876,7 @@ std::string Reply_GetIdentityCredential::GetTypeName() const {
 class Msg_DisconnectIdentityCredential::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_DisconnectIdentityCredential>()._impl_._has_bits_);
-  static void set_has_aoptions(HasBits* has_bits) {
+  static void set_has_a_aoptions(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -896,15 +896,15 @@ Msg_DisconnectIdentityCredential::Msg_DisconnectIdentityCredential(const Msg_Dis
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoptions_){}};
+    , decltype(_impl_.a_aoptions_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aoptions_.InitDefault();
+  _impl_.a_aoptions_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoptions_.Set("", GetArenaForAllocation());
+    _impl_.a_aoptions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoptions()) {
-    _this->_impl_.aoptions_.Set(from._internal_aoptions(), 
+  if (from._internal_has_a_aoptions()) {
+    _this->_impl_.a_aoptions_.Set(from._internal_a_aoptions(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Msg_DisconnectIdentityCredential)
@@ -917,11 +917,11 @@ inline void Msg_DisconnectIdentityCredential::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.aoptions_){}
+    , decltype(_impl_.a_aoptions_){}
   };
-  _impl_.aoptions_.InitDefault();
+  _impl_.a_aoptions_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoptions_.Set("", GetArenaForAllocation());
+    _impl_.a_aoptions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -936,7 +936,7 @@ Msg_DisconnectIdentityCredential::~Msg_DisconnectIdentityCredential() {
 
 inline void Msg_DisconnectIdentityCredential::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.aoptions_.Destroy();
+  _impl_.a_aoptions_.Destroy();
 }
 
 void Msg_DisconnectIdentityCredential::SetCachedSize(int size) const {
@@ -951,7 +951,7 @@ void Msg_DisconnectIdentityCredential::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.aoptions_.ClearNonDefaultToEmpty();
+    _impl_.a_aoptions_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -964,10 +964,10 @@ const char* Msg_DisconnectIdentityCredential::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aOptions = 1;
+      // required bytes a_aOptions = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_aoptions();
+          auto str = _internal_mutable_a_aoptions();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1004,10 +1004,10 @@ uint8_t* Msg_DisconnectIdentityCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aOptions = 1;
+  // required bytes a_aOptions = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_aoptions(), target);
+        1, this->_internal_a_aoptions(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1022,11 +1022,11 @@ size_t Msg_DisconnectIdentityCredential::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebIdentity.Msg_DisconnectIdentityCredential)
   size_t total_size = 0;
 
-  // required bytes aOptions = 1;
-  if (_internal_has_aoptions()) {
+  // required bytes a_aOptions = 1;
+  if (_internal_has_a_aoptions()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoptions());
+        this->_internal_a_aoptions());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1053,8 +1053,8 @@ void Msg_DisconnectIdentityCredential::MergeFrom(const Msg_DisconnectIdentityCre
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_aoptions()) {
-    _this->_internal_set_aoptions(from._internal_aoptions());
+  if (from._internal_has_a_aoptions()) {
+    _this->_internal_set_a_aoptions(from._internal_a_aoptions());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1078,8 +1078,8 @@ void Msg_DisconnectIdentityCredential::InternalSwap(Msg_DisconnectIdentityCreden
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoptions_, lhs_arena,
-      &other->_impl_.aoptions_, rhs_arena
+      &_impl_.a_aoptions_, lhs_arena,
+      &other->_impl_.a_aoptions_, rhs_arena
   );
 }
 
@@ -1093,7 +1093,7 @@ std::string Msg_DisconnectIdentityCredential::GetTypeName() const {
 class Reply_DisconnectIdentityCredential::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_DisconnectIdentityCredential>()._impl_._has_bits_);
-  static void set_has_rv(HasBits* has_bits) {
+  static void set_has_a_rv(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1113,15 +1113,15 @@ Reply_DisconnectIdentityCredential::Reply_DisconnectIdentityCredential(const Rep
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}};
+    , decltype(_impl_.a_rv_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_rv()) {
-    _this->_impl_.rv_.Set(from._internal_rv(), 
+  if (from._internal_has_a_rv()) {
+    _this->_impl_.a_rv_.Set(from._internal_a_rv(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Reply_DisconnectIdentityCredential)
@@ -1134,11 +1134,11 @@ inline void Reply_DisconnectIdentityCredential::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}
+    , decltype(_impl_.a_rv_){}
   };
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1153,7 +1153,7 @@ Reply_DisconnectIdentityCredential::~Reply_DisconnectIdentityCredential() {
 
 inline void Reply_DisconnectIdentityCredential::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.rv_.Destroy();
+  _impl_.a_rv_.Destroy();
 }
 
 void Reply_DisconnectIdentityCredential::SetCachedSize(int size) const {
@@ -1168,7 +1168,7 @@ void Reply_DisconnectIdentityCredential::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.rv_.ClearNonDefaultToEmpty();
+    _impl_.a_rv_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1181,10 +1181,10 @@ const char* Reply_DisconnectIdentityCredential::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes rv = 1;
+      // required bytes a_rv = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_rv();
+          auto str = _internal_mutable_a_rv();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1221,10 +1221,10 @@ uint8_t* Reply_DisconnectIdentityCredential::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes rv = 1;
+  // required bytes a_rv = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_rv(), target);
+        1, this->_internal_a_rv(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1239,11 +1239,11 @@ size_t Reply_DisconnectIdentityCredential::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebIdentity.Reply_DisconnectIdentityCredential)
   size_t total_size = 0;
 
-  // required bytes rv = 1;
-  if (_internal_has_rv()) {
+  // required bytes a_rv = 1;
+  if (_internal_has_a_rv()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_rv());
+        this->_internal_a_rv());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1270,8 +1270,8 @@ void Reply_DisconnectIdentityCredential::MergeFrom(const Reply_DisconnectIdentit
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_rv()) {
-    _this->_internal_set_rv(from._internal_rv());
+  if (from._internal_has_a_rv()) {
+    _this->_internal_set_a_rv(from._internal_a_rv());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1295,8 +1295,8 @@ void Reply_DisconnectIdentityCredential::InternalSwap(Reply_DisconnectIdentityCr
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.rv_, lhs_arena,
-      &other->_impl_.rv_, rhs_arena
+      &_impl_.a_rv_, lhs_arena,
+      &other->_impl_.a_rv_, rhs_arena
   );
 }
 
@@ -1458,7 +1458,7 @@ std::string Msg_PreventSilentAccess::GetTypeName() const {
 class Reply_PreventSilentAccess::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_PreventSilentAccess>()._impl_._has_bits_);
-  static void set_has_rv(HasBits* has_bits) {
+  static void set_has_a_rv(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1478,15 +1478,15 @@ Reply_PreventSilentAccess::Reply_PreventSilentAccess(const Reply_PreventSilentAc
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}};
+    , decltype(_impl_.a_rv_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_rv()) {
-    _this->_impl_.rv_.Set(from._internal_rv(), 
+  if (from._internal_has_a_rv()) {
+    _this->_impl_.a_rv_.Set(from._internal_a_rv(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Reply_PreventSilentAccess)
@@ -1499,11 +1499,11 @@ inline void Reply_PreventSilentAccess::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}
+    , decltype(_impl_.a_rv_){}
   };
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1518,7 +1518,7 @@ Reply_PreventSilentAccess::~Reply_PreventSilentAccess() {
 
 inline void Reply_PreventSilentAccess::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.rv_.Destroy();
+  _impl_.a_rv_.Destroy();
 }
 
 void Reply_PreventSilentAccess::SetCachedSize(int size) const {
@@ -1533,7 +1533,7 @@ void Reply_PreventSilentAccess::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.rv_.ClearNonDefaultToEmpty();
+    _impl_.a_rv_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1546,10 +1546,10 @@ const char* Reply_PreventSilentAccess::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes rv = 1;
+      // required bytes a_rv = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_rv();
+          auto str = _internal_mutable_a_rv();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1586,10 +1586,10 @@ uint8_t* Reply_PreventSilentAccess::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes rv = 1;
+  // required bytes a_rv = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_rv(), target);
+        1, this->_internal_a_rv(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1604,11 +1604,11 @@ size_t Reply_PreventSilentAccess::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebIdentity.Reply_PreventSilentAccess)
   size_t total_size = 0;
 
-  // required bytes rv = 1;
-  if (_internal_has_rv()) {
+  // required bytes a_rv = 1;
+  if (_internal_has_a_rv()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_rv());
+        this->_internal_a_rv());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1635,8 +1635,8 @@ void Reply_PreventSilentAccess::MergeFrom(const Reply_PreventSilentAccess& from)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_rv()) {
-    _this->_internal_set_rv(from._internal_rv());
+  if (from._internal_has_a_rv()) {
+    _this->_internal_set_a_rv(from._internal_a_rv());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1660,8 +1660,8 @@ void Reply_PreventSilentAccess::InternalSwap(Reply_PreventSilentAccess* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.rv_, lhs_arena,
-      &other->_impl_.rv_, rhs_arena
+      &_impl_.a_rv_, lhs_arena,
+      &other->_impl_.a_rv_, rhs_arena
   );
 }
 
@@ -1675,7 +1675,7 @@ std::string Reply_PreventSilentAccess::GetTypeName() const {
 class Msg_SetLoginStatus::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SetLoginStatus>()._impl_._has_bits_);
-  static void set_has_foo(HasBits* has_bits) {
+  static void set_has_a_foo(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1695,15 +1695,15 @@ Msg_SetLoginStatus::Msg_SetLoginStatus(const Msg_SetLoginStatus& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.foo_){}};
+    , decltype(_impl_.a_foo_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.foo_.InitDefault();
+  _impl_.a_foo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.foo_.Set("", GetArenaForAllocation());
+    _impl_.a_foo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_foo()) {
-    _this->_impl_.foo_.Set(from._internal_foo(), 
+  if (from._internal_has_a_foo()) {
+    _this->_impl_.a_foo_.Set(from._internal_a_foo(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Msg_SetLoginStatus)
@@ -1716,11 +1716,11 @@ inline void Msg_SetLoginStatus::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.foo_){}
+    , decltype(_impl_.a_foo_){}
   };
-  _impl_.foo_.InitDefault();
+  _impl_.a_foo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.foo_.Set("", GetArenaForAllocation());
+    _impl_.a_foo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1735,7 +1735,7 @@ Msg_SetLoginStatus::~Msg_SetLoginStatus() {
 
 inline void Msg_SetLoginStatus::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.foo_.Destroy();
+  _impl_.a_foo_.Destroy();
 }
 
 void Msg_SetLoginStatus::SetCachedSize(int size) const {
@@ -1750,7 +1750,7 @@ void Msg_SetLoginStatus::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.foo_.ClearNonDefaultToEmpty();
+    _impl_.a_foo_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1763,10 +1763,10 @@ const char* Msg_SetLoginStatus::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes foo = 1;
+      // required bytes a_foo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_foo();
+          auto str = _internal_mutable_a_foo();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1803,10 +1803,10 @@ uint8_t* Msg_SetLoginStatus::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes foo = 1;
+  // required bytes a_foo = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_foo(), target);
+        1, this->_internal_a_foo(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1821,11 +1821,11 @@ size_t Msg_SetLoginStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebIdentity.Msg_SetLoginStatus)
   size_t total_size = 0;
 
-  // required bytes foo = 1;
-  if (_internal_has_foo()) {
+  // required bytes a_foo = 1;
+  if (_internal_has_a_foo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_foo());
+        this->_internal_a_foo());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1852,8 +1852,8 @@ void Msg_SetLoginStatus::MergeFrom(const Msg_SetLoginStatus& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_foo()) {
-    _this->_internal_set_foo(from._internal_foo());
+  if (from._internal_has_a_foo()) {
+    _this->_internal_set_a_foo(from._internal_a_foo());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1877,8 +1877,8 @@ void Msg_SetLoginStatus::InternalSwap(Msg_SetLoginStatus* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.foo_, lhs_arena,
-      &other->_impl_.foo_, rhs_arena
+      &_impl_.a_foo_, lhs_arena,
+      &other->_impl_.a_foo_, rhs_arena
   );
 }
 
@@ -1892,7 +1892,7 @@ std::string Msg_SetLoginStatus::GetTypeName() const {
 class Reply_SetLoginStatus::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_SetLoginStatus>()._impl_._has_bits_);
-  static void set_has_rv(HasBits* has_bits) {
+  static void set_has_a_rv(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1912,15 +1912,15 @@ Reply_SetLoginStatus::Reply_SetLoginStatus(const Reply_SetLoginStatus& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}};
+    , decltype(_impl_.a_rv_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_rv()) {
-    _this->_impl_.rv_.Set(from._internal_rv(), 
+  if (from._internal_has_a_rv()) {
+    _this->_impl_.a_rv_.Set(from._internal_a_rv(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PWebIdentity.Reply_SetLoginStatus)
@@ -1933,11 +1933,11 @@ inline void Reply_SetLoginStatus::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}
+    , decltype(_impl_.a_rv_){}
   };
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1952,7 +1952,7 @@ Reply_SetLoginStatus::~Reply_SetLoginStatus() {
 
 inline void Reply_SetLoginStatus::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.rv_.Destroy();
+  _impl_.a_rv_.Destroy();
 }
 
 void Reply_SetLoginStatus::SetCachedSize(int size) const {
@@ -1967,7 +1967,7 @@ void Reply_SetLoginStatus::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.rv_.ClearNonDefaultToEmpty();
+    _impl_.a_rv_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1980,10 +1980,10 @@ const char* Reply_SetLoginStatus::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes rv = 1;
+      // required bytes a_rv = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_rv();
+          auto str = _internal_mutable_a_rv();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2020,10 +2020,10 @@ uint8_t* Reply_SetLoginStatus::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes rv = 1;
+  // required bytes a_rv = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_rv(), target);
+        1, this->_internal_a_rv(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2038,11 +2038,11 @@ size_t Reply_SetLoginStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebIdentity.Reply_SetLoginStatus)
   size_t total_size = 0;
 
-  // required bytes rv = 1;
-  if (_internal_has_rv()) {
+  // required bytes a_rv = 1;
+  if (_internal_has_a_rv()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_rv());
+        this->_internal_a_rv());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2069,8 +2069,8 @@ void Reply_SetLoginStatus::MergeFrom(const Reply_SetLoginStatus& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_rv()) {
-    _this->_internal_set_rv(from._internal_rv());
+  if (from._internal_has_a_rv()) {
+    _this->_internal_set_a_rv(from._internal_a_rv());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2094,8 +2094,8 @@ void Reply_SetLoginStatus::InternalSwap(Reply_SetLoginStatus* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.rv_, lhs_arena,
-      &other->_impl_.rv_, rhs_arena
+      &_impl_.a_rv_, lhs_arena,
+      &other->_impl_.a_rv_, rhs_arena
   );
 }
 

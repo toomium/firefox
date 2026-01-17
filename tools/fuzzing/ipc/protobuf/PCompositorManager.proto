@@ -18,26 +18,26 @@ import "LayersSurfaces.proto";
 
 // Message declarations
 message Msg_PCompositorBridgeConstructor {
-  required protobuf.mozilla.layers.CompositorBridgeOptions options = 1;
+  required protobuf.mozilla.layers.CompositorBridgeOptions a_options = 1;
 }
 
 message Reply_PCompositorBridgeConstructor {
 }
 
 message Msg_AddSharedSurface {
-  required bytes aId = 1;
-  required protobuf.mozilla.layers.SurfaceDescriptorShared aDesc = 2;
+  required bytes a_aId = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptorShared a_aDesc = 2;
 }
 
 message Msg_RemoveSharedSurface {
-  required bytes aId = 1;
+  required bytes a_aId = 1;
 }
 
 message Msg_ReportSharedSurfacesMemory {
 }
 
 message Reply_ReportSharedSurfacesMemory {
-  required bytes aReport = 1;
+  required bytes a_aReport = 1;
 }
 
 message Msg_NotifyMemoryPressure {
@@ -47,15 +47,15 @@ message Msg_ReportMemory {
 }
 
 message Reply_ReportMemory {
-  required bytes aReport = 1;
+  required bytes a_aReport = 1;
 }
 
 message Msg_InitCanvasManager {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_NotifyWebRenderError {
-  required bytes error = 1;
+  required bytes a_error = 1;
 }
 
 // Parameter mappings stats:

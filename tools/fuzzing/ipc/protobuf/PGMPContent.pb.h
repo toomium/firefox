@@ -688,24 +688,24 @@ class Msg_PChromiumCDMConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAKeySystemFieldNumber = 1,
+    kAAKeySystemFieldNumber = 1,
   };
-  // required bytes aKeySystem = 1;
-  bool has_akeysystem() const;
+  // required bytes a_aKeySystem = 1;
+  bool has_a_akeysystem() const;
   private:
-  bool _internal_has_akeysystem() const;
+  bool _internal_has_a_akeysystem() const;
   public:
-  void clear_akeysystem();
-  const std::string& akeysystem() const;
+  void clear_a_akeysystem();
+  const std::string& a_akeysystem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_akeysystem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_akeysystem();
-  PROTOBUF_NODISCARD std::string* release_akeysystem();
-  void set_allocated_akeysystem(std::string* akeysystem);
+  void set_a_akeysystem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_akeysystem();
+  PROTOBUF_NODISCARD std::string* release_a_akeysystem();
+  void set_allocated_a_akeysystem(std::string* a_akeysystem);
   private:
-  const std::string& _internal_akeysystem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_akeysystem(const std::string& value);
-  std::string* _internal_mutable_akeysystem();
+  const std::string& _internal_a_akeysystem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_akeysystem(const std::string& value);
+  std::string* _internal_mutable_a_akeysystem();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor)
@@ -718,7 +718,7 @@ class Msg_PChromiumCDMConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr akeysystem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_akeysystem_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -874,72 +874,72 @@ class Reply_PChromiumCDMConstructor final :
 
 // Msg_PChromiumCDMConstructor
 
-// required bytes aKeySystem = 1;
-inline bool Msg_PChromiumCDMConstructor::_internal_has_akeysystem() const {
+// required bytes a_aKeySystem = 1;
+inline bool Msg_PChromiumCDMConstructor::_internal_has_a_akeysystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PChromiumCDMConstructor::has_akeysystem() const {
-  return _internal_has_akeysystem();
+inline bool Msg_PChromiumCDMConstructor::has_a_akeysystem() const {
+  return _internal_has_a_akeysystem();
 }
-inline void Msg_PChromiumCDMConstructor::clear_akeysystem() {
-  _impl_.akeysystem_.ClearToEmpty();
+inline void Msg_PChromiumCDMConstructor::clear_a_akeysystem() {
+  _impl_.a_akeysystem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PChromiumCDMConstructor::akeysystem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.aKeySystem)
-  return _internal_akeysystem();
+inline const std::string& Msg_PChromiumCDMConstructor::a_akeysystem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
+  return _internal_a_akeysystem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PChromiumCDMConstructor::set_akeysystem(ArgT0&& arg0, ArgT... args) {
+void Msg_PChromiumCDMConstructor::set_a_akeysystem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.akeysystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.aKeySystem)
+ _impl_.a_akeysystem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
 }
-inline std::string* Msg_PChromiumCDMConstructor::mutable_akeysystem() {
-  std::string* _s = _internal_mutable_akeysystem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.aKeySystem)
+inline std::string* Msg_PChromiumCDMConstructor::mutable_a_akeysystem() {
+  std::string* _s = _internal_mutable_a_akeysystem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
   return _s;
 }
-inline const std::string& Msg_PChromiumCDMConstructor::_internal_akeysystem() const {
-  return _impl_.akeysystem_.Get();
+inline const std::string& Msg_PChromiumCDMConstructor::_internal_a_akeysystem() const {
+  return _impl_.a_akeysystem_.Get();
 }
-inline void Msg_PChromiumCDMConstructor::_internal_set_akeysystem(const std::string& value) {
+inline void Msg_PChromiumCDMConstructor::_internal_set_a_akeysystem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.akeysystem_.Set(value, GetArenaForAllocation());
+  _impl_.a_akeysystem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PChromiumCDMConstructor::_internal_mutable_akeysystem() {
+inline std::string* Msg_PChromiumCDMConstructor::_internal_mutable_a_akeysystem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.akeysystem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_akeysystem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PChromiumCDMConstructor::release_akeysystem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.aKeySystem)
-  if (!_internal_has_akeysystem()) {
+inline std::string* Msg_PChromiumCDMConstructor::release_a_akeysystem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
+  if (!_internal_has_a_akeysystem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.akeysystem_.Release();
+  auto* p = _impl_.a_akeysystem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.akeysystem_.IsDefault()) {
-    _impl_.akeysystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_akeysystem_.IsDefault()) {
+    _impl_.a_akeysystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PChromiumCDMConstructor::set_allocated_akeysystem(std::string* akeysystem) {
-  if (akeysystem != nullptr) {
+inline void Msg_PChromiumCDMConstructor::set_allocated_a_akeysystem(std::string* a_akeysystem) {
+  if (a_akeysystem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.akeysystem_.SetAllocated(akeysystem, GetArenaForAllocation());
+  _impl_.a_akeysystem_.SetAllocated(a_akeysystem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.akeysystem_.IsDefault()) {
-    _impl_.akeysystem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_akeysystem_.IsDefault()) {
+    _impl_.a_akeysystem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.aKeySystem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
 }
 
 // -------------------------------------------------------------------

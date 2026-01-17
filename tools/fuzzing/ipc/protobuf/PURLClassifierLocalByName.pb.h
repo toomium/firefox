@@ -177,25 +177,25 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultsFieldNumber = 1,
+    kAResultsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.URLClassifierLocalResult results = 1;
-  int results_size() const;
+  // repeated .protobuf.mozilla.dom.URLClassifierLocalResult a_results = 1;
+  int a_results_size() const;
   private:
-  int _internal_results_size() const;
+  int _internal_a_results_size() const;
   public:
-  void clear_results();
-  ::protobuf::mozilla::dom::URLClassifierLocalResult* mutable_results(int index);
+  void clear_a_results();
+  ::protobuf::mozilla::dom::URLClassifierLocalResult* mutable_a_results(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::URLClassifierLocalResult >*
-      mutable_results();
+      mutable_a_results();
   private:
-  const ::protobuf::mozilla::dom::URLClassifierLocalResult& _internal_results(int index) const;
-  ::protobuf::mozilla::dom::URLClassifierLocalResult* _internal_add_results();
+  const ::protobuf::mozilla::dom::URLClassifierLocalResult& _internal_a_results(int index) const;
+  ::protobuf::mozilla::dom::URLClassifierLocalResult* _internal_add_a_results();
   public:
-  const ::protobuf::mozilla::dom::URLClassifierLocalResult& results(int index) const;
-  ::protobuf::mozilla::dom::URLClassifierLocalResult* add_results();
+  const ::protobuf::mozilla::dom::URLClassifierLocalResult& a_results(int index) const;
+  ::protobuf::mozilla::dom::URLClassifierLocalResult* add_a_results();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::URLClassifierLocalResult >&
-      results() const;
+      a_results() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__)
  private:
@@ -205,7 +205,7 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::URLClassifierLocalResult > results_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::URLClassifierLocalResult > a_results_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -346,41 +346,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// repeated .protobuf.mozilla.dom.URLClassifierLocalResult results = 1;
-inline int Msg___delete__::_internal_results_size() const {
-  return _impl_.results_.size();
+// repeated .protobuf.mozilla.dom.URLClassifierLocalResult a_results = 1;
+inline int Msg___delete__::_internal_a_results_size() const {
+  return _impl_.a_results_.size();
 }
-inline int Msg___delete__::results_size() const {
-  return _internal_results_size();
+inline int Msg___delete__::a_results_size() const {
+  return _internal_a_results_size();
 }
-inline ::protobuf::mozilla::dom::URLClassifierLocalResult* Msg___delete__::mutable_results(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.results)
-  return _impl_.results_.Mutable(index);
+inline ::protobuf::mozilla::dom::URLClassifierLocalResult* Msg___delete__::mutable_a_results(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.a_results)
+  return _impl_.a_results_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::URLClassifierLocalResult >*
-Msg___delete__::mutable_results() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.results)
-  return &_impl_.results_;
+Msg___delete__::mutable_a_results() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.a_results)
+  return &_impl_.a_results_;
 }
-inline const ::protobuf::mozilla::dom::URLClassifierLocalResult& Msg___delete__::_internal_results(int index) const {
-  return _impl_.results_.Get(index);
+inline const ::protobuf::mozilla::dom::URLClassifierLocalResult& Msg___delete__::_internal_a_results(int index) const {
+  return _impl_.a_results_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::URLClassifierLocalResult& Msg___delete__::results(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.results)
-  return _internal_results(index);
+inline const ::protobuf::mozilla::dom::URLClassifierLocalResult& Msg___delete__::a_results(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.a_results)
+  return _internal_a_results(index);
 }
-inline ::protobuf::mozilla::dom::URLClassifierLocalResult* Msg___delete__::_internal_add_results() {
-  return _impl_.results_.Add();
+inline ::protobuf::mozilla::dom::URLClassifierLocalResult* Msg___delete__::_internal_add_a_results() {
+  return _impl_.a_results_.Add();
 }
-inline ::protobuf::mozilla::dom::URLClassifierLocalResult* Msg___delete__::add_results() {
-  ::protobuf::mozilla::dom::URLClassifierLocalResult* _add = _internal_add_results();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.results)
+inline ::protobuf::mozilla::dom::URLClassifierLocalResult* Msg___delete__::add_a_results() {
+  ::protobuf::mozilla::dom::URLClassifierLocalResult* _add = _internal_add_a_results();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.a_results)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::URLClassifierLocalResult >&
-Msg___delete__::results() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.results)
-  return _impl_.results_;
+Msg___delete__::a_results() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PURLClassifierLocalByName.Msg___delete__.a_results)
+  return _impl_.a_results_;
 }
 
 // -------------------------------------------------------------------

@@ -21,64 +21,64 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message ServiceWorkerData {
-  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor descriptor = 1;
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor registrationDescriptor = 2;
-  required bytes cacheName = 3;
-  required uint32 loadFlags = 4;
-  required bytes id = 5;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+  required bytes a_cacheName = 3;
+  required uint32 a_loadFlags = 4;
+  required bytes a_id = 5;
 }
 
 message OptionalServiceWorkerData {
   oneof content {
-    bytes mVvoid_t = 1;
-    protobuf.mozilla.dom.ServiceWorkerData mVServiceWorkerData = 2;
+    bytes a_mVvoid_t = 1;
+    protobuf.mozilla.dom.ServiceWorkerData a_mVServiceWorkerData = 2;
   }
 }
 
 message RemoteWorkerData {
-  required bytes originalScriptURL = 1;
-  required protobuf.mozilla.ipc.URIParams baseScriptURL = 2;
-  required protobuf.mozilla.ipc.URIParams resolvedScriptURL = 3;
-  required bytes workerOptions = 4;
-  required protobuf.mozilla.ipc.PrincipalInfo loadingPrincipalInfo = 5;
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 6;
-  required protobuf.mozilla.ipc.PrincipalInfo partitionedPrincipalInfo = 7;
-  required bool useRegularPrincipal = 8;
-  required bool usingStorageAccess = 9;
-  required protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 10;
-  required bytes domain = 11;
-  required bool isSecureContext = 12;
-  optional protobuf.mozilla.dom.IPCClientInfo clientInfo = 13;
-  required bytes referrerInfo = 14;
-  required bytes storageAccess = 15;
-  required bool isThirdPartyContext = 16;
-  required bool shouldResistFingerprinting = 17;
-  optional bytes overriddenFingerprintingSettings = 18;
-  required bool isOn3PCBExceptionList = 19;
-  required bytes originTrials = 20;
-  required protobuf.mozilla.dom.OptionalServiceWorkerData serviceWorkerData = 21;
-  required bytes agentClusterId = 22;
-  required bytes remoteType = 23;
+  required bytes a_originalScriptURL = 1;
+  required protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+  required protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+  required bytes a_workerOptions = 4;
+  required protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+  required protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+  required bool a_useRegularPrincipal = 8;
+  required bool a_usingStorageAccess = 9;
+  required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+  required bytes a_domain = 11;
+  required bool a_isSecureContext = 12;
+  optional protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
+  required bytes a_referrerInfo = 14;
+  required bytes a_storageAccess = 15;
+  required bool a_isThirdPartyContext = 16;
+  required bool a_shouldResistFingerprinting = 17;
+  optional bytes a_overriddenFingerprintingSettings = 18;
+  required bool a_isOn3PCBExceptionList = 19;
+  required bytes a_originTrials = 20;
+  required protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+  required bytes a_agentClusterId = 22;
+  required bytes a_remoteType = 23;
 }
 
 message ErrorDataNote {
-  required uint32 lineNumber = 1;
-  required uint32 columnNumber = 2;
-  required bytes message = 3;
-  required bytes filename = 4;
+  required uint32 a_lineNumber = 1;
+  required uint32 a_columnNumber = 2;
+  required bytes a_message = 3;
+  required bytes a_filename = 4;
 }
 
 message ErrorData {
-  required bool isWarning = 1;
-  required uint32 lineNumber = 2;
-  required uint32 columnNumber = 3;
-  required bytes message = 4;
-  required bytes filename = 5;
-  repeated protobuf.mozilla.dom.ErrorDataNote notes = 6;
+  required bool a_isWarning = 1;
+  required uint32 a_lineNumber = 2;
+  required uint32 a_columnNumber = 3;
+  required bytes a_message = 4;
+  required bytes a_filename = 5;
+  repeated protobuf.mozilla.dom.ErrorDataNote a_notes = 6;
 }
 
 message CSPViolation {
-  required bytes json = 1;
+  required bytes a_json = 1;
 }
 
 message ErrorMismatchOptions {
@@ -86,28 +86,28 @@ message ErrorMismatchOptions {
 
 message ErrorValue {
   oneof content {
-    bytes mVnsresult = 1;
-    protobuf.mozilla.dom.ErrorData mVErrorData = 2;
-    protobuf.mozilla.dom.CSPViolation mVCSPViolation = 3;
-    protobuf.mozilla.dom.ErrorMismatchOptions mVErrorMismatchOptions = 4;
-    bytes mVvoid_t = 5;
+    bytes a_mVnsresult = 1;
+    protobuf.mozilla.dom.ErrorData a_mVErrorData = 2;
+    protobuf.mozilla.dom.CSPViolation a_mVCSPViolation = 3;
+    protobuf.mozilla.dom.ErrorMismatchOptions a_mVErrorMismatchOptions = 4;
+    bytes a_mVvoid_t = 5;
   }
 }
 
 message RemoteWorkerDebuggerInfo {
-  required bool isChrome = 1;
-  required uint32 type = 2;
-  required bytes url = 3;
-  required uint64 windowID = 4;
-  required bytes principal = 5;
-  required uint64 serviceWorkerID = 6;
-  required bytes Id = 7;
-  required bytes name = 8;
-  required bytes parentId = 9;
+  required bool a_isChrome = 1;
+  required uint32 a_type = 2;
+  required bytes a_url = 3;
+  required uint64 a_windowID = 4;
+  required bytes a_principal = 5;
+  required uint64 a_serviceWorkerID = 6;
+  required bytes a_Id = 7;
+  required bytes a_name = 8;
+  required bytes a_parentId = 9;
 }
 
 message RemoteWorkerDebuggerErrorInfo {
-  required bytes fileName = 1;
-  required uint32 lineNo = 2;
-  required bytes message = 3;
+  required bytes a_fileName = 1;
+  required uint32 a_lineNo = 2;
+  required bytes a_message = 3;
 }

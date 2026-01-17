@@ -22,22 +22,22 @@ message Reply___delete__ {
 }
 
 message Msg_AddIPOverride {
-  required bytes aHost = 1;
-  required bytes aIPLiteral = 2;
+  required bytes a_aHost = 1;
+  required bytes a_aIPLiteral = 2;
 }
 
 message Msg_AddHTTPSRecordOverride {
-  required bytes aHost = 1;
-  repeated uint32 aData = 2;
+  required bytes a_aHost = 1;
+  repeated uint32 a_aData = 2;
 }
 
 message Msg_SetCnameOverride {
-  required bytes aHost = 1;
-  required bytes aCNAME = 2;
+  required bytes a_aHost = 1;
+  required bytes a_aCNAME = 2;
 }
 
 message Msg_ClearHostOverride {
-  required bytes aHost = 1;
+  required bytes a_aHost = 1;
 }
 
 message Msg_ClearOverrides {

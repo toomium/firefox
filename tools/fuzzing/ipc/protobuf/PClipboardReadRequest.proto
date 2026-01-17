@@ -19,19 +19,19 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_GetData {
-  repeated bytes aFlavors = 1;
+  repeated bytes a_aFlavors = 1;
 }
 
 message Reply_GetData {
-  required protobuf.mozilla.dom.IPCTransferableDataOrError aTransferableData = 1;
+  required protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
 }
 
 message Msg_GetDataSync {
-  repeated bytes aFlavors = 1;
+  repeated bytes a_aFlavors = 1;
 }
 
 message Reply_GetDataSync {
-  required protobuf.mozilla.dom.IPCTransferableDataOrError aTransferableData = 1;
+  required protobuf.mozilla.dom.IPCTransferableDataOrError a_aTransferableData = 1;
 }
 
 message Msg___delete__ {

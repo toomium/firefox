@@ -73,7 +73,7 @@ PROTOBUF_CONSTEXPR Msg_PChromiumCDMConstructor::Msg_PChromiumCDMConstructor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.akeysystem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_akeysystem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_PChromiumCDMConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PChromiumCDMConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -701,7 +701,7 @@ std::string Reply_PGMPVideoEncoderConstructor::GetTypeName() const {
 class Msg_PChromiumCDMConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PChromiumCDMConstructor>()._impl_._has_bits_);
-  static void set_has_akeysystem(HasBits* has_bits) {
+  static void set_has_a_akeysystem(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -721,15 +721,15 @@ Msg_PChromiumCDMConstructor::Msg_PChromiumCDMConstructor(const Msg_PChromiumCDMC
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.akeysystem_){}};
+    , decltype(_impl_.a_akeysystem_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.akeysystem_.InitDefault();
+  _impl_.a_akeysystem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.akeysystem_.Set("", GetArenaForAllocation());
+    _impl_.a_akeysystem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_akeysystem()) {
-    _this->_impl_.akeysystem_.Set(from._internal_akeysystem(), 
+  if (from._internal_has_a_akeysystem()) {
+    _this->_impl_.a_akeysystem_.Set(from._internal_a_akeysystem(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor)
@@ -742,11 +742,11 @@ inline void Msg_PChromiumCDMConstructor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.akeysystem_){}
+    , decltype(_impl_.a_akeysystem_){}
   };
-  _impl_.akeysystem_.InitDefault();
+  _impl_.a_akeysystem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.akeysystem_.Set("", GetArenaForAllocation());
+    _impl_.a_akeysystem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -761,7 +761,7 @@ Msg_PChromiumCDMConstructor::~Msg_PChromiumCDMConstructor() {
 
 inline void Msg_PChromiumCDMConstructor::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.akeysystem_.Destroy();
+  _impl_.a_akeysystem_.Destroy();
 }
 
 void Msg_PChromiumCDMConstructor::SetCachedSize(int size) const {
@@ -776,7 +776,7 @@ void Msg_PChromiumCDMConstructor::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.akeysystem_.ClearNonDefaultToEmpty();
+    _impl_.a_akeysystem_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -789,10 +789,10 @@ const char* Msg_PChromiumCDMConstructor::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aKeySystem = 1;
+      // required bytes a_aKeySystem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_akeysystem();
+          auto str = _internal_mutable_a_akeysystem();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -829,10 +829,10 @@ uint8_t* Msg_PChromiumCDMConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aKeySystem = 1;
+  // required bytes a_aKeySystem = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_akeysystem(), target);
+        1, this->_internal_a_akeysystem(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -847,11 +847,11 @@ size_t Msg_PChromiumCDMConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor)
   size_t total_size = 0;
 
-  // required bytes aKeySystem = 1;
-  if (_internal_has_akeysystem()) {
+  // required bytes a_aKeySystem = 1;
+  if (_internal_has_a_akeysystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_akeysystem());
+        this->_internal_a_akeysystem());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -878,8 +878,8 @@ void Msg_PChromiumCDMConstructor::MergeFrom(const Msg_PChromiumCDMConstructor& f
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_akeysystem()) {
-    _this->_internal_set_akeysystem(from._internal_akeysystem());
+  if (from._internal_has_a_akeysystem()) {
+    _this->_internal_set_a_akeysystem(from._internal_a_akeysystem());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -903,8 +903,8 @@ void Msg_PChromiumCDMConstructor::InternalSwap(Msg_PChromiumCDMConstructor* othe
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.akeysystem_, lhs_arena,
-      &other->_impl_.akeysystem_, rhs_arena
+      &_impl_.a_akeysystem_, lhs_arena,
+      &other->_impl_.a_akeysystem_, rhs_arena
   );
 }
 

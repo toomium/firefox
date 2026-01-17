@@ -213,95 +213,95 @@ class ServiceWorkerData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCacheNameFieldNumber = 3,
-    kIdFieldNumber = 5,
-    kDescriptorFieldNumber = 1,
-    kRegistrationDescriptorFieldNumber = 2,
-    kLoadFlagsFieldNumber = 4,
+    kACacheNameFieldNumber = 3,
+    kAIdFieldNumber = 5,
+    kADescriptorFieldNumber = 1,
+    kARegistrationDescriptorFieldNumber = 2,
+    kALoadFlagsFieldNumber = 4,
   };
-  // required bytes cacheName = 3;
-  bool has_cachename() const;
+  // required bytes a_cacheName = 3;
+  bool has_a_cachename() const;
   private:
-  bool _internal_has_cachename() const;
+  bool _internal_has_a_cachename() const;
   public:
-  void clear_cachename();
-  const std::string& cachename() const;
+  void clear_a_cachename();
+  const std::string& a_cachename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_cachename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_cachename();
-  PROTOBUF_NODISCARD std::string* release_cachename();
-  void set_allocated_cachename(std::string* cachename);
+  void set_a_cachename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_cachename();
+  PROTOBUF_NODISCARD std::string* release_a_cachename();
+  void set_allocated_a_cachename(std::string* a_cachename);
   private:
-  const std::string& _internal_cachename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cachename(const std::string& value);
-  std::string* _internal_mutable_cachename();
+  const std::string& _internal_a_cachename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_cachename(const std::string& value);
+  std::string* _internal_mutable_a_cachename();
   public:
 
-  // required bytes id = 5;
-  bool has_id() const;
+  // required bytes a_id = 5;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
-  // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor descriptor = 1;
-  bool has_descriptor() const;
+  // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+  bool has_a_descriptor() const;
   private:
-  bool _internal_has_descriptor() const;
+  bool _internal_has_a_descriptor() const;
   public:
-  void clear_descriptor();
-  const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& descriptor() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* release_descriptor();
-  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* mutable_descriptor();
-  void set_allocated_descriptor(::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* descriptor);
+  void clear_a_descriptor();
+  const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& a_descriptor() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* release_a_descriptor();
+  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* mutable_a_descriptor();
+  void set_allocated_a_descriptor(::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_descriptor);
   private:
-  const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& _internal_descriptor() const;
-  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* _internal_mutable_descriptor();
+  const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& _internal_a_descriptor() const;
+  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* _internal_mutable_a_descriptor();
   public:
-  void unsafe_arena_set_allocated_descriptor(
-      ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* descriptor);
-  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_descriptor();
+  void unsafe_arena_set_allocated_a_descriptor(
+      ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_descriptor);
+  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_a_descriptor();
 
-  // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor registrationDescriptor = 2;
-  bool has_registrationdescriptor() const;
+  // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+  bool has_a_registrationdescriptor() const;
   private:
-  bool _internal_has_registrationdescriptor() const;
+  bool _internal_has_a_registrationdescriptor() const;
   public:
-  void clear_registrationdescriptor();
-  const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& registrationdescriptor() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* release_registrationdescriptor();
-  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* mutable_registrationdescriptor();
-  void set_allocated_registrationdescriptor(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* registrationdescriptor);
+  void clear_a_registrationdescriptor();
+  const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& a_registrationdescriptor() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* release_a_registrationdescriptor();
+  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* mutable_a_registrationdescriptor();
+  void set_allocated_a_registrationdescriptor(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_registrationdescriptor);
   private:
-  const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& _internal_registrationdescriptor() const;
-  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* _internal_mutable_registrationdescriptor();
+  const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& _internal_a_registrationdescriptor() const;
+  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* _internal_mutable_a_registrationdescriptor();
   public:
-  void unsafe_arena_set_allocated_registrationdescriptor(
-      ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* registrationdescriptor);
-  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* unsafe_arena_release_registrationdescriptor();
+  void unsafe_arena_set_allocated_a_registrationdescriptor(
+      ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_registrationdescriptor);
+  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* unsafe_arena_release_a_registrationdescriptor();
 
-  // required uint32 loadFlags = 4;
-  bool has_loadflags() const;
+  // required uint32 a_loadFlags = 4;
+  bool has_a_loadflags() const;
   private:
-  bool _internal_has_loadflags() const;
+  bool _internal_has_a_loadflags() const;
   public:
-  void clear_loadflags();
-  uint32_t loadflags() const;
-  void set_loadflags(uint32_t value);
+  void clear_a_loadflags();
+  uint32_t a_loadflags() const;
+  void set_a_loadflags(uint32_t value);
   private:
-  uint32_t _internal_loadflags() const;
-  void _internal_set_loadflags(uint32_t value);
+  uint32_t _internal_a_loadflags() const;
+  void _internal_set_a_loadflags(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ServiceWorkerData)
@@ -317,11 +317,11 @@ class ServiceWorkerData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cachename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* descriptor_;
-    ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* registrationdescriptor_;
-    uint32_t loadflags_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_cachename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
+    ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_descriptor_;
+    ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_registrationdescriptor_;
+    uint32_t a_loadflags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -370,8 +370,8 @@ class OptionalServiceWorkerData final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVvoidT = 1,
-    kMVServiceWorkerData = 2,
+    kAMVvoidT = 1,
+    kAMVServiceWorkerData = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -444,52 +444,52 @@ class OptionalServiceWorkerData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVvoidTFieldNumber = 1,
-    kMVServiceWorkerDataFieldNumber = 2,
+    kAMVvoidTFieldNumber = 1,
+    kAMVServiceWorkerDataFieldNumber = 2,
   };
-  // bytes mVvoid_t = 1;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 1;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
-  // .protobuf.mozilla.dom.ServiceWorkerData mVServiceWorkerData = 2;
-  bool has_mvserviceworkerdata() const;
+  // .protobuf.mozilla.dom.ServiceWorkerData a_mVServiceWorkerData = 2;
+  bool has_a_mvserviceworkerdata() const;
   private:
-  bool _internal_has_mvserviceworkerdata() const;
+  bool _internal_has_a_mvserviceworkerdata() const;
   public:
-  void clear_mvserviceworkerdata();
-  const ::protobuf::mozilla::dom::ServiceWorkerData& mvserviceworkerdata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ServiceWorkerData* release_mvserviceworkerdata();
-  ::protobuf::mozilla::dom::ServiceWorkerData* mutable_mvserviceworkerdata();
-  void set_allocated_mvserviceworkerdata(::protobuf::mozilla::dom::ServiceWorkerData* mvserviceworkerdata);
+  void clear_a_mvserviceworkerdata();
+  const ::protobuf::mozilla::dom::ServiceWorkerData& a_mvserviceworkerdata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ServiceWorkerData* release_a_mvserviceworkerdata();
+  ::protobuf::mozilla::dom::ServiceWorkerData* mutable_a_mvserviceworkerdata();
+  void set_allocated_a_mvserviceworkerdata(::protobuf::mozilla::dom::ServiceWorkerData* a_mvserviceworkerdata);
   private:
-  const ::protobuf::mozilla::dom::ServiceWorkerData& _internal_mvserviceworkerdata() const;
-  ::protobuf::mozilla::dom::ServiceWorkerData* _internal_mutable_mvserviceworkerdata();
+  const ::protobuf::mozilla::dom::ServiceWorkerData& _internal_a_mvserviceworkerdata() const;
+  ::protobuf::mozilla::dom::ServiceWorkerData* _internal_mutable_a_mvserviceworkerdata();
   public:
-  void unsafe_arena_set_allocated_mvserviceworkerdata(
-      ::protobuf::mozilla::dom::ServiceWorkerData* mvserviceworkerdata);
-  ::protobuf::mozilla::dom::ServiceWorkerData* unsafe_arena_release_mvserviceworkerdata();
+  void unsafe_arena_set_allocated_a_mvserviceworkerdata(
+      ::protobuf::mozilla::dom::ServiceWorkerData* a_mvserviceworkerdata);
+  ::protobuf::mozilla::dom::ServiceWorkerData* unsafe_arena_release_a_mvserviceworkerdata();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.OptionalServiceWorkerData)
  private:
   class _Internal;
-  void set_has_mvvoid_t();
-  void set_has_mvserviceworkerdata();
+  void set_has_a_mvvoid_t();
+  void set_has_a_mvserviceworkerdata();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -501,8 +501,8 @@ class OptionalServiceWorkerData final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
-      ::protobuf::mozilla::dom::ServiceWorkerData* mvserviceworkerdata_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
+      ::protobuf::mozilla::dom::ServiceWorkerData* a_mvserviceworkerdata_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -623,412 +623,412 @@ class RemoteWorkerData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOriginalScriptURLFieldNumber = 1,
-    kWorkerOptionsFieldNumber = 4,
-    kDomainFieldNumber = 11,
-    kReferrerInfoFieldNumber = 14,
-    kStorageAccessFieldNumber = 15,
-    kOverriddenFingerprintingSettingsFieldNumber = 18,
-    kOriginTrialsFieldNumber = 20,
-    kAgentClusterIdFieldNumber = 22,
-    kRemoteTypeFieldNumber = 23,
-    kBaseScriptURLFieldNumber = 2,
-    kResolvedScriptURLFieldNumber = 3,
-    kLoadingPrincipalInfoFieldNumber = 5,
-    kPrincipalInfoFieldNumber = 6,
-    kPartitionedPrincipalInfoFieldNumber = 7,
-    kCookieJarSettingsFieldNumber = 10,
-    kClientInfoFieldNumber = 13,
-    kServiceWorkerDataFieldNumber = 21,
-    kUseRegularPrincipalFieldNumber = 8,
-    kUsingStorageAccessFieldNumber = 9,
-    kIsSecureContextFieldNumber = 12,
-    kIsThirdPartyContextFieldNumber = 16,
-    kShouldResistFingerprintingFieldNumber = 17,
-    kIsOn3PCBExceptionListFieldNumber = 19,
+    kAOriginalScriptURLFieldNumber = 1,
+    kAWorkerOptionsFieldNumber = 4,
+    kADomainFieldNumber = 11,
+    kAReferrerInfoFieldNumber = 14,
+    kAStorageAccessFieldNumber = 15,
+    kAOverriddenFingerprintingSettingsFieldNumber = 18,
+    kAOriginTrialsFieldNumber = 20,
+    kAAgentClusterIdFieldNumber = 22,
+    kARemoteTypeFieldNumber = 23,
+    kABaseScriptURLFieldNumber = 2,
+    kAResolvedScriptURLFieldNumber = 3,
+    kALoadingPrincipalInfoFieldNumber = 5,
+    kAPrincipalInfoFieldNumber = 6,
+    kAPartitionedPrincipalInfoFieldNumber = 7,
+    kACookieJarSettingsFieldNumber = 10,
+    kAClientInfoFieldNumber = 13,
+    kAServiceWorkerDataFieldNumber = 21,
+    kAUseRegularPrincipalFieldNumber = 8,
+    kAUsingStorageAccessFieldNumber = 9,
+    kAIsSecureContextFieldNumber = 12,
+    kAIsThirdPartyContextFieldNumber = 16,
+    kAShouldResistFingerprintingFieldNumber = 17,
+    kAIsOn3PCBExceptionListFieldNumber = 19,
   };
-  // required bytes originalScriptURL = 1;
-  bool has_originalscripturl() const;
+  // required bytes a_originalScriptURL = 1;
+  bool has_a_originalscripturl() const;
   private:
-  bool _internal_has_originalscripturl() const;
+  bool _internal_has_a_originalscripturl() const;
   public:
-  void clear_originalscripturl();
-  const std::string& originalscripturl() const;
+  void clear_a_originalscripturl();
+  const std::string& a_originalscripturl() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originalscripturl(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originalscripturl();
-  PROTOBUF_NODISCARD std::string* release_originalscripturl();
-  void set_allocated_originalscripturl(std::string* originalscripturl);
+  void set_a_originalscripturl(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originalscripturl();
+  PROTOBUF_NODISCARD std::string* release_a_originalscripturl();
+  void set_allocated_a_originalscripturl(std::string* a_originalscripturl);
   private:
-  const std::string& _internal_originalscripturl() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originalscripturl(const std::string& value);
-  std::string* _internal_mutable_originalscripturl();
+  const std::string& _internal_a_originalscripturl() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originalscripturl(const std::string& value);
+  std::string* _internal_mutable_a_originalscripturl();
   public:
 
-  // required bytes workerOptions = 4;
-  bool has_workeroptions() const;
+  // required bytes a_workerOptions = 4;
+  bool has_a_workeroptions() const;
   private:
-  bool _internal_has_workeroptions() const;
+  bool _internal_has_a_workeroptions() const;
   public:
-  void clear_workeroptions();
-  const std::string& workeroptions() const;
+  void clear_a_workeroptions();
+  const std::string& a_workeroptions() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_workeroptions(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_workeroptions();
-  PROTOBUF_NODISCARD std::string* release_workeroptions();
-  void set_allocated_workeroptions(std::string* workeroptions);
+  void set_a_workeroptions(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_workeroptions();
+  PROTOBUF_NODISCARD std::string* release_a_workeroptions();
+  void set_allocated_a_workeroptions(std::string* a_workeroptions);
   private:
-  const std::string& _internal_workeroptions() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_workeroptions(const std::string& value);
-  std::string* _internal_mutable_workeroptions();
+  const std::string& _internal_a_workeroptions() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_workeroptions(const std::string& value);
+  std::string* _internal_mutable_a_workeroptions();
   public:
 
-  // required bytes domain = 11;
-  bool has_domain() const;
+  // required bytes a_domain = 11;
+  bool has_a_domain() const;
   private:
-  bool _internal_has_domain() const;
+  bool _internal_has_a_domain() const;
   public:
-  void clear_domain();
-  const std::string& domain() const;
+  void clear_a_domain();
+  const std::string& a_domain() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_domain(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_domain();
-  PROTOBUF_NODISCARD std::string* release_domain();
-  void set_allocated_domain(std::string* domain);
+  void set_a_domain(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_domain();
+  PROTOBUF_NODISCARD std::string* release_a_domain();
+  void set_allocated_a_domain(std::string* a_domain);
   private:
-  const std::string& _internal_domain() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_domain(const std::string& value);
-  std::string* _internal_mutable_domain();
+  const std::string& _internal_a_domain() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_domain(const std::string& value);
+  std::string* _internal_mutable_a_domain();
   public:
 
-  // required bytes referrerInfo = 14;
-  bool has_referrerinfo() const;
+  // required bytes a_referrerInfo = 14;
+  bool has_a_referrerinfo() const;
   private:
-  bool _internal_has_referrerinfo() const;
+  bool _internal_has_a_referrerinfo() const;
   public:
-  void clear_referrerinfo();
-  const std::string& referrerinfo() const;
+  void clear_a_referrerinfo();
+  const std::string& a_referrerinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_referrerinfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_referrerinfo();
-  PROTOBUF_NODISCARD std::string* release_referrerinfo();
-  void set_allocated_referrerinfo(std::string* referrerinfo);
+  void set_a_referrerinfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_referrerinfo();
+  PROTOBUF_NODISCARD std::string* release_a_referrerinfo();
+  void set_allocated_a_referrerinfo(std::string* a_referrerinfo);
   private:
-  const std::string& _internal_referrerinfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_referrerinfo(const std::string& value);
-  std::string* _internal_mutable_referrerinfo();
+  const std::string& _internal_a_referrerinfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_referrerinfo(const std::string& value);
+  std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required bytes storageAccess = 15;
-  bool has_storageaccess() const;
+  // required bytes a_storageAccess = 15;
+  bool has_a_storageaccess() const;
   private:
-  bool _internal_has_storageaccess() const;
+  bool _internal_has_a_storageaccess() const;
   public:
-  void clear_storageaccess();
-  const std::string& storageaccess() const;
+  void clear_a_storageaccess();
+  const std::string& a_storageaccess() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_storageaccess(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_storageaccess();
-  PROTOBUF_NODISCARD std::string* release_storageaccess();
-  void set_allocated_storageaccess(std::string* storageaccess);
+  void set_a_storageaccess(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_storageaccess();
+  PROTOBUF_NODISCARD std::string* release_a_storageaccess();
+  void set_allocated_a_storageaccess(std::string* a_storageaccess);
   private:
-  const std::string& _internal_storageaccess() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_storageaccess(const std::string& value);
-  std::string* _internal_mutable_storageaccess();
+  const std::string& _internal_a_storageaccess() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_storageaccess(const std::string& value);
+  std::string* _internal_mutable_a_storageaccess();
   public:
 
-  // optional bytes overriddenFingerprintingSettings = 18;
-  bool has_overriddenfingerprintingsettings() const;
+  // optional bytes a_overriddenFingerprintingSettings = 18;
+  bool has_a_overriddenfingerprintingsettings() const;
   private:
-  bool _internal_has_overriddenfingerprintingsettings() const;
+  bool _internal_has_a_overriddenfingerprintingsettings() const;
   public:
-  void clear_overriddenfingerprintingsettings();
-  const std::string& overriddenfingerprintingsettings() const;
+  void clear_a_overriddenfingerprintingsettings();
+  const std::string& a_overriddenfingerprintingsettings() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_overriddenfingerprintingsettings(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_overriddenfingerprintingsettings();
-  PROTOBUF_NODISCARD std::string* release_overriddenfingerprintingsettings();
-  void set_allocated_overriddenfingerprintingsettings(std::string* overriddenfingerprintingsettings);
+  void set_a_overriddenfingerprintingsettings(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_overriddenfingerprintingsettings();
+  PROTOBUF_NODISCARD std::string* release_a_overriddenfingerprintingsettings();
+  void set_allocated_a_overriddenfingerprintingsettings(std::string* a_overriddenfingerprintingsettings);
   private:
-  const std::string& _internal_overriddenfingerprintingsettings() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_overriddenfingerprintingsettings(const std::string& value);
-  std::string* _internal_mutable_overriddenfingerprintingsettings();
+  const std::string& _internal_a_overriddenfingerprintingsettings() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_overriddenfingerprintingsettings(const std::string& value);
+  std::string* _internal_mutable_a_overriddenfingerprintingsettings();
   public:
 
-  // required bytes originTrials = 20;
-  bool has_origintrials() const;
+  // required bytes a_originTrials = 20;
+  bool has_a_origintrials() const;
   private:
-  bool _internal_has_origintrials() const;
+  bool _internal_has_a_origintrials() const;
   public:
-  void clear_origintrials();
-  const std::string& origintrials() const;
+  void clear_a_origintrials();
+  const std::string& a_origintrials() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_origintrials(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_origintrials();
-  PROTOBUF_NODISCARD std::string* release_origintrials();
-  void set_allocated_origintrials(std::string* origintrials);
+  void set_a_origintrials(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_origintrials();
+  PROTOBUF_NODISCARD std::string* release_a_origintrials();
+  void set_allocated_a_origintrials(std::string* a_origintrials);
   private:
-  const std::string& _internal_origintrials() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_origintrials(const std::string& value);
-  std::string* _internal_mutable_origintrials();
+  const std::string& _internal_a_origintrials() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_origintrials(const std::string& value);
+  std::string* _internal_mutable_a_origintrials();
   public:
 
-  // required bytes agentClusterId = 22;
-  bool has_agentclusterid() const;
+  // required bytes a_agentClusterId = 22;
+  bool has_a_agentclusterid() const;
   private:
-  bool _internal_has_agentclusterid() const;
+  bool _internal_has_a_agentclusterid() const;
   public:
-  void clear_agentclusterid();
-  const std::string& agentclusterid() const;
+  void clear_a_agentclusterid();
+  const std::string& a_agentclusterid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_agentclusterid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_agentclusterid();
-  PROTOBUF_NODISCARD std::string* release_agentclusterid();
-  void set_allocated_agentclusterid(std::string* agentclusterid);
+  void set_a_agentclusterid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_agentclusterid();
+  PROTOBUF_NODISCARD std::string* release_a_agentclusterid();
+  void set_allocated_a_agentclusterid(std::string* a_agentclusterid);
   private:
-  const std::string& _internal_agentclusterid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_agentclusterid(const std::string& value);
-  std::string* _internal_mutable_agentclusterid();
+  const std::string& _internal_a_agentclusterid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_agentclusterid(const std::string& value);
+  std::string* _internal_mutable_a_agentclusterid();
   public:
 
-  // required bytes remoteType = 23;
-  bool has_remotetype() const;
+  // required bytes a_remoteType = 23;
+  bool has_a_remotetype() const;
   private:
-  bool _internal_has_remotetype() const;
+  bool _internal_has_a_remotetype() const;
   public:
-  void clear_remotetype();
-  const std::string& remotetype() const;
+  void clear_a_remotetype();
+  const std::string& a_remotetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_remotetype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_remotetype();
-  PROTOBUF_NODISCARD std::string* release_remotetype();
-  void set_allocated_remotetype(std::string* remotetype);
+  void set_a_remotetype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_remotetype();
+  PROTOBUF_NODISCARD std::string* release_a_remotetype();
+  void set_allocated_a_remotetype(std::string* a_remotetype);
   private:
-  const std::string& _internal_remotetype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_remotetype(const std::string& value);
-  std::string* _internal_mutable_remotetype();
+  const std::string& _internal_a_remotetype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_remotetype(const std::string& value);
+  std::string* _internal_mutable_a_remotetype();
   public:
 
-  // required .protobuf.mozilla.ipc.URIParams baseScriptURL = 2;
-  bool has_basescripturl() const;
+  // required .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+  bool has_a_basescripturl() const;
   private:
-  bool _internal_has_basescripturl() const;
+  bool _internal_has_a_basescripturl() const;
   public:
-  void clear_basescripturl();
-  const ::protobuf::mozilla::ipc::URIParams& basescripturl() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::URIParams* release_basescripturl();
-  ::protobuf::mozilla::ipc::URIParams* mutable_basescripturl();
-  void set_allocated_basescripturl(::protobuf::mozilla::ipc::URIParams* basescripturl);
+  void clear_a_basescripturl();
+  const ::protobuf::mozilla::ipc::URIParams& a_basescripturl() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::URIParams* release_a_basescripturl();
+  ::protobuf::mozilla::ipc::URIParams* mutable_a_basescripturl();
+  void set_allocated_a_basescripturl(::protobuf::mozilla::ipc::URIParams* a_basescripturl);
   private:
-  const ::protobuf::mozilla::ipc::URIParams& _internal_basescripturl() const;
-  ::protobuf::mozilla::ipc::URIParams* _internal_mutable_basescripturl();
+  const ::protobuf::mozilla::ipc::URIParams& _internal_a_basescripturl() const;
+  ::protobuf::mozilla::ipc::URIParams* _internal_mutable_a_basescripturl();
   public:
-  void unsafe_arena_set_allocated_basescripturl(
-      ::protobuf::mozilla::ipc::URIParams* basescripturl);
-  ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_basescripturl();
+  void unsafe_arena_set_allocated_a_basescripturl(
+      ::protobuf::mozilla::ipc::URIParams* a_basescripturl);
+  ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_a_basescripturl();
 
-  // required .protobuf.mozilla.ipc.URIParams resolvedScriptURL = 3;
-  bool has_resolvedscripturl() const;
+  // required .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+  bool has_a_resolvedscripturl() const;
   private:
-  bool _internal_has_resolvedscripturl() const;
+  bool _internal_has_a_resolvedscripturl() const;
   public:
-  void clear_resolvedscripturl();
-  const ::protobuf::mozilla::ipc::URIParams& resolvedscripturl() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::URIParams* release_resolvedscripturl();
-  ::protobuf::mozilla::ipc::URIParams* mutable_resolvedscripturl();
-  void set_allocated_resolvedscripturl(::protobuf::mozilla::ipc::URIParams* resolvedscripturl);
+  void clear_a_resolvedscripturl();
+  const ::protobuf::mozilla::ipc::URIParams& a_resolvedscripturl() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::URIParams* release_a_resolvedscripturl();
+  ::protobuf::mozilla::ipc::URIParams* mutable_a_resolvedscripturl();
+  void set_allocated_a_resolvedscripturl(::protobuf::mozilla::ipc::URIParams* a_resolvedscripturl);
   private:
-  const ::protobuf::mozilla::ipc::URIParams& _internal_resolvedscripturl() const;
-  ::protobuf::mozilla::ipc::URIParams* _internal_mutable_resolvedscripturl();
+  const ::protobuf::mozilla::ipc::URIParams& _internal_a_resolvedscripturl() const;
+  ::protobuf::mozilla::ipc::URIParams* _internal_mutable_a_resolvedscripturl();
   public:
-  void unsafe_arena_set_allocated_resolvedscripturl(
-      ::protobuf::mozilla::ipc::URIParams* resolvedscripturl);
-  ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_resolvedscripturl();
+  void unsafe_arena_set_allocated_a_resolvedscripturl(
+      ::protobuf::mozilla::ipc::URIParams* a_resolvedscripturl);
+  ::protobuf::mozilla::ipc::URIParams* unsafe_arena_release_a_resolvedscripturl();
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo loadingPrincipalInfo = 5;
-  bool has_loadingprincipalinfo() const;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+  bool has_a_loadingprincipalinfo() const;
   private:
-  bool _internal_has_loadingprincipalinfo() const;
+  bool _internal_has_a_loadingprincipalinfo() const;
   public:
-  void clear_loadingprincipalinfo();
-  const ::protobuf::mozilla::ipc::PrincipalInfo& loadingprincipalinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_loadingprincipalinfo();
-  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_loadingprincipalinfo();
-  void set_allocated_loadingprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* loadingprincipalinfo);
+  void clear_a_loadingprincipalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& a_loadingprincipalinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_a_loadingprincipalinfo();
+  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_a_loadingprincipalinfo();
+  void set_allocated_a_loadingprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_loadingprincipalinfo);
   private:
-  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_loadingprincipalinfo() const;
-  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_loadingprincipalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_a_loadingprincipalinfo() const;
+  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_a_loadingprincipalinfo();
   public:
-  void unsafe_arena_set_allocated_loadingprincipalinfo(
-      ::protobuf::mozilla::ipc::PrincipalInfo* loadingprincipalinfo);
-  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_loadingprincipalinfo();
+  void unsafe_arena_set_allocated_a_loadingprincipalinfo(
+      ::protobuf::mozilla::ipc::PrincipalInfo* a_loadingprincipalinfo);
+  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_loadingprincipalinfo();
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo principalInfo = 6;
-  bool has_principalinfo() const;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+  bool has_a_principalinfo() const;
   private:
-  bool _internal_has_principalinfo() const;
+  bool _internal_has_a_principalinfo() const;
   public:
-  void clear_principalinfo();
-  const ::protobuf::mozilla::ipc::PrincipalInfo& principalinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_principalinfo();
-  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_principalinfo();
-  void set_allocated_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* principalinfo);
+  void clear_a_principalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& a_principalinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_a_principalinfo();
+  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_a_principalinfo();
+  void set_allocated_a_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   private:
-  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_principalinfo() const;
-  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_principalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_a_principalinfo() const;
+  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_a_principalinfo();
   public:
-  void unsafe_arena_set_allocated_principalinfo(
-      ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo);
-  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_principalinfo();
+  void unsafe_arena_set_allocated_a_principalinfo(
+      ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
+  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo partitionedPrincipalInfo = 7;
-  bool has_partitionedprincipalinfo() const;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+  bool has_a_partitionedprincipalinfo() const;
   private:
-  bool _internal_has_partitionedprincipalinfo() const;
+  bool _internal_has_a_partitionedprincipalinfo() const;
   public:
-  void clear_partitionedprincipalinfo();
-  const ::protobuf::mozilla::ipc::PrincipalInfo& partitionedprincipalinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_partitionedprincipalinfo();
-  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_partitionedprincipalinfo();
-  void set_allocated_partitionedprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* partitionedprincipalinfo);
+  void clear_a_partitionedprincipalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& a_partitionedprincipalinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_a_partitionedprincipalinfo();
+  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_a_partitionedprincipalinfo();
+  void set_allocated_a_partitionedprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_partitionedprincipalinfo);
   private:
-  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_partitionedprincipalinfo() const;
-  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_partitionedprincipalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_a_partitionedprincipalinfo() const;
+  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_a_partitionedprincipalinfo();
   public:
-  void unsafe_arena_set_allocated_partitionedprincipalinfo(
-      ::protobuf::mozilla::ipc::PrincipalInfo* partitionedprincipalinfo);
-  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_partitionedprincipalinfo();
+  void unsafe_arena_set_allocated_a_partitionedprincipalinfo(
+      ::protobuf::mozilla::ipc::PrincipalInfo* a_partitionedprincipalinfo);
+  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_partitionedprincipalinfo();
 
-  // required .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 10;
-  bool has_cookiejarsettings() const;
+  // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+  bool has_a_cookiejarsettings() const;
   private:
-  bool _internal_has_cookiejarsettings() const;
+  bool _internal_has_a_cookiejarsettings() const;
   public:
-  void clear_cookiejarsettings();
-  const ::protobuf::mozilla::net::CookieJarSettingsArgs& cookiejarsettings() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieJarSettingsArgs* release_cookiejarsettings();
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* mutable_cookiejarsettings();
-  void set_allocated_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings);
+  void clear_a_cookiejarsettings();
+  const ::protobuf::mozilla::net::CookieJarSettingsArgs& a_cookiejarsettings() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::CookieJarSettingsArgs* release_a_cookiejarsettings();
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* mutable_a_cookiejarsettings();
+  void set_allocated_a_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   private:
-  const ::protobuf::mozilla::net::CookieJarSettingsArgs& _internal_cookiejarsettings() const;
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* _internal_mutable_cookiejarsettings();
+  const ::protobuf::mozilla::net::CookieJarSettingsArgs& _internal_a_cookiejarsettings() const;
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* _internal_mutable_a_cookiejarsettings();
   public:
-  void unsafe_arena_set_allocated_cookiejarsettings(
-      ::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings);
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_cookiejarsettings();
+  void unsafe_arena_set_allocated_a_cookiejarsettings(
+      ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // optional .protobuf.mozilla.dom.IPCClientInfo clientInfo = 13;
-  bool has_clientinfo() const;
+  // optional .protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
+  bool has_a_clientinfo() const;
   private:
-  bool _internal_has_clientinfo() const;
+  bool _internal_has_a_clientinfo() const;
   public:
-  void clear_clientinfo();
-  const ::protobuf::mozilla::dom::IPCClientInfo& clientinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCClientInfo* release_clientinfo();
-  ::protobuf::mozilla::dom::IPCClientInfo* mutable_clientinfo();
-  void set_allocated_clientinfo(::protobuf::mozilla::dom::IPCClientInfo* clientinfo);
+  void clear_a_clientinfo();
+  const ::protobuf::mozilla::dom::IPCClientInfo& a_clientinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCClientInfo* release_a_clientinfo();
+  ::protobuf::mozilla::dom::IPCClientInfo* mutable_a_clientinfo();
+  void set_allocated_a_clientinfo(::protobuf::mozilla::dom::IPCClientInfo* a_clientinfo);
   private:
-  const ::protobuf::mozilla::dom::IPCClientInfo& _internal_clientinfo() const;
-  ::protobuf::mozilla::dom::IPCClientInfo* _internal_mutable_clientinfo();
+  const ::protobuf::mozilla::dom::IPCClientInfo& _internal_a_clientinfo() const;
+  ::protobuf::mozilla::dom::IPCClientInfo* _internal_mutable_a_clientinfo();
   public:
-  void unsafe_arena_set_allocated_clientinfo(
-      ::protobuf::mozilla::dom::IPCClientInfo* clientinfo);
-  ::protobuf::mozilla::dom::IPCClientInfo* unsafe_arena_release_clientinfo();
+  void unsafe_arena_set_allocated_a_clientinfo(
+      ::protobuf::mozilla::dom::IPCClientInfo* a_clientinfo);
+  ::protobuf::mozilla::dom::IPCClientInfo* unsafe_arena_release_a_clientinfo();
 
-  // required .protobuf.mozilla.dom.OptionalServiceWorkerData serviceWorkerData = 21;
-  bool has_serviceworkerdata() const;
+  // required .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+  bool has_a_serviceworkerdata() const;
   private:
-  bool _internal_has_serviceworkerdata() const;
+  bool _internal_has_a_serviceworkerdata() const;
   public:
-  void clear_serviceworkerdata();
-  const ::protobuf::mozilla::dom::OptionalServiceWorkerData& serviceworkerdata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::OptionalServiceWorkerData* release_serviceworkerdata();
-  ::protobuf::mozilla::dom::OptionalServiceWorkerData* mutable_serviceworkerdata();
-  void set_allocated_serviceworkerdata(::protobuf::mozilla::dom::OptionalServiceWorkerData* serviceworkerdata);
+  void clear_a_serviceworkerdata();
+  const ::protobuf::mozilla::dom::OptionalServiceWorkerData& a_serviceworkerdata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::OptionalServiceWorkerData* release_a_serviceworkerdata();
+  ::protobuf::mozilla::dom::OptionalServiceWorkerData* mutable_a_serviceworkerdata();
+  void set_allocated_a_serviceworkerdata(::protobuf::mozilla::dom::OptionalServiceWorkerData* a_serviceworkerdata);
   private:
-  const ::protobuf::mozilla::dom::OptionalServiceWorkerData& _internal_serviceworkerdata() const;
-  ::protobuf::mozilla::dom::OptionalServiceWorkerData* _internal_mutable_serviceworkerdata();
+  const ::protobuf::mozilla::dom::OptionalServiceWorkerData& _internal_a_serviceworkerdata() const;
+  ::protobuf::mozilla::dom::OptionalServiceWorkerData* _internal_mutable_a_serviceworkerdata();
   public:
-  void unsafe_arena_set_allocated_serviceworkerdata(
-      ::protobuf::mozilla::dom::OptionalServiceWorkerData* serviceworkerdata);
-  ::protobuf::mozilla::dom::OptionalServiceWorkerData* unsafe_arena_release_serviceworkerdata();
+  void unsafe_arena_set_allocated_a_serviceworkerdata(
+      ::protobuf::mozilla::dom::OptionalServiceWorkerData* a_serviceworkerdata);
+  ::protobuf::mozilla::dom::OptionalServiceWorkerData* unsafe_arena_release_a_serviceworkerdata();
 
-  // required bool useRegularPrincipal = 8;
-  bool has_useregularprincipal() const;
+  // required bool a_useRegularPrincipal = 8;
+  bool has_a_useregularprincipal() const;
   private:
-  bool _internal_has_useregularprincipal() const;
+  bool _internal_has_a_useregularprincipal() const;
   public:
-  void clear_useregularprincipal();
-  bool useregularprincipal() const;
-  void set_useregularprincipal(bool value);
+  void clear_a_useregularprincipal();
+  bool a_useregularprincipal() const;
+  void set_a_useregularprincipal(bool value);
   private:
-  bool _internal_useregularprincipal() const;
-  void _internal_set_useregularprincipal(bool value);
-  public:
-
-  // required bool usingStorageAccess = 9;
-  bool has_usingstorageaccess() const;
-  private:
-  bool _internal_has_usingstorageaccess() const;
-  public:
-  void clear_usingstorageaccess();
-  bool usingstorageaccess() const;
-  void set_usingstorageaccess(bool value);
-  private:
-  bool _internal_usingstorageaccess() const;
-  void _internal_set_usingstorageaccess(bool value);
+  bool _internal_a_useregularprincipal() const;
+  void _internal_set_a_useregularprincipal(bool value);
   public:
 
-  // required bool isSecureContext = 12;
-  bool has_issecurecontext() const;
+  // required bool a_usingStorageAccess = 9;
+  bool has_a_usingstorageaccess() const;
   private:
-  bool _internal_has_issecurecontext() const;
+  bool _internal_has_a_usingstorageaccess() const;
   public:
-  void clear_issecurecontext();
-  bool issecurecontext() const;
-  void set_issecurecontext(bool value);
+  void clear_a_usingstorageaccess();
+  bool a_usingstorageaccess() const;
+  void set_a_usingstorageaccess(bool value);
   private:
-  bool _internal_issecurecontext() const;
-  void _internal_set_issecurecontext(bool value);
-  public:
-
-  // required bool isThirdPartyContext = 16;
-  bool has_isthirdpartycontext() const;
-  private:
-  bool _internal_has_isthirdpartycontext() const;
-  public:
-  void clear_isthirdpartycontext();
-  bool isthirdpartycontext() const;
-  void set_isthirdpartycontext(bool value);
-  private:
-  bool _internal_isthirdpartycontext() const;
-  void _internal_set_isthirdpartycontext(bool value);
+  bool _internal_a_usingstorageaccess() const;
+  void _internal_set_a_usingstorageaccess(bool value);
   public:
 
-  // required bool shouldResistFingerprinting = 17;
-  bool has_shouldresistfingerprinting() const;
+  // required bool a_isSecureContext = 12;
+  bool has_a_issecurecontext() const;
   private:
-  bool _internal_has_shouldresistfingerprinting() const;
+  bool _internal_has_a_issecurecontext() const;
   public:
-  void clear_shouldresistfingerprinting();
-  bool shouldresistfingerprinting() const;
-  void set_shouldresistfingerprinting(bool value);
+  void clear_a_issecurecontext();
+  bool a_issecurecontext() const;
+  void set_a_issecurecontext(bool value);
   private:
-  bool _internal_shouldresistfingerprinting() const;
-  void _internal_set_shouldresistfingerprinting(bool value);
+  bool _internal_a_issecurecontext() const;
+  void _internal_set_a_issecurecontext(bool value);
   public:
 
-  // required bool isOn3PCBExceptionList = 19;
-  bool has_ison3pcbexceptionlist() const;
+  // required bool a_isThirdPartyContext = 16;
+  bool has_a_isthirdpartycontext() const;
   private:
-  bool _internal_has_ison3pcbexceptionlist() const;
+  bool _internal_has_a_isthirdpartycontext() const;
   public:
-  void clear_ison3pcbexceptionlist();
-  bool ison3pcbexceptionlist() const;
-  void set_ison3pcbexceptionlist(bool value);
+  void clear_a_isthirdpartycontext();
+  bool a_isthirdpartycontext() const;
+  void set_a_isthirdpartycontext(bool value);
   private:
-  bool _internal_ison3pcbexceptionlist() const;
-  void _internal_set_ison3pcbexceptionlist(bool value);
+  bool _internal_a_isthirdpartycontext() const;
+  void _internal_set_a_isthirdpartycontext(bool value);
+  public:
+
+  // required bool a_shouldResistFingerprinting = 17;
+  bool has_a_shouldresistfingerprinting() const;
+  private:
+  bool _internal_has_a_shouldresistfingerprinting() const;
+  public:
+  void clear_a_shouldresistfingerprinting();
+  bool a_shouldresistfingerprinting() const;
+  void set_a_shouldresistfingerprinting(bool value);
+  private:
+  bool _internal_a_shouldresistfingerprinting() const;
+  void _internal_set_a_shouldresistfingerprinting(bool value);
+  public:
+
+  // required bool a_isOn3PCBExceptionList = 19;
+  bool has_a_ison3pcbexceptionlist() const;
+  private:
+  bool _internal_has_a_ison3pcbexceptionlist() const;
+  public:
+  void clear_a_ison3pcbexceptionlist();
+  bool a_ison3pcbexceptionlist() const;
+  void set_a_ison3pcbexceptionlist(bool value);
+  private:
+  bool _internal_a_ison3pcbexceptionlist() const;
+  void _internal_set_a_ison3pcbexceptionlist(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.RemoteWorkerData)
@@ -1044,29 +1044,29 @@ class RemoteWorkerData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originalscripturl_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr workeroptions_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr domain_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr referrerinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr storageaccess_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr overriddenfingerprintingsettings_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr origintrials_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr agentclusterid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr remotetype_;
-    ::protobuf::mozilla::ipc::URIParams* basescripturl_;
-    ::protobuf::mozilla::ipc::URIParams* resolvedscripturl_;
-    ::protobuf::mozilla::ipc::PrincipalInfo* loadingprincipalinfo_;
-    ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo_;
-    ::protobuf::mozilla::ipc::PrincipalInfo* partitionedprincipalinfo_;
-    ::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings_;
-    ::protobuf::mozilla::dom::IPCClientInfo* clientinfo_;
-    ::protobuf::mozilla::dom::OptionalServiceWorkerData* serviceworkerdata_;
-    bool useregularprincipal_;
-    bool usingstorageaccess_;
-    bool issecurecontext_;
-    bool isthirdpartycontext_;
-    bool shouldresistfingerprinting_;
-    bool ison3pcbexceptionlist_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originalscripturl_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_workeroptions_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_domain_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_referrerinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_storageaccess_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_overriddenfingerprintingsettings_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_origintrials_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agentclusterid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_remotetype_;
+    ::protobuf::mozilla::ipc::URIParams* a_basescripturl_;
+    ::protobuf::mozilla::ipc::URIParams* a_resolvedscripturl_;
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_loadingprincipalinfo_;
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_partitionedprincipalinfo_;
+    ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings_;
+    ::protobuf::mozilla::dom::IPCClientInfo* a_clientinfo_;
+    ::protobuf::mozilla::dom::OptionalServiceWorkerData* a_serviceworkerdata_;
+    bool a_useregularprincipal_;
+    bool a_usingstorageaccess_;
+    bool a_issecurecontext_;
+    bool a_isthirdpartycontext_;
+    bool a_shouldresistfingerprinting_;
+    bool a_ison3pcbexceptionlist_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1183,71 +1183,71 @@ class ErrorDataNote final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 3,
-    kFilenameFieldNumber = 4,
-    kLineNumberFieldNumber = 1,
-    kColumnNumberFieldNumber = 2,
+    kAMessageFieldNumber = 3,
+    kAFilenameFieldNumber = 4,
+    kALineNumberFieldNumber = 1,
+    kAColumnNumberFieldNumber = 2,
   };
-  // required bytes message = 3;
-  bool has_message() const;
+  // required bytes a_message = 3;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes filename = 4;
-  bool has_filename() const;
+  // required bytes a_filename = 4;
+  bool has_a_filename() const;
   private:
-  bool _internal_has_filename() const;
+  bool _internal_has_a_filename() const;
   public:
-  void clear_filename();
-  const std::string& filename() const;
+  void clear_a_filename();
+  const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filename();
-  PROTOBUF_NODISCARD std::string* release_filename();
-  void set_allocated_filename(std::string* filename);
+  void set_a_filename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filename();
+  PROTOBUF_NODISCARD std::string* release_a_filename();
+  void set_allocated_a_filename(std::string* a_filename);
   private:
-  const std::string& _internal_filename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filename(const std::string& value);
-  std::string* _internal_mutable_filename();
+  const std::string& _internal_a_filename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filename(const std::string& value);
+  std::string* _internal_mutable_a_filename();
   public:
 
-  // required uint32 lineNumber = 1;
-  bool has_linenumber() const;
+  // required uint32 a_lineNumber = 1;
+  bool has_a_linenumber() const;
   private:
-  bool _internal_has_linenumber() const;
+  bool _internal_has_a_linenumber() const;
   public:
-  void clear_linenumber();
-  uint32_t linenumber() const;
-  void set_linenumber(uint32_t value);
+  void clear_a_linenumber();
+  uint32_t a_linenumber() const;
+  void set_a_linenumber(uint32_t value);
   private:
-  uint32_t _internal_linenumber() const;
-  void _internal_set_linenumber(uint32_t value);
+  uint32_t _internal_a_linenumber() const;
+  void _internal_set_a_linenumber(uint32_t value);
   public:
 
-  // required uint32 columnNumber = 2;
-  bool has_columnnumber() const;
+  // required uint32 a_columnNumber = 2;
+  bool has_a_columnnumber() const;
   private:
-  bool _internal_has_columnnumber() const;
+  bool _internal_has_a_columnnumber() const;
   public:
-  void clear_columnnumber();
-  uint32_t columnnumber() const;
-  void set_columnnumber(uint32_t value);
+  void clear_a_columnnumber();
+  uint32_t a_columnnumber() const;
+  void set_a_columnnumber(uint32_t value);
   private:
-  uint32_t _internal_columnnumber() const;
-  void _internal_set_columnnumber(uint32_t value);
+  uint32_t _internal_a_columnnumber() const;
+  void _internal_set_a_columnnumber(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ErrorDataNote)
@@ -1263,10 +1263,10 @@ class ErrorDataNote final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filename_;
-    uint32_t linenumber_;
-    uint32_t columnnumber_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
+    uint32_t a_linenumber_;
+    uint32_t a_columnnumber_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1383,104 +1383,104 @@ class ErrorData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNotesFieldNumber = 6,
-    kMessageFieldNumber = 4,
-    kFilenameFieldNumber = 5,
-    kIsWarningFieldNumber = 1,
-    kLineNumberFieldNumber = 2,
-    kColumnNumberFieldNumber = 3,
+    kANotesFieldNumber = 6,
+    kAMessageFieldNumber = 4,
+    kAFilenameFieldNumber = 5,
+    kAIsWarningFieldNumber = 1,
+    kALineNumberFieldNumber = 2,
+    kAColumnNumberFieldNumber = 3,
   };
-  // repeated .protobuf.mozilla.dom.ErrorDataNote notes = 6;
-  int notes_size() const;
+  // repeated .protobuf.mozilla.dom.ErrorDataNote a_notes = 6;
+  int a_notes_size() const;
   private:
-  int _internal_notes_size() const;
+  int _internal_a_notes_size() const;
   public:
-  void clear_notes();
-  ::protobuf::mozilla::dom::ErrorDataNote* mutable_notes(int index);
+  void clear_a_notes();
+  ::protobuf::mozilla::dom::ErrorDataNote* mutable_a_notes(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote >*
-      mutable_notes();
+      mutable_a_notes();
   private:
-  const ::protobuf::mozilla::dom::ErrorDataNote& _internal_notes(int index) const;
-  ::protobuf::mozilla::dom::ErrorDataNote* _internal_add_notes();
+  const ::protobuf::mozilla::dom::ErrorDataNote& _internal_a_notes(int index) const;
+  ::protobuf::mozilla::dom::ErrorDataNote* _internal_add_a_notes();
   public:
-  const ::protobuf::mozilla::dom::ErrorDataNote& notes(int index) const;
-  ::protobuf::mozilla::dom::ErrorDataNote* add_notes();
+  const ::protobuf::mozilla::dom::ErrorDataNote& a_notes(int index) const;
+  ::protobuf::mozilla::dom::ErrorDataNote* add_a_notes();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote >&
-      notes() const;
+      a_notes() const;
 
-  // required bytes message = 4;
-  bool has_message() const;
+  // required bytes a_message = 4;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes filename = 5;
-  bool has_filename() const;
+  // required bytes a_filename = 5;
+  bool has_a_filename() const;
   private:
-  bool _internal_has_filename() const;
+  bool _internal_has_a_filename() const;
   public:
-  void clear_filename();
-  const std::string& filename() const;
+  void clear_a_filename();
+  const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filename();
-  PROTOBUF_NODISCARD std::string* release_filename();
-  void set_allocated_filename(std::string* filename);
+  void set_a_filename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filename();
+  PROTOBUF_NODISCARD std::string* release_a_filename();
+  void set_allocated_a_filename(std::string* a_filename);
   private:
-  const std::string& _internal_filename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filename(const std::string& value);
-  std::string* _internal_mutable_filename();
+  const std::string& _internal_a_filename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filename(const std::string& value);
+  std::string* _internal_mutable_a_filename();
   public:
 
-  // required bool isWarning = 1;
-  bool has_iswarning() const;
+  // required bool a_isWarning = 1;
+  bool has_a_iswarning() const;
   private:
-  bool _internal_has_iswarning() const;
+  bool _internal_has_a_iswarning() const;
   public:
-  void clear_iswarning();
-  bool iswarning() const;
-  void set_iswarning(bool value);
+  void clear_a_iswarning();
+  bool a_iswarning() const;
+  void set_a_iswarning(bool value);
   private:
-  bool _internal_iswarning() const;
-  void _internal_set_iswarning(bool value);
-  public:
-
-  // required uint32 lineNumber = 2;
-  bool has_linenumber() const;
-  private:
-  bool _internal_has_linenumber() const;
-  public:
-  void clear_linenumber();
-  uint32_t linenumber() const;
-  void set_linenumber(uint32_t value);
-  private:
-  uint32_t _internal_linenumber() const;
-  void _internal_set_linenumber(uint32_t value);
+  bool _internal_a_iswarning() const;
+  void _internal_set_a_iswarning(bool value);
   public:
 
-  // required uint32 columnNumber = 3;
-  bool has_columnnumber() const;
+  // required uint32 a_lineNumber = 2;
+  bool has_a_linenumber() const;
   private:
-  bool _internal_has_columnnumber() const;
+  bool _internal_has_a_linenumber() const;
   public:
-  void clear_columnnumber();
-  uint32_t columnnumber() const;
-  void set_columnnumber(uint32_t value);
+  void clear_a_linenumber();
+  uint32_t a_linenumber() const;
+  void set_a_linenumber(uint32_t value);
   private:
-  uint32_t _internal_columnnumber() const;
-  void _internal_set_columnnumber(uint32_t value);
+  uint32_t _internal_a_linenumber() const;
+  void _internal_set_a_linenumber(uint32_t value);
+  public:
+
+  // required uint32 a_columnNumber = 3;
+  bool has_a_columnnumber() const;
+  private:
+  bool _internal_has_a_columnnumber() const;
+  public:
+  void clear_a_columnnumber();
+  uint32_t a_columnnumber() const;
+  void set_a_columnnumber(uint32_t value);
+  private:
+  uint32_t _internal_a_columnnumber() const;
+  void _internal_set_a_columnnumber(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ErrorData)
@@ -1496,12 +1496,12 @@ class ErrorData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote > notes_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filename_;
-    bool iswarning_;
-    uint32_t linenumber_;
-    uint32_t columnnumber_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote > a_notes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
+    bool a_iswarning_;
+    uint32_t a_linenumber_;
+    uint32_t a_columnnumber_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1618,24 +1618,24 @@ class CSPViolation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kJsonFieldNumber = 1,
+    kAJsonFieldNumber = 1,
   };
-  // required bytes json = 1;
-  bool has_json() const;
+  // required bytes a_json = 1;
+  bool has_a_json() const;
   private:
-  bool _internal_has_json() const;
+  bool _internal_has_a_json() const;
   public:
-  void clear_json();
-  const std::string& json() const;
+  void clear_a_json();
+  const std::string& a_json() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_json(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_json();
-  PROTOBUF_NODISCARD std::string* release_json();
-  void set_allocated_json(std::string* json);
+  void set_a_json(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_json();
+  PROTOBUF_NODISCARD std::string* release_a_json();
+  void set_allocated_a_json(std::string* a_json);
   private:
-  const std::string& _internal_json() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_json(const std::string& value);
-  std::string* _internal_mutable_json();
+  const std::string& _internal_a_json() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_json(const std::string& value);
+  std::string* _internal_mutable_a_json();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.CSPViolation)
@@ -1648,7 +1648,7 @@ class CSPViolation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr json_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_json_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1821,11 +1821,11 @@ class ErrorValue final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
-    kMVErrorData = 2,
-    kMVCSPViolation = 3,
-    kMVErrorMismatchOptions = 4,
-    kMVvoidT = 5,
+    kAMVnsresult = 1,
+    kAMVErrorData = 2,
+    kAMVCSPViolation = 3,
+    kAMVErrorMismatchOptions = 4,
+    kAMVvoidT = 5,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1898,100 +1898,100 @@ class ErrorValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
-    kMVErrorDataFieldNumber = 2,
-    kMVCSPViolationFieldNumber = 3,
-    kMVErrorMismatchOptionsFieldNumber = 4,
-    kMVvoidTFieldNumber = 5,
+    kAMVnsresultFieldNumber = 1,
+    kAMVErrorDataFieldNumber = 2,
+    kAMVCSPViolationFieldNumber = 3,
+    kAMVErrorMismatchOptionsFieldNumber = 4,
+    kAMVvoidTFieldNumber = 5,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.ErrorData mVErrorData = 2;
-  bool has_mverrordata() const;
+  // .protobuf.mozilla.dom.ErrorData a_mVErrorData = 2;
+  bool has_a_mverrordata() const;
   private:
-  bool _internal_has_mverrordata() const;
+  bool _internal_has_a_mverrordata() const;
   public:
-  void clear_mverrordata();
-  const ::protobuf::mozilla::dom::ErrorData& mverrordata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorData* release_mverrordata();
-  ::protobuf::mozilla::dom::ErrorData* mutable_mverrordata();
-  void set_allocated_mverrordata(::protobuf::mozilla::dom::ErrorData* mverrordata);
+  void clear_a_mverrordata();
+  const ::protobuf::mozilla::dom::ErrorData& a_mverrordata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorData* release_a_mverrordata();
+  ::protobuf::mozilla::dom::ErrorData* mutable_a_mverrordata();
+  void set_allocated_a_mverrordata(::protobuf::mozilla::dom::ErrorData* a_mverrordata);
   private:
-  const ::protobuf::mozilla::dom::ErrorData& _internal_mverrordata() const;
-  ::protobuf::mozilla::dom::ErrorData* _internal_mutable_mverrordata();
+  const ::protobuf::mozilla::dom::ErrorData& _internal_a_mverrordata() const;
+  ::protobuf::mozilla::dom::ErrorData* _internal_mutable_a_mverrordata();
   public:
-  void unsafe_arena_set_allocated_mverrordata(
-      ::protobuf::mozilla::dom::ErrorData* mverrordata);
-  ::protobuf::mozilla::dom::ErrorData* unsafe_arena_release_mverrordata();
+  void unsafe_arena_set_allocated_a_mverrordata(
+      ::protobuf::mozilla::dom::ErrorData* a_mverrordata);
+  ::protobuf::mozilla::dom::ErrorData* unsafe_arena_release_a_mverrordata();
 
-  // .protobuf.mozilla.dom.CSPViolation mVCSPViolation = 3;
-  bool has_mvcspviolation() const;
+  // .protobuf.mozilla.dom.CSPViolation a_mVCSPViolation = 3;
+  bool has_a_mvcspviolation() const;
   private:
-  bool _internal_has_mvcspviolation() const;
+  bool _internal_has_a_mvcspviolation() const;
   public:
-  void clear_mvcspviolation();
-  const ::protobuf::mozilla::dom::CSPViolation& mvcspviolation() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::CSPViolation* release_mvcspviolation();
-  ::protobuf::mozilla::dom::CSPViolation* mutable_mvcspviolation();
-  void set_allocated_mvcspviolation(::protobuf::mozilla::dom::CSPViolation* mvcspviolation);
+  void clear_a_mvcspviolation();
+  const ::protobuf::mozilla::dom::CSPViolation& a_mvcspviolation() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::CSPViolation* release_a_mvcspviolation();
+  ::protobuf::mozilla::dom::CSPViolation* mutable_a_mvcspviolation();
+  void set_allocated_a_mvcspviolation(::protobuf::mozilla::dom::CSPViolation* a_mvcspviolation);
   private:
-  const ::protobuf::mozilla::dom::CSPViolation& _internal_mvcspviolation() const;
-  ::protobuf::mozilla::dom::CSPViolation* _internal_mutable_mvcspviolation();
+  const ::protobuf::mozilla::dom::CSPViolation& _internal_a_mvcspviolation() const;
+  ::protobuf::mozilla::dom::CSPViolation* _internal_mutable_a_mvcspviolation();
   public:
-  void unsafe_arena_set_allocated_mvcspviolation(
-      ::protobuf::mozilla::dom::CSPViolation* mvcspviolation);
-  ::protobuf::mozilla::dom::CSPViolation* unsafe_arena_release_mvcspviolation();
+  void unsafe_arena_set_allocated_a_mvcspviolation(
+      ::protobuf::mozilla::dom::CSPViolation* a_mvcspviolation);
+  ::protobuf::mozilla::dom::CSPViolation* unsafe_arena_release_a_mvcspviolation();
 
-  // .protobuf.mozilla.dom.ErrorMismatchOptions mVErrorMismatchOptions = 4;
-  bool has_mverrormismatchoptions() const;
+  // .protobuf.mozilla.dom.ErrorMismatchOptions a_mVErrorMismatchOptions = 4;
+  bool has_a_mverrormismatchoptions() const;
   private:
-  bool _internal_has_mverrormismatchoptions() const;
+  bool _internal_has_a_mverrormismatchoptions() const;
   public:
-  void clear_mverrormismatchoptions();
-  const ::protobuf::mozilla::dom::ErrorMismatchOptions& mverrormismatchoptions() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorMismatchOptions* release_mverrormismatchoptions();
-  ::protobuf::mozilla::dom::ErrorMismatchOptions* mutable_mverrormismatchoptions();
-  void set_allocated_mverrormismatchoptions(::protobuf::mozilla::dom::ErrorMismatchOptions* mverrormismatchoptions);
+  void clear_a_mverrormismatchoptions();
+  const ::protobuf::mozilla::dom::ErrorMismatchOptions& a_mverrormismatchoptions() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ErrorMismatchOptions* release_a_mverrormismatchoptions();
+  ::protobuf::mozilla::dom::ErrorMismatchOptions* mutable_a_mverrormismatchoptions();
+  void set_allocated_a_mverrormismatchoptions(::protobuf::mozilla::dom::ErrorMismatchOptions* a_mverrormismatchoptions);
   private:
-  const ::protobuf::mozilla::dom::ErrorMismatchOptions& _internal_mverrormismatchoptions() const;
-  ::protobuf::mozilla::dom::ErrorMismatchOptions* _internal_mutable_mverrormismatchoptions();
+  const ::protobuf::mozilla::dom::ErrorMismatchOptions& _internal_a_mverrormismatchoptions() const;
+  ::protobuf::mozilla::dom::ErrorMismatchOptions* _internal_mutable_a_mverrormismatchoptions();
   public:
-  void unsafe_arena_set_allocated_mverrormismatchoptions(
-      ::protobuf::mozilla::dom::ErrorMismatchOptions* mverrormismatchoptions);
-  ::protobuf::mozilla::dom::ErrorMismatchOptions* unsafe_arena_release_mverrormismatchoptions();
+  void unsafe_arena_set_allocated_a_mverrormismatchoptions(
+      ::protobuf::mozilla::dom::ErrorMismatchOptions* a_mverrormismatchoptions);
+  ::protobuf::mozilla::dom::ErrorMismatchOptions* unsafe_arena_release_a_mverrormismatchoptions();
 
-  // bytes mVvoid_t = 5;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 5;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
   void clear_content();
@@ -1999,11 +1999,11 @@ class ErrorValue final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ErrorValue)
  private:
   class _Internal;
-  void set_has_mvnsresult();
-  void set_has_mverrordata();
-  void set_has_mvcspviolation();
-  void set_has_mverrormismatchoptions();
-  void set_has_mvvoid_t();
+  void set_has_a_mvnsresult();
+  void set_has_a_mverrordata();
+  void set_has_a_mvcspviolation();
+  void set_has_a_mverrormismatchoptions();
+  void set_has_a_mvvoid_t();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -2015,11 +2015,11 @@ class ErrorValue final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
-      ::protobuf::mozilla::dom::ErrorData* mverrordata_;
-      ::protobuf::mozilla::dom::CSPViolation* mvcspviolation_;
-      ::protobuf::mozilla::dom::ErrorMismatchOptions* mverrormismatchoptions_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
+      ::protobuf::mozilla::dom::ErrorData* a_mverrordata_;
+      ::protobuf::mozilla::dom::CSPViolation* a_mvcspviolation_;
+      ::protobuf::mozilla::dom::ErrorMismatchOptions* a_mverrormismatchoptions_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -2140,156 +2140,156 @@ class RemoteWorkerDebuggerInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUrlFieldNumber = 3,
-    kPrincipalFieldNumber = 5,
-    kIdFieldNumber = 7,
-    kNameFieldNumber = 8,
-    kParentIdFieldNumber = 9,
-    kIsChromeFieldNumber = 1,
-    kTypeFieldNumber = 2,
-    kWindowIDFieldNumber = 4,
-    kServiceWorkerIDFieldNumber = 6,
+    kAUrlFieldNumber = 3,
+    kAPrincipalFieldNumber = 5,
+    kAIdFieldNumber = 7,
+    kANameFieldNumber = 8,
+    kAParentIdFieldNumber = 9,
+    kAIsChromeFieldNumber = 1,
+    kATypeFieldNumber = 2,
+    kAWindowIDFieldNumber = 4,
+    kAServiceWorkerIDFieldNumber = 6,
   };
-  // required bytes url = 3;
-  bool has_url() const;
+  // required bytes a_url = 3;
+  bool has_a_url() const;
   private:
-  bool _internal_has_url() const;
+  bool _internal_has_a_url() const;
   public:
-  void clear_url();
-  const std::string& url() const;
+  void clear_a_url();
+  const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_url(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_url();
-  PROTOBUF_NODISCARD std::string* release_url();
-  void set_allocated_url(std::string* url);
+  void set_a_url(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_url();
+  PROTOBUF_NODISCARD std::string* release_a_url();
+  void set_allocated_a_url(std::string* a_url);
   private:
-  const std::string& _internal_url() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_url(const std::string& value);
-  std::string* _internal_mutable_url();
+  const std::string& _internal_a_url() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_url(const std::string& value);
+  std::string* _internal_mutable_a_url();
   public:
 
-  // required bytes principal = 5;
-  bool has_principal() const;
+  // required bytes a_principal = 5;
+  bool has_a_principal() const;
   private:
-  bool _internal_has_principal() const;
+  bool _internal_has_a_principal() const;
   public:
-  void clear_principal();
-  const std::string& principal() const;
+  void clear_a_principal();
+  const std::string& a_principal() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_principal(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_principal();
-  PROTOBUF_NODISCARD std::string* release_principal();
-  void set_allocated_principal(std::string* principal);
+  void set_a_principal(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_principal();
+  PROTOBUF_NODISCARD std::string* release_a_principal();
+  void set_allocated_a_principal(std::string* a_principal);
   private:
-  const std::string& _internal_principal() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_principal(const std::string& value);
-  std::string* _internal_mutable_principal();
+  const std::string& _internal_a_principal() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_principal(const std::string& value);
+  std::string* _internal_mutable_a_principal();
   public:
 
-  // required bytes Id = 7;
-  bool has_id() const;
+  // required bytes a_Id = 7;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  const std::string& id() const;
+  void clear_a_id();
+  const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_id(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_id();
-  PROTOBUF_NODISCARD std::string* release_id();
-  void set_allocated_id(std::string* id);
+  void set_a_id(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_id();
+  PROTOBUF_NODISCARD std::string* release_a_id();
+  void set_allocated_a_id(std::string* a_id);
   private:
-  const std::string& _internal_id() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_id(const std::string& value);
-  std::string* _internal_mutable_id();
+  const std::string& _internal_a_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_id(const std::string& value);
+  std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes name = 8;
-  bool has_name() const;
+  // required bytes a_name = 8;
+  bool has_a_name() const;
   private:
-  bool _internal_has_name() const;
+  bool _internal_has_a_name() const;
   public:
-  void clear_name();
-  const std::string& name() const;
+  void clear_a_name();
+  const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_name();
-  PROTOBUF_NODISCARD std::string* release_name();
-  void set_allocated_name(std::string* name);
+  void set_a_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_name();
+  PROTOBUF_NODISCARD std::string* release_a_name();
+  void set_allocated_a_name(std::string* a_name);
   private:
-  const std::string& _internal_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
+  const std::string& _internal_a_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_name(const std::string& value);
+  std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes parentId = 9;
-  bool has_parentid() const;
+  // required bytes a_parentId = 9;
+  bool has_a_parentid() const;
   private:
-  bool _internal_has_parentid() const;
+  bool _internal_has_a_parentid() const;
   public:
-  void clear_parentid();
-  const std::string& parentid() const;
+  void clear_a_parentid();
+  const std::string& a_parentid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_parentid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_parentid();
-  PROTOBUF_NODISCARD std::string* release_parentid();
-  void set_allocated_parentid(std::string* parentid);
+  void set_a_parentid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_parentid();
+  PROTOBUF_NODISCARD std::string* release_a_parentid();
+  void set_allocated_a_parentid(std::string* a_parentid);
   private:
-  const std::string& _internal_parentid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_parentid(const std::string& value);
-  std::string* _internal_mutable_parentid();
+  const std::string& _internal_a_parentid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_parentid(const std::string& value);
+  std::string* _internal_mutable_a_parentid();
   public:
 
-  // required bool isChrome = 1;
-  bool has_ischrome() const;
+  // required bool a_isChrome = 1;
+  bool has_a_ischrome() const;
   private:
-  bool _internal_has_ischrome() const;
+  bool _internal_has_a_ischrome() const;
   public:
-  void clear_ischrome();
-  bool ischrome() const;
-  void set_ischrome(bool value);
+  void clear_a_ischrome();
+  bool a_ischrome() const;
+  void set_a_ischrome(bool value);
   private:
-  bool _internal_ischrome() const;
-  void _internal_set_ischrome(bool value);
-  public:
-
-  // required uint32 type = 2;
-  bool has_type() const;
-  private:
-  bool _internal_has_type() const;
-  public:
-  void clear_type();
-  uint32_t type() const;
-  void set_type(uint32_t value);
-  private:
-  uint32_t _internal_type() const;
-  void _internal_set_type(uint32_t value);
+  bool _internal_a_ischrome() const;
+  void _internal_set_a_ischrome(bool value);
   public:
 
-  // required uint64 windowID = 4;
-  bool has_windowid() const;
+  // required uint32 a_type = 2;
+  bool has_a_type() const;
   private:
-  bool _internal_has_windowid() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_windowid();
-  uint64_t windowid() const;
-  void set_windowid(uint64_t value);
+  void clear_a_type();
+  uint32_t a_type() const;
+  void set_a_type(uint32_t value);
   private:
-  uint64_t _internal_windowid() const;
-  void _internal_set_windowid(uint64_t value);
+  uint32_t _internal_a_type() const;
+  void _internal_set_a_type(uint32_t value);
   public:
 
-  // required uint64 serviceWorkerID = 6;
-  bool has_serviceworkerid() const;
+  // required uint64 a_windowID = 4;
+  bool has_a_windowid() const;
   private:
-  bool _internal_has_serviceworkerid() const;
+  bool _internal_has_a_windowid() const;
   public:
-  void clear_serviceworkerid();
-  uint64_t serviceworkerid() const;
-  void set_serviceworkerid(uint64_t value);
+  void clear_a_windowid();
+  uint64_t a_windowid() const;
+  void set_a_windowid(uint64_t value);
   private:
-  uint64_t _internal_serviceworkerid() const;
-  void _internal_set_serviceworkerid(uint64_t value);
+  uint64_t _internal_a_windowid() const;
+  void _internal_set_a_windowid(uint64_t value);
+  public:
+
+  // required uint64 a_serviceWorkerID = 6;
+  bool has_a_serviceworkerid() const;
+  private:
+  bool _internal_has_a_serviceworkerid() const;
+  public:
+  void clear_a_serviceworkerid();
+  uint64_t a_serviceworkerid() const;
+  void set_a_serviceworkerid(uint64_t value);
+  private:
+  uint64_t _internal_a_serviceworkerid() const;
+  void _internal_set_a_serviceworkerid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
@@ -2305,15 +2305,15 @@ class RemoteWorkerDebuggerInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr url_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr principal_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr parentid_;
-    bool ischrome_;
-    uint32_t type_;
-    uint64_t windowid_;
-    uint64_t serviceworkerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_url_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_principal_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_parentid_;
+    bool a_ischrome_;
+    uint32_t a_type_;
+    uint64_t a_windowid_;
+    uint64_t a_serviceworkerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -2430,57 +2430,57 @@ class RemoteWorkerDebuggerErrorInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFileNameFieldNumber = 1,
-    kMessageFieldNumber = 3,
-    kLineNoFieldNumber = 2,
+    kAFileNameFieldNumber = 1,
+    kAMessageFieldNumber = 3,
+    kALineNoFieldNumber = 2,
   };
-  // required bytes fileName = 1;
-  bool has_filename() const;
+  // required bytes a_fileName = 1;
+  bool has_a_filename() const;
   private:
-  bool _internal_has_filename() const;
+  bool _internal_has_a_filename() const;
   public:
-  void clear_filename();
-  const std::string& filename() const;
+  void clear_a_filename();
+  const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filename();
-  PROTOBUF_NODISCARD std::string* release_filename();
-  void set_allocated_filename(std::string* filename);
+  void set_a_filename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filename();
+  PROTOBUF_NODISCARD std::string* release_a_filename();
+  void set_allocated_a_filename(std::string* a_filename);
   private:
-  const std::string& _internal_filename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filename(const std::string& value);
-  std::string* _internal_mutable_filename();
+  const std::string& _internal_a_filename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filename(const std::string& value);
+  std::string* _internal_mutable_a_filename();
   public:
 
-  // required bytes message = 3;
-  bool has_message() const;
+  // required bytes a_message = 3;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
-  // required uint32 lineNo = 2;
-  bool has_lineno() const;
+  // required uint32 a_lineNo = 2;
+  bool has_a_lineno() const;
   private:
-  bool _internal_has_lineno() const;
+  bool _internal_has_a_lineno() const;
   public:
-  void clear_lineno();
-  uint32_t lineno() const;
-  void set_lineno(uint32_t value);
+  void clear_a_lineno();
+  uint32_t a_lineno() const;
+  void set_a_lineno(uint32_t value);
   private:
-  uint32_t _internal_lineno() const;
-  void _internal_set_lineno(uint32_t value);
+  uint32_t _internal_a_lineno() const;
+  void _internal_set_a_lineno(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
@@ -2496,9 +2496,9 @@ class RemoteWorkerDebuggerErrorInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    uint32_t lineno_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    uint32_t a_lineno_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -2514,41 +2514,41 @@ class RemoteWorkerDebuggerErrorInfo final :
 #endif  // __GNUC__
 // ServiceWorkerData
 
-// required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor descriptor = 1;
-inline bool ServiceWorkerData::_internal_has_descriptor() const {
+// required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+inline bool ServiceWorkerData::_internal_has_a_descriptor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.descriptor_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_descriptor_ != nullptr);
   return value;
 }
-inline bool ServiceWorkerData::has_descriptor() const {
-  return _internal_has_descriptor();
+inline bool ServiceWorkerData::has_a_descriptor() const {
+  return _internal_has_a_descriptor();
 }
-inline const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& ServiceWorkerData::_internal_descriptor() const {
-  const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* p = _impl_.descriptor_;
+inline const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& ServiceWorkerData::_internal_a_descriptor() const {
+  const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* p = _impl_.a_descriptor_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor&>(
       ::protobuf::mozilla::dom::_IPCServiceWorkerDescriptor_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& ServiceWorkerData::descriptor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.descriptor)
-  return _internal_descriptor();
+inline const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& ServiceWorkerData::a_descriptor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.a_descriptor)
+  return _internal_a_descriptor();
 }
-inline void ServiceWorkerData::unsafe_arena_set_allocated_descriptor(
-    ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* descriptor) {
+inline void ServiceWorkerData::unsafe_arena_set_allocated_a_descriptor(
+    ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_descriptor) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.descriptor_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_descriptor_);
   }
-  _impl_.descriptor_ = descriptor;
-  if (descriptor) {
+  _impl_.a_descriptor_ = a_descriptor;
+  if (a_descriptor) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.descriptor)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_descriptor)
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::release_descriptor() {
+inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::release_a_descriptor() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* temp = _impl_.descriptor_;
-  _impl_.descriptor_ = nullptr;
+  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* temp = _impl_.a_descriptor_;
+  _impl_.a_descriptor_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2560,82 +2560,82 @@ inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::unsafe_arena_release_descriptor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.descriptor)
+inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::unsafe_arena_release_a_descriptor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.a_descriptor)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* temp = _impl_.descriptor_;
-  _impl_.descriptor_ = nullptr;
+  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* temp = _impl_.a_descriptor_;
+  _impl_.a_descriptor_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::_internal_mutable_descriptor() {
+inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::_internal_mutable_a_descriptor() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.descriptor_ == nullptr) {
+  if (_impl_.a_descriptor_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCServiceWorkerDescriptor>(GetArenaForAllocation());
-    _impl_.descriptor_ = p;
+    _impl_.a_descriptor_ = p;
   }
-  return _impl_.descriptor_;
+  return _impl_.a_descriptor_;
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::mutable_descriptor() {
-  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* _msg = _internal_mutable_descriptor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.descriptor)
+inline ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* ServiceWorkerData::mutable_a_descriptor() {
+  ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* _msg = _internal_mutable_a_descriptor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.a_descriptor)
   return _msg;
 }
-inline void ServiceWorkerData::set_allocated_descriptor(::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* descriptor) {
+inline void ServiceWorkerData::set_allocated_a_descriptor(::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_descriptor) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.descriptor_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_descriptor_);
   }
-  if (descriptor) {
+  if (a_descriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(descriptor));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_descriptor));
     if (message_arena != submessage_arena) {
-      descriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, descriptor, submessage_arena);
+      a_descriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_descriptor, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.descriptor_ = descriptor;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.descriptor)
+  _impl_.a_descriptor_ = a_descriptor;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_descriptor)
 }
 
-// required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor registrationDescriptor = 2;
-inline bool ServiceWorkerData::_internal_has_registrationdescriptor() const {
+// required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+inline bool ServiceWorkerData::_internal_has_a_registrationdescriptor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.registrationdescriptor_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_registrationdescriptor_ != nullptr);
   return value;
 }
-inline bool ServiceWorkerData::has_registrationdescriptor() const {
-  return _internal_has_registrationdescriptor();
+inline bool ServiceWorkerData::has_a_registrationdescriptor() const {
+  return _internal_has_a_registrationdescriptor();
 }
-inline const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& ServiceWorkerData::_internal_registrationdescriptor() const {
-  const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* p = _impl_.registrationdescriptor_;
+inline const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& ServiceWorkerData::_internal_a_registrationdescriptor() const {
+  const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* p = _impl_.a_registrationdescriptor_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor&>(
       ::protobuf::mozilla::dom::_IPCServiceWorkerRegistrationDescriptor_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& ServiceWorkerData::registrationdescriptor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.registrationDescriptor)
-  return _internal_registrationdescriptor();
+inline const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& ServiceWorkerData::a_registrationdescriptor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.a_registrationDescriptor)
+  return _internal_a_registrationdescriptor();
 }
-inline void ServiceWorkerData::unsafe_arena_set_allocated_registrationdescriptor(
-    ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* registrationdescriptor) {
+inline void ServiceWorkerData::unsafe_arena_set_allocated_a_registrationdescriptor(
+    ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_registrationdescriptor) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.registrationdescriptor_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_registrationdescriptor_);
   }
-  _impl_.registrationdescriptor_ = registrationdescriptor;
-  if (registrationdescriptor) {
+  _impl_.a_registrationdescriptor_ = a_registrationdescriptor;
+  if (a_registrationdescriptor) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.registrationDescriptor)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_registrationDescriptor)
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::release_registrationdescriptor() {
+inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::release_a_registrationdescriptor() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* temp = _impl_.registrationdescriptor_;
-  _impl_.registrationdescriptor_ = nullptr;
+  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* temp = _impl_.a_registrationdescriptor_;
+  _impl_.a_registrationdescriptor_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2647,363 +2647,363 @@ inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* Service
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::unsafe_arena_release_registrationdescriptor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.registrationDescriptor)
+inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::unsafe_arena_release_a_registrationdescriptor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.a_registrationDescriptor)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* temp = _impl_.registrationdescriptor_;
-  _impl_.registrationdescriptor_ = nullptr;
+  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* temp = _impl_.a_registrationdescriptor_;
+  _impl_.a_registrationdescriptor_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::_internal_mutable_registrationdescriptor() {
+inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::_internal_mutable_a_registrationdescriptor() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.registrationdescriptor_ == nullptr) {
+  if (_impl_.a_registrationdescriptor_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor>(GetArenaForAllocation());
-    _impl_.registrationdescriptor_ = p;
+    _impl_.a_registrationdescriptor_ = p;
   }
-  return _impl_.registrationdescriptor_;
+  return _impl_.a_registrationdescriptor_;
 }
-inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::mutable_registrationdescriptor() {
-  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* _msg = _internal_mutable_registrationdescriptor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.registrationDescriptor)
+inline ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* ServiceWorkerData::mutable_a_registrationdescriptor() {
+  ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* _msg = _internal_mutable_a_registrationdescriptor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.a_registrationDescriptor)
   return _msg;
 }
-inline void ServiceWorkerData::set_allocated_registrationdescriptor(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* registrationdescriptor) {
+inline void ServiceWorkerData::set_allocated_a_registrationdescriptor(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_registrationdescriptor) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.registrationdescriptor_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_registrationdescriptor_);
   }
-  if (registrationdescriptor) {
+  if (a_registrationdescriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(registrationdescriptor));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_registrationdescriptor));
     if (message_arena != submessage_arena) {
-      registrationdescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, registrationdescriptor, submessage_arena);
+      a_registrationdescriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_registrationdescriptor, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.registrationdescriptor_ = registrationdescriptor;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.registrationDescriptor)
+  _impl_.a_registrationdescriptor_ = a_registrationdescriptor;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_registrationDescriptor)
 }
 
-// required bytes cacheName = 3;
-inline bool ServiceWorkerData::_internal_has_cachename() const {
+// required bytes a_cacheName = 3;
+inline bool ServiceWorkerData::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ServiceWorkerData::has_cachename() const {
-  return _internal_has_cachename();
+inline bool ServiceWorkerData::has_a_cachename() const {
+  return _internal_has_a_cachename();
 }
-inline void ServiceWorkerData::clear_cachename() {
-  _impl_.cachename_.ClearToEmpty();
+inline void ServiceWorkerData::clear_a_cachename() {
+  _impl_.a_cachename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ServiceWorkerData::cachename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.cacheName)
-  return _internal_cachename();
+inline const std::string& ServiceWorkerData::a_cachename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.a_cacheName)
+  return _internal_a_cachename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ServiceWorkerData::set_cachename(ArgT0&& arg0, ArgT... args) {
+void ServiceWorkerData::set_a_cachename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.cacheName)
+ _impl_.a_cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.a_cacheName)
 }
-inline std::string* ServiceWorkerData::mutable_cachename() {
-  std::string* _s = _internal_mutable_cachename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.cacheName)
+inline std::string* ServiceWorkerData::mutable_a_cachename() {
+  std::string* _s = _internal_mutable_a_cachename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.a_cacheName)
   return _s;
 }
-inline const std::string& ServiceWorkerData::_internal_cachename() const {
-  return _impl_.cachename_.Get();
+inline const std::string& ServiceWorkerData::_internal_a_cachename() const {
+  return _impl_.a_cachename_.Get();
 }
-inline void ServiceWorkerData::_internal_set_cachename(const std::string& value) {
+inline void ServiceWorkerData::_internal_set_a_cachename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.cachename_.Set(value, GetArenaForAllocation());
+  _impl_.a_cachename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerData::_internal_mutable_cachename() {
+inline std::string* ServiceWorkerData::_internal_mutable_a_cachename() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.cachename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_cachename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerData::release_cachename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.cacheName)
-  if (!_internal_has_cachename()) {
+inline std::string* ServiceWorkerData::release_a_cachename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.a_cacheName)
+  if (!_internal_has_a_cachename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.cachename_.Release();
+  auto* p = _impl_.a_cachename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachename_.IsDefault()) {
-    _impl_.cachename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachename_.IsDefault()) {
+    _impl_.a_cachename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ServiceWorkerData::set_allocated_cachename(std::string* cachename) {
-  if (cachename != nullptr) {
+inline void ServiceWorkerData::set_allocated_a_cachename(std::string* a_cachename) {
+  if (a_cachename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.cachename_.SetAllocated(cachename, GetArenaForAllocation());
+  _impl_.a_cachename_.SetAllocated(a_cachename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.cachename_.IsDefault()) {
-    _impl_.cachename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_cachename_.IsDefault()) {
+    _impl_.a_cachename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.cacheName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_cacheName)
 }
 
-// required uint32 loadFlags = 4;
-inline bool ServiceWorkerData::_internal_has_loadflags() const {
+// required uint32 a_loadFlags = 4;
+inline bool ServiceWorkerData::_internal_has_a_loadflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool ServiceWorkerData::has_loadflags() const {
-  return _internal_has_loadflags();
+inline bool ServiceWorkerData::has_a_loadflags() const {
+  return _internal_has_a_loadflags();
 }
-inline void ServiceWorkerData::clear_loadflags() {
-  _impl_.loadflags_ = 0u;
+inline void ServiceWorkerData::clear_a_loadflags() {
+  _impl_.a_loadflags_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t ServiceWorkerData::_internal_loadflags() const {
-  return _impl_.loadflags_;
+inline uint32_t ServiceWorkerData::_internal_a_loadflags() const {
+  return _impl_.a_loadflags_;
 }
-inline uint32_t ServiceWorkerData::loadflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.loadFlags)
-  return _internal_loadflags();
+inline uint32_t ServiceWorkerData::a_loadflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.a_loadFlags)
+  return _internal_a_loadflags();
 }
-inline void ServiceWorkerData::_internal_set_loadflags(uint32_t value) {
+inline void ServiceWorkerData::_internal_set_a_loadflags(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.loadflags_ = value;
+  _impl_.a_loadflags_ = value;
 }
-inline void ServiceWorkerData::set_loadflags(uint32_t value) {
-  _internal_set_loadflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.loadFlags)
+inline void ServiceWorkerData::set_a_loadflags(uint32_t value) {
+  _internal_set_a_loadflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.a_loadFlags)
 }
 
-// required bytes id = 5;
-inline bool ServiceWorkerData::_internal_has_id() const {
+// required bytes a_id = 5;
+inline bool ServiceWorkerData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ServiceWorkerData::has_id() const {
-  return _internal_has_id();
+inline bool ServiceWorkerData::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void ServiceWorkerData::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void ServiceWorkerData::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ServiceWorkerData::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.id)
-  return _internal_id();
+inline const std::string& ServiceWorkerData::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerData.a_id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ServiceWorkerData::set_id(ArgT0&& arg0, ArgT... args) {
+void ServiceWorkerData::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.a_id)
 }
-inline std::string* ServiceWorkerData::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.id)
+inline std::string* ServiceWorkerData::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerData.a_id)
   return _s;
 }
-inline const std::string& ServiceWorkerData::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& ServiceWorkerData::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void ServiceWorkerData::_internal_set_id(const std::string& value) {
+inline void ServiceWorkerData::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerData::_internal_mutable_id() {
+inline std::string* ServiceWorkerData::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ServiceWorkerData::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.id)
-  if (!_internal_has_id()) {
+inline std::string* ServiceWorkerData::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ServiceWorkerData.a_id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ServiceWorkerData::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void ServiceWorkerData::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_id)
 }
 
 // -------------------------------------------------------------------
 
 // OptionalServiceWorkerData
 
-// bytes mVvoid_t = 1;
-inline bool OptionalServiceWorkerData::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 1;
+inline bool OptionalServiceWorkerData::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool OptionalServiceWorkerData::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool OptionalServiceWorkerData::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void OptionalServiceWorkerData::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void OptionalServiceWorkerData::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void OptionalServiceWorkerData::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void OptionalServiceWorkerData::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& OptionalServiceWorkerData::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalServiceWorkerData.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& OptionalServiceWorkerData::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void OptionalServiceWorkerData::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void OptionalServiceWorkerData::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.OptionalServiceWorkerData.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVvoid_t)
 }
-inline std::string* OptionalServiceWorkerData::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.OptionalServiceWorkerData.mVvoid_t)
+inline std::string* OptionalServiceWorkerData::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVvoid_t)
   return _s;
 }
-inline const std::string& OptionalServiceWorkerData::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& OptionalServiceWorkerData::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void OptionalServiceWorkerData::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void OptionalServiceWorkerData::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* OptionalServiceWorkerData::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* OptionalServiceWorkerData::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* OptionalServiceWorkerData::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.OptionalServiceWorkerData.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* OptionalServiceWorkerData::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void OptionalServiceWorkerData::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void OptionalServiceWorkerData::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.OptionalServiceWorkerData.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVvoid_t)
 }
 
-// .protobuf.mozilla.dom.ServiceWorkerData mVServiceWorkerData = 2;
-inline bool OptionalServiceWorkerData::_internal_has_mvserviceworkerdata() const {
-  return content_case() == kMVServiceWorkerData;
+// .protobuf.mozilla.dom.ServiceWorkerData a_mVServiceWorkerData = 2;
+inline bool OptionalServiceWorkerData::_internal_has_a_mvserviceworkerdata() const {
+  return content_case() == kAMVServiceWorkerData;
 }
-inline bool OptionalServiceWorkerData::has_mvserviceworkerdata() const {
-  return _internal_has_mvserviceworkerdata();
+inline bool OptionalServiceWorkerData::has_a_mvserviceworkerdata() const {
+  return _internal_has_a_mvserviceworkerdata();
 }
-inline void OptionalServiceWorkerData::set_has_mvserviceworkerdata() {
-  _impl_._oneof_case_[0] = kMVServiceWorkerData;
+inline void OptionalServiceWorkerData::set_has_a_mvserviceworkerdata() {
+  _impl_._oneof_case_[0] = kAMVServiceWorkerData;
 }
-inline void OptionalServiceWorkerData::clear_mvserviceworkerdata() {
-  if (_internal_has_mvserviceworkerdata()) {
+inline void OptionalServiceWorkerData::clear_a_mvserviceworkerdata() {
+  if (_internal_has_a_mvserviceworkerdata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvserviceworkerdata_;
+      delete _impl_.content_.a_mvserviceworkerdata_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::release_mvserviceworkerdata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.OptionalServiceWorkerData.mVServiceWorkerData)
-  if (_internal_has_mvserviceworkerdata()) {
+inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::release_a_mvserviceworkerdata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVServiceWorkerData)
+  if (_internal_has_a_mvserviceworkerdata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::ServiceWorkerData* temp = _impl_.content_.mvserviceworkerdata_;
+    ::protobuf::mozilla::dom::ServiceWorkerData* temp = _impl_.content_.a_mvserviceworkerdata_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvserviceworkerdata_ = nullptr;
+    _impl_.content_.a_mvserviceworkerdata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerData& OptionalServiceWorkerData::_internal_mvserviceworkerdata() const {
-  return _internal_has_mvserviceworkerdata()
-      ? *_impl_.content_.mvserviceworkerdata_
+inline const ::protobuf::mozilla::dom::ServiceWorkerData& OptionalServiceWorkerData::_internal_a_mvserviceworkerdata() const {
+  return _internal_has_a_mvserviceworkerdata()
+      ? *_impl_.content_.a_mvserviceworkerdata_
       : reinterpret_cast< ::protobuf::mozilla::dom::ServiceWorkerData&>(::protobuf::mozilla::dom::_ServiceWorkerData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerData& OptionalServiceWorkerData::mvserviceworkerdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalServiceWorkerData.mVServiceWorkerData)
-  return _internal_mvserviceworkerdata();
+inline const ::protobuf::mozilla::dom::ServiceWorkerData& OptionalServiceWorkerData::a_mvserviceworkerdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVServiceWorkerData)
+  return _internal_a_mvserviceworkerdata();
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::unsafe_arena_release_mvserviceworkerdata() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.OptionalServiceWorkerData.mVServiceWorkerData)
-  if (_internal_has_mvserviceworkerdata()) {
+inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::unsafe_arena_release_a_mvserviceworkerdata() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVServiceWorkerData)
+  if (_internal_has_a_mvserviceworkerdata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::ServiceWorkerData* temp = _impl_.content_.mvserviceworkerdata_;
-    _impl_.content_.mvserviceworkerdata_ = nullptr;
+    ::protobuf::mozilla::dom::ServiceWorkerData* temp = _impl_.content_.a_mvserviceworkerdata_;
+    _impl_.content_.a_mvserviceworkerdata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void OptionalServiceWorkerData::unsafe_arena_set_allocated_mvserviceworkerdata(::protobuf::mozilla::dom::ServiceWorkerData* mvserviceworkerdata) {
+inline void OptionalServiceWorkerData::unsafe_arena_set_allocated_a_mvserviceworkerdata(::protobuf::mozilla::dom::ServiceWorkerData* a_mvserviceworkerdata) {
   clear_content();
-  if (mvserviceworkerdata) {
-    set_has_mvserviceworkerdata();
-    _impl_.content_.mvserviceworkerdata_ = mvserviceworkerdata;
+  if (a_mvserviceworkerdata) {
+    set_has_a_mvserviceworkerdata();
+    _impl_.content_.a_mvserviceworkerdata_ = a_mvserviceworkerdata;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.OptionalServiceWorkerData.mVServiceWorkerData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVServiceWorkerData)
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::_internal_mutable_mvserviceworkerdata() {
-  if (!_internal_has_mvserviceworkerdata()) {
+inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::_internal_mutable_a_mvserviceworkerdata() {
+  if (!_internal_has_a_mvserviceworkerdata()) {
     clear_content();
-    set_has_mvserviceworkerdata();
-    _impl_.content_.mvserviceworkerdata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::ServiceWorkerData >(GetArenaForAllocation());
+    set_has_a_mvserviceworkerdata();
+    _impl_.content_.a_mvserviceworkerdata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::ServiceWorkerData >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvserviceworkerdata_;
+  return _impl_.content_.a_mvserviceworkerdata_;
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::mutable_mvserviceworkerdata() {
-  ::protobuf::mozilla::dom::ServiceWorkerData* _msg = _internal_mutable_mvserviceworkerdata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.OptionalServiceWorkerData.mVServiceWorkerData)
+inline ::protobuf::mozilla::dom::ServiceWorkerData* OptionalServiceWorkerData::mutable_a_mvserviceworkerdata() {
+  ::protobuf::mozilla::dom::ServiceWorkerData* _msg = _internal_mutable_a_mvserviceworkerdata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.OptionalServiceWorkerData.a_mVServiceWorkerData)
   return _msg;
 }
 
@@ -3020,109 +3020,109 @@ inline OptionalServiceWorkerData::ContentCase OptionalServiceWorkerData::content
 
 // RemoteWorkerData
 
-// required bytes originalScriptURL = 1;
-inline bool RemoteWorkerData::_internal_has_originalscripturl() const {
+// required bytes a_originalScriptURL = 1;
+inline bool RemoteWorkerData::_internal_has_a_originalscripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_originalscripturl() const {
-  return _internal_has_originalscripturl();
+inline bool RemoteWorkerData::has_a_originalscripturl() const {
+  return _internal_has_a_originalscripturl();
 }
-inline void RemoteWorkerData::clear_originalscripturl() {
-  _impl_.originalscripturl_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_originalscripturl() {
+  _impl_.a_originalscripturl_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& RemoteWorkerData::originalscripturl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.originalScriptURL)
-  return _internal_originalscripturl();
+inline const std::string& RemoteWorkerData::a_originalscripturl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL)
+  return _internal_a_originalscripturl();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_originalscripturl(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_originalscripturl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.originalscripturl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.originalScriptURL)
+ _impl_.a_originalscripturl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL)
 }
-inline std::string* RemoteWorkerData::mutable_originalscripturl() {
-  std::string* _s = _internal_mutable_originalscripturl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.originalScriptURL)
+inline std::string* RemoteWorkerData::mutable_a_originalscripturl() {
+  std::string* _s = _internal_mutable_a_originalscripturl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_originalscripturl() const {
-  return _impl_.originalscripturl_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_originalscripturl() const {
+  return _impl_.a_originalscripturl_.Get();
 }
-inline void RemoteWorkerData::_internal_set_originalscripturl(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_originalscripturl(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.originalscripturl_.Set(value, GetArenaForAllocation());
+  _impl_.a_originalscripturl_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_originalscripturl() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_originalscripturl() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.originalscripturl_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originalscripturl_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_originalscripturl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.originalScriptURL)
-  if (!_internal_has_originalscripturl()) {
+inline std::string* RemoteWorkerData::release_a_originalscripturl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL)
+  if (!_internal_has_a_originalscripturl()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.originalscripturl_.Release();
+  auto* p = _impl_.a_originalscripturl_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originalscripturl_.IsDefault()) {
-    _impl_.originalscripturl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originalscripturl_.IsDefault()) {
+    _impl_.a_originalscripturl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_originalscripturl(std::string* originalscripturl) {
-  if (originalscripturl != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_originalscripturl(std::string* a_originalscripturl) {
+  if (a_originalscripturl != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.originalscripturl_.SetAllocated(originalscripturl, GetArenaForAllocation());
+  _impl_.a_originalscripturl_.SetAllocated(a_originalscripturl, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originalscripturl_.IsDefault()) {
-    _impl_.originalscripturl_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originalscripturl_.IsDefault()) {
+    _impl_.a_originalscripturl_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.originalScriptURL)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL)
 }
 
-// required .protobuf.mozilla.ipc.URIParams baseScriptURL = 2;
-inline bool RemoteWorkerData::_internal_has_basescripturl() const {
+// required .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+inline bool RemoteWorkerData::_internal_has_a_basescripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.basescripturl_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_basescripturl_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_basescripturl() const {
-  return _internal_has_basescripturl();
+inline bool RemoteWorkerData::has_a_basescripturl() const {
+  return _internal_has_a_basescripturl();
 }
-inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::_internal_basescripturl() const {
-  const ::protobuf::mozilla::ipc::URIParams* p = _impl_.basescripturl_;
+inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::_internal_a_basescripturl() const {
+  const ::protobuf::mozilla::ipc::URIParams* p = _impl_.a_basescripturl_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::URIParams&>(
       ::protobuf::mozilla::ipc::_URIParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::basescripturl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.baseScriptURL)
-  return _internal_basescripturl();
+inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::a_basescripturl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_baseScriptURL)
+  return _internal_a_basescripturl();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_basescripturl(
-    ::protobuf::mozilla::ipc::URIParams* basescripturl) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_basescripturl(
+    ::protobuf::mozilla::ipc::URIParams* a_basescripturl) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.basescripturl_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_basescripturl_);
   }
-  _impl_.basescripturl_ = basescripturl;
-  if (basescripturl) {
+  _impl_.a_basescripturl_ = a_basescripturl;
+  if (a_basescripturl) {
     _impl_._has_bits_[0] |= 0x00000200u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000200u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.baseScriptURL)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_baseScriptURL)
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::release_basescripturl() {
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::release_a_basescripturl() {
   _impl_._has_bits_[0] &= ~0x00000200u;
-  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.basescripturl_;
-  _impl_.basescripturl_ = nullptr;
+  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.a_basescripturl_;
+  _impl_.a_basescripturl_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3134,82 +3134,82 @@ inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::release_basescript
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::unsafe_arena_release_basescripturl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.baseScriptURL)
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::unsafe_arena_release_a_basescripturl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_baseScriptURL)
   _impl_._has_bits_[0] &= ~0x00000200u;
-  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.basescripturl_;
-  _impl_.basescripturl_ = nullptr;
+  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.a_basescripturl_;
+  _impl_.a_basescripturl_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::_internal_mutable_basescripturl() {
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::_internal_mutable_a_basescripturl() {
   _impl_._has_bits_[0] |= 0x00000200u;
-  if (_impl_.basescripturl_ == nullptr) {
+  if (_impl_.a_basescripturl_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::URIParams>(GetArenaForAllocation());
-    _impl_.basescripturl_ = p;
+    _impl_.a_basescripturl_ = p;
   }
-  return _impl_.basescripturl_;
+  return _impl_.a_basescripturl_;
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::mutable_basescripturl() {
-  ::protobuf::mozilla::ipc::URIParams* _msg = _internal_mutable_basescripturl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.baseScriptURL)
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::mutable_a_basescripturl() {
+  ::protobuf::mozilla::ipc::URIParams* _msg = _internal_mutable_a_basescripturl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_baseScriptURL)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_basescripturl(::protobuf::mozilla::ipc::URIParams* basescripturl) {
+inline void RemoteWorkerData::set_allocated_a_basescripturl(::protobuf::mozilla::ipc::URIParams* a_basescripturl) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.basescripturl_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_basescripturl_);
   }
-  if (basescripturl) {
+  if (a_basescripturl) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(basescripturl));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_basescripturl));
     if (message_arena != submessage_arena) {
-      basescripturl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, basescripturl, submessage_arena);
+      a_basescripturl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_basescripturl, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000200u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000200u;
   }
-  _impl_.basescripturl_ = basescripturl;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.baseScriptURL)
+  _impl_.a_basescripturl_ = a_basescripturl;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_baseScriptURL)
 }
 
-// required .protobuf.mozilla.ipc.URIParams resolvedScriptURL = 3;
-inline bool RemoteWorkerData::_internal_has_resolvedscripturl() const {
+// required .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+inline bool RemoteWorkerData::_internal_has_a_resolvedscripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.resolvedscripturl_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_resolvedscripturl_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_resolvedscripturl() const {
-  return _internal_has_resolvedscripturl();
+inline bool RemoteWorkerData::has_a_resolvedscripturl() const {
+  return _internal_has_a_resolvedscripturl();
 }
-inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::_internal_resolvedscripturl() const {
-  const ::protobuf::mozilla::ipc::URIParams* p = _impl_.resolvedscripturl_;
+inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::_internal_a_resolvedscripturl() const {
+  const ::protobuf::mozilla::ipc::URIParams* p = _impl_.a_resolvedscripturl_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::URIParams&>(
       ::protobuf::mozilla::ipc::_URIParams_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::resolvedscripturl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.resolvedScriptURL)
-  return _internal_resolvedscripturl();
+inline const ::protobuf::mozilla::ipc::URIParams& RemoteWorkerData::a_resolvedscripturl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_resolvedScriptURL)
+  return _internal_a_resolvedscripturl();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_resolvedscripturl(
-    ::protobuf::mozilla::ipc::URIParams* resolvedscripturl) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_resolvedscripturl(
+    ::protobuf::mozilla::ipc::URIParams* a_resolvedscripturl) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.resolvedscripturl_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_resolvedscripturl_);
   }
-  _impl_.resolvedscripturl_ = resolvedscripturl;
-  if (resolvedscripturl) {
+  _impl_.a_resolvedscripturl_ = a_resolvedscripturl;
+  if (a_resolvedscripturl) {
     _impl_._has_bits_[0] |= 0x00000400u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000400u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.resolvedScriptURL)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_resolvedScriptURL)
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::release_resolvedscripturl() {
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::release_a_resolvedscripturl() {
   _impl_._has_bits_[0] &= ~0x00000400u;
-  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.resolvedscripturl_;
-  _impl_.resolvedscripturl_ = nullptr;
+  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.a_resolvedscripturl_;
+  _impl_.a_resolvedscripturl_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3221,150 +3221,150 @@ inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::release_resolvedsc
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::unsafe_arena_release_resolvedscripturl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.resolvedScriptURL)
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::unsafe_arena_release_a_resolvedscripturl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_resolvedScriptURL)
   _impl_._has_bits_[0] &= ~0x00000400u;
-  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.resolvedscripturl_;
-  _impl_.resolvedscripturl_ = nullptr;
+  ::protobuf::mozilla::ipc::URIParams* temp = _impl_.a_resolvedscripturl_;
+  _impl_.a_resolvedscripturl_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::_internal_mutable_resolvedscripturl() {
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::_internal_mutable_a_resolvedscripturl() {
   _impl_._has_bits_[0] |= 0x00000400u;
-  if (_impl_.resolvedscripturl_ == nullptr) {
+  if (_impl_.a_resolvedscripturl_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::URIParams>(GetArenaForAllocation());
-    _impl_.resolvedscripturl_ = p;
+    _impl_.a_resolvedscripturl_ = p;
   }
-  return _impl_.resolvedscripturl_;
+  return _impl_.a_resolvedscripturl_;
 }
-inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::mutable_resolvedscripturl() {
-  ::protobuf::mozilla::ipc::URIParams* _msg = _internal_mutable_resolvedscripturl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.resolvedScriptURL)
+inline ::protobuf::mozilla::ipc::URIParams* RemoteWorkerData::mutable_a_resolvedscripturl() {
+  ::protobuf::mozilla::ipc::URIParams* _msg = _internal_mutable_a_resolvedscripturl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_resolvedScriptURL)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_resolvedscripturl(::protobuf::mozilla::ipc::URIParams* resolvedscripturl) {
+inline void RemoteWorkerData::set_allocated_a_resolvedscripturl(::protobuf::mozilla::ipc::URIParams* a_resolvedscripturl) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.resolvedscripturl_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_resolvedscripturl_);
   }
-  if (resolvedscripturl) {
+  if (a_resolvedscripturl) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(resolvedscripturl));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_resolvedscripturl));
     if (message_arena != submessage_arena) {
-      resolvedscripturl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, resolvedscripturl, submessage_arena);
+      a_resolvedscripturl = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_resolvedscripturl, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000400u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000400u;
   }
-  _impl_.resolvedscripturl_ = resolvedscripturl;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.resolvedScriptURL)
+  _impl_.a_resolvedscripturl_ = a_resolvedscripturl;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_resolvedScriptURL)
 }
 
-// required bytes workerOptions = 4;
-inline bool RemoteWorkerData::_internal_has_workeroptions() const {
+// required bytes a_workerOptions = 4;
+inline bool RemoteWorkerData::_internal_has_a_workeroptions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_workeroptions() const {
-  return _internal_has_workeroptions();
+inline bool RemoteWorkerData::has_a_workeroptions() const {
+  return _internal_has_a_workeroptions();
 }
-inline void RemoteWorkerData::clear_workeroptions() {
-  _impl_.workeroptions_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_workeroptions() {
+  _impl_.a_workeroptions_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& RemoteWorkerData::workeroptions() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.workerOptions)
-  return _internal_workeroptions();
+inline const std::string& RemoteWorkerData::a_workeroptions() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_workerOptions)
+  return _internal_a_workeroptions();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_workeroptions(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_workeroptions(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.workeroptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.workerOptions)
+ _impl_.a_workeroptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_workerOptions)
 }
-inline std::string* RemoteWorkerData::mutable_workeroptions() {
-  std::string* _s = _internal_mutable_workeroptions();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.workerOptions)
+inline std::string* RemoteWorkerData::mutable_a_workeroptions() {
+  std::string* _s = _internal_mutable_a_workeroptions();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_workerOptions)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_workeroptions() const {
-  return _impl_.workeroptions_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_workeroptions() const {
+  return _impl_.a_workeroptions_.Get();
 }
-inline void RemoteWorkerData::_internal_set_workeroptions(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_workeroptions(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.workeroptions_.Set(value, GetArenaForAllocation());
+  _impl_.a_workeroptions_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_workeroptions() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_workeroptions() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.workeroptions_.Mutable(GetArenaForAllocation());
+  return _impl_.a_workeroptions_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_workeroptions() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.workerOptions)
-  if (!_internal_has_workeroptions()) {
+inline std::string* RemoteWorkerData::release_a_workeroptions() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_workerOptions)
+  if (!_internal_has_a_workeroptions()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.workeroptions_.Release();
+  auto* p = _impl_.a_workeroptions_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workeroptions_.IsDefault()) {
-    _impl_.workeroptions_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workeroptions_.IsDefault()) {
+    _impl_.a_workeroptions_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_workeroptions(std::string* workeroptions) {
-  if (workeroptions != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_workeroptions(std::string* a_workeroptions) {
+  if (a_workeroptions != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.workeroptions_.SetAllocated(workeroptions, GetArenaForAllocation());
+  _impl_.a_workeroptions_.SetAllocated(a_workeroptions, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.workeroptions_.IsDefault()) {
-    _impl_.workeroptions_.Set("", GetArenaForAllocation());
+  if (_impl_.a_workeroptions_.IsDefault()) {
+    _impl_.a_workeroptions_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.workerOptions)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_workerOptions)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo loadingPrincipalInfo = 5;
-inline bool RemoteWorkerData::_internal_has_loadingprincipalinfo() const {
+// required .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+inline bool RemoteWorkerData::_internal_has_a_loadingprincipalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.loadingprincipalinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_loadingprincipalinfo_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_loadingprincipalinfo() const {
-  return _internal_has_loadingprincipalinfo();
+inline bool RemoteWorkerData::has_a_loadingprincipalinfo() const {
+  return _internal_has_a_loadingprincipalinfo();
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::_internal_loadingprincipalinfo() const {
-  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.loadingprincipalinfo_;
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::_internal_a_loadingprincipalinfo() const {
+  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.a_loadingprincipalinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::PrincipalInfo&>(
       ::protobuf::mozilla::ipc::_PrincipalInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::loadingprincipalinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.loadingPrincipalInfo)
-  return _internal_loadingprincipalinfo();
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::a_loadingprincipalinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_loadingPrincipalInfo)
+  return _internal_a_loadingprincipalinfo();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_loadingprincipalinfo(
-    ::protobuf::mozilla::ipc::PrincipalInfo* loadingprincipalinfo) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_loadingprincipalinfo(
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_loadingprincipalinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.loadingprincipalinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_loadingprincipalinfo_);
   }
-  _impl_.loadingprincipalinfo_ = loadingprincipalinfo;
-  if (loadingprincipalinfo) {
+  _impl_.a_loadingprincipalinfo_ = a_loadingprincipalinfo;
+  if (a_loadingprincipalinfo) {
     _impl_._has_bits_[0] |= 0x00000800u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000800u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.loadingPrincipalInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_loadingPrincipalInfo)
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_loadingprincipalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_a_loadingprincipalinfo() {
   _impl_._has_bits_[0] &= ~0x00000800u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.loadingprincipalinfo_;
-  _impl_.loadingprincipalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_loadingprincipalinfo_;
+  _impl_.a_loadingprincipalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3376,82 +3376,82 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_loadin
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::unsafe_arena_release_loadingprincipalinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.loadingPrincipalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::unsafe_arena_release_a_loadingprincipalinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_loadingPrincipalInfo)
   _impl_._has_bits_[0] &= ~0x00000800u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.loadingprincipalinfo_;
-  _impl_.loadingprincipalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_loadingprincipalinfo_;
+  _impl_.a_loadingprincipalinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::_internal_mutable_loadingprincipalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::_internal_mutable_a_loadingprincipalinfo() {
   _impl_._has_bits_[0] |= 0x00000800u;
-  if (_impl_.loadingprincipalinfo_ == nullptr) {
+  if (_impl_.a_loadingprincipalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
-    _impl_.loadingprincipalinfo_ = p;
+    _impl_.a_loadingprincipalinfo_ = p;
   }
-  return _impl_.loadingprincipalinfo_;
+  return _impl_.a_loadingprincipalinfo_;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::mutable_loadingprincipalinfo() {
-  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_loadingprincipalinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.loadingPrincipalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::mutable_a_loadingprincipalinfo() {
+  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_a_loadingprincipalinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_loadingPrincipalInfo)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_loadingprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* loadingprincipalinfo) {
+inline void RemoteWorkerData::set_allocated_a_loadingprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_loadingprincipalinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.loadingprincipalinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_loadingprincipalinfo_);
   }
-  if (loadingprincipalinfo) {
+  if (a_loadingprincipalinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(loadingprincipalinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_loadingprincipalinfo));
     if (message_arena != submessage_arena) {
-      loadingprincipalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, loadingprincipalinfo, submessage_arena);
+      a_loadingprincipalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_loadingprincipalinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000800u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000800u;
   }
-  _impl_.loadingprincipalinfo_ = loadingprincipalinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.loadingPrincipalInfo)
+  _impl_.a_loadingprincipalinfo_ = a_loadingprincipalinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_loadingPrincipalInfo)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo principalInfo = 6;
-inline bool RemoteWorkerData::_internal_has_principalinfo() const {
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+inline bool RemoteWorkerData::_internal_has_a_principalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.principalinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_principalinfo() const {
-  return _internal_has_principalinfo();
+inline bool RemoteWorkerData::has_a_principalinfo() const {
+  return _internal_has_a_principalinfo();
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::_internal_principalinfo() const {
-  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.principalinfo_;
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::_internal_a_principalinfo() const {
+  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.a_principalinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::PrincipalInfo&>(
       ::protobuf::mozilla::ipc::_PrincipalInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::principalinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.principalInfo)
-  return _internal_principalinfo();
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::a_principalinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_principalInfo)
+  return _internal_a_principalinfo();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_principalinfo(
-    ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_principalinfo(
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.principalinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_principalinfo_);
   }
-  _impl_.principalinfo_ = principalinfo;
-  if (principalinfo) {
+  _impl_.a_principalinfo_ = a_principalinfo;
+  if (a_principalinfo) {
     _impl_._has_bits_[0] |= 0x00001000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00001000u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.principalInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_principalInfo)
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_principalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_a_principalinfo() {
   _impl_._has_bits_[0] &= ~0x00001000u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.principalinfo_;
-  _impl_.principalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
+  _impl_.a_principalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3463,82 +3463,82 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_princi
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::unsafe_arena_release_principalinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.principalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::unsafe_arena_release_a_principalinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_principalInfo)
   _impl_._has_bits_[0] &= ~0x00001000u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.principalinfo_;
-  _impl_.principalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
+  _impl_.a_principalinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::_internal_mutable_principalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::_internal_mutable_a_principalinfo() {
   _impl_._has_bits_[0] |= 0x00001000u;
-  if (_impl_.principalinfo_ == nullptr) {
+  if (_impl_.a_principalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
-    _impl_.principalinfo_ = p;
+    _impl_.a_principalinfo_ = p;
   }
-  return _impl_.principalinfo_;
+  return _impl_.a_principalinfo_;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::mutable_principalinfo() {
-  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_principalinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.principalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::mutable_a_principalinfo() {
+  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_a_principalinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_principalInfo)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* principalinfo) {
+inline void RemoteWorkerData::set_allocated_a_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.principalinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_principalinfo_);
   }
-  if (principalinfo) {
+  if (a_principalinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(principalinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_principalinfo));
     if (message_arena != submessage_arena) {
-      principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, principalinfo, submessage_arena);
+      a_principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_principalinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00001000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00001000u;
   }
-  _impl_.principalinfo_ = principalinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.principalInfo)
+  _impl_.a_principalinfo_ = a_principalinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_principalInfo)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo partitionedPrincipalInfo = 7;
-inline bool RemoteWorkerData::_internal_has_partitionedprincipalinfo() const {
+// required .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+inline bool RemoteWorkerData::_internal_has_a_partitionedprincipalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.partitionedprincipalinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_partitionedprincipalinfo_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_partitionedprincipalinfo() const {
-  return _internal_has_partitionedprincipalinfo();
+inline bool RemoteWorkerData::has_a_partitionedprincipalinfo() const {
+  return _internal_has_a_partitionedprincipalinfo();
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::_internal_partitionedprincipalinfo() const {
-  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.partitionedprincipalinfo_;
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::_internal_a_partitionedprincipalinfo() const {
+  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.a_partitionedprincipalinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::PrincipalInfo&>(
       ::protobuf::mozilla::ipc::_PrincipalInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::partitionedprincipalinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.partitionedPrincipalInfo)
-  return _internal_partitionedprincipalinfo();
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& RemoteWorkerData::a_partitionedprincipalinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_partitionedPrincipalInfo)
+  return _internal_a_partitionedprincipalinfo();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_partitionedprincipalinfo(
-    ::protobuf::mozilla::ipc::PrincipalInfo* partitionedprincipalinfo) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_partitionedprincipalinfo(
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_partitionedprincipalinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.partitionedprincipalinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_partitionedprincipalinfo_);
   }
-  _impl_.partitionedprincipalinfo_ = partitionedprincipalinfo;
-  if (partitionedprincipalinfo) {
+  _impl_.a_partitionedprincipalinfo_ = a_partitionedprincipalinfo;
+  if (a_partitionedprincipalinfo) {
     _impl_._has_bits_[0] |= 0x00002000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00002000u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.partitionedPrincipalInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_partitionedPrincipalInfo)
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_partitionedprincipalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_a_partitionedprincipalinfo() {
   _impl_._has_bits_[0] &= ~0x00002000u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.partitionedprincipalinfo_;
-  _impl_.partitionedprincipalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_partitionedprincipalinfo_;
+  _impl_.a_partitionedprincipalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3550,138 +3550,138 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::release_partit
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::unsafe_arena_release_partitionedprincipalinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.partitionedPrincipalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::unsafe_arena_release_a_partitionedprincipalinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_partitionedPrincipalInfo)
   _impl_._has_bits_[0] &= ~0x00002000u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.partitionedprincipalinfo_;
-  _impl_.partitionedprincipalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_partitionedprincipalinfo_;
+  _impl_.a_partitionedprincipalinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::_internal_mutable_partitionedprincipalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::_internal_mutable_a_partitionedprincipalinfo() {
   _impl_._has_bits_[0] |= 0x00002000u;
-  if (_impl_.partitionedprincipalinfo_ == nullptr) {
+  if (_impl_.a_partitionedprincipalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
-    _impl_.partitionedprincipalinfo_ = p;
+    _impl_.a_partitionedprincipalinfo_ = p;
   }
-  return _impl_.partitionedprincipalinfo_;
+  return _impl_.a_partitionedprincipalinfo_;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::mutable_partitionedprincipalinfo() {
-  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_partitionedprincipalinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.partitionedPrincipalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* RemoteWorkerData::mutable_a_partitionedprincipalinfo() {
+  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_a_partitionedprincipalinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_partitionedPrincipalInfo)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_partitionedprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* partitionedprincipalinfo) {
+inline void RemoteWorkerData::set_allocated_a_partitionedprincipalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_partitionedprincipalinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.partitionedprincipalinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_partitionedprincipalinfo_);
   }
-  if (partitionedprincipalinfo) {
+  if (a_partitionedprincipalinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(partitionedprincipalinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_partitionedprincipalinfo));
     if (message_arena != submessage_arena) {
-      partitionedprincipalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, partitionedprincipalinfo, submessage_arena);
+      a_partitionedprincipalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_partitionedprincipalinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00002000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00002000u;
   }
-  _impl_.partitionedprincipalinfo_ = partitionedprincipalinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.partitionedPrincipalInfo)
+  _impl_.a_partitionedprincipalinfo_ = a_partitionedprincipalinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_partitionedPrincipalInfo)
 }
 
-// required bool useRegularPrincipal = 8;
-inline bool RemoteWorkerData::_internal_has_useregularprincipal() const {
+// required bool a_useRegularPrincipal = 8;
+inline bool RemoteWorkerData::_internal_has_a_useregularprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_useregularprincipal() const {
-  return _internal_has_useregularprincipal();
+inline bool RemoteWorkerData::has_a_useregularprincipal() const {
+  return _internal_has_a_useregularprincipal();
 }
-inline void RemoteWorkerData::clear_useregularprincipal() {
-  _impl_.useregularprincipal_ = false;
+inline void RemoteWorkerData::clear_a_useregularprincipal() {
+  _impl_.a_useregularprincipal_ = false;
   _impl_._has_bits_[0] &= ~0x00020000u;
 }
-inline bool RemoteWorkerData::_internal_useregularprincipal() const {
-  return _impl_.useregularprincipal_;
+inline bool RemoteWorkerData::_internal_a_useregularprincipal() const {
+  return _impl_.a_useregularprincipal_;
 }
-inline bool RemoteWorkerData::useregularprincipal() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.useRegularPrincipal)
-  return _internal_useregularprincipal();
+inline bool RemoteWorkerData::a_useregularprincipal() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_useRegularPrincipal)
+  return _internal_a_useregularprincipal();
 }
-inline void RemoteWorkerData::_internal_set_useregularprincipal(bool value) {
+inline void RemoteWorkerData::_internal_set_a_useregularprincipal(bool value) {
   _impl_._has_bits_[0] |= 0x00020000u;
-  _impl_.useregularprincipal_ = value;
+  _impl_.a_useregularprincipal_ = value;
 }
-inline void RemoteWorkerData::set_useregularprincipal(bool value) {
-  _internal_set_useregularprincipal(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.useRegularPrincipal)
+inline void RemoteWorkerData::set_a_useregularprincipal(bool value) {
+  _internal_set_a_useregularprincipal(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_useRegularPrincipal)
 }
 
-// required bool usingStorageAccess = 9;
-inline bool RemoteWorkerData::_internal_has_usingstorageaccess() const {
+// required bool a_usingStorageAccess = 9;
+inline bool RemoteWorkerData::_internal_has_a_usingstorageaccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_usingstorageaccess() const {
-  return _internal_has_usingstorageaccess();
+inline bool RemoteWorkerData::has_a_usingstorageaccess() const {
+  return _internal_has_a_usingstorageaccess();
 }
-inline void RemoteWorkerData::clear_usingstorageaccess() {
-  _impl_.usingstorageaccess_ = false;
+inline void RemoteWorkerData::clear_a_usingstorageaccess() {
+  _impl_.a_usingstorageaccess_ = false;
   _impl_._has_bits_[0] &= ~0x00040000u;
 }
-inline bool RemoteWorkerData::_internal_usingstorageaccess() const {
-  return _impl_.usingstorageaccess_;
+inline bool RemoteWorkerData::_internal_a_usingstorageaccess() const {
+  return _impl_.a_usingstorageaccess_;
 }
-inline bool RemoteWorkerData::usingstorageaccess() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.usingStorageAccess)
-  return _internal_usingstorageaccess();
+inline bool RemoteWorkerData::a_usingstorageaccess() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_usingStorageAccess)
+  return _internal_a_usingstorageaccess();
 }
-inline void RemoteWorkerData::_internal_set_usingstorageaccess(bool value) {
+inline void RemoteWorkerData::_internal_set_a_usingstorageaccess(bool value) {
   _impl_._has_bits_[0] |= 0x00040000u;
-  _impl_.usingstorageaccess_ = value;
+  _impl_.a_usingstorageaccess_ = value;
 }
-inline void RemoteWorkerData::set_usingstorageaccess(bool value) {
-  _internal_set_usingstorageaccess(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.usingStorageAccess)
+inline void RemoteWorkerData::set_a_usingstorageaccess(bool value) {
+  _internal_set_a_usingstorageaccess(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_usingStorageAccess)
 }
 
-// required .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 10;
-inline bool RemoteWorkerData::_internal_has_cookiejarsettings() const {
+// required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+inline bool RemoteWorkerData::_internal_has_a_cookiejarsettings() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.cookiejarsettings_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_cookiejarsettings_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_cookiejarsettings() const {
-  return _internal_has_cookiejarsettings();
+inline bool RemoteWorkerData::has_a_cookiejarsettings() const {
+  return _internal_has_a_cookiejarsettings();
 }
-inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& RemoteWorkerData::_internal_cookiejarsettings() const {
-  const ::protobuf::mozilla::net::CookieJarSettingsArgs* p = _impl_.cookiejarsettings_;
+inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& RemoteWorkerData::_internal_a_cookiejarsettings() const {
+  const ::protobuf::mozilla::net::CookieJarSettingsArgs* p = _impl_.a_cookiejarsettings_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::CookieJarSettingsArgs&>(
       ::protobuf::mozilla::net::_CookieJarSettingsArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& RemoteWorkerData::cookiejarsettings() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.cookieJarSettings)
-  return _internal_cookiejarsettings();
+inline const ::protobuf::mozilla::net::CookieJarSettingsArgs& RemoteWorkerData::a_cookiejarsettings() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_cookieJarSettings)
+  return _internal_a_cookiejarsettings();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_cookiejarsettings(
-    ::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_cookiejarsettings(
+    ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookiejarsettings_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookiejarsettings_);
   }
-  _impl_.cookiejarsettings_ = cookiejarsettings;
-  if (cookiejarsettings) {
+  _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
+  if (a_cookiejarsettings) {
     _impl_._has_bits_[0] |= 0x00004000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00004000u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.cookieJarSettings)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_cookieJarSettings)
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::release_cookiejarsettings() {
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::release_a_cookiejarsettings() {
   _impl_._has_bits_[0] &= ~0x00004000u;
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.cookiejarsettings_;
-  _impl_.cookiejarsettings_ = nullptr;
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
+  _impl_.a_cookiejarsettings_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3693,178 +3693,178 @@ inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::releas
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::unsafe_arena_release_cookiejarsettings() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.cookieJarSettings)
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::unsafe_arena_release_a_cookiejarsettings() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_cookieJarSettings)
   _impl_._has_bits_[0] &= ~0x00004000u;
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.cookiejarsettings_;
-  _impl_.cookiejarsettings_ = nullptr;
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
+  _impl_.a_cookiejarsettings_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::_internal_mutable_cookiejarsettings() {
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::_internal_mutable_a_cookiejarsettings() {
   _impl_._has_bits_[0] |= 0x00004000u;
-  if (_impl_.cookiejarsettings_ == nullptr) {
+  if (_impl_.a_cookiejarsettings_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::CookieJarSettingsArgs>(GetArenaForAllocation());
-    _impl_.cookiejarsettings_ = p;
+    _impl_.a_cookiejarsettings_ = p;
   }
-  return _impl_.cookiejarsettings_;
+  return _impl_.a_cookiejarsettings_;
 }
-inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::mutable_cookiejarsettings() {
-  ::protobuf::mozilla::net::CookieJarSettingsArgs* _msg = _internal_mutable_cookiejarsettings();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.cookieJarSettings)
+inline ::protobuf::mozilla::net::CookieJarSettingsArgs* RemoteWorkerData::mutable_a_cookiejarsettings() {
+  ::protobuf::mozilla::net::CookieJarSettingsArgs* _msg = _internal_mutable_a_cookiejarsettings();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_cookieJarSettings)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* cookiejarsettings) {
+inline void RemoteWorkerData::set_allocated_a_cookiejarsettings(::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.cookiejarsettings_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_cookiejarsettings_);
   }
-  if (cookiejarsettings) {
+  if (a_cookiejarsettings) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cookiejarsettings));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_cookiejarsettings));
     if (message_arena != submessage_arena) {
-      cookiejarsettings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, cookiejarsettings, submessage_arena);
+      a_cookiejarsettings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_cookiejarsettings, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00004000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00004000u;
   }
-  _impl_.cookiejarsettings_ = cookiejarsettings;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.cookieJarSettings)
+  _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_cookieJarSettings)
 }
 
-// required bytes domain = 11;
-inline bool RemoteWorkerData::_internal_has_domain() const {
+// required bytes a_domain = 11;
+inline bool RemoteWorkerData::_internal_has_a_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_domain() const {
-  return _internal_has_domain();
+inline bool RemoteWorkerData::has_a_domain() const {
+  return _internal_has_a_domain();
 }
-inline void RemoteWorkerData::clear_domain() {
-  _impl_.domain_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_domain() {
+  _impl_.a_domain_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& RemoteWorkerData::domain() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.domain)
-  return _internal_domain();
+inline const std::string& RemoteWorkerData::a_domain() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_domain)
+  return _internal_a_domain();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_domain(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_domain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.domain)
+ _impl_.a_domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_domain)
 }
-inline std::string* RemoteWorkerData::mutable_domain() {
-  std::string* _s = _internal_mutable_domain();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.domain)
+inline std::string* RemoteWorkerData::mutable_a_domain() {
+  std::string* _s = _internal_mutable_a_domain();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_domain)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_domain() const {
-  return _impl_.domain_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_domain() const {
+  return _impl_.a_domain_.Get();
 }
-inline void RemoteWorkerData::_internal_set_domain(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_domain(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.domain_.Set(value, GetArenaForAllocation());
+  _impl_.a_domain_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_domain() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_domain() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.domain_.Mutable(GetArenaForAllocation());
+  return _impl_.a_domain_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_domain() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.domain)
-  if (!_internal_has_domain()) {
+inline std::string* RemoteWorkerData::release_a_domain() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_domain)
+  if (!_internal_has_a_domain()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.domain_.Release();
+  auto* p = _impl_.a_domain_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.domain_.IsDefault()) {
-    _impl_.domain_.Set("", GetArenaForAllocation());
+  if (_impl_.a_domain_.IsDefault()) {
+    _impl_.a_domain_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_domain(std::string* domain) {
-  if (domain != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_domain(std::string* a_domain) {
+  if (a_domain != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.domain_.SetAllocated(domain, GetArenaForAllocation());
+  _impl_.a_domain_.SetAllocated(a_domain, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.domain_.IsDefault()) {
-    _impl_.domain_.Set("", GetArenaForAllocation());
+  if (_impl_.a_domain_.IsDefault()) {
+    _impl_.a_domain_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.domain)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_domain)
 }
 
-// required bool isSecureContext = 12;
-inline bool RemoteWorkerData::_internal_has_issecurecontext() const {
+// required bool a_isSecureContext = 12;
+inline bool RemoteWorkerData::_internal_has_a_issecurecontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_issecurecontext() const {
-  return _internal_has_issecurecontext();
+inline bool RemoteWorkerData::has_a_issecurecontext() const {
+  return _internal_has_a_issecurecontext();
 }
-inline void RemoteWorkerData::clear_issecurecontext() {
-  _impl_.issecurecontext_ = false;
+inline void RemoteWorkerData::clear_a_issecurecontext() {
+  _impl_.a_issecurecontext_ = false;
   _impl_._has_bits_[0] &= ~0x00080000u;
 }
-inline bool RemoteWorkerData::_internal_issecurecontext() const {
-  return _impl_.issecurecontext_;
+inline bool RemoteWorkerData::_internal_a_issecurecontext() const {
+  return _impl_.a_issecurecontext_;
 }
-inline bool RemoteWorkerData::issecurecontext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.isSecureContext)
-  return _internal_issecurecontext();
+inline bool RemoteWorkerData::a_issecurecontext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_isSecureContext)
+  return _internal_a_issecurecontext();
 }
-inline void RemoteWorkerData::_internal_set_issecurecontext(bool value) {
+inline void RemoteWorkerData::_internal_set_a_issecurecontext(bool value) {
   _impl_._has_bits_[0] |= 0x00080000u;
-  _impl_.issecurecontext_ = value;
+  _impl_.a_issecurecontext_ = value;
 }
-inline void RemoteWorkerData::set_issecurecontext(bool value) {
-  _internal_set_issecurecontext(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.isSecureContext)
+inline void RemoteWorkerData::set_a_issecurecontext(bool value) {
+  _internal_set_a_issecurecontext(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_isSecureContext)
 }
 
-// optional .protobuf.mozilla.dom.IPCClientInfo clientInfo = 13;
-inline bool RemoteWorkerData::_internal_has_clientinfo() const {
+// optional .protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
+inline bool RemoteWorkerData::_internal_has_a_clientinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00008000u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.clientinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_clientinfo_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_clientinfo() const {
-  return _internal_has_clientinfo();
+inline bool RemoteWorkerData::has_a_clientinfo() const {
+  return _internal_has_a_clientinfo();
 }
-inline const ::protobuf::mozilla::dom::IPCClientInfo& RemoteWorkerData::_internal_clientinfo() const {
-  const ::protobuf::mozilla::dom::IPCClientInfo* p = _impl_.clientinfo_;
+inline const ::protobuf::mozilla::dom::IPCClientInfo& RemoteWorkerData::_internal_a_clientinfo() const {
+  const ::protobuf::mozilla::dom::IPCClientInfo* p = _impl_.a_clientinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::IPCClientInfo&>(
       ::protobuf::mozilla::dom::_IPCClientInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCClientInfo& RemoteWorkerData::clientinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.clientInfo)
-  return _internal_clientinfo();
+inline const ::protobuf::mozilla::dom::IPCClientInfo& RemoteWorkerData::a_clientinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_clientInfo)
+  return _internal_a_clientinfo();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_clientinfo(
-    ::protobuf::mozilla::dom::IPCClientInfo* clientinfo) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_clientinfo(
+    ::protobuf::mozilla::dom::IPCClientInfo* a_clientinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.clientinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_clientinfo_);
   }
-  _impl_.clientinfo_ = clientinfo;
-  if (clientinfo) {
+  _impl_.a_clientinfo_ = a_clientinfo;
+  if (a_clientinfo) {
     _impl_._has_bits_[0] |= 0x00008000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00008000u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.clientInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_clientInfo)
 }
-inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::release_clientinfo() {
+inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::release_a_clientinfo() {
   _impl_._has_bits_[0] &= ~0x00008000u;
-  ::protobuf::mozilla::dom::IPCClientInfo* temp = _impl_.clientinfo_;
-  _impl_.clientinfo_ = nullptr;
+  ::protobuf::mozilla::dom::IPCClientInfo* temp = _impl_.a_clientinfo_;
+  _impl_.a_clientinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3876,442 +3876,442 @@ inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::release_client
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::unsafe_arena_release_clientinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.clientInfo)
+inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::unsafe_arena_release_a_clientinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_clientInfo)
   _impl_._has_bits_[0] &= ~0x00008000u;
-  ::protobuf::mozilla::dom::IPCClientInfo* temp = _impl_.clientinfo_;
-  _impl_.clientinfo_ = nullptr;
+  ::protobuf::mozilla::dom::IPCClientInfo* temp = _impl_.a_clientinfo_;
+  _impl_.a_clientinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::_internal_mutable_clientinfo() {
+inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::_internal_mutable_a_clientinfo() {
   _impl_._has_bits_[0] |= 0x00008000u;
-  if (_impl_.clientinfo_ == nullptr) {
+  if (_impl_.a_clientinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCClientInfo>(GetArenaForAllocation());
-    _impl_.clientinfo_ = p;
+    _impl_.a_clientinfo_ = p;
   }
-  return _impl_.clientinfo_;
+  return _impl_.a_clientinfo_;
 }
-inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::mutable_clientinfo() {
-  ::protobuf::mozilla::dom::IPCClientInfo* _msg = _internal_mutable_clientinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.clientInfo)
+inline ::protobuf::mozilla::dom::IPCClientInfo* RemoteWorkerData::mutable_a_clientinfo() {
+  ::protobuf::mozilla::dom::IPCClientInfo* _msg = _internal_mutable_a_clientinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_clientInfo)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_clientinfo(::protobuf::mozilla::dom::IPCClientInfo* clientinfo) {
+inline void RemoteWorkerData::set_allocated_a_clientinfo(::protobuf::mozilla::dom::IPCClientInfo* a_clientinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.clientinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_clientinfo_);
   }
-  if (clientinfo) {
+  if (a_clientinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(clientinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_clientinfo));
     if (message_arena != submessage_arena) {
-      clientinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, clientinfo, submessage_arena);
+      a_clientinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_clientinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00008000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00008000u;
   }
-  _impl_.clientinfo_ = clientinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.clientInfo)
+  _impl_.a_clientinfo_ = a_clientinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_clientInfo)
 }
 
-// required bytes referrerInfo = 14;
-inline bool RemoteWorkerData::_internal_has_referrerinfo() const {
+// required bytes a_referrerInfo = 14;
+inline bool RemoteWorkerData::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_referrerinfo() const {
-  return _internal_has_referrerinfo();
+inline bool RemoteWorkerData::has_a_referrerinfo() const {
+  return _internal_has_a_referrerinfo();
 }
-inline void RemoteWorkerData::clear_referrerinfo() {
-  _impl_.referrerinfo_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_referrerinfo() {
+  _impl_.a_referrerinfo_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& RemoteWorkerData::referrerinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.referrerInfo)
-  return _internal_referrerinfo();
+inline const std::string& RemoteWorkerData::a_referrerinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_referrerInfo)
+  return _internal_a_referrerinfo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_referrerinfo(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_referrerinfo(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.referrerinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.referrerInfo)
+ _impl_.a_referrerinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_referrerInfo)
 }
-inline std::string* RemoteWorkerData::mutable_referrerinfo() {
-  std::string* _s = _internal_mutable_referrerinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.referrerInfo)
+inline std::string* RemoteWorkerData::mutable_a_referrerinfo() {
+  std::string* _s = _internal_mutable_a_referrerinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_referrerInfo)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_referrerinfo() const {
-  return _impl_.referrerinfo_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_referrerinfo() const {
+  return _impl_.a_referrerinfo_.Get();
 }
-inline void RemoteWorkerData::_internal_set_referrerinfo(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_referrerinfo(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.referrerinfo_.Set(value, GetArenaForAllocation());
+  _impl_.a_referrerinfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_referrerinfo() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_referrerinfo() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.referrerinfo_.Mutable(GetArenaForAllocation());
+  return _impl_.a_referrerinfo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_referrerinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.referrerInfo)
-  if (!_internal_has_referrerinfo()) {
+inline std::string* RemoteWorkerData::release_a_referrerinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_referrerInfo)
+  if (!_internal_has_a_referrerinfo()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.referrerinfo_.Release();
+  auto* p = _impl_.a_referrerinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.referrerinfo_.IsDefault()) {
-    _impl_.referrerinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_referrerinfo_.IsDefault()) {
+    _impl_.a_referrerinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_referrerinfo(std::string* referrerinfo) {
-  if (referrerinfo != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_referrerinfo(std::string* a_referrerinfo) {
+  if (a_referrerinfo != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.referrerinfo_.SetAllocated(referrerinfo, GetArenaForAllocation());
+  _impl_.a_referrerinfo_.SetAllocated(a_referrerinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.referrerinfo_.IsDefault()) {
-    _impl_.referrerinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_referrerinfo_.IsDefault()) {
+    _impl_.a_referrerinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.referrerInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_referrerInfo)
 }
 
-// required bytes storageAccess = 15;
-inline bool RemoteWorkerData::_internal_has_storageaccess() const {
+// required bytes a_storageAccess = 15;
+inline bool RemoteWorkerData::_internal_has_a_storageaccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_storageaccess() const {
-  return _internal_has_storageaccess();
+inline bool RemoteWorkerData::has_a_storageaccess() const {
+  return _internal_has_a_storageaccess();
 }
-inline void RemoteWorkerData::clear_storageaccess() {
-  _impl_.storageaccess_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_storageaccess() {
+  _impl_.a_storageaccess_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& RemoteWorkerData::storageaccess() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.storageAccess)
-  return _internal_storageaccess();
+inline const std::string& RemoteWorkerData::a_storageaccess() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_storageAccess)
+  return _internal_a_storageaccess();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_storageaccess(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_storageaccess(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.storageaccess_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.storageAccess)
+ _impl_.a_storageaccess_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_storageAccess)
 }
-inline std::string* RemoteWorkerData::mutable_storageaccess() {
-  std::string* _s = _internal_mutable_storageaccess();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.storageAccess)
+inline std::string* RemoteWorkerData::mutable_a_storageaccess() {
+  std::string* _s = _internal_mutable_a_storageaccess();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_storageAccess)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_storageaccess() const {
-  return _impl_.storageaccess_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_storageaccess() const {
+  return _impl_.a_storageaccess_.Get();
 }
-inline void RemoteWorkerData::_internal_set_storageaccess(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_storageaccess(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.storageaccess_.Set(value, GetArenaForAllocation());
+  _impl_.a_storageaccess_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_storageaccess() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_storageaccess() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.storageaccess_.Mutable(GetArenaForAllocation());
+  return _impl_.a_storageaccess_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_storageaccess() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.storageAccess)
-  if (!_internal_has_storageaccess()) {
+inline std::string* RemoteWorkerData::release_a_storageaccess() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_storageAccess)
+  if (!_internal_has_a_storageaccess()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.storageaccess_.Release();
+  auto* p = _impl_.a_storageaccess_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.storageaccess_.IsDefault()) {
-    _impl_.storageaccess_.Set("", GetArenaForAllocation());
+  if (_impl_.a_storageaccess_.IsDefault()) {
+    _impl_.a_storageaccess_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_storageaccess(std::string* storageaccess) {
-  if (storageaccess != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_storageaccess(std::string* a_storageaccess) {
+  if (a_storageaccess != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.storageaccess_.SetAllocated(storageaccess, GetArenaForAllocation());
+  _impl_.a_storageaccess_.SetAllocated(a_storageaccess, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.storageaccess_.IsDefault()) {
-    _impl_.storageaccess_.Set("", GetArenaForAllocation());
+  if (_impl_.a_storageaccess_.IsDefault()) {
+    _impl_.a_storageaccess_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.storageAccess)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_storageAccess)
 }
 
-// required bool isThirdPartyContext = 16;
-inline bool RemoteWorkerData::_internal_has_isthirdpartycontext() const {
+// required bool a_isThirdPartyContext = 16;
+inline bool RemoteWorkerData::_internal_has_a_isthirdpartycontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_isthirdpartycontext() const {
-  return _internal_has_isthirdpartycontext();
+inline bool RemoteWorkerData::has_a_isthirdpartycontext() const {
+  return _internal_has_a_isthirdpartycontext();
 }
-inline void RemoteWorkerData::clear_isthirdpartycontext() {
-  _impl_.isthirdpartycontext_ = false;
+inline void RemoteWorkerData::clear_a_isthirdpartycontext() {
+  _impl_.a_isthirdpartycontext_ = false;
   _impl_._has_bits_[0] &= ~0x00100000u;
 }
-inline bool RemoteWorkerData::_internal_isthirdpartycontext() const {
-  return _impl_.isthirdpartycontext_;
+inline bool RemoteWorkerData::_internal_a_isthirdpartycontext() const {
+  return _impl_.a_isthirdpartycontext_;
 }
-inline bool RemoteWorkerData::isthirdpartycontext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.isThirdPartyContext)
-  return _internal_isthirdpartycontext();
+inline bool RemoteWorkerData::a_isthirdpartycontext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_isThirdPartyContext)
+  return _internal_a_isthirdpartycontext();
 }
-inline void RemoteWorkerData::_internal_set_isthirdpartycontext(bool value) {
+inline void RemoteWorkerData::_internal_set_a_isthirdpartycontext(bool value) {
   _impl_._has_bits_[0] |= 0x00100000u;
-  _impl_.isthirdpartycontext_ = value;
+  _impl_.a_isthirdpartycontext_ = value;
 }
-inline void RemoteWorkerData::set_isthirdpartycontext(bool value) {
-  _internal_set_isthirdpartycontext(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.isThirdPartyContext)
+inline void RemoteWorkerData::set_a_isthirdpartycontext(bool value) {
+  _internal_set_a_isthirdpartycontext(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_isThirdPartyContext)
 }
 
-// required bool shouldResistFingerprinting = 17;
-inline bool RemoteWorkerData::_internal_has_shouldresistfingerprinting() const {
+// required bool a_shouldResistFingerprinting = 17;
+inline bool RemoteWorkerData::_internal_has_a_shouldresistfingerprinting() const {
   bool value = (_impl_._has_bits_[0] & 0x00200000u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_shouldresistfingerprinting() const {
-  return _internal_has_shouldresistfingerprinting();
+inline bool RemoteWorkerData::has_a_shouldresistfingerprinting() const {
+  return _internal_has_a_shouldresistfingerprinting();
 }
-inline void RemoteWorkerData::clear_shouldresistfingerprinting() {
-  _impl_.shouldresistfingerprinting_ = false;
+inline void RemoteWorkerData::clear_a_shouldresistfingerprinting() {
+  _impl_.a_shouldresistfingerprinting_ = false;
   _impl_._has_bits_[0] &= ~0x00200000u;
 }
-inline bool RemoteWorkerData::_internal_shouldresistfingerprinting() const {
-  return _impl_.shouldresistfingerprinting_;
+inline bool RemoteWorkerData::_internal_a_shouldresistfingerprinting() const {
+  return _impl_.a_shouldresistfingerprinting_;
 }
-inline bool RemoteWorkerData::shouldresistfingerprinting() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.shouldResistFingerprinting)
-  return _internal_shouldresistfingerprinting();
+inline bool RemoteWorkerData::a_shouldresistfingerprinting() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_shouldResistFingerprinting)
+  return _internal_a_shouldresistfingerprinting();
 }
-inline void RemoteWorkerData::_internal_set_shouldresistfingerprinting(bool value) {
+inline void RemoteWorkerData::_internal_set_a_shouldresistfingerprinting(bool value) {
   _impl_._has_bits_[0] |= 0x00200000u;
-  _impl_.shouldresistfingerprinting_ = value;
+  _impl_.a_shouldresistfingerprinting_ = value;
 }
-inline void RemoteWorkerData::set_shouldresistfingerprinting(bool value) {
-  _internal_set_shouldresistfingerprinting(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.shouldResistFingerprinting)
+inline void RemoteWorkerData::set_a_shouldresistfingerprinting(bool value) {
+  _internal_set_a_shouldresistfingerprinting(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_shouldResistFingerprinting)
 }
 
-// optional bytes overriddenFingerprintingSettings = 18;
-inline bool RemoteWorkerData::_internal_has_overriddenfingerprintingsettings() const {
+// optional bytes a_overriddenFingerprintingSettings = 18;
+inline bool RemoteWorkerData::_internal_has_a_overriddenfingerprintingsettings() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_overriddenfingerprintingsettings() const {
-  return _internal_has_overriddenfingerprintingsettings();
+inline bool RemoteWorkerData::has_a_overriddenfingerprintingsettings() const {
+  return _internal_has_a_overriddenfingerprintingsettings();
 }
-inline void RemoteWorkerData::clear_overriddenfingerprintingsettings() {
-  _impl_.overriddenfingerprintingsettings_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_overriddenfingerprintingsettings() {
+  _impl_.a_overriddenfingerprintingsettings_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline const std::string& RemoteWorkerData::overriddenfingerprintingsettings() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.overriddenFingerprintingSettings)
-  return _internal_overriddenfingerprintingsettings();
+inline const std::string& RemoteWorkerData::a_overriddenfingerprintingsettings() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_overriddenFingerprintingSettings)
+  return _internal_a_overriddenfingerprintingsettings();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_overriddenfingerprintingsettings(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_overriddenfingerprintingsettings(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.overriddenfingerprintingsettings_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.overriddenFingerprintingSettings)
+ _impl_.a_overriddenfingerprintingsettings_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_overriddenFingerprintingSettings)
 }
-inline std::string* RemoteWorkerData::mutable_overriddenfingerprintingsettings() {
-  std::string* _s = _internal_mutable_overriddenfingerprintingsettings();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.overriddenFingerprintingSettings)
+inline std::string* RemoteWorkerData::mutable_a_overriddenfingerprintingsettings() {
+  std::string* _s = _internal_mutable_a_overriddenfingerprintingsettings();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_overriddenFingerprintingSettings)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_overriddenfingerprintingsettings() const {
-  return _impl_.overriddenfingerprintingsettings_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_overriddenfingerprintingsettings() const {
+  return _impl_.a_overriddenfingerprintingsettings_.Get();
 }
-inline void RemoteWorkerData::_internal_set_overriddenfingerprintingsettings(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_overriddenfingerprintingsettings(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.overriddenfingerprintingsettings_.Set(value, GetArenaForAllocation());
+  _impl_.a_overriddenfingerprintingsettings_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_overriddenfingerprintingsettings() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_overriddenfingerprintingsettings() {
   _impl_._has_bits_[0] |= 0x00000020u;
-  return _impl_.overriddenfingerprintingsettings_.Mutable(GetArenaForAllocation());
+  return _impl_.a_overriddenfingerprintingsettings_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_overriddenfingerprintingsettings() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.overriddenFingerprintingSettings)
-  if (!_internal_has_overriddenfingerprintingsettings()) {
+inline std::string* RemoteWorkerData::release_a_overriddenfingerprintingsettings() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_overriddenFingerprintingSettings)
+  if (!_internal_has_a_overriddenfingerprintingsettings()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.overriddenfingerprintingsettings_.Release();
+  auto* p = _impl_.a_overriddenfingerprintingsettings_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.overriddenfingerprintingsettings_.IsDefault()) {
-    _impl_.overriddenfingerprintingsettings_.Set("", GetArenaForAllocation());
+  if (_impl_.a_overriddenfingerprintingsettings_.IsDefault()) {
+    _impl_.a_overriddenfingerprintingsettings_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_overriddenfingerprintingsettings(std::string* overriddenfingerprintingsettings) {
-  if (overriddenfingerprintingsettings != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_overriddenfingerprintingsettings(std::string* a_overriddenfingerprintingsettings) {
+  if (a_overriddenfingerprintingsettings != nullptr) {
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  _impl_.overriddenfingerprintingsettings_.SetAllocated(overriddenfingerprintingsettings, GetArenaForAllocation());
+  _impl_.a_overriddenfingerprintingsettings_.SetAllocated(a_overriddenfingerprintingsettings, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.overriddenfingerprintingsettings_.IsDefault()) {
-    _impl_.overriddenfingerprintingsettings_.Set("", GetArenaForAllocation());
+  if (_impl_.a_overriddenfingerprintingsettings_.IsDefault()) {
+    _impl_.a_overriddenfingerprintingsettings_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.overriddenFingerprintingSettings)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_overriddenFingerprintingSettings)
 }
 
-// required bool isOn3PCBExceptionList = 19;
-inline bool RemoteWorkerData::_internal_has_ison3pcbexceptionlist() const {
+// required bool a_isOn3PCBExceptionList = 19;
+inline bool RemoteWorkerData::_internal_has_a_ison3pcbexceptionlist() const {
   bool value = (_impl_._has_bits_[0] & 0x00400000u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_ison3pcbexceptionlist() const {
-  return _internal_has_ison3pcbexceptionlist();
+inline bool RemoteWorkerData::has_a_ison3pcbexceptionlist() const {
+  return _internal_has_a_ison3pcbexceptionlist();
 }
-inline void RemoteWorkerData::clear_ison3pcbexceptionlist() {
-  _impl_.ison3pcbexceptionlist_ = false;
+inline void RemoteWorkerData::clear_a_ison3pcbexceptionlist() {
+  _impl_.a_ison3pcbexceptionlist_ = false;
   _impl_._has_bits_[0] &= ~0x00400000u;
 }
-inline bool RemoteWorkerData::_internal_ison3pcbexceptionlist() const {
-  return _impl_.ison3pcbexceptionlist_;
+inline bool RemoteWorkerData::_internal_a_ison3pcbexceptionlist() const {
+  return _impl_.a_ison3pcbexceptionlist_;
 }
-inline bool RemoteWorkerData::ison3pcbexceptionlist() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.isOn3PCBExceptionList)
-  return _internal_ison3pcbexceptionlist();
+inline bool RemoteWorkerData::a_ison3pcbexceptionlist() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_isOn3PCBExceptionList)
+  return _internal_a_ison3pcbexceptionlist();
 }
-inline void RemoteWorkerData::_internal_set_ison3pcbexceptionlist(bool value) {
+inline void RemoteWorkerData::_internal_set_a_ison3pcbexceptionlist(bool value) {
   _impl_._has_bits_[0] |= 0x00400000u;
-  _impl_.ison3pcbexceptionlist_ = value;
+  _impl_.a_ison3pcbexceptionlist_ = value;
 }
-inline void RemoteWorkerData::set_ison3pcbexceptionlist(bool value) {
-  _internal_set_ison3pcbexceptionlist(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.isOn3PCBExceptionList)
+inline void RemoteWorkerData::set_a_ison3pcbexceptionlist(bool value) {
+  _internal_set_a_ison3pcbexceptionlist(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_isOn3PCBExceptionList)
 }
 
-// required bytes originTrials = 20;
-inline bool RemoteWorkerData::_internal_has_origintrials() const {
+// required bytes a_originTrials = 20;
+inline bool RemoteWorkerData::_internal_has_a_origintrials() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_origintrials() const {
-  return _internal_has_origintrials();
+inline bool RemoteWorkerData::has_a_origintrials() const {
+  return _internal_has_a_origintrials();
 }
-inline void RemoteWorkerData::clear_origintrials() {
-  _impl_.origintrials_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_origintrials() {
+  _impl_.a_origintrials_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline const std::string& RemoteWorkerData::origintrials() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.originTrials)
-  return _internal_origintrials();
+inline const std::string& RemoteWorkerData::a_origintrials() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_originTrials)
+  return _internal_a_origintrials();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_origintrials(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_origintrials(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.origintrials_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.originTrials)
+ _impl_.a_origintrials_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_originTrials)
 }
-inline std::string* RemoteWorkerData::mutable_origintrials() {
-  std::string* _s = _internal_mutable_origintrials();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.originTrials)
+inline std::string* RemoteWorkerData::mutable_a_origintrials() {
+  std::string* _s = _internal_mutable_a_origintrials();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_originTrials)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_origintrials() const {
-  return _impl_.origintrials_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_origintrials() const {
+  return _impl_.a_origintrials_.Get();
 }
-inline void RemoteWorkerData::_internal_set_origintrials(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_origintrials(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.origintrials_.Set(value, GetArenaForAllocation());
+  _impl_.a_origintrials_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_origintrials() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_origintrials() {
   _impl_._has_bits_[0] |= 0x00000040u;
-  return _impl_.origintrials_.Mutable(GetArenaForAllocation());
+  return _impl_.a_origintrials_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_origintrials() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.originTrials)
-  if (!_internal_has_origintrials()) {
+inline std::string* RemoteWorkerData::release_a_origintrials() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_originTrials)
+  if (!_internal_has_a_origintrials()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000040u;
-  auto* p = _impl_.origintrials_.Release();
+  auto* p = _impl_.a_origintrials_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.origintrials_.IsDefault()) {
-    _impl_.origintrials_.Set("", GetArenaForAllocation());
+  if (_impl_.a_origintrials_.IsDefault()) {
+    _impl_.a_origintrials_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_origintrials(std::string* origintrials) {
-  if (origintrials != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_origintrials(std::string* a_origintrials) {
+  if (a_origintrials != nullptr) {
     _impl_._has_bits_[0] |= 0x00000040u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000040u;
   }
-  _impl_.origintrials_.SetAllocated(origintrials, GetArenaForAllocation());
+  _impl_.a_origintrials_.SetAllocated(a_origintrials, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.origintrials_.IsDefault()) {
-    _impl_.origintrials_.Set("", GetArenaForAllocation());
+  if (_impl_.a_origintrials_.IsDefault()) {
+    _impl_.a_origintrials_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.originTrials)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_originTrials)
 }
 
-// required .protobuf.mozilla.dom.OptionalServiceWorkerData serviceWorkerData = 21;
-inline bool RemoteWorkerData::_internal_has_serviceworkerdata() const {
+// required .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+inline bool RemoteWorkerData::_internal_has_a_serviceworkerdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00010000u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.serviceworkerdata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_serviceworkerdata_ != nullptr);
   return value;
 }
-inline bool RemoteWorkerData::has_serviceworkerdata() const {
-  return _internal_has_serviceworkerdata();
+inline bool RemoteWorkerData::has_a_serviceworkerdata() const {
+  return _internal_has_a_serviceworkerdata();
 }
-inline void RemoteWorkerData::clear_serviceworkerdata() {
-  if (_impl_.serviceworkerdata_ != nullptr) _impl_.serviceworkerdata_->Clear();
+inline void RemoteWorkerData::clear_a_serviceworkerdata() {
+  if (_impl_.a_serviceworkerdata_ != nullptr) _impl_.a_serviceworkerdata_->Clear();
   _impl_._has_bits_[0] &= ~0x00010000u;
 }
-inline const ::protobuf::mozilla::dom::OptionalServiceWorkerData& RemoteWorkerData::_internal_serviceworkerdata() const {
-  const ::protobuf::mozilla::dom::OptionalServiceWorkerData* p = _impl_.serviceworkerdata_;
+inline const ::protobuf::mozilla::dom::OptionalServiceWorkerData& RemoteWorkerData::_internal_a_serviceworkerdata() const {
+  const ::protobuf::mozilla::dom::OptionalServiceWorkerData* p = _impl_.a_serviceworkerdata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::OptionalServiceWorkerData&>(
       ::protobuf::mozilla::dom::_OptionalServiceWorkerData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::OptionalServiceWorkerData& RemoteWorkerData::serviceworkerdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.serviceWorkerData)
-  return _internal_serviceworkerdata();
+inline const ::protobuf::mozilla::dom::OptionalServiceWorkerData& RemoteWorkerData::a_serviceworkerdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_serviceWorkerData)
+  return _internal_a_serviceworkerdata();
 }
-inline void RemoteWorkerData::unsafe_arena_set_allocated_serviceworkerdata(
-    ::protobuf::mozilla::dom::OptionalServiceWorkerData* serviceworkerdata) {
+inline void RemoteWorkerData::unsafe_arena_set_allocated_a_serviceworkerdata(
+    ::protobuf::mozilla::dom::OptionalServiceWorkerData* a_serviceworkerdata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.serviceworkerdata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_serviceworkerdata_);
   }
-  _impl_.serviceworkerdata_ = serviceworkerdata;
-  if (serviceworkerdata) {
+  _impl_.a_serviceworkerdata_ = a_serviceworkerdata;
+  if (a_serviceworkerdata) {
     _impl_._has_bits_[0] |= 0x00010000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00010000u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.serviceWorkerData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_serviceWorkerData)
 }
-inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::release_serviceworkerdata() {
+inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::release_a_serviceworkerdata() {
   _impl_._has_bits_[0] &= ~0x00010000u;
-  ::protobuf::mozilla::dom::OptionalServiceWorkerData* temp = _impl_.serviceworkerdata_;
-  _impl_.serviceworkerdata_ = nullptr;
+  ::protobuf::mozilla::dom::OptionalServiceWorkerData* temp = _impl_.a_serviceworkerdata_;
+  _impl_.a_serviceworkerdata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4323,712 +4323,712 @@ inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::unsafe_arena_release_serviceworkerdata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.serviceWorkerData)
+inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::unsafe_arena_release_a_serviceworkerdata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_serviceWorkerData)
   _impl_._has_bits_[0] &= ~0x00010000u;
-  ::protobuf::mozilla::dom::OptionalServiceWorkerData* temp = _impl_.serviceworkerdata_;
-  _impl_.serviceworkerdata_ = nullptr;
+  ::protobuf::mozilla::dom::OptionalServiceWorkerData* temp = _impl_.a_serviceworkerdata_;
+  _impl_.a_serviceworkerdata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::_internal_mutable_serviceworkerdata() {
+inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::_internal_mutable_a_serviceworkerdata() {
   _impl_._has_bits_[0] |= 0x00010000u;
-  if (_impl_.serviceworkerdata_ == nullptr) {
+  if (_impl_.a_serviceworkerdata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::OptionalServiceWorkerData>(GetArenaForAllocation());
-    _impl_.serviceworkerdata_ = p;
+    _impl_.a_serviceworkerdata_ = p;
   }
-  return _impl_.serviceworkerdata_;
+  return _impl_.a_serviceworkerdata_;
 }
-inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::mutable_serviceworkerdata() {
-  ::protobuf::mozilla::dom::OptionalServiceWorkerData* _msg = _internal_mutable_serviceworkerdata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.serviceWorkerData)
+inline ::protobuf::mozilla::dom::OptionalServiceWorkerData* RemoteWorkerData::mutable_a_serviceworkerdata() {
+  ::protobuf::mozilla::dom::OptionalServiceWorkerData* _msg = _internal_mutable_a_serviceworkerdata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_serviceWorkerData)
   return _msg;
 }
-inline void RemoteWorkerData::set_allocated_serviceworkerdata(::protobuf::mozilla::dom::OptionalServiceWorkerData* serviceworkerdata) {
+inline void RemoteWorkerData::set_allocated_a_serviceworkerdata(::protobuf::mozilla::dom::OptionalServiceWorkerData* a_serviceworkerdata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.serviceworkerdata_;
+    delete _impl_.a_serviceworkerdata_;
   }
-  if (serviceworkerdata) {
+  if (a_serviceworkerdata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(serviceworkerdata);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_serviceworkerdata);
     if (message_arena != submessage_arena) {
-      serviceworkerdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, serviceworkerdata, submessage_arena);
+      a_serviceworkerdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_serviceworkerdata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00010000u;
   } else {
     _impl_._has_bits_[0] &= ~0x00010000u;
   }
-  _impl_.serviceworkerdata_ = serviceworkerdata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.serviceWorkerData)
+  _impl_.a_serviceworkerdata_ = a_serviceworkerdata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_serviceWorkerData)
 }
 
-// required bytes agentClusterId = 22;
-inline bool RemoteWorkerData::_internal_has_agentclusterid() const {
+// required bytes a_agentClusterId = 22;
+inline bool RemoteWorkerData::_internal_has_a_agentclusterid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_agentclusterid() const {
-  return _internal_has_agentclusterid();
+inline bool RemoteWorkerData::has_a_agentclusterid() const {
+  return _internal_has_a_agentclusterid();
 }
-inline void RemoteWorkerData::clear_agentclusterid() {
-  _impl_.agentclusterid_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_agentclusterid() {
+  _impl_.a_agentclusterid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline const std::string& RemoteWorkerData::agentclusterid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.agentClusterId)
-  return _internal_agentclusterid();
+inline const std::string& RemoteWorkerData::a_agentclusterid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_agentClusterId)
+  return _internal_a_agentclusterid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_agentclusterid(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_agentclusterid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.agentclusterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.agentClusterId)
+ _impl_.a_agentclusterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_agentClusterId)
 }
-inline std::string* RemoteWorkerData::mutable_agentclusterid() {
-  std::string* _s = _internal_mutable_agentclusterid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.agentClusterId)
+inline std::string* RemoteWorkerData::mutable_a_agentclusterid() {
+  std::string* _s = _internal_mutable_a_agentclusterid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_agentClusterId)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_agentclusterid() const {
-  return _impl_.agentclusterid_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_agentclusterid() const {
+  return _impl_.a_agentclusterid_.Get();
 }
-inline void RemoteWorkerData::_internal_set_agentclusterid(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_agentclusterid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.agentclusterid_.Set(value, GetArenaForAllocation());
+  _impl_.a_agentclusterid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_agentclusterid() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_agentclusterid() {
   _impl_._has_bits_[0] |= 0x00000080u;
-  return _impl_.agentclusterid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_agentclusterid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_agentclusterid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.agentClusterId)
-  if (!_internal_has_agentclusterid()) {
+inline std::string* RemoteWorkerData::release_a_agentclusterid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_agentClusterId)
+  if (!_internal_has_a_agentclusterid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000080u;
-  auto* p = _impl_.agentclusterid_.Release();
+  auto* p = _impl_.a_agentclusterid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.agentclusterid_.IsDefault()) {
-    _impl_.agentclusterid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_agentclusterid_.IsDefault()) {
+    _impl_.a_agentclusterid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_agentclusterid(std::string* agentclusterid) {
-  if (agentclusterid != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_agentclusterid(std::string* a_agentclusterid) {
+  if (a_agentclusterid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000080u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000080u;
   }
-  _impl_.agentclusterid_.SetAllocated(agentclusterid, GetArenaForAllocation());
+  _impl_.a_agentclusterid_.SetAllocated(a_agentclusterid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.agentclusterid_.IsDefault()) {
-    _impl_.agentclusterid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_agentclusterid_.IsDefault()) {
+    _impl_.a_agentclusterid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.agentClusterId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_agentClusterId)
 }
 
-// required bytes remoteType = 23;
-inline bool RemoteWorkerData::_internal_has_remotetype() const {
+// required bytes a_remoteType = 23;
+inline bool RemoteWorkerData::_internal_has_a_remotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool RemoteWorkerData::has_remotetype() const {
-  return _internal_has_remotetype();
+inline bool RemoteWorkerData::has_a_remotetype() const {
+  return _internal_has_a_remotetype();
 }
-inline void RemoteWorkerData::clear_remotetype() {
-  _impl_.remotetype_.ClearToEmpty();
+inline void RemoteWorkerData::clear_a_remotetype() {
+  _impl_.a_remotetype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline const std::string& RemoteWorkerData::remotetype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.remoteType)
-  return _internal_remotetype();
+inline const std::string& RemoteWorkerData::a_remotetype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerData.a_remoteType)
+  return _internal_a_remotetype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerData::set_remotetype(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerData::set_a_remotetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.remotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.remoteType)
+ _impl_.a_remotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_remoteType)
 }
-inline std::string* RemoteWorkerData::mutable_remotetype() {
-  std::string* _s = _internal_mutable_remotetype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.remoteType)
+inline std::string* RemoteWorkerData::mutable_a_remotetype() {
+  std::string* _s = _internal_mutable_a_remotetype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerData.a_remoteType)
   return _s;
 }
-inline const std::string& RemoteWorkerData::_internal_remotetype() const {
-  return _impl_.remotetype_.Get();
+inline const std::string& RemoteWorkerData::_internal_a_remotetype() const {
+  return _impl_.a_remotetype_.Get();
 }
-inline void RemoteWorkerData::_internal_set_remotetype(const std::string& value) {
+inline void RemoteWorkerData::_internal_set_a_remotetype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.remotetype_.Set(value, GetArenaForAllocation());
+  _impl_.a_remotetype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::_internal_mutable_remotetype() {
+inline std::string* RemoteWorkerData::_internal_mutable_a_remotetype() {
   _impl_._has_bits_[0] |= 0x00000100u;
-  return _impl_.remotetype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_remotetype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerData::release_remotetype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.remoteType)
-  if (!_internal_has_remotetype()) {
+inline std::string* RemoteWorkerData::release_a_remotetype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerData.a_remoteType)
+  if (!_internal_has_a_remotetype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000100u;
-  auto* p = _impl_.remotetype_.Release();
+  auto* p = _impl_.a_remotetype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remotetype_.IsDefault()) {
-    _impl_.remotetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remotetype_.IsDefault()) {
+    _impl_.a_remotetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerData::set_allocated_remotetype(std::string* remotetype) {
-  if (remotetype != nullptr) {
+inline void RemoteWorkerData::set_allocated_a_remotetype(std::string* a_remotetype) {
+  if (a_remotetype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000100u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000100u;
   }
-  _impl_.remotetype_.SetAllocated(remotetype, GetArenaForAllocation());
+  _impl_.a_remotetype_.SetAllocated(a_remotetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remotetype_.IsDefault()) {
-    _impl_.remotetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remotetype_.IsDefault()) {
+    _impl_.a_remotetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.remoteType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_remoteType)
 }
 
 // -------------------------------------------------------------------
 
 // ErrorDataNote
 
-// required uint32 lineNumber = 1;
-inline bool ErrorDataNote::_internal_has_linenumber() const {
+// required uint32 a_lineNumber = 1;
+inline bool ErrorDataNote::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ErrorDataNote::has_linenumber() const {
-  return _internal_has_linenumber();
+inline bool ErrorDataNote::has_a_linenumber() const {
+  return _internal_has_a_linenumber();
 }
-inline void ErrorDataNote::clear_linenumber() {
-  _impl_.linenumber_ = 0u;
+inline void ErrorDataNote::clear_a_linenumber() {
+  _impl_.a_linenumber_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t ErrorDataNote::_internal_linenumber() const {
-  return _impl_.linenumber_;
+inline uint32_t ErrorDataNote::_internal_a_linenumber() const {
+  return _impl_.a_linenumber_;
 }
-inline uint32_t ErrorDataNote::linenumber() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.lineNumber)
-  return _internal_linenumber();
+inline uint32_t ErrorDataNote::a_linenumber() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.a_lineNumber)
+  return _internal_a_linenumber();
 }
-inline void ErrorDataNote::_internal_set_linenumber(uint32_t value) {
+inline void ErrorDataNote::_internal_set_a_linenumber(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.linenumber_ = value;
+  _impl_.a_linenumber_ = value;
 }
-inline void ErrorDataNote::set_linenumber(uint32_t value) {
-  _internal_set_linenumber(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.lineNumber)
+inline void ErrorDataNote::set_a_linenumber(uint32_t value) {
+  _internal_set_a_linenumber(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_lineNumber)
 }
 
-// required uint32 columnNumber = 2;
-inline bool ErrorDataNote::_internal_has_columnnumber() const {
+// required uint32 a_columnNumber = 2;
+inline bool ErrorDataNote::_internal_has_a_columnnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool ErrorDataNote::has_columnnumber() const {
-  return _internal_has_columnnumber();
+inline bool ErrorDataNote::has_a_columnnumber() const {
+  return _internal_has_a_columnnumber();
 }
-inline void ErrorDataNote::clear_columnnumber() {
-  _impl_.columnnumber_ = 0u;
+inline void ErrorDataNote::clear_a_columnnumber() {
+  _impl_.a_columnnumber_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t ErrorDataNote::_internal_columnnumber() const {
-  return _impl_.columnnumber_;
+inline uint32_t ErrorDataNote::_internal_a_columnnumber() const {
+  return _impl_.a_columnnumber_;
 }
-inline uint32_t ErrorDataNote::columnnumber() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.columnNumber)
-  return _internal_columnnumber();
+inline uint32_t ErrorDataNote::a_columnnumber() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.a_columnNumber)
+  return _internal_a_columnnumber();
 }
-inline void ErrorDataNote::_internal_set_columnnumber(uint32_t value) {
+inline void ErrorDataNote::_internal_set_a_columnnumber(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.columnnumber_ = value;
+  _impl_.a_columnnumber_ = value;
 }
-inline void ErrorDataNote::set_columnnumber(uint32_t value) {
-  _internal_set_columnnumber(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.columnNumber)
+inline void ErrorDataNote::set_a_columnnumber(uint32_t value) {
+  _internal_set_a_columnnumber(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_columnNumber)
 }
 
-// required bytes message = 3;
-inline bool ErrorDataNote::_internal_has_message() const {
+// required bytes a_message = 3;
+inline bool ErrorDataNote::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ErrorDataNote::has_message() const {
-  return _internal_has_message();
+inline bool ErrorDataNote::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void ErrorDataNote::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void ErrorDataNote::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ErrorDataNote::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.message)
-  return _internal_message();
+inline const std::string& ErrorDataNote::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ErrorDataNote::set_message(ArgT0&& arg0, ArgT... args) {
+void ErrorDataNote::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_message)
 }
-inline std::string* ErrorDataNote::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorDataNote.message)
+inline std::string* ErrorDataNote::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorDataNote.a_message)
   return _s;
 }
-inline const std::string& ErrorDataNote::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& ErrorDataNote::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void ErrorDataNote::_internal_set_message(const std::string& value) {
+inline void ErrorDataNote::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ErrorDataNote::_internal_mutable_message() {
+inline std::string* ErrorDataNote::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ErrorDataNote::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorDataNote.message)
-  if (!_internal_has_message()) {
+inline std::string* ErrorDataNote::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorDataNote.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ErrorDataNote::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void ErrorDataNote::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorDataNote.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorDataNote.a_message)
 }
 
-// required bytes filename = 4;
-inline bool ErrorDataNote::_internal_has_filename() const {
+// required bytes a_filename = 4;
+inline bool ErrorDataNote::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ErrorDataNote::has_filename() const {
-  return _internal_has_filename();
+inline bool ErrorDataNote::has_a_filename() const {
+  return _internal_has_a_filename();
 }
-inline void ErrorDataNote::clear_filename() {
-  _impl_.filename_.ClearToEmpty();
+inline void ErrorDataNote::clear_a_filename() {
+  _impl_.a_filename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ErrorDataNote::filename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.filename)
-  return _internal_filename();
+inline const std::string& ErrorDataNote::a_filename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorDataNote.a_filename)
+  return _internal_a_filename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ErrorDataNote::set_filename(ArgT0&& arg0, ArgT... args) {
+void ErrorDataNote::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.filename)
+ _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_filename)
 }
-inline std::string* ErrorDataNote::mutable_filename() {
-  std::string* _s = _internal_mutable_filename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorDataNote.filename)
+inline std::string* ErrorDataNote::mutable_a_filename() {
+  std::string* _s = _internal_mutable_a_filename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorDataNote.a_filename)
   return _s;
 }
-inline const std::string& ErrorDataNote::_internal_filename() const {
-  return _impl_.filename_.Get();
+inline const std::string& ErrorDataNote::_internal_a_filename() const {
+  return _impl_.a_filename_.Get();
 }
-inline void ErrorDataNote::_internal_set_filename(const std::string& value) {
+inline void ErrorDataNote::_internal_set_a_filename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.filename_.Set(value, GetArenaForAllocation());
+  _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ErrorDataNote::_internal_mutable_filename() {
+inline std::string* ErrorDataNote::_internal_mutable_a_filename() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.filename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ErrorDataNote::release_filename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorDataNote.filename)
-  if (!_internal_has_filename()) {
+inline std::string* ErrorDataNote::release_a_filename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorDataNote.a_filename)
+  if (!_internal_has_a_filename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.filename_.Release();
+  auto* p = _impl_.a_filename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ErrorDataNote::set_allocated_filename(std::string* filename) {
-  if (filename != nullptr) {
+inline void ErrorDataNote::set_allocated_a_filename(std::string* a_filename) {
+  if (a_filename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.filename_.SetAllocated(filename, GetArenaForAllocation());
+  _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorDataNote.filename)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorDataNote.a_filename)
 }
 
 // -------------------------------------------------------------------
 
 // ErrorData
 
-// required bool isWarning = 1;
-inline bool ErrorData::_internal_has_iswarning() const {
+// required bool a_isWarning = 1;
+inline bool ErrorData::_internal_has_a_iswarning() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ErrorData::has_iswarning() const {
-  return _internal_has_iswarning();
+inline bool ErrorData::has_a_iswarning() const {
+  return _internal_has_a_iswarning();
 }
-inline void ErrorData::clear_iswarning() {
-  _impl_.iswarning_ = false;
+inline void ErrorData::clear_a_iswarning() {
+  _impl_.a_iswarning_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool ErrorData::_internal_iswarning() const {
-  return _impl_.iswarning_;
+inline bool ErrorData::_internal_a_iswarning() const {
+  return _impl_.a_iswarning_;
 }
-inline bool ErrorData::iswarning() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.isWarning)
-  return _internal_iswarning();
+inline bool ErrorData::a_iswarning() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.a_isWarning)
+  return _internal_a_iswarning();
 }
-inline void ErrorData::_internal_set_iswarning(bool value) {
+inline void ErrorData::_internal_set_a_iswarning(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.iswarning_ = value;
+  _impl_.a_iswarning_ = value;
 }
-inline void ErrorData::set_iswarning(bool value) {
-  _internal_set_iswarning(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.isWarning)
+inline void ErrorData::set_a_iswarning(bool value) {
+  _internal_set_a_iswarning(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_isWarning)
 }
 
-// required uint32 lineNumber = 2;
-inline bool ErrorData::_internal_has_linenumber() const {
+// required uint32 a_lineNumber = 2;
+inline bool ErrorData::_internal_has_a_linenumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool ErrorData::has_linenumber() const {
-  return _internal_has_linenumber();
+inline bool ErrorData::has_a_linenumber() const {
+  return _internal_has_a_linenumber();
 }
-inline void ErrorData::clear_linenumber() {
-  _impl_.linenumber_ = 0u;
+inline void ErrorData::clear_a_linenumber() {
+  _impl_.a_linenumber_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t ErrorData::_internal_linenumber() const {
-  return _impl_.linenumber_;
+inline uint32_t ErrorData::_internal_a_linenumber() const {
+  return _impl_.a_linenumber_;
 }
-inline uint32_t ErrorData::linenumber() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.lineNumber)
-  return _internal_linenumber();
+inline uint32_t ErrorData::a_linenumber() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.a_lineNumber)
+  return _internal_a_linenumber();
 }
-inline void ErrorData::_internal_set_linenumber(uint32_t value) {
+inline void ErrorData::_internal_set_a_linenumber(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.linenumber_ = value;
+  _impl_.a_linenumber_ = value;
 }
-inline void ErrorData::set_linenumber(uint32_t value) {
-  _internal_set_linenumber(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.lineNumber)
+inline void ErrorData::set_a_linenumber(uint32_t value) {
+  _internal_set_a_linenumber(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_lineNumber)
 }
 
-// required uint32 columnNumber = 3;
-inline bool ErrorData::_internal_has_columnnumber() const {
+// required uint32 a_columnNumber = 3;
+inline bool ErrorData::_internal_has_a_columnnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool ErrorData::has_columnnumber() const {
-  return _internal_has_columnnumber();
+inline bool ErrorData::has_a_columnnumber() const {
+  return _internal_has_a_columnnumber();
 }
-inline void ErrorData::clear_columnnumber() {
-  _impl_.columnnumber_ = 0u;
+inline void ErrorData::clear_a_columnnumber() {
+  _impl_.a_columnnumber_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t ErrorData::_internal_columnnumber() const {
-  return _impl_.columnnumber_;
+inline uint32_t ErrorData::_internal_a_columnnumber() const {
+  return _impl_.a_columnnumber_;
 }
-inline uint32_t ErrorData::columnnumber() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.columnNumber)
-  return _internal_columnnumber();
+inline uint32_t ErrorData::a_columnnumber() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.a_columnNumber)
+  return _internal_a_columnnumber();
 }
-inline void ErrorData::_internal_set_columnnumber(uint32_t value) {
+inline void ErrorData::_internal_set_a_columnnumber(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.columnnumber_ = value;
+  _impl_.a_columnnumber_ = value;
 }
-inline void ErrorData::set_columnnumber(uint32_t value) {
-  _internal_set_columnnumber(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.columnNumber)
+inline void ErrorData::set_a_columnnumber(uint32_t value) {
+  _internal_set_a_columnnumber(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_columnNumber)
 }
 
-// required bytes message = 4;
-inline bool ErrorData::_internal_has_message() const {
+// required bytes a_message = 4;
+inline bool ErrorData::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ErrorData::has_message() const {
-  return _internal_has_message();
+inline bool ErrorData::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void ErrorData::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void ErrorData::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ErrorData::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.message)
-  return _internal_message();
+inline const std::string& ErrorData::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ErrorData::set_message(ArgT0&& arg0, ArgT... args) {
+void ErrorData::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_message)
 }
-inline std::string* ErrorData::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorData.message)
+inline std::string* ErrorData::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorData.a_message)
   return _s;
 }
-inline const std::string& ErrorData::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& ErrorData::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void ErrorData::_internal_set_message(const std::string& value) {
+inline void ErrorData::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ErrorData::_internal_mutable_message() {
+inline std::string* ErrorData::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ErrorData::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorData.message)
-  if (!_internal_has_message()) {
+inline std::string* ErrorData::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorData.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ErrorData::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void ErrorData::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorData.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorData.a_message)
 }
 
-// required bytes filename = 5;
-inline bool ErrorData::_internal_has_filename() const {
+// required bytes a_filename = 5;
+inline bool ErrorData::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ErrorData::has_filename() const {
-  return _internal_has_filename();
+inline bool ErrorData::has_a_filename() const {
+  return _internal_has_a_filename();
 }
-inline void ErrorData::clear_filename() {
-  _impl_.filename_.ClearToEmpty();
+inline void ErrorData::clear_a_filename() {
+  _impl_.a_filename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& ErrorData::filename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.filename)
-  return _internal_filename();
+inline const std::string& ErrorData::a_filename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.a_filename)
+  return _internal_a_filename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ErrorData::set_filename(ArgT0&& arg0, ArgT... args) {
+void ErrorData::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.filename)
+ _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_filename)
 }
-inline std::string* ErrorData::mutable_filename() {
-  std::string* _s = _internal_mutable_filename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorData.filename)
+inline std::string* ErrorData::mutable_a_filename() {
+  std::string* _s = _internal_mutable_a_filename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorData.a_filename)
   return _s;
 }
-inline const std::string& ErrorData::_internal_filename() const {
-  return _impl_.filename_.Get();
+inline const std::string& ErrorData::_internal_a_filename() const {
+  return _impl_.a_filename_.Get();
 }
-inline void ErrorData::_internal_set_filename(const std::string& value) {
+inline void ErrorData::_internal_set_a_filename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.filename_.Set(value, GetArenaForAllocation());
+  _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ErrorData::_internal_mutable_filename() {
+inline std::string* ErrorData::_internal_mutable_a_filename() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.filename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ErrorData::release_filename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorData.filename)
-  if (!_internal_has_filename()) {
+inline std::string* ErrorData::release_a_filename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorData.a_filename)
+  if (!_internal_has_a_filename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.filename_.Release();
+  auto* p = _impl_.a_filename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ErrorData::set_allocated_filename(std::string* filename) {
-  if (filename != nullptr) {
+inline void ErrorData::set_allocated_a_filename(std::string* a_filename) {
+  if (a_filename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.filename_.SetAllocated(filename, GetArenaForAllocation());
+  _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorData.filename)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorData.a_filename)
 }
 
-// repeated .protobuf.mozilla.dom.ErrorDataNote notes = 6;
-inline int ErrorData::_internal_notes_size() const {
-  return _impl_.notes_.size();
+// repeated .protobuf.mozilla.dom.ErrorDataNote a_notes = 6;
+inline int ErrorData::_internal_a_notes_size() const {
+  return _impl_.a_notes_.size();
 }
-inline int ErrorData::notes_size() const {
-  return _internal_notes_size();
+inline int ErrorData::a_notes_size() const {
+  return _internal_a_notes_size();
 }
-inline void ErrorData::clear_notes() {
-  _impl_.notes_.Clear();
+inline void ErrorData::clear_a_notes() {
+  _impl_.a_notes_.Clear();
 }
-inline ::protobuf::mozilla::dom::ErrorDataNote* ErrorData::mutable_notes(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorData.notes)
-  return _impl_.notes_.Mutable(index);
+inline ::protobuf::mozilla::dom::ErrorDataNote* ErrorData::mutable_a_notes(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorData.a_notes)
+  return _impl_.a_notes_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote >*
-ErrorData::mutable_notes() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.ErrorData.notes)
-  return &_impl_.notes_;
+ErrorData::mutable_a_notes() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.ErrorData.a_notes)
+  return &_impl_.a_notes_;
 }
-inline const ::protobuf::mozilla::dom::ErrorDataNote& ErrorData::_internal_notes(int index) const {
-  return _impl_.notes_.Get(index);
+inline const ::protobuf::mozilla::dom::ErrorDataNote& ErrorData::_internal_a_notes(int index) const {
+  return _impl_.a_notes_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::ErrorDataNote& ErrorData::notes(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.notes)
-  return _internal_notes(index);
+inline const ::protobuf::mozilla::dom::ErrorDataNote& ErrorData::a_notes(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorData.a_notes)
+  return _internal_a_notes(index);
 }
-inline ::protobuf::mozilla::dom::ErrorDataNote* ErrorData::_internal_add_notes() {
-  return _impl_.notes_.Add();
+inline ::protobuf::mozilla::dom::ErrorDataNote* ErrorData::_internal_add_a_notes() {
+  return _impl_.a_notes_.Add();
 }
-inline ::protobuf::mozilla::dom::ErrorDataNote* ErrorData::add_notes() {
-  ::protobuf::mozilla::dom::ErrorDataNote* _add = _internal_add_notes();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.ErrorData.notes)
+inline ::protobuf::mozilla::dom::ErrorDataNote* ErrorData::add_a_notes() {
+  ::protobuf::mozilla::dom::ErrorDataNote* _add = _internal_add_a_notes();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.ErrorData.a_notes)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote >&
-ErrorData::notes() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.ErrorData.notes)
-  return _impl_.notes_;
+ErrorData::a_notes() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.ErrorData.a_notes)
+  return _impl_.a_notes_;
 }
 
 // -------------------------------------------------------------------
 
 // CSPViolation
 
-// required bytes json = 1;
-inline bool CSPViolation::_internal_has_json() const {
+// required bytes a_json = 1;
+inline bool CSPViolation::_internal_has_a_json() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CSPViolation::has_json() const {
-  return _internal_has_json();
+inline bool CSPViolation::has_a_json() const {
+  return _internal_has_a_json();
 }
-inline void CSPViolation::clear_json() {
-  _impl_.json_.ClearToEmpty();
+inline void CSPViolation::clear_a_json() {
+  _impl_.a_json_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CSPViolation::json() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CSPViolation.json)
-  return _internal_json();
+inline const std::string& CSPViolation::a_json() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CSPViolation.a_json)
+  return _internal_a_json();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CSPViolation::set_json(ArgT0&& arg0, ArgT... args) {
+void CSPViolation::set_a_json(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.json_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CSPViolation.json)
+ _impl_.a_json_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CSPViolation.a_json)
 }
-inline std::string* CSPViolation::mutable_json() {
-  std::string* _s = _internal_mutable_json();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CSPViolation.json)
+inline std::string* CSPViolation::mutable_a_json() {
+  std::string* _s = _internal_mutable_a_json();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CSPViolation.a_json)
   return _s;
 }
-inline const std::string& CSPViolation::_internal_json() const {
-  return _impl_.json_.Get();
+inline const std::string& CSPViolation::_internal_a_json() const {
+  return _impl_.a_json_.Get();
 }
-inline void CSPViolation::_internal_set_json(const std::string& value) {
+inline void CSPViolation::_internal_set_a_json(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.json_.Set(value, GetArenaForAllocation());
+  _impl_.a_json_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CSPViolation::_internal_mutable_json() {
+inline std::string* CSPViolation::_internal_mutable_a_json() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.json_.Mutable(GetArenaForAllocation());
+  return _impl_.a_json_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CSPViolation::release_json() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CSPViolation.json)
-  if (!_internal_has_json()) {
+inline std::string* CSPViolation::release_a_json() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CSPViolation.a_json)
+  if (!_internal_has_a_json()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.json_.Release();
+  auto* p = _impl_.a_json_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.json_.IsDefault()) {
-    _impl_.json_.Set("", GetArenaForAllocation());
+  if (_impl_.a_json_.IsDefault()) {
+    _impl_.a_json_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CSPViolation::set_allocated_json(std::string* json) {
-  if (json != nullptr) {
+inline void CSPViolation::set_allocated_a_json(std::string* a_json) {
+  if (a_json != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.json_.SetAllocated(json, GetArenaForAllocation());
+  _impl_.a_json_.SetAllocated(a_json, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.json_.IsDefault()) {
-    _impl_.json_.Set("", GetArenaForAllocation());
+  if (_impl_.a_json_.IsDefault()) {
+    _impl_.a_json_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CSPViolation.json)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CSPViolation.a_json)
 }
 
 // -------------------------------------------------------------------
@@ -5039,380 +5039,380 @@ inline void CSPViolation::set_allocated_json(std::string* json) {
 
 // ErrorValue
 
-// bytes mVnsresult = 1;
-inline bool ErrorValue::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool ErrorValue::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool ErrorValue::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool ErrorValue::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void ErrorValue::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void ErrorValue::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void ErrorValue::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void ErrorValue::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ErrorValue::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& ErrorValue::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ErrorValue::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void ErrorValue::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorValue.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorValue.a_mVnsresult)
 }
-inline std::string* ErrorValue::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.mVnsresult)
+inline std::string* ErrorValue::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.a_mVnsresult)
   return _s;
 }
-inline const std::string& ErrorValue::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& ErrorValue::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ErrorValue::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void ErrorValue::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ErrorValue::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* ErrorValue::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ErrorValue::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* ErrorValue::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ErrorValue::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void ErrorValue::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorValue.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorValue.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.ErrorData mVErrorData = 2;
-inline bool ErrorValue::_internal_has_mverrordata() const {
-  return content_case() == kMVErrorData;
+// .protobuf.mozilla.dom.ErrorData a_mVErrorData = 2;
+inline bool ErrorValue::_internal_has_a_mverrordata() const {
+  return content_case() == kAMVErrorData;
 }
-inline bool ErrorValue::has_mverrordata() const {
-  return _internal_has_mverrordata();
+inline bool ErrorValue::has_a_mverrordata() const {
+  return _internal_has_a_mverrordata();
 }
-inline void ErrorValue::set_has_mverrordata() {
-  _impl_._oneof_case_[0] = kMVErrorData;
+inline void ErrorValue::set_has_a_mverrordata() {
+  _impl_._oneof_case_[0] = kAMVErrorData;
 }
-inline void ErrorValue::clear_mverrordata() {
-  if (_internal_has_mverrordata()) {
+inline void ErrorValue::clear_a_mverrordata() {
+  if (_internal_has_a_mverrordata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mverrordata_;
+      delete _impl_.content_.a_mverrordata_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::release_mverrordata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.mVErrorData)
-  if (_internal_has_mverrordata()) {
+inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::release_a_mverrordata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.a_mVErrorData)
+  if (_internal_has_a_mverrordata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::ErrorData* temp = _impl_.content_.mverrordata_;
+    ::protobuf::mozilla::dom::ErrorData* temp = _impl_.content_.a_mverrordata_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mverrordata_ = nullptr;
+    _impl_.content_.a_mverrordata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::ErrorData& ErrorValue::_internal_mverrordata() const {
-  return _internal_has_mverrordata()
-      ? *_impl_.content_.mverrordata_
+inline const ::protobuf::mozilla::dom::ErrorData& ErrorValue::_internal_a_mverrordata() const {
+  return _internal_has_a_mverrordata()
+      ? *_impl_.content_.a_mverrordata_
       : reinterpret_cast< ::protobuf::mozilla::dom::ErrorData&>(::protobuf::mozilla::dom::_ErrorData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ErrorData& ErrorValue::mverrordata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.mVErrorData)
-  return _internal_mverrordata();
+inline const ::protobuf::mozilla::dom::ErrorData& ErrorValue::a_mverrordata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.a_mVErrorData)
+  return _internal_a_mverrordata();
 }
-inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::unsafe_arena_release_mverrordata() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.ErrorValue.mVErrorData)
-  if (_internal_has_mverrordata()) {
+inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::unsafe_arena_release_a_mverrordata() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.ErrorValue.a_mVErrorData)
+  if (_internal_has_a_mverrordata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::ErrorData* temp = _impl_.content_.mverrordata_;
-    _impl_.content_.mverrordata_ = nullptr;
+    ::protobuf::mozilla::dom::ErrorData* temp = _impl_.content_.a_mverrordata_;
+    _impl_.content_.a_mverrordata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void ErrorValue::unsafe_arena_set_allocated_mverrordata(::protobuf::mozilla::dom::ErrorData* mverrordata) {
+inline void ErrorValue::unsafe_arena_set_allocated_a_mverrordata(::protobuf::mozilla::dom::ErrorData* a_mverrordata) {
   clear_content();
-  if (mverrordata) {
-    set_has_mverrordata();
-    _impl_.content_.mverrordata_ = mverrordata;
+  if (a_mverrordata) {
+    set_has_a_mverrordata();
+    _impl_.content_.a_mverrordata_ = a_mverrordata;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ErrorValue.mVErrorData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ErrorValue.a_mVErrorData)
 }
-inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::_internal_mutable_mverrordata() {
-  if (!_internal_has_mverrordata()) {
+inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::_internal_mutable_a_mverrordata() {
+  if (!_internal_has_a_mverrordata()) {
     clear_content();
-    set_has_mverrordata();
-    _impl_.content_.mverrordata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::ErrorData >(GetArenaForAllocation());
+    set_has_a_mverrordata();
+    _impl_.content_.a_mverrordata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::ErrorData >(GetArenaForAllocation());
   }
-  return _impl_.content_.mverrordata_;
+  return _impl_.content_.a_mverrordata_;
 }
-inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::mutable_mverrordata() {
-  ::protobuf::mozilla::dom::ErrorData* _msg = _internal_mutable_mverrordata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.mVErrorData)
+inline ::protobuf::mozilla::dom::ErrorData* ErrorValue::mutable_a_mverrordata() {
+  ::protobuf::mozilla::dom::ErrorData* _msg = _internal_mutable_a_mverrordata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.a_mVErrorData)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.CSPViolation mVCSPViolation = 3;
-inline bool ErrorValue::_internal_has_mvcspviolation() const {
-  return content_case() == kMVCSPViolation;
+// .protobuf.mozilla.dom.CSPViolation a_mVCSPViolation = 3;
+inline bool ErrorValue::_internal_has_a_mvcspviolation() const {
+  return content_case() == kAMVCSPViolation;
 }
-inline bool ErrorValue::has_mvcspviolation() const {
-  return _internal_has_mvcspviolation();
+inline bool ErrorValue::has_a_mvcspviolation() const {
+  return _internal_has_a_mvcspviolation();
 }
-inline void ErrorValue::set_has_mvcspviolation() {
-  _impl_._oneof_case_[0] = kMVCSPViolation;
+inline void ErrorValue::set_has_a_mvcspviolation() {
+  _impl_._oneof_case_[0] = kAMVCSPViolation;
 }
-inline void ErrorValue::clear_mvcspviolation() {
-  if (_internal_has_mvcspviolation()) {
+inline void ErrorValue::clear_a_mvcspviolation() {
+  if (_internal_has_a_mvcspviolation()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvcspviolation_;
+      delete _impl_.content_.a_mvcspviolation_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::release_mvcspviolation() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.mVCSPViolation)
-  if (_internal_has_mvcspviolation()) {
+inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::release_a_mvcspviolation() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.a_mVCSPViolation)
+  if (_internal_has_a_mvcspviolation()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::CSPViolation* temp = _impl_.content_.mvcspviolation_;
+    ::protobuf::mozilla::dom::CSPViolation* temp = _impl_.content_.a_mvcspviolation_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvcspviolation_ = nullptr;
+    _impl_.content_.a_mvcspviolation_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::CSPViolation& ErrorValue::_internal_mvcspviolation() const {
-  return _internal_has_mvcspviolation()
-      ? *_impl_.content_.mvcspviolation_
+inline const ::protobuf::mozilla::dom::CSPViolation& ErrorValue::_internal_a_mvcspviolation() const {
+  return _internal_has_a_mvcspviolation()
+      ? *_impl_.content_.a_mvcspviolation_
       : reinterpret_cast< ::protobuf::mozilla::dom::CSPViolation&>(::protobuf::mozilla::dom::_CSPViolation_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::CSPViolation& ErrorValue::mvcspviolation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.mVCSPViolation)
-  return _internal_mvcspviolation();
+inline const ::protobuf::mozilla::dom::CSPViolation& ErrorValue::a_mvcspviolation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.a_mVCSPViolation)
+  return _internal_a_mvcspviolation();
 }
-inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::unsafe_arena_release_mvcspviolation() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.ErrorValue.mVCSPViolation)
-  if (_internal_has_mvcspviolation()) {
+inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::unsafe_arena_release_a_mvcspviolation() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.ErrorValue.a_mVCSPViolation)
+  if (_internal_has_a_mvcspviolation()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::CSPViolation* temp = _impl_.content_.mvcspviolation_;
-    _impl_.content_.mvcspviolation_ = nullptr;
+    ::protobuf::mozilla::dom::CSPViolation* temp = _impl_.content_.a_mvcspviolation_;
+    _impl_.content_.a_mvcspviolation_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void ErrorValue::unsafe_arena_set_allocated_mvcspviolation(::protobuf::mozilla::dom::CSPViolation* mvcspviolation) {
+inline void ErrorValue::unsafe_arena_set_allocated_a_mvcspviolation(::protobuf::mozilla::dom::CSPViolation* a_mvcspviolation) {
   clear_content();
-  if (mvcspviolation) {
-    set_has_mvcspviolation();
-    _impl_.content_.mvcspviolation_ = mvcspviolation;
+  if (a_mvcspviolation) {
+    set_has_a_mvcspviolation();
+    _impl_.content_.a_mvcspviolation_ = a_mvcspviolation;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ErrorValue.mVCSPViolation)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ErrorValue.a_mVCSPViolation)
 }
-inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::_internal_mutable_mvcspviolation() {
-  if (!_internal_has_mvcspviolation()) {
+inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::_internal_mutable_a_mvcspviolation() {
+  if (!_internal_has_a_mvcspviolation()) {
     clear_content();
-    set_has_mvcspviolation();
-    _impl_.content_.mvcspviolation_ = CreateMaybeMessage< ::protobuf::mozilla::dom::CSPViolation >(GetArenaForAllocation());
+    set_has_a_mvcspviolation();
+    _impl_.content_.a_mvcspviolation_ = CreateMaybeMessage< ::protobuf::mozilla::dom::CSPViolation >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvcspviolation_;
+  return _impl_.content_.a_mvcspviolation_;
 }
-inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::mutable_mvcspviolation() {
-  ::protobuf::mozilla::dom::CSPViolation* _msg = _internal_mutable_mvcspviolation();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.mVCSPViolation)
+inline ::protobuf::mozilla::dom::CSPViolation* ErrorValue::mutable_a_mvcspviolation() {
+  ::protobuf::mozilla::dom::CSPViolation* _msg = _internal_mutable_a_mvcspviolation();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.a_mVCSPViolation)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.ErrorMismatchOptions mVErrorMismatchOptions = 4;
-inline bool ErrorValue::_internal_has_mverrormismatchoptions() const {
-  return content_case() == kMVErrorMismatchOptions;
+// .protobuf.mozilla.dom.ErrorMismatchOptions a_mVErrorMismatchOptions = 4;
+inline bool ErrorValue::_internal_has_a_mverrormismatchoptions() const {
+  return content_case() == kAMVErrorMismatchOptions;
 }
-inline bool ErrorValue::has_mverrormismatchoptions() const {
-  return _internal_has_mverrormismatchoptions();
+inline bool ErrorValue::has_a_mverrormismatchoptions() const {
+  return _internal_has_a_mverrormismatchoptions();
 }
-inline void ErrorValue::set_has_mverrormismatchoptions() {
-  _impl_._oneof_case_[0] = kMVErrorMismatchOptions;
+inline void ErrorValue::set_has_a_mverrormismatchoptions() {
+  _impl_._oneof_case_[0] = kAMVErrorMismatchOptions;
 }
-inline void ErrorValue::clear_mverrormismatchoptions() {
-  if (_internal_has_mverrormismatchoptions()) {
+inline void ErrorValue::clear_a_mverrormismatchoptions() {
+  if (_internal_has_a_mverrormismatchoptions()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mverrormismatchoptions_;
+      delete _impl_.content_.a_mverrormismatchoptions_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::release_mverrormismatchoptions() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.mVErrorMismatchOptions)
-  if (_internal_has_mverrormismatchoptions()) {
+inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::release_a_mverrormismatchoptions() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.a_mVErrorMismatchOptions)
+  if (_internal_has_a_mverrormismatchoptions()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::ErrorMismatchOptions* temp = _impl_.content_.mverrormismatchoptions_;
+    ::protobuf::mozilla::dom::ErrorMismatchOptions* temp = _impl_.content_.a_mverrormismatchoptions_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mverrormismatchoptions_ = nullptr;
+    _impl_.content_.a_mverrormismatchoptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::ErrorMismatchOptions& ErrorValue::_internal_mverrormismatchoptions() const {
-  return _internal_has_mverrormismatchoptions()
-      ? *_impl_.content_.mverrormismatchoptions_
+inline const ::protobuf::mozilla::dom::ErrorMismatchOptions& ErrorValue::_internal_a_mverrormismatchoptions() const {
+  return _internal_has_a_mverrormismatchoptions()
+      ? *_impl_.content_.a_mverrormismatchoptions_
       : reinterpret_cast< ::protobuf::mozilla::dom::ErrorMismatchOptions&>(::protobuf::mozilla::dom::_ErrorMismatchOptions_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ErrorMismatchOptions& ErrorValue::mverrormismatchoptions() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.mVErrorMismatchOptions)
-  return _internal_mverrormismatchoptions();
+inline const ::protobuf::mozilla::dom::ErrorMismatchOptions& ErrorValue::a_mverrormismatchoptions() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.a_mVErrorMismatchOptions)
+  return _internal_a_mverrormismatchoptions();
 }
-inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::unsafe_arena_release_mverrormismatchoptions() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.ErrorValue.mVErrorMismatchOptions)
-  if (_internal_has_mverrormismatchoptions()) {
+inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::unsafe_arena_release_a_mverrormismatchoptions() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.ErrorValue.a_mVErrorMismatchOptions)
+  if (_internal_has_a_mverrormismatchoptions()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::ErrorMismatchOptions* temp = _impl_.content_.mverrormismatchoptions_;
-    _impl_.content_.mverrormismatchoptions_ = nullptr;
+    ::protobuf::mozilla::dom::ErrorMismatchOptions* temp = _impl_.content_.a_mverrormismatchoptions_;
+    _impl_.content_.a_mverrormismatchoptions_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void ErrorValue::unsafe_arena_set_allocated_mverrormismatchoptions(::protobuf::mozilla::dom::ErrorMismatchOptions* mverrormismatchoptions) {
+inline void ErrorValue::unsafe_arena_set_allocated_a_mverrormismatchoptions(::protobuf::mozilla::dom::ErrorMismatchOptions* a_mverrormismatchoptions) {
   clear_content();
-  if (mverrormismatchoptions) {
-    set_has_mverrormismatchoptions();
-    _impl_.content_.mverrormismatchoptions_ = mverrormismatchoptions;
+  if (a_mverrormismatchoptions) {
+    set_has_a_mverrormismatchoptions();
+    _impl_.content_.a_mverrormismatchoptions_ = a_mverrormismatchoptions;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ErrorValue.mVErrorMismatchOptions)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.ErrorValue.a_mVErrorMismatchOptions)
 }
-inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::_internal_mutable_mverrormismatchoptions() {
-  if (!_internal_has_mverrormismatchoptions()) {
+inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::_internal_mutable_a_mverrormismatchoptions() {
+  if (!_internal_has_a_mverrormismatchoptions()) {
     clear_content();
-    set_has_mverrormismatchoptions();
-    _impl_.content_.mverrormismatchoptions_ = CreateMaybeMessage< ::protobuf::mozilla::dom::ErrorMismatchOptions >(GetArenaForAllocation());
+    set_has_a_mverrormismatchoptions();
+    _impl_.content_.a_mverrormismatchoptions_ = CreateMaybeMessage< ::protobuf::mozilla::dom::ErrorMismatchOptions >(GetArenaForAllocation());
   }
-  return _impl_.content_.mverrormismatchoptions_;
+  return _impl_.content_.a_mverrormismatchoptions_;
 }
-inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::mutable_mverrormismatchoptions() {
-  ::protobuf::mozilla::dom::ErrorMismatchOptions* _msg = _internal_mutable_mverrormismatchoptions();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.mVErrorMismatchOptions)
+inline ::protobuf::mozilla::dom::ErrorMismatchOptions* ErrorValue::mutable_a_mverrormismatchoptions() {
+  ::protobuf::mozilla::dom::ErrorMismatchOptions* _msg = _internal_mutable_a_mverrormismatchoptions();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.a_mVErrorMismatchOptions)
   return _msg;
 }
 
-// bytes mVvoid_t = 5;
-inline bool ErrorValue::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 5;
+inline bool ErrorValue::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool ErrorValue::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool ErrorValue::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void ErrorValue::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void ErrorValue::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void ErrorValue::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void ErrorValue::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ErrorValue::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& ErrorValue::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ErrorValue.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ErrorValue::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void ErrorValue::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorValue.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorValue.a_mVvoid_t)
 }
-inline std::string* ErrorValue::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.mVvoid_t)
+inline std::string* ErrorValue::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ErrorValue.a_mVvoid_t)
   return _s;
 }
-inline const std::string& ErrorValue::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& ErrorValue::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ErrorValue::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void ErrorValue::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ErrorValue::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* ErrorValue::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ErrorValue::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* ErrorValue::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ErrorValue.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ErrorValue::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void ErrorValue::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorValue.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorValue.a_mVvoid_t)
 }
 
 inline bool ErrorValue::has_content() const {
@@ -5428,624 +5428,624 @@ inline ErrorValue::ContentCase ErrorValue::content_case() const {
 
 // RemoteWorkerDebuggerInfo
 
-// required bool isChrome = 1;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_ischrome() const {
+// required bool a_isChrome = 1;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_ischrome() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_ischrome() const {
-  return _internal_has_ischrome();
+inline bool RemoteWorkerDebuggerInfo::has_a_ischrome() const {
+  return _internal_has_a_ischrome();
 }
-inline void RemoteWorkerDebuggerInfo::clear_ischrome() {
-  _impl_.ischrome_ = false;
+inline void RemoteWorkerDebuggerInfo::clear_a_ischrome() {
+  _impl_.a_ischrome_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool RemoteWorkerDebuggerInfo::_internal_ischrome() const {
-  return _impl_.ischrome_;
+inline bool RemoteWorkerDebuggerInfo::_internal_a_ischrome() const {
+  return _impl_.a_ischrome_;
 }
-inline bool RemoteWorkerDebuggerInfo::ischrome() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.isChrome)
-  return _internal_ischrome();
+inline bool RemoteWorkerDebuggerInfo::a_ischrome() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_isChrome)
+  return _internal_a_ischrome();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_ischrome(bool value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_ischrome(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.ischrome_ = value;
+  _impl_.a_ischrome_ = value;
 }
-inline void RemoteWorkerDebuggerInfo::set_ischrome(bool value) {
-  _internal_set_ischrome(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.isChrome)
+inline void RemoteWorkerDebuggerInfo::set_a_ischrome(bool value) {
+  _internal_set_a_ischrome(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_isChrome)
 }
 
-// required uint32 type = 2;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_type() const {
+// required uint32 a_type = 2;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_type() const {
-  return _internal_has_type();
+inline bool RemoteWorkerDebuggerInfo::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void RemoteWorkerDebuggerInfo::clear_type() {
-  _impl_.type_ = 0u;
+inline void RemoteWorkerDebuggerInfo::clear_a_type() {
+  _impl_.a_type_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline uint32_t RemoteWorkerDebuggerInfo::_internal_type() const {
-  return _impl_.type_;
+inline uint32_t RemoteWorkerDebuggerInfo::_internal_a_type() const {
+  return _impl_.a_type_;
 }
-inline uint32_t RemoteWorkerDebuggerInfo::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.type)
-  return _internal_type();
+inline uint32_t RemoteWorkerDebuggerInfo::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_type)
+  return _internal_a_type();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_type(uint32_t value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_type(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.type_ = value;
+  _impl_.a_type_ = value;
 }
-inline void RemoteWorkerDebuggerInfo::set_type(uint32_t value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.type)
+inline void RemoteWorkerDebuggerInfo::set_a_type(uint32_t value) {
+  _internal_set_a_type(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_type)
 }
 
-// required bytes url = 3;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_url() const {
+// required bytes a_url = 3;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_url() const {
-  return _internal_has_url();
+inline bool RemoteWorkerDebuggerInfo::has_a_url() const {
+  return _internal_has_a_url();
 }
-inline void RemoteWorkerDebuggerInfo::clear_url() {
-  _impl_.url_.ClearToEmpty();
+inline void RemoteWorkerDebuggerInfo::clear_a_url() {
+  _impl_.a_url_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::url() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.url)
-  return _internal_url();
+inline const std::string& RemoteWorkerDebuggerInfo::a_url() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url)
+  return _internal_a_url();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerInfo::set_url(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerInfo::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.url)
+ _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url)
 }
-inline std::string* RemoteWorkerDebuggerInfo::mutable_url() {
-  std::string* _s = _internal_mutable_url();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.url)
+inline std::string* RemoteWorkerDebuggerInfo::mutable_a_url() {
+  std::string* _s = _internal_mutable_a_url();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::_internal_url() const {
-  return _impl_.url_.Get();
+inline const std::string& RemoteWorkerDebuggerInfo::_internal_a_url() const {
+  return _impl_.a_url_.Get();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_url(const std::string& value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_url(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.url_.Set(value, GetArenaForAllocation());
+  _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_url() {
+inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_a_url() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.url_.Mutable(GetArenaForAllocation());
+  return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::release_url() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.url)
-  if (!_internal_has_url()) {
+inline std::string* RemoteWorkerDebuggerInfo::release_a_url() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url)
+  if (!_internal_has_a_url()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.url_.Release();
+  auto* p = _impl_.a_url_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerInfo::set_allocated_url(std::string* url) {
-  if (url != nullptr) {
+inline void RemoteWorkerDebuggerInfo::set_allocated_a_url(std::string* a_url) {
+  if (a_url != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.url_.SetAllocated(url, GetArenaForAllocation());
+  _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.url_.IsDefault()) {
-    _impl_.url_.Set("", GetArenaForAllocation());
+  if (_impl_.a_url_.IsDefault()) {
+    _impl_.a_url_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.url)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url)
 }
 
-// required uint64 windowID = 4;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_windowid() const {
+// required uint64 a_windowID = 4;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_windowid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_windowid() const {
-  return _internal_has_windowid();
+inline bool RemoteWorkerDebuggerInfo::has_a_windowid() const {
+  return _internal_has_a_windowid();
 }
-inline void RemoteWorkerDebuggerInfo::clear_windowid() {
-  _impl_.windowid_ = uint64_t{0u};
+inline void RemoteWorkerDebuggerInfo::clear_a_windowid() {
+  _impl_.a_windowid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline uint64_t RemoteWorkerDebuggerInfo::_internal_windowid() const {
-  return _impl_.windowid_;
+inline uint64_t RemoteWorkerDebuggerInfo::_internal_a_windowid() const {
+  return _impl_.a_windowid_;
 }
-inline uint64_t RemoteWorkerDebuggerInfo::windowid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.windowID)
-  return _internal_windowid();
+inline uint64_t RemoteWorkerDebuggerInfo::a_windowid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_windowID)
+  return _internal_a_windowid();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_windowid(uint64_t value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_windowid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.windowid_ = value;
+  _impl_.a_windowid_ = value;
 }
-inline void RemoteWorkerDebuggerInfo::set_windowid(uint64_t value) {
-  _internal_set_windowid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.windowID)
+inline void RemoteWorkerDebuggerInfo::set_a_windowid(uint64_t value) {
+  _internal_set_a_windowid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_windowID)
 }
 
-// required bytes principal = 5;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_principal() const {
+// required bytes a_principal = 5;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_principal() const {
-  return _internal_has_principal();
+inline bool RemoteWorkerDebuggerInfo::has_a_principal() const {
+  return _internal_has_a_principal();
 }
-inline void RemoteWorkerDebuggerInfo::clear_principal() {
-  _impl_.principal_.ClearToEmpty();
+inline void RemoteWorkerDebuggerInfo::clear_a_principal() {
+  _impl_.a_principal_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::principal() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.principal)
-  return _internal_principal();
+inline const std::string& RemoteWorkerDebuggerInfo::a_principal() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_principal)
+  return _internal_a_principal();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerInfo::set_principal(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerInfo::set_a_principal(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.principal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.principal)
+ _impl_.a_principal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_principal)
 }
-inline std::string* RemoteWorkerDebuggerInfo::mutable_principal() {
-  std::string* _s = _internal_mutable_principal();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.principal)
+inline std::string* RemoteWorkerDebuggerInfo::mutable_a_principal() {
+  std::string* _s = _internal_mutable_a_principal();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_principal)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::_internal_principal() const {
-  return _impl_.principal_.Get();
+inline const std::string& RemoteWorkerDebuggerInfo::_internal_a_principal() const {
+  return _impl_.a_principal_.Get();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_principal(const std::string& value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_principal(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.principal_.Set(value, GetArenaForAllocation());
+  _impl_.a_principal_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_principal() {
+inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_a_principal() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.principal_.Mutable(GetArenaForAllocation());
+  return _impl_.a_principal_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::release_principal() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.principal)
-  if (!_internal_has_principal()) {
+inline std::string* RemoteWorkerDebuggerInfo::release_a_principal() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_principal)
+  if (!_internal_has_a_principal()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.principal_.Release();
+  auto* p = _impl_.a_principal_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.principal_.IsDefault()) {
-    _impl_.principal_.Set("", GetArenaForAllocation());
+  if (_impl_.a_principal_.IsDefault()) {
+    _impl_.a_principal_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerInfo::set_allocated_principal(std::string* principal) {
-  if (principal != nullptr) {
+inline void RemoteWorkerDebuggerInfo::set_allocated_a_principal(std::string* a_principal) {
+  if (a_principal != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.principal_.SetAllocated(principal, GetArenaForAllocation());
+  _impl_.a_principal_.SetAllocated(a_principal, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.principal_.IsDefault()) {
-    _impl_.principal_.Set("", GetArenaForAllocation());
+  if (_impl_.a_principal_.IsDefault()) {
+    _impl_.a_principal_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.principal)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_principal)
 }
 
-// required uint64 serviceWorkerID = 6;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_serviceworkerid() const {
+// required uint64 a_serviceWorkerID = 6;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_serviceworkerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_serviceworkerid() const {
-  return _internal_has_serviceworkerid();
+inline bool RemoteWorkerDebuggerInfo::has_a_serviceworkerid() const {
+  return _internal_has_a_serviceworkerid();
 }
-inline void RemoteWorkerDebuggerInfo::clear_serviceworkerid() {
-  _impl_.serviceworkerid_ = uint64_t{0u};
+inline void RemoteWorkerDebuggerInfo::clear_a_serviceworkerid() {
+  _impl_.a_serviceworkerid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline uint64_t RemoteWorkerDebuggerInfo::_internal_serviceworkerid() const {
-  return _impl_.serviceworkerid_;
+inline uint64_t RemoteWorkerDebuggerInfo::_internal_a_serviceworkerid() const {
+  return _impl_.a_serviceworkerid_;
 }
-inline uint64_t RemoteWorkerDebuggerInfo::serviceworkerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.serviceWorkerID)
-  return _internal_serviceworkerid();
+inline uint64_t RemoteWorkerDebuggerInfo::a_serviceworkerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_serviceWorkerID)
+  return _internal_a_serviceworkerid();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_serviceworkerid(uint64_t value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_serviceworkerid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.serviceworkerid_ = value;
+  _impl_.a_serviceworkerid_ = value;
 }
-inline void RemoteWorkerDebuggerInfo::set_serviceworkerid(uint64_t value) {
-  _internal_set_serviceworkerid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.serviceWorkerID)
+inline void RemoteWorkerDebuggerInfo::set_a_serviceworkerid(uint64_t value) {
+  _internal_set_a_serviceworkerid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_serviceWorkerID)
 }
 
-// required bytes Id = 7;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_id() const {
+// required bytes a_Id = 7;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_id() const {
-  return _internal_has_id();
+inline bool RemoteWorkerDebuggerInfo::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void RemoteWorkerDebuggerInfo::clear_id() {
-  _impl_.id_.ClearToEmpty();
+inline void RemoteWorkerDebuggerInfo::clear_a_id() {
+  _impl_.a_id_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.Id)
-  return _internal_id();
+inline const std::string& RemoteWorkerDebuggerInfo::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
+  return _internal_a_id();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerInfo::set_id(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerInfo::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.Id)
+ _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
 }
-inline std::string* RemoteWorkerDebuggerInfo::mutable_id() {
-  std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.Id)
+inline std::string* RemoteWorkerDebuggerInfo::mutable_a_id() {
+  std::string* _s = _internal_mutable_a_id();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::_internal_id() const {
-  return _impl_.id_.Get();
+inline const std::string& RemoteWorkerDebuggerInfo::_internal_a_id() const {
+  return _impl_.a_id_.Get();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_id(const std::string& value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_id(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.id_.Set(value, GetArenaForAllocation());
+  _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_id() {
+inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_a_id() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.id_.Mutable(GetArenaForAllocation());
+  return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::release_id() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.Id)
-  if (!_internal_has_id()) {
+inline std::string* RemoteWorkerDebuggerInfo::release_a_id() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
+  if (!_internal_has_a_id()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.id_.Release();
+  auto* p = _impl_.a_id_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerInfo::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
+inline void RemoteWorkerDebuggerInfo::set_allocated_a_id(std::string* a_id) {
+  if (a_id != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.id_.SetAllocated(id, GetArenaForAllocation());
+  _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.id_.IsDefault()) {
-    _impl_.id_.Set("", GetArenaForAllocation());
+  if (_impl_.a_id_.IsDefault()) {
+    _impl_.a_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.Id)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
 }
 
-// required bytes name = 8;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_name() const {
+// required bytes a_name = 8;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_name() const {
-  return _internal_has_name();
+inline bool RemoteWorkerDebuggerInfo::has_a_name() const {
+  return _internal_has_a_name();
 }
-inline void RemoteWorkerDebuggerInfo::clear_name() {
-  _impl_.name_.ClearToEmpty();
+inline void RemoteWorkerDebuggerInfo::clear_a_name() {
+  _impl_.a_name_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::name() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.name)
-  return _internal_name();
+inline const std::string& RemoteWorkerDebuggerInfo::a_name() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
+  return _internal_a_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerInfo::set_name(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.name)
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
 }
-inline std::string* RemoteWorkerDebuggerInfo::mutable_name() {
-  std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.name)
+inline std::string* RemoteWorkerDebuggerInfo::mutable_a_name() {
+  std::string* _s = _internal_mutable_a_name();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::_internal_name() const {
-  return _impl_.name_.Get();
+inline const std::string& RemoteWorkerDebuggerInfo::_internal_a_name() const {
+  return _impl_.a_name_.Get();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_name(const std::string& value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_name(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.name_.Set(value, GetArenaForAllocation());
+  _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_name() {
+inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_a_name() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.name_.Mutable(GetArenaForAllocation());
+  return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::release_name() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.name)
-  if (!_internal_has_name()) {
+inline std::string* RemoteWorkerDebuggerInfo::release_a_name() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
+  if (!_internal_has_a_name()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.name_.Release();
+  auto* p = _impl_.a_name_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerInfo::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
+inline void RemoteWorkerDebuggerInfo::set_allocated_a_name(std::string* a_name) {
+  if (a_name != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.name_.SetAllocated(name, GetArenaForAllocation());
+  _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.name_.IsDefault()) {
-    _impl_.name_.Set("", GetArenaForAllocation());
+  if (_impl_.a_name_.IsDefault()) {
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.name)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
 }
 
-// required bytes parentId = 9;
-inline bool RemoteWorkerDebuggerInfo::_internal_has_parentid() const {
+// required bytes a_parentId = 9;
+inline bool RemoteWorkerDebuggerInfo::_internal_has_a_parentid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerInfo::has_parentid() const {
-  return _internal_has_parentid();
+inline bool RemoteWorkerDebuggerInfo::has_a_parentid() const {
+  return _internal_has_a_parentid();
 }
-inline void RemoteWorkerDebuggerInfo::clear_parentid() {
-  _impl_.parentid_.ClearToEmpty();
+inline void RemoteWorkerDebuggerInfo::clear_a_parentid() {
+  _impl_.a_parentid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::parentid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.parentId)
-  return _internal_parentid();
+inline const std::string& RemoteWorkerDebuggerInfo::a_parentid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId)
+  return _internal_a_parentid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerInfo::set_parentid(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerInfo::set_a_parentid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.parentId)
+ _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId)
 }
-inline std::string* RemoteWorkerDebuggerInfo::mutable_parentid() {
-  std::string* _s = _internal_mutable_parentid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.parentId)
+inline std::string* RemoteWorkerDebuggerInfo::mutable_a_parentid() {
+  std::string* _s = _internal_mutable_a_parentid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerInfo::_internal_parentid() const {
-  return _impl_.parentid_.Get();
+inline const std::string& RemoteWorkerDebuggerInfo::_internal_a_parentid() const {
+  return _impl_.a_parentid_.Get();
 }
-inline void RemoteWorkerDebuggerInfo::_internal_set_parentid(const std::string& value) {
+inline void RemoteWorkerDebuggerInfo::_internal_set_a_parentid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.parentid_.Set(value, GetArenaForAllocation());
+  _impl_.a_parentid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_parentid() {
+inline std::string* RemoteWorkerDebuggerInfo::_internal_mutable_a_parentid() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.parentid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_parentid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerInfo::release_parentid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.parentId)
-  if (!_internal_has_parentid()) {
+inline std::string* RemoteWorkerDebuggerInfo::release_a_parentid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId)
+  if (!_internal_has_a_parentid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.parentid_.Release();
+  auto* p = _impl_.a_parentid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerInfo::set_allocated_parentid(std::string* parentid) {
-  if (parentid != nullptr) {
+inline void RemoteWorkerDebuggerInfo::set_allocated_a_parentid(std::string* a_parentid) {
+  if (a_parentid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.parentid_.SetAllocated(parentid, GetArenaForAllocation());
+  _impl_.a_parentid_.SetAllocated(a_parentid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.parentid_.IsDefault()) {
-    _impl_.parentid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_parentid_.IsDefault()) {
+    _impl_.a_parentid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.parentId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId)
 }
 
 // -------------------------------------------------------------------
 
 // RemoteWorkerDebuggerErrorInfo
 
-// required bytes fileName = 1;
-inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_filename() const {
+// required bytes a_fileName = 1;
+inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerErrorInfo::has_filename() const {
-  return _internal_has_filename();
+inline bool RemoteWorkerDebuggerErrorInfo::has_a_filename() const {
+  return _internal_has_a_filename();
 }
-inline void RemoteWorkerDebuggerErrorInfo::clear_filename() {
-  _impl_.filename_.ClearToEmpty();
+inline void RemoteWorkerDebuggerErrorInfo::clear_a_filename() {
+  _impl_.a_filename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& RemoteWorkerDebuggerErrorInfo::filename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.fileName)
-  return _internal_filename();
+inline const std::string& RemoteWorkerDebuggerErrorInfo::a_filename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName)
+  return _internal_a_filename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerErrorInfo::set_filename(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerErrorInfo::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.fileName)
+ _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName)
 }
-inline std::string* RemoteWorkerDebuggerErrorInfo::mutable_filename() {
-  std::string* _s = _internal_mutable_filename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.fileName)
+inline std::string* RemoteWorkerDebuggerErrorInfo::mutable_a_filename() {
+  std::string* _s = _internal_mutable_a_filename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerErrorInfo::_internal_filename() const {
-  return _impl_.filename_.Get();
+inline const std::string& RemoteWorkerDebuggerErrorInfo::_internal_a_filename() const {
+  return _impl_.a_filename_.Get();
 }
-inline void RemoteWorkerDebuggerErrorInfo::_internal_set_filename(const std::string& value) {
+inline void RemoteWorkerDebuggerErrorInfo::_internal_set_a_filename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.filename_.Set(value, GetArenaForAllocation());
+  _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerErrorInfo::_internal_mutable_filename() {
+inline std::string* RemoteWorkerDebuggerErrorInfo::_internal_mutable_a_filename() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.filename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerErrorInfo::release_filename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.fileName)
-  if (!_internal_has_filename()) {
+inline std::string* RemoteWorkerDebuggerErrorInfo::release_a_filename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName)
+  if (!_internal_has_a_filename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.filename_.Release();
+  auto* p = _impl_.a_filename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerErrorInfo::set_allocated_filename(std::string* filename) {
-  if (filename != nullptr) {
+inline void RemoteWorkerDebuggerErrorInfo::set_allocated_a_filename(std::string* a_filename) {
+  if (a_filename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.filename_.SetAllocated(filename, GetArenaForAllocation());
+  _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.fileName)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName)
 }
 
-// required uint32 lineNo = 2;
-inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_lineno() const {
+// required uint32 a_lineNo = 2;
+inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_a_lineno() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerErrorInfo::has_lineno() const {
-  return _internal_has_lineno();
+inline bool RemoteWorkerDebuggerErrorInfo::has_a_lineno() const {
+  return _internal_has_a_lineno();
 }
-inline void RemoteWorkerDebuggerErrorInfo::clear_lineno() {
-  _impl_.lineno_ = 0u;
+inline void RemoteWorkerDebuggerErrorInfo::clear_a_lineno() {
+  _impl_.a_lineno_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t RemoteWorkerDebuggerErrorInfo::_internal_lineno() const {
-  return _impl_.lineno_;
+inline uint32_t RemoteWorkerDebuggerErrorInfo::_internal_a_lineno() const {
+  return _impl_.a_lineno_;
 }
-inline uint32_t RemoteWorkerDebuggerErrorInfo::lineno() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.lineNo)
-  return _internal_lineno();
+inline uint32_t RemoteWorkerDebuggerErrorInfo::a_lineno() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_lineNo)
+  return _internal_a_lineno();
 }
-inline void RemoteWorkerDebuggerErrorInfo::_internal_set_lineno(uint32_t value) {
+inline void RemoteWorkerDebuggerErrorInfo::_internal_set_a_lineno(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.lineno_ = value;
+  _impl_.a_lineno_ = value;
 }
-inline void RemoteWorkerDebuggerErrorInfo::set_lineno(uint32_t value) {
-  _internal_set_lineno(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.lineNo)
+inline void RemoteWorkerDebuggerErrorInfo::set_a_lineno(uint32_t value) {
+  _internal_set_a_lineno(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_lineNo)
 }
 
-// required bytes message = 3;
-inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_message() const {
+// required bytes a_message = 3;
+inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool RemoteWorkerDebuggerErrorInfo::has_message() const {
-  return _internal_has_message();
+inline bool RemoteWorkerDebuggerErrorInfo::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void RemoteWorkerDebuggerErrorInfo::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void RemoteWorkerDebuggerErrorInfo::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& RemoteWorkerDebuggerErrorInfo::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.message)
-  return _internal_message();
+inline const std::string& RemoteWorkerDebuggerErrorInfo::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void RemoteWorkerDebuggerErrorInfo::set_message(ArgT0&& arg0, ArgT... args) {
+void RemoteWorkerDebuggerErrorInfo::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message)
 }
-inline std::string* RemoteWorkerDebuggerErrorInfo::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.message)
+inline std::string* RemoteWorkerDebuggerErrorInfo::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message)
   return _s;
 }
-inline const std::string& RemoteWorkerDebuggerErrorInfo::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& RemoteWorkerDebuggerErrorInfo::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void RemoteWorkerDebuggerErrorInfo::_internal_set_message(const std::string& value) {
+inline void RemoteWorkerDebuggerErrorInfo::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerErrorInfo::_internal_mutable_message() {
+inline std::string* RemoteWorkerDebuggerErrorInfo::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* RemoteWorkerDebuggerErrorInfo::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.message)
-  if (!_internal_has_message()) {
+inline std::string* RemoteWorkerDebuggerErrorInfo::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void RemoteWorkerDebuggerErrorInfo::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void RemoteWorkerDebuggerErrorInfo::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message)
 }
 
 #ifdef __GNUC__

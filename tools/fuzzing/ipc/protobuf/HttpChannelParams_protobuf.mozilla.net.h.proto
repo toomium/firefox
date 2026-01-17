@@ -16,41 +16,41 @@ import "IPCStream.proto";
 
 // Structs and unions declarations
 message HttpChannelOnStartRequestArgs {
-  required bytes securityInfo = 1;
-  required bytes overrideReferrerInfo = 2;
-  required uint64 cacheEntryId = 3;
-  required sint64 altDataLength = 4;
-  required bytes altDataType = 5;
-  repeated bytes cookieHeaders = 6;
-  required bytes selfAddr = 7;
-  required bytes peerAddr = 8;
-  required protobuf.mozilla.net.ResourceTimingStructArgs timing = 9;
-  required protobuf.mozilla.net.ParentLoadInfoForwarderArgs loadInfoForwarder = 10;
-  required bytes channelStatus = 11;
-  required bytes effectiveTRRMode = 12;
-  required bytes trrSkipReason = 13;
-  required uint32 cacheFetchCount = 14;
-  required uint32 cacheExpirationTime = 15;
-  required uint32 cacheKey = 16;
-  optional uint32 multiPartID = 17;
-  required bool isFromCache = 18;
-  required bool isRacing = 19;
-  required bool cacheEntryAvailable = 20;
-  required bool deliveringAltData = 21;
-  required bool applyConversion = 22;
-  required bool isResolvedByTRR = 23;
-  required bool allRedirectsSameOrigin = 24;
-  required bool isFirstPartOfMultiPart = 25;
-  required bool isLastPartOfMultiPart = 26;
-  required bytes openerPolicy = 27;
-  required bool shouldWaitForOnStartRequestSent = 28;
-  required bool dataFromSocketProcess = 29;
-  required bool hasHTTPSRR = 30;
-  required bool isProxyUsed = 31;
-  required uint32 redirectCount = 32;
-  required bytes protocolVersion = 33;
+  required bytes a_securityInfo = 1;
+  required bytes a_overrideReferrerInfo = 2;
+  required uint64 a_cacheEntryId = 3;
+  required sint64 a_altDataLength = 4;
+  required bytes a_altDataType = 5;
+  repeated bytes a_cookieHeaders = 6;
+  required bytes a_selfAddr = 7;
+  required bytes a_peerAddr = 8;
+  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
+  required protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 10;
+  required bytes a_channelStatus = 11;
+  required bytes a_effectiveTRRMode = 12;
+  required bytes a_trrSkipReason = 13;
+  required uint32 a_cacheFetchCount = 14;
+  required uint32 a_cacheExpirationTime = 15;
+  required uint32 a_cacheKey = 16;
+  optional uint32 a_multiPartID = 17;
+  required bool a_isFromCache = 18;
+  required bool a_isRacing = 19;
+  required bool a_cacheEntryAvailable = 20;
+  required bool a_deliveringAltData = 21;
+  required bool a_applyConversion = 22;
+  required bool a_isResolvedByTRR = 23;
+  required bool a_allRedirectsSameOrigin = 24;
+  required bool a_isFirstPartOfMultiPart = 25;
+  required bool a_isLastPartOfMultiPart = 26;
+  required bytes a_openerPolicy = 27;
+  required bool a_shouldWaitForOnStartRequestSent = 28;
+  required bool a_dataFromSocketProcess = 29;
+  required bool a_hasHTTPSRR = 30;
+  required bool a_isProxyUsed = 31;
+  required uint32 a_redirectCount = 32;
+  required bytes a_protocolVersion = 33;
 }
 
 message HttpChannelAltDataStream {
-  optional protobuf.mozilla.ipc.IPCStream altDataInputStream = 1;
+  optional protobuf.mozilla.ipc.IPCStream a_altDataInputStream = 1;
 }

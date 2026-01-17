@@ -20,14 +20,14 @@ message Msg_Teardown {
 }
 
 message Msg_PClientHandleOpConstructor {
-  required protobuf.mozilla.dom.ClientOpConstructorArgs aArgs = 1;
+  required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 1;
 }
 
 message Reply_PClientHandleOpConstructor {
 }
 
 message Msg_ExecutionReady {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Msg___delete__ {

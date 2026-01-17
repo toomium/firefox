@@ -14,17 +14,17 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message OpenDatabaseRequestResponse {
-  required bytes database = 1;
+  required bytes a_database = 1;
 }
 
 message DeleteDatabaseRequestResponse {
-  required uint64 previousVersion = 1;
+  required uint64 a_previousVersion = 1;
 }
 
 message FactoryRequestResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse mVOpenDatabaseRequestResponse = 2;
-    protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse mVDeleteDatabaseRequestResponse = 3;
+    bytes a_mVnsresult = 1;
+    protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse a_mVOpenDatabaseRequestResponse = 2;
+    protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse a_mVDeleteDatabaseRequestResponse = 3;
   }
 }

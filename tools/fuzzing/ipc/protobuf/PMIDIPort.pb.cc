@@ -35,7 +35,7 @@ struct Msg_ShutdownDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ShutdownDefaultTypeInternal _Msg_Shutdown_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Send::Msg_Send(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.msg_)*/{}
+    /*decltype(_impl_.a_msg_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_SendDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SendDefaultTypeInternal()
@@ -84,7 +84,7 @@ struct Msg_ClearDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ClearDefaultTypeInternal _Msg_Clear_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Receive::Msg_Receive(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.msg_)*/{}
+    /*decltype(_impl_.a_msg_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_ReceiveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveDefaultTypeInternal()
@@ -99,8 +99,8 @@ PROTOBUF_CONSTEXPR Msg_UpdateStatus::Msg_UpdateStatus(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.devicestate_)*/0u
-  , /*decltype(_impl_.connectionstate_)*/0u} {}
+  , /*decltype(_impl_.a_devicestate_)*/0u
+  , /*decltype(_impl_.a_connectionstate_)*/0u} {}
 struct Msg_UpdateStatusDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UpdateStatusDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -273,8 +273,8 @@ class Msg_Send::_Internal {
  public:
 };
 
-void Msg_Send::clear_msg() {
-  _impl_.msg_.Clear();
+void Msg_Send::clear_a_msg() {
+  _impl_.a_msg_.Clear();
 }
 Msg_Send::Msg_Send(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -286,7 +286,7 @@ Msg_Send::Msg_Send(const Msg_Send& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Send* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.msg_){from._impl_.msg_}
+      decltype(_impl_.a_msg_){from._impl_.a_msg_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -298,7 +298,7 @@ inline void Msg_Send::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.msg_){arena}
+      decltype(_impl_.a_msg_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -314,7 +314,7 @@ Msg_Send::~Msg_Send() {
 
 inline void Msg_Send::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.msg_.~RepeatedPtrField();
+  _impl_.a_msg_.~RepeatedPtrField();
 }
 
 void Msg_Send::SetCachedSize(int size) const {
@@ -327,7 +327,7 @@ void Msg_Send::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.msg_.Clear();
+  _impl_.a_msg_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -337,13 +337,13 @@ const char* Msg_Send::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
+      // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_msg(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_msg(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -379,10 +379,10 @@ uint8_t* Msg_Send::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
+  // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_msg_size()); i < n; i++) {
-    const auto& repfield = this->_internal_msg(i);
+      n = static_cast<unsigned>(this->_internal_a_msg_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_msg(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -403,9 +403,9 @@ size_t Msg_Send::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
-  total_size += 1UL * this->_internal_msg_size();
-  for (const auto& msg : this->_impl_.msg_) {
+  // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
+  total_size += 1UL * this->_internal_a_msg_size();
+  for (const auto& msg : this->_impl_.a_msg_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -431,7 +431,7 @@ void Msg_Send::MergeFrom(const Msg_Send& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.msg_.MergeFrom(from._impl_.msg_);
+  _this->_impl_.a_msg_.MergeFrom(from._impl_.a_msg_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -443,7 +443,7 @@ void Msg_Send::CopyFrom(const Msg_Send& from) {
 }
 
 bool Msg_Send::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.msg_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_msg_))
     return false;
   return true;
 }
@@ -451,7 +451,7 @@ bool Msg_Send::IsInitialized() const {
 void Msg_Send::InternalSwap(Msg_Send* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.msg_.InternalSwap(&other->_impl_.msg_);
+  _impl_.a_msg_.InternalSwap(&other->_impl_.a_msg_);
 }
 
 std::string Msg_Send::GetTypeName() const {
@@ -909,8 +909,8 @@ class Msg_Receive::_Internal {
  public:
 };
 
-void Msg_Receive::clear_msg() {
-  _impl_.msg_.Clear();
+void Msg_Receive::clear_a_msg() {
+  _impl_.a_msg_.Clear();
 }
 Msg_Receive::Msg_Receive(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -922,7 +922,7 @@ Msg_Receive::Msg_Receive(const Msg_Receive& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Receive* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.msg_){from._impl_.msg_}
+      decltype(_impl_.a_msg_){from._impl_.a_msg_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -934,7 +934,7 @@ inline void Msg_Receive::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.msg_){arena}
+      decltype(_impl_.a_msg_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -950,7 +950,7 @@ Msg_Receive::~Msg_Receive() {
 
 inline void Msg_Receive::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.msg_.~RepeatedPtrField();
+  _impl_.a_msg_.~RepeatedPtrField();
 }
 
 void Msg_Receive::SetCachedSize(int size) const {
@@ -963,7 +963,7 @@ void Msg_Receive::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.msg_.Clear();
+  _impl_.a_msg_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -973,13 +973,13 @@ const char* Msg_Receive::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
+      // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_msg(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_msg(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -1015,10 +1015,10 @@ uint8_t* Msg_Receive::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
+  // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_msg_size()); i < n; i++) {
-    const auto& repfield = this->_internal_msg(i);
+      n = static_cast<unsigned>(this->_internal_a_msg_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_msg(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -1039,9 +1039,9 @@ size_t Msg_Receive::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MIDIMessage msg = 1;
-  total_size += 1UL * this->_internal_msg_size();
-  for (const auto& msg : this->_impl_.msg_) {
+  // repeated .protobuf.mozilla.dom.MIDIMessage a_msg = 1;
+  total_size += 1UL * this->_internal_a_msg_size();
+  for (const auto& msg : this->_impl_.a_msg_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -1067,7 +1067,7 @@ void Msg_Receive::MergeFrom(const Msg_Receive& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.msg_.MergeFrom(from._impl_.msg_);
+  _this->_impl_.a_msg_.MergeFrom(from._impl_.a_msg_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -1079,7 +1079,7 @@ void Msg_Receive::CopyFrom(const Msg_Receive& from) {
 }
 
 bool Msg_Receive::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.msg_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_msg_))
     return false;
   return true;
 }
@@ -1087,7 +1087,7 @@ bool Msg_Receive::IsInitialized() const {
 void Msg_Receive::InternalSwap(Msg_Receive* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.msg_.InternalSwap(&other->_impl_.msg_);
+  _impl_.a_msg_.InternalSwap(&other->_impl_.a_msg_);
 }
 
 std::string Msg_Receive::GetTypeName() const {
@@ -1100,10 +1100,10 @@ std::string Msg_Receive::GetTypeName() const {
 class Msg_UpdateStatus::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_UpdateStatus>()._impl_._has_bits_);
-  static void set_has_devicestate(HasBits* has_bits) {
+  static void set_has_a_devicestate(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_connectionstate(HasBits* has_bits) {
+  static void set_has_a_connectionstate(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1123,13 +1123,13 @@ Msg_UpdateStatus::Msg_UpdateStatus(const Msg_UpdateStatus& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.devicestate_){}
-    , decltype(_impl_.connectionstate_){}};
+    , decltype(_impl_.a_devicestate_){}
+    , decltype(_impl_.a_connectionstate_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.devicestate_, &from._impl_.devicestate_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.connectionstate_) -
-    reinterpret_cast<char*>(&_impl_.devicestate_)) + sizeof(_impl_.connectionstate_));
+  ::memcpy(&_impl_.a_devicestate_, &from._impl_.a_devicestate_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_connectionstate_) -
+    reinterpret_cast<char*>(&_impl_.a_devicestate_)) + sizeof(_impl_.a_connectionstate_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus)
 }
 
@@ -1140,8 +1140,8 @@ inline void Msg_UpdateStatus::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.devicestate_){0u}
-    , decltype(_impl_.connectionstate_){0u}
+    , decltype(_impl_.a_devicestate_){0u}
+    , decltype(_impl_.a_connectionstate_){0u}
   };
 }
 
@@ -1170,9 +1170,9 @@ void Msg_UpdateStatus::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.devicestate_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.connectionstate_) -
-        reinterpret_cast<char*>(&_impl_.devicestate_)) + sizeof(_impl_.connectionstate_));
+    ::memset(&_impl_.a_devicestate_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_connectionstate_) -
+        reinterpret_cast<char*>(&_impl_.a_devicestate_)) + sizeof(_impl_.a_connectionstate_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1185,20 +1185,20 @@ const char* Msg_UpdateStatus::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 deviceState = 1;
+      // required uint32 a_deviceState = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_devicestate(&has_bits);
-          _impl_.devicestate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_devicestate(&has_bits);
+          _impl_.a_devicestate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 connectionState = 2;
+      // required uint32 a_connectionState = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_connectionstate(&has_bits);
-          _impl_.connectionstate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_connectionstate(&has_bits);
+          _impl_.a_connectionstate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1234,16 +1234,16 @@ uint8_t* Msg_UpdateStatus::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 deviceState = 1;
+  // required uint32 a_deviceState = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_devicestate(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_devicestate(), target);
   }
 
-  // required uint32 connectionState = 2;
+  // required uint32 a_connectionState = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_connectionstate(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_connectionstate(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1258,14 +1258,14 @@ size_t Msg_UpdateStatus::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PMIDIPort.Msg_UpdateStatus)
   size_t total_size = 0;
 
-  if (_internal_has_devicestate()) {
-    // required uint32 deviceState = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_devicestate());
+  if (_internal_has_a_devicestate()) {
+    // required uint32 a_deviceState = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_devicestate());
   }
 
-  if (_internal_has_connectionstate()) {
-    // required uint32 connectionState = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_connectionstate());
+  if (_internal_has_a_connectionstate()) {
+    // required uint32 a_connectionState = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_connectionstate());
   }
 
   return total_size;
@@ -1275,11 +1275,11 @@ size_t Msg_UpdateStatus::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 deviceState = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_devicestate());
+    // required uint32 a_deviceState = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_devicestate());
 
-    // required uint32 connectionState = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_connectionstate());
+    // required uint32 a_connectionState = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_connectionstate());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1312,10 +1312,10 @@ void Msg_UpdateStatus::MergeFrom(const Msg_UpdateStatus& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.devicestate_ = from._impl_.devicestate_;
+      _this->_impl_.a_devicestate_ = from._impl_.a_devicestate_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.connectionstate_ = from._impl_.connectionstate_;
+      _this->_impl_.a_connectionstate_ = from._impl_.a_connectionstate_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1339,11 +1339,11 @@ void Msg_UpdateStatus::InternalSwap(Msg_UpdateStatus* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_UpdateStatus, _impl_.connectionstate_)
-      + sizeof(Msg_UpdateStatus::_impl_.connectionstate_)
-      - PROTOBUF_FIELD_OFFSET(Msg_UpdateStatus, _impl_.devicestate_)>(
-          reinterpret_cast<char*>(&_impl_.devicestate_),
-          reinterpret_cast<char*>(&other->_impl_.devicestate_));
+      PROTOBUF_FIELD_OFFSET(Msg_UpdateStatus, _impl_.a_connectionstate_)
+      + sizeof(Msg_UpdateStatus::_impl_.a_connectionstate_)
+      - PROTOBUF_FIELD_OFFSET(Msg_UpdateStatus, _impl_.a_devicestate_)>(
+          reinterpret_cast<char*>(&_impl_.a_devicestate_),
+          reinterpret_cast<char*>(&other->_impl_.a_devicestate_));
 }
 
 std::string Msg_UpdateStatus::GetTypeName() const {

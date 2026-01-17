@@ -185,38 +185,38 @@ class Msg_GamepadTestEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAGamepadEventFieldNumber = 2,
-    kAIDFieldNumber = 1,
+    kAAGamepadEventFieldNumber = 2,
+    kAAIDFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.GamepadChangeEvent aGamepadEvent = 2;
-  bool has_agamepadevent() const;
+  // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+  bool has_a_agamepadevent() const;
   private:
-  bool _internal_has_agamepadevent() const;
+  bool _internal_has_a_agamepadevent() const;
   public:
-  void clear_agamepadevent();
-  const ::protobuf::mozilla::dom::GamepadChangeEvent& agamepadevent() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::GamepadChangeEvent* release_agamepadevent();
-  ::protobuf::mozilla::dom::GamepadChangeEvent* mutable_agamepadevent();
-  void set_allocated_agamepadevent(::protobuf::mozilla::dom::GamepadChangeEvent* agamepadevent);
+  void clear_a_agamepadevent();
+  const ::protobuf::mozilla::dom::GamepadChangeEvent& a_agamepadevent() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::GamepadChangeEvent* release_a_agamepadevent();
+  ::protobuf::mozilla::dom::GamepadChangeEvent* mutable_a_agamepadevent();
+  void set_allocated_a_agamepadevent(::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent);
   private:
-  const ::protobuf::mozilla::dom::GamepadChangeEvent& _internal_agamepadevent() const;
-  ::protobuf::mozilla::dom::GamepadChangeEvent* _internal_mutable_agamepadevent();
+  const ::protobuf::mozilla::dom::GamepadChangeEvent& _internal_a_agamepadevent() const;
+  ::protobuf::mozilla::dom::GamepadChangeEvent* _internal_mutable_a_agamepadevent();
   public:
-  void unsafe_arena_set_allocated_agamepadevent(
-      ::protobuf::mozilla::dom::GamepadChangeEvent* agamepadevent);
-  ::protobuf::mozilla::dom::GamepadChangeEvent* unsafe_arena_release_agamepadevent();
+  void unsafe_arena_set_allocated_a_agamepadevent(
+      ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent);
+  ::protobuf::mozilla::dom::GamepadChangeEvent* unsafe_arena_release_a_agamepadevent();
 
-  // required uint32 aID = 1;
-  bool has_aid() const;
+  // required uint32 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint32_t aid() const;
-  void set_aid(uint32_t value);
+  void clear_a_aid();
+  uint32_t a_aid() const;
+  void set_a_aid(uint32_t value);
   private:
-  uint32_t _internal_aid() const;
-  void _internal_set_aid(uint32_t value);
+  uint32_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent)
@@ -232,8 +232,8 @@ class Msg_GamepadTestEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::GamepadChangeEvent* agamepadevent_;
-    uint32_t aid_;
+    ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent_;
+    uint32_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadTestChannel_2eproto;
@@ -598,38 +598,38 @@ class Msg_ReplyGamepadHandle final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHandleFieldNumber = 2,
-    kAIDFieldNumber = 1,
+    kAAHandleFieldNumber = 2,
+    kAAIDFieldNumber = 1,
   };
-  // required bytes aHandle = 2;
-  bool has_ahandle() const;
+  // required bytes a_aHandle = 2;
+  bool has_a_ahandle() const;
   private:
-  bool _internal_has_ahandle() const;
+  bool _internal_has_a_ahandle() const;
   public:
-  void clear_ahandle();
-  const std::string& ahandle() const;
+  void clear_a_ahandle();
+  const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahandle();
-  PROTOBUF_NODISCARD std::string* release_ahandle();
-  void set_allocated_ahandle(std::string* ahandle);
+  void set_a_ahandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahandle();
+  PROTOBUF_NODISCARD std::string* release_a_ahandle();
+  void set_allocated_a_ahandle(std::string* a_ahandle);
   private:
-  const std::string& _internal_ahandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahandle(const std::string& value);
-  std::string* _internal_mutable_ahandle();
+  const std::string& _internal_a_ahandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahandle(const std::string& value);
+  std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 aID = 1;
-  bool has_aid() const;
+  // required uint32 a_aID = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint32_t aid() const;
-  void set_aid(uint32_t value);
+  void clear_a_aid();
+  uint32_t a_aid() const;
+  void set_a_aid(uint32_t value);
   private:
-  uint32_t _internal_aid() const;
-  void _internal_set_aid(uint32_t value);
+  uint32_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle)
@@ -645,8 +645,8 @@ class Msg_ReplyGamepadHandle final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahandle_;
-    uint32_t aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
+    uint32_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadTestChannel_2eproto;
@@ -662,69 +662,69 @@ class Msg_ReplyGamepadHandle final :
 #endif  // __GNUC__
 // Msg_GamepadTestEvent
 
-// required uint32 aID = 1;
-inline bool Msg_GamepadTestEvent::_internal_has_aid() const {
+// required uint32 a_aID = 1;
+inline bool Msg_GamepadTestEvent::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GamepadTestEvent::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_GamepadTestEvent::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_GamepadTestEvent::clear_aid() {
-  _impl_.aid_ = 0u;
+inline void Msg_GamepadTestEvent::clear_a_aid() {
+  _impl_.a_aid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_GamepadTestEvent::_internal_aid() const {
-  return _impl_.aid_;
+inline uint32_t Msg_GamepadTestEvent::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint32_t Msg_GamepadTestEvent::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aID)
-  return _internal_aid();
+inline uint32_t Msg_GamepadTestEvent::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_GamepadTestEvent::_internal_set_aid(uint32_t value) {
+inline void Msg_GamepadTestEvent::_internal_set_a_aid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_GamepadTestEvent::set_aid(uint32_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aID)
+inline void Msg_GamepadTestEvent::set_a_aid(uint32_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aID)
 }
 
-// required .protobuf.mozilla.dom.GamepadChangeEvent aGamepadEvent = 2;
-inline bool Msg_GamepadTestEvent::_internal_has_agamepadevent() const {
+// required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+inline bool Msg_GamepadTestEvent::_internal_has_a_agamepadevent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.agamepadevent_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_agamepadevent_ != nullptr);
   return value;
 }
-inline bool Msg_GamepadTestEvent::has_agamepadevent() const {
-  return _internal_has_agamepadevent();
+inline bool Msg_GamepadTestEvent::has_a_agamepadevent() const {
+  return _internal_has_a_agamepadevent();
 }
-inline const ::protobuf::mozilla::dom::GamepadChangeEvent& Msg_GamepadTestEvent::_internal_agamepadevent() const {
-  const ::protobuf::mozilla::dom::GamepadChangeEvent* p = _impl_.agamepadevent_;
+inline const ::protobuf::mozilla::dom::GamepadChangeEvent& Msg_GamepadTestEvent::_internal_a_agamepadevent() const {
+  const ::protobuf::mozilla::dom::GamepadChangeEvent* p = _impl_.a_agamepadevent_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::GamepadChangeEvent&>(
       ::protobuf::mozilla::dom::_GamepadChangeEvent_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::GamepadChangeEvent& Msg_GamepadTestEvent::agamepadevent() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aGamepadEvent)
-  return _internal_agamepadevent();
+inline const ::protobuf::mozilla::dom::GamepadChangeEvent& Msg_GamepadTestEvent::a_agamepadevent() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
+  return _internal_a_agamepadevent();
 }
-inline void Msg_GamepadTestEvent::unsafe_arena_set_allocated_agamepadevent(
-    ::protobuf::mozilla::dom::GamepadChangeEvent* agamepadevent) {
+inline void Msg_GamepadTestEvent::unsafe_arena_set_allocated_a_agamepadevent(
+    ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.agamepadevent_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_agamepadevent_);
   }
-  _impl_.agamepadevent_ = agamepadevent;
-  if (agamepadevent) {
+  _impl_.a_agamepadevent_ = a_agamepadevent;
+  if (a_agamepadevent) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aGamepadEvent)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
 }
-inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::release_agamepadevent() {
+inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::release_a_agamepadevent() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.agamepadevent_;
-  _impl_.agamepadevent_ = nullptr;
+  ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.a_agamepadevent_;
+  _impl_.a_agamepadevent_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -736,45 +736,45 @@ inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::relea
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::unsafe_arena_release_agamepadevent() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aGamepadEvent)
+inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::unsafe_arena_release_a_agamepadevent() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.agamepadevent_;
-  _impl_.agamepadevent_ = nullptr;
+  ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.a_agamepadevent_;
+  _impl_.a_agamepadevent_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::_internal_mutable_agamepadevent() {
+inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::_internal_mutable_a_agamepadevent() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.agamepadevent_ == nullptr) {
+  if (_impl_.a_agamepadevent_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::GamepadChangeEvent>(GetArenaForAllocation());
-    _impl_.agamepadevent_ = p;
+    _impl_.a_agamepadevent_ = p;
   }
-  return _impl_.agamepadevent_;
+  return _impl_.a_agamepadevent_;
 }
-inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::mutable_agamepadevent() {
-  ::protobuf::mozilla::dom::GamepadChangeEvent* _msg = _internal_mutable_agamepadevent();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aGamepadEvent)
+inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::mutable_a_agamepadevent() {
+  ::protobuf::mozilla::dom::GamepadChangeEvent* _msg = _internal_mutable_a_agamepadevent();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
   return _msg;
 }
-inline void Msg_GamepadTestEvent::set_allocated_agamepadevent(::protobuf::mozilla::dom::GamepadChangeEvent* agamepadevent) {
+inline void Msg_GamepadTestEvent::set_allocated_a_agamepadevent(::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.agamepadevent_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_agamepadevent_);
   }
-  if (agamepadevent) {
+  if (a_agamepadevent) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(agamepadevent));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_agamepadevent));
     if (message_arena != submessage_arena) {
-      agamepadevent = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, agamepadevent, submessage_arena);
+      a_agamepadevent = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_agamepadevent, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.agamepadevent_ = agamepadevent;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.aGamepadEvent)
+  _impl_.a_agamepadevent_ = a_agamepadevent;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
 }
 
 // -------------------------------------------------------------------
@@ -789,100 +789,100 @@ inline void Msg_GamepadTestEvent::set_allocated_agamepadevent(::protobuf::mozill
 
 // Msg_ReplyGamepadHandle
 
-// required uint32 aID = 1;
-inline bool Msg_ReplyGamepadHandle::_internal_has_aid() const {
+// required uint32 a_aID = 1;
+inline bool Msg_ReplyGamepadHandle::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReplyGamepadHandle::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_ReplyGamepadHandle::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_ReplyGamepadHandle::clear_aid() {
-  _impl_.aid_ = 0u;
+inline void Msg_ReplyGamepadHandle::clear_a_aid() {
+  _impl_.a_aid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_ReplyGamepadHandle::_internal_aid() const {
-  return _impl_.aid_;
+inline uint32_t Msg_ReplyGamepadHandle::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint32_t Msg_ReplyGamepadHandle::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aID)
-  return _internal_aid();
+inline uint32_t Msg_ReplyGamepadHandle::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_ReplyGamepadHandle::_internal_set_aid(uint32_t value) {
+inline void Msg_ReplyGamepadHandle::_internal_set_a_aid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_ReplyGamepadHandle::set_aid(uint32_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aID)
+inline void Msg_ReplyGamepadHandle::set_a_aid(uint32_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aID)
 }
 
-// required bytes aHandle = 2;
-inline bool Msg_ReplyGamepadHandle::_internal_has_ahandle() const {
+// required bytes a_aHandle = 2;
+inline bool Msg_ReplyGamepadHandle::_internal_has_a_ahandle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReplyGamepadHandle::has_ahandle() const {
-  return _internal_has_ahandle();
+inline bool Msg_ReplyGamepadHandle::has_a_ahandle() const {
+  return _internal_has_a_ahandle();
 }
-inline void Msg_ReplyGamepadHandle::clear_ahandle() {
-  _impl_.ahandle_.ClearToEmpty();
+inline void Msg_ReplyGamepadHandle::clear_a_ahandle() {
+  _impl_.a_ahandle_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReplyGamepadHandle::ahandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aHandle)
-  return _internal_ahandle();
+inline const std::string& Msg_ReplyGamepadHandle::a_ahandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
+  return _internal_a_ahandle();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReplyGamepadHandle::set_ahandle(ArgT0&& arg0, ArgT... args) {
+void Msg_ReplyGamepadHandle::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aHandle)
+ _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
 }
-inline std::string* Msg_ReplyGamepadHandle::mutable_ahandle() {
-  std::string* _s = _internal_mutable_ahandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aHandle)
+inline std::string* Msg_ReplyGamepadHandle::mutable_a_ahandle() {
+  std::string* _s = _internal_mutable_a_ahandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
   return _s;
 }
-inline const std::string& Msg_ReplyGamepadHandle::_internal_ahandle() const {
-  return _impl_.ahandle_.Get();
+inline const std::string& Msg_ReplyGamepadHandle::_internal_a_ahandle() const {
+  return _impl_.a_ahandle_.Get();
 }
-inline void Msg_ReplyGamepadHandle::_internal_set_ahandle(const std::string& value) {
+inline void Msg_ReplyGamepadHandle::_internal_set_a_ahandle(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ahandle_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReplyGamepadHandle::_internal_mutable_ahandle() {
+inline std::string* Msg_ReplyGamepadHandle::_internal_mutable_a_ahandle() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ahandle_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReplyGamepadHandle::release_ahandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aHandle)
-  if (!_internal_has_ahandle()) {
+inline std::string* Msg_ReplyGamepadHandle::release_a_ahandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
+  if (!_internal_has_a_ahandle()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ahandle_.Release();
+  auto* p = _impl_.a_ahandle_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReplyGamepadHandle::set_allocated_ahandle(std::string* ahandle) {
-  if (ahandle != nullptr) {
+inline void Msg_ReplyGamepadHandle::set_allocated_a_ahandle(std::string* a_ahandle) {
+  if (a_ahandle != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ahandle_.SetAllocated(ahandle, GetArenaForAllocation());
+  _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahandle_.IsDefault()) {
-    _impl_.ahandle_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahandle_.IsDefault()) {
+    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.aHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
 }
 
 #ifdef __GNUC__

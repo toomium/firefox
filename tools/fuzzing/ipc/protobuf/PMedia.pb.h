@@ -189,38 +189,38 @@ class Msg_GetPrincipalKey final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPrincipalFieldNumber = 1,
-    kAPersistFieldNumber = 2,
+    kAAPrincipalFieldNumber = 1,
+    kAAPersistFieldNumber = 2,
   };
-  // required .protobuf.mozilla.ipc.PrincipalInfo aPrincipal = 1;
-  bool has_aprincipal() const;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
+  bool has_a_aprincipal() const;
   private:
-  bool _internal_has_aprincipal() const;
+  bool _internal_has_a_aprincipal() const;
   public:
-  void clear_aprincipal();
-  const ::protobuf::mozilla::ipc::PrincipalInfo& aprincipal() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_aprincipal();
-  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_aprincipal();
-  void set_allocated_aprincipal(::protobuf::mozilla::ipc::PrincipalInfo* aprincipal);
+  void clear_a_aprincipal();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& a_aprincipal() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_a_aprincipal();
+  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_a_aprincipal();
+  void set_allocated_a_aprincipal(::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipal);
   private:
-  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_aprincipal() const;
-  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_aprincipal();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_a_aprincipal() const;
+  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_a_aprincipal();
   public:
-  void unsafe_arena_set_allocated_aprincipal(
-      ::protobuf::mozilla::ipc::PrincipalInfo* aprincipal);
-  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_aprincipal();
+  void unsafe_arena_set_allocated_a_aprincipal(
+      ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipal);
+  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipal();
 
-  // required bool aPersist = 2;
-  bool has_apersist() const;
+  // required bool a_aPersist = 2;
+  bool has_a_apersist() const;
   private:
-  bool _internal_has_apersist() const;
+  bool _internal_has_a_apersist() const;
   public:
-  void clear_apersist();
-  bool apersist() const;
-  void set_apersist(bool value);
+  void clear_a_apersist();
+  bool a_apersist() const;
+  void set_a_apersist(bool value);
   private:
-  bool _internal_apersist() const;
-  void _internal_set_apersist(bool value);
+  bool _internal_a_apersist() const;
+  void _internal_set_a_apersist(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
@@ -236,8 +236,8 @@ class Msg_GetPrincipalKey final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::PrincipalInfo* aprincipal_;
-    bool apersist_;
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipal_;
+    bool a_apersist_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMedia_2eproto;
@@ -354,24 +354,24 @@ class Reply_GetPrincipalKey final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAKeyFieldNumber = 1,
+    kAAKeyFieldNumber = 1,
   };
-  // required bytes aKey = 1;
-  bool has_akey() const;
+  // required bytes a_aKey = 1;
+  bool has_a_akey() const;
   private:
-  bool _internal_has_akey() const;
+  bool _internal_has_a_akey() const;
   public:
-  void clear_akey();
-  const std::string& akey() const;
+  void clear_a_akey();
+  const std::string& a_akey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_akey(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_akey();
-  PROTOBUF_NODISCARD std::string* release_akey();
-  void set_allocated_akey(std::string* akey);
+  void set_a_akey(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_akey();
+  PROTOBUF_NODISCARD std::string* release_a_akey();
+  void set_allocated_a_akey(std::string* a_akey);
   private:
-  const std::string& _internal_akey() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_akey(const std::string& value);
-  std::string* _internal_mutable_akey();
+  const std::string& _internal_a_akey() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_akey(const std::string& value);
+  std::string* _internal_mutable_a_akey();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
@@ -384,7 +384,7 @@ class Reply_GetPrincipalKey final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr akey_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_akey_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMedia_2eproto;
@@ -501,33 +501,33 @@ class Msg_SanitizeOriginKeys final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASinceWhenFieldNumber = 1,
-    kAOnlyPrivateBrowsingFieldNumber = 2,
+    kAASinceWhenFieldNumber = 1,
+    kAAOnlyPrivateBrowsingFieldNumber = 2,
   };
-  // required uint64 aSinceWhen = 1;
-  bool has_asincewhen() const;
+  // required uint64 a_aSinceWhen = 1;
+  bool has_a_asincewhen() const;
   private:
-  bool _internal_has_asincewhen() const;
+  bool _internal_has_a_asincewhen() const;
   public:
-  void clear_asincewhen();
-  uint64_t asincewhen() const;
-  void set_asincewhen(uint64_t value);
+  void clear_a_asincewhen();
+  uint64_t a_asincewhen() const;
+  void set_a_asincewhen(uint64_t value);
   private:
-  uint64_t _internal_asincewhen() const;
-  void _internal_set_asincewhen(uint64_t value);
+  uint64_t _internal_a_asincewhen() const;
+  void _internal_set_a_asincewhen(uint64_t value);
   public:
 
-  // required bool aOnlyPrivateBrowsing = 2;
-  bool has_aonlyprivatebrowsing() const;
+  // required bool a_aOnlyPrivateBrowsing = 2;
+  bool has_a_aonlyprivatebrowsing() const;
   private:
-  bool _internal_has_aonlyprivatebrowsing() const;
+  bool _internal_has_a_aonlyprivatebrowsing() const;
   public:
-  void clear_aonlyprivatebrowsing();
-  bool aonlyprivatebrowsing() const;
-  void set_aonlyprivatebrowsing(bool value);
+  void clear_a_aonlyprivatebrowsing();
+  bool a_aonlyprivatebrowsing() const;
+  void set_a_aonlyprivatebrowsing(bool value);
   private:
-  bool _internal_aonlyprivatebrowsing() const;
-  void _internal_set_aonlyprivatebrowsing(bool value);
+  bool _internal_a_aonlyprivatebrowsing() const;
+  void _internal_set_a_aonlyprivatebrowsing(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
@@ -543,8 +543,8 @@ class Msg_SanitizeOriginKeys final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t asincewhen_;
-    bool aonlyprivatebrowsing_;
+    uint64_t a_asincewhen_;
+    bool a_aonlyprivatebrowsing_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMedia_2eproto;
@@ -808,41 +808,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_GetPrincipalKey
 
-// required .protobuf.mozilla.ipc.PrincipalInfo aPrincipal = 1;
-inline bool Msg_GetPrincipalKey::_internal_has_aprincipal() const {
+// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
+inline bool Msg_GetPrincipalKey::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aprincipal_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aprincipal_ != nullptr);
   return value;
 }
-inline bool Msg_GetPrincipalKey::has_aprincipal() const {
-  return _internal_has_aprincipal();
+inline bool Msg_GetPrincipalKey::has_a_aprincipal() const {
+  return _internal_has_a_aprincipal();
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& Msg_GetPrincipalKey::_internal_aprincipal() const {
-  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.aprincipal_;
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& Msg_GetPrincipalKey::_internal_a_aprincipal() const {
+  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.a_aprincipal_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::PrincipalInfo&>(
       ::protobuf::mozilla::ipc::_PrincipalInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& Msg_GetPrincipalKey::aprincipal() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPrincipal)
-  return _internal_aprincipal();
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& Msg_GetPrincipalKey::a_aprincipal() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPrincipal)
+  return _internal_a_aprincipal();
 }
-inline void Msg_GetPrincipalKey::unsafe_arena_set_allocated_aprincipal(
-    ::protobuf::mozilla::ipc::PrincipalInfo* aprincipal) {
+inline void Msg_GetPrincipalKey::unsafe_arena_set_allocated_a_aprincipal(
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipal) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aprincipal_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aprincipal_);
   }
-  _impl_.aprincipal_ = aprincipal;
-  if (aprincipal) {
+  _impl_.a_aprincipal_ = a_aprincipal;
+  if (a_aprincipal) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPrincipal)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPrincipal)
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::release_aprincipal() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::release_a_aprincipal() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.aprincipal_;
-  _impl_.aprincipal_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_aprincipal_;
+  _impl_.a_aprincipal_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -854,205 +854,205 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::release_apr
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::unsafe_arena_release_aprincipal() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPrincipal)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::unsafe_arena_release_a_aprincipal() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPrincipal)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.aprincipal_;
-  _impl_.aprincipal_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_aprincipal_;
+  _impl_.a_aprincipal_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::_internal_mutable_aprincipal() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::_internal_mutable_a_aprincipal() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aprincipal_ == nullptr) {
+  if (_impl_.a_aprincipal_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
-    _impl_.aprincipal_ = p;
+    _impl_.a_aprincipal_ = p;
   }
-  return _impl_.aprincipal_;
+  return _impl_.a_aprincipal_;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::mutable_aprincipal() {
-  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_aprincipal();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPrincipal)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* Msg_GetPrincipalKey::mutable_a_aprincipal() {
+  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_a_aprincipal();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPrincipal)
   return _msg;
 }
-inline void Msg_GetPrincipalKey::set_allocated_aprincipal(::protobuf::mozilla::ipc::PrincipalInfo* aprincipal) {
+inline void Msg_GetPrincipalKey::set_allocated_a_aprincipal(::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipal) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aprincipal_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aprincipal_);
   }
-  if (aprincipal) {
+  if (a_aprincipal) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aprincipal));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aprincipal));
     if (message_arena != submessage_arena) {
-      aprincipal = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aprincipal, submessage_arena);
+      a_aprincipal = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aprincipal, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aprincipal_ = aprincipal;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPrincipal)
+  _impl_.a_aprincipal_ = a_aprincipal;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPrincipal)
 }
 
-// required bool aPersist = 2;
-inline bool Msg_GetPrincipalKey::_internal_has_apersist() const {
+// required bool a_aPersist = 2;
+inline bool Msg_GetPrincipalKey::_internal_has_a_apersist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetPrincipalKey::has_apersist() const {
-  return _internal_has_apersist();
+inline bool Msg_GetPrincipalKey::has_a_apersist() const {
+  return _internal_has_a_apersist();
 }
-inline void Msg_GetPrincipalKey::clear_apersist() {
-  _impl_.apersist_ = false;
+inline void Msg_GetPrincipalKey::clear_a_apersist() {
+  _impl_.a_apersist_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_GetPrincipalKey::_internal_apersist() const {
-  return _impl_.apersist_;
+inline bool Msg_GetPrincipalKey::_internal_a_apersist() const {
+  return _impl_.a_apersist_;
 }
-inline bool Msg_GetPrincipalKey::apersist() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPersist)
-  return _internal_apersist();
+inline bool Msg_GetPrincipalKey::a_apersist() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPersist)
+  return _internal_a_apersist();
 }
-inline void Msg_GetPrincipalKey::_internal_set_apersist(bool value) {
+inline void Msg_GetPrincipalKey::_internal_set_a_apersist(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.apersist_ = value;
+  _impl_.a_apersist_ = value;
 }
-inline void Msg_GetPrincipalKey::set_apersist(bool value) {
-  _internal_set_apersist(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.aPersist)
+inline void Msg_GetPrincipalKey::set_a_apersist(bool value) {
+  _internal_set_a_apersist(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey.a_aPersist)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetPrincipalKey
 
-// required bytes aKey = 1;
-inline bool Reply_GetPrincipalKey::_internal_has_akey() const {
+// required bytes a_aKey = 1;
+inline bool Reply_GetPrincipalKey::_internal_has_a_akey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetPrincipalKey::has_akey() const {
-  return _internal_has_akey();
+inline bool Reply_GetPrincipalKey::has_a_akey() const {
+  return _internal_has_a_akey();
 }
-inline void Reply_GetPrincipalKey::clear_akey() {
-  _impl_.akey_.ClearToEmpty();
+inline void Reply_GetPrincipalKey::clear_a_akey() {
+  _impl_.a_akey_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetPrincipalKey::akey() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.aKey)
-  return _internal_akey();
+inline const std::string& Reply_GetPrincipalKey::a_akey() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey)
+  return _internal_a_akey();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetPrincipalKey::set_akey(ArgT0&& arg0, ArgT... args) {
+void Reply_GetPrincipalKey::set_a_akey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.akey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.aKey)
+ _impl_.a_akey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey)
 }
-inline std::string* Reply_GetPrincipalKey::mutable_akey() {
-  std::string* _s = _internal_mutable_akey();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.aKey)
+inline std::string* Reply_GetPrincipalKey::mutable_a_akey() {
+  std::string* _s = _internal_mutable_a_akey();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey)
   return _s;
 }
-inline const std::string& Reply_GetPrincipalKey::_internal_akey() const {
-  return _impl_.akey_.Get();
+inline const std::string& Reply_GetPrincipalKey::_internal_a_akey() const {
+  return _impl_.a_akey_.Get();
 }
-inline void Reply_GetPrincipalKey::_internal_set_akey(const std::string& value) {
+inline void Reply_GetPrincipalKey::_internal_set_a_akey(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.akey_.Set(value, GetArenaForAllocation());
+  _impl_.a_akey_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetPrincipalKey::_internal_mutable_akey() {
+inline std::string* Reply_GetPrincipalKey::_internal_mutable_a_akey() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.akey_.Mutable(GetArenaForAllocation());
+  return _impl_.a_akey_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetPrincipalKey::release_akey() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.aKey)
-  if (!_internal_has_akey()) {
+inline std::string* Reply_GetPrincipalKey::release_a_akey() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey)
+  if (!_internal_has_a_akey()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.akey_.Release();
+  auto* p = _impl_.a_akey_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.akey_.IsDefault()) {
-    _impl_.akey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_akey_.IsDefault()) {
+    _impl_.a_akey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetPrincipalKey::set_allocated_akey(std::string* akey) {
-  if (akey != nullptr) {
+inline void Reply_GetPrincipalKey::set_allocated_a_akey(std::string* a_akey) {
+  if (a_akey != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.akey_.SetAllocated(akey, GetArenaForAllocation());
+  _impl_.a_akey_.SetAllocated(a_akey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.akey_.IsDefault()) {
-    _impl_.akey_.Set("", GetArenaForAllocation());
+  if (_impl_.a_akey_.IsDefault()) {
+    _impl_.a_akey_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.aKey)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SanitizeOriginKeys
 
-// required uint64 aSinceWhen = 1;
-inline bool Msg_SanitizeOriginKeys::_internal_has_asincewhen() const {
+// required uint64 a_aSinceWhen = 1;
+inline bool Msg_SanitizeOriginKeys::_internal_has_a_asincewhen() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SanitizeOriginKeys::has_asincewhen() const {
-  return _internal_has_asincewhen();
+inline bool Msg_SanitizeOriginKeys::has_a_asincewhen() const {
+  return _internal_has_a_asincewhen();
 }
-inline void Msg_SanitizeOriginKeys::clear_asincewhen() {
-  _impl_.asincewhen_ = uint64_t{0u};
+inline void Msg_SanitizeOriginKeys::clear_a_asincewhen() {
+  _impl_.a_asincewhen_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_SanitizeOriginKeys::_internal_asincewhen() const {
-  return _impl_.asincewhen_;
+inline uint64_t Msg_SanitizeOriginKeys::_internal_a_asincewhen() const {
+  return _impl_.a_asincewhen_;
 }
-inline uint64_t Msg_SanitizeOriginKeys::asincewhen() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.aSinceWhen)
-  return _internal_asincewhen();
+inline uint64_t Msg_SanitizeOriginKeys::a_asincewhen() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.a_aSinceWhen)
+  return _internal_a_asincewhen();
 }
-inline void Msg_SanitizeOriginKeys::_internal_set_asincewhen(uint64_t value) {
+inline void Msg_SanitizeOriginKeys::_internal_set_a_asincewhen(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.asincewhen_ = value;
+  _impl_.a_asincewhen_ = value;
 }
-inline void Msg_SanitizeOriginKeys::set_asincewhen(uint64_t value) {
-  _internal_set_asincewhen(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.aSinceWhen)
+inline void Msg_SanitizeOriginKeys::set_a_asincewhen(uint64_t value) {
+  _internal_set_a_asincewhen(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.a_aSinceWhen)
 }
 
-// required bool aOnlyPrivateBrowsing = 2;
-inline bool Msg_SanitizeOriginKeys::_internal_has_aonlyprivatebrowsing() const {
+// required bool a_aOnlyPrivateBrowsing = 2;
+inline bool Msg_SanitizeOriginKeys::_internal_has_a_aonlyprivatebrowsing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SanitizeOriginKeys::has_aonlyprivatebrowsing() const {
-  return _internal_has_aonlyprivatebrowsing();
+inline bool Msg_SanitizeOriginKeys::has_a_aonlyprivatebrowsing() const {
+  return _internal_has_a_aonlyprivatebrowsing();
 }
-inline void Msg_SanitizeOriginKeys::clear_aonlyprivatebrowsing() {
-  _impl_.aonlyprivatebrowsing_ = false;
+inline void Msg_SanitizeOriginKeys::clear_a_aonlyprivatebrowsing() {
+  _impl_.a_aonlyprivatebrowsing_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_SanitizeOriginKeys::_internal_aonlyprivatebrowsing() const {
-  return _impl_.aonlyprivatebrowsing_;
+inline bool Msg_SanitizeOriginKeys::_internal_a_aonlyprivatebrowsing() const {
+  return _impl_.a_aonlyprivatebrowsing_;
 }
-inline bool Msg_SanitizeOriginKeys::aonlyprivatebrowsing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.aOnlyPrivateBrowsing)
-  return _internal_aonlyprivatebrowsing();
+inline bool Msg_SanitizeOriginKeys::a_aonlyprivatebrowsing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.a_aOnlyPrivateBrowsing)
+  return _internal_a_aonlyprivatebrowsing();
 }
-inline void Msg_SanitizeOriginKeys::_internal_set_aonlyprivatebrowsing(bool value) {
+inline void Msg_SanitizeOriginKeys::_internal_set_a_aonlyprivatebrowsing(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aonlyprivatebrowsing_ = value;
+  _impl_.a_aonlyprivatebrowsing_ = value;
 }
-inline void Msg_SanitizeOriginKeys::set_aonlyprivatebrowsing(bool value) {
-  _internal_set_aonlyprivatebrowsing(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.aOnlyPrivateBrowsing)
+inline void Msg_SanitizeOriginKeys::set_a_aonlyprivatebrowsing(bool value) {
+  _internal_set_a_aonlyprivatebrowsing(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys.a_aOnlyPrivateBrowsing)
 }
 
 // -------------------------------------------------------------------

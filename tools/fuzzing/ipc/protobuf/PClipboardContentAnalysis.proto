@@ -17,23 +17,23 @@ import "IPCTransferable.proto";
 
 // Message declarations
 message Msg_GetClipboard {
-  repeated bytes aTypes = 1;
-  required bytes aWhichClipboard = 2;
-  required uint64 aRequestingWindowContextId = 3;
+  repeated bytes a_aTypes = 1;
+  required bytes a_aWhichClipboard = 2;
+  required uint64 a_aRequestingWindowContextId = 3;
 }
 
 message Reply_GetClipboard {
-  required protobuf.mozilla.dom.IPCTransferableDataOrError transferableDataOrError = 1;
+  required protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
 }
 
 message Msg_GetAllClipboardDataSync {
-  repeated bytes aTypes = 1;
-  required bytes aWhichClipboard = 2;
-  required uint64 aRequestingWindowContextId = 3;
+  repeated bytes a_aTypes = 1;
+  required bytes a_aWhichClipboard = 2;
+  required uint64 a_aRequestingWindowContextId = 3;
 }
 
 message Reply_GetAllClipboardDataSync {
-  required protobuf.mozilla.dom.IPCTransferableDataOrError transferableDataOrError = 1;
+  required protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
 }
 
 // Parameter mappings stats:

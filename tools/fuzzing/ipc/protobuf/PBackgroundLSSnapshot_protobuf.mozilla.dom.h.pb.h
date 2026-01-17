@@ -194,43 +194,43 @@ class LSSetItemInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kValueFieldNumber = 2,
+    kAKeyFieldNumber = 1,
+    kAValueFieldNumber = 2,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes value = 2;
-  bool has_value() const;
+  // required bytes a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSetItemInfo)
@@ -246,8 +246,8 @@ class LSSetItemInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -364,24 +364,24 @@ class LSRemoveItemInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
+    kAKeyFieldNumber = 1,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRemoveItemInfo)
@@ -394,7 +394,7 @@ class LSRemoveItemInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -567,9 +567,9 @@ class LSWriteInfo final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVLSSetItemInfo = 1,
-    kMVLSRemoveItemInfo = 2,
-    kMVLSClearInfo = 3,
+    kAMVLSSetItemInfo = 1,
+    kAMVLSRemoveItemInfo = 2,
+    kAMVLSClearInfo = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -642,72 +642,72 @@ class LSWriteInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVLSSetItemInfoFieldNumber = 1,
-    kMVLSRemoveItemInfoFieldNumber = 2,
-    kMVLSClearInfoFieldNumber = 3,
+    kAMVLSSetItemInfoFieldNumber = 1,
+    kAMVLSRemoveItemInfoFieldNumber = 2,
+    kAMVLSClearInfoFieldNumber = 3,
   };
-  // .protobuf.mozilla.dom.LSSetItemInfo mVLSSetItemInfo = 1;
-  bool has_mvlssetiteminfo() const;
+  // .protobuf.mozilla.dom.LSSetItemInfo a_mVLSSetItemInfo = 1;
+  bool has_a_mvlssetiteminfo() const;
   private:
-  bool _internal_has_mvlssetiteminfo() const;
+  bool _internal_has_a_mvlssetiteminfo() const;
   public:
-  void clear_mvlssetiteminfo();
-  const ::protobuf::mozilla::dom::LSSetItemInfo& mvlssetiteminfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSetItemInfo* release_mvlssetiteminfo();
-  ::protobuf::mozilla::dom::LSSetItemInfo* mutable_mvlssetiteminfo();
-  void set_allocated_mvlssetiteminfo(::protobuf::mozilla::dom::LSSetItemInfo* mvlssetiteminfo);
+  void clear_a_mvlssetiteminfo();
+  const ::protobuf::mozilla::dom::LSSetItemInfo& a_mvlssetiteminfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSetItemInfo* release_a_mvlssetiteminfo();
+  ::protobuf::mozilla::dom::LSSetItemInfo* mutable_a_mvlssetiteminfo();
+  void set_allocated_a_mvlssetiteminfo(::protobuf::mozilla::dom::LSSetItemInfo* a_mvlssetiteminfo);
   private:
-  const ::protobuf::mozilla::dom::LSSetItemInfo& _internal_mvlssetiteminfo() const;
-  ::protobuf::mozilla::dom::LSSetItemInfo* _internal_mutable_mvlssetiteminfo();
+  const ::protobuf::mozilla::dom::LSSetItemInfo& _internal_a_mvlssetiteminfo() const;
+  ::protobuf::mozilla::dom::LSSetItemInfo* _internal_mutable_a_mvlssetiteminfo();
   public:
-  void unsafe_arena_set_allocated_mvlssetiteminfo(
-      ::protobuf::mozilla::dom::LSSetItemInfo* mvlssetiteminfo);
-  ::protobuf::mozilla::dom::LSSetItemInfo* unsafe_arena_release_mvlssetiteminfo();
+  void unsafe_arena_set_allocated_a_mvlssetiteminfo(
+      ::protobuf::mozilla::dom::LSSetItemInfo* a_mvlssetiteminfo);
+  ::protobuf::mozilla::dom::LSSetItemInfo* unsafe_arena_release_a_mvlssetiteminfo();
 
-  // .protobuf.mozilla.dom.LSRemoveItemInfo mVLSRemoveItemInfo = 2;
-  bool has_mvlsremoveiteminfo() const;
+  // .protobuf.mozilla.dom.LSRemoveItemInfo a_mVLSRemoveItemInfo = 2;
+  bool has_a_mvlsremoveiteminfo() const;
   private:
-  bool _internal_has_mvlsremoveiteminfo() const;
+  bool _internal_has_a_mvlsremoveiteminfo() const;
   public:
-  void clear_mvlsremoveiteminfo();
-  const ::protobuf::mozilla::dom::LSRemoveItemInfo& mvlsremoveiteminfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRemoveItemInfo* release_mvlsremoveiteminfo();
-  ::protobuf::mozilla::dom::LSRemoveItemInfo* mutable_mvlsremoveiteminfo();
-  void set_allocated_mvlsremoveiteminfo(::protobuf::mozilla::dom::LSRemoveItemInfo* mvlsremoveiteminfo);
+  void clear_a_mvlsremoveiteminfo();
+  const ::protobuf::mozilla::dom::LSRemoveItemInfo& a_mvlsremoveiteminfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRemoveItemInfo* release_a_mvlsremoveiteminfo();
+  ::protobuf::mozilla::dom::LSRemoveItemInfo* mutable_a_mvlsremoveiteminfo();
+  void set_allocated_a_mvlsremoveiteminfo(::protobuf::mozilla::dom::LSRemoveItemInfo* a_mvlsremoveiteminfo);
   private:
-  const ::protobuf::mozilla::dom::LSRemoveItemInfo& _internal_mvlsremoveiteminfo() const;
-  ::protobuf::mozilla::dom::LSRemoveItemInfo* _internal_mutable_mvlsremoveiteminfo();
+  const ::protobuf::mozilla::dom::LSRemoveItemInfo& _internal_a_mvlsremoveiteminfo() const;
+  ::protobuf::mozilla::dom::LSRemoveItemInfo* _internal_mutable_a_mvlsremoveiteminfo();
   public:
-  void unsafe_arena_set_allocated_mvlsremoveiteminfo(
-      ::protobuf::mozilla::dom::LSRemoveItemInfo* mvlsremoveiteminfo);
-  ::protobuf::mozilla::dom::LSRemoveItemInfo* unsafe_arena_release_mvlsremoveiteminfo();
+  void unsafe_arena_set_allocated_a_mvlsremoveiteminfo(
+      ::protobuf::mozilla::dom::LSRemoveItemInfo* a_mvlsremoveiteminfo);
+  ::protobuf::mozilla::dom::LSRemoveItemInfo* unsafe_arena_release_a_mvlsremoveiteminfo();
 
-  // .protobuf.mozilla.dom.LSClearInfo mVLSClearInfo = 3;
-  bool has_mvlsclearinfo() const;
+  // .protobuf.mozilla.dom.LSClearInfo a_mVLSClearInfo = 3;
+  bool has_a_mvlsclearinfo() const;
   private:
-  bool _internal_has_mvlsclearinfo() const;
+  bool _internal_has_a_mvlsclearinfo() const;
   public:
-  void clear_mvlsclearinfo();
-  const ::protobuf::mozilla::dom::LSClearInfo& mvlsclearinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSClearInfo* release_mvlsclearinfo();
-  ::protobuf::mozilla::dom::LSClearInfo* mutable_mvlsclearinfo();
-  void set_allocated_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo);
+  void clear_a_mvlsclearinfo();
+  const ::protobuf::mozilla::dom::LSClearInfo& a_mvlsclearinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSClearInfo* release_a_mvlsclearinfo();
+  ::protobuf::mozilla::dom::LSClearInfo* mutable_a_mvlsclearinfo();
+  void set_allocated_a_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo);
   private:
-  const ::protobuf::mozilla::dom::LSClearInfo& _internal_mvlsclearinfo() const;
-  ::protobuf::mozilla::dom::LSClearInfo* _internal_mutable_mvlsclearinfo();
+  const ::protobuf::mozilla::dom::LSClearInfo& _internal_a_mvlsclearinfo() const;
+  ::protobuf::mozilla::dom::LSClearInfo* _internal_mutable_a_mvlsclearinfo();
   public:
-  void unsafe_arena_set_allocated_mvlsclearinfo(
-      ::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo);
-  ::protobuf::mozilla::dom::LSClearInfo* unsafe_arena_release_mvlsclearinfo();
+  void unsafe_arena_set_allocated_a_mvlsclearinfo(
+      ::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo);
+  ::protobuf::mozilla::dom::LSClearInfo* unsafe_arena_release_a_mvlsclearinfo();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSWriteInfo)
  private:
   class _Internal;
-  void set_has_mvlssetiteminfo();
-  void set_has_mvlsremoveiteminfo();
-  void set_has_mvlsclearinfo();
+  void set_has_a_mvlssetiteminfo();
+  void set_has_a_mvlsremoveiteminfo();
+  void set_has_a_mvlsclearinfo();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -719,9 +719,9 @@ class LSWriteInfo final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::LSSetItemInfo* mvlssetiteminfo_;
-      ::protobuf::mozilla::dom::LSRemoveItemInfo* mvlsremoveiteminfo_;
-      ::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo_;
+      ::protobuf::mozilla::dom::LSSetItemInfo* a_mvlssetiteminfo_;
+      ::protobuf::mozilla::dom::LSRemoveItemInfo* a_mvlsremoveiteminfo_;
+      ::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -842,62 +842,62 @@ class LSSetItemAndNotifyInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kOldValueFieldNumber = 2,
-    kValueFieldNumber = 3,
+    kAKeyFieldNumber = 1,
+    kAOldValueFieldNumber = 2,
+    kAValueFieldNumber = 3,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes oldValue = 2;
-  bool has_oldvalue() const;
+  // required bytes a_oldValue = 2;
+  bool has_a_oldvalue() const;
   private:
-  bool _internal_has_oldvalue() const;
+  bool _internal_has_a_oldvalue() const;
   public:
-  void clear_oldvalue();
-  const std::string& oldvalue() const;
+  void clear_a_oldvalue();
+  const std::string& a_oldvalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_oldvalue(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_oldvalue();
-  PROTOBUF_NODISCARD std::string* release_oldvalue();
-  void set_allocated_oldvalue(std::string* oldvalue);
+  void set_a_oldvalue(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_oldvalue();
+  PROTOBUF_NODISCARD std::string* release_a_oldvalue();
+  void set_allocated_a_oldvalue(std::string* a_oldvalue);
   private:
-  const std::string& _internal_oldvalue() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_oldvalue(const std::string& value);
-  std::string* _internal_mutable_oldvalue();
+  const std::string& _internal_a_oldvalue() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_oldvalue(const std::string& value);
+  std::string* _internal_mutable_a_oldvalue();
   public:
 
-  // required bytes value = 3;
-  bool has_value() const;
+  // required bytes a_value = 3;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const std::string& value() const;
+  void clear_a_value();
+  const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_value(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_value();
-  PROTOBUF_NODISCARD std::string* release_value();
-  void set_allocated_value(std::string* value);
+  void set_a_value(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_value();
+  PROTOBUF_NODISCARD std::string* release_a_value();
+  void set_allocated_a_value(std::string* a_value);
   private:
-  const std::string& _internal_value() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_value(const std::string& value);
-  std::string* _internal_mutable_value();
+  const std::string& _internal_a_value() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_value(const std::string& value);
+  std::string* _internal_mutable_a_value();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
@@ -913,9 +913,9 @@ class LSSetItemAndNotifyInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr oldvalue_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldvalue_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1032,43 +1032,43 @@ class LSRemoveItemAndNotifyInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kOldValueFieldNumber = 2,
+    kAKeyFieldNumber = 1,
+    kAOldValueFieldNumber = 2,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes oldValue = 2;
-  bool has_oldvalue() const;
+  // required bytes a_oldValue = 2;
+  bool has_a_oldvalue() const;
   private:
-  bool _internal_has_oldvalue() const;
+  bool _internal_has_a_oldvalue() const;
   public:
-  void clear_oldvalue();
-  const std::string& oldvalue() const;
+  void clear_a_oldvalue();
+  const std::string& a_oldvalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_oldvalue(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_oldvalue();
-  PROTOBUF_NODISCARD std::string* release_oldvalue();
-  void set_allocated_oldvalue(std::string* oldvalue);
+  void set_a_oldvalue(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_oldvalue();
+  PROTOBUF_NODISCARD std::string* release_a_oldvalue();
+  void set_allocated_a_oldvalue(std::string* a_oldvalue);
   private:
-  const std::string& _internal_oldvalue() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_oldvalue(const std::string& value);
-  std::string* _internal_mutable_oldvalue();
+  const std::string& _internal_a_oldvalue() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_oldvalue(const std::string& value);
+  std::string* _internal_mutable_a_oldvalue();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
@@ -1084,8 +1084,8 @@ class LSRemoveItemAndNotifyInfo final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr oldvalue_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldvalue_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1134,9 +1134,9 @@ class LSWriteAndNotifyInfo final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVLSSetItemAndNotifyInfo = 1,
-    kMVLSRemoveItemAndNotifyInfo = 2,
-    kMVLSClearInfo = 3,
+    kAMVLSSetItemAndNotifyInfo = 1,
+    kAMVLSRemoveItemAndNotifyInfo = 2,
+    kAMVLSClearInfo = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1209,72 +1209,72 @@ class LSWriteAndNotifyInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVLSSetItemAndNotifyInfoFieldNumber = 1,
-    kMVLSRemoveItemAndNotifyInfoFieldNumber = 2,
-    kMVLSClearInfoFieldNumber = 3,
+    kAMVLSSetItemAndNotifyInfoFieldNumber = 1,
+    kAMVLSRemoveItemAndNotifyInfoFieldNumber = 2,
+    kAMVLSClearInfoFieldNumber = 3,
   };
-  // .protobuf.mozilla.dom.LSSetItemAndNotifyInfo mVLSSetItemAndNotifyInfo = 1;
-  bool has_mvlssetitemandnotifyinfo() const;
+  // .protobuf.mozilla.dom.LSSetItemAndNotifyInfo a_mVLSSetItemAndNotifyInfo = 1;
+  bool has_a_mvlssetitemandnotifyinfo() const;
   private:
-  bool _internal_has_mvlssetitemandnotifyinfo() const;
+  bool _internal_has_a_mvlssetitemandnotifyinfo() const;
   public:
-  void clear_mvlssetitemandnotifyinfo();
-  const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& mvlssetitemandnotifyinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* release_mvlssetitemandnotifyinfo();
-  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* mutable_mvlssetitemandnotifyinfo();
-  void set_allocated_mvlssetitemandnotifyinfo(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* mvlssetitemandnotifyinfo);
+  void clear_a_mvlssetitemandnotifyinfo();
+  const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& a_mvlssetitemandnotifyinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* release_a_mvlssetitemandnotifyinfo();
+  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* mutable_a_mvlssetitemandnotifyinfo();
+  void set_allocated_a_mvlssetitemandnotifyinfo(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* a_mvlssetitemandnotifyinfo);
   private:
-  const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& _internal_mvlssetitemandnotifyinfo() const;
-  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* _internal_mutable_mvlssetitemandnotifyinfo();
+  const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& _internal_a_mvlssetitemandnotifyinfo() const;
+  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* _internal_mutable_a_mvlssetitemandnotifyinfo();
   public:
-  void unsafe_arena_set_allocated_mvlssetitemandnotifyinfo(
-      ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* mvlssetitemandnotifyinfo);
-  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* unsafe_arena_release_mvlssetitemandnotifyinfo();
+  void unsafe_arena_set_allocated_a_mvlssetitemandnotifyinfo(
+      ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* a_mvlssetitemandnotifyinfo);
+  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* unsafe_arena_release_a_mvlssetitemandnotifyinfo();
 
-  // .protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo mVLSRemoveItemAndNotifyInfo = 2;
-  bool has_mvlsremoveitemandnotifyinfo() const;
+  // .protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo a_mVLSRemoveItemAndNotifyInfo = 2;
+  bool has_a_mvlsremoveitemandnotifyinfo() const;
   private:
-  bool _internal_has_mvlsremoveitemandnotifyinfo() const;
+  bool _internal_has_a_mvlsremoveitemandnotifyinfo() const;
   public:
-  void clear_mvlsremoveitemandnotifyinfo();
-  const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& mvlsremoveitemandnotifyinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* release_mvlsremoveitemandnotifyinfo();
-  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* mutable_mvlsremoveitemandnotifyinfo();
-  void set_allocated_mvlsremoveitemandnotifyinfo(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* mvlsremoveitemandnotifyinfo);
+  void clear_a_mvlsremoveitemandnotifyinfo();
+  const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& a_mvlsremoveitemandnotifyinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* release_a_mvlsremoveitemandnotifyinfo();
+  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* mutable_a_mvlsremoveitemandnotifyinfo();
+  void set_allocated_a_mvlsremoveitemandnotifyinfo(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* a_mvlsremoveitemandnotifyinfo);
   private:
-  const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& _internal_mvlsremoveitemandnotifyinfo() const;
-  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* _internal_mutable_mvlsremoveitemandnotifyinfo();
+  const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& _internal_a_mvlsremoveitemandnotifyinfo() const;
+  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* _internal_mutable_a_mvlsremoveitemandnotifyinfo();
   public:
-  void unsafe_arena_set_allocated_mvlsremoveitemandnotifyinfo(
-      ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* mvlsremoveitemandnotifyinfo);
-  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* unsafe_arena_release_mvlsremoveitemandnotifyinfo();
+  void unsafe_arena_set_allocated_a_mvlsremoveitemandnotifyinfo(
+      ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* a_mvlsremoveitemandnotifyinfo);
+  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* unsafe_arena_release_a_mvlsremoveitemandnotifyinfo();
 
-  // .protobuf.mozilla.dom.LSClearInfo mVLSClearInfo = 3;
-  bool has_mvlsclearinfo() const;
+  // .protobuf.mozilla.dom.LSClearInfo a_mVLSClearInfo = 3;
+  bool has_a_mvlsclearinfo() const;
   private:
-  bool _internal_has_mvlsclearinfo() const;
+  bool _internal_has_a_mvlsclearinfo() const;
   public:
-  void clear_mvlsclearinfo();
-  const ::protobuf::mozilla::dom::LSClearInfo& mvlsclearinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSClearInfo* release_mvlsclearinfo();
-  ::protobuf::mozilla::dom::LSClearInfo* mutable_mvlsclearinfo();
-  void set_allocated_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo);
+  void clear_a_mvlsclearinfo();
+  const ::protobuf::mozilla::dom::LSClearInfo& a_mvlsclearinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::LSClearInfo* release_a_mvlsclearinfo();
+  ::protobuf::mozilla::dom::LSClearInfo* mutable_a_mvlsclearinfo();
+  void set_allocated_a_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo);
   private:
-  const ::protobuf::mozilla::dom::LSClearInfo& _internal_mvlsclearinfo() const;
-  ::protobuf::mozilla::dom::LSClearInfo* _internal_mutable_mvlsclearinfo();
+  const ::protobuf::mozilla::dom::LSClearInfo& _internal_a_mvlsclearinfo() const;
+  ::protobuf::mozilla::dom::LSClearInfo* _internal_mutable_a_mvlsclearinfo();
   public:
-  void unsafe_arena_set_allocated_mvlsclearinfo(
-      ::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo);
-  ::protobuf::mozilla::dom::LSClearInfo* unsafe_arena_release_mvlsclearinfo();
+  void unsafe_arena_set_allocated_a_mvlsclearinfo(
+      ::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo);
+  ::protobuf::mozilla::dom::LSClearInfo* unsafe_arena_release_a_mvlsclearinfo();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.LSWriteAndNotifyInfo)
  private:
   class _Internal;
-  void set_has_mvlssetitemandnotifyinfo();
-  void set_has_mvlsremoveitemandnotifyinfo();
-  void set_has_mvlsclearinfo();
+  void set_has_a_mvlssetitemandnotifyinfo();
+  void set_has_a_mvlsremoveitemandnotifyinfo();
+  void set_has_a_mvlsclearinfo();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1286,9 +1286,9 @@ class LSWriteAndNotifyInfo final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* mvlssetitemandnotifyinfo_;
-      ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* mvlsremoveitemandnotifyinfo_;
-      ::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo_;
+      ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* a_mvlssetitemandnotifyinfo_;
+      ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* a_mvlsremoveitemandnotifyinfo_;
+      ::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1308,212 +1308,212 @@ class LSWriteAndNotifyInfo final :
 #endif  // __GNUC__
 // LSSetItemInfo
 
-// required bytes key = 1;
-inline bool LSSetItemInfo::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool LSSetItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSSetItemInfo::has_key() const {
-  return _internal_has_key();
+inline bool LSSetItemInfo::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void LSSetItemInfo::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void LSSetItemInfo::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& LSSetItemInfo::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.key)
-  return _internal_key();
+inline const std::string& LSSetItemInfo::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSSetItemInfo::set_key(ArgT0&& arg0, ArgT... args) {
+void LSSetItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.a_key)
 }
-inline std::string* LSSetItemInfo::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemInfo.key)
+inline std::string* LSSetItemInfo::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemInfo.a_key)
   return _s;
 }
-inline const std::string& LSSetItemInfo::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& LSSetItemInfo::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void LSSetItemInfo::_internal_set_key(const std::string& value) {
+inline void LSSetItemInfo::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSetItemInfo::_internal_mutable_key() {
+inline std::string* LSSetItemInfo::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSSetItemInfo::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.key)
-  if (!_internal_has_key()) {
+inline std::string* LSSetItemInfo::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSSetItemInfo::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void LSSetItemInfo::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemInfo.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemInfo.a_key)
 }
 
-// required bytes value = 2;
-inline bool LSSetItemInfo::_internal_has_value() const {
+// required bytes a_value = 2;
+inline bool LSSetItemInfo::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LSSetItemInfo::has_value() const {
-  return _internal_has_value();
+inline bool LSSetItemInfo::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void LSSetItemInfo::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void LSSetItemInfo::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& LSSetItemInfo::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.value)
-  return _internal_value();
+inline const std::string& LSSetItemInfo::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSSetItemInfo::set_value(ArgT0&& arg0, ArgT... args) {
+void LSSetItemInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.a_value)
 }
-inline std::string* LSSetItemInfo::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemInfo.value)
+inline std::string* LSSetItemInfo::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemInfo.a_value)
   return _s;
 }
-inline const std::string& LSSetItemInfo::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& LSSetItemInfo::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void LSSetItemInfo::_internal_set_value(const std::string& value) {
+inline void LSSetItemInfo::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSetItemInfo::_internal_mutable_value() {
+inline std::string* LSSetItemInfo::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSSetItemInfo::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.value)
-  if (!_internal_has_value()) {
+inline std::string* LSSetItemInfo::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSSetItemInfo::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void LSSetItemInfo::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemInfo.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemInfo.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // LSRemoveItemInfo
 
-// required bytes key = 1;
-inline bool LSRemoveItemInfo::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool LSRemoveItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSRemoveItemInfo::has_key() const {
-  return _internal_has_key();
+inline bool LSRemoveItemInfo::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void LSRemoveItemInfo::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void LSRemoveItemInfo::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& LSRemoveItemInfo::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemInfo.key)
-  return _internal_key();
+inline const std::string& LSRemoveItemInfo::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSRemoveItemInfo::set_key(ArgT0&& arg0, ArgT... args) {
+void LSRemoveItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemInfo.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
 }
-inline std::string* LSRemoveItemInfo::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRemoveItemInfo.key)
+inline std::string* LSRemoveItemInfo::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
   return _s;
 }
-inline const std::string& LSRemoveItemInfo::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& LSRemoveItemInfo::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void LSRemoveItemInfo::_internal_set_key(const std::string& value) {
+inline void LSRemoveItemInfo::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSRemoveItemInfo::_internal_mutable_key() {
+inline std::string* LSRemoveItemInfo::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSRemoveItemInfo::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemInfo.key)
-  if (!_internal_has_key()) {
+inline std::string* LSRemoveItemInfo::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSRemoveItemInfo::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void LSRemoveItemInfo::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemInfo.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
 }
 
 // -------------------------------------------------------------------
@@ -1524,225 +1524,225 @@ inline void LSRemoveItemInfo::set_allocated_key(std::string* key) {
 
 // LSWriteInfo
 
-// .protobuf.mozilla.dom.LSSetItemInfo mVLSSetItemInfo = 1;
-inline bool LSWriteInfo::_internal_has_mvlssetiteminfo() const {
-  return content_case() == kMVLSSetItemInfo;
+// .protobuf.mozilla.dom.LSSetItemInfo a_mVLSSetItemInfo = 1;
+inline bool LSWriteInfo::_internal_has_a_mvlssetiteminfo() const {
+  return content_case() == kAMVLSSetItemInfo;
 }
-inline bool LSWriteInfo::has_mvlssetiteminfo() const {
-  return _internal_has_mvlssetiteminfo();
+inline bool LSWriteInfo::has_a_mvlssetiteminfo() const {
+  return _internal_has_a_mvlssetiteminfo();
 }
-inline void LSWriteInfo::set_has_mvlssetiteminfo() {
-  _impl_._oneof_case_[0] = kMVLSSetItemInfo;
+inline void LSWriteInfo::set_has_a_mvlssetiteminfo() {
+  _impl_._oneof_case_[0] = kAMVLSSetItemInfo;
 }
-inline void LSWriteInfo::clear_mvlssetiteminfo() {
-  if (_internal_has_mvlssetiteminfo()) {
+inline void LSWriteInfo::clear_a_mvlssetiteminfo() {
+  if (_internal_has_a_mvlssetiteminfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlssetiteminfo_;
+      delete _impl_.content_.a_mvlssetiteminfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::release_mvlssetiteminfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteInfo.mVLSSetItemInfo)
-  if (_internal_has_mvlssetiteminfo()) {
+inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::release_a_mvlssetiteminfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteInfo.a_mVLSSetItemInfo)
+  if (_internal_has_a_mvlssetiteminfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSetItemInfo* temp = _impl_.content_.mvlssetiteminfo_;
+    ::protobuf::mozilla::dom::LSSetItemInfo* temp = _impl_.content_.a_mvlssetiteminfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlssetiteminfo_ = nullptr;
+    _impl_.content_.a_mvlssetiteminfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSSetItemInfo& LSWriteInfo::_internal_mvlssetiteminfo() const {
-  return _internal_has_mvlssetiteminfo()
-      ? *_impl_.content_.mvlssetiteminfo_
+inline const ::protobuf::mozilla::dom::LSSetItemInfo& LSWriteInfo::_internal_a_mvlssetiteminfo() const {
+  return _internal_has_a_mvlssetiteminfo()
+      ? *_impl_.content_.a_mvlssetiteminfo_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSSetItemInfo&>(::protobuf::mozilla::dom::_LSSetItemInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSSetItemInfo& LSWriteInfo::mvlssetiteminfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteInfo.mVLSSetItemInfo)
-  return _internal_mvlssetiteminfo();
+inline const ::protobuf::mozilla::dom::LSSetItemInfo& LSWriteInfo::a_mvlssetiteminfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteInfo.a_mVLSSetItemInfo)
+  return _internal_a_mvlssetiteminfo();
 }
-inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::unsafe_arena_release_mvlssetiteminfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteInfo.mVLSSetItemInfo)
-  if (_internal_has_mvlssetiteminfo()) {
+inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::unsafe_arena_release_a_mvlssetiteminfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteInfo.a_mVLSSetItemInfo)
+  if (_internal_has_a_mvlssetiteminfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSetItemInfo* temp = _impl_.content_.mvlssetiteminfo_;
-    _impl_.content_.mvlssetiteminfo_ = nullptr;
+    ::protobuf::mozilla::dom::LSSetItemInfo* temp = _impl_.content_.a_mvlssetiteminfo_;
+    _impl_.content_.a_mvlssetiteminfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSWriteInfo::unsafe_arena_set_allocated_mvlssetiteminfo(::protobuf::mozilla::dom::LSSetItemInfo* mvlssetiteminfo) {
+inline void LSWriteInfo::unsafe_arena_set_allocated_a_mvlssetiteminfo(::protobuf::mozilla::dom::LSSetItemInfo* a_mvlssetiteminfo) {
   clear_content();
-  if (mvlssetiteminfo) {
-    set_has_mvlssetiteminfo();
-    _impl_.content_.mvlssetiteminfo_ = mvlssetiteminfo;
+  if (a_mvlssetiteminfo) {
+    set_has_a_mvlssetiteminfo();
+    _impl_.content_.a_mvlssetiteminfo_ = a_mvlssetiteminfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteInfo.mVLSSetItemInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteInfo.a_mVLSSetItemInfo)
 }
-inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::_internal_mutable_mvlssetiteminfo() {
-  if (!_internal_has_mvlssetiteminfo()) {
+inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::_internal_mutable_a_mvlssetiteminfo() {
+  if (!_internal_has_a_mvlssetiteminfo()) {
     clear_content();
-    set_has_mvlssetiteminfo();
-    _impl_.content_.mvlssetiteminfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSetItemInfo >(GetArenaForAllocation());
+    set_has_a_mvlssetiteminfo();
+    _impl_.content_.a_mvlssetiteminfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSetItemInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlssetiteminfo_;
+  return _impl_.content_.a_mvlssetiteminfo_;
 }
-inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::mutable_mvlssetiteminfo() {
-  ::protobuf::mozilla::dom::LSSetItemInfo* _msg = _internal_mutable_mvlssetiteminfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteInfo.mVLSSetItemInfo)
+inline ::protobuf::mozilla::dom::LSSetItemInfo* LSWriteInfo::mutable_a_mvlssetiteminfo() {
+  ::protobuf::mozilla::dom::LSSetItemInfo* _msg = _internal_mutable_a_mvlssetiteminfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteInfo.a_mVLSSetItemInfo)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSRemoveItemInfo mVLSRemoveItemInfo = 2;
-inline bool LSWriteInfo::_internal_has_mvlsremoveiteminfo() const {
-  return content_case() == kMVLSRemoveItemInfo;
+// .protobuf.mozilla.dom.LSRemoveItemInfo a_mVLSRemoveItemInfo = 2;
+inline bool LSWriteInfo::_internal_has_a_mvlsremoveiteminfo() const {
+  return content_case() == kAMVLSRemoveItemInfo;
 }
-inline bool LSWriteInfo::has_mvlsremoveiteminfo() const {
-  return _internal_has_mvlsremoveiteminfo();
+inline bool LSWriteInfo::has_a_mvlsremoveiteminfo() const {
+  return _internal_has_a_mvlsremoveiteminfo();
 }
-inline void LSWriteInfo::set_has_mvlsremoveiteminfo() {
-  _impl_._oneof_case_[0] = kMVLSRemoveItemInfo;
+inline void LSWriteInfo::set_has_a_mvlsremoveiteminfo() {
+  _impl_._oneof_case_[0] = kAMVLSRemoveItemInfo;
 }
-inline void LSWriteInfo::clear_mvlsremoveiteminfo() {
-  if (_internal_has_mvlsremoveiteminfo()) {
+inline void LSWriteInfo::clear_a_mvlsremoveiteminfo() {
+  if (_internal_has_a_mvlsremoveiteminfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsremoveiteminfo_;
+      delete _impl_.content_.a_mvlsremoveiteminfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::release_mvlsremoveiteminfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteInfo.mVLSRemoveItemInfo)
-  if (_internal_has_mvlsremoveiteminfo()) {
+inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::release_a_mvlsremoveiteminfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteInfo.a_mVLSRemoveItemInfo)
+  if (_internal_has_a_mvlsremoveiteminfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRemoveItemInfo* temp = _impl_.content_.mvlsremoveiteminfo_;
+    ::protobuf::mozilla::dom::LSRemoveItemInfo* temp = _impl_.content_.a_mvlsremoveiteminfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsremoveiteminfo_ = nullptr;
+    _impl_.content_.a_mvlsremoveiteminfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSRemoveItemInfo& LSWriteInfo::_internal_mvlsremoveiteminfo() const {
-  return _internal_has_mvlsremoveiteminfo()
-      ? *_impl_.content_.mvlsremoveiteminfo_
+inline const ::protobuf::mozilla::dom::LSRemoveItemInfo& LSWriteInfo::_internal_a_mvlsremoveiteminfo() const {
+  return _internal_has_a_mvlsremoveiteminfo()
+      ? *_impl_.content_.a_mvlsremoveiteminfo_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSRemoveItemInfo&>(::protobuf::mozilla::dom::_LSRemoveItemInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSRemoveItemInfo& LSWriteInfo::mvlsremoveiteminfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteInfo.mVLSRemoveItemInfo)
-  return _internal_mvlsremoveiteminfo();
+inline const ::protobuf::mozilla::dom::LSRemoveItemInfo& LSWriteInfo::a_mvlsremoveiteminfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteInfo.a_mVLSRemoveItemInfo)
+  return _internal_a_mvlsremoveiteminfo();
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::unsafe_arena_release_mvlsremoveiteminfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteInfo.mVLSRemoveItemInfo)
-  if (_internal_has_mvlsremoveiteminfo()) {
+inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::unsafe_arena_release_a_mvlsremoveiteminfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteInfo.a_mVLSRemoveItemInfo)
+  if (_internal_has_a_mvlsremoveiteminfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRemoveItemInfo* temp = _impl_.content_.mvlsremoveiteminfo_;
-    _impl_.content_.mvlsremoveiteminfo_ = nullptr;
+    ::protobuf::mozilla::dom::LSRemoveItemInfo* temp = _impl_.content_.a_mvlsremoveiteminfo_;
+    _impl_.content_.a_mvlsremoveiteminfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSWriteInfo::unsafe_arena_set_allocated_mvlsremoveiteminfo(::protobuf::mozilla::dom::LSRemoveItemInfo* mvlsremoveiteminfo) {
+inline void LSWriteInfo::unsafe_arena_set_allocated_a_mvlsremoveiteminfo(::protobuf::mozilla::dom::LSRemoveItemInfo* a_mvlsremoveiteminfo) {
   clear_content();
-  if (mvlsremoveiteminfo) {
-    set_has_mvlsremoveiteminfo();
-    _impl_.content_.mvlsremoveiteminfo_ = mvlsremoveiteminfo;
+  if (a_mvlsremoveiteminfo) {
+    set_has_a_mvlsremoveiteminfo();
+    _impl_.content_.a_mvlsremoveiteminfo_ = a_mvlsremoveiteminfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteInfo.mVLSRemoveItemInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteInfo.a_mVLSRemoveItemInfo)
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::_internal_mutable_mvlsremoveiteminfo() {
-  if (!_internal_has_mvlsremoveiteminfo()) {
+inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::_internal_mutable_a_mvlsremoveiteminfo() {
+  if (!_internal_has_a_mvlsremoveiteminfo()) {
     clear_content();
-    set_has_mvlsremoveiteminfo();
-    _impl_.content_.mvlsremoveiteminfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRemoveItemInfo >(GetArenaForAllocation());
+    set_has_a_mvlsremoveiteminfo();
+    _impl_.content_.a_mvlsremoveiteminfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRemoveItemInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsremoveiteminfo_;
+  return _impl_.content_.a_mvlsremoveiteminfo_;
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::mutable_mvlsremoveiteminfo() {
-  ::protobuf::mozilla::dom::LSRemoveItemInfo* _msg = _internal_mutable_mvlsremoveiteminfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteInfo.mVLSRemoveItemInfo)
+inline ::protobuf::mozilla::dom::LSRemoveItemInfo* LSWriteInfo::mutable_a_mvlsremoveiteminfo() {
+  ::protobuf::mozilla::dom::LSRemoveItemInfo* _msg = _internal_mutable_a_mvlsremoveiteminfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteInfo.a_mVLSRemoveItemInfo)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSClearInfo mVLSClearInfo = 3;
-inline bool LSWriteInfo::_internal_has_mvlsclearinfo() const {
-  return content_case() == kMVLSClearInfo;
+// .protobuf.mozilla.dom.LSClearInfo a_mVLSClearInfo = 3;
+inline bool LSWriteInfo::_internal_has_a_mvlsclearinfo() const {
+  return content_case() == kAMVLSClearInfo;
 }
-inline bool LSWriteInfo::has_mvlsclearinfo() const {
-  return _internal_has_mvlsclearinfo();
+inline bool LSWriteInfo::has_a_mvlsclearinfo() const {
+  return _internal_has_a_mvlsclearinfo();
 }
-inline void LSWriteInfo::set_has_mvlsclearinfo() {
-  _impl_._oneof_case_[0] = kMVLSClearInfo;
+inline void LSWriteInfo::set_has_a_mvlsclearinfo() {
+  _impl_._oneof_case_[0] = kAMVLSClearInfo;
 }
-inline void LSWriteInfo::clear_mvlsclearinfo() {
-  if (_internal_has_mvlsclearinfo()) {
+inline void LSWriteInfo::clear_a_mvlsclearinfo() {
+  if (_internal_has_a_mvlsclearinfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsclearinfo_;
+      delete _impl_.content_.a_mvlsclearinfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::release_mvlsclearinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteInfo.mVLSClearInfo)
-  if (_internal_has_mvlsclearinfo()) {
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::release_a_mvlsclearinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteInfo.a_mVLSClearInfo)
+  if (_internal_has_a_mvlsclearinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.mvlsclearinfo_;
+    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.a_mvlsclearinfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsclearinfo_ = nullptr;
+    _impl_.content_.a_mvlsclearinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteInfo::_internal_mvlsclearinfo() const {
-  return _internal_has_mvlsclearinfo()
-      ? *_impl_.content_.mvlsclearinfo_
+inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteInfo::_internal_a_mvlsclearinfo() const {
+  return _internal_has_a_mvlsclearinfo()
+      ? *_impl_.content_.a_mvlsclearinfo_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSClearInfo&>(::protobuf::mozilla::dom::_LSClearInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteInfo::mvlsclearinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteInfo.mVLSClearInfo)
-  return _internal_mvlsclearinfo();
+inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteInfo::a_mvlsclearinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteInfo.a_mVLSClearInfo)
+  return _internal_a_mvlsclearinfo();
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::unsafe_arena_release_mvlsclearinfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteInfo.mVLSClearInfo)
-  if (_internal_has_mvlsclearinfo()) {
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::unsafe_arena_release_a_mvlsclearinfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteInfo.a_mVLSClearInfo)
+  if (_internal_has_a_mvlsclearinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.mvlsclearinfo_;
-    _impl_.content_.mvlsclearinfo_ = nullptr;
+    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.a_mvlsclearinfo_;
+    _impl_.content_.a_mvlsclearinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSWriteInfo::unsafe_arena_set_allocated_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo) {
+inline void LSWriteInfo::unsafe_arena_set_allocated_a_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo) {
   clear_content();
-  if (mvlsclearinfo) {
-    set_has_mvlsclearinfo();
-    _impl_.content_.mvlsclearinfo_ = mvlsclearinfo;
+  if (a_mvlsclearinfo) {
+    set_has_a_mvlsclearinfo();
+    _impl_.content_.a_mvlsclearinfo_ = a_mvlsclearinfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteInfo.mVLSClearInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteInfo.a_mVLSClearInfo)
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::_internal_mutable_mvlsclearinfo() {
-  if (!_internal_has_mvlsclearinfo()) {
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::_internal_mutable_a_mvlsclearinfo() {
+  if (!_internal_has_a_mvlsclearinfo()) {
     clear_content();
-    set_has_mvlsclearinfo();
-    _impl_.content_.mvlsclearinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSClearInfo >(GetArenaForAllocation());
+    set_has_a_mvlsclearinfo();
+    _impl_.content_.a_mvlsclearinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSClearInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsclearinfo_;
+  return _impl_.content_.a_mvlsclearinfo_;
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::mutable_mvlsclearinfo() {
-  ::protobuf::mozilla::dom::LSClearInfo* _msg = _internal_mutable_mvlsclearinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteInfo.mVLSClearInfo)
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteInfo::mutable_a_mvlsclearinfo() {
+  ::protobuf::mozilla::dom::LSClearInfo* _msg = _internal_mutable_a_mvlsclearinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteInfo.a_mVLSClearInfo)
   return _msg;
 }
 
@@ -1759,573 +1759,573 @@ inline LSWriteInfo::ContentCase LSWriteInfo::content_case() const {
 
 // LSSetItemAndNotifyInfo
 
-// required bytes key = 1;
-inline bool LSSetItemAndNotifyInfo::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool LSSetItemAndNotifyInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSSetItemAndNotifyInfo::has_key() const {
-  return _internal_has_key();
+inline bool LSSetItemAndNotifyInfo::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void LSSetItemAndNotifyInfo::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void LSSetItemAndNotifyInfo::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& LSSetItemAndNotifyInfo::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.key)
-  return _internal_key();
+inline const std::string& LSSetItemAndNotifyInfo::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSSetItemAndNotifyInfo::set_key(ArgT0&& arg0, ArgT... args) {
+void LSSetItemAndNotifyInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
 }
-inline std::string* LSSetItemAndNotifyInfo::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.key)
+inline std::string* LSSetItemAndNotifyInfo::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
   return _s;
 }
-inline const std::string& LSSetItemAndNotifyInfo::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& LSSetItemAndNotifyInfo::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void LSSetItemAndNotifyInfo::_internal_set_key(const std::string& value) {
+inline void LSSetItemAndNotifyInfo::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_key() {
+inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSSetItemAndNotifyInfo::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.key)
-  if (!_internal_has_key()) {
+inline std::string* LSSetItemAndNotifyInfo::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSSetItemAndNotifyInfo::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void LSSetItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
 }
 
-// required bytes oldValue = 2;
-inline bool LSSetItemAndNotifyInfo::_internal_has_oldvalue() const {
+// required bytes a_oldValue = 2;
+inline bool LSSetItemAndNotifyInfo::_internal_has_a_oldvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LSSetItemAndNotifyInfo::has_oldvalue() const {
-  return _internal_has_oldvalue();
+inline bool LSSetItemAndNotifyInfo::has_a_oldvalue() const {
+  return _internal_has_a_oldvalue();
 }
-inline void LSSetItemAndNotifyInfo::clear_oldvalue() {
-  _impl_.oldvalue_.ClearToEmpty();
+inline void LSSetItemAndNotifyInfo::clear_a_oldvalue() {
+  _impl_.a_oldvalue_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& LSSetItemAndNotifyInfo::oldvalue() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.oldValue)
-  return _internal_oldvalue();
+inline const std::string& LSSetItemAndNotifyInfo::a_oldvalue() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
+  return _internal_a_oldvalue();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSSetItemAndNotifyInfo::set_oldvalue(ArgT0&& arg0, ArgT... args) {
+void LSSetItemAndNotifyInfo::set_a_oldvalue(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.oldValue)
+ _impl_.a_oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
 }
-inline std::string* LSSetItemAndNotifyInfo::mutable_oldvalue() {
-  std::string* _s = _internal_mutable_oldvalue();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.oldValue)
+inline std::string* LSSetItemAndNotifyInfo::mutable_a_oldvalue() {
+  std::string* _s = _internal_mutable_a_oldvalue();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
   return _s;
 }
-inline const std::string& LSSetItemAndNotifyInfo::_internal_oldvalue() const {
-  return _impl_.oldvalue_.Get();
+inline const std::string& LSSetItemAndNotifyInfo::_internal_a_oldvalue() const {
+  return _impl_.a_oldvalue_.Get();
 }
-inline void LSSetItemAndNotifyInfo::_internal_set_oldvalue(const std::string& value) {
+inline void LSSetItemAndNotifyInfo::_internal_set_a_oldvalue(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.oldvalue_.Set(value, GetArenaForAllocation());
+  _impl_.a_oldvalue_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_oldvalue() {
+inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_oldvalue() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.oldvalue_.Mutable(GetArenaForAllocation());
+  return _impl_.a_oldvalue_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSSetItemAndNotifyInfo::release_oldvalue() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.oldValue)
-  if (!_internal_has_oldvalue()) {
+inline std::string* LSSetItemAndNotifyInfo::release_a_oldvalue() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
+  if (!_internal_has_a_oldvalue()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.oldvalue_.Release();
+  auto* p = _impl_.a_oldvalue_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oldvalue_.IsDefault()) {
-    _impl_.oldvalue_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oldvalue_.IsDefault()) {
+    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSSetItemAndNotifyInfo::set_allocated_oldvalue(std::string* oldvalue) {
-  if (oldvalue != nullptr) {
+inline void LSSetItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldvalue) {
+  if (a_oldvalue != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.oldvalue_.SetAllocated(oldvalue, GetArenaForAllocation());
+  _impl_.a_oldvalue_.SetAllocated(a_oldvalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oldvalue_.IsDefault()) {
-    _impl_.oldvalue_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oldvalue_.IsDefault()) {
+    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.oldValue)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
 }
 
-// required bytes value = 3;
-inline bool LSSetItemAndNotifyInfo::_internal_has_value() const {
+// required bytes a_value = 3;
+inline bool LSSetItemAndNotifyInfo::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool LSSetItemAndNotifyInfo::has_value() const {
-  return _internal_has_value();
+inline bool LSSetItemAndNotifyInfo::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void LSSetItemAndNotifyInfo::clear_value() {
-  _impl_.value_.ClearToEmpty();
+inline void LSSetItemAndNotifyInfo::clear_a_value() {
+  _impl_.a_value_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& LSSetItemAndNotifyInfo::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.value)
-  return _internal_value();
+inline const std::string& LSSetItemAndNotifyInfo::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
+  return _internal_a_value();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSSetItemAndNotifyInfo::set_value(ArgT0&& arg0, ArgT... args) {
+void LSSetItemAndNotifyInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.value)
+ _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
 }
-inline std::string* LSSetItemAndNotifyInfo::mutable_value() {
-  std::string* _s = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.value)
+inline std::string* LSSetItemAndNotifyInfo::mutable_a_value() {
+  std::string* _s = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
   return _s;
 }
-inline const std::string& LSSetItemAndNotifyInfo::_internal_value() const {
-  return _impl_.value_.Get();
+inline const std::string& LSSetItemAndNotifyInfo::_internal_a_value() const {
+  return _impl_.a_value_.Get();
 }
-inline void LSSetItemAndNotifyInfo::_internal_set_value(const std::string& value) {
+inline void LSSetItemAndNotifyInfo::_internal_set_a_value(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.value_.Set(value, GetArenaForAllocation());
+  _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_value() {
+inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.value_.Mutable(GetArenaForAllocation());
+  return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSSetItemAndNotifyInfo::release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.value)
-  if (!_internal_has_value()) {
+inline std::string* LSSetItemAndNotifyInfo::release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
+  if (!_internal_has_a_value()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.value_.Release();
+  auto* p = _impl_.a_value_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSSetItemAndNotifyInfo::set_allocated_value(std::string* value) {
-  if (value != nullptr) {
+inline void LSSetItemAndNotifyInfo::set_allocated_a_value(std::string* a_value) {
+  if (a_value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.value_.SetAllocated(value, GetArenaForAllocation());
+  _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.value_.IsDefault()) {
-    _impl_.value_.Set("", GetArenaForAllocation());
+  if (_impl_.a_value_.IsDefault()) {
+    _impl_.a_value_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.value)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // LSRemoveItemAndNotifyInfo
 
-// required bytes key = 1;
-inline bool LSRemoveItemAndNotifyInfo::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool LSRemoveItemAndNotifyInfo::has_key() const {
-  return _internal_has_key();
+inline bool LSRemoveItemAndNotifyInfo::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void LSRemoveItemAndNotifyInfo::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void LSRemoveItemAndNotifyInfo::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& LSRemoveItemAndNotifyInfo::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.key)
-  return _internal_key();
+inline const std::string& LSRemoveItemAndNotifyInfo::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSRemoveItemAndNotifyInfo::set_key(ArgT0&& arg0, ArgT... args) {
+void LSRemoveItemAndNotifyInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
 }
-inline std::string* LSRemoveItemAndNotifyInfo::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.key)
+inline std::string* LSRemoveItemAndNotifyInfo::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
   return _s;
 }
-inline const std::string& LSRemoveItemAndNotifyInfo::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& LSRemoveItemAndNotifyInfo::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void LSRemoveItemAndNotifyInfo::_internal_set_key(const std::string& value) {
+inline void LSRemoveItemAndNotifyInfo::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_key() {
+inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSRemoveItemAndNotifyInfo::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.key)
-  if (!_internal_has_key()) {
+inline std::string* LSRemoveItemAndNotifyInfo::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSRemoveItemAndNotifyInfo::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void LSRemoveItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
 }
 
-// required bytes oldValue = 2;
-inline bool LSRemoveItemAndNotifyInfo::_internal_has_oldvalue() const {
+// required bytes a_oldValue = 2;
+inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_oldvalue() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool LSRemoveItemAndNotifyInfo::has_oldvalue() const {
-  return _internal_has_oldvalue();
+inline bool LSRemoveItemAndNotifyInfo::has_a_oldvalue() const {
+  return _internal_has_a_oldvalue();
 }
-inline void LSRemoveItemAndNotifyInfo::clear_oldvalue() {
-  _impl_.oldvalue_.ClearToEmpty();
+inline void LSRemoveItemAndNotifyInfo::clear_a_oldvalue() {
+  _impl_.a_oldvalue_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& LSRemoveItemAndNotifyInfo::oldvalue() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.oldValue)
-  return _internal_oldvalue();
+inline const std::string& LSRemoveItemAndNotifyInfo::a_oldvalue() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
+  return _internal_a_oldvalue();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void LSRemoveItemAndNotifyInfo::set_oldvalue(ArgT0&& arg0, ArgT... args) {
+void LSRemoveItemAndNotifyInfo::set_a_oldvalue(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.oldValue)
+ _impl_.a_oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
 }
-inline std::string* LSRemoveItemAndNotifyInfo::mutable_oldvalue() {
-  std::string* _s = _internal_mutable_oldvalue();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.oldValue)
+inline std::string* LSRemoveItemAndNotifyInfo::mutable_a_oldvalue() {
+  std::string* _s = _internal_mutable_a_oldvalue();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
   return _s;
 }
-inline const std::string& LSRemoveItemAndNotifyInfo::_internal_oldvalue() const {
-  return _impl_.oldvalue_.Get();
+inline const std::string& LSRemoveItemAndNotifyInfo::_internal_a_oldvalue() const {
+  return _impl_.a_oldvalue_.Get();
 }
-inline void LSRemoveItemAndNotifyInfo::_internal_set_oldvalue(const std::string& value) {
+inline void LSRemoveItemAndNotifyInfo::_internal_set_a_oldvalue(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.oldvalue_.Set(value, GetArenaForAllocation());
+  _impl_.a_oldvalue_.Set(value, GetArenaForAllocation());
 }
-inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_oldvalue() {
+inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_a_oldvalue() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.oldvalue_.Mutable(GetArenaForAllocation());
+  return _impl_.a_oldvalue_.Mutable(GetArenaForAllocation());
 }
-inline std::string* LSRemoveItemAndNotifyInfo::release_oldvalue() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.oldValue)
-  if (!_internal_has_oldvalue()) {
+inline std::string* LSRemoveItemAndNotifyInfo::release_a_oldvalue() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
+  if (!_internal_has_a_oldvalue()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.oldvalue_.Release();
+  auto* p = _impl_.a_oldvalue_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oldvalue_.IsDefault()) {
-    _impl_.oldvalue_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oldvalue_.IsDefault()) {
+    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void LSRemoveItemAndNotifyInfo::set_allocated_oldvalue(std::string* oldvalue) {
-  if (oldvalue != nullptr) {
+inline void LSRemoveItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldvalue) {
+  if (a_oldvalue != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.oldvalue_.SetAllocated(oldvalue, GetArenaForAllocation());
+  _impl_.a_oldvalue_.SetAllocated(a_oldvalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oldvalue_.IsDefault()) {
-    _impl_.oldvalue_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oldvalue_.IsDefault()) {
+    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.oldValue)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
 }
 
 // -------------------------------------------------------------------
 
 // LSWriteAndNotifyInfo
 
-// .protobuf.mozilla.dom.LSSetItemAndNotifyInfo mVLSSetItemAndNotifyInfo = 1;
-inline bool LSWriteAndNotifyInfo::_internal_has_mvlssetitemandnotifyinfo() const {
-  return content_case() == kMVLSSetItemAndNotifyInfo;
+// .protobuf.mozilla.dom.LSSetItemAndNotifyInfo a_mVLSSetItemAndNotifyInfo = 1;
+inline bool LSWriteAndNotifyInfo::_internal_has_a_mvlssetitemandnotifyinfo() const {
+  return content_case() == kAMVLSSetItemAndNotifyInfo;
 }
-inline bool LSWriteAndNotifyInfo::has_mvlssetitemandnotifyinfo() const {
-  return _internal_has_mvlssetitemandnotifyinfo();
+inline bool LSWriteAndNotifyInfo::has_a_mvlssetitemandnotifyinfo() const {
+  return _internal_has_a_mvlssetitemandnotifyinfo();
 }
-inline void LSWriteAndNotifyInfo::set_has_mvlssetitemandnotifyinfo() {
-  _impl_._oneof_case_[0] = kMVLSSetItemAndNotifyInfo;
+inline void LSWriteAndNotifyInfo::set_has_a_mvlssetitemandnotifyinfo() {
+  _impl_._oneof_case_[0] = kAMVLSSetItemAndNotifyInfo;
 }
-inline void LSWriteAndNotifyInfo::clear_mvlssetitemandnotifyinfo() {
-  if (_internal_has_mvlssetitemandnotifyinfo()) {
+inline void LSWriteAndNotifyInfo::clear_a_mvlssetitemandnotifyinfo() {
+  if (_internal_has_a_mvlssetitemandnotifyinfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlssetitemandnotifyinfo_;
+      delete _impl_.content_.a_mvlssetitemandnotifyinfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::release_mvlssetitemandnotifyinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSSetItemAndNotifyInfo)
-  if (_internal_has_mvlssetitemandnotifyinfo()) {
+inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::release_a_mvlssetitemandnotifyinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSSetItemAndNotifyInfo)
+  if (_internal_has_a_mvlssetitemandnotifyinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* temp = _impl_.content_.mvlssetitemandnotifyinfo_;
+    ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* temp = _impl_.content_.a_mvlssetitemandnotifyinfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlssetitemandnotifyinfo_ = nullptr;
+    _impl_.content_.a_mvlssetitemandnotifyinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& LSWriteAndNotifyInfo::_internal_mvlssetitemandnotifyinfo() const {
-  return _internal_has_mvlssetitemandnotifyinfo()
-      ? *_impl_.content_.mvlssetitemandnotifyinfo_
+inline const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& LSWriteAndNotifyInfo::_internal_a_mvlssetitemandnotifyinfo() const {
+  return _internal_has_a_mvlssetitemandnotifyinfo()
+      ? *_impl_.content_.a_mvlssetitemandnotifyinfo_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo&>(::protobuf::mozilla::dom::_LSSetItemAndNotifyInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& LSWriteAndNotifyInfo::mvlssetitemandnotifyinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSSetItemAndNotifyInfo)
-  return _internal_mvlssetitemandnotifyinfo();
+inline const ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo& LSWriteAndNotifyInfo::a_mvlssetitemandnotifyinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSSetItemAndNotifyInfo)
+  return _internal_a_mvlssetitemandnotifyinfo();
 }
-inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::unsafe_arena_release_mvlssetitemandnotifyinfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSSetItemAndNotifyInfo)
-  if (_internal_has_mvlssetitemandnotifyinfo()) {
+inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::unsafe_arena_release_a_mvlssetitemandnotifyinfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSSetItemAndNotifyInfo)
+  if (_internal_has_a_mvlssetitemandnotifyinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* temp = _impl_.content_.mvlssetitemandnotifyinfo_;
-    _impl_.content_.mvlssetitemandnotifyinfo_ = nullptr;
+    ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* temp = _impl_.content_.a_mvlssetitemandnotifyinfo_;
+    _impl_.content_.a_mvlssetitemandnotifyinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSWriteAndNotifyInfo::unsafe_arena_set_allocated_mvlssetitemandnotifyinfo(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* mvlssetitemandnotifyinfo) {
+inline void LSWriteAndNotifyInfo::unsafe_arena_set_allocated_a_mvlssetitemandnotifyinfo(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* a_mvlssetitemandnotifyinfo) {
   clear_content();
-  if (mvlssetitemandnotifyinfo) {
-    set_has_mvlssetitemandnotifyinfo();
-    _impl_.content_.mvlssetitemandnotifyinfo_ = mvlssetitemandnotifyinfo;
+  if (a_mvlssetitemandnotifyinfo) {
+    set_has_a_mvlssetitemandnotifyinfo();
+    _impl_.content_.a_mvlssetitemandnotifyinfo_ = a_mvlssetitemandnotifyinfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSSetItemAndNotifyInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSSetItemAndNotifyInfo)
 }
-inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::_internal_mutable_mvlssetitemandnotifyinfo() {
-  if (!_internal_has_mvlssetitemandnotifyinfo()) {
+inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::_internal_mutable_a_mvlssetitemandnotifyinfo() {
+  if (!_internal_has_a_mvlssetitemandnotifyinfo()) {
     clear_content();
-    set_has_mvlssetitemandnotifyinfo();
-    _impl_.content_.mvlssetitemandnotifyinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo >(GetArenaForAllocation());
+    set_has_a_mvlssetitemandnotifyinfo();
+    _impl_.content_.a_mvlssetitemandnotifyinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlssetitemandnotifyinfo_;
+  return _impl_.content_.a_mvlssetitemandnotifyinfo_;
 }
-inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::mutable_mvlssetitemandnotifyinfo() {
-  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* _msg = _internal_mutable_mvlssetitemandnotifyinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSSetItemAndNotifyInfo)
+inline ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* LSWriteAndNotifyInfo::mutable_a_mvlssetitemandnotifyinfo() {
+  ::protobuf::mozilla::dom::LSSetItemAndNotifyInfo* _msg = _internal_mutable_a_mvlssetitemandnotifyinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSSetItemAndNotifyInfo)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo mVLSRemoveItemAndNotifyInfo = 2;
-inline bool LSWriteAndNotifyInfo::_internal_has_mvlsremoveitemandnotifyinfo() const {
-  return content_case() == kMVLSRemoveItemAndNotifyInfo;
+// .protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo a_mVLSRemoveItemAndNotifyInfo = 2;
+inline bool LSWriteAndNotifyInfo::_internal_has_a_mvlsremoveitemandnotifyinfo() const {
+  return content_case() == kAMVLSRemoveItemAndNotifyInfo;
 }
-inline bool LSWriteAndNotifyInfo::has_mvlsremoveitemandnotifyinfo() const {
-  return _internal_has_mvlsremoveitemandnotifyinfo();
+inline bool LSWriteAndNotifyInfo::has_a_mvlsremoveitemandnotifyinfo() const {
+  return _internal_has_a_mvlsremoveitemandnotifyinfo();
 }
-inline void LSWriteAndNotifyInfo::set_has_mvlsremoveitemandnotifyinfo() {
-  _impl_._oneof_case_[0] = kMVLSRemoveItemAndNotifyInfo;
+inline void LSWriteAndNotifyInfo::set_has_a_mvlsremoveitemandnotifyinfo() {
+  _impl_._oneof_case_[0] = kAMVLSRemoveItemAndNotifyInfo;
 }
-inline void LSWriteAndNotifyInfo::clear_mvlsremoveitemandnotifyinfo() {
-  if (_internal_has_mvlsremoveitemandnotifyinfo()) {
+inline void LSWriteAndNotifyInfo::clear_a_mvlsremoveitemandnotifyinfo() {
+  if (_internal_has_a_mvlsremoveitemandnotifyinfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsremoveitemandnotifyinfo_;
+      delete _impl_.content_.a_mvlsremoveitemandnotifyinfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::release_mvlsremoveitemandnotifyinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSRemoveItemAndNotifyInfo)
-  if (_internal_has_mvlsremoveitemandnotifyinfo()) {
+inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::release_a_mvlsremoveitemandnotifyinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSRemoveItemAndNotifyInfo)
+  if (_internal_has_a_mvlsremoveitemandnotifyinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* temp = _impl_.content_.mvlsremoveitemandnotifyinfo_;
+    ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* temp = _impl_.content_.a_mvlsremoveitemandnotifyinfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsremoveitemandnotifyinfo_ = nullptr;
+    _impl_.content_.a_mvlsremoveitemandnotifyinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& LSWriteAndNotifyInfo::_internal_mvlsremoveitemandnotifyinfo() const {
-  return _internal_has_mvlsremoveitemandnotifyinfo()
-      ? *_impl_.content_.mvlsremoveitemandnotifyinfo_
+inline const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& LSWriteAndNotifyInfo::_internal_a_mvlsremoveitemandnotifyinfo() const {
+  return _internal_has_a_mvlsremoveitemandnotifyinfo()
+      ? *_impl_.content_.a_mvlsremoveitemandnotifyinfo_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo&>(::protobuf::mozilla::dom::_LSRemoveItemAndNotifyInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& LSWriteAndNotifyInfo::mvlsremoveitemandnotifyinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSRemoveItemAndNotifyInfo)
-  return _internal_mvlsremoveitemandnotifyinfo();
+inline const ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo& LSWriteAndNotifyInfo::a_mvlsremoveitemandnotifyinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSRemoveItemAndNotifyInfo)
+  return _internal_a_mvlsremoveitemandnotifyinfo();
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::unsafe_arena_release_mvlsremoveitemandnotifyinfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSRemoveItemAndNotifyInfo)
-  if (_internal_has_mvlsremoveitemandnotifyinfo()) {
+inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::unsafe_arena_release_a_mvlsremoveitemandnotifyinfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSRemoveItemAndNotifyInfo)
+  if (_internal_has_a_mvlsremoveitemandnotifyinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* temp = _impl_.content_.mvlsremoveitemandnotifyinfo_;
-    _impl_.content_.mvlsremoveitemandnotifyinfo_ = nullptr;
+    ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* temp = _impl_.content_.a_mvlsremoveitemandnotifyinfo_;
+    _impl_.content_.a_mvlsremoveitemandnotifyinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSWriteAndNotifyInfo::unsafe_arena_set_allocated_mvlsremoveitemandnotifyinfo(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* mvlsremoveitemandnotifyinfo) {
+inline void LSWriteAndNotifyInfo::unsafe_arena_set_allocated_a_mvlsremoveitemandnotifyinfo(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* a_mvlsremoveitemandnotifyinfo) {
   clear_content();
-  if (mvlsremoveitemandnotifyinfo) {
-    set_has_mvlsremoveitemandnotifyinfo();
-    _impl_.content_.mvlsremoveitemandnotifyinfo_ = mvlsremoveitemandnotifyinfo;
+  if (a_mvlsremoveitemandnotifyinfo) {
+    set_has_a_mvlsremoveitemandnotifyinfo();
+    _impl_.content_.a_mvlsremoveitemandnotifyinfo_ = a_mvlsremoveitemandnotifyinfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSRemoveItemAndNotifyInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSRemoveItemAndNotifyInfo)
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::_internal_mutable_mvlsremoveitemandnotifyinfo() {
-  if (!_internal_has_mvlsremoveitemandnotifyinfo()) {
+inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::_internal_mutable_a_mvlsremoveitemandnotifyinfo() {
+  if (!_internal_has_a_mvlsremoveitemandnotifyinfo()) {
     clear_content();
-    set_has_mvlsremoveitemandnotifyinfo();
-    _impl_.content_.mvlsremoveitemandnotifyinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo >(GetArenaForAllocation());
+    set_has_a_mvlsremoveitemandnotifyinfo();
+    _impl_.content_.a_mvlsremoveitemandnotifyinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsremoveitemandnotifyinfo_;
+  return _impl_.content_.a_mvlsremoveitemandnotifyinfo_;
 }
-inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::mutable_mvlsremoveitemandnotifyinfo() {
-  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* _msg = _internal_mutable_mvlsremoveitemandnotifyinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSRemoveItemAndNotifyInfo)
+inline ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* LSWriteAndNotifyInfo::mutable_a_mvlsremoveitemandnotifyinfo() {
+  ::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo* _msg = _internal_mutable_a_mvlsremoveitemandnotifyinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSRemoveItemAndNotifyInfo)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.LSClearInfo mVLSClearInfo = 3;
-inline bool LSWriteAndNotifyInfo::_internal_has_mvlsclearinfo() const {
-  return content_case() == kMVLSClearInfo;
+// .protobuf.mozilla.dom.LSClearInfo a_mVLSClearInfo = 3;
+inline bool LSWriteAndNotifyInfo::_internal_has_a_mvlsclearinfo() const {
+  return content_case() == kAMVLSClearInfo;
 }
-inline bool LSWriteAndNotifyInfo::has_mvlsclearinfo() const {
-  return _internal_has_mvlsclearinfo();
+inline bool LSWriteAndNotifyInfo::has_a_mvlsclearinfo() const {
+  return _internal_has_a_mvlsclearinfo();
 }
-inline void LSWriteAndNotifyInfo::set_has_mvlsclearinfo() {
-  _impl_._oneof_case_[0] = kMVLSClearInfo;
+inline void LSWriteAndNotifyInfo::set_has_a_mvlsclearinfo() {
+  _impl_._oneof_case_[0] = kAMVLSClearInfo;
 }
-inline void LSWriteAndNotifyInfo::clear_mvlsclearinfo() {
-  if (_internal_has_mvlsclearinfo()) {
+inline void LSWriteAndNotifyInfo::clear_a_mvlsclearinfo() {
+  if (_internal_has_a_mvlsclearinfo()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvlsclearinfo_;
+      delete _impl_.content_.a_mvlsclearinfo_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::release_mvlsclearinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSClearInfo)
-  if (_internal_has_mvlsclearinfo()) {
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::release_a_mvlsclearinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSClearInfo)
+  if (_internal_has_a_mvlsclearinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.mvlsclearinfo_;
+    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.a_mvlsclearinfo_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvlsclearinfo_ = nullptr;
+    _impl_.content_.a_mvlsclearinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteAndNotifyInfo::_internal_mvlsclearinfo() const {
-  return _internal_has_mvlsclearinfo()
-      ? *_impl_.content_.mvlsclearinfo_
+inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteAndNotifyInfo::_internal_a_mvlsclearinfo() const {
+  return _internal_has_a_mvlsclearinfo()
+      ? *_impl_.content_.a_mvlsclearinfo_
       : reinterpret_cast< ::protobuf::mozilla::dom::LSClearInfo&>(::protobuf::mozilla::dom::_LSClearInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteAndNotifyInfo::mvlsclearinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSClearInfo)
-  return _internal_mvlsclearinfo();
+inline const ::protobuf::mozilla::dom::LSClearInfo& LSWriteAndNotifyInfo::a_mvlsclearinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSClearInfo)
+  return _internal_a_mvlsclearinfo();
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::unsafe_arena_release_mvlsclearinfo() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSClearInfo)
-  if (_internal_has_mvlsclearinfo()) {
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::unsafe_arena_release_a_mvlsclearinfo() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSClearInfo)
+  if (_internal_has_a_mvlsclearinfo()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.mvlsclearinfo_;
-    _impl_.content_.mvlsclearinfo_ = nullptr;
+    ::protobuf::mozilla::dom::LSClearInfo* temp = _impl_.content_.a_mvlsclearinfo_;
+    _impl_.content_.a_mvlsclearinfo_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void LSWriteAndNotifyInfo::unsafe_arena_set_allocated_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* mvlsclearinfo) {
+inline void LSWriteAndNotifyInfo::unsafe_arena_set_allocated_a_mvlsclearinfo(::protobuf::mozilla::dom::LSClearInfo* a_mvlsclearinfo) {
   clear_content();
-  if (mvlsclearinfo) {
-    set_has_mvlsclearinfo();
-    _impl_.content_.mvlsclearinfo_ = mvlsclearinfo;
+  if (a_mvlsclearinfo) {
+    set_has_a_mvlsclearinfo();
+    _impl_.content_.a_mvlsclearinfo_ = a_mvlsclearinfo;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSClearInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSClearInfo)
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::_internal_mutable_mvlsclearinfo() {
-  if (!_internal_has_mvlsclearinfo()) {
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::_internal_mutable_a_mvlsclearinfo() {
+  if (!_internal_has_a_mvlsclearinfo()) {
     clear_content();
-    set_has_mvlsclearinfo();
-    _impl_.content_.mvlsclearinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSClearInfo >(GetArenaForAllocation());
+    set_has_a_mvlsclearinfo();
+    _impl_.content_.a_mvlsclearinfo_ = CreateMaybeMessage< ::protobuf::mozilla::dom::LSClearInfo >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvlsclearinfo_;
+  return _impl_.content_.a_mvlsclearinfo_;
 }
-inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::mutable_mvlsclearinfo() {
-  ::protobuf::mozilla::dom::LSClearInfo* _msg = _internal_mutable_mvlsclearinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteAndNotifyInfo.mVLSClearInfo)
+inline ::protobuf::mozilla::dom::LSClearInfo* LSWriteAndNotifyInfo::mutable_a_mvlsclearinfo() {
+  ::protobuf::mozilla::dom::LSClearInfo* _msg = _internal_mutable_a_mvlsclearinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.LSWriteAndNotifyInfo.a_mVLSClearInfo)
   return _msg;
 }
 

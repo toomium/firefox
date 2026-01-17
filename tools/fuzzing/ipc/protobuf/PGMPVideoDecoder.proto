@@ -17,21 +17,21 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_InitDecode {
-  required bytes aCodecSettings = 1;
-  repeated uint32 aCodecSpecific = 2;
-  required sint32 aCoreCount = 3;
+  required bytes a_aCodecSettings = 1;
+  repeated uint32 a_aCodecSpecific = 2;
+  required sint32 a_aCoreCount = 3;
 }
 
 message Msg_GiveShmem {
-  required bytes aOutputShmem = 1;
+  required bytes a_aOutputShmem = 1;
 }
 
 message Msg_Decode {
-  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData aInputFrame = 1;
-  required bytes aInputShmem = 2;
-  required bool aMissingFrames = 3;
-  repeated uint32 aCodecSpecificInfo = 4;
-  required sint64 aRenderTimeMs = 5;
+  required protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aInputFrame = 1;
+  required bytes a_aInputShmem = 2;
+  required bool a_aMissingFrames = 3;
+  repeated uint32 a_aCodecSpecificInfo = 4;
+  required sint64 a_aRenderTimeMs = 5;
 }
 
 message Msg_Reset {
@@ -47,25 +47,25 @@ message Reply___delete__ {
 }
 
 message Msg_ReturnShmem {
-  required bytes aInputShmem = 1;
+  required bytes a_aInputShmem = 1;
 }
 
 message Msg_DecodedData {
-  required protobuf.mozilla.gmp.GMPVideoi420FrameData aDecodedFrame = 1;
-  repeated uint32 aDecodedData = 2;
+  required protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  repeated uint32 a_aDecodedData = 2;
 }
 
 message Msg_DecodedShmem {
-  required protobuf.mozilla.gmp.GMPVideoi420FrameData aDecodedFrame = 1;
-  required bytes aDecodedShmem = 2;
+  required protobuf.mozilla.gmp.GMPVideoi420FrameData a_aDecodedFrame = 1;
+  required bytes a_aDecodedShmem = 2;
 }
 
 message Msg_ReceivedDecodedReferenceFrame {
-  required uint64 aPictureId = 1;
+  required uint64 a_aPictureId = 1;
 }
 
 message Msg_ReceivedDecodedFrame {
-  required uint64 aPictureId = 1;
+  required uint64 a_aPictureId = 1;
 }
 
 message Msg_InputDataExhausted {
@@ -78,7 +78,7 @@ message Msg_ResetComplete {
 }
 
 message Msg_Error {
-  required bytes aErr = 1;
+  required bytes a_aErr = 1;
 }
 
 message Msg_Shutdown {

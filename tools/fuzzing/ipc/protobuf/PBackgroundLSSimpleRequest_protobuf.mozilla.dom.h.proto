@@ -14,17 +14,17 @@ import "PBackgroundLSSharedTypes.proto";
 
 // Structs and unions declarations
 message LSSimpleRequestPreloadedResponse {
-  required bool preloaded = 1;
+  required bool a_preloaded = 1;
 }
 
 message LSSimpleRequestGetStateResponse {
-  repeated protobuf.mozilla.dom.LSItemInfo itemInfos = 1;
+  repeated protobuf.mozilla.dom.LSItemInfo a_itemInfos = 1;
 }
 
 message LSSimpleRequestResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse mVLSSimpleRequestPreloadedResponse = 2;
-    protobuf.mozilla.dom.LSSimpleRequestGetStateResponse mVLSSimpleRequestGetStateResponse = 3;
+    bytes a_mVnsresult = 1;
+    protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse a_mVLSSimpleRequestPreloadedResponse = 2;
+    protobuf.mozilla.dom.LSSimpleRequestGetStateResponse a_mVLSSimpleRequestGetStateResponse = 3;
   }
 }

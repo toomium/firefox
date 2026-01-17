@@ -25,10 +25,10 @@ PROTOBUF_CONSTEXPR IPCLockRequest::IPCLockRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.lockmode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ifavailable_)*/false
-  , /*decltype(_impl_.steal_)*/false} {}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_lockmode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ifavailable_)*/false
+  , /*decltype(_impl_.a_steal_)*/false} {}
 struct IPCLockRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCLockRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,16 +52,16 @@ namespace locks {
 class IPCLockRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCLockRequest>()._impl_._has_bits_);
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_lockmode(HasBits* has_bits) {
+  static void set_has_a_lockmode(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_ifavailable(HasBits* has_bits) {
+  static void set_has_a_ifavailable(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_steal(HasBits* has_bits) {
+  static void set_has_a_steal(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -81,31 +81,31 @@ IPCLockRequest::IPCLockRequest(const IPCLockRequest& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.lockmode_){}
-    , decltype(_impl_.ifavailable_){}
-    , decltype(_impl_.steal_){}};
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_lockmode_){}
+    , decltype(_impl_.a_ifavailable_){}
+    , decltype(_impl_.a_steal_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.lockmode_.InitDefault();
+  _impl_.a_lockmode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.lockmode_.Set("", GetArenaForAllocation());
+    _impl_.a_lockmode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_lockmode()) {
-    _this->_impl_.lockmode_.Set(from._internal_lockmode(), 
+  if (from._internal_has_a_lockmode()) {
+    _this->_impl_.a_lockmode_.Set(from._internal_a_lockmode(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.ifavailable_, &from._impl_.ifavailable_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.steal_) -
-    reinterpret_cast<char*>(&_impl_.ifavailable_)) + sizeof(_impl_.steal_));
+  ::memcpy(&_impl_.a_ifavailable_, &from._impl_.a_ifavailable_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_steal_) -
+    reinterpret_cast<char*>(&_impl_.a_ifavailable_)) + sizeof(_impl_.a_steal_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.locks.IPCLockRequest)
 }
 
@@ -116,18 +116,18 @@ inline void IPCLockRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.lockmode_){}
-    , decltype(_impl_.ifavailable_){false}
-    , decltype(_impl_.steal_){false}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_lockmode_){}
+    , decltype(_impl_.a_ifavailable_){false}
+    , decltype(_impl_.a_steal_){false}
   };
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.lockmode_.InitDefault();
+  _impl_.a_lockmode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.lockmode_.Set("", GetArenaForAllocation());
+    _impl_.a_lockmode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -142,8 +142,8 @@ IPCLockRequest::~IPCLockRequest() {
 
 inline void IPCLockRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
-  _impl_.lockmode_.Destroy();
+  _impl_.a_name_.Destroy();
+  _impl_.a_lockmode_.Destroy();
 }
 
 void IPCLockRequest::SetCachedSize(int size) const {
@@ -159,15 +159,15 @@ void IPCLockRequest::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.name_.ClearNonDefaultToEmpty();
+      _impl_.a_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.lockmode_.ClearNonDefaultToEmpty();
+      _impl_.a_lockmode_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.ifavailable_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.steal_) -
-      reinterpret_cast<char*>(&_impl_.ifavailable_)) + sizeof(_impl_.steal_));
+  ::memset(&_impl_.a_ifavailable_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_steal_) -
+      reinterpret_cast<char*>(&_impl_.a_ifavailable_)) + sizeof(_impl_.a_steal_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -179,38 +179,38 @@ const char* IPCLockRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes name = 1;
+      // required bytes a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes lockMode = 2;
+      // required bytes a_lockMode = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_lockmode();
+          auto str = _internal_mutable_a_lockmode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool ifAvailable = 3;
+      // required bool a_ifAvailable = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_ifavailable(&has_bits);
-          _impl_.ifavailable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ifavailable(&has_bits);
+          _impl_.a_ifavailable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool steal = 4;
+      // required bool a_steal = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_steal(&has_bits);
-          _impl_.steal_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_steal(&has_bits);
+          _impl_.a_steal_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -246,28 +246,28 @@ uint8_t* IPCLockRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes name = 1;
+  // required bytes a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_name(), target);
+        1, this->_internal_a_name(), target);
   }
 
-  // required bytes lockMode = 2;
+  // required bytes a_lockMode = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_lockmode(), target);
+        2, this->_internal_a_lockmode(), target);
   }
 
-  // required bool ifAvailable = 3;
+  // required bool a_ifAvailable = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_ifavailable(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_ifavailable(), target);
   }
 
-  // required bool steal = 4;
+  // required bool a_steal = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_steal(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_steal(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -282,27 +282,27 @@ size_t IPCLockRequest::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.locks.IPCLockRequest)
   size_t total_size = 0;
 
-  if (_internal_has_name()) {
-    // required bytes name = 1;
+  if (_internal_has_a_name()) {
+    // required bytes a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
 
-  if (_internal_has_lockmode()) {
-    // required bytes lockMode = 2;
+  if (_internal_has_a_lockmode()) {
+    // required bytes a_lockMode = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_lockmode());
+        this->_internal_a_lockmode());
   }
 
-  if (_internal_has_ifavailable()) {
-    // required bool ifAvailable = 3;
+  if (_internal_has_a_ifavailable()) {
+    // required bool a_ifAvailable = 3;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_steal()) {
-    // required bool steal = 4;
+  if (_internal_has_a_steal()) {
+    // required bool a_steal = 4;
     total_size += 1 + 1;
   }
 
@@ -313,20 +313,20 @@ size_t IPCLockRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes name = 1;
+    // required bytes a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
 
-    // required bytes lockMode = 2;
+    // required bytes a_lockMode = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_lockmode());
+        this->_internal_a_lockmode());
 
-    // required bool ifAvailable = 3;
+    // required bool a_ifAvailable = 3;
     total_size += 1 + 1;
 
-    // required bool steal = 4;
+    // required bool a_steal = 4;
     total_size += 1 + 1;
 
   } else {
@@ -360,16 +360,16 @@ void IPCLockRequest::MergeFrom(const IPCLockRequest& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_name(from._internal_name());
+      _this->_internal_set_a_name(from._internal_a_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_lockmode(from._internal_lockmode());
+      _this->_internal_set_a_lockmode(from._internal_a_lockmode());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.ifavailable_ = from._impl_.ifavailable_;
+      _this->_impl_.a_ifavailable_ = from._impl_.a_ifavailable_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.steal_ = from._impl_.steal_;
+      _this->_impl_.a_steal_ = from._impl_.a_steal_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -395,19 +395,19 @@ void IPCLockRequest::InternalSwap(IPCLockRequest* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.lockmode_, lhs_arena,
-      &other->_impl_.lockmode_, rhs_arena
+      &_impl_.a_lockmode_, lhs_arena,
+      &other->_impl_.a_lockmode_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(IPCLockRequest, _impl_.steal_)
-      + sizeof(IPCLockRequest::_impl_.steal_)
-      - PROTOBUF_FIELD_OFFSET(IPCLockRequest, _impl_.ifavailable_)>(
-          reinterpret_cast<char*>(&_impl_.ifavailable_),
-          reinterpret_cast<char*>(&other->_impl_.ifavailable_));
+      PROTOBUF_FIELD_OFFSET(IPCLockRequest, _impl_.a_steal_)
+      + sizeof(IPCLockRequest::_impl_.a_steal_)
+      - PROTOBUF_FIELD_OFFSET(IPCLockRequest, _impl_.a_ifavailable_)>(
+          reinterpret_cast<char*>(&_impl_.a_ifavailable_),
+          reinterpret_cast<char*>(&other->_impl_.a_ifavailable_));
 }
 
 std::string IPCLockRequest::GetTypeName() const {

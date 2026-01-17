@@ -440,29 +440,29 @@ class Msg_PuppetSubmit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABufferFieldNumber = 1,
+    kAABufferFieldNumber = 1,
   };
-  // repeated uint64 aBuffer = 1;
-  int abuffer_size() const;
+  // repeated uint64 a_aBuffer = 1;
+  int a_abuffer_size() const;
   private:
-  int _internal_abuffer_size() const;
+  int _internal_a_abuffer_size() const;
   public:
-  void clear_abuffer();
+  void clear_a_abuffer();
   private:
-  uint64_t _internal_abuffer(int index) const;
+  uint64_t _internal_a_abuffer(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_abuffer() const;
-  void _internal_add_abuffer(uint64_t value);
+      _internal_a_abuffer() const;
+  void _internal_add_a_abuffer(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_abuffer();
+      _internal_mutable_a_abuffer();
   public:
-  uint64_t abuffer(int index) const;
-  void set_abuffer(int index, uint64_t value);
-  void add_abuffer(uint64_t value);
+  uint64_t a_abuffer(int index) const;
+  void set_a_abuffer(int index, uint64_t value);
+  void add_a_abuffer(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      abuffer() const;
+      a_abuffer() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_abuffer();
+      mutable_a_abuffer();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit)
  private:
@@ -472,7 +472,7 @@ class Msg_PuppetSubmit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > abuffer_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_abuffer_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -869,51 +869,51 @@ class Msg_NotifyPuppetComplete final :
 
 // Msg_PuppetSubmit
 
-// repeated uint64 aBuffer = 1;
-inline int Msg_PuppetSubmit::_internal_abuffer_size() const {
-  return _impl_.abuffer_.size();
+// repeated uint64 a_aBuffer = 1;
+inline int Msg_PuppetSubmit::_internal_a_abuffer_size() const {
+  return _impl_.a_abuffer_.size();
 }
-inline int Msg_PuppetSubmit::abuffer_size() const {
-  return _internal_abuffer_size();
+inline int Msg_PuppetSubmit::a_abuffer_size() const {
+  return _internal_a_abuffer_size();
 }
-inline void Msg_PuppetSubmit::clear_abuffer() {
-  _impl_.abuffer_.Clear();
+inline void Msg_PuppetSubmit::clear_a_abuffer() {
+  _impl_.a_abuffer_.Clear();
 }
-inline uint64_t Msg_PuppetSubmit::_internal_abuffer(int index) const {
-  return _impl_.abuffer_.Get(index);
+inline uint64_t Msg_PuppetSubmit::_internal_a_abuffer(int index) const {
+  return _impl_.a_abuffer_.Get(index);
 }
-inline uint64_t Msg_PuppetSubmit::abuffer(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.aBuffer)
-  return _internal_abuffer(index);
+inline uint64_t Msg_PuppetSubmit::a_abuffer(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.a_aBuffer)
+  return _internal_a_abuffer(index);
 }
-inline void Msg_PuppetSubmit::set_abuffer(int index, uint64_t value) {
-  _impl_.abuffer_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.aBuffer)
+inline void Msg_PuppetSubmit::set_a_abuffer(int index, uint64_t value) {
+  _impl_.a_abuffer_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.a_aBuffer)
 }
-inline void Msg_PuppetSubmit::_internal_add_abuffer(uint64_t value) {
-  _impl_.abuffer_.Add(value);
+inline void Msg_PuppetSubmit::_internal_add_a_abuffer(uint64_t value) {
+  _impl_.a_abuffer_.Add(value);
 }
-inline void Msg_PuppetSubmit::add_abuffer(uint64_t value) {
-  _internal_add_abuffer(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.aBuffer)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_PuppetSubmit::_internal_abuffer() const {
-  return _impl_.abuffer_;
+inline void Msg_PuppetSubmit::add_a_abuffer(uint64_t value) {
+  _internal_add_a_abuffer(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.a_aBuffer)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-Msg_PuppetSubmit::abuffer() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.aBuffer)
-  return _internal_abuffer();
+Msg_PuppetSubmit::_internal_a_abuffer() const {
+  return _impl_.a_abuffer_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+Msg_PuppetSubmit::a_abuffer() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.a_aBuffer)
+  return _internal_a_abuffer();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_PuppetSubmit::_internal_mutable_abuffer() {
-  return &_impl_.abuffer_;
+Msg_PuppetSubmit::_internal_mutable_a_abuffer() {
+  return &_impl_.a_abuffer_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-Msg_PuppetSubmit::mutable_abuffer() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.aBuffer)
-  return _internal_mutable_abuffer();
+Msg_PuppetSubmit::mutable_a_abuffer() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit.a_aBuffer)
+  return _internal_mutable_a_abuffer();
 }
 
 // -------------------------------------------------------------------

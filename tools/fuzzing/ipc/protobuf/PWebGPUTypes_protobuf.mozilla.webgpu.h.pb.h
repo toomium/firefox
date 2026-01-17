@@ -177,47 +177,47 @@ class BufferMapSuccess final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOffsetFieldNumber = 1,
-    kSizeFieldNumber = 2,
-    kWritableFieldNumber = 3,
+    kAOffsetFieldNumber = 1,
+    kASizeFieldNumber = 2,
+    kAWritableFieldNumber = 3,
   };
-  // required uint64 offset = 1;
-  bool has_offset() const;
+  // required uint64 a_offset = 1;
+  bool has_a_offset() const;
   private:
-  bool _internal_has_offset() const;
+  bool _internal_has_a_offset() const;
   public:
-  void clear_offset();
-  uint64_t offset() const;
-  void set_offset(uint64_t value);
+  void clear_a_offset();
+  uint64_t a_offset() const;
+  void set_a_offset(uint64_t value);
   private:
-  uint64_t _internal_offset() const;
-  void _internal_set_offset(uint64_t value);
-  public:
-
-  // required uint64 size = 2;
-  bool has_size() const;
-  private:
-  bool _internal_has_size() const;
-  public:
-  void clear_size();
-  uint64_t size() const;
-  void set_size(uint64_t value);
-  private:
-  uint64_t _internal_size() const;
-  void _internal_set_size(uint64_t value);
+  uint64_t _internal_a_offset() const;
+  void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required bool writable = 3;
-  bool has_writable() const;
+  // required uint64 a_size = 2;
+  bool has_a_size() const;
   private:
-  bool _internal_has_writable() const;
+  bool _internal_has_a_size() const;
   public:
-  void clear_writable();
-  bool writable() const;
-  void set_writable(bool value);
+  void clear_a_size();
+  uint64_t a_size() const;
+  void set_a_size(uint64_t value);
   private:
-  bool _internal_writable() const;
-  void _internal_set_writable(bool value);
+  uint64_t _internal_a_size() const;
+  void _internal_set_a_size(uint64_t value);
+  public:
+
+  // required bool a_writable = 3;
+  bool has_a_writable() const;
+  private:
+  bool _internal_has_a_writable() const;
+  public:
+  void clear_a_writable();
+  bool a_writable() const;
+  void set_a_writable(bool value);
+  private:
+  bool _internal_a_writable() const;
+  void _internal_set_a_writable(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.BufferMapSuccess)
@@ -233,9 +233,9 @@ class BufferMapSuccess final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t offset_;
-    uint64_t size_;
-    bool writable_;
+    uint64_t a_offset_;
+    uint64_t a_size_;
+    bool a_writable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto;
@@ -352,24 +352,24 @@ class BufferMapError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageFieldNumber = 1,
+    kAMessageFieldNumber = 1,
   };
-  // required bytes message = 1;
-  bool has_message() const;
+  // required bytes a_message = 1;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.BufferMapError)
@@ -382,7 +382,7 @@ class BufferMapError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto;
@@ -431,8 +431,8 @@ class BufferMapResult final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVBufferMapSuccess = 1,
-    kMVBufferMapError = 2,
+    kAMVBufferMapSuccess = 1,
+    kAMVBufferMapError = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -505,52 +505,52 @@ class BufferMapResult final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVBufferMapSuccessFieldNumber = 1,
-    kMVBufferMapErrorFieldNumber = 2,
+    kAMVBufferMapSuccessFieldNumber = 1,
+    kAMVBufferMapErrorFieldNumber = 2,
   };
-  // .protobuf.mozilla.webgpu.BufferMapSuccess mVBufferMapSuccess = 1;
-  bool has_mvbuffermapsuccess() const;
+  // .protobuf.mozilla.webgpu.BufferMapSuccess a_mVBufferMapSuccess = 1;
+  bool has_a_mvbuffermapsuccess() const;
   private:
-  bool _internal_has_mvbuffermapsuccess() const;
+  bool _internal_has_a_mvbuffermapsuccess() const;
   public:
-  void clear_mvbuffermapsuccess();
-  const ::protobuf::mozilla::webgpu::BufferMapSuccess& mvbuffermapsuccess() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::webgpu::BufferMapSuccess* release_mvbuffermapsuccess();
-  ::protobuf::mozilla::webgpu::BufferMapSuccess* mutable_mvbuffermapsuccess();
-  void set_allocated_mvbuffermapsuccess(::protobuf::mozilla::webgpu::BufferMapSuccess* mvbuffermapsuccess);
+  void clear_a_mvbuffermapsuccess();
+  const ::protobuf::mozilla::webgpu::BufferMapSuccess& a_mvbuffermapsuccess() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::webgpu::BufferMapSuccess* release_a_mvbuffermapsuccess();
+  ::protobuf::mozilla::webgpu::BufferMapSuccess* mutable_a_mvbuffermapsuccess();
+  void set_allocated_a_mvbuffermapsuccess(::protobuf::mozilla::webgpu::BufferMapSuccess* a_mvbuffermapsuccess);
   private:
-  const ::protobuf::mozilla::webgpu::BufferMapSuccess& _internal_mvbuffermapsuccess() const;
-  ::protobuf::mozilla::webgpu::BufferMapSuccess* _internal_mutable_mvbuffermapsuccess();
+  const ::protobuf::mozilla::webgpu::BufferMapSuccess& _internal_a_mvbuffermapsuccess() const;
+  ::protobuf::mozilla::webgpu::BufferMapSuccess* _internal_mutable_a_mvbuffermapsuccess();
   public:
-  void unsafe_arena_set_allocated_mvbuffermapsuccess(
-      ::protobuf::mozilla::webgpu::BufferMapSuccess* mvbuffermapsuccess);
-  ::protobuf::mozilla::webgpu::BufferMapSuccess* unsafe_arena_release_mvbuffermapsuccess();
+  void unsafe_arena_set_allocated_a_mvbuffermapsuccess(
+      ::protobuf::mozilla::webgpu::BufferMapSuccess* a_mvbuffermapsuccess);
+  ::protobuf::mozilla::webgpu::BufferMapSuccess* unsafe_arena_release_a_mvbuffermapsuccess();
 
-  // .protobuf.mozilla.webgpu.BufferMapError mVBufferMapError = 2;
-  bool has_mvbuffermaperror() const;
+  // .protobuf.mozilla.webgpu.BufferMapError a_mVBufferMapError = 2;
+  bool has_a_mvbuffermaperror() const;
   private:
-  bool _internal_has_mvbuffermaperror() const;
+  bool _internal_has_a_mvbuffermaperror() const;
   public:
-  void clear_mvbuffermaperror();
-  const ::protobuf::mozilla::webgpu::BufferMapError& mvbuffermaperror() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::webgpu::BufferMapError* release_mvbuffermaperror();
-  ::protobuf::mozilla::webgpu::BufferMapError* mutable_mvbuffermaperror();
-  void set_allocated_mvbuffermaperror(::protobuf::mozilla::webgpu::BufferMapError* mvbuffermaperror);
+  void clear_a_mvbuffermaperror();
+  const ::protobuf::mozilla::webgpu::BufferMapError& a_mvbuffermaperror() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::webgpu::BufferMapError* release_a_mvbuffermaperror();
+  ::protobuf::mozilla::webgpu::BufferMapError* mutable_a_mvbuffermaperror();
+  void set_allocated_a_mvbuffermaperror(::protobuf::mozilla::webgpu::BufferMapError* a_mvbuffermaperror);
   private:
-  const ::protobuf::mozilla::webgpu::BufferMapError& _internal_mvbuffermaperror() const;
-  ::protobuf::mozilla::webgpu::BufferMapError* _internal_mutable_mvbuffermaperror();
+  const ::protobuf::mozilla::webgpu::BufferMapError& _internal_a_mvbuffermaperror() const;
+  ::protobuf::mozilla::webgpu::BufferMapError* _internal_mutable_a_mvbuffermaperror();
   public:
-  void unsafe_arena_set_allocated_mvbuffermaperror(
-      ::protobuf::mozilla::webgpu::BufferMapError* mvbuffermaperror);
-  ::protobuf::mozilla::webgpu::BufferMapError* unsafe_arena_release_mvbuffermaperror();
+  void unsafe_arena_set_allocated_a_mvbuffermaperror(
+      ::protobuf::mozilla::webgpu::BufferMapError* a_mvbuffermaperror);
+  ::protobuf::mozilla::webgpu::BufferMapError* unsafe_arena_release_a_mvbuffermaperror();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.BufferMapResult)
  private:
   class _Internal;
-  void set_has_mvbuffermapsuccess();
-  void set_has_mvbuffermaperror();
+  void set_has_a_mvbuffermapsuccess();
+  void set_has_a_mvbuffermaperror();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -562,8 +562,8 @@ class BufferMapResult final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::webgpu::BufferMapSuccess* mvbuffermapsuccess_;
-      ::protobuf::mozilla::webgpu::BufferMapError* mvbuffermaperror_;
+      ::protobuf::mozilla::webgpu::BufferMapSuccess* a_mvbuffermapsuccess_;
+      ::protobuf::mozilla::webgpu::BufferMapError* a_mvbuffermaperror_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -583,311 +583,311 @@ class BufferMapResult final :
 #endif  // __GNUC__
 // BufferMapSuccess
 
-// required uint64 offset = 1;
-inline bool BufferMapSuccess::_internal_has_offset() const {
+// required uint64 a_offset = 1;
+inline bool BufferMapSuccess::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool BufferMapSuccess::has_offset() const {
-  return _internal_has_offset();
+inline bool BufferMapSuccess::has_a_offset() const {
+  return _internal_has_a_offset();
 }
-inline void BufferMapSuccess::clear_offset() {
-  _impl_.offset_ = uint64_t{0u};
+inline void BufferMapSuccess::clear_a_offset() {
+  _impl_.a_offset_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t BufferMapSuccess::_internal_offset() const {
-  return _impl_.offset_;
+inline uint64_t BufferMapSuccess::_internal_a_offset() const {
+  return _impl_.a_offset_;
 }
-inline uint64_t BufferMapSuccess::offset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapSuccess.offset)
-  return _internal_offset();
+inline uint64_t BufferMapSuccess::a_offset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapSuccess.a_offset)
+  return _internal_a_offset();
 }
-inline void BufferMapSuccess::_internal_set_offset(uint64_t value) {
+inline void BufferMapSuccess::_internal_set_a_offset(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.offset_ = value;
+  _impl_.a_offset_ = value;
 }
-inline void BufferMapSuccess::set_offset(uint64_t value) {
-  _internal_set_offset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.offset)
+inline void BufferMapSuccess::set_a_offset(uint64_t value) {
+  _internal_set_a_offset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.a_offset)
 }
 
-// required uint64 size = 2;
-inline bool BufferMapSuccess::_internal_has_size() const {
+// required uint64 a_size = 2;
+inline bool BufferMapSuccess::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool BufferMapSuccess::has_size() const {
-  return _internal_has_size();
+inline bool BufferMapSuccess::has_a_size() const {
+  return _internal_has_a_size();
 }
-inline void BufferMapSuccess::clear_size() {
-  _impl_.size_ = uint64_t{0u};
+inline void BufferMapSuccess::clear_a_size() {
+  _impl_.a_size_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t BufferMapSuccess::_internal_size() const {
-  return _impl_.size_;
+inline uint64_t BufferMapSuccess::_internal_a_size() const {
+  return _impl_.a_size_;
 }
-inline uint64_t BufferMapSuccess::size() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapSuccess.size)
-  return _internal_size();
+inline uint64_t BufferMapSuccess::a_size() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapSuccess.a_size)
+  return _internal_a_size();
 }
-inline void BufferMapSuccess::_internal_set_size(uint64_t value) {
+inline void BufferMapSuccess::_internal_set_a_size(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.size_ = value;
+  _impl_.a_size_ = value;
 }
-inline void BufferMapSuccess::set_size(uint64_t value) {
-  _internal_set_size(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.size)
+inline void BufferMapSuccess::set_a_size(uint64_t value) {
+  _internal_set_a_size(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.a_size)
 }
 
-// required bool writable = 3;
-inline bool BufferMapSuccess::_internal_has_writable() const {
+// required bool a_writable = 3;
+inline bool BufferMapSuccess::_internal_has_a_writable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool BufferMapSuccess::has_writable() const {
-  return _internal_has_writable();
+inline bool BufferMapSuccess::has_a_writable() const {
+  return _internal_has_a_writable();
 }
-inline void BufferMapSuccess::clear_writable() {
-  _impl_.writable_ = false;
+inline void BufferMapSuccess::clear_a_writable() {
+  _impl_.a_writable_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool BufferMapSuccess::_internal_writable() const {
-  return _impl_.writable_;
+inline bool BufferMapSuccess::_internal_a_writable() const {
+  return _impl_.a_writable_;
 }
-inline bool BufferMapSuccess::writable() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapSuccess.writable)
-  return _internal_writable();
+inline bool BufferMapSuccess::a_writable() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapSuccess.a_writable)
+  return _internal_a_writable();
 }
-inline void BufferMapSuccess::_internal_set_writable(bool value) {
+inline void BufferMapSuccess::_internal_set_a_writable(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.writable_ = value;
+  _impl_.a_writable_ = value;
 }
-inline void BufferMapSuccess::set_writable(bool value) {
-  _internal_set_writable(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.writable)
+inline void BufferMapSuccess::set_a_writable(bool value) {
+  _internal_set_a_writable(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapSuccess.a_writable)
 }
 
 // -------------------------------------------------------------------
 
 // BufferMapError
 
-// required bytes message = 1;
-inline bool BufferMapError::_internal_has_message() const {
+// required bytes a_message = 1;
+inline bool BufferMapError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool BufferMapError::has_message() const {
-  return _internal_has_message();
+inline bool BufferMapError::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void BufferMapError::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void BufferMapError::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& BufferMapError::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapError.message)
-  return _internal_message();
+inline const std::string& BufferMapError::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapError.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void BufferMapError::set_message(ArgT0&& arg0, ArgT... args) {
+void BufferMapError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapError.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.BufferMapError.a_message)
 }
-inline std::string* BufferMapError::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.BufferMapError.message)
+inline std::string* BufferMapError::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.BufferMapError.a_message)
   return _s;
 }
-inline const std::string& BufferMapError::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& BufferMapError::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void BufferMapError::_internal_set_message(const std::string& value) {
+inline void BufferMapError::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* BufferMapError::_internal_mutable_message() {
+inline std::string* BufferMapError::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* BufferMapError::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.BufferMapError.message)
-  if (!_internal_has_message()) {
+inline std::string* BufferMapError::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.BufferMapError.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void BufferMapError::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void BufferMapError::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.BufferMapError.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.BufferMapError.a_message)
 }
 
 // -------------------------------------------------------------------
 
 // BufferMapResult
 
-// .protobuf.mozilla.webgpu.BufferMapSuccess mVBufferMapSuccess = 1;
-inline bool BufferMapResult::_internal_has_mvbuffermapsuccess() const {
-  return content_case() == kMVBufferMapSuccess;
+// .protobuf.mozilla.webgpu.BufferMapSuccess a_mVBufferMapSuccess = 1;
+inline bool BufferMapResult::_internal_has_a_mvbuffermapsuccess() const {
+  return content_case() == kAMVBufferMapSuccess;
 }
-inline bool BufferMapResult::has_mvbuffermapsuccess() const {
-  return _internal_has_mvbuffermapsuccess();
+inline bool BufferMapResult::has_a_mvbuffermapsuccess() const {
+  return _internal_has_a_mvbuffermapsuccess();
 }
-inline void BufferMapResult::set_has_mvbuffermapsuccess() {
-  _impl_._oneof_case_[0] = kMVBufferMapSuccess;
+inline void BufferMapResult::set_has_a_mvbuffermapsuccess() {
+  _impl_._oneof_case_[0] = kAMVBufferMapSuccess;
 }
-inline void BufferMapResult::clear_mvbuffermapsuccess() {
-  if (_internal_has_mvbuffermapsuccess()) {
+inline void BufferMapResult::clear_a_mvbuffermapsuccess() {
+  if (_internal_has_a_mvbuffermapsuccess()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvbuffermapsuccess_;
+      delete _impl_.content_.a_mvbuffermapsuccess_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::release_mvbuffermapsuccess() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapSuccess)
-  if (_internal_has_mvbuffermapsuccess()) {
+inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::release_a_mvbuffermapsuccess() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapSuccess)
+  if (_internal_has_a_mvbuffermapsuccess()) {
     clear_has_content();
-    ::protobuf::mozilla::webgpu::BufferMapSuccess* temp = _impl_.content_.mvbuffermapsuccess_;
+    ::protobuf::mozilla::webgpu::BufferMapSuccess* temp = _impl_.content_.a_mvbuffermapsuccess_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvbuffermapsuccess_ = nullptr;
+    _impl_.content_.a_mvbuffermapsuccess_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::webgpu::BufferMapSuccess& BufferMapResult::_internal_mvbuffermapsuccess() const {
-  return _internal_has_mvbuffermapsuccess()
-      ? *_impl_.content_.mvbuffermapsuccess_
+inline const ::protobuf::mozilla::webgpu::BufferMapSuccess& BufferMapResult::_internal_a_mvbuffermapsuccess() const {
+  return _internal_has_a_mvbuffermapsuccess()
+      ? *_impl_.content_.a_mvbuffermapsuccess_
       : reinterpret_cast< ::protobuf::mozilla::webgpu::BufferMapSuccess&>(::protobuf::mozilla::webgpu::_BufferMapSuccess_default_instance_);
 }
-inline const ::protobuf::mozilla::webgpu::BufferMapSuccess& BufferMapResult::mvbuffermapsuccess() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapSuccess)
-  return _internal_mvbuffermapsuccess();
+inline const ::protobuf::mozilla::webgpu::BufferMapSuccess& BufferMapResult::a_mvbuffermapsuccess() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapSuccess)
+  return _internal_a_mvbuffermapsuccess();
 }
-inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::unsafe_arena_release_mvbuffermapsuccess() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapSuccess)
-  if (_internal_has_mvbuffermapsuccess()) {
+inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::unsafe_arena_release_a_mvbuffermapsuccess() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapSuccess)
+  if (_internal_has_a_mvbuffermapsuccess()) {
     clear_has_content();
-    ::protobuf::mozilla::webgpu::BufferMapSuccess* temp = _impl_.content_.mvbuffermapsuccess_;
-    _impl_.content_.mvbuffermapsuccess_ = nullptr;
+    ::protobuf::mozilla::webgpu::BufferMapSuccess* temp = _impl_.content_.a_mvbuffermapsuccess_;
+    _impl_.content_.a_mvbuffermapsuccess_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void BufferMapResult::unsafe_arena_set_allocated_mvbuffermapsuccess(::protobuf::mozilla::webgpu::BufferMapSuccess* mvbuffermapsuccess) {
+inline void BufferMapResult::unsafe_arena_set_allocated_a_mvbuffermapsuccess(::protobuf::mozilla::webgpu::BufferMapSuccess* a_mvbuffermapsuccess) {
   clear_content();
-  if (mvbuffermapsuccess) {
-    set_has_mvbuffermapsuccess();
-    _impl_.content_.mvbuffermapsuccess_ = mvbuffermapsuccess;
+  if (a_mvbuffermapsuccess) {
+    set_has_a_mvbuffermapsuccess();
+    _impl_.content_.a_mvbuffermapsuccess_ = a_mvbuffermapsuccess;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapSuccess)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapSuccess)
 }
-inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::_internal_mutable_mvbuffermapsuccess() {
-  if (!_internal_has_mvbuffermapsuccess()) {
+inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::_internal_mutable_a_mvbuffermapsuccess() {
+  if (!_internal_has_a_mvbuffermapsuccess()) {
     clear_content();
-    set_has_mvbuffermapsuccess();
-    _impl_.content_.mvbuffermapsuccess_ = CreateMaybeMessage< ::protobuf::mozilla::webgpu::BufferMapSuccess >(GetArenaForAllocation());
+    set_has_a_mvbuffermapsuccess();
+    _impl_.content_.a_mvbuffermapsuccess_ = CreateMaybeMessage< ::protobuf::mozilla::webgpu::BufferMapSuccess >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvbuffermapsuccess_;
+  return _impl_.content_.a_mvbuffermapsuccess_;
 }
-inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::mutable_mvbuffermapsuccess() {
-  ::protobuf::mozilla::webgpu::BufferMapSuccess* _msg = _internal_mutable_mvbuffermapsuccess();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapSuccess)
+inline ::protobuf::mozilla::webgpu::BufferMapSuccess* BufferMapResult::mutable_a_mvbuffermapsuccess() {
+  ::protobuf::mozilla::webgpu::BufferMapSuccess* _msg = _internal_mutable_a_mvbuffermapsuccess();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapSuccess)
   return _msg;
 }
 
-// .protobuf.mozilla.webgpu.BufferMapError mVBufferMapError = 2;
-inline bool BufferMapResult::_internal_has_mvbuffermaperror() const {
-  return content_case() == kMVBufferMapError;
+// .protobuf.mozilla.webgpu.BufferMapError a_mVBufferMapError = 2;
+inline bool BufferMapResult::_internal_has_a_mvbuffermaperror() const {
+  return content_case() == kAMVBufferMapError;
 }
-inline bool BufferMapResult::has_mvbuffermaperror() const {
-  return _internal_has_mvbuffermaperror();
+inline bool BufferMapResult::has_a_mvbuffermaperror() const {
+  return _internal_has_a_mvbuffermaperror();
 }
-inline void BufferMapResult::set_has_mvbuffermaperror() {
-  _impl_._oneof_case_[0] = kMVBufferMapError;
+inline void BufferMapResult::set_has_a_mvbuffermaperror() {
+  _impl_._oneof_case_[0] = kAMVBufferMapError;
 }
-inline void BufferMapResult::clear_mvbuffermaperror() {
-  if (_internal_has_mvbuffermaperror()) {
+inline void BufferMapResult::clear_a_mvbuffermaperror() {
+  if (_internal_has_a_mvbuffermaperror()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvbuffermaperror_;
+      delete _impl_.content_.a_mvbuffermaperror_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::release_mvbuffermaperror() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapError)
-  if (_internal_has_mvbuffermaperror()) {
+inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::release_a_mvbuffermaperror() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapError)
+  if (_internal_has_a_mvbuffermaperror()) {
     clear_has_content();
-    ::protobuf::mozilla::webgpu::BufferMapError* temp = _impl_.content_.mvbuffermaperror_;
+    ::protobuf::mozilla::webgpu::BufferMapError* temp = _impl_.content_.a_mvbuffermaperror_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvbuffermaperror_ = nullptr;
+    _impl_.content_.a_mvbuffermaperror_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::webgpu::BufferMapError& BufferMapResult::_internal_mvbuffermaperror() const {
-  return _internal_has_mvbuffermaperror()
-      ? *_impl_.content_.mvbuffermaperror_
+inline const ::protobuf::mozilla::webgpu::BufferMapError& BufferMapResult::_internal_a_mvbuffermaperror() const {
+  return _internal_has_a_mvbuffermaperror()
+      ? *_impl_.content_.a_mvbuffermaperror_
       : reinterpret_cast< ::protobuf::mozilla::webgpu::BufferMapError&>(::protobuf::mozilla::webgpu::_BufferMapError_default_instance_);
 }
-inline const ::protobuf::mozilla::webgpu::BufferMapError& BufferMapResult::mvbuffermaperror() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapError)
-  return _internal_mvbuffermaperror();
+inline const ::protobuf::mozilla::webgpu::BufferMapError& BufferMapResult::a_mvbuffermaperror() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapError)
+  return _internal_a_mvbuffermaperror();
 }
-inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::unsafe_arena_release_mvbuffermaperror() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapError)
-  if (_internal_has_mvbuffermaperror()) {
+inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::unsafe_arena_release_a_mvbuffermaperror() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapError)
+  if (_internal_has_a_mvbuffermaperror()) {
     clear_has_content();
-    ::protobuf::mozilla::webgpu::BufferMapError* temp = _impl_.content_.mvbuffermaperror_;
-    _impl_.content_.mvbuffermaperror_ = nullptr;
+    ::protobuf::mozilla::webgpu::BufferMapError* temp = _impl_.content_.a_mvbuffermaperror_;
+    _impl_.content_.a_mvbuffermaperror_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void BufferMapResult::unsafe_arena_set_allocated_mvbuffermaperror(::protobuf::mozilla::webgpu::BufferMapError* mvbuffermaperror) {
+inline void BufferMapResult::unsafe_arena_set_allocated_a_mvbuffermaperror(::protobuf::mozilla::webgpu::BufferMapError* a_mvbuffermaperror) {
   clear_content();
-  if (mvbuffermaperror) {
-    set_has_mvbuffermaperror();
-    _impl_.content_.mvbuffermaperror_ = mvbuffermaperror;
+  if (a_mvbuffermaperror) {
+    set_has_a_mvbuffermaperror();
+    _impl_.content_.a_mvbuffermaperror_ = a_mvbuffermaperror;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapError)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapError)
 }
-inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::_internal_mutable_mvbuffermaperror() {
-  if (!_internal_has_mvbuffermaperror()) {
+inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::_internal_mutable_a_mvbuffermaperror() {
+  if (!_internal_has_a_mvbuffermaperror()) {
     clear_content();
-    set_has_mvbuffermaperror();
-    _impl_.content_.mvbuffermaperror_ = CreateMaybeMessage< ::protobuf::mozilla::webgpu::BufferMapError >(GetArenaForAllocation());
+    set_has_a_mvbuffermaperror();
+    _impl_.content_.a_mvbuffermaperror_ = CreateMaybeMessage< ::protobuf::mozilla::webgpu::BufferMapError >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvbuffermaperror_;
+  return _impl_.content_.a_mvbuffermaperror_;
 }
-inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::mutable_mvbuffermaperror() {
-  ::protobuf::mozilla::webgpu::BufferMapError* _msg = _internal_mutable_mvbuffermaperror();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.BufferMapResult.mVBufferMapError)
+inline ::protobuf::mozilla::webgpu::BufferMapError* BufferMapResult::mutable_a_mvbuffermaperror() {
+  ::protobuf::mozilla::webgpu::BufferMapError* _msg = _internal_mutable_a_mvbuffermaperror();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.BufferMapResult.a_mVBufferMapError)
   return _msg;
 }
 

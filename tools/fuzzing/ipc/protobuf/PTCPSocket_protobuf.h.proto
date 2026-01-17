@@ -13,25 +13,25 @@ package protobuf;
 
 // Structs and unions declarations
 message TCPError {
-  required bytes name = 1;
-  required bytes message = 2;
-  required bytes errorCode = 3;
+  required bytes a_name = 1;
+  required bytes a_message = 2;
+  required bytes a_errorCode = 3;
 }
 
 message SendableData {
   message _mVArrayOfuint8_t {
-    repeated uint32 mVArrayOfuint8_t = 1;
+    repeated uint32 a_mVArrayOfuint8_t = 1;
   }
   oneof content {
     _mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-    bytes mVnsCString = 2;
+    bytes a_mVnsCString = 2;
   }
 }
 
 message CallbackData {
   oneof content {
-    bytes mVvoid_t = 1;
-    protobuf.SendableData mVSendableData = 2;
-    protobuf.TCPError mVTCPError = 3;
+    bytes a_mVvoid_t = 1;
+    protobuf.SendableData a_mVSendableData = 2;
+    protobuf.TCPError a_mVTCPError = 3;
   }
 }

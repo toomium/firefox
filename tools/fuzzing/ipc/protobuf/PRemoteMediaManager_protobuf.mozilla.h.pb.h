@@ -172,38 +172,38 @@ class VideoDecoderInfoIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kVideoInfoFieldNumber = 1,
-    kFramerateFieldNumber = 2,
+    kAVideoInfoFieldNumber = 1,
+    kAFramerateFieldNumber = 2,
   };
-  // required bytes videoInfo = 1;
-  bool has_videoinfo() const;
+  // required bytes a_videoInfo = 1;
+  bool has_a_videoinfo() const;
   private:
-  bool _internal_has_videoinfo() const;
+  bool _internal_has_a_videoinfo() const;
   public:
-  void clear_videoinfo();
-  const std::string& videoinfo() const;
+  void clear_a_videoinfo();
+  const std::string& a_videoinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_videoinfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_videoinfo();
-  PROTOBUF_NODISCARD std::string* release_videoinfo();
-  void set_allocated_videoinfo(std::string* videoinfo);
+  void set_a_videoinfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_videoinfo();
+  PROTOBUF_NODISCARD std::string* release_a_videoinfo();
+  void set_allocated_a_videoinfo(std::string* a_videoinfo);
   private:
-  const std::string& _internal_videoinfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_videoinfo(const std::string& value);
-  std::string* _internal_mutable_videoinfo();
+  const std::string& _internal_a_videoinfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_videoinfo(const std::string& value);
+  std::string* _internal_mutable_a_videoinfo();
   public:
 
-  // required float framerate = 2;
-  bool has_framerate() const;
+  // required float a_framerate = 2;
+  bool has_a_framerate() const;
   private:
-  bool _internal_has_framerate() const;
+  bool _internal_has_a_framerate() const;
   public:
-  void clear_framerate();
-  float framerate() const;
-  void set_framerate(float value);
+  void clear_a_framerate();
+  float a_framerate() const;
+  void set_a_framerate(float value);
   private:
-  float _internal_framerate() const;
-  void _internal_set_framerate(float value);
+  float _internal_a_framerate() const;
+  void _internal_set_a_framerate(float value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.VideoDecoderInfoIPDL)
@@ -219,8 +219,8 @@ class VideoDecoderInfoIPDL final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr videoinfo_;
-    float framerate_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_videoinfo_;
+    float a_framerate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto;
@@ -269,8 +269,8 @@ class RemoteDecoderInfoIPDL final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVAudioInfo = 1,
-    kMVVideoDecoderInfoIPDL = 2,
+    kAMVAudioInfo = 1,
+    kAMVVideoDecoderInfoIPDL = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -343,52 +343,52 @@ class RemoteDecoderInfoIPDL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVAudioInfoFieldNumber = 1,
-    kMVVideoDecoderInfoIPDLFieldNumber = 2,
+    kAMVAudioInfoFieldNumber = 1,
+    kAMVVideoDecoderInfoIPDLFieldNumber = 2,
   };
-  // bytes mVAudioInfo = 1;
-  bool has_mvaudioinfo() const;
+  // bytes a_mVAudioInfo = 1;
+  bool has_a_mvaudioinfo() const;
   private:
-  bool _internal_has_mvaudioinfo() const;
+  bool _internal_has_a_mvaudioinfo() const;
   public:
-  void clear_mvaudioinfo();
-  const std::string& mvaudioinfo() const;
+  void clear_a_mvaudioinfo();
+  const std::string& a_mvaudioinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvaudioinfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvaudioinfo();
-  PROTOBUF_NODISCARD std::string* release_mvaudioinfo();
-  void set_allocated_mvaudioinfo(std::string* mvaudioinfo);
+  void set_a_mvaudioinfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvaudioinfo();
+  PROTOBUF_NODISCARD std::string* release_a_mvaudioinfo();
+  void set_allocated_a_mvaudioinfo(std::string* a_mvaudioinfo);
   private:
-  const std::string& _internal_mvaudioinfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvaudioinfo(const std::string& value);
-  std::string* _internal_mutable_mvaudioinfo();
+  const std::string& _internal_a_mvaudioinfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvaudioinfo(const std::string& value);
+  std::string* _internal_mutable_a_mvaudioinfo();
   public:
 
-  // .protobuf.mozilla.VideoDecoderInfoIPDL mVVideoDecoderInfoIPDL = 2;
-  bool has_mvvideodecoderinfoipdl() const;
+  // .protobuf.mozilla.VideoDecoderInfoIPDL a_mVVideoDecoderInfoIPDL = 2;
+  bool has_a_mvvideodecoderinfoipdl() const;
   private:
-  bool _internal_has_mvvideodecoderinfoipdl() const;
+  bool _internal_has_a_mvvideodecoderinfoipdl() const;
   public:
-  void clear_mvvideodecoderinfoipdl();
-  const ::protobuf::mozilla::VideoDecoderInfoIPDL& mvvideodecoderinfoipdl() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::VideoDecoderInfoIPDL* release_mvvideodecoderinfoipdl();
-  ::protobuf::mozilla::VideoDecoderInfoIPDL* mutable_mvvideodecoderinfoipdl();
-  void set_allocated_mvvideodecoderinfoipdl(::protobuf::mozilla::VideoDecoderInfoIPDL* mvvideodecoderinfoipdl);
+  void clear_a_mvvideodecoderinfoipdl();
+  const ::protobuf::mozilla::VideoDecoderInfoIPDL& a_mvvideodecoderinfoipdl() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::VideoDecoderInfoIPDL* release_a_mvvideodecoderinfoipdl();
+  ::protobuf::mozilla::VideoDecoderInfoIPDL* mutable_a_mvvideodecoderinfoipdl();
+  void set_allocated_a_mvvideodecoderinfoipdl(::protobuf::mozilla::VideoDecoderInfoIPDL* a_mvvideodecoderinfoipdl);
   private:
-  const ::protobuf::mozilla::VideoDecoderInfoIPDL& _internal_mvvideodecoderinfoipdl() const;
-  ::protobuf::mozilla::VideoDecoderInfoIPDL* _internal_mutable_mvvideodecoderinfoipdl();
+  const ::protobuf::mozilla::VideoDecoderInfoIPDL& _internal_a_mvvideodecoderinfoipdl() const;
+  ::protobuf::mozilla::VideoDecoderInfoIPDL* _internal_mutable_a_mvvideodecoderinfoipdl();
   public:
-  void unsafe_arena_set_allocated_mvvideodecoderinfoipdl(
-      ::protobuf::mozilla::VideoDecoderInfoIPDL* mvvideodecoderinfoipdl);
-  ::protobuf::mozilla::VideoDecoderInfoIPDL* unsafe_arena_release_mvvideodecoderinfoipdl();
+  void unsafe_arena_set_allocated_a_mvvideodecoderinfoipdl(
+      ::protobuf::mozilla::VideoDecoderInfoIPDL* a_mvvideodecoderinfoipdl);
+  ::protobuf::mozilla::VideoDecoderInfoIPDL* unsafe_arena_release_a_mvvideodecoderinfoipdl();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.RemoteDecoderInfoIPDL)
  private:
   class _Internal;
-  void set_has_mvaudioinfo();
-  void set_has_mvvideodecoderinfoipdl();
+  void set_has_a_mvaudioinfo();
+  void set_has_a_mvvideodecoderinfoipdl();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -400,8 +400,8 @@ class RemoteDecoderInfoIPDL final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvaudioinfo_;
-      ::protobuf::mozilla::VideoDecoderInfoIPDL* mvvideodecoderinfoipdl_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvaudioinfo_;
+      ::protobuf::mozilla::VideoDecoderInfoIPDL* a_mvvideodecoderinfoipdl_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -421,254 +421,254 @@ class RemoteDecoderInfoIPDL final :
 #endif  // __GNUC__
 // VideoDecoderInfoIPDL
 
-// required bytes videoInfo = 1;
-inline bool VideoDecoderInfoIPDL::_internal_has_videoinfo() const {
+// required bytes a_videoInfo = 1;
+inline bool VideoDecoderInfoIPDL::_internal_has_a_videoinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool VideoDecoderInfoIPDL::has_videoinfo() const {
-  return _internal_has_videoinfo();
+inline bool VideoDecoderInfoIPDL::has_a_videoinfo() const {
+  return _internal_has_a_videoinfo();
 }
-inline void VideoDecoderInfoIPDL::clear_videoinfo() {
-  _impl_.videoinfo_.ClearToEmpty();
+inline void VideoDecoderInfoIPDL::clear_a_videoinfo() {
+  _impl_.a_videoinfo_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& VideoDecoderInfoIPDL::videoinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.VideoDecoderInfoIPDL.videoInfo)
-  return _internal_videoinfo();
+inline const std::string& VideoDecoderInfoIPDL::a_videoinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
+  return _internal_a_videoinfo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void VideoDecoderInfoIPDL::set_videoinfo(ArgT0&& arg0, ArgT... args) {
+void VideoDecoderInfoIPDL::set_a_videoinfo(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.videoinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.VideoDecoderInfoIPDL.videoInfo)
+ _impl_.a_videoinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
 }
-inline std::string* VideoDecoderInfoIPDL::mutable_videoinfo() {
-  std::string* _s = _internal_mutable_videoinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.VideoDecoderInfoIPDL.videoInfo)
+inline std::string* VideoDecoderInfoIPDL::mutable_a_videoinfo() {
+  std::string* _s = _internal_mutable_a_videoinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
   return _s;
 }
-inline const std::string& VideoDecoderInfoIPDL::_internal_videoinfo() const {
-  return _impl_.videoinfo_.Get();
+inline const std::string& VideoDecoderInfoIPDL::_internal_a_videoinfo() const {
+  return _impl_.a_videoinfo_.Get();
 }
-inline void VideoDecoderInfoIPDL::_internal_set_videoinfo(const std::string& value) {
+inline void VideoDecoderInfoIPDL::_internal_set_a_videoinfo(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.videoinfo_.Set(value, GetArenaForAllocation());
+  _impl_.a_videoinfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* VideoDecoderInfoIPDL::_internal_mutable_videoinfo() {
+inline std::string* VideoDecoderInfoIPDL::_internal_mutable_a_videoinfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.videoinfo_.Mutable(GetArenaForAllocation());
+  return _impl_.a_videoinfo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* VideoDecoderInfoIPDL::release_videoinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.VideoDecoderInfoIPDL.videoInfo)
-  if (!_internal_has_videoinfo()) {
+inline std::string* VideoDecoderInfoIPDL::release_a_videoinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
+  if (!_internal_has_a_videoinfo()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.videoinfo_.Release();
+  auto* p = _impl_.a_videoinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.videoinfo_.IsDefault()) {
-    _impl_.videoinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_videoinfo_.IsDefault()) {
+    _impl_.a_videoinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void VideoDecoderInfoIPDL::set_allocated_videoinfo(std::string* videoinfo) {
-  if (videoinfo != nullptr) {
+inline void VideoDecoderInfoIPDL::set_allocated_a_videoinfo(std::string* a_videoinfo) {
+  if (a_videoinfo != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.videoinfo_.SetAllocated(videoinfo, GetArenaForAllocation());
+  _impl_.a_videoinfo_.SetAllocated(a_videoinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.videoinfo_.IsDefault()) {
-    _impl_.videoinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_videoinfo_.IsDefault()) {
+    _impl_.a_videoinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.VideoDecoderInfoIPDL.videoInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
 }
 
-// required float framerate = 2;
-inline bool VideoDecoderInfoIPDL::_internal_has_framerate() const {
+// required float a_framerate = 2;
+inline bool VideoDecoderInfoIPDL::_internal_has_a_framerate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool VideoDecoderInfoIPDL::has_framerate() const {
-  return _internal_has_framerate();
+inline bool VideoDecoderInfoIPDL::has_a_framerate() const {
+  return _internal_has_a_framerate();
 }
-inline void VideoDecoderInfoIPDL::clear_framerate() {
-  _impl_.framerate_ = 0;
+inline void VideoDecoderInfoIPDL::clear_a_framerate() {
+  _impl_.a_framerate_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline float VideoDecoderInfoIPDL::_internal_framerate() const {
-  return _impl_.framerate_;
+inline float VideoDecoderInfoIPDL::_internal_a_framerate() const {
+  return _impl_.a_framerate_;
 }
-inline float VideoDecoderInfoIPDL::framerate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.VideoDecoderInfoIPDL.framerate)
-  return _internal_framerate();
+inline float VideoDecoderInfoIPDL::a_framerate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.VideoDecoderInfoIPDL.a_framerate)
+  return _internal_a_framerate();
 }
-inline void VideoDecoderInfoIPDL::_internal_set_framerate(float value) {
+inline void VideoDecoderInfoIPDL::_internal_set_a_framerate(float value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.framerate_ = value;
+  _impl_.a_framerate_ = value;
 }
-inline void VideoDecoderInfoIPDL::set_framerate(float value) {
-  _internal_set_framerate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.VideoDecoderInfoIPDL.framerate)
+inline void VideoDecoderInfoIPDL::set_a_framerate(float value) {
+  _internal_set_a_framerate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.VideoDecoderInfoIPDL.a_framerate)
 }
 
 // -------------------------------------------------------------------
 
 // RemoteDecoderInfoIPDL
 
-// bytes mVAudioInfo = 1;
-inline bool RemoteDecoderInfoIPDL::_internal_has_mvaudioinfo() const {
-  return content_case() == kMVAudioInfo;
+// bytes a_mVAudioInfo = 1;
+inline bool RemoteDecoderInfoIPDL::_internal_has_a_mvaudioinfo() const {
+  return content_case() == kAMVAudioInfo;
 }
-inline bool RemoteDecoderInfoIPDL::has_mvaudioinfo() const {
-  return _internal_has_mvaudioinfo();
+inline bool RemoteDecoderInfoIPDL::has_a_mvaudioinfo() const {
+  return _internal_has_a_mvaudioinfo();
 }
-inline void RemoteDecoderInfoIPDL::set_has_mvaudioinfo() {
-  _impl_._oneof_case_[0] = kMVAudioInfo;
+inline void RemoteDecoderInfoIPDL::set_has_a_mvaudioinfo() {
+  _impl_._oneof_case_[0] = kAMVAudioInfo;
 }
-inline void RemoteDecoderInfoIPDL::clear_mvaudioinfo() {
-  if (_internal_has_mvaudioinfo()) {
-    _impl_.content_.mvaudioinfo_.Destroy();
+inline void RemoteDecoderInfoIPDL::clear_a_mvaudioinfo() {
+  if (_internal_has_a_mvaudioinfo()) {
+    _impl_.content_.a_mvaudioinfo_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& RemoteDecoderInfoIPDL::mvaudioinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteDecoderInfoIPDL.mVAudioInfo)
-  return _internal_mvaudioinfo();
+inline const std::string& RemoteDecoderInfoIPDL::a_mvaudioinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVAudioInfo)
+  return _internal_a_mvaudioinfo();
 }
 template <typename ArgT0, typename... ArgT>
-inline void RemoteDecoderInfoIPDL::set_mvaudioinfo(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvaudioinfo()) {
+inline void RemoteDecoderInfoIPDL::set_a_mvaudioinfo(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvaudioinfo()) {
     clear_content();
-    set_has_mvaudioinfo();
-    _impl_.content_.mvaudioinfo_.InitDefault();
+    set_has_a_mvaudioinfo();
+    _impl_.content_.a_mvaudioinfo_.InitDefault();
   }
-  _impl_.content_.mvaudioinfo_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.RemoteDecoderInfoIPDL.mVAudioInfo)
+  _impl_.content_.a_mvaudioinfo_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVAudioInfo)
 }
-inline std::string* RemoteDecoderInfoIPDL::mutable_mvaudioinfo() {
-  std::string* _s = _internal_mutable_mvaudioinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteDecoderInfoIPDL.mVAudioInfo)
+inline std::string* RemoteDecoderInfoIPDL::mutable_a_mvaudioinfo() {
+  std::string* _s = _internal_mutable_a_mvaudioinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVAudioInfo)
   return _s;
 }
-inline const std::string& RemoteDecoderInfoIPDL::_internal_mvaudioinfo() const {
-  if (_internal_has_mvaudioinfo()) {
-    return _impl_.content_.mvaudioinfo_.Get();
+inline const std::string& RemoteDecoderInfoIPDL::_internal_a_mvaudioinfo() const {
+  if (_internal_has_a_mvaudioinfo()) {
+    return _impl_.content_.a_mvaudioinfo_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void RemoteDecoderInfoIPDL::_internal_set_mvaudioinfo(const std::string& value) {
-  if (!_internal_has_mvaudioinfo()) {
+inline void RemoteDecoderInfoIPDL::_internal_set_a_mvaudioinfo(const std::string& value) {
+  if (!_internal_has_a_mvaudioinfo()) {
     clear_content();
-    set_has_mvaudioinfo();
-    _impl_.content_.mvaudioinfo_.InitDefault();
+    set_has_a_mvaudioinfo();
+    _impl_.content_.a_mvaudioinfo_.InitDefault();
   }
-  _impl_.content_.mvaudioinfo_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvaudioinfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteDecoderInfoIPDL::_internal_mutable_mvaudioinfo() {
-  if (!_internal_has_mvaudioinfo()) {
+inline std::string* RemoteDecoderInfoIPDL::_internal_mutable_a_mvaudioinfo() {
+  if (!_internal_has_a_mvaudioinfo()) {
     clear_content();
-    set_has_mvaudioinfo();
-    _impl_.content_.mvaudioinfo_.InitDefault();
+    set_has_a_mvaudioinfo();
+    _impl_.content_.a_mvaudioinfo_.InitDefault();
   }
-  return _impl_.content_.mvaudioinfo_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvaudioinfo_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* RemoteDecoderInfoIPDL::release_mvaudioinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteDecoderInfoIPDL.mVAudioInfo)
-  if (_internal_has_mvaudioinfo()) {
+inline std::string* RemoteDecoderInfoIPDL::release_a_mvaudioinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVAudioInfo)
+  if (_internal_has_a_mvaudioinfo()) {
     clear_has_content();
-    return _impl_.content_.mvaudioinfo_.Release();
+    return _impl_.content_.a_mvaudioinfo_.Release();
   } else {
     return nullptr;
   }
 }
-inline void RemoteDecoderInfoIPDL::set_allocated_mvaudioinfo(std::string* mvaudioinfo) {
+inline void RemoteDecoderInfoIPDL::set_allocated_a_mvaudioinfo(std::string* a_mvaudioinfo) {
   if (has_content()) {
     clear_content();
   }
-  if (mvaudioinfo != nullptr) {
-    set_has_mvaudioinfo();
-    _impl_.content_.mvaudioinfo_.InitAllocated(mvaudioinfo, GetArenaForAllocation());
+  if (a_mvaudioinfo != nullptr) {
+    set_has_a_mvaudioinfo();
+    _impl_.content_.a_mvaudioinfo_.InitAllocated(a_mvaudioinfo, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.RemoteDecoderInfoIPDL.mVAudioInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVAudioInfo)
 }
 
-// .protobuf.mozilla.VideoDecoderInfoIPDL mVVideoDecoderInfoIPDL = 2;
-inline bool RemoteDecoderInfoIPDL::_internal_has_mvvideodecoderinfoipdl() const {
-  return content_case() == kMVVideoDecoderInfoIPDL;
+// .protobuf.mozilla.VideoDecoderInfoIPDL a_mVVideoDecoderInfoIPDL = 2;
+inline bool RemoteDecoderInfoIPDL::_internal_has_a_mvvideodecoderinfoipdl() const {
+  return content_case() == kAMVVideoDecoderInfoIPDL;
 }
-inline bool RemoteDecoderInfoIPDL::has_mvvideodecoderinfoipdl() const {
-  return _internal_has_mvvideodecoderinfoipdl();
+inline bool RemoteDecoderInfoIPDL::has_a_mvvideodecoderinfoipdl() const {
+  return _internal_has_a_mvvideodecoderinfoipdl();
 }
-inline void RemoteDecoderInfoIPDL::set_has_mvvideodecoderinfoipdl() {
-  _impl_._oneof_case_[0] = kMVVideoDecoderInfoIPDL;
+inline void RemoteDecoderInfoIPDL::set_has_a_mvvideodecoderinfoipdl() {
+  _impl_._oneof_case_[0] = kAMVVideoDecoderInfoIPDL;
 }
-inline void RemoteDecoderInfoIPDL::clear_mvvideodecoderinfoipdl() {
-  if (_internal_has_mvvideodecoderinfoipdl()) {
+inline void RemoteDecoderInfoIPDL::clear_a_mvvideodecoderinfoipdl() {
+  if (_internal_has_a_mvvideodecoderinfoipdl()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvvideodecoderinfoipdl_;
+      delete _impl_.content_.a_mvvideodecoderinfoipdl_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::release_mvvideodecoderinfoipdl() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteDecoderInfoIPDL.mVVideoDecoderInfoIPDL)
-  if (_internal_has_mvvideodecoderinfoipdl()) {
+inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::release_a_mvvideodecoderinfoipdl() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVVideoDecoderInfoIPDL)
+  if (_internal_has_a_mvvideodecoderinfoipdl()) {
     clear_has_content();
-    ::protobuf::mozilla::VideoDecoderInfoIPDL* temp = _impl_.content_.mvvideodecoderinfoipdl_;
+    ::protobuf::mozilla::VideoDecoderInfoIPDL* temp = _impl_.content_.a_mvvideodecoderinfoipdl_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvvideodecoderinfoipdl_ = nullptr;
+    _impl_.content_.a_mvvideodecoderinfoipdl_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::VideoDecoderInfoIPDL& RemoteDecoderInfoIPDL::_internal_mvvideodecoderinfoipdl() const {
-  return _internal_has_mvvideodecoderinfoipdl()
-      ? *_impl_.content_.mvvideodecoderinfoipdl_
+inline const ::protobuf::mozilla::VideoDecoderInfoIPDL& RemoteDecoderInfoIPDL::_internal_a_mvvideodecoderinfoipdl() const {
+  return _internal_has_a_mvvideodecoderinfoipdl()
+      ? *_impl_.content_.a_mvvideodecoderinfoipdl_
       : reinterpret_cast< ::protobuf::mozilla::VideoDecoderInfoIPDL&>(::protobuf::mozilla::_VideoDecoderInfoIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::VideoDecoderInfoIPDL& RemoteDecoderInfoIPDL::mvvideodecoderinfoipdl() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteDecoderInfoIPDL.mVVideoDecoderInfoIPDL)
-  return _internal_mvvideodecoderinfoipdl();
+inline const ::protobuf::mozilla::VideoDecoderInfoIPDL& RemoteDecoderInfoIPDL::a_mvvideodecoderinfoipdl() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVVideoDecoderInfoIPDL)
+  return _internal_a_mvvideodecoderinfoipdl();
 }
-inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::unsafe_arena_release_mvvideodecoderinfoipdl() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.RemoteDecoderInfoIPDL.mVVideoDecoderInfoIPDL)
-  if (_internal_has_mvvideodecoderinfoipdl()) {
+inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::unsafe_arena_release_a_mvvideodecoderinfoipdl() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVVideoDecoderInfoIPDL)
+  if (_internal_has_a_mvvideodecoderinfoipdl()) {
     clear_has_content();
-    ::protobuf::mozilla::VideoDecoderInfoIPDL* temp = _impl_.content_.mvvideodecoderinfoipdl_;
-    _impl_.content_.mvvideodecoderinfoipdl_ = nullptr;
+    ::protobuf::mozilla::VideoDecoderInfoIPDL* temp = _impl_.content_.a_mvvideodecoderinfoipdl_;
+    _impl_.content_.a_mvvideodecoderinfoipdl_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RemoteDecoderInfoIPDL::unsafe_arena_set_allocated_mvvideodecoderinfoipdl(::protobuf::mozilla::VideoDecoderInfoIPDL* mvvideodecoderinfoipdl) {
+inline void RemoteDecoderInfoIPDL::unsafe_arena_set_allocated_a_mvvideodecoderinfoipdl(::protobuf::mozilla::VideoDecoderInfoIPDL* a_mvvideodecoderinfoipdl) {
   clear_content();
-  if (mvvideodecoderinfoipdl) {
-    set_has_mvvideodecoderinfoipdl();
-    _impl_.content_.mvvideodecoderinfoipdl_ = mvvideodecoderinfoipdl;
+  if (a_mvvideodecoderinfoipdl) {
+    set_has_a_mvvideodecoderinfoipdl();
+    _impl_.content_.a_mvvideodecoderinfoipdl_ = a_mvvideodecoderinfoipdl;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.RemoteDecoderInfoIPDL.mVVideoDecoderInfoIPDL)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVVideoDecoderInfoIPDL)
 }
-inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::_internal_mutable_mvvideodecoderinfoipdl() {
-  if (!_internal_has_mvvideodecoderinfoipdl()) {
+inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::_internal_mutable_a_mvvideodecoderinfoipdl() {
+  if (!_internal_has_a_mvvideodecoderinfoipdl()) {
     clear_content();
-    set_has_mvvideodecoderinfoipdl();
-    _impl_.content_.mvvideodecoderinfoipdl_ = CreateMaybeMessage< ::protobuf::mozilla::VideoDecoderInfoIPDL >(GetArenaForAllocation());
+    set_has_a_mvvideodecoderinfoipdl();
+    _impl_.content_.a_mvvideodecoderinfoipdl_ = CreateMaybeMessage< ::protobuf::mozilla::VideoDecoderInfoIPDL >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvvideodecoderinfoipdl_;
+  return _impl_.content_.a_mvvideodecoderinfoipdl_;
 }
-inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::mutable_mvvideodecoderinfoipdl() {
-  ::protobuf::mozilla::VideoDecoderInfoIPDL* _msg = _internal_mutable_mvvideodecoderinfoipdl();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteDecoderInfoIPDL.mVVideoDecoderInfoIPDL)
+inline ::protobuf::mozilla::VideoDecoderInfoIPDL* RemoteDecoderInfoIPDL::mutable_a_mvvideodecoderinfoipdl() {
+  ::protobuf::mozilla::VideoDecoderInfoIPDL* _msg = _internal_mutable_a_mvvideodecoderinfoipdl();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteDecoderInfoIPDL.a_mVVideoDecoderInfoIPDL)
   return _msg;
 }
 

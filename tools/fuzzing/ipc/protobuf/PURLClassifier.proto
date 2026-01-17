@@ -17,8 +17,8 @@ import "PURLClassifierInfo.proto";
 
 // Message declarations
 message Msg___delete__ {
-  optional protobuf.mozilla.dom.ClassifierInfo info = 1;
-  required bytes errorCode = 2;
+  optional protobuf.mozilla.dom.ClassifierInfo a_info = 1;
+  required bytes a_errorCode = 2;
 }
 
 message Reply___delete__ {

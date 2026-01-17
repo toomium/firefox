@@ -170,25 +170,25 @@ class ServiceWorkerConfiguration final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kServiceWorkerRegistrationsFieldNumber = 1,
+    kAServiceWorkerRegistrationsFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData serviceWorkerRegistrations = 1;
-  int serviceworkerregistrations_size() const;
+  // repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData a_serviceWorkerRegistrations = 1;
+  int a_serviceworkerregistrations_size() const;
   private:
-  int _internal_serviceworkerregistrations_size() const;
+  int _internal_a_serviceworkerregistrations_size() const;
   public:
-  void clear_serviceworkerregistrations();
-  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* mutable_serviceworkerregistrations(int index);
+  void clear_a_serviceworkerregistrations();
+  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* mutable_a_serviceworkerregistrations(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ServiceWorkerRegistrationData >*
-      mutable_serviceworkerregistrations();
+      mutable_a_serviceworkerregistrations();
   private:
-  const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& _internal_serviceworkerregistrations(int index) const;
-  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* _internal_add_serviceworkerregistrations();
+  const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& _internal_a_serviceworkerregistrations(int index) const;
+  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* _internal_add_a_serviceworkerregistrations();
   public:
-  const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& serviceworkerregistrations(int index) const;
-  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* add_serviceworkerregistrations();
+  const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& a_serviceworkerregistrations(int index) const;
+  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* add_a_serviceworkerregistrations();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ServiceWorkerRegistrationData >&
-      serviceworkerregistrations() const;
+      a_serviceworkerregistrations() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.ServiceWorkerConfiguration)
  private:
@@ -198,7 +198,7 @@ class ServiceWorkerConfiguration final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ServiceWorkerRegistrationData > serviceworkerregistrations_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ServiceWorkerRegistrationData > a_serviceworkerregistrations_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -215,41 +215,41 @@ class ServiceWorkerConfiguration final :
 #endif  // __GNUC__
 // ServiceWorkerConfiguration
 
-// repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData serviceWorkerRegistrations = 1;
-inline int ServiceWorkerConfiguration::_internal_serviceworkerregistrations_size() const {
-  return _impl_.serviceworkerregistrations_.size();
+// repeated .protobuf.mozilla.dom.ServiceWorkerRegistrationData a_serviceWorkerRegistrations = 1;
+inline int ServiceWorkerConfiguration::_internal_a_serviceworkerregistrations_size() const {
+  return _impl_.a_serviceworkerregistrations_.size();
 }
-inline int ServiceWorkerConfiguration::serviceworkerregistrations_size() const {
-  return _internal_serviceworkerregistrations_size();
+inline int ServiceWorkerConfiguration::a_serviceworkerregistrations_size() const {
+  return _internal_a_serviceworkerregistrations_size();
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* ServiceWorkerConfiguration::mutable_serviceworkerregistrations(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerConfiguration.serviceWorkerRegistrations)
-  return _impl_.serviceworkerregistrations_.Mutable(index);
+inline ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* ServiceWorkerConfiguration::mutable_a_serviceworkerregistrations(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.ServiceWorkerConfiguration.a_serviceWorkerRegistrations)
+  return _impl_.a_serviceworkerregistrations_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ServiceWorkerRegistrationData >*
-ServiceWorkerConfiguration::mutable_serviceworkerregistrations() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.ServiceWorkerConfiguration.serviceWorkerRegistrations)
-  return &_impl_.serviceworkerregistrations_;
+ServiceWorkerConfiguration::mutable_a_serviceworkerregistrations() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.ServiceWorkerConfiguration.a_serviceWorkerRegistrations)
+  return &_impl_.a_serviceworkerregistrations_;
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& ServiceWorkerConfiguration::_internal_serviceworkerregistrations(int index) const {
-  return _impl_.serviceworkerregistrations_.Get(index);
+inline const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& ServiceWorkerConfiguration::_internal_a_serviceworkerregistrations(int index) const {
+  return _impl_.a_serviceworkerregistrations_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& ServiceWorkerConfiguration::serviceworkerregistrations(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerConfiguration.serviceWorkerRegistrations)
-  return _internal_serviceworkerregistrations(index);
+inline const ::protobuf::mozilla::dom::ServiceWorkerRegistrationData& ServiceWorkerConfiguration::a_serviceworkerregistrations(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ServiceWorkerConfiguration.a_serviceWorkerRegistrations)
+  return _internal_a_serviceworkerregistrations(index);
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* ServiceWorkerConfiguration::_internal_add_serviceworkerregistrations() {
-  return _impl_.serviceworkerregistrations_.Add();
+inline ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* ServiceWorkerConfiguration::_internal_add_a_serviceworkerregistrations() {
+  return _impl_.a_serviceworkerregistrations_.Add();
 }
-inline ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* ServiceWorkerConfiguration::add_serviceworkerregistrations() {
-  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* _add = _internal_add_serviceworkerregistrations();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.ServiceWorkerConfiguration.serviceWorkerRegistrations)
+inline ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* ServiceWorkerConfiguration::add_a_serviceworkerregistrations() {
+  ::protobuf::mozilla::dom::ServiceWorkerRegistrationData* _add = _internal_add_a_serviceworkerregistrations();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.ServiceWorkerConfiguration.a_serviceWorkerRegistrations)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ServiceWorkerRegistrationData >&
-ServiceWorkerConfiguration::serviceworkerregistrations() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.ServiceWorkerConfiguration.serviceWorkerRegistrations)
-  return _impl_.serviceworkerregistrations_;
+ServiceWorkerConfiguration::a_serviceworkerregistrations() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.ServiceWorkerConfiguration.a_serviceWorkerRegistrations)
+  return _impl_.a_serviceworkerregistrations_;
 }
 
 #ifdef __GNUC__

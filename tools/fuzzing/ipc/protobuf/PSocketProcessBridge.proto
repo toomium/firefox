@@ -16,12 +16,12 @@ package protobuf.mozilla.net.PSocketProcessBridge;
 
 // Message declarations
 message Msg_InitBackgroundDataBridge {
-  required bytes aEndpoint = 1;
-  required uint64 aChannelID = 2;
+  required bytes a_aEndpoint = 1;
+  required uint64 a_aChannelID = 2;
 }
 
 message Msg_InitMediaTransport {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 // Parameter mappings stats:

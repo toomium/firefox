@@ -20,7 +20,7 @@ message Msg_Shutdown {
 }
 
 message Msg_Send {
-  repeated protobuf.mozilla.dom.MIDIMessage msg = 1;
+  repeated protobuf.mozilla.dom.MIDIMessage a_msg = 1;
 }
 
 message Msg_Open {
@@ -33,12 +33,12 @@ message Msg_Clear {
 }
 
 message Msg_Receive {
-  repeated protobuf.mozilla.dom.MIDIMessage msg = 1;
+  repeated protobuf.mozilla.dom.MIDIMessage a_msg = 1;
 }
 
 message Msg_UpdateStatus {
-  required uint32 deviceState = 1;
-  required uint32 connectionState = 2;
+  required uint32 a_deviceState = 1;
+  required uint32 a_connectionState = 2;
 }
 
 // Parameter mappings stats:

@@ -16,11 +16,11 @@ package protobuf.mozilla.dom.PFileSystemWritableFileStream;
 
 // Message declarations
 message Msg_Close {
-  required bool aAbort = 1;
+  required bool a_aAbort = 1;
 }
 
 message Reply_Close {
-  required bytes ok = 1;
+  required bytes a_ok = 1;
 }
 
 message Msg___delete__ {

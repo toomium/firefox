@@ -270,38 +270,38 @@ class Msg_RequestFocus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACallerTypeFieldNumber = 2,
-    kCanRaiseFieldNumber = 1,
+    kAACallerTypeFieldNumber = 2,
+    kACanRaiseFieldNumber = 1,
   };
-  // required bytes aCallerType = 2;
-  bool has_acallertype() const;
+  // required bytes a_aCallerType = 2;
+  bool has_a_acallertype() const;
   private:
-  bool _internal_has_acallertype() const;
+  bool _internal_has_a_acallertype() const;
   public:
-  void clear_acallertype();
-  const std::string& acallertype() const;
+  void clear_a_acallertype();
+  const std::string& a_acallertype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acallertype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acallertype();
-  PROTOBUF_NODISCARD std::string* release_acallertype();
-  void set_allocated_acallertype(std::string* acallertype);
+  void set_a_acallertype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acallertype();
+  PROTOBUF_NODISCARD std::string* release_a_acallertype();
+  void set_allocated_a_acallertype(std::string* a_acallertype);
   private:
-  const std::string& _internal_acallertype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acallertype(const std::string& value);
-  std::string* _internal_mutable_acallertype();
+  const std::string& _internal_a_acallertype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acallertype(const std::string& value);
+  std::string* _internal_mutable_a_acallertype();
   public:
 
-  // required bool canRaise = 1;
-  bool has_canraise() const;
+  // required bool a_canRaise = 1;
+  bool has_a_canraise() const;
   private:
-  bool _internal_has_canraise() const;
+  bool _internal_has_a_canraise() const;
   public:
-  void clear_canraise();
-  bool canraise() const;
-  void set_canraise(bool value);
+  void clear_a_canraise();
+  bool a_canraise() const;
+  void set_a_canraise(bool value);
   private:
-  bool _internal_canraise() const;
-  void _internal_set_canraise(bool value);
+  bool _internal_a_canraise() const;
+  void _internal_set_a_canraise(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus)
@@ -317,8 +317,8 @@ class Msg_RequestFocus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acallertype_;
-    bool canraise_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acallertype_;
+    bool a_canraise_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -435,33 +435,33 @@ class Msg_MoveFocus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kForwardFieldNumber = 1,
-    kForDocumentNavigationFieldNumber = 2,
+    kAForwardFieldNumber = 1,
+    kAForDocumentNavigationFieldNumber = 2,
   };
-  // required bool forward = 1;
-  bool has_forward() const;
+  // required bool a_forward = 1;
+  bool has_a_forward() const;
   private:
-  bool _internal_has_forward() const;
+  bool _internal_has_a_forward() const;
   public:
-  void clear_forward();
-  bool forward() const;
-  void set_forward(bool value);
+  void clear_a_forward();
+  bool a_forward() const;
+  void set_a_forward(bool value);
   private:
-  bool _internal_forward() const;
-  void _internal_set_forward(bool value);
+  bool _internal_a_forward() const;
+  void _internal_set_a_forward(bool value);
   public:
 
-  // required bool forDocumentNavigation = 2;
-  bool has_fordocumentnavigation() const;
+  // required bool a_forDocumentNavigation = 2;
+  bool has_a_fordocumentnavigation() const;
   private:
-  bool _internal_has_fordocumentnavigation() const;
+  bool _internal_has_a_fordocumentnavigation() const;
   public:
-  void clear_fordocumentnavigation();
-  bool fordocumentnavigation() const;
-  void set_fordocumentnavigation(bool value);
+  void clear_a_fordocumentnavigation();
+  bool a_fordocumentnavigation() const;
+  void set_a_fordocumentnavigation(bool value);
   private:
-  bool _internal_fordocumentnavigation() const;
-  void _internal_set_fordocumentnavigation(bool value);
+  bool _internal_a_fordocumentnavigation() const;
+  void _internal_set_a_fordocumentnavigation(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus)
@@ -477,8 +477,8 @@ class Msg_MoveFocus final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool forward_;
-    bool fordocumentnavigation_;
+    bool a_forward_;
+    bool a_fordocumentnavigation_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -595,24 +595,24 @@ class Msg_MaybeFireEmbedderLoadEvents final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFireEventAtEmbeddingElementFieldNumber = 1,
+    kAAFireEventAtEmbeddingElementFieldNumber = 1,
   };
-  // required bytes aFireEventAtEmbeddingElement = 1;
-  bool has_afireeventatembeddingelement() const;
+  // required bytes a_aFireEventAtEmbeddingElement = 1;
+  bool has_a_afireeventatembeddingelement() const;
   private:
-  bool _internal_has_afireeventatembeddingelement() const;
+  bool _internal_has_a_afireeventatembeddingelement() const;
   public:
-  void clear_afireeventatembeddingelement();
-  const std::string& afireeventatembeddingelement() const;
+  void clear_a_afireeventatembeddingelement();
+  const std::string& a_afireeventatembeddingelement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_afireeventatembeddingelement(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_afireeventatembeddingelement();
-  PROTOBUF_NODISCARD std::string* release_afireeventatembeddingelement();
-  void set_allocated_afireeventatembeddingelement(std::string* afireeventatembeddingelement);
+  void set_a_afireeventatembeddingelement(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_afireeventatembeddingelement();
+  PROTOBUF_NODISCARD std::string* release_a_afireeventatembeddingelement();
+  void set_allocated_a_afireeventatembeddingelement(std::string* a_afireeventatembeddingelement);
   private:
-  const std::string& _internal_afireeventatembeddingelement() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_afireeventatembeddingelement(const std::string& value);
-  std::string* _internal_mutable_afireeventatembeddingelement();
+  const std::string& _internal_a_afireeventatembeddingelement() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_afireeventatembeddingelement(const std::string& value);
+  std::string* _internal_mutable_a_afireeventatembeddingelement();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents)
@@ -625,7 +625,7 @@ class Msg_MaybeFireEmbedderLoadEvents final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr afireeventatembeddingelement_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afireeventatembeddingelement_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -742,95 +742,95 @@ class Msg_ScrollRectIntoView final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARectFieldNumber = 1,
-    kAVerticalFieldNumber = 2,
-    kAHorizontalFieldNumber = 3,
-    kAScrollFlagsFieldNumber = 4,
-    kAAppUnitsPerDevPixelFieldNumber = 5,
+    kAARectFieldNumber = 1,
+    kAAVerticalFieldNumber = 2,
+    kAAHorizontalFieldNumber = 3,
+    kAAScrollFlagsFieldNumber = 4,
+    kAAAppUnitsPerDevPixelFieldNumber = 5,
   };
-  // required bytes aRect = 1;
-  bool has_arect() const;
+  // required bytes a_aRect = 1;
+  bool has_a_arect() const;
   private:
-  bool _internal_has_arect() const;
+  bool _internal_has_a_arect() const;
   public:
-  void clear_arect();
-  const std::string& arect() const;
+  void clear_a_arect();
+  const std::string& a_arect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arect(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arect();
-  PROTOBUF_NODISCARD std::string* release_arect();
-  void set_allocated_arect(std::string* arect);
+  void set_a_arect(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arect();
+  PROTOBUF_NODISCARD std::string* release_a_arect();
+  void set_allocated_a_arect(std::string* a_arect);
   private:
-  const std::string& _internal_arect() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arect(const std::string& value);
-  std::string* _internal_mutable_arect();
+  const std::string& _internal_a_arect() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arect(const std::string& value);
+  std::string* _internal_mutable_a_arect();
   public:
 
-  // required bytes aVertical = 2;
-  bool has_avertical() const;
+  // required bytes a_aVertical = 2;
+  bool has_a_avertical() const;
   private:
-  bool _internal_has_avertical() const;
+  bool _internal_has_a_avertical() const;
   public:
-  void clear_avertical();
-  const std::string& avertical() const;
+  void clear_a_avertical();
+  const std::string& a_avertical() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_avertical(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_avertical();
-  PROTOBUF_NODISCARD std::string* release_avertical();
-  void set_allocated_avertical(std::string* avertical);
+  void set_a_avertical(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_avertical();
+  PROTOBUF_NODISCARD std::string* release_a_avertical();
+  void set_allocated_a_avertical(std::string* a_avertical);
   private:
-  const std::string& _internal_avertical() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_avertical(const std::string& value);
-  std::string* _internal_mutable_avertical();
+  const std::string& _internal_a_avertical() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_avertical(const std::string& value);
+  std::string* _internal_mutable_a_avertical();
   public:
 
-  // required bytes aHorizontal = 3;
-  bool has_ahorizontal() const;
+  // required bytes a_aHorizontal = 3;
+  bool has_a_ahorizontal() const;
   private:
-  bool _internal_has_ahorizontal() const;
+  bool _internal_has_a_ahorizontal() const;
   public:
-  void clear_ahorizontal();
-  const std::string& ahorizontal() const;
+  void clear_a_ahorizontal();
+  const std::string& a_ahorizontal() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ahorizontal(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ahorizontal();
-  PROTOBUF_NODISCARD std::string* release_ahorizontal();
-  void set_allocated_ahorizontal(std::string* ahorizontal);
+  void set_a_ahorizontal(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ahorizontal();
+  PROTOBUF_NODISCARD std::string* release_a_ahorizontal();
+  void set_allocated_a_ahorizontal(std::string* a_ahorizontal);
   private:
-  const std::string& _internal_ahorizontal() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ahorizontal(const std::string& value);
-  std::string* _internal_mutable_ahorizontal();
+  const std::string& _internal_a_ahorizontal() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ahorizontal(const std::string& value);
+  std::string* _internal_mutable_a_ahorizontal();
   public:
 
-  // required bytes aScrollFlags = 4;
-  bool has_ascrollflags() const;
+  // required bytes a_aScrollFlags = 4;
+  bool has_a_ascrollflags() const;
   private:
-  bool _internal_has_ascrollflags() const;
+  bool _internal_has_a_ascrollflags() const;
   public:
-  void clear_ascrollflags();
-  const std::string& ascrollflags() const;
+  void clear_a_ascrollflags();
+  const std::string& a_ascrollflags() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ascrollflags(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ascrollflags();
-  PROTOBUF_NODISCARD std::string* release_ascrollflags();
-  void set_allocated_ascrollflags(std::string* ascrollflags);
+  void set_a_ascrollflags(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ascrollflags();
+  PROTOBUF_NODISCARD std::string* release_a_ascrollflags();
+  void set_allocated_a_ascrollflags(std::string* a_ascrollflags);
   private:
-  const std::string& _internal_ascrollflags() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ascrollflags(const std::string& value);
-  std::string* _internal_mutable_ascrollflags();
+  const std::string& _internal_a_ascrollflags() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ascrollflags(const std::string& value);
+  std::string* _internal_mutable_a_ascrollflags();
   public:
 
-  // required sint32 aAppUnitsPerDevPixel = 5;
-  bool has_aappunitsperdevpixel() const;
+  // required sint32 a_aAppUnitsPerDevPixel = 5;
+  bool has_a_aappunitsperdevpixel() const;
   private:
-  bool _internal_has_aappunitsperdevpixel() const;
+  bool _internal_has_a_aappunitsperdevpixel() const;
   public:
-  void clear_aappunitsperdevpixel();
-  int32_t aappunitsperdevpixel() const;
-  void set_aappunitsperdevpixel(int32_t value);
+  void clear_a_aappunitsperdevpixel();
+  int32_t a_aappunitsperdevpixel() const;
+  void set_a_aappunitsperdevpixel(int32_t value);
   private:
-  int32_t _internal_aappunitsperdevpixel() const;
-  void _internal_set_aappunitsperdevpixel(int32_t value);
+  int32_t _internal_a_aappunitsperdevpixel() const;
+  void _internal_set_a_aappunitsperdevpixel(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView)
@@ -846,11 +846,11 @@ class Msg_ScrollRectIntoView final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arect_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr avertical_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ahorizontal_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ascrollflags_;
-    int32_t aappunitsperdevpixel_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arect_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_avertical_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahorizontal_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollflags_;
+    int32_t a_aappunitsperdevpixel_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -1091,43 +1091,43 @@ class Msg_IntrinsicSizeOrRatioChanged final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIntrinsicSizeFieldNumber = 1,
-    kAIntrinsicRatioFieldNumber = 2,
+    kAAIntrinsicSizeFieldNumber = 1,
+    kAAIntrinsicRatioFieldNumber = 2,
   };
-  // optional bytes aIntrinsicSize = 1;
-  bool has_aintrinsicsize() const;
+  // optional bytes a_aIntrinsicSize = 1;
+  bool has_a_aintrinsicsize() const;
   private:
-  bool _internal_has_aintrinsicsize() const;
+  bool _internal_has_a_aintrinsicsize() const;
   public:
-  void clear_aintrinsicsize();
-  const std::string& aintrinsicsize() const;
+  void clear_a_aintrinsicsize();
+  const std::string& a_aintrinsicsize() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aintrinsicsize(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aintrinsicsize();
-  PROTOBUF_NODISCARD std::string* release_aintrinsicsize();
-  void set_allocated_aintrinsicsize(std::string* aintrinsicsize);
+  void set_a_aintrinsicsize(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aintrinsicsize();
+  PROTOBUF_NODISCARD std::string* release_a_aintrinsicsize();
+  void set_allocated_a_aintrinsicsize(std::string* a_aintrinsicsize);
   private:
-  const std::string& _internal_aintrinsicsize() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aintrinsicsize(const std::string& value);
-  std::string* _internal_mutable_aintrinsicsize();
+  const std::string& _internal_a_aintrinsicsize() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aintrinsicsize(const std::string& value);
+  std::string* _internal_mutable_a_aintrinsicsize();
   public:
 
-  // optional bytes aIntrinsicRatio = 2;
-  bool has_aintrinsicratio() const;
+  // optional bytes a_aIntrinsicRatio = 2;
+  bool has_a_aintrinsicratio() const;
   private:
-  bool _internal_has_aintrinsicratio() const;
+  bool _internal_has_a_aintrinsicratio() const;
   public:
-  void clear_aintrinsicratio();
-  const std::string& aintrinsicratio() const;
+  void clear_a_aintrinsicratio();
+  const std::string& a_aintrinsicratio() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aintrinsicratio(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aintrinsicratio();
-  PROTOBUF_NODISCARD std::string* release_aintrinsicratio();
-  void set_allocated_aintrinsicratio(std::string* aintrinsicratio);
+  void set_a_aintrinsicratio(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aintrinsicratio();
+  PROTOBUF_NODISCARD std::string* release_a_aintrinsicratio();
+  void set_allocated_a_aintrinsicratio(std::string* a_aintrinsicratio);
   private:
-  const std::string& _internal_aintrinsicratio() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aintrinsicratio(const std::string& value);
-  std::string* _internal_mutable_aintrinsicratio();
+  const std::string& _internal_a_aintrinsicratio() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aintrinsicratio(const std::string& value);
+  std::string* _internal_mutable_a_aintrinsicratio();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged)
@@ -1140,8 +1140,8 @@ class Msg_IntrinsicSizeOrRatioChanged final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aintrinsicsize_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aintrinsicratio_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aintrinsicsize_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aintrinsicratio_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -1258,24 +1258,24 @@ class Msg_ImageLoadComplete final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAResultFieldNumber = 1,
+    kAAResultFieldNumber = 1,
   };
-  // required bytes aResult = 1;
-  bool has_aresult() const;
+  // required bytes a_aResult = 1;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const std::string& aresult() const;
+  void clear_a_aresult();
+  const std::string& a_aresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aresult();
-  PROTOBUF_NODISCARD std::string* release_aresult();
-  void set_allocated_aresult(std::string* aresult);
+  void set_a_aresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aresult();
+  PROTOBUF_NODISCARD std::string* release_a_aresult();
+  void set_allocated_a_aresult(std::string* a_aresult);
   private:
-  const std::string& _internal_aresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aresult(const std::string& value);
-  std::string* _internal_mutable_aresult();
+  const std::string& _internal_a_aresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aresult(const std::string& value);
+  std::string* _internal_mutable_a_aresult();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete)
@@ -1288,7 +1288,7 @@ class Msg_ImageLoadComplete final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aresult_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -1777,24 +1777,24 @@ class Msg_LoadURL final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kALoadStateFieldNumber = 1,
+    kAALoadStateFieldNumber = 1,
   };
-  // required bytes aLoadState = 1;
-  bool has_aloadstate() const;
+  // required bytes a_aLoadState = 1;
+  bool has_a_aloadstate() const;
   private:
-  bool _internal_has_aloadstate() const;
+  bool _internal_has_a_aloadstate() const;
   public:
-  void clear_aloadstate();
-  const std::string& aloadstate() const;
+  void clear_a_aloadstate();
+  const std::string& a_aloadstate() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aloadstate(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aloadstate();
-  PROTOBUF_NODISCARD std::string* release_aloadstate();
-  void set_allocated_aloadstate(std::string* aloadstate);
+  void set_a_aloadstate(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aloadstate();
+  PROTOBUF_NODISCARD std::string* release_a_aloadstate();
+  void set_allocated_a_aloadstate(std::string* a_aloadstate);
   private:
-  const std::string& _internal_aloadstate() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aloadstate(const std::string& value);
-  std::string* _internal_mutable_aloadstate();
+  const std::string& _internal_a_aloadstate() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aloadstate(const std::string& value);
+  std::string* _internal_mutable_a_aloadstate();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL)
@@ -1807,7 +1807,7 @@ class Msg_LoadURL final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aloadstate_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aloadstate_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -1924,19 +1924,19 @@ class Msg_ResumeLoad final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPendingSwitchIDFieldNumber = 1,
+    kAAPendingSwitchIDFieldNumber = 1,
   };
-  // required uint64 aPendingSwitchID = 1;
-  bool has_apendingswitchid() const;
+  // required uint64 a_aPendingSwitchID = 1;
+  bool has_a_apendingswitchid() const;
   private:
-  bool _internal_has_apendingswitchid() const;
+  bool _internal_has_a_apendingswitchid() const;
   public:
-  void clear_apendingswitchid();
-  uint64_t apendingswitchid() const;
-  void set_apendingswitchid(uint64_t value);
+  void clear_a_apendingswitchid();
+  uint64_t a_apendingswitchid() const;
+  void set_a_apendingswitchid(uint64_t value);
   private:
-  uint64_t _internal_apendingswitchid() const;
-  void _internal_set_apendingswitchid(uint64_t value);
+  uint64_t _internal_a_apendingswitchid() const;
+  void _internal_set_a_apendingswitchid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_ResumeLoad)
@@ -1949,7 +1949,7 @@ class Msg_ResumeLoad final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t apendingswitchid_;
+    uint64_t a_apendingswitchid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2066,25 +2066,25 @@ class Msg_Show final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kInfoFieldNumber = 1,
+    kAInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.OwnerShowInfo info = 1;
-  bool has_info() const;
+  // required .protobuf.mozilla.dom.OwnerShowInfo a_info = 1;
+  bool has_a_info() const;
   private:
-  bool _internal_has_info() const;
+  bool _internal_has_a_info() const;
   public:
-  void clear_info();
-  const ::protobuf::mozilla::dom::OwnerShowInfo& info() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::OwnerShowInfo* release_info();
-  ::protobuf::mozilla::dom::OwnerShowInfo* mutable_info();
-  void set_allocated_info(::protobuf::mozilla::dom::OwnerShowInfo* info);
+  void clear_a_info();
+  const ::protobuf::mozilla::dom::OwnerShowInfo& a_info() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::OwnerShowInfo* release_a_info();
+  ::protobuf::mozilla::dom::OwnerShowInfo* mutable_a_info();
+  void set_allocated_a_info(::protobuf::mozilla::dom::OwnerShowInfo* a_info);
   private:
-  const ::protobuf::mozilla::dom::OwnerShowInfo& _internal_info() const;
-  ::protobuf::mozilla::dom::OwnerShowInfo* _internal_mutable_info();
+  const ::protobuf::mozilla::dom::OwnerShowInfo& _internal_a_info() const;
+  ::protobuf::mozilla::dom::OwnerShowInfo* _internal_mutable_a_info();
   public:
-  void unsafe_arena_set_allocated_info(
-      ::protobuf::mozilla::dom::OwnerShowInfo* info);
-  ::protobuf::mozilla::dom::OwnerShowInfo* unsafe_arena_release_info();
+  void unsafe_arena_set_allocated_a_info(
+      ::protobuf::mozilla::dom::OwnerShowInfo* a_info);
+  ::protobuf::mozilla::dom::OwnerShowInfo* unsafe_arena_release_a_info();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_Show)
  private:
@@ -2096,7 +2096,7 @@ class Msg_Show final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::OwnerShowInfo* info_;
+    ::protobuf::mozilla::dom::OwnerShowInfo* a_info_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2213,24 +2213,24 @@ class Msg_ScrollbarPreferenceChanged final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPrefFieldNumber = 1,
+    kAPrefFieldNumber = 1,
   };
-  // required bytes pref = 1;
-  bool has_pref() const;
+  // required bytes a_pref = 1;
+  bool has_a_pref() const;
   private:
-  bool _internal_has_pref() const;
+  bool _internal_has_a_pref() const;
   public:
-  void clear_pref();
-  const std::string& pref() const;
+  void clear_a_pref();
+  const std::string& a_pref() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_pref(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_pref();
-  PROTOBUF_NODISCARD std::string* release_pref();
-  void set_allocated_pref(std::string* pref);
+  void set_a_pref(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_pref();
+  PROTOBUF_NODISCARD std::string* release_a_pref();
+  void set_allocated_a_pref(std::string* a_pref);
   private:
-  const std::string& _internal_pref() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_pref(const std::string& value);
-  std::string* _internal_mutable_pref();
+  const std::string& _internal_a_pref() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_pref(const std::string& value);
+  std::string* _internal_mutable_a_pref();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged)
@@ -2243,7 +2243,7 @@ class Msg_ScrollbarPreferenceChanged final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pref_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pref_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2360,43 +2360,43 @@ class Msg_UpdateDimensions final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRectFieldNumber = 1,
-    kSizeFieldNumber = 2,
+    kARectFieldNumber = 1,
+    kASizeFieldNumber = 2,
   };
-  // required bytes rect = 1;
-  bool has_rect() const;
+  // required bytes a_rect = 1;
+  bool has_a_rect() const;
   private:
-  bool _internal_has_rect() const;
+  bool _internal_has_a_rect() const;
   public:
-  void clear_rect();
-  const std::string& rect() const;
+  void clear_a_rect();
+  const std::string& a_rect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_rect(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_rect();
-  PROTOBUF_NODISCARD std::string* release_rect();
-  void set_allocated_rect(std::string* rect);
+  void set_a_rect(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_rect();
+  PROTOBUF_NODISCARD std::string* release_a_rect();
+  void set_allocated_a_rect(std::string* a_rect);
   private:
-  const std::string& _internal_rect() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rect(const std::string& value);
-  std::string* _internal_mutable_rect();
+  const std::string& _internal_a_rect() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_rect(const std::string& value);
+  std::string* _internal_mutable_a_rect();
   public:
 
-  // required bytes size = 2;
-  bool has_size() const;
+  // required bytes a_size = 2;
+  bool has_a_size() const;
   private:
-  bool _internal_has_size() const;
+  bool _internal_has_a_size() const;
   public:
-  void clear_size();
-  const std::string& size() const;
+  void clear_a_size();
+  const std::string& a_size() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_size(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_size();
-  PROTOBUF_NODISCARD std::string* release_size();
-  void set_allocated_size(std::string* size);
+  void set_a_size(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_size();
+  PROTOBUF_NODISCARD std::string* release_a_size();
+  void set_allocated_a_size(std::string* a_size);
   private:
-  const std::string& _internal_size() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_size(const std::string& value);
-  std::string* _internal_mutable_size();
+  const std::string& _internal_a_size() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_size(const std::string& value);
+  std::string* _internal_mutable_a_size();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions)
@@ -2412,8 +2412,8 @@ class Msg_UpdateDimensions final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rect_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rect_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2530,19 +2530,19 @@ class Msg_RenderLayers final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEnabledFieldNumber = 1,
+    kAAEnabledFieldNumber = 1,
   };
-  // required bool aEnabled = 1;
-  bool has_aenabled() const;
+  // required bool a_aEnabled = 1;
+  bool has_a_aenabled() const;
   private:
-  bool _internal_has_aenabled() const;
+  bool _internal_has_a_aenabled() const;
   public:
-  void clear_aenabled();
-  bool aenabled() const;
-  void set_aenabled(bool value);
+  void clear_a_aenabled();
+  bool a_aenabled() const;
+  void set_a_aenabled(bool value);
   private:
-  bool _internal_aenabled() const;
-  void _internal_set_aenabled(bool value);
+  bool _internal_a_aenabled() const;
+  void _internal_set_a_aenabled(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_RenderLayers)
@@ -2555,7 +2555,7 @@ class Msg_RenderLayers final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aenabled_;
+    bool a_aenabled_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2672,24 +2672,24 @@ class Msg_UpdateEffects final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAEffectsFieldNumber = 1,
+    kAAEffectsFieldNumber = 1,
   };
-  // required bytes aEffects = 1;
-  bool has_aeffects() const;
+  // required bytes a_aEffects = 1;
+  bool has_a_aeffects() const;
   private:
-  bool _internal_has_aeffects() const;
+  bool _internal_has_a_aeffects() const;
   public:
-  void clear_aeffects();
-  const std::string& aeffects() const;
+  void clear_a_aeffects();
+  const std::string& a_aeffects() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aeffects(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aeffects();
-  PROTOBUF_NODISCARD std::string* release_aeffects();
-  void set_allocated_aeffects(std::string* aeffects);
+  void set_a_aeffects(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aeffects();
+  PROTOBUF_NODISCARD std::string* release_a_aeffects();
+  void set_allocated_a_aeffects(std::string* a_aeffects);
   private:
-  const std::string& _internal_aeffects() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aeffects(const std::string& value);
-  std::string* _internal_mutable_aeffects();
+  const std::string& _internal_a_aeffects() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aeffects(const std::string& value);
+  std::string* _internal_mutable_a_aeffects();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects)
@@ -2702,7 +2702,7 @@ class Msg_UpdateEffects final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aeffects_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aeffects_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2819,25 +2819,25 @@ class Msg_UpdateRemotePrintSettings final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPrintDataFieldNumber = 1,
+    kAAPrintDataFieldNumber = 1,
   };
-  // required .protobuf.mozilla.embedding.PrintData aPrintData = 1;
-  bool has_aprintdata() const;
+  // required .protobuf.mozilla.embedding.PrintData a_aPrintData = 1;
+  bool has_a_aprintdata() const;
   private:
-  bool _internal_has_aprintdata() const;
+  bool _internal_has_a_aprintdata() const;
   public:
-  void clear_aprintdata();
-  const ::protobuf::mozilla::embedding::PrintData& aprintdata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::embedding::PrintData* release_aprintdata();
-  ::protobuf::mozilla::embedding::PrintData* mutable_aprintdata();
-  void set_allocated_aprintdata(::protobuf::mozilla::embedding::PrintData* aprintdata);
+  void clear_a_aprintdata();
+  const ::protobuf::mozilla::embedding::PrintData& a_aprintdata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::embedding::PrintData* release_a_aprintdata();
+  ::protobuf::mozilla::embedding::PrintData* mutable_a_aprintdata();
+  void set_allocated_a_aprintdata(::protobuf::mozilla::embedding::PrintData* a_aprintdata);
   private:
-  const ::protobuf::mozilla::embedding::PrintData& _internal_aprintdata() const;
-  ::protobuf::mozilla::embedding::PrintData* _internal_mutable_aprintdata();
+  const ::protobuf::mozilla::embedding::PrintData& _internal_a_aprintdata() const;
+  ::protobuf::mozilla::embedding::PrintData* _internal_mutable_a_aprintdata();
   public:
-  void unsafe_arena_set_allocated_aprintdata(
-      ::protobuf::mozilla::embedding::PrintData* aprintdata);
-  ::protobuf::mozilla::embedding::PrintData* unsafe_arena_release_aprintdata();
+  void unsafe_arena_set_allocated_a_aprintdata(
+      ::protobuf::mozilla::embedding::PrintData* a_aprintdata);
+  ::protobuf::mozilla::embedding::PrintData* unsafe_arena_release_a_aprintdata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings)
  private:
@@ -2849,7 +2849,7 @@ class Msg_UpdateRemotePrintSettings final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::embedding::PrintData* aprintdata_;
+    ::protobuf::mozilla::embedding::PrintData* a_aprintdata_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -2966,33 +2966,33 @@ class Msg_NavigateByKey final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAForwardFieldNumber = 1,
-    kAForDocumentNavigationFieldNumber = 2,
+    kAAForwardFieldNumber = 1,
+    kAAForDocumentNavigationFieldNumber = 2,
   };
-  // required bool aForward = 1;
-  bool has_aforward() const;
+  // required bool a_aForward = 1;
+  bool has_a_aforward() const;
   private:
-  bool _internal_has_aforward() const;
+  bool _internal_has_a_aforward() const;
   public:
-  void clear_aforward();
-  bool aforward() const;
-  void set_aforward(bool value);
+  void clear_a_aforward();
+  bool a_aforward() const;
+  void set_a_aforward(bool value);
   private:
-  bool _internal_aforward() const;
-  void _internal_set_aforward(bool value);
+  bool _internal_a_aforward() const;
+  void _internal_set_a_aforward(bool value);
   public:
 
-  // required bool aForDocumentNavigation = 2;
-  bool has_afordocumentnavigation() const;
+  // required bool a_aForDocumentNavigation = 2;
+  bool has_a_afordocumentnavigation() const;
   private:
-  bool _internal_has_afordocumentnavigation() const;
+  bool _internal_has_a_afordocumentnavigation() const;
   public:
-  void clear_afordocumentnavigation();
-  bool afordocumentnavigation() const;
-  void set_afordocumentnavigation(bool value);
+  void clear_a_afordocumentnavigation();
+  bool a_afordocumentnavigation() const;
+  void set_a_afordocumentnavigation(bool value);
   private:
-  bool _internal_afordocumentnavigation() const;
-  void _internal_set_afordocumentnavigation(bool value);
+  bool _internal_a_afordocumentnavigation() const;
+  void _internal_set_a_afordocumentnavigation(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey)
@@ -3008,8 +3008,8 @@ class Msg_NavigateByKey final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aforward_;
-    bool afordocumentnavigation_;
+    bool a_aforward_;
+    bool a_afordocumentnavigation_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -3126,24 +3126,24 @@ class Msg_DispatchSynthesizedMouseEvent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEventFieldNumber = 1,
+    kAEventFieldNumber = 1,
   };
-  // required bytes event = 1;
-  bool has_event() const;
+  // required bytes a_event = 1;
+  bool has_a_event() const;
   private:
-  bool _internal_has_event() const;
+  bool _internal_has_a_event() const;
   public:
-  void clear_event();
-  const std::string& event() const;
+  void clear_a_event();
+  const std::string& a_event() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_event(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_event();
-  PROTOBUF_NODISCARD std::string* release_event();
-  void set_allocated_event(std::string* event);
+  void set_a_event(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_event();
+  PROTOBUF_NODISCARD std::string* release_a_event();
+  void set_allocated_a_event(std::string* a_event);
   private:
-  const std::string& _internal_event() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_event(const std::string& value);
-  std::string* _internal_mutable_event();
+  const std::string& _internal_a_event() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_event(const std::string& value);
+  std::string* _internal_mutable_a_event();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent)
@@ -3156,7 +3156,7 @@ class Msg_DispatchSynthesizedMouseEvent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr event_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_event_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -3273,19 +3273,19 @@ class Msg_Activate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAActionIdFieldNumber = 1,
+    kAAActionIdFieldNumber = 1,
   };
-  // required uint64 aActionId = 1;
-  bool has_aactionid() const;
+  // required uint64 a_aActionId = 1;
+  bool has_a_aactionid() const;
   private:
-  bool _internal_has_aactionid() const;
+  bool _internal_has_a_aactionid() const;
   public:
-  void clear_aactionid();
-  uint64_t aactionid() const;
-  void set_aactionid(uint64_t value);
+  void clear_a_aactionid();
+  uint64_t a_aactionid() const;
+  void set_a_aactionid(uint64_t value);
   private:
-  uint64_t _internal_aactionid() const;
-  void _internal_set_aactionid(uint64_t value);
+  uint64_t _internal_a_aactionid() const;
+  void _internal_set_a_aactionid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_Activate)
@@ -3298,7 +3298,7 @@ class Msg_Activate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aactionid_;
+    uint64_t a_aactionid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -3415,33 +3415,33 @@ class Msg_Deactivate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAActionIdFieldNumber = 2,
-    kAWindowLoweringFieldNumber = 1,
+    kAAActionIdFieldNumber = 2,
+    kAAWindowLoweringFieldNumber = 1,
   };
-  // required uint64 aActionId = 2;
-  bool has_aactionid() const;
+  // required uint64 a_aActionId = 2;
+  bool has_a_aactionid() const;
   private:
-  bool _internal_has_aactionid() const;
+  bool _internal_has_a_aactionid() const;
   public:
-  void clear_aactionid();
-  uint64_t aactionid() const;
-  void set_aactionid(uint64_t value);
+  void clear_a_aactionid();
+  uint64_t a_aactionid() const;
+  void set_a_aactionid(uint64_t value);
   private:
-  uint64_t _internal_aactionid() const;
-  void _internal_set_aactionid(uint64_t value);
+  uint64_t _internal_a_aactionid() const;
+  void _internal_set_a_aactionid(uint64_t value);
   public:
 
-  // required bool aWindowLowering = 1;
-  bool has_awindowlowering() const;
+  // required bool a_aWindowLowering = 1;
+  bool has_a_awindowlowering() const;
   private:
-  bool _internal_has_awindowlowering() const;
+  bool _internal_has_a_awindowlowering() const;
   public:
-  void clear_awindowlowering();
-  bool awindowlowering() const;
-  void set_awindowlowering(bool value);
+  void clear_a_awindowlowering();
+  bool a_awindowlowering() const;
+  void set_a_awindowlowering(bool value);
   private:
-  bool _internal_awindowlowering() const;
-  void _internal_set_awindowlowering(bool value);
+  bool _internal_a_awindowlowering() const;
+  void _internal_set_a_awindowlowering(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate)
@@ -3457,8 +3457,8 @@ class Msg_Deactivate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t aactionid_;
-    bool awindowlowering_;
+    uint64_t a_aactionid_;
+    bool a_awindowlowering_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -3575,24 +3575,24 @@ class Msg_UpdateRemoteStyle final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAImageRenderingFieldNumber = 1,
+    kAAImageRenderingFieldNumber = 1,
   };
-  // required bytes aImageRendering = 1;
-  bool has_aimagerendering() const;
+  // required bytes a_aImageRendering = 1;
+  bool has_a_aimagerendering() const;
   private:
-  bool _internal_has_aimagerendering() const;
+  bool _internal_has_a_aimagerendering() const;
   public:
-  void clear_aimagerendering();
-  const std::string& aimagerendering() const;
+  void clear_a_aimagerendering();
+  const std::string& a_aimagerendering() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aimagerendering(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aimagerendering();
-  PROTOBUF_NODISCARD std::string* release_aimagerendering();
-  void set_allocated_aimagerendering(std::string* aimagerendering);
+  void set_a_aimagerendering(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aimagerendering();
+  PROTOBUF_NODISCARD std::string* release_a_aimagerendering();
+  void set_allocated_a_aimagerendering(std::string* a_aimagerendering);
   private:
-  const std::string& _internal_aimagerendering() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aimagerendering(const std::string& value);
-  std::string* _internal_mutable_aimagerendering();
+  const std::string& _internal_a_aimagerendering() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aimagerendering(const std::string& value);
+  std::string* _internal_mutable_a_aimagerendering();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle)
@@ -3605,7 +3605,7 @@ class Msg_UpdateRemoteStyle final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aimagerendering_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aimagerendering_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -3846,38 +3846,38 @@ class Msg_SetEmbedderAccessible final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADocFieldNumber = 1,
-    kAIDFieldNumber = 2,
+    kAADocFieldNumber = 1,
+    kAAIDFieldNumber = 2,
   };
-  // required bytes aDoc = 1;
-  bool has_adoc() const;
+  // required bytes a_aDoc = 1;
+  bool has_a_adoc() const;
   private:
-  bool _internal_has_adoc() const;
+  bool _internal_has_a_adoc() const;
   public:
-  void clear_adoc();
-  const std::string& adoc() const;
+  void clear_a_adoc();
+  const std::string& a_adoc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adoc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adoc();
-  PROTOBUF_NODISCARD std::string* release_adoc();
-  void set_allocated_adoc(std::string* adoc);
+  void set_a_adoc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adoc();
+  PROTOBUF_NODISCARD std::string* release_a_adoc();
+  void set_allocated_a_adoc(std::string* a_adoc);
   private:
-  const std::string& _internal_adoc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adoc(const std::string& value);
-  std::string* _internal_mutable_adoc();
+  const std::string& _internal_a_adoc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adoc(const std::string& value);
+  std::string* _internal_mutable_a_adoc();
   public:
 
-  // required uint64 aID = 2;
-  bool has_aid() const;
+  // required uint64 a_aID = 2;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint64_t aid() const;
-  void set_aid(uint64_t value);
+  void clear_a_aid();
+  uint64_t a_aid() const;
+  void set_a_aid(uint64_t value);
   private:
-  uint64_t _internal_aid() const;
-  void _internal_set_aid(uint64_t value);
+  uint64_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible)
@@ -3893,8 +3893,8 @@ class Msg_SetEmbedderAccessible final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adoc_;
-    uint64_t aid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adoc_;
+    uint64_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowserBridge_2eproto;
@@ -3910,536 +3910,536 @@ class Msg_SetEmbedderAccessible final :
 #endif  // __GNUC__
 // Msg_RequestFocus
 
-// required bool canRaise = 1;
-inline bool Msg_RequestFocus::_internal_has_canraise() const {
+// required bool a_canRaise = 1;
+inline bool Msg_RequestFocus::_internal_has_a_canraise() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RequestFocus::has_canraise() const {
-  return _internal_has_canraise();
+inline bool Msg_RequestFocus::has_a_canraise() const {
+  return _internal_has_a_canraise();
 }
-inline void Msg_RequestFocus::clear_canraise() {
-  _impl_.canraise_ = false;
+inline void Msg_RequestFocus::clear_a_canraise() {
+  _impl_.a_canraise_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_RequestFocus::_internal_canraise() const {
-  return _impl_.canraise_;
+inline bool Msg_RequestFocus::_internal_a_canraise() const {
+  return _impl_.a_canraise_;
 }
-inline bool Msg_RequestFocus::canraise() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.canRaise)
-  return _internal_canraise();
+inline bool Msg_RequestFocus::a_canraise() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_canRaise)
+  return _internal_a_canraise();
 }
-inline void Msg_RequestFocus::_internal_set_canraise(bool value) {
+inline void Msg_RequestFocus::_internal_set_a_canraise(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.canraise_ = value;
+  _impl_.a_canraise_ = value;
 }
-inline void Msg_RequestFocus::set_canraise(bool value) {
-  _internal_set_canraise(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.canRaise)
+inline void Msg_RequestFocus::set_a_canraise(bool value) {
+  _internal_set_a_canraise(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_canRaise)
 }
 
-// required bytes aCallerType = 2;
-inline bool Msg_RequestFocus::_internal_has_acallertype() const {
+// required bytes a_aCallerType = 2;
+inline bool Msg_RequestFocus::_internal_has_a_acallertype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RequestFocus::has_acallertype() const {
-  return _internal_has_acallertype();
+inline bool Msg_RequestFocus::has_a_acallertype() const {
+  return _internal_has_a_acallertype();
 }
-inline void Msg_RequestFocus::clear_acallertype() {
-  _impl_.acallertype_.ClearToEmpty();
+inline void Msg_RequestFocus::clear_a_acallertype() {
+  _impl_.a_acallertype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RequestFocus::acallertype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.aCallerType)
-  return _internal_acallertype();
+inline const std::string& Msg_RequestFocus::a_acallertype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_aCallerType)
+  return _internal_a_acallertype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RequestFocus::set_acallertype(ArgT0&& arg0, ArgT... args) {
+void Msg_RequestFocus::set_a_acallertype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acallertype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.aCallerType)
+ _impl_.a_acallertype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_aCallerType)
 }
-inline std::string* Msg_RequestFocus::mutable_acallertype() {
-  std::string* _s = _internal_mutable_acallertype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.aCallerType)
+inline std::string* Msg_RequestFocus::mutable_a_acallertype() {
+  std::string* _s = _internal_mutable_a_acallertype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_aCallerType)
   return _s;
 }
-inline const std::string& Msg_RequestFocus::_internal_acallertype() const {
-  return _impl_.acallertype_.Get();
+inline const std::string& Msg_RequestFocus::_internal_a_acallertype() const {
+  return _impl_.a_acallertype_.Get();
 }
-inline void Msg_RequestFocus::_internal_set_acallertype(const std::string& value) {
+inline void Msg_RequestFocus::_internal_set_a_acallertype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acallertype_.Set(value, GetArenaForAllocation());
+  _impl_.a_acallertype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RequestFocus::_internal_mutable_acallertype() {
+inline std::string* Msg_RequestFocus::_internal_mutable_a_acallertype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acallertype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acallertype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RequestFocus::release_acallertype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.aCallerType)
-  if (!_internal_has_acallertype()) {
+inline std::string* Msg_RequestFocus::release_a_acallertype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_aCallerType)
+  if (!_internal_has_a_acallertype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acallertype_.Release();
+  auto* p = _impl_.a_acallertype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acallertype_.IsDefault()) {
-    _impl_.acallertype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acallertype_.IsDefault()) {
+    _impl_.a_acallertype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RequestFocus::set_allocated_acallertype(std::string* acallertype) {
-  if (acallertype != nullptr) {
+inline void Msg_RequestFocus::set_allocated_a_acallertype(std::string* a_acallertype) {
+  if (a_acallertype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acallertype_.SetAllocated(acallertype, GetArenaForAllocation());
+  _impl_.a_acallertype_.SetAllocated(a_acallertype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acallertype_.IsDefault()) {
-    _impl_.acallertype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acallertype_.IsDefault()) {
+    _impl_.a_acallertype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.aCallerType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_RequestFocus.a_aCallerType)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_MoveFocus
 
-// required bool forward = 1;
-inline bool Msg_MoveFocus::_internal_has_forward() const {
+// required bool a_forward = 1;
+inline bool Msg_MoveFocus::_internal_has_a_forward() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_MoveFocus::has_forward() const {
-  return _internal_has_forward();
+inline bool Msg_MoveFocus::has_a_forward() const {
+  return _internal_has_a_forward();
 }
-inline void Msg_MoveFocus::clear_forward() {
-  _impl_.forward_ = false;
+inline void Msg_MoveFocus::clear_a_forward() {
+  _impl_.a_forward_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_MoveFocus::_internal_forward() const {
-  return _impl_.forward_;
+inline bool Msg_MoveFocus::_internal_a_forward() const {
+  return _impl_.a_forward_;
 }
-inline bool Msg_MoveFocus::forward() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.forward)
-  return _internal_forward();
+inline bool Msg_MoveFocus::a_forward() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.a_forward)
+  return _internal_a_forward();
 }
-inline void Msg_MoveFocus::_internal_set_forward(bool value) {
+inline void Msg_MoveFocus::_internal_set_a_forward(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.forward_ = value;
+  _impl_.a_forward_ = value;
 }
-inline void Msg_MoveFocus::set_forward(bool value) {
-  _internal_set_forward(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.forward)
+inline void Msg_MoveFocus::set_a_forward(bool value) {
+  _internal_set_a_forward(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.a_forward)
 }
 
-// required bool forDocumentNavigation = 2;
-inline bool Msg_MoveFocus::_internal_has_fordocumentnavigation() const {
+// required bool a_forDocumentNavigation = 2;
+inline bool Msg_MoveFocus::_internal_has_a_fordocumentnavigation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_MoveFocus::has_fordocumentnavigation() const {
-  return _internal_has_fordocumentnavigation();
+inline bool Msg_MoveFocus::has_a_fordocumentnavigation() const {
+  return _internal_has_a_fordocumentnavigation();
 }
-inline void Msg_MoveFocus::clear_fordocumentnavigation() {
-  _impl_.fordocumentnavigation_ = false;
+inline void Msg_MoveFocus::clear_a_fordocumentnavigation() {
+  _impl_.a_fordocumentnavigation_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_MoveFocus::_internal_fordocumentnavigation() const {
-  return _impl_.fordocumentnavigation_;
+inline bool Msg_MoveFocus::_internal_a_fordocumentnavigation() const {
+  return _impl_.a_fordocumentnavigation_;
 }
-inline bool Msg_MoveFocus::fordocumentnavigation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.forDocumentNavigation)
-  return _internal_fordocumentnavigation();
+inline bool Msg_MoveFocus::a_fordocumentnavigation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.a_forDocumentNavigation)
+  return _internal_a_fordocumentnavigation();
 }
-inline void Msg_MoveFocus::_internal_set_fordocumentnavigation(bool value) {
+inline void Msg_MoveFocus::_internal_set_a_fordocumentnavigation(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.fordocumentnavigation_ = value;
+  _impl_.a_fordocumentnavigation_ = value;
 }
-inline void Msg_MoveFocus::set_fordocumentnavigation(bool value) {
-  _internal_set_fordocumentnavigation(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.forDocumentNavigation)
+inline void Msg_MoveFocus::set_a_fordocumentnavigation(bool value) {
+  _internal_set_a_fordocumentnavigation(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MoveFocus.a_forDocumentNavigation)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_MaybeFireEmbedderLoadEvents
 
-// required bytes aFireEventAtEmbeddingElement = 1;
-inline bool Msg_MaybeFireEmbedderLoadEvents::_internal_has_afireeventatembeddingelement() const {
+// required bytes a_aFireEventAtEmbeddingElement = 1;
+inline bool Msg_MaybeFireEmbedderLoadEvents::_internal_has_a_afireeventatembeddingelement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_MaybeFireEmbedderLoadEvents::has_afireeventatembeddingelement() const {
-  return _internal_has_afireeventatembeddingelement();
+inline bool Msg_MaybeFireEmbedderLoadEvents::has_a_afireeventatembeddingelement() const {
+  return _internal_has_a_afireeventatembeddingelement();
 }
-inline void Msg_MaybeFireEmbedderLoadEvents::clear_afireeventatembeddingelement() {
-  _impl_.afireeventatembeddingelement_.ClearToEmpty();
+inline void Msg_MaybeFireEmbedderLoadEvents::clear_a_afireeventatembeddingelement() {
+  _impl_.a_afireeventatembeddingelement_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_MaybeFireEmbedderLoadEvents::afireeventatembeddingelement() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.aFireEventAtEmbeddingElement)
-  return _internal_afireeventatembeddingelement();
+inline const std::string& Msg_MaybeFireEmbedderLoadEvents::a_afireeventatembeddingelement() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.a_aFireEventAtEmbeddingElement)
+  return _internal_a_afireeventatembeddingelement();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_MaybeFireEmbedderLoadEvents::set_afireeventatembeddingelement(ArgT0&& arg0, ArgT... args) {
+void Msg_MaybeFireEmbedderLoadEvents::set_a_afireeventatembeddingelement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.afireeventatembeddingelement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.aFireEventAtEmbeddingElement)
+ _impl_.a_afireeventatembeddingelement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.a_aFireEventAtEmbeddingElement)
 }
-inline std::string* Msg_MaybeFireEmbedderLoadEvents::mutable_afireeventatembeddingelement() {
-  std::string* _s = _internal_mutable_afireeventatembeddingelement();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.aFireEventAtEmbeddingElement)
+inline std::string* Msg_MaybeFireEmbedderLoadEvents::mutable_a_afireeventatembeddingelement() {
+  std::string* _s = _internal_mutable_a_afireeventatembeddingelement();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.a_aFireEventAtEmbeddingElement)
   return _s;
 }
-inline const std::string& Msg_MaybeFireEmbedderLoadEvents::_internal_afireeventatembeddingelement() const {
-  return _impl_.afireeventatembeddingelement_.Get();
+inline const std::string& Msg_MaybeFireEmbedderLoadEvents::_internal_a_afireeventatembeddingelement() const {
+  return _impl_.a_afireeventatembeddingelement_.Get();
 }
-inline void Msg_MaybeFireEmbedderLoadEvents::_internal_set_afireeventatembeddingelement(const std::string& value) {
+inline void Msg_MaybeFireEmbedderLoadEvents::_internal_set_a_afireeventatembeddingelement(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.afireeventatembeddingelement_.Set(value, GetArenaForAllocation());
+  _impl_.a_afireeventatembeddingelement_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_MaybeFireEmbedderLoadEvents::_internal_mutable_afireeventatembeddingelement() {
+inline std::string* Msg_MaybeFireEmbedderLoadEvents::_internal_mutable_a_afireeventatembeddingelement() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.afireeventatembeddingelement_.Mutable(GetArenaForAllocation());
+  return _impl_.a_afireeventatembeddingelement_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_MaybeFireEmbedderLoadEvents::release_afireeventatembeddingelement() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.aFireEventAtEmbeddingElement)
-  if (!_internal_has_afireeventatembeddingelement()) {
+inline std::string* Msg_MaybeFireEmbedderLoadEvents::release_a_afireeventatembeddingelement() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.a_aFireEventAtEmbeddingElement)
+  if (!_internal_has_a_afireeventatembeddingelement()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.afireeventatembeddingelement_.Release();
+  auto* p = _impl_.a_afireeventatembeddingelement_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afireeventatembeddingelement_.IsDefault()) {
-    _impl_.afireeventatembeddingelement_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afireeventatembeddingelement_.IsDefault()) {
+    _impl_.a_afireeventatembeddingelement_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_MaybeFireEmbedderLoadEvents::set_allocated_afireeventatembeddingelement(std::string* afireeventatembeddingelement) {
-  if (afireeventatembeddingelement != nullptr) {
+inline void Msg_MaybeFireEmbedderLoadEvents::set_allocated_a_afireeventatembeddingelement(std::string* a_afireeventatembeddingelement) {
+  if (a_afireeventatembeddingelement != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.afireeventatembeddingelement_.SetAllocated(afireeventatembeddingelement, GetArenaForAllocation());
+  _impl_.a_afireeventatembeddingelement_.SetAllocated(a_afireeventatembeddingelement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afireeventatembeddingelement_.IsDefault()) {
-    _impl_.afireeventatembeddingelement_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afireeventatembeddingelement_.IsDefault()) {
+    _impl_.a_afireeventatembeddingelement_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.aFireEventAtEmbeddingElement)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_MaybeFireEmbedderLoadEvents.a_aFireEventAtEmbeddingElement)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScrollRectIntoView
 
-// required bytes aRect = 1;
-inline bool Msg_ScrollRectIntoView::_internal_has_arect() const {
+// required bytes a_aRect = 1;
+inline bool Msg_ScrollRectIntoView::_internal_has_a_arect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollRectIntoView::has_arect() const {
-  return _internal_has_arect();
+inline bool Msg_ScrollRectIntoView::has_a_arect() const {
+  return _internal_has_a_arect();
 }
-inline void Msg_ScrollRectIntoView::clear_arect() {
-  _impl_.arect_.ClearToEmpty();
+inline void Msg_ScrollRectIntoView::clear_a_arect() {
+  _impl_.a_arect_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ScrollRectIntoView::arect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aRect)
-  return _internal_arect();
+inline const std::string& Msg_ScrollRectIntoView::a_arect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aRect)
+  return _internal_a_arect();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScrollRectIntoView::set_arect(ArgT0&& arg0, ArgT... args) {
+void Msg_ScrollRectIntoView::set_a_arect(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aRect)
+ _impl_.a_arect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aRect)
 }
-inline std::string* Msg_ScrollRectIntoView::mutable_arect() {
-  std::string* _s = _internal_mutable_arect();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aRect)
+inline std::string* Msg_ScrollRectIntoView::mutable_a_arect() {
+  std::string* _s = _internal_mutable_a_arect();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aRect)
   return _s;
 }
-inline const std::string& Msg_ScrollRectIntoView::_internal_arect() const {
-  return _impl_.arect_.Get();
+inline const std::string& Msg_ScrollRectIntoView::_internal_a_arect() const {
+  return _impl_.a_arect_.Get();
 }
-inline void Msg_ScrollRectIntoView::_internal_set_arect(const std::string& value) {
+inline void Msg_ScrollRectIntoView::_internal_set_a_arect(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arect_.Set(value, GetArenaForAllocation());
+  _impl_.a_arect_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::_internal_mutable_arect() {
+inline std::string* Msg_ScrollRectIntoView::_internal_mutable_a_arect() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arect_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arect_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::release_arect() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aRect)
-  if (!_internal_has_arect()) {
+inline std::string* Msg_ScrollRectIntoView::release_a_arect() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aRect)
+  if (!_internal_has_a_arect()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arect_.Release();
+  auto* p = _impl_.a_arect_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arect_.IsDefault()) {
-    _impl_.arect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arect_.IsDefault()) {
+    _impl_.a_arect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScrollRectIntoView::set_allocated_arect(std::string* arect) {
-  if (arect != nullptr) {
+inline void Msg_ScrollRectIntoView::set_allocated_a_arect(std::string* a_arect) {
+  if (a_arect != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arect_.SetAllocated(arect, GetArenaForAllocation());
+  _impl_.a_arect_.SetAllocated(a_arect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arect_.IsDefault()) {
-    _impl_.arect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arect_.IsDefault()) {
+    _impl_.a_arect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aRect)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aRect)
 }
 
-// required bytes aVertical = 2;
-inline bool Msg_ScrollRectIntoView::_internal_has_avertical() const {
+// required bytes a_aVertical = 2;
+inline bool Msg_ScrollRectIntoView::_internal_has_a_avertical() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ScrollRectIntoView::has_avertical() const {
-  return _internal_has_avertical();
+inline bool Msg_ScrollRectIntoView::has_a_avertical() const {
+  return _internal_has_a_avertical();
 }
-inline void Msg_ScrollRectIntoView::clear_avertical() {
-  _impl_.avertical_.ClearToEmpty();
+inline void Msg_ScrollRectIntoView::clear_a_avertical() {
+  _impl_.a_avertical_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ScrollRectIntoView::avertical() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aVertical)
-  return _internal_avertical();
+inline const std::string& Msg_ScrollRectIntoView::a_avertical() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aVertical)
+  return _internal_a_avertical();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScrollRectIntoView::set_avertical(ArgT0&& arg0, ArgT... args) {
+void Msg_ScrollRectIntoView::set_a_avertical(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.avertical_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aVertical)
+ _impl_.a_avertical_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aVertical)
 }
-inline std::string* Msg_ScrollRectIntoView::mutable_avertical() {
-  std::string* _s = _internal_mutable_avertical();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aVertical)
+inline std::string* Msg_ScrollRectIntoView::mutable_a_avertical() {
+  std::string* _s = _internal_mutable_a_avertical();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aVertical)
   return _s;
 }
-inline const std::string& Msg_ScrollRectIntoView::_internal_avertical() const {
-  return _impl_.avertical_.Get();
+inline const std::string& Msg_ScrollRectIntoView::_internal_a_avertical() const {
+  return _impl_.a_avertical_.Get();
 }
-inline void Msg_ScrollRectIntoView::_internal_set_avertical(const std::string& value) {
+inline void Msg_ScrollRectIntoView::_internal_set_a_avertical(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.avertical_.Set(value, GetArenaForAllocation());
+  _impl_.a_avertical_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::_internal_mutable_avertical() {
+inline std::string* Msg_ScrollRectIntoView::_internal_mutable_a_avertical() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.avertical_.Mutable(GetArenaForAllocation());
+  return _impl_.a_avertical_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::release_avertical() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aVertical)
-  if (!_internal_has_avertical()) {
+inline std::string* Msg_ScrollRectIntoView::release_a_avertical() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aVertical)
+  if (!_internal_has_a_avertical()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.avertical_.Release();
+  auto* p = _impl_.a_avertical_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.avertical_.IsDefault()) {
-    _impl_.avertical_.Set("", GetArenaForAllocation());
+  if (_impl_.a_avertical_.IsDefault()) {
+    _impl_.a_avertical_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScrollRectIntoView::set_allocated_avertical(std::string* avertical) {
-  if (avertical != nullptr) {
+inline void Msg_ScrollRectIntoView::set_allocated_a_avertical(std::string* a_avertical) {
+  if (a_avertical != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.avertical_.SetAllocated(avertical, GetArenaForAllocation());
+  _impl_.a_avertical_.SetAllocated(a_avertical, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.avertical_.IsDefault()) {
-    _impl_.avertical_.Set("", GetArenaForAllocation());
+  if (_impl_.a_avertical_.IsDefault()) {
+    _impl_.a_avertical_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aVertical)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aVertical)
 }
 
-// required bytes aHorizontal = 3;
-inline bool Msg_ScrollRectIntoView::_internal_has_ahorizontal() const {
+// required bytes a_aHorizontal = 3;
+inline bool Msg_ScrollRectIntoView::_internal_has_a_ahorizontal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ScrollRectIntoView::has_ahorizontal() const {
-  return _internal_has_ahorizontal();
+inline bool Msg_ScrollRectIntoView::has_a_ahorizontal() const {
+  return _internal_has_a_ahorizontal();
 }
-inline void Msg_ScrollRectIntoView::clear_ahorizontal() {
-  _impl_.ahorizontal_.ClearToEmpty();
+inline void Msg_ScrollRectIntoView::clear_a_ahorizontal() {
+  _impl_.a_ahorizontal_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_ScrollRectIntoView::ahorizontal() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aHorizontal)
-  return _internal_ahorizontal();
+inline const std::string& Msg_ScrollRectIntoView::a_ahorizontal() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aHorizontal)
+  return _internal_a_ahorizontal();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScrollRectIntoView::set_ahorizontal(ArgT0&& arg0, ArgT... args) {
+void Msg_ScrollRectIntoView::set_a_ahorizontal(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.ahorizontal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aHorizontal)
+ _impl_.a_ahorizontal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aHorizontal)
 }
-inline std::string* Msg_ScrollRectIntoView::mutable_ahorizontal() {
-  std::string* _s = _internal_mutable_ahorizontal();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aHorizontal)
+inline std::string* Msg_ScrollRectIntoView::mutable_a_ahorizontal() {
+  std::string* _s = _internal_mutable_a_ahorizontal();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aHorizontal)
   return _s;
 }
-inline const std::string& Msg_ScrollRectIntoView::_internal_ahorizontal() const {
-  return _impl_.ahorizontal_.Get();
+inline const std::string& Msg_ScrollRectIntoView::_internal_a_ahorizontal() const {
+  return _impl_.a_ahorizontal_.Get();
 }
-inline void Msg_ScrollRectIntoView::_internal_set_ahorizontal(const std::string& value) {
+inline void Msg_ScrollRectIntoView::_internal_set_a_ahorizontal(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.ahorizontal_.Set(value, GetArenaForAllocation());
+  _impl_.a_ahorizontal_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::_internal_mutable_ahorizontal() {
+inline std::string* Msg_ScrollRectIntoView::_internal_mutable_a_ahorizontal() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.ahorizontal_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ahorizontal_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::release_ahorizontal() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aHorizontal)
-  if (!_internal_has_ahorizontal()) {
+inline std::string* Msg_ScrollRectIntoView::release_a_ahorizontal() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aHorizontal)
+  if (!_internal_has_a_ahorizontal()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.ahorizontal_.Release();
+  auto* p = _impl_.a_ahorizontal_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahorizontal_.IsDefault()) {
-    _impl_.ahorizontal_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahorizontal_.IsDefault()) {
+    _impl_.a_ahorizontal_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScrollRectIntoView::set_allocated_ahorizontal(std::string* ahorizontal) {
-  if (ahorizontal != nullptr) {
+inline void Msg_ScrollRectIntoView::set_allocated_a_ahorizontal(std::string* a_ahorizontal) {
+  if (a_ahorizontal != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.ahorizontal_.SetAllocated(ahorizontal, GetArenaForAllocation());
+  _impl_.a_ahorizontal_.SetAllocated(a_ahorizontal, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ahorizontal_.IsDefault()) {
-    _impl_.ahorizontal_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ahorizontal_.IsDefault()) {
+    _impl_.a_ahorizontal_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aHorizontal)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aHorizontal)
 }
 
-// required bytes aScrollFlags = 4;
-inline bool Msg_ScrollRectIntoView::_internal_has_ascrollflags() const {
+// required bytes a_aScrollFlags = 4;
+inline bool Msg_ScrollRectIntoView::_internal_has_a_ascrollflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ScrollRectIntoView::has_ascrollflags() const {
-  return _internal_has_ascrollflags();
+inline bool Msg_ScrollRectIntoView::has_a_ascrollflags() const {
+  return _internal_has_a_ascrollflags();
 }
-inline void Msg_ScrollRectIntoView::clear_ascrollflags() {
-  _impl_.ascrollflags_.ClearToEmpty();
+inline void Msg_ScrollRectIntoView::clear_a_ascrollflags() {
+  _impl_.a_ascrollflags_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_ScrollRectIntoView::ascrollflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aScrollFlags)
-  return _internal_ascrollflags();
+inline const std::string& Msg_ScrollRectIntoView::a_ascrollflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aScrollFlags)
+  return _internal_a_ascrollflags();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScrollRectIntoView::set_ascrollflags(ArgT0&& arg0, ArgT... args) {
+void Msg_ScrollRectIntoView::set_a_ascrollflags(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.ascrollflags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aScrollFlags)
+ _impl_.a_ascrollflags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aScrollFlags)
 }
-inline std::string* Msg_ScrollRectIntoView::mutable_ascrollflags() {
-  std::string* _s = _internal_mutable_ascrollflags();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aScrollFlags)
+inline std::string* Msg_ScrollRectIntoView::mutable_a_ascrollflags() {
+  std::string* _s = _internal_mutable_a_ascrollflags();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aScrollFlags)
   return _s;
 }
-inline const std::string& Msg_ScrollRectIntoView::_internal_ascrollflags() const {
-  return _impl_.ascrollflags_.Get();
+inline const std::string& Msg_ScrollRectIntoView::_internal_a_ascrollflags() const {
+  return _impl_.a_ascrollflags_.Get();
 }
-inline void Msg_ScrollRectIntoView::_internal_set_ascrollflags(const std::string& value) {
+inline void Msg_ScrollRectIntoView::_internal_set_a_ascrollflags(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.ascrollflags_.Set(value, GetArenaForAllocation());
+  _impl_.a_ascrollflags_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::_internal_mutable_ascrollflags() {
+inline std::string* Msg_ScrollRectIntoView::_internal_mutable_a_ascrollflags() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.ascrollflags_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ascrollflags_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollRectIntoView::release_ascrollflags() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aScrollFlags)
-  if (!_internal_has_ascrollflags()) {
+inline std::string* Msg_ScrollRectIntoView::release_a_ascrollflags() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aScrollFlags)
+  if (!_internal_has_a_ascrollflags()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.ascrollflags_.Release();
+  auto* p = _impl_.a_ascrollflags_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ascrollflags_.IsDefault()) {
-    _impl_.ascrollflags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ascrollflags_.IsDefault()) {
+    _impl_.a_ascrollflags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScrollRectIntoView::set_allocated_ascrollflags(std::string* ascrollflags) {
-  if (ascrollflags != nullptr) {
+inline void Msg_ScrollRectIntoView::set_allocated_a_ascrollflags(std::string* a_ascrollflags) {
+  if (a_ascrollflags != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.ascrollflags_.SetAllocated(ascrollflags, GetArenaForAllocation());
+  _impl_.a_ascrollflags_.SetAllocated(a_ascrollflags, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ascrollflags_.IsDefault()) {
-    _impl_.ascrollflags_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ascrollflags_.IsDefault()) {
+    _impl_.a_ascrollflags_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aScrollFlags)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aScrollFlags)
 }
 
-// required sint32 aAppUnitsPerDevPixel = 5;
-inline bool Msg_ScrollRectIntoView::_internal_has_aappunitsperdevpixel() const {
+// required sint32 a_aAppUnitsPerDevPixel = 5;
+inline bool Msg_ScrollRectIntoView::_internal_has_a_aappunitsperdevpixel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_ScrollRectIntoView::has_aappunitsperdevpixel() const {
-  return _internal_has_aappunitsperdevpixel();
+inline bool Msg_ScrollRectIntoView::has_a_aappunitsperdevpixel() const {
+  return _internal_has_a_aappunitsperdevpixel();
 }
-inline void Msg_ScrollRectIntoView::clear_aappunitsperdevpixel() {
-  _impl_.aappunitsperdevpixel_ = 0;
+inline void Msg_ScrollRectIntoView::clear_a_aappunitsperdevpixel() {
+  _impl_.a_aappunitsperdevpixel_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int32_t Msg_ScrollRectIntoView::_internal_aappunitsperdevpixel() const {
-  return _impl_.aappunitsperdevpixel_;
+inline int32_t Msg_ScrollRectIntoView::_internal_a_aappunitsperdevpixel() const {
+  return _impl_.a_aappunitsperdevpixel_;
 }
-inline int32_t Msg_ScrollRectIntoView::aappunitsperdevpixel() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aAppUnitsPerDevPixel)
-  return _internal_aappunitsperdevpixel();
+inline int32_t Msg_ScrollRectIntoView::a_aappunitsperdevpixel() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aAppUnitsPerDevPixel)
+  return _internal_a_aappunitsperdevpixel();
 }
-inline void Msg_ScrollRectIntoView::_internal_set_aappunitsperdevpixel(int32_t value) {
+inline void Msg_ScrollRectIntoView::_internal_set_a_aappunitsperdevpixel(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.aappunitsperdevpixel_ = value;
+  _impl_.a_aappunitsperdevpixel_ = value;
 }
-inline void Msg_ScrollRectIntoView::set_aappunitsperdevpixel(int32_t value) {
-  _internal_set_aappunitsperdevpixel(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.aAppUnitsPerDevPixel)
+inline void Msg_ScrollRectIntoView::set_a_aappunitsperdevpixel(int32_t value) {
+  _internal_set_a_aappunitsperdevpixel(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollRectIntoView.a_aAppUnitsPerDevPixel)
 }
 
 // -------------------------------------------------------------------
@@ -4450,212 +4450,212 @@ inline void Msg_ScrollRectIntoView::set_aappunitsperdevpixel(int32_t value) {
 
 // Msg_IntrinsicSizeOrRatioChanged
 
-// optional bytes aIntrinsicSize = 1;
-inline bool Msg_IntrinsicSizeOrRatioChanged::_internal_has_aintrinsicsize() const {
+// optional bytes a_aIntrinsicSize = 1;
+inline bool Msg_IntrinsicSizeOrRatioChanged::_internal_has_a_aintrinsicsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_IntrinsicSizeOrRatioChanged::has_aintrinsicsize() const {
-  return _internal_has_aintrinsicsize();
+inline bool Msg_IntrinsicSizeOrRatioChanged::has_a_aintrinsicsize() const {
+  return _internal_has_a_aintrinsicsize();
 }
-inline void Msg_IntrinsicSizeOrRatioChanged::clear_aintrinsicsize() {
-  _impl_.aintrinsicsize_.ClearToEmpty();
+inline void Msg_IntrinsicSizeOrRatioChanged::clear_a_aintrinsicsize() {
+  _impl_.a_aintrinsicsize_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_IntrinsicSizeOrRatioChanged::aintrinsicsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicSize)
-  return _internal_aintrinsicsize();
+inline const std::string& Msg_IntrinsicSizeOrRatioChanged::a_aintrinsicsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicSize)
+  return _internal_a_aintrinsicsize();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_IntrinsicSizeOrRatioChanged::set_aintrinsicsize(ArgT0&& arg0, ArgT... args) {
+void Msg_IntrinsicSizeOrRatioChanged::set_a_aintrinsicsize(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aintrinsicsize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicSize)
+ _impl_.a_aintrinsicsize_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicSize)
 }
-inline std::string* Msg_IntrinsicSizeOrRatioChanged::mutable_aintrinsicsize() {
-  std::string* _s = _internal_mutable_aintrinsicsize();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicSize)
+inline std::string* Msg_IntrinsicSizeOrRatioChanged::mutable_a_aintrinsicsize() {
+  std::string* _s = _internal_mutable_a_aintrinsicsize();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicSize)
   return _s;
 }
-inline const std::string& Msg_IntrinsicSizeOrRatioChanged::_internal_aintrinsicsize() const {
-  return _impl_.aintrinsicsize_.Get();
+inline const std::string& Msg_IntrinsicSizeOrRatioChanged::_internal_a_aintrinsicsize() const {
+  return _impl_.a_aintrinsicsize_.Get();
 }
-inline void Msg_IntrinsicSizeOrRatioChanged::_internal_set_aintrinsicsize(const std::string& value) {
+inline void Msg_IntrinsicSizeOrRatioChanged::_internal_set_a_aintrinsicsize(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aintrinsicsize_.Set(value, GetArenaForAllocation());
+  _impl_.a_aintrinsicsize_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_IntrinsicSizeOrRatioChanged::_internal_mutable_aintrinsicsize() {
+inline std::string* Msg_IntrinsicSizeOrRatioChanged::_internal_mutable_a_aintrinsicsize() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aintrinsicsize_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aintrinsicsize_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_IntrinsicSizeOrRatioChanged::release_aintrinsicsize() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicSize)
-  if (!_internal_has_aintrinsicsize()) {
+inline std::string* Msg_IntrinsicSizeOrRatioChanged::release_a_aintrinsicsize() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicSize)
+  if (!_internal_has_a_aintrinsicsize()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aintrinsicsize_.Release();
+  auto* p = _impl_.a_aintrinsicsize_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aintrinsicsize_.IsDefault()) {
-    _impl_.aintrinsicsize_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aintrinsicsize_.IsDefault()) {
+    _impl_.a_aintrinsicsize_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_IntrinsicSizeOrRatioChanged::set_allocated_aintrinsicsize(std::string* aintrinsicsize) {
-  if (aintrinsicsize != nullptr) {
+inline void Msg_IntrinsicSizeOrRatioChanged::set_allocated_a_aintrinsicsize(std::string* a_aintrinsicsize) {
+  if (a_aintrinsicsize != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aintrinsicsize_.SetAllocated(aintrinsicsize, GetArenaForAllocation());
+  _impl_.a_aintrinsicsize_.SetAllocated(a_aintrinsicsize, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aintrinsicsize_.IsDefault()) {
-    _impl_.aintrinsicsize_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aintrinsicsize_.IsDefault()) {
+    _impl_.a_aintrinsicsize_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicSize)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicSize)
 }
 
-// optional bytes aIntrinsicRatio = 2;
-inline bool Msg_IntrinsicSizeOrRatioChanged::_internal_has_aintrinsicratio() const {
+// optional bytes a_aIntrinsicRatio = 2;
+inline bool Msg_IntrinsicSizeOrRatioChanged::_internal_has_a_aintrinsicratio() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_IntrinsicSizeOrRatioChanged::has_aintrinsicratio() const {
-  return _internal_has_aintrinsicratio();
+inline bool Msg_IntrinsicSizeOrRatioChanged::has_a_aintrinsicratio() const {
+  return _internal_has_a_aintrinsicratio();
 }
-inline void Msg_IntrinsicSizeOrRatioChanged::clear_aintrinsicratio() {
-  _impl_.aintrinsicratio_.ClearToEmpty();
+inline void Msg_IntrinsicSizeOrRatioChanged::clear_a_aintrinsicratio() {
+  _impl_.a_aintrinsicratio_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_IntrinsicSizeOrRatioChanged::aintrinsicratio() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicRatio)
-  return _internal_aintrinsicratio();
+inline const std::string& Msg_IntrinsicSizeOrRatioChanged::a_aintrinsicratio() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicRatio)
+  return _internal_a_aintrinsicratio();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_IntrinsicSizeOrRatioChanged::set_aintrinsicratio(ArgT0&& arg0, ArgT... args) {
+void Msg_IntrinsicSizeOrRatioChanged::set_a_aintrinsicratio(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aintrinsicratio_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicRatio)
+ _impl_.a_aintrinsicratio_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicRatio)
 }
-inline std::string* Msg_IntrinsicSizeOrRatioChanged::mutable_aintrinsicratio() {
-  std::string* _s = _internal_mutable_aintrinsicratio();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicRatio)
+inline std::string* Msg_IntrinsicSizeOrRatioChanged::mutable_a_aintrinsicratio() {
+  std::string* _s = _internal_mutable_a_aintrinsicratio();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicRatio)
   return _s;
 }
-inline const std::string& Msg_IntrinsicSizeOrRatioChanged::_internal_aintrinsicratio() const {
-  return _impl_.aintrinsicratio_.Get();
+inline const std::string& Msg_IntrinsicSizeOrRatioChanged::_internal_a_aintrinsicratio() const {
+  return _impl_.a_aintrinsicratio_.Get();
 }
-inline void Msg_IntrinsicSizeOrRatioChanged::_internal_set_aintrinsicratio(const std::string& value) {
+inline void Msg_IntrinsicSizeOrRatioChanged::_internal_set_a_aintrinsicratio(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aintrinsicratio_.Set(value, GetArenaForAllocation());
+  _impl_.a_aintrinsicratio_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_IntrinsicSizeOrRatioChanged::_internal_mutable_aintrinsicratio() {
+inline std::string* Msg_IntrinsicSizeOrRatioChanged::_internal_mutable_a_aintrinsicratio() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aintrinsicratio_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aintrinsicratio_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_IntrinsicSizeOrRatioChanged::release_aintrinsicratio() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicRatio)
-  if (!_internal_has_aintrinsicratio()) {
+inline std::string* Msg_IntrinsicSizeOrRatioChanged::release_a_aintrinsicratio() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicRatio)
+  if (!_internal_has_a_aintrinsicratio()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aintrinsicratio_.Release();
+  auto* p = _impl_.a_aintrinsicratio_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aintrinsicratio_.IsDefault()) {
-    _impl_.aintrinsicratio_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aintrinsicratio_.IsDefault()) {
+    _impl_.a_aintrinsicratio_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_IntrinsicSizeOrRatioChanged::set_allocated_aintrinsicratio(std::string* aintrinsicratio) {
-  if (aintrinsicratio != nullptr) {
+inline void Msg_IntrinsicSizeOrRatioChanged::set_allocated_a_aintrinsicratio(std::string* a_aintrinsicratio) {
+  if (a_aintrinsicratio != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aintrinsicratio_.SetAllocated(aintrinsicratio, GetArenaForAllocation());
+  _impl_.a_aintrinsicratio_.SetAllocated(a_aintrinsicratio, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aintrinsicratio_.IsDefault()) {
-    _impl_.aintrinsicratio_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aintrinsicratio_.IsDefault()) {
+    _impl_.a_aintrinsicratio_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.aIntrinsicRatio)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_IntrinsicSizeOrRatioChanged.a_aIntrinsicRatio)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ImageLoadComplete
 
-// required bytes aResult = 1;
-inline bool Msg_ImageLoadComplete::_internal_has_aresult() const {
+// required bytes a_aResult = 1;
+inline bool Msg_ImageLoadComplete::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ImageLoadComplete::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Msg_ImageLoadComplete::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline void Msg_ImageLoadComplete::clear_aresult() {
-  _impl_.aresult_.ClearToEmpty();
+inline void Msg_ImageLoadComplete::clear_a_aresult() {
+  _impl_.a_aresult_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ImageLoadComplete::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.aResult)
-  return _internal_aresult();
+inline const std::string& Msg_ImageLoadComplete::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.a_aResult)
+  return _internal_a_aresult();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ImageLoadComplete::set_aresult(ArgT0&& arg0, ArgT... args) {
+void Msg_ImageLoadComplete::set_a_aresult(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.aResult)
+ _impl_.a_aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.a_aResult)
 }
-inline std::string* Msg_ImageLoadComplete::mutable_aresult() {
-  std::string* _s = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.aResult)
+inline std::string* Msg_ImageLoadComplete::mutable_a_aresult() {
+  std::string* _s = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.a_aResult)
   return _s;
 }
-inline const std::string& Msg_ImageLoadComplete::_internal_aresult() const {
-  return _impl_.aresult_.Get();
+inline const std::string& Msg_ImageLoadComplete::_internal_a_aresult() const {
+  return _impl_.a_aresult_.Get();
 }
-inline void Msg_ImageLoadComplete::_internal_set_aresult(const std::string& value) {
+inline void Msg_ImageLoadComplete::_internal_set_a_aresult(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aresult_.Set(value, GetArenaForAllocation());
+  _impl_.a_aresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ImageLoadComplete::_internal_mutable_aresult() {
+inline std::string* Msg_ImageLoadComplete::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aresult_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aresult_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ImageLoadComplete::release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.aResult)
-  if (!_internal_has_aresult()) {
+inline std::string* Msg_ImageLoadComplete::release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.a_aResult)
+  if (!_internal_has_a_aresult()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aresult_.Release();
+  auto* p = _impl_.a_aresult_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ImageLoadComplete::set_allocated_aresult(std::string* aresult) {
-  if (aresult != nullptr) {
+inline void Msg_ImageLoadComplete::set_allocated_a_aresult(std::string* a_aresult) {
+  if (a_aresult != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresult_.SetAllocated(aresult, GetArenaForAllocation());
+  _impl_.a_aresult_.SetAllocated(a_aresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.aResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ImageLoadComplete.a_aResult)
 }
 
 // -------------------------------------------------------------------
@@ -4674,145 +4674,145 @@ inline void Msg_ImageLoadComplete::set_allocated_aresult(std::string* aresult) {
 
 // Msg_LoadURL
 
-// required bytes aLoadState = 1;
-inline bool Msg_LoadURL::_internal_has_aloadstate() const {
+// required bytes a_aLoadState = 1;
+inline bool Msg_LoadURL::_internal_has_a_aloadstate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_LoadURL::has_aloadstate() const {
-  return _internal_has_aloadstate();
+inline bool Msg_LoadURL::has_a_aloadstate() const {
+  return _internal_has_a_aloadstate();
 }
-inline void Msg_LoadURL::clear_aloadstate() {
-  _impl_.aloadstate_.ClearToEmpty();
+inline void Msg_LoadURL::clear_a_aloadstate() {
+  _impl_.a_aloadstate_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_LoadURL::aloadstate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.aLoadState)
-  return _internal_aloadstate();
+inline const std::string& Msg_LoadURL::a_aloadstate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.a_aLoadState)
+  return _internal_a_aloadstate();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_LoadURL::set_aloadstate(ArgT0&& arg0, ArgT... args) {
+void Msg_LoadURL::set_a_aloadstate(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aloadstate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.aLoadState)
+ _impl_.a_aloadstate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.a_aLoadState)
 }
-inline std::string* Msg_LoadURL::mutable_aloadstate() {
-  std::string* _s = _internal_mutable_aloadstate();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.aLoadState)
+inline std::string* Msg_LoadURL::mutable_a_aloadstate() {
+  std::string* _s = _internal_mutable_a_aloadstate();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.a_aLoadState)
   return _s;
 }
-inline const std::string& Msg_LoadURL::_internal_aloadstate() const {
-  return _impl_.aloadstate_.Get();
+inline const std::string& Msg_LoadURL::_internal_a_aloadstate() const {
+  return _impl_.a_aloadstate_.Get();
 }
-inline void Msg_LoadURL::_internal_set_aloadstate(const std::string& value) {
+inline void Msg_LoadURL::_internal_set_a_aloadstate(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aloadstate_.Set(value, GetArenaForAllocation());
+  _impl_.a_aloadstate_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_LoadURL::_internal_mutable_aloadstate() {
+inline std::string* Msg_LoadURL::_internal_mutable_a_aloadstate() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aloadstate_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aloadstate_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_LoadURL::release_aloadstate() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.aLoadState)
-  if (!_internal_has_aloadstate()) {
+inline std::string* Msg_LoadURL::release_a_aloadstate() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.a_aLoadState)
+  if (!_internal_has_a_aloadstate()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aloadstate_.Release();
+  auto* p = _impl_.a_aloadstate_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aloadstate_.IsDefault()) {
-    _impl_.aloadstate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aloadstate_.IsDefault()) {
+    _impl_.a_aloadstate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_LoadURL::set_allocated_aloadstate(std::string* aloadstate) {
-  if (aloadstate != nullptr) {
+inline void Msg_LoadURL::set_allocated_a_aloadstate(std::string* a_aloadstate) {
+  if (a_aloadstate != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aloadstate_.SetAllocated(aloadstate, GetArenaForAllocation());
+  _impl_.a_aloadstate_.SetAllocated(a_aloadstate, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aloadstate_.IsDefault()) {
-    _impl_.aloadstate_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aloadstate_.IsDefault()) {
+    _impl_.a_aloadstate_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.aLoadState)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_LoadURL.a_aLoadState)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ResumeLoad
 
-// required uint64 aPendingSwitchID = 1;
-inline bool Msg_ResumeLoad::_internal_has_apendingswitchid() const {
+// required uint64 a_aPendingSwitchID = 1;
+inline bool Msg_ResumeLoad::_internal_has_a_apendingswitchid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ResumeLoad::has_apendingswitchid() const {
-  return _internal_has_apendingswitchid();
+inline bool Msg_ResumeLoad::has_a_apendingswitchid() const {
+  return _internal_has_a_apendingswitchid();
 }
-inline void Msg_ResumeLoad::clear_apendingswitchid() {
-  _impl_.apendingswitchid_ = uint64_t{0u};
+inline void Msg_ResumeLoad::clear_a_apendingswitchid() {
+  _impl_.a_apendingswitchid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_ResumeLoad::_internal_apendingswitchid() const {
-  return _impl_.apendingswitchid_;
+inline uint64_t Msg_ResumeLoad::_internal_a_apendingswitchid() const {
+  return _impl_.a_apendingswitchid_;
 }
-inline uint64_t Msg_ResumeLoad::apendingswitchid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ResumeLoad.aPendingSwitchID)
-  return _internal_apendingswitchid();
+inline uint64_t Msg_ResumeLoad::a_apendingswitchid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ResumeLoad.a_aPendingSwitchID)
+  return _internal_a_apendingswitchid();
 }
-inline void Msg_ResumeLoad::_internal_set_apendingswitchid(uint64_t value) {
+inline void Msg_ResumeLoad::_internal_set_a_apendingswitchid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apendingswitchid_ = value;
+  _impl_.a_apendingswitchid_ = value;
 }
-inline void Msg_ResumeLoad::set_apendingswitchid(uint64_t value) {
-  _internal_set_apendingswitchid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ResumeLoad.aPendingSwitchID)
+inline void Msg_ResumeLoad::set_a_apendingswitchid(uint64_t value) {
+  _internal_set_a_apendingswitchid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ResumeLoad.a_aPendingSwitchID)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Show
 
-// required .protobuf.mozilla.dom.OwnerShowInfo info = 1;
-inline bool Msg_Show::_internal_has_info() const {
+// required .protobuf.mozilla.dom.OwnerShowInfo a_info = 1;
+inline bool Msg_Show::_internal_has_a_info() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.info_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_info_ != nullptr);
   return value;
 }
-inline bool Msg_Show::has_info() const {
-  return _internal_has_info();
+inline bool Msg_Show::has_a_info() const {
+  return _internal_has_a_info();
 }
-inline const ::protobuf::mozilla::dom::OwnerShowInfo& Msg_Show::_internal_info() const {
-  const ::protobuf::mozilla::dom::OwnerShowInfo* p = _impl_.info_;
+inline const ::protobuf::mozilla::dom::OwnerShowInfo& Msg_Show::_internal_a_info() const {
+  const ::protobuf::mozilla::dom::OwnerShowInfo* p = _impl_.a_info_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::OwnerShowInfo&>(
       ::protobuf::mozilla::dom::_OwnerShowInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::OwnerShowInfo& Msg_Show::info() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.info)
-  return _internal_info();
+inline const ::protobuf::mozilla::dom::OwnerShowInfo& Msg_Show::a_info() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.a_info)
+  return _internal_a_info();
 }
-inline void Msg_Show::unsafe_arena_set_allocated_info(
-    ::protobuf::mozilla::dom::OwnerShowInfo* info) {
+inline void Msg_Show::unsafe_arena_set_allocated_a_info(
+    ::protobuf::mozilla::dom::OwnerShowInfo* a_info) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.info_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_info_);
   }
-  _impl_.info_ = info;
-  if (info) {
+  _impl_.a_info_ = a_info;
+  if (a_info) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.a_info)
 }
-inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::release_info() {
+inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::release_a_info() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::OwnerShowInfo* temp = _impl_.info_;
-  _impl_.info_ = nullptr;
+  ::protobuf::mozilla::dom::OwnerShowInfo* temp = _impl_.a_info_;
+  _impl_.a_info_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4824,402 +4824,402 @@ inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::release_info() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::unsafe_arena_release_info() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.info)
+inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::unsafe_arena_release_a_info() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.a_info)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::OwnerShowInfo* temp = _impl_.info_;
-  _impl_.info_ = nullptr;
+  ::protobuf::mozilla::dom::OwnerShowInfo* temp = _impl_.a_info_;
+  _impl_.a_info_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::_internal_mutable_info() {
+inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::_internal_mutable_a_info() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.info_ == nullptr) {
+  if (_impl_.a_info_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::OwnerShowInfo>(GetArenaForAllocation());
-    _impl_.info_ = p;
+    _impl_.a_info_ = p;
   }
-  return _impl_.info_;
+  return _impl_.a_info_;
 }
-inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::mutable_info() {
-  ::protobuf::mozilla::dom::OwnerShowInfo* _msg = _internal_mutable_info();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.info)
+inline ::protobuf::mozilla::dom::OwnerShowInfo* Msg_Show::mutable_a_info() {
+  ::protobuf::mozilla::dom::OwnerShowInfo* _msg = _internal_mutable_a_info();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.a_info)
   return _msg;
 }
-inline void Msg_Show::set_allocated_info(::protobuf::mozilla::dom::OwnerShowInfo* info) {
+inline void Msg_Show::set_allocated_a_info(::protobuf::mozilla::dom::OwnerShowInfo* a_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.info_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_info_);
   }
-  if (info) {
+  if (a_info) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(info));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_info));
     if (message_arena != submessage_arena) {
-      info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, info, submessage_arena);
+      a_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_info, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.info_ = info;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.info)
+  _impl_.a_info_ = a_info;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_Show.a_info)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ScrollbarPreferenceChanged
 
-// required bytes pref = 1;
-inline bool Msg_ScrollbarPreferenceChanged::_internal_has_pref() const {
+// required bytes a_pref = 1;
+inline bool Msg_ScrollbarPreferenceChanged::_internal_has_a_pref() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ScrollbarPreferenceChanged::has_pref() const {
-  return _internal_has_pref();
+inline bool Msg_ScrollbarPreferenceChanged::has_a_pref() const {
+  return _internal_has_a_pref();
 }
-inline void Msg_ScrollbarPreferenceChanged::clear_pref() {
-  _impl_.pref_.ClearToEmpty();
+inline void Msg_ScrollbarPreferenceChanged::clear_a_pref() {
+  _impl_.a_pref_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ScrollbarPreferenceChanged::pref() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.pref)
-  return _internal_pref();
+inline const std::string& Msg_ScrollbarPreferenceChanged::a_pref() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.a_pref)
+  return _internal_a_pref();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ScrollbarPreferenceChanged::set_pref(ArgT0&& arg0, ArgT... args) {
+void Msg_ScrollbarPreferenceChanged::set_a_pref(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.pref_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.pref)
+ _impl_.a_pref_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.a_pref)
 }
-inline std::string* Msg_ScrollbarPreferenceChanged::mutable_pref() {
-  std::string* _s = _internal_mutable_pref();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.pref)
+inline std::string* Msg_ScrollbarPreferenceChanged::mutable_a_pref() {
+  std::string* _s = _internal_mutable_a_pref();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.a_pref)
   return _s;
 }
-inline const std::string& Msg_ScrollbarPreferenceChanged::_internal_pref() const {
-  return _impl_.pref_.Get();
+inline const std::string& Msg_ScrollbarPreferenceChanged::_internal_a_pref() const {
+  return _impl_.a_pref_.Get();
 }
-inline void Msg_ScrollbarPreferenceChanged::_internal_set_pref(const std::string& value) {
+inline void Msg_ScrollbarPreferenceChanged::_internal_set_a_pref(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.pref_.Set(value, GetArenaForAllocation());
+  _impl_.a_pref_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollbarPreferenceChanged::_internal_mutable_pref() {
+inline std::string* Msg_ScrollbarPreferenceChanged::_internal_mutable_a_pref() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.pref_.Mutable(GetArenaForAllocation());
+  return _impl_.a_pref_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ScrollbarPreferenceChanged::release_pref() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.pref)
-  if (!_internal_has_pref()) {
+inline std::string* Msg_ScrollbarPreferenceChanged::release_a_pref() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.a_pref)
+  if (!_internal_has_a_pref()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.pref_.Release();
+  auto* p = _impl_.a_pref_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.pref_.IsDefault()) {
-    _impl_.pref_.Set("", GetArenaForAllocation());
+  if (_impl_.a_pref_.IsDefault()) {
+    _impl_.a_pref_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ScrollbarPreferenceChanged::set_allocated_pref(std::string* pref) {
-  if (pref != nullptr) {
+inline void Msg_ScrollbarPreferenceChanged::set_allocated_a_pref(std::string* a_pref) {
+  if (a_pref != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.pref_.SetAllocated(pref, GetArenaForAllocation());
+  _impl_.a_pref_.SetAllocated(a_pref, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.pref_.IsDefault()) {
-    _impl_.pref_.Set("", GetArenaForAllocation());
+  if (_impl_.a_pref_.IsDefault()) {
+    _impl_.a_pref_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.pref)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_ScrollbarPreferenceChanged.a_pref)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateDimensions
 
-// required bytes rect = 1;
-inline bool Msg_UpdateDimensions::_internal_has_rect() const {
+// required bytes a_rect = 1;
+inline bool Msg_UpdateDimensions::_internal_has_a_rect() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateDimensions::has_rect() const {
-  return _internal_has_rect();
+inline bool Msg_UpdateDimensions::has_a_rect() const {
+  return _internal_has_a_rect();
 }
-inline void Msg_UpdateDimensions::clear_rect() {
-  _impl_.rect_.ClearToEmpty();
+inline void Msg_UpdateDimensions::clear_a_rect() {
+  _impl_.a_rect_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UpdateDimensions::rect() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.rect)
-  return _internal_rect();
+inline const std::string& Msg_UpdateDimensions::a_rect() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_rect)
+  return _internal_a_rect();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateDimensions::set_rect(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateDimensions::set_a_rect(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.rect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.rect)
+ _impl_.a_rect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_rect)
 }
-inline std::string* Msg_UpdateDimensions::mutable_rect() {
-  std::string* _s = _internal_mutable_rect();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.rect)
+inline std::string* Msg_UpdateDimensions::mutable_a_rect() {
+  std::string* _s = _internal_mutable_a_rect();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_rect)
   return _s;
 }
-inline const std::string& Msg_UpdateDimensions::_internal_rect() const {
-  return _impl_.rect_.Get();
+inline const std::string& Msg_UpdateDimensions::_internal_a_rect() const {
+  return _impl_.a_rect_.Get();
 }
-inline void Msg_UpdateDimensions::_internal_set_rect(const std::string& value) {
+inline void Msg_UpdateDimensions::_internal_set_a_rect(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.rect_.Set(value, GetArenaForAllocation());
+  _impl_.a_rect_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDimensions::_internal_mutable_rect() {
+inline std::string* Msg_UpdateDimensions::_internal_mutable_a_rect() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.rect_.Mutable(GetArenaForAllocation());
+  return _impl_.a_rect_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDimensions::release_rect() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.rect)
-  if (!_internal_has_rect()) {
+inline std::string* Msg_UpdateDimensions::release_a_rect() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_rect)
+  if (!_internal_has_a_rect()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.rect_.Release();
+  auto* p = _impl_.a_rect_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rect_.IsDefault()) {
-    _impl_.rect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rect_.IsDefault()) {
+    _impl_.a_rect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateDimensions::set_allocated_rect(std::string* rect) {
-  if (rect != nullptr) {
+inline void Msg_UpdateDimensions::set_allocated_a_rect(std::string* a_rect) {
+  if (a_rect != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.rect_.SetAllocated(rect, GetArenaForAllocation());
+  _impl_.a_rect_.SetAllocated(a_rect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rect_.IsDefault()) {
-    _impl_.rect_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rect_.IsDefault()) {
+    _impl_.a_rect_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.rect)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_rect)
 }
 
-// required bytes size = 2;
-inline bool Msg_UpdateDimensions::_internal_has_size() const {
+// required bytes a_size = 2;
+inline bool Msg_UpdateDimensions::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_UpdateDimensions::has_size() const {
-  return _internal_has_size();
+inline bool Msg_UpdateDimensions::has_a_size() const {
+  return _internal_has_a_size();
 }
-inline void Msg_UpdateDimensions::clear_size() {
-  _impl_.size_.ClearToEmpty();
+inline void Msg_UpdateDimensions::clear_a_size() {
+  _impl_.a_size_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_UpdateDimensions::size() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.size)
-  return _internal_size();
+inline const std::string& Msg_UpdateDimensions::a_size() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_size)
+  return _internal_a_size();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateDimensions::set_size(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateDimensions::set_a_size(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.size_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.size)
+ _impl_.a_size_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_size)
 }
-inline std::string* Msg_UpdateDimensions::mutable_size() {
-  std::string* _s = _internal_mutable_size();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.size)
+inline std::string* Msg_UpdateDimensions::mutable_a_size() {
+  std::string* _s = _internal_mutable_a_size();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_size)
   return _s;
 }
-inline const std::string& Msg_UpdateDimensions::_internal_size() const {
-  return _impl_.size_.Get();
+inline const std::string& Msg_UpdateDimensions::_internal_a_size() const {
+  return _impl_.a_size_.Get();
 }
-inline void Msg_UpdateDimensions::_internal_set_size(const std::string& value) {
+inline void Msg_UpdateDimensions::_internal_set_a_size(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.size_.Set(value, GetArenaForAllocation());
+  _impl_.a_size_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDimensions::_internal_mutable_size() {
+inline std::string* Msg_UpdateDimensions::_internal_mutable_a_size() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.size_.Mutable(GetArenaForAllocation());
+  return _impl_.a_size_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateDimensions::release_size() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.size)
-  if (!_internal_has_size()) {
+inline std::string* Msg_UpdateDimensions::release_a_size() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_size)
+  if (!_internal_has_a_size()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.size_.Release();
+  auto* p = _impl_.a_size_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.size_.IsDefault()) {
-    _impl_.size_.Set("", GetArenaForAllocation());
+  if (_impl_.a_size_.IsDefault()) {
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateDimensions::set_allocated_size(std::string* size) {
-  if (size != nullptr) {
+inline void Msg_UpdateDimensions::set_allocated_a_size(std::string* a_size) {
+  if (a_size != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.size_.SetAllocated(size, GetArenaForAllocation());
+  _impl_.a_size_.SetAllocated(a_size, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.size_.IsDefault()) {
-    _impl_.size_.Set("", GetArenaForAllocation());
+  if (_impl_.a_size_.IsDefault()) {
+    _impl_.a_size_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.size)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateDimensions.a_size)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RenderLayers
 
-// required bool aEnabled = 1;
-inline bool Msg_RenderLayers::_internal_has_aenabled() const {
+// required bool a_aEnabled = 1;
+inline bool Msg_RenderLayers::_internal_has_a_aenabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RenderLayers::has_aenabled() const {
-  return _internal_has_aenabled();
+inline bool Msg_RenderLayers::has_a_aenabled() const {
+  return _internal_has_a_aenabled();
 }
-inline void Msg_RenderLayers::clear_aenabled() {
-  _impl_.aenabled_ = false;
+inline void Msg_RenderLayers::clear_a_aenabled() {
+  _impl_.a_aenabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_RenderLayers::_internal_aenabled() const {
-  return _impl_.aenabled_;
+inline bool Msg_RenderLayers::_internal_a_aenabled() const {
+  return _impl_.a_aenabled_;
 }
-inline bool Msg_RenderLayers::aenabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_RenderLayers.aEnabled)
-  return _internal_aenabled();
+inline bool Msg_RenderLayers::a_aenabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_RenderLayers.a_aEnabled)
+  return _internal_a_aenabled();
 }
-inline void Msg_RenderLayers::_internal_set_aenabled(bool value) {
+inline void Msg_RenderLayers::_internal_set_a_aenabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aenabled_ = value;
+  _impl_.a_aenabled_ = value;
 }
-inline void Msg_RenderLayers::set_aenabled(bool value) {
-  _internal_set_aenabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_RenderLayers.aEnabled)
+inline void Msg_RenderLayers::set_a_aenabled(bool value) {
+  _internal_set_a_aenabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_RenderLayers.a_aEnabled)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateEffects
 
-// required bytes aEffects = 1;
-inline bool Msg_UpdateEffects::_internal_has_aeffects() const {
+// required bytes a_aEffects = 1;
+inline bool Msg_UpdateEffects::_internal_has_a_aeffects() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateEffects::has_aeffects() const {
-  return _internal_has_aeffects();
+inline bool Msg_UpdateEffects::has_a_aeffects() const {
+  return _internal_has_a_aeffects();
 }
-inline void Msg_UpdateEffects::clear_aeffects() {
-  _impl_.aeffects_.ClearToEmpty();
+inline void Msg_UpdateEffects::clear_a_aeffects() {
+  _impl_.a_aeffects_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UpdateEffects::aeffects() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.aEffects)
-  return _internal_aeffects();
+inline const std::string& Msg_UpdateEffects::a_aeffects() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.a_aEffects)
+  return _internal_a_aeffects();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateEffects::set_aeffects(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateEffects::set_a_aeffects(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aeffects_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.aEffects)
+ _impl_.a_aeffects_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.a_aEffects)
 }
-inline std::string* Msg_UpdateEffects::mutable_aeffects() {
-  std::string* _s = _internal_mutable_aeffects();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.aEffects)
+inline std::string* Msg_UpdateEffects::mutable_a_aeffects() {
+  std::string* _s = _internal_mutable_a_aeffects();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.a_aEffects)
   return _s;
 }
-inline const std::string& Msg_UpdateEffects::_internal_aeffects() const {
-  return _impl_.aeffects_.Get();
+inline const std::string& Msg_UpdateEffects::_internal_a_aeffects() const {
+  return _impl_.a_aeffects_.Get();
 }
-inline void Msg_UpdateEffects::_internal_set_aeffects(const std::string& value) {
+inline void Msg_UpdateEffects::_internal_set_a_aeffects(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aeffects_.Set(value, GetArenaForAllocation());
+  _impl_.a_aeffects_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateEffects::_internal_mutable_aeffects() {
+inline std::string* Msg_UpdateEffects::_internal_mutable_a_aeffects() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aeffects_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aeffects_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateEffects::release_aeffects() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.aEffects)
-  if (!_internal_has_aeffects()) {
+inline std::string* Msg_UpdateEffects::release_a_aeffects() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.a_aEffects)
+  if (!_internal_has_a_aeffects()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aeffects_.Release();
+  auto* p = _impl_.a_aeffects_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aeffects_.IsDefault()) {
-    _impl_.aeffects_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aeffects_.IsDefault()) {
+    _impl_.a_aeffects_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateEffects::set_allocated_aeffects(std::string* aeffects) {
-  if (aeffects != nullptr) {
+inline void Msg_UpdateEffects::set_allocated_a_aeffects(std::string* a_aeffects) {
+  if (a_aeffects != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aeffects_.SetAllocated(aeffects, GetArenaForAllocation());
+  _impl_.a_aeffects_.SetAllocated(a_aeffects, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aeffects_.IsDefault()) {
-    _impl_.aeffects_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aeffects_.IsDefault()) {
+    _impl_.a_aeffects_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.aEffects)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateEffects.a_aEffects)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateRemotePrintSettings
 
-// required .protobuf.mozilla.embedding.PrintData aPrintData = 1;
-inline bool Msg_UpdateRemotePrintSettings::_internal_has_aprintdata() const {
+// required .protobuf.mozilla.embedding.PrintData a_aPrintData = 1;
+inline bool Msg_UpdateRemotePrintSettings::_internal_has_a_aprintdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aprintdata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aprintdata_ != nullptr);
   return value;
 }
-inline bool Msg_UpdateRemotePrintSettings::has_aprintdata() const {
-  return _internal_has_aprintdata();
+inline bool Msg_UpdateRemotePrintSettings::has_a_aprintdata() const {
+  return _internal_has_a_aprintdata();
 }
-inline const ::protobuf::mozilla::embedding::PrintData& Msg_UpdateRemotePrintSettings::_internal_aprintdata() const {
-  const ::protobuf::mozilla::embedding::PrintData* p = _impl_.aprintdata_;
+inline const ::protobuf::mozilla::embedding::PrintData& Msg_UpdateRemotePrintSettings::_internal_a_aprintdata() const {
+  const ::protobuf::mozilla::embedding::PrintData* p = _impl_.a_aprintdata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::embedding::PrintData&>(
       ::protobuf::mozilla::embedding::_PrintData_default_instance_);
 }
-inline const ::protobuf::mozilla::embedding::PrintData& Msg_UpdateRemotePrintSettings::aprintdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.aPrintData)
-  return _internal_aprintdata();
+inline const ::protobuf::mozilla::embedding::PrintData& Msg_UpdateRemotePrintSettings::a_aprintdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.a_aPrintData)
+  return _internal_a_aprintdata();
 }
-inline void Msg_UpdateRemotePrintSettings::unsafe_arena_set_allocated_aprintdata(
-    ::protobuf::mozilla::embedding::PrintData* aprintdata) {
+inline void Msg_UpdateRemotePrintSettings::unsafe_arena_set_allocated_a_aprintdata(
+    ::protobuf::mozilla::embedding::PrintData* a_aprintdata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aprintdata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aprintdata_);
   }
-  _impl_.aprintdata_ = aprintdata;
-  if (aprintdata) {
+  _impl_.a_aprintdata_ = a_aprintdata;
+  if (a_aprintdata) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.aPrintData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.a_aPrintData)
 }
-inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::release_aprintdata() {
+inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::release_a_aprintdata() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::embedding::PrintData* temp = _impl_.aprintdata_;
-  _impl_.aprintdata_ = nullptr;
+  ::protobuf::mozilla::embedding::PrintData* temp = _impl_.a_aprintdata_;
+  _impl_.a_aprintdata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -5231,341 +5231,341 @@ inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::unsafe_arena_release_aprintdata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.aPrintData)
+inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::unsafe_arena_release_a_aprintdata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.a_aPrintData)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::embedding::PrintData* temp = _impl_.aprintdata_;
-  _impl_.aprintdata_ = nullptr;
+  ::protobuf::mozilla::embedding::PrintData* temp = _impl_.a_aprintdata_;
+  _impl_.a_aprintdata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::_internal_mutable_aprintdata() {
+inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::_internal_mutable_a_aprintdata() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aprintdata_ == nullptr) {
+  if (_impl_.a_aprintdata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::embedding::PrintData>(GetArenaForAllocation());
-    _impl_.aprintdata_ = p;
+    _impl_.a_aprintdata_ = p;
   }
-  return _impl_.aprintdata_;
+  return _impl_.a_aprintdata_;
 }
-inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::mutable_aprintdata() {
-  ::protobuf::mozilla::embedding::PrintData* _msg = _internal_mutable_aprintdata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.aPrintData)
+inline ::protobuf::mozilla::embedding::PrintData* Msg_UpdateRemotePrintSettings::mutable_a_aprintdata() {
+  ::protobuf::mozilla::embedding::PrintData* _msg = _internal_mutable_a_aprintdata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.a_aPrintData)
   return _msg;
 }
-inline void Msg_UpdateRemotePrintSettings::set_allocated_aprintdata(::protobuf::mozilla::embedding::PrintData* aprintdata) {
+inline void Msg_UpdateRemotePrintSettings::set_allocated_a_aprintdata(::protobuf::mozilla::embedding::PrintData* a_aprintdata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aprintdata_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aprintdata_);
   }
-  if (aprintdata) {
+  if (a_aprintdata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aprintdata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aprintdata));
     if (message_arena != submessage_arena) {
-      aprintdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aprintdata, submessage_arena);
+      a_aprintdata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aprintdata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aprintdata_ = aprintdata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.aPrintData)
+  _impl_.a_aprintdata_ = a_aprintdata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemotePrintSettings.a_aPrintData)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_NavigateByKey
 
-// required bool aForward = 1;
-inline bool Msg_NavigateByKey::_internal_has_aforward() const {
+// required bool a_aForward = 1;
+inline bool Msg_NavigateByKey::_internal_has_a_aforward() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NavigateByKey::has_aforward() const {
-  return _internal_has_aforward();
+inline bool Msg_NavigateByKey::has_a_aforward() const {
+  return _internal_has_a_aforward();
 }
-inline void Msg_NavigateByKey::clear_aforward() {
-  _impl_.aforward_ = false;
+inline void Msg_NavigateByKey::clear_a_aforward() {
+  _impl_.a_aforward_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_NavigateByKey::_internal_aforward() const {
-  return _impl_.aforward_;
+inline bool Msg_NavigateByKey::_internal_a_aforward() const {
+  return _impl_.a_aforward_;
 }
-inline bool Msg_NavigateByKey::aforward() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.aForward)
-  return _internal_aforward();
+inline bool Msg_NavigateByKey::a_aforward() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.a_aForward)
+  return _internal_a_aforward();
 }
-inline void Msg_NavigateByKey::_internal_set_aforward(bool value) {
+inline void Msg_NavigateByKey::_internal_set_a_aforward(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aforward_ = value;
+  _impl_.a_aforward_ = value;
 }
-inline void Msg_NavigateByKey::set_aforward(bool value) {
-  _internal_set_aforward(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.aForward)
+inline void Msg_NavigateByKey::set_a_aforward(bool value) {
+  _internal_set_a_aforward(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.a_aForward)
 }
 
-// required bool aForDocumentNavigation = 2;
-inline bool Msg_NavigateByKey::_internal_has_afordocumentnavigation() const {
+// required bool a_aForDocumentNavigation = 2;
+inline bool Msg_NavigateByKey::_internal_has_a_afordocumentnavigation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_NavigateByKey::has_afordocumentnavigation() const {
-  return _internal_has_afordocumentnavigation();
+inline bool Msg_NavigateByKey::has_a_afordocumentnavigation() const {
+  return _internal_has_a_afordocumentnavigation();
 }
-inline void Msg_NavigateByKey::clear_afordocumentnavigation() {
-  _impl_.afordocumentnavigation_ = false;
+inline void Msg_NavigateByKey::clear_a_afordocumentnavigation() {
+  _impl_.a_afordocumentnavigation_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_NavigateByKey::_internal_afordocumentnavigation() const {
-  return _impl_.afordocumentnavigation_;
+inline bool Msg_NavigateByKey::_internal_a_afordocumentnavigation() const {
+  return _impl_.a_afordocumentnavigation_;
 }
-inline bool Msg_NavigateByKey::afordocumentnavigation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.aForDocumentNavigation)
-  return _internal_afordocumentnavigation();
+inline bool Msg_NavigateByKey::a_afordocumentnavigation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.a_aForDocumentNavigation)
+  return _internal_a_afordocumentnavigation();
 }
-inline void Msg_NavigateByKey::_internal_set_afordocumentnavigation(bool value) {
+inline void Msg_NavigateByKey::_internal_set_a_afordocumentnavigation(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.afordocumentnavigation_ = value;
+  _impl_.a_afordocumentnavigation_ = value;
 }
-inline void Msg_NavigateByKey::set_afordocumentnavigation(bool value) {
-  _internal_set_afordocumentnavigation(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.aForDocumentNavigation)
+inline void Msg_NavigateByKey::set_a_afordocumentnavigation(bool value) {
+  _internal_set_a_afordocumentnavigation(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_NavigateByKey.a_aForDocumentNavigation)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DispatchSynthesizedMouseEvent
 
-// required bytes event = 1;
-inline bool Msg_DispatchSynthesizedMouseEvent::_internal_has_event() const {
+// required bytes a_event = 1;
+inline bool Msg_DispatchSynthesizedMouseEvent::_internal_has_a_event() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DispatchSynthesizedMouseEvent::has_event() const {
-  return _internal_has_event();
+inline bool Msg_DispatchSynthesizedMouseEvent::has_a_event() const {
+  return _internal_has_a_event();
 }
-inline void Msg_DispatchSynthesizedMouseEvent::clear_event() {
-  _impl_.event_.ClearToEmpty();
+inline void Msg_DispatchSynthesizedMouseEvent::clear_a_event() {
+  _impl_.a_event_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DispatchSynthesizedMouseEvent::event() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.event)
-  return _internal_event();
+inline const std::string& Msg_DispatchSynthesizedMouseEvent::a_event() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.a_event)
+  return _internal_a_event();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DispatchSynthesizedMouseEvent::set_event(ArgT0&& arg0, ArgT... args) {
+void Msg_DispatchSynthesizedMouseEvent::set_a_event(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.event_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.event)
+ _impl_.a_event_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.a_event)
 }
-inline std::string* Msg_DispatchSynthesizedMouseEvent::mutable_event() {
-  std::string* _s = _internal_mutable_event();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.event)
+inline std::string* Msg_DispatchSynthesizedMouseEvent::mutable_a_event() {
+  std::string* _s = _internal_mutable_a_event();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.a_event)
   return _s;
 }
-inline const std::string& Msg_DispatchSynthesizedMouseEvent::_internal_event() const {
-  return _impl_.event_.Get();
+inline const std::string& Msg_DispatchSynthesizedMouseEvent::_internal_a_event() const {
+  return _impl_.a_event_.Get();
 }
-inline void Msg_DispatchSynthesizedMouseEvent::_internal_set_event(const std::string& value) {
+inline void Msg_DispatchSynthesizedMouseEvent::_internal_set_a_event(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.event_.Set(value, GetArenaForAllocation());
+  _impl_.a_event_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DispatchSynthesizedMouseEvent::_internal_mutable_event() {
+inline std::string* Msg_DispatchSynthesizedMouseEvent::_internal_mutable_a_event() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.event_.Mutable(GetArenaForAllocation());
+  return _impl_.a_event_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DispatchSynthesizedMouseEvent::release_event() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.event)
-  if (!_internal_has_event()) {
+inline std::string* Msg_DispatchSynthesizedMouseEvent::release_a_event() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.a_event)
+  if (!_internal_has_a_event()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.event_.Release();
+  auto* p = _impl_.a_event_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.event_.IsDefault()) {
-    _impl_.event_.Set("", GetArenaForAllocation());
+  if (_impl_.a_event_.IsDefault()) {
+    _impl_.a_event_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DispatchSynthesizedMouseEvent::set_allocated_event(std::string* event) {
-  if (event != nullptr) {
+inline void Msg_DispatchSynthesizedMouseEvent::set_allocated_a_event(std::string* a_event) {
+  if (a_event != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.event_.SetAllocated(event, GetArenaForAllocation());
+  _impl_.a_event_.SetAllocated(a_event, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.event_.IsDefault()) {
-    _impl_.event_.Set("", GetArenaForAllocation());
+  if (_impl_.a_event_.IsDefault()) {
+    _impl_.a_event_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.event)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_DispatchSynthesizedMouseEvent.a_event)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Activate
 
-// required uint64 aActionId = 1;
-inline bool Msg_Activate::_internal_has_aactionid() const {
+// required uint64 a_aActionId = 1;
+inline bool Msg_Activate::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Activate::has_aactionid() const {
-  return _internal_has_aactionid();
+inline bool Msg_Activate::has_a_aactionid() const {
+  return _internal_has_a_aactionid();
 }
-inline void Msg_Activate::clear_aactionid() {
-  _impl_.aactionid_ = uint64_t{0u};
+inline void Msg_Activate::clear_a_aactionid() {
+  _impl_.a_aactionid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_Activate::_internal_aactionid() const {
-  return _impl_.aactionid_;
+inline uint64_t Msg_Activate::_internal_a_aactionid() const {
+  return _impl_.a_aactionid_;
 }
-inline uint64_t Msg_Activate::aactionid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Activate.aActionId)
-  return _internal_aactionid();
+inline uint64_t Msg_Activate::a_aactionid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Activate.a_aActionId)
+  return _internal_a_aactionid();
 }
-inline void Msg_Activate::_internal_set_aactionid(uint64_t value) {
+inline void Msg_Activate::_internal_set_a_aactionid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aactionid_ = value;
+  _impl_.a_aactionid_ = value;
 }
-inline void Msg_Activate::set_aactionid(uint64_t value) {
-  _internal_set_aactionid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Activate.aActionId)
+inline void Msg_Activate::set_a_aactionid(uint64_t value) {
+  _internal_set_a_aactionid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Activate.a_aActionId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Deactivate
 
-// required bool aWindowLowering = 1;
-inline bool Msg_Deactivate::_internal_has_awindowlowering() const {
+// required bool a_aWindowLowering = 1;
+inline bool Msg_Deactivate::_internal_has_a_awindowlowering() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Deactivate::has_awindowlowering() const {
-  return _internal_has_awindowlowering();
+inline bool Msg_Deactivate::has_a_awindowlowering() const {
+  return _internal_has_a_awindowlowering();
 }
-inline void Msg_Deactivate::clear_awindowlowering() {
-  _impl_.awindowlowering_ = false;
+inline void Msg_Deactivate::clear_a_awindowlowering() {
+  _impl_.a_awindowlowering_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_Deactivate::_internal_awindowlowering() const {
-  return _impl_.awindowlowering_;
+inline bool Msg_Deactivate::_internal_a_awindowlowering() const {
+  return _impl_.a_awindowlowering_;
 }
-inline bool Msg_Deactivate::awindowlowering() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.aWindowLowering)
-  return _internal_awindowlowering();
+inline bool Msg_Deactivate::a_awindowlowering() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.a_aWindowLowering)
+  return _internal_a_awindowlowering();
 }
-inline void Msg_Deactivate::_internal_set_awindowlowering(bool value) {
+inline void Msg_Deactivate::_internal_set_a_awindowlowering(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.awindowlowering_ = value;
+  _impl_.a_awindowlowering_ = value;
 }
-inline void Msg_Deactivate::set_awindowlowering(bool value) {
-  _internal_set_awindowlowering(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.aWindowLowering)
+inline void Msg_Deactivate::set_a_awindowlowering(bool value) {
+  _internal_set_a_awindowlowering(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.a_aWindowLowering)
 }
 
-// required uint64 aActionId = 2;
-inline bool Msg_Deactivate::_internal_has_aactionid() const {
+// required uint64 a_aActionId = 2;
+inline bool Msg_Deactivate::_internal_has_a_aactionid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Deactivate::has_aactionid() const {
-  return _internal_has_aactionid();
+inline bool Msg_Deactivate::has_a_aactionid() const {
+  return _internal_has_a_aactionid();
 }
-inline void Msg_Deactivate::clear_aactionid() {
-  _impl_.aactionid_ = uint64_t{0u};
+inline void Msg_Deactivate::clear_a_aactionid() {
+  _impl_.a_aactionid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_Deactivate::_internal_aactionid() const {
-  return _impl_.aactionid_;
+inline uint64_t Msg_Deactivate::_internal_a_aactionid() const {
+  return _impl_.a_aactionid_;
 }
-inline uint64_t Msg_Deactivate::aactionid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.aActionId)
-  return _internal_aactionid();
+inline uint64_t Msg_Deactivate::a_aactionid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.a_aActionId)
+  return _internal_a_aactionid();
 }
-inline void Msg_Deactivate::_internal_set_aactionid(uint64_t value) {
+inline void Msg_Deactivate::_internal_set_a_aactionid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aactionid_ = value;
+  _impl_.a_aactionid_ = value;
 }
-inline void Msg_Deactivate::set_aactionid(uint64_t value) {
-  _internal_set_aactionid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.aActionId)
+inline void Msg_Deactivate::set_a_aactionid(uint64_t value) {
+  _internal_set_a_aactionid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_Deactivate.a_aActionId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UpdateRemoteStyle
 
-// required bytes aImageRendering = 1;
-inline bool Msg_UpdateRemoteStyle::_internal_has_aimagerendering() const {
+// required bytes a_aImageRendering = 1;
+inline bool Msg_UpdateRemoteStyle::_internal_has_a_aimagerendering() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UpdateRemoteStyle::has_aimagerendering() const {
-  return _internal_has_aimagerendering();
+inline bool Msg_UpdateRemoteStyle::has_a_aimagerendering() const {
+  return _internal_has_a_aimagerendering();
 }
-inline void Msg_UpdateRemoteStyle::clear_aimagerendering() {
-  _impl_.aimagerendering_.ClearToEmpty();
+inline void Msg_UpdateRemoteStyle::clear_a_aimagerendering() {
+  _impl_.a_aimagerendering_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UpdateRemoteStyle::aimagerendering() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.aImageRendering)
-  return _internal_aimagerendering();
+inline const std::string& Msg_UpdateRemoteStyle::a_aimagerendering() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.a_aImageRendering)
+  return _internal_a_aimagerendering();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UpdateRemoteStyle::set_aimagerendering(ArgT0&& arg0, ArgT... args) {
+void Msg_UpdateRemoteStyle::set_a_aimagerendering(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aimagerendering_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.aImageRendering)
+ _impl_.a_aimagerendering_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.a_aImageRendering)
 }
-inline std::string* Msg_UpdateRemoteStyle::mutable_aimagerendering() {
-  std::string* _s = _internal_mutable_aimagerendering();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.aImageRendering)
+inline std::string* Msg_UpdateRemoteStyle::mutable_a_aimagerendering() {
+  std::string* _s = _internal_mutable_a_aimagerendering();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.a_aImageRendering)
   return _s;
 }
-inline const std::string& Msg_UpdateRemoteStyle::_internal_aimagerendering() const {
-  return _impl_.aimagerendering_.Get();
+inline const std::string& Msg_UpdateRemoteStyle::_internal_a_aimagerendering() const {
+  return _impl_.a_aimagerendering_.Get();
 }
-inline void Msg_UpdateRemoteStyle::_internal_set_aimagerendering(const std::string& value) {
+inline void Msg_UpdateRemoteStyle::_internal_set_a_aimagerendering(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aimagerendering_.Set(value, GetArenaForAllocation());
+  _impl_.a_aimagerendering_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateRemoteStyle::_internal_mutable_aimagerendering() {
+inline std::string* Msg_UpdateRemoteStyle::_internal_mutable_a_aimagerendering() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aimagerendering_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aimagerendering_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UpdateRemoteStyle::release_aimagerendering() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.aImageRendering)
-  if (!_internal_has_aimagerendering()) {
+inline std::string* Msg_UpdateRemoteStyle::release_a_aimagerendering() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.a_aImageRendering)
+  if (!_internal_has_a_aimagerendering()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aimagerendering_.Release();
+  auto* p = _impl_.a_aimagerendering_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aimagerendering_.IsDefault()) {
-    _impl_.aimagerendering_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aimagerendering_.IsDefault()) {
+    _impl_.a_aimagerendering_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UpdateRemoteStyle::set_allocated_aimagerendering(std::string* aimagerendering) {
-  if (aimagerendering != nullptr) {
+inline void Msg_UpdateRemoteStyle::set_allocated_a_aimagerendering(std::string* a_aimagerendering) {
+  if (a_aimagerendering != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aimagerendering_.SetAllocated(aimagerendering, GetArenaForAllocation());
+  _impl_.a_aimagerendering_.SetAllocated(a_aimagerendering, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aimagerendering_.IsDefault()) {
-    _impl_.aimagerendering_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aimagerendering_.IsDefault()) {
+    _impl_.a_aimagerendering_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.aImageRendering)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_UpdateRemoteStyle.a_aImageRendering)
 }
 
 // -------------------------------------------------------------------
@@ -5576,100 +5576,100 @@ inline void Msg_UpdateRemoteStyle::set_allocated_aimagerendering(std::string* ai
 
 // Msg_SetEmbedderAccessible
 
-// required bytes aDoc = 1;
-inline bool Msg_SetEmbedderAccessible::_internal_has_adoc() const {
+// required bytes a_aDoc = 1;
+inline bool Msg_SetEmbedderAccessible::_internal_has_a_adoc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetEmbedderAccessible::has_adoc() const {
-  return _internal_has_adoc();
+inline bool Msg_SetEmbedderAccessible::has_a_adoc() const {
+  return _internal_has_a_adoc();
 }
-inline void Msg_SetEmbedderAccessible::clear_adoc() {
-  _impl_.adoc_.ClearToEmpty();
+inline void Msg_SetEmbedderAccessible::clear_a_adoc() {
+  _impl_.a_adoc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SetEmbedderAccessible::adoc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aDoc)
-  return _internal_adoc();
+inline const std::string& Msg_SetEmbedderAccessible::a_adoc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aDoc)
+  return _internal_a_adoc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetEmbedderAccessible::set_adoc(ArgT0&& arg0, ArgT... args) {
+void Msg_SetEmbedderAccessible::set_a_adoc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adoc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aDoc)
+ _impl_.a_adoc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aDoc)
 }
-inline std::string* Msg_SetEmbedderAccessible::mutable_adoc() {
-  std::string* _s = _internal_mutable_adoc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aDoc)
+inline std::string* Msg_SetEmbedderAccessible::mutable_a_adoc() {
+  std::string* _s = _internal_mutable_a_adoc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aDoc)
   return _s;
 }
-inline const std::string& Msg_SetEmbedderAccessible::_internal_adoc() const {
-  return _impl_.adoc_.Get();
+inline const std::string& Msg_SetEmbedderAccessible::_internal_a_adoc() const {
+  return _impl_.a_adoc_.Get();
 }
-inline void Msg_SetEmbedderAccessible::_internal_set_adoc(const std::string& value) {
+inline void Msg_SetEmbedderAccessible::_internal_set_a_adoc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adoc_.Set(value, GetArenaForAllocation());
+  _impl_.a_adoc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetEmbedderAccessible::_internal_mutable_adoc() {
+inline std::string* Msg_SetEmbedderAccessible::_internal_mutable_a_adoc() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.adoc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adoc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetEmbedderAccessible::release_adoc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aDoc)
-  if (!_internal_has_adoc()) {
+inline std::string* Msg_SetEmbedderAccessible::release_a_adoc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aDoc)
+  if (!_internal_has_a_adoc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.adoc_.Release();
+  auto* p = _impl_.a_adoc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adoc_.IsDefault()) {
-    _impl_.adoc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adoc_.IsDefault()) {
+    _impl_.a_adoc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetEmbedderAccessible::set_allocated_adoc(std::string* adoc) {
-  if (adoc != nullptr) {
+inline void Msg_SetEmbedderAccessible::set_allocated_a_adoc(std::string* a_adoc) {
+  if (a_adoc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.adoc_.SetAllocated(adoc, GetArenaForAllocation());
+  _impl_.a_adoc_.SetAllocated(a_adoc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adoc_.IsDefault()) {
-    _impl_.adoc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adoc_.IsDefault()) {
+    _impl_.a_adoc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aDoc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aDoc)
 }
 
-// required uint64 aID = 2;
-inline bool Msg_SetEmbedderAccessible::_internal_has_aid() const {
+// required uint64 a_aID = 2;
+inline bool Msg_SetEmbedderAccessible::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetEmbedderAccessible::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_SetEmbedderAccessible::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_SetEmbedderAccessible::clear_aid() {
-  _impl_.aid_ = uint64_t{0u};
+inline void Msg_SetEmbedderAccessible::clear_a_aid() {
+  _impl_.a_aid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_SetEmbedderAccessible::_internal_aid() const {
-  return _impl_.aid_;
+inline uint64_t Msg_SetEmbedderAccessible::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint64_t Msg_SetEmbedderAccessible::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aID)
-  return _internal_aid();
+inline uint64_t Msg_SetEmbedderAccessible::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aID)
+  return _internal_a_aid();
 }
-inline void Msg_SetEmbedderAccessible::_internal_set_aid(uint64_t value) {
+inline void Msg_SetEmbedderAccessible::_internal_set_a_aid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_SetEmbedderAccessible::set_aid(uint64_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.aID)
+inline void Msg_SetEmbedderAccessible::set_a_aid(uint64_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowserBridge.Msg_SetEmbedderAccessible.a_aID)
 }
 
 #ifdef __GNUC__

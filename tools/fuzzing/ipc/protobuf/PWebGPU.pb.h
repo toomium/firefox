@@ -377,43 +377,43 @@ class Msg_DeviceAction final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kBufFieldNumber = 2,
+    kASelfIdFieldNumber = 1,
+    kABufFieldNumber = 2,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes buf = 2;
-  bool has_buf() const;
+  // required bytes a_buf = 2;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction)
@@ -429,8 +429,8 @@ class Msg_DeviceAction final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -547,43 +547,43 @@ class Msg_DeviceActionWithAck final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kBufFieldNumber = 2,
+    kASelfIdFieldNumber = 1,
+    kABufFieldNumber = 2,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes buf = 2;
-  bool has_buf() const;
+  // required bytes a_buf = 2;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck)
@@ -599,8 +599,8 @@ class Msg_DeviceActionWithAck final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -717,19 +717,19 @@ class Reply_DeviceActionWithAck final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDummyFieldNumber = 1,
+    kADummyFieldNumber = 1,
   };
-  // required bool dummy = 1;
-  bool has_dummy() const;
+  // required bool a_dummy = 1;
+  bool has_a_dummy() const;
   private:
-  bool _internal_has_dummy() const;
+  bool _internal_has_a_dummy() const;
   public:
-  void clear_dummy();
-  bool dummy() const;
-  void set_dummy(bool value);
+  void clear_a_dummy();
+  bool a_dummy() const;
+  void set_a_dummy(bool value);
   private:
-  bool _internal_dummy() const;
-  void _internal_set_dummy(bool value);
+  bool _internal_a_dummy() const;
+  void _internal_set_a_dummy(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck)
@@ -742,7 +742,7 @@ class Reply_DeviceActionWithAck final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool dummy_;
+    bool a_dummy_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -859,62 +859,62 @@ class Msg_TextureAction final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kADeviceIdFieldNumber = 2,
-    kBufFieldNumber = 3,
+    kASelfIdFieldNumber = 1,
+    kAADeviceIdFieldNumber = 2,
+    kABufFieldNumber = 3,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aDeviceId = 2;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 2;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes buf = 3;
-  bool has_buf() const;
+  // required bytes a_buf = 3;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction)
@@ -930,9 +930,9 @@ class Msg_TextureAction final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1049,62 +1049,62 @@ class Msg_CommandEncoderAction final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kADeviceIdFieldNumber = 2,
-    kBufFieldNumber = 3,
+    kASelfIdFieldNumber = 1,
+    kAADeviceIdFieldNumber = 2,
+    kABufFieldNumber = 3,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aDeviceId = 2;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 2;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes buf = 3;
-  bool has_buf() const;
+  // required bytes a_buf = 3;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction)
@@ -1120,9 +1120,9 @@ class Msg_CommandEncoderAction final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1239,62 +1239,62 @@ class Msg_RenderPass final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kADeviceIdFieldNumber = 2,
-    kBufFieldNumber = 3,
+    kASelfIdFieldNumber = 1,
+    kAADeviceIdFieldNumber = 2,
+    kABufFieldNumber = 3,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aDeviceId = 2;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 2;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes buf = 3;
-  bool has_buf() const;
+  // required bytes a_buf = 3;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass)
@@ -1310,9 +1310,9 @@ class Msg_RenderPass final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1429,62 +1429,62 @@ class Msg_ComputePass final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kADeviceIdFieldNumber = 2,
-    kBufFieldNumber = 3,
+    kASelfIdFieldNumber = 1,
+    kAADeviceIdFieldNumber = 2,
+    kABufFieldNumber = 3,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aDeviceId = 2;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 2;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes buf = 3;
-  bool has_buf() const;
+  // required bytes a_buf = 3;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass)
@@ -1500,9 +1500,9 @@ class Msg_ComputePass final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1619,81 +1619,81 @@ class Msg_DeviceCreateBuffer final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceIdFieldNumber = 1,
-    kBufferIdFieldNumber = 2,
-    kDescFieldNumber = 3,
-    kShmFieldNumber = 4,
+    kADeviceIdFieldNumber = 1,
+    kABufferIdFieldNumber = 2,
+    kADescFieldNumber = 3,
+    kAShmFieldNumber = 4,
   };
-  // required bytes deviceId = 1;
-  bool has_deviceid() const;
+  // required bytes a_deviceId = 1;
+  bool has_a_deviceid() const;
   private:
-  bool _internal_has_deviceid() const;
+  bool _internal_has_a_deviceid() const;
   public:
-  void clear_deviceid();
-  const std::string& deviceid() const;
+  void clear_a_deviceid();
+  const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_deviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_deviceid();
-  PROTOBUF_NODISCARD std::string* release_deviceid();
-  void set_allocated_deviceid(std::string* deviceid);
+  void set_a_deviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_deviceid();
+  PROTOBUF_NODISCARD std::string* release_a_deviceid();
+  void set_allocated_a_deviceid(std::string* a_deviceid);
   private:
-  const std::string& _internal_deviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_deviceid(const std::string& value);
-  std::string* _internal_mutable_deviceid();
+  const std::string& _internal_a_deviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_deviceid(const std::string& value);
+  std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes bufferId = 2;
-  bool has_bufferid() const;
+  // required bytes a_bufferId = 2;
+  bool has_a_bufferid() const;
   private:
-  bool _internal_has_bufferid() const;
+  bool _internal_has_a_bufferid() const;
   public:
-  void clear_bufferid();
-  const std::string& bufferid() const;
+  void clear_a_bufferid();
+  const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bufferid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bufferid();
-  PROTOBUF_NODISCARD std::string* release_bufferid();
-  void set_allocated_bufferid(std::string* bufferid);
+  void set_a_bufferid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bufferid();
+  PROTOBUF_NODISCARD std::string* release_a_bufferid();
+  void set_allocated_a_bufferid(std::string* a_bufferid);
   private:
-  const std::string& _internal_bufferid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bufferid(const std::string& value);
-  std::string* _internal_mutable_bufferid();
+  const std::string& _internal_a_bufferid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bufferid(const std::string& value);
+  std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bytes desc = 3;
-  bool has_desc() const;
+  // required bytes a_desc = 3;
+  bool has_a_desc() const;
   private:
-  bool _internal_has_desc() const;
+  bool _internal_has_a_desc() const;
   public:
-  void clear_desc();
-  const std::string& desc() const;
+  void clear_a_desc();
+  const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_desc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_desc();
-  PROTOBUF_NODISCARD std::string* release_desc();
-  void set_allocated_desc(std::string* desc);
+  void set_a_desc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_desc();
+  PROTOBUF_NODISCARD std::string* release_a_desc();
+  void set_allocated_a_desc(std::string* a_desc);
   private:
-  const std::string& _internal_desc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_desc(const std::string& value);
-  std::string* _internal_mutable_desc();
+  const std::string& _internal_a_desc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_desc(const std::string& value);
+  std::string* _internal_mutable_a_desc();
   public:
 
-  // required bytes shm = 4;
-  bool has_shm() const;
+  // required bytes a_shm = 4;
+  bool has_a_shm() const;
   private:
-  bool _internal_has_shm() const;
+  bool _internal_has_a_shm() const;
   public:
-  void clear_shm();
-  const std::string& shm() const;
+  void clear_a_shm();
+  const std::string& a_shm() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_shm(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_shm();
-  PROTOBUF_NODISCARD std::string* release_shm();
-  void set_allocated_shm(std::string* shm);
+  void set_a_shm(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_shm();
+  PROTOBUF_NODISCARD std::string* release_a_shm();
+  void set_allocated_a_shm(std::string* a_shm);
   private:
-  const std::string& _internal_shm() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_shm(const std::string& value);
-  std::string* _internal_mutable_shm();
+  const std::string& _internal_a_shm() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_shm(const std::string& value);
+  std::string* _internal_mutable_a_shm();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer)
@@ -1709,10 +1709,10 @@ class Msg_DeviceCreateBuffer final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr deviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bufferid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr desc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr shm_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_shm_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1829,43 +1829,43 @@ class Msg_InstanceRequestAdapter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOptionsFieldNumber = 1,
-    kAAdapterIdFieldNumber = 2,
+    kAOptionsFieldNumber = 1,
+    kAAAdapterIdFieldNumber = 2,
   };
-  // required bytes options = 1;
-  bool has_options() const;
+  // required bytes a_options = 1;
+  bool has_a_options() const;
   private:
-  bool _internal_has_options() const;
+  bool _internal_has_a_options() const;
   public:
-  void clear_options();
-  const std::string& options() const;
+  void clear_a_options();
+  const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_options(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_options();
-  PROTOBUF_NODISCARD std::string* release_options();
-  void set_allocated_options(std::string* options);
+  void set_a_options(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_options();
+  PROTOBUF_NODISCARD std::string* release_a_options();
+  void set_allocated_a_options(std::string* a_options);
   private:
-  const std::string& _internal_options() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_options(const std::string& value);
-  std::string* _internal_mutable_options();
+  const std::string& _internal_a_options() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_options(const std::string& value);
+  std::string* _internal_mutable_a_options();
   public:
 
-  // required bytes aAdapterId = 2;
-  bool has_aadapterid() const;
+  // required bytes a_aAdapterId = 2;
+  bool has_a_aadapterid() const;
   private:
-  bool _internal_has_aadapterid() const;
+  bool _internal_has_a_aadapterid() const;
   public:
-  void clear_aadapterid();
-  const std::string& aadapterid() const;
+  void clear_a_aadapterid();
+  const std::string& a_aadapterid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aadapterid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aadapterid();
-  PROTOBUF_NODISCARD std::string* release_aadapterid();
-  void set_allocated_aadapterid(std::string* aadapterid);
+  void set_a_aadapterid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aadapterid();
+  PROTOBUF_NODISCARD std::string* release_a_aadapterid();
+  void set_allocated_a_aadapterid(std::string* a_aadapterid);
   private:
-  const std::string& _internal_aadapterid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aadapterid(const std::string& value);
-  std::string* _internal_mutable_aadapterid();
+  const std::string& _internal_a_aadapterid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aadapterid(const std::string& value);
+  std::string* _internal_mutable_a_aadapterid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter)
@@ -1881,8 +1881,8 @@ class Msg_InstanceRequestAdapter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr options_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aadapterid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aadapterid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1999,24 +1999,24 @@ class Reply_InstanceRequestAdapter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kByteBufFieldNumber = 1,
+    kAByteBufFieldNumber = 1,
   };
-  // required bytes byteBuf = 1;
-  bool has_bytebuf() const;
+  // required bytes a_byteBuf = 1;
+  bool has_a_bytebuf() const;
   private:
-  bool _internal_has_bytebuf() const;
+  bool _internal_has_a_bytebuf() const;
   public:
-  void clear_bytebuf();
-  const std::string& bytebuf() const;
+  void clear_a_bytebuf();
+  const std::string& a_bytebuf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bytebuf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bytebuf();
-  PROTOBUF_NODISCARD std::string* release_bytebuf();
-  void set_allocated_bytebuf(std::string* bytebuf);
+  void set_a_bytebuf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bytebuf();
+  PROTOBUF_NODISCARD std::string* release_a_bytebuf();
+  void set_allocated_a_bytebuf(std::string* a_bytebuf);
   private:
-  const std::string& _internal_bytebuf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bytebuf(const std::string& value);
-  std::string* _internal_mutable_bytebuf();
+  const std::string& _internal_a_bytebuf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bytebuf(const std::string& value);
+  std::string* _internal_mutable_a_bytebuf();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter)
@@ -2029,7 +2029,7 @@ class Reply_InstanceRequestAdapter final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bytebuf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bytebuf_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2146,81 +2146,81 @@ class Msg_AdapterRequestDevice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAdapterIdFieldNumber = 1,
-    kDescriptorBufFieldNumber = 2,
-    kNewDeviceIdFieldNumber = 3,
-    kNewQueueIdFieldNumber = 4,
+    kAAdapterIdFieldNumber = 1,
+    kADescriptorBufFieldNumber = 2,
+    kANewDeviceIdFieldNumber = 3,
+    kANewQueueIdFieldNumber = 4,
   };
-  // required bytes adapterId = 1;
-  bool has_adapterid() const;
+  // required bytes a_adapterId = 1;
+  bool has_a_adapterid() const;
   private:
-  bool _internal_has_adapterid() const;
+  bool _internal_has_a_adapterid() const;
   public:
-  void clear_adapterid();
-  const std::string& adapterid() const;
+  void clear_a_adapterid();
+  const std::string& a_adapterid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adapterid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adapterid();
-  PROTOBUF_NODISCARD std::string* release_adapterid();
-  void set_allocated_adapterid(std::string* adapterid);
+  void set_a_adapterid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adapterid();
+  PROTOBUF_NODISCARD std::string* release_a_adapterid();
+  void set_allocated_a_adapterid(std::string* a_adapterid);
   private:
-  const std::string& _internal_adapterid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adapterid(const std::string& value);
-  std::string* _internal_mutable_adapterid();
+  const std::string& _internal_a_adapterid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adapterid(const std::string& value);
+  std::string* _internal_mutable_a_adapterid();
   public:
 
-  // required bytes descriptorBuf = 2;
-  bool has_descriptorbuf() const;
+  // required bytes a_descriptorBuf = 2;
+  bool has_a_descriptorbuf() const;
   private:
-  bool _internal_has_descriptorbuf() const;
+  bool _internal_has_a_descriptorbuf() const;
   public:
-  void clear_descriptorbuf();
-  const std::string& descriptorbuf() const;
+  void clear_a_descriptorbuf();
+  const std::string& a_descriptorbuf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_descriptorbuf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_descriptorbuf();
-  PROTOBUF_NODISCARD std::string* release_descriptorbuf();
-  void set_allocated_descriptorbuf(std::string* descriptorbuf);
+  void set_a_descriptorbuf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_descriptorbuf();
+  PROTOBUF_NODISCARD std::string* release_a_descriptorbuf();
+  void set_allocated_a_descriptorbuf(std::string* a_descriptorbuf);
   private:
-  const std::string& _internal_descriptorbuf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_descriptorbuf(const std::string& value);
-  std::string* _internal_mutable_descriptorbuf();
+  const std::string& _internal_a_descriptorbuf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_descriptorbuf(const std::string& value);
+  std::string* _internal_mutable_a_descriptorbuf();
   public:
 
-  // required bytes newDeviceId = 3;
-  bool has_newdeviceid() const;
+  // required bytes a_newDeviceId = 3;
+  bool has_a_newdeviceid() const;
   private:
-  bool _internal_has_newdeviceid() const;
+  bool _internal_has_a_newdeviceid() const;
   public:
-  void clear_newdeviceid();
-  const std::string& newdeviceid() const;
+  void clear_a_newdeviceid();
+  const std::string& a_newdeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_newdeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_newdeviceid();
-  PROTOBUF_NODISCARD std::string* release_newdeviceid();
-  void set_allocated_newdeviceid(std::string* newdeviceid);
+  void set_a_newdeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_newdeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_newdeviceid();
+  void set_allocated_a_newdeviceid(std::string* a_newdeviceid);
   private:
-  const std::string& _internal_newdeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_newdeviceid(const std::string& value);
-  std::string* _internal_mutable_newdeviceid();
+  const std::string& _internal_a_newdeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_newdeviceid(const std::string& value);
+  std::string* _internal_mutable_a_newdeviceid();
   public:
 
-  // required bytes newQueueId = 4;
-  bool has_newqueueid() const;
+  // required bytes a_newQueueId = 4;
+  bool has_a_newqueueid() const;
   private:
-  bool _internal_has_newqueueid() const;
+  bool _internal_has_a_newqueueid() const;
   public:
-  void clear_newqueueid();
-  const std::string& newqueueid() const;
+  void clear_a_newqueueid();
+  const std::string& a_newqueueid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_newqueueid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_newqueueid();
-  PROTOBUF_NODISCARD std::string* release_newqueueid();
-  void set_allocated_newqueueid(std::string* newqueueid);
+  void set_a_newqueueid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_newqueueid();
+  PROTOBUF_NODISCARD std::string* release_a_newqueueid();
+  void set_allocated_a_newqueueid(std::string* a_newqueueid);
   private:
-  const std::string& _internal_newqueueid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_newqueueid(const std::string& value);
-  std::string* _internal_mutable_newqueueid();
+  const std::string& _internal_a_newqueueid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_newqueueid(const std::string& value);
+  std::string* _internal_mutable_a_newqueueid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice)
@@ -2236,10 +2236,10 @@ class Msg_AdapterRequestDevice final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adapterid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr descriptorbuf_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr newdeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr newqueueid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adapterid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptorbuf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_newdeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_newqueueid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2356,19 +2356,19 @@ class Reply_AdapterRequestDevice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSuccessFieldNumber = 1,
+    kASuccessFieldNumber = 1,
   };
-  // required bool success = 1;
-  bool has_success() const;
+  // required bool a_success = 1;
+  bool has_a_success() const;
   private:
-  bool _internal_has_success() const;
+  bool _internal_has_a_success() const;
   public:
-  void clear_success();
-  bool success() const;
-  void set_success(bool value);
+  void clear_a_success();
+  bool a_success() const;
+  void set_a_success(bool value);
   private:
-  bool _internal_success() const;
-  void _internal_set_success(bool value);
+  bool _internal_a_success() const;
+  void _internal_set_a_success(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice)
@@ -2381,7 +2381,7 @@ class Reply_AdapterRequestDevice final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool success_;
+    bool a_success_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2498,24 +2498,24 @@ class Msg_AdapterDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop)
@@ -2528,7 +2528,7 @@ class Msg_AdapterDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2645,81 +2645,81 @@ class Msg_DeviceCreateShaderModule final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kBufferIdFieldNumber = 2,
-    kLabelFieldNumber = 3,
-    kCodeFieldNumber = 4,
+    kASelfIdFieldNumber = 1,
+    kABufferIdFieldNumber = 2,
+    kALabelFieldNumber = 3,
+    kACodeFieldNumber = 4,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes bufferId = 2;
-  bool has_bufferid() const;
+  // required bytes a_bufferId = 2;
+  bool has_a_bufferid() const;
   private:
-  bool _internal_has_bufferid() const;
+  bool _internal_has_a_bufferid() const;
   public:
-  void clear_bufferid();
-  const std::string& bufferid() const;
+  void clear_a_bufferid();
+  const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bufferid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bufferid();
-  PROTOBUF_NODISCARD std::string* release_bufferid();
-  void set_allocated_bufferid(std::string* bufferid);
+  void set_a_bufferid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bufferid();
+  PROTOBUF_NODISCARD std::string* release_a_bufferid();
+  void set_allocated_a_bufferid(std::string* a_bufferid);
   private:
-  const std::string& _internal_bufferid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bufferid(const std::string& value);
-  std::string* _internal_mutable_bufferid();
+  const std::string& _internal_a_bufferid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bufferid(const std::string& value);
+  std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bytes label = 3;
-  bool has_label() const;
+  // required bytes a_label = 3;
+  bool has_a_label() const;
   private:
-  bool _internal_has_label() const;
+  bool _internal_has_a_label() const;
   public:
-  void clear_label();
-  const std::string& label() const;
+  void clear_a_label();
+  const std::string& a_label() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_label(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_label();
-  PROTOBUF_NODISCARD std::string* release_label();
-  void set_allocated_label(std::string* label);
+  void set_a_label(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_label();
+  PROTOBUF_NODISCARD std::string* release_a_label();
+  void set_allocated_a_label(std::string* a_label);
   private:
-  const std::string& _internal_label() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_label(const std::string& value);
-  std::string* _internal_mutable_label();
+  const std::string& _internal_a_label() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_label(const std::string& value);
+  std::string* _internal_mutable_a_label();
   public:
 
-  // required bytes code = 4;
-  bool has_code() const;
+  // required bytes a_code = 4;
+  bool has_a_code() const;
   private:
-  bool _internal_has_code() const;
+  bool _internal_has_a_code() const;
   public:
-  void clear_code();
-  const std::string& code() const;
+  void clear_a_code();
+  const std::string& a_code() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_code(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_code();
-  PROTOBUF_NODISCARD std::string* release_code();
-  void set_allocated_code(std::string* code);
+  void set_a_code(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_code();
+  PROTOBUF_NODISCARD std::string* release_a_code();
+  void set_allocated_a_code(std::string* a_code);
   private:
-  const std::string& _internal_code() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_code(const std::string& value);
-  std::string* _internal_mutable_code();
+  const std::string& _internal_a_code() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_code(const std::string& value);
+  std::string* _internal_mutable_a_code();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule)
@@ -2735,10 +2735,10 @@ class Msg_DeviceCreateShaderModule final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bufferid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr label_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr code_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_label_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_code_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2855,30 +2855,30 @@ class Reply_DeviceCreateShaderModule final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessagesFieldNumber = 1,
+    kAMessagesFieldNumber = 1,
   };
-  // repeated bytes messages = 1;
-  int messages_size() const;
+  // repeated bytes a_messages = 1;
+  int a_messages_size() const;
   private:
-  int _internal_messages_size() const;
+  int _internal_a_messages_size() const;
   public:
-  void clear_messages();
-  const std::string& messages(int index) const;
-  std::string* mutable_messages(int index);
-  void set_messages(int index, const std::string& value);
-  void set_messages(int index, std::string&& value);
-  void set_messages(int index, const char* value);
-  void set_messages(int index, const void* value, size_t size);
-  std::string* add_messages();
-  void add_messages(const std::string& value);
-  void add_messages(std::string&& value);
-  void add_messages(const char* value);
-  void add_messages(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& messages() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_messages();
+  void clear_a_messages();
+  const std::string& a_messages(int index) const;
+  std::string* mutable_a_messages(int index);
+  void set_a_messages(int index, const std::string& value);
+  void set_a_messages(int index, std::string&& value);
+  void set_a_messages(int index, const char* value);
+  void set_a_messages(int index, const void* value, size_t size);
+  std::string* add_a_messages();
+  void add_a_messages(const std::string& value);
+  void add_a_messages(std::string&& value);
+  void add_a_messages(const char* value);
+  void add_a_messages(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_messages() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_messages();
   private:
-  const std::string& _internal_messages(int index) const;
-  std::string* _internal_add_messages();
+  const std::string& _internal_a_messages(int index) const;
+  std::string* _internal_add_a_messages();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule)
@@ -2889,7 +2889,7 @@ class Reply_DeviceCreateShaderModule final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> messages_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_messages_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3007,85 +3007,85 @@ class Msg_BufferMap final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceIdFieldNumber = 1,
-    kBufferIdFieldNumber = 2,
-    kOffsetFieldNumber = 4,
-    kSizeFieldNumber = 5,
-    kAModeFieldNumber = 3,
+    kADeviceIdFieldNumber = 1,
+    kABufferIdFieldNumber = 2,
+    kAOffsetFieldNumber = 4,
+    kASizeFieldNumber = 5,
+    kAAModeFieldNumber = 3,
   };
-  // required bytes deviceId = 1;
-  bool has_deviceid() const;
+  // required bytes a_deviceId = 1;
+  bool has_a_deviceid() const;
   private:
-  bool _internal_has_deviceid() const;
+  bool _internal_has_a_deviceid() const;
   public:
-  void clear_deviceid();
-  const std::string& deviceid() const;
+  void clear_a_deviceid();
+  const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_deviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_deviceid();
-  PROTOBUF_NODISCARD std::string* release_deviceid();
-  void set_allocated_deviceid(std::string* deviceid);
+  void set_a_deviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_deviceid();
+  PROTOBUF_NODISCARD std::string* release_a_deviceid();
+  void set_allocated_a_deviceid(std::string* a_deviceid);
   private:
-  const std::string& _internal_deviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_deviceid(const std::string& value);
-  std::string* _internal_mutable_deviceid();
+  const std::string& _internal_a_deviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_deviceid(const std::string& value);
+  std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes bufferId = 2;
-  bool has_bufferid() const;
+  // required bytes a_bufferId = 2;
+  bool has_a_bufferid() const;
   private:
-  bool _internal_has_bufferid() const;
+  bool _internal_has_a_bufferid() const;
   public:
-  void clear_bufferid();
-  const std::string& bufferid() const;
+  void clear_a_bufferid();
+  const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bufferid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bufferid();
-  PROTOBUF_NODISCARD std::string* release_bufferid();
-  void set_allocated_bufferid(std::string* bufferid);
+  void set_a_bufferid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bufferid();
+  PROTOBUF_NODISCARD std::string* release_a_bufferid();
+  void set_allocated_a_bufferid(std::string* a_bufferid);
   private:
-  const std::string& _internal_bufferid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bufferid(const std::string& value);
-  std::string* _internal_mutable_bufferid();
+  const std::string& _internal_a_bufferid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bufferid(const std::string& value);
+  std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required uint64 offset = 4;
-  bool has_offset() const;
+  // required uint64 a_offset = 4;
+  bool has_a_offset() const;
   private:
-  bool _internal_has_offset() const;
+  bool _internal_has_a_offset() const;
   public:
-  void clear_offset();
-  uint64_t offset() const;
-  void set_offset(uint64_t value);
+  void clear_a_offset();
+  uint64_t a_offset() const;
+  void set_a_offset(uint64_t value);
   private:
-  uint64_t _internal_offset() const;
-  void _internal_set_offset(uint64_t value);
-  public:
-
-  // required uint64 size = 5;
-  bool has_size() const;
-  private:
-  bool _internal_has_size() const;
-  public:
-  void clear_size();
-  uint64_t size() const;
-  void set_size(uint64_t value);
-  private:
-  uint64_t _internal_size() const;
-  void _internal_set_size(uint64_t value);
+  uint64_t _internal_a_offset() const;
+  void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 aMode = 3;
-  bool has_amode() const;
+  // required uint64 a_size = 5;
+  bool has_a_size() const;
   private:
-  bool _internal_has_amode() const;
+  bool _internal_has_a_size() const;
   public:
-  void clear_amode();
-  uint32_t amode() const;
-  void set_amode(uint32_t value);
+  void clear_a_size();
+  uint64_t a_size() const;
+  void set_a_size(uint64_t value);
   private:
-  uint32_t _internal_amode() const;
-  void _internal_set_amode(uint32_t value);
+  uint64_t _internal_a_size() const;
+  void _internal_set_a_size(uint64_t value);
+  public:
+
+  // required uint32 a_aMode = 3;
+  bool has_a_amode() const;
+  private:
+  bool _internal_has_a_amode() const;
+  public:
+  void clear_a_amode();
+  uint32_t a_amode() const;
+  void set_a_amode(uint32_t value);
+  private:
+  uint32_t _internal_a_amode() const;
+  void _internal_set_a_amode(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap)
@@ -3101,11 +3101,11 @@ class Msg_BufferMap final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr deviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bufferid_;
-    uint64_t offset_;
-    uint64_t size_;
-    uint32_t amode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
+    uint64_t a_offset_;
+    uint64_t a_size_;
+    uint32_t a_amode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3222,25 +3222,25 @@ class Reply_BufferMap final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.webgpu.BufferMapResult result = 1;
-  bool has_result() const;
+  // required .protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::webgpu::BufferMapResult& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::webgpu::BufferMapResult* release_result();
-  ::protobuf::mozilla::webgpu::BufferMapResult* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::webgpu::BufferMapResult* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::webgpu::BufferMapResult& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::webgpu::BufferMapResult* release_a_result();
+  ::protobuf::mozilla::webgpu::BufferMapResult* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::webgpu::BufferMapResult* a_result);
   private:
-  const ::protobuf::mozilla::webgpu::BufferMapResult& _internal_result() const;
-  ::protobuf::mozilla::webgpu::BufferMapResult* _internal_mutable_result();
+  const ::protobuf::mozilla::webgpu::BufferMapResult& _internal_a_result() const;
+  ::protobuf::mozilla::webgpu::BufferMapResult* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::webgpu::BufferMapResult* result);
-  ::protobuf::mozilla::webgpu::BufferMapResult* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::webgpu::BufferMapResult* a_result);
+  ::protobuf::mozilla::webgpu::BufferMapResult* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap)
  private:
@@ -3252,7 +3252,7 @@ class Reply_BufferMap final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::webgpu::BufferMapResult* result_;
+    ::protobuf::mozilla::webgpu::BufferMapResult* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3369,57 +3369,57 @@ class Msg_BufferUnmap final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceIdFieldNumber = 1,
-    kBufferIdFieldNumber = 2,
-    kFlushFieldNumber = 3,
+    kADeviceIdFieldNumber = 1,
+    kABufferIdFieldNumber = 2,
+    kAFlushFieldNumber = 3,
   };
-  // required bytes deviceId = 1;
-  bool has_deviceid() const;
+  // required bytes a_deviceId = 1;
+  bool has_a_deviceid() const;
   private:
-  bool _internal_has_deviceid() const;
+  bool _internal_has_a_deviceid() const;
   public:
-  void clear_deviceid();
-  const std::string& deviceid() const;
+  void clear_a_deviceid();
+  const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_deviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_deviceid();
-  PROTOBUF_NODISCARD std::string* release_deviceid();
-  void set_allocated_deviceid(std::string* deviceid);
+  void set_a_deviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_deviceid();
+  PROTOBUF_NODISCARD std::string* release_a_deviceid();
+  void set_allocated_a_deviceid(std::string* a_deviceid);
   private:
-  const std::string& _internal_deviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_deviceid(const std::string& value);
-  std::string* _internal_mutable_deviceid();
+  const std::string& _internal_a_deviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_deviceid(const std::string& value);
+  std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes bufferId = 2;
-  bool has_bufferid() const;
+  // required bytes a_bufferId = 2;
+  bool has_a_bufferid() const;
   private:
-  bool _internal_has_bufferid() const;
+  bool _internal_has_a_bufferid() const;
   public:
-  void clear_bufferid();
-  const std::string& bufferid() const;
+  void clear_a_bufferid();
+  const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bufferid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bufferid();
-  PROTOBUF_NODISCARD std::string* release_bufferid();
-  void set_allocated_bufferid(std::string* bufferid);
+  void set_a_bufferid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_bufferid();
+  PROTOBUF_NODISCARD std::string* release_a_bufferid();
+  void set_allocated_a_bufferid(std::string* a_bufferid);
   private:
-  const std::string& _internal_bufferid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bufferid(const std::string& value);
-  std::string* _internal_mutable_bufferid();
+  const std::string& _internal_a_bufferid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_bufferid(const std::string& value);
+  std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bool flush = 3;
-  bool has_flush() const;
+  // required bool a_flush = 3;
+  bool has_a_flush() const;
   private:
-  bool _internal_has_flush() const;
+  bool _internal_has_a_flush() const;
   public:
-  void clear_flush();
-  bool flush() const;
-  void set_flush(bool value);
+  void clear_a_flush();
+  bool a_flush() const;
+  void set_a_flush(bool value);
   private:
-  bool _internal_flush() const;
-  void _internal_set_flush(bool value);
+  bool _internal_a_flush() const;
+  void _internal_set_a_flush(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap)
@@ -3435,9 +3435,9 @@ class Msg_BufferUnmap final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr deviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bufferid_;
-    bool flush_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
+    bool a_flush_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3554,24 +3554,24 @@ class Msg_BufferDestroy final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy)
@@ -3584,7 +3584,7 @@ class Msg_BufferDestroy final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3701,24 +3701,24 @@ class Msg_BufferDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop)
@@ -3731,7 +3731,7 @@ class Msg_BufferDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3848,43 +3848,43 @@ class Msg_TextureDestroy final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kDeviceIdFieldNumber = 2,
+    kASelfIdFieldNumber = 1,
+    kADeviceIdFieldNumber = 2,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes deviceId = 2;
-  bool has_deviceid() const;
+  // required bytes a_deviceId = 2;
+  bool has_a_deviceid() const;
   private:
-  bool _internal_has_deviceid() const;
+  bool _internal_has_a_deviceid() const;
   public:
-  void clear_deviceid();
-  const std::string& deviceid() const;
+  void clear_a_deviceid();
+  const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_deviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_deviceid();
-  PROTOBUF_NODISCARD std::string* release_deviceid();
-  void set_allocated_deviceid(std::string* deviceid);
+  void set_a_deviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_deviceid();
+  PROTOBUF_NODISCARD std::string* release_a_deviceid();
+  void set_allocated_a_deviceid(std::string* a_deviceid);
   private:
-  const std::string& _internal_deviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_deviceid(const std::string& value);
-  std::string* _internal_mutable_deviceid();
+  const std::string& _internal_a_deviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_deviceid(const std::string& value);
+  std::string* _internal_mutable_a_deviceid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy)
@@ -3900,8 +3900,8 @@ class Msg_TextureDestroy final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr deviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4018,24 +4018,24 @@ class Msg_TextureDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop)
@@ -4048,7 +4048,7 @@ class Msg_TextureDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4165,24 +4165,24 @@ class Msg_TextureViewDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop)
@@ -4195,7 +4195,7 @@ class Msg_TextureViewDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4312,24 +4312,24 @@ class Msg_SamplerDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop)
@@ -4342,7 +4342,7 @@ class Msg_SamplerDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4459,24 +4459,24 @@ class Msg_QuerySetDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop)
@@ -4489,7 +4489,7 @@ class Msg_QuerySetDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4606,24 +4606,24 @@ class Msg_DeviceDestroy final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy)
@@ -4636,7 +4636,7 @@ class Msg_DeviceDestroy final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4753,24 +4753,24 @@ class Msg_DeviceDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop)
@@ -4783,7 +4783,7 @@ class Msg_DeviceDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4900,62 +4900,62 @@ class Msg_CommandEncoderFinish final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kDeviceIdFieldNumber = 2,
-    kDescFieldNumber = 3,
+    kASelfIdFieldNumber = 1,
+    kADeviceIdFieldNumber = 2,
+    kADescFieldNumber = 3,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes deviceId = 2;
-  bool has_deviceid() const;
+  // required bytes a_deviceId = 2;
+  bool has_a_deviceid() const;
   private:
-  bool _internal_has_deviceid() const;
+  bool _internal_has_a_deviceid() const;
   public:
-  void clear_deviceid();
-  const std::string& deviceid() const;
+  void clear_a_deviceid();
+  const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_deviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_deviceid();
-  PROTOBUF_NODISCARD std::string* release_deviceid();
-  void set_allocated_deviceid(std::string* deviceid);
+  void set_a_deviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_deviceid();
+  PROTOBUF_NODISCARD std::string* release_a_deviceid();
+  void set_allocated_a_deviceid(std::string* a_deviceid);
   private:
-  const std::string& _internal_deviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_deviceid(const std::string& value);
-  std::string* _internal_mutable_deviceid();
+  const std::string& _internal_a_deviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_deviceid(const std::string& value);
+  std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes desc = 3;
-  bool has_desc() const;
+  // required bytes a_desc = 3;
+  bool has_a_desc() const;
   private:
-  bool _internal_has_desc() const;
+  bool _internal_has_a_desc() const;
   public:
-  void clear_desc();
-  const std::string& desc() const;
+  void clear_a_desc();
+  const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_desc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_desc();
-  PROTOBUF_NODISCARD std::string* release_desc();
-  void set_allocated_desc(std::string* desc);
+  void set_a_desc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_desc();
+  PROTOBUF_NODISCARD std::string* release_a_desc();
+  void set_allocated_a_desc(std::string* a_desc);
   private:
-  const std::string& _internal_desc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_desc(const std::string& value);
-  std::string* _internal_mutable_desc();
+  const std::string& _internal_a_desc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_desc(const std::string& value);
+  std::string* _internal_mutable_a_desc();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish)
@@ -4971,9 +4971,9 @@ class Msg_CommandEncoderFinish final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr deviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr desc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5090,24 +5090,24 @@ class Msg_CommandEncoderDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop)
@@ -5120,7 +5120,7 @@ class Msg_CommandEncoderDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5237,24 +5237,24 @@ class Msg_RenderBundleDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop)
@@ -5267,7 +5267,7 @@ class Msg_RenderBundleDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5384,93 +5384,93 @@ class Msg_QueueSubmit final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCommandBuffersFieldNumber = 3,
-    kTextureIdsFieldNumber = 4,
-    kSelfIdFieldNumber = 1,
-    kADeviceIdFieldNumber = 2,
+    kACommandBuffersFieldNumber = 3,
+    kATextureIdsFieldNumber = 4,
+    kASelfIdFieldNumber = 1,
+    kAADeviceIdFieldNumber = 2,
   };
-  // repeated bytes commandBuffers = 3;
-  int commandbuffers_size() const;
+  // repeated bytes a_commandBuffers = 3;
+  int a_commandbuffers_size() const;
   private:
-  int _internal_commandbuffers_size() const;
+  int _internal_a_commandbuffers_size() const;
   public:
-  void clear_commandbuffers();
-  const std::string& commandbuffers(int index) const;
-  std::string* mutable_commandbuffers(int index);
-  void set_commandbuffers(int index, const std::string& value);
-  void set_commandbuffers(int index, std::string&& value);
-  void set_commandbuffers(int index, const char* value);
-  void set_commandbuffers(int index, const void* value, size_t size);
-  std::string* add_commandbuffers();
-  void add_commandbuffers(const std::string& value);
-  void add_commandbuffers(std::string&& value);
-  void add_commandbuffers(const char* value);
-  void add_commandbuffers(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& commandbuffers() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_commandbuffers();
+  void clear_a_commandbuffers();
+  const std::string& a_commandbuffers(int index) const;
+  std::string* mutable_a_commandbuffers(int index);
+  void set_a_commandbuffers(int index, const std::string& value);
+  void set_a_commandbuffers(int index, std::string&& value);
+  void set_a_commandbuffers(int index, const char* value);
+  void set_a_commandbuffers(int index, const void* value, size_t size);
+  std::string* add_a_commandbuffers();
+  void add_a_commandbuffers(const std::string& value);
+  void add_a_commandbuffers(std::string&& value);
+  void add_a_commandbuffers(const char* value);
+  void add_a_commandbuffers(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_commandbuffers() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_commandbuffers();
   private:
-  const std::string& _internal_commandbuffers(int index) const;
-  std::string* _internal_add_commandbuffers();
-  public:
-
-  // repeated bytes textureIds = 4;
-  int textureids_size() const;
-  private:
-  int _internal_textureids_size() const;
-  public:
-  void clear_textureids();
-  const std::string& textureids(int index) const;
-  std::string* mutable_textureids(int index);
-  void set_textureids(int index, const std::string& value);
-  void set_textureids(int index, std::string&& value);
-  void set_textureids(int index, const char* value);
-  void set_textureids(int index, const void* value, size_t size);
-  std::string* add_textureids();
-  void add_textureids(const std::string& value);
-  void add_textureids(std::string&& value);
-  void add_textureids(const char* value);
-  void add_textureids(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& textureids() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_textureids();
-  private:
-  const std::string& _internal_textureids(int index) const;
-  std::string* _internal_add_textureids();
+  const std::string& _internal_a_commandbuffers(int index) const;
+  std::string* _internal_add_a_commandbuffers();
   public:
 
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // repeated bytes a_textureIds = 4;
+  int a_textureids_size() const;
   private:
-  bool _internal_has_selfid() const;
+  int _internal_a_textureids_size() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_textureids();
+  const std::string& a_textureids(int index) const;
+  std::string* mutable_a_textureids(int index);
+  void set_a_textureids(int index, const std::string& value);
+  void set_a_textureids(int index, std::string&& value);
+  void set_a_textureids(int index, const char* value);
+  void set_a_textureids(int index, const void* value, size_t size);
+  std::string* add_a_textureids();
+  void add_a_textureids(const std::string& value);
+  void add_a_textureids(std::string&& value);
+  void add_a_textureids(const char* value);
+  void add_a_textureids(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_textureids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_textureids();
+  private:
+  const std::string& _internal_a_textureids(int index) const;
+  std::string* _internal_add_a_textureids();
+  public:
+
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
+  private:
+  bool _internal_has_a_selfid() const;
+  public:
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aDeviceId = 2;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 2;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit)
@@ -5486,10 +5486,10 @@ class Msg_QueueSubmit final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> commandbuffers_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> textureids_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_commandbuffers_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_textureids_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5606,24 +5606,24 @@ class Msg_QueueOnSubmittedWorkDone final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone)
@@ -5636,7 +5636,7 @@ class Msg_QueueOnSubmittedWorkDone final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5753,24 +5753,24 @@ class Reply_QueueOnSubmittedWorkDone final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOkFieldNumber = 1,
+    kAOkFieldNumber = 1,
   };
-  // required bytes ok = 1;
-  bool has_ok() const;
+  // required bytes a_ok = 1;
+  bool has_a_ok() const;
   private:
-  bool _internal_has_ok() const;
+  bool _internal_has_a_ok() const;
   public:
-  void clear_ok();
-  const std::string& ok() const;
+  void clear_a_ok();
+  const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ok(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ok();
-  PROTOBUF_NODISCARD std::string* release_ok();
-  void set_allocated_ok(std::string* ok);
+  void set_a_ok(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ok();
+  PROTOBUF_NODISCARD std::string* release_a_ok();
+  void set_allocated_a_ok(std::string* a_ok);
   private:
-  const std::string& _internal_ok() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ok(const std::string& value);
-  std::string* _internal_mutable_ok();
+  const std::string& _internal_a_ok() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ok(const std::string& value);
+  std::string* _internal_mutable_a_ok();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone)
@@ -5783,7 +5783,7 @@ class Reply_QueueOnSubmittedWorkDone final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ok_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5900,81 +5900,81 @@ class Msg_QueueWriteAction final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kADeviceIdFieldNumber = 2,
-    kBufFieldNumber = 3,
-    kShmemFieldNumber = 4,
+    kASelfIdFieldNumber = 1,
+    kAADeviceIdFieldNumber = 2,
+    kABufFieldNumber = 3,
+    kAShmemFieldNumber = 4,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aDeviceId = 2;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 2;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes buf = 3;
-  bool has_buf() const;
+  // required bytes a_buf = 3;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
-  // required bytes shmem = 4;
-  bool has_shmem() const;
+  // required bytes a_shmem = 4;
+  bool has_a_shmem() const;
   private:
-  bool _internal_has_shmem() const;
+  bool _internal_has_a_shmem() const;
   public:
-  void clear_shmem();
-  const std::string& shmem() const;
+  void clear_a_shmem();
+  const std::string& a_shmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_shmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_shmem();
-  PROTOBUF_NODISCARD std::string* release_shmem();
-  void set_allocated_shmem(std::string* shmem);
+  void set_a_shmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_shmem();
+  PROTOBUF_NODISCARD std::string* release_a_shmem();
+  void set_allocated_a_shmem(std::string* a_shmem);
   private:
-  const std::string& _internal_shmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_shmem(const std::string& value);
-  std::string* _internal_mutable_shmem();
+  const std::string& _internal_a_shmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_shmem(const std::string& value);
+  std::string* _internal_mutable_a_shmem();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction)
@@ -5990,10 +5990,10 @@ class Msg_QueueWriteAction final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr shmem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_shmem_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6110,24 +6110,24 @@ class Msg_BindGroupLayoutDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop)
@@ -6140,7 +6140,7 @@ class Msg_BindGroupLayoutDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6257,24 +6257,24 @@ class Msg_PipelineLayoutDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop)
@@ -6287,7 +6287,7 @@ class Msg_PipelineLayoutDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6404,24 +6404,24 @@ class Msg_BindGroupDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop)
@@ -6434,7 +6434,7 @@ class Msg_BindGroupDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6551,24 +6551,24 @@ class Msg_ShaderModuleDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop)
@@ -6581,7 +6581,7 @@ class Msg_ShaderModuleDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6698,24 +6698,24 @@ class Msg_ComputePipelineDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop)
@@ -6728,7 +6728,7 @@ class Msg_ComputePipelineDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6845,24 +6845,24 @@ class Msg_RenderPipelineDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop)
@@ -6875,7 +6875,7 @@ class Msg_RenderPipelineDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6992,49 +6992,49 @@ class Msg_ImplicitLayoutDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kImplicitBglIdsFieldNumber = 2,
-    kImplicitPlIdFieldNumber = 1,
+    kAImplicitBglIdsFieldNumber = 2,
+    kAImplicitPlIdFieldNumber = 1,
   };
-  // repeated bytes implicitBglIds = 2;
-  int implicitbglids_size() const;
+  // repeated bytes a_implicitBglIds = 2;
+  int a_implicitbglids_size() const;
   private:
-  int _internal_implicitbglids_size() const;
+  int _internal_a_implicitbglids_size() const;
   public:
-  void clear_implicitbglids();
-  const std::string& implicitbglids(int index) const;
-  std::string* mutable_implicitbglids(int index);
-  void set_implicitbglids(int index, const std::string& value);
-  void set_implicitbglids(int index, std::string&& value);
-  void set_implicitbglids(int index, const char* value);
-  void set_implicitbglids(int index, const void* value, size_t size);
-  std::string* add_implicitbglids();
-  void add_implicitbglids(const std::string& value);
-  void add_implicitbglids(std::string&& value);
-  void add_implicitbglids(const char* value);
-  void add_implicitbglids(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& implicitbglids() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_implicitbglids();
+  void clear_a_implicitbglids();
+  const std::string& a_implicitbglids(int index) const;
+  std::string* mutable_a_implicitbglids(int index);
+  void set_a_implicitbglids(int index, const std::string& value);
+  void set_a_implicitbglids(int index, std::string&& value);
+  void set_a_implicitbglids(int index, const char* value);
+  void set_a_implicitbglids(int index, const void* value, size_t size);
+  std::string* add_a_implicitbglids();
+  void add_a_implicitbglids(const std::string& value);
+  void add_a_implicitbglids(std::string&& value);
+  void add_a_implicitbglids(const char* value);
+  void add_a_implicitbglids(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_implicitbglids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_implicitbglids();
   private:
-  const std::string& _internal_implicitbglids(int index) const;
-  std::string* _internal_add_implicitbglids();
+  const std::string& _internal_a_implicitbglids(int index) const;
+  std::string* _internal_add_a_implicitbglids();
   public:
 
-  // required bytes implicitPlId = 1;
-  bool has_implicitplid() const;
+  // required bytes a_implicitPlId = 1;
+  bool has_a_implicitplid() const;
   private:
-  bool _internal_has_implicitplid() const;
+  bool _internal_has_a_implicitplid() const;
   public:
-  void clear_implicitplid();
-  const std::string& implicitplid() const;
+  void clear_a_implicitplid();
+  const std::string& a_implicitplid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_implicitplid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_implicitplid();
-  PROTOBUF_NODISCARD std::string* release_implicitplid();
-  void set_allocated_implicitplid(std::string* implicitplid);
+  void set_a_implicitplid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_implicitplid();
+  PROTOBUF_NODISCARD std::string* release_a_implicitplid();
+  void set_allocated_a_implicitplid(std::string* a_implicitplid);
   private:
-  const std::string& _internal_implicitplid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_implicitplid(const std::string& value);
-  std::string* _internal_mutable_implicitplid();
+  const std::string& _internal_a_implicitplid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_implicitplid(const std::string& value);
+  std::string* _internal_mutable_a_implicitplid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop)
@@ -7047,8 +7047,8 @@ class Msg_ImplicitLayoutDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> implicitbglids_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr implicitplid_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_implicitbglids_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_implicitplid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7165,120 +7165,120 @@ class Msg_DeviceCreateSwapChain final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBufferIdsFieldNumber = 4,
-    kSelfIdFieldNumber = 1,
-    kQueueIdFieldNumber = 2,
-    kDescFieldNumber = 3,
-    kOwnerIdFieldNumber = 5,
-    kUseExternalTextureInSwapChainFieldNumber = 6,
+    kABufferIdsFieldNumber = 4,
+    kASelfIdFieldNumber = 1,
+    kAQueueIdFieldNumber = 2,
+    kADescFieldNumber = 3,
+    kAOwnerIdFieldNumber = 5,
+    kAUseExternalTextureInSwapChainFieldNumber = 6,
   };
-  // repeated bytes bufferIds = 4;
-  int bufferids_size() const;
+  // repeated bytes a_bufferIds = 4;
+  int a_bufferids_size() const;
   private:
-  int _internal_bufferids_size() const;
+  int _internal_a_bufferids_size() const;
   public:
-  void clear_bufferids();
-  const std::string& bufferids(int index) const;
-  std::string* mutable_bufferids(int index);
-  void set_bufferids(int index, const std::string& value);
-  void set_bufferids(int index, std::string&& value);
-  void set_bufferids(int index, const char* value);
-  void set_bufferids(int index, const void* value, size_t size);
-  std::string* add_bufferids();
-  void add_bufferids(const std::string& value);
-  void add_bufferids(std::string&& value);
-  void add_bufferids(const char* value);
-  void add_bufferids(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& bufferids() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_bufferids();
+  void clear_a_bufferids();
+  const std::string& a_bufferids(int index) const;
+  std::string* mutable_a_bufferids(int index);
+  void set_a_bufferids(int index, const std::string& value);
+  void set_a_bufferids(int index, std::string&& value);
+  void set_a_bufferids(int index, const char* value);
+  void set_a_bufferids(int index, const void* value, size_t size);
+  std::string* add_a_bufferids();
+  void add_a_bufferids(const std::string& value);
+  void add_a_bufferids(std::string&& value);
+  void add_a_bufferids(const char* value);
+  void add_a_bufferids(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_bufferids() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_bufferids();
   private:
-  const std::string& _internal_bufferids(int index) const;
-  std::string* _internal_add_bufferids();
+  const std::string& _internal_a_bufferids(int index) const;
+  std::string* _internal_add_a_bufferids();
   public:
 
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes queueId = 2;
-  bool has_queueid() const;
+  // required bytes a_queueId = 2;
+  bool has_a_queueid() const;
   private:
-  bool _internal_has_queueid() const;
+  bool _internal_has_a_queueid() const;
   public:
-  void clear_queueid();
-  const std::string& queueid() const;
+  void clear_a_queueid();
+  const std::string& a_queueid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_queueid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_queueid();
-  PROTOBUF_NODISCARD std::string* release_queueid();
-  void set_allocated_queueid(std::string* queueid);
+  void set_a_queueid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_queueid();
+  PROTOBUF_NODISCARD std::string* release_a_queueid();
+  void set_allocated_a_queueid(std::string* a_queueid);
   private:
-  const std::string& _internal_queueid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_queueid(const std::string& value);
-  std::string* _internal_mutable_queueid();
+  const std::string& _internal_a_queueid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_queueid(const std::string& value);
+  std::string* _internal_mutable_a_queueid();
   public:
 
-  // required bytes desc = 3;
-  bool has_desc() const;
+  // required bytes a_desc = 3;
+  bool has_a_desc() const;
   private:
-  bool _internal_has_desc() const;
+  bool _internal_has_a_desc() const;
   public:
-  void clear_desc();
-  const std::string& desc() const;
+  void clear_a_desc();
+  const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_desc(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_desc();
-  PROTOBUF_NODISCARD std::string* release_desc();
-  void set_allocated_desc(std::string* desc);
+  void set_a_desc(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_desc();
+  PROTOBUF_NODISCARD std::string* release_a_desc();
+  void set_allocated_a_desc(std::string* a_desc);
   private:
-  const std::string& _internal_desc() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_desc(const std::string& value);
-  std::string* _internal_mutable_desc();
+  const std::string& _internal_a_desc() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_desc(const std::string& value);
+  std::string* _internal_mutable_a_desc();
   public:
 
-  // required bytes ownerId = 5;
-  bool has_ownerid() const;
+  // required bytes a_ownerId = 5;
+  bool has_a_ownerid() const;
   private:
-  bool _internal_has_ownerid() const;
+  bool _internal_has_a_ownerid() const;
   public:
-  void clear_ownerid();
-  const std::string& ownerid() const;
+  void clear_a_ownerid();
+  const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ownerid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ownerid();
-  PROTOBUF_NODISCARD std::string* release_ownerid();
-  void set_allocated_ownerid(std::string* ownerid);
+  void set_a_ownerid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ownerid();
+  PROTOBUF_NODISCARD std::string* release_a_ownerid();
+  void set_allocated_a_ownerid(std::string* a_ownerid);
   private:
-  const std::string& _internal_ownerid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ownerid(const std::string& value);
-  std::string* _internal_mutable_ownerid();
+  const std::string& _internal_a_ownerid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ownerid(const std::string& value);
+  std::string* _internal_mutable_a_ownerid();
   public:
 
-  // required bool useExternalTextureInSwapChain = 6;
-  bool has_useexternaltextureinswapchain() const;
+  // required bool a_useExternalTextureInSwapChain = 6;
+  bool has_a_useexternaltextureinswapchain() const;
   private:
-  bool _internal_has_useexternaltextureinswapchain() const;
+  bool _internal_has_a_useexternaltextureinswapchain() const;
   public:
-  void clear_useexternaltextureinswapchain();
-  bool useexternaltextureinswapchain() const;
-  void set_useexternaltextureinswapchain(bool value);
+  void clear_a_useexternaltextureinswapchain();
+  bool a_useexternaltextureinswapchain() const;
+  void set_a_useexternaltextureinswapchain(bool value);
   private:
-  bool _internal_useexternaltextureinswapchain() const;
-  void _internal_set_useexternaltextureinswapchain(bool value);
+  bool _internal_a_useexternaltextureinswapchain() const;
+  void _internal_set_a_useexternaltextureinswapchain(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain)
@@ -7294,12 +7294,12 @@ class Msg_DeviceCreateSwapChain final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> bufferids_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr queueid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr desc_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ownerid_;
-    bool useexternaltextureinswapchain_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_bufferids_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_queueid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
+    bool a_useexternaltextureinswapchain_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7416,81 +7416,81 @@ class Msg_SwapChainPresent final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTextureIdFieldNumber = 1,
-    kCommandEncoderIdFieldNumber = 2,
-    kRemoteTextureIdFieldNumber = 3,
-    kRemoteTextureOwnerIdFieldNumber = 4,
+    kATextureIdFieldNumber = 1,
+    kACommandEncoderIdFieldNumber = 2,
+    kARemoteTextureIdFieldNumber = 3,
+    kARemoteTextureOwnerIdFieldNumber = 4,
   };
-  // required bytes textureId = 1;
-  bool has_textureid() const;
+  // required bytes a_textureId = 1;
+  bool has_a_textureid() const;
   private:
-  bool _internal_has_textureid() const;
+  bool _internal_has_a_textureid() const;
   public:
-  void clear_textureid();
-  const std::string& textureid() const;
+  void clear_a_textureid();
+  const std::string& a_textureid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_textureid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_textureid();
-  PROTOBUF_NODISCARD std::string* release_textureid();
-  void set_allocated_textureid(std::string* textureid);
+  void set_a_textureid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_textureid();
+  PROTOBUF_NODISCARD std::string* release_a_textureid();
+  void set_allocated_a_textureid(std::string* a_textureid);
   private:
-  const std::string& _internal_textureid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_textureid(const std::string& value);
-  std::string* _internal_mutable_textureid();
+  const std::string& _internal_a_textureid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_textureid(const std::string& value);
+  std::string* _internal_mutable_a_textureid();
   public:
 
-  // required bytes commandEncoderId = 2;
-  bool has_commandencoderid() const;
+  // required bytes a_commandEncoderId = 2;
+  bool has_a_commandencoderid() const;
   private:
-  bool _internal_has_commandencoderid() const;
+  bool _internal_has_a_commandencoderid() const;
   public:
-  void clear_commandencoderid();
-  const std::string& commandencoderid() const;
+  void clear_a_commandencoderid();
+  const std::string& a_commandencoderid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_commandencoderid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_commandencoderid();
-  PROTOBUF_NODISCARD std::string* release_commandencoderid();
-  void set_allocated_commandencoderid(std::string* commandencoderid);
+  void set_a_commandencoderid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_commandencoderid();
+  PROTOBUF_NODISCARD std::string* release_a_commandencoderid();
+  void set_allocated_a_commandencoderid(std::string* a_commandencoderid);
   private:
-  const std::string& _internal_commandencoderid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_commandencoderid(const std::string& value);
-  std::string* _internal_mutable_commandencoderid();
+  const std::string& _internal_a_commandencoderid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_commandencoderid(const std::string& value);
+  std::string* _internal_mutable_a_commandencoderid();
   public:
 
-  // required bytes remoteTextureId = 3;
-  bool has_remotetextureid() const;
+  // required bytes a_remoteTextureId = 3;
+  bool has_a_remotetextureid() const;
   private:
-  bool _internal_has_remotetextureid() const;
+  bool _internal_has_a_remotetextureid() const;
   public:
-  void clear_remotetextureid();
-  const std::string& remotetextureid() const;
+  void clear_a_remotetextureid();
+  const std::string& a_remotetextureid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_remotetextureid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_remotetextureid();
-  PROTOBUF_NODISCARD std::string* release_remotetextureid();
-  void set_allocated_remotetextureid(std::string* remotetextureid);
+  void set_a_remotetextureid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_remotetextureid();
+  PROTOBUF_NODISCARD std::string* release_a_remotetextureid();
+  void set_allocated_a_remotetextureid(std::string* a_remotetextureid);
   private:
-  const std::string& _internal_remotetextureid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_remotetextureid(const std::string& value);
-  std::string* _internal_mutable_remotetextureid();
+  const std::string& _internal_a_remotetextureid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_remotetextureid(const std::string& value);
+  std::string* _internal_mutable_a_remotetextureid();
   public:
 
-  // required bytes remoteTextureOwnerId = 4;
-  bool has_remotetextureownerid() const;
+  // required bytes a_remoteTextureOwnerId = 4;
+  bool has_a_remotetextureownerid() const;
   private:
-  bool _internal_has_remotetextureownerid() const;
+  bool _internal_has_a_remotetextureownerid() const;
   public:
-  void clear_remotetextureownerid();
-  const std::string& remotetextureownerid() const;
+  void clear_a_remotetextureownerid();
+  const std::string& a_remotetextureownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_remotetextureownerid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_remotetextureownerid();
-  PROTOBUF_NODISCARD std::string* release_remotetextureownerid();
-  void set_allocated_remotetextureownerid(std::string* remotetextureownerid);
+  void set_a_remotetextureownerid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_remotetextureownerid();
+  PROTOBUF_NODISCARD std::string* release_a_remotetextureownerid();
+  void set_allocated_a_remotetextureownerid(std::string* a_remotetextureownerid);
   private:
-  const std::string& _internal_remotetextureownerid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_remotetextureownerid(const std::string& value);
-  std::string* _internal_mutable_remotetextureownerid();
+  const std::string& _internal_a_remotetextureownerid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_remotetextureownerid(const std::string& value);
+  std::string* _internal_mutable_a_remotetextureownerid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent)
@@ -7506,10 +7506,10 @@ class Msg_SwapChainPresent final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr textureid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr commandencoderid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr remotetextureid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr remotetextureownerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_textureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_commandencoderid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_remotetextureid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_remotetextureownerid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7626,62 +7626,62 @@ class Msg_SwapChainDrop final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOwnerIdFieldNumber = 1,
-    kTxnTypeFieldNumber = 2,
-    kTxnIdFieldNumber = 3,
+    kAOwnerIdFieldNumber = 1,
+    kATxnTypeFieldNumber = 2,
+    kATxnIdFieldNumber = 3,
   };
-  // required bytes ownerId = 1;
-  bool has_ownerid() const;
+  // required bytes a_ownerId = 1;
+  bool has_a_ownerid() const;
   private:
-  bool _internal_has_ownerid() const;
+  bool _internal_has_a_ownerid() const;
   public:
-  void clear_ownerid();
-  const std::string& ownerid() const;
+  void clear_a_ownerid();
+  const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_ownerid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_ownerid();
-  PROTOBUF_NODISCARD std::string* release_ownerid();
-  void set_allocated_ownerid(std::string* ownerid);
+  void set_a_ownerid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_ownerid();
+  PROTOBUF_NODISCARD std::string* release_a_ownerid();
+  void set_allocated_a_ownerid(std::string* a_ownerid);
   private:
-  const std::string& _internal_ownerid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_ownerid(const std::string& value);
-  std::string* _internal_mutable_ownerid();
+  const std::string& _internal_a_ownerid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_ownerid(const std::string& value);
+  std::string* _internal_mutable_a_ownerid();
   public:
 
-  // required bytes txnType = 2;
-  bool has_txntype() const;
+  // required bytes a_txnType = 2;
+  bool has_a_txntype() const;
   private:
-  bool _internal_has_txntype() const;
+  bool _internal_has_a_txntype() const;
   public:
-  void clear_txntype();
-  const std::string& txntype() const;
+  void clear_a_txntype();
+  const std::string& a_txntype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_txntype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_txntype();
-  PROTOBUF_NODISCARD std::string* release_txntype();
-  void set_allocated_txntype(std::string* txntype);
+  void set_a_txntype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_txntype();
+  PROTOBUF_NODISCARD std::string* release_a_txntype();
+  void set_allocated_a_txntype(std::string* a_txntype);
   private:
-  const std::string& _internal_txntype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_txntype(const std::string& value);
-  std::string* _internal_mutable_txntype();
+  const std::string& _internal_a_txntype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_txntype(const std::string& value);
+  std::string* _internal_mutable_a_txntype();
   public:
 
-  // required bytes txnId = 3;
-  bool has_txnid() const;
+  // required bytes a_txnId = 3;
+  bool has_a_txnid() const;
   private:
-  bool _internal_has_txnid() const;
+  bool _internal_has_a_txnid() const;
   public:
-  void clear_txnid();
-  const std::string& txnid() const;
+  void clear_a_txnid();
+  const std::string& a_txnid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_txnid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_txnid();
-  PROTOBUF_NODISCARD std::string* release_txnid();
-  void set_allocated_txnid(std::string* txnid);
+  void set_a_txnid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_txnid();
+  PROTOBUF_NODISCARD std::string* release_a_txnid();
+  void set_allocated_a_txnid(std::string* a_txnid);
   private:
-  const std::string& _internal_txnid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_txnid(const std::string& value);
-  std::string* _internal_mutable_txnid();
+  const std::string& _internal_a_txnid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_txnid(const std::string& value);
+  std::string* _internal_mutable_a_txnid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop)
@@ -7697,9 +7697,9 @@ class Msg_SwapChainDrop final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr ownerid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr txntype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr txnid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txntype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txnid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7816,43 +7816,43 @@ class Msg_DevicePushErrorScope final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kAFilterFieldNumber = 2,
+    kASelfIdFieldNumber = 1,
+    kAAFilterFieldNumber = 2,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aFilter = 2;
-  bool has_afilter() const;
+  // required bytes a_aFilter = 2;
+  bool has_a_afilter() const;
   private:
-  bool _internal_has_afilter() const;
+  bool _internal_has_a_afilter() const;
   public:
-  void clear_afilter();
-  const std::string& afilter() const;
+  void clear_a_afilter();
+  const std::string& a_afilter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_afilter(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_afilter();
-  PROTOBUF_NODISCARD std::string* release_afilter();
-  void set_allocated_afilter(std::string* afilter);
+  void set_a_afilter(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_afilter();
+  PROTOBUF_NODISCARD std::string* release_a_afilter();
+  void set_allocated_a_afilter(std::string* a_afilter);
   private:
-  const std::string& _internal_afilter() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_afilter(const std::string& value);
-  std::string* _internal_mutable_afilter();
+  const std::string& _internal_a_afilter() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_afilter(const std::string& value);
+  std::string* _internal_mutable_a_afilter();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope)
@@ -7868,8 +7868,8 @@ class Msg_DevicePushErrorScope final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr afilter_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afilter_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7986,24 +7986,24 @@ class Msg_DevicePopErrorScope final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
+    kASelfIdFieldNumber = 1,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope)
@@ -8016,7 +8016,7 @@ class Msg_DevicePopErrorScope final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8133,24 +8133,24 @@ class Reply_DevicePopErrorScope final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bytes result = 1;
-  bool has_result() const;
+  // required bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope)
@@ -8163,7 +8163,7 @@ class Reply_DevicePopErrorScope final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8280,62 +8280,62 @@ class Msg_ReportError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSelfIdFieldNumber = 1,
-    kATypeFieldNumber = 2,
-    kMessageFieldNumber = 3,
+    kASelfIdFieldNumber = 1,
+    kAATypeFieldNumber = 2,
+    kAMessageFieldNumber = 3,
   };
-  // required bytes selfId = 1;
-  bool has_selfid() const;
+  // required bytes a_selfId = 1;
+  bool has_a_selfid() const;
   private:
-  bool _internal_has_selfid() const;
+  bool _internal_has_a_selfid() const;
   public:
-  void clear_selfid();
-  const std::string& selfid() const;
+  void clear_a_selfid();
+  const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_selfid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_selfid();
-  PROTOBUF_NODISCARD std::string* release_selfid();
-  void set_allocated_selfid(std::string* selfid);
+  void set_a_selfid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_selfid();
+  PROTOBUF_NODISCARD std::string* release_a_selfid();
+  void set_allocated_a_selfid(std::string* a_selfid);
   private:
-  const std::string& _internal_selfid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_selfid(const std::string& value);
-  std::string* _internal_mutable_selfid();
+  const std::string& _internal_a_selfid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_selfid(const std::string& value);
+  std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes aType = 2;
-  bool has_atype() const;
+  // required bytes a_aType = 2;
+  bool has_a_atype() const;
   private:
-  bool _internal_has_atype() const;
+  bool _internal_has_a_atype() const;
   public:
-  void clear_atype();
-  const std::string& atype() const;
+  void clear_a_atype();
+  const std::string& a_atype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atype();
-  PROTOBUF_NODISCARD std::string* release_atype();
-  void set_allocated_atype(std::string* atype);
+  void set_a_atype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atype();
+  PROTOBUF_NODISCARD std::string* release_a_atype();
+  void set_allocated_a_atype(std::string* a_atype);
   private:
-  const std::string& _internal_atype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atype(const std::string& value);
-  std::string* _internal_mutable_atype();
+  const std::string& _internal_a_atype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atype(const std::string& value);
+  std::string* _internal_mutable_a_atype();
   public:
 
-  // required bytes message = 3;
-  bool has_message() const;
+  // required bytes a_message = 3;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError)
@@ -8351,9 +8351,9 @@ class Msg_ReportError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr selfid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8470,43 +8470,43 @@ class Msg_UncapturedError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADeviceIdFieldNumber = 1,
-    kMessageFieldNumber = 2,
+    kAADeviceIdFieldNumber = 1,
+    kAMessageFieldNumber = 2,
   };
-  // optional bytes aDeviceId = 1;
-  bool has_adeviceid() const;
+  // optional bytes a_aDeviceId = 1;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes message = 2;
-  bool has_message() const;
+  // required bytes a_message = 2;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError)
@@ -8519,8 +8519,8 @@ class Msg_UncapturedError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8637,57 +8637,57 @@ class Msg_DeviceLost final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADeviceIdFieldNumber = 1,
-    kMessageFieldNumber = 3,
-    kReasonFieldNumber = 2,
+    kAADeviceIdFieldNumber = 1,
+    kAMessageFieldNumber = 3,
+    kAReasonFieldNumber = 2,
   };
-  // required bytes aDeviceId = 1;
-  bool has_adeviceid() const;
+  // required bytes a_aDeviceId = 1;
+  bool has_a_adeviceid() const;
   private:
-  bool _internal_has_adeviceid() const;
+  bool _internal_has_a_adeviceid() const;
   public:
-  void clear_adeviceid();
-  const std::string& adeviceid() const;
+  void clear_a_adeviceid();
+  const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_adeviceid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_adeviceid();
-  PROTOBUF_NODISCARD std::string* release_adeviceid();
-  void set_allocated_adeviceid(std::string* adeviceid);
+  void set_a_adeviceid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_adeviceid();
+  PROTOBUF_NODISCARD std::string* release_a_adeviceid();
+  void set_allocated_a_adeviceid(std::string* a_adeviceid);
   private:
-  const std::string& _internal_adeviceid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_adeviceid(const std::string& value);
-  std::string* _internal_mutable_adeviceid();
+  const std::string& _internal_a_adeviceid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_adeviceid(const std::string& value);
+  std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes message = 3;
-  bool has_message() const;
+  // required bytes a_message = 3;
+  bool has_a_message() const;
   private:
-  bool _internal_has_message() const;
+  bool _internal_has_a_message() const;
   public:
-  void clear_message();
-  const std::string& message() const;
+  void clear_a_message();
+  const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message();
-  PROTOBUF_NODISCARD std::string* release_message();
-  void set_allocated_message(std::string* message);
+  void set_a_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_message();
+  PROTOBUF_NODISCARD std::string* release_a_message();
+  void set_allocated_a_message(std::string* a_message);
   private:
-  const std::string& _internal_message() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  const std::string& _internal_a_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_message(const std::string& value);
+  std::string* _internal_mutable_a_message();
   public:
 
-  // optional uint32 reason = 2;
-  bool has_reason() const;
+  // optional uint32 a_reason = 2;
+  bool has_a_reason() const;
   private:
-  bool _internal_has_reason() const;
+  bool _internal_has_a_reason() const;
   public:
-  void clear_reason();
-  uint32_t reason() const;
-  void set_reason(uint32_t value);
+  void clear_a_reason();
+  uint32_t a_reason() const;
+  void set_a_reason(uint32_t value);
   private:
-  uint32_t _internal_reason() const;
-  void _internal_set_reason(uint32_t value);
+  uint32_t _internal_a_reason() const;
+  void _internal_set_a_reason(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost)
@@ -8703,9 +8703,9 @@ class Msg_DeviceLost final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr adeviceid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-    uint32_t reason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    uint32_t a_reason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8969,2632 +8969,2632 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_DeviceAction
 
-// required bytes selfId = 1;
-inline bool Msg_DeviceAction::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DeviceAction::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceAction::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DeviceAction::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DeviceAction::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DeviceAction::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceAction::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DeviceAction::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceAction::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
 }
-inline std::string* Msg_DeviceAction::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.selfId)
+inline std::string* Msg_DeviceAction::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DeviceAction::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DeviceAction::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DeviceAction::_internal_set_selfid(const std::string& value) {
+inline void Msg_DeviceAction::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceAction::_internal_mutable_selfid() {
+inline std::string* Msg_DeviceAction::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceAction::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DeviceAction::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceAction::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DeviceAction::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
 }
 
-// required bytes buf = 2;
-inline bool Msg_DeviceAction::_internal_has_buf() const {
+// required bytes a_buf = 2;
+inline bool Msg_DeviceAction::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeviceAction::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_DeviceAction::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_DeviceAction::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_DeviceAction::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DeviceAction::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.buf)
-  return _internal_buf();
+inline const std::string& Msg_DeviceAction::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceAction::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
 }
-inline std::string* Msg_DeviceAction::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.buf)
+inline std::string* Msg_DeviceAction::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
   return _s;
 }
-inline const std::string& Msg_DeviceAction::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_DeviceAction::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_DeviceAction::_internal_set_buf(const std::string& value) {
+inline void Msg_DeviceAction::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceAction::_internal_mutable_buf() {
+inline std::string* Msg_DeviceAction::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceAction::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_DeviceAction::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceAction::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_DeviceAction::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceActionWithAck
 
-// required bytes selfId = 1;
-inline bool Msg_DeviceActionWithAck::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DeviceActionWithAck::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceActionWithAck::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DeviceActionWithAck::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DeviceActionWithAck::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DeviceActionWithAck::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceActionWithAck::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DeviceActionWithAck::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceActionWithAck::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceActionWithAck::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
 }
-inline std::string* Msg_DeviceActionWithAck::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.selfId)
+inline std::string* Msg_DeviceActionWithAck::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DeviceActionWithAck::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DeviceActionWithAck::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DeviceActionWithAck::_internal_set_selfid(const std::string& value) {
+inline void Msg_DeviceActionWithAck::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceActionWithAck::_internal_mutable_selfid() {
+inline std::string* Msg_DeviceActionWithAck::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceActionWithAck::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DeviceActionWithAck::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceActionWithAck::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DeviceActionWithAck::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
 }
 
-// required bytes buf = 2;
-inline bool Msg_DeviceActionWithAck::_internal_has_buf() const {
+// required bytes a_buf = 2;
+inline bool Msg_DeviceActionWithAck::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeviceActionWithAck::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_DeviceActionWithAck::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_DeviceActionWithAck::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_DeviceActionWithAck::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DeviceActionWithAck::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.buf)
-  return _internal_buf();
+inline const std::string& Msg_DeviceActionWithAck::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceActionWithAck::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceActionWithAck::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
 }
-inline std::string* Msg_DeviceActionWithAck::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.buf)
+inline std::string* Msg_DeviceActionWithAck::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
   return _s;
 }
-inline const std::string& Msg_DeviceActionWithAck::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_DeviceActionWithAck::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_DeviceActionWithAck::_internal_set_buf(const std::string& value) {
+inline void Msg_DeviceActionWithAck::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceActionWithAck::_internal_mutable_buf() {
+inline std::string* Msg_DeviceActionWithAck::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceActionWithAck::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_DeviceActionWithAck::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceActionWithAck::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_DeviceActionWithAck::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_DeviceActionWithAck
 
-// required bool dummy = 1;
-inline bool Reply_DeviceActionWithAck::_internal_has_dummy() const {
+// required bool a_dummy = 1;
+inline bool Reply_DeviceActionWithAck::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_DeviceActionWithAck::has_dummy() const {
-  return _internal_has_dummy();
+inline bool Reply_DeviceActionWithAck::has_a_dummy() const {
+  return _internal_has_a_dummy();
 }
-inline void Reply_DeviceActionWithAck::clear_dummy() {
-  _impl_.dummy_ = false;
+inline void Reply_DeviceActionWithAck::clear_a_dummy() {
+  _impl_.a_dummy_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_DeviceActionWithAck::_internal_dummy() const {
-  return _impl_.dummy_;
+inline bool Reply_DeviceActionWithAck::_internal_a_dummy() const {
+  return _impl_.a_dummy_;
 }
-inline bool Reply_DeviceActionWithAck::dummy() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck.dummy)
-  return _internal_dummy();
+inline bool Reply_DeviceActionWithAck::a_dummy() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck.a_dummy)
+  return _internal_a_dummy();
 }
-inline void Reply_DeviceActionWithAck::_internal_set_dummy(bool value) {
+inline void Reply_DeviceActionWithAck::_internal_set_a_dummy(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.dummy_ = value;
+  _impl_.a_dummy_ = value;
 }
-inline void Reply_DeviceActionWithAck::set_dummy(bool value) {
-  _internal_set_dummy(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck.dummy)
+inline void Reply_DeviceActionWithAck::set_a_dummy(bool value) {
+  _internal_set_a_dummy(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck.a_dummy)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TextureAction
 
-// required bytes selfId = 1;
-inline bool Msg_TextureAction::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_TextureAction::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TextureAction::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_TextureAction::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_TextureAction::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_TextureAction::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_TextureAction::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_TextureAction::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureAction::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
 }
-inline std::string* Msg_TextureAction::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.selfId)
+inline std::string* Msg_TextureAction::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
   return _s;
 }
-inline const std::string& Msg_TextureAction::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_TextureAction::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_TextureAction::_internal_set_selfid(const std::string& value) {
+inline void Msg_TextureAction::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureAction::_internal_mutable_selfid() {
+inline std::string* Msg_TextureAction::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureAction::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_TextureAction::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureAction::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_TextureAction::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
 }
 
-// required bytes aDeviceId = 2;
-inline bool Msg_TextureAction::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 2;
+inline bool Msg_TextureAction::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_TextureAction::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_TextureAction::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_TextureAction::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_TextureAction::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_TextureAction::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_TextureAction::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureAction::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureAction::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
 }
-inline std::string* Msg_TextureAction::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.aDeviceId)
+inline std::string* Msg_TextureAction::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_TextureAction::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_TextureAction::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_TextureAction::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_TextureAction::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureAction::_internal_mutable_adeviceid() {
+inline std::string* Msg_TextureAction::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureAction::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_TextureAction::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureAction::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_TextureAction::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
 }
 
-// required bytes buf = 3;
-inline bool Msg_TextureAction::_internal_has_buf() const {
+// required bytes a_buf = 3;
+inline bool Msg_TextureAction::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_TextureAction::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_TextureAction::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_TextureAction::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_TextureAction::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_TextureAction::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.buf)
-  return _internal_buf();
+inline const std::string& Msg_TextureAction::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureAction::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
 }
-inline std::string* Msg_TextureAction::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.buf)
+inline std::string* Msg_TextureAction::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
   return _s;
 }
-inline const std::string& Msg_TextureAction::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_TextureAction::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_TextureAction::_internal_set_buf(const std::string& value) {
+inline void Msg_TextureAction::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureAction::_internal_mutable_buf() {
+inline std::string* Msg_TextureAction::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureAction::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_TextureAction::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureAction::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_TextureAction::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CommandEncoderAction
 
-// required bytes selfId = 1;
-inline bool Msg_CommandEncoderAction::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_CommandEncoderAction::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderAction::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_CommandEncoderAction::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_CommandEncoderAction::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_CommandEncoderAction::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CommandEncoderAction::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_CommandEncoderAction::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderAction::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
 }
-inline std::string* Msg_CommandEncoderAction::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.selfId)
+inline std::string* Msg_CommandEncoderAction::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderAction::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_CommandEncoderAction::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_CommandEncoderAction::_internal_set_selfid(const std::string& value) {
+inline void Msg_CommandEncoderAction::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderAction::_internal_mutable_selfid() {
+inline std::string* Msg_CommandEncoderAction::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderAction::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_CommandEncoderAction::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderAction::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_CommandEncoderAction::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
 }
 
-// required bytes aDeviceId = 2;
-inline bool Msg_CommandEncoderAction::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 2;
+inline bool Msg_CommandEncoderAction::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderAction::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_CommandEncoderAction::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_CommandEncoderAction::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_CommandEncoderAction::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_CommandEncoderAction::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_CommandEncoderAction::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderAction::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderAction::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
 }
-inline std::string* Msg_CommandEncoderAction::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.aDeviceId)
+inline std::string* Msg_CommandEncoderAction::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderAction::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_CommandEncoderAction::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_CommandEncoderAction::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_CommandEncoderAction::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderAction::_internal_mutable_adeviceid() {
+inline std::string* Msg_CommandEncoderAction::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderAction::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_CommandEncoderAction::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderAction::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_CommandEncoderAction::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
 }
 
-// required bytes buf = 3;
-inline bool Msg_CommandEncoderAction::_internal_has_buf() const {
+// required bytes a_buf = 3;
+inline bool Msg_CommandEncoderAction::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderAction::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_CommandEncoderAction::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_CommandEncoderAction::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_CommandEncoderAction::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_CommandEncoderAction::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.buf)
-  return _internal_buf();
+inline const std::string& Msg_CommandEncoderAction::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderAction::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
 }
-inline std::string* Msg_CommandEncoderAction::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.buf)
+inline std::string* Msg_CommandEncoderAction::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderAction::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_CommandEncoderAction::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_CommandEncoderAction::_internal_set_buf(const std::string& value) {
+inline void Msg_CommandEncoderAction::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderAction::_internal_mutable_buf() {
+inline std::string* Msg_CommandEncoderAction::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderAction::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_CommandEncoderAction::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderAction::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_CommandEncoderAction::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RenderPass
 
-// required bytes selfId = 1;
-inline bool Msg_RenderPass::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_RenderPass::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RenderPass::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_RenderPass::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_RenderPass::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_RenderPass::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RenderPass::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_RenderPass::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RenderPass::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_RenderPass::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
 }
-inline std::string* Msg_RenderPass::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.selfId)
+inline std::string* Msg_RenderPass::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
   return _s;
 }
-inline const std::string& Msg_RenderPass::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_RenderPass::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_RenderPass::_internal_set_selfid(const std::string& value) {
+inline void Msg_RenderPass::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPass::_internal_mutable_selfid() {
+inline std::string* Msg_RenderPass::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPass::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_RenderPass::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RenderPass::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_RenderPass::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
 }
 
-// required bytes aDeviceId = 2;
-inline bool Msg_RenderPass::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 2;
+inline bool Msg_RenderPass::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RenderPass::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_RenderPass::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_RenderPass::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_RenderPass::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_RenderPass::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_RenderPass::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RenderPass::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_RenderPass::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
 }
-inline std::string* Msg_RenderPass::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.aDeviceId)
+inline std::string* Msg_RenderPass::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_RenderPass::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_RenderPass::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_RenderPass::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_RenderPass::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPass::_internal_mutable_adeviceid() {
+inline std::string* Msg_RenderPass::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPass::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_RenderPass::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RenderPass::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_RenderPass::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
 }
 
-// required bytes buf = 3;
-inline bool Msg_RenderPass::_internal_has_buf() const {
+// required bytes a_buf = 3;
+inline bool Msg_RenderPass::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_RenderPass::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_RenderPass::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_RenderPass::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_RenderPass::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_RenderPass::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.buf)
-  return _internal_buf();
+inline const std::string& Msg_RenderPass::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RenderPass::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_RenderPass::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
 }
-inline std::string* Msg_RenderPass::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.buf)
+inline std::string* Msg_RenderPass::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
   return _s;
 }
-inline const std::string& Msg_RenderPass::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_RenderPass::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_RenderPass::_internal_set_buf(const std::string& value) {
+inline void Msg_RenderPass::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPass::_internal_mutable_buf() {
+inline std::string* Msg_RenderPass::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPass::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_RenderPass::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RenderPass::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_RenderPass::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ComputePass
 
-// required bytes selfId = 1;
-inline bool Msg_ComputePass::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_ComputePass::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ComputePass::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_ComputePass::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_ComputePass::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_ComputePass::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ComputePass::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_ComputePass::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ComputePass::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_ComputePass::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
 }
-inline std::string* Msg_ComputePass::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.selfId)
+inline std::string* Msg_ComputePass::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
   return _s;
 }
-inline const std::string& Msg_ComputePass::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_ComputePass::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_ComputePass::_internal_set_selfid(const std::string& value) {
+inline void Msg_ComputePass::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePass::_internal_mutable_selfid() {
+inline std::string* Msg_ComputePass::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePass::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_ComputePass::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ComputePass::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_ComputePass::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
 }
 
-// required bytes aDeviceId = 2;
-inline bool Msg_ComputePass::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 2;
+inline bool Msg_ComputePass::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ComputePass::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_ComputePass::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_ComputePass::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_ComputePass::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ComputePass::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_ComputePass::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ComputePass::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_ComputePass::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
 }
-inline std::string* Msg_ComputePass::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.aDeviceId)
+inline std::string* Msg_ComputePass::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_ComputePass::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_ComputePass::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_ComputePass::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_ComputePass::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePass::_internal_mutable_adeviceid() {
+inline std::string* Msg_ComputePass::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePass::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_ComputePass::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ComputePass::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_ComputePass::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
 }
 
-// required bytes buf = 3;
-inline bool Msg_ComputePass::_internal_has_buf() const {
+// required bytes a_buf = 3;
+inline bool Msg_ComputePass::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ComputePass::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_ComputePass::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_ComputePass::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_ComputePass::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_ComputePass::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.buf)
-  return _internal_buf();
+inline const std::string& Msg_ComputePass::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ComputePass::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_ComputePass::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
 }
-inline std::string* Msg_ComputePass::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.buf)
+inline std::string* Msg_ComputePass::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
   return _s;
 }
-inline const std::string& Msg_ComputePass::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_ComputePass::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_ComputePass::_internal_set_buf(const std::string& value) {
+inline void Msg_ComputePass::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePass::_internal_mutable_buf() {
+inline std::string* Msg_ComputePass::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePass::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_ComputePass::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ComputePass::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_ComputePass::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceCreateBuffer
 
-// required bytes deviceId = 1;
-inline bool Msg_DeviceCreateBuffer::_internal_has_deviceid() const {
+// required bytes a_deviceId = 1;
+inline bool Msg_DeviceCreateBuffer::_internal_has_a_deviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateBuffer::has_deviceid() const {
-  return _internal_has_deviceid();
+inline bool Msg_DeviceCreateBuffer::has_a_deviceid() const {
+  return _internal_has_a_deviceid();
 }
-inline void Msg_DeviceCreateBuffer::clear_deviceid() {
-  _impl_.deviceid_.ClearToEmpty();
+inline void Msg_DeviceCreateBuffer::clear_a_deviceid() {
+  _impl_.a_deviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceCreateBuffer::deviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.deviceId)
-  return _internal_deviceid();
+inline const std::string& Msg_DeviceCreateBuffer::a_deviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
+  return _internal_a_deviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateBuffer::set_deviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateBuffer::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.deviceId)
+ _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
 }
-inline std::string* Msg_DeviceCreateBuffer::mutable_deviceid() {
-  std::string* _s = _internal_mutable_deviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.deviceId)
+inline std::string* Msg_DeviceCreateBuffer::mutable_a_deviceid() {
+  std::string* _s = _internal_mutable_a_deviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateBuffer::_internal_deviceid() const {
-  return _impl_.deviceid_.Get();
+inline const std::string& Msg_DeviceCreateBuffer::_internal_a_deviceid() const {
+  return _impl_.a_deviceid_.Get();
 }
-inline void Msg_DeviceCreateBuffer::_internal_set_deviceid(const std::string& value) {
+inline void Msg_DeviceCreateBuffer::_internal_set_a_deviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.deviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_deviceid() {
+inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_deviceid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.deviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::release_deviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.deviceId)
-  if (!_internal_has_deviceid()) {
+inline std::string* Msg_DeviceCreateBuffer::release_a_deviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
+  if (!_internal_has_a_deviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.deviceid_.Release();
+  auto* p = _impl_.a_deviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateBuffer::set_allocated_deviceid(std::string* deviceid) {
-  if (deviceid != nullptr) {
+inline void Msg_DeviceCreateBuffer::set_allocated_a_deviceid(std::string* a_deviceid) {
+  if (a_deviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.deviceid_.SetAllocated(deviceid, GetArenaForAllocation());
+  _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.deviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
 }
 
-// required bytes bufferId = 2;
-inline bool Msg_DeviceCreateBuffer::_internal_has_bufferid() const {
+// required bytes a_bufferId = 2;
+inline bool Msg_DeviceCreateBuffer::_internal_has_a_bufferid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateBuffer::has_bufferid() const {
-  return _internal_has_bufferid();
+inline bool Msg_DeviceCreateBuffer::has_a_bufferid() const {
+  return _internal_has_a_bufferid();
 }
-inline void Msg_DeviceCreateBuffer::clear_bufferid() {
-  _impl_.bufferid_.ClearToEmpty();
+inline void Msg_DeviceCreateBuffer::clear_a_bufferid() {
+  _impl_.a_bufferid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DeviceCreateBuffer::bufferid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.bufferId)
-  return _internal_bufferid();
+inline const std::string& Msg_DeviceCreateBuffer::a_bufferid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
+  return _internal_a_bufferid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateBuffer::set_bufferid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateBuffer::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.bufferId)
+ _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
 }
-inline std::string* Msg_DeviceCreateBuffer::mutable_bufferid() {
-  std::string* _s = _internal_mutable_bufferid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.bufferId)
+inline std::string* Msg_DeviceCreateBuffer::mutable_a_bufferid() {
+  std::string* _s = _internal_mutable_a_bufferid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateBuffer::_internal_bufferid() const {
-  return _impl_.bufferid_.Get();
+inline const std::string& Msg_DeviceCreateBuffer::_internal_a_bufferid() const {
+  return _impl_.a_bufferid_.Get();
 }
-inline void Msg_DeviceCreateBuffer::_internal_set_bufferid(const std::string& value) {
+inline void Msg_DeviceCreateBuffer::_internal_set_a_bufferid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bufferid_.Set(value, GetArenaForAllocation());
+  _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_bufferid() {
+inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_bufferid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.bufferid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::release_bufferid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.bufferId)
-  if (!_internal_has_bufferid()) {
+inline std::string* Msg_DeviceCreateBuffer::release_a_bufferid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
+  if (!_internal_has_a_bufferid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.bufferid_.Release();
+  auto* p = _impl_.a_bufferid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateBuffer::set_allocated_bufferid(std::string* bufferid) {
-  if (bufferid != nullptr) {
+inline void Msg_DeviceCreateBuffer::set_allocated_a_bufferid(std::string* a_bufferid) {
+  if (a_bufferid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.bufferid_.SetAllocated(bufferid, GetArenaForAllocation());
+  _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.bufferId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
 }
 
-// required bytes desc = 3;
-inline bool Msg_DeviceCreateBuffer::_internal_has_desc() const {
+// required bytes a_desc = 3;
+inline bool Msg_DeviceCreateBuffer::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateBuffer::has_desc() const {
-  return _internal_has_desc();
+inline bool Msg_DeviceCreateBuffer::has_a_desc() const {
+  return _internal_has_a_desc();
 }
-inline void Msg_DeviceCreateBuffer::clear_desc() {
-  _impl_.desc_.ClearToEmpty();
+inline void Msg_DeviceCreateBuffer::clear_a_desc() {
+  _impl_.a_desc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_DeviceCreateBuffer::desc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.desc)
-  return _internal_desc();
+inline const std::string& Msg_DeviceCreateBuffer::a_desc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
+  return _internal_a_desc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateBuffer::set_desc(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateBuffer::set_a_desc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.desc)
+ _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
 }
-inline std::string* Msg_DeviceCreateBuffer::mutable_desc() {
-  std::string* _s = _internal_mutable_desc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.desc)
+inline std::string* Msg_DeviceCreateBuffer::mutable_a_desc() {
+  std::string* _s = _internal_mutable_a_desc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateBuffer::_internal_desc() const {
-  return _impl_.desc_.Get();
+inline const std::string& Msg_DeviceCreateBuffer::_internal_a_desc() const {
+  return _impl_.a_desc_.Get();
 }
-inline void Msg_DeviceCreateBuffer::_internal_set_desc(const std::string& value) {
+inline void Msg_DeviceCreateBuffer::_internal_set_a_desc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.desc_.Set(value, GetArenaForAllocation());
+  _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_desc() {
+inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_desc() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.desc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::release_desc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.desc)
-  if (!_internal_has_desc()) {
+inline std::string* Msg_DeviceCreateBuffer::release_a_desc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
+  if (!_internal_has_a_desc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.desc_.Release();
+  auto* p = _impl_.a_desc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateBuffer::set_allocated_desc(std::string* desc) {
-  if (desc != nullptr) {
+inline void Msg_DeviceCreateBuffer::set_allocated_a_desc(std::string* a_desc) {
+  if (a_desc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.desc_.SetAllocated(desc, GetArenaForAllocation());
+  _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.desc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
 }
 
-// required bytes shm = 4;
-inline bool Msg_DeviceCreateBuffer::_internal_has_shm() const {
+// required bytes a_shm = 4;
+inline bool Msg_DeviceCreateBuffer::_internal_has_a_shm() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateBuffer::has_shm() const {
-  return _internal_has_shm();
+inline bool Msg_DeviceCreateBuffer::has_a_shm() const {
+  return _internal_has_a_shm();
 }
-inline void Msg_DeviceCreateBuffer::clear_shm() {
-  _impl_.shm_.ClearToEmpty();
+inline void Msg_DeviceCreateBuffer::clear_a_shm() {
+  _impl_.a_shm_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_DeviceCreateBuffer::shm() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.shm)
-  return _internal_shm();
+inline const std::string& Msg_DeviceCreateBuffer::a_shm() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
+  return _internal_a_shm();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateBuffer::set_shm(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateBuffer::set_a_shm(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.shm_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.shm)
+ _impl_.a_shm_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
 }
-inline std::string* Msg_DeviceCreateBuffer::mutable_shm() {
-  std::string* _s = _internal_mutable_shm();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.shm)
+inline std::string* Msg_DeviceCreateBuffer::mutable_a_shm() {
+  std::string* _s = _internal_mutable_a_shm();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateBuffer::_internal_shm() const {
-  return _impl_.shm_.Get();
+inline const std::string& Msg_DeviceCreateBuffer::_internal_a_shm() const {
+  return _impl_.a_shm_.Get();
 }
-inline void Msg_DeviceCreateBuffer::_internal_set_shm(const std::string& value) {
+inline void Msg_DeviceCreateBuffer::_internal_set_a_shm(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.shm_.Set(value, GetArenaForAllocation());
+  _impl_.a_shm_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_shm() {
+inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_shm() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.shm_.Mutable(GetArenaForAllocation());
+  return _impl_.a_shm_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateBuffer::release_shm() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.shm)
-  if (!_internal_has_shm()) {
+inline std::string* Msg_DeviceCreateBuffer::release_a_shm() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
+  if (!_internal_has_a_shm()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.shm_.Release();
+  auto* p = _impl_.a_shm_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.shm_.IsDefault()) {
-    _impl_.shm_.Set("", GetArenaForAllocation());
+  if (_impl_.a_shm_.IsDefault()) {
+    _impl_.a_shm_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateBuffer::set_allocated_shm(std::string* shm) {
-  if (shm != nullptr) {
+inline void Msg_DeviceCreateBuffer::set_allocated_a_shm(std::string* a_shm) {
+  if (a_shm != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.shm_.SetAllocated(shm, GetArenaForAllocation());
+  _impl_.a_shm_.SetAllocated(a_shm, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.shm_.IsDefault()) {
-    _impl_.shm_.Set("", GetArenaForAllocation());
+  if (_impl_.a_shm_.IsDefault()) {
+    _impl_.a_shm_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.shm)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InstanceRequestAdapter
 
-// required bytes options = 1;
-inline bool Msg_InstanceRequestAdapter::_internal_has_options() const {
+// required bytes a_options = 1;
+inline bool Msg_InstanceRequestAdapter::_internal_has_a_options() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InstanceRequestAdapter::has_options() const {
-  return _internal_has_options();
+inline bool Msg_InstanceRequestAdapter::has_a_options() const {
+  return _internal_has_a_options();
 }
-inline void Msg_InstanceRequestAdapter::clear_options() {
-  _impl_.options_.ClearToEmpty();
+inline void Msg_InstanceRequestAdapter::clear_a_options() {
+  _impl_.a_options_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InstanceRequestAdapter::options() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.options)
-  return _internal_options();
+inline const std::string& Msg_InstanceRequestAdapter::a_options() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
+  return _internal_a_options();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InstanceRequestAdapter::set_options(ArgT0&& arg0, ArgT... args) {
+void Msg_InstanceRequestAdapter::set_a_options(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.options)
+ _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
 }
-inline std::string* Msg_InstanceRequestAdapter::mutable_options() {
-  std::string* _s = _internal_mutable_options();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.options)
+inline std::string* Msg_InstanceRequestAdapter::mutable_a_options() {
+  std::string* _s = _internal_mutable_a_options();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
   return _s;
 }
-inline const std::string& Msg_InstanceRequestAdapter::_internal_options() const {
-  return _impl_.options_.Get();
+inline const std::string& Msg_InstanceRequestAdapter::_internal_a_options() const {
+  return _impl_.a_options_.Get();
 }
-inline void Msg_InstanceRequestAdapter::_internal_set_options(const std::string& value) {
+inline void Msg_InstanceRequestAdapter::_internal_set_a_options(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.options_.Set(value, GetArenaForAllocation());
+  _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InstanceRequestAdapter::_internal_mutable_options() {
+inline std::string* Msg_InstanceRequestAdapter::_internal_mutable_a_options() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.options_.Mutable(GetArenaForAllocation());
+  return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InstanceRequestAdapter::release_options() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.options)
-  if (!_internal_has_options()) {
+inline std::string* Msg_InstanceRequestAdapter::release_a_options() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
+  if (!_internal_has_a_options()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.options_.Release();
+  auto* p = _impl_.a_options_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.options_.IsDefault()) {
-    _impl_.options_.Set("", GetArenaForAllocation());
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InstanceRequestAdapter::set_allocated_options(std::string* options) {
-  if (options != nullptr) {
+inline void Msg_InstanceRequestAdapter::set_allocated_a_options(std::string* a_options) {
+  if (a_options != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.options_.SetAllocated(options, GetArenaForAllocation());
+  _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.options_.IsDefault()) {
-    _impl_.options_.Set("", GetArenaForAllocation());
+  if (_impl_.a_options_.IsDefault()) {
+    _impl_.a_options_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.options)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
 }
 
-// required bytes aAdapterId = 2;
-inline bool Msg_InstanceRequestAdapter::_internal_has_aadapterid() const {
+// required bytes a_aAdapterId = 2;
+inline bool Msg_InstanceRequestAdapter::_internal_has_a_aadapterid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_InstanceRequestAdapter::has_aadapterid() const {
-  return _internal_has_aadapterid();
+inline bool Msg_InstanceRequestAdapter::has_a_aadapterid() const {
+  return _internal_has_a_aadapterid();
 }
-inline void Msg_InstanceRequestAdapter::clear_aadapterid() {
-  _impl_.aadapterid_.ClearToEmpty();
+inline void Msg_InstanceRequestAdapter::clear_a_aadapterid() {
+  _impl_.a_aadapterid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_InstanceRequestAdapter::aadapterid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.aAdapterId)
-  return _internal_aadapterid();
+inline const std::string& Msg_InstanceRequestAdapter::a_aadapterid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
+  return _internal_a_aadapterid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InstanceRequestAdapter::set_aadapterid(ArgT0&& arg0, ArgT... args) {
+void Msg_InstanceRequestAdapter::set_a_aadapterid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aadapterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.aAdapterId)
+ _impl_.a_aadapterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
 }
-inline std::string* Msg_InstanceRequestAdapter::mutable_aadapterid() {
-  std::string* _s = _internal_mutable_aadapterid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.aAdapterId)
+inline std::string* Msg_InstanceRequestAdapter::mutable_a_aadapterid() {
+  std::string* _s = _internal_mutable_a_aadapterid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
   return _s;
 }
-inline const std::string& Msg_InstanceRequestAdapter::_internal_aadapterid() const {
-  return _impl_.aadapterid_.Get();
+inline const std::string& Msg_InstanceRequestAdapter::_internal_a_aadapterid() const {
+  return _impl_.a_aadapterid_.Get();
 }
-inline void Msg_InstanceRequestAdapter::_internal_set_aadapterid(const std::string& value) {
+inline void Msg_InstanceRequestAdapter::_internal_set_a_aadapterid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aadapterid_.Set(value, GetArenaForAllocation());
+  _impl_.a_aadapterid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InstanceRequestAdapter::_internal_mutable_aadapterid() {
+inline std::string* Msg_InstanceRequestAdapter::_internal_mutable_a_aadapterid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aadapterid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aadapterid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InstanceRequestAdapter::release_aadapterid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.aAdapterId)
-  if (!_internal_has_aadapterid()) {
+inline std::string* Msg_InstanceRequestAdapter::release_a_aadapterid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
+  if (!_internal_has_a_aadapterid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aadapterid_.Release();
+  auto* p = _impl_.a_aadapterid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aadapterid_.IsDefault()) {
-    _impl_.aadapterid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aadapterid_.IsDefault()) {
+    _impl_.a_aadapterid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InstanceRequestAdapter::set_allocated_aadapterid(std::string* aadapterid) {
-  if (aadapterid != nullptr) {
+inline void Msg_InstanceRequestAdapter::set_allocated_a_aadapterid(std::string* a_aadapterid) {
+  if (a_aadapterid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aadapterid_.SetAllocated(aadapterid, GetArenaForAllocation());
+  _impl_.a_aadapterid_.SetAllocated(a_aadapterid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aadapterid_.IsDefault()) {
-    _impl_.aadapterid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aadapterid_.IsDefault()) {
+    _impl_.a_aadapterid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.aAdapterId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_InstanceRequestAdapter
 
-// required bytes byteBuf = 1;
-inline bool Reply_InstanceRequestAdapter::_internal_has_bytebuf() const {
+// required bytes a_byteBuf = 1;
+inline bool Reply_InstanceRequestAdapter::_internal_has_a_bytebuf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_InstanceRequestAdapter::has_bytebuf() const {
-  return _internal_has_bytebuf();
+inline bool Reply_InstanceRequestAdapter::has_a_bytebuf() const {
+  return _internal_has_a_bytebuf();
 }
-inline void Reply_InstanceRequestAdapter::clear_bytebuf() {
-  _impl_.bytebuf_.ClearToEmpty();
+inline void Reply_InstanceRequestAdapter::clear_a_bytebuf() {
+  _impl_.a_bytebuf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_InstanceRequestAdapter::bytebuf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.byteBuf)
-  return _internal_bytebuf();
+inline const std::string& Reply_InstanceRequestAdapter::a_bytebuf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
+  return _internal_a_bytebuf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_InstanceRequestAdapter::set_bytebuf(ArgT0&& arg0, ArgT... args) {
+void Reply_InstanceRequestAdapter::set_a_bytebuf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.bytebuf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.byteBuf)
+ _impl_.a_bytebuf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
 }
-inline std::string* Reply_InstanceRequestAdapter::mutable_bytebuf() {
-  std::string* _s = _internal_mutable_bytebuf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.byteBuf)
+inline std::string* Reply_InstanceRequestAdapter::mutable_a_bytebuf() {
+  std::string* _s = _internal_mutable_a_bytebuf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
   return _s;
 }
-inline const std::string& Reply_InstanceRequestAdapter::_internal_bytebuf() const {
-  return _impl_.bytebuf_.Get();
+inline const std::string& Reply_InstanceRequestAdapter::_internal_a_bytebuf() const {
+  return _impl_.a_bytebuf_.Get();
 }
-inline void Reply_InstanceRequestAdapter::_internal_set_bytebuf(const std::string& value) {
+inline void Reply_InstanceRequestAdapter::_internal_set_a_bytebuf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.bytebuf_.Set(value, GetArenaForAllocation());
+  _impl_.a_bytebuf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_InstanceRequestAdapter::_internal_mutable_bytebuf() {
+inline std::string* Reply_InstanceRequestAdapter::_internal_mutable_a_bytebuf() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.bytebuf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bytebuf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_InstanceRequestAdapter::release_bytebuf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.byteBuf)
-  if (!_internal_has_bytebuf()) {
+inline std::string* Reply_InstanceRequestAdapter::release_a_bytebuf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
+  if (!_internal_has_a_bytebuf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.bytebuf_.Release();
+  auto* p = _impl_.a_bytebuf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bytebuf_.IsDefault()) {
-    _impl_.bytebuf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bytebuf_.IsDefault()) {
+    _impl_.a_bytebuf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_InstanceRequestAdapter::set_allocated_bytebuf(std::string* bytebuf) {
-  if (bytebuf != nullptr) {
+inline void Reply_InstanceRequestAdapter::set_allocated_a_bytebuf(std::string* a_bytebuf) {
+  if (a_bytebuf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.bytebuf_.SetAllocated(bytebuf, GetArenaForAllocation());
+  _impl_.a_bytebuf_.SetAllocated(a_bytebuf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bytebuf_.IsDefault()) {
-    _impl_.bytebuf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bytebuf_.IsDefault()) {
+    _impl_.a_bytebuf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.byteBuf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AdapterRequestDevice
 
-// required bytes adapterId = 1;
-inline bool Msg_AdapterRequestDevice::_internal_has_adapterid() const {
+// required bytes a_adapterId = 1;
+inline bool Msg_AdapterRequestDevice::_internal_has_a_adapterid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AdapterRequestDevice::has_adapterid() const {
-  return _internal_has_adapterid();
+inline bool Msg_AdapterRequestDevice::has_a_adapterid() const {
+  return _internal_has_a_adapterid();
 }
-inline void Msg_AdapterRequestDevice::clear_adapterid() {
-  _impl_.adapterid_.ClearToEmpty();
+inline void Msg_AdapterRequestDevice::clear_a_adapterid() {
+  _impl_.a_adapterid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AdapterRequestDevice::adapterid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.adapterId)
-  return _internal_adapterid();
+inline const std::string& Msg_AdapterRequestDevice::a_adapterid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
+  return _internal_a_adapterid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AdapterRequestDevice::set_adapterid(ArgT0&& arg0, ArgT... args) {
+void Msg_AdapterRequestDevice::set_a_adapterid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adapterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.adapterId)
+ _impl_.a_adapterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
 }
-inline std::string* Msg_AdapterRequestDevice::mutable_adapterid() {
-  std::string* _s = _internal_mutable_adapterid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.adapterId)
+inline std::string* Msg_AdapterRequestDevice::mutable_a_adapterid() {
+  std::string* _s = _internal_mutable_a_adapterid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
   return _s;
 }
-inline const std::string& Msg_AdapterRequestDevice::_internal_adapterid() const {
-  return _impl_.adapterid_.Get();
+inline const std::string& Msg_AdapterRequestDevice::_internal_a_adapterid() const {
+  return _impl_.a_adapterid_.Get();
 }
-inline void Msg_AdapterRequestDevice::_internal_set_adapterid(const std::string& value) {
+inline void Msg_AdapterRequestDevice::_internal_set_a_adapterid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adapterid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adapterid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::_internal_mutable_adapterid() {
+inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_adapterid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.adapterid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adapterid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::release_adapterid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.adapterId)
-  if (!_internal_has_adapterid()) {
+inline std::string* Msg_AdapterRequestDevice::release_a_adapterid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
+  if (!_internal_has_a_adapterid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.adapterid_.Release();
+  auto* p = _impl_.a_adapterid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adapterid_.IsDefault()) {
-    _impl_.adapterid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adapterid_.IsDefault()) {
+    _impl_.a_adapterid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AdapterRequestDevice::set_allocated_adapterid(std::string* adapterid) {
-  if (adapterid != nullptr) {
+inline void Msg_AdapterRequestDevice::set_allocated_a_adapterid(std::string* a_adapterid) {
+  if (a_adapterid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.adapterid_.SetAllocated(adapterid, GetArenaForAllocation());
+  _impl_.a_adapterid_.SetAllocated(a_adapterid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adapterid_.IsDefault()) {
-    _impl_.adapterid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adapterid_.IsDefault()) {
+    _impl_.a_adapterid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.adapterId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
 }
 
-// required bytes descriptorBuf = 2;
-inline bool Msg_AdapterRequestDevice::_internal_has_descriptorbuf() const {
+// required bytes a_descriptorBuf = 2;
+inline bool Msg_AdapterRequestDevice::_internal_has_a_descriptorbuf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_AdapterRequestDevice::has_descriptorbuf() const {
-  return _internal_has_descriptorbuf();
+inline bool Msg_AdapterRequestDevice::has_a_descriptorbuf() const {
+  return _internal_has_a_descriptorbuf();
 }
-inline void Msg_AdapterRequestDevice::clear_descriptorbuf() {
-  _impl_.descriptorbuf_.ClearToEmpty();
+inline void Msg_AdapterRequestDevice::clear_a_descriptorbuf() {
+  _impl_.a_descriptorbuf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_AdapterRequestDevice::descriptorbuf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.descriptorBuf)
-  return _internal_descriptorbuf();
+inline const std::string& Msg_AdapterRequestDevice::a_descriptorbuf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
+  return _internal_a_descriptorbuf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AdapterRequestDevice::set_descriptorbuf(ArgT0&& arg0, ArgT... args) {
+void Msg_AdapterRequestDevice::set_a_descriptorbuf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.descriptorbuf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.descriptorBuf)
+ _impl_.a_descriptorbuf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
 }
-inline std::string* Msg_AdapterRequestDevice::mutable_descriptorbuf() {
-  std::string* _s = _internal_mutable_descriptorbuf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.descriptorBuf)
+inline std::string* Msg_AdapterRequestDevice::mutable_a_descriptorbuf() {
+  std::string* _s = _internal_mutable_a_descriptorbuf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
   return _s;
 }
-inline const std::string& Msg_AdapterRequestDevice::_internal_descriptorbuf() const {
-  return _impl_.descriptorbuf_.Get();
+inline const std::string& Msg_AdapterRequestDevice::_internal_a_descriptorbuf() const {
+  return _impl_.a_descriptorbuf_.Get();
 }
-inline void Msg_AdapterRequestDevice::_internal_set_descriptorbuf(const std::string& value) {
+inline void Msg_AdapterRequestDevice::_internal_set_a_descriptorbuf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.descriptorbuf_.Set(value, GetArenaForAllocation());
+  _impl_.a_descriptorbuf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::_internal_mutable_descriptorbuf() {
+inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_descriptorbuf() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.descriptorbuf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_descriptorbuf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::release_descriptorbuf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.descriptorBuf)
-  if (!_internal_has_descriptorbuf()) {
+inline std::string* Msg_AdapterRequestDevice::release_a_descriptorbuf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
+  if (!_internal_has_a_descriptorbuf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.descriptorbuf_.Release();
+  auto* p = _impl_.a_descriptorbuf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.descriptorbuf_.IsDefault()) {
-    _impl_.descriptorbuf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_descriptorbuf_.IsDefault()) {
+    _impl_.a_descriptorbuf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AdapterRequestDevice::set_allocated_descriptorbuf(std::string* descriptorbuf) {
-  if (descriptorbuf != nullptr) {
+inline void Msg_AdapterRequestDevice::set_allocated_a_descriptorbuf(std::string* a_descriptorbuf) {
+  if (a_descriptorbuf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.descriptorbuf_.SetAllocated(descriptorbuf, GetArenaForAllocation());
+  _impl_.a_descriptorbuf_.SetAllocated(a_descriptorbuf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.descriptorbuf_.IsDefault()) {
-    _impl_.descriptorbuf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_descriptorbuf_.IsDefault()) {
+    _impl_.a_descriptorbuf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.descriptorBuf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
 }
 
-// required bytes newDeviceId = 3;
-inline bool Msg_AdapterRequestDevice::_internal_has_newdeviceid() const {
+// required bytes a_newDeviceId = 3;
+inline bool Msg_AdapterRequestDevice::_internal_has_a_newdeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_AdapterRequestDevice::has_newdeviceid() const {
-  return _internal_has_newdeviceid();
+inline bool Msg_AdapterRequestDevice::has_a_newdeviceid() const {
+  return _internal_has_a_newdeviceid();
 }
-inline void Msg_AdapterRequestDevice::clear_newdeviceid() {
-  _impl_.newdeviceid_.ClearToEmpty();
+inline void Msg_AdapterRequestDevice::clear_a_newdeviceid() {
+  _impl_.a_newdeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_AdapterRequestDevice::newdeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newDeviceId)
-  return _internal_newdeviceid();
+inline const std::string& Msg_AdapterRequestDevice::a_newdeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
+  return _internal_a_newdeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AdapterRequestDevice::set_newdeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_AdapterRequestDevice::set_a_newdeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.newdeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newDeviceId)
+ _impl_.a_newdeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
 }
-inline std::string* Msg_AdapterRequestDevice::mutable_newdeviceid() {
-  std::string* _s = _internal_mutable_newdeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newDeviceId)
+inline std::string* Msg_AdapterRequestDevice::mutable_a_newdeviceid() {
+  std::string* _s = _internal_mutable_a_newdeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
   return _s;
 }
-inline const std::string& Msg_AdapterRequestDevice::_internal_newdeviceid() const {
-  return _impl_.newdeviceid_.Get();
+inline const std::string& Msg_AdapterRequestDevice::_internal_a_newdeviceid() const {
+  return _impl_.a_newdeviceid_.Get();
 }
-inline void Msg_AdapterRequestDevice::_internal_set_newdeviceid(const std::string& value) {
+inline void Msg_AdapterRequestDevice::_internal_set_a_newdeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.newdeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_newdeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::_internal_mutable_newdeviceid() {
+inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_newdeviceid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.newdeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_newdeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::release_newdeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newDeviceId)
-  if (!_internal_has_newdeviceid()) {
+inline std::string* Msg_AdapterRequestDevice::release_a_newdeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
+  if (!_internal_has_a_newdeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.newdeviceid_.Release();
+  auto* p = _impl_.a_newdeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.newdeviceid_.IsDefault()) {
-    _impl_.newdeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_newdeviceid_.IsDefault()) {
+    _impl_.a_newdeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AdapterRequestDevice::set_allocated_newdeviceid(std::string* newdeviceid) {
-  if (newdeviceid != nullptr) {
+inline void Msg_AdapterRequestDevice::set_allocated_a_newdeviceid(std::string* a_newdeviceid) {
+  if (a_newdeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.newdeviceid_.SetAllocated(newdeviceid, GetArenaForAllocation());
+  _impl_.a_newdeviceid_.SetAllocated(a_newdeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.newdeviceid_.IsDefault()) {
-    _impl_.newdeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_newdeviceid_.IsDefault()) {
+    _impl_.a_newdeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
 }
 
-// required bytes newQueueId = 4;
-inline bool Msg_AdapterRequestDevice::_internal_has_newqueueid() const {
+// required bytes a_newQueueId = 4;
+inline bool Msg_AdapterRequestDevice::_internal_has_a_newqueueid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_AdapterRequestDevice::has_newqueueid() const {
-  return _internal_has_newqueueid();
+inline bool Msg_AdapterRequestDevice::has_a_newqueueid() const {
+  return _internal_has_a_newqueueid();
 }
-inline void Msg_AdapterRequestDevice::clear_newqueueid() {
-  _impl_.newqueueid_.ClearToEmpty();
+inline void Msg_AdapterRequestDevice::clear_a_newqueueid() {
+  _impl_.a_newqueueid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_AdapterRequestDevice::newqueueid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newQueueId)
-  return _internal_newqueueid();
+inline const std::string& Msg_AdapterRequestDevice::a_newqueueid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
+  return _internal_a_newqueueid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AdapterRequestDevice::set_newqueueid(ArgT0&& arg0, ArgT... args) {
+void Msg_AdapterRequestDevice::set_a_newqueueid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.newqueueid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newQueueId)
+ _impl_.a_newqueueid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
 }
-inline std::string* Msg_AdapterRequestDevice::mutable_newqueueid() {
-  std::string* _s = _internal_mutable_newqueueid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newQueueId)
+inline std::string* Msg_AdapterRequestDevice::mutable_a_newqueueid() {
+  std::string* _s = _internal_mutable_a_newqueueid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
   return _s;
 }
-inline const std::string& Msg_AdapterRequestDevice::_internal_newqueueid() const {
-  return _impl_.newqueueid_.Get();
+inline const std::string& Msg_AdapterRequestDevice::_internal_a_newqueueid() const {
+  return _impl_.a_newqueueid_.Get();
 }
-inline void Msg_AdapterRequestDevice::_internal_set_newqueueid(const std::string& value) {
+inline void Msg_AdapterRequestDevice::_internal_set_a_newqueueid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.newqueueid_.Set(value, GetArenaForAllocation());
+  _impl_.a_newqueueid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::_internal_mutable_newqueueid() {
+inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_newqueueid() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.newqueueid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_newqueueid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterRequestDevice::release_newqueueid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newQueueId)
-  if (!_internal_has_newqueueid()) {
+inline std::string* Msg_AdapterRequestDevice::release_a_newqueueid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
+  if (!_internal_has_a_newqueueid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.newqueueid_.Release();
+  auto* p = _impl_.a_newqueueid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.newqueueid_.IsDefault()) {
-    _impl_.newqueueid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_newqueueid_.IsDefault()) {
+    _impl_.a_newqueueid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AdapterRequestDevice::set_allocated_newqueueid(std::string* newqueueid) {
-  if (newqueueid != nullptr) {
+inline void Msg_AdapterRequestDevice::set_allocated_a_newqueueid(std::string* a_newqueueid) {
+  if (a_newqueueid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.newqueueid_.SetAllocated(newqueueid, GetArenaForAllocation());
+  _impl_.a_newqueueid_.SetAllocated(a_newqueueid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.newqueueid_.IsDefault()) {
-    _impl_.newqueueid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_newqueueid_.IsDefault()) {
+    _impl_.a_newqueueid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.newQueueId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_AdapterRequestDevice
 
-// required bool success = 1;
-inline bool Reply_AdapterRequestDevice::_internal_has_success() const {
+// required bool a_success = 1;
+inline bool Reply_AdapterRequestDevice::_internal_has_a_success() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_AdapterRequestDevice::has_success() const {
-  return _internal_has_success();
+inline bool Reply_AdapterRequestDevice::has_a_success() const {
+  return _internal_has_a_success();
 }
-inline void Reply_AdapterRequestDevice::clear_success() {
-  _impl_.success_ = false;
+inline void Reply_AdapterRequestDevice::clear_a_success() {
+  _impl_.a_success_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_AdapterRequestDevice::_internal_success() const {
-  return _impl_.success_;
+inline bool Reply_AdapterRequestDevice::_internal_a_success() const {
+  return _impl_.a_success_;
 }
-inline bool Reply_AdapterRequestDevice::success() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice.success)
-  return _internal_success();
+inline bool Reply_AdapterRequestDevice::a_success() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice.a_success)
+  return _internal_a_success();
 }
-inline void Reply_AdapterRequestDevice::_internal_set_success(bool value) {
+inline void Reply_AdapterRequestDevice::_internal_set_a_success(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.success_ = value;
+  _impl_.a_success_ = value;
 }
-inline void Reply_AdapterRequestDevice::set_success(bool value) {
-  _internal_set_success(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice.success)
+inline void Reply_AdapterRequestDevice::set_a_success(bool value) {
+  _internal_set_a_success(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice.a_success)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_AdapterDrop
 
-// required bytes selfId = 1;
-inline bool Msg_AdapterDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_AdapterDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_AdapterDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_AdapterDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_AdapterDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_AdapterDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_AdapterDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_AdapterDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_AdapterDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_AdapterDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
 }
-inline std::string* Msg_AdapterDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.selfId)
+inline std::string* Msg_AdapterDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_AdapterDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_AdapterDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_AdapterDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_AdapterDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterDrop::_internal_mutable_selfid() {
+inline std::string* Msg_AdapterDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_AdapterDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_AdapterDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_AdapterDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_AdapterDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceCreateShaderModule
 
-// required bytes selfId = 1;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DeviceCreateShaderModule::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateShaderModule::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DeviceCreateShaderModule::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DeviceCreateShaderModule::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DeviceCreateShaderModule::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DeviceCreateShaderModule::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateShaderModule::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateShaderModule::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
 }
-inline std::string* Msg_DeviceCreateShaderModule::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.selfId)
+inline std::string* Msg_DeviceCreateShaderModule::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DeviceCreateShaderModule::_internal_set_selfid(const std::string& value) {
+inline void Msg_DeviceCreateShaderModule::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_selfid() {
+inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DeviceCreateShaderModule::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateShaderModule::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DeviceCreateShaderModule::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
 }
 
-// required bytes bufferId = 2;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_bufferid() const {
+// required bytes a_bufferId = 2;
+inline bool Msg_DeviceCreateShaderModule::_internal_has_a_bufferid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateShaderModule::has_bufferid() const {
-  return _internal_has_bufferid();
+inline bool Msg_DeviceCreateShaderModule::has_a_bufferid() const {
+  return _internal_has_a_bufferid();
 }
-inline void Msg_DeviceCreateShaderModule::clear_bufferid() {
-  _impl_.bufferid_.ClearToEmpty();
+inline void Msg_DeviceCreateShaderModule::clear_a_bufferid() {
+  _impl_.a_bufferid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::bufferid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.bufferId)
-  return _internal_bufferid();
+inline const std::string& Msg_DeviceCreateShaderModule::a_bufferid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
+  return _internal_a_bufferid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateShaderModule::set_bufferid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateShaderModule::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.bufferId)
+ _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
 }
-inline std::string* Msg_DeviceCreateShaderModule::mutable_bufferid() {
-  std::string* _s = _internal_mutable_bufferid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.bufferId)
+inline std::string* Msg_DeviceCreateShaderModule::mutable_a_bufferid() {
+  std::string* _s = _internal_mutable_a_bufferid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::_internal_bufferid() const {
-  return _impl_.bufferid_.Get();
+inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_bufferid() const {
+  return _impl_.a_bufferid_.Get();
 }
-inline void Msg_DeviceCreateShaderModule::_internal_set_bufferid(const std::string& value) {
+inline void Msg_DeviceCreateShaderModule::_internal_set_a_bufferid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bufferid_.Set(value, GetArenaForAllocation());
+  _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_bufferid() {
+inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_bufferid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.bufferid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::release_bufferid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.bufferId)
-  if (!_internal_has_bufferid()) {
+inline std::string* Msg_DeviceCreateShaderModule::release_a_bufferid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
+  if (!_internal_has_a_bufferid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.bufferid_.Release();
+  auto* p = _impl_.a_bufferid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateShaderModule::set_allocated_bufferid(std::string* bufferid) {
-  if (bufferid != nullptr) {
+inline void Msg_DeviceCreateShaderModule::set_allocated_a_bufferid(std::string* a_bufferid) {
+  if (a_bufferid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.bufferid_.SetAllocated(bufferid, GetArenaForAllocation());
+  _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.bufferId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
 }
 
-// required bytes label = 3;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_label() const {
+// required bytes a_label = 3;
+inline bool Msg_DeviceCreateShaderModule::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateShaderModule::has_label() const {
-  return _internal_has_label();
+inline bool Msg_DeviceCreateShaderModule::has_a_label() const {
+  return _internal_has_a_label();
 }
-inline void Msg_DeviceCreateShaderModule::clear_label() {
-  _impl_.label_.ClearToEmpty();
+inline void Msg_DeviceCreateShaderModule::clear_a_label() {
+  _impl_.a_label_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::label() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
-  return _internal_label();
+inline const std::string& Msg_DeviceCreateShaderModule::a_label() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
+  return _internal_a_label();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateShaderModule::set_label(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateShaderModule::set_a_label(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.label_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
+ _impl_.a_label_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
-inline std::string* Msg_DeviceCreateShaderModule::mutable_label() {
-  std::string* _s = _internal_mutable_label();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
+inline std::string* Msg_DeviceCreateShaderModule::mutable_a_label() {
+  std::string* _s = _internal_mutable_a_label();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::_internal_label() const {
-  return _impl_.label_.Get();
+inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_label() const {
+  return _impl_.a_label_.Get();
 }
-inline void Msg_DeviceCreateShaderModule::_internal_set_label(const std::string& value) {
+inline void Msg_DeviceCreateShaderModule::_internal_set_a_label(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.label_.Set(value, GetArenaForAllocation());
+  _impl_.a_label_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_label() {
+inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_label() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.label_.Mutable(GetArenaForAllocation());
+  return _impl_.a_label_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::release_label() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
-  if (!_internal_has_label()) {
+inline std::string* Msg_DeviceCreateShaderModule::release_a_label() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
+  if (!_internal_has_a_label()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.label_.Release();
+  auto* p = _impl_.a_label_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.label_.IsDefault()) {
-    _impl_.label_.Set("", GetArenaForAllocation());
+  if (_impl_.a_label_.IsDefault()) {
+    _impl_.a_label_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateShaderModule::set_allocated_label(std::string* label) {
-  if (label != nullptr) {
+inline void Msg_DeviceCreateShaderModule::set_allocated_a_label(std::string* a_label) {
+  if (a_label != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.label_.SetAllocated(label, GetArenaForAllocation());
+  _impl_.a_label_.SetAllocated(a_label, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.label_.IsDefault()) {
-    _impl_.label_.Set("", GetArenaForAllocation());
+  if (_impl_.a_label_.IsDefault()) {
+    _impl_.a_label_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.label)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
 
-// required bytes code = 4;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_code() const {
+// required bytes a_code = 4;
+inline bool Msg_DeviceCreateShaderModule::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateShaderModule::has_code() const {
-  return _internal_has_code();
+inline bool Msg_DeviceCreateShaderModule::has_a_code() const {
+  return _internal_has_a_code();
 }
-inline void Msg_DeviceCreateShaderModule::clear_code() {
-  _impl_.code_.ClearToEmpty();
+inline void Msg_DeviceCreateShaderModule::clear_a_code() {
+  _impl_.a_code_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::code() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.code)
-  return _internal_code();
+inline const std::string& Msg_DeviceCreateShaderModule::a_code() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
+  return _internal_a_code();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateShaderModule::set_code(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateShaderModule::set_a_code(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.code_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.code)
+ _impl_.a_code_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
 }
-inline std::string* Msg_DeviceCreateShaderModule::mutable_code() {
-  std::string* _s = _internal_mutable_code();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.code)
+inline std::string* Msg_DeviceCreateShaderModule::mutable_a_code() {
+  std::string* _s = _internal_mutable_a_code();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateShaderModule::_internal_code() const {
-  return _impl_.code_.Get();
+inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_code() const {
+  return _impl_.a_code_.Get();
 }
-inline void Msg_DeviceCreateShaderModule::_internal_set_code(const std::string& value) {
+inline void Msg_DeviceCreateShaderModule::_internal_set_a_code(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.code_.Set(value, GetArenaForAllocation());
+  _impl_.a_code_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_code() {
+inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_code() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.code_.Mutable(GetArenaForAllocation());
+  return _impl_.a_code_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateShaderModule::release_code() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.code)
-  if (!_internal_has_code()) {
+inline std::string* Msg_DeviceCreateShaderModule::release_a_code() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
+  if (!_internal_has_a_code()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.code_.Release();
+  auto* p = _impl_.a_code_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.code_.IsDefault()) {
-    _impl_.code_.Set("", GetArenaForAllocation());
+  if (_impl_.a_code_.IsDefault()) {
+    _impl_.a_code_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateShaderModule::set_allocated_code(std::string* code) {
-  if (code != nullptr) {
+inline void Msg_DeviceCreateShaderModule::set_allocated_a_code(std::string* a_code) {
+  if (a_code != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.code_.SetAllocated(code, GetArenaForAllocation());
+  _impl_.a_code_.SetAllocated(a_code, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.code_.IsDefault()) {
-    _impl_.code_.Set("", GetArenaForAllocation());
+  if (_impl_.a_code_.IsDefault()) {
+    _impl_.a_code_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.code)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_DeviceCreateShaderModule
 
-// repeated bytes messages = 1;
-inline int Reply_DeviceCreateShaderModule::_internal_messages_size() const {
-  return _impl_.messages_.size();
+// repeated bytes a_messages = 1;
+inline int Reply_DeviceCreateShaderModule::_internal_a_messages_size() const {
+  return _impl_.a_messages_.size();
 }
-inline int Reply_DeviceCreateShaderModule::messages_size() const {
-  return _internal_messages_size();
+inline int Reply_DeviceCreateShaderModule::a_messages_size() const {
+  return _internal_a_messages_size();
 }
-inline void Reply_DeviceCreateShaderModule::clear_messages() {
-  _impl_.messages_.Clear();
+inline void Reply_DeviceCreateShaderModule::clear_a_messages() {
+  _impl_.a_messages_.Clear();
 }
-inline std::string* Reply_DeviceCreateShaderModule::add_messages() {
-  std::string* _s = _internal_add_messages();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+inline std::string* Reply_DeviceCreateShaderModule::add_a_messages() {
+  std::string* _s = _internal_add_a_messages();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
   return _s;
 }
-inline const std::string& Reply_DeviceCreateShaderModule::_internal_messages(int index) const {
-  return _impl_.messages_.Get(index);
+inline const std::string& Reply_DeviceCreateShaderModule::_internal_a_messages(int index) const {
+  return _impl_.a_messages_.Get(index);
 }
-inline const std::string& Reply_DeviceCreateShaderModule::messages(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
-  return _internal_messages(index);
+inline const std::string& Reply_DeviceCreateShaderModule::a_messages(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
+  return _internal_a_messages(index);
 }
-inline std::string* Reply_DeviceCreateShaderModule::mutable_messages(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
-  return _impl_.messages_.Mutable(index);
+inline std::string* Reply_DeviceCreateShaderModule::mutable_a_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
+  return _impl_.a_messages_.Mutable(index);
 }
-inline void Reply_DeviceCreateShaderModule::set_messages(int index, const std::string& value) {
-  _impl_.messages_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+inline void Reply_DeviceCreateShaderModule::set_a_messages(int index, const std::string& value) {
+  _impl_.a_messages_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline void Reply_DeviceCreateShaderModule::set_messages(int index, std::string&& value) {
-  _impl_.messages_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+inline void Reply_DeviceCreateShaderModule::set_a_messages(int index, std::string&& value) {
+  _impl_.a_messages_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline void Reply_DeviceCreateShaderModule::set_messages(int index, const char* value) {
+inline void Reply_DeviceCreateShaderModule::set_a_messages(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.messages_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+  _impl_.a_messages_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline void Reply_DeviceCreateShaderModule::set_messages(int index, const void* value, size_t size) {
-  _impl_.messages_.Mutable(index)->assign(
+inline void Reply_DeviceCreateShaderModule::set_a_messages(int index, const void* value, size_t size) {
+  _impl_.a_messages_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline std::string* Reply_DeviceCreateShaderModule::_internal_add_messages() {
-  return _impl_.messages_.Add();
+inline std::string* Reply_DeviceCreateShaderModule::_internal_add_a_messages() {
+  return _impl_.a_messages_.Add();
 }
-inline void Reply_DeviceCreateShaderModule::add_messages(const std::string& value) {
-  _impl_.messages_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+inline void Reply_DeviceCreateShaderModule::add_a_messages(const std::string& value) {
+  _impl_.a_messages_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline void Reply_DeviceCreateShaderModule::add_messages(std::string&& value) {
-  _impl_.messages_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+inline void Reply_DeviceCreateShaderModule::add_a_messages(std::string&& value) {
+  _impl_.a_messages_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline void Reply_DeviceCreateShaderModule::add_messages(const char* value) {
+inline void Reply_DeviceCreateShaderModule::add_a_messages(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.messages_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+  _impl_.a_messages_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
-inline void Reply_DeviceCreateShaderModule::add_messages(const void* value, size_t size) {
-  _impl_.messages_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
+inline void Reply_DeviceCreateShaderModule::add_a_messages(const void* value, size_t size) {
+  _impl_.a_messages_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Reply_DeviceCreateShaderModule::messages() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
-  return _impl_.messages_;
+Reply_DeviceCreateShaderModule::a_messages() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
+  return _impl_.a_messages_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Reply_DeviceCreateShaderModule::mutable_messages() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.messages)
-  return &_impl_.messages_;
+Reply_DeviceCreateShaderModule::mutable_a_messages() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule.a_messages)
+  return &_impl_.a_messages_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BufferMap
 
-// required bytes deviceId = 1;
-inline bool Msg_BufferMap::_internal_has_deviceid() const {
+// required bytes a_deviceId = 1;
+inline bool Msg_BufferMap::_internal_has_a_deviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BufferMap::has_deviceid() const {
-  return _internal_has_deviceid();
+inline bool Msg_BufferMap::has_a_deviceid() const {
+  return _internal_has_a_deviceid();
 }
-inline void Msg_BufferMap::clear_deviceid() {
-  _impl_.deviceid_.ClearToEmpty();
+inline void Msg_BufferMap::clear_a_deviceid() {
+  _impl_.a_deviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BufferMap::deviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.deviceId)
-  return _internal_deviceid();
+inline const std::string& Msg_BufferMap::a_deviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
+  return _internal_a_deviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BufferMap::set_deviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_BufferMap::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.deviceId)
+ _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
 }
-inline std::string* Msg_BufferMap::mutable_deviceid() {
-  std::string* _s = _internal_mutable_deviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.deviceId)
+inline std::string* Msg_BufferMap::mutable_a_deviceid() {
+  std::string* _s = _internal_mutable_a_deviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
   return _s;
 }
-inline const std::string& Msg_BufferMap::_internal_deviceid() const {
-  return _impl_.deviceid_.Get();
+inline const std::string& Msg_BufferMap::_internal_a_deviceid() const {
+  return _impl_.a_deviceid_.Get();
 }
-inline void Msg_BufferMap::_internal_set_deviceid(const std::string& value) {
+inline void Msg_BufferMap::_internal_set_a_deviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.deviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BufferMap::_internal_mutable_deviceid() {
+inline std::string* Msg_BufferMap::_internal_mutable_a_deviceid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.deviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BufferMap::release_deviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.deviceId)
-  if (!_internal_has_deviceid()) {
+inline std::string* Msg_BufferMap::release_a_deviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
+  if (!_internal_has_a_deviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.deviceid_.Release();
+  auto* p = _impl_.a_deviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BufferMap::set_allocated_deviceid(std::string* deviceid) {
-  if (deviceid != nullptr) {
+inline void Msg_BufferMap::set_allocated_a_deviceid(std::string* a_deviceid) {
+  if (a_deviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.deviceid_.SetAllocated(deviceid, GetArenaForAllocation());
+  _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.deviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
 }
 
-// required bytes bufferId = 2;
-inline bool Msg_BufferMap::_internal_has_bufferid() const {
+// required bytes a_bufferId = 2;
+inline bool Msg_BufferMap::_internal_has_a_bufferid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_BufferMap::has_bufferid() const {
-  return _internal_has_bufferid();
+inline bool Msg_BufferMap::has_a_bufferid() const {
+  return _internal_has_a_bufferid();
 }
-inline void Msg_BufferMap::clear_bufferid() {
-  _impl_.bufferid_.ClearToEmpty();
+inline void Msg_BufferMap::clear_a_bufferid() {
+  _impl_.a_bufferid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_BufferMap::bufferid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.bufferId)
-  return _internal_bufferid();
+inline const std::string& Msg_BufferMap::a_bufferid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
+  return _internal_a_bufferid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BufferMap::set_bufferid(ArgT0&& arg0, ArgT... args) {
+void Msg_BufferMap::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.bufferId)
+ _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
 }
-inline std::string* Msg_BufferMap::mutable_bufferid() {
-  std::string* _s = _internal_mutable_bufferid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.bufferId)
+inline std::string* Msg_BufferMap::mutable_a_bufferid() {
+  std::string* _s = _internal_mutable_a_bufferid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
   return _s;
 }
-inline const std::string& Msg_BufferMap::_internal_bufferid() const {
-  return _impl_.bufferid_.Get();
+inline const std::string& Msg_BufferMap::_internal_a_bufferid() const {
+  return _impl_.a_bufferid_.Get();
 }
-inline void Msg_BufferMap::_internal_set_bufferid(const std::string& value) {
+inline void Msg_BufferMap::_internal_set_a_bufferid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bufferid_.Set(value, GetArenaForAllocation());
+  _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BufferMap::_internal_mutable_bufferid() {
+inline std::string* Msg_BufferMap::_internal_mutable_a_bufferid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.bufferid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BufferMap::release_bufferid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.bufferId)
-  if (!_internal_has_bufferid()) {
+inline std::string* Msg_BufferMap::release_a_bufferid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
+  if (!_internal_has_a_bufferid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.bufferid_.Release();
+  auto* p = _impl_.a_bufferid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BufferMap::set_allocated_bufferid(std::string* bufferid) {
-  if (bufferid != nullptr) {
+inline void Msg_BufferMap::set_allocated_a_bufferid(std::string* a_bufferid) {
+  if (a_bufferid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.bufferid_.SetAllocated(bufferid, GetArenaForAllocation());
+  _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.bufferId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
 }
 
-// required uint32 aMode = 3;
-inline bool Msg_BufferMap::_internal_has_amode() const {
+// required uint32 a_aMode = 3;
+inline bool Msg_BufferMap::_internal_has_a_amode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_BufferMap::has_amode() const {
-  return _internal_has_amode();
+inline bool Msg_BufferMap::has_a_amode() const {
+  return _internal_has_a_amode();
 }
-inline void Msg_BufferMap::clear_amode() {
-  _impl_.amode_ = 0u;
+inline void Msg_BufferMap::clear_a_amode() {
+  _impl_.a_amode_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint32_t Msg_BufferMap::_internal_amode() const {
-  return _impl_.amode_;
+inline uint32_t Msg_BufferMap::_internal_a_amode() const {
+  return _impl_.a_amode_;
 }
-inline uint32_t Msg_BufferMap::amode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.aMode)
-  return _internal_amode();
+inline uint32_t Msg_BufferMap::a_amode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_aMode)
+  return _internal_a_amode();
 }
-inline void Msg_BufferMap::_internal_set_amode(uint32_t value) {
+inline void Msg_BufferMap::_internal_set_a_amode(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.amode_ = value;
+  _impl_.a_amode_ = value;
 }
-inline void Msg_BufferMap::set_amode(uint32_t value) {
-  _internal_set_amode(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.aMode)
+inline void Msg_BufferMap::set_a_amode(uint32_t value) {
+  _internal_set_a_amode(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_aMode)
 }
 
-// required uint64 offset = 4;
-inline bool Msg_BufferMap::_internal_has_offset() const {
+// required uint64 a_offset = 4;
+inline bool Msg_BufferMap::_internal_has_a_offset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_BufferMap::has_offset() const {
-  return _internal_has_offset();
+inline bool Msg_BufferMap::has_a_offset() const {
+  return _internal_has_a_offset();
 }
-inline void Msg_BufferMap::clear_offset() {
-  _impl_.offset_ = uint64_t{0u};
+inline void Msg_BufferMap::clear_a_offset() {
+  _impl_.a_offset_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint64_t Msg_BufferMap::_internal_offset() const {
-  return _impl_.offset_;
+inline uint64_t Msg_BufferMap::_internal_a_offset() const {
+  return _impl_.a_offset_;
 }
-inline uint64_t Msg_BufferMap::offset() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.offset)
-  return _internal_offset();
+inline uint64_t Msg_BufferMap::a_offset() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_offset)
+  return _internal_a_offset();
 }
-inline void Msg_BufferMap::_internal_set_offset(uint64_t value) {
+inline void Msg_BufferMap::_internal_set_a_offset(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.offset_ = value;
+  _impl_.a_offset_ = value;
 }
-inline void Msg_BufferMap::set_offset(uint64_t value) {
-  _internal_set_offset(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.offset)
+inline void Msg_BufferMap::set_a_offset(uint64_t value) {
+  _internal_set_a_offset(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_offset)
 }
 
-// required uint64 size = 5;
-inline bool Msg_BufferMap::_internal_has_size() const {
+// required uint64 a_size = 5;
+inline bool Msg_BufferMap::_internal_has_a_size() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_BufferMap::has_size() const {
-  return _internal_has_size();
+inline bool Msg_BufferMap::has_a_size() const {
+  return _internal_has_a_size();
 }
-inline void Msg_BufferMap::clear_size() {
-  _impl_.size_ = uint64_t{0u};
+inline void Msg_BufferMap::clear_a_size() {
+  _impl_.a_size_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint64_t Msg_BufferMap::_internal_size() const {
-  return _impl_.size_;
+inline uint64_t Msg_BufferMap::_internal_a_size() const {
+  return _impl_.a_size_;
 }
-inline uint64_t Msg_BufferMap::size() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.size)
-  return _internal_size();
+inline uint64_t Msg_BufferMap::a_size() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_size)
+  return _internal_a_size();
 }
-inline void Msg_BufferMap::_internal_set_size(uint64_t value) {
+inline void Msg_BufferMap::_internal_set_a_size(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.size_ = value;
+  _impl_.a_size_ = value;
 }
-inline void Msg_BufferMap::set_size(uint64_t value) {
-  _internal_set_size(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.size)
+inline void Msg_BufferMap::set_a_size(uint64_t value) {
+  _internal_set_a_size(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_size)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_BufferMap
 
-// required .protobuf.mozilla.webgpu.BufferMapResult result = 1;
-inline bool Reply_BufferMap::_internal_has_result() const {
+// required .protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
+inline bool Reply_BufferMap::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_BufferMap::has_result() const {
-  return _internal_has_result();
+inline bool Reply_BufferMap::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::webgpu::BufferMapResult& Reply_BufferMap::_internal_result() const {
-  const ::protobuf::mozilla::webgpu::BufferMapResult* p = _impl_.result_;
+inline const ::protobuf::mozilla::webgpu::BufferMapResult& Reply_BufferMap::_internal_a_result() const {
+  const ::protobuf::mozilla::webgpu::BufferMapResult* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::webgpu::BufferMapResult&>(
       ::protobuf::mozilla::webgpu::_BufferMapResult_default_instance_);
 }
-inline const ::protobuf::mozilla::webgpu::BufferMapResult& Reply_BufferMap::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::webgpu::BufferMapResult& Reply_BufferMap::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
+  return _internal_a_result();
 }
-inline void Reply_BufferMap::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::webgpu::BufferMapResult* result) {
+inline void Reply_BufferMap::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::webgpu::BufferMapResult* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
 }
-inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::release_result() {
+inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::webgpu::BufferMapResult* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::webgpu::BufferMapResult* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -11606,4233 +11606,4233 @@ inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::release_re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.result)
+inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::webgpu::BufferMapResult* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::webgpu::BufferMapResult* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::_internal_mutable_result() {
+inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::webgpu::BufferMapResult>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::mutable_result() {
-  ::protobuf::mozilla::webgpu::BufferMapResult* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.result)
+inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::mutable_a_result() {
+  ::protobuf::mozilla::webgpu::BufferMapResult* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
   return _msg;
 }
-inline void Reply_BufferMap::set_allocated_result(::protobuf::mozilla::webgpu::BufferMapResult* result) {
+inline void Reply_BufferMap::set_allocated_a_result(::protobuf::mozilla::webgpu::BufferMapResult* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BufferUnmap
 
-// required bytes deviceId = 1;
-inline bool Msg_BufferUnmap::_internal_has_deviceid() const {
+// required bytes a_deviceId = 1;
+inline bool Msg_BufferUnmap::_internal_has_a_deviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BufferUnmap::has_deviceid() const {
-  return _internal_has_deviceid();
+inline bool Msg_BufferUnmap::has_a_deviceid() const {
+  return _internal_has_a_deviceid();
 }
-inline void Msg_BufferUnmap::clear_deviceid() {
-  _impl_.deviceid_.ClearToEmpty();
+inline void Msg_BufferUnmap::clear_a_deviceid() {
+  _impl_.a_deviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BufferUnmap::deviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.deviceId)
-  return _internal_deviceid();
+inline const std::string& Msg_BufferUnmap::a_deviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
+  return _internal_a_deviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BufferUnmap::set_deviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_BufferUnmap::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.deviceId)
+ _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
 }
-inline std::string* Msg_BufferUnmap::mutable_deviceid() {
-  std::string* _s = _internal_mutable_deviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.deviceId)
+inline std::string* Msg_BufferUnmap::mutable_a_deviceid() {
+  std::string* _s = _internal_mutable_a_deviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
   return _s;
 }
-inline const std::string& Msg_BufferUnmap::_internal_deviceid() const {
-  return _impl_.deviceid_.Get();
+inline const std::string& Msg_BufferUnmap::_internal_a_deviceid() const {
+  return _impl_.a_deviceid_.Get();
 }
-inline void Msg_BufferUnmap::_internal_set_deviceid(const std::string& value) {
+inline void Msg_BufferUnmap::_internal_set_a_deviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.deviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BufferUnmap::_internal_mutable_deviceid() {
+inline std::string* Msg_BufferUnmap::_internal_mutable_a_deviceid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.deviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BufferUnmap::release_deviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.deviceId)
-  if (!_internal_has_deviceid()) {
+inline std::string* Msg_BufferUnmap::release_a_deviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
+  if (!_internal_has_a_deviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.deviceid_.Release();
+  auto* p = _impl_.a_deviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BufferUnmap::set_allocated_deviceid(std::string* deviceid) {
-  if (deviceid != nullptr) {
+inline void Msg_BufferUnmap::set_allocated_a_deviceid(std::string* a_deviceid) {
+  if (a_deviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.deviceid_.SetAllocated(deviceid, GetArenaForAllocation());
+  _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.deviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
 }
 
-// required bytes bufferId = 2;
-inline bool Msg_BufferUnmap::_internal_has_bufferid() const {
+// required bytes a_bufferId = 2;
+inline bool Msg_BufferUnmap::_internal_has_a_bufferid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_BufferUnmap::has_bufferid() const {
-  return _internal_has_bufferid();
+inline bool Msg_BufferUnmap::has_a_bufferid() const {
+  return _internal_has_a_bufferid();
 }
-inline void Msg_BufferUnmap::clear_bufferid() {
-  _impl_.bufferid_.ClearToEmpty();
+inline void Msg_BufferUnmap::clear_a_bufferid() {
+  _impl_.a_bufferid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_BufferUnmap::bufferid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.bufferId)
-  return _internal_bufferid();
+inline const std::string& Msg_BufferUnmap::a_bufferid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
+  return _internal_a_bufferid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BufferUnmap::set_bufferid(ArgT0&& arg0, ArgT... args) {
+void Msg_BufferUnmap::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.bufferId)
+ _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
 }
-inline std::string* Msg_BufferUnmap::mutable_bufferid() {
-  std::string* _s = _internal_mutable_bufferid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.bufferId)
+inline std::string* Msg_BufferUnmap::mutable_a_bufferid() {
+  std::string* _s = _internal_mutable_a_bufferid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
   return _s;
 }
-inline const std::string& Msg_BufferUnmap::_internal_bufferid() const {
-  return _impl_.bufferid_.Get();
+inline const std::string& Msg_BufferUnmap::_internal_a_bufferid() const {
+  return _impl_.a_bufferid_.Get();
 }
-inline void Msg_BufferUnmap::_internal_set_bufferid(const std::string& value) {
+inline void Msg_BufferUnmap::_internal_set_a_bufferid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bufferid_.Set(value, GetArenaForAllocation());
+  _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BufferUnmap::_internal_mutable_bufferid() {
+inline std::string* Msg_BufferUnmap::_internal_mutable_a_bufferid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.bufferid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BufferUnmap::release_bufferid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.bufferId)
-  if (!_internal_has_bufferid()) {
+inline std::string* Msg_BufferUnmap::release_a_bufferid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
+  if (!_internal_has_a_bufferid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.bufferid_.Release();
+  auto* p = _impl_.a_bufferid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BufferUnmap::set_allocated_bufferid(std::string* bufferid) {
-  if (bufferid != nullptr) {
+inline void Msg_BufferUnmap::set_allocated_a_bufferid(std::string* a_bufferid) {
+  if (a_bufferid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.bufferid_.SetAllocated(bufferid, GetArenaForAllocation());
+  _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bufferid_.IsDefault()) {
-    _impl_.bufferid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_bufferid_.IsDefault()) {
+    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.bufferId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
 }
 
-// required bool flush = 3;
-inline bool Msg_BufferUnmap::_internal_has_flush() const {
+// required bool a_flush = 3;
+inline bool Msg_BufferUnmap::_internal_has_a_flush() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_BufferUnmap::has_flush() const {
-  return _internal_has_flush();
+inline bool Msg_BufferUnmap::has_a_flush() const {
+  return _internal_has_a_flush();
 }
-inline void Msg_BufferUnmap::clear_flush() {
-  _impl_.flush_ = false;
+inline void Msg_BufferUnmap::clear_a_flush() {
+  _impl_.a_flush_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_BufferUnmap::_internal_flush() const {
-  return _impl_.flush_;
+inline bool Msg_BufferUnmap::_internal_a_flush() const {
+  return _impl_.a_flush_;
 }
-inline bool Msg_BufferUnmap::flush() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.flush)
-  return _internal_flush();
+inline bool Msg_BufferUnmap::a_flush() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_flush)
+  return _internal_a_flush();
 }
-inline void Msg_BufferUnmap::_internal_set_flush(bool value) {
+inline void Msg_BufferUnmap::_internal_set_a_flush(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.flush_ = value;
+  _impl_.a_flush_ = value;
 }
-inline void Msg_BufferUnmap::set_flush(bool value) {
-  _internal_set_flush(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.flush)
+inline void Msg_BufferUnmap::set_a_flush(bool value) {
+  _internal_set_a_flush(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_flush)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BufferDestroy
 
-// required bytes selfId = 1;
-inline bool Msg_BufferDestroy::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_BufferDestroy::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BufferDestroy::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_BufferDestroy::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_BufferDestroy::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_BufferDestroy::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BufferDestroy::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_BufferDestroy::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BufferDestroy::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_BufferDestroy::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
 }
-inline std::string* Msg_BufferDestroy::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.selfId)
+inline std::string* Msg_BufferDestroy::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
   return _s;
 }
-inline const std::string& Msg_BufferDestroy::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_BufferDestroy::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_BufferDestroy::_internal_set_selfid(const std::string& value) {
+inline void Msg_BufferDestroy::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BufferDestroy::_internal_mutable_selfid() {
+inline std::string* Msg_BufferDestroy::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BufferDestroy::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_BufferDestroy::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BufferDestroy::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_BufferDestroy::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BufferDrop
 
-// required bytes selfId = 1;
-inline bool Msg_BufferDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_BufferDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BufferDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_BufferDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_BufferDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_BufferDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BufferDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_BufferDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BufferDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_BufferDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
 }
-inline std::string* Msg_BufferDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.selfId)
+inline std::string* Msg_BufferDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_BufferDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_BufferDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_BufferDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_BufferDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BufferDrop::_internal_mutable_selfid() {
+inline std::string* Msg_BufferDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BufferDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_BufferDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BufferDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_BufferDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TextureDestroy
 
-// required bytes selfId = 1;
-inline bool Msg_TextureDestroy::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_TextureDestroy::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TextureDestroy::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_TextureDestroy::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_TextureDestroy::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_TextureDestroy::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_TextureDestroy::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_TextureDestroy::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureDestroy::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureDestroy::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
 }
-inline std::string* Msg_TextureDestroy::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.selfId)
+inline std::string* Msg_TextureDestroy::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
   return _s;
 }
-inline const std::string& Msg_TextureDestroy::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_TextureDestroy::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_TextureDestroy::_internal_set_selfid(const std::string& value) {
+inline void Msg_TextureDestroy::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureDestroy::_internal_mutable_selfid() {
+inline std::string* Msg_TextureDestroy::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureDestroy::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_TextureDestroy::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureDestroy::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_TextureDestroy::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
 }
 
-// required bytes deviceId = 2;
-inline bool Msg_TextureDestroy::_internal_has_deviceid() const {
+// required bytes a_deviceId = 2;
+inline bool Msg_TextureDestroy::_internal_has_a_deviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_TextureDestroy::has_deviceid() const {
-  return _internal_has_deviceid();
+inline bool Msg_TextureDestroy::has_a_deviceid() const {
+  return _internal_has_a_deviceid();
 }
-inline void Msg_TextureDestroy::clear_deviceid() {
-  _impl_.deviceid_.ClearToEmpty();
+inline void Msg_TextureDestroy::clear_a_deviceid() {
+  _impl_.a_deviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_TextureDestroy::deviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.deviceId)
-  return _internal_deviceid();
+inline const std::string& Msg_TextureDestroy::a_deviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
+  return _internal_a_deviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureDestroy::set_deviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureDestroy::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.deviceId)
+ _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
 }
-inline std::string* Msg_TextureDestroy::mutable_deviceid() {
-  std::string* _s = _internal_mutable_deviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.deviceId)
+inline std::string* Msg_TextureDestroy::mutable_a_deviceid() {
+  std::string* _s = _internal_mutable_a_deviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
   return _s;
 }
-inline const std::string& Msg_TextureDestroy::_internal_deviceid() const {
-  return _impl_.deviceid_.Get();
+inline const std::string& Msg_TextureDestroy::_internal_a_deviceid() const {
+  return _impl_.a_deviceid_.Get();
 }
-inline void Msg_TextureDestroy::_internal_set_deviceid(const std::string& value) {
+inline void Msg_TextureDestroy::_internal_set_a_deviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.deviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureDestroy::_internal_mutable_deviceid() {
+inline std::string* Msg_TextureDestroy::_internal_mutable_a_deviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.deviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureDestroy::release_deviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.deviceId)
-  if (!_internal_has_deviceid()) {
+inline std::string* Msg_TextureDestroy::release_a_deviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
+  if (!_internal_has_a_deviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.deviceid_.Release();
+  auto* p = _impl_.a_deviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureDestroy::set_allocated_deviceid(std::string* deviceid) {
-  if (deviceid != nullptr) {
+inline void Msg_TextureDestroy::set_allocated_a_deviceid(std::string* a_deviceid) {
+  if (a_deviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.deviceid_.SetAllocated(deviceid, GetArenaForAllocation());
+  _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.deviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TextureDrop
 
-// required bytes selfId = 1;
-inline bool Msg_TextureDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_TextureDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TextureDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_TextureDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_TextureDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_TextureDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_TextureDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_TextureDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
 }
-inline std::string* Msg_TextureDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.selfId)
+inline std::string* Msg_TextureDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_TextureDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_TextureDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_TextureDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_TextureDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureDrop::_internal_mutable_selfid() {
+inline std::string* Msg_TextureDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_TextureDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_TextureDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_TextureViewDrop
 
-// required bytes selfId = 1;
-inline bool Msg_TextureViewDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_TextureViewDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_TextureViewDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_TextureViewDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_TextureViewDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_TextureViewDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_TextureViewDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_TextureViewDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_TextureViewDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_TextureViewDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
 }
-inline std::string* Msg_TextureViewDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.selfId)
+inline std::string* Msg_TextureViewDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_TextureViewDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_TextureViewDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_TextureViewDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_TextureViewDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_TextureViewDrop::_internal_mutable_selfid() {
+inline std::string* Msg_TextureViewDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_TextureViewDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_TextureViewDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_TextureViewDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_TextureViewDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SamplerDrop
 
-// required bytes selfId = 1;
-inline bool Msg_SamplerDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_SamplerDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SamplerDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_SamplerDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_SamplerDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_SamplerDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SamplerDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_SamplerDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SamplerDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_SamplerDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
 }
-inline std::string* Msg_SamplerDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.selfId)
+inline std::string* Msg_SamplerDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_SamplerDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_SamplerDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_SamplerDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_SamplerDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SamplerDrop::_internal_mutable_selfid() {
+inline std::string* Msg_SamplerDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SamplerDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_SamplerDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SamplerDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_SamplerDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_QuerySetDrop
 
-// required bytes selfId = 1;
-inline bool Msg_QuerySetDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_QuerySetDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_QuerySetDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_QuerySetDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_QuerySetDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_QuerySetDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_QuerySetDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_QuerySetDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QuerySetDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_QuerySetDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
 }
-inline std::string* Msg_QuerySetDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.selfId)
+inline std::string* Msg_QuerySetDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_QuerySetDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_QuerySetDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_QuerySetDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_QuerySetDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QuerySetDrop::_internal_mutable_selfid() {
+inline std::string* Msg_QuerySetDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QuerySetDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_QuerySetDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QuerySetDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_QuerySetDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceDestroy
 
-// required bytes selfId = 1;
-inline bool Msg_DeviceDestroy::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DeviceDestroy::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceDestroy::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DeviceDestroy::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DeviceDestroy::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DeviceDestroy::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceDestroy::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DeviceDestroy::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceDestroy::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceDestroy::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
 }
-inline std::string* Msg_DeviceDestroy::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.selfId)
+inline std::string* Msg_DeviceDestroy::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DeviceDestroy::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DeviceDestroy::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DeviceDestroy::_internal_set_selfid(const std::string& value) {
+inline void Msg_DeviceDestroy::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceDestroy::_internal_mutable_selfid() {
+inline std::string* Msg_DeviceDestroy::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceDestroy::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DeviceDestroy::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceDestroy::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DeviceDestroy::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceDrop
 
-// required bytes selfId = 1;
-inline bool Msg_DeviceDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DeviceDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DeviceDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DeviceDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DeviceDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DeviceDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
 }
-inline std::string* Msg_DeviceDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.selfId)
+inline std::string* Msg_DeviceDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DeviceDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DeviceDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DeviceDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_DeviceDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceDrop::_internal_mutable_selfid() {
+inline std::string* Msg_DeviceDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DeviceDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DeviceDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CommandEncoderFinish
 
-// required bytes selfId = 1;
-inline bool Msg_CommandEncoderFinish::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_CommandEncoderFinish::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderFinish::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_CommandEncoderFinish::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_CommandEncoderFinish::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_CommandEncoderFinish::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CommandEncoderFinish::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_CommandEncoderFinish::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderFinish::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderFinish::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
 }
-inline std::string* Msg_CommandEncoderFinish::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.selfId)
+inline std::string* Msg_CommandEncoderFinish::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderFinish::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_CommandEncoderFinish::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_CommandEncoderFinish::_internal_set_selfid(const std::string& value) {
+inline void Msg_CommandEncoderFinish::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderFinish::_internal_mutable_selfid() {
+inline std::string* Msg_CommandEncoderFinish::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderFinish::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_CommandEncoderFinish::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderFinish::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_CommandEncoderFinish::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
 }
 
-// required bytes deviceId = 2;
-inline bool Msg_CommandEncoderFinish::_internal_has_deviceid() const {
+// required bytes a_deviceId = 2;
+inline bool Msg_CommandEncoderFinish::_internal_has_a_deviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderFinish::has_deviceid() const {
-  return _internal_has_deviceid();
+inline bool Msg_CommandEncoderFinish::has_a_deviceid() const {
+  return _internal_has_a_deviceid();
 }
-inline void Msg_CommandEncoderFinish::clear_deviceid() {
-  _impl_.deviceid_.ClearToEmpty();
+inline void Msg_CommandEncoderFinish::clear_a_deviceid() {
+  _impl_.a_deviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_CommandEncoderFinish::deviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.deviceId)
-  return _internal_deviceid();
+inline const std::string& Msg_CommandEncoderFinish::a_deviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
+  return _internal_a_deviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderFinish::set_deviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderFinish::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.deviceId)
+ _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
 }
-inline std::string* Msg_CommandEncoderFinish::mutable_deviceid() {
-  std::string* _s = _internal_mutable_deviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.deviceId)
+inline std::string* Msg_CommandEncoderFinish::mutable_a_deviceid() {
+  std::string* _s = _internal_mutable_a_deviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderFinish::_internal_deviceid() const {
-  return _impl_.deviceid_.Get();
+inline const std::string& Msg_CommandEncoderFinish::_internal_a_deviceid() const {
+  return _impl_.a_deviceid_.Get();
 }
-inline void Msg_CommandEncoderFinish::_internal_set_deviceid(const std::string& value) {
+inline void Msg_CommandEncoderFinish::_internal_set_a_deviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.deviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderFinish::_internal_mutable_deviceid() {
+inline std::string* Msg_CommandEncoderFinish::_internal_mutable_a_deviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.deviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderFinish::release_deviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.deviceId)
-  if (!_internal_has_deviceid()) {
+inline std::string* Msg_CommandEncoderFinish::release_a_deviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
+  if (!_internal_has_a_deviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.deviceid_.Release();
+  auto* p = _impl_.a_deviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderFinish::set_allocated_deviceid(std::string* deviceid) {
-  if (deviceid != nullptr) {
+inline void Msg_CommandEncoderFinish::set_allocated_a_deviceid(std::string* a_deviceid) {
+  if (a_deviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.deviceid_.SetAllocated(deviceid, GetArenaForAllocation());
+  _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.deviceid_.IsDefault()) {
-    _impl_.deviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_deviceid_.IsDefault()) {
+    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.deviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
 }
 
-// required bytes desc = 3;
-inline bool Msg_CommandEncoderFinish::_internal_has_desc() const {
+// required bytes a_desc = 3;
+inline bool Msg_CommandEncoderFinish::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderFinish::has_desc() const {
-  return _internal_has_desc();
+inline bool Msg_CommandEncoderFinish::has_a_desc() const {
+  return _internal_has_a_desc();
 }
-inline void Msg_CommandEncoderFinish::clear_desc() {
-  _impl_.desc_.ClearToEmpty();
+inline void Msg_CommandEncoderFinish::clear_a_desc() {
+  _impl_.a_desc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_CommandEncoderFinish::desc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.desc)
-  return _internal_desc();
+inline const std::string& Msg_CommandEncoderFinish::a_desc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
+  return _internal_a_desc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderFinish::set_desc(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderFinish::set_a_desc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.desc)
+ _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
 }
-inline std::string* Msg_CommandEncoderFinish::mutable_desc() {
-  std::string* _s = _internal_mutable_desc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.desc)
+inline std::string* Msg_CommandEncoderFinish::mutable_a_desc() {
+  std::string* _s = _internal_mutable_a_desc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderFinish::_internal_desc() const {
-  return _impl_.desc_.Get();
+inline const std::string& Msg_CommandEncoderFinish::_internal_a_desc() const {
+  return _impl_.a_desc_.Get();
 }
-inline void Msg_CommandEncoderFinish::_internal_set_desc(const std::string& value) {
+inline void Msg_CommandEncoderFinish::_internal_set_a_desc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.desc_.Set(value, GetArenaForAllocation());
+  _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderFinish::_internal_mutable_desc() {
+inline std::string* Msg_CommandEncoderFinish::_internal_mutable_a_desc() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.desc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderFinish::release_desc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.desc)
-  if (!_internal_has_desc()) {
+inline std::string* Msg_CommandEncoderFinish::release_a_desc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
+  if (!_internal_has_a_desc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.desc_.Release();
+  auto* p = _impl_.a_desc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderFinish::set_allocated_desc(std::string* desc) {
-  if (desc != nullptr) {
+inline void Msg_CommandEncoderFinish::set_allocated_a_desc(std::string* a_desc) {
+  if (a_desc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.desc_.SetAllocated(desc, GetArenaForAllocation());
+  _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.desc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_CommandEncoderDrop
 
-// required bytes selfId = 1;
-inline bool Msg_CommandEncoderDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_CommandEncoderDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_CommandEncoderDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_CommandEncoderDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_CommandEncoderDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_CommandEncoderDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_CommandEncoderDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_CommandEncoderDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_CommandEncoderDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_CommandEncoderDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
 }
-inline std::string* Msg_CommandEncoderDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.selfId)
+inline std::string* Msg_CommandEncoderDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_CommandEncoderDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_CommandEncoderDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_CommandEncoderDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_CommandEncoderDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderDrop::_internal_mutable_selfid() {
+inline std::string* Msg_CommandEncoderDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_CommandEncoderDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_CommandEncoderDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_CommandEncoderDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_CommandEncoderDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RenderBundleDrop
 
-// required bytes selfId = 1;
-inline bool Msg_RenderBundleDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_RenderBundleDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RenderBundleDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_RenderBundleDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_RenderBundleDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_RenderBundleDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RenderBundleDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_RenderBundleDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RenderBundleDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_RenderBundleDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
 }
-inline std::string* Msg_RenderBundleDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.selfId)
+inline std::string* Msg_RenderBundleDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_RenderBundleDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_RenderBundleDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_RenderBundleDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_RenderBundleDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RenderBundleDrop::_internal_mutable_selfid() {
+inline std::string* Msg_RenderBundleDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RenderBundleDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_RenderBundleDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RenderBundleDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_RenderBundleDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_QueueSubmit
 
-// required bytes selfId = 1;
-inline bool Msg_QueueSubmit::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_QueueSubmit::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_QueueSubmit::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_QueueSubmit::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_QueueSubmit::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_QueueSubmit::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_QueueSubmit::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_QueueSubmit::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueSubmit::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueSubmit::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
 }
-inline std::string* Msg_QueueSubmit::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.selfId)
+inline std::string* Msg_QueueSubmit::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
   return _s;
 }
-inline const std::string& Msg_QueueSubmit::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_QueueSubmit::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_QueueSubmit::_internal_set_selfid(const std::string& value) {
+inline void Msg_QueueSubmit::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueSubmit::_internal_mutable_selfid() {
+inline std::string* Msg_QueueSubmit::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueSubmit::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_QueueSubmit::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueSubmit::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_QueueSubmit::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
 }
 
-// required bytes aDeviceId = 2;
-inline bool Msg_QueueSubmit::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 2;
+inline bool Msg_QueueSubmit::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_QueueSubmit::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_QueueSubmit::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_QueueSubmit::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_QueueSubmit::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_QueueSubmit::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_QueueSubmit::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueSubmit::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueSubmit::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
 }
-inline std::string* Msg_QueueSubmit::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.aDeviceId)
+inline std::string* Msg_QueueSubmit::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_QueueSubmit::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_QueueSubmit::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_QueueSubmit::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_QueueSubmit::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueSubmit::_internal_mutable_adeviceid() {
+inline std::string* Msg_QueueSubmit::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueSubmit::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_QueueSubmit::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueSubmit::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_QueueSubmit::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
 }
 
-// repeated bytes commandBuffers = 3;
-inline int Msg_QueueSubmit::_internal_commandbuffers_size() const {
-  return _impl_.commandbuffers_.size();
+// repeated bytes a_commandBuffers = 3;
+inline int Msg_QueueSubmit::_internal_a_commandbuffers_size() const {
+  return _impl_.a_commandbuffers_.size();
 }
-inline int Msg_QueueSubmit::commandbuffers_size() const {
-  return _internal_commandbuffers_size();
+inline int Msg_QueueSubmit::a_commandbuffers_size() const {
+  return _internal_a_commandbuffers_size();
 }
-inline void Msg_QueueSubmit::clear_commandbuffers() {
-  _impl_.commandbuffers_.Clear();
+inline void Msg_QueueSubmit::clear_a_commandbuffers() {
+  _impl_.a_commandbuffers_.Clear();
 }
-inline std::string* Msg_QueueSubmit::add_commandbuffers() {
-  std::string* _s = _internal_add_commandbuffers();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+inline std::string* Msg_QueueSubmit::add_a_commandbuffers() {
+  std::string* _s = _internal_add_a_commandbuffers();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
   return _s;
 }
-inline const std::string& Msg_QueueSubmit::_internal_commandbuffers(int index) const {
-  return _impl_.commandbuffers_.Get(index);
+inline const std::string& Msg_QueueSubmit::_internal_a_commandbuffers(int index) const {
+  return _impl_.a_commandbuffers_.Get(index);
 }
-inline const std::string& Msg_QueueSubmit::commandbuffers(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
-  return _internal_commandbuffers(index);
+inline const std::string& Msg_QueueSubmit::a_commandbuffers(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
+  return _internal_a_commandbuffers(index);
 }
-inline std::string* Msg_QueueSubmit::mutable_commandbuffers(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
-  return _impl_.commandbuffers_.Mutable(index);
+inline std::string* Msg_QueueSubmit::mutable_a_commandbuffers(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
+  return _impl_.a_commandbuffers_.Mutable(index);
 }
-inline void Msg_QueueSubmit::set_commandbuffers(int index, const std::string& value) {
-  _impl_.commandbuffers_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+inline void Msg_QueueSubmit::set_a_commandbuffers(int index, const std::string& value) {
+  _impl_.a_commandbuffers_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline void Msg_QueueSubmit::set_commandbuffers(int index, std::string&& value) {
-  _impl_.commandbuffers_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+inline void Msg_QueueSubmit::set_a_commandbuffers(int index, std::string&& value) {
+  _impl_.a_commandbuffers_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline void Msg_QueueSubmit::set_commandbuffers(int index, const char* value) {
+inline void Msg_QueueSubmit::set_a_commandbuffers(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.commandbuffers_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+  _impl_.a_commandbuffers_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline void Msg_QueueSubmit::set_commandbuffers(int index, const void* value, size_t size) {
-  _impl_.commandbuffers_.Mutable(index)->assign(
+inline void Msg_QueueSubmit::set_a_commandbuffers(int index, const void* value, size_t size) {
+  _impl_.a_commandbuffers_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline std::string* Msg_QueueSubmit::_internal_add_commandbuffers() {
-  return _impl_.commandbuffers_.Add();
+inline std::string* Msg_QueueSubmit::_internal_add_a_commandbuffers() {
+  return _impl_.a_commandbuffers_.Add();
 }
-inline void Msg_QueueSubmit::add_commandbuffers(const std::string& value) {
-  _impl_.commandbuffers_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+inline void Msg_QueueSubmit::add_a_commandbuffers(const std::string& value) {
+  _impl_.a_commandbuffers_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline void Msg_QueueSubmit::add_commandbuffers(std::string&& value) {
-  _impl_.commandbuffers_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+inline void Msg_QueueSubmit::add_a_commandbuffers(std::string&& value) {
+  _impl_.a_commandbuffers_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline void Msg_QueueSubmit::add_commandbuffers(const char* value) {
+inline void Msg_QueueSubmit::add_a_commandbuffers(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.commandbuffers_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+  _impl_.a_commandbuffers_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
-inline void Msg_QueueSubmit::add_commandbuffers(const void* value, size_t size) {
-  _impl_.commandbuffers_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
+inline void Msg_QueueSubmit::add_a_commandbuffers(const void* value, size_t size) {
+  _impl_.a_commandbuffers_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_QueueSubmit::commandbuffers() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
-  return _impl_.commandbuffers_;
+Msg_QueueSubmit::a_commandbuffers() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
+  return _impl_.a_commandbuffers_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_QueueSubmit::mutable_commandbuffers() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.commandBuffers)
-  return &_impl_.commandbuffers_;
+Msg_QueueSubmit::mutable_a_commandbuffers() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_commandBuffers)
+  return &_impl_.a_commandbuffers_;
 }
 
-// repeated bytes textureIds = 4;
-inline int Msg_QueueSubmit::_internal_textureids_size() const {
-  return _impl_.textureids_.size();
+// repeated bytes a_textureIds = 4;
+inline int Msg_QueueSubmit::_internal_a_textureids_size() const {
+  return _impl_.a_textureids_.size();
 }
-inline int Msg_QueueSubmit::textureids_size() const {
-  return _internal_textureids_size();
+inline int Msg_QueueSubmit::a_textureids_size() const {
+  return _internal_a_textureids_size();
 }
-inline void Msg_QueueSubmit::clear_textureids() {
-  _impl_.textureids_.Clear();
+inline void Msg_QueueSubmit::clear_a_textureids() {
+  _impl_.a_textureids_.Clear();
 }
-inline std::string* Msg_QueueSubmit::add_textureids() {
-  std::string* _s = _internal_add_textureids();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+inline std::string* Msg_QueueSubmit::add_a_textureids() {
+  std::string* _s = _internal_add_a_textureids();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
   return _s;
 }
-inline const std::string& Msg_QueueSubmit::_internal_textureids(int index) const {
-  return _impl_.textureids_.Get(index);
+inline const std::string& Msg_QueueSubmit::_internal_a_textureids(int index) const {
+  return _impl_.a_textureids_.Get(index);
 }
-inline const std::string& Msg_QueueSubmit::textureids(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
-  return _internal_textureids(index);
+inline const std::string& Msg_QueueSubmit::a_textureids(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
+  return _internal_a_textureids(index);
 }
-inline std::string* Msg_QueueSubmit::mutable_textureids(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
-  return _impl_.textureids_.Mutable(index);
+inline std::string* Msg_QueueSubmit::mutable_a_textureids(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
+  return _impl_.a_textureids_.Mutable(index);
 }
-inline void Msg_QueueSubmit::set_textureids(int index, const std::string& value) {
-  _impl_.textureids_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+inline void Msg_QueueSubmit::set_a_textureids(int index, const std::string& value) {
+  _impl_.a_textureids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline void Msg_QueueSubmit::set_textureids(int index, std::string&& value) {
-  _impl_.textureids_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+inline void Msg_QueueSubmit::set_a_textureids(int index, std::string&& value) {
+  _impl_.a_textureids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline void Msg_QueueSubmit::set_textureids(int index, const char* value) {
+inline void Msg_QueueSubmit::set_a_textureids(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.textureids_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+  _impl_.a_textureids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline void Msg_QueueSubmit::set_textureids(int index, const void* value, size_t size) {
-  _impl_.textureids_.Mutable(index)->assign(
+inline void Msg_QueueSubmit::set_a_textureids(int index, const void* value, size_t size) {
+  _impl_.a_textureids_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline std::string* Msg_QueueSubmit::_internal_add_textureids() {
-  return _impl_.textureids_.Add();
+inline std::string* Msg_QueueSubmit::_internal_add_a_textureids() {
+  return _impl_.a_textureids_.Add();
 }
-inline void Msg_QueueSubmit::add_textureids(const std::string& value) {
-  _impl_.textureids_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+inline void Msg_QueueSubmit::add_a_textureids(const std::string& value) {
+  _impl_.a_textureids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline void Msg_QueueSubmit::add_textureids(std::string&& value) {
-  _impl_.textureids_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+inline void Msg_QueueSubmit::add_a_textureids(std::string&& value) {
+  _impl_.a_textureids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline void Msg_QueueSubmit::add_textureids(const char* value) {
+inline void Msg_QueueSubmit::add_a_textureids(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.textureids_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+  _impl_.a_textureids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
-inline void Msg_QueueSubmit::add_textureids(const void* value, size_t size) {
-  _impl_.textureids_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
+inline void Msg_QueueSubmit::add_a_textureids(const void* value, size_t size) {
+  _impl_.a_textureids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_QueueSubmit::textureids() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
-  return _impl_.textureids_;
+Msg_QueueSubmit::a_textureids() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
+  return _impl_.a_textureids_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_QueueSubmit::mutable_textureids() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.textureIds)
-  return &_impl_.textureids_;
+Msg_QueueSubmit::mutable_a_textureids() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_textureIds)
+  return &_impl_.a_textureids_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_QueueOnSubmittedWorkDone
 
-// required bytes selfId = 1;
-inline bool Msg_QueueOnSubmittedWorkDone::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_QueueOnSubmittedWorkDone::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_QueueOnSubmittedWorkDone::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_QueueOnSubmittedWorkDone::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_QueueOnSubmittedWorkDone::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_QueueOnSubmittedWorkDone::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_QueueOnSubmittedWorkDone::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_QueueOnSubmittedWorkDone::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueOnSubmittedWorkDone::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueOnSubmittedWorkDone::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
 }
-inline std::string* Msg_QueueOnSubmittedWorkDone::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.selfId)
+inline std::string* Msg_QueueOnSubmittedWorkDone::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
   return _s;
 }
-inline const std::string& Msg_QueueOnSubmittedWorkDone::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_QueueOnSubmittedWorkDone::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_QueueOnSubmittedWorkDone::_internal_set_selfid(const std::string& value) {
+inline void Msg_QueueOnSubmittedWorkDone::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueOnSubmittedWorkDone::_internal_mutable_selfid() {
+inline std::string* Msg_QueueOnSubmittedWorkDone::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueOnSubmittedWorkDone::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_QueueOnSubmittedWorkDone::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueOnSubmittedWorkDone::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_QueueOnSubmittedWorkDone::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_QueueOnSubmittedWorkDone
 
-// required bytes ok = 1;
-inline bool Reply_QueueOnSubmittedWorkDone::_internal_has_ok() const {
+// required bytes a_ok = 1;
+inline bool Reply_QueueOnSubmittedWorkDone::_internal_has_a_ok() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_QueueOnSubmittedWorkDone::has_ok() const {
-  return _internal_has_ok();
+inline bool Reply_QueueOnSubmittedWorkDone::has_a_ok() const {
+  return _internal_has_a_ok();
 }
-inline void Reply_QueueOnSubmittedWorkDone::clear_ok() {
-  _impl_.ok_.ClearToEmpty();
+inline void Reply_QueueOnSubmittedWorkDone::clear_a_ok() {
+  _impl_.a_ok_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_QueueOnSubmittedWorkDone::ok() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.ok)
-  return _internal_ok();
+inline const std::string& Reply_QueueOnSubmittedWorkDone::a_ok() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
+  return _internal_a_ok();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_QueueOnSubmittedWorkDone::set_ok(ArgT0&& arg0, ArgT... args) {
+void Reply_QueueOnSubmittedWorkDone::set_a_ok(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.ok)
+ _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
 }
-inline std::string* Reply_QueueOnSubmittedWorkDone::mutable_ok() {
-  std::string* _s = _internal_mutable_ok();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.ok)
+inline std::string* Reply_QueueOnSubmittedWorkDone::mutable_a_ok() {
+  std::string* _s = _internal_mutable_a_ok();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
   return _s;
 }
-inline const std::string& Reply_QueueOnSubmittedWorkDone::_internal_ok() const {
-  return _impl_.ok_.Get();
+inline const std::string& Reply_QueueOnSubmittedWorkDone::_internal_a_ok() const {
+  return _impl_.a_ok_.Get();
 }
-inline void Reply_QueueOnSubmittedWorkDone::_internal_set_ok(const std::string& value) {
+inline void Reply_QueueOnSubmittedWorkDone::_internal_set_a_ok(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ok_.Set(value, GetArenaForAllocation());
+  _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_QueueOnSubmittedWorkDone::_internal_mutable_ok() {
+inline std::string* Reply_QueueOnSubmittedWorkDone::_internal_mutable_a_ok() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ok_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_QueueOnSubmittedWorkDone::release_ok() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.ok)
-  if (!_internal_has_ok()) {
+inline std::string* Reply_QueueOnSubmittedWorkDone::release_a_ok() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
+  if (!_internal_has_a_ok()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ok_.Release();
+  auto* p = _impl_.a_ok_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_QueueOnSubmittedWorkDone::set_allocated_ok(std::string* ok) {
-  if (ok != nullptr) {
+inline void Reply_QueueOnSubmittedWorkDone::set_allocated_a_ok(std::string* a_ok) {
+  if (a_ok != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ok_.SetAllocated(ok, GetArenaForAllocation());
+  _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ok_.IsDefault()) {
-    _impl_.ok_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ok_.IsDefault()) {
+    _impl_.a_ok_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.ok)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_QueueWriteAction
 
-// required bytes selfId = 1;
-inline bool Msg_QueueWriteAction::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_QueueWriteAction::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_QueueWriteAction::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_QueueWriteAction::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_QueueWriteAction::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_QueueWriteAction::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_QueueWriteAction::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_QueueWriteAction::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueWriteAction::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueWriteAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
 }
-inline std::string* Msg_QueueWriteAction::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.selfId)
+inline std::string* Msg_QueueWriteAction::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
   return _s;
 }
-inline const std::string& Msg_QueueWriteAction::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_QueueWriteAction::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_QueueWriteAction::_internal_set_selfid(const std::string& value) {
+inline void Msg_QueueWriteAction::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::_internal_mutable_selfid() {
+inline std::string* Msg_QueueWriteAction::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_QueueWriteAction::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueWriteAction::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_QueueWriteAction::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
 }
 
-// required bytes aDeviceId = 2;
-inline bool Msg_QueueWriteAction::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 2;
+inline bool Msg_QueueWriteAction::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_QueueWriteAction::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_QueueWriteAction::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_QueueWriteAction::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_QueueWriteAction::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_QueueWriteAction::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_QueueWriteAction::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueWriteAction::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueWriteAction::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
 }
-inline std::string* Msg_QueueWriteAction::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.aDeviceId)
+inline std::string* Msg_QueueWriteAction::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_QueueWriteAction::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_QueueWriteAction::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_QueueWriteAction::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_QueueWriteAction::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::_internal_mutable_adeviceid() {
+inline std::string* Msg_QueueWriteAction::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_QueueWriteAction::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueWriteAction::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_QueueWriteAction::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
 }
 
-// required bytes buf = 3;
-inline bool Msg_QueueWriteAction::_internal_has_buf() const {
+// required bytes a_buf = 3;
+inline bool Msg_QueueWriteAction::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_QueueWriteAction::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_QueueWriteAction::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_QueueWriteAction::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_QueueWriteAction::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_QueueWriteAction::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.buf)
-  return _internal_buf();
+inline const std::string& Msg_QueueWriteAction::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueWriteAction::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueWriteAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
 }
-inline std::string* Msg_QueueWriteAction::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.buf)
+inline std::string* Msg_QueueWriteAction::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
   return _s;
 }
-inline const std::string& Msg_QueueWriteAction::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_QueueWriteAction::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_QueueWriteAction::_internal_set_buf(const std::string& value) {
+inline void Msg_QueueWriteAction::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::_internal_mutable_buf() {
+inline std::string* Msg_QueueWriteAction::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_QueueWriteAction::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueWriteAction::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_QueueWriteAction::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
 }
 
-// required bytes shmem = 4;
-inline bool Msg_QueueWriteAction::_internal_has_shmem() const {
+// required bytes a_shmem = 4;
+inline bool Msg_QueueWriteAction::_internal_has_a_shmem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_QueueWriteAction::has_shmem() const {
-  return _internal_has_shmem();
+inline bool Msg_QueueWriteAction::has_a_shmem() const {
+  return _internal_has_a_shmem();
 }
-inline void Msg_QueueWriteAction::clear_shmem() {
-  _impl_.shmem_.ClearToEmpty();
+inline void Msg_QueueWriteAction::clear_a_shmem() {
+  _impl_.a_shmem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_QueueWriteAction::shmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.shmem)
-  return _internal_shmem();
+inline const std::string& Msg_QueueWriteAction::a_shmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
+  return _internal_a_shmem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_QueueWriteAction::set_shmem(ArgT0&& arg0, ArgT... args) {
+void Msg_QueueWriteAction::set_a_shmem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.shmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.shmem)
+ _impl_.a_shmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
 }
-inline std::string* Msg_QueueWriteAction::mutable_shmem() {
-  std::string* _s = _internal_mutable_shmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.shmem)
+inline std::string* Msg_QueueWriteAction::mutable_a_shmem() {
+  std::string* _s = _internal_mutable_a_shmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
   return _s;
 }
-inline const std::string& Msg_QueueWriteAction::_internal_shmem() const {
-  return _impl_.shmem_.Get();
+inline const std::string& Msg_QueueWriteAction::_internal_a_shmem() const {
+  return _impl_.a_shmem_.Get();
 }
-inline void Msg_QueueWriteAction::_internal_set_shmem(const std::string& value) {
+inline void Msg_QueueWriteAction::_internal_set_a_shmem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.shmem_.Set(value, GetArenaForAllocation());
+  _impl_.a_shmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::_internal_mutable_shmem() {
+inline std::string* Msg_QueueWriteAction::_internal_mutable_a_shmem() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.shmem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_shmem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_QueueWriteAction::release_shmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.shmem)
-  if (!_internal_has_shmem()) {
+inline std::string* Msg_QueueWriteAction::release_a_shmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
+  if (!_internal_has_a_shmem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.shmem_.Release();
+  auto* p = _impl_.a_shmem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.shmem_.IsDefault()) {
-    _impl_.shmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_shmem_.IsDefault()) {
+    _impl_.a_shmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_QueueWriteAction::set_allocated_shmem(std::string* shmem) {
-  if (shmem != nullptr) {
+inline void Msg_QueueWriteAction::set_allocated_a_shmem(std::string* a_shmem) {
+  if (a_shmem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.shmem_.SetAllocated(shmem, GetArenaForAllocation());
+  _impl_.a_shmem_.SetAllocated(a_shmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.shmem_.IsDefault()) {
-    _impl_.shmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_shmem_.IsDefault()) {
+    _impl_.a_shmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.shmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BindGroupLayoutDrop
 
-// required bytes selfId = 1;
-inline bool Msg_BindGroupLayoutDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_BindGroupLayoutDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BindGroupLayoutDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_BindGroupLayoutDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_BindGroupLayoutDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_BindGroupLayoutDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BindGroupLayoutDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_BindGroupLayoutDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BindGroupLayoutDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_BindGroupLayoutDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
 }
-inline std::string* Msg_BindGroupLayoutDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.selfId)
+inline std::string* Msg_BindGroupLayoutDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_BindGroupLayoutDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_BindGroupLayoutDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_BindGroupLayoutDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_BindGroupLayoutDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BindGroupLayoutDrop::_internal_mutable_selfid() {
+inline std::string* Msg_BindGroupLayoutDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BindGroupLayoutDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_BindGroupLayoutDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BindGroupLayoutDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_BindGroupLayoutDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_PipelineLayoutDrop
 
-// required bytes selfId = 1;
-inline bool Msg_PipelineLayoutDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_PipelineLayoutDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PipelineLayoutDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_PipelineLayoutDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_PipelineLayoutDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_PipelineLayoutDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PipelineLayoutDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_PipelineLayoutDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PipelineLayoutDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_PipelineLayoutDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
 }
-inline std::string* Msg_PipelineLayoutDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.selfId)
+inline std::string* Msg_PipelineLayoutDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_PipelineLayoutDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_PipelineLayoutDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_PipelineLayoutDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_PipelineLayoutDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PipelineLayoutDrop::_internal_mutable_selfid() {
+inline std::string* Msg_PipelineLayoutDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PipelineLayoutDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_PipelineLayoutDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PipelineLayoutDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_PipelineLayoutDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_BindGroupDrop
 
-// required bytes selfId = 1;
-inline bool Msg_BindGroupDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_BindGroupDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_BindGroupDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_BindGroupDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_BindGroupDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_BindGroupDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_BindGroupDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_BindGroupDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_BindGroupDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_BindGroupDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
 }
-inline std::string* Msg_BindGroupDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.selfId)
+inline std::string* Msg_BindGroupDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_BindGroupDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_BindGroupDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_BindGroupDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_BindGroupDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_BindGroupDrop::_internal_mutable_selfid() {
+inline std::string* Msg_BindGroupDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_BindGroupDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_BindGroupDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_BindGroupDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_BindGroupDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ShaderModuleDrop
 
-// required bytes selfId = 1;
-inline bool Msg_ShaderModuleDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_ShaderModuleDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ShaderModuleDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_ShaderModuleDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_ShaderModuleDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_ShaderModuleDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ShaderModuleDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_ShaderModuleDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ShaderModuleDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_ShaderModuleDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
 }
-inline std::string* Msg_ShaderModuleDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.selfId)
+inline std::string* Msg_ShaderModuleDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_ShaderModuleDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_ShaderModuleDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_ShaderModuleDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_ShaderModuleDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ShaderModuleDrop::_internal_mutable_selfid() {
+inline std::string* Msg_ShaderModuleDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ShaderModuleDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_ShaderModuleDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ShaderModuleDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_ShaderModuleDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ComputePipelineDrop
 
-// required bytes selfId = 1;
-inline bool Msg_ComputePipelineDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_ComputePipelineDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ComputePipelineDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_ComputePipelineDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_ComputePipelineDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_ComputePipelineDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ComputePipelineDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_ComputePipelineDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ComputePipelineDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_ComputePipelineDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
 }
-inline std::string* Msg_ComputePipelineDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.selfId)
+inline std::string* Msg_ComputePipelineDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_ComputePipelineDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_ComputePipelineDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_ComputePipelineDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_ComputePipelineDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePipelineDrop::_internal_mutable_selfid() {
+inline std::string* Msg_ComputePipelineDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ComputePipelineDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_ComputePipelineDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ComputePipelineDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_ComputePipelineDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RenderPipelineDrop
 
-// required bytes selfId = 1;
-inline bool Msg_RenderPipelineDrop::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_RenderPipelineDrop::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RenderPipelineDrop::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_RenderPipelineDrop::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_RenderPipelineDrop::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_RenderPipelineDrop::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RenderPipelineDrop::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_RenderPipelineDrop::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RenderPipelineDrop::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_RenderPipelineDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
 }
-inline std::string* Msg_RenderPipelineDrop::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.selfId)
+inline std::string* Msg_RenderPipelineDrop::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
   return _s;
 }
-inline const std::string& Msg_RenderPipelineDrop::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_RenderPipelineDrop::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_RenderPipelineDrop::_internal_set_selfid(const std::string& value) {
+inline void Msg_RenderPipelineDrop::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPipelineDrop::_internal_mutable_selfid() {
+inline std::string* Msg_RenderPipelineDrop::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RenderPipelineDrop::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_RenderPipelineDrop::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RenderPipelineDrop::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_RenderPipelineDrop::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ImplicitLayoutDrop
 
-// required bytes implicitPlId = 1;
-inline bool Msg_ImplicitLayoutDrop::_internal_has_implicitplid() const {
+// required bytes a_implicitPlId = 1;
+inline bool Msg_ImplicitLayoutDrop::_internal_has_a_implicitplid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ImplicitLayoutDrop::has_implicitplid() const {
-  return _internal_has_implicitplid();
+inline bool Msg_ImplicitLayoutDrop::has_a_implicitplid() const {
+  return _internal_has_a_implicitplid();
 }
-inline void Msg_ImplicitLayoutDrop::clear_implicitplid() {
-  _impl_.implicitplid_.ClearToEmpty();
+inline void Msg_ImplicitLayoutDrop::clear_a_implicitplid() {
+  _impl_.a_implicitplid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ImplicitLayoutDrop::implicitplid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitPlId)
-  return _internal_implicitplid();
+inline const std::string& Msg_ImplicitLayoutDrop::a_implicitplid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
+  return _internal_a_implicitplid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ImplicitLayoutDrop::set_implicitplid(ArgT0&& arg0, ArgT... args) {
+void Msg_ImplicitLayoutDrop::set_a_implicitplid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.implicitplid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitPlId)
+ _impl_.a_implicitplid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
 }
-inline std::string* Msg_ImplicitLayoutDrop::mutable_implicitplid() {
-  std::string* _s = _internal_mutable_implicitplid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitPlId)
+inline std::string* Msg_ImplicitLayoutDrop::mutable_a_implicitplid() {
+  std::string* _s = _internal_mutable_a_implicitplid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
   return _s;
 }
-inline const std::string& Msg_ImplicitLayoutDrop::_internal_implicitplid() const {
-  return _impl_.implicitplid_.Get();
+inline const std::string& Msg_ImplicitLayoutDrop::_internal_a_implicitplid() const {
+  return _impl_.a_implicitplid_.Get();
 }
-inline void Msg_ImplicitLayoutDrop::_internal_set_implicitplid(const std::string& value) {
+inline void Msg_ImplicitLayoutDrop::_internal_set_a_implicitplid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.implicitplid_.Set(value, GetArenaForAllocation());
+  _impl_.a_implicitplid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ImplicitLayoutDrop::_internal_mutable_implicitplid() {
+inline std::string* Msg_ImplicitLayoutDrop::_internal_mutable_a_implicitplid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.implicitplid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_implicitplid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ImplicitLayoutDrop::release_implicitplid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitPlId)
-  if (!_internal_has_implicitplid()) {
+inline std::string* Msg_ImplicitLayoutDrop::release_a_implicitplid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
+  if (!_internal_has_a_implicitplid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.implicitplid_.Release();
+  auto* p = _impl_.a_implicitplid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.implicitplid_.IsDefault()) {
-    _impl_.implicitplid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_implicitplid_.IsDefault()) {
+    _impl_.a_implicitplid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ImplicitLayoutDrop::set_allocated_implicitplid(std::string* implicitplid) {
-  if (implicitplid != nullptr) {
+inline void Msg_ImplicitLayoutDrop::set_allocated_a_implicitplid(std::string* a_implicitplid) {
+  if (a_implicitplid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.implicitplid_.SetAllocated(implicitplid, GetArenaForAllocation());
+  _impl_.a_implicitplid_.SetAllocated(a_implicitplid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.implicitplid_.IsDefault()) {
-    _impl_.implicitplid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_implicitplid_.IsDefault()) {
+    _impl_.a_implicitplid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitPlId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
 }
 
-// repeated bytes implicitBglIds = 2;
-inline int Msg_ImplicitLayoutDrop::_internal_implicitbglids_size() const {
-  return _impl_.implicitbglids_.size();
+// repeated bytes a_implicitBglIds = 2;
+inline int Msg_ImplicitLayoutDrop::_internal_a_implicitbglids_size() const {
+  return _impl_.a_implicitbglids_.size();
 }
-inline int Msg_ImplicitLayoutDrop::implicitbglids_size() const {
-  return _internal_implicitbglids_size();
+inline int Msg_ImplicitLayoutDrop::a_implicitbglids_size() const {
+  return _internal_a_implicitbglids_size();
 }
-inline void Msg_ImplicitLayoutDrop::clear_implicitbglids() {
-  _impl_.implicitbglids_.Clear();
+inline void Msg_ImplicitLayoutDrop::clear_a_implicitbglids() {
+  _impl_.a_implicitbglids_.Clear();
 }
-inline std::string* Msg_ImplicitLayoutDrop::add_implicitbglids() {
-  std::string* _s = _internal_add_implicitbglids();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+inline std::string* Msg_ImplicitLayoutDrop::add_a_implicitbglids() {
+  std::string* _s = _internal_add_a_implicitbglids();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
   return _s;
 }
-inline const std::string& Msg_ImplicitLayoutDrop::_internal_implicitbglids(int index) const {
-  return _impl_.implicitbglids_.Get(index);
+inline const std::string& Msg_ImplicitLayoutDrop::_internal_a_implicitbglids(int index) const {
+  return _impl_.a_implicitbglids_.Get(index);
 }
-inline const std::string& Msg_ImplicitLayoutDrop::implicitbglids(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
-  return _internal_implicitbglids(index);
+inline const std::string& Msg_ImplicitLayoutDrop::a_implicitbglids(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
+  return _internal_a_implicitbglids(index);
 }
-inline std::string* Msg_ImplicitLayoutDrop::mutable_implicitbglids(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
-  return _impl_.implicitbglids_.Mutable(index);
+inline std::string* Msg_ImplicitLayoutDrop::mutable_a_implicitbglids(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
+  return _impl_.a_implicitbglids_.Mutable(index);
 }
-inline void Msg_ImplicitLayoutDrop::set_implicitbglids(int index, const std::string& value) {
-  _impl_.implicitbglids_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+inline void Msg_ImplicitLayoutDrop::set_a_implicitbglids(int index, const std::string& value) {
+  _impl_.a_implicitbglids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline void Msg_ImplicitLayoutDrop::set_implicitbglids(int index, std::string&& value) {
-  _impl_.implicitbglids_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+inline void Msg_ImplicitLayoutDrop::set_a_implicitbglids(int index, std::string&& value) {
+  _impl_.a_implicitbglids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline void Msg_ImplicitLayoutDrop::set_implicitbglids(int index, const char* value) {
+inline void Msg_ImplicitLayoutDrop::set_a_implicitbglids(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.implicitbglids_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+  _impl_.a_implicitbglids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline void Msg_ImplicitLayoutDrop::set_implicitbglids(int index, const void* value, size_t size) {
-  _impl_.implicitbglids_.Mutable(index)->assign(
+inline void Msg_ImplicitLayoutDrop::set_a_implicitbglids(int index, const void* value, size_t size) {
+  _impl_.a_implicitbglids_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline std::string* Msg_ImplicitLayoutDrop::_internal_add_implicitbglids() {
-  return _impl_.implicitbglids_.Add();
+inline std::string* Msg_ImplicitLayoutDrop::_internal_add_a_implicitbglids() {
+  return _impl_.a_implicitbglids_.Add();
 }
-inline void Msg_ImplicitLayoutDrop::add_implicitbglids(const std::string& value) {
-  _impl_.implicitbglids_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+inline void Msg_ImplicitLayoutDrop::add_a_implicitbglids(const std::string& value) {
+  _impl_.a_implicitbglids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline void Msg_ImplicitLayoutDrop::add_implicitbglids(std::string&& value) {
-  _impl_.implicitbglids_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+inline void Msg_ImplicitLayoutDrop::add_a_implicitbglids(std::string&& value) {
+  _impl_.a_implicitbglids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline void Msg_ImplicitLayoutDrop::add_implicitbglids(const char* value) {
+inline void Msg_ImplicitLayoutDrop::add_a_implicitbglids(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.implicitbglids_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+  _impl_.a_implicitbglids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
-inline void Msg_ImplicitLayoutDrop::add_implicitbglids(const void* value, size_t size) {
-  _impl_.implicitbglids_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
+inline void Msg_ImplicitLayoutDrop::add_a_implicitbglids(const void* value, size_t size) {
+  _impl_.a_implicitbglids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_ImplicitLayoutDrop::implicitbglids() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
-  return _impl_.implicitbglids_;
+Msg_ImplicitLayoutDrop::a_implicitbglids() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
+  return _impl_.a_implicitbglids_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_ImplicitLayoutDrop::mutable_implicitbglids() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.implicitBglIds)
-  return &_impl_.implicitbglids_;
+Msg_ImplicitLayoutDrop::mutable_a_implicitbglids() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitBglIds)
+  return &_impl_.a_implicitbglids_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceCreateSwapChain
 
-// required bytes selfId = 1;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DeviceCreateSwapChain::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateSwapChain::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DeviceCreateSwapChain::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DeviceCreateSwapChain::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DeviceCreateSwapChain::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DeviceCreateSwapChain::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateSwapChain::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateSwapChain::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
 }
-inline std::string* Msg_DeviceCreateSwapChain::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.selfId)
+inline std::string* Msg_DeviceCreateSwapChain::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DeviceCreateSwapChain::_internal_set_selfid(const std::string& value) {
+inline void Msg_DeviceCreateSwapChain::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_selfid() {
+inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DeviceCreateSwapChain::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateSwapChain::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DeviceCreateSwapChain::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
 }
 
-// required bytes queueId = 2;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_queueid() const {
+// required bytes a_queueId = 2;
+inline bool Msg_DeviceCreateSwapChain::_internal_has_a_queueid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateSwapChain::has_queueid() const {
-  return _internal_has_queueid();
+inline bool Msg_DeviceCreateSwapChain::has_a_queueid() const {
+  return _internal_has_a_queueid();
 }
-inline void Msg_DeviceCreateSwapChain::clear_queueid() {
-  _impl_.queueid_.ClearToEmpty();
+inline void Msg_DeviceCreateSwapChain::clear_a_queueid() {
+  _impl_.a_queueid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::queueid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.queueId)
-  return _internal_queueid();
+inline const std::string& Msg_DeviceCreateSwapChain::a_queueid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
+  return _internal_a_queueid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateSwapChain::set_queueid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateSwapChain::set_a_queueid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.queueid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.queueId)
+ _impl_.a_queueid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
 }
-inline std::string* Msg_DeviceCreateSwapChain::mutable_queueid() {
-  std::string* _s = _internal_mutable_queueid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.queueId)
+inline std::string* Msg_DeviceCreateSwapChain::mutable_a_queueid() {
+  std::string* _s = _internal_mutable_a_queueid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::_internal_queueid() const {
-  return _impl_.queueid_.Get();
+inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_queueid() const {
+  return _impl_.a_queueid_.Get();
 }
-inline void Msg_DeviceCreateSwapChain::_internal_set_queueid(const std::string& value) {
+inline void Msg_DeviceCreateSwapChain::_internal_set_a_queueid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.queueid_.Set(value, GetArenaForAllocation());
+  _impl_.a_queueid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_queueid() {
+inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_queueid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.queueid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_queueid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::release_queueid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.queueId)
-  if (!_internal_has_queueid()) {
+inline std::string* Msg_DeviceCreateSwapChain::release_a_queueid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
+  if (!_internal_has_a_queueid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.queueid_.Release();
+  auto* p = _impl_.a_queueid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.queueid_.IsDefault()) {
-    _impl_.queueid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_queueid_.IsDefault()) {
+    _impl_.a_queueid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateSwapChain::set_allocated_queueid(std::string* queueid) {
-  if (queueid != nullptr) {
+inline void Msg_DeviceCreateSwapChain::set_allocated_a_queueid(std::string* a_queueid) {
+  if (a_queueid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.queueid_.SetAllocated(queueid, GetArenaForAllocation());
+  _impl_.a_queueid_.SetAllocated(a_queueid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.queueid_.IsDefault()) {
-    _impl_.queueid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_queueid_.IsDefault()) {
+    _impl_.a_queueid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.queueId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
 }
 
-// required bytes desc = 3;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_desc() const {
+// required bytes a_desc = 3;
+inline bool Msg_DeviceCreateSwapChain::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateSwapChain::has_desc() const {
-  return _internal_has_desc();
+inline bool Msg_DeviceCreateSwapChain::has_a_desc() const {
+  return _internal_has_a_desc();
 }
-inline void Msg_DeviceCreateSwapChain::clear_desc() {
-  _impl_.desc_.ClearToEmpty();
+inline void Msg_DeviceCreateSwapChain::clear_a_desc() {
+  _impl_.a_desc_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::desc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.desc)
-  return _internal_desc();
+inline const std::string& Msg_DeviceCreateSwapChain::a_desc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
+  return _internal_a_desc();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateSwapChain::set_desc(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateSwapChain::set_a_desc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.desc)
+ _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
 }
-inline std::string* Msg_DeviceCreateSwapChain::mutable_desc() {
-  std::string* _s = _internal_mutable_desc();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.desc)
+inline std::string* Msg_DeviceCreateSwapChain::mutable_a_desc() {
+  std::string* _s = _internal_mutable_a_desc();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::_internal_desc() const {
-  return _impl_.desc_.Get();
+inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_desc() const {
+  return _impl_.a_desc_.Get();
 }
-inline void Msg_DeviceCreateSwapChain::_internal_set_desc(const std::string& value) {
+inline void Msg_DeviceCreateSwapChain::_internal_set_a_desc(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.desc_.Set(value, GetArenaForAllocation());
+  _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_desc() {
+inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_desc() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.desc_.Mutable(GetArenaForAllocation());
+  return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::release_desc() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.desc)
-  if (!_internal_has_desc()) {
+inline std::string* Msg_DeviceCreateSwapChain::release_a_desc() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
+  if (!_internal_has_a_desc()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.desc_.Release();
+  auto* p = _impl_.a_desc_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateSwapChain::set_allocated_desc(std::string* desc) {
-  if (desc != nullptr) {
+inline void Msg_DeviceCreateSwapChain::set_allocated_a_desc(std::string* a_desc) {
+  if (a_desc != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.desc_.SetAllocated(desc, GetArenaForAllocation());
+  _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.desc_.IsDefault()) {
-    _impl_.desc_.Set("", GetArenaForAllocation());
+  if (_impl_.a_desc_.IsDefault()) {
+    _impl_.a_desc_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.desc)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
 }
 
-// repeated bytes bufferIds = 4;
-inline int Msg_DeviceCreateSwapChain::_internal_bufferids_size() const {
-  return _impl_.bufferids_.size();
+// repeated bytes a_bufferIds = 4;
+inline int Msg_DeviceCreateSwapChain::_internal_a_bufferids_size() const {
+  return _impl_.a_bufferids_.size();
 }
-inline int Msg_DeviceCreateSwapChain::bufferids_size() const {
-  return _internal_bufferids_size();
+inline int Msg_DeviceCreateSwapChain::a_bufferids_size() const {
+  return _internal_a_bufferids_size();
 }
-inline void Msg_DeviceCreateSwapChain::clear_bufferids() {
-  _impl_.bufferids_.Clear();
+inline void Msg_DeviceCreateSwapChain::clear_a_bufferids() {
+  _impl_.a_bufferids_.Clear();
 }
-inline std::string* Msg_DeviceCreateSwapChain::add_bufferids() {
-  std::string* _s = _internal_add_bufferids();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+inline std::string* Msg_DeviceCreateSwapChain::add_a_bufferids() {
+  std::string* _s = _internal_add_a_bufferids();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::_internal_bufferids(int index) const {
-  return _impl_.bufferids_.Get(index);
+inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_bufferids(int index) const {
+  return _impl_.a_bufferids_.Get(index);
 }
-inline const std::string& Msg_DeviceCreateSwapChain::bufferids(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
-  return _internal_bufferids(index);
+inline const std::string& Msg_DeviceCreateSwapChain::a_bufferids(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
+  return _internal_a_bufferids(index);
 }
-inline std::string* Msg_DeviceCreateSwapChain::mutable_bufferids(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
-  return _impl_.bufferids_.Mutable(index);
+inline std::string* Msg_DeviceCreateSwapChain::mutable_a_bufferids(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
+  return _impl_.a_bufferids_.Mutable(index);
 }
-inline void Msg_DeviceCreateSwapChain::set_bufferids(int index, const std::string& value) {
-  _impl_.bufferids_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+inline void Msg_DeviceCreateSwapChain::set_a_bufferids(int index, const std::string& value) {
+  _impl_.a_bufferids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline void Msg_DeviceCreateSwapChain::set_bufferids(int index, std::string&& value) {
-  _impl_.bufferids_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+inline void Msg_DeviceCreateSwapChain::set_a_bufferids(int index, std::string&& value) {
+  _impl_.a_bufferids_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline void Msg_DeviceCreateSwapChain::set_bufferids(int index, const char* value) {
+inline void Msg_DeviceCreateSwapChain::set_a_bufferids(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.bufferids_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+  _impl_.a_bufferids_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline void Msg_DeviceCreateSwapChain::set_bufferids(int index, const void* value, size_t size) {
-  _impl_.bufferids_.Mutable(index)->assign(
+inline void Msg_DeviceCreateSwapChain::set_a_bufferids(int index, const void* value, size_t size) {
+  _impl_.a_bufferids_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline std::string* Msg_DeviceCreateSwapChain::_internal_add_bufferids() {
-  return _impl_.bufferids_.Add();
+inline std::string* Msg_DeviceCreateSwapChain::_internal_add_a_bufferids() {
+  return _impl_.a_bufferids_.Add();
 }
-inline void Msg_DeviceCreateSwapChain::add_bufferids(const std::string& value) {
-  _impl_.bufferids_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+inline void Msg_DeviceCreateSwapChain::add_a_bufferids(const std::string& value) {
+  _impl_.a_bufferids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline void Msg_DeviceCreateSwapChain::add_bufferids(std::string&& value) {
-  _impl_.bufferids_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+inline void Msg_DeviceCreateSwapChain::add_a_bufferids(std::string&& value) {
+  _impl_.a_bufferids_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline void Msg_DeviceCreateSwapChain::add_bufferids(const char* value) {
+inline void Msg_DeviceCreateSwapChain::add_a_bufferids(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.bufferids_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+  _impl_.a_bufferids_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
-inline void Msg_DeviceCreateSwapChain::add_bufferids(const void* value, size_t size) {
-  _impl_.bufferids_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
+inline void Msg_DeviceCreateSwapChain::add_a_bufferids(const void* value, size_t size) {
+  _impl_.a_bufferids_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_DeviceCreateSwapChain::bufferids() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
-  return _impl_.bufferids_;
+Msg_DeviceCreateSwapChain::a_bufferids() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
+  return _impl_.a_bufferids_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_DeviceCreateSwapChain::mutable_bufferids() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.bufferIds)
-  return &_impl_.bufferids_;
+Msg_DeviceCreateSwapChain::mutable_a_bufferids() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_bufferIds)
+  return &_impl_.a_bufferids_;
 }
 
-// required bytes ownerId = 5;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_ownerid() const {
+// required bytes a_ownerId = 5;
+inline bool Msg_DeviceCreateSwapChain::_internal_has_a_ownerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateSwapChain::has_ownerid() const {
-  return _internal_has_ownerid();
+inline bool Msg_DeviceCreateSwapChain::has_a_ownerid() const {
+  return _internal_has_a_ownerid();
 }
-inline void Msg_DeviceCreateSwapChain::clear_ownerid() {
-  _impl_.ownerid_.ClearToEmpty();
+inline void Msg_DeviceCreateSwapChain::clear_a_ownerid() {
+  _impl_.a_ownerid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::ownerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.ownerId)
-  return _internal_ownerid();
+inline const std::string& Msg_DeviceCreateSwapChain::a_ownerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
+  return _internal_a_ownerid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceCreateSwapChain::set_ownerid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceCreateSwapChain::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.ownerId)
+ _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
 }
-inline std::string* Msg_DeviceCreateSwapChain::mutable_ownerid() {
-  std::string* _s = _internal_mutable_ownerid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.ownerId)
+inline std::string* Msg_DeviceCreateSwapChain::mutable_a_ownerid() {
+  std::string* _s = _internal_mutable_a_ownerid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
   return _s;
 }
-inline const std::string& Msg_DeviceCreateSwapChain::_internal_ownerid() const {
-  return _impl_.ownerid_.Get();
+inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_ownerid() const {
+  return _impl_.a_ownerid_.Get();
 }
-inline void Msg_DeviceCreateSwapChain::_internal_set_ownerid(const std::string& value) {
+inline void Msg_DeviceCreateSwapChain::_internal_set_a_ownerid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.ownerid_.Set(value, GetArenaForAllocation());
+  _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_ownerid() {
+inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_ownerid() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.ownerid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceCreateSwapChain::release_ownerid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.ownerId)
-  if (!_internal_has_ownerid()) {
+inline std::string* Msg_DeviceCreateSwapChain::release_a_ownerid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
+  if (!_internal_has_a_ownerid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.ownerid_.Release();
+  auto* p = _impl_.a_ownerid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceCreateSwapChain::set_allocated_ownerid(std::string* ownerid) {
-  if (ownerid != nullptr) {
+inline void Msg_DeviceCreateSwapChain::set_allocated_a_ownerid(std::string* a_ownerid) {
+  if (a_ownerid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.ownerid_.SetAllocated(ownerid, GetArenaForAllocation());
+  _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.ownerId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
 }
 
-// required bool useExternalTextureInSwapChain = 6;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_useexternaltextureinswapchain() const {
+// required bool a_useExternalTextureInSwapChain = 6;
+inline bool Msg_DeviceCreateSwapChain::_internal_has_a_useexternaltextureinswapchain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_DeviceCreateSwapChain::has_useexternaltextureinswapchain() const {
-  return _internal_has_useexternaltextureinswapchain();
+inline bool Msg_DeviceCreateSwapChain::has_a_useexternaltextureinswapchain() const {
+  return _internal_has_a_useexternaltextureinswapchain();
 }
-inline void Msg_DeviceCreateSwapChain::clear_useexternaltextureinswapchain() {
-  _impl_.useexternaltextureinswapchain_ = false;
+inline void Msg_DeviceCreateSwapChain::clear_a_useexternaltextureinswapchain() {
+  _impl_.a_useexternaltextureinswapchain_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Msg_DeviceCreateSwapChain::_internal_useexternaltextureinswapchain() const {
-  return _impl_.useexternaltextureinswapchain_;
+inline bool Msg_DeviceCreateSwapChain::_internal_a_useexternaltextureinswapchain() const {
+  return _impl_.a_useexternaltextureinswapchain_;
 }
-inline bool Msg_DeviceCreateSwapChain::useexternaltextureinswapchain() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.useExternalTextureInSwapChain)
-  return _internal_useexternaltextureinswapchain();
+inline bool Msg_DeviceCreateSwapChain::a_useexternaltextureinswapchain() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_useExternalTextureInSwapChain)
+  return _internal_a_useexternaltextureinswapchain();
 }
-inline void Msg_DeviceCreateSwapChain::_internal_set_useexternaltextureinswapchain(bool value) {
+inline void Msg_DeviceCreateSwapChain::_internal_set_a_useexternaltextureinswapchain(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.useexternaltextureinswapchain_ = value;
+  _impl_.a_useexternaltextureinswapchain_ = value;
 }
-inline void Msg_DeviceCreateSwapChain::set_useexternaltextureinswapchain(bool value) {
-  _internal_set_useexternaltextureinswapchain(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.useExternalTextureInSwapChain)
+inline void Msg_DeviceCreateSwapChain::set_a_useexternaltextureinswapchain(bool value) {
+  _internal_set_a_useexternaltextureinswapchain(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_useExternalTextureInSwapChain)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SwapChainPresent
 
-// required bytes textureId = 1;
-inline bool Msg_SwapChainPresent::_internal_has_textureid() const {
+// required bytes a_textureId = 1;
+inline bool Msg_SwapChainPresent::_internal_has_a_textureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SwapChainPresent::has_textureid() const {
-  return _internal_has_textureid();
+inline bool Msg_SwapChainPresent::has_a_textureid() const {
+  return _internal_has_a_textureid();
 }
-inline void Msg_SwapChainPresent::clear_textureid() {
-  _impl_.textureid_.ClearToEmpty();
+inline void Msg_SwapChainPresent::clear_a_textureid() {
+  _impl_.a_textureid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SwapChainPresent::textureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.textureId)
-  return _internal_textureid();
+inline const std::string& Msg_SwapChainPresent::a_textureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
+  return _internal_a_textureid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainPresent::set_textureid(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainPresent::set_a_textureid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.textureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.textureId)
+ _impl_.a_textureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
 }
-inline std::string* Msg_SwapChainPresent::mutable_textureid() {
-  std::string* _s = _internal_mutable_textureid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.textureId)
+inline std::string* Msg_SwapChainPresent::mutable_a_textureid() {
+  std::string* _s = _internal_mutable_a_textureid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
   return _s;
 }
-inline const std::string& Msg_SwapChainPresent::_internal_textureid() const {
-  return _impl_.textureid_.Get();
+inline const std::string& Msg_SwapChainPresent::_internal_a_textureid() const {
+  return _impl_.a_textureid_.Get();
 }
-inline void Msg_SwapChainPresent::_internal_set_textureid(const std::string& value) {
+inline void Msg_SwapChainPresent::_internal_set_a_textureid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.textureid_.Set(value, GetArenaForAllocation());
+  _impl_.a_textureid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::_internal_mutable_textureid() {
+inline std::string* Msg_SwapChainPresent::_internal_mutable_a_textureid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.textureid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_textureid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::release_textureid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.textureId)
-  if (!_internal_has_textureid()) {
+inline std::string* Msg_SwapChainPresent::release_a_textureid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
+  if (!_internal_has_a_textureid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.textureid_.Release();
+  auto* p = _impl_.a_textureid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.textureid_.IsDefault()) {
-    _impl_.textureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_textureid_.IsDefault()) {
+    _impl_.a_textureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainPresent::set_allocated_textureid(std::string* textureid) {
-  if (textureid != nullptr) {
+inline void Msg_SwapChainPresent::set_allocated_a_textureid(std::string* a_textureid) {
+  if (a_textureid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.textureid_.SetAllocated(textureid, GetArenaForAllocation());
+  _impl_.a_textureid_.SetAllocated(a_textureid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.textureid_.IsDefault()) {
-    _impl_.textureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_textureid_.IsDefault()) {
+    _impl_.a_textureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.textureId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
 }
 
-// required bytes commandEncoderId = 2;
-inline bool Msg_SwapChainPresent::_internal_has_commandencoderid() const {
+// required bytes a_commandEncoderId = 2;
+inline bool Msg_SwapChainPresent::_internal_has_a_commandencoderid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SwapChainPresent::has_commandencoderid() const {
-  return _internal_has_commandencoderid();
+inline bool Msg_SwapChainPresent::has_a_commandencoderid() const {
+  return _internal_has_a_commandencoderid();
 }
-inline void Msg_SwapChainPresent::clear_commandencoderid() {
-  _impl_.commandencoderid_.ClearToEmpty();
+inline void Msg_SwapChainPresent::clear_a_commandencoderid() {
+  _impl_.a_commandencoderid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_SwapChainPresent::commandencoderid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.commandEncoderId)
-  return _internal_commandencoderid();
+inline const std::string& Msg_SwapChainPresent::a_commandencoderid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
+  return _internal_a_commandencoderid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainPresent::set_commandencoderid(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainPresent::set_a_commandencoderid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.commandencoderid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.commandEncoderId)
+ _impl_.a_commandencoderid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
 }
-inline std::string* Msg_SwapChainPresent::mutable_commandencoderid() {
-  std::string* _s = _internal_mutable_commandencoderid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.commandEncoderId)
+inline std::string* Msg_SwapChainPresent::mutable_a_commandencoderid() {
+  std::string* _s = _internal_mutable_a_commandencoderid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
   return _s;
 }
-inline const std::string& Msg_SwapChainPresent::_internal_commandencoderid() const {
-  return _impl_.commandencoderid_.Get();
+inline const std::string& Msg_SwapChainPresent::_internal_a_commandencoderid() const {
+  return _impl_.a_commandencoderid_.Get();
 }
-inline void Msg_SwapChainPresent::_internal_set_commandencoderid(const std::string& value) {
+inline void Msg_SwapChainPresent::_internal_set_a_commandencoderid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.commandencoderid_.Set(value, GetArenaForAllocation());
+  _impl_.a_commandencoderid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::_internal_mutable_commandencoderid() {
+inline std::string* Msg_SwapChainPresent::_internal_mutable_a_commandencoderid() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.commandencoderid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_commandencoderid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::release_commandencoderid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.commandEncoderId)
-  if (!_internal_has_commandencoderid()) {
+inline std::string* Msg_SwapChainPresent::release_a_commandencoderid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
+  if (!_internal_has_a_commandencoderid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.commandencoderid_.Release();
+  auto* p = _impl_.a_commandencoderid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.commandencoderid_.IsDefault()) {
-    _impl_.commandencoderid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_commandencoderid_.IsDefault()) {
+    _impl_.a_commandencoderid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainPresent::set_allocated_commandencoderid(std::string* commandencoderid) {
-  if (commandencoderid != nullptr) {
+inline void Msg_SwapChainPresent::set_allocated_a_commandencoderid(std::string* a_commandencoderid) {
+  if (a_commandencoderid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.commandencoderid_.SetAllocated(commandencoderid, GetArenaForAllocation());
+  _impl_.a_commandencoderid_.SetAllocated(a_commandencoderid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.commandencoderid_.IsDefault()) {
-    _impl_.commandencoderid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_commandencoderid_.IsDefault()) {
+    _impl_.a_commandencoderid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.commandEncoderId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
 }
 
-// required bytes remoteTextureId = 3;
-inline bool Msg_SwapChainPresent::_internal_has_remotetextureid() const {
+// required bytes a_remoteTextureId = 3;
+inline bool Msg_SwapChainPresent::_internal_has_a_remotetextureid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_SwapChainPresent::has_remotetextureid() const {
-  return _internal_has_remotetextureid();
+inline bool Msg_SwapChainPresent::has_a_remotetextureid() const {
+  return _internal_has_a_remotetextureid();
 }
-inline void Msg_SwapChainPresent::clear_remotetextureid() {
-  _impl_.remotetextureid_.ClearToEmpty();
+inline void Msg_SwapChainPresent::clear_a_remotetextureid() {
+  _impl_.a_remotetextureid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_SwapChainPresent::remotetextureid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureId)
-  return _internal_remotetextureid();
+inline const std::string& Msg_SwapChainPresent::a_remotetextureid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
+  return _internal_a_remotetextureid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainPresent::set_remotetextureid(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainPresent::set_a_remotetextureid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.remotetextureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureId)
+ _impl_.a_remotetextureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
 }
-inline std::string* Msg_SwapChainPresent::mutable_remotetextureid() {
-  std::string* _s = _internal_mutable_remotetextureid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureId)
+inline std::string* Msg_SwapChainPresent::mutable_a_remotetextureid() {
+  std::string* _s = _internal_mutable_a_remotetextureid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
   return _s;
 }
-inline const std::string& Msg_SwapChainPresent::_internal_remotetextureid() const {
-  return _impl_.remotetextureid_.Get();
+inline const std::string& Msg_SwapChainPresent::_internal_a_remotetextureid() const {
+  return _impl_.a_remotetextureid_.Get();
 }
-inline void Msg_SwapChainPresent::_internal_set_remotetextureid(const std::string& value) {
+inline void Msg_SwapChainPresent::_internal_set_a_remotetextureid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.remotetextureid_.Set(value, GetArenaForAllocation());
+  _impl_.a_remotetextureid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::_internal_mutable_remotetextureid() {
+inline std::string* Msg_SwapChainPresent::_internal_mutable_a_remotetextureid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.remotetextureid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_remotetextureid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::release_remotetextureid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureId)
-  if (!_internal_has_remotetextureid()) {
+inline std::string* Msg_SwapChainPresent::release_a_remotetextureid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
+  if (!_internal_has_a_remotetextureid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.remotetextureid_.Release();
+  auto* p = _impl_.a_remotetextureid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remotetextureid_.IsDefault()) {
-    _impl_.remotetextureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remotetextureid_.IsDefault()) {
+    _impl_.a_remotetextureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainPresent::set_allocated_remotetextureid(std::string* remotetextureid) {
-  if (remotetextureid != nullptr) {
+inline void Msg_SwapChainPresent::set_allocated_a_remotetextureid(std::string* a_remotetextureid) {
+  if (a_remotetextureid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.remotetextureid_.SetAllocated(remotetextureid, GetArenaForAllocation());
+  _impl_.a_remotetextureid_.SetAllocated(a_remotetextureid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remotetextureid_.IsDefault()) {
-    _impl_.remotetextureid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remotetextureid_.IsDefault()) {
+    _impl_.a_remotetextureid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
 }
 
-// required bytes remoteTextureOwnerId = 4;
-inline bool Msg_SwapChainPresent::_internal_has_remotetextureownerid() const {
+// required bytes a_remoteTextureOwnerId = 4;
+inline bool Msg_SwapChainPresent::_internal_has_a_remotetextureownerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_SwapChainPresent::has_remotetextureownerid() const {
-  return _internal_has_remotetextureownerid();
+inline bool Msg_SwapChainPresent::has_a_remotetextureownerid() const {
+  return _internal_has_a_remotetextureownerid();
 }
-inline void Msg_SwapChainPresent::clear_remotetextureownerid() {
-  _impl_.remotetextureownerid_.ClearToEmpty();
+inline void Msg_SwapChainPresent::clear_a_remotetextureownerid() {
+  _impl_.a_remotetextureownerid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_SwapChainPresent::remotetextureownerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureOwnerId)
-  return _internal_remotetextureownerid();
+inline const std::string& Msg_SwapChainPresent::a_remotetextureownerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
+  return _internal_a_remotetextureownerid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainPresent::set_remotetextureownerid(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainPresent::set_a_remotetextureownerid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.remotetextureownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureOwnerId)
+ _impl_.a_remotetextureownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
 }
-inline std::string* Msg_SwapChainPresent::mutable_remotetextureownerid() {
-  std::string* _s = _internal_mutable_remotetextureownerid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureOwnerId)
+inline std::string* Msg_SwapChainPresent::mutable_a_remotetextureownerid() {
+  std::string* _s = _internal_mutable_a_remotetextureownerid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
   return _s;
 }
-inline const std::string& Msg_SwapChainPresent::_internal_remotetextureownerid() const {
-  return _impl_.remotetextureownerid_.Get();
+inline const std::string& Msg_SwapChainPresent::_internal_a_remotetextureownerid() const {
+  return _impl_.a_remotetextureownerid_.Get();
 }
-inline void Msg_SwapChainPresent::_internal_set_remotetextureownerid(const std::string& value) {
+inline void Msg_SwapChainPresent::_internal_set_a_remotetextureownerid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.remotetextureownerid_.Set(value, GetArenaForAllocation());
+  _impl_.a_remotetextureownerid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::_internal_mutable_remotetextureownerid() {
+inline std::string* Msg_SwapChainPresent::_internal_mutable_a_remotetextureownerid() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.remotetextureownerid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_remotetextureownerid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainPresent::release_remotetextureownerid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureOwnerId)
-  if (!_internal_has_remotetextureownerid()) {
+inline std::string* Msg_SwapChainPresent::release_a_remotetextureownerid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
+  if (!_internal_has_a_remotetextureownerid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.remotetextureownerid_.Release();
+  auto* p = _impl_.a_remotetextureownerid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remotetextureownerid_.IsDefault()) {
-    _impl_.remotetextureownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remotetextureownerid_.IsDefault()) {
+    _impl_.a_remotetextureownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainPresent::set_allocated_remotetextureownerid(std::string* remotetextureownerid) {
-  if (remotetextureownerid != nullptr) {
+inline void Msg_SwapChainPresent::set_allocated_a_remotetextureownerid(std::string* a_remotetextureownerid) {
+  if (a_remotetextureownerid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.remotetextureownerid_.SetAllocated(remotetextureownerid, GetArenaForAllocation());
+  _impl_.a_remotetextureownerid_.SetAllocated(a_remotetextureownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.remotetextureownerid_.IsDefault()) {
-    _impl_.remotetextureownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_remotetextureownerid_.IsDefault()) {
+    _impl_.a_remotetextureownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.remoteTextureOwnerId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SwapChainDrop
 
-// required bytes ownerId = 1;
-inline bool Msg_SwapChainDrop::_internal_has_ownerid() const {
+// required bytes a_ownerId = 1;
+inline bool Msg_SwapChainDrop::_internal_has_a_ownerid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SwapChainDrop::has_ownerid() const {
-  return _internal_has_ownerid();
+inline bool Msg_SwapChainDrop::has_a_ownerid() const {
+  return _internal_has_a_ownerid();
 }
-inline void Msg_SwapChainDrop::clear_ownerid() {
-  _impl_.ownerid_.ClearToEmpty();
+inline void Msg_SwapChainDrop::clear_a_ownerid() {
+  _impl_.a_ownerid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SwapChainDrop::ownerid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.ownerId)
-  return _internal_ownerid();
+inline const std::string& Msg_SwapChainDrop::a_ownerid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
+  return _internal_a_ownerid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainDrop::set_ownerid(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainDrop::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.ownerId)
+ _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
 }
-inline std::string* Msg_SwapChainDrop::mutable_ownerid() {
-  std::string* _s = _internal_mutable_ownerid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.ownerId)
+inline std::string* Msg_SwapChainDrop::mutable_a_ownerid() {
+  std::string* _s = _internal_mutable_a_ownerid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
   return _s;
 }
-inline const std::string& Msg_SwapChainDrop::_internal_ownerid() const {
-  return _impl_.ownerid_.Get();
+inline const std::string& Msg_SwapChainDrop::_internal_a_ownerid() const {
+  return _impl_.a_ownerid_.Get();
 }
-inline void Msg_SwapChainDrop::_internal_set_ownerid(const std::string& value) {
+inline void Msg_SwapChainDrop::_internal_set_a_ownerid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ownerid_.Set(value, GetArenaForAllocation());
+  _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainDrop::_internal_mutable_ownerid() {
+inline std::string* Msg_SwapChainDrop::_internal_mutable_a_ownerid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.ownerid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainDrop::release_ownerid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.ownerId)
-  if (!_internal_has_ownerid()) {
+inline std::string* Msg_SwapChainDrop::release_a_ownerid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
+  if (!_internal_has_a_ownerid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.ownerid_.Release();
+  auto* p = _impl_.a_ownerid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainDrop::set_allocated_ownerid(std::string* ownerid) {
-  if (ownerid != nullptr) {
+inline void Msg_SwapChainDrop::set_allocated_a_ownerid(std::string* a_ownerid) {
+  if (a_ownerid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.ownerid_.SetAllocated(ownerid, GetArenaForAllocation());
+  _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.ownerid_.IsDefault()) {
-    _impl_.ownerid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_ownerid_.IsDefault()) {
+    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.ownerId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
 }
 
-// required bytes txnType = 2;
-inline bool Msg_SwapChainDrop::_internal_has_txntype() const {
+// required bytes a_txnType = 2;
+inline bool Msg_SwapChainDrop::_internal_has_a_txntype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SwapChainDrop::has_txntype() const {
-  return _internal_has_txntype();
+inline bool Msg_SwapChainDrop::has_a_txntype() const {
+  return _internal_has_a_txntype();
 }
-inline void Msg_SwapChainDrop::clear_txntype() {
-  _impl_.txntype_.ClearToEmpty();
+inline void Msg_SwapChainDrop::clear_a_txntype() {
+  _impl_.a_txntype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_SwapChainDrop::txntype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnType)
-  return _internal_txntype();
+inline const std::string& Msg_SwapChainDrop::a_txntype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
+  return _internal_a_txntype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainDrop::set_txntype(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainDrop::set_a_txntype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.txntype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnType)
+ _impl_.a_txntype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
 }
-inline std::string* Msg_SwapChainDrop::mutable_txntype() {
-  std::string* _s = _internal_mutable_txntype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnType)
+inline std::string* Msg_SwapChainDrop::mutable_a_txntype() {
+  std::string* _s = _internal_mutable_a_txntype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
   return _s;
 }
-inline const std::string& Msg_SwapChainDrop::_internal_txntype() const {
-  return _impl_.txntype_.Get();
+inline const std::string& Msg_SwapChainDrop::_internal_a_txntype() const {
+  return _impl_.a_txntype_.Get();
 }
-inline void Msg_SwapChainDrop::_internal_set_txntype(const std::string& value) {
+inline void Msg_SwapChainDrop::_internal_set_a_txntype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.txntype_.Set(value, GetArenaForAllocation());
+  _impl_.a_txntype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainDrop::_internal_mutable_txntype() {
+inline std::string* Msg_SwapChainDrop::_internal_mutable_a_txntype() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.txntype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_txntype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainDrop::release_txntype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnType)
-  if (!_internal_has_txntype()) {
+inline std::string* Msg_SwapChainDrop::release_a_txntype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
+  if (!_internal_has_a_txntype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.txntype_.Release();
+  auto* p = _impl_.a_txntype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txntype_.IsDefault()) {
-    _impl_.txntype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txntype_.IsDefault()) {
+    _impl_.a_txntype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainDrop::set_allocated_txntype(std::string* txntype) {
-  if (txntype != nullptr) {
+inline void Msg_SwapChainDrop::set_allocated_a_txntype(std::string* a_txntype) {
+  if (a_txntype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.txntype_.SetAllocated(txntype, GetArenaForAllocation());
+  _impl_.a_txntype_.SetAllocated(a_txntype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txntype_.IsDefault()) {
-    _impl_.txntype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txntype_.IsDefault()) {
+    _impl_.a_txntype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
 }
 
-// required bytes txnId = 3;
-inline bool Msg_SwapChainDrop::_internal_has_txnid() const {
+// required bytes a_txnId = 3;
+inline bool Msg_SwapChainDrop::_internal_has_a_txnid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_SwapChainDrop::has_txnid() const {
-  return _internal_has_txnid();
+inline bool Msg_SwapChainDrop::has_a_txnid() const {
+  return _internal_has_a_txnid();
 }
-inline void Msg_SwapChainDrop::clear_txnid() {
-  _impl_.txnid_.ClearToEmpty();
+inline void Msg_SwapChainDrop::clear_a_txnid() {
+  _impl_.a_txnid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_SwapChainDrop::txnid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnId)
-  return _internal_txnid();
+inline const std::string& Msg_SwapChainDrop::a_txnid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
+  return _internal_a_txnid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SwapChainDrop::set_txnid(ArgT0&& arg0, ArgT... args) {
+void Msg_SwapChainDrop::set_a_txnid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.txnid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnId)
+ _impl_.a_txnid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
 }
-inline std::string* Msg_SwapChainDrop::mutable_txnid() {
-  std::string* _s = _internal_mutable_txnid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnId)
+inline std::string* Msg_SwapChainDrop::mutable_a_txnid() {
+  std::string* _s = _internal_mutable_a_txnid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
   return _s;
 }
-inline const std::string& Msg_SwapChainDrop::_internal_txnid() const {
-  return _impl_.txnid_.Get();
+inline const std::string& Msg_SwapChainDrop::_internal_a_txnid() const {
+  return _impl_.a_txnid_.Get();
 }
-inline void Msg_SwapChainDrop::_internal_set_txnid(const std::string& value) {
+inline void Msg_SwapChainDrop::_internal_set_a_txnid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.txnid_.Set(value, GetArenaForAllocation());
+  _impl_.a_txnid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainDrop::_internal_mutable_txnid() {
+inline std::string* Msg_SwapChainDrop::_internal_mutable_a_txnid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.txnid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_txnid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SwapChainDrop::release_txnid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnId)
-  if (!_internal_has_txnid()) {
+inline std::string* Msg_SwapChainDrop::release_a_txnid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
+  if (!_internal_has_a_txnid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.txnid_.Release();
+  auto* p = _impl_.a_txnid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txnid_.IsDefault()) {
-    _impl_.txnid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txnid_.IsDefault()) {
+    _impl_.a_txnid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SwapChainDrop::set_allocated_txnid(std::string* txnid) {
-  if (txnid != nullptr) {
+inline void Msg_SwapChainDrop::set_allocated_a_txnid(std::string* a_txnid) {
+  if (a_txnid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.txnid_.SetAllocated(txnid, GetArenaForAllocation());
+  _impl_.a_txnid_.SetAllocated(a_txnid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.txnid_.IsDefault()) {
-    _impl_.txnid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_txnid_.IsDefault()) {
+    _impl_.a_txnid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.txnId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DevicePushErrorScope
 
-// required bytes selfId = 1;
-inline bool Msg_DevicePushErrorScope::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DevicePushErrorScope::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DevicePushErrorScope::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DevicePushErrorScope::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DevicePushErrorScope::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DevicePushErrorScope::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DevicePushErrorScope::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DevicePushErrorScope::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DevicePushErrorScope::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DevicePushErrorScope::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
 }
-inline std::string* Msg_DevicePushErrorScope::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.selfId)
+inline std::string* Msg_DevicePushErrorScope::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DevicePushErrorScope::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DevicePushErrorScope::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DevicePushErrorScope::_internal_set_selfid(const std::string& value) {
+inline void Msg_DevicePushErrorScope::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DevicePushErrorScope::_internal_mutable_selfid() {
+inline std::string* Msg_DevicePushErrorScope::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DevicePushErrorScope::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DevicePushErrorScope::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DevicePushErrorScope::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DevicePushErrorScope::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
 }
 
-// required bytes aFilter = 2;
-inline bool Msg_DevicePushErrorScope::_internal_has_afilter() const {
+// required bytes a_aFilter = 2;
+inline bool Msg_DevicePushErrorScope::_internal_has_a_afilter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DevicePushErrorScope::has_afilter() const {
-  return _internal_has_afilter();
+inline bool Msg_DevicePushErrorScope::has_a_afilter() const {
+  return _internal_has_a_afilter();
 }
-inline void Msg_DevicePushErrorScope::clear_afilter() {
-  _impl_.afilter_.ClearToEmpty();
+inline void Msg_DevicePushErrorScope::clear_a_afilter() {
+  _impl_.a_afilter_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DevicePushErrorScope::afilter() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.aFilter)
-  return _internal_afilter();
+inline const std::string& Msg_DevicePushErrorScope::a_afilter() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
+  return _internal_a_afilter();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DevicePushErrorScope::set_afilter(ArgT0&& arg0, ArgT... args) {
+void Msg_DevicePushErrorScope::set_a_afilter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.afilter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.aFilter)
+ _impl_.a_afilter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
 }
-inline std::string* Msg_DevicePushErrorScope::mutable_afilter() {
-  std::string* _s = _internal_mutable_afilter();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.aFilter)
+inline std::string* Msg_DevicePushErrorScope::mutable_a_afilter() {
+  std::string* _s = _internal_mutable_a_afilter();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
   return _s;
 }
-inline const std::string& Msg_DevicePushErrorScope::_internal_afilter() const {
-  return _impl_.afilter_.Get();
+inline const std::string& Msg_DevicePushErrorScope::_internal_a_afilter() const {
+  return _impl_.a_afilter_.Get();
 }
-inline void Msg_DevicePushErrorScope::_internal_set_afilter(const std::string& value) {
+inline void Msg_DevicePushErrorScope::_internal_set_a_afilter(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.afilter_.Set(value, GetArenaForAllocation());
+  _impl_.a_afilter_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DevicePushErrorScope::_internal_mutable_afilter() {
+inline std::string* Msg_DevicePushErrorScope::_internal_mutable_a_afilter() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.afilter_.Mutable(GetArenaForAllocation());
+  return _impl_.a_afilter_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DevicePushErrorScope::release_afilter() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.aFilter)
-  if (!_internal_has_afilter()) {
+inline std::string* Msg_DevicePushErrorScope::release_a_afilter() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
+  if (!_internal_has_a_afilter()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.afilter_.Release();
+  auto* p = _impl_.a_afilter_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afilter_.IsDefault()) {
-    _impl_.afilter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afilter_.IsDefault()) {
+    _impl_.a_afilter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DevicePushErrorScope::set_allocated_afilter(std::string* afilter) {
-  if (afilter != nullptr) {
+inline void Msg_DevicePushErrorScope::set_allocated_a_afilter(std::string* a_afilter) {
+  if (a_afilter != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.afilter_.SetAllocated(afilter, GetArenaForAllocation());
+  _impl_.a_afilter_.SetAllocated(a_afilter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.afilter_.IsDefault()) {
-    _impl_.afilter_.Set("", GetArenaForAllocation());
+  if (_impl_.a_afilter_.IsDefault()) {
+    _impl_.a_afilter_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.aFilter)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DevicePopErrorScope
 
-// required bytes selfId = 1;
-inline bool Msg_DevicePopErrorScope::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_DevicePopErrorScope::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DevicePopErrorScope::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_DevicePopErrorScope::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_DevicePopErrorScope::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_DevicePopErrorScope::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DevicePopErrorScope::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_DevicePopErrorScope::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DevicePopErrorScope::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_DevicePopErrorScope::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
 }
-inline std::string* Msg_DevicePopErrorScope::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.selfId)
+inline std::string* Msg_DevicePopErrorScope::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
   return _s;
 }
-inline const std::string& Msg_DevicePopErrorScope::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_DevicePopErrorScope::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_DevicePopErrorScope::_internal_set_selfid(const std::string& value) {
+inline void Msg_DevicePopErrorScope::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DevicePopErrorScope::_internal_mutable_selfid() {
+inline std::string* Msg_DevicePopErrorScope::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DevicePopErrorScope::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_DevicePopErrorScope::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DevicePopErrorScope::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_DevicePopErrorScope::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_DevicePopErrorScope
 
-// required bytes result = 1;
-inline bool Reply_DevicePopErrorScope::_internal_has_result() const {
+// required bytes a_result = 1;
+inline bool Reply_DevicePopErrorScope::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_DevicePopErrorScope::has_result() const {
-  return _internal_has_result();
+inline bool Reply_DevicePopErrorScope::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_DevicePopErrorScope::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_DevicePopErrorScope::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_DevicePopErrorScope::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.result)
-  return _internal_result();
+inline const std::string& Reply_DevicePopErrorScope::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_DevicePopErrorScope::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_DevicePopErrorScope::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
 }
-inline std::string* Reply_DevicePopErrorScope::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.result)
+inline std::string* Reply_DevicePopErrorScope::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
   return _s;
 }
-inline const std::string& Reply_DevicePopErrorScope::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_DevicePopErrorScope::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_DevicePopErrorScope::_internal_set_result(const std::string& value) {
+inline void Reply_DevicePopErrorScope::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_DevicePopErrorScope::_internal_mutable_result() {
+inline std::string* Reply_DevicePopErrorScope::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_DevicePopErrorScope::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_DevicePopErrorScope::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_DevicePopErrorScope::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_DevicePopErrorScope::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReportError
 
-// required bytes selfId = 1;
-inline bool Msg_ReportError::_internal_has_selfid() const {
+// required bytes a_selfId = 1;
+inline bool Msg_ReportError::_internal_has_a_selfid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReportError::has_selfid() const {
-  return _internal_has_selfid();
+inline bool Msg_ReportError::has_a_selfid() const {
+  return _internal_has_a_selfid();
 }
-inline void Msg_ReportError::clear_selfid() {
-  _impl_.selfid_.ClearToEmpty();
+inline void Msg_ReportError::clear_a_selfid() {
+  _impl_.a_selfid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ReportError::selfid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.selfId)
-  return _internal_selfid();
+inline const std::string& Msg_ReportError::a_selfid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
+  return _internal_a_selfid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReportError::set_selfid(ArgT0&& arg0, ArgT... args) {
+void Msg_ReportError::set_a_selfid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.selfId)
+ _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
 }
-inline std::string* Msg_ReportError::mutable_selfid() {
-  std::string* _s = _internal_mutable_selfid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.selfId)
+inline std::string* Msg_ReportError::mutable_a_selfid() {
+  std::string* _s = _internal_mutable_a_selfid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
   return _s;
 }
-inline const std::string& Msg_ReportError::_internal_selfid() const {
-  return _impl_.selfid_.Get();
+inline const std::string& Msg_ReportError::_internal_a_selfid() const {
+  return _impl_.a_selfid_.Get();
 }
-inline void Msg_ReportError::_internal_set_selfid(const std::string& value) {
+inline void Msg_ReportError::_internal_set_a_selfid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.selfid_.Set(value, GetArenaForAllocation());
+  _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReportError::_internal_mutable_selfid() {
+inline std::string* Msg_ReportError::_internal_mutable_a_selfid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.selfid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReportError::release_selfid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.selfId)
-  if (!_internal_has_selfid()) {
+inline std::string* Msg_ReportError::release_a_selfid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
+  if (!_internal_has_a_selfid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.selfid_.Release();
+  auto* p = _impl_.a_selfid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReportError::set_allocated_selfid(std::string* selfid) {
-  if (selfid != nullptr) {
+inline void Msg_ReportError::set_allocated_a_selfid(std::string* a_selfid) {
+  if (a_selfid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.selfid_.SetAllocated(selfid, GetArenaForAllocation());
+  _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.selfid_.IsDefault()) {
-    _impl_.selfid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_selfid_.IsDefault()) {
+    _impl_.a_selfid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.selfId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
 }
 
-// required bytes aType = 2;
-inline bool Msg_ReportError::_internal_has_atype() const {
+// required bytes a_aType = 2;
+inline bool Msg_ReportError::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ReportError::has_atype() const {
-  return _internal_has_atype();
+inline bool Msg_ReportError::has_a_atype() const {
+  return _internal_has_a_atype();
 }
-inline void Msg_ReportError::clear_atype() {
-  _impl_.atype_.ClearToEmpty();
+inline void Msg_ReportError::clear_a_atype() {
+  _impl_.a_atype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ReportError::atype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.aType)
-  return _internal_atype();
+inline const std::string& Msg_ReportError::a_atype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
+  return _internal_a_atype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReportError::set_atype(ArgT0&& arg0, ArgT... args) {
+void Msg_ReportError::set_a_atype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.aType)
+ _impl_.a_atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
 }
-inline std::string* Msg_ReportError::mutable_atype() {
-  std::string* _s = _internal_mutable_atype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.aType)
+inline std::string* Msg_ReportError::mutable_a_atype() {
+  std::string* _s = _internal_mutable_a_atype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
   return _s;
 }
-inline const std::string& Msg_ReportError::_internal_atype() const {
-  return _impl_.atype_.Get();
+inline const std::string& Msg_ReportError::_internal_a_atype() const {
+  return _impl_.a_atype_.Get();
 }
-inline void Msg_ReportError::_internal_set_atype(const std::string& value) {
+inline void Msg_ReportError::_internal_set_a_atype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.atype_.Set(value, GetArenaForAllocation());
+  _impl_.a_atype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReportError::_internal_mutable_atype() {
+inline std::string* Msg_ReportError::_internal_mutable_a_atype() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.atype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReportError::release_atype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.aType)
-  if (!_internal_has_atype()) {
+inline std::string* Msg_ReportError::release_a_atype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
+  if (!_internal_has_a_atype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.atype_.Release();
+  auto* p = _impl_.a_atype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atype_.IsDefault()) {
-    _impl_.atype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atype_.IsDefault()) {
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReportError::set_allocated_atype(std::string* atype) {
-  if (atype != nullptr) {
+inline void Msg_ReportError::set_allocated_a_atype(std::string* a_atype) {
+  if (a_atype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.atype_.SetAllocated(atype, GetArenaForAllocation());
+  _impl_.a_atype_.SetAllocated(a_atype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atype_.IsDefault()) {
-    _impl_.atype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atype_.IsDefault()) {
+    _impl_.a_atype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.aType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
 }
 
-// required bytes message = 3;
-inline bool Msg_ReportError::_internal_has_message() const {
+// required bytes a_message = 3;
+inline bool Msg_ReportError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ReportError::has_message() const {
-  return _internal_has_message();
+inline bool Msg_ReportError::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void Msg_ReportError::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void Msg_ReportError::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_ReportError::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.message)
-  return _internal_message();
+inline const std::string& Msg_ReportError::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ReportError::set_message(ArgT0&& arg0, ArgT... args) {
+void Msg_ReportError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
 }
-inline std::string* Msg_ReportError::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.message)
+inline std::string* Msg_ReportError::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
   return _s;
 }
-inline const std::string& Msg_ReportError::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& Msg_ReportError::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void Msg_ReportError::_internal_set_message(const std::string& value) {
+inline void Msg_ReportError::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ReportError::_internal_mutable_message() {
+inline std::string* Msg_ReportError::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ReportError::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.message)
-  if (!_internal_has_message()) {
+inline std::string* Msg_ReportError::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ReportError::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void Msg_ReportError::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_UncapturedError
 
-// optional bytes aDeviceId = 1;
-inline bool Msg_UncapturedError::_internal_has_adeviceid() const {
+// optional bytes a_aDeviceId = 1;
+inline bool Msg_UncapturedError::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_UncapturedError::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_UncapturedError::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_UncapturedError::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_UncapturedError::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_UncapturedError::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_UncapturedError::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UncapturedError::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_UncapturedError::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
 }
-inline std::string* Msg_UncapturedError::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.aDeviceId)
+inline std::string* Msg_UncapturedError::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_UncapturedError::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_UncapturedError::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_UncapturedError::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_UncapturedError::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UncapturedError::_internal_mutable_adeviceid() {
+inline std::string* Msg_UncapturedError::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UncapturedError::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_UncapturedError::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UncapturedError::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_UncapturedError::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
 }
 
-// required bytes message = 2;
-inline bool Msg_UncapturedError::_internal_has_message() const {
+// required bytes a_message = 2;
+inline bool Msg_UncapturedError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_UncapturedError::has_message() const {
-  return _internal_has_message();
+inline bool Msg_UncapturedError::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void Msg_UncapturedError::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void Msg_UncapturedError::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_UncapturedError::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.message)
-  return _internal_message();
+inline const std::string& Msg_UncapturedError::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_UncapturedError::set_message(ArgT0&& arg0, ArgT... args) {
+void Msg_UncapturedError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
 }
-inline std::string* Msg_UncapturedError::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.message)
+inline std::string* Msg_UncapturedError::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
   return _s;
 }
-inline const std::string& Msg_UncapturedError::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& Msg_UncapturedError::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void Msg_UncapturedError::_internal_set_message(const std::string& value) {
+inline void Msg_UncapturedError::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_UncapturedError::_internal_mutable_message() {
+inline std::string* Msg_UncapturedError::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_UncapturedError::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.message)
-  if (!_internal_has_message()) {
+inline std::string* Msg_UncapturedError::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_UncapturedError::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void Msg_UncapturedError::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_DeviceLost
 
-// required bytes aDeviceId = 1;
-inline bool Msg_DeviceLost::_internal_has_adeviceid() const {
+// required bytes a_aDeviceId = 1;
+inline bool Msg_DeviceLost::_internal_has_a_adeviceid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_DeviceLost::has_adeviceid() const {
-  return _internal_has_adeviceid();
+inline bool Msg_DeviceLost::has_a_adeviceid() const {
+  return _internal_has_a_adeviceid();
 }
-inline void Msg_DeviceLost::clear_adeviceid() {
-  _impl_.adeviceid_.ClearToEmpty();
+inline void Msg_DeviceLost::clear_a_adeviceid() {
+  _impl_.a_adeviceid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_DeviceLost::adeviceid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.aDeviceId)
-  return _internal_adeviceid();
+inline const std::string& Msg_DeviceLost::a_adeviceid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
+  return _internal_a_adeviceid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceLost::set_adeviceid(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceLost::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.aDeviceId)
+ _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
 }
-inline std::string* Msg_DeviceLost::mutable_adeviceid() {
-  std::string* _s = _internal_mutable_adeviceid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.aDeviceId)
+inline std::string* Msg_DeviceLost::mutable_a_adeviceid() {
+  std::string* _s = _internal_mutable_a_adeviceid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
   return _s;
 }
-inline const std::string& Msg_DeviceLost::_internal_adeviceid() const {
-  return _impl_.adeviceid_.Get();
+inline const std::string& Msg_DeviceLost::_internal_a_adeviceid() const {
+  return _impl_.a_adeviceid_.Get();
 }
-inline void Msg_DeviceLost::_internal_set_adeviceid(const std::string& value) {
+inline void Msg_DeviceLost::_internal_set_a_adeviceid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.adeviceid_.Set(value, GetArenaForAllocation());
+  _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceLost::_internal_mutable_adeviceid() {
+inline std::string* Msg_DeviceLost::_internal_mutable_a_adeviceid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.adeviceid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceLost::release_adeviceid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.aDeviceId)
-  if (!_internal_has_adeviceid()) {
+inline std::string* Msg_DeviceLost::release_a_adeviceid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
+  if (!_internal_has_a_adeviceid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.adeviceid_.Release();
+  auto* p = _impl_.a_adeviceid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceLost::set_allocated_adeviceid(std::string* adeviceid) {
-  if (adeviceid != nullptr) {
+inline void Msg_DeviceLost::set_allocated_a_adeviceid(std::string* a_adeviceid) {
+  if (a_adeviceid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.adeviceid_.SetAllocated(adeviceid, GetArenaForAllocation());
+  _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.adeviceid_.IsDefault()) {
-    _impl_.adeviceid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_adeviceid_.IsDefault()) {
+    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.aDeviceId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
 }
 
-// optional uint32 reason = 2;
-inline bool Msg_DeviceLost::_internal_has_reason() const {
+// optional uint32 a_reason = 2;
+inline bool Msg_DeviceLost::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_DeviceLost::has_reason() const {
-  return _internal_has_reason();
+inline bool Msg_DeviceLost::has_a_reason() const {
+  return _internal_has_a_reason();
 }
-inline void Msg_DeviceLost::clear_reason() {
-  _impl_.reason_ = 0u;
+inline void Msg_DeviceLost::clear_a_reason() {
+  _impl_.a_reason_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_DeviceLost::_internal_reason() const {
-  return _impl_.reason_;
+inline uint32_t Msg_DeviceLost::_internal_a_reason() const {
+  return _impl_.a_reason_;
 }
-inline uint32_t Msg_DeviceLost::reason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.reason)
-  return _internal_reason();
+inline uint32_t Msg_DeviceLost::a_reason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_reason)
+  return _internal_a_reason();
 }
-inline void Msg_DeviceLost::_internal_set_reason(uint32_t value) {
+inline void Msg_DeviceLost::_internal_set_a_reason(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.reason_ = value;
+  _impl_.a_reason_ = value;
 }
-inline void Msg_DeviceLost::set_reason(uint32_t value) {
-  _internal_set_reason(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.reason)
+inline void Msg_DeviceLost::set_a_reason(uint32_t value) {
+  _internal_set_a_reason(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_reason)
 }
 
-// required bytes message = 3;
-inline bool Msg_DeviceLost::_internal_has_message() const {
+// required bytes a_message = 3;
+inline bool Msg_DeviceLost::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_DeviceLost::has_message() const {
-  return _internal_has_message();
+inline bool Msg_DeviceLost::has_a_message() const {
+  return _internal_has_a_message();
 }
-inline void Msg_DeviceLost::clear_message() {
-  _impl_.message_.ClearToEmpty();
+inline void Msg_DeviceLost::clear_a_message() {
+  _impl_.a_message_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_DeviceLost::message() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.message)
-  return _internal_message();
+inline const std::string& Msg_DeviceLost::a_message() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
+  return _internal_a_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_DeviceLost::set_message(ArgT0&& arg0, ArgT... args) {
+void Msg_DeviceLost::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.message)
+ _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
 }
-inline std::string* Msg_DeviceLost::mutable_message() {
-  std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.message)
+inline std::string* Msg_DeviceLost::mutable_a_message() {
+  std::string* _s = _internal_mutable_a_message();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
   return _s;
 }
-inline const std::string& Msg_DeviceLost::_internal_message() const {
-  return _impl_.message_.Get();
+inline const std::string& Msg_DeviceLost::_internal_a_message() const {
+  return _impl_.a_message_.Get();
 }
-inline void Msg_DeviceLost::_internal_set_message(const std::string& value) {
+inline void Msg_DeviceLost::_internal_set_a_message(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.message_.Set(value, GetArenaForAllocation());
+  _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceLost::_internal_mutable_message() {
+inline std::string* Msg_DeviceLost::_internal_mutable_a_message() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.message_.Mutable(GetArenaForAllocation());
+  return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_DeviceLost::release_message() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.message)
-  if (!_internal_has_message()) {
+inline std::string* Msg_DeviceLost::release_a_message() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
+  if (!_internal_has_a_message()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.message_.Release();
+  auto* p = _impl_.a_message_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_DeviceLost::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
+inline void Msg_DeviceLost::set_allocated_a_message(std::string* a_message) {
+  if (a_message != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+  _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_.IsDefault()) {
-    _impl_.message_.Set("", GetArenaForAllocation());
+  if (_impl_.a_message_.IsDefault()) {
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.message)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
 }
 
 // -------------------------------------------------------------------

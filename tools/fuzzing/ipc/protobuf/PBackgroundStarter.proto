@@ -16,7 +16,7 @@ package protobuf.mozilla.ipc.PBackgroundStarter;
 
 // Message declarations
 message Msg_InitBackground {
-  required bytes aEndpoint = 1;
+  required bytes a_aEndpoint = 1;
 }
 
 // Parameter mappings stats:

@@ -25,7 +25,7 @@ PROTOBUF_CONSTEXPR Msg_TimerExpired::Msg_TimerExpired(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.atimerid_)*/0u} {}
+  , /*decltype(_impl_.a_atimerid_)*/0u} {}
 struct Msg_TimerExpiredDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TimerExpiredDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,8 +39,8 @@ PROTOBUF_CONSTEXPR Msg_SetTimer::Msg_SetTimer(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.atimerid_)*/0u
-  , /*decltype(_impl_.atimeoutms_)*/0u} {}
+  , /*decltype(_impl_.a_atimerid_)*/0u
+  , /*decltype(_impl_.a_atimeoutms_)*/0u} {}
 struct Msg_SetTimerDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetTimerDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -88,7 +88,7 @@ namespace PGMPTimer {
 class Msg_TimerExpired::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_TimerExpired>()._impl_._has_bits_);
-  static void set_has_atimerid(HasBits* has_bits) {
+  static void set_has_a_atimerid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -108,10 +108,10 @@ Msg_TimerExpired::Msg_TimerExpired(const Msg_TimerExpired& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atimerid_){}};
+    , decltype(_impl_.a_atimerid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.atimerid_ = from._impl_.atimerid_;
+  _this->_impl_.a_atimerid_ = from._impl_.a_atimerid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired)
 }
 
@@ -122,7 +122,7 @@ inline void Msg_TimerExpired::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atimerid_){0u}
+    , decltype(_impl_.a_atimerid_){0u}
   };
 }
 
@@ -149,7 +149,7 @@ void Msg_TimerExpired::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.atimerid_ = 0u;
+  _impl_.a_atimerid_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -161,11 +161,11 @@ const char* Msg_TimerExpired::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aTimerId = 1;
+      // required uint32 a_aTimerId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_atimerid(&has_bits);
-          _impl_.atimerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_atimerid(&has_bits);
+          _impl_.a_atimerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -201,10 +201,10 @@ uint8_t* Msg_TimerExpired::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aTimerId = 1;
+  // required uint32 a_aTimerId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_atimerid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_atimerid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -219,9 +219,9 @@ size_t Msg_TimerExpired::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPTimer.Msg_TimerExpired)
   size_t total_size = 0;
 
-  // required uint32 aTimerId = 1;
-  if (_internal_has_atimerid()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_atimerid());
+  // required uint32 a_aTimerId = 1;
+  if (_internal_has_a_atimerid()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_atimerid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -248,8 +248,8 @@ void Msg_TimerExpired::MergeFrom(const Msg_TimerExpired& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_atimerid()) {
-    _this->_internal_set_atimerid(from._internal_atimerid());
+  if (from._internal_has_a_atimerid()) {
+    _this->_internal_set_a_atimerid(from._internal_a_atimerid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -270,7 +270,7 @@ void Msg_TimerExpired::InternalSwap(Msg_TimerExpired* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.atimerid_, other->_impl_.atimerid_);
+  swap(_impl_.a_atimerid_, other->_impl_.a_atimerid_);
 }
 
 std::string Msg_TimerExpired::GetTypeName() const {
@@ -283,10 +283,10 @@ std::string Msg_TimerExpired::GetTypeName() const {
 class Msg_SetTimer::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SetTimer>()._impl_._has_bits_);
-  static void set_has_atimerid(HasBits* has_bits) {
+  static void set_has_a_atimerid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_atimeoutms(HasBits* has_bits) {
+  static void set_has_a_atimeoutms(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -306,13 +306,13 @@ Msg_SetTimer::Msg_SetTimer(const Msg_SetTimer& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atimerid_){}
-    , decltype(_impl_.atimeoutms_){}};
+    , decltype(_impl_.a_atimerid_){}
+    , decltype(_impl_.a_atimeoutms_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.atimerid_, &from._impl_.atimerid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.atimeoutms_) -
-    reinterpret_cast<char*>(&_impl_.atimerid_)) + sizeof(_impl_.atimeoutms_));
+  ::memcpy(&_impl_.a_atimerid_, &from._impl_.a_atimerid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_atimeoutms_) -
+    reinterpret_cast<char*>(&_impl_.a_atimerid_)) + sizeof(_impl_.a_atimeoutms_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer)
 }
 
@@ -323,8 +323,8 @@ inline void Msg_SetTimer::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.atimerid_){0u}
-    , decltype(_impl_.atimeoutms_){0u}
+    , decltype(_impl_.a_atimerid_){0u}
+    , decltype(_impl_.a_atimeoutms_){0u}
   };
 }
 
@@ -353,9 +353,9 @@ void Msg_SetTimer::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.atimerid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.atimeoutms_) -
-        reinterpret_cast<char*>(&_impl_.atimerid_)) + sizeof(_impl_.atimeoutms_));
+    ::memset(&_impl_.a_atimerid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_atimeoutms_) -
+        reinterpret_cast<char*>(&_impl_.a_atimerid_)) + sizeof(_impl_.a_atimeoutms_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -368,20 +368,20 @@ const char* Msg_SetTimer::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 aTimerId = 1;
+      // required uint32 a_aTimerId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_atimerid(&has_bits);
-          _impl_.atimerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_atimerid(&has_bits);
+          _impl_.a_atimerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aTimeoutMs = 2;
+      // required uint32 a_aTimeoutMs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_atimeoutms(&has_bits);
-          _impl_.atimeoutms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_atimeoutms(&has_bits);
+          _impl_.a_atimeoutms_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -417,16 +417,16 @@ uint8_t* Msg_SetTimer::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aTimerId = 1;
+  // required uint32 a_aTimerId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_atimerid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_atimerid(), target);
   }
 
-  // required uint32 aTimeoutMs = 2;
+  // required uint32 a_aTimeoutMs = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_atimeoutms(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_atimeoutms(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -441,14 +441,14 @@ size_t Msg_SetTimer::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gmp.PGMPTimer.Msg_SetTimer)
   size_t total_size = 0;
 
-  if (_internal_has_atimerid()) {
-    // required uint32 aTimerId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_atimerid());
+  if (_internal_has_a_atimerid()) {
+    // required uint32 a_aTimerId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_atimerid());
   }
 
-  if (_internal_has_atimeoutms()) {
-    // required uint32 aTimeoutMs = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_atimeoutms());
+  if (_internal_has_a_atimeoutms()) {
+    // required uint32 a_aTimeoutMs = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_atimeoutms());
   }
 
   return total_size;
@@ -458,11 +458,11 @@ size_t Msg_SetTimer::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 aTimerId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_atimerid());
+    // required uint32 a_aTimerId = 1;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_atimerid());
 
-    // required uint32 aTimeoutMs = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_atimeoutms());
+    // required uint32 a_aTimeoutMs = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_atimeoutms());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -495,10 +495,10 @@ void Msg_SetTimer::MergeFrom(const Msg_SetTimer& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.atimerid_ = from._impl_.atimerid_;
+      _this->_impl_.a_atimerid_ = from._impl_.a_atimerid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.atimeoutms_ = from._impl_.atimeoutms_;
+      _this->_impl_.a_atimeoutms_ = from._impl_.a_atimeoutms_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -522,11 +522,11 @@ void Msg_SetTimer::InternalSwap(Msg_SetTimer* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_SetTimer, _impl_.atimeoutms_)
-      + sizeof(Msg_SetTimer::_impl_.atimeoutms_)
-      - PROTOBUF_FIELD_OFFSET(Msg_SetTimer, _impl_.atimerid_)>(
-          reinterpret_cast<char*>(&_impl_.atimerid_),
-          reinterpret_cast<char*>(&other->_impl_.atimerid_));
+      PROTOBUF_FIELD_OFFSET(Msg_SetTimer, _impl_.a_atimeoutms_)
+      + sizeof(Msg_SetTimer::_impl_.a_atimeoutms_)
+      - PROTOBUF_FIELD_OFFSET(Msg_SetTimer, _impl_.a_atimerid_)>(
+          reinterpret_cast<char*>(&_impl_.a_atimerid_),
+          reinterpret_cast<char*>(&other->_impl_.a_atimerid_));
 }
 
 std::string Msg_SetTimer::GetTypeName() const {

@@ -181,44 +181,44 @@ class KeyValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kKeyFieldNumber = 1,
-    kValueFieldNumber = 2,
+    kAKeyFieldNumber = 1,
+    kAValueFieldNumber = 2,
   };
-  // required bytes key = 1;
-  bool has_key() const;
+  // required bytes a_key = 1;
+  bool has_a_key() const;
   private:
-  bool _internal_has_key() const;
+  bool _internal_has_a_key() const;
   public:
-  void clear_key();
-  const std::string& key() const;
+  void clear_a_key();
+  const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_key(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_key();
-  PROTOBUF_NODISCARD std::string* release_key();
-  void set_allocated_key(std::string* key);
+  void set_a_key(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_key();
+  PROTOBUF_NODISCARD std::string* release_a_key();
+  void set_allocated_a_key(std::string* a_key);
   private:
-  const std::string& _internal_key() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_key(const std::string& value);
-  std::string* _internal_mutable_key();
+  const std::string& _internal_a_key() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_key(const std::string& value);
+  std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
-  bool has_value() const;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+  bool has_a_value() const;
   private:
-  bool _internal_has_value() const;
+  bool _internal_has_a_value() const;
   public:
-  void clear_value();
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& value() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant* release_value();
-  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_value();
-  void set_allocated_value(::protobuf::mozilla::_ipdltest::JSONVariant* value);
+  void clear_a_value();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& a_value() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant* release_a_value();
+  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_a_value();
+  void set_allocated_a_value(::protobuf::mozilla::_ipdltest::JSONVariant* a_value);
   private:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_value() const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_mutable_value();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_a_value() const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_mutable_a_value();
   public:
-  void unsafe_arena_set_allocated_value(
-      ::protobuf::mozilla::_ipdltest::JSONVariant* value);
-  ::protobuf::mozilla::_ipdltest::JSONVariant* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_a_value(
+      ::protobuf::mozilla::_ipdltest::JSONVariant* a_value);
+  ::protobuf::mozilla::_ipdltest::JSONVariant* unsafe_arena_release_a_value();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.KeyValue)
  private:
@@ -233,8 +233,8 @@ class KeyValue final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
-    ::protobuf::mozilla::_ipdltest::JSONVariant* value_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    ::protobuf::mozilla::_ipdltest::JSONVariant* a_value_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
@@ -351,25 +351,25 @@ class JSONVariant__mVArrayOfKeyValue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfKeyValueFieldNumber = 1,
+    kAMVArrayOfKeyValueFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla._ipdltest.KeyValue mVArrayOfKeyValue = 1;
-  int mvarrayofkeyvalue_size() const;
+  // repeated .protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
+  int a_mvarrayofkeyvalue_size() const;
   private:
-  int _internal_mvarrayofkeyvalue_size() const;
+  int _internal_a_mvarrayofkeyvalue_size() const;
   public:
-  void clear_mvarrayofkeyvalue();
-  ::protobuf::mozilla::_ipdltest::KeyValue* mutable_mvarrayofkeyvalue(int index);
+  void clear_a_mvarrayofkeyvalue();
+  ::protobuf::mozilla::_ipdltest::KeyValue* mutable_a_mvarrayofkeyvalue(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >*
-      mutable_mvarrayofkeyvalue();
+      mutable_a_mvarrayofkeyvalue();
   private:
-  const ::protobuf::mozilla::_ipdltest::KeyValue& _internal_mvarrayofkeyvalue(int index) const;
-  ::protobuf::mozilla::_ipdltest::KeyValue* _internal_add_mvarrayofkeyvalue();
+  const ::protobuf::mozilla::_ipdltest::KeyValue& _internal_a_mvarrayofkeyvalue(int index) const;
+  ::protobuf::mozilla::_ipdltest::KeyValue* _internal_add_a_mvarrayofkeyvalue();
   public:
-  const ::protobuf::mozilla::_ipdltest::KeyValue& mvarrayofkeyvalue(int index) const;
-  ::protobuf::mozilla::_ipdltest::KeyValue* add_mvarrayofkeyvalue();
+  const ::protobuf::mozilla::_ipdltest::KeyValue& a_mvarrayofkeyvalue(int index) const;
+  ::protobuf::mozilla::_ipdltest::KeyValue* add_a_mvarrayofkeyvalue();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >&
-      mvarrayofkeyvalue() const;
+      a_mvarrayofkeyvalue() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue)
  private:
@@ -379,7 +379,7 @@ class JSONVariant__mVArrayOfKeyValue final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue > mvarrayofkeyvalue_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue > a_mvarrayofkeyvalue_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -497,25 +497,25 @@ class JSONVariant__mVArrayOfJSONVariant final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfJSONVariantFieldNumber = 1,
+    kAMVArrayOfJSONVariantFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla._ipdltest.JSONVariant mVArrayOfJSONVariant = 1;
-  int mvarrayofjsonvariant_size() const;
+  // repeated .protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
+  int a_mvarrayofjsonvariant_size() const;
   private:
-  int _internal_mvarrayofjsonvariant_size() const;
+  int _internal_a_mvarrayofjsonvariant_size() const;
   public:
-  void clear_mvarrayofjsonvariant();
-  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_mvarrayofjsonvariant(int index);
+  void clear_a_mvarrayofjsonvariant();
+  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_a_mvarrayofjsonvariant(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >*
-      mutable_mvarrayofjsonvariant();
+      mutable_a_mvarrayofjsonvariant();
   private:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_mvarrayofjsonvariant(int index) const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_add_mvarrayofjsonvariant();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_a_mvarrayofjsonvariant(int index) const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_add_a_mvarrayofjsonvariant();
   public:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& mvarrayofjsonvariant(int index) const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* add_mvarrayofjsonvariant();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& a_mvarrayofjsonvariant(int index) const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* add_a_mvarrayofjsonvariant();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >&
-      mvarrayofjsonvariant() const;
+      a_mvarrayofjsonvariant() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant)
  private:
@@ -525,7 +525,7 @@ class JSONVariant__mVArrayOfJSONVariant final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant > mvarrayofjsonvariant_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant > a_mvarrayofjsonvariant_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -575,13 +575,13 @@ class JSONVariant final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVvoidT = 1,
-    kMVnullT = 2,
-    kMVbool = 3,
-    kMVint = 4,
-    kMVdouble = 5,
-    kMVnsString = 6,
-    kMVPTestJSONHandle = 7,
+    kAMVvoidT = 1,
+    kAMVnullT = 2,
+    kAMVbool = 3,
+    kAMVint = 4,
+    kAMVdouble = 5,
+    kAMVnsString = 6,
+    kAMVPTestJSONHandle = 7,
     kMVArrayOfKeyValue = 8,
     kMVArrayOfJSONVariant = 9,
     CONTENT_NOT_SET = 0,
@@ -659,125 +659,125 @@ class JSONVariant final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVvoidTFieldNumber = 1,
-    kMVnullTFieldNumber = 2,
-    kMVboolFieldNumber = 3,
-    kMVintFieldNumber = 4,
-    kMVdoubleFieldNumber = 5,
-    kMVnsStringFieldNumber = 6,
-    kMVPTestJSONHandleFieldNumber = 7,
+    kAMVvoidTFieldNumber = 1,
+    kAMVnullTFieldNumber = 2,
+    kAMVboolFieldNumber = 3,
+    kAMVintFieldNumber = 4,
+    kAMVdoubleFieldNumber = 5,
+    kAMVnsStringFieldNumber = 6,
+    kAMVPTestJSONHandleFieldNumber = 7,
     kMVArrayOfKeyValueFieldNumber = 8,
     kMVArrayOfJSONVariantFieldNumber = 9,
   };
-  // bytes mVvoid_t = 1;
-  bool has_mvvoid_t() const;
+  // bytes a_mVvoid_t = 1;
+  bool has_a_mvvoid_t() const;
   private:
-  bool _internal_has_mvvoid_t() const;
+  bool _internal_has_a_mvvoid_t() const;
   public:
-  void clear_mvvoid_t();
-  const std::string& mvvoid_t() const;
+  void clear_a_mvvoid_t();
+  const std::string& a_mvvoid_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvvoid_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvvoid_t();
-  PROTOBUF_NODISCARD std::string* release_mvvoid_t();
-  void set_allocated_mvvoid_t(std::string* mvvoid_t);
+  void set_a_mvvoid_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvvoid_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvvoid_t();
+  void set_allocated_a_mvvoid_t(std::string* a_mvvoid_t);
   private:
-  const std::string& _internal_mvvoid_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvvoid_t(const std::string& value);
-  std::string* _internal_mutable_mvvoid_t();
+  const std::string& _internal_a_mvvoid_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvvoid_t(const std::string& value);
+  std::string* _internal_mutable_a_mvvoid_t();
   public:
 
-  // bytes mVnull_t = 2;
-  bool has_mvnull_t() const;
+  // bytes a_mVnull_t = 2;
+  bool has_a_mvnull_t() const;
   private:
-  bool _internal_has_mvnull_t() const;
+  bool _internal_has_a_mvnull_t() const;
   public:
-  void clear_mvnull_t();
-  const std::string& mvnull_t() const;
+  void clear_a_mvnull_t();
+  const std::string& a_mvnull_t() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnull_t(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnull_t();
-  PROTOBUF_NODISCARD std::string* release_mvnull_t();
-  void set_allocated_mvnull_t(std::string* mvnull_t);
+  void set_a_mvnull_t(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnull_t();
+  PROTOBUF_NODISCARD std::string* release_a_mvnull_t();
+  void set_allocated_a_mvnull_t(std::string* a_mvnull_t);
   private:
-  const std::string& _internal_mvnull_t() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnull_t(const std::string& value);
-  std::string* _internal_mutable_mvnull_t();
+  const std::string& _internal_a_mvnull_t() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnull_t(const std::string& value);
+  std::string* _internal_mutable_a_mvnull_t();
   public:
 
-  // bool mVbool = 3;
-  bool has_mvbool() const;
+  // bool a_mVbool = 3;
+  bool has_a_mvbool() const;
   private:
-  bool _internal_has_mvbool() const;
+  bool _internal_has_a_mvbool() const;
   public:
-  void clear_mvbool();
-  bool mvbool() const;
-  void set_mvbool(bool value);
+  void clear_a_mvbool();
+  bool a_mvbool() const;
+  void set_a_mvbool(bool value);
   private:
-  bool _internal_mvbool() const;
-  void _internal_set_mvbool(bool value);
-  public:
-
-  // sint32 mVint = 4;
-  bool has_mvint() const;
-  private:
-  bool _internal_has_mvint() const;
-  public:
-  void clear_mvint();
-  int32_t mvint() const;
-  void set_mvint(int32_t value);
-  private:
-  int32_t _internal_mvint() const;
-  void _internal_set_mvint(int32_t value);
+  bool _internal_a_mvbool() const;
+  void _internal_set_a_mvbool(bool value);
   public:
 
-  // double mVdouble = 5;
-  bool has_mvdouble() const;
+  // sint32 a_mVint = 4;
+  bool has_a_mvint() const;
   private:
-  bool _internal_has_mvdouble() const;
+  bool _internal_has_a_mvint() const;
   public:
-  void clear_mvdouble();
-  double mvdouble() const;
-  void set_mvdouble(double value);
+  void clear_a_mvint();
+  int32_t a_mvint() const;
+  void set_a_mvint(int32_t value);
   private:
-  double _internal_mvdouble() const;
-  void _internal_set_mvdouble(double value);
+  int32_t _internal_a_mvint() const;
+  void _internal_set_a_mvint(int32_t value);
   public:
 
-  // bytes mVnsString = 6;
-  bool has_mvnsstring() const;
+  // double a_mVdouble = 5;
+  bool has_a_mvdouble() const;
   private:
-  bool _internal_has_mvnsstring() const;
+  bool _internal_has_a_mvdouble() const;
   public:
-  void clear_mvnsstring();
-  const std::string& mvnsstring() const;
+  void clear_a_mvdouble();
+  double a_mvdouble() const;
+  void set_a_mvdouble(double value);
+  private:
+  double _internal_a_mvdouble() const;
+  void _internal_set_a_mvdouble(double value);
+  public:
+
+  // bytes a_mVnsString = 6;
+  bool has_a_mvnsstring() const;
+  private:
+  bool _internal_has_a_mvnsstring() const;
+  public:
+  void clear_a_mvnsstring();
+  const std::string& a_mvnsstring() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsstring(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsstring();
-  PROTOBUF_NODISCARD std::string* release_mvnsstring();
-  void set_allocated_mvnsstring(std::string* mvnsstring);
+  void set_a_mvnsstring(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsstring();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsstring();
+  void set_allocated_a_mvnsstring(std::string* a_mvnsstring);
   private:
-  const std::string& _internal_mvnsstring() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsstring(const std::string& value);
-  std::string* _internal_mutable_mvnsstring();
+  const std::string& _internal_a_mvnsstring() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsstring(const std::string& value);
+  std::string* _internal_mutable_a_mvnsstring();
   public:
 
-  // bytes mVPTestJSONHandle = 7;
-  bool has_mvptestjsonhandle() const;
+  // bytes a_mVPTestJSONHandle = 7;
+  bool has_a_mvptestjsonhandle() const;
   private:
-  bool _internal_has_mvptestjsonhandle() const;
+  bool _internal_has_a_mvptestjsonhandle() const;
   public:
-  void clear_mvptestjsonhandle();
-  const std::string& mvptestjsonhandle() const;
+  void clear_a_mvptestjsonhandle();
+  const std::string& a_mvptestjsonhandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvptestjsonhandle(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvptestjsonhandle();
-  PROTOBUF_NODISCARD std::string* release_mvptestjsonhandle();
-  void set_allocated_mvptestjsonhandle(std::string* mvptestjsonhandle);
+  void set_a_mvptestjsonhandle(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvptestjsonhandle();
+  PROTOBUF_NODISCARD std::string* release_a_mvptestjsonhandle();
+  void set_allocated_a_mvptestjsonhandle(std::string* a_mvptestjsonhandle);
   private:
-  const std::string& _internal_mvptestjsonhandle() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvptestjsonhandle(const std::string& value);
-  std::string* _internal_mutable_mvptestjsonhandle();
+  const std::string& _internal_a_mvptestjsonhandle() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvptestjsonhandle(const std::string& value);
+  std::string* _internal_mutable_a_mvptestjsonhandle();
   public:
 
   // .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue mVArrayOfKeyValue = 8;
@@ -821,13 +821,13 @@ class JSONVariant final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant)
  private:
   class _Internal;
-  void set_has_mvvoid_t();
-  void set_has_mvnull_t();
-  void set_has_mvbool();
-  void set_has_mvint();
-  void set_has_mvdouble();
-  void set_has_mvnsstring();
-  void set_has_mvptestjsonhandle();
+  void set_has_a_mvvoid_t();
+  void set_has_a_mvnull_t();
+  void set_has_a_mvbool();
+  void set_has_a_mvint();
+  void set_has_a_mvdouble();
+  void set_has_a_mvnsstring();
+  void set_has_a_mvptestjsonhandle();
   void set_has_mvarrayofkeyvalue();
   void set_has_mvarrayofjsonvariant();
 
@@ -841,13 +841,13 @@ class JSONVariant final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvvoid_t_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnull_t_;
-      bool mvbool_;
-      int32_t mvint_;
-      double mvdouble_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsstring_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvptestjsonhandle_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnull_t_;
+      bool a_mvbool_;
+      int32_t a_mvint_;
+      double a_mvdouble_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsstring_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvptestjsonhandle_;
       ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* mvarrayofkeyvalue_;
       ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* mvarrayofjsonvariant_;
     } content_;
@@ -869,113 +869,113 @@ class JSONVariant final :
 #endif  // __GNUC__
 // KeyValue
 
-// required bytes key = 1;
-inline bool KeyValue::_internal_has_key() const {
+// required bytes a_key = 1;
+inline bool KeyValue::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool KeyValue::has_key() const {
-  return _internal_has_key();
+inline bool KeyValue::has_a_key() const {
+  return _internal_has_a_key();
 }
-inline void KeyValue::clear_key() {
-  _impl_.key_.ClearToEmpty();
+inline void KeyValue::clear_a_key() {
+  _impl_.a_key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& KeyValue::key() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.KeyValue.key)
-  return _internal_key();
+inline const std::string& KeyValue::a_key() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.KeyValue.a_key)
+  return _internal_a_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void KeyValue::set_key(ArgT0&& arg0, ArgT... args) {
+void KeyValue::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.KeyValue.key)
+ _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
-inline std::string* KeyValue::mutable_key() {
-  std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.KeyValue.key)
+inline std::string* KeyValue::mutable_a_key() {
+  std::string* _s = _internal_mutable_a_key();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.KeyValue.a_key)
   return _s;
 }
-inline const std::string& KeyValue::_internal_key() const {
-  return _impl_.key_.Get();
+inline const std::string& KeyValue::_internal_a_key() const {
+  return _impl_.a_key_.Get();
 }
-inline void KeyValue::_internal_set_key(const std::string& value) {
+inline void KeyValue::_internal_set_a_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.key_.Set(value, GetArenaForAllocation());
+  _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* KeyValue::_internal_mutable_key() {
+inline std::string* KeyValue::_internal_mutable_a_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.key_.Mutable(GetArenaForAllocation());
+  return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* KeyValue::release_key() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.key)
-  if (!_internal_has_key()) {
+inline std::string* KeyValue::release_a_key() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.a_key)
+  if (!_internal_has_a_key()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.key_.Release();
+  auto* p = _impl_.a_key_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void KeyValue::set_allocated_key(std::string* key) {
-  if (key != nullptr) {
+inline void KeyValue::set_allocated_a_key(std::string* a_key) {
+  if (a_key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.key_.SetAllocated(key, GetArenaForAllocation());
+  _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.key_.IsDefault()) {
-    _impl_.key_.Set("", GetArenaForAllocation());
+  if (_impl_.a_key_.IsDefault()) {
+    _impl_.a_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.key)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
 
-// required .protobuf.mozilla._ipdltest.JSONVariant value = 2;
-inline bool KeyValue::_internal_has_value() const {
+// required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+inline bool KeyValue::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.value_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
   return value;
 }
-inline bool KeyValue::has_value() const {
-  return _internal_has_value();
+inline bool KeyValue::has_a_value() const {
+  return _internal_has_a_value();
 }
-inline void KeyValue::clear_value() {
-  if (_impl_.value_ != nullptr) _impl_.value_->Clear();
+inline void KeyValue::clear_a_value() {
+  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& KeyValue::_internal_value() const {
-  const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.value_;
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& KeyValue::_internal_a_value() const {
+  const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.a_value_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_ipdltest::JSONVariant&>(
       ::protobuf::mozilla::_ipdltest::_JSONVariant_default_instance_);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& KeyValue::value() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.KeyValue.value)
-  return _internal_value();
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& KeyValue::a_value() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.KeyValue.a_value)
+  return _internal_a_value();
 }
-inline void KeyValue::unsafe_arena_set_allocated_value(
-    ::protobuf::mozilla::_ipdltest::JSONVariant* value) {
+inline void KeyValue::unsafe_arena_set_allocated_a_value(
+    ::protobuf::mozilla::_ipdltest::JSONVariant* a_value) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.value_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_value_);
   }
-  _impl_.value_ = value;
-  if (value) {
+  _impl_.a_value_ = a_value;
+  if (a_value) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.KeyValue.value)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_value)
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_value() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_a_value() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -987,558 +987,558 @@ inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_value() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::unsafe_arena_release_value() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.value)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::unsafe_arena_release_a_value() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.a_value)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.value_;
-  _impl_.value_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_value_;
+  _impl_.a_value_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::_internal_mutable_value() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::_internal_mutable_a_value() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.value_ == nullptr) {
+  if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant>(GetArenaForAllocation());
-    _impl_.value_ = p;
+    _impl_.a_value_ = p;
   }
-  return _impl_.value_;
+  return _impl_.a_value_;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::mutable_value() {
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _msg = _internal_mutable_value();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.KeyValue.value)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::mutable_a_value() {
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _msg = _internal_mutable_a_value();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.KeyValue.a_value)
   return _msg;
 }
-inline void KeyValue::set_allocated_value(::protobuf::mozilla::_ipdltest::JSONVariant* value) {
+inline void KeyValue::set_allocated_a_value(::protobuf::mozilla::_ipdltest::JSONVariant* a_value) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.value_;
+    delete _impl_.a_value_;
   }
-  if (value) {
+  if (a_value) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(value);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_value);
     if (message_arena != submessage_arena) {
-      value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, value, submessage_arena);
+      a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_value, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.value_ = value;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.value)
+  _impl_.a_value_ = a_value;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_value)
 }
 
 // -------------------------------------------------------------------
 
 // JSONVariant__mVArrayOfKeyValue
 
-// repeated .protobuf.mozilla._ipdltest.KeyValue mVArrayOfKeyValue = 1;
-inline int JSONVariant__mVArrayOfKeyValue::_internal_mvarrayofkeyvalue_size() const {
-  return _impl_.mvarrayofkeyvalue_.size();
+// repeated .protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
+inline int JSONVariant__mVArrayOfKeyValue::_internal_a_mvarrayofkeyvalue_size() const {
+  return _impl_.a_mvarrayofkeyvalue_.size();
 }
-inline int JSONVariant__mVArrayOfKeyValue::mvarrayofkeyvalue_size() const {
-  return _internal_mvarrayofkeyvalue_size();
+inline int JSONVariant__mVArrayOfKeyValue::a_mvarrayofkeyvalue_size() const {
+  return _internal_a_mvarrayofkeyvalue_size();
 }
-inline void JSONVariant__mVArrayOfKeyValue::clear_mvarrayofkeyvalue() {
-  _impl_.mvarrayofkeyvalue_.Clear();
+inline void JSONVariant__mVArrayOfKeyValue::clear_a_mvarrayofkeyvalue() {
+  _impl_.a_mvarrayofkeyvalue_.Clear();
 }
-inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::mutable_mvarrayofkeyvalue(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.mVArrayOfKeyValue)
-  return _impl_.mvarrayofkeyvalue_.Mutable(index);
+inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::mutable_a_mvarrayofkeyvalue(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+  return _impl_.a_mvarrayofkeyvalue_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >*
-JSONVariant__mVArrayOfKeyValue::mutable_mvarrayofkeyvalue() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.mVArrayOfKeyValue)
-  return &_impl_.mvarrayofkeyvalue_;
+JSONVariant__mVArrayOfKeyValue::mutable_a_mvarrayofkeyvalue() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+  return &_impl_.a_mvarrayofkeyvalue_;
 }
-inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant__mVArrayOfKeyValue::_internal_mvarrayofkeyvalue(int index) const {
-  return _impl_.mvarrayofkeyvalue_.Get(index);
+inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant__mVArrayOfKeyValue::_internal_a_mvarrayofkeyvalue(int index) const {
+  return _impl_.a_mvarrayofkeyvalue_.Get(index);
 }
-inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant__mVArrayOfKeyValue::mvarrayofkeyvalue(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.mVArrayOfKeyValue)
-  return _internal_mvarrayofkeyvalue(index);
+inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant__mVArrayOfKeyValue::a_mvarrayofkeyvalue(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+  return _internal_a_mvarrayofkeyvalue(index);
 }
-inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::_internal_add_mvarrayofkeyvalue() {
-  return _impl_.mvarrayofkeyvalue_.Add();
+inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::_internal_add_a_mvarrayofkeyvalue() {
+  return _impl_.a_mvarrayofkeyvalue_.Add();
 }
-inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::add_mvarrayofkeyvalue() {
-  ::protobuf::mozilla::_ipdltest::KeyValue* _add = _internal_add_mvarrayofkeyvalue();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.mVArrayOfKeyValue)
+inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::add_a_mvarrayofkeyvalue() {
+  ::protobuf::mozilla::_ipdltest::KeyValue* _add = _internal_add_a_mvarrayofkeyvalue();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >&
-JSONVariant__mVArrayOfKeyValue::mvarrayofkeyvalue() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.mVArrayOfKeyValue)
-  return _impl_.mvarrayofkeyvalue_;
+JSONVariant__mVArrayOfKeyValue::a_mvarrayofkeyvalue() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+  return _impl_.a_mvarrayofkeyvalue_;
 }
 
 // -------------------------------------------------------------------
 
 // JSONVariant__mVArrayOfJSONVariant
 
-// repeated .protobuf.mozilla._ipdltest.JSONVariant mVArrayOfJSONVariant = 1;
-inline int JSONVariant__mVArrayOfJSONVariant::_internal_mvarrayofjsonvariant_size() const {
-  return _impl_.mvarrayofjsonvariant_.size();
+// repeated .protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
+inline int JSONVariant__mVArrayOfJSONVariant::_internal_a_mvarrayofjsonvariant_size() const {
+  return _impl_.a_mvarrayofjsonvariant_.size();
 }
-inline int JSONVariant__mVArrayOfJSONVariant::mvarrayofjsonvariant_size() const {
-  return _internal_mvarrayofjsonvariant_size();
+inline int JSONVariant__mVArrayOfJSONVariant::a_mvarrayofjsonvariant_size() const {
+  return _internal_a_mvarrayofjsonvariant_size();
 }
-inline void JSONVariant__mVArrayOfJSONVariant::clear_mvarrayofjsonvariant() {
-  _impl_.mvarrayofjsonvariant_.Clear();
+inline void JSONVariant__mVArrayOfJSONVariant::clear_a_mvarrayofjsonvariant() {
+  _impl_.a_mvarrayofjsonvariant_.Clear();
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::mutable_mvarrayofjsonvariant(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.mVArrayOfJSONVariant)
-  return _impl_.mvarrayofjsonvariant_.Mutable(index);
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::mutable_a_mvarrayofjsonvariant(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+  return _impl_.a_mvarrayofjsonvariant_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >*
-JSONVariant__mVArrayOfJSONVariant::mutable_mvarrayofjsonvariant() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.mVArrayOfJSONVariant)
-  return &_impl_.mvarrayofjsonvariant_;
+JSONVariant__mVArrayOfJSONVariant::mutable_a_mvarrayofjsonvariant() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+  return &_impl_.a_mvarrayofjsonvariant_;
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant__mVArrayOfJSONVariant::_internal_mvarrayofjsonvariant(int index) const {
-  return _impl_.mvarrayofjsonvariant_.Get(index);
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant__mVArrayOfJSONVariant::_internal_a_mvarrayofjsonvariant(int index) const {
+  return _impl_.a_mvarrayofjsonvariant_.Get(index);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant__mVArrayOfJSONVariant::mvarrayofjsonvariant(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.mVArrayOfJSONVariant)
-  return _internal_mvarrayofjsonvariant(index);
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant__mVArrayOfJSONVariant::a_mvarrayofjsonvariant(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+  return _internal_a_mvarrayofjsonvariant(index);
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::_internal_add_mvarrayofjsonvariant() {
-  return _impl_.mvarrayofjsonvariant_.Add();
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::_internal_add_a_mvarrayofjsonvariant() {
+  return _impl_.a_mvarrayofjsonvariant_.Add();
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::add_mvarrayofjsonvariant() {
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _add = _internal_add_mvarrayofjsonvariant();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.mVArrayOfJSONVariant)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::add_a_mvarrayofjsonvariant() {
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _add = _internal_add_a_mvarrayofjsonvariant();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >&
-JSONVariant__mVArrayOfJSONVariant::mvarrayofjsonvariant() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.mVArrayOfJSONVariant)
-  return _impl_.mvarrayofjsonvariant_;
+JSONVariant__mVArrayOfJSONVariant::a_mvarrayofjsonvariant() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+  return _impl_.a_mvarrayofjsonvariant_;
 }
 
 // -------------------------------------------------------------------
 
 // JSONVariant
 
-// bytes mVvoid_t = 1;
-inline bool JSONVariant::_internal_has_mvvoid_t() const {
-  return content_case() == kMVvoidT;
+// bytes a_mVvoid_t = 1;
+inline bool JSONVariant::_internal_has_a_mvvoid_t() const {
+  return content_case() == kAMVvoidT;
 }
-inline bool JSONVariant::has_mvvoid_t() const {
-  return _internal_has_mvvoid_t();
+inline bool JSONVariant::has_a_mvvoid_t() const {
+  return _internal_has_a_mvvoid_t();
 }
-inline void JSONVariant::set_has_mvvoid_t() {
-  _impl_._oneof_case_[0] = kMVvoidT;
+inline void JSONVariant::set_has_a_mvvoid_t() {
+  _impl_._oneof_case_[0] = kAMVvoidT;
 }
-inline void JSONVariant::clear_mvvoid_t() {
-  if (_internal_has_mvvoid_t()) {
-    _impl_.content_.mvvoid_t_.Destroy();
+inline void JSONVariant::clear_a_mvvoid_t() {
+  if (_internal_has_a_mvvoid_t()) {
+    _impl_.content_.a_mvvoid_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& JSONVariant::mvvoid_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVvoid_t)
-  return _internal_mvvoid_t();
+inline const std::string& JSONVariant::a_mvvoid_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVvoid_t)
+  return _internal_a_mvvoid_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void JSONVariant::set_mvvoid_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvvoid_t()) {
+inline void JSONVariant::set_a_mvvoid_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVvoid_t)
+  _impl_.content_.a_mvvoid_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVvoid_t)
 }
-inline std::string* JSONVariant::mutable_mvvoid_t() {
-  std::string* _s = _internal_mutable_mvvoid_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.mVvoid_t)
+inline std::string* JSONVariant::mutable_a_mvvoid_t() {
+  std::string* _s = _internal_mutable_a_mvvoid_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_mVvoid_t)
   return _s;
 }
-inline const std::string& JSONVariant::_internal_mvvoid_t() const {
-  if (_internal_has_mvvoid_t()) {
-    return _impl_.content_.mvvoid_t_.Get();
+inline const std::string& JSONVariant::_internal_a_mvvoid_t() const {
+  if (_internal_has_a_mvvoid_t()) {
+    return _impl_.content_.a_mvvoid_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void JSONVariant::_internal_set_mvvoid_t(const std::string& value) {
-  if (!_internal_has_mvvoid_t()) {
+inline void JSONVariant::_internal_set_a_mvvoid_t(const std::string& value) {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  _impl_.content_.mvvoid_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvvoid_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSONVariant::_internal_mutable_mvvoid_t() {
-  if (!_internal_has_mvvoid_t()) {
+inline std::string* JSONVariant::_internal_mutable_a_mvvoid_t() {
+  if (!_internal_has_a_mvvoid_t()) {
     clear_content();
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitDefault();
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitDefault();
   }
-  return _impl_.content_.mvvoid_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvvoid_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* JSONVariant::release_mvvoid_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.mVvoid_t)
-  if (_internal_has_mvvoid_t()) {
+inline std::string* JSONVariant::release_a_mvvoid_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVvoid_t)
+  if (_internal_has_a_mvvoid_t()) {
     clear_has_content();
-    return _impl_.content_.mvvoid_t_.Release();
+    return _impl_.content_.a_mvvoid_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void JSONVariant::set_allocated_mvvoid_t(std::string* mvvoid_t) {
+inline void JSONVariant::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvvoid_t != nullptr) {
-    set_has_mvvoid_t();
-    _impl_.content_.mvvoid_t_.InitAllocated(mvvoid_t, GetArenaForAllocation());
+  if (a_mvvoid_t != nullptr) {
+    set_has_a_mvvoid_t();
+    _impl_.content_.a_mvvoid_t_.InitAllocated(a_mvvoid_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.mVvoid_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVvoid_t)
 }
 
-// bytes mVnull_t = 2;
-inline bool JSONVariant::_internal_has_mvnull_t() const {
-  return content_case() == kMVnullT;
+// bytes a_mVnull_t = 2;
+inline bool JSONVariant::_internal_has_a_mvnull_t() const {
+  return content_case() == kAMVnullT;
 }
-inline bool JSONVariant::has_mvnull_t() const {
-  return _internal_has_mvnull_t();
+inline bool JSONVariant::has_a_mvnull_t() const {
+  return _internal_has_a_mvnull_t();
 }
-inline void JSONVariant::set_has_mvnull_t() {
-  _impl_._oneof_case_[0] = kMVnullT;
+inline void JSONVariant::set_has_a_mvnull_t() {
+  _impl_._oneof_case_[0] = kAMVnullT;
 }
-inline void JSONVariant::clear_mvnull_t() {
-  if (_internal_has_mvnull_t()) {
-    _impl_.content_.mvnull_t_.Destroy();
+inline void JSONVariant::clear_a_mvnull_t() {
+  if (_internal_has_a_mvnull_t()) {
+    _impl_.content_.a_mvnull_t_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& JSONVariant::mvnull_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVnull_t)
-  return _internal_mvnull_t();
+inline const std::string& JSONVariant::a_mvnull_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVnull_t)
+  return _internal_a_mvnull_t();
 }
 template <typename ArgT0, typename... ArgT>
-inline void JSONVariant::set_mvnull_t(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnull_t()) {
+inline void JSONVariant::set_a_mvnull_t(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnull_t()) {
     clear_content();
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitDefault();
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitDefault();
   }
-  _impl_.content_.mvnull_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVnull_t)
+  _impl_.content_.a_mvnull_t_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVnull_t)
 }
-inline std::string* JSONVariant::mutable_mvnull_t() {
-  std::string* _s = _internal_mutable_mvnull_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.mVnull_t)
+inline std::string* JSONVariant::mutable_a_mvnull_t() {
+  std::string* _s = _internal_mutable_a_mvnull_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_mVnull_t)
   return _s;
 }
-inline const std::string& JSONVariant::_internal_mvnull_t() const {
-  if (_internal_has_mvnull_t()) {
-    return _impl_.content_.mvnull_t_.Get();
+inline const std::string& JSONVariant::_internal_a_mvnull_t() const {
+  if (_internal_has_a_mvnull_t()) {
+    return _impl_.content_.a_mvnull_t_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void JSONVariant::_internal_set_mvnull_t(const std::string& value) {
-  if (!_internal_has_mvnull_t()) {
+inline void JSONVariant::_internal_set_a_mvnull_t(const std::string& value) {
+  if (!_internal_has_a_mvnull_t()) {
     clear_content();
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitDefault();
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitDefault();
   }
-  _impl_.content_.mvnull_t_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnull_t_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSONVariant::_internal_mutable_mvnull_t() {
-  if (!_internal_has_mvnull_t()) {
+inline std::string* JSONVariant::_internal_mutable_a_mvnull_t() {
+  if (!_internal_has_a_mvnull_t()) {
     clear_content();
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitDefault();
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitDefault();
   }
-  return _impl_.content_.mvnull_t_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnull_t_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* JSONVariant::release_mvnull_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.mVnull_t)
-  if (_internal_has_mvnull_t()) {
+inline std::string* JSONVariant::release_a_mvnull_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVnull_t)
+  if (_internal_has_a_mvnull_t()) {
     clear_has_content();
-    return _impl_.content_.mvnull_t_.Release();
+    return _impl_.content_.a_mvnull_t_.Release();
   } else {
     return nullptr;
   }
 }
-inline void JSONVariant::set_allocated_mvnull_t(std::string* mvnull_t) {
+inline void JSONVariant::set_allocated_a_mvnull_t(std::string* a_mvnull_t) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnull_t != nullptr) {
-    set_has_mvnull_t();
-    _impl_.content_.mvnull_t_.InitAllocated(mvnull_t, GetArenaForAllocation());
+  if (a_mvnull_t != nullptr) {
+    set_has_a_mvnull_t();
+    _impl_.content_.a_mvnull_t_.InitAllocated(a_mvnull_t, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.mVnull_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVnull_t)
 }
 
-// bool mVbool = 3;
-inline bool JSONVariant::_internal_has_mvbool() const {
-  return content_case() == kMVbool;
+// bool a_mVbool = 3;
+inline bool JSONVariant::_internal_has_a_mvbool() const {
+  return content_case() == kAMVbool;
 }
-inline bool JSONVariant::has_mvbool() const {
-  return _internal_has_mvbool();
+inline bool JSONVariant::has_a_mvbool() const {
+  return _internal_has_a_mvbool();
 }
-inline void JSONVariant::set_has_mvbool() {
-  _impl_._oneof_case_[0] = kMVbool;
+inline void JSONVariant::set_has_a_mvbool() {
+  _impl_._oneof_case_[0] = kAMVbool;
 }
-inline void JSONVariant::clear_mvbool() {
-  if (_internal_has_mvbool()) {
-    _impl_.content_.mvbool_ = false;
+inline void JSONVariant::clear_a_mvbool() {
+  if (_internal_has_a_mvbool()) {
+    _impl_.content_.a_mvbool_ = false;
     clear_has_content();
   }
 }
-inline bool JSONVariant::_internal_mvbool() const {
-  if (_internal_has_mvbool()) {
-    return _impl_.content_.mvbool_;
+inline bool JSONVariant::_internal_a_mvbool() const {
+  if (_internal_has_a_mvbool()) {
+    return _impl_.content_.a_mvbool_;
   }
   return false;
 }
-inline void JSONVariant::_internal_set_mvbool(bool value) {
-  if (!_internal_has_mvbool()) {
+inline void JSONVariant::_internal_set_a_mvbool(bool value) {
+  if (!_internal_has_a_mvbool()) {
     clear_content();
-    set_has_mvbool();
+    set_has_a_mvbool();
   }
-  _impl_.content_.mvbool_ = value;
+  _impl_.content_.a_mvbool_ = value;
 }
-inline bool JSONVariant::mvbool() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVbool)
-  return _internal_mvbool();
+inline bool JSONVariant::a_mvbool() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVbool)
+  return _internal_a_mvbool();
 }
-inline void JSONVariant::set_mvbool(bool value) {
-  _internal_set_mvbool(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVbool)
+inline void JSONVariant::set_a_mvbool(bool value) {
+  _internal_set_a_mvbool(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVbool)
 }
 
-// sint32 mVint = 4;
-inline bool JSONVariant::_internal_has_mvint() const {
-  return content_case() == kMVint;
+// sint32 a_mVint = 4;
+inline bool JSONVariant::_internal_has_a_mvint() const {
+  return content_case() == kAMVint;
 }
-inline bool JSONVariant::has_mvint() const {
-  return _internal_has_mvint();
+inline bool JSONVariant::has_a_mvint() const {
+  return _internal_has_a_mvint();
 }
-inline void JSONVariant::set_has_mvint() {
-  _impl_._oneof_case_[0] = kMVint;
+inline void JSONVariant::set_has_a_mvint() {
+  _impl_._oneof_case_[0] = kAMVint;
 }
-inline void JSONVariant::clear_mvint() {
-  if (_internal_has_mvint()) {
-    _impl_.content_.mvint_ = 0;
+inline void JSONVariant::clear_a_mvint() {
+  if (_internal_has_a_mvint()) {
+    _impl_.content_.a_mvint_ = 0;
     clear_has_content();
   }
 }
-inline int32_t JSONVariant::_internal_mvint() const {
-  if (_internal_has_mvint()) {
-    return _impl_.content_.mvint_;
+inline int32_t JSONVariant::_internal_a_mvint() const {
+  if (_internal_has_a_mvint()) {
+    return _impl_.content_.a_mvint_;
   }
   return 0;
 }
-inline void JSONVariant::_internal_set_mvint(int32_t value) {
-  if (!_internal_has_mvint()) {
+inline void JSONVariant::_internal_set_a_mvint(int32_t value) {
+  if (!_internal_has_a_mvint()) {
     clear_content();
-    set_has_mvint();
+    set_has_a_mvint();
   }
-  _impl_.content_.mvint_ = value;
+  _impl_.content_.a_mvint_ = value;
 }
-inline int32_t JSONVariant::mvint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVint)
-  return _internal_mvint();
+inline int32_t JSONVariant::a_mvint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVint)
+  return _internal_a_mvint();
 }
-inline void JSONVariant::set_mvint(int32_t value) {
-  _internal_set_mvint(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVint)
+inline void JSONVariant::set_a_mvint(int32_t value) {
+  _internal_set_a_mvint(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVint)
 }
 
-// double mVdouble = 5;
-inline bool JSONVariant::_internal_has_mvdouble() const {
-  return content_case() == kMVdouble;
+// double a_mVdouble = 5;
+inline bool JSONVariant::_internal_has_a_mvdouble() const {
+  return content_case() == kAMVdouble;
 }
-inline bool JSONVariant::has_mvdouble() const {
-  return _internal_has_mvdouble();
+inline bool JSONVariant::has_a_mvdouble() const {
+  return _internal_has_a_mvdouble();
 }
-inline void JSONVariant::set_has_mvdouble() {
-  _impl_._oneof_case_[0] = kMVdouble;
+inline void JSONVariant::set_has_a_mvdouble() {
+  _impl_._oneof_case_[0] = kAMVdouble;
 }
-inline void JSONVariant::clear_mvdouble() {
-  if (_internal_has_mvdouble()) {
-    _impl_.content_.mvdouble_ = 0;
+inline void JSONVariant::clear_a_mvdouble() {
+  if (_internal_has_a_mvdouble()) {
+    _impl_.content_.a_mvdouble_ = 0;
     clear_has_content();
   }
 }
-inline double JSONVariant::_internal_mvdouble() const {
-  if (_internal_has_mvdouble()) {
-    return _impl_.content_.mvdouble_;
+inline double JSONVariant::_internal_a_mvdouble() const {
+  if (_internal_has_a_mvdouble()) {
+    return _impl_.content_.a_mvdouble_;
   }
   return 0;
 }
-inline void JSONVariant::_internal_set_mvdouble(double value) {
-  if (!_internal_has_mvdouble()) {
+inline void JSONVariant::_internal_set_a_mvdouble(double value) {
+  if (!_internal_has_a_mvdouble()) {
     clear_content();
-    set_has_mvdouble();
+    set_has_a_mvdouble();
   }
-  _impl_.content_.mvdouble_ = value;
+  _impl_.content_.a_mvdouble_ = value;
 }
-inline double JSONVariant::mvdouble() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVdouble)
-  return _internal_mvdouble();
+inline double JSONVariant::a_mvdouble() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVdouble)
+  return _internal_a_mvdouble();
 }
-inline void JSONVariant::set_mvdouble(double value) {
-  _internal_set_mvdouble(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVdouble)
+inline void JSONVariant::set_a_mvdouble(double value) {
+  _internal_set_a_mvdouble(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVdouble)
 }
 
-// bytes mVnsString = 6;
-inline bool JSONVariant::_internal_has_mvnsstring() const {
-  return content_case() == kMVnsString;
+// bytes a_mVnsString = 6;
+inline bool JSONVariant::_internal_has_a_mvnsstring() const {
+  return content_case() == kAMVnsString;
 }
-inline bool JSONVariant::has_mvnsstring() const {
-  return _internal_has_mvnsstring();
+inline bool JSONVariant::has_a_mvnsstring() const {
+  return _internal_has_a_mvnsstring();
 }
-inline void JSONVariant::set_has_mvnsstring() {
-  _impl_._oneof_case_[0] = kMVnsString;
+inline void JSONVariant::set_has_a_mvnsstring() {
+  _impl_._oneof_case_[0] = kAMVnsString;
 }
-inline void JSONVariant::clear_mvnsstring() {
-  if (_internal_has_mvnsstring()) {
-    _impl_.content_.mvnsstring_.Destroy();
+inline void JSONVariant::clear_a_mvnsstring() {
+  if (_internal_has_a_mvnsstring()) {
+    _impl_.content_.a_mvnsstring_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& JSONVariant::mvnsstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVnsString)
-  return _internal_mvnsstring();
+inline const std::string& JSONVariant::a_mvnsstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString)
+  return _internal_a_mvnsstring();
 }
 template <typename ArgT0, typename... ArgT>
-inline void JSONVariant::set_mvnsstring(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsstring()) {
+inline void JSONVariant::set_a_mvnsstring(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsstring()) {
     clear_content();
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitDefault();
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVnsString)
+  _impl_.content_.a_mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString)
 }
-inline std::string* JSONVariant::mutable_mvnsstring() {
-  std::string* _s = _internal_mutable_mvnsstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.mVnsString)
+inline std::string* JSONVariant::mutable_a_mvnsstring() {
+  std::string* _s = _internal_mutable_a_mvnsstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString)
   return _s;
 }
-inline const std::string& JSONVariant::_internal_mvnsstring() const {
-  if (_internal_has_mvnsstring()) {
-    return _impl_.content_.mvnsstring_.Get();
+inline const std::string& JSONVariant::_internal_a_mvnsstring() const {
+  if (_internal_has_a_mvnsstring()) {
+    return _impl_.content_.a_mvnsstring_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void JSONVariant::_internal_set_mvnsstring(const std::string& value) {
-  if (!_internal_has_mvnsstring()) {
+inline void JSONVariant::_internal_set_a_mvnsstring(const std::string& value) {
+  if (!_internal_has_a_mvnsstring()) {
     clear_content();
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitDefault();
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.mvnsstring_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsstring_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSONVariant::_internal_mutable_mvnsstring() {
-  if (!_internal_has_mvnsstring()) {
+inline std::string* JSONVariant::_internal_mutable_a_mvnsstring() {
+  if (!_internal_has_a_mvnsstring()) {
     clear_content();
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitDefault();
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  return _impl_.content_.mvnsstring_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsstring_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* JSONVariant::release_mvnsstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.mVnsString)
-  if (_internal_has_mvnsstring()) {
+inline std::string* JSONVariant::release_a_mvnsstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString)
+  if (_internal_has_a_mvnsstring()) {
     clear_has_content();
-    return _impl_.content_.mvnsstring_.Release();
+    return _impl_.content_.a_mvnsstring_.Release();
   } else {
     return nullptr;
   }
 }
-inline void JSONVariant::set_allocated_mvnsstring(std::string* mvnsstring) {
+inline void JSONVariant::set_allocated_a_mvnsstring(std::string* a_mvnsstring) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsstring != nullptr) {
-    set_has_mvnsstring();
-    _impl_.content_.mvnsstring_.InitAllocated(mvnsstring, GetArenaForAllocation());
+  if (a_mvnsstring != nullptr) {
+    set_has_a_mvnsstring();
+    _impl_.content_.a_mvnsstring_.InitAllocated(a_mvnsstring, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.mVnsString)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString)
 }
 
-// bytes mVPTestJSONHandle = 7;
-inline bool JSONVariant::_internal_has_mvptestjsonhandle() const {
-  return content_case() == kMVPTestJSONHandle;
+// bytes a_mVPTestJSONHandle = 7;
+inline bool JSONVariant::_internal_has_a_mvptestjsonhandle() const {
+  return content_case() == kAMVPTestJSONHandle;
 }
-inline bool JSONVariant::has_mvptestjsonhandle() const {
-  return _internal_has_mvptestjsonhandle();
+inline bool JSONVariant::has_a_mvptestjsonhandle() const {
+  return _internal_has_a_mvptestjsonhandle();
 }
-inline void JSONVariant::set_has_mvptestjsonhandle() {
-  _impl_._oneof_case_[0] = kMVPTestJSONHandle;
+inline void JSONVariant::set_has_a_mvptestjsonhandle() {
+  _impl_._oneof_case_[0] = kAMVPTestJSONHandle;
 }
-inline void JSONVariant::clear_mvptestjsonhandle() {
-  if (_internal_has_mvptestjsonhandle()) {
-    _impl_.content_.mvptestjsonhandle_.Destroy();
+inline void JSONVariant::clear_a_mvptestjsonhandle() {
+  if (_internal_has_a_mvptestjsonhandle()) {
+    _impl_.content_.a_mvptestjsonhandle_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& JSONVariant::mvptestjsonhandle() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVPTestJSONHandle)
-  return _internal_mvptestjsonhandle();
+inline const std::string& JSONVariant::a_mvptestjsonhandle() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVPTestJSONHandle)
+  return _internal_a_mvptestjsonhandle();
 }
 template <typename ArgT0, typename... ArgT>
-inline void JSONVariant::set_mvptestjsonhandle(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvptestjsonhandle()) {
+inline void JSONVariant::set_a_mvptestjsonhandle(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvptestjsonhandle()) {
     clear_content();
-    set_has_mvptestjsonhandle();
-    _impl_.content_.mvptestjsonhandle_.InitDefault();
+    set_has_a_mvptestjsonhandle();
+    _impl_.content_.a_mvptestjsonhandle_.InitDefault();
   }
-  _impl_.content_.mvptestjsonhandle_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.mVPTestJSONHandle)
+  _impl_.content_.a_mvptestjsonhandle_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVPTestJSONHandle)
 }
-inline std::string* JSONVariant::mutable_mvptestjsonhandle() {
-  std::string* _s = _internal_mutable_mvptestjsonhandle();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.mVPTestJSONHandle)
+inline std::string* JSONVariant::mutable_a_mvptestjsonhandle() {
+  std::string* _s = _internal_mutable_a_mvptestjsonhandle();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_mVPTestJSONHandle)
   return _s;
 }
-inline const std::string& JSONVariant::_internal_mvptestjsonhandle() const {
-  if (_internal_has_mvptestjsonhandle()) {
-    return _impl_.content_.mvptestjsonhandle_.Get();
+inline const std::string& JSONVariant::_internal_a_mvptestjsonhandle() const {
+  if (_internal_has_a_mvptestjsonhandle()) {
+    return _impl_.content_.a_mvptestjsonhandle_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void JSONVariant::_internal_set_mvptestjsonhandle(const std::string& value) {
-  if (!_internal_has_mvptestjsonhandle()) {
+inline void JSONVariant::_internal_set_a_mvptestjsonhandle(const std::string& value) {
+  if (!_internal_has_a_mvptestjsonhandle()) {
     clear_content();
-    set_has_mvptestjsonhandle();
-    _impl_.content_.mvptestjsonhandle_.InitDefault();
+    set_has_a_mvptestjsonhandle();
+    _impl_.content_.a_mvptestjsonhandle_.InitDefault();
   }
-  _impl_.content_.mvptestjsonhandle_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvptestjsonhandle_.Set(value, GetArenaForAllocation());
 }
-inline std::string* JSONVariant::_internal_mutable_mvptestjsonhandle() {
-  if (!_internal_has_mvptestjsonhandle()) {
+inline std::string* JSONVariant::_internal_mutable_a_mvptestjsonhandle() {
+  if (!_internal_has_a_mvptestjsonhandle()) {
     clear_content();
-    set_has_mvptestjsonhandle();
-    _impl_.content_.mvptestjsonhandle_.InitDefault();
+    set_has_a_mvptestjsonhandle();
+    _impl_.content_.a_mvptestjsonhandle_.InitDefault();
   }
-  return _impl_.content_.mvptestjsonhandle_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvptestjsonhandle_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* JSONVariant::release_mvptestjsonhandle() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.mVPTestJSONHandle)
-  if (_internal_has_mvptestjsonhandle()) {
+inline std::string* JSONVariant::release_a_mvptestjsonhandle() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVPTestJSONHandle)
+  if (_internal_has_a_mvptestjsonhandle()) {
     clear_has_content();
-    return _impl_.content_.mvptestjsonhandle_.Release();
+    return _impl_.content_.a_mvptestjsonhandle_.Release();
   } else {
     return nullptr;
   }
 }
-inline void JSONVariant::set_allocated_mvptestjsonhandle(std::string* mvptestjsonhandle) {
+inline void JSONVariant::set_allocated_a_mvptestjsonhandle(std::string* a_mvptestjsonhandle) {
   if (has_content()) {
     clear_content();
   }
-  if (mvptestjsonhandle != nullptr) {
-    set_has_mvptestjsonhandle();
-    _impl_.content_.mvptestjsonhandle_.InitAllocated(mvptestjsonhandle, GetArenaForAllocation());
+  if (a_mvptestjsonhandle != nullptr) {
+    set_has_a_mvptestjsonhandle();
+    _impl_.content_.a_mvptestjsonhandle_.InitAllocated(a_mvptestjsonhandle, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.mVPTestJSONHandle)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVPTestJSONHandle)
 }
 
 // .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue mVArrayOfKeyValue = 8;

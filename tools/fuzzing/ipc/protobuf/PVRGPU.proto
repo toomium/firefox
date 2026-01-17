@@ -20,7 +20,7 @@ message Msg_StopVRService {
 }
 
 message Msg_PuppetSubmit {
-  repeated uint64 aBuffer = 1;
+  repeated uint64 a_aBuffer = 1;
 }
 
 message Msg_PuppetReset {

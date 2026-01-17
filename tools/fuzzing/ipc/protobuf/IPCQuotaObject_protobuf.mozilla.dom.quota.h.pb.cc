@@ -25,7 +25,7 @@ PROTOBUF_CONSTEXPR IPCQuotaObject::IPCQuotaObject(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.childendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_childendpoint_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct IPCQuotaObjectDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCQuotaObjectDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,7 +49,7 @@ namespace quota {
 class IPCQuotaObject::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCQuotaObject>()._impl_._has_bits_);
-  static void set_has_childendpoint(HasBits* has_bits) {
+  static void set_has_a_childendpoint(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -69,15 +69,15 @@ IPCQuotaObject::IPCQuotaObject(const IPCQuotaObject& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.childendpoint_){}};
+    , decltype(_impl_.a_childendpoint_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.childendpoint_.InitDefault();
+  _impl_.a_childendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.childendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_childendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_childendpoint()) {
-    _this->_impl_.childendpoint_.Set(from._internal_childendpoint(), 
+  if (from._internal_has_a_childendpoint()) {
+    _this->_impl_.a_childendpoint_.Set(from._internal_a_childendpoint(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.IPCQuotaObject)
@@ -90,11 +90,11 @@ inline void IPCQuotaObject::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.childendpoint_){}
+    , decltype(_impl_.a_childendpoint_){}
   };
-  _impl_.childendpoint_.InitDefault();
+  _impl_.a_childendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.childendpoint_.Set("", GetArenaForAllocation());
+    _impl_.a_childendpoint_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -109,7 +109,7 @@ IPCQuotaObject::~IPCQuotaObject() {
 
 inline void IPCQuotaObject::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.childendpoint_.Destroy();
+  _impl_.a_childendpoint_.Destroy();
 }
 
 void IPCQuotaObject::SetCachedSize(int size) const {
@@ -124,7 +124,7 @@ void IPCQuotaObject::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.childendpoint_.ClearNonDefaultToEmpty();
+    _impl_.a_childendpoint_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -137,10 +137,10 @@ const char* IPCQuotaObject::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes childEndpoint = 1;
+      // required bytes a_childEndpoint = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_childendpoint();
+          auto str = _internal_mutable_a_childendpoint();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -177,10 +177,10 @@ uint8_t* IPCQuotaObject::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes childEndpoint = 1;
+  // required bytes a_childEndpoint = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_childendpoint(), target);
+        1, this->_internal_a_childendpoint(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -195,11 +195,11 @@ size_t IPCQuotaObject::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.IPCQuotaObject)
   size_t total_size = 0;
 
-  // required bytes childEndpoint = 1;
-  if (_internal_has_childendpoint()) {
+  // required bytes a_childEndpoint = 1;
+  if (_internal_has_a_childendpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_childendpoint());
+        this->_internal_a_childendpoint());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -226,8 +226,8 @@ void IPCQuotaObject::MergeFrom(const IPCQuotaObject& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_childendpoint()) {
-    _this->_internal_set_childendpoint(from._internal_childendpoint());
+  if (from._internal_has_a_childendpoint()) {
+    _this->_internal_set_a_childendpoint(from._internal_a_childendpoint());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -251,8 +251,8 @@ void IPCQuotaObject::InternalSwap(IPCQuotaObject* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.childendpoint_, lhs_arena,
-      &other->_impl_.childendpoint_, rhs_arena
+      &_impl_.a_childendpoint_, lhs_arena,
+      &other->_impl_.a_childendpoint_, rhs_arena
   );
 }
 

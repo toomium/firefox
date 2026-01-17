@@ -14,72 +14,72 @@ package protobuf.mozilla._foo;
 // Structs and unions declarations
 message IntDouble {
   oneof content {
-    sint32 mVint = 1;
-    double mVdouble = 2;
+    sint32 a_mVint = 1;
+    double a_mVdouble = 2;
   }
 }
 
 message SIntDouble {
-  required sint32 i = 1;
-  required double d = 2;
+  required sint32 a_i = 1;
+  required double a_d = 2;
 }
 
 message IntDoubleArrays {
   message _mVArrayOfint {
-    repeated sint32 mVArrayOfint = 1;
+    repeated sint32 a_mVArrayOfint = 1;
   }
   message _mVArrayOfdouble {
-    repeated double mVArrayOfdouble = 1;
+    repeated double a_mVArrayOfdouble = 1;
   }
   oneof content {
-    sint32 mVint = 1;
+    sint32 a_mVint = 1;
     _mVArrayOfint mVArrayOfint = 2;
     _mVArrayOfdouble mVArrayOfdouble = 3;
   }
 }
 
 message SIntDoubleArrays {
-  required sint32 i = 1;
-  repeated sint32 ai = 2;
-  repeated double ad = 3;
+  required sint32 a_i = 1;
+  repeated sint32 a_ai = 2;
+  repeated double a_ad = 3;
 }
 
 message ActorWrapper {
-  required bytes actor = 1;
+  required bytes a_actor = 1;
 }
 
 message Actors {
   message _mVArrayOfint {
-    repeated sint32 mVArrayOfint = 1;
+    repeated sint32 a_mVArrayOfint = 1;
   }
   message _mVArrayOfPTestDataStructuresSub {
-    repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+    repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   }
   oneof content {
-    sint32 mVint = 1;
+    sint32 a_mVint = 1;
     _mVArrayOfint mVArrayOfint = 2;
     _mVArrayOfPTestDataStructuresSub mVArrayOfPTestDataStructuresSub = 3;
   }
 }
 
 message SActors {
-  required sint32 i = 1;
-  repeated sint32 ai = 2;
-  repeated bytes ap = 3;
+  required sint32 a_i = 1;
+  repeated sint32 a_ai = 2;
+  repeated bytes a_ap = 3;
 }
 
 message Unions {
   message _mVArrayOfint {
-    repeated sint32 mVArrayOfint = 1;
+    repeated sint32 a_mVArrayOfint = 1;
   }
   message _mVArrayOfPTestDataStructuresSub {
-    repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+    repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   }
   message _mVArrayOfActors {
-    repeated protobuf.mozilla._foo.Actors mVArrayOfActors = 1;
+    repeated protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
   }
   oneof content {
-    sint32 mVint = 1;
+    sint32 a_mVint = 1;
     _mVArrayOfint mVArrayOfint = 2;
     _mVArrayOfPTestDataStructuresSub mVArrayOfPTestDataStructuresSub = 3;
     _mVArrayOfActors mVArrayOfActors = 4;
@@ -87,27 +87,27 @@ message Unions {
 }
 
 message Structs {
-  required sint32 i = 1;
-  repeated sint32 ai = 2;
-  repeated bytes ap = 3;
-  repeated protobuf.mozilla._foo.SActors aa = 4;
+  required sint32 a_i = 1;
+  repeated sint32 a_ai = 2;
+  repeated bytes a_ap = 3;
+  repeated protobuf.mozilla._foo.SActors a_aa = 4;
 }
 
 message WithStructs {
   message _mVArrayOfint {
-    repeated sint32 mVArrayOfint = 1;
+    repeated sint32 a_mVArrayOfint = 1;
   }
   message _mVArrayOfPTestDataStructuresSub {
-    repeated bytes mVArrayOfPTestDataStructuresSub = 1;
+    repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   }
   message _mVArrayOfSActors {
-    repeated protobuf.mozilla._foo.SActors mVArrayOfSActors = 1;
+    repeated protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
   }
   message _mVArrayOfStructs {
-    repeated protobuf.mozilla._foo.Structs mVArrayOfStructs = 1;
+    repeated protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
   }
   oneof content {
-    sint32 mVint = 1;
+    sint32 a_mVint = 1;
     _mVArrayOfint mVArrayOfint = 2;
     _mVArrayOfPTestDataStructuresSub mVArrayOfPTestDataStructuresSub = 3;
     _mVArrayOfSActors mVArrayOfSActors = 4;
@@ -116,58 +116,58 @@ message WithStructs {
 }
 
 message WithUnions {
-  required sint32 i = 1;
-  repeated sint32 ai = 2;
-  repeated bytes ap = 3;
-  repeated protobuf.mozilla._foo.Actors aa = 4;
-  repeated protobuf.mozilla._foo.Unions au = 5;
+  required sint32 a_i = 1;
+  repeated sint32 a_ai = 2;
+  repeated bytes a_ap = 3;
+  repeated protobuf.mozilla._foo.Actors a_aa = 4;
+  repeated protobuf.mozilla._foo.Unions a_au = 5;
 }
 
 message CommonAttrs {
-  required bool dummy = 1;
+  required bool a_dummy = 1;
 }
 
 message FooAttrs {
-  required sint32 dummy = 1;
+  required sint32 a_dummy = 1;
 }
 
 message BarAttrs {
-  required float dummy = 1;
+  required float a_dummy = 1;
 }
 
 message SpecificAttrs {
   oneof content {
-    protobuf.mozilla._foo.FooAttrs mVFooAttrs = 1;
-    protobuf.mozilla._foo.BarAttrs mVBarAttrs = 2;
+    protobuf.mozilla._foo.FooAttrs a_mVFooAttrs = 1;
+    protobuf.mozilla._foo.BarAttrs a_mVBarAttrs = 2;
   }
 }
 
 message Attrs {
-  required protobuf.mozilla._foo.CommonAttrs common = 1;
-  required protobuf.mozilla._foo.SpecificAttrs specific = 2;
+  required protobuf.mozilla._foo.CommonAttrs a_common = 1;
+  required protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
 }
 
 message SetAttrs {
-  required bytes x = 1;
-  required protobuf.mozilla._foo.Attrs attrs = 2;
+  required bytes a_x = 1;
+  required protobuf.mozilla._foo.Attrs a_attrs = 2;
 }
 
 message Op {
   oneof content {
-    bytes mVnull_t = 1;
-    protobuf.mozilla._foo.SetAttrs mVSetAttrs = 2;
+    bytes a_mVnull_t = 1;
+    protobuf.mozilla._foo.SetAttrs a_mVSetAttrs = 2;
   }
 }
 
 message ShmemStruct {
-  required sint32 i = 1;
-  required bytes mem = 2;
+  required sint32 a_i = 1;
+  required bytes a_mem = 2;
 }
 
 message ShmemUnion {
   oneof content {
-    sint32 mVint = 1;
-    bytes mVShmem = 2;
+    sint32 a_mVint = 1;
+    bytes a_mVShmem = 2;
   }
 }
 

@@ -20,7 +20,7 @@ message Msg_OpenHeapSnapshotTempFile {
 }
 
 message Reply_OpenHeapSnapshotTempFile {
-  required protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse response = 1;
+  required protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
 }
 
 message Msg___delete__ {

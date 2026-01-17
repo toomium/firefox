@@ -208,24 +208,24 @@ class Msg_OnTransportAvailable final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASecurityInfoFieldNumber = 1,
+    kAASecurityInfoFieldNumber = 1,
   };
-  // required bytes aSecurityInfo = 1;
-  bool has_asecurityinfo() const;
+  // required bytes a_aSecurityInfo = 1;
+  bool has_a_asecurityinfo() const;
   private:
-  bool _internal_has_asecurityinfo() const;
+  bool _internal_has_a_asecurityinfo() const;
   public:
-  void clear_asecurityinfo();
-  const std::string& asecurityinfo() const;
+  void clear_a_asecurityinfo();
+  const std::string& a_asecurityinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_asecurityinfo(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_asecurityinfo();
-  PROTOBUF_NODISCARD std::string* release_asecurityinfo();
-  void set_allocated_asecurityinfo(std::string* asecurityinfo);
+  void set_a_asecurityinfo(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_asecurityinfo();
+  PROTOBUF_NODISCARD std::string* release_a_asecurityinfo();
+  void set_allocated_a_asecurityinfo(std::string* a_asecurityinfo);
   private:
-  const std::string& _internal_asecurityinfo() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_asecurityinfo(const std::string& value);
-  std::string* _internal_mutable_asecurityinfo();
+  const std::string& _internal_a_asecurityinfo() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_asecurityinfo(const std::string& value);
+  std::string* _internal_mutable_a_asecurityinfo();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable)
@@ -238,7 +238,7 @@ class Msg_OnTransportAvailable final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr asecurityinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asecurityinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketConnection_2eproto;
@@ -355,24 +355,24 @@ class Msg_OnError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStatusFieldNumber = 1,
+    kAAStatusFieldNumber = 1,
   };
-  // required bytes aStatus = 1;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError)
@@ -385,7 +385,7 @@ class Msg_OnError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketConnection_2eproto;
@@ -626,29 +626,29 @@ class Msg_OnDataReceived final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 1,
+    kAADataFieldNumber = 1,
   };
-  // repeated uint32 aData = 1;
-  int adata_size() const;
+  // repeated uint32 a_aData = 1;
+  int a_adata_size() const;
   private:
-  int _internal_adata_size() const;
+  int _internal_a_adata_size() const;
   public:
-  void clear_adata();
+  void clear_a_adata();
   private:
-  uint32_t _internal_adata(int index) const;
+  uint32_t _internal_a_adata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_adata() const;
-  void _internal_add_adata(uint32_t value);
+      _internal_a_adata() const;
+  void _internal_add_a_adata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_adata();
+      _internal_mutable_a_adata();
   public:
-  uint32_t adata(int index) const;
-  void set_adata(int index, uint32_t value);
-  void add_adata(uint32_t value);
+  uint32_t a_adata(int index) const;
+  void set_a_adata(int index, uint32_t value);
+  void add_a_adata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      adata() const;
+      a_adata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_adata();
+      mutable_a_adata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived)
  private:
@@ -658,7 +658,7 @@ class Msg_OnDataReceived final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > adata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -776,24 +776,24 @@ class Msg_OnUpgradeFailed final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAReasonFieldNumber = 1,
+    kAAReasonFieldNumber = 1,
   };
-  // required bytes aReason = 1;
-  bool has_areason() const;
+  // required bytes a_aReason = 1;
+  bool has_a_areason() const;
   private:
-  bool _internal_has_areason() const;
+  bool _internal_has_a_areason() const;
   public:
-  void clear_areason();
-  const std::string& areason() const;
+  void clear_a_areason();
+  const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_areason(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_areason();
-  PROTOBUF_NODISCARD std::string* release_areason();
-  void set_allocated_areason(std::string* areason);
+  void set_a_areason(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_areason();
+  PROTOBUF_NODISCARD std::string* release_a_areason();
+  void set_allocated_a_areason(std::string* a_areason);
   private:
-  const std::string& _internal_areason() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_areason(const std::string& value);
-  std::string* _internal_mutable_areason();
+  const std::string& _internal_a_areason() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_areason(const std::string& value);
+  std::string* _internal_mutable_a_areason();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed)
@@ -806,7 +806,7 @@ class Msg_OnUpgradeFailed final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr areason_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebSocketConnection_2eproto;
@@ -923,29 +923,29 @@ class Msg_WriteOutputData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 1,
+    kAADataFieldNumber = 1,
   };
-  // repeated uint32 aData = 1;
-  int adata_size() const;
+  // repeated uint32 a_aData = 1;
+  int a_adata_size() const;
   private:
-  int _internal_adata_size() const;
+  int _internal_a_adata_size() const;
   public:
-  void clear_adata();
+  void clear_a_adata();
   private:
-  uint32_t _internal_adata(int index) const;
+  uint32_t _internal_a_adata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_adata() const;
-  void _internal_add_adata(uint32_t value);
+      _internal_a_adata() const;
+  void _internal_add_a_adata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_adata();
+      _internal_mutable_a_adata();
   public:
-  uint32_t adata(int index) const;
-  void set_adata(int index, uint32_t value);
-  void add_adata(uint32_t value);
+  uint32_t a_adata(int index) const;
+  void set_a_adata(int index, uint32_t value);
+  void add_a_adata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      adata() const;
+      a_adata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_adata();
+      mutable_a_adata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData)
  private:
@@ -955,7 +955,7 @@ class Msg_WriteOutputData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > adata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1468,144 +1468,144 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnTransportAvailable
 
-// required bytes aSecurityInfo = 1;
-inline bool Msg_OnTransportAvailable::_internal_has_asecurityinfo() const {
+// required bytes a_aSecurityInfo = 1;
+inline bool Msg_OnTransportAvailable::_internal_has_a_asecurityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnTransportAvailable::has_asecurityinfo() const {
-  return _internal_has_asecurityinfo();
+inline bool Msg_OnTransportAvailable::has_a_asecurityinfo() const {
+  return _internal_has_a_asecurityinfo();
 }
-inline void Msg_OnTransportAvailable::clear_asecurityinfo() {
-  _impl_.asecurityinfo_.ClearToEmpty();
+inline void Msg_OnTransportAvailable::clear_a_asecurityinfo() {
+  _impl_.a_asecurityinfo_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnTransportAvailable::asecurityinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.aSecurityInfo)
-  return _internal_asecurityinfo();
+inline const std::string& Msg_OnTransportAvailable::a_asecurityinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.a_aSecurityInfo)
+  return _internal_a_asecurityinfo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnTransportAvailable::set_asecurityinfo(ArgT0&& arg0, ArgT... args) {
+void Msg_OnTransportAvailable::set_a_asecurityinfo(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.asecurityinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.aSecurityInfo)
+ _impl_.a_asecurityinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.a_aSecurityInfo)
 }
-inline std::string* Msg_OnTransportAvailable::mutable_asecurityinfo() {
-  std::string* _s = _internal_mutable_asecurityinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.aSecurityInfo)
+inline std::string* Msg_OnTransportAvailable::mutable_a_asecurityinfo() {
+  std::string* _s = _internal_mutable_a_asecurityinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.a_aSecurityInfo)
   return _s;
 }
-inline const std::string& Msg_OnTransportAvailable::_internal_asecurityinfo() const {
-  return _impl_.asecurityinfo_.Get();
+inline const std::string& Msg_OnTransportAvailable::_internal_a_asecurityinfo() const {
+  return _impl_.a_asecurityinfo_.Get();
 }
-inline void Msg_OnTransportAvailable::_internal_set_asecurityinfo(const std::string& value) {
+inline void Msg_OnTransportAvailable::_internal_set_a_asecurityinfo(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.asecurityinfo_.Set(value, GetArenaForAllocation());
+  _impl_.a_asecurityinfo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnTransportAvailable::_internal_mutable_asecurityinfo() {
+inline std::string* Msg_OnTransportAvailable::_internal_mutable_a_asecurityinfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.asecurityinfo_.Mutable(GetArenaForAllocation());
+  return _impl_.a_asecurityinfo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnTransportAvailable::release_asecurityinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.aSecurityInfo)
-  if (!_internal_has_asecurityinfo()) {
+inline std::string* Msg_OnTransportAvailable::release_a_asecurityinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.a_aSecurityInfo)
+  if (!_internal_has_a_asecurityinfo()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.asecurityinfo_.Release();
+  auto* p = _impl_.a_asecurityinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asecurityinfo_.IsDefault()) {
-    _impl_.asecurityinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asecurityinfo_.IsDefault()) {
+    _impl_.a_asecurityinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnTransportAvailable::set_allocated_asecurityinfo(std::string* asecurityinfo) {
-  if (asecurityinfo != nullptr) {
+inline void Msg_OnTransportAvailable::set_allocated_a_asecurityinfo(std::string* a_asecurityinfo) {
+  if (a_asecurityinfo != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.asecurityinfo_.SetAllocated(asecurityinfo, GetArenaForAllocation());
+  _impl_.a_asecurityinfo_.SetAllocated(a_asecurityinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.asecurityinfo_.IsDefault()) {
-    _impl_.asecurityinfo_.Set("", GetArenaForAllocation());
+  if (_impl_.a_asecurityinfo_.IsDefault()) {
+    _impl_.a_asecurityinfo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.aSecurityInfo)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketConnection.Msg_OnTransportAvailable.a_aSecurityInfo)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnError
 
-// required bytes aStatus = 1;
-inline bool Msg_OnError::_internal_has_astatus() const {
+// required bytes a_aStatus = 1;
+inline bool Msg_OnError::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnError::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_OnError::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_OnError::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_OnError::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnError::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_OnError::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnError::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_OnError::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
 }
-inline std::string* Msg_OnError::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.aStatus)
+inline std::string* Msg_OnError::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_OnError::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_OnError::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_OnError::_internal_set_astatus(const std::string& value) {
+inline void Msg_OnError::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnError::_internal_mutable_astatus() {
+inline std::string* Msg_OnError::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnError::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_OnError::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnError::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_OnError::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketConnection.Msg_OnError.a_aStatus)
 }
 
 // -------------------------------------------------------------------
@@ -1616,174 +1616,174 @@ inline void Msg_OnError::set_allocated_astatus(std::string* astatus) {
 
 // Msg_OnDataReceived
 
-// repeated uint32 aData = 1;
-inline int Msg_OnDataReceived::_internal_adata_size() const {
-  return _impl_.adata_.size();
+// repeated uint32 a_aData = 1;
+inline int Msg_OnDataReceived::_internal_a_adata_size() const {
+  return _impl_.a_adata_.size();
 }
-inline int Msg_OnDataReceived::adata_size() const {
-  return _internal_adata_size();
+inline int Msg_OnDataReceived::a_adata_size() const {
+  return _internal_a_adata_size();
 }
-inline void Msg_OnDataReceived::clear_adata() {
-  _impl_.adata_.Clear();
+inline void Msg_OnDataReceived::clear_a_adata() {
+  _impl_.a_adata_.Clear();
 }
-inline uint32_t Msg_OnDataReceived::_internal_adata(int index) const {
-  return _impl_.adata_.Get(index);
+inline uint32_t Msg_OnDataReceived::_internal_a_adata(int index) const {
+  return _impl_.a_adata_.Get(index);
 }
-inline uint32_t Msg_OnDataReceived::adata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.aData)
-  return _internal_adata(index);
+inline uint32_t Msg_OnDataReceived::a_adata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.a_aData)
+  return _internal_a_adata(index);
 }
-inline void Msg_OnDataReceived::set_adata(int index, uint32_t value) {
-  _impl_.adata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.aData)
+inline void Msg_OnDataReceived::set_a_adata(int index, uint32_t value) {
+  _impl_.a_adata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.a_aData)
 }
-inline void Msg_OnDataReceived::_internal_add_adata(uint32_t value) {
-  _impl_.adata_.Add(value);
+inline void Msg_OnDataReceived::_internal_add_a_adata(uint32_t value) {
+  _impl_.a_adata_.Add(value);
 }
-inline void Msg_OnDataReceived::add_adata(uint32_t value) {
-  _internal_add_adata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.aData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_OnDataReceived::_internal_adata() const {
-  return _impl_.adata_;
+inline void Msg_OnDataReceived::add_a_adata(uint32_t value) {
+  _internal_add_a_adata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.a_aData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_OnDataReceived::adata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.aData)
-  return _internal_adata();
+Msg_OnDataReceived::_internal_a_adata() const {
+  return _impl_.a_adata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_OnDataReceived::a_adata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.a_aData)
+  return _internal_a_adata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_OnDataReceived::_internal_mutable_adata() {
-  return &_impl_.adata_;
+Msg_OnDataReceived::_internal_mutable_a_adata() {
+  return &_impl_.a_adata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_OnDataReceived::mutable_adata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.aData)
-  return _internal_mutable_adata();
+Msg_OnDataReceived::mutable_a_adata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebSocketConnection.Msg_OnDataReceived.a_aData)
+  return _internal_mutable_a_adata();
 }
 
 // -------------------------------------------------------------------
 
 // Msg_OnUpgradeFailed
 
-// required bytes aReason = 1;
-inline bool Msg_OnUpgradeFailed::_internal_has_areason() const {
+// required bytes a_aReason = 1;
+inline bool Msg_OnUpgradeFailed::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnUpgradeFailed::has_areason() const {
-  return _internal_has_areason();
+inline bool Msg_OnUpgradeFailed::has_a_areason() const {
+  return _internal_has_a_areason();
 }
-inline void Msg_OnUpgradeFailed::clear_areason() {
-  _impl_.areason_.ClearToEmpty();
+inline void Msg_OnUpgradeFailed::clear_a_areason() {
+  _impl_.a_areason_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnUpgradeFailed::areason() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.aReason)
-  return _internal_areason();
+inline const std::string& Msg_OnUpgradeFailed::a_areason() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
+  return _internal_a_areason();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnUpgradeFailed::set_areason(ArgT0&& arg0, ArgT... args) {
+void Msg_OnUpgradeFailed::set_a_areason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.aReason)
+ _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
 }
-inline std::string* Msg_OnUpgradeFailed::mutable_areason() {
-  std::string* _s = _internal_mutable_areason();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.aReason)
+inline std::string* Msg_OnUpgradeFailed::mutable_a_areason() {
+  std::string* _s = _internal_mutable_a_areason();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
   return _s;
 }
-inline const std::string& Msg_OnUpgradeFailed::_internal_areason() const {
-  return _impl_.areason_.Get();
+inline const std::string& Msg_OnUpgradeFailed::_internal_a_areason() const {
+  return _impl_.a_areason_.Get();
 }
-inline void Msg_OnUpgradeFailed::_internal_set_areason(const std::string& value) {
+inline void Msg_OnUpgradeFailed::_internal_set_a_areason(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.areason_.Set(value, GetArenaForAllocation());
+  _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnUpgradeFailed::_internal_mutable_areason() {
+inline std::string* Msg_OnUpgradeFailed::_internal_mutable_a_areason() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.areason_.Mutable(GetArenaForAllocation());
+  return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnUpgradeFailed::release_areason() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.aReason)
-  if (!_internal_has_areason()) {
+inline std::string* Msg_OnUpgradeFailed::release_a_areason() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
+  if (!_internal_has_a_areason()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.areason_.Release();
+  auto* p = _impl_.a_areason_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.areason_.IsDefault()) {
-    _impl_.areason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnUpgradeFailed::set_allocated_areason(std::string* areason) {
-  if (areason != nullptr) {
+inline void Msg_OnUpgradeFailed::set_allocated_a_areason(std::string* a_areason) {
+  if (a_areason != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.areason_.SetAllocated(areason, GetArenaForAllocation());
+  _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.areason_.IsDefault()) {
-    _impl_.areason_.Set("", GetArenaForAllocation());
+  if (_impl_.a_areason_.IsDefault()) {
+    _impl_.a_areason_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.aReason)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocketConnection.Msg_OnUpgradeFailed.a_aReason)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_WriteOutputData
 
-// repeated uint32 aData = 1;
-inline int Msg_WriteOutputData::_internal_adata_size() const {
-  return _impl_.adata_.size();
+// repeated uint32 a_aData = 1;
+inline int Msg_WriteOutputData::_internal_a_adata_size() const {
+  return _impl_.a_adata_.size();
 }
-inline int Msg_WriteOutputData::adata_size() const {
-  return _internal_adata_size();
+inline int Msg_WriteOutputData::a_adata_size() const {
+  return _internal_a_adata_size();
 }
-inline void Msg_WriteOutputData::clear_adata() {
-  _impl_.adata_.Clear();
+inline void Msg_WriteOutputData::clear_a_adata() {
+  _impl_.a_adata_.Clear();
 }
-inline uint32_t Msg_WriteOutputData::_internal_adata(int index) const {
-  return _impl_.adata_.Get(index);
+inline uint32_t Msg_WriteOutputData::_internal_a_adata(int index) const {
+  return _impl_.a_adata_.Get(index);
 }
-inline uint32_t Msg_WriteOutputData::adata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.aData)
-  return _internal_adata(index);
+inline uint32_t Msg_WriteOutputData::a_adata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.a_aData)
+  return _internal_a_adata(index);
 }
-inline void Msg_WriteOutputData::set_adata(int index, uint32_t value) {
-  _impl_.adata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.aData)
+inline void Msg_WriteOutputData::set_a_adata(int index, uint32_t value) {
+  _impl_.a_adata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.a_aData)
 }
-inline void Msg_WriteOutputData::_internal_add_adata(uint32_t value) {
-  _impl_.adata_.Add(value);
+inline void Msg_WriteOutputData::_internal_add_a_adata(uint32_t value) {
+  _impl_.a_adata_.Add(value);
 }
-inline void Msg_WriteOutputData::add_adata(uint32_t value) {
-  _internal_add_adata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.aData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_WriteOutputData::_internal_adata() const {
-  return _impl_.adata_;
+inline void Msg_WriteOutputData::add_a_adata(uint32_t value) {
+  _internal_add_a_adata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.a_aData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_WriteOutputData::adata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.aData)
-  return _internal_adata();
+Msg_WriteOutputData::_internal_a_adata() const {
+  return _impl_.a_adata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_WriteOutputData::a_adata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.a_aData)
+  return _internal_a_adata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_WriteOutputData::_internal_mutable_adata() {
-  return &_impl_.adata_;
+Msg_WriteOutputData::_internal_mutable_a_adata() {
+  return &_impl_.a_adata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_WriteOutputData::mutable_adata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.aData)
-  return _internal_mutable_adata();
+Msg_WriteOutputData::mutable_a_adata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PWebSocketConnection.Msg_WriteOutputData.a_aData)
+  return _internal_mutable_a_adata();
 }
 
 // -------------------------------------------------------------------

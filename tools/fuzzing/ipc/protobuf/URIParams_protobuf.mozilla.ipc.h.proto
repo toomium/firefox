@@ -14,91 +14,91 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message SimpleURIParams {
-  required bytes spec = 1;
+  required bytes a_spec = 1;
 }
 
 message DefaultURIParams {
-  required bytes spec = 1;
+  required bytes a_spec = 1;
 }
 
 message StandardURLSegment {
-  required uint32 position = 1;
-  required sint32 length = 2;
+  required uint32 a_position = 1;
+  required sint32 a_length = 2;
 }
 
 message StandardURLParams {
-  required uint32 urlType = 1;
-  required sint32 port = 2;
-  required sint32 defaultPort = 3;
-  required bytes spec = 4;
-  required protobuf.mozilla.ipc.StandardURLSegment scheme = 5;
-  required protobuf.mozilla.ipc.StandardURLSegment authority = 6;
-  required protobuf.mozilla.ipc.StandardURLSegment username = 7;
-  required protobuf.mozilla.ipc.StandardURLSegment password = 8;
-  required protobuf.mozilla.ipc.StandardURLSegment host = 9;
-  required protobuf.mozilla.ipc.StandardURLSegment path = 10;
-  required protobuf.mozilla.ipc.StandardURLSegment filePath = 11;
-  required protobuf.mozilla.ipc.StandardURLSegment directory = 12;
-  required protobuf.mozilla.ipc.StandardURLSegment baseName = 13;
-  required protobuf.mozilla.ipc.StandardURLSegment extension = 14;
-  required protobuf.mozilla.ipc.StandardURLSegment query = 15;
-  required protobuf.mozilla.ipc.StandardURLSegment ref = 16;
-  required bool supportsFileURL = 17;
-  required bool isSubstituting = 18;
+  required uint32 a_urlType = 1;
+  required sint32 a_port = 2;
+  required sint32 a_defaultPort = 3;
+  required bytes a_spec = 4;
+  required protobuf.mozilla.ipc.StandardURLSegment a_scheme = 5;
+  required protobuf.mozilla.ipc.StandardURLSegment a_authority = 6;
+  required protobuf.mozilla.ipc.StandardURLSegment a_username = 7;
+  required protobuf.mozilla.ipc.StandardURLSegment a_password = 8;
+  required protobuf.mozilla.ipc.StandardURLSegment a_host = 9;
+  required protobuf.mozilla.ipc.StandardURLSegment a_path = 10;
+  required protobuf.mozilla.ipc.StandardURLSegment a_filePath = 11;
+  required protobuf.mozilla.ipc.StandardURLSegment a_directory = 12;
+  required protobuf.mozilla.ipc.StandardURLSegment a_baseName = 13;
+  required protobuf.mozilla.ipc.StandardURLSegment a_extension = 14;
+  required protobuf.mozilla.ipc.StandardURLSegment a_query = 15;
+  required protobuf.mozilla.ipc.StandardURLSegment a_ref = 16;
+  required bool a_supportsFileURL = 17;
+  required bool a_isSubstituting = 18;
 }
 
 message JARURIParams {
-  required protobuf.mozilla.ipc.URIParams jarFile = 1;
-  required protobuf.mozilla.ipc.URIParams jarEntry = 2;
-  required bytes charset = 3;
+  required protobuf.mozilla.ipc.URIParams a_jarFile = 1;
+  required protobuf.mozilla.ipc.URIParams a_jarEntry = 2;
+  required bytes a_charset = 3;
 }
 
 message IconURIParams {
-  optional protobuf.mozilla.ipc.URIParams uri = 1;
-  required uint32 size = 2;
-  required bytes contentType = 3;
-  required bytes fileName = 4;
-  required bytes stockIcon = 5;
-  required uint32 iconScale = 6;
-  optional bool iconDark = 7;
+  optional protobuf.mozilla.ipc.URIParams a_uri = 1;
+  required uint32 a_size = 2;
+  required bytes a_contentType = 3;
+  required bytes a_fileName = 4;
+  required bytes a_stockIcon = 5;
+  required uint32 a_iconScale = 6;
+  optional bool a_iconDark = 7;
 }
 
 message HostObjectURIParams {
-  required protobuf.mozilla.ipc.SimpleURIParams simpleParams = 1;
-  required bool revoked = 2;
+  required protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
+  required bool a_revoked = 2;
 }
 
 message URIParams {
   oneof content {
-    protobuf.mozilla.ipc.SimpleURIParams mVSimpleURIParams = 1;
-    protobuf.mozilla.ipc.StandardURLParams mVStandardURLParams = 2;
-    protobuf.mozilla.ipc.JARURIParams mVJARURIParams = 3;
-    protobuf.mozilla.ipc.IconURIParams mVIconURIParams = 4;
-    protobuf.mozilla.ipc.JSURIParams mVJSURIParams = 5;
-    protobuf.mozilla.ipc.SimpleNestedURIParams mVSimpleNestedURIParams = 6;
-    protobuf.mozilla.ipc.HostObjectURIParams mVHostObjectURIParams = 7;
-    protobuf.mozilla.ipc.DefaultURIParams mVDefaultURIParams = 8;
-    protobuf.mozilla.ipc.NestedAboutURIParams mVNestedAboutURIParams = 9;
-    protobuf.mozilla.ipc.SubstitutingJARURIParams mVSubstitutingJARURIParams = 10;
+    protobuf.mozilla.ipc.SimpleURIParams a_mVSimpleURIParams = 1;
+    protobuf.mozilla.ipc.StandardURLParams a_mVStandardURLParams = 2;
+    protobuf.mozilla.ipc.JARURIParams a_mVJARURIParams = 3;
+    protobuf.mozilla.ipc.IconURIParams a_mVIconURIParams = 4;
+    protobuf.mozilla.ipc.JSURIParams a_mVJSURIParams = 5;
+    protobuf.mozilla.ipc.SimpleNestedURIParams a_mVSimpleNestedURIParams = 6;
+    protobuf.mozilla.ipc.HostObjectURIParams a_mVHostObjectURIParams = 7;
+    protobuf.mozilla.ipc.DefaultURIParams a_mVDefaultURIParams = 8;
+    protobuf.mozilla.ipc.NestedAboutURIParams a_mVNestedAboutURIParams = 9;
+    protobuf.mozilla.ipc.SubstitutingJARURIParams a_mVSubstitutingJARURIParams = 10;
   }
 }
 
 message JSURIParams {
-  required protobuf.mozilla.ipc.SimpleURIParams simpleParams = 1;
-  optional protobuf.mozilla.ipc.URIParams baseURI = 2;
+  required protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
+  optional protobuf.mozilla.ipc.URIParams a_baseURI = 2;
 }
 
 message SimpleNestedURIParams {
-  required protobuf.mozilla.ipc.SimpleURIParams simpleParams = 1;
-  required protobuf.mozilla.ipc.URIParams innerURI = 2;
+  required protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
+  required protobuf.mozilla.ipc.URIParams a_innerURI = 2;
 }
 
 message NestedAboutURIParams {
-  required protobuf.mozilla.ipc.SimpleNestedURIParams nestedParams = 1;
-  optional protobuf.mozilla.ipc.URIParams baseURI = 2;
+  required protobuf.mozilla.ipc.SimpleNestedURIParams a_nestedParams = 1;
+  optional protobuf.mozilla.ipc.URIParams a_baseURI = 2;
 }
 
 message SubstitutingJARURIParams {
-  required protobuf.mozilla.ipc.URIParams source = 1;
-  required protobuf.mozilla.ipc.JARURIParams resolved = 2;
+  required protobuf.mozilla.ipc.URIParams a_source = 1;
+  required protobuf.mozilla.ipc.JARURIParams a_resolved = 2;
 }

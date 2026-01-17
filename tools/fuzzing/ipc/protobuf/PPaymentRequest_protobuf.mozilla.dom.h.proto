@@ -13,195 +13,195 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCPaymentMethodData {
-  required bytes supportedMethods = 1;
-  required bytes data = 2;
+  required bytes a_supportedMethods = 1;
+  required bytes a_data = 2;
 }
 
 message IPCPaymentCurrencyAmount {
-  required bytes currency = 1;
-  required bytes value = 2;
+  required bytes a_currency = 1;
+  required bytes a_value = 2;
 }
 
 message IPCPaymentItem {
-  required bytes label = 1;
-  required protobuf.mozilla.dom.IPCPaymentCurrencyAmount amount = 2;
-  required bool pending = 3;
+  required bytes a_label = 1;
+  required protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
+  required bool a_pending = 3;
 }
 
 message IPCPaymentDetailsModifier {
-  required bytes supportedMethods = 1;
-  required protobuf.mozilla.dom.IPCPaymentItem total = 2;
-  repeated protobuf.mozilla.dom.IPCPaymentItem additionalDisplayItems = 3;
-  required bytes data = 4;
-  required bool additionalDisplayItemsPassed = 5;
+  required bytes a_supportedMethods = 1;
+  required protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+  repeated protobuf.mozilla.dom.IPCPaymentItem a_additionalDisplayItems = 3;
+  required bytes a_data = 4;
+  required bool a_additionalDisplayItemsPassed = 5;
 }
 
 message IPCPaymentShippingOption {
-  required bytes id = 1;
-  required bytes label = 2;
-  required protobuf.mozilla.dom.IPCPaymentCurrencyAmount amount = 3;
-  required bool selected = 4;
+  required bytes a_id = 1;
+  required bytes a_label = 2;
+  required protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
+  required bool a_selected = 4;
 }
 
 message IPCPaymentDetails {
-  required bytes id = 1;
-  required protobuf.mozilla.dom.IPCPaymentItem total = 2;
-  repeated protobuf.mozilla.dom.IPCPaymentItem displayItems = 3;
-  repeated protobuf.mozilla.dom.IPCPaymentShippingOption shippingOptions = 4;
-  repeated protobuf.mozilla.dom.IPCPaymentDetailsModifier modifiers = 5;
-  required bytes error = 6;
-  required bytes shippingAddressErrors = 7;
-  required bytes payerErrors = 8;
-  required bytes paymentMethodErrors = 9;
+  required bytes a_id = 1;
+  required protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+  repeated protobuf.mozilla.dom.IPCPaymentItem a_displayItems = 3;
+  repeated protobuf.mozilla.dom.IPCPaymentShippingOption a_shippingOptions = 4;
+  repeated protobuf.mozilla.dom.IPCPaymentDetailsModifier a_modifiers = 5;
+  required bytes a_error = 6;
+  required bytes a_shippingAddressErrors = 7;
+  required bytes a_payerErrors = 8;
+  required bytes a_paymentMethodErrors = 9;
 }
 
 message IPCPaymentOptions {
-  required bool requestPayerName = 1;
-  required bool requestPayerEmail = 2;
-  required bool requestPayerPhone = 3;
-  required bool requestShipping = 4;
-  required bool requestBillingAddress = 5;
-  required bytes shippingType = 6;
+  required bool a_requestPayerName = 1;
+  required bool a_requestPayerEmail = 2;
+  required bool a_requestPayerPhone = 3;
+  required bool a_requestShipping = 4;
+  required bool a_requestBillingAddress = 5;
+  required bytes a_shippingType = 6;
 }
 
 message IPCPaymentCreateActionRequest {
-  required uint64 topOuterWindowId = 1;
-  required bytes requestId = 2;
-  required bytes topLevelPrincipal = 3;
-  repeated protobuf.mozilla.dom.IPCPaymentMethodData methodData = 4;
-  required protobuf.mozilla.dom.IPCPaymentDetails details = 5;
-  required protobuf.mozilla.dom.IPCPaymentOptions options = 6;
-  required bytes shippingOption = 7;
+  required uint64 a_topOuterWindowId = 1;
+  required bytes a_requestId = 2;
+  required bytes a_topLevelPrincipal = 3;
+  repeated protobuf.mozilla.dom.IPCPaymentMethodData a_methodData = 4;
+  required protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
+  required protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
+  required bytes a_shippingOption = 7;
 }
 
 message IPCPaymentCanMakeActionRequest {
-  required bytes requestId = 1;
+  required bytes a_requestId = 1;
 }
 
 message IPCPaymentShowActionRequest {
-  required bytes requestId = 1;
-  required bool isUpdating = 2;
+  required bytes a_requestId = 1;
+  required bool a_isUpdating = 2;
 }
 
 message IPCPaymentAbortActionRequest {
-  required bytes requestId = 1;
+  required bytes a_requestId = 1;
 }
 
 message IPCPaymentCompleteActionRequest {
-  required bytes requestId = 1;
-  required bytes completeStatus = 2;
+  required bytes a_requestId = 1;
+  required bytes a_completeStatus = 2;
 }
 
 message IPCPaymentUpdateActionRequest {
-  required bytes requestId = 1;
-  required protobuf.mozilla.dom.IPCPaymentDetails details = 2;
-  required bytes shippingOption = 3;
+  required bytes a_requestId = 1;
+  required protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
+  required bytes a_shippingOption = 3;
 }
 
 message IPCPaymentCloseActionRequest {
-  required bytes requestId = 1;
+  required bytes a_requestId = 1;
 }
 
 message IPCPaymentRetryActionRequest {
-  required bytes requestId = 1;
-  required bytes error = 2;
-  required bytes payerErrors = 3;
-  required bytes paymentMethodErrors = 4;
-  required bytes shippingAddressErrors = 5;
+  required bytes a_requestId = 1;
+  required bytes a_error = 2;
+  required bytes a_payerErrors = 3;
+  required bytes a_paymentMethodErrors = 4;
+  required bytes a_shippingAddressErrors = 5;
 }
 
 message IPCPaymentActionRequest {
   oneof content {
-    protobuf.mozilla.dom.IPCPaymentCreateActionRequest mVIPCPaymentCreateActionRequest = 1;
-    protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest mVIPCPaymentCanMakeActionRequest = 2;
-    protobuf.mozilla.dom.IPCPaymentShowActionRequest mVIPCPaymentShowActionRequest = 3;
-    protobuf.mozilla.dom.IPCPaymentAbortActionRequest mVIPCPaymentAbortActionRequest = 4;
-    protobuf.mozilla.dom.IPCPaymentCompleteActionRequest mVIPCPaymentCompleteActionRequest = 5;
-    protobuf.mozilla.dom.IPCPaymentUpdateActionRequest mVIPCPaymentUpdateActionRequest = 6;
-    protobuf.mozilla.dom.IPCPaymentCloseActionRequest mVIPCPaymentCloseActionRequest = 7;
-    protobuf.mozilla.dom.IPCPaymentRetryActionRequest mVIPCPaymentRetryActionRequest = 8;
+    protobuf.mozilla.dom.IPCPaymentCreateActionRequest a_mVIPCPaymentCreateActionRequest = 1;
+    protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest a_mVIPCPaymentCanMakeActionRequest = 2;
+    protobuf.mozilla.dom.IPCPaymentShowActionRequest a_mVIPCPaymentShowActionRequest = 3;
+    protobuf.mozilla.dom.IPCPaymentAbortActionRequest a_mVIPCPaymentAbortActionRequest = 4;
+    protobuf.mozilla.dom.IPCPaymentCompleteActionRequest a_mVIPCPaymentCompleteActionRequest = 5;
+    protobuf.mozilla.dom.IPCPaymentUpdateActionRequest a_mVIPCPaymentUpdateActionRequest = 6;
+    protobuf.mozilla.dom.IPCPaymentCloseActionRequest a_mVIPCPaymentCloseActionRequest = 7;
+    protobuf.mozilla.dom.IPCPaymentRetryActionRequest a_mVIPCPaymentRetryActionRequest = 8;
   }
 }
 
 message IPCPaymentCanMakeActionResponse {
-  required bytes requestId = 1;
-  required bool result = 2;
+  required bytes a_requestId = 1;
+  required bool a_result = 2;
 }
 
 message IPCPaymentAddress {
-  required bytes country = 1;
-  repeated bytes addressLine = 2;
-  required bytes region = 3;
-  required bytes regionCode = 4;
-  required bytes city = 5;
-  required bytes dependentLocality = 6;
-  required bytes postalCode = 7;
-  required bytes sortingCode = 8;
-  required bytes organization = 9;
-  required bytes recipient = 10;
-  required bytes phone = 11;
+  required bytes a_country = 1;
+  repeated bytes a_addressLine = 2;
+  required bytes a_region = 3;
+  required bytes a_regionCode = 4;
+  required bytes a_city = 5;
+  required bytes a_dependentLocality = 6;
+  required bytes a_postalCode = 7;
+  required bytes a_sortingCode = 8;
+  required bytes a_organization = 9;
+  required bytes a_recipient = 10;
+  required bytes a_phone = 11;
 }
 
 message IPCGeneralResponse {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message IPCBasicCardResponse {
-  required bytes cardholderName = 1;
-  required bytes cardNumber = 2;
-  required bytes expiryMonth = 3;
-  required bytes expiryYear = 4;
-  required bytes cardSecurityCode = 5;
-  required protobuf.mozilla.dom.IPCPaymentAddress billingAddress = 6;
+  required bytes a_cardholderName = 1;
+  required bytes a_cardNumber = 2;
+  required bytes a_expiryMonth = 3;
+  required bytes a_expiryYear = 4;
+  required bytes a_cardSecurityCode = 5;
+  required protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
 }
 
 message IPCPaymentResponseData {
   oneof content {
-    protobuf.mozilla.dom.IPCGeneralResponse mVIPCGeneralResponse = 1;
-    protobuf.mozilla.dom.IPCBasicCardResponse mVIPCBasicCardResponse = 2;
+    protobuf.mozilla.dom.IPCGeneralResponse a_mVIPCGeneralResponse = 1;
+    protobuf.mozilla.dom.IPCBasicCardResponse a_mVIPCBasicCardResponse = 2;
   }
 }
 
 message IPCPaymentShowActionResponse {
-  required bytes requestId = 1;
-  required uint32 status = 2;
-  required bytes methodName = 3;
-  required protobuf.mozilla.dom.IPCPaymentResponseData data = 4;
-  required bytes payerName = 5;
-  required bytes payerEmail = 6;
-  required bytes payerPhone = 7;
+  required bytes a_requestId = 1;
+  required uint32 a_status = 2;
+  required bytes a_methodName = 3;
+  required protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
+  required bytes a_payerName = 5;
+  required bytes a_payerEmail = 6;
+  required bytes a_payerPhone = 7;
 }
 
 message IPCPaymentAbortActionResponse {
-  required bytes requestId = 1;
-  required bool isSucceeded = 2;
+  required bytes a_requestId = 1;
+  required bool a_isSucceeded = 2;
 }
 
 message IPCPaymentCompleteActionResponse {
-  required bytes requestId = 1;
-  required bool isCompleted = 2;
+  required bytes a_requestId = 1;
+  required bool a_isCompleted = 2;
 }
 
 message IPCPaymentActionResponse {
   oneof content {
-    protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse mVIPCPaymentCanMakeActionResponse = 1;
-    protobuf.mozilla.dom.IPCPaymentShowActionResponse mVIPCPaymentShowActionResponse = 2;
-    protobuf.mozilla.dom.IPCPaymentAbortActionResponse mVIPCPaymentAbortActionResponse = 3;
-    protobuf.mozilla.dom.IPCPaymentCompleteActionResponse mVIPCPaymentCompleteActionResponse = 4;
+    protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse a_mVIPCPaymentCanMakeActionResponse = 1;
+    protobuf.mozilla.dom.IPCPaymentShowActionResponse a_mVIPCPaymentShowActionResponse = 2;
+    protobuf.mozilla.dom.IPCPaymentAbortActionResponse a_mVIPCPaymentAbortActionResponse = 3;
+    protobuf.mozilla.dom.IPCPaymentCompleteActionResponse a_mVIPCPaymentCompleteActionResponse = 4;
   }
 }
 
 message IPCGeneralChangeDetails {
-  required bytes details = 1;
+  required bytes a_details = 1;
 }
 
 message IPCBasicCardChangeDetails {
-  required protobuf.mozilla.dom.IPCPaymentAddress billingAddress = 1;
+  required protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
 }
 
 message IPCMethodChangeDetails {
   oneof content {
-    protobuf.mozilla.dom.IPCGeneralChangeDetails mVIPCGeneralChangeDetails = 1;
-    protobuf.mozilla.dom.IPCBasicCardChangeDetails mVIPCBasicCardChangeDetails = 2;
+    protobuf.mozilla.dom.IPCGeneralChangeDetails a_mVIPCGeneralChangeDetails = 1;
+    protobuf.mozilla.dom.IPCBasicCardChangeDetails a_mVIPCBasicCardChangeDetails = 2;
   }
 }

@@ -14,11 +14,11 @@ import "GMPTypes.proto";
 
 // Structs and unions declarations
 message GMPLaunchResult {
-  required uint32 pluginId = 1;
-  required bytes pluginType = 2;
-  required bytes pid = 3;
-  required bytes displayName = 4;
-  required bytes endpoint = 5;
-  required bytes result = 6;
-  required bytes errorDescription = 7;
+  required uint32 a_pluginId = 1;
+  required bytes a_pluginType = 2;
+  required bytes a_pid = 3;
+  required bytes a_displayName = 4;
+  required bytes a_endpoint = 5;
+  required bytes a_result = 6;
+  required bytes a_errorDescription = 7;
 }

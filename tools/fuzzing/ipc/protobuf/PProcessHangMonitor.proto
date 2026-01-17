@@ -15,7 +15,7 @@ import public "PProcessHangMonitor_protobuf.mozilla.h.proto";
 
 // Message declarations
 message Msg_HangEvidence {
-  required protobuf.mozilla.SlowScriptData data = 1;
+  required protobuf.mozilla.SlowScriptData a_data = 1;
 }
 
 message Msg_ClearHang {
@@ -34,23 +34,23 @@ message Msg_EndStartingDebugger {
 }
 
 message Msg_PaintWhileInterruptingJS {
-  required bytes tabId = 1;
+  required bytes a_tabId = 1;
 }
 
 message Msg_UnloadLayersWhileInterruptingJS {
-  required bytes tabId = 1;
+  required bytes a_tabId = 1;
 }
 
 message Msg_CancelContentJSExecutionIfRunning {
-  required bytes tabId = 1;
-  required bytes aNavigationType = 2;
-  required sint32 aNavigationIndex = 3;
-  optional bytes aNavigationURI = 4;
-  required sint32 aEpoch = 5;
+  required bytes a_tabId = 1;
+  required bytes a_aNavigationType = 2;
+  required sint32 a_aNavigationIndex = 3;
+  optional bytes a_aNavigationURI = 4;
+  required sint32 a_aEpoch = 5;
 }
 
 message Msg_SetMainThreadQoSPriority {
-  required bytes qosPriority = 1;
+  required bytes a_qosPriority = 1;
 }
 
 // Parameter mappings stats:

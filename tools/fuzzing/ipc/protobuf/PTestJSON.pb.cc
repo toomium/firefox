@@ -61,7 +61,7 @@ PROTOBUF_CONSTEXPR Msg_Test::Msg_Test(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.i_)*/nullptr} {}
+  , /*decltype(_impl_.a_i_)*/nullptr} {}
 struct Msg_TestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -75,7 +75,7 @@ PROTOBUF_CONSTEXPR Reply_Test::Reply_Test(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.o_)*/nullptr} {}
+  , /*decltype(_impl_.a_o_)*/nullptr} {}
 struct Reply_TestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_TestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -567,8 +567,8 @@ std::string Reply_PTestJSONHandleConstructor::GetTypeName() const {
 class Msg_Test::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_Test>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::_ipdltest::JSONVariant& i(const Msg_Test* msg);
-  static void set_has_i(HasBits* has_bits) {
+  static const ::protobuf::mozilla::_ipdltest::JSONVariant& a_i(const Msg_Test* msg);
+  static void set_has_a_i(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -577,11 +577,11 @@ class Msg_Test::_Internal {
 };
 
 const ::protobuf::mozilla::_ipdltest::JSONVariant&
-Msg_Test::_Internal::i(const Msg_Test* msg) {
-  return *msg->_impl_.i_;
+Msg_Test::_Internal::a_i(const Msg_Test* msg) {
+  return *msg->_impl_.a_i_;
 }
-void Msg_Test::clear_i() {
-  if (_impl_.i_ != nullptr) _impl_.i_->Clear();
+void Msg_Test::clear_a_i() {
+  if (_impl_.a_i_ != nullptr) _impl_.a_i_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_Test::Msg_Test(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -596,11 +596,11 @@ Msg_Test::Msg_Test(const Msg_Test& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.i_){nullptr}};
+    , decltype(_impl_.a_i_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_i()) {
-    _this->_impl_.i_ = new ::protobuf::mozilla::_ipdltest::JSONVariant(*from._impl_.i_);
+  if (from._internal_has_a_i()) {
+    _this->_impl_.a_i_ = new ::protobuf::mozilla::_ipdltest::JSONVariant(*from._impl_.a_i_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test)
 }
@@ -612,7 +612,7 @@ inline void Msg_Test::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.i_){nullptr}
+    , decltype(_impl_.a_i_){nullptr}
   };
 }
 
@@ -627,7 +627,7 @@ Msg_Test::~Msg_Test() {
 
 inline void Msg_Test::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.i_;
+  if (this != internal_default_instance()) delete _impl_.a_i_;
 }
 
 void Msg_Test::SetCachedSize(int size) const {
@@ -642,8 +642,8 @@ void Msg_Test::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.i_ != nullptr);
-    _impl_.i_->Clear();
+    GOOGLE_DCHECK(_impl_.a_i_ != nullptr);
+    _impl_.a_i_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -656,10 +656,10 @@ const char* Msg_Test::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla._ipdltest.JSONVariant i = 1;
+      // required .protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_i(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_i(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -695,11 +695,11 @@ uint8_t* Msg_Test::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla._ipdltest.JSONVariant i = 1;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::i(this),
-        _Internal::i(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_i(this),
+        _Internal::a_i(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -714,11 +714,11 @@ size_t Msg_Test::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla._ipdltest.JSONVariant i = 1;
-  if (_internal_has_i()) {
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
+  if (_internal_has_a_i()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.i_);
+        *_impl_.a_i_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -745,9 +745,9 @@ void Msg_Test::MergeFrom(const Msg_Test& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_i()) {
-    _this->_internal_mutable_i()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
-        from._internal_i());
+  if (from._internal_has_a_i()) {
+    _this->_internal_mutable_a_i()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
+        from._internal_a_i());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -761,8 +761,8 @@ void Msg_Test::CopyFrom(const Msg_Test& from) {
 
 bool Msg_Test::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_i()) {
-    if (!_impl_.i_->IsInitialized()) return false;
+  if (_internal_has_a_i()) {
+    if (!_impl_.a_i_->IsInitialized()) return false;
   }
   return true;
 }
@@ -771,7 +771,7 @@ void Msg_Test::InternalSwap(Msg_Test* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.i_, other->_impl_.i_);
+  swap(_impl_.a_i_, other->_impl_.a_i_);
 }
 
 std::string Msg_Test::GetTypeName() const {
@@ -784,8 +784,8 @@ std::string Msg_Test::GetTypeName() const {
 class Reply_Test::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_Test>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::_ipdltest::JSONVariant& o(const Reply_Test* msg);
-  static void set_has_o(HasBits* has_bits) {
+  static const ::protobuf::mozilla::_ipdltest::JSONVariant& a_o(const Reply_Test* msg);
+  static void set_has_a_o(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -794,11 +794,11 @@ class Reply_Test::_Internal {
 };
 
 const ::protobuf::mozilla::_ipdltest::JSONVariant&
-Reply_Test::_Internal::o(const Reply_Test* msg) {
-  return *msg->_impl_.o_;
+Reply_Test::_Internal::a_o(const Reply_Test* msg) {
+  return *msg->_impl_.a_o_;
 }
-void Reply_Test::clear_o() {
-  if (_impl_.o_ != nullptr) _impl_.o_->Clear();
+void Reply_Test::clear_a_o() {
+  if (_impl_.a_o_ != nullptr) _impl_.a_o_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Reply_Test::Reply_Test(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -813,11 +813,11 @@ Reply_Test::Reply_Test(const Reply_Test& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.o_){nullptr}};
+    , decltype(_impl_.a_o_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_o()) {
-    _this->_impl_.o_ = new ::protobuf::mozilla::_ipdltest::JSONVariant(*from._impl_.o_);
+  if (from._internal_has_a_o()) {
+    _this->_impl_.a_o_ = new ::protobuf::mozilla::_ipdltest::JSONVariant(*from._impl_.a_o_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test)
 }
@@ -829,7 +829,7 @@ inline void Reply_Test::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.o_){nullptr}
+    , decltype(_impl_.a_o_){nullptr}
   };
 }
 
@@ -844,7 +844,7 @@ Reply_Test::~Reply_Test() {
 
 inline void Reply_Test::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.o_;
+  if (this != internal_default_instance()) delete _impl_.a_o_;
 }
 
 void Reply_Test::SetCachedSize(int size) const {
@@ -859,8 +859,8 @@ void Reply_Test::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.o_ != nullptr);
-    _impl_.o_->Clear();
+    GOOGLE_DCHECK(_impl_.a_o_ != nullptr);
+    _impl_.a_o_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -873,10 +873,10 @@ const char* Reply_Test::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla._ipdltest.JSONVariant o = 1;
+      // required .protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_o(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_o(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -912,11 +912,11 @@ uint8_t* Reply_Test::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla._ipdltest.JSONVariant o = 1;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::o(this),
-        _Internal::o(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_o(this),
+        _Internal::a_o(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -931,11 +931,11 @@ size_t Reply_Test::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla._ipdltest.JSONVariant o = 1;
-  if (_internal_has_o()) {
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
+  if (_internal_has_a_o()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.o_);
+        *_impl_.a_o_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -962,9 +962,9 @@ void Reply_Test::MergeFrom(const Reply_Test& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_o()) {
-    _this->_internal_mutable_o()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
-        from._internal_o());
+  if (from._internal_has_a_o()) {
+    _this->_internal_mutable_a_o()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
+        from._internal_a_o());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -978,8 +978,8 @@ void Reply_Test::CopyFrom(const Reply_Test& from) {
 
 bool Reply_Test::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_o()) {
-    if (!_impl_.o_->IsInitialized()) return false;
+  if (_internal_has_a_o()) {
+    if (!_impl_.a_o_->IsInitialized()) return false;
   }
   return true;
 }
@@ -988,7 +988,7 @@ void Reply_Test::InternalSwap(Reply_Test* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.o_, other->_impl_.o_);
+  swap(_impl_.a_o_, other->_impl_.a_o_);
 }
 
 std::string Reply_Test::GetTypeName() const {

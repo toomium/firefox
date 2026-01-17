@@ -23,34 +23,34 @@ message Reply___delete__ {
 }
 
 message Msg_RequestPayment {
-  required protobuf.mozilla.dom.IPCPaymentActionRequest aAction = 1;
+  required protobuf.mozilla.dom.IPCPaymentActionRequest a_aAction = 1;
 }
 
 message Msg_RespondPayment {
-  required protobuf.mozilla.dom.IPCPaymentActionResponse aResponse = 1;
+  required protobuf.mozilla.dom.IPCPaymentActionResponse a_aResponse = 1;
 }
 
 message Msg_ChangeShippingAddress {
-  required bytes aRequestId = 1;
-  required protobuf.mozilla.dom.IPCPaymentAddress aAddress = 2;
+  required bytes a_aRequestId = 1;
+  required protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
 }
 
 message Msg_ChangeShippingOption {
-  required bytes aRequestId = 1;
-  required bytes aOption = 2;
+  required bytes a_aRequestId = 1;
+  required bytes a_aOption = 2;
 }
 
 message Msg_ChangePayerDetail {
-  required bytes aRequestId = 1;
-  required bytes aPayerName = 2;
-  required bytes aPayerEmail = 3;
-  required bytes aPayerPhone = 4;
+  required bytes a_aRequestId = 1;
+  required bytes a_aPayerName = 2;
+  required bytes a_aPayerEmail = 3;
+  required bytes a_aPayerPhone = 4;
 }
 
 message Msg_ChangePaymentMethod {
-  required bytes aRequestId = 1;
-  required bytes aMethodName = 2;
-  required protobuf.mozilla.dom.IPCMethodChangeDetails aMethodDetails = 3;
+  required bytes a_aRequestId = 1;
+  required bytes a_aMethodName = 2;
+  required protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;
 }
 
 // Parameter mappings stats:

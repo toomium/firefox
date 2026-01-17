@@ -13,5 +13,5 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message RawBytes {
-  repeated uint32 data = 1;
+  repeated uint32 a_data = 1;
 }

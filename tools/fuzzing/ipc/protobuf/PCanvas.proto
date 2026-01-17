@@ -16,24 +16,24 @@ package protobuf.mozilla.layers.PCanvas;
 
 // Message declarations
 message Msg_InitTranslator {
-  required bytes aTextureType = 1;
-  required bytes aWebglTextureType = 2;
-  required bytes aBackendType = 3;
-  required bytes aHeaderHandle = 4;
-  repeated bytes aBufferHandles = 5;
-  required bytes aReaderSem = 6;
-  required bytes aWriterSem = 7;
+  required bytes a_aTextureType = 1;
+  required bytes a_aWebglTextureType = 2;
+  required bytes a_aBackendType = 3;
+  required bytes a_aHeaderHandle = 4;
+  repeated bytes a_aBufferHandles = 5;
+  required bytes a_aReaderSem = 6;
+  required bytes a_aWriterSem = 7;
 }
 
 message Msg_RestartTranslation {
 }
 
 message Msg_AddBuffer {
-  required bytes aBufferHandle = 1;
+  required bytes a_aBufferHandle = 1;
 }
 
 message Msg_SetDataSurfaceBuffer {
-  required bytes aBufferHandle = 1;
+  required bytes a_aBufferHandle = 1;
 }
 
 message Msg_ClearCachedResources {
@@ -43,9 +43,9 @@ message Msg_DropFreeBuffersWhenDormant {
 }
 
 message Msg_SnapshotExternalCanvas {
-  required uint64 aSyncId = 1;
-  required uint32 aManagerId = 2;
-  required bytes aCanvasId = 3;
+  required uint64 a_aSyncId = 1;
+  required uint32 a_aManagerId = 2;
+  required bytes a_aCanvasId = 3;
 }
 
 message Msg___delete__ {
@@ -58,7 +58,7 @@ message Msg_NotifyDeviceChanged {
 }
 
 message Msg_NotifyDeviceReset {
-  repeated bytes aOwners = 1;
+  repeated bytes a_aOwners = 1;
 }
 
 message Msg_Deactivate {
@@ -68,20 +68,20 @@ message Msg_BlockCanvas {
 }
 
 message Msg_NotifyRequiresRefresh {
-  required bytes aTextureOwnerId = 1;
+  required bytes a_aTextureOwnerId = 1;
 }
 
 message Msg_SnapshotShmem {
-  required bytes aTextureOwnerId = 1;
-  required bytes aShmemHandle = 2;
+  required bytes a_aTextureOwnerId = 1;
+  required bytes a_aShmemHandle = 2;
 }
 
 message Reply_SnapshotShmem {
-  required bool aSuccess = 1;
+  required bool a_aSuccess = 1;
 }
 
 message Msg_NotifyTextureDestruction {
-  required bytes aTextureOwnerId = 1;
+  required bytes a_aTextureOwnerId = 1;
 }
 
 // Parameter mappings stats:

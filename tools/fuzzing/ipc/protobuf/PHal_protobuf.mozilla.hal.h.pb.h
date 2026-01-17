@@ -181,47 +181,47 @@ class BatteryInformation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kLevelFieldNumber = 1,
-    kRemainingTimeFieldNumber = 3,
-    kChargingFieldNumber = 2,
+    kALevelFieldNumber = 1,
+    kARemainingTimeFieldNumber = 3,
+    kAChargingFieldNumber = 2,
   };
-  // required double level = 1;
-  bool has_level() const;
+  // required double a_level = 1;
+  bool has_a_level() const;
   private:
-  bool _internal_has_level() const;
+  bool _internal_has_a_level() const;
   public:
-  void clear_level();
-  double level() const;
-  void set_level(double value);
+  void clear_a_level();
+  double a_level() const;
+  void set_a_level(double value);
   private:
-  double _internal_level() const;
-  void _internal_set_level(double value);
-  public:
-
-  // required double remainingTime = 3;
-  bool has_remainingtime() const;
-  private:
-  bool _internal_has_remainingtime() const;
-  public:
-  void clear_remainingtime();
-  double remainingtime() const;
-  void set_remainingtime(double value);
-  private:
-  double _internal_remainingtime() const;
-  void _internal_set_remainingtime(double value);
+  double _internal_a_level() const;
+  void _internal_set_a_level(double value);
   public:
 
-  // required bool charging = 2;
-  bool has_charging() const;
+  // required double a_remainingTime = 3;
+  bool has_a_remainingtime() const;
   private:
-  bool _internal_has_charging() const;
+  bool _internal_has_a_remainingtime() const;
   public:
-  void clear_charging();
-  bool charging() const;
-  void set_charging(bool value);
+  void clear_a_remainingtime();
+  double a_remainingtime() const;
+  void set_a_remainingtime(double value);
   private:
-  bool _internal_charging() const;
-  void _internal_set_charging(bool value);
+  double _internal_a_remainingtime() const;
+  void _internal_set_a_remainingtime(double value);
+  public:
+
+  // required bool a_charging = 2;
+  bool has_a_charging() const;
+  private:
+  bool _internal_has_a_charging() const;
+  public:
+  void clear_a_charging();
+  bool a_charging() const;
+  void set_a_charging(bool value);
+  private:
+  bool _internal_a_charging() const;
+  void _internal_set_a_charging(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.BatteryInformation)
@@ -237,9 +237,9 @@ class BatteryInformation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    double level_;
-    double remainingtime_;
-    bool charging_;
+    double a_level_;
+    double a_remainingtime_;
+    bool a_charging_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto;
@@ -356,66 +356,66 @@ class SensorData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kValuesFieldNumber = 3,
-    kSensorFieldNumber = 1,
-    kTimestampFieldNumber = 2,
+    kAValuesFieldNumber = 3,
+    kASensorFieldNumber = 1,
+    kATimestampFieldNumber = 2,
   };
-  // repeated float values = 3;
-  int values_size() const;
+  // repeated float a_values = 3;
+  int a_values_size() const;
   private:
-  int _internal_values_size() const;
+  int _internal_a_values_size() const;
   public:
-  void clear_values();
+  void clear_a_values();
   private:
-  float _internal_values(int index) const;
+  float _internal_a_values(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
-      _internal_values() const;
-  void _internal_add_values(float value);
+      _internal_a_values() const;
+  void _internal_add_a_values(float value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >*
-      _internal_mutable_values();
+      _internal_mutable_a_values();
   public:
-  float values(int index) const;
-  void set_values(int index, float value);
-  void add_values(float value);
+  float a_values(int index) const;
+  void set_a_values(int index, float value);
+  void add_a_values(float value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
-      values() const;
+      a_values() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >*
-      mutable_values();
+      mutable_a_values();
 
-  // required bytes sensor = 1;
-  bool has_sensor() const;
+  // required bytes a_sensor = 1;
+  bool has_a_sensor() const;
   private:
-  bool _internal_has_sensor() const;
+  bool _internal_has_a_sensor() const;
   public:
-  void clear_sensor();
-  const std::string& sensor() const;
+  void clear_a_sensor();
+  const std::string& a_sensor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_sensor(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_sensor();
-  PROTOBUF_NODISCARD std::string* release_sensor();
-  void set_allocated_sensor(std::string* sensor);
+  void set_a_sensor(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_sensor();
+  PROTOBUF_NODISCARD std::string* release_a_sensor();
+  void set_allocated_a_sensor(std::string* a_sensor);
   private:
-  const std::string& _internal_sensor() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_sensor(const std::string& value);
-  std::string* _internal_mutable_sensor();
+  const std::string& _internal_a_sensor() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_sensor(const std::string& value);
+  std::string* _internal_mutable_a_sensor();
   public:
 
-  // required bytes timestamp = 2;
-  bool has_timestamp() const;
+  // required bytes a_timestamp = 2;
+  bool has_a_timestamp() const;
   private:
-  bool _internal_has_timestamp() const;
+  bool _internal_has_a_timestamp() const;
   public:
-  void clear_timestamp();
-  const std::string& timestamp() const;
+  void clear_a_timestamp();
+  const std::string& a_timestamp() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_timestamp(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_timestamp();
-  PROTOBUF_NODISCARD std::string* release_timestamp();
-  void set_allocated_timestamp(std::string* timestamp);
+  void set_a_timestamp(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_timestamp();
+  PROTOBUF_NODISCARD std::string* release_a_timestamp();
+  void set_allocated_a_timestamp(std::string* a_timestamp);
   private:
-  const std::string& _internal_timestamp() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_timestamp(const std::string& value);
-  std::string* _internal_mutable_timestamp();
+  const std::string& _internal_a_timestamp() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_timestamp(const std::string& value);
+  std::string* _internal_mutable_a_timestamp();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.SensorData)
@@ -431,9 +431,9 @@ class SensorData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > values_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sensor_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr timestamp_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > a_values_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_sensor_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timestamp_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto;
@@ -550,47 +550,47 @@ class NetworkInformation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTypeFieldNumber = 1,
-    kIsWifiFieldNumber = 2,
-    kDhcpGatewayFieldNumber = 3,
+    kATypeFieldNumber = 1,
+    kAIsWifiFieldNumber = 2,
+    kADhcpGatewayFieldNumber = 3,
   };
-  // required uint32 type = 1;
-  bool has_type() const;
+  // required uint32 a_type = 1;
+  bool has_a_type() const;
   private:
-  bool _internal_has_type() const;
+  bool _internal_has_a_type() const;
   public:
-  void clear_type();
-  uint32_t type() const;
-  void set_type(uint32_t value);
+  void clear_a_type();
+  uint32_t a_type() const;
+  void set_a_type(uint32_t value);
   private:
-  uint32_t _internal_type() const;
-  void _internal_set_type(uint32_t value);
-  public:
-
-  // required bool isWifi = 2;
-  bool has_iswifi() const;
-  private:
-  bool _internal_has_iswifi() const;
-  public:
-  void clear_iswifi();
-  bool iswifi() const;
-  void set_iswifi(bool value);
-  private:
-  bool _internal_iswifi() const;
-  void _internal_set_iswifi(bool value);
+  uint32_t _internal_a_type() const;
+  void _internal_set_a_type(uint32_t value);
   public:
 
-  // required uint32 dhcpGateway = 3;
-  bool has_dhcpgateway() const;
+  // required bool a_isWifi = 2;
+  bool has_a_iswifi() const;
   private:
-  bool _internal_has_dhcpgateway() const;
+  bool _internal_has_a_iswifi() const;
   public:
-  void clear_dhcpgateway();
-  uint32_t dhcpgateway() const;
-  void set_dhcpgateway(uint32_t value);
+  void clear_a_iswifi();
+  bool a_iswifi() const;
+  void set_a_iswifi(bool value);
   private:
-  uint32_t _internal_dhcpgateway() const;
-  void _internal_set_dhcpgateway(uint32_t value);
+  bool _internal_a_iswifi() const;
+  void _internal_set_a_iswifi(bool value);
+  public:
+
+  // required uint32 a_dhcpGateway = 3;
+  bool has_a_dhcpgateway() const;
+  private:
+  bool _internal_has_a_dhcpgateway() const;
+  public:
+  void clear_a_dhcpgateway();
+  uint32_t a_dhcpgateway() const;
+  void set_a_dhcpgateway(uint32_t value);
+  private:
+  uint32_t _internal_a_dhcpgateway() const;
+  void _internal_set_a_dhcpgateway(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.NetworkInformation)
@@ -606,9 +606,9 @@ class NetworkInformation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t type_;
-    bool iswifi_;
-    uint32_t dhcpgateway_;
+    uint32_t a_type_;
+    bool a_iswifi_;
+    uint32_t a_dhcpgateway_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto;
@@ -725,75 +725,75 @@ class WakeLockInformation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kLockingProcessesFieldNumber = 4,
-    kTopicFieldNumber = 1,
-    kNumLocksFieldNumber = 2,
-    kNumHiddenFieldNumber = 3,
+    kALockingProcessesFieldNumber = 4,
+    kATopicFieldNumber = 1,
+    kANumLocksFieldNumber = 2,
+    kANumHiddenFieldNumber = 3,
   };
-  // repeated uint64 lockingProcesses = 4;
-  int lockingprocesses_size() const;
+  // repeated uint64 a_lockingProcesses = 4;
+  int a_lockingprocesses_size() const;
   private:
-  int _internal_lockingprocesses_size() const;
+  int _internal_a_lockingprocesses_size() const;
   public:
-  void clear_lockingprocesses();
+  void clear_a_lockingprocesses();
   private:
-  uint64_t _internal_lockingprocesses(int index) const;
+  uint64_t _internal_a_lockingprocesses(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      _internal_lockingprocesses() const;
-  void _internal_add_lockingprocesses(uint64_t value);
+      _internal_a_lockingprocesses() const;
+  void _internal_add_a_lockingprocesses(uint64_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      _internal_mutable_lockingprocesses();
+      _internal_mutable_a_lockingprocesses();
   public:
-  uint64_t lockingprocesses(int index) const;
-  void set_lockingprocesses(int index, uint64_t value);
-  void add_lockingprocesses(uint64_t value);
+  uint64_t a_lockingprocesses(int index) const;
+  void set_a_lockingprocesses(int index, uint64_t value);
+  void add_a_lockingprocesses(uint64_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-      lockingprocesses() const;
+      a_lockingprocesses() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-      mutable_lockingprocesses();
+      mutable_a_lockingprocesses();
 
-  // required bytes topic = 1;
-  bool has_topic() const;
+  // required bytes a_topic = 1;
+  bool has_a_topic() const;
   private:
-  bool _internal_has_topic() const;
+  bool _internal_has_a_topic() const;
   public:
-  void clear_topic();
-  const std::string& topic() const;
+  void clear_a_topic();
+  const std::string& a_topic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_topic(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_topic();
-  PROTOBUF_NODISCARD std::string* release_topic();
-  void set_allocated_topic(std::string* topic);
+  void set_a_topic(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_topic();
+  PROTOBUF_NODISCARD std::string* release_a_topic();
+  void set_allocated_a_topic(std::string* a_topic);
   private:
-  const std::string& _internal_topic() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_topic(const std::string& value);
-  std::string* _internal_mutable_topic();
+  const std::string& _internal_a_topic() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_topic(const std::string& value);
+  std::string* _internal_mutable_a_topic();
   public:
 
-  // required uint32 numLocks = 2;
-  bool has_numlocks() const;
+  // required uint32 a_numLocks = 2;
+  bool has_a_numlocks() const;
   private:
-  bool _internal_has_numlocks() const;
+  bool _internal_has_a_numlocks() const;
   public:
-  void clear_numlocks();
-  uint32_t numlocks() const;
-  void set_numlocks(uint32_t value);
+  void clear_a_numlocks();
+  uint32_t a_numlocks() const;
+  void set_a_numlocks(uint32_t value);
   private:
-  uint32_t _internal_numlocks() const;
-  void _internal_set_numlocks(uint32_t value);
+  uint32_t _internal_a_numlocks() const;
+  void _internal_set_a_numlocks(uint32_t value);
   public:
 
-  // required uint32 numHidden = 3;
-  bool has_numhidden() const;
+  // required uint32 a_numHidden = 3;
+  bool has_a_numhidden() const;
   private:
-  bool _internal_has_numhidden() const;
+  bool _internal_has_a_numhidden() const;
   public:
-  void clear_numhidden();
-  uint32_t numhidden() const;
-  void set_numhidden(uint32_t value);
+  void clear_a_numhidden();
+  uint32_t a_numhidden() const;
+  void set_a_numhidden(uint32_t value);
   private:
-  uint32_t _internal_numhidden() const;
-  void _internal_set_numhidden(uint32_t value);
+  uint32_t _internal_a_numhidden() const;
+  void _internal_set_a_numhidden(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.hal.WakeLockInformation)
@@ -809,10 +809,10 @@ class WakeLockInformation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > lockingprocesses_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr topic_;
-    uint32_t numlocks_;
-    uint32_t numhidden_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_lockingprocesses_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_topic_;
+    uint32_t a_numlocks_;
+    uint32_t a_numhidden_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto;
@@ -828,538 +828,538 @@ class WakeLockInformation final :
 #endif  // __GNUC__
 // BatteryInformation
 
-// required double level = 1;
-inline bool BatteryInformation::_internal_has_level() const {
+// required double a_level = 1;
+inline bool BatteryInformation::_internal_has_a_level() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool BatteryInformation::has_level() const {
-  return _internal_has_level();
+inline bool BatteryInformation::has_a_level() const {
+  return _internal_has_a_level();
 }
-inline void BatteryInformation::clear_level() {
-  _impl_.level_ = 0;
+inline void BatteryInformation::clear_a_level() {
+  _impl_.a_level_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double BatteryInformation::_internal_level() const {
-  return _impl_.level_;
+inline double BatteryInformation::_internal_a_level() const {
+  return _impl_.a_level_;
 }
-inline double BatteryInformation::level() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.BatteryInformation.level)
-  return _internal_level();
+inline double BatteryInformation::a_level() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.BatteryInformation.a_level)
+  return _internal_a_level();
 }
-inline void BatteryInformation::_internal_set_level(double value) {
+inline void BatteryInformation::_internal_set_a_level(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.level_ = value;
+  _impl_.a_level_ = value;
 }
-inline void BatteryInformation::set_level(double value) {
-  _internal_set_level(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.level)
+inline void BatteryInformation::set_a_level(double value) {
+  _internal_set_a_level(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.a_level)
 }
 
-// required bool charging = 2;
-inline bool BatteryInformation::_internal_has_charging() const {
+// required bool a_charging = 2;
+inline bool BatteryInformation::_internal_has_a_charging() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool BatteryInformation::has_charging() const {
-  return _internal_has_charging();
+inline bool BatteryInformation::has_a_charging() const {
+  return _internal_has_a_charging();
 }
-inline void BatteryInformation::clear_charging() {
-  _impl_.charging_ = false;
+inline void BatteryInformation::clear_a_charging() {
+  _impl_.a_charging_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool BatteryInformation::_internal_charging() const {
-  return _impl_.charging_;
+inline bool BatteryInformation::_internal_a_charging() const {
+  return _impl_.a_charging_;
 }
-inline bool BatteryInformation::charging() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.BatteryInformation.charging)
-  return _internal_charging();
+inline bool BatteryInformation::a_charging() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.BatteryInformation.a_charging)
+  return _internal_a_charging();
 }
-inline void BatteryInformation::_internal_set_charging(bool value) {
+inline void BatteryInformation::_internal_set_a_charging(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.charging_ = value;
+  _impl_.a_charging_ = value;
 }
-inline void BatteryInformation::set_charging(bool value) {
-  _internal_set_charging(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.charging)
+inline void BatteryInformation::set_a_charging(bool value) {
+  _internal_set_a_charging(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.a_charging)
 }
 
-// required double remainingTime = 3;
-inline bool BatteryInformation::_internal_has_remainingtime() const {
+// required double a_remainingTime = 3;
+inline bool BatteryInformation::_internal_has_a_remainingtime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool BatteryInformation::has_remainingtime() const {
-  return _internal_has_remainingtime();
+inline bool BatteryInformation::has_a_remainingtime() const {
+  return _internal_has_a_remainingtime();
 }
-inline void BatteryInformation::clear_remainingtime() {
-  _impl_.remainingtime_ = 0;
+inline void BatteryInformation::clear_a_remainingtime() {
+  _impl_.a_remainingtime_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline double BatteryInformation::_internal_remainingtime() const {
-  return _impl_.remainingtime_;
+inline double BatteryInformation::_internal_a_remainingtime() const {
+  return _impl_.a_remainingtime_;
 }
-inline double BatteryInformation::remainingtime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.BatteryInformation.remainingTime)
-  return _internal_remainingtime();
+inline double BatteryInformation::a_remainingtime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.BatteryInformation.a_remainingTime)
+  return _internal_a_remainingtime();
 }
-inline void BatteryInformation::_internal_set_remainingtime(double value) {
+inline void BatteryInformation::_internal_set_a_remainingtime(double value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.remainingtime_ = value;
+  _impl_.a_remainingtime_ = value;
 }
-inline void BatteryInformation::set_remainingtime(double value) {
-  _internal_set_remainingtime(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.remainingTime)
+inline void BatteryInformation::set_a_remainingtime(double value) {
+  _internal_set_a_remainingtime(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.BatteryInformation.a_remainingTime)
 }
 
 // -------------------------------------------------------------------
 
 // SensorData
 
-// required bytes sensor = 1;
-inline bool SensorData::_internal_has_sensor() const {
+// required bytes a_sensor = 1;
+inline bool SensorData::_internal_has_a_sensor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SensorData::has_sensor() const {
-  return _internal_has_sensor();
+inline bool SensorData::has_a_sensor() const {
+  return _internal_has_a_sensor();
 }
-inline void SensorData::clear_sensor() {
-  _impl_.sensor_.ClearToEmpty();
+inline void SensorData::clear_a_sensor() {
+  _impl_.a_sensor_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& SensorData::sensor() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.SensorData.sensor)
-  return _internal_sensor();
+inline const std::string& SensorData::a_sensor() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.SensorData.a_sensor)
+  return _internal_a_sensor();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SensorData::set_sensor(ArgT0&& arg0, ArgT... args) {
+void SensorData::set_a_sensor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.sensor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.SensorData.sensor)
+ _impl_.a_sensor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.SensorData.a_sensor)
 }
-inline std::string* SensorData::mutable_sensor() {
-  std::string* _s = _internal_mutable_sensor();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.hal.SensorData.sensor)
+inline std::string* SensorData::mutable_a_sensor() {
+  std::string* _s = _internal_mutable_a_sensor();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.hal.SensorData.a_sensor)
   return _s;
 }
-inline const std::string& SensorData::_internal_sensor() const {
-  return _impl_.sensor_.Get();
+inline const std::string& SensorData::_internal_a_sensor() const {
+  return _impl_.a_sensor_.Get();
 }
-inline void SensorData::_internal_set_sensor(const std::string& value) {
+inline void SensorData::_internal_set_a_sensor(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.sensor_.Set(value, GetArenaForAllocation());
+  _impl_.a_sensor_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SensorData::_internal_mutable_sensor() {
+inline std::string* SensorData::_internal_mutable_a_sensor() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.sensor_.Mutable(GetArenaForAllocation());
+  return _impl_.a_sensor_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SensorData::release_sensor() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.hal.SensorData.sensor)
-  if (!_internal_has_sensor()) {
+inline std::string* SensorData::release_a_sensor() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.hal.SensorData.a_sensor)
+  if (!_internal_has_a_sensor()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.sensor_.Release();
+  auto* p = _impl_.a_sensor_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sensor_.IsDefault()) {
-    _impl_.sensor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sensor_.IsDefault()) {
+    _impl_.a_sensor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SensorData::set_allocated_sensor(std::string* sensor) {
-  if (sensor != nullptr) {
+inline void SensorData::set_allocated_a_sensor(std::string* a_sensor) {
+  if (a_sensor != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.sensor_.SetAllocated(sensor, GetArenaForAllocation());
+  _impl_.a_sensor_.SetAllocated(a_sensor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.sensor_.IsDefault()) {
-    _impl_.sensor_.Set("", GetArenaForAllocation());
+  if (_impl_.a_sensor_.IsDefault()) {
+    _impl_.a_sensor_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.SensorData.sensor)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.SensorData.a_sensor)
 }
 
-// required bytes timestamp = 2;
-inline bool SensorData::_internal_has_timestamp() const {
+// required bytes a_timestamp = 2;
+inline bool SensorData::_internal_has_a_timestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool SensorData::has_timestamp() const {
-  return _internal_has_timestamp();
+inline bool SensorData::has_a_timestamp() const {
+  return _internal_has_a_timestamp();
 }
-inline void SensorData::clear_timestamp() {
-  _impl_.timestamp_.ClearToEmpty();
+inline void SensorData::clear_a_timestamp() {
+  _impl_.a_timestamp_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& SensorData::timestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.SensorData.timestamp)
-  return _internal_timestamp();
+inline const std::string& SensorData::a_timestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.SensorData.a_timestamp)
+  return _internal_a_timestamp();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SensorData::set_timestamp(ArgT0&& arg0, ArgT... args) {
+void SensorData::set_a_timestamp(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.timestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.SensorData.timestamp)
+ _impl_.a_timestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.SensorData.a_timestamp)
 }
-inline std::string* SensorData::mutable_timestamp() {
-  std::string* _s = _internal_mutable_timestamp();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.hal.SensorData.timestamp)
+inline std::string* SensorData::mutable_a_timestamp() {
+  std::string* _s = _internal_mutable_a_timestamp();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.hal.SensorData.a_timestamp)
   return _s;
 }
-inline const std::string& SensorData::_internal_timestamp() const {
-  return _impl_.timestamp_.Get();
+inline const std::string& SensorData::_internal_a_timestamp() const {
+  return _impl_.a_timestamp_.Get();
 }
-inline void SensorData::_internal_set_timestamp(const std::string& value) {
+inline void SensorData::_internal_set_a_timestamp(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.timestamp_.Set(value, GetArenaForAllocation());
+  _impl_.a_timestamp_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SensorData::_internal_mutable_timestamp() {
+inline std::string* SensorData::_internal_mutable_a_timestamp() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.timestamp_.Mutable(GetArenaForAllocation());
+  return _impl_.a_timestamp_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SensorData::release_timestamp() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.hal.SensorData.timestamp)
-  if (!_internal_has_timestamp()) {
+inline std::string* SensorData::release_a_timestamp() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.hal.SensorData.a_timestamp)
+  if (!_internal_has_a_timestamp()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.timestamp_.Release();
+  auto* p = _impl_.a_timestamp_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timestamp_.IsDefault()) {
-    _impl_.timestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timestamp_.IsDefault()) {
+    _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SensorData::set_allocated_timestamp(std::string* timestamp) {
-  if (timestamp != nullptr) {
+inline void SensorData::set_allocated_a_timestamp(std::string* a_timestamp) {
+  if (a_timestamp != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.timestamp_.SetAllocated(timestamp, GetArenaForAllocation());
+  _impl_.a_timestamp_.SetAllocated(a_timestamp, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timestamp_.IsDefault()) {
-    _impl_.timestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timestamp_.IsDefault()) {
+    _impl_.a_timestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.SensorData.timestamp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.SensorData.a_timestamp)
 }
 
-// repeated float values = 3;
-inline int SensorData::_internal_values_size() const {
-  return _impl_.values_.size();
+// repeated float a_values = 3;
+inline int SensorData::_internal_a_values_size() const {
+  return _impl_.a_values_.size();
 }
-inline int SensorData::values_size() const {
-  return _internal_values_size();
+inline int SensorData::a_values_size() const {
+  return _internal_a_values_size();
 }
-inline void SensorData::clear_values() {
-  _impl_.values_.Clear();
+inline void SensorData::clear_a_values() {
+  _impl_.a_values_.Clear();
 }
-inline float SensorData::_internal_values(int index) const {
-  return _impl_.values_.Get(index);
+inline float SensorData::_internal_a_values(int index) const {
+  return _impl_.a_values_.Get(index);
 }
-inline float SensorData::values(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.SensorData.values)
-  return _internal_values(index);
+inline float SensorData::a_values(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.SensorData.a_values)
+  return _internal_a_values(index);
 }
-inline void SensorData::set_values(int index, float value) {
-  _impl_.values_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.SensorData.values)
+inline void SensorData::set_a_values(int index, float value) {
+  _impl_.a_values_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.SensorData.a_values)
 }
-inline void SensorData::_internal_add_values(float value) {
-  _impl_.values_.Add(value);
+inline void SensorData::_internal_add_a_values(float value) {
+  _impl_.a_values_.Add(value);
 }
-inline void SensorData::add_values(float value) {
-  _internal_add_values(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.hal.SensorData.values)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
-SensorData::_internal_values() const {
-  return _impl_.values_;
+inline void SensorData::add_a_values(float value) {
+  _internal_add_a_values(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.hal.SensorData.a_values)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
-SensorData::values() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.hal.SensorData.values)
-  return _internal_values();
+SensorData::_internal_a_values() const {
+  return _impl_.a_values_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >&
+SensorData::a_values() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.hal.SensorData.a_values)
+  return _internal_a_values();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >*
-SensorData::_internal_mutable_values() {
-  return &_impl_.values_;
+SensorData::_internal_mutable_a_values() {
+  return &_impl_.a_values_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< float >*
-SensorData::mutable_values() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.hal.SensorData.values)
-  return _internal_mutable_values();
+SensorData::mutable_a_values() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.hal.SensorData.a_values)
+  return _internal_mutable_a_values();
 }
 
 // -------------------------------------------------------------------
 
 // NetworkInformation
 
-// required uint32 type = 1;
-inline bool NetworkInformation::_internal_has_type() const {
+// required uint32 a_type = 1;
+inline bool NetworkInformation::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool NetworkInformation::has_type() const {
-  return _internal_has_type();
+inline bool NetworkInformation::has_a_type() const {
+  return _internal_has_a_type();
 }
-inline void NetworkInformation::clear_type() {
-  _impl_.type_ = 0u;
+inline void NetworkInformation::clear_a_type() {
+  _impl_.a_type_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t NetworkInformation::_internal_type() const {
-  return _impl_.type_;
+inline uint32_t NetworkInformation::_internal_a_type() const {
+  return _impl_.a_type_;
 }
-inline uint32_t NetworkInformation::type() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.NetworkInformation.type)
-  return _internal_type();
+inline uint32_t NetworkInformation::a_type() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.NetworkInformation.a_type)
+  return _internal_a_type();
 }
-inline void NetworkInformation::_internal_set_type(uint32_t value) {
+inline void NetworkInformation::_internal_set_a_type(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.type_ = value;
+  _impl_.a_type_ = value;
 }
-inline void NetworkInformation::set_type(uint32_t value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.type)
+inline void NetworkInformation::set_a_type(uint32_t value) {
+  _internal_set_a_type(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.a_type)
 }
 
-// required bool isWifi = 2;
-inline bool NetworkInformation::_internal_has_iswifi() const {
+// required bool a_isWifi = 2;
+inline bool NetworkInformation::_internal_has_a_iswifi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool NetworkInformation::has_iswifi() const {
-  return _internal_has_iswifi();
+inline bool NetworkInformation::has_a_iswifi() const {
+  return _internal_has_a_iswifi();
 }
-inline void NetworkInformation::clear_iswifi() {
-  _impl_.iswifi_ = false;
+inline void NetworkInformation::clear_a_iswifi() {
+  _impl_.a_iswifi_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool NetworkInformation::_internal_iswifi() const {
-  return _impl_.iswifi_;
+inline bool NetworkInformation::_internal_a_iswifi() const {
+  return _impl_.a_iswifi_;
 }
-inline bool NetworkInformation::iswifi() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.NetworkInformation.isWifi)
-  return _internal_iswifi();
+inline bool NetworkInformation::a_iswifi() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.NetworkInformation.a_isWifi)
+  return _internal_a_iswifi();
 }
-inline void NetworkInformation::_internal_set_iswifi(bool value) {
+inline void NetworkInformation::_internal_set_a_iswifi(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.iswifi_ = value;
+  _impl_.a_iswifi_ = value;
 }
-inline void NetworkInformation::set_iswifi(bool value) {
-  _internal_set_iswifi(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.isWifi)
+inline void NetworkInformation::set_a_iswifi(bool value) {
+  _internal_set_a_iswifi(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.a_isWifi)
 }
 
-// required uint32 dhcpGateway = 3;
-inline bool NetworkInformation::_internal_has_dhcpgateway() const {
+// required uint32 a_dhcpGateway = 3;
+inline bool NetworkInformation::_internal_has_a_dhcpgateway() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool NetworkInformation::has_dhcpgateway() const {
-  return _internal_has_dhcpgateway();
+inline bool NetworkInformation::has_a_dhcpgateway() const {
+  return _internal_has_a_dhcpgateway();
 }
-inline void NetworkInformation::clear_dhcpgateway() {
-  _impl_.dhcpgateway_ = 0u;
+inline void NetworkInformation::clear_a_dhcpgateway() {
+  _impl_.a_dhcpgateway_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t NetworkInformation::_internal_dhcpgateway() const {
-  return _impl_.dhcpgateway_;
+inline uint32_t NetworkInformation::_internal_a_dhcpgateway() const {
+  return _impl_.a_dhcpgateway_;
 }
-inline uint32_t NetworkInformation::dhcpgateway() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.NetworkInformation.dhcpGateway)
-  return _internal_dhcpgateway();
+inline uint32_t NetworkInformation::a_dhcpgateway() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.NetworkInformation.a_dhcpGateway)
+  return _internal_a_dhcpgateway();
 }
-inline void NetworkInformation::_internal_set_dhcpgateway(uint32_t value) {
+inline void NetworkInformation::_internal_set_a_dhcpgateway(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.dhcpgateway_ = value;
+  _impl_.a_dhcpgateway_ = value;
 }
-inline void NetworkInformation::set_dhcpgateway(uint32_t value) {
-  _internal_set_dhcpgateway(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.dhcpGateway)
+inline void NetworkInformation::set_a_dhcpgateway(uint32_t value) {
+  _internal_set_a_dhcpgateway(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.NetworkInformation.a_dhcpGateway)
 }
 
 // -------------------------------------------------------------------
 
 // WakeLockInformation
 
-// required bytes topic = 1;
-inline bool WakeLockInformation::_internal_has_topic() const {
+// required bytes a_topic = 1;
+inline bool WakeLockInformation::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool WakeLockInformation::has_topic() const {
-  return _internal_has_topic();
+inline bool WakeLockInformation::has_a_topic() const {
+  return _internal_has_a_topic();
 }
-inline void WakeLockInformation::clear_topic() {
-  _impl_.topic_.ClearToEmpty();
+inline void WakeLockInformation::clear_a_topic() {
+  _impl_.a_topic_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& WakeLockInformation::topic() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.topic)
-  return _internal_topic();
+inline const std::string& WakeLockInformation::a_topic() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.a_topic)
+  return _internal_a_topic();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void WakeLockInformation::set_topic(ArgT0&& arg0, ArgT... args) {
+void WakeLockInformation::set_a_topic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.topic)
+ _impl_.a_topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.a_topic)
 }
-inline std::string* WakeLockInformation::mutable_topic() {
-  std::string* _s = _internal_mutable_topic();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.hal.WakeLockInformation.topic)
+inline std::string* WakeLockInformation::mutable_a_topic() {
+  std::string* _s = _internal_mutable_a_topic();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.hal.WakeLockInformation.a_topic)
   return _s;
 }
-inline const std::string& WakeLockInformation::_internal_topic() const {
-  return _impl_.topic_.Get();
+inline const std::string& WakeLockInformation::_internal_a_topic() const {
+  return _impl_.a_topic_.Get();
 }
-inline void WakeLockInformation::_internal_set_topic(const std::string& value) {
+inline void WakeLockInformation::_internal_set_a_topic(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.topic_.Set(value, GetArenaForAllocation());
+  _impl_.a_topic_.Set(value, GetArenaForAllocation());
 }
-inline std::string* WakeLockInformation::_internal_mutable_topic() {
+inline std::string* WakeLockInformation::_internal_mutable_a_topic() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.topic_.Mutable(GetArenaForAllocation());
+  return _impl_.a_topic_.Mutable(GetArenaForAllocation());
 }
-inline std::string* WakeLockInformation::release_topic() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.hal.WakeLockInformation.topic)
-  if (!_internal_has_topic()) {
+inline std::string* WakeLockInformation::release_a_topic() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.hal.WakeLockInformation.a_topic)
+  if (!_internal_has_a_topic()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.topic_.Release();
+  auto* p = _impl_.a_topic_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.topic_.IsDefault()) {
-    _impl_.topic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_topic_.IsDefault()) {
+    _impl_.a_topic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void WakeLockInformation::set_allocated_topic(std::string* topic) {
-  if (topic != nullptr) {
+inline void WakeLockInformation::set_allocated_a_topic(std::string* a_topic) {
+  if (a_topic != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.topic_.SetAllocated(topic, GetArenaForAllocation());
+  _impl_.a_topic_.SetAllocated(a_topic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.topic_.IsDefault()) {
-    _impl_.topic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_topic_.IsDefault()) {
+    _impl_.a_topic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.WakeLockInformation.topic)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal.WakeLockInformation.a_topic)
 }
 
-// required uint32 numLocks = 2;
-inline bool WakeLockInformation::_internal_has_numlocks() const {
+// required uint32 a_numLocks = 2;
+inline bool WakeLockInformation::_internal_has_a_numlocks() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool WakeLockInformation::has_numlocks() const {
-  return _internal_has_numlocks();
+inline bool WakeLockInformation::has_a_numlocks() const {
+  return _internal_has_a_numlocks();
 }
-inline void WakeLockInformation::clear_numlocks() {
-  _impl_.numlocks_ = 0u;
+inline void WakeLockInformation::clear_a_numlocks() {
+  _impl_.a_numlocks_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t WakeLockInformation::_internal_numlocks() const {
-  return _impl_.numlocks_;
+inline uint32_t WakeLockInformation::_internal_a_numlocks() const {
+  return _impl_.a_numlocks_;
 }
-inline uint32_t WakeLockInformation::numlocks() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.numLocks)
-  return _internal_numlocks();
+inline uint32_t WakeLockInformation::a_numlocks() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.a_numLocks)
+  return _internal_a_numlocks();
 }
-inline void WakeLockInformation::_internal_set_numlocks(uint32_t value) {
+inline void WakeLockInformation::_internal_set_a_numlocks(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.numlocks_ = value;
+  _impl_.a_numlocks_ = value;
 }
-inline void WakeLockInformation::set_numlocks(uint32_t value) {
-  _internal_set_numlocks(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.numLocks)
+inline void WakeLockInformation::set_a_numlocks(uint32_t value) {
+  _internal_set_a_numlocks(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.a_numLocks)
 }
 
-// required uint32 numHidden = 3;
-inline bool WakeLockInformation::_internal_has_numhidden() const {
+// required uint32 a_numHidden = 3;
+inline bool WakeLockInformation::_internal_has_a_numhidden() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool WakeLockInformation::has_numhidden() const {
-  return _internal_has_numhidden();
+inline bool WakeLockInformation::has_a_numhidden() const {
+  return _internal_has_a_numhidden();
 }
-inline void WakeLockInformation::clear_numhidden() {
-  _impl_.numhidden_ = 0u;
+inline void WakeLockInformation::clear_a_numhidden() {
+  _impl_.a_numhidden_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t WakeLockInformation::_internal_numhidden() const {
-  return _impl_.numhidden_;
+inline uint32_t WakeLockInformation::_internal_a_numhidden() const {
+  return _impl_.a_numhidden_;
 }
-inline uint32_t WakeLockInformation::numhidden() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.numHidden)
-  return _internal_numhidden();
+inline uint32_t WakeLockInformation::a_numhidden() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.a_numHidden)
+  return _internal_a_numhidden();
 }
-inline void WakeLockInformation::_internal_set_numhidden(uint32_t value) {
+inline void WakeLockInformation::_internal_set_a_numhidden(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.numhidden_ = value;
+  _impl_.a_numhidden_ = value;
 }
-inline void WakeLockInformation::set_numhidden(uint32_t value) {
-  _internal_set_numhidden(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.numHidden)
+inline void WakeLockInformation::set_a_numhidden(uint32_t value) {
+  _internal_set_a_numhidden(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.a_numHidden)
 }
 
-// repeated uint64 lockingProcesses = 4;
-inline int WakeLockInformation::_internal_lockingprocesses_size() const {
-  return _impl_.lockingprocesses_.size();
+// repeated uint64 a_lockingProcesses = 4;
+inline int WakeLockInformation::_internal_a_lockingprocesses_size() const {
+  return _impl_.a_lockingprocesses_.size();
 }
-inline int WakeLockInformation::lockingprocesses_size() const {
-  return _internal_lockingprocesses_size();
+inline int WakeLockInformation::a_lockingprocesses_size() const {
+  return _internal_a_lockingprocesses_size();
 }
-inline void WakeLockInformation::clear_lockingprocesses() {
-  _impl_.lockingprocesses_.Clear();
+inline void WakeLockInformation::clear_a_lockingprocesses() {
+  _impl_.a_lockingprocesses_.Clear();
 }
-inline uint64_t WakeLockInformation::_internal_lockingprocesses(int index) const {
-  return _impl_.lockingprocesses_.Get(index);
+inline uint64_t WakeLockInformation::_internal_a_lockingprocesses(int index) const {
+  return _impl_.a_lockingprocesses_.Get(index);
 }
-inline uint64_t WakeLockInformation::lockingprocesses(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.lockingProcesses)
-  return _internal_lockingprocesses(index);
+inline uint64_t WakeLockInformation::a_lockingprocesses(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.hal.WakeLockInformation.a_lockingProcesses)
+  return _internal_a_lockingprocesses(index);
 }
-inline void WakeLockInformation::set_lockingprocesses(int index, uint64_t value) {
-  _impl_.lockingprocesses_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.lockingProcesses)
+inline void WakeLockInformation::set_a_lockingprocesses(int index, uint64_t value) {
+  _impl_.a_lockingprocesses_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.a_lockingProcesses)
 }
-inline void WakeLockInformation::_internal_add_lockingprocesses(uint64_t value) {
-  _impl_.lockingprocesses_.Add(value);
+inline void WakeLockInformation::_internal_add_a_lockingprocesses(uint64_t value) {
+  _impl_.a_lockingprocesses_.Add(value);
 }
-inline void WakeLockInformation::add_lockingprocesses(uint64_t value) {
-  _internal_add_lockingprocesses(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.hal.WakeLockInformation.lockingProcesses)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-WakeLockInformation::_internal_lockingprocesses() const {
-  return _impl_.lockingprocesses_;
+inline void WakeLockInformation::add_a_lockingprocesses(uint64_t value) {
+  _internal_add_a_lockingprocesses(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.hal.WakeLockInformation.a_lockingProcesses)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-WakeLockInformation::lockingprocesses() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.hal.WakeLockInformation.lockingProcesses)
-  return _internal_lockingprocesses();
+WakeLockInformation::_internal_a_lockingprocesses() const {
+  return _impl_.a_lockingprocesses_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
+WakeLockInformation::a_lockingprocesses() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.hal.WakeLockInformation.a_lockingProcesses)
+  return _internal_a_lockingprocesses();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-WakeLockInformation::_internal_mutable_lockingprocesses() {
-  return &_impl_.lockingprocesses_;
+WakeLockInformation::_internal_mutable_a_lockingprocesses() {
+  return &_impl_.a_lockingprocesses_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-WakeLockInformation::mutable_lockingprocesses() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.hal.WakeLockInformation.lockingProcesses)
-  return _internal_mutable_lockingprocesses();
+WakeLockInformation::mutable_a_lockingprocesses() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.hal.WakeLockInformation.a_lockingProcesses)
+  return _internal_mutable_a_lockingprocesses();
 }
 
 #ifdef __GNUC__

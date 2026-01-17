@@ -100,8 +100,8 @@ class RemoteLazyStream final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVRemoteLazyInputStream = 1,
-    kMVIPCStream = 2,
+    kAMVRemoteLazyInputStream = 1,
+    kAMVIPCStream = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -174,52 +174,52 @@ class RemoteLazyStream final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVRemoteLazyInputStreamFieldNumber = 1,
-    kMVIPCStreamFieldNumber = 2,
+    kAMVRemoteLazyInputStreamFieldNumber = 1,
+    kAMVIPCStreamFieldNumber = 2,
   };
-  // bytes mVRemoteLazyInputStream = 1;
-  bool has_mvremotelazyinputstream() const;
+  // bytes a_mVRemoteLazyInputStream = 1;
+  bool has_a_mvremotelazyinputstream() const;
   private:
-  bool _internal_has_mvremotelazyinputstream() const;
+  bool _internal_has_a_mvremotelazyinputstream() const;
   public:
-  void clear_mvremotelazyinputstream();
-  const std::string& mvremotelazyinputstream() const;
+  void clear_a_mvremotelazyinputstream();
+  const std::string& a_mvremotelazyinputstream() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvremotelazyinputstream(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvremotelazyinputstream();
-  PROTOBUF_NODISCARD std::string* release_mvremotelazyinputstream();
-  void set_allocated_mvremotelazyinputstream(std::string* mvremotelazyinputstream);
+  void set_a_mvremotelazyinputstream(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvremotelazyinputstream();
+  PROTOBUF_NODISCARD std::string* release_a_mvremotelazyinputstream();
+  void set_allocated_a_mvremotelazyinputstream(std::string* a_mvremotelazyinputstream);
   private:
-  const std::string& _internal_mvremotelazyinputstream() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvremotelazyinputstream(const std::string& value);
-  std::string* _internal_mutable_mvremotelazyinputstream();
+  const std::string& _internal_a_mvremotelazyinputstream() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvremotelazyinputstream(const std::string& value);
+  std::string* _internal_mutable_a_mvremotelazyinputstream();
   public:
 
-  // .protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
-  bool has_mvipcstream() const;
+  // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
+  bool has_a_mvipcstream() const;
   private:
-  bool _internal_has_mvipcstream() const;
+  bool _internal_has_a_mvipcstream() const;
   public:
-  void clear_mvipcstream();
-  const ::protobuf::mozilla::ipc::IPCStream& mvipcstream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_mvipcstream();
-  ::protobuf::mozilla::ipc::IPCStream* mutable_mvipcstream();
-  void set_allocated_mvipcstream(::protobuf::mozilla::ipc::IPCStream* mvipcstream);
+  void clear_a_mvipcstream();
+  const ::protobuf::mozilla::ipc::IPCStream& a_mvipcstream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_a_mvipcstream();
+  ::protobuf::mozilla::ipc::IPCStream* mutable_a_mvipcstream();
+  void set_allocated_a_mvipcstream(::protobuf::mozilla::ipc::IPCStream* a_mvipcstream);
   private:
-  const ::protobuf::mozilla::ipc::IPCStream& _internal_mvipcstream() const;
-  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_mvipcstream();
+  const ::protobuf::mozilla::ipc::IPCStream& _internal_a_mvipcstream() const;
+  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_a_mvipcstream();
   public:
-  void unsafe_arena_set_allocated_mvipcstream(
-      ::protobuf::mozilla::ipc::IPCStream* mvipcstream);
-  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_mvipcstream();
+  void unsafe_arena_set_allocated_a_mvipcstream(
+      ::protobuf::mozilla::ipc::IPCStream* a_mvipcstream);
+  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_mvipcstream();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.RemoteLazyStream)
  private:
   class _Internal;
-  void set_has_mvremotelazyinputstream();
-  void set_has_mvipcstream();
+  void set_has_a_mvremotelazyinputstream();
+  void set_has_a_mvipcstream();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -231,8 +231,8 @@ class RemoteLazyStream final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvremotelazyinputstream_;
-      ::protobuf::mozilla::ipc::IPCStream* mvipcstream_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvremotelazyinputstream_;
+      ::protobuf::mozilla::ipc::IPCStream* a_mvipcstream_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -252,146 +252,146 @@ class RemoteLazyStream final :
 #endif  // __GNUC__
 // RemoteLazyStream
 
-// bytes mVRemoteLazyInputStream = 1;
-inline bool RemoteLazyStream::_internal_has_mvremotelazyinputstream() const {
-  return content_case() == kMVRemoteLazyInputStream;
+// bytes a_mVRemoteLazyInputStream = 1;
+inline bool RemoteLazyStream::_internal_has_a_mvremotelazyinputstream() const {
+  return content_case() == kAMVRemoteLazyInputStream;
 }
-inline bool RemoteLazyStream::has_mvremotelazyinputstream() const {
-  return _internal_has_mvremotelazyinputstream();
+inline bool RemoteLazyStream::has_a_mvremotelazyinputstream() const {
+  return _internal_has_a_mvremotelazyinputstream();
 }
-inline void RemoteLazyStream::set_has_mvremotelazyinputstream() {
-  _impl_._oneof_case_[0] = kMVRemoteLazyInputStream;
+inline void RemoteLazyStream::set_has_a_mvremotelazyinputstream() {
+  _impl_._oneof_case_[0] = kAMVRemoteLazyInputStream;
 }
-inline void RemoteLazyStream::clear_mvremotelazyinputstream() {
-  if (_internal_has_mvremotelazyinputstream()) {
-    _impl_.content_.mvremotelazyinputstream_.Destroy();
+inline void RemoteLazyStream::clear_a_mvremotelazyinputstream() {
+  if (_internal_has_a_mvremotelazyinputstream()) {
+    _impl_.content_.a_mvremotelazyinputstream_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& RemoteLazyStream::mvremotelazyinputstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteLazyStream.mVRemoteLazyInputStream)
-  return _internal_mvremotelazyinputstream();
+inline const std::string& RemoteLazyStream::a_mvremotelazyinputstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteLazyStream.a_mVRemoteLazyInputStream)
+  return _internal_a_mvremotelazyinputstream();
 }
 template <typename ArgT0, typename... ArgT>
-inline void RemoteLazyStream::set_mvremotelazyinputstream(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvremotelazyinputstream()) {
+inline void RemoteLazyStream::set_a_mvremotelazyinputstream(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvremotelazyinputstream()) {
     clear_content();
-    set_has_mvremotelazyinputstream();
-    _impl_.content_.mvremotelazyinputstream_.InitDefault();
+    set_has_a_mvremotelazyinputstream();
+    _impl_.content_.a_mvremotelazyinputstream_.InitDefault();
   }
-  _impl_.content_.mvremotelazyinputstream_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.RemoteLazyStream.mVRemoteLazyInputStream)
+  _impl_.content_.a_mvremotelazyinputstream_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.RemoteLazyStream.a_mVRemoteLazyInputStream)
 }
-inline std::string* RemoteLazyStream::mutable_mvremotelazyinputstream() {
-  std::string* _s = _internal_mutable_mvremotelazyinputstream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteLazyStream.mVRemoteLazyInputStream)
+inline std::string* RemoteLazyStream::mutable_a_mvremotelazyinputstream() {
+  std::string* _s = _internal_mutable_a_mvremotelazyinputstream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteLazyStream.a_mVRemoteLazyInputStream)
   return _s;
 }
-inline const std::string& RemoteLazyStream::_internal_mvremotelazyinputstream() const {
-  if (_internal_has_mvremotelazyinputstream()) {
-    return _impl_.content_.mvremotelazyinputstream_.Get();
+inline const std::string& RemoteLazyStream::_internal_a_mvremotelazyinputstream() const {
+  if (_internal_has_a_mvremotelazyinputstream()) {
+    return _impl_.content_.a_mvremotelazyinputstream_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void RemoteLazyStream::_internal_set_mvremotelazyinputstream(const std::string& value) {
-  if (!_internal_has_mvremotelazyinputstream()) {
+inline void RemoteLazyStream::_internal_set_a_mvremotelazyinputstream(const std::string& value) {
+  if (!_internal_has_a_mvremotelazyinputstream()) {
     clear_content();
-    set_has_mvremotelazyinputstream();
-    _impl_.content_.mvremotelazyinputstream_.InitDefault();
+    set_has_a_mvremotelazyinputstream();
+    _impl_.content_.a_mvremotelazyinputstream_.InitDefault();
   }
-  _impl_.content_.mvremotelazyinputstream_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvremotelazyinputstream_.Set(value, GetArenaForAllocation());
 }
-inline std::string* RemoteLazyStream::_internal_mutable_mvremotelazyinputstream() {
-  if (!_internal_has_mvremotelazyinputstream()) {
+inline std::string* RemoteLazyStream::_internal_mutable_a_mvremotelazyinputstream() {
+  if (!_internal_has_a_mvremotelazyinputstream()) {
     clear_content();
-    set_has_mvremotelazyinputstream();
-    _impl_.content_.mvremotelazyinputstream_.InitDefault();
+    set_has_a_mvremotelazyinputstream();
+    _impl_.content_.a_mvremotelazyinputstream_.InitDefault();
   }
-  return _impl_.content_.mvremotelazyinputstream_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvremotelazyinputstream_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* RemoteLazyStream::release_mvremotelazyinputstream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteLazyStream.mVRemoteLazyInputStream)
-  if (_internal_has_mvremotelazyinputstream()) {
+inline std::string* RemoteLazyStream::release_a_mvremotelazyinputstream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteLazyStream.a_mVRemoteLazyInputStream)
+  if (_internal_has_a_mvremotelazyinputstream()) {
     clear_has_content();
-    return _impl_.content_.mvremotelazyinputstream_.Release();
+    return _impl_.content_.a_mvremotelazyinputstream_.Release();
   } else {
     return nullptr;
   }
 }
-inline void RemoteLazyStream::set_allocated_mvremotelazyinputstream(std::string* mvremotelazyinputstream) {
+inline void RemoteLazyStream::set_allocated_a_mvremotelazyinputstream(std::string* a_mvremotelazyinputstream) {
   if (has_content()) {
     clear_content();
   }
-  if (mvremotelazyinputstream != nullptr) {
-    set_has_mvremotelazyinputstream();
-    _impl_.content_.mvremotelazyinputstream_.InitAllocated(mvremotelazyinputstream, GetArenaForAllocation());
+  if (a_mvremotelazyinputstream != nullptr) {
+    set_has_a_mvremotelazyinputstream();
+    _impl_.content_.a_mvremotelazyinputstream_.InitAllocated(a_mvremotelazyinputstream, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.RemoteLazyStream.mVRemoteLazyInputStream)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.RemoteLazyStream.a_mVRemoteLazyInputStream)
 }
 
-// .protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
-inline bool RemoteLazyStream::_internal_has_mvipcstream() const {
-  return content_case() == kMVIPCStream;
+// .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
+inline bool RemoteLazyStream::_internal_has_a_mvipcstream() const {
+  return content_case() == kAMVIPCStream;
 }
-inline bool RemoteLazyStream::has_mvipcstream() const {
-  return _internal_has_mvipcstream();
+inline bool RemoteLazyStream::has_a_mvipcstream() const {
+  return _internal_has_a_mvipcstream();
 }
-inline void RemoteLazyStream::set_has_mvipcstream() {
-  _impl_._oneof_case_[0] = kMVIPCStream;
+inline void RemoteLazyStream::set_has_a_mvipcstream() {
+  _impl_._oneof_case_[0] = kAMVIPCStream;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::release_mvipcstream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteLazyStream.mVIPCStream)
-  if (_internal_has_mvipcstream()) {
+inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::release_a_mvipcstream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.RemoteLazyStream.a_mVIPCStream)
+  if (_internal_has_a_mvipcstream()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.mvipcstream_;
+    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.a_mvipcstream_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvipcstream_ = nullptr;
+    _impl_.content_.a_mvipcstream_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& RemoteLazyStream::_internal_mvipcstream() const {
-  return _internal_has_mvipcstream()
-      ? *_impl_.content_.mvipcstream_
+inline const ::protobuf::mozilla::ipc::IPCStream& RemoteLazyStream::_internal_a_mvipcstream() const {
+  return _internal_has_a_mvipcstream()
+      ? *_impl_.content_.a_mvipcstream_
       : reinterpret_cast< ::protobuf::mozilla::ipc::IPCStream&>(::protobuf::mozilla::ipc::_IPCStream_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& RemoteLazyStream::mvipcstream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteLazyStream.mVIPCStream)
-  return _internal_mvipcstream();
+inline const ::protobuf::mozilla::ipc::IPCStream& RemoteLazyStream::a_mvipcstream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.RemoteLazyStream.a_mVIPCStream)
+  return _internal_a_mvipcstream();
 }
-inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::unsafe_arena_release_mvipcstream() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.RemoteLazyStream.mVIPCStream)
-  if (_internal_has_mvipcstream()) {
+inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::unsafe_arena_release_a_mvipcstream() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.RemoteLazyStream.a_mVIPCStream)
+  if (_internal_has_a_mvipcstream()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.mvipcstream_;
-    _impl_.content_.mvipcstream_ = nullptr;
+    ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.content_.a_mvipcstream_;
+    _impl_.content_.a_mvipcstream_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RemoteLazyStream::unsafe_arena_set_allocated_mvipcstream(::protobuf::mozilla::ipc::IPCStream* mvipcstream) {
+inline void RemoteLazyStream::unsafe_arena_set_allocated_a_mvipcstream(::protobuf::mozilla::ipc::IPCStream* a_mvipcstream) {
   clear_content();
-  if (mvipcstream) {
-    set_has_mvipcstream();
-    _impl_.content_.mvipcstream_ = mvipcstream;
+  if (a_mvipcstream) {
+    set_has_a_mvipcstream();
+    _impl_.content_.a_mvipcstream_ = a_mvipcstream;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.RemoteLazyStream.mVIPCStream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.RemoteLazyStream.a_mVIPCStream)
 }
-inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::_internal_mutable_mvipcstream() {
-  if (!_internal_has_mvipcstream()) {
+inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::_internal_mutable_a_mvipcstream() {
+  if (!_internal_has_a_mvipcstream()) {
     clear_content();
-    set_has_mvipcstream();
-    _impl_.content_.mvipcstream_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::IPCStream >(GetArenaForAllocation());
+    set_has_a_mvipcstream();
+    _impl_.content_.a_mvipcstream_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::IPCStream >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvipcstream_;
+  return _impl_.content_.a_mvipcstream_;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::mutable_mvipcstream() {
-  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_mvipcstream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteLazyStream.mVIPCStream)
+inline ::protobuf::mozilla::ipc::IPCStream* RemoteLazyStream::mutable_a_mvipcstream() {
+  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_a_mvipcstream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.RemoteLazyStream.a_mVIPCStream)
   return _msg;
 }
 

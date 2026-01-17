@@ -18,24 +18,24 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_LaunchGMP {
-  required protobuf.mozilla.gmp.NodeIdVariant nodeIdVariant = 1;
-  required bytes api = 2;
-  repeated bytes tags = 3;
-  repeated bytes alreadyBridgedTo = 4;
+  required protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
+  required bytes a_api = 2;
+  repeated bytes a_tags = 3;
+  repeated bytes a_alreadyBridgedTo = 4;
 }
 
 message Reply_LaunchGMP {
-  required protobuf.mozilla.gmp.GMPLaunchResult aResult = 1;
+  required protobuf.mozilla.gmp.GMPLaunchResult a_aResult = 1;
 }
 
 message Msg_GetGMPNodeId {
-  required bytes origin = 1;
-  required bytes topLevelOrigin = 2;
-  required bytes gmpName = 3;
+  required bytes a_origin = 1;
+  required bytes a_topLevelOrigin = 2;
+  required bytes a_gmpName = 3;
 }
 
 message Reply_GetGMPNodeId {
-  required bytes id = 1;
+  required bytes a_id = 1;
 }
 
 message Msg_BeginShutdown {

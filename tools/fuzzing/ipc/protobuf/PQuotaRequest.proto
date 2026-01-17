@@ -17,7 +17,7 @@ import public "PQuotaRequest_protobuf.mozilla.dom.quota.h.proto";
 
 // Message declarations
 message Msg___delete__ {
-  required protobuf.mozilla.dom.quota.RequestResponse response = 1;
+  required protobuf.mozilla.dom.quota.RequestResponse a_response = 1;
 }
 
 message Reply___delete__ {

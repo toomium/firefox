@@ -23,7 +23,7 @@ namespace dom {
 namespace PMessagePort {
 PROTOBUF_CONSTEXPR Msg_PostMessages::Msg_PostMessages(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.messages_)*/{}
+    /*decltype(_impl_.a_messages_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PostMessagesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PostMessagesDefaultTypeInternal()
@@ -36,7 +36,7 @@ struct Msg_PostMessagesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PostMessagesDefaultTypeInternal _Msg_PostMessages_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Disentangle::Msg_Disentangle(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.messages_)*/{}
+    /*decltype(_impl_.a_messages_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_DisentangleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DisentangleDefaultTypeInternal()
@@ -73,7 +73,7 @@ struct Msg_CloseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CloseDefaultTypeInternal _Msg_Close_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Entangled::Msg_Entangled(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.messages_)*/{}
+    /*decltype(_impl_.a_messages_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_EntangledDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EntangledDefaultTypeInternal()
@@ -86,7 +86,7 @@ struct Msg_EntangledDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EntangledDefaultTypeInternal _Msg_Entangled_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ReceiveData::Msg_ReceiveData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.messages_)*/{}
+    /*decltype(_impl_.a_messages_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_ReceiveDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReceiveDataDefaultTypeInternal()
@@ -148,8 +148,8 @@ class Msg_PostMessages::_Internal {
  public:
 };
 
-void Msg_PostMessages::clear_messages() {
-  _impl_.messages_.Clear();
+void Msg_PostMessages::clear_a_messages() {
+  _impl_.a_messages_.Clear();
 }
 Msg_PostMessages::Msg_PostMessages(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -161,7 +161,7 @@ Msg_PostMessages::Msg_PostMessages(const Msg_PostMessages& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PostMessages* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){from._impl_.messages_}
+      decltype(_impl_.a_messages_){from._impl_.a_messages_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -173,7 +173,7 @@ inline void Msg_PostMessages::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){arena}
+      decltype(_impl_.a_messages_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -189,7 +189,7 @@ Msg_PostMessages::~Msg_PostMessages() {
 
 inline void Msg_PostMessages::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.messages_.~RepeatedPtrField();
+  _impl_.a_messages_.~RepeatedPtrField();
 }
 
 void Msg_PostMessages::SetCachedSize(int size) const {
@@ -202,7 +202,7 @@ void Msg_PostMessages::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.messages_.Clear();
+  _impl_.a_messages_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -212,13 +212,13 @@ const char* Msg_PostMessages::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+      // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_messages(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_messages(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -254,10 +254,10 @@ uint8_t* Msg_PostMessages::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_messages_size()); i < n; i++) {
-    const auto& repfield = this->_internal_messages(i);
+      n = static_cast<unsigned>(this->_internal_a_messages_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_messages(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -278,9 +278,9 @@ size_t Msg_PostMessages::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  total_size += 1UL * this->_internal_messages_size();
-  for (const auto& msg : this->_impl_.messages_) {
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  total_size += 1UL * this->_internal_a_messages_size();
+  for (const auto& msg : this->_impl_.a_messages_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -306,7 +306,7 @@ void Msg_PostMessages::MergeFrom(const Msg_PostMessages& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.messages_.MergeFrom(from._impl_.messages_);
+  _this->_impl_.a_messages_.MergeFrom(from._impl_.a_messages_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -318,7 +318,7 @@ void Msg_PostMessages::CopyFrom(const Msg_PostMessages& from) {
 }
 
 bool Msg_PostMessages::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.messages_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
     return false;
   return true;
 }
@@ -326,7 +326,7 @@ bool Msg_PostMessages::IsInitialized() const {
 void Msg_PostMessages::InternalSwap(Msg_PostMessages* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.messages_.InternalSwap(&other->_impl_.messages_);
+  _impl_.a_messages_.InternalSwap(&other->_impl_.a_messages_);
 }
 
 std::string Msg_PostMessages::GetTypeName() const {
@@ -340,8 +340,8 @@ class Msg_Disentangle::_Internal {
  public:
 };
 
-void Msg_Disentangle::clear_messages() {
-  _impl_.messages_.Clear();
+void Msg_Disentangle::clear_a_messages() {
+  _impl_.a_messages_.Clear();
 }
 Msg_Disentangle::Msg_Disentangle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -353,7 +353,7 @@ Msg_Disentangle::Msg_Disentangle(const Msg_Disentangle& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Disentangle* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){from._impl_.messages_}
+      decltype(_impl_.a_messages_){from._impl_.a_messages_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -365,7 +365,7 @@ inline void Msg_Disentangle::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){arena}
+      decltype(_impl_.a_messages_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -381,7 +381,7 @@ Msg_Disentangle::~Msg_Disentangle() {
 
 inline void Msg_Disentangle::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.messages_.~RepeatedPtrField();
+  _impl_.a_messages_.~RepeatedPtrField();
 }
 
 void Msg_Disentangle::SetCachedSize(int size) const {
@@ -394,7 +394,7 @@ void Msg_Disentangle::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.messages_.Clear();
+  _impl_.a_messages_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -404,13 +404,13 @@ const char* Msg_Disentangle::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+      // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_messages(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_messages(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -446,10 +446,10 @@ uint8_t* Msg_Disentangle::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_messages_size()); i < n; i++) {
-    const auto& repfield = this->_internal_messages(i);
+      n = static_cast<unsigned>(this->_internal_a_messages_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_messages(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -470,9 +470,9 @@ size_t Msg_Disentangle::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  total_size += 1UL * this->_internal_messages_size();
-  for (const auto& msg : this->_impl_.messages_) {
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  total_size += 1UL * this->_internal_a_messages_size();
+  for (const auto& msg : this->_impl_.a_messages_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -498,7 +498,7 @@ void Msg_Disentangle::MergeFrom(const Msg_Disentangle& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.messages_.MergeFrom(from._impl_.messages_);
+  _this->_impl_.a_messages_.MergeFrom(from._impl_.a_messages_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -510,7 +510,7 @@ void Msg_Disentangle::CopyFrom(const Msg_Disentangle& from) {
 }
 
 bool Msg_Disentangle::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.messages_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
     return false;
   return true;
 }
@@ -518,7 +518,7 @@ bool Msg_Disentangle::IsInitialized() const {
 void Msg_Disentangle::InternalSwap(Msg_Disentangle* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.messages_.InternalSwap(&other->_impl_.messages_);
+  _impl_.a_messages_.InternalSwap(&other->_impl_.a_messages_);
 }
 
 std::string Msg_Disentangle::GetTypeName() const {
@@ -828,8 +828,8 @@ class Msg_Entangled::_Internal {
  public:
 };
 
-void Msg_Entangled::clear_messages() {
-  _impl_.messages_.Clear();
+void Msg_Entangled::clear_a_messages() {
+  _impl_.a_messages_.Clear();
 }
 Msg_Entangled::Msg_Entangled(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -841,7 +841,7 @@ Msg_Entangled::Msg_Entangled(const Msg_Entangled& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Entangled* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){from._impl_.messages_}
+      decltype(_impl_.a_messages_){from._impl_.a_messages_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -853,7 +853,7 @@ inline void Msg_Entangled::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){arena}
+      decltype(_impl_.a_messages_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -869,7 +869,7 @@ Msg_Entangled::~Msg_Entangled() {
 
 inline void Msg_Entangled::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.messages_.~RepeatedPtrField();
+  _impl_.a_messages_.~RepeatedPtrField();
 }
 
 void Msg_Entangled::SetCachedSize(int size) const {
@@ -882,7 +882,7 @@ void Msg_Entangled::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.messages_.Clear();
+  _impl_.a_messages_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -892,13 +892,13 @@ const char* Msg_Entangled::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+      // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_messages(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_messages(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -934,10 +934,10 @@ uint8_t* Msg_Entangled::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_messages_size()); i < n; i++) {
-    const auto& repfield = this->_internal_messages(i);
+      n = static_cast<unsigned>(this->_internal_a_messages_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_messages(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -958,9 +958,9 @@ size_t Msg_Entangled::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  total_size += 1UL * this->_internal_messages_size();
-  for (const auto& msg : this->_impl_.messages_) {
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  total_size += 1UL * this->_internal_a_messages_size();
+  for (const auto& msg : this->_impl_.a_messages_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -986,7 +986,7 @@ void Msg_Entangled::MergeFrom(const Msg_Entangled& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.messages_.MergeFrom(from._impl_.messages_);
+  _this->_impl_.a_messages_.MergeFrom(from._impl_.a_messages_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -998,7 +998,7 @@ void Msg_Entangled::CopyFrom(const Msg_Entangled& from) {
 }
 
 bool Msg_Entangled::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.messages_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
     return false;
   return true;
 }
@@ -1006,7 +1006,7 @@ bool Msg_Entangled::IsInitialized() const {
 void Msg_Entangled::InternalSwap(Msg_Entangled* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.messages_.InternalSwap(&other->_impl_.messages_);
+  _impl_.a_messages_.InternalSwap(&other->_impl_.a_messages_);
 }
 
 std::string Msg_Entangled::GetTypeName() const {
@@ -1020,8 +1020,8 @@ class Msg_ReceiveData::_Internal {
  public:
 };
 
-void Msg_ReceiveData::clear_messages() {
-  _impl_.messages_.Clear();
+void Msg_ReceiveData::clear_a_messages() {
+  _impl_.a_messages_.Clear();
 }
 Msg_ReceiveData::Msg_ReceiveData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -1033,7 +1033,7 @@ Msg_ReceiveData::Msg_ReceiveData(const Msg_ReceiveData& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ReceiveData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){from._impl_.messages_}
+      decltype(_impl_.a_messages_){from._impl_.a_messages_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1045,7 +1045,7 @@ inline void Msg_ReceiveData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.messages_){arena}
+      decltype(_impl_.a_messages_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -1061,7 +1061,7 @@ Msg_ReceiveData::~Msg_ReceiveData() {
 
 inline void Msg_ReceiveData::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.messages_.~RepeatedPtrField();
+  _impl_.a_messages_.~RepeatedPtrField();
 }
 
 void Msg_ReceiveData::SetCachedSize(int size) const {
@@ -1074,7 +1074,7 @@ void Msg_ReceiveData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.messages_.Clear();
+  _impl_.a_messages_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -1084,13 +1084,13 @@ const char* Msg_ReceiveData::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+      // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_messages(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_messages(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -1126,10 +1126,10 @@ uint8_t* Msg_ReceiveData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_messages_size()); i < n; i++) {
-    const auto& repfield = this->_internal_messages(i);
+      n = static_cast<unsigned>(this->_internal_a_messages_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_messages(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
@@ -1150,9 +1150,9 @@ size_t Msg_ReceiveData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  total_size += 1UL * this->_internal_messages_size();
-  for (const auto& msg : this->_impl_.messages_) {
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  total_size += 1UL * this->_internal_a_messages_size();
+  for (const auto& msg : this->_impl_.a_messages_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -1178,7 +1178,7 @@ void Msg_ReceiveData::MergeFrom(const Msg_ReceiveData& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.messages_.MergeFrom(from._impl_.messages_);
+  _this->_impl_.a_messages_.MergeFrom(from._impl_.a_messages_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -1190,7 +1190,7 @@ void Msg_ReceiveData::CopyFrom(const Msg_ReceiveData& from) {
 }
 
 bool Msg_ReceiveData::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.messages_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_messages_))
     return false;
   return true;
 }
@@ -1198,7 +1198,7 @@ bool Msg_ReceiveData::IsInitialized() const {
 void Msg_ReceiveData::InternalSwap(Msg_ReceiveData* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.messages_.InternalSwap(&other->_impl_.messages_);
+  _impl_.a_messages_.InternalSwap(&other->_impl_.a_messages_);
 }
 
 std::string Msg_ReceiveData::GetTypeName() const {

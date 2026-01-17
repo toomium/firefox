@@ -22,47 +22,47 @@ message Msg_Construct {
 }
 
 message Reply_Construct {
-  required bytes result = 1;
+  required bytes a_result = 1;
 }
 
 message Msg_Init {
 }
 
 message Reply_Init {
-  required protobuf.mozilla.InitResultIPDL result = 1;
+  required protobuf.mozilla.InitResultIPDL a_result = 1;
 }
 
 message Msg_Decode {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message Reply_Decode {
-  required protobuf.mozilla.DecodeResultIPDL result = 1;
+  required protobuf.mozilla.DecodeResultIPDL a_result = 1;
 }
 
 message Msg_Flush {
 }
 
 message Reply_Flush {
-  required bytes error = 1;
+  required bytes a_error = 1;
 }
 
 message Msg_Drain {
 }
 
 message Reply_Drain {
-  required protobuf.mozilla.DecodeResultIPDL result = 1;
+  required protobuf.mozilla.DecodeResultIPDL a_result = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_SetSeekThreshold {
-  required bytes time = 1;
+  required bytes a_time = 1;
 }
 
 message Msg___delete__ {

@@ -22,8 +22,8 @@ message Reply___delete__ {
 }
 
 message Msg_ClearStoragesForOrigin {
-  required bytes originAttrs = 1;
-  required bytes originKey = 2;
+  required bytes a_originAttrs = 1;
+  required bytes a_originKey = 2;
 }
 
 // Parameter mappings stats:

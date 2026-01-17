@@ -20,101 +20,101 @@ import "PrefsTypes.proto";
 
 // Message declarations
 message Msg_Init {
-  repeated protobuf.mozilla.gfx.GfxVarUpdate vars = 1;
-  optional bytes sandboxBroker = 2;
-  required bool canRecordReleaseTelemetry = 3;
-  required bool aIsReadyForBackgroundProcessing = 4;
+  repeated protobuf.mozilla.gfx.GfxVarUpdate a_vars = 1;
+  optional bytes a_sandboxBroker = 2;
+  required bool a_canRecordReleaseTelemetry = 3;
+  required bool a_aIsReadyForBackgroundProcessing = 4;
 }
 
 message Msg_InitProfiler {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_NewContentRemoteMediaManager {
-  required bytes endpoint = 1;
-  required bytes childId = 2;
+  required bytes a_endpoint = 1;
+  required bytes a_childId = 2;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 generation = 1;
-  required bool anonymize = 2;
-  required bool minimizeMemoryUsage = 3;
-  optional bytes DMDFile = 4;
+  required uint32 a_generation = 1;
+  required bool a_anonymize = 2;
+  required bool a_minimizeMemoryUsage = 3;
+  optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 aGeneration = 1;
+  required uint32 a_aGeneration = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref pref = 1;
+  required protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_UpdateVar {
-  required protobuf.mozilla.gfx.GfxVarUpdate var = 1;
+  required protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
 }
 
 message Msg_InitVideoBridge {
-  required bytes endpoint = 1;
-  required bool createHardwareDevice = 2;
-  required protobuf.mozilla.gfx.ContentDeviceData contentDeviceData = 3;
+  required bytes a_endpoint = 1;
+  required bool a_createHardwareDevice = 2;
+  required protobuf.mozilla.gfx.ContentDeviceData a_contentDeviceData = 3;
 }
 
 message Msg_FlushFOGData {
 }
 
 message Reply_FlushFOGData {
-  required bytes buf = 1;
+  required bytes a_buf = 1;
 }
 
 message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool unused = 1;
+  required bool a_unused = 1;
 }
 
 message Msg_TestTelemetryProbes {
 }
 
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs aInitArgs = 1;
+  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_AddMemoryReport {
-  required protobuf.mozilla.dom.MemoryReport aReport = 1;
+  required protobuf.mozilla.dom.MemoryReport a_aReport = 1;
 }
 
 message Msg_UpdateMediaCodecsSupported {
-  required bytes aSupported = 1;
+  required bytes a_aSupported = 1;
 }
 
 message Msg_AccumulateChildHistograms {
-  repeated bytes accumulations = 1;
+  repeated bytes a_accumulations = 1;
 }
 
 message Msg_AccumulateChildKeyedHistograms {
-  repeated bytes accumulations = 1;
+  repeated bytes a_accumulations = 1;
 }
 
 message Msg_UpdateChildScalars {
-  repeated bytes actions = 1;
+  repeated bytes a_actions = 1;
 }
 
 message Msg_UpdateChildKeyedScalars {
-  repeated bytes actions = 1;
+  repeated bytes a_actions = 1;
 }
 
 message Msg_RecordChildEvents {
-  repeated bytes events = 1;
+  repeated bytes a_events = 1;
 }
 
 message Msg_RecordDiscardedData {
-  required bytes data = 1;
+  required bytes a_data = 1;
 }
 
 message Msg_FOGData {
-  required bytes buf = 1;
+  required bytes a_buf = 1;
 }
 
 // Parameter mappings stats:

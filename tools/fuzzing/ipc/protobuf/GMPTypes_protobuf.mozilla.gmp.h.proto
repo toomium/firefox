@@ -12,88 +12,88 @@ package protobuf.mozilla.gmp;
 
 // Structs and unions declarations
 message NodeIdParts {
-  required bytes mOrigin = 1;
-  required bytes mTopLevelOrigin = 2;
-  required bytes mGMPName = 3;
+  required bytes a_mOrigin = 1;
+  required bytes a_mTopLevelOrigin = 2;
+  required bytes a_mGMPName = 3;
 }
 
 message NodeIdVariant {
   oneof content {
-    bytes mVnsCString = 1;
-    protobuf.mozilla.gmp.NodeIdParts mVNodeIdParts = 2;
+    bytes a_mVnsCString = 1;
+    protobuf.mozilla.gmp.NodeIdParts a_mVNodeIdParts = 2;
   }
 }
 
 message GMPVideoEncodedFrameData {
-  required uint32 mEncodedWidth = 1;
-  required uint32 mEncodedHeight = 2;
-  required uint64 mTimestamp = 3;
-  required uint64 mDuration = 4;
-  required uint32 mFrameType = 5;
-  required uint32 mSize = 6;
-  required sint32 mTemporalLayerId = 7;
-  required bytes mBufferType = 8;
-  required bool mCompleteFrame = 9;
+  required uint32 a_mEncodedWidth = 1;
+  required uint32 a_mEncodedHeight = 2;
+  required uint64 a_mTimestamp = 3;
+  required uint64 a_mDuration = 4;
+  required uint32 a_mFrameType = 5;
+  required uint32 a_mSize = 6;
+  required sint32 a_mTemporalLayerId = 7;
+  required bytes a_mBufferType = 8;
+  required bool a_mCompleteFrame = 9;
 }
 
 message GMPPlaneData {
-  required sint32 mOffset = 1;
-  required sint32 mSize = 2;
-  required sint32 mStride = 3;
+  required sint32 a_mOffset = 1;
+  required sint32 a_mSize = 2;
+  required sint32 a_mStride = 3;
 }
 
 message GMPVideoi420FrameData {
-  required protobuf.mozilla.gmp.GMPPlaneData mYPlane = 1;
-  required protobuf.mozilla.gmp.GMPPlaneData mUPlane = 2;
-  required protobuf.mozilla.gmp.GMPPlaneData mVPlane = 3;
-  required sint32 mWidth = 4;
-  required sint32 mHeight = 5;
-  required uint64 mTimestamp = 6;
-  optional uint64 mUpdatedTimestamp = 7;
-  required uint64 mDuration = 8;
+  required protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
+  required protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
+  required protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
+  required sint32 a_mWidth = 4;
+  required sint32 a_mHeight = 5;
+  required uint64 a_mTimestamp = 6;
+  optional uint64 a_mUpdatedTimestamp = 7;
+  required uint64 a_mDuration = 8;
 }
 
 message CDMInputBuffer {
-  required bytes mData = 1;
-  repeated uint32 mKeyId = 2;
-  repeated uint32 mIV = 3;
-  required sint64 mTimestamp = 4;
-  required sint64 mDuration = 5;
-  repeated uint32 mClearBytes = 6;
-  repeated uint32 mCipherBytes = 7;
-  required uint32 mCryptByteBlock = 8;
-  required uint32 mSkipByteBlock = 9;
-  required bytes mEncryptionScheme = 10;
+  required bytes a_mData = 1;
+  repeated uint32 a_mKeyId = 2;
+  repeated uint32 a_mIV = 3;
+  required sint64 a_mTimestamp = 4;
+  required sint64 a_mDuration = 5;
+  repeated uint32 a_mClearBytes = 6;
+  repeated uint32 a_mCipherBytes = 7;
+  required uint32 a_mCryptByteBlock = 8;
+  required uint32 a_mSkipByteBlock = 9;
+  required bytes a_mEncryptionScheme = 10;
 }
 
 message CDMVideoDecoderConfig {
-  required uint32 mCodec = 1;
-  required uint32 mProfile = 2;
-  required uint32 mFormat = 3;
-  required sint32 mImageWidth = 4;
-  required sint32 mImageHeight = 5;
-  repeated uint32 mExtraData = 6;
-  required bytes mEncryptionScheme = 7;
+  required uint32 a_mCodec = 1;
+  required uint32 a_mProfile = 2;
+  required uint32 a_mFormat = 3;
+  required sint32 a_mImageWidth = 4;
+  required sint32 a_mImageHeight = 5;
+  repeated uint32 a_mExtraData = 6;
+  required bytes a_mEncryptionScheme = 7;
 }
 
 message CDMKeyInformation {
-  repeated uint32 mKeyId = 1;
-  required uint32 mStatus = 2;
-  required uint32 mSystemCode = 3;
+  repeated uint32 a_mKeyId = 1;
+  required uint32 a_mStatus = 2;
+  required uint32 a_mSystemCode = 3;
 }
 
 message CDMVideoPlane {
-  required uint32 mPlaneOffset = 1;
-  required uint32 mStride = 2;
+  required uint32 a_mPlaneOffset = 1;
+  required uint32 a_mStride = 2;
 }
 
 message CDMVideoFrame {
-  required uint32 mFormat = 1;
-  required sint32 mImageWidth = 2;
-  required sint32 mImageHeight = 3;
-  required protobuf.mozilla.gmp.CDMVideoPlane mYPlane = 4;
-  required protobuf.mozilla.gmp.CDMVideoPlane mUPlane = 5;
-  required protobuf.mozilla.gmp.CDMVideoPlane mVPlane = 6;
-  required sint64 mTimestamp = 7;
-  required sint64 mDuration = 8;
+  required uint32 a_mFormat = 1;
+  required sint32 a_mImageWidth = 2;
+  required sint32 a_mImageHeight = 3;
+  required protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
+  required protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
+  required protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
+  required sint64 a_mTimestamp = 7;
+  required sint64 a_mDuration = 8;
 }

@@ -25,14 +25,14 @@ PROTOBUF_CONSTEXPR Msg_OnVerifySSLServerCertFinished::Msg_OnVerifySSLServerCertF
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.abuiltcertchain_)*/{}
-  , /*decltype(_impl_.aevstatus_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aoverridableerrorcategory_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.acerttransparencystatus_)*/0u
-  , /*decltype(_impl_.afinalerror_)*/0
-  , /*decltype(_impl_.asucceeded_)*/false
-  , /*decltype(_impl_.aisbuiltcertchainrootbuiltinroot_)*/false
-  , /*decltype(_impl_.amadeocsprequests_)*/false} {}
+  , /*decltype(_impl_.a_abuiltcertchain_)*/{}
+  , /*decltype(_impl_.a_aevstatus_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aoverridableerrorcategory_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_acerttransparencystatus_)*/0u
+  , /*decltype(_impl_.a_afinalerror_)*/0
+  , /*decltype(_impl_.a_asucceeded_)*/false
+  , /*decltype(_impl_.a_aisbuiltcertchainrootbuiltinroot_)*/false
+  , /*decltype(_impl_.a_amadeocsprequests_)*/false} {}
 struct Msg_OnVerifySSLServerCertFinishedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_OnVerifySSLServerCertFinishedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -80,25 +80,25 @@ namespace PVerifySSLServerCert {
 class Msg_OnVerifySSLServerCertFinished::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_OnVerifySSLServerCertFinished>()._impl_._has_bits_);
-  static void set_has_acerttransparencystatus(HasBits* has_bits) {
+  static void set_has_a_acerttransparencystatus(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_aevstatus(HasBits* has_bits) {
+  static void set_has_a_aevstatus(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_asucceeded(HasBits* has_bits) {
+  static void set_has_a_asucceeded(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_afinalerror(HasBits* has_bits) {
+  static void set_has_a_afinalerror(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_aoverridableerrorcategory(HasBits* has_bits) {
+  static void set_has_a_aoverridableerrorcategory(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aisbuiltcertchainrootbuiltinroot(HasBits* has_bits) {
+  static void set_has_a_aisbuiltcertchainrootbuiltinroot(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_amadeocsprequests(HasBits* has_bits) {
+  static void set_has_a_amadeocsprequests(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -106,8 +106,8 @@ class Msg_OnVerifySSLServerCertFinished::_Internal {
   }
 };
 
-void Msg_OnVerifySSLServerCertFinished::clear_abuiltcertchain() {
-  _impl_.abuiltcertchain_.Clear();
+void Msg_OnVerifySSLServerCertFinished::clear_a_abuiltcertchain() {
+  _impl_.a_abuiltcertchain_.Clear();
 }
 Msg_OnVerifySSLServerCertFinished::Msg_OnVerifySSLServerCertFinished(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -121,35 +121,35 @@ Msg_OnVerifySSLServerCertFinished::Msg_OnVerifySSLServerCertFinished(const Msg_O
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abuiltcertchain_){from._impl_.abuiltcertchain_}
-    , decltype(_impl_.aevstatus_){}
-    , decltype(_impl_.aoverridableerrorcategory_){}
-    , decltype(_impl_.acerttransparencystatus_){}
-    , decltype(_impl_.afinalerror_){}
-    , decltype(_impl_.asucceeded_){}
-    , decltype(_impl_.aisbuiltcertchainrootbuiltinroot_){}
-    , decltype(_impl_.amadeocsprequests_){}};
+    , decltype(_impl_.a_abuiltcertchain_){from._impl_.a_abuiltcertchain_}
+    , decltype(_impl_.a_aevstatus_){}
+    , decltype(_impl_.a_aoverridableerrorcategory_){}
+    , decltype(_impl_.a_acerttransparencystatus_){}
+    , decltype(_impl_.a_afinalerror_){}
+    , decltype(_impl_.a_asucceeded_){}
+    , decltype(_impl_.a_aisbuiltcertchainrootbuiltinroot_){}
+    , decltype(_impl_.a_amadeocsprequests_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.aevstatus_.InitDefault();
+  _impl_.a_aevstatus_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevstatus_.Set("", GetArenaForAllocation());
+    _impl_.a_aevstatus_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aevstatus()) {
-    _this->_impl_.aevstatus_.Set(from._internal_aevstatus(), 
+  if (from._internal_has_a_aevstatus()) {
+    _this->_impl_.a_aevstatus_.Set(from._internal_a_aevstatus(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.aoverridableerrorcategory_.InitDefault();
+  _impl_.a_aoverridableerrorcategory_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoverridableerrorcategory_.Set("", GetArenaForAllocation());
+    _impl_.a_aoverridableerrorcategory_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_aoverridableerrorcategory()) {
-    _this->_impl_.aoverridableerrorcategory_.Set(from._internal_aoverridableerrorcategory(), 
+  if (from._internal_has_a_aoverridableerrorcategory()) {
+    _this->_impl_.a_aoverridableerrorcategory_.Set(from._internal_a_aoverridableerrorcategory(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.acerttransparencystatus_, &from._impl_.acerttransparencystatus_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.amadeocsprequests_) -
-    reinterpret_cast<char*>(&_impl_.acerttransparencystatus_)) + sizeof(_impl_.amadeocsprequests_));
+  ::memcpy(&_impl_.a_acerttransparencystatus_, &from._impl_.a_acerttransparencystatus_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_amadeocsprequests_) -
+    reinterpret_cast<char*>(&_impl_.a_acerttransparencystatus_)) + sizeof(_impl_.a_amadeocsprequests_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished)
 }
 
@@ -160,22 +160,22 @@ inline void Msg_OnVerifySSLServerCertFinished::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abuiltcertchain_){arena}
-    , decltype(_impl_.aevstatus_){}
-    , decltype(_impl_.aoverridableerrorcategory_){}
-    , decltype(_impl_.acerttransparencystatus_){0u}
-    , decltype(_impl_.afinalerror_){0}
-    , decltype(_impl_.asucceeded_){false}
-    , decltype(_impl_.aisbuiltcertchainrootbuiltinroot_){false}
-    , decltype(_impl_.amadeocsprequests_){false}
+    , decltype(_impl_.a_abuiltcertchain_){arena}
+    , decltype(_impl_.a_aevstatus_){}
+    , decltype(_impl_.a_aoverridableerrorcategory_){}
+    , decltype(_impl_.a_acerttransparencystatus_){0u}
+    , decltype(_impl_.a_afinalerror_){0}
+    , decltype(_impl_.a_asucceeded_){false}
+    , decltype(_impl_.a_aisbuiltcertchainrootbuiltinroot_){false}
+    , decltype(_impl_.a_amadeocsprequests_){false}
   };
-  _impl_.aevstatus_.InitDefault();
+  _impl_.a_aevstatus_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aevstatus_.Set("", GetArenaForAllocation());
+    _impl_.a_aevstatus_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.aoverridableerrorcategory_.InitDefault();
+  _impl_.a_aoverridableerrorcategory_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.aoverridableerrorcategory_.Set("", GetArenaForAllocation());
+    _impl_.a_aoverridableerrorcategory_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -190,9 +190,9 @@ Msg_OnVerifySSLServerCertFinished::~Msg_OnVerifySSLServerCertFinished() {
 
 inline void Msg_OnVerifySSLServerCertFinished::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.abuiltcertchain_.~RepeatedPtrField();
-  _impl_.aevstatus_.Destroy();
-  _impl_.aoverridableerrorcategory_.Destroy();
+  _impl_.a_abuiltcertchain_.~RepeatedPtrField();
+  _impl_.a_aevstatus_.Destroy();
+  _impl_.a_aoverridableerrorcategory_.Destroy();
 }
 
 void Msg_OnVerifySSLServerCertFinished::SetCachedSize(int size) const {
@@ -205,20 +205,20 @@ void Msg_OnVerifySSLServerCertFinished::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.abuiltcertchain_.Clear();
+  _impl_.a_abuiltcertchain_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.aevstatus_.ClearNonDefaultToEmpty();
+      _impl_.a_aevstatus_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.aoverridableerrorcategory_.ClearNonDefaultToEmpty();
+      _impl_.a_aoverridableerrorcategory_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x0000007cu) {
-    ::memset(&_impl_.acerttransparencystatus_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.amadeocsprequests_) -
-        reinterpret_cast<char*>(&_impl_.acerttransparencystatus_)) + sizeof(_impl_.amadeocsprequests_));
+    ::memset(&_impl_.a_acerttransparencystatus_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_amadeocsprequests_) -
+        reinterpret_cast<char*>(&_impl_.a_acerttransparencystatus_)) + sizeof(_impl_.a_amadeocsprequests_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -231,78 +231,78 @@ const char* Msg_OnVerifySSLServerCertFinished::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.psm.ByteArray aBuiltCertChain = 1;
+      // repeated .protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_abuiltcertchain(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_abuiltcertchain(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aCertTransparencyStatus = 2;
+      // required uint32 a_aCertTransparencyStatus = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_acerttransparencystatus(&has_bits);
-          _impl_.acerttransparencystatus_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_acerttransparencystatus(&has_bits);
+          _impl_.a_acerttransparencystatus_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aEVStatus = 3;
+      // required bytes a_aEVStatus = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_aevstatus();
+          auto str = _internal_mutable_a_aevstatus();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aSucceeded = 4;
+      // required bool a_aSucceeded = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_asucceeded(&has_bits);
-          _impl_.asucceeded_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_asucceeded(&has_bits);
+          _impl_.a_asucceeded_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 aFinalError = 5;
+      // required sint32 a_aFinalError = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_afinalerror(&has_bits);
-          _impl_.afinalerror_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_afinalerror(&has_bits);
+          _impl_.a_afinalerror_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aOverridableErrorCategory = 6;
+      // required bytes a_aOverridableErrorCategory = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_aoverridableerrorcategory();
+          auto str = _internal_mutable_a_aoverridableerrorcategory();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aIsBuiltCertChainRootBuiltInRoot = 7;
+      // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_aisbuiltcertchainrootbuiltinroot(&has_bits);
-          _impl_.aisbuiltcertchainrootbuiltinroot_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aisbuiltcertchainrootbuiltinroot(&has_bits);
+          _impl_.a_aisbuiltcertchainrootbuiltinroot_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aMadeOCSPRequests = 8;
+      // required bool a_aMadeOCSPRequests = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_amadeocsprequests(&has_bits);
-          _impl_.amadeocsprequests_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_amadeocsprequests(&has_bits);
+          _impl_.a_amadeocsprequests_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -337,55 +337,55 @@ uint8_t* Msg_OnVerifySSLServerCertFinished::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.psm.ByteArray aBuiltCertChain = 1;
+  // repeated .protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_abuiltcertchain_size()); i < n; i++) {
-    const auto& repfield = this->_internal_abuiltcertchain(i);
+      n = static_cast<unsigned>(this->_internal_a_abuiltcertchain_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_abuiltcertchain(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 aCertTransparencyStatus = 2;
+  // required uint32 a_aCertTransparencyStatus = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_acerttransparencystatus(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_acerttransparencystatus(), target);
   }
 
-  // required bytes aEVStatus = 3;
+  // required bytes a_aEVStatus = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_aevstatus(), target);
+        3, this->_internal_a_aevstatus(), target);
   }
 
-  // required bool aSucceeded = 4;
+  // required bool a_aSucceeded = 4;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_asucceeded(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_asucceeded(), target);
   }
 
-  // required sint32 aFinalError = 5;
+  // required sint32 a_aFinalError = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_afinalerror(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_a_afinalerror(), target);
   }
 
-  // required bytes aOverridableErrorCategory = 6;
+  // required bytes a_aOverridableErrorCategory = 6;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_aoverridableerrorcategory(), target);
+        6, this->_internal_a_aoverridableerrorcategory(), target);
   }
 
-  // required bool aIsBuiltCertChainRootBuiltInRoot = 7;
+  // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_aisbuiltcertchainrootbuiltinroot(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_aisbuiltcertchainrootbuiltinroot(), target);
   }
 
-  // required bool aMadeOCSPRequests = 8;
+  // required bool a_aMadeOCSPRequests = 8;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_amadeocsprequests(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_amadeocsprequests(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -400,42 +400,42 @@ size_t Msg_OnVerifySSLServerCertFinished::RequiredFieldsByteSizeFallback() const
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished)
   size_t total_size = 0;
 
-  if (_internal_has_aevstatus()) {
-    // required bytes aEVStatus = 3;
+  if (_internal_has_a_aevstatus()) {
+    // required bytes a_aEVStatus = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevstatus());
+        this->_internal_a_aevstatus());
   }
 
-  if (_internal_has_aoverridableerrorcategory()) {
-    // required bytes aOverridableErrorCategory = 6;
+  if (_internal_has_a_aoverridableerrorcategory()) {
+    // required bytes a_aOverridableErrorCategory = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoverridableerrorcategory());
+        this->_internal_a_aoverridableerrorcategory());
   }
 
-  if (_internal_has_acerttransparencystatus()) {
-    // required uint32 aCertTransparencyStatus = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_acerttransparencystatus());
+  if (_internal_has_a_acerttransparencystatus()) {
+    // required uint32 a_aCertTransparencyStatus = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acerttransparencystatus());
   }
 
-  if (_internal_has_afinalerror()) {
-    // required sint32 aFinalError = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_afinalerror());
+  if (_internal_has_a_afinalerror()) {
+    // required sint32 a_aFinalError = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_afinalerror());
   }
 
-  if (_internal_has_asucceeded()) {
-    // required bool aSucceeded = 4;
+  if (_internal_has_a_asucceeded()) {
+    // required bool a_aSucceeded = 4;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_aisbuiltcertchainrootbuiltinroot()) {
-    // required bool aIsBuiltCertChainRootBuiltInRoot = 7;
+  if (_internal_has_a_aisbuiltcertchainrootbuiltinroot()) {
+    // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_amadeocsprequests()) {
-    // required bool aMadeOCSPRequests = 8;
+  if (_internal_has_a_amadeocsprequests()) {
+    // required bool a_aMadeOCSPRequests = 8;
     total_size += 1 + 1;
   }
 
@@ -446,29 +446,29 @@ size_t Msg_OnVerifySSLServerCertFinished::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes aEVStatus = 3;
+    // required bytes a_aEVStatus = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aevstatus());
+        this->_internal_a_aevstatus());
 
-    // required bytes aOverridableErrorCategory = 6;
+    // required bytes a_aOverridableErrorCategory = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_aoverridableerrorcategory());
+        this->_internal_a_aoverridableerrorcategory());
 
-    // required uint32 aCertTransparencyStatus = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_acerttransparencystatus());
+    // required uint32 a_aCertTransparencyStatus = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acerttransparencystatus());
 
-    // required sint32 aFinalError = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_afinalerror());
+    // required sint32 a_aFinalError = 5;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_afinalerror());
 
-    // required bool aSucceeded = 4;
+    // required bool a_aSucceeded = 4;
     total_size += 1 + 1;
 
-    // required bool aIsBuiltCertChainRootBuiltInRoot = 7;
+    // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
     total_size += 1 + 1;
 
-    // required bool aMadeOCSPRequests = 8;
+    // required bool a_aMadeOCSPRequests = 8;
     total_size += 1 + 1;
 
   } else {
@@ -478,9 +478,9 @@ size_t Msg_OnVerifySSLServerCertFinished::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.psm.ByteArray aBuiltCertChain = 1;
-  total_size += 1UL * this->_internal_abuiltcertchain_size();
-  for (const auto& msg : this->_impl_.abuiltcertchain_) {
+  // repeated .protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
+  total_size += 1UL * this->_internal_a_abuiltcertchain_size();
+  for (const auto& msg : this->_impl_.a_abuiltcertchain_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -506,29 +506,29 @@ void Msg_OnVerifySSLServerCertFinished::MergeFrom(const Msg_OnVerifySSLServerCer
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.abuiltcertchain_.MergeFrom(from._impl_.abuiltcertchain_);
+  _this->_impl_.a_abuiltcertchain_.MergeFrom(from._impl_.a_abuiltcertchain_);
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000007fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_aevstatus(from._internal_aevstatus());
+      _this->_internal_set_a_aevstatus(from._internal_a_aevstatus());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_aoverridableerrorcategory(from._internal_aoverridableerrorcategory());
+      _this->_internal_set_a_aoverridableerrorcategory(from._internal_a_aoverridableerrorcategory());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.acerttransparencystatus_ = from._impl_.acerttransparencystatus_;
+      _this->_impl_.a_acerttransparencystatus_ = from._impl_.a_acerttransparencystatus_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.afinalerror_ = from._impl_.afinalerror_;
+      _this->_impl_.a_afinalerror_ = from._impl_.a_afinalerror_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.asucceeded_ = from._impl_.asucceeded_;
+      _this->_impl_.a_asucceeded_ = from._impl_.a_asucceeded_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.aisbuiltcertchainrootbuiltinroot_ = from._impl_.aisbuiltcertchainrootbuiltinroot_;
+      _this->_impl_.a_aisbuiltcertchainrootbuiltinroot_ = from._impl_.a_aisbuiltcertchainrootbuiltinroot_;
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.amadeocsprequests_ = from._impl_.amadeocsprequests_;
+      _this->_impl_.a_amadeocsprequests_ = from._impl_.a_amadeocsprequests_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -553,21 +553,21 @@ void Msg_OnVerifySSLServerCertFinished::InternalSwap(Msg_OnVerifySSLServerCertFi
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.abuiltcertchain_.InternalSwap(&other->_impl_.abuiltcertchain_);
+  _impl_.a_abuiltcertchain_.InternalSwap(&other->_impl_.a_abuiltcertchain_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aevstatus_, lhs_arena,
-      &other->_impl_.aevstatus_, rhs_arena
+      &_impl_.a_aevstatus_, lhs_arena,
+      &other->_impl_.a_aevstatus_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.aoverridableerrorcategory_, lhs_arena,
-      &other->_impl_.aoverridableerrorcategory_, rhs_arena
+      &_impl_.a_aoverridableerrorcategory_, lhs_arena,
+      &other->_impl_.a_aoverridableerrorcategory_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_OnVerifySSLServerCertFinished, _impl_.amadeocsprequests_)
-      + sizeof(Msg_OnVerifySSLServerCertFinished::_impl_.amadeocsprequests_)
-      - PROTOBUF_FIELD_OFFSET(Msg_OnVerifySSLServerCertFinished, _impl_.acerttransparencystatus_)>(
-          reinterpret_cast<char*>(&_impl_.acerttransparencystatus_),
-          reinterpret_cast<char*>(&other->_impl_.acerttransparencystatus_));
+      PROTOBUF_FIELD_OFFSET(Msg_OnVerifySSLServerCertFinished, _impl_.a_amadeocsprequests_)
+      + sizeof(Msg_OnVerifySSLServerCertFinished::_impl_.a_amadeocsprequests_)
+      - PROTOBUF_FIELD_OFFSET(Msg_OnVerifySSLServerCertFinished, _impl_.a_acerttransparencystatus_)>(
+          reinterpret_cast<char*>(&_impl_.a_acerttransparencystatus_),
+          reinterpret_cast<char*>(&other->_impl_.a_acerttransparencystatus_));
 }
 
 std::string Msg_OnVerifySSLServerCertFinished::GetTypeName() const {

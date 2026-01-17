@@ -25,11 +25,11 @@ PROTOBUF_CONSTEXPR Msg_SessionStoreUpdate::Msg_SessionStoreUpdate(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.adocshellcaps_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.azoom_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aprivatemode_)*/false
-  , /*decltype(_impl_.aneedcollectshistory_)*/false
-  , /*decltype(_impl_.aepoch_)*/0u} {}
+  , /*decltype(_impl_.a_adocshellcaps_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_azoom_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aprivatemode_)*/false
+  , /*decltype(_impl_.a_aneedcollectshistory_)*/false
+  , /*decltype(_impl_.a_aepoch_)*/0u} {}
 struct Msg_SessionStoreUpdateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SessionStoreUpdateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -43,10 +43,10 @@ PROTOBUF_CONSTEXPR Msg_IncrementalSessionStoreUpdate::Msg_IncrementalSessionStor
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.abrowsingcontext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.ascrollposition_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aformdata_)*/nullptr
-  , /*decltype(_impl_.aepoch_)*/0u} {}
+  , /*decltype(_impl_.a_abrowsingcontext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_ascrollposition_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aformdata_)*/nullptr
+  , /*decltype(_impl_.a_aepoch_)*/0u} {}
 struct Msg_IncrementalSessionStoreUpdateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_IncrementalSessionStoreUpdateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,8 +60,8 @@ PROTOBUF_CONSTEXPR Msg_ResetSessionStore::Msg_ResetSessionStore(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.abrowsingcontext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.aepoch_)*/0u} {}
+  , /*decltype(_impl_.a_abrowsingcontext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aepoch_)*/0u} {}
 struct Msg_ResetSessionStoreDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ResetSessionStoreDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -87,7 +87,7 @@ PROTOBUF_CONSTEXPR Reply_FlushTabState::Reply_FlushTabState(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.ahadcontext_)*/false} {}
+  , /*decltype(_impl_.a_ahadcontext_)*/false} {}
 struct Reply_FlushTabStateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_FlushTabStateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -135,19 +135,19 @@ namespace PSessionStore {
 class Msg_SessionStoreUpdate::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_SessionStoreUpdate>()._impl_._has_bits_);
-  static void set_has_adocshellcaps(HasBits* has_bits) {
+  static void set_has_a_adocshellcaps(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aprivatemode(HasBits* has_bits) {
+  static void set_has_a_aprivatemode(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_azoom(HasBits* has_bits) {
+  static void set_has_a_azoom(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aneedcollectshistory(HasBits* has_bits) {
+  static void set_has_a_aneedcollectshistory(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_aepoch(HasBits* has_bits) {
+  static void set_has_a_aepoch(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -167,32 +167,32 @@ Msg_SessionStoreUpdate::Msg_SessionStoreUpdate(const Msg_SessionStoreUpdate& fro
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adocshellcaps_){}
-    , decltype(_impl_.azoom_){}
-    , decltype(_impl_.aprivatemode_){}
-    , decltype(_impl_.aneedcollectshistory_){}
-    , decltype(_impl_.aepoch_){}};
+    , decltype(_impl_.a_adocshellcaps_){}
+    , decltype(_impl_.a_azoom_){}
+    , decltype(_impl_.a_aprivatemode_){}
+    , decltype(_impl_.a_aneedcollectshistory_){}
+    , decltype(_impl_.a_aepoch_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.adocshellcaps_.InitDefault();
+  _impl_.a_adocshellcaps_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adocshellcaps_.Set("", GetArenaForAllocation());
+    _impl_.a_adocshellcaps_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_adocshellcaps()) {
-    _this->_impl_.adocshellcaps_.Set(from._internal_adocshellcaps(), 
+  if (from._internal_has_a_adocshellcaps()) {
+    _this->_impl_.a_adocshellcaps_.Set(from._internal_a_adocshellcaps(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.azoom_.InitDefault();
+  _impl_.a_azoom_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.azoom_.Set("", GetArenaForAllocation());
+    _impl_.a_azoom_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_azoom()) {
-    _this->_impl_.azoom_.Set(from._internal_azoom(), 
+  if (from._internal_has_a_azoom()) {
+    _this->_impl_.a_azoom_.Set(from._internal_a_azoom(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.aprivatemode_, &from._impl_.aprivatemode_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.aepoch_) -
-    reinterpret_cast<char*>(&_impl_.aprivatemode_)) + sizeof(_impl_.aepoch_));
+  ::memcpy(&_impl_.a_aprivatemode_, &from._impl_.a_aprivatemode_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_aepoch_) -
+    reinterpret_cast<char*>(&_impl_.a_aprivatemode_)) + sizeof(_impl_.a_aepoch_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PSessionStore.Msg_SessionStoreUpdate)
 }
 
@@ -203,19 +203,19 @@ inline void Msg_SessionStoreUpdate::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.adocshellcaps_){}
-    , decltype(_impl_.azoom_){}
-    , decltype(_impl_.aprivatemode_){false}
-    , decltype(_impl_.aneedcollectshistory_){false}
-    , decltype(_impl_.aepoch_){0u}
+    , decltype(_impl_.a_adocshellcaps_){}
+    , decltype(_impl_.a_azoom_){}
+    , decltype(_impl_.a_aprivatemode_){false}
+    , decltype(_impl_.a_aneedcollectshistory_){false}
+    , decltype(_impl_.a_aepoch_){0u}
   };
-  _impl_.adocshellcaps_.InitDefault();
+  _impl_.a_adocshellcaps_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.adocshellcaps_.Set("", GetArenaForAllocation());
+    _impl_.a_adocshellcaps_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.azoom_.InitDefault();
+  _impl_.a_azoom_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.azoom_.Set("", GetArenaForAllocation());
+    _impl_.a_azoom_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -230,8 +230,8 @@ Msg_SessionStoreUpdate::~Msg_SessionStoreUpdate() {
 
 inline void Msg_SessionStoreUpdate::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.adocshellcaps_.Destroy();
-  _impl_.azoom_.Destroy();
+  _impl_.a_adocshellcaps_.Destroy();
+  _impl_.a_azoom_.Destroy();
 }
 
 void Msg_SessionStoreUpdate::SetCachedSize(int size) const {
@@ -247,16 +247,16 @@ void Msg_SessionStoreUpdate::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.adocshellcaps_.ClearNonDefaultToEmpty();
+      _impl_.a_adocshellcaps_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.azoom_.ClearNonDefaultToEmpty();
+      _impl_.a_azoom_.ClearNonDefaultToEmpty();
     }
   }
   if (cached_has_bits & 0x0000001cu) {
-    ::memset(&_impl_.aprivatemode_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.aepoch_) -
-        reinterpret_cast<char*>(&_impl_.aprivatemode_)) + sizeof(_impl_.aepoch_));
+    ::memset(&_impl_.a_aprivatemode_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_aepoch_) -
+        reinterpret_cast<char*>(&_impl_.a_aprivatemode_)) + sizeof(_impl_.a_aepoch_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -269,47 +269,47 @@ const char* Msg_SessionStoreUpdate::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes aDocShellCaps = 1;
+      // optional bytes a_aDocShellCaps = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_adocshellcaps();
+          auto str = _internal_mutable_a_adocshellcaps();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bool aPrivateMode = 2;
+      // optional bool a_aPrivateMode = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_aprivatemode(&has_bits);
-          _impl_.aprivatemode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aprivatemode(&has_bits);
+          _impl_.a_aprivatemode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes aZoom = 3;
+      // required bytes a_aZoom = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_azoom();
+          auto str = _internal_mutable_a_azoom();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool aNeedCollectSHistory = 4;
+      // required bool a_aNeedCollectSHistory = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_aneedcollectshistory(&has_bits);
-          _impl_.aneedcollectshistory_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_aneedcollectshistory(&has_bits);
+          _impl_.a_aneedcollectshistory_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aEpoch = 5;
+      // required uint32 a_aEpoch = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_aepoch(&has_bits);
-          _impl_.aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_aepoch(&has_bits);
+          _impl_.a_aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -345,34 +345,34 @@ uint8_t* Msg_SessionStoreUpdate::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes aDocShellCaps = 1;
+  // optional bytes a_aDocShellCaps = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_adocshellcaps(), target);
+        1, this->_internal_a_adocshellcaps(), target);
   }
 
-  // optional bool aPrivateMode = 2;
+  // optional bool a_aPrivateMode = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_aprivatemode(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_aprivatemode(), target);
   }
 
-  // required bytes aZoom = 3;
+  // required bytes a_aZoom = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_azoom(), target);
+        3, this->_internal_a_azoom(), target);
   }
 
-  // required bool aNeedCollectSHistory = 4;
+  // required bool a_aNeedCollectSHistory = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_aneedcollectshistory(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_aneedcollectshistory(), target);
   }
 
-  // required uint32 aEpoch = 5;
+  // required uint32 a_aEpoch = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_aepoch(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(5, this->_internal_a_aepoch(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -387,21 +387,21 @@ size_t Msg_SessionStoreUpdate::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSessionStore.Msg_SessionStoreUpdate)
   size_t total_size = 0;
 
-  if (_internal_has_azoom()) {
-    // required bytes aZoom = 3;
+  if (_internal_has_a_azoom()) {
+    // required bytes a_aZoom = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_azoom());
+        this->_internal_a_azoom());
   }
 
-  if (_internal_has_aneedcollectshistory()) {
-    // required bool aNeedCollectSHistory = 4;
+  if (_internal_has_a_aneedcollectshistory()) {
+    // required bool a_aNeedCollectSHistory = 4;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_aepoch()) {
-    // required uint32 aEpoch = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aepoch());
+  if (_internal_has_a_aepoch()) {
+    // required uint32 a_aEpoch = 5;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aepoch());
   }
 
   return total_size;
@@ -411,16 +411,16 @@ size_t Msg_SessionStoreUpdate::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001a) ^ 0x0000001a) == 0) {  // All required fields are present.
-    // required bytes aZoom = 3;
+    // required bytes a_aZoom = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_azoom());
+        this->_internal_a_azoom());
 
-    // required bool aNeedCollectSHistory = 4;
+    // required bool a_aNeedCollectSHistory = 4;
     total_size += 1 + 1;
 
-    // required uint32 aEpoch = 5;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aepoch());
+    // required uint32 a_aEpoch = 5;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aepoch());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -429,15 +429,15 @@ size_t Msg_SessionStoreUpdate::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes aDocShellCaps = 1;
+  // optional bytes a_aDocShellCaps = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_adocshellcaps());
+        this->_internal_a_adocshellcaps());
   }
 
-  // optional bool aPrivateMode = 2;
+  // optional bool a_aPrivateMode = 2;
   if (cached_has_bits & 0x00000004u) {
     total_size += 1 + 1;
   }
@@ -466,19 +466,19 @@ void Msg_SessionStoreUpdate::MergeFrom(const Msg_SessionStoreUpdate& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_adocshellcaps(from._internal_adocshellcaps());
+      _this->_internal_set_a_adocshellcaps(from._internal_a_adocshellcaps());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_azoom(from._internal_azoom());
+      _this->_internal_set_a_azoom(from._internal_a_azoom());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.aprivatemode_ = from._impl_.aprivatemode_;
+      _this->_impl_.a_aprivatemode_ = from._impl_.a_aprivatemode_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.aneedcollectshistory_ = from._impl_.aneedcollectshistory_;
+      _this->_impl_.a_aneedcollectshistory_ = from._impl_.a_aneedcollectshistory_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.aepoch_ = from._impl_.aepoch_;
+      _this->_impl_.a_aepoch_ = from._impl_.a_aepoch_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -504,19 +504,19 @@ void Msg_SessionStoreUpdate::InternalSwap(Msg_SessionStoreUpdate* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.adocshellcaps_, lhs_arena,
-      &other->_impl_.adocshellcaps_, rhs_arena
+      &_impl_.a_adocshellcaps_, lhs_arena,
+      &other->_impl_.a_adocshellcaps_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.azoom_, lhs_arena,
-      &other->_impl_.azoom_, rhs_arena
+      &_impl_.a_azoom_, lhs_arena,
+      &other->_impl_.a_azoom_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_SessionStoreUpdate, _impl_.aepoch_)
-      + sizeof(Msg_SessionStoreUpdate::_impl_.aepoch_)
-      - PROTOBUF_FIELD_OFFSET(Msg_SessionStoreUpdate, _impl_.aprivatemode_)>(
-          reinterpret_cast<char*>(&_impl_.aprivatemode_),
-          reinterpret_cast<char*>(&other->_impl_.aprivatemode_));
+      PROTOBUF_FIELD_OFFSET(Msg_SessionStoreUpdate, _impl_.a_aepoch_)
+      + sizeof(Msg_SessionStoreUpdate::_impl_.a_aepoch_)
+      - PROTOBUF_FIELD_OFFSET(Msg_SessionStoreUpdate, _impl_.a_aprivatemode_)>(
+          reinterpret_cast<char*>(&_impl_.a_aprivatemode_),
+          reinterpret_cast<char*>(&other->_impl_.a_aprivatemode_));
 }
 
 std::string Msg_SessionStoreUpdate::GetTypeName() const {
@@ -529,17 +529,17 @@ std::string Msg_SessionStoreUpdate::GetTypeName() const {
 class Msg_IncrementalSessionStoreUpdate::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_IncrementalSessionStoreUpdate>()._impl_._has_bits_);
-  static void set_has_abrowsingcontext(HasBits* has_bits) {
+  static void set_has_a_abrowsingcontext(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::dom::sessionstore::FormData& aformdata(const Msg_IncrementalSessionStoreUpdate* msg);
-  static void set_has_aformdata(HasBits* has_bits) {
+  static const ::protobuf::mozilla::dom::sessionstore::FormData& a_aformdata(const Msg_IncrementalSessionStoreUpdate* msg);
+  static void set_has_a_aformdata(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_ascrollposition(HasBits* has_bits) {
+  static void set_has_a_ascrollposition(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_aepoch(HasBits* has_bits) {
+  static void set_has_a_aepoch(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -548,11 +548,11 @@ class Msg_IncrementalSessionStoreUpdate::_Internal {
 };
 
 const ::protobuf::mozilla::dom::sessionstore::FormData&
-Msg_IncrementalSessionStoreUpdate::_Internal::aformdata(const Msg_IncrementalSessionStoreUpdate* msg) {
-  return *msg->_impl_.aformdata_;
+Msg_IncrementalSessionStoreUpdate::_Internal::a_aformdata(const Msg_IncrementalSessionStoreUpdate* msg) {
+  return *msg->_impl_.a_aformdata_;
 }
-void Msg_IncrementalSessionStoreUpdate::clear_aformdata() {
-  if (_impl_.aformdata_ != nullptr) _impl_.aformdata_->Clear();
+void Msg_IncrementalSessionStoreUpdate::clear_a_aformdata() {
+  if (_impl_.a_aformdata_ != nullptr) _impl_.a_aformdata_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 Msg_IncrementalSessionStoreUpdate::Msg_IncrementalSessionStoreUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -567,32 +567,32 @@ Msg_IncrementalSessionStoreUpdate::Msg_IncrementalSessionStoreUpdate(const Msg_I
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abrowsingcontext_){}
-    , decltype(_impl_.ascrollposition_){}
-    , decltype(_impl_.aformdata_){nullptr}
-    , decltype(_impl_.aepoch_){}};
+    , decltype(_impl_.a_abrowsingcontext_){}
+    , decltype(_impl_.a_ascrollposition_){}
+    , decltype(_impl_.a_aformdata_){nullptr}
+    , decltype(_impl_.a_aepoch_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.abrowsingcontext_.InitDefault();
+  _impl_.a_abrowsingcontext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.abrowsingcontext_.Set("", GetArenaForAllocation());
+    _impl_.a_abrowsingcontext_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_abrowsingcontext()) {
-    _this->_impl_.abrowsingcontext_.Set(from._internal_abrowsingcontext(), 
+  if (from._internal_has_a_abrowsingcontext()) {
+    _this->_impl_.a_abrowsingcontext_.Set(from._internal_a_abrowsingcontext(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.ascrollposition_.InitDefault();
+  _impl_.a_ascrollposition_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ascrollposition_.Set("", GetArenaForAllocation());
+    _impl_.a_ascrollposition_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_ascrollposition()) {
-    _this->_impl_.ascrollposition_.Set(from._internal_ascrollposition(), 
+  if (from._internal_has_a_ascrollposition()) {
+    _this->_impl_.a_ascrollposition_.Set(from._internal_a_ascrollposition(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_aformdata()) {
-    _this->_impl_.aformdata_ = new ::protobuf::mozilla::dom::sessionstore::FormData(*from._impl_.aformdata_);
+  if (from._internal_has_a_aformdata()) {
+    _this->_impl_.a_aformdata_ = new ::protobuf::mozilla::dom::sessionstore::FormData(*from._impl_.a_aformdata_);
   }
-  _this->_impl_.aepoch_ = from._impl_.aepoch_;
+  _this->_impl_.a_aepoch_ = from._impl_.a_aepoch_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PSessionStore.Msg_IncrementalSessionStoreUpdate)
 }
 
@@ -603,18 +603,18 @@ inline void Msg_IncrementalSessionStoreUpdate::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abrowsingcontext_){}
-    , decltype(_impl_.ascrollposition_){}
-    , decltype(_impl_.aformdata_){nullptr}
-    , decltype(_impl_.aepoch_){0u}
+    , decltype(_impl_.a_abrowsingcontext_){}
+    , decltype(_impl_.a_ascrollposition_){}
+    , decltype(_impl_.a_aformdata_){nullptr}
+    , decltype(_impl_.a_aepoch_){0u}
   };
-  _impl_.abrowsingcontext_.InitDefault();
+  _impl_.a_abrowsingcontext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.abrowsingcontext_.Set("", GetArenaForAllocation());
+    _impl_.a_abrowsingcontext_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.ascrollposition_.InitDefault();
+  _impl_.a_ascrollposition_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.ascrollposition_.Set("", GetArenaForAllocation());
+    _impl_.a_ascrollposition_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -629,9 +629,9 @@ Msg_IncrementalSessionStoreUpdate::~Msg_IncrementalSessionStoreUpdate() {
 
 inline void Msg_IncrementalSessionStoreUpdate::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.abrowsingcontext_.Destroy();
-  _impl_.ascrollposition_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.aformdata_;
+  _impl_.a_abrowsingcontext_.Destroy();
+  _impl_.a_ascrollposition_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_aformdata_;
 }
 
 void Msg_IncrementalSessionStoreUpdate::SetCachedSize(int size) const {
@@ -647,17 +647,17 @@ void Msg_IncrementalSessionStoreUpdate::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.abrowsingcontext_.ClearNonDefaultToEmpty();
+      _impl_.a_abrowsingcontext_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.ascrollposition_.ClearNonDefaultToEmpty();
+      _impl_.a_ascrollposition_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.aformdata_ != nullptr);
-      _impl_.aformdata_->Clear();
+      GOOGLE_DCHECK(_impl_.a_aformdata_ != nullptr);
+      _impl_.a_aformdata_->Clear();
     }
   }
-  _impl_.aepoch_ = 0u;
+  _impl_.a_aepoch_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -669,37 +669,37 @@ const char* Msg_IncrementalSessionStoreUpdate::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aBrowsingContext = 1;
+      // required bytes a_aBrowsingContext = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_abrowsingcontext();
+          auto str = _internal_mutable_a_abrowsingcontext();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional .protobuf.mozilla.dom.sessionstore.FormData aFormData = 2;
+      // optional .protobuf.mozilla.dom.sessionstore.FormData a_aFormData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_aformdata(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_aformdata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes aScrollPosition = 3;
+      // optional bytes a_aScrollPosition = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_ascrollposition();
+          auto str = _internal_mutable_a_ascrollposition();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aEpoch = 4;
+      // required uint32 a_aEpoch = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_aepoch(&has_bits);
-          _impl_.aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_aepoch(&has_bits);
+          _impl_.a_aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -735,29 +735,29 @@ uint8_t* Msg_IncrementalSessionStoreUpdate::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aBrowsingContext = 1;
+  // required bytes a_aBrowsingContext = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_abrowsingcontext(), target);
+        1, this->_internal_a_abrowsingcontext(), target);
   }
 
-  // optional .protobuf.mozilla.dom.sessionstore.FormData aFormData = 2;
+  // optional .protobuf.mozilla.dom.sessionstore.FormData a_aFormData = 2;
   if (cached_has_bits & 0x00000004u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::aformdata(this),
-        _Internal::aformdata(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(2, _Internal::a_aformdata(this),
+        _Internal::a_aformdata(this).GetCachedSize(), target, stream);
   }
 
-  // optional bytes aScrollPosition = 3;
+  // optional bytes a_aScrollPosition = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_ascrollposition(), target);
+        3, this->_internal_a_ascrollposition(), target);
   }
 
-  // required uint32 aEpoch = 4;
+  // required uint32 a_aEpoch = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_aepoch(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_aepoch(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -772,16 +772,16 @@ size_t Msg_IncrementalSessionStoreUpdate::RequiredFieldsByteSizeFallback() const
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSessionStore.Msg_IncrementalSessionStoreUpdate)
   size_t total_size = 0;
 
-  if (_internal_has_abrowsingcontext()) {
-    // required bytes aBrowsingContext = 1;
+  if (_internal_has_a_abrowsingcontext()) {
+    // required bytes a_aBrowsingContext = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_abrowsingcontext());
+        this->_internal_a_abrowsingcontext());
   }
 
-  if (_internal_has_aepoch()) {
-    // required uint32 aEpoch = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aepoch());
+  if (_internal_has_a_aepoch()) {
+    // required uint32 a_aEpoch = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aepoch());
   }
 
   return total_size;
@@ -791,13 +791,13 @@ size_t Msg_IncrementalSessionStoreUpdate::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000009) ^ 0x00000009) == 0) {  // All required fields are present.
-    // required bytes aBrowsingContext = 1;
+    // required bytes a_aBrowsingContext = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_abrowsingcontext());
+        this->_internal_a_abrowsingcontext());
 
-    // required uint32 aEpoch = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aepoch());
+    // required uint32 a_aEpoch = 4;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aepoch());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -808,18 +808,18 @@ size_t Msg_IncrementalSessionStoreUpdate::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000006u) {
-    // optional bytes aScrollPosition = 3;
+    // optional bytes a_aScrollPosition = 3;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_ascrollposition());
+          this->_internal_a_ascrollposition());
     }
 
-    // optional .protobuf.mozilla.dom.sessionstore.FormData aFormData = 2;
+    // optional .protobuf.mozilla.dom.sessionstore.FormData a_aFormData = 2;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.aformdata_);
+          *_impl_.a_aformdata_);
     }
 
   }
@@ -847,17 +847,17 @@ void Msg_IncrementalSessionStoreUpdate::MergeFrom(const Msg_IncrementalSessionSt
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_abrowsingcontext(from._internal_abrowsingcontext());
+      _this->_internal_set_a_abrowsingcontext(from._internal_a_abrowsingcontext());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_ascrollposition(from._internal_ascrollposition());
+      _this->_internal_set_a_ascrollposition(from._internal_a_ascrollposition());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_aformdata()->::protobuf::mozilla::dom::sessionstore::FormData::MergeFrom(
-          from._internal_aformdata());
+      _this->_internal_mutable_a_aformdata()->::protobuf::mozilla::dom::sessionstore::FormData::MergeFrom(
+          from._internal_a_aformdata());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.aepoch_ = from._impl_.aepoch_;
+      _this->_impl_.a_aepoch_ = from._impl_.a_aepoch_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -873,8 +873,8 @@ void Msg_IncrementalSessionStoreUpdate::CopyFrom(const Msg_IncrementalSessionSto
 
 bool Msg_IncrementalSessionStoreUpdate::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_aformdata()) {
-    if (!_impl_.aformdata_->IsInitialized()) return false;
+  if (_internal_has_a_aformdata()) {
+    if (!_impl_.a_aformdata_->IsInitialized()) return false;
   }
   return true;
 }
@@ -886,19 +886,19 @@ void Msg_IncrementalSessionStoreUpdate::InternalSwap(Msg_IncrementalSessionStore
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.abrowsingcontext_, lhs_arena,
-      &other->_impl_.abrowsingcontext_, rhs_arena
+      &_impl_.a_abrowsingcontext_, lhs_arena,
+      &other->_impl_.a_abrowsingcontext_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.ascrollposition_, lhs_arena,
-      &other->_impl_.ascrollposition_, rhs_arena
+      &_impl_.a_ascrollposition_, lhs_arena,
+      &other->_impl_.a_ascrollposition_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_IncrementalSessionStoreUpdate, _impl_.aepoch_)
-      + sizeof(Msg_IncrementalSessionStoreUpdate::_impl_.aepoch_)
-      - PROTOBUF_FIELD_OFFSET(Msg_IncrementalSessionStoreUpdate, _impl_.aformdata_)>(
-          reinterpret_cast<char*>(&_impl_.aformdata_),
-          reinterpret_cast<char*>(&other->_impl_.aformdata_));
+      PROTOBUF_FIELD_OFFSET(Msg_IncrementalSessionStoreUpdate, _impl_.a_aepoch_)
+      + sizeof(Msg_IncrementalSessionStoreUpdate::_impl_.a_aepoch_)
+      - PROTOBUF_FIELD_OFFSET(Msg_IncrementalSessionStoreUpdate, _impl_.a_aformdata_)>(
+          reinterpret_cast<char*>(&_impl_.a_aformdata_),
+          reinterpret_cast<char*>(&other->_impl_.a_aformdata_));
 }
 
 std::string Msg_IncrementalSessionStoreUpdate::GetTypeName() const {
@@ -911,10 +911,10 @@ std::string Msg_IncrementalSessionStoreUpdate::GetTypeName() const {
 class Msg_ResetSessionStore::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ResetSessionStore>()._impl_._has_bits_);
-  static void set_has_abrowsingcontext(HasBits* has_bits) {
+  static void set_has_a_abrowsingcontext(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_aepoch(HasBits* has_bits) {
+  static void set_has_a_aepoch(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -934,19 +934,19 @@ Msg_ResetSessionStore::Msg_ResetSessionStore(const Msg_ResetSessionStore& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abrowsingcontext_){}
-    , decltype(_impl_.aepoch_){}};
+    , decltype(_impl_.a_abrowsingcontext_){}
+    , decltype(_impl_.a_aepoch_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.abrowsingcontext_.InitDefault();
+  _impl_.a_abrowsingcontext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.abrowsingcontext_.Set("", GetArenaForAllocation());
+    _impl_.a_abrowsingcontext_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_abrowsingcontext()) {
-    _this->_impl_.abrowsingcontext_.Set(from._internal_abrowsingcontext(), 
+  if (from._internal_has_a_abrowsingcontext()) {
+    _this->_impl_.a_abrowsingcontext_.Set(from._internal_a_abrowsingcontext(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.aepoch_ = from._impl_.aepoch_;
+  _this->_impl_.a_aepoch_ = from._impl_.a_aepoch_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PSessionStore.Msg_ResetSessionStore)
 }
 
@@ -957,12 +957,12 @@ inline void Msg_ResetSessionStore::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.abrowsingcontext_){}
-    , decltype(_impl_.aepoch_){0u}
+    , decltype(_impl_.a_abrowsingcontext_){}
+    , decltype(_impl_.a_aepoch_){0u}
   };
-  _impl_.abrowsingcontext_.InitDefault();
+  _impl_.a_abrowsingcontext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.abrowsingcontext_.Set("", GetArenaForAllocation());
+    _impl_.a_abrowsingcontext_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -977,7 +977,7 @@ Msg_ResetSessionStore::~Msg_ResetSessionStore() {
 
 inline void Msg_ResetSessionStore::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.abrowsingcontext_.Destroy();
+  _impl_.a_abrowsingcontext_.Destroy();
 }
 
 void Msg_ResetSessionStore::SetCachedSize(int size) const {
@@ -992,9 +992,9 @@ void Msg_ResetSessionStore::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.abrowsingcontext_.ClearNonDefaultToEmpty();
+    _impl_.a_abrowsingcontext_.ClearNonDefaultToEmpty();
   }
-  _impl_.aepoch_ = 0u;
+  _impl_.a_aepoch_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1006,20 +1006,20 @@ const char* Msg_ResetSessionStore::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes aBrowsingContext = 1;
+      // required bytes a_aBrowsingContext = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_abrowsingcontext();
+          auto str = _internal_mutable_a_abrowsingcontext();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 aEpoch = 2;
+      // required uint32 a_aEpoch = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_aepoch(&has_bits);
-          _impl_.aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_aepoch(&has_bits);
+          _impl_.a_aepoch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1055,16 +1055,16 @@ uint8_t* Msg_ResetSessionStore::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes aBrowsingContext = 1;
+  // required bytes a_aBrowsingContext = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_abrowsingcontext(), target);
+        1, this->_internal_a_abrowsingcontext(), target);
   }
 
-  // required uint32 aEpoch = 2;
+  // required uint32 a_aEpoch = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_aepoch(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_aepoch(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1079,16 +1079,16 @@ size_t Msg_ResetSessionStore::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PSessionStore.Msg_ResetSessionStore)
   size_t total_size = 0;
 
-  if (_internal_has_abrowsingcontext()) {
-    // required bytes aBrowsingContext = 1;
+  if (_internal_has_a_abrowsingcontext()) {
+    // required bytes a_aBrowsingContext = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_abrowsingcontext());
+        this->_internal_a_abrowsingcontext());
   }
 
-  if (_internal_has_aepoch()) {
-    // required uint32 aEpoch = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aepoch());
+  if (_internal_has_a_aepoch()) {
+    // required uint32 a_aEpoch = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aepoch());
   }
 
   return total_size;
@@ -1098,13 +1098,13 @@ size_t Msg_ResetSessionStore::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes aBrowsingContext = 1;
+    // required bytes a_aBrowsingContext = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_abrowsingcontext());
+        this->_internal_a_abrowsingcontext());
 
-    // required uint32 aEpoch = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_aepoch());
+    // required uint32 a_aEpoch = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aepoch());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1137,10 +1137,10 @@ void Msg_ResetSessionStore::MergeFrom(const Msg_ResetSessionStore& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_abrowsingcontext(from._internal_abrowsingcontext());
+      _this->_internal_set_a_abrowsingcontext(from._internal_a_abrowsingcontext());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.aepoch_ = from._impl_.aepoch_;
+      _this->_impl_.a_aepoch_ = from._impl_.a_aepoch_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -1166,10 +1166,10 @@ void Msg_ResetSessionStore::InternalSwap(Msg_ResetSessionStore* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.abrowsingcontext_, lhs_arena,
-      &other->_impl_.abrowsingcontext_, rhs_arena
+      &_impl_.a_abrowsingcontext_, lhs_arena,
+      &other->_impl_.a_abrowsingcontext_, rhs_arena
   );
-  swap(_impl_.aepoch_, other->_impl_.aepoch_);
+  swap(_impl_.a_aepoch_, other->_impl_.a_aepoch_);
 }
 
 std::string Msg_ResetSessionStore::GetTypeName() const {
@@ -1330,7 +1330,7 @@ std::string Msg_FlushTabState::GetTypeName() const {
 class Reply_FlushTabState::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_FlushTabState>()._impl_._has_bits_);
-  static void set_has_ahadcontext(HasBits* has_bits) {
+  static void set_has_a_ahadcontext(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1350,10 +1350,10 @@ Reply_FlushTabState::Reply_FlushTabState(const Reply_FlushTabState& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ahadcontext_){}};
+    , decltype(_impl_.a_ahadcontext_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.ahadcontext_ = from._impl_.ahadcontext_;
+  _this->_impl_.a_ahadcontext_ = from._impl_.a_ahadcontext_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PSessionStore.Reply_FlushTabState)
 }
 
@@ -1364,7 +1364,7 @@ inline void Reply_FlushTabState::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.ahadcontext_){false}
+    , decltype(_impl_.a_ahadcontext_){false}
   };
 }
 
@@ -1391,7 +1391,7 @@ void Reply_FlushTabState::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.ahadcontext_ = false;
+  _impl_.a_ahadcontext_ = false;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1403,11 +1403,11 @@ const char* Reply_FlushTabState::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool aHadContext = 1;
+      // required bool a_aHadContext = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_ahadcontext(&has_bits);
-          _impl_.ahadcontext_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_ahadcontext(&has_bits);
+          _impl_.a_ahadcontext_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1443,10 +1443,10 @@ uint8_t* Reply_FlushTabState::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool aHadContext = 1;
+  // required bool a_aHadContext = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_ahadcontext(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_ahadcontext(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1461,8 +1461,8 @@ size_t Reply_FlushTabState::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSessionStore.Reply_FlushTabState)
   size_t total_size = 0;
 
-  // required bool aHadContext = 1;
-  if (_internal_has_ahadcontext()) {
+  // required bool a_aHadContext = 1;
+  if (_internal_has_a_ahadcontext()) {
     total_size += 1 + 1;
   }
   uint32_t cached_has_bits = 0;
@@ -1490,8 +1490,8 @@ void Reply_FlushTabState::MergeFrom(const Reply_FlushTabState& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_ahadcontext()) {
-    _this->_internal_set_ahadcontext(from._internal_ahadcontext());
+  if (from._internal_has_a_ahadcontext()) {
+    _this->_internal_set_a_ahadcontext(from._internal_a_ahadcontext());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1512,7 +1512,7 @@ void Reply_FlushTabState::InternalSwap(Reply_FlushTabState* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.ahadcontext_, other->_impl_.ahadcontext_);
+  swap(_impl_.a_ahadcontext_, other->_impl_.a_ahadcontext_);
 }
 
 std::string Reply_FlushTabState::GetTypeName() const {

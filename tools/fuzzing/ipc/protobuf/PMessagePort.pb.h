@@ -206,25 +206,25 @@ class Msg_PostMessages final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessagesFieldNumber = 1,
+    kAMessagesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  int messages_size() const;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  int a_messages_size() const;
   private:
-  int _internal_messages_size() const;
+  int _internal_a_messages_size() const;
   public:
-  void clear_messages();
-  ::protobuf::mozilla::dom::MessageData* mutable_messages(int index);
+  void clear_a_messages();
+  ::protobuf::mozilla::dom::MessageData* mutable_a_messages(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-      mutable_messages();
+      mutable_a_messages();
   private:
-  const ::protobuf::mozilla::dom::MessageData& _internal_messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* _internal_add_messages();
+  const ::protobuf::mozilla::dom::MessageData& _internal_a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* _internal_add_a_messages();
   public:
-  const ::protobuf::mozilla::dom::MessageData& messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* add_messages();
+  const ::protobuf::mozilla::dom::MessageData& a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* add_a_messages();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-      messages() const;
+      a_messages() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages)
  private:
@@ -234,7 +234,7 @@ class Msg_PostMessages final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > messages_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > a_messages_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -352,25 +352,25 @@ class Msg_Disentangle final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessagesFieldNumber = 1,
+    kAMessagesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  int messages_size() const;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  int a_messages_size() const;
   private:
-  int _internal_messages_size() const;
+  int _internal_a_messages_size() const;
   public:
-  void clear_messages();
-  ::protobuf::mozilla::dom::MessageData* mutable_messages(int index);
+  void clear_a_messages();
+  ::protobuf::mozilla::dom::MessageData* mutable_a_messages(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-      mutable_messages();
+      mutable_a_messages();
   private:
-  const ::protobuf::mozilla::dom::MessageData& _internal_messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* _internal_add_messages();
+  const ::protobuf::mozilla::dom::MessageData& _internal_a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* _internal_add_a_messages();
   public:
-  const ::protobuf::mozilla::dom::MessageData& messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* add_messages();
+  const ::protobuf::mozilla::dom::MessageData& a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* add_a_messages();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-      messages() const;
+      a_messages() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle)
  private:
@@ -380,7 +380,7 @@ class Msg_Disentangle final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > messages_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > a_messages_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -746,25 +746,25 @@ class Msg_Entangled final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessagesFieldNumber = 1,
+    kAMessagesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  int messages_size() const;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  int a_messages_size() const;
   private:
-  int _internal_messages_size() const;
+  int _internal_a_messages_size() const;
   public:
-  void clear_messages();
-  ::protobuf::mozilla::dom::MessageData* mutable_messages(int index);
+  void clear_a_messages();
+  ::protobuf::mozilla::dom::MessageData* mutable_a_messages(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-      mutable_messages();
+      mutable_a_messages();
   private:
-  const ::protobuf::mozilla::dom::MessageData& _internal_messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* _internal_add_messages();
+  const ::protobuf::mozilla::dom::MessageData& _internal_a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* _internal_add_a_messages();
   public:
-  const ::protobuf::mozilla::dom::MessageData& messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* add_messages();
+  const ::protobuf::mozilla::dom::MessageData& a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* add_a_messages();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-      messages() const;
+      a_messages() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMessagePort.Msg_Entangled)
  private:
@@ -774,7 +774,7 @@ class Msg_Entangled final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > messages_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > a_messages_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -892,25 +892,25 @@ class Msg_ReceiveData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessagesFieldNumber = 1,
+    kAMessagesFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.MessageData messages = 1;
-  int messages_size() const;
+  // repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+  int a_messages_size() const;
   private:
-  int _internal_messages_size() const;
+  int _internal_a_messages_size() const;
   public:
-  void clear_messages();
-  ::protobuf::mozilla::dom::MessageData* mutable_messages(int index);
+  void clear_a_messages();
+  ::protobuf::mozilla::dom::MessageData* mutable_a_messages(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-      mutable_messages();
+      mutable_a_messages();
   private:
-  const ::protobuf::mozilla::dom::MessageData& _internal_messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* _internal_add_messages();
+  const ::protobuf::mozilla::dom::MessageData& _internal_a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* _internal_add_a_messages();
   public:
-  const ::protobuf::mozilla::dom::MessageData& messages(int index) const;
-  ::protobuf::mozilla::dom::MessageData* add_messages();
+  const ::protobuf::mozilla::dom::MessageData& a_messages(int index) const;
+  ::protobuf::mozilla::dom::MessageData* add_a_messages();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-      messages() const;
+      a_messages() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData)
  private:
@@ -920,7 +920,7 @@ class Msg_ReceiveData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > messages_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData > a_messages_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1309,82 +1309,82 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PostMessages
 
-// repeated .protobuf.mozilla.dom.MessageData messages = 1;
-inline int Msg_PostMessages::_internal_messages_size() const {
-  return _impl_.messages_.size();
+// repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+inline int Msg_PostMessages::_internal_a_messages_size() const {
+  return _impl_.a_messages_.size();
 }
-inline int Msg_PostMessages::messages_size() const {
-  return _internal_messages_size();
+inline int Msg_PostMessages::a_messages_size() const {
+  return _internal_a_messages_size();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessages::mutable_messages(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.messages)
-  return _impl_.messages_.Mutable(index);
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessages::mutable_a_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.a_messages)
+  return _impl_.a_messages_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-Msg_PostMessages::mutable_messages() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.messages)
-  return &_impl_.messages_;
+Msg_PostMessages::mutable_a_messages() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.a_messages)
+  return &_impl_.a_messages_;
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessages::_internal_messages(int index) const {
-  return _impl_.messages_.Get(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessages::_internal_a_messages(int index) const {
+  return _impl_.a_messages_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessages::messages(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.messages)
-  return _internal_messages(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_PostMessages::a_messages(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.a_messages)
+  return _internal_a_messages(index);
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessages::_internal_add_messages() {
-  return _impl_.messages_.Add();
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessages::_internal_add_a_messages() {
+  return _impl_.a_messages_.Add();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessages::add_messages() {
-  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_messages();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.messages)
+inline ::protobuf::mozilla::dom::MessageData* Msg_PostMessages::add_a_messages() {
+  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_a_messages();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.a_messages)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-Msg_PostMessages::messages() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.messages)
-  return _impl_.messages_;
+Msg_PostMessages::a_messages() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_PostMessages.a_messages)
+  return _impl_.a_messages_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Disentangle
 
-// repeated .protobuf.mozilla.dom.MessageData messages = 1;
-inline int Msg_Disentangle::_internal_messages_size() const {
-  return _impl_.messages_.size();
+// repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+inline int Msg_Disentangle::_internal_a_messages_size() const {
+  return _impl_.a_messages_.size();
 }
-inline int Msg_Disentangle::messages_size() const {
-  return _internal_messages_size();
+inline int Msg_Disentangle::a_messages_size() const {
+  return _internal_a_messages_size();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Disentangle::mutable_messages(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.messages)
-  return _impl_.messages_.Mutable(index);
+inline ::protobuf::mozilla::dom::MessageData* Msg_Disentangle::mutable_a_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.a_messages)
+  return _impl_.a_messages_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-Msg_Disentangle::mutable_messages() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.messages)
-  return &_impl_.messages_;
+Msg_Disentangle::mutable_a_messages() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.a_messages)
+  return &_impl_.a_messages_;
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_Disentangle::_internal_messages(int index) const {
-  return _impl_.messages_.Get(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_Disentangle::_internal_a_messages(int index) const {
+  return _impl_.a_messages_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_Disentangle::messages(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.messages)
-  return _internal_messages(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_Disentangle::a_messages(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.a_messages)
+  return _internal_a_messages(index);
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Disentangle::_internal_add_messages() {
-  return _impl_.messages_.Add();
+inline ::protobuf::mozilla::dom::MessageData* Msg_Disentangle::_internal_add_a_messages() {
+  return _impl_.a_messages_.Add();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Disentangle::add_messages() {
-  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_messages();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.messages)
+inline ::protobuf::mozilla::dom::MessageData* Msg_Disentangle::add_a_messages() {
+  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_a_messages();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.a_messages)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-Msg_Disentangle::messages() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.messages)
-  return _impl_.messages_;
+Msg_Disentangle::a_messages() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_Disentangle.a_messages)
+  return _impl_.a_messages_;
 }
 
 // -------------------------------------------------------------------
@@ -1399,82 +1399,82 @@ Msg_Disentangle::messages() const {
 
 // Msg_Entangled
 
-// repeated .protobuf.mozilla.dom.MessageData messages = 1;
-inline int Msg_Entangled::_internal_messages_size() const {
-  return _impl_.messages_.size();
+// repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+inline int Msg_Entangled::_internal_a_messages_size() const {
+  return _impl_.a_messages_.size();
 }
-inline int Msg_Entangled::messages_size() const {
-  return _internal_messages_size();
+inline int Msg_Entangled::a_messages_size() const {
+  return _internal_a_messages_size();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Entangled::mutable_messages(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.messages)
-  return _impl_.messages_.Mutable(index);
+inline ::protobuf::mozilla::dom::MessageData* Msg_Entangled::mutable_a_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.a_messages)
+  return _impl_.a_messages_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-Msg_Entangled::mutable_messages() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.messages)
-  return &_impl_.messages_;
+Msg_Entangled::mutable_a_messages() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.a_messages)
+  return &_impl_.a_messages_;
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_Entangled::_internal_messages(int index) const {
-  return _impl_.messages_.Get(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_Entangled::_internal_a_messages(int index) const {
+  return _impl_.a_messages_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_Entangled::messages(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.messages)
-  return _internal_messages(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_Entangled::a_messages(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.a_messages)
+  return _internal_a_messages(index);
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Entangled::_internal_add_messages() {
-  return _impl_.messages_.Add();
+inline ::protobuf::mozilla::dom::MessageData* Msg_Entangled::_internal_add_a_messages() {
+  return _impl_.a_messages_.Add();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_Entangled::add_messages() {
-  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_messages();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.messages)
+inline ::protobuf::mozilla::dom::MessageData* Msg_Entangled::add_a_messages() {
+  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_a_messages();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.a_messages)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-Msg_Entangled::messages() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.messages)
-  return _impl_.messages_;
+Msg_Entangled::a_messages() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_Entangled.a_messages)
+  return _impl_.a_messages_;
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReceiveData
 
-// repeated .protobuf.mozilla.dom.MessageData messages = 1;
-inline int Msg_ReceiveData::_internal_messages_size() const {
-  return _impl_.messages_.size();
+// repeated .protobuf.mozilla.dom.MessageData a_messages = 1;
+inline int Msg_ReceiveData::_internal_a_messages_size() const {
+  return _impl_.a_messages_.size();
 }
-inline int Msg_ReceiveData::messages_size() const {
-  return _internal_messages_size();
+inline int Msg_ReceiveData::a_messages_size() const {
+  return _internal_a_messages_size();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_ReceiveData::mutable_messages(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.messages)
-  return _impl_.messages_.Mutable(index);
+inline ::protobuf::mozilla::dom::MessageData* Msg_ReceiveData::mutable_a_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.a_messages)
+  return _impl_.a_messages_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >*
-Msg_ReceiveData::mutable_messages() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.messages)
-  return &_impl_.messages_;
+Msg_ReceiveData::mutable_a_messages() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.a_messages)
+  return &_impl_.a_messages_;
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_ReceiveData::_internal_messages(int index) const {
-  return _impl_.messages_.Get(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_ReceiveData::_internal_a_messages(int index) const {
+  return _impl_.a_messages_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::MessageData& Msg_ReceiveData::messages(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.messages)
-  return _internal_messages(index);
+inline const ::protobuf::mozilla::dom::MessageData& Msg_ReceiveData::a_messages(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.a_messages)
+  return _internal_a_messages(index);
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_ReceiveData::_internal_add_messages() {
-  return _impl_.messages_.Add();
+inline ::protobuf::mozilla::dom::MessageData* Msg_ReceiveData::_internal_add_a_messages() {
+  return _impl_.a_messages_.Add();
 }
-inline ::protobuf::mozilla::dom::MessageData* Msg_ReceiveData::add_messages() {
-  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_messages();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.messages)
+inline ::protobuf::mozilla::dom::MessageData* Msg_ReceiveData::add_a_messages() {
+  ::protobuf::mozilla::dom::MessageData* _add = _internal_add_a_messages();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.a_messages)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::MessageData >&
-Msg_ReceiveData::messages() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.messages)
-  return _impl_.messages_;
+Msg_ReceiveData::a_messages() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PMessagePort.Msg_ReceiveData.a_messages)
+  return _impl_.a_messages_;
 }
 
 // -------------------------------------------------------------------

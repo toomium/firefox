@@ -177,25 +177,25 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
+    kAResponseFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.SDBRequestResponse response = 1;
-  bool has_response() const;
+  // required .protobuf.mozilla.dom.SDBRequestResponse a_response = 1;
+  bool has_a_response() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_a_response() const;
   public:
-  void clear_response();
-  const ::protobuf::mozilla::dom::SDBRequestResponse& response() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SDBRequestResponse* release_response();
-  ::protobuf::mozilla::dom::SDBRequestResponse* mutable_response();
-  void set_allocated_response(::protobuf::mozilla::dom::SDBRequestResponse* response);
+  void clear_a_response();
+  const ::protobuf::mozilla::dom::SDBRequestResponse& a_response() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SDBRequestResponse* release_a_response();
+  ::protobuf::mozilla::dom::SDBRequestResponse* mutable_a_response();
+  void set_allocated_a_response(::protobuf::mozilla::dom::SDBRequestResponse* a_response);
   private:
-  const ::protobuf::mozilla::dom::SDBRequestResponse& _internal_response() const;
-  ::protobuf::mozilla::dom::SDBRequestResponse* _internal_mutable_response();
+  const ::protobuf::mozilla::dom::SDBRequestResponse& _internal_a_response() const;
+  ::protobuf::mozilla::dom::SDBRequestResponse* _internal_mutable_a_response();
   public:
-  void unsafe_arena_set_allocated_response(
-      ::protobuf::mozilla::dom::SDBRequestResponse* response);
-  ::protobuf::mozilla::dom::SDBRequestResponse* unsafe_arena_release_response();
+  void unsafe_arena_set_allocated_a_response(
+      ::protobuf::mozilla::dom::SDBRequestResponse* a_response);
+  ::protobuf::mozilla::dom::SDBRequestResponse* unsafe_arena_release_a_response();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__)
  private:
@@ -207,7 +207,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::SDBRequestResponse* response_;
+    ::protobuf::mozilla::dom::SDBRequestResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBRequest_2eproto;
@@ -347,41 +347,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg___delete__
 
-// required .protobuf.mozilla.dom.SDBRequestResponse response = 1;
-inline bool Msg___delete__::_internal_has_response() const {
+// required .protobuf.mozilla.dom.SDBRequestResponse a_response = 1;
+inline bool Msg___delete__::_internal_has_a_response() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.response_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
   return value;
 }
-inline bool Msg___delete__::has_response() const {
-  return _internal_has_response();
+inline bool Msg___delete__::has_a_response() const {
+  return _internal_has_a_response();
 }
-inline const ::protobuf::mozilla::dom::SDBRequestResponse& Msg___delete__::_internal_response() const {
-  const ::protobuf::mozilla::dom::SDBRequestResponse* p = _impl_.response_;
+inline const ::protobuf::mozilla::dom::SDBRequestResponse& Msg___delete__::_internal_a_response() const {
+  const ::protobuf::mozilla::dom::SDBRequestResponse* p = _impl_.a_response_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::SDBRequestResponse&>(
       ::protobuf::mozilla::dom::_SDBRequestResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SDBRequestResponse& Msg___delete__::response() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.response)
-  return _internal_response();
+inline const ::protobuf::mozilla::dom::SDBRequestResponse& Msg___delete__::a_response() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.a_response)
+  return _internal_a_response();
 }
-inline void Msg___delete__::unsafe_arena_set_allocated_response(
-    ::protobuf::mozilla::dom::SDBRequestResponse* response) {
+inline void Msg___delete__::unsafe_arena_set_allocated_a_response(
+    ::protobuf::mozilla::dom::SDBRequestResponse* a_response) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  _impl_.response_ = response;
-  if (response) {
+  _impl_.a_response_ = a_response;
+  if (a_response) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.a_response)
 }
-inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::release_response() {
+inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::release_a_response() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::SDBRequestResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::SDBRequestResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -393,45 +393,45 @@ inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::release_res
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.response)
+inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::unsafe_arena_release_a_response() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.a_response)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::SDBRequestResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::SDBRequestResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::_internal_mutable_response() {
+inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::_internal_mutable_a_response() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.response_ == nullptr) {
+  if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::SDBRequestResponse>(GetArenaForAllocation());
-    _impl_.response_ = p;
+    _impl_.a_response_ = p;
   }
-  return _impl_.response_;
+  return _impl_.a_response_;
 }
-inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::mutable_response() {
-  ::protobuf::mozilla::dom::SDBRequestResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.response)
+inline ::protobuf::mozilla::dom::SDBRequestResponse* Msg___delete__::mutable_a_response() {
+  ::protobuf::mozilla::dom::SDBRequestResponse* _msg = _internal_mutable_a_response();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.a_response)
   return _msg;
 }
-inline void Msg___delete__::set_allocated_response(::protobuf::mozilla::dom::SDBRequestResponse* response) {
+inline void Msg___delete__::set_allocated_a_response(::protobuf::mozilla::dom::SDBRequestResponse* a_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  if (response) {
+  if (a_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_response));
     if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
+      a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_response, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.response)
+  _impl_.a_response_ = a_response;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSDBRequest.Msg___delete__.a_response)
 }
 
 // -------------------------------------------------------------------

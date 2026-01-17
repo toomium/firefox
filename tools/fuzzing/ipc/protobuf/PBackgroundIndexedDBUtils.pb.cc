@@ -38,10 +38,10 @@ PROTOBUF_CONSTEXPR Msg_GetFileReferences::Msg_GetFileReferences(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.persistencetype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.origin_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.databasename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.fileid_)*/int64_t{0}} {}
+  , /*decltype(_impl_.a_persistencetype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_origin_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_databasename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_fileid_)*/int64_t{0}} {}
 struct Msg_GetFileReferencesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetFileReferencesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -55,9 +55,9 @@ PROTOBUF_CONSTEXPR Reply_GetFileReferences::Reply_GetFileReferences(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.refcnt_)*/0
-  , /*decltype(_impl_.dbrefcnt_)*/0
-  , /*decltype(_impl_.result_)*/false} {}
+  , /*decltype(_impl_.a_refcnt_)*/0
+  , /*decltype(_impl_.a_dbrefcnt_)*/0
+  , /*decltype(_impl_.a_result_)*/false} {}
 struct Reply_GetFileReferencesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetFileReferencesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -83,7 +83,7 @@ PROTOBUF_CONSTEXPR Reply_DoMaintenance::Reply_DoMaintenance(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_rv_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Reply_DoMaintenanceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_DoMaintenanceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -281,16 +281,16 @@ std::string Msg_DeleteMe::GetTypeName() const {
 class Msg_GetFileReferences::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_GetFileReferences>()._impl_._has_bits_);
-  static void set_has_persistencetype(HasBits* has_bits) {
+  static void set_has_a_persistencetype(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_origin(HasBits* has_bits) {
+  static void set_has_a_origin(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_databasename(HasBits* has_bits) {
+  static void set_has_a_databasename(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_fileid(HasBits* has_bits) {
+  static void set_has_a_fileid(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -310,37 +310,37 @@ Msg_GetFileReferences::Msg_GetFileReferences(const Msg_GetFileReferences& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.persistencetype_){}
-    , decltype(_impl_.origin_){}
-    , decltype(_impl_.databasename_){}
-    , decltype(_impl_.fileid_){}};
+    , decltype(_impl_.a_persistencetype_){}
+    , decltype(_impl_.a_origin_){}
+    , decltype(_impl_.a_databasename_){}
+    , decltype(_impl_.a_fileid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.persistencetype_.InitDefault();
+  _impl_.a_persistencetype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.persistencetype_.Set("", GetArenaForAllocation());
+    _impl_.a_persistencetype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_persistencetype()) {
-    _this->_impl_.persistencetype_.Set(from._internal_persistencetype(), 
+  if (from._internal_has_a_persistencetype()) {
+    _this->_impl_.a_persistencetype_.Set(from._internal_a_persistencetype(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.origin_.InitDefault();
+  _impl_.a_origin_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.origin_.Set("", GetArenaForAllocation());
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_origin()) {
-    _this->_impl_.origin_.Set(from._internal_origin(), 
+  if (from._internal_has_a_origin()) {
+    _this->_impl_.a_origin_.Set(from._internal_a_origin(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.databasename_.InitDefault();
+  _impl_.a_databasename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.databasename_.Set("", GetArenaForAllocation());
+    _impl_.a_databasename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_databasename()) {
-    _this->_impl_.databasename_.Set(from._internal_databasename(), 
+  if (from._internal_has_a_databasename()) {
+    _this->_impl_.a_databasename_.Set(from._internal_a_databasename(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.fileid_ = from._impl_.fileid_;
+  _this->_impl_.a_fileid_ = from._impl_.a_fileid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences)
 }
 
@@ -351,22 +351,22 @@ inline void Msg_GetFileReferences::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.persistencetype_){}
-    , decltype(_impl_.origin_){}
-    , decltype(_impl_.databasename_){}
-    , decltype(_impl_.fileid_){int64_t{0}}
+    , decltype(_impl_.a_persistencetype_){}
+    , decltype(_impl_.a_origin_){}
+    , decltype(_impl_.a_databasename_){}
+    , decltype(_impl_.a_fileid_){int64_t{0}}
   };
-  _impl_.persistencetype_.InitDefault();
+  _impl_.a_persistencetype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.persistencetype_.Set("", GetArenaForAllocation());
+    _impl_.a_persistencetype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.origin_.InitDefault();
+  _impl_.a_origin_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.origin_.Set("", GetArenaForAllocation());
+    _impl_.a_origin_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.databasename_.InitDefault();
+  _impl_.a_databasename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.databasename_.Set("", GetArenaForAllocation());
+    _impl_.a_databasename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -381,9 +381,9 @@ Msg_GetFileReferences::~Msg_GetFileReferences() {
 
 inline void Msg_GetFileReferences::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.persistencetype_.Destroy();
-  _impl_.origin_.Destroy();
-  _impl_.databasename_.Destroy();
+  _impl_.a_persistencetype_.Destroy();
+  _impl_.a_origin_.Destroy();
+  _impl_.a_databasename_.Destroy();
 }
 
 void Msg_GetFileReferences::SetCachedSize(int size) const {
@@ -399,16 +399,16 @@ void Msg_GetFileReferences::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.persistencetype_.ClearNonDefaultToEmpty();
+      _impl_.a_persistencetype_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.origin_.ClearNonDefaultToEmpty();
+      _impl_.a_origin_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.databasename_.ClearNonDefaultToEmpty();
+      _impl_.a_databasename_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.fileid_ = int64_t{0};
+  _impl_.a_fileid_ = int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -420,38 +420,38 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes persistenceType = 1;
+      // required bytes a_persistenceType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_persistencetype();
+          auto str = _internal_mutable_a_persistencetype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes origin = 2;
+      // required bytes a_origin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_origin();
+          auto str = _internal_mutable_a_origin();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes databaseName = 3;
+      // required bytes a_databaseName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_databasename();
+          auto str = _internal_mutable_a_databasename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 fileId = 4;
+      // required sint64 a_fileId = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_fileid(&has_bits);
-          _impl_.fileid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          _Internal::set_has_a_fileid(&has_bits);
+          _impl_.a_fileid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -487,28 +487,28 @@ uint8_t* Msg_GetFileReferences::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes persistenceType = 1;
+  // required bytes a_persistenceType = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_persistencetype(), target);
+        1, this->_internal_a_persistencetype(), target);
   }
 
-  // required bytes origin = 2;
+  // required bytes a_origin = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_origin(), target);
+        2, this->_internal_a_origin(), target);
   }
 
-  // required bytes databaseName = 3;
+  // required bytes a_databaseName = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_databasename(), target);
+        3, this->_internal_a_databasename(), target);
   }
 
-  // required sint64 fileId = 4;
+  // required sint64 a_fileId = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_fileid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_fileid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -523,30 +523,30 @@ size_t Msg_GetFileReferences::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Msg_GetFileReferences)
   size_t total_size = 0;
 
-  if (_internal_has_persistencetype()) {
-    // required bytes persistenceType = 1;
+  if (_internal_has_a_persistencetype()) {
+    // required bytes a_persistenceType = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_persistencetype());
+        this->_internal_a_persistencetype());
   }
 
-  if (_internal_has_origin()) {
-    // required bytes origin = 2;
+  if (_internal_has_a_origin()) {
+    // required bytes a_origin = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_origin());
+        this->_internal_a_origin());
   }
 
-  if (_internal_has_databasename()) {
-    // required bytes databaseName = 3;
+  if (_internal_has_a_databasename()) {
+    // required bytes a_databaseName = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_databasename());
+        this->_internal_a_databasename());
   }
 
-  if (_internal_has_fileid()) {
-    // required sint64 fileId = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_fileid());
+  if (_internal_has_a_fileid()) {
+    // required sint64 a_fileId = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_fileid());
   }
 
   return total_size;
@@ -556,23 +556,23 @@ size_t Msg_GetFileReferences::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes persistenceType = 1;
+    // required bytes a_persistenceType = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_persistencetype());
+        this->_internal_a_persistencetype());
 
-    // required bytes origin = 2;
+    // required bytes a_origin = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_origin());
+        this->_internal_a_origin());
 
-    // required bytes databaseName = 3;
+    // required bytes a_databaseName = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_databasename());
+        this->_internal_a_databasename());
 
-    // required sint64 fileId = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_fileid());
+    // required sint64 a_fileId = 4;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_fileid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -605,16 +605,16 @@ void Msg_GetFileReferences::MergeFrom(const Msg_GetFileReferences& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_persistencetype(from._internal_persistencetype());
+      _this->_internal_set_a_persistencetype(from._internal_a_persistencetype());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_origin(from._internal_origin());
+      _this->_internal_set_a_origin(from._internal_a_origin());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_databasename(from._internal_databasename());
+      _this->_internal_set_a_databasename(from._internal_a_databasename());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.fileid_ = from._impl_.fileid_;
+      _this->_impl_.a_fileid_ = from._impl_.a_fileid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -640,18 +640,18 @@ void Msg_GetFileReferences::InternalSwap(Msg_GetFileReferences* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.persistencetype_, lhs_arena,
-      &other->_impl_.persistencetype_, rhs_arena
+      &_impl_.a_persistencetype_, lhs_arena,
+      &other->_impl_.a_persistencetype_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.origin_, lhs_arena,
-      &other->_impl_.origin_, rhs_arena
+      &_impl_.a_origin_, lhs_arena,
+      &other->_impl_.a_origin_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.databasename_, lhs_arena,
-      &other->_impl_.databasename_, rhs_arena
+      &_impl_.a_databasename_, lhs_arena,
+      &other->_impl_.a_databasename_, rhs_arena
   );
-  swap(_impl_.fileid_, other->_impl_.fileid_);
+  swap(_impl_.a_fileid_, other->_impl_.a_fileid_);
 }
 
 std::string Msg_GetFileReferences::GetTypeName() const {
@@ -664,13 +664,13 @@ std::string Msg_GetFileReferences::GetTypeName() const {
 class Reply_GetFileReferences::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_GetFileReferences>()._impl_._has_bits_);
-  static void set_has_refcnt(HasBits* has_bits) {
+  static void set_has_a_refcnt(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_dbrefcnt(HasBits* has_bits) {
+  static void set_has_a_dbrefcnt(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_result(HasBits* has_bits) {
+  static void set_has_a_result(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -690,14 +690,14 @@ Reply_GetFileReferences::Reply_GetFileReferences(const Reply_GetFileReferences& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.refcnt_){}
-    , decltype(_impl_.dbrefcnt_){}
-    , decltype(_impl_.result_){}};
+    , decltype(_impl_.a_refcnt_){}
+    , decltype(_impl_.a_dbrefcnt_){}
+    , decltype(_impl_.a_result_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.refcnt_, &from._impl_.refcnt_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.result_) -
-    reinterpret_cast<char*>(&_impl_.refcnt_)) + sizeof(_impl_.result_));
+  ::memcpy(&_impl_.a_refcnt_, &from._impl_.a_refcnt_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_result_) -
+    reinterpret_cast<char*>(&_impl_.a_refcnt_)) + sizeof(_impl_.a_result_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences)
 }
 
@@ -708,9 +708,9 @@ inline void Reply_GetFileReferences::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.refcnt_){0}
-    , decltype(_impl_.dbrefcnt_){0}
-    , decltype(_impl_.result_){false}
+    , decltype(_impl_.a_refcnt_){0}
+    , decltype(_impl_.a_dbrefcnt_){0}
+    , decltype(_impl_.a_result_){false}
   };
 }
 
@@ -739,9 +739,9 @@ void Reply_GetFileReferences::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
-    ::memset(&_impl_.refcnt_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.result_) -
-        reinterpret_cast<char*>(&_impl_.refcnt_)) + sizeof(_impl_.result_));
+    ::memset(&_impl_.a_refcnt_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_result_) -
+        reinterpret_cast<char*>(&_impl_.a_refcnt_)) + sizeof(_impl_.a_result_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -754,29 +754,29 @@ const char* Reply_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 refCnt = 1;
+      // required sint32 a_refCnt = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_refcnt(&has_bits);
-          _impl_.refcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_refcnt(&has_bits);
+          _impl_.a_refcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 dBRefCnt = 2;
+      // required sint32 a_dBRefCnt = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_dbrefcnt(&has_bits);
-          _impl_.dbrefcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_dbrefcnt(&has_bits);
+          _impl_.a_dbrefcnt_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool result = 3;
+      // required bool a_result = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_result(&has_bits);
-          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_result(&has_bits);
+          _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -812,22 +812,22 @@ uint8_t* Reply_GetFileReferences::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 refCnt = 1;
+  // required sint32 a_refCnt = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_refcnt(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_refcnt(), target);
   }
 
-  // required sint32 dBRefCnt = 2;
+  // required sint32 a_dBRefCnt = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_dbrefcnt(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_dbrefcnt(), target);
   }
 
-  // required bool result = 3;
+  // required bool a_result = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_result(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -842,18 +842,18 @@ size_t Reply_GetFileReferences::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_GetFileReferences)
   size_t total_size = 0;
 
-  if (_internal_has_refcnt()) {
-    // required sint32 refCnt = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_refcnt());
+  if (_internal_has_a_refcnt()) {
+    // required sint32 a_refCnt = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_refcnt());
   }
 
-  if (_internal_has_dbrefcnt()) {
-    // required sint32 dBRefCnt = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_dbrefcnt());
+  if (_internal_has_a_dbrefcnt()) {
+    // required sint32 a_dBRefCnt = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_dbrefcnt());
   }
 
-  if (_internal_has_result()) {
-    // required bool result = 3;
+  if (_internal_has_a_result()) {
+    // required bool a_result = 3;
     total_size += 1 + 1;
   }
 
@@ -864,13 +864,13 @@ size_t Reply_GetFileReferences::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required sint32 refCnt = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_refcnt());
+    // required sint32 a_refCnt = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_refcnt());
 
-    // required sint32 dBRefCnt = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_dbrefcnt());
+    // required sint32 a_dBRefCnt = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_dbrefcnt());
 
-    // required bool result = 3;
+    // required bool a_result = 3;
     total_size += 1 + 1;
 
   } else {
@@ -904,13 +904,13 @@ void Reply_GetFileReferences::MergeFrom(const Reply_GetFileReferences& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.refcnt_ = from._impl_.refcnt_;
+      _this->_impl_.a_refcnt_ = from._impl_.a_refcnt_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.dbrefcnt_ = from._impl_.dbrefcnt_;
+      _this->_impl_.a_dbrefcnt_ = from._impl_.a_dbrefcnt_;
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.result_ = from._impl_.result_;
+      _this->_impl_.a_result_ = from._impl_.a_result_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -934,11 +934,11 @@ void Reply_GetFileReferences::InternalSwap(Reply_GetFileReferences* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Reply_GetFileReferences, _impl_.result_)
-      + sizeof(Reply_GetFileReferences::_impl_.result_)
-      - PROTOBUF_FIELD_OFFSET(Reply_GetFileReferences, _impl_.refcnt_)>(
-          reinterpret_cast<char*>(&_impl_.refcnt_),
-          reinterpret_cast<char*>(&other->_impl_.refcnt_));
+      PROTOBUF_FIELD_OFFSET(Reply_GetFileReferences, _impl_.a_result_)
+      + sizeof(Reply_GetFileReferences::_impl_.a_result_)
+      - PROTOBUF_FIELD_OFFSET(Reply_GetFileReferences, _impl_.a_refcnt_)>(
+          reinterpret_cast<char*>(&_impl_.a_refcnt_),
+          reinterpret_cast<char*>(&other->_impl_.a_refcnt_));
 }
 
 std::string Reply_GetFileReferences::GetTypeName() const {
@@ -1099,7 +1099,7 @@ std::string Msg_DoMaintenance::GetTypeName() const {
 class Reply_DoMaintenance::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_DoMaintenance>()._impl_._has_bits_);
-  static void set_has_rv(HasBits* has_bits) {
+  static void set_has_a_rv(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1119,15 +1119,15 @@ Reply_DoMaintenance::Reply_DoMaintenance(const Reply_DoMaintenance& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}};
+    , decltype(_impl_.a_rv_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_rv()) {
-    _this->_impl_.rv_.Set(from._internal_rv(), 
+  if (from._internal_has_a_rv()) {
+    _this->_impl_.a_rv_.Set(from._internal_a_rv(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance)
@@ -1140,11 +1140,11 @@ inline void Reply_DoMaintenance::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.rv_){}
+    , decltype(_impl_.a_rv_){}
   };
-  _impl_.rv_.InitDefault();
+  _impl_.a_rv_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.rv_.Set("", GetArenaForAllocation());
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1159,7 +1159,7 @@ Reply_DoMaintenance::~Reply_DoMaintenance() {
 
 inline void Reply_DoMaintenance::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.rv_.Destroy();
+  _impl_.a_rv_.Destroy();
 }
 
 void Reply_DoMaintenance::SetCachedSize(int size) const {
@@ -1174,7 +1174,7 @@ void Reply_DoMaintenance::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.rv_.ClearNonDefaultToEmpty();
+    _impl_.a_rv_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1187,10 +1187,10 @@ const char* Reply_DoMaintenance::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes rv = 1;
+      // required bytes a_rv = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_rv();
+          auto str = _internal_mutable_a_rv();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1227,10 +1227,10 @@ uint8_t* Reply_DoMaintenance::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes rv = 1;
+  // required bytes a_rv = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_rv(), target);
+        1, this->_internal_a_rv(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1245,11 +1245,11 @@ size_t Reply_DoMaintenance::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils.Reply_DoMaintenance)
   size_t total_size = 0;
 
-  // required bytes rv = 1;
-  if (_internal_has_rv()) {
+  // required bytes a_rv = 1;
+  if (_internal_has_a_rv()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_rv());
+        this->_internal_a_rv());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1276,8 +1276,8 @@ void Reply_DoMaintenance::MergeFrom(const Reply_DoMaintenance& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_rv()) {
-    _this->_internal_set_rv(from._internal_rv());
+  if (from._internal_has_a_rv()) {
+    _this->_internal_set_a_rv(from._internal_a_rv());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1301,8 +1301,8 @@ void Reply_DoMaintenance::InternalSwap(Reply_DoMaintenance* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.rv_, lhs_arena,
-      &other->_impl_.rv_, rhs_arena
+      &_impl_.a_rv_, lhs_arena,
+      &other->_impl_.a_rv_, rhs_arena
   );
 }
 

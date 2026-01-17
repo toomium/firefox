@@ -180,71 +180,71 @@ class Msg_ConfigurePAC final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPACURIFieldNumber = 1,
-    kAPACScriptDataFieldNumber = 2,
-    kAIncludePathFieldNumber = 3,
-    kAExtraHeapSizeFieldNumber = 4,
+    kAAPACURIFieldNumber = 1,
+    kAAPACScriptDataFieldNumber = 2,
+    kAAIncludePathFieldNumber = 3,
+    kAAExtraHeapSizeFieldNumber = 4,
   };
-  // required bytes aPACURI = 1;
-  bool has_apacuri() const;
+  // required bytes a_aPACURI = 1;
+  bool has_a_apacuri() const;
   private:
-  bool _internal_has_apacuri() const;
+  bool _internal_has_a_apacuri() const;
   public:
-  void clear_apacuri();
-  const std::string& apacuri() const;
+  void clear_a_apacuri();
+  const std::string& a_apacuri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_apacuri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_apacuri();
-  PROTOBUF_NODISCARD std::string* release_apacuri();
-  void set_allocated_apacuri(std::string* apacuri);
+  void set_a_apacuri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_apacuri();
+  PROTOBUF_NODISCARD std::string* release_a_apacuri();
+  void set_allocated_a_apacuri(std::string* a_apacuri);
   private:
-  const std::string& _internal_apacuri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_apacuri(const std::string& value);
-  std::string* _internal_mutable_apacuri();
+  const std::string& _internal_a_apacuri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_apacuri(const std::string& value);
+  std::string* _internal_mutable_a_apacuri();
   public:
 
-  // required bytes aPACScriptData = 2;
-  bool has_apacscriptdata() const;
+  // required bytes a_aPACScriptData = 2;
+  bool has_a_apacscriptdata() const;
   private:
-  bool _internal_has_apacscriptdata() const;
+  bool _internal_has_a_apacscriptdata() const;
   public:
-  void clear_apacscriptdata();
-  const std::string& apacscriptdata() const;
+  void clear_a_apacscriptdata();
+  const std::string& a_apacscriptdata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_apacscriptdata(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_apacscriptdata();
-  PROTOBUF_NODISCARD std::string* release_apacscriptdata();
-  void set_allocated_apacscriptdata(std::string* apacscriptdata);
+  void set_a_apacscriptdata(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_apacscriptdata();
+  PROTOBUF_NODISCARD std::string* release_a_apacscriptdata();
+  void set_allocated_a_apacscriptdata(std::string* a_apacscriptdata);
   private:
-  const std::string& _internal_apacscriptdata() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_apacscriptdata(const std::string& value);
-  std::string* _internal_mutable_apacscriptdata();
+  const std::string& _internal_a_apacscriptdata() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_apacscriptdata(const std::string& value);
+  std::string* _internal_mutable_a_apacscriptdata();
   public:
 
-  // required bool aIncludePath = 3;
-  bool has_aincludepath() const;
+  // required bool a_aIncludePath = 3;
+  bool has_a_aincludepath() const;
   private:
-  bool _internal_has_aincludepath() const;
+  bool _internal_has_a_aincludepath() const;
   public:
-  void clear_aincludepath();
-  bool aincludepath() const;
-  void set_aincludepath(bool value);
+  void clear_a_aincludepath();
+  bool a_aincludepath() const;
+  void set_a_aincludepath(bool value);
   private:
-  bool _internal_aincludepath() const;
-  void _internal_set_aincludepath(bool value);
+  bool _internal_a_aincludepath() const;
+  void _internal_set_a_aincludepath(bool value);
   public:
 
-  // required uint32 aExtraHeapSize = 4;
-  bool has_aextraheapsize() const;
+  // required uint32 a_aExtraHeapSize = 4;
+  bool has_a_aextraheapsize() const;
   private:
-  bool _internal_has_aextraheapsize() const;
+  bool _internal_has_a_aextraheapsize() const;
   public:
-  void clear_aextraheapsize();
-  uint32_t aextraheapsize() const;
-  void set_aextraheapsize(uint32_t value);
+  void clear_a_aextraheapsize();
+  uint32_t a_aextraheapsize() const;
+  void set_a_aextraheapsize(uint32_t value);
   private:
-  uint32_t _internal_aextraheapsize() const;
-  void _internal_set_aextraheapsize(uint32_t value);
+  uint32_t _internal_a_aextraheapsize() const;
+  void _internal_set_a_aextraheapsize(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
@@ -260,10 +260,10 @@ class Msg_ConfigurePAC final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apacuri_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr apacscriptdata_;
-    bool aincludepath_;
-    uint32_t aextraheapsize_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apacuri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apacscriptdata_;
+    bool a_aincludepath_;
+    uint32_t a_aextraheapsize_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProxyAutoConfig_2eproto;
@@ -380,43 +380,43 @@ class Msg_GetProxyForURI final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATestURIFieldNumber = 1,
-    kATestHostFieldNumber = 2,
+    kAATestURIFieldNumber = 1,
+    kAATestHostFieldNumber = 2,
   };
-  // required bytes aTestURI = 1;
-  bool has_atesturi() const;
+  // required bytes a_aTestURI = 1;
+  bool has_a_atesturi() const;
   private:
-  bool _internal_has_atesturi() const;
+  bool _internal_has_a_atesturi() const;
   public:
-  void clear_atesturi();
-  const std::string& atesturi() const;
+  void clear_a_atesturi();
+  const std::string& a_atesturi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atesturi(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atesturi();
-  PROTOBUF_NODISCARD std::string* release_atesturi();
-  void set_allocated_atesturi(std::string* atesturi);
+  void set_a_atesturi(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atesturi();
+  PROTOBUF_NODISCARD std::string* release_a_atesturi();
+  void set_allocated_a_atesturi(std::string* a_atesturi);
   private:
-  const std::string& _internal_atesturi() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atesturi(const std::string& value);
-  std::string* _internal_mutable_atesturi();
+  const std::string& _internal_a_atesturi() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atesturi(const std::string& value);
+  std::string* _internal_mutable_a_atesturi();
   public:
 
-  // required bytes aTestHost = 2;
-  bool has_atesthost() const;
+  // required bytes a_aTestHost = 2;
+  bool has_a_atesthost() const;
   private:
-  bool _internal_has_atesthost() const;
+  bool _internal_has_a_atesthost() const;
   public:
-  void clear_atesthost();
-  const std::string& atesthost() const;
+  void clear_a_atesthost();
+  const std::string& a_atesthost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atesthost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atesthost();
-  PROTOBUF_NODISCARD std::string* release_atesthost();
-  void set_allocated_atesthost(std::string* atesthost);
+  void set_a_atesthost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atesthost();
+  PROTOBUF_NODISCARD std::string* release_a_atesthost();
+  void set_allocated_a_atesthost(std::string* a_atesthost);
   private:
-  const std::string& _internal_atesthost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atesthost(const std::string& value);
-  std::string* _internal_mutable_atesthost();
+  const std::string& _internal_a_atesthost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atesthost(const std::string& value);
+  std::string* _internal_mutable_a_atesthost();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
@@ -432,8 +432,8 @@ class Msg_GetProxyForURI final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atesturi_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atesthost_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atesturi_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atesthost_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProxyAutoConfig_2eproto;
@@ -550,43 +550,43 @@ class Reply_GetProxyForURI final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStatusFieldNumber = 1,
-    kAResultFieldNumber = 2,
+    kAAStatusFieldNumber = 1,
+    kAAResultFieldNumber = 2,
   };
-  // required bytes aStatus = 1;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
-  // required bytes aResult = 2;
-  bool has_aresult() const;
+  // required bytes a_aResult = 2;
+  bool has_a_aresult() const;
   private:
-  bool _internal_has_aresult() const;
+  bool _internal_has_a_aresult() const;
   public:
-  void clear_aresult();
-  const std::string& aresult() const;
+  void clear_a_aresult();
+  const std::string& a_aresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aresult();
-  PROTOBUF_NODISCARD std::string* release_aresult();
-  void set_allocated_aresult(std::string* aresult);
+  void set_a_aresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aresult();
+  PROTOBUF_NODISCARD std::string* release_a_aresult();
+  void set_allocated_a_aresult(std::string* a_aresult);
   private:
-  const std::string& _internal_aresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aresult(const std::string& value);
-  std::string* _internal_mutable_aresult();
+  const std::string& _internal_a_aresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aresult(const std::string& value);
+  std::string* _internal_mutable_a_aresult();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
@@ -602,8 +602,8 @@ class Reply_GetProxyForURI final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aresult_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresult_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProxyAutoConfig_2eproto;
@@ -619,476 +619,476 @@ class Reply_GetProxyForURI final :
 #endif  // __GNUC__
 // Msg_ConfigurePAC
 
-// required bytes aPACURI = 1;
-inline bool Msg_ConfigurePAC::_internal_has_apacuri() const {
+// required bytes a_aPACURI = 1;
+inline bool Msg_ConfigurePAC::_internal_has_a_apacuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ConfigurePAC::has_apacuri() const {
-  return _internal_has_apacuri();
+inline bool Msg_ConfigurePAC::has_a_apacuri() const {
+  return _internal_has_a_apacuri();
 }
-inline void Msg_ConfigurePAC::clear_apacuri() {
-  _impl_.apacuri_.ClearToEmpty();
+inline void Msg_ConfigurePAC::clear_a_apacuri() {
+  _impl_.a_apacuri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ConfigurePAC::apacuri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
-  return _internal_apacuri();
+inline const std::string& Msg_ConfigurePAC::a_apacuri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI)
+  return _internal_a_apacuri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ConfigurePAC::set_apacuri(ArgT0&& arg0, ArgT... args) {
+void Msg_ConfigurePAC::set_a_apacuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.apacuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
+ _impl_.a_apacuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI)
 }
-inline std::string* Msg_ConfigurePAC::mutable_apacuri() {
-  std::string* _s = _internal_mutable_apacuri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
+inline std::string* Msg_ConfigurePAC::mutable_a_apacuri() {
+  std::string* _s = _internal_mutable_a_apacuri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI)
   return _s;
 }
-inline const std::string& Msg_ConfigurePAC::_internal_apacuri() const {
-  return _impl_.apacuri_.Get();
+inline const std::string& Msg_ConfigurePAC::_internal_a_apacuri() const {
+  return _impl_.a_apacuri_.Get();
 }
-inline void Msg_ConfigurePAC::_internal_set_apacuri(const std::string& value) {
+inline void Msg_ConfigurePAC::_internal_set_a_apacuri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.apacuri_.Set(value, GetArenaForAllocation());
+  _impl_.a_apacuri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ConfigurePAC::_internal_mutable_apacuri() {
+inline std::string* Msg_ConfigurePAC::_internal_mutable_a_apacuri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.apacuri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_apacuri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ConfigurePAC::release_apacuri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
-  if (!_internal_has_apacuri()) {
+inline std::string* Msg_ConfigurePAC::release_a_apacuri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI)
+  if (!_internal_has_a_apacuri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.apacuri_.Release();
+  auto* p = _impl_.a_apacuri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apacuri_.IsDefault()) {
-    _impl_.apacuri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apacuri_.IsDefault()) {
+    _impl_.a_apacuri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ConfigurePAC::set_allocated_apacuri(std::string* apacuri) {
-  if (apacuri != nullptr) {
+inline void Msg_ConfigurePAC::set_allocated_a_apacuri(std::string* a_apacuri) {
+  if (a_apacuri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.apacuri_.SetAllocated(apacuri, GetArenaForAllocation());
+  _impl_.a_apacuri_.SetAllocated(a_apacuri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apacuri_.IsDefault()) {
-    _impl_.apacuri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apacuri_.IsDefault()) {
+    _impl_.a_apacuri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACURI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI)
 }
 
-// required bytes aPACScriptData = 2;
-inline bool Msg_ConfigurePAC::_internal_has_apacscriptdata() const {
+// required bytes a_aPACScriptData = 2;
+inline bool Msg_ConfigurePAC::_internal_has_a_apacscriptdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ConfigurePAC::has_apacscriptdata() const {
-  return _internal_has_apacscriptdata();
+inline bool Msg_ConfigurePAC::has_a_apacscriptdata() const {
+  return _internal_has_a_apacscriptdata();
 }
-inline void Msg_ConfigurePAC::clear_apacscriptdata() {
-  _impl_.apacscriptdata_.ClearToEmpty();
+inline void Msg_ConfigurePAC::clear_a_apacscriptdata() {
+  _impl_.a_apacscriptdata_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ConfigurePAC::apacscriptdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACScriptData)
-  return _internal_apacscriptdata();
+inline const std::string& Msg_ConfigurePAC::a_apacscriptdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData)
+  return _internal_a_apacscriptdata();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ConfigurePAC::set_apacscriptdata(ArgT0&& arg0, ArgT... args) {
+void Msg_ConfigurePAC::set_a_apacscriptdata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.apacscriptdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACScriptData)
+ _impl_.a_apacscriptdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData)
 }
-inline std::string* Msg_ConfigurePAC::mutable_apacscriptdata() {
-  std::string* _s = _internal_mutable_apacscriptdata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACScriptData)
+inline std::string* Msg_ConfigurePAC::mutable_a_apacscriptdata() {
+  std::string* _s = _internal_mutable_a_apacscriptdata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData)
   return _s;
 }
-inline const std::string& Msg_ConfigurePAC::_internal_apacscriptdata() const {
-  return _impl_.apacscriptdata_.Get();
+inline const std::string& Msg_ConfigurePAC::_internal_a_apacscriptdata() const {
+  return _impl_.a_apacscriptdata_.Get();
 }
-inline void Msg_ConfigurePAC::_internal_set_apacscriptdata(const std::string& value) {
+inline void Msg_ConfigurePAC::_internal_set_a_apacscriptdata(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.apacscriptdata_.Set(value, GetArenaForAllocation());
+  _impl_.a_apacscriptdata_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ConfigurePAC::_internal_mutable_apacscriptdata() {
+inline std::string* Msg_ConfigurePAC::_internal_mutable_a_apacscriptdata() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.apacscriptdata_.Mutable(GetArenaForAllocation());
+  return _impl_.a_apacscriptdata_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ConfigurePAC::release_apacscriptdata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACScriptData)
-  if (!_internal_has_apacscriptdata()) {
+inline std::string* Msg_ConfigurePAC::release_a_apacscriptdata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData)
+  if (!_internal_has_a_apacscriptdata()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.apacscriptdata_.Release();
+  auto* p = _impl_.a_apacscriptdata_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apacscriptdata_.IsDefault()) {
-    _impl_.apacscriptdata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apacscriptdata_.IsDefault()) {
+    _impl_.a_apacscriptdata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ConfigurePAC::set_allocated_apacscriptdata(std::string* apacscriptdata) {
-  if (apacscriptdata != nullptr) {
+inline void Msg_ConfigurePAC::set_allocated_a_apacscriptdata(std::string* a_apacscriptdata) {
+  if (a_apacscriptdata != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.apacscriptdata_.SetAllocated(apacscriptdata, GetArenaForAllocation());
+  _impl_.a_apacscriptdata_.SetAllocated(a_apacscriptdata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.apacscriptdata_.IsDefault()) {
-    _impl_.apacscriptdata_.Set("", GetArenaForAllocation());
+  if (_impl_.a_apacscriptdata_.IsDefault()) {
+    _impl_.a_apacscriptdata_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aPACScriptData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData)
 }
 
-// required bool aIncludePath = 3;
-inline bool Msg_ConfigurePAC::_internal_has_aincludepath() const {
+// required bool a_aIncludePath = 3;
+inline bool Msg_ConfigurePAC::_internal_has_a_aincludepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ConfigurePAC::has_aincludepath() const {
-  return _internal_has_aincludepath();
+inline bool Msg_ConfigurePAC::has_a_aincludepath() const {
+  return _internal_has_a_aincludepath();
 }
-inline void Msg_ConfigurePAC::clear_aincludepath() {
-  _impl_.aincludepath_ = false;
+inline void Msg_ConfigurePAC::clear_a_aincludepath() {
+  _impl_.a_aincludepath_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_ConfigurePAC::_internal_aincludepath() const {
-  return _impl_.aincludepath_;
+inline bool Msg_ConfigurePAC::_internal_a_aincludepath() const {
+  return _impl_.a_aincludepath_;
 }
-inline bool Msg_ConfigurePAC::aincludepath() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aIncludePath)
-  return _internal_aincludepath();
+inline bool Msg_ConfigurePAC::a_aincludepath() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aIncludePath)
+  return _internal_a_aincludepath();
 }
-inline void Msg_ConfigurePAC::_internal_set_aincludepath(bool value) {
+inline void Msg_ConfigurePAC::_internal_set_a_aincludepath(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aincludepath_ = value;
+  _impl_.a_aincludepath_ = value;
 }
-inline void Msg_ConfigurePAC::set_aincludepath(bool value) {
-  _internal_set_aincludepath(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aIncludePath)
+inline void Msg_ConfigurePAC::set_a_aincludepath(bool value) {
+  _internal_set_a_aincludepath(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aIncludePath)
 }
 
-// required uint32 aExtraHeapSize = 4;
-inline bool Msg_ConfigurePAC::_internal_has_aextraheapsize() const {
+// required uint32 a_aExtraHeapSize = 4;
+inline bool Msg_ConfigurePAC::_internal_has_a_aextraheapsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ConfigurePAC::has_aextraheapsize() const {
-  return _internal_has_aextraheapsize();
+inline bool Msg_ConfigurePAC::has_a_aextraheapsize() const {
+  return _internal_has_a_aextraheapsize();
 }
-inline void Msg_ConfigurePAC::clear_aextraheapsize() {
-  _impl_.aextraheapsize_ = 0u;
+inline void Msg_ConfigurePAC::clear_a_aextraheapsize() {
+  _impl_.a_aextraheapsize_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_ConfigurePAC::_internal_aextraheapsize() const {
-  return _impl_.aextraheapsize_;
+inline uint32_t Msg_ConfigurePAC::_internal_a_aextraheapsize() const {
+  return _impl_.a_aextraheapsize_;
 }
-inline uint32_t Msg_ConfigurePAC::aextraheapsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aExtraHeapSize)
-  return _internal_aextraheapsize();
+inline uint32_t Msg_ConfigurePAC::a_aextraheapsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aExtraHeapSize)
+  return _internal_a_aextraheapsize();
 }
-inline void Msg_ConfigurePAC::_internal_set_aextraheapsize(uint32_t value) {
+inline void Msg_ConfigurePAC::_internal_set_a_aextraheapsize(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.aextraheapsize_ = value;
+  _impl_.a_aextraheapsize_ = value;
 }
-inline void Msg_ConfigurePAC::set_aextraheapsize(uint32_t value) {
-  _internal_set_aextraheapsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.aExtraHeapSize)
+inline void Msg_ConfigurePAC::set_a_aextraheapsize(uint32_t value) {
+  _internal_set_a_aextraheapsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aExtraHeapSize)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_GetProxyForURI
 
-// required bytes aTestURI = 1;
-inline bool Msg_GetProxyForURI::_internal_has_atesturi() const {
+// required bytes a_aTestURI = 1;
+inline bool Msg_GetProxyForURI::_internal_has_a_atesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_GetProxyForURI::has_atesturi() const {
-  return _internal_has_atesturi();
+inline bool Msg_GetProxyForURI::has_a_atesturi() const {
+  return _internal_has_a_atesturi();
 }
-inline void Msg_GetProxyForURI::clear_atesturi() {
-  _impl_.atesturi_.ClearToEmpty();
+inline void Msg_GetProxyForURI::clear_a_atesturi() {
+  _impl_.a_atesturi_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_GetProxyForURI::atesturi() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
-  return _internal_atesturi();
+inline const std::string& Msg_GetProxyForURI::a_atesturi() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI)
+  return _internal_a_atesturi();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetProxyForURI::set_atesturi(ArgT0&& arg0, ArgT... args) {
+void Msg_GetProxyForURI::set_a_atesturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atesturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
+ _impl_.a_atesturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI)
 }
-inline std::string* Msg_GetProxyForURI::mutable_atesturi() {
-  std::string* _s = _internal_mutable_atesturi();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
+inline std::string* Msg_GetProxyForURI::mutable_a_atesturi() {
+  std::string* _s = _internal_mutable_a_atesturi();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI)
   return _s;
 }
-inline const std::string& Msg_GetProxyForURI::_internal_atesturi() const {
-  return _impl_.atesturi_.Get();
+inline const std::string& Msg_GetProxyForURI::_internal_a_atesturi() const {
+  return _impl_.a_atesturi_.Get();
 }
-inline void Msg_GetProxyForURI::_internal_set_atesturi(const std::string& value) {
+inline void Msg_GetProxyForURI::_internal_set_a_atesturi(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atesturi_.Set(value, GetArenaForAllocation());
+  _impl_.a_atesturi_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetProxyForURI::_internal_mutable_atesturi() {
+inline std::string* Msg_GetProxyForURI::_internal_mutable_a_atesturi() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atesturi_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atesturi_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetProxyForURI::release_atesturi() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
-  if (!_internal_has_atesturi()) {
+inline std::string* Msg_GetProxyForURI::release_a_atesturi() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI)
+  if (!_internal_has_a_atesturi()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atesturi_.Release();
+  auto* p = _impl_.a_atesturi_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atesturi_.IsDefault()) {
-    _impl_.atesturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atesturi_.IsDefault()) {
+    _impl_.a_atesturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetProxyForURI::set_allocated_atesturi(std::string* atesturi) {
-  if (atesturi != nullptr) {
+inline void Msg_GetProxyForURI::set_allocated_a_atesturi(std::string* a_atesturi) {
+  if (a_atesturi != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atesturi_.SetAllocated(atesturi, GetArenaForAllocation());
+  _impl_.a_atesturi_.SetAllocated(a_atesturi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atesturi_.IsDefault()) {
-    _impl_.atesturi_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atesturi_.IsDefault()) {
+    _impl_.a_atesturi_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestURI)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI)
 }
 
-// required bytes aTestHost = 2;
-inline bool Msg_GetProxyForURI::_internal_has_atesthost() const {
+// required bytes a_aTestHost = 2;
+inline bool Msg_GetProxyForURI::_internal_has_a_atesthost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_GetProxyForURI::has_atesthost() const {
-  return _internal_has_atesthost();
+inline bool Msg_GetProxyForURI::has_a_atesthost() const {
+  return _internal_has_a_atesthost();
 }
-inline void Msg_GetProxyForURI::clear_atesthost() {
-  _impl_.atesthost_.ClearToEmpty();
+inline void Msg_GetProxyForURI::clear_a_atesthost() {
+  _impl_.a_atesthost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_GetProxyForURI::atesthost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestHost)
-  return _internal_atesthost();
+inline const std::string& Msg_GetProxyForURI::a_atesthost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost)
+  return _internal_a_atesthost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_GetProxyForURI::set_atesthost(ArgT0&& arg0, ArgT... args) {
+void Msg_GetProxyForURI::set_a_atesthost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.atesthost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestHost)
+ _impl_.a_atesthost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost)
 }
-inline std::string* Msg_GetProxyForURI::mutable_atesthost() {
-  std::string* _s = _internal_mutable_atesthost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestHost)
+inline std::string* Msg_GetProxyForURI::mutable_a_atesthost() {
+  std::string* _s = _internal_mutable_a_atesthost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost)
   return _s;
 }
-inline const std::string& Msg_GetProxyForURI::_internal_atesthost() const {
-  return _impl_.atesthost_.Get();
+inline const std::string& Msg_GetProxyForURI::_internal_a_atesthost() const {
+  return _impl_.a_atesthost_.Get();
 }
-inline void Msg_GetProxyForURI::_internal_set_atesthost(const std::string& value) {
+inline void Msg_GetProxyForURI::_internal_set_a_atesthost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.atesthost_.Set(value, GetArenaForAllocation());
+  _impl_.a_atesthost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_GetProxyForURI::_internal_mutable_atesthost() {
+inline std::string* Msg_GetProxyForURI::_internal_mutable_a_atesthost() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.atesthost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atesthost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_GetProxyForURI::release_atesthost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestHost)
-  if (!_internal_has_atesthost()) {
+inline std::string* Msg_GetProxyForURI::release_a_atesthost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost)
+  if (!_internal_has_a_atesthost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.atesthost_.Release();
+  auto* p = _impl_.a_atesthost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atesthost_.IsDefault()) {
-    _impl_.atesthost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atesthost_.IsDefault()) {
+    _impl_.a_atesthost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_GetProxyForURI::set_allocated_atesthost(std::string* atesthost) {
-  if (atesthost != nullptr) {
+inline void Msg_GetProxyForURI::set_allocated_a_atesthost(std::string* a_atesthost) {
+  if (a_atesthost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.atesthost_.SetAllocated(atesthost, GetArenaForAllocation());
+  _impl_.a_atesthost_.SetAllocated(a_atesthost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atesthost_.IsDefault()) {
-    _impl_.atesthost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atesthost_.IsDefault()) {
+    _impl_.a_atesthost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.aTestHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_GetProxyForURI
 
-// required bytes aStatus = 1;
-inline bool Reply_GetProxyForURI::_internal_has_astatus() const {
+// required bytes a_aStatus = 1;
+inline bool Reply_GetProxyForURI::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_GetProxyForURI::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Reply_GetProxyForURI::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Reply_GetProxyForURI::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Reply_GetProxyForURI::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_GetProxyForURI::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aStatus)
-  return _internal_astatus();
+inline const std::string& Reply_GetProxyForURI::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetProxyForURI::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Reply_GetProxyForURI::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aStatus)
 }
-inline std::string* Reply_GetProxyForURI::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aStatus)
+inline std::string* Reply_GetProxyForURI::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aStatus)
   return _s;
 }
-inline const std::string& Reply_GetProxyForURI::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Reply_GetProxyForURI::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Reply_GetProxyForURI::_internal_set_astatus(const std::string& value) {
+inline void Reply_GetProxyForURI::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetProxyForURI::_internal_mutable_astatus() {
+inline std::string* Reply_GetProxyForURI::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetProxyForURI::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Reply_GetProxyForURI::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetProxyForURI::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Reply_GetProxyForURI::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aStatus)
 }
 
-// required bytes aResult = 2;
-inline bool Reply_GetProxyForURI::_internal_has_aresult() const {
+// required bytes a_aResult = 2;
+inline bool Reply_GetProxyForURI::_internal_has_a_aresult() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Reply_GetProxyForURI::has_aresult() const {
-  return _internal_has_aresult();
+inline bool Reply_GetProxyForURI::has_a_aresult() const {
+  return _internal_has_a_aresult();
 }
-inline void Reply_GetProxyForURI::clear_aresult() {
-  _impl_.aresult_.ClearToEmpty();
+inline void Reply_GetProxyForURI::clear_a_aresult() {
+  _impl_.a_aresult_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Reply_GetProxyForURI::aresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aResult)
-  return _internal_aresult();
+inline const std::string& Reply_GetProxyForURI::a_aresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult)
+  return _internal_a_aresult();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_GetProxyForURI::set_aresult(ArgT0&& arg0, ArgT... args) {
+void Reply_GetProxyForURI::set_a_aresult(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aResult)
+ _impl_.a_aresult_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult)
 }
-inline std::string* Reply_GetProxyForURI::mutable_aresult() {
-  std::string* _s = _internal_mutable_aresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aResult)
+inline std::string* Reply_GetProxyForURI::mutable_a_aresult() {
+  std::string* _s = _internal_mutable_a_aresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult)
   return _s;
 }
-inline const std::string& Reply_GetProxyForURI::_internal_aresult() const {
-  return _impl_.aresult_.Get();
+inline const std::string& Reply_GetProxyForURI::_internal_a_aresult() const {
+  return _impl_.a_aresult_.Get();
 }
-inline void Reply_GetProxyForURI::_internal_set_aresult(const std::string& value) {
+inline void Reply_GetProxyForURI::_internal_set_a_aresult(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aresult_.Set(value, GetArenaForAllocation());
+  _impl_.a_aresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_GetProxyForURI::_internal_mutable_aresult() {
+inline std::string* Reply_GetProxyForURI::_internal_mutable_a_aresult() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aresult_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aresult_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_GetProxyForURI::release_aresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aResult)
-  if (!_internal_has_aresult()) {
+inline std::string* Reply_GetProxyForURI::release_a_aresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult)
+  if (!_internal_has_a_aresult()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aresult_.Release();
+  auto* p = _impl_.a_aresult_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_GetProxyForURI::set_allocated_aresult(std::string* aresult) {
-  if (aresult != nullptr) {
+inline void Reply_GetProxyForURI::set_allocated_a_aresult(std::string* a_aresult) {
+  if (a_aresult != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aresult_.SetAllocated(aresult, GetArenaForAllocation());
+  _impl_.a_aresult_.SetAllocated(a_aresult, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresult_.IsDefault()) {
-    _impl_.aresult_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresult_.IsDefault()) {
+    _impl_.a_aresult_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.aResult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult)
 }
 
 #ifdef __GNUC__

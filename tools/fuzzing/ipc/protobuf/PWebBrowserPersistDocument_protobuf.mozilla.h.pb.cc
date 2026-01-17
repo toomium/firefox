@@ -23,18 +23,18 @@ PROTOBUF_CONSTEXPR WebBrowserPersistDocumentAttrs::WebBrowserPersistDocumentAttr
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.documenturi_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.baseuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.contenttype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.characterset_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.title_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.referrerinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.contentdisposition_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.cookiejarsettings_)*/nullptr
-  , /*decltype(_impl_.principal_)*/nullptr
-  , /*decltype(_impl_.isprivate_)*/false
-  , /*decltype(_impl_.sessionhistorycachekey_)*/0u
-  , /*decltype(_impl_.persistflags_)*/0u} {}
+  , /*decltype(_impl_.a_documenturi_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_baseuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_contenttype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_characterset_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_title_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_referrerinfo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_contentdisposition_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_cookiejarsettings_)*/nullptr
+  , /*decltype(_impl_.a_principal_)*/nullptr
+  , /*decltype(_impl_.a_isprivate_)*/false
+  , /*decltype(_impl_.a_sessionhistorycachekey_)*/0u
+  , /*decltype(_impl_.a_persistflags_)*/0u} {}
 struct WebBrowserPersistDocumentAttrsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebBrowserPersistDocumentAttrsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -48,8 +48,8 @@ PROTOBUF_CONSTEXPR WebBrowserPersistURIMapEntry::WebBrowserPersistURIMapEntry(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.mapfrom_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.mapto_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_mapfrom_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_mapto_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct WebBrowserPersistURIMapEntryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebBrowserPersistURIMapEntryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -63,8 +63,8 @@ PROTOBUF_CONSTEXPR WebBrowserPersistURIMap::WebBrowserPersistURIMap(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.mapuris_)*/{}
-  , /*decltype(_impl_.targetbaseuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_mapuris_)*/{}
+  , /*decltype(_impl_.a_targetbaseuri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct WebBrowserPersistURIMapDefaultTypeInternal {
   PROTOBUF_CONSTEXPR WebBrowserPersistURIMapDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -84,42 +84,42 @@ namespace mozilla {
 class WebBrowserPersistDocumentAttrs::_Internal {
  public:
   using HasBits = decltype(std::declval<WebBrowserPersistDocumentAttrs>()._impl_._has_bits_);
-  static void set_has_isprivate(HasBits* has_bits) {
+  static void set_has_a_isprivate(HasBits* has_bits) {
     (*has_bits)[0] |= 512u;
   }
-  static void set_has_documenturi(HasBits* has_bits) {
+  static void set_has_a_documenturi(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_baseuri(HasBits* has_bits) {
+  static void set_has_a_baseuri(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_contenttype(HasBits* has_bits) {
+  static void set_has_a_contenttype(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_characterset(HasBits* has_bits) {
+  static void set_has_a_characterset(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
-  static void set_has_title(HasBits* has_bits) {
+  static void set_has_a_title(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_referrerinfo(HasBits* has_bits) {
+  static void set_has_a_referrerinfo(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static const ::protobuf::mozilla::net::CookieJarSettingsArgs& cookiejarsettings(const WebBrowserPersistDocumentAttrs* msg);
-  static void set_has_cookiejarsettings(HasBits* has_bits) {
+  static const ::protobuf::mozilla::net::CookieJarSettingsArgs& a_cookiejarsettings(const WebBrowserPersistDocumentAttrs* msg);
+  static void set_has_a_cookiejarsettings(HasBits* has_bits) {
     (*has_bits)[0] |= 128u;
   }
-  static void set_has_contentdisposition(HasBits* has_bits) {
+  static void set_has_a_contentdisposition(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
-  static void set_has_sessionhistorycachekey(HasBits* has_bits) {
+  static void set_has_a_sessionhistorycachekey(HasBits* has_bits) {
     (*has_bits)[0] |= 1024u;
   }
-  static void set_has_persistflags(HasBits* has_bits) {
+  static void set_has_a_persistflags(HasBits* has_bits) {
     (*has_bits)[0] |= 2048u;
   }
-  static const ::protobuf::mozilla::ipc::PrincipalInfo& principal(const WebBrowserPersistDocumentAttrs* msg);
-  static void set_has_principal(HasBits* has_bits) {
+  static const ::protobuf::mozilla::ipc::PrincipalInfo& a_principal(const WebBrowserPersistDocumentAttrs* msg);
+  static void set_has_a_principal(HasBits* has_bits) {
     (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -128,19 +128,19 @@ class WebBrowserPersistDocumentAttrs::_Internal {
 };
 
 const ::protobuf::mozilla::net::CookieJarSettingsArgs&
-WebBrowserPersistDocumentAttrs::_Internal::cookiejarsettings(const WebBrowserPersistDocumentAttrs* msg) {
-  return *msg->_impl_.cookiejarsettings_;
+WebBrowserPersistDocumentAttrs::_Internal::a_cookiejarsettings(const WebBrowserPersistDocumentAttrs* msg) {
+  return *msg->_impl_.a_cookiejarsettings_;
 }
 const ::protobuf::mozilla::ipc::PrincipalInfo&
-WebBrowserPersistDocumentAttrs::_Internal::principal(const WebBrowserPersistDocumentAttrs* msg) {
-  return *msg->_impl_.principal_;
+WebBrowserPersistDocumentAttrs::_Internal::a_principal(const WebBrowserPersistDocumentAttrs* msg) {
+  return *msg->_impl_.a_principal_;
 }
-void WebBrowserPersistDocumentAttrs::clear_cookiejarsettings() {
-  if (_impl_.cookiejarsettings_ != nullptr) _impl_.cookiejarsettings_->Clear();
+void WebBrowserPersistDocumentAttrs::clear_a_cookiejarsettings() {
+  if (_impl_.a_cookiejarsettings_ != nullptr) _impl_.a_cookiejarsettings_->Clear();
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-void WebBrowserPersistDocumentAttrs::clear_principal() {
-  if (_impl_.principal_ != nullptr) _impl_.principal_->Clear();
+void WebBrowserPersistDocumentAttrs::clear_a_principal() {
+  if (_impl_.a_principal_ != nullptr) _impl_.a_principal_->Clear();
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
 WebBrowserPersistDocumentAttrs::WebBrowserPersistDocumentAttrs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -155,85 +155,85 @@ WebBrowserPersistDocumentAttrs::WebBrowserPersistDocumentAttrs(const WebBrowserP
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.documenturi_){}
-    , decltype(_impl_.baseuri_){}
-    , decltype(_impl_.contenttype_){}
-    , decltype(_impl_.characterset_){}
-    , decltype(_impl_.title_){}
-    , decltype(_impl_.referrerinfo_){}
-    , decltype(_impl_.contentdisposition_){}
-    , decltype(_impl_.cookiejarsettings_){nullptr}
-    , decltype(_impl_.principal_){nullptr}
-    , decltype(_impl_.isprivate_){}
-    , decltype(_impl_.sessionhistorycachekey_){}
-    , decltype(_impl_.persistflags_){}};
+    , decltype(_impl_.a_documenturi_){}
+    , decltype(_impl_.a_baseuri_){}
+    , decltype(_impl_.a_contenttype_){}
+    , decltype(_impl_.a_characterset_){}
+    , decltype(_impl_.a_title_){}
+    , decltype(_impl_.a_referrerinfo_){}
+    , decltype(_impl_.a_contentdisposition_){}
+    , decltype(_impl_.a_cookiejarsettings_){nullptr}
+    , decltype(_impl_.a_principal_){nullptr}
+    , decltype(_impl_.a_isprivate_){}
+    , decltype(_impl_.a_sessionhistorycachekey_){}
+    , decltype(_impl_.a_persistflags_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.documenturi_.InitDefault();
+  _impl_.a_documenturi_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.documenturi_.Set("", GetArenaForAllocation());
+    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_documenturi()) {
-    _this->_impl_.documenturi_.Set(from._internal_documenturi(), 
+  if (from._internal_has_a_documenturi()) {
+    _this->_impl_.a_documenturi_.Set(from._internal_a_documenturi(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.baseuri_.InitDefault();
+  _impl_.a_baseuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.baseuri_.Set("", GetArenaForAllocation());
+    _impl_.a_baseuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_baseuri()) {
-    _this->_impl_.baseuri_.Set(from._internal_baseuri(), 
+  if (from._internal_has_a_baseuri()) {
+    _this->_impl_.a_baseuri_.Set(from._internal_a_baseuri(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.contenttype_.InitDefault();
+  _impl_.a_contenttype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.contenttype_.Set("", GetArenaForAllocation());
+    _impl_.a_contenttype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_contenttype()) {
-    _this->_impl_.contenttype_.Set(from._internal_contenttype(), 
+  if (from._internal_has_a_contenttype()) {
+    _this->_impl_.a_contenttype_.Set(from._internal_a_contenttype(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.characterset_.InitDefault();
+  _impl_.a_characterset_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.characterset_.Set("", GetArenaForAllocation());
+    _impl_.a_characterset_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_characterset()) {
-    _this->_impl_.characterset_.Set(from._internal_characterset(), 
+  if (from._internal_has_a_characterset()) {
+    _this->_impl_.a_characterset_.Set(from._internal_a_characterset(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.title_.InitDefault();
+  _impl_.a_title_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.title_.Set("", GetArenaForAllocation());
+    _impl_.a_title_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_title()) {
-    _this->_impl_.title_.Set(from._internal_title(), 
+  if (from._internal_has_a_title()) {
+    _this->_impl_.a_title_.Set(from._internal_a_title(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.referrerinfo_.InitDefault();
+  _impl_.a_referrerinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.referrerinfo_.Set("", GetArenaForAllocation());
+    _impl_.a_referrerinfo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_referrerinfo()) {
-    _this->_impl_.referrerinfo_.Set(from._internal_referrerinfo(), 
+  if (from._internal_has_a_referrerinfo()) {
+    _this->_impl_.a_referrerinfo_.Set(from._internal_a_referrerinfo(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.contentdisposition_.InitDefault();
+  _impl_.a_contentdisposition_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.contentdisposition_.Set("", GetArenaForAllocation());
+    _impl_.a_contentdisposition_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_contentdisposition()) {
-    _this->_impl_.contentdisposition_.Set(from._internal_contentdisposition(), 
+  if (from._internal_has_a_contentdisposition()) {
+    _this->_impl_.a_contentdisposition_.Set(from._internal_a_contentdisposition(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_cookiejarsettings()) {
-    _this->_impl_.cookiejarsettings_ = new ::protobuf::mozilla::net::CookieJarSettingsArgs(*from._impl_.cookiejarsettings_);
+  if (from._internal_has_a_cookiejarsettings()) {
+    _this->_impl_.a_cookiejarsettings_ = new ::protobuf::mozilla::net::CookieJarSettingsArgs(*from._impl_.a_cookiejarsettings_);
   }
-  if (from._internal_has_principal()) {
-    _this->_impl_.principal_ = new ::protobuf::mozilla::ipc::PrincipalInfo(*from._impl_.principal_);
+  if (from._internal_has_a_principal()) {
+    _this->_impl_.a_principal_ = new ::protobuf::mozilla::ipc::PrincipalInfo(*from._impl_.a_principal_);
   }
-  ::memcpy(&_impl_.isprivate_, &from._impl_.isprivate_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.persistflags_) -
-    reinterpret_cast<char*>(&_impl_.isprivate_)) + sizeof(_impl_.persistflags_));
+  ::memcpy(&_impl_.a_isprivate_, &from._impl_.a_isprivate_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_persistflags_) -
+    reinterpret_cast<char*>(&_impl_.a_isprivate_)) + sizeof(_impl_.a_persistflags_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.WebBrowserPersistDocumentAttrs)
 }
 
@@ -244,46 +244,46 @@ inline void WebBrowserPersistDocumentAttrs::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.documenturi_){}
-    , decltype(_impl_.baseuri_){}
-    , decltype(_impl_.contenttype_){}
-    , decltype(_impl_.characterset_){}
-    , decltype(_impl_.title_){}
-    , decltype(_impl_.referrerinfo_){}
-    , decltype(_impl_.contentdisposition_){}
-    , decltype(_impl_.cookiejarsettings_){nullptr}
-    , decltype(_impl_.principal_){nullptr}
-    , decltype(_impl_.isprivate_){false}
-    , decltype(_impl_.sessionhistorycachekey_){0u}
-    , decltype(_impl_.persistflags_){0u}
+    , decltype(_impl_.a_documenturi_){}
+    , decltype(_impl_.a_baseuri_){}
+    , decltype(_impl_.a_contenttype_){}
+    , decltype(_impl_.a_characterset_){}
+    , decltype(_impl_.a_title_){}
+    , decltype(_impl_.a_referrerinfo_){}
+    , decltype(_impl_.a_contentdisposition_){}
+    , decltype(_impl_.a_cookiejarsettings_){nullptr}
+    , decltype(_impl_.a_principal_){nullptr}
+    , decltype(_impl_.a_isprivate_){false}
+    , decltype(_impl_.a_sessionhistorycachekey_){0u}
+    , decltype(_impl_.a_persistflags_){0u}
   };
-  _impl_.documenturi_.InitDefault();
+  _impl_.a_documenturi_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.documenturi_.Set("", GetArenaForAllocation());
+    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.baseuri_.InitDefault();
+  _impl_.a_baseuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.baseuri_.Set("", GetArenaForAllocation());
+    _impl_.a_baseuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.contenttype_.InitDefault();
+  _impl_.a_contenttype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.contenttype_.Set("", GetArenaForAllocation());
+    _impl_.a_contenttype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.characterset_.InitDefault();
+  _impl_.a_characterset_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.characterset_.Set("", GetArenaForAllocation());
+    _impl_.a_characterset_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.title_.InitDefault();
+  _impl_.a_title_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.title_.Set("", GetArenaForAllocation());
+    _impl_.a_title_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.referrerinfo_.InitDefault();
+  _impl_.a_referrerinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.referrerinfo_.Set("", GetArenaForAllocation());
+    _impl_.a_referrerinfo_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.contentdisposition_.InitDefault();
+  _impl_.a_contentdisposition_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.contentdisposition_.Set("", GetArenaForAllocation());
+    _impl_.a_contentdisposition_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -298,15 +298,15 @@ WebBrowserPersistDocumentAttrs::~WebBrowserPersistDocumentAttrs() {
 
 inline void WebBrowserPersistDocumentAttrs::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.documenturi_.Destroy();
-  _impl_.baseuri_.Destroy();
-  _impl_.contenttype_.Destroy();
-  _impl_.characterset_.Destroy();
-  _impl_.title_.Destroy();
-  _impl_.referrerinfo_.Destroy();
-  _impl_.contentdisposition_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.cookiejarsettings_;
-  if (this != internal_default_instance()) delete _impl_.principal_;
+  _impl_.a_documenturi_.Destroy();
+  _impl_.a_baseuri_.Destroy();
+  _impl_.a_contenttype_.Destroy();
+  _impl_.a_characterset_.Destroy();
+  _impl_.a_title_.Destroy();
+  _impl_.a_referrerinfo_.Destroy();
+  _impl_.a_contentdisposition_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_cookiejarsettings_;
+  if (this != internal_default_instance()) delete _impl_.a_principal_;
 }
 
 void WebBrowserPersistDocumentAttrs::SetCachedSize(int size) const {
@@ -322,39 +322,39 @@ void WebBrowserPersistDocumentAttrs::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.documenturi_.ClearNonDefaultToEmpty();
+      _impl_.a_documenturi_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.baseuri_.ClearNonDefaultToEmpty();
+      _impl_.a_baseuri_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.contenttype_.ClearNonDefaultToEmpty();
+      _impl_.a_contenttype_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      _impl_.characterset_.ClearNonDefaultToEmpty();
+      _impl_.a_characterset_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      _impl_.title_.ClearNonDefaultToEmpty();
+      _impl_.a_title_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000020u) {
-      _impl_.referrerinfo_.ClearNonDefaultToEmpty();
+      _impl_.a_referrerinfo_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000040u) {
-      _impl_.contentdisposition_.ClearNonDefaultToEmpty();
+      _impl_.a_contentdisposition_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000080u) {
-      GOOGLE_DCHECK(_impl_.cookiejarsettings_ != nullptr);
-      _impl_.cookiejarsettings_->Clear();
+      GOOGLE_DCHECK(_impl_.a_cookiejarsettings_ != nullptr);
+      _impl_.a_cookiejarsettings_->Clear();
     }
   }
   if (cached_has_bits & 0x00000100u) {
-    GOOGLE_DCHECK(_impl_.principal_ != nullptr);
-    _impl_.principal_->Clear();
+    GOOGLE_DCHECK(_impl_.a_principal_ != nullptr);
+    _impl_.a_principal_->Clear();
   }
   if (cached_has_bits & 0x00000e00u) {
-    ::memset(&_impl_.isprivate_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.persistflags_) -
-        reinterpret_cast<char*>(&_impl_.isprivate_)) + sizeof(_impl_.persistflags_));
+    ::memset(&_impl_.a_isprivate_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_persistflags_) -
+        reinterpret_cast<char*>(&_impl_.a_isprivate_)) + sizeof(_impl_.a_persistflags_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -367,108 +367,108 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool isPrivate = 1;
+      // required bool a_isPrivate = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_isprivate(&has_bits);
-          _impl_.isprivate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_isprivate(&has_bits);
+          _impl_.a_isprivate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes documentURI = 2;
+      // required bytes a_documentURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_documenturi();
+          auto str = _internal_mutable_a_documenturi();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes baseURI = 3;
+      // required bytes a_baseURI = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_baseuri();
+          auto str = _internal_mutable_a_baseuri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes contentType = 4;
+      // required bytes a_contentType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
-          auto str = _internal_mutable_contenttype();
+          auto str = _internal_mutable_a_contenttype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes characterSet = 5;
+      // required bytes a_characterSet = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
-          auto str = _internal_mutable_characterset();
+          auto str = _internal_mutable_a_characterset();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes title = 6;
+      // required bytes a_title = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
-          auto str = _internal_mutable_title();
+          auto str = _internal_mutable_a_title();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes referrerInfo = 7;
+      // required bytes a_referrerInfo = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
-          auto str = _internal_mutable_referrerinfo();
+          auto str = _internal_mutable_a_referrerinfo();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 8;
+      // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_cookiejarsettings(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_cookiejarsettings(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes contentDisposition = 9;
+      // required bytes a_contentDisposition = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
-          auto str = _internal_mutable_contentdisposition();
+          auto str = _internal_mutable_a_contentdisposition();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 sessionHistoryCacheKey = 10;
+      // required uint32 a_sessionHistoryCacheKey = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _Internal::set_has_sessionhistorycachekey(&has_bits);
-          _impl_.sessionhistorycachekey_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_sessionhistorycachekey(&has_bits);
+          _impl_.a_sessionhistorycachekey_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 persistFlags = 11;
+      // required uint32 a_persistFlags = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_persistflags(&has_bits);
-          _impl_.persistflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_persistflags(&has_bits);
+          _impl_.a_persistflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.PrincipalInfo principal = 12;
+      // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_principal(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_principal(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -504,78 +504,78 @@ uint8_t* WebBrowserPersistDocumentAttrs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bool isPrivate = 1;
+  // required bool a_isPrivate = 1;
   if (cached_has_bits & 0x00000200u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_isprivate(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_isprivate(), target);
   }
 
-  // required bytes documentURI = 2;
+  // required bytes a_documentURI = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_documenturi(), target);
+        2, this->_internal_a_documenturi(), target);
   }
 
-  // required bytes baseURI = 3;
+  // required bytes a_baseURI = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_baseuri(), target);
+        3, this->_internal_a_baseuri(), target);
   }
 
-  // required bytes contentType = 4;
+  // required bytes a_contentType = 4;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        4, this->_internal_contenttype(), target);
+        4, this->_internal_a_contenttype(), target);
   }
 
-  // required bytes characterSet = 5;
+  // required bytes a_characterSet = 5;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_characterset(), target);
+        5, this->_internal_a_characterset(), target);
   }
 
-  // required bytes title = 6;
+  // required bytes a_title = 6;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
-        6, this->_internal_title(), target);
+        6, this->_internal_a_title(), target);
   }
 
-  // required bytes referrerInfo = 7;
+  // required bytes a_referrerInfo = 7;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
-        7, this->_internal_referrerinfo(), target);
+        7, this->_internal_a_referrerinfo(), target);
   }
 
-  // required .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 8;
+  // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
   if (cached_has_bits & 0x00000080u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(8, _Internal::cookiejarsettings(this),
-        _Internal::cookiejarsettings(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(8, _Internal::a_cookiejarsettings(this),
+        _Internal::a_cookiejarsettings(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes contentDisposition = 9;
+  // required bytes a_contentDisposition = 9;
   if (cached_has_bits & 0x00000040u) {
     target = stream->WriteBytesMaybeAliased(
-        9, this->_internal_contentdisposition(), target);
+        9, this->_internal_a_contentdisposition(), target);
   }
 
-  // required uint32 sessionHistoryCacheKey = 10;
+  // required uint32 a_sessionHistoryCacheKey = 10;
   if (cached_has_bits & 0x00000400u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_sessionhistorycachekey(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_a_sessionhistorycachekey(), target);
   }
 
-  // required uint32 persistFlags = 11;
+  // required uint32 a_persistFlags = 11;
   if (cached_has_bits & 0x00000800u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_persistflags(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_a_persistflags(), target);
   }
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo principal = 12;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 12;
   if (cached_has_bits & 0x00000100u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(12, _Internal::principal(this),
-        _Internal::principal(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(12, _Internal::a_principal(this),
+        _Internal::a_principal(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -590,82 +590,82 @@ size_t WebBrowserPersistDocumentAttrs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.WebBrowserPersistDocumentAttrs)
   size_t total_size = 0;
 
-  if (_internal_has_documenturi()) {
-    // required bytes documentURI = 2;
+  if (_internal_has_a_documenturi()) {
+    // required bytes a_documentURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_documenturi());
+        this->_internal_a_documenturi());
   }
 
-  if (_internal_has_baseuri()) {
-    // required bytes baseURI = 3;
+  if (_internal_has_a_baseuri()) {
+    // required bytes a_baseURI = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_baseuri());
+        this->_internal_a_baseuri());
   }
 
-  if (_internal_has_contenttype()) {
-    // required bytes contentType = 4;
+  if (_internal_has_a_contenttype()) {
+    // required bytes a_contentType = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_contenttype());
+        this->_internal_a_contenttype());
   }
 
-  if (_internal_has_characterset()) {
-    // required bytes characterSet = 5;
+  if (_internal_has_a_characterset()) {
+    // required bytes a_characterSet = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_characterset());
+        this->_internal_a_characterset());
   }
 
-  if (_internal_has_title()) {
-    // required bytes title = 6;
+  if (_internal_has_a_title()) {
+    // required bytes a_title = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_title());
+        this->_internal_a_title());
   }
 
-  if (_internal_has_referrerinfo()) {
-    // required bytes referrerInfo = 7;
+  if (_internal_has_a_referrerinfo()) {
+    // required bytes a_referrerInfo = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_referrerinfo());
+        this->_internal_a_referrerinfo());
   }
 
-  if (_internal_has_contentdisposition()) {
-    // required bytes contentDisposition = 9;
+  if (_internal_has_a_contentdisposition()) {
+    // required bytes a_contentDisposition = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_contentdisposition());
+        this->_internal_a_contentdisposition());
   }
 
-  if (_internal_has_cookiejarsettings()) {
-    // required .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 8;
+  if (_internal_has_a_cookiejarsettings()) {
+    // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.cookiejarsettings_);
+        *_impl_.a_cookiejarsettings_);
   }
 
-  if (_internal_has_principal()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo principal = 12;
+  if (_internal_has_a_principal()) {
+    // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 12;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.principal_);
+        *_impl_.a_principal_);
   }
 
-  if (_internal_has_isprivate()) {
-    // required bool isPrivate = 1;
+  if (_internal_has_a_isprivate()) {
+    // required bool a_isPrivate = 1;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_sessionhistorycachekey()) {
-    // required uint32 sessionHistoryCacheKey = 10;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_sessionhistorycachekey());
+  if (_internal_has_a_sessionhistorycachekey()) {
+    // required uint32 a_sessionHistoryCacheKey = 10;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_sessionhistorycachekey());
   }
 
-  if (_internal_has_persistflags()) {
-    // required uint32 persistFlags = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_persistflags());
+  if (_internal_has_a_persistflags()) {
+    // required uint32 a_persistFlags = 11;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_persistflags());
   }
 
   return total_size;
@@ -675,59 +675,59 @@ size_t WebBrowserPersistDocumentAttrs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000fff) ^ 0x00000fff) == 0) {  // All required fields are present.
-    // required bytes documentURI = 2;
+    // required bytes a_documentURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_documenturi());
+        this->_internal_a_documenturi());
 
-    // required bytes baseURI = 3;
+    // required bytes a_baseURI = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_baseuri());
+        this->_internal_a_baseuri());
 
-    // required bytes contentType = 4;
+    // required bytes a_contentType = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_contenttype());
+        this->_internal_a_contenttype());
 
-    // required bytes characterSet = 5;
+    // required bytes a_characterSet = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_characterset());
+        this->_internal_a_characterset());
 
-    // required bytes title = 6;
+    // required bytes a_title = 6;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_title());
+        this->_internal_a_title());
 
-    // required bytes referrerInfo = 7;
+    // required bytes a_referrerInfo = 7;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_referrerinfo());
+        this->_internal_a_referrerinfo());
 
-    // required bytes contentDisposition = 9;
+    // required bytes a_contentDisposition = 9;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_contentdisposition());
+        this->_internal_a_contentdisposition());
 
-    // required .protobuf.mozilla.net.CookieJarSettingsArgs cookieJarSettings = 8;
+    // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.cookiejarsettings_);
+        *_impl_.a_cookiejarsettings_);
 
-    // required .protobuf.mozilla.ipc.PrincipalInfo principal = 12;
+    // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 12;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.principal_);
+        *_impl_.a_principal_);
 
-    // required bool isPrivate = 1;
+    // required bool a_isPrivate = 1;
     total_size += 1 + 1;
 
-    // required uint32 sessionHistoryCacheKey = 10;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_sessionhistorycachekey());
+    // required uint32 a_sessionHistoryCacheKey = 10;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_sessionhistorycachekey());
 
-    // required uint32 persistFlags = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_persistflags());
+    // required uint32 a_persistFlags = 11;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_persistflags());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -760,44 +760,44 @@ void WebBrowserPersistDocumentAttrs::MergeFrom(const WebBrowserPersistDocumentAt
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_documenturi(from._internal_documenturi());
+      _this->_internal_set_a_documenturi(from._internal_a_documenturi());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_baseuri(from._internal_baseuri());
+      _this->_internal_set_a_baseuri(from._internal_a_baseuri());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_contenttype(from._internal_contenttype());
+      _this->_internal_set_a_contenttype(from._internal_a_contenttype());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_characterset(from._internal_characterset());
+      _this->_internal_set_a_characterset(from._internal_a_characterset());
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_title(from._internal_title());
+      _this->_internal_set_a_title(from._internal_a_title());
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_referrerinfo(from._internal_referrerinfo());
+      _this->_internal_set_a_referrerinfo(from._internal_a_referrerinfo());
     }
     if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_contentdisposition(from._internal_contentdisposition());
+      _this->_internal_set_a_contentdisposition(from._internal_a_contentdisposition());
     }
     if (cached_has_bits & 0x00000080u) {
-      _this->_internal_mutable_cookiejarsettings()->::protobuf::mozilla::net::CookieJarSettingsArgs::MergeFrom(
-          from._internal_cookiejarsettings());
+      _this->_internal_mutable_a_cookiejarsettings()->::protobuf::mozilla::net::CookieJarSettingsArgs::MergeFrom(
+          from._internal_a_cookiejarsettings());
     }
   }
   if (cached_has_bits & 0x00000f00u) {
     if (cached_has_bits & 0x00000100u) {
-      _this->_internal_mutable_principal()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
-          from._internal_principal());
+      _this->_internal_mutable_a_principal()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
+          from._internal_a_principal());
     }
     if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.isprivate_ = from._impl_.isprivate_;
+      _this->_impl_.a_isprivate_ = from._impl_.a_isprivate_;
     }
     if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.sessionhistorycachekey_ = from._impl_.sessionhistorycachekey_;
+      _this->_impl_.a_sessionhistorycachekey_ = from._impl_.a_sessionhistorycachekey_;
     }
     if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.persistflags_ = from._impl_.persistflags_;
+      _this->_impl_.a_persistflags_ = from._impl_.a_persistflags_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -813,11 +813,11 @@ void WebBrowserPersistDocumentAttrs::CopyFrom(const WebBrowserPersistDocumentAtt
 
 bool WebBrowserPersistDocumentAttrs::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_cookiejarsettings()) {
-    if (!_impl_.cookiejarsettings_->IsInitialized()) return false;
+  if (_internal_has_a_cookiejarsettings()) {
+    if (!_impl_.a_cookiejarsettings_->IsInitialized()) return false;
   }
-  if (_internal_has_principal()) {
-    if (!_impl_.principal_->IsInitialized()) return false;
+  if (_internal_has_a_principal()) {
+    if (!_impl_.a_principal_->IsInitialized()) return false;
   }
   return true;
 }
@@ -829,39 +829,39 @@ void WebBrowserPersistDocumentAttrs::InternalSwap(WebBrowserPersistDocumentAttrs
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.documenturi_, lhs_arena,
-      &other->_impl_.documenturi_, rhs_arena
+      &_impl_.a_documenturi_, lhs_arena,
+      &other->_impl_.a_documenturi_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.baseuri_, lhs_arena,
-      &other->_impl_.baseuri_, rhs_arena
+      &_impl_.a_baseuri_, lhs_arena,
+      &other->_impl_.a_baseuri_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.contenttype_, lhs_arena,
-      &other->_impl_.contenttype_, rhs_arena
+      &_impl_.a_contenttype_, lhs_arena,
+      &other->_impl_.a_contenttype_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.characterset_, lhs_arena,
-      &other->_impl_.characterset_, rhs_arena
+      &_impl_.a_characterset_, lhs_arena,
+      &other->_impl_.a_characterset_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.title_, lhs_arena,
-      &other->_impl_.title_, rhs_arena
+      &_impl_.a_title_, lhs_arena,
+      &other->_impl_.a_title_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.referrerinfo_, lhs_arena,
-      &other->_impl_.referrerinfo_, rhs_arena
+      &_impl_.a_referrerinfo_, lhs_arena,
+      &other->_impl_.a_referrerinfo_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.contentdisposition_, lhs_arena,
-      &other->_impl_.contentdisposition_, rhs_arena
+      &_impl_.a_contentdisposition_, lhs_arena,
+      &other->_impl_.a_contentdisposition_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WebBrowserPersistDocumentAttrs, _impl_.persistflags_)
-      + sizeof(WebBrowserPersistDocumentAttrs::_impl_.persistflags_)
-      - PROTOBUF_FIELD_OFFSET(WebBrowserPersistDocumentAttrs, _impl_.cookiejarsettings_)>(
-          reinterpret_cast<char*>(&_impl_.cookiejarsettings_),
-          reinterpret_cast<char*>(&other->_impl_.cookiejarsettings_));
+      PROTOBUF_FIELD_OFFSET(WebBrowserPersistDocumentAttrs, _impl_.a_persistflags_)
+      + sizeof(WebBrowserPersistDocumentAttrs::_impl_.a_persistflags_)
+      - PROTOBUF_FIELD_OFFSET(WebBrowserPersistDocumentAttrs, _impl_.a_cookiejarsettings_)>(
+          reinterpret_cast<char*>(&_impl_.a_cookiejarsettings_),
+          reinterpret_cast<char*>(&other->_impl_.a_cookiejarsettings_));
 }
 
 std::string WebBrowserPersistDocumentAttrs::GetTypeName() const {
@@ -874,10 +874,10 @@ std::string WebBrowserPersistDocumentAttrs::GetTypeName() const {
 class WebBrowserPersistURIMapEntry::_Internal {
  public:
   using HasBits = decltype(std::declval<WebBrowserPersistURIMapEntry>()._impl_._has_bits_);
-  static void set_has_mapfrom(HasBits* has_bits) {
+  static void set_has_a_mapfrom(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_mapto(HasBits* has_bits) {
+  static void set_has_a_mapto(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -897,24 +897,24 @@ WebBrowserPersistURIMapEntry::WebBrowserPersistURIMapEntry(const WebBrowserPersi
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mapfrom_){}
-    , decltype(_impl_.mapto_){}};
+    , decltype(_impl_.a_mapfrom_){}
+    , decltype(_impl_.a_mapto_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.mapfrom_.InitDefault();
+  _impl_.a_mapfrom_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mapfrom_.Set("", GetArenaForAllocation());
+    _impl_.a_mapfrom_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mapfrom()) {
-    _this->_impl_.mapfrom_.Set(from._internal_mapfrom(), 
+  if (from._internal_has_a_mapfrom()) {
+    _this->_impl_.a_mapfrom_.Set(from._internal_a_mapfrom(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.mapto_.InitDefault();
+  _impl_.a_mapto_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mapto_.Set("", GetArenaForAllocation());
+    _impl_.a_mapto_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_mapto()) {
-    _this->_impl_.mapto_.Set(from._internal_mapto(), 
+  if (from._internal_has_a_mapto()) {
+    _this->_impl_.a_mapto_.Set(from._internal_a_mapto(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.WebBrowserPersistURIMapEntry)
@@ -927,16 +927,16 @@ inline void WebBrowserPersistURIMapEntry::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mapfrom_){}
-    , decltype(_impl_.mapto_){}
+    , decltype(_impl_.a_mapfrom_){}
+    , decltype(_impl_.a_mapto_){}
   };
-  _impl_.mapfrom_.InitDefault();
+  _impl_.a_mapfrom_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mapfrom_.Set("", GetArenaForAllocation());
+    _impl_.a_mapfrom_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.mapto_.InitDefault();
+  _impl_.a_mapto_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.mapto_.Set("", GetArenaForAllocation());
+    _impl_.a_mapto_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -951,8 +951,8 @@ WebBrowserPersistURIMapEntry::~WebBrowserPersistURIMapEntry() {
 
 inline void WebBrowserPersistURIMapEntry::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mapfrom_.Destroy();
-  _impl_.mapto_.Destroy();
+  _impl_.a_mapfrom_.Destroy();
+  _impl_.a_mapto_.Destroy();
 }
 
 void WebBrowserPersistURIMapEntry::SetCachedSize(int size) const {
@@ -968,10 +968,10 @@ void WebBrowserPersistURIMapEntry::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.mapfrom_.ClearNonDefaultToEmpty();
+      _impl_.a_mapfrom_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.mapto_.ClearNonDefaultToEmpty();
+      _impl_.a_mapto_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -985,19 +985,19 @@ const char* WebBrowserPersistURIMapEntry::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes mapFrom = 1;
+      // required bytes a_mapFrom = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mapfrom();
+          auto str = _internal_mutable_a_mapfrom();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes mapTo = 2;
+      // required bytes a_mapTo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mapto();
+          auto str = _internal_mutable_a_mapto();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1034,16 +1034,16 @@ uint8_t* WebBrowserPersistURIMapEntry::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes mapFrom = 1;
+  // required bytes a_mapFrom = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_mapfrom(), target);
+        1, this->_internal_a_mapfrom(), target);
   }
 
-  // required bytes mapTo = 2;
+  // required bytes a_mapTo = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_mapto(), target);
+        2, this->_internal_a_mapto(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1058,18 +1058,18 @@ size_t WebBrowserPersistURIMapEntry::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.WebBrowserPersistURIMapEntry)
   size_t total_size = 0;
 
-  if (_internal_has_mapfrom()) {
-    // required bytes mapFrom = 1;
+  if (_internal_has_a_mapfrom()) {
+    // required bytes a_mapFrom = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mapfrom());
+        this->_internal_a_mapfrom());
   }
 
-  if (_internal_has_mapto()) {
-    // required bytes mapTo = 2;
+  if (_internal_has_a_mapto()) {
+    // required bytes a_mapTo = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mapto());
+        this->_internal_a_mapto());
   }
 
   return total_size;
@@ -1079,15 +1079,15 @@ size_t WebBrowserPersistURIMapEntry::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes mapFrom = 1;
+    // required bytes a_mapFrom = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mapfrom());
+        this->_internal_a_mapfrom());
 
-    // required bytes mapTo = 2;
+    // required bytes a_mapTo = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_mapto());
+        this->_internal_a_mapto());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -1120,10 +1120,10 @@ void WebBrowserPersistURIMapEntry::MergeFrom(const WebBrowserPersistURIMapEntry&
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_mapfrom(from._internal_mapfrom());
+      _this->_internal_set_a_mapfrom(from._internal_a_mapfrom());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_mapto(from._internal_mapto());
+      _this->_internal_set_a_mapto(from._internal_a_mapto());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -1148,12 +1148,12 @@ void WebBrowserPersistURIMapEntry::InternalSwap(WebBrowserPersistURIMapEntry* ot
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mapfrom_, lhs_arena,
-      &other->_impl_.mapfrom_, rhs_arena
+      &_impl_.a_mapfrom_, lhs_arena,
+      &other->_impl_.a_mapfrom_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.mapto_, lhs_arena,
-      &other->_impl_.mapto_, rhs_arena
+      &_impl_.a_mapto_, lhs_arena,
+      &other->_impl_.a_mapto_, rhs_arena
   );
 }
 
@@ -1167,7 +1167,7 @@ std::string WebBrowserPersistURIMapEntry::GetTypeName() const {
 class WebBrowserPersistURIMap::_Internal {
  public:
   using HasBits = decltype(std::declval<WebBrowserPersistURIMap>()._impl_._has_bits_);
-  static void set_has_targetbaseuri(HasBits* has_bits) {
+  static void set_has_a_targetbaseuri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1187,16 +1187,16 @@ WebBrowserPersistURIMap::WebBrowserPersistURIMap(const WebBrowserPersistURIMap& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mapuris_){from._impl_.mapuris_}
-    , decltype(_impl_.targetbaseuri_){}};
+    , decltype(_impl_.a_mapuris_){from._impl_.a_mapuris_}
+    , decltype(_impl_.a_targetbaseuri_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.targetbaseuri_.InitDefault();
+  _impl_.a_targetbaseuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.targetbaseuri_.Set("", GetArenaForAllocation());
+    _impl_.a_targetbaseuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_targetbaseuri()) {
-    _this->_impl_.targetbaseuri_.Set(from._internal_targetbaseuri(), 
+  if (from._internal_has_a_targetbaseuri()) {
+    _this->_impl_.a_targetbaseuri_.Set(from._internal_a_targetbaseuri(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.WebBrowserPersistURIMap)
@@ -1209,12 +1209,12 @@ inline void WebBrowserPersistURIMap::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.mapuris_){arena}
-    , decltype(_impl_.targetbaseuri_){}
+    , decltype(_impl_.a_mapuris_){arena}
+    , decltype(_impl_.a_targetbaseuri_){}
   };
-  _impl_.targetbaseuri_.InitDefault();
+  _impl_.a_targetbaseuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.targetbaseuri_.Set("", GetArenaForAllocation());
+    _impl_.a_targetbaseuri_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1229,8 +1229,8 @@ WebBrowserPersistURIMap::~WebBrowserPersistURIMap() {
 
 inline void WebBrowserPersistURIMap::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mapuris_.~RepeatedPtrField();
-  _impl_.targetbaseuri_.Destroy();
+  _impl_.a_mapuris_.~RepeatedPtrField();
+  _impl_.a_targetbaseuri_.Destroy();
 }
 
 void WebBrowserPersistURIMap::SetCachedSize(int size) const {
@@ -1243,10 +1243,10 @@ void WebBrowserPersistURIMap::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mapuris_.Clear();
+  _impl_.a_mapuris_.Clear();
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.targetbaseuri_.ClearNonDefaultToEmpty();
+    _impl_.a_targetbaseuri_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1259,23 +1259,23 @@ const char* WebBrowserPersistURIMap::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .protobuf.mozilla.WebBrowserPersistURIMapEntry mapURIs = 1;
+      // repeated .protobuf.mozilla.WebBrowserPersistURIMapEntry a_mapURIs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_mapuris(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_a_mapuris(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // required bytes targetBaseURI = 2;
+      // required bytes a_targetBaseURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_targetbaseuri();
+          auto str = _internal_mutable_a_targetbaseuri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -1311,19 +1311,19 @@ uint8_t* WebBrowserPersistURIMap::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.WebBrowserPersistURIMapEntry mapURIs = 1;
+  // repeated .protobuf.mozilla.WebBrowserPersistURIMapEntry a_mapURIs = 1;
   for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_mapuris_size()); i < n; i++) {
-    const auto& repfield = this->_internal_mapuris(i);
+      n = static_cast<unsigned>(this->_internal_a_mapuris_size()); i < n; i++) {
+    const auto& repfield = this->_internal_a_mapuris(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
         InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes targetBaseURI = 2;
+  // required bytes a_targetBaseURI = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_targetbaseuri(), target);
+        2, this->_internal_a_targetbaseuri(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1338,19 +1338,19 @@ size_t WebBrowserPersistURIMap::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.WebBrowserPersistURIMap)
   size_t total_size = 0;
 
-  // required bytes targetBaseURI = 2;
-  if (_internal_has_targetbaseuri()) {
+  // required bytes a_targetBaseURI = 2;
+  if (_internal_has_a_targetbaseuri()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_targetbaseuri());
+        this->_internal_a_targetbaseuri());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .protobuf.mozilla.WebBrowserPersistURIMapEntry mapURIs = 1;
-  total_size += 1UL * this->_internal_mapuris_size();
-  for (const auto& msg : this->_impl_.mapuris_) {
+  // repeated .protobuf.mozilla.WebBrowserPersistURIMapEntry a_mapURIs = 1;
+  total_size += 1UL * this->_internal_a_mapuris_size();
+  for (const auto& msg : this->_impl_.a_mapuris_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -1376,9 +1376,9 @@ void WebBrowserPersistURIMap::MergeFrom(const WebBrowserPersistURIMap& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mapuris_.MergeFrom(from._impl_.mapuris_);
-  if (from._internal_has_targetbaseuri()) {
-    _this->_internal_set_targetbaseuri(from._internal_targetbaseuri());
+  _this->_impl_.a_mapuris_.MergeFrom(from._impl_.a_mapuris_);
+  if (from._internal_has_a_targetbaseuri()) {
+    _this->_internal_set_a_targetbaseuri(from._internal_a_targetbaseuri());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1392,7 +1392,7 @@ void WebBrowserPersistURIMap::CopyFrom(const WebBrowserPersistURIMap& from) {
 
 bool WebBrowserPersistURIMap::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.mapuris_))
+  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mapuris_))
     return false;
   return true;
 }
@@ -1403,10 +1403,10 @@ void WebBrowserPersistURIMap::InternalSwap(WebBrowserPersistURIMap* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  _impl_.mapuris_.InternalSwap(&other->_impl_.mapuris_);
+  _impl_.a_mapuris_.InternalSwap(&other->_impl_.a_mapuris_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.targetbaseuri_, lhs_arena,
-      &other->_impl_.targetbaseuri_, rhs_arena
+      &_impl_.a_targetbaseuri_, lhs_arena,
+      &other->_impl_.a_targetbaseuri_, rhs_arena
   );
 }
 

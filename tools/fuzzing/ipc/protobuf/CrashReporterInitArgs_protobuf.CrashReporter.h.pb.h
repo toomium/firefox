@@ -166,24 +166,24 @@ class CrashReporterInitArgs final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kThreadIdFieldNumber = 1,
+    kAThreadIdFieldNumber = 1,
   };
-  // required bytes threadId = 1;
-  bool has_threadid() const;
+  // required bytes a_threadId = 1;
+  bool has_a_threadid() const;
   private:
-  bool _internal_has_threadid() const;
+  bool _internal_has_a_threadid() const;
   public:
-  void clear_threadid();
-  const std::string& threadid() const;
+  void clear_a_threadid();
+  const std::string& a_threadid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_threadid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_threadid();
-  PROTOBUF_NODISCARD std::string* release_threadid();
-  void set_allocated_threadid(std::string* threadid);
+  void set_a_threadid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_threadid();
+  PROTOBUF_NODISCARD std::string* release_a_threadid();
+  void set_allocated_a_threadid(std::string* a_threadid);
   private:
-  const std::string& _internal_threadid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_threadid(const std::string& value);
-  std::string* _internal_mutable_threadid();
+  const std::string& _internal_a_threadid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_threadid(const std::string& value);
+  std::string* _internal_mutable_a_threadid();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.CrashReporter.CrashReporterInitArgs)
@@ -196,7 +196,7 @@ class CrashReporterInitArgs final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr threadid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_threadid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_CrashReporterInitArgs_5fprotobuf_2eCrashReporter_2eh_2eproto;
@@ -212,72 +212,72 @@ class CrashReporterInitArgs final :
 #endif  // __GNUC__
 // CrashReporterInitArgs
 
-// required bytes threadId = 1;
-inline bool CrashReporterInitArgs::_internal_has_threadid() const {
+// required bytes a_threadId = 1;
+inline bool CrashReporterInitArgs::_internal_has_a_threadid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool CrashReporterInitArgs::has_threadid() const {
-  return _internal_has_threadid();
+inline bool CrashReporterInitArgs::has_a_threadid() const {
+  return _internal_has_a_threadid();
 }
-inline void CrashReporterInitArgs::clear_threadid() {
-  _impl_.threadid_.ClearToEmpty();
+inline void CrashReporterInitArgs::clear_a_threadid() {
+  _impl_.a_threadid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CrashReporterInitArgs::threadid() const {
-  // @@protoc_insertion_point(field_get:protobuf.CrashReporter.CrashReporterInitArgs.threadId)
-  return _internal_threadid();
+inline const std::string& CrashReporterInitArgs::a_threadid() const {
+  // @@protoc_insertion_point(field_get:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
+  return _internal_a_threadid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void CrashReporterInitArgs::set_threadid(ArgT0&& arg0, ArgT... args) {
+void CrashReporterInitArgs::set_a_threadid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.threadid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.CrashReporter.CrashReporterInitArgs.threadId)
+ _impl_.a_threadid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
 }
-inline std::string* CrashReporterInitArgs::mutable_threadid() {
-  std::string* _s = _internal_mutable_threadid();
-  // @@protoc_insertion_point(field_mutable:protobuf.CrashReporter.CrashReporterInitArgs.threadId)
+inline std::string* CrashReporterInitArgs::mutable_a_threadid() {
+  std::string* _s = _internal_mutable_a_threadid();
+  // @@protoc_insertion_point(field_mutable:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
   return _s;
 }
-inline const std::string& CrashReporterInitArgs::_internal_threadid() const {
-  return _impl_.threadid_.Get();
+inline const std::string& CrashReporterInitArgs::_internal_a_threadid() const {
+  return _impl_.a_threadid_.Get();
 }
-inline void CrashReporterInitArgs::_internal_set_threadid(const std::string& value) {
+inline void CrashReporterInitArgs::_internal_set_a_threadid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.threadid_.Set(value, GetArenaForAllocation());
+  _impl_.a_threadid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* CrashReporterInitArgs::_internal_mutable_threadid() {
+inline std::string* CrashReporterInitArgs::_internal_mutable_a_threadid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.threadid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_threadid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* CrashReporterInitArgs::release_threadid() {
-  // @@protoc_insertion_point(field_release:protobuf.CrashReporter.CrashReporterInitArgs.threadId)
-  if (!_internal_has_threadid()) {
+inline std::string* CrashReporterInitArgs::release_a_threadid() {
+  // @@protoc_insertion_point(field_release:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
+  if (!_internal_has_a_threadid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.threadid_.Release();
+  auto* p = _impl_.a_threadid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.threadid_.IsDefault()) {
-    _impl_.threadid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_threadid_.IsDefault()) {
+    _impl_.a_threadid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void CrashReporterInitArgs::set_allocated_threadid(std::string* threadid) {
-  if (threadid != nullptr) {
+inline void CrashReporterInitArgs::set_allocated_a_threadid(std::string* a_threadid) {
+  if (a_threadid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.threadid_.SetAllocated(threadid, GetArenaForAllocation());
+  _impl_.a_threadid_.SetAllocated(a_threadid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.threadid_.IsDefault()) {
-    _impl_.threadid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_threadid_.IsDefault()) {
+    _impl_.a_threadid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.CrashReporter.CrashReporterInitArgs.threadId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
 }
 
 #ifdef __GNUC__

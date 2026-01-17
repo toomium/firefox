@@ -15,15 +15,15 @@ import "PBackgroundSharedTypes.proto";
 // Structs and unions declarations
 message OriginUsageMetadataArrayResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    bytes mVOriginUsageMetadataArray = 2;
+    bytes a_mVnsresult = 1;
+    bytes a_mVOriginUsageMetadataArray = 2;
   }
 }
 
 message UsageInfoResponse {
   oneof content {
-    bytes mVnsresult = 1;
-    bytes mVUsageInfo = 2;
+    bytes a_mVnsresult = 1;
+    bytes a_mVUsageInfo = 2;
   }
 }
 
@@ -31,36 +31,36 @@ message StorageNameParams {
 }
 
 message GetFullOriginMetadataParams {
-  required bytes persistenceType = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 2;
+  required bytes a_persistenceType = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message ClearResetOriginParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
-  required bytes persistenceType = 2;
-  required bool persistenceTypeIsExplicit = 3;
-  required bytes clientType = 4;
-  required bool clientTypeIsExplicit = 5;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  required bytes a_persistenceType = 2;
+  required bool a_persistenceTypeIsExplicit = 3;
+  required bytes a_clientType = 4;
+  required bool a_clientTypeIsExplicit = 5;
 }
 
 message PersistedParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message PersistParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message EstimateParams {
-  required protobuf.mozilla.ipc.PrincipalInfo principalInfo = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
 }
 
 message RequestParams {
   oneof content {
-    protobuf.mozilla.dom.quota.StorageNameParams mVStorageNameParams = 1;
-    protobuf.mozilla.dom.quota.GetFullOriginMetadataParams mVGetFullOriginMetadataParams = 2;
-    protobuf.mozilla.dom.quota.PersistedParams mVPersistedParams = 3;
-    protobuf.mozilla.dom.quota.PersistParams mVPersistParams = 4;
-    protobuf.mozilla.dom.quota.EstimateParams mVEstimateParams = 5;
+    protobuf.mozilla.dom.quota.StorageNameParams a_mVStorageNameParams = 1;
+    protobuf.mozilla.dom.quota.GetFullOriginMetadataParams a_mVGetFullOriginMetadataParams = 2;
+    protobuf.mozilla.dom.quota.PersistedParams a_mVPersistedParams = 3;
+    protobuf.mozilla.dom.quota.PersistParams a_mVPersistParams = 4;
+    protobuf.mozilla.dom.quota.EstimateParams a_mVEstimateParams = 5;
   }
 }

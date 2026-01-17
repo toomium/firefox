@@ -433,25 +433,25 @@ class Msg_NotifyListeners final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFileChannelInfoFieldNumber = 1,
+    kAAFileChannelInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.FileChannelInfo aFileChannelInfo = 1;
-  bool has_afilechannelinfo() const;
+  // required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
+  bool has_a_afilechannelinfo() const;
   private:
-  bool _internal_has_afilechannelinfo() const;
+  bool _internal_has_a_afilechannelinfo() const;
   public:
-  void clear_afilechannelinfo();
-  const ::protobuf::mozilla::net::FileChannelInfo& afilechannelinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::FileChannelInfo* release_afilechannelinfo();
-  ::protobuf::mozilla::net::FileChannelInfo* mutable_afilechannelinfo();
-  void set_allocated_afilechannelinfo(::protobuf::mozilla::net::FileChannelInfo* afilechannelinfo);
+  void clear_a_afilechannelinfo();
+  const ::protobuf::mozilla::net::FileChannelInfo& a_afilechannelinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::FileChannelInfo* release_a_afilechannelinfo();
+  ::protobuf::mozilla::net::FileChannelInfo* mutable_a_afilechannelinfo();
+  void set_allocated_a_afilechannelinfo(::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo);
   private:
-  const ::protobuf::mozilla::net::FileChannelInfo& _internal_afilechannelinfo() const;
-  ::protobuf::mozilla::net::FileChannelInfo* _internal_mutable_afilechannelinfo();
+  const ::protobuf::mozilla::net::FileChannelInfo& _internal_a_afilechannelinfo() const;
+  ::protobuf::mozilla::net::FileChannelInfo* _internal_mutable_a_afilechannelinfo();
   public:
-  void unsafe_arena_set_allocated_afilechannelinfo(
-      ::protobuf::mozilla::net::FileChannelInfo* afilechannelinfo);
-  ::protobuf::mozilla::net::FileChannelInfo* unsafe_arena_release_afilechannelinfo();
+  void unsafe_arena_set_allocated_a_afilechannelinfo(
+      ::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo);
+  ::protobuf::mozilla::net::FileChannelInfo* unsafe_arena_release_a_afilechannelinfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners)
  private:
@@ -463,7 +463,7 @@ class Msg_NotifyListeners final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::net::FileChannelInfo* afilechannelinfo_;
+    ::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileChannel_2eproto;
@@ -580,19 +580,19 @@ class Msg_SetChannelIdForRedirect final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAChannelIdFieldNumber = 1,
+    kAAChannelIdFieldNumber = 1,
   };
-  // required uint64 aChannelId = 1;
-  bool has_achannelid() const;
+  // required uint64 a_aChannelId = 1;
+  bool has_a_achannelid() const;
   private:
-  bool _internal_has_achannelid() const;
+  bool _internal_has_a_achannelid() const;
   public:
-  void clear_achannelid();
-  uint64_t achannelid() const;
-  void set_achannelid(uint64_t value);
+  void clear_a_achannelid();
+  uint64_t a_achannelid() const;
+  void set_a_achannelid(uint64_t value);
   private:
-  uint64_t _internal_achannelid() const;
-  void _internal_set_achannelid(uint64_t value);
+  uint64_t _internal_a_achannelid() const;
+  void _internal_set_a_achannelid(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect)
@@ -605,7 +605,7 @@ class Msg_SetChannelIdForRedirect final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t achannelid_;
+    uint64_t a_achannelid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileChannel_2eproto;
@@ -629,41 +629,41 @@ class Msg_SetChannelIdForRedirect final :
 
 // Msg_NotifyListeners
 
-// required .protobuf.mozilla.net.FileChannelInfo aFileChannelInfo = 1;
-inline bool Msg_NotifyListeners::_internal_has_afilechannelinfo() const {
+// required .protobuf.mozilla.net.FileChannelInfo a_aFileChannelInfo = 1;
+inline bool Msg_NotifyListeners::_internal_has_a_afilechannelinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.afilechannelinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_afilechannelinfo_ != nullptr);
   return value;
 }
-inline bool Msg_NotifyListeners::has_afilechannelinfo() const {
-  return _internal_has_afilechannelinfo();
+inline bool Msg_NotifyListeners::has_a_afilechannelinfo() const {
+  return _internal_has_a_afilechannelinfo();
 }
-inline const ::protobuf::mozilla::net::FileChannelInfo& Msg_NotifyListeners::_internal_afilechannelinfo() const {
-  const ::protobuf::mozilla::net::FileChannelInfo* p = _impl_.afilechannelinfo_;
+inline const ::protobuf::mozilla::net::FileChannelInfo& Msg_NotifyListeners::_internal_a_afilechannelinfo() const {
+  const ::protobuf::mozilla::net::FileChannelInfo* p = _impl_.a_afilechannelinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::FileChannelInfo&>(
       ::protobuf::mozilla::net::_FileChannelInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::net::FileChannelInfo& Msg_NotifyListeners::afilechannelinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.aFileChannelInfo)
-  return _internal_afilechannelinfo();
+inline const ::protobuf::mozilla::net::FileChannelInfo& Msg_NotifyListeners::a_afilechannelinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
+  return _internal_a_afilechannelinfo();
 }
-inline void Msg_NotifyListeners::unsafe_arena_set_allocated_afilechannelinfo(
-    ::protobuf::mozilla::net::FileChannelInfo* afilechannelinfo) {
+inline void Msg_NotifyListeners::unsafe_arena_set_allocated_a_afilechannelinfo(
+    ::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.afilechannelinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_afilechannelinfo_);
   }
-  _impl_.afilechannelinfo_ = afilechannelinfo;
-  if (afilechannelinfo) {
+  _impl_.a_afilechannelinfo_ = a_afilechannelinfo;
+  if (a_afilechannelinfo) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.aFileChannelInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
 }
-inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::release_afilechannelinfo() {
+inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::release_a_afilechannelinfo() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::FileChannelInfo* temp = _impl_.afilechannelinfo_;
-  _impl_.afilechannelinfo_ = nullptr;
+  ::protobuf::mozilla::net::FileChannelInfo* temp = _impl_.a_afilechannelinfo_;
+  _impl_.a_afilechannelinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -675,77 +675,77 @@ inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::release_a
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::unsafe_arena_release_afilechannelinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.aFileChannelInfo)
+inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::unsafe_arena_release_a_afilechannelinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::net::FileChannelInfo* temp = _impl_.afilechannelinfo_;
-  _impl_.afilechannelinfo_ = nullptr;
+  ::protobuf::mozilla::net::FileChannelInfo* temp = _impl_.a_afilechannelinfo_;
+  _impl_.a_afilechannelinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::_internal_mutable_afilechannelinfo() {
+inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::_internal_mutable_a_afilechannelinfo() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.afilechannelinfo_ == nullptr) {
+  if (_impl_.a_afilechannelinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::FileChannelInfo>(GetArenaForAllocation());
-    _impl_.afilechannelinfo_ = p;
+    _impl_.a_afilechannelinfo_ = p;
   }
-  return _impl_.afilechannelinfo_;
+  return _impl_.a_afilechannelinfo_;
 }
-inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::mutable_afilechannelinfo() {
-  ::protobuf::mozilla::net::FileChannelInfo* _msg = _internal_mutable_afilechannelinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.aFileChannelInfo)
+inline ::protobuf::mozilla::net::FileChannelInfo* Msg_NotifyListeners::mutable_a_afilechannelinfo() {
+  ::protobuf::mozilla::net::FileChannelInfo* _msg = _internal_mutable_a_afilechannelinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
   return _msg;
 }
-inline void Msg_NotifyListeners::set_allocated_afilechannelinfo(::protobuf::mozilla::net::FileChannelInfo* afilechannelinfo) {
+inline void Msg_NotifyListeners::set_allocated_a_afilechannelinfo(::protobuf::mozilla::net::FileChannelInfo* a_afilechannelinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.afilechannelinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_afilechannelinfo_);
   }
-  if (afilechannelinfo) {
+  if (a_afilechannelinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(afilechannelinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_afilechannelinfo));
     if (message_arena != submessage_arena) {
-      afilechannelinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, afilechannelinfo, submessage_arena);
+      a_afilechannelinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_afilechannelinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.afilechannelinfo_ = afilechannelinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.aFileChannelInfo)
+  _impl_.a_afilechannelinfo_ = a_afilechannelinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PFileChannel.Msg_NotifyListeners.a_aFileChannelInfo)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetChannelIdForRedirect
 
-// required uint64 aChannelId = 1;
-inline bool Msg_SetChannelIdForRedirect::_internal_has_achannelid() const {
+// required uint64 a_aChannelId = 1;
+inline bool Msg_SetChannelIdForRedirect::_internal_has_a_achannelid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetChannelIdForRedirect::has_achannelid() const {
-  return _internal_has_achannelid();
+inline bool Msg_SetChannelIdForRedirect::has_a_achannelid() const {
+  return _internal_has_a_achannelid();
 }
-inline void Msg_SetChannelIdForRedirect::clear_achannelid() {
-  _impl_.achannelid_ = uint64_t{0u};
+inline void Msg_SetChannelIdForRedirect::clear_a_achannelid() {
+  _impl_.a_achannelid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_SetChannelIdForRedirect::_internal_achannelid() const {
-  return _impl_.achannelid_;
+inline uint64_t Msg_SetChannelIdForRedirect::_internal_a_achannelid() const {
+  return _impl_.a_achannelid_;
 }
-inline uint64_t Msg_SetChannelIdForRedirect::achannelid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect.aChannelId)
-  return _internal_achannelid();
+inline uint64_t Msg_SetChannelIdForRedirect::a_achannelid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect.a_aChannelId)
+  return _internal_a_achannelid();
 }
-inline void Msg_SetChannelIdForRedirect::_internal_set_achannelid(uint64_t value) {
+inline void Msg_SetChannelIdForRedirect::_internal_set_a_achannelid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.achannelid_ = value;
+  _impl_.a_achannelid_ = value;
 }
-inline void Msg_SetChannelIdForRedirect::set_achannelid(uint64_t value) {
-  _internal_set_achannelid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect.aChannelId)
+inline void Msg_SetChannelIdForRedirect::set_a_achannelid(uint64_t value) {
+  _internal_set_a_achannelid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PFileChannel.Msg_SetChannelIdForRedirect.a_aChannelId)
 }
 
 #ifdef __GNUC__

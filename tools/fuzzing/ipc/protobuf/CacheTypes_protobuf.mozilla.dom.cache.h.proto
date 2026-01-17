@@ -15,109 +15,109 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message CacheQueryParams {
-  required bool ignoreSearch = 1;
-  required bool ignoreMethod = 2;
-  required bool ignoreVary = 3;
-  required bool cacheNameSet = 4;
-  required bytes cacheName = 5;
+  required bool a_ignoreSearch = 1;
+  required bool a_ignoreMethod = 2;
+  required bool a_ignoreVary = 3;
+  required bool a_cacheNameSet = 4;
+  required bytes a_cacheName = 5;
 }
 
 message CacheReadStream {
-  required bytes id = 1;
-  required bytes control = 2;
-  optional protobuf.mozilla.ipc.IPCStream stream = 3;
+  required bytes a_id = 1;
+  required bytes a_control = 2;
+  optional protobuf.mozilla.ipc.IPCStream a_stream = 3;
 }
 
 message HeadersEntry {
-  required bytes name = 1;
-  required bytes value = 2;
+  required bytes a_name = 1;
+  required bytes a_value = 2;
 }
 
 message CacheRequest {
-  required bytes method = 1;
-  required bytes urlWithoutQuery = 2;
-  required bytes urlQuery = 3;
-  required bytes urlFragment = 4;
-  repeated protobuf.mozilla.dom.cache.HeadersEntry headers = 5;
-  required bytes headersGuard = 6;
-  required bytes referrer = 7;
-  required bytes referrerPolicy = 8;
-  required bytes mode = 9;
-  required bytes credentials = 10;
-  optional protobuf.mozilla.dom.cache.CacheReadStream body = 11;
-  required sint64 bodyDiskSize = 12;
-  required bytes contentPolicyType = 13;
-  required bytes requestCache = 14;
-  required bytes requestRedirect = 15;
-  required bytes integrity = 16;
-  required bytes loadingEmbedderPolicy = 17;
-  optional protobuf.mozilla.ipc.PrincipalInfo principalInfo = 18;
+  required bytes a_method = 1;
+  required bytes a_urlWithoutQuery = 2;
+  required bytes a_urlQuery = 3;
+  required bytes a_urlFragment = 4;
+  repeated protobuf.mozilla.dom.cache.HeadersEntry a_headers = 5;
+  required bytes a_headersGuard = 6;
+  required bytes a_referrer = 7;
+  required bytes a_referrerPolicy = 8;
+  required bytes a_mode = 9;
+  required bytes a_credentials = 10;
+  optional protobuf.mozilla.dom.cache.CacheReadStream a_body = 11;
+  required sint64 a_bodyDiskSize = 12;
+  required bytes a_contentPolicyType = 13;
+  required bytes a_requestCache = 14;
+  required bytes a_requestRedirect = 15;
+  required bytes a_integrity = 16;
+  required bytes a_loadingEmbedderPolicy = 17;
+  optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 18;
 }
 
 message CacheResponse {
-  required bytes type = 1;
-  repeated bytes urlList = 2;
-  required uint32 status = 3;
-  required bytes statusText = 4;
-  repeated protobuf.mozilla.dom.cache.HeadersEntry headers = 5;
-  required bytes headersGuard = 6;
-  optional protobuf.mozilla.dom.cache.CacheReadStream body = 7;
-  required sint64 bodyDiskSize = 8;
-  required bytes securityInfo = 9;
-  optional protobuf.mozilla.ipc.PrincipalInfo principalInfo = 10;
-  required uint32 paddingInfo = 11;
-  required sint64 paddingSize = 12;
-  required bytes credentials = 13;
+  required bytes a_type = 1;
+  repeated bytes a_urlList = 2;
+  required uint32 a_status = 3;
+  required bytes a_statusText = 4;
+  repeated protobuf.mozilla.dom.cache.HeadersEntry a_headers = 5;
+  required bytes a_headersGuard = 6;
+  optional protobuf.mozilla.dom.cache.CacheReadStream a_body = 7;
+  required sint64 a_bodyDiskSize = 8;
+  required bytes a_securityInfo = 9;
+  optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
+  required uint32 a_paddingInfo = 11;
+  required sint64 a_paddingSize = 12;
+  required bytes a_credentials = 13;
 }
 
 message CacheRequestResponse {
-  required protobuf.mozilla.dom.cache.CacheRequest request = 1;
-  required protobuf.mozilla.dom.cache.CacheResponse response = 2;
+  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  required protobuf.mozilla.dom.cache.CacheResponse a_response = 2;
 }
 
 message CacheMatchArgs {
-  required protobuf.mozilla.dom.cache.CacheRequest request = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams params = 2;
-  required bytes openMode = 3;
+  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  required bytes a_openMode = 3;
 }
 
 message CacheMatchAllArgs {
-  optional protobuf.mozilla.dom.cache.CacheRequest maybeRequest = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams params = 2;
-  required bytes openMode = 3;
+  optional protobuf.mozilla.dom.cache.CacheRequest a_maybeRequest = 1;
+  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  required bytes a_openMode = 3;
 }
 
 message CachePutAllArgs {
-  repeated protobuf.mozilla.dom.cache.CacheRequestResponse requestResponseList = 1;
+  repeated protobuf.mozilla.dom.cache.CacheRequestResponse a_requestResponseList = 1;
 }
 
 message CacheDeleteArgs {
-  required protobuf.mozilla.dom.cache.CacheRequest request = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams params = 2;
+  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
 }
 
 message CacheKeysArgs {
-  optional protobuf.mozilla.dom.cache.CacheRequest maybeRequest = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams params = 2;
-  required bytes openMode = 3;
+  optional protobuf.mozilla.dom.cache.CacheRequest a_maybeRequest = 1;
+  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  required bytes a_openMode = 3;
 }
 
 message StorageMatchArgs {
-  required protobuf.mozilla.dom.cache.CacheRequest request = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams params = 2;
-  required bytes openMode = 3;
+  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  required bytes a_openMode = 3;
 }
 
 message StorageHasArgs {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message StorageOpenArgs {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message StorageDeleteArgs {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message StorageKeysArgs {
@@ -125,71 +125,71 @@ message StorageKeysArgs {
 
 message CacheOpArgs {
   oneof content {
-    protobuf.mozilla.dom.cache.CacheMatchArgs mVCacheMatchArgs = 1;
-    protobuf.mozilla.dom.cache.CacheMatchAllArgs mVCacheMatchAllArgs = 2;
-    protobuf.mozilla.dom.cache.CachePutAllArgs mVCachePutAllArgs = 3;
-    protobuf.mozilla.dom.cache.CacheDeleteArgs mVCacheDeleteArgs = 4;
-    protobuf.mozilla.dom.cache.CacheKeysArgs mVCacheKeysArgs = 5;
-    protobuf.mozilla.dom.cache.StorageMatchArgs mVStorageMatchArgs = 6;
-    protobuf.mozilla.dom.cache.StorageHasArgs mVStorageHasArgs = 7;
-    protobuf.mozilla.dom.cache.StorageOpenArgs mVStorageOpenArgs = 8;
-    protobuf.mozilla.dom.cache.StorageDeleteArgs mVStorageDeleteArgs = 9;
-    protobuf.mozilla.dom.cache.StorageKeysArgs mVStorageKeysArgs = 10;
+    protobuf.mozilla.dom.cache.CacheMatchArgs a_mVCacheMatchArgs = 1;
+    protobuf.mozilla.dom.cache.CacheMatchAllArgs a_mVCacheMatchAllArgs = 2;
+    protobuf.mozilla.dom.cache.CachePutAllArgs a_mVCachePutAllArgs = 3;
+    protobuf.mozilla.dom.cache.CacheDeleteArgs a_mVCacheDeleteArgs = 4;
+    protobuf.mozilla.dom.cache.CacheKeysArgs a_mVCacheKeysArgs = 5;
+    protobuf.mozilla.dom.cache.StorageMatchArgs a_mVStorageMatchArgs = 6;
+    protobuf.mozilla.dom.cache.StorageHasArgs a_mVStorageHasArgs = 7;
+    protobuf.mozilla.dom.cache.StorageOpenArgs a_mVStorageOpenArgs = 8;
+    protobuf.mozilla.dom.cache.StorageDeleteArgs a_mVStorageDeleteArgs = 9;
+    protobuf.mozilla.dom.cache.StorageKeysArgs a_mVStorageKeysArgs = 10;
   }
 }
 
 message CacheMatchResult {
-  optional protobuf.mozilla.dom.cache.CacheResponse maybeResponse = 1;
+  optional protobuf.mozilla.dom.cache.CacheResponse a_maybeResponse = 1;
 }
 
 message CacheMatchAllResult {
-  repeated protobuf.mozilla.dom.cache.CacheResponse responseList = 1;
+  repeated protobuf.mozilla.dom.cache.CacheResponse a_responseList = 1;
 }
 
 message CachePutAllResult {
 }
 
 message CacheDeleteResult {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message CacheKeysResult {
-  repeated protobuf.mozilla.dom.cache.CacheRequest requestList = 1;
+  repeated protobuf.mozilla.dom.cache.CacheRequest a_requestList = 1;
 }
 
 message StorageMatchResult {
-  optional protobuf.mozilla.dom.cache.CacheResponse maybeResponse = 1;
+  optional protobuf.mozilla.dom.cache.CacheResponse a_maybeResponse = 1;
 }
 
 message StorageHasResult {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message StorageOpenResult {
-  required bytes actor = 1;
-  required bytes ns = 2;
+  required bytes a_actor = 1;
+  required bytes a_ns = 2;
 }
 
 message StorageDeleteResult {
-  required bool success = 1;
+  required bool a_success = 1;
 }
 
 message StorageKeysResult {
-  repeated bytes keyList = 1;
+  repeated bytes a_keyList = 1;
 }
 
 message CacheOpResult {
   oneof content {
-    bytes mVvoid_t = 1;
-    protobuf.mozilla.dom.cache.CacheMatchResult mVCacheMatchResult = 2;
-    protobuf.mozilla.dom.cache.CacheMatchAllResult mVCacheMatchAllResult = 3;
-    protobuf.mozilla.dom.cache.CachePutAllResult mVCachePutAllResult = 4;
-    protobuf.mozilla.dom.cache.CacheDeleteResult mVCacheDeleteResult = 5;
-    protobuf.mozilla.dom.cache.CacheKeysResult mVCacheKeysResult = 6;
-    protobuf.mozilla.dom.cache.StorageMatchResult mVStorageMatchResult = 7;
-    protobuf.mozilla.dom.cache.StorageHasResult mVStorageHasResult = 8;
-    protobuf.mozilla.dom.cache.StorageOpenResult mVStorageOpenResult = 9;
-    protobuf.mozilla.dom.cache.StorageDeleteResult mVStorageDeleteResult = 10;
-    protobuf.mozilla.dom.cache.StorageKeysResult mVStorageKeysResult = 11;
+    bytes a_mVvoid_t = 1;
+    protobuf.mozilla.dom.cache.CacheMatchResult a_mVCacheMatchResult = 2;
+    protobuf.mozilla.dom.cache.CacheMatchAllResult a_mVCacheMatchAllResult = 3;
+    protobuf.mozilla.dom.cache.CachePutAllResult a_mVCachePutAllResult = 4;
+    protobuf.mozilla.dom.cache.CacheDeleteResult a_mVCacheDeleteResult = 5;
+    protobuf.mozilla.dom.cache.CacheKeysResult a_mVCacheKeysResult = 6;
+    protobuf.mozilla.dom.cache.StorageMatchResult a_mVStorageMatchResult = 7;
+    protobuf.mozilla.dom.cache.StorageHasResult a_mVStorageHasResult = 8;
+    protobuf.mozilla.dom.cache.StorageOpenResult a_mVStorageOpenResult = 9;
+    protobuf.mozilla.dom.cache.StorageDeleteResult a_mVStorageDeleteResult = 10;
+    protobuf.mozilla.dom.cache.StorageKeysResult a_mVStorageKeysResult = 11;
   }
 }

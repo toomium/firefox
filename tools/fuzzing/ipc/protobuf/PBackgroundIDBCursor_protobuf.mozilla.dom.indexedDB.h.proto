@@ -14,64 +14,64 @@ import "PBackgroundIDBSharedTypes.proto";
 
 // Structs and unions declarations
 message ContinueParams {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message ContinuePrimaryKeyParams {
-  required bytes key = 1;
-  required bytes primaryKey = 2;
+  required bytes a_key = 1;
+  required bytes a_primaryKey = 2;
 }
 
 message AdvanceParams {
-  required uint32 count = 1;
+  required uint32 a_count = 1;
 }
 
 message CursorRequestParams {
   oneof content {
-    protobuf.mozilla.dom.indexedDB.ContinueParams mVContinueParams = 1;
-    protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams mVContinuePrimaryKeyParams = 2;
-    protobuf.mozilla.dom.indexedDB.AdvanceParams mVAdvanceParams = 3;
+    protobuf.mozilla.dom.indexedDB.ContinueParams a_mVContinueParams = 1;
+    protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams a_mVContinuePrimaryKeyParams = 2;
+    protobuf.mozilla.dom.indexedDB.AdvanceParams a_mVAdvanceParams = 3;
   }
 }
 
 message ObjectStoreCursorResponse {
-  required bytes key = 1;
-  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo cloneInfo = 2;
+  required bytes a_key = 1;
+  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 2;
 }
 
 message ObjectStoreKeyCursorResponse {
-  required bytes key = 1;
+  required bytes a_key = 1;
 }
 
 message IndexCursorResponse {
-  required bytes key = 1;
-  required bytes sortKey = 2;
-  required bytes objectKey = 3;
-  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo cloneInfo = 4;
+  required bytes a_key = 1;
+  required bytes a_sortKey = 2;
+  required bytes a_objectKey = 3;
+  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 4;
 }
 
 message IndexKeyCursorResponse {
-  required bytes key = 1;
-  required bytes sortKey = 2;
-  required bytes objectKey = 3;
+  required bytes a_key = 1;
+  required bytes a_sortKey = 2;
+  required bytes a_objectKey = 3;
 }
 
 message CursorResponse {
   message _mVArrayOfObjectStoreCursorResponse {
-    repeated protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 1;
+    repeated protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 1;
   }
   message _mVArrayOfObjectStoreKeyCursorResponse {
-    repeated protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 1;
+    repeated protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 1;
   }
   message _mVArrayOfIndexCursorResponse {
-    repeated protobuf.mozilla.dom.indexedDB.IndexCursorResponse mVArrayOfIndexCursorResponse = 1;
+    repeated protobuf.mozilla.dom.indexedDB.IndexCursorResponse a_mVArrayOfIndexCursorResponse = 1;
   }
   message _mVArrayOfIndexKeyCursorResponse {
-    repeated protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse mVArrayOfIndexKeyCursorResponse = 1;
+    repeated protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 1;
   }
   oneof content {
-    bytes mVvoid_t = 1;
-    bytes mVnsresult = 2;
+    bytes a_mVvoid_t = 1;
+    bytes a_mVnsresult = 2;
     _mVArrayOfObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 3;
     _mVArrayOfObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 4;
     _mVArrayOfIndexCursorResponse mVArrayOfIndexCursorResponse = 5;

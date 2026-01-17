@@ -18,39 +18,39 @@ import "IPCServiceWorkerRegistrationDescriptor.proto";
 
 // Message declarations
 message Msg_Register {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
-  required bytes aScopeURL = 2;
-  required bytes aScriptURL = 3;
-  required bytes aUpdateViaCache = 4;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  required bytes a_aScopeURL = 2;
+  required bytes a_aScriptURL = 3;
+  required bytes a_aUpdateViaCache = 4;
 }
 
 message Reply_Register {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetRegistration {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
-  required bytes aURL = 2;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  required bytes a_aURL = 2;
 }
 
 message Reply_GetRegistration {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetRegistrations {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Reply_GetRegistrations {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg_GetReady {
-  required protobuf.mozilla.dom.IPCClientInfo aClientInfo = 1;
+  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Reply_GetReady {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult aResult = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult a_aResult = 1;
 }
 
 message Msg___delete__ {

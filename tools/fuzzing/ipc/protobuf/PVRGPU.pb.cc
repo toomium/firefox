@@ -47,7 +47,7 @@ struct Msg_StopVRServiceDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StopVRServiceDefaultTypeInternal _Msg_StopVRService_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PuppetSubmit::Msg_PuppetSubmit(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.abuffer_)*/{}
+    /*decltype(_impl_.a_abuffer_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PuppetSubmitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PuppetSubmitDefaultTypeInternal()
@@ -415,7 +415,7 @@ Msg_PuppetSubmit::Msg_PuppetSubmit(const Msg_PuppetSubmit& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PuppetSubmit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.abuffer_){from._impl_.abuffer_}
+      decltype(_impl_.a_abuffer_){from._impl_.a_abuffer_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -427,7 +427,7 @@ inline void Msg_PuppetSubmit::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.abuffer_){arena}
+      decltype(_impl_.a_abuffer_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -443,7 +443,7 @@ Msg_PuppetSubmit::~Msg_PuppetSubmit() {
 
 inline void Msg_PuppetSubmit::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.abuffer_.~RepeatedField();
+  _impl_.a_abuffer_.~RepeatedField();
 }
 
 void Msg_PuppetSubmit::SetCachedSize(int size) const {
@@ -456,7 +456,7 @@ void Msg_PuppetSubmit::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.abuffer_.Clear();
+  _impl_.a_abuffer_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -466,18 +466,18 @@ const char* Msg_PuppetSubmit::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint64 aBuffer = 1;
+      // repeated uint64 a_aBuffer = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_abuffer(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+            _internal_add_a_abuffer(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_abuffer(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_abuffer(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -511,10 +511,10 @@ uint8_t* Msg_PuppetSubmit::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint64 aBuffer = 1;
-  for (int i = 0, n = this->_internal_abuffer_size(); i < n; i++) {
+  // repeated uint64 a_aBuffer = 1;
+  for (int i = 0, n = this->_internal_a_abuffer_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_abuffer(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_abuffer(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -533,12 +533,12 @@ size_t Msg_PuppetSubmit::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint64 aBuffer = 1;
+  // repeated uint64 a_aBuffer = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt64Size(this->_impl_.abuffer_);
+      UInt64Size(this->_impl_.a_abuffer_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_abuffer_size());
+                  ::_pbi::FromIntSize(this->_internal_a_abuffer_size());
     total_size += data_size;
   }
 
@@ -563,7 +563,7 @@ void Msg_PuppetSubmit::MergeFrom(const Msg_PuppetSubmit& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.abuffer_.MergeFrom(from._impl_.abuffer_);
+  _this->_impl_.a_abuffer_.MergeFrom(from._impl_.a_abuffer_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -581,7 +581,7 @@ bool Msg_PuppetSubmit::IsInitialized() const {
 void Msg_PuppetSubmit::InternalSwap(Msg_PuppetSubmit* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.abuffer_.InternalSwap(&other->_impl_.abuffer_);
+  _impl_.a_abuffer_.InternalSwap(&other->_impl_.a_abuffer_);
 }
 
 std::string Msg_PuppetSubmit::GetTypeName() const {

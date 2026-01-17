@@ -18,30 +18,30 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_Bind {
-  required protobuf.UDPAddressInfo addressInfo = 1;
-  required bool addressReuse = 2;
-  required bool loopback = 3;
-  required uint32 recvBufferSize = 4;
-  required uint32 sendBufferSize = 5;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  required bool a_addressReuse = 2;
+  required bool a_loopback = 3;
+  required uint32 a_recvBufferSize = 4;
+  required uint32 a_sendBufferSize = 5;
 }
 
 message Msg_Connect {
-  required protobuf.UDPAddressInfo addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_OutgoingData {
-  required protobuf.UDPData data = 1;
-  required protobuf.UDPSocketAddr addr = 2;
+  required protobuf.UDPData a_data = 1;
+  required protobuf.UDPSocketAddr a_addr = 2;
 }
 
 message Msg_JoinMulticast {
-  required bytes multicastAddress = 1;
-  required bytes iface = 2;
+  required bytes a_multicastAddress = 1;
+  required bytes a_iface = 2;
 }
 
 message Msg_LeaveMulticast {
-  required bytes multicastAddress = 1;
-  required bytes iface = 2;
+  required bytes a_multicastAddress = 1;
+  required bytes a_iface = 2;
 }
 
 message Msg_Close {
@@ -51,25 +51,25 @@ message Msg_RequestDelete {
 }
 
 message Msg_CallbackOpened {
-  required protobuf.UDPAddressInfo addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_CallbackConnected {
-  required protobuf.UDPAddressInfo addressInfo = 1;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_CallbackClosed {
 }
 
 message Msg_CallbackReceivedData {
-  required protobuf.UDPAddressInfo addressInfo = 1;
-  repeated uint32 data = 2;
+  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  repeated uint32 a_data = 2;
 }
 
 message Msg_CallbackError {
-  required bytes message = 1;
-  required bytes filename = 2;
-  required uint32 lineNumber = 3;
+  required bytes a_message = 1;
+  required bytes a_filename = 2;
+  required uint32 a_lineNumber = 3;
 }
 
 message Msg___delete__ {

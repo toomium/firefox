@@ -18,18 +18,18 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_OnTransportAndData {
-  required uint64 offset = 1;
-  required uint32 count = 2;
-  required bytes data = 3;
-  required bytes onDataAvailableStart = 4;
+  required uint64 a_offset = 1;
+  required uint32 a_count = 2;
+  required bytes a_data = 3;
+  required bytes a_onDataAvailableStart = 4;
 }
 
 message Msg_OnStopRequest {
-  required bytes aStatus = 1;
-  required protobuf.mozilla.net.ResourceTimingStructArgs timing = 2;
-  required bytes lastActiveTabOptimization = 3;
-  required bytes responseTrailers = 4;
-  required bytes onStopRequestStart = 5;
+  required bytes a_aStatus = 1;
+  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
+  required bytes a_lastActiveTabOptimization = 3;
+  required bytes a_responseTrailers = 4;
+  required bytes a_onStopRequestStart = 5;
 }
 
 message Msg___delete__ {

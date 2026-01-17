@@ -13,5 +13,5 @@ package protobuf.mozilla.dom.quota;
 
 // Structs and unions declarations
 message IPCQuotaObject {
-  required bytes childEndpoint = 1;
+  required bytes a_childEndpoint = 1;
 }

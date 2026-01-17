@@ -30,125 +30,125 @@ message Reply_PCookieServiceConstructor {
 }
 
 message Msg_PHttpChannelConstructor {
-  required bytes browser = 1;
-  required bytes loadContext = 2;
-  required protobuf.mozilla.net.HttpChannelCreationArgs args = 3;
+  required bytes a_browser = 1;
+  required bytes a_loadContext = 2;
+  required protobuf.mozilla.net.HttpChannelCreationArgs a_args = 3;
 }
 
 message Reply_PHttpChannelConstructor {
 }
 
 message Msg_PWebSocketConstructor {
-  required bytes browser = 1;
-  required bytes loadContext = 2;
-  required uint32 aSerialID = 3;
+  required bytes a_browser = 1;
+  required bytes a_loadContext = 2;
+  required uint32 a_aSerialID = 3;
 }
 
 message Reply_PWebSocketConstructor {
 }
 
 message Msg_PTCPServerSocketConstructor {
-  required uint32 localPort = 1;
-  required uint32 backlog = 2;
-  required bool useArrayBuffers = 3;
+  required uint32 a_localPort = 1;
+  required uint32 a_backlog = 2;
+  required bool a_useArrayBuffers = 3;
 }
 
 message Reply_PTCPServerSocketConstructor {
 }
 
 message Msg_PUDPSocketConstructor {
-  required bytes principal = 1;
-  required bytes filter = 2;
+  required bytes a_principal = 1;
+  required bytes a_filter = 2;
 }
 
 message Reply_PUDPSocketConstructor {
 }
 
 message Msg_PDNSRequestConstructor {
-  required bytes hostName = 1;
-  required bytes trrServer = 2;
-  required sint32 port = 3;
-  required uint32 type = 4;
-  required bytes originAttributes = 5;
-  required bytes flags = 6;
+  required bytes a_hostName = 1;
+  required bytes a_trrServer = 2;
+  required sint32 a_port = 3;
+  required uint32 a_type = 4;
+  required bytes a_originAttributes = 5;
+  required bytes a_flags = 6;
 }
 
 message Reply_PDNSRequestConstructor {
 }
 
 message Msg_PDocumentChannelConstructor {
-  required bytes browsingContext = 1;
-  required protobuf.mozilla.net.DocumentChannelCreationArgs args = 2;
+  required bytes a_browsingContext = 1;
+  required protobuf.mozilla.net.DocumentChannelCreationArgs a_args = 2;
 }
 
 message Reply_PDocumentChannelConstructor {
 }
 
 message Msg_PWebSocketEventListenerConstructor {
-  required uint64 aInnerWindowID = 1;
+  required uint64 a_aInnerWindowID = 1;
 }
 
 message Reply_PWebSocketEventListenerConstructor {
 }
 
 message Msg_PredPredict {
-  required bytes targetURI = 1;
-  required bytes sourceURI = 2;
-  required uint32 reason = 3;
-  required bytes originAttributes = 4;
-  required bool hasVerifier = 5;
+  required bytes a_targetURI = 1;
+  required bytes a_sourceURI = 2;
+  required uint32 a_reason = 3;
+  required bytes a_originAttributes = 4;
+  required bool a_hasVerifier = 5;
 }
 
 message Msg_PredLearn {
-  required bytes targetURI = 1;
-  required bytes sourceURI = 2;
-  required uint32 reason = 3;
-  required bytes originAttributes = 4;
+  required bytes a_targetURI = 1;
+  required bytes a_sourceURI = 2;
+  required uint32 a_reason = 3;
+  required bytes a_originAttributes = 4;
 }
 
 message Msg_PredReset {
 }
 
 message Msg_SpeculativeConnect {
-  required bytes uri = 1;
-  required bytes principal = 2;
-  optional bytes originAttributes = 3;
-  required bool anonymous = 4;
+  required bytes a_uri = 1;
+  required bytes a_principal = 2;
+  optional bytes a_originAttributes = 3;
+  required bool a_anonymous = 4;
 }
 
 message Msg_HTMLDNSPrefetch {
-  required bytes hostname = 1;
-  required bool isHttps = 2;
-  required bytes originAttributes = 3;
-  required bytes flags = 4;
+  required bytes a_hostname = 1;
+  required bool a_isHttps = 2;
+  required bytes a_originAttributes = 3;
+  required bytes a_flags = 4;
 }
 
 message Msg_CancelHTMLDNSPrefetch {
-  required bytes hostname = 1;
-  required bool isHttps = 2;
-  required bytes originAttributes = 3;
-  required bytes flags = 4;
-  required bytes reason = 5;
+  required bytes a_hostname = 1;
+  required bool a_isHttps = 2;
+  required bytes a_originAttributes = 3;
+  required bytes a_flags = 4;
+  required bytes a_reason = 5;
 }
 
 message Msg_PDataChannelConstructor {
-  required uint32 channelId = 1;
+  required uint32 a_channelId = 1;
 }
 
 message Reply_PDataChannelConstructor {
 }
 
 message Msg_PGIOChannelConstructor {
-  required bytes browser = 1;
-  required bytes loadContext = 2;
-  required protobuf.mozilla.net.GIOChannelCreationArgs args = 3;
+  required bytes a_browser = 1;
+  required bytes a_loadContext = 2;
+  required protobuf.mozilla.net.GIOChannelCreationArgs a_args = 3;
 }
 
 message Reply_PGIOChannelConstructor {
 }
 
 message Msg_PSimpleChannelConstructor {
-  required uint32 channelId = 1;
+  required uint32 a_channelId = 1;
 }
 
 message Reply_PSimpleChannelConstructor {
@@ -161,21 +161,21 @@ message Reply_PFileChannelConstructor {
 }
 
 message Msg_RequestContextLoadBegin {
-  required uint64 rcid = 1;
+  required uint64 a_rcid = 1;
 }
 
 message Msg_RequestContextAfterDOMContentLoaded {
-  required uint64 rcid = 1;
+  required uint64 a_rcid = 1;
 }
 
 message Msg_RemoveRequestContext {
-  required uint64 rcid = 1;
+  required uint64 a_rcid = 1;
 }
 
 message Msg_PAltDataOutputStreamConstructor {
-  required bytes type = 1;
-  required sint64 predictedSize = 2;
-  required bytes channel = 3;
+  required bytes a_type = 1;
+  required sint64 a_predictedSize = 2;
+  required bytes a_channel = 3;
 }
 
 message Reply_PAltDataOutputStreamConstructor {
@@ -188,33 +188,33 @@ message Reply_PStunAddrsRequestConstructor {
 }
 
 message Msg_PWebrtcTCPSocketConstructor {
-  optional bytes tabId = 1;
+  optional bytes a_tabId = 1;
 }
 
 message Reply_PWebrtcTCPSocketConstructor {
 }
 
 message Msg_GetExtensionStream {
-  required bytes uri = 1;
+  required bytes a_uri = 1;
 }
 
 message Reply_GetExtensionStream {
-  required bytes stream = 1;
+  required bytes a_stream = 1;
 }
 
 message Msg_GetExtensionFD {
-  required bytes uri = 1;
+  required bytes a_uri = 1;
 }
 
 message Reply_GetExtensionFD {
-  required bytes fd = 1;
+  required bytes a_fd = 1;
 }
 
 message Msg_InitSocketProcessBridge {
 }
 
 message Reply_InitSocketProcessBridge {
-  required bytes endpoint = 1;
+  required bytes a_endpoint = 1;
 }
 
 message Msg_ResetSocketProcessBridge {
@@ -224,45 +224,45 @@ message Msg_EnsureHSTSData {
 }
 
 message Reply_EnsureHSTSData {
-  required bool result = 1;
+  required bool a_result = 1;
 }
 
 message Msg_GetPageThumbStream {
-  required bytes uri = 1;
-  required protobuf.mozilla.net.LoadInfoArgs loadInfo = 2;
+  required bytes a_uri = 1;
+  required protobuf.mozilla.net.LoadInfoArgs a_loadInfo = 2;
 }
 
 message Reply_GetPageThumbStream {
-  optional protobuf.mozilla.net.RemoteStreamInfo info = 1;
+  optional protobuf.mozilla.net.RemoteStreamInfo a_info = 1;
 }
 
 message Msg_GetPageIconStream {
-  required bytes uri = 1;
-  required protobuf.mozilla.net.LoadInfoArgs loadInfo = 2;
+  required bytes a_uri = 1;
+  required protobuf.mozilla.net.LoadInfoArgs a_loadInfo = 2;
 }
 
 message Reply_GetPageIconStream {
-  optional protobuf.mozilla.net.RemoteStreamInfo info = 1;
+  optional protobuf.mozilla.net.RemoteStreamInfo a_info = 1;
 }
 
 message Msg_PredOnPredictPrefetch {
-  required bytes uri = 1;
-  required uint32 httpStatus = 2;
+  required bytes a_uri = 1;
+  required uint32 a_httpStatus = 2;
 }
 
 message Msg_PredOnPredictPreconnect {
-  required bytes uri = 1;
+  required bytes a_uri = 1;
 }
 
 message Msg_PredOnPredictDNS {
-  required bytes uri = 1;
+  required bytes a_uri = 1;
 }
 
 message Msg_SpeculativeConnectRequest {
 }
 
 message Msg_NetworkChangeNotification {
-  required bytes type = 1;
+  required bytes a_type = 1;
 }
 
 message Msg_PTransportProviderConstructor {
@@ -272,12 +272,12 @@ message Reply_PTransportProviderConstructor {
 }
 
 message Msg_SetTRRDomain {
-  required bytes domain = 1;
+  required bytes a_domain = 1;
 }
 
 message Msg_PTCPSocketConstructor {
-  required bytes host = 1;
-  required uint32 port = 2;
+  required bytes a_host = 1;
+  required uint32 a_port = 2;
 }
 
 message Reply_PTCPSocketConstructor {

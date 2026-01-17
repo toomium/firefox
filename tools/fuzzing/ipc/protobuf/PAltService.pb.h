@@ -185,57 +185,57 @@ class Msg_ClearHostMapping final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHostFieldNumber = 1,
-    kOriginAttributesFieldNumber = 3,
-    kPortFieldNumber = 2,
+    kAHostFieldNumber = 1,
+    kAOriginAttributesFieldNumber = 3,
+    kAPortFieldNumber = 2,
   };
-  // required bytes host = 1;
-  bool has_host() const;
+  // required bytes a_host = 1;
+  bool has_a_host() const;
   private:
-  bool _internal_has_host() const;
+  bool _internal_has_a_host() const;
   public:
-  void clear_host();
-  const std::string& host() const;
+  void clear_a_host();
+  const std::string& a_host() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_host(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_host();
-  PROTOBUF_NODISCARD std::string* release_host();
-  void set_allocated_host(std::string* host);
+  void set_a_host(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_host();
+  PROTOBUF_NODISCARD std::string* release_a_host();
+  void set_allocated_a_host(std::string* a_host);
   private:
-  const std::string& _internal_host() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_host(const std::string& value);
-  std::string* _internal_mutable_host();
+  const std::string& _internal_a_host() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_host(const std::string& value);
+  std::string* _internal_mutable_a_host();
   public:
 
-  // required bytes originAttributes = 3;
-  bool has_originattributes() const;
+  // required bytes a_originAttributes = 3;
+  bool has_a_originattributes() const;
   private:
-  bool _internal_has_originattributes() const;
+  bool _internal_has_a_originattributes() const;
   public:
-  void clear_originattributes();
-  const std::string& originattributes() const;
+  void clear_a_originattributes();
+  const std::string& a_originattributes() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originattributes(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originattributes();
-  PROTOBUF_NODISCARD std::string* release_originattributes();
-  void set_allocated_originattributes(std::string* originattributes);
+  void set_a_originattributes(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originattributes();
+  PROTOBUF_NODISCARD std::string* release_a_originattributes();
+  void set_allocated_a_originattributes(std::string* a_originattributes);
   private:
-  const std::string& _internal_originattributes() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originattributes(const std::string& value);
-  std::string* _internal_mutable_originattributes();
+  const std::string& _internal_a_originattributes() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originattributes(const std::string& value);
+  std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required sint32 port = 2;
-  bool has_port() const;
+  // required sint32 a_port = 2;
+  bool has_a_port() const;
   private:
-  bool _internal_has_port() const;
+  bool _internal_has_a_port() const;
   public:
-  void clear_port();
-  int32_t port() const;
-  void set_port(int32_t value);
+  void clear_a_port();
+  int32_t a_port() const;
+  void set_a_port(int32_t value);
   private:
-  int32_t _internal_port() const;
-  void _internal_set_port(int32_t value);
+  int32_t _internal_a_port() const;
+  void _internal_set_a_port(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping)
@@ -251,9 +251,9 @@ class Msg_ClearHostMapping final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr host_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originattributes_;
-    int32_t port_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_host_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattributes_;
+    int32_t a_port_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAltService_2eproto;
@@ -370,180 +370,180 @@ class Msg_ProcessHeader final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProxyInfoFieldNumber = 7,
-    kBufFieldNumber = 1,
-    kOriginSchemeFieldNumber = 2,
-    kOriginHostFieldNumber = 3,
-    kUsernameFieldNumber = 5,
-    kOriginAttributesFieldNumber = 9,
-    kConnInfoArgsFieldNumber = 10,
-    kOriginPortFieldNumber = 4,
-    kPrivateBrowsingFieldNumber = 6,
-    kCapsFieldNumber = 8,
+    kAProxyInfoFieldNumber = 7,
+    kABufFieldNumber = 1,
+    kAOriginSchemeFieldNumber = 2,
+    kAOriginHostFieldNumber = 3,
+    kAUsernameFieldNumber = 5,
+    kAOriginAttributesFieldNumber = 9,
+    kAConnInfoArgsFieldNumber = 10,
+    kAOriginPortFieldNumber = 4,
+    kAPrivateBrowsingFieldNumber = 6,
+    kACapsFieldNumber = 8,
   };
-  // repeated .protobuf.mozilla.net.ProxyInfoCloneArgs proxyInfo = 7;
-  int proxyinfo_size() const;
+  // repeated .protobuf.mozilla.net.ProxyInfoCloneArgs a_proxyInfo = 7;
+  int a_proxyinfo_size() const;
   private:
-  int _internal_proxyinfo_size() const;
+  int _internal_a_proxyinfo_size() const;
   public:
-  void clear_proxyinfo();
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* mutable_proxyinfo(int index);
+  void clear_a_proxyinfo();
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* mutable_a_proxyinfo(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >*
-      mutable_proxyinfo();
+      mutable_a_proxyinfo();
   private:
-  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& _internal_proxyinfo(int index) const;
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _internal_add_proxyinfo();
+  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& _internal_a_proxyinfo(int index) const;
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _internal_add_a_proxyinfo();
   public:
-  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& proxyinfo(int index) const;
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* add_proxyinfo();
+  const ::protobuf::mozilla::net::ProxyInfoCloneArgs& a_proxyinfo(int index) const;
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* add_a_proxyinfo();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
-      proxyinfo() const;
+      a_proxyinfo() const;
 
-  // required bytes buf = 1;
-  bool has_buf() const;
+  // required bytes a_buf = 1;
+  bool has_a_buf() const;
   private:
-  bool _internal_has_buf() const;
+  bool _internal_has_a_buf() const;
   public:
-  void clear_buf();
-  const std::string& buf() const;
+  void clear_a_buf();
+  const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_buf(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_buf();
-  PROTOBUF_NODISCARD std::string* release_buf();
-  void set_allocated_buf(std::string* buf);
+  void set_a_buf(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_buf();
+  PROTOBUF_NODISCARD std::string* release_a_buf();
+  void set_allocated_a_buf(std::string* a_buf);
   private:
-  const std::string& _internal_buf() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_buf(const std::string& value);
-  std::string* _internal_mutable_buf();
+  const std::string& _internal_a_buf() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_buf(const std::string& value);
+  std::string* _internal_mutable_a_buf();
   public:
 
-  // required bytes originScheme = 2;
-  bool has_originscheme() const;
+  // required bytes a_originScheme = 2;
+  bool has_a_originscheme() const;
   private:
-  bool _internal_has_originscheme() const;
+  bool _internal_has_a_originscheme() const;
   public:
-  void clear_originscheme();
-  const std::string& originscheme() const;
+  void clear_a_originscheme();
+  const std::string& a_originscheme() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originscheme(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originscheme();
-  PROTOBUF_NODISCARD std::string* release_originscheme();
-  void set_allocated_originscheme(std::string* originscheme);
+  void set_a_originscheme(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originscheme();
+  PROTOBUF_NODISCARD std::string* release_a_originscheme();
+  void set_allocated_a_originscheme(std::string* a_originscheme);
   private:
-  const std::string& _internal_originscheme() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originscheme(const std::string& value);
-  std::string* _internal_mutable_originscheme();
+  const std::string& _internal_a_originscheme() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originscheme(const std::string& value);
+  std::string* _internal_mutable_a_originscheme();
   public:
 
-  // required bytes originHost = 3;
-  bool has_originhost() const;
+  // required bytes a_originHost = 3;
+  bool has_a_originhost() const;
   private:
-  bool _internal_has_originhost() const;
+  bool _internal_has_a_originhost() const;
   public:
-  void clear_originhost();
-  const std::string& originhost() const;
+  void clear_a_originhost();
+  const std::string& a_originhost() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originhost(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originhost();
-  PROTOBUF_NODISCARD std::string* release_originhost();
-  void set_allocated_originhost(std::string* originhost);
+  void set_a_originhost(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originhost();
+  PROTOBUF_NODISCARD std::string* release_a_originhost();
+  void set_allocated_a_originhost(std::string* a_originhost);
   private:
-  const std::string& _internal_originhost() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originhost(const std::string& value);
-  std::string* _internal_mutable_originhost();
+  const std::string& _internal_a_originhost() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originhost(const std::string& value);
+  std::string* _internal_mutable_a_originhost();
   public:
 
-  // required bytes username = 5;
-  bool has_username() const;
+  // required bytes a_username = 5;
+  bool has_a_username() const;
   private:
-  bool _internal_has_username() const;
+  bool _internal_has_a_username() const;
   public:
-  void clear_username();
-  const std::string& username() const;
+  void clear_a_username();
+  const std::string& a_username() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_username(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_username();
-  PROTOBUF_NODISCARD std::string* release_username();
-  void set_allocated_username(std::string* username);
+  void set_a_username(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_username();
+  PROTOBUF_NODISCARD std::string* release_a_username();
+  void set_allocated_a_username(std::string* a_username);
   private:
-  const std::string& _internal_username() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_username(const std::string& value);
-  std::string* _internal_mutable_username();
+  const std::string& _internal_a_username() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_username(const std::string& value);
+  std::string* _internal_mutable_a_username();
   public:
 
-  // required bytes originAttributes = 9;
-  bool has_originattributes() const;
+  // required bytes a_originAttributes = 9;
+  bool has_a_originattributes() const;
   private:
-  bool _internal_has_originattributes() const;
+  bool _internal_has_a_originattributes() const;
   public:
-  void clear_originattributes();
-  const std::string& originattributes() const;
+  void clear_a_originattributes();
+  const std::string& a_originattributes() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originattributes(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originattributes();
-  PROTOBUF_NODISCARD std::string* release_originattributes();
-  void set_allocated_originattributes(std::string* originattributes);
+  void set_a_originattributes(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originattributes();
+  PROTOBUF_NODISCARD std::string* release_a_originattributes();
+  void set_allocated_a_originattributes(std::string* a_originattributes);
   private:
-  const std::string& _internal_originattributes() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originattributes(const std::string& value);
-  std::string* _internal_mutable_originattributes();
+  const std::string& _internal_a_originattributes() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originattributes(const std::string& value);
+  std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs connInfoArgs = 10;
-  bool has_conninfoargs() const;
+  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 10;
+  bool has_a_conninfoargs() const;
   private:
-  bool _internal_has_conninfoargs() const;
+  bool _internal_has_a_conninfoargs() const;
   public:
-  void clear_conninfoargs();
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& conninfoargs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_conninfoargs();
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_conninfoargs();
-  void set_allocated_conninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs);
+  void clear_a_conninfoargs();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& a_conninfoargs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* release_a_conninfoargs();
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* mutable_a_conninfoargs();
+  void set_allocated_a_conninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs);
   private:
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_conninfoargs() const;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_conninfoargs();
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& _internal_a_conninfoargs() const;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _internal_mutable_a_conninfoargs();
   public:
-  void unsafe_arena_set_allocated_conninfoargs(
-      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs);
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_conninfoargs();
+  void unsafe_arena_set_allocated_a_conninfoargs(
+      ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs);
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_conninfoargs();
 
-  // required sint32 originPort = 4;
-  bool has_originport() const;
+  // required sint32 a_originPort = 4;
+  bool has_a_originport() const;
   private:
-  bool _internal_has_originport() const;
+  bool _internal_has_a_originport() const;
   public:
-  void clear_originport();
-  int32_t originport() const;
-  void set_originport(int32_t value);
+  void clear_a_originport();
+  int32_t a_originport() const;
+  void set_a_originport(int32_t value);
   private:
-  int32_t _internal_originport() const;
-  void _internal_set_originport(int32_t value);
-  public:
-
-  // required bool privateBrowsing = 6;
-  bool has_privatebrowsing() const;
-  private:
-  bool _internal_has_privatebrowsing() const;
-  public:
-  void clear_privatebrowsing();
-  bool privatebrowsing() const;
-  void set_privatebrowsing(bool value);
-  private:
-  bool _internal_privatebrowsing() const;
-  void _internal_set_privatebrowsing(bool value);
+  int32_t _internal_a_originport() const;
+  void _internal_set_a_originport(int32_t value);
   public:
 
-  // required uint32 caps = 8;
-  bool has_caps() const;
+  // required bool a_privateBrowsing = 6;
+  bool has_a_privatebrowsing() const;
   private:
-  bool _internal_has_caps() const;
+  bool _internal_has_a_privatebrowsing() const;
   public:
-  void clear_caps();
-  uint32_t caps() const;
-  void set_caps(uint32_t value);
+  void clear_a_privatebrowsing();
+  bool a_privatebrowsing() const;
+  void set_a_privatebrowsing(bool value);
   private:
-  uint32_t _internal_caps() const;
-  void _internal_set_caps(uint32_t value);
+  bool _internal_a_privatebrowsing() const;
+  void _internal_set_a_privatebrowsing(bool value);
+  public:
+
+  // required uint32 a_caps = 8;
+  bool has_a_caps() const;
+  private:
+  bool _internal_has_a_caps() const;
+  public:
+  void clear_a_caps();
+  uint32_t a_caps() const;
+  void set_a_caps(uint32_t value);
+  private:
+  uint32_t _internal_a_caps() const;
+  void _internal_set_a_caps(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PAltService.Msg_ProcessHeader)
@@ -559,16 +559,16 @@ class Msg_ProcessHeader final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs > proxyinfo_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr buf_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originscheme_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originhost_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originattributes_;
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs_;
-    int32_t originport_;
-    bool privatebrowsing_;
-    uint32_t caps_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs > a_proxyinfo_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originscheme_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originhost_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_username_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattributes_;
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs_;
+    int32_t a_originport_;
+    bool a_privatebrowsing_;
+    uint32_t a_caps_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAltService_2eproto;
@@ -832,670 +832,670 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_ClearHostMapping
 
-// required bytes host = 1;
-inline bool Msg_ClearHostMapping::_internal_has_host() const {
+// required bytes a_host = 1;
+inline bool Msg_ClearHostMapping::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ClearHostMapping::has_host() const {
-  return _internal_has_host();
+inline bool Msg_ClearHostMapping::has_a_host() const {
+  return _internal_has_a_host();
 }
-inline void Msg_ClearHostMapping::clear_host() {
-  _impl_.host_.ClearToEmpty();
+inline void Msg_ClearHostMapping::clear_a_host() {
+  _impl_.a_host_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ClearHostMapping::host() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.host)
-  return _internal_host();
+inline const std::string& Msg_ClearHostMapping::a_host() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
+  return _internal_a_host();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ClearHostMapping::set_host(ArgT0&& arg0, ArgT... args) {
+void Msg_ClearHostMapping::set_a_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.host)
+ _impl_.a_host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
 }
-inline std::string* Msg_ClearHostMapping::mutable_host() {
-  std::string* _s = _internal_mutable_host();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.host)
+inline std::string* Msg_ClearHostMapping::mutable_a_host() {
+  std::string* _s = _internal_mutable_a_host();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
   return _s;
 }
-inline const std::string& Msg_ClearHostMapping::_internal_host() const {
-  return _impl_.host_.Get();
+inline const std::string& Msg_ClearHostMapping::_internal_a_host() const {
+  return _impl_.a_host_.Get();
 }
-inline void Msg_ClearHostMapping::_internal_set_host(const std::string& value) {
+inline void Msg_ClearHostMapping::_internal_set_a_host(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.host_.Set(value, GetArenaForAllocation());
+  _impl_.a_host_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ClearHostMapping::_internal_mutable_host() {
+inline std::string* Msg_ClearHostMapping::_internal_mutable_a_host() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.host_.Mutable(GetArenaForAllocation());
+  return _impl_.a_host_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ClearHostMapping::release_host() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.host)
-  if (!_internal_has_host()) {
+inline std::string* Msg_ClearHostMapping::release_a_host() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
+  if (!_internal_has_a_host()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.host_.Release();
+  auto* p = _impl_.a_host_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.host_.IsDefault()) {
-    _impl_.host_.Set("", GetArenaForAllocation());
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ClearHostMapping::set_allocated_host(std::string* host) {
-  if (host != nullptr) {
+inline void Msg_ClearHostMapping::set_allocated_a_host(std::string* a_host) {
+  if (a_host != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.host_.SetAllocated(host, GetArenaForAllocation());
+  _impl_.a_host_.SetAllocated(a_host, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.host_.IsDefault()) {
-    _impl_.host_.Set("", GetArenaForAllocation());
+  if (_impl_.a_host_.IsDefault()) {
+    _impl_.a_host_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.host)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
 }
 
-// required sint32 port = 2;
-inline bool Msg_ClearHostMapping::_internal_has_port() const {
+// required sint32 a_port = 2;
+inline bool Msg_ClearHostMapping::_internal_has_a_port() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ClearHostMapping::has_port() const {
-  return _internal_has_port();
+inline bool Msg_ClearHostMapping::has_a_port() const {
+  return _internal_has_a_port();
 }
-inline void Msg_ClearHostMapping::clear_port() {
-  _impl_.port_ = 0;
+inline void Msg_ClearHostMapping::clear_a_port() {
+  _impl_.a_port_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t Msg_ClearHostMapping::_internal_port() const {
-  return _impl_.port_;
+inline int32_t Msg_ClearHostMapping::_internal_a_port() const {
+  return _impl_.a_port_;
 }
-inline int32_t Msg_ClearHostMapping::port() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.port)
-  return _internal_port();
+inline int32_t Msg_ClearHostMapping::a_port() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_port)
+  return _internal_a_port();
 }
-inline void Msg_ClearHostMapping::_internal_set_port(int32_t value) {
+inline void Msg_ClearHostMapping::_internal_set_a_port(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.port_ = value;
+  _impl_.a_port_ = value;
 }
-inline void Msg_ClearHostMapping::set_port(int32_t value) {
-  _internal_set_port(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.port)
+inline void Msg_ClearHostMapping::set_a_port(int32_t value) {
+  _internal_set_a_port(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_port)
 }
 
-// required bytes originAttributes = 3;
-inline bool Msg_ClearHostMapping::_internal_has_originattributes() const {
+// required bytes a_originAttributes = 3;
+inline bool Msg_ClearHostMapping::_internal_has_a_originattributes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ClearHostMapping::has_originattributes() const {
-  return _internal_has_originattributes();
+inline bool Msg_ClearHostMapping::has_a_originattributes() const {
+  return _internal_has_a_originattributes();
 }
-inline void Msg_ClearHostMapping::clear_originattributes() {
-  _impl_.originattributes_.ClearToEmpty();
+inline void Msg_ClearHostMapping::clear_a_originattributes() {
+  _impl_.a_originattributes_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ClearHostMapping::originattributes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.originAttributes)
-  return _internal_originattributes();
+inline const std::string& Msg_ClearHostMapping::a_originattributes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_originAttributes)
+  return _internal_a_originattributes();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ClearHostMapping::set_originattributes(ArgT0&& arg0, ArgT... args) {
+void Msg_ClearHostMapping::set_a_originattributes(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.originAttributes)
+ _impl_.a_originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_originAttributes)
 }
-inline std::string* Msg_ClearHostMapping::mutable_originattributes() {
-  std::string* _s = _internal_mutable_originattributes();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.originAttributes)
+inline std::string* Msg_ClearHostMapping::mutable_a_originattributes() {
+  std::string* _s = _internal_mutable_a_originattributes();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_originAttributes)
   return _s;
 }
-inline const std::string& Msg_ClearHostMapping::_internal_originattributes() const {
-  return _impl_.originattributes_.Get();
+inline const std::string& Msg_ClearHostMapping::_internal_a_originattributes() const {
+  return _impl_.a_originattributes_.Get();
 }
-inline void Msg_ClearHostMapping::_internal_set_originattributes(const std::string& value) {
+inline void Msg_ClearHostMapping::_internal_set_a_originattributes(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.originattributes_.Set(value, GetArenaForAllocation());
+  _impl_.a_originattributes_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ClearHostMapping::_internal_mutable_originattributes() {
+inline std::string* Msg_ClearHostMapping::_internal_mutable_a_originattributes() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.originattributes_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originattributes_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ClearHostMapping::release_originattributes() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.originAttributes)
-  if (!_internal_has_originattributes()) {
+inline std::string* Msg_ClearHostMapping::release_a_originattributes() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_originAttributes)
+  if (!_internal_has_a_originattributes()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.originattributes_.Release();
+  auto* p = _impl_.a_originattributes_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributes_.IsDefault()) {
-    _impl_.originattributes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributes_.IsDefault()) {
+    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ClearHostMapping::set_allocated_originattributes(std::string* originattributes) {
-  if (originattributes != nullptr) {
+inline void Msg_ClearHostMapping::set_allocated_a_originattributes(std::string* a_originattributes) {
+  if (a_originattributes != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.originattributes_.SetAllocated(originattributes, GetArenaForAllocation());
+  _impl_.a_originattributes_.SetAllocated(a_originattributes, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributes_.IsDefault()) {
-    _impl_.originattributes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributes_.IsDefault()) {
+    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.originAttributes)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_originAttributes)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ProcessHeader
 
-// required bytes buf = 1;
-inline bool Msg_ProcessHeader::_internal_has_buf() const {
+// required bytes a_buf = 1;
+inline bool Msg_ProcessHeader::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_buf() const {
-  return _internal_has_buf();
+inline bool Msg_ProcessHeader::has_a_buf() const {
+  return _internal_has_a_buf();
 }
-inline void Msg_ProcessHeader::clear_buf() {
-  _impl_.buf_.ClearToEmpty();
+inline void Msg_ProcessHeader::clear_a_buf() {
+  _impl_.a_buf_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_ProcessHeader::buf() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.buf)
-  return _internal_buf();
+inline const std::string& Msg_ProcessHeader::a_buf() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
+  return _internal_a_buf();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ProcessHeader::set_buf(ArgT0&& arg0, ArgT... args) {
+void Msg_ProcessHeader::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.buf)
+ _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
 }
-inline std::string* Msg_ProcessHeader::mutable_buf() {
-  std::string* _s = _internal_mutable_buf();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.buf)
+inline std::string* Msg_ProcessHeader::mutable_a_buf() {
+  std::string* _s = _internal_mutable_a_buf();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
   return _s;
 }
-inline const std::string& Msg_ProcessHeader::_internal_buf() const {
-  return _impl_.buf_.Get();
+inline const std::string& Msg_ProcessHeader::_internal_a_buf() const {
+  return _impl_.a_buf_.Get();
 }
-inline void Msg_ProcessHeader::_internal_set_buf(const std::string& value) {
+inline void Msg_ProcessHeader::_internal_set_a_buf(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.buf_.Set(value, GetArenaForAllocation());
+  _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::_internal_mutable_buf() {
+inline std::string* Msg_ProcessHeader::_internal_mutable_a_buf() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.buf_.Mutable(GetArenaForAllocation());
+  return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::release_buf() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.buf)
-  if (!_internal_has_buf()) {
+inline std::string* Msg_ProcessHeader::release_a_buf() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
+  if (!_internal_has_a_buf()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.buf_.Release();
+  auto* p = _impl_.a_buf_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ProcessHeader::set_allocated_buf(std::string* buf) {
-  if (buf != nullptr) {
+inline void Msg_ProcessHeader::set_allocated_a_buf(std::string* a_buf) {
+  if (a_buf != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.buf_.SetAllocated(buf, GetArenaForAllocation());
+  _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.buf_.IsDefault()) {
-    _impl_.buf_.Set("", GetArenaForAllocation());
+  if (_impl_.a_buf_.IsDefault()) {
+    _impl_.a_buf_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.buf)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
 }
 
-// required bytes originScheme = 2;
-inline bool Msg_ProcessHeader::_internal_has_originscheme() const {
+// required bytes a_originScheme = 2;
+inline bool Msg_ProcessHeader::_internal_has_a_originscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_originscheme() const {
-  return _internal_has_originscheme();
+inline bool Msg_ProcessHeader::has_a_originscheme() const {
+  return _internal_has_a_originscheme();
 }
-inline void Msg_ProcessHeader::clear_originscheme() {
-  _impl_.originscheme_.ClearToEmpty();
+inline void Msg_ProcessHeader::clear_a_originscheme() {
+  _impl_.a_originscheme_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_ProcessHeader::originscheme() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originScheme)
-  return _internal_originscheme();
+inline const std::string& Msg_ProcessHeader::a_originscheme() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
+  return _internal_a_originscheme();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ProcessHeader::set_originscheme(ArgT0&& arg0, ArgT... args) {
+void Msg_ProcessHeader::set_a_originscheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.originscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originScheme)
+ _impl_.a_originscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
 }
-inline std::string* Msg_ProcessHeader::mutable_originscheme() {
-  std::string* _s = _internal_mutable_originscheme();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originScheme)
+inline std::string* Msg_ProcessHeader::mutable_a_originscheme() {
+  std::string* _s = _internal_mutable_a_originscheme();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
   return _s;
 }
-inline const std::string& Msg_ProcessHeader::_internal_originscheme() const {
-  return _impl_.originscheme_.Get();
+inline const std::string& Msg_ProcessHeader::_internal_a_originscheme() const {
+  return _impl_.a_originscheme_.Get();
 }
-inline void Msg_ProcessHeader::_internal_set_originscheme(const std::string& value) {
+inline void Msg_ProcessHeader::_internal_set_a_originscheme(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.originscheme_.Set(value, GetArenaForAllocation());
+  _impl_.a_originscheme_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::_internal_mutable_originscheme() {
+inline std::string* Msg_ProcessHeader::_internal_mutable_a_originscheme() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.originscheme_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originscheme_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::release_originscheme() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originScheme)
-  if (!_internal_has_originscheme()) {
+inline std::string* Msg_ProcessHeader::release_a_originscheme() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
+  if (!_internal_has_a_originscheme()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.originscheme_.Release();
+  auto* p = _impl_.a_originscheme_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originscheme_.IsDefault()) {
-    _impl_.originscheme_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originscheme_.IsDefault()) {
+    _impl_.a_originscheme_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ProcessHeader::set_allocated_originscheme(std::string* originscheme) {
-  if (originscheme != nullptr) {
+inline void Msg_ProcessHeader::set_allocated_a_originscheme(std::string* a_originscheme) {
+  if (a_originscheme != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.originscheme_.SetAllocated(originscheme, GetArenaForAllocation());
+  _impl_.a_originscheme_.SetAllocated(a_originscheme, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originscheme_.IsDefault()) {
-    _impl_.originscheme_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originscheme_.IsDefault()) {
+    _impl_.a_originscheme_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originScheme)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
 }
 
-// required bytes originHost = 3;
-inline bool Msg_ProcessHeader::_internal_has_originhost() const {
+// required bytes a_originHost = 3;
+inline bool Msg_ProcessHeader::_internal_has_a_originhost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_originhost() const {
-  return _internal_has_originhost();
+inline bool Msg_ProcessHeader::has_a_originhost() const {
+  return _internal_has_a_originhost();
 }
-inline void Msg_ProcessHeader::clear_originhost() {
-  _impl_.originhost_.ClearToEmpty();
+inline void Msg_ProcessHeader::clear_a_originhost() {
+  _impl_.a_originhost_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_ProcessHeader::originhost() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originHost)
-  return _internal_originhost();
+inline const std::string& Msg_ProcessHeader::a_originhost() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
+  return _internal_a_originhost();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ProcessHeader::set_originhost(ArgT0&& arg0, ArgT... args) {
+void Msg_ProcessHeader::set_a_originhost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.originhost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originHost)
+ _impl_.a_originhost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
 }
-inline std::string* Msg_ProcessHeader::mutable_originhost() {
-  std::string* _s = _internal_mutable_originhost();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originHost)
+inline std::string* Msg_ProcessHeader::mutable_a_originhost() {
+  std::string* _s = _internal_mutable_a_originhost();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
   return _s;
 }
-inline const std::string& Msg_ProcessHeader::_internal_originhost() const {
-  return _impl_.originhost_.Get();
+inline const std::string& Msg_ProcessHeader::_internal_a_originhost() const {
+  return _impl_.a_originhost_.Get();
 }
-inline void Msg_ProcessHeader::_internal_set_originhost(const std::string& value) {
+inline void Msg_ProcessHeader::_internal_set_a_originhost(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.originhost_.Set(value, GetArenaForAllocation());
+  _impl_.a_originhost_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::_internal_mutable_originhost() {
+inline std::string* Msg_ProcessHeader::_internal_mutable_a_originhost() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.originhost_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originhost_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::release_originhost() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originHost)
-  if (!_internal_has_originhost()) {
+inline std::string* Msg_ProcessHeader::release_a_originhost() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
+  if (!_internal_has_a_originhost()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.originhost_.Release();
+  auto* p = _impl_.a_originhost_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originhost_.IsDefault()) {
-    _impl_.originhost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originhost_.IsDefault()) {
+    _impl_.a_originhost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ProcessHeader::set_allocated_originhost(std::string* originhost) {
-  if (originhost != nullptr) {
+inline void Msg_ProcessHeader::set_allocated_a_originhost(std::string* a_originhost) {
+  if (a_originhost != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.originhost_.SetAllocated(originhost, GetArenaForAllocation());
+  _impl_.a_originhost_.SetAllocated(a_originhost, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originhost_.IsDefault()) {
-    _impl_.originhost_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originhost_.IsDefault()) {
+    _impl_.a_originhost_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originHost)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
 }
 
-// required sint32 originPort = 4;
-inline bool Msg_ProcessHeader::_internal_has_originport() const {
+// required sint32 a_originPort = 4;
+inline bool Msg_ProcessHeader::_internal_has_a_originport() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_originport() const {
-  return _internal_has_originport();
+inline bool Msg_ProcessHeader::has_a_originport() const {
+  return _internal_has_a_originport();
 }
-inline void Msg_ProcessHeader::clear_originport() {
-  _impl_.originport_ = 0;
+inline void Msg_ProcessHeader::clear_a_originport() {
+  _impl_.a_originport_ = 0;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline int32_t Msg_ProcessHeader::_internal_originport() const {
-  return _impl_.originport_;
+inline int32_t Msg_ProcessHeader::_internal_a_originport() const {
+  return _impl_.a_originport_;
 }
-inline int32_t Msg_ProcessHeader::originport() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originPort)
-  return _internal_originport();
+inline int32_t Msg_ProcessHeader::a_originport() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originPort)
+  return _internal_a_originport();
 }
-inline void Msg_ProcessHeader::_internal_set_originport(int32_t value) {
+inline void Msg_ProcessHeader::_internal_set_a_originport(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.originport_ = value;
+  _impl_.a_originport_ = value;
 }
-inline void Msg_ProcessHeader::set_originport(int32_t value) {
-  _internal_set_originport(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originPort)
+inline void Msg_ProcessHeader::set_a_originport(int32_t value) {
+  _internal_set_a_originport(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originPort)
 }
 
-// required bytes username = 5;
-inline bool Msg_ProcessHeader::_internal_has_username() const {
+// required bytes a_username = 5;
+inline bool Msg_ProcessHeader::_internal_has_a_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_username() const {
-  return _internal_has_username();
+inline bool Msg_ProcessHeader::has_a_username() const {
+  return _internal_has_a_username();
 }
-inline void Msg_ProcessHeader::clear_username() {
-  _impl_.username_.ClearToEmpty();
+inline void Msg_ProcessHeader::clear_a_username() {
+  _impl_.a_username_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const std::string& Msg_ProcessHeader::username() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.username)
-  return _internal_username();
+inline const std::string& Msg_ProcessHeader::a_username() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
+  return _internal_a_username();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ProcessHeader::set_username(ArgT0&& arg0, ArgT... args) {
+void Msg_ProcessHeader::set_a_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.username_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.username)
+ _impl_.a_username_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
 }
-inline std::string* Msg_ProcessHeader::mutable_username() {
-  std::string* _s = _internal_mutable_username();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.username)
+inline std::string* Msg_ProcessHeader::mutable_a_username() {
+  std::string* _s = _internal_mutable_a_username();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
   return _s;
 }
-inline const std::string& Msg_ProcessHeader::_internal_username() const {
-  return _impl_.username_.Get();
+inline const std::string& Msg_ProcessHeader::_internal_a_username() const {
+  return _impl_.a_username_.Get();
 }
-inline void Msg_ProcessHeader::_internal_set_username(const std::string& value) {
+inline void Msg_ProcessHeader::_internal_set_a_username(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.username_.Set(value, GetArenaForAllocation());
+  _impl_.a_username_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::_internal_mutable_username() {
+inline std::string* Msg_ProcessHeader::_internal_mutable_a_username() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  return _impl_.username_.Mutable(GetArenaForAllocation());
+  return _impl_.a_username_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::release_username() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.username)
-  if (!_internal_has_username()) {
+inline std::string* Msg_ProcessHeader::release_a_username() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
+  if (!_internal_has_a_username()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.username_.Release();
+  auto* p = _impl_.a_username_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.username_.IsDefault()) {
-    _impl_.username_.Set("", GetArenaForAllocation());
+  if (_impl_.a_username_.IsDefault()) {
+    _impl_.a_username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ProcessHeader::set_allocated_username(std::string* username) {
-  if (username != nullptr) {
+inline void Msg_ProcessHeader::set_allocated_a_username(std::string* a_username) {
+  if (a_username != nullptr) {
     _impl_._has_bits_[0] |= 0x00000008u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
-  _impl_.username_.SetAllocated(username, GetArenaForAllocation());
+  _impl_.a_username_.SetAllocated(a_username, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.username_.IsDefault()) {
-    _impl_.username_.Set("", GetArenaForAllocation());
+  if (_impl_.a_username_.IsDefault()) {
+    _impl_.a_username_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.username)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
 }
 
-// required bool privateBrowsing = 6;
-inline bool Msg_ProcessHeader::_internal_has_privatebrowsing() const {
+// required bool a_privateBrowsing = 6;
+inline bool Msg_ProcessHeader::_internal_has_a_privatebrowsing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_privatebrowsing() const {
-  return _internal_has_privatebrowsing();
+inline bool Msg_ProcessHeader::has_a_privatebrowsing() const {
+  return _internal_has_a_privatebrowsing();
 }
-inline void Msg_ProcessHeader::clear_privatebrowsing() {
-  _impl_.privatebrowsing_ = false;
+inline void Msg_ProcessHeader::clear_a_privatebrowsing() {
+  _impl_.a_privatebrowsing_ = false;
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline bool Msg_ProcessHeader::_internal_privatebrowsing() const {
-  return _impl_.privatebrowsing_;
+inline bool Msg_ProcessHeader::_internal_a_privatebrowsing() const {
+  return _impl_.a_privatebrowsing_;
 }
-inline bool Msg_ProcessHeader::privatebrowsing() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.privateBrowsing)
-  return _internal_privatebrowsing();
+inline bool Msg_ProcessHeader::a_privatebrowsing() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_privateBrowsing)
+  return _internal_a_privatebrowsing();
 }
-inline void Msg_ProcessHeader::_internal_set_privatebrowsing(bool value) {
+inline void Msg_ProcessHeader::_internal_set_a_privatebrowsing(bool value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.privatebrowsing_ = value;
+  _impl_.a_privatebrowsing_ = value;
 }
-inline void Msg_ProcessHeader::set_privatebrowsing(bool value) {
-  _internal_set_privatebrowsing(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.privateBrowsing)
+inline void Msg_ProcessHeader::set_a_privatebrowsing(bool value) {
+  _internal_set_a_privatebrowsing(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_privateBrowsing)
 }
 
-// repeated .protobuf.mozilla.net.ProxyInfoCloneArgs proxyInfo = 7;
-inline int Msg_ProcessHeader::_internal_proxyinfo_size() const {
-  return _impl_.proxyinfo_.size();
+// repeated .protobuf.mozilla.net.ProxyInfoCloneArgs a_proxyInfo = 7;
+inline int Msg_ProcessHeader::_internal_a_proxyinfo_size() const {
+  return _impl_.a_proxyinfo_.size();
 }
-inline int Msg_ProcessHeader::proxyinfo_size() const {
-  return _internal_proxyinfo_size();
+inline int Msg_ProcessHeader::a_proxyinfo_size() const {
+  return _internal_a_proxyinfo_size();
 }
-inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg_ProcessHeader::mutable_proxyinfo(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.proxyInfo)
-  return _impl_.proxyinfo_.Mutable(index);
+inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg_ProcessHeader::mutable_a_proxyinfo(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_proxyInfo)
+  return _impl_.a_proxyinfo_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >*
-Msg_ProcessHeader::mutable_proxyinfo() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.proxyInfo)
-  return &_impl_.proxyinfo_;
+Msg_ProcessHeader::mutable_a_proxyinfo() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_proxyInfo)
+  return &_impl_.a_proxyinfo_;
 }
-inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg_ProcessHeader::_internal_proxyinfo(int index) const {
-  return _impl_.proxyinfo_.Get(index);
+inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg_ProcessHeader::_internal_a_proxyinfo(int index) const {
+  return _impl_.a_proxyinfo_.Get(index);
 }
-inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg_ProcessHeader::proxyinfo(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.proxyInfo)
-  return _internal_proxyinfo(index);
+inline const ::protobuf::mozilla::net::ProxyInfoCloneArgs& Msg_ProcessHeader::a_proxyinfo(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_proxyInfo)
+  return _internal_a_proxyinfo(index);
 }
-inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg_ProcessHeader::_internal_add_proxyinfo() {
-  return _impl_.proxyinfo_.Add();
+inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg_ProcessHeader::_internal_add_a_proxyinfo() {
+  return _impl_.a_proxyinfo_.Add();
 }
-inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg_ProcessHeader::add_proxyinfo() {
-  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _add = _internal_add_proxyinfo();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.proxyInfo)
+inline ::protobuf::mozilla::net::ProxyInfoCloneArgs* Msg_ProcessHeader::add_a_proxyinfo() {
+  ::protobuf::mozilla::net::ProxyInfoCloneArgs* _add = _internal_add_a_proxyinfo();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_proxyInfo)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
-Msg_ProcessHeader::proxyinfo() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.proxyInfo)
-  return _impl_.proxyinfo_;
+Msg_ProcessHeader::a_proxyinfo() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_proxyInfo)
+  return _impl_.a_proxyinfo_;
 }
 
-// required uint32 caps = 8;
-inline bool Msg_ProcessHeader::_internal_has_caps() const {
+// required uint32 a_caps = 8;
+inline bool Msg_ProcessHeader::_internal_has_a_caps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_caps() const {
-  return _internal_has_caps();
+inline bool Msg_ProcessHeader::has_a_caps() const {
+  return _internal_has_a_caps();
 }
-inline void Msg_ProcessHeader::clear_caps() {
-  _impl_.caps_ = 0u;
+inline void Msg_ProcessHeader::clear_a_caps() {
+  _impl_.a_caps_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline uint32_t Msg_ProcessHeader::_internal_caps() const {
-  return _impl_.caps_;
+inline uint32_t Msg_ProcessHeader::_internal_a_caps() const {
+  return _impl_.a_caps_;
 }
-inline uint32_t Msg_ProcessHeader::caps() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.caps)
-  return _internal_caps();
+inline uint32_t Msg_ProcessHeader::a_caps() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_caps)
+  return _internal_a_caps();
 }
-inline void Msg_ProcessHeader::_internal_set_caps(uint32_t value) {
+inline void Msg_ProcessHeader::_internal_set_a_caps(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.caps_ = value;
+  _impl_.a_caps_ = value;
 }
-inline void Msg_ProcessHeader::set_caps(uint32_t value) {
-  _internal_set_caps(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.caps)
+inline void Msg_ProcessHeader::set_a_caps(uint32_t value) {
+  _internal_set_a_caps(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_caps)
 }
 
-// required bytes originAttributes = 9;
-inline bool Msg_ProcessHeader::_internal_has_originattributes() const {
+// required bytes a_originAttributes = 9;
+inline bool Msg_ProcessHeader::_internal_has_a_originattributes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_ProcessHeader::has_originattributes() const {
-  return _internal_has_originattributes();
+inline bool Msg_ProcessHeader::has_a_originattributes() const {
+  return _internal_has_a_originattributes();
 }
-inline void Msg_ProcessHeader::clear_originattributes() {
-  _impl_.originattributes_.ClearToEmpty();
+inline void Msg_ProcessHeader::clear_a_originattributes() {
+  _impl_.a_originattributes_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline const std::string& Msg_ProcessHeader::originattributes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originAttributes)
-  return _internal_originattributes();
+inline const std::string& Msg_ProcessHeader::a_originattributes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originAttributes)
+  return _internal_a_originattributes();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_ProcessHeader::set_originattributes(ArgT0&& arg0, ArgT... args) {
+void Msg_ProcessHeader::set_a_originattributes(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originAttributes)
+ _impl_.a_originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originAttributes)
 }
-inline std::string* Msg_ProcessHeader::mutable_originattributes() {
-  std::string* _s = _internal_mutable_originattributes();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originAttributes)
+inline std::string* Msg_ProcessHeader::mutable_a_originattributes() {
+  std::string* _s = _internal_mutable_a_originattributes();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originAttributes)
   return _s;
 }
-inline const std::string& Msg_ProcessHeader::_internal_originattributes() const {
-  return _impl_.originattributes_.Get();
+inline const std::string& Msg_ProcessHeader::_internal_a_originattributes() const {
+  return _impl_.a_originattributes_.Get();
 }
-inline void Msg_ProcessHeader::_internal_set_originattributes(const std::string& value) {
+inline void Msg_ProcessHeader::_internal_set_a_originattributes(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.originattributes_.Set(value, GetArenaForAllocation());
+  _impl_.a_originattributes_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::_internal_mutable_originattributes() {
+inline std::string* Msg_ProcessHeader::_internal_mutable_a_originattributes() {
   _impl_._has_bits_[0] |= 0x00000010u;
-  return _impl_.originattributes_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originattributes_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_ProcessHeader::release_originattributes() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originAttributes)
-  if (!_internal_has_originattributes()) {
+inline std::string* Msg_ProcessHeader::release_a_originattributes() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originAttributes)
+  if (!_internal_has_a_originattributes()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.originattributes_.Release();
+  auto* p = _impl_.a_originattributes_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributes_.IsDefault()) {
-    _impl_.originattributes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributes_.IsDefault()) {
+    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_ProcessHeader::set_allocated_originattributes(std::string* originattributes) {
-  if (originattributes != nullptr) {
+inline void Msg_ProcessHeader::set_allocated_a_originattributes(std::string* a_originattributes) {
+  if (a_originattributes != nullptr) {
     _impl_._has_bits_[0] |= 0x00000010u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000010u;
   }
-  _impl_.originattributes_.SetAllocated(originattributes, GetArenaForAllocation());
+  _impl_.a_originattributes_.SetAllocated(a_originattributes, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributes_.IsDefault()) {
-    _impl_.originattributes_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributes_.IsDefault()) {
+    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.originAttributes)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originAttributes)
 }
 
-// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs connInfoArgs = 10;
-inline bool Msg_ProcessHeader::_internal_has_conninfoargs() const {
+// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 10;
+inline bool Msg_ProcessHeader::_internal_has_a_conninfoargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.conninfoargs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_conninfoargs_ != nullptr);
   return value;
 }
-inline bool Msg_ProcessHeader::has_conninfoargs() const {
-  return _internal_has_conninfoargs();
+inline bool Msg_ProcessHeader::has_a_conninfoargs() const {
+  return _internal_has_a_conninfoargs();
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ProcessHeader::_internal_conninfoargs() const {
-  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.conninfoargs_;
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ProcessHeader::_internal_a_conninfoargs() const {
+  const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* p = _impl_.a_conninfoargs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs&>(
       ::protobuf::mozilla::net::_HttpConnectionInfoCloneArgs_default_instance_);
 }
-inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ProcessHeader::conninfoargs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.connInfoArgs)
-  return _internal_conninfoargs();
+inline const ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs& Msg_ProcessHeader::a_conninfoargs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_connInfoArgs)
+  return _internal_a_conninfoargs();
 }
-inline void Msg_ProcessHeader::unsafe_arena_set_allocated_conninfoargs(
-    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs) {
+inline void Msg_ProcessHeader::unsafe_arena_set_allocated_a_conninfoargs(
+    ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.conninfoargs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_conninfoargs_);
   }
-  _impl_.conninfoargs_ = conninfoargs;
-  if (conninfoargs) {
+  _impl_.a_conninfoargs_ = a_conninfoargs;
+  if (a_conninfoargs) {
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.connInfoArgs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_connInfoArgs)
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::release_conninfoargs() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::release_a_conninfoargs() {
   _impl_._has_bits_[0] &= ~0x00000020u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.conninfoargs_;
-  _impl_.conninfoargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_conninfoargs_;
+  _impl_.a_conninfoargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1507,45 +1507,45 @@ inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader:
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::unsafe_arena_release_conninfoargs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.connInfoArgs)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::unsafe_arena_release_a_conninfoargs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_connInfoArgs)
   _impl_._has_bits_[0] &= ~0x00000020u;
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.conninfoargs_;
-  _impl_.conninfoargs_ = nullptr;
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_conninfoargs_;
+  _impl_.a_conninfoargs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::_internal_mutable_conninfoargs() {
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::_internal_mutable_a_conninfoargs() {
   _impl_._has_bits_[0] |= 0x00000020u;
-  if (_impl_.conninfoargs_ == nullptr) {
+  if (_impl_.a_conninfoargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpConnectionInfoCloneArgs>(GetArenaForAllocation());
-    _impl_.conninfoargs_ = p;
+    _impl_.a_conninfoargs_ = p;
   }
-  return _impl_.conninfoargs_;
+  return _impl_.a_conninfoargs_;
 }
-inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::mutable_conninfoargs() {
-  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_conninfoargs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.connInfoArgs)
+inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_ProcessHeader::mutable_a_conninfoargs() {
+  ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* _msg = _internal_mutable_a_conninfoargs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_connInfoArgs)
   return _msg;
 }
-inline void Msg_ProcessHeader::set_allocated_conninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* conninfoargs) {
+inline void Msg_ProcessHeader::set_allocated_a_conninfoargs(::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_conninfoargs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.conninfoargs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_conninfoargs_);
   }
-  if (conninfoargs) {
+  if (a_conninfoargs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(conninfoargs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_conninfoargs));
     if (message_arena != submessage_arena) {
-      conninfoargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, conninfoargs, submessage_arena);
+      a_conninfoargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_conninfoargs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000020u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000020u;
   }
-  _impl_.conninfoargs_ = conninfoargs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.connInfoArgs)
+  _impl_.a_conninfoargs_ = a_conninfoargs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_connInfoArgs)
 }
 
 // -------------------------------------------------------------------

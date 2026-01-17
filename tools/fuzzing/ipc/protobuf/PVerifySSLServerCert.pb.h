@@ -181,132 +181,132 @@ class Msg_OnVerifySSLServerCertFinished final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABuiltCertChainFieldNumber = 1,
-    kAEVStatusFieldNumber = 3,
-    kAOverridableErrorCategoryFieldNumber = 6,
-    kACertTransparencyStatusFieldNumber = 2,
-    kAFinalErrorFieldNumber = 5,
-    kASucceededFieldNumber = 4,
-    kAIsBuiltCertChainRootBuiltInRootFieldNumber = 7,
-    kAMadeOCSPRequestsFieldNumber = 8,
+    kAABuiltCertChainFieldNumber = 1,
+    kAAEVStatusFieldNumber = 3,
+    kAAOverridableErrorCategoryFieldNumber = 6,
+    kAACertTransparencyStatusFieldNumber = 2,
+    kAAFinalErrorFieldNumber = 5,
+    kAASucceededFieldNumber = 4,
+    kAAIsBuiltCertChainRootBuiltInRootFieldNumber = 7,
+    kAAMadeOCSPRequestsFieldNumber = 8,
   };
-  // repeated .protobuf.mozilla.psm.ByteArray aBuiltCertChain = 1;
-  int abuiltcertchain_size() const;
+  // repeated .protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
+  int a_abuiltcertchain_size() const;
   private:
-  int _internal_abuiltcertchain_size() const;
+  int _internal_a_abuiltcertchain_size() const;
   public:
-  void clear_abuiltcertchain();
-  ::protobuf::mozilla::psm::ByteArray* mutable_abuiltcertchain(int index);
+  void clear_a_abuiltcertchain();
+  ::protobuf::mozilla::psm::ByteArray* mutable_a_abuiltcertchain(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >*
-      mutable_abuiltcertchain();
+      mutable_a_abuiltcertchain();
   private:
-  const ::protobuf::mozilla::psm::ByteArray& _internal_abuiltcertchain(int index) const;
-  ::protobuf::mozilla::psm::ByteArray* _internal_add_abuiltcertchain();
+  const ::protobuf::mozilla::psm::ByteArray& _internal_a_abuiltcertchain(int index) const;
+  ::protobuf::mozilla::psm::ByteArray* _internal_add_a_abuiltcertchain();
   public:
-  const ::protobuf::mozilla::psm::ByteArray& abuiltcertchain(int index) const;
-  ::protobuf::mozilla::psm::ByteArray* add_abuiltcertchain();
+  const ::protobuf::mozilla::psm::ByteArray& a_abuiltcertchain(int index) const;
+  ::protobuf::mozilla::psm::ByteArray* add_a_abuiltcertchain();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >&
-      abuiltcertchain() const;
+      a_abuiltcertchain() const;
 
-  // required bytes aEVStatus = 3;
-  bool has_aevstatus() const;
+  // required bytes a_aEVStatus = 3;
+  bool has_a_aevstatus() const;
   private:
-  bool _internal_has_aevstatus() const;
+  bool _internal_has_a_aevstatus() const;
   public:
-  void clear_aevstatus();
-  const std::string& aevstatus() const;
+  void clear_a_aevstatus();
+  const std::string& a_aevstatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aevstatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aevstatus();
-  PROTOBUF_NODISCARD std::string* release_aevstatus();
-  void set_allocated_aevstatus(std::string* aevstatus);
+  void set_a_aevstatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aevstatus();
+  PROTOBUF_NODISCARD std::string* release_a_aevstatus();
+  void set_allocated_a_aevstatus(std::string* a_aevstatus);
   private:
-  const std::string& _internal_aevstatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aevstatus(const std::string& value);
-  std::string* _internal_mutable_aevstatus();
+  const std::string& _internal_a_aevstatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aevstatus(const std::string& value);
+  std::string* _internal_mutable_a_aevstatus();
   public:
 
-  // required bytes aOverridableErrorCategory = 6;
-  bool has_aoverridableerrorcategory() const;
+  // required bytes a_aOverridableErrorCategory = 6;
+  bool has_a_aoverridableerrorcategory() const;
   private:
-  bool _internal_has_aoverridableerrorcategory() const;
+  bool _internal_has_a_aoverridableerrorcategory() const;
   public:
-  void clear_aoverridableerrorcategory();
-  const std::string& aoverridableerrorcategory() const;
+  void clear_a_aoverridableerrorcategory();
+  const std::string& a_aoverridableerrorcategory() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aoverridableerrorcategory(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aoverridableerrorcategory();
-  PROTOBUF_NODISCARD std::string* release_aoverridableerrorcategory();
-  void set_allocated_aoverridableerrorcategory(std::string* aoverridableerrorcategory);
+  void set_a_aoverridableerrorcategory(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aoverridableerrorcategory();
+  PROTOBUF_NODISCARD std::string* release_a_aoverridableerrorcategory();
+  void set_allocated_a_aoverridableerrorcategory(std::string* a_aoverridableerrorcategory);
   private:
-  const std::string& _internal_aoverridableerrorcategory() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aoverridableerrorcategory(const std::string& value);
-  std::string* _internal_mutable_aoverridableerrorcategory();
+  const std::string& _internal_a_aoverridableerrorcategory() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aoverridableerrorcategory(const std::string& value);
+  std::string* _internal_mutable_a_aoverridableerrorcategory();
   public:
 
-  // required uint32 aCertTransparencyStatus = 2;
-  bool has_acerttransparencystatus() const;
+  // required uint32 a_aCertTransparencyStatus = 2;
+  bool has_a_acerttransparencystatus() const;
   private:
-  bool _internal_has_acerttransparencystatus() const;
+  bool _internal_has_a_acerttransparencystatus() const;
   public:
-  void clear_acerttransparencystatus();
-  uint32_t acerttransparencystatus() const;
-  void set_acerttransparencystatus(uint32_t value);
+  void clear_a_acerttransparencystatus();
+  uint32_t a_acerttransparencystatus() const;
+  void set_a_acerttransparencystatus(uint32_t value);
   private:
-  uint32_t _internal_acerttransparencystatus() const;
-  void _internal_set_acerttransparencystatus(uint32_t value);
-  public:
-
-  // required sint32 aFinalError = 5;
-  bool has_afinalerror() const;
-  private:
-  bool _internal_has_afinalerror() const;
-  public:
-  void clear_afinalerror();
-  int32_t afinalerror() const;
-  void set_afinalerror(int32_t value);
-  private:
-  int32_t _internal_afinalerror() const;
-  void _internal_set_afinalerror(int32_t value);
+  uint32_t _internal_a_acerttransparencystatus() const;
+  void _internal_set_a_acerttransparencystatus(uint32_t value);
   public:
 
-  // required bool aSucceeded = 4;
-  bool has_asucceeded() const;
+  // required sint32 a_aFinalError = 5;
+  bool has_a_afinalerror() const;
   private:
-  bool _internal_has_asucceeded() const;
+  bool _internal_has_a_afinalerror() const;
   public:
-  void clear_asucceeded();
-  bool asucceeded() const;
-  void set_asucceeded(bool value);
+  void clear_a_afinalerror();
+  int32_t a_afinalerror() const;
+  void set_a_afinalerror(int32_t value);
   private:
-  bool _internal_asucceeded() const;
-  void _internal_set_asucceeded(bool value);
-  public:
-
-  // required bool aIsBuiltCertChainRootBuiltInRoot = 7;
-  bool has_aisbuiltcertchainrootbuiltinroot() const;
-  private:
-  bool _internal_has_aisbuiltcertchainrootbuiltinroot() const;
-  public:
-  void clear_aisbuiltcertchainrootbuiltinroot();
-  bool aisbuiltcertchainrootbuiltinroot() const;
-  void set_aisbuiltcertchainrootbuiltinroot(bool value);
-  private:
-  bool _internal_aisbuiltcertchainrootbuiltinroot() const;
-  void _internal_set_aisbuiltcertchainrootbuiltinroot(bool value);
+  int32_t _internal_a_afinalerror() const;
+  void _internal_set_a_afinalerror(int32_t value);
   public:
 
-  // required bool aMadeOCSPRequests = 8;
-  bool has_amadeocsprequests() const;
+  // required bool a_aSucceeded = 4;
+  bool has_a_asucceeded() const;
   private:
-  bool _internal_has_amadeocsprequests() const;
+  bool _internal_has_a_asucceeded() const;
   public:
-  void clear_amadeocsprequests();
-  bool amadeocsprequests() const;
-  void set_amadeocsprequests(bool value);
+  void clear_a_asucceeded();
+  bool a_asucceeded() const;
+  void set_a_asucceeded(bool value);
   private:
-  bool _internal_amadeocsprequests() const;
-  void _internal_set_amadeocsprequests(bool value);
+  bool _internal_a_asucceeded() const;
+  void _internal_set_a_asucceeded(bool value);
+  public:
+
+  // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
+  bool has_a_aisbuiltcertchainrootbuiltinroot() const;
+  private:
+  bool _internal_has_a_aisbuiltcertchainrootbuiltinroot() const;
+  public:
+  void clear_a_aisbuiltcertchainrootbuiltinroot();
+  bool a_aisbuiltcertchainrootbuiltinroot() const;
+  void set_a_aisbuiltcertchainrootbuiltinroot(bool value);
+  private:
+  bool _internal_a_aisbuiltcertchainrootbuiltinroot() const;
+  void _internal_set_a_aisbuiltcertchainrootbuiltinroot(bool value);
+  public:
+
+  // required bool a_aMadeOCSPRequests = 8;
+  bool has_a_amadeocsprequests() const;
+  private:
+  bool _internal_has_a_amadeocsprequests() const;
+  public:
+  void clear_a_amadeocsprequests();
+  bool a_amadeocsprequests() const;
+  void set_a_amadeocsprequests(bool value);
+  private:
+  bool _internal_a_amadeocsprequests() const;
+  void _internal_set_a_amadeocsprequests(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished)
@@ -322,14 +322,14 @@ class Msg_OnVerifySSLServerCertFinished final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray > abuiltcertchain_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aevstatus_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aoverridableerrorcategory_;
-    uint32_t acerttransparencystatus_;
-    int32_t afinalerror_;
-    bool asucceeded_;
-    bool aisbuiltcertchainrootbuiltinroot_;
-    bool amadeocsprequests_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray > a_abuiltcertchain_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevstatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoverridableerrorcategory_;
+    uint32_t a_acerttransparencystatus_;
+    int32_t a_afinalerror_;
+    bool a_asucceeded_;
+    bool a_aisbuiltcertchainrootbuiltinroot_;
+    bool a_amadeocsprequests_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVerifySSLServerCert_2eproto;
@@ -593,317 +593,317 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnVerifySSLServerCertFinished
 
-// repeated .protobuf.mozilla.psm.ByteArray aBuiltCertChain = 1;
-inline int Msg_OnVerifySSLServerCertFinished::_internal_abuiltcertchain_size() const {
-  return _impl_.abuiltcertchain_.size();
+// repeated .protobuf.mozilla.psm.ByteArray a_aBuiltCertChain = 1;
+inline int Msg_OnVerifySSLServerCertFinished::_internal_a_abuiltcertchain_size() const {
+  return _impl_.a_abuiltcertchain_.size();
 }
-inline int Msg_OnVerifySSLServerCertFinished::abuiltcertchain_size() const {
-  return _internal_abuiltcertchain_size();
+inline int Msg_OnVerifySSLServerCertFinished::a_abuiltcertchain_size() const {
+  return _internal_a_abuiltcertchain_size();
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_OnVerifySSLServerCertFinished::mutable_abuiltcertchain(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aBuiltCertChain)
-  return _impl_.abuiltcertchain_.Mutable(index);
+inline ::protobuf::mozilla::psm::ByteArray* Msg_OnVerifySSLServerCertFinished::mutable_a_abuiltcertchain(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aBuiltCertChain)
+  return _impl_.a_abuiltcertchain_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >*
-Msg_OnVerifySSLServerCertFinished::mutable_abuiltcertchain() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aBuiltCertChain)
-  return &_impl_.abuiltcertchain_;
+Msg_OnVerifySSLServerCertFinished::mutable_a_abuiltcertchain() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aBuiltCertChain)
+  return &_impl_.a_abuiltcertchain_;
 }
-inline const ::protobuf::mozilla::psm::ByteArray& Msg_OnVerifySSLServerCertFinished::_internal_abuiltcertchain(int index) const {
-  return _impl_.abuiltcertchain_.Get(index);
+inline const ::protobuf::mozilla::psm::ByteArray& Msg_OnVerifySSLServerCertFinished::_internal_a_abuiltcertchain(int index) const {
+  return _impl_.a_abuiltcertchain_.Get(index);
 }
-inline const ::protobuf::mozilla::psm::ByteArray& Msg_OnVerifySSLServerCertFinished::abuiltcertchain(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aBuiltCertChain)
-  return _internal_abuiltcertchain(index);
+inline const ::protobuf::mozilla::psm::ByteArray& Msg_OnVerifySSLServerCertFinished::a_abuiltcertchain(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aBuiltCertChain)
+  return _internal_a_abuiltcertchain(index);
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_OnVerifySSLServerCertFinished::_internal_add_abuiltcertchain() {
-  return _impl_.abuiltcertchain_.Add();
+inline ::protobuf::mozilla::psm::ByteArray* Msg_OnVerifySSLServerCertFinished::_internal_add_a_abuiltcertchain() {
+  return _impl_.a_abuiltcertchain_.Add();
 }
-inline ::protobuf::mozilla::psm::ByteArray* Msg_OnVerifySSLServerCertFinished::add_abuiltcertchain() {
-  ::protobuf::mozilla::psm::ByteArray* _add = _internal_add_abuiltcertchain();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aBuiltCertChain)
+inline ::protobuf::mozilla::psm::ByteArray* Msg_OnVerifySSLServerCertFinished::add_a_abuiltcertchain() {
+  ::protobuf::mozilla::psm::ByteArray* _add = _internal_add_a_abuiltcertchain();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aBuiltCertChain)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >&
-Msg_OnVerifySSLServerCertFinished::abuiltcertchain() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aBuiltCertChain)
-  return _impl_.abuiltcertchain_;
+Msg_OnVerifySSLServerCertFinished::a_abuiltcertchain() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aBuiltCertChain)
+  return _impl_.a_abuiltcertchain_;
 }
 
-// required uint32 aCertTransparencyStatus = 2;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_acerttransparencystatus() const {
+// required uint32 a_aCertTransparencyStatus = 2;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_acerttransparencystatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_acerttransparencystatus() const {
-  return _internal_has_acerttransparencystatus();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_acerttransparencystatus() const {
+  return _internal_has_a_acerttransparencystatus();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_acerttransparencystatus() {
-  _impl_.acerttransparencystatus_ = 0u;
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_acerttransparencystatus() {
+  _impl_.a_acerttransparencystatus_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_OnVerifySSLServerCertFinished::_internal_acerttransparencystatus() const {
-  return _impl_.acerttransparencystatus_;
+inline uint32_t Msg_OnVerifySSLServerCertFinished::_internal_a_acerttransparencystatus() const {
+  return _impl_.a_acerttransparencystatus_;
 }
-inline uint32_t Msg_OnVerifySSLServerCertFinished::acerttransparencystatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aCertTransparencyStatus)
-  return _internal_acerttransparencystatus();
+inline uint32_t Msg_OnVerifySSLServerCertFinished::a_acerttransparencystatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aCertTransparencyStatus)
+  return _internal_a_acerttransparencystatus();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_acerttransparencystatus(uint32_t value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_acerttransparencystatus(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.acerttransparencystatus_ = value;
+  _impl_.a_acerttransparencystatus_ = value;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_acerttransparencystatus(uint32_t value) {
-  _internal_set_acerttransparencystatus(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aCertTransparencyStatus)
+inline void Msg_OnVerifySSLServerCertFinished::set_a_acerttransparencystatus(uint32_t value) {
+  _internal_set_a_acerttransparencystatus(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aCertTransparencyStatus)
 }
 
-// required bytes aEVStatus = 3;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_aevstatus() const {
+// required bytes a_aEVStatus = 3;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aevstatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_aevstatus() const {
-  return _internal_has_aevstatus();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_aevstatus() const {
+  return _internal_has_a_aevstatus();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_aevstatus() {
-  _impl_.aevstatus_.ClearToEmpty();
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_aevstatus() {
+  _impl_.a_aevstatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_OnVerifySSLServerCertFinished::aevstatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aEVStatus)
-  return _internal_aevstatus();
+inline const std::string& Msg_OnVerifySSLServerCertFinished::a_aevstatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
+  return _internal_a_aevstatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnVerifySSLServerCertFinished::set_aevstatus(ArgT0&& arg0, ArgT... args) {
+void Msg_OnVerifySSLServerCertFinished::set_a_aevstatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aevstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aEVStatus)
+ _impl_.a_aevstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
 }
-inline std::string* Msg_OnVerifySSLServerCertFinished::mutable_aevstatus() {
-  std::string* _s = _internal_mutable_aevstatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aEVStatus)
+inline std::string* Msg_OnVerifySSLServerCertFinished::mutable_a_aevstatus() {
+  std::string* _s = _internal_mutable_a_aevstatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
   return _s;
 }
-inline const std::string& Msg_OnVerifySSLServerCertFinished::_internal_aevstatus() const {
-  return _impl_.aevstatus_.Get();
+inline const std::string& Msg_OnVerifySSLServerCertFinished::_internal_a_aevstatus() const {
+  return _impl_.a_aevstatus_.Get();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_aevstatus(const std::string& value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_aevstatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aevstatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_aevstatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnVerifySSLServerCertFinished::_internal_mutable_aevstatus() {
+inline std::string* Msg_OnVerifySSLServerCertFinished::_internal_mutable_a_aevstatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aevstatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aevstatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnVerifySSLServerCertFinished::release_aevstatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aEVStatus)
-  if (!_internal_has_aevstatus()) {
+inline std::string* Msg_OnVerifySSLServerCertFinished::release_a_aevstatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
+  if (!_internal_has_a_aevstatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aevstatus_.Release();
+  auto* p = _impl_.a_aevstatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aevstatus_.IsDefault()) {
-    _impl_.aevstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aevstatus_.IsDefault()) {
+    _impl_.a_aevstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_allocated_aevstatus(std::string* aevstatus) {
-  if (aevstatus != nullptr) {
+inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aevstatus(std::string* a_aevstatus) {
+  if (a_aevstatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aevstatus_.SetAllocated(aevstatus, GetArenaForAllocation());
+  _impl_.a_aevstatus_.SetAllocated(a_aevstatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aevstatus_.IsDefault()) {
-    _impl_.aevstatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aevstatus_.IsDefault()) {
+    _impl_.a_aevstatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aEVStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
 }
 
-// required bool aSucceeded = 4;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_asucceeded() const {
+// required bool a_aSucceeded = 4;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_asucceeded() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_asucceeded() const {
-  return _internal_has_asucceeded();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_asucceeded() const {
+  return _internal_has_a_asucceeded();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_asucceeded() {
-  _impl_.asucceeded_ = false;
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_asucceeded() {
+  _impl_.a_asucceeded_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_asucceeded() const {
-  return _impl_.asucceeded_;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_a_asucceeded() const {
+  return _impl_.a_asucceeded_;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::asucceeded() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aSucceeded)
-  return _internal_asucceeded();
+inline bool Msg_OnVerifySSLServerCertFinished::a_asucceeded() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aSucceeded)
+  return _internal_a_asucceeded();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_asucceeded(bool value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_asucceeded(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.asucceeded_ = value;
+  _impl_.a_asucceeded_ = value;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_asucceeded(bool value) {
-  _internal_set_asucceeded(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aSucceeded)
+inline void Msg_OnVerifySSLServerCertFinished::set_a_asucceeded(bool value) {
+  _internal_set_a_asucceeded(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aSucceeded)
 }
 
-// required sint32 aFinalError = 5;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_afinalerror() const {
+// required sint32 a_aFinalError = 5;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_afinalerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_afinalerror() const {
-  return _internal_has_afinalerror();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_afinalerror() const {
+  return _internal_has_a_afinalerror();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_afinalerror() {
-  _impl_.afinalerror_ = 0;
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_afinalerror() {
+  _impl_.a_afinalerror_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t Msg_OnVerifySSLServerCertFinished::_internal_afinalerror() const {
-  return _impl_.afinalerror_;
+inline int32_t Msg_OnVerifySSLServerCertFinished::_internal_a_afinalerror() const {
+  return _impl_.a_afinalerror_;
 }
-inline int32_t Msg_OnVerifySSLServerCertFinished::afinalerror() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aFinalError)
-  return _internal_afinalerror();
+inline int32_t Msg_OnVerifySSLServerCertFinished::a_afinalerror() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aFinalError)
+  return _internal_a_afinalerror();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_afinalerror(int32_t value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_afinalerror(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.afinalerror_ = value;
+  _impl_.a_afinalerror_ = value;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_afinalerror(int32_t value) {
-  _internal_set_afinalerror(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aFinalError)
+inline void Msg_OnVerifySSLServerCertFinished::set_a_afinalerror(int32_t value) {
+  _internal_set_a_afinalerror(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aFinalError)
 }
 
-// required bytes aOverridableErrorCategory = 6;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_aoverridableerrorcategory() const {
+// required bytes a_aOverridableErrorCategory = 6;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aoverridableerrorcategory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_aoverridableerrorcategory() const {
-  return _internal_has_aoverridableerrorcategory();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_aoverridableerrorcategory() const {
+  return _internal_has_a_aoverridableerrorcategory();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_aoverridableerrorcategory() {
-  _impl_.aoverridableerrorcategory_.ClearToEmpty();
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_aoverridableerrorcategory() {
+  _impl_.a_aoverridableerrorcategory_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_OnVerifySSLServerCertFinished::aoverridableerrorcategory() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aOverridableErrorCategory)
-  return _internal_aoverridableerrorcategory();
+inline const std::string& Msg_OnVerifySSLServerCertFinished::a_aoverridableerrorcategory() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
+  return _internal_a_aoverridableerrorcategory();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_OnVerifySSLServerCertFinished::set_aoverridableerrorcategory(ArgT0&& arg0, ArgT... args) {
+void Msg_OnVerifySSLServerCertFinished::set_a_aoverridableerrorcategory(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.aoverridableerrorcategory_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aOverridableErrorCategory)
+ _impl_.a_aoverridableerrorcategory_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
 }
-inline std::string* Msg_OnVerifySSLServerCertFinished::mutable_aoverridableerrorcategory() {
-  std::string* _s = _internal_mutable_aoverridableerrorcategory();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aOverridableErrorCategory)
+inline std::string* Msg_OnVerifySSLServerCertFinished::mutable_a_aoverridableerrorcategory() {
+  std::string* _s = _internal_mutable_a_aoverridableerrorcategory();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
   return _s;
 }
-inline const std::string& Msg_OnVerifySSLServerCertFinished::_internal_aoverridableerrorcategory() const {
-  return _impl_.aoverridableerrorcategory_.Get();
+inline const std::string& Msg_OnVerifySSLServerCertFinished::_internal_a_aoverridableerrorcategory() const {
+  return _impl_.a_aoverridableerrorcategory_.Get();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_aoverridableerrorcategory(const std::string& value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_aoverridableerrorcategory(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aoverridableerrorcategory_.Set(value, GetArenaForAllocation());
+  _impl_.a_aoverridableerrorcategory_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_OnVerifySSLServerCertFinished::_internal_mutable_aoverridableerrorcategory() {
+inline std::string* Msg_OnVerifySSLServerCertFinished::_internal_mutable_a_aoverridableerrorcategory() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.aoverridableerrorcategory_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aoverridableerrorcategory_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_OnVerifySSLServerCertFinished::release_aoverridableerrorcategory() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aOverridableErrorCategory)
-  if (!_internal_has_aoverridableerrorcategory()) {
+inline std::string* Msg_OnVerifySSLServerCertFinished::release_a_aoverridableerrorcategory() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
+  if (!_internal_has_a_aoverridableerrorcategory()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.aoverridableerrorcategory_.Release();
+  auto* p = _impl_.a_aoverridableerrorcategory_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aoverridableerrorcategory_.IsDefault()) {
-    _impl_.aoverridableerrorcategory_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aoverridableerrorcategory_.IsDefault()) {
+    _impl_.a_aoverridableerrorcategory_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_allocated_aoverridableerrorcategory(std::string* aoverridableerrorcategory) {
-  if (aoverridableerrorcategory != nullptr) {
+inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aoverridableerrorcategory(std::string* a_aoverridableerrorcategory) {
+  if (a_aoverridableerrorcategory != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.aoverridableerrorcategory_.SetAllocated(aoverridableerrorcategory, GetArenaForAllocation());
+  _impl_.a_aoverridableerrorcategory_.SetAllocated(a_aoverridableerrorcategory, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aoverridableerrorcategory_.IsDefault()) {
-    _impl_.aoverridableerrorcategory_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aoverridableerrorcategory_.IsDefault()) {
+    _impl_.a_aoverridableerrorcategory_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aOverridableErrorCategory)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
 }
 
-// required bool aIsBuiltCertChainRootBuiltInRoot = 7;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_aisbuiltcertchainrootbuiltinroot() const {
+// required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aisbuiltcertchainrootbuiltinroot() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_aisbuiltcertchainrootbuiltinroot() const {
-  return _internal_has_aisbuiltcertchainrootbuiltinroot();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_aisbuiltcertchainrootbuiltinroot() const {
+  return _internal_has_a_aisbuiltcertchainrootbuiltinroot();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_aisbuiltcertchainrootbuiltinroot() {
-  _impl_.aisbuiltcertchainrootbuiltinroot_ = false;
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_aisbuiltcertchainrootbuiltinroot() {
+  _impl_.a_aisbuiltcertchainrootbuiltinroot_ = false;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_aisbuiltcertchainrootbuiltinroot() const {
-  return _impl_.aisbuiltcertchainrootbuiltinroot_;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_a_aisbuiltcertchainrootbuiltinroot() const {
+  return _impl_.a_aisbuiltcertchainrootbuiltinroot_;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::aisbuiltcertchainrootbuiltinroot() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aIsBuiltCertChainRootBuiltInRoot)
-  return _internal_aisbuiltcertchainrootbuiltinroot();
+inline bool Msg_OnVerifySSLServerCertFinished::a_aisbuiltcertchainrootbuiltinroot() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aIsBuiltCertChainRootBuiltInRoot)
+  return _internal_a_aisbuiltcertchainrootbuiltinroot();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_aisbuiltcertchainrootbuiltinroot(bool value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_aisbuiltcertchainrootbuiltinroot(bool value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.aisbuiltcertchainrootbuiltinroot_ = value;
+  _impl_.a_aisbuiltcertchainrootbuiltinroot_ = value;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_aisbuiltcertchainrootbuiltinroot(bool value) {
-  _internal_set_aisbuiltcertchainrootbuiltinroot(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aIsBuiltCertChainRootBuiltInRoot)
+inline void Msg_OnVerifySSLServerCertFinished::set_a_aisbuiltcertchainrootbuiltinroot(bool value) {
+  _internal_set_a_aisbuiltcertchainrootbuiltinroot(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aIsBuiltCertChainRootBuiltInRoot)
 }
 
-// required bool aMadeOCSPRequests = 8;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_amadeocsprequests() const {
+// required bool a_aMadeOCSPRequests = 8;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_amadeocsprequests() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::has_amadeocsprequests() const {
-  return _internal_has_amadeocsprequests();
+inline bool Msg_OnVerifySSLServerCertFinished::has_a_amadeocsprequests() const {
+  return _internal_has_a_amadeocsprequests();
 }
-inline void Msg_OnVerifySSLServerCertFinished::clear_amadeocsprequests() {
-  _impl_.amadeocsprequests_ = false;
+inline void Msg_OnVerifySSLServerCertFinished::clear_a_amadeocsprequests() {
+  _impl_.a_amadeocsprequests_ = false;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_amadeocsprequests() const {
-  return _impl_.amadeocsprequests_;
+inline bool Msg_OnVerifySSLServerCertFinished::_internal_a_amadeocsprequests() const {
+  return _impl_.a_amadeocsprequests_;
 }
-inline bool Msg_OnVerifySSLServerCertFinished::amadeocsprequests() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aMadeOCSPRequests)
-  return _internal_amadeocsprequests();
+inline bool Msg_OnVerifySSLServerCertFinished::a_amadeocsprequests() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aMadeOCSPRequests)
+  return _internal_a_amadeocsprequests();
 }
-inline void Msg_OnVerifySSLServerCertFinished::_internal_set_amadeocsprequests(bool value) {
+inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_amadeocsprequests(bool value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.amadeocsprequests_ = value;
+  _impl_.a_amadeocsprequests_ = value;
 }
-inline void Msg_OnVerifySSLServerCertFinished::set_amadeocsprequests(bool value) {
-  _internal_set_amadeocsprequests(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.aMadeOCSPRequests)
+inline void Msg_OnVerifySSLServerCertFinished::set_a_amadeocsprequests(bool value) {
+  _internal_set_a_amadeocsprequests(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aMadeOCSPRequests)
 }
 
 // -------------------------------------------------------------------

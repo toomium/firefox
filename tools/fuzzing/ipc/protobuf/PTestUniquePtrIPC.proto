@@ -15,15 +15,15 @@ import public "PTestUniquePtrIPC_protobuf.mozilla._ipdltest.h.proto";
 
 // Message declarations
 message Msg_TestMessage {
-  required bytes a1 = 1;
-  required bytes a2 = 2;
-  required protobuf.mozilla._ipdltest.DummyStruct a3 = 3;
-  required bytes a4 = 4;
-  required protobuf.mozilla._ipdltest.DummyUnion a5 = 5;
+  required bytes a_a1 = 1;
+  required bytes a_a2 = 2;
+  required protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
+  required bytes a_a4 = 4;
+  required protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
 }
 
 message Msg_TestSendReference {
-  required bytes a = 1;
+  required bytes a_a = 1;
 }
 
 // Parameter mappings stats:

@@ -192,33 +192,33 @@ class Msg_Response final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIdFieldNumber = 1,
-    kASuccessFieldNumber = 2,
+    kAAIdFieldNumber = 1,
+    kAASuccessFieldNumber = 2,
   };
-  // required uint32 aId = 1;
-  bool has_aid() const;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint32_t aid() const;
-  void set_aid(uint32_t value);
+  void clear_a_aid();
+  uint32_t a_aid() const;
+  void set_a_aid(uint32_t value);
   private:
-  uint32_t _internal_aid() const;
-  void _internal_set_aid(uint32_t value);
+  uint32_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint32_t value);
   public:
 
-  // required bool aSuccess = 2;
-  bool has_asuccess() const;
+  // required bool a_aSuccess = 2;
+  bool has_a_asuccess() const;
   private:
-  bool _internal_has_asuccess() const;
+  bool _internal_has_a_asuccess() const;
   public:
-  void clear_asuccess();
-  bool asuccess() const;
-  void set_asuccess(bool value);
+  void clear_a_asuccess();
+  bool a_asuccess() const;
+  void set_a_asuccess(bool value);
   private:
-  bool _internal_asuccess() const;
-  void _internal_set_asuccess(bool value);
+  bool _internal_a_asuccess() const;
+  void _internal_set_a_asuccess(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response)
@@ -234,8 +234,8 @@ class Msg_Response final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t aid_;
-    bool asuccess_;
+    uint32_t a_aid_;
+    bool a_asuccess_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaSystemResourceManager_2eproto;
@@ -600,52 +600,52 @@ class Msg_Acquire final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAResourceTypeFieldNumber = 2,
-    kAIdFieldNumber = 1,
-    kAWillWaitFieldNumber = 3,
+    kAAResourceTypeFieldNumber = 2,
+    kAAIdFieldNumber = 1,
+    kAAWillWaitFieldNumber = 3,
   };
-  // required bytes aResourceType = 2;
-  bool has_aresourcetype() const;
+  // required bytes a_aResourceType = 2;
+  bool has_a_aresourcetype() const;
   private:
-  bool _internal_has_aresourcetype() const;
+  bool _internal_has_a_aresourcetype() const;
   public:
-  void clear_aresourcetype();
-  const std::string& aresourcetype() const;
+  void clear_a_aresourcetype();
+  const std::string& a_aresourcetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aresourcetype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aresourcetype();
-  PROTOBUF_NODISCARD std::string* release_aresourcetype();
-  void set_allocated_aresourcetype(std::string* aresourcetype);
+  void set_a_aresourcetype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aresourcetype();
+  PROTOBUF_NODISCARD std::string* release_a_aresourcetype();
+  void set_allocated_a_aresourcetype(std::string* a_aresourcetype);
   private:
-  const std::string& _internal_aresourcetype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aresourcetype(const std::string& value);
-  std::string* _internal_mutable_aresourcetype();
+  const std::string& _internal_a_aresourcetype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aresourcetype(const std::string& value);
+  std::string* _internal_mutable_a_aresourcetype();
   public:
 
-  // required uint32 aId = 1;
-  bool has_aid() const;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint32_t aid() const;
-  void set_aid(uint32_t value);
+  void clear_a_aid();
+  uint32_t a_aid() const;
+  void set_a_aid(uint32_t value);
   private:
-  uint32_t _internal_aid() const;
-  void _internal_set_aid(uint32_t value);
+  uint32_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint32_t value);
   public:
 
-  // required bool aWillWait = 3;
-  bool has_awillwait() const;
+  // required bool a_aWillWait = 3;
+  bool has_a_awillwait() const;
   private:
-  bool _internal_has_awillwait() const;
+  bool _internal_has_a_awillwait() const;
   public:
-  void clear_awillwait();
-  bool awillwait() const;
-  void set_awillwait(bool value);
+  void clear_a_awillwait();
+  bool a_awillwait() const;
+  void set_a_awillwait(bool value);
   private:
-  bool _internal_awillwait() const;
-  void _internal_set_awillwait(bool value);
+  bool _internal_a_awillwait() const;
+  void _internal_set_a_awillwait(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire)
@@ -661,9 +661,9 @@ class Msg_Acquire final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aresourcetype_;
-    uint32_t aid_;
-    bool awillwait_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresourcetype_;
+    uint32_t a_aid_;
+    bool a_awillwait_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaSystemResourceManager_2eproto;
@@ -780,19 +780,19 @@ class Msg_Release final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIdFieldNumber = 1,
+    kAAIdFieldNumber = 1,
   };
-  // required uint32 aId = 1;
-  bool has_aid() const;
+  // required uint32 a_aId = 1;
+  bool has_a_aid() const;
   private:
-  bool _internal_has_aid() const;
+  bool _internal_has_a_aid() const;
   public:
-  void clear_aid();
-  uint32_t aid() const;
-  void set_aid(uint32_t value);
+  void clear_a_aid();
+  uint32_t a_aid() const;
+  void set_a_aid(uint32_t value);
   private:
-  uint32_t _internal_aid() const;
-  void _internal_set_aid(uint32_t value);
+  uint32_t _internal_a_aid() const;
+  void _internal_set_a_aid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Release)
@@ -805,7 +805,7 @@ class Msg_Release final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t aid_;
+    uint32_t a_aid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaSystemResourceManager_2eproto;
@@ -945,60 +945,60 @@ class Msg_RemoveResourceManager final :
 #endif  // __GNUC__
 // Msg_Response
 
-// required uint32 aId = 1;
-inline bool Msg_Response::_internal_has_aid() const {
+// required uint32 a_aId = 1;
+inline bool Msg_Response::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Response::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_Response::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_Response::clear_aid() {
-  _impl_.aid_ = 0u;
+inline void Msg_Response::clear_a_aid() {
+  _impl_.a_aid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_Response::_internal_aid() const {
-  return _impl_.aid_;
+inline uint32_t Msg_Response::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint32_t Msg_Response::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.aId)
-  return _internal_aid();
+inline uint32_t Msg_Response::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.a_aId)
+  return _internal_a_aid();
 }
-inline void Msg_Response::_internal_set_aid(uint32_t value) {
+inline void Msg_Response::_internal_set_a_aid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_Response::set_aid(uint32_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.aId)
+inline void Msg_Response::set_a_aid(uint32_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.a_aId)
 }
 
-// required bool aSuccess = 2;
-inline bool Msg_Response::_internal_has_asuccess() const {
+// required bool a_aSuccess = 2;
+inline bool Msg_Response::_internal_has_a_asuccess() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Response::has_asuccess() const {
-  return _internal_has_asuccess();
+inline bool Msg_Response::has_a_asuccess() const {
+  return _internal_has_a_asuccess();
 }
-inline void Msg_Response::clear_asuccess() {
-  _impl_.asuccess_ = false;
+inline void Msg_Response::clear_a_asuccess() {
+  _impl_.a_asuccess_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_Response::_internal_asuccess() const {
-  return _impl_.asuccess_;
+inline bool Msg_Response::_internal_a_asuccess() const {
+  return _impl_.a_asuccess_;
 }
-inline bool Msg_Response::asuccess() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.aSuccess)
-  return _internal_asuccess();
+inline bool Msg_Response::a_asuccess() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.a_aSuccess)
+  return _internal_a_asuccess();
 }
-inline void Msg_Response::_internal_set_asuccess(bool value) {
+inline void Msg_Response::_internal_set_a_asuccess(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.asuccess_ = value;
+  _impl_.a_asuccess_ = value;
 }
-inline void Msg_Response::set_asuccess(bool value) {
-  _internal_set_asuccess(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.aSuccess)
+inline void Msg_Response::set_a_asuccess(bool value) {
+  _internal_set_a_asuccess(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Response.a_aSuccess)
 }
 
 // -------------------------------------------------------------------
@@ -1013,160 +1013,160 @@ inline void Msg_Response::set_asuccess(bool value) {
 
 // Msg_Acquire
 
-// required uint32 aId = 1;
-inline bool Msg_Acquire::_internal_has_aid() const {
+// required uint32 a_aId = 1;
+inline bool Msg_Acquire::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Acquire::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_Acquire::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_Acquire::clear_aid() {
-  _impl_.aid_ = 0u;
+inline void Msg_Acquire::clear_a_aid() {
+  _impl_.a_aid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_Acquire::_internal_aid() const {
-  return _impl_.aid_;
+inline uint32_t Msg_Acquire::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint32_t Msg_Acquire::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aId)
-  return _internal_aid();
+inline uint32_t Msg_Acquire::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aId)
+  return _internal_a_aid();
 }
-inline void Msg_Acquire::_internal_set_aid(uint32_t value) {
+inline void Msg_Acquire::_internal_set_a_aid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_Acquire::set_aid(uint32_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aId)
+inline void Msg_Acquire::set_a_aid(uint32_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aId)
 }
 
-// required bytes aResourceType = 2;
-inline bool Msg_Acquire::_internal_has_aresourcetype() const {
+// required bytes a_aResourceType = 2;
+inline bool Msg_Acquire::_internal_has_a_aresourcetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Acquire::has_aresourcetype() const {
-  return _internal_has_aresourcetype();
+inline bool Msg_Acquire::has_a_aresourcetype() const {
+  return _internal_has_a_aresourcetype();
 }
-inline void Msg_Acquire::clear_aresourcetype() {
-  _impl_.aresourcetype_.ClearToEmpty();
+inline void Msg_Acquire::clear_a_aresourcetype() {
+  _impl_.a_aresourcetype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Acquire::aresourcetype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aResourceType)
-  return _internal_aresourcetype();
+inline const std::string& Msg_Acquire::a_aresourcetype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
+  return _internal_a_aresourcetype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Acquire::set_aresourcetype(ArgT0&& arg0, ArgT... args) {
+void Msg_Acquire::set_a_aresourcetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aresourcetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aResourceType)
+ _impl_.a_aresourcetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
 }
-inline std::string* Msg_Acquire::mutable_aresourcetype() {
-  std::string* _s = _internal_mutable_aresourcetype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aResourceType)
+inline std::string* Msg_Acquire::mutable_a_aresourcetype() {
+  std::string* _s = _internal_mutable_a_aresourcetype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
   return _s;
 }
-inline const std::string& Msg_Acquire::_internal_aresourcetype() const {
-  return _impl_.aresourcetype_.Get();
+inline const std::string& Msg_Acquire::_internal_a_aresourcetype() const {
+  return _impl_.a_aresourcetype_.Get();
 }
-inline void Msg_Acquire::_internal_set_aresourcetype(const std::string& value) {
+inline void Msg_Acquire::_internal_set_a_aresourcetype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aresourcetype_.Set(value, GetArenaForAllocation());
+  _impl_.a_aresourcetype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Acquire::_internal_mutable_aresourcetype() {
+inline std::string* Msg_Acquire::_internal_mutable_a_aresourcetype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aresourcetype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aresourcetype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Acquire::release_aresourcetype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aResourceType)
-  if (!_internal_has_aresourcetype()) {
+inline std::string* Msg_Acquire::release_a_aresourcetype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
+  if (!_internal_has_a_aresourcetype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aresourcetype_.Release();
+  auto* p = _impl_.a_aresourcetype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresourcetype_.IsDefault()) {
-    _impl_.aresourcetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresourcetype_.IsDefault()) {
+    _impl_.a_aresourcetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Acquire::set_allocated_aresourcetype(std::string* aresourcetype) {
-  if (aresourcetype != nullptr) {
+inline void Msg_Acquire::set_allocated_a_aresourcetype(std::string* a_aresourcetype) {
+  if (a_aresourcetype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aresourcetype_.SetAllocated(aresourcetype, GetArenaForAllocation());
+  _impl_.a_aresourcetype_.SetAllocated(a_aresourcetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aresourcetype_.IsDefault()) {
-    _impl_.aresourcetype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aresourcetype_.IsDefault()) {
+    _impl_.a_aresourcetype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aResourceType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aResourceType)
 }
 
-// required bool aWillWait = 3;
-inline bool Msg_Acquire::_internal_has_awillwait() const {
+// required bool a_aWillWait = 3;
+inline bool Msg_Acquire::_internal_has_a_awillwait() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_Acquire::has_awillwait() const {
-  return _internal_has_awillwait();
+inline bool Msg_Acquire::has_a_awillwait() const {
+  return _internal_has_a_awillwait();
 }
-inline void Msg_Acquire::clear_awillwait() {
-  _impl_.awillwait_ = false;
+inline void Msg_Acquire::clear_a_awillwait() {
+  _impl_.a_awillwait_ = false;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline bool Msg_Acquire::_internal_awillwait() const {
-  return _impl_.awillwait_;
+inline bool Msg_Acquire::_internal_a_awillwait() const {
+  return _impl_.a_awillwait_;
 }
-inline bool Msg_Acquire::awillwait() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aWillWait)
-  return _internal_awillwait();
+inline bool Msg_Acquire::a_awillwait() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aWillWait)
+  return _internal_a_awillwait();
 }
-inline void Msg_Acquire::_internal_set_awillwait(bool value) {
+inline void Msg_Acquire::_internal_set_a_awillwait(bool value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.awillwait_ = value;
+  _impl_.a_awillwait_ = value;
 }
-inline void Msg_Acquire::set_awillwait(bool value) {
-  _internal_set_awillwait(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.aWillWait)
+inline void Msg_Acquire::set_a_awillwait(bool value) {
+  _internal_set_a_awillwait(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Acquire.a_aWillWait)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Release
 
-// required uint32 aId = 1;
-inline bool Msg_Release::_internal_has_aid() const {
+// required uint32 a_aId = 1;
+inline bool Msg_Release::_internal_has_a_aid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Release::has_aid() const {
-  return _internal_has_aid();
+inline bool Msg_Release::has_a_aid() const {
+  return _internal_has_a_aid();
 }
-inline void Msg_Release::clear_aid() {
-  _impl_.aid_ = 0u;
+inline void Msg_Release::clear_a_aid() {
+  _impl_.a_aid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_Release::_internal_aid() const {
-  return _impl_.aid_;
+inline uint32_t Msg_Release::_internal_a_aid() const {
+  return _impl_.a_aid_;
 }
-inline uint32_t Msg_Release::aid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Release.aId)
-  return _internal_aid();
+inline uint32_t Msg_Release::a_aid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Release.a_aId)
+  return _internal_a_aid();
 }
-inline void Msg_Release::_internal_set_aid(uint32_t value) {
+inline void Msg_Release::_internal_set_a_aid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aid_ = value;
+  _impl_.a_aid_ = value;
 }
-inline void Msg_Release::set_aid(uint32_t value) {
-  _internal_set_aid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Release.aId)
+inline void Msg_Release::set_a_aid(uint32_t value) {
+  _internal_set_a_aid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMediaSystemResourceManager.Msg_Release.a_aId)
 }
 
 // -------------------------------------------------------------------

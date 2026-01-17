@@ -20,53 +20,53 @@ message Msg_DeleteMe {
 }
 
 message Msg_Commit {
-  optional sint64 lastRequest = 1;
+  optional sint64 a_lastRequest = 1;
 }
 
 message Msg_Abort {
-  required bytes resultCode = 1;
+  required bytes a_resultCode = 1;
 }
 
 message Msg_CreateObjectStore {
-  required protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata metadata = 1;
+  required protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata a_metadata = 1;
 }
 
 message Msg_DeleteObjectStore {
-  required sint64 objectStoreId = 1;
+  required sint64 a_objectStoreId = 1;
 }
 
 message Msg_RenameObjectStore {
-  required sint64 objectStoreId = 1;
-  required bytes name = 2;
+  required sint64 a_objectStoreId = 1;
+  required bytes a_name = 2;
 }
 
 message Msg_CreateIndex {
-  required sint64 objectStoreId = 1;
-  required protobuf.mozilla.dom.indexedDB.IndexMetadata metadata = 2;
+  required sint64 a_objectStoreId = 1;
+  required protobuf.mozilla.dom.indexedDB.IndexMetadata a_metadata = 2;
 }
 
 message Msg_DeleteIndex {
-  required sint64 objectStoreId = 1;
-  required sint64 indexId = 2;
+  required sint64 a_objectStoreId = 1;
+  required sint64 a_indexId = 2;
 }
 
 message Msg_RenameIndex {
-  required sint64 objectStoreId = 1;
-  required sint64 indexId = 2;
-  required bytes name = 3;
+  required sint64 a_objectStoreId = 1;
+  required sint64 a_indexId = 2;
+  required bytes a_name = 3;
 }
 
 message Msg_PBackgroundIDBCursorConstructor {
-  required sint64 requestId = 1;
-  required protobuf.mozilla.dom.indexedDB.OpenCursorParams params = 2;
+  required sint64 a_requestId = 1;
+  required protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 2;
 }
 
 message Reply_PBackgroundIDBCursorConstructor {
 }
 
 message Msg_PBackgroundIDBRequestConstructor {
-  required sint64 requestId = 1;
-  required protobuf.mozilla.dom.indexedDB.RequestParams params = 2;
+  required sint64 a_requestId = 1;
+  required protobuf.mozilla.dom.indexedDB.RequestParams a_params = 2;
 }
 
 message Reply_PBackgroundIDBRequestConstructor {
@@ -79,7 +79,7 @@ message Reply___delete__ {
 }
 
 message Msg_Complete {
-  required bytes result = 1;
+  required bytes a_result = 1;
 }
 
 // Parameter mappings stats:

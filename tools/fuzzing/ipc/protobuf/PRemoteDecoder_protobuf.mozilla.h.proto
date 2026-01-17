@@ -16,32 +16,32 @@ import "LayersSurfaces.proto";
 // Structs and unions declarations
 message DecodedOutputIPDL {
   oneof content {
-    bytes mVArrayOfRemoteAudioData = 1;
-    bytes mVArrayOfRemoteVideoData = 2;
+    bytes a_mVArrayOfRemoteAudioData = 1;
+    bytes a_mVArrayOfRemoteVideoData = 2;
   }
 }
 
 message InitCompletionIPDL {
-  required bytes type = 1;
-  required bytes decoderDescription = 2;
-  required bytes decoderProcessName = 3;
-  required bytes decoderCodecName = 4;
-  required bool hardware = 5;
-  required bytes hardwareReason = 6;
-  required bytes conversion = 7;
-  required bool shouldDecoderAlwaysBeRecycled = 8;
+  required bytes a_type = 1;
+  required bytes a_decoderDescription = 2;
+  required bytes a_decoderProcessName = 3;
+  required bytes a_decoderCodecName = 4;
+  required bool a_hardware = 5;
+  required bytes a_hardwareReason = 6;
+  required bytes a_conversion = 7;
+  required bool a_shouldDecoderAlwaysBeRecycled = 8;
 }
 
 message InitResultIPDL {
   oneof content {
-    bytes mVMediaResult = 1;
-    protobuf.mozilla.InitCompletionIPDL mVInitCompletionIPDL = 2;
+    bytes a_mVMediaResult = 1;
+    protobuf.mozilla.InitCompletionIPDL a_mVInitCompletionIPDL = 2;
   }
 }
 
 message DecodeResultIPDL {
   oneof content {
-    bytes mVMediaResult = 1;
-    protobuf.mozilla.DecodedOutputIPDL mVDecodedOutputIPDL = 2;
+    bytes a_mVMediaResult = 1;
+    protobuf.mozilla.DecodedOutputIPDL a_mVDecodedOutputIPDL = 2;
   }
 }

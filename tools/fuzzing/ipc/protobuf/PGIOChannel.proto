@@ -24,7 +24,7 @@ message Reply___delete__ {
 }
 
 message Msg_Cancel {
-  required bytes status = 1;
+  required bytes a_status = 1;
 }
 
 message Msg_Suspend {
@@ -34,26 +34,26 @@ message Msg_Resume {
 }
 
 message Msg_OnStartRequest {
-  required bytes aChannelStatus = 1;
-  required sint64 aContentLength = 2;
-  required bytes aContentType = 3;
-  required bytes aEntityID = 4;
-  required protobuf.mozilla.ipc.URIParams aURI = 5;
+  required bytes a_aChannelStatus = 1;
+  required sint64 a_aContentLength = 2;
+  required bytes a_aContentType = 3;
+  required bytes a_aEntityID = 4;
+  required protobuf.mozilla.ipc.URIParams a_aURI = 5;
 }
 
 message Msg_OnDataAvailable {
-  required bytes channelStatus = 1;
-  required bytes data = 2;
-  required uint64 offset = 3;
-  required uint32 count = 4;
+  required bytes a_channelStatus = 1;
+  required bytes a_data = 2;
+  required uint64 a_offset = 3;
+  required uint32 a_count = 4;
 }
 
 message Msg_OnStopRequest {
-  required bytes channelStatus = 1;
+  required bytes a_channelStatus = 1;
 }
 
 message Msg_FailedAsyncOpen {
-  required bytes statusCode = 1;
+  required bytes a_statusCode = 1;
 }
 
 message Msg_DeleteSelf {

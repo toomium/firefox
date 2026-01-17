@@ -174,75 +174,75 @@ class VideoCaptureCapability final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kWidthFieldNumber = 1,
-    kHeightFieldNumber = 2,
-    kMaxFPSFieldNumber = 3,
-    kVideoTypeFieldNumber = 4,
-    kInterlacedFieldNumber = 5,
+    kAWidthFieldNumber = 1,
+    kAHeightFieldNumber = 2,
+    kAMaxFPSFieldNumber = 3,
+    kAVideoTypeFieldNumber = 4,
+    kAInterlacedFieldNumber = 5,
   };
-  // required sint32 width = 1;
-  bool has_width() const;
+  // required sint32 a_width = 1;
+  bool has_a_width() const;
   private:
-  bool _internal_has_width() const;
+  bool _internal_has_a_width() const;
   public:
-  void clear_width();
-  int32_t width() const;
-  void set_width(int32_t value);
+  void clear_a_width();
+  int32_t a_width() const;
+  void set_a_width(int32_t value);
   private:
-  int32_t _internal_width() const;
-  void _internal_set_width(int32_t value);
-  public:
-
-  // required sint32 height = 2;
-  bool has_height() const;
-  private:
-  bool _internal_has_height() const;
-  public:
-  void clear_height();
-  int32_t height() const;
-  void set_height(int32_t value);
-  private:
-  int32_t _internal_height() const;
-  void _internal_set_height(int32_t value);
+  int32_t _internal_a_width() const;
+  void _internal_set_a_width(int32_t value);
   public:
 
-  // required sint32 maxFPS = 3;
-  bool has_maxfps() const;
+  // required sint32 a_height = 2;
+  bool has_a_height() const;
   private:
-  bool _internal_has_maxfps() const;
+  bool _internal_has_a_height() const;
   public:
-  void clear_maxfps();
-  int32_t maxfps() const;
-  void set_maxfps(int32_t value);
+  void clear_a_height();
+  int32_t a_height() const;
+  void set_a_height(int32_t value);
   private:
-  int32_t _internal_maxfps() const;
-  void _internal_set_maxfps(int32_t value);
-  public:
-
-  // required sint32 videoType = 4;
-  bool has_videotype() const;
-  private:
-  bool _internal_has_videotype() const;
-  public:
-  void clear_videotype();
-  int32_t videotype() const;
-  void set_videotype(int32_t value);
-  private:
-  int32_t _internal_videotype() const;
-  void _internal_set_videotype(int32_t value);
+  int32_t _internal_a_height() const;
+  void _internal_set_a_height(int32_t value);
   public:
 
-  // required bool interlaced = 5;
-  bool has_interlaced() const;
+  // required sint32 a_maxFPS = 3;
+  bool has_a_maxfps() const;
   private:
-  bool _internal_has_interlaced() const;
+  bool _internal_has_a_maxfps() const;
   public:
-  void clear_interlaced();
-  bool interlaced() const;
-  void set_interlaced(bool value);
+  void clear_a_maxfps();
+  int32_t a_maxfps() const;
+  void set_a_maxfps(int32_t value);
   private:
-  bool _internal_interlaced() const;
-  void _internal_set_interlaced(bool value);
+  int32_t _internal_a_maxfps() const;
+  void _internal_set_a_maxfps(int32_t value);
+  public:
+
+  // required sint32 a_videoType = 4;
+  bool has_a_videotype() const;
+  private:
+  bool _internal_has_a_videotype() const;
+  public:
+  void clear_a_videotype();
+  int32_t a_videotype() const;
+  void set_a_videotype(int32_t value);
+  private:
+  int32_t _internal_a_videotype() const;
+  void _internal_set_a_videotype(int32_t value);
+  public:
+
+  // required bool a_interlaced = 5;
+  bool has_a_interlaced() const;
+  private:
+  bool _internal_has_a_interlaced() const;
+  public:
+  void clear_a_interlaced();
+  bool a_interlaced() const;
+  void set_a_interlaced(bool value);
+  private:
+  bool _internal_a_interlaced() const;
+  void _internal_set_a_interlaced(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.VideoCaptureCapability)
@@ -258,11 +258,11 @@ class VideoCaptureCapability final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int32_t width_;
-    int32_t height_;
-    int32_t maxfps_;
-    int32_t videotype_;
-    bool interlaced_;
+    int32_t a_width_;
+    int32_t a_height_;
+    int32_t a_maxfps_;
+    int32_t a_videotype_;
+    bool a_interlaced_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto;
@@ -379,206 +379,206 @@ class VideoFrameProperties final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCaptureTimeFieldNumber = 1,
-    kBufferSizeFieldNumber = 2,
-    kRtpTimeStampFieldNumber = 3,
-    kNtpTimeMsFieldNumber = 4,
-    kRenderTimeMsFieldNumber = 5,
-    kRotationFieldNumber = 6,
-    kYAllocatedSizeFieldNumber = 7,
-    kUAllocatedSizeFieldNumber = 8,
-    kVAllocatedSizeFieldNumber = 9,
-    kWidthFieldNumber = 10,
-    kHeightFieldNumber = 11,
-    kYStrideFieldNumber = 12,
-    kUStrideFieldNumber = 13,
-    kVStrideFieldNumber = 14,
+    kACaptureTimeFieldNumber = 1,
+    kABufferSizeFieldNumber = 2,
+    kARtpTimeStampFieldNumber = 3,
+    kANtpTimeMsFieldNumber = 4,
+    kARenderTimeMsFieldNumber = 5,
+    kARotationFieldNumber = 6,
+    kAYAllocatedSizeFieldNumber = 7,
+    kAUAllocatedSizeFieldNumber = 8,
+    kAVAllocatedSizeFieldNumber = 9,
+    kAWidthFieldNumber = 10,
+    kAHeightFieldNumber = 11,
+    kAYStrideFieldNumber = 12,
+    kAUStrideFieldNumber = 13,
+    kAVStrideFieldNumber = 14,
   };
-  // required bytes captureTime = 1;
-  bool has_capturetime() const;
+  // required bytes a_captureTime = 1;
+  bool has_a_capturetime() const;
   private:
-  bool _internal_has_capturetime() const;
+  bool _internal_has_a_capturetime() const;
   public:
-  void clear_capturetime();
-  const std::string& capturetime() const;
+  void clear_a_capturetime();
+  const std::string& a_capturetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_capturetime(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_capturetime();
-  PROTOBUF_NODISCARD std::string* release_capturetime();
-  void set_allocated_capturetime(std::string* capturetime);
+  void set_a_capturetime(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_capturetime();
+  PROTOBUF_NODISCARD std::string* release_a_capturetime();
+  void set_allocated_a_capturetime(std::string* a_capturetime);
   private:
-  const std::string& _internal_capturetime() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_capturetime(const std::string& value);
-  std::string* _internal_mutable_capturetime();
+  const std::string& _internal_a_capturetime() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_capturetime(const std::string& value);
+  std::string* _internal_mutable_a_capturetime();
   public:
 
-  // required uint32 bufferSize = 2;
-  bool has_buffersize() const;
+  // required uint32 a_bufferSize = 2;
+  bool has_a_buffersize() const;
   private:
-  bool _internal_has_buffersize() const;
+  bool _internal_has_a_buffersize() const;
   public:
-  void clear_buffersize();
-  uint32_t buffersize() const;
-  void set_buffersize(uint32_t value);
+  void clear_a_buffersize();
+  uint32_t a_buffersize() const;
+  void set_a_buffersize(uint32_t value);
   private:
-  uint32_t _internal_buffersize() const;
-  void _internal_set_buffersize(uint32_t value);
-  public:
-
-  // required uint32 rtpTimeStamp = 3;
-  bool has_rtptimestamp() const;
-  private:
-  bool _internal_has_rtptimestamp() const;
-  public:
-  void clear_rtptimestamp();
-  uint32_t rtptimestamp() const;
-  void set_rtptimestamp(uint32_t value);
-  private:
-  uint32_t _internal_rtptimestamp() const;
-  void _internal_set_rtptimestamp(uint32_t value);
+  uint32_t _internal_a_buffersize() const;
+  void _internal_set_a_buffersize(uint32_t value);
   public:
 
-  // required sint64 ntpTimeMs = 4;
-  bool has_ntptimems() const;
+  // required uint32 a_rtpTimeStamp = 3;
+  bool has_a_rtptimestamp() const;
   private:
-  bool _internal_has_ntptimems() const;
+  bool _internal_has_a_rtptimestamp() const;
   public:
-  void clear_ntptimems();
-  int64_t ntptimems() const;
-  void set_ntptimems(int64_t value);
+  void clear_a_rtptimestamp();
+  uint32_t a_rtptimestamp() const;
+  void set_a_rtptimestamp(uint32_t value);
   private:
-  int64_t _internal_ntptimems() const;
-  void _internal_set_ntptimems(int64_t value);
-  public:
-
-  // required sint64 renderTimeMs = 5;
-  bool has_rendertimems() const;
-  private:
-  bool _internal_has_rendertimems() const;
-  public:
-  void clear_rendertimems();
-  int64_t rendertimems() const;
-  void set_rendertimems(int64_t value);
-  private:
-  int64_t _internal_rendertimems() const;
-  void _internal_set_rendertimems(int64_t value);
+  uint32_t _internal_a_rtptimestamp() const;
+  void _internal_set_a_rtptimestamp(uint32_t value);
   public:
 
-  // required sint32 rotation = 6;
-  bool has_rotation() const;
+  // required sint64 a_ntpTimeMs = 4;
+  bool has_a_ntptimems() const;
   private:
-  bool _internal_has_rotation() const;
+  bool _internal_has_a_ntptimems() const;
   public:
-  void clear_rotation();
-  int32_t rotation() const;
-  void set_rotation(int32_t value);
+  void clear_a_ntptimems();
+  int64_t a_ntptimems() const;
+  void set_a_ntptimems(int64_t value);
   private:
-  int32_t _internal_rotation() const;
-  void _internal_set_rotation(int32_t value);
-  public:
-
-  // required sint32 yAllocatedSize = 7;
-  bool has_yallocatedsize() const;
-  private:
-  bool _internal_has_yallocatedsize() const;
-  public:
-  void clear_yallocatedsize();
-  int32_t yallocatedsize() const;
-  void set_yallocatedsize(int32_t value);
-  private:
-  int32_t _internal_yallocatedsize() const;
-  void _internal_set_yallocatedsize(int32_t value);
+  int64_t _internal_a_ntptimems() const;
+  void _internal_set_a_ntptimems(int64_t value);
   public:
 
-  // required sint32 uAllocatedSize = 8;
-  bool has_uallocatedsize() const;
+  // required sint64 a_renderTimeMs = 5;
+  bool has_a_rendertimems() const;
   private:
-  bool _internal_has_uallocatedsize() const;
+  bool _internal_has_a_rendertimems() const;
   public:
-  void clear_uallocatedsize();
-  int32_t uallocatedsize() const;
-  void set_uallocatedsize(int32_t value);
+  void clear_a_rendertimems();
+  int64_t a_rendertimems() const;
+  void set_a_rendertimems(int64_t value);
   private:
-  int32_t _internal_uallocatedsize() const;
-  void _internal_set_uallocatedsize(int32_t value);
-  public:
-
-  // required sint32 vAllocatedSize = 9;
-  bool has_vallocatedsize() const;
-  private:
-  bool _internal_has_vallocatedsize() const;
-  public:
-  void clear_vallocatedsize();
-  int32_t vallocatedsize() const;
-  void set_vallocatedsize(int32_t value);
-  private:
-  int32_t _internal_vallocatedsize() const;
-  void _internal_set_vallocatedsize(int32_t value);
+  int64_t _internal_a_rendertimems() const;
+  void _internal_set_a_rendertimems(int64_t value);
   public:
 
-  // required sint32 width = 10;
-  bool has_width() const;
+  // required sint32 a_rotation = 6;
+  bool has_a_rotation() const;
   private:
-  bool _internal_has_width() const;
+  bool _internal_has_a_rotation() const;
   public:
-  void clear_width();
-  int32_t width() const;
-  void set_width(int32_t value);
+  void clear_a_rotation();
+  int32_t a_rotation() const;
+  void set_a_rotation(int32_t value);
   private:
-  int32_t _internal_width() const;
-  void _internal_set_width(int32_t value);
-  public:
-
-  // required sint32 height = 11;
-  bool has_height() const;
-  private:
-  bool _internal_has_height() const;
-  public:
-  void clear_height();
-  int32_t height() const;
-  void set_height(int32_t value);
-  private:
-  int32_t _internal_height() const;
-  void _internal_set_height(int32_t value);
+  int32_t _internal_a_rotation() const;
+  void _internal_set_a_rotation(int32_t value);
   public:
 
-  // required sint32 yStride = 12;
-  bool has_ystride() const;
+  // required sint32 a_yAllocatedSize = 7;
+  bool has_a_yallocatedsize() const;
   private:
-  bool _internal_has_ystride() const;
+  bool _internal_has_a_yallocatedsize() const;
   public:
-  void clear_ystride();
-  int32_t ystride() const;
-  void set_ystride(int32_t value);
+  void clear_a_yallocatedsize();
+  int32_t a_yallocatedsize() const;
+  void set_a_yallocatedsize(int32_t value);
   private:
-  int32_t _internal_ystride() const;
-  void _internal_set_ystride(int32_t value);
-  public:
-
-  // required sint32 uStride = 13;
-  bool has_ustride() const;
-  private:
-  bool _internal_has_ustride() const;
-  public:
-  void clear_ustride();
-  int32_t ustride() const;
-  void set_ustride(int32_t value);
-  private:
-  int32_t _internal_ustride() const;
-  void _internal_set_ustride(int32_t value);
+  int32_t _internal_a_yallocatedsize() const;
+  void _internal_set_a_yallocatedsize(int32_t value);
   public:
 
-  // required sint32 vStride = 14;
-  bool has_vstride() const;
+  // required sint32 a_uAllocatedSize = 8;
+  bool has_a_uallocatedsize() const;
   private:
-  bool _internal_has_vstride() const;
+  bool _internal_has_a_uallocatedsize() const;
   public:
-  void clear_vstride();
-  int32_t vstride() const;
-  void set_vstride(int32_t value);
+  void clear_a_uallocatedsize();
+  int32_t a_uallocatedsize() const;
+  void set_a_uallocatedsize(int32_t value);
   private:
-  int32_t _internal_vstride() const;
-  void _internal_set_vstride(int32_t value);
+  int32_t _internal_a_uallocatedsize() const;
+  void _internal_set_a_uallocatedsize(int32_t value);
+  public:
+
+  // required sint32 a_vAllocatedSize = 9;
+  bool has_a_vallocatedsize() const;
+  private:
+  bool _internal_has_a_vallocatedsize() const;
+  public:
+  void clear_a_vallocatedsize();
+  int32_t a_vallocatedsize() const;
+  void set_a_vallocatedsize(int32_t value);
+  private:
+  int32_t _internal_a_vallocatedsize() const;
+  void _internal_set_a_vallocatedsize(int32_t value);
+  public:
+
+  // required sint32 a_width = 10;
+  bool has_a_width() const;
+  private:
+  bool _internal_has_a_width() const;
+  public:
+  void clear_a_width();
+  int32_t a_width() const;
+  void set_a_width(int32_t value);
+  private:
+  int32_t _internal_a_width() const;
+  void _internal_set_a_width(int32_t value);
+  public:
+
+  // required sint32 a_height = 11;
+  bool has_a_height() const;
+  private:
+  bool _internal_has_a_height() const;
+  public:
+  void clear_a_height();
+  int32_t a_height() const;
+  void set_a_height(int32_t value);
+  private:
+  int32_t _internal_a_height() const;
+  void _internal_set_a_height(int32_t value);
+  public:
+
+  // required sint32 a_yStride = 12;
+  bool has_a_ystride() const;
+  private:
+  bool _internal_has_a_ystride() const;
+  public:
+  void clear_a_ystride();
+  int32_t a_ystride() const;
+  void set_a_ystride(int32_t value);
+  private:
+  int32_t _internal_a_ystride() const;
+  void _internal_set_a_ystride(int32_t value);
+  public:
+
+  // required sint32 a_uStride = 13;
+  bool has_a_ustride() const;
+  private:
+  bool _internal_has_a_ustride() const;
+  public:
+  void clear_a_ustride();
+  int32_t a_ustride() const;
+  void set_a_ustride(int32_t value);
+  private:
+  int32_t _internal_a_ustride() const;
+  void _internal_set_a_ustride(int32_t value);
+  public:
+
+  // required sint32 a_vStride = 14;
+  bool has_a_vstride() const;
+  private:
+  bool _internal_has_a_vstride() const;
+  public:
+  void clear_a_vstride();
+  int32_t a_vstride() const;
+  void set_a_vstride(int32_t value);
+  private:
+  int32_t _internal_a_vstride() const;
+  void _internal_set_a_vstride(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.camera.VideoFrameProperties)
@@ -594,20 +594,20 @@ class VideoFrameProperties final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr capturetime_;
-    uint32_t buffersize_;
-    uint32_t rtptimestamp_;
-    int64_t ntptimems_;
-    int64_t rendertimems_;
-    int32_t rotation_;
-    int32_t yallocatedsize_;
-    int32_t uallocatedsize_;
-    int32_t vallocatedsize_;
-    int32_t width_;
-    int32_t height_;
-    int32_t ystride_;
-    int32_t ustride_;
-    int32_t vstride_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_capturetime_;
+    uint32_t a_buffersize_;
+    uint32_t a_rtptimestamp_;
+    int64_t a_ntptimems_;
+    int64_t a_rendertimems_;
+    int32_t a_rotation_;
+    int32_t a_yallocatedsize_;
+    int32_t a_uallocatedsize_;
+    int32_t a_vallocatedsize_;
+    int32_t a_width_;
+    int32_t a_height_;
+    int32_t a_ystride_;
+    int32_t a_ustride_;
+    int32_t a_vstride_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto;
@@ -623,580 +623,580 @@ class VideoFrameProperties final :
 #endif  // __GNUC__
 // VideoCaptureCapability
 
-// required sint32 width = 1;
-inline bool VideoCaptureCapability::_internal_has_width() const {
+// required sint32 a_width = 1;
+inline bool VideoCaptureCapability::_internal_has_a_width() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool VideoCaptureCapability::has_width() const {
-  return _internal_has_width();
+inline bool VideoCaptureCapability::has_a_width() const {
+  return _internal_has_a_width();
 }
-inline void VideoCaptureCapability::clear_width() {
-  _impl_.width_ = 0;
+inline void VideoCaptureCapability::clear_a_width() {
+  _impl_.a_width_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t VideoCaptureCapability::_internal_width() const {
-  return _impl_.width_;
+inline int32_t VideoCaptureCapability::_internal_a_width() const {
+  return _impl_.a_width_;
 }
-inline int32_t VideoCaptureCapability::width() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.width)
-  return _internal_width();
+inline int32_t VideoCaptureCapability::a_width() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.a_width)
+  return _internal_a_width();
 }
-inline void VideoCaptureCapability::_internal_set_width(int32_t value) {
+inline void VideoCaptureCapability::_internal_set_a_width(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.width_ = value;
+  _impl_.a_width_ = value;
 }
-inline void VideoCaptureCapability::set_width(int32_t value) {
-  _internal_set_width(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.width)
+inline void VideoCaptureCapability::set_a_width(int32_t value) {
+  _internal_set_a_width(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.a_width)
 }
 
-// required sint32 height = 2;
-inline bool VideoCaptureCapability::_internal_has_height() const {
+// required sint32 a_height = 2;
+inline bool VideoCaptureCapability::_internal_has_a_height() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool VideoCaptureCapability::has_height() const {
-  return _internal_has_height();
+inline bool VideoCaptureCapability::has_a_height() const {
+  return _internal_has_a_height();
 }
-inline void VideoCaptureCapability::clear_height() {
-  _impl_.height_ = 0;
+inline void VideoCaptureCapability::clear_a_height() {
+  _impl_.a_height_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline int32_t VideoCaptureCapability::_internal_height() const {
-  return _impl_.height_;
+inline int32_t VideoCaptureCapability::_internal_a_height() const {
+  return _impl_.a_height_;
 }
-inline int32_t VideoCaptureCapability::height() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.height)
-  return _internal_height();
+inline int32_t VideoCaptureCapability::a_height() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.a_height)
+  return _internal_a_height();
 }
-inline void VideoCaptureCapability::_internal_set_height(int32_t value) {
+inline void VideoCaptureCapability::_internal_set_a_height(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.height_ = value;
+  _impl_.a_height_ = value;
 }
-inline void VideoCaptureCapability::set_height(int32_t value) {
-  _internal_set_height(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.height)
+inline void VideoCaptureCapability::set_a_height(int32_t value) {
+  _internal_set_a_height(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.a_height)
 }
 
-// required sint32 maxFPS = 3;
-inline bool VideoCaptureCapability::_internal_has_maxfps() const {
+// required sint32 a_maxFPS = 3;
+inline bool VideoCaptureCapability::_internal_has_a_maxfps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool VideoCaptureCapability::has_maxfps() const {
-  return _internal_has_maxfps();
+inline bool VideoCaptureCapability::has_a_maxfps() const {
+  return _internal_has_a_maxfps();
 }
-inline void VideoCaptureCapability::clear_maxfps() {
-  _impl_.maxfps_ = 0;
+inline void VideoCaptureCapability::clear_a_maxfps() {
+  _impl_.a_maxfps_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline int32_t VideoCaptureCapability::_internal_maxfps() const {
-  return _impl_.maxfps_;
+inline int32_t VideoCaptureCapability::_internal_a_maxfps() const {
+  return _impl_.a_maxfps_;
 }
-inline int32_t VideoCaptureCapability::maxfps() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.maxFPS)
-  return _internal_maxfps();
+inline int32_t VideoCaptureCapability::a_maxfps() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.a_maxFPS)
+  return _internal_a_maxfps();
 }
-inline void VideoCaptureCapability::_internal_set_maxfps(int32_t value) {
+inline void VideoCaptureCapability::_internal_set_a_maxfps(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.maxfps_ = value;
+  _impl_.a_maxfps_ = value;
 }
-inline void VideoCaptureCapability::set_maxfps(int32_t value) {
-  _internal_set_maxfps(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.maxFPS)
+inline void VideoCaptureCapability::set_a_maxfps(int32_t value) {
+  _internal_set_a_maxfps(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.a_maxFPS)
 }
 
-// required sint32 videoType = 4;
-inline bool VideoCaptureCapability::_internal_has_videotype() const {
+// required sint32 a_videoType = 4;
+inline bool VideoCaptureCapability::_internal_has_a_videotype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool VideoCaptureCapability::has_videotype() const {
-  return _internal_has_videotype();
+inline bool VideoCaptureCapability::has_a_videotype() const {
+  return _internal_has_a_videotype();
 }
-inline void VideoCaptureCapability::clear_videotype() {
-  _impl_.videotype_ = 0;
+inline void VideoCaptureCapability::clear_a_videotype() {
+  _impl_.a_videotype_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int32_t VideoCaptureCapability::_internal_videotype() const {
-  return _impl_.videotype_;
+inline int32_t VideoCaptureCapability::_internal_a_videotype() const {
+  return _impl_.a_videotype_;
 }
-inline int32_t VideoCaptureCapability::videotype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.videoType)
-  return _internal_videotype();
+inline int32_t VideoCaptureCapability::a_videotype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.a_videoType)
+  return _internal_a_videotype();
 }
-inline void VideoCaptureCapability::_internal_set_videotype(int32_t value) {
+inline void VideoCaptureCapability::_internal_set_a_videotype(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.videotype_ = value;
+  _impl_.a_videotype_ = value;
 }
-inline void VideoCaptureCapability::set_videotype(int32_t value) {
-  _internal_set_videotype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.videoType)
+inline void VideoCaptureCapability::set_a_videotype(int32_t value) {
+  _internal_set_a_videotype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.a_videoType)
 }
 
-// required bool interlaced = 5;
-inline bool VideoCaptureCapability::_internal_has_interlaced() const {
+// required bool a_interlaced = 5;
+inline bool VideoCaptureCapability::_internal_has_a_interlaced() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool VideoCaptureCapability::has_interlaced() const {
-  return _internal_has_interlaced();
+inline bool VideoCaptureCapability::has_a_interlaced() const {
+  return _internal_has_a_interlaced();
 }
-inline void VideoCaptureCapability::clear_interlaced() {
-  _impl_.interlaced_ = false;
+inline void VideoCaptureCapability::clear_a_interlaced() {
+  _impl_.a_interlaced_ = false;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline bool VideoCaptureCapability::_internal_interlaced() const {
-  return _impl_.interlaced_;
+inline bool VideoCaptureCapability::_internal_a_interlaced() const {
+  return _impl_.a_interlaced_;
 }
-inline bool VideoCaptureCapability::interlaced() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.interlaced)
-  return _internal_interlaced();
+inline bool VideoCaptureCapability::a_interlaced() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoCaptureCapability.a_interlaced)
+  return _internal_a_interlaced();
 }
-inline void VideoCaptureCapability::_internal_set_interlaced(bool value) {
+inline void VideoCaptureCapability::_internal_set_a_interlaced(bool value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.interlaced_ = value;
+  _impl_.a_interlaced_ = value;
 }
-inline void VideoCaptureCapability::set_interlaced(bool value) {
-  _internal_set_interlaced(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.interlaced)
+inline void VideoCaptureCapability::set_a_interlaced(bool value) {
+  _internal_set_a_interlaced(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoCaptureCapability.a_interlaced)
 }
 
 // -------------------------------------------------------------------
 
 // VideoFrameProperties
 
-// required bytes captureTime = 1;
-inline bool VideoFrameProperties::_internal_has_capturetime() const {
+// required bytes a_captureTime = 1;
+inline bool VideoFrameProperties::_internal_has_a_capturetime() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_capturetime() const {
-  return _internal_has_capturetime();
+inline bool VideoFrameProperties::has_a_capturetime() const {
+  return _internal_has_a_capturetime();
 }
-inline void VideoFrameProperties::clear_capturetime() {
-  _impl_.capturetime_.ClearToEmpty();
+inline void VideoFrameProperties::clear_a_capturetime() {
+  _impl_.a_capturetime_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& VideoFrameProperties::capturetime() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.captureTime)
-  return _internal_capturetime();
+inline const std::string& VideoFrameProperties::a_capturetime() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_captureTime)
+  return _internal_a_capturetime();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void VideoFrameProperties::set_capturetime(ArgT0&& arg0, ArgT... args) {
+void VideoFrameProperties::set_a_capturetime(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.capturetime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.captureTime)
+ _impl_.a_capturetime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_captureTime)
 }
-inline std::string* VideoFrameProperties::mutable_capturetime() {
-  std::string* _s = _internal_mutable_capturetime();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.VideoFrameProperties.captureTime)
+inline std::string* VideoFrameProperties::mutable_a_capturetime() {
+  std::string* _s = _internal_mutable_a_capturetime();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.camera.VideoFrameProperties.a_captureTime)
   return _s;
 }
-inline const std::string& VideoFrameProperties::_internal_capturetime() const {
-  return _impl_.capturetime_.Get();
+inline const std::string& VideoFrameProperties::_internal_a_capturetime() const {
+  return _impl_.a_capturetime_.Get();
 }
-inline void VideoFrameProperties::_internal_set_capturetime(const std::string& value) {
+inline void VideoFrameProperties::_internal_set_a_capturetime(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.capturetime_.Set(value, GetArenaForAllocation());
+  _impl_.a_capturetime_.Set(value, GetArenaForAllocation());
 }
-inline std::string* VideoFrameProperties::_internal_mutable_capturetime() {
+inline std::string* VideoFrameProperties::_internal_mutable_a_capturetime() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.capturetime_.Mutable(GetArenaForAllocation());
+  return _impl_.a_capturetime_.Mutable(GetArenaForAllocation());
 }
-inline std::string* VideoFrameProperties::release_capturetime() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.VideoFrameProperties.captureTime)
-  if (!_internal_has_capturetime()) {
+inline std::string* VideoFrameProperties::release_a_capturetime() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.camera.VideoFrameProperties.a_captureTime)
+  if (!_internal_has_a_capturetime()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.capturetime_.Release();
+  auto* p = _impl_.a_capturetime_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.capturetime_.IsDefault()) {
-    _impl_.capturetime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_capturetime_.IsDefault()) {
+    _impl_.a_capturetime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void VideoFrameProperties::set_allocated_capturetime(std::string* capturetime) {
-  if (capturetime != nullptr) {
+inline void VideoFrameProperties::set_allocated_a_capturetime(std::string* a_capturetime) {
+  if (a_capturetime != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.capturetime_.SetAllocated(capturetime, GetArenaForAllocation());
+  _impl_.a_capturetime_.SetAllocated(a_capturetime, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.capturetime_.IsDefault()) {
-    _impl_.capturetime_.Set("", GetArenaForAllocation());
+  if (_impl_.a_capturetime_.IsDefault()) {
+    _impl_.a_capturetime_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.VideoFrameProperties.captureTime)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.camera.VideoFrameProperties.a_captureTime)
 }
 
-// required uint32 bufferSize = 2;
-inline bool VideoFrameProperties::_internal_has_buffersize() const {
+// required uint32 a_bufferSize = 2;
+inline bool VideoFrameProperties::_internal_has_a_buffersize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_buffersize() const {
-  return _internal_has_buffersize();
+inline bool VideoFrameProperties::has_a_buffersize() const {
+  return _internal_has_a_buffersize();
 }
-inline void VideoFrameProperties::clear_buffersize() {
-  _impl_.buffersize_ = 0u;
+inline void VideoFrameProperties::clear_a_buffersize() {
+  _impl_.a_buffersize_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t VideoFrameProperties::_internal_buffersize() const {
-  return _impl_.buffersize_;
+inline uint32_t VideoFrameProperties::_internal_a_buffersize() const {
+  return _impl_.a_buffersize_;
 }
-inline uint32_t VideoFrameProperties::buffersize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.bufferSize)
-  return _internal_buffersize();
+inline uint32_t VideoFrameProperties::a_buffersize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_bufferSize)
+  return _internal_a_buffersize();
 }
-inline void VideoFrameProperties::_internal_set_buffersize(uint32_t value) {
+inline void VideoFrameProperties::_internal_set_a_buffersize(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.buffersize_ = value;
+  _impl_.a_buffersize_ = value;
 }
-inline void VideoFrameProperties::set_buffersize(uint32_t value) {
-  _internal_set_buffersize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.bufferSize)
+inline void VideoFrameProperties::set_a_buffersize(uint32_t value) {
+  _internal_set_a_buffersize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_bufferSize)
 }
 
-// required uint32 rtpTimeStamp = 3;
-inline bool VideoFrameProperties::_internal_has_rtptimestamp() const {
+// required uint32 a_rtpTimeStamp = 3;
+inline bool VideoFrameProperties::_internal_has_a_rtptimestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_rtptimestamp() const {
-  return _internal_has_rtptimestamp();
+inline bool VideoFrameProperties::has_a_rtptimestamp() const {
+  return _internal_has_a_rtptimestamp();
 }
-inline void VideoFrameProperties::clear_rtptimestamp() {
-  _impl_.rtptimestamp_ = 0u;
+inline void VideoFrameProperties::clear_a_rtptimestamp() {
+  _impl_.a_rtptimestamp_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t VideoFrameProperties::_internal_rtptimestamp() const {
-  return _impl_.rtptimestamp_;
+inline uint32_t VideoFrameProperties::_internal_a_rtptimestamp() const {
+  return _impl_.a_rtptimestamp_;
 }
-inline uint32_t VideoFrameProperties::rtptimestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.rtpTimeStamp)
-  return _internal_rtptimestamp();
+inline uint32_t VideoFrameProperties::a_rtptimestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_rtpTimeStamp)
+  return _internal_a_rtptimestamp();
 }
-inline void VideoFrameProperties::_internal_set_rtptimestamp(uint32_t value) {
+inline void VideoFrameProperties::_internal_set_a_rtptimestamp(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.rtptimestamp_ = value;
+  _impl_.a_rtptimestamp_ = value;
 }
-inline void VideoFrameProperties::set_rtptimestamp(uint32_t value) {
-  _internal_set_rtptimestamp(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.rtpTimeStamp)
+inline void VideoFrameProperties::set_a_rtptimestamp(uint32_t value) {
+  _internal_set_a_rtptimestamp(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_rtpTimeStamp)
 }
 
-// required sint64 ntpTimeMs = 4;
-inline bool VideoFrameProperties::_internal_has_ntptimems() const {
+// required sint64 a_ntpTimeMs = 4;
+inline bool VideoFrameProperties::_internal_has_a_ntptimems() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_ntptimems() const {
-  return _internal_has_ntptimems();
+inline bool VideoFrameProperties::has_a_ntptimems() const {
+  return _internal_has_a_ntptimems();
 }
-inline void VideoFrameProperties::clear_ntptimems() {
-  _impl_.ntptimems_ = int64_t{0};
+inline void VideoFrameProperties::clear_a_ntptimems() {
+  _impl_.a_ntptimems_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline int64_t VideoFrameProperties::_internal_ntptimems() const {
-  return _impl_.ntptimems_;
+inline int64_t VideoFrameProperties::_internal_a_ntptimems() const {
+  return _impl_.a_ntptimems_;
 }
-inline int64_t VideoFrameProperties::ntptimems() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.ntpTimeMs)
-  return _internal_ntptimems();
+inline int64_t VideoFrameProperties::a_ntptimems() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_ntpTimeMs)
+  return _internal_a_ntptimems();
 }
-inline void VideoFrameProperties::_internal_set_ntptimems(int64_t value) {
+inline void VideoFrameProperties::_internal_set_a_ntptimems(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.ntptimems_ = value;
+  _impl_.a_ntptimems_ = value;
 }
-inline void VideoFrameProperties::set_ntptimems(int64_t value) {
-  _internal_set_ntptimems(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.ntpTimeMs)
+inline void VideoFrameProperties::set_a_ntptimems(int64_t value) {
+  _internal_set_a_ntptimems(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_ntpTimeMs)
 }
 
-// required sint64 renderTimeMs = 5;
-inline bool VideoFrameProperties::_internal_has_rendertimems() const {
+// required sint64 a_renderTimeMs = 5;
+inline bool VideoFrameProperties::_internal_has_a_rendertimems() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_rendertimems() const {
-  return _internal_has_rendertimems();
+inline bool VideoFrameProperties::has_a_rendertimems() const {
+  return _internal_has_a_rendertimems();
 }
-inline void VideoFrameProperties::clear_rendertimems() {
-  _impl_.rendertimems_ = int64_t{0};
+inline void VideoFrameProperties::clear_a_rendertimems() {
+  _impl_.a_rendertimems_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline int64_t VideoFrameProperties::_internal_rendertimems() const {
-  return _impl_.rendertimems_;
+inline int64_t VideoFrameProperties::_internal_a_rendertimems() const {
+  return _impl_.a_rendertimems_;
 }
-inline int64_t VideoFrameProperties::rendertimems() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.renderTimeMs)
-  return _internal_rendertimems();
+inline int64_t VideoFrameProperties::a_rendertimems() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_renderTimeMs)
+  return _internal_a_rendertimems();
 }
-inline void VideoFrameProperties::_internal_set_rendertimems(int64_t value) {
+inline void VideoFrameProperties::_internal_set_a_rendertimems(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.rendertimems_ = value;
+  _impl_.a_rendertimems_ = value;
 }
-inline void VideoFrameProperties::set_rendertimems(int64_t value) {
-  _internal_set_rendertimems(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.renderTimeMs)
+inline void VideoFrameProperties::set_a_rendertimems(int64_t value) {
+  _internal_set_a_rendertimems(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_renderTimeMs)
 }
 
-// required sint32 rotation = 6;
-inline bool VideoFrameProperties::_internal_has_rotation() const {
+// required sint32 a_rotation = 6;
+inline bool VideoFrameProperties::_internal_has_a_rotation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_rotation() const {
-  return _internal_has_rotation();
+inline bool VideoFrameProperties::has_a_rotation() const {
+  return _internal_has_a_rotation();
 }
-inline void VideoFrameProperties::clear_rotation() {
-  _impl_.rotation_ = 0;
+inline void VideoFrameProperties::clear_a_rotation() {
+  _impl_.a_rotation_ = 0;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline int32_t VideoFrameProperties::_internal_rotation() const {
-  return _impl_.rotation_;
+inline int32_t VideoFrameProperties::_internal_a_rotation() const {
+  return _impl_.a_rotation_;
 }
-inline int32_t VideoFrameProperties::rotation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.rotation)
-  return _internal_rotation();
+inline int32_t VideoFrameProperties::a_rotation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_rotation)
+  return _internal_a_rotation();
 }
-inline void VideoFrameProperties::_internal_set_rotation(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_rotation(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.rotation_ = value;
+  _impl_.a_rotation_ = value;
 }
-inline void VideoFrameProperties::set_rotation(int32_t value) {
-  _internal_set_rotation(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.rotation)
+inline void VideoFrameProperties::set_a_rotation(int32_t value) {
+  _internal_set_a_rotation(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_rotation)
 }
 
-// required sint32 yAllocatedSize = 7;
-inline bool VideoFrameProperties::_internal_has_yallocatedsize() const {
+// required sint32 a_yAllocatedSize = 7;
+inline bool VideoFrameProperties::_internal_has_a_yallocatedsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_yallocatedsize() const {
-  return _internal_has_yallocatedsize();
+inline bool VideoFrameProperties::has_a_yallocatedsize() const {
+  return _internal_has_a_yallocatedsize();
 }
-inline void VideoFrameProperties::clear_yallocatedsize() {
-  _impl_.yallocatedsize_ = 0;
+inline void VideoFrameProperties::clear_a_yallocatedsize() {
+  _impl_.a_yallocatedsize_ = 0;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline int32_t VideoFrameProperties::_internal_yallocatedsize() const {
-  return _impl_.yallocatedsize_;
+inline int32_t VideoFrameProperties::_internal_a_yallocatedsize() const {
+  return _impl_.a_yallocatedsize_;
 }
-inline int32_t VideoFrameProperties::yallocatedsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.yAllocatedSize)
-  return _internal_yallocatedsize();
+inline int32_t VideoFrameProperties::a_yallocatedsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_yAllocatedSize)
+  return _internal_a_yallocatedsize();
 }
-inline void VideoFrameProperties::_internal_set_yallocatedsize(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_yallocatedsize(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.yallocatedsize_ = value;
+  _impl_.a_yallocatedsize_ = value;
 }
-inline void VideoFrameProperties::set_yallocatedsize(int32_t value) {
-  _internal_set_yallocatedsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.yAllocatedSize)
+inline void VideoFrameProperties::set_a_yallocatedsize(int32_t value) {
+  _internal_set_a_yallocatedsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_yAllocatedSize)
 }
 
-// required sint32 uAllocatedSize = 8;
-inline bool VideoFrameProperties::_internal_has_uallocatedsize() const {
+// required sint32 a_uAllocatedSize = 8;
+inline bool VideoFrameProperties::_internal_has_a_uallocatedsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_uallocatedsize() const {
-  return _internal_has_uallocatedsize();
+inline bool VideoFrameProperties::has_a_uallocatedsize() const {
+  return _internal_has_a_uallocatedsize();
 }
-inline void VideoFrameProperties::clear_uallocatedsize() {
-  _impl_.uallocatedsize_ = 0;
+inline void VideoFrameProperties::clear_a_uallocatedsize() {
+  _impl_.a_uallocatedsize_ = 0;
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
-inline int32_t VideoFrameProperties::_internal_uallocatedsize() const {
-  return _impl_.uallocatedsize_;
+inline int32_t VideoFrameProperties::_internal_a_uallocatedsize() const {
+  return _impl_.a_uallocatedsize_;
 }
-inline int32_t VideoFrameProperties::uallocatedsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.uAllocatedSize)
-  return _internal_uallocatedsize();
+inline int32_t VideoFrameProperties::a_uallocatedsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_uAllocatedSize)
+  return _internal_a_uallocatedsize();
 }
-inline void VideoFrameProperties::_internal_set_uallocatedsize(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_uallocatedsize(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000080u;
-  _impl_.uallocatedsize_ = value;
+  _impl_.a_uallocatedsize_ = value;
 }
-inline void VideoFrameProperties::set_uallocatedsize(int32_t value) {
-  _internal_set_uallocatedsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.uAllocatedSize)
+inline void VideoFrameProperties::set_a_uallocatedsize(int32_t value) {
+  _internal_set_a_uallocatedsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_uAllocatedSize)
 }
 
-// required sint32 vAllocatedSize = 9;
-inline bool VideoFrameProperties::_internal_has_vallocatedsize() const {
+// required sint32 a_vAllocatedSize = 9;
+inline bool VideoFrameProperties::_internal_has_a_vallocatedsize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_vallocatedsize() const {
-  return _internal_has_vallocatedsize();
+inline bool VideoFrameProperties::has_a_vallocatedsize() const {
+  return _internal_has_a_vallocatedsize();
 }
-inline void VideoFrameProperties::clear_vallocatedsize() {
-  _impl_.vallocatedsize_ = 0;
+inline void VideoFrameProperties::clear_a_vallocatedsize() {
+  _impl_.a_vallocatedsize_ = 0;
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
-inline int32_t VideoFrameProperties::_internal_vallocatedsize() const {
-  return _impl_.vallocatedsize_;
+inline int32_t VideoFrameProperties::_internal_a_vallocatedsize() const {
+  return _impl_.a_vallocatedsize_;
 }
-inline int32_t VideoFrameProperties::vallocatedsize() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.vAllocatedSize)
-  return _internal_vallocatedsize();
+inline int32_t VideoFrameProperties::a_vallocatedsize() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_vAllocatedSize)
+  return _internal_a_vallocatedsize();
 }
-inline void VideoFrameProperties::_internal_set_vallocatedsize(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_vallocatedsize(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000100u;
-  _impl_.vallocatedsize_ = value;
+  _impl_.a_vallocatedsize_ = value;
 }
-inline void VideoFrameProperties::set_vallocatedsize(int32_t value) {
-  _internal_set_vallocatedsize(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.vAllocatedSize)
+inline void VideoFrameProperties::set_a_vallocatedsize(int32_t value) {
+  _internal_set_a_vallocatedsize(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_vAllocatedSize)
 }
 
-// required sint32 width = 10;
-inline bool VideoFrameProperties::_internal_has_width() const {
+// required sint32 a_width = 10;
+inline bool VideoFrameProperties::_internal_has_a_width() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_width() const {
-  return _internal_has_width();
+inline bool VideoFrameProperties::has_a_width() const {
+  return _internal_has_a_width();
 }
-inline void VideoFrameProperties::clear_width() {
-  _impl_.width_ = 0;
+inline void VideoFrameProperties::clear_a_width() {
+  _impl_.a_width_ = 0;
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
-inline int32_t VideoFrameProperties::_internal_width() const {
-  return _impl_.width_;
+inline int32_t VideoFrameProperties::_internal_a_width() const {
+  return _impl_.a_width_;
 }
-inline int32_t VideoFrameProperties::width() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.width)
-  return _internal_width();
+inline int32_t VideoFrameProperties::a_width() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_width)
+  return _internal_a_width();
 }
-inline void VideoFrameProperties::_internal_set_width(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_width(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000200u;
-  _impl_.width_ = value;
+  _impl_.a_width_ = value;
 }
-inline void VideoFrameProperties::set_width(int32_t value) {
-  _internal_set_width(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.width)
+inline void VideoFrameProperties::set_a_width(int32_t value) {
+  _internal_set_a_width(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_width)
 }
 
-// required sint32 height = 11;
-inline bool VideoFrameProperties::_internal_has_height() const {
+// required sint32 a_height = 11;
+inline bool VideoFrameProperties::_internal_has_a_height() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_height() const {
-  return _internal_has_height();
+inline bool VideoFrameProperties::has_a_height() const {
+  return _internal_has_a_height();
 }
-inline void VideoFrameProperties::clear_height() {
-  _impl_.height_ = 0;
+inline void VideoFrameProperties::clear_a_height() {
+  _impl_.a_height_ = 0;
   _impl_._has_bits_[0] &= ~0x00000400u;
 }
-inline int32_t VideoFrameProperties::_internal_height() const {
-  return _impl_.height_;
+inline int32_t VideoFrameProperties::_internal_a_height() const {
+  return _impl_.a_height_;
 }
-inline int32_t VideoFrameProperties::height() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.height)
-  return _internal_height();
+inline int32_t VideoFrameProperties::a_height() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_height)
+  return _internal_a_height();
 }
-inline void VideoFrameProperties::_internal_set_height(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_height(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000400u;
-  _impl_.height_ = value;
+  _impl_.a_height_ = value;
 }
-inline void VideoFrameProperties::set_height(int32_t value) {
-  _internal_set_height(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.height)
+inline void VideoFrameProperties::set_a_height(int32_t value) {
+  _internal_set_a_height(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_height)
 }
 
-// required sint32 yStride = 12;
-inline bool VideoFrameProperties::_internal_has_ystride() const {
+// required sint32 a_yStride = 12;
+inline bool VideoFrameProperties::_internal_has_a_ystride() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_ystride() const {
-  return _internal_has_ystride();
+inline bool VideoFrameProperties::has_a_ystride() const {
+  return _internal_has_a_ystride();
 }
-inline void VideoFrameProperties::clear_ystride() {
-  _impl_.ystride_ = 0;
+inline void VideoFrameProperties::clear_a_ystride() {
+  _impl_.a_ystride_ = 0;
   _impl_._has_bits_[0] &= ~0x00000800u;
 }
-inline int32_t VideoFrameProperties::_internal_ystride() const {
-  return _impl_.ystride_;
+inline int32_t VideoFrameProperties::_internal_a_ystride() const {
+  return _impl_.a_ystride_;
 }
-inline int32_t VideoFrameProperties::ystride() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.yStride)
-  return _internal_ystride();
+inline int32_t VideoFrameProperties::a_ystride() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_yStride)
+  return _internal_a_ystride();
 }
-inline void VideoFrameProperties::_internal_set_ystride(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_ystride(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000800u;
-  _impl_.ystride_ = value;
+  _impl_.a_ystride_ = value;
 }
-inline void VideoFrameProperties::set_ystride(int32_t value) {
-  _internal_set_ystride(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.yStride)
+inline void VideoFrameProperties::set_a_ystride(int32_t value) {
+  _internal_set_a_ystride(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_yStride)
 }
 
-// required sint32 uStride = 13;
-inline bool VideoFrameProperties::_internal_has_ustride() const {
+// required sint32 a_uStride = 13;
+inline bool VideoFrameProperties::_internal_has_a_ustride() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_ustride() const {
-  return _internal_has_ustride();
+inline bool VideoFrameProperties::has_a_ustride() const {
+  return _internal_has_a_ustride();
 }
-inline void VideoFrameProperties::clear_ustride() {
-  _impl_.ustride_ = 0;
+inline void VideoFrameProperties::clear_a_ustride() {
+  _impl_.a_ustride_ = 0;
   _impl_._has_bits_[0] &= ~0x00001000u;
 }
-inline int32_t VideoFrameProperties::_internal_ustride() const {
-  return _impl_.ustride_;
+inline int32_t VideoFrameProperties::_internal_a_ustride() const {
+  return _impl_.a_ustride_;
 }
-inline int32_t VideoFrameProperties::ustride() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.uStride)
-  return _internal_ustride();
+inline int32_t VideoFrameProperties::a_ustride() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_uStride)
+  return _internal_a_ustride();
 }
-inline void VideoFrameProperties::_internal_set_ustride(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_ustride(int32_t value) {
   _impl_._has_bits_[0] |= 0x00001000u;
-  _impl_.ustride_ = value;
+  _impl_.a_ustride_ = value;
 }
-inline void VideoFrameProperties::set_ustride(int32_t value) {
-  _internal_set_ustride(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.uStride)
+inline void VideoFrameProperties::set_a_ustride(int32_t value) {
+  _internal_set_a_ustride(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_uStride)
 }
 
-// required sint32 vStride = 14;
-inline bool VideoFrameProperties::_internal_has_vstride() const {
+// required sint32 a_vStride = 14;
+inline bool VideoFrameProperties::_internal_has_a_vstride() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
 }
-inline bool VideoFrameProperties::has_vstride() const {
-  return _internal_has_vstride();
+inline bool VideoFrameProperties::has_a_vstride() const {
+  return _internal_has_a_vstride();
 }
-inline void VideoFrameProperties::clear_vstride() {
-  _impl_.vstride_ = 0;
+inline void VideoFrameProperties::clear_a_vstride() {
+  _impl_.a_vstride_ = 0;
   _impl_._has_bits_[0] &= ~0x00002000u;
 }
-inline int32_t VideoFrameProperties::_internal_vstride() const {
-  return _impl_.vstride_;
+inline int32_t VideoFrameProperties::_internal_a_vstride() const {
+  return _impl_.a_vstride_;
 }
-inline int32_t VideoFrameProperties::vstride() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.vStride)
-  return _internal_vstride();
+inline int32_t VideoFrameProperties::a_vstride() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.camera.VideoFrameProperties.a_vStride)
+  return _internal_a_vstride();
 }
-inline void VideoFrameProperties::_internal_set_vstride(int32_t value) {
+inline void VideoFrameProperties::_internal_set_a_vstride(int32_t value) {
   _impl_._has_bits_[0] |= 0x00002000u;
-  _impl_.vstride_ = value;
+  _impl_.a_vstride_ = value;
 }
-inline void VideoFrameProperties::set_vstride(int32_t value) {
-  _internal_set_vstride(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.vStride)
+inline void VideoFrameProperties::set_a_vstride(int32_t value) {
+  _internal_set_a_vstride(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.camera.VideoFrameProperties.a_vStride)
 }
 
 #ifdef __GNUC__

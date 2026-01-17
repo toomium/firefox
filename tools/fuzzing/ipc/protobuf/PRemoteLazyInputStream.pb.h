@@ -190,24 +190,24 @@ class Msg_Clone final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACloneEndpointFieldNumber = 1,
+    kAACloneEndpointFieldNumber = 1,
   };
-  // required bytes aCloneEndpoint = 1;
-  bool has_acloneendpoint() const;
+  // required bytes a_aCloneEndpoint = 1;
+  bool has_a_acloneendpoint() const;
   private:
-  bool _internal_has_acloneendpoint() const;
+  bool _internal_has_a_acloneendpoint() const;
   public:
-  void clear_acloneendpoint();
-  const std::string& acloneendpoint() const;
+  void clear_a_acloneendpoint();
+  const std::string& a_acloneendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acloneendpoint(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acloneendpoint();
-  PROTOBUF_NODISCARD std::string* release_acloneendpoint();
-  void set_allocated_acloneendpoint(std::string* acloneendpoint);
+  void set_a_acloneendpoint(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acloneendpoint();
+  PROTOBUF_NODISCARD std::string* release_a_acloneendpoint();
+  void set_allocated_a_acloneendpoint(std::string* a_acloneendpoint);
   private:
-  const std::string& _internal_acloneendpoint() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acloneendpoint(const std::string& value);
-  std::string* _internal_mutable_acloneendpoint();
+  const std::string& _internal_a_acloneendpoint() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acloneendpoint(const std::string& value);
+  std::string* _internal_mutable_a_acloneendpoint();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone)
@@ -220,7 +220,7 @@ class Msg_Clone final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acloneendpoint_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acloneendpoint_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -337,33 +337,33 @@ class Msg_StreamNeeded final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStartFieldNumber = 1,
-    kALengthFieldNumber = 2,
+    kAAStartFieldNumber = 1,
+    kAALengthFieldNumber = 2,
   };
-  // required uint64 aStart = 1;
-  bool has_astart() const;
+  // required uint64 a_aStart = 1;
+  bool has_a_astart() const;
   private:
-  bool _internal_has_astart() const;
+  bool _internal_has_a_astart() const;
   public:
-  void clear_astart();
-  uint64_t astart() const;
-  void set_astart(uint64_t value);
+  void clear_a_astart();
+  uint64_t a_astart() const;
+  void set_a_astart(uint64_t value);
   private:
-  uint64_t _internal_astart() const;
-  void _internal_set_astart(uint64_t value);
+  uint64_t _internal_a_astart() const;
+  void _internal_set_a_astart(uint64_t value);
   public:
 
-  // required uint64 aLength = 2;
-  bool has_alength() const;
+  // required uint64 a_aLength = 2;
+  bool has_a_alength() const;
   private:
-  bool _internal_has_alength() const;
+  bool _internal_has_a_alength() const;
   public:
-  void clear_alength();
-  uint64_t alength() const;
-  void set_alength(uint64_t value);
+  void clear_a_alength();
+  uint64_t a_alength() const;
+  void set_a_alength(uint64_t value);
   private:
-  uint64_t _internal_alength() const;
-  void _internal_set_alength(uint64_t value);
+  uint64_t _internal_a_alength() const;
+  void _internal_set_a_alength(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded)
@@ -379,8 +379,8 @@ class Msg_StreamNeeded final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t astart_;
-    uint64_t alength_;
+    uint64_t a_astart_;
+    uint64_t a_alength_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -497,25 +497,25 @@ class Reply_StreamNeeded final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStreamFieldNumber = 1,
+    kAStreamFieldNumber = 1,
   };
-  // optional .protobuf.mozilla.ipc.IPCStream stream = 1;
-  bool has_stream() const;
+  // optional .protobuf.mozilla.ipc.IPCStream a_stream = 1;
+  bool has_a_stream() const;
   private:
-  bool _internal_has_stream() const;
+  bool _internal_has_a_stream() const;
   public:
-  void clear_stream();
-  const ::protobuf::mozilla::ipc::IPCStream& stream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_stream();
-  ::protobuf::mozilla::ipc::IPCStream* mutable_stream();
-  void set_allocated_stream(::protobuf::mozilla::ipc::IPCStream* stream);
+  void clear_a_stream();
+  const ::protobuf::mozilla::ipc::IPCStream& a_stream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_a_stream();
+  ::protobuf::mozilla::ipc::IPCStream* mutable_a_stream();
+  void set_allocated_a_stream(::protobuf::mozilla::ipc::IPCStream* a_stream);
   private:
-  const ::protobuf::mozilla::ipc::IPCStream& _internal_stream() const;
-  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_stream();
+  const ::protobuf::mozilla::ipc::IPCStream& _internal_a_stream() const;
+  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_a_stream();
   public:
-  void unsafe_arena_set_allocated_stream(
-      ::protobuf::mozilla::ipc::IPCStream* stream);
-  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_stream();
+  void unsafe_arena_set_allocated_a_stream(
+      ::protobuf::mozilla::ipc::IPCStream* a_stream);
+  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_stream();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded)
  private:
@@ -527,7 +527,7 @@ class Reply_StreamNeeded final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::ipc::IPCStream* stream_;
+    ::protobuf::mozilla::ipc::IPCStream* a_stream_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -768,19 +768,19 @@ class Reply_LengthNeeded final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kLengthFieldNumber = 1,
+    kALengthFieldNumber = 1,
   };
-  // required sint64 length = 1;
-  bool has_length() const;
+  // required sint64 a_length = 1;
+  bool has_a_length() const;
   private:
-  bool _internal_has_length() const;
+  bool _internal_has_a_length() const;
   public:
-  void clear_length();
-  int64_t length() const;
-  void set_length(int64_t value);
+  void clear_a_length();
+  int64_t a_length() const;
+  void set_a_length(int64_t value);
   private:
-  int64_t _internal_length() const;
-  void _internal_set_length(int64_t value);
+  int64_t _internal_a_length() const;
+  void _internal_set_a_length(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded)
@@ -793,7 +793,7 @@ class Reply_LengthNeeded final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    int64_t length_;
+    int64_t a_length_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -933,173 +933,173 @@ class Msg_Goodbye final :
 #endif  // __GNUC__
 // Msg_Clone
 
-// required bytes aCloneEndpoint = 1;
-inline bool Msg_Clone::_internal_has_acloneendpoint() const {
+// required bytes a_aCloneEndpoint = 1;
+inline bool Msg_Clone::_internal_has_a_acloneendpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Clone::has_acloneendpoint() const {
-  return _internal_has_acloneendpoint();
+inline bool Msg_Clone::has_a_acloneendpoint() const {
+  return _internal_has_a_acloneendpoint();
 }
-inline void Msg_Clone::clear_acloneendpoint() {
-  _impl_.acloneendpoint_.ClearToEmpty();
+inline void Msg_Clone::clear_a_acloneendpoint() {
+  _impl_.a_acloneendpoint_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Clone::acloneendpoint() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.aCloneEndpoint)
-  return _internal_acloneendpoint();
+inline const std::string& Msg_Clone::a_acloneendpoint() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
+  return _internal_a_acloneendpoint();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Clone::set_acloneendpoint(ArgT0&& arg0, ArgT... args) {
+void Msg_Clone::set_a_acloneendpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acloneendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.aCloneEndpoint)
+ _impl_.a_acloneendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
 }
-inline std::string* Msg_Clone::mutable_acloneendpoint() {
-  std::string* _s = _internal_mutable_acloneendpoint();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.aCloneEndpoint)
+inline std::string* Msg_Clone::mutable_a_acloneendpoint() {
+  std::string* _s = _internal_mutable_a_acloneendpoint();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
   return _s;
 }
-inline const std::string& Msg_Clone::_internal_acloneendpoint() const {
-  return _impl_.acloneendpoint_.Get();
+inline const std::string& Msg_Clone::_internal_a_acloneendpoint() const {
+  return _impl_.a_acloneendpoint_.Get();
 }
-inline void Msg_Clone::_internal_set_acloneendpoint(const std::string& value) {
+inline void Msg_Clone::_internal_set_a_acloneendpoint(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acloneendpoint_.Set(value, GetArenaForAllocation());
+  _impl_.a_acloneendpoint_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Clone::_internal_mutable_acloneendpoint() {
+inline std::string* Msg_Clone::_internal_mutable_a_acloneendpoint() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acloneendpoint_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acloneendpoint_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Clone::release_acloneendpoint() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.aCloneEndpoint)
-  if (!_internal_has_acloneendpoint()) {
+inline std::string* Msg_Clone::release_a_acloneendpoint() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
+  if (!_internal_has_a_acloneendpoint()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acloneendpoint_.Release();
+  auto* p = _impl_.a_acloneendpoint_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acloneendpoint_.IsDefault()) {
-    _impl_.acloneendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acloneendpoint_.IsDefault()) {
+    _impl_.a_acloneendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Clone::set_allocated_acloneendpoint(std::string* acloneendpoint) {
-  if (acloneendpoint != nullptr) {
+inline void Msg_Clone::set_allocated_a_acloneendpoint(std::string* a_acloneendpoint) {
+  if (a_acloneendpoint != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acloneendpoint_.SetAllocated(acloneendpoint, GetArenaForAllocation());
+  _impl_.a_acloneendpoint_.SetAllocated(a_acloneendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acloneendpoint_.IsDefault()) {
-    _impl_.acloneendpoint_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acloneendpoint_.IsDefault()) {
+    _impl_.a_acloneendpoint_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.aCloneEndpoint)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_StreamNeeded
 
-// required uint64 aStart = 1;
-inline bool Msg_StreamNeeded::_internal_has_astart() const {
+// required uint64 a_aStart = 1;
+inline bool Msg_StreamNeeded::_internal_has_a_astart() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_StreamNeeded::has_astart() const {
-  return _internal_has_astart();
+inline bool Msg_StreamNeeded::has_a_astart() const {
+  return _internal_has_a_astart();
 }
-inline void Msg_StreamNeeded::clear_astart() {
-  _impl_.astart_ = uint64_t{0u};
+inline void Msg_StreamNeeded::clear_a_astart() {
+  _impl_.a_astart_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_StreamNeeded::_internal_astart() const {
-  return _impl_.astart_;
+inline uint64_t Msg_StreamNeeded::_internal_a_astart() const {
+  return _impl_.a_astart_;
 }
-inline uint64_t Msg_StreamNeeded::astart() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.aStart)
-  return _internal_astart();
+inline uint64_t Msg_StreamNeeded::a_astart() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.a_aStart)
+  return _internal_a_astart();
 }
-inline void Msg_StreamNeeded::_internal_set_astart(uint64_t value) {
+inline void Msg_StreamNeeded::_internal_set_a_astart(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astart_ = value;
+  _impl_.a_astart_ = value;
 }
-inline void Msg_StreamNeeded::set_astart(uint64_t value) {
-  _internal_set_astart(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.aStart)
+inline void Msg_StreamNeeded::set_a_astart(uint64_t value) {
+  _internal_set_a_astart(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.a_aStart)
 }
 
-// required uint64 aLength = 2;
-inline bool Msg_StreamNeeded::_internal_has_alength() const {
+// required uint64 a_aLength = 2;
+inline bool Msg_StreamNeeded::_internal_has_a_alength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_StreamNeeded::has_alength() const {
-  return _internal_has_alength();
+inline bool Msg_StreamNeeded::has_a_alength() const {
+  return _internal_has_a_alength();
 }
-inline void Msg_StreamNeeded::clear_alength() {
-  _impl_.alength_ = uint64_t{0u};
+inline void Msg_StreamNeeded::clear_a_alength() {
+  _impl_.a_alength_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_StreamNeeded::_internal_alength() const {
-  return _impl_.alength_;
+inline uint64_t Msg_StreamNeeded::_internal_a_alength() const {
+  return _impl_.a_alength_;
 }
-inline uint64_t Msg_StreamNeeded::alength() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.aLength)
-  return _internal_alength();
+inline uint64_t Msg_StreamNeeded::a_alength() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.a_aLength)
+  return _internal_a_alength();
 }
-inline void Msg_StreamNeeded::_internal_set_alength(uint64_t value) {
+inline void Msg_StreamNeeded::_internal_set_a_alength(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.alength_ = value;
+  _impl_.a_alength_ = value;
 }
-inline void Msg_StreamNeeded::set_alength(uint64_t value) {
-  _internal_set_alength(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.aLength)
+inline void Msg_StreamNeeded::set_a_alength(uint64_t value) {
+  _internal_set_a_alength(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.a_aLength)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_StreamNeeded
 
-// optional .protobuf.mozilla.ipc.IPCStream stream = 1;
-inline bool Reply_StreamNeeded::_internal_has_stream() const {
+// optional .protobuf.mozilla.ipc.IPCStream a_stream = 1;
+inline bool Reply_StreamNeeded::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.stream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
   return value;
 }
-inline bool Reply_StreamNeeded::has_stream() const {
-  return _internal_has_stream();
+inline bool Reply_StreamNeeded::has_a_stream() const {
+  return _internal_has_a_stream();
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& Reply_StreamNeeded::_internal_stream() const {
-  const ::protobuf::mozilla::ipc::IPCStream* p = _impl_.stream_;
+inline const ::protobuf::mozilla::ipc::IPCStream& Reply_StreamNeeded::_internal_a_stream() const {
+  const ::protobuf::mozilla::ipc::IPCStream* p = _impl_.a_stream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::IPCStream&>(
       ::protobuf::mozilla::ipc::_IPCStream_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& Reply_StreamNeeded::stream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.stream)
-  return _internal_stream();
+inline const ::protobuf::mozilla::ipc::IPCStream& Reply_StreamNeeded::a_stream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.a_stream)
+  return _internal_a_stream();
 }
-inline void Reply_StreamNeeded::unsafe_arena_set_allocated_stream(
-    ::protobuf::mozilla::ipc::IPCStream* stream) {
+inline void Reply_StreamNeeded::unsafe_arena_set_allocated_a_stream(
+    ::protobuf::mozilla::ipc::IPCStream* a_stream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  _impl_.stream_ = stream;
-  if (stream) {
+  _impl_.a_stream_ = a_stream;
+  if (a_stream) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.stream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.a_stream)
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::release_stream() {
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::release_a_stream() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1111,45 +1111,45 @@ inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::release_stream()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::unsafe_arena_release_stream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.stream)
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::unsafe_arena_release_a_stream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.a_stream)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::_internal_mutable_stream() {
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::_internal_mutable_a_stream() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.stream_ == nullptr) {
+  if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::IPCStream>(GetArenaForAllocation());
-    _impl_.stream_ = p;
+    _impl_.a_stream_ = p;
   }
-  return _impl_.stream_;
+  return _impl_.a_stream_;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::mutable_stream() {
-  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_stream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.stream)
+inline ::protobuf::mozilla::ipc::IPCStream* Reply_StreamNeeded::mutable_a_stream() {
+  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_a_stream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.a_stream)
   return _msg;
 }
-inline void Reply_StreamNeeded::set_allocated_stream(::protobuf::mozilla::ipc::IPCStream* stream) {
+inline void Reply_StreamNeeded::set_allocated_a_stream(::protobuf::mozilla::ipc::IPCStream* a_stream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  if (stream) {
+  if (a_stream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(stream));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_stream));
     if (message_arena != submessage_arena) {
-      stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, stream, submessage_arena);
+      a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_stream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.stream_ = stream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.stream)
+  _impl_.a_stream_ = a_stream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded.a_stream)
 }
 
 // -------------------------------------------------------------------
@@ -1160,32 +1160,32 @@ inline void Reply_StreamNeeded::set_allocated_stream(::protobuf::mozilla::ipc::I
 
 // Reply_LengthNeeded
 
-// required sint64 length = 1;
-inline bool Reply_LengthNeeded::_internal_has_length() const {
+// required sint64 a_length = 1;
+inline bool Reply_LengthNeeded::_internal_has_a_length() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_LengthNeeded::has_length() const {
-  return _internal_has_length();
+inline bool Reply_LengthNeeded::has_a_length() const {
+  return _internal_has_a_length();
 }
-inline void Reply_LengthNeeded::clear_length() {
-  _impl_.length_ = int64_t{0};
+inline void Reply_LengthNeeded::clear_a_length() {
+  _impl_.a_length_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t Reply_LengthNeeded::_internal_length() const {
-  return _impl_.length_;
+inline int64_t Reply_LengthNeeded::_internal_a_length() const {
+  return _impl_.a_length_;
 }
-inline int64_t Reply_LengthNeeded::length() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded.length)
-  return _internal_length();
+inline int64_t Reply_LengthNeeded::a_length() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded.a_length)
+  return _internal_a_length();
 }
-inline void Reply_LengthNeeded::_internal_set_length(int64_t value) {
+inline void Reply_LengthNeeded::_internal_set_a_length(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.length_ = value;
+  _impl_.a_length_ = value;
 }
-inline void Reply_LengthNeeded::set_length(int64_t value) {
-  _internal_set_length(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded.length)
+inline void Reply_LengthNeeded::set_a_length(int64_t value) {
+  _internal_set_a_length(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded.a_length)
 }
 
 // -------------------------------------------------------------------

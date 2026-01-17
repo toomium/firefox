@@ -169,7 +169,7 @@ PROTOBUF_CONSTEXPR Reply_CheckChild::Reply_CheckChild(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.reply_)*/0u} {}
+  , /*decltype(_impl_.a_reply_)*/0u} {}
 struct Reply_CheckChildDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CheckChildDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -195,7 +195,7 @@ PROTOBUF_CONSTEXPR Reply_CheckParent::Reply_CheckParent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.reply_)*/0u} {}
+  , /*decltype(_impl_.a_reply_)*/0u} {}
 struct Reply_CheckParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CheckParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -1995,7 +1995,7 @@ std::string Msg_CheckChild::GetTypeName() const {
 class Reply_CheckChild::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_CheckChild>()._impl_._has_bits_);
-  static void set_has_reply(HasBits* has_bits) {
+  static void set_has_a_reply(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2015,10 +2015,10 @@ Reply_CheckChild::Reply_CheckChild(const Reply_CheckChild& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.reply_){}};
+    , decltype(_impl_.a_reply_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.reply_ = from._impl_.reply_;
+  _this->_impl_.a_reply_ = from._impl_.a_reply_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
 }
 
@@ -2029,7 +2029,7 @@ inline void Reply_CheckChild::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.reply_){0u}
+    , decltype(_impl_.a_reply_){0u}
   };
 }
 
@@ -2056,7 +2056,7 @@ void Reply_CheckChild::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.reply_ = 0u;
+  _impl_.a_reply_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2068,11 +2068,11 @@ const char* Reply_CheckChild::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 reply = 1;
+      // required uint32 a_reply = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_reply(&has_bits);
-          _impl_.reply_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_reply(&has_bits);
+          _impl_.a_reply_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2108,10 +2108,10 @@ uint8_t* Reply_CheckChild::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 reply = 1;
+  // required uint32 a_reply = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_reply(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_reply(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2126,9 +2126,9 @@ size_t Reply_CheckChild::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
   size_t total_size = 0;
 
-  // required uint32 reply = 1;
-  if (_internal_has_reply()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_reply());
+  // required uint32 a_reply = 1;
+  if (_internal_has_a_reply()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2155,8 +2155,8 @@ void Reply_CheckChild::MergeFrom(const Reply_CheckChild& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_reply()) {
-    _this->_internal_set_reply(from._internal_reply());
+  if (from._internal_has_a_reply()) {
+    _this->_internal_set_a_reply(from._internal_a_reply());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2177,7 +2177,7 @@ void Reply_CheckChild::InternalSwap(Reply_CheckChild* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.reply_, other->_impl_.reply_);
+  swap(_impl_.a_reply_, other->_impl_.a_reply_);
 }
 
 std::string Reply_CheckChild::GetTypeName() const {
@@ -2338,7 +2338,7 @@ std::string Msg_CheckParent::GetTypeName() const {
 class Reply_CheckParent::_Internal {
  public:
   using HasBits = decltype(std::declval<Reply_CheckParent>()._impl_._has_bits_);
-  static void set_has_reply(HasBits* has_bits) {
+  static void set_has_a_reply(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2358,10 +2358,10 @@ Reply_CheckParent::Reply_CheckParent(const Reply_CheckParent& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.reply_){}};
+    , decltype(_impl_.a_reply_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.reply_ = from._impl_.reply_;
+  _this->_impl_.a_reply_ = from._impl_.a_reply_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
 }
 
@@ -2372,7 +2372,7 @@ inline void Reply_CheckParent::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.reply_){0u}
+    , decltype(_impl_.a_reply_){0u}
   };
 }
 
@@ -2399,7 +2399,7 @@ void Reply_CheckParent::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.reply_ = 0u;
+  _impl_.a_reply_ = 0u;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -2411,11 +2411,11 @@ const char* Reply_CheckParent::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 reply = 1;
+      // required uint32 a_reply = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_reply(&has_bits);
-          _impl_.reply_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_reply(&has_bits);
+          _impl_.a_reply_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2451,10 +2451,10 @@ uint8_t* Reply_CheckParent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 reply = 1;
+  // required uint32 a_reply = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_reply(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_reply(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2469,9 +2469,9 @@ size_t Reply_CheckParent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
   size_t total_size = 0;
 
-  // required uint32 reply = 1;
-  if (_internal_has_reply()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_reply());
+  // required uint32 a_reply = 1;
+  if (_internal_has_a_reply()) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2498,8 +2498,8 @@ void Reply_CheckParent::MergeFrom(const Reply_CheckParent& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_reply()) {
-    _this->_internal_set_reply(from._internal_reply());
+  if (from._internal_has_a_reply()) {
+    _this->_internal_set_a_reply(from._internal_a_reply());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -2520,7 +2520,7 @@ void Reply_CheckParent::InternalSwap(Reply_CheckParent* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.reply_, other->_impl_.reply_);
+  swap(_impl_.a_reply_, other->_impl_.a_reply_);
 }
 
 std::string Reply_CheckParent::GetTypeName() const {

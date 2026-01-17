@@ -184,38 +184,38 @@ class Msg_Hang final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTimeoutFieldNumber = 2,
-    kHangModeFieldNumber = 1,
+    kATimeoutFieldNumber = 2,
+    kAHangModeFieldNumber = 1,
   };
-  // required bytes timeout = 2;
-  bool has_timeout() const;
+  // required bytes a_timeout = 2;
+  bool has_a_timeout() const;
   private:
-  bool _internal_has_timeout() const;
+  bool _internal_has_a_timeout() const;
   public:
-  void clear_timeout();
-  const std::string& timeout() const;
+  void clear_a_timeout();
+  const std::string& a_timeout() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_timeout(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_timeout();
-  PROTOBUF_NODISCARD std::string* release_timeout();
-  void set_allocated_timeout(std::string* timeout);
+  void set_a_timeout(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_timeout();
+  PROTOBUF_NODISCARD std::string* release_a_timeout();
+  void set_allocated_a_timeout(std::string* a_timeout);
   private:
-  const std::string& _internal_timeout() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_timeout(const std::string& value);
-  std::string* _internal_mutable_timeout();
+  const std::string& _internal_a_timeout() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_timeout(const std::string& value);
+  std::string* _internal_mutable_a_timeout();
   public:
 
-  // required uint32 hangMode = 1;
-  bool has_hangmode() const;
+  // required uint32 a_hangMode = 1;
+  bool has_a_hangmode() const;
   private:
-  bool _internal_has_hangmode() const;
+  bool _internal_has_a_hangmode() const;
   public:
-  void clear_hangmode();
-  uint32_t hangmode() const;
-  void set_hangmode(uint32_t value);
+  void clear_a_hangmode();
+  uint32_t a_hangmode() const;
+  void set_a_hangmode(uint32_t value);
   private:
-  uint32_t _internal_hangmode() const;
-  void _internal_set_hangmode(uint32_t value);
+  uint32_t _internal_a_hangmode() const;
+  void _internal_set_a_hangmode(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang)
@@ -231,8 +231,8 @@ class Msg_Hang final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr timeout_;
-    uint32_t hangmode_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timeout_;
+    uint32_t a_hangmode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestHangs_2eproto;
@@ -473,19 +473,19 @@ class Msg_Start final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kHangModeFieldNumber = 1,
+    kAHangModeFieldNumber = 1,
   };
-  // required uint32 hangMode = 1;
-  bool has_hangmode() const;
+  // required uint32 a_hangMode = 1;
+  bool has_a_hangmode() const;
   private:
-  bool _internal_has_hangmode() const;
+  bool _internal_has_a_hangmode() const;
   public:
-  void clear_hangmode();
-  uint32_t hangmode() const;
-  void set_hangmode(uint32_t value);
+  void clear_a_hangmode();
+  uint32_t a_hangmode() const;
+  void set_a_hangmode(uint32_t value);
   private:
-  uint32_t _internal_hangmode() const;
-  void _internal_set_hangmode(uint32_t value);
+  uint32_t _internal_a_hangmode() const;
+  void _internal_set_a_hangmode(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start)
@@ -498,7 +498,7 @@ class Msg_Start final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t hangmode_;
+    uint32_t a_hangmode_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestHangs_2eproto;
@@ -615,19 +615,19 @@ class Reply_Start final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDetectedHangFieldNumber = 1,
+    kADetectedHangFieldNumber = 1,
   };
-  // required bool detectedHang = 1;
-  bool has_detectedhang() const;
+  // required bool a_detectedHang = 1;
+  bool has_a_detectedhang() const;
   private:
-  bool _internal_has_detectedhang() const;
+  bool _internal_has_a_detectedhang() const;
   public:
-  void clear_detectedhang();
-  bool detectedhang() const;
-  void set_detectedhang(bool value);
+  void clear_a_detectedhang();
+  bool a_detectedhang() const;
+  void set_a_detectedhang(bool value);
   private:
-  bool _internal_detectedhang() const;
-  void _internal_set_detectedhang(bool value);
+  bool _internal_a_detectedhang() const;
+  void _internal_set_a_detectedhang(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start)
@@ -640,7 +640,7 @@ class Reply_Start final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool detectedhang_;
+    bool a_detectedhang_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestHangs_2eproto;
@@ -656,100 +656,100 @@ class Reply_Start final :
 #endif  // __GNUC__
 // Msg_Hang
 
-// required uint32 hangMode = 1;
-inline bool Msg_Hang::_internal_has_hangmode() const {
+// required uint32 a_hangMode = 1;
+inline bool Msg_Hang::_internal_has_a_hangmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Hang::has_hangmode() const {
-  return _internal_has_hangmode();
+inline bool Msg_Hang::has_a_hangmode() const {
+  return _internal_has_a_hangmode();
 }
-inline void Msg_Hang::clear_hangmode() {
-  _impl_.hangmode_ = 0u;
+inline void Msg_Hang::clear_a_hangmode() {
+  _impl_.a_hangmode_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Msg_Hang::_internal_hangmode() const {
-  return _impl_.hangmode_;
+inline uint32_t Msg_Hang::_internal_a_hangmode() const {
+  return _impl_.a_hangmode_;
 }
-inline uint32_t Msg_Hang::hangmode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.hangMode)
-  return _internal_hangmode();
+inline uint32_t Msg_Hang::a_hangmode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_hangMode)
+  return _internal_a_hangmode();
 }
-inline void Msg_Hang::_internal_set_hangmode(uint32_t value) {
+inline void Msg_Hang::_internal_set_a_hangmode(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.hangmode_ = value;
+  _impl_.a_hangmode_ = value;
 }
-inline void Msg_Hang::set_hangmode(uint32_t value) {
-  _internal_set_hangmode(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.hangMode)
+inline void Msg_Hang::set_a_hangmode(uint32_t value) {
+  _internal_set_a_hangmode(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_hangMode)
 }
 
-// required bytes timeout = 2;
-inline bool Msg_Hang::_internal_has_timeout() const {
+// required bytes a_timeout = 2;
+inline bool Msg_Hang::_internal_has_a_timeout() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Hang::has_timeout() const {
-  return _internal_has_timeout();
+inline bool Msg_Hang::has_a_timeout() const {
+  return _internal_has_a_timeout();
 }
-inline void Msg_Hang::clear_timeout() {
-  _impl_.timeout_.ClearToEmpty();
+inline void Msg_Hang::clear_a_timeout() {
+  _impl_.a_timeout_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Hang::timeout() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.timeout)
-  return _internal_timeout();
+inline const std::string& Msg_Hang::a_timeout() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
+  return _internal_a_timeout();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Hang::set_timeout(ArgT0&& arg0, ArgT... args) {
+void Msg_Hang::set_a_timeout(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.timeout_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.timeout)
+ _impl_.a_timeout_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
 }
-inline std::string* Msg_Hang::mutable_timeout() {
-  std::string* _s = _internal_mutable_timeout();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.timeout)
+inline std::string* Msg_Hang::mutable_a_timeout() {
+  std::string* _s = _internal_mutable_a_timeout();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
   return _s;
 }
-inline const std::string& Msg_Hang::_internal_timeout() const {
-  return _impl_.timeout_.Get();
+inline const std::string& Msg_Hang::_internal_a_timeout() const {
+  return _impl_.a_timeout_.Get();
 }
-inline void Msg_Hang::_internal_set_timeout(const std::string& value) {
+inline void Msg_Hang::_internal_set_a_timeout(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.timeout_.Set(value, GetArenaForAllocation());
+  _impl_.a_timeout_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Hang::_internal_mutable_timeout() {
+inline std::string* Msg_Hang::_internal_mutable_a_timeout() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.timeout_.Mutable(GetArenaForAllocation());
+  return _impl_.a_timeout_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Hang::release_timeout() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.timeout)
-  if (!_internal_has_timeout()) {
+inline std::string* Msg_Hang::release_a_timeout() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
+  if (!_internal_has_a_timeout()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.timeout_.Release();
+  auto* p = _impl_.a_timeout_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timeout_.IsDefault()) {
-    _impl_.timeout_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timeout_.IsDefault()) {
+    _impl_.a_timeout_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Hang::set_allocated_timeout(std::string* timeout) {
-  if (timeout != nullptr) {
+inline void Msg_Hang::set_allocated_a_timeout(std::string* a_timeout) {
+  if (a_timeout != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.timeout_.SetAllocated(timeout, GetArenaForAllocation());
+  _impl_.a_timeout_.SetAllocated(a_timeout, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.timeout_.IsDefault()) {
-    _impl_.timeout_.Set("", GetArenaForAllocation());
+  if (_impl_.a_timeout_.IsDefault()) {
+    _impl_.a_timeout_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.timeout)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestHangs.Msg_Hang.a_timeout)
 }
 
 // -------------------------------------------------------------------
@@ -760,64 +760,64 @@ inline void Msg_Hang::set_allocated_timeout(std::string* timeout) {
 
 // Msg_Start
 
-// required uint32 hangMode = 1;
-inline bool Msg_Start::_internal_has_hangmode() const {
+// required uint32 a_hangMode = 1;
+inline bool Msg_Start::_internal_has_a_hangmode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Start::has_hangmode() const {
-  return _internal_has_hangmode();
+inline bool Msg_Start::has_a_hangmode() const {
+  return _internal_has_a_hangmode();
 }
-inline void Msg_Start::clear_hangmode() {
-  _impl_.hangmode_ = 0u;
+inline void Msg_Start::clear_a_hangmode() {
+  _impl_.a_hangmode_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_Start::_internal_hangmode() const {
-  return _impl_.hangmode_;
+inline uint32_t Msg_Start::_internal_a_hangmode() const {
+  return _impl_.a_hangmode_;
 }
-inline uint32_t Msg_Start::hangmode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start.hangMode)
-  return _internal_hangmode();
+inline uint32_t Msg_Start::a_hangmode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start.a_hangMode)
+  return _internal_a_hangmode();
 }
-inline void Msg_Start::_internal_set_hangmode(uint32_t value) {
+inline void Msg_Start::_internal_set_a_hangmode(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.hangmode_ = value;
+  _impl_.a_hangmode_ = value;
 }
-inline void Msg_Start::set_hangmode(uint32_t value) {
-  _internal_set_hangmode(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start.hangMode)
+inline void Msg_Start::set_a_hangmode(uint32_t value) {
+  _internal_set_a_hangmode(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Msg_Start.a_hangMode)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Start
 
-// required bool detectedHang = 1;
-inline bool Reply_Start::_internal_has_detectedhang() const {
+// required bool a_detectedHang = 1;
+inline bool Reply_Start::_internal_has_a_detectedhang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Start::has_detectedhang() const {
-  return _internal_has_detectedhang();
+inline bool Reply_Start::has_a_detectedhang() const {
+  return _internal_has_a_detectedhang();
 }
-inline void Reply_Start::clear_detectedhang() {
-  _impl_.detectedhang_ = false;
+inline void Reply_Start::clear_a_detectedhang() {
+  _impl_.a_detectedhang_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Start::_internal_detectedhang() const {
-  return _impl_.detectedhang_;
+inline bool Reply_Start::_internal_a_detectedhang() const {
+  return _impl_.a_detectedhang_;
 }
-inline bool Reply_Start::detectedhang() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start.detectedHang)
-  return _internal_detectedhang();
+inline bool Reply_Start::a_detectedhang() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start.a_detectedHang)
+  return _internal_a_detectedhang();
 }
-inline void Reply_Start::_internal_set_detectedhang(bool value) {
+inline void Reply_Start::_internal_set_a_detectedhang(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.detectedhang_ = value;
+  _impl_.a_detectedhang_ = value;
 }
-inline void Reply_Start::set_detectedhang(bool value) {
-  _internal_set_detectedhang(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start.detectedHang)
+inline void Reply_Start::set_a_detectedhang(bool value) {
+  _internal_set_a_detectedhang(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestHangs.Reply_Start.a_detectedHang)
 }
 
 #ifdef __GNUC__

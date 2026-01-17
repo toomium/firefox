@@ -166,76 +166,76 @@ class SlowScriptData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTabIdFieldNumber = 1,
-    kFilenameFieldNumber = 2,
-    kAddonIdFieldNumber = 3,
-    kDurationFieldNumber = 4,
+    kATabIdFieldNumber = 1,
+    kAFilenameFieldNumber = 2,
+    kAAddonIdFieldNumber = 3,
+    kADurationFieldNumber = 4,
   };
-  // required bytes tabId = 1;
-  bool has_tabid() const;
+  // required bytes a_tabId = 1;
+  bool has_a_tabid() const;
   private:
-  bool _internal_has_tabid() const;
+  bool _internal_has_a_tabid() const;
   public:
-  void clear_tabid();
-  const std::string& tabid() const;
+  void clear_a_tabid();
+  const std::string& a_tabid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_tabid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_tabid();
-  PROTOBUF_NODISCARD std::string* release_tabid();
-  void set_allocated_tabid(std::string* tabid);
+  void set_a_tabid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_tabid();
+  PROTOBUF_NODISCARD std::string* release_a_tabid();
+  void set_allocated_a_tabid(std::string* a_tabid);
   private:
-  const std::string& _internal_tabid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_tabid(const std::string& value);
-  std::string* _internal_mutable_tabid();
+  const std::string& _internal_a_tabid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_tabid(const std::string& value);
+  std::string* _internal_mutable_a_tabid();
   public:
 
-  // required bytes filename = 2;
-  bool has_filename() const;
+  // required bytes a_filename = 2;
+  bool has_a_filename() const;
   private:
-  bool _internal_has_filename() const;
+  bool _internal_has_a_filename() const;
   public:
-  void clear_filename();
-  const std::string& filename() const;
+  void clear_a_filename();
+  const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_filename(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_filename();
-  PROTOBUF_NODISCARD std::string* release_filename();
-  void set_allocated_filename(std::string* filename);
+  void set_a_filename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_filename();
+  PROTOBUF_NODISCARD std::string* release_a_filename();
+  void set_allocated_a_filename(std::string* a_filename);
   private:
-  const std::string& _internal_filename() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_filename(const std::string& value);
-  std::string* _internal_mutable_filename();
+  const std::string& _internal_a_filename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_filename(const std::string& value);
+  std::string* _internal_mutable_a_filename();
   public:
 
-  // required bytes addonId = 3;
-  bool has_addonid() const;
+  // required bytes a_addonId = 3;
+  bool has_a_addonid() const;
   private:
-  bool _internal_has_addonid() const;
+  bool _internal_has_a_addonid() const;
   public:
-  void clear_addonid();
-  const std::string& addonid() const;
+  void clear_a_addonid();
+  const std::string& a_addonid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_addonid(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_addonid();
-  PROTOBUF_NODISCARD std::string* release_addonid();
-  void set_allocated_addonid(std::string* addonid);
+  void set_a_addonid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_addonid();
+  PROTOBUF_NODISCARD std::string* release_a_addonid();
+  void set_allocated_a_addonid(std::string* a_addonid);
   private:
-  const std::string& _internal_addonid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_addonid(const std::string& value);
-  std::string* _internal_mutable_addonid();
+  const std::string& _internal_a_addonid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_addonid(const std::string& value);
+  std::string* _internal_mutable_a_addonid();
   public:
 
-  // required double duration = 4;
-  bool has_duration() const;
+  // required double a_duration = 4;
+  bool has_a_duration() const;
   private:
-  bool _internal_has_duration() const;
+  bool _internal_has_a_duration() const;
   public:
-  void clear_duration();
-  double duration() const;
-  void set_duration(double value);
+  void clear_a_duration();
+  double a_duration() const;
+  void set_a_duration(double value);
   private:
-  double _internal_duration() const;
-  void _internal_set_duration(double value);
+  double _internal_a_duration() const;
+  void _internal_set_a_duration(double value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.SlowScriptData)
@@ -251,10 +251,10 @@ class SlowScriptData final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tabid_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr filename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr addonid_;
-    double duration_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_addonid_;
+    double a_duration_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_5fprotobuf_2emozilla_2eh_2eproto;
@@ -270,236 +270,236 @@ class SlowScriptData final :
 #endif  // __GNUC__
 // SlowScriptData
 
-// required bytes tabId = 1;
-inline bool SlowScriptData::_internal_has_tabid() const {
+// required bytes a_tabId = 1;
+inline bool SlowScriptData::_internal_has_a_tabid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool SlowScriptData::has_tabid() const {
-  return _internal_has_tabid();
+inline bool SlowScriptData::has_a_tabid() const {
+  return _internal_has_a_tabid();
 }
-inline void SlowScriptData::clear_tabid() {
-  _impl_.tabid_.ClearToEmpty();
+inline void SlowScriptData::clear_a_tabid() {
+  _impl_.a_tabid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& SlowScriptData::tabid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.tabId)
-  return _internal_tabid();
+inline const std::string& SlowScriptData::a_tabid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_tabId)
+  return _internal_a_tabid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SlowScriptData::set_tabid(ArgT0&& arg0, ArgT... args) {
+void SlowScriptData::set_a_tabid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.tabId)
+ _impl_.a_tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_tabId)
 }
-inline std::string* SlowScriptData::mutable_tabid() {
-  std::string* _s = _internal_mutable_tabid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.SlowScriptData.tabId)
+inline std::string* SlowScriptData::mutable_a_tabid() {
+  std::string* _s = _internal_mutable_a_tabid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.SlowScriptData.a_tabId)
   return _s;
 }
-inline const std::string& SlowScriptData::_internal_tabid() const {
-  return _impl_.tabid_.Get();
+inline const std::string& SlowScriptData::_internal_a_tabid() const {
+  return _impl_.a_tabid_.Get();
 }
-inline void SlowScriptData::_internal_set_tabid(const std::string& value) {
+inline void SlowScriptData::_internal_set_a_tabid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.tabid_.Set(value, GetArenaForAllocation());
+  _impl_.a_tabid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SlowScriptData::_internal_mutable_tabid() {
+inline std::string* SlowScriptData::_internal_mutable_a_tabid() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.tabid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_tabid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SlowScriptData::release_tabid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.tabId)
-  if (!_internal_has_tabid()) {
+inline std::string* SlowScriptData::release_a_tabid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.a_tabId)
+  if (!_internal_has_a_tabid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.tabid_.Release();
+  auto* p = _impl_.a_tabid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.tabid_.IsDefault()) {
-    _impl_.tabid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_tabid_.IsDefault()) {
+    _impl_.a_tabid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SlowScriptData::set_allocated_tabid(std::string* tabid) {
-  if (tabid != nullptr) {
+inline void SlowScriptData::set_allocated_a_tabid(std::string* a_tabid) {
+  if (a_tabid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.tabid_.SetAllocated(tabid, GetArenaForAllocation());
+  _impl_.a_tabid_.SetAllocated(a_tabid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.tabid_.IsDefault()) {
-    _impl_.tabid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_tabid_.IsDefault()) {
+    _impl_.a_tabid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.tabId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_tabId)
 }
 
-// required bytes filename = 2;
-inline bool SlowScriptData::_internal_has_filename() const {
+// required bytes a_filename = 2;
+inline bool SlowScriptData::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool SlowScriptData::has_filename() const {
-  return _internal_has_filename();
+inline bool SlowScriptData::has_a_filename() const {
+  return _internal_has_a_filename();
 }
-inline void SlowScriptData::clear_filename() {
-  _impl_.filename_.ClearToEmpty();
+inline void SlowScriptData::clear_a_filename() {
+  _impl_.a_filename_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& SlowScriptData::filename() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.filename)
-  return _internal_filename();
+inline const std::string& SlowScriptData::a_filename() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_filename)
+  return _internal_a_filename();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SlowScriptData::set_filename(ArgT0&& arg0, ArgT... args) {
+void SlowScriptData::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.filename)
+ _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_filename)
 }
-inline std::string* SlowScriptData::mutable_filename() {
-  std::string* _s = _internal_mutable_filename();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.SlowScriptData.filename)
+inline std::string* SlowScriptData::mutable_a_filename() {
+  std::string* _s = _internal_mutable_a_filename();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.SlowScriptData.a_filename)
   return _s;
 }
-inline const std::string& SlowScriptData::_internal_filename() const {
-  return _impl_.filename_.Get();
+inline const std::string& SlowScriptData::_internal_a_filename() const {
+  return _impl_.a_filename_.Get();
 }
-inline void SlowScriptData::_internal_set_filename(const std::string& value) {
+inline void SlowScriptData::_internal_set_a_filename(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.filename_.Set(value, GetArenaForAllocation());
+  _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SlowScriptData::_internal_mutable_filename() {
+inline std::string* SlowScriptData::_internal_mutable_a_filename() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.filename_.Mutable(GetArenaForAllocation());
+  return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SlowScriptData::release_filename() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.filename)
-  if (!_internal_has_filename()) {
+inline std::string* SlowScriptData::release_a_filename() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.a_filename)
+  if (!_internal_has_a_filename()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.filename_.Release();
+  auto* p = _impl_.a_filename_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SlowScriptData::set_allocated_filename(std::string* filename) {
-  if (filename != nullptr) {
+inline void SlowScriptData::set_allocated_a_filename(std::string* a_filename) {
+  if (a_filename != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.filename_.SetAllocated(filename, GetArenaForAllocation());
+  _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.filename_.IsDefault()) {
-    _impl_.filename_.Set("", GetArenaForAllocation());
+  if (_impl_.a_filename_.IsDefault()) {
+    _impl_.a_filename_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.filename)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_filename)
 }
 
-// required bytes addonId = 3;
-inline bool SlowScriptData::_internal_has_addonid() const {
+// required bytes a_addonId = 3;
+inline bool SlowScriptData::_internal_has_a_addonid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool SlowScriptData::has_addonid() const {
-  return _internal_has_addonid();
+inline bool SlowScriptData::has_a_addonid() const {
+  return _internal_has_a_addonid();
 }
-inline void SlowScriptData::clear_addonid() {
-  _impl_.addonid_.ClearToEmpty();
+inline void SlowScriptData::clear_a_addonid() {
+  _impl_.a_addonid_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& SlowScriptData::addonid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.addonId)
-  return _internal_addonid();
+inline const std::string& SlowScriptData::a_addonid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_addonId)
+  return _internal_a_addonid();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SlowScriptData::set_addonid(ArgT0&& arg0, ArgT... args) {
+void SlowScriptData::set_a_addonid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.addonid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.addonId)
+ _impl_.a_addonid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_addonId)
 }
-inline std::string* SlowScriptData::mutable_addonid() {
-  std::string* _s = _internal_mutable_addonid();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.SlowScriptData.addonId)
+inline std::string* SlowScriptData::mutable_a_addonid() {
+  std::string* _s = _internal_mutable_a_addonid();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.SlowScriptData.a_addonId)
   return _s;
 }
-inline const std::string& SlowScriptData::_internal_addonid() const {
-  return _impl_.addonid_.Get();
+inline const std::string& SlowScriptData::_internal_a_addonid() const {
+  return _impl_.a_addonid_.Get();
 }
-inline void SlowScriptData::_internal_set_addonid(const std::string& value) {
+inline void SlowScriptData::_internal_set_a_addonid(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.addonid_.Set(value, GetArenaForAllocation());
+  _impl_.a_addonid_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SlowScriptData::_internal_mutable_addonid() {
+inline std::string* SlowScriptData::_internal_mutable_a_addonid() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.addonid_.Mutable(GetArenaForAllocation());
+  return _impl_.a_addonid_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SlowScriptData::release_addonid() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.addonId)
-  if (!_internal_has_addonid()) {
+inline std::string* SlowScriptData::release_a_addonid() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.SlowScriptData.a_addonId)
+  if (!_internal_has_a_addonid()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.addonid_.Release();
+  auto* p = _impl_.a_addonid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.addonid_.IsDefault()) {
-    _impl_.addonid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_addonid_.IsDefault()) {
+    _impl_.a_addonid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void SlowScriptData::set_allocated_addonid(std::string* addonid) {
-  if (addonid != nullptr) {
+inline void SlowScriptData::set_allocated_a_addonid(std::string* a_addonid) {
+  if (a_addonid != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.addonid_.SetAllocated(addonid, GetArenaForAllocation());
+  _impl_.a_addonid_.SetAllocated(a_addonid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.addonid_.IsDefault()) {
-    _impl_.addonid_.Set("", GetArenaForAllocation());
+  if (_impl_.a_addonid_.IsDefault()) {
+    _impl_.a_addonid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.addonId)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.SlowScriptData.a_addonId)
 }
 
-// required double duration = 4;
-inline bool SlowScriptData::_internal_has_duration() const {
+// required double a_duration = 4;
+inline bool SlowScriptData::_internal_has_a_duration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool SlowScriptData::has_duration() const {
-  return _internal_has_duration();
+inline bool SlowScriptData::has_a_duration() const {
+  return _internal_has_a_duration();
 }
-inline void SlowScriptData::clear_duration() {
-  _impl_.duration_ = 0;
+inline void SlowScriptData::clear_a_duration() {
+  _impl_.a_duration_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline double SlowScriptData::_internal_duration() const {
-  return _impl_.duration_;
+inline double SlowScriptData::_internal_a_duration() const {
+  return _impl_.a_duration_;
 }
-inline double SlowScriptData::duration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.duration)
-  return _internal_duration();
+inline double SlowScriptData::a_duration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.SlowScriptData.a_duration)
+  return _internal_a_duration();
 }
-inline void SlowScriptData::_internal_set_duration(double value) {
+inline void SlowScriptData::_internal_set_a_duration(double value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.duration_ = value;
+  _impl_.a_duration_ = value;
 }
-inline void SlowScriptData::set_duration(double value) {
-  _internal_set_duration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.duration)
+inline void SlowScriptData::set_a_duration(double value) {
+  _internal_set_a_duration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.SlowScriptData.a_duration)
 }
 
 #ifdef __GNUC__

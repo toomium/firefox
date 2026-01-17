@@ -189,25 +189,25 @@ class Msg_Continue final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
+    kAResponseFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.PreprocessResponse response = 1;
-  bool has_response() const;
+  // required .protobuf.mozilla.dom.indexedDB.PreprocessResponse a_response = 1;
+  bool has_a_response() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_a_response() const;
   public:
-  void clear_response();
-  const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& response() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* release_response();
-  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* mutable_response();
-  void set_allocated_response(::protobuf::mozilla::dom::indexedDB::PreprocessResponse* response);
+  void clear_a_response();
+  const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& a_response() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* release_a_response();
+  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* mutable_a_response();
+  void set_allocated_a_response(::protobuf::mozilla::dom::indexedDB::PreprocessResponse* a_response);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& _internal_response() const;
-  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* _internal_mutable_response();
+  const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& _internal_a_response() const;
+  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* _internal_mutable_a_response();
   public:
-  void unsafe_arena_set_allocated_response(
-      ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* response);
-  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* unsafe_arena_release_response();
+  void unsafe_arena_set_allocated_a_response(
+      ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* a_response);
+  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* unsafe_arena_release_a_response();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue)
  private:
@@ -219,7 +219,7 @@ class Msg_Continue final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* response_;
+    ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_2eproto;
@@ -336,25 +336,25 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseFieldNumber = 1,
+    kAResponseFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.RequestResponse response = 1;
-  bool has_response() const;
+  // required .protobuf.mozilla.dom.indexedDB.RequestResponse a_response = 1;
+  bool has_a_response() const;
   private:
-  bool _internal_has_response() const;
+  bool _internal_has_a_response() const;
   public:
-  void clear_response();
-  const ::protobuf::mozilla::dom::indexedDB::RequestResponse& response() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::RequestResponse* release_response();
-  ::protobuf::mozilla::dom::indexedDB::RequestResponse* mutable_response();
-  void set_allocated_response(::protobuf::mozilla::dom::indexedDB::RequestResponse* response);
+  void clear_a_response();
+  const ::protobuf::mozilla::dom::indexedDB::RequestResponse& a_response() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::RequestResponse* release_a_response();
+  ::protobuf::mozilla::dom::indexedDB::RequestResponse* mutable_a_response();
+  void set_allocated_a_response(::protobuf::mozilla::dom::indexedDB::RequestResponse* a_response);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::RequestResponse& _internal_response() const;
-  ::protobuf::mozilla::dom::indexedDB::RequestResponse* _internal_mutable_response();
+  const ::protobuf::mozilla::dom::indexedDB::RequestResponse& _internal_a_response() const;
+  ::protobuf::mozilla::dom::indexedDB::RequestResponse* _internal_mutable_a_response();
   public:
-  void unsafe_arena_set_allocated_response(
-      ::protobuf::mozilla::dom::indexedDB::RequestResponse* response);
-  ::protobuf::mozilla::dom::indexedDB::RequestResponse* unsafe_arena_release_response();
+  void unsafe_arena_set_allocated_a_response(
+      ::protobuf::mozilla::dom::indexedDB::RequestResponse* a_response);
+  ::protobuf::mozilla::dom::indexedDB::RequestResponse* unsafe_arena_release_a_response();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__)
  private:
@@ -366,7 +366,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::indexedDB::RequestResponse* response_;
+    ::protobuf::mozilla::dom::indexedDB::RequestResponse* a_response_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_2eproto;
@@ -607,25 +607,25 @@ class Msg_Preprocess final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
+    kAParamsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.PreprocessParams params = 1;
-  bool has_params() const;
+  // required .protobuf.mozilla.dom.indexedDB.PreprocessParams a_params = 1;
+  bool has_a_params() const;
   private:
-  bool _internal_has_params() const;
+  bool _internal_has_a_params() const;
   public:
-  void clear_params();
-  const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& params() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::PreprocessParams* release_params();
-  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* mutable_params();
-  void set_allocated_params(::protobuf::mozilla::dom::indexedDB::PreprocessParams* params);
+  void clear_a_params();
+  const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& a_params() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::PreprocessParams* release_a_params();
+  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* mutable_a_params();
+  void set_allocated_a_params(::protobuf::mozilla::dom::indexedDB::PreprocessParams* a_params);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& _internal_params() const;
-  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* _internal_mutable_params();
+  const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& _internal_a_params() const;
+  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* _internal_mutable_a_params();
   public:
-  void unsafe_arena_set_allocated_params(
-      ::protobuf::mozilla::dom::indexedDB::PreprocessParams* params);
-  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* unsafe_arena_release_params();
+  void unsafe_arena_set_allocated_a_params(
+      ::protobuf::mozilla::dom::indexedDB::PreprocessParams* a_params);
+  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* unsafe_arena_release_a_params();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess)
  private:
@@ -637,7 +637,7 @@ class Msg_Preprocess final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::indexedDB::PreprocessParams* params_;
+    ::protobuf::mozilla::dom::indexedDB::PreprocessParams* a_params_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_2eproto;
@@ -653,41 +653,41 @@ class Msg_Preprocess final :
 #endif  // __GNUC__
 // Msg_Continue
 
-// required .protobuf.mozilla.dom.indexedDB.PreprocessResponse response = 1;
-inline bool Msg_Continue::_internal_has_response() const {
+// required .protobuf.mozilla.dom.indexedDB.PreprocessResponse a_response = 1;
+inline bool Msg_Continue::_internal_has_a_response() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.response_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
   return value;
 }
-inline bool Msg_Continue::has_response() const {
-  return _internal_has_response();
+inline bool Msg_Continue::has_a_response() const {
+  return _internal_has_a_response();
 }
-inline const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& Msg_Continue::_internal_response() const {
-  const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* p = _impl_.response_;
+inline const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& Msg_Continue::_internal_a_response() const {
+  const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* p = _impl_.a_response_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse&>(
       ::protobuf::mozilla::dom::indexedDB::_PreprocessResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& Msg_Continue::response() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.response)
-  return _internal_response();
+inline const ::protobuf::mozilla::dom::indexedDB::PreprocessResponse& Msg_Continue::a_response() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.a_response)
+  return _internal_a_response();
 }
-inline void Msg_Continue::unsafe_arena_set_allocated_response(
-    ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* response) {
+inline void Msg_Continue::unsafe_arena_set_allocated_a_response(
+    ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* a_response) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  _impl_.response_ = response;
-  if (response) {
+  _impl_.a_response_ = a_response;
+  if (a_response) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.a_response)
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::release_response() {
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::release_a_response() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -699,86 +699,86 @@ inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.response)
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::unsafe_arena_release_a_response() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.a_response)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::_internal_mutable_response() {
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::_internal_mutable_a_response() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.response_ == nullptr) {
+  if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::PreprocessResponse>(GetArenaForAllocation());
-    _impl_.response_ = p;
+    _impl_.a_response_ = p;
   }
-  return _impl_.response_;
+  return _impl_.a_response_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::mutable_response() {
-  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.response)
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* Msg_Continue::mutable_a_response() {
+  ::protobuf::mozilla::dom::indexedDB::PreprocessResponse* _msg = _internal_mutable_a_response();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.a_response)
   return _msg;
 }
-inline void Msg_Continue::set_allocated_response(::protobuf::mozilla::dom::indexedDB::PreprocessResponse* response) {
+inline void Msg_Continue::set_allocated_a_response(::protobuf::mozilla::dom::indexedDB::PreprocessResponse* a_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  if (response) {
+  if (a_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_response));
     if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
+      a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_response, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.response)
+  _impl_.a_response_ = a_response;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Continue.a_response)
 }
 
 // -------------------------------------------------------------------
 
 // Msg___delete__
 
-// required .protobuf.mozilla.dom.indexedDB.RequestResponse response = 1;
-inline bool Msg___delete__::_internal_has_response() const {
+// required .protobuf.mozilla.dom.indexedDB.RequestResponse a_response = 1;
+inline bool Msg___delete__::_internal_has_a_response() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.response_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_response_ != nullptr);
   return value;
 }
-inline bool Msg___delete__::has_response() const {
-  return _internal_has_response();
+inline bool Msg___delete__::has_a_response() const {
+  return _internal_has_a_response();
 }
-inline const ::protobuf::mozilla::dom::indexedDB::RequestResponse& Msg___delete__::_internal_response() const {
-  const ::protobuf::mozilla::dom::indexedDB::RequestResponse* p = _impl_.response_;
+inline const ::protobuf::mozilla::dom::indexedDB::RequestResponse& Msg___delete__::_internal_a_response() const {
+  const ::protobuf::mozilla::dom::indexedDB::RequestResponse* p = _impl_.a_response_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::RequestResponse&>(
       ::protobuf::mozilla::dom::indexedDB::_RequestResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::RequestResponse& Msg___delete__::response() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.response)
-  return _internal_response();
+inline const ::protobuf::mozilla::dom::indexedDB::RequestResponse& Msg___delete__::a_response() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.a_response)
+  return _internal_a_response();
 }
-inline void Msg___delete__::unsafe_arena_set_allocated_response(
-    ::protobuf::mozilla::dom::indexedDB::RequestResponse* response) {
+inline void Msg___delete__::unsafe_arena_set_allocated_a_response(
+    ::protobuf::mozilla::dom::indexedDB::RequestResponse* a_response) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  _impl_.response_ = response;
-  if (response) {
+  _impl_.a_response_ = a_response;
+  if (a_response) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.response)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.a_response)
 }
-inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::release_response() {
+inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::release_a_response() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::RequestResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::RequestResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -790,45 +790,45 @@ inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::rel
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::unsafe_arena_release_response() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.response)
+inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::unsafe_arena_release_a_response() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.a_response)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::RequestResponse* temp = _impl_.response_;
-  _impl_.response_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::RequestResponse* temp = _impl_.a_response_;
+  _impl_.a_response_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::_internal_mutable_response() {
+inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::_internal_mutable_a_response() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.response_ == nullptr) {
+  if (_impl_.a_response_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::RequestResponse>(GetArenaForAllocation());
-    _impl_.response_ = p;
+    _impl_.a_response_ = p;
   }
-  return _impl_.response_;
+  return _impl_.a_response_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::mutable_response() {
-  ::protobuf::mozilla::dom::indexedDB::RequestResponse* _msg = _internal_mutable_response();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.response)
+inline ::protobuf::mozilla::dom::indexedDB::RequestResponse* Msg___delete__::mutable_a_response() {
+  ::protobuf::mozilla::dom::indexedDB::RequestResponse* _msg = _internal_mutable_a_response();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.a_response)
   return _msg;
 }
-inline void Msg___delete__::set_allocated_response(::protobuf::mozilla::dom::indexedDB::RequestResponse* response) {
+inline void Msg___delete__::set_allocated_a_response(::protobuf::mozilla::dom::indexedDB::RequestResponse* a_response) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.response_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_response_);
   }
-  if (response) {
+  if (a_response) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(response));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_response));
     if (message_arena != submessage_arena) {
-      response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
+      a_response = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_response, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.response)
+  _impl_.a_response_ = a_response;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg___delete__.a_response)
 }
 
 // -------------------------------------------------------------------
@@ -839,41 +839,41 @@ inline void Msg___delete__::set_allocated_response(::protobuf::mozilla::dom::ind
 
 // Msg_Preprocess
 
-// required .protobuf.mozilla.dom.indexedDB.PreprocessParams params = 1;
-inline bool Msg_Preprocess::_internal_has_params() const {
+// required .protobuf.mozilla.dom.indexedDB.PreprocessParams a_params = 1;
+inline bool Msg_Preprocess::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.params_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
   return value;
 }
-inline bool Msg_Preprocess::has_params() const {
-  return _internal_has_params();
+inline bool Msg_Preprocess::has_a_params() const {
+  return _internal_has_a_params();
 }
-inline const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& Msg_Preprocess::_internal_params() const {
-  const ::protobuf::mozilla::dom::indexedDB::PreprocessParams* p = _impl_.params_;
+inline const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& Msg_Preprocess::_internal_a_params() const {
+  const ::protobuf::mozilla::dom::indexedDB::PreprocessParams* p = _impl_.a_params_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::PreprocessParams&>(
       ::protobuf::mozilla::dom::indexedDB::_PreprocessParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& Msg_Preprocess::params() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.params)
-  return _internal_params();
+inline const ::protobuf::mozilla::dom::indexedDB::PreprocessParams& Msg_Preprocess::a_params() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.a_params)
+  return _internal_a_params();
 }
-inline void Msg_Preprocess::unsafe_arena_set_allocated_params(
-    ::protobuf::mozilla::dom::indexedDB::PreprocessParams* params) {
+inline void Msg_Preprocess::unsafe_arena_set_allocated_a_params(
+    ::protobuf::mozilla::dom::indexedDB::PreprocessParams* a_params) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  _impl_.params_ = params;
-  if (params) {
+  _impl_.a_params_ = a_params;
+  if (a_params) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.params)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.a_params)
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::release_params() {
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::release_a_params() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -885,45 +885,45 @@ inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::unsafe_arena_release_params() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.params)
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::unsafe_arena_release_a_params() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.a_params)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::_internal_mutable_params() {
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::_internal_mutable_a_params() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.params_ == nullptr) {
+  if (_impl_.a_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::PreprocessParams>(GetArenaForAllocation());
-    _impl_.params_ = p;
+    _impl_.a_params_ = p;
   }
-  return _impl_.params_;
+  return _impl_.a_params_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::mutable_params() {
-  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* _msg = _internal_mutable_params();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.params)
+inline ::protobuf::mozilla::dom::indexedDB::PreprocessParams* Msg_Preprocess::mutable_a_params() {
+  ::protobuf::mozilla::dom::indexedDB::PreprocessParams* _msg = _internal_mutable_a_params();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.a_params)
   return _msg;
 }
-inline void Msg_Preprocess::set_allocated_params(::protobuf::mozilla::dom::indexedDB::PreprocessParams* params) {
+inline void Msg_Preprocess::set_allocated_a_params(::protobuf::mozilla::dom::indexedDB::PreprocessParams* a_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  if (params) {
+  if (a_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(params));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_params));
     if (message_arena != submessage_arena) {
-      params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, params, submessage_arena);
+      a_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_params, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.params_ = params;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.params)
+  _impl_.a_params_ = a_params;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBRequest.Msg_Preprocess.a_params)
 }
 
 #ifdef __GNUC__

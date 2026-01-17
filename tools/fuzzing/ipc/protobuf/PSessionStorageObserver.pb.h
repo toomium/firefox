@@ -556,62 +556,62 @@ class Msg_Observe final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTopicFieldNumber = 1,
-    kOriginAttributesPatternFieldNumber = 2,
-    kOriginScopeFieldNumber = 3,
+    kATopicFieldNumber = 1,
+    kAOriginAttributesPatternFieldNumber = 2,
+    kAOriginScopeFieldNumber = 3,
   };
-  // required bytes topic = 1;
-  bool has_topic() const;
+  // required bytes a_topic = 1;
+  bool has_a_topic() const;
   private:
-  bool _internal_has_topic() const;
+  bool _internal_has_a_topic() const;
   public:
-  void clear_topic();
-  const std::string& topic() const;
+  void clear_a_topic();
+  const std::string& a_topic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_topic(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_topic();
-  PROTOBUF_NODISCARD std::string* release_topic();
-  void set_allocated_topic(std::string* topic);
+  void set_a_topic(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_topic();
+  PROTOBUF_NODISCARD std::string* release_a_topic();
+  void set_allocated_a_topic(std::string* a_topic);
   private:
-  const std::string& _internal_topic() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_topic(const std::string& value);
-  std::string* _internal_mutable_topic();
+  const std::string& _internal_a_topic() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_topic(const std::string& value);
+  std::string* _internal_mutable_a_topic();
   public:
 
-  // required bytes originAttributesPattern = 2;
-  bool has_originattributespattern() const;
+  // required bytes a_originAttributesPattern = 2;
+  bool has_a_originattributespattern() const;
   private:
-  bool _internal_has_originattributespattern() const;
+  bool _internal_has_a_originattributespattern() const;
   public:
-  void clear_originattributespattern();
-  const std::string& originattributespattern() const;
+  void clear_a_originattributespattern();
+  const std::string& a_originattributespattern() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originattributespattern(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originattributespattern();
-  PROTOBUF_NODISCARD std::string* release_originattributespattern();
-  void set_allocated_originattributespattern(std::string* originattributespattern);
+  void set_a_originattributespattern(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originattributespattern();
+  PROTOBUF_NODISCARD std::string* release_a_originattributespattern();
+  void set_allocated_a_originattributespattern(std::string* a_originattributespattern);
   private:
-  const std::string& _internal_originattributespattern() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originattributespattern(const std::string& value);
-  std::string* _internal_mutable_originattributespattern();
+  const std::string& _internal_a_originattributespattern() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originattributespattern(const std::string& value);
+  std::string* _internal_mutable_a_originattributespattern();
   public:
 
-  // required bytes originScope = 3;
-  bool has_originscope() const;
+  // required bytes a_originScope = 3;
+  bool has_a_originscope() const;
   private:
-  bool _internal_has_originscope() const;
+  bool _internal_has_a_originscope() const;
   public:
-  void clear_originscope();
-  const std::string& originscope() const;
+  void clear_a_originscope();
+  const std::string& a_originscope() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_originscope(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_originscope();
-  PROTOBUF_NODISCARD std::string* release_originscope();
-  void set_allocated_originscope(std::string* originscope);
+  void set_a_originscope(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_originscope();
+  PROTOBUF_NODISCARD std::string* release_a_originscope();
+  void set_allocated_a_originscope(std::string* a_originscope);
   private:
-  const std::string& _internal_originscope() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_originscope(const std::string& value);
-  std::string* _internal_mutable_originscope();
+  const std::string& _internal_a_originscope() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_originscope(const std::string& value);
+  std::string* _internal_mutable_a_originscope();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe)
@@ -627,9 +627,9 @@ class Msg_Observe final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr topic_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originattributespattern_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr originscope_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_topic_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattributespattern_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originscope_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSessionStorageObserver_2eproto;
@@ -657,208 +657,208 @@ class Msg_Observe final :
 
 // Msg_Observe
 
-// required bytes topic = 1;
-inline bool Msg_Observe::_internal_has_topic() const {
+// required bytes a_topic = 1;
+inline bool Msg_Observe::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Observe::has_topic() const {
-  return _internal_has_topic();
+inline bool Msg_Observe::has_a_topic() const {
+  return _internal_has_a_topic();
 }
-inline void Msg_Observe::clear_topic() {
-  _impl_.topic_.ClearToEmpty();
+inline void Msg_Observe::clear_a_topic() {
+  _impl_.a_topic_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Observe::topic() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
-  return _internal_topic();
+inline const std::string& Msg_Observe::a_topic() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_topic)
+  return _internal_a_topic();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Observe::set_topic(ArgT0&& arg0, ArgT... args) {
+void Msg_Observe::set_a_topic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
+ _impl_.a_topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_topic)
 }
-inline std::string* Msg_Observe::mutable_topic() {
-  std::string* _s = _internal_mutable_topic();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
+inline std::string* Msg_Observe::mutable_a_topic() {
+  std::string* _s = _internal_mutable_a_topic();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_topic)
   return _s;
 }
-inline const std::string& Msg_Observe::_internal_topic() const {
-  return _impl_.topic_.Get();
+inline const std::string& Msg_Observe::_internal_a_topic() const {
+  return _impl_.a_topic_.Get();
 }
-inline void Msg_Observe::_internal_set_topic(const std::string& value) {
+inline void Msg_Observe::_internal_set_a_topic(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.topic_.Set(value, GetArenaForAllocation());
+  _impl_.a_topic_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Observe::_internal_mutable_topic() {
+inline std::string* Msg_Observe::_internal_mutable_a_topic() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.topic_.Mutable(GetArenaForAllocation());
+  return _impl_.a_topic_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Observe::release_topic() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
-  if (!_internal_has_topic()) {
+inline std::string* Msg_Observe::release_a_topic() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_topic)
+  if (!_internal_has_a_topic()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.topic_.Release();
+  auto* p = _impl_.a_topic_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.topic_.IsDefault()) {
-    _impl_.topic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_topic_.IsDefault()) {
+    _impl_.a_topic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Observe::set_allocated_topic(std::string* topic) {
-  if (topic != nullptr) {
+inline void Msg_Observe::set_allocated_a_topic(std::string* a_topic) {
+  if (a_topic != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.topic_.SetAllocated(topic, GetArenaForAllocation());
+  _impl_.a_topic_.SetAllocated(a_topic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.topic_.IsDefault()) {
-    _impl_.topic_.Set("", GetArenaForAllocation());
+  if (_impl_.a_topic_.IsDefault()) {
+    _impl_.a_topic_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.topic)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_topic)
 }
 
-// required bytes originAttributesPattern = 2;
-inline bool Msg_Observe::_internal_has_originattributespattern() const {
+// required bytes a_originAttributesPattern = 2;
+inline bool Msg_Observe::_internal_has_a_originattributespattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Observe::has_originattributespattern() const {
-  return _internal_has_originattributespattern();
+inline bool Msg_Observe::has_a_originattributespattern() const {
+  return _internal_has_a_originattributespattern();
 }
-inline void Msg_Observe::clear_originattributespattern() {
-  _impl_.originattributespattern_.ClearToEmpty();
+inline void Msg_Observe::clear_a_originattributespattern() {
+  _impl_.a_originattributespattern_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_Observe::originattributespattern() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
-  return _internal_originattributespattern();
+inline const std::string& Msg_Observe::a_originattributespattern() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originAttributesPattern)
+  return _internal_a_originattributespattern();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Observe::set_originattributespattern(ArgT0&& arg0, ArgT... args) {
+void Msg_Observe::set_a_originattributespattern(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.originattributespattern_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
+ _impl_.a_originattributespattern_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originAttributesPattern)
 }
-inline std::string* Msg_Observe::mutable_originattributespattern() {
-  std::string* _s = _internal_mutable_originattributespattern();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
+inline std::string* Msg_Observe::mutable_a_originattributespattern() {
+  std::string* _s = _internal_mutable_a_originattributespattern();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originAttributesPattern)
   return _s;
 }
-inline const std::string& Msg_Observe::_internal_originattributespattern() const {
-  return _impl_.originattributespattern_.Get();
+inline const std::string& Msg_Observe::_internal_a_originattributespattern() const {
+  return _impl_.a_originattributespattern_.Get();
 }
-inline void Msg_Observe::_internal_set_originattributespattern(const std::string& value) {
+inline void Msg_Observe::_internal_set_a_originattributespattern(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.originattributespattern_.Set(value, GetArenaForAllocation());
+  _impl_.a_originattributespattern_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Observe::_internal_mutable_originattributespattern() {
+inline std::string* Msg_Observe::_internal_mutable_a_originattributespattern() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.originattributespattern_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originattributespattern_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Observe::release_originattributespattern() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
-  if (!_internal_has_originattributespattern()) {
+inline std::string* Msg_Observe::release_a_originattributespattern() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originAttributesPattern)
+  if (!_internal_has_a_originattributespattern()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.originattributespattern_.Release();
+  auto* p = _impl_.a_originattributespattern_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributespattern_.IsDefault()) {
-    _impl_.originattributespattern_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributespattern_.IsDefault()) {
+    _impl_.a_originattributespattern_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Observe::set_allocated_originattributespattern(std::string* originattributespattern) {
-  if (originattributespattern != nullptr) {
+inline void Msg_Observe::set_allocated_a_originattributespattern(std::string* a_originattributespattern) {
+  if (a_originattributespattern != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.originattributespattern_.SetAllocated(originattributespattern, GetArenaForAllocation());
+  _impl_.a_originattributespattern_.SetAllocated(a_originattributespattern, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originattributespattern_.IsDefault()) {
-    _impl_.originattributespattern_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originattributespattern_.IsDefault()) {
+    _impl_.a_originattributespattern_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originAttributesPattern)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originAttributesPattern)
 }
 
-// required bytes originScope = 3;
-inline bool Msg_Observe::_internal_has_originscope() const {
+// required bytes a_originScope = 3;
+inline bool Msg_Observe::_internal_has_a_originscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_Observe::has_originscope() const {
-  return _internal_has_originscope();
+inline bool Msg_Observe::has_a_originscope() const {
+  return _internal_has_a_originscope();
 }
-inline void Msg_Observe::clear_originscope() {
-  _impl_.originscope_.ClearToEmpty();
+inline void Msg_Observe::clear_a_originscope() {
+  _impl_.a_originscope_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_Observe::originscope() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originScope)
-  return _internal_originscope();
+inline const std::string& Msg_Observe::a_originscope() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originScope)
+  return _internal_a_originscope();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Observe::set_originscope(ArgT0&& arg0, ArgT... args) {
+void Msg_Observe::set_a_originscope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.originscope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originScope)
+ _impl_.a_originscope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originScope)
 }
-inline std::string* Msg_Observe::mutable_originscope() {
-  std::string* _s = _internal_mutable_originscope();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originScope)
+inline std::string* Msg_Observe::mutable_a_originscope() {
+  std::string* _s = _internal_mutable_a_originscope();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originScope)
   return _s;
 }
-inline const std::string& Msg_Observe::_internal_originscope() const {
-  return _impl_.originscope_.Get();
+inline const std::string& Msg_Observe::_internal_a_originscope() const {
+  return _impl_.a_originscope_.Get();
 }
-inline void Msg_Observe::_internal_set_originscope(const std::string& value) {
+inline void Msg_Observe::_internal_set_a_originscope(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.originscope_.Set(value, GetArenaForAllocation());
+  _impl_.a_originscope_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Observe::_internal_mutable_originscope() {
+inline std::string* Msg_Observe::_internal_mutable_a_originscope() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.originscope_.Mutable(GetArenaForAllocation());
+  return _impl_.a_originscope_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Observe::release_originscope() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originScope)
-  if (!_internal_has_originscope()) {
+inline std::string* Msg_Observe::release_a_originscope() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originScope)
+  if (!_internal_has_a_originscope()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.originscope_.Release();
+  auto* p = _impl_.a_originscope_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originscope_.IsDefault()) {
-    _impl_.originscope_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originscope_.IsDefault()) {
+    _impl_.a_originscope_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Observe::set_allocated_originscope(std::string* originscope) {
-  if (originscope != nullptr) {
+inline void Msg_Observe::set_allocated_a_originscope(std::string* a_originscope) {
+  if (a_originscope != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.originscope_.SetAllocated(originscope, GetArenaForAllocation());
+  _impl_.a_originscope_.SetAllocated(a_originscope, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.originscope_.IsDefault()) {
-    _impl_.originscope_.Set("", GetArenaForAllocation());
+  if (_impl_.a_originscope_.IsDefault()) {
+    _impl_.a_originscope_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.originScope)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSessionStorageObserver.Msg_Observe.a_originScope)
 }
 
 #ifdef __GNUC__

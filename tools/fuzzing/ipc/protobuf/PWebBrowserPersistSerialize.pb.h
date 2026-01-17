@@ -177,29 +177,29 @@ class Msg_WriteData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 1,
+    kAADataFieldNumber = 1,
   };
-  // repeated uint32 aData = 1;
-  int adata_size() const;
+  // repeated uint32 a_aData = 1;
+  int a_adata_size() const;
   private:
-  int _internal_adata_size() const;
+  int _internal_a_adata_size() const;
   public:
-  void clear_adata();
+  void clear_a_adata();
   private:
-  uint32_t _internal_adata(int index) const;
+  uint32_t _internal_a_adata(int index) const;
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      _internal_adata() const;
-  void _internal_add_adata(uint32_t value);
+      _internal_a_adata() const;
+  void _internal_add_a_adata(uint32_t value);
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      _internal_mutable_adata();
+      _internal_mutable_a_adata();
   public:
-  uint32_t adata(int index) const;
-  void set_adata(int index, uint32_t value);
-  void add_adata(uint32_t value);
+  uint32_t a_adata(int index) const;
+  void set_a_adata(int index, uint32_t value);
+  void add_a_adata(uint32_t value);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-      adata() const;
+      a_adata() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-      mutable_adata();
+      mutable_a_adata();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData)
  private:
@@ -209,7 +209,7 @@ class Msg_WriteData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > adata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_adata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -327,43 +327,43 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAContentTypeFieldNumber = 1,
-    kAStatusFieldNumber = 2,
+    kAAContentTypeFieldNumber = 1,
+    kAAStatusFieldNumber = 2,
   };
-  // required bytes aContentType = 1;
-  bool has_acontenttype() const;
+  // required bytes a_aContentType = 1;
+  bool has_a_acontenttype() const;
   private:
-  bool _internal_has_acontenttype() const;
+  bool _internal_has_a_acontenttype() const;
   public:
-  void clear_acontenttype();
-  const std::string& acontenttype() const;
+  void clear_a_acontenttype();
+  const std::string& a_acontenttype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_acontenttype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_acontenttype();
-  PROTOBUF_NODISCARD std::string* release_acontenttype();
-  void set_allocated_acontenttype(std::string* acontenttype);
+  void set_a_acontenttype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_acontenttype();
+  PROTOBUF_NODISCARD std::string* release_a_acontenttype();
+  void set_allocated_a_acontenttype(std::string* a_acontenttype);
   private:
-  const std::string& _internal_acontenttype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_acontenttype(const std::string& value);
-  std::string* _internal_mutable_acontenttype();
+  const std::string& _internal_a_acontenttype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_acontenttype(const std::string& value);
+  std::string* _internal_mutable_a_acontenttype();
   public:
 
-  // required bytes aStatus = 2;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 2;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__)
@@ -379,8 +379,8 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr acontenttype_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acontenttype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistSerialize_2eproto;
@@ -520,191 +520,191 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_WriteData
 
-// repeated uint32 aData = 1;
-inline int Msg_WriteData::_internal_adata_size() const {
-  return _impl_.adata_.size();
+// repeated uint32 a_aData = 1;
+inline int Msg_WriteData::_internal_a_adata_size() const {
+  return _impl_.a_adata_.size();
 }
-inline int Msg_WriteData::adata_size() const {
-  return _internal_adata_size();
+inline int Msg_WriteData::a_adata_size() const {
+  return _internal_a_adata_size();
 }
-inline void Msg_WriteData::clear_adata() {
-  _impl_.adata_.Clear();
+inline void Msg_WriteData::clear_a_adata() {
+  _impl_.a_adata_.Clear();
 }
-inline uint32_t Msg_WriteData::_internal_adata(int index) const {
-  return _impl_.adata_.Get(index);
+inline uint32_t Msg_WriteData::_internal_a_adata(int index) const {
+  return _impl_.a_adata_.Get(index);
 }
-inline uint32_t Msg_WriteData::adata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.aData)
-  return _internal_adata(index);
+inline uint32_t Msg_WriteData::a_adata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.a_aData)
+  return _internal_a_adata(index);
 }
-inline void Msg_WriteData::set_adata(int index, uint32_t value) {
-  _impl_.adata_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.aData)
+inline void Msg_WriteData::set_a_adata(int index, uint32_t value) {
+  _impl_.a_adata_.Set(index, value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.a_aData)
 }
-inline void Msg_WriteData::_internal_add_adata(uint32_t value) {
-  _impl_.adata_.Add(value);
+inline void Msg_WriteData::_internal_add_a_adata(uint32_t value) {
+  _impl_.a_adata_.Add(value);
 }
-inline void Msg_WriteData::add_adata(uint32_t value) {
-  _internal_add_adata(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.aData)
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_WriteData::_internal_adata() const {
-  return _impl_.adata_;
+inline void Msg_WriteData::add_a_adata(uint32_t value) {
+  _internal_add_a_adata(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.a_aData)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-Msg_WriteData::adata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.aData)
-  return _internal_adata();
+Msg_WriteData::_internal_a_adata() const {
+  return _impl_.a_adata_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
+Msg_WriteData::a_adata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.a_aData)
+  return _internal_a_adata();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_WriteData::_internal_mutable_adata() {
-  return &_impl_.adata_;
+Msg_WriteData::_internal_mutable_a_adata() {
+  return &_impl_.a_adata_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-Msg_WriteData::mutable_adata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.aData)
-  return _internal_mutable_adata();
+Msg_WriteData::mutable_a_adata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.PWebBrowserPersistSerialize.Msg_WriteData.a_aData)
+  return _internal_mutable_a_adata();
 }
 
 // -------------------------------------------------------------------
 
 // Msg___delete__
 
-// required bytes aContentType = 1;
-inline bool Msg___delete__::_internal_has_acontenttype() const {
+// required bytes a_aContentType = 1;
+inline bool Msg___delete__::_internal_has_a_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_acontenttype() const {
-  return _internal_has_acontenttype();
+inline bool Msg___delete__::has_a_acontenttype() const {
+  return _internal_has_a_acontenttype();
 }
-inline void Msg___delete__::clear_acontenttype() {
-  _impl_.acontenttype_.ClearToEmpty();
+inline void Msg___delete__::clear_a_acontenttype() {
+  _impl_.a_acontenttype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg___delete__::acontenttype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aContentType)
-  return _internal_acontenttype();
+inline const std::string& Msg___delete__::a_acontenttype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aContentType)
+  return _internal_a_acontenttype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_acontenttype(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_acontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.acontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aContentType)
+ _impl_.a_acontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aContentType)
 }
-inline std::string* Msg___delete__::mutable_acontenttype() {
-  std::string* _s = _internal_mutable_acontenttype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aContentType)
+inline std::string* Msg___delete__::mutable_a_acontenttype() {
+  std::string* _s = _internal_mutable_a_acontenttype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aContentType)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_acontenttype() const {
-  return _impl_.acontenttype_.Get();
+inline const std::string& Msg___delete__::_internal_a_acontenttype() const {
+  return _impl_.a_acontenttype_.Get();
 }
-inline void Msg___delete__::_internal_set_acontenttype(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_acontenttype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.acontenttype_.Set(value, GetArenaForAllocation());
+  _impl_.a_acontenttype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_acontenttype() {
+inline std::string* Msg___delete__::_internal_mutable_a_acontenttype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.acontenttype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_acontenttype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_acontenttype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aContentType)
-  if (!_internal_has_acontenttype()) {
+inline std::string* Msg___delete__::release_a_acontenttype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aContentType)
+  if (!_internal_has_a_acontenttype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.acontenttype_.Release();
+  auto* p = _impl_.a_acontenttype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acontenttype_.IsDefault()) {
-    _impl_.acontenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acontenttype_.IsDefault()) {
+    _impl_.a_acontenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_acontenttype(std::string* acontenttype) {
-  if (acontenttype != nullptr) {
+inline void Msg___delete__::set_allocated_a_acontenttype(std::string* a_acontenttype) {
+  if (a_acontenttype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acontenttype_.SetAllocated(acontenttype, GetArenaForAllocation());
+  _impl_.a_acontenttype_.SetAllocated(a_acontenttype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.acontenttype_.IsDefault()) {
-    _impl_.acontenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_acontenttype_.IsDefault()) {
+    _impl_.a_acontenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aContentType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aContentType)
 }
 
-// required bytes aStatus = 2;
-inline bool Msg___delete__::_internal_has_astatus() const {
+// required bytes a_aStatus = 2;
+inline bool Msg___delete__::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg___delete__::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg___delete__::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg___delete__::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg___delete__::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg___delete__::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg___delete__::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg___delete__::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aStatus)
 }
-inline std::string* Msg___delete__::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aStatus)
+inline std::string* Msg___delete__::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aStatus)
   return _s;
 }
-inline const std::string& Msg___delete__::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg___delete__::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg___delete__::_internal_set_astatus(const std::string& value) {
+inline void Msg___delete__::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::_internal_mutable_astatus() {
+inline std::string* Msg___delete__::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg___delete__::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg___delete__::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg___delete__::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg___delete__::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistSerialize.Msg___delete__.a_aStatus)
 }
 
 // -------------------------------------------------------------------

@@ -569,25 +569,25 @@ class Msg_Test final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIFieldNumber = 1,
+    kAIFieldNumber = 1,
   };
-  // required .protobuf.mozilla._ipdltest.JSONVariant i = 1;
-  bool has_i() const;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
+  bool has_a_i() const;
   private:
-  bool _internal_has_i() const;
+  bool _internal_has_a_i() const;
   public:
-  void clear_i();
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& i() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant* release_i();
-  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_i();
-  void set_allocated_i(::protobuf::mozilla::_ipdltest::JSONVariant* i);
+  void clear_a_i();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& a_i() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant* release_a_i();
+  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_a_i();
+  void set_allocated_a_i(::protobuf::mozilla::_ipdltest::JSONVariant* a_i);
   private:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_i() const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_mutable_i();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_a_i() const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_mutable_a_i();
   public:
-  void unsafe_arena_set_allocated_i(
-      ::protobuf::mozilla::_ipdltest::JSONVariant* i);
-  ::protobuf::mozilla::_ipdltest::JSONVariant* unsafe_arena_release_i();
+  void unsafe_arena_set_allocated_a_i(
+      ::protobuf::mozilla::_ipdltest::JSONVariant* a_i);
+  ::protobuf::mozilla::_ipdltest::JSONVariant* unsafe_arena_release_a_i();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test)
  private:
@@ -599,7 +599,7 @@ class Msg_Test final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::_ipdltest::JSONVariant* i_;
+    ::protobuf::mozilla::_ipdltest::JSONVariant* a_i_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestJSON_2eproto;
@@ -716,25 +716,25 @@ class Reply_Test final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kOFieldNumber = 1,
+    kAOFieldNumber = 1,
   };
-  // required .protobuf.mozilla._ipdltest.JSONVariant o = 1;
-  bool has_o() const;
+  // required .protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
+  bool has_a_o() const;
   private:
-  bool _internal_has_o() const;
+  bool _internal_has_a_o() const;
   public:
-  void clear_o();
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& o() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant* release_o();
-  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_o();
-  void set_allocated_o(::protobuf::mozilla::_ipdltest::JSONVariant* o);
+  void clear_a_o();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& a_o() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant* release_a_o();
+  ::protobuf::mozilla::_ipdltest::JSONVariant* mutable_a_o();
+  void set_allocated_a_o(::protobuf::mozilla::_ipdltest::JSONVariant* a_o);
   private:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_o() const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_mutable_o();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant& _internal_a_o() const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _internal_mutable_a_o();
   public:
-  void unsafe_arena_set_allocated_o(
-      ::protobuf::mozilla::_ipdltest::JSONVariant* o);
-  ::protobuf::mozilla::_ipdltest::JSONVariant* unsafe_arena_release_o();
+  void unsafe_arena_set_allocated_a_o(
+      ::protobuf::mozilla::_ipdltest::JSONVariant* a_o);
+  ::protobuf::mozilla::_ipdltest::JSONVariant* unsafe_arena_release_a_o();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test)
  private:
@@ -746,7 +746,7 @@ class Reply_Test final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::_ipdltest::JSONVariant* o_;
+    ::protobuf::mozilla::_ipdltest::JSONVariant* a_o_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestJSON_2eproto;
@@ -1022,41 +1022,41 @@ class Reply___delete__ final :
 
 // Msg_Test
 
-// required .protobuf.mozilla._ipdltest.JSONVariant i = 1;
-inline bool Msg_Test::_internal_has_i() const {
+// required .protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
+inline bool Msg_Test::_internal_has_a_i() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.i_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_i_ != nullptr);
   return value;
 }
-inline bool Msg_Test::has_i() const {
-  return _internal_has_i();
+inline bool Msg_Test::has_a_i() const {
+  return _internal_has_a_i();
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Msg_Test::_internal_i() const {
-  const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.i_;
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Msg_Test::_internal_a_i() const {
+  const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.a_i_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_ipdltest::JSONVariant&>(
       ::protobuf::mozilla::_ipdltest::_JSONVariant_default_instance_);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Msg_Test::i() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.i)
-  return _internal_i();
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Msg_Test::a_i() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.a_i)
+  return _internal_a_i();
 }
-inline void Msg_Test::unsafe_arena_set_allocated_i(
-    ::protobuf::mozilla::_ipdltest::JSONVariant* i) {
+inline void Msg_Test::unsafe_arena_set_allocated_a_i(
+    ::protobuf::mozilla::_ipdltest::JSONVariant* a_i) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.i_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_i_);
   }
-  _impl_.i_ = i;
-  if (i) {
+  _impl_.a_i_ = a_i;
+  if (a_i) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.i)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.a_i)
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::release_i() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::release_a_i() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.i_;
-  _impl_.i_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_i_;
+  _impl_.a_i_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1068,86 +1068,86 @@ inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::release_i() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::unsafe_arena_release_i() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.i)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::unsafe_arena_release_a_i() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.a_i)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.i_;
-  _impl_.i_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_i_;
+  _impl_.a_i_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::_internal_mutable_i() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::_internal_mutable_a_i() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.i_ == nullptr) {
+  if (_impl_.a_i_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant>(GetArenaForAllocation());
-    _impl_.i_ = p;
+    _impl_.a_i_ = p;
   }
-  return _impl_.i_;
+  return _impl_.a_i_;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::mutable_i() {
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _msg = _internal_mutable_i();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.i)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Msg_Test::mutable_a_i() {
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _msg = _internal_mutable_a_i();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.a_i)
   return _msg;
 }
-inline void Msg_Test::set_allocated_i(::protobuf::mozilla::_ipdltest::JSONVariant* i) {
+inline void Msg_Test::set_allocated_a_i(::protobuf::mozilla::_ipdltest::JSONVariant* a_i) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.i_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_i_);
   }
-  if (i) {
+  if (a_i) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(i));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_i));
     if (message_arena != submessage_arena) {
-      i = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, i, submessage_arena);
+      a_i = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_i, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.i_ = i;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.i)
+  _impl_.a_i_ = a_i;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Msg_Test.a_i)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Test
 
-// required .protobuf.mozilla._ipdltest.JSONVariant o = 1;
-inline bool Reply_Test::_internal_has_o() const {
+// required .protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
+inline bool Reply_Test::_internal_has_a_o() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.o_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_o_ != nullptr);
   return value;
 }
-inline bool Reply_Test::has_o() const {
-  return _internal_has_o();
+inline bool Reply_Test::has_a_o() const {
+  return _internal_has_a_o();
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Reply_Test::_internal_o() const {
-  const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.o_;
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Reply_Test::_internal_a_o() const {
+  const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.a_o_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::_ipdltest::JSONVariant&>(
       ::protobuf::mozilla::_ipdltest::_JSONVariant_default_instance_);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Reply_Test::o() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.o)
-  return _internal_o();
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& Reply_Test::a_o() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.a_o)
+  return _internal_a_o();
 }
-inline void Reply_Test::unsafe_arena_set_allocated_o(
-    ::protobuf::mozilla::_ipdltest::JSONVariant* o) {
+inline void Reply_Test::unsafe_arena_set_allocated_a_o(
+    ::protobuf::mozilla::_ipdltest::JSONVariant* a_o) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.o_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_o_);
   }
-  _impl_.o_ = o;
-  if (o) {
+  _impl_.a_o_ = a_o;
+  if (a_o) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.o)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.a_o)
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::release_o() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::release_a_o() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.o_;
-  _impl_.o_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_o_;
+  _impl_.a_o_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1159,45 +1159,45 @@ inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::release_o() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::unsafe_arena_release_o() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.o)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::unsafe_arena_release_a_o() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.a_o)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.o_;
-  _impl_.o_ = nullptr;
+  ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_o_;
+  _impl_.a_o_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::_internal_mutable_o() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::_internal_mutable_a_o() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.o_ == nullptr) {
+  if (_impl_.a_o_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant>(GetArenaForAllocation());
-    _impl_.o_ = p;
+    _impl_.a_o_ = p;
   }
-  return _impl_.o_;
+  return _impl_.a_o_;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::mutable_o() {
-  ::protobuf::mozilla::_ipdltest::JSONVariant* _msg = _internal_mutable_o();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.o)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* Reply_Test::mutable_a_o() {
+  ::protobuf::mozilla::_ipdltest::JSONVariant* _msg = _internal_mutable_a_o();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.a_o)
   return _msg;
 }
-inline void Reply_Test::set_allocated_o(::protobuf::mozilla::_ipdltest::JSONVariant* o) {
+inline void Reply_Test::set_allocated_a_o(::protobuf::mozilla::_ipdltest::JSONVariant* a_o) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.o_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_o_);
   }
-  if (o) {
+  if (a_o) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(o));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_o));
     if (message_arena != submessage_arena) {
-      o = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, o, submessage_arena);
+      a_o = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_o, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.o_ = o;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.o)
+  _impl_.a_o_ = a_o;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.PTestJSON.Reply_Test.a_o)
 }
 
 // -------------------------------------------------------------------

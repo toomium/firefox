@@ -205,44 +205,44 @@ class Msg_Attributes final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAttrsFieldNumber = 1,
-    kStreamFieldNumber = 2,
+    kAAAttrsFieldNumber = 1,
+    kAStreamFieldNumber = 2,
   };
-  // required .protobuf.mozilla.WebBrowserPersistDocumentAttrs aAttrs = 1;
-  bool has_aattrs() const;
+  // required .protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
+  bool has_a_aattrs() const;
   private:
-  bool _internal_has_aattrs() const;
+  bool _internal_has_a_aattrs() const;
   public:
-  void clear_aattrs();
-  const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& aattrs() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* release_aattrs();
-  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* mutable_aattrs();
-  void set_allocated_aattrs(::protobuf::mozilla::WebBrowserPersistDocumentAttrs* aattrs);
+  void clear_a_aattrs();
+  const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& a_aattrs() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* release_a_aattrs();
+  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* mutable_a_aattrs();
+  void set_allocated_a_aattrs(::protobuf::mozilla::WebBrowserPersistDocumentAttrs* a_aattrs);
   private:
-  const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& _internal_aattrs() const;
-  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* _internal_mutable_aattrs();
+  const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& _internal_a_aattrs() const;
+  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* _internal_mutable_a_aattrs();
   public:
-  void unsafe_arena_set_allocated_aattrs(
-      ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* aattrs);
-  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* unsafe_arena_release_aattrs();
+  void unsafe_arena_set_allocated_a_aattrs(
+      ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* a_aattrs);
+  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* unsafe_arena_release_a_aattrs();
 
-  // optional .protobuf.mozilla.ipc.IPCStream stream = 2;
-  bool has_stream() const;
+  // optional .protobuf.mozilla.ipc.IPCStream a_stream = 2;
+  bool has_a_stream() const;
   private:
-  bool _internal_has_stream() const;
+  bool _internal_has_a_stream() const;
   public:
-  void clear_stream();
-  const ::protobuf::mozilla::ipc::IPCStream& stream() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_stream();
-  ::protobuf::mozilla::ipc::IPCStream* mutable_stream();
-  void set_allocated_stream(::protobuf::mozilla::ipc::IPCStream* stream);
+  void clear_a_stream();
+  const ::protobuf::mozilla::ipc::IPCStream& a_stream() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::IPCStream* release_a_stream();
+  ::protobuf::mozilla::ipc::IPCStream* mutable_a_stream();
+  void set_allocated_a_stream(::protobuf::mozilla::ipc::IPCStream* a_stream);
   private:
-  const ::protobuf::mozilla::ipc::IPCStream& _internal_stream() const;
-  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_stream();
+  const ::protobuf::mozilla::ipc::IPCStream& _internal_a_stream() const;
+  ::protobuf::mozilla::ipc::IPCStream* _internal_mutable_a_stream();
   public:
-  void unsafe_arena_set_allocated_stream(
-      ::protobuf::mozilla::ipc::IPCStream* stream);
-  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_stream();
+  void unsafe_arena_set_allocated_a_stream(
+      ::protobuf::mozilla::ipc::IPCStream* a_stream);
+  ::protobuf::mozilla::ipc::IPCStream* unsafe_arena_release_a_stream();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes)
  private:
@@ -254,8 +254,8 @@ class Msg_Attributes final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* aattrs_;
-    ::protobuf::mozilla::ipc::IPCStream* stream_;
+    ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* a_aattrs_;
+    ::protobuf::mozilla::ipc::IPCStream* a_stream_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -372,24 +372,24 @@ class Msg_InitFailure final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAStatusFieldNumber = 1,
+    kAAStatusFieldNumber = 1,
   };
-  // required bytes aStatus = 1;
-  bool has_astatus() const;
+  // required bytes a_aStatus = 1;
+  bool has_a_astatus() const;
   private:
-  bool _internal_has_astatus() const;
+  bool _internal_has_a_astatus() const;
   public:
-  void clear_astatus();
-  const std::string& astatus() const;
+  void clear_a_astatus();
+  const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_astatus(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_astatus();
-  PROTOBUF_NODISCARD std::string* release_astatus();
-  void set_allocated_astatus(std::string* astatus);
+  void set_a_astatus(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_astatus();
+  PROTOBUF_NODISCARD std::string* release_a_astatus();
+  void set_allocated_a_astatus(std::string* a_astatus);
   private:
-  const std::string& _internal_astatus() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_astatus(const std::string& value);
-  std::string* _internal_mutable_astatus();
+  const std::string& _internal_a_astatus() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_astatus(const std::string& value);
+  std::string* _internal_mutable_a_astatus();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure)
@@ -402,7 +402,7 @@ class Msg_InitFailure final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr astatus_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -519,19 +519,19 @@ class Msg_SetPersistFlags final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kANewFlagsFieldNumber = 1,
+    kAANewFlagsFieldNumber = 1,
   };
-  // required uint32 aNewFlags = 1;
-  bool has_anewflags() const;
+  // required uint32 a_aNewFlags = 1;
+  bool has_a_anewflags() const;
   private:
-  bool _internal_has_anewflags() const;
+  bool _internal_has_a_anewflags() const;
   public:
-  void clear_anewflags();
-  uint32_t anewflags() const;
-  void set_anewflags(uint32_t value);
+  void clear_a_anewflags();
+  uint32_t a_anewflags() const;
+  void set_a_anewflags(uint32_t value);
   private:
-  uint32_t _internal_anewflags() const;
-  void _internal_set_anewflags(uint32_t value);
+  uint32_t _internal_a_anewflags() const;
+  void _internal_set_a_anewflags(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags)
@@ -544,7 +544,7 @@ class Msg_SetPersistFlags final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t anewflags_;
+    uint32_t a_anewflags_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -909,71 +909,71 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARequestedContentTypeFieldNumber = 2,
-    kAMapFieldNumber = 1,
-    kAEncoderFlagsFieldNumber = 3,
-    kAWrapColumnFieldNumber = 4,
+    kAARequestedContentTypeFieldNumber = 2,
+    kAAMapFieldNumber = 1,
+    kAAEncoderFlagsFieldNumber = 3,
+    kAAWrapColumnFieldNumber = 4,
   };
-  // required bytes aRequestedContentType = 2;
-  bool has_arequestedcontenttype() const;
+  // required bytes a_aRequestedContentType = 2;
+  bool has_a_arequestedcontenttype() const;
   private:
-  bool _internal_has_arequestedcontenttype() const;
+  bool _internal_has_a_arequestedcontenttype() const;
   public:
-  void clear_arequestedcontenttype();
-  const std::string& arequestedcontenttype() const;
+  void clear_a_arequestedcontenttype();
+  const std::string& a_arequestedcontenttype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_arequestedcontenttype(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_arequestedcontenttype();
-  PROTOBUF_NODISCARD std::string* release_arequestedcontenttype();
-  void set_allocated_arequestedcontenttype(std::string* arequestedcontenttype);
+  void set_a_arequestedcontenttype(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_arequestedcontenttype();
+  PROTOBUF_NODISCARD std::string* release_a_arequestedcontenttype();
+  void set_allocated_a_arequestedcontenttype(std::string* a_arequestedcontenttype);
   private:
-  const std::string& _internal_arequestedcontenttype() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_arequestedcontenttype(const std::string& value);
-  std::string* _internal_mutable_arequestedcontenttype();
+  const std::string& _internal_a_arequestedcontenttype() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_arequestedcontenttype(const std::string& value);
+  std::string* _internal_mutable_a_arequestedcontenttype();
   public:
 
-  // required .protobuf.mozilla.WebBrowserPersistURIMap aMap = 1;
-  bool has_amap() const;
+  // required .protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 1;
+  bool has_a_amap() const;
   private:
-  bool _internal_has_amap() const;
+  bool _internal_has_a_amap() const;
   public:
-  void clear_amap();
-  const ::protobuf::mozilla::WebBrowserPersistURIMap& amap() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::WebBrowserPersistURIMap* release_amap();
-  ::protobuf::mozilla::WebBrowserPersistURIMap* mutable_amap();
-  void set_allocated_amap(::protobuf::mozilla::WebBrowserPersistURIMap* amap);
+  void clear_a_amap();
+  const ::protobuf::mozilla::WebBrowserPersistURIMap& a_amap() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::WebBrowserPersistURIMap* release_a_amap();
+  ::protobuf::mozilla::WebBrowserPersistURIMap* mutable_a_amap();
+  void set_allocated_a_amap(::protobuf::mozilla::WebBrowserPersistURIMap* a_amap);
   private:
-  const ::protobuf::mozilla::WebBrowserPersistURIMap& _internal_amap() const;
-  ::protobuf::mozilla::WebBrowserPersistURIMap* _internal_mutable_amap();
+  const ::protobuf::mozilla::WebBrowserPersistURIMap& _internal_a_amap() const;
+  ::protobuf::mozilla::WebBrowserPersistURIMap* _internal_mutable_a_amap();
   public:
-  void unsafe_arena_set_allocated_amap(
-      ::protobuf::mozilla::WebBrowserPersistURIMap* amap);
-  ::protobuf::mozilla::WebBrowserPersistURIMap* unsafe_arena_release_amap();
+  void unsafe_arena_set_allocated_a_amap(
+      ::protobuf::mozilla::WebBrowserPersistURIMap* a_amap);
+  ::protobuf::mozilla::WebBrowserPersistURIMap* unsafe_arena_release_a_amap();
 
-  // required uint32 aEncoderFlags = 3;
-  bool has_aencoderflags() const;
+  // required uint32 a_aEncoderFlags = 3;
+  bool has_a_aencoderflags() const;
   private:
-  bool _internal_has_aencoderflags() const;
+  bool _internal_has_a_aencoderflags() const;
   public:
-  void clear_aencoderflags();
-  uint32_t aencoderflags() const;
-  void set_aencoderflags(uint32_t value);
+  void clear_a_aencoderflags();
+  uint32_t a_aencoderflags() const;
+  void set_a_aencoderflags(uint32_t value);
   private:
-  uint32_t _internal_aencoderflags() const;
-  void _internal_set_aencoderflags(uint32_t value);
+  uint32_t _internal_a_aencoderflags() const;
+  void _internal_set_a_aencoderflags(uint32_t value);
   public:
 
-  // required uint32 aWrapColumn = 4;
-  bool has_awrapcolumn() const;
+  // required uint32 a_aWrapColumn = 4;
+  bool has_a_awrapcolumn() const;
   private:
-  bool _internal_has_awrapcolumn() const;
+  bool _internal_has_a_awrapcolumn() const;
   public:
-  void clear_awrapcolumn();
-  uint32_t awrapcolumn() const;
-  void set_awrapcolumn(uint32_t value);
+  void clear_a_awrapcolumn();
+  uint32_t a_awrapcolumn() const;
+  void set_a_awrapcolumn(uint32_t value);
   private:
-  uint32_t _internal_awrapcolumn() const;
-  void _internal_set_awrapcolumn(uint32_t value);
+  uint32_t _internal_a_awrapcolumn() const;
+  void _internal_set_a_awrapcolumn(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor)
@@ -989,10 +989,10 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr arequestedcontenttype_;
-    ::protobuf::mozilla::WebBrowserPersistURIMap* amap_;
-    uint32_t aencoderflags_;
-    uint32_t awrapcolumn_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arequestedcontenttype_;
+    ::protobuf::mozilla::WebBrowserPersistURIMap* a_amap_;
+    uint32_t a_aencoderflags_;
+    uint32_t a_awrapcolumn_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -1380,41 +1380,41 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Attributes
 
-// required .protobuf.mozilla.WebBrowserPersistDocumentAttrs aAttrs = 1;
-inline bool Msg_Attributes::_internal_has_aattrs() const {
+// required .protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
+inline bool Msg_Attributes::_internal_has_a_aattrs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.aattrs_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_aattrs_ != nullptr);
   return value;
 }
-inline bool Msg_Attributes::has_aattrs() const {
-  return _internal_has_aattrs();
+inline bool Msg_Attributes::has_a_aattrs() const {
+  return _internal_has_a_aattrs();
 }
-inline const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& Msg_Attributes::_internal_aattrs() const {
-  const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* p = _impl_.aattrs_;
+inline const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& Msg_Attributes::_internal_a_aattrs() const {
+  const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* p = _impl_.a_aattrs_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs&>(
       ::protobuf::mozilla::_WebBrowserPersistDocumentAttrs_default_instance_);
 }
-inline const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& Msg_Attributes::aattrs() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.aAttrs)
-  return _internal_aattrs();
+inline const ::protobuf::mozilla::WebBrowserPersistDocumentAttrs& Msg_Attributes::a_aattrs() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
+  return _internal_a_aattrs();
 }
-inline void Msg_Attributes::unsafe_arena_set_allocated_aattrs(
-    ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* aattrs) {
+inline void Msg_Attributes::unsafe_arena_set_allocated_a_aattrs(
+    ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* a_aattrs) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aattrs_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aattrs_);
   }
-  _impl_.aattrs_ = aattrs;
-  if (aattrs) {
+  _impl_.a_aattrs_ = a_aattrs;
+  if (a_aattrs) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.aAttrs)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
 }
-inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::release_aattrs() {
+inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::release_a_aattrs() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* temp = _impl_.aattrs_;
-  _impl_.aattrs_ = nullptr;
+  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* temp = _impl_.a_aattrs_;
+  _impl_.a_aattrs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1426,82 +1426,82 @@ inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::unsafe_arena_release_aattrs() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.aAttrs)
+inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::unsafe_arena_release_a_aattrs() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* temp = _impl_.aattrs_;
-  _impl_.aattrs_ = nullptr;
+  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* temp = _impl_.a_aattrs_;
+  _impl_.a_aattrs_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::_internal_mutable_aattrs() {
+inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::_internal_mutable_a_aattrs() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.aattrs_ == nullptr) {
+  if (_impl_.a_aattrs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::WebBrowserPersistDocumentAttrs>(GetArenaForAllocation());
-    _impl_.aattrs_ = p;
+    _impl_.a_aattrs_ = p;
   }
-  return _impl_.aattrs_;
+  return _impl_.a_aattrs_;
 }
-inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::mutable_aattrs() {
-  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* _msg = _internal_mutable_aattrs();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.aAttrs)
+inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::mutable_a_aattrs() {
+  ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* _msg = _internal_mutable_a_aattrs();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
   return _msg;
 }
-inline void Msg_Attributes::set_allocated_aattrs(::protobuf::mozilla::WebBrowserPersistDocumentAttrs* aattrs) {
+inline void Msg_Attributes::set_allocated_a_aattrs(::protobuf::mozilla::WebBrowserPersistDocumentAttrs* a_aattrs) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.aattrs_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_aattrs_);
   }
-  if (aattrs) {
+  if (a_aattrs) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(aattrs));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_aattrs));
     if (message_arena != submessage_arena) {
-      aattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, aattrs, submessage_arena);
+      a_aattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_aattrs, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aattrs_ = aattrs;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.aAttrs)
+  _impl_.a_aattrs_ = a_aattrs;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
 }
 
-// optional .protobuf.mozilla.ipc.IPCStream stream = 2;
-inline bool Msg_Attributes::_internal_has_stream() const {
+// optional .protobuf.mozilla.ipc.IPCStream a_stream = 2;
+inline bool Msg_Attributes::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.stream_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
   return value;
 }
-inline bool Msg_Attributes::has_stream() const {
-  return _internal_has_stream();
+inline bool Msg_Attributes::has_a_stream() const {
+  return _internal_has_a_stream();
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& Msg_Attributes::_internal_stream() const {
-  const ::protobuf::mozilla::ipc::IPCStream* p = _impl_.stream_;
+inline const ::protobuf::mozilla::ipc::IPCStream& Msg_Attributes::_internal_a_stream() const {
+  const ::protobuf::mozilla::ipc::IPCStream* p = _impl_.a_stream_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::IPCStream&>(
       ::protobuf::mozilla::ipc::_IPCStream_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::IPCStream& Msg_Attributes::stream() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.stream)
-  return _internal_stream();
+inline const ::protobuf::mozilla::ipc::IPCStream& Msg_Attributes::a_stream() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
+  return _internal_a_stream();
 }
-inline void Msg_Attributes::unsafe_arena_set_allocated_stream(
-    ::protobuf::mozilla::ipc::IPCStream* stream) {
+inline void Msg_Attributes::unsafe_arena_set_allocated_a_stream(
+    ::protobuf::mozilla::ipc::IPCStream* a_stream) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  _impl_.stream_ = stream;
-  if (stream) {
+  _impl_.a_stream_ = a_stream;
+  if (a_stream) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.stream)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::release_stream() {
+inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::release_a_stream() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1513,149 +1513,149 @@ inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::release_stream() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::unsafe_arena_release_stream() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.stream)
+inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::unsafe_arena_release_a_stream() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.stream_;
-  _impl_.stream_ = nullptr;
+  ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_stream_;
+  _impl_.a_stream_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::_internal_mutable_stream() {
+inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::_internal_mutable_a_stream() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.stream_ == nullptr) {
+  if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::IPCStream>(GetArenaForAllocation());
-    _impl_.stream_ = p;
+    _impl_.a_stream_ = p;
   }
-  return _impl_.stream_;
+  return _impl_.a_stream_;
 }
-inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::mutable_stream() {
-  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_stream();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.stream)
+inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::mutable_a_stream() {
+  ::protobuf::mozilla::ipc::IPCStream* _msg = _internal_mutable_a_stream();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
   return _msg;
 }
-inline void Msg_Attributes::set_allocated_stream(::protobuf::mozilla::ipc::IPCStream* stream) {
+inline void Msg_Attributes::set_allocated_a_stream(::protobuf::mozilla::ipc::IPCStream* a_stream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.stream_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_stream_);
   }
-  if (stream) {
+  if (a_stream) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(stream));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_stream));
     if (message_arena != submessage_arena) {
-      stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, stream, submessage_arena);
+      a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_stream, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.stream_ = stream;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.stream)
+  _impl_.a_stream_ = a_stream;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitFailure
 
-// required bytes aStatus = 1;
-inline bool Msg_InitFailure::_internal_has_astatus() const {
+// required bytes a_aStatus = 1;
+inline bool Msg_InitFailure::_internal_has_a_astatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitFailure::has_astatus() const {
-  return _internal_has_astatus();
+inline bool Msg_InitFailure::has_a_astatus() const {
+  return _internal_has_a_astatus();
 }
-inline void Msg_InitFailure::clear_astatus() {
-  _impl_.astatus_.ClearToEmpty();
+inline void Msg_InitFailure::clear_a_astatus() {
+  _impl_.a_astatus_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_InitFailure::astatus() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.aStatus)
-  return _internal_astatus();
+inline const std::string& Msg_InitFailure::a_astatus() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
+  return _internal_a_astatus();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_InitFailure::set_astatus(ArgT0&& arg0, ArgT... args) {
+void Msg_InitFailure::set_a_astatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.aStatus)
+ _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
 }
-inline std::string* Msg_InitFailure::mutable_astatus() {
-  std::string* _s = _internal_mutable_astatus();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.aStatus)
+inline std::string* Msg_InitFailure::mutable_a_astatus() {
+  std::string* _s = _internal_mutable_a_astatus();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
   return _s;
 }
-inline const std::string& Msg_InitFailure::_internal_astatus() const {
-  return _impl_.astatus_.Get();
+inline const std::string& Msg_InitFailure::_internal_a_astatus() const {
+  return _impl_.a_astatus_.Get();
 }
-inline void Msg_InitFailure::_internal_set_astatus(const std::string& value) {
+inline void Msg_InitFailure::_internal_set_a_astatus(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.astatus_.Set(value, GetArenaForAllocation());
+  _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_InitFailure::_internal_mutable_astatus() {
+inline std::string* Msg_InitFailure::_internal_mutable_a_astatus() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.astatus_.Mutable(GetArenaForAllocation());
+  return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_InitFailure::release_astatus() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.aStatus)
-  if (!_internal_has_astatus()) {
+inline std::string* Msg_InitFailure::release_a_astatus() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
+  if (!_internal_has_a_astatus()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.astatus_.Release();
+  auto* p = _impl_.a_astatus_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_InitFailure::set_allocated_astatus(std::string* astatus) {
-  if (astatus != nullptr) {
+inline void Msg_InitFailure::set_allocated_a_astatus(std::string* a_astatus) {
+  if (a_astatus != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.astatus_.SetAllocated(astatus, GetArenaForAllocation());
+  _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.astatus_.IsDefault()) {
-    _impl_.astatus_.Set("", GetArenaForAllocation());
+  if (_impl_.a_astatus_.IsDefault()) {
+    _impl_.a_astatus_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.aStatus)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetPersistFlags
 
-// required uint32 aNewFlags = 1;
-inline bool Msg_SetPersistFlags::_internal_has_anewflags() const {
+// required uint32 a_aNewFlags = 1;
+inline bool Msg_SetPersistFlags::_internal_has_a_anewflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetPersistFlags::has_anewflags() const {
-  return _internal_has_anewflags();
+inline bool Msg_SetPersistFlags::has_a_anewflags() const {
+  return _internal_has_a_anewflags();
 }
-inline void Msg_SetPersistFlags::clear_anewflags() {
-  _impl_.anewflags_ = 0u;
+inline void Msg_SetPersistFlags::clear_a_anewflags() {
+  _impl_.a_anewflags_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetPersistFlags::_internal_anewflags() const {
-  return _impl_.anewflags_;
+inline uint32_t Msg_SetPersistFlags::_internal_a_anewflags() const {
+  return _impl_.a_anewflags_;
 }
-inline uint32_t Msg_SetPersistFlags::anewflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags.aNewFlags)
-  return _internal_anewflags();
+inline uint32_t Msg_SetPersistFlags::a_anewflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags.a_aNewFlags)
+  return _internal_a_anewflags();
 }
-inline void Msg_SetPersistFlags::_internal_set_anewflags(uint32_t value) {
+inline void Msg_SetPersistFlags::_internal_set_a_anewflags(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.anewflags_ = value;
+  _impl_.a_anewflags_ = value;
 }
-inline void Msg_SetPersistFlags::set_anewflags(uint32_t value) {
-  _internal_set_anewflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags.aNewFlags)
+inline void Msg_SetPersistFlags::set_a_anewflags(uint32_t value) {
+  _internal_set_a_anewflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags.a_aNewFlags)
 }
 
 // -------------------------------------------------------------------
@@ -1670,41 +1670,41 @@ inline void Msg_SetPersistFlags::set_anewflags(uint32_t value) {
 
 // Msg_PWebBrowserPersistSerializeConstructor
 
-// required .protobuf.mozilla.WebBrowserPersistURIMap aMap = 1;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_amap() const {
+// required .protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 1;
+inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_amap() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.amap_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_amap_ != nullptr);
   return value;
 }
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_amap() const {
-  return _internal_has_amap();
+inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_amap() const {
+  return _internal_has_a_amap();
 }
-inline const ::protobuf::mozilla::WebBrowserPersistURIMap& Msg_PWebBrowserPersistSerializeConstructor::_internal_amap() const {
-  const ::protobuf::mozilla::WebBrowserPersistURIMap* p = _impl_.amap_;
+inline const ::protobuf::mozilla::WebBrowserPersistURIMap& Msg_PWebBrowserPersistSerializeConstructor::_internal_a_amap() const {
+  const ::protobuf::mozilla::WebBrowserPersistURIMap* p = _impl_.a_amap_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::WebBrowserPersistURIMap&>(
       ::protobuf::mozilla::_WebBrowserPersistURIMap_default_instance_);
 }
-inline const ::protobuf::mozilla::WebBrowserPersistURIMap& Msg_PWebBrowserPersistSerializeConstructor::amap() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aMap)
-  return _internal_amap();
+inline const ::protobuf::mozilla::WebBrowserPersistURIMap& Msg_PWebBrowserPersistSerializeConstructor::a_amap() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
+  return _internal_a_amap();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::unsafe_arena_set_allocated_amap(
-    ::protobuf::mozilla::WebBrowserPersistURIMap* amap) {
+inline void Msg_PWebBrowserPersistSerializeConstructor::unsafe_arena_set_allocated_a_amap(
+    ::protobuf::mozilla::WebBrowserPersistURIMap* a_amap) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.amap_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_amap_);
   }
-  _impl_.amap_ = amap;
-  if (amap) {
+  _impl_.a_amap_ = a_amap;
+  if (a_amap) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aMap)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
 }
-inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::release_amap() {
+inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::release_a_amap() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::WebBrowserPersistURIMap* temp = _impl_.amap_;
-  _impl_.amap_ = nullptr;
+  ::protobuf::mozilla::WebBrowserPersistURIMap* temp = _impl_.a_amap_;
+  _impl_.a_amap_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1716,169 +1716,169 @@ inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSeria
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::unsafe_arena_release_amap() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aMap)
+inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::unsafe_arena_release_a_amap() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::WebBrowserPersistURIMap* temp = _impl_.amap_;
-  _impl_.amap_ = nullptr;
+  ::protobuf::mozilla::WebBrowserPersistURIMap* temp = _impl_.a_amap_;
+  _impl_.a_amap_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::_internal_mutable_amap() {
+inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::_internal_mutable_a_amap() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.amap_ == nullptr) {
+  if (_impl_.a_amap_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::WebBrowserPersistURIMap>(GetArenaForAllocation());
-    _impl_.amap_ = p;
+    _impl_.a_amap_ = p;
   }
-  return _impl_.amap_;
+  return _impl_.a_amap_;
 }
-inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::mutable_amap() {
-  ::protobuf::mozilla::WebBrowserPersistURIMap* _msg = _internal_mutable_amap();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aMap)
+inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::mutable_a_amap() {
+  ::protobuf::mozilla::WebBrowserPersistURIMap* _msg = _internal_mutable_a_amap();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
   return _msg;
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_amap(::protobuf::mozilla::WebBrowserPersistURIMap* amap) {
+inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_amap(::protobuf::mozilla::WebBrowserPersistURIMap* a_amap) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.amap_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_amap_);
   }
-  if (amap) {
+  if (a_amap) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(amap));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_amap));
     if (message_arena != submessage_arena) {
-      amap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, amap, submessage_arena);
+      a_amap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_amap, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.amap_ = amap;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aMap)
+  _impl_.a_amap_ = a_amap;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
 }
 
-// required bytes aRequestedContentType = 2;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_arequestedcontenttype() const {
+// required bytes a_aRequestedContentType = 2;
+inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_arequestedcontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_arequestedcontenttype() const {
-  return _internal_has_arequestedcontenttype();
+inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_arequestedcontenttype() const {
+  return _internal_has_a_arequestedcontenttype();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::clear_arequestedcontenttype() {
-  _impl_.arequestedcontenttype_.ClearToEmpty();
+inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_arequestedcontenttype() {
+  _impl_.a_arequestedcontenttype_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::arequestedcontenttype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aRequestedContentType)
-  return _internal_arequestedcontenttype();
+inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::a_arequestedcontenttype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
+  return _internal_a_arequestedcontenttype();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PWebBrowserPersistSerializeConstructor::set_arequestedcontenttype(ArgT0&& arg0, ArgT... args) {
+void Msg_PWebBrowserPersistSerializeConstructor::set_a_arequestedcontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.arequestedcontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aRequestedContentType)
+ _impl_.a_arequestedcontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
 }
-inline std::string* Msg_PWebBrowserPersistSerializeConstructor::mutable_arequestedcontenttype() {
-  std::string* _s = _internal_mutable_arequestedcontenttype();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aRequestedContentType)
+inline std::string* Msg_PWebBrowserPersistSerializeConstructor::mutable_a_arequestedcontenttype() {
+  std::string* _s = _internal_mutable_a_arequestedcontenttype();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
   return _s;
 }
-inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::_internal_arequestedcontenttype() const {
-  return _impl_.arequestedcontenttype_.Get();
+inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::_internal_a_arequestedcontenttype() const {
+  return _impl_.a_arequestedcontenttype_.Get();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_arequestedcontenttype(const std::string& value) {
+inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_arequestedcontenttype(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.arequestedcontenttype_.Set(value, GetArenaForAllocation());
+  _impl_.a_arequestedcontenttype_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PWebBrowserPersistSerializeConstructor::_internal_mutable_arequestedcontenttype() {
+inline std::string* Msg_PWebBrowserPersistSerializeConstructor::_internal_mutable_a_arequestedcontenttype() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.arequestedcontenttype_.Mutable(GetArenaForAllocation());
+  return _impl_.a_arequestedcontenttype_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PWebBrowserPersistSerializeConstructor::release_arequestedcontenttype() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aRequestedContentType)
-  if (!_internal_has_arequestedcontenttype()) {
+inline std::string* Msg_PWebBrowserPersistSerializeConstructor::release_a_arequestedcontenttype() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
+  if (!_internal_has_a_arequestedcontenttype()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.arequestedcontenttype_.Release();
+  auto* p = _impl_.a_arequestedcontenttype_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arequestedcontenttype_.IsDefault()) {
-    _impl_.arequestedcontenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arequestedcontenttype_.IsDefault()) {
+    _impl_.a_arequestedcontenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_arequestedcontenttype(std::string* arequestedcontenttype) {
-  if (arequestedcontenttype != nullptr) {
+inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_arequestedcontenttype(std::string* a_arequestedcontenttype) {
+  if (a_arequestedcontenttype != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.arequestedcontenttype_.SetAllocated(arequestedcontenttype, GetArenaForAllocation());
+  _impl_.a_arequestedcontenttype_.SetAllocated(a_arequestedcontenttype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.arequestedcontenttype_.IsDefault()) {
-    _impl_.arequestedcontenttype_.Set("", GetArenaForAllocation());
+  if (_impl_.a_arequestedcontenttype_.IsDefault()) {
+    _impl_.a_arequestedcontenttype_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aRequestedContentType)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
 }
 
-// required uint32 aEncoderFlags = 3;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_aencoderflags() const {
+// required uint32 a_aEncoderFlags = 3;
+inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_aencoderflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_aencoderflags() const {
-  return _internal_has_aencoderflags();
+inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_aencoderflags() const {
+  return _internal_has_a_aencoderflags();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::clear_aencoderflags() {
-  _impl_.aencoderflags_ = 0u;
+inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_aencoderflags() {
+  _impl_.a_aencoderflags_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::_internal_aencoderflags() const {
-  return _impl_.aencoderflags_;
+inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::_internal_a_aencoderflags() const {
+  return _impl_.a_aencoderflags_;
 }
-inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::aencoderflags() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aEncoderFlags)
-  return _internal_aencoderflags();
+inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::a_aencoderflags() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aEncoderFlags)
+  return _internal_a_aencoderflags();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_aencoderflags(uint32_t value) {
+inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_aencoderflags(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.aencoderflags_ = value;
+  _impl_.a_aencoderflags_ = value;
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::set_aencoderflags(uint32_t value) {
-  _internal_set_aencoderflags(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aEncoderFlags)
+inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_aencoderflags(uint32_t value) {
+  _internal_set_a_aencoderflags(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aEncoderFlags)
 }
 
-// required uint32 aWrapColumn = 4;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_awrapcolumn() const {
+// required uint32 a_aWrapColumn = 4;
+inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_awrapcolumn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_awrapcolumn() const {
-  return _internal_has_awrapcolumn();
+inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_awrapcolumn() const {
+  return _internal_has_a_awrapcolumn();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::clear_awrapcolumn() {
-  _impl_.awrapcolumn_ = 0u;
+inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_awrapcolumn() {
+  _impl_.a_awrapcolumn_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::_internal_awrapcolumn() const {
-  return _impl_.awrapcolumn_;
+inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::_internal_a_awrapcolumn() const {
+  return _impl_.a_awrapcolumn_;
 }
-inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::awrapcolumn() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aWrapColumn)
-  return _internal_awrapcolumn();
+inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::a_awrapcolumn() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aWrapColumn)
+  return _internal_a_awrapcolumn();
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_awrapcolumn(uint32_t value) {
+inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_awrapcolumn(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.awrapcolumn_ = value;
+  _impl_.a_awrapcolumn_ = value;
 }
-inline void Msg_PWebBrowserPersistSerializeConstructor::set_awrapcolumn(uint32_t value) {
-  _internal_set_awrapcolumn(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.aWrapColumn)
+inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_awrapcolumn(uint32_t value) {
+  _internal_set_a_awrapcolumn(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aWrapColumn)
 }
 
 // -------------------------------------------------------------------

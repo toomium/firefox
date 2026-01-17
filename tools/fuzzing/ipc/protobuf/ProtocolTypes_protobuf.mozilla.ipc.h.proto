@@ -12,6 +12,6 @@ package protobuf.mozilla.ipc;
 
 // Structs and unions declarations
 message ProtocolFdMapping {
-  required uint32 protocolId = 1;
-  required bytes fd = 2;
+  required uint32 a_protocolId = 1;
+  required bytes a_fd = 2;
 }

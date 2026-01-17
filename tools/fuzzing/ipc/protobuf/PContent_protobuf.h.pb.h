@@ -114,9 +114,9 @@ class ChromeRegistryItem final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVChromePackage = 1,
-    kMVOverrideMapping = 2,
-    kMVSubstitutionMapping = 3,
+    kAMVChromePackage = 1,
+    kAMVOverrideMapping = 2,
+    kAMVSubstitutionMapping = 3,
     CONTENT_NOT_SET = 0,
   };
 
@@ -189,62 +189,62 @@ class ChromeRegistryItem final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVChromePackageFieldNumber = 1,
-    kMVOverrideMappingFieldNumber = 2,
-    kMVSubstitutionMappingFieldNumber = 3,
+    kAMVChromePackageFieldNumber = 1,
+    kAMVOverrideMappingFieldNumber = 2,
+    kAMVSubstitutionMappingFieldNumber = 3,
   };
-  // bytes mVChromePackage = 1;
-  bool has_mvchromepackage() const;
+  // bytes a_mVChromePackage = 1;
+  bool has_a_mvchromepackage() const;
   private:
-  bool _internal_has_mvchromepackage() const;
+  bool _internal_has_a_mvchromepackage() const;
   public:
-  void clear_mvchromepackage();
-  const std::string& mvchromepackage() const;
+  void clear_a_mvchromepackage();
+  const std::string& a_mvchromepackage() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvchromepackage(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvchromepackage();
-  PROTOBUF_NODISCARD std::string* release_mvchromepackage();
-  void set_allocated_mvchromepackage(std::string* mvchromepackage);
+  void set_a_mvchromepackage(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvchromepackage();
+  PROTOBUF_NODISCARD std::string* release_a_mvchromepackage();
+  void set_allocated_a_mvchromepackage(std::string* a_mvchromepackage);
   private:
-  const std::string& _internal_mvchromepackage() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvchromepackage(const std::string& value);
-  std::string* _internal_mutable_mvchromepackage();
+  const std::string& _internal_a_mvchromepackage() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvchromepackage(const std::string& value);
+  std::string* _internal_mutable_a_mvchromepackage();
   public:
 
-  // bytes mVOverrideMapping = 2;
-  bool has_mvoverridemapping() const;
+  // bytes a_mVOverrideMapping = 2;
+  bool has_a_mvoverridemapping() const;
   private:
-  bool _internal_has_mvoverridemapping() const;
+  bool _internal_has_a_mvoverridemapping() const;
   public:
-  void clear_mvoverridemapping();
-  const std::string& mvoverridemapping() const;
+  void clear_a_mvoverridemapping();
+  const std::string& a_mvoverridemapping() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvoverridemapping(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvoverridemapping();
-  PROTOBUF_NODISCARD std::string* release_mvoverridemapping();
-  void set_allocated_mvoverridemapping(std::string* mvoverridemapping);
+  void set_a_mvoverridemapping(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvoverridemapping();
+  PROTOBUF_NODISCARD std::string* release_a_mvoverridemapping();
+  void set_allocated_a_mvoverridemapping(std::string* a_mvoverridemapping);
   private:
-  const std::string& _internal_mvoverridemapping() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvoverridemapping(const std::string& value);
-  std::string* _internal_mutable_mvoverridemapping();
+  const std::string& _internal_a_mvoverridemapping() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvoverridemapping(const std::string& value);
+  std::string* _internal_mutable_a_mvoverridemapping();
   public:
 
-  // bytes mVSubstitutionMapping = 3;
-  bool has_mvsubstitutionmapping() const;
+  // bytes a_mVSubstitutionMapping = 3;
+  bool has_a_mvsubstitutionmapping() const;
   private:
-  bool _internal_has_mvsubstitutionmapping() const;
+  bool _internal_has_a_mvsubstitutionmapping() const;
   public:
-  void clear_mvsubstitutionmapping();
-  const std::string& mvsubstitutionmapping() const;
+  void clear_a_mvsubstitutionmapping();
+  const std::string& a_mvsubstitutionmapping() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvsubstitutionmapping(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvsubstitutionmapping();
-  PROTOBUF_NODISCARD std::string* release_mvsubstitutionmapping();
-  void set_allocated_mvsubstitutionmapping(std::string* mvsubstitutionmapping);
+  void set_a_mvsubstitutionmapping(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvsubstitutionmapping();
+  PROTOBUF_NODISCARD std::string* release_a_mvsubstitutionmapping();
+  void set_allocated_a_mvsubstitutionmapping(std::string* a_mvsubstitutionmapping);
   private:
-  const std::string& _internal_mvsubstitutionmapping() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvsubstitutionmapping(const std::string& value);
-  std::string* _internal_mutable_mvsubstitutionmapping();
+  const std::string& _internal_a_mvsubstitutionmapping() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvsubstitutionmapping(const std::string& value);
+  std::string* _internal_mutable_a_mvsubstitutionmapping();
   public:
 
   void clear_content();
@@ -252,9 +252,9 @@ class ChromeRegistryItem final :
   // @@protoc_insertion_point(class_scope:protobuf.ChromeRegistryItem)
  private:
   class _Internal;
-  void set_has_mvchromepackage();
-  void set_has_mvoverridemapping();
-  void set_has_mvsubstitutionmapping();
+  void set_has_a_mvchromepackage();
+  void set_has_a_mvoverridemapping();
+  void set_has_a_mvsubstitutionmapping();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -266,9 +266,9 @@ class ChromeRegistryItem final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvchromepackage_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvoverridemapping_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvsubstitutionmapping_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvchromepackage_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvoverridemapping_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvsubstitutionmapping_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -288,235 +288,235 @@ class ChromeRegistryItem final :
 #endif  // __GNUC__
 // ChromeRegistryItem
 
-// bytes mVChromePackage = 1;
-inline bool ChromeRegistryItem::_internal_has_mvchromepackage() const {
-  return content_case() == kMVChromePackage;
+// bytes a_mVChromePackage = 1;
+inline bool ChromeRegistryItem::_internal_has_a_mvchromepackage() const {
+  return content_case() == kAMVChromePackage;
 }
-inline bool ChromeRegistryItem::has_mvchromepackage() const {
-  return _internal_has_mvchromepackage();
+inline bool ChromeRegistryItem::has_a_mvchromepackage() const {
+  return _internal_has_a_mvchromepackage();
 }
-inline void ChromeRegistryItem::set_has_mvchromepackage() {
-  _impl_._oneof_case_[0] = kMVChromePackage;
+inline void ChromeRegistryItem::set_has_a_mvchromepackage() {
+  _impl_._oneof_case_[0] = kAMVChromePackage;
 }
-inline void ChromeRegistryItem::clear_mvchromepackage() {
-  if (_internal_has_mvchromepackage()) {
-    _impl_.content_.mvchromepackage_.Destroy();
+inline void ChromeRegistryItem::clear_a_mvchromepackage() {
+  if (_internal_has_a_mvchromepackage()) {
+    _impl_.content_.a_mvchromepackage_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ChromeRegistryItem::mvchromepackage() const {
-  // @@protoc_insertion_point(field_get:protobuf.ChromeRegistryItem.mVChromePackage)
-  return _internal_mvchromepackage();
+inline const std::string& ChromeRegistryItem::a_mvchromepackage() const {
+  // @@protoc_insertion_point(field_get:protobuf.ChromeRegistryItem.a_mVChromePackage)
+  return _internal_a_mvchromepackage();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ChromeRegistryItem::set_mvchromepackage(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvchromepackage()) {
+inline void ChromeRegistryItem::set_a_mvchromepackage(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvchromepackage()) {
     clear_content();
-    set_has_mvchromepackage();
-    _impl_.content_.mvchromepackage_.InitDefault();
+    set_has_a_mvchromepackage();
+    _impl_.content_.a_mvchromepackage_.InitDefault();
   }
-  _impl_.content_.mvchromepackage_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.ChromeRegistryItem.mVChromePackage)
+  _impl_.content_.a_mvchromepackage_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.ChromeRegistryItem.a_mVChromePackage)
 }
-inline std::string* ChromeRegistryItem::mutable_mvchromepackage() {
-  std::string* _s = _internal_mutable_mvchromepackage();
-  // @@protoc_insertion_point(field_mutable:protobuf.ChromeRegistryItem.mVChromePackage)
+inline std::string* ChromeRegistryItem::mutable_a_mvchromepackage() {
+  std::string* _s = _internal_mutable_a_mvchromepackage();
+  // @@protoc_insertion_point(field_mutable:protobuf.ChromeRegistryItem.a_mVChromePackage)
   return _s;
 }
-inline const std::string& ChromeRegistryItem::_internal_mvchromepackage() const {
-  if (_internal_has_mvchromepackage()) {
-    return _impl_.content_.mvchromepackage_.Get();
+inline const std::string& ChromeRegistryItem::_internal_a_mvchromepackage() const {
+  if (_internal_has_a_mvchromepackage()) {
+    return _impl_.content_.a_mvchromepackage_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ChromeRegistryItem::_internal_set_mvchromepackage(const std::string& value) {
-  if (!_internal_has_mvchromepackage()) {
+inline void ChromeRegistryItem::_internal_set_a_mvchromepackage(const std::string& value) {
+  if (!_internal_has_a_mvchromepackage()) {
     clear_content();
-    set_has_mvchromepackage();
-    _impl_.content_.mvchromepackage_.InitDefault();
+    set_has_a_mvchromepackage();
+    _impl_.content_.a_mvchromepackage_.InitDefault();
   }
-  _impl_.content_.mvchromepackage_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvchromepackage_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ChromeRegistryItem::_internal_mutable_mvchromepackage() {
-  if (!_internal_has_mvchromepackage()) {
+inline std::string* ChromeRegistryItem::_internal_mutable_a_mvchromepackage() {
+  if (!_internal_has_a_mvchromepackage()) {
     clear_content();
-    set_has_mvchromepackage();
-    _impl_.content_.mvchromepackage_.InitDefault();
+    set_has_a_mvchromepackage();
+    _impl_.content_.a_mvchromepackage_.InitDefault();
   }
-  return _impl_.content_.mvchromepackage_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvchromepackage_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ChromeRegistryItem::release_mvchromepackage() {
-  // @@protoc_insertion_point(field_release:protobuf.ChromeRegistryItem.mVChromePackage)
-  if (_internal_has_mvchromepackage()) {
+inline std::string* ChromeRegistryItem::release_a_mvchromepackage() {
+  // @@protoc_insertion_point(field_release:protobuf.ChromeRegistryItem.a_mVChromePackage)
+  if (_internal_has_a_mvchromepackage()) {
     clear_has_content();
-    return _impl_.content_.mvchromepackage_.Release();
+    return _impl_.content_.a_mvchromepackage_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ChromeRegistryItem::set_allocated_mvchromepackage(std::string* mvchromepackage) {
+inline void ChromeRegistryItem::set_allocated_a_mvchromepackage(std::string* a_mvchromepackage) {
   if (has_content()) {
     clear_content();
   }
-  if (mvchromepackage != nullptr) {
-    set_has_mvchromepackage();
-    _impl_.content_.mvchromepackage_.InitAllocated(mvchromepackage, GetArenaForAllocation());
+  if (a_mvchromepackage != nullptr) {
+    set_has_a_mvchromepackage();
+    _impl_.content_.a_mvchromepackage_.InitAllocated(a_mvchromepackage, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.ChromeRegistryItem.mVChromePackage)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.ChromeRegistryItem.a_mVChromePackage)
 }
 
-// bytes mVOverrideMapping = 2;
-inline bool ChromeRegistryItem::_internal_has_mvoverridemapping() const {
-  return content_case() == kMVOverrideMapping;
+// bytes a_mVOverrideMapping = 2;
+inline bool ChromeRegistryItem::_internal_has_a_mvoverridemapping() const {
+  return content_case() == kAMVOverrideMapping;
 }
-inline bool ChromeRegistryItem::has_mvoverridemapping() const {
-  return _internal_has_mvoverridemapping();
+inline bool ChromeRegistryItem::has_a_mvoverridemapping() const {
+  return _internal_has_a_mvoverridemapping();
 }
-inline void ChromeRegistryItem::set_has_mvoverridemapping() {
-  _impl_._oneof_case_[0] = kMVOverrideMapping;
+inline void ChromeRegistryItem::set_has_a_mvoverridemapping() {
+  _impl_._oneof_case_[0] = kAMVOverrideMapping;
 }
-inline void ChromeRegistryItem::clear_mvoverridemapping() {
-  if (_internal_has_mvoverridemapping()) {
-    _impl_.content_.mvoverridemapping_.Destroy();
+inline void ChromeRegistryItem::clear_a_mvoverridemapping() {
+  if (_internal_has_a_mvoverridemapping()) {
+    _impl_.content_.a_mvoverridemapping_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ChromeRegistryItem::mvoverridemapping() const {
-  // @@protoc_insertion_point(field_get:protobuf.ChromeRegistryItem.mVOverrideMapping)
-  return _internal_mvoverridemapping();
+inline const std::string& ChromeRegistryItem::a_mvoverridemapping() const {
+  // @@protoc_insertion_point(field_get:protobuf.ChromeRegistryItem.a_mVOverrideMapping)
+  return _internal_a_mvoverridemapping();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ChromeRegistryItem::set_mvoverridemapping(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvoverridemapping()) {
+inline void ChromeRegistryItem::set_a_mvoverridemapping(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvoverridemapping()) {
     clear_content();
-    set_has_mvoverridemapping();
-    _impl_.content_.mvoverridemapping_.InitDefault();
+    set_has_a_mvoverridemapping();
+    _impl_.content_.a_mvoverridemapping_.InitDefault();
   }
-  _impl_.content_.mvoverridemapping_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.ChromeRegistryItem.mVOverrideMapping)
+  _impl_.content_.a_mvoverridemapping_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.ChromeRegistryItem.a_mVOverrideMapping)
 }
-inline std::string* ChromeRegistryItem::mutable_mvoverridemapping() {
-  std::string* _s = _internal_mutable_mvoverridemapping();
-  // @@protoc_insertion_point(field_mutable:protobuf.ChromeRegistryItem.mVOverrideMapping)
+inline std::string* ChromeRegistryItem::mutable_a_mvoverridemapping() {
+  std::string* _s = _internal_mutable_a_mvoverridemapping();
+  // @@protoc_insertion_point(field_mutable:protobuf.ChromeRegistryItem.a_mVOverrideMapping)
   return _s;
 }
-inline const std::string& ChromeRegistryItem::_internal_mvoverridemapping() const {
-  if (_internal_has_mvoverridemapping()) {
-    return _impl_.content_.mvoverridemapping_.Get();
+inline const std::string& ChromeRegistryItem::_internal_a_mvoverridemapping() const {
+  if (_internal_has_a_mvoverridemapping()) {
+    return _impl_.content_.a_mvoverridemapping_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ChromeRegistryItem::_internal_set_mvoverridemapping(const std::string& value) {
-  if (!_internal_has_mvoverridemapping()) {
+inline void ChromeRegistryItem::_internal_set_a_mvoverridemapping(const std::string& value) {
+  if (!_internal_has_a_mvoverridemapping()) {
     clear_content();
-    set_has_mvoverridemapping();
-    _impl_.content_.mvoverridemapping_.InitDefault();
+    set_has_a_mvoverridemapping();
+    _impl_.content_.a_mvoverridemapping_.InitDefault();
   }
-  _impl_.content_.mvoverridemapping_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvoverridemapping_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ChromeRegistryItem::_internal_mutable_mvoverridemapping() {
-  if (!_internal_has_mvoverridemapping()) {
+inline std::string* ChromeRegistryItem::_internal_mutable_a_mvoverridemapping() {
+  if (!_internal_has_a_mvoverridemapping()) {
     clear_content();
-    set_has_mvoverridemapping();
-    _impl_.content_.mvoverridemapping_.InitDefault();
+    set_has_a_mvoverridemapping();
+    _impl_.content_.a_mvoverridemapping_.InitDefault();
   }
-  return _impl_.content_.mvoverridemapping_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvoverridemapping_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ChromeRegistryItem::release_mvoverridemapping() {
-  // @@protoc_insertion_point(field_release:protobuf.ChromeRegistryItem.mVOverrideMapping)
-  if (_internal_has_mvoverridemapping()) {
+inline std::string* ChromeRegistryItem::release_a_mvoverridemapping() {
+  // @@protoc_insertion_point(field_release:protobuf.ChromeRegistryItem.a_mVOverrideMapping)
+  if (_internal_has_a_mvoverridemapping()) {
     clear_has_content();
-    return _impl_.content_.mvoverridemapping_.Release();
+    return _impl_.content_.a_mvoverridemapping_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ChromeRegistryItem::set_allocated_mvoverridemapping(std::string* mvoverridemapping) {
+inline void ChromeRegistryItem::set_allocated_a_mvoverridemapping(std::string* a_mvoverridemapping) {
   if (has_content()) {
     clear_content();
   }
-  if (mvoverridemapping != nullptr) {
-    set_has_mvoverridemapping();
-    _impl_.content_.mvoverridemapping_.InitAllocated(mvoverridemapping, GetArenaForAllocation());
+  if (a_mvoverridemapping != nullptr) {
+    set_has_a_mvoverridemapping();
+    _impl_.content_.a_mvoverridemapping_.InitAllocated(a_mvoverridemapping, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.ChromeRegistryItem.mVOverrideMapping)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.ChromeRegistryItem.a_mVOverrideMapping)
 }
 
-// bytes mVSubstitutionMapping = 3;
-inline bool ChromeRegistryItem::_internal_has_mvsubstitutionmapping() const {
-  return content_case() == kMVSubstitutionMapping;
+// bytes a_mVSubstitutionMapping = 3;
+inline bool ChromeRegistryItem::_internal_has_a_mvsubstitutionmapping() const {
+  return content_case() == kAMVSubstitutionMapping;
 }
-inline bool ChromeRegistryItem::has_mvsubstitutionmapping() const {
-  return _internal_has_mvsubstitutionmapping();
+inline bool ChromeRegistryItem::has_a_mvsubstitutionmapping() const {
+  return _internal_has_a_mvsubstitutionmapping();
 }
-inline void ChromeRegistryItem::set_has_mvsubstitutionmapping() {
-  _impl_._oneof_case_[0] = kMVSubstitutionMapping;
+inline void ChromeRegistryItem::set_has_a_mvsubstitutionmapping() {
+  _impl_._oneof_case_[0] = kAMVSubstitutionMapping;
 }
-inline void ChromeRegistryItem::clear_mvsubstitutionmapping() {
-  if (_internal_has_mvsubstitutionmapping()) {
-    _impl_.content_.mvsubstitutionmapping_.Destroy();
+inline void ChromeRegistryItem::clear_a_mvsubstitutionmapping() {
+  if (_internal_has_a_mvsubstitutionmapping()) {
+    _impl_.content_.a_mvsubstitutionmapping_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& ChromeRegistryItem::mvsubstitutionmapping() const {
-  // @@protoc_insertion_point(field_get:protobuf.ChromeRegistryItem.mVSubstitutionMapping)
-  return _internal_mvsubstitutionmapping();
+inline const std::string& ChromeRegistryItem::a_mvsubstitutionmapping() const {
+  // @@protoc_insertion_point(field_get:protobuf.ChromeRegistryItem.a_mVSubstitutionMapping)
+  return _internal_a_mvsubstitutionmapping();
 }
 template <typename ArgT0, typename... ArgT>
-inline void ChromeRegistryItem::set_mvsubstitutionmapping(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvsubstitutionmapping()) {
+inline void ChromeRegistryItem::set_a_mvsubstitutionmapping(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvsubstitutionmapping()) {
     clear_content();
-    set_has_mvsubstitutionmapping();
-    _impl_.content_.mvsubstitutionmapping_.InitDefault();
+    set_has_a_mvsubstitutionmapping();
+    _impl_.content_.a_mvsubstitutionmapping_.InitDefault();
   }
-  _impl_.content_.mvsubstitutionmapping_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.ChromeRegistryItem.mVSubstitutionMapping)
+  _impl_.content_.a_mvsubstitutionmapping_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.ChromeRegistryItem.a_mVSubstitutionMapping)
 }
-inline std::string* ChromeRegistryItem::mutable_mvsubstitutionmapping() {
-  std::string* _s = _internal_mutable_mvsubstitutionmapping();
-  // @@protoc_insertion_point(field_mutable:protobuf.ChromeRegistryItem.mVSubstitutionMapping)
+inline std::string* ChromeRegistryItem::mutable_a_mvsubstitutionmapping() {
+  std::string* _s = _internal_mutable_a_mvsubstitutionmapping();
+  // @@protoc_insertion_point(field_mutable:protobuf.ChromeRegistryItem.a_mVSubstitutionMapping)
   return _s;
 }
-inline const std::string& ChromeRegistryItem::_internal_mvsubstitutionmapping() const {
-  if (_internal_has_mvsubstitutionmapping()) {
-    return _impl_.content_.mvsubstitutionmapping_.Get();
+inline const std::string& ChromeRegistryItem::_internal_a_mvsubstitutionmapping() const {
+  if (_internal_has_a_mvsubstitutionmapping()) {
+    return _impl_.content_.a_mvsubstitutionmapping_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void ChromeRegistryItem::_internal_set_mvsubstitutionmapping(const std::string& value) {
-  if (!_internal_has_mvsubstitutionmapping()) {
+inline void ChromeRegistryItem::_internal_set_a_mvsubstitutionmapping(const std::string& value) {
+  if (!_internal_has_a_mvsubstitutionmapping()) {
     clear_content();
-    set_has_mvsubstitutionmapping();
-    _impl_.content_.mvsubstitutionmapping_.InitDefault();
+    set_has_a_mvsubstitutionmapping();
+    _impl_.content_.a_mvsubstitutionmapping_.InitDefault();
   }
-  _impl_.content_.mvsubstitutionmapping_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvsubstitutionmapping_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ChromeRegistryItem::_internal_mutable_mvsubstitutionmapping() {
-  if (!_internal_has_mvsubstitutionmapping()) {
+inline std::string* ChromeRegistryItem::_internal_mutable_a_mvsubstitutionmapping() {
+  if (!_internal_has_a_mvsubstitutionmapping()) {
     clear_content();
-    set_has_mvsubstitutionmapping();
-    _impl_.content_.mvsubstitutionmapping_.InitDefault();
+    set_has_a_mvsubstitutionmapping();
+    _impl_.content_.a_mvsubstitutionmapping_.InitDefault();
   }
-  return _impl_.content_.mvsubstitutionmapping_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvsubstitutionmapping_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* ChromeRegistryItem::release_mvsubstitutionmapping() {
-  // @@protoc_insertion_point(field_release:protobuf.ChromeRegistryItem.mVSubstitutionMapping)
-  if (_internal_has_mvsubstitutionmapping()) {
+inline std::string* ChromeRegistryItem::release_a_mvsubstitutionmapping() {
+  // @@protoc_insertion_point(field_release:protobuf.ChromeRegistryItem.a_mVSubstitutionMapping)
+  if (_internal_has_a_mvsubstitutionmapping()) {
     clear_has_content();
-    return _impl_.content_.mvsubstitutionmapping_.Release();
+    return _impl_.content_.a_mvsubstitutionmapping_.Release();
   } else {
     return nullptr;
   }
 }
-inline void ChromeRegistryItem::set_allocated_mvsubstitutionmapping(std::string* mvsubstitutionmapping) {
+inline void ChromeRegistryItem::set_allocated_a_mvsubstitutionmapping(std::string* a_mvsubstitutionmapping) {
   if (has_content()) {
     clear_content();
   }
-  if (mvsubstitutionmapping != nullptr) {
-    set_has_mvsubstitutionmapping();
-    _impl_.content_.mvsubstitutionmapping_.InitAllocated(mvsubstitutionmapping, GetArenaForAllocation());
+  if (a_mvsubstitutionmapping != nullptr) {
+    set_has_a_mvsubstitutionmapping();
+    _impl_.content_.a_mvsubstitutionmapping_.InitAllocated(a_mvsubstitutionmapping, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.ChromeRegistryItem.mVSubstitutionMapping)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.ChromeRegistryItem.a_mVSubstitutionMapping)
 }
 
 inline bool ChromeRegistryItem::has_content() const {

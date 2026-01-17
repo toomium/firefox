@@ -183,38 +183,38 @@ class Msg_Resolve final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAModeFieldNumber = 1,
-    kAIsAvailableFieldNumber = 2,
+    kAAModeFieldNumber = 1,
+    kAAIsAvailableFieldNumber = 2,
   };
-  // required bytes aMode = 1;
-  bool has_amode() const;
+  // required bytes a_aMode = 1;
+  bool has_a_amode() const;
   private:
-  bool _internal_has_amode() const;
+  bool _internal_has_a_amode() const;
   public:
-  void clear_amode();
-  const std::string& amode() const;
+  void clear_a_amode();
+  const std::string& a_amode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_amode(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_amode();
-  PROTOBUF_NODISCARD std::string* release_amode();
-  void set_allocated_amode(std::string* amode);
+  void set_a_amode(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_amode();
+  PROTOBUF_NODISCARD std::string* release_a_amode();
+  void set_allocated_a_amode(std::string* a_amode);
   private:
-  const std::string& _internal_amode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_amode(const std::string& value);
-  std::string* _internal_mutable_amode();
+  const std::string& _internal_a_amode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_amode(const std::string& value);
+  std::string* _internal_mutable_a_amode();
   public:
 
-  // required bool aIsAvailable = 2;
-  bool has_aisavailable() const;
+  // required bool a_aIsAvailable = 2;
+  bool has_a_aisavailable() const;
   private:
-  bool _internal_has_aisavailable() const;
+  bool _internal_has_a_aisavailable() const;
   public:
-  void clear_aisavailable();
-  bool aisavailable() const;
-  void set_aisavailable(bool value);
+  void clear_a_aisavailable();
+  bool a_aisavailable() const;
+  void set_a_aisavailable(bool value);
   private:
-  bool _internal_aisavailable() const;
-  void _internal_set_aisavailable(bool value);
+  bool _internal_a_aisavailable() const;
+  void _internal_set_a_aisavailable(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve)
@@ -230,8 +230,8 @@ class Msg_Resolve final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr amode_;
-    bool aisavailable_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amode_;
+    bool a_aisavailable_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockRequest_2eproto;
@@ -348,19 +348,19 @@ class Msg___delete__ final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAbortedFieldNumber = 1,
+    kAAAbortedFieldNumber = 1,
   };
-  // required bool aAborted = 1;
-  bool has_aaborted() const;
+  // required bool a_aAborted = 1;
+  bool has_a_aaborted() const;
   private:
-  bool _internal_has_aaborted() const;
+  bool _internal_has_a_aaborted() const;
   public:
-  void clear_aaborted();
-  bool aaborted() const;
-  void set_aaborted(bool value);
+  void clear_a_aaborted();
+  bool a_aaborted() const;
+  void set_a_aaborted(bool value);
   private:
-  bool _internal_aaborted() const;
-  void _internal_set_aaborted(bool value);
+  bool _internal_a_aaborted() const;
+  void _internal_set_a_aaborted(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__)
@@ -373,7 +373,7 @@ class Msg___delete__ final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aaborted_;
+    bool a_aaborted_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockRequest_2eproto;
@@ -513,132 +513,132 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Resolve
 
-// required bytes aMode = 1;
-inline bool Msg_Resolve::_internal_has_amode() const {
+// required bytes a_aMode = 1;
+inline bool Msg_Resolve::_internal_has_a_amode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Resolve::has_amode() const {
-  return _internal_has_amode();
+inline bool Msg_Resolve::has_a_amode() const {
+  return _internal_has_a_amode();
 }
-inline void Msg_Resolve::clear_amode() {
-  _impl_.amode_.ClearToEmpty();
+inline void Msg_Resolve::clear_a_amode() {
+  _impl_.a_amode_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Resolve::amode() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aMode)
-  return _internal_amode();
+inline const std::string& Msg_Resolve::a_amode() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aMode)
+  return _internal_a_amode();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Resolve::set_amode(ArgT0&& arg0, ArgT... args) {
+void Msg_Resolve::set_a_amode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.amode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aMode)
+ _impl_.a_amode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aMode)
 }
-inline std::string* Msg_Resolve::mutable_amode() {
-  std::string* _s = _internal_mutable_amode();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aMode)
+inline std::string* Msg_Resolve::mutable_a_amode() {
+  std::string* _s = _internal_mutable_a_amode();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aMode)
   return _s;
 }
-inline const std::string& Msg_Resolve::_internal_amode() const {
-  return _impl_.amode_.Get();
+inline const std::string& Msg_Resolve::_internal_a_amode() const {
+  return _impl_.a_amode_.Get();
 }
-inline void Msg_Resolve::_internal_set_amode(const std::string& value) {
+inline void Msg_Resolve::_internal_set_a_amode(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.amode_.Set(value, GetArenaForAllocation());
+  _impl_.a_amode_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Resolve::_internal_mutable_amode() {
+inline std::string* Msg_Resolve::_internal_mutable_a_amode() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.amode_.Mutable(GetArenaForAllocation());
+  return _impl_.a_amode_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Resolve::release_amode() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aMode)
-  if (!_internal_has_amode()) {
+inline std::string* Msg_Resolve::release_a_amode() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aMode)
+  if (!_internal_has_a_amode()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.amode_.Release();
+  auto* p = _impl_.a_amode_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amode_.IsDefault()) {
-    _impl_.amode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amode_.IsDefault()) {
+    _impl_.a_amode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Resolve::set_allocated_amode(std::string* amode) {
-  if (amode != nullptr) {
+inline void Msg_Resolve::set_allocated_a_amode(std::string* a_amode) {
+  if (a_amode != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.amode_.SetAllocated(amode, GetArenaForAllocation());
+  _impl_.a_amode_.SetAllocated(a_amode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.amode_.IsDefault()) {
-    _impl_.amode_.Set("", GetArenaForAllocation());
+  if (_impl_.a_amode_.IsDefault()) {
+    _impl_.a_amode_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aMode)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aMode)
 }
 
-// required bool aIsAvailable = 2;
-inline bool Msg_Resolve::_internal_has_aisavailable() const {
+// required bool a_aIsAvailable = 2;
+inline bool Msg_Resolve::_internal_has_a_aisavailable() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_Resolve::has_aisavailable() const {
-  return _internal_has_aisavailable();
+inline bool Msg_Resolve::has_a_aisavailable() const {
+  return _internal_has_a_aisavailable();
 }
-inline void Msg_Resolve::clear_aisavailable() {
-  _impl_.aisavailable_ = false;
+inline void Msg_Resolve::clear_a_aisavailable() {
+  _impl_.a_aisavailable_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_Resolve::_internal_aisavailable() const {
-  return _impl_.aisavailable_;
+inline bool Msg_Resolve::_internal_a_aisavailable() const {
+  return _impl_.a_aisavailable_;
 }
-inline bool Msg_Resolve::aisavailable() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aIsAvailable)
-  return _internal_aisavailable();
+inline bool Msg_Resolve::a_aisavailable() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aIsAvailable)
+  return _internal_a_aisavailable();
 }
-inline void Msg_Resolve::_internal_set_aisavailable(bool value) {
+inline void Msg_Resolve::_internal_set_a_aisavailable(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aisavailable_ = value;
+  _impl_.a_aisavailable_ = value;
 }
-inline void Msg_Resolve::set_aisavailable(bool value) {
-  _internal_set_aisavailable(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.aIsAvailable)
+inline void Msg_Resolve::set_a_aisavailable(bool value) {
+  _internal_set_a_aisavailable(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockRequest.Msg_Resolve.a_aIsAvailable)
 }
 
 // -------------------------------------------------------------------
 
 // Msg___delete__
 
-// required bool aAborted = 1;
-inline bool Msg___delete__::_internal_has_aaborted() const {
+// required bool a_aAborted = 1;
+inline bool Msg___delete__::_internal_has_a_aaborted() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg___delete__::has_aaborted() const {
-  return _internal_has_aaborted();
+inline bool Msg___delete__::has_a_aaborted() const {
+  return _internal_has_a_aaborted();
 }
-inline void Msg___delete__::clear_aaborted() {
-  _impl_.aaborted_ = false;
+inline void Msg___delete__::clear_a_aaborted() {
+  _impl_.a_aaborted_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg___delete__::_internal_aaborted() const {
-  return _impl_.aaborted_;
+inline bool Msg___delete__::_internal_a_aaborted() const {
+  return _impl_.a_aaborted_;
 }
-inline bool Msg___delete__::aaborted() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__.aAborted)
-  return _internal_aaborted();
+inline bool Msg___delete__::a_aaborted() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__.a_aAborted)
+  return _internal_a_aaborted();
 }
-inline void Msg___delete__::_internal_set_aaborted(bool value) {
+inline void Msg___delete__::_internal_set_a_aaborted(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aaborted_ = value;
+  _impl_.a_aaborted_ = value;
 }
-inline void Msg___delete__::set_aaborted(bool value) {
-  _internal_set_aaborted(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__.aAborted)
+inline void Msg___delete__::set_a_aaborted(bool value) {
+  _internal_set_a_aaborted(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockRequest.Msg___delete__.a_aAborted)
 }
 
 // -------------------------------------------------------------------

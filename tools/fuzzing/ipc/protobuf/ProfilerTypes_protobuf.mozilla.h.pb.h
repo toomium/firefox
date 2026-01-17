@@ -182,114 +182,114 @@ class ProfilerInitParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFiltersFieldNumber = 7,
-    kEnabledFieldNumber = 1,
-    kEntriesFieldNumber = 2,
-    kDurationFieldNumber = 3,
-    kIntervalFieldNumber = 4,
-    kActiveTabIDFieldNumber = 6,
-    kFeaturesFieldNumber = 5,
+    kAFiltersFieldNumber = 7,
+    kAEnabledFieldNumber = 1,
+    kAEntriesFieldNumber = 2,
+    kADurationFieldNumber = 3,
+    kAIntervalFieldNumber = 4,
+    kAActiveTabIDFieldNumber = 6,
+    kAFeaturesFieldNumber = 5,
   };
-  // repeated bytes filters = 7;
-  int filters_size() const;
+  // repeated bytes a_filters = 7;
+  int a_filters_size() const;
   private:
-  int _internal_filters_size() const;
+  int _internal_a_filters_size() const;
   public:
-  void clear_filters();
-  const std::string& filters(int index) const;
-  std::string* mutable_filters(int index);
-  void set_filters(int index, const std::string& value);
-  void set_filters(int index, std::string&& value);
-  void set_filters(int index, const char* value);
-  void set_filters(int index, const void* value, size_t size);
-  std::string* add_filters();
-  void add_filters(const std::string& value);
-  void add_filters(std::string&& value);
-  void add_filters(const char* value);
-  void add_filters(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& filters() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_filters();
+  void clear_a_filters();
+  const std::string& a_filters(int index) const;
+  std::string* mutable_a_filters(int index);
+  void set_a_filters(int index, const std::string& value);
+  void set_a_filters(int index, std::string&& value);
+  void set_a_filters(int index, const char* value);
+  void set_a_filters(int index, const void* value, size_t size);
+  std::string* add_a_filters();
+  void add_a_filters(const std::string& value);
+  void add_a_filters(std::string&& value);
+  void add_a_filters(const char* value);
+  void add_a_filters(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_filters() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_filters();
   private:
-  const std::string& _internal_filters(int index) const;
-  std::string* _internal_add_filters();
-  public:
-
-  // required bool enabled = 1;
-  bool has_enabled() const;
-  private:
-  bool _internal_has_enabled() const;
-  public:
-  void clear_enabled();
-  bool enabled() const;
-  void set_enabled(bool value);
-  private:
-  bool _internal_enabled() const;
-  void _internal_set_enabled(bool value);
+  const std::string& _internal_a_filters(int index) const;
+  std::string* _internal_add_a_filters();
   public:
 
-  // required uint32 entries = 2;
-  bool has_entries() const;
+  // required bool a_enabled = 1;
+  bool has_a_enabled() const;
   private:
-  bool _internal_has_entries() const;
+  bool _internal_has_a_enabled() const;
   public:
-  void clear_entries();
-  uint32_t entries() const;
-  void set_entries(uint32_t value);
+  void clear_a_enabled();
+  bool a_enabled() const;
+  void set_a_enabled(bool value);
   private:
-  uint32_t _internal_entries() const;
-  void _internal_set_entries(uint32_t value);
-  public:
-
-  // optional double duration = 3;
-  bool has_duration() const;
-  private:
-  bool _internal_has_duration() const;
-  public:
-  void clear_duration();
-  double duration() const;
-  void set_duration(double value);
-  private:
-  double _internal_duration() const;
-  void _internal_set_duration(double value);
+  bool _internal_a_enabled() const;
+  void _internal_set_a_enabled(bool value);
   public:
 
-  // required double interval = 4;
-  bool has_interval() const;
+  // required uint32 a_entries = 2;
+  bool has_a_entries() const;
   private:
-  bool _internal_has_interval() const;
+  bool _internal_has_a_entries() const;
   public:
-  void clear_interval();
-  double interval() const;
-  void set_interval(double value);
+  void clear_a_entries();
+  uint32_t a_entries() const;
+  void set_a_entries(uint32_t value);
   private:
-  double _internal_interval() const;
-  void _internal_set_interval(double value);
-  public:
-
-  // required uint64 activeTabID = 6;
-  bool has_activetabid() const;
-  private:
-  bool _internal_has_activetabid() const;
-  public:
-  void clear_activetabid();
-  uint64_t activetabid() const;
-  void set_activetabid(uint64_t value);
-  private:
-  uint64_t _internal_activetabid() const;
-  void _internal_set_activetabid(uint64_t value);
+  uint32_t _internal_a_entries() const;
+  void _internal_set_a_entries(uint32_t value);
   public:
 
-  // required uint32 features = 5;
-  bool has_features() const;
+  // optional double a_duration = 3;
+  bool has_a_duration() const;
   private:
-  bool _internal_has_features() const;
+  bool _internal_has_a_duration() const;
   public:
-  void clear_features();
-  uint32_t features() const;
-  void set_features(uint32_t value);
+  void clear_a_duration();
+  double a_duration() const;
+  void set_a_duration(double value);
   private:
-  uint32_t _internal_features() const;
-  void _internal_set_features(uint32_t value);
+  double _internal_a_duration() const;
+  void _internal_set_a_duration(double value);
+  public:
+
+  // required double a_interval = 4;
+  bool has_a_interval() const;
+  private:
+  bool _internal_has_a_interval() const;
+  public:
+  void clear_a_interval();
+  double a_interval() const;
+  void set_a_interval(double value);
+  private:
+  double _internal_a_interval() const;
+  void _internal_set_a_interval(double value);
+  public:
+
+  // required uint64 a_activeTabID = 6;
+  bool has_a_activetabid() const;
+  private:
+  bool _internal_has_a_activetabid() const;
+  public:
+  void clear_a_activetabid();
+  uint64_t a_activetabid() const;
+  void set_a_activetabid(uint64_t value);
+  private:
+  uint64_t _internal_a_activetabid() const;
+  void _internal_set_a_activetabid(uint64_t value);
+  public:
+
+  // required uint32 a_features = 5;
+  bool has_a_features() const;
+  private:
+  bool _internal_has_a_features() const;
+  public:
+  void clear_a_features();
+  uint32_t a_features() const;
+  void set_a_features(uint32_t value);
+  private:
+  uint32_t _internal_a_features() const;
+  void _internal_set_a_features(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ProfilerInitParams)
@@ -305,13 +305,13 @@ class ProfilerInitParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> filters_;
-    bool enabled_;
-    uint32_t entries_;
-    double duration_;
-    double interval_;
-    uint64_t activetabid_;
-    uint32_t features_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_filters_;
+    bool a_enabled_;
+    uint32_t a_entries_;
+    double a_duration_;
+    double a_interval_;
+    uint64_t a_activetabid_;
+    uint32_t a_features_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -428,38 +428,38 @@ class ProfileBufferChunkMetadata final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDoneTimeStampFieldNumber = 1,
-    kBufferBytesFieldNumber = 2,
+    kADoneTimeStampFieldNumber = 1,
+    kABufferBytesFieldNumber = 2,
   };
-  // required bytes doneTimeStamp = 1;
-  bool has_donetimestamp() const;
+  // required bytes a_doneTimeStamp = 1;
+  bool has_a_donetimestamp() const;
   private:
-  bool _internal_has_donetimestamp() const;
+  bool _internal_has_a_donetimestamp() const;
   public:
-  void clear_donetimestamp();
-  const std::string& donetimestamp() const;
+  void clear_a_donetimestamp();
+  const std::string& a_donetimestamp() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_donetimestamp(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_donetimestamp();
-  PROTOBUF_NODISCARD std::string* release_donetimestamp();
-  void set_allocated_donetimestamp(std::string* donetimestamp);
+  void set_a_donetimestamp(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_donetimestamp();
+  PROTOBUF_NODISCARD std::string* release_a_donetimestamp();
+  void set_allocated_a_donetimestamp(std::string* a_donetimestamp);
   private:
-  const std::string& _internal_donetimestamp() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_donetimestamp(const std::string& value);
-  std::string* _internal_mutable_donetimestamp();
+  const std::string& _internal_a_donetimestamp() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_donetimestamp(const std::string& value);
+  std::string* _internal_mutable_a_donetimestamp();
   public:
 
-  // required uint32 bufferBytes = 2;
-  bool has_bufferbytes() const;
+  // required uint32 a_bufferBytes = 2;
+  bool has_a_bufferbytes() const;
   private:
-  bool _internal_has_bufferbytes() const;
+  bool _internal_has_a_bufferbytes() const;
   public:
-  void clear_bufferbytes();
-  uint32_t bufferbytes() const;
-  void set_bufferbytes(uint32_t value);
+  void clear_a_bufferbytes();
+  uint32_t a_bufferbytes() const;
+  void set_a_bufferbytes(uint32_t value);
   private:
-  uint32_t _internal_bufferbytes() const;
-  void _internal_set_bufferbytes(uint32_t value);
+  uint32_t _internal_a_bufferbytes() const;
+  void _internal_set_a_bufferbytes(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ProfileBufferChunkMetadata)
@@ -475,8 +475,8 @@ class ProfileBufferChunkMetadata final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr donetimestamp_;
-    uint32_t bufferbytes_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_donetimestamp_;
+    uint32_t a_bufferbytes_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -593,71 +593,71 @@ class ProfileBufferChunkManagerUpdate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kNewlyReleasedChunksFieldNumber = 4,
-    kOldestDoneTimeStampFieldNumber = 3,
-    kUnreleasedBytesFieldNumber = 1,
-    kReleasedBytesFieldNumber = 2,
+    kANewlyReleasedChunksFieldNumber = 4,
+    kAOldestDoneTimeStampFieldNumber = 3,
+    kAUnreleasedBytesFieldNumber = 1,
+    kAReleasedBytesFieldNumber = 2,
   };
-  // repeated .protobuf.mozilla.ProfileBufferChunkMetadata newlyReleasedChunks = 4;
-  int newlyreleasedchunks_size() const;
+  // repeated .protobuf.mozilla.ProfileBufferChunkMetadata a_newlyReleasedChunks = 4;
+  int a_newlyreleasedchunks_size() const;
   private:
-  int _internal_newlyreleasedchunks_size() const;
+  int _internal_a_newlyreleasedchunks_size() const;
   public:
-  void clear_newlyreleasedchunks();
-  ::protobuf::mozilla::ProfileBufferChunkMetadata* mutable_newlyreleasedchunks(int index);
+  void clear_a_newlyreleasedchunks();
+  ::protobuf::mozilla::ProfileBufferChunkMetadata* mutable_a_newlyreleasedchunks(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ProfileBufferChunkMetadata >*
-      mutable_newlyreleasedchunks();
+      mutable_a_newlyreleasedchunks();
   private:
-  const ::protobuf::mozilla::ProfileBufferChunkMetadata& _internal_newlyreleasedchunks(int index) const;
-  ::protobuf::mozilla::ProfileBufferChunkMetadata* _internal_add_newlyreleasedchunks();
+  const ::protobuf::mozilla::ProfileBufferChunkMetadata& _internal_a_newlyreleasedchunks(int index) const;
+  ::protobuf::mozilla::ProfileBufferChunkMetadata* _internal_add_a_newlyreleasedchunks();
   public:
-  const ::protobuf::mozilla::ProfileBufferChunkMetadata& newlyreleasedchunks(int index) const;
-  ::protobuf::mozilla::ProfileBufferChunkMetadata* add_newlyreleasedchunks();
+  const ::protobuf::mozilla::ProfileBufferChunkMetadata& a_newlyreleasedchunks(int index) const;
+  ::protobuf::mozilla::ProfileBufferChunkMetadata* add_a_newlyreleasedchunks();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ProfileBufferChunkMetadata >&
-      newlyreleasedchunks() const;
+      a_newlyreleasedchunks() const;
 
-  // required bytes oldestDoneTimeStamp = 3;
-  bool has_oldestdonetimestamp() const;
+  // required bytes a_oldestDoneTimeStamp = 3;
+  bool has_a_oldestdonetimestamp() const;
   private:
-  bool _internal_has_oldestdonetimestamp() const;
+  bool _internal_has_a_oldestdonetimestamp() const;
   public:
-  void clear_oldestdonetimestamp();
-  const std::string& oldestdonetimestamp() const;
+  void clear_a_oldestdonetimestamp();
+  const std::string& a_oldestdonetimestamp() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_oldestdonetimestamp(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_oldestdonetimestamp();
-  PROTOBUF_NODISCARD std::string* release_oldestdonetimestamp();
-  void set_allocated_oldestdonetimestamp(std::string* oldestdonetimestamp);
+  void set_a_oldestdonetimestamp(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_oldestdonetimestamp();
+  PROTOBUF_NODISCARD std::string* release_a_oldestdonetimestamp();
+  void set_allocated_a_oldestdonetimestamp(std::string* a_oldestdonetimestamp);
   private:
-  const std::string& _internal_oldestdonetimestamp() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_oldestdonetimestamp(const std::string& value);
-  std::string* _internal_mutable_oldestdonetimestamp();
+  const std::string& _internal_a_oldestdonetimestamp() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_oldestdonetimestamp(const std::string& value);
+  std::string* _internal_mutable_a_oldestdonetimestamp();
   public:
 
-  // required uint64 unreleasedBytes = 1;
-  bool has_unreleasedbytes() const;
+  // required uint64 a_unreleasedBytes = 1;
+  bool has_a_unreleasedbytes() const;
   private:
-  bool _internal_has_unreleasedbytes() const;
+  bool _internal_has_a_unreleasedbytes() const;
   public:
-  void clear_unreleasedbytes();
-  uint64_t unreleasedbytes() const;
-  void set_unreleasedbytes(uint64_t value);
+  void clear_a_unreleasedbytes();
+  uint64_t a_unreleasedbytes() const;
+  void set_a_unreleasedbytes(uint64_t value);
   private:
-  uint64_t _internal_unreleasedbytes() const;
-  void _internal_set_unreleasedbytes(uint64_t value);
+  uint64_t _internal_a_unreleasedbytes() const;
+  void _internal_set_a_unreleasedbytes(uint64_t value);
   public:
 
-  // required uint64 releasedBytes = 2;
-  bool has_releasedbytes() const;
+  // required uint64 a_releasedBytes = 2;
+  bool has_a_releasedbytes() const;
   private:
-  bool _internal_has_releasedbytes() const;
+  bool _internal_has_a_releasedbytes() const;
   public:
-  void clear_releasedbytes();
-  uint64_t releasedbytes() const;
-  void set_releasedbytes(uint64_t value);
+  void clear_a_releasedbytes();
+  uint64_t a_releasedbytes() const;
+  void set_a_releasedbytes(uint64_t value);
   private:
-  uint64_t _internal_releasedbytes() const;
-  void _internal_set_releasedbytes(uint64_t value);
+  uint64_t _internal_a_releasedbytes() const;
+  void _internal_set_a_releasedbytes(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ProfileBufferChunkManagerUpdate)
@@ -673,10 +673,10 @@ class ProfileBufferChunkManagerUpdate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ProfileBufferChunkMetadata > newlyreleasedchunks_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr oldestdonetimestamp_;
-    uint64_t unreleasedbytes_;
-    uint64_t releasedbytes_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ProfileBufferChunkMetadata > a_newlyreleasedchunks_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldestdonetimestamp_;
+    uint64_t a_unreleasedbytes_;
+    uint64_t a_releasedbytes_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -793,38 +793,38 @@ class GatherProfileProgress final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProgressLocationFieldNumber = 2,
-    kProgressProportionValueUnderlyingTypeFieldNumber = 1,
+    kAProgressLocationFieldNumber = 2,
+    kAProgressProportionValueUnderlyingTypeFieldNumber = 1,
   };
-  // required bytes progressLocation = 2;
-  bool has_progresslocation() const;
+  // required bytes a_progressLocation = 2;
+  bool has_a_progresslocation() const;
   private:
-  bool _internal_has_progresslocation() const;
+  bool _internal_has_a_progresslocation() const;
   public:
-  void clear_progresslocation();
-  const std::string& progresslocation() const;
+  void clear_a_progresslocation();
+  const std::string& a_progresslocation() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_progresslocation(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_progresslocation();
-  PROTOBUF_NODISCARD std::string* release_progresslocation();
-  void set_allocated_progresslocation(std::string* progresslocation);
+  void set_a_progresslocation(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_progresslocation();
+  PROTOBUF_NODISCARD std::string* release_a_progresslocation();
+  void set_allocated_a_progresslocation(std::string* a_progresslocation);
   private:
-  const std::string& _internal_progresslocation() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_progresslocation(const std::string& value);
-  std::string* _internal_mutable_progresslocation();
+  const std::string& _internal_a_progresslocation() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_progresslocation(const std::string& value);
+  std::string* _internal_mutable_a_progresslocation();
   public:
 
-  // required uint32 progressProportionValueUnderlyingType = 1;
-  bool has_progressproportionvalueunderlyingtype() const;
+  // required uint32 a_progressProportionValueUnderlyingType = 1;
+  bool has_a_progressproportionvalueunderlyingtype() const;
   private:
-  bool _internal_has_progressproportionvalueunderlyingtype() const;
+  bool _internal_has_a_progressproportionvalueunderlyingtype() const;
   public:
-  void clear_progressproportionvalueunderlyingtype();
-  uint32_t progressproportionvalueunderlyingtype() const;
-  void set_progressproportionvalueunderlyingtype(uint32_t value);
+  void clear_a_progressproportionvalueunderlyingtype();
+  uint32_t a_progressproportionvalueunderlyingtype() const;
+  void set_a_progressproportionvalueunderlyingtype(uint32_t value);
   private:
-  uint32_t _internal_progressproportionvalueunderlyingtype() const;
-  void _internal_set_progressproportionvalueunderlyingtype(uint32_t value);
+  uint32_t _internal_a_progressproportionvalueunderlyingtype() const;
+  void _internal_set_a_progressproportionvalueunderlyingtype(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.GatherProfileProgress)
@@ -840,8 +840,8 @@ class GatherProfileProgress final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr progresslocation_;
-    uint32_t progressproportionvalueunderlyingtype_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_progresslocation_;
+    uint32_t a_progressproportionvalueunderlyingtype_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -958,43 +958,43 @@ class IPCProfileAndAdditionalInformation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kProfileShmemFieldNumber = 1,
-    kAdditionalInformationFieldNumber = 2,
+    kAProfileShmemFieldNumber = 1,
+    kAAdditionalInformationFieldNumber = 2,
   };
-  // required bytes profileShmem = 1;
-  bool has_profileshmem() const;
+  // required bytes a_profileShmem = 1;
+  bool has_a_profileshmem() const;
   private:
-  bool _internal_has_profileshmem() const;
+  bool _internal_has_a_profileshmem() const;
   public:
-  void clear_profileshmem();
-  const std::string& profileshmem() const;
+  void clear_a_profileshmem();
+  const std::string& a_profileshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_profileshmem(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_profileshmem();
-  PROTOBUF_NODISCARD std::string* release_profileshmem();
-  void set_allocated_profileshmem(std::string* profileshmem);
+  void set_a_profileshmem(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_profileshmem();
+  PROTOBUF_NODISCARD std::string* release_a_profileshmem();
+  void set_allocated_a_profileshmem(std::string* a_profileshmem);
   private:
-  const std::string& _internal_profileshmem() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_profileshmem(const std::string& value);
-  std::string* _internal_mutable_profileshmem();
+  const std::string& _internal_a_profileshmem() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_profileshmem(const std::string& value);
+  std::string* _internal_mutable_a_profileshmem();
   public:
 
-  // optional bytes additionalInformation = 2;
-  bool has_additionalinformation() const;
+  // optional bytes a_additionalInformation = 2;
+  bool has_a_additionalinformation() const;
   private:
-  bool _internal_has_additionalinformation() const;
+  bool _internal_has_a_additionalinformation() const;
   public:
-  void clear_additionalinformation();
-  const std::string& additionalinformation() const;
+  void clear_a_additionalinformation();
+  const std::string& a_additionalinformation() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_additionalinformation(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_additionalinformation();
-  PROTOBUF_NODISCARD std::string* release_additionalinformation();
-  void set_allocated_additionalinformation(std::string* additionalinformation);
+  void set_a_additionalinformation(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_additionalinformation();
+  PROTOBUF_NODISCARD std::string* release_a_additionalinformation();
+  void set_allocated_a_additionalinformation(std::string* a_additionalinformation);
   private:
-  const std::string& _internal_additionalinformation() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_additionalinformation(const std::string& value);
-  std::string* _internal_mutable_additionalinformation();
+  const std::string& _internal_a_additionalinformation() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_additionalinformation(const std::string& value);
+  std::string* _internal_mutable_a_additionalinformation();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.IPCProfileAndAdditionalInformation)
@@ -1007,8 +1007,8 @@ class IPCProfileAndAdditionalInformation final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr profileshmem_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr additionalinformation_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_profileshmem_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_additionalinformation_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -1024,755 +1024,755 @@ class IPCProfileAndAdditionalInformation final :
 #endif  // __GNUC__
 // ProfilerInitParams
 
-// required bool enabled = 1;
-inline bool ProfilerInitParams::_internal_has_enabled() const {
+// required bool a_enabled = 1;
+inline bool ProfilerInitParams::_internal_has_a_enabled() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ProfilerInitParams::has_enabled() const {
-  return _internal_has_enabled();
+inline bool ProfilerInitParams::has_a_enabled() const {
+  return _internal_has_a_enabled();
 }
-inline void ProfilerInitParams::clear_enabled() {
-  _impl_.enabled_ = false;
+inline void ProfilerInitParams::clear_a_enabled() {
+  _impl_.a_enabled_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool ProfilerInitParams::_internal_enabled() const {
-  return _impl_.enabled_;
+inline bool ProfilerInitParams::_internal_a_enabled() const {
+  return _impl_.a_enabled_;
 }
-inline bool ProfilerInitParams::enabled() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.enabled)
-  return _internal_enabled();
+inline bool ProfilerInitParams::a_enabled() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_enabled)
+  return _internal_a_enabled();
 }
-inline void ProfilerInitParams::_internal_set_enabled(bool value) {
+inline void ProfilerInitParams::_internal_set_a_enabled(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.enabled_ = value;
+  _impl_.a_enabled_ = value;
 }
-inline void ProfilerInitParams::set_enabled(bool value) {
-  _internal_set_enabled(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.enabled)
+inline void ProfilerInitParams::set_a_enabled(bool value) {
+  _internal_set_a_enabled(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_enabled)
 }
 
-// required uint32 entries = 2;
-inline bool ProfilerInitParams::_internal_has_entries() const {
+// required uint32 a_entries = 2;
+inline bool ProfilerInitParams::_internal_has_a_entries() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ProfilerInitParams::has_entries() const {
-  return _internal_has_entries();
+inline bool ProfilerInitParams::has_a_entries() const {
+  return _internal_has_a_entries();
 }
-inline void ProfilerInitParams::clear_entries() {
-  _impl_.entries_ = 0u;
+inline void ProfilerInitParams::clear_a_entries() {
+  _impl_.a_entries_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t ProfilerInitParams::_internal_entries() const {
-  return _impl_.entries_;
+inline uint32_t ProfilerInitParams::_internal_a_entries() const {
+  return _impl_.a_entries_;
 }
-inline uint32_t ProfilerInitParams::entries() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.entries)
-  return _internal_entries();
+inline uint32_t ProfilerInitParams::a_entries() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_entries)
+  return _internal_a_entries();
 }
-inline void ProfilerInitParams::_internal_set_entries(uint32_t value) {
+inline void ProfilerInitParams::_internal_set_a_entries(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.entries_ = value;
+  _impl_.a_entries_ = value;
 }
-inline void ProfilerInitParams::set_entries(uint32_t value) {
-  _internal_set_entries(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.entries)
+inline void ProfilerInitParams::set_a_entries(uint32_t value) {
+  _internal_set_a_entries(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_entries)
 }
 
-// optional double duration = 3;
-inline bool ProfilerInitParams::_internal_has_duration() const {
+// optional double a_duration = 3;
+inline bool ProfilerInitParams::_internal_has_a_duration() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ProfilerInitParams::has_duration() const {
-  return _internal_has_duration();
+inline bool ProfilerInitParams::has_a_duration() const {
+  return _internal_has_a_duration();
 }
-inline void ProfilerInitParams::clear_duration() {
-  _impl_.duration_ = 0;
+inline void ProfilerInitParams::clear_a_duration() {
+  _impl_.a_duration_ = 0;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline double ProfilerInitParams::_internal_duration() const {
-  return _impl_.duration_;
+inline double ProfilerInitParams::_internal_a_duration() const {
+  return _impl_.a_duration_;
 }
-inline double ProfilerInitParams::duration() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.duration)
-  return _internal_duration();
+inline double ProfilerInitParams::a_duration() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_duration)
+  return _internal_a_duration();
 }
-inline void ProfilerInitParams::_internal_set_duration(double value) {
+inline void ProfilerInitParams::_internal_set_a_duration(double value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.duration_ = value;
+  _impl_.a_duration_ = value;
 }
-inline void ProfilerInitParams::set_duration(double value) {
-  _internal_set_duration(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.duration)
+inline void ProfilerInitParams::set_a_duration(double value) {
+  _internal_set_a_duration(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_duration)
 }
 
-// required double interval = 4;
-inline bool ProfilerInitParams::_internal_has_interval() const {
+// required double a_interval = 4;
+inline bool ProfilerInitParams::_internal_has_a_interval() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool ProfilerInitParams::has_interval() const {
-  return _internal_has_interval();
+inline bool ProfilerInitParams::has_a_interval() const {
+  return _internal_has_a_interval();
 }
-inline void ProfilerInitParams::clear_interval() {
-  _impl_.interval_ = 0;
+inline void ProfilerInitParams::clear_a_interval() {
+  _impl_.a_interval_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline double ProfilerInitParams::_internal_interval() const {
-  return _impl_.interval_;
+inline double ProfilerInitParams::_internal_a_interval() const {
+  return _impl_.a_interval_;
 }
-inline double ProfilerInitParams::interval() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.interval)
-  return _internal_interval();
+inline double ProfilerInitParams::a_interval() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_interval)
+  return _internal_a_interval();
 }
-inline void ProfilerInitParams::_internal_set_interval(double value) {
+inline void ProfilerInitParams::_internal_set_a_interval(double value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.interval_ = value;
+  _impl_.a_interval_ = value;
 }
-inline void ProfilerInitParams::set_interval(double value) {
-  _internal_set_interval(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.interval)
+inline void ProfilerInitParams::set_a_interval(double value) {
+  _internal_set_a_interval(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_interval)
 }
 
-// required uint32 features = 5;
-inline bool ProfilerInitParams::_internal_has_features() const {
+// required uint32 a_features = 5;
+inline bool ProfilerInitParams::_internal_has_a_features() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool ProfilerInitParams::has_features() const {
-  return _internal_has_features();
+inline bool ProfilerInitParams::has_a_features() const {
+  return _internal_has_a_features();
 }
-inline void ProfilerInitParams::clear_features() {
-  _impl_.features_ = 0u;
+inline void ProfilerInitParams::clear_a_features() {
+  _impl_.a_features_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline uint32_t ProfilerInitParams::_internal_features() const {
-  return _impl_.features_;
+inline uint32_t ProfilerInitParams::_internal_a_features() const {
+  return _impl_.a_features_;
 }
-inline uint32_t ProfilerInitParams::features() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.features)
-  return _internal_features();
+inline uint32_t ProfilerInitParams::a_features() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_features)
+  return _internal_a_features();
 }
-inline void ProfilerInitParams::_internal_set_features(uint32_t value) {
+inline void ProfilerInitParams::_internal_set_a_features(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.features_ = value;
+  _impl_.a_features_ = value;
 }
-inline void ProfilerInitParams::set_features(uint32_t value) {
-  _internal_set_features(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.features)
+inline void ProfilerInitParams::set_a_features(uint32_t value) {
+  _internal_set_a_features(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_features)
 }
 
-// required uint64 activeTabID = 6;
-inline bool ProfilerInitParams::_internal_has_activetabid() const {
+// required uint64 a_activeTabID = 6;
+inline bool ProfilerInitParams::_internal_has_a_activetabid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool ProfilerInitParams::has_activetabid() const {
-  return _internal_has_activetabid();
+inline bool ProfilerInitParams::has_a_activetabid() const {
+  return _internal_has_a_activetabid();
 }
-inline void ProfilerInitParams::clear_activetabid() {
-  _impl_.activetabid_ = uint64_t{0u};
+inline void ProfilerInitParams::clear_a_activetabid() {
+  _impl_.a_activetabid_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline uint64_t ProfilerInitParams::_internal_activetabid() const {
-  return _impl_.activetabid_;
+inline uint64_t ProfilerInitParams::_internal_a_activetabid() const {
+  return _impl_.a_activetabid_;
 }
-inline uint64_t ProfilerInitParams::activetabid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.activeTabID)
-  return _internal_activetabid();
+inline uint64_t ProfilerInitParams::a_activetabid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_activeTabID)
+  return _internal_a_activetabid();
 }
-inline void ProfilerInitParams::_internal_set_activetabid(uint64_t value) {
+inline void ProfilerInitParams::_internal_set_a_activetabid(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.activetabid_ = value;
+  _impl_.a_activetabid_ = value;
 }
-inline void ProfilerInitParams::set_activetabid(uint64_t value) {
-  _internal_set_activetabid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.activeTabID)
+inline void ProfilerInitParams::set_a_activetabid(uint64_t value) {
+  _internal_set_a_activetabid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_activeTabID)
 }
 
-// repeated bytes filters = 7;
-inline int ProfilerInitParams::_internal_filters_size() const {
-  return _impl_.filters_.size();
+// repeated bytes a_filters = 7;
+inline int ProfilerInitParams::_internal_a_filters_size() const {
+  return _impl_.a_filters_.size();
 }
-inline int ProfilerInitParams::filters_size() const {
-  return _internal_filters_size();
+inline int ProfilerInitParams::a_filters_size() const {
+  return _internal_a_filters_size();
 }
-inline void ProfilerInitParams::clear_filters() {
-  _impl_.filters_.Clear();
+inline void ProfilerInitParams::clear_a_filters() {
+  _impl_.a_filters_.Clear();
 }
-inline std::string* ProfilerInitParams::add_filters() {
-  std::string* _s = _internal_add_filters();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ProfilerInitParams.filters)
+inline std::string* ProfilerInitParams::add_a_filters() {
+  std::string* _s = _internal_add_a_filters();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ProfilerInitParams.a_filters)
   return _s;
 }
-inline const std::string& ProfilerInitParams::_internal_filters(int index) const {
-  return _impl_.filters_.Get(index);
+inline const std::string& ProfilerInitParams::_internal_a_filters(int index) const {
+  return _impl_.a_filters_.Get(index);
 }
-inline const std::string& ProfilerInitParams::filters(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.filters)
-  return _internal_filters(index);
+inline const std::string& ProfilerInitParams::a_filters(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfilerInitParams.a_filters)
+  return _internal_a_filters(index);
 }
-inline std::string* ProfilerInitParams::mutable_filters(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfilerInitParams.filters)
-  return _impl_.filters_.Mutable(index);
+inline std::string* ProfilerInitParams::mutable_a_filters(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfilerInitParams.a_filters)
+  return _impl_.a_filters_.Mutable(index);
 }
-inline void ProfilerInitParams::set_filters(int index, const std::string& value) {
-  _impl_.filters_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.filters)
+inline void ProfilerInitParams::set_a_filters(int index, const std::string& value) {
+  _impl_.a_filters_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline void ProfilerInitParams::set_filters(int index, std::string&& value) {
-  _impl_.filters_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.filters)
+inline void ProfilerInitParams::set_a_filters(int index, std::string&& value) {
+  _impl_.a_filters_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline void ProfilerInitParams::set_filters(int index, const char* value) {
+inline void ProfilerInitParams::set_a_filters(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.filters_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ProfilerInitParams.filters)
+  _impl_.a_filters_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline void ProfilerInitParams::set_filters(int index, const void* value, size_t size) {
-  _impl_.filters_.Mutable(index)->assign(
+inline void ProfilerInitParams::set_a_filters(int index, const void* value, size_t size) {
+  _impl_.a_filters_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ProfilerInitParams.filters)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline std::string* ProfilerInitParams::_internal_add_filters() {
-  return _impl_.filters_.Add();
+inline std::string* ProfilerInitParams::_internal_add_a_filters() {
+  return _impl_.a_filters_.Add();
 }
-inline void ProfilerInitParams::add_filters(const std::string& value) {
-  _impl_.filters_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ProfilerInitParams.filters)
+inline void ProfilerInitParams::add_a_filters(const std::string& value) {
+  _impl_.a_filters_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline void ProfilerInitParams::add_filters(std::string&& value) {
-  _impl_.filters_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ProfilerInitParams.filters)
+inline void ProfilerInitParams::add_a_filters(std::string&& value) {
+  _impl_.a_filters_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline void ProfilerInitParams::add_filters(const char* value) {
+inline void ProfilerInitParams::add_a_filters(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.filters_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ProfilerInitParams.filters)
+  _impl_.a_filters_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
-inline void ProfilerInitParams::add_filters(const void* value, size_t size) {
-  _impl_.filters_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ProfilerInitParams.filters)
+inline void ProfilerInitParams::add_a_filters(const void* value, size_t size) {
+  _impl_.a_filters_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ProfilerInitParams.a_filters)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-ProfilerInitParams::filters() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ProfilerInitParams.filters)
-  return _impl_.filters_;
+ProfilerInitParams::a_filters() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ProfilerInitParams.a_filters)
+  return _impl_.a_filters_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-ProfilerInitParams::mutable_filters() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ProfilerInitParams.filters)
-  return &_impl_.filters_;
+ProfilerInitParams::mutable_a_filters() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ProfilerInitParams.a_filters)
+  return &_impl_.a_filters_;
 }
 
 // -------------------------------------------------------------------
 
 // ProfileBufferChunkMetadata
 
-// required bytes doneTimeStamp = 1;
-inline bool ProfileBufferChunkMetadata::_internal_has_donetimestamp() const {
+// required bytes a_doneTimeStamp = 1;
+inline bool ProfileBufferChunkMetadata::_internal_has_a_donetimestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ProfileBufferChunkMetadata::has_donetimestamp() const {
-  return _internal_has_donetimestamp();
+inline bool ProfileBufferChunkMetadata::has_a_donetimestamp() const {
+  return _internal_has_a_donetimestamp();
 }
-inline void ProfileBufferChunkMetadata::clear_donetimestamp() {
-  _impl_.donetimestamp_.ClearToEmpty();
+inline void ProfileBufferChunkMetadata::clear_a_donetimestamp() {
+  _impl_.a_donetimestamp_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ProfileBufferChunkMetadata::donetimestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkMetadata.doneTimeStamp)
-  return _internal_donetimestamp();
+inline const std::string& ProfileBufferChunkMetadata::a_donetimestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkMetadata.a_doneTimeStamp)
+  return _internal_a_donetimestamp();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ProfileBufferChunkMetadata::set_donetimestamp(ArgT0&& arg0, ArgT... args) {
+void ProfileBufferChunkMetadata::set_a_donetimestamp(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.donetimestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkMetadata.doneTimeStamp)
+ _impl_.a_donetimestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkMetadata.a_doneTimeStamp)
 }
-inline std::string* ProfileBufferChunkMetadata::mutable_donetimestamp() {
-  std::string* _s = _internal_mutable_donetimestamp();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfileBufferChunkMetadata.doneTimeStamp)
+inline std::string* ProfileBufferChunkMetadata::mutable_a_donetimestamp() {
+  std::string* _s = _internal_mutable_a_donetimestamp();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfileBufferChunkMetadata.a_doneTimeStamp)
   return _s;
 }
-inline const std::string& ProfileBufferChunkMetadata::_internal_donetimestamp() const {
-  return _impl_.donetimestamp_.Get();
+inline const std::string& ProfileBufferChunkMetadata::_internal_a_donetimestamp() const {
+  return _impl_.a_donetimestamp_.Get();
 }
-inline void ProfileBufferChunkMetadata::_internal_set_donetimestamp(const std::string& value) {
+inline void ProfileBufferChunkMetadata::_internal_set_a_donetimestamp(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.donetimestamp_.Set(value, GetArenaForAllocation());
+  _impl_.a_donetimestamp_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ProfileBufferChunkMetadata::_internal_mutable_donetimestamp() {
+inline std::string* ProfileBufferChunkMetadata::_internal_mutable_a_donetimestamp() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.donetimestamp_.Mutable(GetArenaForAllocation());
+  return _impl_.a_donetimestamp_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ProfileBufferChunkMetadata::release_donetimestamp() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ProfileBufferChunkMetadata.doneTimeStamp)
-  if (!_internal_has_donetimestamp()) {
+inline std::string* ProfileBufferChunkMetadata::release_a_donetimestamp() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ProfileBufferChunkMetadata.a_doneTimeStamp)
+  if (!_internal_has_a_donetimestamp()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.donetimestamp_.Release();
+  auto* p = _impl_.a_donetimestamp_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.donetimestamp_.IsDefault()) {
-    _impl_.donetimestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_donetimestamp_.IsDefault()) {
+    _impl_.a_donetimestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ProfileBufferChunkMetadata::set_allocated_donetimestamp(std::string* donetimestamp) {
-  if (donetimestamp != nullptr) {
+inline void ProfileBufferChunkMetadata::set_allocated_a_donetimestamp(std::string* a_donetimestamp) {
+  if (a_donetimestamp != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.donetimestamp_.SetAllocated(donetimestamp, GetArenaForAllocation());
+  _impl_.a_donetimestamp_.SetAllocated(a_donetimestamp, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.donetimestamp_.IsDefault()) {
-    _impl_.donetimestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_donetimestamp_.IsDefault()) {
+    _impl_.a_donetimestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ProfileBufferChunkMetadata.doneTimeStamp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ProfileBufferChunkMetadata.a_doneTimeStamp)
 }
 
-// required uint32 bufferBytes = 2;
-inline bool ProfileBufferChunkMetadata::_internal_has_bufferbytes() const {
+// required uint32 a_bufferBytes = 2;
+inline bool ProfileBufferChunkMetadata::_internal_has_a_bufferbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ProfileBufferChunkMetadata::has_bufferbytes() const {
-  return _internal_has_bufferbytes();
+inline bool ProfileBufferChunkMetadata::has_a_bufferbytes() const {
+  return _internal_has_a_bufferbytes();
 }
-inline void ProfileBufferChunkMetadata::clear_bufferbytes() {
-  _impl_.bufferbytes_ = 0u;
+inline void ProfileBufferChunkMetadata::clear_a_bufferbytes() {
+  _impl_.a_bufferbytes_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t ProfileBufferChunkMetadata::_internal_bufferbytes() const {
-  return _impl_.bufferbytes_;
+inline uint32_t ProfileBufferChunkMetadata::_internal_a_bufferbytes() const {
+  return _impl_.a_bufferbytes_;
 }
-inline uint32_t ProfileBufferChunkMetadata::bufferbytes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkMetadata.bufferBytes)
-  return _internal_bufferbytes();
+inline uint32_t ProfileBufferChunkMetadata::a_bufferbytes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkMetadata.a_bufferBytes)
+  return _internal_a_bufferbytes();
 }
-inline void ProfileBufferChunkMetadata::_internal_set_bufferbytes(uint32_t value) {
+inline void ProfileBufferChunkMetadata::_internal_set_a_bufferbytes(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.bufferbytes_ = value;
+  _impl_.a_bufferbytes_ = value;
 }
-inline void ProfileBufferChunkMetadata::set_bufferbytes(uint32_t value) {
-  _internal_set_bufferbytes(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkMetadata.bufferBytes)
+inline void ProfileBufferChunkMetadata::set_a_bufferbytes(uint32_t value) {
+  _internal_set_a_bufferbytes(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkMetadata.a_bufferBytes)
 }
 
 // -------------------------------------------------------------------
 
 // ProfileBufferChunkManagerUpdate
 
-// required uint64 unreleasedBytes = 1;
-inline bool ProfileBufferChunkManagerUpdate::_internal_has_unreleasedbytes() const {
+// required uint64 a_unreleasedBytes = 1;
+inline bool ProfileBufferChunkManagerUpdate::_internal_has_a_unreleasedbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool ProfileBufferChunkManagerUpdate::has_unreleasedbytes() const {
-  return _internal_has_unreleasedbytes();
+inline bool ProfileBufferChunkManagerUpdate::has_a_unreleasedbytes() const {
+  return _internal_has_a_unreleasedbytes();
 }
-inline void ProfileBufferChunkManagerUpdate::clear_unreleasedbytes() {
-  _impl_.unreleasedbytes_ = uint64_t{0u};
+inline void ProfileBufferChunkManagerUpdate::clear_a_unreleasedbytes() {
+  _impl_.a_unreleasedbytes_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t ProfileBufferChunkManagerUpdate::_internal_unreleasedbytes() const {
-  return _impl_.unreleasedbytes_;
+inline uint64_t ProfileBufferChunkManagerUpdate::_internal_a_unreleasedbytes() const {
+  return _impl_.a_unreleasedbytes_;
 }
-inline uint64_t ProfileBufferChunkManagerUpdate::unreleasedbytes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.unreleasedBytes)
-  return _internal_unreleasedbytes();
+inline uint64_t ProfileBufferChunkManagerUpdate::a_unreleasedbytes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_unreleasedBytes)
+  return _internal_a_unreleasedbytes();
 }
-inline void ProfileBufferChunkManagerUpdate::_internal_set_unreleasedbytes(uint64_t value) {
+inline void ProfileBufferChunkManagerUpdate::_internal_set_a_unreleasedbytes(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.unreleasedbytes_ = value;
+  _impl_.a_unreleasedbytes_ = value;
 }
-inline void ProfileBufferChunkManagerUpdate::set_unreleasedbytes(uint64_t value) {
-  _internal_set_unreleasedbytes(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.unreleasedBytes)
+inline void ProfileBufferChunkManagerUpdate::set_a_unreleasedbytes(uint64_t value) {
+  _internal_set_a_unreleasedbytes(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_unreleasedBytes)
 }
 
-// required uint64 releasedBytes = 2;
-inline bool ProfileBufferChunkManagerUpdate::_internal_has_releasedbytes() const {
+// required uint64 a_releasedBytes = 2;
+inline bool ProfileBufferChunkManagerUpdate::_internal_has_a_releasedbytes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool ProfileBufferChunkManagerUpdate::has_releasedbytes() const {
-  return _internal_has_releasedbytes();
+inline bool ProfileBufferChunkManagerUpdate::has_a_releasedbytes() const {
+  return _internal_has_a_releasedbytes();
 }
-inline void ProfileBufferChunkManagerUpdate::clear_releasedbytes() {
-  _impl_.releasedbytes_ = uint64_t{0u};
+inline void ProfileBufferChunkManagerUpdate::clear_a_releasedbytes() {
+  _impl_.a_releasedbytes_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint64_t ProfileBufferChunkManagerUpdate::_internal_releasedbytes() const {
-  return _impl_.releasedbytes_;
+inline uint64_t ProfileBufferChunkManagerUpdate::_internal_a_releasedbytes() const {
+  return _impl_.a_releasedbytes_;
 }
-inline uint64_t ProfileBufferChunkManagerUpdate::releasedbytes() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.releasedBytes)
-  return _internal_releasedbytes();
+inline uint64_t ProfileBufferChunkManagerUpdate::a_releasedbytes() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_releasedBytes)
+  return _internal_a_releasedbytes();
 }
-inline void ProfileBufferChunkManagerUpdate::_internal_set_releasedbytes(uint64_t value) {
+inline void ProfileBufferChunkManagerUpdate::_internal_set_a_releasedbytes(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.releasedbytes_ = value;
+  _impl_.a_releasedbytes_ = value;
 }
-inline void ProfileBufferChunkManagerUpdate::set_releasedbytes(uint64_t value) {
-  _internal_set_releasedbytes(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.releasedBytes)
+inline void ProfileBufferChunkManagerUpdate::set_a_releasedbytes(uint64_t value) {
+  _internal_set_a_releasedbytes(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_releasedBytes)
 }
 
-// required bytes oldestDoneTimeStamp = 3;
-inline bool ProfileBufferChunkManagerUpdate::_internal_has_oldestdonetimestamp() const {
+// required bytes a_oldestDoneTimeStamp = 3;
+inline bool ProfileBufferChunkManagerUpdate::_internal_has_a_oldestdonetimestamp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool ProfileBufferChunkManagerUpdate::has_oldestdonetimestamp() const {
-  return _internal_has_oldestdonetimestamp();
+inline bool ProfileBufferChunkManagerUpdate::has_a_oldestdonetimestamp() const {
+  return _internal_has_a_oldestdonetimestamp();
 }
-inline void ProfileBufferChunkManagerUpdate::clear_oldestdonetimestamp() {
-  _impl_.oldestdonetimestamp_.ClearToEmpty();
+inline void ProfileBufferChunkManagerUpdate::clear_a_oldestdonetimestamp() {
+  _impl_.a_oldestdonetimestamp_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& ProfileBufferChunkManagerUpdate::oldestdonetimestamp() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.oldestDoneTimeStamp)
-  return _internal_oldestdonetimestamp();
+inline const std::string& ProfileBufferChunkManagerUpdate::a_oldestdonetimestamp() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_oldestDoneTimeStamp)
+  return _internal_a_oldestdonetimestamp();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void ProfileBufferChunkManagerUpdate::set_oldestdonetimestamp(ArgT0&& arg0, ArgT... args) {
+void ProfileBufferChunkManagerUpdate::set_a_oldestdonetimestamp(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.oldestdonetimestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.oldestDoneTimeStamp)
+ _impl_.a_oldestdonetimestamp_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_oldestDoneTimeStamp)
 }
-inline std::string* ProfileBufferChunkManagerUpdate::mutable_oldestdonetimestamp() {
-  std::string* _s = _internal_mutable_oldestdonetimestamp();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfileBufferChunkManagerUpdate.oldestDoneTimeStamp)
+inline std::string* ProfileBufferChunkManagerUpdate::mutable_a_oldestdonetimestamp() {
+  std::string* _s = _internal_mutable_a_oldestdonetimestamp();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_oldestDoneTimeStamp)
   return _s;
 }
-inline const std::string& ProfileBufferChunkManagerUpdate::_internal_oldestdonetimestamp() const {
-  return _impl_.oldestdonetimestamp_.Get();
+inline const std::string& ProfileBufferChunkManagerUpdate::_internal_a_oldestdonetimestamp() const {
+  return _impl_.a_oldestdonetimestamp_.Get();
 }
-inline void ProfileBufferChunkManagerUpdate::_internal_set_oldestdonetimestamp(const std::string& value) {
+inline void ProfileBufferChunkManagerUpdate::_internal_set_a_oldestdonetimestamp(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.oldestdonetimestamp_.Set(value, GetArenaForAllocation());
+  _impl_.a_oldestdonetimestamp_.Set(value, GetArenaForAllocation());
 }
-inline std::string* ProfileBufferChunkManagerUpdate::_internal_mutable_oldestdonetimestamp() {
+inline std::string* ProfileBufferChunkManagerUpdate::_internal_mutable_a_oldestdonetimestamp() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.oldestdonetimestamp_.Mutable(GetArenaForAllocation());
+  return _impl_.a_oldestdonetimestamp_.Mutable(GetArenaForAllocation());
 }
-inline std::string* ProfileBufferChunkManagerUpdate::release_oldestdonetimestamp() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ProfileBufferChunkManagerUpdate.oldestDoneTimeStamp)
-  if (!_internal_has_oldestdonetimestamp()) {
+inline std::string* ProfileBufferChunkManagerUpdate::release_a_oldestdonetimestamp() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_oldestDoneTimeStamp)
+  if (!_internal_has_a_oldestdonetimestamp()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.oldestdonetimestamp_.Release();
+  auto* p = _impl_.a_oldestdonetimestamp_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oldestdonetimestamp_.IsDefault()) {
-    _impl_.oldestdonetimestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oldestdonetimestamp_.IsDefault()) {
+    _impl_.a_oldestdonetimestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void ProfileBufferChunkManagerUpdate::set_allocated_oldestdonetimestamp(std::string* oldestdonetimestamp) {
-  if (oldestdonetimestamp != nullptr) {
+inline void ProfileBufferChunkManagerUpdate::set_allocated_a_oldestdonetimestamp(std::string* a_oldestdonetimestamp) {
+  if (a_oldestdonetimestamp != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.oldestdonetimestamp_.SetAllocated(oldestdonetimestamp, GetArenaForAllocation());
+  _impl_.a_oldestdonetimestamp_.SetAllocated(a_oldestdonetimestamp, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.oldestdonetimestamp_.IsDefault()) {
-    _impl_.oldestdonetimestamp_.Set("", GetArenaForAllocation());
+  if (_impl_.a_oldestdonetimestamp_.IsDefault()) {
+    _impl_.a_oldestdonetimestamp_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ProfileBufferChunkManagerUpdate.oldestDoneTimeStamp)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_oldestDoneTimeStamp)
 }
 
-// repeated .protobuf.mozilla.ProfileBufferChunkMetadata newlyReleasedChunks = 4;
-inline int ProfileBufferChunkManagerUpdate::_internal_newlyreleasedchunks_size() const {
-  return _impl_.newlyreleasedchunks_.size();
+// repeated .protobuf.mozilla.ProfileBufferChunkMetadata a_newlyReleasedChunks = 4;
+inline int ProfileBufferChunkManagerUpdate::_internal_a_newlyreleasedchunks_size() const {
+  return _impl_.a_newlyreleasedchunks_.size();
 }
-inline int ProfileBufferChunkManagerUpdate::newlyreleasedchunks_size() const {
-  return _internal_newlyreleasedchunks_size();
+inline int ProfileBufferChunkManagerUpdate::a_newlyreleasedchunks_size() const {
+  return _internal_a_newlyreleasedchunks_size();
 }
-inline void ProfileBufferChunkManagerUpdate::clear_newlyreleasedchunks() {
-  _impl_.newlyreleasedchunks_.Clear();
+inline void ProfileBufferChunkManagerUpdate::clear_a_newlyreleasedchunks() {
+  _impl_.a_newlyreleasedchunks_.Clear();
 }
-inline ::protobuf::mozilla::ProfileBufferChunkMetadata* ProfileBufferChunkManagerUpdate::mutable_newlyreleasedchunks(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfileBufferChunkManagerUpdate.newlyReleasedChunks)
-  return _impl_.newlyreleasedchunks_.Mutable(index);
+inline ::protobuf::mozilla::ProfileBufferChunkMetadata* ProfileBufferChunkManagerUpdate::mutable_a_newlyreleasedchunks(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_newlyReleasedChunks)
+  return _impl_.a_newlyreleasedchunks_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ProfileBufferChunkMetadata >*
-ProfileBufferChunkManagerUpdate::mutable_newlyreleasedchunks() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ProfileBufferChunkManagerUpdate.newlyReleasedChunks)
-  return &_impl_.newlyreleasedchunks_;
+ProfileBufferChunkManagerUpdate::mutable_a_newlyreleasedchunks() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_newlyReleasedChunks)
+  return &_impl_.a_newlyreleasedchunks_;
 }
-inline const ::protobuf::mozilla::ProfileBufferChunkMetadata& ProfileBufferChunkManagerUpdate::_internal_newlyreleasedchunks(int index) const {
-  return _impl_.newlyreleasedchunks_.Get(index);
+inline const ::protobuf::mozilla::ProfileBufferChunkMetadata& ProfileBufferChunkManagerUpdate::_internal_a_newlyreleasedchunks(int index) const {
+  return _impl_.a_newlyreleasedchunks_.Get(index);
 }
-inline const ::protobuf::mozilla::ProfileBufferChunkMetadata& ProfileBufferChunkManagerUpdate::newlyreleasedchunks(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.newlyReleasedChunks)
-  return _internal_newlyreleasedchunks(index);
+inline const ::protobuf::mozilla::ProfileBufferChunkMetadata& ProfileBufferChunkManagerUpdate::a_newlyreleasedchunks(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_newlyReleasedChunks)
+  return _internal_a_newlyreleasedchunks(index);
 }
-inline ::protobuf::mozilla::ProfileBufferChunkMetadata* ProfileBufferChunkManagerUpdate::_internal_add_newlyreleasedchunks() {
-  return _impl_.newlyreleasedchunks_.Add();
+inline ::protobuf::mozilla::ProfileBufferChunkMetadata* ProfileBufferChunkManagerUpdate::_internal_add_a_newlyreleasedchunks() {
+  return _impl_.a_newlyreleasedchunks_.Add();
 }
-inline ::protobuf::mozilla::ProfileBufferChunkMetadata* ProfileBufferChunkManagerUpdate::add_newlyreleasedchunks() {
-  ::protobuf::mozilla::ProfileBufferChunkMetadata* _add = _internal_add_newlyreleasedchunks();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ProfileBufferChunkManagerUpdate.newlyReleasedChunks)
+inline ::protobuf::mozilla::ProfileBufferChunkMetadata* ProfileBufferChunkManagerUpdate::add_a_newlyreleasedchunks() {
+  ::protobuf::mozilla::ProfileBufferChunkMetadata* _add = _internal_add_a_newlyreleasedchunks();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_newlyReleasedChunks)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ProfileBufferChunkMetadata >&
-ProfileBufferChunkManagerUpdate::newlyreleasedchunks() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ProfileBufferChunkManagerUpdate.newlyReleasedChunks)
-  return _impl_.newlyreleasedchunks_;
+ProfileBufferChunkManagerUpdate::a_newlyreleasedchunks() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ProfileBufferChunkManagerUpdate.a_newlyReleasedChunks)
+  return _impl_.a_newlyreleasedchunks_;
 }
 
 // -------------------------------------------------------------------
 
 // GatherProfileProgress
 
-// required uint32 progressProportionValueUnderlyingType = 1;
-inline bool GatherProfileProgress::_internal_has_progressproportionvalueunderlyingtype() const {
+// required uint32 a_progressProportionValueUnderlyingType = 1;
+inline bool GatherProfileProgress::_internal_has_a_progressproportionvalueunderlyingtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool GatherProfileProgress::has_progressproportionvalueunderlyingtype() const {
-  return _internal_has_progressproportionvalueunderlyingtype();
+inline bool GatherProfileProgress::has_a_progressproportionvalueunderlyingtype() const {
+  return _internal_has_a_progressproportionvalueunderlyingtype();
 }
-inline void GatherProfileProgress::clear_progressproportionvalueunderlyingtype() {
-  _impl_.progressproportionvalueunderlyingtype_ = 0u;
+inline void GatherProfileProgress::clear_a_progressproportionvalueunderlyingtype() {
+  _impl_.a_progressproportionvalueunderlyingtype_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t GatherProfileProgress::_internal_progressproportionvalueunderlyingtype() const {
-  return _impl_.progressproportionvalueunderlyingtype_;
+inline uint32_t GatherProfileProgress::_internal_a_progressproportionvalueunderlyingtype() const {
+  return _impl_.a_progressproportionvalueunderlyingtype_;
 }
-inline uint32_t GatherProfileProgress::progressproportionvalueunderlyingtype() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.GatherProfileProgress.progressProportionValueUnderlyingType)
-  return _internal_progressproportionvalueunderlyingtype();
+inline uint32_t GatherProfileProgress::a_progressproportionvalueunderlyingtype() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.GatherProfileProgress.a_progressProportionValueUnderlyingType)
+  return _internal_a_progressproportionvalueunderlyingtype();
 }
-inline void GatherProfileProgress::_internal_set_progressproportionvalueunderlyingtype(uint32_t value) {
+inline void GatherProfileProgress::_internal_set_a_progressproportionvalueunderlyingtype(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.progressproportionvalueunderlyingtype_ = value;
+  _impl_.a_progressproportionvalueunderlyingtype_ = value;
 }
-inline void GatherProfileProgress::set_progressproportionvalueunderlyingtype(uint32_t value) {
-  _internal_set_progressproportionvalueunderlyingtype(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.progressProportionValueUnderlyingType)
+inline void GatherProfileProgress::set_a_progressproportionvalueunderlyingtype(uint32_t value) {
+  _internal_set_a_progressproportionvalueunderlyingtype(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.a_progressProportionValueUnderlyingType)
 }
 
-// required bytes progressLocation = 2;
-inline bool GatherProfileProgress::_internal_has_progresslocation() const {
+// required bytes a_progressLocation = 2;
+inline bool GatherProfileProgress::_internal_has_a_progresslocation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool GatherProfileProgress::has_progresslocation() const {
-  return _internal_has_progresslocation();
+inline bool GatherProfileProgress::has_a_progresslocation() const {
+  return _internal_has_a_progresslocation();
 }
-inline void GatherProfileProgress::clear_progresslocation() {
-  _impl_.progresslocation_.ClearToEmpty();
+inline void GatherProfileProgress::clear_a_progresslocation() {
+  _impl_.a_progresslocation_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GatherProfileProgress::progresslocation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.GatherProfileProgress.progressLocation)
-  return _internal_progresslocation();
+inline const std::string& GatherProfileProgress::a_progresslocation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.GatherProfileProgress.a_progressLocation)
+  return _internal_a_progresslocation();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void GatherProfileProgress::set_progresslocation(ArgT0&& arg0, ArgT... args) {
+void GatherProfileProgress::set_a_progresslocation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.progresslocation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.progressLocation)
+ _impl_.a_progresslocation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.GatherProfileProgress.a_progressLocation)
 }
-inline std::string* GatherProfileProgress::mutable_progresslocation() {
-  std::string* _s = _internal_mutable_progresslocation();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.GatherProfileProgress.progressLocation)
+inline std::string* GatherProfileProgress::mutable_a_progresslocation() {
+  std::string* _s = _internal_mutable_a_progresslocation();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.GatherProfileProgress.a_progressLocation)
   return _s;
 }
-inline const std::string& GatherProfileProgress::_internal_progresslocation() const {
-  return _impl_.progresslocation_.Get();
+inline const std::string& GatherProfileProgress::_internal_a_progresslocation() const {
+  return _impl_.a_progresslocation_.Get();
 }
-inline void GatherProfileProgress::_internal_set_progresslocation(const std::string& value) {
+inline void GatherProfileProgress::_internal_set_a_progresslocation(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.progresslocation_.Set(value, GetArenaForAllocation());
+  _impl_.a_progresslocation_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GatherProfileProgress::_internal_mutable_progresslocation() {
+inline std::string* GatherProfileProgress::_internal_mutable_a_progresslocation() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.progresslocation_.Mutable(GetArenaForAllocation());
+  return _impl_.a_progresslocation_.Mutable(GetArenaForAllocation());
 }
-inline std::string* GatherProfileProgress::release_progresslocation() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.GatherProfileProgress.progressLocation)
-  if (!_internal_has_progresslocation()) {
+inline std::string* GatherProfileProgress::release_a_progresslocation() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.GatherProfileProgress.a_progressLocation)
+  if (!_internal_has_a_progresslocation()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.progresslocation_.Release();
+  auto* p = _impl_.a_progresslocation_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.progresslocation_.IsDefault()) {
-    _impl_.progresslocation_.Set("", GetArenaForAllocation());
+  if (_impl_.a_progresslocation_.IsDefault()) {
+    _impl_.a_progresslocation_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void GatherProfileProgress::set_allocated_progresslocation(std::string* progresslocation) {
-  if (progresslocation != nullptr) {
+inline void GatherProfileProgress::set_allocated_a_progresslocation(std::string* a_progresslocation) {
+  if (a_progresslocation != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.progresslocation_.SetAllocated(progresslocation, GetArenaForAllocation());
+  _impl_.a_progresslocation_.SetAllocated(a_progresslocation, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.progresslocation_.IsDefault()) {
-    _impl_.progresslocation_.Set("", GetArenaForAllocation());
+  if (_impl_.a_progresslocation_.IsDefault()) {
+    _impl_.a_progresslocation_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.GatherProfileProgress.progressLocation)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.GatherProfileProgress.a_progressLocation)
 }
 
 // -------------------------------------------------------------------
 
 // IPCProfileAndAdditionalInformation
 
-// required bytes profileShmem = 1;
-inline bool IPCProfileAndAdditionalInformation::_internal_has_profileshmem() const {
+// required bytes a_profileShmem = 1;
+inline bool IPCProfileAndAdditionalInformation::_internal_has_a_profileshmem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool IPCProfileAndAdditionalInformation::has_profileshmem() const {
-  return _internal_has_profileshmem();
+inline bool IPCProfileAndAdditionalInformation::has_a_profileshmem() const {
+  return _internal_has_a_profileshmem();
 }
-inline void IPCProfileAndAdditionalInformation::clear_profileshmem() {
-  _impl_.profileshmem_.ClearToEmpty();
+inline void IPCProfileAndAdditionalInformation::clear_a_profileshmem() {
+  _impl_.a_profileshmem_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& IPCProfileAndAdditionalInformation::profileshmem() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.IPCProfileAndAdditionalInformation.profileShmem)
-  return _internal_profileshmem();
+inline const std::string& IPCProfileAndAdditionalInformation::a_profileshmem() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_profileShmem)
+  return _internal_a_profileshmem();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCProfileAndAdditionalInformation::set_profileshmem(ArgT0&& arg0, ArgT... args) {
+void IPCProfileAndAdditionalInformation::set_a_profileshmem(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.profileshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.IPCProfileAndAdditionalInformation.profileShmem)
+ _impl_.a_profileshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_profileShmem)
 }
-inline std::string* IPCProfileAndAdditionalInformation::mutable_profileshmem() {
-  std::string* _s = _internal_mutable_profileshmem();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.IPCProfileAndAdditionalInformation.profileShmem)
+inline std::string* IPCProfileAndAdditionalInformation::mutable_a_profileshmem() {
+  std::string* _s = _internal_mutable_a_profileshmem();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_profileShmem)
   return _s;
 }
-inline const std::string& IPCProfileAndAdditionalInformation::_internal_profileshmem() const {
-  return _impl_.profileshmem_.Get();
+inline const std::string& IPCProfileAndAdditionalInformation::_internal_a_profileshmem() const {
+  return _impl_.a_profileshmem_.Get();
 }
-inline void IPCProfileAndAdditionalInformation::_internal_set_profileshmem(const std::string& value) {
+inline void IPCProfileAndAdditionalInformation::_internal_set_a_profileshmem(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.profileshmem_.Set(value, GetArenaForAllocation());
+  _impl_.a_profileshmem_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCProfileAndAdditionalInformation::_internal_mutable_profileshmem() {
+inline std::string* IPCProfileAndAdditionalInformation::_internal_mutable_a_profileshmem() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.profileshmem_.Mutable(GetArenaForAllocation());
+  return _impl_.a_profileshmem_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCProfileAndAdditionalInformation::release_profileshmem() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.IPCProfileAndAdditionalInformation.profileShmem)
-  if (!_internal_has_profileshmem()) {
+inline std::string* IPCProfileAndAdditionalInformation::release_a_profileshmem() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_profileShmem)
+  if (!_internal_has_a_profileshmem()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.profileshmem_.Release();
+  auto* p = _impl_.a_profileshmem_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.profileshmem_.IsDefault()) {
-    _impl_.profileshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_profileshmem_.IsDefault()) {
+    _impl_.a_profileshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCProfileAndAdditionalInformation::set_allocated_profileshmem(std::string* profileshmem) {
-  if (profileshmem != nullptr) {
+inline void IPCProfileAndAdditionalInformation::set_allocated_a_profileshmem(std::string* a_profileshmem) {
+  if (a_profileshmem != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.profileshmem_.SetAllocated(profileshmem, GetArenaForAllocation());
+  _impl_.a_profileshmem_.SetAllocated(a_profileshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.profileshmem_.IsDefault()) {
-    _impl_.profileshmem_.Set("", GetArenaForAllocation());
+  if (_impl_.a_profileshmem_.IsDefault()) {
+    _impl_.a_profileshmem_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.IPCProfileAndAdditionalInformation.profileShmem)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_profileShmem)
 }
 
-// optional bytes additionalInformation = 2;
-inline bool IPCProfileAndAdditionalInformation::_internal_has_additionalinformation() const {
+// optional bytes a_additionalInformation = 2;
+inline bool IPCProfileAndAdditionalInformation::_internal_has_a_additionalinformation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool IPCProfileAndAdditionalInformation::has_additionalinformation() const {
-  return _internal_has_additionalinformation();
+inline bool IPCProfileAndAdditionalInformation::has_a_additionalinformation() const {
+  return _internal_has_a_additionalinformation();
 }
-inline void IPCProfileAndAdditionalInformation::clear_additionalinformation() {
-  _impl_.additionalinformation_.ClearToEmpty();
+inline void IPCProfileAndAdditionalInformation::clear_a_additionalinformation() {
+  _impl_.a_additionalinformation_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& IPCProfileAndAdditionalInformation::additionalinformation() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.IPCProfileAndAdditionalInformation.additionalInformation)
-  return _internal_additionalinformation();
+inline const std::string& IPCProfileAndAdditionalInformation::a_additionalinformation() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_additionalInformation)
+  return _internal_a_additionalinformation();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void IPCProfileAndAdditionalInformation::set_additionalinformation(ArgT0&& arg0, ArgT... args) {
+void IPCProfileAndAdditionalInformation::set_a_additionalinformation(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.additionalinformation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.IPCProfileAndAdditionalInformation.additionalInformation)
+ _impl_.a_additionalinformation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_additionalInformation)
 }
-inline std::string* IPCProfileAndAdditionalInformation::mutable_additionalinformation() {
-  std::string* _s = _internal_mutable_additionalinformation();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.IPCProfileAndAdditionalInformation.additionalInformation)
+inline std::string* IPCProfileAndAdditionalInformation::mutable_a_additionalinformation() {
+  std::string* _s = _internal_mutable_a_additionalinformation();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_additionalInformation)
   return _s;
 }
-inline const std::string& IPCProfileAndAdditionalInformation::_internal_additionalinformation() const {
-  return _impl_.additionalinformation_.Get();
+inline const std::string& IPCProfileAndAdditionalInformation::_internal_a_additionalinformation() const {
+  return _impl_.a_additionalinformation_.Get();
 }
-inline void IPCProfileAndAdditionalInformation::_internal_set_additionalinformation(const std::string& value) {
+inline void IPCProfileAndAdditionalInformation::_internal_set_a_additionalinformation(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.additionalinformation_.Set(value, GetArenaForAllocation());
+  _impl_.a_additionalinformation_.Set(value, GetArenaForAllocation());
 }
-inline std::string* IPCProfileAndAdditionalInformation::_internal_mutable_additionalinformation() {
+inline std::string* IPCProfileAndAdditionalInformation::_internal_mutable_a_additionalinformation() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.additionalinformation_.Mutable(GetArenaForAllocation());
+  return _impl_.a_additionalinformation_.Mutable(GetArenaForAllocation());
 }
-inline std::string* IPCProfileAndAdditionalInformation::release_additionalinformation() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.IPCProfileAndAdditionalInformation.additionalInformation)
-  if (!_internal_has_additionalinformation()) {
+inline std::string* IPCProfileAndAdditionalInformation::release_a_additionalinformation() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_additionalInformation)
+  if (!_internal_has_a_additionalinformation()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.additionalinformation_.Release();
+  auto* p = _impl_.a_additionalinformation_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.additionalinformation_.IsDefault()) {
-    _impl_.additionalinformation_.Set("", GetArenaForAllocation());
+  if (_impl_.a_additionalinformation_.IsDefault()) {
+    _impl_.a_additionalinformation_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void IPCProfileAndAdditionalInformation::set_allocated_additionalinformation(std::string* additionalinformation) {
-  if (additionalinformation != nullptr) {
+inline void IPCProfileAndAdditionalInformation::set_allocated_a_additionalinformation(std::string* a_additionalinformation) {
+  if (a_additionalinformation != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.additionalinformation_.SetAllocated(additionalinformation, GetArenaForAllocation());
+  _impl_.a_additionalinformation_.SetAllocated(a_additionalinformation, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.additionalinformation_.IsDefault()) {
-    _impl_.additionalinformation_.Set("", GetArenaForAllocation());
+  if (_impl_.a_additionalinformation_.IsDefault()) {
+    _impl_.a_additionalinformation_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.IPCProfileAndAdditionalInformation.additionalInformation)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.IPCProfileAndAdditionalInformation.a_additionalInformation)
 }
 
 #ifdef __GNUC__

@@ -12,32 +12,32 @@ package protobuf.mozilla.psm;
 
 // Structs and unions declarations
 message ByteArray {
-  repeated uint32 data = 1;
+  repeated uint32 a_data = 1;
 }
 
 message ECKey {
-  repeated uint32 params = 1;
-  repeated uint32 cert = 2;
+  repeated uint32 a_params = 1;
+  repeated uint32 a_cert = 2;
 }
 
 message RSAKey {
-  repeated uint32 modulus = 1;
-  repeated uint32 cert = 2;
+  repeated uint32 a_modulus = 1;
+  repeated uint32 a_cert = 2;
 }
 
 message Certificate {
-  repeated uint32 der = 1;
+  repeated uint32 a_der = 1;
 }
 
 message IPCClientCertObject {
   oneof content {
-    protobuf.mozilla.psm.ECKey mVECKey = 1;
-    protobuf.mozilla.psm.RSAKey mVRSAKey = 2;
-    protobuf.mozilla.psm.Certificate mVCertificate = 3;
+    protobuf.mozilla.psm.ECKey a_mVECKey = 1;
+    protobuf.mozilla.psm.RSAKey a_mVRSAKey = 2;
+    protobuf.mozilla.psm.Certificate a_mVCertificate = 3;
   }
 }
 
 message DelegatedCredentialInfoArg {
-  required uint32 scheme = 1;
-  required uint32 authKeyBits = 2;
+  required uint32 a_scheme = 1;
+  required uint32 a_authKeyBits = 2;
 }

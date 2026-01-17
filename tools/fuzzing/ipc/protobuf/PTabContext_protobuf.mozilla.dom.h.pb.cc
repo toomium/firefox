@@ -24,8 +24,8 @@ PROTOBUF_CONSTEXPR PopupIPCTabContext::PopupIPCTabContext(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.opener_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.chromeouterwindowid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_opener_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_chromeouterwindowid_)*/uint64_t{0u}} {}
 struct PopupIPCTabContextDefaultTypeInternal {
   PROTOBUF_CONSTEXPR PopupIPCTabContextDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,8 +39,8 @@ PROTOBUF_CONSTEXPR FrameIPCTabContext::FrameIPCTabContext(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.chromeouterwindowid_)*/uint64_t{0u}
-  , /*decltype(_impl_.maxtouchpoints_)*/0u} {}
+  , /*decltype(_impl_.a_chromeouterwindowid_)*/uint64_t{0u}
+  , /*decltype(_impl_.a_maxtouchpoints_)*/0u} {}
 struct FrameIPCTabContextDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FrameIPCTabContextDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -76,10 +76,10 @@ namespace dom {
 class PopupIPCTabContext::_Internal {
  public:
   using HasBits = decltype(std::declval<PopupIPCTabContext>()._impl_._has_bits_);
-  static void set_has_opener(HasBits* has_bits) {
+  static void set_has_a_opener(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_chromeouterwindowid(HasBits* has_bits) {
+  static void set_has_a_chromeouterwindowid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -99,19 +99,19 @@ PopupIPCTabContext::PopupIPCTabContext(const PopupIPCTabContext& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.opener_){}
-    , decltype(_impl_.chromeouterwindowid_){}};
+    , decltype(_impl_.a_opener_){}
+    , decltype(_impl_.a_chromeouterwindowid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.opener_.InitDefault();
+  _impl_.a_opener_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.opener_.Set("", GetArenaForAllocation());
+    _impl_.a_opener_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_opener()) {
-    _this->_impl_.opener_.Set(from._internal_opener(), 
+  if (from._internal_has_a_opener()) {
+    _this->_impl_.a_opener_.Set(from._internal_a_opener(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.chromeouterwindowid_ = from._impl_.chromeouterwindowid_;
+  _this->_impl_.a_chromeouterwindowid_ = from._impl_.a_chromeouterwindowid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PopupIPCTabContext)
 }
 
@@ -122,12 +122,12 @@ inline void PopupIPCTabContext::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.opener_){}
-    , decltype(_impl_.chromeouterwindowid_){uint64_t{0u}}
+    , decltype(_impl_.a_opener_){}
+    , decltype(_impl_.a_chromeouterwindowid_){uint64_t{0u}}
   };
-  _impl_.opener_.InitDefault();
+  _impl_.a_opener_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.opener_.Set("", GetArenaForAllocation());
+    _impl_.a_opener_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -142,7 +142,7 @@ PopupIPCTabContext::~PopupIPCTabContext() {
 
 inline void PopupIPCTabContext::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.opener_.Destroy();
+  _impl_.a_opener_.Destroy();
 }
 
 void PopupIPCTabContext::SetCachedSize(int size) const {
@@ -157,9 +157,9 @@ void PopupIPCTabContext::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.opener_.ClearNonDefaultToEmpty();
+    _impl_.a_opener_.ClearNonDefaultToEmpty();
   }
-  _impl_.chromeouterwindowid_ = uint64_t{0u};
+  _impl_.a_chromeouterwindowid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -171,20 +171,20 @@ const char* PopupIPCTabContext::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes opener = 1;
+      // required bytes a_opener = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_opener();
+          auto str = _internal_mutable_a_opener();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 chromeOuterWindowID = 2;
+      // required uint64 a_chromeOuterWindowID = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_chromeouterwindowid(&has_bits);
-          _impl_.chromeouterwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_chromeouterwindowid(&has_bits);
+          _impl_.a_chromeouterwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -220,16 +220,16 @@ uint8_t* PopupIPCTabContext::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes opener = 1;
+  // required bytes a_opener = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_opener(), target);
+        1, this->_internal_a_opener(), target);
   }
 
-  // required uint64 chromeOuterWindowID = 2;
+  // required uint64 a_chromeOuterWindowID = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_chromeouterwindowid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_chromeouterwindowid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -244,16 +244,16 @@ size_t PopupIPCTabContext::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PopupIPCTabContext)
   size_t total_size = 0;
 
-  if (_internal_has_opener()) {
-    // required bytes opener = 1;
+  if (_internal_has_a_opener()) {
+    // required bytes a_opener = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_opener());
+        this->_internal_a_opener());
   }
 
-  if (_internal_has_chromeouterwindowid()) {
-    // required uint64 chromeOuterWindowID = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_chromeouterwindowid());
+  if (_internal_has_a_chromeouterwindowid()) {
+    // required uint64 a_chromeOuterWindowID = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_chromeouterwindowid());
   }
 
   return total_size;
@@ -263,13 +263,13 @@ size_t PopupIPCTabContext::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes opener = 1;
+    // required bytes a_opener = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_opener());
+        this->_internal_a_opener());
 
-    // required uint64 chromeOuterWindowID = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_chromeouterwindowid());
+    // required uint64 a_chromeOuterWindowID = 2;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_chromeouterwindowid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -302,10 +302,10 @@ void PopupIPCTabContext::MergeFrom(const PopupIPCTabContext& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_opener(from._internal_opener());
+      _this->_internal_set_a_opener(from._internal_a_opener());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.chromeouterwindowid_ = from._impl_.chromeouterwindowid_;
+      _this->_impl_.a_chromeouterwindowid_ = from._impl_.a_chromeouterwindowid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -331,10 +331,10 @@ void PopupIPCTabContext::InternalSwap(PopupIPCTabContext* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.opener_, lhs_arena,
-      &other->_impl_.opener_, rhs_arena
+      &_impl_.a_opener_, lhs_arena,
+      &other->_impl_.a_opener_, rhs_arena
   );
-  swap(_impl_.chromeouterwindowid_, other->_impl_.chromeouterwindowid_);
+  swap(_impl_.a_chromeouterwindowid_, other->_impl_.a_chromeouterwindowid_);
 }
 
 std::string PopupIPCTabContext::GetTypeName() const {
@@ -347,10 +347,10 @@ std::string PopupIPCTabContext::GetTypeName() const {
 class FrameIPCTabContext::_Internal {
  public:
   using HasBits = decltype(std::declval<FrameIPCTabContext>()._impl_._has_bits_);
-  static void set_has_chromeouterwindowid(HasBits* has_bits) {
+  static void set_has_a_chromeouterwindowid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_maxtouchpoints(HasBits* has_bits) {
+  static void set_has_a_maxtouchpoints(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -370,13 +370,13 @@ FrameIPCTabContext::FrameIPCTabContext(const FrameIPCTabContext& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.chromeouterwindowid_){}
-    , decltype(_impl_.maxtouchpoints_){}};
+    , decltype(_impl_.a_chromeouterwindowid_){}
+    , decltype(_impl_.a_maxtouchpoints_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.chromeouterwindowid_, &from._impl_.chromeouterwindowid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxtouchpoints_) -
-    reinterpret_cast<char*>(&_impl_.chromeouterwindowid_)) + sizeof(_impl_.maxtouchpoints_));
+  ::memcpy(&_impl_.a_chromeouterwindowid_, &from._impl_.a_chromeouterwindowid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_maxtouchpoints_) -
+    reinterpret_cast<char*>(&_impl_.a_chromeouterwindowid_)) + sizeof(_impl_.a_maxtouchpoints_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.FrameIPCTabContext)
 }
 
@@ -387,8 +387,8 @@ inline void FrameIPCTabContext::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.chromeouterwindowid_){uint64_t{0u}}
-    , decltype(_impl_.maxtouchpoints_){0u}
+    , decltype(_impl_.a_chromeouterwindowid_){uint64_t{0u}}
+    , decltype(_impl_.a_maxtouchpoints_){0u}
   };
 }
 
@@ -417,9 +417,9 @@ void FrameIPCTabContext::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.chromeouterwindowid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.maxtouchpoints_) -
-        reinterpret_cast<char*>(&_impl_.chromeouterwindowid_)) + sizeof(_impl_.maxtouchpoints_));
+    ::memset(&_impl_.a_chromeouterwindowid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_maxtouchpoints_) -
+        reinterpret_cast<char*>(&_impl_.a_chromeouterwindowid_)) + sizeof(_impl_.a_maxtouchpoints_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -432,20 +432,20 @@ const char* FrameIPCTabContext::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 chromeOuterWindowID = 1;
+      // required uint64 a_chromeOuterWindowID = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_chromeouterwindowid(&has_bits);
-          _impl_.chromeouterwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_chromeouterwindowid(&has_bits);
+          _impl_.a_chromeouterwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 maxTouchPoints = 2;
+      // required uint32 a_maxTouchPoints = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_maxtouchpoints(&has_bits);
-          _impl_.maxtouchpoints_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _Internal::set_has_a_maxtouchpoints(&has_bits);
+          _impl_.a_maxtouchpoints_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -481,16 +481,16 @@ uint8_t* FrameIPCTabContext::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 chromeOuterWindowID = 1;
+  // required uint64 a_chromeOuterWindowID = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_chromeouterwindowid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_chromeouterwindowid(), target);
   }
 
-  // required uint32 maxTouchPoints = 2;
+  // required uint32 a_maxTouchPoints = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_maxtouchpoints(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_maxtouchpoints(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -505,14 +505,14 @@ size_t FrameIPCTabContext::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.FrameIPCTabContext)
   size_t total_size = 0;
 
-  if (_internal_has_chromeouterwindowid()) {
-    // required uint64 chromeOuterWindowID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_chromeouterwindowid());
+  if (_internal_has_a_chromeouterwindowid()) {
+    // required uint64 a_chromeOuterWindowID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_chromeouterwindowid());
   }
 
-  if (_internal_has_maxtouchpoints()) {
-    // required uint32 maxTouchPoints = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_maxtouchpoints());
+  if (_internal_has_a_maxtouchpoints()) {
+    // required uint32 a_maxTouchPoints = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_maxtouchpoints());
   }
 
   return total_size;
@@ -522,11 +522,11 @@ size_t FrameIPCTabContext::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint64 chromeOuterWindowID = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_chromeouterwindowid());
+    // required uint64 a_chromeOuterWindowID = 1;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_chromeouterwindowid());
 
-    // required uint32 maxTouchPoints = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_maxtouchpoints());
+    // required uint32 a_maxTouchPoints = 2;
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_maxtouchpoints());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -559,10 +559,10 @@ void FrameIPCTabContext::MergeFrom(const FrameIPCTabContext& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.chromeouterwindowid_ = from._impl_.chromeouterwindowid_;
+      _this->_impl_.a_chromeouterwindowid_ = from._impl_.a_chromeouterwindowid_;
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.maxtouchpoints_ = from._impl_.maxtouchpoints_;
+      _this->_impl_.a_maxtouchpoints_ = from._impl_.a_maxtouchpoints_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -586,11 +586,11 @@ void FrameIPCTabContext::InternalSwap(FrameIPCTabContext* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FrameIPCTabContext, _impl_.maxtouchpoints_)
-      + sizeof(FrameIPCTabContext::_impl_.maxtouchpoints_)
-      - PROTOBUF_FIELD_OFFSET(FrameIPCTabContext, _impl_.chromeouterwindowid_)>(
-          reinterpret_cast<char*>(&_impl_.chromeouterwindowid_),
-          reinterpret_cast<char*>(&other->_impl_.chromeouterwindowid_));
+      PROTOBUF_FIELD_OFFSET(FrameIPCTabContext, _impl_.a_maxtouchpoints_)
+      + sizeof(FrameIPCTabContext::_impl_.a_maxtouchpoints_)
+      - PROTOBUF_FIELD_OFFSET(FrameIPCTabContext, _impl_.a_chromeouterwindowid_)>(
+          reinterpret_cast<char*>(&_impl_.a_chromeouterwindowid_),
+          reinterpret_cast<char*>(&other->_impl_.a_chromeouterwindowid_));
 }
 
 std::string FrameIPCTabContext::GetTypeName() const {
@@ -602,47 +602,47 @@ std::string FrameIPCTabContext::GetTypeName() const {
 
 class IPCTabContext::_Internal {
  public:
-  static const ::protobuf::mozilla::dom::PopupIPCTabContext& mvpopupipctabcontext(const IPCTabContext* msg);
-  static const ::protobuf::mozilla::dom::FrameIPCTabContext& mvframeipctabcontext(const IPCTabContext* msg);
+  static const ::protobuf::mozilla::dom::PopupIPCTabContext& a_mvpopupipctabcontext(const IPCTabContext* msg);
+  static const ::protobuf::mozilla::dom::FrameIPCTabContext& a_mvframeipctabcontext(const IPCTabContext* msg);
 };
 
 const ::protobuf::mozilla::dom::PopupIPCTabContext&
-IPCTabContext::_Internal::mvpopupipctabcontext(const IPCTabContext* msg) {
-  return *msg->_impl_.content_.mvpopupipctabcontext_;
+IPCTabContext::_Internal::a_mvpopupipctabcontext(const IPCTabContext* msg) {
+  return *msg->_impl_.content_.a_mvpopupipctabcontext_;
 }
 const ::protobuf::mozilla::dom::FrameIPCTabContext&
-IPCTabContext::_Internal::mvframeipctabcontext(const IPCTabContext* msg) {
-  return *msg->_impl_.content_.mvframeipctabcontext_;
+IPCTabContext::_Internal::a_mvframeipctabcontext(const IPCTabContext* msg) {
+  return *msg->_impl_.content_.a_mvframeipctabcontext_;
 }
-void IPCTabContext::set_allocated_mvpopupipctabcontext(::protobuf::mozilla::dom::PopupIPCTabContext* mvpopupipctabcontext) {
+void IPCTabContext::set_allocated_a_mvpopupipctabcontext(::protobuf::mozilla::dom::PopupIPCTabContext* a_mvpopupipctabcontext) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvpopupipctabcontext) {
+  if (a_mvpopupipctabcontext) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvpopupipctabcontext);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvpopupipctabcontext);
     if (message_arena != submessage_arena) {
-      mvpopupipctabcontext = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvpopupipctabcontext, submessage_arena);
+      a_mvpopupipctabcontext = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvpopupipctabcontext, submessage_arena);
     }
-    set_has_mvpopupipctabcontext();
-    _impl_.content_.mvpopupipctabcontext_ = mvpopupipctabcontext;
+    set_has_a_mvpopupipctabcontext();
+    _impl_.content_.a_mvpopupipctabcontext_ = a_mvpopupipctabcontext;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTabContext.mVPopupIPCTabContext)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTabContext.a_mVPopupIPCTabContext)
 }
-void IPCTabContext::set_allocated_mvframeipctabcontext(::protobuf::mozilla::dom::FrameIPCTabContext* mvframeipctabcontext) {
+void IPCTabContext::set_allocated_a_mvframeipctabcontext(::protobuf::mozilla::dom::FrameIPCTabContext* a_mvframeipctabcontext) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvframeipctabcontext) {
+  if (a_mvframeipctabcontext) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvframeipctabcontext);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvframeipctabcontext);
     if (message_arena != submessage_arena) {
-      mvframeipctabcontext = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvframeipctabcontext, submessage_arena);
+      a_mvframeipctabcontext = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvframeipctabcontext, submessage_arena);
     }
-    set_has_mvframeipctabcontext();
-    _impl_.content_.mvframeipctabcontext_ = mvframeipctabcontext;
+    set_has_a_mvframeipctabcontext();
+    _impl_.content_.a_mvframeipctabcontext_ = a_mvframeipctabcontext;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTabContext.mVFrameIPCTabContext)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTabContext.a_mVFrameIPCTabContext)
 }
 IPCTabContext::IPCTabContext(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -661,14 +661,14 @@ IPCTabContext::IPCTabContext(const IPCTabContext& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVPopupIPCTabContext: {
-      _this->_internal_mutable_mvpopupipctabcontext()->::protobuf::mozilla::dom::PopupIPCTabContext::MergeFrom(
-          from._internal_mvpopupipctabcontext());
+    case kAMVPopupIPCTabContext: {
+      _this->_internal_mutable_a_mvpopupipctabcontext()->::protobuf::mozilla::dom::PopupIPCTabContext::MergeFrom(
+          from._internal_a_mvpopupipctabcontext());
       break;
     }
-    case kMVFrameIPCTabContext: {
-      _this->_internal_mutable_mvframeipctabcontext()->::protobuf::mozilla::dom::FrameIPCTabContext::MergeFrom(
-          from._internal_mvframeipctabcontext());
+    case kAMVFrameIPCTabContext: {
+      _this->_internal_mutable_a_mvframeipctabcontext()->::protobuf::mozilla::dom::FrameIPCTabContext::MergeFrom(
+          from._internal_a_mvframeipctabcontext());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -713,15 +713,15 @@ void IPCTabContext::SetCachedSize(int size) const {
 void IPCTabContext::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla.dom.IPCTabContext)
   switch (content_case()) {
-    case kMVPopupIPCTabContext: {
+    case kAMVPopupIPCTabContext: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvpopupipctabcontext_;
+        delete _impl_.content_.a_mvpopupipctabcontext_;
       }
       break;
     }
-    case kMVFrameIPCTabContext: {
+    case kAMVFrameIPCTabContext: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvframeipctabcontext_;
+        delete _impl_.content_.a_mvframeipctabcontext_;
       }
       break;
     }
@@ -749,18 +749,18 @@ const char* IPCTabContext::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.mozilla.dom.PopupIPCTabContext mVPopupIPCTabContext = 1;
+      // .protobuf.mozilla.dom.PopupIPCTabContext a_mVPopupIPCTabContext = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvpopupipctabcontext(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvpopupipctabcontext(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.dom.FrameIPCTabContext mVFrameIPCTabContext = 2;
+      // .protobuf.mozilla.dom.FrameIPCTabContext a_mVFrameIPCTabContext = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvframeipctabcontext(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvframeipctabcontext(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -795,16 +795,16 @@ uint8_t* IPCTabContext::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVPopupIPCTabContext: {
+    case kAMVPopupIPCTabContext: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvpopupipctabcontext(this),
-          _Internal::mvpopupipctabcontext(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvpopupipctabcontext(this),
+          _Internal::a_mvpopupipctabcontext(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVFrameIPCTabContext: {
+    case kAMVFrameIPCTabContext: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvframeipctabcontext(this),
-          _Internal::mvframeipctabcontext(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvframeipctabcontext(this),
+          _Internal::a_mvframeipctabcontext(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -826,18 +826,18 @@ size_t IPCTabContext::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.mozilla.dom.PopupIPCTabContext mVPopupIPCTabContext = 1;
-    case kMVPopupIPCTabContext: {
+    // .protobuf.mozilla.dom.PopupIPCTabContext a_mVPopupIPCTabContext = 1;
+    case kAMVPopupIPCTabContext: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvpopupipctabcontext_);
+          *_impl_.content_.a_mvpopupipctabcontext_);
       break;
     }
-    // .protobuf.mozilla.dom.FrameIPCTabContext mVFrameIPCTabContext = 2;
-    case kMVFrameIPCTabContext: {
+    // .protobuf.mozilla.dom.FrameIPCTabContext a_mVFrameIPCTabContext = 2;
+    case kAMVFrameIPCTabContext: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvframeipctabcontext_);
+          *_impl_.content_.a_mvframeipctabcontext_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -866,14 +866,14 @@ void IPCTabContext::MergeFrom(const IPCTabContext& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVPopupIPCTabContext: {
-      _this->_internal_mutable_mvpopupipctabcontext()->::protobuf::mozilla::dom::PopupIPCTabContext::MergeFrom(
-          from._internal_mvpopupipctabcontext());
+    case kAMVPopupIPCTabContext: {
+      _this->_internal_mutable_a_mvpopupipctabcontext()->::protobuf::mozilla::dom::PopupIPCTabContext::MergeFrom(
+          from._internal_a_mvpopupipctabcontext());
       break;
     }
-    case kMVFrameIPCTabContext: {
-      _this->_internal_mutable_mvframeipctabcontext()->::protobuf::mozilla::dom::FrameIPCTabContext::MergeFrom(
-          from._internal_mvframeipctabcontext());
+    case kAMVFrameIPCTabContext: {
+      _this->_internal_mutable_a_mvframeipctabcontext()->::protobuf::mozilla::dom::FrameIPCTabContext::MergeFrom(
+          from._internal_a_mvframeipctabcontext());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -892,15 +892,15 @@ void IPCTabContext::CopyFrom(const IPCTabContext& from) {
 
 bool IPCTabContext::IsInitialized() const {
   switch (content_case()) {
-    case kMVPopupIPCTabContext: {
-      if (_internal_has_mvpopupipctabcontext()) {
-        if (!_impl_.content_.mvpopupipctabcontext_->IsInitialized()) return false;
+    case kAMVPopupIPCTabContext: {
+      if (_internal_has_a_mvpopupipctabcontext()) {
+        if (!_impl_.content_.a_mvpopupipctabcontext_->IsInitialized()) return false;
       }
       break;
     }
-    case kMVFrameIPCTabContext: {
-      if (_internal_has_mvframeipctabcontext()) {
-        if (!_impl_.content_.mvframeipctabcontext_->IsInitialized()) return false;
+    case kAMVFrameIPCTabContext: {
+      if (_internal_has_a_mvframeipctabcontext()) {
+        if (!_impl_.content_.a_mvframeipctabcontext_->IsInitialized()) return false;
       }
       break;
     }

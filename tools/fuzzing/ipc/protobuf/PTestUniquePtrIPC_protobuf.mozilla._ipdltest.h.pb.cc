@@ -24,7 +24,7 @@ PROTOBUF_CONSTEXPR DummyStruct::DummyStruct(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.x_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_x_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct DummyStructDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DummyStructDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,7 +60,7 @@ namespace _ipdltest {
 class DummyStruct::_Internal {
  public:
   using HasBits = decltype(std::declval<DummyStruct>()._impl_._has_bits_);
-  static void set_has_x(HasBits* has_bits) {
+  static void set_has_a_x(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -80,15 +80,15 @@ DummyStruct::DummyStruct(const DummyStruct& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.x_){}};
+    , decltype(_impl_.a_x_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.x_.InitDefault();
+  _impl_.a_x_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.x_.Set("", GetArenaForAllocation());
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_x()) {
-    _this->_impl_.x_.Set(from._internal_x(), 
+  if (from._internal_has_a_x()) {
+    _this->_impl_.a_x_.Set(from._internal_a_x(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.DummyStruct)
@@ -101,11 +101,11 @@ inline void DummyStruct::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.x_){}
+    , decltype(_impl_.a_x_){}
   };
-  _impl_.x_.InitDefault();
+  _impl_.a_x_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.x_.Set("", GetArenaForAllocation());
+    _impl_.a_x_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -120,7 +120,7 @@ DummyStruct::~DummyStruct() {
 
 inline void DummyStruct::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.x_.Destroy();
+  _impl_.a_x_.Destroy();
 }
 
 void DummyStruct::SetCachedSize(int size) const {
@@ -135,7 +135,7 @@ void DummyStruct::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.x_.ClearNonDefaultToEmpty();
+    _impl_.a_x_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -148,10 +148,10 @@ const char* DummyStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string x = 1;
+      // required string a_x = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_x();
+          auto str = _internal_mutable_a_x();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -188,10 +188,10 @@ uint8_t* DummyStruct::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string x = 1;
+  // required string a_x = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_x(), target);
+        1, this->_internal_a_x(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -206,11 +206,11 @@ size_t DummyStruct::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.DummyStruct)
   size_t total_size = 0;
 
-  // required string x = 1;
-  if (_internal_has_x()) {
+  // required string a_x = 1;
+  if (_internal_has_a_x()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_x());
+        this->_internal_a_x());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -237,8 +237,8 @@ void DummyStruct::MergeFrom(const DummyStruct& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_x()) {
-    _this->_internal_set_x(from._internal_x());
+  if (from._internal_has_a_x()) {
+    _this->_internal_set_a_x(from._internal_a_x());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -262,8 +262,8 @@ void DummyStruct::InternalSwap(DummyStruct* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.x_, lhs_arena,
-      &other->_impl_.x_, rhs_arena
+      &_impl_.a_x_, lhs_arena,
+      &other->_impl_.a_x_, rhs_arena
   );
 }
 
@@ -295,12 +295,12 @@ DummyUnion::DummyUnion(const DummyUnion& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVstring: {
-      _this->_internal_set_mvstring(from._internal_mvstring());
+    case kAMVstring: {
+      _this->_internal_set_a_mvstring(from._internal_a_mvstring());
       break;
     }
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -345,11 +345,11 @@ void DummyUnion::SetCachedSize(int size) const {
 void DummyUnion::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.mozilla._ipdltest.DummyUnion)
   switch (content_case()) {
-    case kMVstring: {
-      _impl_.content_.mvstring_.Destroy();
+    case kAMVstring: {
+      _impl_.content_.a_mvstring_.Destroy();
       break;
     }
-    case kMVint: {
+    case kAMVint: {
       // No need to clear
       break;
     }
@@ -377,19 +377,19 @@ const char* DummyUnion::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVstring = 1;
+      // bytes a_mVstring = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvstring();
+          auto str = _internal_mutable_a_mvstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // sint32 mVint = 2;
+      // sint32 a_mVint = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _internal_set_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
+          _internal_set_a_mvint(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -424,14 +424,14 @@ uint8_t* DummyUnion::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVstring: {
+    case kAMVstring: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvstring(), target);
+          1, this->_internal_a_mvstring(), target);
       break;
     }
-    case kMVint: {
+    case kAMVint: {
       target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_mvint(), target);
+      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_mvint(), target);
       break;
     }
     default: ;
@@ -453,16 +453,16 @@ size_t DummyUnion::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVstring = 1;
-    case kMVstring: {
+    // bytes a_mVstring = 1;
+    case kAMVstring: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvstring());
+          this->_internal_a_mvstring());
       break;
     }
-    // sint32 mVint = 2;
-    case kMVint: {
-      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_mvint());
+    // sint32 a_mVint = 2;
+    case kAMVint: {
+      total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_mvint());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -491,12 +491,12 @@ void DummyUnion::MergeFrom(const DummyUnion& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVstring: {
-      _this->_internal_set_mvstring(from._internal_mvstring());
+    case kAMVstring: {
+      _this->_internal_set_a_mvstring(from._internal_a_mvstring());
       break;
     }
-    case kMVint: {
-      _this->_internal_set_mvint(from._internal_mvint());
+    case kAMVint: {
+      _this->_internal_set_a_mvint(from._internal_a_mvint());
       break;
     }
     case CONTENT_NOT_SET: {

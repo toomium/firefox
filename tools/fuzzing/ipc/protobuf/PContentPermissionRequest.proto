@@ -23,8 +23,8 @@ message Msg_Destroy {
 }
 
 message Msg_NotifyResult {
-  required bool allow = 1;
-  repeated protobuf.mozilla.dom.PermissionChoice choices = 2;
+  required bool a_allow = 1;
+  repeated protobuf.mozilla.dom.PermissionChoice a_choices = 2;
 }
 
 message Msg___delete__ {

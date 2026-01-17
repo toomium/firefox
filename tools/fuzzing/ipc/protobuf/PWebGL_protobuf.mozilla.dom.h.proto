@@ -14,7 +14,7 @@ package protobuf.mozilla.dom;
 // Structs and unions declarations
 message ReadPixelsBuffer {
   oneof content {
-    uint64 mVuint64_t = 1;
-    bytes mVShmem = 2;
+    uint64 a_mVuint64_t = 1;
+    bytes a_mVShmem = 2;
   }
 }

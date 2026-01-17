@@ -25,7 +25,7 @@ PROTOBUF_CONSTEXPR Msg_CaptureEnded::Msg_CaptureEnded(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.streamid_)*/0} {}
+  , /*decltype(_impl_.a_streamid_)*/0} {}
 struct Msg_CaptureEndedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CaptureEndedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,9 +39,9 @@ PROTOBUF_CONSTEXPR Msg_DeliverFrame::Msg_DeliverFrame(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.buffer_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.props_)*/nullptr
-  , /*decltype(_impl_.streamid_)*/0} {}
+  , /*decltype(_impl_.a_buffer_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_props_)*/nullptr
+  , /*decltype(_impl_.a_streamid_)*/0} {}
 struct Msg_DeliverFrameDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DeliverFrameDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -67,7 +67,7 @@ PROTOBUF_CONSTEXPR Msg_ReplyNumberOfCaptureDevices::Msg_ReplyNumberOfCaptureDevi
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.devicecount_)*/0} {}
+  , /*decltype(_impl_.a_devicecount_)*/0} {}
 struct Msg_ReplyNumberOfCaptureDevicesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyNumberOfCaptureDevicesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -81,7 +81,7 @@ PROTOBUF_CONSTEXPR Msg_ReplyNumberOfCapabilities::Msg_ReplyNumberOfCapabilities(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.capabilitycount_)*/0} {}
+  , /*decltype(_impl_.a_capabilitycount_)*/0} {}
 struct Msg_ReplyNumberOfCapabilitiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyNumberOfCapabilitiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -95,7 +95,7 @@ PROTOBUF_CONSTEXPR Msg_ReplyAllocateCapture::Msg_ReplyAllocateCapture(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.captureid_)*/0} {}
+  , /*decltype(_impl_.a_captureid_)*/0} {}
 struct Msg_ReplyAllocateCaptureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyAllocateCaptureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -109,7 +109,7 @@ PROTOBUF_CONSTEXPR Msg_ReplyGetCaptureCapability::Msg_ReplyGetCaptureCapability(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.cap_)*/nullptr} {}
+  , /*decltype(_impl_.a_cap_)*/nullptr} {}
 struct Msg_ReplyGetCaptureCapabilityDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyGetCaptureCapabilityDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -123,10 +123,10 @@ PROTOBUF_CONSTEXPR Msg_ReplyGetCaptureDevice::Msg_ReplyGetCaptureDevice(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.device_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.device_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.scary_)*/false
-  , /*decltype(_impl_.placeholder_)*/false} {}
+  , /*decltype(_impl_.a_device_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_device_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_scary_)*/false
+  , /*decltype(_impl_.a_placeholder_)*/false} {}
 struct Msg_ReplyGetCaptureDeviceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReplyGetCaptureDeviceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -188,7 +188,7 @@ PROTOBUF_CONSTEXPR Msg_NumberOfCaptureDevices::Msg_NumberOfCaptureDevices(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_NumberOfCaptureDevicesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NumberOfCaptureDevicesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -202,8 +202,8 @@ PROTOBUF_CONSTEXPR Msg_NumberOfCapabilities::Msg_NumberOfCapabilities(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.deviceuniqueidutf8_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_deviceuniqueidutf8_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_NumberOfCapabilitiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NumberOfCapabilitiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -217,9 +217,9 @@ PROTOBUF_CONSTEXPR Msg_GetCaptureCapability::Msg_GetCaptureCapability(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.unique_idutf8_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.capability_number_)*/0} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_unique_idutf8_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_capability_number_)*/0} {}
 struct Msg_GetCaptureCapabilityDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetCaptureCapabilityDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -233,8 +233,8 @@ PROTOBUF_CONSTEXPR Msg_GetCaptureDevice::Msg_GetCaptureDevice(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.deviceindex_)*/0} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_deviceindex_)*/0} {}
 struct Msg_GetCaptureDeviceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetCaptureDeviceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -248,9 +248,9 @@ PROTOBUF_CONSTEXPR Msg_AllocateCapture::Msg_AllocateCapture(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.unique_idutf8_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.windowid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_unique_idutf8_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_windowid_)*/uint64_t{0u}} {}
 struct Msg_AllocateCaptureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_AllocateCaptureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -264,8 +264,8 @@ PROTOBUF_CONSTEXPR Msg_ReleaseCapture::Msg_ReleaseCapture(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.captureid_)*/0} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_captureid_)*/0} {}
 struct Msg_ReleaseCaptureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReleaseCaptureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -279,9 +279,9 @@ PROTOBUF_CONSTEXPR Msg_StartCapture::Msg_StartCapture(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.capability_)*/nullptr
-  , /*decltype(_impl_.captureid_)*/0} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_capability_)*/nullptr
+  , /*decltype(_impl_.a_captureid_)*/0} {}
 struct Msg_StartCaptureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartCaptureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -295,8 +295,8 @@ PROTOBUF_CONSTEXPR Msg_FocusOnSelectedSource::Msg_FocusOnSelectedSource(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.captureid_)*/0} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_captureid_)*/0} {}
 struct Msg_FocusOnSelectedSourceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_FocusOnSelectedSourceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -310,8 +310,8 @@ PROTOBUF_CONSTEXPR Msg_StopCapture::Msg_StopCapture(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.captureid_)*/0} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_captureid_)*/0} {}
 struct Msg_StopCaptureDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StopCaptureDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -325,7 +325,7 @@ PROTOBUF_CONSTEXPR Msg_ReleaseFrame::Msg_ReleaseFrame(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.s_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_s_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_ReleaseFrameDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ReleaseFrameDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -339,7 +339,7 @@ PROTOBUF_CONSTEXPR Msg_EnsureInitialized::Msg_EnsureInitialized(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_engine_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct Msg_EnsureInitializedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EnsureInitializedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -363,7 +363,7 @@ namespace PCameras {
 class Msg_CaptureEnded::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_CaptureEnded>()._impl_._has_bits_);
-  static void set_has_streamid(HasBits* has_bits) {
+  static void set_has_a_streamid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -383,10 +383,10 @@ Msg_CaptureEnded::Msg_CaptureEnded(const Msg_CaptureEnded& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.streamid_){}};
+    , decltype(_impl_.a_streamid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.streamid_ = from._impl_.streamid_;
+  _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded)
 }
 
@@ -397,7 +397,7 @@ inline void Msg_CaptureEnded::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.streamid_){0}
+    , decltype(_impl_.a_streamid_){0}
   };
 }
 
@@ -424,7 +424,7 @@ void Msg_CaptureEnded::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.streamid_ = 0;
+  _impl_.a_streamid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -436,11 +436,11 @@ const char* Msg_CaptureEnded::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 streamId = 1;
+      // required sint32 a_streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_streamid(&has_bits);
-          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_streamid(&has_bits);
+          _impl_.a_streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -476,10 +476,10 @@ uint8_t* Msg_CaptureEnded::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 streamId = 1;
+  // required sint32 a_streamId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_streamid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_streamid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -494,9 +494,9 @@ size_t Msg_CaptureEnded::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_CaptureEnded)
   size_t total_size = 0;
 
-  // required sint32 streamId = 1;
-  if (_internal_has_streamid()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_streamid());
+  // required sint32 a_streamId = 1;
+  if (_internal_has_a_streamid()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_streamid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -523,8 +523,8 @@ void Msg_CaptureEnded::MergeFrom(const Msg_CaptureEnded& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_streamid()) {
-    _this->_internal_set_streamid(from._internal_streamid());
+  if (from._internal_has_a_streamid()) {
+    _this->_internal_set_a_streamid(from._internal_a_streamid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -545,7 +545,7 @@ void Msg_CaptureEnded::InternalSwap(Msg_CaptureEnded* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.streamid_, other->_impl_.streamid_);
+  swap(_impl_.a_streamid_, other->_impl_.a_streamid_);
 }
 
 std::string Msg_CaptureEnded::GetTypeName() const {
@@ -558,14 +558,14 @@ std::string Msg_CaptureEnded::GetTypeName() const {
 class Msg_DeliverFrame::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_DeliverFrame>()._impl_._has_bits_);
-  static void set_has_streamid(HasBits* has_bits) {
+  static void set_has_a_streamid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_buffer(HasBits* has_bits) {
+  static void set_has_a_buffer(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static const ::protobuf::mozilla::camera::VideoFrameProperties& props(const Msg_DeliverFrame* msg);
-  static void set_has_props(HasBits* has_bits) {
+  static const ::protobuf::mozilla::camera::VideoFrameProperties& a_props(const Msg_DeliverFrame* msg);
+  static void set_has_a_props(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -574,11 +574,11 @@ class Msg_DeliverFrame::_Internal {
 };
 
 const ::protobuf::mozilla::camera::VideoFrameProperties&
-Msg_DeliverFrame::_Internal::props(const Msg_DeliverFrame* msg) {
-  return *msg->_impl_.props_;
+Msg_DeliverFrame::_Internal::a_props(const Msg_DeliverFrame* msg) {
+  return *msg->_impl_.a_props_;
 }
-void Msg_DeliverFrame::clear_props() {
-  if (_impl_.props_ != nullptr) _impl_.props_->Clear();
+void Msg_DeliverFrame::clear_a_props() {
+  if (_impl_.a_props_ != nullptr) _impl_.a_props_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_DeliverFrame::Msg_DeliverFrame(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -593,23 +593,23 @@ Msg_DeliverFrame::Msg_DeliverFrame(const Msg_DeliverFrame& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.buffer_){}
-    , decltype(_impl_.props_){nullptr}
-    , decltype(_impl_.streamid_){}};
+    , decltype(_impl_.a_buffer_){}
+    , decltype(_impl_.a_props_){nullptr}
+    , decltype(_impl_.a_streamid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.buffer_.InitDefault();
+  _impl_.a_buffer_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.buffer_.Set("", GetArenaForAllocation());
+    _impl_.a_buffer_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_buffer()) {
-    _this->_impl_.buffer_.Set(from._internal_buffer(), 
+  if (from._internal_has_a_buffer()) {
+    _this->_impl_.a_buffer_.Set(from._internal_a_buffer(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_props()) {
-    _this->_impl_.props_ = new ::protobuf::mozilla::camera::VideoFrameProperties(*from._impl_.props_);
+  if (from._internal_has_a_props()) {
+    _this->_impl_.a_props_ = new ::protobuf::mozilla::camera::VideoFrameProperties(*from._impl_.a_props_);
   }
-  _this->_impl_.streamid_ = from._impl_.streamid_;
+  _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame)
 }
 
@@ -620,13 +620,13 @@ inline void Msg_DeliverFrame::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.buffer_){}
-    , decltype(_impl_.props_){nullptr}
-    , decltype(_impl_.streamid_){0}
+    , decltype(_impl_.a_buffer_){}
+    , decltype(_impl_.a_props_){nullptr}
+    , decltype(_impl_.a_streamid_){0}
   };
-  _impl_.buffer_.InitDefault();
+  _impl_.a_buffer_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.buffer_.Set("", GetArenaForAllocation());
+    _impl_.a_buffer_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -641,8 +641,8 @@ Msg_DeliverFrame::~Msg_DeliverFrame() {
 
 inline void Msg_DeliverFrame::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.buffer_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.props_;
+  _impl_.a_buffer_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_props_;
 }
 
 void Msg_DeliverFrame::SetCachedSize(int size) const {
@@ -658,14 +658,14 @@ void Msg_DeliverFrame::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.buffer_.ClearNonDefaultToEmpty();
+      _impl_.a_buffer_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.props_ != nullptr);
-      _impl_.props_->Clear();
+      GOOGLE_DCHECK(_impl_.a_props_ != nullptr);
+      _impl_.a_props_->Clear();
     }
   }
-  _impl_.streamid_ = 0;
+  _impl_.a_streamid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -677,28 +677,28 @@ const char* Msg_DeliverFrame::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 streamId = 1;
+      // required sint32 a_streamId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_streamid(&has_bits);
-          _impl_.streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_streamid(&has_bits);
+          _impl_.a_streamid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes buffer = 2;
+      // required bytes a_buffer = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_buffer();
+          auto str = _internal_mutable_a_buffer();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.camera.VideoFrameProperties props = 3;
+      // required .protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_props(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_props(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -734,23 +734,23 @@ uint8_t* Msg_DeliverFrame::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 streamId = 1;
+  // required sint32 a_streamId = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_streamid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_streamid(), target);
   }
 
-  // required bytes buffer = 2;
+  // required bytes a_buffer = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_buffer(), target);
+        2, this->_internal_a_buffer(), target);
   }
 
-  // required .protobuf.mozilla.camera.VideoFrameProperties props = 3;
+  // required .protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::props(this),
-        _Internal::props(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(3, _Internal::a_props(this),
+        _Internal::a_props(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -765,23 +765,23 @@ size_t Msg_DeliverFrame::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_DeliverFrame)
   size_t total_size = 0;
 
-  if (_internal_has_buffer()) {
-    // required bytes buffer = 2;
+  if (_internal_has_a_buffer()) {
+    // required bytes a_buffer = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_buffer());
+        this->_internal_a_buffer());
   }
 
-  if (_internal_has_props()) {
-    // required .protobuf.mozilla.camera.VideoFrameProperties props = 3;
+  if (_internal_has_a_props()) {
+    // required .protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.props_);
+        *_impl_.a_props_);
   }
 
-  if (_internal_has_streamid()) {
-    // required sint32 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_streamid());
+  if (_internal_has_a_streamid()) {
+    // required sint32 a_streamId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_streamid());
   }
 
   return total_size;
@@ -791,18 +791,18 @@ size_t Msg_DeliverFrame::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes buffer = 2;
+    // required bytes a_buffer = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_buffer());
+        this->_internal_a_buffer());
 
-    // required .protobuf.mozilla.camera.VideoFrameProperties props = 3;
+    // required .protobuf.mozilla.camera.VideoFrameProperties a_props = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.props_);
+        *_impl_.a_props_);
 
-    // required sint32 streamId = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_streamid());
+    // required sint32 a_streamId = 1;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_streamid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -835,14 +835,14 @@ void Msg_DeliverFrame::MergeFrom(const Msg_DeliverFrame& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_buffer(from._internal_buffer());
+      _this->_internal_set_a_buffer(from._internal_a_buffer());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_props()->::protobuf::mozilla::camera::VideoFrameProperties::MergeFrom(
-          from._internal_props());
+      _this->_internal_mutable_a_props()->::protobuf::mozilla::camera::VideoFrameProperties::MergeFrom(
+          from._internal_a_props());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.streamid_ = from._impl_.streamid_;
+      _this->_impl_.a_streamid_ = from._impl_.a_streamid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -858,8 +858,8 @@ void Msg_DeliverFrame::CopyFrom(const Msg_DeliverFrame& from) {
 
 bool Msg_DeliverFrame::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_props()) {
-    if (!_impl_.props_->IsInitialized()) return false;
+  if (_internal_has_a_props()) {
+    if (!_impl_.a_props_->IsInitialized()) return false;
   }
   return true;
 }
@@ -871,15 +871,15 @@ void Msg_DeliverFrame::InternalSwap(Msg_DeliverFrame* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.buffer_, lhs_arena,
-      &other->_impl_.buffer_, rhs_arena
+      &_impl_.a_buffer_, lhs_arena,
+      &other->_impl_.a_buffer_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_DeliverFrame, _impl_.streamid_)
-      + sizeof(Msg_DeliverFrame::_impl_.streamid_)
-      - PROTOBUF_FIELD_OFFSET(Msg_DeliverFrame, _impl_.props_)>(
-          reinterpret_cast<char*>(&_impl_.props_),
-          reinterpret_cast<char*>(&other->_impl_.props_));
+      PROTOBUF_FIELD_OFFSET(Msg_DeliverFrame, _impl_.a_streamid_)
+      + sizeof(Msg_DeliverFrame::_impl_.a_streamid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_DeliverFrame, _impl_.a_props_)>(
+          reinterpret_cast<char*>(&_impl_.a_props_),
+          reinterpret_cast<char*>(&other->_impl_.a_props_));
 }
 
 std::string Msg_DeliverFrame::GetTypeName() const {
@@ -1040,7 +1040,7 @@ std::string Msg_DeviceChange::GetTypeName() const {
 class Msg_ReplyNumberOfCaptureDevices::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReplyNumberOfCaptureDevices>()._impl_._has_bits_);
-  static void set_has_devicecount(HasBits* has_bits) {
+  static void set_has_a_devicecount(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1060,10 +1060,10 @@ Msg_ReplyNumberOfCaptureDevices::Msg_ReplyNumberOfCaptureDevices(const Msg_Reply
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.devicecount_){}};
+    , decltype(_impl_.a_devicecount_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.devicecount_ = from._impl_.devicecount_;
+  _this->_impl_.a_devicecount_ = from._impl_.a_devicecount_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices)
 }
 
@@ -1074,7 +1074,7 @@ inline void Msg_ReplyNumberOfCaptureDevices::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.devicecount_){0}
+    , decltype(_impl_.a_devicecount_){0}
   };
 }
 
@@ -1101,7 +1101,7 @@ void Msg_ReplyNumberOfCaptureDevices::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.devicecount_ = 0;
+  _impl_.a_devicecount_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1113,11 +1113,11 @@ const char* Msg_ReplyNumberOfCaptureDevices::_InternalParse(const char* ptr, ::_
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 deviceCount = 1;
+      // required sint32 a_deviceCount = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_devicecount(&has_bits);
-          _impl_.devicecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_devicecount(&has_bits);
+          _impl_.a_devicecount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1153,10 +1153,10 @@ uint8_t* Msg_ReplyNumberOfCaptureDevices::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 deviceCount = 1;
+  // required sint32 a_deviceCount = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_devicecount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_devicecount(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1171,9 +1171,9 @@ size_t Msg_ReplyNumberOfCaptureDevices::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCaptureDevices)
   size_t total_size = 0;
 
-  // required sint32 deviceCount = 1;
-  if (_internal_has_devicecount()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_devicecount());
+  // required sint32 a_deviceCount = 1;
+  if (_internal_has_a_devicecount()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_devicecount());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1200,8 +1200,8 @@ void Msg_ReplyNumberOfCaptureDevices::MergeFrom(const Msg_ReplyNumberOfCaptureDe
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_devicecount()) {
-    _this->_internal_set_devicecount(from._internal_devicecount());
+  if (from._internal_has_a_devicecount()) {
+    _this->_internal_set_a_devicecount(from._internal_a_devicecount());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1222,7 +1222,7 @@ void Msg_ReplyNumberOfCaptureDevices::InternalSwap(Msg_ReplyNumberOfCaptureDevic
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.devicecount_, other->_impl_.devicecount_);
+  swap(_impl_.a_devicecount_, other->_impl_.a_devicecount_);
 }
 
 std::string Msg_ReplyNumberOfCaptureDevices::GetTypeName() const {
@@ -1235,7 +1235,7 @@ std::string Msg_ReplyNumberOfCaptureDevices::GetTypeName() const {
 class Msg_ReplyNumberOfCapabilities::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReplyNumberOfCapabilities>()._impl_._has_bits_);
-  static void set_has_capabilitycount(HasBits* has_bits) {
+  static void set_has_a_capabilitycount(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1255,10 +1255,10 @@ Msg_ReplyNumberOfCapabilities::Msg_ReplyNumberOfCapabilities(const Msg_ReplyNumb
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.capabilitycount_){}};
+    , decltype(_impl_.a_capabilitycount_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.capabilitycount_ = from._impl_.capabilitycount_;
+  _this->_impl_.a_capabilitycount_ = from._impl_.a_capabilitycount_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities)
 }
 
@@ -1269,7 +1269,7 @@ inline void Msg_ReplyNumberOfCapabilities::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.capabilitycount_){0}
+    , decltype(_impl_.a_capabilitycount_){0}
   };
 }
 
@@ -1296,7 +1296,7 @@ void Msg_ReplyNumberOfCapabilities::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.capabilitycount_ = 0;
+  _impl_.a_capabilitycount_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1308,11 +1308,11 @@ const char* Msg_ReplyNumberOfCapabilities::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 capabilityCount = 1;
+      // required sint32 a_capabilityCount = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_capabilitycount(&has_bits);
-          _impl_.capabilitycount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_capabilitycount(&has_bits);
+          _impl_.a_capabilitycount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1348,10 +1348,10 @@ uint8_t* Msg_ReplyNumberOfCapabilities::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 capabilityCount = 1;
+  // required sint32 a_capabilityCount = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_capabilitycount(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_capabilitycount(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1366,9 +1366,9 @@ size_t Msg_ReplyNumberOfCapabilities::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyNumberOfCapabilities)
   size_t total_size = 0;
 
-  // required sint32 capabilityCount = 1;
-  if (_internal_has_capabilitycount()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_capabilitycount());
+  // required sint32 a_capabilityCount = 1;
+  if (_internal_has_a_capabilitycount()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_capabilitycount());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1395,8 +1395,8 @@ void Msg_ReplyNumberOfCapabilities::MergeFrom(const Msg_ReplyNumberOfCapabilitie
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_capabilitycount()) {
-    _this->_internal_set_capabilitycount(from._internal_capabilitycount());
+  if (from._internal_has_a_capabilitycount()) {
+    _this->_internal_set_a_capabilitycount(from._internal_a_capabilitycount());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1417,7 +1417,7 @@ void Msg_ReplyNumberOfCapabilities::InternalSwap(Msg_ReplyNumberOfCapabilities* 
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.capabilitycount_, other->_impl_.capabilitycount_);
+  swap(_impl_.a_capabilitycount_, other->_impl_.a_capabilitycount_);
 }
 
 std::string Msg_ReplyNumberOfCapabilities::GetTypeName() const {
@@ -1430,7 +1430,7 @@ std::string Msg_ReplyNumberOfCapabilities::GetTypeName() const {
 class Msg_ReplyAllocateCapture::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReplyAllocateCapture>()._impl_._has_bits_);
-  static void set_has_captureid(HasBits* has_bits) {
+  static void set_has_a_captureid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1450,10 +1450,10 @@ Msg_ReplyAllocateCapture::Msg_ReplyAllocateCapture(const Msg_ReplyAllocateCaptur
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.captureid_){}};
+    , decltype(_impl_.a_captureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _this->_impl_.captureid_ = from._impl_.captureid_;
+  _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture)
 }
 
@@ -1464,7 +1464,7 @@ inline void Msg_ReplyAllocateCapture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.captureid_){0}
+    , decltype(_impl_.a_captureid_){0}
   };
 }
 
@@ -1491,7 +1491,7 @@ void Msg_ReplyAllocateCapture::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.captureid_ = 0;
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1503,11 +1503,11 @@ const char* Msg_ReplyAllocateCapture::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 captureId = 1;
+      // required sint32 a_captureId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_captureid(&has_bits);
+          _impl_.a_captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1543,10 +1543,10 @@ uint8_t* Msg_ReplyAllocateCapture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 captureId = 1;
+  // required sint32 a_captureId = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1561,9 +1561,9 @@ size_t Msg_ReplyAllocateCapture::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyAllocateCapture)
   size_t total_size = 0;
 
-  // required sint32 captureId = 1;
-  if (_internal_has_captureid()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+  // required sint32 a_captureId = 1;
+  if (_internal_has_a_captureid()) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1590,8 +1590,8 @@ void Msg_ReplyAllocateCapture::MergeFrom(const Msg_ReplyAllocateCapture& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_captureid()) {
-    _this->_internal_set_captureid(from._internal_captureid());
+  if (from._internal_has_a_captureid()) {
+    _this->_internal_set_a_captureid(from._internal_a_captureid());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1612,7 +1612,7 @@ void Msg_ReplyAllocateCapture::InternalSwap(Msg_ReplyAllocateCapture* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.captureid_, other->_impl_.captureid_);
+  swap(_impl_.a_captureid_, other->_impl_.a_captureid_);
 }
 
 std::string Msg_ReplyAllocateCapture::GetTypeName() const {
@@ -1625,8 +1625,8 @@ std::string Msg_ReplyAllocateCapture::GetTypeName() const {
 class Msg_ReplyGetCaptureCapability::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReplyGetCaptureCapability>()._impl_._has_bits_);
-  static const ::protobuf::mozilla::camera::VideoCaptureCapability& cap(const Msg_ReplyGetCaptureCapability* msg);
-  static void set_has_cap(HasBits* has_bits) {
+  static const ::protobuf::mozilla::camera::VideoCaptureCapability& a_cap(const Msg_ReplyGetCaptureCapability* msg);
+  static void set_has_a_cap(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1635,11 +1635,11 @@ class Msg_ReplyGetCaptureCapability::_Internal {
 };
 
 const ::protobuf::mozilla::camera::VideoCaptureCapability&
-Msg_ReplyGetCaptureCapability::_Internal::cap(const Msg_ReplyGetCaptureCapability* msg) {
-  return *msg->_impl_.cap_;
+Msg_ReplyGetCaptureCapability::_Internal::a_cap(const Msg_ReplyGetCaptureCapability* msg) {
+  return *msg->_impl_.a_cap_;
 }
-void Msg_ReplyGetCaptureCapability::clear_cap() {
-  if (_impl_.cap_ != nullptr) _impl_.cap_->Clear();
+void Msg_ReplyGetCaptureCapability::clear_a_cap() {
+  if (_impl_.a_cap_ != nullptr) _impl_.a_cap_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 Msg_ReplyGetCaptureCapability::Msg_ReplyGetCaptureCapability(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1654,11 +1654,11 @@ Msg_ReplyGetCaptureCapability::Msg_ReplyGetCaptureCapability(const Msg_ReplyGetC
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.cap_){nullptr}};
+    , decltype(_impl_.a_cap_){nullptr}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  if (from._internal_has_cap()) {
-    _this->_impl_.cap_ = new ::protobuf::mozilla::camera::VideoCaptureCapability(*from._impl_.cap_);
+  if (from._internal_has_a_cap()) {
+    _this->_impl_.a_cap_ = new ::protobuf::mozilla::camera::VideoCaptureCapability(*from._impl_.a_cap_);
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability)
 }
@@ -1670,7 +1670,7 @@ inline void Msg_ReplyGetCaptureCapability::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.cap_){nullptr}
+    , decltype(_impl_.a_cap_){nullptr}
   };
 }
 
@@ -1685,7 +1685,7 @@ Msg_ReplyGetCaptureCapability::~Msg_ReplyGetCaptureCapability() {
 
 inline void Msg_ReplyGetCaptureCapability::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.cap_;
+  if (this != internal_default_instance()) delete _impl_.a_cap_;
 }
 
 void Msg_ReplyGetCaptureCapability::SetCachedSize(int size) const {
@@ -1700,8 +1700,8 @@ void Msg_ReplyGetCaptureCapability::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.cap_ != nullptr);
-    _impl_.cap_->Clear();
+    GOOGLE_DCHECK(_impl_.a_cap_ != nullptr);
+    _impl_.a_cap_->Clear();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -1714,10 +1714,10 @@ const char* Msg_ReplyGetCaptureCapability::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.camera.VideoCaptureCapability cap = 1;
+      // required .protobuf.mozilla.camera.VideoCaptureCapability a_cap = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_cap(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_cap(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1753,11 +1753,11 @@ uint8_t* Msg_ReplyGetCaptureCapability::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.camera.VideoCaptureCapability cap = 1;
+  // required .protobuf.mozilla.camera.VideoCaptureCapability a_cap = 1;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::cap(this),
-        _Internal::cap(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::a_cap(this),
+        _Internal::a_cap(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1772,11 +1772,11 @@ size_t Msg_ReplyGetCaptureCapability::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureCapability)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.camera.VideoCaptureCapability cap = 1;
-  if (_internal_has_cap()) {
+  // required .protobuf.mozilla.camera.VideoCaptureCapability a_cap = 1;
+  if (_internal_has_a_cap()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.cap_);
+        *_impl_.a_cap_);
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1803,9 +1803,9 @@ void Msg_ReplyGetCaptureCapability::MergeFrom(const Msg_ReplyGetCaptureCapabilit
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_cap()) {
-    _this->_internal_mutable_cap()->::protobuf::mozilla::camera::VideoCaptureCapability::MergeFrom(
-        from._internal_cap());
+  if (from._internal_has_a_cap()) {
+    _this->_internal_mutable_a_cap()->::protobuf::mozilla::camera::VideoCaptureCapability::MergeFrom(
+        from._internal_a_cap());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1819,8 +1819,8 @@ void Msg_ReplyGetCaptureCapability::CopyFrom(const Msg_ReplyGetCaptureCapability
 
 bool Msg_ReplyGetCaptureCapability::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_cap()) {
-    if (!_impl_.cap_->IsInitialized()) return false;
+  if (_internal_has_a_cap()) {
+    if (!_impl_.a_cap_->IsInitialized()) return false;
   }
   return true;
 }
@@ -1829,7 +1829,7 @@ void Msg_ReplyGetCaptureCapability::InternalSwap(Msg_ReplyGetCaptureCapability* 
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.cap_, other->_impl_.cap_);
+  swap(_impl_.a_cap_, other->_impl_.a_cap_);
 }
 
 std::string Msg_ReplyGetCaptureCapability::GetTypeName() const {
@@ -1842,16 +1842,16 @@ std::string Msg_ReplyGetCaptureCapability::GetTypeName() const {
 class Msg_ReplyGetCaptureDevice::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReplyGetCaptureDevice>()._impl_._has_bits_);
-  static void set_has_device_name(HasBits* has_bits) {
+  static void set_has_a_device_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_device_id(HasBits* has_bits) {
+  static void set_has_a_device_id(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_scary(HasBits* has_bits) {
+  static void set_has_a_scary(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static void set_has_placeholder(HasBits* has_bits) {
+  static void set_has_a_placeholder(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -1871,31 +1871,31 @@ Msg_ReplyGetCaptureDevice::Msg_ReplyGetCaptureDevice(const Msg_ReplyGetCaptureDe
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.device_name_){}
-    , decltype(_impl_.device_id_){}
-    , decltype(_impl_.scary_){}
-    , decltype(_impl_.placeholder_){}};
+    , decltype(_impl_.a_device_name_){}
+    , decltype(_impl_.a_device_id_){}
+    , decltype(_impl_.a_scary_){}
+    , decltype(_impl_.a_placeholder_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.device_name_.InitDefault();
+  _impl_.a_device_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.device_name_.Set("", GetArenaForAllocation());
+    _impl_.a_device_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_device_name()) {
-    _this->_impl_.device_name_.Set(from._internal_device_name(), 
+  if (from._internal_has_a_device_name()) {
+    _this->_impl_.a_device_name_.Set(from._internal_a_device_name(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.device_id_.InitDefault();
+  _impl_.a_device_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.device_id_.Set("", GetArenaForAllocation());
+    _impl_.a_device_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_device_id()) {
-    _this->_impl_.device_id_.Set(from._internal_device_id(), 
+  if (from._internal_has_a_device_id()) {
+    _this->_impl_.a_device_id_.Set(from._internal_a_device_id(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.scary_, &from._impl_.scary_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.placeholder_) -
-    reinterpret_cast<char*>(&_impl_.scary_)) + sizeof(_impl_.placeholder_));
+  ::memcpy(&_impl_.a_scary_, &from._impl_.a_scary_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_placeholder_) -
+    reinterpret_cast<char*>(&_impl_.a_scary_)) + sizeof(_impl_.a_placeholder_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice)
 }
 
@@ -1906,18 +1906,18 @@ inline void Msg_ReplyGetCaptureDevice::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.device_name_){}
-    , decltype(_impl_.device_id_){}
-    , decltype(_impl_.scary_){false}
-    , decltype(_impl_.placeholder_){false}
+    , decltype(_impl_.a_device_name_){}
+    , decltype(_impl_.a_device_id_){}
+    , decltype(_impl_.a_scary_){false}
+    , decltype(_impl_.a_placeholder_){false}
   };
-  _impl_.device_name_.InitDefault();
+  _impl_.a_device_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.device_name_.Set("", GetArenaForAllocation());
+    _impl_.a_device_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.device_id_.InitDefault();
+  _impl_.a_device_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.device_id_.Set("", GetArenaForAllocation());
+    _impl_.a_device_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -1932,8 +1932,8 @@ Msg_ReplyGetCaptureDevice::~Msg_ReplyGetCaptureDevice() {
 
 inline void Msg_ReplyGetCaptureDevice::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.device_name_.Destroy();
-  _impl_.device_id_.Destroy();
+  _impl_.a_device_name_.Destroy();
+  _impl_.a_device_id_.Destroy();
 }
 
 void Msg_ReplyGetCaptureDevice::SetCachedSize(int size) const {
@@ -1949,15 +1949,15 @@ void Msg_ReplyGetCaptureDevice::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.device_name_.ClearNonDefaultToEmpty();
+      _impl_.a_device_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.device_id_.ClearNonDefaultToEmpty();
+      _impl_.a_device_id_.ClearNonDefaultToEmpty();
     }
   }
-  ::memset(&_impl_.scary_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.placeholder_) -
-      reinterpret_cast<char*>(&_impl_.scary_)) + sizeof(_impl_.placeholder_));
+  ::memset(&_impl_.a_scary_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_placeholder_) -
+      reinterpret_cast<char*>(&_impl_.a_scary_)) + sizeof(_impl_.a_placeholder_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1969,38 +1969,38 @@ const char* Msg_ReplyGetCaptureDevice::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes device_name = 1;
+      // required bytes a_device_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_device_name();
+          auto str = _internal_mutable_a_device_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes device_id = 2;
+      // required bytes a_device_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_device_id();
+          auto str = _internal_mutable_a_device_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool scary = 3;
+      // required bool a_scary = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_scary(&has_bits);
-          _impl_.scary_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_scary(&has_bits);
+          _impl_.a_scary_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool placeholder = 4;
+      // required bool a_placeholder = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_placeholder(&has_bits);
-          _impl_.placeholder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_placeholder(&has_bits);
+          _impl_.a_placeholder_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2036,28 +2036,28 @@ uint8_t* Msg_ReplyGetCaptureDevice::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes device_name = 1;
+  // required bytes a_device_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_device_name(), target);
+        1, this->_internal_a_device_name(), target);
   }
 
-  // required bytes device_id = 2;
+  // required bytes a_device_id = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_device_id(), target);
+        2, this->_internal_a_device_id(), target);
   }
 
-  // required bool scary = 3;
+  // required bool a_scary = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_scary(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_scary(), target);
   }
 
-  // required bool placeholder = 4;
+  // required bool a_placeholder = 4;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_placeholder(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_placeholder(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2072,27 +2072,27 @@ size_t Msg_ReplyGetCaptureDevice::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_ReplyGetCaptureDevice)
   size_t total_size = 0;
 
-  if (_internal_has_device_name()) {
-    // required bytes device_name = 1;
+  if (_internal_has_a_device_name()) {
+    // required bytes a_device_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_device_name());
+        this->_internal_a_device_name());
   }
 
-  if (_internal_has_device_id()) {
-    // required bytes device_id = 2;
+  if (_internal_has_a_device_id()) {
+    // required bytes a_device_id = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_device_id());
+        this->_internal_a_device_id());
   }
 
-  if (_internal_has_scary()) {
-    // required bool scary = 3;
+  if (_internal_has_a_scary()) {
+    // required bool a_scary = 3;
     total_size += 1 + 1;
   }
 
-  if (_internal_has_placeholder()) {
-    // required bool placeholder = 4;
+  if (_internal_has_a_placeholder()) {
+    // required bool a_placeholder = 4;
     total_size += 1 + 1;
   }
 
@@ -2103,20 +2103,20 @@ size_t Msg_ReplyGetCaptureDevice::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes device_name = 1;
+    // required bytes a_device_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_device_name());
+        this->_internal_a_device_name());
 
-    // required bytes device_id = 2;
+    // required bytes a_device_id = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_device_id());
+        this->_internal_a_device_id());
 
-    // required bool scary = 3;
+    // required bool a_scary = 3;
     total_size += 1 + 1;
 
-    // required bool placeholder = 4;
+    // required bool a_placeholder = 4;
     total_size += 1 + 1;
 
   } else {
@@ -2150,16 +2150,16 @@ void Msg_ReplyGetCaptureDevice::MergeFrom(const Msg_ReplyGetCaptureDevice& from)
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000000fu) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_device_name(from._internal_device_name());
+      _this->_internal_set_a_device_name(from._internal_a_device_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_device_id(from._internal_device_id());
+      _this->_internal_set_a_device_id(from._internal_a_device_id());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.scary_ = from._impl_.scary_;
+      _this->_impl_.a_scary_ = from._impl_.a_scary_;
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.placeholder_ = from._impl_.placeholder_;
+      _this->_impl_.a_placeholder_ = from._impl_.a_placeholder_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -2185,19 +2185,19 @@ void Msg_ReplyGetCaptureDevice::InternalSwap(Msg_ReplyGetCaptureDevice* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.device_name_, lhs_arena,
-      &other->_impl_.device_name_, rhs_arena
+      &_impl_.a_device_name_, lhs_arena,
+      &other->_impl_.a_device_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.device_id_, lhs_arena,
-      &other->_impl_.device_id_, rhs_arena
+      &_impl_.a_device_id_, lhs_arena,
+      &other->_impl_.a_device_id_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_ReplyGetCaptureDevice, _impl_.placeholder_)
-      + sizeof(Msg_ReplyGetCaptureDevice::_impl_.placeholder_)
-      - PROTOBUF_FIELD_OFFSET(Msg_ReplyGetCaptureDevice, _impl_.scary_)>(
-          reinterpret_cast<char*>(&_impl_.scary_),
-          reinterpret_cast<char*>(&other->_impl_.scary_));
+      PROTOBUF_FIELD_OFFSET(Msg_ReplyGetCaptureDevice, _impl_.a_placeholder_)
+      + sizeof(Msg_ReplyGetCaptureDevice::_impl_.a_placeholder_)
+      - PROTOBUF_FIELD_OFFSET(Msg_ReplyGetCaptureDevice, _impl_.a_scary_)>(
+          reinterpret_cast<char*>(&_impl_.a_scary_),
+          reinterpret_cast<char*>(&other->_impl_.a_scary_));
 }
 
 std::string Msg_ReplyGetCaptureDevice::GetTypeName() const {
@@ -2802,7 +2802,7 @@ std::string Reply___delete__::GetTypeName() const {
 class Msg_NumberOfCaptureDevices::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_NumberOfCaptureDevices>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -2822,15 +2822,15 @@ Msg_NumberOfCaptureDevices::Msg_NumberOfCaptureDevices(const Msg_NumberOfCapture
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}};
+    , decltype(_impl_.a_engine_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices)
@@ -2843,11 +2843,11 @@ inline void Msg_NumberOfCaptureDevices::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
+    , decltype(_impl_.a_engine_){}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -2862,7 +2862,7 @@ Msg_NumberOfCaptureDevices::~Msg_NumberOfCaptureDevices() {
 
 inline void Msg_NumberOfCaptureDevices::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
+  _impl_.a_engine_.Destroy();
 }
 
 void Msg_NumberOfCaptureDevices::SetCachedSize(int size) const {
@@ -2877,7 +2877,7 @@ void Msg_NumberOfCaptureDevices::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.engine_.ClearNonDefaultToEmpty();
+    _impl_.a_engine_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2890,10 +2890,10 @@ const char* Msg_NumberOfCaptureDevices::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -2930,10 +2930,10 @@ uint8_t* Msg_NumberOfCaptureDevices::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2948,11 +2948,11 @@ size_t Msg_NumberOfCaptureDevices::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_NumberOfCaptureDevices)
   size_t total_size = 0;
 
-  // required bytes engine = 1;
-  if (_internal_has_engine()) {
+  // required bytes a_engine = 1;
+  if (_internal_has_a_engine()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2979,8 +2979,8 @@ void Msg_NumberOfCaptureDevices::MergeFrom(const Msg_NumberOfCaptureDevices& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_engine()) {
-    _this->_internal_set_engine(from._internal_engine());
+  if (from._internal_has_a_engine()) {
+    _this->_internal_set_a_engine(from._internal_a_engine());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -3004,8 +3004,8 @@ void Msg_NumberOfCaptureDevices::InternalSwap(Msg_NumberOfCaptureDevices* other)
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
 }
 
@@ -3019,10 +3019,10 @@ std::string Msg_NumberOfCaptureDevices::GetTypeName() const {
 class Msg_NumberOfCapabilities::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_NumberOfCapabilities>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_deviceuniqueidutf8(HasBits* has_bits) {
+  static void set_has_a_deviceuniqueidutf8(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3042,24 +3042,24 @@ Msg_NumberOfCapabilities::Msg_NumberOfCapabilities(const Msg_NumberOfCapabilitie
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.deviceuniqueidutf8_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_deviceuniqueidutf8_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.deviceuniqueidutf8_.InitDefault();
+  _impl_.a_deviceuniqueidutf8_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.deviceuniqueidutf8_.Set("", GetArenaForAllocation());
+    _impl_.a_deviceuniqueidutf8_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_deviceuniqueidutf8()) {
-    _this->_impl_.deviceuniqueidutf8_.Set(from._internal_deviceuniqueidutf8(), 
+  if (from._internal_has_a_deviceuniqueidutf8()) {
+    _this->_impl_.a_deviceuniqueidutf8_.Set(from._internal_a_deviceuniqueidutf8(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities)
@@ -3072,16 +3072,16 @@ inline void Msg_NumberOfCapabilities::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.deviceuniqueidutf8_){}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_deviceuniqueidutf8_){}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.deviceuniqueidutf8_.InitDefault();
+  _impl_.a_deviceuniqueidutf8_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.deviceuniqueidutf8_.Set("", GetArenaForAllocation());
+    _impl_.a_deviceuniqueidutf8_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3096,8 +3096,8 @@ Msg_NumberOfCapabilities::~Msg_NumberOfCapabilities() {
 
 inline void Msg_NumberOfCapabilities::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
-  _impl_.deviceuniqueidutf8_.Destroy();
+  _impl_.a_engine_.Destroy();
+  _impl_.a_deviceuniqueidutf8_.Destroy();
 }
 
 void Msg_NumberOfCapabilities::SetCachedSize(int size) const {
@@ -3113,10 +3113,10 @@ void Msg_NumberOfCapabilities::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.engine_.ClearNonDefaultToEmpty();
+      _impl_.a_engine_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.deviceuniqueidutf8_.ClearNonDefaultToEmpty();
+      _impl_.a_deviceuniqueidutf8_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -3130,19 +3130,19 @@ const char* Msg_NumberOfCapabilities::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes deviceUniqueIdUTF8 = 2;
+      // required bytes a_deviceUniqueIdUTF8 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_deviceuniqueidutf8();
+          auto str = _internal_mutable_a_deviceuniqueidutf8();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -3179,16 +3179,16 @@ uint8_t* Msg_NumberOfCapabilities::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required bytes deviceUniqueIdUTF8 = 2;
+  // required bytes a_deviceUniqueIdUTF8 = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_deviceuniqueidutf8(), target);
+        2, this->_internal_a_deviceuniqueidutf8(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3203,18 +3203,18 @@ size_t Msg_NumberOfCapabilities::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_NumberOfCapabilities)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_deviceuniqueidutf8()) {
-    // required bytes deviceUniqueIdUTF8 = 2;
+  if (_internal_has_a_deviceuniqueidutf8()) {
+    // required bytes a_deviceUniqueIdUTF8 = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_deviceuniqueidutf8());
+        this->_internal_a_deviceuniqueidutf8());
   }
 
   return total_size;
@@ -3224,15 +3224,15 @@ size_t Msg_NumberOfCapabilities::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required bytes deviceUniqueIdUTF8 = 2;
+    // required bytes a_deviceUniqueIdUTF8 = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_deviceuniqueidutf8());
+        this->_internal_a_deviceuniqueidutf8());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3265,10 +3265,10 @@ void Msg_NumberOfCapabilities::MergeFrom(const Msg_NumberOfCapabilities& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_deviceuniqueidutf8(from._internal_deviceuniqueidutf8());
+      _this->_internal_set_a_deviceuniqueidutf8(from._internal_a_deviceuniqueidutf8());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -3293,12 +3293,12 @@ void Msg_NumberOfCapabilities::InternalSwap(Msg_NumberOfCapabilities* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.deviceuniqueidutf8_, lhs_arena,
-      &other->_impl_.deviceuniqueidutf8_, rhs_arena
+      &_impl_.a_deviceuniqueidutf8_, lhs_arena,
+      &other->_impl_.a_deviceuniqueidutf8_, rhs_arena
   );
 }
 
@@ -3312,13 +3312,13 @@ std::string Msg_NumberOfCapabilities::GetTypeName() const {
 class Msg_GetCaptureCapability::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_GetCaptureCapability>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_unique_idutf8(HasBits* has_bits) {
+  static void set_has_a_unique_idutf8(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_capability_number(HasBits* has_bits) {
+  static void set_has_a_capability_number(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3338,28 +3338,28 @@ Msg_GetCaptureCapability::Msg_GetCaptureCapability(const Msg_GetCaptureCapabilit
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.unique_idutf8_){}
-    , decltype(_impl_.capability_number_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_unique_idutf8_){}
+    , decltype(_impl_.a_capability_number_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.unique_idutf8_.InitDefault();
+  _impl_.a_unique_idutf8_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_unique_idutf8()) {
-    _this->_impl_.unique_idutf8_.Set(from._internal_unique_idutf8(), 
+  if (from._internal_has_a_unique_idutf8()) {
+    _this->_impl_.a_unique_idutf8_.Set(from._internal_a_unique_idutf8(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.capability_number_ = from._impl_.capability_number_;
+  _this->_impl_.a_capability_number_ = from._impl_.a_capability_number_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability)
 }
 
@@ -3370,17 +3370,17 @@ inline void Msg_GetCaptureCapability::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.unique_idutf8_){}
-    , decltype(_impl_.capability_number_){0}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_unique_idutf8_){}
+    , decltype(_impl_.a_capability_number_){0}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.unique_idutf8_.InitDefault();
+  _impl_.a_unique_idutf8_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3395,8 +3395,8 @@ Msg_GetCaptureCapability::~Msg_GetCaptureCapability() {
 
 inline void Msg_GetCaptureCapability::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
-  _impl_.unique_idutf8_.Destroy();
+  _impl_.a_engine_.Destroy();
+  _impl_.a_unique_idutf8_.Destroy();
 }
 
 void Msg_GetCaptureCapability::SetCachedSize(int size) const {
@@ -3412,13 +3412,13 @@ void Msg_GetCaptureCapability::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.engine_.ClearNonDefaultToEmpty();
+      _impl_.a_engine_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.unique_idutf8_.ClearNonDefaultToEmpty();
+      _impl_.a_unique_idutf8_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.capability_number_ = 0;
+  _impl_.a_capability_number_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -3430,29 +3430,29 @@ const char* Msg_GetCaptureCapability::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes unique_idUTF8 = 2;
+      // required bytes a_unique_idUTF8 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_unique_idutf8();
+          auto str = _internal_mutable_a_unique_idutf8();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 capability_number = 3;
+      // required sint32 a_capability_number = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_capability_number(&has_bits);
-          _impl_.capability_number_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_capability_number(&has_bits);
+          _impl_.a_capability_number_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3488,22 +3488,22 @@ uint8_t* Msg_GetCaptureCapability::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required bytes unique_idUTF8 = 2;
+  // required bytes a_unique_idUTF8 = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_unique_idutf8(), target);
+        2, this->_internal_a_unique_idutf8(), target);
   }
 
-  // required sint32 capability_number = 3;
+  // required sint32 a_capability_number = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_capability_number(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_capability_number(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3518,23 +3518,23 @@ size_t Msg_GetCaptureCapability::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_GetCaptureCapability)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_unique_idutf8()) {
-    // required bytes unique_idUTF8 = 2;
+  if (_internal_has_a_unique_idutf8()) {
+    // required bytes a_unique_idUTF8 = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_unique_idutf8());
+        this->_internal_a_unique_idutf8());
   }
 
-  if (_internal_has_capability_number()) {
-    // required sint32 capability_number = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_capability_number());
+  if (_internal_has_a_capability_number()) {
+    // required sint32 a_capability_number = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_capability_number());
   }
 
   return total_size;
@@ -3544,18 +3544,18 @@ size_t Msg_GetCaptureCapability::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required bytes unique_idUTF8 = 2;
+    // required bytes a_unique_idUTF8 = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_unique_idutf8());
+        this->_internal_a_unique_idutf8());
 
-    // required sint32 capability_number = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_capability_number());
+    // required sint32 a_capability_number = 3;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_capability_number());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3588,13 +3588,13 @@ void Msg_GetCaptureCapability::MergeFrom(const Msg_GetCaptureCapability& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_unique_idutf8(from._internal_unique_idutf8());
+      _this->_internal_set_a_unique_idutf8(from._internal_a_unique_idutf8());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.capability_number_ = from._impl_.capability_number_;
+      _this->_impl_.a_capability_number_ = from._impl_.a_capability_number_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3620,14 +3620,14 @@ void Msg_GetCaptureCapability::InternalSwap(Msg_GetCaptureCapability* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.unique_idutf8_, lhs_arena,
-      &other->_impl_.unique_idutf8_, rhs_arena
+      &_impl_.a_unique_idutf8_, lhs_arena,
+      &other->_impl_.a_unique_idutf8_, rhs_arena
   );
-  swap(_impl_.capability_number_, other->_impl_.capability_number_);
+  swap(_impl_.a_capability_number_, other->_impl_.a_capability_number_);
 }
 
 std::string Msg_GetCaptureCapability::GetTypeName() const {
@@ -3640,10 +3640,10 @@ std::string Msg_GetCaptureCapability::GetTypeName() const {
 class Msg_GetCaptureDevice::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_GetCaptureDevice>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_deviceindex(HasBits* has_bits) {
+  static void set_has_a_deviceindex(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3663,19 +3663,19 @@ Msg_GetCaptureDevice::Msg_GetCaptureDevice(const Msg_GetCaptureDevice& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.deviceindex_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_deviceindex_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.deviceindex_ = from._impl_.deviceindex_;
+  _this->_impl_.a_deviceindex_ = from._impl_.a_deviceindex_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice)
 }
 
@@ -3686,12 +3686,12 @@ inline void Msg_GetCaptureDevice::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.deviceindex_){0}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_deviceindex_){0}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3706,7 +3706,7 @@ Msg_GetCaptureDevice::~Msg_GetCaptureDevice() {
 
 inline void Msg_GetCaptureDevice::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
+  _impl_.a_engine_.Destroy();
 }
 
 void Msg_GetCaptureDevice::SetCachedSize(int size) const {
@@ -3721,9 +3721,9 @@ void Msg_GetCaptureDevice::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.engine_.ClearNonDefaultToEmpty();
+    _impl_.a_engine_.ClearNonDefaultToEmpty();
   }
-  _impl_.deviceindex_ = 0;
+  _impl_.a_deviceindex_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -3735,20 +3735,20 @@ const char* Msg_GetCaptureDevice::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 deviceIndex = 2;
+      // required sint32 a_deviceIndex = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_deviceindex(&has_bits);
-          _impl_.deviceindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_deviceindex(&has_bits);
+          _impl_.a_deviceindex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3784,16 +3784,16 @@ uint8_t* Msg_GetCaptureDevice::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required sint32 deviceIndex = 2;
+  // required sint32 a_deviceIndex = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_deviceindex(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_deviceindex(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3808,16 +3808,16 @@ size_t Msg_GetCaptureDevice::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_GetCaptureDevice)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_deviceindex()) {
-    // required sint32 deviceIndex = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_deviceindex());
+  if (_internal_has_a_deviceindex()) {
+    // required sint32 a_deviceIndex = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_deviceindex());
   }
 
   return total_size;
@@ -3827,13 +3827,13 @@ size_t Msg_GetCaptureDevice::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required sint32 deviceIndex = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_deviceindex());
+    // required sint32 a_deviceIndex = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_deviceindex());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -3866,10 +3866,10 @@ void Msg_GetCaptureDevice::MergeFrom(const Msg_GetCaptureDevice& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.deviceindex_ = from._impl_.deviceindex_;
+      _this->_impl_.a_deviceindex_ = from._impl_.a_deviceindex_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -3895,10 +3895,10 @@ void Msg_GetCaptureDevice::InternalSwap(Msg_GetCaptureDevice* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
-  swap(_impl_.deviceindex_, other->_impl_.deviceindex_);
+  swap(_impl_.a_deviceindex_, other->_impl_.a_deviceindex_);
 }
 
 std::string Msg_GetCaptureDevice::GetTypeName() const {
@@ -3911,13 +3911,13 @@ std::string Msg_GetCaptureDevice::GetTypeName() const {
 class Msg_AllocateCapture::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_AllocateCapture>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_unique_idutf8(HasBits* has_bits) {
+  static void set_has_a_unique_idutf8(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_windowid(HasBits* has_bits) {
+  static void set_has_a_windowid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -3937,28 +3937,28 @@ Msg_AllocateCapture::Msg_AllocateCapture(const Msg_AllocateCapture& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.unique_idutf8_){}
-    , decltype(_impl_.windowid_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_unique_idutf8_){}
+    , decltype(_impl_.a_windowid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.unique_idutf8_.InitDefault();
+  _impl_.a_unique_idutf8_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_unique_idutf8()) {
-    _this->_impl_.unique_idutf8_.Set(from._internal_unique_idutf8(), 
+  if (from._internal_has_a_unique_idutf8()) {
+    _this->_impl_.a_unique_idutf8_.Set(from._internal_a_unique_idutf8(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.windowid_ = from._impl_.windowid_;
+  _this->_impl_.a_windowid_ = from._impl_.a_windowid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture)
 }
 
@@ -3969,17 +3969,17 @@ inline void Msg_AllocateCapture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.unique_idutf8_){}
-    , decltype(_impl_.windowid_){uint64_t{0u}}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_unique_idutf8_){}
+    , decltype(_impl_.a_windowid_){uint64_t{0u}}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.unique_idutf8_.InitDefault();
+  _impl_.a_unique_idutf8_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.unique_idutf8_.Set("", GetArenaForAllocation());
+    _impl_.a_unique_idutf8_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -3994,8 +3994,8 @@ Msg_AllocateCapture::~Msg_AllocateCapture() {
 
 inline void Msg_AllocateCapture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
-  _impl_.unique_idutf8_.Destroy();
+  _impl_.a_engine_.Destroy();
+  _impl_.a_unique_idutf8_.Destroy();
 }
 
 void Msg_AllocateCapture::SetCachedSize(int size) const {
@@ -4011,13 +4011,13 @@ void Msg_AllocateCapture::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.engine_.ClearNonDefaultToEmpty();
+      _impl_.a_engine_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.unique_idutf8_.ClearNonDefaultToEmpty();
+      _impl_.a_unique_idutf8_.ClearNonDefaultToEmpty();
     }
   }
-  _impl_.windowid_ = uint64_t{0u};
+  _impl_.a_windowid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4029,29 +4029,29 @@ const char* Msg_AllocateCapture::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes unique_idUTF8 = 2;
+      // required bytes a_unique_idUTF8 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_unique_idutf8();
+          auto str = _internal_mutable_a_unique_idutf8();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 windowID = 3;
+      // required uint64 a_windowID = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_windowid(&has_bits);
-          _impl_.windowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _Internal::set_has_a_windowid(&has_bits);
+          _impl_.a_windowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4087,22 +4087,22 @@ uint8_t* Msg_AllocateCapture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required bytes unique_idUTF8 = 2;
+  // required bytes a_unique_idUTF8 = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_unique_idutf8(), target);
+        2, this->_internal_a_unique_idutf8(), target);
   }
 
-  // required uint64 windowID = 3;
+  // required uint64 a_windowID = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_windowid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_a_windowid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4117,23 +4117,23 @@ size_t Msg_AllocateCapture::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_AllocateCapture)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_unique_idutf8()) {
-    // required bytes unique_idUTF8 = 2;
+  if (_internal_has_a_unique_idutf8()) {
+    // required bytes a_unique_idUTF8 = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_unique_idutf8());
+        this->_internal_a_unique_idutf8());
   }
 
-  if (_internal_has_windowid()) {
-    // required uint64 windowID = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_windowid());
+  if (_internal_has_a_windowid()) {
+    // required uint64 a_windowID = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
   }
 
   return total_size;
@@ -4143,18 +4143,18 @@ size_t Msg_AllocateCapture::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required bytes unique_idUTF8 = 2;
+    // required bytes a_unique_idUTF8 = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_unique_idutf8());
+        this->_internal_a_unique_idutf8());
 
-    // required uint64 windowID = 3;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_windowid());
+    // required uint64 a_windowID = 3;
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4187,13 +4187,13 @@ void Msg_AllocateCapture::MergeFrom(const Msg_AllocateCapture& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_unique_idutf8(from._internal_unique_idutf8());
+      _this->_internal_set_a_unique_idutf8(from._internal_a_unique_idutf8());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.windowid_ = from._impl_.windowid_;
+      _this->_impl_.a_windowid_ = from._impl_.a_windowid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4219,14 +4219,14 @@ void Msg_AllocateCapture::InternalSwap(Msg_AllocateCapture* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.unique_idutf8_, lhs_arena,
-      &other->_impl_.unique_idutf8_, rhs_arena
+      &_impl_.a_unique_idutf8_, lhs_arena,
+      &other->_impl_.a_unique_idutf8_, rhs_arena
   );
-  swap(_impl_.windowid_, other->_impl_.windowid_);
+  swap(_impl_.a_windowid_, other->_impl_.a_windowid_);
 }
 
 std::string Msg_AllocateCapture::GetTypeName() const {
@@ -4239,10 +4239,10 @@ std::string Msg_AllocateCapture::GetTypeName() const {
 class Msg_ReleaseCapture::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReleaseCapture>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_captureid(HasBits* has_bits) {
+  static void set_has_a_captureid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4262,19 +4262,19 @@ Msg_ReleaseCapture::Msg_ReleaseCapture(const Msg_ReleaseCapture& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.captureid_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_captureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.captureid_ = from._impl_.captureid_;
+  _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture)
 }
 
@@ -4285,12 +4285,12 @@ inline void Msg_ReleaseCapture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.captureid_){0}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_captureid_){0}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4305,7 +4305,7 @@ Msg_ReleaseCapture::~Msg_ReleaseCapture() {
 
 inline void Msg_ReleaseCapture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
+  _impl_.a_engine_.Destroy();
 }
 
 void Msg_ReleaseCapture::SetCachedSize(int size) const {
@@ -4320,9 +4320,9 @@ void Msg_ReleaseCapture::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.engine_.ClearNonDefaultToEmpty();
+    _impl_.a_engine_.ClearNonDefaultToEmpty();
   }
-  _impl_.captureid_ = 0;
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4334,20 +4334,20 @@ const char* Msg_ReleaseCapture::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 captureId = 2;
+      // required sint32 a_captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_captureid(&has_bits);
+          _impl_.a_captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4383,16 +4383,16 @@ uint8_t* Msg_ReleaseCapture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required sint32 captureId = 2;
+  // required sint32 a_captureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4407,16 +4407,16 @@ size_t Msg_ReleaseCapture::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_ReleaseCapture)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_captureid()) {
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+  if (_internal_has_a_captureid()) {
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
   }
 
   return total_size;
@@ -4426,13 +4426,13 @@ size_t Msg_ReleaseCapture::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4465,10 +4465,10 @@ void Msg_ReleaseCapture::MergeFrom(const Msg_ReleaseCapture& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.captureid_ = from._impl_.captureid_;
+      _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4494,10 +4494,10 @@ void Msg_ReleaseCapture::InternalSwap(Msg_ReleaseCapture* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
-  swap(_impl_.captureid_, other->_impl_.captureid_);
+  swap(_impl_.a_captureid_, other->_impl_.a_captureid_);
 }
 
 std::string Msg_ReleaseCapture::GetTypeName() const {
@@ -4510,14 +4510,14 @@ std::string Msg_ReleaseCapture::GetTypeName() const {
 class Msg_StartCapture::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_StartCapture>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_captureid(HasBits* has_bits) {
+  static void set_has_a_captureid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
-  static const ::protobuf::mozilla::camera::VideoCaptureCapability& capability(const Msg_StartCapture* msg);
-  static void set_has_capability(HasBits* has_bits) {
+  static const ::protobuf::mozilla::camera::VideoCaptureCapability& a_capability(const Msg_StartCapture* msg);
+  static void set_has_a_capability(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4526,11 +4526,11 @@ class Msg_StartCapture::_Internal {
 };
 
 const ::protobuf::mozilla::camera::VideoCaptureCapability&
-Msg_StartCapture::_Internal::capability(const Msg_StartCapture* msg) {
-  return *msg->_impl_.capability_;
+Msg_StartCapture::_Internal::a_capability(const Msg_StartCapture* msg) {
+  return *msg->_impl_.a_capability_;
 }
-void Msg_StartCapture::clear_capability() {
-  if (_impl_.capability_ != nullptr) _impl_.capability_->Clear();
+void Msg_StartCapture::clear_a_capability() {
+  if (_impl_.a_capability_ != nullptr) _impl_.a_capability_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 Msg_StartCapture::Msg_StartCapture(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -4545,23 +4545,23 @@ Msg_StartCapture::Msg_StartCapture(const Msg_StartCapture& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.capability_){nullptr}
-    , decltype(_impl_.captureid_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_capability_){nullptr}
+    , decltype(_impl_.a_captureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  if (from._internal_has_capability()) {
-    _this->_impl_.capability_ = new ::protobuf::mozilla::camera::VideoCaptureCapability(*from._impl_.capability_);
+  if (from._internal_has_a_capability()) {
+    _this->_impl_.a_capability_ = new ::protobuf::mozilla::camera::VideoCaptureCapability(*from._impl_.a_capability_);
   }
-  _this->_impl_.captureid_ = from._impl_.captureid_;
+  _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_StartCapture)
 }
 
@@ -4572,13 +4572,13 @@ inline void Msg_StartCapture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.capability_){nullptr}
-    , decltype(_impl_.captureid_){0}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_capability_){nullptr}
+    , decltype(_impl_.a_captureid_){0}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4593,8 +4593,8 @@ Msg_StartCapture::~Msg_StartCapture() {
 
 inline void Msg_StartCapture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.capability_;
+  _impl_.a_engine_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.a_capability_;
 }
 
 void Msg_StartCapture::SetCachedSize(int size) const {
@@ -4610,14 +4610,14 @@ void Msg_StartCapture::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.engine_.ClearNonDefaultToEmpty();
+      _impl_.a_engine_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.capability_ != nullptr);
-      _impl_.capability_->Clear();
+      GOOGLE_DCHECK(_impl_.a_capability_ != nullptr);
+      _impl_.a_capability_->Clear();
     }
   }
-  _impl_.captureid_ = 0;
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4629,28 +4629,28 @@ const char* Msg_StartCapture::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 captureId = 2;
+      // required sint32 a_captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_captureid(&has_bits);
+          _impl_.a_captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
+      // required .protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_capability(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_capability(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4686,23 +4686,23 @@ uint8_t* Msg_StartCapture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required sint32 captureId = 2;
+  // required sint32 a_captureId = 2;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_captureid(), target);
   }
 
-  // required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
+  // required .protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::capability(this),
-        _Internal::capability(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(3, _Internal::a_capability(this),
+        _Internal::a_capability(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4717,23 +4717,23 @@ size_t Msg_StartCapture::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_StartCapture)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_capability()) {
-    // required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
+  if (_internal_has_a_capability()) {
+    // required .protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.capability_);
+        *_impl_.a_capability_);
   }
 
-  if (_internal_has_captureid()) {
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+  if (_internal_has_a_captureid()) {
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
   }
 
   return total_size;
@@ -4743,18 +4743,18 @@ size_t Msg_StartCapture::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required .protobuf.mozilla.camera.VideoCaptureCapability capability = 3;
+    // required .protobuf.mozilla.camera.VideoCaptureCapability a_capability = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.capability_);
+        *_impl_.a_capability_);
 
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -4787,14 +4787,14 @@ void Msg_StartCapture::MergeFrom(const Msg_StartCapture& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_capability()->::protobuf::mozilla::camera::VideoCaptureCapability::MergeFrom(
-          from._internal_capability());
+      _this->_internal_mutable_a_capability()->::protobuf::mozilla::camera::VideoCaptureCapability::MergeFrom(
+          from._internal_a_capability());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.captureid_ = from._impl_.captureid_;
+      _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -4810,8 +4810,8 @@ void Msg_StartCapture::CopyFrom(const Msg_StartCapture& from) {
 
 bool Msg_StartCapture::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_capability()) {
-    if (!_impl_.capability_->IsInitialized()) return false;
+  if (_internal_has_a_capability()) {
+    if (!_impl_.a_capability_->IsInitialized()) return false;
   }
   return true;
 }
@@ -4823,15 +4823,15 @@ void Msg_StartCapture::InternalSwap(Msg_StartCapture* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Msg_StartCapture, _impl_.captureid_)
-      + sizeof(Msg_StartCapture::_impl_.captureid_)
-      - PROTOBUF_FIELD_OFFSET(Msg_StartCapture, _impl_.capability_)>(
-          reinterpret_cast<char*>(&_impl_.capability_),
-          reinterpret_cast<char*>(&other->_impl_.capability_));
+      PROTOBUF_FIELD_OFFSET(Msg_StartCapture, _impl_.a_captureid_)
+      + sizeof(Msg_StartCapture::_impl_.a_captureid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_StartCapture, _impl_.a_capability_)>(
+          reinterpret_cast<char*>(&_impl_.a_capability_),
+          reinterpret_cast<char*>(&other->_impl_.a_capability_));
 }
 
 std::string Msg_StartCapture::GetTypeName() const {
@@ -4844,10 +4844,10 @@ std::string Msg_StartCapture::GetTypeName() const {
 class Msg_FocusOnSelectedSource::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_FocusOnSelectedSource>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_captureid(HasBits* has_bits) {
+  static void set_has_a_captureid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -4867,19 +4867,19 @@ Msg_FocusOnSelectedSource::Msg_FocusOnSelectedSource(const Msg_FocusOnSelectedSo
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.captureid_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_captureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.captureid_ = from._impl_.captureid_;
+  _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource)
 }
 
@@ -4890,12 +4890,12 @@ inline void Msg_FocusOnSelectedSource::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.captureid_){0}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_captureid_){0}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -4910,7 +4910,7 @@ Msg_FocusOnSelectedSource::~Msg_FocusOnSelectedSource() {
 
 inline void Msg_FocusOnSelectedSource::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
+  _impl_.a_engine_.Destroy();
 }
 
 void Msg_FocusOnSelectedSource::SetCachedSize(int size) const {
@@ -4925,9 +4925,9 @@ void Msg_FocusOnSelectedSource::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.engine_.ClearNonDefaultToEmpty();
+    _impl_.a_engine_.ClearNonDefaultToEmpty();
   }
-  _impl_.captureid_ = 0;
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -4939,20 +4939,20 @@ const char* Msg_FocusOnSelectedSource::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 captureId = 2;
+      // required sint32 a_captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_captureid(&has_bits);
+          _impl_.a_captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4988,16 +4988,16 @@ uint8_t* Msg_FocusOnSelectedSource::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required sint32 captureId = 2;
+  // required sint32 a_captureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5012,16 +5012,16 @@ size_t Msg_FocusOnSelectedSource::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_FocusOnSelectedSource)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_captureid()) {
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+  if (_internal_has_a_captureid()) {
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
   }
 
   return total_size;
@@ -5031,13 +5031,13 @@ size_t Msg_FocusOnSelectedSource::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5070,10 +5070,10 @@ void Msg_FocusOnSelectedSource::MergeFrom(const Msg_FocusOnSelectedSource& from)
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.captureid_ = from._impl_.captureid_;
+      _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -5099,10 +5099,10 @@ void Msg_FocusOnSelectedSource::InternalSwap(Msg_FocusOnSelectedSource* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
-  swap(_impl_.captureid_, other->_impl_.captureid_);
+  swap(_impl_.a_captureid_, other->_impl_.a_captureid_);
 }
 
 std::string Msg_FocusOnSelectedSource::GetTypeName() const {
@@ -5115,10 +5115,10 @@ std::string Msg_FocusOnSelectedSource::GetTypeName() const {
 class Msg_StopCapture::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_StopCapture>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_captureid(HasBits* has_bits) {
+  static void set_has_a_captureid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5138,19 +5138,19 @@ Msg_StopCapture::Msg_StopCapture(const Msg_StopCapture& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.captureid_){}};
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_captureid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.captureid_ = from._impl_.captureid_;
+  _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_StopCapture)
 }
 
@@ -5161,12 +5161,12 @@ inline void Msg_StopCapture::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
-    , decltype(_impl_.captureid_){0}
+    , decltype(_impl_.a_engine_){}
+    , decltype(_impl_.a_captureid_){0}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5181,7 +5181,7 @@ Msg_StopCapture::~Msg_StopCapture() {
 
 inline void Msg_StopCapture::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
+  _impl_.a_engine_.Destroy();
 }
 
 void Msg_StopCapture::SetCachedSize(int size) const {
@@ -5196,9 +5196,9 @@ void Msg_StopCapture::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.engine_.ClearNonDefaultToEmpty();
+    _impl_.a_engine_.ClearNonDefaultToEmpty();
   }
-  _impl_.captureid_ = 0;
+  _impl_.a_captureid_ = 0;
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -5210,20 +5210,20 @@ const char* Msg_StopCapture::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 captureId = 2;
+      // required sint32 a_captureId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_captureid(&has_bits);
-          _impl_.captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
+          _Internal::set_has_a_captureid(&has_bits);
+          _impl_.a_captureid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -5259,16 +5259,16 @@ uint8_t* Msg_StopCapture::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
-  // required sint32 captureId = 2;
+  // required sint32 a_captureId = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_captureid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_captureid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5283,16 +5283,16 @@ size_t Msg_StopCapture::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.PCameras.Msg_StopCapture)
   size_t total_size = 0;
 
-  if (_internal_has_engine()) {
-    // required bytes engine = 1;
+  if (_internal_has_a_engine()) {
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
 
-  if (_internal_has_captureid()) {
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+  if (_internal_has_a_captureid()) {
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
   }
 
   return total_size;
@@ -5302,13 +5302,13 @@ size_t Msg_StopCapture::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes engine = 1;
+    // required bytes a_engine = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
 
-    // required sint32 captureId = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_captureid());
+    // required sint32 a_captureId = 2;
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_captureid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -5341,10 +5341,10 @@ void Msg_StopCapture::MergeFrom(const Msg_StopCapture& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_engine(from._internal_engine());
+      _this->_internal_set_a_engine(from._internal_a_engine());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.captureid_ = from._impl_.captureid_;
+      _this->_impl_.a_captureid_ = from._impl_.a_captureid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
@@ -5370,10 +5370,10 @@ void Msg_StopCapture::InternalSwap(Msg_StopCapture* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
-  swap(_impl_.captureid_, other->_impl_.captureid_);
+  swap(_impl_.a_captureid_, other->_impl_.a_captureid_);
 }
 
 std::string Msg_StopCapture::GetTypeName() const {
@@ -5386,7 +5386,7 @@ std::string Msg_StopCapture::GetTypeName() const {
 class Msg_ReleaseFrame::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_ReleaseFrame>()._impl_._has_bits_);
-  static void set_has_s(HasBits* has_bits) {
+  static void set_has_a_s(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5406,15 +5406,15 @@ Msg_ReleaseFrame::Msg_ReleaseFrame(const Msg_ReleaseFrame& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.s_){}};
+    , decltype(_impl_.a_s_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.s_.InitDefault();
+  _impl_.a_s_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.s_.Set("", GetArenaForAllocation());
+    _impl_.a_s_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_s()) {
-    _this->_impl_.s_.Set(from._internal_s(), 
+  if (from._internal_has_a_s()) {
+    _this->_impl_.a_s_.Set(from._internal_a_s(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame)
@@ -5427,11 +5427,11 @@ inline void Msg_ReleaseFrame::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.s_){}
+    , decltype(_impl_.a_s_){}
   };
-  _impl_.s_.InitDefault();
+  _impl_.a_s_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.s_.Set("", GetArenaForAllocation());
+    _impl_.a_s_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5446,7 +5446,7 @@ Msg_ReleaseFrame::~Msg_ReleaseFrame() {
 
 inline void Msg_ReleaseFrame::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.s_.Destroy();
+  _impl_.a_s_.Destroy();
 }
 
 void Msg_ReleaseFrame::SetCachedSize(int size) const {
@@ -5461,7 +5461,7 @@ void Msg_ReleaseFrame::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.s_.ClearNonDefaultToEmpty();
+    _impl_.a_s_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -5474,10 +5474,10 @@ const char* Msg_ReleaseFrame::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes s = 1;
+      // required bytes a_s = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_s();
+          auto str = _internal_mutable_a_s();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5514,10 +5514,10 @@ uint8_t* Msg_ReleaseFrame::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes s = 1;
+  // required bytes a_s = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_s(), target);
+        1, this->_internal_a_s(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5532,11 +5532,11 @@ size_t Msg_ReleaseFrame::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_ReleaseFrame)
   size_t total_size = 0;
 
-  // required bytes s = 1;
-  if (_internal_has_s()) {
+  // required bytes a_s = 1;
+  if (_internal_has_a_s()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_s());
+        this->_internal_a_s());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -5563,8 +5563,8 @@ void Msg_ReleaseFrame::MergeFrom(const Msg_ReleaseFrame& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_s()) {
-    _this->_internal_set_s(from._internal_s());
+  if (from._internal_has_a_s()) {
+    _this->_internal_set_a_s(from._internal_a_s());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5588,8 +5588,8 @@ void Msg_ReleaseFrame::InternalSwap(Msg_ReleaseFrame* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.s_, lhs_arena,
-      &other->_impl_.s_, rhs_arena
+      &_impl_.a_s_, lhs_arena,
+      &other->_impl_.a_s_, rhs_arena
   );
 }
 
@@ -5603,7 +5603,7 @@ std::string Msg_ReleaseFrame::GetTypeName() const {
 class Msg_EnsureInitialized::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_EnsureInitialized>()._impl_._has_bits_);
-  static void set_has_engine(HasBits* has_bits) {
+  static void set_has_a_engine(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -5623,15 +5623,15 @@ Msg_EnsureInitialized::Msg_EnsureInitialized(const Msg_EnsureInitialized& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}};
+    , decltype(_impl_.a_engine_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_engine()) {
-    _this->_impl_.engine_.Set(from._internal_engine(), 
+  if (from._internal_has_a_engine()) {
+    _this->_impl_.a_engine_.Set(from._internal_a_engine(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized)
@@ -5644,11 +5644,11 @@ inline void Msg_EnsureInitialized::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.engine_){}
+    , decltype(_impl_.a_engine_){}
   };
-  _impl_.engine_.InitDefault();
+  _impl_.a_engine_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.engine_.Set("", GetArenaForAllocation());
+    _impl_.a_engine_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5663,7 +5663,7 @@ Msg_EnsureInitialized::~Msg_EnsureInitialized() {
 
 inline void Msg_EnsureInitialized::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.engine_.Destroy();
+  _impl_.a_engine_.Destroy();
 }
 
 void Msg_EnsureInitialized::SetCachedSize(int size) const {
@@ -5678,7 +5678,7 @@ void Msg_EnsureInitialized::Clear() {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    _impl_.engine_.ClearNonDefaultToEmpty();
+    _impl_.a_engine_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -5691,10 +5691,10 @@ const char* Msg_EnsureInitialized::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes engine = 1;
+      // required bytes a_engine = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_engine();
+          auto str = _internal_mutable_a_engine();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -5731,10 +5731,10 @@ uint8_t* Msg_EnsureInitialized::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes engine = 1;
+  // required bytes a_engine = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_engine(), target);
+        1, this->_internal_a_engine(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5749,11 +5749,11 @@ size_t Msg_EnsureInitialized::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.PCameras.Msg_EnsureInitialized)
   size_t total_size = 0;
 
-  // required bytes engine = 1;
-  if (_internal_has_engine()) {
+  // required bytes a_engine = 1;
+  if (_internal_has_a_engine()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_engine());
+        this->_internal_a_engine());
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -5780,8 +5780,8 @@ void Msg_EnsureInitialized::MergeFrom(const Msg_EnsureInitialized& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_engine()) {
-    _this->_internal_set_engine(from._internal_engine());
+  if (from._internal_has_a_engine()) {
+    _this->_internal_set_a_engine(from._internal_a_engine());
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -5805,8 +5805,8 @@ void Msg_EnsureInitialized::InternalSwap(Msg_EnsureInitialized* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.engine_, lhs_arena,
-      &other->_impl_.engine_, rhs_arena
+      &_impl_.a_engine_, lhs_arena,
+      &other->_impl_.a_engine_, rhs_arena
   );
 }
 

@@ -16,7 +16,7 @@ import "ProtocolTypes.proto";
 // Structs and unions declarations
 message RemoteLazyStream {
   oneof content {
-    bytes mVRemoteLazyInputStream = 1;
-    protobuf.mozilla.ipc.IPCStream mVIPCStream = 2;
+    bytes a_mVRemoteLazyInputStream = 1;
+    protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
   }
 }

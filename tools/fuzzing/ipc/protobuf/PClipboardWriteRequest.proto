@@ -19,11 +19,11 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_SetData {
-  required protobuf.mozilla.dom.IPCTransferable aTransferable = 1;
+  required protobuf.mozilla.dom.IPCTransferable a_aTransferable = 1;
 }
 
 message Msg___delete__ {
-  required bytes aResult = 1;
+  required bytes a_aResult = 1;
 }
 
 message Reply___delete__ {

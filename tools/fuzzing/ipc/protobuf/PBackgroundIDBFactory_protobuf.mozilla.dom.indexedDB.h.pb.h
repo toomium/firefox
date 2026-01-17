@@ -194,44 +194,44 @@ class CommonFactoryRequestParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMetadataFieldNumber = 1,
-    kPrincipalInfoFieldNumber = 2,
+    kAMetadataFieldNumber = 1,
+    kAPrincipalInfoFieldNumber = 2,
   };
-  // required .protobuf.mozilla.dom.indexedDB.DatabaseMetadata metadata = 1;
-  bool has_metadata() const;
+  // required .protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_metadata = 1;
+  bool has_a_metadata() const;
   private:
-  bool _internal_has_metadata() const;
+  bool _internal_has_a_metadata() const;
   public:
-  void clear_metadata();
-  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& metadata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* release_metadata();
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* mutable_metadata();
-  void set_allocated_metadata(::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* metadata);
+  void clear_a_metadata();
+  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& a_metadata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* release_a_metadata();
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* mutable_a_metadata();
+  void set_allocated_a_metadata(::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* a_metadata);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& _internal_metadata() const;
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _internal_mutable_metadata();
+  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& _internal_a_metadata() const;
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _internal_mutable_a_metadata();
   public:
-  void unsafe_arena_set_allocated_metadata(
-      ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* metadata);
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* unsafe_arena_release_metadata();
+  void unsafe_arena_set_allocated_a_metadata(
+      ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* a_metadata);
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* unsafe_arena_release_a_metadata();
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo principalInfo = 2;
-  bool has_principalinfo() const;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  bool has_a_principalinfo() const;
   private:
-  bool _internal_has_principalinfo() const;
+  bool _internal_has_a_principalinfo() const;
   public:
-  void clear_principalinfo();
-  const ::protobuf::mozilla::ipc::PrincipalInfo& principalinfo() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_principalinfo();
-  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_principalinfo();
-  void set_allocated_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* principalinfo);
+  void clear_a_principalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& a_principalinfo() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::PrincipalInfo* release_a_principalinfo();
+  ::protobuf::mozilla::ipc::PrincipalInfo* mutable_a_principalinfo();
+  void set_allocated_a_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   private:
-  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_principalinfo() const;
-  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_principalinfo();
+  const ::protobuf::mozilla::ipc::PrincipalInfo& _internal_a_principalinfo() const;
+  ::protobuf::mozilla::ipc::PrincipalInfo* _internal_mutable_a_principalinfo();
   public:
-  void unsafe_arena_set_allocated_principalinfo(
-      ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo);
-  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_principalinfo();
+  void unsafe_arena_set_allocated_a_principalinfo(
+      ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
+  ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams)
  private:
@@ -246,8 +246,8 @@ class CommonFactoryRequestParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* metadata_;
-    ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo_;
+    ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* a_metadata_;
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -364,25 +364,25 @@ class OpenDatabaseRequestParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCommonParamsFieldNumber = 1,
+    kACommonParamsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams commonParams = 1;
-  bool has_commonparams() const;
+  // required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
+  bool has_a_commonparams() const;
   private:
-  bool _internal_has_commonparams() const;
+  bool _internal_has_a_commonparams() const;
   public:
-  void clear_commonparams();
-  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& commonparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* release_commonparams();
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* mutable_commonparams();
-  void set_allocated_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams);
+  void clear_a_commonparams();
+  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& a_commonparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* release_a_commonparams();
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* mutable_a_commonparams();
+  void set_allocated_a_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& _internal_commonparams() const;
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _internal_mutable_commonparams();
+  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& _internal_a_commonparams() const;
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _internal_mutable_a_commonparams();
   public:
-  void unsafe_arena_set_allocated_commonparams(
-      ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams);
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* unsafe_arena_release_commonparams();
+  void unsafe_arena_set_allocated_a_commonparams(
+      ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams);
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* unsafe_arena_release_a_commonparams();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams)
  private:
@@ -394,7 +394,7 @@ class OpenDatabaseRequestParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams_;
+    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -511,25 +511,25 @@ class DeleteDatabaseRequestParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCommonParamsFieldNumber = 1,
+    kACommonParamsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams commonParams = 1;
-  bool has_commonparams() const;
+  // required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
+  bool has_a_commonparams() const;
   private:
-  bool _internal_has_commonparams() const;
+  bool _internal_has_a_commonparams() const;
   public:
-  void clear_commonparams();
-  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& commonparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* release_commonparams();
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* mutable_commonparams();
-  void set_allocated_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams);
+  void clear_a_commonparams();
+  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& a_commonparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* release_a_commonparams();
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* mutable_a_commonparams();
+  void set_allocated_a_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& _internal_commonparams() const;
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _internal_mutable_commonparams();
+  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& _internal_a_commonparams() const;
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _internal_mutable_a_commonparams();
   public:
-  void unsafe_arena_set_allocated_commonparams(
-      ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams);
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* unsafe_arena_release_commonparams();
+  void unsafe_arena_set_allocated_a_commonparams(
+      ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams);
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* unsafe_arena_release_a_commonparams();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams)
  private:
@@ -541,7 +541,7 @@ class DeleteDatabaseRequestParams final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams_;
+    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -590,8 +590,8 @@ class FactoryRequestParams final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVOpenDatabaseRequestParams = 1,
-    kMVDeleteDatabaseRequestParams = 2,
+    kAMVOpenDatabaseRequestParams = 1,
+    kAMVDeleteDatabaseRequestParams = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -664,52 +664,52 @@ class FactoryRequestParams final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVOpenDatabaseRequestParamsFieldNumber = 1,
-    kMVDeleteDatabaseRequestParamsFieldNumber = 2,
+    kAMVOpenDatabaseRequestParamsFieldNumber = 1,
+    kAMVDeleteDatabaseRequestParamsFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams mVOpenDatabaseRequestParams = 1;
-  bool has_mvopendatabaserequestparams() const;
+  // .protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams a_mVOpenDatabaseRequestParams = 1;
+  bool has_a_mvopendatabaserequestparams() const;
   private:
-  bool _internal_has_mvopendatabaserequestparams() const;
+  bool _internal_has_a_mvopendatabaserequestparams() const;
   public:
-  void clear_mvopendatabaserequestparams();
-  const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& mvopendatabaserequestparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* release_mvopendatabaserequestparams();
-  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* mutable_mvopendatabaserequestparams();
-  void set_allocated_mvopendatabaserequestparams(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* mvopendatabaserequestparams);
+  void clear_a_mvopendatabaserequestparams();
+  const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& a_mvopendatabaserequestparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* release_a_mvopendatabaserequestparams();
+  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* mutable_a_mvopendatabaserequestparams();
+  void set_allocated_a_mvopendatabaserequestparams(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* a_mvopendatabaserequestparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& _internal_mvopendatabaserequestparams() const;
-  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* _internal_mutable_mvopendatabaserequestparams();
+  const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& _internal_a_mvopendatabaserequestparams() const;
+  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* _internal_mutable_a_mvopendatabaserequestparams();
   public:
-  void unsafe_arena_set_allocated_mvopendatabaserequestparams(
-      ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* mvopendatabaserequestparams);
-  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* unsafe_arena_release_mvopendatabaserequestparams();
+  void unsafe_arena_set_allocated_a_mvopendatabaserequestparams(
+      ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* a_mvopendatabaserequestparams);
+  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* unsafe_arena_release_a_mvopendatabaserequestparams();
 
-  // .protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams mVDeleteDatabaseRequestParams = 2;
-  bool has_mvdeletedatabaserequestparams() const;
+  // .protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams a_mVDeleteDatabaseRequestParams = 2;
+  bool has_a_mvdeletedatabaserequestparams() const;
   private:
-  bool _internal_has_mvdeletedatabaserequestparams() const;
+  bool _internal_has_a_mvdeletedatabaserequestparams() const;
   public:
-  void clear_mvdeletedatabaserequestparams();
-  const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& mvdeletedatabaserequestparams() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* release_mvdeletedatabaserequestparams();
-  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* mutable_mvdeletedatabaserequestparams();
-  void set_allocated_mvdeletedatabaserequestparams(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* mvdeletedatabaserequestparams);
+  void clear_a_mvdeletedatabaserequestparams();
+  const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& a_mvdeletedatabaserequestparams() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* release_a_mvdeletedatabaserequestparams();
+  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* mutable_a_mvdeletedatabaserequestparams();
+  void set_allocated_a_mvdeletedatabaserequestparams(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* a_mvdeletedatabaserequestparams);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& _internal_mvdeletedatabaserequestparams() const;
-  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* _internal_mutable_mvdeletedatabaserequestparams();
+  const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& _internal_a_mvdeletedatabaserequestparams() const;
+  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* _internal_mutable_a_mvdeletedatabaserequestparams();
   public:
-  void unsafe_arena_set_allocated_mvdeletedatabaserequestparams(
-      ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* mvdeletedatabaserequestparams);
-  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* unsafe_arena_release_mvdeletedatabaserequestparams();
+  void unsafe_arena_set_allocated_a_mvdeletedatabaserequestparams(
+      ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* a_mvdeletedatabaserequestparams);
+  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* unsafe_arena_release_a_mvdeletedatabaserequestparams();
 
   void clear_content();
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.FactoryRequestParams)
  private:
   class _Internal;
-  void set_has_mvopendatabaserequestparams();
-  void set_has_mvdeletedatabaserequestparams();
+  void set_has_a_mvopendatabaserequestparams();
+  void set_has_a_mvdeletedatabaserequestparams();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -721,8 +721,8 @@ class FactoryRequestParams final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* mvopendatabaserequestparams_;
-      ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* mvdeletedatabaserequestparams_;
+      ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* a_mvopendatabaserequestparams_;
+      ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* a_mvdeletedatabaserequestparams_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -843,25 +843,25 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfDatabaseMetadataFieldNumber = 1,
+    kAMVArrayOfDatabaseMetadataFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.indexedDB.DatabaseMetadata mVArrayOfDatabaseMetadata = 1;
-  int mvarrayofdatabasemetadata_size() const;
+  // repeated .protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_mVArrayOfDatabaseMetadata = 1;
+  int a_mvarrayofdatabasemetadata_size() const;
   private:
-  int _internal_mvarrayofdatabasemetadata_size() const;
+  int _internal_a_mvarrayofdatabasemetadata_size() const;
   public:
-  void clear_mvarrayofdatabasemetadata();
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* mutable_mvarrayofdatabasemetadata(int index);
+  void clear_a_mvarrayofdatabasemetadata();
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* mutable_a_mvarrayofdatabasemetadata(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >*
-      mutable_mvarrayofdatabasemetadata();
+      mutable_a_mvarrayofdatabasemetadata();
   private:
-  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& _internal_mvarrayofdatabasemetadata(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _internal_add_mvarrayofdatabasemetadata();
+  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& _internal_a_mvarrayofdatabasemetadata(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _internal_add_a_mvarrayofdatabasemetadata();
   public:
-  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& mvarrayofdatabasemetadata(int index) const;
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* add_mvarrayofdatabasemetadata();
+  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& a_mvarrayofdatabasemetadata(int index) const;
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* add_a_mvarrayofdatabasemetadata();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >&
-      mvarrayofdatabasemetadata() const;
+      a_mvarrayofdatabasemetadata() const;
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata)
  private:
@@ -871,7 +871,7 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata > mvarrayofdatabasemetadata_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata > a_mvarrayofdatabasemetadata_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -921,7 +921,7 @@ class GetDatabasesResponse final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVnsresult = 1,
+    kAMVnsresult = 1,
     kMVArrayOfDatabaseMetadata = 2,
     CONTENT_NOT_SET = 0,
   };
@@ -997,25 +997,25 @@ class GetDatabasesResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVnsresultFieldNumber = 1,
+    kAMVnsresultFieldNumber = 1,
     kMVArrayOfDatabaseMetadataFieldNumber = 2,
   };
-  // bytes mVnsresult = 1;
-  bool has_mvnsresult() const;
+  // bytes a_mVnsresult = 1;
+  bool has_a_mvnsresult() const;
   private:
-  bool _internal_has_mvnsresult() const;
+  bool _internal_has_a_mvnsresult() const;
   public:
-  void clear_mvnsresult();
-  const std::string& mvnsresult() const;
+  void clear_a_mvnsresult();
+  const std::string& a_mvnsresult() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_mvnsresult(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_mvnsresult();
-  PROTOBUF_NODISCARD std::string* release_mvnsresult();
-  void set_allocated_mvnsresult(std::string* mvnsresult);
+  void set_a_mvnsresult(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_mvnsresult();
+  PROTOBUF_NODISCARD std::string* release_a_mvnsresult();
+  void set_allocated_a_mvnsresult(std::string* a_mvnsresult);
   private:
-  const std::string& _internal_mvnsresult() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_mvnsresult(const std::string& value);
-  std::string* _internal_mutable_mvnsresult();
+  const std::string& _internal_a_mvnsresult() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_mvnsresult(const std::string& value);
+  std::string* _internal_mutable_a_mvnsresult();
   public:
 
   // .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata mVArrayOfDatabaseMetadata = 2;
@@ -1041,7 +1041,7 @@ class GetDatabasesResponse final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse)
  private:
   class _Internal;
-  void set_has_mvnsresult();
+  void set_has_a_mvnsresult();
   void set_has_mvarrayofdatabasemetadata();
 
   inline bool has_content() const;
@@ -1054,7 +1054,7 @@ class GetDatabasesResponse final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mvnsresult_;
+      ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
       ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* mvarrayofdatabasemetadata_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1075,41 +1075,41 @@ class GetDatabasesResponse final :
 #endif  // __GNUC__
 // CommonFactoryRequestParams
 
-// required .protobuf.mozilla.dom.indexedDB.DatabaseMetadata metadata = 1;
-inline bool CommonFactoryRequestParams::_internal_has_metadata() const {
+// required .protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_metadata = 1;
+inline bool CommonFactoryRequestParams::_internal_has_a_metadata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.metadata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_metadata_ != nullptr);
   return value;
 }
-inline bool CommonFactoryRequestParams::has_metadata() const {
-  return _internal_has_metadata();
+inline bool CommonFactoryRequestParams::has_a_metadata() const {
+  return _internal_has_a_metadata();
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& CommonFactoryRequestParams::_internal_metadata() const {
-  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* p = _impl_.metadata_;
+inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& CommonFactoryRequestParams::_internal_a_metadata() const {
+  const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* p = _impl_.a_metadata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata&>(
       ::protobuf::mozilla::dom::indexedDB::_DatabaseMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& CommonFactoryRequestParams::metadata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.metadata)
-  return _internal_metadata();
+inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& CommonFactoryRequestParams::a_metadata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_metadata)
+  return _internal_a_metadata();
 }
-inline void CommonFactoryRequestParams::unsafe_arena_set_allocated_metadata(
-    ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* metadata) {
+inline void CommonFactoryRequestParams::unsafe_arena_set_allocated_a_metadata(
+    ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* a_metadata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metadata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_metadata_);
   }
-  _impl_.metadata_ = metadata;
-  if (metadata) {
+  _impl_.a_metadata_ = a_metadata;
+  if (a_metadata) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.metadata)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_metadata)
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::release_metadata() {
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::release_a_metadata() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* temp = _impl_.metadata_;
-  _impl_.metadata_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* temp = _impl_.a_metadata_;
+  _impl_.a_metadata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1121,82 +1121,82 @@ inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryReque
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::unsafe_arena_release_metadata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.metadata)
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::unsafe_arena_release_a_metadata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_metadata)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* temp = _impl_.metadata_;
-  _impl_.metadata_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* temp = _impl_.a_metadata_;
+  _impl_.a_metadata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::_internal_mutable_metadata() {
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::_internal_mutable_a_metadata() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.metadata_ == nullptr) {
+  if (_impl_.a_metadata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::DatabaseMetadata>(GetArenaForAllocation());
-    _impl_.metadata_ = p;
+    _impl_.a_metadata_ = p;
   }
-  return _impl_.metadata_;
+  return _impl_.a_metadata_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::mutable_metadata() {
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _msg = _internal_mutable_metadata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.metadata)
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* CommonFactoryRequestParams::mutable_a_metadata() {
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _msg = _internal_mutable_a_metadata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_metadata)
   return _msg;
 }
-inline void CommonFactoryRequestParams::set_allocated_metadata(::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* metadata) {
+inline void CommonFactoryRequestParams::set_allocated_a_metadata(::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* a_metadata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.metadata_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_metadata_);
   }
-  if (metadata) {
+  if (a_metadata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(metadata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_metadata));
     if (message_arena != submessage_arena) {
-      metadata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, metadata, submessage_arena);
+      a_metadata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_metadata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.metadata_ = metadata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.metadata)
+  _impl_.a_metadata_ = a_metadata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_metadata)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo principalInfo = 2;
-inline bool CommonFactoryRequestParams::_internal_has_principalinfo() const {
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+inline bool CommonFactoryRequestParams::_internal_has_a_principalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.principalinfo_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
   return value;
 }
-inline bool CommonFactoryRequestParams::has_principalinfo() const {
-  return _internal_has_principalinfo();
+inline bool CommonFactoryRequestParams::has_a_principalinfo() const {
+  return _internal_has_a_principalinfo();
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& CommonFactoryRequestParams::_internal_principalinfo() const {
-  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.principalinfo_;
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& CommonFactoryRequestParams::_internal_a_principalinfo() const {
+  const ::protobuf::mozilla::ipc::PrincipalInfo* p = _impl_.a_principalinfo_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::ipc::PrincipalInfo&>(
       ::protobuf::mozilla::ipc::_PrincipalInfo_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::PrincipalInfo& CommonFactoryRequestParams::principalinfo() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.principalInfo)
-  return _internal_principalinfo();
+inline const ::protobuf::mozilla::ipc::PrincipalInfo& CommonFactoryRequestParams::a_principalinfo() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_principalInfo)
+  return _internal_a_principalinfo();
 }
-inline void CommonFactoryRequestParams::unsafe_arena_set_allocated_principalinfo(
-    ::protobuf::mozilla::ipc::PrincipalInfo* principalinfo) {
+inline void CommonFactoryRequestParams::unsafe_arena_set_allocated_a_principalinfo(
+    ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.principalinfo_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_principalinfo_);
   }
-  _impl_.principalinfo_ = principalinfo;
-  if (principalinfo) {
+  _impl_.a_principalinfo_ = a_principalinfo;
+  if (a_principalinfo) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.principalInfo)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_principalInfo)
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::release_principalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::release_a_principalinfo() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.principalinfo_;
-  _impl_.principalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
+  _impl_.a_principalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1208,90 +1208,90 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::unsafe_arena_release_principalinfo() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.principalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::unsafe_arena_release_a_principalinfo() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_principalInfo)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.principalinfo_;
-  _impl_.principalinfo_ = nullptr;
+  ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
+  _impl_.a_principalinfo_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::_internal_mutable_principalinfo() {
+inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::_internal_mutable_a_principalinfo() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.principalinfo_ == nullptr) {
+  if (_impl_.a_principalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
-    _impl_.principalinfo_ = p;
+    _impl_.a_principalinfo_ = p;
   }
-  return _impl_.principalinfo_;
+  return _impl_.a_principalinfo_;
 }
-inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::mutable_principalinfo() {
-  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_principalinfo();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.principalInfo)
+inline ::protobuf::mozilla::ipc::PrincipalInfo* CommonFactoryRequestParams::mutable_a_principalinfo() {
+  ::protobuf::mozilla::ipc::PrincipalInfo* _msg = _internal_mutable_a_principalinfo();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_principalInfo)
   return _msg;
 }
-inline void CommonFactoryRequestParams::set_allocated_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* principalinfo) {
+inline void CommonFactoryRequestParams::set_allocated_a_principalinfo(::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.principalinfo_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_principalinfo_);
   }
-  if (principalinfo) {
+  if (a_principalinfo) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(principalinfo));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_principalinfo));
     if (message_arena != submessage_arena) {
-      principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, principalinfo, submessage_arena);
+      a_principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_principalinfo, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.principalinfo_ = principalinfo;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.principalInfo)
+  _impl_.a_principalinfo_ = a_principalinfo;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams.a_principalInfo)
 }
 
 // -------------------------------------------------------------------
 
 // OpenDatabaseRequestParams
 
-// required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams commonParams = 1;
-inline bool OpenDatabaseRequestParams::_internal_has_commonparams() const {
+// required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
+inline bool OpenDatabaseRequestParams::_internal_has_a_commonparams() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.commonparams_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_commonparams_ != nullptr);
   return value;
 }
-inline bool OpenDatabaseRequestParams::has_commonparams() const {
-  return _internal_has_commonparams();
+inline bool OpenDatabaseRequestParams::has_a_commonparams() const {
+  return _internal_has_a_commonparams();
 }
-inline void OpenDatabaseRequestParams::clear_commonparams() {
-  if (_impl_.commonparams_ != nullptr) _impl_.commonparams_->Clear();
+inline void OpenDatabaseRequestParams::clear_a_commonparams() {
+  if (_impl_.a_commonparams_ != nullptr) _impl_.a_commonparams_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& OpenDatabaseRequestParams::_internal_commonparams() const {
-  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* p = _impl_.commonparams_;
+inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& OpenDatabaseRequestParams::_internal_a_commonparams() const {
+  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* p = _impl_.a_commonparams_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams&>(
       ::protobuf::mozilla::dom::indexedDB::_CommonFactoryRequestParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& OpenDatabaseRequestParams::commonparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.commonParams)
-  return _internal_commonparams();
+inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& OpenDatabaseRequestParams::a_commonparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.a_commonParams)
+  return _internal_a_commonparams();
 }
-inline void OpenDatabaseRequestParams::unsafe_arena_set_allocated_commonparams(
-    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams) {
+inline void OpenDatabaseRequestParams::unsafe_arena_set_allocated_a_commonparams(
+    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.commonparams_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_commonparams_);
   }
-  _impl_.commonparams_ = commonparams;
-  if (commonparams) {
+  _impl_.a_commonparams_ = a_commonparams;
+  if (a_commonparams) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.commonParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.a_commonParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::release_commonparams() {
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::release_a_commonparams() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.commonparams_;
-  _impl_.commonparams_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.a_commonparams_;
+  _impl_.a_commonparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1303,89 +1303,89 @@ inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenData
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::unsafe_arena_release_commonparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.commonParams)
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::unsafe_arena_release_a_commonparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.a_commonParams)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.commonparams_;
-  _impl_.commonparams_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.a_commonparams_;
+  _impl_.a_commonparams_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::_internal_mutable_commonparams() {
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::_internal_mutable_a_commonparams() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.commonparams_ == nullptr) {
+  if (_impl_.a_commonparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams>(GetArenaForAllocation());
-    _impl_.commonparams_ = p;
+    _impl_.a_commonparams_ = p;
   }
-  return _impl_.commonparams_;
+  return _impl_.a_commonparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::mutable_commonparams() {
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _msg = _internal_mutable_commonparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.commonParams)
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* OpenDatabaseRequestParams::mutable_a_commonparams() {
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _msg = _internal_mutable_a_commonparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.a_commonParams)
   return _msg;
 }
-inline void OpenDatabaseRequestParams::set_allocated_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams) {
+inline void OpenDatabaseRequestParams::set_allocated_a_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.commonparams_;
+    delete _impl_.a_commonparams_;
   }
-  if (commonparams) {
+  if (a_commonparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(commonparams);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_commonparams);
     if (message_arena != submessage_arena) {
-      commonparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, commonparams, submessage_arena);
+      a_commonparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_commonparams, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.commonparams_ = commonparams;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.commonParams)
+  _impl_.a_commonparams_ = a_commonparams;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams.a_commonParams)
 }
 
 // -------------------------------------------------------------------
 
 // DeleteDatabaseRequestParams
 
-// required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams commonParams = 1;
-inline bool DeleteDatabaseRequestParams::_internal_has_commonparams() const {
+// required .protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
+inline bool DeleteDatabaseRequestParams::_internal_has_a_commonparams() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.commonparams_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_commonparams_ != nullptr);
   return value;
 }
-inline bool DeleteDatabaseRequestParams::has_commonparams() const {
-  return _internal_has_commonparams();
+inline bool DeleteDatabaseRequestParams::has_a_commonparams() const {
+  return _internal_has_a_commonparams();
 }
-inline void DeleteDatabaseRequestParams::clear_commonparams() {
-  if (_impl_.commonparams_ != nullptr) _impl_.commonparams_->Clear();
+inline void DeleteDatabaseRequestParams::clear_a_commonparams() {
+  if (_impl_.a_commonparams_ != nullptr) _impl_.a_commonparams_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& DeleteDatabaseRequestParams::_internal_commonparams() const {
-  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* p = _impl_.commonparams_;
+inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& DeleteDatabaseRequestParams::_internal_a_commonparams() const {
+  const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* p = _impl_.a_commonparams_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams&>(
       ::protobuf::mozilla::dom::indexedDB::_CommonFactoryRequestParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& DeleteDatabaseRequestParams::commonparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.commonParams)
-  return _internal_commonparams();
+inline const ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams& DeleteDatabaseRequestParams::a_commonparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.a_commonParams)
+  return _internal_a_commonparams();
 }
-inline void DeleteDatabaseRequestParams::unsafe_arena_set_allocated_commonparams(
-    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams) {
+inline void DeleteDatabaseRequestParams::unsafe_arena_set_allocated_a_commonparams(
+    ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.commonparams_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_commonparams_);
   }
-  _impl_.commonparams_ = commonparams;
-  if (commonparams) {
+  _impl_.a_commonparams_ = a_commonparams;
+  if (a_commonparams) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.commonParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.a_commonParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::release_commonparams() {
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::release_a_commonparams() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.commonparams_;
-  _impl_.commonparams_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.a_commonparams_;
+  _impl_.a_commonparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1397,195 +1397,195 @@ inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDa
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::unsafe_arena_release_commonparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.commonParams)
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::unsafe_arena_release_a_commonparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.a_commonParams)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.commonparams_;
-  _impl_.commonparams_ = nullptr;
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* temp = _impl_.a_commonparams_;
+  _impl_.a_commonparams_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::_internal_mutable_commonparams() {
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::_internal_mutable_a_commonparams() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.commonparams_ == nullptr) {
+  if (_impl_.a_commonparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams>(GetArenaForAllocation());
-    _impl_.commonparams_ = p;
+    _impl_.a_commonparams_ = p;
   }
-  return _impl_.commonparams_;
+  return _impl_.a_commonparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::mutable_commonparams() {
-  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _msg = _internal_mutable_commonparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.commonParams)
+inline ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* DeleteDatabaseRequestParams::mutable_a_commonparams() {
+  ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* _msg = _internal_mutable_a_commonparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.a_commonParams)
   return _msg;
 }
-inline void DeleteDatabaseRequestParams::set_allocated_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* commonparams) {
+inline void DeleteDatabaseRequestParams::set_allocated_a_commonparams(::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* a_commonparams) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete _impl_.commonparams_;
+    delete _impl_.a_commonparams_;
   }
-  if (commonparams) {
+  if (a_commonparams) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(commonparams);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_commonparams);
     if (message_arena != submessage_arena) {
-      commonparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, commonparams, submessage_arena);
+      a_commonparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_commonparams, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.commonparams_ = commonparams;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.commonParams)
+  _impl_.a_commonparams_ = a_commonparams;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams.a_commonParams)
 }
 
 // -------------------------------------------------------------------
 
 // FactoryRequestParams
 
-// .protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams mVOpenDatabaseRequestParams = 1;
-inline bool FactoryRequestParams::_internal_has_mvopendatabaserequestparams() const {
-  return content_case() == kMVOpenDatabaseRequestParams;
+// .protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestParams a_mVOpenDatabaseRequestParams = 1;
+inline bool FactoryRequestParams::_internal_has_a_mvopendatabaserequestparams() const {
+  return content_case() == kAMVOpenDatabaseRequestParams;
 }
-inline bool FactoryRequestParams::has_mvopendatabaserequestparams() const {
-  return _internal_has_mvopendatabaserequestparams();
+inline bool FactoryRequestParams::has_a_mvopendatabaserequestparams() const {
+  return _internal_has_a_mvopendatabaserequestparams();
 }
-inline void FactoryRequestParams::set_has_mvopendatabaserequestparams() {
-  _impl_._oneof_case_[0] = kMVOpenDatabaseRequestParams;
+inline void FactoryRequestParams::set_has_a_mvopendatabaserequestparams() {
+  _impl_._oneof_case_[0] = kAMVOpenDatabaseRequestParams;
 }
-inline void FactoryRequestParams::clear_mvopendatabaserequestparams() {
-  if (_internal_has_mvopendatabaserequestparams()) {
+inline void FactoryRequestParams::clear_a_mvopendatabaserequestparams() {
+  if (_internal_has_a_mvopendatabaserequestparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvopendatabaserequestparams_;
+      delete _impl_.content_.a_mvopendatabaserequestparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::release_mvopendatabaserequestparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVOpenDatabaseRequestParams)
-  if (_internal_has_mvopendatabaserequestparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::release_a_mvopendatabaserequestparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVOpenDatabaseRequestParams)
+  if (_internal_has_a_mvopendatabaserequestparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* temp = _impl_.content_.mvopendatabaserequestparams_;
+    ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* temp = _impl_.content_.a_mvopendatabaserequestparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvopendatabaserequestparams_ = nullptr;
+    _impl_.content_.a_mvopendatabaserequestparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& FactoryRequestParams::_internal_mvopendatabaserequestparams() const {
-  return _internal_has_mvopendatabaserequestparams()
-      ? *_impl_.content_.mvopendatabaserequestparams_
+inline const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& FactoryRequestParams::_internal_a_mvopendatabaserequestparams() const {
+  return _internal_has_a_mvopendatabaserequestparams()
+      ? *_impl_.content_.a_mvopendatabaserequestparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams&>(::protobuf::mozilla::dom::indexedDB::_OpenDatabaseRequestParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& FactoryRequestParams::mvopendatabaserequestparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVOpenDatabaseRequestParams)
-  return _internal_mvopendatabaserequestparams();
+inline const ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams& FactoryRequestParams::a_mvopendatabaserequestparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVOpenDatabaseRequestParams)
+  return _internal_a_mvopendatabaserequestparams();
 }
-inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::unsafe_arena_release_mvopendatabaserequestparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVOpenDatabaseRequestParams)
-  if (_internal_has_mvopendatabaserequestparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::unsafe_arena_release_a_mvopendatabaserequestparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVOpenDatabaseRequestParams)
+  if (_internal_has_a_mvopendatabaserequestparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* temp = _impl_.content_.mvopendatabaserequestparams_;
-    _impl_.content_.mvopendatabaserequestparams_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* temp = _impl_.content_.a_mvopendatabaserequestparams_;
+    _impl_.content_.a_mvopendatabaserequestparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FactoryRequestParams::unsafe_arena_set_allocated_mvopendatabaserequestparams(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* mvopendatabaserequestparams) {
+inline void FactoryRequestParams::unsafe_arena_set_allocated_a_mvopendatabaserequestparams(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* a_mvopendatabaserequestparams) {
   clear_content();
-  if (mvopendatabaserequestparams) {
-    set_has_mvopendatabaserequestparams();
-    _impl_.content_.mvopendatabaserequestparams_ = mvopendatabaserequestparams;
+  if (a_mvopendatabaserequestparams) {
+    set_has_a_mvopendatabaserequestparams();
+    _impl_.content_.a_mvopendatabaserequestparams_ = a_mvopendatabaserequestparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVOpenDatabaseRequestParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVOpenDatabaseRequestParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::_internal_mutable_mvopendatabaserequestparams() {
-  if (!_internal_has_mvopendatabaserequestparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::_internal_mutable_a_mvopendatabaserequestparams() {
+  if (!_internal_has_a_mvopendatabaserequestparams()) {
     clear_content();
-    set_has_mvopendatabaserequestparams();
-    _impl_.content_.mvopendatabaserequestparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams >(GetArenaForAllocation());
+    set_has_a_mvopendatabaserequestparams();
+    _impl_.content_.a_mvopendatabaserequestparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvopendatabaserequestparams_;
+  return _impl_.content_.a_mvopendatabaserequestparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::mutable_mvopendatabaserequestparams() {
-  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* _msg = _internal_mutable_mvopendatabaserequestparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVOpenDatabaseRequestParams)
+inline ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* FactoryRequestParams::mutable_a_mvopendatabaserequestparams() {
+  ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* _msg = _internal_mutable_a_mvopendatabaserequestparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVOpenDatabaseRequestParams)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams mVDeleteDatabaseRequestParams = 2;
-inline bool FactoryRequestParams::_internal_has_mvdeletedatabaserequestparams() const {
-  return content_case() == kMVDeleteDatabaseRequestParams;
+// .protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestParams a_mVDeleteDatabaseRequestParams = 2;
+inline bool FactoryRequestParams::_internal_has_a_mvdeletedatabaserequestparams() const {
+  return content_case() == kAMVDeleteDatabaseRequestParams;
 }
-inline bool FactoryRequestParams::has_mvdeletedatabaserequestparams() const {
-  return _internal_has_mvdeletedatabaserequestparams();
+inline bool FactoryRequestParams::has_a_mvdeletedatabaserequestparams() const {
+  return _internal_has_a_mvdeletedatabaserequestparams();
 }
-inline void FactoryRequestParams::set_has_mvdeletedatabaserequestparams() {
-  _impl_._oneof_case_[0] = kMVDeleteDatabaseRequestParams;
+inline void FactoryRequestParams::set_has_a_mvdeletedatabaserequestparams() {
+  _impl_._oneof_case_[0] = kAMVDeleteDatabaseRequestParams;
 }
-inline void FactoryRequestParams::clear_mvdeletedatabaserequestparams() {
-  if (_internal_has_mvdeletedatabaserequestparams()) {
+inline void FactoryRequestParams::clear_a_mvdeletedatabaserequestparams() {
+  if (_internal_has_a_mvdeletedatabaserequestparams()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvdeletedatabaserequestparams_;
+      delete _impl_.content_.a_mvdeletedatabaserequestparams_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::release_mvdeletedatabaserequestparams() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVDeleteDatabaseRequestParams)
-  if (_internal_has_mvdeletedatabaserequestparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::release_a_mvdeletedatabaserequestparams() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVDeleteDatabaseRequestParams)
+  if (_internal_has_a_mvdeletedatabaserequestparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* temp = _impl_.content_.mvdeletedatabaserequestparams_;
+    ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* temp = _impl_.content_.a_mvdeletedatabaserequestparams_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvdeletedatabaserequestparams_ = nullptr;
+    _impl_.content_.a_mvdeletedatabaserequestparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& FactoryRequestParams::_internal_mvdeletedatabaserequestparams() const {
-  return _internal_has_mvdeletedatabaserequestparams()
-      ? *_impl_.content_.mvdeletedatabaserequestparams_
+inline const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& FactoryRequestParams::_internal_a_mvdeletedatabaserequestparams() const {
+  return _internal_has_a_mvdeletedatabaserequestparams()
+      ? *_impl_.content_.a_mvdeletedatabaserequestparams_
       : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams&>(::protobuf::mozilla::dom::indexedDB::_DeleteDatabaseRequestParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& FactoryRequestParams::mvdeletedatabaserequestparams() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVDeleteDatabaseRequestParams)
-  return _internal_mvdeletedatabaserequestparams();
+inline const ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams& FactoryRequestParams::a_mvdeletedatabaserequestparams() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVDeleteDatabaseRequestParams)
+  return _internal_a_mvdeletedatabaserequestparams();
 }
-inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::unsafe_arena_release_mvdeletedatabaserequestparams() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVDeleteDatabaseRequestParams)
-  if (_internal_has_mvdeletedatabaserequestparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::unsafe_arena_release_a_mvdeletedatabaserequestparams() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVDeleteDatabaseRequestParams)
+  if (_internal_has_a_mvdeletedatabaserequestparams()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* temp = _impl_.content_.mvdeletedatabaserequestparams_;
-    _impl_.content_.mvdeletedatabaserequestparams_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* temp = _impl_.content_.a_mvdeletedatabaserequestparams_;
+    _impl_.content_.a_mvdeletedatabaserequestparams_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void FactoryRequestParams::unsafe_arena_set_allocated_mvdeletedatabaserequestparams(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* mvdeletedatabaserequestparams) {
+inline void FactoryRequestParams::unsafe_arena_set_allocated_a_mvdeletedatabaserequestparams(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* a_mvdeletedatabaserequestparams) {
   clear_content();
-  if (mvdeletedatabaserequestparams) {
-    set_has_mvdeletedatabaserequestparams();
-    _impl_.content_.mvdeletedatabaserequestparams_ = mvdeletedatabaserequestparams;
+  if (a_mvdeletedatabaserequestparams) {
+    set_has_a_mvdeletedatabaserequestparams();
+    _impl_.content_.a_mvdeletedatabaserequestparams_ = a_mvdeletedatabaserequestparams;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVDeleteDatabaseRequestParams)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVDeleteDatabaseRequestParams)
 }
-inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::_internal_mutable_mvdeletedatabaserequestparams() {
-  if (!_internal_has_mvdeletedatabaserequestparams()) {
+inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::_internal_mutable_a_mvdeletedatabaserequestparams() {
+  if (!_internal_has_a_mvdeletedatabaserequestparams()) {
     clear_content();
-    set_has_mvdeletedatabaserequestparams();
-    _impl_.content_.mvdeletedatabaserequestparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams >(GetArenaForAllocation());
+    set_has_a_mvdeletedatabaserequestparams();
+    _impl_.content_.a_mvdeletedatabaserequestparams_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvdeletedatabaserequestparams_;
+  return _impl_.content_.a_mvdeletedatabaserequestparams_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::mutable_mvdeletedatabaserequestparams() {
-  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* _msg = _internal_mutable_mvdeletedatabaserequestparams();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.mVDeleteDatabaseRequestParams)
+inline ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* FactoryRequestParams::mutable_a_mvdeletedatabaserequestparams() {
+  ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* _msg = _internal_mutable_a_mvdeletedatabaserequestparams();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.FactoryRequestParams.a_mVDeleteDatabaseRequestParams)
   return _msg;
 }
 
@@ -1602,122 +1602,122 @@ inline FactoryRequestParams::ContentCase FactoryRequestParams::content_case() co
 
 // GetDatabasesResponse__mVArrayOfDatabaseMetadata
 
-// repeated .protobuf.mozilla.dom.indexedDB.DatabaseMetadata mVArrayOfDatabaseMetadata = 1;
-inline int GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_mvarrayofdatabasemetadata_size() const {
-  return _impl_.mvarrayofdatabasemetadata_.size();
+// repeated .protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_mVArrayOfDatabaseMetadata = 1;
+inline int GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_a_mvarrayofdatabasemetadata_size() const {
+  return _impl_.a_mvarrayofdatabasemetadata_.size();
 }
-inline int GetDatabasesResponse__mVArrayOfDatabaseMetadata::mvarrayofdatabasemetadata_size() const {
-  return _internal_mvarrayofdatabasemetadata_size();
+inline int GetDatabasesResponse__mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata_size() const {
+  return _internal_a_mvarrayofdatabasemetadata_size();
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::mutable_mvarrayofdatabasemetadata(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.mVArrayOfDatabaseMetadata)
-  return _impl_.mvarrayofdatabasemetadata_.Mutable(index);
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::mutable_a_mvarrayofdatabasemetadata(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+  return _impl_.a_mvarrayofdatabasemetadata_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >*
-GetDatabasesResponse__mVArrayOfDatabaseMetadata::mutable_mvarrayofdatabasemetadata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.mVArrayOfDatabaseMetadata)
-  return &_impl_.mvarrayofdatabasemetadata_;
+GetDatabasesResponse__mVArrayOfDatabaseMetadata::mutable_a_mvarrayofdatabasemetadata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+  return &_impl_.a_mvarrayofdatabasemetadata_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_mvarrayofdatabasemetadata(int index) const {
-  return _impl_.mvarrayofdatabasemetadata_.Get(index);
+inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_a_mvarrayofdatabasemetadata(int index) const {
+  return _impl_.a_mvarrayofdatabasemetadata_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse__mVArrayOfDatabaseMetadata::mvarrayofdatabasemetadata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.mVArrayOfDatabaseMetadata)
-  return _internal_mvarrayofdatabasemetadata(index);
+inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse__mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+  return _internal_a_mvarrayofdatabasemetadata(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_add_mvarrayofdatabasemetadata() {
-  return _impl_.mvarrayofdatabasemetadata_.Add();
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_add_a_mvarrayofdatabasemetadata() {
+  return _impl_.a_mvarrayofdatabasemetadata_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::add_mvarrayofdatabasemetadata() {
-  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _add = _internal_add_mvarrayofdatabasemetadata();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.mVArrayOfDatabaseMetadata)
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::add_a_mvarrayofdatabasemetadata() {
+  ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _add = _internal_add_a_mvarrayofdatabasemetadata();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >&
-GetDatabasesResponse__mVArrayOfDatabaseMetadata::mvarrayofdatabasemetadata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.mVArrayOfDatabaseMetadata)
-  return _impl_.mvarrayofdatabasemetadata_;
+GetDatabasesResponse__mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+  return _impl_.a_mvarrayofdatabasemetadata_;
 }
 
 // -------------------------------------------------------------------
 
 // GetDatabasesResponse
 
-// bytes mVnsresult = 1;
-inline bool GetDatabasesResponse::_internal_has_mvnsresult() const {
-  return content_case() == kMVnsresult;
+// bytes a_mVnsresult = 1;
+inline bool GetDatabasesResponse::_internal_has_a_mvnsresult() const {
+  return content_case() == kAMVnsresult;
 }
-inline bool GetDatabasesResponse::has_mvnsresult() const {
-  return _internal_has_mvnsresult();
+inline bool GetDatabasesResponse::has_a_mvnsresult() const {
+  return _internal_has_a_mvnsresult();
 }
-inline void GetDatabasesResponse::set_has_mvnsresult() {
-  _impl_._oneof_case_[0] = kMVnsresult;
+inline void GetDatabasesResponse::set_has_a_mvnsresult() {
+  _impl_._oneof_case_[0] = kAMVnsresult;
 }
-inline void GetDatabasesResponse::clear_mvnsresult() {
-  if (_internal_has_mvnsresult()) {
-    _impl_.content_.mvnsresult_.Destroy();
+inline void GetDatabasesResponse::clear_a_mvnsresult() {
+  if (_internal_has_a_mvnsresult()) {
+    _impl_.content_.a_mvnsresult_.Destroy();
     clear_has_content();
   }
 }
-inline const std::string& GetDatabasesResponse::mvnsresult() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVnsresult)
-  return _internal_mvnsresult();
+inline const std::string& GetDatabasesResponse::a_mvnsresult() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVnsresult)
+  return _internal_a_mvnsresult();
 }
 template <typename ArgT0, typename... ArgT>
-inline void GetDatabasesResponse::set_mvnsresult(ArgT0&& arg0, ArgT... args) {
-  if (!_internal_has_mvnsresult()) {
+inline void GetDatabasesResponse::set_a_mvnsresult(ArgT0&& arg0, ArgT... args) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVnsresult)
+  _impl_.content_.a_mvnsresult_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVnsresult)
 }
-inline std::string* GetDatabasesResponse::mutable_mvnsresult() {
-  std::string* _s = _internal_mutable_mvnsresult();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVnsresult)
+inline std::string* GetDatabasesResponse::mutable_a_mvnsresult() {
+  std::string* _s = _internal_mutable_a_mvnsresult();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVnsresult)
   return _s;
 }
-inline const std::string& GetDatabasesResponse::_internal_mvnsresult() const {
-  if (_internal_has_mvnsresult()) {
-    return _impl_.content_.mvnsresult_.Get();
+inline const std::string& GetDatabasesResponse::_internal_a_mvnsresult() const {
+  if (_internal_has_a_mvnsresult()) {
+    return _impl_.content_.a_mvnsresult_.Get();
   }
   return ::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void GetDatabasesResponse::_internal_set_mvnsresult(const std::string& value) {
-  if (!_internal_has_mvnsresult()) {
+inline void GetDatabasesResponse::_internal_set_a_mvnsresult(const std::string& value) {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  _impl_.content_.mvnsresult_.Set(value, GetArenaForAllocation());
+  _impl_.content_.a_mvnsresult_.Set(value, GetArenaForAllocation());
 }
-inline std::string* GetDatabasesResponse::_internal_mutable_mvnsresult() {
-  if (!_internal_has_mvnsresult()) {
+inline std::string* GetDatabasesResponse::_internal_mutable_a_mvnsresult() {
+  if (!_internal_has_a_mvnsresult()) {
     clear_content();
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitDefault();
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitDefault();
   }
-  return _impl_.content_.mvnsresult_.Mutable(      GetArenaForAllocation());
+  return _impl_.content_.a_mvnsresult_.Mutable(      GetArenaForAllocation());
 }
-inline std::string* GetDatabasesResponse::release_mvnsresult() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVnsresult)
-  if (_internal_has_mvnsresult()) {
+inline std::string* GetDatabasesResponse::release_a_mvnsresult() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVnsresult)
+  if (_internal_has_a_mvnsresult()) {
     clear_has_content();
-    return _impl_.content_.mvnsresult_.Release();
+    return _impl_.content_.a_mvnsresult_.Release();
   } else {
     return nullptr;
   }
 }
-inline void GetDatabasesResponse::set_allocated_mvnsresult(std::string* mvnsresult) {
+inline void GetDatabasesResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult) {
   if (has_content()) {
     clear_content();
   }
-  if (mvnsresult != nullptr) {
-    set_has_mvnsresult();
-    _impl_.content_.mvnsresult_.InitAllocated(mvnsresult, GetArenaForAllocation());
+  if (a_mvnsresult != nullptr) {
+    set_has_a_mvnsresult();
+    _impl_.content_.a_mvnsresult_.InitAllocated(a_mvnsresult, GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVnsresult)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVnsresult)
 }
 
 // .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata mVArrayOfDatabaseMetadata = 2;

@@ -13,16 +13,16 @@ package protobuf.mozilla.dom;
 // Structs and unions declarations
 message PrefValue {
   oneof content {
-    bytes mVnsCString = 1;
-    sint32 mVint32_t = 2;
-    bool mVbool = 3;
+    bytes a_mVnsCString = 1;
+    sint32 a_mVint32_t = 2;
+    bool a_mVbool = 3;
   }
 }
 
 message Pref {
-  required bytes name = 1;
-  required bool isLocked = 2;
-  required bool isSanitized = 3;
-  optional protobuf.mozilla.dom.PrefValue defaultValue = 4;
-  optional protobuf.mozilla.dom.PrefValue userValue = 5;
+  required bytes a_name = 1;
+  required bool a_isLocked = 2;
+  required bool a_isSanitized = 3;
+  optional protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
+  optional protobuf.mozilla.dom.PrefValue a_userValue = 5;
 }

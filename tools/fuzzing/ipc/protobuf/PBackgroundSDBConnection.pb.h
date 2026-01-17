@@ -321,25 +321,25 @@ class Msg_PBackgroundSDBRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kParamsFieldNumber = 1,
+    kAParamsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.SDBRequestParams params = 1;
-  bool has_params() const;
+  // required .protobuf.mozilla.dom.SDBRequestParams a_params = 1;
+  bool has_a_params() const;
   private:
-  bool _internal_has_params() const;
+  bool _internal_has_a_params() const;
   public:
-  void clear_params();
-  const ::protobuf::mozilla::dom::SDBRequestParams& params() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SDBRequestParams* release_params();
-  ::protobuf::mozilla::dom::SDBRequestParams* mutable_params();
-  void set_allocated_params(::protobuf::mozilla::dom::SDBRequestParams* params);
+  void clear_a_params();
+  const ::protobuf::mozilla::dom::SDBRequestParams& a_params() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::SDBRequestParams* release_a_params();
+  ::protobuf::mozilla::dom::SDBRequestParams* mutable_a_params();
+  void set_allocated_a_params(::protobuf::mozilla::dom::SDBRequestParams* a_params);
   private:
-  const ::protobuf::mozilla::dom::SDBRequestParams& _internal_params() const;
-  ::protobuf::mozilla::dom::SDBRequestParams* _internal_mutable_params();
+  const ::protobuf::mozilla::dom::SDBRequestParams& _internal_a_params() const;
+  ::protobuf::mozilla::dom::SDBRequestParams* _internal_mutable_a_params();
   public:
-  void unsafe_arena_set_allocated_params(
-      ::protobuf::mozilla::dom::SDBRequestParams* params);
-  ::protobuf::mozilla::dom::SDBRequestParams* unsafe_arena_release_params();
+  void unsafe_arena_set_allocated_a_params(
+      ::protobuf::mozilla::dom::SDBRequestParams* a_params);
+  ::protobuf::mozilla::dom::SDBRequestParams* unsafe_arena_release_a_params();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor)
  private:
@@ -351,7 +351,7 @@ class Msg_PBackgroundSDBRequestConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::SDBRequestParams* params_;
+    ::protobuf::mozilla::dom::SDBRequestParams* a_params_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSDBConnection_2eproto;
@@ -991,41 +991,41 @@ class Msg_Closed final :
 
 // Msg_PBackgroundSDBRequestConstructor
 
-// required .protobuf.mozilla.dom.SDBRequestParams params = 1;
-inline bool Msg_PBackgroundSDBRequestConstructor::_internal_has_params() const {
+// required .protobuf.mozilla.dom.SDBRequestParams a_params = 1;
+inline bool Msg_PBackgroundSDBRequestConstructor::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.params_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
   return value;
 }
-inline bool Msg_PBackgroundSDBRequestConstructor::has_params() const {
-  return _internal_has_params();
+inline bool Msg_PBackgroundSDBRequestConstructor::has_a_params() const {
+  return _internal_has_a_params();
 }
-inline const ::protobuf::mozilla::dom::SDBRequestParams& Msg_PBackgroundSDBRequestConstructor::_internal_params() const {
-  const ::protobuf::mozilla::dom::SDBRequestParams* p = _impl_.params_;
+inline const ::protobuf::mozilla::dom::SDBRequestParams& Msg_PBackgroundSDBRequestConstructor::_internal_a_params() const {
+  const ::protobuf::mozilla::dom::SDBRequestParams* p = _impl_.a_params_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::SDBRequestParams&>(
       ::protobuf::mozilla::dom::_SDBRequestParams_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::SDBRequestParams& Msg_PBackgroundSDBRequestConstructor::params() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.params)
-  return _internal_params();
+inline const ::protobuf::mozilla::dom::SDBRequestParams& Msg_PBackgroundSDBRequestConstructor::a_params() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
+  return _internal_a_params();
 }
-inline void Msg_PBackgroundSDBRequestConstructor::unsafe_arena_set_allocated_params(
-    ::protobuf::mozilla::dom::SDBRequestParams* params) {
+inline void Msg_PBackgroundSDBRequestConstructor::unsafe_arena_set_allocated_a_params(
+    ::protobuf::mozilla::dom::SDBRequestParams* a_params) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  _impl_.params_ = params;
-  if (params) {
+  _impl_.a_params_ = a_params;
+  if (a_params) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.params)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
 }
-inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::release_params() {
+inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::release_a_params() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::SDBRequestParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::dom::SDBRequestParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1037,45 +1037,45 @@ inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestCons
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::unsafe_arena_release_params() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.params)
+inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::unsafe_arena_release_a_params() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::SDBRequestParams* temp = _impl_.params_;
-  _impl_.params_ = nullptr;
+  ::protobuf::mozilla::dom::SDBRequestParams* temp = _impl_.a_params_;
+  _impl_.a_params_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::_internal_mutable_params() {
+inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::_internal_mutable_a_params() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.params_ == nullptr) {
+  if (_impl_.a_params_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::SDBRequestParams>(GetArenaForAllocation());
-    _impl_.params_ = p;
+    _impl_.a_params_ = p;
   }
-  return _impl_.params_;
+  return _impl_.a_params_;
 }
-inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::mutable_params() {
-  ::protobuf::mozilla::dom::SDBRequestParams* _msg = _internal_mutable_params();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.params)
+inline ::protobuf::mozilla::dom::SDBRequestParams* Msg_PBackgroundSDBRequestConstructor::mutable_a_params() {
+  ::protobuf::mozilla::dom::SDBRequestParams* _msg = _internal_mutable_a_params();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
   return _msg;
 }
-inline void Msg_PBackgroundSDBRequestConstructor::set_allocated_params(::protobuf::mozilla::dom::SDBRequestParams* params) {
+inline void Msg_PBackgroundSDBRequestConstructor::set_allocated_a_params(::protobuf::mozilla::dom::SDBRequestParams* a_params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_params_);
   }
-  if (params) {
+  if (a_params) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(params));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_params));
     if (message_arena != submessage_arena) {
-      params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, params, submessage_arena);
+      a_params = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_params, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.params_ = params;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.params)
+  _impl_.a_params_ = a_params;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSDBConnection.Msg_PBackgroundSDBRequestConstructor.a_params)
 }
 
 // -------------------------------------------------------------------

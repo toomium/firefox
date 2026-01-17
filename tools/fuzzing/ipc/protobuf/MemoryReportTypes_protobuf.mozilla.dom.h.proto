@@ -12,11 +12,11 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message MemoryReport {
-  required bytes process = 1;
-  required bytes path = 2;
-  required sint32 kind = 3;
-  required sint32 units = 4;
-  required sint64 amount = 5;
-  required uint32 generation = 6;
-  required bytes desc = 7;
+  required bytes a_process = 1;
+  required bytes a_path = 2;
+  required sint32 a_kind = 3;
+  required sint32 a_units = 4;
+  required sint64 a_amount = 5;
+  required uint32 a_generation = 6;
+  required bytes a_desc = 7;
 }

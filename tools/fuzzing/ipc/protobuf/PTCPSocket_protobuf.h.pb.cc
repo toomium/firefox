@@ -22,9 +22,9 @@ PROTOBUF_CONSTEXPR TCPError::TCPError(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.errorcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_errorcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
 struct TCPErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR TCPErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,7 +36,7 @@ struct TCPErrorDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TCPErrorDefaultTypeInternal _TCPError_default_instance_;
 PROTOBUF_CONSTEXPR SendableData__mVArrayOfuint8_t::SendableData__mVArrayOfuint8_t(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.mvarrayofuint8_t_)*/{}
+    /*decltype(_impl_.a_mvarrayofuint8_t_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendableData__mVArrayOfuint8_tDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendableData__mVArrayOfuint8_tDefaultTypeInternal()
@@ -83,13 +83,13 @@ namespace protobuf {
 class TCPError::_Internal {
  public:
   using HasBits = decltype(std::declval<TCPError>()._impl_._has_bits_);
-  static void set_has_name(HasBits* has_bits) {
+  static void set_has_a_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_message(HasBits* has_bits) {
+  static void set_has_a_message(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
-  static void set_has_errorcode(HasBits* has_bits) {
+  static void set_has_a_errorcode(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
@@ -109,33 +109,33 @@ TCPError::TCPError(const TCPError& from)
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.errorcode_){}};
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_message_){}
+    , decltype(_impl_.a_errorcode_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_name()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
+  if (from._internal_has_a_name()) {
+    _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.message_.InitDefault();
+  _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_message()) {
-    _this->_impl_.message_.Set(from._internal_message(), 
+  if (from._internal_has_a_message()) {
+    _this->_impl_.a_message_.Set(from._internal_a_message(), 
       _this->GetArenaForAllocation());
   }
-  _impl_.errorcode_.InitDefault();
+  _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_errorcode()) {
-    _this->_impl_.errorcode_.Set(from._internal_errorcode(), 
+  if (from._internal_has_a_errorcode()) {
+    _this->_impl_.a_errorcode_.Set(from._internal_a_errorcode(), 
       _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:protobuf.TCPError)
@@ -148,21 +148,21 @@ inline void TCPError::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.name_){}
-    , decltype(_impl_.message_){}
-    , decltype(_impl_.errorcode_){}
+    , decltype(_impl_.a_name_){}
+    , decltype(_impl_.a_message_){}
+    , decltype(_impl_.a_errorcode_){}
   };
-  _impl_.name_.InitDefault();
+  _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
+    _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.message_.InitDefault();
+  _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_.Set("", GetArenaForAllocation());
+    _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.errorcode_.InitDefault();
+  _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.errorcode_.Set("", GetArenaForAllocation());
+    _impl_.a_errorcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -177,9 +177,9 @@ TCPError::~TCPError() {
 
 inline void TCPError::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
-  _impl_.message_.Destroy();
-  _impl_.errorcode_.Destroy();
+  _impl_.a_name_.Destroy();
+  _impl_.a_message_.Destroy();
+  _impl_.a_errorcode_.Destroy();
 }
 
 void TCPError::SetCachedSize(int size) const {
@@ -195,13 +195,13 @@ void TCPError::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _impl_.name_.ClearNonDefaultToEmpty();
+      _impl_.a_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      _impl_.message_.ClearNonDefaultToEmpty();
+      _impl_.a_message_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      _impl_.errorcode_.ClearNonDefaultToEmpty();
+      _impl_.a_errorcode_.ClearNonDefaultToEmpty();
     }
   }
   _impl_._has_bits_.Clear();
@@ -215,28 +215,28 @@ const char* TCPError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes name = 1;
+      // required bytes a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
+          auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes message = 2;
+      // required bytes a_message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_message();
+          auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes errorCode = 3;
+      // required bytes a_errorCode = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_errorcode();
+          auto str = _internal_mutable_a_errorcode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -273,22 +273,22 @@ uint8_t* TCPError::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes name = 1;
+  // required bytes a_name = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_name(), target);
+        1, this->_internal_a_name(), target);
   }
 
-  // required bytes message = 2;
+  // required bytes a_message = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_message(), target);
+        2, this->_internal_a_message(), target);
   }
 
-  // required bytes errorCode = 3;
+  // required bytes a_errorCode = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_errorcode(), target);
+        3, this->_internal_a_errorcode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -303,25 +303,25 @@ size_t TCPError::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.TCPError)
   size_t total_size = 0;
 
-  if (_internal_has_name()) {
-    // required bytes name = 1;
+  if (_internal_has_a_name()) {
+    // required bytes a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
   }
 
-  if (_internal_has_message()) {
-    // required bytes message = 2;
+  if (_internal_has_a_message()) {
+    // required bytes a_message = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_message());
+        this->_internal_a_message());
   }
 
-  if (_internal_has_errorcode()) {
-    // required bytes errorCode = 3;
+  if (_internal_has_a_errorcode()) {
+    // required bytes a_errorCode = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_errorcode());
+        this->_internal_a_errorcode());
   }
 
   return total_size;
@@ -331,20 +331,20 @@ size_t TCPError::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes name = 1;
+    // required bytes a_name = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_name());
+        this->_internal_a_name());
 
-    // required bytes message = 2;
+    // required bytes a_message = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_message());
+        this->_internal_a_message());
 
-    // required bytes errorCode = 3;
+    // required bytes a_errorCode = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_errorcode());
+        this->_internal_a_errorcode());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -377,13 +377,13 @@ void TCPError::MergeFrom(const TCPError& from) {
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_name(from._internal_name());
+      _this->_internal_set_a_name(from._internal_a_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_message(from._internal_message());
+      _this->_internal_set_a_message(from._internal_a_message());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_errorcode(from._internal_errorcode());
+      _this->_internal_set_a_errorcode(from._internal_a_errorcode());
     }
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -408,16 +408,16 @@ void TCPError::InternalSwap(TCPError* other) {
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
+      &_impl_.a_name_, lhs_arena,
+      &other->_impl_.a_name_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_, lhs_arena,
-      &other->_impl_.message_, rhs_arena
+      &_impl_.a_message_, lhs_arena,
+      &other->_impl_.a_message_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.errorcode_, lhs_arena,
-      &other->_impl_.errorcode_, rhs_arena
+      &_impl_.a_errorcode_, lhs_arena,
+      &other->_impl_.a_errorcode_, rhs_arena
   );
 }
 
@@ -442,7 +442,7 @@ SendableData__mVArrayOfuint8_t::SendableData__mVArrayOfuint8_t(const SendableDat
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SendableData__mVArrayOfuint8_t* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofuint8_t_){from._impl_.mvarrayofuint8_t_}
+      decltype(_impl_.a_mvarrayofuint8_t_){from._impl_.a_mvarrayofuint8_t_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -454,7 +454,7 @@ inline void SendableData__mVArrayOfuint8_t::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.mvarrayofuint8_t_){arena}
+      decltype(_impl_.a_mvarrayofuint8_t_){arena}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -470,7 +470,7 @@ SendableData__mVArrayOfuint8_t::~SendableData__mVArrayOfuint8_t() {
 
 inline void SendableData__mVArrayOfuint8_t::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.mvarrayofuint8_t_.~RepeatedField();
+  _impl_.a_mvarrayofuint8_t_.~RepeatedField();
 }
 
 void SendableData__mVArrayOfuint8_t::SetCachedSize(int size) const {
@@ -483,7 +483,7 @@ void SendableData__mVArrayOfuint8_t::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.mvarrayofuint8_t_.Clear();
+  _impl_.a_mvarrayofuint8_t_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
@@ -493,18 +493,18 @@ const char* SendableData__mVArrayOfuint8_t::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated uint32 mVArrayOfuint8_t = 1;
+      // repeated uint32 a_mVArrayOfuint8_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
           ptr -= 1;
           do {
             ptr += 1;
-            _internal_add_mvarrayofuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+            _internal_add_a_mvarrayofuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
         } else if (static_cast<uint8_t>(tag) == 10) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_mvarrayofuint8_t(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_mvarrayofuint8_t(), ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -538,10 +538,10 @@ uint8_t* SendableData__mVArrayOfuint8_t::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 mVArrayOfuint8_t = 1;
-  for (int i = 0, n = this->_internal_mvarrayofuint8_t_size(); i < n; i++) {
+  // repeated uint32 a_mVArrayOfuint8_t = 1;
+  for (int i = 0, n = this->_internal_a_mvarrayofuint8_t_size(); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_mvarrayofuint8_t(i), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_mvarrayofuint8_t(i), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -560,12 +560,12 @@ size_t SendableData__mVArrayOfuint8_t::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 mVArrayOfuint8_t = 1;
+  // repeated uint32 a_mVArrayOfuint8_t = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      UInt32Size(this->_impl_.mvarrayofuint8_t_);
+      UInt32Size(this->_impl_.a_mvarrayofuint8_t_);
     total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_mvarrayofuint8_t_size());
+                  ::_pbi::FromIntSize(this->_internal_a_mvarrayofuint8_t_size());
     total_size += data_size;
   }
 
@@ -590,7 +590,7 @@ void SendableData__mVArrayOfuint8_t::MergeFrom(const SendableData__mVArrayOfuint
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.mvarrayofuint8_t_.MergeFrom(from._impl_.mvarrayofuint8_t_);
+  _this->_impl_.a_mvarrayofuint8_t_.MergeFrom(from._impl_.a_mvarrayofuint8_t_);
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -608,7 +608,7 @@ bool SendableData__mVArrayOfuint8_t::IsInitialized() const {
 void SendableData__mVArrayOfuint8_t::InternalSwap(SendableData__mVArrayOfuint8_t* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.mvarrayofuint8_t_.InternalSwap(&other->_impl_.mvarrayofuint8_t_);
+  _impl_.a_mvarrayofuint8_t_.InternalSwap(&other->_impl_.a_mvarrayofuint8_t_);
 }
 
 std::string SendableData__mVArrayOfuint8_t::GetTypeName() const {
@@ -664,8 +664,8 @@ SendableData::SendableData(const SendableData& from)
           from._internal_mvarrayofuint8_t());
       break;
     }
-    case kMVnsCString: {
-      _this->_internal_set_mvnscstring(from._internal_mvnscstring());
+    case kAMVnsCString: {
+      _this->_internal_set_a_mvnscstring(from._internal_a_mvnscstring());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -716,8 +716,8 @@ void SendableData::clear_content() {
       }
       break;
     }
-    case kMVnsCString: {
-      _impl_.content_.mvnscstring_.Destroy();
+    case kAMVnsCString: {
+      _impl_.content_.a_mvnscstring_.Destroy();
       break;
     }
     case CONTENT_NOT_SET: {
@@ -752,10 +752,10 @@ const char* SendableData::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // bytes mVnsCString = 2;
+      // bytes a_mVnsCString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          auto str = _internal_mutable_mvnscstring();
+          auto str = _internal_mutable_a_mvnscstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
@@ -797,9 +797,9 @@ uint8_t* SendableData::_InternalSerialize(
           _Internal::mvarrayofuint8_t(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVnsCString: {
+    case kAMVnsCString: {
       target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_mvnscstring(), target);
+          2, this->_internal_a_mvnscstring(), target);
       break;
     }
     default: ;
@@ -828,11 +828,11 @@ size_t SendableData::ByteSizeLong() const {
           *_impl_.content_.mvarrayofuint8_t_);
       break;
     }
-    // bytes mVnsCString = 2;
-    case kMVnsCString: {
+    // bytes a_mVnsCString = 2;
+    case kAMVnsCString: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvnscstring());
+          this->_internal_a_mvnscstring());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -866,8 +866,8 @@ void SendableData::MergeFrom(const SendableData& from) {
           from._internal_mvarrayofuint8_t());
       break;
     }
-    case kMVnsCString: {
-      _this->_internal_set_mvnscstring(from._internal_mvnscstring());
+    case kAMVnsCString: {
+      _this->_internal_set_a_mvnscstring(from._internal_a_mvnscstring());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -904,47 +904,47 @@ std::string SendableData::GetTypeName() const {
 
 class CallbackData::_Internal {
  public:
-  static const ::protobuf::SendableData& mvsendabledata(const CallbackData* msg);
-  static const ::protobuf::TCPError& mvtcperror(const CallbackData* msg);
+  static const ::protobuf::SendableData& a_mvsendabledata(const CallbackData* msg);
+  static const ::protobuf::TCPError& a_mvtcperror(const CallbackData* msg);
 };
 
 const ::protobuf::SendableData&
-CallbackData::_Internal::mvsendabledata(const CallbackData* msg) {
-  return *msg->_impl_.content_.mvsendabledata_;
+CallbackData::_Internal::a_mvsendabledata(const CallbackData* msg) {
+  return *msg->_impl_.content_.a_mvsendabledata_;
 }
 const ::protobuf::TCPError&
-CallbackData::_Internal::mvtcperror(const CallbackData* msg) {
-  return *msg->_impl_.content_.mvtcperror_;
+CallbackData::_Internal::a_mvtcperror(const CallbackData* msg) {
+  return *msg->_impl_.content_.a_mvtcperror_;
 }
-void CallbackData::set_allocated_mvsendabledata(::protobuf::SendableData* mvsendabledata) {
+void CallbackData::set_allocated_a_mvsendabledata(::protobuf::SendableData* a_mvsendabledata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvsendabledata) {
+  if (a_mvsendabledata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvsendabledata);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvsendabledata);
     if (message_arena != submessage_arena) {
-      mvsendabledata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvsendabledata, submessage_arena);
+      a_mvsendabledata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvsendabledata, submessage_arena);
     }
-    set_has_mvsendabledata();
-    _impl_.content_.mvsendabledata_ = mvsendabledata;
+    set_has_a_mvsendabledata();
+    _impl_.content_.a_mvsendabledata_ = a_mvsendabledata;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.CallbackData.mVSendableData)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.CallbackData.a_mVSendableData)
 }
-void CallbackData::set_allocated_mvtcperror(::protobuf::TCPError* mvtcperror) {
+void CallbackData::set_allocated_a_mvtcperror(::protobuf::TCPError* a_mvtcperror) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvtcperror) {
+  if (a_mvtcperror) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvtcperror);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvtcperror);
     if (message_arena != submessage_arena) {
-      mvtcperror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvtcperror, submessage_arena);
+      a_mvtcperror = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvtcperror, submessage_arena);
     }
-    set_has_mvtcperror();
-    _impl_.content_.mvtcperror_ = mvtcperror;
+    set_has_a_mvtcperror();
+    _impl_.content_.a_mvtcperror_ = a_mvtcperror;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.CallbackData.mVTCPError)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.CallbackData.a_mVTCPError)
 }
 CallbackData::CallbackData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -963,18 +963,18 @@ CallbackData::CallbackData(const CallbackData& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
-    case kMVSendableData: {
-      _this->_internal_mutable_mvsendabledata()->::protobuf::SendableData::MergeFrom(
-          from._internal_mvsendabledata());
+    case kAMVSendableData: {
+      _this->_internal_mutable_a_mvsendabledata()->::protobuf::SendableData::MergeFrom(
+          from._internal_a_mvsendabledata());
       break;
     }
-    case kMVTCPError: {
-      _this->_internal_mutable_mvtcperror()->::protobuf::TCPError::MergeFrom(
-          from._internal_mvtcperror());
+    case kAMVTCPError: {
+      _this->_internal_mutable_a_mvtcperror()->::protobuf::TCPError::MergeFrom(
+          from._internal_a_mvtcperror());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1019,19 +1019,19 @@ void CallbackData::SetCachedSize(int size) const {
 void CallbackData::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.CallbackData)
   switch (content_case()) {
-    case kMVvoidT: {
-      _impl_.content_.mvvoid_t_.Destroy();
+    case kAMVvoidT: {
+      _impl_.content_.a_mvvoid_t_.Destroy();
       break;
     }
-    case kMVSendableData: {
+    case kAMVSendableData: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvsendabledata_;
+        delete _impl_.content_.a_mvsendabledata_;
       }
       break;
     }
-    case kMVTCPError: {
+    case kAMVTCPError: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvtcperror_;
+        delete _impl_.content_.a_mvtcperror_;
       }
       break;
     }
@@ -1059,27 +1059,27 @@ const char* CallbackData::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes mVvoid_t = 1;
+      // bytes a_mVvoid_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_mvvoid_t();
+          auto str = _internal_mutable_a_mvvoid_t();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.SendableData mVSendableData = 2;
+      // .protobuf.SendableData a_mVSendableData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvsendabledata(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvsendabledata(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.TCPError mVTCPError = 3;
+      // .protobuf.TCPError a_mVTCPError = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvtcperror(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvtcperror(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1114,21 +1114,21 @@ uint8_t* CallbackData::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVvoidT: {
+    case kAMVvoidT: {
       target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_mvvoid_t(), target);
+          1, this->_internal_a_mvvoid_t(), target);
       break;
     }
-    case kMVSendableData: {
+    case kAMVSendableData: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvsendabledata(this),
-          _Internal::mvsendabledata(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvsendabledata(this),
+          _Internal::a_mvsendabledata(this).GetCachedSize(), target, stream);
       break;
     }
-    case kMVTCPError: {
+    case kAMVTCPError: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::mvtcperror(this),
-          _Internal::mvtcperror(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(3, _Internal::a_mvtcperror(this),
+          _Internal::a_mvtcperror(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -1150,25 +1150,25 @@ size_t CallbackData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes mVvoid_t = 1;
-    case kMVvoidT: {
+    // bytes a_mVvoid_t = 1;
+    case kAMVvoidT: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-          this->_internal_mvvoid_t());
+          this->_internal_a_mvvoid_t());
       break;
     }
-    // .protobuf.SendableData mVSendableData = 2;
-    case kMVSendableData: {
+    // .protobuf.SendableData a_mVSendableData = 2;
+    case kAMVSendableData: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvsendabledata_);
+          *_impl_.content_.a_mvsendabledata_);
       break;
     }
-    // .protobuf.TCPError mVTCPError = 3;
-    case kMVTCPError: {
+    // .protobuf.TCPError a_mVTCPError = 3;
+    case kAMVTCPError: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvtcperror_);
+          *_impl_.content_.a_mvtcperror_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1197,18 +1197,18 @@ void CallbackData::MergeFrom(const CallbackData& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVvoidT: {
-      _this->_internal_set_mvvoid_t(from._internal_mvvoid_t());
+    case kAMVvoidT: {
+      _this->_internal_set_a_mvvoid_t(from._internal_a_mvvoid_t());
       break;
     }
-    case kMVSendableData: {
-      _this->_internal_mutable_mvsendabledata()->::protobuf::SendableData::MergeFrom(
-          from._internal_mvsendabledata());
+    case kAMVSendableData: {
+      _this->_internal_mutable_a_mvsendabledata()->::protobuf::SendableData::MergeFrom(
+          from._internal_a_mvsendabledata());
       break;
     }
-    case kMVTCPError: {
-      _this->_internal_mutable_mvtcperror()->::protobuf::TCPError::MergeFrom(
-          from._internal_mvtcperror());
+    case kAMVTCPError: {
+      _this->_internal_mutable_a_mvtcperror()->::protobuf::TCPError::MergeFrom(
+          from._internal_a_mvtcperror());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1227,15 +1227,15 @@ void CallbackData::CopyFrom(const CallbackData& from) {
 
 bool CallbackData::IsInitialized() const {
   switch (content_case()) {
-    case kMVvoidT: {
+    case kAMVvoidT: {
       break;
     }
-    case kMVSendableData: {
+    case kAMVSendableData: {
       break;
     }
-    case kMVTCPError: {
-      if (_internal_has_mvtcperror()) {
-        if (!_impl_.content_.mvtcperror_->IsInitialized()) return false;
+    case kAMVTCPError: {
+      if (_internal_has_a_mvtcperror()) {
+        if (!_impl_.content_.a_mvtcperror_->IsInitialized()) return false;
       }
       break;
     }

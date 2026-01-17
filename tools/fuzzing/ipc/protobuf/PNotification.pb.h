@@ -311,24 +311,24 @@ class Reply_Show final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRvFieldNumber = 1,
+    kARvFieldNumber = 1,
   };
-  // required bytes rv = 1;
-  bool has_rv() const;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
   private:
-  bool _internal_has_rv() const;
+  bool _internal_has_a_rv() const;
   public:
-  void clear_rv();
-  const std::string& rv() const;
+  void clear_a_rv();
+  const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_rv(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_rv();
-  PROTOBUF_NODISCARD std::string* release_rv();
-  void set_allocated_rv(std::string* rv);
+  void set_a_rv(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_rv();
+  PROTOBUF_NODISCARD std::string* release_a_rv();
+  void set_allocated_a_rv(std::string* a_rv);
   private:
-  const std::string& _internal_rv() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rv(const std::string& value);
-  std::string* _internal_mutable_rv();
+  const std::string& _internal_a_rv() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_rv(const std::string& value);
+  std::string* _internal_mutable_a_rv();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.notification.PNotification.Reply_Show)
@@ -341,7 +341,7 @@ class Reply_Show final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PNotification_2eproto;
@@ -609,72 +609,72 @@ class Msg_NotifyClick final :
 
 // Reply_Show
 
-// required bytes rv = 1;
-inline bool Reply_Show::_internal_has_rv() const {
+// required bytes a_rv = 1;
+inline bool Reply_Show::_internal_has_a_rv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Show::has_rv() const {
-  return _internal_has_rv();
+inline bool Reply_Show::has_a_rv() const {
+  return _internal_has_a_rv();
 }
-inline void Reply_Show::clear_rv() {
-  _impl_.rv_.ClearToEmpty();
+inline void Reply_Show::clear_a_rv() {
+  _impl_.a_rv_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Show::rv() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.notification.PNotification.Reply_Show.rv)
-  return _internal_rv();
+inline const std::string& Reply_Show::a_rv() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.notification.PNotification.Reply_Show.a_rv)
+  return _internal_a_rv();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Show::set_rv(ArgT0&& arg0, ArgT... args) {
+void Reply_Show::set_a_rv(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.notification.PNotification.Reply_Show.rv)
+ _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.notification.PNotification.Reply_Show.a_rv)
 }
-inline std::string* Reply_Show::mutable_rv() {
-  std::string* _s = _internal_mutable_rv();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.notification.PNotification.Reply_Show.rv)
+inline std::string* Reply_Show::mutable_a_rv() {
+  std::string* _s = _internal_mutable_a_rv();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.notification.PNotification.Reply_Show.a_rv)
   return _s;
 }
-inline const std::string& Reply_Show::_internal_rv() const {
-  return _impl_.rv_.Get();
+inline const std::string& Reply_Show::_internal_a_rv() const {
+  return _impl_.a_rv_.Get();
 }
-inline void Reply_Show::_internal_set_rv(const std::string& value) {
+inline void Reply_Show::_internal_set_a_rv(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.rv_.Set(value, GetArenaForAllocation());
+  _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Show::_internal_mutable_rv() {
+inline std::string* Reply_Show::_internal_mutable_a_rv() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.rv_.Mutable(GetArenaForAllocation());
+  return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Show::release_rv() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.notification.PNotification.Reply_Show.rv)
-  if (!_internal_has_rv()) {
+inline std::string* Reply_Show::release_a_rv() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.notification.PNotification.Reply_Show.a_rv)
+  if (!_internal_has_a_rv()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.rv_.Release();
+  auto* p = _impl_.a_rv_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Show::set_allocated_rv(std::string* rv) {
-  if (rv != nullptr) {
+inline void Reply_Show::set_allocated_a_rv(std::string* a_rv) {
+  if (a_rv != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.rv_.SetAllocated(rv, GetArenaForAllocation());
+  _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.notification.PNotification.Reply_Show.rv)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.notification.PNotification.Reply_Show.a_rv)
 }
 
 // -------------------------------------------------------------------

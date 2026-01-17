@@ -14,16 +14,16 @@ import "IPCBlob.proto";
 
 // Structs and unions declarations
 message FileCreationSuccessResult {
-  required protobuf.mozilla.dom.IPCBlob blob = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileCreationErrorResult {
-  required bytes errorCode = 1;
+  required bytes a_errorCode = 1;
 }
 
 message FileCreationResult {
   oneof content {
-    protobuf.mozilla.dom.FileCreationSuccessResult mVFileCreationSuccessResult = 1;
-    protobuf.mozilla.dom.FileCreationErrorResult mVFileCreationErrorResult = 2;
+    protobuf.mozilla.dom.FileCreationSuccessResult a_mVFileCreationSuccessResult = 1;
+    protobuf.mozilla.dom.FileCreationErrorResult a_mVFileCreationErrorResult = 2;
   }
 }

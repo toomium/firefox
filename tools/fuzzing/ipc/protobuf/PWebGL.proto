@@ -17,11 +17,11 @@ import public "PWebGL_protobuf.mozilla.dom.h.proto";
 
 // Message declarations
 message Msg_Initialize {
-  required bytes desc = 1;
+  required bytes a_desc = 1;
 }
 
 message Reply_Initialize {
-  required bytes res = 1;
+  required bytes a_res = 1;
 }
 
 message Msg___delete__ {
@@ -31,21 +31,21 @@ message Reply___delete__ {
 }
 
 message Msg_WaitForTxn {
-  required bytes ownerId = 1;
-  required bytes txnType = 2;
-  required bytes txnId = 3;
+  required bytes a_ownerId = 1;
+  required bytes a_txnType = 2;
+  required bytes a_txnId = 3;
 }
 
 message Msg_DispatchCommands {
-  required bytes commands = 1;
-  required uint64 size = 2;
+  required bytes a_commands = 1;
+  required uint64 a_size = 2;
 }
 
 message Msg_Ping {
 }
 
 message Reply_Ping {
-  required bytes ok = 1;
+  required bytes a_ok = 1;
 }
 
 message Msg_SyncPing {
@@ -55,71 +55,71 @@ message Reply_SyncPing {
 }
 
 message Msg_TexImage {
-  required uint32 level = 1;
-  required uint32 respecFormat = 2;
-  required bytes offset = 3;
-  required bytes pi = 4;
-  required bytes src = 5;
+  required uint32 a_level = 1;
+  required uint32 a_respecFormat = 2;
+  required bytes a_offset = 3;
+  required bytes a_pi = 4;
+  required bytes a_src = 5;
 }
 
 message Msg_GetBufferSubData {
-  required uint32 target = 1;
-  required uint64 srcByteOffset = 2;
-  required uint64 byteSize = 3;
+  required uint32 a_target = 1;
+  required uint64 a_srcByteOffset = 2;
+  required uint64 a_byteSize = 3;
 }
 
 message Reply_GetBufferSubData {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_GetFrontBufferSnapshot {
 }
 
 message Reply_GetFrontBufferSnapshot {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_ReadPixels {
-  required bytes desc = 1;
-  required protobuf.mozilla.dom.ReadPixelsBuffer buffer = 2;
+  required bytes a_desc = 1;
+  required protobuf.mozilla.dom.ReadPixelsBuffer a_buffer = 2;
 }
 
 message Reply_ReadPixels {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_CheckFramebufferStatus {
-  required uint32 target = 1;
+  required uint32 a_target = 1;
 }
 
 message Reply_CheckFramebufferStatus {
-  required uint32 ret = 1;
+  required uint32 a_ret = 1;
 }
 
 message Msg_ClientWaitSync {
-  required uint64 id = 1;
-  required uint32 flags = 2;
-  required uint64 timeout = 3;
+  required uint64 a_id = 1;
+  required uint32 a_flags = 2;
+  required uint64 a_timeout = 3;
 }
 
 message Reply_ClientWaitSync {
-  required uint32 ret = 1;
+  required uint32 a_ret = 1;
 }
 
 message Msg_CreateOpaqueFramebuffer {
-  required uint64 id = 1;
-  required bytes options = 2;
+  required uint64 a_id = 1;
+  required bytes a_options = 2;
 }
 
 message Reply_CreateOpaqueFramebuffer {
-  required bool ret = 1;
+  required bool a_ret = 1;
 }
 
 message Msg_DrawingBufferSize {
 }
 
 message Reply_DrawingBufferSize {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_Finish {
@@ -129,152 +129,152 @@ message Reply_Finish {
 }
 
 message Msg_GetBufferParameter {
-  required uint32 target = 1;
-  required uint32 pname = 2;
+  required uint32 a_target = 1;
+  required uint32 a_pname = 2;
 }
 
 message Reply_GetBufferParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetCompileResult {
-  required uint64 id = 1;
+  required uint64 a_id = 1;
 }
 
 message Reply_GetCompileResult {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_GetError {
 }
 
 message Reply_GetError {
-  required uint32 ret = 1;
+  required uint32 a_ret = 1;
 }
 
 message Msg_GetFragDataLocation {
-  required uint64 id = 1;
-  required string name = 2;
+  required uint64 a_id = 1;
+  required string a_name = 2;
 }
 
 message Reply_GetFragDataLocation {
-  required sint32 ret = 1;
+  required sint32 a_ret = 1;
 }
 
 message Msg_GetFramebufferAttachmentParameter {
-  required uint64 id = 1;
-  required uint32 attachment = 2;
-  required uint32 pname = 3;
+  required uint64 a_id = 1;
+  required uint32 a_attachment = 2;
+  required uint32 a_pname = 3;
 }
 
 message Reply_GetFramebufferAttachmentParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetFrontBuffer {
-  required uint64 fb = 1;
-  required bool vr = 2;
+  required uint64 a_fb = 1;
+  required bool a_vr = 2;
 }
 
 message Reply_GetFrontBuffer {
-  optional bytes ret = 1;
+  optional bytes a_ret = 1;
 }
 
 message Msg_GetIndexedParameter {
-  required uint32 target = 1;
-  required uint32 index = 2;
+  required uint32 a_target = 1;
+  required uint32 a_index = 2;
 }
 
 message Reply_GetIndexedParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetInternalformatParameter {
-  required uint32 target = 1;
-  required uint32 internalFormat = 2;
-  required uint32 pname = 3;
+  required uint32 a_target = 1;
+  required uint32 a_internalFormat = 2;
+  required uint32 a_pname = 3;
 }
 
 message Reply_GetInternalformatParameter {
-  optional bytes ret = 1;
+  optional bytes a_ret = 1;
 }
 
 message Msg_GetLinkResult {
-  required uint64 id = 1;
+  required uint64 a_id = 1;
 }
 
 message Reply_GetLinkResult {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_GetNumber {
-  required uint32 pname = 1;
+  required uint32 a_pname = 1;
 }
 
 message Reply_GetNumber {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetQueryParameter {
-  required uint64 id = 1;
-  required uint32 pname = 2;
+  required uint64 a_id = 1;
+  required uint32 a_pname = 2;
 }
 
 message Reply_GetQueryParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetRenderbufferParameter {
-  required uint64 id = 1;
-  required uint32 pname = 2;
+  required uint64 a_id = 1;
+  required uint32 a_pname = 2;
 }
 
 message Reply_GetRenderbufferParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetSamplerParameter {
-  required uint64 id = 1;
-  required uint32 pname = 2;
+  required uint64 a_id = 1;
+  required uint32 a_pname = 2;
 }
 
 message Reply_GetSamplerParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetString {
-  required uint32 pname = 1;
+  required uint32 a_pname = 1;
 }
 
 message Reply_GetString {
-  optional string ret = 1;
+  optional string a_ret = 1;
 }
 
 message Msg_GetTexParameter {
-  required uint64 id = 1;
-  required uint32 pname = 2;
+  required uint64 a_id = 1;
+  required uint32 a_pname = 2;
 }
 
 message Reply_GetTexParameter {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_GetUniform {
-  required uint64 id = 1;
-  required uint32 loc = 2;
+  required uint64 a_id = 1;
+  required uint32 a_loc = 2;
 }
 
 message Reply_GetUniform {
-  required bytes ret = 1;
+  required bytes a_ret = 1;
 }
 
 message Msg_GetVertexAttrib {
-  required uint32 index = 1;
-  required uint32 pname = 2;
+  required uint32 a_index = 1;
+  required uint32 a_pname = 2;
 }
 
 message Reply_GetVertexAttrib {
-  optional double ret = 1;
+  optional double a_ret = 1;
 }
 
 message Msg_OnMemoryPressure {
@@ -284,23 +284,23 @@ message Reply_OnMemoryPressure {
 }
 
 message Msg_ValidateProgram {
-  required uint64 id = 1;
+  required uint64 a_id = 1;
 }
 
 message Reply_ValidateProgram {
-  required bool ret = 1;
+  required bool a_ret = 1;
 }
 
 message Msg_JsWarning {
-  required string text = 1;
+  required string a_text = 1;
 }
 
 message Msg_OnContextLoss {
-  required bytes aReason = 1;
+  required bytes a_aReason = 1;
 }
 
 message Msg_OnSyncComplete {
-  required uint64 id = 1;
+  required uint64 a_id = 1;
 }
 
 // Parameter mappings stats:

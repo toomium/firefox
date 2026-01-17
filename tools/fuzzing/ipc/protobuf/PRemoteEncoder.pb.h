@@ -358,24 +358,24 @@ class Reply_Construct final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required bytes result = 1;
-  bool has_result() const;
+  // required bytes a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const std::string& result() const;
+  void clear_a_result();
+  const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_result(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* result);
+  void set_a_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_result();
+  PROTOBUF_NODISCARD std::string* release_a_result();
+  void set_allocated_a_result(std::string* a_result);
   private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* _internal_mutable_result();
+  const std::string& _internal_a_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_result(const std::string& value);
+  std::string* _internal_mutable_a_result();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_Construct)
@@ -388,7 +388,7 @@ class Reply_Construct final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -629,25 +629,25 @@ class Reply_Init final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.EncodeInitResultIPDL result = 1;
-  bool has_result() const;
+  // required .protobuf.mozilla.EncodeInitResultIPDL a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::EncodeInitResultIPDL& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodeInitResultIPDL* release_result();
-  ::protobuf::mozilla::EncodeInitResultIPDL* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::EncodeInitResultIPDL* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::EncodeInitResultIPDL& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodeInitResultIPDL* release_a_result();
+  ::protobuf::mozilla::EncodeInitResultIPDL* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::EncodeInitResultIPDL* a_result);
   private:
-  const ::protobuf::mozilla::EncodeInitResultIPDL& _internal_result() const;
-  ::protobuf::mozilla::EncodeInitResultIPDL* _internal_mutable_result();
+  const ::protobuf::mozilla::EncodeInitResultIPDL& _internal_a_result() const;
+  ::protobuf::mozilla::EncodeInitResultIPDL* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::EncodeInitResultIPDL* result);
-  ::protobuf::mozilla::EncodeInitResultIPDL* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::EncodeInitResultIPDL* a_result);
+  ::protobuf::mozilla::EncodeInitResultIPDL* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_Init)
  private:
@@ -659,7 +659,7 @@ class Reply_Init final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::EncodeInitResultIPDL* result_;
+    ::protobuf::mozilla::EncodeInitResultIPDL* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -776,25 +776,25 @@ class Msg_Encode final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 1,
+    kADataFieldNumber = 1,
   };
-  // required .protobuf.mozilla.EncodedInputIPDL data = 1;
-  bool has_data() const;
+  // required .protobuf.mozilla.EncodedInputIPDL a_data = 1;
+  bool has_a_data() const;
   private:
-  bool _internal_has_data() const;
+  bool _internal_has_a_data() const;
   public:
-  void clear_data();
-  const ::protobuf::mozilla::EncodedInputIPDL& data() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodedInputIPDL* release_data();
-  ::protobuf::mozilla::EncodedInputIPDL* mutable_data();
-  void set_allocated_data(::protobuf::mozilla::EncodedInputIPDL* data);
+  void clear_a_data();
+  const ::protobuf::mozilla::EncodedInputIPDL& a_data() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodedInputIPDL* release_a_data();
+  ::protobuf::mozilla::EncodedInputIPDL* mutable_a_data();
+  void set_allocated_a_data(::protobuf::mozilla::EncodedInputIPDL* a_data);
   private:
-  const ::protobuf::mozilla::EncodedInputIPDL& _internal_data() const;
-  ::protobuf::mozilla::EncodedInputIPDL* _internal_mutable_data();
+  const ::protobuf::mozilla::EncodedInputIPDL& _internal_a_data() const;
+  ::protobuf::mozilla::EncodedInputIPDL* _internal_mutable_a_data();
   public:
-  void unsafe_arena_set_allocated_data(
-      ::protobuf::mozilla::EncodedInputIPDL* data);
-  ::protobuf::mozilla::EncodedInputIPDL* unsafe_arena_release_data();
+  void unsafe_arena_set_allocated_a_data(
+      ::protobuf::mozilla::EncodedInputIPDL* a_data);
+  ::protobuf::mozilla::EncodedInputIPDL* unsafe_arena_release_a_data();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Msg_Encode)
  private:
@@ -806,7 +806,7 @@ class Msg_Encode final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::EncodedInputIPDL* data_;
+    ::protobuf::mozilla::EncodedInputIPDL* a_data_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -923,25 +923,25 @@ class Reply_Encode final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.EncodeResultIPDL result = 1;
-  bool has_result() const;
+  // required .protobuf.mozilla.EncodeResultIPDL a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::EncodeResultIPDL& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodeResultIPDL* release_result();
-  ::protobuf::mozilla::EncodeResultIPDL* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::EncodeResultIPDL* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::EncodeResultIPDL& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodeResultIPDL* release_a_result();
+  ::protobuf::mozilla::EncodeResultIPDL* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::EncodeResultIPDL* a_result);
   private:
-  const ::protobuf::mozilla::EncodeResultIPDL& _internal_result() const;
-  ::protobuf::mozilla::EncodeResultIPDL* _internal_mutable_result();
+  const ::protobuf::mozilla::EncodeResultIPDL& _internal_a_result() const;
+  ::protobuf::mozilla::EncodeResultIPDL* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::EncodeResultIPDL* result);
-  ::protobuf::mozilla::EncodeResultIPDL* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::EncodeResultIPDL* a_result);
+  ::protobuf::mozilla::EncodeResultIPDL* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_Encode)
  private:
@@ -953,7 +953,7 @@ class Reply_Encode final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::EncodeResultIPDL* result_;
+    ::protobuf::mozilla::EncodeResultIPDL* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -1070,24 +1070,24 @@ class Msg_Reconfigure final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kConfigurationChangesFieldNumber = 1,
+    kAConfigurationChangesFieldNumber = 1,
   };
-  // required bytes configurationChanges = 1;
-  bool has_configurationchanges() const;
+  // required bytes a_configurationChanges = 1;
+  bool has_a_configurationchanges() const;
   private:
-  bool _internal_has_configurationchanges() const;
+  bool _internal_has_a_configurationchanges() const;
   public:
-  void clear_configurationchanges();
-  const std::string& configurationchanges() const;
+  void clear_a_configurationchanges();
+  const std::string& a_configurationchanges() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_configurationchanges(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_configurationchanges();
-  PROTOBUF_NODISCARD std::string* release_configurationchanges();
-  void set_allocated_configurationchanges(std::string* configurationchanges);
+  void set_a_configurationchanges(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_configurationchanges();
+  PROTOBUF_NODISCARD std::string* release_a_configurationchanges();
+  void set_allocated_a_configurationchanges(std::string* a_configurationchanges);
   private:
-  const std::string& _internal_configurationchanges() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_configurationchanges(const std::string& value);
-  std::string* _internal_mutable_configurationchanges();
+  const std::string& _internal_a_configurationchanges() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_configurationchanges(const std::string& value);
+  std::string* _internal_mutable_a_configurationchanges();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure)
@@ -1100,7 +1100,7 @@ class Msg_Reconfigure final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr configurationchanges_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_configurationchanges_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -1217,24 +1217,24 @@ class Reply_Reconfigure final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kErrorFieldNumber = 1,
+    kAErrorFieldNumber = 1,
   };
-  // required bytes error = 1;
-  bool has_error() const;
+  // required bytes a_error = 1;
+  bool has_a_error() const;
   private:
-  bool _internal_has_error() const;
+  bool _internal_has_a_error() const;
   public:
-  void clear_error();
-  const std::string& error() const;
+  void clear_a_error();
+  const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_error(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_error();
-  PROTOBUF_NODISCARD std::string* release_error();
-  void set_allocated_error(std::string* error);
+  void set_a_error(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_error();
+  PROTOBUF_NODISCARD std::string* release_a_error();
+  void set_allocated_a_error(std::string* a_error);
   private:
-  const std::string& _internal_error() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_error(const std::string& value);
-  std::string* _internal_mutable_error();
+  const std::string& _internal_a_error() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_error(const std::string& value);
+  std::string* _internal_mutable_a_error();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure)
@@ -1247,7 +1247,7 @@ class Reply_Reconfigure final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr error_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -1488,25 +1488,25 @@ class Reply_Drain final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResultFieldNumber = 1,
+    kAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.EncodeResultIPDL result = 1;
-  bool has_result() const;
+  // required .protobuf.mozilla.EncodeResultIPDL a_result = 1;
+  bool has_a_result() const;
   private:
-  bool _internal_has_result() const;
+  bool _internal_has_a_result() const;
   public:
-  void clear_result();
-  const ::protobuf::mozilla::EncodeResultIPDL& result() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodeResultIPDL* release_result();
-  ::protobuf::mozilla::EncodeResultIPDL* mutable_result();
-  void set_allocated_result(::protobuf::mozilla::EncodeResultIPDL* result);
+  void clear_a_result();
+  const ::protobuf::mozilla::EncodeResultIPDL& a_result() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::EncodeResultIPDL* release_a_result();
+  ::protobuf::mozilla::EncodeResultIPDL* mutable_a_result();
+  void set_allocated_a_result(::protobuf::mozilla::EncodeResultIPDL* a_result);
   private:
-  const ::protobuf::mozilla::EncodeResultIPDL& _internal_result() const;
-  ::protobuf::mozilla::EncodeResultIPDL* _internal_mutable_result();
+  const ::protobuf::mozilla::EncodeResultIPDL& _internal_a_result() const;
+  ::protobuf::mozilla::EncodeResultIPDL* _internal_mutable_a_result();
   public:
-  void unsafe_arena_set_allocated_result(
-      ::protobuf::mozilla::EncodeResultIPDL* result);
-  ::protobuf::mozilla::EncodeResultIPDL* unsafe_arena_release_result();
+  void unsafe_arena_set_allocated_a_result(
+      ::protobuf::mozilla::EncodeResultIPDL* a_result);
+  ::protobuf::mozilla::EncodeResultIPDL* unsafe_arena_release_a_result();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_Drain)
  private:
@@ -1518,7 +1518,7 @@ class Reply_Drain final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::EncodeResultIPDL* result_;
+    ::protobuf::mozilla::EncodeResultIPDL* a_result_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -1635,19 +1635,19 @@ class Msg_ReleaseTicket final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTicketIdFieldNumber = 1,
+    kATicketIdFieldNumber = 1,
   };
-  // required uint32 ticketId = 1;
-  bool has_ticketid() const;
+  // required uint32 a_ticketId = 1;
+  bool has_a_ticketid() const;
   private:
-  bool _internal_has_ticketid() const;
+  bool _internal_has_a_ticketid() const;
   public:
-  void clear_ticketid();
-  uint32_t ticketid() const;
-  void set_ticketid(uint32_t value);
+  void clear_a_ticketid();
+  uint32_t a_ticketid() const;
+  void set_a_ticketid(uint32_t value);
   private:
-  uint32_t _internal_ticketid() const;
-  void _internal_set_ticketid(uint32_t value);
+  uint32_t _internal_a_ticketid() const;
+  void _internal_set_a_ticketid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Msg_ReleaseTicket)
@@ -1660,7 +1660,7 @@ class Msg_ReleaseTicket final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t ticketid_;
+    uint32_t a_ticketid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -1901,19 +1901,19 @@ class Reply_Shutdown final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kUnusedFieldNumber = 1,
+    kAUnusedFieldNumber = 1,
   };
-  // required bool unused = 1;
-  bool has_unused() const;
+  // required bool a_unused = 1;
+  bool has_a_unused() const;
   private:
-  bool _internal_has_unused() const;
+  bool _internal_has_a_unused() const;
   public:
-  void clear_unused();
-  bool unused() const;
-  void set_unused(bool value);
+  void clear_a_unused();
+  bool a_unused() const;
+  void set_a_unused(bool value);
   private:
-  bool _internal_unused() const;
-  void _internal_set_unused(bool value);
+  bool _internal_a_unused() const;
+  void _internal_set_a_unused(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_Shutdown)
@@ -1926,7 +1926,7 @@ class Reply_Shutdown final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool unused_;
+    bool a_unused_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -2043,19 +2043,19 @@ class Msg_SetBitrate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABitsPerSecFieldNumber = 1,
+    kAABitsPerSecFieldNumber = 1,
   };
-  // required uint32 aBitsPerSec = 1;
-  bool has_abitspersec() const;
+  // required uint32 a_aBitsPerSec = 1;
+  bool has_a_abitspersec() const;
   private:
-  bool _internal_has_abitspersec() const;
+  bool _internal_has_a_abitspersec() const;
   public:
-  void clear_abitspersec();
-  uint32_t abitspersec() const;
-  void set_abitspersec(uint32_t value);
+  void clear_a_abitspersec();
+  uint32_t a_abitspersec() const;
+  void set_a_abitspersec(uint32_t value);
   private:
-  uint32_t _internal_abitspersec() const;
-  void _internal_set_abitspersec(uint32_t value);
+  uint32_t _internal_a_abitspersec() const;
+  void _internal_set_a_abitspersec(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Msg_SetBitrate)
@@ -2068,7 +2068,7 @@ class Msg_SetBitrate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint32_t abitspersec_;
+    uint32_t a_abitspersec_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -2185,24 +2185,24 @@ class Reply_SetBitrate final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRvFieldNumber = 1,
+    kARvFieldNumber = 1,
   };
-  // required bytes rv = 1;
-  bool has_rv() const;
+  // required bytes a_rv = 1;
+  bool has_a_rv() const;
   private:
-  bool _internal_has_rv() const;
+  bool _internal_has_a_rv() const;
   public:
-  void clear_rv();
-  const std::string& rv() const;
+  void clear_a_rv();
+  const std::string& a_rv() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_rv(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_rv();
-  PROTOBUF_NODISCARD std::string* release_rv();
-  void set_allocated_rv(std::string* rv);
+  void set_a_rv(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_rv();
+  PROTOBUF_NODISCARD std::string* release_a_rv();
+  void set_allocated_a_rv(std::string* a_rv);
   private:
-  const std::string& _internal_rv() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rv(const std::string& value);
-  std::string* _internal_mutable_rv();
+  const std::string& _internal_a_rv() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_rv(const std::string& value);
+  std::string* _internal_mutable_a_rv();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate)
@@ -2215,7 +2215,7 @@ class Reply_SetBitrate final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rv_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rv_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteEncoder_2eproto;
@@ -2483,72 +2483,72 @@ class Reply___delete__ final :
 
 // Reply_Construct
 
-// required bytes result = 1;
-inline bool Reply_Construct::_internal_has_result() const {
+// required bytes a_result = 1;
+inline bool Reply_Construct::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Construct::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Construct::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline void Reply_Construct::clear_result() {
-  _impl_.result_.ClearToEmpty();
+inline void Reply_Construct::clear_a_result() {
+  _impl_.a_result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Construct::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Construct.result)
-  return _internal_result();
+inline const std::string& Reply_Construct::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Construct.a_result)
+  return _internal_a_result();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Construct::set_result(ArgT0&& arg0, ArgT... args) {
+void Reply_Construct::set_a_result(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_Construct.result)
+ _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_Construct.a_result)
 }
-inline std::string* Reply_Construct::mutable_result() {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Construct.result)
+inline std::string* Reply_Construct::mutable_a_result() {
+  std::string* _s = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Construct.a_result)
   return _s;
 }
-inline const std::string& Reply_Construct::_internal_result() const {
-  return _impl_.result_.Get();
+inline const std::string& Reply_Construct::_internal_a_result() const {
+  return _impl_.a_result_.Get();
 }
-inline void Reply_Construct::_internal_set_result(const std::string& value) {
+inline void Reply_Construct::_internal_set_a_result(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArenaForAllocation());
+  _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Construct::_internal_mutable_result() {
+inline std::string* Reply_Construct::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable(GetArenaForAllocation());
+  return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Construct::release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Construct.result)
-  if (!_internal_has_result()) {
+inline std::string* Reply_Construct::release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Construct.a_result)
+  if (!_internal_has_a_result()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.result_.Release();
+  auto* p = _impl_.a_result_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Construct::set_allocated_result(std::string* result) {
-  if (result != nullptr) {
+inline void Reply_Construct::set_allocated_a_result(std::string* a_result) {
+  if (a_result != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+  _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArenaForAllocation());
+  if (_impl_.a_result_.IsDefault()) {
+    _impl_.a_result_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Construct.result)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Construct.a_result)
 }
 
 // -------------------------------------------------------------------
@@ -2559,41 +2559,41 @@ inline void Reply_Construct::set_allocated_result(std::string* result) {
 
 // Reply_Init
 
-// required .protobuf.mozilla.EncodeInitResultIPDL result = 1;
-inline bool Reply_Init::_internal_has_result() const {
+// required .protobuf.mozilla.EncodeInitResultIPDL a_result = 1;
+inline bool Reply_Init::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_Init::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Init::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::EncodeInitResultIPDL& Reply_Init::_internal_result() const {
-  const ::protobuf::mozilla::EncodeInitResultIPDL* p = _impl_.result_;
+inline const ::protobuf::mozilla::EncodeInitResultIPDL& Reply_Init::_internal_a_result() const {
+  const ::protobuf::mozilla::EncodeInitResultIPDL* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::EncodeInitResultIPDL&>(
       ::protobuf::mozilla::_EncodeInitResultIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::EncodeInitResultIPDL& Reply_Init::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Init.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::EncodeInitResultIPDL& Reply_Init::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Init.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Init::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::EncodeInitResultIPDL* result) {
+inline void Reply_Init::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::EncodeInitResultIPDL* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Init.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Init.a_result)
 }
-inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::release_result() {
+inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodeInitResultIPDL* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::EncodeInitResultIPDL* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2605,86 +2605,86 @@ inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::release_result() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Init.result)
+inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Init.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodeInitResultIPDL* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::EncodeInitResultIPDL* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::_internal_mutable_result() {
+inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::EncodeInitResultIPDL>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::mutable_result() {
-  ::protobuf::mozilla::EncodeInitResultIPDL* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Init.result)
+inline ::protobuf::mozilla::EncodeInitResultIPDL* Reply_Init::mutable_a_result() {
+  ::protobuf::mozilla::EncodeInitResultIPDL* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Init.a_result)
   return _msg;
 }
-inline void Reply_Init::set_allocated_result(::protobuf::mozilla::EncodeInitResultIPDL* result) {
+inline void Reply_Init::set_allocated_a_result(::protobuf::mozilla::EncodeInitResultIPDL* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Init.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Init.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Encode
 
-// required .protobuf.mozilla.EncodedInputIPDL data = 1;
-inline bool Msg_Encode::_internal_has_data() const {
+// required .protobuf.mozilla.EncodedInputIPDL a_data = 1;
+inline bool Msg_Encode::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.data_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
   return value;
 }
-inline bool Msg_Encode::has_data() const {
-  return _internal_has_data();
+inline bool Msg_Encode::has_a_data() const {
+  return _internal_has_a_data();
 }
-inline const ::protobuf::mozilla::EncodedInputIPDL& Msg_Encode::_internal_data() const {
-  const ::protobuf::mozilla::EncodedInputIPDL* p = _impl_.data_;
+inline const ::protobuf::mozilla::EncodedInputIPDL& Msg_Encode::_internal_a_data() const {
+  const ::protobuf::mozilla::EncodedInputIPDL* p = _impl_.a_data_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::EncodedInputIPDL&>(
       ::protobuf::mozilla::_EncodedInputIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::EncodedInputIPDL& Msg_Encode::data() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_Encode.data)
-  return _internal_data();
+inline const ::protobuf::mozilla::EncodedInputIPDL& Msg_Encode::a_data() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_Encode.a_data)
+  return _internal_a_data();
 }
-inline void Msg_Encode::unsafe_arena_set_allocated_data(
-    ::protobuf::mozilla::EncodedInputIPDL* data) {
+inline void Msg_Encode::unsafe_arena_set_allocated_a_data(
+    ::protobuf::mozilla::EncodedInputIPDL* a_data) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  _impl_.data_ = data;
-  if (data) {
+  _impl_.a_data_ = a_data;
+  if (a_data) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Msg_Encode.data)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Msg_Encode.a_data)
 }
-inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::release_data() {
+inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::release_a_data() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodedInputIPDL* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::EncodedInputIPDL* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2696,86 +2696,86 @@ inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::release_data() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::unsafe_arena_release_data() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Msg_Encode.data)
+inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::unsafe_arena_release_a_data() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Msg_Encode.a_data)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodedInputIPDL* temp = _impl_.data_;
-  _impl_.data_ = nullptr;
+  ::protobuf::mozilla::EncodedInputIPDL* temp = _impl_.a_data_;
+  _impl_.a_data_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::_internal_mutable_data() {
+inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::_internal_mutable_a_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.data_ == nullptr) {
+  if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::EncodedInputIPDL>(GetArenaForAllocation());
-    _impl_.data_ = p;
+    _impl_.a_data_ = p;
   }
-  return _impl_.data_;
+  return _impl_.a_data_;
 }
-inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::mutable_data() {
-  ::protobuf::mozilla::EncodedInputIPDL* _msg = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Msg_Encode.data)
+inline ::protobuf::mozilla::EncodedInputIPDL* Msg_Encode::mutable_a_data() {
+  ::protobuf::mozilla::EncodedInputIPDL* _msg = _internal_mutable_a_data();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Msg_Encode.a_data)
   return _msg;
 }
-inline void Msg_Encode::set_allocated_data(::protobuf::mozilla::EncodedInputIPDL* data) {
+inline void Msg_Encode::set_allocated_a_data(::protobuf::mozilla::EncodedInputIPDL* a_data) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.data_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_data_);
   }
-  if (data) {
+  if (a_data) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(data));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_data));
     if (message_arena != submessage_arena) {
-      data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, data, submessage_arena);
+      a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_data, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.data_ = data;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Msg_Encode.data)
+  _impl_.a_data_ = a_data;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Msg_Encode.a_data)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Encode
 
-// required .protobuf.mozilla.EncodeResultIPDL result = 1;
-inline bool Reply_Encode::_internal_has_result() const {
+// required .protobuf.mozilla.EncodeResultIPDL a_result = 1;
+inline bool Reply_Encode::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_Encode::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Encode::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Encode::_internal_result() const {
-  const ::protobuf::mozilla::EncodeResultIPDL* p = _impl_.result_;
+inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Encode::_internal_a_result() const {
+  const ::protobuf::mozilla::EncodeResultIPDL* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::EncodeResultIPDL&>(
       ::protobuf::mozilla::_EncodeResultIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Encode::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Encode.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Encode::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Encode.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Encode::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::EncodeResultIPDL* result) {
+inline void Reply_Encode::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::EncodeResultIPDL* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Encode.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Encode.a_result)
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::release_result() {
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -2787,189 +2787,189 @@ inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::release_result() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Encode.result)
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Encode.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::_internal_mutable_result() {
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::EncodeResultIPDL>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::mutable_result() {
-  ::protobuf::mozilla::EncodeResultIPDL* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Encode.result)
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Encode::mutable_a_result() {
+  ::protobuf::mozilla::EncodeResultIPDL* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Encode.a_result)
   return _msg;
 }
-inline void Reply_Encode::set_allocated_result(::protobuf::mozilla::EncodeResultIPDL* result) {
+inline void Reply_Encode::set_allocated_a_result(::protobuf::mozilla::EncodeResultIPDL* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Encode.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Encode.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Reconfigure
 
-// required bytes configurationChanges = 1;
-inline bool Msg_Reconfigure::_internal_has_configurationchanges() const {
+// required bytes a_configurationChanges = 1;
+inline bool Msg_Reconfigure::_internal_has_a_configurationchanges() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_Reconfigure::has_configurationchanges() const {
-  return _internal_has_configurationchanges();
+inline bool Msg_Reconfigure::has_a_configurationchanges() const {
+  return _internal_has_a_configurationchanges();
 }
-inline void Msg_Reconfigure::clear_configurationchanges() {
-  _impl_.configurationchanges_.ClearToEmpty();
+inline void Msg_Reconfigure::clear_a_configurationchanges() {
+  _impl_.a_configurationchanges_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_Reconfigure::configurationchanges() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.configurationChanges)
-  return _internal_configurationchanges();
+inline const std::string& Msg_Reconfigure::a_configurationchanges() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.a_configurationChanges)
+  return _internal_a_configurationchanges();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_Reconfigure::set_configurationchanges(ArgT0&& arg0, ArgT... args) {
+void Msg_Reconfigure::set_a_configurationchanges(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.configurationchanges_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.configurationChanges)
+ _impl_.a_configurationchanges_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.a_configurationChanges)
 }
-inline std::string* Msg_Reconfigure::mutable_configurationchanges() {
-  std::string* _s = _internal_mutable_configurationchanges();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.configurationChanges)
+inline std::string* Msg_Reconfigure::mutable_a_configurationchanges() {
+  std::string* _s = _internal_mutable_a_configurationchanges();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.a_configurationChanges)
   return _s;
 }
-inline const std::string& Msg_Reconfigure::_internal_configurationchanges() const {
-  return _impl_.configurationchanges_.Get();
+inline const std::string& Msg_Reconfigure::_internal_a_configurationchanges() const {
+  return _impl_.a_configurationchanges_.Get();
 }
-inline void Msg_Reconfigure::_internal_set_configurationchanges(const std::string& value) {
+inline void Msg_Reconfigure::_internal_set_a_configurationchanges(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.configurationchanges_.Set(value, GetArenaForAllocation());
+  _impl_.a_configurationchanges_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_Reconfigure::_internal_mutable_configurationchanges() {
+inline std::string* Msg_Reconfigure::_internal_mutable_a_configurationchanges() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.configurationchanges_.Mutable(GetArenaForAllocation());
+  return _impl_.a_configurationchanges_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_Reconfigure::release_configurationchanges() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.configurationChanges)
-  if (!_internal_has_configurationchanges()) {
+inline std::string* Msg_Reconfigure::release_a_configurationchanges() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.a_configurationChanges)
+  if (!_internal_has_a_configurationchanges()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.configurationchanges_.Release();
+  auto* p = _impl_.a_configurationchanges_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.configurationchanges_.IsDefault()) {
-    _impl_.configurationchanges_.Set("", GetArenaForAllocation());
+  if (_impl_.a_configurationchanges_.IsDefault()) {
+    _impl_.a_configurationchanges_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_Reconfigure::set_allocated_configurationchanges(std::string* configurationchanges) {
-  if (configurationchanges != nullptr) {
+inline void Msg_Reconfigure::set_allocated_a_configurationchanges(std::string* a_configurationchanges) {
+  if (a_configurationchanges != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.configurationchanges_.SetAllocated(configurationchanges, GetArenaForAllocation());
+  _impl_.a_configurationchanges_.SetAllocated(a_configurationchanges, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.configurationchanges_.IsDefault()) {
-    _impl_.configurationchanges_.Set("", GetArenaForAllocation());
+  if (_impl_.a_configurationchanges_.IsDefault()) {
+    _impl_.a_configurationchanges_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.configurationChanges)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Msg_Reconfigure.a_configurationChanges)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_Reconfigure
 
-// required bytes error = 1;
-inline bool Reply_Reconfigure::_internal_has_error() const {
+// required bytes a_error = 1;
+inline bool Reply_Reconfigure::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Reconfigure::has_error() const {
-  return _internal_has_error();
+inline bool Reply_Reconfigure::has_a_error() const {
+  return _internal_has_a_error();
 }
-inline void Reply_Reconfigure::clear_error() {
-  _impl_.error_.ClearToEmpty();
+inline void Reply_Reconfigure::clear_a_error() {
+  _impl_.a_error_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_Reconfigure::error() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.error)
-  return _internal_error();
+inline const std::string& Reply_Reconfigure::a_error() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.a_error)
+  return _internal_a_error();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_Reconfigure::set_error(ArgT0&& arg0, ArgT... args) {
+void Reply_Reconfigure::set_a_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.error)
+ _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.a_error)
 }
-inline std::string* Reply_Reconfigure::mutable_error() {
-  std::string* _s = _internal_mutable_error();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.error)
+inline std::string* Reply_Reconfigure::mutable_a_error() {
+  std::string* _s = _internal_mutable_a_error();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.a_error)
   return _s;
 }
-inline const std::string& Reply_Reconfigure::_internal_error() const {
-  return _impl_.error_.Get();
+inline const std::string& Reply_Reconfigure::_internal_a_error() const {
+  return _impl_.a_error_.Get();
 }
-inline void Reply_Reconfigure::_internal_set_error(const std::string& value) {
+inline void Reply_Reconfigure::_internal_set_a_error(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.error_.Set(value, GetArenaForAllocation());
+  _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_Reconfigure::_internal_mutable_error() {
+inline std::string* Reply_Reconfigure::_internal_mutable_a_error() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.error_.Mutable(GetArenaForAllocation());
+  return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_Reconfigure::release_error() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.error)
-  if (!_internal_has_error()) {
+inline std::string* Reply_Reconfigure::release_a_error() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.a_error)
+  if (!_internal_has_a_error()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.error_.Release();
+  auto* p = _impl_.a_error_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.error_.IsDefault()) {
-    _impl_.error_.Set("", GetArenaForAllocation());
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_Reconfigure::set_allocated_error(std::string* error) {
-  if (error != nullptr) {
+inline void Reply_Reconfigure::set_allocated_a_error(std::string* a_error) {
+  if (a_error != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.error_.SetAllocated(error, GetArenaForAllocation());
+  _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.error_.IsDefault()) {
-    _impl_.error_.Set("", GetArenaForAllocation());
+  if (_impl_.a_error_.IsDefault()) {
+    _impl_.a_error_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.error)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Reconfigure.a_error)
 }
 
 // -------------------------------------------------------------------
@@ -2980,41 +2980,41 @@ inline void Reply_Reconfigure::set_allocated_error(std::string* error) {
 
 // Reply_Drain
 
-// required .protobuf.mozilla.EncodeResultIPDL result = 1;
-inline bool Reply_Drain::_internal_has_result() const {
+// required .protobuf.mozilla.EncodeResultIPDL a_result = 1;
+inline bool Reply_Drain::_internal_has_a_result() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.result_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
   return value;
 }
-inline bool Reply_Drain::has_result() const {
-  return _internal_has_result();
+inline bool Reply_Drain::has_a_result() const {
+  return _internal_has_a_result();
 }
-inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Drain::_internal_result() const {
-  const ::protobuf::mozilla::EncodeResultIPDL* p = _impl_.result_;
+inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Drain::_internal_a_result() const {
+  const ::protobuf::mozilla::EncodeResultIPDL* p = _impl_.a_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::EncodeResultIPDL&>(
       ::protobuf::mozilla::_EncodeResultIPDL_default_instance_);
 }
-inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Drain::result() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Drain.result)
-  return _internal_result();
+inline const ::protobuf::mozilla::EncodeResultIPDL& Reply_Drain::a_result() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Drain.a_result)
+  return _internal_a_result();
 }
-inline void Reply_Drain::unsafe_arena_set_allocated_result(
-    ::protobuf::mozilla::EncodeResultIPDL* result) {
+inline void Reply_Drain::unsafe_arena_set_allocated_a_result(
+    ::protobuf::mozilla::EncodeResultIPDL* a_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  _impl_.result_ = result;
-  if (result) {
+  _impl_.a_result_ = a_result;
+  if (a_result) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Drain.result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Drain.a_result)
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::release_result() {
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::release_a_result() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3026,77 +3026,77 @@ inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::release_result() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::unsafe_arena_release_result() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Drain.result)
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::unsafe_arena_release_a_result() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_Drain.a_result)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.result_;
-  _impl_.result_ = nullptr;
+  ::protobuf::mozilla::EncodeResultIPDL* temp = _impl_.a_result_;
+  _impl_.a_result_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::_internal_mutable_result() {
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::_internal_mutable_a_result() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.result_ == nullptr) {
+  if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::EncodeResultIPDL>(GetArenaForAllocation());
-    _impl_.result_ = p;
+    _impl_.a_result_ = p;
   }
-  return _impl_.result_;
+  return _impl_.a_result_;
 }
-inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::mutable_result() {
-  ::protobuf::mozilla::EncodeResultIPDL* _msg = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Drain.result)
+inline ::protobuf::mozilla::EncodeResultIPDL* Reply_Drain::mutable_a_result() {
+  ::protobuf::mozilla::EncodeResultIPDL* _msg = _internal_mutable_a_result();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_Drain.a_result)
   return _msg;
 }
-inline void Reply_Drain::set_allocated_result(::protobuf::mozilla::EncodeResultIPDL* result) {
+inline void Reply_Drain::set_allocated_a_result(::protobuf::mozilla::EncodeResultIPDL* a_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.result_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_result_);
   }
-  if (result) {
+  if (a_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(result));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_result));
     if (message_arena != submessage_arena) {
-      result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_result, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.result_ = result;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Drain.result)
+  _impl_.a_result_ = a_result;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_Drain.a_result)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_ReleaseTicket
 
-// required uint32 ticketId = 1;
-inline bool Msg_ReleaseTicket::_internal_has_ticketid() const {
+// required uint32 a_ticketId = 1;
+inline bool Msg_ReleaseTicket::_internal_has_a_ticketid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_ReleaseTicket::has_ticketid() const {
-  return _internal_has_ticketid();
+inline bool Msg_ReleaseTicket::has_a_ticketid() const {
+  return _internal_has_a_ticketid();
 }
-inline void Msg_ReleaseTicket::clear_ticketid() {
-  _impl_.ticketid_ = 0u;
+inline void Msg_ReleaseTicket::clear_a_ticketid() {
+  _impl_.a_ticketid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_ReleaseTicket::_internal_ticketid() const {
-  return _impl_.ticketid_;
+inline uint32_t Msg_ReleaseTicket::_internal_a_ticketid() const {
+  return _impl_.a_ticketid_;
 }
-inline uint32_t Msg_ReleaseTicket::ticketid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_ReleaseTicket.ticketId)
-  return _internal_ticketid();
+inline uint32_t Msg_ReleaseTicket::a_ticketid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_ReleaseTicket.a_ticketId)
+  return _internal_a_ticketid();
 }
-inline void Msg_ReleaseTicket::_internal_set_ticketid(uint32_t value) {
+inline void Msg_ReleaseTicket::_internal_set_a_ticketid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.ticketid_ = value;
+  _impl_.a_ticketid_ = value;
 }
-inline void Msg_ReleaseTicket::set_ticketid(uint32_t value) {
-  _internal_set_ticketid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Msg_ReleaseTicket.ticketId)
+inline void Msg_ReleaseTicket::set_a_ticketid(uint32_t value) {
+  _internal_set_a_ticketid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Msg_ReleaseTicket.a_ticketId)
 }
 
 // -------------------------------------------------------------------
@@ -3107,136 +3107,136 @@ inline void Msg_ReleaseTicket::set_ticketid(uint32_t value) {
 
 // Reply_Shutdown
 
-// required bool unused = 1;
-inline bool Reply_Shutdown::_internal_has_unused() const {
+// required bool a_unused = 1;
+inline bool Reply_Shutdown::_internal_has_a_unused() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_Shutdown::has_unused() const {
-  return _internal_has_unused();
+inline bool Reply_Shutdown::has_a_unused() const {
+  return _internal_has_a_unused();
 }
-inline void Reply_Shutdown::clear_unused() {
-  _impl_.unused_ = false;
+inline void Reply_Shutdown::clear_a_unused() {
+  _impl_.a_unused_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_Shutdown::_internal_unused() const {
-  return _impl_.unused_;
+inline bool Reply_Shutdown::_internal_a_unused() const {
+  return _impl_.a_unused_;
 }
-inline bool Reply_Shutdown::unused() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Shutdown.unused)
-  return _internal_unused();
+inline bool Reply_Shutdown::a_unused() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_Shutdown.a_unused)
+  return _internal_a_unused();
 }
-inline void Reply_Shutdown::_internal_set_unused(bool value) {
+inline void Reply_Shutdown::_internal_set_a_unused(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.unused_ = value;
+  _impl_.a_unused_ = value;
 }
-inline void Reply_Shutdown::set_unused(bool value) {
-  _internal_set_unused(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_Shutdown.unused)
+inline void Reply_Shutdown::set_a_unused(bool value) {
+  _internal_set_a_unused(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_Shutdown.a_unused)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetBitrate
 
-// required uint32 aBitsPerSec = 1;
-inline bool Msg_SetBitrate::_internal_has_abitspersec() const {
+// required uint32 a_aBitsPerSec = 1;
+inline bool Msg_SetBitrate::_internal_has_a_abitspersec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetBitrate::has_abitspersec() const {
-  return _internal_has_abitspersec();
+inline bool Msg_SetBitrate::has_a_abitspersec() const {
+  return _internal_has_a_abitspersec();
 }
-inline void Msg_SetBitrate::clear_abitspersec() {
-  _impl_.abitspersec_ = 0u;
+inline void Msg_SetBitrate::clear_a_abitspersec() {
+  _impl_.a_abitspersec_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t Msg_SetBitrate::_internal_abitspersec() const {
-  return _impl_.abitspersec_;
+inline uint32_t Msg_SetBitrate::_internal_a_abitspersec() const {
+  return _impl_.a_abitspersec_;
 }
-inline uint32_t Msg_SetBitrate::abitspersec() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_SetBitrate.aBitsPerSec)
-  return _internal_abitspersec();
+inline uint32_t Msg_SetBitrate::a_abitspersec() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Msg_SetBitrate.a_aBitsPerSec)
+  return _internal_a_abitspersec();
 }
-inline void Msg_SetBitrate::_internal_set_abitspersec(uint32_t value) {
+inline void Msg_SetBitrate::_internal_set_a_abitspersec(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.abitspersec_ = value;
+  _impl_.a_abitspersec_ = value;
 }
-inline void Msg_SetBitrate::set_abitspersec(uint32_t value) {
-  _internal_set_abitspersec(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Msg_SetBitrate.aBitsPerSec)
+inline void Msg_SetBitrate::set_a_abitspersec(uint32_t value) {
+  _internal_set_a_abitspersec(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Msg_SetBitrate.a_aBitsPerSec)
 }
 
 // -------------------------------------------------------------------
 
 // Reply_SetBitrate
 
-// required bytes rv = 1;
-inline bool Reply_SetBitrate::_internal_has_rv() const {
+// required bytes a_rv = 1;
+inline bool Reply_SetBitrate::_internal_has_a_rv() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_SetBitrate::has_rv() const {
-  return _internal_has_rv();
+inline bool Reply_SetBitrate::has_a_rv() const {
+  return _internal_has_a_rv();
 }
-inline void Reply_SetBitrate::clear_rv() {
-  _impl_.rv_.ClearToEmpty();
+inline void Reply_SetBitrate::clear_a_rv() {
+  _impl_.a_rv_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_SetBitrate::rv() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.rv)
-  return _internal_rv();
+inline const std::string& Reply_SetBitrate::a_rv() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.a_rv)
+  return _internal_a_rv();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_SetBitrate::set_rv(ArgT0&& arg0, ArgT... args) {
+void Reply_SetBitrate::set_a_rv(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.rv)
+ _impl_.a_rv_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.a_rv)
 }
-inline std::string* Reply_SetBitrate::mutable_rv() {
-  std::string* _s = _internal_mutable_rv();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.rv)
+inline std::string* Reply_SetBitrate::mutable_a_rv() {
+  std::string* _s = _internal_mutable_a_rv();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.a_rv)
   return _s;
 }
-inline const std::string& Reply_SetBitrate::_internal_rv() const {
-  return _impl_.rv_.Get();
+inline const std::string& Reply_SetBitrate::_internal_a_rv() const {
+  return _impl_.a_rv_.Get();
 }
-inline void Reply_SetBitrate::_internal_set_rv(const std::string& value) {
+inline void Reply_SetBitrate::_internal_set_a_rv(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.rv_.Set(value, GetArenaForAllocation());
+  _impl_.a_rv_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_SetBitrate::_internal_mutable_rv() {
+inline std::string* Reply_SetBitrate::_internal_mutable_a_rv() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.rv_.Mutable(GetArenaForAllocation());
+  return _impl_.a_rv_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_SetBitrate::release_rv() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.rv)
-  if (!_internal_has_rv()) {
+inline std::string* Reply_SetBitrate::release_a_rv() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.a_rv)
+  if (!_internal_has_a_rv()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.rv_.Release();
+  auto* p = _impl_.a_rv_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_SetBitrate::set_allocated_rv(std::string* rv) {
-  if (rv != nullptr) {
+inline void Reply_SetBitrate::set_allocated_a_rv(std::string* a_rv) {
+  if (a_rv != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.rv_.SetAllocated(rv, GetArenaForAllocation());
+  _impl_.a_rv_.SetAllocated(a_rv, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.rv_.IsDefault()) {
-    _impl_.rv_.Set("", GetArenaForAllocation());
+  if (_impl_.a_rv_.IsDefault()) {
+    _impl_.a_rv_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.rv)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteEncoder.Reply_SetBitrate.a_rv)
 }
 
 // -------------------------------------------------------------------

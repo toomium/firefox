@@ -310,44 +310,44 @@ class Msg_PostMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAClonedDataFieldNumber = 1,
-    kASourceFieldNumber = 2,
+    kAAClonedDataFieldNumber = 1,
+    kAASourceFieldNumber = 2,
   };
-  // required .protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
-  bool has_acloneddata() const;
+  // required .protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
+  bool has_a_acloneddata() const;
   private:
-  bool _internal_has_acloneddata() const;
+  bool _internal_has_a_acloneddata() const;
   public:
-  void clear_acloneddata();
-  const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& acloneddata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ClonedOrErrorMessageData* release_acloneddata();
-  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* mutable_acloneddata();
-  void set_allocated_acloneddata(::protobuf::mozilla::dom::ClonedOrErrorMessageData* acloneddata);
+  void clear_a_acloneddata();
+  const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& a_acloneddata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::ClonedOrErrorMessageData* release_a_acloneddata();
+  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* mutable_a_acloneddata();
+  void set_allocated_a_acloneddata(::protobuf::mozilla::dom::ClonedOrErrorMessageData* a_acloneddata);
   private:
-  const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& _internal_acloneddata() const;
-  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* _internal_mutable_acloneddata();
+  const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& _internal_a_acloneddata() const;
+  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* _internal_mutable_a_acloneddata();
   public:
-  void unsafe_arena_set_allocated_acloneddata(
-      ::protobuf::mozilla::dom::ClonedOrErrorMessageData* acloneddata);
-  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* unsafe_arena_release_acloneddata();
+  void unsafe_arena_set_allocated_a_acloneddata(
+      ::protobuf::mozilla::dom::ClonedOrErrorMessageData* a_acloneddata);
+  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* unsafe_arena_release_a_acloneddata();
 
-  // required .protobuf.mozilla.dom.PostMessageSource aSource = 2;
-  bool has_asource() const;
+  // required .protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
+  bool has_a_asource() const;
   private:
-  bool _internal_has_asource() const;
+  bool _internal_has_a_asource() const;
   public:
-  void clear_asource();
-  const ::protobuf::mozilla::dom::PostMessageSource& asource() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PostMessageSource* release_asource();
-  ::protobuf::mozilla::dom::PostMessageSource* mutable_asource();
-  void set_allocated_asource(::protobuf::mozilla::dom::PostMessageSource* asource);
+  void clear_a_asource();
+  const ::protobuf::mozilla::dom::PostMessageSource& a_asource() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::PostMessageSource* release_a_asource();
+  ::protobuf::mozilla::dom::PostMessageSource* mutable_a_asource();
+  void set_allocated_a_asource(::protobuf::mozilla::dom::PostMessageSource* a_asource);
   private:
-  const ::protobuf::mozilla::dom::PostMessageSource& _internal_asource() const;
-  ::protobuf::mozilla::dom::PostMessageSource* _internal_mutable_asource();
+  const ::protobuf::mozilla::dom::PostMessageSource& _internal_a_asource() const;
+  ::protobuf::mozilla::dom::PostMessageSource* _internal_mutable_a_asource();
   public:
-  void unsafe_arena_set_allocated_asource(
-      ::protobuf::mozilla::dom::PostMessageSource* asource);
-  ::protobuf::mozilla::dom::PostMessageSource* unsafe_arena_release_asource();
+  void unsafe_arena_set_allocated_a_asource(
+      ::protobuf::mozilla::dom::PostMessageSource* a_asource);
+  ::protobuf::mozilla::dom::PostMessageSource* unsafe_arena_release_a_asource();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage)
  private:
@@ -362,8 +362,8 @@ class Msg_PostMessage final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::ClonedOrErrorMessageData* acloneddata_;
-    ::protobuf::mozilla::dom::PostMessageSource* asource_;
+    ::protobuf::mozilla::dom::ClonedOrErrorMessageData* a_acloneddata_;
+    ::protobuf::mozilla::dom::PostMessageSource* a_asource_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PServiceWorker_2eproto;
@@ -631,41 +631,41 @@ class Reply___delete__ final :
 
 // Msg_PostMessage
 
-// required .protobuf.mozilla.dom.ClonedOrErrorMessageData aClonedData = 1;
-inline bool Msg_PostMessage::_internal_has_acloneddata() const {
+// required .protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
+inline bool Msg_PostMessage::_internal_has_a_acloneddata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.acloneddata_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_acloneddata_ != nullptr);
   return value;
 }
-inline bool Msg_PostMessage::has_acloneddata() const {
-  return _internal_has_acloneddata();
+inline bool Msg_PostMessage::has_a_acloneddata() const {
+  return _internal_has_a_acloneddata();
 }
-inline const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& Msg_PostMessage::_internal_acloneddata() const {
-  const ::protobuf::mozilla::dom::ClonedOrErrorMessageData* p = _impl_.acloneddata_;
+inline const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& Msg_PostMessage::_internal_a_acloneddata() const {
+  const ::protobuf::mozilla::dom::ClonedOrErrorMessageData* p = _impl_.a_acloneddata_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::ClonedOrErrorMessageData&>(
       ::protobuf::mozilla::dom::_ClonedOrErrorMessageData_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& Msg_PostMessage::acloneddata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aClonedData)
-  return _internal_acloneddata();
+inline const ::protobuf::mozilla::dom::ClonedOrErrorMessageData& Msg_PostMessage::a_acloneddata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aClonedData)
+  return _internal_a_acloneddata();
 }
-inline void Msg_PostMessage::unsafe_arena_set_allocated_acloneddata(
-    ::protobuf::mozilla::dom::ClonedOrErrorMessageData* acloneddata) {
+inline void Msg_PostMessage::unsafe_arena_set_allocated_a_acloneddata(
+    ::protobuf::mozilla::dom::ClonedOrErrorMessageData* a_acloneddata) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.acloneddata_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_acloneddata_);
   }
-  _impl_.acloneddata_ = acloneddata;
-  if (acloneddata) {
+  _impl_.a_acloneddata_ = a_acloneddata;
+  if (a_acloneddata) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aClonedData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aClonedData)
 }
-inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::release_acloneddata() {
+inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::release_a_acloneddata() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* temp = _impl_.acloneddata_;
-  _impl_.acloneddata_ = nullptr;
+  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* temp = _impl_.a_acloneddata_;
+  _impl_.a_acloneddata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -677,82 +677,82 @@ inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::rele
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::unsafe_arena_release_acloneddata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aClonedData)
+inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::unsafe_arena_release_a_acloneddata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aClonedData)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* temp = _impl_.acloneddata_;
-  _impl_.acloneddata_ = nullptr;
+  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* temp = _impl_.a_acloneddata_;
+  _impl_.a_acloneddata_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::_internal_mutable_acloneddata() {
+inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::_internal_mutable_a_acloneddata() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.acloneddata_ == nullptr) {
+  if (_impl_.a_acloneddata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::ClonedOrErrorMessageData>(GetArenaForAllocation());
-    _impl_.acloneddata_ = p;
+    _impl_.a_acloneddata_ = p;
   }
-  return _impl_.acloneddata_;
+  return _impl_.a_acloneddata_;
 }
-inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::mutable_acloneddata() {
-  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* _msg = _internal_mutable_acloneddata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aClonedData)
+inline ::protobuf::mozilla::dom::ClonedOrErrorMessageData* Msg_PostMessage::mutable_a_acloneddata() {
+  ::protobuf::mozilla::dom::ClonedOrErrorMessageData* _msg = _internal_mutable_a_acloneddata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aClonedData)
   return _msg;
 }
-inline void Msg_PostMessage::set_allocated_acloneddata(::protobuf::mozilla::dom::ClonedOrErrorMessageData* acloneddata) {
+inline void Msg_PostMessage::set_allocated_a_acloneddata(::protobuf::mozilla::dom::ClonedOrErrorMessageData* a_acloneddata) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.acloneddata_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_acloneddata_);
   }
-  if (acloneddata) {
+  if (a_acloneddata) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(acloneddata));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_acloneddata));
     if (message_arena != submessage_arena) {
-      acloneddata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, acloneddata, submessage_arena);
+      a_acloneddata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_acloneddata, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.acloneddata_ = acloneddata;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aClonedData)
+  _impl_.a_acloneddata_ = a_acloneddata;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aClonedData)
 }
 
-// required .protobuf.mozilla.dom.PostMessageSource aSource = 2;
-inline bool Msg_PostMessage::_internal_has_asource() const {
+// required .protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
+inline bool Msg_PostMessage::_internal_has_a_asource() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.asource_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_asource_ != nullptr);
   return value;
 }
-inline bool Msg_PostMessage::has_asource() const {
-  return _internal_has_asource();
+inline bool Msg_PostMessage::has_a_asource() const {
+  return _internal_has_a_asource();
 }
-inline const ::protobuf::mozilla::dom::PostMessageSource& Msg_PostMessage::_internal_asource() const {
-  const ::protobuf::mozilla::dom::PostMessageSource* p = _impl_.asource_;
+inline const ::protobuf::mozilla::dom::PostMessageSource& Msg_PostMessage::_internal_a_asource() const {
+  const ::protobuf::mozilla::dom::PostMessageSource* p = _impl_.a_asource_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::PostMessageSource&>(
       ::protobuf::mozilla::dom::_PostMessageSource_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::PostMessageSource& Msg_PostMessage::asource() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aSource)
-  return _internal_asource();
+inline const ::protobuf::mozilla::dom::PostMessageSource& Msg_PostMessage::a_asource() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aSource)
+  return _internal_a_asource();
 }
-inline void Msg_PostMessage::unsafe_arena_set_allocated_asource(
-    ::protobuf::mozilla::dom::PostMessageSource* asource) {
+inline void Msg_PostMessage::unsafe_arena_set_allocated_a_asource(
+    ::protobuf::mozilla::dom::PostMessageSource* a_asource) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.asource_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_asource_);
   }
-  _impl_.asource_ = asource;
-  if (asource) {
+  _impl_.a_asource_ = a_asource;
+  if (a_asource) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aSource)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aSource)
 }
-inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::release_asource() {
+inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::release_a_asource() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::PostMessageSource* temp = _impl_.asource_;
-  _impl_.asource_ = nullptr;
+  ::protobuf::mozilla::dom::PostMessageSource* temp = _impl_.a_asource_;
+  _impl_.a_asource_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -764,45 +764,45 @@ inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::release_aso
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::unsafe_arena_release_asource() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aSource)
+inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::unsafe_arena_release_a_asource() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aSource)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::protobuf::mozilla::dom::PostMessageSource* temp = _impl_.asource_;
-  _impl_.asource_ = nullptr;
+  ::protobuf::mozilla::dom::PostMessageSource* temp = _impl_.a_asource_;
+  _impl_.a_asource_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::_internal_mutable_asource() {
+inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::_internal_mutable_a_asource() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.asource_ == nullptr) {
+  if (_impl_.a_asource_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::PostMessageSource>(GetArenaForAllocation());
-    _impl_.asource_ = p;
+    _impl_.a_asource_ = p;
   }
-  return _impl_.asource_;
+  return _impl_.a_asource_;
 }
-inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::mutable_asource() {
-  ::protobuf::mozilla::dom::PostMessageSource* _msg = _internal_mutable_asource();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aSource)
+inline ::protobuf::mozilla::dom::PostMessageSource* Msg_PostMessage::mutable_a_asource() {
+  ::protobuf::mozilla::dom::PostMessageSource* _msg = _internal_mutable_a_asource();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aSource)
   return _msg;
 }
-inline void Msg_PostMessage::set_allocated_asource(::protobuf::mozilla::dom::PostMessageSource* asource) {
+inline void Msg_PostMessage::set_allocated_a_asource(::protobuf::mozilla::dom::PostMessageSource* a_asource) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.asource_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_asource_);
   }
-  if (asource) {
+  if (a_asource) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(asource));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_asource));
     if (message_arena != submessage_arena) {
-      asource = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, asource, submessage_arena);
+      a_asource = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_asource, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.asource_ = asource;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.aSource)
+  _impl_.a_asource_ = a_asource;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PServiceWorker.Msg_PostMessage.a_aSource)
 }
 
 // -------------------------------------------------------------------

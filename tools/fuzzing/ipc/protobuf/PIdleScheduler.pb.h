@@ -224,38 +224,38 @@ class Msg_IdleTime final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBudgetFieldNumber = 2,
-    kIdFieldNumber = 1,
+    kABudgetFieldNumber = 2,
+    kAIdFieldNumber = 1,
   };
-  // required bytes budget = 2;
-  bool has_budget() const;
+  // required bytes a_budget = 2;
+  bool has_a_budget() const;
   private:
-  bool _internal_has_budget() const;
+  bool _internal_has_a_budget() const;
   public:
-  void clear_budget();
-  const std::string& budget() const;
+  void clear_a_budget();
+  const std::string& a_budget() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_budget(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_budget();
-  PROTOBUF_NODISCARD std::string* release_budget();
-  void set_allocated_budget(std::string* budget);
+  void set_a_budget(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_budget();
+  PROTOBUF_NODISCARD std::string* release_a_budget();
+  void set_allocated_a_budget(std::string* a_budget);
   private:
-  const std::string& _internal_budget() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_budget(const std::string& value);
-  std::string* _internal_mutable_budget();
+  const std::string& _internal_a_budget() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_budget(const std::string& value);
+  std::string* _internal_mutable_a_budget();
   public:
 
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime)
@@ -271,8 +271,8 @@ class Msg_IdleTime final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr budget_;
-    uint64_t id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_budget_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -513,38 +513,38 @@ class Reply_InitForIdleUse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kStateFieldNumber = 1,
-    kChildIdFieldNumber = 2,
+    kAStateFieldNumber = 1,
+    kAChildIdFieldNumber = 2,
   };
-  // optional bytes state = 1;
-  bool has_state() const;
+  // optional bytes a_state = 1;
+  bool has_a_state() const;
   private:
-  bool _internal_has_state() const;
+  bool _internal_has_a_state() const;
   public:
-  void clear_state();
-  const std::string& state() const;
+  void clear_a_state();
+  const std::string& a_state() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_state(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_state();
-  PROTOBUF_NODISCARD std::string* release_state();
-  void set_allocated_state(std::string* state);
+  void set_a_state(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_state();
+  PROTOBUF_NODISCARD std::string* release_a_state();
+  void set_allocated_a_state(std::string* a_state);
   private:
-  const std::string& _internal_state() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_state(const std::string& value);
-  std::string* _internal_mutable_state();
+  const std::string& _internal_a_state() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_state(const std::string& value);
+  std::string* _internal_mutable_a_state();
   public:
 
-  // required uint32 childId = 2;
-  bool has_childid() const;
+  // required uint32 a_childId = 2;
+  bool has_a_childid() const;
   private:
-  bool _internal_has_childid() const;
+  bool _internal_has_a_childid() const;
   public:
-  void clear_childid();
-  uint32_t childid() const;
-  void set_childid(uint32_t value);
+  void clear_a_childid();
+  uint32_t a_childid() const;
+  void set_a_childid(uint32_t value);
   private:
-  uint32_t _internal_childid() const;
-  void _internal_set_childid(uint32_t value);
+  uint32_t _internal_a_childid() const;
+  void _internal_set_a_childid(uint32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse)
@@ -557,8 +557,8 @@ class Reply_InitForIdleUse final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr state_;
-    uint32_t childid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_state_;
+    uint32_t a_childid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -675,38 +675,38 @@ class Msg_RequestIdleTime final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kBudgetFieldNumber = 2,
-    kIdFieldNumber = 1,
+    kABudgetFieldNumber = 2,
+    kAIdFieldNumber = 1,
   };
-  // required bytes budget = 2;
-  bool has_budget() const;
+  // required bytes a_budget = 2;
+  bool has_a_budget() const;
   private:
-  bool _internal_has_budget() const;
+  bool _internal_has_a_budget() const;
   public:
-  void clear_budget();
-  const std::string& budget() const;
+  void clear_a_budget();
+  const std::string& a_budget() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_budget(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_budget();
-  PROTOBUF_NODISCARD std::string* release_budget();
-  void set_allocated_budget(std::string* budget);
+  void set_a_budget(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_budget();
+  PROTOBUF_NODISCARD std::string* release_a_budget();
+  void set_allocated_a_budget(std::string* a_budget);
   private:
-  const std::string& _internal_budget() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_budget(const std::string& value);
-  std::string* _internal_mutable_budget();
+  const std::string& _internal_a_budget() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_budget(const std::string& value);
+  std::string* _internal_mutable_a_budget();
   public:
 
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime)
@@ -722,8 +722,8 @@ class Msg_RequestIdleTime final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr budget_;
-    uint64_t id_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_budget_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -840,19 +840,19 @@ class Msg_IdleTimeUsed final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kIdFieldNumber = 1,
+    kAIdFieldNumber = 1,
   };
-  // required uint64 id = 1;
-  bool has_id() const;
+  // required uint64 a_id = 1;
+  bool has_a_id() const;
   private:
-  bool _internal_has_id() const;
+  bool _internal_has_a_id() const;
   public:
-  void clear_id();
-  uint64_t id() const;
-  void set_id(uint64_t value);
+  void clear_a_id();
+  uint64_t a_id() const;
+  void set_a_id(uint64_t value);
   private:
-  uint64_t _internal_id() const;
-  void _internal_set_id(uint64_t value);
+  uint64_t _internal_a_id() const;
+  void _internal_set_a_id(uint64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTimeUsed)
@@ -865,7 +865,7 @@ class Msg_IdleTimeUsed final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    uint64_t id_;
+    uint64_t a_id_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -1478,19 +1478,19 @@ class Reply_RequestGC final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMayGcFieldNumber = 1,
+    kAMayGcFieldNumber = 1,
   };
-  // required bool may_gc = 1;
-  bool has_may_gc() const;
+  // required bool a_may_gc = 1;
+  bool has_a_may_gc() const;
   private:
-  bool _internal_has_may_gc() const;
+  bool _internal_has_a_may_gc() const;
   public:
-  void clear_may_gc();
-  bool may_gc() const;
-  void set_may_gc(bool value);
+  void clear_a_may_gc();
+  bool a_may_gc() const;
+  void set_a_may_gc(bool value);
   private:
-  bool _internal_may_gc() const;
-  void _internal_set_may_gc(bool value);
+  bool _internal_a_may_gc() const;
+  void _internal_set_a_may_gc(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PIdleScheduler.Reply_RequestGC)
@@ -1503,7 +1503,7 @@ class Reply_RequestGC final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool may_gc_;
+    bool a_may_gc_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIdleScheduler_2eproto;
@@ -2015,100 +2015,100 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_IdleTime
 
-// required uint64 id = 1;
-inline bool Msg_IdleTime::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_IdleTime::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_IdleTime::has_id() const {
-  return _internal_has_id();
+inline bool Msg_IdleTime::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_IdleTime::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_IdleTime::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_IdleTime::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_IdleTime::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_IdleTime::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.id)
-  return _internal_id();
+inline uint64_t Msg_IdleTime::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_id)
+  return _internal_a_id();
 }
-inline void Msg_IdleTime::_internal_set_id(uint64_t value) {
+inline void Msg_IdleTime::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_IdleTime::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.id)
+inline void Msg_IdleTime::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_id)
 }
 
-// required bytes budget = 2;
-inline bool Msg_IdleTime::_internal_has_budget() const {
+// required bytes a_budget = 2;
+inline bool Msg_IdleTime::_internal_has_a_budget() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_IdleTime::has_budget() const {
-  return _internal_has_budget();
+inline bool Msg_IdleTime::has_a_budget() const {
+  return _internal_has_a_budget();
 }
-inline void Msg_IdleTime::clear_budget() {
-  _impl_.budget_.ClearToEmpty();
+inline void Msg_IdleTime::clear_a_budget() {
+  _impl_.a_budget_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_IdleTime::budget() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.budget)
-  return _internal_budget();
+inline const std::string& Msg_IdleTime::a_budget() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
+  return _internal_a_budget();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_IdleTime::set_budget(ArgT0&& arg0, ArgT... args) {
+void Msg_IdleTime::set_a_budget(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.budget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.budget)
+ _impl_.a_budget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
 }
-inline std::string* Msg_IdleTime::mutable_budget() {
-  std::string* _s = _internal_mutable_budget();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.budget)
+inline std::string* Msg_IdleTime::mutable_a_budget() {
+  std::string* _s = _internal_mutable_a_budget();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
   return _s;
 }
-inline const std::string& Msg_IdleTime::_internal_budget() const {
-  return _impl_.budget_.Get();
+inline const std::string& Msg_IdleTime::_internal_a_budget() const {
+  return _impl_.a_budget_.Get();
 }
-inline void Msg_IdleTime::_internal_set_budget(const std::string& value) {
+inline void Msg_IdleTime::_internal_set_a_budget(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.budget_.Set(value, GetArenaForAllocation());
+  _impl_.a_budget_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_IdleTime::_internal_mutable_budget() {
+inline std::string* Msg_IdleTime::_internal_mutable_a_budget() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.budget_.Mutable(GetArenaForAllocation());
+  return _impl_.a_budget_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_IdleTime::release_budget() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.budget)
-  if (!_internal_has_budget()) {
+inline std::string* Msg_IdleTime::release_a_budget() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
+  if (!_internal_has_a_budget()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.budget_.Release();
+  auto* p = _impl_.a_budget_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.budget_.IsDefault()) {
-    _impl_.budget_.Set("", GetArenaForAllocation());
+  if (_impl_.a_budget_.IsDefault()) {
+    _impl_.a_budget_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_IdleTime::set_allocated_budget(std::string* budget) {
-  if (budget != nullptr) {
+inline void Msg_IdleTime::set_allocated_a_budget(std::string* a_budget) {
+  if (a_budget != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.budget_.SetAllocated(budget, GetArenaForAllocation());
+  _impl_.a_budget_.SetAllocated(a_budget, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.budget_.IsDefault()) {
-    _impl_.budget_.Set("", GetArenaForAllocation());
+  if (_impl_.a_budget_.IsDefault()) {
+    _impl_.a_budget_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.budget)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTime.a_budget)
 }
 
 // -------------------------------------------------------------------
@@ -2119,232 +2119,232 @@ inline void Msg_IdleTime::set_allocated_budget(std::string* budget) {
 
 // Reply_InitForIdleUse
 
-// optional bytes state = 1;
-inline bool Reply_InitForIdleUse::_internal_has_state() const {
+// optional bytes a_state = 1;
+inline bool Reply_InitForIdleUse::_internal_has_a_state() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_InitForIdleUse::has_state() const {
-  return _internal_has_state();
+inline bool Reply_InitForIdleUse::has_a_state() const {
+  return _internal_has_a_state();
 }
-inline void Reply_InitForIdleUse::clear_state() {
-  _impl_.state_.ClearToEmpty();
+inline void Reply_InitForIdleUse::clear_a_state() {
+  _impl_.a_state_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Reply_InitForIdleUse::state() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.state)
-  return _internal_state();
+inline const std::string& Reply_InitForIdleUse::a_state() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
+  return _internal_a_state();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Reply_InitForIdleUse::set_state(ArgT0&& arg0, ArgT... args) {
+void Reply_InitForIdleUse::set_a_state(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.state_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.state)
+ _impl_.a_state_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
 }
-inline std::string* Reply_InitForIdleUse::mutable_state() {
-  std::string* _s = _internal_mutable_state();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.state)
+inline std::string* Reply_InitForIdleUse::mutable_a_state() {
+  std::string* _s = _internal_mutable_a_state();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
   return _s;
 }
-inline const std::string& Reply_InitForIdleUse::_internal_state() const {
-  return _impl_.state_.Get();
+inline const std::string& Reply_InitForIdleUse::_internal_a_state() const {
+  return _impl_.a_state_.Get();
 }
-inline void Reply_InitForIdleUse::_internal_set_state(const std::string& value) {
+inline void Reply_InitForIdleUse::_internal_set_a_state(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.state_.Set(value, GetArenaForAllocation());
+  _impl_.a_state_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Reply_InitForIdleUse::_internal_mutable_state() {
+inline std::string* Reply_InitForIdleUse::_internal_mutable_a_state() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.state_.Mutable(GetArenaForAllocation());
+  return _impl_.a_state_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Reply_InitForIdleUse::release_state() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.state)
-  if (!_internal_has_state()) {
+inline std::string* Reply_InitForIdleUse::release_a_state() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
+  if (!_internal_has_a_state()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.state_.Release();
+  auto* p = _impl_.a_state_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.state_.IsDefault()) {
-    _impl_.state_.Set("", GetArenaForAllocation());
+  if (_impl_.a_state_.IsDefault()) {
+    _impl_.a_state_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Reply_InitForIdleUse::set_allocated_state(std::string* state) {
-  if (state != nullptr) {
+inline void Reply_InitForIdleUse::set_allocated_a_state(std::string* a_state) {
+  if (a_state != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.state_.SetAllocated(state, GetArenaForAllocation());
+  _impl_.a_state_.SetAllocated(a_state, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.state_.IsDefault()) {
-    _impl_.state_.Set("", GetArenaForAllocation());
+  if (_impl_.a_state_.IsDefault()) {
+    _impl_.a_state_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.state)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_state)
 }
 
-// required uint32 childId = 2;
-inline bool Reply_InitForIdleUse::_internal_has_childid() const {
+// required uint32 a_childId = 2;
+inline bool Reply_InitForIdleUse::_internal_has_a_childid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Reply_InitForIdleUse::has_childid() const {
-  return _internal_has_childid();
+inline bool Reply_InitForIdleUse::has_a_childid() const {
+  return _internal_has_a_childid();
 }
-inline void Reply_InitForIdleUse::clear_childid() {
-  _impl_.childid_ = 0u;
+inline void Reply_InitForIdleUse::clear_a_childid() {
+  _impl_.a_childid_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t Reply_InitForIdleUse::_internal_childid() const {
-  return _impl_.childid_;
+inline uint32_t Reply_InitForIdleUse::_internal_a_childid() const {
+  return _impl_.a_childid_;
 }
-inline uint32_t Reply_InitForIdleUse::childid() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.childId)
-  return _internal_childid();
+inline uint32_t Reply_InitForIdleUse::a_childid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_childId)
+  return _internal_a_childid();
 }
-inline void Reply_InitForIdleUse::_internal_set_childid(uint32_t value) {
+inline void Reply_InitForIdleUse::_internal_set_a_childid(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.childid_ = value;
+  _impl_.a_childid_ = value;
 }
-inline void Reply_InitForIdleUse::set_childid(uint32_t value) {
-  _internal_set_childid(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.childId)
+inline void Reply_InitForIdleUse::set_a_childid(uint32_t value) {
+  _internal_set_a_childid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Reply_InitForIdleUse.a_childId)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_RequestIdleTime
 
-// required uint64 id = 1;
-inline bool Msg_RequestIdleTime::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_RequestIdleTime::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_RequestIdleTime::has_id() const {
-  return _internal_has_id();
+inline bool Msg_RequestIdleTime::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_RequestIdleTime::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_RequestIdleTime::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint64_t Msg_RequestIdleTime::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_RequestIdleTime::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_RequestIdleTime::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.id)
-  return _internal_id();
+inline uint64_t Msg_RequestIdleTime::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_id)
+  return _internal_a_id();
 }
-inline void Msg_RequestIdleTime::_internal_set_id(uint64_t value) {
+inline void Msg_RequestIdleTime::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_RequestIdleTime::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.id)
+inline void Msg_RequestIdleTime::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_id)
 }
 
-// required bytes budget = 2;
-inline bool Msg_RequestIdleTime::_internal_has_budget() const {
+// required bytes a_budget = 2;
+inline bool Msg_RequestIdleTime::_internal_has_a_budget() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_RequestIdleTime::has_budget() const {
-  return _internal_has_budget();
+inline bool Msg_RequestIdleTime::has_a_budget() const {
+  return _internal_has_a_budget();
 }
-inline void Msg_RequestIdleTime::clear_budget() {
-  _impl_.budget_.ClearToEmpty();
+inline void Msg_RequestIdleTime::clear_a_budget() {
+  _impl_.a_budget_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_RequestIdleTime::budget() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.budget)
-  return _internal_budget();
+inline const std::string& Msg_RequestIdleTime::a_budget() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
+  return _internal_a_budget();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_RequestIdleTime::set_budget(ArgT0&& arg0, ArgT... args) {
+void Msg_RequestIdleTime::set_a_budget(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.budget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.budget)
+ _impl_.a_budget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
 }
-inline std::string* Msg_RequestIdleTime::mutable_budget() {
-  std::string* _s = _internal_mutable_budget();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.budget)
+inline std::string* Msg_RequestIdleTime::mutable_a_budget() {
+  std::string* _s = _internal_mutable_a_budget();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
   return _s;
 }
-inline const std::string& Msg_RequestIdleTime::_internal_budget() const {
-  return _impl_.budget_.Get();
+inline const std::string& Msg_RequestIdleTime::_internal_a_budget() const {
+  return _impl_.a_budget_.Get();
 }
-inline void Msg_RequestIdleTime::_internal_set_budget(const std::string& value) {
+inline void Msg_RequestIdleTime::_internal_set_a_budget(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.budget_.Set(value, GetArenaForAllocation());
+  _impl_.a_budget_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_RequestIdleTime::_internal_mutable_budget() {
+inline std::string* Msg_RequestIdleTime::_internal_mutable_a_budget() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.budget_.Mutable(GetArenaForAllocation());
+  return _impl_.a_budget_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_RequestIdleTime::release_budget() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.budget)
-  if (!_internal_has_budget()) {
+inline std::string* Msg_RequestIdleTime::release_a_budget() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
+  if (!_internal_has_a_budget()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.budget_.Release();
+  auto* p = _impl_.a_budget_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.budget_.IsDefault()) {
-    _impl_.budget_.Set("", GetArenaForAllocation());
+  if (_impl_.a_budget_.IsDefault()) {
+    _impl_.a_budget_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_RequestIdleTime::set_allocated_budget(std::string* budget) {
-  if (budget != nullptr) {
+inline void Msg_RequestIdleTime::set_allocated_a_budget(std::string* a_budget) {
+  if (a_budget != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.budget_.SetAllocated(budget, GetArenaForAllocation());
+  _impl_.a_budget_.SetAllocated(a_budget, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.budget_.IsDefault()) {
-    _impl_.budget_.Set("", GetArenaForAllocation());
+  if (_impl_.a_budget_.IsDefault()) {
+    _impl_.a_budget_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.budget)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PIdleScheduler.Msg_RequestIdleTime.a_budget)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_IdleTimeUsed
 
-// required uint64 id = 1;
-inline bool Msg_IdleTimeUsed::_internal_has_id() const {
+// required uint64 a_id = 1;
+inline bool Msg_IdleTimeUsed::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_IdleTimeUsed::has_id() const {
-  return _internal_has_id();
+inline bool Msg_IdleTimeUsed::has_a_id() const {
+  return _internal_has_a_id();
 }
-inline void Msg_IdleTimeUsed::clear_id() {
-  _impl_.id_ = uint64_t{0u};
+inline void Msg_IdleTimeUsed::clear_a_id() {
+  _impl_.a_id_ = uint64_t{0u};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint64_t Msg_IdleTimeUsed::_internal_id() const {
-  return _impl_.id_;
+inline uint64_t Msg_IdleTimeUsed::_internal_a_id() const {
+  return _impl_.a_id_;
 }
-inline uint64_t Msg_IdleTimeUsed::id() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTimeUsed.id)
-  return _internal_id();
+inline uint64_t Msg_IdleTimeUsed::a_id() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTimeUsed.a_id)
+  return _internal_a_id();
 }
-inline void Msg_IdleTimeUsed::_internal_set_id(uint64_t value) {
+inline void Msg_IdleTimeUsed::_internal_set_a_id(uint64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.id_ = value;
+  _impl_.a_id_ = value;
 }
-inline void Msg_IdleTimeUsed::set_id(uint64_t value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTimeUsed.id)
+inline void Msg_IdleTimeUsed::set_a_id(uint64_t value) {
+  _internal_set_a_id(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Msg_IdleTimeUsed.a_id)
 }
 
 // -------------------------------------------------------------------
@@ -2367,32 +2367,32 @@ inline void Msg_IdleTimeUsed::set_id(uint64_t value) {
 
 // Reply_RequestGC
 
-// required bool may_gc = 1;
-inline bool Reply_RequestGC::_internal_has_may_gc() const {
+// required bool a_may_gc = 1;
+inline bool Reply_RequestGC::_internal_has_a_may_gc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Reply_RequestGC::has_may_gc() const {
-  return _internal_has_may_gc();
+inline bool Reply_RequestGC::has_a_may_gc() const {
+  return _internal_has_a_may_gc();
 }
-inline void Reply_RequestGC::clear_may_gc() {
-  _impl_.may_gc_ = false;
+inline void Reply_RequestGC::clear_a_may_gc() {
+  _impl_.a_may_gc_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Reply_RequestGC::_internal_may_gc() const {
-  return _impl_.may_gc_;
+inline bool Reply_RequestGC::_internal_a_may_gc() const {
+  return _impl_.a_may_gc_;
 }
-inline bool Reply_RequestGC::may_gc() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Reply_RequestGC.may_gc)
-  return _internal_may_gc();
+inline bool Reply_RequestGC::a_may_gc() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PIdleScheduler.Reply_RequestGC.a_may_gc)
+  return _internal_a_may_gc();
 }
-inline void Reply_RequestGC::_internal_set_may_gc(bool value) {
+inline void Reply_RequestGC::_internal_set_a_may_gc(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.may_gc_ = value;
+  _impl_.a_may_gc_ = value;
 }
-inline void Reply_RequestGC::set_may_gc(bool value) {
-  _internal_set_may_gc(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Reply_RequestGC.may_gc)
+inline void Reply_RequestGC::set_a_may_gc(bool value) {
+  _internal_set_a_may_gc(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PIdleScheduler.Reply_RequestGC.a_may_gc)
 }
 
 // -------------------------------------------------------------------

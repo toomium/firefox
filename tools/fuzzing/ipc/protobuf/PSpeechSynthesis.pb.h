@@ -213,25 +213,25 @@ class Msg_VoiceAdded final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAVoiceFieldNumber = 1,
+    kAAVoiceFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.RemoteVoice aVoice = 1;
-  bool has_avoice() const;
+  // required .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
+  bool has_a_avoice() const;
   private:
-  bool _internal_has_avoice() const;
+  bool _internal_has_a_avoice() const;
   public:
-  void clear_avoice();
-  const ::protobuf::mozilla::dom::RemoteVoice& avoice() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RemoteVoice* release_avoice();
-  ::protobuf::mozilla::dom::RemoteVoice* mutable_avoice();
-  void set_allocated_avoice(::protobuf::mozilla::dom::RemoteVoice* avoice);
+  void clear_a_avoice();
+  const ::protobuf::mozilla::dom::RemoteVoice& a_avoice() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::RemoteVoice* release_a_avoice();
+  ::protobuf::mozilla::dom::RemoteVoice* mutable_a_avoice();
+  void set_allocated_a_avoice(::protobuf::mozilla::dom::RemoteVoice* a_avoice);
   private:
-  const ::protobuf::mozilla::dom::RemoteVoice& _internal_avoice() const;
-  ::protobuf::mozilla::dom::RemoteVoice* _internal_mutable_avoice();
+  const ::protobuf::mozilla::dom::RemoteVoice& _internal_a_avoice() const;
+  ::protobuf::mozilla::dom::RemoteVoice* _internal_mutable_a_avoice();
   public:
-  void unsafe_arena_set_allocated_avoice(
-      ::protobuf::mozilla::dom::RemoteVoice* avoice);
-  ::protobuf::mozilla::dom::RemoteVoice* unsafe_arena_release_avoice();
+  void unsafe_arena_set_allocated_a_avoice(
+      ::protobuf::mozilla::dom::RemoteVoice* a_avoice);
+  ::protobuf::mozilla::dom::RemoteVoice* unsafe_arena_release_a_avoice();
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded)
  private:
@@ -243,7 +243,7 @@ class Msg_VoiceAdded final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::protobuf::mozilla::dom::RemoteVoice* avoice_;
+    ::protobuf::mozilla::dom::RemoteVoice* a_avoice_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -360,24 +360,24 @@ class Msg_VoiceRemoved final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAUriFieldNumber = 1,
+    kAAUriFieldNumber = 1,
   };
-  // required bytes aUri = 1;
-  bool has_auri() const;
+  // required bytes a_aUri = 1;
+  bool has_a_auri() const;
   private:
-  bool _internal_has_auri() const;
+  bool _internal_has_a_auri() const;
   public:
-  void clear_auri();
-  const std::string& auri() const;
+  void clear_a_auri();
+  const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_auri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_auri();
-  PROTOBUF_NODISCARD std::string* release_auri();
-  void set_allocated_auri(std::string* auri);
+  void set_a_auri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_auri();
+  PROTOBUF_NODISCARD std::string* release_a_auri();
+  void set_allocated_a_auri(std::string* a_auri);
   private:
-  const std::string& _internal_auri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_auri(const std::string& value);
-  std::string* _internal_mutable_auri();
+  const std::string& _internal_a_auri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_auri(const std::string& value);
+  std::string* _internal_mutable_a_auri();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved)
@@ -390,7 +390,7 @@ class Msg_VoiceRemoved final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr auri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -507,38 +507,38 @@ class Msg_SetDefaultVoice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAUriFieldNumber = 1,
-    kAIsDefaultFieldNumber = 2,
+    kAAUriFieldNumber = 1,
+    kAAIsDefaultFieldNumber = 2,
   };
-  // required bytes aUri = 1;
-  bool has_auri() const;
+  // required bytes a_aUri = 1;
+  bool has_a_auri() const;
   private:
-  bool _internal_has_auri() const;
+  bool _internal_has_a_auri() const;
   public:
-  void clear_auri();
-  const std::string& auri() const;
+  void clear_a_auri();
+  const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_auri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_auri();
-  PROTOBUF_NODISCARD std::string* release_auri();
-  void set_allocated_auri(std::string* auri);
+  void set_a_auri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_auri();
+  PROTOBUF_NODISCARD std::string* release_a_auri();
+  void set_allocated_a_auri(std::string* a_auri);
   private:
-  const std::string& _internal_auri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_auri(const std::string& value);
-  std::string* _internal_mutable_auri();
+  const std::string& _internal_a_auri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_auri(const std::string& value);
+  std::string* _internal_mutable_a_auri();
   public:
 
-  // required bool aIsDefault = 2;
-  bool has_aisdefault() const;
+  // required bool a_aIsDefault = 2;
+  bool has_a_aisdefault() const;
   private:
-  bool _internal_has_aisdefault() const;
+  bool _internal_has_a_aisdefault() const;
   public:
-  void clear_aisdefault();
-  bool aisdefault() const;
-  void set_aisdefault(bool value);
+  void clear_a_aisdefault();
+  bool a_aisdefault() const;
+  void set_a_aisdefault(bool value);
   private:
-  bool _internal_aisdefault() const;
-  void _internal_set_aisdefault(bool value);
+  bool _internal_a_aisdefault() const;
+  void _internal_set_a_aisdefault(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice)
@@ -554,8 +554,8 @@ class Msg_SetDefaultVoice final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr auri_;
-    bool aisdefault_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
+    bool a_aisdefault_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -672,19 +672,19 @@ class Msg_IsSpeakingChanged final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAIsSpeakingFieldNumber = 1,
+    kAAIsSpeakingFieldNumber = 1,
   };
-  // required bool aIsSpeaking = 1;
-  bool has_aisspeaking() const;
+  // required bool a_aIsSpeaking = 1;
+  bool has_a_aisspeaking() const;
   private:
-  bool _internal_has_aisspeaking() const;
+  bool _internal_has_a_aisspeaking() const;
   public:
-  void clear_aisspeaking();
-  bool aisspeaking() const;
-  void set_aisspeaking(bool value);
+  void clear_a_aisspeaking();
+  bool a_aisspeaking() const;
+  void set_a_aisspeaking(bool value);
   private:
-  bool _internal_aisspeaking() const;
-  void _internal_set_aisspeaking(bool value);
+  bool _internal_a_aisspeaking() const;
+  void _internal_set_a_aisspeaking(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged)
@@ -697,7 +697,7 @@ class Msg_IsSpeakingChanged final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    bool aisspeaking_;
+    bool a_aisspeaking_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -938,24 +938,24 @@ class Msg_NotifyVoicesError final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAErrorFieldNumber = 1,
+    kAAErrorFieldNumber = 1,
   };
-  // required bytes aError = 1;
-  bool has_aerror() const;
+  // required bytes a_aError = 1;
+  bool has_a_aerror() const;
   private:
-  bool _internal_has_aerror() const;
+  bool _internal_has_a_aerror() const;
   public:
-  void clear_aerror();
-  const std::string& aerror() const;
+  void clear_a_aerror();
+  const std::string& a_aerror() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_aerror(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_aerror();
-  PROTOBUF_NODISCARD std::string* release_aerror();
-  void set_allocated_aerror(std::string* aerror);
+  void set_a_aerror(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_aerror();
+  PROTOBUF_NODISCARD std::string* release_a_aerror();
+  void set_allocated_a_aerror(std::string* a_aerror);
   private:
-  const std::string& _internal_aerror() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_aerror(const std::string& value);
-  std::string* _internal_mutable_aerror();
+  const std::string& _internal_a_aerror() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_aerror(const std::string& value);
+  std::string* _internal_mutable_a_aerror();
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError)
@@ -968,7 +968,7 @@ class Msg_NotifyVoicesError final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aerror_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aerror_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -1085,63 +1085,63 @@ class Msg_InitialVoicesAndState final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAVoicesFieldNumber = 1,
-    kADefaultsFieldNumber = 2,
-    kAIsSpeakingFieldNumber = 3,
+    kAAVoicesFieldNumber = 1,
+    kAADefaultsFieldNumber = 2,
+    kAAIsSpeakingFieldNumber = 3,
   };
-  // repeated .protobuf.mozilla.dom.RemoteVoice aVoices = 1;
-  int avoices_size() const;
+  // repeated .protobuf.mozilla.dom.RemoteVoice a_aVoices = 1;
+  int a_avoices_size() const;
   private:
-  int _internal_avoices_size() const;
+  int _internal_a_avoices_size() const;
   public:
-  void clear_avoices();
-  ::protobuf::mozilla::dom::RemoteVoice* mutable_avoices(int index);
+  void clear_a_avoices();
+  ::protobuf::mozilla::dom::RemoteVoice* mutable_a_avoices(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice >*
-      mutable_avoices();
+      mutable_a_avoices();
   private:
-  const ::protobuf::mozilla::dom::RemoteVoice& _internal_avoices(int index) const;
-  ::protobuf::mozilla::dom::RemoteVoice* _internal_add_avoices();
+  const ::protobuf::mozilla::dom::RemoteVoice& _internal_a_avoices(int index) const;
+  ::protobuf::mozilla::dom::RemoteVoice* _internal_add_a_avoices();
   public:
-  const ::protobuf::mozilla::dom::RemoteVoice& avoices(int index) const;
-  ::protobuf::mozilla::dom::RemoteVoice* add_avoices();
+  const ::protobuf::mozilla::dom::RemoteVoice& a_avoices(int index) const;
+  ::protobuf::mozilla::dom::RemoteVoice* add_a_avoices();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice >&
-      avoices() const;
+      a_avoices() const;
 
-  // repeated bytes aDefaults = 2;
-  int adefaults_size() const;
+  // repeated bytes a_aDefaults = 2;
+  int a_adefaults_size() const;
   private:
-  int _internal_adefaults_size() const;
+  int _internal_a_adefaults_size() const;
   public:
-  void clear_adefaults();
-  const std::string& adefaults(int index) const;
-  std::string* mutable_adefaults(int index);
-  void set_adefaults(int index, const std::string& value);
-  void set_adefaults(int index, std::string&& value);
-  void set_adefaults(int index, const char* value);
-  void set_adefaults(int index, const void* value, size_t size);
-  std::string* add_adefaults();
-  void add_adefaults(const std::string& value);
-  void add_adefaults(std::string&& value);
-  void add_adefaults(const char* value);
-  void add_adefaults(const void* value, size_t size);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& adefaults() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_adefaults();
+  void clear_a_adefaults();
+  const std::string& a_adefaults(int index) const;
+  std::string* mutable_a_adefaults(int index);
+  void set_a_adefaults(int index, const std::string& value);
+  void set_a_adefaults(int index, std::string&& value);
+  void set_a_adefaults(int index, const char* value);
+  void set_a_adefaults(int index, const void* value, size_t size);
+  std::string* add_a_adefaults();
+  void add_a_adefaults(const std::string& value);
+  void add_a_adefaults(std::string&& value);
+  void add_a_adefaults(const char* value);
+  void add_a_adefaults(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_adefaults() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_adefaults();
   private:
-  const std::string& _internal_adefaults(int index) const;
-  std::string* _internal_add_adefaults();
+  const std::string& _internal_a_adefaults(int index) const;
+  std::string* _internal_add_a_adefaults();
   public:
 
-  // required bool aIsSpeaking = 3;
-  bool has_aisspeaking() const;
+  // required bool a_aIsSpeaking = 3;
+  bool has_a_aisspeaking() const;
   private:
-  bool _internal_has_aisspeaking() const;
+  bool _internal_has_a_aisspeaking() const;
   public:
-  void clear_aisspeaking();
-  bool aisspeaking() const;
-  void set_aisspeaking(bool value);
+  void clear_a_aisspeaking();
+  bool a_aisspeaking() const;
+  void set_a_aisspeaking(bool value);
   private:
-  bool _internal_aisspeaking() const;
-  void _internal_set_aisspeaking(bool value);
+  bool _internal_a_aisspeaking() const;
+  void _internal_set_a_aisspeaking(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState)
@@ -1154,9 +1154,9 @@ class Msg_InitialVoicesAndState final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice > avoices_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> adefaults_;
-    bool aisspeaking_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice > a_avoices_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_adefaults_;
+    bool a_aisspeaking_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -1521,118 +1521,118 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATextFieldNumber = 1,
-    kAUriFieldNumber = 2,
-    kALangFieldNumber = 3,
-    kAVolumeFieldNumber = 4,
-    kARateFieldNumber = 5,
-    kAPitchFieldNumber = 6,
-    kAShouldResistFingerprintingFieldNumber = 7,
+    kAATextFieldNumber = 1,
+    kAAUriFieldNumber = 2,
+    kAALangFieldNumber = 3,
+    kAAVolumeFieldNumber = 4,
+    kAARateFieldNumber = 5,
+    kAAPitchFieldNumber = 6,
+    kAAShouldResistFingerprintingFieldNumber = 7,
   };
-  // required bytes aText = 1;
-  bool has_atext() const;
+  // required bytes a_aText = 1;
+  bool has_a_atext() const;
   private:
-  bool _internal_has_atext() const;
+  bool _internal_has_a_atext() const;
   public:
-  void clear_atext();
-  const std::string& atext() const;
+  void clear_a_atext();
+  const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_atext(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_atext();
-  PROTOBUF_NODISCARD std::string* release_atext();
-  void set_allocated_atext(std::string* atext);
+  void set_a_atext(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_atext();
+  PROTOBUF_NODISCARD std::string* release_a_atext();
+  void set_allocated_a_atext(std::string* a_atext);
   private:
-  const std::string& _internal_atext() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_atext(const std::string& value);
-  std::string* _internal_mutable_atext();
+  const std::string& _internal_a_atext() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_atext(const std::string& value);
+  std::string* _internal_mutable_a_atext();
   public:
 
-  // required bytes aUri = 2;
-  bool has_auri() const;
+  // required bytes a_aUri = 2;
+  bool has_a_auri() const;
   private:
-  bool _internal_has_auri() const;
+  bool _internal_has_a_auri() const;
   public:
-  void clear_auri();
-  const std::string& auri() const;
+  void clear_a_auri();
+  const std::string& a_auri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_auri(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_auri();
-  PROTOBUF_NODISCARD std::string* release_auri();
-  void set_allocated_auri(std::string* auri);
+  void set_a_auri(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_auri();
+  PROTOBUF_NODISCARD std::string* release_a_auri();
+  void set_allocated_a_auri(std::string* a_auri);
   private:
-  const std::string& _internal_auri() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_auri(const std::string& value);
-  std::string* _internal_mutable_auri();
+  const std::string& _internal_a_auri() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_auri(const std::string& value);
+  std::string* _internal_mutable_a_auri();
   public:
 
-  // required bytes aLang = 3;
-  bool has_alang() const;
+  // required bytes a_aLang = 3;
+  bool has_a_alang() const;
   private:
-  bool _internal_has_alang() const;
+  bool _internal_has_a_alang() const;
   public:
-  void clear_alang();
-  const std::string& alang() const;
+  void clear_a_alang();
+  const std::string& a_alang() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_alang(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_alang();
-  PROTOBUF_NODISCARD std::string* release_alang();
-  void set_allocated_alang(std::string* alang);
+  void set_a_alang(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_a_alang();
+  PROTOBUF_NODISCARD std::string* release_a_alang();
+  void set_allocated_a_alang(std::string* a_alang);
   private:
-  const std::string& _internal_alang() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_alang(const std::string& value);
-  std::string* _internal_mutable_alang();
+  const std::string& _internal_a_alang() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_alang(const std::string& value);
+  std::string* _internal_mutable_a_alang();
   public:
 
-  // required float aVolume = 4;
-  bool has_avolume() const;
+  // required float a_aVolume = 4;
+  bool has_a_avolume() const;
   private:
-  bool _internal_has_avolume() const;
+  bool _internal_has_a_avolume() const;
   public:
-  void clear_avolume();
-  float avolume() const;
-  void set_avolume(float value);
+  void clear_a_avolume();
+  float a_avolume() const;
+  void set_a_avolume(float value);
   private:
-  float _internal_avolume() const;
-  void _internal_set_avolume(float value);
-  public:
-
-  // required float aRate = 5;
-  bool has_arate() const;
-  private:
-  bool _internal_has_arate() const;
-  public:
-  void clear_arate();
-  float arate() const;
-  void set_arate(float value);
-  private:
-  float _internal_arate() const;
-  void _internal_set_arate(float value);
+  float _internal_a_avolume() const;
+  void _internal_set_a_avolume(float value);
   public:
 
-  // required float aPitch = 6;
-  bool has_apitch() const;
+  // required float a_aRate = 5;
+  bool has_a_arate() const;
   private:
-  bool _internal_has_apitch() const;
+  bool _internal_has_a_arate() const;
   public:
-  void clear_apitch();
-  float apitch() const;
-  void set_apitch(float value);
+  void clear_a_arate();
+  float a_arate() const;
+  void set_a_arate(float value);
   private:
-  float _internal_apitch() const;
-  void _internal_set_apitch(float value);
+  float _internal_a_arate() const;
+  void _internal_set_a_arate(float value);
   public:
 
-  // required bool aShouldResistFingerprinting = 7;
-  bool has_ashouldresistfingerprinting() const;
+  // required float a_aPitch = 6;
+  bool has_a_apitch() const;
   private:
-  bool _internal_has_ashouldresistfingerprinting() const;
+  bool _internal_has_a_apitch() const;
   public:
-  void clear_ashouldresistfingerprinting();
-  bool ashouldresistfingerprinting() const;
-  void set_ashouldresistfingerprinting(bool value);
+  void clear_a_apitch();
+  float a_apitch() const;
+  void set_a_apitch(float value);
   private:
-  bool _internal_ashouldresistfingerprinting() const;
-  void _internal_set_ashouldresistfingerprinting(bool value);
+  float _internal_a_apitch() const;
+  void _internal_set_a_apitch(float value);
+  public:
+
+  // required bool a_aShouldResistFingerprinting = 7;
+  bool has_a_ashouldresistfingerprinting() const;
+  private:
+  bool _internal_has_a_ashouldresistfingerprinting() const;
+  public:
+  void clear_a_ashouldresistfingerprinting();
+  bool a_ashouldresistfingerprinting() const;
+  void set_a_ashouldresistfingerprinting(bool value);
+  private:
+  bool _internal_a_ashouldresistfingerprinting() const;
+  void _internal_set_a_ashouldresistfingerprinting(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
@@ -1648,13 +1648,13 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr atext_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr auri_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr alang_;
-    float avolume_;
-    float arate_;
-    float apitch_;
-    bool ashouldresistfingerprinting_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_alang_;
+    float a_avolume_;
+    float a_arate_;
+    float a_apitch_;
+    bool a_ashouldresistfingerprinting_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSpeechSynthesis_2eproto;
@@ -1794,41 +1794,41 @@ class Reply_PSpeechSynthesisRequestConstructor final :
 #endif  // __GNUC__
 // Msg_VoiceAdded
 
-// required .protobuf.mozilla.dom.RemoteVoice aVoice = 1;
-inline bool Msg_VoiceAdded::_internal_has_avoice() const {
+// required .protobuf.mozilla.dom.RemoteVoice a_aVoice = 1;
+inline bool Msg_VoiceAdded::_internal_has_a_avoice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.avoice_ != nullptr);
+  PROTOBUF_ASSUME(!value || _impl_.a_avoice_ != nullptr);
   return value;
 }
-inline bool Msg_VoiceAdded::has_avoice() const {
-  return _internal_has_avoice();
+inline bool Msg_VoiceAdded::has_a_avoice() const {
+  return _internal_has_a_avoice();
 }
-inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_VoiceAdded::_internal_avoice() const {
-  const ::protobuf::mozilla::dom::RemoteVoice* p = _impl_.avoice_;
+inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_VoiceAdded::_internal_a_avoice() const {
+  const ::protobuf::mozilla::dom::RemoteVoice* p = _impl_.a_avoice_;
   return p != nullptr ? *p : reinterpret_cast<const ::protobuf::mozilla::dom::RemoteVoice&>(
       ::protobuf::mozilla::dom::_RemoteVoice_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_VoiceAdded::avoice() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.aVoice)
-  return _internal_avoice();
+inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_VoiceAdded::a_avoice() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.a_aVoice)
+  return _internal_a_avoice();
 }
-inline void Msg_VoiceAdded::unsafe_arena_set_allocated_avoice(
-    ::protobuf::mozilla::dom::RemoteVoice* avoice) {
+inline void Msg_VoiceAdded::unsafe_arena_set_allocated_a_avoice(
+    ::protobuf::mozilla::dom::RemoteVoice* a_avoice) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.avoice_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_avoice_);
   }
-  _impl_.avoice_ = avoice;
-  if (avoice) {
+  _impl_.a_avoice_ = a_avoice;
+  if (a_avoice) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.aVoice)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.a_aVoice)
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::release_avoice() {
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::release_a_avoice() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RemoteVoice* temp = _impl_.avoice_;
-  _impl_.avoice_ = nullptr;
+  ::protobuf::mozilla::dom::RemoteVoice* temp = _impl_.a_avoice_;
+  _impl_.a_avoice_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1840,249 +1840,249 @@ inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::release_avoice() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::unsafe_arena_release_avoice() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.aVoice)
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::unsafe_arena_release_a_avoice() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.a_aVoice)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::protobuf::mozilla::dom::RemoteVoice* temp = _impl_.avoice_;
-  _impl_.avoice_ = nullptr;
+  ::protobuf::mozilla::dom::RemoteVoice* temp = _impl_.a_avoice_;
+  _impl_.a_avoice_ = nullptr;
   return temp;
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::_internal_mutable_avoice() {
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::_internal_mutable_a_avoice() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.avoice_ == nullptr) {
+  if (_impl_.a_avoice_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::RemoteVoice>(GetArenaForAllocation());
-    _impl_.avoice_ = p;
+    _impl_.a_avoice_ = p;
   }
-  return _impl_.avoice_;
+  return _impl_.a_avoice_;
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::mutable_avoice() {
-  ::protobuf::mozilla::dom::RemoteVoice* _msg = _internal_mutable_avoice();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.aVoice)
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_VoiceAdded::mutable_a_avoice() {
+  ::protobuf::mozilla::dom::RemoteVoice* _msg = _internal_mutable_a_avoice();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.a_aVoice)
   return _msg;
 }
-inline void Msg_VoiceAdded::set_allocated_avoice(::protobuf::mozilla::dom::RemoteVoice* avoice) {
+inline void Msg_VoiceAdded::set_allocated_a_avoice(::protobuf::mozilla::dom::RemoteVoice* a_avoice) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.avoice_);
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.a_avoice_);
   }
-  if (avoice) {
+  if (a_avoice) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
-                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(avoice));
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(a_avoice));
     if (message_arena != submessage_arena) {
-      avoice = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, avoice, submessage_arena);
+      a_avoice = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_avoice, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.avoice_ = avoice;
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.aVoice)
+  _impl_.a_avoice_ = a_avoice;
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceAdded.a_aVoice)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_VoiceRemoved
 
-// required bytes aUri = 1;
-inline bool Msg_VoiceRemoved::_internal_has_auri() const {
+// required bytes a_aUri = 1;
+inline bool Msg_VoiceRemoved::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_VoiceRemoved::has_auri() const {
-  return _internal_has_auri();
+inline bool Msg_VoiceRemoved::has_a_auri() const {
+  return _internal_has_a_auri();
 }
-inline void Msg_VoiceRemoved::clear_auri() {
-  _impl_.auri_.ClearToEmpty();
+inline void Msg_VoiceRemoved::clear_a_auri() {
+  _impl_.a_auri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_VoiceRemoved::auri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.aUri)
-  return _internal_auri();
+inline const std::string& Msg_VoiceRemoved::a_auri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.a_aUri)
+  return _internal_a_auri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_VoiceRemoved::set_auri(ArgT0&& arg0, ArgT... args) {
+void Msg_VoiceRemoved::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.aUri)
+ _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.a_aUri)
 }
-inline std::string* Msg_VoiceRemoved::mutable_auri() {
-  std::string* _s = _internal_mutable_auri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.aUri)
+inline std::string* Msg_VoiceRemoved::mutable_a_auri() {
+  std::string* _s = _internal_mutable_a_auri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.a_aUri)
   return _s;
 }
-inline const std::string& Msg_VoiceRemoved::_internal_auri() const {
-  return _impl_.auri_.Get();
+inline const std::string& Msg_VoiceRemoved::_internal_a_auri() const {
+  return _impl_.a_auri_.Get();
 }
-inline void Msg_VoiceRemoved::_internal_set_auri(const std::string& value) {
+inline void Msg_VoiceRemoved::_internal_set_a_auri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.auri_.Set(value, GetArenaForAllocation());
+  _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_VoiceRemoved::_internal_mutable_auri() {
+inline std::string* Msg_VoiceRemoved::_internal_mutable_a_auri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.auri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_VoiceRemoved::release_auri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.aUri)
-  if (!_internal_has_auri()) {
+inline std::string* Msg_VoiceRemoved::release_a_auri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.a_aUri)
+  if (!_internal_has_a_auri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.auri_.Release();
+  auto* p = _impl_.a_auri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_VoiceRemoved::set_allocated_auri(std::string* auri) {
-  if (auri != nullptr) {
+inline void Msg_VoiceRemoved::set_allocated_a_auri(std::string* a_auri) {
+  if (a_auri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.auri_.SetAllocated(auri, GetArenaForAllocation());
+  _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.aUri)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_VoiceRemoved.a_aUri)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_SetDefaultVoice
 
-// required bytes aUri = 1;
-inline bool Msg_SetDefaultVoice::_internal_has_auri() const {
+// required bytes a_aUri = 1;
+inline bool Msg_SetDefaultVoice::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_SetDefaultVoice::has_auri() const {
-  return _internal_has_auri();
+inline bool Msg_SetDefaultVoice::has_a_auri() const {
+  return _internal_has_a_auri();
 }
-inline void Msg_SetDefaultVoice::clear_auri() {
-  _impl_.auri_.ClearToEmpty();
+inline void Msg_SetDefaultVoice::clear_a_auri() {
+  _impl_.a_auri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_SetDefaultVoice::auri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aUri)
-  return _internal_auri();
+inline const std::string& Msg_SetDefaultVoice::a_auri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri)
+  return _internal_a_auri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_SetDefaultVoice::set_auri(ArgT0&& arg0, ArgT... args) {
+void Msg_SetDefaultVoice::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aUri)
+ _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri)
 }
-inline std::string* Msg_SetDefaultVoice::mutable_auri() {
-  std::string* _s = _internal_mutable_auri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aUri)
+inline std::string* Msg_SetDefaultVoice::mutable_a_auri() {
+  std::string* _s = _internal_mutable_a_auri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri)
   return _s;
 }
-inline const std::string& Msg_SetDefaultVoice::_internal_auri() const {
-  return _impl_.auri_.Get();
+inline const std::string& Msg_SetDefaultVoice::_internal_a_auri() const {
+  return _impl_.a_auri_.Get();
 }
-inline void Msg_SetDefaultVoice::_internal_set_auri(const std::string& value) {
+inline void Msg_SetDefaultVoice::_internal_set_a_auri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.auri_.Set(value, GetArenaForAllocation());
+  _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_SetDefaultVoice::_internal_mutable_auri() {
+inline std::string* Msg_SetDefaultVoice::_internal_mutable_a_auri() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.auri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_SetDefaultVoice::release_auri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aUri)
-  if (!_internal_has_auri()) {
+inline std::string* Msg_SetDefaultVoice::release_a_auri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri)
+  if (!_internal_has_a_auri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.auri_.Release();
+  auto* p = _impl_.a_auri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_SetDefaultVoice::set_allocated_auri(std::string* auri) {
-  if (auri != nullptr) {
+inline void Msg_SetDefaultVoice::set_allocated_a_auri(std::string* a_auri) {
+  if (a_auri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.auri_.SetAllocated(auri, GetArenaForAllocation());
+  _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aUri)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aUri)
 }
 
-// required bool aIsDefault = 2;
-inline bool Msg_SetDefaultVoice::_internal_has_aisdefault() const {
+// required bool a_aIsDefault = 2;
+inline bool Msg_SetDefaultVoice::_internal_has_a_aisdefault() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_SetDefaultVoice::has_aisdefault() const {
-  return _internal_has_aisdefault();
+inline bool Msg_SetDefaultVoice::has_a_aisdefault() const {
+  return _internal_has_a_aisdefault();
 }
-inline void Msg_SetDefaultVoice::clear_aisdefault() {
-  _impl_.aisdefault_ = false;
+inline void Msg_SetDefaultVoice::clear_a_aisdefault() {
+  _impl_.a_aisdefault_ = false;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline bool Msg_SetDefaultVoice::_internal_aisdefault() const {
-  return _impl_.aisdefault_;
+inline bool Msg_SetDefaultVoice::_internal_a_aisdefault() const {
+  return _impl_.a_aisdefault_;
 }
-inline bool Msg_SetDefaultVoice::aisdefault() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aIsDefault)
-  return _internal_aisdefault();
+inline bool Msg_SetDefaultVoice::a_aisdefault() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aIsDefault)
+  return _internal_a_aisdefault();
 }
-inline void Msg_SetDefaultVoice::_internal_set_aisdefault(bool value) {
+inline void Msg_SetDefaultVoice::_internal_set_a_aisdefault(bool value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.aisdefault_ = value;
+  _impl_.a_aisdefault_ = value;
 }
-inline void Msg_SetDefaultVoice::set_aisdefault(bool value) {
-  _internal_set_aisdefault(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.aIsDefault)
+inline void Msg_SetDefaultVoice::set_a_aisdefault(bool value) {
+  _internal_set_a_aisdefault(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_SetDefaultVoice.a_aIsDefault)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_IsSpeakingChanged
 
-// required bool aIsSpeaking = 1;
-inline bool Msg_IsSpeakingChanged::_internal_has_aisspeaking() const {
+// required bool a_aIsSpeaking = 1;
+inline bool Msg_IsSpeakingChanged::_internal_has_a_aisspeaking() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_IsSpeakingChanged::has_aisspeaking() const {
-  return _internal_has_aisspeaking();
+inline bool Msg_IsSpeakingChanged::has_a_aisspeaking() const {
+  return _internal_has_a_aisspeaking();
 }
-inline void Msg_IsSpeakingChanged::clear_aisspeaking() {
-  _impl_.aisspeaking_ = false;
+inline void Msg_IsSpeakingChanged::clear_a_aisspeaking() {
+  _impl_.a_aisspeaking_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_IsSpeakingChanged::_internal_aisspeaking() const {
-  return _impl_.aisspeaking_;
+inline bool Msg_IsSpeakingChanged::_internal_a_aisspeaking() const {
+  return _impl_.a_aisspeaking_;
 }
-inline bool Msg_IsSpeakingChanged::aisspeaking() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged.aIsSpeaking)
-  return _internal_aisspeaking();
+inline bool Msg_IsSpeakingChanged::a_aisspeaking() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged.a_aIsSpeaking)
+  return _internal_a_aisspeaking();
 }
-inline void Msg_IsSpeakingChanged::_internal_set_aisspeaking(bool value) {
+inline void Msg_IsSpeakingChanged::_internal_set_a_aisspeaking(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aisspeaking_ = value;
+  _impl_.a_aisspeaking_ = value;
 }
-inline void Msg_IsSpeakingChanged::set_aisspeaking(bool value) {
-  _internal_set_aisspeaking(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged.aIsSpeaking)
+inline void Msg_IsSpeakingChanged::set_a_aisspeaking(bool value) {
+  _internal_set_a_aisspeaking(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_IsSpeakingChanged.a_aIsSpeaking)
 }
 
 // -------------------------------------------------------------------
@@ -2093,216 +2093,216 @@ inline void Msg_IsSpeakingChanged::set_aisspeaking(bool value) {
 
 // Msg_NotifyVoicesError
 
-// required bytes aError = 1;
-inline bool Msg_NotifyVoicesError::_internal_has_aerror() const {
+// required bytes a_aError = 1;
+inline bool Msg_NotifyVoicesError::_internal_has_a_aerror() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_NotifyVoicesError::has_aerror() const {
-  return _internal_has_aerror();
+inline bool Msg_NotifyVoicesError::has_a_aerror() const {
+  return _internal_has_a_aerror();
 }
-inline void Msg_NotifyVoicesError::clear_aerror() {
-  _impl_.aerror_.ClearToEmpty();
+inline void Msg_NotifyVoicesError::clear_a_aerror() {
+  _impl_.a_aerror_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_NotifyVoicesError::aerror() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.aError)
-  return _internal_aerror();
+inline const std::string& Msg_NotifyVoicesError::a_aerror() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.a_aError)
+  return _internal_a_aerror();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_NotifyVoicesError::set_aerror(ArgT0&& arg0, ArgT... args) {
+void Msg_NotifyVoicesError::set_a_aerror(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.aerror_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.aError)
+ _impl_.a_aerror_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.a_aError)
 }
-inline std::string* Msg_NotifyVoicesError::mutable_aerror() {
-  std::string* _s = _internal_mutable_aerror();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.aError)
+inline std::string* Msg_NotifyVoicesError::mutable_a_aerror() {
+  std::string* _s = _internal_mutable_a_aerror();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.a_aError)
   return _s;
 }
-inline const std::string& Msg_NotifyVoicesError::_internal_aerror() const {
-  return _impl_.aerror_.Get();
+inline const std::string& Msg_NotifyVoicesError::_internal_a_aerror() const {
+  return _impl_.a_aerror_.Get();
 }
-inline void Msg_NotifyVoicesError::_internal_set_aerror(const std::string& value) {
+inline void Msg_NotifyVoicesError::_internal_set_a_aerror(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aerror_.Set(value, GetArenaForAllocation());
+  _impl_.a_aerror_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyVoicesError::_internal_mutable_aerror() {
+inline std::string* Msg_NotifyVoicesError::_internal_mutable_a_aerror() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.aerror_.Mutable(GetArenaForAllocation());
+  return _impl_.a_aerror_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_NotifyVoicesError::release_aerror() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.aError)
-  if (!_internal_has_aerror()) {
+inline std::string* Msg_NotifyVoicesError::release_a_aerror() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.a_aError)
+  if (!_internal_has_a_aerror()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.aerror_.Release();
+  auto* p = _impl_.a_aerror_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aerror_.IsDefault()) {
-    _impl_.aerror_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aerror_.IsDefault()) {
+    _impl_.a_aerror_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_NotifyVoicesError::set_allocated_aerror(std::string* aerror) {
-  if (aerror != nullptr) {
+inline void Msg_NotifyVoicesError::set_allocated_a_aerror(std::string* a_aerror) {
+  if (a_aerror != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.aerror_.SetAllocated(aerror, GetArenaForAllocation());
+  _impl_.a_aerror_.SetAllocated(a_aerror, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.aerror_.IsDefault()) {
-    _impl_.aerror_.Set("", GetArenaForAllocation());
+  if (_impl_.a_aerror_.IsDefault()) {
+    _impl_.a_aerror_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.aError)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_NotifyVoicesError.a_aError)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_InitialVoicesAndState
 
-// repeated .protobuf.mozilla.dom.RemoteVoice aVoices = 1;
-inline int Msg_InitialVoicesAndState::_internal_avoices_size() const {
-  return _impl_.avoices_.size();
+// repeated .protobuf.mozilla.dom.RemoteVoice a_aVoices = 1;
+inline int Msg_InitialVoicesAndState::_internal_a_avoices_size() const {
+  return _impl_.a_avoices_.size();
 }
-inline int Msg_InitialVoicesAndState::avoices_size() const {
-  return _internal_avoices_size();
+inline int Msg_InitialVoicesAndState::a_avoices_size() const {
+  return _internal_a_avoices_size();
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_InitialVoicesAndState::mutable_avoices(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aVoices)
-  return _impl_.avoices_.Mutable(index);
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_InitialVoicesAndState::mutable_a_avoices(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aVoices)
+  return _impl_.a_avoices_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice >*
-Msg_InitialVoicesAndState::mutable_avoices() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aVoices)
-  return &_impl_.avoices_;
+Msg_InitialVoicesAndState::mutable_a_avoices() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aVoices)
+  return &_impl_.a_avoices_;
 }
-inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_InitialVoicesAndState::_internal_avoices(int index) const {
-  return _impl_.avoices_.Get(index);
+inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_InitialVoicesAndState::_internal_a_avoices(int index) const {
+  return _impl_.a_avoices_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_InitialVoicesAndState::avoices(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aVoices)
-  return _internal_avoices(index);
+inline const ::protobuf::mozilla::dom::RemoteVoice& Msg_InitialVoicesAndState::a_avoices(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aVoices)
+  return _internal_a_avoices(index);
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_InitialVoicesAndState::_internal_add_avoices() {
-  return _impl_.avoices_.Add();
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_InitialVoicesAndState::_internal_add_a_avoices() {
+  return _impl_.a_avoices_.Add();
 }
-inline ::protobuf::mozilla::dom::RemoteVoice* Msg_InitialVoicesAndState::add_avoices() {
-  ::protobuf::mozilla::dom::RemoteVoice* _add = _internal_add_avoices();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aVoices)
+inline ::protobuf::mozilla::dom::RemoteVoice* Msg_InitialVoicesAndState::add_a_avoices() {
+  ::protobuf::mozilla::dom::RemoteVoice* _add = _internal_add_a_avoices();
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aVoices)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::RemoteVoice >&
-Msg_InitialVoicesAndState::avoices() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aVoices)
-  return _impl_.avoices_;
+Msg_InitialVoicesAndState::a_avoices() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aVoices)
+  return _impl_.a_avoices_;
 }
 
-// repeated bytes aDefaults = 2;
-inline int Msg_InitialVoicesAndState::_internal_adefaults_size() const {
-  return _impl_.adefaults_.size();
+// repeated bytes a_aDefaults = 2;
+inline int Msg_InitialVoicesAndState::_internal_a_adefaults_size() const {
+  return _impl_.a_adefaults_.size();
 }
-inline int Msg_InitialVoicesAndState::adefaults_size() const {
-  return _internal_adefaults_size();
+inline int Msg_InitialVoicesAndState::a_adefaults_size() const {
+  return _internal_a_adefaults_size();
 }
-inline void Msg_InitialVoicesAndState::clear_adefaults() {
-  _impl_.adefaults_.Clear();
+inline void Msg_InitialVoicesAndState::clear_a_adefaults() {
+  _impl_.a_adefaults_.Clear();
 }
-inline std::string* Msg_InitialVoicesAndState::add_adefaults() {
-  std::string* _s = _internal_add_adefaults();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+inline std::string* Msg_InitialVoicesAndState::add_a_adefaults() {
+  std::string* _s = _internal_add_a_adefaults();
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
   return _s;
 }
-inline const std::string& Msg_InitialVoicesAndState::_internal_adefaults(int index) const {
-  return _impl_.adefaults_.Get(index);
+inline const std::string& Msg_InitialVoicesAndState::_internal_a_adefaults(int index) const {
+  return _impl_.a_adefaults_.Get(index);
 }
-inline const std::string& Msg_InitialVoicesAndState::adefaults(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
-  return _internal_adefaults(index);
+inline const std::string& Msg_InitialVoicesAndState::a_adefaults(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
+  return _internal_a_adefaults(index);
 }
-inline std::string* Msg_InitialVoicesAndState::mutable_adefaults(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
-  return _impl_.adefaults_.Mutable(index);
+inline std::string* Msg_InitialVoicesAndState::mutable_a_adefaults(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
+  return _impl_.a_adefaults_.Mutable(index);
 }
-inline void Msg_InitialVoicesAndState::set_adefaults(int index, const std::string& value) {
-  _impl_.adefaults_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+inline void Msg_InitialVoicesAndState::set_a_adefaults(int index, const std::string& value) {
+  _impl_.a_adefaults_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline void Msg_InitialVoicesAndState::set_adefaults(int index, std::string&& value) {
-  _impl_.adefaults_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+inline void Msg_InitialVoicesAndState::set_a_adefaults(int index, std::string&& value) {
+  _impl_.a_adefaults_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline void Msg_InitialVoicesAndState::set_adefaults(int index, const char* value) {
+inline void Msg_InitialVoicesAndState::set_a_adefaults(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.adefaults_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+  _impl_.a_adefaults_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline void Msg_InitialVoicesAndState::set_adefaults(int index, const void* value, size_t size) {
-  _impl_.adefaults_.Mutable(index)->assign(
+inline void Msg_InitialVoicesAndState::set_a_adefaults(int index, const void* value, size_t size) {
+  _impl_.a_adefaults_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline std::string* Msg_InitialVoicesAndState::_internal_add_adefaults() {
-  return _impl_.adefaults_.Add();
+inline std::string* Msg_InitialVoicesAndState::_internal_add_a_adefaults() {
+  return _impl_.a_adefaults_.Add();
 }
-inline void Msg_InitialVoicesAndState::add_adefaults(const std::string& value) {
-  _impl_.adefaults_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+inline void Msg_InitialVoicesAndState::add_a_adefaults(const std::string& value) {
+  _impl_.a_adefaults_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline void Msg_InitialVoicesAndState::add_adefaults(std::string&& value) {
-  _impl_.adefaults_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+inline void Msg_InitialVoicesAndState::add_a_adefaults(std::string&& value) {
+  _impl_.a_adefaults_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline void Msg_InitialVoicesAndState::add_adefaults(const char* value) {
+inline void Msg_InitialVoicesAndState::add_a_adefaults(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _impl_.adefaults_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+  _impl_.a_adefaults_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
-inline void Msg_InitialVoicesAndState::add_adefaults(const void* value, size_t size) {
-  _impl_.adefaults_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
+inline void Msg_InitialVoicesAndState::add_a_adefaults(const void* value, size_t size) {
+  _impl_.a_adefaults_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-Msg_InitialVoicesAndState::adefaults() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
-  return _impl_.adefaults_;
+Msg_InitialVoicesAndState::a_adefaults() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
+  return _impl_.a_adefaults_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-Msg_InitialVoicesAndState::mutable_adefaults() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aDefaults)
-  return &_impl_.adefaults_;
+Msg_InitialVoicesAndState::mutable_a_adefaults() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aDefaults)
+  return &_impl_.a_adefaults_;
 }
 
-// required bool aIsSpeaking = 3;
-inline bool Msg_InitialVoicesAndState::_internal_has_aisspeaking() const {
+// required bool a_aIsSpeaking = 3;
+inline bool Msg_InitialVoicesAndState::_internal_has_a_aisspeaking() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_InitialVoicesAndState::has_aisspeaking() const {
-  return _internal_has_aisspeaking();
+inline bool Msg_InitialVoicesAndState::has_a_aisspeaking() const {
+  return _internal_has_a_aisspeaking();
 }
-inline void Msg_InitialVoicesAndState::clear_aisspeaking() {
-  _impl_.aisspeaking_ = false;
+inline void Msg_InitialVoicesAndState::clear_a_aisspeaking() {
+  _impl_.a_aisspeaking_ = false;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline bool Msg_InitialVoicesAndState::_internal_aisspeaking() const {
-  return _impl_.aisspeaking_;
+inline bool Msg_InitialVoicesAndState::_internal_a_aisspeaking() const {
+  return _impl_.a_aisspeaking_;
 }
-inline bool Msg_InitialVoicesAndState::aisspeaking() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aIsSpeaking)
-  return _internal_aisspeaking();
+inline bool Msg_InitialVoicesAndState::a_aisspeaking() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aIsSpeaking)
+  return _internal_a_aisspeaking();
 }
-inline void Msg_InitialVoicesAndState::_internal_set_aisspeaking(bool value) {
+inline void Msg_InitialVoicesAndState::_internal_set_a_aisspeaking(bool value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.aisspeaking_ = value;
+  _impl_.a_aisspeaking_ = value;
 }
-inline void Msg_InitialVoicesAndState::set_aisspeaking(bool value) {
-  _internal_set_aisspeaking(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.aIsSpeaking)
+inline void Msg_InitialVoicesAndState::set_a_aisspeaking(bool value) {
+  _internal_set_a_aisspeaking(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_InitialVoicesAndState.a_aIsSpeaking)
 }
 
 // -------------------------------------------------------------------
@@ -2317,320 +2317,320 @@ inline void Msg_InitialVoicesAndState::set_aisspeaking(bool value) {
 
 // Msg_PSpeechSynthesisRequestConstructor
 
-// required bytes aText = 1;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_atext() const {
+// required bytes a_aText = 1;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_atext() const {
-  return _internal_has_atext();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_atext() const {
+  return _internal_has_a_atext();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_atext() {
-  _impl_.atext_.ClearToEmpty();
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_atext() {
+  _impl_.a_atext_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& Msg_PSpeechSynthesisRequestConstructor::atext() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
-  return _internal_atext();
+inline const std::string& Msg_PSpeechSynthesisRequestConstructor::a_atext() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
+  return _internal_a_atext();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PSpeechSynthesisRequestConstructor::set_atext(ArgT0&& arg0, ArgT... args) {
+void Msg_PSpeechSynthesisRequestConstructor::set_a_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
+ _impl_.a_atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_atext() {
-  std::string* _s = _internal_mutable_atext();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_a_atext() {
+  std::string* _s = _internal_mutable_a_atext();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
   return _s;
 }
-inline const std::string& Msg_PSpeechSynthesisRequestConstructor::_internal_atext() const {
-  return _impl_.atext_.Get();
+inline const std::string& Msg_PSpeechSynthesisRequestConstructor::_internal_a_atext() const {
+  return _impl_.a_atext_.Get();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_atext(const std::string& value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_atext(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.atext_.Set(value, GetArenaForAllocation());
+  _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::_internal_mutable_atext() {
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::_internal_mutable_a_atext() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.atext_.Mutable(GetArenaForAllocation());
+  return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::release_atext() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
-  if (!_internal_has_atext()) {
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::release_a_atext() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
+  if (!_internal_has_a_atext()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.atext_.Release();
+  auto* p = _impl_.a_atext_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atext_.IsDefault()) {
-    _impl_.atext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_atext(std::string* atext) {
-  if (atext != nullptr) {
+inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_atext(std::string* a_atext) {
+  if (a_atext != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
-  _impl_.atext_.SetAllocated(atext, GetArenaForAllocation());
+  _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.atext_.IsDefault()) {
-    _impl_.atext_.Set("", GetArenaForAllocation());
+  if (_impl_.a_atext_.IsDefault()) {
+    _impl_.a_atext_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aText)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
 }
 
-// required bytes aUri = 2;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_auri() const {
+// required bytes a_aUri = 2;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_auri() const {
-  return _internal_has_auri();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_auri() const {
+  return _internal_has_a_auri();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_auri() {
-  _impl_.auri_.ClearToEmpty();
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_auri() {
+  _impl_.a_auri_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& Msg_PSpeechSynthesisRequestConstructor::auri() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
-  return _internal_auri();
+inline const std::string& Msg_PSpeechSynthesisRequestConstructor::a_auri() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
+  return _internal_a_auri();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PSpeechSynthesisRequestConstructor::set_auri(ArgT0&& arg0, ArgT... args) {
+void Msg_PSpeechSynthesisRequestConstructor::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
+ _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_auri() {
-  std::string* _s = _internal_mutable_auri();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_a_auri() {
+  std::string* _s = _internal_mutable_a_auri();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
   return _s;
 }
-inline const std::string& Msg_PSpeechSynthesisRequestConstructor::_internal_auri() const {
-  return _impl_.auri_.Get();
+inline const std::string& Msg_PSpeechSynthesisRequestConstructor::_internal_a_auri() const {
+  return _impl_.a_auri_.Get();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_auri(const std::string& value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_auri(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.auri_.Set(value, GetArenaForAllocation());
+  _impl_.a_auri_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::_internal_mutable_auri() {
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::_internal_mutable_a_auri() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.auri_.Mutable(GetArenaForAllocation());
+  return _impl_.a_auri_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::release_auri() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
-  if (!_internal_has_auri()) {
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::release_a_auri() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
+  if (!_internal_has_a_auri()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.auri_.Release();
+  auto* p = _impl_.a_auri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_auri(std::string* auri) {
-  if (auri != nullptr) {
+inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_auri(std::string* a_auri) {
+  if (a_auri != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  _impl_.auri_.SetAllocated(auri, GetArenaForAllocation());
+  _impl_.a_auri_.SetAllocated(a_auri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.auri_.IsDefault()) {
-    _impl_.auri_.Set("", GetArenaForAllocation());
+  if (_impl_.a_auri_.IsDefault()) {
+    _impl_.a_auri_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aUri)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
 }
 
-// required bytes aLang = 3;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_alang() const {
+// required bytes a_aLang = 3;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_alang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_alang() const {
-  return _internal_has_alang();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_alang() const {
+  return _internal_has_a_alang();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_alang() {
-  _impl_.alang_.ClearToEmpty();
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_alang() {
+  _impl_.a_alang_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const std::string& Msg_PSpeechSynthesisRequestConstructor::alang() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aLang)
-  return _internal_alang();
+inline const std::string& Msg_PSpeechSynthesisRequestConstructor::a_alang() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
+  return _internal_a_alang();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void Msg_PSpeechSynthesisRequestConstructor::set_alang(ArgT0&& arg0, ArgT... args) {
+void Msg_PSpeechSynthesisRequestConstructor::set_a_alang(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.alang_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aLang)
+ _impl_.a_alang_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_alang() {
-  std::string* _s = _internal_mutable_alang();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aLang)
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::mutable_a_alang() {
+  std::string* _s = _internal_mutable_a_alang();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
   return _s;
 }
-inline const std::string& Msg_PSpeechSynthesisRequestConstructor::_internal_alang() const {
-  return _impl_.alang_.Get();
+inline const std::string& Msg_PSpeechSynthesisRequestConstructor::_internal_a_alang() const {
+  return _impl_.a_alang_.Get();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_alang(const std::string& value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_alang(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000004u;
-  _impl_.alang_.Set(value, GetArenaForAllocation());
+  _impl_.a_alang_.Set(value, GetArenaForAllocation());
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::_internal_mutable_alang() {
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::_internal_mutable_a_alang() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  return _impl_.alang_.Mutable(GetArenaForAllocation());
+  return _impl_.a_alang_.Mutable(GetArenaForAllocation());
 }
-inline std::string* Msg_PSpeechSynthesisRequestConstructor::release_alang() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aLang)
-  if (!_internal_has_alang()) {
+inline std::string* Msg_PSpeechSynthesisRequestConstructor::release_a_alang() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
+  if (!_internal_has_a_alang()) {
     return nullptr;
   }
   _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.alang_.Release();
+  auto* p = _impl_.a_alang_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.alang_.IsDefault()) {
-    _impl_.alang_.Set("", GetArenaForAllocation());
+  if (_impl_.a_alang_.IsDefault()) {
+    _impl_.a_alang_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_alang(std::string* alang) {
-  if (alang != nullptr) {
+inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_alang(std::string* a_alang) {
+  if (a_alang != nullptr) {
     _impl_._has_bits_[0] |= 0x00000004u;
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  _impl_.alang_.SetAllocated(alang, GetArenaForAllocation());
+  _impl_.a_alang_.SetAllocated(a_alang, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.alang_.IsDefault()) {
-    _impl_.alang_.Set("", GetArenaForAllocation());
+  if (_impl_.a_alang_.IsDefault()) {
+    _impl_.a_alang_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aLang)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
 }
 
-// required float aVolume = 4;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_avolume() const {
+// required float a_aVolume = 4;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_avolume() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_avolume() const {
-  return _internal_has_avolume();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_avolume() const {
+  return _internal_has_a_avolume();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_avolume() {
-  _impl_.avolume_ = 0;
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_avolume() {
+  _impl_.a_avolume_ = 0;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline float Msg_PSpeechSynthesisRequestConstructor::_internal_avolume() const {
-  return _impl_.avolume_;
+inline float Msg_PSpeechSynthesisRequestConstructor::_internal_a_avolume() const {
+  return _impl_.a_avolume_;
 }
-inline float Msg_PSpeechSynthesisRequestConstructor::avolume() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aVolume)
-  return _internal_avolume();
+inline float Msg_PSpeechSynthesisRequestConstructor::a_avolume() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aVolume)
+  return _internal_a_avolume();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_avolume(float value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_avolume(float value) {
   _impl_._has_bits_[0] |= 0x00000008u;
-  _impl_.avolume_ = value;
+  _impl_.a_avolume_ = value;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_avolume(float value) {
-  _internal_set_avolume(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aVolume)
+inline void Msg_PSpeechSynthesisRequestConstructor::set_a_avolume(float value) {
+  _internal_set_a_avolume(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aVolume)
 }
 
-// required float aRate = 5;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_arate() const {
+// required float a_aRate = 5;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_arate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_arate() const {
-  return _internal_has_arate();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_arate() const {
+  return _internal_has_a_arate();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_arate() {
-  _impl_.arate_ = 0;
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_arate() {
+  _impl_.a_arate_ = 0;
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
-inline float Msg_PSpeechSynthesisRequestConstructor::_internal_arate() const {
-  return _impl_.arate_;
+inline float Msg_PSpeechSynthesisRequestConstructor::_internal_a_arate() const {
+  return _impl_.a_arate_;
 }
-inline float Msg_PSpeechSynthesisRequestConstructor::arate() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aRate)
-  return _internal_arate();
+inline float Msg_PSpeechSynthesisRequestConstructor::a_arate() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aRate)
+  return _internal_a_arate();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_arate(float value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_arate(float value) {
   _impl_._has_bits_[0] |= 0x00000010u;
-  _impl_.arate_ = value;
+  _impl_.a_arate_ = value;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_arate(float value) {
-  _internal_set_arate(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aRate)
+inline void Msg_PSpeechSynthesisRequestConstructor::set_a_arate(float value) {
+  _internal_set_a_arate(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aRate)
 }
 
-// required float aPitch = 6;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_apitch() const {
+// required float a_aPitch = 6;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_apitch() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_apitch() const {
-  return _internal_has_apitch();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_apitch() const {
+  return _internal_has_a_apitch();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_apitch() {
-  _impl_.apitch_ = 0;
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_apitch() {
+  _impl_.a_apitch_ = 0;
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
-inline float Msg_PSpeechSynthesisRequestConstructor::_internal_apitch() const {
-  return _impl_.apitch_;
+inline float Msg_PSpeechSynthesisRequestConstructor::_internal_a_apitch() const {
+  return _impl_.a_apitch_;
 }
-inline float Msg_PSpeechSynthesisRequestConstructor::apitch() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aPitch)
-  return _internal_apitch();
+inline float Msg_PSpeechSynthesisRequestConstructor::a_apitch() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aPitch)
+  return _internal_a_apitch();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_apitch(float value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_apitch(float value) {
   _impl_._has_bits_[0] |= 0x00000020u;
-  _impl_.apitch_ = value;
+  _impl_.a_apitch_ = value;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_apitch(float value) {
-  _internal_set_apitch(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aPitch)
+inline void Msg_PSpeechSynthesisRequestConstructor::set_a_apitch(float value) {
+  _internal_set_a_apitch(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aPitch)
 }
 
-// required bool aShouldResistFingerprinting = 7;
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_ashouldresistfingerprinting() const {
+// required bool a_aShouldResistFingerprinting = 7;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_ashouldresistfingerprinting() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::has_ashouldresistfingerprinting() const {
-  return _internal_has_ashouldresistfingerprinting();
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_ashouldresistfingerprinting() const {
+  return _internal_has_a_ashouldresistfingerprinting();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::clear_ashouldresistfingerprinting() {
-  _impl_.ashouldresistfingerprinting_ = false;
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_ashouldresistfingerprinting() {
+  _impl_.a_ashouldresistfingerprinting_ = false;
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_ashouldresistfingerprinting() const {
-  return _impl_.ashouldresistfingerprinting_;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_a_ashouldresistfingerprinting() const {
+  return _impl_.a_ashouldresistfingerprinting_;
 }
-inline bool Msg_PSpeechSynthesisRequestConstructor::ashouldresistfingerprinting() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aShouldResistFingerprinting)
-  return _internal_ashouldresistfingerprinting();
+inline bool Msg_PSpeechSynthesisRequestConstructor::a_ashouldresistfingerprinting() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aShouldResistFingerprinting)
+  return _internal_a_ashouldresistfingerprinting();
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_ashouldresistfingerprinting(bool value) {
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_ashouldresistfingerprinting(bool value) {
   _impl_._has_bits_[0] |= 0x00000040u;
-  _impl_.ashouldresistfingerprinting_ = value;
+  _impl_.a_ashouldresistfingerprinting_ = value;
 }
-inline void Msg_PSpeechSynthesisRequestConstructor::set_ashouldresistfingerprinting(bool value) {
-  _internal_set_ashouldresistfingerprinting(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.aShouldResistFingerprinting)
+inline void Msg_PSpeechSynthesisRequestConstructor::set_a_ashouldresistfingerprinting(bool value) {
+  _internal_set_a_ashouldresistfingerprinting(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aShouldResistFingerprinting)
 }
 
 // -------------------------------------------------------------------

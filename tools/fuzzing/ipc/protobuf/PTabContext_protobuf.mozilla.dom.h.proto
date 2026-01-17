@@ -13,18 +13,18 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message PopupIPCTabContext {
-  required bytes opener = 1;
-  required uint64 chromeOuterWindowID = 2;
+  required bytes a_opener = 1;
+  required uint64 a_chromeOuterWindowID = 2;
 }
 
 message FrameIPCTabContext {
-  required uint64 chromeOuterWindowID = 1;
-  required uint32 maxTouchPoints = 2;
+  required uint64 a_chromeOuterWindowID = 1;
+  required uint32 a_maxTouchPoints = 2;
 }
 
 message IPCTabContext {
   oneof content {
-    protobuf.mozilla.dom.PopupIPCTabContext mVPopupIPCTabContext = 1;
-    protobuf.mozilla.dom.FrameIPCTabContext mVFrameIPCTabContext = 2;
+    protobuf.mozilla.dom.PopupIPCTabContext a_mVPopupIPCTabContext = 1;
+    protobuf.mozilla.dom.FrameIPCTabContext a_mVFrameIPCTabContext = 2;
   }
 }
